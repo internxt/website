@@ -5,12 +5,14 @@ export enum Campaign {
   Campaign2 = 'campaign2',
   BlackFriday = 'blackFriday',
   CyberWeek = 'cyberWeek',
+  Extension = 'extension',
 }
 
 const CAMPAIGN_SUFFIXES = {
   [Campaign.Campaign2]: 'CM87',
   [Campaign.BlackFriday]: 'BF90',
   [Campaign.CyberWeek]: 'CW90',
+  [Campaign.Extension]: 'ET90',
 } as const;
 
 type CampaignSuffix = typeof CAMPAIGN_SUFFIXES[Campaign];
