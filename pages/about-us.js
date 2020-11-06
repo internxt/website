@@ -1,6 +1,12 @@
+import TopBar from '../components/layout/TopBar'
+
 const AboutUs = () => {
     return ( 
-        <span>Esto sera about us</span>
+        <>
+            <TopBar />
+            <span>Esto sera about us</span>
+        </>
+        
      );
 }
  

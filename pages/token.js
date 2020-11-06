@@ -1,6 +1,11 @@
+import TopBar from '../components/layout/TopBar'
+
 const Token = () => {
     return ( 
-        <span>Esto sera token</span>
+        <>
+            <TopBar />
+            <span>Esto sera token</span>
+        </>
      );
 }
  

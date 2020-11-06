@@ -1,6 +1,11 @@
+import TopBar from '../components/layout/TopBar'
+
 const Prices = () => {
     return ( 
-        <span>Esto sera prices</span>
+        <>
+            <TopBar />
+            <span>Esto sera prices</span>
+        </>
      );
 }
  

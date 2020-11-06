@@ -1,6 +1,11 @@
+import TopBar from '../components/layout/TopBar'
+
 const Photos = () => {
     return ( 
-        <span>Esto sera photos</span>
+        <>
+            <TopBar />
+            <span>Esto sera photos</span>
+        </>
      );
 }
  

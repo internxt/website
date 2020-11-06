@@ -1,6 +1,11 @@
+import TopBar from '../components/layout/TopBar'
+
 const Core = () => {
     return ( 
-        <span>Esto sera core</span>
+        <>
+            <TopBar />
+            <span>Esto sera core</span>
+        </>
      );
 }
  

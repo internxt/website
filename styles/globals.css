@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 2.5%;
+}
