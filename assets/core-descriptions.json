@@ -1,0 +1,40 @@
+[
+    {
+        "title": "Monetize unused storage space.",
+        "subtitle": "A simple peer-to-peer application that enables storage providers to monetize unused storage by hosting encrypted shards of data."
+    },
+    {
+        "title": "Reclaming our privacy & security",
+        "subtitle": "Hosts monotize their unused hard-drive space which allows storing of users encrypted data.",
+        "subtitle2": "Hosts get paid in our Cryptocurrency, Inxt. The more space allocated to the network equals to more Inxt earned."
+    },
+    {
+        "title": "Everything has been done for you",
+        "subtitle": "Simply download the desktop application, create your node, and your device will automatically be connected.",
+        "subtitle3": "Set-up is simple and easy. Enter your ERC20 address, select where you want to store data and then choose how much storage you want to allocate.",
+        "subtitle4": "The homescreen displays only your necessary information, so you can get started as quickly as possible without having to learn anything new."
+    },
+    {
+        "title": "Calculate what you could earn",
+        "subtitle": "More storage you host, more Inxt you own, calculates to a greater income.",
+        "subtitle2": "Calculate below how much you could earn by using Internxt Core."
+    },
+    {
+        "title": "Get started on Internxt Core",
+        "subtitle": "Every month, we will send you a payout based on how much space you allocated and how much Inxt you held. The more time you run the node, the more likely the network will allocate your node, and it will rank you as high quality node. Set-up is quick and easy, just download the app and follow the steps.",
+        "subtitle2": "Enter your Inxt Wallet address, choose where you’d like to store data, allocate your desired storage capacity and finally, insert your public IP.",
+        "subtitle3": "If your IP is dynamic (one that periodically changes), you can use no IP and enter your hostname instead. Click here to find out whether your public IP is static or dynamic.",
+        "subtitle4": "All communication will go through a port in your router that you need to open. We suggest which port you need to open on the Core application.",
+        "subtitle5": "If you want to choose your own port, when entering your public IP address in Step 2, you can write it in the format IP:Port (eg 64.23.35.49:4243).  To open your port, access http://192.168.1.1/ with your browser.",
+        "subtitle6": "In your router configuration enter the port range you want to open. When entering the port number, you will need to enter your IP. Enter “ipconfig /all” in your Windows terminal. For Linux and Mac, enter “ifconfig” instead. For a quick 4-minute video tutorial on how to open a port in your router, you can click here. You can also click here to check whether your port was opened correctly."
+    },
+    {
+        "title": "Frequently asked questions from users.",
+        "subtitle": "Can anyone run a Internxt Core node?",
+        "subtitle2": "What operation systems are compatible?",
+        "subtitle3": "What's the minimum amount of space needed to get paid?",
+        "subtitle4": "How much data can I expect my node to store?",
+        "subtitle5": "How is my node selected to receive data?",
+        "subtitle6": "How often will I get paid?"
+    }
+]
