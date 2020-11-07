@@ -1,32 +1,40 @@
 [
     {
+        "id": "1",
         "title": "Store your files in complete privacy",
-        "subtitle": "A zero-knowledge file storage service that's based on absolute privacy and uncompromising security."
+        "subtitle": "A zero-knowledge file storage service that's based on absolute privacy and uncompromising security.",
+        "subtitle2": "Sign up and get 2 TB free for one month!"
     },
     {
+        "id": "2",
         "title": "One plan for all our services.",
         "subtitle": "Get more out of Internxt with our all in one plans that allow you to use one storage plan accross all our services."
     },
     {
+        "id": "3",
         "title": "Designed to protect your privacy.",
         "subtitle": "Your uploaded files are client-side encrypted and then fragmented into small pieces.",
         "subtitle2": "Only you hold your decryption key which retreives your fragmented files."
     },
     {
+        "id": "4",
         "title": "Switch to a more secure cloud.",
         "subtitle": "Services like Dropbox, Google Drive, Microsoft OneDrive and Apple iCloud all have permission to access your data.",
         "subtitle2": "Internxt Drive features zero-knlowledge encryption, meaning that only you can ever access your files."
     },
     {
+        "id": "5",
         "title": "Secure. Private. Simple to use.",
         "subtitle": "A functional and intuitive interface with a variety of different customizations and features, such as encrypted file sharing."
     },
     {
+        "id": "6",
         "title": "Avaiable on all your devices.",
         "subtitle": "The files you keep secure on Internxt Drive are easy to get to.",
         "subtitle2": "Access your files from our desktop app, Web browser app and our iOS or Android app."
     },
     {
+        "id": "7",
         "title": "Your Business in your hands.",
         "subtitle": "Internxt Drive for teams allows you and your team to store files with total security, collaborate privatly with other members and toggle your administration features."
     }

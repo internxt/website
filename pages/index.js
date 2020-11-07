@@ -1,12 +1,17 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Container from '../components/layout/Container'
 import TopBar from '../components/layout/TopBar'
 
 const Home = () => {
   return (
     <>
       <TopBar />
-      <span>Esto sera el drive</span>
+      <Container id='1'/>
+      <Container id='2'/>
+      <Container id='3'/>
+      <Container id='4'/>
+      <Container id='5'/>
+      <Container id='6'/>
+      <Container id='7'/>
     </>
   )
 }

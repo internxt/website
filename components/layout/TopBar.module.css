@@ -1,5 +1,7 @@
 .logo {
-
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 5px;
 }
 
 .links {
@@ -7,6 +9,51 @@
     align-items: center;
 }
 
-.link {
-    margin: 0 10px;
+.active_link {
+    margin: 0 1.4rem;
+    font-weight: 500;
+    color: #0084ff
+}
+
+.nonactive_link {
+    margin: 0 1.4rem;
+    font-weight: 500;
+    color: black
+}
+
+.nonactive_link:hover {
+    color: #0078e9
+}
+
+.button {
+    width: 118px;
+    height: 35px;
+    border-radius: 17.5px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+}
+
+.button_text {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)), 
+        linear-gradient(261deg, #ff000c 0%, #ac00ff 20%, #00e3ff 47%, #47ff7d 72%, #ffe700 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
