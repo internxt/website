@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import styles from './Container.module.css'
+import descriptions from '../../assets/drive-descriptions.json'
 
 const Container = ({ id }) => {
 
+    const description = descriptions.filter( desc => desc.id === id)
     // Check if a number is odd
     const isOdd = ( num ) => {
         return num % 2 == 1;
@@ -13,7 +14,48 @@ const Container = ({ id }) => {
 
     return ( 
         <div className={className}>
-            esto sera drive
+            <div className={styles.main}>
+                <div className={styles.info}>
+                    <text className={styles.maininfo}>Internxt </text>
+                    <text className={styles.subinfo}>drive</text>
+                </div>
+                
+                <text className={styles.title}>
+                    {description[0].title}
+                </text>
+
+                <text className={styles.subtitle}>
+                    {description[0].subtitle}
+                </text>
+            </div>
+
+            <div className={styles.secondary}>
+                <text className={styles.subtitle2}>
+                    {description[0].subtitle2}
+                </text>
+
+                <div className={styles.signup_container}>
+                    <form style={{display: "flex"}}>
+                        <input
+                            name='email'
+                            type='email'
+                            placeholder='Your email'
+                            className={styles.email}
+                        />
+
+                        <input
+                            name='signup'
+                            type='submit'
+                            title="Sign up"
+                            className={styles.button}
+                        />
+                    </form>
+                </div>
+
+                <text className={styles.subtitle3}>
+                    {description[0].subtitle3}
+                </text>
+            </div>
         </div>
     );
 }

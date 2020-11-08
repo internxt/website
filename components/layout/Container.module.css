@@ -1,0 +1,143 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding-top: 16px;
+}
+
+.secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.maininfo {
+    font-size: 25.7px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: -0.59px;
+    color: #1a1a1a;
+    margin: 0 5px 0 0;
+}
+
+.subinfo {
+    font-size: 25.7px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: -0.59px;
+    color: #1a1a1a;
+}
+
+.title {
+    font-size: 114px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.97;
+    letter-spacing: -0.59px;
+    text-align: center;
+    color: #2a2c35;
+    padding: 0 10% 0;
+}
+
+.subtitle {
+    font-size: 26px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #545465;
+
+    padding: 4rem 25% 0;
+}
+
+.subtitle2 {
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #2b2a35;
+
+    padding: 6rem 0 0;
+
+}
+
+.subtitle3 {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.38;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: #999999;
+
+    padding: 8px 0 1rem 0;
+}
+
+.signup_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 0;
+}
+
+.email {
+    width: 225px;
+    height: 50px;
+
+    border: solid 1px #dddfe5;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: 0;
+
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: #807f86;
+
+    padding: 0 0 0 1rem;
+}
+
+.button {
+    width: 154px;
+    height: 50px;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #0084ff;
+    outline: 0;
+
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.11;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: white;
+}
+
+.button:hover {
+    background-color: #0074e0;
+    cursor: pointer;
+}
+
