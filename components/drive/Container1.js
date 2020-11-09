@@ -2,9 +2,10 @@ import styles from './Container1.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
 import EmailNewsletter from '../EmailNewsletter'
 
-const Container = ({ id }) => {
+const Container1 = ({ id }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
+    
     // Check if a number is odd
     const isOdd = ( num ) => {
         return num % 2 == 1;
@@ -45,4 +46,4 @@ const Container = ({ id }) => {
     );
 }
  
-export default Container;
+export default Container1;
