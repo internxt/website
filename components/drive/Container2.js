@@ -1,6 +1,6 @@
 import styles from './Container2.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
-import PriceCard from '../layout/PriceCard'
+import PriceCard from '../PriceCard'
 
 const Container2 = ({ id }) => {
 
