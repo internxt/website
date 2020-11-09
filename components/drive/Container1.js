@@ -1,5 +1,6 @@
 import styles from './Container1.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
+import EmailNewsletter from '../EmailNewsletter'
 
 const Container = ({ id }) => {
 
@@ -34,23 +35,7 @@ const Container = ({ id }) => {
                     {description[0].subtitle2}
                 </text>
 
-                <div className={styles.signup_container}>
-                    <form style={{display: "flex"}}>
-                        <input
-                            name='email'
-                            type='email'
-                            placeholder='Your email'
-                            className={styles.email}
-                        />
-
-                        <input
-                            name='signup'
-                            type='submit'
-                            title="Sign up"
-                            className={styles.button}
-                        />
-                    </form>
-                </div>
+                <EmailNewsletter />
 
                 <text className={styles.subtitle3}>
                     {description[0].subtitle3}
