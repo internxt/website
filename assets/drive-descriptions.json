@@ -35,5 +35,16 @@
         "id": "6",
         "title": "Your Business in your hands.",
         "subtitle": "Internxt Drive for teams allows you and your team to store files with total security, collaborate privatly with other members and toggle your administration features."
-    }
+    },
+    {
+        "id": "7",
+        "title": "Is cloud the answer?",
+        "subtitle": "“A recent survey from Deloitte shows that blockchain is picking up steam.",
+        "subtitle2": "It’s simply a smarter way to take advantage of emerging technology and all that cloud has to offer: reliability, security and scalability. Deloitte survey reveals strong investment in blockchain.”",
+        "title2": "Analysis of the cloud",
+        "subtitle3": "“The research investigates the impact of distributed and centralized cloud architectures on security.",
+        "subtitle4": "Centralized clouds interlace core functions within the same space. If an error or attack manages to destabilize a centralized component, the entire cloud is at risk.”"
+    }   
+
+
 ]
