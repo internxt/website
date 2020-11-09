@@ -1,4 +1,4 @@
-import styles from './Container.module.css'
+import styles from './Container1.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
 
 const Container = ({ id }) => {

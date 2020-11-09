@@ -26,16 +26,13 @@
     {
         "id": "5",
         "title": "Secure. Private. Simple to use.",
-        "subtitle": "A functional and intuitive interface with a variety of different customizations and features, such as encrypted file sharing."
+        "subtitle": "A functional and intuitive interface with a variety of different customizations and features, such as encrypted file sharing.",
+        "title2": "Avaiable on all your devices.",
+        "subtitle3": "The files you keep secure on Internxt Drive are easy to get to.",
+        "subtitle4": "Access your files from our desktop app, Web browser app and our iOS or Android app."
     },
     {
         "id": "6",
-        "title": "Avaiable on all your devices.",
-        "subtitle": "The files you keep secure on Internxt Drive are easy to get to.",
-        "subtitle2": "Access your files from our desktop app, Web browser app and our iOS or Android app."
-    },
-    {
-        "id": "7",
         "title": "Your Business in your hands.",
         "subtitle": "Internxt Drive for teams allows you and your team to store files with total security, collaborate privatly with other members and toggle your administration features."
     }
