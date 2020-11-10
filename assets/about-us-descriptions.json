@@ -1,30 +1,104 @@
 [
     {
+        "id": "1",
         "title": "Internxt aims to enrich life through revolutionary technology.",
         "subtitle": ""
     },
     {
+        "id": "2",
         "title": "ASSOSCIATED WITH",
-        "subtitle": "Technology should empower each individual, not make them powerless to the corporation."
+        "subtitle": "Technology should empower each individual, not make them powerless to the corporation. Our intention is to offer a vast range of innovative technology services that doesn’t undermine the privacy of the individual.",
+        "subtitle2": "Internxt HQ at Lanzadera Valencia, Spain."
     },
     {
+        "id": "3",
         "title": "Internxt Leadership",
-        "subtitle": ""
+
+        "employee": "Fran Villalba Segarra",
+        "job": "Founder & CEO",
+
+        "employee2": "Alberto González",
+        "job2": "Chief Technology Officer",
+
+        "employee3": "Alejandra Arias",
+        "job3": "Chief Marketing Officer",
+
+        "employee4": "Aldimir Aleksandrov",
+        "job4": "Software Engineer",
+
+        "employee5": "Joan Mora",
+        "job5": "Software Engineer",
+
+        "employee6": "Desi Miroslavova",
+        "job6": "Software Engineer",
+        
+        "employee7": "Elena Garrigós",
+        "job7": "Software Engineer",
+
+        "employee8": "Zhihao Zhang",
+        "job8": "Software Engineer",
+
+        "employee9": "Ainhoa Ribes",
+        "job9": "Marketing Assistant",
+
+        "employee10": "Emi Filipova",
+        "job10": "Marketing Assistant"
     },
     {
+        "id": "4",
         "title": "Internxt Advisors",
-        "subtitle": ""
+
+        "employee": "Harrison Moore",
+        "job": "Creative Advisor",
+
+        "employee2": "Alex Sicart Ramos",
+        "job2": "Technical Advisor",
+
+        "employee3": "Jerome Albert",
+        "job3": "Strategy Advisor"
     },
     {
+        "id": "5",
         "title": "Internxt Investors",
-        "subtitle": ""
+
+        "company": "Esade Ban",
+        "info": "Investor of Cabify & Wallapop",
+
+        "company2": "Vodafone",
+        "info2": "Ex-directors of Vodafone",
+
+        "company3": "Telefonica",
+        "info3": "Ex-directors of Telefonica",
+
+        "company4": "Lanzadera",
+        "info4": "Investor of Zeleros & Airhopping",
+
+        "company5": "The Venture City",
+        "info5": "Investor of Returnly & Peoople"
     },
     {
+        "id": "6",
         "title": "Internxt Partners",
-        "subtitle": ""
+
+        "company": "Blackberry Partnership",
+        "bio1": "Innovation is profoundly changing the way business works as customers increasingly demand secure solutions.",
+        "bio2": "BlackBerry can help Internxt assess Encryption, Infrastructural vulnerabilities, Authentication and Data leak prevention.",
+
+        "company2": "Y Combinator Program",
+        "bio3": "Strartups are most productive when they can spend most of their time building.",
+        "bio4": "Y Combinators goal is to create an environment where we can focus exclusively on building products and talking to users on how to improve.",
+
+        "company3": "Lanzadera Accelerator",
+        "bio5": "Juan Roig is known for being the owner of Mercadona, one of the biggest European corporations.",
+        "bio6": "Internxt will receive the strategic help required to take Internxt to the next level. Lanzadera will also help Internxt cover any funding needs.",
+    
+        "company4": "500 Startups listing",
+        "bio7": "500 Startups is one of the most active venture capital firms in the world and has commited over $454M in investment globally.",
+        "bio8": "500 Startups have chosen Internxt as one of the top SAAS startups worldwide."
     },
     {
-        "title": "Latets Published Articles",
+        "id": "7",
+        "title": "Latest Published Articles",
         "subtitle": ""
     }
     
