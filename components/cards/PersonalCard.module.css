@@ -1,0 +1,51 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 339px;
+    height: 155px;
+    border-radius: 6px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
+    border: solid 1px #f0f0f0;
+    background-color: white;
+
+    margin: .5rem .25rem;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    padding: 24px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 0.87;
+    letter-spacing: -0.21px;
+    color: #2a2c35;
+}
+
+.job {
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: -0.19px;
+    color: #646473;
+
+    margin: 1rem 0 0;
+}
+
+.read_more {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    font-stretch: normal;
+    letter-spacing: 0.36px;
+    color: #9595a6;
+
+    margin: 6.5rem 0 0;
+}
