@@ -1,4 +1,4 @@
-import InfoCard from '../InfoCard'
+import InfoCard from '../cards/InfoCard'
 import styles from './Container7.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
 
