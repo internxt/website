@@ -4,5 +4,13 @@
         "title": "Find a plan that works for you",
         "subtitle": "One plan for complete use of all Internxt's secure services.",
         "subtitle2": "It's simple to upgrade in-app at any time."
+    },
+    {
+        "id": "2",
+        "title": "Privacy focused",
+        "title2": "End-to-end encryption.",
+        "title3": "Uncompromised security",
+        "title4": "Access anywhere",
+        "title5": "Try for free for 30 days!"
     }
 ]

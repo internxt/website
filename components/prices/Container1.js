@@ -1,12 +1,13 @@
 import styles from './Container1.module.css'
 import descriptions from '../../assets/prices-descriptions.json'
+import PriceCard from '../PriceCard'
 
 const Container1 = ({ id }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
     
     return ( 
-        <div className={styles.main_container}>
+        <div>
             <div className={styles.first_half}>
                 <text className={styles.title}>
                     {description[0].title}
@@ -31,8 +32,11 @@ const Container1 = ({ id }) => {
                 </div>
             </div>
             
-            <div className={styles.second_half}>
-
+            <div className={styles.cards_container}>
+                <PriceCard free="true" size={2} />
+                <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
+                <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
+                <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
             </div>
         </div>
      );

@@ -63,7 +63,7 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular }) => 
                     }
             </div>
             {
-                free ? null : <text className={styles.try_for_free}>Try for free for 30 days</text>
+                free ? <text className={styles.try_for_free}>Get started!</text> : <text className={styles.try_for_free}>Try for free for 30 days</text>
             }
         </div>
     );
