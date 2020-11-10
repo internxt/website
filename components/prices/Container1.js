@@ -1,6 +1,6 @@
 import styles from './Container1.module.css'
 import descriptions from '../../assets/prices-descriptions.json'
-import PriceCard from '../PriceCard'
+import PriceCard from '../cards/PriceCard'
 
 const Container1 = ({ id }) => {
 
