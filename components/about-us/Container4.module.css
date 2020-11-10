@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 8rem 0 5rem;
+}
+
+.title{
+    font-size: 60px;
+    font-weight: 800;
+    font-stretch: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #2a2c35;
+}
+
+.cards_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    padding: 4rem 0 0;
+}

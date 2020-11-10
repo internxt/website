@@ -1,0 +1,44 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.assosciated {
+    font-size: 17px;
+    font-weight: 600;
+    font-stretch: normal;
+    letter-spacing: 0.74px;
+    text-align: center;
+    color: #bbbbbb;
+
+    margin: 4rem 0 2rem 0;
+}
+
+.assosciated_logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 0 0 5rem;
+}
+
+.subtitle {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: -0.34px;
+    text-align: center;
+    color: #2a2c35;
+
+    margin: 0 12rem 5rem;
+}
+
+.subtitle2 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 2.69;
+    letter-spacing: -0.1px;
+    color: #646473;
+    text-align: center;
+}
