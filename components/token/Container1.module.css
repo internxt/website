@@ -1,0 +1,68 @@
+.main {
+    height: 922px;
+}
+
+.title {
+    font-size: 114px;
+    font-weight: 800;
+    line-height: 0.97;
+    letter-spacing: -0.59px;
+    text-align: center;
+    color: #2a2c35;
+
+    margin: 3rem 0 4rem;
+}
+
+.subtitle {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.46;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #545465;
+
+    width: 596px;
+}
+
+.buttons_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: 3rem 0 0;
+}
+
+.button {
+    width: 127px;
+    height: 37.6px;
+    border-radius: 18.8px;
+    box-shadow: 0 2px 8px 0 rgba(0, 132, 255, 0.2);
+    background-color: #0084ff;
+    outline: none;
+    border: none;
+
+    margin: 0 1rem 0 0;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #0072dd;
+}
+
+.button_text {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+}
+
+.learn_more {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.95;
+    letter-spacing: -0.1px;
+    color: #2a2c35;
+}

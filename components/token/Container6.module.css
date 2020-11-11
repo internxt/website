@@ -1,0 +1,124 @@
+
+
+.title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #2a2c35;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #545465;
+
+    margin: 1rem 0 7rem;
+}
+
+.card_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 84px 0 161px;
+}
+
+.card {
+    width: 284px;
+    height: 141px;
+    border-radius: 6px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
+    border: solid 1px #f0f0f0;
+    background-color: white;
+
+    margin: 0 5px 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 0 8rem 0;
+}
+
+.first_half {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.second_half {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: 0 0 2rem;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #545465;
+
+    margin: 0 0 .5rem 0;
+}
+
+.input {
+    width: 400px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.input2 {
+    width: 100%;
+    margin: 0 0 2rem;
+}
+
+.payment {
+    margin: 0 3rem 0 0;
+}
+
+.currency {
+    margin: 0 0 0 3rem;
+}
+
+.button {
+    width: 175px;
+    height: 45px;
+    border: 1px solid #f8f9fa;
+    background-color: #f8f9fa;
+    color: #212529;
+    border-radius: 50rem;
+}
+
+.button:hover {
+    background-color: #212529;
+    color:  #f8f9fa;
+    cursor: pointer;
+}

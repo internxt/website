@@ -1,0 +1,48 @@
+
+
+.title {
+    font-size: 60px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #2a2c35;
+
+    margin: 8rem 0 0;
+}
+
+.cards_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding: 3.2rem 3%;
+}
+
+.card {
+    height: 120px;
+    margin: 0 8% 4.3rem
+}
+
+.label {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #9397a9;
+}
+
+.data {
+    font-size: 53px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: black;
+
+    margin: 20px 0 0
+}

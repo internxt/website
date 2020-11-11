@@ -22,10 +22,23 @@ header {
   padding: 0.5rem 1rem 1rem;
 }
 
+p, h1{ 
+  margin: 0;
+}
+
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+input:disabled {
+  background-color: #e9ecef;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .grey {

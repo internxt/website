@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    flex-direction: row;
+
+    padding: 6.86rem 0;
+}
+
+.card_container {
+    margin: 0.6rem;
+}

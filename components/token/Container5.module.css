@@ -1,0 +1,80 @@
+.container { 
+    display: flex;
+    flex-direction: row;
+
+    padding: 0 0 0 161px;
+}
+
+.image_container {
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: 214px 4rem;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    color: #2a2c35;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #545465;
+
+    padding: 1.5rem 0 0;
+}
+
+.button_container {
+    display: flex;
+    flex-direction: row;
+
+    margin: 95px 0 0;
+}
+
+.button1 {
+    width: 147px;
+    height: 46px;
+    padding: 13px 19px 14px 26px;
+    border-top-left-radius: 24.8px;
+    border-bottom-left-radius: 24.8px;
+    background-color: #ff38a4;
+
+    margin: 0 1px 0 0;
+    outline: none;
+    border: none;
+
+    font-size: 17px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: white;
+}
+
+.button2 {
+    width: 147px;
+    height: 46px;
+    padding: 13px 19px 14px 26px;
+    border-top-right-radius: 24.8px;
+    border-bottom-right-radius: 24.8px;
+    background-color: #ff38a4;
+
+    outline: none;
+    border: none;
+
+    font-size: 17px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: white;
+}
