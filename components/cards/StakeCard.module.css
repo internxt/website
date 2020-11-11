@@ -1,0 +1,82 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 9px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
+    border: solid 1px #f0f0f0;
+    background-color: white;
+
+    padding: 38px 3.2rem 43px;
+    margin: 22px 10px 0;
+}
+
+.bundle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ff55b1;
+}
+
+.percentage_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.percentage {
+    font-size: 60px;
+    font-weight: 800;
+    font-stretch: normal;
+    letter-spacing: -1.26px;
+    text-align: center;
+    color: #2b2a35;
+
+    padding: 0 0 0 16px;
+}
+
+.percentage2 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.42px;
+    text-align: center;
+    color: #2b2a35;
+
+    padding: 1rem 0 0;
+}
+
+.per_year {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.39;
+    letter-spacing: -0.24px;
+    text-align: center;
+    color: #7f7f7f;
+}
+
+.inxt {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    border-radius: 23.4px;
+    background-color: #339dff;
+    color: white;
+    text-align: center;
+
+    padding: 8px 18px;
+    margin: 36px 0 0;
+}
+
+.get_started {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 2.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: #7f7f98;
+
+    margin: 0.7rem 0 0;
+}
