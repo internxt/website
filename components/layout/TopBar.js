@@ -17,7 +17,7 @@ const TopBar = () => {
 
                 <Link href="/about-us"><a  className={router.pathname === '/about-us' ? styles.active_link : styles.nonactive_link}>About</a></Link>
 
-                <Link href="/"><a className={styles.nonactive_link}>More</a></Link>
+                <Link href="/token"><a  className={router.pathname === '/token' ? styles.active_link : styles.nonactive_link}>Token</a></Link>
             </div>
 
             <div className={styles.links}>

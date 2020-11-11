@@ -1,59 +1,80 @@
 [
     {
+        "id": "1",
         "title": "An essential utility for everything we do.",
         "subtitle": "Start Staking your Internxt tokens, Inxt on Uniswap to earn up to 20% annual interest paid monthly."
     },
     {
-        "title": "Part of revenues are used",
-        "subtitle": "to market buy Inxt."
+        "id": "2",
+
+        "title": "Part of revenues are used to market buy Inxt.",
+        "subtitle": "",
+        "colored": "to market buy Inxt.",
+
+        "title4": "Inxt is used as payment",
+        "subtitle4": " to core storage providers",
+        "colored4": "",
+
+        "title2": "Hosts earn 10% more",
+        "subtitle2": " for holding Inxt",
+        "colored2": "",
+
+        "title5": "There is a total of 629,000 Inxt tokens in max supply",
+        "subtitle5": "", 
+        "colored5": "629,000",
+
+        "title3": "Greater Inxt staked, higher interest recieved",
+        "subtitle3": "",
+        "colored3": "higher interest recieved",
+
+        "title6": "Organic demand.",
+        "subtitle6": "Reliable growth",
+        "colored6": ""
     },
     {
-        "title": "Inxt is used as payment",
-        "subtitle": "to core storage providers"
-    },
-    {
-        "title": "Hosts earn 10% more",
-        "subtitle": "for storing Inxt"
-    },
-    {
-        "title": "There is a total of",
-        "subtitle": "629,000",
-        "subtitle2": "Inxt tokens in max supply"
-    },
-    {
-        "title": "Greater Inxt you stake",
-        "subtitle": "higher interest recieved"
-    },
-    {
-        "title": "Organic demand.",
-        "subtitle": "Reliable growth"
-    },
-    {
+        "id": "3",
         "title": "All the hard work has been done.",
         "subtitle": "Join our highly secure distributed infrastructure by providing storage space.",
         "subtitle2": "75% of data centers have unused storage space that result in high overheads. By joining our network you will be able to monotie that space by hosting users encrypted data."
     },
     {
+        "id": "4",
         "title": "Stake your Inxt tokens. Get paid.",
+        "colored": "Get paid.",
         "subtitle": "Stake your Internxt tokens on Uniswap to earn interest each month.",
         "subtitle2": "The highest staking rates avaiable on the market today.",
-        "subtitle3": "Get paid automatically each month, just add liquidity on Uniswap. The more liquidity you add, the more you will earn."
+        "subtitle3": "Get paid automatically each month, just add liquidity on Uniswap.",
+        "subtitle4": "The more liquidity you add, the more you will earn.",
+        "link": "Start staking your tokens"
     },
     {
+        "id": "5",
         "title": "Easy and secure way to trade Inxt",
         "subtitle": "Trade directly on Uniswap within the Coinbase Wallet iOS or Android app.",
         "subtitle2": "Connect your Coinbase Wallet on Uniswap by using the WalletLink feature in settings on the app and scan the QR code. Your tokens will then be avaiable to trade on Uniswap."
     },
     {
-        "title": "Buy direct with us",
-        "subtitle": "Our system tracks down and offers the best exchange rates avaiable on the market without the hassle of an exchange."
+        "id": "6",
+        "title": "Exchanges that trade Inxt",
+
+        "title2": "Buy direct with us",
+        "subtitle": "Our system tracks down and offers the best exchange rates available on the market without the hassle of an exchange."
     },
     {
+        "id": "7",
         "title": "Inxt token metrics",
-        "subtitle": ""
+        "label": "PRICE PER INXT",
+        "label2": "CHANGE / 24 HOURS",
+        "label3": "CHANGE / 7 DAYS",
+        "label4": "MARKET CAP",
+        "label5": "ALL-TIME HIGH MARKET CAP",
+        "label6": "ALL-TIME HIGH PRICE",
+        "label7": "24 HOUR VOLUME",
+        "label8": "CIRCULATING SUPPLY",
+        "label9": "MAXIMUM SUPPLY"
     },
     {
-        "title": "Inxt token performance",
-        "subtitle": ""
+        "id": "8",
+        "title": "Inxt token performance"
     }
 ]
