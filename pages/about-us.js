@@ -1,3 +1,5 @@
+import Axios from 'axios';
+import { parseString } from 'xml2js'
 import Container1 from '../components/about-us/Container1';
 import Container2 from '../components/about-us/Container2';
 import Container3 from '../components/about-us/Container3';
@@ -9,6 +11,7 @@ import Footer from '../components/layout/Footer';
 import TopBar from '../components/layout/TopBar'
 
 const AboutUs = () => {
+
     return ( 
         <>
             <TopBar />
@@ -23,6 +26,24 @@ const AboutUs = () => {
         </>
         
      );
+}
+
+export async function getStaticProps() {
+    const POSTS_URL = 'https://medium.com/feed/Internxt'
+
+    const data = Axios( POSTS_URL )
+        .then( res => {
+            console.log(res)
+            parseString(xml, ( err, res ) => {
+                JSON.parse(JSON.stringify(res.rss.channel))
+            })
+        })
+        .catch( err => console.log(err))
+
+    console.log(data)
+    return {
+        props: { data }
+    }
 }
  
 export default AboutUs;
