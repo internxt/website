@@ -7,6 +7,7 @@
     letter-spacing: 0.3px;
     text-align: center;
     color: #2a2c35;
+    margin: 5rem 0 0;
 }
 
 .cards_container {
@@ -14,12 +15,46 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+    margin: 84px 0 23rem;
+    z-index: 2;
 }
 
 .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 6px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
+    border: solid 1px #f0f0f0;
+    background-color: white;
+
     width: 220px;
     height: 141px;
-    margin: 0 20px 0 0;
-    padding: 56px 43px 56px 44px;
-    object-fit: contain;
+    margin: 0 10px 0 10px;
+    padding: 1rem;
+}
+
+.images {
+    position: relative;
+    width: 100%;
+}
+
+.left_image {
+    position: absolute;
+    left: 0;
+    top: 504%;
+    float: left;
+    z-index: 1;
+}
+
+.right_image {
+    position: absolute;
+    right: 0;
+    top: 523%;
+    float: right;
+    z-index: 2;
+
+    padding: 16rem 0 0;
 }

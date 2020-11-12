@@ -1,23 +1,23 @@
 .container { 
     display: flex;
     flex-direction: row;
-
-    padding: 0 0 0 161px;
+    padding: 0 80px;
+    align-items: center;
 }
 
 .image_container {
-    flex: 1;
+    position: relative;
 }
 
 .main {
     display: flex;
-    flex: 1;
     flex-direction: column;
 
     padding: 214px 4rem;
 }
 
 .title {
+    width: 511px;
     font-size: 60px;
     font-weight: 800;
     line-height: normal;
@@ -26,6 +26,7 @@
 }
 
 .subtitle {
+    width: 511px;
     font-size: 24px;
     font-weight: normal;
     line-height: 1.38;

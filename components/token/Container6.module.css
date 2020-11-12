@@ -1,8 +1,8 @@
 
 
 .title {
+    font-family: "averta-extrabold";
     font-size: 60px;
-    font-weight: 800;
     line-height: normal;
     letter-spacing: 0.3px;
     text-align: center;
@@ -10,13 +10,14 @@
 }
 
 .subtitle {
+    font-family: "averta";
     font-size: 24px;
-    font-weight: normal;
     line-height: 1.38;
     letter-spacing: normal;
     text-align: center;
     color: #545465;
 
+    max-width: 661px;
     margin: 1rem 0 7rem;
 }
 
@@ -27,9 +28,14 @@
     justify-content: center;
 
     margin: 84px 0 161px;
+    padding: 0 50rem;
 }
 
 .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 284px;
     height: 141px;
     border-radius: 6px;
@@ -38,6 +44,37 @@
     background-color: white;
 
     margin: 0 5px 10px;
+}
+
+.form_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images {
+    position: relative;
+    width: 100%;
+}
+
+.circle {
+    position: absolute;
+    right: 27%;
+    padding: 7rem 0 0;
+}
+
+.cube {
+    position: absolute;
+    left: -14%;
+    bottom: 1px;
+}
+
+.diamond {
+    position: absolute;
+    right: -66.8%;
+    top: 504%;
+    padding: 10rem 0 0;
 }
 
 .form {
@@ -71,8 +108,8 @@
 }
 
 .label {
+    font-family: "averta";
     font-size: 20px;
-    font-weight: normal;
     line-height: 1.38;
     letter-spacing: normal;
     text-align: left;
@@ -82,7 +119,7 @@
 }
 
 .input {
-    width: 400px;
+    width: 500px;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -115,6 +152,7 @@
     background-color: #f8f9fa;
     color: #212529;
     border-radius: 50rem;
+    font-family: "averta-light";
 }
 
 .button:hover {

@@ -29,6 +29,7 @@
 }
 
 .title {
+    font-family: "averta-extrabold";
     font-size: 46px;
     font-weight: 800;
     line-height: 1.15;
@@ -52,6 +53,7 @@
 }
 
 .text_button {
+    font-family: "averta-bold";
     font-size: 17px;
     font-weight: bold;
     line-height: normal;
@@ -61,6 +63,7 @@
 }
 
 .learn_more {
+    font-family: "averta-light";
     font-size: 13px;
     font-weight: normal;
     line-height: 2.92;
@@ -72,6 +75,7 @@
 }
 
 .keep_updated {
+    font-family: "Averta-semibold";
     font-size: 26px;
     font-weight: 600;
     line-height: 1.35;
@@ -99,6 +103,11 @@
 .text_container {
     display: flex;
     flex-direction: column;
+}
+
+.logo_container {
+    height: 22px;
+    width: 152px;
 }
 
 .logo {

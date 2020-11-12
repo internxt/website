@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import EmailNewsletter from '../EmailNewsletter'
 import styles from './Footer.module.css'
 
@@ -38,7 +39,15 @@ const Footer = () => {
 
                 <div className={styles.social_container}>
                     <div className={styles.text_container}>
-                        <text className={styles.logo}>INTERNXT</text>
+                        <div className={styles.logo_container}>
+                            <Image 
+                                src="/images/1440/Footer/Internxt.png"
+                                alt="INTERXT logo"
+                                width={298}
+                                height={32}
+                                quality={100}
+                            />
+                        </div>
                         <text className={styles.text_social}>Copyright &copy; 2020 Internxt Inc.</text>
                         <text className={styles.text_social}>All rights Reserved</text>
                     </div>
