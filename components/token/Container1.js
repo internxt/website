@@ -1,5 +1,6 @@
 import styles from './Container1.module.css'
 import descriptions from '../../assets/token-descriptions.json'
+import Image from 'next/image'
 
 const Container1 = ({ id }) => {
 
@@ -29,6 +30,16 @@ const Container1 = ({ id }) => {
                 </button>
                 
                 <a className={styles.learn_more}>Learn more</a>
+            </div>
+
+            <div className={styles.image_container}>
+                <div className={styles.image}>
+                    <Image
+                        src="/images/1440/Token/Section 1/Colours bg.png"
+                        width={1316}
+                        height={416}
+                    />
+                </div>
             </div>
         </div>
      );

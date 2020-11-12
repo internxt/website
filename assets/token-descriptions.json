@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "title": "An essential utility for everything we do.",
+        "title": "An essential utility for our services.",
         "subtitle": "Start Staking your Internxt tokens, Inxt on Uniswap to earn up to 20% annual interest paid monthly."
     },
     {
@@ -35,7 +35,8 @@
         "id": "3",
         "title": "All the hard work has been done.",
         "subtitle": "Join our highly secure distributed infrastructure by providing storage space.",
-        "subtitle2": "75% of data centers have unused storage space that result in high overheads. By joining our network you will be able to monotie that space by hosting users encrypted data."
+        "subtitle2": "75% of data centers have unused storage space that result in high overheads. By joining our network you will be able to monotie that space by hosting users encrypted data.",
+        "subtitle3": "Learn more about hosting"
     },
     {
         "id": "4",

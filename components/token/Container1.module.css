@@ -3,6 +3,7 @@
 }
 
 .title {
+    width: 949px;
     font-size: 114px;
     font-weight: 800;
     line-height: 0.97;
@@ -14,6 +15,7 @@
 }
 
 .subtitle {
+    width: 596px;
     font-size: 26px;
     font-weight: normal;
     line-height: 1.46;
@@ -51,18 +53,41 @@
 }
 
 .button_text {
+    font-family: "averta-light";
     font-size: 17px;
     font-weight: 600;
+    letter-spacing: 1.2px;
     line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: white;
 }
 
 .learn_more {
+    font-family: "averta";
     font-size: 17px;
     font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
     line-height: 1.95;
     letter-spacing: -0.1px;
     color: #2a2c35;
+}
+
+.image_container {
+    position: relative;
+    width: 100%;
+}
+
+.left_image {
+    position: absolute;
+    left: 0;
+    top: 504%;
+    float: left;
+    z-index: 1;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    padding: 14px 0 0;
 }

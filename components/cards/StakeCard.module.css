@@ -27,6 +27,7 @@
 }
 
 .percentage {
+    font-family: "averta-extrabold";
     font-size: 60px;
     font-weight: 800;
     font-stretch: normal;
@@ -63,8 +64,17 @@
     height: 36px;
     border-radius: 23.4px;
     background-color: #339dff;
-    color: white;
+
+    font-family: "averta-light";
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: -0.1px;
     text-align: center;
+    color: white;
+
 
     padding: 8px 18px;
     margin: 36px 0 0;

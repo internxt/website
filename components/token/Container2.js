@@ -1,6 +1,7 @@
 import styles from './Container2.module.css'
 import descriptions from '../../assets/token-descriptions.json'
 import TokenSmallCard from '../cards/TokenSmallCard'
+import Image from 'next/image'
 
 const Container2 = ({ id }) => {
     
@@ -25,6 +26,24 @@ const Container2 = ({ id }) => {
     return ( 
         <div className={background}>
             <div className={styles.main}>
+                <div className={styles.images_container}>
+                    <div className={styles.cube}>
+                        <Image
+                            src="/images/1440/Token/Section 2/left glass and cube.png"
+                            width={152}
+                            height={274}
+                        />   
+                    </div>
+
+                    <div className={styles.hoop}>
+                        <Image
+                            src="/images/1440/Token/Section 2/right hoop.png"
+                            width={167}
+                            height={303}
+                        />
+                    </div>
+                </div>
+
                 <div className={styles.card_container}>
                     <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
                     <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />

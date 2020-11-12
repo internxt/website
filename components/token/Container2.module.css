@@ -6,5 +6,25 @@
 }
 
 .card_container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     margin: 0.6rem;
+}
+
+.image_container {
+    position: relative;
+    width: 100%;
+}
+
+.cube {
+    position: absolute;
+    left: 0;
+    padding: 4rem 0 0;
+}
+
+.hoop {
+    position: absolute;
+    right: 0;
+    padding: 38rem 0rem 0 0;
 }

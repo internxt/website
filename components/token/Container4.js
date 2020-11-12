@@ -1,6 +1,7 @@
 import styles from './Container4.module.css'
 import descriptions from '../../assets/token-descriptions.json'
 import StakeCard from '../cards/StakeCard'
+import Image from 'next/image'
 
 const Container4 = ({ id }) => {
 
@@ -34,6 +35,25 @@ const Container4 = ({ id }) => {
 
     return ( 
         <div className={background}>
+
+            <div className={styles.image_container}>
+                <div className={styles.blue_coin}>
+                    <Image
+                        src="/images/1440/Token/Section 4/Coin blue.png"
+                        width={64}
+                        height={60}
+                    />
+                </div>
+                
+                <div className={styles.purple_coin}>
+                    <Image
+                        src="/images/1440/Token/Section 4/Coin purple.png"
+                        width={62}
+                        height={59}
+                    /> 
+                </div>
+            </div>
+
            <h1 className={styles.title}>
                {formattedText(description[0].title, description[0].colored)}
            </h1>
@@ -63,7 +83,6 @@ const Container4 = ({ id }) => {
            <a className={styles.link}>
                {description[0].link}
            </a>
-
         </div>
     );
 }

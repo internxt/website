@@ -55,6 +55,7 @@
     outline: none;
     border: none;
 
+    font-family: "averta-light";
     font-size: 17px;
     font-weight: normal;
     line-height: normal;
@@ -72,7 +73,8 @@
 
     outline: none;
     border: none;
-
+    
+    font-family: "averta-light";
     font-size: 17px;
     font-weight: normal;
     line-height: normal;

@@ -1,21 +1,24 @@
 .container { 
     display: flex;
     flex-direction: row;
+
+    padding: 144px 0 90px;
 }
 
 .image_container {
-    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .main {
     display: flex;
-    flex: 1;
     flex-direction: column;
 
-    padding: 214px 4rem;
+    padding: 0 0 0 112px;
 }
 
 .title {
+    width: 540px;
     font-size: 60px;
     font-weight: 800;
     line-height: normal;
@@ -24,6 +27,7 @@
 }
 
 .subtitle {
+    width: 540px;
     font-size: 24px;
     font-weight: normal;
     line-height: 1.38;
@@ -31,4 +35,16 @@
     color: #545465;
 
     padding: 1.5rem 0 0;
+}
+
+.link {
+    font-family: "averta-bold";    
+    font-size: 22px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.73;
+    letter-spacing: -0.21px;
+    color: #0084ff;
+
+    padding: 4rem 0 0;
 }

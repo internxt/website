@@ -1,5 +1,6 @@
 import styles from './Container3.module.css'
 import descriptions from '../../assets/token-descriptions.json'
+import Image from 'next/image'
 
 const Container3 = ({ id }) => {
 
@@ -18,21 +19,29 @@ const Container3 = ({ id }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={styles.image_container}>
-                    esto sera la imagen
+                    <Image
+                        src="/images/1440/Token/Section 3/floating girl.png"
+                        width={517}
+                        height={589}
+                    />
                 </div>
 
                 <div className={styles.main}>
-                    <text className={styles.title}>
+                    <h1 className={styles.title}>
                         {description[0].title}
-                    </text>
+                    </h1>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle}>
                         {description[0].subtitle}
-                    </text>
+                    </p>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle}>
                         {description[0].subtitle2}
-                    </text>
+                    </p>
+
+                    <p className={styles.link}>
+                        {description[0].subtitle3}
+                    </p>
                 </div>
             </div>
         </div>

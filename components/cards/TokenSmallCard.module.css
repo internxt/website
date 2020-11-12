@@ -2,19 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    height: fit-content;
     width: 370px;
     border-radius: 30px;
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
     border: solid 1px #f0f0f0;
     background-color: white;
 
-    padding: 47px 56px 47px 69px;
-    margin: 0 0 1.1rem 0;
+    padding: 3rem 0;
+    margin: 0 0 1rem;
 }
 
 .title {
+    width: 210px;
+    font-family: "averta-bold";
     font-size: 47.5px;
     font-weight: bold;
     font-stretch: normal;
@@ -25,6 +27,8 @@
 }
 
 .subtitle{
+    font-family: "averta-light";
+    width: 210px;
     font-size: 47.5px;
     font-weight: 300;
     line-height: 0.88;
