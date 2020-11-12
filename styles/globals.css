@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "averta";
+  src: url("/fonts/averta-regular.otf");
+  src: url("/fonts/averta-bold.otf");
+  src: url("/fonts/averta-light.otf");
+  src: url("/fonts/averta-black.otf");
+  src: url("/fonts/averta-semibold.otf");
+  src: url("/fonts/averta-extrabold.otf");
+}
+
+@font-face {
+  font-family: "averta-extrabold";
+  src: url("/fonts/averta-extrabold.otf");
+}
+
+@font-face {
+  font-family: "averta-bold";
+  src: url("/fonts/averta-bold.otf");
+}
+
+@font-face {
+  font-family: "averta";
+  src: url("/fonts/averta-regular.otf");
+}
+
+@font-face {
+  font-family: "averta-light";
+  src: url("/fonts/averta-light.otf");
+}
+
+@font-face {
+  font-family: "averta-semibold";
+  src: url("/fonts/averta-semibold.otf");
+}
+
+@font-face {
+  font-family: "averta-black";
+  src: url("/fonts/averta-black.otf");
+}
+
 html,
 body {
   padding: 0;
@@ -24,6 +64,14 @@ header {
 
 p, h1{ 
   margin: 0;
+}
+
+h1 {
+  font-family: "averta-extrabold";
+}
+
+p {
+  font-family: "averta";
 }
 
 input[type=number]::-webkit-outer-spin-button, 
