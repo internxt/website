@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .assosciated {
+    font-family: "averta";
     font-size: 17px;
     font-weight: 600;
     font-stretch: normal;
@@ -12,18 +14,21 @@
     text-align: center;
     color: #bbbbbb;
 
-    margin: 4rem 0 2rem 0;
+    margin: 4rem 0 4rem 0;
 }
 
 .assosciated_logos {
+    width: 88%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 
     margin: 0 0 5rem;
 }
 
 .subtitle {
+    width: 741px;
     font-size: 26px;
     font-weight: normal;
     line-height: 1.5;
@@ -34,6 +39,24 @@
     margin: 0 12rem 5rem;
 }
 
+.colored {
+    font-family: "averta-bold";
+}
+
+.photos {
+    width: 57%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6.6% 0;
+}
+
+.photo {
+    margin: 0 0 1rem;
+}
+
 .subtitle2 {
     font-size: 16px;
     font-weight: normal;
@@ -41,4 +64,6 @@
     letter-spacing: -0.1px;
     color: #646473;
     text-align: center;
+
+    margin: 1.5rem 0 0;
 }

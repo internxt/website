@@ -26,16 +26,16 @@ const Container3 = ({ id }) => {
             </text>
 
             <div className={styles.cards_container}>
-                <PersonalCard name={employee} job={job} />
-                <PersonalCard name={employee2} job={job2} />
-                <PersonalCard name={employee3} job={job3} />
-                <PersonalCard name={employee4} job={job4} />
-                <PersonalCard name={employee5} job={job5} />
-                <PersonalCard name={employee6} job={job6} />
-                <PersonalCard name={employee7} job={job7} />
-                <PersonalCard name={employee8} job={job8} />
-                <PersonalCard name={employee9} job={job9} />
-                <PersonalCard name={employee10} job={job10} />
+                <PersonalCard name={employee} job={job} picture="Fran" />
+                <PersonalCard name={employee2} job={job2} picture="Alberto" />
+                <PersonalCard name={employee3} job={job3} picture="Ale" />
+                <PersonalCard name={employee4} job={job4} picture="Ald" />
+                <PersonalCard name={employee5} job={job5} picture="Joan" />
+                <PersonalCard name={employee6} job={job6} picture="Desi" />
+                <PersonalCard name={employee7} job={job7} picture="Elena" />
+                <PersonalCard name={employee8} job={job8} picture="Joan" />
+                <PersonalCard name={employee9} job={job9} picture="Ain" />
+                <PersonalCard name={employee10} job={job10} picture="Emi" />
             </div>
         </div>
      );
