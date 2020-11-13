@@ -7,8 +7,9 @@
     {
         "id": "2",
         "title": "ASSOSCIATED WITH",
-        "subtitle": "Technology should empower each individual, not make them powerless to the corporation. Our intention is to offer a vast range of innovative technology services that doesn’t undermine the privacy of the individual.",
-        "subtitle2": "Internxt HQ at Lanzadera Valencia, Spain."
+        "subtitle": "Technology should [[empower]] each individual, not make them [[powerless]] to the corporation. Our [[intention]] is to offer a vast range of [[innovative]] technology services that doesn’t [[undermine]] the [[privacy]] of the individual.",
+        "subtitle2": "Internxt HQ at Lanzadera Valencia, Spain.",
+        "colored": ["empower", "powerless", "intention", "innovative", "undermine", "privacy"]
     },
     {
         "id": "3",
