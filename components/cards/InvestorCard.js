@@ -1,17 +1,27 @@
 import styles from './InvestorCard.module.css'
+import Image from 'next/image'
 
-const InvestorCard = ({ company, description }) => {
+const InvestorCard = ({ company, description, investor, w, h }) => {
+
+    const url = `/images/1440/About/Section 4/${investor}.png`
+
     return ( 
         <div className={styles.card}>
-            <text>vodafone</text>
+           <div className={styles.image}>
+                <Image
+                    src={url}
+                    width={w}
+                    height={h}
+                />
+            </div>
 
-            <text className={styles.name}>
+            <h1 className={styles.name}>
                 {company}
-            </text>
+            </h1>
 
-            <text className={styles.desc}>
+            <p className={styles.desc}>
                 {description}
-            </text>
+            </p>
         </div>
      );
 }

@@ -17,6 +17,7 @@ const PersonalCard = ({ name, job, picture }) => {
 
                 <text className={styles.read_more}>READ BIO</text>
             </div>
+            
             <div className={styles.image}>
                 <Image
                     src={url}

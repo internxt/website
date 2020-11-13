@@ -29,7 +29,7 @@ const Container2 = ({ id }) => {
     
                     return prev.concat(
                         values.includes(current)  ?
-                            <span key={i + current} className={styles.colored}>
+                            <span key={i + current} className={`${styles.colored}`}>
                                 {current}
                             </span>
                             : current
@@ -83,10 +83,9 @@ const Container2 = ({ id }) => {
                 
             </div>
 
-            <p className={styles.subtitle}>
+            <div className={styles.subtitle}>
                 {formattedText(description[0].subtitle, description[0].colored)}
-            </p>
-            
+            </div>
 
             <div className={styles.photos}>
                 <div className={styles.photo}>

@@ -21,10 +21,26 @@ const Container6 = ({ id }) => {
             </text>
 
             <div className={styles.card_container}>
-                <PartnerCard company={company} bio={bio1} bio2={bio2} blue={true} />
-                <PartnerCard company={company2} bio={bio3} bio2={bio4} blue={false} />
-                <PartnerCard company={company3} bio={bio5} bio2={bio6} blue={true} />
-                <PartnerCard company={company4} bio={bio7} bio2={bio8} blue={false} />
+                <PartnerCard 
+                    company={company} bio={bio1} bio2={bio2} blue={true} 
+                    logo="Blackberry logo" logoW={} logoH={} 
+                    image="" imageW={} imageH={} 
+                    />
+
+                <PartnerCard company={company2} bio={bio3} bio2={bio4} blue={false} 
+                    logo="" logoW={} logoH={} 
+                    image="" imageW={} imageH={} 
+                />
+                
+                <PartnerCard company={company3} bio={bio5} bio2={bio6} blue={true} 
+                    logo="" logoW={} logoH={} 
+                    image="" imageW={} imageH={} 
+                />
+
+                <PartnerCard company={company4} bio={bio7} bio2={bio8} blue={false} 
+                    logo="" logoW={} logoH={} 
+                    image="" imageW={} imageH={} 
+                />
             </div>
            
         </div>

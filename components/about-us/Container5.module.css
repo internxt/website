@@ -5,6 +5,8 @@
     letter-spacing: 0.3px;
     text-align: center;
     color: #2a2c35;
+
+    padding: 128px 0 0;
 }
 
 .card_container {
@@ -13,5 +15,5 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    padding: 4rem 0 0;
+    padding: 4rem 0 136px;
 }

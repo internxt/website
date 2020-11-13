@@ -19,9 +19,9 @@ const Container4 = ({ id }) => {
             </text>
 
             <div className={styles.cards_container}>
-                <PersonalCard name={employee} job={job} />
-                <PersonalCard name={employee2} job={job2} />
-                <PersonalCard name={employee3} job={job3} />
+                <PersonalCard name={employee} job={job} picture="Harrison" />
+                <PersonalCard name={employee2} job={job2} picture="Alex" />
+                <PersonalCard name={employee3} job={job3} picture="Jerome" />
             </div>
         </div>
      );

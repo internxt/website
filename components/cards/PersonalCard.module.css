@@ -12,11 +12,18 @@
 }
 
 .bio {
+    width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
 
-    padding: 24px;
+    padding: 6% 6% 0 24px;
+}
+
+.image {
+    display: flex;
+    justify-content: flex-end;
+    width: 55%;
 }
 
 .name {

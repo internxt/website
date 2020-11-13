@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 import styles from './PartnerCard.module.css'
+import Image from 'next/image'
 
-const PartnerCard = ({ company, bio, bio2, blue }) => {
+const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imageW, imageH }) => {
+
+    const logo = `/image/1440/About/Section 5/${logo}.png`
+    const image = `/image/1440/About/Section 5/${image}.png`
 
     const [ cardstyle, setCardstyle] = useState(`${styles.PartnerCard}`)
     const [ companystyle, setCompanystyle] = useState(`${styles.company}`)
@@ -24,25 +28,35 @@ const PartnerCard = ({ company, bio, bio2, blue }) => {
     return ( 
         <div className={cardstyle}>
             <div className={styles.content}>
-                <text>Blackberry</text>
+                <div className={styles.logo_container}>
+                    <Image
+                        src={url}
+                        width={logoW}
+                        height={logoH}
+                    />
+                </div>
 
-                <text className={companystyle}>
+                <h1 className={companystyle}>
                     {company}
-                </text>
+                </h1>
 
-                <text className={biostyle}>
+                <p className={biostyle}>
                     {bio}
-                </text>
+                </p>
 
-                <text className={biostyle}>
+                <p className={biostyle}>
                     {bio2}
-                </text>
+                </p>
 
-                <text className={readmorestyle}>Read more</text>
+                <p className={readmorestyle}>Read more</p>
             </div>
 
-            <div>
-                esto es la imagen
+            <div className={styles.image}>
+                    <Image
+                        src={url}
+                        width={imageW}
+                        height={imageH}
+                    />
             </div>
         </div>
      );
