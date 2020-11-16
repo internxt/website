@@ -40,6 +40,7 @@
 
 .bio {
     position: relative;
+    font-family: "averta-light";
     font-size: 17px;
     font-weight: normal;
     line-height: 1.69;
@@ -53,9 +54,13 @@
     position: absolute;
     margin: 22.5rem 0 0;
 
+    font-family: "averta";
     font-size: 16px;
     font-weight: 600;
     line-height: 2.07;
     letter-spacing: -0.15px;
     color: white;
+}
+
+.image {
 }

@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imageW, imageH }) => {
 
-    const logo = `/image/1440/About/Section 5/${logo}.png`
-    const image = `/image/1440/About/Section 5/${image}.png`
+    const logourl = `/images/1440/About/Section 5/${logo}.png`
+    const imageurl = `/images/1440/About/Section 5/${image}.png`
 
     const [ cardstyle, setCardstyle] = useState(`${styles.PartnerCard}`)
     const [ companystyle, setCompanystyle] = useState(`${styles.company}`)
@@ -30,7 +30,7 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imag
             <div className={styles.content}>
                 <div className={styles.logo_container}>
                     <Image
-                        src={url}
+                        src={logourl}
                         width={logoW}
                         height={logoH}
                     />
@@ -53,7 +53,7 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imag
 
             <div className={styles.image}>
                     <Image
-                        src={url}
+                        src={imageurl}
                         width={imageW}
                         height={imageH}
                     />
