@@ -1,10 +1,16 @@
 import styles from './InfoCard.module.css'
+import Image from 'next/image'
 
-const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2 }) => {
+const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2, image }) => {
+    
+    const url = `/images/1440/Drive/Section 7/${image}.png`
+
     return ( 
         <div className={styles.card_container}>
             <div className={styles.card}>
-                <text className={styles.logo}>esto es el logo</text>
+                <div className={styles.logo}>
+                    <Image src={url} width={137} height={27} />
+                </div>
 
                 <text className={styles.title}>
                     {title}

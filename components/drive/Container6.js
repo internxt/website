@@ -1,5 +1,6 @@
 import styles from './Container6.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
+import Image from 'next/image'
 
 const Container6 = ({ id }) => {
 
@@ -18,24 +19,24 @@ const Container6 = ({ id }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={styles.main}>
-                    <text className={styles.title}>
+                    <h1 className={styles.title}>
                         {description[0].title}
-                    </text>
+                    </h1>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle}>
                         {description[0].subtitle}
-                    </text>
+                    </p>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle}>
                         {description[0].subtitle2}
-                    </text>
+                    </p>
 
                     <a className={styles.link}>Check out plans for teams</a>
 
                 </div>
                 
-                <div className={styles.image_container}>
-                    esto sera la imagen
+                <div className={styles.image}>
+                    <Image src="/images/1440/Drive/Section 6/Business.png" width={708} height={754} />
                 </div>
             </div>
         </div>

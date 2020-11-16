@@ -1,5 +1,6 @@
 import styles from './Container4.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
+import Image from 'next/image'
 
 const Container4 = ({ id }) => {
 
@@ -18,21 +19,21 @@ const Container4 = ({ id }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={styles.main}>
-                    <text className={styles.title}>
+                    <h1 className={styles.title}>
                         {description[0].title}
-                    </text>
+                    </h1>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle}>
                         {description[0].subtitle}
-                    </text>
+                    </p>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle}>
                         {description[0].subtitle2}
-                    </text>
+                    </p>
                 </div>
                 
-                <div className={styles.image_container}>
-                    esto sera la imagen
+                <div className={styles.image}>
+                    <Image src="/images/1440/Drive/Section 4/logos graphic.png" width={493} height={472} />
                 </div>
             </div>
         </div>

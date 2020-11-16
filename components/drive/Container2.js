@@ -18,23 +18,25 @@ const Container2 = ({ id }) => {
     return ( 
         <div className={className}>
             <div className={styles.main}>
-                <text className={styles.title}>
+                <h1 className={styles.title}>
                     {description[0].title}
-                </text>
+                </h1>
 
-                <text className={styles.subtitle}>
+                <p className={styles.subtitle}>
                     {description[0].subtitle}
-                </text>
+                </p>
             </div>
 
             <div className={styles.cards_container}>
-                <PriceCard free="true" size={2} />
+                <PriceCard free="true" size={2} individual={true} />
                 <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
                 <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
                 <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
             </div>
 
-            <a className={styles.link}>Learn more about pricing</a>
+            <a className={styles.link}>
+                {description[0].link}
+            </a>
         </div>
     );
 }

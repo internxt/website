@@ -1,38 +1,43 @@
 .container { 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .container2 { 
     display: flex;
     flex-direction: row;
+    width: 100%;
+    padding: 158px 0 158px;
 }
 
-.image_container {
-    flex: 1;
+.hand {
+    width: 50%;
 }
 
 .main {
     display: flex;
-    flex: 1;
     flex-direction: column;
-
-    padding: 0 10% 0;
+    align-items: center;
 }
 
-.title {
+.title1 {
     font-size: 60px;
-    font-weight: 800;
-    line-height: normal;
     letter-spacing: 0.3px;
     color: #2a2c35;
-
-    padding: 126px 0 0;
 }
 
-.subtitle {
+.title2 {
+    max-width: 513px;
+    font-size: 60px;
+    letter-spacing: 0.3px;
+    color: #2a2c35;
+}
+
+.subtitle1 {
+    max-width: 687px;
     font-size: 24px;
-    font-weight: normal;
     line-height: 1.38;
     letter-spacing: normal;
     color: #545465;
@@ -40,17 +45,28 @@
     padding: 1.5rem 0 0;
 }
 
+.subtitle2{
+    max-width: 511px;
+    font-size: 24px;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #545465;
+    padding: 1rem 0 0;
+}
+
 .links {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2.5rem 0;
 }
 
 .link {
+    font-family: "averta-bold";
     font-size: 22px;
-    font-weight: bold;
     line-height: 1.73;
     letter-spacing: -0.21px;
-    text-align: center;
+    text-align: right;
     color: #0084ff;
-
-    margin: 5rem 2rem 0 0;
+    padding: 0 3rem 0 0;
 }

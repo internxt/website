@@ -1,5 +1,6 @@
 import styles from './Container5.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
+import Image from 'next/image'
 
 const Container5 = ({ id }) => {
 
@@ -18,45 +19,45 @@ const Container5 = ({ id }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={styles.main}>
-                    <text className={styles.title}>
+                    <h1 className={styles.title1}>
                         {description[0].title}
-                    </text>
+                    </h1>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle1}>
                         {description[0].subtitle}
-                    </text>
+                    </p>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle1}>
                         {description[0].subtitle2}
-                    </text>
+                    </p>
                 </div>
                 
-                <div className={styles.image_container}>
-                    esto sera la imagen
+                <div className={styles.interface}>
+                    <Image src="/images/1440/Drive/Section 5/Interface.png" width={1212} height={575} />
                 </div>
             </div>
 
             <div className={styles.container2}>
-                <div className={styles.image_container}>
-                    esto sera la imagen
+                <div className={styles.hand}>
+                    <Image src="/images/1440/Drive/Section 5/blue hand.png" width={590} height={423} />
                 </div>
 
                 <div className={styles.main}>
-                    <text className={styles.title}>
+                    <h1 className={styles.title2}>
                         {description[0].title2}
-                    </text>
+                    </h1>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle2}>
                         {description[0].subtitle2}
-                    </text>
+                    </p>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle2}>
                         {description[0].subtitle3}
-                    </text>
+                    </p>
 
-                    <text className={styles.subtitle}>
+                    <p className={styles.subtitle2}>
                         {description[0].subtitle4}
-                    </text>
+                    </p>
 
                     <div className={styles.links}>
                         <a className={styles.link}>Sign up</a>

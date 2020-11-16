@@ -10,8 +10,8 @@ const Container7 = ({ id }) => {
 
     return ( 
         <div className={styles.cards_container}>
-            <InfoCard title={title} subtitle={subtitle} subtitle2={subtitle2} linkText="Read more"/>
-            <InfoCard title={title2} subtitle={subtitle3} subtitle2={subtitle4} linkText="Read study 1.0" linkText2="Read study 2.0"/>
+            <InfoCard title={title} subtitle={subtitle} subtitle2={subtitle2} linkText="Read more" image="Deloitte" />
+            <InfoCard title={title2} subtitle={subtitle3} subtitle2={subtitle4} linkText="Read study 1.0" linkText2="Read study 2.0" image="IEEE" />
         </div>
      );
 }
