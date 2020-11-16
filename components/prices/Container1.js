@@ -9,25 +9,25 @@ const Container1 = ({ id }) => {
     return ( 
         <div>
             <div className={styles.first_half}>
-                <text className={styles.title}>
+                <h1 className={styles.title}>
                     {description[0].title}
-                </text>
+                </h1>
 
-                <text className={styles.subtitle}>
+                <p className={styles.subtitle}>
                     {description[0].subtitle}
-                </text>
+                </p>
 
-                <text className={styles.subtitle}>
+                <p className={styles.subtitle}>
                     {description[0].subtitle2}
-                </text>
+                </p>
 
                 <div className={styles.switch_container}>
                     <div className={styles.switch}>
-                        <text className={styles.text_switch}>For individuals</text>
+                        <p className={styles.text_switch}>For individuals</p>
                     </div>
 
                     <div className={styles.switch}>
-                        <text className={styles.text_switch}>For teams</text>
+                        <p className={styles.text_switch}>For teams</p>
                     </div>
                 </div>
             </div>

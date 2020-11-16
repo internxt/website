@@ -12,22 +12,6 @@ import Footer from '../components/layout/Footer'
 import React, { useEffect, useState } from 'react';
 
 const AboutUs = ( props ) => {
-
-    let images = []
-
-    const getImages = () => {
-
-        const regex = /<img src="(.*)" width=/
-        props.data.forEach(elem => {
-            const image = elem.description.match(regex)[1]
-            images.push(image)
-        })
-    }
-
-    useEffect(() => {
-        getImages()
-    }, [])
-
     return ( 
         <>
             <Container1 id='1'/>
@@ -36,7 +20,7 @@ const AboutUs = ( props ) => {
             <Container4 id='4'/>
             <Container5 id='5'/>
             <Container6 id='6'/>
-            <Container7 id='7' articles={props.data} images={images} />
+            <Container7 id='7' articles={props} />
             <Footer />
         </>
         
@@ -49,8 +33,16 @@ export async function getStaticProps() {
     const rss = await Feed.load(POSTS_URL)
     const data = rss.items
 
+    let images = []
+    
+    const regex = /<img src="(.*)" width=/
+    data.forEach(elem => {
+        const image = elem.description.match(regex)[1]
+        images.push(image)
+    })
+
     return {
-        props: { data }
+        props: { data, images }
     }
 }
 

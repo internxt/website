@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import styles from './PriceCard.module.css'
+import Image from 'next/image'
 
 const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular }) => {
     
@@ -27,44 +28,44 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular }) => 
 
     return ( 
         <div className={styles.card_container}>
+            {
+                free ? <p className={styles.try_for_free}>Get started!</p> : <p className={styles.try_for_free}>Try for free for 30 days</p>
+            }
             <div className={styles.card}>
-                { mostPopular ? <text className={styles.most_popular}>Most popular</text> : <div className={styles.void}></div> }
+                { mostPopular ? <p className={styles.most_popular}>Most popular</p> : <div className={styles.void}></div> }
 
-                    <text className={styles.size}>
+                    <p className={styles.size}>
                         {plansize}
-                    </text>
+                    </p>
 
                     {free ? 
                             <div className={styles.free_msg}>
-                                <text className={styles.text_free}>FREE</text>
+                                <h1 className={styles.text_free}>FREE</h1>
 
-                                <text className={styles.text_forever}>FOREVER & EVER</text>
+                                <h1 className={styles.text_forever}>FOREVER & EVER</h1>
                             </div>
                         :
                             <div className={styles.paid_container}>
                                 <div className={styles.background_pMonth}>
-                                    <text className={styles.pMonth}>
+                                    <p className={styles.pMonth}>
                                         €{pMonth} / month
-                                    </text>
+                                    </p>
                                 </div>
 
-                                <text className={styles.label}>Prepay 6 month</text>
-                                <text className={styles.pre_pay}>
+                                <p className={styles.label}>Prepay 6 month</p>
+                                <h1 className={styles.pre_pay}>
                                     €{pre6months} / month
-                                </text>
+                                </h1>
 
                                 <div className={styles.line}></div>
 
                                 <text className={styles.label}>Prepay 12 month</text>
-                                <text className={styles.pre_pay}>
+                                <h1 className={styles.pre_pay}>
                                     €{preYear} / month
-                                </text>
+                                </h1>
                             </div>
                     }
             </div>
-            {
-                free ? <text className={styles.try_for_free}>Get started!</text> : <text className={styles.try_for_free}>Try for free for 30 days</text>
-            }
         </div>
     );
 }
