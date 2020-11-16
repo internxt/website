@@ -146,3 +146,21 @@
 
     padding: 0 0 1rem;
 }
+
+.heart1 {
+    position: absolute;
+    padding: 2.5rem 0 0 0.5rem;
+    z-index: 1;
+}
+
+.heart2 {
+    position: absolute;
+    padding: 12rem 13rem 0;
+    z-index: 1;
+}
+
+.heart3 {
+    position: absolute;
+    padding: 22.4rem 1.5rem 0;
+    z-index: 1;
+}

@@ -1,33 +1,14 @@
 import styles from './Container2.module.css'
 import descriptions from '../../assets/prices-descriptions.json'
+import Image from 'next/image'
 
 const Container2 = ({ id }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
 
     return ( 
-        <div className={styles.main_container}>
-            <text className={styles.title}>
-                {description[0].title}
-            </text>
-
-            <text className={styles.title}>
-                {description[0].title2}
-            </text>
-
-            <text className={styles.title}>
-                {description[0].title3}
-            </text>
-
-            <text className={styles.title}>
-                {description[0].title4}
-            </text>
-
-            <text className={styles.title}>
-                {description[0].title5}
-            </text>
-
-            <text>esto sera la imagen</text>
+        <div className={styles.image}>
+           <Image src="/images/1440/Prices Individual/Text.png" width={915} height={989} />
         </div>
      );
 }

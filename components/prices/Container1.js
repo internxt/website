@@ -1,14 +1,36 @@
 import styles from './Container1.module.css'
 import descriptions from '../../assets/prices-descriptions.json'
 import PriceCard from '../cards/PriceCard'
+import Image from 'next/image'
+import { useState } from 'react'
 
 const Container1 = ({ id }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
+
+    const [ individual, setIndividual ] = useState(true)
+    const [ teams, setTeams ] = useState(false)
+    
+    const onClickIndividual = () => {
+        individual ? null : setIndividual(true); setTeams(false)
+    }
+
+    const onClickTeams = () => {
+        teams ? null : setTeams(true); setIndividual(false)
+    }
     
     return ( 
         <div>
             <div className={styles.first_half}>
+
+                <div className={styles.speech}>
+                    <Image src="/images/1440/Prices Individual/12.png" width={118} height={110} /> 
+                </div>
+
+                <div className={styles.letter}>
+                    <Image src="/images/1440/Prices Individual/13.png" width={112} height={121} /> 
+                </div>
+
                 <h1 className={styles.title}>
                     {description[0].title}
                 </h1>
@@ -22,22 +44,28 @@ const Container1 = ({ id }) => {
                 </p>
 
                 <div className={styles.switch_container}>
-                    <div className={styles.switch}>
-                        <p className={styles.text_switch}>For individuals</p>
-                    </div>
+                    <button onClick={onClickIndividual} className={individual ? `${styles.button} ${styles.grey}` : styles.button}>For individuals</button>
 
-                    <div className={styles.switch}>
-                        <p className={styles.text_switch}>For teams</p>
-                    </div>
+                    <button onClick={onClickTeams}  className={teams ? `${styles.button} ${styles.grey}` : styles.button}>For teams</button>
                 </div>
             </div>
             
-            <div className={styles.cards_container}>
-                <PriceCard free="true" size={2} />
-                <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
-                <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
-                <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
-            </div>
+            {
+                individual ?
+                    <div className={styles.cards_container}>
+                        <PriceCard free="true" size={2} individual={true} />
+                        <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
+                        <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
+                        <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
+                    </div>
+                :
+                    <div className={styles.cards_container}>
+                        <PriceCard size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" mostPopular="true" />
+                        <PriceCard size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" />
+                        <PriceCard size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" />
+                        <PriceCard free="true" size={2} individual={false} />
+                    </div>
+            }
         </div>
      );
 }

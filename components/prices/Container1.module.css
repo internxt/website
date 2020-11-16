@@ -7,6 +7,7 @@
 }
 
 .first_half {
+    position: relative;
     display: flex;
     flex-direction: column;     
     align-items: center;
@@ -48,26 +49,29 @@
     margin: 6rem 0 0;
 }
 
-.switch {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 173px;
     height: 45px;
     border-radius: 21.4px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
-    background-color: #fefffe;
-}
+    background-color: #f7f7f7;
 
-.text_switch {
+    font-family: "averta-bold";
     font-size: 17.1px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.84;
     letter-spacing: -0.28px;
     text-align: center;
     color: #22232b;
+
+    outline: none;
+    border: none;
+}
+
+.grey {
+    background-color: #fefffe;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
 }
 
 .cards_container {
@@ -76,4 +80,16 @@
     justify-content: space-around;
 
     padding: 4rem 6rem
+}
+
+.speech {
+    position: absolute;
+    left: 0;
+    padding: 9rem 0 0 23rem;
+}
+
+.letter {
+    position: absolute;
+    right: 0;
+    padding: 2rem 11rem 0;
 }

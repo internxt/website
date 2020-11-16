@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from 'react'
 import styles from './PriceCard.module.css'
 import Image from 'next/image'
 
-const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular }) => {
+const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, individual }) => {
     
     const [ plansize, setPlanSize ] = useState()
 
@@ -24,10 +24,29 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular }) => 
 
     useEffect(() => {
         setPlanSize(formatSize(size))
-    }, [])
+    }, [size])
 
     return ( 
         <div className={styles.card_container}>
+
+            {   mostPopular ?
+                    <>
+                        <div className={styles.heart1}>
+                            <Image src="/images/1440/Prices Individual/heart 1.png" width={25} height={25} /> 
+                        </div>
+
+                        <div className={styles.heart2}>
+                            <Image src="/images/1440/Prices Individual/heart 2.png" width={25} height={30} /> 
+                        </div>
+
+                        <div className={styles.heart3}>
+                            <Image src="/images/1440/Prices Individual/heart 3.png" width={37} height={36} /> 
+                        </div>
+                    </>
+                :
+                    null
+            }
+
             {
                 free ? <p className={styles.try_for_free}>Get started!</p> : <p className={styles.try_for_free}>Try for free for 30 days</p>
             }
@@ -40,9 +59,9 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular }) => 
 
                     {free ? 
                             <div className={styles.free_msg}>
-                                <h1 className={styles.text_free}>FREE</h1>
+                                <h1 className={styles.text_free}> { individual ? <span>FREE</span> : <span>CONTACT</span> } </h1>
 
-                                <h1 className={styles.text_forever}>FOREVER & EVER</h1>
+                                <h1 className={styles.text_forever}> { individual ? <span>FOREVER & EVER</span> : <span>TEAM FOR PRICING</span> } </h1>
                             </div>
                         :
                             <div className={styles.paid_container}>
