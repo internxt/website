@@ -7,3 +7,20 @@
     text-align: center;
     color: #2a2c35;
 }
+
+.card_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.link {
+    font-family: "averta-bold";
+    font-size: 22px;
+    line-height: 1.73;
+    letter-spacing: -0.21px;
+    text-align: right;
+    color: #0084ff;
+
+    margin: 5rem 0 137px;
+}

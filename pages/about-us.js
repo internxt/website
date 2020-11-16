@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { parseString } from 'xml2js'
+import Feed from 'rss-to-json'
 import Container1 from '../components/about-us/Container1'
 import Container2 from '../components/about-us/Container2'
 import Container3 from '../components/about-us/Container3'
@@ -8,9 +8,25 @@ import Container5 from '../components/about-us/Container5'
 import Container6 from '../components/about-us/Container6'
 import Container7 from '../components/about-us/Container7'
 import Footer from '../components/layout/Footer'
-import TopBar from '../components/layout/TopBar'
 
-const AboutUs = () => {
+import React, { useEffect, useState } from 'react';
+
+const AboutUs = ( props ) => {
+
+    let images = []
+
+    const getImages = () => {
+
+        const regex = /<img src="(.*)" width=/
+        props.data.forEach(elem => {
+            const image = elem.description.match(regex)[1]
+            images.push(image)
+        })
+    }
+
+    useEffect(() => {
+        getImages()
+    }, [])
 
     return ( 
         <>
@@ -20,29 +36,22 @@ const AboutUs = () => {
             <Container4 id='4'/>
             <Container5 id='5'/>
             <Container6 id='6'/>
-            <Container7 id='7'/>
+            <Container7 id='7' articles={props.data} images={images} />
             <Footer />
         </>
         
      );
 }
 
-/* export async function getStaticProps() {
+export async function getStaticProps() {
     const POSTS_URL = 'https://medium.com/feed/Internxt'
 
-    const data = Axios( POSTS_URL )
-        .then( res => {
-            console.log(res)
-            parseString(xml, ( err, res ) => {
-                JSON.parse(JSON.stringify(res.rss.channel))
-            })
-        })
-        .catch( err => console.log(err))
+    const rss = await Feed.load(POSTS_URL)
+    const data = rss.items
 
-    console.log(data)
     return {
         props: { data }
     }
-} */
- 
+}
+
 export default AboutUs;

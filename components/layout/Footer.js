@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import EmailNewsletter from '../EmailNewsletter'
 import styles from './Footer.module.css'
@@ -8,37 +7,35 @@ const Footer = () => {
         <>
             <div className={styles.first_half}>
                 <div className={styles.title_container}>
-                    <text className={styles.title}>A family of privacy focused services.</text>
+                    <h1 className={styles.title}>A family of privacy focused services.</h1>
 
-                    <text className={styles.title}>Get started free for 30 days.</text>
+                    <h1 className={styles.title}>Get started free for 30 days.</h1>
 
-                    <text>esto es la imagen</text>
+                    <div className={styles.image}>
+                        <Image src={'/images/1440/Footer/Line.png'} width={68} height={9} />
+                    </div>
                 </div>
 
                 <div className={styles.get_started_container}>
                     <button className={styles.button}>
-                        <text className={styles.text_button}>Get started</text>
+                        <p className={styles.p_button}>Get started</p>
                     </button>
 
-                    <text className={styles.learn_more}>Learn more about Internxt plans</text>
+                    <p className={styles.learn_more}>Learn more about Internxt plans</p>
                 </div>
             </div>
 
             <div className={styles.second_half}>
                 <div className={styles.signup_container}>
-                    <div style={{flex: 0.5}}>
-                        <text className={styles.keep_updated}>Keep me updated about products, news, tips and offers from Internxt.</text>
-                    </div>
+                    <p className={styles.keep_updated}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
-                    <div style={{flex: 0.5}}>
-                        <EmailNewsletter />
-                    </div>                    
+                    <EmailNewsletter />              
                 </div>
 
                 <div className={styles.line}></div>
 
                 <div className={styles.social_container}>
-                    <div className={styles.text_container}>
+                    <div className={styles.p_container}>
                         <div className={styles.logo_container}>
                             <Image 
                                 src="/images/1440/Footer/Internxt.png"
@@ -48,38 +45,38 @@ const Footer = () => {
                                 quality={100}
                             />
                         </div>
-                        <text className={styles.text_social}>Copyright &copy; 2020 Internxt Inc.</text>
-                        <text className={styles.text_social}>All rights Reserved</text>
+                        <p className={styles.p_social}>Copyright &copy; 2020 Internxt Inc.</p>
+                        <p className={styles.p_social}>All rights Reserved</p>
                     </div>
 
-                    <div className={styles.text_container}>
-                        <text className={styles.label}>Products</text>
-                        <text className={styles.text_social}>Internxt Drive</text>
-                        <text className={styles.text_social}>Internxt Photos</text>
-                        <text className={styles.text_social}>Internxt Send</text>
-                        <text className={styles.text_social}>Internxt Token</text>
-                        <text className={styles.text_social}>Internxt Core</text>
+                    <div className={styles.p_container}>
+                        <h1 className={styles.label}>Products</h1>
+                        <p className={styles.p_social}>Internxt Drive</p>
+                        <p className={styles.p_social}>Internxt Photos</p>
+                        <p className={styles.p_social}>Internxt Send</p>
+                        <p className={styles.p_social}>Internxt Token</p>
+                        <p className={styles.p_social}>Internxt Core</p>
                     </div>
 
-                    <div className={styles.text_container}>
-                        <text className={styles.label}>Company</text>
-                        <text className={styles.text_social}>About us</text>
-                        <text className={styles.text_social}>Pricing</text>
-                        <text className={styles.text_social}>Contact</text>
-                        <text className={styles.text_social}>Legals</text>
+                    <div className={styles.p_container}>
+                        <h1 className={styles.label}>Company</h1>
+                        <p className={styles.p_social}>About us</p>
+                        <p className={styles.p_social}>Pricing</p>
+                        <p className={styles.p_social}>Contact</p>
+                        <p className={styles.p_social}>Legals</p>
                     </div>
 
-                    <div className={styles.text_container}>
-                        <text className={styles.label}>Follow us</text>
-                        <text className={styles.text_social}>Twitter</text>
-                        <text className={styles.text_social}>Telegram</text>
-                        <text className={styles.text_social}>Github</text>
+                    <div className={styles.p_container}>
+                        <h1 className={styles.label}>Follow us</h1>
+                        <p className={styles.p_social}>Twitter</p>
+                        <p className={styles.p_social}>Telegram</p>
+                        <p className={styles.p_social}>Github</p>
                     </div>
 
-                    <div className={styles.text_container}>
-                        <text className={styles.label}>Join</text>
-                        <text className={styles.text_social}>Sign in</text>
-                        <text className={styles.text_social}>Get started</text>
+                    <div className={styles.p_container}>
+                        <h1 className={styles.label}>Join</h1>
+                        <p className={styles.p_social}>Sign in</p>
+                        <p className={styles.p_social}>Get started</p>
                     </div>
                 </div>
             </div>

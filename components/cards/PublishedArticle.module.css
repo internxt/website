@@ -1,0 +1,57 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 471px;
+    width: 355px;
+    margin: 1rem;
+
+    padding: 14px 24px 29px 24px;
+    border-radius: 6px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
+    border: solid 1px #f0f0f0;
+    background-color: white;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+}
+
+.description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    position: relative;
+    font-family: "averta-light";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 2.75;
+    letter-spacing: 0.2px;
+    color: #646473;
+}
+
+.title {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.21;
+    letter-spacing: -0.3px;
+    color: #2a2c35;
+
+    margin: 8px 0 0;
+}
+
+.link {
+    position: absolute;
+    margin: 8.5rem 0 0;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    color: #0084ff;
+}
