@@ -1,7 +1,7 @@
 import styles from './InfoCard.module.css'
 import Image from 'next/image'
 
-const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2, image }) => {
+const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2, image, width, heigth }) => {
     
     const url = `/images/1440/Drive/Section 7/${image}.png`
 
@@ -9,20 +9,20 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2, image }) =>
         <div className={styles.card_container}>
             <div className={styles.card}>
                 <div className={styles.logo}>
-                    <Image src={url} width={137} height={27} />
+                    <Image src={url} width={width} height={heigth} />
                 </div>
 
-                <text className={styles.title}>
+                <h1 className={styles.title}>
                     {title}
-                </text>
+                </h1>
 
-                <text className={styles.subtitle}>
+                <p className={styles.subtitle}>
                     {subtitle}
-                </text>
+                </p>
 
-                <text className={styles.subtitle}>
+                <p className={styles.subtitle}>
                     {subtitle2}
-                </text>
+                </p>
 
                 <div className={styles.links_container}>
                     <a className={styles.link}>

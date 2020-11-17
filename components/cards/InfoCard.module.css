@@ -4,6 +4,7 @@
 }
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 489px;
@@ -13,26 +14,28 @@
     border: solid 1px #f0f0f0;
     background-color: white;
 
-    padding: 53px 62px 1rem;
+    padding: 3rem 0 0 3.5rem;
     margin: 0 1rem;
 }
 
 .logo {
-    width: 137px;
-    height: 29.8px;
+    position: absolute;
+    top: 0;
+    margin: 2rem 0 0;
 }
 
 .title {
+    font-family: "averta";
     font-size: 35px;
-    font-weight: bold;
     line-height: 1.15;
     letter-spacing: -0.35px;
     color: #2a2c35;
 
-    margin: 1rem 0 0;
+    margin: 2.5rem 0 0;
 }
 
 .subtitle {
+    max-width: 390px;
     font-size: 19px;
     font-weight: normal;
     line-height: 1.58;
