@@ -22,17 +22,37 @@ const Container1 = ({ id }) => {
     return ( 
         <div>
             <div className={styles.first_half}>
+                {
+                    !individual ? 
+                    <div>
+                        <div className={styles.speech}>
+                            <Image src="/images/1440/Prices Individual/12.png" width={118} height={110} /> 
+                        </div>
 
-                <div className={styles.speech}>
-                    <Image src="/images/1440/Prices Individual/12.png" width={118} height={110} /> 
-                </div>
+                        <div className={styles.letter}>
+                            <Image src="/images/1440/Prices Individual/13.png" width={112} height={121} /> 
+                        </div>
+                    </div>
+                    :
+                    <div>
+                        <div className={styles.face}>
+                            <Image src="/images/1440/Prices Teams/14.png" width={66} height={67} /> 
+                        </div>
 
-                <div className={styles.letter}>
-                    <Image src="/images/1440/Prices Individual/13.png" width={112} height={121} /> 
-                </div>
+                        <div className={styles.star}>
+                            <Image src="/images/1440/Prices Teams/15.png" width={39} height={41} /> 
+                        </div>
+
+                        <div className={styles.mail}>
+                            <Image src="/images/1440/Prices Teams/16.png" width={114} height={75} /> 
+                        </div>
+                    </div>
+                }
 
                 <h1 className={styles.title}>
-                    {description[0].title}
+                    {
+                        individual ? description[0].individual_title : description[0].teams_title
+                    }
                 </h1>
 
                 <p className={styles.subtitle}>

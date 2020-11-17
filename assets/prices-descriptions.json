@@ -1,7 +1,8 @@
 [
     {
         "id": "1",
-        "title": "Find a plan that works for you",
+        "individual_title": "Find a plan that works for you",
+        "teams_title": "Plans that work for every team",
         "subtitle": "One plan for complete use of all Internxt's secure services.",
         "subtitle2": "It's simple to upgrade in-app at any time."
     },

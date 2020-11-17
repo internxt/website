@@ -78,7 +78,7 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
 
                                 <div className={styles.line}></div>
 
-                                <text className={styles.label}>Prepay 12 month</text>
+                                <p className={styles.label}>Prepay 12 month</p>
                                 <h1 className={styles.pre_pay}>
                                     €{preYear} / month
                                 </h1>
