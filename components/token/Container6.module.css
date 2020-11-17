@@ -28,7 +28,7 @@
     justify-content: center;
 
     margin: 84px 0 161px;
-    padding: 0 50rem;
+    padding: 0 8rem 0;
 }
 
 .card {
@@ -47,7 +47,6 @@
 }
 
 .form_container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,20 +59,19 @@
 
 .circle {
     position: absolute;
-    right: 27%;
-    padding: 7rem 0 0;
+    right: 0;
+    padding: 7rem 5rem 0 0;
 }
 
 .cube {
     position: absolute;
-    left: -14%;
-    bottom: 1px;
+    left: 0;
+    margin: 0 0 0 8rem;
 }
 
 .diamond {
     position: absolute;
-    right: -66.8%;
-    top: 504%;
+    right: 0;
     padding: 10rem 0 0;
 }
 

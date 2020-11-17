@@ -1,0 +1,49 @@
+{
+    "status": {
+        "timestamp": "2020-11-17T09:17:54.093Z",
+        "error_code": 0,
+        "error_message": null,
+        "elapsed": 20,
+        "credit_count": 1,
+        "notice": null
+    },
+    "data": {
+        "INXT": {
+            "id": 2022,
+            "name": "Internxt",
+            "symbol": "INXT",
+            "slug": "internxt",
+            "num_market_pairs": 6,
+            "date_added": "2017-10-07T00:00:00.000Z",
+            "tags": [
+                "distributed-computing",
+                "filesharing"
+            ],
+            "max_supply": 629610,
+            "circulating_supply": 629609.543,
+            "total_supply": 629609.543,
+            "platform": {
+                "id": 1027,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xa8006c4ca56f24d6836727d106349320db7fef82"
+            },
+            "is_active": 1,
+            "cmc_rank": 1282,
+            "is_fiat": 0,
+            "last_updated": "2020-11-17T09:16:07.000Z",
+            "quote": {
+                "EUR": {
+                    "price": 1.029256465296038,
+                    "volume_24h": 83909.00348890574,
+                    "percent_change_1h": -10.32888185,
+                    "percent_change_24h": -16.91940133,
+                    "percent_change_7d": -17.83476081,
+                    "market_cap": 648029.6927448338,
+                    "last_updated": "2020-11-17T09:16:57.000Z"
+                }
+            }
+        }
+    }
+}

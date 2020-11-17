@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    margin: 84px 0 23rem;
+    margin: 84px 0 12rem;
     z-index: 2;
 }
 
@@ -44,17 +44,13 @@
 .left_image {
     position: absolute;
     left: 0;
-    top: 504%;
-    float: left;
+    margin: 8rem 0 0;
     z-index: 1;
 }
 
 .right_image {
     position: absolute;
     right: 0;
-    top: 523%;
-    float: right;
+    margin: 17rem 0 0;
     z-index: 2;
-
-    padding: 16rem 0 0;
 }

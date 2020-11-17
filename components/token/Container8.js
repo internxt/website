@@ -17,22 +17,20 @@ const Container8 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={styles.images}>
-                <div className={styles.left_image}>
-                    <Image
-                        src="/images/1440/Token/Section 6/Left graph.png"
-                        width={1086}
-                        height={420}
-                    />
-                </div>
+            <div className={styles.left_image}>
+                <Image
+                    src="/images/1440/Token/Section 6/Left graph.png"
+                    width={600}
+                    height={242}
+                />
+            </div>
 
-                <div className={styles.right_image}>
-                    <Image
-                        src="/images/1440/Token/Section 6/Right graph.png"
-                        width={1068}
-                        height={420}
-                    />
-                </div>
+            <div className={styles.right_image}>
+                <Image
+                    src="/images/1440/Token/Section 6/Right graph.png"
+                    width={600}
+                    height={236}
+                />
             </div>
             
             <h1 className={styles.title}>

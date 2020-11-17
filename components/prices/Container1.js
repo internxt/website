@@ -11,6 +11,7 @@ const Container1 = ({ id }) => {
     const [ individual, setIndividual ] = useState(true)
     const [ teams, setTeams ] = useState(false)
     
+    // ESTO SE PUEDE OPTIMIZAR, onClickTeams SOBRA, CON UNA VARIABLE ES SUFICIENTE
     const onClickIndividual = () => {
         individual ? null : setIndividual(true); setTeams(false)
     }

@@ -84,22 +84,20 @@ const Container6 = ({ id }) => {
             </div>
 
             <div className={styles.form_container}>
-                <div className={styles.images}>
-                    <div className={styles.diamond}>
-                        <Image 
-                            src="/images/1440/Token/Section 5/right diamond.png"
-                            width={109}
-                            height={117}
-                        />
-                    </div>
-                    
-                    <div className={styles.cube}>
-                        <Image 
-                            src="/images/1440/Token/Section 5/left cube.png"
-                            width={84}
-                            height={89}
-                        />
-                    </div>
+                <div className={styles.diamond}>
+                    <Image 
+                        src="/images/1440/Token/Section 5/right diamond.png"
+                        width={109}
+                        height={117}
+                    />
+                </div>
+                
+                <div className={styles.cube}>
+                    <Image 
+                        src="/images/1440/Token/Section 5/left cube.png"
+                        width={84}
+                        height={89}
+                    />
                 </div>
                 
                 <h1 className={styles.title}>
