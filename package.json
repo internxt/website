@@ -14,6 +14,11 @@
     "react-dom": "17.0.1",
     "rss-to-json": "^1.1.1",
     "styled-components": "^5.2.1",
+    "tailwindcss": "^1.9.6",
     "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "postcss-preset-env": "^6.7.0",
+    "purgecss": "^3.0.0"
   }
 }
