@@ -11,8 +11,12 @@ const TopBar = () => {
             <Link href="/" ><a className={styles.logo}>INTERNXT</a></Link>
 
             <div >
-                <Link href="/"><a className={router.pathname === '/' ? styles.active_link : styles.nonactive_link}>Internxt Drive</a></Link>
+                <Link href="/"><a className={router.pathname === '/' ? styles.active_link : styles.nonactive_link}>Drive</a></Link>
 
+                <Link href="/photos"><a className={router.pathname === '/photos' ? styles.active_link : styles.nonactive_link}>Photos</a></Link>
+                
+                <Link href="/"><a className={router.pathname === '/send' ? styles.active_link : styles.nonactive_link}>Send</a></Link>
+                
                 <Link href="/prices"><a className={router.pathname === '/prices' ? styles.active_link : styles.nonactive_link}>Pricing</a></Link>
 
                 <Link href="/about-us"><a  className={router.pathname === '/about-us' ? styles.active_link : styles.nonactive_link}>About</a></Link>

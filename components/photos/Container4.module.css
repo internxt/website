@@ -1,0 +1,39 @@
+.container { 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 117px 0 0;
+    width: 50%;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    width: 582px;
+    font-size: 60px;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    color: #2a2c35;
+}
+
+.subtitle {
+    max-width: 511px;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #545465;
+
+    padding: 1.5rem 0 0;
+}
