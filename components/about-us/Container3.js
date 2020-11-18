@@ -21,11 +21,11 @@ const Container3 = ({ id }) => {
 
     return ( 
         <div className={styles.main}>
-            <text className={styles.title}>
+            <text className={`${styles.title} lg:text-5xl`}>
                 {description[0].title}
             </text>
 
-            <div className={styles.cards_container}>
+            <div className={`grid grid-cols-6 gap-4 lg:px-32 lg:pt-12`}>
                 <PersonalCard name={employee} job={job} picture="Fran" />
                 <PersonalCard name={employee2} job={job2} picture="Alberto" />
                 <PersonalCard name={employee3} job={job3} picture="Ale" />

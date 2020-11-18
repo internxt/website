@@ -8,12 +8,3 @@
 
     padding: 128px 0 0;
 }
-
-.card_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    padding: 4rem 5rem 136px;
-}

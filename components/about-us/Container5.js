@@ -25,11 +25,11 @@ const Container5 = ({ id }) => {
 
     return ( 
         <div className={className}>
-            <text className={styles.title}>
+            <text className={`${styles.title} lg:text-5xl lg:pt-20`}>
                 {title}
             </text>
             
-            <div className={styles.card_container}>
+            <div className="grid grid-cols-6 gap-16 lg:px-32 lg:pt-12 lg:pb-32">
                 <InvestorCard company={company} description={info} investor="Esade" w={125} h={38} />
                 <InvestorCard company={company2} description={info2} investor="Vodafone" w={192} h={48} />
                 <InvestorCard company={company3} description={info3} investor="Telefonica" w={192} h={53} />

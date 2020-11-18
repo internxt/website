@@ -6,24 +6,11 @@
     padding: 8rem 0 5rem;
 }
 
-.title{
+.title {
+    font-family: "averta-extrabold";
     font-size: 60px;
-    font-weight: 800;
     font-stretch: normal;
     letter-spacing: 0.3px;
     text-align: center;
     color: #2a2c35;
-}
-
-.cards_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    padding: 4rem 0 0;
-}
-
-.cards {
-    
 }

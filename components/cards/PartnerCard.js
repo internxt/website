@@ -26,9 +26,9 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imag
     }, [])
 
     return ( 
-        <div className={cardstyle}>
+        <div className={`${cardstyle} lg:h-96`}>
             <div className={styles.content}>
-                <div className={styles.logo_container}>
+                <div>
                     <Image
                         src={logourl}
                         width={logoW}
@@ -36,27 +36,27 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imag
                     />
                 </div>
 
-                <h1 className={companystyle}>
+                <h1 className={`${companystyle} lg:text-2xl`}>
                     {company}
                 </h1>
 
-                <p className={biostyle}>
+                <p className={`${biostyle} lg:text-sm lg:mb-4`}>
                     {bio}
                 </p>
 
-                <p className={biostyle}>
+                <p className={`${biostyle} lg:text-sm lg:mb-0`}>
                     {bio2}
                 </p>
 
-                <p className={readmorestyle}>Read more</p>
+                <p className={`${readmorestyle} lg:text-sm lg:`}>Read more</p>
             </div>
 
-            <div className={styles.image}>
-                    <Image
-                        src={imageurl}
-                        width={imageW}
-                        height={imageH}
-                    />
+            <div>
+                <Image
+                    src={imageurl}
+                    width={imageW}
+                    height={imageH}
+                />
             </div>
         </div>
      );

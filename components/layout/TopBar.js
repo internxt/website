@@ -42,5 +42,5 @@ const TopBar = () => {
         </header>
      );
 }
- 
+
 export default TopBar;

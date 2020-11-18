@@ -16,9 +16,9 @@ const Container6 = ({ id }) => {
 
     return ( 
         <div className={styles.main}>
-            <text className={styles.title}>
+            <h1 className={`${styles.title} lg:text-5xl lg:pt-20 lg:pb-8`}>
                 {title}
-            </text>
+            </h1>
 
             <div className={styles.card_container}>
                 <PartnerCard 

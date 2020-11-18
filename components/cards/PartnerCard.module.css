@@ -17,6 +17,7 @@
   }
 
 .content {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -25,8 +26,8 @@
 }
 
 .company {
+    font-family: "averta-bold";
     font-size: 30px;
-    font-weight: bold;
     line-height: 1.34;
     letter-spacing: -0.3px;
     color: white;
@@ -52,15 +53,10 @@
 
 .read_more {
     position: absolute;
-    margin: 22.5rem 0 0;
-
+    bottom: 0;
     font-family: "averta";
     font-size: 16px;
-    font-weight: 600;
     line-height: 2.07;
     letter-spacing: -0.15px;
     color: white;
-}
-
-.image {
 }

@@ -43,7 +43,7 @@
     font-family: "averta-bold";
 }
 
-.photos {
+.photoss {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

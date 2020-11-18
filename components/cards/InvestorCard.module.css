@@ -1,25 +1,13 @@
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 339px;
-    height: 155px;
-
-    margin: 0 .25rem 5rem;
-}
-
-.image {
-    width: 339px;
-    height: 20%;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .name {
-    font-family: "averta";
+    font-family: "averta-bold";
     font-size: 20px;
-    font-weight: bold;
     line-height: 1.65;
     letter-spacing: -0.1px;
     text-align: center;
@@ -29,8 +17,8 @@
 }
 
 .desc {
+    font-family: "averta";
     font-size: 18px;
-    font-weight: normal;
     line-height: 1.83;
     letter-spacing: -0.1px;
     text-align: center;

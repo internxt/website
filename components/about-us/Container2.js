@@ -40,55 +40,67 @@ const Container2 = ({ id }) => {
 
     return ( 
         <div className={styles.main}>
-            <h1 className={styles.assosciated}>
+            <h1 className={`${styles.assosciated} lg:text-sm lg:mb-12`}>
                 {description[0].title}
             </h1>
 
-            <div className={styles.assosciated_logos}>
-                <Image
-                    src="/images/1440/About/Section 2/lanzadera.png"
-                    width={177}
-                    height={23}
-                />
-
-                <Image
-                    src="/images/1440/About/Section 2/stripe.png"
-                    width={104}
-                    height={43}
-                />
-
-                <Image
-                    src="/images/1440/About/Section 2/500.png"
-                    width={71}
-                    height={71}
-                />
-
-                <Image
-                    src="/images/1440/About/Section 2/venture.png"
-                    width={235}
-                    height={42}
-                />
+            <div className={`${styles.assosciated_logos} lg:mb-12`}>
+                <div className="flex items-center lg:w-32">
+                    <Image
+                        src="/images/1440/About/Section 2/lanzadera.png"
+                        width={177}
+                        height={23}
+                    />
+                </div>
                 
-                <Image
-                    src="/images/1440/About/Section 2/blackberry.png"
-                    width={179}
-                    height={31}
-                />
+                <div className="flex items-center lg:w-20">
+                    <Image
+                        src="/images/1440/About/Section 2/stripe.png"
+                        width={104}
+                        height={43}
+                    />
+                </div>
 
-                <Image
-                    src="/images/1440/About/Section 2/combinator.png"
-                    width={160}
-                    height={34}
-                />
+                <div className="flex items-center lg:w-16">
+                    <Image
+                        src="/images/1440/About/Section 2/500.png"
+                        width={71}
+                        height={71}
+                    />
+                </div>
+
+                <div className="flex items-center lg:w-48">
+                    <Image
+                        src="/images/1440/About/Section 2/venture.png"
+                        width={235}
+                        height={42}
+                    />
+                </div>
+                
+                <div className="flex items-center lg:w-32">
+                    <Image
+                        src="/images/1440/About/Section 2/blackberry.png"
+                        width={179}
+                        height={31}
+                    />
+                </div>
+
+                <div className="flex items-center lg:w-32">
+                    <Image
+                        src="/images/1440/About/Section 2/combinator.png"
+                        width={160}
+                        height={34}
+                    />
+                </div>
                 
             </div>
 
-            <div className={styles.subtitle}>
+            <div className={`${styles.subtitle} lg:text-xl lg:w-120 lg:mb-16`}>
                 {formattedText(description[0].subtitle, description[0].colored)}
             </div>
 
-            <div className={styles.photos}>
-                <div className={styles.photo}>
+            <div className={`${styles.photos} grid grid-cols-6 gap-4 lg:px-24`}>
+                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
                     <Image
                         src="/images/1440/About/Section 2/programming.png"
                         width={365}
@@ -97,7 +109,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={styles.photo}>
+                <div className={`${styles.photo} lg:col-span-4 xl:col-span-4`}>
                     <Image
                         src="/images/1440/About/Section 2/team.png"
                         width={743}
@@ -106,7 +118,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={styles.photo}>
+                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
                   <Image
                     src="/images/1440/About/Section 2/stock photo.png"
                     width={365}
@@ -115,7 +127,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={styles.photo}>
+                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
                     <Image
                         src="/images/1440/About/Section 2/angels.png"
                         width={365}
@@ -124,7 +136,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={styles.photo}>
+                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
                     <Image
                         src="/images/1440/About/Section 2/fran sitting.png"
                         width={365}
@@ -134,7 +146,7 @@ const Container2 = ({ id }) => {
                 
             </div>
             
-            <p className={styles.subtitle2}>
+            <p className={`${styles.subtitle2} lg:text-sm`}>
                 {description[0].subtitle2}
             </p>
         </div>
