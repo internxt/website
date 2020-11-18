@@ -10,8 +10,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding: 4rem 10%;
 }
 
 .title_container {
@@ -89,17 +87,18 @@
 .signup_container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     padding: 52px 0 0;
 }
 
 .social_container {
+    width: 77%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: -webkit-fill-available;
+    padding: 0 0 5rem;
 }
 
 .text_container {
@@ -107,28 +106,21 @@
     flex-direction: column;
 }
 
-.logo_container {
-    height: 22px;
-    width: 152px;
-}
-
 .logo {
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 5px;
+    margin: 0 0 1rem;
 }
 
 .label {
+    font-family: "averta-bold";
     font-size: 18px;
-    font-weight: 600;
     line-height: 1.83;
     letter-spacing: normal;
     color: #4f4f5f;
 }
 
-.text_social {
+.p_social {
+    font-family: "averta";
     font-size: 16px;
-    font-weight: normal;
     line-height: 2.06;
     letter-spacing: normal;
     color: #646473;
@@ -136,7 +128,7 @@
 
 .line {
     height: 1px;
-    width: 100%;
+    width: 77%;
     background-color: #e7e7e7;
 
     margin: 4rem 0;
