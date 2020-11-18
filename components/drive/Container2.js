@@ -18,11 +18,11 @@ const Container2 = ({ id }) => {
     return ( 
         <div className={className}>
             <div className={styles.main}>
-                <h1 className={styles.title}>
+                <h1 className={`${styles.title} lg:text-5xl`}>
                     {description[0].title}
                 </h1>
 
-                <p className={styles.subtitle}>
+                <p className={`${styles.subtitle} lg:text-lg lg:w-9/12`}>
                     {description[0].subtitle}
                 </p>
             </div>
@@ -34,7 +34,7 @@ const Container2 = ({ id }) => {
                 <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
             </div>
 
-            <a className={styles.link}>
+            <a className={`${styles.link} lg:text-base lg:mt-0 lg:mb-16`}>
                 {description[0].link}
             </a>
         </div>

@@ -30,7 +30,7 @@
     flex-direction: row;
     justify-content: space-around;
 
-    padding: 4rem 6rem
+    padding: 4rem 0;
 }
 
 .link {

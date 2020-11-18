@@ -1,20 +1,15 @@
-.card_container {
-    display: flex;
-    flex-direction: column;
-}
 
 .card {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 489px;
     height: 533px;
     border-radius: 9px;
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
     border: solid 1px #f0f0f0;
     background-color: white;
 
-    padding: 3rem 0 0 3.5rem;
+    padding: 3rem 3.5rem 0 3.5rem;
     margin: 0 1rem;
 }
 
@@ -25,7 +20,7 @@
 }
 
 .title {
-    font-family: "averta";
+    font-family: "averta-bold";
     font-size: 35px;
     line-height: 1.15;
     letter-spacing: -0.35px;

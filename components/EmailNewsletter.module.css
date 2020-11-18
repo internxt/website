@@ -16,9 +16,6 @@
 
     font-family: "averta";
     font-size: 17px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: normal;
     letter-spacing: -0.1px;
     color: #807f86;
@@ -35,11 +32,8 @@
     background-color: #0084ff;
     outline: 0;
 
-    font-family: "averta-bold";
+    font-family: "averta";
     font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 2.11;
     letter-spacing: -0.1px;
     text-align: center;

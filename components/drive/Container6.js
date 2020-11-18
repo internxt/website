@@ -19,20 +19,15 @@ const Container6 = ({ id }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={styles.main}>
-                    <h1 className={styles.title}>
+                    <h1 className={`${styles.title} lg:text-5xl lg:w-104 lg:leading-tight`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={styles.subtitle}>
+                    <p className={`${styles.subtitle} lg:text-lg lg:w-96`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={styles.subtitle}>
-                        {description[0].subtitle2}
-                    </p>
-
-                    <a className={styles.link}>Check out plans for teams</a>
-
+                    <a className={`${styles.link} lg:pt-8 lg:text-lg`}>Check out plans for teams</a>
                 </div>
                 
                 <div className={styles.image}>

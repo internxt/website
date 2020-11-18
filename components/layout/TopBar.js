@@ -10,7 +10,7 @@ const TopBar = () => {
         <header>
             <Link href="/" ><a className={styles.logo}>INTERNXT</a></Link>
 
-            <div >
+            <div>
                 <Link href="/"><a className={router.pathname === '/' ? styles.active_link : styles.nonactive_link}>Drive</a></Link>
 
                 <Link href="/photos"><a className={router.pathname === '/photos' ? styles.active_link : styles.nonactive_link}>Photos</a></Link>
