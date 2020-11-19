@@ -16,8 +16,8 @@ const Container8 = ({ id }) => {
     const background = isOdd(id) ? 'container' : 'container grey'
 
     return ( 
-        <div className={`${background} lg:pb-32 relative z-10`}>
-            <div className={`${styles.left_image} lg:w-96`}>
+        <div className={`${background} lg:pb-32 xl:pb-40 relative z-10`}>
+            <div className={`${styles.left_image} lg:w-96 lg:mt-28 xl:w-120`}>
                 <Image
                     src="/images/1440/Token/Section 6/Left graph.png"
                     width={600}
@@ -25,7 +25,7 @@ const Container8 = ({ id }) => {
                 />
             </div>
 
-            <div className={`${styles.right_image} lg:w-96 lg:mb-16`}>
+            <div className={`${styles.right_image} lg:w-96 lg:mb-16 xl:w-120`}>
                 <Image
                     src="/images/1440/Token/Section 6/Right graph.png"
                     width={600}

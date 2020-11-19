@@ -35,7 +35,7 @@ const Container7 = ({ id, data }) => {
                 {description[0].title}
             </h1>
 
-            <div className="grid grid-cols-3 gap-8 lg:mt-12 lg:px-32">
+            <div className="grid grid-cols-3 gap-8 lg:mt-12 lg:px-32 xl:gap-24">
                 <div className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label}

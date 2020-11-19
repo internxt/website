@@ -30,7 +30,7 @@ const Container6 = ({ id }) => {
                 />
             </div>
 
-            <div className="grid grid-cols-3 gap-2 lg:px-40 lg:mt-16">
+            <div className="grid grid-cols-3 gap-2 lg:px-40 lg:mt-16 xl:mt-20">
                 <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/exrates.png"
@@ -97,7 +97,7 @@ const Container6 = ({ id }) => {
                     />
                 </div>
                 
-                <h1 className={`${styles.title} lg:text-4.5xl lg:mt-24`}>
+                <h1 className={`${styles.title} lg:text-4.5xl lg:mt-24 xl:mt-24`}>
                     {description[0].title2}
                 </h1>
 

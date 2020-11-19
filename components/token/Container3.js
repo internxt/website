@@ -27,7 +27,7 @@ const Container3 = ({ id }) => {
                 </div>
 
                 <div className={`${styles.main} lg:pl-12 lg:pt-12`}>
-                    <h1 className={`${styles.title} leading-12 lg:text-5xl lg:max-w-none lg:w-104`}>
+                    <h1 className={`${styles.title} leading-12 lg:text-5xl lg:max-w-none lg:w-104 xl:leading-13`}>
                         {description[0].title}
                     </h1>
 

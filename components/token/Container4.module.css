@@ -61,11 +61,11 @@
 .blue_coin {
     position: absolute;
     left: 0;
-    padding: 20rem 0 0 40rem;
+    padding: 20rem 0 0 8rem;
 }
 
 .purple_coin {
     position: absolute;
     right: 0;
-    padding: 37rem 41rem 0 0;
+    padding: 37rem 9rem 0 0;
 }
