@@ -17,8 +17,8 @@ const Container3 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={styles.container}>
-                <div className={styles.image_container}>
+            <div className={`${styles.container} lg:py-12`}>
+                <div className="lg:w-104">
                     <Image
                         src="/images/1440/Token/Section 3/floating girl.png"
                         width={517}
@@ -26,20 +26,20 @@ const Container3 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.main}>
-                    <h1 className={styles.title}>
+                <div className={`${styles.main} lg:pl-12 lg:pt-12`}>
+                    <h1 className={`${styles.title} leading-12 lg:text-5xl lg:max-w-none lg:w-104`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={styles.subtitle}>
+                    <p className={`${styles.subtitle} lg:text-xl lg:w-100`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={styles.subtitle}>
+                    <p className={`${styles.subtitle} lg:text-xl lg:w-104`}>
                         {description[0].subtitle2}
                     </p>
 
-                    <p className={styles.link}>
+                    <p className={`${styles.link} lg:text-base`}>
                         {description[0].subtitle3}
                     </p>
                 </div>

@@ -1,5 +1,9 @@
 .main {
     height: 922px;
+    background-image: url("/images/1440/Token/Section 1/Colours bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 }
 
 .title {
@@ -73,11 +77,6 @@
     color: #2a2c35;
 }
 
-.image_container {
-    position: relative;
-    width: 100%;
-}
-
 .left_image {
     position: absolute;
     left: 0;
@@ -87,6 +86,7 @@
 }
 
 .image {
+    position: absolute;
     display: flex;
     justify-content: center;
     padding: 14px 0 0;

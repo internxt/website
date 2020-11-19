@@ -18,11 +18,11 @@ const Container6 = ({ id }) => {
     
     return ( 
         <div className={background}>
-            <h1 className={styles.title}>
+            <h1 className={`${styles.title} lg:text-5xl lg:mt-24`}>
                 {description[0].title}
             </h1>
             
-            <div className={styles.circle}>
+            <div className={`${styles.circle} lg:w-32 lg:mt-16`}>
                 <Image
                     src="/images/1440/Token/Section 5/middle circle.png"
                     width={55}
@@ -30,11 +30,8 @@ const Container6 = ({ id }) => {
                 />
             </div>
 
-            <div className={styles.card_container}>
-
-                
-
-                <div className={styles.card}>
+            <div className="grid grid-cols-3 gap-2 lg:px-40 lg:mt-16">
+                <div className={`${styles.card} lg:w-auto lg:px-16 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/exrates.png"
                         width={154}
@@ -42,7 +39,7 @@ const Container6 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:w-auto lg:px-12 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/uniswap.png"
                         width={182}
@@ -50,7 +47,7 @@ const Container6 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:w-auto lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/mercatox.png"
                         width={187}
@@ -58,7 +55,7 @@ const Container6 = ({ id }) => {
                     />
                 </div>
                 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:px-12 lg:w-auto lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/latoken.png"
                         width={159}
@@ -66,7 +63,7 @@ const Container6 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:w-auto lg:px-16 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/idex.png"
                         width={129}
@@ -74,7 +71,7 @@ const Container6 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:w-auto lg:px-16 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/fatbtc.png"
                         width={159}

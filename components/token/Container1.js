@@ -12,34 +12,24 @@ const Container1 = ({ id }) => {
     }
 
     // Set the background color of the container depending on its id
-    const background = isOdd(id) ? `container ${styles.main}` : 'container grey'
+    const background = isOdd(id) ? `container ${styles.main} lg:h-136` : 'container grey'
 
     return ( 
         <div className={background}>
-            <h1 className={styles.title}>
+            <h1 className={`${styles.title} lg:text-8xl lg:w-8/12 lg:mb-6`}>
                 {description[0].title}
             </h1>
 
-            <p className={styles.subtitle}>
+            <p className={`${styles.subtitle} lg:text-xl lg:w-108`}>
                 {description[0].subtitle}
             </p>
 
             <div className={styles.buttons_container}>
-                <button className={styles.button}>
-                    <p className={styles.button_text}>Stake Inxt</p>
+                <button className={`${styles.button} lg:h-8 lg:w-28`}>
+                    <p className={`${styles.button_text} lg:text-xs`}>Stake Inxt</p>
                 </button>
                 
-                <a className={styles.learn_more}>Learn more</a>
-            </div>
-
-            <div className={styles.image_container}>
-                <div className={styles.image}>
-                    <Image
-                        src="/images/1440/Token/Section 1/Colours bg.png"
-                        width={1316}
-                        height={416}
-                    />
-                </div>
+                <a className={`${styles.learn_more} lg:text-xs`}>Learn more</a>
             </div>
         </div>
      );

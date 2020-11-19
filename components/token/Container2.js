@@ -25,9 +25,9 @@ const Container2 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={styles.main}>
+            <div className={`${styles.main} lg:pb-16`}>
                 <div className={styles.images_container}>
-                    <div className={styles.cube}>
+                    <div className={`${styles.cube} lg:w-28`}>
                         <Image
                             src="/images/1440/Token/Section 2/left glass and cube.png"
                             width={152}
@@ -35,7 +35,7 @@ const Container2 = ({ id }) => {
                         />   
                     </div>
 
-                    <div className={styles.hoop}>
+                    <div className={`${styles.hoop} lg:w-24`}>
                         <Image
                             src="/images/1440/Token/Section 2/right hoop.png"
                             width={167}

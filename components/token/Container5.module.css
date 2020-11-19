@@ -1,25 +1,25 @@
 .container { 
     display: flex;
     flex-direction: row;
-    padding: 0 80px;
     align-items: center;
-}
-
-.image_container {
-    position: relative;
 }
 
 .main {
     display: flex;
     flex-direction: column;
+    width: 50%;
+}
 
-    padding: 214px 4rem;
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
 .title {
     width: 511px;
     font-size: 60px;
-    font-weight: 800;
     line-height: normal;
     letter-spacing: 0.3px;
     color: #2a2c35;
@@ -28,7 +28,6 @@
 .subtitle {
     width: 511px;
     font-size: 24px;
-    font-weight: normal;
     line-height: 1.38;
     letter-spacing: normal;
     color: #545465;
@@ -46,7 +45,6 @@
 .button1 {
     width: 147px;
     height: 46px;
-    padding: 13px 19px 14px 26px;
     border-top-left-radius: 24.8px;
     border-bottom-left-radius: 24.8px;
     background-color: #ff38a4;
@@ -57,8 +55,6 @@
 
     font-family: "averta-light";
     font-size: 17px;
-    font-weight: normal;
-    line-height: normal;
     letter-spacing: -0.1px;
     color: white;
 }
@@ -66,7 +62,6 @@
 .button2 {
     width: 147px;
     height: 46px;
-    padding: 13px 19px 14px 26px;
     border-top-right-radius: 24.8px;
     border-bottom-right-radius: 24.8px;
     background-color: #ff38a4;
@@ -76,8 +71,6 @@
     
     font-family: "averta-light";
     font-size: 17px;
-    font-weight: normal;
-    line-height: normal;
     letter-spacing: -0.1px;
     color: white;
 }

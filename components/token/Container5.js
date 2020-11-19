@@ -18,26 +18,26 @@ const Container5 = ({ id }) => {
     return ( 
         <div className={background}>
             <div className={styles.container}>
-                <div className={styles.main}>
-                    <h1 className={styles.title}>
+                <div className={`${styles.main} lg:pl-24 lg:pt-32`}>
+                    <h1 className={`${styles.title} lg:text-5xl lg:w-11/12 leading-12`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={styles.subtitle}>
+                    <p className={`${styles.subtitle} lg:text-xl lg:w-10/12`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={styles.subtitle}>
+                    <p className={`${styles.subtitle} lg:text-xl lg:w-104`}>
                         {description[0].subtitle2}
                     </p>
 
-                    <div className={styles.button_container}>
-                        <button className={styles.button1}>App store</button>
-                        <button className={styles.button2}>Play store</button>
+                    <div className={`${styles.button_container} lg:mt-16`}>
+                        <button className={`${styles.button1} lg:text-xs lg:h-8 lg:w-32`}>App store</button>
+                        <button className={`${styles.button2} lg:text-xs lg:h-8 lg:w-32`}>Play store</button>
                     </div>
                 </div>
                 
-                <div className={styles.image_container}>
+                <div className={`${styles.image} lg:w-5/12 lg:pt-24 lg:ml-12`}>
                     <Image
                         src="/images/1440/Token/Section 5/Coinbase graphic.png"
                         width={560}

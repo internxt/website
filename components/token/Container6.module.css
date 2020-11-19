@@ -21,16 +21,6 @@
     margin: 1rem 0 7rem;
 }
 
-.card_container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    margin: 84px 0 161px;
-    padding: 0 8rem 0;
-}
-
 .card {
     display: flex;
     justify-content: center;
@@ -42,8 +32,6 @@
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
     border: solid 1px #f0f0f0;
     background-color: white;
-
-    margin: 0 5px 10px;
 }
 
 .form_container {
