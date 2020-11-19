@@ -30,7 +30,7 @@ const TopBar = () => {
                 
                 <Link href="/prices"><a className={router.pathname === '/prices' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} lg:text-sm`}>Pricing</a></Link>
 
-                <Link href="/about-us"><a  className={router.pathname === '/about-us' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} lg:text-sm`}>About</a></Link>
+                <Link href="/about"><a  className={router.pathname === '/about' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} lg:text-sm`}>About</a></Link>
 
                 <Link href="/token"><a  className={router.pathname === '/token' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} lg:text-sm`}>Token</a></Link>
             </div>
