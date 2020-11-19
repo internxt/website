@@ -19,7 +19,7 @@ const Container4 = ({ id }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={`${styles.main} lg:pl-24`}>
-                    <h1 className={`${styles.title} lg:text-5xl lg:w-112 lg:leading-tight`}>
+                    <h1 className={`${styles.title} lg:text-5xl lg:w-112 lg:leading-12`}>
                         {description[0].title}
                     </h1>
 
