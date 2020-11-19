@@ -16,8 +16,8 @@ const Container8 = ({ id }) => {
     const background = isOdd(id) ? 'container' : 'container grey'
 
     return ( 
-        <div className={background}>
-            <div className={styles.left_image}>
+        <div className={`${background} lg:pb-32 relative z-10`}>
+            <div className={`${styles.left_image} lg:w-96`}>
                 <Image
                     src="/images/1440/Token/Section 6/Left graph.png"
                     width={600}
@@ -25,7 +25,7 @@ const Container8 = ({ id }) => {
                 />
             </div>
 
-            <div className={styles.right_image}>
+            <div className={`${styles.right_image} lg:w-96 lg:mb-16`}>
                 <Image
                     src="/images/1440/Token/Section 6/Right graph.png"
                     width={600}
@@ -33,12 +33,12 @@ const Container8 = ({ id }) => {
                 />
             </div>
             
-            <h1 className={styles.title}>
+            <h1 className={`${styles.title} lg:text-4.5xl lg:my-16`}>
                 {description[0].title}
             </h1>
 
-            <div className={styles.cards_container}>
-                <div className={styles.card}>
+            <div className="grid grid-cols-4 gap-4">
+                <div className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
                         src="/images/1440/Token/Section 6/coinbase.png"
                         width={133}
@@ -46,7 +46,7 @@ const Container8 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
                         src="/images/1440/Token/Section 6/cmc.png"
                         width={151}
@@ -54,7 +54,7 @@ const Container8 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
                         src="/images/1440/Token/Section 6/binance.png"
                         width={106}
@@ -62,7 +62,7 @@ const Container8 = ({ id }) => {
                     />
                 </div>
 
-                <div className={styles.card}>
+                <div className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
                         src="/images/1440/Token/Section 6/Blockfolio.png"
                         width={140}

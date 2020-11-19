@@ -13,19 +13,9 @@
     margin: 8rem 0 0;
 }
 
-.cards_container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-    padding: 3.2rem 0;
-}
-
 .card {
     width: 250px;
     height: 120px;
-    margin: 0 3.5rem 4.7rem;
 }
 
 .label {

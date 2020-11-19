@@ -108,8 +108,8 @@
     width: 500px;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
+    font-family: "averta-light";
     font-size: 1rem;
-    font-weight: 400;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
