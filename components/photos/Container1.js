@@ -16,7 +16,7 @@ const Container1 = ({ id }) => {
     const className = isOdd(id) ? 'container' : 'container grey'
 
     return ( 
-        <div className={className}>
+        <div className={`${className} relative`}>
             <div className={styles.main}>
                 <h1 className={styles.title}>
                     {description[0].title}
@@ -30,34 +30,34 @@ const Container1 = ({ id }) => {
                     {description[0].subtitle2}
                 </p>
 
-                <div className={styles.star}>
-                    <Image src="/images/1440/Drive/Section 1/star icon.png" width={47} height={50} />
+                <div className={styles.picture}>
+                    <Image src="/images/1440/Photos/Section 1/1.png" width={75} height={92} />
                 </div>
 
-                <div className={styles.gear}>
-                    <Image src="/images/1440/Drive/Section 1/cog icon.png" width={37} height={38} />
+                <div className={styles.weather}>
+                    <Image src="/images/1440/Photos/Section 1/2.png" width={68} height={65} />
                 </div>
 
-                <div className={styles.coin}>
-                    <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
+                <div className={styles.video}>
+                    <Image src="/images/1440/Photos/Section 1/6.png" width={110} height={131} />
                 </div>
 
-                <div className={styles.lock}>
-                    <Image src="/images/1440/Drive/Section 1/lock icon.png" width={45} height={60} />
+                <div className={styles.lgcross}>
+                    <Image src="/images/1440/Photos/Section 1/cross 1.png" width={29} height={29} />
                 </div>
 
-                <div className={styles.coin}>
-                    <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
+                <div className={styles.mdcross}>
+                    <Image src="/images/1440/Photos/Section 1/cross 4.png" width={18} height={18} />
                 </div>
 
-                <div className={styles.coin}>
-                    <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
-                </div>
-
-                <div className={styles.coin}>
-                    <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
+                <div className={styles.smcross}>
+                    <Image src="/images/1440/Photos/Section 1/cross 2.png" width={11} height={11} />
                 </div>
             </div>
+
+            <div className={styles.circles}>
+                    <Image src="/images/1440/Photos/Section 1/5.png" width={182} height={129} />
+                </div>
 
             <div className={styles.secondary}>
                 <h1 className={styles.subtitle2}>
@@ -66,16 +66,16 @@ const Container1 = ({ id }) => {
 
                 <EmailNewsletter />
 
-                <div className={styles.cloud}>
-                    <Image src="/images/1440/Drive/Section 1/cloud icon.png" width={70} height={52} />
+                <div className={styles.recorder}>
+                    <Image src="/images/1440/Photos/Section 1/3.png" width={133} height={104} />
                 </div>
 
-                <div className={styles.hand}>
-                    <Image src="/images/1440/Drive/Section 1/purplehand.png" width={482} height={310} />
+                <div className={styles.message}>
+                    <Image src="/images/1440/Photos/Section 1/4.png" width={82} height={80} />
                 </div>
 
-                <div className={styles.cloud}>
-                    <Image src="/images/1440/Drive/Section 1/cloud icon.png" width={70} height={52} />
+                <div className={styles.cross}>
+                    <Image src="/images/1440/Photos/Section 1/cross 3.png" width={19} height={19} />
                 </div>
             </div>
         </div>

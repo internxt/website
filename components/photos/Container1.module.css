@@ -62,40 +62,64 @@
     padding: 8px 0 1rem 0;
 }
 
-.star {
+.picture {
     position: absolute;
     left: 0;
-    padding: 0 0 0 7rem;
+    padding: 0 0 0 4rem;
 }
 
-.gear {
-    position: absolute;
-    right: 0;
-    padding: 3rem 10rem 0 0;
-}
-
-.coin {
+.weather {
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 0 0 5rem 4rem;
+    padding: 0 0 2rem 5rem;
 }
 
-.lock {
+.circles {
     position: absolute;
     right: 0;
-    bottom: 0;
-    padding: 0 14rem 4rem 0;
+    padding: 27rem 7rem 0;
 }
 
-.cloud {
+.video {
+    position: absolute;
+    right: 0;
+}
+
+.lgcross {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 7rem 16rem;
+}
+
+.mdcross {
+    position: absolute;
+    right: 0;
+    padding: 14rem 10rem 0 0;
+}
+
+.smcross {
+    position: absolute;
+    bottom: 0;
+    padding: 0 2rem 3rem 0;
+}
+
+.cross {
+    position: absolute;
+    right: 0;
+    padding: 4rem 25rem 0 0;
+}
+
+.recorder {
     position: absolute;
     left: 0;
-    padding: 7rem 0 0 18rem;
+    padding: 4rem 0 0 15rem;
 }
 
-.hand {
+.message {
     position: absolute;
-    right: 0;
     bottom: 0;
+    right: 0;
+    padding: 0 30rem 3rem 0;
 }
