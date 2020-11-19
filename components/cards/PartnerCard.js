@@ -26,9 +26,9 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imag
     }, [])
 
     return ( 
-        <div className={`${cardstyle} lg:h-96`}>
-            <div className={styles.content}>
-                <div>
+        <div className={`${cardstyle} lg:w-8/12 lg:h-90`}>
+            <div className={`${styles.content} lg:p-0 lg:pt-8 lg:pl-12`}>
+                <div className="w-32">
                     <Image
                         src={logourl}
                         width={logoW}
@@ -36,27 +36,23 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imag
                     />
                 </div>
 
-                <h1 className={`${companystyle} lg:text-2xl`}>
+                <h1 className={`${companystyle} lg:text-2xl lg:my-4`}>
                     {company}
                 </h1>
 
-                <p className={`${biostyle} lg:text-sm lg:mb-4`}>
+                <p className={`${biostyle} lg:text-13 lg:w-11/12 lg:mb-4 lg:leading-6`}>
                     {bio}
                 </p>
 
-                <p className={`${biostyle} lg:text-sm lg:mb-0`}>
+                <p className={`${biostyle} lg:text-13 lg:w-11/12 lg:mb-0`}>
                     {bio2}
                 </p>
 
-                <p className={`${readmorestyle} lg:text-sm lg:`}>Read more</p>
+                <p className={`${readmorestyle} lg:text-sm lg:pb-6`}>Read more</p>
             </div>
 
-            <div>
-                <Image
-                    src={imageurl}
-                    width={imageW}
-                    height={imageH}
-                />
+            <div className="w-6/12 overflow-hidden">
+                    <img src={imageurl} className="object-contain" />
             </div>
         </div>
      );

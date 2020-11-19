@@ -15,11 +15,11 @@ const Container7 = ({ id, articles }) => {
 
     return ( 
         <div className={background}>
-            <h1 className={styles.title}>
+            <h1 className={`${styles.title} my-16`}>
                 {description[0].title}
             </h1>
 
-            <div className={styles.card_container}>
+            <div className="grid grid-cols-6 gap-y-6 gap-x-3 lg:px-32">
                 <PublishedArticle article={articles.data[0]} image={articles.images[0]} />
                 <PublishedArticle article={articles.data[1]} image={articles.images[1]} />
                 <PublishedArticle article={articles.data[2]} image={articles.images[2]} />
@@ -31,7 +31,7 @@ const Container7 = ({ id, articles }) => {
                 <PublishedArticle article={articles.data[8]} image={articles.images[8]} />
             </div>
 
-            <p className={styles.link}>
+            <p className={`${styles.link} lg:text-base lg:my-16`}>
                 {description[0].link}
             </p>
         </div>

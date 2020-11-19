@@ -99,8 +99,8 @@ const Container2 = ({ id }) => {
                 {formattedText(description[0].subtitle, description[0].colored)}
             </div>
 
-            <div className={`${styles.photos} grid grid-cols-6 gap-4 lg:px-24`}>
-                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
+            <div className={`grid grid-cols-6 gap-4 lg:px-32`}>
+                <div className={`col-span-2`}>
                     <Image
                         src="/images/1440/About/Section 2/programming.png"
                         width={365}
@@ -109,7 +109,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={`${styles.photo} lg:col-span-4 xl:col-span-4`}>
+                <div className={`col-span-4`}>
                     <Image
                         src="/images/1440/About/Section 2/team.png"
                         width={743}
@@ -118,7 +118,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
+                <div className={`col-span-2`}>
                   <Image
                     src="/images/1440/About/Section 2/stock photo.png"
                     width={365}
@@ -127,7 +127,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
+                <div className={`col-span-2`}>
                     <Image
                         src="/images/1440/About/Section 2/angels.png"
                         width={365}
@@ -136,7 +136,7 @@ const Container2 = ({ id }) => {
                 </div>
                 
 
-                <div className={`${styles.photo} lg:col-span-2 xl:col-span-2`}>
+                <div className={`col-span-2`}>
                     <Image
                         src="/images/1440/About/Section 2/fran sitting.png"
                         width={365}
@@ -146,7 +146,7 @@ const Container2 = ({ id }) => {
                 
             </div>
             
-            <p className={`${styles.subtitle2} lg:text-sm`}>
+            <p className={`lg:text-xs lg:mt-4`}>
                 {description[0].subtitle2}
             </p>
         </div>

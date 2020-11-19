@@ -8,12 +8,6 @@
     color: #2a2c35;
 }
 
-.card_container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .link {
     font-family: "averta-bold";
     font-size: 22px;

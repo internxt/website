@@ -16,6 +16,8 @@ module.exports = {
       'sm': {'min': '450px', 'max': '749px'},
     },
     fontSize: {
+      '13': '13px',
+      'xxxs': '0.5rem',
       'xxs': '.625rem',
       'xss': '.6875rem',
       'xs': '.75rem',
@@ -35,6 +37,7 @@ module.exports = {
       spacing: {
         '72': '18rem',
         '84': '21rem',
+        '90': '22.5rem',
         '96': '24rem',
         '100': '25.5rem',
         '104': '27rem',

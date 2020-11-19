@@ -20,7 +20,7 @@ const Container6 = ({ id }) => {
                 {title}
             </h1>
 
-            <div className={styles.card_container}>
+            <div className={`flex flex-col justify-center items-center lg:mb-24`}>
                 <PartnerCard 
                     company={company} bio={bio1} bio2={bio2} blue={true} 
                     logo="Blackberry logo" logoW={157} logoH={27} 

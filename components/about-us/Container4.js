@@ -13,7 +13,7 @@ const Container4 = ({ id }) => {
     } = description[0]
 
     return ( 
-        <div className={`${styles.main} lg:pb-24`}>
+        <div className={`${styles.main} lg:pt-0 lg:pb-24`}>
             <text className={`${styles.title} lg:text-5xl`}>
                 {description[0].title}
             </text>
