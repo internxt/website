@@ -30,6 +30,7 @@ module.exports = {
       '4xl': '2.25rem',
       '4.5xl': '2.75rem',
       '5xl': '3rem',
+      '5.5xl': '3.75rem',
       '6xl': '4rem',
       '7xl': '5rem',
       '8xl': '5.3rem'
@@ -39,6 +40,7 @@ module.exports = {
         '28': '7rem',
         '36': '9rem',
         '44': '11rem',
+        '60': '15rem',
         '72': '18rem',
         '84': '21rem',
         '90': '22.5rem',

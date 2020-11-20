@@ -74,14 +74,6 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
 }
 
-.cards_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    padding: 4rem 6rem
-}
-
 .speech {
     position: absolute;
     left: 0;
@@ -91,23 +83,23 @@
 .letter {
     position: absolute;
     right: 0;
-    padding: 2rem 7rem 0;
+    padding: 2rem 7rem 0 0;
 }
 
 .star {
     position: absolute;
     right: 0;
-    padding: 9rem 13rem 0;
+    padding: 9rem 13rem 0 0;
 }
 
 .face {
     position: absolute;
     right: 0;
-    padding: 3rem 6rem 0;
+    padding: 3rem 6rem 0 0;
 }
 
 .mail {
     position: absolute;
     left: 0;
-    padding: 15rem 5rem 0;
+    padding: 15rem 0 0 5rem;
 }
