@@ -18,8 +18,8 @@ const Container5 = ({ id }) => {
     return ( 
         <div className={background}>
             <div className={styles.container}>
-                <div className={`${styles.main} text-center`}>
-                    <h1 className={`${styles.title1} lg:text-5xl`}>
+                <div className={`${styles.main} items-center`}>
+                    <h1 className={`${styles.title1} lg:text-5xl xl:mt-24`}>
                         {description[0].title}
                     </h1>
 
@@ -43,7 +43,7 @@ const Container5 = ({ id }) => {
                 </div>
 
                 <div className={`${styles.main} lg:pl-32`}>
-                    <h1 className={`${styles.title2} lg:text-5xl lg:w-84 lg:leading-tight`}>
+                    <h1 className={`${styles.title2} lg:text-5xl lg:w-84 lg:leading-tight xl:leading-13 xl:mb-4`}>
                         {description[0].title2}
                     </h1>
 

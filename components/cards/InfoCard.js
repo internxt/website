@@ -23,13 +23,13 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2, image, widt
                 {subtitle2}
             </p>
 
-            <a className={`${styles.link} absolute lg:bottom-0 lg:pb-6 lg:text-sm lg:m-0`}>
+            <a className={`${styles.link} absolute bottom-0 lg:pb-6 lg:text-sm lg:m-0 xl:mb-16`}>
                 {linkText}
             </a>
 
             {
                 linkText2 ? 
-                    <a className={`${styles.link} absolute lg:bottom-0 lg:right-0 lg:pr-16 lg:pb-6 lg:text-sm`}>
+                    <a className={`${styles.link} absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-16 xl:mr-40`}>
                         {linkText2}
                     </a>
                 :
