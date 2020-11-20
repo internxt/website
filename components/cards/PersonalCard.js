@@ -6,7 +6,7 @@ const PersonalCard = ({ name, job, picture }) => {
 
     return ( 
         <div className={`${styles.card} col-span-2`}>
-            <div className={`${styles.bio} lg:pl-5 lg:pt-8`}>
+            <div className={`${styles.bio} lg:pl-5 lg:pt-8 xl:pl-6 xl:pt-8`}>
                 <text className={`${styles.name} lg:text-sm`}>
                     {name}
                 </text>

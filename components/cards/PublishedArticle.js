@@ -8,16 +8,16 @@ const PublishedArticle = ({ article, image}) => {
         <div className={`${styles.card} col-span-2 overflow-hidden h-auto w-auto`}>
             { image ? <img className="h-auto w-full object-contain" src={image} /> : <p>La imagen esta cargando</p> }
 
-            <div className={`${styles.description} lg:pl-4 lg:pt-4`}>
+            <div className={`${styles.description} lg:pl-4 lg:pt-4 xl:pl-6 xl:pt-6`}>
                 <p className={`${styles.date} lg:text-xxs`}>
                     {moment(article.created).format('MMM DD YYYY')}
                 </p>
 
-                <h1 className={`${styles.title} lg:text-sm lg:mb-10`}>
+                <h1 className={`${styles.title} lg:text-sm lg:mb-10 xl:mb-16`}>
                     {article.title}
                 </h1>
 
-                <p className={`${styles.link} lg:text-xxxs lg:mb-4`}>READ ARTICLE</p>
+                <p className={`${styles.link} lg:text-xxxs lg:mb-4 xl:mb-6`}>READ ARTICLE</p>
             </div>
         </div>
     );

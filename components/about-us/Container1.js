@@ -8,21 +8,10 @@ const Container1 = ({ id }) => {
     const description = descriptions.filter( desc => desc.id === id)
 
     return ( 
-        <div className={`${styles.background} lg:h-104`}>
+        <div className={`${styles.background} lg:h-104 xl:h-136`}>
             <TopBar />
 
-            <div className={styles.image}>
-                <Image 
-                    src="/images/1440/About/Section 1/Image .png" 
-                    width={1440}
-                    height={626}
-                    style={{
-                        maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))'
-                    }}
-                />
-            </div>
-
-            <div className={`${styles.main} lg:pl-20 lg:pt-24`}>
+            <div className={`${styles.main} lg:pl-20 lg:pt-24 xl:h-full`}>
                 <h1 className={`${styles.title} lg:text-3xl lg:w-96`}>
                     {description[0].title}
                 </h1>

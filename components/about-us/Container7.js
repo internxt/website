@@ -19,7 +19,7 @@ const Container7 = ({ id, articles }) => {
                 {description[0].title}
             </h1>
 
-            <div className="grid grid-cols-6 gap-y-6 gap-x-3 lg:px-32">
+            <div className="grid grid-cols-6 gap-y-6 gap-x-3 lg:px-32 xl:px-40">
                 <PublishedArticle article={articles.data[0]} image={articles.images[0]} />
                 <PublishedArticle article={articles.data[1]} image={articles.images[1]} />
                 <PublishedArticle article={articles.data[2]} image={articles.images[2]} />

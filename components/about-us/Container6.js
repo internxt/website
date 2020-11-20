@@ -16,11 +16,11 @@ const Container6 = ({ id }) => {
 
     return ( 
         <div className={styles.main}>
-            <h1 className={`${styles.title} lg:text-5xl lg:pt-20 lg:pb-8`}>
+            <h1 className={`${styles.title} lg:text-5xl lg:pt-20 lg:pb-8 xl:mt-24 xl:mb-12`}>
                 {title}
             </h1>
 
-            <div className={`flex flex-col justify-center items-center lg:mb-24`}>
+            <div className={`flex flex-col justify-center items-center lg:mb-24 xl:mb-32`}>
                 <PartnerCard 
                     company={company} bio={bio1} bio2={bio2} blue={true} 
                     logo="Blackberry logo" logoW={157} logoH={27} 

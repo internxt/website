@@ -25,14 +25,6 @@
     padding: 1rem 0 0;
 }
 
-.cards_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    padding: 4rem 0;
-}
-
 .link {
     font-family: "averta-bold";
     font-size: 22px;

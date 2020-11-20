@@ -1,6 +1,9 @@
 .background {
     display: flex;
     flex-direction: column;
+    background-image: url("/images/1440/About/Section 1/Image .png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .image {
