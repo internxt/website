@@ -1,0 +1,97 @@
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/images/1440/Core/Section 5/Calculator bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    font-size: 60px;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: white;
+    margin: 8rem 0 1rem
+}
+
+.subtitle {
+    font-family: "averta-light";
+    font-size: 24px;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0 0;
+}
+
+.label {
+    font-family: "averta-light";
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: center;
+    color: white
+}
+
+.placeholders {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0 0;
+}
+
+.input {
+    width: 130px;
+    height: 45px;
+    border-radius: 21.5px 0 0 21.5px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
+    background-color: #acbaff;
+
+    font-family: "averta-light";
+    font-size: 15px;
+    line-height: 1.54;
+    letter-spacing: normal;
+    color: white;
+    padding: 0 1rem 0;
+    outline: none;
+}
+
+.type_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 45px;
+    border-radius: 0 21.5px 21.5px 0;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.02);
+    background-color: #acbaff;
+}
+
+.type {
+    font-size: 15px;
+    line-height: 1.54;
+    letter-spacing: normal;
+    color: white;
+}
+
+.link {
+    font-family: "averta";
+    font-size: 22px;
+    line-height: 1.73;
+    letter-spacing: -0.21px;
+    text-align: right;
+    color: white;
+
+    margin: 8rem 0;
+}

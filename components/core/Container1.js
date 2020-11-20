@@ -1,6 +1,5 @@
 import styles from './Container1.module.css'
 import descriptions from '../../assets/core-descriptions.json'
-import EmailNewsletter from '../EmailNewsletter'
 import Image from 'next/image'
 
 const Container1 = ({ id }) => {
@@ -16,8 +15,16 @@ const Container1 = ({ id }) => {
     const className = isOdd(id) ? 'container' : 'container grey'
 
     return ( 
-        <div className={className}>
+        <div className={`${className} relative`}>
             <div className={styles.main}>
+                <div className={styles.left}>
+                    <Image src="/images/1440/Core/Section 1/Graphic left.png" width={511} height={268} />
+                </div>
+
+                <div className={styles.right}>
+                    <Image src="/images/1440/Core/Section 1/Graphic right.png" width={438} height={239} />
+                </div>
+
                 <h1 className={styles.title}>
                     {description[0].title}
                 </h1>
@@ -26,40 +33,13 @@ const Container1 = ({ id }) => {
                     {description[0].subtitle}
                 </p>
 
-                <div className={styles.star}>
-                    <Image src="/images/1440/Drive/Section 1/star icon.png" width={47} height={50} />
-                </div>
-
-                <div className={styles.gear}>
-                    <Image src="/images/1440/Drive/Section 1/cog icon.png" width={37} height={38} />
-                </div>
-
-                <div className={styles.coin}>
-                    <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
-                </div>
-
-                <div className={styles.lock}>
-                    <Image src="/images/1440/Drive/Section 1/lock icon.png" width={45} height={60} />
-                </div>
-            </div>
-
-            <div className={styles.secondary}>
                 <h1 className={styles.subtitle2}>
                     {description[0].subtitle2}
                 </h1>
 
-                <EmailNewsletter />
-
-                <p className={styles.subtitle3}>
-                    {description[0].subtitle3}
-                </p>
-
-                <div className={styles.cloud}>
-                    <Image src="/images/1440/Drive/Section 1/cloud icon.png" width={70} height={52} />
-                </div>
-
-                <div className={styles.hand}>
-                    <Image src="/images/1440/Drive/Section 1/purplehand.png" width={482} height={310} />
+                <div className={`${styles.button_container}`}>
+                    <button className={styles.button}>Download</button>
+                    <a className={styles.link}>Set-up & tips</a>
                 </div>
             </div>
         </div>

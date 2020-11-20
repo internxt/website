@@ -53,6 +53,10 @@ const TopBar = () => {
                 <Link href="/token">
                     <a  className={router.pathname === '/token' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Token</a>
                 </Link>
+
+                <Link href="/core">
+                    <a  className={router.pathname === '/core' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Core</a>
+                </Link>
             </div>
 
             <div className={styles.links}>

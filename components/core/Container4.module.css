@@ -1,0 +1,27 @@
+
+.background {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/images/1440/Core/Section 4/map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+
+    padding: 10rem 0 8rem 10rem;
+}
+
+.title {
+    font-size: 50px;
+    line-height: normal;
+    letter-spacing: 0.25px;
+    color: #2a2c35;
+}
+
+.subtitle {
+    font-size: 22px;
+    letter-spacing: normal;
+    color: #545465;
+
+    margin: 0 0 4rem;
+}
