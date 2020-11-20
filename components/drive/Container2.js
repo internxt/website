@@ -27,14 +27,14 @@ const Container2 = ({ id }) => {
                 </p>
             </div>
 
-            <div className={styles.cards_container}>
+            <div className="grid grid-cols-4 gap-3 lg:mt-16">
                 <PriceCard free="true" size={2} individual={true} />
                 <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
                 <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
                 <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
             </div>
 
-            <a className={`${styles.link} lg:text-base lg:mt-0 lg:mb-16`}>
+            <a className={`${styles.link} lg:text-base lg:mt-12 lg:mb-16`}>
                 {description[0].link}
             </a>
         </div>
