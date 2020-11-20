@@ -1,5 +1,5 @@
 .main {
-    height: 922px;
+    height: 850px;
     background-image: url("/images/1440/Token/Section 1/Colours bg.png");
     background-repeat: no-repeat;
     background-position: bottom;
@@ -8,6 +8,7 @@
 
 .title {
     width: 845px;
+    width: 100%;
     font-size: 114px;
     font-weight: 800;
     line-height: 0.97;
