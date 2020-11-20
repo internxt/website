@@ -35,11 +35,11 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
                             <Image src="/images/1440/Prices Individual/heart 1.png" width={25} height={25} /> 
                         </div>
 
-                        <div className={`${styles.heart2} lg:pt-40 lg:pl-40`}>
+                        <div className={`${styles.heart2} lg:pt-40 lg:pr-4 lg:w-10`}>
                             <Image src="/images/1440/Prices Individual/heart 2.png" width={25} height={30} /> 
                         </div>
 
-                        <div className={`${styles.heart3} lg:w-8`}>
+                        <div className={`${styles.heart3} lg:w-6 lg:ml-4`}>
                             <Image src="/images/1440/Prices Individual/heart 3.png" width={37} height={36} /> 
                         </div>
                     </div>
@@ -50,7 +50,7 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
             {
                 free ? <p className={`${styles.try_for_free} text-xss`}>Get started!</p> : <p className={`${styles.try_for_free} lg:text-xss`}>Try for free for 30 days</p>
             }
-            <div className={`${styles.card} lg:min-h-0 lg:w-48 lg:h-64`}>
+            <div className={`${styles.card} lg:min-h-0 lg:w-44 lg:h-60`}>
                 { mostPopular ? <p className={`${styles.most_popular} lg:text-xs lg:pt-3`}>Most popular</p> : <div className={`${styles.void} lg:h-8`}></div> }
 
                     <p className={`${styles.size} lg:text-2xl`}>
