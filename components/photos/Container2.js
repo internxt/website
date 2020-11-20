@@ -22,11 +22,11 @@ const Container2 = ({ id }) => {
                     {description[0].title}
                 </h1>
 
-                <p className={`${styles.subtitle} lg:text-xl lg:w-8/12`}>
+                <p className={`${styles.subtitle} lg:text-xl lg:w-7/12`}>
                     {description[0].subtitle}
                 </p>
 
-                <div className={`${styles.cards_container} lg:pb-12`}>
+                <div className="grid grid-cols-4 gap-x-4 lg:pb-12 lg:mt-12">
                     <PriceCard free="true" size={2} individual={true} />
                     <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
                     <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
