@@ -73,7 +73,7 @@ const Container1 = ({ id }) => {
             
             {
                 individual ?
-                    <div className={`grid grid-cols-4 gap-2 lg:px-40`}>
+                    <div className={`grid grid-cols-4 gap-2 lg:px-40 xl:px-48`}>
                         <PriceCard free="true" size={2} individual={true} />
                         <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
                         <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
