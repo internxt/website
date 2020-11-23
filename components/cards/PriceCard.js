@@ -19,7 +19,7 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
             return gigas + " " + sizes[i]
         }
       
-        return (gigas / Math.pow(1000, i)).toFixed(1) + " " + sizes[i]
+        return (gigas / Math.pow(1000, i)).toFixed(0) + " " + sizes[i]
     }
 
     useEffect(() => {

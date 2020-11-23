@@ -84,7 +84,7 @@ const Container1 = ({ id }) => {
                         <PriceCard size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" mostPopular="true" />
                         <PriceCard size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" />
                         <PriceCard size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" />
-                        <PriceCard free="true" size={2} individual={false} />
+                        <PriceCard free="true" size={2000} individual={false} />
                     </div>
             }
         </div>

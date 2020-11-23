@@ -52,6 +52,7 @@ a {
 }
 
 a:hover {
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -83,6 +84,10 @@ p {
 input[type=number]::-webkit-outer-spin-button, 
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
+}
+
+button:focus {
+  outline: none !important;
 }
 
 .normal_container {

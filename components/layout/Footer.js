@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import EmailNewsletter from '../EmailNewsletter'
 import styles from './Footer.module.css'
+import Link from 'next/link'
 
 const Footer = () => {
     return ( 
-        <>
+        <footer>
             <div className={styles.first_half}>
                 <div className={styles.title_container}>
                     <h1 className={`${styles.title} lg:text-4xl`}>A family of privacy focused services.</h1>
@@ -17,11 +18,12 @@ const Footer = () => {
                 </div>
 
                 <div className={`${styles.get_started_container} lg:mt-10`}>
-                    <button className={`${styles.button} lg:h-8 lg:w-32`}>
-                        <p className={`${styles.text_button} lg:text-sm`}>Get started</p>
-                    </button>
-
-                    <p className={`${styles.learn_more} lg:text-xss lg:mt-1`}>Learn more</p>
+                    
+                    <a href="http://drive.internxt.com/new" className={`${styles.button} ${styles.text_button} lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
+                    
+                    <Link href="/prices">
+                        <a className={`${styles.learn_more} lg:text-xss lg:mt-1`}>Learn more</a>
+                    </Link>
                 </div>
             </div>
 
@@ -46,7 +48,7 @@ const Footer = () => {
                             />
                         </div>
 
-                        <p className={`${`${styles.p_social} lg:text-xs`} lg:text-xs`}>Copyright &copy; 2020 Internxt Inc.</p>
+                        <p className={`${`${styles.p_social} lg:text-xs`} lg:text-xs`}>Copyright &copy; 2020 Internxt</p>
                         <p className={`${`${styles.p_social} lg:text-xs`} lg:text-xs`}>All rights Reserved</p>
                     </div>
 
@@ -81,7 +83,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </footer>
     );
 }
  

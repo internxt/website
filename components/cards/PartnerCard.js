@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import styles from './PartnerCard.module.css'
 import Image from 'next/image'
 
-const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imageW, imageH }) => {
+const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link, imageW, imageH }) => {
 
     const logourl = `/images/1440/About/Section 5/${logo}.png`
     const imageurl = `/images/1440/About/Section 5/${image}.png`
@@ -48,11 +48,11 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, imag
                     {bio2}
                 </p>
 
-                <p className={`${readmorestyle} lg:text-sm lg:pb-6`}>Read more</p>
+                <a href={link} target="_blank" className={`${readmorestyle} lg:text-sm lg:mb-6 xl:mb-6`}>Read more</a>
             </div>
 
             <div className="w-6/12 overflow-hidden">
-                    <img src={imageurl} className="object-contain" />
+                <img src={imageurl} className="object-contain" />
             </div>
         </div>
      );
