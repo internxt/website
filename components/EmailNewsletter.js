@@ -1,9 +1,12 @@
 import styles from './EmailNewsletter.module.css'
 
 const EmailNewsletter = ({ value }) => {
-    return ( 
+    return (
         <div className={styles.signup_container}>
-            <form style={{display: "flex"}}>
+            <form
+                method="GET"
+                action="https://drive.internxt.com/new"
+                style={{ display: "flex" }}>
                 <input
                     name='email'
                     type='email'
@@ -19,7 +22,7 @@ const EmailNewsletter = ({ value }) => {
                 />
             </form>
         </div>
-     );
+    );
 }
- 
+
 export default EmailNewsletter;
