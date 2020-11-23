@@ -33,13 +33,12 @@ const TopBar = () => {
         </Navbar> */
         <header>
             <Link href="/" >
-                <div className={`${styles.logo} lg:w-32 lg:px-4`}>
+                <div className={`${styles.logo} lg:w-32 lg:px-4 xl:w-28`}>
                     <Image 
                         src="/images/1440/Footer/Internxt.png"
                         alt="INTERXT logo"
-                        width={153}
-                        height={16}
-                        quality={100}
+                        width={298}
+                        height={32}
                     />
                 </div>
             </Link>

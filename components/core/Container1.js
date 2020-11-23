@@ -39,7 +39,7 @@ const Container1 = ({ id }) => {
 
                 <div className={`${styles.button_container}`}>
                     <button className={styles.button}>Download</button>
-                    <a className={styles.link}>Set-up & tips</a>
+                    <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={styles.link}>Set-up & tips</a>  
                 </div>
             </div>
         </div>

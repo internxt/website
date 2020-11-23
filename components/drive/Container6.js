@@ -1,6 +1,7 @@
 import styles from './Container6.module.css'
 import descriptions from '../../assets/drive-descriptions.json'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Container6 = ({ id }) => {
 
@@ -27,7 +28,12 @@ const Container6 = ({ id }) => {
                         {description[0].subtitle}
                     </p>
 
-                    <a className={`${styles.link} lg:pt-8 lg:text-lg xl:mt-12`}>Check out plans for teams</a>
+                    <Link href="/prices">
+                        <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mt-8 lg:mb-16 xl:mt-12`}>
+                            <p className="mr-2 mb-1">Check out plans for teams</p>
+                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                        </a>
+                    </Link>
                 </div>
                 
                 <div className={styles.image}>

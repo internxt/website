@@ -1,6 +1,7 @@
 import styles from './Container5.module.css'
 import descriptions from '../../assets/core-descriptions.json'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const Container5 = ({ id }) => {
 
@@ -130,11 +131,11 @@ const Container5 = ({ id }) => {
                 </div>
             </div>
 
-            <a className={`${styles.link}`}>
-                {description[0].link}
+            <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
+                <p className="mr-2">{description[0].link}</p>
             </a>
         </div>
      );
 }
- 
+
 export default Container5;

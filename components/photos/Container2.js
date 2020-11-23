@@ -2,6 +2,7 @@ import styles from './Container2.module.css'
 import descriptions from '../../assets/photos-descriptions.json'
 import PriceCard from '../cards/PriceCard'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Container2 = ({ id }) => {
 
@@ -33,9 +34,12 @@ const Container2 = ({ id }) => {
                     <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
                 </div>
 
-                <p className={`${styles.link} lg:text-base xl:mt-24`}>
-                    {description[0].link}
-                </p>
+                <Link href="/prices">
+                    <a className={`${styles.link} flex flex-row w-auto items-center lg:text-base lg:mt-12 lg:mb-16 xl:mt-24`}>
+                        <p className="mr-2">{description[0].link}</p>
+                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                    </a>
+                </Link>
             </div>
         </div>
      );

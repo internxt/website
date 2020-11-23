@@ -36,9 +36,13 @@
     margin: 8px 0 0;
 }
 
-.link {
+.link_container {
+    display: flex;
     position: absolute;
     bottom: 0;
+}
+
+.link {
     font-size: 11px;
     line-height: normal;
     letter-spacing: 0.4px;

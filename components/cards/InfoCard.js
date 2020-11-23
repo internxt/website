@@ -1,7 +1,7 @@
 import styles from './InfoCard.module.css'
 import Image from 'next/image'
 
-const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2, image, width, heigth }) => {
+const InfoCard = ({ title, subtitle, subtitle2, linkText, link, linkText2, link2, image, width, heigth }) => {
     
     const url = `/images/1440/Drive/Section 7/${image}.png`
 
@@ -23,14 +23,16 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, linkText2, image, widt
                 {subtitle2}
             </p>
 
-            <a className={`${styles.link} absolute bottom-0 lg:pb-6 lg:text-sm lg:m-0 xl:mb-16`}>
-                {linkText}
-            </a>
+                <a href={link} target="_blank" className={`${styles.link} flex flex-row w-auto items-center absolute bottom-0 lg:pb-6 lg:text-sm lg:m-0 xl:mb-16`}>
+                    <p className="mr-2">{linkText}</p>
+                    <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                </a>
 
             {
                 linkText2 ? 
-                    <a className={`${styles.link} absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-16 xl:mr-40`}>
-                        {linkText2}
+                    <a href={link2} target="_blank" className={`${styles.link} flex flex-row w-auto items-center absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-16 xl:mr-32`}>
+                        <p className="mr-2">{linkText}</p>
+                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                     </a>
                 :
                     null

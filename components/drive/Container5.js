@@ -56,8 +56,15 @@ const Container5 = ({ id }) => {
                     </p>
 
                     <div className={styles.links}>
-                        <a className={`${styles.link} lg:text-lg`}>Sign up</a>
-                        <a className={`${styles.link} lg:text-lg`}>Download</a>
+                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
+                            <p className="mr-2">Sign up</p>
+                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                        </a>
+
+                        <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
+                            <p className="mr-2">Download</p>
+                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                        </a>
                     </div>
                 </div>
             </div>
