@@ -17,10 +17,7 @@ const PublishedArticle = ({ article, image}) => {
                     {article.title}
                 </h1>
 
-                <a href={article.link} target="_blank" className={`${styles.link_container} lg:mb-4 xl:mb-6`}>
-                    <p className={`${styles.link} lg:text-xxxs mr-1`}>READ ARTICLE</p>
-                    <Image className="w-2" src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
-                </a>
+                <a href={article.link} target="_blank" className={`${styles.link} absolute bottom-0 mb-6 lg:text-xxxs mr-1`}>READ ARTICLE</a>
             </div>
         </div>
     );
