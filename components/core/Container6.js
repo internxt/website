@@ -1,80 +1,96 @@
 import styles from './Container6.module.css'
 import descriptions from '../../assets/core-descriptions.json'
+import Image from 'next/image'
 
 const Container6 = ({ id }) => {
 
+    // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
 
+    // Check if a number is odd
+    const isOdd = ( num ) => {
+        return num % 2 == 1;
+    }
+
+    // Set the background color of the container depending on its id
+    const background = isOdd(id) ? 'container grey' : 'container'
+
     return ( 
-        <div className={styles.background}>
-            <h1 className={`${styles.title}`}>
+        <div className={`${background}`}>
+            <h1 className={styles.title}>
                 {description[0].title}
             </h1>
 
-            <div className={`grid grid-cols-4 gap-x-6`}>
-                <div className={`${styles.input_container}`}>
-                    <label className={`${styles.label}`}>
-                        {description[0].label}
-                    </label>
-
-                    <div className={`${styles.placeholders}`}>
-                        <input 
-                            type="number"
-                            className={`${styles.input}`}
-                        />
-
-                        <div className={`${styles.type_container}`}>
-                            <p className={`${styles.type}`}>
-                                GB
-                            </p>
-                        </div>
+            <div className="grid grid-cols-4 gap-4 xl:mb-24">
+                <div className={`${styles.card} col-span-2`}>
+                    <div className={`${styles.steps}`}>
+                        <p className={styles.steps_text}>STEP 1</p>
                     </div>
+
+                    <h1 className={`${styles.card_title}`}>
+                        {description[0].title1}
+                    </h1>
+
+                    <p className={`${styles.card_subtitle}`}>
+                        {description[0].subtitle}
+                    </p>
+
+                    <a className={`${styles.card_link}`}>
+                        Download Internxt Core
+                    </a>
                 </div>
 
-                <div className={`${styles.input_container}`}>
-                    <label className={`${styles.label}`}>
-                        {description[0].label}
-                    </label>
-
-                    <div className={`${styles.placeholders}`}>
-                        <input 
-                            type="number"
-                            className={`${styles.input}`}
-                        />
-
-                        <div className={`${styles.type_container}`}>
-                            <p className={`${styles.type}`}>
-                                INXT
-                            </p>
-                        </div>
+                <div className={`${styles.card} col-span-2`}>
+                    <div className={`${styles.steps}`}>
+                        <p className={styles.steps_text}>STEP 2</p>
                     </div>
+
+                    <h1 className={`${styles.card_title}`}>
+                        {description[0].title2}
+                    </h1>
+
+                    <p className={`${styles.card_subtitle}`}>
+                        {description[0].subtitle2}
+                    </p>
+
+                    <p className={`${styles.card_subtitle}`}>
+                        {description[0].subtitle3}
+                    </p>
                 </div>
 
-                <div className={`${styles.input_container}`}>
-                    <label className={`${styles.label}`}>
-                        {description[0].label}
-                    </label>
+                <div className={`${styles.card} col-span-4 w-auto`}>
+                    <div className={`${styles.steps}`}>
+                        <p className={styles.steps_text}>STEP 3</p>
+                    </div>
 
-                    <div className={`${styles.placeholders}`}>
-                        <input 
-                            type="number"
-                            className={`${styles.input}`}
-                        />
+                    <h1 className={`${styles.card_title}`}>
+                        {description[0].title3}
+                    </h1>
 
-                        <div className={`${styles.type_container}`}>
-                            <p className={`${styles.type}`}>
-                                EUR
+                    <div className={`${styles.long_card_description}`}>
+                        <div className={`${styles.paragraph}`}>
+                            <p className={`${styles.card_subtitle}`}>
+                                {description[0].subtitle4}
+                            </p>
+
+                            <p className={`${styles.card_subtitle}`}>
+                                {description[0].subtitle5}
                             </p>
                         </div>
+                        
+                        <p className={`${styles.card_subtitle} w-1/2`}>
+                            {description[0].subtitle6}
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <a className={`${styles.link}`}>
-                {description[0].link}
-            </a>
+            <Image src="/images/1440/Core/Section 6/emoji.png" width={89} height={105} />
+            <h1 className={`${styles.all_set}`}>
+                You're all set!
+            </h1>
         </div>
-     );
+    );
 }
- 
+
 export default Container6;

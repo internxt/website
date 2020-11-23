@@ -42,6 +42,7 @@
     {
         "id": "6",
         "title": "Get started on Internxt Core",
+        "title1": "Download the app",
         "subtitle": "Every month, we will send you a payout based on how much space you allocated and how much Inxt you held. The more time you run the node, the more likely the network will allocate your node, and it will rank you as high quality node. Set-up is quick and easy, just download the app and follow the steps.",
         "title2": "Enter your details",
         "subtitle2": "Enter your Inxt Wallet address, choose where you’d like to store data, allocate your desired storage capacity and finally, insert your public IP.",
@@ -53,12 +54,34 @@
     },
     {
         "id": "7",
-        "title": "Frequently asked questions from users.",
-        "subtitle": "Can anyone run a Internxt Core node?",
-        "subtitle2": "What operation systems are compatible?",
-        "subtitle3": "What's the minimum amount of space needed to get paid?",
-        "subtitle4": "How much data can I expect my node to store?",
-        "subtitle5": "How is my node selected to receive data?",
-        "subtitle6": "How often will I get paid?"
+        "faq": {
+            "title": "Frequently asked questions from users.",
+            "rows": [
+                {
+                    "title": "Can anyone run a Internxt Core node?",
+                    "content": "Totally! Anyone can run an Internxt Core node. All you need is a machine with enough available storage space (eg your laptop). Joining Internxt Core is quick and easy!"
+                },
+                {
+                    "title": "What operating systems are compatible?",
+                    "content": "You can run Internxt Core on Linux, Windows and MacOS."
+                },
+                {
+                    "title": "What’s the minimum amount of space needed to get paid?",
+                    "content": "The minimum monthly payout is of €5, which corresponds to 500 GB of hosted data. However, you can boost your payout by holding Internxt tokens. Check out our payout calculator in the Internxt Core page."
+                },
+                {
+                    "title": "How much data can I expect my node to store?",
+                    "content": "If you run a node almost uninterruptedly, you should be able to hit the minimum payout in just around a month of running Internxt Core. Once that threshold is reached, you will have already secured a recurring, increasing monthly passive income! There is no real limit on how much you can host and therefore earn by running Internxt Core."
+                },
+                {
+                    "title": "How is my node selected to receive data?",
+                    "content": "We want Internxt Drive data to be held by the best performing nodes, so that we can provide a top-notch service to our customers. Nodes are mainly selected based on their available space and uptime."
+                },
+                {
+                    "title": "How often will I get paid?",
+                    "content": "Internxt Core payouts are usually sent during the first week of each new month."
+                }
+            ]
+        }
     }
 ]

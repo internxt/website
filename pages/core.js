@@ -18,7 +18,7 @@ const Core = () => {
             <Container4 id='4' />
             <Container5 id='5' />
             <Container6 id='6' />
-           {/*  <Container7 id='7' /> */}
+            <Container7 id='7' />
             <Footer />
         </>
      );

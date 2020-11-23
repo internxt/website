@@ -90,3 +90,43 @@ input[type=number]::-webkit-inner-spin-button {
 .grey {
   background-color: #fcfcfc;
 }
+
+.faq-row-wrapper {
+  background-color: transparent;
+}
+
+.faq-title {
+  font-family: "averta-extrabold";
+  font-size: 50px;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  color: #2a2c35;
+
+  padding: 0 0 4rem !important;
+}
+
+.faq-body {
+}
+
+.faq-row {
+  padding: 1.5rem 0.5rem !important;
+}
+
+.row-title {
+  font-family: "averta-light";
+  font-size: 20px;
+  line-height: 1.55;
+  letter-spacing: normal;
+  color: #545465;
+}
+
+.row-content {
+  font-family: "averta-light";
+  font-size: 15px;
+  line-height: 1.55;
+  letter-spacing: normal;
+}
+
+.row-content-text {
+  margin: 1rem 0 0 !important;
+}
