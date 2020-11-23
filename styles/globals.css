@@ -56,7 +56,7 @@ a {
 }
 
 header {
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem 1rem;
@@ -81,7 +81,7 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-.container {
+.normal_container {
   display: flex;
   flex-direction: column;
   align-items: center;

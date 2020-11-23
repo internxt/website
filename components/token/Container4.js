@@ -14,7 +14,7 @@ const Container4 = ({ id }) => {
     }
 
     // Set the background color of the container depending on its id
-    const background = isOdd(id) ? 'container' : 'container grey'
+    const background = isOdd(id) ? 'normal_container' : 'normal_container grey'
 
     // Esta funcion cambiara el color de una determinada cadena de texto
     const formattedText = (label, value) => {

@@ -5,15 +5,7 @@ import Image from 'next/image'
 const Container2 = ({ id }) => {
     
     const description = descriptions.filter( desc => desc.id === id)
-    
-    // Check if a number is odd
-    const isOdd = ( num ) => {
-        return num % 2 == 1;
-    }
-
-    // Set the background color of the container depending on its id
-    const className = isOdd(id) ? 'container' : 'container grey'
-
+ 
     // Esta funcion cambiara el color de una determinada palabra de texto
     const formattedText = (text, values) => { 
         const regex = new RegExp(/\[\[(.*?)\]\]/);

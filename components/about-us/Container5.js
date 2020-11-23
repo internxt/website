@@ -21,7 +21,7 @@ const Container5 = ({ id }) => {
     }
 
     // Set the background color of the container depending on its id
-    const className = isOdd(id) ? 'container grey' : 'container'
+    const className = isOdd(id) ? 'normal_container grey' : 'normal_container'
 
     return ( 
         <div className={className}>

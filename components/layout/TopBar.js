@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import styles from './TopBar.module.css'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { Navbar } from 'react-bootstrap'
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
 const TopBar = () => {
 
@@ -17,56 +17,68 @@ const TopBar = () => {
     }, [])
 
     return ( 
-        <Navbar expand="sm">
-            <header>
-                <Link href="/" >
-                    <div className={`${styles.logo} lg:w-32 lg:px-4`}>
-                        <Image 
-                            src="/images/1440/Footer/Internxt.png"
-                            alt="INTERXT logo"
-                            width={153}
-                            height={16}
-                            quality={100}
-                        />
-                    </div>
+        /* <Navbar expand="sm">
+            <Navbar.Brand href="/">INTERNXT</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                    <Nav.Link href="/photos">Photos</Nav.Link>
+                    <Nav.Link href="/">Send</Nav.Link>
+                    <Nav.Link href="/pricing">Pricing</Nav.Link>
+                    <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link href="/token">Token</Nav.Link>
+                    <Nav.Link href="/core">Core</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar> */
+        <header>
+            <Link href="/" >
+                <div className={`${styles.logo} lg:w-32 lg:px-4`}>
+                    <Image 
+                        src="/images/1440/Footer/Internxt.png"
+                        alt="INTERXT logo"
+                        width={153}
+                        height={16}
+                        quality={100}
+                    />
+                </div>
+            </Link>
+
+            <div>
+                <Link href="/">
+                    <a className={router.pathname === '/' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} ${color} lg:text-sm`}>Drive</a>
                 </Link>
 
-                <div>
-                    <Link href="/">
-                        <a className={router.pathname === '/' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} ${color} lg:text-sm`}>Drive</a>
-                    </Link>
+                <Link href="/photos">
+                    <a className={router.pathname === '/photos' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Photos</a>
+                </Link>
+                
+                <Link href="/">
+                    <a className={router.pathname === '/send' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Send</a>
+                </Link>
+                
+                <Link href="/prices">
+                    <a className={router.pathname === '/prices' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Pricing</a>
+                </Link>
 
-                    <Link href="/photos">
-                        <a className={router.pathname === '/photos' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Photos</a>
-                    </Link>
-                    
-                    <Link href="/">
-                        <a className={router.pathname === '/send' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Send</a>
-                    </Link>
-                    
-                    <Link href="/prices">
-                        <a className={router.pathname === '/prices' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Pricing</a>
-                    </Link>
+                <Link href="/about">
+                    <a  className={router.pathname === '/about' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>About</a>
+                </Link>
 
-                    <Link href="/about">
-                        <a  className={router.pathname === '/about' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>About</a>
-                    </Link>
+                <Link href="/token">
+                    <a  className={router.pathname === '/token' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Token</a>
+                </Link>
 
-                    <Link href="/token">
-                        <a  className={router.pathname === '/token' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Token</a>
-                    </Link>
+                <Link href="/core">
+                    <a  className={router.pathname === '/core' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Core</a>
+                </Link>
+            </div>
 
-                    <Link href="/core">
-                        <a  className={router.pathname === '/core' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  ${color} lg:text-sm`}>Core</a>
-                    </Link>
-                </div>
-
-                <div className={styles.links}>
-                    <a className={`${styles.nonactive_link} ${color} lg:text-sm`}>Sign in</a>
-                    <a className={`${styles.button} lg:h-8`}><p className={`${styles.button_text} lg:text-sm`}>Get started</p></a>
-                </div>
-            </header>
-        </Navbar>
+            <div className={styles.links}>
+                <a className={`${styles.nonactive_link} ${color} lg:text-sm`}>Sign in</a>
+                <a className={`${styles.button} lg:h-8`}><p className={`${styles.button_text} lg:text-sm`}>Get started</p></a>
+            </div>
+        </header>
      );
 }
 

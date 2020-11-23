@@ -13,7 +13,7 @@ const Container7 = ({ id }) => {
     }
 
     // Set the background color of the container depending on its id
-    const background = isOdd(id) ? 'container grey' : 'container'
+    const background = isOdd(id) ? 'normal_container grey' : 'normal_container'
 
     const config = {
         animate: true
