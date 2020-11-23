@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className={styles.title_container}>
                     <h1 className={`${styles.title} lg:text-4xl`}>A family of privacy focused services.</h1>
 
-                    <h1 className={`${styles.title} lg:text-4xl`}>Get started free for 30 days.</h1>
+                    <h1 className={`${styles.title} lg:text-4xl`}>Start free with 2GB.</h1>
 
                     <div className={styles.image}>
                         <Image src={'/images/1440/Footer/Line.png'} width={68} height={9} />
@@ -21,7 +21,7 @@ const Footer = () => {
                         <p className={`${styles.text_button} lg:text-sm`}>Get started</p>
                     </button>
 
-                    <p className={`${styles.learn_more} lg:text-xss lg:mt-1`}>Learn more about Internxt plans</p>
+                    <p className={`${styles.learn_more} lg:text-xss lg:mt-1`}>Learn more</p>
                 </div>
             </div>
 

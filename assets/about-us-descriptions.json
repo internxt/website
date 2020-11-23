@@ -63,7 +63,7 @@
         "title": "Internxt Investors",
 
         "company": "Esade Ban",
-        "info": "Investor of Cabify & Wallapop",
+        "info": "Most reputable business school",
 
         "company2": "Vodafone",
         "info2": "Ex-directors of Vodafone",
@@ -75,7 +75,10 @@
         "info4": "Investor of Zeleros & Airhopping",
 
         "company5": "The Venture City",
-        "info5": "Investor of Returnly & Peoople"
+        "info5": "Investor of Cabify & Peoople",
+
+        "company6": "International Business Machines",
+        "info6": "Most reputable technology company"
     },
     {
         "id": "6",
