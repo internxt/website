@@ -13,7 +13,7 @@ module.exports = {
       'xl': {'min': '1440px'},
       'lg': {'min': '1080px', 'max': '1439px'},
       'md': {'min': '750px', 'max': '1079px'},
-      'sm': {'min': '450px', 'max': '749px'},
+      'sm': {'min': '375px', 'max': '749px'},
     },
     fontSize: {
       '13': '13px',

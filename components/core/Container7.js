@@ -21,11 +21,7 @@ const Container7 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <h1 className={styles.title}>
-                {description[0].title}
-            </h1>
-
-            <div className="xl:w-9/12 xl:mb-32">
+            <div className="xl:w-9/12 xl:my-32">
                 <Faq 
                     data={description[0].faq} 
                     styles={{
