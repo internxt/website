@@ -111,7 +111,11 @@
 }
 
 .logo {
-    margin: 0 0 1rem;
+}
+
+.p_container {
+    display: flex;
+    flex-direction: column;
 }
 
 .label {
@@ -128,6 +132,7 @@
     line-height: 2.06;
     letter-spacing: normal;
     color: #646473;
+    margin: .25rem 0 0;
 }
 
 .line {

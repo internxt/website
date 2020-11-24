@@ -38,7 +38,7 @@ const Footer = () => {
 
                 <div className={`${styles.social_container} lg:pb-12`}>
                     <div className={styles.p_container}>
-                        <div className={`${styles.logo} lg:w-32`}>
+                        <div className={`${styles.logo} lg:w-28 xl:w-36 xl:mt-2`}>
                             <Image 
                                 src="/images/1440/Footer/Internxt.png"
                                 alt="INTERXT logo"
@@ -48,38 +48,63 @@ const Footer = () => {
                             />
                         </div>
 
-                        <p className={`${`${styles.p_social} lg:text-xs`} lg:text-xs`}>Copyright &copy; 2020 Internxt</p>
-                        <p className={`${`${styles.p_social} lg:text-xs`} lg:text-xs`}>All rights Reserved</p>
+                        <p className={`${styles.p_social} lg:text-xs mt-6`}>Copyright &copy; 2020 Internxt</p>
+                        <p className={`${styles.p_social} lg:text-xs`}>All rights Reserved</p>
                     </div>
 
                     <div className={styles.p_container}>
                         <h1 className={`${styles.label} lg:text-sm`}>Products</h1>
-                        <p className={`${styles.p_social} lg:text-xs`}>Internxt Drive</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Internxt Photos</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Internxt Send</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Internxt Token</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Internxt Core</p>
+
+                        <Link href="/drive">
+                            <a className={`${styles.p_social} lg:text-xs`}>Internxt Drive</a>
+                        </Link>
+
+                        <Link href="/photos">
+                            <a className={`${styles.p_social} lg:text-xs`}>Internxt Photos</a>
+                        </Link>
+
+                        <Link href="/send">
+                            <a className={`${styles.p_social} lg:text-xs`}>Internxt Send</a>
+                        </Link>
+
+                        <Link href="/token">
+                            <a className={`${styles.p_social} lg:text-xs`}>Internxt Token</a>
+                        </Link>
+
+                        <Link href="/core">
+                            <a className={`${styles.p_social} lg:text-xs`}>Internxt Core</a>
+                        </Link>
                     </div>
 
                     <div className={styles.p_container}>
                         <h1 className={`${styles.label} lg:text-sm`}>Company</h1>
-                        <p className={`${styles.p_social} lg:text-xs`}>About us</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Pricing</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Contact</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Legals</p>
+
+                        <Link href="/about">
+                            <a className={`${styles.p_social} lg:text-xs`}>About us</a>
+                        </Link>
+
+                        <Link href="/prices">
+                            <a className={`${styles.p_social} lg:text-xs`}>Pricing</a>
+                        </Link>
+
+                        <a href="mailto:hello@internxt.com" target="_blank" className={`${styles.p_social} lg:text-xs`}>Contact</a>
+                        
+                        <Link href="/legals">
+                            <a className={`${styles.p_social} lg:text-xs`}>Legals</a>
+                        </Link>
                     </div>
 
                     <div className={styles.p_container}>
                         <h1 className={`${styles.label} lg:text-sm`}>Follow us</h1>
-                        <p className={`${styles.p_social} lg:text-xs`}>Twitter</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Telegram</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Github</p>
+                        <a href="https://twitter.com/Internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Twitter</a>
+                        <a href="https://medium.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Medium</a>
+                        <a href="https://github.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Github</a>
                     </div>
 
                     <div className={styles.p_container}>
                         <h1 className={`${styles.label} lg:text-sm`}>Join</h1>
-                        <p className={`${styles.p_social} lg:text-xs`}>Sign in</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>Get started</p>
+                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.p_social} lg:text-xs`}>Sign in</a>
+                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.p_social} lg:text-xs`}>Get started</a>
                     </div>
                 </div>
             </div>
