@@ -11,14 +11,14 @@ const EmailNewsletter = ({ value }) => {
                     name='email'
                     type='email'
                     placeholder='Your email'
-                    className={`${styles.email} lg:w-48 lg:text-sm lg:h-10`}
+                    className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
                 />
 
                 <input
                     name='signup'
                     type='submit'
                     value={value}
-                    className={`${styles.button} lg:w-32 lg:h-10 lg:text-sm`}
+                    className={`${styles.button} sm:rounded-3xl sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                 />
             </form>
         </div>

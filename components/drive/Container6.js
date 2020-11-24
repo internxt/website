@@ -18,26 +18,30 @@ const Container6 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={styles.container}>
-                <div className={styles.main}>
-                    <h1 className={`${styles.title} lg:text-5xl lg:w-104 lg:leading-tight xl:leading-13`}>
+            <div className={`${styles.container} sm:items-center sm:justify-center sm:flex-col`}>
+                <div className={`${styles.main} sm:items-center sm:w-auto sm:p-0`}>
+                    <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:w-10/12 lg:text-5xl lg:w-104 lg:leading-tight xl:leading-13`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} lg:text-lg lg:w-96`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-10/12 sm:mb-12 lg:text-lg lg:w-96`}>
                         {description[0].subtitle}
                     </p>
 
                     <Link href="/prices">
                         <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mt-8 lg:mb-16 xl:mt-12`}>
-                            <p className="mr-2 mb-1">Check out plans for teams</p>
+                            <p className="sm:text-lg mr-2 mb-1">Check out plans for teams</p>
                             <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                         </a>
                     </Link>
                 </div>
                 
-                <div className={styles.image}>
+                <div className={`${styles.image} sm:hidden`}>
                     <Image src="/images/1440/Drive/Section 6/Business.png" width={708} height={754} />
+                </div>
+
+                <div className={`hidden sm:block sm:mt-12`}>
+                    <Image src="/images/1440/Drive/Section 6/375p business.png" width={708} height={658} />
                 </div>
             </div>
         </div>

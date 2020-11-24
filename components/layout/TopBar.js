@@ -17,7 +17,7 @@ const TopBar = () => {
     }, [])
 
     return ( 
-        /* <Navbar expand="sm">
+        <Navbar expand="sm">
             <Navbar.Brand href="/">INTERNXT</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -30,8 +30,8 @@ const TopBar = () => {
                     <Nav.Link href="/core">Core</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-        </Navbar> */
-        <header>
+        </Navbar>
+        /* <header>
             <Link href="/" >
                 <div className={`${styles.logo} lg:w-32 lg:px-4 xl:w-28`}>
                     <Image 
@@ -75,7 +75,7 @@ const TopBar = () => {
                 <a className={`${styles.nonactive_link} ${color} lg:text-sm`}>Sign in</a>
                 <a className={`${styles.button} lg:h-8`}><p className={`${styles.button_text} lg:text-sm`}>Get started</p></a>
             </div>
-        </header>
+        </header> */
      );
 }
 

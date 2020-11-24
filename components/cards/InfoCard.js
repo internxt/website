@@ -6,20 +6,20 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, link, linkText2, link2
     const url = `/images/1440/Drive/Section 7/${image}.png`
 
     return ( 
-        <div className={`${styles.card} relative lg:p-0 lg:pl-10 lg:pt-12 lg:pb-6 lg:h-100 lg:w-4/12`}>
-            <div className={`${styles.logo} lg:w-4/12`}>
+        <div className={`${styles.card} relative sm:h-auto sm:m-0 sm:p-0 sm:w-10/12 sm:shadow-none sm:border-0 lg:p-0 lg:pl-10 lg:pt-12 lg:pb-6 lg:h-100 lg:w-4/12`}>
+            <div className={`${styles.logo} sm:w-28 lg:w-4/12`}>
                 <Image src={url} width={width} height={heigth} />
             </div>
 
-            <h1 className={`${styles.title} lg:text-2xl lg:mt-10`}>
+            <h1 className={`${styles.title} sm:text-3xl sm:mt-24 lg:text-2xl lg:mt-10`}>
                 {title}
             </h1>
 
-            <p className={`${styles.subtitle} lg:text-sm lg:w-10/12`}>
+            <p className={`${styles.subtitle} sm:text-lg sm:mt-4 sm:mb-12 lg:text-sm lg:w-10/12`}>
                 {subtitle}
             </p>
 
-            <p className={`${styles.subtitle} lg:text-sm lg:w-10/12`}>
+            <p className={`${styles.subtitle} sm:text-lg lg:text-sm lg:w-10/12`}>
                 {subtitle2}
             </p>
 

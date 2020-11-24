@@ -34,8 +34,8 @@ const Container5 = ({ id }) => {
                 <InvestorCard company={company2} description={info2} investor="Vodafone" w={192} h={48} />
                 <InvestorCard company={company3} description={info3} investor="Telefonica" w={192} h={53} />
                 <InvestorCard company={company4} description={info4} investor="Lanz" w={196} h={26} />
-                <InvestorCard company={company5} description={info5} investor="Venture" w={245} h={42} />
                 <InvestorCard company={company6} description={info6} investor="ibm" w={125} h={54} />
+                <InvestorCard company={company5} description={info5} investor="Venture" w={245} h={42} />
             </div>
         </div>
      );

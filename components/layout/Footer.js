@@ -29,7 +29,7 @@ const Footer = () => {
 
             <div className={styles.second_half}>
                 <div className={styles.signup_container}>
-                    <p className={`${styles.keep_updated} lg:text-xl lg:w-120`}>Keep me updated about products, news, tips and offers from Internxt.</p>
+                    <p className={`${styles.keep_updated} sm:min-w-0 lg:text-xl lg:w-120`}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
                     <EmailNewsletter value="Subscribe" />              
                 </div>
@@ -52,7 +52,7 @@ const Footer = () => {
                         <p className={`${styles.p_social} lg:text-xs`}>All rights Reserved</p>
                     </div>
 
-                    <div className={styles.p_container}>
+                    <div className={`${styles.p_container} sm:hidden`}>
                         <h1 className={`${styles.label} lg:text-sm`}>Products</h1>
 
                         <Link href="/drive">
@@ -76,7 +76,7 @@ const Footer = () => {
                         </Link>
                     </div>
 
-                    <div className={styles.p_container}>
+                    <div className={`${styles.p_container} sm:hidden`}>
                         <h1 className={`${styles.label} lg:text-sm`}>Company</h1>
 
                         <Link href="/about">
@@ -111,5 +111,5 @@ const Footer = () => {
         </footer>
     );
 }
- 
+
 export default Footer;

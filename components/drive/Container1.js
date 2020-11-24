@@ -18,47 +18,47 @@ const Container1 = ({ id }) => {
     return ( 
         <div className={className}>
             <div className={`${styles.main}`}>
-                <h1 className={`${styles.title} lg:text-8xl`}>
+                <h1 className={`${styles.title} sm:text-4xl lg:text-8xl`}>
                     {description[0].title}
                 </h1>
 
-                <p className={`${styles.subtitle} lg:text-xl lg:w-7/12`}>
+                <p className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:pt-8 lg:text-xl lg:w-7/12`}>
                     {description[0].subtitle}
                 </p>
 
-                <div className={`${styles.star} lg:pl-24`}>
+                <div className={`${styles.star} sm:top-0 sm:ml-6 sm:w-6 lg:pl-24`}>
                     <Image src="/images/1440/Drive/Section 1/star icon.png" width={47} height={50} />
                 </div>
 
-                <div className={`${styles.gear} lg:pt-8 lg:pr-22`}>
+                <div className={`${styles.gear} sm:p-0 sm:top-0 sm:w-6 sm:mr-12 sm:mt-3 lg:pt-8 lg:pr-22`}>
                     <Image src="/images/1440/Drive/Section 1/cog icon.png" width={37} height={38} />
                 </div>
 
-                <div className={`${styles.coin} lg:pb-20`}>
+                <div className={`${styles.coin} sm:p-0 sm:w-8 sm:mb-12 sm:ml-20 lg:pb-20`}>
                     <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
                 </div>
 
-                <div className={`${styles.lock} lg:pr-32`}>
+                <div className={`${styles.lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-12 lg:pr-32`}>
                     <Image src="/images/1440/Drive/Section 1/lock icon.png" width={45} height={60} />
                 </div>
             </div>
 
-            <div className={`${styles.secondary} lg:pb-32`}>
-                <h1 className={`${styles.subtitle2} lg:text-xl`}>
+            <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
+                <h1 className={`${styles.subtitle2} sm:text-2xl sm:w-10/12 lg:text-xl`}>
                     {description[0].subtitle2}
                 </h1>
 
                 <EmailNewsletter value="Sign up" />
 
-                <p className={`${styles.subtitle3} lg:text-sm`}>
+                <p className={`${styles.subtitle3} sm:text-xs lg:text-sm`}>
                     {description[0].subtitle3}
                 </p>
 
-                <div className={`${styles.cloud} lg:pl-48`}>
+                <div className={`${styles.cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-12 sm:w-8 lg:pl-48`}>
                     <Image src="/images/1440/Drive/Section 1/cloud icon.png" width={70} height={52} />
                 </div>
 
-                <div className={`${styles.hand} lg:w-84`}>
+                <div className={`${styles.hand} sm:hidden lg:w-84`}>
                     <Image src="/images/1440/Drive/Section 1/purplehand.png" width={482} height={310} />
                 </div>
             </div>

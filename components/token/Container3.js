@@ -1,6 +1,7 @@
 import styles from './Container3.module.css'
 import descriptions from '../../assets/token-descriptions.json'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Container3 = ({ id }) => {
 
@@ -39,10 +40,12 @@ const Container3 = ({ id }) => {
                         {description[0].subtitle2}
                     </p>
 
-                    <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
-                        <p className={`lg:text-base mr-1 mb-1`}>{description[0].subtitle3}</p>
-                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
-                    </a>
+                    <Link href="/core">
+                        <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
+                            <p className={`lg:text-base mr-1 mb-1`}>{description[0].subtitle3}</p>
+                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                        </a>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -31,11 +31,11 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
 
             {   mostPopular ?
                     <div>
-                        <div className={`${styles.heart1} lg:w-12 lg:pt-8`}>
+                        <div className={`${styles.heart1} sm:pt-0 lg:w-12 lg:pt-8`}>
                             <Image src="/images/1440/Prices Individual/heart 1.png" width={25} height={25} /> 
                         </div>
 
-                        <div className={`${styles.heart2} lg:pt-40 lg:pr-4 lg:w-10`}>
+                        <div className={`${styles.heart2} sm:pt-36 sm:pr-4 lg:pt-40 lg:pr-4 lg:w-10`}>
                             <Image src="/images/1440/Prices Individual/heart 2.png" width={25} height={30} /> 
                         </div>
 
@@ -48,38 +48,38 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
             }
 
             {
-                free ? <p className={`${styles.try_for_free} lg:text-xss`}>Get started!</p> : <p className={`${styles.try_for_free} lg:text-xss`}>Try for free for 30 days</p>
+                free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xss`}>Get started!</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xss`}>Try for free for 30 days</p>
             }
             <div className={`${styles.card} lg:min-h-0 lg:w-44 lg:h-60`}>
-                { mostPopular ? <p className={`${styles.most_popular} lg:text-xs lg:pt-3`}>Most popular</p> : <div className={`${styles.void} lg:h-8`}></div> }
+                { mostPopular ? <p className={`${styles.most_popular} sm:text-sm lg:text-xs lg:pt-3`}>Most popular</p> : <div className={`${styles.void} lg:h-8`}></div> }
 
-                    <p className={`${styles.size} lg:text-2xl`}>
+                    <p className={`${styles.size} sm:text-3xl lg:text-2xl`}>
                         {plansize}
                     </p>
 
                     {free ? 
                             <div className={styles.free_msg}>
-                                <h1 className={`${styles.text_free} lg:text-lg`}> { individual ? <span>FREE</span> : <span>CONTACT</span> } </h1>
+                                <h1 className={`${styles.text_free} sm:text-2xl lg:text-lg`}> { individual ? <span>FREE</span> : <span>CONTACT</span> } </h1>
 
-                                <h1 className={`${styles.text_forever} lg:text-sm`}> { individual ? <span>FOREVER & EVER</span> : <span>TEAM FOR PRICING</span> } </h1>
+                                <h1 className={`${styles.text_forever} sm:text-xl lg:text-sm`}> { individual ? <span>FOREVER & EVER</span> : <span>TEAM FOR PRICING</span> } </h1>
                             </div>
                         :
                             <div className={styles.paid_container}>
                                 <div className={`${styles.background_pMonth} lg:w-24 h-auto lg:py-1`}>
-                                    <p className={`${styles.pMonth} lg:text-xxs`}>
+                                    <p className={`${styles.pMonth} sm:text-sm lg:text-xxs`}>
                                         €{pMonth} / month
                                     </p>
                                 </div>
 
-                                <p className={`${styles.label} lg:text-xxs`}>Prepay 6 month</p>
-                                <h1 className={`${styles.pre_pay} lg:text-xs`}>
+                                <p className={`${styles.label} sm:text-xs lg:text-xxs`}>Prepay 6 month</p>
+                                <h1 className={`${styles.pre_pay} sm:text-base lg:text-xs`}>
                                     €{pre6months} / month
                                 </h1>
 
                                 <div className={`${styles.line} lg:my-2`}></div>
 
-                                <p className={`${styles.label} lg:text-xxs`}>Prepay 12 month</p>
-                                <h1 className={`${styles.pre_pay} lg:text-xs`}>
+                                <p className={`${styles.label} sm:text-xs lg:text-xxs`}>Prepay 12 month</p>
+                                <h1 className={`${styles.pre_pay} sm:text-base lg:text-xs`}>
                                     €{preYear} / month
                                 </h1>
                             </div>
