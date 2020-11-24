@@ -3,7 +3,7 @@ import TopBar from '../components/layout/TopBar'
 import Container1 from '../components/prices/Container1'
 import Container2 from '../components/prices/Container2'
 
-const Prices = () => {
+const Pricing = () => {
     return ( 
         <>
             <TopBar />
@@ -14,4 +14,4 @@ const Prices = () => {
      );
 }
  
-export default Prices;
+export default Pricing;
