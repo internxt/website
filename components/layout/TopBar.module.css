@@ -5,6 +5,8 @@
 }
 
 .active_link {
+    display: flex;
+    align-items: center;
     font-family: "averta";
     font-size: 16px;
     line-height: normal;
@@ -14,6 +16,8 @@
 }
 
 .nonactive_link {
+    display: flex;
+    align-items: center;
     font-family: "averta";
     font-size: 16px;
     line-height: normal;

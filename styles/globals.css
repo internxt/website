@@ -139,3 +139,34 @@ button:focus {
 .row-content-text {
   margin: 1rem 0 0 !important;
 }
+
+/* Bootstrap edits */
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0,0,0,.5);
+  border: none
+}
+
+.navbar-nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 7rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-family: "averta";
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #2b2a35 !important;
+  margin: 1rem 0;
+}
