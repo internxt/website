@@ -92,6 +92,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 77%;
     padding: 52px 0 0;
 }
@@ -179,3 +180,43 @@
     background: #0084ff;
     color:white;
   }
+
+  .email2 {
+    width: 225px;
+    height: 50px;
+
+    border: solid 1px #dddfe5;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: 0;
+
+    font-family: "averta";
+    font-size: 17px;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: #807f86;
+
+    padding: 0 0 0 1rem;
+}
+
+.button2 {
+    width: 154px;
+    height: 50px;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #0084ff;
+    outline: 0;
+
+    font-family: "averta";
+    font-size: 18px;
+    line-height: 2.11;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: white;
+}
+
+.button2:hover {
+    background-color: #0074e0;
+    cursor: pointer;
+}

@@ -18,11 +18,11 @@ const Container1 = ({ id }) => {
     return ( 
         <div className={className}>
             <div className={`${styles.main}`}>
-                <h1 className={`${styles.title} sm:text-4xl lg:text-8xl`}>
+                <h1 className={`${styles.title} sm:w-10/12 sm:text-4xl lg:text-8xl`}>
                     {description[0].title}
                 </h1>
 
-                <p className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:pt-8 lg:text-xl lg:w-7/12`}>
+                <p className={`${styles.subtitle} sm:text-xl sm:w-9/12 sm:pt-8 lg:text-xl lg:w-7/12`}>
                     {description[0].subtitle}
                 </p>
 
