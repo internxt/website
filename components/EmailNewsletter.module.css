@@ -44,3 +44,7 @@
     background-color: #0074e0;
     cursor: pointer;
 }
+
+.hidden {
+    display: none;
+}

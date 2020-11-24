@@ -146,3 +146,36 @@
 .image {
     margin: -7px 0 0;
 }
+
+.form {
+    display:flex;
+    flex-direction:row;
+    width: 316px;
+    border: solid 1px #eaecf0;
+    border-radius: 6px;
+    background-color: #fafbff;
+    padding: .3rem .5rem .3rem 1rem;
+    margin: 3rem 0 0;
+  }
+  
+  .input {
+    flex-grow:2;
+    border:none;
+    background-color: #fafbff;
+    font-family: "averta-light";
+  }
+  
+  .input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+  
+  .input_button {
+    /* Just a little styling to make it pretty */
+    font-family: "averta-light";
+    font-size: 13px;
+    width: 50px;
+    height: 28px;
+    background: #0084ff;
+    color:white;
+  }

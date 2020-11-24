@@ -6,39 +6,56 @@ import Link from 'next/link'
 const Footer = () => {
     return ( 
         <footer>
-            <div className={styles.first_half}>
+            <div className={`${styles.first_half} sm:p-0 sm:pt-12 sm:pb-16`}>
                 <div className={styles.title_container}>
-                    <h1 className={`${styles.title} lg:text-4xl`}>A family of privacy focused services.</h1>
+                    <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>A family of privacy focused services.</h1>
 
-                    <h1 className={`${styles.title} lg:text-4xl`}>Start free with 2GB.</h1>
+                    <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>Start free with 2GB.</h1>
 
-                    <div className={styles.image}>
+                    <div className={`${styles.image} sm:hidden`}>
                         <Image src={'/images/1440/Footer/Line.png'} width={68} height={9} />
                     </div>
                 </div>
 
                 <div className={`${styles.get_started_container} lg:mt-10`}>
                     
-                    <a href="http://drive.internxt.com/new" className={`${styles.button} ${styles.text_button} lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
+                    <a href="http://drive.internxt.com/new" className={`${styles.button} ${styles.text_button} sm:text-base lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
                     
                     <Link href="/prices">
-                        <a className={`${styles.learn_more} lg:text-xss lg:mt-1`}>Learn more</a>
+                        <a className={`${styles.learn_more} sm:text-base lg:text-xss lg:mt-1`}>Learn more</a>
                     </Link>
                 </div>
             </div>
 
             <div className={styles.second_half}>
-                <div className={styles.signup_container}>
-                    <p className={`${styles.keep_updated} sm:min-w-0 lg:text-xl lg:w-120`}>Keep me updated about products, news, tips and offers from Internxt.</p>
+                <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6`}>
+                    <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:w-120`}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
-                    <EmailNewsletter value="Subscribe" />              
+                    <EmailNewsletter hidden={true} value="Subscribe" />
+                    <form className={styles.form}
+                        method="GET"
+                        action="https://drive.internxt.com/new"
+                        style={{ display: "flex" }}>
+                        <input
+                            name='email'
+                            type='email'
+                            placeholder='Your email'
+                            className={`${styles.input} sm:flex-grow lg:w-48 lg:text-sm lg:h-10 `}
+                        />
+                        <input
+                            name='signup'
+                            type='submit'
+                            value="Send"
+                            className={`${styles.input_button} sm:rounded-3xl`}
+                        />
+                    </form>
                 </div>
 
                 <div className={styles.line}></div>
 
-                <div className={`${styles.social_container} lg:pb-12`}>
-                    <div className={styles.p_container}>
-                        <div className={`${styles.logo} lg:w-28 xl:w-36 xl:mt-2`}>
+                <div className={`${styles.social_container} sm:w-11/12 sm:justify-around lg:pb-12`}>
+                    <div className={`${styles.p_container}`}>
+                        <div className={`${styles.logo} sm:w-24 lg:w-28 xl:w-36 xl:mt-2`}>
                             <Image 
                                 src="/images/1440/Footer/Internxt.png"
                                 alt="INTERXT logo"
@@ -48,8 +65,8 @@ const Footer = () => {
                             />
                         </div>
 
-                        <p className={`${styles.p_social} lg:text-xs mt-6`}>Copyright &copy; 2020 Internxt</p>
-                        <p className={`${styles.p_social} lg:text-xs`}>All rights Reserved</p>
+                        <p className={`${styles.p_social} sm:text-base lg:text-xs mt-6`}>Copyright &copy; 2020 Internxt</p>
+                        <p className={`${styles.p_social} sm:text-base lg:text-xs`}>All rights Reserved</p>
                     </div>
 
                     <div className={`${styles.p_container} sm:hidden`}>
@@ -101,7 +118,7 @@ const Footer = () => {
                         <a href="https://github.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Github</a>
                     </div>
 
-                    <div className={styles.p_container}>
+                    <div className={`${styles.p_container} sm:hidden`}>
                         <h1 className={`${styles.label} lg:text-sm`}>Join</h1>
                         <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.p_social} lg:text-xs`}>Sign in</a>
                         <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.p_social} lg:text-xs`}>Get started</a>

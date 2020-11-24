@@ -26,7 +26,7 @@ const Container1 = ({ id }) => {
                     {description[0].subtitle}
                 </p>
 
-                <div className={`${styles.star} sm:top-0 sm:ml-6 sm:w-6 lg:pl-24`}>
+                <div className={`${styles.star} sm:top-0 sm:ml-6 sm:w-6 sm:p-0 lg:pl-24`}>
                     <Image src="/images/1440/Drive/Section 1/star icon.png" width={47} height={50} />
                 </div>
 

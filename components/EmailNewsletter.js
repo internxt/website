@@ -1,8 +1,11 @@
 import styles from './EmailNewsletter.module.css'
 
-const EmailNewsletter = ({ value }) => {
+const EmailNewsletter = ({ hidden, value }) => {
+
+    const hidden_class = hidden ? styles.hidden : styles.signup_container
+
     return (
-        <div className={styles.signup_container}>
+        <div className={`${hidden_class}`}>
             <form
                 method="GET"
                 action="https://drive.internxt.com/new"
