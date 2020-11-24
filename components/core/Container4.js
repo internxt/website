@@ -6,7 +6,7 @@ const Container4 = ({ id }) => {
     const description = descriptions.filter( desc => desc.id === id)
 
     return ( 
-        <div className={styles.background}>
+        <div className={`${styles.background} sm:p-0 sm:items-center sm:pt-24 sm:pb-12`}>
             <h1 className={`${styles.title}`}>
                 {description[0].title}
             </h1>

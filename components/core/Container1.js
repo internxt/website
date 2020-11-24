@@ -17,29 +17,30 @@ const Container1 = ({ id }) => {
     return ( 
         <div className={`${className} relative`}>
             <div className={styles.main}>
-                <div className={styles.left}>
+                <div className={`${styles.left} sm:w-40`}>
                     <Image src="/images/1440/Core/Section 1/Graphic left.png" width={511} height={268} />
                 </div>
 
-                <div className={styles.right}>
+                <div className={`${styles.right} sm:w-32`}>
                     <Image src="/images/1440/Core/Section 1/Graphic right.png" width={438} height={239} />
                 </div>
 
-                <h1 className={styles.title}>
+                <h1 className={`${styles.title} sm:text-4xl sm:w-10/12`}>
                     {description[0].title}
                 </h1>
 
-                <p className={styles.subtitle}>
+                <p className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:mt-6`}>
                     {description[0].subtitle}
                 </p>
 
-                <h1 className={styles.subtitle2}>
+                <p className={`${styles.subtitle2} sm:text-xl sm:w-6/12 sm:mt-16`}>
                     {description[0].subtitle2}
-                </h1>
+                </p>
 
                 <div className={`${styles.button_container}`}>
-                    <button className={styles.button}>Download</button>
-                    <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={styles.link}>Set-up & tips</a>  
+                    <button className={`${styles.button} sm:text-base`}>Download</button>
+                    <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" 
+                        className={`${styles.link} sm:text-base`}>Set-up & tips</a>  
                 </div>
             </div>
         </div>

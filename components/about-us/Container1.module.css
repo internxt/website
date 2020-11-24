@@ -1,21 +1,17 @@
 .background {
     display: flex;
     flex-direction: column;
-    background-image: url("/images/1440/About/Section 1/Image .png");
+    background-image: url("/images/1440/About/Section 1/background.png");
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.image {
-    position: absolute;
-    z-index: -1;
+    background-size: contain;
+    background-position: bottom;
+    height: 820px;
 }
 
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 117px;
+    align-items: center;
 }
 
 .void {
@@ -24,39 +20,22 @@
 }
 
 .title {
-    width: 495px;
-    text-shadow: 0 2px 28px rgba(0, 0, 0, 0.5);
-    font-family: "averta";
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.35;
-    letter-spacing: 1px;
-    color: white;
-    text-align: left;
+    width: 70%;
+    font-size: 114px;
+    line-height: 0.97;
+    text-align: center;
+    letter-spacing: -0.59px;
+    color: #2a2c35;
+
+    margin: 2rem 0 0;
 }
 
-.button {
-    width: 118px;
-    height: 35px;
-    border-radius: 17.5px;
-    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12);
-    background-color: white;
-    outline: none;
-    border: none;
+.subtitle {
+    font-size: 26px;
+    line-height: 1.46;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #2b2a35;
 
-    margin: 3.5rem 0 0;
-}
-
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.85);
-    cursor: pointer;
-}
-
-.text_button {
-    font-family: "averta";
-    font-size: 14px;
-    font-weight: 600;
-    font-stretch: normal;
-    letter-spacing: 0.2px;
-    color: black;
+    margin: 2rem 0 0;
 }

@@ -26,6 +26,7 @@ const Container7 = ({ id }) => {
                     data={description[0].faq} 
                     styles={{
                         bgColor: "transparent"
+                        
                     }} 
                     config={config} />
             </div>

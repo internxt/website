@@ -47,20 +47,16 @@ const Container5 = ({ id }) => {
 
     return ( 
         <div className={styles.background}>
-            <h1 className={`${styles.title}`}>
+            <h1 className={`${styles.title} sm:text-4xl sm:w-10/12 sm:mt-12`}>
                 {description[0].title}
             </h1>
 
-            <p className={`${styles.subtitle}`}>
+            <p className={`${styles.subtitle} sm:text-xl sm:w-10/12`}>
                 {description[0].subtitle}
             </p>
 
-            <p className={`${styles.subtitle}`}>
-                {description[0].subtitle2}
-            </p>
-
-            <div className={`grid grid-cols-3 gap-x-6`}>
-                <div className={`${styles.input_container}`}>
+            <div className={`grid grid-cols-3 gap-x-6 sm:flex sm:flex-col `}>
+                <div className={`${styles.input_container} sm:mt-12`}>
                     <label className={`${styles.label}`}>
                         {description[0].label}
                     </label>
@@ -84,12 +80,12 @@ const Container5 = ({ id }) => {
                     </div>
                 </div>
 
-                <div className={`${styles.input_container}`}>
+                <div className={`${styles.input_container} sm:mt-6`}>
                     <label className={`${styles.label}`}>
                         {description[0].label2}
                     </label>
 
-                    <div className={`${styles.placeholders}`}>
+                    <div className={`${styles.placeholders} `}>
                         <input 
                             type="number"
                             min="1"
@@ -108,7 +104,7 @@ const Container5 = ({ id }) => {
                     </div>
                 </div>
 
-                <div className={`${styles.input_container}`}>
+                <div className={`${styles.input_container} sm:mt-20`}>
                     <label className={`${styles.label}`}>
                         {description[0].label3}
                     </label>
@@ -132,7 +128,7 @@ const Container5 = ({ id }) => {
             </div>
 
             <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
-                <p className="mr-2">{description[0].link}</p>
+                <p className="sm:text-lg mr-2">{description[0].link}</p>
             </a>
         </div>
      );
