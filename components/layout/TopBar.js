@@ -17,13 +17,13 @@ const TopBar = () => {
     }, [])
 
     return ( 
-        <Navbar expand="md">
+        <Navbar className="sm:flex-row-reverse" expand="md">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Brand className="hidden" href="/"><img src="/images/1440/Footer/Internxt.png" className="sm:w-28 xl:w-36" /></Navbar.Brand>
+            <Navbar.Brand className="md:hidden lg:hidden xl:hidden" href="/"><img src="/images/1440/Footer/Internxt.png" className="" /></Navbar.Brand>
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="w-full justify-between xl:h-16 xl:p-0">
+                <Nav className="w-full justify-between md:h-10 md:p-0 lg:h-12 lg:p-0 xl:h-16 xl:p-0">
                     <Link href="/">
-                        <img className="block object-contain sm:w-28 xl:w-32 " src="/images/1440/Footer/Internxt.png" />
+                        <img className="block object-contain sm:w-28 md:w-28 lg:w-28 xl:w-32 " src="/images/1440/Footer/Internxt.png" />
                     </Link>
 
                     <div className="flex flex-row">

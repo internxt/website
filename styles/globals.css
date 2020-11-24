@@ -170,3 +170,8 @@ button:focus {
   color: #2b2a35 !important;
   margin: 1rem 0;
 }
+
+.navbar-toggler {
+  padding-right: 0;
+  padding-left: 0;
+}
