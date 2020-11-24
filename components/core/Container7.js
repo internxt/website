@@ -21,12 +21,11 @@ const Container7 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className="xl:w-9/12 xl:my-32">
+            <div className="sm:items-center sm:my-24 xl:w-9/12 xl:my-32">
                 <Faq 
                     data={description[0].faq} 
                     styles={{
                         bgColor: "transparent"
-                        
                     }} 
                     config={config} />
             </div>

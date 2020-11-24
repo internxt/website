@@ -28,27 +28,29 @@ const Footer = () => {
             </div>
 
             <div className={styles.second_half}>
-                <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6`}>
+                <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6 sm:items-start`}>
                     <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:w-120`}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
-                    <EmailNewsletter hidden={true} value="Subscribe" />
+                    <div className="sm:hidden">
+                        <EmailNewsletter hidden={false} value="Subscribe" />
+                    </div>
                     
                     <form
                         method="GET"
                         action="https://drive.internxt.com/new"
-                        style={{ display: "flex" }}>
+                        className={` hidden sm:flex sm:mt-8`}>
                         <input
                             name='email'
                             type='email'
                             placeholder='Your email'
-                            className={`${styles.email2} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+                            className={`${styles.email2} sm:h-10 sm:w-56 lg:w-48 lg:text-sm lg:h-10 `}
                         />
 
                         <input
                             name='signup'
                             type='submit'
                             value="Subscribe"
-                            className={`${styles.button2} sm:rounded-3xl sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+                            className={`${styles.button2} sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                         />
                     </form>
                 </div>

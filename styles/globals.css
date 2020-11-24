@@ -140,6 +140,50 @@ button:focus {
   margin: 1rem 0 0 !important;
 }
 
+@media screen and (min-width: 375px) and (max-width: 749px) {
+
+  .faq-row-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .faq-title {
+    font-size: 36px;
+    width: 80%;
+    text-align: center;
+    padding: 0 0 4rem !important;
+  }
+  
+  .faq-body {
+    padding: 0 1rem !important;
+  }
+  
+  .faq-row {
+    padding: 1.5rem 0.5rem !important;
+  }
+
+  .row-title {
+    position: relative !important;
+  }
+  
+  .row-title-text {
+    font-family: "averta-light";
+    font-size: 15px !important;
+    line-height: 1.55;
+    letter-spacing: normal;
+    color: #545465;
+  }
+  
+  .row-content-text {
+    font-family: "averta-light";
+    font-size: 13px !important;
+    line-height: 1.55;
+    letter-spacing: normal;
+    margin: 1rem 0 0 !important;
+  }
+}
 /* Bootstrap edits */
 
 .navbar {

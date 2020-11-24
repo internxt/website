@@ -28,21 +28,21 @@ const TopBar = () => {
 
                     <div className="flex flex-row sm:flex-col sm:p-0">
                         <Link href="/drive">
-                            <a className={router.pathname === '/drive' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Drive</a>
+                            <a className={router.pathname === '/drive' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Drive</a>
                         </Link>
 
                         <Link href="/photos">
-                            <a className={router.pathname === '/photos' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Photos</a>
+                            <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Photos</a>
                         </Link>
 
                         <a href="https://send.internxt.com/" className={`${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Send</a>
 
                         <Link href="/pricing">
-                            <a className={router.pathname === '/pricing' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Pricing</a>
+                            <a className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Pricing</a>
                         </Link>
 
                         <Link href="/about">
-                            <a  className={router.pathname === '/about' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>About</a>
+                            <a  className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>About</a>
                         </Link>
                     </div>
 
