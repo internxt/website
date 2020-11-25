@@ -1,6 +1,5 @@
 import styles from './Container6.module.css'
 import descriptions from '../../assets/token-descriptions.json'
-import { lazy } from 'react'
 import Image from 'next/image'
 
 const Container6 = ({ id }) => {

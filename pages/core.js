@@ -7,10 +7,11 @@ import Container4 from '../components/core/Container4'
 import Container5 from '../components/core/Container5'
 import Container6 from '../components/core/Container6'
 import Container7 from '../components/core/Container7'
+import Layout from '../components/layout/Layout'
 
 const Core = () => {
     return ( 
-        <>
+        <Layout segmentName="core" title='Internxt Core – Get paid to share.'>
             <TopBar />
             <Container1 id='1' />
             <Container2 id='2' />
@@ -20,7 +21,7 @@ const Core = () => {
             <Container6 id='6' />
             <Container7 id='7' />
             <Footer />
-        </>
+        </Layout>
      );
 }
  

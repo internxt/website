@@ -7,13 +7,11 @@ import Container6 from '../components/drive/Container6'
 import Container7 from '../components/drive/Container7'
 import Footer from '../components/layout/Footer'
 import TopBar from '../components/layout/TopBar'
-import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 
 const Home = () => {
   return (
-    <>
-      <Head>
-      </Head>
+    <Layout title='Internxt – Be limitless.' segmentName='home'>
       <TopBar />
       <Container1 id='1' />
       <Container2 id='2' />
@@ -23,7 +21,7 @@ const Home = () => {
       <Container6 id='6' />
       <Container7 id='7' />
       <Footer />
-    </>
+    </Layout>
   )
 }
 

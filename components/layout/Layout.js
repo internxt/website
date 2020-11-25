@@ -1,0 +1,23 @@
+import Link from 'next/link'
+import Head from 'next/head'
+
+export default function Layout({
+    children,
+    title = 'This is the default title',
+    segmentName = null
+}) {
+    return (
+        <>
+            <Head>
+                <title>{title}</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <script src="js/mailerlite.js"></script>
+                <script src="js/segment.js"></script>
+                <script src="js/drift.js"></script>
+                <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
+            </Head>
+            {children}
+        </>
+    )
+}

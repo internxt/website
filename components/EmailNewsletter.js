@@ -6,15 +6,20 @@ const EmailNewsletter = ({ hidden, value }) => {
 
     return (
         <div className={`${hidden_class}`}>
-            <form
-                method="GET"
-                action="https://drive.internxt.com/new"
+            <form   
+                data-code="r3s4c1" 
+                method="post" 
+                target="_blank" 
+                rel="noopener"
+                action="https://app.mailerlite.com/webforms/submit/r3s4c1"
                 style={{ display: "flex" }}>
+                <input type="hidden" name="ml-submit" value="1"></input>
                 <input
-                    name='email'
+                    name='fields[email]'
                     type='email'
                     placeholder='Your email'
                     className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+                    required
                 />
 
                 <input

@@ -4,17 +4,18 @@ import Container1 from '../components/photos/Container1'
 import Container2 from '../components/photos/Container2'
 import Container3 from '../components/photos/Container3'
 import Container4 from '../components/photos/Container4'
+import Layout from '../components/layout/Layout'
 
 const Photos = () => {
     return ( 
-        <>
+        <Layout segmentName="photos" title='Internxt Photos – Secure your memories.'>
             <TopBar />
             <Container1 id='1' />
             <Container2 id='2' />
             <Container3 id='3' />
             <Container4 id='4' />
             <Footer />
-        </>
+        </Layout>
      );
 }
  

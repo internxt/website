@@ -32,7 +32,7 @@ const Footer = () => {
                     <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none`}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
                     <div className="sm:hidden">
-                        <EmailNewsletter hidden={false} value="Subscribe" />
+                        <EmailNewsletter value="Subscribe" />
                     </div>
                     
                     <form

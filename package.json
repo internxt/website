@@ -12,6 +12,7 @@
     "@sendgrid/mail": "^7.4.0",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
     "moment": "^2.29.1",
     "next": "10.0.1",
     "react": "17.0.1",

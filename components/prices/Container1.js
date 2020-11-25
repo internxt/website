@@ -75,14 +75,14 @@ const Container1 = ({ id }) => {
                 individual ?
                     <div className={`grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-8`}>
                         <PriceCard free="true" size={2} individual={true} />
-                        <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
-                        <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
+                        <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" />
+                        <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" mostPopular="true" />
                         <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
                     </div>
                 :
                     <div className={`grid grid-cols-4 gap-2 sm:grid-cols-1 sm:gap-y-8 lg:px-40 xl:px-48`}>
-                        <PriceCard size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" mostPopular="true" />
-                        <PriceCard size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" />
+                        <PriceCard size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" />
+                        <PriceCard size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" mostPopular="true" />
                         <PriceCard size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" />
                         <PriceCard free="true" size={200000} individual={false} />
                     </div>
