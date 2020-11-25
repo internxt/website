@@ -12,7 +12,7 @@ import Layout from '../components/layout/Layout'
 
 const Token = (props) => {
     return (
-        <Layout segmentName="token" title='Internxt – '>
+        <Layout segmentName="token" title='Internxt Token – Our tokenized asset.' description="Internxt token. Learn all about our cryptocurrency, INXT." >
             <TopBar />
             <Container1 id='1' />
             <Container2 id='2' />

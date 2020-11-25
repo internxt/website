@@ -33,7 +33,7 @@ const Container3 = ({ id }) => {
                 <PersonalCard name={employee5} job={job5} picture="Joan" />
                 <PersonalCard name={employee6} job={job6} picture="Desi" />
                 <PersonalCard name={employee7} job={job7} picture="Elena" />
-                <PersonalCard name={employee8} job={job8} picture="Joan" />
+                <PersonalCard name={employee8} job={job8} picture="Zhihao" />
                 <PersonalCard name={employee9} job={job9} picture="Ain" />
                 <PersonalCard name={employee10} job={job10} picture="Emi" />
             </div>

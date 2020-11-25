@@ -52,7 +52,7 @@ const Container7 = ({ id, data }) => {
                     </p>
 
                     <p className={data.quote.EUR.percent_change_24h > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                        {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : <span>-</span>}{Math.round((data.quote.EUR.percent_change_24h + Number.EPSILON) * 100) / 100}%
+                        {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.quote.EUR.percent_change_24h + Number.EPSILON) * 100) / 100}%
                     </p>
                 </div>
                 
@@ -62,7 +62,7 @@ const Container7 = ({ id, data }) => {
                     </p>
 
                     <p className={data.quote.EUR.percent_change_7d > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                    {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : <span>-</span>}{Math.round((data.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
+                    {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
                     </p>
                 </div>
                 

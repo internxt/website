@@ -14,7 +14,7 @@ import React, { useEffect, useState } from 'react';
 
 const AboutUs = ( props ) => {
     return ( 
-        <Layout segmentName='about' title='Internxt – About us.'>
+        <Layout segmentName='about' title='Internxt – About us.' description="Meet Internxt&#039;s Team. Fran Villalba Segarra, Founder and CEO at Internxt. Be limitless.">
             <Container1 id='1'/>
             <Container2 id='2'/>
             <Container3 id='3'/>
@@ -24,7 +24,6 @@ const AboutUs = ( props ) => {
             <Container7 id='7' articles={props} />
             <Footer />
         </Layout>
-        
      );
 }
 

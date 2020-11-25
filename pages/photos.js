@@ -8,7 +8,7 @@ import Layout from '../components/layout/Layout'
 
 const Photos = () => {
     return ( 
-        <Layout segmentName="photos" title='Internxt Photos – Secure your memories.'>
+        <Layout segmentName="photos" title='Internxt – Photos.' description="All your photos in one secure place that&#039;s completely private. Client-side encrypted. Secure alternative to Google Photos." >
             <TopBar />
             <Container1 id='1' />
             <Container2 id='2' />

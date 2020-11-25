@@ -9,6 +9,7 @@ const DownloadCore = () => {
 }
 
 export async function getServerSideProps(context) {
+    const userAgent = require('useragent')
     
     const POSTS_URL = 'https://api.github.com/repos/internxt/core-gui/releases/latest'
 
@@ -17,7 +18,10 @@ export async function getServerSideProps(context) {
 
     //console.log(res.data)
 
-    console.log(context.req.headers['user-agent'])
+    const ua = userAgent.parse(context.req.headers['user-agent'])
+
+    console.log(ua)
+    console.log(ua.os)
 
     return {
         props: { }

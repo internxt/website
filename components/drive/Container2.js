@@ -31,12 +31,12 @@ const Container2 = ({ id }) => {
 
             <div className="grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-10 sm:mt-16 lg:mt-16 xl:mt-20">
                 <PriceCard free="true" size={2} individual={true} />
-                <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" mostPopular="true" />
-                <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" />
+                <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" />
+                <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" mostPopular="true"/>
                 <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
             </div>
 
-            <Link href="/prices">
+            <Link href="/pricing">
                 <a className={`${styles.link} flex flex-row w-auto items-center lg:text-base lg:mt-12 lg:mb-16 xl:mt-24`}>
                     <p className="sm:text-lg mr-2">{description[0].link}</p>
                     <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />

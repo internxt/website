@@ -6,7 +6,7 @@ import Layout from '../components/layout/Layout'
 
 const Pricing = () => {
     return ( 
-        <Layout segmentName="pricing" title='Internxt Pricing – Paga.'>
+        <Layout segmentName="pricing" title='Internxt – Pricing' description="Internxt&#039;s pricing. One membership for all our services. Internxt Drive, Internxt Send, Internxt Photos. Welcome to the Internxt Universe." >
             <TopBar />
             <Container1 id='1' />
             <Container2 id='2' />

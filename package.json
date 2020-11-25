@@ -22,6 +22,7 @@
     "rss-to-json": "^1.1.1",
     "styled-components": "^5.2.1",
     "tailwindcss": "^1.9.6",
+    "useragent": "^2.3.0",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {

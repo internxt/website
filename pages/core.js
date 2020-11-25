@@ -11,7 +11,7 @@ import Layout from '../components/layout/Layout'
 
 const Core = () => {
     return ( 
-        <Layout segmentName="core" title='Internxt Core – Get paid to share.'>
+        <Layout segmentName="core" title='Internxt Core – Get paid to share.' description="Get paid to share the exceeding disk space of your computer to host encrypted shards of data as part of a decentralized network of servers." >
             <TopBar />
             <Container1 id='1' />
             <Container2 id='2' />
