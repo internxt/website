@@ -54,7 +54,7 @@ const Container2 = ({ id }) => {
                 </div>
             </div>
 
-            <div className="flex items-center sm:col-span-2 mt-8">
+            <div className="flex items-center sm:col-span-2 md:hidden lg:hidden xl:hidden mt-8">
                 <Image
                     src="/images/1440/About/Section 2/venture.png"
                     width={235}
@@ -62,7 +62,7 @@ const Container2 = ({ id }) => {
                 />
             </div>
         
-            <div className="flex items-center sm:col-span-2 mt-8">
+            <div className="flex items-center sm:col-span-2 mt-8 md:hidden lg:hidden xl:hidden">
                 <Image
                     src="/images/1440/About/Section 2/combinator.png"
                     width={160}
@@ -70,7 +70,7 @@ const Container2 = ({ id }) => {
                 />
             </div>
 
-            <div className="flex justify-evenly items-center w-full mt-8">
+            <div className="flex justify-evenly items-center w-full mt-8 md:hidden lg:hidden xl:hidden">
                 <div className="flex items-center sm:col-span-2">
                     <Image
                         src="/images/1440/About/Section 2/blackberry.png"

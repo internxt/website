@@ -12,7 +12,7 @@ const Footer = () => {
 
                     <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>Start free with 2GB.</h1>
 
-                    <div className={`${styles.image} sm:hidden`}>
+                    <div className={`${styles.image}`}>
                         <Image src={'/images/1440/Footer/Line.png'} width={68} height={9} />
                     </div>
                 </div>
