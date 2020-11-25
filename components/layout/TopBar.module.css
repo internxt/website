@@ -7,7 +7,7 @@
 .active_link {
     display: flex;
     align-items: center;
-    font-family: "averta-bold";
+    font-family: "averta";
     font-size: 16px;
     line-height: normal;
     letter-spacing: 0px;
@@ -18,7 +18,7 @@
 .nonactive_link {
     display: flex;
     align-items: center;
-    font-family: "averta-bold";
+    font-family: "averta";
     font-size: 16px;
     line-height: normal;
     letter-spacing: 0px;
@@ -74,6 +74,6 @@
 }
 
 .get_started {
-    width: 118px;
+    width: 128px;
     margin: 0 0 0 8px;
 }
