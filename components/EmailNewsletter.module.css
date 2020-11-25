@@ -15,10 +15,10 @@
     outline: 0;
 
     font-family: "averta";
-    font-size: 17px;
+    font-size: 16px;
     line-height: normal;
-    letter-spacing: -0.1px;
-    color: #807f86;
+    letter-spacing: 0px;
+    color: #807F86;
 
     padding: 0 0 0 1rem;
 }
@@ -32,10 +32,10 @@
     background-color: #0084ff;
     outline: 0;
 
-    font-family: "averta";
+    font-family: "averta-bold";
     font-size: 18px;
     line-height: 2.11;
-    letter-spacing: -0.1px;
+    letter-spacing: 0px;
     text-align: center;
     color: white;
 }

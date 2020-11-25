@@ -19,7 +19,7 @@ const TopBar = () => {
     return ( 
         <Navbar className="sm:flex-row-reverse" expand="md">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Brand className="md:hidden lg:hidden xl:hidden" href="/"><img src="/images/1440/Footer/Internxt.png" className="sm:w-28" /></Navbar.Brand>
+            <Navbar.Brand className="md:hidden lg:hidden xl:hidden" href="/"><img src="/images/1440/Footer/Internxt.png" className={`${styles.brand} sm:w-28`} /></Navbar.Brand>
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="w-full justify-between sm:justify-center sm:items-center sm:p-0 md:h-10 md:p-0 lg:h-12 lg:p-0 xl:h-16 xl:p-0">
                     <Link href="/">
@@ -47,8 +47,8 @@ const TopBar = () => {
                     </div>
 
                     <div className={`${styles.links} sm:hidden`}>
-                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} lg:text-sm`}>Sign in</a>
-                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.button} lg:h-8`}><p className={`${styles.button_text} lg:text-sm`}>Get started</p></a>
+                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} m-0 lg:text-sm`}>Sign in</a>
+                        <a href="https://drive.internxt.com/new" target="_blank"><img src="/images/1440/Footer/button.png" className={`${styles.get_started}`} /> </a>
                     </div>
                 </Nav>
             </Navbar.Collapse>

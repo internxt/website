@@ -7,10 +7,10 @@
 .active_link {
     display: flex;
     align-items: center;
-    font-family: "averta";
+    font-family: "averta-bold";
     font-size: 16px;
     line-height: normal;
-    letter-spacing: .3px;
+    letter-spacing: 0px;
     margin: 0 1.4rem;
     color: #0084ff;
 }
@@ -18,10 +18,10 @@
 .nonactive_link {
     display: flex;
     align-items: center;
-    font-family: "averta";
+    font-family: "averta-bold";
     font-size: 16px;
     line-height: normal;
-    letter-spacing: .3px;
+    letter-spacing: 0px;
     color: #1a1a1a;
     margin: 0 1.4rem;
 }
@@ -42,6 +42,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 0 0 0 17px
 }
 
 .button:hover {
@@ -53,7 +55,7 @@
 }
 
 .button_text {
-    font-family: "averta";
+    font-family: "averta-bold";
     font-size: 14px;
     letter-spacing: 0.2px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)), 
@@ -65,4 +67,13 @@
 
 .white {
     color: white;
+}
+
+.brand {
+    width: 110px;
+}
+
+.get_started {
+    width: 118px;
+    margin: 0 0 0 8px;
 }
