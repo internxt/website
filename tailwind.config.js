@@ -10,10 +10,9 @@ module.exports = {
   important: true,
   theme: {
     screens: {
-      'xl': {'min': '1440px'},
-      'lg': {'min': '1080px', 'max': '1439px'},
-      'md': {'min': '750px', 'max': '1079px'},
-      'sm': {'min': '375px', 'max': '749px'},
+      'xl': {'min': '1081px'},
+      'lg': {'min': '751px', 'max': '1080px'},
+      'sm': {'min': '320px', 'max': '749px'},
     },
     fontSize: {
       '13': '13px',

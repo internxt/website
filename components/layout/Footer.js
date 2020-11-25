@@ -29,7 +29,7 @@ const Footer = () => {
 
             <div className={styles.second_half}>
                 <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6 sm:items-start`}>
-                    <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:w-120`}>Keep me updated about products, news, tips and offers from Internxt.</p>
+                    <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none`}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
                     <div className="sm:hidden">
                         <EmailNewsletter hidden={false} value="Subscribe" />

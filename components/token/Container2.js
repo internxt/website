@@ -43,7 +43,8 @@ const Container2 = ({ id }) => {
                         />
                     </div>
                 </div>
-                <div className="sm:flex sm:flex-col">
+
+                <div className="hidden sm:flex sm:flex-col">
                     <div className={`${styles.card_container} sm:grid sm:grid-cols-1`}>
                         <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
                         <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
@@ -55,6 +56,18 @@ const Container2 = ({ id }) => {
                         <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
                         <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
                     </div>
+                </div>
+
+                <div className={`${styles.card_container} sm:hidden`}>
+                    <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
+                    <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
+                    <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
+                </div>
+
+                <div className={`${styles.card_container} sm:hidden`}>
+                    <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
+                    <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
+                    <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
                 </div>
                 
             </div>
