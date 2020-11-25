@@ -17,22 +17,22 @@ const Container3 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={styles.container}>
-                <div className={`${styles.main} lg:pl-32 lg:py-16`}>
-                    <h1 className={`${styles.title} leading-12 lg:text-5xl lg:max-w-none lg:w-104`}>
+            <div className={`${styles.container} sm:flex-col sm:items-center`}>
+                <div className={`${styles.main} sm:items-center sm:p-0 lg:pl-32 lg:py-16`}>
+                    <h1 className={`${styles.title} leading-12 sm:text-4xl sm:text-center sm:w-84 lg:text-5xl lg:max-w-none lg:w-104`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} lg:text-xl lg:w-100`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-xl lg:w-100`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={`${styles.subtitle} lg:text-xl lg:w-100 `}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-xl lg:w-100 `}>
                         {description[0].subtitle2}
                     </p>
                 </div>
                 
-                <div className={`${styles.image} lg:w-2/6 lg:ml-12 lg:pt-12`}>
+                <div className={`${styles.image} sm:w-9/12 sm:mt-16 lg:w-2/6 lg:ml-12 lg:pt-12`}>
                     <Image src="/images/1440/Photos/Section 3/box and apps graphic.png" width={442} height={608} />
                 </div>
             </div>
