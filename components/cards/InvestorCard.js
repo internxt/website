@@ -16,11 +16,11 @@ const InvestorCard = ({ company, description, investor, w, h }) => {
                 />
             </div>
            
-            <h1 className={`${styles.name} lg:text-base lg:pt-8`}>
+            <h1 className={`${styles.name} sm:text-xl sm:pt-6 lg:text-base lg:pt-8`}>
                 {company}
             </h1>
 
-            <p className={`${styles.desc} lg:text-sm`}>
+            <p className={`${styles.desc} sm:text-lg lg:text-sm`}>
                 {description}
             </p>
         </div>

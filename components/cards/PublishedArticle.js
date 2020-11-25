@@ -5,19 +5,19 @@ import moment from 'moment';
 const PublishedArticle = ({ article, image}) => {
 
     return ( 
-        <div className={`${styles.card} col-span-2 overflow-hidden h-auto w-auto`}>
+        <div className={`${styles.card} col-span-2 overflow-hidden h-auto w-auto sm:w-84`}>
             { image ? <img className="h-auto w-full object-contain" src={image} /> : <p>La imagen esta cargando</p> }
 
-            <div className={`${styles.description} lg:pl-4 lg:pt-4 xl:pl-6 xl:pt-6 relative`}>
-                <p className={`${styles.date} lg:text-xxs`}>
+            <div className={`${styles.description} sm:pl-6 sm:pt-2 lg:pl-4 lg:pt-4 xl:pl-6 xl:pt-6 relative`}>
+                <p className={`${styles.date} sm:text-xs lg:text-xxs`}>
                     {moment(article.created).format('MMM DD YYYY')}
                 </p>
 
-                <h1 className={`${styles.title} lg:text-sm lg:mb-10 xl:mb-16`}>
+                <h1 className={`${styles.title} sm:text-lg sm:w-80 sm:pr-4 sm:pb-16 lg:text-sm lg:mb-10 xl:mb-16`}>
                     {article.title}
                 </h1>
 
-                <a href={article.link} target="_blank" className={`${styles.link} absolute bottom-0 mb-6 lg:text-xxxs mr-1`}>READ ARTICLE</a>
+                <a href={article.link} target="_blank" className={`${styles.link} absolute bottom-0 mb-6 sm:text-xss lg:text-xxxs mr-1`}>READ ARTICLE</a>
             </div>
         </div>
     );

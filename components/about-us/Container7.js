@@ -15,12 +15,12 @@ const Container7 = ({ id, articles }) => {
     const background = isOdd(id) ? 'normal_container grey' : 'normal_container'
 
     return ( 
-        <div className={background}>
-            <h1 className={`${styles.title} my-16`}>
+        <div className={`${background} sm:items-center`}>
+            <h1 className={`${styles.title} my-16 sm:text-4xl`}>
                 {description[0].title}
             </h1>
 
-            <div className="grid grid-cols-6 gap-y-6 gap-x-3 lg:px-32 xl:px-48">
+            <div className="grid grid-cols-6 gap-y-6 gap-x-3 sm:flex sm:flex-col lg:px-32 xl:px-48">
                 <PublishedArticle article={articles.data[0]} image={articles.images[0]} />
                 <PublishedArticle article={articles.data[1]} image={articles.images[1]} />
                 <PublishedArticle article={articles.data[2]} image={articles.images[2]} />
@@ -32,8 +32,8 @@ const Container7 = ({ id, articles }) => {
                 <PublishedArticle article={articles.data[8]} image={articles.images[8]} />
             </div>
 
-            <a href="https://medium.com/internxt" target="_blank" className={`${styles.link} flex flex-row items-center lg:text-lg lg:mb-16`}>
-                <p className="mr-2">Read more posts</p>
+            <a href="https://medium.com/internxt" target="_blank" className={`${styles.link} flex flex-row items-center sm:my-16 lg:text-lg lg:mb-16`}>
+                <p className="mr-2 sm:text-lg">Read more posts</p>
                 <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
             </a>
         </div>

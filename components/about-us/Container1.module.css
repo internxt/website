@@ -8,6 +8,13 @@
     height: 820px;
 }
 
+@media screen and (min-width: 375px) and (max-width: 749px) {
+    .background {
+        background-image: url("/images/1440/About/Section 1/375p background.png");
+        background-size: contain;
+    }
+}
+
 .main {
     display: flex;
     flex-direction: column;

@@ -6,17 +6,17 @@ const PersonalCard = ({ name, job, picture }) => {
 
     return ( 
         <div className={`${styles.card} col-span-2`}>
-            <div className={`${styles.bio} lg:pl-5 xl:pl-6`}>
-                <text className={`${styles.name} lg:text-sm`}>
+            <div className={`${styles.bio} sm:pl-6 sm:w-56 lg:pl-5 xl:pl-6`}>
+                <text className={`${styles.name} sm:text-lg sm:pr-4 lg:text-sm`}>
                     {name}
                 </text>
 
-                <text className={`${styles.job} lg:text-xss lg:mt-3`}>
+                <text className={`${styles.job} sm:text-13 lg:text-xss lg:mt-3`}>
                     {job}
                 </text>
             </div>
             
-            <div className={styles.image}>
+            <div className={`${styles.image} sm:w-auto`}>
                 <Image
                     src={url}
                     width={109}

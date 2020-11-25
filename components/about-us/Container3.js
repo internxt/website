@@ -20,12 +20,12 @@ const Container3 = ({ id }) => {
     } = description[0]
 
     return ( 
-        <div className={styles.main}>
-            <text className={`${styles.title} lg:text-5xl`}>
+        <div className={`${styles.main} sm:pt-16`}>
+            <text className={`${styles.title} sm:text-4xl lg:text-5xl`}>
                 {description[0].title}
             </text>
 
-            <div className={`grid grid-cols-6 gap-4 lg:py-12 xl:mt-16`}>
+            <div className={`grid grid-cols-6 gap-4 sm:grid-cols-1 sm:mt-12 lg:py-12 xl:mt-16`}>
                 <PersonalCard name={employee} job={job} picture="Fran" />
                 <PersonalCard name={employee2} job={job2} picture="Alberto" />
                 <PersonalCard name={employee3} job={job3} picture="Ale" />

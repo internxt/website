@@ -25,11 +25,11 @@ const Container5 = ({ id }) => {
 
     return ( 
         <div className={className}>
-            <text className={`${styles.title} lg:text-5xl lg:pt-20 xl:mb-24`}>
+            <text className={`${styles.title} sm:text-4xl sm:pt-16 lg:text-5xl lg:pt-20 xl:mb-24`}>
                 {title}
             </text>
             
-            <div className="grid grid-cols-6 gap-16 lg:px-32 lg:pt-12 lg:pb-32 xl:gap-32 xl:mb-24">
+            <div className="grid grid-cols-6 gap-16 sm:grid-cols-1 sm:mt-12 sm:mb-16 lg:px-32 lg:pt-12 lg:pb-32 xl:gap-32 xl:mb-24">
                 <InvestorCard company={company} description={info} investor="Esade" w={125} h={38} />
                 <InvestorCard company={company2} description={info2} investor="Vodafone" w={192} h={48} />
                 <InvestorCard company={company3} description={info3} investor="Telefonica" w={192} h={53} />
