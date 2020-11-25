@@ -6,6 +6,13 @@
     background-size: contain;
 }
 
+@media screen and (min-width: 375px) and (max-width: 749px) {
+    .main {
+        background-image: url("/images/1440/Token/Section 1/375p Colours bg.png");
+        background-size: contain;
+    }
+}
+
 .title {
     width: 845px;
     width: 100%;

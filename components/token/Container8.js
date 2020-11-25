@@ -17,7 +17,7 @@ const Container8 = ({ id }) => {
 
     return ( 
         <div className={`${background} lg:pb-32 xl:pb-40 relative z-10`}>
-            <div className={`${styles.left_image} lg:w-96 lg:mt-28 xl:w-120`}>
+            <div className={`${styles.left_image} sm:hidden lg:w-96 lg:mt-28 xl:w-120`}>
                 <Image
                     src="/images/1440/Token/Section 6/Left graph.png"
                     width={600}
@@ -25,7 +25,7 @@ const Container8 = ({ id }) => {
                 />
             </div>
 
-            <div className={`${styles.right_image} lg:w-96 lg:mb-16 xl:w-120`}>
+            <div className={`${styles.right_image} sm:hidden lg:w-96 lg:mb-16 xl:w-120`}>
                 <Image
                     src="/images/1440/Token/Section 6/Right graph.png"
                     width={600}
@@ -33,11 +33,11 @@ const Container8 = ({ id }) => {
                 />
             </div>
             
-            <h1 className={`${styles.title} lg:text-4.5xl lg:my-16`}>
+            <h1 className={`${styles.title} sm:text-4xl lg:text-4.5xl lg:my-16`}>
                 {description[0].title}
             </h1>
 
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-4 gap-4 sm:grid-cols-1 sm:mb-24">
                 <div className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
                         src="/images/1440/Token/Section 6/coinbase.png"

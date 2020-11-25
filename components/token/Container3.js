@@ -18,8 +18,8 @@ const Container3 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={`${styles.container} lg:py-12`}>
-                <div className="lg:w-104">
+            <div className={`${styles.container} sm:flex-col-reverse sm:items-center sm:pt-12 lg:py-12`}>
+                <div className="sm:mt-12 sm:w-10/12 lg:w-104">
                     <Image
                         src="/images/1440/Token/Section 3/floating girl.png"
                         width={517}
@@ -27,22 +27,22 @@ const Container3 = ({ id }) => {
                     />
                 </div>
 
-                <div className={`${styles.main} lg:pl-12 lg:pt-12`}>
-                    <h1 className={`${styles.title} leading-12 lg:text-5xl lg:max-w-none lg:w-104 xl:leading-13`}>
+                <div className={`${styles.main} sm:p-0 sm:items-center lg:pl-12 lg:pt-12`}>
+                    <h1 className={`${styles.title} leading-12 sm:text-4xl sm:w-72 sm:text-center lg:text-5xl lg:max-w-none lg:w-104 xl:leading-13`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} lg:text-xl lg:w-100`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-xl lg:w-100`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={`${styles.subtitle} lg:text-xl lg:w-104`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-xl lg:w-104`}>
                         {description[0].subtitle2}
                     </p>
 
                     <Link href="/core">
                         <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
-                            <p className={`lg:text-base mr-1 mb-1`}>{description[0].subtitle3}</p>
+                            <p className={`sm:text-lg lg:text-base mr-1 mb-1`}>{description[0].subtitle3}</p>
                             <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                         </a>
                     </Link>

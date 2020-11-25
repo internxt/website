@@ -25,9 +25,9 @@ const Container2 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={`${styles.main} lg:pb-16`}>
+            <div className={`${styles.main} sm:py-8 lg:pb-16`}>
                 <div className={styles.images_container}>
-                    <div className={`${styles.cube} lg:w-28`}>
+                    <div className={`${styles.cube} sm:hidden lg:w-28`}>
                         <Image
                             src="/images/1440/Token/Section 2/left glass and cube.png"
                             width={152}
@@ -35,7 +35,7 @@ const Container2 = ({ id }) => {
                         />   
                     </div>
 
-                    <div className={`${styles.hoop} lg:w-24`}>
+                    <div className={`${styles.hoop} sm:hidden lg:w-24`}>
                         <Image
                             src="/images/1440/Token/Section 2/right hoop.png"
                             width={167}
@@ -43,18 +43,20 @@ const Container2 = ({ id }) => {
                         />
                     </div>
                 </div>
+                <div className="sm:flex sm:flex-col">
+                    <div className={`${styles.card_container} sm:grid sm:grid-cols-1`}>
+                        <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
+                        <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
+                        <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
+                    </div>
 
-                <div className={styles.card_container}>
-                    <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
-                    <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
-                    <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
+                    <div className={`${styles.card_container} sm:grid sm:grid-cols-1`}>
+                        <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
+                        <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
+                        <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                    </div>
                 </div>
-
-                <div className={styles.card_container}>
-                    <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
-                    <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
-                    <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
-                </div>
+                
             </div>
         </div>
      );

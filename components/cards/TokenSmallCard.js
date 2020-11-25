@@ -20,12 +20,12 @@ const TokenSmallCard = ({ title, subtitle, colored }) => {
     };
 
     return ( 
-        <div className={styles.card}>
-            <p className={`${styles.title} lg:text-4xl lg:w-40`}>
+        <div className={`${styles.card} sm:pl-14 sm:pr-0`}>
+            <p className={`${styles.title} sm:text-4xl sm:w-44 lg:text-4xl lg:w-40`}>
                 {formattedText(title, colored)}
             </p>
 
-            <p className={`${styles.subtitle} lg:text-4xl lg:w-44`}>
+            <p className={`${styles.subtitle} sm:text-4xl lg:text-4xl lg:w-44`}>
                 {subtitle}
             </p>
 

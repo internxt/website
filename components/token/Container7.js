@@ -31,11 +31,11 @@ const Container7 = ({ id, data }) => {
 
     return ( 
         <div className={background}>
-            <h1 className={`${styles.title} lg:text-4.5xl lg:mt-20`}>
+            <h1 className={`${styles.title} sm:text-4xl sm:my-16 lg:text-4.5xl lg:mt-20`}>
                 {description[0].title}
             </h1>
 
-            <div className="grid grid-cols-3 gap-8 lg:mt-12 lg:px-32 xl:gap-24">
+            <div className="grid grid-cols-3 gap-8 sm:grid-cols-1 sm:gap-y-16 lg:mt-12 lg:px-32 xl:gap-24">
                 <div className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label}
@@ -52,7 +52,7 @@ const Container7 = ({ id, data }) => {
                     </p>
 
                     <p className={data.quote.EUR.percent_change_24h > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                        {Math.round((data.quote.EUR.percent_change_24h + Number.EPSILON) * 100) / 100}%
+                        {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : <span>-</span>}{Math.round((data.quote.EUR.percent_change_24h + Number.EPSILON) * 100) / 100}%
                     </p>
                 </div>
                 
@@ -62,7 +62,7 @@ const Container7 = ({ id, data }) => {
                     </p>
 
                     <p className={data.quote.EUR.percent_change_7d > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                        {Math.round((data.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
+                    {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : <span>-</span>}{Math.round((data.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
                     </p>
                 </div>
                 

@@ -36,7 +36,7 @@ const Container4 = ({ id }) => {
     return ( 
         <div className={`${background} relative`}>
 
-            <div className={`${styles.blue_coin} lg:w-36 lg:pl-16 lg:pt-48`}>
+            <div className={`${styles.blue_coin} sm:hidden lg:w-36 lg:pl-16 lg:pt-48`}>
                 <Image
                     src="/images/1440/Token/Section 4/Coin blue.png"
                     width={64}
@@ -44,7 +44,7 @@ const Container4 = ({ id }) => {
                 />
             </div>
             
-            <div className={`${styles.purple_coin} lg:pr-12 lg:pt-104 lg:w-24`}>
+            <div className={`${styles.purple_coin} sm:hidden lg:pr-12 lg:pt-104 lg:w-24`}>
                 <Image
                     src="/images/1440/Token/Section 4/Coin purple.png"
                     width={62}
@@ -52,33 +52,33 @@ const Container4 = ({ id }) => {
                 /> 
             </div>
 
-           <h1 className={`${styles.title} lg:text-5xl lg:mt-16`}>
+           <h1 className={`${styles.title} sm:text-4xl sm:mt-16 lg:text-5xl lg:mt-16`}>
                {formattedText(description[0].title, description[0].colored)}
            </h1>
 
-           <p className={`${styles.subtitle} lg:text-xl`}>
+           <p className={`${styles.subtitle} sm:text-xl sm:w-72 lg:text-xl`}>
                {description[0].subtitle}
            </p>
 
-           <p className={`${styles.subtitle} lg:text-xl`}>
+           <p className={`${styles.subtitle} sm:text-xl sm:w-72 lg:text-xl`}>
                {description[0].subtitle2}
            </p>
 
-           <div className={styles.card_container}>
+           <div className={`${styles.card_container} sm:grid sm:grid-cols-1 sm:gap-y-12 sm:mt-12`}>
                <StakeCard bundle="Starter" percentage="5" inxtQty="0 - 1000 INXT" />
                <StakeCard bundle="Professional" percentage="10" inxtQty="1000 - 10,000 INXT" />
                <StakeCard bundle="Expert" percentage="20" inxtQty="Above 10,000 INXT" />
            </div>
 
-           <p className={`${styles.info} lg:text-base`}>
+           <p className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>
                {description[0].subtitle3}
            </p>
 
-           <p className={`${styles.info} lg:text-base`}>
+           <p className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>
                {description[0].subtitle4}
            </p>
 
-           <a className={`${styles.link} lg:text-base lg:mb-24`}>
+           <a className={`${styles.link} sm:text-xl sm:mb-16 lg:text-base lg:mb-24`}>
                {description[0].link}
            </a>
         </div>

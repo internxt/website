@@ -18,11 +18,11 @@ const Container6 = ({ id }) => {
     
     return ( 
         <div className={background}>
-            <h1 className={`${styles.title} lg:text-4.5xl lg:mt-24`}>
+            <h1 className={`${styles.title} sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-24`}>
                 {description[0].title}
             </h1>
             
-            <div className={`${styles.circle} lg:w-32 lg:mt-16`}>
+            <div className={`${styles.circle} sm:hidden lg:w-32 lg:mt-16`}>
                 <Image
                     src="/images/1440/Token/Section 5/middle circle.png"
                     width={55}
@@ -30,7 +30,7 @@ const Container6 = ({ id }) => {
                 />
             </div>
 
-            <div className="grid grid-cols-3 gap-2 lg:px-40 lg:mt-16 xl:mt-20">
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:my-16 lg:px-40 lg:mt-16 xl:mt-20">
                 <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/exrates.png"
@@ -81,7 +81,7 @@ const Container6 = ({ id }) => {
             </div>
 
             <div className={styles.form_container}>
-                <div className={`${styles.diamond} lg:w-16 lg:ml-16 lg:mt-16`}>
+                <div className={`${styles.diamond} sm:hidden lg:w-16 lg:ml-16 lg:mt-16`}>
                     <Image 
                         src="/images/1440/Token/Section 5/right diamond.png"
                         width={109}
@@ -89,7 +89,7 @@ const Container6 = ({ id }) => {
                     />
                 </div>
                 
-                <div className={`${styles.cube} lg:w-16 lg:ml-16 lg:mt-12`}>
+                <div className={`${styles.cube} sm:hidden lg:w-16 lg:ml-16 lg:mt-12`}>
                     <Image 
                         src="/images/1440/Token/Section 5/left cube.png"
                         width={84}
@@ -97,40 +97,40 @@ const Container6 = ({ id }) => {
                     />
                 </div>
                 
-                <h1 className={`${styles.title} lg:text-4.5xl lg:mt-24 xl:mt-24`}>
+                <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
                     {description[0].title2}
                 </h1>
 
-                <p className={`${styles.subtitle} lg:text-lg lg:mb-24 lg:w-8/12`}>
+                <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-16 lg:text-lg lg:mb-24 lg:w-8/12`}>
                     {description[0].subtitle}
                 </p>
 
-                <form className={`${styles.form} lg:pb-16`}>
+                <form className={`${styles.form} sm:w-full sm:pb-24 lg:pb-16`}>
                     <div className={styles.first_half}>
-                        <div className={styles.payment}>
+                        <div className={`${styles.payment} sm:m-0`}>
                             <div className={styles.input_container}>
-                                <label className={`${styles.label} lg:text-sm`}>Deposit</label>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Deposit</label>
                                 <input 
                                     type="number"
-                                    className={`${styles.input} lg:w-84 lg:text-sm`}
+                                    className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     placeholder="0"
                                 />
                             </div>
 
                             <div className={styles.input_container}>
-                                <label className={`${styles.label} lg:text-sm`}>Receive</label>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Receive</label>
                                 <input 
-                                    className={`${styles.input} lg:w-84 lg:text-sm`}
+                                    className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     placeholder="0"
                                     disabled
                                 />
                             </div>
                         </div>
 
-                        <div className={styles.currency}>
+                        <div className={`${styles.currency} sm:m-0`}>
                             <div className={styles.input_container}>
-                                <label className={`${styles.label} lg:text-sm`}>Currency</label>
-                                <select className={`${styles.input} lg:w-84 lg:text-sm`}>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
+                                <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}>
                                     <option value="bitcoin">Bitcoin</option>
                                     <option value="ethereum">Ethereum</option>
                                     <option selected value="litecoin">Litecoin</option>
@@ -138,9 +138,9 @@ const Container6 = ({ id }) => {
                             </div>
                             
                             <div  className={styles.input_container}>
-                                <label className={`${styles.label} lg:text-sm`}>Currency</label>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
                                 <input 
-                                    className={`${styles.input} lg:w-84 lg:text-sm`}
+                                    className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     placeholder="Internxt"
                                     disabled
                                 />    
@@ -148,14 +148,14 @@ const Container6 = ({ id }) => {
                         </div>
                     </div>
 
-                    <div className={styles.second_half}>
-                        <label className={`${styles.label} lg:text-sm`}>Please enter your INXT receiving address</label>
+                    <div className={`${styles.second_half} sm:items-center`}>
+                        <label className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>Please enter your INXT receiving address</label>
                         <input 
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
                             placeholder="INXT Receiving address"
                         />
 
-                        <label className={`${styles.label} lg:text-sm`}>Please send the funds to the following address</label>
+                        <label className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>Please send the funds to the following address</label>
                         <input
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
                             placeholder="39UtLoELAoDSHQ5YaJvwwSu6ntTUAH2k6C"

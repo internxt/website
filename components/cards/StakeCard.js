@@ -3,11 +3,11 @@ import styles from './StakeCard.module.css'
 const StakeCard = ({ bundle, percentage, inxtQty }) => {
     return ( 
         <div>
-            <p className={`${styles.bundle} lg:text-base`}>
+            <p className={`${styles.bundle} sm:text-xl lg:text-base`}>
                 {bundle}
             </p>
             
-            <div className={`${styles.card} lg:mt-2 lg:px-12 lg:py-4`}>
+            <div className={`${styles.card} sm:py-6 lg:mt-2 lg:px-12 lg:py-4`}>
                 <div className={styles.percentage_container}>
                     <p className={`${styles.percentage} lg:text-5xl`}>
                         {percentage}

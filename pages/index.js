@@ -7,18 +7,21 @@ import Container6 from '../components/drive/Container6'
 import Container7 from '../components/drive/Container7'
 import Footer from '../components/layout/Footer'
 import TopBar from '../components/layout/TopBar'
+import Head from 'next/head'
 
 const Home = () => {
   return (
     <>
+      <Head>
+      </Head>
       <TopBar />
-      <Container1 id='1'/>
-      <Container2 id='2'/>
-      <Container3 id='3'/>
-      <Container4 id='4'/>
-      <Container5 id='5'/>
-      <Container6 id='6'/>
-      <Container7 id='7'/>
+      <Container1 id='1' />
+      <Container2 id='2' />
+      <Container3 id='3' />
+      <Container4 id='4' />
+      <Container5 id='5' />
+      <Container6 id='6' />
+      <Container7 id='7' />
       <Footer />
     </>
   )
