@@ -181,11 +181,11 @@ const Footer = () => {
 
                     <Card>
                         <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                        <Accordion.Toggle as={Button} variant="link" eventKey="2">
                             Follow us
                         </Accordion.Toggle>
                         </Card.Header>
-                        <Accordion.Collapse eventKey="1">
+                        <Accordion.Collapse eventKey="2">
                         <Card.Body>
                             <a href="https://twitter.com/Internxt" className={`${styles.faqtext} lg:text-xs`}>Twitter</a>
                             <a href="https://medium.com/internxt" className={`${styles.faqtext} lg:text-xs`}>Medium</a>
@@ -196,11 +196,11 @@ const Footer = () => {
 
                     <Card>
                         <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                        <Accordion.Toggle as={Button} variant="link" eventKey="3">
                             Join
                         </Accordion.Toggle>
                         </Card.Header>
-                        <Accordion.Collapse eventKey="1">
+                        <Accordion.Collapse eventKey="3">
                         <Card.Body>
                             <a href="https://drive.internxt.com/login" className={`${styles.faqtext} m-0 lg:text-sm`}>Sign in</a>
                             <a href="https://drive.internxt.com/new" className={`${styles.faqtext}`}>Get started</a>
