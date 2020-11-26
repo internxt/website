@@ -32,17 +32,20 @@ export async function getStaticProps() {
 
     const rss = await Feed.load(POSTS_URL)
     const data = rss.items
-
+    console.log('----------------- ESTO ES DATA ---------------', data)
     let images = []
     
     const regex = /<img src="(.*)" width=/
+
     data.forEach(elem => {
-        const image = elem.description.match(regex)[1]
-        images.push(image)
+        if(elem.description) {
+            const image = elem.description.match(regex)[1]
+            images.push(image)
+        }
     })
 
     return {
-        props: { data, images }
+        props: { data: JSON.parse(JSON.stringify(data)), images }
     }
 }
 
