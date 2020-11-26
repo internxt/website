@@ -9,11 +9,11 @@ import Container6 from '../components/core/Container6'
 import Container7 from '../components/core/Container7'
 import Layout from '../components/layout/Layout'
 
-const Core = () => {
+const Core = (props) => {
     return ( 
         <Layout segmentName="core" title='Internxt Core – Get paid to share.' description="Get paid to share the exceeding disk space of your computer to host encrypted shards of data as part of a decentralized network of servers." >
             <TopBar />
-            <Container1 id='1' />
+            <Container1 id='1' {...props} />
             <Container2 id='2' />
             <Container3 id='3' />
             <Container4 id='4' />
@@ -24,5 +24,29 @@ const Core = () => {
         </Layout>
      );
 }
+
+export async function getServerSideProps(ctx) {
+    const userAgent = require('useragent')
+    const ua = ctx.req.headers['user-agent']
+  
+    const uaParsed = userAgent.parse(ua);
+  
+    const downloadUrl = (() => {
+      switch (uaParsed.os.family) {
+        case 'Ubuntu':
+          return 'https://internxt.com/downloads/core.deb';
+        case 'Windows':
+          return 'https://internxt.com/downloads/core.exe';
+        case 'Max OS X':
+          return 'https://internxt.com/downloads/core.dmg';
+        default:
+          return 'https://github.com/internxt/core-gui/releases';
+      }
+    })();
+  
+    return {
+      props: { downloadUrl }
+    }
+  }
  
 export default Core;

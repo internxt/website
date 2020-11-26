@@ -1,20 +1,23 @@
 import styles from './Container1.module.css'
 import descriptions from '../../assets/core-descriptions.json'
 import Image from 'next/image'
+import { Button } from 'react-bootstrap'
 
-const Container1 = ({ id }) => {
+const Container1 = ({ id, downloadUrl }) => {
 
-    const description = descriptions.filter( desc => desc.id === id)
-    
+    console.log(downloadUrl)
+
+    const description = descriptions.filter(desc => desc.id === id)
+
     // Check if a number is odd
-    const isOdd = ( num ) => {
+    const isOdd = (num) => {
         return num % 2 == 1;
     }
 
     // Set the background color of the container depending on its id
     const className = isOdd(id) ? 'normal_container' : 'normal_container grey'
 
-    return ( 
+    return (
         <div className={`${className} relative`}>
             <div className={styles.main}>
                 <div className={`${styles.left} sm:w-40`}>
@@ -38,13 +41,13 @@ const Container1 = ({ id }) => {
                 </p>
 
                 <div className={`${styles.button_container}`}>
-                    <button className={`${styles.button} sm:text-base`}>Download</button>
-                    <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" 
-                        className={`${styles.link} sm:text-base`}>Set-up & tips</a>  
+                    <Button className={`${styles.button} sm:text-base`} href={downloadUrl}>Download</Button>
+                    <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank"
+                        className={`${styles.link} sm:text-base`}>Set-up & tips</a>
                 </div>
             </div>
         </div>
     );
 }
- 
+
 export default Container1;
