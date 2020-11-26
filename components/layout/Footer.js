@@ -2,6 +2,7 @@ import Image from 'next/image'
 import EmailNewsletter from '../EmailNewsletter'
 import styles from './Footer.module.css'
 import Link from 'next/link'
+import { Accordion, Card, Button } from 'react-bootstrap'
 
 const Footer = () => {
     return ( 
@@ -27,7 +28,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className={styles.second_half}>
+            <div className={`${styles.second_half} sm:pb-16`}>
                 <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6 sm:items-start`}>
                     <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none`}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
@@ -55,9 +56,9 @@ const Footer = () => {
                     </form>
                 </div>
 
-                <div className={styles.line}></div>
+                <div className={`${styles.line} sm:hidden`}></div>
 
-                <div className={`${styles.social_container} sm:w-11/12 sm:justify-around lg:pb-12`}>
+                <div className={`${styles.social_container} sm:hidden sm:w-11/12 sm:justify-around lg:pb-12`}>
                     <div className={`${styles.p_container}`}>
                         <div className={`${styles.logo} sm:w-24 lg:w-28 xl:w-36 xl:mt-2`}>
                             <Image 
@@ -126,6 +127,88 @@ const Footer = () => {
                         <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.p_social} lg:text-xs`}>Get started</a>
                     </div>
                 </div>
+
+                <Accordion className="lg:hidden xl:hidden" defaultActiveKey="0">
+                    <Card>
+                        <Card.Header>
+                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                            Products
+                        </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="0">
+                        <Card.Body>
+                            <Link href="/drive">
+                                <a className={styles.faqtext}>Drive</a>
+                            </Link>
+
+                            <Link className="mt-4" href="/photos">
+                                <a className={styles.faqtext}>Photos</a>
+                            </Link>
+                            
+                            <Link className="mt-4" href="https://send.internxt.com/">
+                                <a className={styles.faqtext}>Send</a>
+                            </Link>
+
+                            <Link className="mt-4" href="/token">
+                                <a className={styles.faqtext}>Token</a>
+                            </Link>
+
+                            <Link className="mt-4" href="/core">
+                                <a className={styles.faqtext}>Core</a>
+                            </Link>
+                        </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+
+                    <Card>
+                        <Card.Header>
+                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                            Company
+                        </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="1">
+                        <Card.Body>
+                            <Link href="/about">
+                                <a className={styles.faqtext}>About</a>
+                            </Link>
+
+                            <Link href="/legal">
+                                <a className={styles.faqtext}>Legal</a>
+                            </Link>
+                        </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+
+                    <Card>
+                        <Card.Header>
+                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                            Follow us
+                        </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="1">
+                        <Card.Body>
+                            <a href="https://twitter.com/Internxt" className={`${styles.faqtext} lg:text-xs`}>Twitter</a>
+                            <a href="https://medium.com/internxt" className={`${styles.faqtext} lg:text-xs`}>Medium</a>
+                            <a href="https://github.com/internxt" className={`${styles.faqtext} lg:text-xs`}>Github</a>
+                        </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+
+                    <Card>
+                        <Card.Header>
+                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                            Join
+                        </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="1">
+                        <Card.Body>
+                            <a href="https://drive.internxt.com/login" className={`${styles.faqtext} m-0 lg:text-sm`}>Sign in</a>
+                            <a href="https://drive.internxt.com/new" className={`${styles.faqtext}`}>Get started</a>
+                        </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <div className={`sm:w-80`}></div>
+                </Accordion>
             </div>
         </footer>
     );

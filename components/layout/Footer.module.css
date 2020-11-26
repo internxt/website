@@ -224,3 +224,11 @@
     background-color: #0074e0;
     cursor: pointer;
 }
+
+.faqtext {
+    font-family: "averta-light";
+    font-size: 12px;
+    line-height: 2.11;
+    letter-spacing: -0.1px;
+    text-align: center;
+}

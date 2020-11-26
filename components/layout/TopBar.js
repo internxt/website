@@ -48,7 +48,7 @@ const TopBar = () => {
 
                     <div className={`${styles.links} sm:hidden`}>
                         <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} m-0 lg:text-sm`}>Sign in</a>
-                        <a href="https://drive.internxt.com/new" target="_blank"><img src="/images/1440/Footer/button.png" className={`${styles.get_started}`} /> </a>
+                        <a href="https://drive.internxt.com/new" target="_blank"><img src="/images/1440/Footer/button.png" className={`${styles.get_started}`}/></a>
                     </div>
                 </Nav>
             </Navbar.Collapse>
