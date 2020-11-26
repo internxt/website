@@ -42,13 +42,28 @@ const Container6 = ({ id }) => {
         })
     }
 
+    const receiveValue = deposit / (prices[currency] || 1)
+
     const parseSubmit = (e) => {
         e.preventDefault();
-        const data = new FormData(e.target)
-        fetch('/api/buytoken', { method: 'post', body: data }).then(ok => ok).catch(err => err)
+        const formData = new FormData(e.target)
+
+        var object = {};
+        formData.forEach(function (value, key) {
+            console.log(key)
+            object[key] = value;
+        });
+        object.receive_amount = receiveValue;
+        object.send_to = addrs[currency];
+        var json = JSON.stringify(object);
+
+        fetch('/api/token/buy', { method: 'post', body: json }).then(ok => {
+            alert('Email sent')
+        }).catch(err => {
+            alert('An error ocurred, try again later')
+        })
     }
 
-    const receiveValue = deposit / (prices[currency] || 1)
 
     return (
         <div className={background}>
@@ -145,9 +160,11 @@ const Container6 = ({ id }) => {
                             <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Deposit</label>
                                 <input
+                                    name="deposit"
                                     type="number"
                                     className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     placeholder="0"
+                                    required
                                     onChange={(e) => setDeposit(e.target.value)}
                                 />
                             </div>
@@ -156,7 +173,8 @@ const Container6 = ({ id }) => {
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Receive</label>
                                 <input
                                     className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
-                                    placeholder="0"
+                                    type="number"
+                                    name="receive"
                                     value={receiveValue}
                                     disabled
                                 />
@@ -166,7 +184,9 @@ const Container6 = ({ id }) => {
                         <div className={`${styles.currency} sm:m-0`}>
                             <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
-                                <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`} onChange={(e) => setCurrency(e.target.value)}>
+                                <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
+                                    name="currency"
+                                    onChange={(e) => setCurrency(e.target.value)}>
                                     <option value="btc">Bitcoin</option>
                                     <option value="eth">Ethereum</option>
                                     <option value="ltc">Litecoin</option>
@@ -177,7 +197,8 @@ const Container6 = ({ id }) => {
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
                                 <input
                                     className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
-                                    placeholder="Internxt"
+                                    name="own_currency"
+                                    value="Internxt"
                                     disabled
                                 />
                             </div>
@@ -188,11 +209,14 @@ const Container6 = ({ id }) => {
                         <label className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>Please enter your INXT receiving address</label>
                         <input
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
+                            name="receive_addr"
+                            required
                             placeholder="INXT Receiving address"
                         />
 
                         <label className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>Please send the funds to the following address</label>
                         <input
+                            name="addr"
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
                             value={addrs[currency]}
                             disabled
