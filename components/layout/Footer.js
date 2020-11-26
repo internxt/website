@@ -110,8 +110,8 @@ const Footer = () => {
 
                         <a href="mailto:hello@internxt.com" target="_blank" className={`${styles.p_social} lg:text-xs`}>Contact</a>
                         
-                        <Link href="/legals">
-                            <a className={`${styles.p_social} lg:text-xs`}>Legals</a>
+                        <Link href="/legal">
+                            <a className={`${styles.p_social} lg:text-xs`}>Legal</a>
                         </Link>
                     </div>
 

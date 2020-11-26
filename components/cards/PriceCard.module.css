@@ -93,12 +93,20 @@
     margin: 1rem 0;
 }
 
+.background_pMonth:hover {
+    background-color: #0b7eeb;
+}
+
 .pMonth {
     font-family: "averta-light";
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: -0.19px;
     text-align: center;
+    color: white
+}
+
+.pMonth:hover {
     color: white
 }
 

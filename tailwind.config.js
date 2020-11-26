@@ -22,6 +22,11 @@ module.exports = {
       'lg': {'min': '751px', 'max': '1080px'},
       'sm': {'min': '320px', 'max': '749px'},
     },
+    maxWidth: {
+        '1440': '1440px',
+        '1600': '1600px',
+        '1920': '1920px'
+    },
     fontSize: {
       '13': '13px',
       'xxxs': '0.5rem',

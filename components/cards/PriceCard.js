@@ -66,9 +66,9 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
                         :
                             <div className={styles.paid_container}>
                                 <div className={`${styles.background_pMonth} lg:w-24 h-auto lg:py-1`}>
-                                    <p className={`${styles.pMonth} sm:text-sm lg:text-xxs`}>
+                                    <a id="a" href="https://drive.internxt.com/new" target="_blank" className={`${styles.pMonth} sm:text-sm lg:text-xxs`}>
                                         €{pMonth} / month
-                                    </p>
+                                    </a>
                                 </div>
 
                                 <p className={`${styles.label} sm:text-xs lg:text-xxs`}>Prepay 6 month</p>
