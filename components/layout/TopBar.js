@@ -28,7 +28,7 @@ const TopBar = () => {
 
                     <div className="flex flex-row sm:flex-col sm:p-0">
                         <Link href="/drive">
-                            <a className={router.pathname === '/drive' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Drive</a>
+                            <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Drive</a>
                         </Link>
 
                         <Link href="/photos">

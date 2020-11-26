@@ -17,16 +17,16 @@ const Container1 = ({ id }) => {
 
     return ( 
         <div className={className}>
-            <div className={`${styles.main}`}>
-                <h1 className={`${styles.title} sm:w-10/12 sm:text-4xl lg:text-8xl`}>
+            <div className={`${styles.main} sm:pb-20`}>
+                <h1 className={`${styles.title} sm:w-80 sm:text-4xl lg:text-8xl`}>
                     {description[0].title}
                 </h1>
 
-                <p className={`${styles.subtitle} sm:text-xl sm:w-9/12 sm:pt-8 lg:text-xl lg:w-7/12`}>
+                <p className={`${styles.subtitle} sm:text-xl sm:w-80 sm:pt-8 lg:text-xl lg:w-7/12`}>
                     {description[0].subtitle}
                 </p>
 
-                <div className={`${styles.star} sm:top-0 sm:ml-6 sm:w-6 sm:p-0 lg:pl-24`}>
+                <div className={`${styles.star} sm:top-0 sm:ml-6 sm:mt-6 sm:w-6 sm:p-0 lg:pl-24`}>
                     <Image src="/images/1440/Drive/Section 1/star icon.png" width={47} height={50} />
                 </div>
 
@@ -34,17 +34,17 @@ const Container1 = ({ id }) => {
                     <Image src="/images/1440/Drive/Section 1/cog icon.png" width={37} height={38} />
                 </div>
 
-                <div className={`${styles.coin} sm:p-0 sm:w-8 sm:mb-12 sm:ml-20 lg:pb-20`}>
+                <div className={`${styles.coin} sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:pb-20`}>
                     <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
                 </div>
 
-                <div className={`${styles.lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-12 lg:pr-32`}>
+                <div className={`${styles.lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:pr-32`}>
                     <Image src="/images/1440/Drive/Section 1/lock icon.png" width={45} height={60} />
                 </div>
             </div>
 
             <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
-                <h1 className={`${styles.subtitle2} sm:text-2xl sm:w-10/12 lg:text-xl`}>
+                <h1 className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}>
                     {description[0].subtitle2}
                 </h1>
 
@@ -58,7 +58,7 @@ const Container1 = ({ id }) => {
                         name='email'
                         type='email'
                         placeholder='Your email'
-                        className={`${styles.email} lg:w-48 lg:text-sm lg:h-10 `}
+                        className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
                         required
                     />
 
@@ -66,15 +66,15 @@ const Container1 = ({ id }) => {
                         name='signup'
                         type='submit'
                         value="Sign up"
-                        className={`${styles.button} sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+                        className={`${styles.button} sm:rounded-3xl sm:w-28 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                     />
                 </form>
 
-                <p className={`${styles.subtitle3} sm:text-xs lg:text-sm`}>
+                <p className={`${styles.subtitle3} sm:text-xs sm:pt-2 lg:text-sm`}>
                     {description[0].subtitle3}
                 </p>
 
-                <div className={`${styles.cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-12 sm:w-8 lg:pl-48`}>
+                <div className={`${styles.cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:pl-48`}>
                     <Image src="/images/1440/Drive/Section 1/cloud icon.png" width={70} height={52} />
                 </div>
 

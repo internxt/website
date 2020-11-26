@@ -7,7 +7,7 @@ const Container5 = ({ id }) => {
 
     const description = descriptions.filter(desc => desc.id === id)
 
-    const CENTS_PER_GB = 1
+    const CENTS_PER_GB = 0.1
     const MIN_INXT_BONUS = 100
     const BONUS_PERCENTAGE = 0.1
 
