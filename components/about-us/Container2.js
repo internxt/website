@@ -142,52 +142,13 @@ const Container2 = ({ id }) => {
                 {formattedText(description[0].subtitle, description[0].colored)}
             </div>
 
-            <div className={`grid grid-cols-6 gap-4 sm:gap-x-2 sm:gap-y-0 lg:px-32`}>
-                <div className={`col-span-2`}>
-                    <Image
-                        src="/images/1440/About/Section 2/programming.png"
-                        width={365}
-                        height={417}
-                        className="rounded"
-                    />
-                </div>
-
-                <div className={`col-span-4`}>
-                    <Image
-                        src="/images/1440/About/Section 2/team.png"
-                        width={743}
-                        height={417}
-                        className="rounded"
-                    />
-                </div>
-                
-                <div className={`col-span-2`}>
-                  <Image
-                    src="/images/1440/About/Section 2/stock photo.png"
-                    width={365}
-                    height={322}
+            <div className={`lg:px-32 xl:px-40`}>
+                <Image
+                    src="/images/1440/About/Section 2/about photos.png"
+                    width={1250}
+                    height={850}
                     className="rounded"
-                    />  
-                </div>
-                
-                <div className={`col-span-2`}>
-                    <Image
-                        src="/images/1440/About/Section 2/angels.png"
-                        width={365}
-                        height={332}
-                        className="rounded"
-                    />
-                </div>
-                
-                <div className={`col-span-2`}>
-                    <Image
-                        src="/images/1440/About/Section 2/fran sitting.png"
-                        width={365}
-                        height={332}
-                        className="rounded"
-                    />
-                </div>
-                
+                />
             </div>
             
             <p className={`sm:text-13 lg:text-xs lg:mt-4`}>
