@@ -5,31 +5,14 @@ import Image from 'next/image'
 
 const Container5 = ({ id }) => {
 
-    const description = descriptions.filter( desc => desc.id === id)
+    const description = descriptions.filter(desc => desc.id === id)
 
     const CENTS_PER_GB = 1
     const MIN_INXT_BONUS = 100
     const BONUS_PERCENTAGE = 0.1
 
-    const [ storage, setStorage ] = useState(0)
-    const [ inxt, setInxt ] = useState(0)
-    const [ total, setTotal ] = useState(0)
-
-    /* const isRound = function(number, p){
-        let l = number.toString().split('.')[1].length;
-        return (p >= l);
-    }
-
-    // Funcion que redondea precisamente
-    const round = function(number, p=2){
-        if(Number.isInteger(number) || isRound(number,p))
-            return number;
-        let r = 0.5 * Number.EPSILON * number;
-        let o = 1; while(p-- > 0) o *= 10;
-        if(number<0)
-            o *= -1;
-        return Math.round((number + r) * o) / o;
-    } */
+    const [storage, setStorage] = useState(0)
+    const [inxt, setInxt] = useState(0)
 
     const amountEarned = () => {
         let amountInCents = storage * CENTS_PER_GB
@@ -37,15 +20,17 @@ const Container5 = ({ id }) => {
         inxt >= MIN_INXT_BONUS ? amountInCents += addBonus(amountInCents) : null
         let formattedAmount = amountInCents.toFixed(2)
 
-        setTotal(formattedAmount)
+        return formattedAmount
     }
 
-    const addBonus = ( originalAmount ) => {
-        const bonusMultiplier = ( inxt * BONUS_PERCENTAGE ) / 100
+    const addBonus = (originalAmount) => {
+        const bonusMultiplier = (inxt * BONUS_PERCENTAGE) / 100
         return originalAmount * bonusMultiplier
     }
 
-    return ( 
+    const total = amountEarned()
+
+    return (
         <div className={styles.background}>
             <h1 className={`${styles.title} sm:text-4xl sm:w-10/12 sm:mt-12`}>
                 {description[0].title}
@@ -62,14 +47,11 @@ const Container5 = ({ id }) => {
                     </label>
 
                     <div className={`${styles.placeholders}`}>
-                        <input 
+                        <input
                             type="number"
                             min="1"
                             className={`${styles.input}`}
-                            onChange={e => {
-                                setStorage(e.target.value)
-                                amountEarned()
-                            }}
+                            onChange={e => setStorage(e.target.value)}
                         />
 
                         <div className={`${styles.type_container}`}>
@@ -86,14 +68,11 @@ const Container5 = ({ id }) => {
                     </label>
 
                     <div className={`${styles.placeholders} `}>
-                        <input 
+                        <input
                             type="number"
                             min="1"
                             className={`${styles.input}`}
-                            onChange={e => {
-                                setInxt(e.target.value)
-                                amountEarned()
-                            }}
+                            onChange={e => setInxt(e.target.value)}
                         />
 
                         <div className={`${styles.type_container}`}>
@@ -110,7 +89,7 @@ const Container5 = ({ id }) => {
                     </label>
 
                     <div className={`${styles.placeholders}`}>
-                        <input 
+                        <input
                             type="text"
                             min="0"
                             disabled
@@ -131,7 +110,7 @@ const Container5 = ({ id }) => {
                 <p className="sm:text-lg mr-2">{description[0].link}</p>
             </a>
         </div>
-     );
+    );
 }
 
 export default Container5;
