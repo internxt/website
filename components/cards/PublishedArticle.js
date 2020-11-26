@@ -13,7 +13,7 @@ const PublishedArticle = ({ article, image}) => {
                     {moment(article.created).format('MMM DD YYYY')}
                 </p>
 
-                <h1 className={`${styles.title} sm:text-lg sm:w-80 sm:pr-4 sm:pb-16 lg:text-sm lg:mb-10 xl:mb-16`}>
+                <h1 className={`${styles.title} sm:text-lg sm:w-80 sm:pr-4 sm:pb-16 lg:text-sm lg:mb-10 lg:mr-10 xl:mb-16 xl:mr-8`}>
                     {article.title}
                 </h1>
 

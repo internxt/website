@@ -60,3 +60,7 @@
     letter-spacing: -0.15px;
     color: white;
 }
+
+.read_more:hover {
+    color: white;
+}
