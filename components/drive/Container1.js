@@ -52,12 +52,13 @@ const Container1 = ({ id }) => {
                     method="get" 
                     target="_blank" 
                     action="https://drive.internxt.com/new"
-                    className="sm:hidden">
+                    className="flex items-center"
+                >
                     <input
                         name='email'
                         type='email'
                         placeholder='Your email'
-                        className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+                        className={`${styles.email} lg:w-48 lg:text-sm lg:h-10 `}
                         required
                     />
 
@@ -65,7 +66,7 @@ const Container1 = ({ id }) => {
                         name='signup'
                         type='submit'
                         value="Sign up"
-                        className={`${styles.button} sm:rounded-3xl sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+                        className={`${styles.button} sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                     />
                 </form>
 

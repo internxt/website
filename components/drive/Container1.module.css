@@ -134,8 +134,3 @@
     text-align: center;
     color: white;
 }
-
-.button:hover {
-    background-color: #0074e0;
-    cursor: pointer;
-}
