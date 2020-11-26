@@ -19,9 +19,9 @@ const Footer = () => {
 
                 <div className={`${styles.get_started_container} lg:mt-10`}>
                     
-                    <a href="http://drive.internxt.com/new" className={`${styles.button} ${styles.text_button} sm:text-base lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
+                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} sm:text-base lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
                     
-                    <Link href="/prices">
+                    <Link href="/pricing">
                         <a className={`${styles.learn_more} sm:text-base lg:text-xss lg:mt-1`}>Learn more</a>
                     </Link>
                 </div>
@@ -84,10 +84,8 @@ const Footer = () => {
                             <a className={`${styles.p_social} lg:text-xs`}>Internxt Photos</a>
                         </Link>
 
-                        <Link href="/send">
-                            <a className={`${styles.p_social} lg:text-xs`}>Internxt Send</a>
-                        </Link>
-
+                        <a href="https://send.internxt.com/" target="_blank" className={`${styles.p_social} lg:text-xs`}>Internxt Send</a>
+                        
                         <Link href="/token">
                             <a className={`${styles.p_social} lg:text-xs`}>Internxt Token</a>
                         </Link>
@@ -104,7 +102,7 @@ const Footer = () => {
                             <a className={`${styles.p_social} lg:text-xs`}>About us</a>
                         </Link>
 
-                        <Link href="/prices">
+                        <Link href="/pricing">
                             <a className={`${styles.p_social} lg:text-xs`}>Pricing</a>
                         </Link>
 

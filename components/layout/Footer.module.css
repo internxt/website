@@ -76,6 +76,10 @@
     margin: 1rem 0 0;
 }
 
+.learn_more:hover {
+    color: rgb(207, 207, 207);
+}
+
 .keep_updated {
     min-width: 493px;
     font-family: "Averta-semibold";
