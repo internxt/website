@@ -17,7 +17,7 @@ const Container3 = ({ id }) => {
 
     return ( 
         <div className={background}>
-            <div className={`${styles.container} sm:flex-col sm:items-center`}>
+            <div className={`${styles.container} max-w-1600 sm:flex-col sm:items-center`}>
                 <div className={`${styles.main} sm:items-center sm:p-0 lg:pl-32 lg:py-16`}>
                     <h1 className={`${styles.title} leading-12 sm:text-4xl sm:text-center sm:w-84 sm:mt-16 lg:text-5xl lg:max-w-none lg:w-104`}>
                         {description[0].title}
