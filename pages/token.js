@@ -32,17 +32,6 @@ export async function getStaticProps() {
     const res = await fetch(URL)
     const data = await res.json()
 
-    const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-    const msg = {
-        to: 'hello@internxt.com',
-        from: 'inxt@internxt.com', // Use the email address or domain you verified above
-        subject: 'New Crypto INXT Request',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<ul><li>Deposit: $deposit</li><li>Currency: $currency</li><li>Receive: $receive</li><li>Currency Receive: $currencyReceive</li><li>Receiving Address: $receivingAddr</li><li>Internxt Address: $inxtAddr</li><li>Human score: $score</li></ul>',
-    };
-    //sgMail.send(msg)
 
     return {
         props: {
