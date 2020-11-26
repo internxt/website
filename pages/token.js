@@ -28,22 +28,19 @@ const Token = (props) => {
 }
 
 export async function getStaticProps() {
-    const URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?CMC_PRO_API_KEY=ad054d41-e820-4ebb-805b-dabf899a49ff&symbol=INXT&convert=EUR'
+    const URL = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?CMC_PRO_API_KEY=${process.env.COINMARKETCAP_API_KEY}&symbol=INXT&convert=EUR`
     const res = await fetch(URL)
     const data = await res.json()
 
     const sgMail = require('@sendgrid/mail')
-    require('dotenv').config()
-
-    console.log(process.env.SENDGRID_API_KEY)
-
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
     const msg = {
-        to: 'aldimirprincipal@gmail.com',
-        from: 'hello@internxt.com', // Use the email address or domain you verified above
-        subject: 'Sending with Twilio SendGrid is Fun',
+        to: 'hello@internxt.com',
+        from: 'inxt@internxt.com', // Use the email address or domain you verified above
+        subject: 'New Crypto INXT Request',
         text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        html: '<ul><li>Deposit: $deposit</li><li>Currency: $currency</li><li>Receive: $receive</li><li>Currency Receive: $currencyReceive</li><li>Receiving Address: $receivingAddr</li><li>Internxt Address: $inxtAddr</li><li>Human score: $score</li></ul>',
     };
     //sgMail.send(msg)
 

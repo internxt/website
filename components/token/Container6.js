@@ -48,7 +48,7 @@ const Container6 = ({ id }) => {
         fetch('/api/buytoken', { method: 'post', body: data }).then(ok => ok).catch(err => err)
     }
 
-    const receiveValue = deposit / prices[currency]
+    const receiveValue = deposit / (prices[currency] || 1)
 
     return (
         <div className={background}>
