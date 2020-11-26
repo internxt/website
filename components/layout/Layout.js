@@ -18,6 +18,7 @@ export default function Layout({
                 <script src="js/mailerlite.js"></script>
                 <script src="js/segment.js"></script>
                 <script src="js/drift.js"></script>
+                <script src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_V3_PK}`}></script>
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
             </Head>
             {children}

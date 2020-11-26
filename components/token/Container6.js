@@ -1,26 +1,61 @@
 import styles from './Container6.module.css'
 import descriptions from '../../assets/token-descriptions.json'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+
+const addrs = {
+    btc: '39UtLoELAoDSHQ5YaJvwwSu6ntTUAH2k6C',
+    eth: '0xd9bfdebdb7fb91f063faad165d1c503f646a7e41',
+    ltc: 'MVDqPF5G9fTujvzTSjzuhLKXTJyLxnGT4D'
+}
 
 const Container6 = ({ id }) => {
 
+    const [prices, setPrices] = useState({})
+    const [currency, setCurrency] = useState('btc')
+    const [deposit, setDeposit] = useState(0)
+
+    useEffect(() => {
+        checkPrices()
+    }, [])
+
     // Filter container specific descriptions
-    const description = descriptions.filter( desc => desc.id === id)
+    const description = descriptions.filter(desc => desc.id === id)
 
     // Check if a number is odd
-    const isOdd = ( num ) => {
+    const isOdd = (num) => {
         return num % 2 == 1;
     }
 
     // Set the background color of the container depending on its id
     const background = isOdd(id) ? 'normal_container grey' : 'normal_container'
-    
-    return ( 
+
+    const checkPrices = () => {
+        fetch('/api/token/values').then(res => {
+            if (res.status === 200) {
+                return res.json();
+            } else {
+                throw res
+            }
+        }).then(res => {
+            setPrices(res)
+        })
+    }
+
+    const parseSubmit = (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target)
+        fetch('/api/buytoken', { method: 'post', body: data }).then(ok => ok).catch(err => err)
+    }
+
+    const receiveValue = deposit / prices[currency]
+
+    return (
         <div className={background}>
             <h1 className={`${styles.title} sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-24`}>
                 {description[0].title}
             </h1>
-            
+
             <div className={`${styles.circle} sm:hidden lg:w-32 lg:mt-16`}>
                 <Image
                     src="/images/1440/Token/Section 5/middle circle.png"
@@ -53,7 +88,7 @@ const Container6 = ({ id }) => {
                         height={19}
                     />
                 </div>
-                
+
                 <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Token/Section 5/latoken.png"
@@ -81,21 +116,21 @@ const Container6 = ({ id }) => {
 
             <div className={styles.form_container}>
                 <div className={`${styles.diamond} sm:hidden lg:w-16 lg:ml-16 lg:mt-16`}>
-                    <Image 
+                    <Image
                         src="/images/1440/Token/Section 5/right diamond.png"
                         width={109}
                         height={117}
                     />
                 </div>
-                
+
                 <div className={`${styles.cube} sm:hidden lg:w-16 lg:ml-16 lg:mt-12`}>
-                    <Image 
+                    <Image
                         src="/images/1440/Token/Section 5/left cube.png"
                         width={84}
                         height={89}
                     />
                 </div>
-                
+
                 <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
                     {description[0].title2}
                 </h1>
@@ -104,23 +139,25 @@ const Container6 = ({ id }) => {
                     {description[0].subtitle}
                 </p>
 
-                <form className={`${styles.form} sm:w-full sm:pb-24 lg:pb-16`}>
+                <form className={`${styles.form} sm:w-full sm:pb-24 lg:pb-16`} method="post" onSubmit={parseSubmit}>
                     <div className={styles.first_half}>
                         <div className={`${styles.payment} sm:m-0`}>
                             <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Deposit</label>
-                                <input 
+                                <input
                                     type="number"
                                     className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     placeholder="0"
+                                    onChange={(e) => setDeposit(e.target.value)}
                                 />
                             </div>
 
                             <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Receive</label>
-                                <input 
+                                <input
                                     className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     placeholder="0"
+                                    value={receiveValue}
                                     disabled
                                 />
                             </div>
@@ -129,27 +166,27 @@ const Container6 = ({ id }) => {
                         <div className={`${styles.currency} sm:m-0`}>
                             <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
-                                <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}>
-                                    <option value="bitcoin">Bitcoin</option>
-                                    <option value="ethereum">Ethereum</option>
-                                    <option selected value="litecoin">Litecoin</option>
+                                <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`} onChange={(e) => setCurrency(e.target.value)}>
+                                    <option value="btc">Bitcoin</option>
+                                    <option value="eth">Ethereum</option>
+                                    <option value="ltc">Litecoin</option>
                                 </select>
                             </div>
-                            
-                            <div  className={styles.input_container}>
+
+                            <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
-                                <input 
+                                <input
                                     className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     placeholder="Internxt"
                                     disabled
-                                />    
+                                />
                             </div>
                         </div>
                     </div>
 
                     <div className={`${styles.second_half} sm:items-center`}>
                         <label className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>Please enter your INXT receiving address</label>
-                        <input 
+                        <input
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
                             placeholder="INXT Receiving address"
                         />
@@ -157,12 +194,12 @@ const Container6 = ({ id }) => {
                         <label className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>Please send the funds to the following address</label>
                         <input
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
-                            placeholder="39UtLoELAoDSHQ5YaJvwwSu6ntTUAH2k6C"
+                            value={addrs[currency]}
                             disabled
                         />
                     </div>
 
-                    <input 
+                    <input
                         className={`${styles.button} lg:text-xs lg:h-8 lg:w-32`}
                         value="Done"
                         type="submit"
@@ -170,7 +207,7 @@ const Container6 = ({ id }) => {
                 </form>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Container6;
