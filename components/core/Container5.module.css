@@ -63,8 +63,19 @@
     line-height: 1.54;
     letter-spacing: normal;
     color: white;
+
+
     padding: 0 1rem 0;
     outline: none;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input[type=number] {
+    -moz-appearance: textfield;
 }
 
 .type_container {

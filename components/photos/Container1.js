@@ -53,14 +53,6 @@ const Container1 = ({ id }) => {
                 <div className={`sm:hidden`}>
                     <Image src="/images/1440/Photos/Section 1/cross 2.png" width={11} height={11} />
                 </div>
-
-                <div className={`hidden absolute sm:block `}>
-                    <Image src="/images/1440/Photos/Section 1/1.png" width={75} height={92} />
-                </div>
-
-                <div className={`hidden absolute sm:block `}>
-                    <Image src="/images/1440/Photos/Section 1/1.png" width={75} height={92} />
-                </div>
             </div>
 
             <div className={`${styles.circles} sm:hidden lg:w-40 lg:pr-16 lg:mr-6 lg:pt-84`}>
@@ -68,10 +60,6 @@ const Container1 = ({ id }) => {
                 </div>
 
             <div className={`${styles.secondary} sm:items-center sm:pb-16`}>
-                 <div className={`hidden absolute bottom-0 left-0 ml-8 sm:flex `}>
-                    <Image src="/images/1440/Photos/Section 1/375p recorder.png" width={81} height={32} />
-                </div>
-
                 <h1 className={`${styles.subtitle2} sm:text-2xl sm:w-80 lg:text-xl`}>
                     {description[0].subtitle3}
                 </h1>

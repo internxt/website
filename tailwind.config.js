@@ -9,6 +9,14 @@ module.exports = {
   purge: [],
   important: true,
   theme: {
+    fontFamily: {
+        averta: 'averta',
+        avertalight: 'averta-light',
+        avertasemibold: 'averta-semibold',
+        avertabold: 'averta-bold',
+        avertaextrabold: 'averta-extrabold',
+        avertablack: 'averta-black'
+    },
     screens: {
       'xl': {'min': '1081px'},
       'lg': {'min': '751px', 'max': '1080px'},

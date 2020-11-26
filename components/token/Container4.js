@@ -78,7 +78,7 @@ const Container4 = ({ id }) => {
                {description[0].subtitle4}
            </p>
 
-           <a className={`${styles.link} sm:text-xl sm:mb-16 lg:text-base lg:mb-24`}>
+           <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" target="_blank" className={`${styles.link} sm:text-xl sm:mb-16 lg:text-base lg:mb-24`}>
                {description[0].link}
            </a>
         </div>
