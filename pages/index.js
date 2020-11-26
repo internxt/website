@@ -25,4 +25,16 @@ const Home = () => {
   )
 }
 
+export async function getServerSideProps(ctx) {
+  const userAgent = require('useragent')
+  const ua = ctx.req.headers['user-agent']
+
+  const uaParsed = userAgent.parse(ua);
+  console.log(uaParsed.os.family)
+  
+  return {
+    props: {}
+  }
+}
+
 export default Home;
