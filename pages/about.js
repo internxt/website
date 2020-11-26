@@ -1,4 +1,3 @@
-import Axios from 'axios';
 import Feed from 'rss-to-json'
 import Container1 from '../components/about-us/Container1'
 import Container2 from '../components/about-us/Container2'
@@ -10,11 +9,13 @@ import Container7 from '../components/about-us/Container7'
 import Footer from '../components/layout/Footer'
 import Layout from '../components/layout/Layout'
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import TopBar from '../components/layout/TopBar';
 
 const AboutUs = ( props ) => {
     return ( 
         <Layout segmentName='about' title='Internxt – About us.' description="Meet Internxt&#039;s Team. Fran Villalba Segarra, Founder and CEO at Internxt. Be limitless.">
+            <TopBar />
             <Container1 id='1'/>
             <Container2 id='2'/>
             <Container3 id='3'/>

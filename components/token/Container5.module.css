@@ -44,6 +44,9 @@
 }
 
 .button1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 147px;
     height: 46px;
     border-top-left-radius: 24.8px;
@@ -53,14 +56,12 @@
     margin: 0 1px 0 0;
     outline: none;
     border: none;
-
-    font-family: "averta-light";
-    font-size: 17px;
-    letter-spacing: -0.1px;
-    color: white;
 }
 
 .button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 147px;
     height: 46px;
     border-top-right-radius: 24.8px;
@@ -69,9 +70,16 @@
 
     outline: none;
     border: none;
-    
+}
+
+.appstore {
     font-family: "averta-light";
     font-size: 17px;
     letter-spacing: -0.1px;
+    color: white;
+    
+}
+
+.appstore:hover {
     color: white;
 }

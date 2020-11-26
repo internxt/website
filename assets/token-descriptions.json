@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "An essential utility for our services.",
-        "subtitle": "Start Staking your Internxt tokens, Inxt on Uniswap to earn up to 20% annual interest paid monthly."
+        "subtitle": "Earn up to 20% annual interest paid monthly by holding Internxt tokens."
     },
     {
         "id": "2",
@@ -40,18 +40,18 @@
     },
     {
         "id": "4",
-        "title": "Stake your Inxt tokens. Get paid.",
-        "colored": "Get paid.",
-        "subtitle": "Stake your Internxt tokens on Uniswap to earn interest each month.",
+        "title": "Earn Interest on your Inxt tokens.",
+        "colored": "",
+        "subtitle": "Stake or hold your Internxt tokens to earn interest each month.",
         "subtitle2": "The highest staking rates avaiable on the market today.",
-        "subtitle3": "Get paid automatically each month, just add liquidity on Uniswap.",
+        "subtitle3": "It's super simple. All you need are Internxt tokens and an active Internxt premium membership.",
         "subtitle4": "The more liquidity you add, the more you will earn.",
         "link": "Start staking your tokens"
     },
     {
         "id": "5",
-        "title": "Easy and secure way to trade Inxt",
-        "subtitle": "Trade directly on Uniswap within the Coinbase Wallet iOS or Android app.",
+        "title": "Easy and secure way to store Inxt",
+        "subtitle": "Store your inxt within the Coinbase Wallet iOS or Android app.",
         "subtitle2": "Connect your Coinbase Wallet on Uniswap by using the WalletLink feature in settings on the app and scan the QR code. Your tokens will then be avaiable to trade on Uniswap."
     },
     {

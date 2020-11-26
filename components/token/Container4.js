@@ -64,7 +64,7 @@ const Container4 = ({ id }) => {
                {description[0].subtitle2}
            </p>
 
-           <div className={`${styles.card_container} sm:grid sm:grid-cols-1 sm:gap-y-12 sm:mt-12`}>
+           <div className={`${styles.card_container} grid grid-cols-3 sm:grid sm:grid-cols-1 sm:gap-y-12 sm:mt-12`}>
                <StakeCard bundle="Starter" percentage="5" inxtQty="0 - 1000 INXT" />
                <StakeCard bundle="Professional" percentage="10" inxtQty="1000 - 10,000 INXT" />
                <StakeCard bundle="Expert" percentage="20" inxtQty="Above 10,000 INXT" />
@@ -72,10 +72,6 @@ const Container4 = ({ id }) => {
 
            <p className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>
                {description[0].subtitle3}
-           </p>
-
-           <p className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>
-               {description[0].subtitle4}
            </p>
 
            <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" target="_blank" className={`${styles.link} sm:text-xl sm:mb-16 lg:text-base lg:mb-24`}>

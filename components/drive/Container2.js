@@ -38,7 +38,7 @@ const Container2 = ({ id }) => {
 
             <Link href="/pricing">
                 <a className={`${styles.link} flex flex-row w-auto items-center lg:text-base lg:mt-12 lg:mb-16 xl:mt-24`}>
-                    <p className="sm:text-lg mr-2">{description[0].link}</p>
+                    <p className={`${styles.margin} sm:text-lg mr-2`}>{description[0].link}</p>
                     <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                 </a>
             </Link>

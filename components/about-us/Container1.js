@@ -9,8 +9,6 @@ const Container1 = ({ id }) => {
 
     return ( 
         <div className={`${styles.background} sm:h-120 lg:h-144`}>
-            <TopBar />
-
             <div className={`${styles.main} xl:h-full`}>
                 <h1 className={`${styles.title} sm:text-4xl sm:w-80 lg:text-8xl lg:w-10/12`}>
                     {description[0].title}

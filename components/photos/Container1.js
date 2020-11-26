@@ -64,7 +64,32 @@ const Container1 = ({ id }) => {
                     {description[0].subtitle3}
                 </h1>
 
-                <EmailNewsletter value="Subscribe" />
+                <div className="sm:hidden">
+                    <EmailNewsletter value="Subscribe" />
+                </div>
+                
+                <form
+                    data-code="r3s4c1" 
+                    method="post" 
+                    target="_blank" 
+                    rel="noopener"
+                    action="https://app.mailerlite.com/webforms/submit/r3s4c1"
+                    className={` hidden sm:flex sm:mt-8`}>
+                    <input type="hidden" name="ml-submit" value="1"></input>
+                    <input
+                        name='fields[email]'
+                        type='email'
+                        placeholder='Your email'
+                        className={`${styles.email} sm:h-10 sm:w-56 lg:w-48 lg:text-sm lg:h-10 `}
+                    />
+
+                    <input
+                        name='signup'
+                        type='submit'
+                        value="Subscribe"
+                        className={`${styles.button} sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+                    />
+                </form>
 
                 <div className={`${styles.recorder} sm:hidden lg:w-84 lg:pl-32 lg:pt-32`}>
                     <Image src="/images/1440/Photos/Section 1/3.png" width={133} height={104} />
