@@ -59,7 +59,7 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
 
                     {free ? 
                             <div className={styles.free_msg}>
-                                <h1 className={`${styles.text_free} sm:text-2xl lg:text-lg`}> { individual ? <span>FREE</span> : <span>CONTACT</span> } </h1>
+                                <h1 className={`${styles.text_free} sm:text-2xl sm:font-avertabold lg:text-lg`}> { individual ? <span>FREE</span> : <span>CONTACT</span> } </h1>
 
                                 <h1 className={`${styles.text_forever} sm:text-xl lg:text-sm`}> { individual ? <span>FOREVER & EVER</span> : <span>TEAM FOR PRICING</span> } </h1>
                             </div>
