@@ -41,7 +41,7 @@ export async function getServerSideProps(ctx) {
         return 'https://internxt.com/downloads/drive.deb';
       case 'Windows':
         return 'https://internxt.com/downloads/drive.exe';
-      case 'Max OS X':
+      case 'Mac OS X':
         return 'https://internxt.com/downloads/drive.dmg';
       default:
         return 'https://drive.internxt.com'

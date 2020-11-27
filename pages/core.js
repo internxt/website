@@ -37,7 +37,7 @@ export async function getServerSideProps(ctx) {
           return 'https://internxt.com/downloads/core.deb';
         case 'Windows':
           return 'https://internxt.com/downloads/core.exe';
-        case 'Max OS X':
+        case 'Mac OS X':
           return 'https://internxt.com/downloads/core.dmg';
         default:
           return 'https://github.com/internxt/core-gui/releases';
