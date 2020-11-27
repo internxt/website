@@ -3,7 +3,8 @@
         "id": "1",
         "title": "Monetize unused storage space.",
         "subtitle": "A simple peer-to-peer application that enables storage providers to monetize unused storage by hosting encrypted shards of data.",
-        "subtitle2": "Provide storage on the network"
+        "subtitle2": "Provide storage on the network",
+        "colored": ["storage", "application", "providers", "monetize", "hosting"]
     },
     {
         "id": "2",

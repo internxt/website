@@ -32,11 +32,11 @@ const Container5 = ({ id }) => {
 
     return (
         <div className={styles.background}>
-            <h1 className={`${styles.title} sm:text-4xl sm:w-10/12 sm:mt-12`}>
+            <h1 className={`${styles.title} sm:text-4xl sm:w-80 sm:mt-12`}>
                 {description[0].title}
             </h1>
 
-            <p className={`${styles.subtitle} sm:text-xl sm:w-10/12`}>
+            <p className={`${styles.subtitle} sm:text-xl sm:w-80`}>
                 {description[0].subtitle}
             </p>
 

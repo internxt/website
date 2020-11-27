@@ -5,10 +5,8 @@ import { Button } from 'react-bootstrap'
 
 const Container1 = ({ id, downloadUrl }) => {
 
-    console.log(downloadUrl)
-
     const description = descriptions.filter(desc => desc.id === id)
-
+    
     // Check if a number is odd
     const isOdd = (num) => {
         return num % 2 == 1;
@@ -16,6 +14,30 @@ const Container1 = ({ id, downloadUrl }) => {
 
     // Set the background color of the container depending on its id
     const className = isOdd(id) ? 'normal_container' : 'normal_container grey'
+
+    // Esta funcion cambiara el color de una determinada palabra de texto
+    const formattedText = (text, values) => { 
+        const regex = new RegExp(/\[\[(.*?)\]\]/);
+
+        if (!values.length)
+            return text;
+    
+        return (<div>
+            {text.split(regex)
+                .reduce((prev, current, i) => {
+                    if (!i)
+                        return [current];
+    
+                    return prev.concat(
+                        values.includes(current)  ?
+                            <span key={i + current} className={`${styles.colored}`}>
+                                {current}
+                            </span>
+                            : current
+                    );
+                }, [])}
+        </div>);
+    };
 
     return (
         <div className={`${className} relative`}>
@@ -28,8 +50,8 @@ const Container1 = ({ id, downloadUrl }) => {
                     <Image src="/images/1440/Core/Section 1/Graphic right.png" width={438} height={239} />
                 </div>
 
-                <h1 className={`${styles.title} sm:text-4xl sm:w-10/12`}>
-                    {description[0].title}
+                <h1 className={`${styles.title} sm:text-4xl sm:w-80`}>
+                    {formattedText(description[0].title, description[0].colored)}
                 </h1>
 
                 <p className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:mt-6`}>

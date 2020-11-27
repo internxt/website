@@ -30,7 +30,6 @@
 
 .subtitle {
     width: 820px;
-    font-family: "averta";
     font-size: 26px;
     line-height: 1.46;
     letter-spacing: -0.2px;
@@ -95,4 +94,8 @@
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.colored {
+    font-family: "averta-bold";
 }

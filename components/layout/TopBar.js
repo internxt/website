@@ -21,29 +21,33 @@ const TopBar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Brand className="md:hidden lg:hidden xl:hidden" href="/"><img src="/images/1440/Footer/Internxt.png" className={`${styles.brand} sm:w-28`} /></Navbar.Brand>
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="w-full justify-between sm:justify-center sm:items-center sm:p-0 md:h-10 md:p-0 lg:h-12 lg:p-0 xl:h-16 xl:p-0">
+                <Nav className="w-full justify-between sm:pt-8 sm:items-center sm:p-0 md:h-10 md:p-0 lg:h-12 lg:p-0 xl:h-16 xl:p-0">
                     <Link href="/">
-                        <img className="block object-contain sm:hidden md:w-28 lg:w-28 xl:w-32 " src="/images/1440/Footer/Internxt.png" />
+                        <img className="block object-contain sm:hidden md:w-28 lg:w-28 xl:w-32" src="/images/1440/Footer/Internxt.png" />
                     </Link>
 
                     <div className="flex flex-row sm:flex-col sm:p-0">
                         <Link href="/drive">
-                            <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Drive</a>
+                            <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Drive</a>
                         </Link>
 
                         <Link href="/photos">
-                            <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Photos</a>
+                            <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Photos</a>
                         </Link>
 
-                        <a href="https://send.internxt.com/" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Send</a>
+                        <a href="https://send.internxt.com/" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Send</a>
 
                         <Link href="/pricing">
-                            <a className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>Pricing</a>
+                            <a className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Pricing</a>
                         </Link>
 
                         <Link href="/about">
-                            <a  className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-2xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-2xl lg:text-sm`}>About</a>
+                            <a  className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>About</a>
                         </Link>
+
+                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Sign in</a>
+
+                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Get started</a>
                     </div>
 
                     <div className={`${styles.links} sm:hidden`}>

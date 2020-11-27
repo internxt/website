@@ -22,7 +22,7 @@ const Container6 = ({ id }) => {
             </h1>
 
             <div className="grid grid-cols-4 gap-4 sm:flex sm:flex-col sm:items-center sm:mb-12 xl:mb-24">
-                <div className={`${styles.card} col-span-2 sm:h-auto sm:w-10/12 sm:m-0 sm:mt-12 sm:p-0 sm:shadow-none sm:border-0`}>
+                <div className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:mt-12 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
                         <p className={`${styles.steps_text} sm:text-13`}>STEP 1</p>
                     </div>
@@ -42,7 +42,7 @@ const Container6 = ({ id }) => {
 
                 <div className="hidden sm:block sm:h-1 sm:w-10/12 sm:bg-gray-300 sm:my-8"></div>
 
-                <div className={`${styles.card} col-span-2 sm:h-auto sm:w-10/12 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
+                <div className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
                         <p className={`${styles.steps_text} sm:text-13`}>STEP 2</p>
                     </div>
@@ -62,7 +62,7 @@ const Container6 = ({ id }) => {
 
                 <div className="hidden sm:block sm:h-1 sm:w-10/12 sm:bg-gray-300 sm:mt-4 sm:mb-12"></div>
                 
-                <div className={`${styles.card} col-span-4 w-auto sm:h-auto sm:w-10/12 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
+                <div className={`${styles.card} col-span-4 w-auto sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
                         <p className={`${styles.steps_text} sm:text-13`}>STEP 3</p>
                     </div>
@@ -73,7 +73,7 @@ const Container6 = ({ id }) => {
 
                     <div className={`${styles.long_card_description} sm:flex-col`}>
                         <div className={`${styles.paragraph} sm:w-auto sm:m-0`}>
-                            <p className={`${styles.card_subtitle} sm:text-lg sm:mt-0`}>
+                            <p className={`${styles.card_subtitle} sm:text-lg sm:mt-4`}>
                                 {description[0].subtitle4}
                             </p>
 
