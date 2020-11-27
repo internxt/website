@@ -25,7 +25,7 @@ const Container5 = ({ id }) => {
 
     return ( 
         <div className={className}>
-            <text className={`${styles.title} sm:text-4xl sm:pt-16 lg:text-5xl lg:pt-20 xl:mb-24`}>
+            <text className={`${styles.title} sm:text-4xl sm:font-avertaextrabold sm:pt-16 lg:text-5xl lg:pt-20 xl:mb-24`}>
                 {title}
             </text>
             

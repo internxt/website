@@ -50,7 +50,7 @@ const Container1 = ({ id }) => {
             }
 
             <div className={`${styles.first_half} `}>
-                <h1 className={`${styles.title} sm:text-4xl sm:w-80 lg:text-4.5xl`}>
+                <h1 className={`${styles.title} leading-9 sm:text-4xl sm:w-80 lg:text-4.5xl`}>
                     {
                         individual ? description[0].individual_title : description[0].teams_title
                     }
@@ -65,9 +65,23 @@ const Container1 = ({ id }) => {
                 </p>
 
                 <div className={`${styles.switch_container} sm:mt-12 sm:w-auto sm:h-12 sm:px-2 lg:h-12 lg:w-72 lg:px-1 lg:mt-16`}>
-                    <button onClick={onClickIndividual} className={individual ? `${styles.button} sm:text-xs sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36 ${styles.grey}` : `${styles.button} sm:text-xs sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36`}>For individuals</button>
+                    <button onClick={onClickIndividual} 
+                        className={
+                            individual ? 
+                                    `${styles.button} sm:text-sm sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36 ${styles.grey}` 
+                                : 
+                                    `${styles.button} sm:text-sm sm:text-xs sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36`}>
+                        For individuals
+                    </button>
 
-                    <button onClick={onClickTeams}  className={teams ? `${styles.button} sm:text-xs sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36 ${styles.grey}` : `${styles.button} sm:text-xs sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36`}>For teams</button>
+                    <button onClick={onClickTeams} 
+                        className={
+                            teams ? 
+                                `${styles.button} sm:text-sm sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36 ${styles.grey}` 
+                            : 
+                                `${styles.button} sm:text-sm sm:text-xs sm:w-32 sm:h-10 lg:text-13 lg:h-10 lg:w-36`}>
+                        For teams
+                    </button>
                 </div>
             </div>
             

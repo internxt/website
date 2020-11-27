@@ -151,7 +151,7 @@ const Container2 = ({ id }) => {
                 />
             </div>
             
-            <p className={`sm:text-13 lg:text-xs lg:mt-4`}>
+            <p className={`sm:text-13 sm:mt-4 sm:text-gray-600 sm:font-avertalight lg:text-xs lg:mt-4`}>
                 {description[0].subtitle2}
             </p>
         </div>
