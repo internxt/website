@@ -49,7 +49,7 @@ const Container1 = ({ id }) => {
                 </h1>
 
                 <form   
-                    method="get" 
+                    method="post" 
                     target="_blank" 
                     action="https://drive.internxt.com/new"
                     className="flex items-center"
@@ -59,7 +59,7 @@ const Container1 = ({ id }) => {
                         type='email'
                         placeholder='Your email'
                         className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
-                        required
+                        
                     />
 
                     <input
