@@ -19,15 +19,15 @@ const Container4 = ({ id }) => {
         <div className={background}>
             <div className={`${styles.container} sm:flex-col max-w-1600 xl:items-center xl:justify-center`}>
                 <div className={`${styles.main} sm:w-full sm:items-center sm:p-0 lg:pl-24`}>
-                    <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:mt-12 sm:w-10/12 lg:text-5xl lg:w-112 lg:leading-12 xl:leading-13`}>
+                    <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:mt-12 sm:w-80 lg:text-5xl lg:w-112 lg:leading-12 xl:leading-13`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-10/12 lg:text-lg lg:w-84`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:pt-4 lg:text-lg lg:w-84`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-10/12 lg:text-lg lg:w-84`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-lg lg:w-84`}>
                         {description[0].subtitle2}
                     </p>
                 </div>

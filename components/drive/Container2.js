@@ -20,11 +20,11 @@ const Container2 = ({ id }) => {
     return ( 
         <div className={className}>
             <div className={styles.main}>
-                <h1 className={`${styles.title} sm:pt-16 sm:text-4xl lg:text-5xl`}>
+                <h1 className={`${styles.title} sm:pt-16 sm:text-4xl sm:w-72 lg:text-5xl`}>
                     {description[0].title}
                 </h1>
 
-                <p className={`${styles.subtitle} sm:text-xl w-10/12 lg:text-lg lg:w-9/12`}>
+                <p className={`${styles.subtitle} sm:text-xl w-10/12 sm:w-80 lg:text-lg lg:w-9/12`}>
                     {description[0].subtitle}
                 </p>
             </div>
@@ -37,7 +37,7 @@ const Container2 = ({ id }) => {
             </div>
 
             <Link href="/pricing">
-                <a className={`flex flex-row w-auto items-center lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
+                <a className={`flex flex-row w-auto items-center sm:my-16 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
                     <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>{description[0].link}</p>
                     <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                 </a>

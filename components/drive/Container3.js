@@ -27,15 +27,15 @@ const Container3 = ({ id }) => {
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} sm:hidden sm:text-center sm:w-10/12 sm:text-xl lg:text-lg lg:w-96`}>
+                    <p className={`${styles.subtitle} sm:hidden sm:text-center sm:w-80 sm:text-xl lg:text-lg lg:w-96`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={`${styles.subtitle} hidden sm:flex sm:text-center sm:w-10/12 sm:text-xl`}>
+                    <p className={`${styles.subtitle} hidden sm:flex sm:text-center sm:w-80 sm:text-xl`}>
                         {description[0].subtitle_sm}
                     </p>
 
-                    <p className={`${styles.subtitle} sm:text-center sm:w-10/12 sm:text-xl sm:mb-12 lg:text-lg lg:w-96`}>
+                    <p className={`${styles.subtitle} sm:text-center sm:w-84 sm:text-xl sm:mb-12 lg:text-lg lg:w-96`}>
                         {description[0].subtitle2}
                     </p>
                 </div>

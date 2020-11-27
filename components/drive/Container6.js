@@ -20,18 +20,18 @@ const Container6 = ({ id }) => {
         <div className={background}>
             <div className={`${styles.container} sm:items-center sm:justify-center sm:flex-col`}>
                 <div className={`${styles.main} sm:items-center sm:w-auto sm:p-0`}>
-                    <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:w-10/12 lg:text-5xl lg:w-104 lg:leading-tight xl:leading-13`}>
+                    <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 sm:mt-16 lg:text-5xl lg:w-104 lg:leading-tight xl:leading-13`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-10/12 sm:mb-12 lg:text-lg lg:w-96`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-12 sm:pt-4 lg:text-lg lg:w-96`}>
                         {description[0].subtitle}
                     </p>
 
                     <Link href="/prices">
                         <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mt-8 lg:mb-16 xl:mt-12`}>
                             <Link href="/pricing">
-                                <p className="sm:text-lg mr-2 mb-1">Check out plans for teams</p>
+                                <p className={`${styles.margin} sm:text-lg mr-2 mb-1`}>Check out plans for teams</p>
                             </Link>
                             <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                         </a>

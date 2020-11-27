@@ -19,11 +19,11 @@ const Container5 = ({ id, downloadUrl }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={`${styles.main} items-center`}>
-                    <h1 className={`${styles.title1} sm:text-4xl sm:text-center sm:mt-12 sm:w-10/12 lg:text-5xl xl:mt-24`}>
+                    <h1 className={`${styles.title1} sm:text-4xl sm:text-center sm:mt-12 sm:w-80 lg:text-5xl xl:mt-24`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle1} sm:text-xl sm:text-center sm:w-10/12 lg:text-lg lg:w-10/12 lg:pt-2`}>
+                    <p className={`${styles.subtitle1} sm:text-xl sm:text-center sm:w-80 lg:text-lg lg:w-10/12 lg:pt-2`}>
                         {description[0].subtitle}
                     </p>
                 </div>
@@ -43,26 +43,26 @@ const Container5 = ({ id, downloadUrl }) => {
                 </div>
 
                 <div className={`${styles.main} sm:items-center lg:pl-32`}>
-                    <h1 className={`${styles.title2} sm:text-4xl sm:text-center sm:w-10/12 lg:text-5xl lg:w-84 lg:leading-tight xl:leading-13 xl:mb-4`}>
+                    <h1 className={`${styles.title2} sm:text-4xl sm:text-center sm:w-80 lg:text-5xl lg:w-84 lg:leading-tight xl:leading-13 xl:mb-4`}>
                         {description[0].title2}
                     </h1>
 
-                    <p className={`${styles.subtitle2} sm:text-xl sm:text-center sm:w-10/12 lg:text-lg lg:w-96`}>
+                    <p className={`${styles.subtitle2} sm:text-xl sm:text-center sm:w-80 lg:text-lg lg:w-96`}>
                         {description[0].subtitle3}
                     </p>
 
-                    <p className={`${styles.subtitle2} sm:text-xl sm:text-center sm:w-10/12 lg:text-lg lg:w-96`}>
+                    <p className={`${styles.subtitle2} sm:text-xl sm:text-center sm:w-80 lg:text-lg lg:w-96`}>
                         {description[0].subtitle4}
                     </p>
 
-                    <div className={`${styles.links} sm:justify-evenly`}>
+                    <div className={`${styles.links} sm:justify-evenly sm:w-80`}>
                         <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.link} flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}>
-                            <p className={`${styles.margin} sm:text-lg mr-2`}>Sign up</p>
+                            <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>Sign up</p>
                             <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                         </a>
 
                         <a href={downloadUrl} target="_blank" className={`${styles.link} flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}>
-                            <p className={`${styles.margin} sm:text-lg mr-2`}>Download</p>
+                            <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>Download</p>
                             <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                         </a>
                     </div>
