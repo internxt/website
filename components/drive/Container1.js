@@ -49,7 +49,7 @@ const Container1 = ({ id }) => {
                 </h1>
 
                 <form   
-                    method="post" 
+                    method="get" 
                     target="_blank" 
                     action="https://drive.internxt.com/new"
                     className="flex items-center"
