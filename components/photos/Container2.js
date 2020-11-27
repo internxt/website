@@ -19,7 +19,7 @@ const Container2 = ({ id }) => {
     return ( 
         <div className={background}>
             <div className={`${styles.main_container} sm:py-16 lg:pb-16`}>
-                <h1 className={`${styles.title} sm:text-4xl sm:w-80 lg:text-5xl`}>
+                <h1 className={`${styles.title} leading-9 sm:text-4xl sm:w-80 lg:text-5xl`}>
                     {description[0].title}
                 </h1>
 
@@ -39,7 +39,7 @@ const Container2 = ({ id }) => {
                         <Link href="/pricing">
                             <p className="sm:text-xl mr-2">{description[0].link}</p>
                         </Link>
-                        
+
                         <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                     </a>
                 </Link>

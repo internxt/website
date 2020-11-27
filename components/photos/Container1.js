@@ -17,7 +17,7 @@ const Container1 = ({ id }) => {
 
     return ( 
         <div className={`${className} relative`}>
-            <div className={`${styles.main} sm:pt-14`}>
+            <div className={`${styles.main} sm:py-12`}>
                 <h1 className={`${styles.title} sm:text-4xl sm:pb-8 lg:text-8xl`}>
                     {description[0].title}
                 </h1>
@@ -60,7 +60,7 @@ const Container1 = ({ id }) => {
                 </div>
 
             <div className={`${styles.secondary} sm:items-center sm:pb-16`}>
-                <h1 className={`${styles.subtitle2} sm:text-2xl sm:w-80 lg:text-xl`}>
+                <h1 className={`${styles.subtitle2} sm:font-avertasemibold sm:text-xl sm:w-80 sm:m-0 lg:text-xl`}>
                     {description[0].subtitle3}
                 </h1>
 
@@ -74,7 +74,7 @@ const Container1 = ({ id }) => {
                     target="_blank" 
                     rel="noopener"
                     action="https://app.mailerlite.com/webforms/submit/r3s4c1"
-                    className={` hidden sm:flex sm:mt-8`}>
+                    className={` hidden sm:flex sm:mt-6`}>
                     <input type="hidden" name="ml-submit" value="1"></input>
                     <input
                         name='fields[email]'
