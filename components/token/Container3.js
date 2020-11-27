@@ -28,11 +28,11 @@ const Container3 = ({ id }) => {
                 </div>
 
                 <div className={`${styles.main} sm:p-0 sm:items-center lg:pl-12 lg:pt-12`}>
-                    <h1 className={`${styles.title} leading-12 sm:text-4xl sm:w-72 sm:text-center lg:text-5xl lg:max-w-none lg:w-104 xl:leading-13`}>
+                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-72 sm:text-center lg:text-5xl lg:max-w-none lg:w-104 xl:leading-13`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-xl lg:w-100`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:pt-4 lg:text-xl lg:w-100`}>
                         {description[0].subtitle}
                     </p>
 
@@ -42,7 +42,7 @@ const Container3 = ({ id }) => {
 
                     <Link href="/core">
                         <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
-                            <p className={`sm:text-lg lg:text-base mr-1 mb-1`}>{description[0].subtitle3}</p>
+                            <p className={`font-avertasemibold sm:text-lg lg:text-base mr-2 mb-1`}>{description[0].subtitle3}</p>
                             <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
                         </a>
                     </Link>

@@ -65,8 +65,8 @@ const Container1 = ({ id }) => {
                     <input
                         name='signup'
                         type='submit'
-                        value="Sign up"
-                        className={`${styles.button} sm:rounded-3xl sm:w-28 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+                        value="Start for free"
+                        className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                     />
                 </form>
 

@@ -129,7 +129,7 @@ const Container6 = ({ id }) => {
                 </div>
             </div>
 
-            <div className={styles.form_container}>
+            <div className={`${styles.form_container} sm:w-100%`}>
                 <div className={`${styles.diamond} sm:hidden lg:w-16 lg:ml-16 lg:mt-16`}>
                     <Image
                         src="/images/1440/Token/Section 5/right diamond.png"
@@ -172,7 +172,7 @@ const Container6 = ({ id }) => {
                             <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Receive</label>
                                 <input
-                                    className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
+                                    className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
                                     type="number"
                                     name="receive"
                                     value={receiveValue}
@@ -196,7 +196,7 @@ const Container6 = ({ id }) => {
                             <div className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
                                 <input
-                                    className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
+                                    className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
                                     name="own_currency"
                                     value="Internxt"
                                     disabled
@@ -205,7 +205,7 @@ const Container6 = ({ id }) => {
                         </div>
                     </div>
 
-                    <div className={`${styles.second_half} sm:items-center`}>
+                    <div className={`${styles.second_half} sm:w-84 sm:items-center`}>
                         <label className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>Please enter your INXT receiving address</label>
                         <input
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
@@ -217,7 +217,7 @@ const Container6 = ({ id }) => {
                         <label className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>Please send the funds to the following address</label>
                         <input
                             name="addr"
-                            className={`${styles.input} ${styles.input2} lg:text-sm`}
+                            className={`${styles.input} ${styles.input2} bg-gray-200 text-gray-600 lg:text-sm`}
                             value={addrs[currency]}
                             disabled
                         />

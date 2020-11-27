@@ -65,7 +65,7 @@ const Container1 = ({ id }) => {
                 </h1>
 
                 <div className="sm:hidden">
-                    <EmailNewsletter value="Subscribe" />
+                    <EmailNewsletter value="Get early access" />
                 </div>
                 
                 <form
@@ -80,14 +80,14 @@ const Container1 = ({ id }) => {
                         name='fields[email]'
                         type='email'
                         placeholder='Your email'
-                        className={`${styles.email} sm:h-10 sm:w-56 lg:w-48 lg:text-sm lg:h-10 `}
+                        className={`${styles.email} sm:h-10 sm:w-40 lg:w-48 lg:text-sm lg:h-10 `}
                     />
 
                     <input
                         name='signup'
                         type='submit'
-                        value="Subscribe"
-                        className={`${styles.button} sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+                        value="Get early access"
+                        className={`${styles.button} sm:h-10 sm:w-auto sm:text-base sm:font-avertasemibold sm:px-3 lg:w-32 lg:h-10 lg:text-sm`}
                     />
                 </form>
 
