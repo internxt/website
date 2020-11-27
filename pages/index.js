@@ -44,6 +44,7 @@ export async function getServerSideProps(ctx) {
       case 'Mac OS X':
         return 'https://internxt.com/downloads/drive.dmg';
       default:
+        console.log('Unknown device %s, User Agent: %s', uaParsed.os.family, ua);
         return 'https://drive.internxt.com'
     }
   })();

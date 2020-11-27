@@ -35,7 +35,7 @@ const TopBar = () => {
                             <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Photos</a>
                         </Link>
 
-                        <Link href="/send">
+                        <Link href="https://send.internxt.com">
                             <a className={router.pathname === '/send' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Send</a>
                         </Link>
 
