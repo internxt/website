@@ -40,7 +40,7 @@ const Container2 = ({ id }) => {
                             <p className="sm:text-xl mr-2">{description[0].link}</p>
                         </Link>
 
-                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                     </a>
                 </Link>
             </div>

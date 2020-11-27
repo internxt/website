@@ -43,7 +43,7 @@ const Container3 = ({ id }) => {
                     <Link href="/core">
                         <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
                             <p className={`font-avertasemibold sm:text-lg lg:text-base mr-2 mb-1`}>{description[0].subtitle3}</p>
-                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                         </a>
                     </Link>
                 </div>

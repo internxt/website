@@ -17,7 +17,7 @@ const TopBar = () => {
     }, [])
 
     return ( 
-        <Navbar className="sm:flex-row-reverse" expand="md">
+        <Navbar className="sm:flex-row-reverse sm:pl-4 sm:pt-1" expand="md">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Brand className="md:hidden lg:hidden xl:hidden" href="/"><img src="/images/1440/Footer/Internxt.png" className={`${styles.brand} sm:w-28`} /></Navbar.Brand>
             <Navbar.Collapse id="responsive-navbar-nav">

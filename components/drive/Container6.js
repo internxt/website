@@ -33,7 +33,7 @@ const Container6 = ({ id }) => {
                             <Link href="/pricing">
                                 <p className={`${styles.margin} sm:text-lg mr-2 mb-1`}>Check out plans for teams</p>
                             </Link>
-                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} />
+                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                         </a>
                     </Link>
                 </div>
