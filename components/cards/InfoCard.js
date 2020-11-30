@@ -6,7 +6,7 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, link, linkText2, link2
     const url = `/images/1440/Drive/Section 7/${image}.png`
 
     return ( 
-        <div className={`${styles.card} relative sm:h-auto sm:m-0 sm:p-0 sm:w-10/12 sm:shadow-none sm:border-0 lg:p-0 lg:pl-10 lg:pt-12 lg:pb-6 lg:h-100 lg:w-4/12`}>
+        <div className={`${styles.card} relative sm:h-auto sm:m-0 sm:p-0 sm:w-10/12 sm:shadow-none sm:border-0 lg:p-0 lg:pl-10 lg:pt-12 lg:pb-6 lg:h-100 lg:w-auto`}>
             <div className={`${styles.logo} sm:w-28 lg:w-4/12`}>
                 <Image src={url} width={width} height={heigth} />
             </div>
@@ -23,15 +23,15 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, link, linkText2, link2
                 {subtitle2}
             </p>
 
-                <a href={link} target="_blank" className={`${styles.link} flex flex-row w-auto items-center absolute bottom-0 lg:pb-6 lg:text-sm lg:m-0 xl:mb-16`}>
-                    <p className={`${styles.margin} mr-2`}>{linkText}</p>
+                <a href={link} target="_blank" className={`flex flex-row w-auto items-center absolute bottom-0 lg:pb-6 lg:text-sm lg:m-0 xl:mb-16`}>
+                    <p className={`${styles.margin} ${styles.link} lg:text-13`}>{linkText}</p>
                     <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                 </a>
 
             {
                 linkText2 ? 
-                    <a href={link2} target="_blank" className={`${styles.link} flex flex-row w-auto items-center absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-16 xl:mr-32`}>
-                        <p className={`${styles.margin} mr-2`}>{linkText2}</p>
+                    <a href={link2} target="_blank" className={`flex flex-row w-auto items-center absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-16 xl:mr-32`}>
+                        <p className={`${styles.margin} ${styles.link} lg:text-13`}>{linkText2}</p>
                         <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                     </a>
                 :

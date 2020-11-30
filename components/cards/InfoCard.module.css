@@ -30,7 +30,7 @@
 }
 
 .subtitle {
-    max-width: 390px;
+    max-width: 396px;
     font-size: 19px;
     font-weight: normal;
     line-height: 1.58;
@@ -55,5 +55,5 @@
 }
 
 .margin {
-    margin: 0 0 3px;
+    margin: 0 4px 0px;
 }

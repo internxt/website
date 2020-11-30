@@ -41,8 +41,10 @@
     {
         "id": "7",
         "title": "Is cloud the answer?",
-        "subtitle": "“A recent survey from Deloitte shows that blockchain-based cloud storage is picking up steam. It’s simply a smarter way to take advantage of emerging technology and all that cloud has to offer: reliability, security and scalability. Deloitte survey reveals strong investment in blockchain.”",
+        "subtitle": "“A recent survey from Deloitte shows that blockchain-based cloud storage is picking up steam.", 
+        "subtitle2": "It’s simply a smarter way to take advantage of emerging technology and all that cloud has to offer: reliability, security and scalability. Deloitte survey reveals strong investment in blockchain.”",
         "title2": "Analysis of the cloud",
-        "subtitle3": "“The research investigates the impact of distributed and centralized cloud architectures on security. Centralized clouds interlace core functions within the same space. If an error or attack manages to destabilize a centralized component, the entire cloud is at risk.”"
+        "subtitle3": "“The research investigates the impact of distributed and centralized cloud architectures on security.", 
+        "subtitle4": "Centralized clouds interlace core functions within the same space. If an error or attack manages to destabilize a centralized component, the entire cloud is at risk.”"
     }   
 ]
