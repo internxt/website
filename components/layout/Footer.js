@@ -123,7 +123,7 @@ const Footer = () => {
                         </div>
 
                         <div className={styles.followus_container}>
-                            <img className={styles.logo} src="/images/1440/Footer/twitter.png" />
+                            <img className={styles.logo} src="/images/1440/Footer/medium.png" />
                             <a href="https://medium.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Medium</a>
                         </div>
 
@@ -140,7 +140,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <Accordion className="lg:hidden xl:hidden" defaultActiveKey="0">
+                <Accordion className="lg:hidden xl:hidden">
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">

@@ -255,4 +255,15 @@ button:focus {
   line-height: 1.83;
   letter-spacing: normal;
   color: #4f4f5f;
+  display: flex;
+  width: 100%;
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.btn-link:focus {
+  text-decoration: none;
 }

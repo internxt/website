@@ -26,7 +26,7 @@ const EmailNewsletter = ({ hidden, value }) => {
                     name='signup'
                     type='submit'
                     value={value}
-                    className={`${styles.button} sm:rounded-3xl sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm xl:w-auto xl:px-4`}
+                    className={`${styles.button} sm:rounded-3xl sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm xl:w-auto xl:px-6`}
                 />
             </form>
         </div>
