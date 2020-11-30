@@ -7,7 +7,7 @@ import { Accordion, Card, Button } from 'react-bootstrap'
 const Footer = () => {
     return ( 
         <footer>
-            <div className={`${styles.first_half} sm:p-0 sm:pt-12 sm:pb-16`}>
+            <div className={`${styles.first_half} sm:p-0 sm:py-20`}>
                 <div className={styles.title_container}>
                     <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>A family of privacy focused services.</h1>
 
@@ -221,6 +221,21 @@ const Footer = () => {
                     </Card>
                     <div className={`sm:w-80`}></div>
                 </Accordion>
+
+                <div className={`hidden sm:flex sm:flex-col sm:w-full sm:px-6`}>
+                    <div className={`sm:w-40 mt-16`}>
+                        <Image 
+                            src="/images/1440/Footer/Internxt.png"
+                            alt="INTERXT logo"
+                            width={153}
+                            height={16}
+                            quality={100}
+                        />
+                    </div>
+
+                    <p className={`${styles.p_social} sm:text-base sm:text-xs mt-6`}>Copyright &copy; 2020 Internxt</p>
+                    <p className={`${styles.p_social} sm:text-base sm:text-xs`}>All rights Reserved</p>
+                </div>
             </div>
         </footer>
     );

@@ -1,7 +1,7 @@
 .first_half {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(237deg, #4a66f7 2%, #7a5bfe 87%);
+    background-image: linear-gradient(51deg, #4a66f7 2%, #7a5bfe 87%);
 
     padding: 4rem;
 }
