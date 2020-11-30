@@ -40,6 +40,10 @@ const Container5 = ({ id }) => {
                 {description[0].subtitle}
             </p>
 
+            <p className={`${styles.subtitle} sm:text-xl sm:w-80`}>
+                {description[0].subtitle2}
+            </p>
+
             <div className={`grid grid-cols-3 gap-x-6 sm:flex sm:flex-col `}>
                 <div className={`${styles.input_container} sm:mt-12`}>
                     <label className={`${styles.label}`}>

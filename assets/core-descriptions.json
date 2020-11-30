@@ -33,7 +33,8 @@
     {
         "id": "5",
         "title": "Calculate what you could earn",
-        "subtitle": "More storage you host, more Inxt you own, calculates to a greater income. Calculate below how much you could earn by using Internxt Core.",
+        "subtitle": "More storage you host, more Inxt you own, calculates to a greater income.",
+        "subtitle2": "Calculate below how much you could earn by using Internxt Core.",
         "label": "Storage allocated",
         "label2": "Inxt owned",
         "label3": "Earned per month",

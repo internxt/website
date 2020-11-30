@@ -46,7 +46,7 @@ const Container3 = ({ id }) => {
             </div>
 
             <div className={`grid grid-cols-2 gap-x-24 sm:flex sm:flex-col sm:mb-24 lg:py-16 xl:mb-40`}>
-                <div onClick={() => onClickSetUp()} className={ dashboard ? `${styles.opacity} flex flex-col items-center` : `flex flex-col items-center`}>
+                <div onClick={() => onClickSetUp()} className={ dashboard ? `${styles.opacity} cursor-pointer flex flex-col items-center` : `cursor-pointer flex flex-col items-center`}>
                     <h1 className={`${styles.title2} sm:text-3xl lg:text-5xl lg:w-84 lg:leading-tight`}>
                         {description[0].title2}
                     </h1>
@@ -57,7 +57,7 @@ const Container3 = ({ id }) => {
                     <div className={setup ? `${styles.line}` : `hidden`}></div>
                 </div>
 
-                <div onClick={() => onClickDashboard()} className={dashboard ? `flex flex-col items-center sm:mt-12` : `${styles.opacity} flex flex-col items-center sm:mt-12`}>
+                <div onClick={() => onClickDashboard()} className={dashboard ? `cursor-pointer flex flex-col items-center sm:mt-12` : `${styles.opacity} cursor-pointer  flex flex-col items-center sm:mt-12`}>
                     <h1 className={`${styles.title2} sm:text-3xl lg:text-5xl lg:w-84 lg:leading-tight`}>
                         {description[0].title3}
                     </h1>

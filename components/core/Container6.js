@@ -2,7 +2,7 @@ import styles from './Container6.module.css'
 import descriptions from '../../assets/core-descriptions.json'
 import Image from 'next/image'
 
-const Container6 = ({ id }) => {
+const Container6 = ({ id, downloadUrl }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
@@ -35,7 +35,7 @@ const Container6 = ({ id }) => {
                         {description[0].subtitle}
                     </p>
 
-                    <a className={`${styles.card_link} sm:text-lg`}>
+                    <a href={downloadUrl} className={`${styles.card_link} sm:text-lg`}>
                         Download Internxt Core
                     </a>
                 </div>
