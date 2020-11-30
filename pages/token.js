@@ -27,7 +27,7 @@ const Token = (props) => {
     );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
     const URL = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?CMC_PRO_API_KEY=${process.env.COINMARKETCAP_API_KEY}&symbol=INXT&convert=EUR`
     const res = await fetch(URL)
     const data = await res.json()

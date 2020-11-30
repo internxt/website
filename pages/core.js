@@ -44,9 +44,12 @@ export async function getServerSideProps(ctx) {
           return 'https://github.com/internxt/core-gui/releases';
       }
     })();
+
+    const lang = ctx.locale
+    const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`)
   
     return {
-      props: { downloadUrl }
+      props: { downloadUrl, descriptions }
     }
   }
  

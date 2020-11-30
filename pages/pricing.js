@@ -14,5 +14,17 @@ const Pricing = () => {
         </Layout>
      );
 }
+
+export async function getStaticProps(context) {
+
+    const lang = context.locale
+    const descriptions = require(`../assets/lang/${lang}/core-descriptions.json`)
+
+    return {
+        props: {
+            descriptions
+        }
+    }
+}
  
 export default Pricing;
