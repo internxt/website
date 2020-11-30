@@ -1,5 +1,5 @@
 import styles from './Container2.module.css'
-import descriptions from '../../assets/drive-descriptions.json'
+import descriptions from '../../assets/lang/en/drive-descriptions.json'
 import PriceCard from '../cards/PriceCard'
 import Image from 'next/image'
 import Link from 'next/link'

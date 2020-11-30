@@ -1,5 +1,5 @@
 import styles from './Container6.module.css'
-import descriptions from '../../assets/token-descriptions.json'
+import descriptions from '../../assets/lang/en/token-descriptions.json'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 

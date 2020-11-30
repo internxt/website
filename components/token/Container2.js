@@ -1,5 +1,5 @@
 import styles from './Container2.module.css'
-import descriptions from '../../assets/token-descriptions.json'
+import descriptions from '../../assets/lang/en/token-descriptions.json'
 import TokenSmallCard from '../cards/TokenSmallCard'
 import Image from 'next/image'
 

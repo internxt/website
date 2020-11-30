@@ -1,0 +1,31 @@
+{
+    "faq": {
+        "title": "",
+        "rows": [
+            {
+                "title": "Products",
+                "content": ""
+            },
+            {
+                "title": "What operating systems are compatible?",
+                "content": "You can run Internxt Core on Linux, Windows and MacOS."
+            },
+            {
+                "title": "What’s the minimum amount of space needed to get paid?",
+                "content": "The minimum monthly payout is of €5, which corresponds to 500 GB of hosted data. However, you can boost your payout by holding Internxt tokens. Check out our payout calculator in the Internxt Core page."
+            },
+            {
+                "title": "How much data can I expect my node to store?",
+                "content": "If you run a node almost uninterruptedly, you should be able to hit the minimum payout in just around a month of running Internxt Core. Once that threshold is reached, you will have already secured a recurring, increasing monthly passive income! There is no real limit on how much you can host and therefore earn by running Internxt Core."
+            },
+            {
+                "title": "How is my node selected to receive data?",
+                "content": "We want Internxt Drive data to be held by the best performing nodes, so that we can provide a top-notch service to our customers. Nodes are mainly selected based on their available space and uptime."
+            },
+            {
+                "title": "How often will I get paid?",
+                "content": "Internxt Core payouts are usually sent during the first week of each new month."
+            }
+        ]
+    }
+}

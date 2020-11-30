@@ -1,5 +1,5 @@
 import styles from './Container7.module.css'
-import descriptions from '../../assets/about-us-descriptions.json'
+import descriptions from '../../assets/lang/en/about-us-descriptions.json'
 import PublishedArticle from '../cards/PublishedArticle'
 import Image from 'next/image'
 

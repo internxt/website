@@ -1,5 +1,5 @@
 import styles from './Container6.module.css'
-import descriptions from '../../assets/core-descriptions.json'
+import descriptions from '../../assets/lang/en/core-descriptions.json'
 import Image from 'next/image'
 
 const Container6 = ({ id, downloadUrl }) => {

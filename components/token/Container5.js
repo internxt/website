@@ -1,5 +1,5 @@
 import styles from './Container5.module.css'
-import descriptions from '../../assets/token-descriptions.json'
+import descriptions from '../../assets/lang/en/token-descriptions.json'
 import Image from 'next/image'
 
 const Container5 = ({ id }) => {

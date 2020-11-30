@@ -1,5 +1,5 @@
 import styles from './Container4.module.css'
-import descriptions from '../../assets/token-descriptions.json'
+import descriptions from '../../assets/lang/en/token-descriptions.json'
 import StakeCard from '../cards/StakeCard'
 import Image from 'next/image'
 

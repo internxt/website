@@ -1,5 +1,5 @@
 import styles from './Container6.module.css'
-import descriptions from '../../assets/about-us-descriptions.json'
+import descriptions from '../../assets/lang/en/about-us-descriptions.json'
 import PartnerCard from '../cards/PartnerCard'
 
 const Container6 = ({ id }) => {

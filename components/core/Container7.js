@@ -1,5 +1,5 @@
 import styles from './Container7.module.css'
-import descriptions from '../../assets/core-descriptions.json'
+import descriptions from '../../assets/lang/en/core-descriptions.json'
 import Faq from 'react-faq-component';
 
 const Container7 = ({ id }) => {

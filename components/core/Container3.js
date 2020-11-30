@@ -1,5 +1,5 @@
 import styles from './Container3.module.css'
-import descriptions from '../../assets/core-descriptions.json'
+import descriptions from '../../assets/lang/en/core-descriptions.json'
 import Image from 'next/image'
 import { useState } from 'react'
 

@@ -8,11 +8,13 @@ import Container6 from '../components/about-us/Container6'
 import Container7 from '../components/about-us/Container7'
 import Footer from '../components/layout/Footer'
 import Layout from '../components/layout/Layout'
-
-import React from 'react';
 import TopBar from '../components/layout/TopBar';
+import React from 'react';
+import { useRouter } from 'next/router'
 
 const AboutUs = ( props ) => {
+    const router = useRouter()
+    
     return ( 
         <Layout segmentName='about' title='Internxt – About us.' description="Meet Internxt&#039;s Team. Fran Villalba Segarra, Founder and CEO at Internxt. Be limitless.">
             <TopBar />
@@ -28,12 +30,11 @@ const AboutUs = ( props ) => {
      );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
     const POSTS_URL = 'https://medium.com/feed/Internxt'
 
     const rss = await Feed.load(POSTS_URL)
     const data = rss.items
-    console.log('----------------- ESTO ES DATA ---------------', data)
     let images = []
     
     const regex = /<img src="(.*)" width=/
@@ -45,8 +46,10 @@ export async function getStaticProps() {
         }
     })
 
+    const lang = context.locale
+    const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`)
     return {
-        props: { data: JSON.parse(JSON.stringify(data)), images }
+        props: { data: JSON.parse(JSON.stringify(data)), images, descriptions }
     }
 }
 

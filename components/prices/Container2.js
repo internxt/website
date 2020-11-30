@@ -1,5 +1,5 @@
 import styles from './Container2.module.css'
-import descriptions from '../../assets/prices-descriptions.json'
+import descriptions from '../../assets/lang/en/prices-descriptions.json'
 import Image from 'next/image'
 
 const Container2 = ({ id }) => {

@@ -1,5 +1,5 @@
 import styles from './Container3.module.css'
-import descriptions from '../../assets/about-us-descriptions.json'
+import descriptions from '../../assets/lang/en/about-us-descriptions.json'
 import PersonalCard from '../cards/PersonalCard'
 
 const Container3 = ({ id }) => {

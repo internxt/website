@@ -1,5 +1,5 @@
 import styles from './Container4.module.css'
-import descriptions from '../../assets/core-descriptions.json'
+import descriptions from '../../assets/lang/en/core-descriptions.json'
 
 const Container4 = ({ id }) => {
 

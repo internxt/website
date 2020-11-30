@@ -1,6 +1,6 @@
 import InfoCard from '../cards/InfoCard'
 import styles from './Container7.module.css'
-import descriptions from '../../assets/drive-descriptions.json'
+import descriptions from '../../assets/lang/en/drive-descriptions.json'
 
 const Container7 = ({ id }) => {
 

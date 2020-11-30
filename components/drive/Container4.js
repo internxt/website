@@ -1,5 +1,5 @@
 import styles from './Container4.module.css'
-import descriptions from '../../assets/drive-descriptions.json'
+import descriptions from '../../assets/lang/en/drive-descriptions.json'
 import Image from 'next/image'
 
 const Container4 = ({ id }) => {

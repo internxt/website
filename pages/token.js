@@ -32,10 +32,13 @@ export async function getStaticProps() {
     const res = await fetch(URL)
     const data = await res.json()
 
+    const lang = context.locale
+    const descriptions = require(`../assets/lang/${lang}/core-descriptions.json`)
 
     return {
         props: {
-            data: data.data.INXT
+            data: data.data.INXT,
+            descriptions
         }
     }
 }

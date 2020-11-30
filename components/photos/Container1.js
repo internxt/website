@@ -1,5 +1,5 @@
 import styles from './Container1.module.css'
-import descriptions from '../../assets/photos-descriptions.json'
+import descriptions from '../../assets/lang/en/photos-descriptions.json'
 import EmailNewsletter from '../EmailNewsletter'
 import Image from 'next/image'
 

@@ -1,5 +1,5 @@
 import styles from './Container5.module.css'
-import descriptions from '../../assets/about-us-descriptions.json'
+import descriptions from '../../assets/lang/en/about-us-descriptions.json'
 import InvestorCard from '../cards/InvestorCard'
 
 const Container5 = ({ id }) => {

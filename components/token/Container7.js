@@ -1,5 +1,5 @@
 import styles from './Container7.module.css'
-import descriptions from '../../assets/token-descriptions.json'
+import descriptions from '../../assets/lang/en/token-descriptions.json'
 
 const Container7 = ({ id, data }) => {
 

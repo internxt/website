@@ -1,5 +1,5 @@
 import styles from './Container1.module.css'
-import descriptions from '../../assets/prices-descriptions.json'
+import descriptions from '../../assets/lang/en/prices-descriptions.json'
 import PriceCard from '../cards/PriceCard'
 import Image from 'next/image'
 import { useState } from 'react'

@@ -1,4 +1,4 @@
-import descriptions from '../assets/terms-and-conditions.json'
+import descriptions from '../assets/lang/en/terms-and-conditions.json'
 import Layout from '../components/layout/Layout'
 import TopBar from '../components/layout/TopBar'
 import Footer from '../components/layout/Footer'
