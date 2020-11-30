@@ -12,7 +12,6 @@ const TopBar = () => {
     const [color, setColor] = useState('')
 
     useEffect(() => {
-        console.log('-----', currentPath == '/about' ? 'yes' : 'no')
         currentPath == '/about' ? setColor(`text-white`) : null
     }, [])
 
