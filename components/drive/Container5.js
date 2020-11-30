@@ -28,7 +28,7 @@ const Container5 = ({ id, downloadUrl }) => {
                     </p>
                 </div>
                 
-                <div className={`sm:hidden sm:mt-12`}>
+                <div className={`mt-10 sm:hidden sm:mt-14`}>
                     <Image src="/images/1440/Drive/Section 5/Interface.png" width={1212} height={575} />
                 </div>
 

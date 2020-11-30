@@ -73,7 +73,7 @@
     text-align: center;
     color: white;
 
-    margin: 1rem 0 0;
+    margin: .6rem 0 0;
 }
 
 .learn_more:hover {
@@ -81,15 +81,13 @@
 }
 
 .keep_updated {
-    min-width: 493px;
+    max-width: 500px;
     font-family: "Averta-semibold";
     font-size: 26px;
     font-weight: 600;
     line-height: 1.35;
     letter-spacing: normal;
     color: #2a2c35;
-
-    flex: 0.5;
 }
 
 .signup_container {
@@ -116,6 +114,8 @@
 }
 
 .logo {
+    width: 17px;
+    margin: 0 4px 0 0;
 }
 
 .p_container {
@@ -129,6 +129,12 @@
     line-height: 1.83;
     letter-spacing: normal;
     color: #4f4f5f;
+}
+
+.followus_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .p_social {

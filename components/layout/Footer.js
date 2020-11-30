@@ -30,7 +30,7 @@ const Footer = () => {
 
             <div className={`${styles.second_half} sm:pb-16`}>
                 <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6 sm:items-start`}>
-                    <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none`}>Keep me updated about products, news, tips and offers from Internxt.</p>
+                    <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none `}>Keep me updated about products, news, tips and offers from Internxt.</p>
 
                     <div className="sm:hidden">
                         <EmailNewsletter value="Subscribe" />
@@ -60,7 +60,7 @@ const Footer = () => {
 
                 <div className={`${styles.social_container} sm:hidden sm:w-11/12 sm:justify-around lg:pb-12`}>
                     <div className={`${styles.p_container}`}>
-                        <div className={`${styles.logo} sm:w-24 lg:w-28 xl:w-36 xl:mt-2`}>
+                        <div className={`sm:w-24 lg:w-28 xl:w-36 xl:mt-2`}>
                             <Image 
                                 src="/images/1440/Footer/Internxt.png"
                                 alt="INTERXT logo"
@@ -116,10 +116,22 @@ const Footer = () => {
 
                     <div className={styles.p_container}>
                         <h1 className={`${styles.label} lg:text-sm`}>Follow us</h1>
-                        <a href="https://twitter.com/Internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Twitter</a>
-                        <a href="https://medium.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Medium</a>
-                        <a href="https://github.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Github</a>
-                    </div>
+
+                        <div className={styles.followus_container}>
+                            <img className={styles.logo} src="/images/1440/Footer/twitter.png" />
+                            <a href="https://twitter.com/Internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Twitter</a>    
+                        </div>
+
+                        <div className={styles.followus_container}>
+                            <img className={styles.logo} src="/images/1440/Footer/twitter.png" />
+                            <a href="https://medium.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Medium</a>
+                        </div>
+
+                        <div className={styles.followus_container}>
+                            <img className={styles.logo} src="/images/1440/Footer/github.png" />
+                            <a href="https://github.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Github</a>
+                        </div>
+                       </div>
 
                     <div className={`${styles.p_container} sm:hidden`}>
                         <h1 className={`${styles.label} lg:text-sm`}>Join</h1>
