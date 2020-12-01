@@ -58,7 +58,7 @@
     margin: 1.5rem 0 3rem 0;
 }
 
-.button {
+.button_core {
     width: 127px;
     height: 38px;
     border-radius: 18.8px;
@@ -71,7 +71,9 @@
     letter-spacing: normal;
     text-align: center;
     color: white;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 1rem 0 0;
 }
 

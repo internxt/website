@@ -96,7 +96,7 @@ const Container5 = ({ id }) => {
                         <input
                             type="text"
                             min="0"
-                            disabled
+                            
                             className={`${styles.input}`}
                             value={total}
                         />

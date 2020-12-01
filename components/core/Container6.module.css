@@ -37,7 +37,7 @@
     border-style: solid;
     border-width: 2px;
     border-image-source: linear-gradient(225deg, #47aaff -5%, #a96fff 93%);
-    border-image-slice: 1;
+    border-image-slice: 0;
     background-image: linear-gradient(to bottom, white, white), linear-gradient(225deg, #47aaff -5%, #a96fff 93%);
     background-origin: border-box;
     background-clip: content-box, border-box;

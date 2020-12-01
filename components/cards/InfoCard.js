@@ -6,7 +6,7 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, link, linkText2, link2
     const url = `/images/1440/Drive/Section 7/${image}.png`
 
     return ( 
-        <div className={`${styles.card} relative sm:h-auto sm:m-0 sm:p-0 sm:w-10/12 sm:shadow-none sm:border-0 lg:p-0 lg:pl-10 lg:pt-12 lg:pb-6 lg:h-100 lg:w-auto`}>
+        <div className={`${styles.card} relative sm:h-auto sm:m-0 sm:p-0 sm:pb-16 sm:w-10/12 sm:shadow-none sm:border-0 lg:p-0 lg:pl-10 lg:pt-12 lg:pb-6 lg:h-100 lg:w-auto`}>
             <div className={`${styles.logo} sm:w-28 lg:w-4/12`}>
                 <Image src={url} width={width} height={heigth} />
             </div>

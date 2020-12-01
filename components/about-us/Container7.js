@@ -20,7 +20,7 @@ const Container7 = ({ id, articles }) => {
                 {description[0].title}
             </h1>
 
-            <div className="grid grid-cols-6 gap-y-6 gap-x-3 sm:flex sm:flex-col lg:max-w-780 xl:max-w-1280">
+            <div className="grid grid-cols-6 gap-y-6 gap-x-3 sm:grid-cols-1 lg:max-w-780 xl:max-w-1280">
                 <PublishedArticle article={articles.data[0]} image={articles.images[0]} />
                 <PublishedArticle article={articles.data[1]} image={articles.images[1]} />
                 <PublishedArticle article={articles.data[2]} image={articles.images[2]} />
@@ -34,7 +34,7 @@ const Container7 = ({ id, articles }) => {
 
             <a href="https://medium.com/internxt" target="_blank" className={`${styles.link} flex flex-row items-center sm:my-16 lg:text-lg lg:mb-16`}>
                 <p className="mr-2 sm:text-lg">Read more posts</p>
-                {/* <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.png" width={14} height={11} /> */}
+                {/* <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} /> */}
             </a>
         </div>
      );

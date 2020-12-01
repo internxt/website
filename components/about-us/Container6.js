@@ -20,7 +20,7 @@ const Container6 = ({ id }) => {
     } = description[0]
 
     return ( 
-        <div className={styles.main}>
+        <div className={`${styles.main} sm:mb-24`}>
             <h1 className={`${styles.title} sm:text-4xl sm:mt-16 sm:mb-6 lg:text-5xl lg:pt-20 lg:pb-8 xl:mt-24 xl:mb-12`}>
                 {title}
             </h1>

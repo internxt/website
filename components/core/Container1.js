@@ -63,7 +63,7 @@ const Container1 = ({ id, downloadUrl }) => {
                 </p>
 
                 <div className={`${styles.button_container}`}>
-                    <Button className={`${styles.button} sm:text-base`} href={downloadUrl}>Download</Button>
+                    <div className={`${styles.button_core} sm:text-base`} href={downloadUrl}>Download</div>
                     <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank"
                         className={`${styles.link} sm:text-base`}>Set-up & tips</a>
                 </div>

@@ -40,11 +40,11 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link
                     {company}
                 </h1>
 
-                <p className={`${biostyle} sm:text-base sm:w-68 sm:mb-4 lg:text-13 lg:w-11/12 lg:mb-4 lg:leading-6`}>
+                <p className={`${biostyle} sm:leading-6 sm:text-base sm:w-68 sm:mb-4 lg:text-13 lg:w-11/12 lg:mb-4 lg:leading-6`}>
                     {bio}
                 </p>
 
-                <p className={`${biostyle} sm:text-base sm:w-68 sm:mb-20 lg:text-13 lg:w-11/12 lg:mb-0`}>
+                <p className={`${biostyle} sm:leading-6 sm:text-base sm:w-68 sm:mb-20 lg:text-13 lg:w-11/12 lg:mb-0`}>
                     {bio2}
                 </p>
 
