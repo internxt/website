@@ -75,7 +75,7 @@ const Container4 = ({ id, descriptions }) => {
            
             <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
                 target="_blank"
-                className={`flex flex-row w-auto items-center sm:text-lg sm:my-16 lg:my-12 xl:my-16`}
+                className={`flex flex-row w-auto items-center sm:text-lg sm:my-16 lg:mt-12 lg:mb-16 xl:mt-16 xl:mb-20`}
             >
                 <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2 lg:text-base`}>{description[0].link}</p>
                 <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
