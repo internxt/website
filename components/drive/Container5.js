@@ -18,7 +18,7 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={`${styles.main} items-center`}>
-                    <h1 className={`${styles.title1} sm:text-4xl sm:text-center sm:mt-12 sm:w-80 lg:text-5xl xl:mt-24`}>
+                    <h1 className={`${styles.title1} leading-10 sm:text-4xl sm:text-center sm:mt-12 sm:w-80 lg:text-5xl xl:mt-24`}>
                         {description[0].title}
                     </h1>
 
@@ -42,7 +42,7 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
                 </div>
 
                 <div className={`${styles.main} sm:items-center lg:pl-32`}>
-                    <h1 className={`${styles.title2} sm:text-4xl sm:text-center sm:w-80 lg:text-5xl lg:w-84 lg:leading-tight xl:leading-13 xl:mb-4`}>
+                    <h1 className={`${styles.title2} leading-10 sm:text-4xl sm:text-center sm:w-80 lg:text-5xl lg:w-84 lg:leading-tight xl:leading-13 xl:mb-4`}>
                         {description[0].title2}
                     </h1>
 

@@ -22,7 +22,7 @@ const Container4 = ({ id, descriptions }) => {
                 </div>
 
                 <div className={`${styles.main} sm:items-center`}>
-                    <h1 className={`${styles.title} sm:text-4xl sm:w-84 sm:text-center leading-10 lg:text-5xl lg:max-w-none lg:w-104`}>
+                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-84 sm:text-center leading-10 lg:text-5xl lg:max-w-none lg:w-104`}>
                         {description[0].title}
                     </h1>
 

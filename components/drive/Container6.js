@@ -19,7 +19,7 @@ const Container6 = ({ id, descriptions }) => {
         <div className={background}>
             <div className={`${styles.container} sm:items-center sm:justify-center sm:flex-col`}>
                 <div className={`${styles.main} sm:items-center sm:w-auto sm:p-0`}>
-                    <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 sm:mt-16 lg:text-5xl lg:w-104 lg:leading-tight xl:leading-13`}>
+                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:text-center sm:w-80 sm:mt-16 lg:text-5xl lg:w-104 lg:leading-tight xl:leading-13`}>
                         {description[0].title}
                     </h1>
 
@@ -30,7 +30,7 @@ const Container6 = ({ id, descriptions }) => {
                     <Link href="/prices">
                         <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mt-8 lg:mb-16 xl:mt-12`}>
                             <Link href="/pricing">
-                                <p className={`${styles.margin} sm:text-lg mr-2 mb-1`}>Check out plans for teams</p>
+                                <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2 mb-1`}>Check out plans for teams</p>
                             </Link>
                             <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                         </a>

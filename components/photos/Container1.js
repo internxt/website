@@ -17,7 +17,7 @@ const Container1 = ({ id, descriptions }) => {
     return ( 
         <div className={`${className} relative`}>
             <div className={`${styles.main} sm:py-12`}>
-                <h1 className={`${styles.title} sm:text-4xl sm:pb-8 lg:text-8xl`}>
+                <h1 className={`${styles.title} sm:text-4xl sm:pb-5 sm:w-80 lg:text-8xl`}>
                     {description[0].title}
                 </h1>
 

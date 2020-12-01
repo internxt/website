@@ -65,10 +65,10 @@
 }
 
 .button_text {
-    font-family: "averta-light";
+    font-family: "averta";
     font-size: 17px;
     font-weight: 600;
-    letter-spacing: 1.2px;
+    letter-spacing: .2px;
     line-height: normal;
     text-align: center;
     color: white;

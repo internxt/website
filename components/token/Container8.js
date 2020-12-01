@@ -32,7 +32,7 @@ const Container8 = ({ id, descriptions }) => {
                 />
             </div>
             
-            <h1 className={`${styles.title} sm:text-4xl lg:text-4.5xl lg:my-16`}>
+            <h1 className={`${styles.title} leading-10 sm:text-4xl lg:text-4.5xl lg:my-16`}>
                 {description[0].title}
             </h1>
 

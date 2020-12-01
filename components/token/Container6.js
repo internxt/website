@@ -66,7 +66,7 @@ const Container6 = ({ id, descriptions }) => {
 
     return (
         <div className={background}>
-            <h1 className={`${styles.title} sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-24`}>
+            <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-24`}>
                 {description[0].title}
             </h1>
 

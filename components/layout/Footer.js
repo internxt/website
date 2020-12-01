@@ -20,7 +20,7 @@ const Footer = () => {
 
                 <div className={`${styles.get_started_container} lg:mt-10`}>
                     
-                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} sm:text-base lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
+                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} font-avertasemibold sm:text-base lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
                     
                     <Link href="/pricing">
                         <a className={`${styles.learn_more} sm:text-base lg:text-xss lg:mt-1`}>Learn more</a>
