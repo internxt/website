@@ -34,9 +34,11 @@
 }
 
 .colored_text {
-    background-image: linear-gradient(217deg, #ff5eb6 -10%, #ff1594 97%);
+    display: inline-block;
+    background-image: linear-gradient(217deg, #ff5eb6 33%, #ff1594 97%);
     letter-spacing: -0.71px;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 2px 0 5px;
 }
