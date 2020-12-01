@@ -1,8 +1,7 @@
 import styles from './Container5.module.css'
-import descriptions from '../../assets/lang/en/drive-descriptions.json'
 import Image from 'next/image'
 
-const Container5 = ({ id, downloadUrl }) => {
+const Container5 = ({ id, downloadUrl, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
@@ -23,7 +22,7 @@ const Container5 = ({ id, downloadUrl }) => {
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle1} sm:text-xl sm:text-center sm:w-80 lg:text-lg lg:w-10/12 lg:pt-2`}>
+                    <p className={`${styles.subtitle1} sm:text-xl sm:text-center sm:w-80 lg:text-lg lg:w-10/12 lg:pt-2 xl:text-center`}>
                         {description[0].subtitle}
                     </p>
                 </div>

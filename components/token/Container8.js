@@ -1,8 +1,7 @@
 import styles from './Container8.module.css'
-import descriptions from '../../assets/lang/en/token-descriptions.json'
 import Image from 'next/image'
 
-const Container8 = ({ id }) => {
+const Container8 = ({ id, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)

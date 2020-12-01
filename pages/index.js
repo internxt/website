@@ -13,13 +13,13 @@ const Home = (props) => {
   return (
     <Layout title='Internxt – Be limitless.' description="Internxt Drive is a private, green, free cloud storage service. Make the switch to a better cloud." segmentName='home'>
       <TopBar />
-      <Container1 id='1' />
-      <Container2 id='2' />
-      <Container3 id='3' />
-      <Container4 id='4' />
+      <Container1 id='1' descriptions={props.descriptions} />
+      <Container2 id='2' descriptions={props.descriptions} />
+      <Container3 id='3' descriptions={props.descriptions} />
+      <Container4 id='4' descriptions={props.descriptions} />
       <Container5 id='5' {...props} />
-      <Container6 id='6' />
-      <Container7 id='7' />
+      <Container6 id='6' descriptions={props.descriptions} />
+      <Container7 id='7' descriptions={props.descriptions} />
       <Footer />
     </Layout>
   )
@@ -50,8 +50,8 @@ export async function getServerSideProps(ctx) {
   })();
 
   const lang = ctx.locale
-  const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`)
-
+  const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`)
+  console.log(descriptions)
   return {
     props: { downloadUrl, descriptions }
   }

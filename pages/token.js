@@ -14,14 +14,14 @@ const Token = (props) => {
     return (
         <Layout segmentName="token" title='Internxt Token – Our tokenized asset.' description="Internxt token. Learn all about our cryptocurrency, INXT." >
             <TopBar />
-            <Container1 id='1' />
-            <Container2 id='2' />
-            <Container3 id='3' />
-            <Container4 id='4' />
-            <Container5 id='5' />
-            <Container6 id='6' />
-            <Container7 id='7' data={props.data} />
-            <Container8 id='8' />
+            <Container1 id='1' descriptions={props.descriptions} />
+            <Container2 id='2' descriptions={props.descriptions} />
+            <Container3 id='3' descriptions={props.descriptions} />
+            <Container4 id='4' descriptions={props.descriptions} />
+            <Container5 id='5' descriptions={props.descriptions} />
+            <Container6 id='6' descriptions={props.descriptions} />
+            <Container7 id='7' descriptions={props.descriptions} data={props.data} />
+            <Container8 id='8' descriptions={props.descriptions} />
             <Footer />
         </Layout>
     );
@@ -33,7 +33,7 @@ export async function getStaticProps(context) {
     const data = await res.json()
 
     const lang = context.locale
-    const descriptions = require(`../assets/lang/${lang}/core-descriptions.json`)
+    const descriptions = require(`../assets/lang/${lang}/token-descriptions.json`)
 
     return {
         props: {

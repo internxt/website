@@ -1,8 +1,7 @@
 import InfoCard from '../cards/InfoCard'
 import styles from './Container7.module.css'
-import descriptions from '../../assets/lang/en/drive-descriptions.json'
 
-const Container7 = ({ id }) => {
+const Container7 = ({ id, descriptions }) => {
 
     const LINK_INFOCARD_1 = "https://www2.deloitte.com/us/en/pages/consulting/articles/interest-in-blockchain-continues.html"
     const LINK_INFOCARD_2 = "https://internxt.com/08893440.pdf"

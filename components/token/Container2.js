@@ -1,9 +1,8 @@
 import styles from './Container2.module.css'
-import descriptions from '../../assets/lang/en/token-descriptions.json'
 import TokenSmallCard from '../cards/TokenSmallCard'
 import Image from 'next/image'
 
-const Container2 = ({ id }) => {
+const Container2 = ({ id, descriptions }) => {
     
     const description = descriptions.filter( desc => desc.id === id)
     const { 

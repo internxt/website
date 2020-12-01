@@ -14,12 +14,12 @@ const Core = (props) => {
         <Layout segmentName="core" title='Internxt Core – Get paid to share.' description="Get paid to share the exceeding disk space of your computer to host encrypted shards of data as part of a decentralized network of servers." >
             <TopBar />
             <Container1 id='1' {...props} />
-            <Container2 id='2' />
-            <Container3 id='3' />
-            <Container4 id='4' />
-            <Container5 id='5' />
-            <Container6 id='6' {...props} />
-            <Container7 id='7' />
+            <Container2 id='2' descriptions={props.descriptions} />
+            <Container3 id='3' descriptions={props.descriptions} />
+            <Container4 id='4' descriptions={props.descriptions} />
+            <Container5 id='5' descriptions={props.descriptions} />
+            <Container6 id='6' descriptions={props.descriptions} {...props} />
+            <Container7 id='7' descriptions={props.descriptions} />
             <Footer />
         </Layout>
      );

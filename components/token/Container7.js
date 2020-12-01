@@ -1,7 +1,6 @@
 import styles from './Container7.module.css'
-import descriptions from '../../assets/lang/en/token-descriptions.json'
 
-const Container7 = ({ id, data }) => {
+const Container7 = ({ id, data, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)

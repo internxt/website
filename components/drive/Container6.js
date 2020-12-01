@@ -1,9 +1,8 @@
 import styles from './Container6.module.css'
-import descriptions from '../../assets/lang/en/drive-descriptions.json'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Container6 = ({ id }) => {
+const Container6 = ({ id, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)

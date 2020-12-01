@@ -1,81 +1,81 @@
 [
     {
         "id": "1",
-        "title": "An essential utility for our services.",
-        "subtitle": "Earn up to 20% annual interest paid monthly by holding Internxt tokens."
+        "title": "Una utilidad esencial para nuestros servicios.",
+        "subtitle": "Gana hasta un 20% de interés anual con pago mensual al tener tokens de Internxt."
     },
     {
         "id": "2",
 
-        "title": "Part of revenues are used to market buy Inxt.",
+        "title": "Parte de los ingresos se usan para comprar Inxt.",
         "subtitle": "",
-        "colored": "to market buy Inxt.",
+        "colored": "para comprar Inxt.",
 
-        "title4": "Inxt is used as payment",
-        "subtitle4": " to core storage providers",
+        "title4": "Inxt se usa como forma de pago",
+        "subtitle4": "a los proveedores de almacenamiento",
         "colored4": "",
 
-        "title2": "Hosts earn 10% more",
-        "subtitle2": " for holding Inxt",
+        "title2": "Los hosts ganan un 10% más",
+        "subtitle2": "por mantener Inxt",
         "colored2": "",
 
-        "title5": "There is a total of 629,000 Inxt tokens in max supply",
+        "title5": "Hay un total de 629.000 Inxt tokens en circulación", 
         "subtitle5": "", 
         "colored5": "629,000",
 
-        "title3": "Greater Inxt staked, higher interest recieved",
+        "title3": "Cuanto más Inxt, más interés", 
         "subtitle3": "",
-        "colored3": "higher interest recieved",
+        "colored3": "más interés",
 
-        "title6": "Organic demand.",
-        "subtitle6": "Reliable growth",
+        "title6": "Demanda orgánica",
+        "subtitle6": "Crecimiento fiable",
         "colored6": ""
     },
     {
         "id": "3",
-        "title": "All the hard work has been done.",
-        "subtitle": "Join our highly secure distributed infrastructure by providing storage space.",
-        "subtitle2": "75% of data centers have unused storage space that result in high overheads. By joining our network you will be able to monotie that space by hosting users encrypted data.",
-        "subtitle3": "Learn more about hosting"
+        "title": "El trabajo duro ya está hecho.", 
+        "subtitle": "Únete a nuestra infraestructura de distribución de almacenamiento de alta seguridad",
+        "subtitle2": "El 75% de los centros de datos tienen espacio de almacenamiento sin usar provocando altos gastos. Al unirse a nuestra red, sacarás rendimiento al alojar los datos encriptados de los usuarios.",
+        "subtitle3": "Aprende más sobre el hosting"
     },
     {
         "id": "4",
-        "title": "Earn Interest on your Inxt tokens.",
+        "title": "Gana intereses con tu Inxt tokens",
         "colored": "",
-        "subtitle": "Stake or hold your Internxt tokens to earn interest each month.",
-        "subtitle2": "The highest staking rates avaiable on the market today.",
-        "subtitle3": "It's super simple. All you need are Internxt tokens and an active Internxt premium membership.",
-        "subtitle4": "The more liquidity you add, the more you will earn.",
-        "link": "Start staking your tokens"
+        "subtitle": "Apuesta o mantén tus Inxt para ganar intereses cada mes",
+        "subtitle2": "Las tasas de apuesta más altas del mercado existentes",
+        "subtitle3": "Es súper simple. Todo lo que necesitas son Inxt tokens y una suscripción premium activa de Internxt.",
+        "subtitle4": "Cuanta más liquidez, más ingresos",
+        "link": "Comienza a apostar tus tokens"
     },
     {
         "id": "5",
-        "title": "Easy and secure way to store Inxt",
-        "subtitle": "Store your inxt within the Coinbase Wallet iOS or Android app.",
-        "subtitle2": "Connect your Coinbase Wallet on Uniswap by using the WalletLink feature in settings on the app and scan the QR code. Your tokens will then be avaiable to trade on Uniswap."
+        "title": "Almacena fácilmente tus tokens",
+        "subtitle": "Almacene sus Inxt en la app Coinbase Wallet disponible en iOS o Android.",
+        "subtitle2": "Conecte su Coinbase Wallet a Uniswap usando la función WalletLink en la configuración de la aplicación y escanea el código QR. Ya podrás operar con tus tokens en Uniswap."
     },
     {
         "id": "6",
-        "title": "Exchanges that trade Inxt",
+        "title": "Internxt comercia en 6 exchanges",
 
-        "title2": "Buy direct with us",
-        "subtitle": "Our system tracks down and offers the best exchange rates available on the market without the hassle of an exchange."
+        "title2": "Compranos sin intermediarios",
+        "subtitle": "Nuestro sistema rastrea y ofrece los mejores tipos de cambio disponibles en el mercado sin los inconvenientes de un exchange"
     },
     {
         "id": "7",
-        "title": "Inxt token metrics",
-        "label": "PRICE PER INXT",
-        "label2": "CHANGE / 24 HOURS",
-        "label3": "CHANGE / 7 DAYS",
+        "title": "Métricas de Inxt Token",
+        "label": "PRECIO POR INXT",
+        "label2": "CAMBIO / 24 HORAS",
+        "label3": "CAMBIO / 7 DÍAS",
         "label4": "MARKET CAP",
         "label5": "ALL-TIME HIGH MARKET CAP",
-        "label6": "ALL-TIME HIGH PRICE",
-        "label7": "24 HOUR VOLUME",
-        "label8": "CIRCULATING SUPPLY",
-        "label9": "MAXIMUM SUPPLY"
+        "label6": "ALL-TIME HIGH PRECIO",
+        "label7": "VOLUMEN 24 HORAS",
+        "label8": "OFERTA CIRCULANTE",
+        "label9": "MÁXIMA OFERTA"
     },
     {
         "id": "8",
-        "title": "Inxt token performance"
+        "title": "¿Dónde opera Internxt?"
     }
 ]

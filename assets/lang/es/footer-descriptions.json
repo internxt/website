@@ -3,28 +3,28 @@
         "title": "",
         "rows": [
             {
-                "title": "Products",
+                "title": "Productos",
                 "content": ""
             },
             {
-                "title": "What operating systems are compatible?",
-                "content": "You can run Internxt Core on Linux, Windows and MacOS."
+                "title": "¿Qué sistemas operativos son compatibles?", 
+                "content": "Puedes ejecutar Internxt Core en Linux, Windows y MacOS."
             },
             {
-                "title": "What’s the minimum amount of space needed to get paid?",
-                "content": "The minimum monthly payout is of €5, which corresponds to 500 GB of hosted data. However, you can boost your payout by holding Internxt tokens. Check out our payout calculator in the Internxt Core page."
+                "title": "¿Cuál es la cantidad mínima de espacio necesaria para cobrar?", 
+                "content": "El pago mínimo mensual es de 5 euros, lo que corresponde a 500 GB de datos hosted. Sin embargo, puedes aumentar el pago si tienes tokens de Internxt. Revisa nuestra calculadora de pagos en Internxt Core" 
             },
             {
-                "title": "How much data can I expect my node to store?",
-                "content": "If you run a node almost uninterruptedly, you should be able to hit the minimum payout in just around a month of running Internxt Core. Once that threshold is reached, you will have already secured a recurring, increasing monthly passive income! There is no real limit on how much you can host and therefore earn by running Internxt Core."
+                "title": "¿Cuántos datos puedo esperar que almacene mi nodo?",
+                "content": "Si mantienes tu nodo funcionando casi ininterrumpidamente, deberías ser capaz de alcanzar el pago mínimo en tan solo un mes . Una vez que se alcance ese umbral, ya habrás asegurado un ingreso pasivo mensual recurrente y creciente. No hay un límite real de alojamiento ni límite en la cantidad que puedes ganar si eres un host de  Internxt Core"
             },
             {
-                "title": "How is my node selected to receive data?",
-                "content": "We want Internxt Drive data to be held by the best performing nodes, so that we can provide a top-notch service to our customers. Nodes are mainly selected based on their available space and uptime."
+                "title": "¿Cómo se selecciona mi nodo para recibir datos?", 
+                "content": "Queremos que los datos estén en manos de los nodos con mejor rendimiento y ofrecer un servicio de primera clase a nuestros clientes. Los nodos se seleccionanen base a su espacio disponible y tiempo de funcionamiento."
             },
             {
-                "title": "How often will I get paid?",
-                "content": "Internxt Core payouts are usually sent during the first week of each new month."
+                "title": "¿Con qué frecuencia cobraré?",
+                "content": " Los pagos de Internxt Core suelen enviarse durante la primera semana del mes."
             }
         ]
     }

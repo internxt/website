@@ -1,5 +1,4 @@
 import styles from './Container6.module.css'
-import descriptions from '../../assets/lang/en/token-descriptions.json'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -9,7 +8,7 @@ const addrs = {
     ltc: 'MVDqPF5G9fTujvzTSjzuhLKXTJyLxnGT4D'
 }
 
-const Container6 = ({ id }) => {
+const Container6 = ({ id, descriptions }) => {
 
     const [prices, setPrices] = useState({})
     const [currency, setCurrency] = useState('btc')

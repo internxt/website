@@ -1,9 +1,8 @@
 import styles from './Container1.module.css'
-import descriptions from '../../assets/lang/en/photos-descriptions.json'
 import EmailNewsletter from '../EmailNewsletter'
 import Image from 'next/image'
 
-const Container1 = ({ id }) => {
+const Container1 = ({ id, descriptions }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
     
