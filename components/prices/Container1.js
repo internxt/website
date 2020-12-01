@@ -26,11 +26,11 @@ const Container1 = ({ id }) => {
                 individual ? 
                 <div>
                     <div className={`${styles.speech} sm:hidden lg:w-36 lg:pt-32 lg:pl-16`}>
-                        <Image src="/images/1440/Prices Individual/12.png" width={118} height={110} /> 
+                        <img className="xl:w-32" src="/images/1440/Prices Individual/12.png" /> 
                     </div>
 
                     <div className={`${styles.letter} sm:hidden lg:pr-12 lg:w-32`}>
-                        <Image src="/images/1440/Prices Individual/13.png" width={112} height={121} /> 
+                        <img className="xl:w-24" src="/images/1440/Prices Individual/13.png" /> 
                     </div>
                 </div>
                 :
@@ -56,7 +56,7 @@ const Container1 = ({ id }) => {
                     }
                 </h1>
 
-                <p className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-lg`}>
+                <p className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-lg xl:mt-4`}>
                     {description[0].subtitle}
                 </p>
 
@@ -94,7 +94,7 @@ const Container1 = ({ id }) => {
                         <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
                     </div>
                 :
-                    <div className={`grid grid-cols-4 gap-2 sm:grid-cols-1 sm:gap-y-8 lg:px-40 xl:px-48`}>
+                    <div className={`grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-8`}>
                         <PriceCard size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" />
                         <PriceCard size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" mostPopular="true" />
                         <PriceCard size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" />

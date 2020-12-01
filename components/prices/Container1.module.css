@@ -45,7 +45,7 @@
     border-radius: 29px;
     background-color: #f7f7f7;
 
-    margin: 6rem 0 0;
+    margin: 6rem 0 3rem;
 }
 
 .button {
@@ -82,7 +82,7 @@
 .letter {
     position: absolute;
     right: 0;
-    padding: 2rem 7rem 0 0;
+    padding: 2rem 1rem 0 0;
 }
 
 .star {
