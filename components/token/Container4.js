@@ -72,13 +72,14 @@ const Container4 = ({ id, descriptions }) => {
            <p className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>
                {description[0].subtitle3}
            </p>
-
-           <a 
-            href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
-            target="_blank"
-            className={`${styles.link} sm:text-lg sm:mb-16 lg:text-base lg:mb-24`}>
-               {description[0].link}
-           </a>
+           
+            <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
+                target="_blank"
+                className={`flex flex-row w-auto items-center sm:text-lg sm:my-16 lg:my-12 xl:my-16`}
+            >
+                <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2 lg:text-base`}>{description[0].link}</p>
+                <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
+            </a>
         </div>
     );
 }

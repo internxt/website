@@ -45,15 +45,12 @@
 }
 
 .link {
-    font-family: "averta";
+    font-family: "averta-semibold";
     font-size: 22px;
-    font-weight: bold;
     line-height: 1.73;
     letter-spacing: -0.21px;
     text-align: right;
     color: #0084ff;
-
-    margin: 57px 0 131px;
 }
 
 .blue_coin {
