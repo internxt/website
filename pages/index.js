@@ -50,7 +50,7 @@ export async function getServerSideProps(ctx) {
   })();
 
   const lang = ctx.locale
-  const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`)
+  const descriptions = require(`../assets/lang/en/drive-descriptions.json`)
   console.log(descriptions)
   return {
     props: { downloadUrl, descriptions }

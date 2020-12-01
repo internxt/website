@@ -18,7 +18,7 @@ const Pricing = () => {
 export async function getStaticProps(context) {
 
     const lang = context.locale
-    const descriptions = require(`../assets/lang/${lang}/core-descriptions.json`)
+    const descriptions = require(`../assets/lang/en/core-descriptions.json`)
 
     return {
         props: {

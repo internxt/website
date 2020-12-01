@@ -46,7 +46,7 @@ export async function getServerSideProps(ctx) {
     })();
 
     const lang = ctx.locale
-    const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`)
+    const descriptions = require(`../assets/lang/en/about-us-descriptions.json`)
   
     return {
       props: { downloadUrl, descriptions }

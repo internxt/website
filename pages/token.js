@@ -33,7 +33,7 @@ export async function getStaticProps(context) {
     const data = await res.json()
 
     const lang = context.locale
-    const descriptions = require(`../assets/lang/${lang}/token-descriptions.json`)
+    const descriptions = require(`../assets/lang/en/token-descriptions.json`)
 
     return {
         props: {

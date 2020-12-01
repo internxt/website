@@ -21,7 +21,7 @@ const Photos = (props) => {
 
 export async function getStaticProps(context) {
     const lang = context.locale
-    const descriptions = require(`../assets/lang/${lang}/photos-descriptions.json`)
+    const descriptions = require(`../assets/lang/en/photos-descriptions.json`)
 
     return {
         props: {
