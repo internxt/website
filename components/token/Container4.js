@@ -55,7 +55,7 @@ const Container4 = ({ id, descriptions }) => {
                {formattedText(description[0].title, description[0].colored)}
            </h1>
 
-           <p className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-xl`}>
+           <p className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-xl xl:mt-4`}>
                {description[0].subtitle}
            </p>
 

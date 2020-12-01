@@ -28,8 +28,8 @@ const Container6 = ({ id, descriptions }) => {
                     </p>
 
                     <Link href="/pricing">
-                        <a className={`flex flex-row w-auto items-center sm:my-6 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
-                            <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>Check out plans for teams</p>
+                        <a className={`flex flex-row w-auto items-center sm:my-6 lg:text-base lg:mt-10 lg:mb-12 xl:my-16`}>
+                            <p className={`${styles.margin} ${styles.link} sm:text-lg lg:text-base mr-2`}>Check out plans for teams</p>
                             <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                         </a>
                     </Link>

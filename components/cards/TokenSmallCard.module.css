@@ -12,12 +12,9 @@
 }
 
 .title {
-    width: 210px;
-    font-family: "averta-bold";
+    width: 230px;
+    font-family: "averta-semibold";
     font-size: 47.5px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 0.88;
     letter-spacing: -0.71px;
     color: #2a2c35;
@@ -27,7 +24,6 @@
     font-family: "averta-light";
     width: 210px;
     font-size: 47.5px;
-    font-weight: 300;
     line-height: 0.88;
     letter-spacing: -0.68px;
     color: #2a2c35;

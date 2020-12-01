@@ -37,8 +37,8 @@ const Container1 = ({ id, descriptions }) => {
                     <Image src="/images/1440/Photos/Section 1/2.png" width={68} height={65} />
                 </div>
 
-                <div className={`${styles.video} sm:hidden lg:w-20`}>
-                    <Image src="/images/1440/Photos/Section 1/6.png" width={110} height={131} />
+                <div className={`${styles.video} sm:hidden lg:w-16 xl:w-16`}>
+                    <Image src="/images/1440/Photos/Section 1/6.png" width={110} height={134} />
                 </div>
 
                 <div className={`${styles.lgcross} sm:hidden lg:w-72 lg:pl-48`}>

@@ -7,7 +7,7 @@ import { Accordion, Card, Button } from 'react-bootstrap'
 const Footer = () => {
     return ( 
         <footer>
-            <div className={`${styles.first_half} sm:p-0 sm:py-20`}>
+            <div className={`${styles.first_half} sm:p-0 sm:py-20 lg:h-84`}>
                 <div className={styles.title_container}>
                     <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>A family of privacy focused services.</h1>
 
