@@ -48,7 +48,7 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
             }
 
             {
-                free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xss`}>Get started!</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xss`}>Try for free for 30 days</p>
+                free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-xs`}>Get started!</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-xs`}>Try for free for 30 days</p>
             }
             <div className={`${styles.card} lg:min-h-0 lg:w-44 lg:h-60`}>
                 { mostPopular ? <p className={`${styles.most_popular} sm:text-sm lg:text-xs lg:pt-3`}>Most popular</p> : <div className={`${styles.void} lg:h-8`}></div> }

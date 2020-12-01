@@ -35,15 +35,15 @@ const Container1 = ({ id }) => {
                 </div>
                 :
                 <div>
-                    <div className={`${styles.face} sm:hidden lg:pr-12`}>
+                    <div className={`${styles.face} sm:hidden lg:w-12 lg:mr-6`}>
                         <Image src="/images/1440/Prices Teams/14.png" width={66} height={67} /> 
                     </div>
 
-                    <div className={`${styles.star} sm:hidden lg:pr-32 lg:pt-28`}>
+                    <div className={`${styles.star} sm:hidden lg:w-8 lg:mr-24 lg:mt-36`}>
                         <Image src="/images/1440/Prices Teams/15.png" width={39} height={41} /> 
                     </div>
 
-                    <div className={`${styles.mail} sm:hidden lg:pt-40 lg:w-40`}>
+                    <div className={`${styles.mail} sm:hidden lg:w-20 lg:mt-40`}>
                         <Image src="/images/1440/Prices Teams/16.png" width={114} height={75} /> 
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Container1 = ({ id }) => {
                     {description[0].subtitle2}
                 </p>
 
-                <div className={`${styles.switch_container} sm:mt-12 sm:w-auto sm:h-12 sm:px-2 lg:h-12 lg:w-72 lg:px-1 lg:mt-16`}>
+                <div className={`${styles.switch_container} sm:mt-12 sm:w-auto sm:h-12 sm:px-2 lg:h-12 lg:w-72 lg:mt-16`}>
                     <button onClick={onClickIndividual} 
                         className={
                             individual ? 
