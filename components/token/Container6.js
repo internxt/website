@@ -66,7 +66,7 @@ const Container6 = ({ id, descriptions }) => {
 
     return (
         <div className={background}>
-            <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-24`}>
+            <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-16 xl:mt-24`}>
                 {description[0].title}
             </h1>
 
@@ -79,61 +79,65 @@ const Container6 = ({ id, descriptions }) => {
             </div>
 
             <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:my-16 lg:px-40 lg:mt-16 xl:mt-20">
-                <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/exrates.png"
-                        width={154}
-                        height={41}
-                    />
-                </div>
+                <a href="https://exrates.me/trading/INXTBTC" target="_blank" >
+                    <div className={`${styles.card} cursor-pointer lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
+                        <Image
+                            src="/images/1440/Token/Section 5/exrates.png"
+                            width={154}
+                            height={41}
+                        />
+                    </div>
+                </a>
 
-                <div className={`${styles.card} lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/uniswap.png"
-                        width={182}
-                        height={41}
-                    />
-                </div>
+                <a href="https://info.uniswap.org/pair/0x73994f935b23511686ce1dd59c295e5100031f4b" target="_blank" >
+                    <div className={`${styles.card} lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
+                        <Image
+                            src="/images/1440/Token/Section 5/uniswap.png"
+                            width={182}
+                            height={41}
+                        />
+                    </div>
+                </a>
 
-                <div className={`${styles.card} lg:w-48 lg:px-6 lg:h-24 col-span-1`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/mercatox.png"
-                        width={187}
-                        height={19}
-                    />
-                </div>
-
-                <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/latoken.png"
-                        width={159}
-                        height={39}
-                    />
-                </div>
-
-                <div className={`${styles.card} lg:w-48 lg:px-12 lg:h-24 col-span-1`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/idex.png"
-                        width={129}
-                        height={33}
-                    />
-                </div>
-
-                <div className={`${styles.card} lg:w-48 lg:px-12 lg:h-24 col-span-1`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/fatbtc.png"
-                        width={159}
-                        height={47}
-                    />
-                </div>
+                <a href="https://mercatox.com/exchange/INXT/BTC" target="_blank" >
+                    <div className={`${styles.card} lg:w-48 lg:px-6 lg:h-24 col-span-1`}>
+                        <Image
+                            src="/images/1440/Token/Section 5/mercatox.png"
+                            width={187}
+                            height={19}
+                        />
+                    </div>
+                </a>
             </div>
 
-            <div className={`${styles.form_container} sm:w-100%`}>
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:my-16 lg:mt-2 xl:mt-2">
+                <a href="https://latoken.com/exchange/INXT_BTC" target="_blank" >
+                    <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
+                        <Image
+                            src="/images/1440/Token/Section 5/latoken.png"
+                            width={159}
+                            height={39}
+                        />
+                    </div>
+                </a>
+
+                <a href="https://www.fatbtc.com/trading?currency=INXT/USDT" target="_blank" >
+                    <div className={`${styles.card} lg:w-48 lg:px-12 lg:h-24 col-span-1`}>
+                        <Image
+                            src="/images/1440/Token/Section 5/fatbtc.png"
+                            width={159}
+                            height={47}
+                        />
+                    </div>
+                </a>
+            </div>
+
+            <div className={`${styles.form_container} sm:w-100% lg:mt-16 xl:mt-24`}>
                 <div className={`${styles.diamond} sm:hidden lg:w-16 lg:ml-16 lg:mt-16`}>
                     <Image
                         src="/images/1440/Token/Section 5/right diamond.png"
-                        width={109}
-                        height={117}
+                        width={80}
+                        height={70}
                     />
                 </div>
 
