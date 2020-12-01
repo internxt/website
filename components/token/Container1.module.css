@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
+    margin: 0 3.5rem;
 }
 
 @media screen and (min-width: 375px) and (max-width: 749px) {
