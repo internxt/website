@@ -27,12 +27,10 @@ const Container6 = ({ id, descriptions }) => {
                         {description[0].subtitle}
                     </p>
 
-                    <Link href="/prices">
-                        <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mt-8 lg:mb-16 xl:mt-12`}>
-                            <Link href="/pricing">
-                                <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2 mb-1`}>Check out plans for teams</p>
-                            </Link>
-                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
+                    <Link href="/pricing">
+                        <a className={`flex flex-row w-auto items-center sm:my-6 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
+                            <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>Check out plans for teams</p>
+                            <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                         </a>
                     </Link>
                 </div>

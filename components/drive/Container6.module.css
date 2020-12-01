@@ -36,12 +36,14 @@
 }
 
 .link {
+    font-family: "averta-semibold";
     font-size: 22px;
-    font-weight: bold;
     line-height: 1.73;
     letter-spacing: -0.21px;
-    text-align: left;
+    text-align: center;
     color: #0084ff;
+
+    margin: 3rem 0 6rem;
 }
 
 .margin {

@@ -33,13 +33,10 @@ const Container2 = ({ id, descriptions }) => {
                     <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
                 </div>
 
-                <Link href="/prices">
-                    <a className={`${styles.link} flex flex-row w-auto items-center lg:text-base lg:mt-12 lg:mb-16 xl:mt-24`}>
-                        <Link href="/pricing">
-                            <p className="sm:text-xl mr-2">{description[0].link}</p>
-                        </Link>
-
-                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
+                <Link href="/pricing">
+                    <a className={`flex flex-row w-auto items-center sm:my-6 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
+                        <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>Learn more about pricing</p>
+                        <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                     </a>
                 </Link>
             </div>

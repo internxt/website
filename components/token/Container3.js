@@ -40,9 +40,9 @@ const Container3 = ({ id, descriptions }) => {
                     </p>
 
                     <Link href="/core">
-                        <a className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
-                            <p className={`font-avertasemibold sm:text-lg lg:text-base mr-2 mb-1`}>{description[0].subtitle3}</p>
-                            <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
+                        <a className={`flex flex-row w-auto items-center sm:my-10 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
+                            <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>{description[0].subtitle3}</p>
+                            <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                         </a>
                     </Link>
                 </div>
