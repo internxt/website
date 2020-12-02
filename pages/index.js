@@ -44,14 +44,14 @@ export async function getServerSideProps(ctx) {
       case 'Mac OS X':
         return 'https://internxt.com/downloads/drive.dmg';
       default:
-        console.log('Unknown device %s, User Agent: %s', uaParsed.os.family, ua);
+        //console.log('Unknown device %s, User Agent: %s', uaParsed.os.family, ua);
         return 'https://drive.internxt.com'
     }
   })();
 
   const lang = ctx.locale
   const descriptions = require(`../assets/lang/en/drive-descriptions.json`)
-  console.log(descriptions)
+  //console.log(descriptions)
   return {
     props: { downloadUrl, descriptions }
   }

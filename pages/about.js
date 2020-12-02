@@ -30,7 +30,7 @@ const AboutUs = ( props ) => {
      );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(ctx) {
     const POSTS_URL = 'https://medium.com/feed/Internxt'
 
     const rss = await Feed.load(POSTS_URL)
@@ -46,8 +46,9 @@ export async function getStaticProps(context) {
         }
     })
 
-    const lang = context.locale
+    const lang = ctx.locale
     const descriptions = require(`../assets/lang/en/about-us-descriptions.json`)
+
     return {
         props: { data: JSON.parse(JSON.stringify(data)), images, descriptions }
     }

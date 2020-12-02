@@ -49,7 +49,7 @@ const Container6 = ({ id, descriptions }) => {
 
         var object = {};
         formData.forEach(function (value, key) {
-            console.log(key)
+            //console.log(key)
             object[key] = value;
         });
         object.receive_amount = receiveValue;
