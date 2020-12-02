@@ -27,14 +27,35 @@ const Token = (props) => {
     );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(ctx) {
     const URL = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?CMC_PRO_API_KEY=${process.env.COINMARKETCAP_API_KEY}&symbol=INXT&convert=EUR`
     const res = await fetch(URL)
     const data = await res.json()
 
-    const lang = context.locale
+    const lang = ctx.locale
     const descriptions = require(`../assets/lang/en/token-descriptions.json`)
 
+    const Cookies = require('cookies')
+    const moment = require('moment')
+    const url = require('url')
+    const queryString = require('querystring')
+    const cookies = new Cookies(ctx.req, ctx.res)
+  
+    const query = url.parse(ctx.req.url).query
+    const parsedQuery = queryString.parse(query)
+    let referral
+    const expires = moment().add(2, 'days').toDate()
+  
+    referral = parsedQuery.ref
+  
+    if (referral) {
+        cookies.set('REFERRAL', referral, {
+            domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
+            expires: expires,
+            overwrite: true
+        })  
+    }
+    
     return {
         props: {
             data: data.data.INXT,
@@ -42,7 +63,6 @@ export async function getStaticProps(context) {
         }
     }
 }
-
 
 
 export default Token;

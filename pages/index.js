@@ -51,7 +51,28 @@ export async function getServerSideProps(ctx) {
 
   const lang = ctx.locale
   const descriptions = require(`../assets/lang/en/drive-descriptions.json`)
-  //console.log(descriptions)
+  
+  const Cookies = require('cookies')
+  const moment = require('moment')
+  const url = require('url')
+  const queryString = require('querystring')
+  const cookies = new Cookies(ctx.req, ctx.res)
+
+  const query = url.parse(ctx.req.url).query
+  const parsedQuery = queryString.parse(query)
+  let referral
+  const expires = moment().add(2, 'days').toDate()
+
+  referral = parsedQuery.ref
+
+  if (referral) {
+      cookies.set('REFERRAL', referral, {
+        domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
+        expires: expires,
+        overwrite: true
+      })  
+  }
+
   return {
     props: { downloadUrl, descriptions }
   }

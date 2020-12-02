@@ -8,7 +8,6 @@ import Container5 from '../components/core/Container5'
 import Container6 from '../components/core/Container6'
 import Container7 from '../components/core/Container7'
 import Layout from '../components/layout/Layout'
-import Cookies from 'cookies'
 
 const Core = (props) => {
   return (
@@ -49,6 +48,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale
   const descriptions = require(`../assets/lang/en/about-us-descriptions.json`)
 
+  const Cookies = require('cookies')
   const moment = require('moment')
   const url = require('url')
   const queryString = require('querystring')
