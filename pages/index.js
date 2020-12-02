@@ -11,7 +11,7 @@ import Layout from '../components/layout/Layout'
 
 const Home = (props) => {
   return (
-    <Layout title='Internxt – Be limitless.' description="Internxt Drive is a private, green, free cloud storage service. Make the switch to a better cloud." segmentName='home'>
+    <Layout title='Internxt – Be limitless.' description="Internxt Drive is a private, secure, free cloud storage service. Make the switch to a better cloud. Zero-knowledge encryption, distributed and blockchain technology." segmentName='home'>
       <TopBar />
       <Container1 id='1' descriptions={props.descriptions} />
       <Container2 id='2' descriptions={props.descriptions} />
