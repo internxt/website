@@ -6,7 +6,7 @@ const InvestorCard = ({ company, description, investor, w, h }) => {
     const url = `/images/1440/About/Section 4/${investor}.png`
 
     return ( 
-        <div className={`${styles.card} col-span-2`}>
+        <div className={`${styles.card} col-span-1`}>
             <div className="flex justify-center lg:w-40">
                 <Image
                     src={url}

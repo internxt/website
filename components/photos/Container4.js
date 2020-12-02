@@ -1,5 +1,5 @@
 import styles from './Container4.module.css'
-import Image from 'next/image' 
+import Image from 'next/image'
 
 const Container4 = ({ id, descriptions }) => {
 
@@ -16,23 +16,23 @@ const Container4 = ({ id, descriptions }) => {
 
     return ( 
         <div className={background}>
-            <div className={`${styles.container} max-w-1600 sm:flex-col-reverse sm:items-center sm:mt-16`}>
-                <div className={`${styles.image} sm:w-40 sm:mt-12 lg:w-56 lg:mx-32 lg:mt-16`}>
-                    <Image src="/images/1440/Photos/Section 3/snap graphic.png" width={260} height={579} />
-                </div>
-
-                <div className={`${styles.main} sm:items-center`}>
-                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-84 sm:text-center leading-10 lg:text-5xl lg:max-w-none lg:w-104 xl:leading-12`}>
+            <div className={styles.container}>
+                <div className={`${styles.main} items-center`}>
+                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:text-center sm:mt-12 sm:w-80 lg:text-5xl lg:mt-20 xl:mt-24`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:w-80 sm:text-center sm:pt-2 lg:text-xl lg:w-100`}>
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-center lg:text-lg lg:w-120 lg:mt-4 xl:text-center`}>
                         {description[0].subtitle}
                     </p>
+                </div>
+                
+                <div className={`mt-10 sm:hidden sm:mt-14`}>
+                    <Image src="/images/1440/Photos/Section 4/interface.png" width={1212} height={575} />
+                </div>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:w-80 sm:text-center lg:text-xl lg:w-104`}>
-                        {description[0].subtitle2}
-                    </p>
+                <div className={`hidden sm:block sm:object-contain`}>
+                    <Image src="/images/1440/Photos/Section 4/375p interface.png" width={750} height={319} />
                 </div>
             </div>
         </div>

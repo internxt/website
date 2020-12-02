@@ -20,9 +20,13 @@
     },
     {
         "id": "4",
+        "title": "Designed to keep photos private",
+        "subtitle": "The freedom to access every photo in your library with complete privacy, security and simplicity."
+    },
+    {
+        "id": "5",
         "title": "Share files with complete control.",
         "subtitle": "Secure, private and easy file sharing with our end-to-end encrypted links.",
         "subtitle2": "Files get encrypted before they leave your device and only get decrypted until accessed by your recipient."
     }
-    
 ]

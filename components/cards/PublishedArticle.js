@@ -5,8 +5,8 @@ import moment from 'moment';
 const PublishedArticle = ({ article, image}) => {
 
     return ( 
-        <div className={`${styles.card} col-span-2 overflow-hidden h-auto w-auto sm:w-84`}>
-            { image ? <img className="h-auto w-full object-contain" src={image} /> : <p>La imagen esta cargando</p> }
+        <div className={`${styles.card} col-span-2 overflow-hidden h-auto sm:w-84`}>
+            { image ? <img className="h-full w-full object-contain" src={image} /> : <p>La imagen esta cargando</p> }
 
             <div className={`${styles.description} sm:pl-6 sm:pt-2 lg:pl-4 lg:pt-4 xl:pl-6 xl:pt-6 relative`}>
                 <p className={`${styles.date} sm:text-xs lg:text-xxs`}>

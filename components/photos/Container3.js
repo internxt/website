@@ -31,7 +31,7 @@ const Container3 = ({ id, descriptions }) => {
                     </p>
                 </div>
                 
-                <div className={`${styles.image} sm:w-9/12 sm:mt-16 lg:w-2/6 lg:ml-12 lg:pt-12`}>
+                <div className={`${styles.image} sm:w-9/12 sm:mt-16 lg:w-2/6 lg:ml-12 lg:pt-12 xl:mt-24`}>
                     <Image src="/images/1440/Photos/Section 3/box and apps graphic.png" width={442} height={608} />
                 </div>
             </div>

@@ -11,8 +11,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
+    padding: 2.5rem 0.5rem 0 0;
 }
 
 .image {

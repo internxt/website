@@ -29,11 +29,11 @@ const Container5 = ({ id }) => {
                 {title}
             </text>
             
-            <div className="grid grid-cols-6 gap-16 sm:grid-cols-1 sm:mt-12 sm:mb-16 lg:px-32 lg:pt-12 lg:pb-32 xl:gap-32 xl:mb-24">
+            <div className="grid grid-cols-3 gap-16 sm:grid-cols-1 sm:mt-12 sm:mb-16 lg:px-32 lg:pt-12 lg:pb-32 xl:gap-32 xl:mb-24">
                 <InvestorCard company={company} description={info} investor="Esade" w={125} h={38} />
                 <InvestorCard company={company2} description={info2} investor="Vodafone" w={192} h={48} />
                 <InvestorCard company={company3} description={info3} investor="Telefonica" w={192} h={53} />
-                <InvestorCard company={company4} description={info4} investor="Lanz" w={196} h={26} />
+                <InvestorCard company={company4} description={info4} investor="Angels" w={200} h={32} />
                 <InvestorCard company={company6} description={info6} investor="ibm" w={125} h={54} />
                 <InvestorCard company={company5} description={info5} investor="Venture" w={245} h={42} />
             </div>

@@ -1,7 +1,6 @@
 .container { 
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
 }
 
@@ -20,6 +19,7 @@
 }
 
 .title {
+    width: 582px;
     font-size: 60px;
     line-height: normal;
     letter-spacing: 0.3px;
@@ -27,12 +27,12 @@
 }
 
 .subtitle {
-    width: 650px;
+    max-width: 511px;
     font-size: 24px;
     font-weight: normal;
     line-height: 1.38;
     letter-spacing: normal;
     color: #545465;
 
-    margin: 1.8rem 0 0;
+    padding: 1.5rem 0 0;
 }

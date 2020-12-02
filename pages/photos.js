@@ -4,6 +4,7 @@ import Container1 from '../components/photos/Container1'
 import Container2 from '../components/photos/Container2'
 import Container3 from '../components/photos/Container3'
 import Container4 from '../components/photos/Container4'
+import Container5 from '../components/photos/Container5'
 import Layout from '../components/layout/Layout'
 
 const Photos = (props) => {
@@ -14,6 +15,7 @@ const Photos = (props) => {
             <Container2 id='2' descriptions={props.descriptions} />
             <Container3 id='3' descriptions={props.descriptions} />
             <Container4 id='4' descriptions={props.descriptions} />
+            <Container5 id='5' descriptions={props.descriptions} />
             <Footer />
         </Layout>
      );
