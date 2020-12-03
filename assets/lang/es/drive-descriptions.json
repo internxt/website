@@ -1,10 +1,10 @@
 [
     {
         "id": "1",
-        "title": "Almacena tus archivos con total privacidad", 
-        "subtitle": "Internxt Drive. Servicio de almacenamiento zero-knowledge que se basa en la privacidad absoluta y la seguridad inflexible.",
-        "subtitle2": "¡Regístrate y consigue 2 GB gratis, para siempre!", 
-        "subtitle3": "No se requiere información de facturación",
+        "title": "Guarda archivos de forma segura", 
+        "subtitle": "Internxt Drive. Servicio de cloud encriptado que se basa en la privacidad absoluta y la seguridad infranqueable.",
+        "subtitle2": "¡Consigue 2 GB gratis, para siempre!", 
+        "subtitle3": "No se requiere inf. de facturación",
         "input": "Tu correo",
         "button": "Empieza gratis"
     },
