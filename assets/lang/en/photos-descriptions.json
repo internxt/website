@@ -4,7 +4,10 @@
         "title": "Store photos in complete privacy",
         "subtitle": "All your photos in one secure place that's completely private.",
         "subtitle2": "Not us, or any third-party can ever access your photos.",
-        "subtitle3": "Want to get early access and product updates?"
+        "subtitle3": "Want to get early access and product updates?",
+        "newsletter": "Get early access",
+        "placeholder": "Your email",
+        "button": "Get early access"
     },
     {
         "id": "2",

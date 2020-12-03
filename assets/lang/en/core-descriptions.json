@@ -2,9 +2,11 @@
     {
         "id": "1",
         "title": "Monetize unused storage space.",
-        "subtitle": "A simple peer-to-peer application that enables storage providers to monetize unused storage by hosting encrypted shards of data.",
+        "subtitle": "A simple peer-to-peer [[application]] that enables [[storage]] [[providers]] to [[monetize]] unused storage by [[hosting]] encrypted shards of data.",
         "subtitle2": "Provide storage on the network",
-        "colored": ["storage", "application", "providers", "monetize", "hosting"]
+        "colored": ["storage", "application", "providers", "monetize", "hosting"],
+        "button1": "Download",
+        "button2": "Set-up & tips"
     },
     {
         "id": "2",
@@ -51,7 +53,12 @@
         "title3": "Open your port",
         "subtitle4": "All communication will go through a port in your router that you need to open. We suggest which port you need to open on the Core application.",
         "subtitle5": "If you want to choose your own port, when entering your public IP address in Step 2, you can write it in the format IP:Port (eg 64.23.35.49:4243).  To open your port, access http://192.168.1.1/ with your browser.",
-        "subtitle6": "In your router configuration enter the port range you want to open. When entering the port number, you will need to enter your IP. Enter “ipconfig /all” in your Windows terminal. For Linux and Mac, enter “ifconfig” instead. For a quick 4-minute video tutorial on how to open a port in your router, you can click here. You can also click here to check whether your port was opened correctly."
+        "subtitle6": "In your router configuration enter the port range you want to open. When entering the port number, you will need to enter your IP. Enter “ipconfig /all” in your Windows terminal. For Linux and Mac, enter “ifconfig” instead. For a quick 4-minute video tutorial on how to open a port in your router, you can click here. You can also click here to check whether your port was opened correctly.",
+        "step1": "STEP 1",
+        "step2": "STEP 2",
+        "step3": "STEP 3",
+        "link": "Download Internxt Core",
+        "allset": "You're all set!"
     },
     {
         "id": "7",

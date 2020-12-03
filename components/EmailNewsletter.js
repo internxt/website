@@ -1,6 +1,7 @@
 import styles from './EmailNewsletter.module.css'
 
-const EmailNewsletter = ({ hidden, value }) => {
+const EmailNewsletter = ({ hidden, value, descriptions }) => {
+    const description = descriptions.filter( desc => desc.id === "EmailNewsletter")
 
     const hidden_class = hidden ? styles.hidden : styles.signup_container
 
@@ -17,7 +18,7 @@ const EmailNewsletter = ({ hidden, value }) => {
                 <input
                     name='fields[email]'
                     type='email'
-                    placeholder='Your email'
+                    placeholder={description[0].placeholder}
                     className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
                     required
                 />

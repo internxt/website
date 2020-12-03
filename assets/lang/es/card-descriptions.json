@@ -1,0 +1,32 @@
+[
+    {
+        "id": "PriceCard",
+        "getstarted": "Empieza ya!",
+        "tryforfree": "Pruébalo gratis durante 30 dias",
+        "free": "GRATIS",
+        "forever": "POR LOS SIGLOS DE LOS SIGLOS",
+        "contact": "CONTACTA",
+        "team": "AL EQUIPO PARA EL PRECIO",
+        "mostpopular": "Más popular",
+        "month": "mes",
+        "prepay": "Paga por adelantado"
+    },
+    {
+        "id": "EmailNewsletter",
+        "placeholder": "Tu correo",
+        "button": "Suscríbete"
+    },
+    {
+        "id": "PartnerCard",
+        "link": "Leer más"
+    },
+    {
+        "id": "PublishedArticle",
+        "link": "LEER ARTÍCULO"
+    },
+    {
+        "id": "StakeCard",
+        "peryear": "Por año",
+        "getstarted": "Empieza ya"
+    }
+]

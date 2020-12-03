@@ -1,109 +1,112 @@
 [
     {
         "id": "1",
-        "title": "Enrich life through secure technology.",
-        "subtitle": "Keep me updated about news and offers from Internxt"
+        "title": "Enriquece tu vida a través de la tecnología segura.",
+        "subtitle": "Mantenme al tanto de las noticias y ofertas de Internxt",
+        "newsletter": "Suscribirse",
+        "placeholder": "Tu correo",
+        "button": "Suscribirse"
     },
     {
         "id": "2",
-        "title": "ASSOCIATED WITH",
-        "subtitle": "Technology should [[empower]] each individual, not make them [[powerless]] to the corporation. Our [[intention]] is to offer a vast range of [[innovative]] technology services that doesn’t [[undermine]] the [[privacy]] of the individual.",
-        "subtitle2": "Internxt's headquarters in Valencia, Spain.",
-        "colored": ["empower", "powerless", "intention", "innovative", "undermine", "privacy"]
+        "title": "ASOCIADO CON",
+        "subtitle": "La tecnología debería [[potenciar]] a cada individuo, no hacerlos [[impotentes]] a la corporación. Nuestra [[intención]] es ofrecer una amplia gama de servicios tecnológicos [[innovadores]] que no [[infringen]] la [[privacidad]] del individuo.",
+        "subtitle2": "Sede central de Internxt, Valencia, España",
+        "colored": ["potenciar", "impotentes", "intención", "innovadores", "infringen", "privacidad"]
     },
     {
         "id": "3",
         "title": "Internxt Leadership",
 
         "employee": "Fran Villalba Segarra",
-        "job": "Founder & CEO",
+        "job": "Fundador & CEO",
 
         "employee2": "Alberto González",
-        "job2": "Chief Technology Officer",
+        "job2": "Oficial Jefe de Tecnología",
 
         "employee3": "Alejandra Arias",
-        "job3": "Chief Marketing Officer",
+        "job3": "Oficial Jefe de Marketing",
 
         "employee4": "Aldimir Aleksandrov",
-        "job4": "Software Engineer",
+        "job4": "Ingeniero de Software",
 
         "employee5": "Joan Mora",
-        "job5": "Software Engineer",
+        "job5": "Ingeniero de Software",
 
         "employee6": "Desi Miroslavova",
-        "job6": "Software Engineer",
+        "job6": "Ingeniera de Software",
         
         "employee7": "Elena Garrigós",
-        "job7": "Software Engineer",
+        "job7": "Ingeniera de Software",
 
         "employee8": "Zhihao Zhang",
-        "job8": "Software Engineer",
+        "job8": "Ingeniero de Software",
 
         "employee9": "Ainhoa Ribes",
-        "job9": "Marketing Assistant",
+        "job9": "Asistente de Marketing",
 
         "employee10": "Emi Filipova",
-        "job10": "Marketing Assistant"
+        "job10": "Asistente de Marketing"
     },
     {
         "id": "4",
-        "title": "Internxt Advisors",
+        "title": "Consejeros de Internxt",
 
         "employee": "Harrison Moore",
-        "job": "Creative Advisor",
+        "job": "Consejero Creativo",
 
         "employee2": "Alex Sicart Ramos",
-        "job2": "Technical Advisor",
+        "job2": "Consejero Técnico",
 
         "employee3": "Jerome Albert",
-        "job3": "Strategy Advisor"
+        "job3": "Consejero Estratégico"
     },
     {
         "id": "5",
-        "title": "Internxt Investors",
+        "title": "Inversores de Internxt",
 
         "company": "Esade Ban",
-        "info": "Most reputable business school",
+        "info": "La escuela de negocios con más reputación",
 
         "company2": "Vodafone",
-        "info2": "Ex-directors of Vodafone",
+        "info2": "Ex-directores de Vodafone",
 
         "company3": "Telefonica",
-        "info3": "Ex-directors of Telefonica",
+        "info3": "Ex-directores de Telefonica",
 
-        "company4": "Lanzadera",
-        "info4": "Investor of Zeleros & Airhopping",
+        "company4": "Angels Capital",
+        "info4": "Inversores de Zeleros & Airhopping",
 
         "company5": "The Venture City",
-        "info5": "Investor of Cabify & Peoople",
+        "info5": "Inversores de Cabify & Peoople",
 
         "company6": "IBM",
-        "info6": "One of the largest IT Companies"
+        "info6": "Una de las mayores empresas de informática"
     },
     {
         "id": "6",
-        "title": "Internxt Partners",
+        "title": "Socios de Internxt",
 
-        "company": "Blackberry Partnership",
-        "bio1": "Innovation is profoundly changing the way business works as customers increasingly demand secure solutions.",
-        "bio2": "BlackBerry can help Internxt assess Encryption, Infrastructural vulnerabilities, Authentication and Data leak prevention.",
+        "company": "Asociación Blackberry",
+        "bio1": "La innovación está cambiando la forma en que los negocios trabajan, ya que los clientes exigen cada vez más soluciones seguras.",
+        "bio2": "BlackBerry ayuda a Internxt a evaluar el cifrado, las vulnerabilidades de la infraestructura, la autenticación y la prevención de la fuga de datos.",
 
-        "company2": "Y Combinator Program",
-        "bio3": "Strartups are most productive when they can spend most of their time building.",
-        "bio4": "Y Combinators goal is to create an environment where we can focus exclusively on building products and talking to users on how to improve.",
+        "company2": "Programa Y Combinator",
+        "bio3": "Las Startups son más productivas cuando pasan la mayoría de su tiempo construyendo",
+        "bio4": "El objetivo de Y Combinator es crear un entorno en el que podamos centrarnos exclusivamente en la construcción de productos y en hablar con los usuarios sobre cómo mejorar..",
 
-        "company3": "Lanzadera Accelerator",
-        "bio5": "Juan Roig is known for being the owner of Mercadona, one of the biggest European corporations.",
-        "bio6": "Internxt will receive the strategic help required to take Internxt to the next level. Lanzadera will also help Internxt cover any funding needs.",
+        "company3": "Aceleradora Lanzadera",
+        "bio5": "Juan Roig es conocido por ser el dueño de Mercadona, una de las mayores corporaciones europeas.",
+        "bio6": "Internxt recibirá la ayuda estratégica necesaria para llevar Internxt al siguiente nivel. Lanzadera también ayudará a cubrir cualquier necesidad de financiación.",
     
-        "company4": "500 Startups listing",
-        "bio7": "500 Startups is one of the most active venture capital firms in the world and has commited over $454M in investment globally.",
-        "bio8": "500 Startups have chosen Internxt as one of the top SAAS startups worldwide."
+        "company4": "Lista 500 Startups",
+        "bio7": "500 Startups es una de las empresas de capital riesgo más activas del mundo y ha comprometido más de $454 millones en inversiones a nivel mundial.",
+        "bio8": "500 startups ha elegido a Internxt como una de las mejores startups del SAAS de todo el mundo."
     },
     {
         "id": "7",
-        "title": "Latest Published Articles",
-        "link": "Read more posts"
+        "title": "Últimos artículos publicados",
+        "link": "Lee más posts"
     }
     
 ]

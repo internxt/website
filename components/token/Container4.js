@@ -2,7 +2,7 @@ import styles from './Container4.module.css'
 import StakeCard from '../cards/StakeCard'
 import Image from 'next/image'
 
-const Container4 = ({ id, descriptions }) => {
+const Container4 = ({ id, descriptions, cardDescriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
@@ -64,9 +64,9 @@ const Container4 = ({ id, descriptions }) => {
            </p>
 
            <div className={`${styles.card_container} grid grid-cols-3 sm:grid sm:grid-cols-1 sm:gap-y-12 sm:mt-12`}>
-               <StakeCard bundle="Starter" percentage="5" inxtQty="0 - 1,000 INXT" />
-               <StakeCard bundle="Professional" percentage="10" inxtQty="1,000 - 10,000 INXT" />
-               <StakeCard bundle="Expert" percentage="20" inxtQty="Above 10,000 INXT" />
+               <StakeCard bundle={description[0].bundle1} percentage="5" inxtQty="0 - 1,000 INXT" descriptions={cardDescriptions} />
+               <StakeCard bundle={description[0].bundle2} percentage="10" inxtQty="1,000 - 10,000 INXT" descriptions={cardDescriptions} />
+               <StakeCard bundle={description[0].bundle3} percentage="20" inxtQty="Above 10,000 INXT" descriptions={cardDescriptions} />
            </div>
 
            <p className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>

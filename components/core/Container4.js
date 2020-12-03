@@ -1,7 +1,6 @@
 import styles from './Container4.module.css'
-import descriptions from '../../assets/lang/en/core-descriptions.json'
 
-const Container4 = ({ id }) => {
+const Container4 = ({ id, descriptions }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
 

@@ -2,7 +2,10 @@
     {
         "id": "1",
         "title": "Enrich life through secure technology.",
-        "subtitle": "Keep me updated about news and offers from Internxt"
+        "subtitle": "Keep me updated about news and offers from Internxt",
+        "newsletter": "Subscribe",
+        "placeholder": "Your email",
+        "button": "Subscribe"
     },
     {
         "id": "2",

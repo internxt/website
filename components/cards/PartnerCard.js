@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import styles from './PartnerCard.module.css'
 import Image from 'next/image'
 
-const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link, imageW, imageH }) => {
+const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link, descriptions }) => {
+
+    const description = descriptions.filter( desc => desc.id === "PartnerCard")
 
     const logourl = `/images/1440/About/Section 5/${logo}.png`
     const imageurl = `/images/1440/About/Section 5/${image}.png`
@@ -48,7 +50,7 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link
                     {bio2}
                 </p>
 
-                <a href={link} target="_blank" className={`${readmorestyle} sm:mb-6 lg:text-sm lg:mb-6 xl:mb-12`}>Read more</a>
+                <a href={link} target="_blank" className={`${readmorestyle} sm:mb-6 lg:text-sm lg:mb-6 xl:mb-12`}>{description[0].link}</a>
             </div>
 
             <div className="w-6/12 overflow-hidden sm:hidden">

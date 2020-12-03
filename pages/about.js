@@ -10,22 +10,22 @@ import Footer from '../components/layout/Footer'
 import Layout from '../components/layout/Layout'
 import TopBar from '../components/layout/TopBar';
 import React from 'react';
-import { useRouter } from 'next/router'
 
-const AboutUs = ( props ) => {
-    const router = useRouter()
+const AboutUs = (props) => {
+    
+    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "about")
     
     return ( 
-        <Layout segmentName='about' title='Internxt – About us.' description="Meet Internxt&#039;s Team. Fran Villalba Segarra, Founder and CEO at Internxt. Be limitless.">
+        <Layout segmentName='about' title={metatags[0].title} description={metatags[0].description} >
             <TopBar />
-            <Container1 id='1'/>
-            <Container2 id='2'/>
-            <Container3 id='3'/>
-            <Container4 id='4'/>
-            <Container5 id='5'/>
-            <Container6 id='6'/>
-            <Container7 id='7' articles={props} />
-            <Footer />
+            <Container1 id='1' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
+            <Container2 id='2' descriptions={props.descriptions} />
+            <Container3 id='3' descriptions={props.descriptions} />
+            <Container4 id='4' descriptions={props.descriptions} />
+            <Container5 id='5' descriptions={props.descriptions} />
+            <Container6 id='6' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
+            <Container7 id='7' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} articles={props} />
+            <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
         </Layout>
      );
 }
@@ -47,7 +47,10 @@ export async function getServerSideProps(ctx) {
     })
 
     const lang = ctx.locale
-    const descriptions = require(`../assets/lang/en/photos-descriptions.json`)
+    const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
+    const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`)
+    const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
+    const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
     
     const Cookies = require('cookies')
     const moment = require('moment')
@@ -71,7 +74,7 @@ export async function getServerSideProps(ctx) {
     }
     
   return {
-    props: { data: JSON.parse(JSON.stringify(data)), images, descriptions }
+    props: { data: JSON.parse(JSON.stringify(data)), images, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions }
   }
 }
 

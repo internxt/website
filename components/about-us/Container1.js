@@ -1,9 +1,7 @@
 import styles from './Container1.module.css'
-import descriptions from '../../assets/lang/en/about-us-descriptions.json'
-import TopBar from '../layout/TopBar'
 import EmailNewsletter from '../EmailNewsletter'
 
-const Container1 = ({ id }) => {
+const Container1 = ({ id, descriptions, cardDescriptions }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
 
@@ -19,7 +17,7 @@ const Container1 = ({ id }) => {
                 </p>
 
                 <div className="sm:hidden">
-                    <EmailNewsletter value="Subscribe" />
+                    <EmailNewsletter value={description[0].newsletter} descriptions={cardDescriptions} />
                 </div>
 
                 <form
@@ -33,14 +31,14 @@ const Container1 = ({ id }) => {
                     <input
                         name='fields[email]'
                         type='email'
-                        placeholder='Your email'
+                        placeholder={description[0].placeholder}
                         className={`${styles.email} sm:h-10 sm:w-40 lg:w-48 lg:text-sm lg:h-10 `}
                     />
 
                     <input
                         name='signup'
                         type='submit'
-                        value="Subscribe"
+                        value={description[0].button}
                         className={`${styles.button} sm:h-10 sm:w-auto sm:text-base sm:font-avertasemibold sm:px-3 lg:w-32 lg:h-10 lg:text-sm`}
                     />
                 </form>

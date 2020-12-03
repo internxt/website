@@ -10,17 +10,20 @@ import TopBar from '../components/layout/TopBar'
 import Layout from '../components/layout/Layout'
 
 const Home = (props) => {
+
+    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "drive")
+
   return (
-    <Layout title='Internxt – Be limitless.' description="Internxt Drive is a private, secure, free cloud storage service. Make the switch to a better cloud. Zero-knowledge encryption, distributed and blockchain technology." segmentName='home'>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName='home'>
       <TopBar />
       <Container1 id='1' descriptions={props.descriptions} />
-      <Container2 id='2' descriptions={props.descriptions} />
+      <Container2 id='2' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
       <Container3 id='3' descriptions={props.descriptions} />
       <Container4 id='4' descriptions={props.descriptions} />
       <Container5 id='5' {...props} />
       <Container6 id='6' descriptions={props.descriptions} />
       <Container7 id='7' descriptions={props.descriptions} />
-      <Footer />
+      <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
     </Layout>
   )
 }
@@ -44,14 +47,17 @@ export async function getServerSideProps(ctx) {
       case 'Mac OS X':
         return 'https://internxt.com/downloads/drive.dmg';
       default:
-        //console.log('Unknown device %s, User Agent: %s', uaParsed.os.family, ua);
         return 'https://drive.internxt.com'
     }
   })();
 
-  const lang = ctx.locale
-  const descriptions = require(`../assets/lang/en/drive-descriptions.json`)
   
+  const lang = ctx.locale
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
+  const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`)
+  const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
+  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
+
   const Cookies = require('cookies')
   const moment = require('moment')
   const url = require('url')
@@ -74,7 +80,7 @@ export async function getServerSideProps(ctx) {
   }
 
   return {
-    props: { downloadUrl, descriptions }
+    props: { downloadUrl, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions}
   }
 }
 

@@ -33,12 +33,12 @@ const Container5 = ({ id, descriptions }) => {
                     <div className={`${styles.button_container} lg:mt-16`}>
                         <a href="https://wallet.coinbase.com/" target="_blank" className={`${styles.button1} ${styles.appstore} lg:text-xs lg:h-8 lg:w-32`}>
                             <img className="mr-2" src="/images/1440/Token/Section 5/apple app store.svg" />
-                            App store
+                            {description[0].button1}
                         </a>
 
                         <a href="https://wallet.coinbase.com/" target="_blank" className={`${styles.button2} ${styles.appstore} lg:text-xs lg:h-8 lg:w-32`}>
                             <img className="mr-2 mt-1" src="/images/1440/Token/Section 5/google play store.svg" />
-                            Play store
+                            {description[0].button2}
                         </a>
                     </div>
                 </div>

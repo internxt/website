@@ -2,7 +2,9 @@
     {
         "id": "1",
         "title": "Una utilidad esencial para nuestros servicios.",
-        "subtitle": "Gana hasta un 20% de interés anual con pago mensual al tener tokens de Internxt."
+        "subtitle": "Gana hasta un 20% de interés anual con pago mensual al tener tokens de Internxt.",
+        "button": "Acumula Inxt",
+        "learn": "Aprende más"
     },
     {
         "id": "2",
@@ -12,14 +14,14 @@
         "colored": "para comprar Inxt.",
 
         "title4": "Inxt se usa como forma de pago",
-        "subtitle4": "a los proveedores de almacenamiento",
+        "subtitle4": " a los proveedores de core",
         "colored4": "",
 
-        "title2": "Los hosts ganan un 10% más",
-        "subtitle2": "por mantener Inxt",
+        "title2": "Hosts ganan un 10% más",
+        "subtitle2": " por acumular Inxt",
         "colored2": "",
 
-        "title5": "Hay un total de 629.000 Inxt tokens en circulación", 
+        "title5": "Hay un total de 629,000 Inxt tokens en circulación", 
         "subtitle5": "", 
         "colored5": "629,000",
 
@@ -36,30 +38,41 @@
         "title": "El trabajo duro ya está hecho.", 
         "subtitle": "Únete a nuestra infraestructura de distribución de almacenamiento de alta seguridad",
         "subtitle2": "El 75% de los centros de datos tienen espacio de almacenamiento sin usar provocando altos gastos. Al unirse a nuestra red, sacarás rendimiento al alojar los datos encriptados de los usuarios.",
-        "subtitle3": "Aprende más sobre el hosting"
+        "subtitle3": "Aprende más sobre el hosting" 
     },
     {
         "id": "4",
-        "title": "Gana intereses con tu Inxt tokens",
+        "title": "Gana intereses con tus Inxt tokens",
         "colored": "",
-        "subtitle": "Apuesta o mantén tus Inxt para ganar intereses cada mes",
+        "subtitle": "Acumula o mantén tus Inxt para ganar interés cada mes",
         "subtitle2": "Las tasas de apuesta más altas del mercado existentes",
         "subtitle3": "Es súper simple. Todo lo que necesitas son Inxt tokens y una suscripción premium activa de Internxt.",
         "subtitle4": "Cuanta más liquidez, más ingresos",
-        "link": "Comienza a apostar tus tokens"
+        "link": "Comienza a acumular tus tokens",
+        "bundle1": "Starter",
+        "bundle2": "Professional",
+        "bundle3": "Expert"
     },
     {
         "id": "5",
         "title": "Almacena fácilmente tus tokens",
         "subtitle": "Almacene sus Inxt en la app Coinbase Wallet disponible en iOS o Android.",
-        "subtitle2": "Conecte su Coinbase Wallet a Uniswap usando la función WalletLink en la configuración de la aplicación y escanea el código QR. Ya podrás operar con tus tokens en Uniswap."
+        "subtitle2": "Conecte su Coinbase Wallet a Uniswap usando la función WalletLink en la configuración de la aplicación y escanea el código QR. Ya podrás operar con tus tokens en Uniswap.",
+        "button1": "App store",
+        "button2": "Play store"
     },
     {
         "id": "6",
         "title": "Internxt comercia en 6 exchanges",
 
-        "title2": "Compranos sin intermediarios",
-        "subtitle": "Nuestro sistema rastrea y ofrece los mejores tipos de cambio disponibles en el mercado sin los inconvenientes de un exchange"
+        "title2": "Cómpranos sin intermediarios",
+        "subtitle": "Nuestro sistema rastrea y ofrece los mejores tipos de cambio disponibles en el mercado sin los inconvenientes de un exchange",
+        "deposit": "Depósito",
+        "currency": "Moneda",
+        "receive": "Recibe",
+        "address1": "Por favor introduce tu dirección de depósito de INXT",
+        "address2": "Por favor envía los fondos a la siguiente dirección",
+        "button": "Hecho"
     },
     {
         "id": "7",
@@ -76,6 +89,6 @@
     },
     {
         "id": "8",
-        "title": "¿Dónde opera Internxt?"
+        "title": "Métricas Inxt token"
     }
 ]

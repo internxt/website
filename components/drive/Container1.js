@@ -56,7 +56,7 @@ const Container1 = ({ id, descriptions }) => {
                     <input
                         name='email'
                         type='email'
-                        placeholder='Your email'
+                        placeholder={description[0].input}
                         className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
                         
                     />
@@ -64,7 +64,7 @@ const Container1 = ({ id, descriptions }) => {
                     <input
                         name='signup'
                         type='submit'
-                        value="Start for free"
+                        value={description[0].button}
                         className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                     />
                 </form>

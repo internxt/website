@@ -1,9 +1,7 @@
 import styles from './Container1.module.css'
-import descriptions from '../../assets/lang/en/core-descriptions.json'
 import Image from 'next/image'
-import { Button } from 'react-bootstrap'
 
-const Container1 = ({ id, downloadUrl }) => {
+const Container1 = ({ id, downloadUrl, descriptions }) => {
 
     const description = descriptions.filter(desc => desc.id === id)
     
@@ -51,11 +49,11 @@ const Container1 = ({ id, downloadUrl }) => {
                 </div>
 
                 <h1 className={`${styles.title} sm:text-4xl sm:w-80`}>
-                    {formattedText(description[0].title, description[0].colored)}
+                    {description[0].title}
                 </h1>
 
                 <p className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:mt-6`}>
-                    {description[0].subtitle}
+                    {formattedText(description[0].subtitle, description[0].colored)}
                 </p>
 
                 <p className={`${styles.subtitle2} sm:text-xl sm:w-6/12 sm:mt-16`}>
@@ -63,9 +61,9 @@ const Container1 = ({ id, downloadUrl }) => {
                 </p>
 
                 <div className={`${styles.button_container}`}>
-                    <a href={downloadUrl} className={`${styles.button_core} sm:text-base`}>Download</a>
+                    <a href={downloadUrl} className={`${styles.button_core} sm:text-base`}>{description[0].button1}</a>
                     <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank"
-                        className={`${styles.link} sm:text-base`}>Set-up & tips</a>
+                        className={`${styles.link} sm:text-base`}>{description[0].button2}</a>
                 </div>
             </div>
         </div>

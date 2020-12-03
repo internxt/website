@@ -4,7 +4,10 @@
         "title": "Almacena fotos con total privacidad",
         "subtitle": "Todas tus fotos en un lugar seguro y completamente privado.", 
         "subtitle2": "Ni nosotros ni ningún tercero puede acceder a tus fotos.", 
-        "subtitle3": "¿Quieres ser el primero en enterarte de las actualizaciones?"
+        "subtitle3": "¿Quieres ser el primero en enterarte de las actualizaciones?",
+        "newsletter": "Consigue acceso",
+        "placeholder": "Tu correo",
+        "button": "Consigue acceso"
     },
     {
         "id": "2",
@@ -20,6 +23,11 @@
     },
     {
         "id": "4",
+        "title": "Diseñado para mantener la privacidad en las fotos",
+        "subtitle": "La libertad para acceder a cada foto de tu librería con una privacidad, seguridad y simplicidad total."
+    },
+    {
+        "id": "5",
         "title": "Comparte archivos con total control.", 
         "subtitle": " Comparte archivos de forma segura, privada y fácil con nuestros links encriptados de punto a punto.",
         "subtitle2": "Los archivos se encriptan antes de salir de tu dispositivo y sólo se desencriptan cuando el destinatario accede a ellos."  

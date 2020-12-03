@@ -4,14 +4,8 @@
         "individual_title": "Encuentra el plan perfecto para ti",
         "teams_title": "Planes que encajan a cada equipo",
         "subtitle": "Un plan completo para todos los servicios seguros de Internxt.",
-        "subtitle2": "Suscripción fácil en cualquier momento"
-    },
-    {
-        "id": "2",
-        "title": "Centrado en la privacidad",
-        "title2": "Encriptación de punto a punto.",
-        "title3": "Seguridad sin compromisos",
-        "title4": "Accede donde y cuando quieras",
-        "title5": "Pruébalo gratis por 30 días"
+        "subtitle2": "Suscripción fácil en cualquier momento",
+        "individuals": "Para individuos",
+        "teams": "Para equipos"
     }
 ]

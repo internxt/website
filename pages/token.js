@@ -11,18 +11,21 @@ import Container8 from '../components/token/Container8'
 import Layout from '../components/layout/Layout'
 
 const Token = (props) => {
+
+    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "token")
+
     return (
-        <Layout segmentName="token" title='Internxt Token – Our tokenized asset.' description="Internxt token. Learn all about our cryptocurrency, INXT." >
+        <Layout segmentName="token" title={metatags[0].title} description={metatags[0].description} >
             <TopBar />
             <Container1 id='1' descriptions={props.descriptions} />
             <Container2 id='2' descriptions={props.descriptions} />
             <Container3 id='3' descriptions={props.descriptions} />
-            <Container4 id='4' descriptions={props.descriptions} />
+            <Container4 id='4' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container5 id='5' descriptions={props.descriptions} />
             <Container6 id='6' descriptions={props.descriptions} />
             <Container7 id='7' descriptions={props.descriptions} data={props.data} />
             <Container8 id='8' descriptions={props.descriptions} />
-            <Footer />
+            <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
         </Layout>
     );
 }
@@ -33,7 +36,10 @@ export async function getServerSideProps(ctx) {
     const data = await res.json()
 
     const lang = ctx.locale
-    const descriptions = require(`../assets/lang/en/token-descriptions.json`)
+    const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
+    const descriptions = require(`../assets/lang/${lang}/token-descriptions.json`)
+    const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
+    const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
 
     const Cookies = require('cookies')
     const moment = require('moment')
@@ -58,8 +64,7 @@ export async function getServerSideProps(ctx) {
     
     return {
         props: {
-            data: data.data.INXT,
-            descriptions
+            data: data.data.INXT, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions
         }
     }
 }

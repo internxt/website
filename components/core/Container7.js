@@ -1,8 +1,6 @@
-import styles from './Container7.module.css'
-import descriptions from '../../assets/lang/en/core-descriptions.json'
 import Faq from 'react-faq-component';
 
-const Container7 = ({ id }) => {
+const Container7 = ({ id, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)

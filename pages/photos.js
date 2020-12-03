@@ -8,22 +8,28 @@ import Container5 from '../components/photos/Container5'
 import Layout from '../components/layout/Layout'
 
 const Photos = (props) => {
+
+    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "photos")
+
     return ( 
-        <Layout segmentName="photos" title='Internxt Photos – Alternative to Google Photos.' description="All your photos in one secure place that&#039;s completely private. Client-side encrypted. Secure alternative to Google Photos." >
+        <Layout segmentName="photos" title={metatags[0].title} description={metatags[0].description} >
             <TopBar />
-            <Container1 id='1' descriptions={props.descriptions} />
-            <Container2 id='2' descriptions={props.descriptions} />
+            <Container1 id='1' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
+            <Container2 id='2' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container3 id='3' descriptions={props.descriptions} />
             <Container4 id='4' descriptions={props.descriptions} />
             <Container5 id='5' descriptions={props.descriptions} />
-            <Footer />
+            <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
         </Layout>
      );
 }
 
 export async function getServerSideProps(ctx) {
     const lang = ctx.locale
-    const descriptions = require(`../assets/lang/en/photos-descriptions.json`)
+    const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
+    const descriptions = require(`../assets/lang/${lang}/photos-descriptions.json`)
+    const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
+    const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
     
     const Cookies = require('cookies')
     const moment = require('moment')
@@ -47,7 +53,7 @@ export async function getServerSideProps(ctx) {
     }
     
   return {
-    props: { descriptions }
+    props: { metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions }
   }
 }
  

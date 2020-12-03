@@ -4,20 +4,26 @@ import Container1 from '../components/prices/Container1'
 import Container2 from '../components/prices/Container2'
 import Layout from '../components/layout/Layout'
 
-const Pricing = () => {
+const Pricing = (props) => {
+
+    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "pricing")
+
     return ( 
-        <Layout segmentName="pricing" title='Internxt – Pricing' description="Internxt&#039;s pricing. One membership for all our services. Internxt Drive, Internxt Send, Internxt Photos. Welcome to the Internxt Universe." >
+        <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description} >
             <TopBar />
-            <Container1 id='1' />
-            <Container2 id='2' />
-            <Footer />
+            <Container1 id='1' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
+            <Container2 />
+            <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
         </Layout>
      );
 }
 
 export async function getServerSideProps(ctx) {
     const lang = ctx.locale
-    const descriptions = require(`../assets/lang/en/photos-descriptions.json`)
+    const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
+    const descriptions = require(`../assets/lang/${lang}/prices-descriptions.json`)
+    const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
+    const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
     
     const Cookies = require('cookies')
     const moment = require('moment')
@@ -41,7 +47,7 @@ export async function getServerSideProps(ctx) {
     }
     
   return {
-    props: { descriptions }
+    props: { metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions }
   }
 }
  

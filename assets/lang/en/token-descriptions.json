@@ -2,7 +2,9 @@
     {
         "id": "1",
         "title": "An essential utility for our services.",
-        "subtitle": "Earn up to 20% annual interest paid monthly by holding your Internxt tokens."
+        "subtitle": "Earn up to 20% annual interest paid monthly by holding your Internxt tokens.",
+        "button": "Stake Inxt",
+        "learn": "Learn more"
     },
     {
         "id": "2",
@@ -46,20 +48,31 @@
         "subtitle2": "The highest staking rates avaiable on the market today.",
         "subtitle3": "It's super simple. All you need are Internxt tokens and an active Internxt premium membership.",
         "subtitle4": "The more liquidity you add, the more you will earn.",
-        "link": "Learn more about earning Interest"
+        "link": "Learn more about earning Interest",
+        "bundle1": "Starter",
+        "bundle2": "Professional",
+        "bundle3": "Expert"
     },
     {
         "id": "5",
         "title": "Easy and secure way to store Inxt",
         "subtitle": "Store your inxt within the Coinbase Wallet iOS or Android app.",
-        "subtitle2": "Connect your Coinbase Wallet on Uniswap by using the WalletLink feature in settings on the app and scan the QR code. Your tokens will then be avaiable to trade on Uniswap."
+        "subtitle2": "Connect your Coinbase Wallet on Uniswap by using the WalletLink feature in settings on the app and scan the QR code. Your tokens will then be avaiable to trade on Uniswap.",
+        "button1": "App store",
+        "button2": "Play store"
     },
     {
         "id": "6",
         "title": "Exchanges that trade Inxt",
 
         "title2": "Buy direct with us",
-        "subtitle": "Our system tracks down and offers the best exchange rates available on the market without the hassle of an exchange."
+        "subtitle": "Our system tracks down and offers the best exchange rates available on the market without the hassle of an exchange.",
+        "deposit": "Deposit",
+        "currency": "Currency",
+        "receive": "Receive",
+        "address1": "Please enter your INXT receiving address",
+        "address2": "Please send the funds to the following address",
+        "button": "Done"
     },
     {
         "id": "7",

@@ -24,11 +24,15 @@ const Container1 = ({ id, descriptions }) => {
             </p>
 
             <div className={styles.buttons_container}>
-                <button className={`${styles.button} lg:h-8 lg:w-28`}>
-                    <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" target="_blank" className={`${styles.button_text} sm:text-base lg:text-xs`}>Stake Inxt</a>
-                </button>
+                <a 
+                    href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
+                    target="_blank" 
+                    className={`${styles.button} flex items-center justify-center lg:h-8 lg:w-28`}
+                >
+                    <p className={`${styles.button_text} sm:text-base lg:text-xs`}>{description[0].button}</p>
+                </a>
                 
-                <a className={`${styles.learn_more} sm:text-base lg:text-xs`}>Learn more</a>
+                <a className={`${styles.learn_more} sm:text-base lg:text-xs`}>{description[0].learn}</a>
             </div>
         </div>
      );

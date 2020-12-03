@@ -18,7 +18,7 @@ const Container4 = ({ id, descriptions }) => {
         <div className={background}>
             <div className={styles.container}>
                 <div className={`${styles.main} items-center`}>
-                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:text-center sm:mt-12 sm:w-80 lg:text-5xl lg:mt-20 xl:mt-24`}>
+                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:text-center sm:mt-12 sm:w-80 lg:text-center lg:text-5xl lg:mt-20 xl:text-center xl:leading-12 xl:mt-24`}>
                         {description[0].title}
                     </h1>
 

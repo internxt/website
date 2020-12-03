@@ -1,8 +1,7 @@
 import styles from './Container6.module.css'
-import descriptions from '../../assets/lang/en/about-us-descriptions.json'
 import PartnerCard from '../cards/PartnerCard'
 
-const Container6 = ({ id }) => {
+const Container6 = ({ id, descriptions, cardDescriptions }) => {
 
     const URL_BLACKBERRY = "https://medium.com/internxt/internxt-and-blackberry-partner-to-enhance-x-clouds-security-25bb5ad7d33d"
     const URL_YCOMBINATOR = "https://medium.com/internxt/internxt-has-been-accepted-to-y-combinators-startup-school-b7daf30ab407"
@@ -31,24 +30,28 @@ const Container6 = ({ id }) => {
                     logo="Blackberry logo" logoW={157} logoH={27} 
                     image="Blackberry img" imageW={473} imageH={487} 
                     link={URL_BLACKBERRY}
-                    />
+                    descriptions={cardDescriptions}
+                />
 
                 <PartnerCard company={company2} bio={bio3} bio2={bio4} blue={false} 
                     logo="Y Combinator logo" logoW={155} logoH={32} 
                     image="Y Combinator img" imageW={473} imageH={486} 
                     link={URL_YCOMBINATOR}
+                    descriptions={cardDescriptions}
                 />
                 
                 <PartnerCard company={company3} bio={bio5} bio2={bio6} blue={true} 
                     logo="Lanzadera logo" logoW={162} logoH={22} 
                     image="Lanzadera img" imageW={473} imageH={487} 
                     link={URL_LANZADERA}
+                    descriptions={cardDescriptions}
                 />
 
                 <PartnerCard company={company4} bio={bio7} bio2={bio8} blue={false} 
                     logo="500 logo" logoW={175} logoH={47} 
                     image="500 img" imageW={471} imageH={486} 
                     link={URL_500}
+                    descriptions={cardDescriptions}
                 />
             </div>
            

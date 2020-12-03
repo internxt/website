@@ -13,9 +13,9 @@ const Container7 = ({ id, descriptions }) => {
 
     return ( 
         <div className={`${styles.cards_container} sm:items-center sm:flex-col sm:mb-24 xl:my-12`}>
-            <InfoCard title={title} subtitle={subtitle} subtitle2={subtitle2} linkText="Read more" link={LINK_INFOCARD_1} image="Deloitte" width={137} heigth={27} />
+            <InfoCard title={title} subtitle={subtitle} subtitle2={subtitle2} linkText={description[0].link1} link={LINK_INFOCARD_1} image="Deloitte" width={137} heigth={27} />
             <div className="hidden sm:block sm:h-1 sm:w-10/12 sm:bg-gray-300 sm:mt-12 sm:mb-6"></div>
-            <InfoCard title={title2} subtitle={subtitle3} subtitle2={subtitle4} linkText="Read study 1.0" link={LINK_INFOCARD_2} linkText2="Read study 2.0" link2={LINK2_INFOCARD_2} image="IEEE" width={130} heigth={38} />
+            <InfoCard title={title2} subtitle={subtitle3} subtitle2={subtitle4} linkText={description[0].link2} link={LINK_INFOCARD_2} linkText2={description[0].link3} link2={LINK2_INFOCARD_2} image="IEEE" width={130} heigth={38} />
         </div>
      );
 }

@@ -2,7 +2,7 @@ import styles from './Container2.module.css'
 import PriceCard from '../cards/PriceCard'
 import Link from 'next/link'
 
-const Container2 = ({ id, descriptions }) => {
+const Container2 = ({ id, descriptions, cardDescriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
@@ -28,10 +28,10 @@ const Container2 = ({ id, descriptions }) => {
             </div>
 
             <div className="grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-10 sm:mt-16 lg:mt-16 xl:mt-20">
-                <PriceCard free="true" size={2} individual={true} />
-                <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" />
-                <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" mostPopular="true"/>
-                <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" />
+                <PriceCard free="true" size={2} individual={true} descriptions={cardDescriptions} />
+                <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" descriptions={cardDescriptions} />
+                <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" mostPopular="true" descriptions={cardDescriptions} />
+                <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" descriptions={cardDescriptions} />
             </div>
 
             <Link href="/pricing">

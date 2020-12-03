@@ -1,8 +1,7 @@
 import styles from './Container3.module.css'
-import descriptions from '../../assets/lang/en/about-us-descriptions.json'
 import PersonalCard from '../cards/PersonalCard'
 
-const Container3 = ({ id }) => {
+const Container3 = ({ id, descriptions }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
     const { 

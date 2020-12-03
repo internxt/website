@@ -10,8 +10,11 @@ import Container7 from '../components/core/Container7'
 import Layout from '../components/layout/Layout'
 
 const Core = (props) => {
+    
+  const metatags = props.metatagsDescriptions.filter( desc => desc.id === "core")
+    
   return (
-    <Layout segmentName="core" title='Internxt Core – Get paid to share.' description="Get paid to share the exceeding disk space of your computer to host encrypted shards of data as part of a decentralized network of servers." >
+    <Layout segmentName="core" title={metatags[0].title} description={metatags[0].description} >
       <TopBar />
       <Container1 id='1' {...props} />
       <Container2 id='2' descriptions={props.descriptions} />
@@ -20,7 +23,7 @@ const Core = (props) => {
       <Container5 id='5' descriptions={props.descriptions} />
       <Container6 id='6' descriptions={props.descriptions} {...props} />
       <Container7 id='7' descriptions={props.descriptions} />
-      <Footer />
+      <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
     </Layout>
   );
 }
@@ -40,13 +43,15 @@ export async function getServerSideProps(ctx) {
       case 'Mac OS X':
         return 'https://internxt.com/downloads/core.dmg';
       default:
-        //console.log('Unknown device %s, User Agent: %s', uaParsed.os.family, ua);
         return 'https://github.com/internxt/core-gui/releases';
     }
   })();
 
   const lang = ctx.locale
-  const descriptions = require(`../assets/lang/en/about-us-descriptions.json`)
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
+  const descriptions = require(`../assets/lang/${lang}/core-descriptions.json`)
+  const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
+  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
 
   const Cookies = require('cookies')
   const moment = require('moment')
@@ -56,12 +61,10 @@ export async function getServerSideProps(ctx) {
 
   const query = url.parse(ctx.req.url).query
   const parsedQuery = queryString.parse(query)
-  console.log(parsedQuery)
   let referral
   const expires = moment().add(2, 'days').toDate()
 
   referral = parsedQuery.ref
-  console.log('---------------- REFERRAL ---------------------', referral)
 
   if (referral) {
     cookies.set('REFERRAL', referral, {
@@ -72,7 +75,7 @@ export async function getServerSideProps(ctx) {
   }
 
   return {
-    props: { downloadUrl, descriptions }
+    props: { downloadUrl, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions }
   }
 }
 

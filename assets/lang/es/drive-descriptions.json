@@ -4,7 +4,9 @@
         "title": "Almacena tus archivos con total privacidad", 
         "subtitle": "Internxt Drive. Servicio de almacenamiento zero-knowledge que se basa en la privacidad absoluta y la seguridad inflexible.",
         "subtitle2": "¡Regístrate y consigue 2 GB gratis, para siempre!", 
-        "subtitle3": "No se requiere información de facturación" 
+        "subtitle3": "No se requiere información de facturación",
+        "input": "Tu correo",
+        "button": "Empieza gratis"
     },
     {
         "id": "2",
@@ -31,18 +33,26 @@
         "subtitle": "Una interfaz funcional e intuitiva con diversas características personalizables, como el intercambio de archivos encriptados.",   
         "title2": "Disponible en todos tus dispositivos.", 
         "subtitle3": "La interfaz de Internxt es muy cómoda, práctica y fácil de usar", 
-        "subtitle4": "Accede desde nuestra app de escritorio, app web y nuestra app para iOS o Android." 
+        "subtitle4": "Accede desde nuestra app de escritorio, app web y nuestra app para iOS o Android.", 
+        "link1": "Registrarse",
+        "link2": "Descargar"
     },
     {
         "id": "6",
         "title": "Tu negocio en tus manos.", 
-        "subtitle": "Internxt Drive for teams te permite a ti y a tu equipo almacenar archivos con total seguridad, colaborar de forma privada con otros miembros y alternar las funciones de administración." 
+        "subtitle": "Internxt Drive for teams te permite a ti y a tu equipo almacenar archivos con total seguridad, colaborar de forma privada con otros miembros y alternar las funciones de administración.",
+        "link": "Echa un vistazo a los planes para equipos"
     },
     {
         "id": "7",
         "title": "¿Es la nube la respuesta?", 
-        "subtitle": "“Una reciente encuesta de Deloitte muestra que el almacenamiento en nube basado en Blockchain está ganando fuerza. Es una forma más inteligente de aprovechar la tecnología emergente y todo lo que la nube tiene por ofrecer: fiabilidad, seguridad y escalabilidad. La encuesta revela una fuerte inversión en Blockchain.”",
+        "subtitle": "“Una reciente encuesta de Deloitte muestra que el almacenamiento en nube basado en Blockchain está ganando fuerza.",
+        "subtitle2": " Es una forma más inteligente de aprovechar la tecnología emergente y todo lo que la nube tiene por ofrecer: fiabilidad, seguridad y escalabilidad. La encuesta revela una fuerte inversión en Blockchain.”",
         "title2": "Análisis de la nube",
-        "subtitle3": "“El estudio investiga el impacto de las arquitecturas de nubes descentralizadas y centralizadas en la seguridad. Las nubes centralizadas entrelazan funciones centrales dentro del mismo espacio. Si un error o un ataque logra desestabilizar un componente centralizado, toda la nube está en riesgo.”" 
+        "subtitle3": "“El estudio investiga el impacto de las arquitecturas de nubes descentralizadas y centralizadas en la seguridad.",
+        "subtitle4": "Las nubes centralizadas entrelazan funciones centrales dentro del mismo espacio. Si un error o un ataque logra desestabilizar un componente centralizado, toda la nube está en riesgo.”",
+        "link1": "Leer más",
+        "link2": "Leer estudio 1.0",
+        "link3": "Leer estudio 2.0"
     }   
 ]

@@ -1,8 +1,7 @@
 import styles from './Container6.module.css'
-import descriptions from '../../assets/lang/en/core-descriptions.json'
 import Image from 'next/image'
 
-const Container6 = ({ id, downloadUrl }) => {
+const Container6 = ({ id, downloadUrl, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
@@ -24,7 +23,7 @@ const Container6 = ({ id, downloadUrl }) => {
             <div className="grid grid-cols-4 gap-4 sm:flex sm:flex-col sm:items-center sm:mb-12 xl:mb-24">
                 <div className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:mt-12 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
-                        <p className={`${styles.steps_text} sm:text-13`}>STEP 1</p>
+                        <p className={`${styles.steps_text} sm:text-13`}>{description[0].step1}</p>
                     </div>
 
                     <h1 className={`${styles.card_title} sm:text-3xl`}>
@@ -36,7 +35,7 @@ const Container6 = ({ id, downloadUrl }) => {
                     </p>
 
                     <a href={downloadUrl} className={`${styles.card_link} sm:text-lg`}>
-                        Download Internxt Core
+                        {description[0].link}
                     </a>
                 </div>
 
@@ -44,7 +43,7 @@ const Container6 = ({ id, downloadUrl }) => {
 
                 <div className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
-                        <p className={`${styles.steps_text} sm:text-13`}>STEP 2</p>
+                        <p className={`${styles.steps_text} sm:text-13`}>{description[0].step2}</p>
                     </div>
 
                     <h1 className={`${styles.card_title} sm:text-3xl`}>
@@ -64,7 +63,7 @@ const Container6 = ({ id, downloadUrl }) => {
                 
                 <div className={`${styles.card} col-span-4 w-auto sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
-                        <p className={`${styles.steps_text} sm:text-13`}>STEP 3</p>
+                        <p className={`${styles.steps_text} sm:text-13`}>{description[0].step3}</p>
                     </div>
 
                     <h1 className={`${styles.card_title} sm:text-3xl`}>
@@ -91,7 +90,7 @@ const Container6 = ({ id, downloadUrl }) => {
 
             <Image src="/images/1440/Core/Section 6/emoji.png" width={89} height={105} />
             <h1 className={`${styles.all_set} sm:text-5xl`}>
-                You're all set!
+                {description[0].allset}
             </h1>
         </div>
     );

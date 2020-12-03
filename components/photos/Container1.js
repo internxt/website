@@ -2,10 +2,9 @@ import styles from './Container1.module.css'
 import EmailNewsletter from '../EmailNewsletter'
 import Image from 'next/image'
 
-const Container1 = ({ id, descriptions }) => {
+const Container1 = ({ id, descriptions, cardDescriptions }) => {
 
     const description = descriptions.filter( desc => desc.id === id)
-    
     // Check if a number is odd
     const isOdd = ( num ) => {
         return num % 2 == 1;
@@ -64,7 +63,7 @@ const Container1 = ({ id, descriptions }) => {
                 </h1>
 
                 <div className="sm:hidden">
-                    <EmailNewsletter value="Get early access" />
+                    <EmailNewsletter value={description[0].newsletter} descriptions={cardDescriptions} />
                 </div>
                 
                 <form
@@ -78,14 +77,14 @@ const Container1 = ({ id, descriptions }) => {
                     <input
                         name='fields[email]'
                         type='email'
-                        placeholder='Your email'
+                        placeholder={description[0].placeholder}
                         className={`${styles.email} sm:h-10 sm:w-40 lg:w-48 lg:text-sm lg:h-10 `}
                     />
 
                     <input
                         name='signup'
                         type='submit'
-                        value="Get early access"
+                        value={description[0].button}
                         className={`${styles.button} sm:h-10 sm:w-auto sm:text-base sm:font-avertasemibold sm:px-3 lg:w-32 lg:h-10 lg:text-sm`}
                     />
                 </form>

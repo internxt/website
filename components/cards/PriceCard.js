@@ -1,10 +1,15 @@
-import { Fragment, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './PriceCard.module.css'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
-const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, individual }) => {
+const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, individual, descriptions }) => {
     
+    const description = descriptions.filter( desc => desc.id === "PriceCard")
+
     const [ plansize, setPlanSize ] = useState()
+    const router = useRouter()
+    const locale = router.locale
 
     const formatSize = ( gigas ) => {
         const sizes = ["GB", "TB"]
@@ -48,10 +53,10 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
             }
 
             {
-                free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-xs`}>Get started!</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-xs`}>Try for free for 30 days</p>
+                free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-xs`}>{description[0].getstarted}</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-xs`}>{description[0].tryforfree}</p>
             }
             <div className={`${styles.card} lg:min-h-0 lg:w-44 lg:h-60`}>
-                { mostPopular ? <p className={`${styles.most_popular} sm:text-sm lg:text-xs lg:pt-3`}>Most popular</p> : <div className={`${styles.void} lg:h-8`}></div> }
+                { mostPopular ? <p className={`${styles.most_popular} sm:text-sm lg:text-xs lg:pt-3`}>{description[0].mostpopular}</p> : <div className={`${styles.void} lg:h-8`}></div> }
 
                     <p className={`${styles.size} sm:text-3xl lg:text-2xl`}>
                         {plansize}
@@ -59,29 +64,29 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
 
                     {free ? 
                             <a href="https://drive.internxt.com/new" className={styles.free_msg}>
-                                <h1 className={`${styles.text_free} sm:text-2xl sm:font-avertabold lg:text-lg`}> { individual ? <span>FREE</span> : <span>CONTACT</span> } </h1>
+                                <h1 className={`${styles.text_free} sm:text-2xl sm:font-avertabold lg:text-lg`}> { individual ? <span>{description[0].free}</span> : <span>{description[0].contact}</span> } </h1>
 
-                                <h1 className={`${styles.text_forever} sm:text-xl lg:text-sm`}> { individual ? <span>FOREVER & EVER</span> : <span>TEAM FOR PRICING</span> } </h1>
+                                <h1 className={`${styles.text_forever} sm:text-xl lg:text-sm`}> { individual ? <span>{description[0].forever}</span> : <span>{description[0].team}</span> } </h1>
                             </a>
                         :
                             <div className={styles.paid_container}>
                                 <div className={`${styles.background_pMonth} sm:h-8 lg:w-24 h-8 lg:py-1`}>
                                     <a id="a" href="https://drive.internxt.com/new" target="_blank" 
                                         className={`${styles.pMonth} sm:text-sm lg:text-xxs`}>
-                                        €{pMonth} / month
+                                        €{pMonth} / {description[0].month}
                                     </a>
                                 </div>
 
-                                <p className={`${styles.label} sm:text-xs lg:text-xxs`}>Prepay 6 month</p>
+                                <p className={`${styles.label} sm:text-xs lg:text-xxs`}>{description[0].prepay} 6 {description[0].month}{locale === 'en' ? 's' : 'es'}</p>
                                 <h1 className={`${styles.pre_pay} sm:text-base lg:text-xs`}>
-                                    €{pre6months} / month
+                                    €{pre6months} / {description[0].month}
                                 </h1>
 
                                 <div className={`${styles.line} lg:my-2`}></div>
 
-                                <p className={`${styles.label} sm:text-xs lg:text-xxs`}>Prepay 12 month</p>
+                                <p className={`${styles.label} sm:text-xs lg:text-xxs`}>{description[0].prepay} 12 {description[0].month}{locale === 'en' ? 's' : 'es'}</p>
                                 <h1 className={`${styles.pre_pay} sm:text-base lg:text-xs`}>
-                                    €{preYear} / month
+                                    €{preYear} / {description[0].month}
                                 </h1>
                             </div>
                     }

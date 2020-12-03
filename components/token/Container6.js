@@ -10,9 +10,9 @@ const addrs = {
 
 const Container6 = ({ id, descriptions }) => {
 
-    const [prices, setPrices] = useState({})
-    const [currency, setCurrency] = useState('btc')
-    const [deposit, setDeposit] = useState(0)
+    const [ prices, setPrices ] = useState({})
+    const [ currency, setCurrency ] = useState('btc')
+    const [ deposit, setDeposit ] = useState(0)
 
     useEffect(() => {
         checkPrices()
@@ -20,7 +20,6 @@ const Container6 = ({ id, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter(desc => desc.id === id)
-
     // Check if a number is odd
     const isOdd = (num) => {
         return num % 2 == 1;
@@ -49,7 +48,6 @@ const Container6 = ({ id, descriptions }) => {
 
         var object = {};
         formData.forEach(function (value, key) {
-            //console.log(key)
             object[key] = value;
         });
         object.receive_amount = receiveValue;
@@ -161,7 +159,9 @@ const Container6 = ({ id, descriptions }) => {
                     <div className={styles.first_half}>
                         <div className={`${styles.payment} sm:m-0`}>
                             <div className={styles.input_container}>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Deposit</label>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                    {description[0].deposit}
+                                </label>
                                 <input
                                     name="deposit"
                                     type="number"
@@ -173,7 +173,9 @@ const Container6 = ({ id, descriptions }) => {
                             </div>
 
                             <div className={styles.input_container}>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Receive</label>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                    {description[0].receive}
+                                </label>
                                 <input
                                     className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
                                     type="number"
@@ -186,7 +188,9 @@ const Container6 = ({ id, descriptions }) => {
 
                         <div className={`${styles.currency} sm:m-0`}>
                             <div className={styles.input_container}>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                    {description[0].currency}
+                                </label>
                                 <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
                                     name="currency"
                                     onChange={(e) => setCurrency(e.target.value)}>
@@ -197,7 +201,9 @@ const Container6 = ({ id, descriptions }) => {
                             </div>
 
                             <div className={styles.input_container}>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>Currency</label>
+                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                    {description[0].currency}
+                                </label>
                                 <input
                                     className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
                                     name="own_currency"
@@ -209,7 +215,9 @@ const Container6 = ({ id, descriptions }) => {
                     </div>
 
                     <div className={`${styles.second_half} sm:w-84 sm:items-center`}>
-                        <label className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>Please enter your INXT receiving address</label>
+                        <label className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>
+                            {description[0].address1}
+                        </label>
                         <input
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
                             name="receive_addr"
@@ -217,7 +225,9 @@ const Container6 = ({ id, descriptions }) => {
                             placeholder="INXT Receiving address"
                         />
 
-                        <label className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>Please send the funds to the following address</label>
+                        <label className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>
+                            {description[0].address1}
+                        </label>
                         <input
                             name="addr"
                             className={`${styles.input} ${styles.input2} bg-gray-200 text-gray-600 lg:text-sm`}

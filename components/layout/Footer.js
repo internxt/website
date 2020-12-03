@@ -3,15 +3,24 @@ import EmailNewsletter from '../EmailNewsletter'
 import styles from './Footer.module.css'
 import Link from 'next/link'
 import { Accordion, Card, Button } from 'react-bootstrap'
+import { useRouter } from 'next/router'
 
-const Footer = () => {
+const Footer = ({ descriptions, cardDescriptions }) => {
+
+    const router = useRouter()
+    const locale = router.locale
+
     return ( 
         <footer>
             <div className={`${styles.first_half} sm:p-0 sm:py-20 lg:h-84`}>
                 <div className={styles.title_container}>
-                    <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>A family of privacy focused services.</h1>
+                    <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>
+                        {descriptions.title1}
+                    </h1>
 
-                    <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>Start free with 2GB.</h1>
+                    <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>
+                    {descriptions.title2}
+                    </h1>
 
                     <div className={`${styles.image}`}>
                         <Image src={'/images/1440/Footer/Line.png'} width={68} height={9} />
@@ -20,20 +29,26 @@ const Footer = () => {
 
                 <div className={`${styles.get_started_container} lg:mt-10`}>
                     
-                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} font-avertasemibold sm:text-base lg:text-sm lg:h-8 lg:w-32`}>Get started</a>
+                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} font-avertasemibold sm:text-base lg:text-sm lg:h-8 lg:w-32`}>
+                        {descriptions.button}
+                    </a>
                     
                     <Link href="/pricing">
-                        <a className={`${styles.learn_more} sm:text-base lg:text-xss lg:mt-1`}>Learn more</a>
+                        <a className={`${styles.learn_more} sm:text-base lg:text-xss lg:mt-1`}>
+                            {descriptions.link}
+                        </a>
                     </Link>
                 </div>
             </div>
 
             <div className={`${styles.second_half} sm:pb-16`}>
                 <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6 sm:items-start`}>
-                    <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none `}>Keep me updated about products, news, tips and offers from Internxt.</p>
+                    <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none `}>
+                        {descriptions.keep_updated}
+                    </p>
 
                     <div className="sm:hidden">
-                        <EmailNewsletter value="Subscribe" />
+                        <EmailNewsletter value={descriptions.newsletter} descriptions={cardDescriptions} />
                     </div>
                     
                     <form
@@ -43,14 +58,14 @@ const Footer = () => {
                         <input
                             name='email'
                             type='email'
-                            placeholder='Your email'
+                            placeholder={descriptions.placeholder}
                             className={`${styles.email2} sm:h-10 sm:w-56 lg:w-48 lg:text-sm lg:h-10 `}
                         />
 
                         <input
                             name='signup'
                             type='submit'
-                            value="Subscribe"
+                            value={descriptions.button2}
                             className={`${styles.button2} sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                         />
                     </form>
@@ -70,12 +85,18 @@ const Footer = () => {
                             />
                         </div>
 
-                        <p className={`${styles.p_social} sm:text-base lg:text-xs mt-6`}>Copyright &copy; 2020 Internxt</p>
-                        <p className={`${styles.p_social} sm:text-base lg:text-xs`}>All rights Reserved</p>
+                        <p className={`${styles.p_social} sm:text-base lg:text-xs mt-6`}>
+                            {descriptions.copyright}
+                        </p>
+                        <p className={`${styles.p_social} sm:text-base lg:text-xs`}>
+                            {descriptions.rights}
+                        </p>
                     </div>
 
                     <div className={`${styles.p_container} sm:hidden`}>
-                        <h1 className={`${styles.label} lg:text-sm`}>Products</h1>
+                        <h1 className={`${styles.label} lg:text-sm`}>
+                            {descriptions.label1}
+                        </h1>
 
                         <Link href="/drive">
                             <a className={`${styles.p_social} lg:text-xs`}>Internxt Drive</a>
@@ -97,25 +118,43 @@ const Footer = () => {
                     </div>
 
                     <div className={`${styles.p_container} sm:hidden`}>
-                        <h1 className={`${styles.label} lg:text-sm`}>Company</h1>
+                        <h1 className={`${styles.label} lg:text-sm`}>
+                            {descriptions.label2}
+                        </h1>
 
                         <Link href="/about">
-                            <a className={`${styles.p_social} lg:text-xs`}>About us</a>
+                            <a className={`${styles.p_social} lg:text-xs`}>
+                                {descriptions.info1}
+                            </a>
                         </Link>
 
                         <Link href="/pricing">
-                            <a className={`${styles.p_social} lg:text-xs`}>Pricing</a>
+                            <a className={`${styles.p_social} lg:text-xs`}>
+                                {descriptions.info2}   
+                            </a>
                         </Link>
 
-                        <a href="mailto:hello@internxt.com" target="_blank" className={`${styles.p_social} lg:text-xs`}>Contact</a>
+                        <a href="mailto:hello@internxt.com" target="_blank" className={`${styles.p_social} lg:text-xs`}>
+                            {descriptions.info3}
+                        </a>
                         
                         <Link href="/legal">
                             <a className={`${styles.p_social} lg:text-xs`}>Legal</a>
                         </Link>
+
+                        {
+                            locale == 'en' ? 
+                                <a href="/es" className={`${styles.p_social} lg:text-xs`}>{descriptions.info6}</a>
+                            :
+                                <a href='/' className={`${styles.p_social} lg:text-xs`}>{descriptions.info6}</a>
+                        }
+                        
                     </div>
 
                     <div className={styles.p_container}>
-                        <h1 className={`${styles.label} lg:text-sm`}>Follow us</h1>
+                        <h1 className={`${styles.label} lg:text-sm`}>
+                            {descriptions.label3}
+                        </h1>
 
                         <div className={styles.followus_container}>
                             <img className={styles.logo} src="/images/1440/Footer/twitter.png" />
@@ -134,9 +173,15 @@ const Footer = () => {
                        </div>
 
                     <div className={`${styles.p_container} sm:hidden`}>
-                        <h1 className={`${styles.label} lg:text-sm`}>Join</h1>
-                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.p_social} lg:text-xs`}>Sign in</a>
-                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.p_social} lg:text-xs`}>Get started</a>
+                        <h1 className={`${styles.label} lg:text-sm`}>
+                            {descriptions.label4}
+                        </h1>
+                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.p_social} lg:text-xs`}>
+                            {descriptions.info4}
+                        </a>
+                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.p_social} lg:text-xs`}>
+                            {descriptions.info5}
+                        </a>
                     </div>
                 </div>
 
@@ -144,29 +189,29 @@ const Footer = () => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                            Products
+                            {descriptions.label1}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0">
                         <Card.Body>
                             <Link href="/drive">
-                                <a className={styles.faqtext}>Drive</a>
+                                <a className={styles.faqtext}>Internxt Drive</a>
                             </Link>
 
                             <Link className="mt-4" href="/photos">
-                                <a className={styles.faqtext}>Photos</a>
+                                <a className={styles.faqtext}>Internxt Photos</a>
                             </Link>
                             
                             <Link className="mt-4" href="https://send.internxt.com/">
-                                <a className={styles.faqtext}>Send</a>
+                                <a className={styles.faqtext}>Internxt Send</a>
                             </Link>
 
                             <Link className="mt-4" href="/token">
-                                <a className={styles.faqtext}>Token</a>
+                                <a className={styles.faqtext}>Internxt Token</a>
                             </Link>
 
                             <Link className="mt-4" href="/core">
-                                <a className={styles.faqtext}>Core</a>
+                                <a className={styles.faqtext}>Internxt Core</a>
                             </Link>
                         </Card.Body>
                         </Accordion.Collapse>
@@ -175,13 +220,15 @@ const Footer = () => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                            Company
+                            {descriptions.label2}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="1">
                         <Card.Body>
                             <Link href="/about">
-                                <a className={styles.faqtext}>About</a>
+                                <a className={styles.faqtext}>
+                                    {descriptions.info1}
+                                </a>
                             </Link>
 
                             <Link href="/legal">
@@ -194,7 +241,7 @@ const Footer = () => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                            Follow us
+                            {descriptions.label3}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="2">
@@ -209,13 +256,17 @@ const Footer = () => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                            Join
+                            {descriptions.label4}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="3">
                         <Card.Body>
-                            <a href="https://drive.internxt.com/login" className={`${styles.faqtext} m-0 lg:text-sm`}>Sign in</a>
-                            <a href="https://drive.internxt.com/new" className={`${styles.faqtext}`}>Get started</a>
+                            <a href="https://drive.internxt.com/login" className={`${styles.faqtext} m-0 lg:text-sm`}>
+                                {descriptions.info4}
+                            </a>
+                            <a href="https://drive.internxt.com/new" className={`${styles.faqtext}`}>
+                                {descriptions.info5}
+                            </a>
                         </Card.Body>
                         </Accordion.Collapse>
                     </Card>
@@ -233,8 +284,12 @@ const Footer = () => {
                         />
                     </div>
 
-                    <p className={`${styles.p_social} sm:text-base sm:text-xs mt-6`}>Copyright &copy; 2020 Internxt</p>
-                    <p className={`${styles.p_social} sm:text-base sm:text-xs`}>All rights Reserved</p>
+                    <p className={`${styles.p_social} sm:text-base sm:text-xs mt-6`}>
+                        {descriptions.copyright}
+                    </p>
+                    <p className={`${styles.p_social} sm:text-base sm:text-xs`}>
+                        {descriptions.rights}
+                    </p>
                 </div>
             </div>
         </footer>
