@@ -13,6 +13,7 @@
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "cookies": "^0.8.0",
+    "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "next": "10.0.1",
     "react": "17.0.1",
