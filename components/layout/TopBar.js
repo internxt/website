@@ -22,7 +22,7 @@ const TopBar = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="w-full justify-between sm:pt-8 sm:items-center sm:p-0 lg:relative lg:h-12 lg:p-0 xl:relative xl:h-16 xl:p-0">
                     <Link href="/">
-                        <img className="block object-contain cursor-pointer sm:hidden md:w-28 lg:w-28 xl:w-32" src="/images/1440/Footer/Internxt.png" />
+                        <img className="block object-contain cursor-pointer sm:hidden md:w-28 lg:w-28 xl:w-28" src="/images/1440/Footer/Internxt.png" />
                     </Link>
 
                     <div className={`${styles.center} flex flex-row sm:flex-col sm:p-0`} >

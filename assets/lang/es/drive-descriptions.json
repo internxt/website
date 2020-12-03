@@ -16,14 +16,14 @@
     },
     {
         "id": "3",
-        "title": "Diseñado para proteger tu privacidad",
+        "title": "Diseñado para protegerte.",
         "subtitle": "Tus archivos subidos son encriptados del lado del cliente y luego fragmentados en pequeños pedazos. Cada fragmento encriptado se almacena de forma segura alrededor del mundo, utilizando Blockchain. Privacidad como nunca antes.",
         "subtitle2": "Sólo tú tienes la llave que desencripta tus arichivos fragmentados.",
         "subtitle_sm": "Tus archivos son encriptados del lado del cliente y luego fragmentados en pequeños pedazos."
     },
     {
         "id": "4",
-        "title": "Cambia a una nube más segura.", 
+        "title": "Una nube más segura.", 
         "subtitle": "Servicios como Dropbox, Google Drive, Microsoft OneDrive y Apple iCloud tienen permiso para acceder a tus datos.", 
         "subtitle2": "Internxt Drive tiene zero-knowledge encryption, lo que significa que sólo tú puedes acceder a tus archivos."
     },

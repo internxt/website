@@ -42,7 +42,7 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
                 </div>
 
                 <div className={`${styles.main} sm:items-center lg:pl-32`}>
-                    <h1 className={`${styles.title2} leading-10 sm:text-4xl sm:text-center sm:w-80 lg:text-5xl lg:w-84 lg:leading-tight xl:leading-13 xl:mb-4`}>
+                    <h1 className={`${styles.title2} leading-10 sm:text-4xl sm:text-center sm:w-80 lg:text-5xl lg:w-84 lg:leading-tight xl:leading-13 xl:mb-2`}>
                         {description[0].title2}
                     </h1>
 

@@ -4,7 +4,7 @@
         "title": "Guarda fotos con total privacidad",
         "subtitle": "Todas tus fotos en un lugar seguro y completamente privado.", 
         "subtitle2": "Ni nosotros ni ningún tercero puede acceder a tus fotos.", 
-        "subtitle3": "¿Quieres ser el primero en usarlo?",
+        "subtitle3": "¿Quieres ser el primero en enterarte de las actualizaciones?",
         "newsletter": "Consigue acceso",
         "placeholder": "Tu correo",
         "button": "Consigue acceso"
@@ -23,8 +23,8 @@
     },
     {
         "id": "4",
-        "title": "Diseñado para mantener la privacidad en las fotos",
-        "subtitle": "La libertad para acceder a cada foto de tu librería con una privacidad, seguridad y simplicidad total."
+        "title": "Mantén la privacidad de tus fotos",
+        "subtitle": "Libertad para acceder a tus fotos con total privacidad, seguridad y simplicidad"
     },
     {
         "id": "5",

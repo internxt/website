@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "title": "Una utilidad esencial para nuestros servicios.",
+        "title": "La esencia que mueve Internxt",
         "subtitle": "Gana hasta un 20% de interés anual con pago mensual al tener tokens de Internxt.",
         "button": "Acumula Inxt",
         "learn": "Aprende más"
@@ -17,7 +17,7 @@
         "subtitle4": " a los proveedores de core",
         "colored4": "",
 
-        "title2": "Hosts ganan un 10% más",
+        "title2": "Los hosts ganan un 10% más",
         "subtitle2": " por acumular Inxt",
         "colored2": "",
 
@@ -55,7 +55,7 @@
     },
     {
         "id": "5",
-        "title": "Almacena fácilmente tus tokens",
+        "title": "Almacena tus Inxt fácilmente",
         "subtitle": "Almacene sus Inxt en la app Coinbase Wallet disponible en iOS o Android.",
         "subtitle2": "Conecte su Coinbase Wallet a Uniswap usando la función WalletLink en la configuración de la aplicación y escanea el código QR. Ya podrás operar con tus tokens en Uniswap.",
         "button1": "App store",
@@ -63,9 +63,9 @@
     },
     {
         "id": "6",
-        "title": "Internxt comercia en 6 exchanges",
+        "title": "Internxt comercia en 5 exchanges",
 
-        "title2": "Cómpranos sin intermediarios",
+        "title2": "Compra INXT sin intermediarios",
         "subtitle": "Nuestro sistema rastrea y ofrece los mejores tipos de cambio disponibles en el mercado sin los inconvenientes de un exchange",
         "deposit": "Depósito",
         "currency": "Moneda",
@@ -89,6 +89,6 @@
     },
     {
         "id": "8",
-        "title": "Métricas Inxt token"
+        "title": "¿Dónde intercambiar Inxt?"
     }
 ]

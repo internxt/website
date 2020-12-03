@@ -66,6 +66,7 @@
     position: absolute;
     left: 0;
     padding: 0 0 0 4rem;
+    z-index: -1;
 }
 
 .weather {
@@ -73,18 +74,21 @@
     left: 0;
     bottom: 0;
     padding: 0 0 2rem 5rem;
+    z-index: -1;
 }
 
 .circles {
     position: absolute;
     right: 0;
     padding: 27rem 7rem 0 0;
+    z-index: -1;
 }
 
 .video {
     position: absolute;
     right: 0;
     margin: 0 3rem 0 0;
+    z-index: -1;
 }
 
 .lgcross {
@@ -92,30 +96,35 @@
     bottom: 0;
     left: 0;
     padding: 0 0 7rem 16rem;
+    z-index: -1;
 }
 
 .mdcross {
     position: absolute;
     right: 0;
     padding: 14rem 10rem 0 0;
+    z-index: -1;
 }
 
 .smcross {
     position: absolute;
     bottom: 0;
     padding: 0 2rem 3rem 0;
+    z-index: -1;
 }
 
 .cross {
     position: absolute;
     right: 0;
     padding: 4rem 25rem 0 0;
+    z-index: -1;
 }
 
 .recorder {
     position: absolute;
     left: 0;
     padding: 4rem 0 0 15rem;
+    z-index: -1;
 }
 
 .message {
@@ -123,6 +132,7 @@
     bottom: 0;
     right: 0;
     padding: 0 30rem 3rem 0;
+    z-index: -1;
 }
 
 .email {

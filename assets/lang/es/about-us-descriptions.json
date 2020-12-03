@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "title": "Enriquece tu vida a través de la tecnología segura.",
+        "title": "Enriquece tu vida con la tecnología más segura.",
         "subtitle": "Mantenme al tanto de las noticias y ofertas de Internxt",
         "newsletter": "Suscribirse",
         "placeholder": "Tu correo",
@@ -87,13 +87,13 @@
         "id": "6",
         "title": "Socios de Internxt",
 
-        "company": "Asociación Blackberry",
+        "company": "Asociación BlackBerry",
         "bio1": "La innovación está cambiando la forma en que los negocios trabajan, ya que los clientes exigen cada vez más soluciones seguras.",
         "bio2": "BlackBerry ayuda a Internxt a evaluar el cifrado, las vulnerabilidades de la infraestructura, la autenticación y la prevención de la fuga de datos.",
 
         "company2": "Programa Y Combinator",
-        "bio3": "Las Startups son más productivas cuando pasan la mayoría de su tiempo construyendo",
-        "bio4": "El objetivo de Y Combinator es crear un entorno en el que podamos centrarnos exclusivamente en la construcción de productos y en hablar con los usuarios sobre cómo mejorar..",
+        "bio3": "Las Startups son más productivas cuando pasan la mayoría de su tiempo construyendo.",
+        "bio4": "El objetivo de Y Combinator es crear un entorno en el que podamos centrarnos exclusivamente en la construcción de productos y en hablar con los usuarios sobre cómo mejorar.",
 
         "company3": "Aceleradora Lanzadera",
         "bio5": "Juan Roig es conocido por ser el dueño de Mercadona, una de las mayores corporaciones europeas.",

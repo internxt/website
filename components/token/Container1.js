@@ -1,5 +1,4 @@
 import styles from './Container1.module.css'
-import Image from 'next/image'
 
 const Container1 = ({ id, descriptions }) => {
 
@@ -32,7 +31,8 @@ const Container1 = ({ id, descriptions }) => {
                     <p className={`${styles.button_text} sm:text-base lg:text-xs`}>{description[0].button}</p>
                 </a>
                 
-                <a className={`${styles.learn_more} sm:text-base lg:text-xs`}>{description[0].learn}</a>
+                <a href="https://medium.com/internxt/internxts-token-inxt-embrace-the-power-99dc8940a4b6" target="_blank"
+                    className={`${styles.learn_more} sm:text-base lg:text-xs`}>{description[0].learn}</a>
             </div>
         </div>
      );

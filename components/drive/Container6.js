@@ -36,7 +36,7 @@ const Container6 = ({ id, descriptions }) => {
                 </div>
                 
                 <div className={`${styles.image} sm:hidden`}>
-                    <Image src="/images/1440/Drive/Section 6/Business.png" width={708} height={754} />
+                    <Image src="/images/1440/Drive/Section 6/Business.png" width={740} height={704} />
                 </div>
 
                 <div className={`hidden sm:block sm:mt-12`}>
