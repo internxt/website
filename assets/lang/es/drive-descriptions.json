@@ -54,5 +54,9 @@
         "link1": "Leer más",
         "link2": "Leer estudio 1.0",
         "link3": "Leer estudio 2.0"
-    }   
+    },
+    {
+        "id": "8",
+        "title": "Cambia a Internxt Drive"
+    }
 ]

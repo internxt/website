@@ -5,6 +5,7 @@ import Container4 from '../components/drive/Container4'
 import Container5 from '../components/drive/Container5'
 import Container6 from '../components/drive/Container6'
 import Container7 from '../components/drive/Container7'
+import Container8 from '../components/drive/Container8'
 import Footer from '../components/layout/Footer'
 import TopBar from '../components/layout/TopBar'
 import Layout from '../components/layout/Layout'
@@ -23,6 +24,7 @@ const Home = (props) => {
       <Container5 id='5' {...props} />
       <Container6 id='6' descriptions={props.descriptions} />
       <Container7 id='7' descriptions={props.descriptions} />
+      <Container8 id='8' descriptions={props.descriptions} />
       <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
     </Layout>
   )

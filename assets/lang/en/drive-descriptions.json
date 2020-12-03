@@ -54,5 +54,9 @@
         "link1": "Read more",
         "link2": "Read study 1.0",
         "link3": "Read study 2.0"
-    }   
+    },
+    {
+        "id": "8",
+        "title": "Switch to Internxt Drive"
+    }
 ]
