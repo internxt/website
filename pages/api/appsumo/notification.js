@@ -16,7 +16,7 @@ export default function handler(req, res) {
                     "is_new_user": "false"
                 })
 
-                // Enhance Tier
+                /* // Enhance Tier
                 const { action, email, plan_id, uuid, activation_email, invoice_item_uuid } = req.body
                 req.setHeader('Authorization: Bearer <token>')
                 res.status(200).json({
@@ -42,7 +42,7 @@ export default function handler(req, res) {
                 req.setHeader('Authorization: Bearer <token>')
                 res.status(200).json({
                     "message": "product updated"
-                })
+                }) */
             }
             else res.status(400).json({ msg: 'To access this API you need a valid body' })
         } 
