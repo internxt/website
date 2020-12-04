@@ -189,7 +189,7 @@ button:focus {
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
-  padding: 8px 15px 0 30px;
+  padding: 0 15px 0 30px;
 }
 
 .navbar-light .navbar-toggler {
