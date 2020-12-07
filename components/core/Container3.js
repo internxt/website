@@ -39,9 +39,16 @@ const Container3 = ({ id, descriptions }) => {
                     </p>
                 </div>
                 
-                <div className={`sm:mt-4`}>
-                    <Image src="/images/1440/Core/Section 3/Core interface.png" width={1008} height={658} />
-                </div>
+                {
+                    dashboard ?
+                        <div className={`sm:mt-4`}>
+                            <img src="/images/1440/Core/Section 3/Core dashboard.png" width={1008} height={658} />
+                        </div>
+                    :
+                        <div className={`sm:mt-4`}>
+                            <img src="/images/1440/Core/Section 3/Core interface.png" width={1008} height={658} />
+                        </div>
+                }
             </div>
 
             <div className={`grid grid-cols-2 gap-x-24 sm:hidden lg:py-16 xl:mb-40`}>

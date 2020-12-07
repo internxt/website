@@ -41,7 +41,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                 </div>
 
                 <div className={`${styles.lgcross} sm:hidden lg:w-72 lg:pl-48`}>
-                    <Image src="/images/1440/Photos/Section 1/cross 1.png" width={29} height={29} />
+                    <Image src="/images/1440/Photos/Section 1/cross 1.png" width={19} height={19} />
                 </div>
 
                 <div className={`${styles.mdcross} sm:hidden lg:pr-32 lg:pt-40`}>

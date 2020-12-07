@@ -12,7 +12,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     {description[0].title}
                 </h1>
 
-                <p className={`${styles.subtitle} mb-4 sm:text-xl sm:w-84 sm:mb-0 lg:text-xl`}>
+                <p className={`${styles.subtitle} sm:text-xl sm:w-84 sm:mb-0 lg:text-xl`}>
                     {description[0].subtitle}
                 </p>
 
