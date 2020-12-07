@@ -29,7 +29,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
 
                 <div className={`${styles.get_started_container} lg:mt-10`}>
                     
-                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} font-avertasemibold sm:text-base lg:text-sm lg:h-8 lg:w-32`}>
+                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} sm:text-base lg:text-sm lg:h-8 lg:w-32`}>
                         {descriptions.button}
                     </a>
                     

@@ -59,11 +59,9 @@
 
 .text_button {
     font-family: "averta-semibold";
-    font-size: 17px;
-    font-weight: bold;
-    line-height: normal;
-    letter-spacing: normal;
+    font-size: 16px;
     text-align: center;
+    letter-spacing: 0.1px;
     color: #605dfa;
     margin-bottom: 0;
 }
@@ -158,7 +156,7 @@
 }
 
 .image {
-    margin: -7px 0 0;
+    margin: -7px 0 0 -30px;
 }
 
 .form {

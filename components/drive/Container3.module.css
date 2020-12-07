@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 0 0 -5rem;
 }
 
 .main {
@@ -16,7 +17,7 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 3rem;
 }
 
 .title {
