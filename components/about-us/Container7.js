@@ -1,6 +1,6 @@
 import styles from './Container7.module.css'
-import descriptions from '../../assets/lang/en/about-us-descriptions.json'
 import PublishedArticle from '../cards/PublishedArticle'
+import Image from 'next/image'
 
 const Container7 = ({ id, articles, descriptions, cardDescriptions }) => {
     const description = descriptions.filter( desc => desc.id === id)
@@ -33,7 +33,7 @@ const Container7 = ({ id, articles, descriptions, cardDescriptions }) => {
 
             <a href="https://medium.com/internxt" target="_blank" className={`${styles.link} flex flex-row items-center sm:my-16 lg:text-lg lg:mb-16`}>
                 <p className="mr-2 sm:text-lg">{description[0].link}</p>
-                {/* <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} /> */}
+                <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
             </a>
         </div>
      );

@@ -1,5 +1,6 @@
 import styles from './Container5.module.css'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const Container5 = ({ id, descriptions }) => {
 
@@ -110,6 +111,7 @@ const Container5 = ({ id, descriptions }) => {
 
             <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={`${styles.link} flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
                 <p className="sm:text-lg mr-2">{description[0].link}</p>
+                <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow white.svg" width={14} height={11} />
             </a>
         </div>
     );

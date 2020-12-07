@@ -1,9 +1,10 @@
 [
     {
         "id": "1",
-        "title": "Monetize unused storage space.",
+        "title": "Monetize unused [[storage]] space",
         "subtitle": "A simple peer-to-peer [[application]] that enables [[storage]] [[providers]] to [[monetize]] unused storage by [[hosting]] encrypted shards of data.",
         "subtitle2": "Provide storage on the network",
+        "coloredTitle": ["storage"],
         "colored": ["storage", "application", "providers", "monetize", "hosting"],
         "button1": "Download",
         "button2": "Set-up & tips"

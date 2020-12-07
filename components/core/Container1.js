@@ -37,6 +37,29 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
         </div>);
     };
 
+    const formattedTextColor = (text, values) => { 
+        const regex = new RegExp(/\[\[(.*?)\]\]/);
+
+        if (!values.length)
+            return text;
+    
+        return (<div>
+            {text.split(regex)
+                .reduce((prev, current, i) => {
+                    if (!i)
+                        return [current];
+    
+                    return prev.concat(
+                        values.includes(current)  ?
+                            <span key={i + current} className={`${styles.coloredTitle}`}>
+                                {current}
+                            </span>
+                            : current
+                    );
+                }, [])}
+        </div>);
+    };
+
     return (
         <div className={`${className} relative`}>
             <div className={styles.main}>
@@ -49,7 +72,7 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
                 </div>
 
                 <h1 className={`${styles.title} sm:text-4xl sm:w-80`}>
-                    {description[0].title}
+                    {formattedTextColor(description[0].title, description[0].coloredTitle)}
                 </h1>
 
                 <p className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:mt-6`}>

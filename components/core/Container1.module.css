@@ -2,11 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 16px;
     position: relative;
     width: 100%;
-
-    padding: 3rem 0 6rem;
+    height: 95vh;
 }
 
 .secondary {
@@ -26,6 +24,7 @@
     letter-spacing: -0.59px;
     text-align: center;
     color: #2a2c35;
+    margin: 3rem 0 0;
 }
 
 .subtitle {
@@ -40,7 +39,7 @@
 }
 
 .subtitle2 {
-    font-family: "averta-bold";
+    font-family: "averta-extrabold";
     font-size: 26px;
     line-height: 1.46;
     letter-spacing: 0px;
@@ -79,7 +78,7 @@
 }
 
 .link {
-    font-family: "averta";
+    font-family: "averta-semibold";
     font-size: 17px;
     line-height: 1.95;
     letter-spacing: -0.1px;
@@ -101,4 +100,11 @@
 
 .colored {
     font-family: "averta-bold";
+}
+
+.coloredTitle {
+    background-image: linear-gradient(85deg, #46abff 0%, #9d73ff 82% ), linear-gradient(to bottom, #0084ff, #0084ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
