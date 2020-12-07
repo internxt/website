@@ -24,7 +24,7 @@ const Container3 = ({ id, descriptions }) => {
                 {description[0].title}
             </text>
 
-            <div className={`grid grid-cols-6 gap-4 sm:grid-cols-1 sm:mt-12 lg:py-12 xl:mt-16`}>
+            <div className={`grid grid-cols-6 gap-y-6 gap-x-3 sm:grid-cols-1 sm:mt-12 lg:py-12 xl:mt-16`}>
                 <PersonalCard name={employee} job={job} picture="Fran" />
                 <PersonalCard name={employee2} job={job2} picture="Alberto" />
                 <PersonalCard name={employee3} job={job3} picture="Ale" />

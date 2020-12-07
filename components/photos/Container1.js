@@ -47,10 +47,6 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                 <div className={`${styles.mdcross} sm:hidden lg:pr-32 lg:pt-40`}>
                     <Image src="/images/1440/Photos/Section 1/cross 4.png" width={18} height={18} />
                 </div>
-
-                <div className={`sm:hidden`}>
-                    <Image src="/images/1440/Photos/Section 1/cross 2.png" width={11} height={11} />
-                </div>
             </div>
 
             <div className={`${styles.circles} sm:hidden lg:w-40 lg:pr-16 lg:mr-6 lg:pt-84`}>

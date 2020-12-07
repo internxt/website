@@ -3,11 +3,13 @@ import styles from './PriceCard.module.css'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, individual, descriptions }) => {
+const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, individual, teams, descriptions }) => {
     
     const description = descriptions.filter( desc => desc.id === "PriceCard")
 
     const [ plansize, setPlanSize ] = useState()
+    const [ href, setHref ] = useState("https://drive.internxt.com/new")
+
     const router = useRouter()
     const locale = router.locale
 
@@ -29,41 +31,43 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
 
     useEffect(() => {
         setPlanSize(formatSize(size))
-    }, [size])
+        individual ? null : setHref("mailto:hello@internxt.com")
+    }, [size, individual])
 
     return ( 
-        <div className={`${styles.card_container} relative`}>
+        <div>
+            <div className={`${styles.card_container} relative`}>
 
-            {   mostPopular ?
-                    <div>
-                        <div className={`${styles.heart1} sm:pt-0 lg:w-12 lg:pt-8`}>
-                            <Image src="/images/1440/Prices Individual/heart 1.png" width={25} height={25} /> 
+                {   mostPopular ?
+                        <div>
+                            <div className={`${styles.heart1} sm:pt-0 lg:w-12 lg:pt-8`}>
+                                <Image src="/images/1440/Prices Individual/heart 1.png" width={25} height={25} /> 
+                            </div>
+
+                            <div className={`${styles.heart2} sm:pt-36 sm:pr-4 lg:pt-40 lg:pr-4 lg:w-10`}>
+                                <Image src="/images/1440/Prices Individual/heart 2.png" width={25} height={30} /> 
+                            </div>
+
+                            <div className={`${styles.heart3} lg:w-6 lg:ml-4`}>
+                                <Image src="/images/1440/Prices Individual/heart 3.png" width={37} height={36} /> 
+                            </div>
                         </div>
+                    :
+                        null
+                }
 
-                        <div className={`${styles.heart2} sm:pt-36 sm:pr-4 lg:pt-40 lg:pr-4 lg:w-10`}>
-                            <Image src="/images/1440/Prices Individual/heart 2.png" width={25} height={30} /> 
-                        </div>
-
-                        <div className={`${styles.heart3} lg:w-6 lg:ml-4`}>
-                            <Image src="/images/1440/Prices Individual/heart 3.png" width={37} height={36} /> 
-                        </div>
-                    </div>
-                :
-                    null
-            }
-
-            {
-                free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-13`}>{description[0].getstarted}</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-13`}>{description[0].tryforfree}</p>
-            }
-            <div className={`${styles.card} lg:min-h-0 lg:w-44 lg:h-60`}>
-                { mostPopular ? <p className={`${styles.most_popular} sm:text-sm lg:text-xs lg:pt-3`}>{description[0].mostpopular}</p> : <div className={`${styles.void} lg:h-8`}></div> }
+                {
+                    free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-13`}>{description[0].getstarted}</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-13`}>{description[0].tryforfree}</p>
+                }
+                <div className={`${styles.card} lg:min-h-0 lg:w-44 lg:h-60`}>
+                    { mostPopular ? <p className={`${styles.most_popular} sm:text-sm lg:text-xs lg:pt-3`}>{description[0].mostpopular}</p> : <div className={`${styles.void} lg:h-8`}></div> }
 
                     <p className={`${styles.size} sm:text-3xl lg:text-2xl`}>
                         {plansize}
                     </p>
 
                     {free ? 
-                            <a href="https://drive.internxt.com/new" className={styles.free_msg}>
+                            <a href={href} target="_blank" className={styles.free_msg}>
                                 <h1 className={`${styles.text_free} sm:text-2xl sm:font-avertabold lg:text-lg`}> { individual ? <span>{description[0].free}</span> : <span>{description[0].contact}</span> } </h1>
 
                                 <h1 className={`${styles.text_forever} sm:text-xl lg:text-sm`}> { individual ? <span>{description[0].forever}</span> : <span>{description[0].team}</span> } </h1>
@@ -90,7 +94,15 @@ const PriceCard = ({ free, size, pMonth, pre6months, preYear, mostPopular, indiv
                                 </h1>
                             </div>
                     }
+                </div>
             </div>
+            {
+                teams ? <p className={`${styles.try_for_free} mt-4 sm:hidden lg:text-xxs xl:text-13`}>
+                    {
+                        free ? description[0].limitedMembers : description[0].unlimitedMembers
+                    }
+                    </p> : null
+            }
         </div>
     );
 }

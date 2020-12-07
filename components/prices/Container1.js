@@ -93,10 +93,10 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     </div>
                 :
                     <div className={`grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-8`}>
-                        <PriceCard size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" descriptions={cardDescriptions} />
-                        <PriceCard size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" mostPopular="true" descriptions={cardDescriptions} />
-                        <PriceCard size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" descriptions={cardDescriptions} />
-                        <PriceCard free="true" size={200000} individual={false} descriptions={cardDescriptions} />
+                        <PriceCard teams={true} size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" descriptions={cardDescriptions}  />
+                        <PriceCard teams={true} size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" mostPopular="true" descriptions={cardDescriptions} />
+                        <PriceCard teams={true} size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" descriptions={cardDescriptions} />
+                        <PriceCard teams={true} free="true" size={200000} individual={false} descriptions={cardDescriptions} />
                     </div>
             }
         </div>

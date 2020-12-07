@@ -25,14 +25,14 @@ const InfoCard = ({ title, subtitle, subtitle2, linkText, link, linkText2, link2
 
                 <a href={link} target="_blank" className={`flex flex-row w-auto items-center absolute bottom-0 lg:pb-6 lg:text-sm lg:m-0 xl:mb-12`}>
                     <p className={`${styles.margin} ${styles.link} lg:text-13`}>{linkText}</p>
-                    <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
+                    <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={13} height={11} />
                 </a>
 
             {
                 linkText2 ? 
                     <a href={link2} target="_blank" className={`flex flex-row w-auto items-center absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-12 xl:mr-32`}>
                         <p className={`${styles.margin} ${styles.link} lg:text-13`}>{linkText2}</p>
-                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
+                        <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={13} height={11} />
                     </a>
                 :
                     null
