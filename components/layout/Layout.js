@@ -11,9 +11,9 @@ export default function Layout({
         <>
             <Head>
                 <title>{title}</title>
-                <link rel="alternate" hreflang="en" href="https://internxt.com/" />
-                <link rel="alternate" hreflang="es" href="https://internxt.com/es" />
-                <link rel="alternate" hreflang="x-default" href="https://internxt.com/" />
+                <link rel="alternate" hrefLang="en" href="https://internxt.com/" />
+                <link rel="alternate" hrefLang="es" href="https://internxt.com/es" />
+                <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={description}></meta>
