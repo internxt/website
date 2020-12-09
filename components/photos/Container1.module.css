@@ -174,3 +174,77 @@
     background-color: #0074e0;
     cursor: pointer;
 }
+
+@keyframes semirotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animation_picture {
+    transform: translatey(0px);
+    animation: semirotating 10s ease-in-out infinite;
+}
+
+.animation_weather {
+    transform: translatey(0px);
+    animation: semirotating 15s linear infinite;
+}
+
+.animation_video {
+    transform: translatey(0px);
+    animation: semirotating 20s ease-in-out infinite;
+}
+
+.animation_cross {
+    transform: translatey(0px);
+    animation: move 20s linear infinite;
+}
+
+.animation_cross2 {
+    transform: translatey(0px);
+    animation: move 15s linear infinite;
+}
+
+.animation_cross3 {
+    transform: translatey(0px);
+    animation: move 10s linear infinite;
+}
+
+.animation_circles {
+    transform: translatey(0px);
+    animation: semirotating 25s linear infinite;
+}
+
+.animation_recorder {
+    transform: translatey(0px);
+    animation: semirotating 20s ease-in-out infinite;
+}
+
+.animation_message {
+    transform: translatey(0px);
+    animation: semirotating 20s ease-in-out infinite;
+    z-index: 1;
+}

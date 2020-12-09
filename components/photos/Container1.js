@@ -45,7 +45,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
 
-                    className={`${styles.picture} sm:hidden lg:w-32`}>
+                    className={`${styles.picture} ${styles.animation_picture} sm:hidden lg:w-32`}>
                     <Image src="/images/1440/Photos/Section 1/1.png" width={75} height={92} />
                 </div>
 
@@ -54,7 +54,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
                   
-                    className={`${styles.weather} sm:hidden lg:w-32 lg:pb-16`}>
+                    className={`${styles.weather} ${styles.animation_weather} sm:hidden lg:w-32 lg:pb-16`}>
                     <Image src="/images/1440/Photos/Section 1/2.png" width={68} height={65} />
                 </div>
 
@@ -63,7 +63,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
 
-                    className={`${styles.video} sm:hidden lg:w-16 xl:w-16`}>
+                    className={`${styles.video} ${styles.animation_video} sm:hidden lg:w-16 xl:w-16`}>
                     <Image src="/images/1440/Photos/Section 1/6.png" width={110} height={134} />
                 </div>
 
@@ -72,7 +72,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
 
-                    className={`${styles.lgcross} sm:hidden lg:w-72 lg:pl-48`}>
+                    className={`${styles.lgcross} ${styles.animation_cross} sm:hidden lg:w-72 lg:pl-48`}>
                     <Image src="/images/1440/Photos/Section 1/cross 1.png" width={19} height={19} />
                 </div>
 
@@ -81,7 +81,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
 
-                    className={`${styles.mdcross} sm:hidden lg:pr-32 lg:pt-40`}>
+                    className={`${styles.recorder} ${styles.animation_cross2} sm:hidden lg:pr-32 lg:pt-40`}>
                     <Image src="/images/1440/Photos/Section 1/cross 4.png" width={18} height={18} />
                 </div>
             </div>
@@ -91,7 +91,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                 data-aos-delay="350"
                 data-aos-duration="700"
 
-                className={`${styles.circles} sm:hidden lg:w-40 lg:pr-16 lg:mr-6 lg:pt-84`}>
+                className={`${styles.circles} ${styles.animation_circles} sm:hidden lg:w-40 lg:pr-16 lg:mr-6 lg:pt-84`}>
                 <Image src="/images/1440/Photos/Section 1/5.png" width={182} height={129} />
             </div>
 
@@ -146,7 +146,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
                     
-                    className={`${styles.recorder} sm:hidden lg:w-84 lg:pl-32 lg:pt-32`}>
+                    className={`${styles.recorder} ${styles.animation_recorder} sm:hidden lg:w-84 lg:pl-32 lg:pt-32`}>
                     <Image src="/images/1440/Photos/Section 1/3.png" width={133} height={104} />
                 </div>
 
@@ -155,7 +155,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
                     
-                    className={`${styles.message} sm:hidden lg:w-92 lg:pr-72`}>
+                    className={`${styles.message} ${styles.animation_message} sm:hidden lg:w-92 lg:pr-72`}>
                     <Image src="/images/1440/Photos/Section 1/4.png" width={82} height={80} />
                 </div>
 
@@ -164,7 +164,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="700"
                     
-                    className={`${styles.cross} sm:hidden lg:pr-64`}>
+                    className={`${styles.cross} ${styles.animation_cross3} sm:hidden lg:pr-64`}>
                     <Image src="/images/1440/Photos/Section 1/cross 3.png" width={19} height={19} />
                 </div>
             </div>
