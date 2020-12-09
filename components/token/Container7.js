@@ -30,12 +30,12 @@ const Container7 = ({ id, data, descriptions }) => {
 
     return ( 
         <div className={background}>
-            <h1 className={`${styles.title} sm:text-4xl sm:my-16 lg:text-4.5xl lg:mt-20`}>
+            <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} sm:text-4xl sm:my-16 lg:text-4.5xl lg:mt-20`}>
                 {description[0].title}
             </h1>
 
             <div className="grid grid-cols-3 gap-8 sm:grid-cols-1 sm:gap-y-16 lg:mt-12 lg:px-32 xl:gap-24">
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label}
                     </p>
@@ -45,7 +45,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label2}
                     </p>
@@ -55,17 +55,17 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label3}
                     </p>
 
                     <p className={data.quote.EUR.percent_change_7d > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                    {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
+                        {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
                     </p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label4}
                     </p>
@@ -75,7 +75,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label5}
                     </p>
@@ -83,7 +83,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     <p className={`${styles.data} lg:text-4xl lg:mt-4 ${styles.blue}`}>$18.2M</p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label6}
                     </p>
@@ -91,7 +91,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     <p className={`${styles.data} lg:text-4xl lg:mt-4 ${styles.blue}`}>$33.71</p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label7}
                     </p>
@@ -101,7 +101,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="350" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label8}
                     </p>
@@ -111,7 +111,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
                 </div>
                 
-                <div className={styles.card}>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="400" className={styles.card}>
                     <p className={`${styles.label} lg:text-xss`}>
                         {description[0].label9}
                     </p>

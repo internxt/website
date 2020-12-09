@@ -16,12 +16,22 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
 
     return ( 
         <div className={`${background}`}>
-            <h1 className={`${styles.title} sm:hidden`}>
+            <h1 
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="500"
+
+                className={`${styles.title} sm:hidden`}>
                 {description[0].title}
             </h1>
 
             <div className="grid grid-cols-4 gap-4 sm:flex sm:flex-col sm:items-center sm:mb-12 xl:mb-24">
-                <div className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:mt-12 sm:p-0 sm:shadow-none sm:border-0`}>
+                <div 
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    data-aos-duration="500"
+
+                    className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:mt-12 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
                         <p className={`${styles.steps_text} sm:text-13`}>{description[0].step1}</p>
                     </div>
@@ -41,7 +51,12 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
 
                 <div className="hidden sm:block sm:h-1 sm:w-10/12 sm:bg-gray-300 sm:my-8"></div>
 
-                <div className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
+                <div 
+                    data-aos="fade-up"
+                    data-aos-delay="350"
+                    data-aos-duration="500"
+
+                    className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
                         <p className={`${styles.steps_text} sm:text-13`}>{description[0].step2}</p>
                     </div>
@@ -61,7 +76,12 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
 
                 <div className="hidden sm:block sm:h-1 sm:w-10/12 sm:bg-gray-300 sm:mt-4 sm:mb-12"></div>
                 
-                <div className={`${styles.card} col-span-4 w-auto sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
+                <div 
+                    data-aos="fade-up"
+                    data-aos-delay="450"
+                    data-aos-duration="500"
+
+                    className={`${styles.card} col-span-4 w-auto sm:h-auto sm:w-84 sm:m-0 sm:p-0 sm:shadow-none sm:border-0`}>
                     <div className={`${styles.steps}`}>
                         <p className={`${styles.steps_text} sm:text-13`}>{description[0].step3}</p>
                     </div>
@@ -88,8 +108,18 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
                 </div>
             </div>
 
-            <Image src="/images/1440/Core/Section 6/emoji.png" width={89} height={105} />
-            <h1 className={`${styles.all_set} sm:text-5xl`}>
+            <Image 
+                data-aos="flip-right"
+                data-aos-delay="550"
+                data-aos-duration="700"
+
+                src="/images/1440/Core/Section 6/emoji.png" width={89} height={105} />
+            <h1 
+                data-aos="fade-down"
+                data-aos-delay="150"
+                data-aos-duration="500"
+
+                className={`${styles.all_set} sm:text-5xl`}>
                 {description[0].allset}
             </h1>
         </div>

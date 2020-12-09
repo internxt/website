@@ -19,7 +19,12 @@ const Container7 = ({ id, descriptions }) => {
 
     return ( 
         <div className={background}>
-            <div className="sm:items-center sm:my-24 xl:w-9/12 xl:my-32">
+            <div 
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="500"
+
+                className="sm:items-center sm:my-24 xl:w-9/12 xl:my-32">
                 <Faq 
                     data={description[0].faq} 
                     styles={{

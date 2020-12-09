@@ -17,7 +17,7 @@ const Container3 = ({ id, descriptions }) => {
     return ( 
         <div className={background}>
             <div className={`${styles.container} sm:justify-center sm:flex-col-reverse max-w-1600`}>
-                <div  data-aos="fade-up" data-aos-duration="300" className={`${styles.image} sm:object-cover sm:w-auto lg:w-5/12`}>
+                <div className={`${styles.image} sm:object-cover sm:w-auto lg:w-5/12`}>
                     <Image src="/images/1440/Drive/Section 3/icons graphic.png" width={742} height={722} />
                 </div>
 

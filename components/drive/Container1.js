@@ -25,28 +25,48 @@ const Container1 = ({ id, descriptions }) => {
                     {description[0].title}
                 </h1>
 
-                <p
+                <p 
                     data-aos="fade-up"
-                    data-aos-delay="150"
+                    data-aos-delay="250"
                     data-aos-duration="500"
 
                     className={`${styles.subtitle} sm:text-xl sm:w-80 sm:pt-8 lg:text-xl lg:w-7/12`}>
                     {description[0].subtitle}
                 </p>
 
-                <div className={`${styles.star} sm:top-0 sm:ml-6 sm:mt-6 sm:w-6 sm:p-0 lg:ml-24`}>
+                <div 
+                    data-aos="fade"
+                    data-aos-delay="250"
+                    data-aos-duration="700"
+
+                    className={`${styles.star} sm:top-0 sm:ml-6 sm:mt-6 sm:w-6 sm:p-0 lg:ml-24`}>
                     <Image src="/images/1440/Drive/Section 1/star icon.png" width={47} height={50} />
                 </div>
 
-                <div className={`${styles.gear} sm:p-0 sm:top-0 sm:w-6 sm:mr-12 sm:mt-3 lg:mt-8 lg:mr-22`}>
+                <div 
+                    data-aos="fade"
+                    data-aos-delay="250"
+                    data-aos-duration="700"
+                    
+                    className={`${styles.gear} sm:p-0 sm:top-0 sm:w-6 sm:mr-12 sm:mt-3 lg:mt-8 lg:mr-22`}>
                     <Image src="/images/1440/Drive/Section 1/cog icon.png" width={37} height={38} />
                 </div>
 
-                <div className={`${styles.coin} sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:w-12 lg:mb-20`}>
+                <div 
+                    data-aos="fade"
+                    data-aos-delay="250"
+                    data-aos-duration="700"
+                    
+                    className={`${styles.coin} sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:w-12 lg:mb-20`}>
                     <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
                 </div>
 
-                <div className={`${styles.lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}>
+                <div 
+                    data-aos="fade"
+                    data-aos-delay="250"
+                    data-aos-duration="700"
+                    
+                    className={`${styles.lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}>
                     <Image src="/images/1440/Drive/Section 1/lock icon.png" width={45} height={60} />
                 </div>
             </div>
@@ -54,7 +74,7 @@ const Container1 = ({ id, descriptions }) => {
             <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
                 <h1 
                     data-aos="fade-up"
-                    data-aos-delay="150"
+                    data-aos-delay="350"
                     data-aos-duration="500"
 
                     className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}>
@@ -63,7 +83,7 @@ const Container1 = ({ id, descriptions }) => {
 
                 <form   
                     data-aos="fade-up"
-                    data-aos-delay="150"
+                    data-aos-delay="450"
                     data-aos-duration="500"
                     
                     method="get" 
@@ -89,7 +109,7 @@ const Container1 = ({ id, descriptions }) => {
 
                 <div 
                     data-aos="fade-up"
-                    data-aos-delay="150"
+                    data-aos-delay="550"
                     data-aos-duration="500"
                     
                     className={`${styles.billing_container}`}>
@@ -98,11 +118,20 @@ const Container1 = ({ id, descriptions }) => {
                     </p>
                 </div>
 
-                <div className={`${styles.cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}>
+                <div 
+                    data-aos="fade"
+                    data-aos-delay="250"
+                    data-aos-duration="700"
+                    className={`${styles.cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}>
                     <Image src="/images/1440/Drive/Section 1/cloud icon.png" width={70} height={52} />
                 </div>
 
-                <div className={`${styles.hand} sm:hidden lg:w-84`}>
+                <div 
+                    data-aos="fade-up-left"
+                    data-aos-delay="450"
+                    data-aos-duration="700"
+                    
+                    className={`${styles.hand} sm:hidden lg:w-84`}>
                     <Image src="/images/1440/Drive/Section 1/purplehand.png" width={482} height={310} />
                 </div>
             </div>

@@ -3,11 +3,18 @@ import TopBar from '../components/layout/TopBar'
 import Container1 from '../components/prices/Container1'
 import Container2 from '../components/prices/Container2'
 import Layout from '../components/layout/Layout'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const Pricing = (props) => {
 
     const metatags = props.metatagsDescriptions.filter( desc => desc.id === "pricing")
 
+    useEffect(() => {
+        AOS.init()
+    }, [])
+    
     return ( 
         <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description} >
             <TopBar />

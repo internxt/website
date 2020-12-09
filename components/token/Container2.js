@@ -45,28 +45,60 @@ const Container2 = ({ id, descriptions }) => {
 
                 <div className="hidden sm:flex sm:flex-col">
                     <div className={`${styles.card_container} sm:grid sm:grid-cols-1`}>
-                        <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
-                        <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
-                        <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
+                        <div data-aos="fade-up" data-aos-duration="300">
+                            <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="300">
+                            <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="300">
+                            <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
+                        </div>
                     </div>
 
                     <div className={`${styles.card_container} sm:grid sm:grid-cols-1`}>
-                        <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
-                        <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
-                        <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                        <div data-aos="fade-up" data-aos-duration="300">
+                            <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="300">
+                            <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-duration="300">
+                            <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                        </div>
                     </div>
                 </div>
 
                 <div className={`${styles.card_container} sm:hidden`}>
-                    <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
-                    <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
-                    <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
+                    <div data-aos="fade-up" data-aos-duration="300">
+                        <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
+                        <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
+                        <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
+                    </div>
                 </div>
 
                 <div className={`${styles.card_container} sm:hidden`}>
-                    <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
-                    <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
-                    <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
+                        <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
+                        <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
+                        <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                    </div>
                 </div>
                 
             </div>

@@ -14,16 +14,30 @@ const Container1 = ({ id, descriptions }) => {
 
     return ( 
         <div className={background}>
-            <h1 className={`${styles.title} sm:text-4xl sm:w-80 sm:mb-8 lg:text-8xl lg:w-8/12 lg:mb-6`}>
+            <h1 
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="300"
+                
+                className={`${styles.title} sm:text-4xl sm:w-80 sm:mb-8 lg:text-8xl lg:w-8/12 lg:mb-6`}>
                 {description[0].title}
             </h1>
 
-            <p className={`${styles.subtitle} sm:text-xl sm:w-11/12 lg:text-xl lg:w-108`}>
+            <p 
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="300"
+                
+                className={`${styles.subtitle} sm:text-xl sm:w-11/12 lg:text-xl lg:w-108`}>
                 {description[0].subtitle}
             </p>
 
             <div className={styles.buttons_container}>
                 <a 
+                    data-aos="fade-up"
+                    data-aos-delay="250"
+                    data-aos-duration="300"
+                    
                     href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
                     target="_blank" 
                     className={`${styles.button} flex items-center justify-center lg:h-8 lg:w-28`}
@@ -31,7 +45,12 @@ const Container1 = ({ id, descriptions }) => {
                     <p className={`${styles.button_text} sm:text-base lg:text-xs`}>{description[0].button}</p>
                 </a>
                 
-                <a href="https://medium.com/internxt/internxts-token-inxt-embrace-the-power-99dc8940a4b6" target="_blank"
+                <a 
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    data-aos-duration="300"
+                    
+                    href="https://medium.com/internxt/internxts-token-inxt-embrace-the-power-99dc8940a4b6" target="_blank"
                     className={`${styles.learn_more} sm:text-base lg:text-xs`}>{description[0].learn}</a>
             </div>
         </div>

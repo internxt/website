@@ -31,34 +31,63 @@ const Container5 = ({ id, descriptions }) => {
 
     return (
         <div className={styles.background}>
-            <h1 className={`${styles.title} sm:text-4xl sm:w-80 sm:mt-12`}>
+            <h1  
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="500"
+
+                className={`${styles.title} sm:text-4xl sm:w-80 sm:mt-12`}>
                 {description[0].title}
             </h1>
 
-            <p className={`${styles.subtitle} sm:text-xl sm:w-80`}>
+            <p  
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="500"
+
+                className={`${styles.subtitle} sm:text-xl sm:w-80`}>
                 {description[0].subtitle}
             </p>
 
-            <p className={`${styles.subtitle} sm:text-xl sm:w-80`}>
+            <p  
+                data-aos="fade-up"
+                data-aos-delay="250"
+                data-aos-duration="500"
+
+                className={`${styles.subtitle} sm:text-xl sm:w-80`}>
                 {description[0].subtitle2}
             </p>
 
             <div className={`grid grid-cols-3 gap-x-6 sm:flex sm:flex-col `}>
                 <div className={`${styles.input_container} sm:mt-12`}>
-                    <label className={`${styles.label}`}>
+                    <label  
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        data-aos-duration="500"
+
+                        className={`${styles.label}`}>
                         {description[0].label}
                     </label>
 
-                    <div className={`${styles.placeholders}`}>
-                        <input
-                            type="number"
+                    <div  
+                        data-aos="fade-up"
+                        data-aos-delay="350"
+                        data-aos-duration="500"
+
+                        className={`${styles.placeholders}`}>
+                        <input type="number"
                             min="1"
                             className={`${styles.input}`}
                             onChange={e => setStorage(e.target.value)}
                         />
 
                         <div className={`${styles.type_container}`}>
-                            <p className={`${styles.type}`}>
+                            <p  
+                                data-aos="fade-left"
+                                data-aos-delay="1050"
+                                data-aos-duration="800"
+
+                                className={`${styles.type}`}>
                                 GB
                             </p>
                         </div>
@@ -66,20 +95,34 @@ const Container5 = ({ id, descriptions }) => {
                 </div>
 
                 <div className={`${styles.input_container} sm:mt-6`}>
-                    <label className={`${styles.label}`}>
+                    <label 
+                        data-aos="fade-up"
+                        data-aos-delay="450"
+                        data-aos-duration="500"
+
+                        className={`${styles.label}`}>
                         {description[0].label2}
                     </label>
 
-                    <div className={`${styles.placeholders} `}>
-                        <input
-                            type="number"
+                    <div 
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                        data-aos-duration="500"
+                        
+                        className={`${styles.placeholders} `}>
+                        <input type="number"
                             min="1"
                             className={`${styles.input}`}
                             onChange={e => setInxt(e.target.value)}
                         />
 
                         <div className={`${styles.type_container}`}>
-                            <p className={`${styles.type}`}>
+                            <p 
+                                data-aos="fade-left"
+                                data-aos-delay="1050"
+                                data-aos-duration="800"
+                                
+                                className={`${styles.type}`}>
                                 INXT
                             </p>
                         </div>
@@ -87,11 +130,21 @@ const Container5 = ({ id, descriptions }) => {
                 </div>
 
                 <div className={`${styles.input_container} sm:mt-20`}>
-                    <label className={`${styles.label}`}>
+                    <label 
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                        data-aos-duration="500"
+                        
+                        className={`${styles.label}`}>
                         {description[0].label3}
                     </label>
 
-                    <div className={`${styles.placeholders}`}>
+                    <div 
+                        data-aos="fade-up"
+                        data-aos-delay="650"
+                        data-aos-duration="500"
+                        
+                        className={`${styles.placeholders}`}>
                         <input
                             type="text"
                             min="0"
@@ -101,7 +154,12 @@ const Container5 = ({ id, descriptions }) => {
                         />
 
                         <div className={`${styles.type_container}`}>
-                            <p className={`${styles.type}`}>
+                            <p 
+                                data-aos="fade-left"
+                                data-aos-delay="1050"
+                                data-aos-duration="800"
+                                
+                                className={`${styles.type}`}>
                                 EUR
                             </p>
                         </div>
@@ -109,7 +167,12 @@ const Container5 = ({ id, descriptions }) => {
                 </div>
             </div>
 
-            <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
+            <a 
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="500"
+                
+                href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank" className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center lg:text-lg lg:mb-16`}>
                 <p className="sm:text-lg mr-2">{description[0].link}</p>
                 <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow white.svg" width={14} height={11} />
             </a>

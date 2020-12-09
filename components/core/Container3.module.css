@@ -32,6 +32,7 @@
     text-align: center;
     color: #2a2c35;
     margin: 0 0 1rem 0;
+    z-index: -1;
 }
 
 .subtitle1 {
@@ -52,6 +53,7 @@
     letter-spacing: normal;
     text-align: center;
     color: #545465;
+    z-index: -1;
 }
 
 .line {

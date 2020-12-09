@@ -51,29 +51,37 @@ const Container4 = ({ id, descriptions, cardDescriptions }) => {
                 /> 
             </div>
 
-           <h1 className={`${styles.title} leading-9 sm:text-4xl sm:mt-16 sm:w-80 lg:text-5xl lg:mt-16`}>
+            <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} leading-9 sm:text-4xl sm:mt-16 sm:w-80 lg:text-5xl lg:mt-16`}>
                {formattedText(description[0].title, description[0].colored)}
-           </h1>
+            </h1>
 
-           <p className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-xl xl:mt-4`}>
+            <p data-aos="fade-up" data-aos-duration="300" className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-xl xl:mt-4`}>
                {description[0].subtitle}
-           </p>
+            </p>
 
-           <p className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-xl`}>
+            <p data-aos="fade-up" data-aos-duration="300" className={`${styles.subtitle} sm:text-xl sm:w-80 lg:text-xl`}>
                {description[0].subtitle2}
-           </p>
+            </p>
 
-           <div className={`${styles.card_container} grid grid-cols-3 sm:grid sm:grid-cols-1 sm:gap-y-12 sm:mt-12`}>
-               <StakeCard bundle={description[0].bundle1} percentage="5" inxtQty="0 - 1,000 INXT" descriptions={cardDescriptions} />
-               <StakeCard bundle={description[0].bundle2} percentage="10" inxtQty="1,000 - 10,000 INXT" descriptions={cardDescriptions} />
-               <StakeCard bundle={description[0].bundle3} percentage="20" inxtQty="Above 10,000 INXT" descriptions={cardDescriptions} />
+            <div className={`${styles.card_container} grid grid-cols-3 sm:grid sm:grid-cols-1 sm:gap-y-12 sm:mt-12`}>
+                <div data-aos="fade-up" data-aos-duration="300">
+                   <StakeCard bundle={description[0].bundle1} percentage="5" inxtQty="0 - 1,000 INXT" descriptions={cardDescriptions} />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
+                   <StakeCard bundle={description[0].bundle2} percentage="10" inxtQty="1,000 - 10,000 INXT" descriptions={cardDescriptions} />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
+                   <StakeCard bundle={description[0].bundle3} percentage="20" inxtQty="Above 10,000 INXT" descriptions={cardDescriptions} />
+                </div>
            </div>
 
-           <p className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>
+           <p data-aos="fade-up" data-aos-duration="300" className={`${styles.info} sm:text-xl sm:text-center sm:w-84 lg:text-base`}>
                {description[0].subtitle3}
            </p>
            
-            <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
+            <a data-aos="fade-up" data-aos-duration="300" href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
                 target="_blank"
                 className={`flex hover:opacity-80 flex-row w-auto items-center sm:text-lg sm:my-16 lg:mt-12 lg:mb-20 xl:mt-16 xl:mb-24`}
             >

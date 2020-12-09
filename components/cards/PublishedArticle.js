@@ -6,7 +6,7 @@ const PublishedArticle = ({ article, image, descriptions}) => {
     const description = descriptions.filter( desc => desc.id === "PublishedArticle")
 
     return ( 
-        <div className={`${styles.card} col-span-1 overflow-hidden h-auto sm:w-84 lg:w-72`}>
+        <div className={`${styles.card} col-span-1 overflow-hidden h-full sm:w-84 lg:w-72`}>
             { image ? <img className="h-full w-full object-contain" src={image} /> : <p>There's no image available</p> }
 
             <div className={`${styles.description} sm:pl-6 sm:pt-2 lg:pl-4 lg:pt-4 xl:pl-6 xl:pt-6 relative`}>

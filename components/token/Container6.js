@@ -64,7 +64,7 @@ const Container6 = ({ id, descriptions }) => {
 
     return (
         <div className={background}>
-            <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-16 xl:mt-24`}>
+            <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} leading-10 sm:text-4xl sm:w-72 lg:text-4.5xl lg:mt-16 xl:mt-24`}>
                 {description[0].title}
             </h1>
 
@@ -77,57 +77,67 @@ const Container6 = ({ id, descriptions }) => {
             </div>
 
             <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:mt-16 lg:px-40 lg:mt-16 xl:mt-20">
-                <a href="https://exrates.me/trading/INXTBTC" target="_blank" >
-                    <div className={`${styles.card} cursor-pointer lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
-                        <Image
-                            src="/images/1440/Token/Section 5/exrates.png"
-                            width={154}
-                            height={41}
-                        />
-                    </div>
-                </a>
+                <div data-aos="fade-up" data-aos-duration="300">
+                    <a href="https://exrates.me/trading/INXTBTC" target="_blank" >
+                        <div className={`${styles.card} cursor-pointer lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/exrates.png"
+                                width={154}
+                                height={41}
+                            />
+                        </div>
+                    </a>
+                </div>
 
-                <a href="https://info.uniswap.org/pair/0x73994f935b23511686ce1dd59c295e5100031f4b" target="_blank" >
-                    <div className={`${styles.card} lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
-                        <Image
-                            src="/images/1440/Token/Section 5/uniswap.png"
-                            width={182}
-                            height={41}
-                        />
-                    </div>
-                </a>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
+                    <a href="https://info.uniswap.org/pair/0x73994f935b23511686ce1dd59c295e5100031f4b" target="_blank" >
+                        <div className={`${styles.card} lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/uniswap.png"
+                                width={182}
+                                height={41}
+                            />
+                        </div>
+                    </a>
+                </div>
 
-                <a href="https://mercatox.com/exchange/INXT/BTC" target="_blank" >
-                    <div className={`${styles.card} lg:w-48 lg:px-6 lg:h-24 col-span-1`}>
-                        <Image
-                            src="/images/1440/Token/Section 5/mercatox.png"
-                            width={187}
-                            height={19}
-                        />
-                    </div>
-                </a>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
+                    <a href="https://mercatox.com/exchange/INXT/BTC" target="_blank" >
+                        <div className={`${styles.card} lg:w-48 lg:px-6 lg:h-24 col-span-1`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/mercatox.png"
+                                width={187}
+                                height={19}
+                            />
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:mt-4 sm:mb-16 lg:mt-2 xl:mt-2">
-                <a href="https://latoken.com/exchange/INXT_BTC" target="_blank" >
-                    <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
-                        <Image
-                            src="/images/1440/Token/Section 5/latoken.png"
-                            width={159}
-                            height={39}
-                        />
-                    </div>
-                </a>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
+                    <a href="https://latoken.com/exchange/INXT_BTC" target="_blank" >
+                        <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/latoken.png"
+                                width={159}
+                                height={39}
+                            />
+                        </div>
+                    </a>
+                </div>
 
-                <a href="https://www.fatbtc.com/trading?currency=INXT/USDT" target="_blank" >
-                    <div className={`${styles.card} lg:w-48 lg:px-12 lg:h-24 col-span-1`}>
-                        <Image
-                            src="/images/1440/Token/Section 5/fatbtc.png"
-                            width={159}
-                            height={47}
-                        />
-                    </div>
-                </a>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
+                    <a href="https://www.fatbtc.com/trading?currency=INXT/USDT" target="_blank" >
+                        <div className={`${styles.card} lg:w-48 lg:px-12 lg:h-24 col-span-1`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/fatbtc.png"
+                                width={159}
+                                height={47}
+                            />
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div className={`${styles.form_container} sm:w-100% lg:mt-16 xl:mt-24`}>
@@ -147,18 +157,18 @@ const Container6 = ({ id, descriptions }) => {
                     />
                 </div>
 
-                <h1 className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
+                <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
                     {description[0].title2}
                 </h1>
 
-                <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-16 lg:text-lg lg:mb-24 lg:w-8/12`}>
+                <p data-aos="fade-up" data-aos-duration="300" className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-16 lg:text-lg lg:mb-24 lg:w-8/12`}>
                     {description[0].subtitle}
                 </p>
 
                 <form className={`${styles.form} sm:w-full sm:pb-24 lg:pb-16`} method="post" onSubmit={parseSubmit}>
                     <div className={styles.first_half}>
                         <div className={`${styles.payment} sm:m-0`}>
-                            <div className={styles.input_container}>
+                            <div data-aos="fade-up" data-aos-duration="300" className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>
                                     {description[0].deposit}
                                 </label>
@@ -172,7 +182,7 @@ const Container6 = ({ id, descriptions }) => {
                                 />
                             </div>
 
-                            <div className={styles.input_container}>
+                            <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>
                                     {description[0].receive}
                                 </label>
@@ -187,7 +197,7 @@ const Container6 = ({ id, descriptions }) => {
                         </div>
 
                         <div className={`${styles.currency} sm:m-0`}>
-                            <div className={styles.input_container}>
+                            <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>
                                     {description[0].currency}
                                 </label>
@@ -200,7 +210,7 @@ const Container6 = ({ id, descriptions }) => {
                                 </select>
                             </div>
 
-                            <div className={styles.input_container}>
+                            <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className={styles.input_container}>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>
                                     {description[0].currency}
                                 </label>
@@ -215,20 +225,22 @@ const Container6 = ({ id, descriptions }) => {
                     </div>
 
                     <div className={`${styles.second_half} sm:w-84 sm:items-center`}>
-                        <label className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>
+                        <label data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>
                             {description[0].address1}
                         </label>
                         <input
+                            data-aos="fade-up" data-aos-duration="300" data-aos-delay="250"
                             className={`${styles.input} ${styles.input2} lg:text-sm`}
                             name="receive_addr"
                             required
                             placeholder="INXT Receiving address"
                         />
 
-                        <label className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>
+                        <label data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>
                             {description[0].address1}
                         </label>
                         <input
+                            data-aos="fade-up" data-aos-duration="300" data-aos-delay="350"
                             name="addr"
                             className={`${styles.input} ${styles.input2} bg-gray-200 text-gray-600 lg:text-sm`}
                             value={addrs[currency]}
@@ -237,6 +249,7 @@ const Container6 = ({ id, descriptions }) => {
                     </div>
 
                     <input
+                        data-aos="fade-up" data-aos-duration="300" data-aos-delay="400"
                         className={`${styles.button} lg:text-xs lg:h-8 lg:w-32`}
                         value="Done"
                         type="submit"

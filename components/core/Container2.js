@@ -18,15 +18,30 @@ const Container2 = ({ id, descriptions }) => {
         <div className={background}>
             <div className={`${styles.container} sm:items-center sm:justify-center sm:flex-col`}>
                 <div className={`${styles.main} sm:items-center sm:w-auto sm:p-0 lg:pl-24`}>
-                    <h1 className={`${styles.title} sm:text-center sm:w-84 sm:text-4xl sm:mt-12 lg:text-5xl lg:w-112 lg:leading-12 xl:leading-13`}>
+                    <h1 
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                        data-aos-duration="500"
+
+                        className={`${styles.title} sm:text-center sm:w-84 sm:text-4xl sm:mt-12 lg:text-5xl lg:w-112 lg:leading-12 xl:leading-13`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} sm:text-center sm:w-10/12 sm:text-xl lg:text-lg lg:w-84`}>
+                    <p 
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                        data-aos-duration="500"
+                        
+                        className={`${styles.subtitle} sm:text-center sm:w-10/12 sm:text-xl lg:text-lg lg:w-84`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={`${styles.subtitle} sm:text-center sm:w-10/12 sm:text-xl lg:text-lg lg:w-84`}>
+                    <p 
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                        data-aos-duration="500"
+                        
+                        className={`${styles.subtitle} sm:text-center sm:w-10/12 sm:text-xl lg:text-lg lg:w-84`}>
                         {description[0].subtitle2}
                     </p>
                 </div>

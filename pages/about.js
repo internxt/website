@@ -10,11 +10,18 @@ import Footer from '../components/layout/Footer'
 import Layout from '../components/layout/Layout'
 import TopBar from '../components/layout/TopBar';
 import React from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const AboutUs = (props) => {
     
     const metatags = props.metatagsDescriptions.filter( desc => desc.id === "about")
     
+    useEffect(() => {
+        AOS.init()
+    }, [])
+
     return ( 
         <Layout segmentName='about' title={metatags[0].title} description={metatags[0].description} >
             <TopBar />

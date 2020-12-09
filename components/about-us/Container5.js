@@ -24,17 +24,35 @@ const Container5 = ({ id, descriptions }) => {
 
     return ( 
         <div className={className}>
-            <text className={`${styles.title} sm:text-4xl sm:font-avertaextrabold sm:pt-16 lg:text-5xl lg:pt-20 xl:mb-24`}>
+            <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} sm:text-4xl sm:font-avertaextrabold sm:pt-16 lg:text-5xl lg:pt-20 xl:mb-24`}>
                 {title}
-            </text>
+            </h1>
             
             <div className="grid grid-cols-3 gap-16 sm:grid-cols-1 sm:mt-12 sm:mb-16 lg:px-32 lg:pt-12 lg:pb-32 xl:gap-32 xl:mb-24">
-                <InvestorCard company={company} description={info} investor="Esade" w={125} h={38} />
-                <InvestorCard company={company2} description={info2} investor="Vodafone" w={192} h={48} />
-                <InvestorCard company={company3} description={info3} investor="Telefonica" w={192} h={53} />
-                <InvestorCard company={company4} description={info4} investor="Angels" w={200} h={32} />
-                <InvestorCard company={company6} description={info6} investor="ibm" w={125} h={54} />
-                <InvestorCard company={company5} description={info5} investor="Venture" w={245} h={42} />
+                <div data-aos="fade-up" data-aos-duration="300">
+                    <InvestorCard company={company} description={info} investor="Esade" w={125} h={38} />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
+                    <InvestorCard company={company2} description={info2} investor="Vodafone" w={192} h={48} />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
+                    <InvestorCard company={company3} description={info3} investor="Telefonica" w={192} h={53} />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
+                    <InvestorCard company={company4} description={info4} investor="Angels" w={200} h={32} />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
+                    <InvestorCard company={company6} description={info6} investor="ibm" w={125} h={54} />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
+                    <InvestorCard company={company5} description={info5} investor="Venture" w={245} h={42} />
+                </div>
+
             </div>
         </div>
      );

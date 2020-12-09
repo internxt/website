@@ -35,11 +35,11 @@ const Container6 = ({ id, descriptions }) => {
                     </Link>
                 </div>
                 
-                <div data-aos="fade-up" data-aos-duration="300" className={`${styles.image} sm:hidden`}>
+                <div className={`${styles.image} sm:hidden`}>
                     <Image src="/images/1440/Drive/Section 6/Business.png" width={740} height={704} />
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="300" className={`hidden sm:block sm:mt-12`}>
+                <div className={`hidden sm:block sm:mt-12`}>
                     <Image src="/images/1440/Drive/Section 6/375p business.png" width={708} height={658} />
                 </div>
             </div>

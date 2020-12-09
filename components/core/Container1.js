@@ -71,21 +71,46 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
                     <Image src="/images/1440/Core/Section 1/Graphic right.png" width={438} height={239} />
                 </div>
 
-                <h1 className={`${styles.title} sm:text-4xl sm:w-80`}>
+                <h1 
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+
+                    className={`${styles.title} sm:text-4xl sm:w-80`}>
                     {formattedTextColor(description[0].title, description[0].coloredTitle)}
                 </h1>
 
-                <p className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:mt-6`}>
+                <p 
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    data-aos-duration="500"
+
+                    className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:mt-6`}>
                     {formattedText(description[0].subtitle, description[0].colored)}
                 </p>
 
-                <p className={`${styles.subtitle2} sm:text-xl sm:w-6/12 sm:mt-16`}>
+                <p 
+                    data-aos="fade-up"
+                    data-aos-delay="250"
+                    data-aos-duration="500"
+                    
+                    className={`${styles.subtitle2} sm:text-xl sm:w-6/12 sm:mt-16`}>
                     {description[0].subtitle2}
                 </p>
 
                 <div className={`${styles.button_container}`}>
-                    <a href={downloadUrl} className={`${styles.button_core} sm:text-base`}>{description[0].button1}</a>
-                    <a href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank"
+                    <a 
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        data-aos-duration="500"
+
+                        href={downloadUrl} className={`${styles.button_core} sm:text-base`}>{description[0].button1}</a>
+                    <a 
+                        data-aos="fade-up"
+                        data-aos-delay="350"
+                        data-aos-duration="500"
+
+                        href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank"
                         className={`${styles.link} sm:text-base`}>{description[0].button2}</a>
                 </div>
             </div>

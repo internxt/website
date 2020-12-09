@@ -8,11 +8,18 @@ import Container5 from '../components/core/Container5'
 import Container6 from '../components/core/Container6'
 import Container7 from '../components/core/Container7'
 import Layout from '../components/layout/Layout'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const Core = (props) => {
     
   const metatags = props.metatagsDescriptions.filter( desc => desc.id === "core")
-    
+  
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <Layout segmentName="core" title={metatags[0].title} description={metatags[0].description} >
       <TopBar />

@@ -31,12 +31,16 @@ const Container2 = ({ id, descriptions }) => {
 
     return ( 
         <div className={`${styles.main}`}>
-            <h1 className={`${styles.assosciated} sm:hidden lg:text-sm lg:mb-12`}>
+            <h1 
+                data-aos="fade-up"
+                data-aos-duration="300"
+                
+                className={`${styles.assosciated} sm:hidden lg:text-sm lg:mb-12`}>
                 {description[0].title}
             </h1>
 
             <div className="flex justify-evenly items-center w-full mt-12 md:hidden lg:hidden xl:hidden">
-                <div className="w-40">
+                <div data-aos="fade-up" data-aos-duration="300" className="w-40">
                     <Image
                         src="/images/1440/About/Section 2/lanzadera.png"
                         width={177}
@@ -44,7 +48,7 @@ const Container2 = ({ id, descriptions }) => {
                     />
                 </div>
 
-                <div className="w-20">
+                <div data-aos="fade-up" data-aos-duration="300" className="w-20">
                     <Image
                         src="/images/1440/About/Section 2/stripe.png"
                         width={104}
@@ -53,7 +57,7 @@ const Container2 = ({ id, descriptions }) => {
                 </div>
             </div>
 
-            <div className="flex items-center sm:col-span-2 md:hidden lg:hidden xl:hidden mt-8">
+            <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2 md:hidden lg:hidden xl:hidden mt-8">
                 <Image
                     src="/images/1440/About/Section 2/venture.png"
                     width={235}
@@ -61,7 +65,7 @@ const Container2 = ({ id, descriptions }) => {
                 />
             </div>
         
-            <div className="flex items-center sm:col-span-2 mt-8 md:hidden lg:hidden xl:hidden">
+            <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2 mt-8 md:hidden lg:hidden xl:hidden">
                 <Image
                     src="/images/1440/About/Section 2/combinator.png"
                     width={160}
@@ -70,7 +74,7 @@ const Container2 = ({ id, descriptions }) => {
             </div>
 
             <div className="flex justify-evenly items-center w-full mt-8 md:hidden lg:hidden xl:hidden">
-                <div className="flex items-center sm:col-span-2">
+                <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2">
                     <Image
                         src="/images/1440/About/Section 2/blackberry.png"
                         width={179}
@@ -78,7 +82,7 @@ const Container2 = ({ id, descriptions }) => {
                     />
                 </div>
 
-                <div className="flex items-center sm:col-span-2 w-16">
+                <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2 w-16">
                     <Image
                         src="/images/1440/About/Section 2/500.png"
                         width={71}
@@ -88,7 +92,7 @@ const Container2 = ({ id, descriptions }) => {
             </div>
 
             <div className={`${styles.assosciated_logos} sm:hidden lg:mb-12`}>
-                <div className="flex items-center lg:w-32">
+                <div data-aos="fade-up" data-aos-duration="300" className="flex items-center lg:w-32">
                     <Image
                         src="/images/1440/About/Section 2/lanzadera.png"
                         width={177}
@@ -96,7 +100,7 @@ const Container2 = ({ id, descriptions }) => {
                     />
                 </div>
                 
-                <div className="flex items-center lg:w-20">
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className="flex items-center lg:w-20">
                     <Image
                         src="/images/1440/About/Section 2/stripe.png"
                         width={104}
@@ -104,7 +108,7 @@ const Container2 = ({ id, descriptions }) => {
                     />
                 </div>
 
-                <div className="flex items-center lg:w-16">
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className="flex items-center lg:w-16">
                     <Image
                         src="/images/1440/About/Section 2/500.png"
                         width={71}
@@ -112,7 +116,7 @@ const Container2 = ({ id, descriptions }) => {
                     />
                 </div>
 
-                <div className="flex items-center lg:w-48">
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className="flex items-center lg:w-48">
                     <Image
                         src="/images/1440/About/Section 2/venture.png"
                         width={235}
@@ -120,7 +124,7 @@ const Container2 = ({ id, descriptions }) => {
                     />
                 </div>
                 
-                <div className="flex items-center lg:w-32">
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" className="flex items-center lg:w-32">
                     <Image
                         src="/images/1440/About/Section 2/blackberry.png"
                         width={179}
@@ -128,7 +132,7 @@ const Container2 = ({ id, descriptions }) => {
                     />
                 </div>
 
-                <div className="flex items-center lg:w-32">
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" className="flex items-center lg:w-32">
                     <Image
                         src="/images/1440/About/Section 2/combinator.png"
                         width={160}
@@ -137,11 +141,19 @@ const Container2 = ({ id, descriptions }) => {
                 </div>
             </div>
 
-            <div className={`${styles.subtitle} sm:text-xl sm:w-72 sm:mt-12 lg:text-xl lg:w-120 lg:mb-16`}>
+            <div 
+                data-aos="fade-up" 
+                data-aos-duration="300" 
+                
+                className={`${styles.subtitle} sm:text-xl sm:w-72 sm:mt-12 lg:text-xl lg:w-120 lg:mb-16`}>
                 {formattedText(description[0].subtitle, description[0].colored)}
             </div>
 
-            <div className={`lg:px-32 xl:px-40`}>
+            <div  
+                data-aos="fade-up" 
+                data-aos-duration="300" 
+                
+                className={`lg:px-32 xl:px-40`}>
                 <Image
                     src="/images/1440/About/Section 2/about photos.png"
                     width={1250}
@@ -150,7 +162,11 @@ const Container2 = ({ id, descriptions }) => {
                 />
             </div>
             
-            <p className={`${styles.subtitle2} sm:text-13 sm:mt-4 sm:text-gray-600 sm:font-avertalight lg:text-xs lg:mt-2`}>
+            <p  
+                data-aos="fade-up" 
+                data-aos-duration="300" 
+                
+                className={`${styles.subtitle2} sm:text-13 sm:mt-4 sm:text-gray-600 sm:font-avertalight lg:text-xs lg:mt-2`}>
                 {description[0].subtitle2}
             </p>
         </div>

@@ -6,10 +6,17 @@ import Container3 from '../components/photos/Container3'
 import Container4 from '../components/photos/Container4'
 import Container5 from '../components/photos/Container5'
 import Layout from '../components/layout/Layout'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const Photos = (props) => {
 
     const metatags = props.metatagsDescriptions.filter( desc => desc.id === "photos")
+
+    useEffect(() => {
+        AOS.init()
+    }, [])
 
     return ( 
         <Layout segmentName="photos" title={metatags[0].title} description={metatags[0].description} >

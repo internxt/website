@@ -9,10 +9,17 @@ import Container6 from '../components/token/Container6'
 import Container7 from '../components/token/Container7'
 import Container8 from '../components/token/Container8'
 import Layout from '../components/layout/Layout'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const Token = (props) => {
 
     const metatags = props.metatagsDescriptions.filter( desc => desc.id === "token")
+    
+    useEffect(() => {
+        AOS.init()
+    }, [])
 
     return (
         <Layout segmentName="token" title={metatags[0].title} description={metatags[0].description} >

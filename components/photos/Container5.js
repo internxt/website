@@ -22,15 +22,15 @@ const Container5 = ({ id, descriptions }) => {
                 </div>
 
                 <div className={`${styles.main} sm:items-center`}>
-                    <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-84 sm:text-center leading-10 lg:text-5xl lg:max-w-none lg:w-104 xl:leading-12`}>
+                    <h1 data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={`${styles.title} leading-10 sm:text-4xl sm:w-84 sm:text-center leading-10 lg:text-5xl lg:max-w-none lg:w-104 xl:leading-12`}>
                         {description[0].title}
                     </h1>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:w-80 sm:text-center sm:pt-2 lg:text-xl lg:w-100`}>
+                    <p data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={`${styles.subtitle} sm:text-xl sm:w-80 sm:text-center sm:pt-2 lg:text-xl lg:w-100`}>
                         {description[0].subtitle}
                     </p>
 
-                    <p className={`${styles.subtitle} sm:text-xl sm:w-80 sm:text-center lg:text-xl lg:w-104`}>
+                    <p data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={`${styles.subtitle} sm:text-xl sm:w-80 sm:text-center lg:text-xl lg:w-104`}>
                         {description[0].subtitle2}
                     </p>
                 </div>
