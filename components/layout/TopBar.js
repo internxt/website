@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './TopBar.module.css'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 
 const TopBar = () => {
 

@@ -37,8 +37,9 @@ const Container8 = ({ id, descriptions }) => {
 
             <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:my-16 lg:mt-16 lg:mb-24 xl:mt-20 xl:mb-40">
                 <a href="https://medium.com/internxt/alternative-to-google-drive-ac9f5e8c3eeb" target="_blank" 
-                    className={`${styles.card} cursor-pointer lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
-                    <Image
+                    className={`${styles.card} hover:opacity-80 cursor-pointer lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
+                    <img
+                        className={styles.logo}
                         src="/images/1440/Drive/Section 8/drive.png"
                         width={195}
                         height={32}

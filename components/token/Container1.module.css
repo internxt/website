@@ -63,7 +63,7 @@
 
 .button:hover {
     cursor: pointer;
-    background-color: #0072dd;
+    opacity: 90%;
 }
 
 .button_text {
@@ -85,6 +85,11 @@
     line-height: 1.95;
     letter-spacing: -0.1px;
     color: #2a2c35;
+}
+
+.learn_more:hover {
+    color: #2a2c35;
+    opacity: 80%;
 }
 
 .left_image {

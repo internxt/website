@@ -72,6 +72,14 @@
     border: none;
 }
 
+.button1:hover {
+    opacity: 90%;
+}
+
+.button2:hover {
+    opacity: 90%;
+}
+
 .appstore {
     font-family: "averta-light";
     font-size: 17px;

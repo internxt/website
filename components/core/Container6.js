@@ -34,7 +34,7 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
                         {description[0].subtitle}
                     </p>
 
-                    <a href={downloadUrl} className={`${styles.card_link} sm:text-lg`}>
+                    <a href={downloadUrl} className={`${styles.card_link} hover:opacity-80 sm:text-lg`}>
                         {description[0].link}
                     </a>
                 </div>

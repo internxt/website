@@ -50,7 +50,7 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link
                     {bio2}
                 </p>
 
-                <a href={link} target="_blank" className={`${readmorestyle} sm:mb-6 lg:text-sm lg:mb-6 xl:mb-12`}>{description[0].link}</a>
+                <a href={link} target="_blank" className={`${readmorestyle} hover:opacity-80 sm:mb-6 lg:text-sm lg:mb-6 xl:mb-12`}>{description[0].link}</a>
             </div>
 
             <div className="w-6/12 overflow-hidden sm:hidden">

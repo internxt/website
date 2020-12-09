@@ -49,3 +49,6 @@
     letter-spacing: 0.4px;
     color: #0084ff;
 }
+.link:hover {
+    color: #0084ff;
+}

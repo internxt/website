@@ -84,6 +84,10 @@
     color: #0084ff;
 }
 
+.card_link:hover {
+    color: #0084ff;
+}
+
 .long_card_description {
     display: flex;
     flex-direction: row;

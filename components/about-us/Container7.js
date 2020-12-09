@@ -31,7 +31,7 @@ const Container7 = ({ id, articles, descriptions, cardDescriptions }) => {
                 <PublishedArticle article={articles.data[8]} image={articles.images[8]} descriptions={cardDescriptions} />
             </div>
 
-            <a href="https://medium.com/internxt" target="_blank" className={`${styles.link} flex flex-row items-center sm:my-16 lg:text-lg lg:mb-16`}>
+            <a href="https://medium.com/internxt" target="_blank" className={`${styles.link} hover:opacity-80 flex flex-row items-center sm:my-16 lg:text-lg lg:mb-16`}>
                 <p className="mr-2 sm:text-lg">{description[0].link}</p>
                 <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
             </a>

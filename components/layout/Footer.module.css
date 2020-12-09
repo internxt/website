@@ -53,7 +53,8 @@
 }
 
 .button:hover {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #605dfa;
     cursor: pointer;
 }
 
@@ -138,6 +139,10 @@
     align-items: center;
 }
 
+.followus_container:hover {
+    opacity: 70%;
+}
+
 .p_social {
     font-family: "averta";
     font-size: 16px;
@@ -145,6 +150,11 @@
     letter-spacing: normal;
     color: #646473;
     margin: .25rem 0 0;
+}
+
+.p_social:hover {
+    color: #646473;
+    opacity: 70%;
 }
 
 .line {

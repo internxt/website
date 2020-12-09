@@ -35,8 +35,8 @@ const Container2 = ({ id, descriptions, cardDescriptions }) => {
             </div>
 
             <Link href="/pricing">
-                <a className={`flex flex-row w-auto items-center sm:my-16 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
-                    <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>{description[0].link}</p>
+                <a className={`hover:opacity-80 flex flex-row w-auto items-center sm:my-16 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
+                    <p className={`${styles.link} sm:text-lg mr-2`}>{description[0].link}</p>
                     <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                 </a>
             </Link>

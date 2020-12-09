@@ -55,12 +55,12 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
                     </p>
 
                     <div className={`${styles.links} sm:justify-evenly sm:w-80`}>
-                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.link} flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}>
+                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}>
                             <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>{description[0].link1}</p>
                             <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                         </a>
 
-                        <a href={downloadUrl} target="_blank" className={`${styles.link} flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}>
+                        <a href={downloadUrl} target="_blank" className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}>
                             <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>{description[0].link2}</p>
                             <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
                         </a>

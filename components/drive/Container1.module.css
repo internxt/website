@@ -136,6 +136,10 @@
     color: white;
 }
 
+.button:hover {
+    opacity: 90%;
+}
+
 .billing_container {
     background-color: white;
     border-radius: 12px;

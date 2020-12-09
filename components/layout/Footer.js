@@ -85,10 +85,10 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                             />
                         </div>
 
-                        <p className={`${styles.p_social} sm:text-base lg:text-xs mt-6`}>
+                        <p className={`${styles.p_social} hover:opacity-100 sm:text-base lg:text-xs mt-6`}>
                             {descriptions.copyright}
                         </p>
-                        <p className={`${styles.p_social} sm:text-base lg:text-xs`}>
+                        <p className={`${styles.p_social} hover:opacity-100 sm:text-base lg:text-xs`}>
                             {descriptions.rights}
                         </p>
                     </div>

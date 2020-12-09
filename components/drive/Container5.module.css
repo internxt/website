@@ -70,6 +70,10 @@
     padding: 0 3rem 0 0;
 }
 
+.link:hover {
+    color: #0084ff;
+}
+
 .margin {
     margin: 0 0 0px;
 }

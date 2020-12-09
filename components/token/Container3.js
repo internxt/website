@@ -40,7 +40,7 @@ const Container3 = ({ id, descriptions }) => {
                     </p>
 
                     <Link href="/core">
-                        <a className={`flex flex-row w-auto items-center sm:my-10 lg:text-base lg:mt-12 lg:mb-16 xl:my-16`}>
+                        <a className={`flex hover:opacity-80 flex-row w-auto items-center sm:my-10 lg:text-base lg:mt-12 lg:mb-16 xl:my-16`}>
                             <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>{description[0].subtitle3}</p>
                             <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                         </a>

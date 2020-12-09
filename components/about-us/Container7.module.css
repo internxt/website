@@ -19,6 +19,10 @@
     margin: 5rem 0 137px;
 }
 
+.link:hover {
+    color: #0084ff;
+}
+
 .image {
     margin: 3px 0 0;
 }

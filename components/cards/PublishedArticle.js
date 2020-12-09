@@ -18,7 +18,7 @@ const PublishedArticle = ({ article, image, descriptions}) => {
                     {article.title}
                 </h1>
 
-                <a href={article.link} target="_blank" className={`${styles.link} absolute bottom-0 mb-6 sm:text-xss lg:text-xxxs mr-1`}>{description[0].link}</a>
+                <a href={article.link} target="_blank" className={`${styles.link} hover:opacity-80 absolute bottom-0 mb-6 sm:text-xss lg:text-xxxs mr-1`}>{description[0].link}</a>
             </div>
         </div>
     );

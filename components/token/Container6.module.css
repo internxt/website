@@ -34,6 +34,10 @@
     background-color: white;
 }
 
+.card:hover {
+    opacity: 70%;
+}
+
 .form_container {
     display: flex;
     flex-direction: column;

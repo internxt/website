@@ -40,7 +40,7 @@
 }
 
 .button:hover {
-    background-color: #0074e0;
+    opacity: 90%;
     cursor: pointer;
 }
 
