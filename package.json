@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
+    "aos": "^2.3.4",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "cookies": "^0.8.0",
