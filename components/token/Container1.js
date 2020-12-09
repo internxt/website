@@ -33,25 +33,30 @@ const Container1 = ({ id, descriptions }) => {
             </p>
 
             <div className={styles.buttons_container}>
-                <a 
+                <div
                     data-aos="fade-up"
                     data-aos-delay="250"
-                    data-aos-duration="300"
-                    
-                    href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
-                    target="_blank" 
-                    className={`${styles.button} flex items-center justify-center lg:h-8 lg:w-28`}
-                >
-                    <p className={`${styles.button_text} sm:text-base lg:text-xs`}>{description[0].button}</p>
-                </a>
+                    data-aos-duration="300" >
+                    <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
+                        target="_blank" 
+                        className={`${styles.button} flex items-center justify-center lg:h-8 lg:w-28`}
+                    >
+                        <p className={`${styles.button_text} sm:text-base lg:text-xs`}>{description[0].button}</p>
+                    </a>    
+                </div>
                 
-                <a 
+                <div 
                     data-aos="fade-up"
-                    data-aos-delay="300"
-                    data-aos-duration="300"
+                    data-aos-delay="250"
+                    data-aos-duration="300">
+                    <a href="https://medium.com/internxt/internxts-token-inxt-embrace-the-power-99dc8940a4b6" target="_blank"
+                        className={`${styles.learn_more} sm:text-base lg:text-xs`}>
+                        {description[0].learn}
+                    </a>
+                </div>
                     
-                    href="https://medium.com/internxt/internxts-token-inxt-embrace-the-power-99dc8940a4b6" target="_blank"
-                    className={`${styles.learn_more} sm:text-base lg:text-xs`}>{description[0].learn}</a>
+                    
+                
             </div>
         </div>
      );
