@@ -94,7 +94,7 @@ const PriceCard = ({ free, teams, size, pMonth, pre6months, preYear, mostPopular
                 }
                 {
                     teams ?
-                        <p className={`${styles.members} mt-4 sm:hidden lg:text-xxs xl:text-13`}>
+                        <p className={`${styles.members} mt-4 lg:text-xxs xl:text-13`}>
                             {
                                 limitedMembers ? description[0].limitedMembers : description[0].unlimitedMembers
                             }

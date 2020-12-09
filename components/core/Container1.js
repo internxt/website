@@ -62,12 +62,12 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
 
     return (
         <div className={`${className} relative`}>
-            <div className={styles.main}>
+            <div className={`${styles.main} sm:h-136`}>
                 <div className={`${styles.left} sm:w-40`}>
                     <Image src="/images/1440/Core/Section 1/Graphic left.png" width={511} height={268} />
                 </div>
 
-                <div className={`${styles.right} sm:w-32`}>
+                <div className={`${styles.right} sm:w-36`}>
                     <Image src="/images/1440/Core/Section 1/Graphic right.png" width={438} height={239} />
                 </div>
 

@@ -21,7 +21,7 @@ const Container3 = ({ id, descriptions }) => {
                     <Image src="/images/1440/Drive/Section 3/icons graphic.png" width={742} height={722} />
                 </div>
 
-                <div className={`${styles.main} sm:items-center lg:pl-16`}>
+                <div className={`${styles.main} sm:items-center sm:m-0 lg:pl-16`}>
                     <h1 className={`${styles.title} leading-10 sm:text-center sm:w-84 sm:text-4xl sm:mt-12 lg:text-5xl lg:w-112 lg:leading-tight xl:leading-13`}>
                         {description[0].title}
                     </h1>

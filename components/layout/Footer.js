@@ -22,7 +22,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     {descriptions.title2}
                     </h1>
 
-                    <div className={`${styles.image}`}>
+                    <div className={`${styles.image} sm:mx-0`}>
                         <Image src={'/images/1440/Footer/Line.png'} width={68} height={9} />
                     </div>
                 </div>
