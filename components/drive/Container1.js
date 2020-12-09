@@ -1,5 +1,4 @@
 import styles from './Container1.module.css'
-import EmailNewsletter from '../EmailNewsletter'
 import Image from 'next/image'
 
 const Container1 = ({ id, descriptions }) => {
@@ -17,11 +16,21 @@ const Container1 = ({ id, descriptions }) => {
     return ( 
         <div className={className}>
             <div className={`${styles.main} sm:pb-20`}>
-                <h1 className={`${styles.title} sm:w-80 sm:text-4xl lg:text-8xl`}>
+                <h1
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+
+                    className={`${styles.title} sm:w-80 sm:text-4xl lg:text-8xl`}>
                     {description[0].title}
                 </h1>
 
-                <p className={`${styles.subtitle} sm:text-xl sm:w-80 sm:pt-8 lg:text-xl lg:w-7/12`}>
+                <p
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+
+                    className={`${styles.subtitle} sm:text-xl sm:w-80 sm:pt-8 lg:text-xl lg:w-7/12`}>
                     {description[0].subtitle}
                 </p>
 
@@ -43,11 +52,20 @@ const Container1 = ({ id, descriptions }) => {
             </div>
 
             <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
-                <h1 className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}>
+                <h1 
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+
+                    className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}>
                     {description[0].subtitle2}
                 </h1>
 
                 <form   
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+                    
                     method="get" 
                     target="_blank" 
                     action="https://drive.internxt.com/new"
@@ -69,7 +87,12 @@ const Container1 = ({ id, descriptions }) => {
                     />
                 </form>
 
-                <div className={`${styles.billing_container}`}>
+                <div 
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+                    
+                    className={`${styles.billing_container}`}>
                     <p className={`${styles.subtitle3} sm:text-xs sm:pt-2 lg:text-sm`}>
                         {description[0].subtitle3}
                     </p>
