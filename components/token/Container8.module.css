@@ -24,11 +24,6 @@
     height: 141px;
 }
 
-.card:hover {
-    cursor: pointer;
-    opacity: 70%;
-}
-
 .images {
     position: relative;
     width: 100%;
