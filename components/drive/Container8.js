@@ -15,7 +15,7 @@ const Container8 = ({ id, descriptions }) => {
 
     return (
         <div className={background}>
-            <h1 className={`${styles.title} leading-10 sm:text-4xl sm:w-72 sm:mt-16 lg:text-4.5xl lg:mt-16 xl:mt-40`}>
+            <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} leading-10 sm:text-4xl sm:w-72 sm:mt-16 lg:text-4.5xl lg:mt-16 xl:mt-40`}>
                 {description[0].title}
             </h1>
 
@@ -36,7 +36,7 @@ const Container8 = ({ id, descriptions }) => {
             </div>
 
             <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:my-16 lg:mt-16 lg:mb-24 xl:mt-20 xl:mb-40">
-                <a href="https://medium.com/internxt/alternative-to-google-drive-ac9f5e8c3eeb" target="_blank" 
+                <a data-aos="fade-up" data-aos-duration="300" href="https://medium.com/internxt/alternative-to-google-drive-ac9f5e8c3eeb" target="_blank" 
                     className={`${styles.card} hover:opacity-80 cursor-pointer lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
                     <img
                         className={styles.logo}
@@ -46,7 +46,7 @@ const Container8 = ({ id, descriptions }) => {
                     />
                 </a>
 
-                <a href="https://medium.com/internxt/alternative-to-dropbox-f3d242648497" target="_blank" 
+                <a data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" href="https://medium.com/internxt/alternative-to-dropbox-f3d242648497" target="_blank" 
                     className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Drive/Section 8/dropbox.png"
@@ -55,7 +55,7 @@ const Container8 = ({ id, descriptions }) => {
                     />
                 </a>
 
-                <a href="https://medium.com/internxt/alternative-to-mega-d8731dca65b4" target="_blank" 
+                <a data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" href="https://medium.com/internxt/alternative-to-mega-d8731dca65b4" target="_blank" 
                     className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Drive/Section 8/mega.png"
@@ -64,7 +64,7 @@ const Container8 = ({ id, descriptions }) => {
                     />
                 </a>
 
-                <a href="https://medium.com/internxt/alternative-to-tresorit-c7ec1b9a514a" target="_blank" 
+                <a data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" href="https://medium.com/internxt/alternative-to-tresorit-c7ec1b9a514a" target="_blank" 
                     className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Drive/Section 8/tresorit.png"
@@ -73,7 +73,7 @@ const Container8 = ({ id, descriptions }) => {
                     />
                 </a>
 
-                <a href="https://medium.com/internxt/alternative-to-pcloud-756311b4eb6e" target="_blank" 
+                <a data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" href="https://medium.com/internxt/alternative-to-pcloud-756311b4eb6e" target="_blank" 
                     className={`${styles.card} lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Drive/Section 8/pcloud.png"
@@ -82,7 +82,7 @@ const Container8 = ({ id, descriptions }) => {
                     />
                 </a>
 
-                <a href="https://medium.com/internxt/alternative-to-protondrive-8b753d5cde5e" target="_blank" 
+                <a data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" href="https://medium.com/internxt/alternative-to-protondrive-8b753d5cde5e" target="_blank" 
                     className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                     <Image
                         src="/images/1440/Drive/Section 8/proton.png"

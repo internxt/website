@@ -33,15 +33,18 @@ const Container2 = ({ id, descriptions, cardDescriptions }) => {
                 </p>
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="300" className="grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-10 sm:mt-16 lg:mt-16 xl:mt-20">
-                <PriceCard free="true" size={2} individual={true} descriptions={cardDescriptions} />
-                <PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" descriptions={cardDescriptions} data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" />
-                <PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" mostPopular="true" descriptions={cardDescriptions} data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" />
-                <PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" descriptions={cardDescriptions} data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" />
+            <div className="grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-10 sm:mt-16 lg:mt-16 xl:mt-20">
+                <div data-aos="fade-up" data-aos-duration="300"><PriceCard free="true" size={2} individual={true} descriptions={cardDescriptions} /></div>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50"><PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" descriptions={cardDescriptions}/></div>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100"><PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" mostPopular="true" descriptions={cardDescriptions}/></div>
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150"><PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" descriptions={cardDescriptions}/></div>
             </div>
 
             <Link href="/pricing">
-                <a className={`hover:opacity-80 flex flex-row w-auto items-center sm:my-16 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
+                <a  
+                    data-aos="fade-up" 
+                    data-aos-duration="300"
+                    className={`hover:opacity-80 flex flex-row w-auto items-center sm:my-16 lg:text-base lg:mt-12 lg:mb-16 xl:my-24`}>
                     <p className={`${styles.link} sm:text-lg mr-2`}>{description[0].link}</p>
                     <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                 </a>
