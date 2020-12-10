@@ -20,7 +20,7 @@ const Container3 = ({ id, descriptions }) => {
             <div className={`${styles.container} sm:flex-col-reverse sm:items-center sm:pt-12 lg:py-12`}>
                 <div className="sm:mt-12 sm:w-10/12 lg:w-104">
                     <Image
-                        src="/images/1440/Token/Section 3/floating girl.png"
+                        src="/images/1440/Token/Section 3/floating girl.webp"
                         width={517}
                         height={589}
                     />

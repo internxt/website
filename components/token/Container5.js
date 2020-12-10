@@ -45,7 +45,7 @@ const Container5 = ({ id, descriptions }) => {
                 
                 <div className={`${styles.image} sm:w-11/12 sm:mt-24 lg:pt-24 lg:w-4/12 xl:ml-20`}>
                     <Image
-                        src="/images/1440/Token/Section 5/Coinbase graphic.png"
+                        src="/images/1440/Token/Section 5/Coinbase graphic.webp"
                         width={560}
                         height={612}
                     />

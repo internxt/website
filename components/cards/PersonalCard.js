@@ -2,7 +2,7 @@ import styles from './PersonalCard.module.css'
 import Image from 'next/image'
 
 const PersonalCard = ({ name, job, picture }) => {
-    const url = `/images/1440/About/Section 3/${picture}.png`
+    const url = `/images/1440/About/Section 3/${picture}.webp`
 
     return ( 
         <div className={`${styles.card} col-span-2`}>

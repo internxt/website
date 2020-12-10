@@ -32,7 +32,7 @@ const Container4 = ({ id, descriptions }) => {
                 </div>
                 
                 <div className={`${styles.image} sm:object-cover sm:w-full sm:px-8 sm:my-12 lg:w-5/12`}>
-                    <Image src="/images/1440/Drive/Section 4/logos graphic.png" width={493} height={472} />
+                    <Image src="/images/1440/Drive/Section 4/logos graphic.webp" width={493} height={472} />
                 </div>
             </div>
         </div>

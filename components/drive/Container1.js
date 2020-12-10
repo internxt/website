@@ -40,7 +40,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-duration="700"
 
                     className={`${styles.star} ${styles.animation_star} sm:top-0 sm:ml-6 sm:mt-6 sm:w-6 sm:p-0 lg:ml-24`}>
-                    <Image src="/images/1440/Drive/Section 1/star icon.png" width={47} height={50} />
+                    <Image src="/images/1440/Drive/Section 1/star icon.webp" width={47} height={50} />
                 </div>
 
                 <div 
@@ -49,7 +49,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-duration="700"
                     
                     className={`${styles.gear} ${styles.animation_gear} sm:p-0 sm:top-0 sm:w-6 sm:mr-12 sm:mt-3 lg:mt-8 lg:mr-22`}>
-                    <Image src="/images/1440/Drive/Section 1/cog icon.png" width={37} height={38} />
+                    <Image src="/images/1440/Drive/Section 1/cog icon.webp" width={37} height={38} />
                 </div>
 
                 <div 
@@ -58,7 +58,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-duration="700"
                     
                     className={`${styles.coin} ${styles.animation_coin} sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:w-12 lg:mb-20`}>
-                    <Image src="/images/1440/Drive/Section 1/coin icon.png" width={81} height={76} />
+                    <Image src="/images/1440/Drive/Section 1/coin icon.webp" width={81} height={76} />
                 </div>
 
                 <div 
@@ -67,7 +67,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-duration="700"
                     
                     className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}>
-                    <Image src="/images/1440/Drive/Section 1/lock icon.png" width={45} height={60} />
+                    <Image src="/images/1440/Drive/Section 1/lock icon.webp" width={45} height={60} />
                 </div>
             </div>
 
@@ -119,7 +119,7 @@ const Container1 = ({ id, descriptions }) => {
                 </div>
 
                 <div className={`${styles.cloud} ${styles.animation_cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}>
-                    <Image src="/images/1440/Drive/Section 1/cloud icon.png" width={70} height={52} />
+                    <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
                 </div>
 
                 <div 
@@ -128,7 +128,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-duration="700"
                     
                     className={`${styles.hand} sm:hidden lg:w-84`}>
-                    <Image src="/images/1440/Drive/Section 1/purplehand.png" width={482} height={310} />
+                    <Image src="/images/1440/Drive/Section 1/purplehand.webp" width={482} height={310} />
                 </div>
             </div>
         </div>

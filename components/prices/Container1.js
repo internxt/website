@@ -28,7 +28,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                         data-aos-duration="700"
 
                         className={`${styles.speech} sm:hidden lg:w-36 lg:pt-32 lg:pl-16`}>
-                        <img className="xl:w-32" src="/images/1440/Prices Individual/12.png" /> 
+                        <img className="xl:w-32" src="/images/1440/Prices Individual/12.webp" /> 
                     </div>
 
                     <div 
@@ -36,7 +36,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                         data-aos-duration="700"
                         
                         className={`${styles.letter} sm:hidden lg:pr-12 lg:w-32`}>
-                        <img className="xl:w-24" src="/images/1440/Prices Individual/13.png" /> 
+                        <img className="xl:w-24" src="/images/1440/Prices Individual/13.webp" /> 
                     </div>
                 </div>
                 :
@@ -46,7 +46,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                         data-aos-duration="700"
                         
                         className={`${styles.face} sm:hidden lg:w-12 lg:mr-6`}>
-                        <Image src="/images/1440/Prices Teams/14.png" width={66} height={67} /> 
+                        <Image src="/images/1440/Prices Teams/14.webp" width={66} height={67} /> 
                     </section>
 
                     <section  
@@ -54,7 +54,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                         data-aos-duration="700"
                         
                         className={`${styles.star} sm:hidden lg:w-8 lg:mr-24 lg:mt-36`}>
-                        <Image src="/images/1440/Prices Teams/15.png" width={39} height={41} /> 
+                        <Image src="/images/1440/Prices Teams/15.webp" width={39} height={41} /> 
                     </section>
 
                     <section  
@@ -62,7 +62,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                         data-aos-duration="700"
                         
                         className={`${styles.mail} sm:hidden lg:w-20 lg:mt-40`}>
-                        <Image src="/images/1440/Prices Teams/16.png" width={114} height={75} /> 
+                        <Image src="/images/1440/Prices Teams/16.webp" width={114} height={75} /> 
                     </section>
                 </div>
             }
@@ -135,19 +135,19 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                 :
                     <div className={`grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-8`}>
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
-                            <PriceCard teams={true} limitedMembers={true} size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="5 team members" size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
-                            <PriceCard teams={true} size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" mostPopular="true" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="10 team members" size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" mostPopular="true" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
-                            <PriceCard teams={true} size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="Infinite team members" size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300">
-                            <PriceCard teams={true} free="true" size={200000} individual={false} descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="Infinite team members" free="true" size={200000} individual={false} descriptions={cardDescriptions} />
                         </section>
                     </div>
                     

@@ -28,17 +28,17 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
                 </div>
                 
                 <div data-aos="fade-up" data-aos-duration="300" className={`mt-10 sm:hidden sm:mt-14`}>
-                    <Image src="/images/1440/Drive/Section 5/Interface.png" width={1212} height={575} />
+                    <Image src="/images/1440/Drive/Section 5/Interface.webp" width={1212} height={575} />
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" className={`hidden sm:block sm:object-contain`}>
-                    <Image src="/images/1440/Drive/Section 5/375p interface.png" width={750} height={778} />
+                    <Image src="/images/1440/Drive/Section 5/375p interface.webp" width={750} height={778} />
                 </div>
             </div>
 
             <div className={`${styles.container2} max-w-1600 sm:py-12 sm:justify-center sm:flex-col-reverse lg:py-16`}>
                 <div data-aos="fade-right" data-aos-duration="700" data-aos-delay="150" className={`${styles.hand} sm:w-11/12 lg:w-104`}>
-                    <Image src="/images/1440/Drive/Section 5/blue hand.png" width={590} height={423} />
+                    <Image src="/images/1440/Drive/Section 5/blue hand.webp" width={590} height={423} />
                 </div>
 
                 <div className={`${styles.main} sm:items-center lg:pl-32`}>

@@ -3,7 +3,7 @@ import styles from './PriceCard.module.css'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-const PriceCard = ({ free, teams, size, pMonth, pre6months, preYear, mostPopular, individual, limitedMembers, descriptions }) => {
+const PriceCard = ({ free, teams, teamMembers, size, pMonth, pre6months, preYear, mostPopular, individual, descriptions }) => {
     
     const description = descriptions.filter( desc => desc.id === "PriceCard")
 
@@ -39,15 +39,15 @@ const PriceCard = ({ free, teams, size, pMonth, pre6months, preYear, mostPopular
             {   mostPopular ?
                     <div>
                         <div className={`${styles.heart1} sm:pt-0 lg:w-12 lg:pt-8`}>
-                            <Image src="/images/1440/Prices Individual/heart 1.png" width={25} height={25} /> 
+                            <Image src="/images/1440/Prices Individual/heart 1.webp" width={25} height={25} /> 
                         </div>
 
                         <div className={`${styles.heart2} sm:pt-36 sm:pr-4 lg:pt-40 lg:pr-4 lg:w-10`}>
-                            <Image src="/images/1440/Prices Individual/heart 2.png" width={25} height={30} /> 
+                            <Image src="/images/1440/Prices Individual/heart 2.webp" width={25} height={30} /> 
                         </div>
 
                         <div className={`${styles.heart3} lg:w-6 lg:ml-4`}>
-                            <Image src="/images/1440/Prices Individual/heart 3.png" width={37} height={36} /> 
+                            <Image src="/images/1440/Prices Individual/heart 3.webp" width={37} height={36} /> 
                         </div>
                     </div>
                 :
@@ -96,7 +96,7 @@ const PriceCard = ({ free, teams, size, pMonth, pre6months, preYear, mostPopular
                     teams ?
                         <p className={`${styles.members} mt-4 lg:text-xxs xl:text-13`}>
                             {
-                                limitedMembers ? description[0].limitedMembers : description[0].unlimitedMembers
+                                teamMembers
                             }
                         </p>
                     : null

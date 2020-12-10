@@ -20,9 +20,9 @@ const Container3 = ({ id, descriptions }) => {
 
     return ( 
         <div className={`${styles.main} sm:pt-16`}>
-            <text className={`${styles.title} sm:text-4xl lg:text-5xl`}>
+            <h1 className={`${styles.title} sm:text-4xl lg:text-5xl`}>
                 {description[0].title}
-            </text>
+            </h1>
 
             <div className={`grid grid-cols-6 gap-y-6 gap-x-3 sm:grid-cols-1 sm:mt-12 lg:py-12 xl:mt-16`}>
                 <div data-aos="fade-up" data-aos-duration="300" className="col-span-2">

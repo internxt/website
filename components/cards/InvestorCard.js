@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const InvestorCard = ({ company, description, investor, w, h }) => {
 
-    const url = `/images/1440/About/Section 4/${investor}.png`
+    const url = `/images/1440/About/Section 4/${investor}.webp`
 
     return ( 
         <div className={`${styles.card} col-span-1`}>

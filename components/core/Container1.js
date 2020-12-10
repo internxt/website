@@ -63,12 +63,12 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
     return (
         <div className={`${className} relative`}>
             <div className={`${styles.main} sm:h-136`}>
-                <div className={`${styles.left} sm:w-40`}>
-                    <Image src="/images/1440/Core/Section 1/Graphic left.png" width={511} height={268} />
+                <div data-aos="fade-right" data-aos-delay="250" data-aos-duration="700" className={`${styles.left} sm:w-40`}>
+                    <Image src="/images/1440/Core/Section 1/Graphic left.webp" width={511} height={268} />
                 </div>
 
-                <div className={`${styles.right} sm:w-36`}>
-                    <Image src="/images/1440/Core/Section 1/Graphic right.png" width={438} height={239} />
+                <div data-aos="fade-left" data-aos-delay="250" data-aos-duration="700" className={`${styles.right} sm:w-36`}>
+                    <Image src="/images/1440/Core/Section 1/Graphic right.webp" width={438} height={239} />
                 </div>
 
                 <h1 

@@ -42,7 +42,7 @@ const Container2 = ({ id, descriptions }) => {
             <div className="flex justify-evenly items-center w-full mt-12 md:hidden lg:hidden xl:hidden">
                 <div data-aos="fade-up" data-aos-duration="300" className="w-40">
                     <Image
-                        src="/images/1440/About/Section 2/lanzadera.png"
+                        src="/images/1440/About/Section 2/lanzadera.webp"
                         width={177}
                         height={23}
                     />
@@ -50,7 +50,7 @@ const Container2 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" className="w-20">
                     <Image
-                        src="/images/1440/About/Section 2/stripe.png"
+                        src="/images/1440/About/Section 2/stripe.webp"
                         width={104}
                         height={43}
                     />
@@ -59,7 +59,7 @@ const Container2 = ({ id, descriptions }) => {
 
             <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2 md:hidden lg:hidden xl:hidden mt-8">
                 <Image
-                    src="/images/1440/About/Section 2/venture.png"
+                    src="/images/1440/About/Section 2/venture.webp"
                     width={235}
                     height={42}
                 />
@@ -67,7 +67,7 @@ const Container2 = ({ id, descriptions }) => {
         
             <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2 mt-8 md:hidden lg:hidden xl:hidden">
                 <Image
-                    src="/images/1440/About/Section 2/combinator.png"
+                    src="/images/1440/About/Section 2/combinator.webp"
                     width={160}
                     height={34}
                 />
@@ -76,7 +76,7 @@ const Container2 = ({ id, descriptions }) => {
             <div className="flex justify-evenly items-center w-full mt-8 md:hidden lg:hidden xl:hidden">
                 <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2">
                     <Image
-                        src="/images/1440/About/Section 2/blackberry.png"
+                        src="/images/1440/About/Section 2/blackberry.webp"
                         width={179}
                         height={31}
                     />
@@ -84,7 +84,7 @@ const Container2 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" className="flex items-center sm:col-span-2 w-16">
                     <Image
-                        src="/images/1440/About/Section 2/500.png"
+                        src="/images/1440/About/Section 2/500.webp"
                         width={71}
                         height={71}
                     />
@@ -94,7 +94,7 @@ const Container2 = ({ id, descriptions }) => {
             <div className={`${styles.assosciated_logos} sm:hidden lg:mb-12`}>
                 <div data-aos="fade-up" data-aos-duration="300" className="flex items-center lg:w-32">
                     <Image
-                        src="/images/1440/About/Section 2/lanzadera.png"
+                        src="/images/1440/About/Section 2/lanzadera.webp"
                         width={177}
                         height={23}
                     />
@@ -102,7 +102,7 @@ const Container2 = ({ id, descriptions }) => {
                 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className="flex items-center lg:w-20">
                     <Image
-                        src="/images/1440/About/Section 2/stripe.png"
+                        src="/images/1440/About/Section 2/stripe.webp"
                         width={104}
                         height={43}
                     />
@@ -110,7 +110,7 @@ const Container2 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className="flex items-center lg:w-16">
                     <Image
-                        src="/images/1440/About/Section 2/500.png"
+                        src="/images/1440/About/Section 2/500.webp"
                         width={71}
                         height={71}
                     />
@@ -118,7 +118,7 @@ const Container2 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className="flex items-center lg:w-48">
                     <Image
-                        src="/images/1440/About/Section 2/venture.png"
+                        src="/images/1440/About/Section 2/venture.webp"
                         width={235}
                         height={42}
                     />
@@ -126,7 +126,7 @@ const Container2 = ({ id, descriptions }) => {
                 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" className="flex items-center lg:w-32">
                     <Image
-                        src="/images/1440/About/Section 2/blackberry.png"
+                        src="/images/1440/About/Section 2/blackberry.webp"
                         width={179}
                         height={31}
                     />
@@ -134,7 +134,7 @@ const Container2 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" className="flex items-center lg:w-32">
                     <Image
-                        src="/images/1440/About/Section 2/combinator.png"
+                        src="/images/1440/About/Section 2/combinator.webp"
                         width={160}
                         height={34}
                     />
@@ -155,7 +155,7 @@ const Container2 = ({ id, descriptions }) => {
                 
                 className={`lg:px-32 xl:px-40`}>
                 <Image
-                    src="/images/1440/About/Section 2/about photos.png"
+                    src="/images/1440/About/Section 2/about photos.webp"
                     width={1250}
                     height={850}
                     className="rounded"

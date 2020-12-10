@@ -28,7 +28,7 @@ const Container8 = ({ id, descriptions }) => {
 
                 className={`${styles.hand} sm:hidden lg:w-32 lg:mt-16`}>
                 <Image
-                    src="/images/1440/Drive/Section 8/hand.png"
+                    src="/images/1440/Drive/Section 8/hand.webp"
                     width={186}
                     height={302}
                 />
@@ -43,7 +43,7 @@ const Container8 = ({ id, descriptions }) => {
 
                 className={`${styles.plane} sm:hidden lg:w-32 lg:mt-16`}>
                 <Image
-                    src="/images/1440/Drive/Section 8/plane.png"
+                    src="/images/1440/Drive/Section 8/plane.webp"
                     width={189}
                     height={120}
                 />
@@ -55,7 +55,7 @@ const Container8 = ({ id, descriptions }) => {
                         className={`${styles.card} lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
                         <img
                             className={styles.logo}
-                            src="/images/1440/Drive/Section 8/drive.png"
+                            src="/images/1440/Drive/Section 8/drive.webp"
                             width={195}
                             height={32}
                         />
@@ -66,7 +66,7 @@ const Container8 = ({ id, descriptions }) => {
                     <a href="https://medium.com/internxt/alternative-to-dropbox-f3d242648497" target="_blank" 
                         className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                         <Image
-                            src="/images/1440/Drive/Section 8/dropbox.png"
+                            src="/images/1440/Drive/Section 8/dropbox.webp"
                             width={168}
                             height={33}
                         />
@@ -77,7 +77,7 @@ const Container8 = ({ id, descriptions }) => {
                     <a href="https://medium.com/internxt/alternative-to-mega-d8731dca65b4" target="_blank" 
                         className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                         <Image
-                            src="/images/1440/Drive/Section 8/mega.png"
+                            src="/images/1440/Drive/Section 8/mega.webp"
                             width={147}
                             height={48}
                         />
@@ -88,7 +88,7 @@ const Container8 = ({ id, descriptions }) => {
                     <a href="https://medium.com/internxt/alternative-to-tresorit-c7ec1b9a514a" target="_blank" 
                         className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                         <Image
-                            src="/images/1440/Drive/Section 8/tresorit.png"
+                            src="/images/1440/Drive/Section 8/tresorit.webp"
                             width={156}
                             height={43}
                         />
@@ -99,7 +99,7 @@ const Container8 = ({ id, descriptions }) => {
                     <a href="https://medium.com/internxt/alternative-to-pcloud-756311b4eb6e" target="_blank" 
                         className={`${styles.card} lg:w-48 lg:px-8 lg:h-24 col-span-1`}>
                         <Image
-                            src="/images/1440/Drive/Section 8/pcloud.png"
+                            src="/images/1440/Drive/Section 8/pcloud.webp"
                             width={164}
                             height={41}
                         />
@@ -110,7 +110,7 @@ const Container8 = ({ id, descriptions }) => {
                     <a href="https://medium.com/internxt/alternative-to-protondrive-8b753d5cde5e" target="_blank" 
                         className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                         <Image
-                            src="/images/1440/Drive/Section 8/proton.png"
+                            src="/images/1440/Drive/Section 8/proton.webp"
                             width={161}
                             height={22}
                         />

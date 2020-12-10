@@ -1,6 +1,6 @@
 .main {
     height: 850px;
-    background-image: url("/images/1440/Token/Section 1/Colours bg.png");
+    background-image: url("/images/1440/Token/Section 1/Colours bg.webp");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -9,7 +9,7 @@
 
 @media screen and (min-width: 375px) and (max-width: 749px) {
     .main {
-        background-image: url("/images/1440/Token/Section 1/375p Colours bg.png");
+        background-image: url("/images/1440/Token/Section 1/375p Colours bg.webp");
         background-size: contain;
     }
 }

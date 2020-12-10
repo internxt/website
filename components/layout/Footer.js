@@ -23,7 +23,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     </h1>
 
                     <div className={`${styles.image} sm:mx-0`}>
-                        <Image src={'/images/1440/Footer/Line.png'} width={68} height={9} />
+                        <Image src={'/images/1440/Footer/Line.webp'} width={68} height={9} />
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     <div className={`${styles.p_container}`}>
                         <div className={`sm:w-24 lg:w-28 xl:w-36 xl:mt-2`}>
                             <Image 
-                                src="/images/1440/Footer/Internxt.png"
+                                src="/images/1440/Footer/Internxt.webp"
                                 alt="INTERXT logo"
                                 width={153}
                                 height={16}
@@ -157,17 +157,17 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                         </h1>
 
                         <div className={styles.followus_container}>
-                            <img className={styles.logo} src="/images/1440/Footer/twitter.png" />
+                            <img className={styles.logo} src="/images/1440/Footer/twitter.webp" />
                             <a href="https://twitter.com/Internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Twitter</a>    
                         </div>
 
                         <div className={styles.followus_container}>
-                            <img className={styles.logo} src="/images/1440/Footer/medium.png" />
+                            <img className={styles.logo} src="/images/1440/Footer/medium.webp" />
                             <a href="https://medium.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Medium</a>
                         </div>
 
                         <div className={styles.followus_container}>
-                            <img className={styles.logo} src="/images/1440/Footer/github.png" />
+                            <img className={styles.logo} src="/images/1440/Footer/github.webp" />
                             <a href="https://github.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Github</a>
                         </div>
                        </div>
@@ -276,7 +276,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                 <div className={`hidden sm:flex sm:flex-col sm:w-full sm:px-6`}>
                     <div className={`sm:w-40 mt-16`}>
                         <Image 
-                            src="/images/1440/Footer/Internxt.png"
+                            src="/images/1440/Footer/Internxt.webp"
                             alt="INTERXT logo"
                             width={153}
                             height={16}

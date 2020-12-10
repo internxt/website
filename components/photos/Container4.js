@@ -28,11 +28,11 @@ const Container4 = ({ id, descriptions }) => {
                 </div>
                 
                 <div data-aos="fade-up" data-aos-duration="300" className={`mt-10 sm:hidden sm:mt-14`}>
-                    <Image src="/images/1440/Photos/Section 4/interface.png" width={1212} height={575} />
+                    <Image src="/images/1440/Photos/Section 4/interface.webp" width={1212} height={575} />
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" className={`hidden sm:block sm:object-contain`}>
-                    <Image src="/images/1440/Photos/Section 4/375p interface.png" width={750} height={319} />
+                    <Image src="/images/1440/Photos/Section 4/375p interface.webp" width={750} height={319} />
                 </div>
             </div>
         </div>

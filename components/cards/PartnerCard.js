@@ -6,8 +6,8 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link
 
     const description = descriptions.filter( desc => desc.id === "PartnerCard")
 
-    const logourl = `/images/1440/About/Section 5/${logo}.png`
-    const imageurl = `/images/1440/About/Section 5/${image}.png`
+    const logourl = `/images/1440/About/Section 5/${logo}.webp`
+    const imageurl = `/images/1440/About/Section 5/${image}.webp`
 
     const [ cardstyle, setCardstyle] = useState(`${styles.PartnerCard}`)
     const [ companystyle, setCompanystyle] = useState(`${styles.company}`)

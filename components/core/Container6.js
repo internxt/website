@@ -113,7 +113,7 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
                 data-aos-delay="550"
                 data-aos-duration="700"
 
-                src="/images/1440/Core/Section 6/emoji.png" width={89} height={105} />
+                src="/images/1440/Core/Section 6/emoji.webp" width={89} height={105} />
             <h1 
                 data-aos="fade-down"
                 data-aos-delay="150"

@@ -18,7 +18,7 @@ const Container8 = ({ id, descriptions }) => {
         <div className={`${background} lg:pb-32 xl:pb-40 relative z-10`}>
             <div data-aos="fade-right" data-aos-duration="900" data-aos-delay="500" className={`${styles.left_image} sm:hidden lg:w-96 lg:mt-28 xl:w-120`}>
                 <Image
-                    src="/images/1440/Token/Section 6/Left graph.png"
+                    src="/images/1440/Token/Section 6/Left graph.webp"
                     width={600}
                     height={242}
                 />
@@ -26,7 +26,7 @@ const Container8 = ({ id, descriptions }) => {
 
             <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="500" className={`${styles.right_image} sm:hidden lg:w-96 lg:mb-16 xl:w-120`}>
                 <Image
-                    src="/images/1440/Token/Section 6/Right graph.png"
+                    src="/images/1440/Token/Section 6/Right graph.webp"
                     width={600}
                     height={236}
                 />
@@ -39,7 +39,7 @@ const Container8 = ({ id, descriptions }) => {
             <div className="grid grid-cols-4 gap-4 sm:grid-cols-1 sm:mb-24">
                 <div data-aos="fade-up" data-aos-duration="300" className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
-                        src="/images/1440/Token/Section 6/coinbase.png"
+                        src="/images/1440/Token/Section 6/coinbase.webp"
                         width={133}
                         height={29}
                     />
@@ -47,7 +47,7 @@ const Container8 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
-                        src="/images/1440/Token/Section 6/cmc.png"
+                        src="/images/1440/Token/Section 6/cmc.webp"
                         width={151}
                         height={75}
                     />
@@ -55,7 +55,7 @@ const Container8 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
-                        src="/images/1440/Token/Section 6/binance.png"
+                        src="/images/1440/Token/Section 6/binance.webp"
                         width={106}
                         height={78}
                     />
@@ -63,7 +63,7 @@ const Container8 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className={`${styles.card} lg:w-44 lg:h-28 lg:px-10`}>
                     <Image 
-                        src="/images/1440/Token/Section 6/Blockfolio.png"
+                        src="/images/1440/Token/Section 6/Blockfolio.webp"
                         width={140}
                         height={30}
                     />

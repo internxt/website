@@ -57,7 +57,7 @@ const Container3 = ({ id, descriptions }) => {
                             data-aos-duration="500"
                             
                             className={`sm:mt-4`}>
-                            <img src="/images/1440/Core/Section 3/Core dashboard.png" width={1008} height={658} />
+                            <img src="/images/1440/Core/Section 3/Core dashboard.webp" width={1008} height={658} />
                         </div>
                     :
                         <div 
@@ -66,7 +66,7 @@ const Container3 = ({ id, descriptions }) => {
                             data-aos-duration="500"
                             
                             className={`sm:mt-4`}>
-                            <img src="/images/1440/Core/Section 3/Core interface.png" width={1008} height={658} />
+                            <img src="/images/1440/Core/Section 3/Core interface.webp" width={1008} height={658} />
                         </div>
                 }
             </div>

@@ -1,7 +1,7 @@
 .background {
     display: flex;
     flex-direction: column;
-    background-image: url("/images/1440/About/Section 1/background.png");
+    background-image: url("/images/1440/About/Section 1/background.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 375px) and (max-width: 749px) {
     .background {
-        background-image: url("/images/1440/About/Section 1/375p background.png");
+        background-image: url("/images/1440/About/Section 1/375p background.webp");
         background-size: contain;
     }
 }

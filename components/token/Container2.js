@@ -28,7 +28,7 @@ const Container2 = ({ id, descriptions }) => {
                 <div className={styles.images_container}>
                     <div className={`${styles.cube} sm:hidden lg:w-28`}>
                         <Image
-                            src="/images/1440/Token/Section 2/left glass and cube.png"
+                            src="/images/1440/Token/Section 2/left glass and cube.webp"
                             width={152}
                             height={274}
                         />   
@@ -36,7 +36,7 @@ const Container2 = ({ id, descriptions }) => {
 
                     <div className={`${styles.hoop} sm:hidden lg:w-24`}>
                         <Image
-                            src="/images/1440/Token/Section 2/right hoop.png"
+                            src="/images/1440/Token/Section 2/right hoop.webp"
                             width={167}
                             height={303}
                         />
