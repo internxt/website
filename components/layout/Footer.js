@@ -146,9 +146,10 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                             locale == 'en' ? 
                                 <a href="/es" className={`${styles.p_social} lg:text-xs`}>{descriptions.info6}</a>
                             :
-                                <a href='/' className={`${styles.p_social} lg:text-xs`}>{descriptions.info6}</a>
+                                <Link href="/">
+                                    <a className={`${styles.p_social} lg:text-xs`}>{descriptions.info6}</a>
+                                </Link>
                         }
-                        
                     </div>
 
                     <div className={styles.p_container}>
