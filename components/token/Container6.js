@@ -237,7 +237,7 @@ const Container6 = ({ id, descriptions }) => {
                         />
 
                         <label data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>
-                            {description[0].address1}
+                            {description[0].address2}
                         </label>
                         <input
                             data-aos="fade-up" data-aos-duration="300" data-aos-delay="350"
