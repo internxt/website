@@ -89,16 +89,24 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
                     {formattedText(description[0].subtitle, description[0].colored)}
                 </p>
 
-                <p 
+                <span 
                     data-aos="fade-up"
                     data-aos-delay="250"
                     data-aos-duration="500"
-                    
-                    className={`${styles.subtitle2} sm:text-xl sm:w-6/12 sm:mt-16`}>
+                    style={{
+                        fontFamily: "averta-extrabold",
+                        fontSize: "26px",
+                        lineHeight: "1.46",
+                        letterSpacing: "0px",
+                        textAlign: "center",
+                        color: "#2b2a35",
+                        margin: "6rem 0 0"
+                    }}
+                    className={`sm:text-xl sm:w-6/12 sm:mt-16`}>
                     {description[0].subtitle2}
-                </p>
+                </span>
 
-                <div className={`${styles.button_container}`}>
+                <span className={`${styles.button_container}`}>
                     <a 
                         data-aos="fade-up"
                         data-aos-delay="300"
@@ -112,7 +120,7 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
 
                         href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3" target="_blank"
                         className={`${styles.link} sm:text-base`}>{description[0].button2}</a>
-                </div>
+                </span>
             </div>
         </div>
     );

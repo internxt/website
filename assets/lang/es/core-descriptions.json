@@ -1,9 +1,10 @@
 [
     {
         "id": "1",
-        "title": "Monetiza almacenamiento inutilizado",
+        "title": "Monetiza [[almacenamiento]] inutilizado",
         "subtitle": "Una [[aplicación]] P2P simple que permite a los [[proveedores]] [[monetizar]] el [[almacenamiento]] no utilizado [[alojando]] fragmentos de datos cifrados.",
         "subtitle2": "Proporciona espacio a la red",
+        "coloredTitle": ["almacenamiento"],
         "colored": ["almacenamiento", "aplicación", "proveedores", "monetizar", "alojando"],
         "button1": "Descargar",
         "button2": "Instalación y consejos"
