@@ -134,7 +134,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                             </a>
                         </Link>
 
-                        <a href="mailto:hello@internxt.com" target="_blank" className={`${styles.p_social} lg:text-xs`}>
+                        <a href="mailto:support@internxt.zohodesk.eu" target="_blank" className={`${styles.p_social} lg:text-xs`}>
                             {descriptions.info3}
                         </a>
                         
