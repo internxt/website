@@ -46,7 +46,7 @@ const Container5 = ({ id, descriptions }) => {
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
-                    <InvestorCard company={company6} description={info6} investor="ibm" w={125} h={54} />
+                    <InvestorCard company={company6} description={info6} investor="ibm" w={125} h={44} />
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">

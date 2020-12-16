@@ -7,7 +7,7 @@ const PublishedArticle = ({ article, image, descriptions}) => {
 
     return ( 
         <div className={`${styles.card} col-span-1 overflow-hidden h-full sm:w-84 lg:w-72`}>
-            { image ? <img className="h-full w-full object-contain" src={image} /> : <p>There's no image available</p> }
+            { image ? <img className="w-full object-cover lg:-36 xl:h-48" src={image} /> : <img className="w-full object-cover lg:h-36 xl:h-48" src="/images/1440/About/internxt.png" /> }
 
             <div className={`${styles.description} sm:pl-6 sm:pt-2 lg:pl-4 lg:pt-4 xl:pl-6 xl:pt-6 relative`}>
                 <p className={`${styles.date} sm:text-xs lg:text-xxs`}>
