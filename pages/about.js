@@ -52,7 +52,6 @@ export async function getServerSideProps(ctx) {
             images.push(image)
         } else images.push(null)
     })
-    console.log("--------------------- images ------------------------", images)
     const lang = ctx.locale
     const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
     const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`)
