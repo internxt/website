@@ -33,3 +33,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# public files
+
+public/downloads/*
+public/*.pdf
+core
