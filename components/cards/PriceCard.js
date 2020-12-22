@@ -75,7 +75,10 @@ const PriceCard = ({ free, teams, teamMembers, size, pMonth, pre6months, preYear
                             <div className={`${styles.background_pMonth} sm:h-8 lg:w-24 h-8 lg:py-1`}>
                                 <a id="a" href="https://drive.internxt.com/new" target="_blank" 
                                     className={`${styles.pMonth} sm:text-sm lg:text-xxs`}>
-                                    €{pMonth} / {description[0].month}
+                                    {
+                                        teams ? <div>€{pMonth} user / {description[0].month}</div> : <div>€{pMonth} / {description[0].month}</div>
+                                    }
+                                    
                                 </a>
                             </div>
 

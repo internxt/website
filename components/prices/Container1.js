@@ -135,15 +135,15 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                 :
                     <div className={`grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-8`}>
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
-                            <PriceCard teams={true} teamMembers="5 team members" size={200} pMonth="9.49" pre6months="8.99" preYear="8.49" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="200 GB of storage per user" size={200} pMonth="4.99" pre6months="4.49" preYear="3.99" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
-                            <PriceCard teams={true} teamMembers="10 team members" size={2000} pMonth="19.99" pre6months="19.49" preYear="18.99" mostPopular="true" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="2 TB of storage per user" size={2000} pMonth="9.99" pre6months="8.49" preYear="7.99" mostPopular="true" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
-                            <PriceCard teams={true} teamMembers="Infinite team members" size={20000} pMonth="149.99" pre6months="145.49" preYear="139.99" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="20 TB of storage per user" size={20000} pMonth="95" pre6months="94.49" preYear="93.99" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300">
