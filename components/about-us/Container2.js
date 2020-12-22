@@ -50,9 +50,9 @@ const Container2 = ({ id, descriptions }) => {
 
                 <div data-aos="fade-up" data-aos-duration="300" className="w-20">
                     <Image
-                        src="/images/1440/About/Section 2/stripe.webp"
-                        width={104}
-                        height={43}
+                        src="/images/1440/About/Section 2/orbita.png"
+                        width={160}
+                        height={57}
                     />
                 </div>
             </div>
@@ -102,9 +102,9 @@ const Container2 = ({ id, descriptions }) => {
                 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className="flex items-center lg:w-20">
                     <Image
-                        src="/images/1440/About/Section 2/stripe.webp"
-                        width={104}
-                        height={43}
+                        src="/images/1440/About/Section 2/orbita.png"
+                        width={160}
+                        height={57}
                     />
                 </div>
 
