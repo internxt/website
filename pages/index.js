@@ -58,7 +58,7 @@ export async function getServerSideProps(ctx) {
       default:
         // No borrar
         console.log('Unknown device %s. User-Agent: %s', uaParsed.os.family, ua)
-        return 'https://drive.internxt.com'
+        return 'https://github.com/internxt/drive-desktop/releases'
     }
   })();
 
