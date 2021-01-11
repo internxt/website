@@ -179,6 +179,7 @@ const Container6 = ({ id, descriptions }) => {
                                     placeholder="0"
                                     required
                                     onChange={(e) => setDeposit(e.target.value)}
+                                    step=".01"
                                 />
                             </div>
 
