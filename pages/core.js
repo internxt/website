@@ -79,7 +79,8 @@ export async function getServerSideProps(ctx) {
     cookies.set('REFERRAL', referral, {
       domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
       expires: expires,
-      overwrite: true
+      overwrite: true,
+      httpOnly: false
     })  
   }
 
