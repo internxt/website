@@ -40,7 +40,7 @@ const Container6 = ({ id, descriptions }) => {
         })
     }
 
-    const receiveValue = deposit / (prices[currency] || 1) * 0.75 // 25 comission
+    const receiveValue = deposit / (prices[currency] || 1) * 0.7 // 30 comission
 
     const parseSubmit = (e) => {
         e.preventDefault();
