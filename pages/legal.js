@@ -4,15 +4,16 @@ import Footer from '../components/layout/Footer'
 import descriptionsEnglish from '../assets/lang/en/terms-and-conditions.json'
 import descriptionsSpanish from '../assets/lang/es/terms-and-conditions.json'
 import { useRouter } from 'next/router'
+import cookies from '../lib/cookies'
 
 const Legal = (props) => {
     const router = useRouter()
     const locale = router.locale
 
     const description = locale == 'en' ? descriptionsEnglish : descriptionsSpanish
-    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "photos")
+    const metatags = props.metatagsDescriptions.filter(desc => desc.id === "photos")
 
-    return ( 
+    return (
         <Layout segmentName="legal" title={metatags.title} description={metatags[0].description} >
             <TopBar />
             <div className="flex flex-col items-center my-24">
@@ -166,7 +167,7 @@ const Legal = (props) => {
                     <p className="font-avertalight mb-6">
                         {description.subtitle14}
                     </p>
-                    
+
                     <p className="font-avertalight mb-6">
                         {description.subtitle142}
                     </p>
@@ -264,7 +265,7 @@ const Legal = (props) => {
                     <p className="font-avertalight mb-6">
                         {description.subtitle21}
                     </p>
-                    
+
                     <p className="font-avertalight mb-6">
                         {description.subtitle212}
                     </p>
@@ -440,32 +441,12 @@ export async function getServerSideProps(ctx) {
     const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
     const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
     const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
-    
-    const Cookies = require('cookies')
-    const moment = require('moment')
-    const url = require('url')
-    const queryString = require('querystring')
-    const cookies = new Cookies(ctx.req, ctx.res)
-  
-    const query = url.parse(ctx.req.url).query
-    const parsedQuery = queryString.parse(query)
-    let referral
-    const expires = moment().add(2, 'days').toDate()
-  
-    referral = parsedQuery.ref
-  
-    if (referral) {
-        cookies.set('REFERRAL', referral, {
-            domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
-            expires: expires,
-            overwrite: true,
-            httpOnly: false
-        })  
+
+    cookies.setReferralCookie(ctx);
+
+    return {
+        props: { metatagsDescriptions, footerDescriptions, cardDescriptions }
     }
-    
-  return {
-    props: { metatagsDescriptions, footerDescriptions, cardDescriptions }
-  }
 }
- 
+
 export default Legal;
