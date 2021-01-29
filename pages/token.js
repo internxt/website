@@ -13,11 +13,12 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import cookies from '../lib/cookies'
+import cmc from '../lib/cmc'
 
 const Token = (props) => {
 
-    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "token")
-    
+    const metatags = props.metatagsDescriptions.filter(desc => desc.id === "token")
+
     useEffect(() => {
         AOS.init()
     }, [])
@@ -39,10 +40,6 @@ const Token = (props) => {
 }
 
 export async function getServerSideProps(ctx) {
-    const URL = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?CMC_PRO_API_KEY=${process.env.COINMARKETCAP_API_KEY}&symbol=INXT&convert=EUR`
-    const res = await fetch(URL)
-    const data = await res.json()
-
     const lang = ctx.locale
     const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
     const descriptions = require(`../assets/lang/${lang}/token-descriptions.json`)
@@ -50,6 +47,8 @@ export async function getServerSideProps(ctx) {
     const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
 
     cookies.setReferralCookie(ctx);
+
+    const data = await cmc();
 
     return {
         props: {
