@@ -13,16 +13,17 @@ import React from 'react';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import cookies from '../lib/cookies'
 
 const AboutUs = (props) => {
-    
-    const metatags = props.metatagsDescriptions.filter( desc => desc.id === "about")
-    
+
+    const metatags = props.metatagsDescriptions.filter(desc => desc.id === "about")
+
     useEffect(() => {
         AOS.init()
     }, [])
 
-    return ( 
+    return (
         <Layout segmentName='about' title={metatags[0].title} description={metatags[0].description} >
             <TopBar />
             <Container1 id='1' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
@@ -34,7 +35,7 @@ const AboutUs = (props) => {
             <Container7 id='7' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} articles={props} />
             <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
         </Layout>
-     );
+    );
 }
 
 export async function getServerSideProps(ctx) {
@@ -43,11 +44,11 @@ export async function getServerSideProps(ctx) {
     const rss = await Feed.load(POSTS_URL)
     const data = rss.items
     let images = []
-    
+
     const regex = /<img src="(.*)" width=/
 
     data.forEach(elem => {
-        if(elem.description) {
+        if (elem.description) {
             const image = elem.description.match(regex)[1]
             images.push(image)
         } else images.push(null)
@@ -57,31 +58,12 @@ export async function getServerSideProps(ctx) {
     const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`)
     const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
     const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
-    
-    const Cookies = require('cookies')
-    const moment = require('moment')
-    const url = require('url')
-    const queryString = require('querystring')
-    const cookies = new Cookies(ctx.req, ctx.res)
-  
-    const query = url.parse(ctx.req.url).query
-    const parsedQuery = queryString.parse(query)
-    let referral
-    const expires = moment().add(2, 'days').toDate()
-  
-    referral = parsedQuery.ref
-  
-    if (referral) {
-        cookies.set('REFERRAL', referral, {
-            domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
-            expires: expires,
-            overwrite: true
-        })  
+
+    cookies.setReferralCookie(ctx);
+
+    return {
+        props: { data: JSON.parse(JSON.stringify(data)), images, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions }
     }
-    
-  return {
-    props: { data: JSON.parse(JSON.stringify(data)), images, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions }
-  }
 }
 
 export default AboutUs;
