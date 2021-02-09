@@ -20,6 +20,7 @@
     display: flex;
     justify-content: flex-end;
     width: 55%;
+    object-fit: cover;
 }
 
 .name {

@@ -49,7 +49,10 @@
         "job10": "Asistente de Marketing",
 
         "employee11": "Sergio Gutiérrez",
-        "job11": "Ingeniero de Software"
+        "job11": "Ingeniero de Software",
+
+        "employee12": "Miguel Sánchez",
+        "job12": "Ingeniero de Software"
     },
     {
         "id": "4",
