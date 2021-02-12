@@ -7,7 +7,6 @@ import Container4 from '../components/photos/Container4'
 import Container5 from '../components/photos/Container5'
 import Layout from '../components/layout/Layout'
 import AOS from 'aos'
-import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import cookies from '../lib/cookies'
 

@@ -2,7 +2,6 @@ import Feed from 'rss-to-json'
 import Container1 from '../components/about-us/Container1'
 import Container2 from '../components/about-us/Container2'
 import Container3 from '../components/about-us/Container3'
-import Container4 from '../components/about-us/Container4'
 import Container5 from '../components/about-us/Container5'
 import Container6 from '../components/about-us/Container6'
 import Container7 from '../components/about-us/Container7'
@@ -11,7 +10,6 @@ import Layout from '../components/layout/Layout'
 import TopBar from '../components/layout/TopBar';
 import React from 'react';
 import AOS from 'aos'
-import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import cookies from '../lib/cookies'
 

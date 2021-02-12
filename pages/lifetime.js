@@ -10,7 +10,6 @@ import Layout from '../components/layout/Layout'
 import TopBar from '../components/layout/TopBar'
 import { useEffect } from 'react'
 import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 const Lifetime = (props) => {
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import 'aos/dist/aos.css'
 
 export default function Layout({
     children,

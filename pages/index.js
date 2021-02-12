@@ -10,7 +10,6 @@ import Footer from '../components/layout/Footer'
 import TopBar from '../components/layout/TopBar'
 import Layout from '../components/layout/Layout'
 import AOS from 'aos'
-import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import cookies from '../lib/cookies'
 
