@@ -57,7 +57,7 @@
 .button_text {
     font-family: "averta-bold";
     font-size: 14px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.4px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)), 
         linear-gradient(261deg, #ff000c 0%, #ac00ff 20%, #00e3ff 47%, #47ff7d 72%, #ffe700 100%);
     -webkit-background-clip: text;

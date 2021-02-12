@@ -24,33 +24,40 @@ const TopBar = () => {
                         <img className="block object-contain cursor-pointer sm:hidden md:w-28 lg:w-28 xl:w-28" src="/images/1440/Footer/Internxt.webp" />
                     </Link>
 
-                    <div className={`${styles.center} flex flex-row sm:flex-col sm:p-0`} >
-                        <Link href="/">
-                            <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Drive</a>
-                        </Link>
+                    {
+                        router.pathname !== '/lifetime' ?
+                            <div className={`${styles.center} flex flex-row sm:flex-col sm:p-0`} >
+                                <Link href="/">
+                                    <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Drive</a>
+                                </Link>
 
-                        <Link href="/photos">
-                            <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Photos</a>
-                        </Link>
+                                <Link href="/photos">
+                                    <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Photos</a>
+                                </Link>
 
-                        <a href="https://send.internxt.com" target="_blank" className={router.pathname === '/send' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Send</a>
+                                <a href="https://send.internxt.com" target="_blank" className={router.pathname === '/send' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Send</a>
 
-                        <Link href="/pricing">
-                            <a className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Pricing</a>
-                        </Link>
+                                <Link href="/pricing">
+                                    <a className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Pricing</a>
+                                </Link>
 
-                        <Link href="/about">
-                            <a className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>About</a>
-                        </Link>
+                                <Link href="/about">
+                                    <a className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>About</a>
+                                </Link>
 
-                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Sign in</a>
+                                <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Sign in</a>
 
-                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Get started</a>
-                    </div>
+                                <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Get started</a>
+                            </div>
+                        :
+                            null
+                    }
 
                     <div className={`${styles.links} sm:hidden`}>
                         <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} m-0 lg:text-sm`}>Sign in</a>
-                        <a href="https://drive.internxt.com/new" target="_blank"><img src="/images/1440/Footer/button.webp" className={`${styles.get_started}`} /></a>
+                        <a href="https://drive.internxt.com/new" target="_blank" className={styles.button}>
+                            <p className={styles.button_text}>Claim now!</p>
+                        </a>
                     </div>
                 </Nav>
             </Navbar.Collapse>
