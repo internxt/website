@@ -16,7 +16,7 @@ const Home = (props) => {
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName='home'>
-      <TopBar />
+      <TopBar hideSignIn={true} />
       <Container1 id='9' descriptions={props.descriptions} />
       <Container3 id='3' descriptions={props.descriptions} />
       <Container4 id='4' descriptions={props.descriptions} />

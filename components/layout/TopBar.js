@@ -4,7 +4,7 @@ import styles from './TopBar.module.css'
 import { useEffect, useState } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 
-const TopBar = () => {
+export default function TopBar(props) {
 
     const router = useRouter()
     const currentPath = router.pathname
@@ -49,12 +49,12 @@ const TopBar = () => {
 
                                 <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Get started</a>
                             </div>
-                        :
+                            :
                             null
                     }
 
                     <div className={`${styles.links} sm:hidden`}>
-                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} m-0 lg:text-sm`}>Sign in</a>
+                        {props.hideSignIn ? '' : <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} m-0 lg:text-sm`}>Sign in</a>}
                         <a href="https://drive.internxt.com/new" target="_blank" className={styles.button}>
                             <p className={styles.button_text}>Claim now!</p>
                         </a>
@@ -62,52 +62,5 @@ const TopBar = () => {
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-        /* <header>
-            <Link href="/" >
-                <div className={`${styles.logo} lg:w-32 lg:px-4 xl:w-28`}>
-                    <Image 
-                        src="/images/1440/Footer/Internxt.webp"
-                        alt="INTERXT logo"
-                        width={298}
-                        height={32}
-                    />
-                </div>
-            </Link>
-
-            <div>
-                <Link href="/">
-                    <a className={router.pathname === '/' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link} lg:text-sm`}>Drive</a>
-                </Link>
-
-                <Link href="/photos">
-                    <a className={router.pathname === '/photos' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  lg:text-sm`}>Photos</a>
-                </Link>
-                
-                <a href="https://send.internxt.com/" className={`${styles.nonactive_link}  lg:text-sm`}>Send</a>
-                
-                <Link href="/prices">
-                    <a className={router.pathname === '/pricing' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  lg:text-sm`}>Pricing</a>
-                </Link>
-
-                <Link href="/about">
-                    <a  className={router.pathname === '/about' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  lg:text-sm`}>About</a>
-                </Link>
-
-                <Link href="/token">
-                    <a  className={router.pathname === '/token' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  lg:text-sm`}>Token</a>
-                </Link>
-
-                <Link href="/core">
-                    <a  className={router.pathname === '/core' ? `${styles.active_link} lg:text-sm` : `${styles.nonactive_link}  lg:text-sm`}>Core</a>
-                </Link>
-            </div>
-
-            <div className={styles.links}>
-                <a className={`${styles.nonactive_link} lg:text-sm`}>Sign in</a>
-                <a className={`${styles.button} lg:h-8`}><p className={`${styles.button_text} lg:text-sm`}>Get started</p></a>
-            </div>
-        </header> */
     );
 }
-
-export default TopBar;

@@ -3,30 +3,30 @@ import Image from 'next/image'
 
 const Container1 = ({ id, descriptions }) => {
 
-    const description = descriptions.filter( desc => desc.id === id)
-    
+    const description = descriptions.filter(desc => desc.id === id)
+
     // Check if a number is odd
-    const isOdd = ( num ) => {
+    const isOdd = (num) => {
         return num % 2 == 1;
     }
 
     // Set the background color of the container depending on its id
     const className = isOdd(id) ? 'normal_container' : 'normal_container grey'
 
-    const formattedText = (text, values) => { 
+    const formattedText = (text, values) => {
         const regex = new RegExp(/\[\[(.*?)\]\]/);
 
         if (!values.length)
             return text;
-    
+
         return (<div>
             {text.split(regex)
                 .reduce((prev, current, i) => {
                     if (!i)
                         return [current];
-    
+
                     return prev.concat(
-                        values.includes(current)  ?
+                        values.includes(current) ?
                             <span key={i + current} className={`${styles.lineThrough}`}>
                                 {current}
                             </span>
@@ -36,7 +36,7 @@ const Container1 = ({ id, descriptions }) => {
         </div>);
     };
 
-    return ( 
+    return (
         <div className={className}>
             <div className={`${styles.main} sm:pb-20`}>
                 <h1
@@ -48,7 +48,7 @@ const Container1 = ({ id, descriptions }) => {
                     {description[0].title}
                 </h1>
 
-                <p 
+                <p
                     data-aos="fade-up"
                     data-aos-delay="250"
                     data-aos-duration="500"
@@ -57,7 +57,7 @@ const Container1 = ({ id, descriptions }) => {
                     {description[0].subtitle}
                 </p>
 
-                <div 
+                <div
                     data-aos="fade"
                     data-aos-delay="250"
                     data-aos-duration="700"
@@ -66,36 +66,36 @@ const Container1 = ({ id, descriptions }) => {
                     <Image src="/images/1440/Drive/Section 1/star icon.webp" width={47} height={50} />
                 </div>
 
-                <div 
+                <div
                     data-aos="fade"
                     data-aos-delay="250"
                     data-aos-duration="700"
-                    
+
                     className={`${styles.gear} ${styles.animation_gear} sm:p-0 sm:top-0 sm:w-6 sm:mr-12 sm:mt-3 lg:mt-8 lg:mr-22`}>
                     <Image src="/images/1440/Drive/Section 1/cog icon.webp" width={37} height={38} />
                 </div>
 
-                <div 
+                <div
                     data-aos="fade"
                     data-aos-delay="250"
                     data-aos-duration="700"
-                    
+
                     className={`${styles.coin} ${styles.animation_coin} sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:w-12 lg:mb-20`}>
                     <Image src="/images/1440/Drive/Section 1/coin icon.webp" width={81} height={76} />
                 </div>
 
-                <div 
+                <div
                     data-aos="fade"
                     data-aos-delay="250"
                     data-aos-duration="700"
-                    
+
                     className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}>
                     <Image src="/images/1440/Drive/Section 1/lock icon.webp" width={45} height={60} />
                 </div>
             </div>
 
             <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
-                <h1 
+                <h1
                     data-aos="fade-up"
                     data-aos-delay="350"
                     data-aos-duration="500"
@@ -104,33 +104,23 @@ const Container1 = ({ id, descriptions }) => {
                     {description[0].subtitle2}
                 </h1>
 
-                <p className={styles.label}>
+                <p className={`${styles.label}`}>
                     {formattedText(description[0].title2, description[0].lineThrough)}
                 </p>
 
-                <form   
+                <input
                     data-aos="fade-up"
                     data-aos-delay="450"
                     data-aos-duration="500"
-                    
-                    method="get" 
-                    target="_blank" 
-                    action="https://drive.internxt.com/new"
-                    className="flex items-center"
-                >
-                    <input
-                        name='signup'
-                        type='submit'
-                        value={description[0].button}
-                        className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-60 lg:h-10 lg:text-sm`}
-                    />
-                </form>
+                    value={description[0].button}
+                    className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-60 lg:h-10 lg:text-sm`}
+                />
 
-                <div 
+                <div
                     data-aos="fade-up"
                     data-aos-delay="550"
                     data-aos-duration="500"
-                    
+
                     className={`${styles.billing_container}`}>
                     <p className={`${styles.subtitle3} sm:text-xs sm:pt-2 lg:text-sm`}>
                         {description[0].subtitle3}
@@ -141,11 +131,11 @@ const Container1 = ({ id, descriptions }) => {
                     <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
                 </div>
 
-                <div 
+                <div
                     data-aos="fade-up-left"
                     data-aos-delay="450"
                     data-aos-duration="700"
-                    
+
                     className={`${styles.hand} sm:hidden lg:w-84`}>
                     <Image src="/images/1440/Drive/Section 1/purplehand.webp" width={482} height={310} />
                 </div>
@@ -153,5 +143,5 @@ const Container1 = ({ id, descriptions }) => {
         </div>
     );
 }
- 
+
 export default Container1;
