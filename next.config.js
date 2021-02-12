@@ -10,6 +10,11 @@ module.exports = {
                 source: '/core/setup-and-tips',
                 destination: '/core',
                 permanent: true,
+            },
+            {
+                source: '/es/drive',
+                destination: '/es',
+                permanent: false
             }
         ]
     },
