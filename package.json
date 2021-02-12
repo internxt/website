@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "node ./scripts/use-yarn.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,26 +12,22 @@
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
     "aos": "^2.3.4",
-    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "cookies": "^0.8.0",
+    "jquery": "^3.5.1",
     "jsonwebtoken": "^8.5.1",
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
     "next": "10.0.1",
+    "popper.js": "^1.16.1",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "17.0.1",
-    "react-faq-component": "^1.2.1",
-    "react-reveal": "^1.2.2",
     "rss-to-json": "^1.1.1",
-    "styled-components": "^5.2.1",
     "tailwindcss": "^1.9.6",
-    "useragent": "^2.3.0",
-    "xml2js": "^0.4.23"
+    "useragent": "^2.3.0"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
-    "purgecss": "^3.0.0"
+    "postcss-preset-env": "^6.7.0"
   }
 }
