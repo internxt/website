@@ -150,7 +150,7 @@ const Container5 = ({ id, descriptions }) => {
                             min="0"
                             
                             className={`${styles.input}`}
-                            value={total}
+                            defaultValue={total}
                         />
 
                         <div className={`${styles.type_container}`}>
