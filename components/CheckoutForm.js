@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 
 export default function CheckoutForm(props) {
@@ -6,7 +7,7 @@ export default function CheckoutForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //setLoading(true);
+    setLoading(true);
     // Create a Checkout Session.
     const response = await fetch('/api/stripe/session', {
       method: 'post',
@@ -37,14 +38,15 @@ export default function CheckoutForm(props) {
 
   return <form onSubmit={handleSubmit}>
 
-    <input
+    <button
       data-aos="fade-up"
       data-aos-delay="450"
       data-aos-duration="500"
       type="submit"
       disabled={loading}
       {...props}
-    />
+      style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+    >{loading ? <Spinner animation="border" style={{ color: '#e0e0e0' }} /> : props.value}</button>
 
 
   </form>
