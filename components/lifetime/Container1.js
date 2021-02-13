@@ -1,5 +1,6 @@
 import styles from './Container1.module.css'
 import Image from 'next/image'
+import CheckoutForm from '../CheckoutForm'
 
 const Container1 = ({ id, descriptions }) => {
 
@@ -38,7 +39,7 @@ const Container1 = ({ id, descriptions }) => {
 
     return (
         <div className={className}>
-            <div className={`${styles.main} sm:pb-20`}>
+            <div className={`${styles.main}`}>
                 <h1
                     data-aos="fade-up"
                     data-aos-delay="150"
@@ -100,7 +101,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-delay="350"
                     data-aos-duration="500"
 
-                    className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}>
+                    className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`} style={{ position: 'absolute' }}>
                     {description[0].subtitle2}
                 </h1>
 
@@ -108,13 +109,11 @@ const Container1 = ({ id, descriptions }) => {
                     {formattedText(description[0].title2, description[0].lineThrough)}
                 </p>
 
-                <input
-                    data-aos="fade-up"
-                    data-aos-delay="450"
-                    data-aos-duration="500"
-                    defaultValue={description[0].button}
-                    className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-60 lg:h-10 lg:text-sm`}
-                />
+                <div>
+                    <CheckoutForm value={description[0].button}
+                        className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-60 lg:h-10 lg:text-sm`}
+                    />
+                </div>
 
                 <div
                     data-aos="fade-up"
