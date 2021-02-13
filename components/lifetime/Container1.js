@@ -45,7 +45,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-delay="150"
                     data-aos-duration="500"
 
-                    className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:text-8xl lg:w-150`}>
+                    className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl tablet:text-4xl desktop-hd:text-big lg:w-150`}>
                     {description[0].title}
                 </h1>
 
@@ -100,8 +100,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos="fade-up"
                     data-aos-delay="350"
                     data-aos-duration="500"
-
-                    className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`} style={{ position: 'absolute' }}>
+                    className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}>
                     {description[0].subtitle2}
                 </h1>
 

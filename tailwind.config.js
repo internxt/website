@@ -10,24 +10,29 @@ module.exports = {
   important: true,
   theme: {
     fontFamily: {
-        averta: 'averta',
-        avertalight: 'averta-light',
-        avertasemibold: 'averta-semibold',
-        avertabold: 'averta-bold',
-        avertaextrabold: 'averta-extrabold',
-        avertablack: 'averta-black'
+      averta: 'averta',
+      avertalight: 'averta-light',
+      avertasemibold: 'averta-semibold',
+      avertabold: 'averta-bold',
+      avertaextrabold: 'averta-extrabold',
+      avertablack: 'averta-black'
     },
     screens: {
-      'xl': {'min': '1081px'},
-      'lg': {'min': '751px', 'max': '1080px'},
-      'sm': {'min': '320px', 'max': '750px'},
+      'xl': { 'min': '1081px' },
+      'lg': { 'min': '751px', 'max': '1080px' },
+      'sm': { 'min': '320px', 'max': '750px' },
+      'mobile': { 'min': '0px', 'max': '600px' },
+      'tablet': { 'min': '600px' },
+      'desktop-hd': { 'min': '1280px', 'max': '1920px' },
+      'desktop-full-hd': { 'min': '1920px' },
+      'desktop-ultra-hd': { 'min': '3840px' }
     },
     maxWidth: {
-        '780': '780px',
-        '1280': '1280px',
-        '1440': '1440px',
-        '1600': '1600px',
-        '1920': '1920px'
+      '780': '780px',
+      '1280': '1280px',
+      '1440': '1440px',
+      '1600': '1600px',
+      '1920': '1920px'
     },
     fontSize: {
       '13': '13px',
@@ -47,7 +52,8 @@ module.exports = {
       '5.5xl': '3.75rem',
       '6xl': '4rem',
       '7xl': '5rem',
-      '8xl': '5.3rem'
+      '8xl': '5.3rem',
+      'big': '4.6rem'
     },
     extend: {
       spacing: {

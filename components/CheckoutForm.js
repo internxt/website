@@ -39,9 +39,6 @@ export default function CheckoutForm(props) {
   return <form onSubmit={handleSubmit}>
 
     <button
-      data-aos="fade-up"
-      data-aos-delay="450"
-      data-aos-duration="500"
       type="submit"
       disabled={loading}
       {...props}
