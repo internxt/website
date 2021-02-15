@@ -1,11 +1,13 @@
 import styles from './Container6.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Container6 = ({ id, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
+    const router = useRouter()
 
     // Check if a number is odd
     const isOdd = ( num ) => {
@@ -28,7 +30,7 @@ const Container6 = ({ id, descriptions }) => {
                     </p>
 
                     <Link href="/pricing">
-                        <a data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={`hover:opacity-80 flex flex-row w-auto items-center sm:my-6 lg:text-base lg:mt-10 lg:mb-12 xl:my-16`}>
+                        <a data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={router.pathname === '/lifetime' ? 'hidden' : `hover:opacity-80 flex flex-row w-auto items-center sm:my-6 lg:text-base lg:mt-10 lg:mb-12 xl:my-16`}>
                             <p className={`${styles.margin} ${styles.link} sm:text-lg lg:text-base mr-2`}>{description[0].link}</p>
                             <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
                         </a>
