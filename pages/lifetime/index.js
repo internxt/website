@@ -1,16 +1,16 @@
-import Container1 from '../components/lifetime/Container1'
-import Container3 from '../components/drive/Container3'
-import Container4 from '../components/drive/Container4'
-import Container5 from '../components/drive/Container5'
-import Container6 from '../components/drive/Container6'
-import Container7 from '../components/drive/Container7'
-import Container8 from '../components/drive/Container8'
-import Footer from '../components/layout/Footer'
-import Layout from '../components/layout/Layout'
-import TopBar from '../components/layout/TopBar'
+import Container1 from '../../components/lifetime/Container1'
+import Container3 from '../../components/drive/Container3'
+import Container4 from '../../components/drive/Container4'
+import Container5 from '../../components/drive/Container5'
+import Container6 from '../../components/drive/Container6'
+import Container7 from '../../components/drive/Container7'
+import Container8 from '../../components/drive/Container8'
+import Footer from '../../components/layout/Footer'
+import Layout from '../../components/layout/Layout'
+import TopBar from '../../components/layout/TopBar'
 import { useEffect } from 'react'
 import AOS from 'aos'
-import { redirectToCheckoutAction } from '../components/CheckoutForm'
+import { redirectToCheckoutAction } from '../../components/CheckoutForm'
 
 const Lifetime = (props) => {
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")
@@ -37,10 +37,10 @@ const Lifetime = (props) => {
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`)
-  const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`)
-  const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`)
-  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`)
+  const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions.json`)
+  const descriptions = require(`../../assets/lang/${lang}/drive-descriptions.json`)
+  const footerDescriptions = require(`../../assets/lang/${lang}/footer-descriptions.json`)
+  const cardDescriptions = require(`../../assets/lang/${lang}/card-descriptions.json`)
 
   return {
     props: { metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions }
