@@ -18,7 +18,7 @@ export default function TopBar(props) {
                         <img className="block object-contain cursor-pointer sm:hidden md:w-28 lg:w-28 xl:w-28" src="/images/1440/Footer/Internxt.webp" />
                     </Link>
 
-                    <div className={`${styles.center} flex flex-row sm:flex-col sm:p-0`} >
+                    <div className={router.pathname === "/lifetime" ? 'hidden' : `${styles.center} flex flex-row sm:flex-col sm:p-0`} >
                         <Link href="/">
                             <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Drive</a>
                         </Link>

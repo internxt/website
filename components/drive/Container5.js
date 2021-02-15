@@ -1,10 +1,12 @@
 import styles from './Container5.module.css'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 const Container5 = ({ id, downloadUrl, descriptions }) => {
 
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
+    const router = useRouter()
 
     // Check if a number is odd
     const isOdd = ( num ) => {
@@ -54,7 +56,7 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
                         {description[0].subtitle4}
                     </p>
 
-                    <div className={`${styles.links} sm:justify-evenly sm:w-80`}>
+                    <div className={router.pathname === '/lifetime' ? 'hidden' : `${styles.links} sm:justify-evenly sm:w-80`}>
                         <a data-aos="fade-up" data-aos-duration="300" href="https://drive.internxt.com/new" target="_blank" className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}>
                             <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>{description[0].link1}</p>
                             <Image className={styles.image} src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={14} height={11} />
