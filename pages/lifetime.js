@@ -10,6 +10,7 @@ import Layout from '../components/layout/Layout'
 import TopBar from '../components/layout/TopBar'
 import { useEffect } from 'react'
 import AOS from 'aos'
+import { redirectToCheckoutAction } from '../components/CheckoutForm'
 
 const Lifetime = (props) => {
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")
@@ -21,7 +22,7 @@ const Lifetime = (props) => {
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName='lifetime'>
-      <TopBar hideSignIn={true} />
+      <TopBar hideSignIn={true} signUpAction={redirectToCheckoutAction} signUpText={'Claim now!'} />
       <Container1 id='9' descriptions={props.descriptions} />
       <Container3 id='3' descriptions={props.descriptions} />
       <Container4 id='4' descriptions={props.descriptions} />

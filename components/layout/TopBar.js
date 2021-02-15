@@ -7,12 +7,6 @@ import { Nav, Navbar } from 'react-bootstrap'
 export default function TopBar(props) {
 
     const router = useRouter()
-    const currentPath = router.pathname
-    const [color, setColor] = useState('')
-
-    useEffect(() => {
-        currentPath == '/about' ? setColor(`text-white`) : null
-    }, [])
 
     return (
         <Navbar className="sm:flex-row-reverse sm:pl-4 sm:pt-1" expand="md">
@@ -24,39 +18,47 @@ export default function TopBar(props) {
                         <img className="block object-contain cursor-pointer sm:hidden md:w-28 lg:w-28 xl:w-28" src="/images/1440/Footer/Internxt.webp" />
                     </Link>
 
-                    {
-                        router.pathname !== '/lifetime' ?
-                            <div className={`${styles.center} flex flex-row sm:flex-col sm:p-0`} >
-                                <Link href="/">
-                                    <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Drive</a>
-                                </Link>
+                    <div className={`${styles.center} flex flex-row sm:flex-col sm:p-0`} >
+                        <Link href="/">
+                            <a className={router.pathname === '/' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Drive</a>
+                        </Link>
 
-                                <Link href="/photos">
-                                    <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Photos</a>
-                                </Link>
+                        <Link href="/photos">
+                            <a className={router.pathname === '/photos' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Photos</a>
+                        </Link>
 
-                                <a href="https://send.internxt.com" target="_blank" className={router.pathname === '/send' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Send</a>
+                        <a href="https://send.internxt.com" target="_blank" className={router.pathname === '/send' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Send</a>
 
-                                <Link href="/pricing">
-                                    <a className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Pricing</a>
-                                </Link>
+                        <Link href="/pricing">
+                            <a className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Pricing</a>
+                        </Link>
 
-                                <Link href="/about">
-                                    <a className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>About</a>
-                                </Link>
+                        <Link href="/about">
+                            <a className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>About</a>
+                        </Link>
 
-                                <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Sign in</a>
+                        <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Sign in</a>
 
-                                <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Get started</a>
-                            </div>
-                            :
-                            null
-                    }
+                        <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Get started</a>
+                    </div>
 
                     <div className={`${styles.links} sm:hidden`}>
-                        {props.hideSignIn ? '' : <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} m-0 lg:text-sm`}>Sign in</a>}
-                        <a href="https://drive.internxt.com/new" target="_blank" className={styles.button}>
-                            <p className={styles.button_text}>Claim now!</p>
+                        {props.hideSignIn
+                            ? <></>
+                            : <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.nonactive_link} m-0 lg:text-sm`}>Sign in</a>}
+
+                        <a
+                            {...props.signUpAction ?
+                                {
+                                    onClick: props.signUpAction,
+                                    href: '#'
+                                } :
+                                {
+                                    href: 'https://drive.internxt.com/new',
+                                    target: '_blank'
+                                }}
+                            className={styles.button}>
+                            <p className={styles.button_text}>{props.signUpText ? props.signUpText : 'Get started'}</p>
                         </a>
                     </div>
                 </Nav>
