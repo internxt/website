@@ -58,7 +58,7 @@ export default function TopBar(props) {
                                     target: '_blank'
                                 }}
                             className={styles.button}>
-                            <p className={styles.button_text}>{props.signUpText ? props.signUpText : 'Get started'}</p>
+                            <p className={styles.button_text}>{props.signUpText ? props.signUpText : 'Sign up'}</p>
                         </a>
                     </div>
                 </Nav>
