@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Accordion, Card, Button } from 'react-bootstrap'
 import { useRouter } from 'next/router'
 
-const Footer = ({ descriptions, cardDescriptions }) => {
+const Footer = (props) => {
 
     const router = useRouter()
     const locale = router.locale
@@ -15,11 +15,11 @@ const Footer = ({ descriptions, cardDescriptions }) => {
             <div className={`${styles.first_half} sm:p-0 sm:py-20 lg:h-84`}>
                 <div className={styles.title_container}>
                     <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>
-                        {descriptions.title1}
+                        {router.pathname === '/lifetime' ? props.descriptions.lifetimeTitle1 : props.descriptions.title1}
                     </h1>
 
                     <h1 className={`${styles.title} sm:text-4xl lg:text-4xl`}>
-                    {descriptions.title2}
+                    {router.pathname === '/lifetime' ? props.descriptions.lifetimeTitle2 : props.descriptions.title2}
                     </h1>
 
                     <div className={`${styles.image} sm:mx-0`}>
@@ -29,13 +29,23 @@ const Footer = ({ descriptions, cardDescriptions }) => {
 
                 <div className={`${styles.get_started_container} lg:mt-10`}>
                     
-                    <a href="http://drive.internxt.com/new" target="_blank" className={`${styles.button} ${styles.text_button} sm:text-base lg:text-sm lg:h-8 lg:w-32`}>
-                        {descriptions.button}
+                    <a
+                        {...props.signUpAction ?
+                            {
+                                onClick: props.signUpAction,
+                                href: '#'
+                            } :
+                            {
+                                href: 'https://drive.internxt.com/new',
+                                target: '_blank'
+                            }}
+                            className={`${styles.button} ${styles.text_button} sm:text-base lg:text-sm lg:h-8 lg:w-32`}>
+                        {router.pathname === '/lifetime' ? 'Claim now!' : props.descriptions.button}
                     </a>
                     
                     <Link href="/pricing">
-                        <a className={`${styles.learn_more} sm:text-base lg:text-xss lg:mt-1`}>
-                            {descriptions.link}
+                        <a className={router.pathname === '/lifetime' ? 'hidden' : `${styles.learn_more} sm:text-base lg:text-xss lg:mt-1`}>
+                            {props.descriptions.link}
                         </a>
                     </Link>
                 </div>
@@ -44,11 +54,11 @@ const Footer = ({ descriptions, cardDescriptions }) => {
             <div className={`${styles.second_half} sm:pb-16`}>
                 <div className={`${styles.signup_container} sm:flex-col sm:w-full sm:pl-6 sm:items-start`}>
                     <p className={`${styles.keep_updated} sm:text-xl sm:min-w-0 sm:w-9/12 lg:text-xl lg:min-w-0 lg:w-100 lg:flex-none `}>
-                        {descriptions.keep_updated}
+                        {props.descriptions.keep_updated}
                     </p>
 
                     <div className="sm:hidden">
-                        <EmailNewsletter value={descriptions.newsletter} descriptions={cardDescriptions} />
+                        <EmailNewsletter value={props.descriptions.newsletter} descriptions={props.cardDescriptions} />
                     </div>
                     
                     <form
@@ -58,14 +68,14 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                         <input
                             name='email'
                             type='email'
-                            placeholder={descriptions.placeholder}
+                            placeholder={props.descriptions.placeholder}
                             className={`${styles.email2} sm:h-10 sm:w-56 lg:w-48 lg:text-sm lg:h-10 `}
                         />
 
                         <input
                             name='signup'
                             type='submit'
-                            value={descriptions.button2}
+                            value={props.descriptions.button2}
                             className={`${styles.button2} sm:h-10 sm:w-28 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
                         />
                     </form>
@@ -86,16 +96,16 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                         </div>
 
                         <p className={`${styles.p_social} hover:opacity-100 sm:text-base lg:text-xs mt-6`}>
-                            {descriptions.copyright}
+                            {props.descriptions.copyright}
                         </p>
                         <p className={`${styles.p_social} hover:opacity-100 sm:text-base lg:text-xs`}>
-                            {descriptions.rights}
+                            {props.descriptions.rights}
                         </p>
                     </div>
 
                     <div className={`${styles.p_container} sm:hidden`}>
                         <h1 className={`${styles.label} lg:text-sm`}>
-                            {descriptions.label1}
+                            {props.descriptions.label1}
                         </h1>
 
                         <Link href="/drive">
@@ -119,23 +129,23 @@ const Footer = ({ descriptions, cardDescriptions }) => {
 
                     <div className={`${styles.p_container} sm:hidden`}>
                         <h1 className={`${styles.label} lg:text-sm`}>
-                            {descriptions.label2}
+                            {props.descriptions.label2}
                         </h1>
 
                         <Link href="/about">
                             <a className={`${styles.p_social} lg:text-xs`}>
-                                {descriptions.info1}
+                                {props.descriptions.info1}
                             </a>
                         </Link>
 
                         <Link href="/pricing">
                             <a className={`${styles.p_social} lg:text-xs`}>
-                                {descriptions.info2}   
+                                {props.descriptions.info2}   
                             </a>
                         </Link>
 
                         <a href="mailto:support@internxt.zohodesk.eu" target="_blank" className={`${styles.p_social} lg:text-xs`}>
-                            {descriptions.info3}
+                            {props.descriptions.info3}
                         </a>
                         
                         <Link href="/legal">
@@ -144,17 +154,17 @@ const Footer = ({ descriptions, cardDescriptions }) => {
 
                         {
                             locale == 'en' ? 
-                                <a href="/es" className={`${styles.p_social} lg:text-xs`}>{descriptions.info6}</a>
+                                <a href="/es" className={`${styles.p_social} lg:text-xs`}>{props.descriptions.info6}</a>
                             :
                                 <Link href="/">
-                                    <a className={`${styles.p_social} lg:text-xs`}>{descriptions.info6}</a>
+                                    <a className={`${styles.p_social} lg:text-xs`}>{props.descriptions.info6}</a>
                                 </Link>
                         }
                     </div>
 
                     <div className={styles.p_container}>
                         <h1 className={`${styles.label} lg:text-sm`}>
-                            {descriptions.label3}
+                            {props.descriptions.label3}
                         </h1>
 
                         <div className={styles.followus_container}>
@@ -175,13 +185,13 @@ const Footer = ({ descriptions, cardDescriptions }) => {
 
                     <div className={`${styles.p_container} sm:hidden`}>
                         <h1 className={`${styles.label} lg:text-sm`}>
-                            {descriptions.label4}
+                            {props.descriptions.label4}
                         </h1>
                         <a href="https://drive.internxt.com/login" target="_blank" className={`${styles.p_social} lg:text-xs`}>
-                            {descriptions.info4}
+                            {props.descriptions.info4}
                         </a>
                         <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.p_social} lg:text-xs`}>
-                            {descriptions.info5}
+                            {props.descriptions.info5}
                         </a>
                     </div>
                 </div>
@@ -190,7 +200,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                            {descriptions.label1}
+                            {props.descriptions.label1}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0">
@@ -221,14 +231,14 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                            {descriptions.label2}
+                            {props.descriptions.label2}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="1">
                         <Card.Body>
                             <Link href="/about">
                                 <a className={styles.faqtext}>
-                                    {descriptions.info1}
+                                    {props.descriptions.info1}
                                 </a>
                             </Link>
 
@@ -242,7 +252,7 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                            {descriptions.label3}
+                            {props.descriptions.label3}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="2">
@@ -257,16 +267,16 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     <Card>
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                            {descriptions.label4}
+                            {props.descriptions.label4}
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="3">
                         <Card.Body>
                             <a href="https://drive.internxt.com/login" className={`${styles.faqtext} m-0 lg:text-sm`}>
-                                {descriptions.info4}
+                                {props.descriptions.info4}
                             </a>
                             <a href="https://drive.internxt.com/new" className={`${styles.faqtext}`}>
-                                {descriptions.info5}
+                                {props.descriptions.info5}
                             </a>
                         </Card.Body>
                         </Accordion.Collapse>
@@ -286,10 +296,10 @@ const Footer = ({ descriptions, cardDescriptions }) => {
                     </div>
 
                     <p className={`${styles.p_social} sm:text-base sm:text-xs mt-6`}>
-                        {descriptions.copyright}
+                        {props.descriptions.copyright}
                     </p>
                     <p className={`${styles.p_social} sm:text-base sm:text-xs`}>
-                        {descriptions.rights}
+                        {props.descriptions.rights}
                     </p>
                 </div>
             </div>
