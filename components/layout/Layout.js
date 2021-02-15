@@ -19,10 +19,10 @@ export default function Layout({
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={description}></meta>
                 <link rel="icon" href="/favicon.ico" />
-                <script src="js/mailerlite.js"></script>
-                <script src={`js/segment${process.env.NODE_ENV === 'production' ? '' : '-test'}.js`}></script>
-                <script src="js/drift.js"></script>
-                <script src="js/twitter.js"></script>
+                <script src="/js/mailerlite.js"></script>
+                <script src={`/js/segment${process.env.NODE_ENV === 'production' ? '' : '-test'}.js`}></script>
+                <script src="/js/drift.js"></script>
+                <script src="/js/twitter.js"></script>
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EXL38KVWG"></script>
                 <script dangerouslySetInnerHTML={{
                     __html: 'window.dataLayer = window.dataLayer || [];\
