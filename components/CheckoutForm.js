@@ -2,12 +2,7 @@ import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 
-export default function CheckoutForm(props) {
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+export async function redirectToCheckoutAction() {
     // Create a Checkout Session.
     const response = await fetch('/api/stripe/session', {
       method: 'post',
@@ -33,7 +28,16 @@ export default function CheckoutForm(props) {
     // error, display the localized error message to your customer
     // using `error.message`.
     console.warn(error.message);
-    setLoading(false);
+}
+
+export default function CheckoutForm(props) {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    redirectToCheckoutAction().finally(() => setLoading(false))
   };
 
   return <form onSubmit={handleSubmit}>
