@@ -18,8 +18,8 @@ export default async (req, res) => {
   const params = {
     mode: 'payment',
     payment_method_types: ['card'],
-    success_url: 'https://internxt.com/lifetime/success',
-    cancel_url: 'https://internxt.com/lifetime/cancel',
+    success_url: `${req.headers['origin']}/lifetime/success`,
+    cancel_url: `${req.headers['origin']}/lifetime/cancel`,
     line_items: [
       {
         price: process.env.NODE_ENV === 'production' ? LIFETIMEPRODUCTS.production : LIFETIMEPRODUCTS.debug,
