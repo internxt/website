@@ -30,7 +30,7 @@ const Lifetime = (props) => {
       <Container6 id='6' descriptions={props.descriptions} />
       <Container7 id='7' descriptions={props.descriptions} />
       <Container8 id='8' descriptions={props.descriptions} />
-      <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
+      <Footer signUpAction={redirectToCheckoutAction} descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
     </Layout>
   )
 }
