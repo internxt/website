@@ -45,7 +45,7 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos-delay="150"
                     data-aos-duration="500"
 
-                    className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:w-150 lg:text-8xl`}>
+                    className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:w-150 desktop-hd:text-big desktop-full-hd:text-8xl`}>
                     {description[0].title}
                 </h1>
 
