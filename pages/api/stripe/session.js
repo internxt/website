@@ -7,9 +7,7 @@ const LIFETIMEPRODUCTS = {
 
 export default async (req, res) => {
   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST
-  const stripe = new Stripe(KEY, {
-    apiVersion: '2020-03-02',
-  });
+  const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
   if (req.method !== 'POST') {
     return res.status(500).end('Cannot ' + req.method + ' on ' + req.url);
