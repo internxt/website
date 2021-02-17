@@ -12,13 +12,12 @@ import { useEffect } from 'react'
 import AOS from 'aos'
 import { redirectToCheckoutAction } from '../../components/CheckoutForm'
 
-const Lifetime = (props) => {
+const Lifetime = ({ props }) => {
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")
 
   useEffect(() => {
     AOS.init()
   }, [])
-
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName='lifetime'>
@@ -35,8 +34,10 @@ const Lifetime = (props) => {
   )
 }
 
-export async function getServerSideProps(ctx) {
-  const lang = ctx.locale
+Lifetime.getInitialProps = async (ctx) => {
+  const browserLanguage = ctx.req.headers['accept-language'].split(',')[0]
+
+  const lang = browserLanguage === 'es' ? 'es' : 'en'
   const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions.json`)
   const descriptions = require(`../../assets/lang/${lang}/drive-descriptions.json`)
   const footerDescriptions = require(`../../assets/lang/${lang}/footer-descriptions.json`)
