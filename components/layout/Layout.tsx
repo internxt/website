@@ -4,7 +4,7 @@ import 'aos/dist/aos.css'
 import { propTypes } from 'react-bootstrap/esm/Image'
 
 interface LayoutProps {
-    children: JSX.Element
+    children: React.ReactNode
     title: string
     description: string
     segmentName: string | null
