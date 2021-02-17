@@ -16,5 +16,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         email: session.customer_details.email
     }, process.env.JWT_DRIVE_SERVER, { expiresIn: '14d' });
 
-    res.status(200).send({ token: token })
+    res.status(200).send({ token: token, email: session.customer_details.email })
 }

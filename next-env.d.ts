@@ -11,6 +11,7 @@ declare namespace NodeJS {
         STRIPE_PRIVATE_KEY: string
         STRIPE_PRIVATE_KEY_TEST: string
         JWT_DRIVE_SERVER: string
+        DRIVE_API_URL: string
 
         // PUBLIC KEYS
         NEXT_PUBLIC_RECAPTCHA_V3_PK: string

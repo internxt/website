@@ -1,11 +1,11 @@
 import { GetServerSideProps } from "next";
 import Layout from "../../components/layout/Layout";
 
-export default function Success() {
-    return <Layout segmentName="landing-lifetime-success" disableMailerlite={true} disableDrift={true}>
-        {/* <script dangerouslySetInnerHTML={{ __html: `analytics.track('landing-lifetime-converted', function() { window.location.href='https://drive.internxt.com/login'; });` }} /> */}
-        <div style={{ border: 'solid 1px red', height: '100%' }}>
-            sss
+export default function Success(props) {
+    return <Layout segmentName="landing-lifetime-success" disableMailerlite={true} disableDrift={true} title="Internxt Checkout Succcess" description="Redirect">
+        <script dangerouslySetInnerHTML={{ __html: `analytics.track('landing-lifetime-converted', function() { window.location.href='${props.redirectUrl}'; });` }} />
+        <div>
+            Automatic redirecting to <a href={props.redirectUrl}>Drive Web</a>...
         </div>
     </Layout>
 }
@@ -16,5 +16,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const request = await fetch(host + '/api/stripe/session/' + ctx.query.sid)
     const body = await request.json()
 
-    return { props: {  token: body.token} }
+    const redirectUrl = `${process.env.DRIVE_API_URL}/appsumo/${body.email}?token=${body.token}`
+
+    return {
+        props: {
+            token: body.token,
+            email: body.email,
+            redirectUrl
+        }
+    }
 }
