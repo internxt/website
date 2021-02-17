@@ -23,7 +23,7 @@ module.exports = {
       'sm': { 'min': '320px', 'max': '750px' },
       'mobile': { 'min': '0px', 'max': '600px' },
       'tablet': { 'min': '600px' },
-      'desktop-hd': { 'min': '1280px', 'max': '1920px' },
+      'desktop-hd': { 'min': '1280px' },
       'desktop-full-hd': { 'min': '1920px' },
       'desktop-ultra-hd': { 'min': '3840px' }
     },

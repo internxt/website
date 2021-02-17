@@ -13,7 +13,7 @@ export default async (req, res) => {
     return res.status(500).end('Cannot ' + req.method + ' on ' + req.url);
   }
 
-  const params = {
+  const params: Stripe.Checkout.SessionCreateParams = {
     mode: 'payment',
     payment_method_types: ['card'],
     success_url: `${req.headers['origin']}/lifetime/success`,
@@ -31,11 +31,9 @@ export default async (req, res) => {
   }
 
   try {
-    const checkoutSession = await stripe.checkout.sessions.create(params);
+    const checkoutSession: Stripe.Checkout.Session = await stripe.checkout.sessions.create(params);
     res.status(200).json(checkoutSession);
   } catch (e) {
     res.status(500).send({ error: e.message })
   }
-
-
 } 
