@@ -36,7 +36,6 @@ export default function Layout({
                 {!disableDrift && <script src="/js/drift.js"></script>}
                 <script src="/js/twitter.js"></script>
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EXL38KVWG"></script>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-728922855"></script>
                 <script dangerouslySetInnerHTML={{
                     __html: 'window.dataLayer = window.dataLayer || [];\
                     function gtag(){dataLayer.push(arguments);}\

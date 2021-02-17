@@ -35,9 +35,16 @@ const Lifetime = ({ props }) => {
 }
 
 Lifetime.getInitialProps = async (ctx) => {
+  // saca el idioma del navegador
   const browserLanguage = ctx.req.headers['accept-language'].split(',')[0]
 
-  const lang = browserLanguage === 'es' ? 'es' : 'en'
+  // array con los tags españoles mas populares
+  const spanishTags = ['es', 'es-ES', 'es-AR', 'es-MX', 'es-CO', 'es-US']
+
+  // si el tag coincide con el idioma del navegador devuelvelo
+  const idioma = spanishTags.find(elem => elem === browserLanguage)
+
+  const lang = idioma ? 'es' : 'en'
   const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions.json`)
   const descriptions = require(`../../assets/lang/${lang}/drive-descriptions.json`)
   const footerDescriptions = require(`../../assets/lang/${lang}/footer-descriptions.json`)
