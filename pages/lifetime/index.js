@@ -21,7 +21,7 @@ const Lifetime = ({ props }) => {
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName='lifetime'>
-      <TopBar hideSignIn={true} signUpAction={redirectToCheckoutAction} signUpText={'Claim now!'} />
+      <TopBar hideSignIn={true} signUpAction={() => redirectToCheckoutAction('lifetime2TB')} signUpText={'Claim now!'} hideMenuItems={true} />
       <Container1 id='9' descriptions={props.descriptions} />
       <Container3 id='3' descriptions={props.descriptions} />
       <Container4 id='4' descriptions={props.descriptions} />
