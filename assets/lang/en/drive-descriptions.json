@@ -66,5 +66,13 @@
         "lineThrough": ["€499"],
         "subtitle": "Internxt Drive is an encrypted cloud storage service, based on absolute privacy and security. Get our largest 2 TB plan for life, for a unique, one-time payment of €299, taxes included.",
         "button": "Claim limited-time offer"
+    },
+    {
+        "id": "10",
+        "title": "Are you fast enough to get our 10 TB lifetime account for only €499?",
+        "title2": "[[Normal price 2,500]] Now €499",
+        "lineThrough": ["Normal price 2,500"],
+        "subtitle": "Internxt Drive is an encrypted cloud storage service, based on absolute privacy and secuurity. We're offering a 10 TB account for €499 to a single user. Claim it before someone else does!",
+        "button": "Claim this crazy lifetime offer!"
     }
 ]
