@@ -2,29 +2,38 @@ import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 
-export async function redirectToCheckoutAction() {
+export async function redirectToCheckoutAction(product) {
   // Create a Checkout Session.
   const response = await fetch('/api/stripe/session', {
     method: 'post',
-    body: JSON.stringify({ amount: 1 })
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      product: product,
+      amount: 1
+    })
   });
 
-  if (response.statusCode === 500) {
-    console.error(response.message);
+  if (response.status === 500) {
+    console.error(response.statusText);
     return;
   }
 
   const body = await response.json()
 
   const stripe = await getStripe();
-  const { error } = await stripe.redirectToCheckout({
-    sessionId: body.id
-  });
+  const { error } = await stripe.redirectToCheckout({ sessionId: body.id });
 
   console.warn(error.message);
 }
 
-export default function CheckoutForm(props) {
+interface CheckoutFormProps {
+  product: string
+  value: string
+}
+
+export default function CheckoutForm(props: CheckoutFormProps) {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -35,7 +44,7 @@ export default function CheckoutForm(props) {
       window.analytics.track('landing-lifetime-enter-checkout')
     }
 
-    redirectToCheckoutAction().finally(() => setLoading(false))
+    redirectToCheckoutAction(props.product).finally(() => setLoading(false))
   };
 
   return <form onSubmit={handleSubmit}>

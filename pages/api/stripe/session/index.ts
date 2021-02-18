@@ -2,8 +2,14 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
 
 const LIFETIMEPRODUCTS = {
-  production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
-  debug: 'price_1IKSkkFAOdcgaBMQy1hnVrST'
+  lifetime2TB: {
+    production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
+    debug: 'price_1IKSkkFAOdcgaBMQy1hnVrST'  
+  },
+  lifetime10TB: {
+    production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
+    debug: 'price_1IMANUFAOdcgaBMQcI6c9nVp'  
+  }
 }
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
@@ -21,7 +27,7 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     cancel_url: `${req.headers['origin']}/lifetime/cancel?sid={CHECKOUT_SESSION_ID}`,
     line_items: [
       {
-        price: process.env.NODE_ENV === 'production' ? LIFETIMEPRODUCTS.production : LIFETIMEPRODUCTS.debug,
+        price: process.env.NODE_ENV === 'production' ? LIFETIMEPRODUCTS[req.body.product].production : LIFETIMEPRODUCTS[req.body.product].debug,
         quantity: 1
       }
     ],

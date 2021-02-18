@@ -14,7 +14,6 @@ import { redirectToCheckoutAction } from '../components/CheckoutForm'
 
 const Lifetime = ({ props }) => {
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")
-    console.log('metatags =>', props.metatagsDescriptions)
   useEffect(() => {
     AOS.init()
   }, [])
