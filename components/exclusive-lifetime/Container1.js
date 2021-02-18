@@ -12,7 +12,7 @@ const Container1 = ({ id, descriptions }) => {
     }
 
     // Set the background color of the container depending on its id
-    const className = isOdd(id) ? 'normal_container' : 'normal_container grey'
+    const className = isOdd(id) ? 'normal_container grey' : 'normal_container'
 
     const formattedText = (text, values) => {
         const regex = new RegExp(/\[\[(.*?)\]\]/);
