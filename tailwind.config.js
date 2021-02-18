@@ -25,7 +25,8 @@ module.exports = {
       'tablet': { 'min': '600px' },
       'desktop-hd': { 'min': '1280px' },
       'desktop-full-hd': { 'min': '1920px' },
-      'desktop-ultra-hd': { 'min': '3840px' }
+      'desktop-ultra-hd': { 'min': '3840px' },
+      'retina': { 'min': '1440px' }
     },
     maxWidth: {
       '780': '780px',
