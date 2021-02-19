@@ -35,7 +35,7 @@ const Lifetime = ({ props }) => {
 
 Lifetime.getInitialProps = async (ctx) => {
   // saca el idioma del navegador
-  const browserLanguage = ctx.req.headers['accept-language'].split(',')[0]
+  const browserLanguage = ctx.req.headers['accept-language'] && ctx.req.headers['accept-language'].split(',')[0]
 
   // array con los tags españoles mas populares
   const spanishTags = ['es', 'es-ES', 'es-AR', 'es-MX', 'es-CO', 'es-US']
