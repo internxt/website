@@ -4,11 +4,13 @@ import Stripe from 'stripe';
 const LIFETIMEPRODUCTS = {
   lifetime2TB: {
     production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
-    debug: 'price_1IKSkkFAOdcgaBMQy1hnVrST'  
+    debug: 'price_1IKSkkFAOdcgaBMQy1hnVrST',
+    return: 'lifetime'  
   },
   lifetime10TB: {
     production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
-    debug: 'price_1IMANUFAOdcgaBMQcI6c9nVp'  
+    debug: 'price_1IMANUFAOdcgaBMQcI6c9nVp',
+    return: 'exclusive-lifetime'  
   }
 }
 
@@ -20,14 +22,16 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).send({ error: 'Unknown origin' });
   }
 
+  const PRODUCT = LIFETIMEPRODUCTS[req.body.product];
+
   const params: Stripe.Checkout.SessionCreateParams = {
     mode: 'payment',
     payment_method_types: ['card'],
-    success_url: `${req.headers['origin']}/lifetime/success?sid={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${req.headers['origin']}/lifetime/cancel?sid={CHECKOUT_SESSION_ID}`,
+    success_url: `${req.headers['origin']}/${PRODUCT.return}/success?sid={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${req.headers['origin']}/${PRODUCT.return}/cancel?sid={CHECKOUT_SESSION_ID}`,
     line_items: [
       {
-        price: process.env.NODE_ENV === 'production' ? LIFETIMEPRODUCTS[req.body.product].production : LIFETIMEPRODUCTS[req.body.product].debug,
+        price: process.env.NODE_ENV === 'production' ? PRODUCT.production : PRODUCT.debug,
         quantity: 1
       }
     ],
