@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
-
+import fs from 'fs'
 const LIFETIMEPRODUCTS = {
   lifetime2TB: {
     production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
@@ -15,6 +15,7 @@ const LIFETIMEPRODUCTS = {
 }
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
+  fs.appendFileSync('emails.txt', req.body.email + '\n')
   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST
   const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
+import styles from './CheckoutForm.module.css'
 
-export async function redirectToCheckoutAction(product) {
+export async function redirectToCheckoutAction(product, email) {
   // Create a Checkout Session.
   const response = await fetch('/api/stripe/session', {
     method: 'post',
@@ -11,7 +12,8 @@ export async function redirectToCheckoutAction(product) {
     },
     body: JSON.stringify({
       product: product,
-      amount: 1
+      amount: 1,
+      email
     })
   });
 
@@ -35,6 +37,7 @@ interface CheckoutFormProps {
 
 export default function CheckoutForm(props: CheckoutFormProps) {
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,15 +47,23 @@ export default function CheckoutForm(props: CheckoutFormProps) {
       window.analytics.track('landing-lifetime-enter-checkout')
     }
 
-    redirectToCheckoutAction(props.product).finally(() => setLoading(false))
+    redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))
   };
 
-  return <form onSubmit={handleSubmit}>
+  return <form onSubmit={handleSubmit} style={{ display: 'flex' }}>
+   <input
+      type='email'
+      placeholder='Your email'
+      onChange={e => setEmail(e.target.value)}
+      className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+      required
+    />
+    
     <button
       type="submit"
       disabled={loading}
-      {...props}
       style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      {...props}
     >{loading ? <Spinner animation="border" style={{ color: '#e0e0e0' }} /> : props.value}</button>
   </form>
 }

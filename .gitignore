@@ -39,3 +39,4 @@ yarn-error.log*
 public/downloads/*
 public/*.pdf
 core
+emails.txt
