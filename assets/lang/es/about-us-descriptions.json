@@ -36,8 +36,8 @@
         "employee6": "Desi Miroslavova",
         "job6": "Ingeniera de Software",
         
-        "employee7": "Elena Garrigós",
-        "job7": "Ingeniera de Software",
+        "employee7": "Oleksandra Yudina",
+        "job7": "Asistente de Recursos Humanos",
 
         "employee8": "Zhihao Zhang",
         "job8": "Ingeniero de Software",
@@ -51,11 +51,18 @@
         "employee11": "Sergio Gutiérrez",
         "job11": "Ingeniero de Software",
 
-        "employee12": "Miguel Sánchez",
-        "job12": "Ingeniero de Software",
+        "employee12": "Vicente Belda",
+        "job12": "Especialista en Marketing Digital",
 
-        "employee13": "Vicente Belda",
-        "job13": "Asistente de Marketing"
+        "employee13": "Ana Mínguez",
+        "job13": "Asistente de Marketing",
+
+        "employee14": "Izascun Casasus",
+        "job14": "Asistente de Marketing",
+
+        "employee15": "Mauricio Romero",
+        "job15": "Asistente de Marketing"
+
     },
     {
         "id": "4",

@@ -17,8 +17,9 @@ const Container3 = ({ id, descriptions }) => {
         employee10, job10,
         employee11, job11,
         employee12, job12,
-        employee13, job13
-
+        employee13, job13,
+        employee14, job14,
+        employee15, job15
     } = description[0]
 
     return ( 
@@ -52,10 +53,6 @@ const Container3 = ({ id, descriptions }) => {
                     <PersonalCard name={employee6} job={job6} picture="Desi" />
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className="col-span-2">
-                    <PersonalCard name={employee7} job={job7} picture="Elena" />
-                </div>
-
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="350" className="col-span-2">
                     <PersonalCard name={employee8} job={job8} picture="Zhihao" />
                 </div>
@@ -64,8 +61,12 @@ const Container3 = ({ id, descriptions }) => {
                     <PersonalCard name={employee11} job={job11} picture="Sergio" />
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="400" className="col-span-2">
-                    <PersonalCard name={employee12} job={job12} picture="Miguel" />
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="550" className="col-span-2">
+                    <PersonalCard name={employee12} job={job12} picture="Vicente" />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className="col-span-2">
+                    <PersonalCard name={employee7} job={job7} picture="Oleksandra" />
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="450" className="col-span-2">
@@ -76,8 +77,16 @@ const Container3 = ({ id, descriptions }) => {
                     <PersonalCard name={employee10} job={job10} picture="Cadi" />
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="550" className="col-span-2">
-                    <PersonalCard name={employee13} job={job13} picture="Vicente" />
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="500" className="col-span-2">
+                    <PersonalCard name={employee15} job={job15} picture="Mauricio" />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="500" className="col-span-2">
+                    <PersonalCard name={employee14} job={job14} picture="Izascun" />
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="500" className="col-span-2">
+                    <PersonalCard name={employee13} job={job13} picture="Ana" />
                 </div>
             </div>
         </div>
