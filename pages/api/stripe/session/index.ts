@@ -5,17 +5,19 @@ const LIFETIMEPRODUCTS = {
   lifetime2TB: {
     production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
     debug: 'price_1IKSkkFAOdcgaBMQy1hnVrST',
-    return: 'lifetime'  
+    return: 'lifetime'
   },
   lifetime10TB: {
     production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
     debug: 'price_1IMANUFAOdcgaBMQcI6c9nVp',
-    return: 'exclusive-lifetime'  
+    return: 'exclusive-lifetime'
   }
 }
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
-  fs.appendFileSync('emails.txt', req.body.email + '\n')
+  try {
+    fs.appendFileSync('logs.txt', new Date() + '\t' + req.body.email + '\n')
+  } catch { }
   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST
   const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
