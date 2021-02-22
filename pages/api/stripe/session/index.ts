@@ -41,7 +41,9 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     metadata: {
       member_tier: 'lifetime'
     },
-    billing_address_collection: 'required'
+    billing_address_collection: 'required',
+    customer_email: req.body.email
+
   }
 
   try {
