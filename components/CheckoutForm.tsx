@@ -50,14 +50,14 @@ export default function CheckoutForm(props: CheckoutFormProps) {
     redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))
   };
 
-  return <form onSubmit={handleSubmit} style={{ display: 'flex',  }}>
-   <input
+  return <form onSubmit={handleSubmit} style={{ display: 'flex', }}>
+    <input
       type='email'
       placeholder='Your email'
       onChange={e => setEmail(e.target.value)}
       className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
     />
-    
+
     <button
       type="submit"
       disabled={loading}

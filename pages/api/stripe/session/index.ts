@@ -42,7 +42,7 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
       member_tier: 'lifetime'
     },
     billing_address_collection: 'required',
-    customer_email: req.body.email
+    customer_email: req.body.email ? req.body.email : undefined
 
   }
 
