@@ -13,6 +13,16 @@ export default function Success(props) {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const host = (ctx.req.headers['host'].match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers['host']
 
+    if (!ctx.query.sid) {
+        return {
+            props: {
+                token: '',
+                email: '',
+                redirectUrl: '/'
+            }
+        }
+    }
+
     const request = await fetch(host + '/api/stripe/session/' + ctx.query.sid)
     const body = await request.json()
 
