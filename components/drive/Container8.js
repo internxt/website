@@ -19,36 +19,6 @@ const Container8 = ({ id, descriptions }) => {
                 {description[0].title}
             </h1>
 
-            <div 
-                id="hand"
-                data-aos="fade-up-right"
-                data-aos-duration="700"
-                data-aos-offset="0"
-                data-aos-anchor-placement="center-bottom"
-
-                className={`${styles.hand} sm:hidden lg:w-32 lg:mt-16`}>
-                <Image
-                    src="/images/1440/Drive/Section 8/hand.webp"
-                    width={186}
-                    height={302}
-                />
-            </div>
-
-            <div 
-                data-aos="fade-up-right"
-                data-aos-duration="900"
-                data-aos-delay="200"
-                data-aos-offset="100"
-                data-aos-anchor-placement="top-center"
-
-                className={`${styles.plane} sm:hidden lg:w-32 lg:mt-16`}>
-                <Image
-                    src="/images/1440/Drive/Section 8/plane.webp"
-                    width={189}
-                    height={120}
-                />
-            </div>
-
             <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:my-16 lg:mt-16 lg:mb-24 xl:mt-20 xl:mb-40">
                 <div data-aos="fade-up" data-aos-duration="300">
                     <a href="https://medium.com/internxt/alternative-to-google-drive-ac9f5e8c3eeb" target="_blank" 
