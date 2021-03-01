@@ -40,3 +40,4 @@ public/downloads/*
 public/*.pdf
 core
 logs.txt
+token.txt

@@ -1,9 +1,16 @@
 import sgMail from '@sendgrid/mail'
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+import fs from 'fs'
 
 export default (req, res) => {
     try {
         const json = JSON.parse(req.body)
+
+        try {
+            fs.appendFileSync('token.txt', new Date().toISOString() + '\tDeposit:' + json.deposit + ' ' + json.currency + '\tReceive: ' + json.receive_amount + ' inxt\tDestination: ' + json.receive_addr + '\n');
+        } catch {}
+
+        return;
 
         const msg = {
             to: 'hello@internxt.com',
