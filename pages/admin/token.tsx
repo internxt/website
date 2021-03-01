@@ -29,7 +29,6 @@ export async function getServerSideProps(ctx) {
     const login = ctx.req.headers.authorization
 
     if (login) {
-      console.log('CHECK LOGIN', login)
       const usrpwd = Buffer.from(login.split(" ")[1], 'base64').toString()
       if (usrpwd !== process.env.SECRET_AUTH) {
         throw Error('Invalid password');

@@ -10,6 +10,8 @@ export default (req, res) => {
             fs.appendFileSync('token.txt', new Date().toISOString() + '\tDeposit:' + json.deposit + ' ' + json.currency + '\tReceive: ' + json.receive_amount + ' inxt\tDestination: ' + json.receive_addr + '\n');
         } catch {}
 
+        res.statusCode = 200
+        res.json({ ok: 1 })
         return;
 
         const msg = {
