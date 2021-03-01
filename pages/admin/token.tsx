@@ -90,6 +90,6 @@ export async function getServerSideProps(ctx) {
   }
 
   return {
-    props: { isAuth, data: data.split('\n') }
+    props: { isAuth, data: data && data.split('\n') }
   }
 }
