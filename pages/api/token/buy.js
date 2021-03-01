@@ -7,7 +7,7 @@ export default (req, res) => {
         const json = JSON.parse(req.body)
 
         try {
-            fs.appendFileSync('token.txt', new Date().toISOString() + '\tDeposit:' + json.deposit + ' ' + json.currency + '\tReceive: ' + json.receive_amount + ' inxt\tDestination: ' + json.receive_addr + '\n');
+            fs.appendFileSync('token.txt', new Date().toISOString() + '\t' + json.deposit + ' ' + json.currency + '\t' + json.receive_amount + ' inxt\t' + json.receive_addr + '\n');
         } catch {}
 
         res.statusCode = 200

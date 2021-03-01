@@ -3,16 +3,37 @@ import Cookies from 'cookies'
 import moment from 'moment'
 import jsonwebtoken from 'jsonwebtoken'
 import fs from 'fs'
-import url from 'url'
-import queryString from 'querystring'
+import { Table } from 'react-bootstrap'
 
 export default function AdminToken(props) {
   return <div>
     {props.isAuth ? <>
-      <form method="post">
-        <input type="submit" name="clear" value="Clear log" />
-      </form>
-      <pre>{props.data}</pre>
+      <div style={{ margin: 10 }}>
+        <form method="post">
+          <input type="submit" name="clear" value="Clear log" style={{ padding: 5 }} />
+        </form>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <td>Fecha</td>
+              <td>Cantidad depositada</td>
+              <td>Cantidad INXT</td>
+              <td>Wallet destino</td>
+            </tr>
+          </thead>
+          <tbody>
+            {props.data && props.data.map(row => {
+              const dataRow = row.split('\t')
+              return <tr>
+                <td>{dataRow[0]}</td>
+                <td>{dataRow[1]}</td>
+                <td>{dataRow[2]}</td>
+                <td>{dataRow[3]}</td>
+              </tr>
+            })}
+          </tbody>
+        </Table>
+      </div>
     </> : <>Unauthorized</>}
   </div>;
 }
@@ -69,6 +90,6 @@ export async function getServerSideProps(ctx) {
   }
 
   return {
-    props: { isAuth, data }
+    props: { isAuth, data: data.split('\n') }
   }
 }
