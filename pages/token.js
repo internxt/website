@@ -49,6 +49,8 @@ export async function getServerSideProps(ctx) {
 
     const data = await cmc();
 
+    console.log(data)
+
     return {
         props: {
             data: data.data.INXT, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions

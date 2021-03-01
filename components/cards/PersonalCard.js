@@ -1,5 +1,4 @@
 import styles from './PersonalCard.module.css'
-import Image from 'next/image'
 
 const PersonalCard = ({ name, job, picture }) => {
     const url = `/images/1440/About/Section 3/${picture}.webp`
@@ -17,10 +16,14 @@ const PersonalCard = ({ name, job, picture }) => {
             </div>
             
             <div className={`${styles.image} sm:w-auto`}>
-                <Image
+                <img
                     src={url}
-                    width={109}
-                    height={155}
+                    style={{
+                        width: '109px',
+                        height: '155px',
+                        borderTopRightRadius: '6px',
+                        borderBottomRightRadius: '6px'
+                    }}
                 />
             </div>
         </div>
