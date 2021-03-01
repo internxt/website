@@ -30,7 +30,7 @@ const Token = (props) => {
             <Container3 id='3' descriptions={props.descriptions} />
             <Container4 id='4' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container5 id='5' descriptions={props.descriptions} />
-            <Container6 id='6' descriptions={props.descriptions} />
+            <Container6 id='6' descriptions={props.descriptions} data={props.data} />
             <Container7 id='7' descriptions={props.descriptions} data={props.data} />
             <Container8 id='8' descriptions={props.descriptions} />
             <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
@@ -49,11 +49,9 @@ export async function getServerSideProps(ctx) {
 
     const data = await cmc();
 
-    console.log(data)
-
     return {
         props: {
-            data: data.data.INXT, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions
+            data: data, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions
         }
     }
 }

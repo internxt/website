@@ -1,5 +1,9 @@
 import styles from './Container6.module.css'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import ToolTip from 'react-tooltip'
+import ReactTimeAgo from 'react-timeago'
 import { useEffect, useState } from 'react'
 
 const addrs = {
@@ -8,14 +12,17 @@ const addrs = {
     ltc: 'MVDqPF5G9fTujvzTSjzuhLKXTJyLxnGT4D'
 }
 
-const Container6 = ({ id, descriptions }) => {
-
-    const [ prices, setPrices ] = useState({})
-    const [ currency, setCurrency ] = useState('btc')
-    const [ deposit, setDeposit ] = useState(0)
+const Container6 = ({ id, descriptions, data }) => {
+    const [prices, setPrices] = useState({})
+    const [currency, setCurrency] = useState('btc')
+    const [deposit, setDeposit] = useState(0)
 
     useEffect(() => {
-        checkPrices()
+        setPrices({
+            btc: data.inxtToBTC.data.INXT.quote.BTC.price,
+            eth: data.inxtToETH.data.INXT.quote.ETH.price,
+            ltc: data.inxtToLTC.data.INXT.quote.LTC.price
+        })
     }, [])
 
     // Filter container specific descriptions
@@ -28,19 +35,7 @@ const Container6 = ({ id, descriptions }) => {
     // Set the background color of the container depending on its id
     const background = isOdd(id) ? 'normal_container grey' : 'normal_container'
 
-    const checkPrices = () => {
-        fetch('/api/token/values').then(res => {
-            if (res.status === 200) {
-                return res.json();
-            } else {
-                throw res
-            }
-        }).then(res => {
-            setPrices(res)
-        })
-    }
-
-    const receiveValue = (deposit / (prices[currency] || 1)) * 0.7 // 30 comission
+    const receiveValue = (deposit / (prices[currency] || 0)) * 0.7 // 30 comission
 
     const parseSubmit = (e) => {
         e.preventDefault();
@@ -184,8 +179,9 @@ const Container6 = ({ id, descriptions }) => {
                             </div>
 
                             <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={styles.input_container}>
+                                <ToolTip type='warning' backgroundColor='#f0f0f0' textColor='black' effect='solid' id="cmc-info">Last update: <ReactTimeAgo date={new Date(data.inxtToEUR.status.timestamp)} /></ToolTip>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>
-                                    {description[0].receive}
+                                    {description[0].receive} <a data-tip data-for='cmc-info'><FontAwesomeIcon icon={faInfoCircle} color={'#c0c0c0'} /></a>
                                 </label>
                                 <input
                                     className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}

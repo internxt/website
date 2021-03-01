@@ -1,7 +1,6 @@
 import styles from './Container7.module.css'
 
 const Container7 = ({ id, data, descriptions }) => {
-
     // Filter container specific descriptions
     const description = descriptions.filter( desc => desc.id === id)
 
@@ -41,7 +40,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        ${Math.round((data.quote.EUR.price + Number.EPSILON) * 100) / 100}
+                        ${Math.round((data.inxtToEUR.data.INXT.quote.EUR.price + Number.EPSILON) * 100) / 100}
                     </p>
                 </div>
                 
@@ -50,8 +49,8 @@ const Container7 = ({ id, data, descriptions }) => {
                         {description[0].label2}
                     </p>
 
-                    <p className={data.quote.EUR.percent_change_24h > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                        {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.quote.EUR.percent_change_24h + Number.EPSILON) * 100) / 100}%
+                    <p className={data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
+                        {data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h + Number.EPSILON) * 100) / 100}%
                     </p>
                 </div>
                 
@@ -60,8 +59,8 @@ const Container7 = ({ id, data, descriptions }) => {
                         {description[0].label3}
                     </p>
 
-                    <p className={data.quote.EUR.percent_change_7d > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                        {data.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
+                    <p className={data.inxtToEUR.data.INXT.quote.EUR.percent_change_7d > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
+                        {data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.inxtToEUR.data.INXT.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
                     </p>
                 </div>
                 
@@ -71,7 +70,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        ${formatNumber(data.quote.EUR.market_cap)}
+                        ${formatNumber(data.inxtToEUR.data.INXT.quote.EUR.market_cap)}
                     </p>
                 </div>
                 
@@ -97,7 +96,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        ${formatNumber(data.quote.EUR.volume_24h)}
+                        ${formatNumber(data.inxtToEUR.data.INXT.quote.EUR.volume_24h)}
                     </p>
                 </div>
                 
@@ -107,7 +106,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        {Intl.NumberFormat("en-EN").format(Math.round(data.circulating_supply))}
+                        {Intl.NumberFormat("en-EN").format(Math.round(data.inxtToEUR.data.INXT.circulating_supply))}
                     </p>
                 </div>
                 
@@ -117,7 +116,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        {Intl.NumberFormat("en-EN").format(Math.round(data.total_supply))}
+                        {Intl.NumberFormat("en-EN").format(Math.round(data.inxtToEUR.data.INXT.total_supply))}
                     </p>
                 </div>
             </div>
