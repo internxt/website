@@ -50,7 +50,7 @@ const Container6 = ({ id, descriptions, data }) => {
         var json = JSON.stringify(object);
 
         fetch('/api/token/buy', { method: 'post', body: json }).then(ok => {
-            alert('Email sent')
+            alert('Thank you! As soon as we receive your payment, we will purchase INXT from the market with those funds and send them to your INXT deposit address.')
         }).catch(err => {
             alert('An error ocurred, try again later')
         })
