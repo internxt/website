@@ -12,6 +12,12 @@ const Container1 = ({ id, descriptions }) => {
     // Set the background color of the container depending on its id
     const background = isOdd(id) ? `normal_container ${styles.main} sm:m-0 sm:h-136 lg:h-136` : 'normal_container grey'
 
+
+    const handleScroll = () => {
+        const buySection = document.getElementById("buyINX");
+        buySection.scrollIntoView({behavior: "smooth"});
+    }
+
     return ( 
         <div className={background}>
             <h1 
@@ -37,12 +43,12 @@ const Container1 = ({ id, descriptions }) => {
                     data-aos="fade-up"
                     data-aos-delay="250"
                     data-aos-duration="300" >
-                    <a href="https://medium.com/internxt/earn-interest-by-holding-internxt-tokens-introducing-internxt-earn-5d4830d98370" 
-                        target="_blank" 
+                    <button 
+                        onClick={handleScroll}
                         className={`${styles.button} flex items-center justify-center lg:h-8 lg:w-28`}
                     >
                         <p className={`${styles.button_text} sm:text-base lg:text-xs`}>{description[0].button}</p>
-                    </a>    
+                    </button>
                 </div>
                 
                 <div 

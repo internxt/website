@@ -152,6 +152,7 @@ const Container6 = ({ id, descriptions, data }) => {
                     />
                 </div>
 
+                <div id="buyINX"> </div>             
                 <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
                     {description[0].title2}
                 </h1>
@@ -252,6 +253,7 @@ const Container6 = ({ id, descriptions, data }) => {
                         type="submit"
                     />
                 </form>
+                
             </div>
         </div>
     );
