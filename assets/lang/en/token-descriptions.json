@@ -9,29 +9,41 @@
     {
         "id": "2",
 
-        "title": "Part of revenues are used to market buy Inxt.",
+        "title": "Our cloud services can be paid with Internxt tokens",
         "subtitle": "",
-        "colored": "to market buy Inxt.",
+        "colored": ["Internxt tokens"],
 
-        "title4": "Inxt is used as payment",
-        "subtitle4": " to core storage providers",
-        "colored4": "",
+        "title4": "Storage providers get paid with Internxt tokens",
+        "subtitle4": "",
+        "colored4": ["get paid"],
 
-        "title2": "Hosts earn 10% more",
-        "subtitle2": " for holding Inxt",
-        "colored2": "",
+        "title2": "Customers get discounts by paying with Inxt",
+        "subtitle2": "",
+        "colored2": ["get discounts"],
 
-        "title5": "There is a total of 629,000 Inxt tokens in max supply",
+        "title5": "Customers get discounts by holding Inxt",
         "subtitle5": "", 
-        "colored5": "629,000",
+        "colored5": ["get discounts"],
 
-        "title3": "Greater Inxt staked, higher interest received",
-        "subtitle3": "",
-        "colored3": "higher interest received",
+        "title3": "Users get free merch",
+        "subtitle3": " by holding Inxt",
+        "colored3": "free merch",
 
-        "title6": "Organic demand.",
-        "subtitle6": "Reliable growth",
-        "colored6": ""
+        "title6": "Storage providers are incentivized to hold Inxt",
+        "subtitle6": "",
+        "colored6": "hold Inxt",
+
+        "title7": "Earn interest payments by holding Internxt tokens",
+        "subtitle7": "",
+        "colored7": "Earn interest",
+
+        "title8": "There is a total of 629,000 Inxt tokens in max supply",
+        "subtitle8": "",
+        "colored8": "629,000",
+
+        "title9": "Organic demand. Reliable growth",
+        "subtitle9": "",
+        "colored9": ["Reliable growth"]
     },
     {
         "id": "3",

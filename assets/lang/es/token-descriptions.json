@@ -9,29 +9,41 @@
     {
         "id": "2",
 
-        "title": "Parte de los ingresos se usan para comprar Inxt.",
+        "title": "Nuestro servicio puede ser pagado con Internxt tokens",
         "subtitle": "",
-        "colored": "para comprar Inxt.",
+        "colored": ["Internxt tokens"],
 
-        "title4": "Inxt se usa como forma de pago",
-        "subtitle4": " a los proveedores de core",
-        "colored4": "",
+        "title4": "Inxt se usa como forma de pago a los proveedores de core",
+        "subtitle4": "",
+        "colored4": "forma de pago",
 
-        "title2": "Los hosts ganan un 10% más",
-        "subtitle2": " por acumular Inxt",
-        "colored2": "",
+        "title2": "Nuestros clientes obtienen descuentos pagando con Inxt",
+        "subtitle2": "",
+        "colored2": ["descuentos"],
 
-        "title5": "Hay un total de 629,000 Inxt tokens en circulación", 
+        "title5": "Nuestros clientes obtienen descuentos guardando Inxt",
         "subtitle5": "", 
-        "colored5": "629,000",
+        "colored5": ["descuentos"],
 
-        "title3": "Cuanto más Inxt, más interés", 
+        "title3": "Nuestro usuarios reciben mercancía gratis guardando Inxt",
         "subtitle3": "",
-        "colored3": "más interés",
+        "colored3": "gratis",
 
-        "title6": "Demanda orgánica",
-        "subtitle6": "Crecimiento fiable",
-        "colored6": ""
+        "title6": "Los provedores de core son incetivados a guardar Inxt",
+        "subtitle6": "",
+        "colored6": "guardar",
+
+        "title7": "Recibe intereses en tus pagos guardando Intx",
+        "subtitle7": "",
+        "colored7": "Recibe intereses",
+
+        "title8": "Hay un total de 629,000 Inxt tokens en circulación",
+        "subtitle8": "",
+        "colored8": "629,000",
+
+        "title9": "Demanda orgánica Crecimiento fiable",
+        "subtitle9": "",
+        "colored9": ["orgánica"]
     },
     {
         "id": "3",

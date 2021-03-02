@@ -12,6 +12,10 @@ const Container2 = ({ id, descriptions }) => {
         title4, subtitle4, colored4,
         title5, subtitle5, colored5,
         title6, subtitle6, colored6,
+        title7, subtitle7, colored7,
+        title8, subtitle8, colored8,
+        title9, subtitle9, colored9,
+
     } = description[0]
     
     // Check if a number is odd
@@ -93,11 +97,25 @@ const Container2 = ({ id, descriptions }) => {
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
+                        <TokenSmallCard title={title8} subtitle={subtitle8} colored={colored8} />
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
+                        <TokenSmallCard title={title7} subtitle={subtitle7} colored={colored7} />
+                    </div>
+                </div>
+
+                <div className={`${styles.card_container} sm:hidden`}>
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
+                        <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                    </div>
+                    
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
                         <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
-                        <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                        <TokenSmallCard title={title9} subtitle={subtitle9} colored={colored9} />
                     </div>
                 </div>
                 
