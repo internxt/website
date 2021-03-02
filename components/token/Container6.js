@@ -35,7 +35,7 @@ const Container6 = ({ id, descriptions, data }) => {
     // Set the background color of the container depending on its id
     const background = isOdd(id) ? 'normal_container grey' : 'normal_container'
 
-    const receiveValue = (deposit / (prices[currency] || 0)) * 0.7 // 30 comission
+    const receiveValue = (deposit / (prices[currency] || 0)) * 0.6; // 40 comission
 
     const parseSubmit = (e) => {
         e.preventDefault();
