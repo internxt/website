@@ -180,7 +180,9 @@ const Container6 = ({ id, descriptions, data }) => {
                             </div>
 
                             <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={styles.input_container}>
-                                <ToolTip type='warning' backgroundColor='#f0f0f0' textColor='black' effect='solid' id="cmc-info">Last update: <ReactTimeAgo date={new Date(data.inxtToEUR.status.timestamp)} /></ToolTip>
+                                <ToolTip type='warning' backgroundColor='#f0f0f0' textColor='black' effect='solid' id="cmc-info">
+                                    Minimum receiving amount of 100 INXT
+                                </ToolTip>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>
                                     {description[0].receive} <a data-tip data-for='cmc-info'><FontAwesomeIcon icon={faInfoCircle} color={'#c0c0c0'} /></a>
                                 </label>
