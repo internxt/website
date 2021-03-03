@@ -27,7 +27,7 @@ const Container4 = ({ id, descriptions }) => {
                     </p>
                 </div>
                 
-                <div data-aos="fade-up" data-aos-duration="300" className={`mt-10 sm:hidden sm:mt-14`}>
+                <div data-aos="fade-up" data-aos-duration="300" className={`mt-10 sm:hidden sm:mt-14`} style={{marginBottom: "10px"}}>
                     <Image src="/images/1440/Photos/Section 4/interface.webp" width={1212} height={575} />
                 </div>
 
