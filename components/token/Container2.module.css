@@ -7,7 +7,7 @@
 
 .card_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
     margin: 0.6rem;
 }
