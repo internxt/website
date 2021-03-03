@@ -18,7 +18,7 @@ const Container5 = ({ id, descriptions }) => {
         <div className={background}>
             <div className={`${styles.container} max-w-1600 sm:flex-col-reverse sm:items-center sm:mt-16`}>
                 <div className={`${styles.image} `}>
-                    <img src="/images/1440/Photos/Section 4/hand.png" alt="Share Filest" width="750" height="600" />
+                    <img src="/images/1440/Photos/Section 4/hand2.png" alt="Share Filest"/>
                 </div>
 
                 <div className={`${styles.main} sm:items-center`}>
