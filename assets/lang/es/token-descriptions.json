@@ -102,5 +102,21 @@
     {
         "id": "8",
         "title": "¿Dónde intercambiar Inxt?"
+    },
+    {
+        "id": "9",
+        "title": "Consigue descuentos guardando Internxt tokens",
+        "colored": "",
+        "subtitle": "Reclama hasta 40% descuento en nuestras suscripciones solo guardando INXT",
+        "subtitle2": "",
+        "subtitle3": "Sólo válido en compras mayores a 10€ o más & no compatible con otras ofertas/descuentas.",
+        "subtitle4": "",
+        "link": "",
+        "tier1": "Nivel 1",
+        "tier2": "Nivel 2",
+        "tier3": "Nivel 3",
+        "tier4": "Nivel 4",
+        "tier5": "Nivel 5",
+        "claim": "Reclama tu descuento"
     }
 ]

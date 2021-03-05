@@ -102,5 +102,21 @@
     {
         "id": "8",
         "title": "Inxt token performance"
+    },
+    {
+        "id": "9",
+        "title": "Get discounts by holding Internxt tokens",
+        "colored": "",
+        "subtitle": "Claim up to 40% discounts on our subscriptions by simply holding INXT",
+        "subtitle2": "",
+        "subtitle3": "Valid only on purchases of 10€ or more & not compatible with other offers/discounts.",
+        "subtitle4": "",
+        "link": "",
+        "tier1": "Tier 1",
+        "tier2": "Tier 2",
+        "tier3": "Tier 3",
+        "tier4": "Tier 4",
+        "tier5": "Tier 5",
+        "claim": "Claim your discount"
     }
 ]

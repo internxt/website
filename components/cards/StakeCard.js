@@ -1,6 +1,6 @@
 import styles from './StakeCard.module.css'
 
-const StakeCard = ({ bundle, percentage, inxtQty, descriptions }) => {
+const StakeCard = ({ bundle, percentage, inxtQty, descriptions, disc }) => {
 
     const description = descriptions.filter( desc => desc.id === "StakeCard")
 
@@ -19,7 +19,7 @@ const StakeCard = ({ bundle, percentage, inxtQty, descriptions }) => {
                 </div>
 
                 <p className={`${styles.per_year} lg:text-sm`}>
-                    {description[0].peryear}
+                    {disc ? description[0].discount : description[0].peryear}
                 </p>
 
                 <p className={`${styles.inxt} lg:text-xss lg:mt-6 lg:h-8`}>
@@ -27,7 +27,7 @@ const StakeCard = ({ bundle, percentage, inxtQty, descriptions }) => {
                 </p>
 
                 <p className={`${styles.get_started} lg:text-xss`}>
-                    {description[0].getstarted}
+                    {disc ? "" : description[0].getstarted} 
                 </p>
             </div>
         </div>

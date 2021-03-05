@@ -29,6 +29,7 @@
     {
         "id": "StakeCard",
         "peryear": "Per year",
-        "getstarted": "Get started"
+        "getstarted": "Get started",
+        "discount": "discount"
     }
 ]
