@@ -65,19 +65,19 @@ const LoyaltyProgram = ({ id, descriptions, cardDescriptions }) => {
 
             <div className={`${styles.card_container} grid grid-cols-4 sm:grid sm:grid-cols-1 sm:gap-y-12 sm:mt-12`}>
                 <div data-aos="fade-up" data-aos-duration="300">
-                   <StakeCard bundle={description[0].tier1} percentage="5" inxtQty="100 INXT" descriptions={cardDescriptions} disc={true}/>
+                   <StakeCard bundle={description[0].tier1} percentage="10" inxtQty="100 INXT" descriptions={cardDescriptions} disc={true}/>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
-                   <StakeCard  bundle={description[0].tier2} percentage="7.5" inxtQty="500 INXT" descriptions={cardDescriptions} disc={true} />
+                   <StakeCard  bundle={description[0].tier2} percentage="20" inxtQty="500 INXT" descriptions={cardDescriptions} disc={true} />
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
-                   <StakeCard  bundle={description[0].tier3} percentage="10" inxtQty="1000 INXT" descriptions={cardDescriptions} disc={true} />
+                   <StakeCard  bundle={description[0].tier3} percentage="30" inxtQty="1000 INXT" descriptions={cardDescriptions} disc={true} />
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
-                   <StakeCard  bundle={description[0].tier4} percentage="15" inxtQty="2000 INXT" descriptions={cardDescriptions} disc={true} />
+                   <StakeCard  bundle={description[0].tier4} percentage="40" inxtQty="2000 INXT" descriptions={cardDescriptions} disc={true} />
                 </div>
 
            </div>
