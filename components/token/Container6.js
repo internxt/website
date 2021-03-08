@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import ToolTip from 'react-tooltip'
-import ReactTimeAgo from 'react-timeago'
 import { useEffect, useState } from 'react'
 
 const addrs = {
@@ -181,7 +180,7 @@ const Container6 = ({ id, descriptions, data }) => {
 
                             <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={styles.input_container}>
                                 <ToolTip type='warning' backgroundColor='#f0f0f0' textColor='black' effect='solid' id="cmc-info">
-                                    Minimum receiving amount of 100 INXT
+                                {description[0].tooltip}
                                 </ToolTip>
                                 <label className={`${styles.label} sm:text-base lg:text-sm`}>
                                     {description[0].receive} <a data-tip data-for='cmc-info'><FontAwesomeIcon icon={faInfoCircle} color={'#c0c0c0'} /></a>

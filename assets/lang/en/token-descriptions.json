@@ -84,7 +84,8 @@
         "receive": "Receive",
         "address1": "Please enter your INXT receiving address",
         "address2": "Please send the funds to the following address",
-        "button": "Done"
+        "button": "Done",
+        "tooltip": "This amount is an estimation based on the current market price. Final quantities might differ. Min receiving amount of 100 INXT"
     },
     {
         "id": "7",

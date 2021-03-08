@@ -84,7 +84,8 @@
         "receive": "Recibe",
         "address1": "Por favor introduce tu dirección de depósito de INXT",
         "address2": "Por favor envía los fondos a la siguiente dirección",
-        "button": "Hecho"
+        "button": "Hecho",
+        "tooltip": "Este precio es un estimado del valor actual del mercado. La cantidad final puede variar. Monto mínimo a recibir 100 INXT"
     },
     {
         "id": "7",
