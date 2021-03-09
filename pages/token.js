@@ -27,8 +27,8 @@ const Token = (props) => {
         <Layout segmentName="token" title={metatags[0].title} description={metatags[0].description} >
             <TopBar />
             <Container1 id='1' descriptions={props.descriptions} />
-            <LoyaltyProgram id='9' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container2 id='2' descriptions={props.descriptions} />
+            <LoyaltyProgram id='9' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container3 id='3' descriptions={props.descriptions} />
             <Container4 id='4' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container5 id='5' descriptions={props.descriptions} />

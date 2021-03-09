@@ -33,7 +33,7 @@ const Container4 = ({ id, descriptions, cardDescriptions }) => {
     };
 
     return ( 
-        <div className={`${background} relative`}>
+        <div className={`${background} relative`} id="interest">
 
             <div className={`${styles.blue_coin} sm:hidden lg:w-36 lg:pl-16 lg:pt-48`}>
                 <Image

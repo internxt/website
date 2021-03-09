@@ -23,8 +23,14 @@ const Container2 = ({ id, descriptions }) => {
         return num % 2 == 1;
     }
 
+    const handleScroll = (id) => {
+        console.log(id);
+        const section = document.getElementById(id);
+        section.scrollIntoView({behavior: "smooth"});
+    }
+
     // Set the background color of the container depending on its id
-    const background = isOdd(id) ? `normal_container` : 'normal_container grey'
+    const background = isOdd(id) ? `normal_container` : 'normal_container grey';
 
     return ( 
         <div className={background}>
@@ -82,11 +88,11 @@ const Container2 = ({ id, descriptions }) => {
                         <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" onClick={() => handleScroll("loyaltyProgram")}>
                         <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" onClick={() => handleScroll("merch")}>
                         <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
                     </div>
                 </div>
@@ -100,17 +106,17 @@ const Container2 = ({ id, descriptions }) => {
                         <TokenSmallCard title={title8} subtitle={subtitle8} colored={colored8} />
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" onClick={() => handleScroll("interest")}>
                         <TokenSmallCard title={title7} subtitle={subtitle7} colored={colored7} />
                     </div>
                 </div>
 
                 <div className={`${styles.card_container} sm:hidden`}>
                     <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
-                        <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} />
+                        <TokenSmallCard title={title6} subtitle={subtitle6} colored={colored6} /> 
                     </div>
                     
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" onClick={() => handleScroll("loyaltyProgram")}>
                         <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
                     </div>
 
