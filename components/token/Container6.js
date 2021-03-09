@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 const addrs = {
     btc: '39UtLoELAoDSHQ5YaJvwwSu6ntTUAH2k6C',
-    eth: '0xd9bfdebdb7fb91f063faad165d1c503f646a7e41',
+    eth: '0x60C8875DfD793ed579EEa73cB417F345b6D850B0',
     ltc: 'MVDqPF5G9fTujvzTSjzuhLKXTJyLxnGT4D'
 }
 
