@@ -48,8 +48,8 @@
     {
         "id": "3",
         "title": "All the hard work has been done.",
-        "subtitle": "Join our highly secure distributed infrastructure by providing storage space. Get paid by Internxt customers directly in INXT. Data centers have unused storage space that result in high overheads. By joining our network you will be able to monetize that space by hosting users encrypted data.",
-        "subtitle2": "Hosts receive a 10% payout boost by holding Internxt tokens. Additionally, a minimum of €100 worth of INXT is needed to get paid when 2 TB of data are stored. Providers hosting over 2 TB will also receive free merch once a year.",
+        "subtitle": "Join our highly secure distributed infrastructure by providing storage space. Get paid by Internxt customers directly in INXT. By joining our network you will be able to monetize that space by hosting users encrypted data.",
+        "subtitle2": "Hosts receive a 10% payout boost by holding Internxt tokens. Additionally, a minimum of €100 worth of INXT is needed to get paid when 2 TB of data are stored. Providers hosting over 2 TB will also receive free merch once a year. Not compatible with other offers/discounts.",
         "subtitle3": "Learn more about hosting"
     },
     {
@@ -58,7 +58,7 @@
         "colored": "",
         "subtitle": "Stake or hold your Internxt tokens to earn interest each month.",
         "subtitle2": "The highest staking rates avaiable on the market today.",
-        "subtitle3": "It's super simple. All you need are Internxt tokens and an active Internxt lifetime membership.",
+        "subtitle3": "It's super simple. All you need are INXT and an active Internxt lifetime membership. Not compatible with other offers/discounts",
         "subtitle4": "The more liquidity you add, the more you will earn.",
         "link": "Learn more about earning Interest",
         "bundle1": "Starter",

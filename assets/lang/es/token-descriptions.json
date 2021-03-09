@@ -48,8 +48,8 @@
     {
         "id": "3",
         "title": "El trabajo duro ya está hecho.", 
-        "subtitle": "Únete a nuestra infraestructura de distribución de almacenamiento de alta seguridad. Se remunerado directamente por los usuarios de Internxt con INXT. Los centros de datos tienen espacio de almacenamiento sin usar provocando altos gastos. Al unirse a nuestra red, sacarás rendimiento al alojar los datos encriptados de los usuarios.",
-        "subtitle2": "Recibe 10% de más guardando Internxt Tokens. Además es necesario tener un mínimo de 100€ en INXT cuando almacenas 2TB de datos. Los proveedores con más de 2TB recibirán merch gratis una vez al año",
+        "subtitle": "Únete a nuestra infraestructura de distribución de almacenamiento de alta seguridad. Al unirse a nuestra red, sacarás rendimiento al alojar los datos encriptados de los usuarios.",
+        "subtitle2": "Recibe 10% de más guardando Internxt Tokens. Además es necesario tener un mínimo de 100€ en INXT cuando almacenas 2TB de datos. Los proveedores con más de 2TB recibirán merch gratis una vez al año. No compatible con otras ofertas/descuentos.",
         "subtitle3": "Aprende más sobre el hosting" 
     },
     {
@@ -58,7 +58,7 @@
         "colored": "",
         "subtitle": "Acumula o mantén tus Inxt para ganar interés cada mes",
         "subtitle2": "Las tasas de apuesta más altas del mercado existentes",
-        "subtitle3": "Es súper simple. Todo lo que necesitas son Inxt tokens y una suscripción lifetime activa de Internxt.",
+        "subtitle3": "Es súper simple. Todo lo que necesitas son iNXT y una suscripción lifetime activa de Internxt. No compatible con otras ofertas/descuentos",
         "subtitle4": "Cuanta más liquidez, más ingresos",
         "link": "Comienza a acumular tus tokens",
         "bundle1": "Starter",
@@ -110,7 +110,7 @@
         "colored": "",
         "subtitle": "Reclama hasta 40% descuento en nuestras suscripciones solo guardando INXT",
         "subtitle2": "",
-        "subtitle3": "Sólo válido en compras mayores a 10€ o más & no compatible con otras ofertas/descuentas.",
+        "subtitle3": "Sólo válido en compras mayores a 10€ o más & no compatible con otras ofertas/descuentos.",
         "subtitle4": "",
         "link": "",
         "tier1": "Nivel 1",
