@@ -28,7 +28,7 @@ const Container7 = ({ id, data, descriptions }) => {
       }
 
     return ( 
-        <div className={background}>
+        <div className={background} id="metrics">
             <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} sm:text-4xl sm:my-16 lg:text-4.5xl lg:mt-20`}>
                 {description[0].title}
             </h1>

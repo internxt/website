@@ -88,7 +88,7 @@ const Container2 = ({ id, descriptions }) => {
                         <TokenSmallCard title={title} subtitle={subtitle} colored={colored} />
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" onClick={() => handleScroll("loyaltyProgram")}>
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
                         <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
                     </div>
 
@@ -98,12 +98,12 @@ const Container2 = ({ id, descriptions }) => {
                 </div>
 
                 <div className={`${styles.card_container} sm:hidden`}>
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" onClick={() => handleScroll("merch")}>
                         <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
-                        <TokenSmallCard title={title8} subtitle={subtitle8} colored={colored8} />
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" onClick={() => handleScroll("metrics")}>
+                        <TokenSmallCard title={title8} subtitle={subtitle8} colored={colored8}/>
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
