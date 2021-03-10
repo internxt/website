@@ -40,7 +40,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        ${(Math.round((data.inxtToEUR.data.INXT.quote.EUR.price + Number.EPSILON) * 100) / 100) * 1.2}
+                        ${((Math.round((data.inxtToEUR.data.INXT.quote.EUR.price + Number.EPSILON) * 100) / 100) * 1.2).toFixed(2)}
                     </p>
                 </div>
                 
