@@ -76,7 +76,7 @@
                 },
                 {
                     "title": "What’s the minimum amount of space needed to get paid?",
-                    "content": "The minimum monthly payout is €10, which corresponds to 1000 GB of hosted data. However, you can boost your payout by holding Internxt tokens. Check out our payout calculator in the Internxt Core page. Additionally, once you start hosting over 2 TB of data, a minimum of €100 INXT held is required to participate of our network. You will also receive free Internxt merch once a year."
+                    "content": "The minimum monthly payout is €10, which corresponds to 1000 GB of hosted data. However, you can boost your payout by holding Internxt tokens. Check out our payout calculator in the Internxt Core page. Additionally, once you start hosting over 2 TB of data, a minimum of €100 INXT held is required to participate of our network. Without such minimum amount, their payouts will be capped at 20€, even if more TB of data are stored. You will also receive free Internxt merch once a year, and can claim a 20% discount on all our subscriptions."
                 },
                 {
                     "title": "How much data can I expect my node to store?",
