@@ -54,9 +54,6 @@ const PriceCard = ({ free, teams, teamMembers, size, pMonth, pre6months, preYear
                     null
             }
 
-            {
-                free ? <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-13`}>{description[0].getstarted}</p> : <p className={`${styles.try_for_free} sm:hidden lg:text-xxs xl:text-13`}>{description[0].tryforfree}</p>
-            }
             <div className={teams ? `${styles.card} ${styles.minheight} lg:min-h-0 lg:w-44 lg:h-60` : `${styles.card} lg:min-h-0 lg:w-44 lg:h-60`}>
                 { mostPopular ? <p className={`${styles.most_popular} sm:text-sm lg:text-xs lg:pt-3`}>{description[0].mostpopular}</p> : <div className={`${styles.void} lg:h-8`}></div> }
 
