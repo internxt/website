@@ -19,15 +19,15 @@ const Container5 = ({ id, descriptions }) => {
         inxt >= MIN_INXT_BONUS ? amountInCents += addBonus(amountInCents) : null
         let formattedAmount = amountInCents.toFixed(2)
 
-        return formattedAmount
+        return parseFloat(formattedAmount);
     }
 
     const addBonus = (originalAmount) => {
         const bonusMultiplier = (inxt * BONUS_PERCENTAGE) / 100
         return originalAmount * bonusMultiplier
     }
-
-    const total = amountEarned()
+    
+    const total = ((amountEarned() >= 20) && (inxt < 30)) ? 20 : amountEarned();  
 
     return (
         <div className={styles.background}>
