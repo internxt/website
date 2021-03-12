@@ -30,7 +30,6 @@ const Token = (props) => {
             <Container2 id='2' descriptions={props.descriptions} />
             <LoyaltyProgram id='9' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container3 id='3' descriptions={props.descriptions} />
-            <Container4 id='4' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container5 id='5' descriptions={props.descriptions} />
             <Container6 id='6' descriptions={props.descriptions} data={props.data} />
             <Container7 id='7' descriptions={props.descriptions} data={props.data} />

@@ -37,17 +37,17 @@ const LoyaltyProgram = ({ id, descriptions, cardDescriptions }) => {
 
             <div className={`${styles.blue_coin} sm:hidden lg:w-36 lg:pl-16 lg:pt-48`}>
                 <Image
-                    src="/images/1440/Token/LoyaltyProgram/Earth.png"
-                    width={80}
-                    height={90}
+                    src="/images/1440/Token/Section 4/Coin blue.webp"
+                    width={64}
+                    height={60}
                 />
             </div>
             
             <div className={`${styles.purple_coin} sm:hidden lg:pr-12 lg:pt-104 lg:w-24`}>
                 <Image
-                    src="/images/1440/Token/LoyaltyProgram/ShoppingCart.png"
-                    width={90}
-                    height={100}
+                    src="/images/1440/Token/Section 4/Coin purple.webp"
+                    width={62}
+                    height={59}
                 /> 
             </div>
 

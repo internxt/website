@@ -120,7 +120,7 @@ const Container2 = ({ id, descriptions }) => {
                         <TokenSmallCard title={title5} subtitle={subtitle5} colored={colored5} />
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" onClick={() => handleScroll("interest")}>
+                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" onClick={() => handleScroll("coinbase")}>
                         <TokenSmallCard title={title9} subtitle={subtitle9} colored={colored9} />
                     </div>
                 </div>
