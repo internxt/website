@@ -1,5 +1,6 @@
 import styles from './DataBoostUtility.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const DataBoostUtility = ({ id, descriptions }) => {
 
@@ -33,7 +34,15 @@ const DataBoostUtility = ({ id, descriptions }) => {
                     <p data-aos="fade-up" data-aos-duration="300" className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 lg:text-xl lg:w-104`}>
                         {description[0].subtitle3}
                     </p>
-
+                   
+                    <a 
+                        href="mailto:hello@internxt.com"
+                        target="_blank"
+                        data-aos="fade-up" data-aos-duration="300" className={`flex hover:opacity-80 flex-row w-auto items-center sm:my-10 lg:text-base lg:mt-12 lg:mb-16 xl:my-16`}>
+                        <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>{description[0].subtitle4}</p>
+                        <img src="/images/1440/Drive/Section 2/Section2 arrow.svg"/>
+                    </a>
+                    
                 </div>
 
                 <div className="sm:mt-12 sm:w-10/12 lg:w-104">
