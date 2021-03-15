@@ -104,13 +104,6 @@ const Landing = ({ id, descriptions }) => {
             </div>
 
             <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
-                <h1
-                    data-aos="fade-up"
-                    data-aos-delay="350"
-                    data-aos-duration="500"
-                    className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}>
-                    {description[0].subtitle2}
-                </h1>
 
                 <div>
                     <CheckoutForm
