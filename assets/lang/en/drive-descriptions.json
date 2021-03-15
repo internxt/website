@@ -74,5 +74,12 @@
         "lineThrough": ["Normal price 2,500"],
         "subtitle": "Internxt Drive is an encrypted cloud storage service, based on absolute privacy and security. We're offering a 10 TB account for €499 to a handful of users. Claim one before they run out!",
         "button": "Claim this crazy lifetime offer!"
+    },
+    {
+        "id": "11",
+        "title": "Claim your IVACY €100 secure cloud storage gift today!",
+        "subtitle": "Ivacy VPN + Internxt Secure Cloud Storage. Get a security bundle of VPN protection and Encrypted Decentralized 2TB Cloud Storage.",
+        "subtitle2": "Sign up for a free account now, upgrade upon registration and use the coupon code Ivacy sent you in order to claim a one-time 100% discount on all Internxt subscription plans.",
+        "button": "Claim Ivacy cloud storage deal"
     }
 ]
