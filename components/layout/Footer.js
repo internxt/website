@@ -174,7 +174,7 @@ const Footer = (props) => {
 
                         <div className={styles.followus_container}>
                             <img className={styles.logo} src="/images/1440/Footer/medium.webp" />
-                            <a href="https://medium.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Medium</a>
+                            <a href="https://blog.internxt.com/" target="_blank" className={`${styles.p_social} lg:text-xs`}>Blog</a>
                         </div>
 
                         <div className={styles.followus_container}>
@@ -258,7 +258,7 @@ const Footer = (props) => {
                         <Accordion.Collapse eventKey="2">
                         <Card.Body>
                             <a href="https://twitter.com/Internxt" className={`${styles.faqtext} lg:text-xs`}>Twitter</a>
-                            <a href="https://medium.com/internxt" className={`${styles.faqtext} lg:text-xs`}>Medium</a>
+                            <a href="https://blog.internxt.com/" className={`${styles.faqtext} lg:text-xs`}>Blog</a>
                             <a href="https://github.com/internxt" className={`${styles.faqtext} lg:text-xs`}>Github</a>
                         </Card.Body>
                         </Accordion.Collapse>
