@@ -9,6 +9,7 @@ import Container6 from '../components/token/Container6'
 import Container7 from '../components/token/Container7'
 import Container8 from '../components/token/Container8'
 import LoyaltyProgram from '../components/token/LoyaltyProgram'
+import DataBoostUtility from '../components/token/DataBoostUtility'
 import Layout from '../components/layout/Layout'
 import AOS from 'aos'
 import { useEffect } from 'react'
@@ -30,6 +31,7 @@ const Token = (props) => {
             <Container2 id='2' descriptions={props.descriptions} />
             <LoyaltyProgram id='9' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container3 id='3' descriptions={props.descriptions} />
+            <DataBoostUtility id='10' descriptions={props.descriptions}/>
             <Container5 id='5' descriptions={props.descriptions} />
             <Container6 id='6' descriptions={props.descriptions} data={props.data} />
             <Container7 id='7' descriptions={props.descriptions} data={props.data} />

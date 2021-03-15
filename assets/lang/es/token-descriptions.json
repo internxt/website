@@ -119,5 +119,12 @@
         "tier4": "Nivel 4",
         "tier5": "Nivel 5",
         "claim": "Reclama tu descuento"
+    },
+    {
+        "id": "10",
+        "title": "INXT DATA BOOST UTILITY", 
+        "subtitle": "Gana hasta 2TB gratis adicionales guardando INXT",
+        "subtitle2": "Obtén 1 GB adicional ad almacenamiento por cada 10 Internxt tokens guardado. Solo aplicable para suscripciones de pago. El almacenamiento máximo adicional tiene un máximo de 2X de la suscripción.",
+        "subtitle3": " Por ejemplo, si tienes una suscripción de 200 GB, puedes añadir 200 GB más de almacenamiento guardando INXT. Esto mejorara tu  suscripcion de 200 GB a 400 GB." 
     }
 ]
