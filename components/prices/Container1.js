@@ -135,11 +135,11 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
                 :
                     <div className={`grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-8`}>
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
-                            <PriceCard teams={true} teamMembers="200 GB of storage per user" size={200} pMonth="4.99" pre6months="4.49" preYear="3.99" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="200 GB of storage per user" size={200} pMonth="4.99" pre6months="3.99" preYear="3.49" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
-                            <PriceCard teams={true} teamMembers="2 TB of storage per user" size={2000} pMonth="9.99" pre6months="8.49" preYear="7.99" mostPopular="true" descriptions={cardDescriptions} />
+                            <PriceCard teams={true} teamMembers="2 TB of storage per user" size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" mostPopular="true" descriptions={cardDescriptions} />
                         </section>
 
                         <section data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
