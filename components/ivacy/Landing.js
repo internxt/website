@@ -106,11 +106,31 @@ const Landing = ({ id, descriptions }) => {
             <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
 
                 <div>
-                    <CheckoutForm
-                        product={`lifetime2TB`}
-                        value={description[0].button}
-                        className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-60 lg:h-10 lg:text-sm`}
+                    
+                <form   
+                    data-aos="fade-up"
+                    data-aos-delay="450"
+                    data-aos-duration="500"
+                    method="get" 
+                    target="_blank" 
+                    action="https://drive.internxt.com/new"
+                    className="flex items-center"
+                >
+                    <input
+                        name='email'
+                        type='email'
+                        placeholder="Your email"
+                        className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+                        
                     />
+
+                    <input
+                        name='signup'
+                        type='submit'
+                        value={description[0].button}
+                        className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+                    />
+                </form>
                 </div>
 
                 <div

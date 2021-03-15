@@ -47,7 +47,6 @@ export default function TopBar(props) {
                             <a href="https://drive.internxt.com/new" target="_blank" className={`${styles.nonactive_link} sm:mb-16 sm:text-xl lg:hidden xl:hidden`}>Get started</a>
                         </div>
                     }
-
                     <div className={`${styles.links} sm:hidden`}>
                         {props.hideSignIn
                             ? <></>
