@@ -48,6 +48,14 @@ const Landing = ({ id, descriptions }) => {
                     className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:w-150 desktop-hd:text-big desktop-full-hd:text-8xl retina:text-8xl`}>
                     {description[0].title}
                 </h1>
+                <h1
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+
+                    className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:w-150 desktop-hd:text-big desktop-full-hd:text-8xl retina:text-8xl`}>
+                    {description[0].title2}
+                </h1>
 
                 <p
                     data-aos="fade-up"
