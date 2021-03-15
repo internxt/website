@@ -75,7 +75,6 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
                     data-aos="fade-up"
                     data-aos-delay="150"
                     data-aos-duration="500"
-
                     className={`${styles.title} sm:text-4xl sm:w-80`}>
                     {formattedTextColor(description[0].title, description[0].coloredTitle)}
                 </h1>
@@ -84,7 +83,6 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
                     data-aos="fade-up"
                     data-aos-delay="200"
                     data-aos-duration="500"
-
                     className={`${styles.subtitle} sm:text-xl sm:w-10/12 sm:mt-6`}>
                     {formattedText(description[0].subtitle, description[0].colored)}
                 </p>
@@ -93,16 +91,7 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
                     data-aos="fade-up"
                     data-aos-delay="250"
                     data-aos-duration="500"
-                    style={{
-                        fontFamily: "averta-extrabold",
-                        fontSize: "26px",
-                        lineHeight: "1.46",
-                        letterSpacing: "0px",
-                        textAlign: "center",
-                        color: "#2b2a35",
-                        margin: "6rem 0 0"
-                    }}
-                    className={`sm:text-xl sm:w-6/12 sm:mt-16`}>
+                    className='sm:text-xl sm:w-6/12 sm:mt-16'>
                     {description[0].subtitle2}
                 </span>
 
