@@ -57,14 +57,6 @@ const Landing = ({ id, descriptions }) => {
                     className={`${styles.subtitle} ${styles.levitate2} sm:text-xl sm:w-80 sm:pt-8 lg:text-xl lg:w-7/12`}>
                     {description[0].subtitle}
                 </p>
-                <p
-                    data-aos="fade-up"
-                    data-aos-delay="250"
-                    data-aos-duration="500"
-
-                    className={`${styles.subtitle} ${styles.levitate2} sm:text-xl sm:w-80 sm:pt-8 lg:text-xl lg:w-7/12`}>
-                    {description[0].subtitle2}
-                </p>
 
                 <div
                     data-aos="fade"
