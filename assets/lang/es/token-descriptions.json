@@ -85,7 +85,7 @@
         "address1": "Por favor introduce tu dirección de depósito de INXT",
         "address2": "Por favor envía los fondos a la siguiente dirección",
         "button": "Hecho",
-        "tooltip": "Este precio es un estimado del valor actual del mercado. La cantidad final puede variar. Monto mínimo a recibir 100 INXT"
+        "tooltip": "Este precio es un estimado del valor actual del mercado. La cantidad final puede variar. Monto mínimo a recibir 100 INXT. Las órdenes de compra no son reembolsables"
     },
     {
         "id": "7",

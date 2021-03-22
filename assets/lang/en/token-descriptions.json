@@ -85,7 +85,7 @@
         "address1": "Please enter your INXT receiving address",
         "address2": "Please send the funds to the following address",
         "button": "Done",
-        "tooltip": "This amount is an estimation based on the current market price. Final quantities might differ. Min receiving amount of 100 INXT"
+        "tooltip": "This amount is an estimation based on the current market price. Final quantities might differ. Min purchase of 100 INXT. Orders are non-refundable."
     },
     {
         "id": "7",
