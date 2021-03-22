@@ -150,3 +150,14 @@
     color:  #f8f9fa;
     cursor: pointer;
 }
+
+.warning {
+    font-family: "averta";
+    font-size: 15px;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #545465;
+
+    margin: 0 0 .5rem 0;
+}

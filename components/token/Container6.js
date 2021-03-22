@@ -251,16 +251,18 @@ const Container6 = ({ id, descriptions, data }) => {
                         <input
                             data-aos="fade-up" data-aos-duration="300" data-aos-delay="400"
                             className={`${styles.button} lg:text-xs lg:h-8 lg:w-32`}
-                            value="Done"
+                            value={description[0].button}
                             type="submit"
-                            disabled={receiveValue > 100}
                         /> 
                         : 
                         <div
                             data-aos="fade-up" 
                             data-aos-duration="300" 
                             data-aos-delay="400"
-                        > The minimum amount to receive is 100 INXT</div> 
+                            className={`${styles.warning} sm:text-base sm:text-center sm:w-72 lg:text-sm`}
+                        > 
+                            {description[0].warning}
+                        </div> 
                     }
                 </form>
                 
