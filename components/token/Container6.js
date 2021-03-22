@@ -256,7 +256,11 @@ const Container6 = ({ id, descriptions, data }) => {
                             disabled={receiveValue > 100}
                         /> 
                         : 
-                        <div> The minimun amount to receive is 100 INXT</div> 
+                        <div
+                            data-aos="fade-up" 
+                            data-aos-duration="300" 
+                            data-aos-delay="400"
+                        > The minimun amount to receive is 100 INXT</div> 
                     }
                 </form>
                 
