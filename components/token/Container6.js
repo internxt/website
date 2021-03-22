@@ -260,7 +260,7 @@ const Container6 = ({ id, descriptions, data }) => {
                             data-aos="fade-up" 
                             data-aos-duration="300" 
                             data-aos-delay="400"
-                        > The minimun amount to receive is 100 INXT</div> 
+                        > The minimum amount to receive is 100 INXT</div> 
                     }
                 </form>
                 
