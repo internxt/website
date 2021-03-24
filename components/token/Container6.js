@@ -174,8 +174,6 @@ const Container6 = ({ id, descriptions, data }) => {
                 <div className={`${styles.form_container} sm:w-100% lg:mt-16 xl:mt-24`}>
                     <button
                         className={`${styles.button} lg:text-xs lg:h-8 lg:w-32`}
-                        value="Try Again"
-                        type="submit"
                         onClick={ () => {
                             setPrices({
                                 btc: data.inxtToBTC.data.INXT.quote.BTC.price,
@@ -186,7 +184,7 @@ const Container6 = ({ id, descriptions, data }) => {
                             setDeposit()
                             setError(null)
                         }}
-                    /> 
+                    >Try Again</button>
                 </div> 
             </div>)
             :
@@ -309,9 +307,10 @@ const Container6 = ({ id, descriptions, data }) => {
                         <button
                             data-aos="fade-up" data-aos-duration="300" data-aos-delay="400"
                             className={`${styles.button} lg:text-xs lg:h-8 lg:w-32`}
-                            value={description[0].button}
                             type="submit"
-                        /> 
+                        >
+                            {description[0].button}
+                        </button> 
                         : 
                         <div
                             data-aos="fade-up" 
