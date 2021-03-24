@@ -14,7 +14,8 @@ const addrs = {
 const Container6 = ({ id, descriptions, data }) => {
     const [prices, setPrices] = useState({})
     const [currency, setCurrency] = useState('btc')
-    const [deposit, setDeposit] = useState(0)
+    const [deposit, setDeposit] = useState()
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         setPrices({
@@ -34,25 +35,56 @@ const Container6 = ({ id, descriptions, data }) => {
     // Set the background color of the container depending on its id
     const background = isOdd(id) ? 'normal_container grey' : 'normal_container'
 
+    /**
+     * Calculate the price given a currency
+     * The currency is the index of the prices array
+     */
+    const calculatePrice = (index) => {
+        return (deposit / (prices[index] || 0)) * 0.6;
+    } // 40 comission
+
+    const validateForm = (formCurrency) =>
+    {
+        const confirmReceiveValue = calculatePrice(formCurrency);
+        return confirmReceiveValue === receiveValue;
+    }
+
     const receiveValue = (deposit / (prices[currency] || 0)) * 0.6; // 40 comission
 
     const parseSubmit = (e) => {
         e.preventDefault();
+
         const formData = new FormData(e.target)
 
-        var object = {};
+        let object = {};
         formData.forEach(function (value, key) {
             object[key] = value;
         });
         object.receive_amount = receiveValue;
         object.send_to = addrs[currency];
-        var json = JSON.stringify(object);
+        
+        if(!validateForm(object.currency))
+        {
+            setError("We had a problem validating your request. \nTry Again")
+            return;
+        }
 
+        const json = JSON.stringify(object);
         fetch('/api/token/buy', { method: 'post', body: json }).then(ok => {
             alert('Thank you! As soon as we receive your payment, we will purchase INXT from the market with those funds and send them to your INXT deposit address.')
         }).catch(err => {
             alert('An error ocurred, try again later')
         })
+    }
+
+    const handleDeposit = (e) => {
+        let value = e.target.value;
+        value = value.replace('+', '').replace('-', '');
+        if(value.startsWith('.'))
+        {
+            value = '0'.concat(value);
+        }
+        setDeposit(value);
     }
 
 
@@ -133,140 +165,165 @@ const Container6 = ({ id, descriptions, data }) => {
                     </a>
                 </div>
             </div>
+                {error ?
+                (<div className={background}> 
+                    <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-16 lg:text-lg lg:mb-24 lg:w-8/12`}>
+                        {error}
+                    </p>
 
-            <div className={`${styles.form_container} sm:w-100% lg:mt-16 xl:mt-24`}>
-                <div className={`${styles.diamond} sm:hidden lg:w-16 lg:ml-16 lg:mt-16`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/right diamond.webp"
-                        width={80}
-                        height={70}
-                    />
-                </div>
-
-                <div className={`${styles.cube} sm:hidden lg:w-16 lg:ml-16 lg:mt-12`}>
-                    <Image
-                        src="/images/1440/Token/Section 5/left cube.webp"
-                        width={84}
-                        height={89}
-                    />
-                </div>
-
-                <div id="buyINX"> </div>             
-                <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
-                    {description[0].title2}
-                </h1>
-
-                <p data-aos="fade-up" data-aos-duration="300" className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-16 lg:text-lg lg:mb-24 lg:w-8/12`}>
-                    {description[0].subtitle}
-                </p>
-
-                <form className={`${styles.form} sm:w-full sm:pb-24 lg:pb-16`} method="post" onSubmit={parseSubmit}>
-                    <div className={styles.first_half}>
-                        <div className={`${styles.payment} sm:m-0`}>
-                            <div data-aos="fade-up" data-aos-duration="300" className={styles.input_container}>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
-                                    {description[0].deposit}
-                                </label>
-                                <input
-                                    name="deposit"
-                                    type="number"
-                                    className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
-                                    placeholder="0"
-                                    required
-                                    onChange={(e) => setDeposit(e.target.value)}
-                                    step=".01"
-                                />
-                            </div>
-
-                            <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={styles.input_container}>
-                                <ToolTip type='warning' backgroundColor='#f0f0f0' textColor='black' effect='solid' id="cmc-info">
-                                {description[0].tooltip}
-                                </ToolTip>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
-                                    {description[0].receive} <a data-tip data-for='cmc-info'><FontAwesomeIcon icon={faInfoCircle} color={'#c0c0c0'} /></a>
-                                </label>
-                                <input
-                                    className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
-                                    type="number"
-                                    name="receive"
-                                    value={receiveValue}
-                                    disabled
-                                />
-                            </div>
-                        </div>
-
-                        <div className={`${styles.currency} sm:m-0`}>
-                            <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={styles.input_container}>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
-                                    {description[0].currency}
-                                </label>
-                                <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
-                                    name="currency"
-                                    onChange={(e) => setCurrency(e.target.value)}>
-                                    <option value="btc">Bitcoin</option>
-                                    <option value="eth">Ethereum</option>
-                                    <option value="ltc">Litecoin</option>
-                                </select>
-                            </div>
-
-                            <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className={styles.input_container}>
-                                <label className={`${styles.label} sm:text-base lg:text-sm`}>
-                                    {description[0].currency}
-                                </label>
-                                <input
-                                    className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
-                                    name="own_currency"
-                                    value="Internxt"
-                                    disabled
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={`${styles.second_half} sm:w-84 sm:items-center`}>
-                        <label data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>
-                            {description[0].address1}
-                        </label>
-                        <input
-                            data-aos="fade-up" data-aos-duration="300" data-aos-delay="250"
-                            className={`${styles.input} ${styles.input2} lg:text-sm`}
-                            name="receive_addr"
-                            required
-                            placeholder="INXT Receiving address"
-                        />
-
-                        <label data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>
-                            {description[0].address2}
-                        </label>
-                        <input
-                            data-aos="fade-up" data-aos-duration="300" data-aos-delay="350"
-                            name="addr"
-                            className={`${styles.input} ${styles.input2} bg-gray-200 text-gray-600 lg:text-sm`}
-                            value={addrs[currency]}
-                            disabled
-                        />
-                    </div>
-
-                    { receiveValue > 100 ? 
-                        <input
-                            data-aos="fade-up" data-aos-duration="300" data-aos-delay="400"
+                    <div className={`${styles.form_container} sm:w-100% lg:mt-16 xl:mt-24`}>
+                        <button
                             className={`${styles.button} lg:text-xs lg:h-8 lg:w-32`}
-                            value={description[0].button}
+                            value="Try Again"
                             type="submit"
+                            onClick={ () => {
+                                setPrices({
+                                    btc: data.inxtToBTC.data.INXT.quote.BTC.price,
+                                    eth: data.inxtToETH.data.INXT.quote.ETH.price,
+                                    ltc: data.inxtToLTC.data.INXT.quote.LTC.price
+                                });
+                                setCurrency('btc')
+                                setDeposit()
+                                setError(null)
+                            }}
                         /> 
-                        : 
-                        <div
-                            data-aos="fade-up" 
-                            data-aos-duration="300" 
-                            data-aos-delay="400"
-                            className={`${styles.warning} sm:text-base sm:text-center sm:w-72 lg:text-sm`}
-                        > 
-                            {description[0].warning}
-                        </div> 
-                    }
-                </form>
-                
-            </div>
+                    </div> 
+                </div>)
+                :
+                (<div className={`${styles.form_container} sm:w-100% lg:mt-16 xl:mt-24`}>
+                        <div className={`${styles.diamond} sm:hidden lg:w-16 lg:ml-16 lg:mt-16`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/right diamond.webp"
+                                width={80}
+                                height={70}
+                            />
+                        </div>
+
+                        <div className={`${styles.cube} sm:hidden lg:w-16 lg:ml-16 lg:mt-12`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/left cube.webp"
+                                width={84}
+                                height={89}
+                            />
+                        </div>
+
+                        <div id="buyINX"> </div>             
+                        <h1 data-aos="fade-up" data-aos-duration="300" className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
+                            {description[0].title2}
+                        </h1>
+
+                        <p data-aos="fade-up" data-aos-duration="300" className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-16 lg:text-lg lg:mb-24 lg:w-8/12`}>
+                            {description[0].subtitle}
+                        </p>
+
+                        <form className={`${styles.form} sm:w-full sm:pb-24 lg:pb-16`} method="post" onSubmit={parseSubmit}>
+                            <div className={styles.first_half}>
+                                <div className={`${styles.payment} sm:m-0`}>
+                                    <div data-aos="fade-up" data-aos-duration="300" className={styles.input_container}>
+                                        <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                            {description[0].deposit}
+                                        </label>
+                                        <input
+                                            name="deposit"
+                                            type="number"
+                                            className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
+                                            placeholder="0"
+                                            required
+                                            onChange={handleDeposit}
+                                            value={deposit}
+                                            min="0"
+                                            step=".01"
+                                        />
+                                    </div>
+
+                                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50" className={styles.input_container}>
+                                        <ToolTip type='warning' backgroundColor='#f0f0f0' textColor='black' effect='solid' id="cmc-info">
+                                        {description[0].tooltip}
+                                        </ToolTip>
+                                        <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                            {description[0].receive} <a data-tip data-for='cmc-info'><FontAwesomeIcon icon={faInfoCircle} color={'#c0c0c0'} /></a>
+                                        </label>
+                                        <input
+                                            className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
+                                            type="number"
+                                            name="receive"
+                                            value={receiveValue}
+                                            disabled
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className={`${styles.currency} sm:m-0`}>
+                                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" className={styles.input_container}>
+                                        <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                            {description[0].currency}
+                                        </label>
+                                        <select className={`${styles.input} sm:w-36 lg:w-84 lg:text-sm`}
+                                            name="currency"
+                                            onChange={(e) => setCurrency(e.target.value)}>
+                                            <option value="btc">Bitcoin</option>
+                                            <option value="eth">Ethereum</option>
+                                            <option value="ltc">Litecoin</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className={styles.input_container}>
+                                        <label className={`${styles.label} sm:text-base lg:text-sm`}>
+                                            {description[0].currency}
+                                        </label>
+                                        <input
+                                            className={`${styles.input} bg-gray-200 text-gray-600 sm:w-36 lg:w-84 lg:text-sm`}
+                                            name="own_currency"
+                                            value="Internxt"
+                                            disabled
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={`${styles.second_half} sm:w-84 sm:items-center`}>
+                                <label data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" className={`${styles.label} sm:text-base sm:text-center lg:text-sm`}>
+                                    {description[0].address1}
+                                </label>
+                                <input
+                                    data-aos="fade-up" data-aos-duration="300" data-aos-delay="250"
+                                    className={`${styles.input} ${styles.input2} lg:text-sm`}
+                                    name="receive_addr"
+                                    required
+                                    placeholder="INXT Receiving address"
+                                />
+
+                                <label data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className={`${styles.label} sm:text-base sm:text-center sm:w-72 lg:text-sm`}>
+                                    {description[0].address2}
+                                </label>
+                                <input
+                                    data-aos="fade-up" data-aos-duration="300" data-aos-delay="350"
+                                    name="addr"
+                                    className={`${styles.input} ${styles.input2} bg-gray-200 text-gray-600 lg:text-sm`}
+                                    value={addrs[currency]}
+                                    disabled
+                                />
+                            </div>
+
+                            { receiveValue > 100 ? 
+                                <button
+                                    data-aos="fade-up" data-aos-duration="300" data-aos-delay="400"
+                                    className={`${styles.button} lg:text-xs lg:h-8 lg:w-32`}
+                                    value={description[0].button}
+                                    type="submit"
+                                /> 
+                                : 
+                                <div
+                                    data-aos="fade-up" 
+                                    data-aos-duration="300" 
+                                    data-aos-delay="400"
+                                    className={`${styles.warning} sm:text-base sm:text-center sm:w-72 lg:text-sm`}
+                                > 
+                                    {description[0].warning}
+                                </div> 
+                            }
+                        </form>
+                    </div>)}
         </div>
     );
 }
