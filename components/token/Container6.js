@@ -166,7 +166,7 @@ const Container6 = ({ id, descriptions, data }) => {
                 </div>
             </div>
                 {error ?
-                (<div className={background}> 
+                (<div className={`${styles.error_container}`}> 
                     <p className={`${styles.subtitle} sm:text-xl sm:text-center sm:w-80 sm:mb-16 lg:text-lg lg:mb-24 lg:w-8/12`}>
                         {error}
                     </p>

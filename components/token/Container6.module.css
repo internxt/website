@@ -161,3 +161,11 @@
 
     margin: 0 0 .5rem 0;
 }
+
+
+.error_container {
+    padding-top: 100px;
+
+    max-width: 661px;
+    margin: 1rem 0 7rem;
+}
