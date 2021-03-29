@@ -115,7 +115,7 @@ const Container6 = ({ id, descriptions, data }) => {
                         {description[0].title2}
                     </h1>
                 </div>             
-                <div style={{marginTop: 20, marginBottom: 20}}>
+                <div style={{marginTop: 55, marginBottom: 60}}>
                     <iframe
                         src="https://app.uniswap.org/#/swap?outputCurrency=0xa8006C4ca56F24d6836727D106349320dB7fEF82"
                         height="660px"
