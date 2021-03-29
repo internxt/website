@@ -125,8 +125,8 @@ const Container6 = ({ id, descriptions, data }) => {
                             margin: '0 auto',
                             display: 'block',
                             borderRadius: '10px',
-                            maxWidth: '600px',
-                            minWidth: '500px'
+                            maxWidth: '500px',
+                            minWidth: '400px'
                         }}
                     />
                 </div>
