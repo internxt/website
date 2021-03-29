@@ -178,8 +178,14 @@ const Footer = (props) => {
                         </div>
 
                         <div className={styles.followus_container}>
-                            <img className={styles.logo} src="/images/1440/Footer/github.webp" />
+                            <img className={styles.logo} src="/images/1440/Footer/github.svg" />
                             <a href="https://github.com/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Github</a>
+                        </div>
+
+
+                        <div className={styles.followus_container}>
+                            <img className={styles.logo} src="/images/1440/Footer/telegram.svg" />
+                            <a href="https://t.me/internxt" target="_blank" className={`${styles.p_social} lg:text-xs`}>Telegram</a>
                         </div>
                        </div>
 
