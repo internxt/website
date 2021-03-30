@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import Head from 'next/head'
 import 'aos/dist/aos.css'
-import { propTypes } from 'react-bootstrap/esm/Image'
-
+import CookieConsent from "react-cookie-consent"
 interface LayoutProps {
     children: React.ReactNode
     title: string
@@ -46,6 +44,28 @@ export default function Layout({
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
             </Head>
             {children}
+            <CookieConsent 
+                style={{ 
+                    background: "#2A2C35",
+                    alignItems: 'baseline',
+                    color: 'white',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    left: '37.5%',
+                    position: 'fixed',
+                    width: '25%',
+                    borderRadius: '21px',
+                    marginBottom: '10px'
+                }}
+                buttonStyle={{ 
+                    background: "#2A2C35", 
+                    color: "#FFFFFF", 
+                    fontSize: "13px" 
+                }}
+                buttonText="X"
+            >
+                This website uses cookies to enhance the user experience.
+            </CookieConsent>
         </>
     )
 }
