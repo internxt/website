@@ -94,12 +94,12 @@ const Container6 = ({ id, descriptions, data }) => {
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200"data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
-                    <a href="https://www.fatbtc.com/trading?currency=INXT/USDT" target="_blank" >
+                    <a href="https://yobit.net/en/trade/INXT/BTC" target="_blank" >
                         <div className={`${styles.card} lg:w-48 lg:px-12 lg:h-24 col-span-1`}>
                             <Image
-                                src="/images/1440/Token/Section 5/fatbtc.webp"
-                                width={159}
-                                height={47}
+                                src="/images/1440/Token/Section 5/yobit.svg"
+                                width={140}
+                                height={100}
                             />
                         </div>
                     </a>
