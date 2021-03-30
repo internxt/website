@@ -30,10 +30,10 @@ const Container6 = ({ id, descriptions, data }) => {
 
             <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:mt-16 lg:px-40 lg:mt-16 xl:mt-20">
                 <div data-aos="fade-up" data-aos-duration="300">
-                    <a href="https://exrates.me/trading/INXTBTC" target="_blank" >
+                    <a href="https://global.bittrex.com/Market/Index?MarketName=BTC-INXT" target="_blank" >
                         <div className={`${styles.card} cursor-pointer lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
                             <Image
-                                src="/images/1440/Token/Section 5/exrates.webp"
+                                src="/images/1440/Token/Section 5/bittrex.png"
                                 width={154}
                                 height={41}
                             />
@@ -66,7 +66,21 @@ const Container6 = ({ id, descriptions, data }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:mt-4 sm:mb-16 lg:mt-2 xl:mt-2">
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:gap-y-4 sm:mt-16 lg:px-40 lg:mt-3 xl:mt-2">
+                
+                <div data-aos="fade-up" data-aos-duration="300">
+                    <a href="https://exrates.me/trading/INXTBTC" target="_blank" >
+                        <div className={`${styles.card} cursor-pointer lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
+                            <Image
+                                src="/images/1440/Token/Section 5/exrates.webp"
+                                width={154}
+                                height={41}
+                            />
+                        </div>
+                    </a>
+                </div>
+                
+
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
                     <a href="https://latoken.com/exchange/INXT_BTC" target="_blank" >
                         <div className={`${styles.card} lg:w-48 lg:px-10 lg:h-24 col-span-1`}>
