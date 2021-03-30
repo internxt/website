@@ -51,9 +51,9 @@ export default function Layout({
                     color: 'white',
                     display: 'flex',
                     flexWrap: 'wrap',
-                    left: '37.5%',
+                    left: '32.5%',
                     position: 'fixed',
-                    width: '25%',
+                    width: '35%',
                     borderRadius: '21px',
                     marginBottom: '10px'
                 }}
