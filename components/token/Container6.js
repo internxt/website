@@ -122,28 +122,6 @@ const Container6 = ({ id, descriptions, data }) => {
                     />
                 </div>
 
-                <div id="buyINX"> 
-                    <h1 data-aos="fade-up" 
-                        data-aos-duration="300" 
-                        className={`${styles.title} sm:text-4xl sm:text-center sm:w-80 lg:text-4.5xl lg:mt-24 xl:mt-24`}>
-                        {description[0].title2}
-                    </h1>
-                </div>             
-                <div style={{marginTop: 55, marginBottom: 60}}>
-                    <iframe
-                        src="https://app.uniswap.org/#/swap?outputCurrency=0xa8006C4ca56F24d6836727D106349320dB7fEF82"
-                        height="660px"
-                        width="100%"
-                        style={{
-                            border: 0,
-                            margin: '0 auto',
-                            display: 'block',
-                            borderRadius: '10px',
-                            maxWidth: '500px',
-                            minWidth: '400px'
-                        }}
-                    />
-                </div>
             </div>
         </div>
     );

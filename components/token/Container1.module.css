@@ -36,7 +36,16 @@
     letter-spacing: -0.2px;
     text-align: center;
     color: #545465;
+    width: 596px;
+}
 
+.modal_title {
+    width: 596px;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.46;
+    letter-spacing: -0.2px;
+    color: #545465;
     width: 596px;
 }
 
