@@ -48,9 +48,9 @@ export default function Layout({
             <CookieConsent 
                 containerClasses={`${styles.cookies}`}
                 buttonStyle={{ 
-                    background: "#2A2C35", 
-                    color: "#FFFFFF", 
-                    fontSize: "13px" 
+                    background: "#FFFFFF", 
+                    color: "#2A2C35", 
+                    fontSize: "17px" 
                 }}
                 buttonText="X"
             >
