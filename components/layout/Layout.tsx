@@ -45,7 +45,7 @@ export default function Layout({
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
             </Head>
             {children}
-            <CookieConsent 
+            {/* <CookieConsent 
                 containerClasses={`${styles.cookies}`}
                 buttonStyle={{ 
                     background: "#FFFFFF", 
@@ -55,7 +55,7 @@ export default function Layout({
                 buttonText="X"
             >
                 This website uses cookies to enhance the user experience.
-            </CookieConsent>
+            </CookieConsent> */}
         </>
     )
 }
