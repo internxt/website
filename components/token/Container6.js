@@ -97,8 +97,8 @@ const Container6 = ({ id, descriptions, data }) => {
                     <a href="https://yobit.net/en/trade/INXT/BTC" target="_blank" >
                         <div className={`${styles.card} lg:w-48 lg:px-12 lg:h-24 col-span-1`}>
                             <Image
-                                src="/images/1440/Token/Section 5/yobit.svg"
-                                width={140}
+                                src="/images/1440/Token/Section 5/yobit.png"
+                                width={190}
                                 height={100}
                             />
                         </div>
