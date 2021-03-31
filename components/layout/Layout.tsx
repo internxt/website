@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import 'aos/dist/aos.css'
 import CookieConsent from "react-cookie-consent"
+import styles from './Cookies.module.css'
 interface LayoutProps {
     children: React.ReactNode
     title: string
@@ -44,19 +45,8 @@ export default function Layout({
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
             </Head>
             {children}
-            {/* <CookieConsent 
-                style={{ 
-                    background: "#2A2C35",
-                    alignItems: 'baseline',
-                    color: 'white',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    left: '30%',
-                    position: 'fixed',
-                    width: '40%',
-                    borderRadius: '21px',
-                    marginBottom: '10px'
-                }}
+            <CookieConsent 
+                containerClasses={`${styles.cookies}`}
                 buttonStyle={{ 
                     background: "#2A2C35", 
                     color: "#FFFFFF", 
@@ -65,7 +55,7 @@ export default function Layout({
                 buttonText="X"
             >
                 This website uses cookies to enhance the user experience.
-            </CookieConsent> */}
+            </CookieConsent>
         </>
     )
 }
