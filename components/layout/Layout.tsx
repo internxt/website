@@ -23,6 +23,13 @@ export default function Layout({
         <>
             <Head>
                 <title>{title}</title>
+                <script 
+                    id="Cookiebot" 
+                    src="https://consent.cookiebot.com/uc.js" data-cbid="f107e2b2-3258-4ef1-aefa-533acd1a84d2" 
+                    data-blockingmode="auto" 
+                    type="text/javascript"
+                >
+                </script>
                 <link rel="alternate" hrefLang="en" href="https://internxt.com/" />
                 <link rel="alternate" hrefLang="es" href="https://internxt.com/es" />
                 <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
@@ -44,6 +51,7 @@ export default function Layout({
                 '}} />
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
             </Head>
+      
             {children}
             {/* <CookieConsent 
                 containerClasses={`${styles.cookies}`}
@@ -56,6 +64,12 @@ export default function Layout({
             >
                 This website uses cookies to enhance the user experience.
             </CookieConsent> */}
+            <script 
+                id="CookieDeclaration" 
+                src="https://consent.cookiebot.com/f107e2b2-3258-4ef1-aefa-533acd1a84d2/cd.js" type="text/javascript" 
+                async
+            >
+            </script>
         </>
     )
 }
