@@ -40,7 +40,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        ${((Math.round((data.inxtToEUR.data.INXT.quote.EUR.price + Number.EPSILON) * 100) / 100) * 1.2).toFixed(2)}
+                        €{((Math.round((data.inxtToEUR.data.INXT.quote.EUR.price + Number.EPSILON) * 100) / 100) * 1.2).toFixed(2)}
                     </p>
                 </div>
                 
@@ -70,7 +70,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        ${formatNumber( data.inxtToEUR.data.INXT.quote.EUR.market_cap * 1.2 )}
+                        €{formatNumber( data.inxtToEUR.data.INXT.quote.EUR.market_cap * 1.2 )}
                     </p>
                 </div>
                 
@@ -79,7 +79,7 @@ const Container7 = ({ id, data, descriptions }) => {
                         {description[0].label5}
                     </p>
 
-                    <p className={`${styles.data} lg:text-4xl lg:mt-4 ${styles.blue}`}>$18.2M</p>
+                    <p className={`${styles.data} lg:text-4xl lg:mt-4 ${styles.blue}`}>€18.2M</p>
                 </div>
                 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" className={styles.card}>
@@ -87,7 +87,7 @@ const Container7 = ({ id, data, descriptions }) => {
                         {description[0].label6}
                     </p>
 
-                    <p className={`${styles.data} lg:text-4xl lg:mt-4 ${styles.blue}`}>$33.71</p>
+                    <p className={`${styles.data} lg:text-4xl lg:mt-4 ${styles.blue}`}>€33.71</p>
                 </div>
                 
                 <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="300" className={styles.card}>
@@ -96,7 +96,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
-                        ${formatNumber(data.inxtToEUR.data.INXT.quote.EUR.volume_24h)}
+                        €{formatNumber(data.inxtToEUR.data.INXT.quote.EUR.volume_24h)}
                     </p>
                 </div>
                 
