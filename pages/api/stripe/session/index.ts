@@ -41,6 +41,11 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     metadata: {
       member_tier: 'lifetime'
     },
+    payment_intent_data: {
+      metadata: {
+        member_tier: 'lifetime'
+      }
+    },
     billing_address_collection: 'required',
     customer_email: req.body.email ? req.body.email : undefined
 
@@ -62,4 +67,4 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   if (method === 'POST') { return postSession(req, res); }
 
   return res.status(500).end('Cannot ' + req.method + ' on ' + req.url);
-} 
+}
