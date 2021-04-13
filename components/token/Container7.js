@@ -18,14 +18,16 @@ const Container7 = ({ id, data, descriptions }) => {
         let suffixNum = 0;
 
         while (newNum >= 1000) {
-          newNum /= 1000;
-          suffixNum++;
+            newNum /= 1000;
+            suffixNum++;
         }
         newNum = newNum.toPrecision(3);
-      
+        
         newNum += suffixes[suffixNum];
         return newNum;
-      }
+    }
+
+    const sevenDaysChange = Math.round((data.inxtToEUR.data.INXT.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100;
 
     return ( 
         <div className={background} id="metrics">
@@ -60,7 +62,7 @@ const Container7 = ({ id, data, descriptions }) => {
                     </p>
 
                     <p className={data.inxtToEUR.data.INXT.quote.EUR.percent_change_7d > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
-                        {data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}{Math.round((data.inxtToEUR.data.INXT.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100}%
+                        {sevenDaysChange > 0 ? <span>+</span> : null}{sevenDaysChange}%
                     </p>
                 </div>
                 
