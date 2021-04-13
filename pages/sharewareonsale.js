@@ -9,16 +9,9 @@ import Container8 from "../components/drive/Container8"
 import Layout from "../components/layout/Layout"
 import TopBar from "../components/layout/TopBar"
 import Footer from "../components/layout/Footer"
-import AOS from 'aos'
-import { useEffect } from "react"
 
 const Shareware = (props) => {
-
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")
-
-  useEffect(() => {
-    AOS.init()
-  }, [])
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName='home'>
