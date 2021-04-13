@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Container1 = ({ id, descriptions }) => {
 
   const description = descriptions.filter(desc => desc.id === id)
-  
+
   // Check if a number is odd
   const isOdd = (num) => {
     return num % 2 == 1;
@@ -96,7 +96,12 @@ const Container1 = ({ id, descriptions }) => {
             type='email'
             placeholder={description[0].input}
             className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+          />
 
+          <input
+            name="referrer"
+            type="hidden"
+            value="sharewareonsale"
           />
 
           <input
