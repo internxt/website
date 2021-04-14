@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import 'aos/dist/aos.css'
+import AOS from 'aos'
+import { useEffect } from 'react'
 interface LayoutProps {
     children: React.ReactNode
     title: string
@@ -17,17 +19,15 @@ export default function Layout({
     disableMailerlite = false,
     disableDrift = false
 }: LayoutProps) {
+
+    useEffect(() => {
+        AOS.init()
+    }, []);
+
     return (
         <>
             <Head>
                 <title>{title}</title>
-                <script 
-                    id="Cookiebot" 
-                    src="https://consent.cookiebot.com/uc.js" data-cbid="f107e2b2-3258-4ef1-aefa-533acd1a84d2" 
-                    data-blockingmode="auto" 
-                    type="text/javascript"
-                >
-                </script>
                 <link rel="alternate" hrefLang="en" href="https://internxt.com/" />
                 <link rel="alternate" hrefLang="es" href="https://internxt.com/es" />
                 <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
@@ -50,12 +50,6 @@ export default function Layout({
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
             </Head>
             {children}
-            <script 
-                id="CookieDeclaration" 
-                src="https://consent.cookiebot.com/f107e2b2-3258-4ef1-aefa-533acd1a84d2/cd.js" type="text/javascript" 
-                async
-            >
-            </script>
         </>
     )
 }

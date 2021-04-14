@@ -50,19 +50,24 @@ export default function CheckoutForm(props: CheckoutFormProps) {
     redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))
   };
 
-  return <form onSubmit={handleSubmit} style={{ display: 'flex', }}>
-    <input
-      type='email'
-      placeholder='Your email'
-      onChange={e => setEmail(e.target.value)}
-      className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
-    />
+  return (
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <input
+        type='email'
+        placeholder='Your email'
+        onChange={e => setEmail(e.target.value)}
+        className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+      />
 
-    <button
-      type="submit"
-      disabled={loading}
-      style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-      {...props}
-    >{loading ? <Spinner animation="border" style={{ color: '#e0e0e0' }} /> : props.value}</button>
-  </form>
+      <button
+        type="submit"
+        disabled={loading}
+        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+        {...props}
+      >
+        {loading ? <Spinner animation="border" style={{ color: '#e0e0e0' }} /> : props.value}
+      </button>
+
+    </form>
+  )
 }
