@@ -63,7 +63,7 @@ export default function CheckoutForm(props: CheckoutFormProps) {
         type="submit"
         disabled={loading}
         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-        className={`${styles.button} lg:w-60 lg:h-10 lg:text-sm`}
+        className={`${styles.button} lg:w-60 lg:h-10 lg:text-sm sm:mt-5`}
       >
         {loading ? <Spinner animation="border" style={{ color: '#e0e0e0' }} /> : props.value}
       </button>
