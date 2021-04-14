@@ -43,7 +43,8 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     },
     payment_intent_data: {
       metadata: {
-        member_tier: 'lifetime'
+        member_tier: 'lifetime',
+        lifetime_tier: PRODUCT.return
       }
     },
     billing_address_collection: 'required',
