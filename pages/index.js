@@ -17,10 +17,6 @@ const Home = (props) => {
 
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")
 
-  useEffect(() => {
-    AOS.init()
-  }, [])
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName='home'>
       <TopBar />

@@ -16,10 +16,6 @@ const Core = (props) => {
 
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "core")
 
-  useEffect(() => {
-    AOS.init()
-  }, [])
-
   return (
     <Layout segmentName="core" title={metatags[0].title} description={metatags[0].description} >
       <TopBar />
