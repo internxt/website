@@ -16,3 +16,23 @@
     margin-right: -2px;
     padding: 0 1rem;
 }
+
+.button {
+    width: 290px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0084ff;
+    outline: 0;
+
+    font-family: "averta-semibold";
+    font-size: 18px;
+    line-height: 2.11;
+    letter-spacing: 0px;
+    text-align: center;
+    color: white;
+}
+
+.button:hover {
+    opacity: 90%;
+}
