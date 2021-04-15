@@ -1,4 +1,4 @@
-import styles from '../drive/Container1.module.css'
+import styles from './Container1.module.css'
 import Image from 'next/image'
 
 const Container1 = ({ id, descriptions }) => {
@@ -81,36 +81,42 @@ const Container1 = ({ id, descriptions }) => {
           Get 20 GB for free, forever thanks to SharewareOnSale
         </h1>
 
-        <form
-          data-aos="fade-up"
-          data-aos-delay="450"
-          data-aos-duration="500"
+        <div className={`${styles.formContainer}`}>
+          <form
+            data-aos="fade-up"
+            data-aos-delay="450"
+            data-aos-duration="500"
 
-          method="get"
-          target="_blank"
-          action="https://drive.internxt.com/new"
-          className="flex items-center"
-        >
-          <input
-            name='email'
-            type='email'
-            placeholder={description[0].input}
-            className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
-          />
+            method="get"
+            target="_blank"
+            action="https://drive.internxt.com/new"
+            className="flex items-center"
+          >
+            <input
+              name='email'
+              type='email'
+              placeholder={description[0].input}
+              className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+            />
 
-          <input
-            name="referrer"
-            type="hidden"
-            value="sharewareonsale"
-          />
+            <input
+              name="referrer"
+              type="hidden"
+              value="sharewareonsale"
+            />
 
-          <input
-            name='signup'
-            type='submit'
-            value={description[0].button}
-            className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
-          />
-        </form>
+            <input
+              name='signup'
+              type='submit'
+              value={description[0].button}
+              className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+            />
+          </form>
+
+          <div className="lg:w-28">
+            <Image src="/images/1440/Shareware/shareware.png" width={120} height={60} />
+          </div>
+        </div>
 
         <div
           data-aos="fade-up"
