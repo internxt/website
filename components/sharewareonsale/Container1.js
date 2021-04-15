@@ -90,7 +90,7 @@ const Container1 = ({ id, descriptions }) => {
             method="get"
             target="_blank"
             action="https://drive.internxt.com/new"
-            className="flex items-center"
+            className="flex items-center mr-4"
           >
             <input
               name='email'
