@@ -269,3 +269,58 @@ button:focus {
 .btn-link:focus {
   text-decoration: none;
 }
+
+.cookies-warning {
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1070;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.alert-cookies {
+  color: #fff;
+  background-color: #2e3234;
+  border: 0;
+  box-shadow: 0 1px 5px 3px rgb(46 50 52 / 10%);
+  border-radius: .25rem;
+  font-size: 80%;
+  max-width: 580px;
+}
+
+.alert-cookies__link {
+  color: rgba(255,255,255,0.7);
+  text-shadow: none;
+  margin-left: 5px;
+}
+
+.alert-cookies__link:hover {
+  color: white;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #c3c8ce;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+.close:hover {
+  color: white;
+}
+
+.alert-cookies__close {
+  line-height: .5em;
+  opacity: .7;
+}

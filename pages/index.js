@@ -10,15 +10,23 @@ import Footer from '../components/layout/Footer'
 import TopBar from '../components/layout/TopBar'
 import Layout from '../components/layout/Layout'
 import AOS from 'aos'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import cookies from '../lib/cookies'
 
 const Home = (props) => {
-
+  const [consentCookie, setConsentCookie] = useState(true)
   const metatags = props.metatagsDescriptions.filter(desc => desc.id === "drive")
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem('CookieConsent', 'true')
+    setConsentCookie(true)
+  }
 
   useEffect(() => {
     AOS.init()
+    const cookie = localStorage.getItem('CookieConsent')
+
+    if (!cookie) setConsentCookie(false)
   }, [])
 
   return (
@@ -33,7 +41,24 @@ const Home = (props) => {
       <Container7 id='7' descriptions={props.descriptions} />
       <Container8 id='8' descriptions={props.descriptions} />
       <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
-    </Layout>
+
+      <div className={consentCookie ? 'hidden' : `cookies-warning position-fixed mobile:w-60`}>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <div className="alert alert-cookies alert-dismissible my-0 mobile:text-xxxs mobile:pr-8">
+                Internxt uses cookies to make its website easier to use.
+                <a href="/legal" className="alert-cookies__link">Learn more about cookies. </a>
+
+                <button type="button" onClick={handleAcceptCookies} className="close alert-cookies__close">
+                  <span>×</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout >
   )
 }
 

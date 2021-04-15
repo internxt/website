@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import 'aos/dist/aos.css'
+import AOS from 'aos'
+import { useEffect } from 'react'
 interface LayoutProps {
     children: React.ReactNode
     title: string
@@ -17,6 +19,11 @@ export default function Layout({
     disableMailerlite = false,
     disableDrift = false
 }: LayoutProps) {
+
+    useEffect(() => {
+        AOS.init()
+    }, []);
+
     return (
         <>
             <Head>
