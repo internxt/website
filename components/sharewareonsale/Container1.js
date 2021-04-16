@@ -113,8 +113,13 @@ const Container1 = ({ id, descriptions }) => {
             />
           </form>
 
-          <div className="lg:w-28">
-            <Image src="/images/1440/Shareware/shareware.png" width={120} height={60} />
+          <div
+            data-aos="fade-up"
+            data-aos-delay="550"
+            data-aos-duration="500"
+
+            className="lg:w-28 flex rounded-md overflow-hidden">
+            <Image style={{ borderRadius: 6 }} src="/images/1440/Shareware/shareware.png" width={120} height={39} />
           </div>
         </div>
 
