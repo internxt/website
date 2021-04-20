@@ -990,12 +990,246 @@ const Legal = (props) => {
 
                 <div className="flex flex-col w-8/12 mb-16">
                     <h1 className="font-avertabold text-4.5xl mb-6">
-                        {description.title32}
+                        {description.cookies_title}
                     </h1>
+                    <h5 className="font-avertabold text-2.5xl mb-6">
+                        {description.cookies_subtitle1}
+                    </h5>
 
                     <p className="font-avertalight mb-6">
-                        {description.subtitle32}
+                        {description.cookies_data_part1}
                     </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part2}
+                    </p>
+
+                    <h5 className="font-avertabold text-2.5xl mb-6">
+                        {description.cookies_subtitle2}
+                    </h5>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part3}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part4}
+                    </p>
+
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part5}
+                    </p>
+
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part6}
+                    </p>
+
+                    <h5 className="font-avertabold text-2.5xl mb-6">
+                        {description.cookies_subtitle3}
+                    </h5>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part7}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part8}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part9}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part10}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part11}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part12}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part13}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part14}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part15}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part16}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part17}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part18}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part19}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part20}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part21}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part22}
+                    </p>
+
+                    <h5 className="font-avertabold text-2.5xl mb-6">
+                        {description.cookies_subtitle4}
+                    </h5>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part23}
+                    </p>
+                    
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part24}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part25}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part26}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part27}
+                    </p>
+
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part28}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part29}
+                    </p>
+                    
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part30}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part31}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part32}
+                    </p>
+                    
+
+                    <table>
+                        <tr>
+                            <th colspan="2">COOKIES ANALÍTICAS</th>
+                        </tr>
+                        <tr>
+                            <th>{description.cookies_table_row1_column1}</th>
+                            <th>{description.cookies_table_row1_column2}</th>
+                        </tr>
+                        <tr>
+                            <td>{description.cookies_table_row2_column1}</td>
+                            <td>{description.cookies_table_row2_column2}</td>
+                        </tr>
+                        <tr>
+                            <td>{description.cookies_table_row3_column1}</td>
+                            <td>{description.cookies_table_row3_column2}</td>
+                        </tr>
+                        <tr>
+                            <td>{description.cookies_table_row4_column1}</td>
+                            <td>{description.cookies_table_row4_column2}</td>
+                        </tr>
+                        <tr>
+                            <td>{description.cookies_table_row5_column1}</td>
+                            <td>{description.cookies_table_row5_column2}</td>
+                        </tr>
+
+                        <tr>
+                            <td>{description.cookies_table_row6_column1}</td>
+                            <td>{description.cookies_table_row6_column2}</td>
+                        </tr>
+
+                        <tr>
+                            <td>{description.cookies_table_row7_column1}</td>
+                            <td>{description.cookies_table_row7_column2}</td>
+                        </tr>
+
+                        <tr>
+                            <td>{description.cookies_table_row8_column1}</td>
+                            <td>{description.cookies_table_row8_column2}</td>
+                        </tr>
+                    </table>
+
+                    <h5 className="font-avertabold text-2.5xl mb-6">
+                        {description.cookies_subtitle5}
+                    </h5>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part33}
+                    </p>
+                    
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part34}
+                    </p>
+
+                    <ol>
+                        <li className="font-avertalight mb-6">
+                            {description.cookies_data_part35}
+                        </li>
+
+                        <li className="font-avertalight mb-6">
+                            {description.cookies_data_part36}
+                        </li>
+
+                        <li className="font-avertalight mb-6">
+                            {description.cookies_data_part37}
+                        </li>
+
+                        <li className="font-avertalight mb-6">
+                            {description.cookies_data_part38}
+                        </li>
+
+                        <li className="font-avertalight mb-6">
+                            {description.cookies_data_part39}
+                        </li>
+
+                        <li className="font-avertalight mb-6">
+                            {description.cookies_data_part40}
+                        </li>
+                    </ol>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part41}
+                    </p>
+
+                    <p className="font-avertalight mb-6">
+                        {description.cookies_data_part42}
+                    </p>
+                    
+
                 </div>
 
                 <div className="flex flex-col w-8/12 mb-16">
