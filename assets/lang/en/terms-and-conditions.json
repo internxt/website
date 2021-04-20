@@ -97,7 +97,378 @@
     "subtitle26": "The Agreement constitutes the entire agreement between you and Internxt relating to your access to and use of our Services. We may assign our rights and obligations under the Agreement. The failure of Internxt to exercise or enforce any right or provision of the Agreement will not operate as a waiver of such right or provision. We will not be liable for any delay or failure to perform any obligation under the Agreement where the delay or failure results from any cause beyond our reasonable control. Except as otherwise provided in herein, the Agreement is intended solely for the benefit of the parties and are not intended to confer third-party beneficiary rights upon any other person or entity.",
 
     "title27": "Privacy Policy overview.",
-    "subtitle27": "This Privacy Policy explains how information is collected, used and disclosed by Internxt Universal Technologies SL. (“Company”) when you access or use our websites, mobile applications, or other products or services (collectively, the “Services”), or when you otherwise interact with us. Our Services include the web pages at the internxt.com domain and our online storage services (“Storage Services”) that enable users to store data on third-party devices that have installed an open source, distributed storage software (“Software”). This policy does not apply to the information other devices that have installed the Software may collect about you or your device in connection with your use of the Software. For details about the information these other devices may collect about you or your device, please see this help page. We may change this policy from time to time. If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide additional notice (such as adding a statement to our webpage or sending a notification).",
+
+    "privacy_policy_intro_part1": "The Privacy Policy is part of the Legal Notice that governs the Web Page: www.internxt.com together with the Cookies Usage Policy.",
+    "privacy_policy_intro_part2": "The Web page www.internxt.com is owned by Internxt Universal Technologies, S.L. and complies with the requirements derived from Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce, and current regulations relating to the protection of personal data and, in particular, Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and the free movement of such data and Organic Law 3/2018, of 5 December, on the Protection of Personal Data and guarantee of digital rights.",
+    "privacy_policy_intro_part3": "Internxt Universal Technologies, S.L. reserves the right to modify or adapt this Privacy Policy at any time. Therefore, we recommend that you review it every time you access the Website. In the event that you have registered on the website and access your account or profile, upon accessing it, you will be informed in the event that there have been substantial changes in relation to the processing of your personal ",
+
+    "privacy_policy_person_responsible_title": "Who is the person responsible for the treatment?",
+
+    "privacy_policy_person_responsible_part1": "The data collected or provided voluntarily through the Web Page, either by browsing it, as well as all those who can provide us in the contact forms, via email or telephone, will be collected and processed by the File Manager, whose data are indicated below:",
+
+    "privacy_policy_table_row1_column1": "Identity",
+    "privacy_policy_table_row1_column2": "Internxt Universal Technologies, S.L.",
+
+    "privacy_policy_table_row2_column1": "CIF",
+    "privacy_policy_table_row2_column2": "B98936354",    
+    
+    "privacy_policy_table_row3_column1": "Postal address",
+    "privacy_policy_table_row3_column2": "La Marina de València, Muelle de la Aduana s/n, Edificio Lanzadera, - 46024 – València (Valencia/València)",   
+
+    "privacy_policy_table_row4_column1": "Phone",
+    "privacy_policy_table_row4_column2": "677753624",
+
+    "privacy_policy_table_row5_column1": "E-mail",
+    "privacy_policy_table_row5_column2": "hello@internxt.com",  
+
+    "privacy_policy_table_row6_column1": "DPD Contact:",
+    "privacy_policy_table_row6_column2": "dpd@prodatvalencia.es",
+
+    "privacy_policy_table_row7_column1": "URL:",
+    "privacy_policy_table_row7_column2": "www.internxt.com",  
+
+    "privacy_policy_table_row8_column1": "Mercantile Registry",
+    "privacy_policy_table_row8_column2": "Valencia/València, Tomo ..., Libro ..., Folio ..., Sección ..., Hoja V-....",  
+
+    "privacy_policy_person_responsible_part2": "If, for any reason, you wish to contact us on any matter related to the processing of your personal data or privacy (with our Data Protection Officer), you can do so through any of the means indicated above.",
+
+    "privacy_policy_process_personal_data_title": "When, why, by whom, how, for what purpose and for how long do we process your personal data?",
+
+    "privacy_policy_process_personal_data_subtitle1": "When and why?",
+
+    "privacy_policy_process_personal_data_part1": "You can browse most of our web pages without providing any personal information, but in some cases this information is necessary to provide you with the electronic services you request from us. ",
+
+    "privacy_policy_process_personal_data_part2": "If we need to collect personal data to provide you with the service, we will process the information in accordance with the policy set out in this document and in the specific terms and conditions of the particular service in question (if any), which contain specific privacy statements about the use of the data and inform you why, for what purpose, how, for how long we process your personal data and what security measures we implement.",
+
+
+    "privacy_policy_process_personal_data_subtitle2": "Who collects your data?",
+
+    "privacy_policy_process_personal_data_part3": "The collection and processing of personal data that you may provide to us is carried out by our company or, where appropriate, its data processors. In relation to the latter case, these processors are third parties who are contractually required to ensure that their activity respects the law and implement appropriate security measures to protect such data.",
+
+
+    "privacy_policy_process_personal_data_subtitle3": "What for?",
+
+    "privacy_policy_process_personal_data_part4": "The personal data that we request from you, or that you provide to us as a result of your browsing, is used by us to manage, provide and improve the services you have requested from us.",
+
+    "privacy_policy_process_personal_data_part5": "For example, we will process your personal data in order to manage the queries you send us, to manage your participation in personnel selection processes, to send you electronic communications if you so request, and/or for the preparation of statistics.",
+
+    "privacy_policy_process_personal_data_part6": "In this sense, we ask you for an e-mail address when you use our contact forms on the web. We only collect the sender's personal data necessary to respond to you.",
+
+    "privacy_policy_process_personal_data_part7": "When you subscribe to our newsletters we also ask you for an email to provide the service, in any case you can manage your unsubscribe from the service whenever you want and we put means at your disposal to do so.",
+
+
+    "privacy_policy_process_personal_data_subtitle4": "How do we treat your data?",
+
+    "privacy_policy_process_personal_data_part8": "We collect personal information only to the extent necessary to achieve a specific purpose. The information will not be used for a purpose incompatible with the one described.",
+
+    "privacy_policy_process_personal_data_part9": "We only disclose the information to third parties if it is necessary for the fulfillment of the purpose of the service and only to persons who need to know them. All this in order to be able to provide the service by treating your personal data with confidentiality and reserve, in accordance with current legislation.",
+
+    "privacy_policy_process_personal_data_part10": "In any case, our company adopts security measures to protect the data against possible abuse or unauthorized access, alteration or loss.",
+
+
+    "privacy_policy_process_personal_data_subtitle5": "How do we treat your data?",
+
+    "privacy_policy_process_personal_data_part11": "We store data only for the time necessary to fulfill the purpose of its collection or further processing. The period of data retention will depend on the service and each service will indicate the duration of the processing of personal data.",
+
+    "privacy_policy_process_personal_data_part12": "A table with specific retention periods is provided at the end of this document.",
+
+    "privacy_policy_process_personal_data_subtitle6": "For what purposes will we process your personal data?",
+
+    "privacy_policy_process_personal_data_sub_subtitle6_1": "Customers:",
+
+    "privacy_policy_process_personal_data_part13": "We process your personal data in order to (i) manage your purchase or service provided; (ii) maintain the contractual and pre-contractual relationship for billing, preparation of budgets and follow up on the same as well as send you information by electronic means that deal with your request; (iii) sending communications on commercial information by electronic means that may be of interest to you, provided there is express authorization; (iv) we may develop a commercial profile based on the information you provide us in order to offer products and services according to your interests. No automated decisions will be made on the basis of such a profile.",
+
+    "privacy_policy_process_personal_data_sub_subtitle6_2": "Suppliers:",
+
+    "privacy_policy_process_personal_data_part14": "We process your personal data for the purpose of (i) invoicing and (ii) maintaining business contact, (iii) as well as sending you information by electronic means about our products or services.",
+
+    "privacy_policy_process_personal_data_sub_subtitle6_3": "Web or e-mail contacts:",
+
+    "privacy_policy_process_personal_data_part15": "We process your personal data for the purpose of (i) answering your queries and requests; (ii) managing the requested service or processing your order; (iii) sending you commercial information by electronic means that may be of interest to you, we may create a commercial profile based on the information you provide us in order to offer you products and services according to your interests. No automated decisions will be made on the basis of such a profile.",
+
+    "privacy_policy_process_personal_data_sub_subtitle6_4": "Social media contacts:",
+
+    "privacy_policy_process_personal_data_part16": "We process your personal data in order to (i) answer your queries and requests, (ii) manage the requested service, answer your request or process your order and (iii) interact with you and create a community of followers.",
+
+    "privacy_policy_process_personal_data_sub_subtitle6_5": "Job seekers:",
+
+    "privacy_policy_process_personal_data_part17": "We process your personal data in order to (i) count on you in recruitment selection processes, (ii) summon you for job interviews and evaluate your candidacy, (iii) communicate your resume to group companies, collaborators or related companies with the sole purpose of involving you in their selection processes, provided that you have given us your consent.",
+
+    
+    "privacy_policy_process_personal_data_sub_subtitle6_6": "Participants in our contests:",
+
+    "privacy_policy_process_personal_data_part18": "We process your personal data in order to manage your participation in the contests we organize as well as to publicize the winners of the contest and the awards ceremony.",
+
+    "privacy_policy_process_personal_data_part19": "Winning participants may be photographed or videotaped and disseminated in any of the media, our website or other media. Consequently it is possible that the image of the participants may be captured, recorded and/or reproduced in an ancillary way to the main activity.",
+
+
+    "privacy_policy_process_personal_data_sub_subtitle6_7": "Chat online:",
+
+    "privacy_policy_process_personal_data_part20": "We process your personal data in order to answer your queries and requests.",
+
+    "privacy_policy_process_personal_data_part21": "The data will be deleted from our database once the query or information requested through the chat is resolved.",
+
+    
+    "privacy_policy_process_personal_data_sub_subtitle6_8": "Web users:",
+
+    "privacy_policy_process_personal_data_part22": "By browsing our website we collect information about your browser, your device and data from your use of our website as well as any information you provide to us when using our website. In an anonymized or aggregated form, we may record the IP address (Internet access identification number of the device, which allows devices, systems and servers to recognize and communicate with each other).",
+
+    "privacy_policy_process_personal_data_part23": "The purpose of the processing is (i) to obtain practical knowledge about how users use our website to enable us to improve it; (ii) to perform statistical analysis to help us improve our business strategy; (iii) to perform web performance analysis and (iv) for technical security and system diagnostics. ",
+
+    "privacy_policy_process_personal_data_part24": "The data we collect is not related to a specific user and will be stored in our databases.",
+
+    "privacy_policy_process_personal_data_part25": "The aforementioned data, as well as any personal data you may provide us with, are stored by means of cookies that are collected in a format pseudonymized and are subject to the presentation of objections to the processing of this personal data, as detailed in the Cookie Policy. ",
+
+    "privacy_policy_process_personal_data_part26": "You can consult the Cookies Policy in the corresponding section.",
+
+    "privacy_policy_process_personal_data_part27": "The information of your navigation can be stored by Google Analytics, so we refer to the Privacy Policy of Google, as it collects and treats such information. http://www.google.com/intl/en/policies/privacy/ ",
+
+    "privacy_policy_process_personal_data_part28": "Similarly, from our website you can provide the utility of Google Maps, which may have access to your location, in the event that it is allowed, in order to provide you with greater specificity about the distance and / or roads to our headquarters. In this regard, we refer to the privacy policy used by Google Maps, in order to know the use and processing of such data http://www.google.com/intl/en/policies/privacy/ ",
+
+    "privacy_policy_process_personal_data_part29": "In order to offer information or services of interest based on the User's location, we may access data relating to the geolocation of the User's device in those cases in which the user's configuration for this purpose so permits.",
+
+    "privacy_policy_process_personal_data_part30": "The Portal may offer functionalities to share content through third party applications, such as Facebook or Twitter. These applications may collect and process information related to the user's browsing on the different websites. Any personal information collected through these applications may be used by third party users of these applications. Your interactions are subject to the privacy policies of the companies providing the applications.",
+
+    "privacy_policy_process_personal_data_part31": "The Portal may host blogs, forums, and other social networking applications or services in order to facilitate the exchange of knowledge and content. Any personal information provided by the user may be shared with other users of that service, over which we have no control.",
+
+
+    "privacy_policy_process_personal_data_subtitle7": "What is the legitimacy for the processing of your data?",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_1": "Customers:",
+
+    "privacy_policy_process_personal_data_part32": "The legal basis for the processing of your data is (i) the execution of a contract and maintenance of the contractual relationship and (ii) your consent that is requested for the remission of offers of products and services through electronic means, without in any case the withdrawal of this consent conditions the execution of the contract.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_2": "Suppliers:",
+
+    "privacy_policy_process_personal_data_part33": "The legal basis for processing your data is (i) the performance of a contract to which the data subject is a party or for the implementation of pre-contractual measures.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_3": "Web or e-mail contacts:",
+
+    "privacy_policy_process_personal_data_part34": "The legal basis for the processing of your data is (i) the consent of the data subject.",
+
+    "privacy_policy_process_personal_data_part35": "In those cases where to make a request it is necessary to fill out a form and \"click\" on the submit button, the completion of the same will necessarily imply that you have been informed and have expressly given your consent to the content of the clause attached to the form or acceptance of the privacy policy.",
+
+    "privacy_policy_process_personal_data_part36": "All our forms have a check box that must be checked to access the services offered.",
+
+    "privacy_policy_process_personal_data_part37": "The purposes of the treatment will be the following:",
+
+    "privacy_policy_process_personal_data_part38": "a) Manage queries or requests for information that you send us through the Web Page, email or telephone.",
+
+    "privacy_policy_process_personal_data_part39": "b) Sending communications, special promotions, news or actions that are of interest to you or that you request from us, including by electronic means. As this is an accessory purpose to the main one, you must check the box provided for this purpose.",
+    
+    "privacy_policy_process_personal_data_part40": "The personal data you provide us by this means will not be communicated to third parties, being Internxt Universal Technologies, S.L. who give, directly answer to such queries.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_4": "Social network contacts:",
+
+    "privacy_policy_process_personal_data_part41": "The legal basis for the processing of your data is the acceptance of the contractual relationship with the relevant social network provider manifested when registering in their application and in accordance with their privacy policies, which is external to us.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_5": "Work with us:",
+
+    "privacy_policy_process_personal_data_part42": "In the event that you provide us with your curriculum vitae, either by means of the Web Page, e-mail or physically at the address or any headquarters of Internxt Universal Technologies, S.L. will incorporate them into its database. The curriculum will be stored for a period of 1 year, after which, if we have not contacted you, it will be deleted.",
+
+    "privacy_policy_process_personal_data_part43": "The legal basis for the treatment will be based on the express consent given by the interested party for the processing of the data contained in the curriculum by sending it and checking the box provided for this purpose.In those cases where to make a request it is necessary to fill out a form and \"click\" on the submit button, the completion of the same will necessarily imply that you have been informed and have expressly given your consent to the content of the clause attached to the form or acceptance of the privacy policy.",
+
+    "privacy_policy_process_personal_data_part44": "The purpose of the treatment is to incorporate you to present and future selection processes of Internxt Universal Technologies, S.L. or any entity belonging to the business group.",
+
+    "privacy_policy_process_personal_data_part45": "In the event that the interested party is finally incorporated as an employee of Internxt Universal Technologies, S.L. or any of the entities belonging to the business group, your data will be incorporated into a database owned by the same, in order to internally manage the employee-employer employment relationship.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_6": "Sending Newsletter:",
+
+    "privacy_policy_process_personal_data_part46": "The Web Page allows the option of subscribing to the Newsletter of Internxt Universal Technologies, S.L. To do so, it is necessary to provide an e-mail address to which it will be sent.",
+    
+    "privacy_policy_process_personal_data_part47": "Such information will be stored in a database of Internxt Universal Technologies, S.L. in which it will be registered until the interested party requests to unsubscribe from it or, where appropriate, Internxt Universal Technologies, S.L. ceases to send it.",    
+    
+    "privacy_policy_process_personal_data_part48": "The legal basis for the processing of this personal data is the express consent given by all interested parties who subscribe to this service by checking the box provided for this purpose.",
+    
+    "privacy_policy_process_personal_data_part49": "The e-mail data will only be processed and stored for the purpose of managing the sending of the Newsletter by users who request it.",
+    
+    "privacy_policy_process_personal_data_sub_subtitle7_7": "Chat online:",
+
+    "privacy_policy_process_personal_data_part50": "La base legal para procesar sus datos es su consentimiento al usar el chat.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_8": "Participants in our contests:",
+
+    "privacy_policy_process_personal_data_part51": "The legal basis for the processing of your data is your consent by registering for the contest and accepting the privacy policy and contest rules. ",
+
+    "privacy_policy_process_personal_data_part52": "The personal data collected will not be disclosed to third parties.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_9": "Web users:",
+
+    "privacy_policy_process_personal_data_part53": "The legal basis for the processing of data is our (i) legitimate interest in knowing our users' browsing modes in order to adapt to their interests and improve our relationship with them; as well as (ii) their consent when browsing our website and accepting the terms of use of cookies.",
+    
+    
+    "privacy_policy_process_personal_data_sub_subtitle7_10": "To which recipients will your data be communicated?",
+
+    "privacy_policy_process_personal_data_part54": "Your data will not be disclosed to third parties outside the service we provide, unless legally required. Specifically, they will be communicated to the State Agency of Tax Administration and to banks and financial institutions for the collection of the service provided or product purchased.",
+
+    "privacy_policy_process_personal_data_part55": "Your data may also be communicated to our service providers when necessary for the execution of the contract. In these cases, the data processor has committed itself by contract to use the data only for the purpose that justifies the processing and to maintain appropriate security measures.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_11": "International data transfers.",
+
+    "privacy_policy_process_personal_data_part56": "Due to Internxt has servers and nodes in different countries around the world, international data transfers are made. many of these transfers are made to countries declared by the European Commission to be of an adequate level, such as: Canada, Argentina or Japan.",
+
+    "privacy_policy_process_personal_data_part57": "However, there are many other countries where the data is sent, which are not declared of adequate level; the transfers that are made to these countries, have their legitimate basis in that such transfers are necessary for the execution of a contract between the data subject and the data controller, since otherwise, the service cannot be provided.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_12": "What security measures do we apply?",
+
+    "privacy_policy_process_personal_data_part58": "Rest assured, we have adopted appropriate technical and organizational measures to ensure confidentiality, integrity and availability in the processing of your personal data that we perform, in particular those that prevent the loss, misuse, alteration, unauthorized access and theft of personal data.",
+
+
+    
+    "privacy_policy_process_personal_data_sub_subtitle7_13": "What are your rights when you provide us with your data?",
+
+    "privacy_policy_process_personal_data_part59": "You can exercise your rights of access, rectification, deletion, portability, limitation or opposition to the processing of your data, including the right to withdraw your consent, as detailed below: ",
+
+    "privacy_policy_process_personal_data_part60": "Right of access: you can ask us if we are processing your data and in what way.",
+
+    "privacy_policy_process_personal_data_part61": "Right of rectification: You can ask us to update your personal data if they are incorrect, and delete them if you wish.",
+
+    "privacy_policy_process_personal_data_part62": "Right to limitation of processing: In this case they will only be kept by us for the exercise or defense of claims.",
+
+    "privacy_policy_process_personal_data_part63": "Right of opposition: After your request to oppose the processing, we will stop processing the data in the manner you indicate, unless for compelling legitimate reasons or the exercise or defense of possible claims must continue to be treated.",
+
+    "privacy_policy_process_personal_data_part64": "Right to data portability: In case you want your data to be processed by another company, we will facilitate the portability of your data to the new data controller.",
+
+    "privacy_policy_process_personal_data_part65": "Right to erasure: You can request that we delete your data when it is no longer necessary for processing, you withdraw your consent, it is unlawful processing or there is a legal obligation to do so. We will analyze the case and apply the law.",
+
+    
+    "privacy_policy_process_personal_data_part66": "If you need more information about your rights under the Law and how to exercise them, we recommend that you contact the Spanish Data Protection Agency, which is the supervisory authority for data protection.",
+
+    "privacy_policy_process_personal_data_part67": "You can contact the Data Protection Delegate prior to filing a complaint against the data controller before the AEPD.",
+
+
+    "privacy_policy_process_personal_data_part68": "In the event that we have not attended to the exercise of your rights you can file a complaint with the Spanish Data Protection Agency.",
+
+    "privacy_policy_process_personal_data_part69": "We have forms for the exercise of rights that can be requested to the email address mentioned above; you can also use those prepared by the Spanish Data Protection Agency or third parties. These forms must be signed electronically or be accompanied by a photocopy of the ID card. If you are acting through a representative in the same way, a copy of your ID card or an electronic signature must accompany the form.",
+
+    "privacy_policy_process_personal_data_part70": "The forms must be submitted in person or sent by mail or email to the addresses listed in the \"Responsible\" section.",
+
+    "privacy_policy_process_personal_data_part71": "The maximum time limit for a decision is one month from the receipt of your request.",
+
+    "privacy_policy_process_personal_data_sub_subtitle7_14": "How long will we keep your data?",
+
+    "privacy_policy_process_personal_data_part72": "Personal data will be kept for as long as you maintain your relationship with us. ",
+
+    "privacy_policy_process_personal_data_part73": "At the end of the same, the personal data processed for each of the purposes indicated will be kept for the legally stipulated periods of time. If there is no such legal period until the interested party requests its deletion or revokes the consent given, or during the period that a judge or court may require them according to the statute of limitations for legal actions.",
+    
+    "privacy_policy_process_personal_data_part74": "For each treatment or type of data, we provide you with a specific period, which you can consult in the following table:",
+
+
+
+
+    "privacy_policy_table2_row1_column1": "File",
+    
+    "privacy_policy_table2_row1_column2": "Document",
+    
+    "privacy_policy_table2_row1_column3": "Conservation",
+
+
+    "privacy_policy_table2_row2_column1": "Customers",
+    
+    "privacy_policy_table2_row2_column2_1": "Invoices",
+    
+    "privacy_policy_table2_row2_column2_2": "Contracts",
+
+    "privacy_policy_table2_row2_column3_1": "10 years",
+    
+    "privacy_policy_table2_row2_column3_2": "5 years",
+
+
+    "privacy_policy_table2_row3_column1": "Human Resources",
+    
+    "privacy_policy_table2_row3_column2_1": "Payrolls, TC1, TC2, etc",
+    
+    "privacy_policy_table2_row3_column2_2": "Curriculums",
+
+    "privacy_policy_table2_row3_column2_3": "Contratos. Temporary workers data",
+    
+    "privacy_policy_table2_row3_column2_4": "Worker's file.",
+
+    "privacy_policy_table2_row3_column3_1": "10 years",
+    
+    "privacy_policy_table2_row3_column3_2": "Until the end of the selection process, and 1 year more with your consent.",
+
+    "privacy_policy_table2_row3_column3_3": "4 years",
+    
+    "privacy_policy_table2_row3_column3_4": "Up to 5 years after the sick leave.",
+
+
+    "privacy_policy_table2_row4_column1": "Marketing",
+
+    "privacy_policy_table2_row4_column2": "Databases or web visitors",
+
+    "privacy_policy_table2_row4_column3": "While the treatment lasts",
+
+
+    "privacy_policy_table2_row5_column1": "Suppliers",
+
+    "privacy_policy_table2_row5_column2_1": "Invoices",
+
+    "privacy_policy_table2_row5_column2_2": "Contracts",
+
+    "privacy_policy_table2_row5_column3_1": "10 years",
+
+    "privacy_policy_table2_row5_column3_2": "5 years",
+
+
+
+    "privacy_policy_table2_row6_column1": "Access control and video surveillance",
+
+    "privacy_policy_table2_row6_column2_1": "List of visitors",
+
+    "privacy_policy_table2_row6_column2_2": "Videos",
+
+    "privacy_policy_table2_row6_column3_1": "30 days",
+
+    "privacy_policy_table2_row6_column3_2": "30 days blocking. 3 years destruction",
+
+
+    "privacy_policy_table2_row7_column1": "Accounting",
+
+    "privacy_policy_table2_row7_column2": "Accounting books and documents.",
+
+    "privacy_policy_table2_row7_column3": "6 years",
+
+
+    "privacy_policy_table2_row8_column1": "Taxation",
+
+    "privacy_policy_table2_row8_column2": "Management of the company's administration, rights and obligations related to the payment of taxes.",
+
+    "privacy_policy_table2_row8_column3": "10 years",
+
+
+    "privacy_policy_table2_row9_column1": "Health and Safety",
+
+    "privacy_policy_table2_row9_column2": "Worker Medical Records",
+
+    "privacy_policy_table2_row9_column3": "5 years",
+
+
+
+    "privacy_policy_table2_row10_column1": "Insurance",
+
+    "privacy_policy_table2_row10_column2": "Insurance policies",
+
+    "privacy_policy_table2_row10_column3": "6 years (general rule). 2 years (damages)",
+
+
+    "privacy_policy_table2_row11_column1": "Shopping",
+
+    "privacy_policy_table2_row11_column2": "Registration of all deliveries of goods or services, intra-community acquisitions, imports and exports for VAT purposes.",
+
+    "privacy_policy_table2_row11_column3": "5 years",
+
+
+    "privacy_policy_table2_row12_column1": "Organic Law on Data Protection",
+
+    "privacy_policy_table2_row12_column2_1": "Processing of personal data.",
+
+    "privacy_policy_table2_row12_column2_2": "Personal data of employees stored in the networks, computers and communications equipment used by employees, access controls and internal management/administration systems.",
+
+    "privacy_policy_table2_row12_column3_1": "3 years",
+
+    "privacy_policy_table2_row12_column3_2": "5 years",
+
 
     "title28": "Information you provide to us.",
     "subtitle28": "We collect information you provide directly to us. For example, we collect information you provide when you create an account, subscribe to our updates, respond to a survey, fill out a form, request customer support or communicate with us. The types of information we may collect include your email address, username and password, survey responses and any other information you choose to provide. If you use our Storage Services, our third-party service provider may collect your payment method information for use in connection with your payments for storage.",
