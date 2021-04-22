@@ -87,13 +87,7 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
                     {formattedText(description[0].subtitle, description[0].colored)}
                 </p>
 
-                <span 
-                    data-aos="fade-up"
-                    data-aos-delay="250"
-                    data-aos-duration="500"
-                    className='sm:text-xl sm:w-6/12 sm:mt-16'>
-                    {description[0].subtitle2}
-                </span>
+
 
                 <span className={`${styles.button_container}`}>
                     <a 

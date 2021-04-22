@@ -12,6 +12,7 @@ const Container5 = ({ id, descriptions }) => {
 
     const [storage, setStorage] = useState(0)
     const [inxt, setInxt] = useState(0)
+    const [total, setTotal] = useState(0)
 
     const amountEarned = () => {
         let amountInCents = storage * CENTS_PER_GB
@@ -26,8 +27,6 @@ const Container5 = ({ id, descriptions }) => {
         const bonusMultiplier = (inxt * BONUS_PERCENTAGE) / 100
         return originalAmount * bonusMultiplier
     }
-    
-    const total = ((amountEarned() >= 20) && (inxt < 30)) ? 20 : amountEarned();  
 
     return (
         <div className={styles.background}>
@@ -78,7 +77,7 @@ const Container5 = ({ id, descriptions }) => {
                         <input type="number"
                             min="1"
                             className={`${styles.input}`}
-                            onChange={e => setStorage(e.target.value)}
+                            onChange={e => {setStorage(e.target.value); setTotal(((amountEarned() >= 20) && (inxt < 30)) ? 20 : amountEarned());}}
                         />
 
                         <div className={`${styles.type_container}`}>
@@ -113,7 +112,7 @@ const Container5 = ({ id, descriptions }) => {
                         <input type="number"
                             min="1"
                             className={`${styles.input}`}
-                            onChange={e => setInxt(e.target.value)}
+                            onChange={e => {setInxt(e.target.value); setTotal(((amountEarned() >= 20) && (inxt < 30)) ? 20 : amountEarned());  }}
                         />
 
                         <div className={`${styles.type_container}`}>
@@ -148,9 +147,8 @@ const Container5 = ({ id, descriptions }) => {
                         <input
                             type="text"
                             min="0"
-                            
                             className={`${styles.input}`}
-                            defaultValue={total}
+                            value={total}
                         />
 
                         <div className={`${styles.type_container}`}>
