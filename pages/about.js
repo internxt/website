@@ -13,6 +13,7 @@ import AOS from 'aos'
 import { useEffect } from 'react'
 import cookies from '../lib/cookies'
 
+
 const AboutUs = (props) => {
 
     const metatags = props.metatagsDescriptions.filter(desc => desc.id === "about")
@@ -23,7 +24,7 @@ const AboutUs = (props) => {
             <Container1 id='1' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container2 id='2' descriptions={props.descriptions} />
             <Container3 id='3' descriptions={props.descriptions} />
-           {/*  <Container4 id='4' descriptions={props.descriptions} /> */}
+            {/*  <Container4 id='4' descriptions={props.descriptions} /> */}
             <Container5 id='5' descriptions={props.descriptions} />
             <Container6 id='6' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
             <Container7 id='7' descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} articles={props} />
