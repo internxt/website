@@ -3,9 +3,9 @@ import { AppProps, AppContext } from 'next/app';
 import '../styles/globals.css'
 import '../styles/tailwind.css';
 import cookie from 'cookies'
-// import Analytics from 'analytics-node'
+import Analytics from 'analytics-node'
 
-// const analyticsNode = new Analytics('boGFLmw8Z7TCI0CJ1hE4xN5JgTI1Tblu')
+const analyticsNode = new Analytics('')
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -16,6 +16,9 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
 
   const cookies = new cookie(appContext.ctx.req, appContext.ctx.res)
   const anonymousId = decodeURI(cookies.get('ajs_anonymous_id'))
+  analyt
+
+  console.log(appContext)
 
   return {}
 }

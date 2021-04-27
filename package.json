@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@sendgrid/mail": "^7.4.0",
     "@stripe/stripe-js": "^1.12.1",
+    "analytics-node": "^4.0.1",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.3",
     "cookies": "^0.8.0",
