@@ -56,7 +56,7 @@ export default function CheckoutForm(props: CheckoutFormProps) {
         type='email'
         placeholder='Your email'
         onChange={e => setEmail(e.target.value)}
-        className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
       />
 
       <button
