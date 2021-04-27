@@ -1,4 +1,5 @@
-const execPath = process.env.npm_execpath
+/* eslint-disable no-console */
+const execPath = process.env.npm_execpath;
 
 if (execPath.indexOf('yarn') === -1) {
   console.error('Do not use NPM to install packages. Use yarn.');
