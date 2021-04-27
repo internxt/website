@@ -1,5 +1,5 @@
 import styles from './Container5.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const Container5 = ({ id, descriptions }) => {
@@ -14,7 +14,29 @@ const Container5 = ({ id, descriptions }) => {
     const [inxt, setInxt] = useState(0)
     const [total, setTotal] = useState(0)
 
+    useEffect(() => {
+        const newEarnings = amountEarned();
+
+        if( newEarnings >= 20  )
+        {
+            if( inxt < 30 )
+            {
+                setTotal(20);
+            }
+            else
+            {
+                setTotal(newEarnings);
+            }
+        }
+        else
+        {
+            setTotal(newEarnings);
+        }
+
+    }, [inxt, storage]);
+
     const amountEarned = () => {
+
         let amountInCents = storage * CENTS_PER_GB
 
         inxt >= MIN_INXT_BONUS ? amountInCents += addBonus(amountInCents) : null
@@ -77,7 +99,7 @@ const Container5 = ({ id, descriptions }) => {
                         <input type="number"
                             min="1"
                             className={`${styles.input}`}
-                            onChange={e => {setStorage(e.target.value); setTotal(((amountEarned() >= 20) && (inxt < 30)) ? 20 : amountEarned());}}
+                            onChange={e => setStorage(e.target.value)}
                         />
 
                         <div className={`${styles.type_container}`}>
@@ -112,7 +134,7 @@ const Container5 = ({ id, descriptions }) => {
                         <input type="number"
                             min="1"
                             className={`${styles.input}`}
-                            onChange={e => {setInxt(e.target.value); setTotal(((amountEarned() >= 20) && (inxt < 30)) ? 20 : amountEarned());  }}
+                            onChange={e => setInxt(e.target.value)}
                         />
 
                         <div className={`${styles.type_container}`}>
