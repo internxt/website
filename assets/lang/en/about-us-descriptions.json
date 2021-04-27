@@ -64,7 +64,13 @@
         "job15": "Marketing Assistant",
 
         "employee16": "Aldemaro González",
-        "job16": "Software Engineer"
+        "job16": "Software Engineer",
+
+        "employee17": "Diego Alayon",
+        "job17": "Product Designer",
+        
+        "employee18": "Victor Argento",
+        "job18": "System Administrator"
     },
     {
         "id": "4",
