@@ -66,6 +66,7 @@ const PartnerCard = ({
         <img
           src={imageurl}
           className="object-contain lg:object-cover lg:h-full"
+          alt=""
         />
       </div>
     </div>

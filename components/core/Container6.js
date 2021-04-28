@@ -34,12 +34,8 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
           data-aos-duration="500"
           className={`${styles.card} col-span-2 sm:h-auto sm:w-84 sm:m-0 sm:mt-12 sm:p-0 sm:shadow-none sm:border-0`}
         >
-          <div
-            className={`${styles.steps}`}
-          >
-            <p
-              className={`${styles.steps_text} sm:text-13`}
-            >
+          <div className={`${styles.steps}`}>
+            <p className={`${styles.steps_text} sm:text-13`}>
               {description[0].step1}
             </p>
           </div>
@@ -161,7 +157,6 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
         data-aos="flip-right"
         data-aos-delay="550"
         data-aos-duration="700"
-
         src="/images/1440/Core/Section 6/emoji.webp"
         width={89}
         height={105}

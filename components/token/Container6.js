@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Container6.module.css';
 
-const Container6 = ({ id, descriptions, data }) => {
+const Container6 = ({ id, descriptions }) => {
   // Filter container specific descriptions
   const description = descriptions.filter((desc) => desc.id === id);
   // Check if a number is odd

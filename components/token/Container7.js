@@ -18,7 +18,7 @@ const Container7 = ({ id, data, descriptions }) => {
 
     while (newNum >= 1000) {
       newNum /= 1000;
-      suffixNum++;
+      suffixNum += 1;
     }
     newNum = newNum.toPrecision(3);
 
@@ -26,7 +26,11 @@ const Container7 = ({ id, data, descriptions }) => {
     return newNum;
   };
 
-  const sevenDaysChange = Math.round((data.inxtToEUR.data.INXT.quote.EUR.percent_change_7d + Number.EPSILON) * 100) / 100;
+  const percentChange7d = data.inxtToEUR.data.INXT.quote.EUR.percent_change_7d;
+  const { price } = data.inxtToEUR.data.INXT.quote.EUR;
+  const percentChange24h = data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h;
+
+  const sevenDaysChange = Math.round((percentChange7d + Number.EPSILON) * 100) / 100;
 
   return (
     <div
@@ -53,7 +57,7 @@ const Container7 = ({ id, data, descriptions }) => {
 
           <p className={`${styles.data} lg:text-4xl lg:mt-4`}>
             €
-            {((Math.round((data.inxtToEUR.data.INXT.quote.EUR.price + Number.EPSILON) * 100) / 100) * 1.2).toFixed(2)}
+            {((Math.round((price + Number.EPSILON) * 100) / 100) * 1.2).toFixed(2)}
           </p>
         </div>
 
@@ -69,7 +73,7 @@ const Container7 = ({ id, data, descriptions }) => {
 
           <p className={data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h > 0 ? `${styles.data} lg:text-4xl lg:mt-4 ${styles.green}` : `${styles.data} lg:text-4xl lg:mt-4 ${styles.red}`}>
             {data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h > 0 ? <span>+</span> : null}
-            {Math.round((data.inxtToEUR.data.INXT.quote.EUR.percent_change_24h + Number.EPSILON) * 100) / 100}
+            {Math.round((percentChange24h + Number.EPSILON) * 100) / 100}
             %
           </p>
         </div>

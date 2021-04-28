@@ -53,28 +53,28 @@ const Container3 = ({ id, descriptions }) => {
         </div>
 
         {
-                    dashboard
-                      ? (
-                        <div
-                          data-aos="fade-up"
-                          data-aos-delay="150"
-                          data-aos-duration="500"
-                          className="sm:mt-4"
-                        >
-                          <img src="/images/1440/Core/Section 3/Core dashboard.webp" width={1008} height={658} />
-                        </div>
-                      )
-                      : (
-                        <div
-                          data-aos="fade-up"
-                          data-aos-delay="150"
-                          data-aos-duration="500"
-                          className="sm:mt-4"
-                        >
-                          <img src="/images/1440/Core/Section 3/Core interface.webp" width={1008} height={658} />
-                        </div>
-                      )
-                }
+          dashboard
+            ? (
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="500"
+                className="sm:mt-4"
+              >
+                <img src="/images/1440/Core/Section 3/Core dashboard.webp" width={1008} height={658} />
+              </div>
+            )
+            : (
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="500"
+                className="sm:mt-4"
+              >
+                <img src="/images/1440/Core/Section 3/Core interface.webp" width={1008} height={658} />
+              </div>
+            )
+        }
       </div>
 
       <div

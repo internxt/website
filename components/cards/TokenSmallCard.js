@@ -14,12 +14,14 @@ const TokenSmallCard = ({ title, subtitle, colored }) => {
             if (!i) {
               return [current];
             }
-            return prev.concat(<span
-              className={styles.colored_text}
-              key={value + current}
-            >
-              { value }
-            </span>, current);
+            return prev.concat(
+              <span
+                className={styles.colored_text}
+                key={value + current}
+              >
+                {value}
+              </span>, current,
+            );
           }, [])}
       </span>
     );

@@ -26,20 +26,35 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
     }
   },
   "plugins": [
     "unused-imports"
   ],
   "rules": {
-    "no-unused-vars": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
     "import/no-dynamic-require": 0,
     "import/extensions": 0,
     "global-require": 0,
     "react/destructuring-assignment": "warn",
-    "unused-imports/no-unused-imports": "error",
     "react/prop-types": 0,
     "react/jsx-filename-extension": 0,
+    "eslintjsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/anchor-is-valid": 0,
     "unused-imports/no-unused-vars": [
       "warn",
       {
@@ -47,6 +62,14 @@
         "varsIgnorePattern": "^_",
         "args": "after-used",
         "argsIgnorePattern": "^_"
+      }
+    ],
+    "comma-dangle": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
       }
     ]
   }

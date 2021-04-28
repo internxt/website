@@ -35,6 +35,7 @@ const Container8 = ({ id, descriptions }) => {
               src="/images/1440/Drive/Section 8/drive.webp"
               width={195}
               height={32}
+              alt=""
             />
           </a>
         </div>

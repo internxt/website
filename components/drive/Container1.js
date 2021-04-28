@@ -12,10 +12,7 @@ const Container1 = ({ id, descriptions }) => {
   const className = isOdd(id) ? 'normal_container' : 'normal_container grey';
 
   return (
-    <div className={
-className
-}
-    >
+    <div className={className}>
       <div className={`${styles.main} sm:pb-20`}>
         <h1
           data-aos="fade-up"
@@ -86,7 +83,6 @@ className
           data-aos="fade-up"
           data-aos-delay="450"
           data-aos-duration="500"
-
           method="get"
           target="_blank"
           action="https://drive.internxt.com/new"

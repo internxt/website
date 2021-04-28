@@ -100,6 +100,7 @@ const Container1 = ({ id, descriptions }) => {
                 src="https://app.uniswap.org/#/swap?outputCurrency=0xa8006C4ca56F24d6836727D106349320dB7fEF82&theme=light"
                 height="660px"
                 width="498px"
+                title="uniswap"
                 style={{
                   display: 'block',
                   borderRadius: '3px',

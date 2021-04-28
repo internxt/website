@@ -21,10 +21,7 @@ const Container5 = ({ id, descriptions }) => {
   const className = isOdd(id) ? 'normal_container grey' : 'normal_container';
 
   return (
-    <div className={
-className
-}
-    >
+    <div className={className}>
       <h1
         data-aos="fade-up"
         data-aos-duration="300"

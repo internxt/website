@@ -11,38 +11,10 @@ const Landing = ({ id, descriptions }) => {
   // Set the background color of the container depending on its id
   const className = isOdd(id) ? 'normal_container' : 'normal_container grey';
 
-  const formattedText = (text, values) => {
-    const regex = new RegExp(/\[\[(.*?)\]\]/);
-
-    if (!values.length) return text;
-
-    return (
-      <div>
-        {text.split(regex)
-          .reduce((prev, current, i) => {
-            if (!i) return [current];
-
-            return prev.concat(
-              values.includes(current)
-                ? (
-                  <span
-                    key={i + current}
-                    className={`${styles.lineThrough}`}
-                  >
-                    {current}
-                  </span>
-                )
-                : current,
-            );
-          }, [])}
-      </div>
-    );
-  };
-
   return (
     <div className={
-className
-}
+      className
+    }
     >
       <div className={`${styles.main}`}>
         <h1

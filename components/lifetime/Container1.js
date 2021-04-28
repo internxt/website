@@ -41,10 +41,7 @@ const Container1 = ({ id, descriptions }) => {
   };
 
   return (
-    <div className={
-className
-}
-    >
+    <div className={className}>
       <div className={`${styles.main}`}>
         <h1
           data-aos="fade-up"

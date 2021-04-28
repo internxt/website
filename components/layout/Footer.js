@@ -177,23 +177,23 @@ const Footer = (props) => {
             </Link>
 
             {
-                            locale === 'en'
-                              ? (
-                                <a
-                                  href="/es"
-                                  className={`${styles.p_social} lg:text-xs`}
-                                >
-                                  {props.descriptions.info6}
-                                </a>
-                              )
-                              : (
-                                <Link href="/">
-                                  <a className={`${styles.p_social} lg:text-xs`}>
-                                    {props.descriptions.info6}
-                                  </a>
-                                </Link>
-                              )
-                        }
+              locale === 'en'
+                ? (
+                  <a
+                    href="/es"
+                    className={`${styles.p_social} lg:text-xs`}
+                  >
+                    {props.descriptions.info6}
+                  </a>
+                )
+                : (
+                  <Link href="/">
+                    <a className={`${styles.p_social} lg:text-xs`}>
+                      {props.descriptions.info6}
+                    </a>
+                  </Link>
+                )
+            }
           </div>
 
           <div className={styles.p_container}>
@@ -205,6 +205,7 @@ const Footer = (props) => {
               <img
                 className={styles.logo}
                 src="/images/1440/Footer/twitter.webp"
+                alt=""
               />
               <a
                 href="https://twitter.com/Internxt"
@@ -220,6 +221,7 @@ const Footer = (props) => {
               <img
                 className={styles.logo}
                 src="/images/1440/Footer/medium.webp"
+                alt=""
               />
               <a
                 href="https://blog.internxt.com/"
@@ -235,6 +237,7 @@ const Footer = (props) => {
               <img
                 className={styles.logo}
                 src="/images/1440/Footer/github.svg"
+                alt=""
               />
               <a
                 href="https://github.com/internxt"
@@ -250,6 +253,7 @@ const Footer = (props) => {
               <img
                 className={styles.logo}
                 src="/images/1440/Footer/telegram.svg"
+                alt=""
               />
               <a
                 href="https://t.me/internxt"

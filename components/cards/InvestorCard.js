@@ -14,7 +14,7 @@ const InvestorCard = ({
           src={url}
           width={w}
           height={h}
-          style="lg:w-full"
+          className="lg:w-full"
         />
       </div>
 

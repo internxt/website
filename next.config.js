@@ -28,4 +28,7 @@ module.exports = {
   env: {
     SEGMENT_API_KEY_PROD: process.env.SEGMENT_API_KEY_PROD,
   },
+  future: {
+    webpack5: true
+  }
 };
