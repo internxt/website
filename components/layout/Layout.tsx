@@ -6,9 +6,9 @@ interface LayoutProps {
     children: React.ReactNode
     title: string
     description: string
-    segmentName: string | null
-    disableMailerlite: boolean
-    disableDrift: boolean
+    segmentName?: string | null
+    disableMailerlite?: boolean
+    disableDrift?: boolean
 }
 
 export default function Layout({

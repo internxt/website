@@ -11,11 +11,13 @@ const PublishedArticle = ({ article, image, descriptions }) => {
         <img
           className="w-full object-cover lg:-36 xl:h-48"
           src={image}
+          alt=""
         />
       ) : (
         <img
           className="w-full object-cover lg:h-36 xl:h-48"
           src="/images/1440/About/internxt.png"
+          alt=""
         />
       ) }
 

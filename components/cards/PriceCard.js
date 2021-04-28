@@ -22,13 +22,13 @@ const PriceCard = ({
       return 'N/A';
     }
 
-    const i = parseInt(Math.floor(Math.log(gigas) / Math.log(1000)));
+    const i = parseInt(Math.floor(Math.log(gigas) / Math.log(1000)), 10);
 
     if (i === 0) {
       return `${gigas} ${sizes[i]}`;
     }
 
-    return `${(gigas / Math.pow(1000, i)).toFixed(0)} ${sizes[i]}`;
+    return `${(gigas / (1000 ** i)).toFixed(0)} ${sizes[i]}`;
   };
 
   useEffect(() => {
@@ -79,13 +79,13 @@ const PriceCard = ({
             >
               <h1 className={`${styles.text_free} sm:text-2xl sm:font-avertabold lg:text-lg`}>
                 {' '}
-                {individual ? <span>{description[0].free}</span> : <span>{description[0].contact}</span>}
+                <span>{individual ? description[0].free : description[0].contact}</span>
                 {' '}
               </h1>
 
               <h1 className={`${styles.text_forever} sm:text-xl lg:text-sm`}>
                 {' '}
-                {individual ? <span>{description[0].forever}</span> : <span>{description[0].team}</span>}
+                <span>{individual ? description[0].forever : description[0].team}</span>
                 {' '}
               </h1>
             </a>

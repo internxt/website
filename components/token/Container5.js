@@ -57,6 +57,7 @@ const Container5 = ({ id, descriptions }) => {
               <img
                 className="mr-2"
                 src="/images/1440/Token/Section 5/apple app store.svg"
+                alt=""
               />
               {description[0].button1}
             </a>
@@ -70,6 +71,7 @@ const Container5 = ({ id, descriptions }) => {
               <img
                 className="mr-2 mt-1"
                 src="/images/1440/Token/Section 5/google play store.svg"
+                alt=""
               />
               {description[0].button2}
             </a>

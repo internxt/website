@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Container3.module.css';
 import PersonalCard from '../cards/PersonalCard';
 

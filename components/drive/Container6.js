@@ -47,7 +47,7 @@ const Container6 = ({ id, descriptions }) => {
               <p className={`${styles.margin} ${styles.link} sm:text-lg lg:text-base mr-2`}>
                 {description[0].link}
               </p>
-              <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" />
+              <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" alt="" />
             </a>
           </Link>
         </div>

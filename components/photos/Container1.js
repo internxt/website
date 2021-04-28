@@ -119,7 +119,6 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
           data-aos="fade-up"
           data-aos-delay="650"
           data-aos-duration="500"
-
           data-code="r3s4c1"
           method="post"
           target="_blank"

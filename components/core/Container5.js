@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './Container5.module.css';
 
@@ -12,6 +12,22 @@ const Container5 = ({ id, descriptions }) => {
   const [storage, setStorage] = useState(0);
   const [inxt, setInxt] = useState(0);
   const [total, setTotal] = useState(0);
+
+  const addBonus = (originalAmount) => {
+    const bonusMultiplier = (inxt * BONUS_PERCENTAGE) / 100;
+    return originalAmount * bonusMultiplier;
+  };
+
+  const amountEarned = () => {
+    let amountInCents = storage * CENTS_PER_GB;
+
+    if (inxt >= MIN_INXT_BONUS) {
+      amountInCents += addBonus(amountInCents);
+    }
+    const formattedAmount = amountInCents.toFixed(2);
+
+    return parseFloat(formattedAmount);
+  };
 
   useEffect(() => {
     const newEarnings = amountEarned();
@@ -27,27 +43,12 @@ const Container5 = ({ id, descriptions }) => {
     }
   }, [inxt, storage]);
 
-  const amountEarned = () => {
-    let amountInCents = storage * CENTS_PER_GB;
-
-    inxt >= MIN_INXT_BONUS ? amountInCents += addBonus(amountInCents) : null;
-    const formattedAmount = amountInCents.toFixed(2);
-
-    return parseFloat(formattedAmount);
-  };
-
-  const addBonus = (originalAmount) => {
-    const bonusMultiplier = (inxt * BONUS_PERCENTAGE) / 100;
-    return originalAmount * bonusMultiplier;
-  };
-
   return (
     <div className={styles.background}>
       <h1
         data-aos="fade-up"
         data-aos-delay="150"
         data-aos-duration="500"
-
         className={`${styles.title} sm:text-4xl sm:w-80 sm:mt-12`}
       >
         {description[0].title}
@@ -57,7 +58,6 @@ const Container5 = ({ id, descriptions }) => {
         data-aos="fade-up"
         data-aos-delay="200"
         data-aos-duration="500"
-
         className={`${styles.subtitle} sm:text-xl sm:w-80`}
       >
         {description[0].subtitle}
@@ -67,7 +67,6 @@ const Container5 = ({ id, descriptions }) => {
         data-aos="fade-up"
         data-aos-delay="250"
         data-aos-duration="500"
-
         className={`${styles.subtitle} sm:text-xl sm:w-80`}
       >
         {description[0].subtitle2}
@@ -79,7 +78,6 @@ const Container5 = ({ id, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-duration="500"
-
             className={`${styles.label}`}
           >
             {description[0].label}
@@ -89,7 +87,6 @@ const Container5 = ({ id, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="350"
             data-aos-duration="500"
-
             className={`${styles.placeholders}`}
           >
             <input
@@ -104,7 +101,6 @@ const Container5 = ({ id, descriptions }) => {
                 data-aos="fade-left"
                 data-aos-delay="1050"
                 data-aos-duration="800"
-
                 className={`${styles.type}`}
               >
                 GB
@@ -118,7 +114,6 @@ const Container5 = ({ id, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="450"
             data-aos-duration="500"
-
             className={`${styles.label}`}
           >
             {description[0].label2}
@@ -128,7 +123,6 @@ const Container5 = ({ id, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="500"
             data-aos-duration="500"
-
             className={`${styles.placeholders} `}
           >
             <input
@@ -143,7 +137,6 @@ const Container5 = ({ id, descriptions }) => {
                 data-aos="fade-left"
                 data-aos-delay="1050"
                 data-aos-duration="800"
-
                 className={`${styles.type}`}
               >
                 INXT
@@ -157,7 +150,6 @@ const Container5 = ({ id, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="600"
             data-aos-duration="500"
-
             className={`${styles.label}`}
           >
             {description[0].label3}
@@ -167,7 +159,6 @@ const Container5 = ({ id, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="650"
             data-aos-duration="500"
-
             className={`${styles.placeholders}`}
           >
             <input
@@ -182,7 +173,6 @@ const Container5 = ({ id, descriptions }) => {
                 data-aos="fade-left"
                 data-aos-delay="1050"
                 data-aos-duration="800"
-
                 className={`${styles.type}`}
               >
                 EUR
@@ -196,7 +186,6 @@ const Container5 = ({ id, descriptions }) => {
         data-aos="fade-up"
         data-aos-delay="150"
         data-aos-duration="500"
-
         href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3"
         target="_blank"
         className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center lg:text-lg lg:mb-16`}

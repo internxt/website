@@ -21,9 +21,8 @@ const Container2 = ({ id, descriptions }) => {
   // Check if a number is odd
   const isOdd = (num) => num % 2 === 1;
 
-  const handleScroll = (id) => {
-    console.log(id);
-    const section = document.getElementById(id);
+  const handleScroll = (tagId) => {
+    const section = document.getElementById(tagId);
     section.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -90,13 +89,23 @@ const Container2 = ({ id, descriptions }) => {
             <TokenSmallCard title={title2} subtitle={subtitle2} colored={colored2} />
           </div>
 
-          <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100" onClick={() => handleScroll('merch')}>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="300"
+            data-aos-delay="100"
+            onClick={() => handleScroll('merch')}
+          >
             <TokenSmallCard title={title3} subtitle={subtitle3} colored={colored3} />
           </div>
         </div>
 
         <div className={`${styles.card_container} sm:hidden`}>
-          <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" onClick={() => handleScroll('merch')}>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="300"
+            data-aos-delay="150"
+            onClick={() => handleScroll('merch')}
+          >
             <TokenSmallCard title={title4} subtitle={subtitle4} colored={colored4} />
           </div>
 

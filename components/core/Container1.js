@@ -6,7 +6,7 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
   const description = descriptions.filter((desc) => desc.id === id);
 
   // Check if a number is odd
-  const isOdd = (num) => num % 2 == 1;
+  const isOdd = (num) => num % 2 === 1;
 
   // Set the background color of the container depending on its id
   const className = isOdd(id) ? 'normal_container' : 'normal_container grey';
@@ -96,7 +96,6 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-duration="500"
-
             href={downloadUrl}
             className={`${styles.button_core} sm:text-base`}
           >
@@ -106,7 +105,6 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="350"
             data-aos-duration="500"
-
             href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3"
             target="_blank"
             className={`${styles.link} sm:text-base`}

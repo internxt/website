@@ -62,7 +62,7 @@ const DataBoostUtility = ({ id, descriptions }) => {
             <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2`}>
               {description[0].subtitle4}
             </p>
-            <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" />
+            <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" alt="" />
           </a>
 
         </div>

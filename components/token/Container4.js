@@ -25,12 +25,14 @@ const Container4 = ({ id, descriptions, cardDescriptions }) => {
             if (!i) {
               return [current];
             }
-            return prev.concat(<span
-              className={styles.colored_text}
-              key={value + current}
-            >
-              { value }
-            </span>, current);
+            return prev.concat(
+              <span
+                className={styles.colored_text}
+                key={value + current}
+              >
+                {value}
+              </span>, current,
+            );
           }, [])}
       </span>
     );
@@ -115,7 +117,7 @@ const Container4 = ({ id, descriptions, cardDescriptions }) => {
         <p className={`${styles.margin} ${styles.link} sm:text-lg mr-2 lg:text-base`}>
           {description[0].link}
         </p>
-        <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" />
+        <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" alt="" />
       </a>
     </div>
   );

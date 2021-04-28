@@ -54,7 +54,12 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      data: JSON.parse(JSON.stringify(data)), images, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions,
+      data: JSON.parse(JSON.stringify(data)),
+      images,
+      metatagsDescriptions,
+      descriptions,
+      footerDescriptions,
+      cardDescriptions,
     },
   };
 }

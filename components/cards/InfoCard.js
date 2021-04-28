@@ -40,22 +40,22 @@ const InfoCard = ({
       </a>
 
       {
-                linkText2
-                  ? (
-                    <a
-                      href={link2}
-                      target="_blank"
-                      className={router.pathname === '/lifetime' ? 'hidden' : 'flex hover:opacity-80 flex-row w-auto items-center absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-12 xl:mr-32'}
-                      rel="noreferrer"
-                    >
-                      <p className={`${styles.margin} ${styles.link} lg:text-13`}>
-                        {linkText2}
-                      </p>
-                      <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={13} height={11} />
-                    </a>
-                  )
-                  : null
-            }
+        linkText2
+          ? (
+            <a
+              href={link2}
+              target="_blank"
+              className={router.pathname === '/lifetime' ? 'hidden' : 'flex hover:opacity-80 flex-row w-auto items-center absolute bottom-0 right-0 lg:pr-16 lg:pb-6 lg:text-sm xl:mb-12 xl:mr-32'}
+              rel="noreferrer"
+            >
+              <p className={`${styles.margin} ${styles.link} lg:text-13`}>
+                {linkText2}
+              </p>
+              <Image src="/images/1440/Drive/Section 2/Section2 arrow.svg" width={13} height={11} />
+            </a>
+          )
+          : null
+      }
     </div>
   );
 };

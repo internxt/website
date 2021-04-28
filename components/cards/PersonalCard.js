@@ -25,6 +25,7 @@ const PersonalCard = ({ name, job, picture }) => {
             borderTopRightRadius: '6px',
             borderBottomRightRadius: '6px',
           }}
+          alt=""
         />
       </div>
     </div>

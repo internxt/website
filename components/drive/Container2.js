@@ -14,10 +14,7 @@ const Container2 = ({ id, descriptions, cardDescriptions }) => {
   const className = isOdd(id) ? 'normal_container' : 'normal_container grey';
 
   return (
-    <div className={
-className
-}
-    >
+    <div className={className}>
       <div className={styles.main}>
         <h1
           data-aos="fade-up"
@@ -52,7 +49,7 @@ className
           <p className={`${styles.link} sm:text-lg mr-2`}>
             {description[0].link}
           </p>
-          <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" />
+          <img src="/images/1440/Drive/Section 2/Section2 arrow.svg" alt="" />
         </a>
       </Link>
     </div>
