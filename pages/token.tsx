@@ -26,7 +26,7 @@ const Token = ({ metatagsDescriptions, descriptions, data, footerDescriptions, c
       <Container3 id="3" descriptions={descriptions} />
       <DataBoostUtility id="10" descriptions={descriptions} />
       <Container5 id="5" descriptions={descriptions} />
-      <Container6 id="6" descriptions={descriptions} data={data} />
+      <Container6 id="6" descriptions={descriptions} />
       <Container7 id="7" descriptions={descriptions} data={data} />
       <Container8 id="8" descriptions={descriptions} />
       <Footer descriptions={footerDescriptions} cardDescriptions={cardDescriptions} />
