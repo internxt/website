@@ -44,7 +44,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
   const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
 
-  cookies.setPublicCookie(ctx, 'REFERRAL', 'sharewareonsale');
+  cookies.setPublicCookie(ctx, 'REFERRAL', 'giveawayoftheday');
 
   return {
     props: {
