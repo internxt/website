@@ -21,6 +21,7 @@ export default function Success(props) {
       title="Internxt Checkout Succcess"
       description="Redirect"
     >
+      <script dangerouslySetInnerHTML={{ __html: 'gtag("event", "conversion", { "send_to": "AW-728922855/vjXbCKq30Y0CEOf1ydsC", "transaction_id": ""});' }} />
       <div>
         Automatic redirecting to
         {' '}
