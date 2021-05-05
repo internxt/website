@@ -24,8 +24,7 @@ export default function Success(props) {
       <script>
         gtag('event', 'conversion', {
           'send_to': 'AW-728922855/vjXbCKq30Y0CEOf1ydsC',
-          'value': 299.0,
-          'currency': 'EUR'
+          'transaction_id': ''
         });
       </script>
 
