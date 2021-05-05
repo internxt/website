@@ -21,6 +21,14 @@ export default function Success(props) {
       title="Internxt Checkout Succcess"
       description="Redirect"
     >
+
+      <script>
+        gtag('event', 'conversion', {
+          'send_to': 'AW-728922855/clLnCIy2w40CEOf1ydsC',
+          'transaction_id': ''
+        });
+      </script>
+
       <div>
         Automatic redirecting to
         {' '}
