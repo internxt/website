@@ -43,7 +43,7 @@ export default function Layout({
                     gtag(\'js\', new Date());\
                     gtag(\'config\', \'AW-728922855\');\
                 '}} />
-                <script src={`/js/sg.js`}></script>
+                <script src={`https://internxt.com/js/sg.js`}></script>
                 {!disableDrift && <script src="/js/drift.js"></script>}
                 <script src="/js/twitter.js"></script>
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />

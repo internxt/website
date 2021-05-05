@@ -4,6 +4,11 @@ import Layout from "../../components/layout/Layout";
 
 export default function Success(props) {
   useEffect(() => {
+    console.log('1', window.analytics);
+    setTimeout(() => {
+      console.log('2', window.analytics);
+    }, 5000);
+
     if (props.email && props.token) {
       window.analytics.track('landing-lifetime-converted', {
         price: 299
@@ -25,7 +30,7 @@ export default function Success(props) {
     >
       <script dangerouslySetInnerHTML={{ __html: 'gtag("event", "conversion", { "send_to": "AW-728922855/vjXbCKq30Y0CEOf1ydsC", "transaction_id": ""});' }} />
       <div>
-        Automatic redirecting to
+        Redirecting to
         {' '}
         <a href={props.redirectUrl}>Drive Web</a>
         ...
@@ -51,6 +56,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const body = await request.json();
 
   const redirectUrl = `${process.env.DRIVE_API_URL}/appsumo/${body.email}?token=${body.token}`;
+
+  console.warn('[%s] %s', body.email, redirectUrl);
 
   return {
     props: {
