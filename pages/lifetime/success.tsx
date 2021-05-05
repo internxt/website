@@ -5,7 +5,9 @@ import Layout from "../../components/layout/Layout";
 export default function Success(props) {
   useEffect(() => {
     if (props.email && props.token) {
-      window.analytics.track('landing-lifetime-converted', () => {
+      window.analytics.track('landing-lifetime-converted', {
+        price: 299
+      }, () => {
         setTimeout(() => {
           window.location = props.redirectUrl;
         }, 5000);
