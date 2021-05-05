@@ -44,8 +44,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     };
   }
 
-  const request = await fetch(host + '/api/stripe/session/' + ctx.query.sid);
-  const body = await request.json()
+  const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`);
+  const body = await request.json();
 
   const redirectUrl = `${process.env.DRIVE_API_URL}/appsumo/${body.email}?token=${body.token}`;
 

@@ -44,8 +44,8 @@ export default function Layout({
                     __html: 'window.dataLayer = window.dataLayer || [];\
                     function gtag(){dataLayer.push(arguments);}\
                     gtag(\'js\', new Date());\
-                    gtag(\'config\', \'G-6EXL38KVWG\');\
                     gtag(\'config\', \'AW-728922855\');\
+                    gtag(\'config\', \'G-6EXL38KVWG\');\
                 '}} />
                 <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
             </Head>
