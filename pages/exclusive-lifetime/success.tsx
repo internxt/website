@@ -22,13 +22,7 @@ export default function Success(props) {
       description="Redirect"
     >
 
-      <script>
-        gtag('event', 'conversion', {
-          'send_to': 'AW-728922855/clLnCIy2w40CEOf1ydsC',
-          'transaction_id': ''
-        });
-      </script>
-
+      <script dangerouslySetInnerHTML={{ __html: 'gtag("event", "conversion", { "send_to": "AW-728922855/UUA3CPv-yo8CEOf1ydsC", "transaction_id": ""});'}} />
       <div>
         Automatic redirecting to
         {' '}
