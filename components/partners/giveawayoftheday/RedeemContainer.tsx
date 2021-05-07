@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Container1.module.css';
-import CheckoutForm from '../CheckoutForm';
 
 const Container1 = ({ id, descriptions }) => {
   const description = descriptions.filter((desc) => desc.id === id);
@@ -12,42 +11,14 @@ const Container1 = ({ id, descriptions }) => {
   // Set the background color of the container depending on its id
   const className = isOdd(id) ? 'normal_container' : 'normal_container grey';
 
-  const formattedText = (text, values) => {
-    const regex = new RegExp(/\[\[(.*?)\]\]/);
-
-    if (!values.length) return text;
-
-    return (
-      <div>
-        {text.split(regex)
-          .reduce((prev, current, i) => {
-            if (!i) return [current];
-
-            return prev.concat(
-              values.includes(current)
-                ? (
-                  <span
-                    key={i + current}
-                    className={`${styles.lineThrough}`}
-                  >
-                    {current}
-                  </span>
-                )
-                : current,
-            );
-          }, [])}
-      </div>
-    );
-  };
-
   return (
     <div className={className}>
-      <div className={`${styles.main}`}>
+      <div className={`${styles.main} sm:pb-20`}>
         <h1
           data-aos="fade-up"
           data-aos-delay="150"
           data-aos-duration="500"
-          className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:w-150 desktop-hd:text-big desktop-full-hd:text-8xl retina:text-8xl`}
+          className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:text-8xl`}
         >
           {description[0].title}
         </h1>
@@ -105,19 +76,39 @@ const Container1 = ({ id, descriptions }) => {
           data-aos-duration="500"
           className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}
         >
-          {description[0].subtitle2}
+          Get 20 GB for free, forever thanks to GiveAwayOfTheDay
         </h1>
 
-        <p className={`${styles.label}`}>
-          {formattedText(description[0].title2, description[0].lineThrough)}
-        </p>
+        <div className={`${styles.formContainer}`}>
+          <form
+            data-aos="fade-up"
+            data-aos-delay="450"
+            data-aos-duration="500"
+            method="get"
+            target="_blank"
+            action="https://drive.internxt.com/new"
+            className="flex items-center mr-4"
+          >
+            <input
+              name="email"
+              type="email"
+              placeholder={description[0].input}
+              className={`${styles.email} sm:hidden lg:w-48 lg:text-sm lg:h-10 `}
+            />
 
-        <div>
-          <CheckoutForm
-            product="lifetime2TB"
-            value={description[0].button}
-            className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
-          />
+            <input
+              name="referrer"
+              type="hidden"
+              value="giveawayoftheday"
+            />
+
+            <input
+              name="signup"
+              type="submit"
+              value={description[0].button}
+              className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-32 lg:h-10 lg:text-sm`}
+            />
+          </form>
         </div>
 
         <div
