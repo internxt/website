@@ -1,4 +1,4 @@
-import cache from 'memory-cache'
+import cache from 'memory-cache';
 
 type ConversionType = 'EUR' | 'BTC' | 'ETH' | 'LTC';
 
@@ -9,8 +9,6 @@ async function getInxtConversion(convertTo: ConversionType) {
   return data;
 }
 
-
-
 export default async function getInxtValues() {
   const cachedData = cache.get('cmc');
 
@@ -19,8 +17,8 @@ export default async function getInxtValues() {
     const inxtToBTC = await getInxtConversion('BTC');
     const inxtToETH = await getInxtConversion('ETH');
     const inxtToLTC = await getInxtConversion('LTC');
-    const data = { inxtToEUR, inxtToBTC, inxtToETH, inxtToLTC, cache: false }
-    cache.put('cmc', data, 5 * 60 * 1000 * 4)
+    const data = { inxtToEUR, inxtToBTC, inxtToETH, inxtToLTC, cache: false };
+    cache.put('cmc', data, 5 * 60 * 1000 * 4);
   } else {
     cachedData.cache = true;
   }

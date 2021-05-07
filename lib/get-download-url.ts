@@ -6,7 +6,7 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
   const ua = ctx.req.headers['user-agent'];
   const uaParsed = userAgent.parse(ua);
 
-  const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ links: { linux: null, windows: null, macos: null } }));
+  const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
 
   switch (uaParsed.os.family) {
     case 'iOS':
