@@ -3,6 +3,33 @@ import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 import styles from './CheckoutForm.module.css'
 
+export async function redirectToCheckoutForSubscriptionAction(product, email?) {
+    // Create a Checkout Session.
+    const response = await fetch('/api/stripe/session/subscription', {
+      method: 'post',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        product: product,
+        amount: 1,
+        email
+      })
+    });
+  
+    if (response.status === 500) {
+      console.error(response.statusText);
+      return;
+    }
+  
+    const body = await response.json()
+  
+    const stripe = await getStripe();
+    const { error } = await stripe.redirectToCheckout({ sessionId: body.id });
+  
+    console.warn(error.message);
+}
+
 export async function redirectToCheckoutAction(product, email) {
   // Create a Checkout Session.
   const response = await fetch('/api/stripe/session', {
@@ -33,6 +60,7 @@ export async function redirectToCheckoutAction(product, email) {
 interface CheckoutFormProps {
   product: string
   value: string
+  type?: string 
 }
 
 export default function CheckoutForm(props: CheckoutFormProps) {
@@ -47,7 +75,15 @@ export default function CheckoutForm(props: CheckoutFormProps) {
       window.analytics.track('landing-lifetime-enter-checkout')
     }
 
-    redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))
+    if(props.type)
+    {
+      redirectToCheckoutForSubscriptionAction(props.product, email).finally(() => setLoading(false))    
+    }
+    else
+    {
+      redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))  
+    }
+    
   };
 
   return (
