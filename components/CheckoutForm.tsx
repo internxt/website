@@ -71,16 +71,18 @@ export default function CheckoutForm(props: CheckoutFormProps) {
     e.preventDefault();
     setLoading(true);
 
-    if (window && window.analytics) {
-      window.analytics.track('landing-lifetime-enter-checkout')
-    }
-
     if(props.type)
     {
+      if (window && window.analytics) {
+        // window.analytics.track('landing-lifetime-enter-checkout')
+      }  
       redirectToCheckoutForSubscriptionAction(props.product, email).finally(() => setLoading(false))    
     }
     else
     {
+      if (window && window.analytics) {
+        window.analytics.track('landing-lifetime-enter-checkout')
+      }  
       redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))  
     }
     
