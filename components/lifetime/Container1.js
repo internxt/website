@@ -116,7 +116,7 @@ const Container1 = ({ id, descriptions }) => {
           <CheckoutForm
             product="lifetime2TB"
             value={description[0].button}
-            className={`${styles.button} sm:rounded-3xl sm:w-auto sm:px-4 sm:h-10 sm:text-base lg:w-60 lg:h-10 lg:text-sm`}
+            className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
           />
         </div>
 
