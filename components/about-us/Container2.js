@@ -63,7 +63,7 @@ const Container2 = ({ id, descriptions }) => {
           className="w-20"
         >
           <Image
-            src="/images/1440/About/Section 2/orbita.png"
+            src="/images/1440/About/Section 2/stripe.webp"
             width={160}
             height={57}
           />
@@ -140,7 +140,7 @@ const Container2 = ({ id, descriptions }) => {
           className="flex items-center lg:w-20"
         >
           <Image
-            src="/images/1440/About/Section 2/orbita.png"
+            src="/images/1440/About/Section 2/stripe.webp"
             width={160}
             height={57}
           />
