@@ -65,7 +65,7 @@ const Container2 = ({ id, descriptions }) => {
           <Image
             src="/images/1440/About/Section 2/stripe.webp"
             width={160}
-            height={57}
+            height={70}
           />
         </div>
       </div>
@@ -142,7 +142,7 @@ const Container2 = ({ id, descriptions }) => {
           <Image
             src="/images/1440/About/Section 2/stripe.webp"
             width={160}
-            height={57}
+            height={70}
           />
         </div>
 
