@@ -5,7 +5,7 @@
     padding-top: 16px;
     position: relative;
     width: 100%;
-    padding: 3rem 0 6rem;
+    padding: 3rem 0 4rem;
 }
 
 .secondary {
@@ -20,7 +20,7 @@
 
 .title {
     max-width: 892px;
-    font-size: 88px;
+    font-size: 91px;
     line-height: 0.97;
     letter-spacing: -0.59px;
     text-align: center;

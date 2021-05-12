@@ -13,7 +13,7 @@ const Container1 = ({ id, descriptions }) => {
 
   return (
     <div className={className}>
-      <div className={`${styles.main} sm:pb-20`}>
+      <div className={`${styles.main} sm:pb-10`}>
         <h1
           data-aos="fade-up"
           data-aos-delay="150"
