@@ -63,7 +63,7 @@ const Container1 = ({ id, descriptions }) => {
           data-aos="fade"
           data-aos-delay="250"
           data-aos-duration="700"
-          className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}
+          className={`${styles.lock} ${styles.animation_lock} hidden sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}
         >
           <Image src="/images/1440/Drive/Section 1/lock icon.webp" width={45} height={60} />
         </div>
