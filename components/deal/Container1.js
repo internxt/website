@@ -20,7 +20,7 @@ const Container1 = ({ id, descriptions }) => {
           data-aos-duration="500"
           className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:text-8xl`}
         >
-          {description[0].title}
+          {description[0].title} 
         </h1>
 
         <p
@@ -29,7 +29,7 @@ const Container1 = ({ id, descriptions }) => {
           data-aos-duration="500"
           className={`${styles.subtitle} ${styles.levitate2} sm:text-xl sm:w-80 sm:pt-8 lg:text-xl lg:w-7/12`}
         >
-          {description[0].subtitle}
+          {description[0].subtitle} <strong>200DEAL</strong>
         </p>
 
         <div
