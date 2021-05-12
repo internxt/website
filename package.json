@@ -5,7 +5,7 @@
   "scripts": {
     "preinstall": "node ./scripts/use-yarn.js",
     "prebuild": "node ./scripts/check-envs.js",
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "prod": "next export",
