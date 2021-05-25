@@ -44,11 +44,6 @@ className={router.pathname === '/send' ? `${styles.active_link} sm:mb-16 sm:text
 className={router.pathname === '/pricing' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Pricing</a>
                           </Link>
 
-                          <Link href="/token">
-                            <a
-className={router.pathname === '/token' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>Token</a>
-                          </Link>
-
                           <Link href="/about">
                             <a
 className={router.pathname === '/about' ? `${styles.active_link} sm:mb-16 sm:text-xl lg:text-sm` : `${styles.nonactive_link} sm:mb-16 sm:text-xl lg:text-sm`}>About</a>

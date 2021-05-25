@@ -1,9 +1,12 @@
 import { GetServerSidePropsContext } from 'next';
 import userAgent from 'useragent';
+import { getLatestReleaseInfo } from './github';
 
 export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
   const ua = ctx.req.headers['user-agent'];
   const uaParsed = userAgent.parse(ua);
+
+  const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
 
   switch (uaParsed.os.family) {
     case 'iOS':
@@ -11,11 +14,11 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
     case 'Android':
       return 'https://play.google.com/store/apps/details?id=com.internxt.cloud&hl=es';
     case 'Ubuntu':
-      return 'https://internxt.com/downloads/drive.deb';
+      return info.links.linux || 'https://internxt.com/downloads/drive.deb';
     case 'Windows':
-      return 'https://internxt.com/downloads/drive.exe';
+      return info.links.windows || 'https://internxt.com/downloads/drive.exe';
     case 'Mac OS X':
-      return 'https://internxt.com/downloads/drive.dmg';
+      return info.links.macos || 'https://internxt.com/downloads/drive.dmg';
     default:
       // No borrar
       // eslint-disable-next-line no-console
