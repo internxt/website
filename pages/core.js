@@ -23,7 +23,6 @@ const Core = ({
       <TopBar />
       <Container1 id="1" {...{ downloadUrl, descriptions }} />
       <Container2 id="2" descriptions={descriptions} />
-      <Container3 id="3" descriptions={descriptions} />
       <Container4 id="4" descriptions={descriptions} />
       <Container5 id="5" descriptions={descriptions} />
       <Container6 id="6" {...{ downloadUrl, descriptions }} />

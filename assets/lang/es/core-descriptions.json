@@ -6,8 +6,8 @@
         "subtitle2": "Proporciona espacio a la red",
         "coloredTitle": ["almacenamiento"],
         "colored": ["almacenamiento", "aplicación", "proveedores", "monetizar", "alojando"],
-        "button1": "Descargar",
-        "button2": "Instalación y consejos"
+        "button1": "Instálalo",
+        "button2": "O usa docker"
     },
     {
         "id": "2",
@@ -54,7 +54,11 @@
         "title3": "Abre tu puerto",
         "subtitle4": "Toda la comunicación pasará a través de un puerto en tu router que necesitarás abrir. Te sugerimos qué puerto necesitarás abrir en la aplicación central.",
         "subtitle5": "Si elijes tu propio puerto, cuando introduzcas tu dirección pública IP en el paso 2, escribe en el formato IP:Port (eg 64.23.35.49:4243). Para abrir tu puerto, accede a  http://192.168.1.1/ con tu navegador.",
-        "subtitle6": "En la configuración de tu router introduce el rango de puertos que quieres abrir. Al ingresar el número de puerto, deberás ingresar su IP. Introduzca 'ipconfig /all' en su terminal de Windows. Para Linux y Mac, introduzca 'ifconfig' en su lugar. Te proporcionamos un vídeo-tutorial de 4 minutos sobre cómo abrir un puerto en su router, puede hacer clic aquí. También puede hacer clic aquí para comprobar si su puerto se abrió correctamente.",
+        "subtitle6": "En la configuración de tu router introduce el rango de puertos que quieres abrir. Al ingresar el número de puerto, deberás ingresar su IP. Introduzca 'ipconfig /all' en su terminal de Windows. Para Linux y Mac, introduzca 'ifconfig' en su lugar. Te proporcionamos un vídeo-tutorial de 4 minutos sobre cómo abrir un puerto en su router, puede hacer clic",
+        "link_tutorial": " aquí.",
+        "subtitle7": " También puede hacer clic",
+        "link_port": " aquí ",
+        "subtitle8": "para comprobar si su puerto se abrió correctamente.",
         "step1": "PASO 1",
         "step2": "PASO 2",
         "step3": "PASO 3",
@@ -72,7 +76,7 @@
                 },
                 {
                     "title": "¿Qué sistemas operativos son compatibles?",
-                    "content": "Puedes ejecutar Internxt Core en Linux, Windows y MacOS."
+                    "content": "Puedes ejecutar Internxt Core en Linux, Windows y MacOS. Puedes ejecutar la versión comandos, or también puedes ejecutarlo usando docker. Si tienes un sistema NAS que soporte docker, también puede ejecutar Internxt Core"
                 },
                 {
                     "title": "¿Cuál es la cantidad mínima de espacio que se necesita para cobrar?",
