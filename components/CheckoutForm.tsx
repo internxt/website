@@ -77,23 +77,17 @@ export default function CheckoutForm(props: CheckoutFormProps) {
     if(props.type)
     {
       if (window && window.analytics) {
-        // window.analytics.track('landing-lifetime-enter-checkout')
+        window.analytics.track('landing-subscription-200GB-enter-checkout')
       }  
       redirectToCheckoutForSubscriptionAction(props.product, email).finally(() => setLoading(false))    
     }
-<<<<<<< HEAD
     else
     {
       if (window && window.analytics) {
         window.analytics.track('landing-lifetime-enter-checkout')
       }  
-      redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))  
+      redirectToCheckoutAction(props.product, email, props.urlQuery).finally(() => setLoading(false))
     }
-    
-=======
-
-    redirectToCheckoutAction(props.product, email, props.urlQuery).finally(() => setLoading(false))
->>>>>>> main
   };
 
   return (

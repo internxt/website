@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container1 from '../../components/offer/Container1';
 import Container3 from '../../components/drive/Container3';
 import Container4 from '../../components/drive/Container4';
@@ -13,6 +13,10 @@ import { redirectToCheckoutForSubscriptionAction } from '../../components/Checko
 
 const Lifetime = ({ props }) => {
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'drive');
+
+  useEffect(() => {
+    window.analytics.track('landing-subscription-200GB');
+  }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="subscription200GB">
