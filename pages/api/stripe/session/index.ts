@@ -27,11 +27,23 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
 
   const PRODUCT = LIFETIMEPRODUCTS[req.body.product];
 
+  const urlQuery = req.body.urlQuery ? '&gclid=' + req.body.urlQuery : undefined;
+  
+  let successUrl = `${req.headers['origin']}/${PRODUCT.return}/success?sid={CHECKOUT_SESSION_ID}`;
+  let cancelUrl = `${req.headers['origin']}/${PRODUCT.return}/cancel?sid={CHECKOUT_SESSION_ID}`;
+
+  if(urlQuery) {
+    successUrl+=urlQuery;
+    cancelUrl+=urlQuery;
+  }
+
+  console.log(urlQuery)
+
   const params: Stripe.Checkout.SessionCreateParams = {
     mode: 'payment',
     payment_method_types: ['card'],
-    success_url: `${req.headers['origin']}/${PRODUCT.return}/success?sid={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${req.headers['origin']}/${PRODUCT.return}/cancel?sid={CHECKOUT_SESSION_ID}`,
+    success_url: successUrl,
+    cancel_url: cancelUrl,
     line_items: [
       {
         price: process.env.NODE_ENV === 'production' ? PRODUCT.production : PRODUCT.debug,
