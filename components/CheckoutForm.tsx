@@ -30,7 +30,8 @@ export async function redirectToCheckoutForSubscriptionAction(product, email?) {
     console.warn(error.message);
 }
 
-export async function redirectToCheckoutAction(product, email) {
+
+export async function redirectToCheckoutAction(product, email, urlQuery) {
   // Create a Checkout Session.
   const response = await fetch('/api/stripe/session', {
     method: 'post',
@@ -40,7 +41,8 @@ export async function redirectToCheckoutAction(product, email) {
     body: JSON.stringify({
       product: product,
       amount: 1,
-      email
+      email,
+      urlQuery
     })
   });
 
@@ -61,6 +63,7 @@ interface CheckoutFormProps {
   product: string
   value: string
   type?: string 
+  urlQuery?: string
 }
 
 export default function CheckoutForm(props: CheckoutFormProps) {
@@ -78,6 +81,7 @@ export default function CheckoutForm(props: CheckoutFormProps) {
       }  
       redirectToCheckoutForSubscriptionAction(props.product, email).finally(() => setLoading(false))    
     }
+<<<<<<< HEAD
     else
     {
       if (window && window.analytics) {
@@ -86,6 +90,10 @@ export default function CheckoutForm(props: CheckoutFormProps) {
       redirectToCheckoutAction(props.product, email).finally(() => setLoading(false))  
     }
     
+=======
+
+    redirectToCheckoutAction(props.product, email, props.urlQuery).finally(() => setLoading(false))
+>>>>>>> main
   };
 
   return (
@@ -94,7 +102,7 @@ export default function CheckoutForm(props: CheckoutFormProps) {
         type='email'
         placeholder='Your email'
         onChange={e => setEmail(e.target.value)}
-className={`${styles.email} lg:w-48 lg:text-sm lg:h-10 `}
+        className={`${styles.email} lg:w-48 lg:text-sm lg:h-10 `}
         required
       />
 

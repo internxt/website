@@ -36,13 +36,6 @@ export default function Layout({
                 <meta name="description" content={description}></meta>
                 <link rel="icon" href="/favicon.ico" />
                 {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-728922855"></script>
-                <script dangerouslySetInnerHTML={{
-                    __html: 'window.dataLayer = window.dataLayer || [];\
-                    function gtag(){dataLayer.push(arguments);}\
-                    gtag(\'js\', new Date());\
-                    gtag(\'config\', \'AW-728922855\');\
-                '}} />
                 <script src={`https://internxt.com/js/sg.js`}></script>
                 {!disableDrift && <script src="/js/drift.js"></script>}
                 <script src="/js/twitter.js"></script>

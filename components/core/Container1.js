@@ -96,7 +96,7 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-duration="500"
-            href={downloadUrl}
+            href="https://blog.internxt.com/how-to-install-a-headless-version-of-x-core-1f5537f4042"
             className={`${styles.button_core} sm:text-base`}
           >
             {description[0].button1}
@@ -105,7 +105,7 @@ const Container1 = ({ id, downloadUrl, descriptions }) => {
             data-aos="fade-up"
             data-aos-delay="350"
             data-aos-duration="500"
-            href="https://medium.com/internxt/learn-how-to-correctly-set-up-x-core-its-quick-easy-4e738042a8a3"
+            href="https://blog.internxt.com/how-to-run-x-core-on-docker-7703c83de446"
             target="_blank"
             className={`${styles.link} sm:text-base`}
             rel="noreferrer"
