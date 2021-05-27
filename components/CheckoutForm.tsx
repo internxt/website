@@ -3,7 +3,7 @@ import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 import styles from './CheckoutForm.module.css'
 
-export async function redirectToCheckoutForSubscriptionAction(product, email?) {
+export async function redirectToCheckoutForSubscriptionAction(product, email, urlQuery) {
     // Create a Checkout Session.
     const response = await fetch('/api/stripe/session/subscription', {
       method: 'post',
@@ -13,7 +13,8 @@ export async function redirectToCheckoutForSubscriptionAction(product, email?) {
       body: JSON.stringify({
         product: product,
         amount: 1,
-        email
+        email,
+        urlQuery
       })
     });
   
@@ -79,7 +80,7 @@ export default function CheckoutForm(props: CheckoutFormProps) {
       if (window && window.analytics) {
         window.analytics.track('landing-subscription-200GB-enter-checkout')
       }  
-      redirectToCheckoutForSubscriptionAction(props.product, email).finally(() => setLoading(false))    
+      redirectToCheckoutForSubscriptionAction(props.product, email, props.urlQuery).finally(() => setLoading(false))    
     }
     else
     {
