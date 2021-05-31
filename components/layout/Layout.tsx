@@ -40,6 +40,7 @@ export default function Layout({
         {!disableDrift && <script src="/js/drift.js"></script>}
         <script src="/js/twitter.js"></script>
         <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
+        <script src="/js/adtrack.js"></script>
       </Head>
       {children}
     </>
