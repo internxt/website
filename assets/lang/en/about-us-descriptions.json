@@ -38,39 +38,21 @@
         
         "employee7": "Oleksandra Yudina",
         "job7": "Human Resources Assistant",
+        
+        "employee8": "Ainhoa Ribes",
+        "job8": "Marketing Assistant",
 
-        "employee8": "Zhihao Zhang",
-        "job8": "Software Engineer",
-
-        "employee9": "Ainhoa Ribes",
+        "employee9": "Cadi Silla",
         "job9": "Marketing Assistant",
 
-        "employee10": "Cadi Silla",
-        "job10": "Marketing Assistant",
+        "employee10": "Sergio Gutiérrez",
+        "job10": "Software Engineer",
 
-        "employee11": "Sergio Gutiérrez",
-        "job11": "Software Engineer",
+        "employee11": "Vicente Belda",
+        "job11": "Digital Marketing Specialist",
 
-        "employee12": "Vicente Belda",
-        "job12": "Digital Marketing Specialist",
-
-        "employee13": "Ana Mínguez",
-        "job13": "Marketing Assistant",
-
-        "employee14": "Izas Casasus",
-        "job14": "Marketing Assistant",
-
-        "employee15": "Mauricio Romero",
-        "job15": "Marketing Assistant",
-
-        "employee16": "Aldemaro González",
-        "job16": "Software Engineer",
-
-        "employee17": "Diego Alayon",
-        "job17": "Product Designer",
-        
-        "employee18": "Victor Argento",
-        "job18": "System Administrator"
+        "employee12": "Diego Alayon",
+        "job12": "Product Designer"
     },
     {
         "id": "4",
@@ -92,20 +74,11 @@
         "company": "Esade Ban",
         "info": "Most reputable business school",
 
-        "company2": "Vodafone",
-        "info2": "Ex-directors of Vodafone",
+        "company2": "Angels Capital",
+        "info2": "Investor of Zeleros & Airhopping",
 
-        "company3": "Telefonica",
-        "info3": "Ex-directors of Telefonica",
-
-        "company4": "Angels Capital",
-        "info4": "Investor of Zeleros & Airhopping",
-
-        "company5": "The Venture City",
-        "info5": "Investor of Cabify & Peoople",
-
-        "company6": "IBM",
-        "info6": "One of the largest IT Companies"
+        "company3": "The Venture City",
+        "info3": "Investor of Cabify & Peoople"
     },
     {
         "id": "6",

@@ -39,38 +39,20 @@
         "employee7": "Oleksandra Yudina",
         "job7": "Asistente de Recursos Humanos",
 
-        "employee8": "Zhihao Zhang",
-        "job8": "Ingeniero de Software",
+        "employee8": "Ainhoa Ribes",
+        "job8": "Asistente de Marketing",
 
-        "employee9": "Ainhoa Ribes",
+        "employee9": "Cadi Silla",
         "job9": "Asistente de Marketing",
 
-        "employee10": "Cadi Silla",
-        "job10": "Asistente de Marketing",
+        "employee10": "Sergio Gutiérrez",
+        "job10": "Ingeniero de Software",
 
-        "employee11": "Sergio Gutiérrez",
-        "job11": "Ingeniero de Software",
+        "employee11": "Vicente Belda",
+        "job11": "Especialista en Marketing Digital",
 
-        "employee12": "Vicente Belda",
-        "job12": "Especialista en Marketing Digital",
-
-        "employee13": "Ana Mínguez",
-        "job13": "Asistente de Marketing",
-
-        "employee14": "Izas Casasus",
-        "job14": "Asistente de Marketing",
-
-        "employee15": "Mauricio Romero",
-        "job15": "Asistente de Marketing",
-
-        "employee16": "Aldemaro González",
-        "job16": "Ingeniero de Software",
-
-        "employee17": "Diego Alayon",
-        "job17": "Diseñador de Producto",
-
-        "employee18": "Victor Argento",
-        "job18": "Administrador de Sistemas"
+        "employee12": "Diego Alayon",
+        "job12": "Diseñador de Producto"
 
     },
     {
@@ -93,20 +75,11 @@
         "company": "Esade Ban",
         "info": "La escuela de negocios con más reputación",
 
-        "company2": "Vodafone",
-        "info2": "Ex-directores de Vodafone",
+        "company2": "Angels Capital",
+        "info2": "Inversores de Zeleros & Airhopping",
 
-        "company3": "Telefonica",
-        "info3": "Ex-directores de Telefonica",
-
-        "company4": "Angels Capital",
-        "info4": "Inversores de Zeleros & Airhopping",
-
-        "company5": "The Venture City",
-        "info5": "Inversores de Cabify & Peoople",
-
-        "company6": "IBM",
-        "info6": "Una de las mayores empresas de informática"
+        "company3": "The Venture City",
+        "info3": "Inversores de Cabify & Peoople"
     },
     {
         "id": "6",

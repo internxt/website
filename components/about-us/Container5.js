@@ -8,10 +8,7 @@ const Container5 = ({ id, descriptions }) => {
     title,
     company, info,
     company2, info2,
-    company3, info3,
-    company4, info4,
-    company5, info5,
-    company6, info6,
+    company3, info3
 
   } = description[0];
 
@@ -35,24 +32,12 @@ const Container5 = ({ id, descriptions }) => {
           <InvestorCard company={company} description={info} investor="Esade" w={125} h={38} />
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
-          <InvestorCard company={company2} description={info2} investor="Vodafone" w={192} h={48} />
-        </div>
-
         <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
-          <InvestorCard company={company3} description={info3} investor="Telefonica" w={192} h={53} />
+          <InvestorCard company={company2} description={info2} investor="Angels" w={200} h={32} />
         </div>
 
         <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
-          <InvestorCard company={company4} description={info4} investor="Angels" w={200} h={32} />
-        </div>
-
-        <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
-          <InvestorCard company={company6} description={info6} investor="ibm" w={125} h={44} />
-        </div>
-
-        <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
-          <InvestorCard company={company5} description={info5} investor="Venture" w={245} h={42} />
+          <InvestorCard company={company3} description={info3} investor="Venture" w={245} h={42} />
         </div>
 
       </div>
