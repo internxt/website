@@ -162,7 +162,7 @@ const Footer = (props) => {
             </Link>
 
             <a
-              href="mailto:support@internxt.zohodesk.eu"
+              href="mailto:idajggytsuz7jivosite@jivo-mail.com"
               target="_blank"
               className={`${styles.p_social} lg:text-xs`}
               rel="noreferrer"

@@ -114,7 +114,7 @@ const LoyaltyProgram = ({ id, descriptions, cardDescriptions }) => {
       <a
         data-aos="fade-up"
         data-aos-duration="300"
-        href="mailto:support@internxt.zohodesk.eu"
+        href="mailto:idajggytsuz7jivosite@jivo-mail.com"
         target="_blank"
         className="flex hover:opacity-80 flex-row w-auto items-center sm:text-lg sm:my-16 lg:mt-12 lg:mb-20 xl:mt-16 xl:mb-24"
         rel="noreferrer"

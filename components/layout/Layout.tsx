@@ -9,6 +9,8 @@ interface LayoutProps {
   segmentName?: string | null
   disableMailerlite?: boolean
   disableDrift?: boolean
+  disableAdtrack?: boolean
+  disableJivosite?: boolean
 }
 
 export default function Layout({
@@ -17,7 +19,9 @@ export default function Layout({
   description = "Internxt",
   segmentName = null,
   disableMailerlite = false,
-  disableDrift = false
+  disableDrift = true,
+  disableAdtrack = false,
+  disableJivosite = false
 }: LayoutProps) {
 
   useEffect(() => {
@@ -38,9 +42,10 @@ export default function Layout({
         {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
         <script src={`https://internxt.com/js/sg.js`}></script>
         {!disableDrift && <script src="/js/drift.js"></script>}
+        {!disableJivosite && <script src="//code-eu1.jivosite.com/widget/go1VHRddni" async></script>}
         <script src="/js/twitter.js"></script>
         <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
-        <script src="/js/adtrack.js"></script>
+        {!disableAdtrack && <script src="/js/adtrack.js"></script>}
       </Head>
       {children}
     </>
