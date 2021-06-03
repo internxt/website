@@ -37,7 +37,6 @@ const Home = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
       <TopBar />
       <Container1 id="1" dealDescriptions={dealDescriptions} />
-      <Container2 id="2" descriptions={descriptions} cardDescriptions={cardDescriptions} />
       <Container3 id="3" descriptions={descriptions} />
       <Container4 id="4" descriptions={descriptions} />
       <Container5 id="5" {...{ downloadUrl, descriptions }} />
