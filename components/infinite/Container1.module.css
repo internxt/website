@@ -1,3 +1,12 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+}
+
+.maxWidth {
+  max-width: 1300px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,7 +14,6 @@
   padding-top: 16px;
   position: relative;
   width: 100%;
-  padding: 3rem 0 2rem;
 }
 
 .secondary {
@@ -15,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 0 0 13rem;
+  padding-top: 2rem;
 }
 
 .title {

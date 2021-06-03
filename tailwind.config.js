@@ -52,9 +52,11 @@ module.exports = {
       '5xl': '3rem',
       '5.5xl': '3.75rem',
       '6xl': '4rem',
+      big: '4.6rem',
       '7xl': '5rem',
       '8xl': '5.3rem',
-      big: '4.6rem',
+      '9xl': '5.5rem',
+      '10xl': '6rem',
     },
     extend: {
       spacing: {

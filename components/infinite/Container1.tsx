@@ -1,25 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import styles from './Container1.module.css'
-import { Spinner } from 'react-bootstrap';
 
 const Container1 = ({ id, dealDescriptions }) => {
-  const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState('')
-
   const description = dealDescriptions.filter((desc) => desc.id === 'infinite');
   const isOdd = (num) => num % 2 === 1;
   // Set the background color of the container depending on its id
   const className = isOdd(id) ? 'normal_container' : 'normal_container grey';
 
   return (
-    <div className={className}>
-      <div className={`${styles.main} sm:pb-20`}>
+    <div className={`${className} pt-10`}>
+      <div className={`${styles.main} sm:pb-20 ${styles.maxWidth}`}>
         <h1
           data-aos="fade-up"
           data-aos-delay="150"
           data-aos-duration="500"
-          className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:w-150 lg:text-7xl desktop-hd:text-big desktop-full-hd:text-8xl retina:text-8xl`}
+          className={`${styles.title} ${styles.levitate} sm:w-80 sm:text-4xl lg:w-164 lg:text-7xl desktop-hd:text-10xl desktop-full-hd:text-10xl retina:text-10xl`}
         >
           {description[0].title}
         </h1>
@@ -70,7 +66,7 @@ const Container1 = ({ id, dealDescriptions }) => {
         </div>
       </div>
 
-      <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
+      <div className={`${styles.secondary} ${styles.maxWidth} sm:pb-12 sm:pt-0 sm:items-center pb-56`}>
         <div className={`${styles.cloud} ${styles.animation_cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}>
           <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
         </div>
@@ -84,7 +80,6 @@ const Container1 = ({ id, dealDescriptions }) => {
             <input
               type="submit"
               value={description[0].button}
-              disabled={loading}
               className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
             />
           </form>
