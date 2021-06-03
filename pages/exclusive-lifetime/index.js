@@ -16,7 +16,7 @@ const Lifetime = ({ props }) => {
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="exclusive-lifetime">
-      <TopBar hideSignIn={false} signUpAction={() => { window.location.href = 'http://www.AL.com'; }} signUpText="Claim now!" hideMenuItems />
+      <TopBar hideSignIn={false} signUpAction={() => { window.location.href = '#'; }} signUpText="Claim now!" hideMenuItems />
       <Container1 id="10" descriptions={props.descriptions} />
       <Container3 id="3" descriptions={props.descriptions} />
       <Container4 id="4" descriptions={props.descriptions} />
