@@ -11,6 +11,11 @@ const LIFETIMEPRODUCTS = {
     production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
     debug: 'price_1IMANUFAOdcgaBMQcI6c9nVp',
     return: 'exclusive-lifetime'
+  },
+  infiniteLifetime: {
+    production: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
+    debug: 'price_1IyIduFAOdcgaBMQMtqkaC50',
+    return: 'infinite-lifetime'
   }
 }
 
@@ -36,8 +41,6 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     successUrl+=urlQuery;
     cancelUrl+=urlQuery;
   }
-
-  console.log(urlQuery)
 
   const params: Stripe.Checkout.SessionCreateParams = {
     mode: 'payment',

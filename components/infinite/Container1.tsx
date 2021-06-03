@@ -1,8 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Container1.module.css'
+import CheckoutForm from '../CheckoutForm';
+import { useRouter } from 'next/router';
 
 const Container1 = ({ id, dealDescriptions }) => {
+  const router = useRouter();
+  const {gclid} = router.query;
   const description = dealDescriptions.filter((desc) => desc.id === 'infinite');
   const isOdd = (num) => num % 2 === 1;
   // Set the background color of the container depending on its id
@@ -71,19 +75,13 @@ const Container1 = ({ id, dealDescriptions }) => {
           <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
         </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-delay="450"
-          data-aos-duration="500"
-        >
-          <form action="https://buy.stripe.com/fZe7vO5T33IJ2hW7su"
-          >
-            <input
-              type="submit"
-              value={description[0].button}
-              className={`${styles.button} sm:w-60 sm:px-0 sm:mt-0 sm:text-base lg:w-60 lg:h-10 lg:text-sm`}
-            />
-          </form>
+        <div>
+          <CheckoutForm
+            product="infinite-lifetime"
+            value={description[0].button}
+            className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
+            urlQuery={gclid}
+          />
         </div>
 
         <div

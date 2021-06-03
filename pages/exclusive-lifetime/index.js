@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Container1 from '../../components/exclusive-lifetime/Container1';
 import Container3 from '../../components/drive/Container3';
 import Container4 from '../../components/drive/Container4';
@@ -12,11 +12,19 @@ import TopBar from '../../components/layout/TopBar';
 import { redirectToCheckoutAction } from '../../components/CheckoutForm';
 
 const Lifetime = ({ props }) => {
+  const [stripeObject, setStripeObject] = useState({})
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'drive');
+ 
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const gclid = urlParams.get('gclid');
+    const stripeObj = { product: 'lifetime2TB', urlQuery: gclid }
+    setStripeObject(stripeObj)
+  }, [])
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="exclusive-lifetime">
-      <TopBar hideSignIn={false} signUpAction={() => { window.location.href = '#'; }} signUpText="Claim now!" hideMenuItems />
+      <TopBar hideSignIn={false} signUpAction={() => redirectToCheckoutAction(stripeObject)} signUpText="Claim now!" hideMenuItems />
       <Container1 id="10" descriptions={props.descriptions} />
       <Container3 id="3" descriptions={props.descriptions} />
       <Container4 id="4" descriptions={props.descriptions} />

@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 const Container1 = ({ id, descriptions }) => {
   const description = descriptions.filter((desc) => desc.id === id);
   const router = useRouter();
-  console.log(router)
   const {gclid} = router.query;
 
   // Check if a number is odd

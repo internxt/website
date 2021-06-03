@@ -14,11 +14,13 @@ import TopBar from '../components/layout/TopBar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
+import { redirectToCheckoutAction } from '../components/CheckoutForm';
 
 const Home = ({
   metatagsDescriptions, descriptions, cardDescriptions, footerDescriptions, downloadUrl, dealDescriptions
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
+  const [stripeObject, setStripeObject] = useState({})
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   const handleAcceptCookies = () => {
@@ -31,11 +33,17 @@ const Home = ({
     const cookie = localStorage.getItem('CookieConsent');
 
     if (!cookie) setConsentCookie(false);
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const gclid = urlParams.get('gclid')
+    
+    const stripeObj = { product: 'lifetime2TB', urlQuery: gclid }
+    setStripeObject(stripeObj)
   }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-      <TopBar />
+      <TopBar signUpAction={() => redirectToCheckoutAction(stripeObject)} />
       <Container1 id="1" dealDescriptions={dealDescriptions} />
       <Container3 id="3" descriptions={descriptions} />
       <Container4 id="4" descriptions={descriptions} />

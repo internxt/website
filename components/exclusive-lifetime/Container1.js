@@ -2,9 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Container1.module.css';
 import CheckoutForm from '../CheckoutForm';
+import { useRouter } from 'next/router';
 
 const Container1 = ({ id, descriptions }) => {
   const description = descriptions.filter((desc) => desc.id === id);
+  const router = useRouter();
+  const {gclid} = router.query;
 
   // Check if a number is odd
   const isOdd = (num) => num % 2 === 1;
@@ -117,6 +120,7 @@ const Container1 = ({ id, descriptions }) => {
             product="lifetime10TB"
             value={description[0].button}
             className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
+            urlQuery={gclid}
           />
         </div>
 

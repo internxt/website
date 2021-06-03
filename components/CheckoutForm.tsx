@@ -3,7 +3,7 @@ import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 import styles from './CheckoutForm.module.css'
 
-export async function redirectToCheckoutAction(product, email, urlQuery) {
+export async function redirectToCheckoutAction(stripeObject) {
   // Create a Checkout Session.
   const response = await fetch('/api/stripe/session', {
     method: 'post',
@@ -11,10 +11,8 @@ export async function redirectToCheckoutAction(product, email, urlQuery) {
       'Content-type': 'application/json'
     },
     body: JSON.stringify({
-      product: product,
+      ...stripeObject,
       amount: 1,
-      email,
-      urlQuery
     })
   });
 
@@ -49,7 +47,13 @@ export default function CheckoutForm(props: CheckoutFormProps) {
       window.analytics.track('landing-lifetime-enter-checkout')
     }
 
-    redirectToCheckoutAction(props.product, email, props.urlQuery).finally(() => setLoading(false))
+    const stripeObj = {
+      product: props.product,
+      email,
+      urlQuery: props.urlQuery
+    }
+
+    redirectToCheckoutAction(stripeObj).finally(() => setLoading(false))
   };
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Container1 from '../../components/lifetime/Container1';
 import Container3 from '../../components/drive/Container3';
 import Container4 from '../../components/drive/Container4';
@@ -10,13 +10,23 @@ import Footer from '../../components/layout/Footer';
 import Layout from '../../components/layout/Layout';
 import TopBar from '../../components/layout/TopBar';
 import { redirectToCheckoutAction } from '../../components/CheckoutForm';
+import { useRouter } from 'next/router';
 
 const Lifetime = ({ props }) => {
+  const [stripeObject, setStripeObject] = useState({})
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const gclid = urlParams.get('gclid')
+    
+    const stripeObj = { product: 'lifetime2TB', urlQuery: gclid }
+    setStripeObject(stripeObj)
+  }, [])
+  
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="lifetime">
-      <TopBar hideSignIn signUpAction={() => redirectToCheckoutAction('lifetime2TB')} signUpText="Claim now!" hideMenuItems />
+      <TopBar hideSignIn signUpAction={() => redirectToCheckoutAction(stripeObject)} signUpText="Claim now!" hideMenuItems />
       <Container1 id="9" descriptions={props.descriptions} />
       <Container3 id="3" descriptions={props.descriptions} />
       <Container4 id="4" descriptions={props.descriptions} />
