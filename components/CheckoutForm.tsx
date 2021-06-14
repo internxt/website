@@ -32,6 +32,7 @@ export async function redirectToCheckoutAction(stripeObject) {
 interface CheckoutFormProps {
   product: string
   value: string
+  className: any
   urlQuery?: string | string[]
 }
 
