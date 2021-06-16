@@ -1,23 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
 import fs from 'fs'
-const LIFETIMEPRODUCTS = {
-  lifetime2TB: {
-    production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
-    debug: 'price_1IKSkkFAOdcgaBMQy1hnVrST',
-    return: 'lifetime'
-  },
-  lifetime10TB: {
-    production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
-    debug: 'price_1IMANUFAOdcgaBMQcI6c9nVp',
-    return: 'exclusive-lifetime'
-  },
-  infiniteLifetime: {
-    production: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
-    debug: 'price_1IyIduFAOdcgaBMQMtqkaC50',
-    return: 'infinite-lifetime'
-  }
-}
+import { getStripeProduct } from './productsInfo';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -30,10 +14,10 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).send({ error: 'Unknown origin' });
   }
 
-  const PRODUCT = LIFETIMEPRODUCTS[req.body.product];
+  const PRODUCT = getStripeProduct[req.body.product];
 
   const urlQuery = req.body.urlQuery ? '&gclid=' + req.body.urlQuery : undefined;
-  
+
   let successUrl = `${req.headers['origin']}/${PRODUCT.return}/success?sid={CHECKOUT_SESSION_ID}`;
   let cancelUrl = `${req.headers['origin']}/${PRODUCT.return}/cancel?sid={CHECKOUT_SESSION_ID}`;
 
