@@ -3,6 +3,12 @@ import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 import styles from './CheckoutForm.module.css'
 
+interface CheckoutFormProps {
+  product: string
+  value: string
+  className: any
+}
+
 export async function redirectToCheckoutAction(stripeObject) {
   // Create a Checkout Session.
   const response = await fetch('/api/stripe/session', {
@@ -29,12 +35,7 @@ export async function redirectToCheckoutAction(stripeObject) {
   console.warn(error.message);
 }
 
-interface CheckoutFormProps {
-  product: string
-  value: string
-  className: any
-  urlQuery?: string | string[]
-}
+
 
 export default function CheckoutForm(props: CheckoutFormProps) {
   const [loading, setLoading] = useState(false);
@@ -50,8 +51,7 @@ export default function CheckoutForm(props: CheckoutFormProps) {
 
     const stripeObj = {
       product: props.product,
-      email,
-      urlQuery: props.urlQuery
+      email
     }
 
     redirectToCheckoutAction(stripeObj).finally(() => setLoading(false))

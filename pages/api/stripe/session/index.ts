@@ -1,46 +1,23 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
-import fs from 'fs'
-const LIFETIMEPRODUCTS = {
-  lifetime2TB: {
-    production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
-    debug: 'price_1IKSkkFAOdcgaBMQy1hnVrST',
-    return: 'lifetime'
-  },
-  lifetime10TB: {
-    production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
-    debug: 'price_1IMANUFAOdcgaBMQcI6c9nVp',
-    return: 'exclusive-lifetime'
-  },
-  infiniteLifetime: {
-    production: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
-    debug: 'price_1IyIduFAOdcgaBMQMtqkaC50',
-    return: 'infinite-lifetime'
-  }
-}
+import fs from 'fs';
+import { getStripeProduct } from './productsInfo';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
   try {
     fs.appendFileSync('logs.txt', new Date() + '\t' + req.body.email + '\n')
   } catch { }
-  const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST
+  const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
   const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
-  if (!req.headers['origin']) {
+  if (!req.headers.origin) {
     return res.status(400).send({ error: 'Unknown origin' });
   }
 
-  const PRODUCT = LIFETIMEPRODUCTS[req.body.product];
+  const PRODUCT = getStripeProduct(req.body.product);
 
-  const urlQuery = req.body.urlQuery ? '&gclid=' + req.body.urlQuery : undefined;
-  
-  let successUrl = `${req.headers['origin']}/${PRODUCT.return}/success?sid={CHECKOUT_SESSION_ID}`;
-  let cancelUrl = `${req.headers['origin']}/${PRODUCT.return}/cancel?sid={CHECKOUT_SESSION_ID}`;
-
-  if(urlQuery) {
-    successUrl+=urlQuery;
-    cancelUrl+=urlQuery;
-  }
+  const successUrl = `${req.headers.origin}/${PRODUCT.return}/success?sid={CHECKOUT_SESSION_ID}`;
+  const cancelUrl = `${req.headers.origin}/${PRODUCT.return}/cancel?sid={CHECKOUT_SESSION_ID}`;
 
   const params: Stripe.Checkout.SessionCreateParams = {
     mode: 'payment',
@@ -64,23 +41,18 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     },
     billing_address_collection: 'required',
     customer_email: req.body.email ? req.body.email : undefined
-
-  }
-
+  };
   try {
     const checkoutSession: Stripe.Checkout.Session = await stripe.checkout.sessions.create(params);
     res.status(200).json(checkoutSession);
   } catch (e) {
-    res.status(500).send({ error: e.message })
+    res.status(500).send({ error: e.message });
   }
 }
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
-
-  const method = req.method;
-
   // if (method === 'GET') { return getSession(req, res); }
-  if (method === 'POST') { return postSession(req, res); }
+  if (req.method === 'POST') { return postSession(req, res); }
 
-  return res.status(500).end('Cannot ' + req.method + ' on ' + req.url);
-}
+  return res.status(500).end(`Cannot ${req.method} on ${req.url}`);
+};

@@ -120,7 +120,7 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
               rel="noreferrer"
             >
               <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>
-                {description[0].link2} 
+                {description[0].link2}
               </p>
               <Image
                 className={styles.image}

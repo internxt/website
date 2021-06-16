@@ -148,9 +148,9 @@ const Container6 = ({ id, downloadUrl, descriptions }) => {
               className={`${styles.card_subtitle} sm:w-auto sm:text-lg sm:mt-0 w-1/2`}
             >
               {description[0].subtitle6}
-              <a href="https://canyouseeme.org/" target="_blank">{description[0].link_tutorial}</a> 
-              {description[0].subtitle7} 
-              <a href="https://canyouseeme.org/" target="_blank">{description[0].link_port}</a> 
+              <a href="https://canyouseeme.org/" target="_blank" rel="noreferrer">{description[0].link_tutorial}</a>
+              {description[0].subtitle7}
+              <a href="https://canyouseeme.org/" target="_blank" rel="noreferrer">{description[0].link_port}</a>
               {description[0].subtitle8}
             </p>
           </div>
