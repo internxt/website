@@ -12,15 +12,14 @@ import TopBar from '../../components/layout/TopBar';
 import { redirectToCheckoutAction } from '../../components/CheckoutForm';
 
 const Lifetime = ({ props }) => {
-  const [stripeObject, setStripeObject] = useState({})
+  const [stripeObject, setStripeObject] = useState({});
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'drive');
- 
+
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const gclid = urlParams.get('gclid');
-    const stripeObj = { product: 'lifetime2TB', urlQuery: gclid }
-    setStripeObject(stripeObj)
-  }, [])
+    const stripeObj = { product: 'lifetime2TB' };
+    setStripeObject(stripeObj);
+  }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="exclusive-lifetime">

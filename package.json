@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "prod": "next export",
-    "linter": "eslint ."
+    "lint": "eslint ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",

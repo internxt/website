@@ -1,26 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-import Container1 from '../components/infinite/Container1';
-import Container2 from '../components/drive/Container2';
-import Container3 from '../components/drive/Container3';
-import Container4 from '../components/drive/Container4';
-import Container5 from '../components/drive/Container5';
-import Container6 from '../components/drive/Container6';
-import Container7 from '../components/drive/Container7';
-import Container8 from '../components/drive/Container8';
-import Footer from '../components/layout/Footer';
-import TopBar from '../components/layout/TopBar';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import { getDriveDownloadUrl } from '../lib/get-download-url';
-import { redirectToCheckoutAction } from '../components/CheckoutForm';
+import Container1 from '../../components/infinite/Container1';
+import Container3 from '../../components/drive/Container3';
+import Container4 from '../../components/drive/Container4';
+import Container5 from '../../components/drive/Container5';
+import Container6 from '../../components/drive/Container6';
+import Container7 from '../../components/drive/Container7';
+import Container8 from '../../components/drive/Container8';
+import Footer from '../../components/layout/Footer';
+import TopBar from '../../components/layout/TopBar';
+import Layout from '../../components/layout/Layout';
+import cookies from '../../lib/cookies';
+import { getDriveDownloadUrl } from '../../lib/get-download-url';
+import { redirectToCheckoutAction } from '../../components/CheckoutForm';
 
 const Home = ({
-  metatagsDescriptions, descriptions, cardDescriptions, footerDescriptions, downloadUrl, dealDescriptions
+  metatagsDescriptions,
+  descriptions,
+  cardDescriptions,
+  footerDescriptions,
+  downloadUrl,
+  dealDescriptions
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
-  const [stripeObject, setStripeObject] = useState({})
+  const [stripeObject, setStripeObject] = useState({});
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   const handleAcceptCookies = () => {
@@ -35,15 +39,16 @@ const Home = ({
     if (!cookie) setConsentCookie(false);
 
     const urlParams = new URLSearchParams(window.location.search);
-    const gclid = urlParams.get('gclid')
-    
-    const stripeObj = { product: 'lifetime2TB', urlQuery: gclid }
-    setStripeObject(stripeObj)
+    const gclid = urlParams.get('gclid');
+    localStorage.setItem('gclid', gclid);
+
+    const stripeObj = { product: 'infiniteLifetime' };
+    setStripeObject(stripeObj);
   }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-      <TopBar signUpAction={() => redirectToCheckoutAction(stripeObject)} />
+      <TopBar signUpText="Claim now!" hideMenuItems hideSignIn signUpAction={() => redirectToCheckoutAction(stripeObject)} />
       <Container1 id="1" dealDescriptions={dealDescriptions} />
       <Container3 id="3" descriptions={descriptions} />
       <Container4 id="4" descriptions={descriptions} />
@@ -88,11 +93,11 @@ export async function getServerSideProps(ctx) {
 
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`);
-  const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
-  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
-  const dealDescriptions = require(`../assets/lang/en/deal-descriptions.json`);
+  const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions.json`);
+  const descriptions = require(`../../assets/lang/${lang}/drive-descriptions.json`);
+  const footerDescriptions = require(`../../assets/lang/${lang}/footer-descriptions.json`);
+  const cardDescriptions = require(`../../assets/lang/${lang}/card-descriptions.json`);
+  const dealDescriptions = require(`../../assets/lang/en/deal-descriptions.json`);
 
   cookies.setReferralCookie(ctx);
 

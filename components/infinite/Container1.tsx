@@ -1,12 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styles from './Container1.module.css'
 import CheckoutForm from '../CheckoutForm';
-import { useRouter } from 'next/router';
 
 const Container1 = ({ id, dealDescriptions }) => {
-  const router = useRouter();
-  const {gclid} = router.query;
   const description = dealDescriptions.filter((desc) => desc.id === 'infinite');
   const isOdd = (num) => num % 2 === 1;
   // Set the background color of the container depending on its id
@@ -77,10 +75,9 @@ const Container1 = ({ id, dealDescriptions }) => {
 
         <div>
           <CheckoutForm
-            product="infinite-lifetime"
+            product="infiniteLifetime"
             value={description[0].button}
             className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
-            urlQuery={gclid}
           />
         </div>
 

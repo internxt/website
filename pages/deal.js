@@ -79,11 +79,11 @@ const Home = ({
 export async function getServerSideProps(ctx) {
   const downloadUrl = await getDriveDownloadUrl(ctx);
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const descriptions = require(`../assets/lang/en/drive-descriptions.json`);
-  const footerDescriptions = require(`../assets/lang/en/footer-descriptions.json`);
-  const cardDescriptions = require(`../assets/lang/en/card-descriptions.json`);
-  const dealDescriptions = require(`../assets/lang/en/deal-descriptions.json`);
+  const metatagsDescriptions = require('../assets/lang/en/metatags-descriptions.json');
+  const descriptions = require('../assets/lang/en/drive-descriptions.json');
+  const footerDescriptions = require('../assets/lang/en/footer-descriptions.json');
+  const cardDescriptions = require('../assets/lang/en/card-descriptions.json');
+  const dealDescriptions = require('../assets/lang/en/deal-descriptions.json');
 
   cookies.setReferralCookie(ctx);
 
