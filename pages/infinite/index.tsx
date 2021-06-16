@@ -52,11 +52,7 @@ const Home = ({
       <Container1 id="1" dealDescriptions={dealDescriptions} />
       <Container3 id="3" descriptions={descriptions} />
       <Container4 id="4" descriptions={descriptions} />
-      <Container5 id="5" {...{ downloadUrl, descriptions }} />
       {' '}
-      <Container6 id="6" descriptions={descriptions} />
-      <Container7 id="7" descriptions={descriptions} />
-      <Container8 id="8" descriptions={descriptions} />
       <Footer descriptions={footerDescriptions} cardDescriptions={cardDescriptions} />
 
       <div className={consentCookie ? 'hidden' : 'cookies-warning position-fixed mobile:w-60'}>
