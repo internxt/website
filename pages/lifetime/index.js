@@ -16,7 +16,6 @@ const Lifetime = ({ props }) => {
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   useEffect(() => {
-
     const stripeObj = { product: 'lifetime2TB' };
     setStripeObject(stripeObj);
   }, []);
