@@ -1,11 +1,11 @@
 const STRIPE_PRODUCT = {
   lifetime2TB: {
-    production: 'price_1J5AfMFAOdcgaBMQsgKmLTSP',
+    production: 'price_1J53jfFAOdcgaBMQlLR0AqRo',
     debug: 'price_1J5AfMFAOdcgaBMQsgKmLTSP',
     return: 'lifetime'
   },
   lifetime10TB: {
-    production: 'price_1J5Ai0FAOdcgaBMQd5xA0gP1',
+    production: 'price_1J53mLFAOdcgaBMQ4kqdvRvf',
     debug: 'price_1J5Ai0FAOdcgaBMQd5xA0gP1',
     return: 'exclusive-lifetime'
   },
