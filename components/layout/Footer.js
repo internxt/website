@@ -162,7 +162,7 @@ const Footer = (props) => {
             </Link>
 
             <a
-              href="mailto:hello@internxt.com"
+              href="https://help.internxt.com/"
               target="_blank"
               className={`${styles.p_social} lg:text-xs`}
               rel="noreferrer"
