@@ -84,7 +84,7 @@ const Container1 = ({ id, descriptions }) => {
           data-aos="fade"
           data-aos-delay="250"
           data-aos-duration="700"
-          className={`${styles.coin} ${styles.animation_coin} sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:w-12 lg:mb-20`}
+          className={`${styles.coin} ${styles.animation_coin} sm:p-0 sm:w-8 sm:mb-0 sm:ml-10 lg:w-12 lg:mb-20`}
         >
           <Image src="/images/1440/Drive/Section 1/coin icon.webp" width={81} height={76} />
         </div>
@@ -93,23 +93,14 @@ const Container1 = ({ id, descriptions }) => {
           data-aos="fade"
           data-aos-delay="250"
           data-aos-duration="700"
-          className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}
+          className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-4 sm:mb-2 lg:mr-32`}
         >
           <Image src="/images/1440/Drive/Section 1/lock icon.webp" width={45} height={60} />
         </div>
       </div>
 
       <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
-        <h1
-          data-aos="fade-up"
-          data-aos-delay="350"
-          data-aos-duration="500"
-          className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}
-        >
-          {description[0].subtitle2}
-        </h1>
-
-        <p className={`${styles.label}`}>
+        <p className={`${styles.label} sm`}>
           {formattedText(description[0].title2, description[0].lineThrough)}
         </p>
 
@@ -117,23 +108,8 @@ const Container1 = ({ id, descriptions }) => {
           <CheckoutForm
             product="lifetime10TB"
             value={description[0].button}
-            className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
+            className={`${styles.button} sm:w-60 sm:px-5 sm:text-sm sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
           />
-        </div>
-
-        <div
-          data-aos="fade-up"
-          data-aos-delay="550"
-          data-aos-duration="500"
-          className={`${styles.billing_container}`}
-        >
-          <p className={`${styles.subtitle3} sm:text-xs sm:pt-2 lg:text-sm`}>
-            {description[0].subtitle3}
-          </p>
-        </div>
-
-        <div className={`${styles.cloud} ${styles.animation_cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}>
-          <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
         </div>
 
         <div
@@ -143,6 +119,15 @@ const Container1 = ({ id, descriptions }) => {
           className={`${styles.hand} sm:hidden lg:w-84`}
         >
           <Image src="/images/1440/Drive/Section 1/purplehand.webp" width={482} height={310} />
+        </div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-duration="700"
+          className={`${styles.cloud} ${styles.animation_cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}
+        >
+          <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
         </div>
       </div>
     </div>

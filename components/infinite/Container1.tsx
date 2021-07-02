@@ -10,9 +10,37 @@ const Container1 = ({ id, dealDescriptions }) => {
   // Set the background color of the container depending on its id
   const className = isOdd(id) ? 'normal_container' : 'normal_container grey';
 
+  const formattedText = (text, values) => {
+    const regex = new RegExp(/\[\[(.*?)\]\]/);
+
+    if (!values.length) return text;
+
+    return (
+      <div>
+        {text.split(regex)
+          .reduce((prev, current, i) => {
+            if (!i) return [current];
+
+            return prev.concat(
+              values.includes(current)
+                ? (
+                  <span
+                    key={i + current}
+                    className={`${styles.lineThrough}`}
+                  >
+                    {current}
+                  </span>
+                )
+                : current,
+            );
+          }, [])}
+      </div>
+    );
+  };
+
   return (
     <div className={`${className}`}>
-      <div className={`${styles.main} sm:pb-20 ${styles.maxWidth}`}>
+      <div className={`${styles.main}`}>
         <h1
           data-aos="fade-up"
           data-aos-delay="150"
@@ -53,7 +81,7 @@ const Container1 = ({ id, dealDescriptions }) => {
           data-aos="fade"
           data-aos-delay="250"
           data-aos-duration="700"
-          className={`${styles.coin} ${styles.animation_coin} sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:w-12 lg:mb-20`}
+          className={`${styles.coin} ${styles.animation_coin} sm:hidden sm:p-0 sm:w-8 sm:mb-8 sm:ml-10 lg:w-12 lg:mb-20`}
         >
           <Image src="/images/1440/Drive/Section 1/coin icon.webp" width={81} height={76} />
         </div>
@@ -62,13 +90,17 @@ const Container1 = ({ id, dealDescriptions }) => {
           data-aos="fade"
           data-aos-delay="250"
           data-aos-duration="700"
-          className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}
+          className={`${styles.lock} ${styles.animation_lock} sm:hidden sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}
         >
           <Image src="/images/1440/Drive/Section 1/lock icon.webp" width={45} height={60} />
         </div>
       </div>
 
       <div className={`${styles.secondary} ${styles.maxWidth} sm:pb-12 sm:pt-0 sm:items-center lg:pb-44`}>
+        <p className={`${styles.label} sm`}>
+          {formattedText(description[0].subtitle2, description[0].lineThrough)}
+        </p>
+
         <div className={`${styles.cloud} ${styles.animation_cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}>
           <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
         </div>

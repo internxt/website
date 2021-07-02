@@ -92,22 +92,13 @@ const Container1 = ({ id, descriptions }) => {
           data-aos="fade"
           data-aos-delay="250"
           data-aos-duration="700"
-          className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-16 sm:mb-6 lg:mr-32`}
+          className={`${styles.lock} ${styles.animation_lock} sm:p-0 sm:w-8 sm:mr-4 sm:mb-6 lg:mr-32`}
         >
           <Image src="/images/1440/Drive/Section 1/lock icon.webp" width={45} height={60} />
         </div>
       </div>
 
       <div className={`${styles.secondary} sm:pb-12 sm:items-center lg:pb-32`}>
-        <h1
-          data-aos="fade-up"
-          data-aos-delay="350"
-          data-aos-duration="500"
-          className={`${styles.subtitle2} sm:text-2xl sm:mb-8 sm:w-10/12 lg:text-xl`}
-        >
-          {description[0].subtitle2}
-        </h1>
-
         <p className={`${styles.label}`}>
           {formattedText(description[0].title2, description[0].lineThrough)}
         </p>

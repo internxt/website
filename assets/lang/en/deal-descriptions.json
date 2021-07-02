@@ -12,6 +12,8 @@
     "id": "infinite",
     "title": "Claim your infinite lifetime membership",
     "subtitle": "Internxt is an encrypted cloud service, based on absolute privacy and security. Get an unlimited plan for life, for a unique, one-time payment of €999, taxes included.",
+    "subtitle2": "[[Normal price €9,999]] Now €999",
+    "lineThrough": ["Normal price €9,999"],
     "input": "Your email",
     "button": "Claim limited-time offer"
   }
