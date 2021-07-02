@@ -101,25 +101,12 @@ const Container1 = ({ id, dealDescriptions }) => {
           {formattedText(description[0].subtitle2, description[0].lineThrough)}
         </p>
 
-        <div className={`${styles.cloud} ${styles.animation_cloud} sm:bottom-0 sm:p-0 sm:mb-10 sm:ml-8 sm:w-8 lg:ml-48`}>
-          <Image src="/images/1440/Drive/Section 1/cloud icon.webp" width={70} height={52} />
-        </div>
-
         <div>
           <CheckoutForm
             product="infiniteLifetime"
             value={description[0].button}
             className={`${styles.button} sm:w-60 sm:px-5 sm:text-base sm:mt-5 lg:w-60 lg:h-10 lg:text-sm`}
           />
-        </div>
-
-        <div
-          data-aos="fade-up-left"
-          data-aos-delay="450"
-          data-aos-duration="700"
-          className={`${styles.hand} sm:hidden lg:w-84`}
-        >
-          <Image src="/images/1440/Drive/Section 1/purplehand.webp" width={482} height={310} />
         </div>
       </div>
     </div>
