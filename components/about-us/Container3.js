@@ -16,7 +16,8 @@ const Container3 = ({ id, descriptions }) => {
     employee9, job9,
     employee10, job10,
     employee11, job11,
-    employee12, job12
+    employee12, job12,
+    employee13, job13
   } = description[0];
 
   return (
@@ -25,7 +26,7 @@ const Container3 = ({ id, descriptions }) => {
         {description[0].title}
       </h1>
 
-      <div className="grid grid-cols-6 gap-y-6 gap-x-3 sm:grid-cols-1 sm:mt-12 lg:py-12 xl:mt-16">
+      <div className="grid grid-cols-6 gap-y-6 gap-x-3 sm:grid-cols-1 lg:grid-cols-4 sm:mt-12 lg:py-12 xl:mt-16">
         <div data-aos="fade-up" data-aos-duration="300" className="col-span-2">
           <PersonalCard name={employee} job={job} picture="Fran" />
         </div>
@@ -52,6 +53,10 @@ const Container3 = ({ id, descriptions }) => {
 
         <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="400" className="col-span-2">
           <PersonalCard name={employee10} job={job10} picture="Sergio" />
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="400" className="col-span-2">
+          <PersonalCard name={employee13} job={job13} picture="carlos" />
         </div>
 
         <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="550" className="col-span-2">
