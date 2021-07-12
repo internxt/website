@@ -249,23 +249,6 @@ const Footer = (props) => {
               </a>
             </div>
 
-            <div className={styles.followus_container}>
-              <img
-                className={styles.logo}
-                src="/images/1440/Footer/telegram.svg"
-                alt=""
-              />
-              <a
-                href="https://t.me/internxt"
-                target="_blank"
-                className={`${styles.p_social} lg:text-xs`}
-                rel="noreferrer"
-              >
-                Telegram
-              </a>
-            </div>
-          </div>
-
           <div className={`${styles.p_container} sm:hidden`}>
             <h1 className={`${styles.label} lg:text-sm`}>
               {props.descriptions.label4}
