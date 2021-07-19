@@ -248,7 +248,8 @@ const Footer = (props) => {
                 Github
               </a>
             </div>
-
+          </div>
+          
           <div className={`${styles.p_container} sm:hidden`}>
             <h1 className={`${styles.label} lg:text-sm`}>
               {props.descriptions.label4}
