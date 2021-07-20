@@ -17,7 +17,8 @@ const Container3 = ({ id, descriptions }) => {
     employee10, job10,
     employee11, job11,
     employee12, job12,
-    employee13, job13
+    employee13, job13,
+    employee14, job14
   } = description[0];
 
   return (
@@ -77,6 +78,10 @@ const Container3 = ({ id, descriptions }) => {
 
         <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="500" className="col-span-2">
           <PersonalCard name={employee12} job={job12} picture="Diego" />
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="500" className="col-span-2">
+          <PersonalCard name={employee14} job={job14} picture="Alvaro" />
         </div>
       </div>
     </div>
