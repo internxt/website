@@ -148,7 +148,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
               className="grid grid-cols-4 gap-3 sm:grid-cols-1 sm:gap-y-8"
             >
               <div data-aos="fade-up" data-aos-duration="300">
-                <PriceCard free="true" size={10} individual descriptions={cardDescriptions} />
+                <PriceCard free="true" size={2} individual descriptions={cardDescriptions} />
               </div>
 
               <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
