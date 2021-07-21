@@ -32,7 +32,7 @@ const Container2 = ({ id, descriptions, cardDescriptions }) => {
         </p>
 
         <div className="grid grid-cols-4 gap-x-4 sm:grid-cols-1 sm:gap-y-8 sm:my-16 lg:pb-12 lg:mt-12 xl:mt-16">
-          <div data-aos="fade-up" data-aos-duration="300"><PriceCard free="true" size={10} individual descriptions={cardDescriptions} /></div>
+          <div data-aos="fade-up" data-aos-duration="300"><PriceCard free="true" size={2} individual descriptions={cardDescriptions} /></div>
           <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="50"><PriceCard size={20} pMonth="0.99" pre6months="0.95" preYear="0.89" descriptions={cardDescriptions} /></div>
           <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100"><PriceCard size={200} pMonth="4.49" pre6months="3.99" preYear="3.49" mostPopular="true" descriptions={cardDescriptions} /></div>
           <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150"><PriceCard size={2000} pMonth="9.99" pre6months="9.49" preYear="8.99" descriptions={cardDescriptions} /></div>
