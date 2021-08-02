@@ -137,9 +137,9 @@ const Footer = (props) => {
               </a>
             </Link>
 
-            <Link href="/core">
+            <Link href="https://www.couponupto.com/" target="_blank">
               <a className={`${styles.p_social} lg:text-xs`}>
-                Internxt Core
+                Cuponupto
               </a>
             </Link>
           </div>
