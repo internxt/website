@@ -139,7 +139,7 @@ const Footer = (props) => {
 
             <Link href="https://www.couponupto.com/coupons/internxt" target="_blank">
               <a className={`${styles.p_social} lg:text-xs`}>
-                Cupon Upto
+                CuponUpto
               </a>
             </Link>
           </div>
