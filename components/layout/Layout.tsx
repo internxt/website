@@ -41,10 +41,12 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
         <script src={`https://internxt.com/js/sg.js`}></script>
+        <script dangerouslySetInnerHTML={{ __html: `analytics.load('uEUiW7CGVHP8WDeA4UtK0hEgVZsmPFtb')` }} />
         {!disableDrift && <script src="/js/drift.js"></script>}
         <script dangerouslySetInnerHTML={{
           __html: ` window.intercomSettings = { app_id: "ta2ffq6n" };\
-          (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ta2ffq6n';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();`
+          (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ta2ffq6n';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+          window.localStorage.setItem('inxt-queryString', location.search)`
         }} />
         <script src="/js/twitter.js"></script>
         <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
