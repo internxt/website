@@ -27,15 +27,12 @@
         "employee3": "Alejandra Arias",
         "job3": "Directora de Marketing",
 
-        "employee4": "Aldimir Aleksandrov",
-        "job4": "Ingeniero de Software",
-
         "employee5": "Joan Mora",
-        "job5": "Ingeniero de Software",
+        "job5": "Product Manager",
 
         "employee6": "Desi Miroslavova",
         "job6": "Ingeniera de Software",
-        
+
         "employee7": "Sasha Yudina",
         "job7": "Directora de Recursos Humanos",
 
@@ -101,7 +98,7 @@
         "company3": "Aceleradora Lanzadera",
         "bio5": "Juan Roig es conocido por ser el dueño de Mercadona, una de las mayores corporaciones europeas.",
         "bio6": "Internxt recibirá la ayuda estratégica necesaria para llevar Internxt al siguiente nivel. Lanzadera también ayudará a cubrir cualquier necesidad de financiación.",
-    
+
         "company4": "Lista 500 Startups",
         "bio7": "500 Startups es una de las empresas de capital riesgo más activas del mundo y ha comprometido más de $454 millones en inversiones a nivel mundial.",
         "bio8": "500 startups ha elegido a Internxt como una de las mejores startups del SAAS de todo el mundo."
@@ -111,5 +108,5 @@
         "title": "Últimos artículos publicados",
         "link": "Lee más posts"
     }
-    
+
 ]

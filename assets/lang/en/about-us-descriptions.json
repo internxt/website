@@ -27,18 +27,15 @@
         "employee3": "Alejandra Arias",
         "job3": "Chief Marketing Officer",
 
-        "employee4": "Aldimir Aleksandrov",
-        "job4": "Front-End Engineer",
-
         "employee5": "Joan Mora",
         "job5": "Product Manager",
 
         "employee6": "Desi Miroslavova",
         "job6": "Full-Stack Engineer",
-        
+
         "employee7": "Sasha Yudina",
         "job7": "Human Resources Manager",
-        
+
         "employee8": "Ainhoa Ribes",
         "job8": "Marketing Assistant",
 
@@ -95,7 +92,7 @@
         "company3": "Lanzadera Accelerator",
         "bio5": "Juan Roig is known for being the owner of Mercadona, one of the biggest European corporations.",
         "bio6": "Internxt will receive the strategic help required to take Internxt to the next level. Lanzadera will also help Internxt cover any funding needs.",
-    
+
         "company4": "500 Startups listing",
         "bio7": "500 Startups is one of the most active venture capital firms in the world and has commited over $454M in investment globally.",
         "bio8": "500 Startups have chosen Internxt as one of the top SAAS startups worldwide."
@@ -105,5 +102,5 @@
         "title": "Latest Published Articles",
         "link": "Read more posts"
     }
-    
+
 ]
