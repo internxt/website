@@ -14,6 +14,7 @@ import TopBar from '../components/layout/TopBar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
+import setUTM from '../lib/conversions';
 
 const Home = ({
   metatagsDescriptions, descriptions, cardDescriptions, footerDescriptions, downloadUrl
@@ -29,6 +30,7 @@ const Home = ({
   useEffect(() => {
     AOS.init();
     const cookie = localStorage.getItem('CookieConsent');
+    setUTM();
 
     if (!cookie) setConsentCookie(false);
   }, []);
