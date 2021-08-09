@@ -40,16 +40,8 @@ const Container3 = ({ id, descriptions }) => {
           <PersonalCard name={employee3} job={job3} picture="Ale" />
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="150" className="col-span-2">
-          <PersonalCard name={employee4} job={job4} picture="Ald" />
-        </div>
-
         <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200" className="col-span-2">
           <PersonalCard name={employee5} job={job5} picture="Joan" />
-        </div>
-
-        <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="250" className="col-span-2">
-          <PersonalCard name={employee6} job={job6} picture="Desi" />
         </div>
 
         <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="400" className="col-span-2">
