@@ -141,6 +141,8 @@ $l-neutral-40: #dfe1e6;
 $l-neutral-30: #ebecf0;
 $l-neutral-10: #fafbfc;
 $l-neutral-20: #f4f5f7;
+
+
 html,
 body {
   padding: 0;
@@ -193,6 +195,20 @@ p, h1{
 }
 .subtitle {
   color: $neutral-500;
+}
+
+.heroSection {
+	background-image: url('../public/images/drive/Background.png');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.logo {
+  background-image: url('../public/images/logos/Internxt.svg');
+	background-position: left top;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 input[type=number]::-webkit-outer-spin-button, 

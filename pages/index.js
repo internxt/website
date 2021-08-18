@@ -10,7 +10,7 @@ import { getDriveDownloadUrl } from '../lib/get-download-url';
 import setUTM from '../lib/conversions';
 
 const Home = ({
-  metatagsDescriptions, descriptions, cardDescriptions, footerDescriptions, downloadUrl
+  metatagsDescriptions, descriptions, cardDescriptions, navbarLang, footerDescriptions, downloadUrl
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
@@ -30,8 +30,10 @@ const Home = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-        <Navbar />
+      <div className="heroSection">
+        <Navbar lang={navbarLang}/>
         <HeroSection descriptions={descriptions}/>
+      </div>
     </Layout>
   );
 };
@@ -43,6 +45,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
   const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
 
@@ -50,7 +53,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      downloadUrl, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions,
+      downloadUrl, metatagsDescriptions, descriptions, navbarLang, footerDescriptions, cardDescriptions,
     },
   };
 }
