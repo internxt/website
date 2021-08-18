@@ -1,8 +1,8 @@
 {
     "HeroSection":
     {
-        "title": "Guarda archivos de forma segura",
-        "subtitle": "Internxt Drive es un servicio de almacenamiento en la nube basado en la privacidad y seguridad",
+        "title": {"line1": "Guarda archivos", "line2": "de forma segura"},
+        "subtitle": {"line1": "Internxt Drive es un servicio de almacenamiento", "line2": " en la nube basado en la privacidad y seguridad"},
         "cta1": "Consigue 2GB",
         "cta1detail": "gratis",
         "cta2": {"mobile": "Obtener App", "desktop": "Descargar"}
