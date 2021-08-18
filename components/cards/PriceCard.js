@@ -77,7 +77,7 @@ const PriceCard = ({
               className={styles.free_msg}
               rel="noreferrer"
             >
-              <h1 className={`${styles.text_free} sm:text-2xl sm:font-avertabold lg:text-lg`}>
+              <h1 className={`${styles.text_free} sm:text-2xl lg:text-lg`}>
                 {' '}
                 <span>{individual ? description[0].free : description[0].contact}</span>
                 {' '}

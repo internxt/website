@@ -46,7 +46,7 @@
 }
 
 .subtitle2 {
-    font-family: "averta-bold";
+    
     font-size: 26px;
     line-height: 1.46;
     letter-spacing: -0.1px;
@@ -56,7 +56,7 @@
 }
 
 .subtitle3 {
-    font-family: "averta-light";
+    
     font-size: 16px;
     line-height: 2.38;
     letter-spacing: 0.1px;
@@ -65,7 +65,7 @@
 }
 
 .label {
-    font-family: "averta-light";
+    
     font-size: 16px;
     line-height: 2.38;
     letter-spacing: 0.1px;
@@ -123,7 +123,7 @@
     border-bottom-left-radius: 6px;
     outline: 0;
 
-    font-family: "averta";
+    
     font-size: 16px;
     line-height: normal;
     letter-spacing: 0px;
@@ -140,7 +140,7 @@
     background-color: #0084ff;
     outline: 0;
 
-    font-family: "averta-semibold";
+    
     font-size: 18px;
     line-height: 2.11;
     letter-spacing: 0px;

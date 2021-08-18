@@ -1,7 +1,7 @@
 
 
 .title {
-    font-family: "averta-extrabold";
+    
     font-size: 60px;
     line-height: normal;
     letter-spacing: -0.19px;
@@ -10,7 +10,7 @@
 }
 
 .subtitle {
-    font-family: "averta";
+    
     font-size: 24px;
     line-height: 1.38;
     letter-spacing: normal;
@@ -98,7 +98,7 @@
 }
 
 .label {
-    font-family: "averta";
+    
     font-size: 20px;
     line-height: 1.38;
     letter-spacing: normal;
@@ -112,7 +112,7 @@
     width: 500px;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    font-family: "averta-light";
+    
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
@@ -142,7 +142,7 @@
     background-color: #f8f9fa;
     color: #212529;
     border-radius: 50rem;
-    font-family: "averta-light";
+    
 }
 
 .button:hover {
@@ -152,7 +152,7 @@
 }
 
 .warning {
-    font-family: "averta";
+    
     font-size: 15px;
     line-height: 1.38;
     letter-spacing: normal;

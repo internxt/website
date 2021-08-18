@@ -1,0 +1,85 @@
+[
+    {
+        "section": "HeroSection",
+        "title": "Guarda archivos de forma segura", 
+        "subtitle": "Internxt Drive es un servicio de cloud encriptado que se basa en la privacidad absoluta y la seguridad infranqueable.",
+        "subtitle2": "¡Consigue 2 GB gratis, para siempre!", 
+        "subtitle3": "No se requieren datos de facturación",
+        "input": "Tu correo",
+        "button": "Empieza gratis"
+    },
+    {
+        "id": "2",
+        "title": "Un plan para todos los servicios",
+        "subtitle": " Saca más partido de Internxt con nuestra suscripción 'todo en uno' que te permite usar un mismo plan para todos los servicios.",
+        "link": "Más información sobre los precios"
+    },
+    {
+        "id": "3",
+        "title": "Diseñado para protegerte.",
+        "subtitle": "Tus archivos subidos son encriptados del lado del cliente y luego fragmentados en pequeños pedazos. Cada fragmento encriptado se almacena de forma segura alrededor del mundo, utilizando Blockchain. Privacidad como nunca antes.",
+        "subtitle2": "Sólo tú tienes la llave que desencripta tus archivos fragmentados.",
+        "subtitle_sm": "Tus archivos son encriptados del lado del cliente y luego fragmentados en pequeños pedazos."
+    },
+    {
+        "id": "4",
+        "title": "Una nube más segura.", 
+        "subtitle": "Servicios como Dropbox, Google Drive, Microsoft OneDrive y Apple iCloud tienen permiso para acceder a tus datos.", 
+        "subtitle2": "Internxt Drive tiene zero-knowledge encryption, lo que significa que sólo tú puedes acceder a tus archivos."
+    },
+    {
+        "id": "5",
+        "title": "Seguro. Privado. Fácil de usar.", 
+        "subtitle": "Una interfaz funcional e intuitiva con diversas características personalizables, como el intercambio de archivos encriptados.",   
+        "title2": "Disponible en todos tus dispositivos.", 
+        "subtitle3": "La interfaz de Internxt es muy cómoda, práctica y fácil de usar.", 
+        "subtitle4": "Accede desde nuestra app de escritorio, app web y nuestra app para iOS o Android.", 
+        "link1": "Registrarse",
+        "link2": "Descargar"
+    },
+    {
+        "id": "6",
+        "title": "Tu negocio en tus manos.", 
+        "subtitle": "Internxt Drive for teams te permite a ti y a tu equipo almacenar archivos con total seguridad, colaborar de forma privada con otros miembros y alternar las funciones de administración.",
+        "link": "Echa un vistazo a los planes para equipos"
+    },
+    {
+        "id": "7",
+        "title": "¿Es la nube la respuesta?", 
+        "subtitle": "“Una reciente encuesta de Deloitte muestra que el almacenamiento en nube basado en Blockchain está ganando fuerza.",
+        "subtitle2": " Es una forma más inteligente de aprovechar la tecnología emergente y todo lo que la nube tiene por ofrecer: fiabilidad, seguridad y escalabilidad. La encuesta revela una fuerte inversión en Blockchain.”",
+        "title2": "Análisis de la nube",
+        "subtitle3": "“El estudio investiga el impacto de las arquitecturas de nubes descentralizadas y centralizadas en la seguridad.",
+        "subtitle4": "Las nubes centralizadas entrelazan funciones centrales dentro del mismo espacio. Si un error o un ataque logra desestabilizar un componente centralizado, toda la nube está en riesgo.”",
+        "link1": "Leer más",
+        "link2": "Leer estudio 1.0",
+        "link3": "Leer estudio 2.0"
+    },
+    {
+        "id": "8",
+        "title": "Cambia a Internxt Drive"
+    },
+    {
+        "id": "9",
+        "title": "Oferta exclusiva cloud seguro, 2 TB de por vida",
+        "title2": "[[Antes €499]] Ahora €349",
+        "lineThrough": ["Antes €499"],
+        "subtitle": "Internxt Drive es un servicio de cloud encriptado que se basa en la privacidad absoluta. Consigue nuestro plan de 2 TB de por vida por un pago único de €349, IVA incluído.",
+        "button": "Consigue la oferta"
+    },
+    {
+        "id": "10",
+        "title": "Eres lo suficientemente rápido como para conseguir nuestro lifetime de 10 TB por solo 699€?",
+        "title2": "[[Precio normal €2,500]] Ahora 699€",
+        "lineThrough": ["Precio normal €2,500"],
+        "subtitle": "Internxt Drive es un servicio de cloud encriptado que se basa en la privacidad absoluta. Estamos ofreciendo cuentas de 10 TB por 699€ a unos pocos usuarios. Hazte con una antes de que se acaben!",
+        "button": "Consigue ésta super oferta!"
+    },
+    {
+        "id": "11",
+        "title": "Consigue tu €100 con tu regalo de IVACY ahora mismo!",
+        "title2": "Consigue el descuento",
+        "subtitle": "Ivacy VPN + Internxt Secure Cloud Storage. Consigue tu oferta de protección VPN más almacenamiento encriptado y descentralizado de 2TB. Registrate gratis ahora, suscribete utilizando el cupón que te envió Ivacy para conseguir el descuento del 100% en todas las suscripciones de Internxt.",
+        "button": "Reclama el descuento de Ivacy"
+    }
+]

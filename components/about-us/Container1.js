@@ -58,7 +58,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
             name="signup"
             type="submit"
             value={description[0].button}
-            className={`${styles.button} sm:h-10 sm:w-auto sm:text-base sm:font-avertasemibold sm:px-3 lg:w-32 lg:h-10 lg:text-sm`}
+            className={`${styles.button} sm:h-10 sm:w-auto sm:text-base sm:px-3 lg:w-32 lg:h-10 lg:text-sm`}
           />
         </form>
       </div>

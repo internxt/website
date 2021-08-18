@@ -101,7 +101,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
           data-aos="fade-up"
           data-aos-delay="450"
           data-aos-duration="500"
-          className={`${styles.subtitle2} sm:font-avertasemibold sm:text-xl sm:w-80 sm:m-0 lg:text-xl`}
+          className={`${styles.subtitle2}  sm:text-xl sm:w-80 sm:m-0 lg:text-xl`}
         >
           {description[0].subtitle3}
         </h1>
@@ -138,7 +138,7 @@ const Container1 = ({ id, descriptions, cardDescriptions }) => {
             name="signup"
             type="submit"
             value={description[0].button}
-            className={`${styles.button} sm:h-10 sm:w-auto sm:text-base sm:font-avertasemibold sm:px-3 lg:w-32 lg:h-10 lg:text-sm`}
+            className={`${styles.button} sm:h-10 sm:w-auto sm:text-base  sm:px-3 lg:w-32 lg:h-10 lg:text-sm`}
           />
         </form>
 

@@ -223,7 +223,7 @@ const Container2 = ({ id, descriptions }) => {
       <p
         data-aos="fade-up"
         data-aos-duration="300"
-        className={`${styles.subtitle2} sm:text-13 sm:mt-4 sm:text-gray-600 sm:font-avertalight lg:text-xs lg:mt-2`}
+        className={`${styles.subtitle2} sm:text-13 sm:mt-4 sm:text-gray-600 lg:text-xs lg:mt-2`}
       >
         {description[0].subtitle2}
       </p>

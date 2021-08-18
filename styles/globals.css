@@ -1,48 +1,9 @@
-@font-face {
-  font-family: "averta";
-  src: url("/fonts/averta-regular.otf");
-  src: url("/fonts/averta-bold.otf");
-  src: url("/fonts/averta-light.otf");
-  src: url("/fonts/averta-black.otf");
-  src: url("/fonts/averta-semibold.otf");
-  src: url("/fonts/averta-extrabold.otf");
-}
-
-@font-face {
-  font-family: "averta-extrabold";
-  src: url("/fonts/averta-extrabold.otf");
-}
-
-@font-face {
-  font-family: "averta-bold";
-  src: url("/fonts/averta-bold.otf");
-}
-
-@font-face {
-  font-family: "averta";
-  src: url("/fonts/averta-regular.otf");
-}
-
-@font-face {
-  font-family: "averta-light";
-  src: url("/fonts/averta-light.otf");
-}
-
-@font-face {
-  font-family: "averta-semibold";
-  src: url("/fonts/averta-semibold.otf");
-}
-
-@font-face {
-  font-family: "averta-black";
-  src: url("/fonts/averta-black.otf");
-}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "Neue Einstellung", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
 }
@@ -74,12 +35,9 @@ p, h1{
   margin: 0;
 }
 
-h1 {
-  font-family: "averta-extrabold";
-}
-
-p {
-  font-family: "averta";
+h1.title {
+  font-family: "Neue Einstellung";
+  font-weight: 600;
 }
 
 input[type=number]::-webkit-outer-spin-button, 
@@ -106,7 +64,7 @@ button:focus {
 }
 
 .faq-title {
-  font-family: "averta-extrabold";
+  
   font-size: 50px;
   line-height: normal;
   letter-spacing: 0.25px;
@@ -123,7 +81,7 @@ button:focus {
 }
 
 .row-title {
-  font-family: "averta-light";
+  
   font-size: 20px;
   line-height: 1.55;
   letter-spacing: normal;
@@ -131,7 +89,7 @@ button:focus {
 }
 
 .row-content {
-  font-family: "averta-light";
+  
   font-size: 15px;
   line-height: 1.55;
   letter-spacing: normal;
@@ -170,7 +128,7 @@ button:focus {
   }
   
   .row-title-text {
-    font-family: "averta-light";
+    
     font-size: 15px !important;
     line-height: 1.55;
     letter-spacing: normal;
@@ -178,7 +136,7 @@ button:focus {
   }
   
   .row-content-text {
-    font-family: "averta-light";
+    
     font-size: 13px !important;
     line-height: 1.55;
     letter-spacing: normal;
@@ -209,7 +167,7 @@ button:focus {
 .nav-link {
   display: flex;
   align-items: center;
-  font-family: "averta";
+  
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: normal;
@@ -251,7 +209,7 @@ button:focus {
 }
 
 .btn {
-  font-family: "averta";
+  
   font-size: 18px;
   line-height: 1.83;
   letter-spacing: normal;

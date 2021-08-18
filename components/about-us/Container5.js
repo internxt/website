@@ -22,7 +22,7 @@ const Container5 = ({ id, descriptions }) => {
       <h1
         data-aos="fade-up"
         data-aos-duration="300"
-        className={`${styles.title} sm:text-4xl sm:font-avertaextrabold sm:pt-16 lg:text-5xl lg:pt-20 xl:mb-24`}
+        className={`${styles.title} sm:text-4xl sm:pt-16 lg:text-5xl lg:pt-20 xl:mb-24`}
       >
         {title}
       </h1>

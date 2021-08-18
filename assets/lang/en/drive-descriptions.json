@@ -1,85 +1,10 @@
-[
+{
+    "HeroSection":
     {
-        "id": "1",
-        "title": "Store your files in complete privacy",
-        "subtitle": "Internxt Drive is a zero-knowledge file storage service that's based on absolute privacy and uncompromising security.",
-        "subtitle2": "Sign up and get 2 GB for free, forever!",
-        "subtitle3": "No billing information required",
-        "input": "Your email",
-        "button": "Start for free"
-    },
-    {
-        "id": "2",
-        "title": "One plan for all our services.",
-        "subtitle": "Get more out of Internxt with our all in one membership that allows you to use one storage plan across all our services.",
-        "link": "Learn more about pricing"
-    },
-    {
-        "id": "3",
-        "title": "Designed to protect your privacy.",
-        "subtitle": "Your uploaded files are client-side encrypted and then fragmented into small pieces.",
-        "subtitle2": "Only you hold your decryption key which retrieves your fragmented files.",
-        "subtitle_sm": "Your uploaded files are client-side encrypted and then fragmented into small pieces."
-    },
-    {
-        "id": "4",
-        "title": "Your data is yours to share.",
-        "subtitle": "Services like Dropbox, Google Drive, Microsoft OneDrive and Apple iCloud all have permission to access your data.",
-        "subtitle2": "Internxt Drive features zero-knowledge encryption, meaning that only you can ever access your files."
-    },
-    {
-        "id": "5",
-        "title": "Secure. Private. Simple to use.",
-        "subtitle": "A functional and intuitive interface with a variety of different customizations and features, such as encrypted file sharing.",
-        "title2": "Available on all your devices.",
-        "subtitle3": "The files you keep secure on Internxt Drive are easy to get to.",
-        "subtitle4": "Access your files from our desktop app, Web browser app and our iOS or Android app.",
-        "link1": "Sign up",
-        "link2": "Download"
-    },
-    {
-        "id": "6",
-        "title": "Your Business in your hands.",
-        "subtitle": "Internxt Drive for teams allows you and your team to store files with total security, collaborate privately with other members and toggle your administration features.",
-        "link": "Check out plans for teams"
-    },
-    {
-        "id": "7",
-        "title": "Is cloud the answer?",
-        "subtitle": "“A recent survey from Deloitte shows that blockchain-based cloud storage is picking up steam.", 
-        "subtitle2": "It’s simply a smarter way to take advantage of emerging technology and all that cloud has to offer: reliability, security and scalability. Deloitte survey reveals strong investment in blockchain.”",
-        "title2": "Analysis of the cloud",
-        "subtitle3": "“The research investigates the impact of distributed and centralized cloud architectures on security.", 
-        "subtitle4": "Centralized clouds interlace core functions within the same space. If an error or attack manages to destabilize a centralized component, the entire cloud is at risk.”",
-        "link1": "Read more",
-        "link2": "Read study 1.0",
-        "link3": "Read study 2.0"
-    },
-    {
-        "id": "8",
-        "title": "Switch to Internxt Drive"
-    },
-    {
-        "id": "9",
-        "title": "Limited-time offer, 2 TB lifetime secure cloud storage",
-        "title2": "[[Before €499]] Now €349",
-        "lineThrough": ["Before €499"],
-        "subtitle": "Internxt Drive is an encrypted cloud storage service, based on absolute privacy and security. Get our largest 2 TB plan for life, for a unique, one-time payment of €349, taxes included.",
-        "button": "Claim limited-time offer"
-    },
-    {
-        "id": "10",
-        "title": "Are you fast enough to get our 10 TB lifetime account for only €699?",
-        "title2": "[[Normal price €2,500]] Now €699",
-        "lineThrough": ["Normal price €2,500"],
-        "subtitle": "Internxt Drive is an encrypted cloud storage service, based on absolute privacy and security. We're offering a 10 TB account for €699 to a handful of users. Claim one before they run out!",
-        "button": "Claim this crazy lifetime offer!"
-    },
-    {
-        "id": "11",
-        "title": "Ivacy VPN + Internxt secure cloud storage.",
-        "title2": "Claim your €100 Ivacy gift!",
-        "subtitle": "Claim your security bundle of VPN protection + 2TB secure cloud. Sign up for a free account, upgrade upon registration & use the coupon code Ivacy sent you in order to claim a one-time 100% discount on any of Internxt subscriptions",
-        "button": "Claim Ivacy cloud storage deal"
+        "title": "Store your files in total privacy",
+        "subtitle": "Internxt Drive is a zero-knowledge file storage service based on best-in-class privacy and security",
+        "cta1": "Get 2GB",
+        "cta1detail": "for free",
+        "cta2": {"mobile": "Get App", "desktop": "Download"}
     }
-]
+}

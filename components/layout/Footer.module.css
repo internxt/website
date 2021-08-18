@@ -31,7 +31,7 @@
 }
 
 .title {
-    font-family: "averta-extrabold";
+    
     font-size: 46px;
     font-weight: 800;
     line-height: 1.15;
@@ -59,7 +59,7 @@
 }
 
 .text_button {
-    font-family: "averta-semibold";
+    
     font-size: 16px;
     text-align: center;
     letter-spacing: 0.1px;
@@ -68,7 +68,7 @@
 }
 
 .learn_more {
-    font-family: "averta-light";
+    
     font-size: 13px;
     line-height: 2.92;
     letter-spacing: 0.2px;
@@ -84,7 +84,7 @@
 
 .keep_updated {
     max-width: 500px;
-    font-family: "Averta-semibold";
+    
     font-size: 26px;
     font-weight: 600;
     line-height: 1.35;
@@ -126,7 +126,7 @@
 }
 
 .label {
-    font-family: "averta-bold";
+    
     font-size: 18px;
     line-height: 1.83;
     letter-spacing: normal;
@@ -144,7 +144,7 @@
 }
 
 .p_social {
-    font-family: "averta";
+    
     font-size: 16px;
     line-height: 2.06;
     letter-spacing: normal;
@@ -184,7 +184,7 @@
     flex-grow:2;
     border:none;
     background-color: #fafbff;
-    font-family: "averta-light";
+    
   }
   
   .input:focus {
@@ -194,7 +194,7 @@
   
   .input_button {
     /* Just a little styling to make it pretty */
-    font-family: "averta-light";
+    
     font-size: 13px;
     width: 50px;
     height: 28px;
@@ -211,7 +211,7 @@
     border-bottom-left-radius: 6px;
     outline: 0;
 
-    font-family: "averta";
+    
     font-size: 17px;
     line-height: normal;
     letter-spacing: -0.1px;
@@ -229,7 +229,7 @@
     background-color: #0084ff;
     outline: 0;
 
-    font-family: "averta";
+    
     font-size: 18px;
     line-height: 2.11;
     letter-spacing: -0.1px;
@@ -243,7 +243,7 @@
 }
 
 .faqtext {
-    font-family: "averta-light";
+    
     font-size: 16px;
     line-height: 2.11;
     letter-spacing: -0.1px;

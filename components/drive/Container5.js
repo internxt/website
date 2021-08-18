@@ -99,7 +99,7 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
               className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}
               rel="noreferrer"
             >
-              <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>
+              <p className={`${styles.margin} sm:text-lg mr-2`}>
                 {description[0].link1}
               </p>
               <Image
@@ -119,7 +119,7 @@ const Container5 = ({ id, downloadUrl, descriptions }) => {
               className={`${styles.link} hover:opacity-80 flex flex-row w-auto items-center sm:p-0 lg:text-lg lg:mb-16`}
               rel="noreferrer"
             >
-              <p className={`${styles.margin} font-avertasemibold sm:text-lg mr-2`}>
+              <p className={`${styles.margin} sm:text-lg mr-2`}>
                 {description[0].link2}
               </p>
               <Image

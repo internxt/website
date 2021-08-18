@@ -52,7 +52,6 @@
 }
 
 .text_forever {
-    font-family: "averta-light";
     text-shadow: 0 2px 20px white;
     background-image: linear-gradient(244deg, #3470fc 29%, #a011eb 90% );
     font-size: 18px;
@@ -102,7 +101,6 @@
 }
 
 .pMonth {
-    font-family: "averta-light";
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: 0.1px;
@@ -123,7 +121,6 @@
 }
 
 .pre_pay {
-    font-family: "averta-bold";
     font-size: 16px;
     line-height: 1.56;
     letter-spacing: -0.21px;

@@ -6,7 +6,6 @@
 }
 
 .assosciated {
-    font-family: "averta";
     font-size: 17px;
     font-weight: 600;
     font-stretch: normal;
@@ -29,7 +28,6 @@
 
 .subtitle {
     width: 741px;
-    font-family: "averta";
     font-size: 26px;
     line-height: 1.5;
     letter-spacing: -0.34px;
@@ -39,9 +37,6 @@
     margin: 0 12rem 5rem;
 }
 
-.colored {
-    font-family: "averta-bold";
-}
 
 .subtitle2 {
     font-size: 16px;

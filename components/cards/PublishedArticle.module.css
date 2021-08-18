@@ -19,7 +19,6 @@
 
 .date {
     position: relative;
-    font-family: "averta";
     font-size: 12px;
     line-height: 2.75;
     letter-spacing: 0.2px;
@@ -27,7 +26,6 @@
 }
 
 .title {
-    font-family: "averta";
     font-size: 19px;
     line-height: 1.21;
     letter-spacing: -0.3px;
@@ -43,7 +41,6 @@
 }
 
 .link {
-    font-family: "averta";
     font-size: 11px;
     line-height: normal;
     letter-spacing: 0.4px;
