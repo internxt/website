@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
 import HeroSection from '../components/drive/HeroSection';
+import GetStartedSection from '../components/drive/GetStartedSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
@@ -34,6 +35,7 @@ const Home = ({
         <Navbar lang={navbarLang}/>
         <HeroSection descriptions={descriptions}/>
       </div>
+      <GetStartedSection descriptions={descriptions}/>
     </Layout>
   );
 };
@@ -44,7 +46,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`);
+  const descriptions = require(`../assets/lang/${lang}/home.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
   const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);

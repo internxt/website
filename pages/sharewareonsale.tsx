@@ -40,7 +40,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
   const lang = 'en';
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const descriptions = require(`../assets/lang/${lang}/drive-descriptions.json`);
+  const descriptions = require(`../assets/lang/${lang}/drive.json`);
   const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
   const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
 
