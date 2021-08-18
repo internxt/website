@@ -9,7 +9,7 @@ import Container6 from '../components/drive/Container6';
 import Container7 from '../components/drive/Container7';
 import Container8 from '../components/drive/Container8';
 import Layout from '../components/layout/Layout';
-import TopBar from '../components/layout/TopBar';
+import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
@@ -21,7 +21,7 @@ const Shareware = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-      <TopBar />
+      <Navbar />
       <RedeemContainer id="1" descriptions={descriptions} />
       <Container2 id="2" descriptions={descriptions} cardDescriptions={cardDescriptions} />
       <Container3 id="3" descriptions={descriptions} />

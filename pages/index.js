@@ -3,7 +3,7 @@ import AOS from 'aos';
 
 import HeroSection from '../components/drive/HeroSection';
 import Footer from '../components/layout/Footer';
-import TopBar from '../components/layout/TopBar';
+import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
@@ -30,7 +30,8 @@ const Home = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-      <HeroSection descriptions={descriptions} />
+        <Navbar />
+        <HeroSection descriptions={descriptions}/>
     </Layout>
   );
 };

@@ -5,6 +5,6 @@
         "subtitle": "Internxt Drive es un servicio de almacenamiento en la nube basado en la privacidad y seguridad",
         "cta1": "Consigue 2GB",
         "cta1detail": "gratis",
-        "cta2": "Descargar"
+        "cta2": {"mobile": "Obtener App", "desktop": "Descargar"}
     }
 }

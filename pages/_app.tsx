@@ -1,5 +1,5 @@
 import App, { AppProps, AppContext } from 'next/app';
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import '../styles/tailwind.css';
 
 function MyApp({ Component, pageProps }: AppProps) {

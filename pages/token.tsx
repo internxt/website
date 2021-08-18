@@ -1,5 +1,5 @@
 import React from 'react';
-import TopBar from '../components/layout/TopBar';
+import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import Container1 from '../components/token/Container1';
 import Container2 from '../components/token/Container2';
@@ -19,7 +19,7 @@ const Token = ({ metatagsDescriptions, descriptions, data, footerDescriptions, c
 
   return (
     <Layout segmentName="token" title={metatags[0].title} description={metatags[0].description}>
-      <TopBar />
+      <Navbar />
       <Container1 id="1" descriptions={descriptions} />
       <Container2 id="2" descriptions={descriptions} />
       <LoyaltyProgram id="9" descriptions={descriptions} cardDescriptions={cardDescriptions} />

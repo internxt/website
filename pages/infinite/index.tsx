@@ -9,7 +9,7 @@ import Container6 from '../../components/drive/Container6';
 import Container7 from '../../components/drive/Container7';
 import Container8 from '../../components/drive/Container8';
 import Footer from '../../components/layout/Footer';
-import TopBar from '../../components/layout/TopBar';
+import Navbar from '../../components/layout/Navbar';
 import Layout from '../../components/layout/Layout';
 import cookies from '../../lib/cookies';
 import { getDriveDownloadUrl } from '../../lib/get-download-url';
@@ -48,7 +48,7 @@ const Home = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-      <TopBar signUpText="Claim now!" hideMenuItems hideSignIn signUpAction={() => redirectToCheckoutAction(stripeObject)} />
+      <Navbar signUpText="Claim now!" hideMenuItems hideSignIn signUpAction={() => redirectToCheckoutAction(stripeObject)} />
       <Container1 id="1" dealDescriptions={dealDescriptions} />
       <Container3 id="3" descriptions={descriptions} />
       <Container4 id="4" descriptions={descriptions} />

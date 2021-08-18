@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from './TopBar.module.css';
+import styles from './Navbar.module.scss';
 
-export default function TopBar(props) {
+export default function Navbar(props) {
   const router = useRouter();
 
   return (
-    <>
-    </>
+    <div className="navbar">
+      
+    </div>
   );
 }
