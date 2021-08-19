@@ -1,16 +1,27 @@
 {
-    "HeroSection":
-    {
-        "title": {"line1": "Store your files", "line2": "in total privacy"},
-        "subtitle": {"line1": "Internxt Drive is a zero-knowledge file storage", "line2": "service based on best-in-class privacy and security"},
-        "cta1": "Get 2GB",
-        "cta1detail": "for free",
-        "cta2": {"mobile": "Get App", "desktop": "Download"}
-    },
-    "GetStartedSection":
-    {
-        "title": {"line1": "Get started and", "line2": "get 2GB for free"},
-        "subtitle": {"line1": "Our clients are very happy with Internxt Drive, but", "line2": "they are happier knowing they are in total privacy."},
-        "cta1": "Get started"
-    }
+	"HeroSection":
+	{
+		"title": {"line1": "Store your files", "line2": "in total privacy"},
+		"subtitle": {"line1": "Internxt Drive is a zero-knowledge file storage", "line2": "service based on best-in-class privacy and security"},
+		"cta1": "Get 2GB",
+		"cta1detail": "for free",
+		"cta2": {"mobile": "Get App", "desktop": "Download"}
+	},
+	"FeaturesSection":
+	{
+		"eyebrow": "Internxt Drive",
+		"title": {"line1": "More than a cloud", "line2": "storage solution"},
+		"subtitle": {"line1": "Our products are based on your privacy and security.", "line2": "Internxt Drive is just the begining of a full family of", "line3": "products focused on you and your privacy."}
+	},
+	"InvestorsSection":
+	{
+		"title": "Brands trust us",
+		"subtitle": {"line1": "Brands and investors trust us so strongly that", "line2": "we raised more than 1M in 2 years."}
+	},
+	"GetStartedSection":
+	{
+		"title": {"line1": "Get started and", "line2": "get 2GB for free"},
+		"subtitle": {"line1": "Our clients are very happy with Internxt Drive, but", "line2": "they are happier knowing they are in total privacy."},
+		"cta1": "Get started"
+	}
 }

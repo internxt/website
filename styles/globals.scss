@@ -1,4 +1,5 @@
 // Colors
+
 $black: #000000;
 $cool-gray-50: #878d96;
 $cool-gray-60: #697077;
@@ -142,6 +143,135 @@ $l-neutral-30: #ebecf0;
 $l-neutral-10: #fafbfc;
 $l-neutral-20: #f4f5f7;
 
+// Fonts
+
+/*
+@font-face {
+  font-family: "Raleway";
+  font-weight: 700; // <-- here!
+  font-style: normal;
+  font-display: optional;
+  src: local("Raleway"),
+    url("/fonts/raleway-variablefont_wght-webfont.woff2") format("woff2"),
+    url("/fonts/raleway-variablefont_wght-webfont.woff") format("woff");
+}
+*/
+
+/*
+@font-face {
+  font-family: "Neue Einstellung";
+  src: url("../public/fonts/NeueEinstellung-Thin.ttf"),
+       url("../public/fonts/NeueEinstellung-Extralight.ttf"),
+       url("../public/fonts/NeueEinstellung-Light.ttf"),
+       url("../public/fonts/NeueEinstellung-Regular.ttf"),
+       url("../public/fonts/NeueEinstellung-Medium.ttf"),
+       url("../public/fonts/NeueEinstellung-Semibold.ttf"),
+       url("../public/fonts/NeueEinstellung-Bold.ttf"),
+       url("../public/fonts/NeueEinstellung-Extrabold.ttf"),
+       url("../public/fonts/NeueEinstellung-Black.ttf");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Thin";
+  font-weight: 100;
+  font-style: normal;
+  src: local("Neue Einstellung Thin"),
+       url("../public/fonts/NeueEinstellung-Thin.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Thin.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Thin.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Extralight";
+  font-weight: 200;
+  font-style: normal;
+  src: local("Neue Einstellung Extralight"),
+       url("../public/fonts/NeueEinstellung-Extralight.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Extralight.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Extralight.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Extralight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Light";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Neue Einstellung Light"),
+       url("../public/fonts/NeueEinstellung-Light.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Light.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Light.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Neue Einstellung Regular"),
+       url("../public/fonts/NeueEinstellung-Regular.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Regular.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Regular.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Neue Einstellung Medium"),
+       url("../public/fonts/NeueEinstellung-Medium.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Medium.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Medium.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Semibold";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Neue Einstellung Semibold"),
+       url("../public/fonts/NeueEinstellung-Semibold.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Semibold.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Semibold.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Neue Einstellung Bold"),
+       url("../public/fonts/NeueEinstellung-Bold.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Bold.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Bold.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Extrabold";
+  font-weight: 800;
+  font-style: normal;
+  src: local("Neue Einstellung Extrabold"),
+       url("../public/fonts/NeueEinstellung-Extrabold.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Extrabold.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Extrabold.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Extrabold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Einstellung Black";
+  font-weight: 900;
+  font-style: normal;
+  src: local("Neue Einstellung Black"),
+       url("../public/fonts/NeueEinstellung-Black.otf") format("otf"),
+       url("../public/fonts/NeueEinstellung-Black.ttf") format("ttf"),
+       url("../public/fonts/NeueEinstellung-Black.woff") format("woff"),
+       url("../public/fonts/NeueEinstellung-Black.woff2") format("woff2");
+}
+*/
+
+// Global styles
 
 html,
 body {
@@ -190,7 +320,7 @@ p, h1{
   margin: 0;
 }
 
-.title {
+.title, .eyebrow {
   font-weight: 600;
 }
 .subtitle {
@@ -204,6 +334,34 @@ p, h1{
   background-repeat: no-repeat;
 }
 
+.featuredMarquee {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100vw;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $l-neutral-30;
+  }
+}
+
 .getStartedSection {
   background-image: url('../public/images/home/wavesBlueSmall.jpg');
   background-position: center center;
@@ -212,7 +370,7 @@ p, h1{
 }
 
 .logo {
-  background-image: url('../public/logos/Internxt.svg');
+  background-image: url('../public/logos/internxt/internxt.svg');
 	background-position: left top;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -251,8 +409,10 @@ button:focus {
   padding: 0 0 4rem !important;
 }
 
+/*
 .faq-body {
 }
+*/
 
 .faq-row {
   padding: 1.5rem 0.5rem !important;

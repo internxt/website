@@ -3,6 +3,8 @@ import AOS from 'aos';
 
 import HeroSection from '../components/drive/HeroSection';
 import GetStartedSection from '../components/drive/GetStartedSection';
+import InvestorsSection from '../components/drive/InvestorsSection';
+import FeaturesSection from '../components/drive/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
@@ -36,6 +38,8 @@ const Home = ({
         <Navbar lang={navbarLang}/>
         <HeroSection descriptions={descriptions}/>
       </div>
+      <FeaturesSection descriptions={descriptions}/>
+      <InvestorsSection descriptions={descriptions}/>
       <div className="getStartedSection">
         <GetStartedSection descriptions={descriptions}/>
       </div>

@@ -1,16 +1,27 @@
 {
-    "HeroSection":
-    {
-        "title": {"line1": "Guarda archivos", "line2": "de forma segura"},
-        "subtitle": {"line1": "Internxt Drive es un servicio de almacenamiento", "line2": " en la nube basado en la privacidad y seguridad"},
-        "cta1": "Consigue 2GB",
-        "cta1detail": "gratis",
-        "cta2": {"mobile": "Obtener App", "desktop": "Descargar"}
-    },
-    "GetStartedSection":
-    {
-        "title": {"line1": "Empieza ahora y", "line2": "consige 2GB gratis"},
-        "subtitle": {"line1": "Nuestros clientes estan muy contentos con Internxt Drive, pero", "line2": "estan más contentos sabiendo que es totalmente privado."},
-        "cta1": "Empezar ahora"
-    }
+	"HeroSection":
+	{
+		"title": {"line1": "Guarda archivos", "line2": "de forma segura"},
+		"subtitle": {"line1": "Internxt Drive es un servicio de almacenamiento", "line2": " en la nube basado en la privacidad y seguridad"},
+		"cta1": "Consigue 2GB",
+		"cta1detail": "gratis",
+		"cta2": {"mobile": "Obtener App", "desktop": "Descargar"}
+	},
+	"FeaturesSection":
+	{
+		"eyebrow": "Internxt Drive",
+		"title": {"line1": "El mejor sitio para tus", "line2": "archivos y recuerdos"},
+		"subtitle": {"line1": "Our products are based on your privacy and security.", "line2": "Internxt Drive is just the begining of a full family of", "line3": "products focused on you and your privacy."}
+	},
+	"InvestorsSection":
+	{
+		"title": "Confían en nosotros",
+		"subtitle": {"line1": "Nuestros inversores y patrocinadores confían tanto en", "line2": "nosotros que hemos levantado más de 2M en solo 2 años."}
+	},
+	"GetStartedSection":
+	{
+		"title": {"line1": "Empieza ahora y", "line2": "consige 2GB gratis"},
+		"subtitle": {"line1": "Nuestros clientes estan muy contentos con Internxt Drive, pero", "line2": "estan más contentos sabiendo que es totalmente privado."},
+		"cta1": "Empezar ahora"
+	}
 }

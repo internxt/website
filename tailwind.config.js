@@ -12,7 +12,7 @@ module.exports = {
       xl: '1280px'
     },
     colors: {
-      transparent: 'transparent',
+      transparent: 'rgba(0,0,0,0)',
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
