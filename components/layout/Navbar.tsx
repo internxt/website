@@ -8,7 +8,7 @@ export default function Navbar({lang}) {
   return (
     <section>
       <div className="content">
-        <div className="navbar items-center flex justify-between py-6 px-6 md:px-10 md:py-8 lg:px-32 lg:py-8">
+        <div className="navbar items-center flex justify-between py-4 px-6 md:px-10 md:py-8 lg:px-32 lg:py-8">
           <a href="/" className="flex flex-shrink-0">
             <img src="../../logos/internxt.svg"/>
           </a>

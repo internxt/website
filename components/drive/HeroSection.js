@@ -8,16 +8,16 @@ const HeroSection = ({ descriptions }) => {
   return (
     <section>
       <div className="content pt-8 pb-4">
-        <div className={`flex flex-col md:flex-row items-center justify-between w-full my-12`}>
+        <div className={`flex flex-col md:flex-row items-center justify-between w-full my-6`}>
           <div className="flex w-auto md:hidden mx-20 mb-6">
             <img src="/images/drive/devicesMobileView.png" draggable="false"/>
           </div>
           <div className={`flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 flex flex-col w-screen sm:w-auto text-center md:text-left`}>
-            <h1 className={`title mb-8 text-5xl lg:text-6xl`}>
-              {description.title.line1}<br/>{description.title.line2}
+            <h1 className={`title mb-4 md:mb-8 text-4xl md:text-5xl lg:text-6xl`}>
+              {description.title.line1}<br className="hidden sm:inline-flex"/> {description.title.line2}
             </h1>
-            <p className={`mb-8 text-lg lg:text-xl`}>
-            {description.subtitle.line1}<br/>{description.subtitle.line2}
+            <p className={`mb-8 md:mb-8 text-lg lg:text-xl`}>
+            {description.subtitle.line1}<br className="hidden sm:inline-flex"/> {description.subtitle.line2}
             </p>
             <div>
               <a href="https://drive.internxt.com/new?" target="_blank">
@@ -39,7 +39,8 @@ const HeroSection = ({ descriptions }) => {
             </div>
           </div>
           <div className="hidden md:flex flex-grow max-w-2xl">
-            <img src="/images/drive/devicesAscCut.png" draggable="false"/>
+            <img className="hidden xl:flex" src="/images/drive/devicesAsc.png" draggable="false"/>
+            <img className="flex xl:hidden" src="/images/drive/devicesAscCut.png" draggable="false"/>
           </div>
         </div>
       </div>
