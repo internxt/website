@@ -17,7 +17,7 @@ export default function Navbar({lang}) {
               <a href="/" className="mr-6 lg:mr-8 text-neutral-300 focus:text-neutral-700 font-medium">{lang.products}</a>
               <a href="/" className="mr-6 lg:mr-8 text-neutral-300 focus:text-neutral-700 font-medium">{lang.download}</a>
               <a href="/" className="mr-6 lg:mr-8 text-neutral-300 focus:text-neutral-700 font-medium">{lang.pricing}</a>
-              <a href="/" className="mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{lang.login}</a>
+              <a href="/login" className="mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{lang.login}</a>
             </div>
             <a href="https://drive.internxt.com/new?" target="_blank">
               <button

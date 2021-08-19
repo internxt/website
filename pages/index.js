@@ -32,10 +32,13 @@ const Home = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
       <div className="heroSection">
+      
         <Navbar lang={navbarLang}/>
         <HeroSection descriptions={descriptions}/>
       </div>
-      <GetStartedSection descriptions={descriptions}/>
+      <div className="getStartedSection">
+        <GetStartedSection descriptions={descriptions}/>
+      </div>
     </Layout>
   );
 };

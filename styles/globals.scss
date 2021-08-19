@@ -198,10 +198,17 @@ p, h1{
 }
 
 .heroSection {
-	background-image: url('../public/images/drive/Background.png');
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+  background-image: url('../public/images/home/Background.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.getStartedSection {
+  background-image: url('../public/images/home/wavesBlueSmall.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .logo {

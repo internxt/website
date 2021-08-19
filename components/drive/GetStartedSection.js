@@ -1,15 +1,13 @@
 import React from 'react'
 import styles from './GetStartedSection.module.scss';
-import { isMobile } from "react-device-detect";
 
 const GetStartedSection = ({ descriptions }) => {
   const description = descriptions["GetStartedSection"];
 
   return (
-    <section className="bg-blue-60 text-white">
+    <section className="text-white">
       <div className="content">
-        <div className={`flex flex-col items-center justify-center w-full`}>
-          <div className={`flex-shrink-0 px-6 md:px-0 my-8 flex flex-col w-full text-center`}>
+        <div className={`flex flex-col items-center justify-center w-full text-center flex-shrink-0 px-10 md:px-0 py-8`}>
             <h2 className={`mb-4 text-3xl font-semibold`}>
               {description.title.line1}<br className="sm:hidden"/> {description.title.line2}
             </h2>
@@ -26,7 +24,6 @@ const GetStartedSection = ({ descriptions }) => {
                 </button>
               </a>
             </div>
-          </div>
         </div>
       </div>
     </section>

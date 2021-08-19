@@ -16,6 +16,11 @@ module.exports = {
         destination: '/es',
         permanent: false,
       },
+      {
+        source: '/login',
+        destination: 'https://drive.internxt.com/login',
+        permanent: false,
+      }
     ];
   },
   i18n: {
