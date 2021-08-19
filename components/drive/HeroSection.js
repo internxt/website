@@ -21,6 +21,7 @@ const HeroSection = ({ descriptions }) => {
             <p className={`mb-8 md:mb-8 text-lg lg:text-xl`}>
             {description.subtitle.line1}<br className="hidden sm:inline-flex"/> {description.subtitle.line2}
             </p>
+						
             <div>
               <a href="https://drive.internxt.com/new" target="_blank">
                 <button
