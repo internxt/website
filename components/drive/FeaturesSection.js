@@ -1,15 +1,12 @@
 import React from 'react'
-import styles from './HeroSection.module.scss';
-import { isMobile } from "react-device-detect";
-import Marquee from "react-fast-marquee";
+import styles from './FeaturesSection.module.scss';
 
-const HeroSection = ({ descriptions }) => {
-  const description = descriptions["HeroSection"];
+const FeaturesSection = ({ descriptions }) => {
+  const description = descriptions["FeaturesSection"];
 
   return (
     <section>
-      <div className="content pt-8">
-
+      <div className="content pt-8 pb-4">
         <div className={`flex flex-col md:flex-row items-center justify-between w-full sm:mb-6`}>
           <div className="flex w-auto md:hidden mx-20 mb-6">
             <img src="/images/home/devicesMobileView.png" draggable="false"/>
@@ -45,33 +42,9 @@ const HeroSection = ({ descriptions }) => {
             <img className="flex xl:hidden" src="/images/home/devicesAscCut.png" draggable="false"/>
           </div>
         </div>
-
-				<div className="flex lg:hidden">
-					<Marquee className="bg-white" gradientColor="[255,255,255]" gradientWidth="32px" speed="30">
-						<div className="featured flex flex-row w-full p-6">
-							<img className="mr-12" src="../../logos/featured/forbes.svg" draggable="false"/>
-							<img className="mr-12" src="../../logos/featured/businessinsider.svg" draggable="false"/>
-							<img className="mr-12" src="../../logos/featured/techradar.svg" draggable="false"/>
-							<img className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false"/>
-							<img className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false"/>
-							<img src="../../logos/featured/elpais.svg" draggable="false"/>
-						</div>
-					</Marquee>
-				</div>
-        <div className="overflow-hidden hidden lg:flex">
-          <div className="featured flex flex-row w-full p-6 md:px-10 lg:px-32 bg-white overflow-x-auto">
-            <img className="mr-10" src="../../logos/featured/forbes.svg" draggable="false"/>
-            <img className="mr-10" src="../../logos/featured/businessinsider.svg" draggable="false"/>
-            <img className="mr-10" src="../../logos/featured/techradar.svg" draggable="false"/>
-            <img className="mr-10" src="../../logos/featured/techcrunch.svg" draggable="false"/>
-            <img className="mr-10" src="../../logos/featured/lavanguardia.svg" draggable="false"/>
-            <img src="../../logos/featured/elpais.svg" draggable="false"/>
-          </div>
-        </div>
-
       </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default FeaturesSection;

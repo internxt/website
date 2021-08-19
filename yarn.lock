@@ -6392,6 +6392,11 @@ react-faq-component@^1.3.1:
   resolved "https://registry.yarnpkg.com/react-faq-component/-/react-faq-component-1.3.1.tgz#3dad142b7dddc971f66684ee7155e743c6307a86"
   integrity sha512-5JkmFu+WqeyXaf2fuYIoP5snP81S3EWreNdraWLtwiGiN5TpinjpOt59OgPZTDOfXfAjOfNPaVWYateh7IFI7g==
 
+react-fast-marquee@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-fast-marquee/-/react-fast-marquee-1.2.1.tgz#8a8ee91ec0cee04bcff7f1ea5c3fd5a2c4dc227d"
+  integrity sha512-rd9ZDhiUrrL2puZNlnb633df/1gjtknuIaf749LIgTLXa18fzPIdFBrz4VjERu1ECUdU9tniaF5FuosNt/GYKQ==
+
 react-is@16.13.1, react-is@^16.3.2, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
