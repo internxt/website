@@ -15,23 +15,23 @@ const InvestorsSection = ({ descriptions }) => {
               {description.subtitle.line1}<br className="hidden sm:inline-flex"/> {description.subtitle.line2}<br className="hidden sm:inline-flex"/> {description.subtitle.line3}
             </p>
 
-            <div className="flex flex-row justify-center flex-wrap sm:px-10">
-              <div className="flex flex-shrink-0 w-1/2 md:w-1/3 xl:w-44 h-20 items-center justify-center">
+            <div className="flex flex-row justify-around flex-wrap sm:px-10">
+              <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
                 <img src="../../logos/investors/ovhcloud.svg" draggable="false"/>
               </div>
-              <div className="flex flex-shrink-0 w-1/2 md:w-1/3 xl:w-44 h-20 items-center justify-center">
+              <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
                 <img src="../../logos/investors/blackberry.svg" draggable="false"/>
               </div>
-              <div className="flex flex-shrink-0 w-1/2 md:w-1/3 xl:w-44 h-20 items-center justify-center">
+              <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
                 <img src="../../logos/investors/stripe.svg" draggable="false"/>
               </div>
-              <div className="flex flex-shrink-0 w-1/2 md:w-1/3 xl:w-44 h-20 items-center justify-center">
+              <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
                 <img src="../../logos/investors/esade.svg" draggable="false"/>
               </div>
-              <div className="flex flex-shrink-0 w-1/2 md:w-1/3 xl:w-44 h-20 items-center justify-center">
+              <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
                 <img src="../../logos/investors/ycombinator.svg" draggable="false"/>
               </div>
-              <div className="flex flex-shrink-0 w-1/2 md:w-1/3 xl:w-44 h-20 items-center justify-center">
+              <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
                 <img src="../../logos/investors/angelscapital.svg" draggable="false"/>
               </div>
             </div>
