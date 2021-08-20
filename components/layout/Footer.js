@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Accordion, Card, Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 import EmailNewsletter from '../EmailNewsletter';
 
 const Footer = (props) => {

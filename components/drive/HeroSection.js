@@ -14,11 +14,11 @@ const HeroSection = ({ descriptions }) => {
           <div className="flex w-auto md:hidden mx-20 mb-6">
             <img src="/images/home/devicesMobileView.png" draggable="false"/>
           </div>
-          <div className={`flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 flex flex-col w-screen sm:w-auto text-center md:text-left`}>
+          <div className={`flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 lg:mr-16 flex flex-col w-screen sm:w-auto text-center md:text-left`}>
             <h1 className={`title mb-4 md:mb-8 text-4xl md:text-5xl lg:text-6xl`}>
               {description.title.line1}<br className="hidden sm:inline-flex"/> {description.title.line2}
             </h1>
-            <p className={`mb-8 md:mb-8 text-lg lg:text-xl`}>
+            <p className={`mb-8 md:mb-8 text-lg lg:text-xl text-neutral-500`}>
             {description.subtitle.line1}<br className="hidden sm:inline-flex"/> {description.subtitle.line2}
             </p>
 						
