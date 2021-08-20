@@ -10,11 +10,11 @@
 	"FeaturesSection":
 	{
 		"eyebrow": "INTERNXT DRIVE",
-		"title": {"line1": "More than a cloud", "line2": "storage solution"},
+		"title": {"line1": "The perfect place", "line2": "for all your files"},
 		"subtitle": {"line1": "Our products are based on your privacy and security.", "line2": "Internxt Drive is just the begining of a full family of", "line3": "products focused on you and your privacy."},
 		"cta": "Discover Internxt Drive",
 		"feature1": {"title": {"line1": "Secure", "line2": "by design"}, "description": "Your files are encrypted before leaving your device, so only you can access your files, no tricks, no hidden things, just privacy, that’s Internxt.", "cta": "How zero-knowledge works"},
-		"feature2": {"title": {"line1": "Multi", "line2": "device"}, "description": "We not only provide you a web app, but a whole family of apps for all your devices and needs", "cta": "Download apps"},
+		"feature2": {"title": {"line1": "Multi", "line2": "device"}, "description": "Access the whole family of apps adapted for all your devices to suit all your needs.", "cta": "Download apps"},
 		"feature3": {"title": {"line1": "Privacy, that's", "line2": "the question"}, "description": "Unlike other competitors, our business model is not based on ads, but on you. We don’t access or sell your data.", "cta": "Privacy at Internxt"}
 	},
 	"InvestorsSection":
