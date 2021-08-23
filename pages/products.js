@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-import HeroSection from '../components/drive/HeroSection';
-import GetStartedSection from '../components/drive/GetStartedSection';
-import InvestorsSection from '../components/drive/InvestorsSection';
-import FeaturesSection from '../components/drive/FeaturesSection';
+import HeroSection from '../components/products/HeroSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
@@ -12,8 +9,8 @@ import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
 import setUTM from '../lib/conversions';
 
-const Home = ({
-  metatagsDescriptions, langJson, lang, cardDescriptions, navbarLang, footerLang, downloadUrl
+const Products = ({
+  metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
@@ -32,17 +29,12 @@ const Home = ({
   }, []);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-      <div className="heroSectionHome">
-        <Navbar textContent={navbarLang} lang={lang}/>
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={lang}/>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
+      <div className="heroSection">
+        <Navbar textContent={navbarLang}/>
+        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl}/>
       </div>
-      <FeaturesSection textContent={langJson["FeaturesSection"]} lang={lang}/>
-      <InvestorsSection textContent={langJson["InvestorsSection"]}/>
-      <div className="getStartedSection">
-        <GetStartedSection textContent={langJson["GetStartedSection"]} lang={lang}/>
-      </div>
-      <Footer textContent={footerLang} lang={lang}/>
+      <Footer textContent={footerLang}/>
     </Layout>
   );
 };
@@ -62,9 +54,9 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      downloadUrl, lang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
+      downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
     },
   };
 }
 
-export default Home;
+export default Products;

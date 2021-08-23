@@ -1,8 +1,7 @@
 {
     "products": "Products",
     "about": "About us",
-    "download": "Download",
     "pricing": "Pricing",
     "login": "Log in",
-    "getstarted": "Get started"
+    "getStarted": "Get started"
 }
