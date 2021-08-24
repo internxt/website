@@ -3,5 +3,23 @@
     "about": "Sobre nosotros",
     "pricing": "Precios",
     "login": "Iniciar sesión",
-    "getStarted": "Empezar ahora"
+    "getStarted": "Empezar ahora",
+    "productsMenu" : {
+        "allProducts": "Ver todos los productos",
+        "web": {
+            "title": "Web",
+            "description": "Accede a tus archivos sin salir del navegador",
+            "link": "Abrir Drive Web"
+        },
+        "desktop": {
+            "title": "Desktop",
+            "description": "Sincroniza tu nube con tu ordenador",
+            "link": "Descargar Desktop app"
+        },
+        "mobile": {
+            "title": "Mobile",
+            "description": "Todos tus archivos en la palma de tu mano",
+            "link": "Obtener app"
+        }
+    }
 }

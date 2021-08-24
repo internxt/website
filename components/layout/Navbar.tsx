@@ -7,24 +7,6 @@ import { Fragment } from 'react'
 export default function Navbar({textContent, lang}) {
   const router = useRouter();
 
-  const solutions = [
-    {
-      name: 'Insights',
-      description: 'Measure actions your users take',
-      href: '##'
-    },
-    {
-      name: 'Automations',
-      description: 'Create your own targeted content',
-      href: '##'
-    },
-    {
-      name: 'Reports',
-      description: 'Keep track of your growth',
-      href: '##'
-    },
-  ]
-
   return (
     <section>
       <div className="content">
@@ -38,15 +20,98 @@ export default function Navbar({textContent, lang}) {
           
           <div className="links">
             <div className="hidden md:inline-flex">
-              <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className={`mr-6 lg:mr-8 ${router.pathname === '/products' ? `text-neutral-700 ${styles.selected}` : `text-neutral-300`} focus:text-neutral-700 font-medium`}>{textContent.products}</a>
-              <a href="/" className="mr-6 lg:mr-8 text-neutral-300 focus:text-neutral-700 font-medium">{textContent.pricing}</a>
-              <a href="/" className="mr-6 lg:mr-8 text-neutral-300 focus:text-neutral-700 font-medium">{textContent.about}</a>
-              <a href="/login" className="mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{textContent.login}</a>
+              <a href={`${router.pathname === '/pricings' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/pricings')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">{textContent.pricing}</a>
+              <div className="max-w-sm mr-6 lg:mr-8">
+                <Popover className="relative">
+                  {({ open }) => (
+                    <>
+                      <Popover.Button className={`transition duration-150 ease-in-out font-medium text-neutral-700`}>
+                        <span className={`flex ${open ? 'text-neutral-80' : ''}`}>{textContent.products}<img className="mt-0.5 ml-3 transform rotate-90" src="/icons/chevronBoldNeutral80.svg" draggable="false"/></span>
+                      </Popover.Button>
+
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-200"
+                        enterFrom="opacity-0 translate-y-1"
+                        enterTo="opacity-100 translate-y-0"
+                        leave="transition ease-in duration-150"
+                        leaveFrom="opacity-100 translate-y-0"
+                        leaveTo="opacity-0 translate-y-1"
+                      >
+                        <Popover.Panel className="absolute z-10 w-screen max-w-sm transform -translate-x-1/2 left-1/2 lg:max-w-3xl mt-6">
+                          <div className="p-10 pb-12 bg-neutral-10 rounded-lg shadow-xl ring-1 ring-neutral-30 overflow-hidden">
+                            
+                            <div className="flex pb-6 justify-between items-end">
+                              <div className="text-xs font-semibold text-neutral-100">INTERNXT DRIVE</div>
+                              <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl"><span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span><img className=" ml-1.5 transform scale-75" src="/icons/chevronNeutral80.svg" draggable="false"/></a>
+                            </div>
+                            
+                            <div className="relative grid gap-8 lg:grid-cols-3 lg:gap-16">
+
+                              <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                                <div className="space-y-2">
+                                  <p className="text-2xl font-medium text-neutral-700">
+                                    {textContent.productsMenu.web.title}
+                                  </p>
+                                  <p className="text-normal text-neutral-500">
+                                    {textContent.productsMenu.web.description}
+                                  </p>
+                                </div>
+                                <a href="https://drive.internxt.com" target="_blank" className="text-sm text-blue-60 font-semibold">
+                                  <div className="flex flex-row items-center"><img className="mt-0.5 mr-2" src="/icons/newTab.svg" draggable="false"/>{textContent.productsMenu.web.link}</div>
+                                </a>
+                              </div>
+
+                              <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                                <div className="space-y-2">
+                                  <p className="text-2xl font-medium text-neutral-700">
+                                    {textContent.productsMenu.desktop.title}
+                                  </p>
+                                  <p className="text-normal text-neutral-500">
+                                    {textContent.productsMenu.desktop.description}
+                                  </p>
+                                </div>
+                                <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row text-sm text-blue-60 font-semibold">
+                                  <span className="flex flex-shrink-0">
+                                    {textContent.productsMenu.desktop.link}
+                                  </span>
+                                  <img className="mt-0.5 ml-2 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
+                                </a>
+                              </div>
+
+                              <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                                <div className="space-y-2">
+                                  <p className="text-2xl font-medium text-neutral-700">
+                                    {textContent.productsMenu.mobile.title}
+                                  </p>
+                                  <p className="text-normal text-neutral-500">
+                                    {textContent.productsMenu.mobile.description}
+                                  </p>
+                                </div>
+                                <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row text-sm text-blue-60 font-semibold">
+                                  <span className="flex flex-shrink-0">
+                                    {textContent.productsMenu.mobile.link}
+                                  </span>
+                                  <img className="mt-0.5 ml-2 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
+                                </a>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </>
+                  )}
+                </Popover>
+              </div>
+              <a href={`${router.pathname === '/abouts' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/abouts')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">{textContent.about}</a>
+              <a href="/login" className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{textContent.login}</a>
             </div>
             <a href="https://drive.internxt.com/new" target="_blank">
               <button
                 type="button"
-                className="flex justify-center sm:inline-flex px-4 py-2 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
+                className="flex justify-center sm:inline-flex px-4 py-1 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
               >
                 {textContent.getStarted}
               </button>
@@ -54,72 +119,6 @@ export default function Navbar({textContent, lang}) {
           </div>
         </div>
       </div>
-
-
-
-      <div className="w-full max-w-sm px-4 fixed top-0 hidden">
-        <Popover className="relative">
-          {({ open }) => (
-            <>
-              <Popover.Button
-                className={`
-                  ${open ? '' : 'text-opacity-90'}
-                  text-white group bg-orange-700 px-3 py-2 rounded-md inline-flex items-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
-              >
-                <span>Solutions</span>
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-                  <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                      {solutions.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                        >
-                          <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-900">
-                              {item.name}
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              {item.description}
-                            </p>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                    <div className="p-4 bg-gray-50">
-                      <a
-                        href="##"
-                        className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                      >
-                        <span className="flex items-center">
-                          <span className="text-sm font-medium text-gray-900">
-                            Documentation
-                          </span>
-                        </span>
-                        <span className="block text-sm text-gray-500">
-                          Start integrating products and tools
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
-      </div>
-
 
     </section>
     

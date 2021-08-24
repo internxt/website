@@ -1,0 +1,24 @@
+{
+	"HeroSection":
+	{
+		"title": "Internxt Drive",
+		"subtitle": {"line1": "El lugar perfecto para todos tus archivos,", "line2": " accesible desde todos tus dispositivos."},
+		"download": "Descargar",
+		"otherPlatforms": "Otras platformas"
+	},
+	"CardsSection":
+	{
+		"eyebrow": "INTERNXT DRIVE",
+		"title": {"line1": "Tus archivos, en todos", "line2": "tus dispositivos"},
+		"subtitle": {"line1": "Accede a todos tus archivos desde el navegador,", "line2": "tu ordenador y tu móvil."},
+		"card1": {"title": "Drive Mobile", "description": "All the power of Internxt Drive and all your files right into your pocket."},
+		"card2": {"title": "Drive Desktop", "description": "Sync your Internxt folder on your computer with your Internxt cloud."},
+		"card3": {"title": "Drive Web", "description": "Access your files just with a browser from anywhere in total privacy."}
+	},
+	"GetStartedSection":
+	{
+		"title": {"line1": "Empieza ahora y", "line2": "consige 2GB gratis"},
+		"subtitle": {"line1": "Nuestros clientes estan muy contentos con Internxt Drive, pero", "line2": "estan más contentos sabiendo que es totalmente privado."},
+		"cta1": "Empezar ahora"
+	}
+}

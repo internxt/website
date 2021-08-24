@@ -13,7 +13,7 @@ import { getDriveDownloadUrl } from '../lib/get-download-url';
 import setUTM from '../lib/conversions';
 
 const Home = ({
-  metatagsDescriptions, langJson, lang, cardDescriptions, navbarLang, footerLang, downloadUrl
+  metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, deviceLang
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
@@ -34,15 +34,15 @@ const Home = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
       <div className="heroSectionHome">
-        <Navbar textContent={navbarLang} lang={lang}/>
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={lang}/>
+        <Navbar textContent={navbarLang} lang={deviceLang}/>
+        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
       </div>
-      <FeaturesSection textContent={langJson["FeaturesSection"]} lang={lang}/>
+      <FeaturesSection textContent={langJson["FeaturesSection"]} lang={deviceLang}/>
       <InvestorsSection textContent={langJson["InvestorsSection"]}/>
       <div className="getStartedSection">
-        <GetStartedSection textContent={langJson["GetStartedSection"]} lang={lang}/>
+        <GetStartedSection textContent={langJson["GetStartedSection"]} lang={deviceLang}/>
       </div>
-      <Footer textContent={footerLang} lang={lang}/>
+      <Footer textContent={footerLang} lang={deviceLang}/>
     </Layout>
   );
 };
@@ -51,6 +51,7 @@ export async function getServerSideProps(ctx) {
   const downloadUrl = await getDriveDownloadUrl(ctx);
 
   const lang = ctx.locale;
+  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/home.json`);
@@ -62,7 +63,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      downloadUrl, lang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
+      downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
     },
   };
 }

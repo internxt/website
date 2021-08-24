@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './FeaturesSection.module.scss';
+import styles from './CardsSection.module.scss';
 
-const FeaturesSection = ({textContent, lang}) => {
+const CardsSection = ({textContent, lang}) => {
   return (
     <section className="bg-neutral-10">
       <div className="content px-6 pb-24 flex flex-col">
@@ -13,11 +13,8 @@ const FeaturesSection = ({textContent, lang}) => {
               {textContent.title.line1}<br className="hidden sm:flex"/> {textContent.title.line2}
             </h2>
             <p className={`mb-6 text-lg text-neutral-500`}>
-            {textContent.subtitle.line1}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line2}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line3}
+            {textContent.subtitle.line1}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line2}
             </p>
-            <a href={`${lang ? (lang === "en" ? "" : lang) : ""}/products`} className="text-lg font-semibold sm:font-normal text-blue-60">
-              <div className="flex flex-row items-center">{textContent.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBoldBlue60.svg" draggable="false"/></div>
-            </a>
         </div>
 
         <div className="grid mx-auto grid-cols-2 grid-rows-1 gap-6 sm:gap-10 lg:p-10 max-w-5xl">
@@ -25,13 +22,13 @@ const FeaturesSection = ({textContent, lang}) => {
           <div className={`col-span-2 ${styles.featureBox} grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
             <div className={`sm:row-auto flex flex-col flex-shrink-0 pb-0 p-12 sm:pb-12 lg:p-16 space-y-6`}>
               <span className="text-5xl sm:text-4xl font-semibold">
-                {textContent.feature1.title.line1}<br/>{textContent.feature1.title.line2}
+                {textContent.card1.title}
               </span>
               <span className="text-lg text-neutral-500">
-                {textContent.feature1.description}
+                {textContent.card1.description}
               </span>
               <a href="https://help.internxt.com/en/articles/5387164-what-is-zero-knowledge-encryption" target="_blank" className="text-lg text-blue-60">
-                <div className="flex flex-row items-center">{textContent.feature1.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
+                <div className="flex flex-row items-center">{textContent.card1.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
               </a>
             </div>
             <div className={`${styles.securebydesignImage}`} role="img" alt="file being encrypted" aria-label="file being encrypted"></div>
@@ -41,13 +38,13 @@ const FeaturesSection = ({textContent, lang}) => {
             <img className="flex lg:max-w-xs mb-6" src="/images/home/devicesDesc.png" draggable="false" alt="dektop, laptop and phone with Internxt app"/>
             <div className="flex flex-col text-left space-y-6">
               <span className="text-5xl sm:text-4xl font-semibold">
-                {textContent.feature2.title.line1}<br className="flex sm:hidden"/> {textContent.feature2.title.line2}
+                {textContent.card2.title}
               </span>
               <span className="text-lg text-neutral-500">
-                {textContent.feature2.description}
+                {textContent.card2.description}
               </span>
               <a href={`${lang ? (lang === "en" ? "" : lang) : ""}/products`} className="text-lg text-blue-60">
-                <div className="flex flex-row items-center">{textContent.feature2.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
+                <div className="flex flex-row items-center">{textContent.card2.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
               </a>
             </div>
           </div>
@@ -56,13 +53,13 @@ const FeaturesSection = ({textContent, lang}) => {
             <img className="h-16 w-12 sm:h-24 sm:w-20 mb-6" src="/icons/lock.svg" draggable="false" alt="privacy lock icon"/>
             <div className="flex flex-col text-left space-y-6">
               <span className="text-5xl sm:text-4xl font-semibold">
-                {textContent.feature3.title.line1}<br className="hidden sm:flex"/> {textContent.feature3.title.line2}
+                {textContent.card3.title}
               </span>
               <span className="text-lg text-neutral-500">
-                {textContent.feature3.description}
+                {textContent.card3.description}
               </span>
               <a href="/" target="_blank" className="text-lg text-blue-60">
-                <div className="flex flex-row items-center">{textContent.feature3.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
+                <div className="flex flex-row items-center">{textContent.card3.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
               </a>
             </div>
           </div>
@@ -74,4 +71,4 @@ const FeaturesSection = ({textContent, lang}) => {
   );
 };
 
-export default FeaturesSection;
+export default CardsSection;
