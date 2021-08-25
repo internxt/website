@@ -1,18 +1,73 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import styles from './Navbar.module.scss';
-import { Popover, Transition } from '@headlessui/react'
+import { Popover, Transition, Disclosure } from '@headlessui/react'
+import { Squeeze as Hamburger } from 'hamburger-react'
 import { Fragment } from 'react'
+import { MinusIcon } from '@heroicons/react/solid'
 
 export default function Navbar({textContent, lang}) {
   const router = useRouter();
+  const [navbarBG, setNavbarBG] = React.useState(false)
+  const [showMobileMenu, setShowMobileMenu] = React.useState(false)
+  const handleScroll = () => {
+    (window.pageYOffset > 0) ? setNavbarBG(true) : setNavbarBG(false)
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  })
 
   return (
-    <section>
-      <div className="content">
-        <div className="navbar items-center flex justify-between p-4 md:px-10 md:py-8 lg:px-32 lg:py-8">
-          <div className="flex flex-row space-x-4 md:space-x-0 pl-2">
-            <img className="flex md:hidden" src="../../icons/menu.svg" alt="menu icon"/>
+    <section className={`flex items-center fixed w-full h-16 transition-all duration-75 sm:duration-500 bg-white ${showMobileMenu || navbarBG ? 'bg-opacity-100' : 'bg-opacity-0'} ${navbarBG ? styles.nabvarScrolled : ''} z-40`}>
+      <div className="content w-full">
+        <div className="navbar items-center flex justify-between px-4 md:px-10 lg:px-32">
+          <div className="flex flex-row space-x-4 md:space-x-0">
+            <div className="flex md:hidden">
+              <Hamburger label="Show menu" size={24} color="#253858" onToggle={toggled => { setShowMobileMenu(toggled) }} />
+              
+              <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${showMobileMenu ? 'opacity-100' : 'opacity-0'}`}></div>
+              <div className={`transition-all duration-500 flex flex-col fixed left-0 w-full top-14 overflow-hidden bg-white text-xl ${showMobileMenu ? 'h-full pb-14 overflow-y-auto' : 'h-0'}`}>
+                <div className="my-6 font-medium">
+                  <Disclosure as="div">
+                    {({ open }) => (
+                      <div className={`transition duration-300 delay-200 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                        <div className={`${open ? 'bg-neutral-20' : ''}`}>
+                          
+                          <Disclosure.Button className={`flex justify-between items-center w-full px-8 py-3 font-medium ${open ? 'bg-neutral-10' : ''}`}>
+                            <div className={`flex flex-row`}>{textContent.products}</div>
+                            <div className={`relative w-6 h-6`}>
+                              <MinusIcon className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-neutral-100' : 'text-neutral-50 -rotate-180'}`} />
+                              <MinusIcon className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-neutral-100' : 'text-neutral-50 -rotate-90'}`} />
+                            </div>
+                          </Disclosure.Button>
+
+                          <Transition
+                            enter="transition duration-200 ease-out"
+                            enterFrom="transform scale-95 opacity-0"
+                            enterTo="transform scale-100 opacity-100"
+                            leave="transition duration-200 ease-out"
+                            leaveFrom="transform scale-100 opacity-100"
+                            leaveTo="transform scale-95 opacity-0"
+                          >
+                            <Disclosure.Panel className="flex flex-col py-3 text-neutral-500 mb-4">
+                              <a href={`${router.pathname === '/products#web' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#web')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.web.titleMenu}</a>
+                              <a href={`${router.pathname === '/products#desktop' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#desktop')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.desktop.titleMenu}</a>
+                              <a href={`${router.pathname === '/products#mobile' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#mobile')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.mobile.titleMenu}</a>
+                            </Disclosure.Panel>
+                          </Transition>
+
+                        </div>
+                      </div>
+                    )}
+                  </Disclosure>
+                  
+                  <a href={`${router.pathname === '/pricings' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/pricings')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.pricing}</a>
+                  <a href={`${router.pathname === '/abouts' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/abouts')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.about}</a>
+                  <a href="/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.login}</a>
+                </div>
+              </div>
+            </div>
             <a href="/" className="flex flex-shrink-0">
               <img src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
             </a>
@@ -39,7 +94,7 @@ export default function Navbar({textContent, lang}) {
                         leaveTo="opacity-0 -translate-y-2"
                       >
                         <Popover.Panel className="absolute z-10 w-screen max-w-sm transform -translate-x-1/2 left-1/2 lg:max-w-3xl mt-4">
-                          <div className="p-10 pb-12 bg-neutral-10 rounded-lg shadow-xl ring-1 ring-neutral-30 overflow-hidden">
+                          <div className={`p-10 pt-8 pb-12 bg-neutral-10 rounded-lg shadow-xl ring-1 ring-neutral-30 overflow-hidden`}>
                             
                             <div className="flex pb-4 justify-between items-end">
                               <div className="text-xs font-semibold text-neutral-100">INTERNXT DRIVE</div>

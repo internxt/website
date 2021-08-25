@@ -19,7 +19,7 @@ const CardsSection = ({textContent, lang}) => {
 
         <div className="grid mx-auto grid-cols-2 grid-rows-1 gap-6 sm:gap-10 lg:p-10 max-w-5xl">
           
-          <div className={`col-span-2 ${styles.featureBox} grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
+          <div id="mobile" className={`col-span-2 ${styles.featureBox} grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
             <div className={`sm:row-auto flex flex-col flex-shrink-0 pb-0 p-12 sm:pb-12 lg:p-16 space-y-6`}>
               <span className="text-5xl sm:text-4xl font-semibold">
                 {textContent.card1.title}
@@ -34,7 +34,7 @@ const CardsSection = ({textContent, lang}) => {
             <div className={`${styles.securebydesignImage}`} role="img" alt="file being encrypted" aria-label="file being encrypted"></div>
           </div>
 
-          <div className={`col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col md:flex-1 justify-self-start p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8`}>
+          <div id="desktop" className={`col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col md:flex-1 justify-self-start p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8`}>
             <img className="flex lg:max-w-xs mb-6" src="/images/home/devicesDesc.png" draggable="false" alt="dektop, laptop and phone with Internxt app"/>
             <div className="flex flex-col text-left space-y-6">
               <span className="text-5xl sm:text-4xl font-semibold">
@@ -49,7 +49,7 @@ const CardsSection = ({textContent, lang}) => {
             </div>
           </div>
 
-          <div className={`col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col justify-self-start md:flex-1 p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8`}>
+          <div id="web" className={`col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col justify-self-start md:flex-1 p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8`}>
             <img className="h-16 w-12 sm:h-24 sm:w-20 mb-6" src="/icons/lock.svg" draggable="false" alt="privacy lock icon"/>
             <div className="flex flex-col text-left space-y-6">
               <span className="text-5xl sm:text-4xl font-semibold">

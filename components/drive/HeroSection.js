@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 const HeroSection = ({textContent, download, lang}) => {
   return (
     <section>
-      <div className="content pt-8">
+      <div className="content pt-24">
 
         <div className={`flex flex-col md:flex-row items-center justify-between w-full sm:mb-6`}>
           <div className="flex w-auto md:hidden mx-20 mb-6">

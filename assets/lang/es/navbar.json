@@ -8,16 +8,19 @@
         "allProducts": "Ver todos los productos",
         "web": {
             "title": "Web",
+            "titleMenu": "Drive Web",
             "description": "Accede a tus archivos sin salir del navegador",
             "link": "Abrir Drive Web"
         },
         "desktop": {
             "title": "Desktop",
+            "titleMenu": "Drive Desktop",
             "description": "Sincroniza tu nube con tu ordenador",
             "link": "Descargar Desktop app"
         },
         "mobile": {
             "title": "Mobile",
+            "titleMenu": "Drive Mobile",
             "description": "Todos tus archivos en la palma de tu mano",
             "link": "Obtener app"
         }

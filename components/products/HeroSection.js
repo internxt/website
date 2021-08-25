@@ -5,7 +5,7 @@ import { isMobile } from "react-device-detect";
 const HeroSection = ({textContent, download, lang, platform}) => {
   return (
     <section>
-      <div className="content pt-8">
+      <div className="content pt-24">
 
         <div className={`flex flex-col md:flex-row items-center justify-between w-full sm:mb-6`}>
           <div className={`flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 lg:mr-16 flex flex-col w-screen sm:w-auto text-center md:text-left`}>
