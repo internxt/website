@@ -8,8 +8,8 @@ import { MinusIcon } from '@heroicons/react/solid'
 
 export default function Navbar({textContent, lang}) {
   const router = useRouter();
+  const [menuState, setMenuState] = React.useState(false)
   const [navbarBG, setNavbarBG] = React.useState(false)
-  const [showMobileMenu, setShowMobileMenu] = React.useState(false)
   const handleScroll = () => {
     (window.pageYOffset > 0) ? setNavbarBG(true) : setNavbarBG(false)
   }
@@ -19,19 +19,19 @@ export default function Navbar({textContent, lang}) {
   })
 
   return (
-    <section className={`flex items-center fixed w-full h-16 transition-all duration-75 sm:duration-500 bg-white ${showMobileMenu || navbarBG ? 'bg-opacity-100' : 'bg-opacity-0'} ${navbarBG ? styles.nabvarScrolled : ''} z-40`}>
+    <section className={`flex items-center fixed w-full h-16 transition-all duration-75 sm:duration-500 bg-white ${menuState || navbarBG ? 'bg-opacity-100' : 'bg-opacity-0'} ${navbarBG ? styles.nabvarScrolled : ''} z-40`}>
       <div className="content w-full">
         <div className="navbar items-center flex justify-between px-4 md:px-10 lg:px-32">
           <div className="flex flex-row space-x-4 md:space-x-0">
             <div className="flex md:hidden">
-              <Hamburger label="Show menu" size={24} color="#253858" onToggle={toggled => { setShowMobileMenu(toggled) }} />
+              <Hamburger label="Show menu" size={24} color="#253858" toggled={menuState} toggle={setMenuState} />
               
-              <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${showMobileMenu ? 'opacity-100' : 'opacity-0'}`}></div>
-              <div className={`transition-all duration-500 flex flex-col fixed left-0 w-full top-14 overflow-hidden bg-white text-xl ${showMobileMenu ? 'h-full pb-14 overflow-y-auto' : 'h-0'}`}>
+              <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${menuState ? 'opacity-100' : 'opacity-0'}`}></div>
+              <div className={`transition-all duration-500 flex flex-col fixed left-0 w-full top-14 overflow-hidden bg-white text-xl ${menuState ? 'h-full pb-14 overflow-y-auto' : 'h-0'}`}>
                 <div className="my-6 font-medium">
                   <Disclosure as="div">
                     {({ open }) => (
-                      <div className={`transition duration-300 delay-200 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                      <div className={`transition duration-300 delay-200 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
                         <div className={`${open ? 'bg-neutral-20' : ''}`}>
                           
                           <Disclosure.Button className={`flex justify-between items-center w-full px-8 py-3 font-medium ${open ? 'bg-neutral-10' : ''}`}>
@@ -51,9 +51,9 @@ export default function Navbar({textContent, lang}) {
                             leaveTo="transform scale-95 opacity-0"
                           >
                             <Disclosure.Panel className="flex flex-col py-3 text-neutral-500 mb-4">
-                              <a href={`${router.pathname === '/products#web' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#web')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.web.titleMenu}</a>
-                              <a href={`${router.pathname === '/products#desktop' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#desktop')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.desktop.titleMenu}</a>
-                              <a href={`${router.pathname === '/products#mobile' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#mobile')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.mobile.titleMenu}</a>
+                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#web' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#web')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.web.titleMenu}</a>
+                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#desktop' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#desktop')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.desktop.titleMenu}</a>
+                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#mobile' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#mobile')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.mobile.titleMenu}</a>
                             </Disclosure.Panel>
                           </Transition>
 
@@ -62,9 +62,9 @@ export default function Navbar({textContent, lang}) {
                     )}
                   </Disclosure>
                   
-                  <a href={`${router.pathname === '/pricings' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/pricings')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.pricing}</a>
-                  <a href={`${router.pathname === '/abouts' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/abouts')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.about}</a>
-                  <a href="/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${showMobileMenu ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.login}</a>
+                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/pricings' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/pricings')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.pricing}</a>
+                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/abouts' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/abouts')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.about}</a>
+                  <a onClick={() => {setMenuState(false)}} href="/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.login}</a>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function Navbar({textContent, lang}) {
                             
                             <div className="flex pb-4 justify-between items-end">
                               <div className="text-xs font-semibold text-neutral-100">INTERNXT DRIVE</div>
-                              <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl"><span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span><img className=" ml-1.5 transform scale-75" src="/icons/chevronNeutral80.svg" draggable="false"/></a>
+                              <Popover.Button><a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl"><span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span><img className=" ml-1.5 transform scale-75" src="/icons/chevronNeutral80.svg" draggable="false"/></a></Popover.Button>
                             </div>
                             
                             <div className="relative grid gap-8 lg:grid-cols-3 lg:gap-16">
@@ -112,9 +112,11 @@ export default function Navbar({textContent, lang}) {
                                     {textContent.productsMenu.web.description}
                                   </p>
                                 </div>
-                                <a href="https://drive.internxt.com" target="_blank" className="text-sm text-blue-60 font-semibold">
-                                  <div className="flex flex-row items-center"><img className="mt-0.5 mr-2" src="/icons/newTab.svg" draggable="false"/>{textContent.productsMenu.web.link}</div>
-                                </a>
+                                <Popover.Button>
+                                  <a href="https://drive.internxt.com" target="_blank" className="text-sm text-blue-60 font-semibold">
+                                    <div className="flex flex-row items-center"><img className="mt-0.5 mr-2" src="/icons/newTab.svg" draggable="false"/>{textContent.productsMenu.web.link}</div>
+                                  </a>
+                                </Popover.Button>
                               </div>
 
                               <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
@@ -126,12 +128,14 @@ export default function Navbar({textContent, lang}) {
                                     {textContent.productsMenu.desktop.description}
                                   </p>
                                 </div>
-                                <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
-                                  <span className="flex flex-shrink-0">
-                                    {textContent.productsMenu.desktop.link}
-                                  </span>
-                                  <img className="mt-0.5 transform scale-75" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
-                                </a>
+                                <Popover.Button>
+                                  <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#desktop')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
+                                    <span className="flex flex-shrink-0">
+                                      {textContent.productsMenu.desktop.link}
+                                    </span>
+                                    <img className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
+                                  </a>
+                                </Popover.Button>
                               </div>
 
                               <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
@@ -143,12 +147,14 @@ export default function Navbar({textContent, lang}) {
                                     {textContent.productsMenu.mobile.description}
                                   </p>
                                 </div>
-                                <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
-                                  <span className="flex flex-shrink-0">
-                                    {textContent.productsMenu.mobile.link}
-                                  </span>
-                                  <img className="mt-0.5 transform scale-75" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
-                                </a>
+                                <Popover.Button>
+                                  <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#mobile')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
+                                    <span className="flex flex-shrink-0">
+                                      {textContent.productsMenu.mobile.link}
+                                    </span>
+                                    <img className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
+                                  </a>
+                                </Popover.Button>
                               </div>
 
                             </div>

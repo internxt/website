@@ -9,11 +9,11 @@
 	"CardsSection":
 	{
 		"eyebrow": "INTERNXT DRIVE",
-		"title": {"line1": "Tus archivos, en todos", "line2": "tus dispositivos"},
+		"title": {"line1": "Todos tus archivos, en", "line2": "todos tus dispositivos"},
 		"subtitle": {"line1": "Accede a todos tus archivos desde el navegador,", "line2": "tu ordenador y tu móvil."},
-		"card1": {"title": "Drive Mobile", "description": "All the power of Internxt Drive and all your files right into your pocket."},
-		"card2": {"title": "Drive Desktop", "description": "Sync your Internxt folder on your computer with your Internxt cloud."},
-		"card3": {"title": "Drive Web", "description": "Access your files just with a browser from anywhere in total privacy."}
+		"mobile": {"title": "Drive Mobile", "description": "All the power of Internxt Drive and all your files right into your pocket."},
+		"desktop": {"title": "Drive Desktop", "description": "Sync your Internxt folder on your computer with your Internxt cloud.", "cta": "Descargar", "ctaConcat": "para"},
+		"web": {"title": "Drive Web", "description": "Access your files from your browser from anywhere in total privacy.", "cta": "Abrir Drive Web"}
 	},
 	"GetStartedSection":
 	{

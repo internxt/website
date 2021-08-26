@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './CardsSection.module.scss';
 
-const CardsSection = ({textContent, lang}) => {
+const CardsSection = ({textContent, lang, download, platform}) => {
   return (
     <section className="bg-neutral-10">
       <div className="content px-6 pb-24 flex flex-col">
@@ -18,50 +18,85 @@ const CardsSection = ({textContent, lang}) => {
         </div>
 
         <div className="grid mx-auto grid-cols-2 grid-rows-1 gap-6 sm:gap-10 lg:p-10 max-w-5xl">
-          
-          <div id="mobile" className={`col-span-2 ${styles.featureBox} grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
+
+          <div id="web" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} z-10 col-span-2 ${styles.featureBox} grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
+            
             <div className={`sm:row-auto flex flex-col flex-shrink-0 pb-0 p-12 sm:pb-12 lg:p-16 space-y-6`}>
               <span className="text-5xl sm:text-4xl font-semibold">
-                {textContent.card1.title}
+                {textContent.web.title}
               </span>
               <span className="text-lg text-neutral-500">
-                {textContent.card1.description}
+                {textContent.web.description}
               </span>
-              <a href="https://help.internxt.com/en/articles/5387164-what-is-zero-knowledge-encryption" target="_blank" className="text-lg text-blue-60">
-                <div className="flex flex-row items-center">{textContent.card1.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
+              <a href="https://drive.internxt.com" target="_blank" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'} text-lg text-blue-60`}>
+                <div className="flex flex-row items-center"><img className="w-3 h-3 mt-0.5 mr-3" src="/icons/newTab.svg" draggable="false"/>{textContent.web.cta}</div>
               </a>
             </div>
-            <div className={`${styles.securebydesignImage}`} role="img" alt="file being encrypted" aria-label="file being encrypted"></div>
+
+            <div className="grid place-content-end">
+              <img className="flex max-h-60 sm:max-h-full" src="/images/products/safari.png" draggable="false" alt="Internxt Drive Web on Safari"/>
+            </div>
+
           </div>
 
-          <div id="desktop" className={`col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col md:flex-1 justify-self-start p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8`}>
-            <img className="flex lg:max-w-xs mb-6" src="/images/home/devicesDesc.png" draggable="false" alt="dektop, laptop and phone with Internxt app"/>
-            <div className="flex flex-col text-left space-y-6">
+          <div id="desktop" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col md:flex-1 justify-self-start bg-white rounded-3xl overflow-hidden space-y-8`}>
+            
+            <div className="flex flex-col text-left space-y-6 p-12 px-8 lg:p-16 lg:py-14">
               <span className="text-5xl sm:text-4xl font-semibold">
-                {textContent.card2.title}
+                {textContent.desktop.title}
               </span>
               <span className="text-lg text-neutral-500">
-                {textContent.card2.description}
+                {textContent.desktop.description}
               </span>
-              <a href={`${lang ? (lang === "en" ? "" : lang) : ""}/products`} className="text-lg text-blue-60">
-                <div className="flex flex-row items-center">{textContent.card2.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
+              <a href={download} target="_self" className={`${(platform === 'Windows' || platform === 'macOS' || platform === 'Linux') ? 'flex' : 'hidden'}`}>
+                <button type="button" className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75">
+                  {textContent.desktop.cta} {textContent.desktop.ctaConcat} {platform}
+                </button>
               </a>
             </div>
+
+            <img className="flex" src="/images/products/mackbook.png" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
+          
           </div>
 
-          <div id="web" className={`col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col justify-self-start md:flex-1 p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8`}>
-            <img className="h-16 w-12 sm:h-24 sm:w-20 mb-6" src="/icons/lock.svg" draggable="false" alt="privacy lock icon"/>
-            <div className="flex flex-col text-left space-y-6">
+          <div id="mobile" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col justify-self-start md:flex-1 bg-white rounded-3xl overflow-hidden space-y-8`}>
+            
+            <div className="flex flex-col text-left space-y-6 p-12 px-8 lg:p-16 lg:py-14">
               <span className="text-5xl sm:text-4xl font-semibold">
-                {textContent.card3.title}
+                {textContent.mobile.title}
               </span>
               <span className="text-lg text-neutral-500">
-                {textContent.card3.description}
+                {textContent.mobile.description}
               </span>
-              <a href="/" target="_blank" className="text-lg text-blue-60">
-                <div className="flex flex-row items-center">{textContent.card3.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
-              </a>
+
+              <div>
+                <div className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex flex-row space-x-4 justify-between'}`}>
+                  <a href={download} className="flex justify-center mt-2 max-h-4">
+                    <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                    <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                    
+                  </a>
+                  <a href={download} className="flex justify-center mt-2 max-h-4">
+                    <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                    <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                  </a>
+                </div>
+
+                <a href={download} className={`${(platform === 'iOS' || platform === 'Android') ? 'flex' : 'hidden'} justify-center mt-2 max-h-4`}>
+                  <img className={`h-14 ${(platform === 'iOS' && lang === 'en') ? '' : 'hidden'}`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                  <img className={`h-14 ${(platform === 'iOS' && lang === 'es') ? '' : 'hidden'}`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                  <img className={`h-14 ${(platform === 'Android' && lang === 'en') ? '' : 'hidden'}`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                  <img className={`h-14 ${(platform === 'Android' && lang === 'es') ? '' : 'hidden'}`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                </a>
+              </div>   
             </div>
+
+            <div className="flex items-end">
+              <img className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+              <img className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+              <img className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+            </div>
+            
           </div>
 
         </div>
