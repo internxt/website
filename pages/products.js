@@ -32,7 +32,7 @@ const Products = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
       <div className="heroSection">
-        <Navbar textContent={navbarLang}/>
+        <Navbar textContent={navbarLang} lang={devideLang}/>
         <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={devideLang} platform={devicePlatform}/>
         <CardsSection textContent={langJson["CardsSection"]} download={downloadUrl} lang={devideLang} platform={devicePlatform}/>
       </div>

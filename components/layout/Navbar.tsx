@@ -51,9 +51,9 @@ export default function Navbar({textContent, lang}) {
                             leaveTo="transform scale-95 opacity-0"
                           >
                             <Disclosure.Panel className="flex flex-col py-3 text-neutral-500 mb-4">
-                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#web' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#web')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.web.titleMenu}</a>
-                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#desktop' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#desktop')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.desktop.titleMenu}</a>
-                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#mobile' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#mobile')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.mobile.titleMenu}</a>
+                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#web' : ((lang ? lang : '') + '/products#web')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.web.titleMenu}</a>
+                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#desktop' : ((lang ? lang : '') + '/products#desktop')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.desktop.titleMenu}</a>
+                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#mobile' : ((lang ? lang : '') + '/products#mobile')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.mobile.titleMenu}</a>
                             </Disclosure.Panel>
                           </Transition>
 
@@ -62,20 +62,28 @@ export default function Navbar({textContent, lang}) {
                     )}
                   </Disclosure>
                   
-                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/pricings' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/pricings')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.pricing}</a>
-                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/abouts' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/abouts')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.about}</a>
-                  <a onClick={() => {setMenuState(false)}} href="/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>{textContent.login}</a>
+                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/pricings' ? '' : ((lang ? lang : '') + '/pricings')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                    {textContent.pricing}
+                  </a>
+                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/abouts' ? '' : ((lang ? lang : '') + '/abouts')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                    {textContent.about}
+                  </a>
+                  <a onClick={() => {setMenuState(false)}} href="/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                    {textContent.login}
+                  </a>
                 </div>
               </div>
             </div>
-            <a href="/" className="flex flex-shrink-0">
+            <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
               <img src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
             </a>
           </div>
           
           <div className="links">
             <div className="hidden md:inline-flex">
-              <a href={`${router.pathname === '/pricings' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/pricings')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">{textContent.pricing}</a>
+              <a href={`${router.pathname === '/pricings' ? '' : ((lang ? lang : '') + '/pricings')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">
+                {textContent.pricing}
+              </a>
               <div className="max-w-sm mr-6 lg:mr-8">
                 <Popover className="relative">
                   {({ open }) => (
@@ -98,7 +106,7 @@ export default function Navbar({textContent, lang}) {
                             
                             <div className="flex pb-4 justify-between items-end">
                               <div className="text-xs font-semibold text-neutral-100">INTERNXT DRIVE</div>
-                              <Popover.Button><a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products')}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl"><span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span><img className=" ml-1.5 transform scale-75" src="/icons/chevronNeutral80.svg" draggable="false"/></a></Popover.Button>
+                              <Popover.Button><a href={`${router.pathname === '/products' ? '' : ((lang ? lang : '') + '/products')}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl"><span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span><img className=" ml-1.5 transform scale-75" src="/icons/chevronNeutral80.svg" draggable="false"/></a></Popover.Button>
                             </div>
                             
                             <div className="relative grid gap-8 lg:grid-cols-3 lg:gap-16">
@@ -129,7 +137,7 @@ export default function Navbar({textContent, lang}) {
                                   </p>
                                 </div>
                                 <Popover.Button>
-                                  <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#desktop')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
+                                  <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? lang : '') + '/products#desktop')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
                                     <span className="flex flex-shrink-0">
                                       {textContent.productsMenu.desktop.link}
                                     </span>
@@ -148,7 +156,7 @@ export default function Navbar({textContent, lang}) {
                                   </p>
                                 </div>
                                 <Popover.Button>
-                                  <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/products#mobile')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
+                                  <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? lang : '') + '/products#mobile')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
                                     <span className="flex flex-shrink-0">
                                       {textContent.productsMenu.mobile.link}
                                     </span>
