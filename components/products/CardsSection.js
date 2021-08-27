@@ -19,7 +19,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
 
         <div className="grid mx-auto grid-cols-2 grid-rows-1 gap-6 sm:gap-10 lg:p-10 max-w-5xl">
 
-          <div id="web" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} z-10 col-span-2 ${styles.featureBox} grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
+          <div id="web" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
             
             <div className={`sm:row-auto flex flex-col flex-shrink-0 pb-0 p-12 sm:pb-12 lg:p-16 space-y-6`}>
               <span className="text-5xl sm:text-4xl font-semibold">
@@ -39,9 +39,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
 
           </div>
 
-          <div id="desktop" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col md:flex-1 justify-self-start bg-white rounded-3xl overflow-hidden space-y-8`}>
+          <div id="desktop" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden space-y-8`}>
             
-            <div className="flex flex-col text-left space-y-6 p-12 px-8 lg:p-16 lg:py-14">
+            <div className="flex flex-col text-left space-y-6 pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
               <span className="text-5xl sm:text-4xl font-semibold">
                 {textContent.desktop.title}
               </span>
@@ -55,13 +55,15 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               </a>
             </div>
 
-            <img className="flex" src="/images/products/mackbook.png" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
+            <div className="flex items-end content-end">
+              <img className="flex" src="/images/products/mackbook.png" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
+            </div>
           
           </div>
 
-          <div id="mobile" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col justify-self-start md:flex-1 bg-white rounded-3xl overflow-hidden space-y-8`}>
+          <div id="mobile" data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden`}>
             
-            <div className="flex flex-col text-left space-y-6 p-12 px-8 lg:p-16 lg:py-14">
+            <div className="flex flex-col text-left space-y-6 pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
               <span className="text-5xl sm:text-4xl font-semibold">
                 {textContent.mobile.title}
               </span>
@@ -71,12 +73,12 @@ const CardsSection = ({textContent, lang, download, platform}) => {
 
               <div>
                 <div className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex flex-row space-x-4 justify-between'}`}>
-                  <a href={download} className="flex justify-center mt-2 max-h-4">
+                  <a href={download} className="flex justify-center mt-2">
                     <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
                     <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
                     
                   </a>
-                  <a href={download} className="flex justify-center mt-2 max-h-4">
+                  <a href={download} className="flex justify-center mt-2">
                     <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
                     <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
                   </a>
@@ -91,7 +93,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               </div>   
             </div>
 
-            <div className="flex items-end">
+            <div className="flex items-end content-end">
               <img className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
               <img className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
               <img className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
