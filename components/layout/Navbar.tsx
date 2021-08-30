@@ -54,6 +54,7 @@ export default function Navbar({textContent, lang}) {
                               <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#web' : ((lang ? lang : '') + '/products#web')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.web.titleMenu}</a>
                               <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#desktop' : ((lang ? lang : '') + '/products#desktop')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.desktop.titleMenu}</a>
                               <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '#mobile' : ((lang ? lang : '') + '/products#mobile')}`} className={`flex w-full px-8 py-3`}>{textContent.productsMenu.mobile.titleMenu}</a>
+                              <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/products' ? '' : ((lang ? lang : '') + '/products')}`} className={`flex w-full px-8 py-3 font-normal text-lg text-neutral-100`}>{textContent.productsMenu.allProducts}</a>
                             </Disclosure.Panel>
                           </Transition>
 

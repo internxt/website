@@ -1014,7 +1014,7 @@ module.exports = {
         'text-base': {
           fontFamily: theme('fontFamily.NeueEinstellung.Regular')
         },
-        'input-wrapper': {
+        'input-wrapper--disabled': {
           flexDirection: 'row',
           borderColor: 'rgba(0,0,0,0.25)',
           borderRadius: 10,
@@ -1022,18 +1022,18 @@ module.exports = {
           height: 56,
           alignItems: 'center'
         },
-        input: {
+        'input--disabled': {
           flexGrow: 1,
           marginLeft: 10
         },
-        'input-icon': {
+        'input-icon--disabled': {
           marginRight: 10,
           marginLeft: 7
         },
-        'input-valid': {
+        'input-valid--disabled': {
           borderColor: 'rgba(66,190,101,1)'
         },
-        'input-error': {
+        'input-error--disabled': {
           borderColor: 'rgba(255,0,0,1)'
         }
       };

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import AOS from 'aos';
 
 import HeroSection from '../components/products/HeroSection';
@@ -11,32 +12,19 @@ import { getDriveDownloadUrl, getPlatform } from '../lib/get-download-url';
 import setUTM from '../lib/conversions';
 
 const Products = ({
-  metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, devicePlatform, devideLang
+  lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, devicePlatform, deviceLang
 }) => {
-  const [consentCookie, setConsentCookie] = useState(true);
+  const router = useRouter();
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
-
-  const handleAcceptCookies = () => {
-    localStorage.setItem('CookieConsent', 'true');
-    setConsentCookie(true);
-  };
-
-  useEffect(() => {
-    AOS.init();
-    const cookie = localStorage.getItem('CookieConsent');
-    setUTM();
-
-    if (!cookie) setConsentCookie(false);
-  }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
       <div className="heroSection">
-        <Navbar textContent={navbarLang} lang={devideLang}/>
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={devideLang} platform={devicePlatform}/>
-        <CardsSection textContent={langJson["CardsSection"]} download={downloadUrl} lang={devideLang} platform={devicePlatform}/>
+        <Navbar textContent={navbarLang} lang={deviceLang}/>
+        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
+        <CardsSection textContent={langJson["CardsSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
       </div>
-      <Footer textContent={footerLang}/>
+      <Footer textContent={footerLang} lang={deviceLang}/>
     </Layout>
   );
 };
@@ -46,7 +34,7 @@ export async function getServerSideProps(ctx) {
   const devicePlatform = await getPlatform(ctx);
 
   const lang = ctx.locale;
-  const devideLang = ctx.locale;
+  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/products.json`);
@@ -58,7 +46,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions, devicePlatform, devideLang,
+      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions, devicePlatform, deviceLang,
     },
   };
 }

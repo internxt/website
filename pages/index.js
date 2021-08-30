@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import AOS from 'aos';
 
 import HeroSection from '../components/drive/HeroSection';
@@ -13,22 +14,25 @@ import { getDriveDownloadUrl } from '../lib/get-download-url';
 import setUTM from '../lib/conversions';
 
 const Home = ({
-  metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, deviceLang
+  lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, deviceLang
 }) => {
+  const router = useRouter();
   const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
+  /*
   const handleAcceptCookies = () => {
     localStorage.setItem('CookieConsent', 'true');
     setConsentCookie(true);
   };
+  */
 
   useEffect(() => {
     AOS.init();
-    const cookie = localStorage.getItem('CookieConsent');
+    // const cookie = localStorage.getItem('CookieConsent');
     setUTM();
 
-    if (!cookie) setConsentCookie(false);
+    // if (!cookie) setConsentCookie(false);
   }, []);
 
   return (
@@ -63,7 +67,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
+      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
     },
   };
 }

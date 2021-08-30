@@ -1,25 +1,39 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import Layout from '../components/layout/Layout';
-import TopBar from '../components/layout/TopBar';
 import Footer from '../components/layout/Footer';
+import Navbar from '../components/layout/Navbar';
+import Layout from '../components/layout/Layout';
 import descriptionsEnglish from '../assets/lang/en/terms-and-conditions.json';
 import descriptionsSpanish from '../assets/lang/es/terms-and-conditions.json';
 import cookies from '../lib/cookies';
+import setUTM from '../lib/conversions';
 
 const Legal = (props) => {
   const router = useRouter();
   const { locale } = router;
 
+  const [consentCookie, setConsentCookie] = React.useState(true);
   const description = locale === 'en' ? descriptionsEnglish : descriptionsSpanish;
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'photos');
 
+  const handleAcceptCookies = () => {
+    localStorage.setItem('CookieConsent', 'true');
+    setConsentCookie(true);
+  };
+
+  React.useEffect(() => {
+    const cookie = localStorage.getItem('CookieConsent');
+    setUTM();
+
+    if (!cookie) setConsentCookie(false);
+  }, []);
+
   return (
     <Layout segmentName="legal" title={metatags.title} description={metatags[0].description}>
-      <TopBar />
-      <div className="flex flex-col items-center my-24">
+      <Navbar textContent={props.navbarLang} lang={props.deviceLang}/>
+      <div className="flex flex-col items-center py-32 pt-80">
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className=" text-2xl font-semibold mb-8">
             {description.title}
           </h1>
 
@@ -29,7 +43,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title2}
           </h1>
 
@@ -39,7 +53,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title3}
           </h1>
 
@@ -49,7 +63,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title4}
           </h1>
 
@@ -59,7 +73,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title5}
           </h1>
 
@@ -69,7 +83,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title6}
           </h1>
 
@@ -79,7 +93,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title7}
           </h1>
 
@@ -89,7 +103,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title8}
           </h1>
 
@@ -99,7 +113,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title9}
           </h1>
 
@@ -109,7 +123,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title10}
           </h1>
 
@@ -127,7 +141,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title11}
           </h1>
 
@@ -137,7 +151,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title12}
           </h1>
 
@@ -151,7 +165,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title13}
           </h1>
 
@@ -161,7 +175,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title14}
           </h1>
 
@@ -175,7 +189,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title15}
           </h1>
 
@@ -185,7 +199,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title16}
           </h1>
 
@@ -219,7 +233,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title17}
           </h1>
 
@@ -229,7 +243,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title18}
           </h1>
 
@@ -239,7 +253,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title19}
           </h1>
 
@@ -249,7 +263,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title20}
           </h1>
 
@@ -259,7 +273,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title21}
           </h1>
 
@@ -273,7 +287,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title22}
           </h1>
 
@@ -283,7 +297,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title23}
           </h1>
 
@@ -301,7 +315,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title24}
           </h1>
 
@@ -331,7 +345,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title25}
           </h1>
 
@@ -341,7 +355,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title26}
           </h1>
 
@@ -351,7 +365,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title27}
           </h1>
 
@@ -367,7 +381,7 @@ const Legal = (props) => {
             {description.privacy_policy_intro_part3}
           </p>
 
-          <h5 className=" text-4.5xl mb-6">
+          <h5 className="text-2xl font-semibold mb-6">
             {description.privacy_policy_person_responsible_title}
           </h5>
 
@@ -417,7 +431,7 @@ const Legal = (props) => {
             {description.privacy_policy_person_responsible_part2}
           </p>
 
-          <h5 className=" text-4xl mb-6">
+          <h5 className=" text-4xl mb-6 mt-24">
             {description.privacy_policy_process_personal_data_title}
           </h5>
 
@@ -925,7 +939,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title28}
           </h1>
 
@@ -935,7 +949,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title29}
           </h1>
 
@@ -957,7 +971,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title30}
           </h1>
 
@@ -967,7 +981,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title31}
           </h1>
 
@@ -977,7 +991,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.cookies_title}
           </h1>
           <h5 className=" text-2.5xl mb-6">
@@ -1214,7 +1228,7 @@ const Legal = (props) => {
         </div>
 
         <div className="flex flex-col w-8/12 mb-16">
-          <h1 className=" text-4.5xl mb-6">
+          <h1 className="text-2xl font-semibold mb-6">
             {description.title33}
           </h1>
 
@@ -1223,21 +1237,50 @@ const Legal = (props) => {
           </p>
         </div>
       </div>
-      <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
+      <Footer textContent={props.footerLang} cardDescriptions={props.cardDescriptions} />
+
+      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="1000" className={`cookies ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 right-0 sm:bottom-8 sm:right-8 z-50 p-4 sm:p-6 bg-neutral-10 sm:rounded-lg w-full sm:max-w-xs ring-1 ring-neutral-30 shadow-2xl`}>
+        <div className="flex flex-row sm:flex-col items-center space-x-4 sm:space-y-8 sm:space-x-0">
+          
+          <div className="flex flex-col space-y-2">
+            <p className="text-neutal-700 text-base font-semibold">
+              Internxt uses cookies to make its website easier to use
+            </p>
+            <a
+              href={`${router.pathname === '/legal' ? '' : ((lang ? lang : '') + '/legal')}`}
+              target="_blank"
+              className="text-neutral-100 text-sm"
+            >
+              <div className="flex flex-row items-center"><img className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false"/>Learn more about cookies</div>
+            </a>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleAcceptCookies}
+            className="flex justify-center items-center h-12 w-16 sm:w-full sm:px-4 sm:py-2 border border-transparent rounded-lg text-base font-medium text-neutral-500 bg-neutral-30 active:bg-neutral-40 focus:bg-neutral-30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-30 transition-all duration-75 cursor-pointer"
+          >
+            <span className="hidden sm:flex">Ok, close</span><img className="flex sm:hidden h-6" src="/icons/closeNeutral60.svg" draggable="false"/>
+          </button>
+        </div>
+      </div>
     </Layout>
   );
 };
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
+  const deviceLang = ctx.locale;
+
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
   cookies.setReferralCookie(ctx);
 
   return {
-    props: { metatagsDescriptions, footerDescriptions, cardDescriptions },
+    props: { metatagsDescriptions, navbarLang, deviceLang, footerLang, cardDescriptions },
   };
 }
 

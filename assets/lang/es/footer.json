@@ -1,53 +1,41 @@
 {
-    "title1": "Una familia de productos hechos para la privacidad.",
-    "title2": "Empieza gratis con 2GB",
-    "lifetimeTitle1": "Consigue 2 TB de almacenamiento de por vida",
-    "lifetimeTitle2": "por un pago único de solo €349!",
-    "button": "Empieza ya",
-    "link": "Aprende más",
-    "keep_updated": "Mantente actualizado sobre el producto, noticias y ofertas de Internxt",
-    "newsletter": "Suscríbete",
-    "placeholder": "Tu correo",
-    "button2": "Suscríbete",
-    "copyright": "Copyright © 2021 Internxt",
-    "derechos": "Todos los derechos reservados",
-    "label1": "Productos",
-    "label2": "Compañía",
-    "label3": "Síguenos",
-    "label4": "Únete",
-    "info1": "Sobre nosotros",
-    "info2": "Planes",
-    "info3": "Contacto",
-    "info6": "English",
-    "info4": "Iniciar sesión",
-    "info5": "Empieza ya",
-    "faq": {
-        "title": "",
-        "rows": [
-            {
-                "title": "Productos",
-                "content": ""
-            },
-            {
-                "title": "¿Qué sistemas operativos son compatibles?", 
-                "content": "Puedes ejecutar Internxt Core en Linux, Windows y MacOS."
-            },
-            {
-                "title": "¿Cuál es la cantidad mínima de espacio necesaria para cobrar?", 
-                "content": "El pago mínimo mensual es de 5 euros, lo que corresponde a 500 GB de datos hosted. Sin embargo, puedes aumentar el pago si tienes tokens de Internxt. Revisa nuestra calculadora de pagos en Internxt Core" 
-            },
-            {
-                "title": "¿Cuántos datos puedo esperar que almacene mi nodo?",
-                "content": "Si mantienes tu nodo funcionando casi ininterrumpidamente, deberías ser capaz de alcanzar el pago mínimo en tan solo un mes . Una vez que se alcance ese umbral, ya habrás asegurado un ingreso pasivo mensual recurrente y creciente. No hay un límite real de alojamiento ni límite en la cantidad que puedes ganar si eres un host de  Internxt Core"
-            },
-            {
-                "title": "¿Cómo se selecciona mi nodo para recibir datos?", 
-                "content": "Queremos que los datos estén en manos de los nodos con mejor rendimiento y ofrecer un servicio de primera clase a nuestros clientes. Los nodos se seleccionanen base a su espacio disponible y tiempo de funcionamiento."
-            },
-            {
-                "title": "¿Con qué frecuencia cobraré?",
-                "content": " Los pagos de Internxt Core suelen enviarse durante la primera semana del mes."
-            }
-        ]
-    }
+	"NewsletterSection": {
+		"title": "Mantenme al día",
+		"description": {"line1": "¿Quieres saber de nosotros cuando lancemos nuevos", "line2": "productos o una nueva actualización? Introduce tu", "line3": "correo y nosotros haremos cargo del resto."},
+		"input": "Tu correo",
+		"info": "Puedes cancelar tu suscripción en cualquier momento",
+		"cta": "Suscribirse"
+	},
+	"FooterSection": {
+		"description": "Internxt Drive es un servicio de almacenamiento de archivos de zero-knowledge que se basa en la privacidad absoluta y la seguridad sin compromisos.",
+		"copyright": "Copyright © 2021 Internxt",
+		"sections": {
+			"products": {
+				"title": "Productos",
+				"driveWeb": "Drive Web",
+				"driveDesktop": "Drive Desktop",
+				"driveMobile": "Drive para móvil"
+			},
+			"company": {
+				"title": "Compañía",
+				"about": "Sobre nosotros",
+				"contact": "Contacto",
+				"terms": "Terminos & Privacidad"
+			},
+			"join": {
+				"title": "Únete",
+				"signup": "Crear cuenta",
+				"login": "Iniciar sesión",
+				"downloads": "Descargas"
+			},
+			"follow": {
+				"title": "Síguemos"
+			}
+		}
+	},
+	"Cookies": {
+		"title": "Internxt usa cookies para mejorar la experiencia de navegación",
+		"link": "Más información sobre nuestras cookies",
+		"close": "Ok, cerrar"
+	}
 }
