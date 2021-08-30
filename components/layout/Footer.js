@@ -50,7 +50,7 @@ export default function Footer({textContent, lang}) {
               name="fields[email]"
               type="email"
               placeholder={`${textContent.NewsletterSection.input}`}
-              className={`flex flex-row h-auto px-4 py-3 sm:py-2 outline-none rounded-lg border-2 border-neutral-40 hover:border-neutral-50 focus:border-neutral-60 transition-all duration-75 bg-neutral-10 text-left appearance-none`}
+              className={`flex flex-row h-auto px-4 py-3 sm:py-2 outline-none rounded-lg border-2 border-neutral-40 focus:border-neutral-50 transition-all duration-150 bg-neutral-10 text-left appearance-none`}
               required
             />
             <input

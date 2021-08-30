@@ -19,7 +19,7 @@ export default function Navbar({textContent, lang}) {
   })
 
   return (
-    <section className={`flex items-center fixed w-full h-16 transition-all duration-75 sm:duration-500 bg-white ${menuState || navbarBG ? 'bg-opacity-100' : 'bg-opacity-0'} ${navbarBG ? styles.nabvarScrolled : ''} z-40`}>
+    <section className={`flex items-center fixed w-full h-16 transition-all duration-75 sm:duration-250 bg-white ${menuState || navbarBG ? 'bg-opacity-100' : 'bg-opacity-0'} ${navbarBG ? styles.nabvarScrolled : ''} z-40`}>
       <div className="content w-full">
         <div className="navbar items-center flex justify-between px-4 md:px-10 lg:px-32">
           <div className="flex flex-row space-x-4 md:space-x-0">

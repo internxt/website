@@ -149,6 +149,10 @@ $l-neutral-20: #f4f5f7;
 
 // Global styles
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;

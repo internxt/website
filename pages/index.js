@@ -20,19 +20,9 @@ const Home = ({
   const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
-  /*
-  const handleAcceptCookies = () => {
-    localStorage.setItem('CookieConsent', 'true');
-    setConsentCookie(true);
-  };
-  */
-
   useEffect(() => {
     AOS.init();
-    // const cookie = localStorage.getItem('CookieConsent');
     setUTM();
-
-    // if (!cookie) setConsentCookie(false);
   }, []);
 
   return (

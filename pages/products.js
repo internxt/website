@@ -17,6 +17,11 @@ const Products = ({
   const router = useRouter();
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
+  useEffect(() => {
+    AOS.init();
+    setUTM();
+  }, []);
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
       <div className="heroSection">
