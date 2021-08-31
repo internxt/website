@@ -317,7 +317,7 @@ export default function Footer({textContent, lang}) {
               {textContent.Cookies.title}
             </p>
             <a
-              href={`${router.pathname === '/' ? '' : ((lang ? lang : '') + '/legal')}`}
+              href={`${router.pathname === '/legal' ? '' : ((lang ? lang : '') + '/legal')}`}
               target="_blank"
               className="text-neutral-100 text-sm"
             >

@@ -32,6 +32,23 @@
   }
 }
 
+.navbarBlur {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.navbarSolid {
+  background: rgba(255,255,255,1) !important;
+}
+
+@supports not (backdrop-filter: none) {
+  .nabvarScrolled {
+    background: rgba(255,255,255,1) !important;
+    box-shadow: inset 0 -1px 0 0 #ebecf0;
+  }
+}
+
 .nabvarScrolled {
+  background: rgba(255,255,255,.9);
   box-shadow: inset 0 -1px 0 0 #ebecf0;
 }

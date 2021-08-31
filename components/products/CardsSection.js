@@ -18,7 +18,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
         </div>
 
         <div className="grid mx-auto grid-cols-2 grid-rows-1 gap-6 sm:gap-10 lg:p-10 max-w-5xl">
-
+            
           <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
             
             <div className={`sm:row-auto flex flex-col flex-shrink-0 pb-0 p-12 sm:pb-12 lg:p-16 space-y-6`}>
@@ -40,72 +40,76 @@ const CardsSection = ({textContent, lang, download, platform}) => {
 
           </div>
 
-          <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} relative col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden space-y-8`}>
-            
-            <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
-              <div id="desktop" className="scrollAnchor absolute -top-24"></div>
-              <div className="flex flex-col space-y-6">
-                <span className="text-5xl sm:text-4xl font-semibold">
-                  {textContent.desktop.title}
-                </span>
-                <span className="text-lg text-neutral-500">
-                  {textContent.desktop.description}
-                </span>
-                <a href={download} target="_self" className={`${(platform === 'Windows' || platform === 'macOS' || platform === 'Linux') ? 'flex' : 'hidden'}`}>
-                  <button type="button" className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75">
-                    {textContent.desktop.cta} {textContent.desktop.ctaConcat} {platform}
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-end content-end">
-              <img className="flex" src="/images/products/mackbook.png" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
-            </div>
-          
-          </div>
-
-          <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden`}>
-            
-            <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
-              <div id="mobile" className="scrollAnchor absolute -top-24"></div>
-              <div className="flex flex-col space-y-6">
-                <span className="text-5xl sm:text-4xl font-semibold">
-                  {textContent.mobile.title}
-                </span>
-                <span className="text-lg text-neutral-500">
-                  {textContent.mobile.description}
-                </span>
-
-                <div>
-                  <div className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex flex-row space-x-4 justify-between'}`}>
-                    <a href={download} className="flex justify-center mt-2">
-                      <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
-                      <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
-                      
-                    </a>
-                    <a href={download} className="flex justify-center mt-2">
-                      <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
-                      <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
-                    </a>
-                  </div>
-
-                  <a href={download} className={`${(platform === 'iOS' || platform === 'Android') ? 'flex' : 'hidden'} justify-center mt-2 max-h-4`}>
-                    <img className={`h-14 ${(platform === 'iOS' && lang === 'en') ? '' : 'hidden'}`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
-                    <img className={`h-14 ${(platform === 'iOS' && lang === 'es') ? '' : 'hidden'}`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
-                    <img className={`h-14 ${(platform === 'Android' && lang === 'en') ? '' : 'hidden'}`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
-                    <img className={`h-14 ${(platform === 'Android' && lang === 'es') ? '' : 'hidden'}`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+          <div className="relative">
+            <div id="desktop" className="scrollAnchor absolute -top-24"></div>
+            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} relative col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden space-y-8`}>   
+              
+              <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
+                <div className="flex flex-col space-y-6">
+                  <span className="text-5xl sm:text-4xl font-semibold">
+                    {textContent.desktop.title}
+                  </span>
+                  <span className="text-lg text-neutral-500">
+                    {textContent.desktop.description}
+                  </span>
+                  <a href={download} target="_self" className={`${(platform === 'Windows' || platform === 'macOS' || platform === 'Linux') ? 'flex' : 'hidden'}`}>
+                    <button type="button" className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75">
+                      {textContent.desktop.cta} {textContent.desktop.ctaConcat} {platform}
+                    </button>
                   </a>
                 </div>
               </div>
-            </div>
 
-            <div className="flex items-end content-end">
-              <img className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-              <img className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-              <img className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-            </div>
+              <div className="flex items-end content-end">
+                <img className="flex" src="/images/products/mackbook.png" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
+              </div>
             
+            </div>
+          </div>
+
+          <div className="relative">
+            <div id="mobile" className="scrollAnchor absolute -top-24"></div>
+            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden`}>
+              
+              <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
+                <div className="flex flex-col space-y-6">
+                  <span className="text-5xl sm:text-4xl font-semibold">
+                    {textContent.mobile.title}
+                  </span>
+                  <span className="text-lg text-neutral-500">
+                    {textContent.mobile.description}
+                  </span>
+
+                  <div>
+                    <div className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex flex-row space-x-4 justify-between'}`}>
+                      <a href={download} className="flex justify-center mt-2">
+                        <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                        <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                        
+                      </a>
+                      <a href={download} className="flex justify-center mt-2">
+                        <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                        <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                      </a>
+                    </div>
+
+                    <a href={download} className={`${(platform === 'iOS' || platform === 'Android') ? 'flex' : 'hidden'} justify-center mt-2 max-h-4`}>
+                      <img className={`h-14 ${(platform === 'iOS' && lang === 'en') ? '' : 'hidden'}`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                      <img className={`h-14 ${(platform === 'iOS' && lang === 'es') ? '' : 'hidden'}`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                      <img className={`h-14 ${(platform === 'Android' && lang === 'en') ? '' : 'hidden'}`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                      <img className={`h-14 ${(platform === 'Android' && lang === 'es') ? '' : 'hidden'}`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-end content-end">
+                <img className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+              </div>
+              
+            </div>
           </div>
 
         </div>

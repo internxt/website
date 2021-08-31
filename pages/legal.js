@@ -1238,32 +1238,6 @@ const Legal = (props) => {
         </div>
       </div>
       <Footer textContent={props.footerLang} cardDescriptions={props.cardDescriptions} />
-
-      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="1000" className={`cookies ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 right-0 sm:bottom-8 sm:right-8 z-50 p-4 sm:p-6 bg-neutral-10 sm:rounded-lg w-full sm:max-w-xs ring-1 ring-neutral-30 shadow-2xl`}>
-        <div className="flex flex-row sm:flex-col items-center space-x-4 sm:space-y-8 sm:space-x-0">
-          
-          <div className="flex flex-col space-y-2">
-            <p className="text-neutal-700 text-base font-semibold">
-              Internxt uses cookies to make its website easier to use
-            </p>
-            <a
-              href={`${router.pathname === '/legal' ? '' : ((lang ? lang : '') + '/legal')}`}
-              target="_blank"
-              className="text-neutral-100 text-sm"
-            >
-              <div className="flex flex-row items-center"><img className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false"/>Learn more about cookies</div>
-            </a>
-          </div>
-
-          <button
-            type="button"
-            onClick={handleAcceptCookies}
-            className="flex justify-center items-center h-12 w-16 sm:w-full sm:px-4 sm:py-2 border border-transparent rounded-lg text-base font-medium text-neutral-500 bg-neutral-30 active:bg-neutral-40 focus:bg-neutral-30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-30 transition-all duration-75 cursor-pointer"
-          >
-            <span className="hidden sm:flex">Ok, close</span><img className="flex sm:hidden h-6" src="/icons/closeNeutral60.svg" draggable="false"/>
-          </button>
-        </div>
-      </div>
     </Layout>
   );
 };
