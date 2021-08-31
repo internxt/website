@@ -1237,7 +1237,10 @@ const Legal = (props) => {
           </p>
         </div>
       </div>
-      <Footer textContent={props.footerLang} cardDescriptions={props.cardDescriptions} />
+
+      <div className="bg-neutral-10">
+        <Footer textContent={props.footerLang} cardDescriptions={props.cardDescriptions} />
+      </div>
     </Layout>
   );
 };

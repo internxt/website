@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styles from './PriceCard.module.css';
 
-const PriceCard = ({
+const PriceCardOld = ({
   free, teams, teamMembers, size, pMonth, pre6months, preYear, mostPopular, individual, descriptions,
 }) => {
   const description = descriptions.filter((desc) => desc.id === 'PriceCard');
@@ -175,4 +175,4 @@ const PriceCard = ({
   );
 };
 
-export default PriceCard;
+export default PriceCardOld;

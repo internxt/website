@@ -28,7 +28,9 @@ const Token = ({
         <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
         <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
       </div>
-      <Footer textContent={footerLang} lang={deviceLang}/>
+      <div className="bg-neutral-10">
+        <Footer textContent={footerLang} lang={deviceLang}/>
+      </div>
     </Layout>
   );
 };

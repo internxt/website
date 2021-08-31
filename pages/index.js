@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import AOS from 'aos';
 
-import HeroSection from '../components/drive/HeroSection';
-import GetStartedSection from '../components/drive/GetStartedSection';
-import InvestorsSection from '../components/drive/InvestorsSection';
-import FeaturesSection from '../components/drive/FeaturesSection';
+import HeroSection from '../components/home/HeroSection';
+import GetStartedSection from '../components/home/GetStartedSection';
+import InvestorsSection from '../components/home/InvestorsSection';
+import FeaturesSection from '../components/home/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';

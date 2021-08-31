@@ -2,7 +2,6 @@ import React from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Container1 from '../components/prices/Container1';
-import Container2 from '../components/prices/Container2';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
@@ -13,7 +12,7 @@ const Pricing = (props) => {
     <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description}>
       <Navbar textContent={props.navbarLang} lang={props.deviceLang} cta={['default']} />
       <Container1 id="1" descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
-      <Container2 />
+
       <Footer textContent={props.footerLang} lang={props.deviceLang}/>
     </Layout>
   );
