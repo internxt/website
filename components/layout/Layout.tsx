@@ -11,6 +11,7 @@ interface LayoutProps {
   disableDrift?: boolean
   disableAdtrack?: boolean
   disableJivosite?: boolean
+  segmentEnv?: boolean
 }
 
 export default function Layout({
@@ -21,7 +22,8 @@ export default function Layout({
   disableMailerlite = false,
   disableDrift = true,
   disableAdtrack = false,
-  disableJivosite = false
+  disableJivosite = false,
+  segmentEnv = process.env.NODE_ENV === 'production'
 }: LayoutProps) {
 
   useEffect(() => {
@@ -40,8 +42,7 @@ export default function Layout({
         <meta name="description" content={description}></meta>
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
-        <script src={`https://internxt.com/js/sg.js`}></script>
-        <script dangerouslySetInnerHTML={{ __html: `analytics.load('uEUiW7CGVHP8WDeA4UtK0hEgVZsmPFtb')` }} />
+        {segmentEnv ? <script src="https://internxt.com/js/sg.js"></script> : <script src="/js/segment.js"></script>}
         {!disableDrift && <script src="/js/drift.js"></script>}
         <script dangerouslySetInnerHTML={{
           __html: ` window.intercomSettings = { app_id: "ta2ffq6n" };\

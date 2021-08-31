@@ -61,7 +61,7 @@ const FeaturesSection = ({textContent, lang}) => {
               <span className="text-lg text-neutral-500">
                 {textContent.feature3.description}
               </span>
-              <a href="/" target="_blank" className="text-lg text-blue-60">
+              <a href="/" target="_blank" className="text-lg text-blue-60 hidden">
                 <div className="flex flex-row items-center">{textContent.feature3.cta}<img className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
               </a>
             </div>
