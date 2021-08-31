@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from './HeroSection.module.scss';
-import { isMobile } from "react-device-detect";
-import Marquee from "react-fast-marquee";
 
 const HeroSection = ({textContent, download, lang}) => {
   return (

@@ -25,7 +25,7 @@ const Products = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
       <div className="heroSection">
-        <Navbar textContent={navbarLang} lang={deviceLang}/>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']}/>
         <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
         <CardsSection textContent={langJson["CardsSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
       </div>

@@ -1,0 +1,54 @@
+{
+	"infiniteLifetime": {
+		"eyebrow": "ALMACENAMIENTO INFINITO",
+		"title": {
+			"line1": "Reclama tu suscripción",
+			"line2": "infinita de por vida"
+		},
+		"subtitle": {
+			"line1": "Internxt es un servicio encriptado en la nube, basado en la",
+			"line2": "privacidad y seguridad absoluta. Consigue un plan ilimitado",
+			"line3": "de por vida, por un único pago de 999€, impuestos incluidos."
+		},
+		"previousPrice": "Antes €9,999",
+		"price": "Ahora €999",
+		"input": "Tu correo",
+		"loading": "Cargando...",
+		"cta": "Reclamar oferta"
+	},
+	"lifetime2TB": {
+		"eyebrow": "2TB PARA SIEMPRE",
+		"title": {
+			"line1": "Oferta exclusiva cloud seguro,",
+			"line2": "2TB de por vida"
+		},
+		"subtitle": {
+			"line1": "Internxt es un servicio encriptado en la nube, basado en la",
+			"line2": "privacidad y seguridad absoluta. Consigue un plan de 2TB",
+			"line3": "de por vida, por un único pago de 349€, impuestos incluidos."
+		},
+		"previousPrice": "Antes €499",
+		"price": "Ahora €349",
+		"input": "Tu correo",
+		"loading": "Cargando...",
+		"cta": "Consigue la oferta"
+	},
+	"lifetime10TB": {
+		"eyebrow": "10TB PARA SIEMPRE",
+		"title": {
+			"line1": "Eres tan rápido como para",
+			"line2": "conseguir nuestro lifetime",
+			"line3": "de 10 TB por solo 699€?"
+		},
+		"subtitle": {
+			"line1": "Internxt Drive es un servicio de cloud encriptado que se basa en",
+			"line2": "la privacidad absoluta. Estamos ofreciendo cuentas de 10TB por 699€",
+			"line3": "a unos pocos usuarios. Hazte con una antes de que se acaben!"
+		},
+		"previousPrice": "Antes €2,500",
+		"price": "Ahora €699",
+		"input": "Tu correo",
+		"loading": "Cargando...",
+		"cta": "Consigue ésta super oferta!"
+	}
+}

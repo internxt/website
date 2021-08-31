@@ -6,13 +6,14 @@ import { Squeeze as Hamburger } from 'hamburger-react'
 import { Fragment } from 'react'
 import { MinusIcon } from '@heroicons/react/solid'
 
-export default function Navbar({textContent, lang}) {
+export default function Navbar({textContent, lang, cta}) {
   const router = useRouter();
   const [menuState, setMenuState] = React.useState(false)
   const [navbarBG, setNavbarBG] = React.useState(false)
   const handleScroll = () => {
     (window.pageYOffset > 0) ? setNavbarBG(true) : setNavbarBG(false)
   }
+  cta[0] ? cta[0] : (cta = ['default', null]);
 
   React.useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -63,10 +64,10 @@ export default function Navbar({textContent, lang}) {
                     )}
                   </Disclosure>
                   
-                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/pricings' ? '' : ((lang ? lang : '') + '/pricings')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/pricing' ? '' : ((lang ? lang : '') + '/pricing')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
                     {textContent.pricing}
                   </a>
-                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/abouts' ? '' : ((lang ? lang : '') + '/abouts')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                  <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/about' ? '' : ((lang ? lang : '') + '/about')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
                     {textContent.about}
                   </a>
                   <a onClick={() => {setMenuState(false)}} href="/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
@@ -82,7 +83,7 @@ export default function Navbar({textContent, lang}) {
           
           <div className="links">
             <div className="hidden md:inline-flex">
-              <a href={`${router.pathname === '/pricings' ? '' : ((lang ? lang : '') + '/pricings')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">
+              <a href={`${router.pathname === '/pricing' ? '' : ((lang ? lang : '') + '/pricing')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">
                 {textContent.pricing}
               </a>
               <div className="max-w-sm mr-6 lg:mr-8">
@@ -175,17 +176,31 @@ export default function Navbar({textContent, lang}) {
                   )}
                 </Popover>
               </div>
-              <a href={`${router.pathname === '/abouts' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/abouts')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">{textContent.about}</a>
+              <a href={`${router.pathname === '/about' ? '' : ((lang ? (lang === 'en' ? '' : lang) : '') + '/about')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">{textContent.about}</a>
               <a href="/login" className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{textContent.login}</a>
             </div>
-            <a href="https://drive.internxt.com/new" target="_blank">
+
+            {(cta[0] === 'default') ? (
+              <a href="https://drive.internxt.com/new" target="_blank">
+                <button
+                  type="button"
+                  className="flex justify-center sm:inline-flex px-4 py-1 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
+                >
+                  {textContent.getStarted}
+                </button>
+              </a>
+             ) : ''}
+
+            {(cta[0] === 'checkout') ? (
               <button
                 type="button"
+                onClick={cta[1]}
                 className="flex justify-center sm:inline-flex px-4 py-1 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
               >
-                {textContent.getStarted}
+                {textContent.checkout}
               </button>
-            </a>
+             ) : ''}
+            
           </div>
         </div>
       </div>

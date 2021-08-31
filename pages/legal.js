@@ -30,7 +30,7 @@ const Legal = (props) => {
 
   return (
     <Layout segmentName="legal" title={metatags.title} description={metatags[0].description}>
-      <Navbar textContent={props.navbarLang} lang={props.deviceLang}/>
+      <Navbar textContent={props.navbarLang} lang={props.deviceLang} cta={['default']}/>
       <div className="flex flex-col items-center py-32 pt-80">
         <div className="flex flex-col w-8/12 mb-16">
           <h1 className=" text-2xl font-semibold mb-8">

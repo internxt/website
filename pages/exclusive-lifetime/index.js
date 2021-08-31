@@ -1,66 +1,71 @@
 import React, { useEffect, useState } from 'react';
-import Container1 from '../../components/exclusive-lifetime/Container1';
-import Container3 from '../../components/drive/Container3';
-import Container4 from '../../components/drive/Container4';
-import Container5 from '../../components/drive/Container5';
-import Container6 from '../../components/drive/Container6';
-import Container7 from '../../components/drive/Container7';
-import Container8 from '../../components/drive/Container8';
-import Footer from '../../components/layout/Footer';
-import Layout from '../../components/layout/Layout';
-import TopBar from '../../components/layout/TopBar';
-import { redirectToCheckoutAction } from '../../components/CheckoutForm';
+import AOS from 'aos';
 
-const Lifetime = ({ props }) => {
+import HeroSection from '../../components/exclusive-lifetime/HeroSection';
+import Footer from '../../components/layout/Footer';
+import Navbar from '../../components/layout/Navbar';
+import Layout from '../../components/layout/Layout';
+import cookies from '../../lib/cookies';
+import { getDriveDownloadUrl } from '../../lib/get-download-url';
+import { redirectToCheckoutAction } from '../../components/CheckoutForm';
+import setUTM from '../../lib/conversions';
+
+const Lifetime = ({
+  lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, deviceLang
+}) => {
+  const [consentCookie, setConsentCookie] = useState(true);
   const [stripeObject, setStripeObject] = useState({});
-  const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   useEffect(() => {
+    AOS.init();
+    const cookie = localStorage.getItem('CookieConsent');
+
+    if (!cookie) setConsentCookie(false);
+
     const urlParams = new URLSearchParams(window.location.search);
-    const stripeObj = { product: 'lifetime2TB' };
+    const gclid = urlParams.get('gclid');
+    localStorage.setItem('gclid', gclid);
+
+    const stripeObj = { product: 'lifetime10TB' };
     setStripeObject(stripeObj);
+
+    setUTM();
   }, []);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="exclusive-lifetime">
-      <TopBar hideSignIn={false} signUpAction={() => redirectToCheckoutAction(stripeObject)} signUpText="Claim now!" hideMenuItems />
-      <Container1 id="10" descriptions={props.descriptions} />
-      <Container3 id="3" descriptions={props.descriptions} />
-      <Container4 id="4" descriptions={props.descriptions} />
-      <Container5 id="5" {...props} />
-      <Container6 id="6" descriptions={props.descriptions} />
-      <Container7 id="7" descriptions={props.descriptions} />
-      <Container8 id="8" descriptions={props.descriptions} />
-      <Footer
-        signUpAction={redirectToCheckoutAction}
-        descriptions={props.footerDescriptions}
-        cardDescriptions={props.cardDescriptions}
-      />
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="drive">
+      <div>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['checkout',() => redirectToCheckoutAction(stripeObject)]}/>
+        <HeroSection textContent={langJson["lifetime10TB"]} download={downloadUrl} lang={deviceLang} checkout={() => redirectToCheckoutAction(stripeObject)}/>
+      </div>
+      <div className="bg-neutral-10">
+        <Footer textContent={footerLang} lang={deviceLang}/>
+      </div>
+      
     </Layout>
   );
 };
 
-Lifetime.getInitialProps = async (ctx) => {
-  // saca el idioma del navegador
-  const browserLanguage = ctx.req.headers['accept-language'] && ctx.req.headers['accept-language'].split(',')[0];
+export async function getServerSideProps(ctx) {
+  const downloadUrl = await getDriveDownloadUrl(ctx);
 
-  // array con los tags españoles mas populares
-  const spanishTags = ['es', 'es-ES', 'es-AR', 'es-MX', 'es-CO', 'es-US'];
+  const lang = ctx.locale;
+  const deviceLang = ctx.locale;
 
-  // si el tag coincide con el idioma del navegador devuelvelo
-  const idioma = spanishTags.find((elem) => elem === browserLanguage);
-
-  const lang = idioma ? 'es' : 'en';
-  const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions`);
-  const descriptions = require(`../../assets/lang/${lang}/drive.json`);
-  const footerDescriptions = require(`../../assets/lang/${lang}/footer-descriptions.json`);
+  const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`../../assets/lang/${lang}/lifetime.json`);
+  const navbarLang = require(`../../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../../assets/lang/${lang}/footer.json`);
   const cardDescriptions = require(`../../assets/lang/${lang}/card-descriptions.json`);
+
+  cookies.setReferralCookie(ctx);
 
   return {
     props: {
-      metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions,
+      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
     },
   };
-};
+}
 
 export default Lifetime;

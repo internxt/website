@@ -25,7 +25,7 @@ const Token = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="token">
       <div>
-        <Navbar textContent={navbarLang} lang={deviceLang}/>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
         <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
       </div>
       <Footer textContent={footerLang} lang={deviceLang}/>

@@ -28,7 +28,7 @@ const Home = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
       <div className="heroSectionHome">
-        <Navbar textContent={navbarLang} lang={deviceLang}/>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
         <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
       </div>
       <FeaturesSection textContent={langJson["FeaturesSection"]} lang={deviceLang}/>

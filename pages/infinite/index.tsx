@@ -1,36 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-import Container1 from '../../components/infinite/Container1';
-import Container3 from '../../components/drive/Container3';
-import Container4 from '../../components/drive/Container4';
-import Container5 from '../../components/drive/Container5';
-import Container6 from '../../components/drive/Container6';
-import Container7 from '../../components/drive/Container7';
-import Container8 from '../../components/drive/Container8';
+import HeroSection from '../../components/infinite/HeroSection';
 import Footer from '../../components/layout/Footer';
 import Navbar from '../../components/layout/Navbar';
 import Layout from '../../components/layout/Layout';
 import cookies from '../../lib/cookies';
 import { getDriveDownloadUrl } from '../../lib/get-download-url';
 import { redirectToCheckoutAction } from '../../components/CheckoutForm';
+import setUTM from '../../lib/conversions';
 
-const Home = ({
-  metatagsDescriptions,
-  descriptions,
-  cardDescriptions,
-  footerDescriptions,
-  downloadUrl,
-  dealDescriptions
+const Infinite = ({
+  lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, deviceLang
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
   const [stripeObject, setStripeObject] = useState({});
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
-
-  const handleAcceptCookies = () => {
-    localStorage.setItem('CookieConsent', 'true');
-    setConsentCookie(true);
-  };
 
   useEffect(() => {
     AOS.init();
@@ -44,41 +29,18 @@ const Home = ({
 
     const stripeObj = { product: 'infiniteLifetime' };
     setStripeObject(stripeObj);
+
+    setUTM();
   }, []);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
-      <Navbar signUpText="Claim now!" hideMenuItems hideSignIn signUpAction={() => redirectToCheckoutAction(stripeObject)} />
-      <Container1 id="1" dealDescriptions={dealDescriptions} />
-      <Container3 id="3" descriptions={descriptions} />
-      <Container4 id="4" descriptions={descriptions} />
-      {' '}
-      <Footer descriptions={footerDescriptions} cardDescriptions={cardDescriptions} />
-
-      <div className={consentCookie ? 'hidden' : 'cookies-warning position-fixed mobile:w-60'}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col">
-              <div className="alert alert-cookies alert-dismissible my-0 mobile:text-xxxs mobile:pr-8">
-                Internxt uses cookies to make its website easier to use.
-                <a
-                  href="/legal"
-                  className="alert-cookies__link"
-                >
-                  Learn more about cookies.
-                </a>
-
-                <button
-                  type="button"
-                  onClick={handleAcceptCookies}
-                  className="close alert-cookies__close"
-                >
-                  <span>×</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="drive">
+      <div>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['checkout',() => redirectToCheckoutAction(stripeObject)]}/>
+        <HeroSection textContent={langJson["infiniteLifetime"]} download={downloadUrl} lang={deviceLang} checkout={() => redirectToCheckoutAction(stripeObject)}/>
+      </div>
+      <div className="bg-neutral-10">
+        <Footer textContent={footerLang} lang={deviceLang}/>
       </div>
     </Layout>
   );
@@ -88,20 +50,21 @@ export async function getServerSideProps(ctx) {
   const downloadUrl = await getDriveDownloadUrl(ctx);
 
   const lang = ctx.locale;
+  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions.json`);
-  const descriptions = require(`../../assets/lang/${lang}/drive.json`);
-  const footerDescriptions = require(`../../assets/lang/${lang}/footer-descriptions.json`);
+  const langJson = require(`../../assets/lang/${lang}/lifetime.json`);
+  const navbarLang = require(`../../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../../assets/lang/${lang}/footer.json`);
   const cardDescriptions = require(`../../assets/lang/${lang}/card-descriptions.json`);
-  const dealDescriptions = require(`../../assets/lang/en/deal-descriptions.json`);
 
   cookies.setReferralCookie(ctx);
 
   return {
     props: {
-      downloadUrl, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions, dealDescriptions
+      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
     },
   };
 }
 
-export default Home;
+export default Infinite;

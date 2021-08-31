@@ -8,7 +8,7 @@ import Container6 from '../components/about-us/Container6';
 import Container7 from '../components/about-us/Container7';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
-import TopBar from '../components/layout/TopBar';
+import Navbar from '../components/layout/Navbar';
 import cookies from '../lib/cookies';
 
 const AboutUs = (props) => {
@@ -16,15 +16,14 @@ const AboutUs = (props) => {
 
   return (
     <Layout segmentName="about" title={metatags[0].title} description={metatags[0].description}>
-      <TopBar />
+      <Navbar textContent={props.navbarLang} lang={props.deviceLang} cta={['default']} />
       <Container1 id="1" descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
       <Container2 id="2" descriptions={props.descriptions} />
       <Container3 id="3" descriptions={props.descriptions} />
-      {/*  <Container4 id='4' descriptions={props.descriptions} /> */}
       <Container5 id="5" descriptions={props.descriptions} />
       <Container6 id="6" descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
       <Container7 id="7" descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} articles={props} />
-      <Footer descriptions={props.footerDescriptions} cardDescriptions={props.cardDescriptions} />
+      <Footer textContent={props.footerLang} lang={props.deviceLang}/>
     </Layout>
   );
 };
@@ -45,9 +44,11 @@ export async function getServerSideProps(ctx) {
     } else images.push(null);
   });
   const lang = ctx.locale;
+  const deviceLang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const descriptions = require(`../assets/lang/${lang}/about-us-descriptions.json`);
-  const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
 
   cookies.setReferralCookie(ctx);
@@ -58,8 +59,10 @@ export async function getServerSideProps(ctx) {
       images,
       metatagsDescriptions,
       descriptions,
-      footerDescriptions,
+      footerLang,
+      navbarLang,
       cardDescriptions,
+      deviceLang
     },
   };
 }
