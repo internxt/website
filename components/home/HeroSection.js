@@ -41,7 +41,7 @@ const HeroSection = ({textContent, download, lang}) => {
           </div>
           <div className="hidden md:flex flex-grow max-w-2xl mr-0 xl:mr-32">
             <img className="hidden xl:flex" src="/images/home/devicesAsc.webp" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
-            <img className="flex xl:hidden" src="/images/home/devicesAscCut.png" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
+            <img className="flex xl:hidden" src="/images/home/devicesAscCut.webp" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
           </div>
         </div>
 
