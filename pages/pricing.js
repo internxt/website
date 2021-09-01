@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
-import Container1 from '../components/prices/Container1';
+import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
@@ -10,28 +10,25 @@ const Pricing = (props) => {
 
   return (
     <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description}>
-      <Navbar textContent={props.navbarLang} lang={props.deviceLang} cta={['default']} />
-      <Container1 id="1" descriptions={props.descriptions} cardDescriptions={props.cardDescriptions} />
+      <Navbar textContent={props.navbarLang} lang={props.lang} cta={['default']} />
+      <PriceTable />
 
-      <Footer textContent={props.footerLang} lang={props.deviceLang}/>
+      <Footer textContent={props.footerLang} lang={props.lang}/>
     </Layout>
   );
 };
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const descriptions = require(`../assets/lang/${lang}/prices-descriptions.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
 
   cookies.setReferralCookie(ctx);
 
   return {
     props: {
-      metatagsDescriptions, descriptions, footerLang, cardDescriptions, navbarLang, deviceLang
+      metatagsDescriptions, footerLang, navbarLang, lang
     },
   };
 }

@@ -2,8 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import styles from './PublishedArticle.module.css';
 
-const PublishedArticle = ({ article, image, descriptions }) => {
-  const description = descriptions.filter((desc) => desc.id === 'PublishedArticle');
+const PublishedArticle = ({ textContent, article, image }) => {
 
   return (
     <div className={`${styles.card} col-span-1 overflow-hidden h-full sm:w-84 lg:w-72`}>
@@ -33,10 +32,10 @@ const PublishedArticle = ({ article, image, descriptions }) => {
         <a
           href={article.link}
           target="_blank"
-          className={`${styles.link} hover:opacity-80 absolute bottom-0 mb-6 sm:text-xss lg:text-xxxs mr-1`}
+          className={`${styles.link} hover:opacity-80 absolute bottom-0 mb-6 sm:text-xs lg:text-xs mr-1`}
           rel="noreferrer"
         >
-          {description[0].link}
+          {textContent.link}
         </a>
       </div>
     </div>

@@ -1,0 +1,112 @@
+{
+	"HeroSection": {
+		"description": "Technology should empower each individual, not make them powerless to the corporation. Our intention is to offer a vast range of innovative technology services that doesn’t undermine the privacy of the individual."
+	},
+	"LeadershipSection": {
+		"Employees": [
+			{
+				"name": "Fran Villalba",
+				"position": "Chief Executive Officer"
+			},
+			{
+				"name": "Alberto González",
+				"position": "Software Engineer"
+			},
+			{
+				"name": "Carlos Sala",
+				"position": "Software Engineer"
+			},
+			{
+				"name": "Alex Menor",
+				"position": "Software Engineer"
+			},
+			{
+				"name": "Sergio Gutierrez",
+				"position": "Software Engineer"
+			},
+			{
+				"name": "Joan Mora",
+				"position": "Product Manager"
+			},
+			{
+				"name": "Diego Andrés",
+				"position": "Product Designer"
+			},
+			{
+				"name": "Álvaro Hernández",
+				"position": "Product Designer"
+			},
+			{
+				"name": "Sasha Yudina",
+				"position": "Human Resource Manager"
+			},
+			{
+				"name": "Ainhoa Ribes",
+				"position": "Marketing Assistant"
+			},
+			{
+				"name": "Vicente Belda",
+				"position": "Marketing Assistant"
+			},
+			{
+				"name": "Cadi Silla",
+				"position": "Marketing Assistant"
+			}
+		],
+		"Advisors": [
+			{
+				"name": "Jerome Albert",
+				"position": "Strategy Advisor"
+			}
+		],
+		"Investors": [
+			{
+				"name": "Esade Ban",
+				"bio": "Most reputable business school"
+			},
+			{
+				"name": "Angels Capital",
+				"bio": "Investor of Zeleros & Airhopping"
+			},
+			{
+				"name": "The Venture City",
+				"bio": "Investor of Cabify & Peoople"
+			}
+		],
+		"Partners": [
+			{
+				"name": "Blackberry",
+				"bio": {
+					"line1": "Innovation is profoundly changing the way business works as customers increasingly demand secure solutions.",
+					"line2": "BlackBerry can help Internxt assess Encryption, Infrastructural vulnerabilities, Authentication and Data leak prevention."
+				}
+			},
+			{
+				"name": "Y Combinator",
+				"bio": {
+					"line1": "Startups are most productive when they can spend most of their time building.",
+					"line2": "Y Combinators goal is to create an environment where we can focus exclusively on building products and talking to users on how to improve."
+				}
+			},
+			{
+				"name": "Lanzadera",
+				"bio": {
+					"line1": "Juan Roig is known for being the owner of Mercadona, one of the biggest European corporations.",
+					"line2": "Internxt will receive the strategic help required to take Internxt to the next level. Lanzadera will also help Internxt cover any funding needs."
+				}
+			},
+			{
+				"name": "500 Startups",
+				"bio": {
+					"line1": "500 Startups is one of the most active venture capital firms in the world and has commited over $454M in investment globally.",
+					"line2": "500 Startups have chosen Internxt as one of the top SAAS startups worldwide."
+				}
+			}
+		]
+	},
+	"Articles": {
+		"title": "Latest Published Articles",
+    "link": "Read more posts",
+		"read": "Read article"
+	}
+}

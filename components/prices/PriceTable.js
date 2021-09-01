@@ -1,13 +1,8 @@
 import React, { Fragment, useState } from 'react';
-import Image from 'next/image';
-
-import styles from './Container1.module.css';
-import PriceCardOld from '../cards/PriceCard';
 import PriceCard from './PriceCard';
 import { Transition } from '@headlessui/react'
 
-const Container1 = ({ id, descriptions }) => {
-  const description = descriptions.filter((desc) => desc.id === id);
+const PriceTable = (props) => {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [teams, setTeams] = useState(false);
@@ -147,4 +142,4 @@ const Container1 = ({ id, descriptions }) => {
   );
 };
 
-export default Container1;
+export default PriceTable;

@@ -1257,7 +1257,7 @@ export async function getServerSideProps(ctx) {
   cookies.setReferralCookie(ctx);
 
   return {
-    props: { metatagsDescriptions, navbarLang, deviceLang, footerLang, cardDescriptions },
+    props: { metatagsDescriptions, navbarLang, deviceLang, footerLang },
   };
 }
 

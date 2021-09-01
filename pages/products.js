@@ -13,7 +13,7 @@ import setUTM from '../lib/conversions';
 import { LanguageServiceMode } from 'typescript';
 
 const Products = ({
-  lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, devicePlatform, deviceLang
+  lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, devicePlatform, deviceLang
 }) => {
   const router = useRouter();
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
@@ -46,13 +46,12 @@ export async function getServerSideProps(ctx) {
   const langJson = require(`../assets/lang/${lang}/products.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
 
   cookies.setReferralCookie(ctx);
 
   return {
     props: {
-      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions, devicePlatform, deviceLang,
+      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, devicePlatform, deviceLang,
     },
   };
 }

@@ -11,7 +11,7 @@ import { redirectToCheckoutAction } from '../../components/CheckoutForm';
 import setUTM from '../../lib/conversions';
 
 const Lifetime = ({
-  lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, deviceLang
+  lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
   const [stripeObject, setStripeObject] = useState({});
@@ -56,13 +56,12 @@ export async function getServerSideProps(ctx) {
   const langJson = require(`../../assets/lang/${lang}/lifetime.json`);
   const navbarLang = require(`../../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../../assets/lang/${lang}/footer.json`);
-  const cardDescriptions = require(`../../assets/lang/${lang}/card-descriptions.json`);
 
   cookies.setReferralCookie(ctx);
 
   return {
     props: {
-      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions,
+      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }
