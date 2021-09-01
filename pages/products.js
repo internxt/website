@@ -10,6 +10,7 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl, getPlatform } from '../lib/get-download-url';
 import setUTM from '../lib/conversions';
+import { LanguageServiceMode } from 'typescript';
 
 const Products = ({
   lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, devicePlatform, deviceLang
@@ -26,7 +27,7 @@ const Products = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
       <div className="heroSection">
         <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']}/>
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
+        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={lang} platform={devicePlatform}/>
         <CardsSection textContent={langJson["CardsSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
       </div>
       <Footer textContent={footerLang} lang={deviceLang}/>

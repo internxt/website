@@ -85,13 +85,13 @@ export default function Footer({textContent, lang}) {
                   {textContent.FooterSection.sections.products.title}
                 </p>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
-                  <a href={`${router.pathname === '/products' ? '#web' : ((lang ? lang : '') + '/products#web')}`}>
+                  <a href={`${router.pathname === '/products' ? '#web' : ((lang ? '/' + lang : '') + '/products#web')}`}>
                     {textContent.FooterSection.sections.products.driveWeb}
                   </a>
-                  <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? lang : '') + '/products#desktop')}`}>
+                  <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? '/' + lang : '') + '/products#desktop')}`}>
                     {textContent.FooterSection.sections.products.driveDesktop}
                   </a>
-                  <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? lang : '') + '/products#mobile')}`}>
+                  <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? '/' + lang : '') + '/products#mobile')}`}>
                     {textContent.FooterSection.sections.products.driveMobile}
                   </a>
                 </div>
@@ -102,13 +102,13 @@ export default function Footer({textContent, lang}) {
                   {textContent.FooterSection.sections.company.title}
                 </p>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
-                  <a href={`${router.pathname === '/about' ? '' : ((lang ? lang : '') + '/about')}`}>
+                  <a href={`${router.pathname === '/about' ? '' : ((lang ? '/' + lang : '') + '/about')}`}>
                     {textContent.FooterSection.sections.company.about}
                   </a>
                   <a href="https://help.internxt.com/" target="_blank">
                     {textContent.FooterSection.sections.company.contact}
                   </a>
-                  <a href={`${router.pathname === '/legal' ? '' : ((lang ? lang : '') + '/legal')}`}>
+                  <a href={`${router.pathname === '/legal' ? '' : ((lang ? '/' + lang : '') + '/legal')}`}>
                     {textContent.FooterSection.sections.company.terms}
                   </a>
                 </div>
@@ -125,7 +125,7 @@ export default function Footer({textContent, lang}) {
                   <a href="https://drive.internxt.com/login" target="_self">
                     {textContent.FooterSection.sections.join.login}
                   </a>
-                  <a href={`${router.pathname === '/products' ? '' : ((lang ? lang : '') + '/products')}`}>
+                  <a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`}>
                     {textContent.FooterSection.sections.join.downloads}
                   </a>
                 </div>
@@ -142,7 +142,7 @@ export default function Footer({textContent, lang}) {
                   <a href="https://drive.internxt.com/login" target="_self">
                     Github
                   </a>
-                  <a href={`${router.pathname === '/products' ? '' : ((lang ? lang : '') + '/products')}`}>
+                  <a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`}>
                     Medium
                   </a>
                 </div>
@@ -175,9 +175,9 @@ export default function Footer({textContent, lang}) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
-                        <a href={`${router.pathname === '/products' ? '#web' : ((lang ? lang : '') + '/products#web')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.products.driveWeb}</a>
-                        <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? lang : '') + '/products#desktop')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.products.driveDesktop}</a>
-                        <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? lang : '') + '/products#mobile')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.products.driveMobile}</a>
+                        <a href={`${router.pathname === '/products' ? '#web' : ((lang ? '/' + lang : '') + '/products#web')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.products.driveWeb}</a>
+                        <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? '/' + lang : '') + '/products#desktop')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.products.driveDesktop}</a>
+                        <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? '/' + lang : '') + '/products#mobile')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.products.driveMobile}</a>
                       </Disclosure.Panel>
                     </Transition>
 
@@ -206,9 +206,9 @@ export default function Footer({textContent, lang}) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
-                        <a href={`${router.pathname === '/about' ? '#web' : ((lang ? lang : '') + '/about')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.about}</a>
+                        <a href={`${router.pathname === '/about' ? '#web' : ((lang ? '/' + lang : '') + '/about')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.about}</a>
                         <a href="https://help.internxt.com/" target="_blank" className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.contact}</a>
-                        <a href={`${router.pathname === '/legal' ? '' : ((lang ? lang : '') + '/legal')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.terms}</a>
+                        <a href={`${router.pathname === '/legal' ? '' : ((lang ? '/' + lang : '') + '/legal')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.terms}</a>
                       </Disclosure.Panel>
                     </Transition>
 
@@ -239,7 +239,7 @@ export default function Footer({textContent, lang}) {
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
                         <a href="https://drive.internxt.com/new" target="_self" className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.join.signup}</a>
                         <a href="https://drive.internxt.com/login" target="_self" className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.join.login}</a>
-                        <a href={`${router.pathname === '/products' ? '' : ((lang ? lang : '') + '/products')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.join.downloads}</a>
+                        <a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.join.downloads}</a>
                       </Disclosure.Panel>
                     </Transition>
 
@@ -317,7 +317,7 @@ export default function Footer({textContent, lang}) {
               {textContent.Cookies.title}
             </p>
             <a
-              href={`${router.pathname === '/' ? '' : ((lang ? lang : '') + '/legal')}`}
+              href={`${router.pathname === '/' ? '' : ((lang ? '/' + lang : '') + '/legal')}`}
               target="_blank"
               className="text-neutral-100 text-sm"
             >
