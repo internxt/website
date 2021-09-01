@@ -889,6 +889,10 @@ module.exports = {
     'disabled'
   ],
   variants: {
+    extend: {
+      scale: ['focus', 'active', 'hover'],
+      translate: ['focus', 'active', 'hover']
+    },
     accessibility: ['responsive', 'focus-within', 'focus'],
     alignContent: ['responsive'],
     alignItems: ['responsive'],

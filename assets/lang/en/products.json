@@ -4,6 +4,7 @@
 		"title": "Internxt Drive",
 		"subtitle": {"line1": "The perfect place for all your files,", "line2": " accesible from all your devices."},
 		"download": "Download",
+		"downloadConcat": "for",
 		"otherPlatforms": "Other platforms"
 	},
 	"CardsSection":

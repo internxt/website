@@ -4,6 +4,7 @@
 		"title": "Internxt Drive",
 		"subtitle": {"line1": "El lugar perfecto para todos tus archivos,", "line2": " accesible desde todos tus dispositivos."},
 		"download": "Descargar",
+		"downloadConcat": "para",
 		"otherPlatforms": "Otras platformas"
 	},
 	"CardsSection":
@@ -13,7 +14,7 @@
 		"subtitle": {"line1": "Accede a todos tus archivos desde el navegador,", "line2": "tu ordenador y tu móvil."},
 		"mobile": {"title": "Drive Mobile", "description": "All the power of Internxt Drive and all your files right into your pocket."},
 		"desktop": {"title": "Drive Desktop", "description": "Sync your Internxt folder on your computer with your Internxt cloud.", "cta": "Descargar", "ctaConcat": "para"},
-		"web": {"title": "Drive Web", "description": "Access your files from your browser from anywhere in total privacy.", "cta": "Abrir Drive Web"}
+		"web": {"title": "Drive Web", "description": "Access your files from your browser from anywhere in total privacy.", "cta": "Launch Drive Web"}
 	},
 	"GetStartedSection":
 	{

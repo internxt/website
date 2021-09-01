@@ -6,12 +6,9 @@ const InvestorsSection = ({textContent}) => {
     <section>
       <div className="content">
         <div className={`flex flex-col items-center justify-center w-full text-center flex-shrink-0 px-10 md:px-0 py-12 md:py-24`}>
-            <h2 className={`mb-4 text-4xl font-semibold`}>
+            <h2 className={`mb-8 text-4xl font-semibold`}>
               {textContent.title}
             </h2>
-            <p className={`mb-8 text-lg text-neutral-500`}>
-              {textContent.subtitle.line1}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line2}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line3}
-            </p>
 
             <div className="flex flex-row justify-around flex-wrap sm:px-10">
               <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">

@@ -8,7 +8,9 @@ const PriceCard = ({
   totalBilled,
   featureList,
   cta,
-  popular
+  handlePayment,
+  popular,
+  contentText
 }) => {
 
   const billingFrequencyList = {
@@ -41,16 +43,16 @@ const PriceCard = ({
           </div>
         </div>
 
-        <div className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
+        <button className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 transform origin-center active:translate-y-0.5 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
           <p className={`${pricePerMonth.toLowerCase() === 'free' ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>Buy {storage}</p>
           <p className={`${pricePerMonth.toLowerCase() === 'free' ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>Sign up now</p>
           <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>Get started</p>
-        </div>
+        </button>
       </div>
       
       <div className="featureList flex flex-col p-6 text-neutral-500 bg-neutral-10 border-t border-neutral-20">
         <div className="flex flex-col space-y-2">
-          <div className="flex flex-row space-x-2 font-semibold"><img src="/icons/checkNeutral500.svg" draggable="false"/><span>30 days guarantee</span></div>
+          <div className="flex flex-row space-x-2 font-semibold"><img src="/icons/checkNeutral500.svg" draggable="false"/><span>30 days money-back guarantee</span></div>
           <div className="flex flex-row space-x-2"><img src="/icons/checkNeutral500.svg" draggable="false"/><span>Private and Secure file sharing</span></div>
           <div className="flex flex-row space-x-2"><img src="/icons/checkNeutral500.svg" draggable="false"/><span>Access your files from any device</span></div>
         </div>
@@ -58,6 +60,15 @@ const PriceCard = ({
 
     </div>
   )
+}
+
+export async function getServerSideProps(ctx) {
+  const lang = ctx.locale
+  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+
+  return {
+    props: { contentText }
+  }
 }
 
 export default PriceCard;

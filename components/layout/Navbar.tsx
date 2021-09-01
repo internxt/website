@@ -112,59 +112,59 @@ export default function Navbar({textContent, lang, cta}) {
                             
                             <div className="relative grid gap-8 lg:grid-cols-3 lg:gap-16">
 
-                              <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
-                                <div className="space-y-2">
-                                  <p className="text-2xl font-medium text-neutral-700">
-                                    {textContent.productsMenu.web.title}
-                                  </p>
-                                  <p className="text-normal text-neutral-500">
-                                    {textContent.productsMenu.web.description}
-                                  </p>
-                                </div>
-                                <Popover.Button>
-                                  <a href="https://drive.internxt.com" target="_blank" className="text-sm text-blue-60 font-semibold">
-                                    <div className="flex flex-row items-center"><img className="mt-0.5 mr-2" src="/icons/newTab.svg" draggable="false"/>{textContent.productsMenu.web.link}</div>
-                                  </a>
-                                </Popover.Button>
-                              </div>
+                              <Popover.Button>
+                                <a href="https://drive.internxt.com" target="_blank" className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                                  <div className="flex flex-col text-left space-y-2">
+                                    <p className="text-2xl font-medium text-neutral-700">
+                                      {textContent.productsMenu.web.title}
+                                    </p>
+                                    <p className="text-normal text-neutral-500">
+                                      {textContent.productsMenu.web.description}
+                                    </p>
+                                  </div>                                    
+                                  <div className="flex flex-row items-center text-sm text-blue-60 font-semibold">
+                                    <img className="mt-0.5 mr-2" src="/icons/newTab.svg" draggable="false"/>
+                                    {textContent.productsMenu.web.link}
+                                  </div>
+                                </a>
+                              </Popover.Button>
 
-                              <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
-                                <div className="space-y-2">
-                                  <p className="text-2xl font-medium text-neutral-700">
-                                    {textContent.productsMenu.desktop.title}
-                                  </p>
-                                  <p className="text-normal text-neutral-500">
-                                    {textContent.productsMenu.desktop.description}
-                                  </p>
-                                </div>
-                                <Popover.Button>
-                                  <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? '/' + lang : '') + '/products#desktop')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
-                                    <span className="flex flex-shrink-0">
-                                      {textContent.productsMenu.desktop.link}
-                                    </span>
+                              <Popover.Button>
+                                <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? '/' + lang : '') + '/products#desktop')}`} className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                                  <div className="flex flex-col text-left space-y-2">
+                                    <p className="text-2xl font-medium text-neutral-700">
+                                      {textContent.productsMenu.desktop.title}
+                                    </p>
+                                    <p className="text-normal text-neutral-500">
+                                      {textContent.productsMenu.desktop.description}
+                                    </p>
+                                  </div>
+                                  <div className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
+                                    <span className="flex flex-shrink-0">{textContent.productsMenu.desktop.link}</span>
                                     <img className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
-                                  </a>
-                                </Popover.Button>
-                              </div>
-
-                              <div className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
-                                <div className="space-y-2">
-                                  <p className="text-2xl font-medium text-neutral-700">
-                                    {textContent.productsMenu.mobile.title}
-                                  </p>
-                                  <p className="text-normal text-neutral-500">
-                                    {textContent.productsMenu.mobile.description}
-                                  </p>
-                                </div>
-                                <Popover.Button>
-                                  <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? '/' + lang : '') + '/products#mobile')}`} className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
+                                  </div>
+                                </a>
+                              </Popover.Button>
+                              
+                              <Popover.Button>
+                                <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? '/' + lang : '') + '/products#mobile')}`} className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                                  <div className="flex flex-col text-left space-y-2">
+                                    <p className="text-2xl font-medium text-neutral-700">
+                                      {textContent.productsMenu.mobile.title}
+                                    </p>
+                                    <p className="text-normal text-neutral-500">
+                                      {textContent.productsMenu.mobile.description}
+                                    </p>
+                                  </div>
+                                  <div  className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
                                     <span className="flex flex-shrink-0">
                                       {textContent.productsMenu.mobile.link}
                                     </span>
                                     <img className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
-                                  </a>
-                                </Popover.Button>
-                              </div>
+                                  </div>
+                                </a>
+                              </Popover.Button>
+                              
 
                             </div>
 
