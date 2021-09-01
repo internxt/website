@@ -11,7 +11,7 @@ const HeroSection = ({textContent, download, lang, platform}) => {
 
           <div className={`flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 lg:mr-16 flex flex-col w-screen sm:w-auto text-center md:text-left`}>
             
-            <img src="/images/home/devicesMobileView.png" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'} md:hidden mb-10`} draggable="false" alt="laptop and phone with Internxt app"/>
+            <img src="/images/home/devicesMobileView.webp" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'} md:hidden mb-10`} draggable="false" alt="laptop and phone with Internxt app"/>
 
             <h1 className={`title mb-4 md:mb-8 text-4xl md:text-5xl lg:text-6xl`}>
               {textContent.title}
@@ -52,13 +52,13 @@ const HeroSection = ({textContent, download, lang, platform}) => {
           </div>
 
           <div className={`flex w-auto md:hidden`}>
-            <img src="/images/products/iPhoneCut.png" className={`${platform === 'iOS' ? '' : 'hidden'}`} draggable="false" alt="iPhone with Internxt App on screen"/>
-            <img src="/images/products/pixel4xlCut.png" className={`${platform === 'Android' ? '' : 'hidden'}`} draggable="false" alt="iPhone with Internxt App on screen"/>
+            <img src="/images/products/iPhoneCut.webp" className={`${platform === 'iOS' ? '' : 'hidden'}`} draggable="false" alt="iPhone with Internxt App on screen"/>
+            <img src="/images/products/pixel4xlCut.webp" className={`${platform === 'Android' ? '' : 'hidden'}`} draggable="false" alt="iPhone with Internxt App on screen"/>
           </div>
 
           <div className={`hidden md:flex flex-grow max-w-2xl mr-0 xl:mr-32`}>
-            <img className="hidden xl:flex" src="/images/home/devicesAsc.png" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
-            <img className="flex xl:hidden" src="/images/home/devicesAscCut.png" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
+            <img className="hidden xl:flex" src="/images/home/devicesAsc.webp" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
+            <img className="flex xl:hidden" src="/images/home/devicesAscCut.webp" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
           </div>
         </div>
 

@@ -10,7 +10,7 @@ const HeroSection = ({textContent, download, lang}) => {
 
         <div className={`flex flex-col md:flex-row items-center justify-between w-full sm:mb-6`}>
           <div className="flex w-auto md:hidden mx-20 mb-6">
-            <img src="/images/home/devicesMobileView.png" draggable="false" alt="laptop and phone with Internxt app"/>
+            <img src="/images/home/devicesMobileView.webp" draggable="false" alt="laptop and phone with Internxt app"/>
           </div>
           <div className={`flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 lg:mr-16 flex flex-col w-screen sm:w-auto text-center md:text-left`}>
             <h1 className={`title mb-4 md:mb-8 text-4xl md:text-5xl lg:text-6xl`}>
@@ -40,7 +40,7 @@ const HeroSection = ({textContent, download, lang}) => {
             </div>
           </div>
           <div className="hidden md:flex flex-grow max-w-2xl mr-0 xl:mr-32">
-            <img className="hidden xl:flex" src="/images/home/devicesAsc.png" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
+            <img className="hidden xl:flex" src="/images/home/devicesAsc.webp" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
             <img className="flex xl:hidden" src="/images/home/devicesAscCut.png" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
           </div>
         </div>

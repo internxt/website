@@ -35,7 +35,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
             </div>
 
             <div className="grid place-content-end">
-              <img className="flex max-h-60 sm:max-h-full" src="/images/products/safari.png" draggable="false" alt="Internxt Drive Web on Safari"/>
+              <img className="flex max-h-60 sm:max-h-full" src="/images/products/safari.webp" draggable="false" alt="Internxt Drive Web on Safari"/>
             </div>
 
           </div>
@@ -61,7 +61,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               </div>
 
               <div className="flex items-end content-end">
-                <img className="flex" src="/images/products/mackbook.png" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
+                <img className="flex" src="/images/products/mackbook.webp" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
               </div>
             
             </div>
@@ -104,9 +104,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               </div>
 
               <div className="flex items-end content-end">
-                <img className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-                <img className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-                <img className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.png" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
               </div>
               
             </div>
