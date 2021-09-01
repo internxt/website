@@ -112,7 +112,7 @@ export default function Navbar({textContent, lang, cta}) {
                             
                             <div className="relative grid gap-8 lg:grid-cols-3 lg:gap-16">
 
-                              <Popover.Button>
+                              <Popover.Button className={`${styles.popoverItem}`}>
                                 <a href="https://drive.internxt.com" target="_blank" className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
                                   <div className="flex flex-col text-left space-y-2">
                                     <p className="text-2xl font-medium text-neutral-700">
@@ -129,8 +129,8 @@ export default function Navbar({textContent, lang, cta}) {
                                 </a>
                               </Popover.Button>
 
-                              <Popover.Button>
-                                <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? '/' + lang : '') + '/products#desktop')}`} className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                              <Popover.Button className={`${styles.popoverItem}`}>
+                                <a href={`${router.pathname === '/products' ? '#desktop' : ((lang ? '/' + lang : '') + '/products#desktop')}`} className={`flex flex-col space-y-4`}>
                                   <div className="flex flex-col text-left space-y-2">
                                     <p className="text-2xl font-medium text-neutral-700">
                                       {textContent.productsMenu.desktop.title}
@@ -146,8 +146,8 @@ export default function Navbar({textContent, lang, cta}) {
                                 </a>
                               </Popover.Button>
                               
-                              <Popover.Button>
-                                <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? '/' + lang : '') + '/products#mobile')}`} className={`flex flex-col space-y-4 ${styles.popoverItem}`}>
+                              <Popover.Button className={`${styles.popoverItem}`}>
+                                <a href={`${router.pathname === '/products' ? '#mobile' : ((lang ? '/' + lang : '') + '/products#mobile')}`} className={`flex flex-col space-y-4`}>
                                   <div className="flex flex-col text-left space-y-2">
                                     <p className="text-2xl font-medium text-neutral-700">
                                       {textContent.productsMenu.mobile.title}

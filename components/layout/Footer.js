@@ -65,7 +65,7 @@ export default function Footer({textContent, lang}) {
 
         <footer className="border-0 md:border-t md:border-neutral-20">
 
-          <div className="hidden md:flex md:flex-col lg:flex-row sm:p-10 py-14 md:space-y-14 lg:space-y-0 lg:space-x-20 justify-between mx-0 md:mx-6 xl:mx-0">
+          <div className="hidden md:flex md:flex-col lg:flex-row sm:p-10 py-14 md:space-y-14 lg:space-y-0 lg:space-x-20 justify-between mx-0 md:mx-6">
 
             <div className="flex flex-col space-y-4 max-w-sm">
               <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
@@ -119,7 +119,7 @@ export default function Footer({textContent, lang}) {
                   {textContent.FooterSection.sections.join.title}
                 </p>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
-                <a href="https://drive.internxt.com/new" target="_self">
+                  <a href="https://drive.internxt.com/new" target="_self">
                     {textContent.FooterSection.sections.join.signup}
                   </a>
                   <a href="https://drive.internxt.com/login" target="_self">
@@ -136,13 +136,24 @@ export default function Footer({textContent, lang}) {
                   {textContent.FooterSection.sections.follow.title}
                 </p>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
-                <a href="https://drive.internxt.com/new" target="_self">
-                    {textContent.FooterSection.sections.join.signup}
-                  </a>
-                  <a href="https://drive.internxt.com/login" target="_self">
+                  <div className="flex flex-row space-x-1">
+                    <a href="https://twitter.com/Internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
+                      <img className="h-4" src="/icons/social/neutral-300/twitter.svg" draggable="false"/>
+                    </a>
+                    <a href="https://linkedin.com/company/internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
+                      <img className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false"/>
+                    </a>
+                    <a href="https://facebook.com/internxt/" target="_blank" className={`h-6 py-1.5 pr-2`}>
+                      <img className="h-4" src="/icons/social/neutral-300/facebook.svg" draggable="false"/>
+                    </a>
+                    <a href="https://instagram.com/internxt/" target="_blank" className={`h-6 py-1.5 pr-2`}>
+                      <img className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false"/>
+                    </a>
+                  </div>
+                  <a href="https://github.com/internxt" target="_blank">
                     Github
                   </a>
-                  <a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`}>
+                  <a href="https://blog.internxt.com/" target="_blank">
                     Medium
                   </a>
                 </div>
