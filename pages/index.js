@@ -17,7 +17,6 @@ const Home = ({
   lang, metatagsDescriptions, langJson, cardDescriptions, navbarLang, footerLang, downloadUrl, deviceLang
 }) => {
   const router = useRouter();
-  const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   useEffect(() => {
