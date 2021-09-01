@@ -40,9 +40,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
 
           </div>
 
-          <div className="relative">
+          <div className="relative col-span-2 sm:col-span-1">
             <div id="desktop" className="scrollAnchor absolute -top-24"></div>
-            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} relative col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden space-y-8`}>   
+            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden space-y-8`}>   
               
               <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
                 <div className="flex flex-col space-y-6">
@@ -67,9 +67,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative col-span-2 sm:col-span-1">
             <div id="mobile" className="scrollAnchor absolute -top-24"></div>
-            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 sm:col-span-1 grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden`}>
+            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden`}>
               
               <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
                 <div className="flex flex-col space-y-6">
