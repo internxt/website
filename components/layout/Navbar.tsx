@@ -185,7 +185,7 @@ export default function Navbar({textContent, lang, cta}) {
                   type="button"
                   className="flex justify-center sm:inline-flex px-4 py-1 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
                 >
-                  {textContent.getStarted}
+                  <p className="whitespace-nowrap">{textContent.getStarted}</p>
                 </button>
               </a>
              ) : ''}
@@ -196,7 +196,7 @@ export default function Navbar({textContent, lang, cta}) {
                 onClick={cta[1]}
                 className="flex justify-center sm:inline-flex px-4 py-1 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
               >
-                {textContent.checkout}
+                <p className="whitespace-nowrap">{textContent.checkout}</p>
               </button>
              ) : ''}
             
