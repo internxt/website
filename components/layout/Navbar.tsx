@@ -28,7 +28,7 @@ export default function Navbar({textContent, lang, cta}) {
               <Hamburger label="Show menu" size={24} color="#253858" toggled={menuState} toggle={setMenuState} />
               
               <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${menuState ? 'opacity-100' : 'opacity-0'}`}></div>
-              <div className={`transition-all duration-500 flex flex-col fixed left-0 w-full top-14 overflow-hidden bg-white text-xl ${menuState ? 'h-full pb-14 overflow-y-auto' : 'h-0'}`}>
+              <div className={`transition-all duration-500 flex flex-col fixed left-0 w-full top-14 overflow-hidden bg-white text-xl ${menuState ? 'h-screen pb-14 overflow-y-auto' : 'h-0'}`}>
                 <div className="my-6 font-medium">
                   <Disclosure as="div">
                     {({ open }) => (

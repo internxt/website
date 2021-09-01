@@ -309,8 +309,8 @@ export default function Footer({textContent, lang}) {
         </footer>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="500" className={`cookies ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 right-0 sm:bottom-8 sm:right-8 z-50 p-4 sm:p-6 bg-neutral-10 sm:rounded-lg w-full sm:max-w-xs ring-1 ring-neutral-30 shadow-2xl`}>
-        <div className="flex flex-row sm:flex-col items-center space-x-4 sm:space-y-8 sm:space-x-0">
+      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="500" className={`cookies ${styles.cookiesBlur} ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 right-0 sm:bottom-8 sm:right-8 z-50 p-4 sm:p-6 bg-neutral-10 sm:rounded-lg w-full sm:max-w-xs justify-between ring-1 ring-neutral-30 shadow-2xl`}>
+        <div className="flex flex-row sm:flex-col items-center justify-between w-full space-x-4 sm:space-y-8 sm:space-x-0">
           
           <div className="flex flex-col space-y-2">
             <p className="text-neutal-700 text-base font-semibold">
