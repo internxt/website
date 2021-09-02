@@ -12,7 +12,6 @@ const Pricing = (props) => {
     <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description}>
       <Navbar textContent={props.navbarLang} lang={props.lang} cta={['default']} />
       <PriceTable />
-
       <Footer textContent={props.footerLang} lang={props.lang}/>
     </Layout>
   );

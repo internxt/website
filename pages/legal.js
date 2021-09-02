@@ -31,8 +31,9 @@ const Legal = (props) => {
   return (
     <Layout segmentName="legal" title={metatags.title} description={metatags[0].description}>
       <Navbar textContent={props.navbarLang} lang={props.deviceLang} cta={['default']}/>
-      <div className="flex flex-col items-center py-32 pt-80">
-        <div className="flex flex-col w-8/12 mb-16">
+
+      <div className="flex flex-col items-center py-32 pt-44 px-6 md:px-0 mt-0 m-6 md:m-10 md:mt-0 lg:m-32 lg:mt-0 xl:mx-auto max-w-5xl">
+        <div className="flex flex-col mb-16">
           <h1 className=" text-2xl font-semibold mb-8">
             {description.title}
           </h1>
@@ -42,7 +43,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title2}
           </h1>
@@ -52,7 +53,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title3}
           </h1>
@@ -62,7 +63,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title4}
           </h1>
@@ -72,7 +73,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title5}
           </h1>
@@ -82,7 +83,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title6}
           </h1>
@@ -92,7 +93,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title7}
           </h1>
@@ -102,7 +103,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title8}
           </h1>
@@ -112,7 +113,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title9}
           </h1>
@@ -122,7 +123,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title10}
           </h1>
@@ -140,7 +141,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title11}
           </h1>
@@ -150,7 +151,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title12}
           </h1>
@@ -164,7 +165,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title13}
           </h1>
@@ -174,7 +175,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title14}
           </h1>
@@ -188,7 +189,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title15}
           </h1>
@@ -198,7 +199,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title16}
           </h1>
@@ -232,7 +233,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title17}
           </h1>
@@ -242,7 +243,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title18}
           </h1>
@@ -252,7 +253,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title19}
           </h1>
@@ -262,7 +263,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title20}
           </h1>
@@ -272,7 +273,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title21}
           </h1>
@@ -286,7 +287,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title22}
           </h1>
@@ -296,7 +297,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title23}
           </h1>
@@ -314,7 +315,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title24}
           </h1>
@@ -344,7 +345,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title25}
           </h1>
@@ -354,7 +355,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title26}
           </h1>
@@ -364,7 +365,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title27}
           </h1>
@@ -938,7 +939,7 @@ const Legal = (props) => {
           </table>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title28}
           </h1>
@@ -948,7 +949,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title29}
           </h1>
@@ -970,7 +971,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title30}
           </h1>
@@ -980,7 +981,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title31}
           </h1>
@@ -990,7 +991,7 @@ const Legal = (props) => {
           </p>
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.cookies_title}
           </h1>
@@ -1227,7 +1228,7 @@ const Legal = (props) => {
 
         </div>
 
-        <div className="flex flex-col w-8/12 mb-16">
+        <div className="flex flex-col mb-16">
           <h1 className="text-2xl font-semibold mb-6">
             {description.title33}
           </h1>

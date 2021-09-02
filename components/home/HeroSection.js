@@ -49,23 +49,47 @@ const HeroSection = ({textContent, download, lang}) => {
 					<div className="flex lg:hidden">
 						<Marquee className="bg-white" gradientColor="[255,255,255]" gradientWidth="32px" speed="30">
 							<div className="featured flex flex-row w-full p-6">
-								<img className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" alt="forbes logo"/>
-								<img className="mr-12" src="../../logos/featured/businessinsider.svg" draggable="false" alt="businessinsider logo"/>
-								<img className="mr-12" src="../../logos/featured/techradar.svg" draggable="false" alt="techradar logo"/>
-								<img className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" alt="techcrunch logo"/>
-								<img className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false" alt="lavanguardia logo"/>
-								<img src="../../logos/featured/elpais.svg" draggable="false" alt="elpais logo"/>
+								<a href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=6881c2ac70ee" target="_blank">
+                  <img className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" alt="forbes logo"/>
+                </a>
+								<a href="https://www.businessinsider.es/internxt-nube-espanola-apuesta-privacidad-google-750951" target="_blank">
+                  <img className="mr-12" src="../../logos/featured/businessinsider.svg" draggable="false" alt="businessinsider logo"/>
+                </a>
+								<a href="https://www.techradar.com/news/how-decentralized-models-are-reimagining-the-cloud" target="_blank">
+                  <img className="mr-12" src="../../logos/featured/techradar.svg" draggable="false" alt="techradar logo"/>
+                </a>
+                <a href="https://techcrunch.com/2021/06/17/internxt-gets-1m-to-be-the-coinbase-of-decentralized-storage/" target="_blank">
+                  <img className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" alt="techcrunch logo"/>
+                </a>
+                <a href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html" target="_blank">
+                  <img className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false" alt="lavanguardia logo"/>
+                </a>
+                <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank">
+                  <img src="../../logos/featured/elpais.svg" draggable="false" alt="elpais logo"/>
+                </a>
 							</div>
 						</Marquee>
 					</div>
 					<div className="overflow-hidden hidden lg:flex">
 						<div className="featured flex flex-row justify-center w-full p-6 md:px-10 lg:px-32 bg-white overflow-x-auto">
-							<img className="mr-10" src="../../logos/featured/forbes.svg" draggable="false" alt="forbes logo"/>
-							<img className="mr-10" src="../../logos/featured/businessinsider.svg" draggable="false" alt="businessinsider logo"/>
-							<img className="mr-10" src="../../logos/featured/techradar.svg" draggable="false" alt="techradar logo"/>
-							<img className="mr-10" src="../../logos/featured/techcrunch.svg" draggable="false" alt="techcrunch logo"/>
-							<img className="mr-10" src="../../logos/featured/lavanguardia.svg" draggable="false" alt="lavanguardia logo"/>
-							<img src="../../logos/featured/elpais.svg" draggable="false" alt="elpais logo"/>
+              <a href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=6881c2ac70ee" target="_blank">
+                <img className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" alt="forbes logo"/>
+              </a>
+              <a href="https://www.businessinsider.es/internxt-nube-espanola-apuesta-privacidad-google-750951" target="_blank">
+                <img className="mr-12" src="../../logos/featured/businessinsider.svg" draggable="false" alt="businessinsider logo"/>
+              </a>
+              <a href="https://www.techradar.com/news/how-decentralized-models-are-reimagining-the-cloud" target="_blank">
+                <img className="mr-12" src="../../logos/featured/techradar.svg" draggable="false" alt="techradar logo"/>
+              </a>
+              <a href="https://techcrunch.com/2021/06/17/internxt-gets-1m-to-be-the-coinbase-of-decentralized-storage/" target="_blank">
+                <img className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" alt="techcrunch logo"/>
+              </a>
+              <a href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html" target="_blank">
+                <img className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false" alt="lavanguardia logo"/>
+              </a>
+              <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank">
+                <img src="../../logos/featured/elpais.svg" draggable="false" alt="elpais logo"/>
+              </a>
 						</div>
 					</div>
 				</div>

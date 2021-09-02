@@ -14,7 +14,9 @@ const AboutUs = ({ lang, langJson, footerLang, navbarLang, metatagsDescriptions,
   return (
     <Layout segmentName="about" title={metatags[0].title} description={metatags[0].description}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} />
-      <HeroSection textContent={langJson["HeroSection"]} />
+      <div className="heroSectionHome border-b border-neutral-20">
+        <HeroSection textContent={langJson["HeroSection"]} />
+      </div>
       <TeamSection textContent={langJson["TeamSection"]} />
       <Articles textContent={langJson["Articles"]} articles={articles} images={images} />
       <Footer textContent={footerLang} lang={lang}/>

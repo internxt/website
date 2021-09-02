@@ -1,3 +1,11 @@
 export default function Custom404() {
-  return <h1 className="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">404<br/>Page Not Found</h1>
+  return (
+    <section>
+      <div className="content flex flex-col w-screen h-screen items-center justify-center">
+        <h1 className="text-neutral-500 text-4xl font-semibold">404</h1>
+        <p className="text-neutral-100 text-xl">Page not found</p>
+        <p className="text-blue-60 mt-4"><a href="/">Go back home</a></p>
+      </div>
+    </section>
+  )
 }
