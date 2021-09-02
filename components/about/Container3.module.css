@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0 2rem;
+}
+
+.title {
+    font-size: 60px;
+    font-stretch: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #2a2c35;
+}

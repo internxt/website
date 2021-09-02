@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styles from './PriceCard.module.css';
 
-const PriceCard = ({
+const PriceCardOld = ({
   free, teams, teamMembers, size, pMonth, pre6months, preYear, mostPopular, individual, descriptions,
 }) => {
   const description = descriptions.filter((desc) => desc.id === 'PriceCard');
@@ -77,7 +77,7 @@ const PriceCard = ({
               className={styles.free_msg}
               rel="noreferrer"
             >
-              <h1 className={`${styles.text_free} sm:text-2xl sm:font-avertabold lg:text-lg`}>
+              <h1 className={`${styles.text_free} sm:text-2xl lg:text-lg`}>
                 {' '}
                 <span>{individual ? description[0].free : description[0].contact}</span>
                 {' '}
@@ -175,4 +175,4 @@ const PriceCard = ({
   );
 };
 
-export default PriceCard;
+export default PriceCardOld;

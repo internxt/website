@@ -27,6 +27,26 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
   }
 }
 
+export async function getPlatform(ctx: GetServerSidePropsContext) {
+  const ua = ctx.req.headers['user-agent'];
+  const uaParsed = userAgent.parse(ua);
+
+  switch (uaParsed.os.family) {
+    case 'iOS':
+      return 'iOS';
+    case 'Android':
+      return 'Android';
+    case 'Ubuntu':
+      return 'Linux';
+    case 'Windows':
+      return 'Windows';
+    case 'Mac OS X':
+      return 'macOS';
+    default:
+      return null;
+  }
+}
+
 export async function getCoreDownloadUrl(ctx: GetServerSidePropsContext) {
   const ua = ctx.req.headers['user-agent'];
   const uaParsed = userAgent.parse(ua);

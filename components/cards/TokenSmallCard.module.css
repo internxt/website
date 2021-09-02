@@ -13,7 +13,6 @@
 
 .title {
     width: 230px;
-    font-family: "averta-semibold";
     font-size: 47.5px;
     line-height: 1;
     letter-spacing: -0.71px;
@@ -21,7 +20,6 @@
 }
 
 .subtitle{
-    font-family: "averta-semibold";
     width: 210px;
     font-size: 47.5px;
     line-height: 1;

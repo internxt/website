@@ -1,0 +1,125 @@
+{
+	"HeroSection": {
+		"description": "La tecnología debería potenciar a cada individuo, no hacerlos impotentes a la corporación. Nuestra intención es ofrecer una amplia gama de servicios tecnológicos innovadores que no infringen la privacidad del individuo."
+	},
+	"TeamSection": {
+		"title": "Liderazgo en Internxt",
+		"employees": [
+			{
+				"name": "Fran Villalba Segarra",
+				"position": "Chief Executive Officer",
+				"photoId": "Fran",
+				"linkedin": "fvsegarra"
+			},
+			{
+				"name": "Alberto González",
+				"position": "Software Engineer",
+				"photoId": "Alberto",
+				"linkedin": "jalbertogonzaleztorre"
+			},
+			{
+				"name": "Carlos Sala",
+				"position": "Software Engineer",
+				"photoId": "Carlos",
+				"linkedin": "carlos-sala-samper-43629863"
+			},
+			{
+				"name": "Alex Menor",
+				"position": "Software Engineer",
+				"photoId": "Alex",
+				"linkedin": "alejandro-menor-molinero-a34595176"
+			},
+			{
+				"name": "Joan Mora",
+				"position": "Product Manager",
+				"photoId": "Joan",
+				"linkedin": "joan-mora"
+			},
+			{
+				"name": "Diego Andrés",
+				"position": "Product Designer",
+				"photoId": "Diego",
+				"linkedin": "diego-alayon-gomez"
+			},
+			{
+				"name": "Álvaro Hernández",
+				"position": "Product Designer",
+				"photoId": "Alvaro",
+				"linkedin": "alvarohernandezperales"
+			},
+			{
+				"name": "Sasha Yudina",
+				"position": "Human Resource Manager",
+				"photoId": "Sasha",
+				"linkedin": "sashayudina"
+			},
+			{
+				"name": "Ainhoa Ribes",
+				"position": "Marketing Assistant",
+				"photoId": "Ainhoa",
+				"linkedin": "ainhoa-ribes-a245401b9"
+			},
+			{
+				"name": "Vicente Belda",
+				"position": "Marketing Assistant",
+				"photoId": "Vicente",
+				"linkedin": "vicente-belda"
+			},
+			{
+				"name": "Cadi Silla",
+				"position": "Marketing Assistant",
+				"photoId": "Cadi",
+				"linkedin": "cadi-silla-fati"
+			}
+		],
+		"Investors": [
+			{
+				"name": "Esade Ban",
+				"bio": "La escuela de negocios con más reputación"
+			},
+			{
+				"name": "Angels Capital",
+				"bio": "Inversores de Zeleros y Airhopping"
+			},
+			{
+				"name": "The Venture City",
+				"bio": "Inversores de Cabify y Peoople"
+			}
+		],
+		"Partners": [
+			{
+				"name": "Blackberry",
+				"bio": {
+					"line1": "La innovación está cambiando la forma en que los negocios trabajan, ya que los clientes exigen cada vez más soluciones seguras.",
+					"line2": "BlackBerry ayuda a Internxt a evaluar el cifrado, las vulnerabilidades de la infraestructura, la autenticación y la prevención de la fuga de datos."
+				}
+			},
+			{
+				"name": "Y Combinator",
+				"bio": {
+					"line1": "Las Startups son más productivas cuando pasan la mayoría de su tiempo construyendo.",
+					"line2": "El objetivo de Y Combinator es crear un entorno en el que podamos centrarnos exclusivamente en la construcción de productos y en hablar con los usuarios sobre cómo mejorar."
+				}
+			},
+			{
+				"name": "Lanzadera",
+				"bio": {
+					"line1": "Juan Roig es conocido por ser el dueño de Mercadona, una de las mayores corporaciones europeas.",
+					"line2": "Internxt recibirá la ayuda estratégica necesaria para llevar Internxt al siguiente nivel. Lanzadera también ayudará a cubrir cualquier necesidad de financiación."
+				}
+			},
+			{
+				"name": "500 Startups",
+				"bio": {
+					"line1": "500 Startups es una de las empresas de capital riesgo más activas del mundo y ha comprometido más de $454 millones en inversiones a nivel mundial.",
+					"line2": "500 startups ha elegido a Internxt como una de las mejores startups del SAAS de todo el mundo."
+				}
+			}
+		]
+	},
+	"Articles": {
+		"title": "Últimos artículos publicados",
+    "morePosts": "Leer más posts",
+		"read": "Leer artículo"
+	}
+}

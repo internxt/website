@@ -1,0 +1,41 @@
+{
+	"NewsletterSection": {
+		"title": "Mantenme al día",
+		"description": {"line1": "¿Quieres saber de nosotros cuando lancemos nuevos", "line2": "productos o una nueva actualización? Introduce tu", "line3": "correo y nosotros haremos cargo del resto."},
+		"input": "Tu correo",
+		"info": "Puedes cancelar tu suscripción en cualquier momento",
+		"cta": "Suscribirse"
+	},
+	"FooterSection": {
+		"description": "La misión de Internxt es ayudar a dar forma a un mundo que respete los derechos de privacidad de la humanidad. Para ello, estamos lanzando una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger ese derecho fundamental.",
+		"copyright": "Copyright © 2021 Internxt",
+		"sections": {
+			"products": {
+				"title": "Productos",
+				"driveWeb": "Drive Web",
+				"driveDesktop": "Drive Desktop",
+				"driveMobile": "Drive para móvil"
+			},
+			"company": {
+				"title": "Compañía",
+				"about": "Sobre nosotros",
+				"contact": "Contacto",
+				"terms": "Terminos & Privacidad"
+			},
+			"join": {
+				"title": "Únete",
+				"signup": "Crear cuenta",
+				"login": "Iniciar sesión",
+				"downloads": "Descargas"
+			},
+			"follow": {
+				"title": "Síguemos"
+			}
+		}
+	},
+	"Cookies": {
+		"title": "Internxt usa cookies para mejorar la experiencia de navegación",
+		"link": "Más información sobre nuestras cookies",
+		"close": "Ok, cerrar"
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"NewsletterSection": {
+		"title": "We’ve got more coming...",
+		"description": {"line1": "Want to hear from us when we launch", "line2": "new products or release a new update?", "line3": "Type you mail adress and we’ll do the rest!"},
+		"input": "Enter email adress",
+		"info": "You can unsubscribe at any time",
+		"cta": "Subscribe"
+	},
+	"FooterSection": {
+		"description": "Internxt’s mission is to help shape a world that respects humanity’s privacy rights. To do so, we are releasing a series of services, which all have the common goal of helping humanity protect that fundamental right.",
+		"copyright": "Copyright © 2021 Internxt",
+		"sections": {
+			"products": {
+				"title": "Products",
+				"driveWeb": "Drive Web",
+				"driveDesktop": "Drive Desktop",
+				"driveMobile": "Drive app mobile"
+			},
+			"company": {
+				"title": "Company",
+				"about": "About us",
+				"contact": "Contact",
+				"terms": "Terms & Privacy"
+			},
+			"join": {
+				"title": "Join us",
+				"signup": "Sign up",
+				"login": "Log in",
+				"downloads": "Downloads"
+			},
+			"follow": {
+				"title": "Follow us"
+			}
+		}
+	},
+	"Cookies": {
+		"title": "Internxt uses cookies to make this website easier to use",
+		"link": "Learn more about cookies",
+		"close": "Ok, close"
+	}
+}

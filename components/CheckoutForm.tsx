@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Spinner } from "react-bootstrap";
 import { getStripe } from '../lib/getstripe'
 import styles from './CheckoutForm.module.css'
 
 interface CheckoutFormProps {
   product: string
   value: string
+  input: string
   className: any
+  loading: string
 }
 
 export async function redirectToCheckoutAction(stripeObject) {
@@ -58,22 +59,24 @@ export default function CheckoutForm(props: CheckoutFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col sm:flex-row space-y-2 sm:space-x-2 sm:space-y-0 items-center justify-center"
+    >
       <input
         type='email'
-        placeholder='Your email'
+        placeholder={props.input}
         onChange={e => setEmail(e.target.value)}
-        className={`${styles.email} lg:w-48 lg:text-sm lg:h-10 `}
+        className={`flex flex-row h-auto w-full sm:w-auto px-4 py-3 sm:py-2 outline-none rounded-lg border-2 border-neutral-40 focus:border-neutral-50 transition-all duration-150 bg-neutral-10 text-left appearance-none`}
         required
       />
 
       <button
         type="submit"
         disabled={loading}
-        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-        {...props}
+        className="flex flex-row justify-center w-full sm:w-auto items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer"
       >
-        {loading ? <Spinner animation="border" style={{ color: '#e0e0e0' }} /> : props.value}
+        {loading ? props.loading : props.value}
       </button>
 
     </form>

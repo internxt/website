@@ -1,53 +1,56 @@
-import React from 'react';
-import TopBar from '../components/layout/TopBar';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import AOS from 'aos';
+
+import HeroSection from '../components/token/HeroSection';
 import Footer from '../components/layout/Footer';
-import Container1 from '../components/token/Container1';
-import Container2 from '../components/token/Container2';
-import Container3 from '../components/token/Container3';
-import Container5 from '../components/token/Container5';
-import Container6 from '../components/token/Container6';
-import Container7 from '../components/token/Container7';
-import Container8 from '../components/token/Container8';
-import LoyaltyProgram from '../components/token/LoyaltyProgram';
-import DataBoostUtility from '../components/token/DataBoostUtility';
+import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import cmc from '../lib/cmc';
+import { getDriveDownloadUrl } from '../lib/get-download-url';
+import setUTM from '../lib/conversions';
 
-const Token = ({ metatagsDescriptions, descriptions, data, footerDescriptions, cardDescriptions }: any): JSX.Element => {
+const Token = ({
+  lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
+}) => {
+  const router = useRouter();
+  const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'token');
 
+  useEffect(() => {
+    AOS.init();
+    setUTM();
+  }, []);
+
   return (
-    <Layout segmentName="token" title={metatags[0].title} description={metatags[0].description}>
-      <TopBar />
-      <Container1 id="1" descriptions={descriptions} />
-      <Container2 id="2" descriptions={descriptions} />
-      <LoyaltyProgram id="9" descriptions={descriptions} cardDescriptions={cardDescriptions} />
-      <Container3 id="3" descriptions={descriptions} />
-      <DataBoostUtility id="10" descriptions={descriptions} />
-      <Container5 id="5" descriptions={descriptions} />
-      <Container6 id="6" descriptions={descriptions} />
-      <Container7 id="7" descriptions={descriptions} data={data} />
-      <Container8 id="8" descriptions={descriptions} />
-      <Footer descriptions={footerDescriptions} cardDescriptions={cardDescriptions} />
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="token">
+      <div>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
+        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
+      </div>
+      <div className="bg-neutral-10">
+        <Footer textContent={footerLang} lang={deviceLang}/>
+      </div>
     </Layout>
   );
 };
 
 export async function getServerSideProps(ctx) {
+  const downloadUrl = await getDriveDownloadUrl(ctx);
+
   const lang = ctx.locale;
+  const deviceLang = ctx.locale;
+
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const descriptions = require(`../assets/lang/${lang}/token-descriptions.json`);
-  const footerDescriptions = require(`../assets/lang/${lang}/footer-descriptions.json`);
-  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
+  const langJson = require(`../assets/lang/${lang}/token.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 
-  const data = await cmc();
-
   return {
     props: {
-      data, metatagsDescriptions, descriptions, footerDescriptions, cardDescriptions,
+      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }

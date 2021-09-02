@@ -24,7 +24,6 @@
 }
 
 .name {
-    font-family: "averta-bold";
     font-size: 18px;
     line-height: 0.87;
     letter-spacing: -0.21px;
@@ -32,7 +31,6 @@
 }
 
 .job {
-    font-family: "averta";
     font-size: 13px;
     line-height: 1.18;
     letter-spacing: -0.19px;
