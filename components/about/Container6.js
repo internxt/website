@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Container6.module.css';
 import PartnerCard from '../cards/PartnerCard';
 
-const Container6 = ({ id, descriptions, cardDescriptions }) => {
+const Container6 = ({ id, descriptions }) => {
   const URL_BLACKBERRY = 'https://medium.com/internxt/internxt-and-blackberry-partner-to-enhance-x-clouds-security-25bb5ad7d33d';
   const URL_YCOMBINATOR = 'https://medium.com/internxt/internxt-has-been-accepted-to-y-combinators-startup-school-b7daf30ab407';
   const URL_LANZADERA = 'https://medium.com/internxt/internxt-joins-juan-roigs-startup-accelerator-lanzadera-9c2bae8f370d';
@@ -42,7 +42,6 @@ const Container6 = ({ id, descriptions, cardDescriptions }) => {
             imageW={473}
             imageH={487}
             link={URL_BLACKBERRY}
-            descriptions={cardDescriptions}
           />
         </div>
 
@@ -59,7 +58,6 @@ const Container6 = ({ id, descriptions, cardDescriptions }) => {
             imageW={473}
             imageH={486}
             link={URL_YCOMBINATOR}
-            descriptions={cardDescriptions}
           />
         </div>
 
@@ -76,7 +74,6 @@ const Container6 = ({ id, descriptions, cardDescriptions }) => {
             imageW={473}
             imageH={487}
             link={URL_LANZADERA}
-            descriptions={cardDescriptions}
           />
         </div>
 
@@ -93,7 +90,6 @@ const Container6 = ({ id, descriptions, cardDescriptions }) => {
             imageW={471}
             imageH={486}
             link={URL_500}
-            descriptions={cardDescriptions}
           />
         </div>
       </div>

@@ -1239,7 +1239,7 @@ const Legal = (props) => {
       </div>
 
       <div className="bg-neutral-10">
-        <Footer textContent={props.footerLang} cardDescriptions={props.cardDescriptions} />
+        <Footer textContent={props.footerLang} />
       </div>
     </Layout>
   );
@@ -1251,7 +1251,6 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const cardDescriptions = require(`../assets/lang/${lang}/card-descriptions.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
   cookies.setReferralCookie(ctx);

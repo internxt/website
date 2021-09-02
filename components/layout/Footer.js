@@ -362,7 +362,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, cardDescriptions, devicePlatform, deviceLang,
+      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, devicePlatform, deviceLang,
     },
   };
 }
