@@ -12,9 +12,9 @@
 		"eyebrow": "INTERNXT DRIVE",
 		"title": {"line1": "Todos tus archivos, en", "line2": "todos tus dispositivos"},
 		"subtitle": {"line1": "Accede a todos tus archivos desde el navegador,", "line2": "tu ordenador y tu móvil."},
-		"mobile": {"title": "Drive Mobile", "description": "All the power of Internxt Drive and all your files right into your pocket."},
-		"desktop": {"title": "Drive Desktop", "description": "Sync your Internxt folder on your computer with your Internxt cloud.", "cta": "Descargar", "ctaConcat": "para"},
-		"web": {"title": "Drive Web", "description": "Access your files from your browser from anywhere in total privacy.", "cta": "Launch Drive Web"}
+		"mobile": {"title": "Drive para móvil", "description": "Toda la seguridad de Internxt Drive y todos tus archivos en tu bolsillo."},
+		"desktop": {"title": "Drive Desktop", "description": "Sincroniza tu carpeta en la nube de Internxt Drive con tu ordenador.", "cta": "Descargar", "ctaConcat": "para"},
+		"web": {"title": "Drive Web", "description": "Accede a tus archivos, fotos y videos con total privacidad desde el navegador.", "cta": "Abrir Drive Web"}
 	},
 	"GetStartedSection":
 	{
