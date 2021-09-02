@@ -71,7 +71,7 @@ export default function Footer({textContent, lang}) {
               <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
                 <img src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
               </a>
-              <p className="text-sm">
+              <p className="text-sm text-neutral-80">
                 {textContent.FooterSection.description}
               </p>
               <p className="text-sm">
