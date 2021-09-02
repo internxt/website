@@ -1,6 +1,7 @@
 import React from 'react';
 import Feed from 'rss-to-json';
 import HeroSection from '../components/about/HeroSection';
+import TeamSection from '../components/about/TeamSection';
 import Articles from '../components/about/Articles';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
@@ -14,10 +15,9 @@ const AboutUs = ({ lang, langJson, footerLang, navbarLang, metatagsDescriptions,
     <Layout segmentName="about" title={metatags[0].title} description={metatags[0].description}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} />
       <HeroSection textContent={langJson["HeroSection"]} />
+      <TeamSection textContent={langJson["TeamSection"]} />
       <Articles textContent={langJson["Articles"]} articles={articles} images={images} />
-      <div className="bg-neutral-10">
-        <Footer textContent={footerLang} lang={lang}/>
-      </div>
+      <Footer textContent={footerLang} lang={lang}/>
     </Layout>
   );
 };
@@ -29,7 +29,7 @@ export async function getServerSideProps(ctx) {
   const articles = rss.items;
   const images = [];
 
-  const regex = /<img src="(.*)" width=/;
+  const regex = /<img.*? src="([^"]+)"/;
 
   articles.forEach((elem) => {
     if (elem.description) {

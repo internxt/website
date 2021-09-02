@@ -8,6 +8,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/ivacy',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/core/setup-and-tips',
         destination: '/core',
         permanent: true,

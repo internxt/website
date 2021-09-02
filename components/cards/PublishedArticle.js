@@ -2,44 +2,57 @@ import React from 'react';
 import moment from 'moment';
 import styles from './PublishedArticle.module.css';
 
-const PublishedArticle = ({ textContent, article, image }) => {
+const PublishedArticle = ({ article, image }) => {
 
   return (
-    <div className={`${styles.card} col-span-1 overflow-hidden h-full sm:w-84 lg:w-72`}>
-      { image ? (
-        <img
-          className="w-full object-cover lg:-36 xl:h-48"
-          src={image}
-          alt=""
-        />
-      ) : (
-        <img
-          className="w-full object-cover lg:h-36 xl:h-48"
-          src="/images/1440/About/internxt.png"
-          alt=""
-        />
-      ) }
+    <div className={`bg-white rounded-lg ring-1 ring-neutral-30 overflow-hidden h-full w-full md:w-80`}>
+      <a href={article.link} target="_blank" rel="noreferrer">
+        { image ? (
+          <img
+            className="w-full"
+            src={image}
+            alt=""
+            draggable="false"
+          />
+        ) : (
+          <img
+            className="w-full"
+            src="/images/about/articles/placeholder.png"
+            alt=""
+            draggable="false"
+          />
+        ) }
 
-      <div className={`${styles.description} sm:pl-6 sm:pt-2 lg:pl-4 lg:pt-4 xl:pl-6 xl:pt-6 relative`}>
-        <p className={`${styles.date} sm:text-xs lg:text-xxs`}>
-          {moment(article.created).format('MMM DD YYYY')}
-        </p>
+        <div className={`p-6`}>
+          <p className={`text-xs`}>
+            {moment(article.created).format('MMM DD YYYY')}
+          </p>
 
-        <h1 className={`${styles.title} sm:text-lg sm:w-80 sm:pr-4 sm:pb-16 lg:text-sm lg:mb-10 lg:pr-4 xl:mb-16 xl:pr-6`}>
-          {article.title}
-        </h1>
+          <p className={`pt-2 text-lg`}>
+            {article.title}
+          </p>
 
-        <a
-          href={article.link}
-          target="_blank"
-          className={`${styles.link} hover:opacity-80 absolute bottom-0 mb-6 sm:text-xs lg:text-xs mr-1`}
-          rel="noreferrer"
-        >
-          {textContent.link}
-        </a>
-      </div>
+          <a
+            href={article.link}
+            target="_blank"
+            className={`hover:opacity-80 absolute bottom-0 mb-6 sm:text-xs lg:text-xs mr-1`}
+            rel="noreferrer"
+          >
+          </a>
+        </div>
+      </a>
+      
     </div>
   );
 };
+
+export async function getServerSideProps(ctx) {
+
+  cookies.setReferralCookie(ctx);
+
+  return {
+    props: {},
+  };
+}
 
 export default PublishedArticle;

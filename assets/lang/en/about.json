@@ -2,61 +2,74 @@
 	"HeroSection": {
 		"description": "Technology should empower each individual, not make them powerless to the corporation. Our intention is to offer a vast range of innovative technology services that doesn’t undermine the privacy of the individual."
 	},
-	"LeadershipSection": {
-		"Employees": [
+	"TeamSection": {
+		"title": "Internxt Leadership",
+		"employees": [
 			{
-				"name": "Fran Villalba",
-				"position": "Chief Executive Officer"
+				"name": "Fran Villalba Segarra",
+				"position": "Chief Executive Officer",
+				"photoId": "Fran",
+				"linkedin": "fvsegarra"
 			},
 			{
 				"name": "Alberto González",
-				"position": "Software Engineer"
+				"position": "Software Engineer",
+				"photoId": "Alberto",
+				"linkedin": "jalbertogonzaleztorre"
 			},
 			{
 				"name": "Carlos Sala",
-				"position": "Software Engineer"
+				"position": "Software Engineer",
+				"photoId": "Carlos",
+				"linkedin": "carlos-sala-samper-43629863"
 			},
 			{
 				"name": "Alex Menor",
-				"position": "Software Engineer"
-			},
-			{
-				"name": "Sergio Gutierrez",
-				"position": "Software Engineer"
+				"position": "Software Engineer",
+				"photoId": "Alex",
+				"linkedin": "alejandro-menor-molinero-a34595176"
 			},
 			{
 				"name": "Joan Mora",
-				"position": "Product Manager"
+				"position": "Product Manager",
+				"photoId": "Joan",
+				"linkedin": "joan-mora"
 			},
 			{
 				"name": "Diego Andrés",
-				"position": "Product Designer"
+				"position": "Product Designer",
+				"photoId": "Diego",
+				"linkedin": "diego-alayon-gomez"
 			},
 			{
 				"name": "Álvaro Hernández",
-				"position": "Product Designer"
+				"position": "Product Designer",
+				"photoId": "Alvaro",
+				"linkedin": "alvarohernandezperales"
 			},
 			{
 				"name": "Sasha Yudina",
-				"position": "Human Resource Manager"
+				"position": "Human Resource Manager",
+				"photoId": "Sasha",
+				"linkedin": "sashayudina"
 			},
 			{
 				"name": "Ainhoa Ribes",
-				"position": "Marketing Assistant"
+				"position": "Marketing Assistant",
+				"photoId": "Ainhoa",
+				"linkedin": "ainhoa-ribes-a245401b9"
 			},
 			{
 				"name": "Vicente Belda",
-				"position": "Marketing Assistant"
+				"position": "Marketing Assistant",
+				"photoId": "Vicente",
+				"linkedin": "vicente-belda"
 			},
 			{
 				"name": "Cadi Silla",
-				"position": "Marketing Assistant"
-			}
-		],
-		"Advisors": [
-			{
-				"name": "Jerome Albert",
-				"position": "Strategy Advisor"
+				"position": "Marketing Assistant",
+				"photoId": "Cadi",
+				"linkedin": "cadi-silla-fati"
 			}
 		],
 		"Investors": [
@@ -106,7 +119,7 @@
 	},
 	"Articles": {
 		"title": "Latest Published Articles",
-    "link": "Read more posts",
+    "morePosts": "Read more posts",
 		"read": "Read article"
 	}
 }
