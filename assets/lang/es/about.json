@@ -1,6 +1,6 @@
 {
 	"HeroSection": {
-		"description": "La tecnología debería potenciar a cada individuo, no hacerlos impotentes a la corporación. Nuestra intención es ofrecer una amplia gama de servicios tecnológicos innovadores que no infringen la privacidad del individuo."
+		"description": "Here at Internxt, we believe that what humanity can achieve is extraordinary. We want to become a force of positive change that pushes society towards a better, brighter future. To do so, we are completely reengineering the status quo of a variety of industries, through the application of innovation in a way that’s coherent."
 	},
 	"TeamSection": {
 		"title": "Liderazgo en Internxt",
@@ -13,7 +13,7 @@
 			},
 			{
 				"name": "Alberto González",
-				"position": "Software Engineer",
+				"position": "Chief Technology Officer",
 				"photoId": "Alberto",
 				"linkedin": "jalbertogonzaleztorre"
 			},

@@ -1,6 +1,6 @@
 {
 	"HeroSection": {
-		"description": "Technology should empower each individual, not make them powerless to the corporation. Our intention is to offer a vast range of innovative technology services that doesn’t undermine the privacy of the individual."
+		"description": "Here at Internxt, we believe that what humanity can achieve is extraordinary. We want to become a force of positive change that pushes society towards a better, brighter future. To do so, we are completely reengineering the status quo of a variety of industries, through the application of innovation in a way that’s coherent."
 	},
 	"TeamSection": {
 		"title": "Internxt Leadership",
@@ -13,7 +13,7 @@
 			},
 			{
 				"name": "Alberto González",
-				"position": "Software Engineer",
+				"position": "Chief Technology Officer",
 				"photoId": "Alberto",
 				"linkedin": "jalbertogonzaleztorre"
 			},

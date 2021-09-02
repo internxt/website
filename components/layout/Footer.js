@@ -143,9 +143,6 @@ export default function Footer({textContent, lang}) {
                     <a href="https://linkedin.com/company/internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
                       <img className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false"/>
                     </a>
-                    <a href="https://facebook.com/internxt/" target="_blank" className={`h-6 py-1.5 pr-2`}>
-                      <img className="h-4" src="/icons/social/neutral-300/facebook.svg" draggable="false"/>
-                    </a>
                     <a href="https://instagram.com/internxt/" target="_blank" className={`h-6 py-1.5 pr-2`}>
                       <img className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false"/>
                     </a>
@@ -154,7 +151,7 @@ export default function Footer({textContent, lang}) {
                     Github
                   </a>
                   <a href="https://blog.internxt.com/" target="_blank">
-                    Medium
+                    Blog
                   </a>
                 </div>
               </div>
