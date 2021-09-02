@@ -6,7 +6,7 @@ const TeamSection = ({ textContent }) => {
   return (
     <section>
       <div className="content">
-        <p className={`flex flex-col mx-auto text-center px-10 text-4xl my-24`}>
+        <p className={`flex flex-col mx-auto text-center px-6 text-4xl my-24`}>
           <p>{textContent.title}</p>
         </p>
 

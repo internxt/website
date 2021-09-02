@@ -5,7 +5,7 @@ const Articles = ({ textContent, articles, images }) => {
 
   return (
     <section className="bg-neutral-10">
-      <div className="content flex flex-col justify-center px-10 md:px-0">
+      <div className="content flex flex-col justify-center px-6 md:px-0">
         <h1 className={`flex justify-center my-16 text-2xl`}>
           {textContent.title}
         </h1>
