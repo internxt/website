@@ -55,9 +55,9 @@ const PriceCard = ({
       
       <div className="featureList flex flex-col p-6 text-neutral-500 bg-neutral-10 border-t border-neutral-20">
         <div className="flex flex-col space-y-2">
-          <div className="flex flex-row space-x-2 font-semibold"><img src="/icons/checkNeutral500.svg" draggable="false"/><span>30 days money-back guarantee</span></div>
-          <div className="flex flex-row space-x-2"><img src="/icons/checkNeutral500.svg" draggable="false"/><span>Private and Secure file sharing</span></div>
-          <div className="flex flex-row space-x-2"><img src="/icons/checkNeutral500.svg" draggable="false"/><span>Access your files from any device</span></div>
+          <div className={`flex flex-row space-x-2 font-semibold`}><img loading="lazy" src="/icons/checkNeutral500.svg" draggable="false"/><span className={`${pricePerMonth <= 0 ? 'hidden' : 'flex'}`}>30 days money-back guarantee</span><span  className={`${pricePerMonth <= 0 ? 'flex' : 'hidden'}`}>Enjoy Internxt for free, forever!</span></div>
+          <div className="flex flex-row space-x-2"><img loading="lazy" src="/icons/checkNeutral500.svg" draggable="false"/><span>Private and Secure file sharing</span></div>
+          <div className="flex flex-row space-x-2"><img loading="lazy" src="/icons/checkNeutral500.svg" draggable="false"/><span>Access your files from any device</span></div>
         </div>
       </div>
 

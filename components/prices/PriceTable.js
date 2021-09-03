@@ -93,12 +93,12 @@ const PriceTable = (props) => {
 
       <div className="flex flex-col items-center">
         <h1 className="pt-40 text-center text-5xl">
-          <p className={`${individual ? 'flex' : 'hidden'}`}>Individual Plans</p>
-          <p className={`${individual ? 'hidden' : 'flex'}`}>Business Plans</p>
+          <p className={`${individual ? 'flex' : 'hidden'}`}>Plans for Individuals</p>
+          <p className={`${individual ? 'hidden' : 'flex'}`}>Plans for Businesses</p>
         </h1>
         <button className="pt-2 pb-10 text-center text-blue-60 active:text-blue-50 font-semibold cursor-pointer" onClick={() => {setIndividual(!individual)}}>
-          <p className={`${individual ? 'flex' : 'hidden'}`}>Change to Business Plans</p>
-          <p className={`${individual ? 'hidden' : 'flex'}`}>Change to Individual Plans</p>
+          <p className={`${individual ? 'flex' : 'hidden'}`}>Change to Plans for Businesses</p>
+          <p className={`${individual ? 'hidden' : 'flex'}`}>Change to Plans for Individual</p>
         </button>
 
         <div className="flex flex-row p-1.5 text-sm bg-neutral-20 ring-1 ring-neutral-30 rounded-lg">

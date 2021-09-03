@@ -7,14 +7,14 @@ const Article = ({ article, image, linkLabel }) => {
     <div className={`flex flex-col bg-white rounded-lg ring-1 ring-neutral-30 overflow-hidden h-full w-full md:w-80`}>
       <a href={article.link} target="_blank" rel="noreferrer">
         { image ? (
-          <img
+          <img loading="lazy"
             className="w-full"
             src={image}
             alt=""
             draggable="false"
           />
         ) : (
-          <img
+          <img loading="lazy"
             className="w-full"
             src="/images/about/articles/placeholder.png"
             alt=""

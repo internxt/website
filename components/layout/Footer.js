@@ -69,7 +69,7 @@ export default function Footer({textContent, lang}) {
 
             <div className="flex flex-col space-y-4 max-w-sm">
               <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
-                <img src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
+                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
               </a>
               <p className="text-sm text-neutral-80">
                 {textContent.FooterSection.description}
@@ -138,13 +138,13 @@ export default function Footer({textContent, lang}) {
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
                   <div className="flex flex-row space-x-1">
                     <a href="https://twitter.com/Internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
-                      <img className="h-4" src="/icons/social/neutral-300/twitter.svg" draggable="false"/>
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/twitter.svg" draggable="false"/>
                     </a>
                     <a href="https://linkedin.com/company/internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
-                      <img className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false"/>
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false"/>
                     </a>
                     <a href="https://instagram.com/internxt/" target="_blank" className={`h-6 py-1.5 pr-2`}>
-                      <img className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false"/>
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false"/>
                     </a>
                   </div>
                   <a href="https://github.com/internxt" target="_blank">
@@ -305,7 +305,7 @@ export default function Footer({textContent, lang}) {
 
             <div className="flex flex-row justify-between px-6 py-8 mt-8 bg-neutral-20">
               <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
-                <img src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
+                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
               </a>
               <p className="text-sm text-neutral-100">
                 {textContent.FooterSection.copyright}
@@ -325,11 +325,11 @@ export default function Footer({textContent, lang}) {
               {textContent.Cookies.title}
             </p>
             <a
-              href={`${router.pathname === '/' ? '' : ((lang ? '/' + lang : '') + '/legal')}`}
+              href={`${router.pathname === '/legal' ? '' : ((lang ? '/' + lang : '') + '/legal')}`}
               target="_blank"
               className="text-neutral-100 text-sm"
             >
-              <div className="flex flex-row items-center"><img className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false"/>{textContent.Cookies.link}</div>
+              <div className="flex flex-row items-center"><img loading="lazy" className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false"/>{textContent.Cookies.link}</div>
             </a>
             <div className="pt-6">
               <button
@@ -348,7 +348,7 @@ export default function Footer({textContent, lang}) {
               onClick={handleAcceptCookies}
               className="flex justify-center items-center h-10 w-14 p-0 sm:w-full sm:px-4 sm:py-2 border border-transparent rounded-lg text-base font-medium text-neutral-500 bg-neutral-30 active:bg-neutral-40 focus:bg-neutral-30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-30 transition-all duration-75 cursor-pointer"
             >
-              <span className="hidden sm:flex">{textContent.Cookies.close}</span><img className="flex sm:hidden h-6" src="/icons/closeNeutral60.svg" draggable="false"/>
+              <span className="hidden sm:flex">{textContent.Cookies.close}</span><img loading="lazy" className="flex sm:hidden h-6" src="/icons/closeNeutral60.svg" draggable="false"/>
             </button>
           </div>
 

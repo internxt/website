@@ -30,12 +30,12 @@ const CardsSection = ({textContent, lang, download, platform}) => {
                 {textContent.web.description}
               </span>
               <a href="https://drive.internxt.com" target="_blank" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'} text-lg text-blue-60`}>
-                <div className="flex flex-row items-center"><img className="w-3 h-3 mt-0.5 mr-3" src="/icons/newTab.svg" draggable="false"/>{textContent.web.cta}</div>
+                <div className="flex flex-row items-center"><img loading="lazy" className="w-3 h-3 mt-0.5 mr-3" src="/icons/newTab.svg" draggable="false"/>{textContent.web.cta}</div>
               </a>
             </div>
 
             <div className="grid place-content-end">
-              <img className="flex max-h-60 sm:max-h-full" src="/images/products/safari.webp" draggable="false" alt="Internxt Drive Web on Safari"/>
+              <img loading="lazy" className="flex max-h-60 sm:max-h-full" src="/images/products/safari.webp" draggable="false" alt="Internxt Drive Web on Safari"/>
             </div>
 
           </div>
@@ -61,7 +61,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               </div>
 
               <div className="flex items-end content-end">
-                <img className="flex" src="/images/products/mackbook.webp" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
+                <img loading="lazy" className="flex" src="/images/products/mackbook.webp" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
               </div>
             
             </div>
@@ -83,30 +83,30 @@ const CardsSection = ({textContent, lang, download, platform}) => {
                   <div>
                     <div className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex flex-row space-x-4 justify-between'}`}>
                       <a href={download} className="flex justify-center mt-2">
-                        <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
-                        <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                        <img loading="lazy" className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                        <img loading="lazy" className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
                         
                       </a>
                       <a href={download} className="flex justify-center mt-2">
-                        <img className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
-                        <img className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                        <img loading="lazy" className={`h-14 ${(lang === 'en') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                        <img loading="lazy" className={`h-14 ${(lang === 'es') ? '' : 'hidden'} max-h-12`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
                       </a>
                     </div>
 
                     <a href={download} className={`${(platform === 'iOS' || platform === 'Android') ? 'flex' : 'hidden'} justify-center mt-2 max-h-4`}>
-                      <img className={`h-14 ${(platform === 'iOS' && lang === 'en') ? '' : 'hidden'}`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
-                      <img className={`h-14 ${(platform === 'iOS' && lang === 'es') ? '' : 'hidden'}`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
-                      <img className={`h-14 ${(platform === 'Android' && lang === 'en') ? '' : 'hidden'}`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
-                      <img className={`h-14 ${(platform === 'Android' && lang === 'es') ? '' : 'hidden'}`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                      <img loading="lazy" className={`h-14 ${(platform === 'iOS' && lang === 'en') ? '' : 'hidden'}`} src="/badges/appStoreEN.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                      <img loading="lazy" className={`h-14 ${(platform === 'iOS' && lang === 'es') ? '' : 'hidden'}`} src="/badges/appStoreES.svg" draggable="false" alt="Apple App Store badge for download Internxt Drive Mobile App"/>
+                      <img loading="lazy" className={`h-14 ${(platform === 'Android' && lang === 'en') ? '' : 'hidden'}`} src="/badges/playStoreEN.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
+                      <img loading="lazy" className={`h-14 ${(platform === 'Android' && lang === 'es') ? '' : 'hidden'}`} src="/badges/playStoreES.svg" draggable="false" alt="Google Play Store badge for download Internxt Drive Mobile App"/>
                     </a>
                   </div>
                 </div>
               </div>
 
               <div className="flex items-end content-end">
-                <img className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-                <img className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-                <img className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img loading="lazy" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img loading="lazy" className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img loading="lazy" className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
               </div>
               
             </div>

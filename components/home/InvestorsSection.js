@@ -12,22 +12,22 @@ const InvestorsSection = ({textContent}) => {
 
             <div className="flex flex-row justify-around flex-wrap sm:px-10">
               <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-                <img src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovhcloud logo"/>
+                <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovhcloud logo"/>
               </div>
               <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-                <img src="../../logos/investors/blackberry.svg" draggable="false" alt="blackberry logo"/>
+                <img loading="lazy" src="../../logos/investors/blackberry.svg" draggable="false" alt="blackberry logo"/>
               </div>
               <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-                <img src="../../logos/investors/stripe.svg" draggable="false" alt="stripe logo"/>
+                <img loading="lazy" src="../../logos/investors/theventurecity.svg" draggable="false" alt="theventurecity logo"/>
               </div>
               <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-                <img src="../../logos/investors/esade.svg" draggable="false" alt="esade logo"/>
+                <img loading="lazy" src="../../logos/investors/esade.svg" draggable="false" alt="esade logo"/>
               </div>
               <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-                <img src="../../logos/investors/ycombinator.svg" draggable="false" alt="ycombinator logo"/>
+                <img loading="lazy" src="../../logos/investors/ycombinator.svg" draggable="false" alt="ycombinator logo"/>
               </div>
               <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-                <img src="../../logos/investors/angelscapital.svg" draggable="false" alt="angelscapital logo"/>
+                <img loading="lazy" src="../../logos/investors/angelscapital.svg" draggable="false" alt="angelscapital logo"/>
               </div>
             </div>
         </div>

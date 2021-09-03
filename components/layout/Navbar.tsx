@@ -76,7 +76,7 @@ export default function Navbar({textContent, lang, cta}) {
               </div>
             </div>
             <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
-              <img src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
+              <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
             </a>
           </div>
           
@@ -90,7 +90,7 @@ export default function Navbar({textContent, lang, cta}) {
                   {({ open }) => (
                     <>
                       <Popover.Button className={`transition duration-150 ease-in-out font-medium text-neutral-700`}>
-                        <span className={`flex ${open ? 'text-neutral-80' : ''}`}>{textContent.products}<img className="mt-0.5 ml-3 transform rotate-90" src="/icons/chevronBoldNeutral80.svg" draggable="false"/></span>
+                        <span className={`flex ${open ? 'text-neutral-80' : ''}`}>{textContent.products}<img loading="lazy" className="mt-0.5 ml-3 transform rotate-90" src="/icons/chevronBoldNeutral80.svg" draggable="false"/></span>
                       </Popover.Button>
 
                       <Transition
@@ -107,7 +107,7 @@ export default function Navbar({textContent, lang, cta}) {
                             
                             <div className="flex pb-4 justify-between items-end">
                               <div className="text-xs font-semibold text-neutral-100">INTERNXT DRIVE</div>
-                              <Popover.Button><a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl"><span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span><img className=" ml-1.5 transform scale-75" src="/icons/chevronNeutral80.svg" draggable="false"/></a></Popover.Button>
+                              <Popover.Button><a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl"><span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span><img loading="lazy" className=" ml-1.5 transform scale-75" src="/icons/chevronNeutral80.svg" draggable="false"/></a></Popover.Button>
                             </div>
                             
                             <div className="relative grid gap-8 lg:grid-cols-3 lg:gap-16">
@@ -123,7 +123,7 @@ export default function Navbar({textContent, lang, cta}) {
                                     </p>
                                   </div>                                    
                                   <div className="flex flex-row items-center text-sm text-blue-60 font-semibold">
-                                    <img className="mt-0.5 mr-2" src="/icons/newTab.svg" draggable="false"/>
+                                    <img loading="lazy" className="mt-0.5 mr-2" src="/icons/newTab.svg" draggable="false"/>
                                     {textContent.productsMenu.web.link}
                                   </div>
                                 </a>
@@ -141,7 +141,7 @@ export default function Navbar({textContent, lang, cta}) {
                                   </div>
                                   <div className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
                                     <span className="flex flex-shrink-0">{textContent.productsMenu.desktop.link}</span>
-                                    <img className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
+                                    <img loading="lazy" className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
                                   </div>
                                 </a>
                               </Popover.Button>
@@ -160,7 +160,7 @@ export default function Navbar({textContent, lang, cta}) {
                                     <span className="flex flex-shrink-0">
                                       {textContent.productsMenu.mobile.link}
                                     </span>
-                                    <img className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
+                                    <img loading="lazy" className="mt-0.5 transform scale-50" src="/icons/chevronBoldBlue60.svg" draggable="false"/>
                                   </div>
                                 </a>
                               </Popover.Button>
