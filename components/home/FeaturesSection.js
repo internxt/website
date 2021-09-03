@@ -18,7 +18,7 @@ const FeaturesSection = ({textContent, lang}) => {
             <h3 className={`mb-6 text-lg text-neutral-500`}>
             {textContent.subtitle.line1}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line2}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line3}
             </h3>
-            <a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`} className="text-lg font-semibold sm:font-normal text-blue-60">
+            <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/products')}`} className="text-lg font-semibold sm:font-normal text-blue-60">
               <div className="flex flex-row items-center">{textContent.cta}<img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBoldBlue60.svg" draggable="false"/></div>
             </a>
         </div>
@@ -49,7 +49,7 @@ const FeaturesSection = ({textContent, lang}) => {
               <span className="text-lg text-neutral-500">
                 {textContent.feature2.description}
               </span>
-              <a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`} className="text-lg text-blue-60">
+              <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/products')}`} className="text-lg text-blue-60">
                 <div className="flex flex-row items-center">{textContent.feature2.cta}<img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false"/></div>
               </a>
             </div>
