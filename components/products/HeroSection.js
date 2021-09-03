@@ -16,9 +16,9 @@ const HeroSection = ({textContent, download, lang, platform}) => {
             <h1 className={`title mb-4 md:mb-8 text-4xl md:text-5xl lg:text-6xl`}>
               {textContent.title}
             </h1>
-            <p className={`mb-8 md:mb-8 text-lg lg:text-xl text-neutral-500`}>
+            <h2 className={`mb-8 md:mb-8 text-lg lg:text-xl text-neutral-500`}>
               {textContent.subtitle.line1}<br className="hidden md:inline-flex"/> {textContent.subtitle.line2}
-            </p>
+            </h2>
 						
             <div>
               

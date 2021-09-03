@@ -23,9 +23,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
             
             <div className={`sm:row-auto flex flex-col flex-shrink-0 pb-0 p-12 sm:pb-12 lg:p-16 space-y-6`}>
               <div id="web" className="scrollAnchor absolute -top-24"></div>
-              <span className="text-5xl sm:text-4xl font-semibold">
+              <h2 className="text-5xl sm:text-4xl font-semibold">
                 {textContent.web.title}
-              </span>
+              </h2>
               <span className="text-lg text-neutral-500">
                 {textContent.web.description}
               </span>
@@ -46,9 +46,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               
               <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
                 <div className="flex flex-col space-y-6">
-                  <span className="text-5xl sm:text-4xl font-semibold">
+                  <h2 className="text-5xl sm:text-4xl font-semibold">
                     {textContent.desktop.title}
-                  </span>
+                  </h2>
                   <span className="text-lg text-neutral-500">
                     {textContent.desktop.description}
                   </span>
@@ -73,9 +73,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               
               <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
                 <div className="flex flex-col space-y-6">
-                  <span className="text-5xl sm:text-4xl font-semibold">
+                  <h2 className="text-5xl sm:text-4xl font-semibold">
                     {textContent.mobile.title}
-                  </span>
+                  </h2>
                   <span className="text-lg text-neutral-500">
                     {textContent.mobile.description}
                   </span>

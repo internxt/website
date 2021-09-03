@@ -93,18 +93,16 @@ const PriceTable = (props) => {
 
       <div className="flex flex-col items-center">
         <h1 className="pt-40 text-center text-5xl">
-          <p className={`${individual ? 'flex' : 'hidden'}`}>Plans for Individuals</p>
-          <p className={`${individual ? 'hidden' : 'flex'}`}>Plans for Businesses</p>
+          {individual ? 'Plans for Individuals' : 'Plans for Businesses'}
         </h1>
         <button className="pt-2 pb-10 text-center text-blue-60 active:text-blue-50 font-semibold cursor-pointer" onClick={() => {setIndividual(!individual)}}>
-          <p className={`${individual ? 'flex' : 'hidden'}`}>Change to Plans for Businesses</p>
-          <p className={`${individual ? 'hidden' : 'flex'}`}>Change to Plans for Individual</p>
+          {individual ? 'Change to Plans for Businesses' : 'Change to Plans for Individual'}
         </button>
 
-        <div className="flex flex-row p-px text-sm bg-neutral-20 ring-1 ring-neutral-30 rounded-lg">
-          <button onClick={() => {setBillingFrequency(1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm ring-1 ring-neutral-30 bg-white' : 'text-neutral-80'}`}>Monthly</button>
-          <button onClick={() => {setBillingFrequency(6)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 6 ? 'text-neutral-700 shadow-sm ring-1 ring-neutral-30 bg-white' : 'text-neutral-80'}`}>Semianually</button>
-          <button onClick={() => {setBillingFrequency(12)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm ring-1 ring-neutral-30 bg-white' : 'text-neutral-80'}`}>Anually</button>
+        <div className="flex flex-row p-0.5 text-sm bg-neutral-20 rounded-lg">
+          <button onClick={() => {setBillingFrequency(1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>Monthly</button>
+          <button onClick={() => {setBillingFrequency(6)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 6 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>Semiannually</button>
+          <button onClick={() => {setBillingFrequency(12)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>Annually</button>
         </div>
         
           <Transition

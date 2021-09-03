@@ -9,9 +9,9 @@ const GetStartedSection = ({textContent, lang}) => {
             <h2 className={`mb-4 text-3xl sm:text-2xl font-semibold`}>
               {textContent.title.line1}<br className="sm:hidden"/> {textContent.title.line2}
             </h2>
-            <p className={`mb-8 text-lg text-blue-20`}>
+            <h3 className={`mb-8 text-lg text-blue-20`}>
             {textContent.subtitle.line1}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line2}
-            </p>
+            </h3>
             <div>
               <a href="https://drive.internxt.com/new" target="_blank">
                 <button

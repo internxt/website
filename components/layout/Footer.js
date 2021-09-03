@@ -30,7 +30,7 @@ export default function Footer({textContent, lang}) {
         <div className="newsletter flex flex-col sm:flex-row space-y-6 sm:space-x-20 py-20 justify-center mx-6 md:mx-10 lg:mx-32">
 
           <div className="flex flex-col space-y-2">
-            <p className="text-3xl font-semibold">{textContent.NewsletterSection.title}</p>
+            <h2 className="text-3xl font-semibold">{textContent.NewsletterSection.title}</h2>
             <p className="text-lg text-neutral-500">
               {textContent.NewsletterSection.description.line1}<br className="hidden md:flex"/> {textContent.NewsletterSection.description.line2}<br className="hidden md:flex"/> {textContent.NewsletterSection.description.line3}
             </p>
@@ -81,9 +81,9 @@ export default function Footer({textContent, lang}) {
 
             <div className="flex flex-row lg:space-x-14 xl:space-x-20 flex-shrink-0 justify-between">
               <div className="flex flex-col space-y-4 flex-shrink-0">
-                <p className="text-lg font-semibold">
+                <h3 className="text-lg font-semibold">
                   {textContent.FooterSection.sections.products.title}
-                </p>
+                </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
                   <a href={`${router.pathname === '/products' ? '' : ((lang ? '/' + lang : '') + '/products')}`}>
                     Internxt Drive
@@ -95,9 +95,9 @@ export default function Footer({textContent, lang}) {
               </div>
 
               <div className="flex flex-col space-y-4 flex-shrink-0">
-                <p className="text-lg font-semibold">
+                <h3 className="text-lg font-semibold">
                   {textContent.FooterSection.sections.company.title}
-                </p>
+                </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
                   <a href={`${router.pathname === '/about' ? '' : ((lang ? '/' + lang : '') + '/about')}`}>
                     {textContent.FooterSection.sections.company.about}
@@ -112,9 +112,9 @@ export default function Footer({textContent, lang}) {
               </div>
 
               <div className="flex flex-col space-y-4 flex-shrink-0">
-                <p className="text-lg font-semibold">
+                <h3 className="text-lg font-semibold">
                   {textContent.FooterSection.sections.join.title}
-                </p>
+                </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
                   <a href="https://drive.internxt.com/new" target="_self">
                     {textContent.FooterSection.sections.join.signup}
@@ -129,9 +129,9 @@ export default function Footer({textContent, lang}) {
               </div>
 
               <div className="flex flex-col space-y-4 flex-shrink-0">
-                <p className="text-lg font-semibold">
+                <h3 className="text-lg font-semibold">
                   {textContent.FooterSection.sections.follow.title}
-                </p>
+                </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
                   <div className="flex flex-row space-x-1">
                     <a href="https://twitter.com/Internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
@@ -164,9 +164,9 @@ export default function Footer({textContent, lang}) {
                   <div>
                     
                     <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <div className={`flex flex-row`}>
+                      <h3 className={`flex flex-row`}>
                         {textContent.FooterSection.sections.products.title}
-                      </div>
+                      </h3>
                       <div className={`relative w-6 h-6`}>
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
@@ -194,9 +194,9 @@ export default function Footer({textContent, lang}) {
                   <div>
                     
                     <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <div className={`flex flex-row`}>
+                      <h3 className={`flex flex-row`}>
                         {textContent.FooterSection.sections.company.title}
-                      </div>
+                      </h3>
                       <div className={`relative w-6 h-6`}>
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
@@ -225,9 +225,9 @@ export default function Footer({textContent, lang}) {
                   <div>
                     
                     <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <div className={`flex flex-row`}>
+                      <h3 className={`flex flex-row`}>
                         {textContent.FooterSection.sections.join.title}
-                      </div>
+                      </h3>
                       <div className={`relative w-6 h-6`}>
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
@@ -256,9 +256,9 @@ export default function Footer({textContent, lang}) {
                   <div>
                     
                     <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <div className={`flex flex-row`}>
+                      <h3 className={`flex flex-row`}>
                         {textContent.FooterSection.sections.follow.title}
-                      </div>
+                      </h3>
                       <div className={`relative w-6 h-6`}>
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
