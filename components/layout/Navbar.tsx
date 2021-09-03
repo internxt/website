@@ -17,6 +17,7 @@ export default function Navbar({textContent, lang, cta}) {
 
   React.useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    handleScroll
   })
 
   return (
