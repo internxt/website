@@ -23,7 +23,7 @@ const PriceTable = (props) => {
         },
         "popular": false
       },
-      "twentyGB": {
+      "GB20": {
         "stripeID": "20GB",
         "storage": "20GB",
         "pricePerMonth": {
@@ -33,7 +33,7 @@ const PriceTable = (props) => {
         },
         "popular": false
       },
-      "twoHundredGB": {
+      "GB200": {
         "stripeID": "200GB",
         "storage": "200GB",
         "pricePerMonth": {
@@ -43,7 +43,7 @@ const PriceTable = (props) => {
         },
         "popular": true
       },
-      "twoTB": {
+      "TB2": {
         "stripeID": "2TB",
         "storage": "2TB",
         "pricePerMonth": {
@@ -55,7 +55,7 @@ const PriceTable = (props) => {
       }
     },
     "business": {
-      "twoHundredGB": {
+      "GB200": {
         "stripeID": "200GB",
         "storage": "200GB",
         "pricePerMonth": {
@@ -65,7 +65,7 @@ const PriceTable = (props) => {
         },
         "popular": false
       },
-      "twoTB": {
+      "TB2": {
         "stripeID": "2TB",
         "storage": "2TB",
         "pricePerMonth": {
@@ -115,9 +115,9 @@ const PriceTable = (props) => {
           >
             <div className={`flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
               <PriceCard planType="individual" storage={pricings.individuals.free.storage} pricePerMonth={billingPrice(pricings.individuals.free.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.individuals.free.popular} />
-              <PriceCard planType="individual" storage={pricings.individuals.twentyGB.storage} pricePerMonth={billingPrice(pricings.individuals.twentyGB.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.individuals.twentyGB.popular} />
-              <PriceCard planType="individual" storage={pricings.individuals.twoHundredGB.storage} pricePerMonth={billingPrice(pricings.individuals.twoHundredGB.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.individuals.twoHundredGB.popular} />
-              <PriceCard planType="individual" storage={pricings.individuals.twoTB.storage} pricePerMonth={billingPrice(pricings.individuals.twoTB.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.individuals.twoTB.popular}/>
+              <PriceCard planType="individual" storage={pricings.individuals.GB20.storage} pricePerMonth={billingPrice(pricings.individuals.GB20.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.individuals.GB20.popular} />
+              <PriceCard planType="individual" storage={pricings.individuals.GB200.storage} pricePerMonth={billingPrice(pricings.individuals.GB200.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.individuals.GB200.popular} />
+              <PriceCard planType="individual" storage={pricings.individuals.TB2.storage} pricePerMonth={billingPrice(pricings.individuals.TB2.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.individuals.TB2.popular}/>
             </div>
           </Transition>
           
@@ -128,8 +128,8 @@ const PriceTable = (props) => {
             enterTo="transform scale-100 translate-y-0 opacity-100"
           >
             <div className={`flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
-              <PriceCard planType="business" storage={pricings.business.twoHundredGB.storage} pricePerMonth={billingPrice(pricings.business.twoHundredGB.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.business.twoHundredGB.popular} />
-              <PriceCard planType="business" storage={pricings.business.twoTB.storage} pricePerMonth={billingPrice(pricings.business.twoTB.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.business.twoTB.popular} />
+              <PriceCard planType="business" storage={pricings.business.GB200.storage} pricePerMonth={billingPrice(pricings.business.GB200.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.business.GB200.popular} />
+              <PriceCard planType="business" storage={pricings.business.TB2.storage} pricePerMonth={billingPrice(pricings.business.TB2.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.business.TB2.popular} />
               <PriceCard planType="business" storage={pricings.business.twentyTB.storage} pricePerMonth={billingPrice(pricings.business.twentyTB.pricePerMonth)} billingFrequency={billingFrequency} popular={pricings.business.twentyTB.popular} />
             </div>
           </Transition>
