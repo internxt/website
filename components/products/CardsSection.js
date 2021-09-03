@@ -13,7 +13,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               {textContent.title.line1}<br className="hidden sm:flex"/> {textContent.title.line2}
             </h2>
             <p className={`mb-6 text-lg text-neutral-500`}>
-            {textContent.subtitle.line1}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line2}
+              {textContent.subtitle.line1}<br className="hidden sm:inline-flex"/> {textContent.subtitle.line2}
             </p>
         </div>
 
@@ -35,7 +35,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
             </div>
 
             <div className="grid place-content-end">
-              <img loading="lazy" className="flex max-h-60 sm:max-h-full" src="/images/products/safari.webp" draggable="false" alt="Internxt Drive Web on Safari"/>
+              <img loading="lazy" className="object-cover" src="/images/products/safari.webp" draggable="false" alt="Internxt Drive Web on Safari"/>
             </div>
 
           </div>
@@ -61,7 +61,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               </div>
 
               <div className="flex items-end content-end">
-                <img loading="lazy" className="flex" src="/images/products/mackbook.webp" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
+                <img loading="lazy" className="object-cover" src="/images/products/mackbook.webp" draggable="false" alt="Internxt Drive Desktop App running on a Macbook Pro"/>
               </div>
             
             </div>
@@ -104,9 +104,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
               </div>
 
               <div className="flex items-end content-end">
-                <img loading="lazy" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'}`} src="/images/products/iosandandroidCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-                <img loading="lazy" className={`${(platform === 'iOS') ? 'flex' : 'hidden'} `} src="/images/products/iphoneCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
-                <img loading="lazy" className={`${(platform === 'Android') ? 'flex' : 'hidden'}`} src="/images/products/pixel4xlCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img loading="lazy" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'object-cover'}`} src="/images/products/iosandandroidCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img loading="lazy" className={`${(platform === 'iOS') ? 'object-cover' : 'hidden'} `} src="/images/products/iphoneCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
+                <img loading="lazy" className={`${(platform === 'Android') ? 'object-cover' : 'hidden'}`} src="/images/products/pixel4xlCut.webp" draggable="false" alt="iPhone and Android side by side with Internxt Drive Mobile App on screen"/>
               </div>
               
             </div>

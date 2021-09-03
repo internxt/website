@@ -4,42 +4,43 @@ import moment from 'moment';
 const Article = ({ article, image, linkLabel }) => {
 
   return (
-    <div className={`flex flex-col bg-white rounded-lg ring-1 ring-neutral-30 overflow-hidden h-full w-full md:w-80`}>
-      <a href={article.link} target="_blank" rel="noreferrer">
+    <a href={article.link} target="_blank" rel="noreferrer" className={`flex flex-col bg-white rounded-lg ring-1 ring-neutral-30 h-full w-full md:w-80`}>
+      
+      <div className="flex flex-col">
         { image ? (
           <img loading="lazy"
-            className="w-full"
+            className="flex flex-col w-full"
             src={image}
             alt=""
             draggable="false"
           />
         ) : (
           <img loading="lazy"
-            className="w-full"
+            className="flex flex-col w-full"
             src="/images/about/articles/placeholder.png"
             alt=""
             draggable="false"
           />
         ) }
+      </div>
 
-        <div className={`flex flex-col p-6`}>
-          <div>
-            <p className={`text-xs`}>
-              {moment(article.created).format('MMM DD YYYY')}
-            </p>
+      <div className="flex flex-col p-6">
+        <div>
+          <p className={`text-xs`}>
+            {moment(article.created).format('MMM DD YYYY')}
+          </p>
 
-            <p className={`pt-2 text-lg`}>
-              {article.title}
-            </p>
-          </div>
-
-          <p className={`pt-2 text-sm text-blue-50`}>
-            {linkLabel}
+          <p className={`pt-2 text-lg`}>
+            {article.title}
           </p>
         </div>
-      </a>
-      
-    </div>
+
+        <p className={`pt-2 text-sm text-blue-50`}>
+          {linkLabel}
+        </p>
+      </div>
+
+    </a>
   );
 };
 

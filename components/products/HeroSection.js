@@ -51,12 +51,12 @@ const HeroSection = ({textContent, download, lang, platform}) => {
             </div>
           </div>
 
-          <div className={`flex w-auto md:hidden`}>
+          <div className={`flex flex-col w-auto md:hidden`}>
             <img loading="lazy" src="/images/products/iPhoneCut.webp" className={`${platform === 'iOS' ? '' : 'hidden'}`} draggable="false" alt="iPhone with Internxt App on screen"/>
             <img loading="lazy" src="/images/products/pixel4xlCut.webp" className={`${platform === 'Android' ? '' : 'hidden'}`} draggable="false" alt="iPhone with Internxt App on screen"/>
           </div>
 
-          <div className={`hidden md:flex flex-grow max-w-2xl mr-0 xl:mr-32`}>
+          <div className={`hidden md:flex flex-grow flex-col max-w-2xl mr-0 xl:mr-32`}>
             <img loading="lazy" className="hidden xl:flex" src="/images/home/devicesAsc.webp" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
             <img loading="lazy" className="flex xl:hidden" src="/images/home/devicesAscCut.webp" draggable="false"  alt="desktop, laptop and phone with Internxt app"/>
           </div>

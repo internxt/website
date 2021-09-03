@@ -56,7 +56,7 @@ const FeaturesSection = ({textContent, lang}) => {
           </div>
 
           <div data-aos="fade-up" data-aos-duration="500" className={`col-span-2 sm:col-span-1 z-10 ${styles.featureBox} flex flex-col justify-self-start md:flex-1 p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8`}>
-            <div className="flex">
+            <div className="flex flex-col">
               <img loading="lazy" className="hidden sm:flex lg:max-w-xs mb-6" src="/images/home/privacy.webp" draggable="false" alt="privacy green lock icon"/>
               <img loading="lazy" className="flex sm:hidden h-16 w-12 sm:h-24 sm:w-20 mb-2 sm:mb-6" src="/icons/lock.svg" draggable="false" alt="privacy green lock icon"/>
             </div>
