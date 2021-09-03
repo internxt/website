@@ -285,7 +285,7 @@ export default function Footer({textContent, lang}) {
                           Github
                         </a>
                         <a href="https://blog.internxt.com/" target="_blank" className={`flex w-full px-4 py-3`}>
-                          Medium
+                          Blog
                         </a>
                       </Disclosure.Panel>
                     </Transition>
