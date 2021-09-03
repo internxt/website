@@ -16,8 +16,8 @@ export default function Navbar({textContent, lang, cta}) {
   cta[0] ? cta[0] : (cta = ['default', null]);
 
   React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
     handleScroll
+    window.addEventListener("scroll", handleScroll);
   })
 
   return (
