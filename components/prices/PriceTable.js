@@ -101,10 +101,10 @@ const PriceTable = (props) => {
           <p className={`${individual ? 'hidden' : 'flex'}`}>Change to Plans for Individual</p>
         </button>
 
-        <div className="flex flex-row p-1.5 text-sm bg-neutral-20 ring-1 ring-neutral-30 rounded-lg">
-          <button onClick={() => {setBillingFrequency(1)}} className={`py-2 px-4 rounded-lg ${billingFrequency === 1 ? 'text-neutral-500 shadow-sm ring-1 ring-neutral-30 bg-white font-semibold' : 'text-neutral-100'}`}>Monthly</button>
-          <button onClick={() => {setBillingFrequency(6)}} className={`py-2 px-4 rounded-lg ${billingFrequency === 6 ? 'text-neutral-500 shadow-sm ring-1 ring-neutral-30 bg-white font-semibold' : 'text-neutral-100'}`}>Semianually</button>
-          <button onClick={() => {setBillingFrequency(12)}} className={`py-2 px-4 rounded-lg ${billingFrequency === 12 ? 'text-neutral-500 shadow-sm ring-1 ring-neutral-30 bg-white font-semibold' : 'text-neutral-100'}`}>Anually</button>
+        <div className="flex flex-row p-px text-sm bg-neutral-20 ring-1 ring-neutral-30 rounded-lg">
+          <button onClick={() => {setBillingFrequency(1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm ring-1 ring-neutral-30 bg-white' : 'text-neutral-80'}`}>Monthly</button>
+          <button onClick={() => {setBillingFrequency(6)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 6 ? 'text-neutral-700 shadow-sm ring-1 ring-neutral-30 bg-white' : 'text-neutral-80'}`}>Semianually</button>
+          <button onClick={() => {setBillingFrequency(12)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm ring-1 ring-neutral-30 bg-white' : 'text-neutral-80'}`}>Anually</button>
         </div>
         
           <Transition
