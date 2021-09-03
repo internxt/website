@@ -9,7 +9,7 @@ import { MinusIcon } from '@heroicons/react/solid'
 export default function Navbar({textContent, lang, cta}) {
   const router = useRouter();
   const [menuState, setMenuState] = React.useState(false)
-  const [navbarBG, setNavbarBG] = React.useState(false)
+  const [navbarBG, setNavbarBG] = React.useState(true)
   const handleScroll = () => {
     (window.pageYOffset > 0) ? setNavbarBG(true) : setNavbarBG(false)
   }
