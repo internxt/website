@@ -324,7 +324,7 @@ export default function Footer({textContent, lang}) {
             >
               <div className="flex flex-row items-center"><img loading="lazy" className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false"/>{textContent.Cookies.link}</div>
             </a>
-            <div className="pt-6">
+            <div className="pt-2">
               <button
                 type="button"
                 onClick={handleAcceptCookies}
@@ -333,16 +333,6 @@ export default function Footer({textContent, lang}) {
                 <span className="flex">{textContent.Cookies.close}</span>
               </button>
             </div>
-          </div>
-
-          <div className="hidden">
-            <button
-              type="button"
-              onClick={handleAcceptCookies}
-              className="flex justify-center items-center h-10 w-14 p-0 sm:w-full sm:px-4 sm:py-2 border border-transparent rounded-lg text-base font-medium text-neutral-500 bg-neutral-30 active:bg-neutral-40 focus:bg-neutral-30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-30 transition-all duration-75 cursor-pointer"
-            >
-              <span className="hidden sm:flex">{textContent.Cookies.close}</span><img loading="lazy" className="flex sm:hidden h-6" src="/icons/closeNeutral60.svg" draggable="false"/>
-            </button>
           </div>
 
         </div>

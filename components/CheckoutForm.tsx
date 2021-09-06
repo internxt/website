@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { getStripe } from '../lib/getstripe'
-import styles from './CheckoutForm.module.css'
 
 interface CheckoutFormProps {
   product: string

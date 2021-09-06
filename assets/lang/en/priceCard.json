@@ -1,4 +1,41 @@
 {
-	"test": "test",
-	"getStarted": "Get started"
+	"mostPopular": "Most popular",
+	"planTitles": {
+		"individuals": "Plans for Individuals",
+		"business": "Plans for Business"
+	},
+	"changePlan": {
+		"toIndividuals": "Change to Plans for Individuals",
+		"toBusiness": "Change to Plans for Business"
+	},
+	"billingFrequency": {
+		"lifetime": "Lifetime",
+		"monthly": "Monthly",
+		"semiannually": "Semiannually",
+		"annually": "Annually"
+	},
+	"billingFrequencyLabel": {
+		"lifetime": "One-time payment",
+		"monthly": "billed monthly",
+    "semiannually": "billed semiannually",
+    "annually": "billed annually"
+	},
+	"billingFrequencyLabelSmall": {
+		"monthly": "/monthly",
+    "semiannually": "/semiannually",
+    "annually": "/annually"
+	},
+	"perUserSlash": "/user",
+	"perUser": "Per user",
+	"users": "users",
+	"freePlan": "Free",
+	"price": {
+		"free": "Free forever"
+	},
+	"perMonth": "/month",
+	"cta": {
+		"getStarted": "Get started",
+		"signUpNow": "Sign up now",
+		"buy": "Buy"
+	}
 }

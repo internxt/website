@@ -1,4 +1,41 @@
 {
-	"test": "test",
-	"getStarted": "Empezar ahora"
+	"mostPopular": "Más popular",
+	"planTitles": {
+		"individuals": "Planes Individuales",
+		"business": "Planes para Empresas"
+	},
+	"changePlan": {
+		"toIndividuals": "Cambiar a Planes Individuales",
+		"toBusiness": "Cambiar a Planes para Empresas"
+	},
+	"billingFrequency": {
+		"lifetime": "Lifetime",
+		"monthly": "Mensual",
+    "semiannually": "Semianual",
+    "annually": "Anual"
+	},
+	"billingFrequencyLabel": {
+		"lifetime": "Pago único",
+		"monthly": "facturado al mes",
+    "semiannually": "facturado cada 6 meses",
+    "annually": "facturado al año"
+	},
+	"billingFrequencyLabelSmall": {
+		"monthly": "/mes",
+    "semiannually": "/6 meses",
+    "annually": "/año"
+	},
+	"perUserSlash": "/usuario",
+	"perUser": "Por usuario",
+	"users": "usuarios",
+	"freePlan": "Gratis",
+	"price": {
+		"free": "Gratis para siempre"
+	},
+	"perMonth": "/mes",
+	"cta": {
+		"getStarted": "Empezar ahora",
+		"signUpNow": "Conseguir gratis ahora",
+		"buy": "Conseguir"
+	}
 }
