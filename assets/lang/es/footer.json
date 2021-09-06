@@ -1,13 +1,13 @@
 {
 	"NewsletterSection": {
 		"title": "Mantenme al día",
-		"description": {"line1": "¿Quieres saber de nosotros cuando lancemos nuevos", "line2": "productos o una nueva actualización? Introduce tu", "line3": "correo y nosotros haremos cargo del resto."},
+		"description": {"line1": "¿Quieres saber de nosotros cuando lancemos nuevos", "line2": "productos o una nueva actualización? Introduce tu", "line3": "correo y nosotros nos haremos cargo del resto."},
 		"input": "Tu correo",
 		"info": "Puedes cancelar tu suscripción en cualquier momento",
 		"cta": "Suscribirse"
 	},
 	"FooterSection": {
-		"description": "La misión de Internxt es ayudar a dar forma a un mundo que respete los derechos de privacidad. Para ello, desarrollamos una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger ese derecho fundamental.",
+		"description": "La misión de Internxt es ayudar a dar forma a un mundo que respete el derecho a la privacidad. Para ello, desarrollamos una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger este derecho fundamental.",
 		"copyright": "Copyright © 2021, Internxt Universal Technologies SL",
 		"sections": {
 			"products": {

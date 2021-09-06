@@ -5,7 +5,6 @@ import { Transition } from '@headlessui/react'
 const PriceTable = (props) => {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
-  const [teams, setTeams] = useState(false);
 
   const billingPrice = (price) => {
     return price[billingFrequency]
@@ -76,8 +75,8 @@ const PriceTable = (props) => {
         "popular": true
       },
       "twentyTB": {
-        "stripeID": "2TB",
-        "storage": "2TB",
+        "stripeID": "20TB",
+        "storage": "20TB",
         "pricePerMonth": {
           "1": "95.00",
           "6": "94.49",
