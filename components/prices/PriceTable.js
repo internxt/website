@@ -10,11 +10,8 @@ const PriceTable = (props) => {
 
   function parentSetUserCount(count) {
     setUserCount(count)
-    console.log("parentSetUserCount-"+count)
-    console.log("\_ userCount-"+userCount)
   }
   function parentGetUserCount() {
-    console.log("parentGetUserCount-"+userCount)
     return userCount
   }
 
@@ -92,7 +89,7 @@ const PriceTable = (props) => {
       },
       "Unlimited": {
         "stripeID": "infiniteLifetime",
-        "storage": "Unlimited",
+        "storage": "Unlimited Storage",
         "price": {
           "-1": "999"
         },
@@ -177,9 +174,9 @@ const PriceTable = (props) => {
             enterTo="transform scale-100 translate-y-0 opacity-100"
           >
             <div className={`flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
-              <PriceCard planType="business" storage={pricings.business.GB200.storage} price={billingPrice(pricings.business.GB200.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.business.GB200.stripeID}`]} popular={pricings.business.GB200.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={props.lang} />
-              <PriceCard planType="business" storage={pricings.business.TB2.storage} price={billingPrice(pricings.business.TB2.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.business.TB2.stripeID}`]} popular={pricings.business.TB2.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={props.lang} />
-              <PriceCard planType="business" storage={pricings.business.twentyTB.storage} price={billingPrice(pricings.business.twentyTB.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.business.twentyTB.stripeID}`]} popular={pricings.business.twentyTB.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={props.lang} />
+              <PriceCard planType="business" storage={pricings.business.GB200.storage} price={billingPrice(pricings.business.GB200.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.business.GB200.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={props.lang} />
+              <PriceCard planType="business" storage={pricings.business.TB2.storage} price={billingPrice(pricings.business.TB2.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.business.TB2.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={props.lang} />
+              <PriceCard planType="business" storage={pricings.business.twentyTB.storage} price={billingPrice(pricings.business.twentyTB.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.business.twentyTB.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={props.lang} />
             </div>
           </Transition>
         

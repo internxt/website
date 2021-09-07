@@ -35,7 +35,18 @@
 	"perMonth": "/mes",
 	"cta": {
 		"getStarted": "Empezar ahora",
-		"signUpNow": "Conseguir gratis ahora",
+		"signUpNow": "Regístrate gratis ahora",
 		"buy": "Conseguir"
+	},
+	"features": {
+		"enjoyForever": {
+			"enjoy": "Disfruta de",
+			"forFree": "gratis",
+			"forever": "para siempre"
+		},
+		"moneyBack": "30 días de garantía o devolución",
+		"encryptedFiles": "Guarda y comparte archivos encriptados",
+		"accessFromAnywhere": "Tus archivos en todos tus dispositivos",
+		"allServices": "Acceso a todos nuestros servicios"
 	}
 }
