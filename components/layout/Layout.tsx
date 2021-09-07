@@ -52,7 +52,12 @@ export default function Layout({
         <script src="/js/twitter.js"></script>
         <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
         {!disableAdtrack && <script src="/js/adtrack.js"></script>}
+        <script type="text/javascript" dangerouslySetInnerHTML={{
+          __html: `_atrk_opts = { atrk_acct:"MVwdx1V7ja20rs", domain:"internxt.com",dynamic: true};
+          (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();`
+        }} />
       </Head>
+      <noscript><img src="https://certify.alexametrics.com/atrk.gif?account=MVwdx1V7ja20rs" height="0" width="0" alt="" /></noscript>
       {children}
     </>
   )

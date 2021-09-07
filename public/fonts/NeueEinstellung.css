@@ -4,7 +4,7 @@
 /*
 @font-face {
   font-family: "NeueEinstellung";
-  font-display: swap;
+  font-display: auto;
   src: url("./NeueEinstellung-Thin.ttf"),
        url("./NeueEinstellung-Extralight.ttf"),
        url("./NeueEinstellung-Light.ttf"),
@@ -21,7 +21,7 @@
   font-family: "NeueEinstellung";
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("Neue Einstellung Thin"),
        url("./NeueEinstellung-Thin.otf") format("otf"),
        url("./NeueEinstellung-Thin.ttf") format("truetype"),
@@ -33,7 +33,7 @@
   font-family: "NeueEinstellung";
   font-weight: 200;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung Extralight"),
        url("./NeueEinstellung-Extralight.otf") format("otf"),
        url("./NeueEinstellung-Extralight.ttf") format("truetype"),
@@ -45,7 +45,7 @@
   font-family: "NeueEinstellung";
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung Light"),
        url("./NeueEinstellung-Light.otf") format("otf"),
        url("./NeueEinstellung-Light.ttf") format("truetype"),
@@ -57,7 +57,7 @@
   font-family: "NeueEinstellung";
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung Regular"),
        url("./NeueEinstellung-Regular.otf") format("otf"),
        url("./NeueEinstellung-Regular.ttf") format("truetype"),
@@ -69,7 +69,7 @@
   font-family: "NeueEinstellung";
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung"),
        url("./NeueEinstellung-Medium.otf") format("otf"),
        url("./NeueEinstellung-Medium.ttf") format("truetype"),
@@ -81,7 +81,7 @@
   font-family: "NeueEinstellung";
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung Semibold"),
        url("./NeueEinstellung-Semibold.otf") format("otf"),
        url("./NeueEinstellung-Semibold.ttf") format("truetype"),
@@ -93,7 +93,7 @@
   font-family: "NeueEinstellung";
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung Bold"),
        url("./NeueEinstellung-Bold.otf") format("otf"),
        url("./NeueEinstellung-Bold.ttf") format("truetype"),
@@ -105,7 +105,7 @@
   font-family: "NeueEinstellung";
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung Extrabold"),
        url("./NeueEinstellung-Extrabold.otf") format("otf"),
        url("./NeueEinstellung-Extrabold.ttf") format("truetype"),
@@ -117,7 +117,7 @@
   font-family: "NeueEinstellung";
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
   src: local("NeueEinstellung Black"),
        url("./NeueEinstellung-Black.otf") format("otf"),
        url("./NeueEinstellung-Black.ttf") format("truetype"),
