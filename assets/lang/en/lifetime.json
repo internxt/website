@@ -25,10 +25,10 @@
 		"subtitle": {
 			"line1": "Internxt is an encrypted cloud service, based on absolute",
 			"line2": "privacy and security. Get a 2TB plan for life, for a",
-			"line3": "unique, one-time payment of €349, taxes included."
+			"line3": "unique, one-time payment of €299, taxes included."
 		},
 		"previousPrice": "Normal price €499",
-		"price": "Now €349",
+		"price": "Now €299",
 		"input": "Your email",
 		"loading": "Loading...",
 		"cta": "Claim limited-time offer"
@@ -38,15 +38,15 @@
 		"title": {
 			"line1": "Are you fast enough to get",
 			"line2": "our 10TB lifetime account",
-			"line3": "for only €699?"
+			"line3": "for only €499?"
 		},
 		"subtitle": {
 			"line1": "Internxt Drive is an encrypted cloud storage service, based on",
 			"line2": "absolute privacy and security. We're offering a 10 TB account",
-			"line3": "for €699 to a handful of users. Claim one before they run out!"
+			"line3": "for €499 to a handful of users. Claim one before they run out!"
 		},
 		"previousPrice": "Normal price €2,500",
-		"price": "Now €699",
+		"price": "Now €499",
 		"input": "Your email",
 		"loading": "Loading...",
 		"cta": "Claim this crazy limited-time offer!"
