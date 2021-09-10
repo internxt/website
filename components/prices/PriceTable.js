@@ -142,9 +142,9 @@ const PriceTable = (props) => {
         </button>
 
         <div className="flex flex-row p-0.5 text-sm bg-neutral-20 rounded-lg">
-          <button onClick={() => {setBillingFrequency(1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80 active:bg-neutral-30 active:text-neutral-100'}`}>{contentText.billingFrequency.monthly}</button>
-          <button onClick={() => {setBillingFrequency(12)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80 active:bg-neutral-30 active:text-neutral-100'}`}>{contentText.billingFrequency.annually}</button>
-          <button onClick={() => {setBillingFrequency(-1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === -1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80 active:bg-neutral-30 active:text-neutral-100'} ${individual ? '' : 'hidden'}`}>{contentText.billingFrequency.lifetime}</button>
+          <button onClick={() => {setBillingFrequency(1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>{contentText.billingFrequency.monthly}</button>
+          <button onClick={() => {setBillingFrequency(12)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>{contentText.billingFrequency.annually}</button>
+          <button onClick={() => {setBillingFrequency(-1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === -1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'} ${individual ? '' : 'hidden'}`}>{contentText.billingFrequency.lifetime}</button>
         </div>
         
           <Transition

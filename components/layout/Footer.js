@@ -296,7 +296,7 @@ export default function Footer({textContent, lang}) {
             </div>
             
 
-            <div className="flex flex-row justify-between px-6 py-8 mt-8 bg-neutral-20">
+            <div className="flex flex-col space-y-2 px-6 py-8 mt-8 bg-neutral-20">
               <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
                 <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
               </a>
