@@ -7,9 +7,14 @@ import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import cookies from '../lib/cookies';
+import setUTM from '../lib/conversions';
 
 const AboutUs = ({ lang, langJson, footerLang, navbarLang, metatagsDescriptions, articles, articleImages }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
+
+  React.useEffect(() => {
+    setUTM();
+  }, []);
 
   return (
     <Layout segmentName="about" title={metatags[0].title} description={metatags[0].description}>
