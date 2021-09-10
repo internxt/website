@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
+import setUTM from '../lib/conversions';
 
 const Pricing = (props) => {
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+
+  useEffect(() => {
+    setUTM()
+  }, []);
 
   return (
     <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description}>

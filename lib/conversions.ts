@@ -1,6 +1,6 @@
 export default async function setUTM() {
   const domainsToDecorate = [
-    'drive.internxt.com',
+    'drive.internxt.com'
   ];
   const queryParams = [
     'utm_medium',
