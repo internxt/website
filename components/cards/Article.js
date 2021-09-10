@@ -9,7 +9,7 @@ const Article = ({ article, image, linkLabel }) => {
       <div className="flex flex-col">
         { image ? (
           <img loading="lazy"
-            className="flex flex-col w-full"
+            className="flex flex-col w-full rounded-t-lg"
             src={image}
             alt=""
             draggable="false"
