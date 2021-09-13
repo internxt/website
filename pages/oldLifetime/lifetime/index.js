@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-import HeroSection from './HeroSection';
-import FeatureSection from './FeatureSection';
-import GetLifetimeSection from './GetLifetimeSection';
+import HeroSection from '../../components/lifetime/HeroSection';
 import Footer from '../../components/layout/Footer';
+import Navbar from '../../components/layout/Navbar';
 import Layout from '../../components/layout/Layout';
 import cookies from '../../lib/cookies';
 import { getDriveDownloadUrl } from '../../lib/get-download-url';
@@ -36,10 +35,13 @@ const Lifetime = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="drive">
-      <HeroSection lang={lang} textContent={langJson["HeroSection"]} />
-      <FeatureSection lang={lang} textContent={langJson["FeatureSection"]} />
-      <GetLifetimeSection lang={lang} textContent={langJson["GetLifetimeSection"]} />
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter/>
+      <div>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['checkout',() => redirectToCheckoutAction(stripeObject)]}/>
+        <HeroSection textContent={langJson["lifetime2TB"]} download={downloadUrl} lang={deviceLang} checkout={() => redirectToCheckoutAction(stripeObject)}/>
+      </div>
+      <div className="bg-neutral-10">
+        <Footer textContent={footerLang} lang={deviceLang}/>
+      </div>
     </Layout>
   );
 };

@@ -216,7 +216,10 @@ p, h1{
 }
 
 .card {
-  box-shadow: 0 1.5rem 2rem #F0F1F4;
+  box-shadow: 0 32px 64px rgba(0,0,0,.08);
+}
+.card-soft {
+  box-shadow: 0 40px 64px rgba(0,0,0,.04);
 }
 
 .featuredMarquee {

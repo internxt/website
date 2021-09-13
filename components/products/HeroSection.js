@@ -1,6 +1,4 @@
 import React from 'react'
-import styles from './HeroSection.module.scss';
-import { isMobile } from "react-device-detect";
 
 const HeroSection = ({textContent, download, lang, platform}) => {
   return (

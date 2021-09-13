@@ -4,9 +4,14 @@ import Layout from "../../components/layout/Layout";
 
 export default function Success(props) {
   useEffect(() => {
+    console.log('1', window.analytics);
+    setTimeout(() => {
+      console.log('2', window.analytics);
+    }, 5000);
+
     if (props.email && props.token) {
-      window.analytics.track('landing-exclusive-lifetime-converted', {
-        price: 499
+      window.analytics.track('landing-lifetime-converted', {
+        price: 299
       }, () => {
         setTimeout(() => {
           window.location = props.redirectUrl;
@@ -43,7 +48,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         email: '',
         redirectUrl: '/'
       }
-    };
+    }
   }
 
   const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`);

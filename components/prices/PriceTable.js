@@ -63,14 +63,6 @@ const PriceTable = (props) => {
       }
     },
     "lifetime": {
-      "free": {
-        "stripeID": "2GB",
-        "storage": "2GB",
-        "price": {
-          "-1": "0"
-        },
-        "popular": false
-      },
       "TB2": {
         "stripeID": "lifetime2TB",
         "storage": "2TB",
@@ -87,9 +79,9 @@ const PriceTable = (props) => {
         },
         "popular": true
       },
-      "Unlimited": {
+      "Infinite": {
         "stripeID": "infiniteLifetime",
-        "storage": "Unlimited Storage",
+        "storage": "Infinite Storage",
         "price": {
           "-1": "999"
         },
@@ -160,10 +152,9 @@ const PriceTable = (props) => {
               <PriceCard planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.individuals.TB2.popular} lang={props.lang} />
             </div>
             <div className={`${billingFrequency === -1 ? 'flex' : 'hidden'} content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
-              <PriceCard planType="individual" storage={pricings.lifetime.free.storage} price={billingPrice(pricings.lifetime.free.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.lifetime.free.popular} lang={props.lang} />
               <PriceCard planType="individual" storage={pricings.lifetime.TB2.storage} price={billingPrice(pricings.lifetime.TB2.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.TB2.stripeID}`]} popular={pricings.lifetime.TB2.popular} lang={props.lang} />
               <PriceCard planType="individual" storage={pricings.lifetime.TB10.storage} price={billingPrice(pricings.lifetime.TB10.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.TB10.stripeID}`]} popular={pricings.lifetime.TB10.popular} lang={props.lang} />
-              <PriceCard planType="individual" storage={pricings.lifetime.Unlimited.storage} price={billingPrice(pricings.lifetime.Unlimited.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.Unlimited.stripeID}`]} popular={pricings.lifetime.Unlimited.popular} lang={props.lang} />
+              <PriceCard planType="individual" storage={pricings.lifetime.Infinite.storage} price={billingPrice(pricings.lifetime.Infinite.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.Infinite.stripeID}`]} popular={pricings.lifetime.Infinite.popular} lang={props.lang} />
             </div>
           </Transition>
           
