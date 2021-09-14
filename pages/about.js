@@ -24,7 +24,7 @@ const AboutUs = ({ lang, langJson, footerLang, navbarLang, metatagsDescriptions,
       </div>
       <TeamSection textContent={langJson["TeamSection"]} />
       <Articles textContent={langJson["Articles"]} articles={articles} images={articleImages} />
-      <Footer textContent={footerLang} lang={lang}/>
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false}/>
     </Layout>
   );
 };

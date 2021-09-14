@@ -1240,7 +1240,7 @@ const Legal = (props) => {
       </div>
 
       <div className="bg-neutral-10">
-        <Footer textContent={props.footerLang} />
+        <Footer textContent={props.footerLang} hideNewsletter={false}/>
       </div>
     </Layout>
   );

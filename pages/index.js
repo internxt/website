@@ -37,7 +37,7 @@ const Home = ({
       <div className="getStartedSection">
         <GetStartedSection textContent={langJson["GetStartedSection"]} lang={deviceLang}/>
       </div>
-      <Footer textContent={footerLang} lang={deviceLang}/>
+      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false}/>
     </Layout>
   );
 };

@@ -29,7 +29,7 @@ const Products = ({
         <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={lang} platform={devicePlatform}/>
         <CardsSection textContent={langJson["CardsSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
       </div>
-      <Footer textContent={footerLang} lang={deviceLang}/>
+      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false}/>
     </Layout>
   );
 };

@@ -29,7 +29,7 @@ const Token = ({
         <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
       </div>
       <div className="bg-neutral-10">
-        <Footer textContent={footerLang} lang={deviceLang}/>
+        <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false}/>
       </div>
     </Layout>
   );
