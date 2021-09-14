@@ -7,7 +7,7 @@ import { Transition, Disclosure } from '@headlessui/react'
 import { MinusIcon } from '@heroicons/react/solid'
 import styles from './Footer.module.scss';
 
-export default function Footer({textContent, lang}) {
+export default function Footer({textContent, lang, hideNewsletter}) {
   const router = useRouter();
   const [consentCookie, setConsentCookie] = React.useState(true);
 
@@ -27,7 +27,7 @@ export default function Footer({textContent, lang}) {
   return (
     <section>
       <div className="content">
-        <div className="newsletter flex flex-col sm:flex-row space-y-6 sm:space-x-20 py-20 justify-center mx-6 md:mx-10 lg:mx-32">
+        <div className={`newsletter ${hideNewsletter ? 'hidden' : 'flex'} flex-col sm:flex-row space-y-6 sm:space-x-20 py-20 justify-center mx-6 md:mx-10 lg:mx-32`}>
 
           <div className="flex flex-col space-y-2">
             <h2 className="text-3xl font-semibold">{textContent.NewsletterSection.title}</h2>
@@ -69,7 +69,7 @@ export default function Footer({textContent, lang}) {
 
             <div className="flex flex-col space-y-4 max-w-sm">
               <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
-                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
+                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo" draggable="false"/>
               </a>
               <p className="text-sm text-neutral-80">
                 {textContent.FooterSection.description}
@@ -296,7 +296,7 @@ export default function Footer({textContent, lang}) {
             </div>
             
 
-            <div className="flex flex-row justify-between px-6 py-8 mt-8 bg-neutral-20">
+            <div className="flex flex-col space-y-2 px-6 py-8 mt-8 bg-neutral-20">
               <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
                 <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
               </a>
@@ -310,7 +310,7 @@ export default function Footer({textContent, lang}) {
         </footer>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="500" className={`cookies ${styles.cookiesBlur} ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 right-0 sm:bottom-8 sm:right-8 z-50 p-4 sm:p-6 bg-neutral-10 sm:rounded-lg w-full sm:max-w-xs justify-between ring-1 ring-neutral-30 shadow-2xl`}>
+      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="500" className={`cookies ${styles.cookiesBlur} ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 left-0 sm:bottom-8 sm:left-8 z-50 p-4 sm:p-6 bg-neutral-10 sm:rounded-lg w-full sm:max-w-xs justify-between ring-1 ring-neutral-30 shadow-2xl`}>
         <div className="flex flex-row sm:flex-col items-center justify-between w-full space-x-4 sm:space-y-8 sm:space-x-0">
           
           <div className="flex flex-col space-y-2">

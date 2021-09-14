@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './CardsSection.module.scss';
 
 const CardsSection = ({textContent, lang, download, platform}) => {
   return (
@@ -19,7 +18,7 @@ const CardsSection = ({textContent, lang, download, platform}) => {
 
         <div className="grid mx-auto grid-cols-2 grid-rows-1 gap-6 sm:gap-10 lg:p-10 max-w-5xl">
             
-          <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} col-span-2 grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
+          <div data-aos="fade-up" data-aos-duration="500" className={`card-soft col-span-2 grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-0 auto-cols-min bg-white rounded-3xl overflow-hidden`}>
             
             <div className={`sm:row-auto flex flex-col flex-shrink-0 pb-0 p-12 sm:pb-12 lg:p-16 space-y-6`}>
               <div id="web" className="scrollAnchor absolute -top-24"></div>
@@ -40,9 +39,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
 
           </div>
 
-          <div className="relative col-span-2 sm:col-span-1">
+          <div className="relative col-span-2 sm:col-span-1 z-10">
             <div id="desktop" className="scrollAnchor absolute -top-24"></div>
-            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden space-y-8`}>   
+            <div data-aos="fade-up" data-aos-duration="500" className={`card-soft grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden space-y-8`}>   
               
               <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
                 <div className="flex flex-col space-y-6">
@@ -67,9 +66,9 @@ const CardsSection = ({textContent, lang, download, platform}) => {
             </div>
           </div>
 
-          <div className="relative col-span-2 sm:col-span-1">
+          <div className="relative col-span-2 sm:col-span-1 z-20">
             <div id="mobile" className="scrollAnchor absolute -top-24"></div>
-            <div data-aos="fade-up" data-aos-duration="500" className={`${styles.card} grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden`}>
+            <div data-aos="fade-up" data-aos-duration="500" className={`card-soft grid grid-cols-1 grid-rows-2 gap-0 auto-cols-min place-content-between place-items-stretch bg-white rounded-3xl overflow-hidden`}>
               
               <div className="flex flex-col text-left pb-0 p-12 px-8 lg:p-16 lg:pb-0 lg:py-14">
                 <div className="flex flex-col space-y-6">

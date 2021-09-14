@@ -38,7 +38,7 @@ const PriceCard = ({
   }, []);
 
   return (
-    <div className={`priceCard card ${popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''} flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2`}>
+    <div className={`priceCard card ${popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''} flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-4`}>
 
       <div className={`mostPopular ${popular ? '' : 'hidden'} flex flex-col py-2 items-center justify-center text-xs font-semibold text-white`}>{contentText.mostPopular}</div>
 
@@ -53,7 +53,7 @@ const PriceCard = ({
             <p className="flex flex-row items-start text-neutral-700 font-semibold space-x-0.5"><span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span><span className="price text-4xl font-bold">{price<= 0 ? `${contentText.freePlan}` : price}</span></p>
             <span className={`perMonth ${(price <= 0) ? 'hidden' : (billingFrequency < 0 ? 'hidden' : '')}`}>{contentText.perMonth}</span>
           </div>
-
+          
           <span className={`priceBefore ${priceBefore ? 'flex' : 'hidden'} text-base text-neutral-80 font-medium line-through`}>€{priceBefore}</span>
 
           <div className={`totalBilling ${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} flex-row text-neutral-80 text-xs`}>

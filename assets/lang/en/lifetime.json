@@ -1,4 +1,79 @@
 {
+	"HeroSection": {
+		"eyebrow": "Lifetime Membership",
+		"title": {
+			"line1": "Your files and memories",
+			"line2": "forever with you."
+		},
+		"description": {
+			"line1": "Lifetime Membership is one-time payment.",
+			"line2": "Say bye bye to lifelong subscriptions."
+		},
+		"securePayment": "100% Secure payment, powered by Stripe"
+	},
+	"FeatureSection": {
+		"title": {
+			"line1": "Designed to protect you.",
+			"line2": "Powered by trust."
+		},
+		"features": {
+			"privacy": {
+				"title": "Private",
+				"description": {
+					"line1": "Internxt is not just another cloud",
+					"line2": "storage solution, we don’t",
+					"line3": "share or sell your data."
+				}
+			},
+			"unlimited": {
+				"title": "Unlimited access",
+				"description": {
+					"line1": "One payment to keep your files,",
+					"line2": "videos, photos and memories",
+					"line3": "safe with you forever and ever."
+				}
+			},
+			"improvement": {
+				"title": "Continuous improvement",
+				"description": {
+					"line1": "We love to listen to our community",
+					"line2": "in order to keep improving the things",
+					"line3": "that matter the most to you."
+				}
+			},
+			"security": {
+				"title": "Secure",
+				"description": {
+					"line1": "We use zero-knowledge to ensure",
+					"line2": "that your data remains private by",
+					"line3": "client-side encrypting it."
+				}
+			},
+			"new": {
+				"title": "Get new features",
+				"description": {
+					"line1": "You will be able to access all the",
+					"line2": "current features and all the new",
+					"line3": "to come with each release."
+				}
+			},
+			"support": {
+				"title": "Premium support",
+				"description": {
+					"line1": "You will always have the best",
+					"line2": "treatment from our customer service,",
+					"line3": "for us you are part of the family."
+				}
+			}
+		}
+	},
+	"GetLifetimeSection": {
+		"title": {
+			"line1": "Your files secure and",
+			"line2": "private forever."
+		},
+		"cta": "Explore Plans"
+	},
 	"infiniteLifetime": {
 		"eyebrow": "INFINITE STORAGE FOREVER",
 		"title": {

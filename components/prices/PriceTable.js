@@ -63,20 +63,13 @@ const PriceTable = (props) => {
       }
     },
     "lifetime": {
-      "free": {
-        "stripeID": "2GB",
-        "storage": "2GB",
-        "price": {
-          "-1": "0"
-        },
-        "popular": false
-      },
       "TB2": {
         "stripeID": "lifetime2TB",
         "storage": "2TB",
         "price": {
           "-1": "299"
         },
+        "priceBefore": "499",
         "popular": false
       },
       "TB10": {
@@ -85,14 +78,16 @@ const PriceTable = (props) => {
         "price": {
           "-1": "499"
         },
+        "priceBefore": "2500",
         "popular": true
       },
-      "Unlimited": {
+      "Infinite": {
         "stripeID": "infiniteLifetime",
-        "storage": "Unlimited Storage",
+        "storage": "Infinite Storage",
         "price": {
           "-1": "999"
         },
+        "priceBefore": "9999",
         "popular": false
       }
     },
@@ -142,9 +137,9 @@ const PriceTable = (props) => {
         </button>
 
         <div className="flex flex-row p-0.5 text-sm bg-neutral-20 rounded-lg">
-          <button onClick={() => {setBillingFrequency(1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80 active:bg-neutral-30 active:text-neutral-100'}`}>{contentText.billingFrequency.monthly}</button>
-          <button onClick={() => {setBillingFrequency(12)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80 active:bg-neutral-30 active:text-neutral-100'}`}>{contentText.billingFrequency.annually}</button>
-          <button onClick={() => {setBillingFrequency(-1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === -1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80 active:bg-neutral-30 active:text-neutral-100'} ${individual ? '' : 'hidden'}`}>{contentText.billingFrequency.lifetime}</button>
+          <button onClick={() => {setBillingFrequency(1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>{contentText.billingFrequency.monthly}</button>
+          <button onClick={() => {setBillingFrequency(12)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>{contentText.billingFrequency.annually}</button>
+          <button onClick={() => {setBillingFrequency(-1)}} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === -1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'} ${individual ? '' : 'hidden'}`}>{contentText.billingFrequency.lifetime}</button>
         </div>
         
           <Transition
@@ -160,10 +155,9 @@ const PriceTable = (props) => {
               <PriceCard planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.individuals.TB2.popular} lang={props.lang} />
             </div>
             <div className={`${billingFrequency === -1 ? 'flex' : 'hidden'} content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
-              <PriceCard planType="individual" storage={pricings.lifetime.free.storage} price={billingPrice(pricings.lifetime.free.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.lifetime.free.popular} lang={props.lang} />
-              <PriceCard planType="individual" storage={pricings.lifetime.TB2.storage} price={billingPrice(pricings.lifetime.TB2.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.TB2.stripeID}`]} popular={pricings.lifetime.TB2.popular} lang={props.lang} />
-              <PriceCard planType="individual" storage={pricings.lifetime.TB10.storage} price={billingPrice(pricings.lifetime.TB10.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.TB10.stripeID}`]} popular={pricings.lifetime.TB10.popular} lang={props.lang} />
-              <PriceCard planType="individual" storage={pricings.lifetime.Unlimited.storage} price={billingPrice(pricings.lifetime.Unlimited.price)} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.Unlimited.stripeID}`]} popular={pricings.lifetime.Unlimited.popular} lang={props.lang} />
+              <PriceCard planType="individual" storage={pricings.lifetime.TB2.storage} price={billingPrice(pricings.lifetime.TB2.price)} priceBefore={pricings.lifetime.TB2.priceBefore} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.TB2.stripeID}`]} popular={pricings.lifetime.TB2.popular} lang={props.lang} />
+              <PriceCard planType="individual" storage={pricings.lifetime.TB10.storage} price={billingPrice(pricings.lifetime.TB10.price)} priceBefore={pricings.lifetime.TB10.priceBefore} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.TB10.stripeID}`]} popular={pricings.lifetime.TB10.popular} lang={props.lang} />
+              <PriceCard planType="individual" storage={pricings.lifetime.Infinite.storage} price={billingPrice(pricings.lifetime.Infinite.price)} priceBefore={pricings.lifetime.Infinite.priceBefore} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.Infinite.stripeID}`]} popular={pricings.lifetime.Infinite.popular} lang={props.lang} />
             </div>
           </Transition>
           

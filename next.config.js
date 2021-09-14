@@ -21,6 +21,36 @@ module.exports = {
         source: '/login',
         destination: 'https://drive.internxt.com/login',
         permanent: false,
+      },
+      {
+        source: '/exclusive-lifetime',
+        destination: '/lifetime',
+        permanent: false,
+      },
+      {
+        source: '/es/exclusive-lifetime',
+        destination: '/es/lifetime',
+        permanent: false,
+      },
+      {
+        source: '/en/exclusive-lifetime',
+        destination: '/en/lifetime',
+        permanent: false,
+      },
+      {
+        source: '/es/infinite',
+        destination: '/es/lifetime',
+        permanent: false,
+      },
+      {
+        source: '/en/infinite',
+        destination: '/en/lifetime',
+        permanent: false,
+      },
+      {
+        source: '/infinite',
+        destination: '/lifetime',
+        permanent: false,
       }
     ];
   },

@@ -10,7 +10,6 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl, getPlatform } from '../lib/get-download-url';
 import setUTM from '../lib/conversions';
-import { LanguageServiceMode } from 'typescript';
 
 const Products = ({
   lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, devicePlatform, deviceLang
