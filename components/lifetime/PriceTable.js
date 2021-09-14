@@ -1,10 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import PriceCard from './PriceCard';
-import { Transition } from '@headlessui/react'
 
 const PriceTable = (props) => {
   const [billingFrequency, setBillingFrequency] = useState(-1);
-  const contentText = require(`../../assets/lang/${props.lang}/priceCard.json`);
 
   function parentSetUserCount(count) {
     setUserCount(count)

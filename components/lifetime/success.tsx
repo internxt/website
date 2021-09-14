@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { GetServerSideProps } from "next";
-import Layout from "../../components/layout/Layout";
+import Layout from "../layout/Layout";
 
 export default function Success(props) {
   useEffect(() => {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { redirectToCheckoutAction } from '../../components/CheckoutForm';
+import { redirectToCheckoutAction } from '../CheckoutForm';
 
 const PriceCard = ({
   planType,
@@ -12,6 +12,7 @@ const PriceCard = ({
   setUsers,
   getUsers,
   popular,
+  contentText,
   lang
 }) => {
 
@@ -28,7 +29,7 @@ const PriceCard = ({
   var totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   var teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   useEffect(() => {
     if (cta[0] === 'checkout') {
