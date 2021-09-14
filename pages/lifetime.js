@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-import HeroSection from './HeroSection';
-import FeatureSection from './FeatureSection';
-import GetLifetimeSection from './GetLifetimeSection';
-import Footer from '../../components/layout/Footer';
-import Layout from '../../components/layout/Layout';
-import cookies from '../../lib/cookies';
-import { getDriveDownloadUrl } from '../../lib/get-download-url';
-import { redirectToCheckoutAction } from '../../components/CheckoutForm';
-import setUTM from '../../lib/conversions';
+import HeroSection from '../components/lifetime/HeroSection';
+import FeatureSection from '../components/lifetime/FeatureSection';
+import GetLifetimeSection from '../components/lifetime/GetLifetimeSection';
+import Footer from '../components/layout/Footer';
+import Layout from '../components/layout/Layout';
+import cookies from '../lib/cookies';
+import { getDriveDownloadUrl } from '../lib/get-download-url';
+import setUTM from '../lib/conversions';
 
 const Lifetime = ({
   lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
@@ -50,10 +49,10 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
-  const metatagsDescriptions = require(`../../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../../assets/lang/${lang}/lifetime.json`);
-  const navbarLang = require(`../../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/${lang}/lifetime.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 
