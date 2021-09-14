@@ -39,7 +39,7 @@ const Lifetime = ({
       <HeroSection lang={lang} textContent={langJson["HeroSection"]} />
       <FeatureSection lang={lang} textContent={langJson["FeatureSection"]} />
       <GetLifetimeSection lang={lang} textContent={langJson["GetLifetimeSection"]} />
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter/>
+      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={true}/>
     </Layout>
   );
 };
