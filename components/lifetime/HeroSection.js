@@ -9,7 +9,7 @@ const HeroSection = ({ lang, textContent }) => {
 
       <img className="my-10" loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo" draggable="false"/>
 
-      <div className="flex flex-col items-center my-12 text-center text-neutral-900 px-6">
+      <div className="flex flex-col items-center my-8 sm:my-12 text-center text-neutral-900 px-6">
         
         <div className="flex flex-col items-center mb-10 font-semibold">
           <h3 className="eyebrow text-lg md:text-xl">
@@ -25,7 +25,7 @@ const HeroSection = ({ lang, textContent }) => {
         </p>
       </div>
 
-      <div className="my-12" id="priceTable">
+      <div className="my-8 sm:my-12" id="priceTable">
         <PriceTable lang={lang} />
       </div>
 

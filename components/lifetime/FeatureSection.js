@@ -4,7 +4,7 @@ const FeatureSection = ({ lang, textContent }) => {
 
   return (
     <section>
-      <div className="flex flex-col items-center my-20 mb-32">
+      <div className="flex flex-col items-center my-10 md:my-20 mb-32">
 
         <div className="flex flex-col items-center text-center mb-24 font-semibold px-6">
           <h2 className="eyebrow text-4xl">
@@ -12,7 +12,7 @@ const FeatureSection = ({ lang, textContent }) => {
           </h2>
         </div>
 
-        <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24">
+        <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 md:gap-24">
 
           <div className="flex flex-col items-center text-center space-y-8">
             <img className="h-12 select-none" loading="lazy" src="../../images/lifetime/icons/privacy-icon.png" alt="Eye slash" draggable="false"/>

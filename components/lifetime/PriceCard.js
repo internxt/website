@@ -39,7 +39,7 @@ const PriceCard = ({
   }, []);
 
   return (
-    <div className={`priceCard card ${popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''} flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-4`}>
+    <div className={`priceCard card ${popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''} flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2 sm:m-4`}>
 
       <div className={`mostPopular ${popular ? '' : 'hidden'} flex flex-col py-2 items-center justify-center text-xs font-semibold text-white`}>{contentText.mostPopular}</div>
 
