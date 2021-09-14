@@ -11,7 +11,7 @@ export default function Success(props) {
 
     if (props.email && props.token) {
       window.analytics.track('landing-lifetime-converted', {
-        price: 299
+        // price: 299
       }, () => {
         setTimeout(() => {
           window.location = props.redirectUrl;
