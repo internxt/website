@@ -15,7 +15,7 @@ const FeatureSection = ({ lang, textContent }) => {
         <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24">
 
           <div className="flex flex-col items-center text-center space-y-8">
-            <img className="h-12" loading="lazy" src="../../images/lifetime/icons/privacy-icon.png" alt="Eye slash" draggable="false"/>
+            <img className="h-12 select-none" loading="lazy" src="../../images/lifetime/icons/privacy-icon.png" alt="Eye slash" draggable="false"/>
             
             <div className="flex flex-col items-center text-center space-y-3">
               <span className="font-semibold text-xl text-neutral-900">
@@ -28,7 +28,7 @@ const FeatureSection = ({ lang, textContent }) => {
           </div>
 
           <div className="flex flex-col items-center text-center space-y-8">
-            <img className="h-12" loading="lazy" src="../../images/lifetime/icons/unlimited-icon.png" alt="Infinity" draggable="false"/>
+            <img className="h-12 select-none" loading="lazy" src="../../images/lifetime/icons/unlimited-icon.png" alt="Infinity" draggable="false"/>
             
             <div className="flex flex-col items-center text-center space-y-3">
               <span className="font-semibold text-xl text-neutral-900">
@@ -41,7 +41,7 @@ const FeatureSection = ({ lang, textContent }) => {
           </div>
 
           <div className="flex flex-col items-center text-center space-y-8">
-            <img className="h-12" loading="lazy" src="../../images/lifetime/icons/improvement-icon.png" alt="Person group" draggable="false"/>
+            <img className="h-12 select-none" loading="lazy" src="../../images/lifetime/icons/improvement-icon.png" alt="Person group" draggable="false"/>
             
             <div className="flex flex-col items-center text-center space-y-3">
               <span className="font-semibold text-xl text-neutral-900">
@@ -54,7 +54,7 @@ const FeatureSection = ({ lang, textContent }) => {
           </div>
 
           <div className="flex flex-col items-center text-center space-y-8">
-            <img className="h-12" loading="lazy" src="../../images/lifetime/icons/security-icon.png" alt="Lock" draggable="false"/>
+            <img className="h-12 select-none" loading="lazy" src="../../images/lifetime/icons/security-icon.png" alt="Lock" draggable="false"/>
             
             <div className="flex flex-col items-center text-center space-y-3">
               <span className="font-semibold text-xl text-neutral-900">
@@ -67,7 +67,7 @@ const FeatureSection = ({ lang, textContent }) => {
           </div>
 
           <div className="flex flex-col items-center text-center space-y-8">
-            <img className="h-12" loading="lazy" src="../../images/lifetime/icons/new-icon.png" alt="List numbers" draggable="false"/>
+            <img className="h-12 select-none" loading="lazy" src="../../images/lifetime/icons/new-icon.png" alt="List numbers" draggable="false"/>
             
             <div className="flex flex-col items-center text-center space-y-3">
               <span className="font-semibold text-xl text-neutral-900">
@@ -80,7 +80,7 @@ const FeatureSection = ({ lang, textContent }) => {
           </div>
 
           <div className="flex flex-col items-center text-center space-y-8">
-            <img className="h-12" loading="lazy" src="../../images/lifetime/icons/support-icon.png" alt="Person group signal" draggable="false"/>
+            <img className="h-12 select-none" loading="lazy" src="../../images/lifetime/icons/support-icon.png" alt="Person group signal" draggable="false"/>
             
             <div className="flex flex-col items-center text-center space-y-3">
               <span className="font-semibold text-xl text-neutral-900">

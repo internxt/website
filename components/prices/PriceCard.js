@@ -5,6 +5,7 @@ const PriceCard = ({
   planType,
   storage,
   price,
+  priceBefore,
   billingFrequency,
   featureList,
   cta,
@@ -46,12 +47,14 @@ const PriceCard = ({
           <p>{storage}<span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>{contentText.perUserSlash}</span></p>
         </div>
 
-        <div className={`planPrice flex flex-col p-10 justify-center items-center space-y-4`}>
-          <div className={`priceBreakdown flex ${planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end' : 'flex-col items-center'}`}>
+        <div className={`planPrice flex flex-col p-10 justify-center items-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}>
+          <div className={`priceBreakdown flex ${planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end': 'flex-col items-center'}`}>
             <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-semibold`}>{contentText.perUser}</span>
             <p className="flex flex-row items-start text-neutral-700 font-semibold space-x-0.5"><span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span><span className="price text-4xl font-bold">{price<= 0 ? `${contentText.freePlan}` : price}</span></p>
             <span className={`perMonth ${(price <= 0) ? 'hidden' : (billingFrequency < 0 ? 'hidden' : '')}`}>{contentText.perMonth}</span>
           </div>
+
+          <span className={`priceBefore ${priceBefore ? 'flex' : 'hidden'} text-base text-neutral-80 font-medium line-through`}>€{priceBefore}</span>
 
           <div className={`totalBilling ${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} flex-row text-neutral-80 text-xs`}>
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
@@ -69,7 +72,7 @@ const PriceCard = ({
             <label htmlFor={`users_${storage}`} className={`absolute top-0 left-0 h-full w-full flex flex-row items-center justify-center text-xl sm:text-base font-medium cursor-text`}>
               <div className="relative flex flex-row h-full items-center">
                 <span className={`pointer-events-none ${(getUsers === NaN || getUsers === '' || getUsers < 1) ? '' : 'opacity-0'}`}>{(getUsers === NaN || getUsers === '' || getUsers < 1) ? 0 : getUsers}</span>
-                <input id={`users_${storage}`} type="number" inputmode="numeric" min="2" max={MAX_USERS} step="1" value={getUsers} onChange={(e) => { e.target.value.toString().startsWith('0') ? e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length) : setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : e.target.value ) }} onBlur={(e) => { setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : (e.target.value < 2 ? 2 : e.target.value) ) }} className={`absolute left-0 bg-transparent font-medium appearance-none outline-none w-14 min-w-full`} />
+                <input id={`users_${storage}`} type="number" inputMode="numeric" min="2" max={MAX_USERS} step="1" value={getUsers} onChange={(e) => { e.target.value.toString().startsWith('0') ? e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length) : setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : e.target.value ) }} onBlur={(e) => { setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : (e.target.value < 2 ? 2 : e.target.value) ) }} className={`absolute left-0 bg-transparent font-medium appearance-none outline-none w-14 min-w-full`} />
               </div>
               <span className="ml-1 select-none">{contentText.users}</span>
             </label>

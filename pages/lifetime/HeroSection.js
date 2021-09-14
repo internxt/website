@@ -4,7 +4,7 @@ import PriceTable from './PriceTable';
 const HeroSection = ({ lang, textContent }) => {
 
   return (
-    <section>
+    <section className="bg-gradient-to-b from-white via-neutral-10 to-white">
       <div className="flex flex-col items-center">
 
       <img className="my-10" loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo" draggable="false"/>
@@ -31,7 +31,7 @@ const HeroSection = ({ lang, textContent }) => {
 
       <div className="flex flex-row items-center mb-20 space-x-1">
         <img className="h-5" loading="lazy" src="../../images/lifetime/icons/lock-green-icon.png" alt="Lock" draggable="false"/>
-        <span className="text-normal md:text-sm text-neutral-500">100% Secure payment, powered by Stripe</span>
+        <span className="text-normal font-medium md:text-sm text-neutral-100">{textContent.securePayment}</span>
       </div>
         
       </div>

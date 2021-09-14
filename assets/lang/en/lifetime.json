@@ -8,7 +8,8 @@
 		"description": {
 			"line1": "Lifetime Membership is one-time payment.",
 			"line2": "Say bye bye to lifelong subscriptions."
-		}
+		},
+		"securePayment": "100% Secure payment, powered by Stripe"
 	},
 	"FeatureSection": {
 		"title": {
