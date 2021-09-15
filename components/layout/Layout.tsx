@@ -47,15 +47,15 @@ export default function Layout({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description}></meta>
         <link rel="icon" href="/favicon.ico" />
-        {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
         {segmentEnv ? <script src="https://internxt.com/js/sg.js"></script> : <script src="/js/segment.js"></script>}
+        <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
+        {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
         {!disableDrift && <script src="/js/drift.js"></script>}
         <script dangerouslySetInnerHTML={{
           __html: ` window.intercomSettings = { app_id: "ta2ffq6n" };\
           (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ta2ffq6n';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();`
         }} />
         <script src="/js/twitter.js"></script>
-        <script dangerouslySetInnerHTML={{ __html: `analytics.page(\'${segmentName}\')` }} />
         {!disableAdtrack && <script src="/js/adtrack.js"></script>}
       </Head>
       {children}

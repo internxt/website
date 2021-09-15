@@ -72,7 +72,18 @@ const PriceCard = ({
             <label htmlFor={`users_${storage}`} className={`absolute top-0 left-0 h-full w-full flex flex-row items-center justify-center text-xl sm:text-base font-medium cursor-text`}>
               <div className="relative flex flex-row h-full items-center">
                 <span className={`pointer-events-none ${(getUsers === NaN || getUsers === '' || getUsers < 1) ? '' : 'opacity-0'}`}>{(getUsers === NaN || getUsers === '' || getUsers < 1) ? 0 : getUsers}</span>
-                <input id={`users_${storage}`} type="number" inputMode="numeric" min="2" max={MAX_USERS} step="1" value={getUsers} onChange={(e) => { e.target.value.toString().startsWith('0') ? e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length) : setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : e.target.value ) }} onBlur={(e) => { setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : (e.target.value < 2 ? 2 : e.target.value) ) }} className={`absolute left-0 bg-transparent font-medium appearance-none outline-none w-14 min-w-full`} />
+                <input
+                  id={`users_${storage}`}
+                  type="number"
+                  inputMode="numeric"
+                  min="2"
+                  max={MAX_USERS}
+                  step="1"
+                  value={getUsers}
+                  onChange={(e) => { e.target.value.toString().startsWith('0') ? e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length) : setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : e.target.value ) }}
+                  onBlur={(e) => { setUsers( (e.target.value > MAX_USERS) ? MAX_USERS : (e.target.value < 2 ? 2 : e.target.value) ) }}
+                  onKeyDown={(e) => {(e.key === 'Enter' || e.key === 'Escape') ? e.target.blur() : null}}
+                  className={`absolute left-0 bg-transparent font-medium appearance-none outline-none w-14 min-w-full`} />
               </div>
               <span className="ml-1 select-none">{contentText.users}</span>
             </label>
