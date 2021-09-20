@@ -55,9 +55,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`);
   const body = await request.json();
 
-  const redirectUrl = `${process.env.DRIVE_API_URL}/appsumo/${body.email}?token=${body.token}`;
+  const redirectUrl = `${process.env.DRIVE_WEB}/appsumo?email=${body.email}&token=${body.token}`;
 
   console.warn('[%s] %s', body.email, redirectUrl);
+  window.analytics.track('Order Completed');
 
   return {
     props: {
