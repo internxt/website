@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
 import fs from 'fs';
-import { getStripeProduct } from './productsInfo';
+import { getStripeProduct } from '../Constants';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
   try {
