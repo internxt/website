@@ -1,16 +1,21 @@
 import React, { useEffect } from 'react';
-import { GetServerSideProps } from "next";
-import Layout from "../../components/layout/Layout";
+import { GetServerSideProps } from 'next';
+import Stripe from 'stripe';
+import Layout from '../../components/layout/Layout';
 
 export default function Success(props) {
   useEffect(() => {
-    console.log('1', window.analytics);
     setTimeout(() => {
-      console.log('2', window.analytics);
     }, 5000);
 
     if (props.email && props.token) {
-      window.analytics.track('landing-lifetime-converted', {
+      /*
+        await stripe.prices.retrieve(
+          'plan_Gd68ayqEhY7ElV'
+        ).then(res => console.log(res));
+        // window.analytics.track('Order Completed');
+      */
+      window.analytics.track('Order Completed', {
         // price: 299
       }, () => {
         setTimeout(() => {
@@ -23,7 +28,7 @@ export default function Success(props) {
   }, []);
   return (
     <Layout
-      segmentName="landing-lifetime-success"
+      segmentName="Payment Completed"
       disableMailerlite
       disableDrift
       title="Internxt Checkout Succcess"
@@ -41,6 +46,10 @@ export default function Success(props) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const host = (ctx.req.headers['host'].match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers['host'];
+  const stripe = new Stripe(
+    process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST,
+    { apiVersion: '2020-08-27' }
+  );
 
   if (!ctx.query.sid) {
     return {
@@ -49,7 +58,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         email: '',
         redirectUrl: '/'
       }
-    }
+    };
   }
 
   const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`);

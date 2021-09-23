@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
 import fs from 'fs';
-import { getStripeProduct } from './productsInfo';
+import { getStripeProduct } from '../stripeProducts';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -16,29 +16,15 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
 
   const PRODUCT = getStripeProduct(req.body.product);
 
-  const successUrl = `${req.headers.origin}/${PRODUCT.return}/success?sid={CHECKOUT_SESSION_ID}`;
-  const cancelUrl = `${req.headers.origin}/${PRODUCT.return}/cancel?sid={CHECKOUT_SESSION_ID}`;
+  const successUrl = `${req.headers.origin}/payment/success?sid={CHECKOUT_SESSION_ID}`;
+  const cancelUrl = `${req.headers.origin}/payment/cancel?sid={CHECKOUT_SESSION_ID}`;
 
   const params: Stripe.Checkout.SessionCreateParams = {
-    mode: 'payment',
+    mode: PRODUCT.mode,
     payment_method_types: ['card'],
     success_url: successUrl,
     cancel_url: cancelUrl,
-    line_items: [
-      {
-        price: process.env.NODE_ENV === 'production' ? PRODUCT.production : PRODUCT.debug,
-        quantity: 1
-      }
-    ],
-    metadata: {
-      member_tier: 'lifetime'
-    },
-    payment_intent_data: {
-      metadata: {
-        member_tier: 'lifetime',
-        lifetime_tier: PRODUCT.return
-      }
-    },
+    ...PRODUCT.session,
     billing_address_collection: 'required',
     customer_email: req.body.email ? req.body.email : undefined
   };
