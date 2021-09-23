@@ -61,12 +61,22 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     };
   }
 
-  const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`);
-  const body = await request.json();
+  const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`).then(res => {
+    if (res.status !== 200) {
+      return null;
+    }
+    return res;
+  }).catch(() => null);
 
-  const redirectUrl = `${process.env.DRIVE_WEB}/appsumo?email=${body.email}&token=${body.token}`;
+  let redirectUrl = 'https://www.internxt.com';
+  let body = { email: null, token: null };
+  if (request) {
+    body = await request.json().catch(() => ({}));
 
-  console.warn('[%s] %s', body.email, redirectUrl);
+    redirectUrl = `${process.env.DRIVE_WEB}/appsumo?email=${body.email}&token=${body.token}`;
+  }
+
+  // console.warn('[%s] %s', body.email, redirectUrl);
 
   return {
     props: {
