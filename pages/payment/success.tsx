@@ -67,7 +67,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const redirectUrl = `${process.env.DRIVE_WEB}/appsumo?email=${body.email}&token=${body.token}`;
 
   console.warn('[%s] %s', body.email, redirectUrl);
-  window.analytics.track('Order Completed');
 
   return {
     props: {
