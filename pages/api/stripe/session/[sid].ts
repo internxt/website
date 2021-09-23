@@ -10,11 +10,16 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-    // const customer = await stripe.customers.retrieve(<string>session.customer);
+    if(session && session.payment_status === 'paid') {
+        // const customer = await stripe.customers.retrieve(<string>session.customer);
 
-    const token = jsonwebtoken.sign({
-        email: session.customer_details.email
-    }, process.env.JWT_DRIVE_SERVER, { expiresIn: '14d' });
+        const token = jsonwebtoken.sign({
+            email: session.customer_details.email
+        }, process.env.JWT_DRIVE_SERVER, { expiresIn: '14d' });
 
-    res.status(200).send({ token: token, email: session.customer_details.email })
+        res.status(200).send({ token: token, email: session.customer_details.email })
+    }
+    else {
+        res.status(401).send({msg: 'Unauthoraized'});
+    }
 }
