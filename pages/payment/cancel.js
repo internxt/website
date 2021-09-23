@@ -3,8 +3,8 @@ import Layout from '../../components/layout/Layout';
 
 export default function Cancelled() {
   return (
-    <Layout segmentName="Payment Canceled">
-      <script dangerouslySetInnerHTML={{ __html: 'analytics.track(\'Payment Canceled\', function() { window.location.href=\'https://internxt.com/pricing\'; });' }} />
+    <Layout segmentName="Order Canceled">
+      <script dangerouslySetInnerHTML={{ __html: 'analytics.track(\'Order Canceled\', function() { window.location.href=\'https://internxt.com/pricing\'; });' }} />
     </Layout>
   );
 }

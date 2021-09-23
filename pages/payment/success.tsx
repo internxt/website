@@ -28,7 +28,7 @@ export default function Success(props) {
   }, []);
   return (
     <Layout
-      segmentName="Payment Completed"
+      segmentName="Order Completed"
       disableMailerlite
       disableDrift
       title="Internxt Checkout Succcess"
