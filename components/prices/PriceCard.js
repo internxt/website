@@ -65,7 +65,7 @@ const PriceCard = ({
         </div>
 
         <div className={`businessUserCount ${planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'} flex-col w-full bg-neutral-10 ring-1 ring-neutral-20 rounded-lg p-4 mb-4`}>
-          
+
           <div className="input relative flex flex-row justify-between bg-white rounded-lg ring-1 ring-neutral-30">
             <button onClick={() => { if (getUsers >= 3) { setUsers(parseInt(getUsers) - 1) } else ( setUsers(2) ) }} className={`flex flex-row items-center justify-center h-10 w-10 sm:h-8 sm:w-8 ${(getUsers > 2) ? 'bg-blue-60 text-white active:bg-blue-70' : 'bg-neutral-30 text-neutral-80 active:bg-neutral-40 cursor-not-allowed'} text-2xl font-light z-10 rounded-l-lg transition-all sm:duration-50 select-none`}><span className="mb-1">-</span></button>
             <button onClick={() => { if (getUsers <= MAX_USERS - 1) { setUsers(parseInt(getUsers) + 1) } else ( setUsers(MAX_USERS) ) }} className={`flex flex-row items-center justify-center h-10 w-10 sm:h-8 sm:w-8 ${(getUsers < MAX_USERS) ? 'bg-blue-60 text-white active:bg-blue-70' : 'bg-neutral-30 text-neutral-80 active:bg-neutral-40 cursor-not-allowed'} text-2xl font-light z-10 rounded-r-lg transition-all sm:duration-50 select-none`}><span className="mb-1">+</span></button>
@@ -113,7 +113,7 @@ const PriceCard = ({
           </button>
         </div>
       </div>
-      
+
       <div className="featureList flex flex-col p-6 text-neutral-500 bg-neutral-10 border-t border-neutral-20">
         <div className="flex flex-col space-y-2">
           <div className={`flex flex-row items-start space-x-2 font-semibold`}><img loading="lazy" className="mt-0.5 transform translate-y-px select-none" src="/icons/checkNeutral500.svg" draggable="false"/><span className={`${price <= 0 ? 'hidden' : 'flex'}`}>{billingFrequency < 0 ? `${contentText.features.enjoyForever.enjoy} ${storage} ${contentText.features.enjoyForever.forever}` : `${contentText.features.moneyBack}`}</span><span  className={`${price <= 0 ? 'flex' : 'hidden'}`}>{contentText.features.enjoyForever.enjoy} {storage} {contentText.features.enjoyForever.forever}</span></div>
