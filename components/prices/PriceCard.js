@@ -15,7 +15,7 @@ const PriceCard = ({
   lang
 }) => {
 
-  const [stripeObject, setStripeObject] = useState({});
+  const stripeObject = { product: cta[1] };
   // const [userCount, setUserCount] = useState(2);
 
   const billingFrequencyList = {
@@ -29,13 +29,6 @@ const PriceCard = ({
   var teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
-
-  useEffect(() => {
-    if (cta[0] === 'checkout') {
-      const stripeObj = { product: cta[1] };
-      setStripeObject(stripeObj);
-    }
-  }, []);
 
   return (
     <div className={`priceCard card ${popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''} flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2`}>

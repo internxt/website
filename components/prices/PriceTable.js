@@ -15,6 +15,10 @@ const PriceTable = (props) => {
     return userCount
   }
 
+  function checkoutPlan(plan) {
+    return plan + `${billingFrequency}`
+  }
+
   const billingPrice = (price) => {
     return price[billingFrequency]
   }
@@ -150,9 +154,9 @@ const PriceTable = (props) => {
           >
             <div className={`${billingFrequency !== -1 ? 'flex' : 'hidden'} content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
               <PriceCard planType="individual" storage={pricings.individuals.free.storage} price={billingPrice(pricings.individuals.free.price)} billingFrequency={billingFrequency} cta={['link',`https://drive.internxt.com/new?`]} popular={pricings.individuals.free.popular} lang={props.lang} />
-            <PriceCard planType="individual" storage={pricings.individuals.GB20.storage} price={billingPrice(pricings.individuals.GB20.price)} billingFrequency={billingFrequency} cta={['checkout', `GB20${billingFrequency}`]} popular={pricings.individuals.GB20.popular} lang={props.lang} />
-            <PriceCard planType="individual" storage={pricings.individuals.GB200.storage} price={billingPrice(pricings.individuals.GB200.price)} billingFrequency={billingFrequency} cta={['checkout', `GB200${billingFrequency}`]} popular={pricings.individuals.GB200.popular} lang={props.lang} />
-            <PriceCard planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', `TB2${billingFrequency}`]} popular={pricings.individuals.TB2.popular} lang={props.lang} />
+            <PriceCard planType="individual" storage={pricings.individuals.GB20.storage} price={billingPrice(pricings.individuals.GB20.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('GB20')]} popular={pricings.individuals.GB20.popular} lang={props.lang} />
+            <PriceCard planType="individual" storage={pricings.individuals.GB200.storage} price={billingPrice(pricings.individuals.GB200.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('GB200')]} popular={pricings.individuals.GB200.popular} lang={props.lang} />
+            <PriceCard planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('TB2')]} popular={pricings.individuals.TB2.popular} lang={props.lang} />
             </div>
             <div className={`${billingFrequency === -1 ? 'flex' : 'hidden'} content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
               <PriceCard planType="individual" storage={pricings.lifetime.TB2.storage} price={billingPrice(pricings.lifetime.TB2.price)} priceBefore={pricings.lifetime.TB2.priceBefore} billingFrequency={billingFrequency} cta={['checkout',`${pricings.lifetime.TB2.stripeID}`]} popular={pricings.lifetime.TB2.popular} lang={props.lang} />

@@ -128,8 +128,8 @@ const STRIPE_PRODUCT = {
     }
   },
   TB21: {
-    production: 'plan_FkTXxEg3GZW0pg',
-    debug: 'plan_Gd6EiK5twY0akg',
+    production: 'plan_F7ptyrVRmyL8Gn',
+    debug: 'plan_Gd6Dvdm1yJxoQq',
     return: 'pricing',
     mode: 'subscription',
     session: {
