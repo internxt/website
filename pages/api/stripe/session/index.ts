@@ -28,6 +28,7 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     billing_address_collection: 'required',
     customer_email: req.body.email ? req.body.email : undefined
   };
+  console.log(params)
   try {
     const checkoutSession: Stripe.Checkout.Session = await stripe.checkout.sessions.create(params);
     res.status(200).json(checkoutSession);
