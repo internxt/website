@@ -6,7 +6,8 @@ export default async function setUTM() {
     'utm_medium',
     'utm_source',
     'utm_campaign',
-    'gclid'
+    'gclid',
+    'irclickid'
   ];
   let links = document.querySelectorAll('a');
 

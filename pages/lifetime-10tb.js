@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-import HeroSection from '../components/lifetime/HeroSection';
+import HeroSection10TB from '../components/lifetime/HeroSection10TB';
 import FeatureSection from '../components/lifetime/FeatureSection';
 import GetLifetimeSection from '../components/lifetime/GetLifetimeSection';
 import Footer from '../components/layout/Footer';
@@ -9,7 +9,7 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
 
-const Lifetime = ({
+const Lifetime10TB = ({
   lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
 }) => {
   const [consentCookie, setConsentCookie] = useState(true);
@@ -24,7 +24,7 @@ const Lifetime = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="drive">
-      <HeroSection lang={lang} textContent={langJson["HeroSection"]} />
+      <HeroSection10TB lang={lang} textContent={langJson["HeroSection"]} />
       <FeatureSection lang={lang} textContent={langJson["FeatureSection"]} />
       <GetLifetimeSection lang={lang} textContent={langJson["GetLifetimeSection"]} />
       <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={true}/>
@@ -52,4 +52,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Lifetime;
+export default Lifetime10TB;
