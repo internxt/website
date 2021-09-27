@@ -8,7 +8,6 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
-import setUTM from '../lib/conversions';
 
 const Token = ({
   lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
@@ -19,7 +18,6 @@ const Token = ({
 
   useEffect(() => {
     AOS.init();
-    setUTM();
   }, []);
 
   return (

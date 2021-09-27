@@ -9,7 +9,6 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl, getPlatform } from '../lib/get-download-url';
-import setUTM from '../lib/conversions';
 
 const Products = ({
   lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, devicePlatform, deviceLang
@@ -19,7 +18,6 @@ const Products = ({
 
   useEffect(() => {
     AOS.init();
-    setUTM();
   }, []);
 
   return (

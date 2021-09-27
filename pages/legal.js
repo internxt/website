@@ -6,7 +6,6 @@ import Layout from '../components/layout/Layout';
 import descriptionsEnglish from '../assets/lang/en/terms-and-conditions.json';
 import descriptionsSpanish from '../assets/lang/es/terms-and-conditions.json';
 import cookies from '../lib/cookies';
-import setUTM from '../lib/conversions';
 
 const Legal = (props) => {
   const router = useRouter();
@@ -15,18 +14,6 @@ const Legal = (props) => {
   const [consentCookie, setConsentCookie] = React.useState(true);
   const description = locale === 'en' ? descriptionsEnglish : descriptionsSpanish;
   const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'photos');
-
-  const handleAcceptCookies = () => {
-    localStorage.setItem('CookieConsent', 'true');
-    setConsentCookie(true);
-  };
-
-  React.useEffect(() => {
-    const cookie = localStorage.getItem('CookieConsent');
-    setUTM();
-
-    if (!cookie) setConsentCookie(false);
-  }, []);
 
   return (
     <Layout segmentName="legal" title={metatags.title} description={metatags[0].description}>
