@@ -20,6 +20,27 @@ const STRIPE_PRODUCT = {
       },
     }
   },
+  lifetime2TBLanding: {
+    production: 'price_1Jed1uFAOdcgaBMQyU0Ebkuy',
+    debug: 'price_1Jed7vFAOdcgaBMQdqghGT0w',
+    mode: 'payment',
+    session: {
+      line_items: [
+        {
+          quantity: 1
+        }
+      ],
+      metadata: {
+        member_tier: 'lifetime'
+      },
+      payment_intent_data: {
+        metadata: {
+          member_tier: 'lifetime',
+          lifetime_tier: 'lifetime'
+        }
+      },
+    }
+  },
   lifetime10TB: {
     production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
     debug: 'price_1JZYkSFAOdcgaBMQItAo6Ev3',
@@ -28,6 +49,28 @@ const STRIPE_PRODUCT = {
       line_items: [
         {
           price: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
+          quantity: 1
+        }
+      ],
+      metadata: {
+        member_tier: 'lifetime'
+      },
+      payment_intent_data: {
+        metadata: {
+          member_tier: 'lifetime',
+          lifetime_tier: 'exclusive-lifetime'
+        }
+      },
+    }
+  },
+  lifetime10TBLanding: {
+    production: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
+    debug: 'price_1Jed8vFAOdcgaBMQC8sdLZdd',
+    mode: 'payment',
+    session: {
+      line_items: [
+        {
+          price: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
           quantity: 1
         }
       ],

@@ -16,7 +16,7 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
 
   const PRODUCT = getStripeProduct(req.body.product);
 
-  const successUrl = `${req.headers.origin}/payment/success?sid={CHECKOUT_SESSION_ID}`;
+  const successUrl = `${req.headers.origin}/payment/success?product=${req.body.product}&sid={CHECKOUT_SESSION_ID}`;
   const cancelUrl = `${req.headers.origin}/payment/cancel?sid={CHECKOUT_SESSION_ID}`;
 
   const params: Stripe.Checkout.SessionCreateParams = {
