@@ -11,6 +11,10 @@ export default function Success(props) {
     if (props.email && props.token) {
       const urlParams = new URLSearchParams(window.location.search);
       const properties = getProductProperties(urlParams.get('product'));
+      const impact = sessionStorage.getItem('irclickid') ? 'impact' : null;
+      const other = 'organic';
+      const affiliate = [impact, other].find((o) => typeof o !== 'undefined' && o !== null);
+      properties.affiliate = affiliate;
       window.analytics.track('Order Completed', properties, () => {
         setTimeout(() => {
           window.location = props.redirectUrl;
