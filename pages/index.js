@@ -18,8 +18,6 @@ const Home = ({
   const router = useRouter();
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
-  // console.log(window.location.search ?? window.location.search);
-
   useEffect(() => {
     AOS.init();
   }, []);
