@@ -6,15 +6,23 @@ const TeamSection = ({ textContent }) => {
   return (
     <section>
       <div className="content">
-        <div className={`flex flex-col mx-auto text-center px-6 text-4xl my-24`}>
-          <p>{textContent.title}</p>
+
+        <div className="max-w-xl text-left sm:text-center mx-auto my-24 md:my-40 px-8">
+          <p className="mb-4 text-lg text-neutral-700">
+            “{textContent.quote}”
+          </p>
+          <p className="text-neutral-100">
+            <span className="mr-3">—</span>
+            <span>Fran Villalba Segarra, CEO</span>
+          </p>
         </div>
 
-        <div className="grid gap-8 w-auto grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center mb-20 px-8">
+        <div className="grid gap-8 w-auto grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center my-16 md:my-32 px-8">
           {textContent.employees.map((employee, index) => (
             <Employee key={index} info={employee}/>
           ))}
         </div>
+
       </div>
     </section>
   );
