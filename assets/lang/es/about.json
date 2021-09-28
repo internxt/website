@@ -1,6 +1,11 @@
 {
 	"HeroSection": {
-		"description": "En Internxt creemos que lo que la humanidad puede lograr es extraordinario. Queremos convertirnos en una fuerza de cambio positivo que empuje a la sociedad hacia un futuro mejor y más brillante. Para ello, estamos rediseñando por completo el statu quo de diversas industrias, mediante la aplicación de la innovación de forma coherente."
+		"theTeam": "Nuestro equipo",
+		"description": {
+			"line1": "Cuando decimos equipo, decimos familia, aquí en Internxt aprendemos los unos",
+			"line2": "de los otros y tratamos de dar lo mejor de nosotros mismos cada día para",
+			"line3": "desarrollar productos increíbles diseñados con las personas en el centro."
+		}
 	},
 	"TeamSection": {
 		"title": "Liderazgo en Internxt",
@@ -115,7 +120,8 @@
 					"line2": "500 startups ha elegido a Internxt como una de las mejores startups del SAAS de todo el mundo."
 				}
 			}
-		]
+		],
+		"quote": "Creemos que lo que la humanidad puede lograr es extraordinario. Queremos convertirnos en una fuerza de cambio positivo que empuje a la sociedad hacia un futuro mejor y más brillante. Para ello, estamos rediseñando por completo el statu quo de diversas industrias, mediante la aplicación de la innovación de forma coherente."
 	},
 	"Articles": {
 		"title": "Últimos artículos publicados",
