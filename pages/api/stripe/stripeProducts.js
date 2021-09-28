@@ -46,6 +46,13 @@ const STRIPE_PRODUCT = {
           lifetime_tier: 'lifetime'
         }
       },
+    },
+    properties: {
+      currency: 'eur',
+      revenue: 99,
+      type: 'one_time',
+      price_id: 'price_1Jed1uFAOdcgaBMQyU0Ebkuy',
+      quantity: 1,
     }
   },
   lifetime10TB: {
@@ -97,6 +104,13 @@ const STRIPE_PRODUCT = {
           lifetime_tier: 'exclusive-lifetime'
         }
       },
+    },
+    properties: {
+      currency: 'eur',
+      revenue: 299,
+      type: 'one_time',
+      price_id: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
+      quantity: 1,
     }
   },
   infiniteLifetime: {
