@@ -6,9 +6,9 @@ const PriceTable = (props) => {
 
   const pricings = {
     "TB2": {
-      "stripeID": "lifetime2TB",
+      "stripeID": "lifetime2TBLanding",
       "storage": "2TB",
-      "price": "299",
+      "price": "99",
       "priceBefore": "499"
     }
   }

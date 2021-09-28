@@ -70,7 +70,7 @@ export default function Navbar({textContent, lang, cta}) {
                   <a onClick={() => {setMenuState(false)}} href={`${router.pathname === '/about' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/about')}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
                     {textContent.about}
                   </a>
-                  <a onClick={() => {setMenuState(false)}} href="/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                  <a onClick={() => {setMenuState(false)}} href="https://drive.internxt.com/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
                     {textContent.login}
                   </a>
                 </div>
@@ -177,7 +177,7 @@ export default function Navbar({textContent, lang, cta}) {
                 </Popover>
               </div>
               <a href={`${router.pathname === '/about' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/about')}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">{textContent.about}</a>
-              <a href="/login" className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{textContent.login}</a>
+              <a href="https://drive.internxt.com/login" className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{textContent.login}</a>
             </div>
 
             {(cta[0] === 'default') ? (
