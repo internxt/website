@@ -20,7 +20,7 @@ const STRIPE_PRODUCT = {
       },
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 299,
       type: 'one_time',
       price_id: 'price_1HrovfFAOdcgaBMQP33yyJdt',
@@ -48,7 +48,7 @@ const STRIPE_PRODUCT = {
       },
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 99,
       type: 'one_time',
       price_id: 'price_1Jed1uFAOdcgaBMQyU0Ebkuy',
@@ -77,7 +77,7 @@ const STRIPE_PRODUCT = {
       },
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 499,
       type: 'one_time',
       price_id: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
@@ -106,7 +106,7 @@ const STRIPE_PRODUCT = {
       },
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 299,
       type: 'one_time',
       price_id: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
@@ -135,7 +135,7 @@ const STRIPE_PRODUCT = {
       },
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 999,
       type: 'one_time',
       price_id: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
@@ -154,7 +154,7 @@ const STRIPE_PRODUCT = {
       ]
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 10.68,
       type: 'recurrent',
       price_id: 'plan_Frb29JIJYJ4e8G',
@@ -173,7 +173,7 @@ const STRIPE_PRODUCT = {
       ]
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 41.68,
       type: 'recurrent',
       price_id: 'plan_F2FebxiAYyZC7m',
@@ -193,7 +193,7 @@ const STRIPE_PRODUCT = {
       ]
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 107.88,
       type: 'recurrent',
       price_id: 'plan_FkTXxEg3GZW0pg',
@@ -213,7 +213,7 @@ const STRIPE_PRODUCT = {
       ]
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 0.99,
       type: 'recurrent',
       price_id: 'plan_Frb0qIcAlz2lDm',
@@ -233,7 +233,7 @@ const STRIPE_PRODUCT = {
       ]
     },
     properties: {
-      currency: 'eur',
+      currency: 'EUR',
       revenue: 4.49,
       type: 'recurrent',
       price_id: 'plan_EUaU5KuX0bbmMZ',
@@ -254,7 +254,7 @@ const STRIPE_PRODUCT = {
     }
   },
   properties: {
-    currency: 'eur',
+    currency: 'EUR',
     revenue: 9.99,
     type: 'recurrent',
     price_id: 'plan_F7ptyrVRmyL8Gn',
