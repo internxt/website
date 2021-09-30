@@ -11,7 +11,7 @@ const HeroSection = ({ textContent }) => {
             <div class="absolute top-24 md:top-6 flex h-12 md:h-24 w-full bg-gradient-to-b from-white to-transparentw"></div>
             <div class="absolute top-0 flex h-24 md:h-6 w-full bg-white"></div>
           </div>
-          <img loading="lazy" src={`../../images/about/team/internxt-family-crop.webp`} draggable="false" className="w-full"/>
+          <img loading="lazy" src="../../images/about/team/Internxt-family-crop.webp" draggable="false" className="w-full"/>
         </div>
         <div className="absolute bottom-0 flex flex-col justify-end w-full h-full text-left sm:text-center -mb-64 md:-mb-12 lg:mb-0 px-8 pb-8 transition-all duration-150 ease-in-out">
           <h1 className="text-4xl sm:text-6xl font-medium text-white mb-6">{textContent.theTeam}</h1>
