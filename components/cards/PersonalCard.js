@@ -17,7 +17,8 @@ const PersonalCard = ({ name, job, picture }) => {
       </div>
 
       <div className={`${styles.image} sm:w-auto`}>
-        <img loading="lazy"
+        <img
+          loading="lazy"
           src={url}
           style={{
             width: '109px',

@@ -23,11 +23,11 @@ const Products = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
       <div className="heroSection">
-        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']}/>
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={lang} platform={devicePlatform}/>
-        <CardsSection textContent={langJson["CardsSection"]} download={downloadUrl} lang={deviceLang} platform={devicePlatform}/>
+        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
+        <HeroSection textContent={langJson.HeroSection} download={downloadUrl} lang={lang} platform={devicePlatform} />
+        <CardsSection textContent={langJson.CardsSection} download={downloadUrl} lang={deviceLang} platform={devicePlatform} />
       </div>
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false}/>
+      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false} />
     </Layout>
   );
 };

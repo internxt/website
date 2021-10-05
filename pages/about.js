@@ -8,17 +8,18 @@ import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import cookies from '../lib/cookies';
 
-const AboutUs = ({ lang, langJson, footerLang, navbarLang, metatagsDescriptions, articles, articleImages }) => {
+const AboutUs = ({
+  lang, langJson, footerLang, navbarLang, metatagsDescriptions, articles, articleImages
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
-
 
   return (
     <Layout segmentName="about" title={metatags[0].title} description={metatags[0].description}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} />
-      <HeroSection textContent={langJson["HeroSection"]} />
-      <TeamSection textContent={langJson["TeamSection"]} />
-      <Articles textContent={langJson["Articles"]} articles={articles} images={articleImages} />
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false}/>
+      <HeroSection textContent={langJson.HeroSection} />
+      <TeamSection textContent={langJson.TeamSection} />
+      <Articles textContent={langJson.Articles} articles={articles} images={articleImages} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
   );
 };
@@ -32,25 +33,25 @@ export async function getServerSideProps(ctx) {
   const regex = /<img.*? src="([^"]+)"/;
 
   articles.map((article) => {
-    if (article['description']) {
-      articleImages.push(article.description)
-    } else if (article['content']) {
-      articleImages.push(article.content)
+    if (article.description) {
+      articleImages.push(article.description);
+    } else if (article.content) {
+      articleImages.push(article.content);
     } else if (article['content-encoded']) {
-      articleImages.push(article.content)
+      articleImages.push(article.content);
     } else {
-      console.warn('Can\'t find \'description\' or \'content\' in RRSS Feed')
+      console.warn('Can\'t find \'description\' or \'content\' in RRSS Feed');
     }
-  })
+  });
 
   articleImages.map((content, index) => {
     if (content && content.match(regex)) {
-      articleImages[index] = content.match(regex)[1]
+      articleImages[index] = content.match(regex)[1];
     } else {
-      articleImages[index] = null
+      articleImages[index] = null;
     }
-  })
-  
+  });
+
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);

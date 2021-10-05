@@ -28,14 +28,14 @@ const Home = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
       <div className="heroSectionHome">
         <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
+        <HeroSection textContent={langJson.HeroSection} download={downloadUrl} lang={deviceLang} />
       </div>
-      <FeaturesSection textContent={langJson["FeaturesSection"]} lang={deviceLang}/>
-      <InvestorsSection textContent={langJson["InvestorsSection"]}/>
+      <FeaturesSection textContent={langJson.FeaturesSection} lang={deviceLang} />
+      <InvestorsSection textContent={langJson.InvestorsSection} />
       <div className="getStartedSection">
-        <GetStartedSection textContent={langJson["GetStartedSection"]} lang={deviceLang}/>
+        <GetStartedSection textContent={langJson.GetStartedSection} lang={deviceLang} />
       </div>
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false}/>
+      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false} />
     </Layout>
   );
 };

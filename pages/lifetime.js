@@ -24,10 +24,10 @@ const Lifetime = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="drive">
-      <HeroSection lang={lang} textContent={langJson["HeroSection"]} />
-      <FeatureSection lang={lang} textContent={langJson["FeatureSection"]} />
-      <GetLifetimeSection lang={lang} textContent={langJson["GetLifetimeSection"]} />
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={true}/>
+      <HeroSection lang={lang} textContent={langJson.HeroSection} />
+      <FeatureSection lang={lang} textContent={langJson.FeatureSection} />
+      <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
+      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter />
     </Layout>
   );
 };

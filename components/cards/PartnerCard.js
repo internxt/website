@@ -63,7 +63,8 @@ const PartnerCard = ({
       </div>
 
       <div className="w-6/12 overflow-hidden sm:hidden">
-        <img loading="lazy"
+        <img
+          loading="lazy"
           src={imageurl}
           className="object-contain lg:object-cover lg:h-full"
           alt=""
