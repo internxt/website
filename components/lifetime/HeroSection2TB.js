@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PriceTable2TB from './PriceTable2TB';
 
 const HeroSection2TB = ({ lang, textContent }) => (

@@ -9,18 +9,48 @@ import Navbar from '../components/layout/Navbar';
 import cookies from '../lib/cookies';
 
 const AboutUs = ({
-  lang, langJson, footerLang, navbarLang, metatagsDescriptions, articles, articleImages
+  lang,
+  langJson,
+  footerLang,
+  navbarLang,
+  metatagsDescriptions,
+  articles,
+  articleImages
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
   return (
+
     <Layout segmentName="about" title={metatags[0].title} description={metatags[0].description}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} />
-      <HeroSection textContent={langJson.HeroSection} />
-      <TeamSection textContent={langJson.TeamSection} />
-      <Articles textContent={langJson.Articles} articles={articles} images={articleImages} />
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['default']}
+      />
+
+      <HeroSection
+        textContent={langJson.HeroSection}
+      />
+
+      <TeamSection
+        textContent={langJson.TeamSection}
+      />
+
+      <Articles
+        textContent={langJson.Articles}
+        articles={articles}
+        images={articleImages}
+      />
+
+      <Footer
+        textContent={footerLang}
+        lang={lang}
+        hideNewsletter={false}
+      />
+
     </Layout>
+
   );
 };
 
@@ -32,6 +62,7 @@ export async function getServerSideProps(ctx) {
   const articleImages = [];
   const regex = /<img.*? src="([^"]+)"/;
 
+  // eslint-disable-next-line array-callback-return
   articles.map((article) => {
     if (article.description) {
       articleImages.push(article.description);
@@ -40,12 +71,15 @@ export async function getServerSideProps(ctx) {
     } else if (article['content-encoded']) {
       articleImages.push(article.content);
     } else {
+      // eslint-disable-next-line no-console
       console.warn('Can\'t find \'description\' or \'content\' in RRSS Feed');
     }
   });
 
+  // eslint-disable-next-line array-callback-return
   articleImages.map((content, index) => {
     if (content && content.match(regex)) {
+      // eslint-disable-next-line prefer-destructuring
       articleImages[index] = content.match(regex)[1];
     } else {
       articleImages[index] = null;

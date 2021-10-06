@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './GetStartedSection.module.scss';
 
-const GetStartedSection = ({ textContent, lang }) => (
+const GetStartedSection = ({
+  textContent
+}) => (
   <section className="text-white">
     <div className="content">
       <div className="flex flex-col sm:items-center justify-center w-full text-left sm:text-center flex-shrink-0 px-10 md:px-0 py-12">

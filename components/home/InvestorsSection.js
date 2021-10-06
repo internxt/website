@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './InvestorsSection.module.scss';
 
 const InvestorsSection = ({ textContent }) => (
   <section>

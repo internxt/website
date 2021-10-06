@@ -43,12 +43,4 @@ const Article = ({ article, image, linkLabel }) => (
   </a>
 );
 
-export async function getServerSideProps(ctx) {
-  cookies.setReferralCookie(ctx);
-
-  return {
-    props: { },
-  };
-}
-
 export default Article;

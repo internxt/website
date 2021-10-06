@@ -23,17 +23,17 @@ export const getServerSideProps = ({ res }) => {
     .filter((staticPage) => Object.keys(
       pages
     ).includes(path.parse(staticPage).name))
-    .map((staticPagePath) => `${baseUrl}/${path.parse(staticPagePath).name}`);
+    .map((staticPagePath) => `${path.parse(staticPagePath).name}`);
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${staticPages
-    .map((url) => `
+    .map((page) => `
             <url>
-              <loc>${url === 'index.js' ? '' : url}</loc>
+              <loc>${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
-              <priority>1.0</priority>
+              <priority>${pages[page]}</priority>
             </url>
           `)
     .join('')}

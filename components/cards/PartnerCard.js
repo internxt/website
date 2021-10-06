@@ -27,7 +27,7 @@ const PartnerCard = ({
 
   useEffect(() => {
     changeClass();
-  }, []);
+  });
 
   return (
     <div className={`${cardstyle} sm:h-auto sm:w-84 lg:w-8/12 lg:h-90`}>

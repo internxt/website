@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 
 import HeroSection from '../components/products/HeroSection';
@@ -11,9 +10,15 @@ import cookies from '../lib/cookies';
 import { getDriveDownloadUrl, getPlatform } from '../lib/get-download-url';
 
 const Products = ({
-  lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, devicePlatform, deviceLang
+  lang,
+  metatagsDescriptions,
+  langJson,
+  navbarLang,
+  footerLang,
+  downloadUrl,
+  devicePlatform,
+  deviceLang
 }) => {
-  const router = useRouter();
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   useEffect(() => {
@@ -21,14 +26,41 @@ const Products = ({
   }, []);
 
   return (
+
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="products">
+
       <div className="heroSection">
-        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
-        <HeroSection textContent={langJson.HeroSection} download={downloadUrl} lang={lang} platform={devicePlatform} />
-        <CardsSection textContent={langJson.CardsSection} download={downloadUrl} lang={deviceLang} platform={devicePlatform} />
+
+        <Navbar
+          textContent={navbarLang}
+          lang={deviceLang}
+          cta={['default']}
+        />
+
+        <HeroSection
+          textContent={langJson.HeroSection}
+          download={downloadUrl}
+          lang={lang}
+          platform={devicePlatform}
+        />
+
+        <CardsSection
+          textContent={langJson.CardsSection}
+          download={downloadUrl}
+          lang={deviceLang}
+          platform={devicePlatform}
+        />
+
       </div>
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false} />
+
+      <Footer
+        textContent={footerLang}
+        lang={deviceLang}
+        hideNewsletter={false}
+      />
+
     </Layout>
+
   );
 };
 
@@ -48,7 +80,14 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, devicePlatform, deviceLang,
+      lang,
+      downloadUrl,
+      metatagsDescriptions,
+      langJson,
+      navbarLang,
+      footerLang,
+      devicePlatform,
+      deviceLang,
     },
   };
 }

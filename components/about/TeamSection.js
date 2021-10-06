@@ -18,8 +18,8 @@ const TeamSection = ({ textContent }) => (
       </div>
 
       <div className="grid gap-8 w-auto grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center my-16 md:my-32 px-8">
-        {textContent.employees.map((employee, index) => (
-          <Employee key={index} info={employee} />
+        {textContent.employees.map((employee) => (
+          <Employee key={employee.photoId} info={employee} />
         ))}
       </div>
 

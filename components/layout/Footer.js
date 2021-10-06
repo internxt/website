@@ -91,9 +91,11 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
                   {textContent.FooterSection.sections.products.title}
                 </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
+                  {/* eslint-disable-next-line no-nested-ternary */}
                   <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`}>
                     Internxt Drive
                   </a>
+                  {/* eslint-disable-next-line no-nested-ternary */}
                   <a href={`${router.pathname === '/token' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/token`)}`}>
                     Internxt Token
                   </a>
@@ -105,12 +107,14 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
                   {textContent.FooterSection.sections.company.title}
                 </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
+                  {/* eslint-disable-next-line no-nested-ternary */}
                   <a href={`${router.pathname === '/about' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/about`)}`}>
                     {textContent.FooterSection.sections.company.about}
                   </a>
                   <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
                     {textContent.FooterSection.sections.company.contact}
                   </a>
+                  {/* eslint-disable-next-line no-nested-ternary */}
                   <a href={`${router.pathname === '/legal' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/legal`)}`}>
                     {textContent.FooterSection.sections.company.terms}
                   </a>
@@ -128,6 +132,7 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
                   <a href="https://drive.internxt.com/login" target="_self">
                     {textContent.FooterSection.sections.join.login}
                   </a>
+                  {/* eslint-disable-next-line no-nested-ternary */}
                   <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`}>
                     {textContent.FooterSection.sections.join.downloads}
                   </a>
@@ -141,13 +146,13 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
                   <div className="flex flex-row space-x-1">
                     <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/twitter.svg" draggable="false" />
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/twitter.svg" draggable="false" alt="twitter icon" />
                     </a>
                     <a href="https://linkedin.com/company/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false" />
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false" alt="linkedin icon" />
                     </a>
                     <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false" />
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false" alt="instagram icon" />
                     </a>
                   </div>
                   <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
@@ -186,7 +191,9 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
+                        {/* eslint-disable-next-line no-nested-ternary */}
                         <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="flex w-full px-4 py-3">Internxt Drive</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
                         <a href={`${router.pathname === '/token' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/token`)}`} className="flex w-full px-4 py-3">Internxt Token</a>
                       </Disclosure.Panel>
                     </Transition>
@@ -216,8 +223,10 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
+                        {/* eslint-disable-next-line no-nested-ternary */}
                         <a href={`${router.pathname === '/about' ? '#web' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/about`)}`} className="flex w-full px-4 py-3">{textContent.FooterSection.sections.company.about}</a>
                         <a href="https://help.internxt.com/" target="_blank" className="flex w-full px-4 py-3" rel="noreferrer">{textContent.FooterSection.sections.company.contact}</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
                         <a href={`${router.pathname === '/legal' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/legal`)}`} className="flex w-full px-4 py-3">{textContent.FooterSection.sections.company.terms}</a>
                       </Disclosure.Panel>
                     </Transition>
@@ -249,6 +258,7 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
                         <a href="https://drive.internxt.com/new" target="_self" className="flex w-full px-4 py-3">{textContent.FooterSection.sections.join.signup}</a>
                         <a href="https://drive.internxt.com/login" target="_self" className="flex w-full px-4 py-3">{textContent.FooterSection.sections.join.login}</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
                         <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="flex w-full px-4 py-3">{textContent.FooterSection.sections.join.downloads}</a>
                       </Disclosure.Panel>
                     </Transition>
@@ -323,13 +333,14 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
               {textContent.Cookies.title}
             </p>
             <a
+              // eslint-disable-next-line no-nested-ternary
               href={`${router.pathname === '/legal' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/legal`)}`}
               target="_blank"
               className="text-neutral-100 text-sm"
               rel="noreferrer"
             >
               <div className="flex flex-row items-center">
-                <img loading="lazy" className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false" />
+                <img loading="lazy" className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false" alt="new tab icon" />
                 {textContent.Cookies.link}
               </div>
             </a>
@@ -353,7 +364,9 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
 }
 
 export async function getServerSideProps(ctx) {
+  // eslint-disable-next-line no-undef
   const downloadUrl = await getDriveDownloadUrl(ctx);
+  // eslint-disable-next-line no-undef
   const devicePlatform = await getPlatform(ctx);
 
   const lang = ctx.locale;
@@ -363,7 +376,10 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, devicePlatform, deviceLang,
+      lang,
+      downloadUrl,
+      devicePlatform,
+      deviceLang
     },
   };
 }

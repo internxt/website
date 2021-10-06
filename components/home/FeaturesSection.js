@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useRouter } from 'next/router';
 import styles from './FeaturesSection.module.scss';
@@ -30,7 +31,7 @@ const FeaturesSection = ({ textContent, lang }) => {
           <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="text-lg font-semibold sm:font-normal text-blue-60">
             <div className="flex flex-row items-center">
               {textContent.cta}
-              <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBoldBlue60.svg" draggable="false" />
+              <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBoldBlue60.svg" draggable="false" alt="arrow right" />
             </div>
           </a>
         </div>
@@ -50,7 +51,7 @@ const FeaturesSection = ({ textContent, lang }) => {
               <a href="https://help.internxt.com/en/articles/5387164-what-is-zero-knowledge-encryption" target="_blank" className="text-lg text-blue-60" rel="noreferrer">
                 <div className="flex flex-row items-center">
                   {textContent.feature1.cta}
-                  <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" />
+                  <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" alt="arrow right" />
                 </div>
               </a>
             </div>
@@ -72,7 +73,7 @@ const FeaturesSection = ({ textContent, lang }) => {
               <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="text-lg text-blue-60">
                 <div className="flex flex-row items-center">
                   {textContent.feature2.cta}
-                  <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" />
+                  <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" alt="arrow right" />
                 </div>
               </a>
             </div>
@@ -96,7 +97,7 @@ const FeaturesSection = ({ textContent, lang }) => {
               <a href={`${(lang ? (`/${lang}`) : '/')}`} target="_blank" className="text-lg text-blue-60 hidden" rel="noreferrer">
                 <div className="flex flex-row items-center">
                   {textContent.feature3.cta}
-                  <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" />
+                  <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" alt="arrow right" />
                 </div>
               </a>
             </div>

@@ -1,15 +1,10 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import PriceCard from './PriceCard';
 
-const PriceTable = (props) => {
-  const [billingFrequency, setBillingFrequency] = useState(-1);
-
-  function parentSetUserCount(count) {
-    setUserCount(count);
-  }
-  function parentGetUserCount() {
-    return userCount;
-  }
+const PriceTable = ({
+  lang
+}) => {
+  const billingFrequency = -1;
 
   const billingPrice = (price) => price[billingFrequency];
 
@@ -44,17 +39,52 @@ const PriceTable = (props) => {
   };
 
   return (
+
     <section>
+
       <div className="flex flex-col items-center">
 
         <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end px-6">
-          <PriceCard planType="individual" storage={pricings.TB2.storage} price={billingPrice(pricings.TB2.price)} priceBefore={pricings.TB2.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.TB2.stripeID}`]} popular={pricings.TB2.popular} lang={props.lang} />
-          <PriceCard planType="individual" storage={pricings.TB10.storage} price={billingPrice(pricings.TB10.price)} priceBefore={pricings.TB10.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.TB10.stripeID}`]} popular={pricings.TB10.popular} lang={props.lang} />
-          <PriceCard planType="individual" storage={pricings.Infinite.storage} price={billingPrice(pricings.Infinite.price)} priceBefore={pricings.Infinite.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.Infinite.stripeID}`]} popular={pricings.Infinite.popular} lang={props.lang} />
+
+          <PriceCard
+            planType="individual"
+            storage={pricings.TB2.storage}
+            price={billingPrice(pricings.TB2.price)}
+            priceBefore={pricings.TB2.priceBefore}
+            billingFrequency={billingFrequency}
+            cta={['checkout', `${pricings.TB2.stripeID}`]}
+            popular={pricings.TB2.popular}
+            lang={lang}
+          />
+
+          <PriceCard
+            planType="individual"
+            storage={pricings.TB10.storage}
+            price={billingPrice(pricings.TB10.price)}
+            priceBefore={pricings.TB10.priceBefore}
+            billingFrequency={billingFrequency}
+            cta={['checkout', `${pricings.TB10.stripeID}`]}
+            popular={pricings.TB10.popular}
+            lang={lang}
+          />
+
+          <PriceCard
+            planType="individual"
+            storage={pricings.Infinite.storage}
+            price={billingPrice(pricings.Infinite.price)}
+            priceBefore={pricings.Infinite.priceBefore}
+            billingFrequency={billingFrequency}
+            cta={['checkout', `${pricings.Infinite.stripeID}`]}
+            popular={pricings.Infinite.popular}
+            lang={lang}
+          />
+
         </div>
 
       </div>
+
     </section>
+
   );
 };
 

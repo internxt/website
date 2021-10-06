@@ -37,7 +37,7 @@ const CardsSection = ({
             </span>
             <a href="https://drive.internxt.com" target="_blank" className={`${(platform === 'iOS' || platform === 'Android') ? 'hidden' : 'flex'} text-lg text-blue-60`} rel="noreferrer">
               <div className="flex flex-row items-center">
-                <img loading="lazy" className="w-3 h-3 mt-0.5 mr-3" src="/icons/newTab.svg" draggable="false" />
+                <img loading="lazy" className="w-3 h-3 mt-0.5 mr-3" src="/icons/newTab.svg" draggable="false" alt="new tab icon" />
                 {textContent.web.cta}
               </div>
             </a>

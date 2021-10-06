@@ -69,9 +69,6 @@ const Articles = ({ textContent, articles, images }) => (
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const textContent = require(`../../assets/lang/${lang}/about.json`);
-  textContent = textContent.Articles;
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {
