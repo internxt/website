@@ -1,4 +1,3 @@
-const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
@@ -16,17 +15,6 @@ module.exports = {
       transparent: 'rgba(0,0,0,0)',
       transparentw: 'rgba(255,255,255,0)',
       current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.coolGray,
-      red: colors.red,
-      yellow: colors.amber,
-      green: colors.emerald,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      purple: colors.violet,
-      pink: colors.pink,
-      //Umeme design system
       black: '#000000',
       gray: {
         10: '#f4f4f4',
@@ -789,7 +777,7 @@ module.exports = {
       600: '600ms',
       650: '650ms',
       700: '700ms',
-      700: '750ms',
+      750: '750ms',
       800: '800ms',
       850: '850ms',
       900: '900ms',
@@ -1017,7 +1005,7 @@ module.exports = {
   plugins: [
     plugin(({ addComponents, theme }) => {
       const newComponents = {
-        'btn': {
+        btn: {
           height: 56,
           alignItems: 'center',
           justifyContent: 'center',
@@ -1060,4 +1048,4 @@ module.exports = {
       return addComponents(newComponents);
     })
   ]
-}
+};

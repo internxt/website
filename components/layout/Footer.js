@@ -1,13 +1,13 @@
 import AOS from 'aos';
 import React from 'react';
 import { useRouter } from 'next/router';
+import { Transition, Disclosure } from '@headlessui/react';
+import { MinusIcon } from '@heroicons/react/solid';
 import cookies from '../../lib/cookies';
 import setUTM from '../../lib/conversions';
-import { Transition, Disclosure } from '@headlessui/react'
-import { MinusIcon } from '@heroicons/react/solid'
 import styles from './Footer.module.scss';
 
-export default function Footer({textContent, lang, hideNewsletter}) {
+export default function Footer({ textContent, lang, hideNewsletter }) {
   const router = useRouter();
   const [consentCookie, setConsentCookie] = React.useState(true);
 
@@ -32,7 +32,13 @@ export default function Footer({textContent, lang, hideNewsletter}) {
           <div className="flex flex-col space-y-2">
             <h2 className="text-3xl font-semibold">{textContent.NewsletterSection.title}</h2>
             <p className="text-lg text-neutral-500">
-              {textContent.NewsletterSection.description.line1}<br className="hidden md:flex"/> {textContent.NewsletterSection.description.line2}<br className="hidden md:flex"/> {textContent.NewsletterSection.description.line3}
+              {textContent.NewsletterSection.description.line1}
+              <br className="hidden md:flex" />
+              {' '}
+              {textContent.NewsletterSection.description.line2}
+              <br className="hidden md:flex" />
+              {' '}
+              {textContent.NewsletterSection.description.line3}
             </p>
             <span className="text-sm text-neutral-80">{textContent.NewsletterSection.info}</span>
           </div>
@@ -50,7 +56,7 @@ export default function Footer({textContent, lang, hideNewsletter}) {
               name="fields[email]"
               type="email"
               placeholder={`${textContent.NewsletterSection.input}`}
-              className={`flex flex-row h-auto px-4 py-3 sm:py-2 outline-none rounded-lg border-2 border-neutral-40 focus:border-neutral-50 transition-all duration-150 bg-neutral-10 text-left appearance-none`}
+              className="flex flex-row h-auto px-4 py-3 sm:py-2 outline-none rounded-lg border-2 border-neutral-40 focus:border-neutral-50 transition-all duration-150 bg-neutral-10 text-left appearance-none"
               required
             />
             <input
@@ -68,8 +74,8 @@ export default function Footer({textContent, lang, hideNewsletter}) {
           <div className="hidden md:flex md:flex-col lg:flex-row sm:p-10 py-14 md:space-y-14 lg:space-y-0 lg:space-x-20 justify-between mx-0 md:mx-6">
 
             <div className="flex flex-col space-y-4 max-w-sm">
-              <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
-                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo" draggable="false"/>
+              <a href={`${(lang ? (`/${lang}`) : '/')}`} className="flex flex-shrink-0">
+                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo" draggable="false" />
               </a>
               <p className="text-sm text-neutral-80">
                 {textContent.FooterSection.description}
@@ -85,10 +91,12 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                   {textContent.FooterSection.sections.products.title}
                 </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
-                  <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/products')}`}>
+                  {/* eslint-disable-next-line no-nested-ternary */}
+                  <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`}>
                     Internxt Drive
                   </a>
-                  <a href={`${router.pathname === '/token' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/token')}`}>
+                  {/* eslint-disable-next-line no-nested-ternary */}
+                  <a href={`${router.pathname === '/token' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/token`)}`}>
                     Internxt Token
                   </a>
                 </div>
@@ -99,13 +107,15 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                   {textContent.FooterSection.sections.company.title}
                 </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
-                  <a href={`${router.pathname === '/about' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/about')}`}>
+                  {/* eslint-disable-next-line no-nested-ternary */}
+                  <a href={`${router.pathname === '/about' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/about`)}`}>
                     {textContent.FooterSection.sections.company.about}
                   </a>
-                  <a href="https://help.internxt.com/" target="_blank">
+                  <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
                     {textContent.FooterSection.sections.company.contact}
                   </a>
-                  <a href={`${router.pathname === '/legal' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/legal')}`}>
+                  {/* eslint-disable-next-line no-nested-ternary */}
+                  <a href={`${router.pathname === '/legal' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/legal`)}`}>
                     {textContent.FooterSection.sections.company.terms}
                   </a>
                 </div>
@@ -122,7 +132,8 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                   <a href="https://drive.internxt.com/login" target="_self">
                     {textContent.FooterSection.sections.join.login}
                   </a>
-                  <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/products')}`}>
+                  {/* eslint-disable-next-line no-nested-ternary */}
+                  <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`}>
                     {textContent.FooterSection.sections.join.downloads}
                   </a>
                 </div>
@@ -134,20 +145,20 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                 </h3>
                 <div className="flex flex-col space-y-3 text-base text-neutral-300">
                   <div className="flex flex-row space-x-1">
-                    <a href="https://twitter.com/Internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
-                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/twitter.svg" draggable="false"/>
+                    <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/twitter.svg" draggable="false" alt="twitter icon" />
                     </a>
-                    <a href="https://linkedin.com/company/internxt" target="_blank" className={`h-6 py-1.5 pr-2`}>
-                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false"/>
+                    <a href="https://linkedin.com/company/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/linkedin.svg" draggable="false" alt="linkedin icon" />
                     </a>
-                    <a href="https://instagram.com/internxt/" target="_blank" className={`h-6 py-1.5 pr-2`}>
-                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false"/>
+                    <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                      <img loading="lazy" className="h-4" src="/icons/social/neutral-300/instagram.svg" draggable="false" alt="instagram icon" />
                     </a>
                   </div>
-                  <a href="https://github.com/internxt" target="_blank">
+                  <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
                     Github
                   </a>
-                  <a href="https://blog.internxt.com/" target="_blank">
+                  <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
                     Blog
                   </a>
                 </div>
@@ -162,12 +173,12 @@ export default function Footer({textContent, lang, hideNewsletter}) {
               <Disclosure as="div" className="border-b border-neutral-20">
                 {({ open }) => (
                   <div>
-                    
-                    <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <h3 className={`flex flex-row`}>
+
+                    <Disclosure.Button className="flex justify-between items-center w-full py-3 text-lg font-medium">
+                      <h3 className="flex flex-row">
                         {textContent.FooterSection.sections.products.title}
                       </h3>
-                      <div className={`relative w-6 h-6`}>
+                      <div className="relative w-6 h-6">
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
                       </div>
@@ -180,8 +191,10 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
-                        <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/products')}`} className={`flex w-full px-4 py-3`}>Internxt Drive</a>
-                        <a href={`${router.pathname === '/token' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/token')}`} className={`flex w-full px-4 py-3`}>Internxt Token</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
+                        <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="flex w-full px-4 py-3">Internxt Drive</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
+                        <a href={`${router.pathname === '/token' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/token`)}`} className="flex w-full px-4 py-3">Internxt Token</a>
                       </Disclosure.Panel>
                     </Transition>
 
@@ -192,12 +205,12 @@ export default function Footer({textContent, lang, hideNewsletter}) {
               <Disclosure as="div" className="border-b border-neutral-20">
                 {({ open }) => (
                   <div>
-                    
-                    <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <h3 className={`flex flex-row`}>
+
+                    <Disclosure.Button className="flex justify-between items-center w-full py-3 text-lg font-medium">
+                      <h3 className="flex flex-row">
                         {textContent.FooterSection.sections.company.title}
                       </h3>
-                      <div className={`relative w-6 h-6`}>
+                      <div className="relative w-6 h-6">
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
                       </div>
@@ -210,9 +223,11 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
-                        <a href={`${router.pathname === '/about' ? '#web' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/about')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.about}</a>
-                        <a href="https://help.internxt.com/" target="_blank" className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.contact}</a>
-                        <a href={`${router.pathname === '/legal' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/legal')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.company.terms}</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
+                        <a href={`${router.pathname === '/about' ? '#web' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/about`)}`} className="flex w-full px-4 py-3">{textContent.FooterSection.sections.company.about}</a>
+                        <a href="https://help.internxt.com/" target="_blank" className="flex w-full px-4 py-3" rel="noreferrer">{textContent.FooterSection.sections.company.contact}</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
+                        <a href={`${router.pathname === '/legal' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/legal`)}`} className="flex w-full px-4 py-3">{textContent.FooterSection.sections.company.terms}</a>
                       </Disclosure.Panel>
                     </Transition>
 
@@ -223,12 +238,12 @@ export default function Footer({textContent, lang, hideNewsletter}) {
               <Disclosure as="div" className="border-b border-neutral-20">
                 {({ open }) => (
                   <div>
-                    
-                    <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <h3 className={`flex flex-row`}>
+
+                    <Disclosure.Button className="flex justify-between items-center w-full py-3 text-lg font-medium">
+                      <h3 className="flex flex-row">
                         {textContent.FooterSection.sections.join.title}
                       </h3>
-                      <div className={`relative w-6 h-6`}>
+                      <div className="relative w-6 h-6">
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
                       </div>
@@ -241,9 +256,10 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
-                        <a href="https://drive.internxt.com/new" target="_self" className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.join.signup}</a>
-                        <a href="https://drive.internxt.com/login" target="_self" className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.join.login}</a>
-                        <a href={`${router.pathname === '/products' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/products')}`} className={`flex w-full px-4 py-3`}>{textContent.FooterSection.sections.join.downloads}</a>
+                        <a href="https://drive.internxt.com/new" target="_self" className="flex w-full px-4 py-3">{textContent.FooterSection.sections.join.signup}</a>
+                        <a href="https://drive.internxt.com/login" target="_self" className="flex w-full px-4 py-3">{textContent.FooterSection.sections.join.login}</a>
+                        {/* eslint-disable-next-line no-nested-ternary */}
+                        <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="flex w-full px-4 py-3">{textContent.FooterSection.sections.join.downloads}</a>
                       </Disclosure.Panel>
                     </Transition>
 
@@ -254,12 +270,12 @@ export default function Footer({textContent, lang, hideNewsletter}) {
               <Disclosure as="div">
                 {({ open }) => (
                   <div>
-                    
-                    <Disclosure.Button className={`flex justify-between items-center w-full py-3 text-lg font-medium`}>
-                      <h3 className={`flex flex-row`}>
+
+                    <Disclosure.Button className="flex justify-between items-center w-full py-3 text-lg font-medium">
+                      <h3 className="flex flex-row">
                         {textContent.FooterSection.sections.follow.title}
                       </h3>
-                      <div className={`relative w-6 h-6`}>
+                      <div className="relative w-6 h-6">
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-180'}`} />
                         <MinusIcon className={`absolute top-0 left-0 w-6 h-6 text-neutral-50 transition duration-300 transform ${open ? '' : '-rotate-90'}`} />
                       </div>
@@ -272,19 +288,19 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                       leave="transition duration-0"
                     >
                       <Disclosure.Panel className="flex flex-col text-neutral-500 pb-2">
-                        <a href="https://twitter.com/Internxt" target="_blank" className={`flex w-full px-4 py-3`}>
+                        <a href="https://twitter.com/Internxt" target="_blank" className="flex w-full px-4 py-3" rel="noreferrer">
                           Twitter
                         </a>
-                        <a href="https://linkedin.com/company/internxt" target="_blank" className={`flex w-full px-4 py-3`}>
+                        <a href="https://linkedin.com/company/internxt" target="_blank" className="flex w-full px-4 py-3" rel="noreferrer">
                           LinkedIn
                         </a>
-                        <a href="https://instagram.com/internxt/" target="_blank" className={`flex w-full px-4 py-3`}>
+                        <a href="https://instagram.com/internxt/" target="_blank" className="flex w-full px-4 py-3" rel="noreferrer">
                           Instagram
                         </a>
-                        <a href="https://github.com/internxt" target="_blank" className={`flex w-full px-4 py-3`}>
+                        <a href="https://github.com/internxt" target="_blank" className="flex w-full px-4 py-3" rel="noreferrer">
                           Github
                         </a>
-                        <a href="https://blog.internxt.com/" target="_blank" className={`flex w-full px-4 py-3`}>
+                        <a href="https://blog.internxt.com/" target="_blank" className="flex w-full px-4 py-3" rel="noreferrer">
                           Blog
                         </a>
                       </Disclosure.Panel>
@@ -294,11 +310,10 @@ export default function Footer({textContent, lang, hideNewsletter}) {
                 )}
               </Disclosure>
             </div>
-            
 
             <div className="flex flex-col space-y-2 px-6 py-8 mt-8 bg-neutral-20">
-              <a href={`${(lang ? ('/' + lang) : '/')}`} className="flex flex-shrink-0">
-                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo"/>
+              <a href={`${(lang ? (`/${lang}`) : '/')}`} className="flex flex-shrink-0">
+                <img loading="lazy" src="../../logos/internxt/internxt.svg" alt="Internxt logo" />
               </a>
               <p className="text-sm text-neutral-100">
                 {textContent.FooterSection.copyright}
@@ -312,17 +327,22 @@ export default function Footer({textContent, lang, hideNewsletter}) {
 
       <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="500" className={`cookies ${styles.cookiesBlur} ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 left-0 sm:bottom-8 sm:left-8 z-50 p-4 sm:p-6 bg-neutral-10 sm:rounded-lg w-full sm:max-w-xs justify-between ring-1 ring-neutral-30 shadow-2xl`}>
         <div className="flex flex-row sm:flex-col items-center justify-between w-full space-x-4 sm:space-y-8 sm:space-x-0">
-          
+
           <div className="flex flex-col space-y-2">
             <p className="text-neutal-700 text-base font-semibold">
               {textContent.Cookies.title}
             </p>
             <a
-              href={`${router.pathname === '/legal' ? '' : ((lang ? (lang === 'en' ? '' : '/' + lang) : '') + '/legal')}`}
+              // eslint-disable-next-line no-nested-ternary
+              href={`${router.pathname === '/legal' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/legal`)}`}
               target="_blank"
               className="text-neutral-100 text-sm"
+              rel="noreferrer"
             >
-              <div className="flex flex-row items-center"><img loading="lazy" className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false"/>{textContent.Cookies.link}</div>
+              <div className="flex flex-row items-center">
+                <img loading="lazy" className="mt-0.5 mr-2" src="/icons/newTabNeutral40.svg" draggable="false" alt="new tab icon" />
+                {textContent.Cookies.link}
+              </div>
             </a>
             <div className="pt-2">
               <button
@@ -339,12 +359,14 @@ export default function Footer({textContent, lang, hideNewsletter}) {
       </div>
 
     </section>
-    
+
   );
-};
+}
 
 export async function getServerSideProps(ctx) {
+  // eslint-disable-next-line no-undef
   const downloadUrl = await getDriveDownloadUrl(ctx);
+  // eslint-disable-next-line no-undef
   const devicePlatform = await getPlatform(ctx);
 
   const lang = ctx.locale;
@@ -354,7 +376,10 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, downloadUrl, metatagsDescriptions, langJson, navbarLang, footerLang, devicePlatform, deviceLang,
+      lang,
+      downloadUrl,
+      devicePlatform,
+      deviceLang
     },
   };
 }

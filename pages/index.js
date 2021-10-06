@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 
 import HeroSection from '../components/home/HeroSection';
@@ -13,9 +12,13 @@ import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
 
 const Home = ({
-  lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
+  metatagsDescriptions,
+  langJson,
+  navbarLang,
+  footerLang,
+  downloadUrl,
+  deviceLang
 }) => {
-  const router = useRouter();
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   useEffect(() => {
@@ -23,18 +26,49 @@ const Home = ({
   }, []);
 
   return (
+
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
+
       <div className="heroSectionHome">
-        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
+
+        <Navbar
+          textContent={navbarLang}
+          lang={deviceLang}
+          cta={['default']}
+        />
+
+        <HeroSection
+          textContent={langJson.HeroSection}
+          download={downloadUrl}
+          lang={deviceLang}
+        />
+
       </div>
-      <FeaturesSection textContent={langJson["FeaturesSection"]} lang={deviceLang}/>
-      <InvestorsSection textContent={langJson["InvestorsSection"]}/>
+
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        lang={deviceLang}
+      />
+
+      <InvestorsSection
+        textContent={langJson.InvestorsSection}
+      />
+
       <div className="getStartedSection">
-        <GetStartedSection textContent={langJson["GetStartedSection"]} lang={deviceLang}/>
+        <GetStartedSection
+          textContent={langJson.GetStartedSection}
+          lang={deviceLang}
+        />
       </div>
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false}/>
+
+      <Footer
+        textContent={footerLang}
+        lang={deviceLang}
+        hideNewsletter={false}
+      />
+
     </Layout>
+
   );
 };
 

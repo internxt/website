@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Custom500() {
   return (
     <section>
@@ -6,5 +8,5 @@ export default function Custom500() {
         <p className="text-neutral-100 text-xl">Server-side error occurred</p>
       </div>
     </section>
-  )
+  );
 }

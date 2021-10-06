@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 
 import HeroSection2TB from '../components/lifetime/HeroSection2TB';
@@ -10,25 +10,45 @@ import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
 
 const Lifetime2TB = ({
-  lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
+  lang,
+  metatagsDescriptions,
+  langJson,
+  footerLang,
+  deviceLang
 }) => {
-  const [consentCookie, setConsentCookie] = useState(true);
-  const [stripeObject, setStripeObject] = useState({});
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   useEffect(() => {
     AOS.init();
-    const stripeObj = { product: 'lifetime2TB' };
-    setStripeObject(stripeObj);
   }, []);
 
   return (
+
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="drive">
-      <HeroSection2TB lang={lang} textContent={langJson["HeroSection"]} />
-      <FeatureSection lang={lang} textContent={langJson["FeatureSection"]} />
-      <GetLifetimeSection lang={lang} textContent={langJson["GetLifetimeSection"]} />
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={true}/>
+
+      <HeroSection2TB
+        lang={lang}
+        textContent={langJson.HeroSection}
+      />
+
+      <FeatureSection
+        lang={lang}
+        textContent={langJson.FeatureSection}
+      />
+
+      <GetLifetimeSection
+        lang={lang}
+        textContent={langJson.GetLifetimeSection}
+      />
+
+      <Footer
+        textContent={footerLang}
+        lang={deviceLang}
+        hideNewsletter
+      />
+
     </Layout>
+
   );
 };
 

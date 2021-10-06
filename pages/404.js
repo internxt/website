@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Custom404() {
   return (
     <section>
@@ -7,5 +9,5 @@ export default function Custom404() {
         <p className="text-blue-60 mt-4"><a href="/">Go back home</a></p>
       </div>
     </section>
-  )
+  );
 }

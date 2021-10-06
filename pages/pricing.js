@@ -1,19 +1,40 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
-const Pricing = (props) => {
-  const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+const Pricing = ({
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  lang
+}) => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   return (
+
     <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description}>
-      <Navbar textContent={props.navbarLang} lang={props.lang} cta={['default']} />
-      <PriceTable lang={props.lang} />
-      <Footer textContent={props.footerLang} lang={props.lang} hideNewsletter={false}/>
+
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['default']}
+      />
+
+      <PriceTable
+        lang={lang}
+      />
+
+      <Footer
+        textContent={footerLang}
+        lang={lang}
+        hideNewsletter={false}
+      />
+
     </Layout>
+
   );
 };
 
@@ -27,7 +48,10 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      metatagsDescriptions, footerLang, navbarLang, lang
+      metatagsDescriptions,
+      footerLang,
+      navbarLang,
+      lang
     },
   };
 }

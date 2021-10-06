@@ -7,17 +7,21 @@ import descriptionsEnglish from '../assets/lang/en/terms-and-conditions.json';
 import descriptionsSpanish from '../assets/lang/es/terms-and-conditions.json';
 import cookies from '../lib/cookies';
 
-const Legal = (props) => {
+const Legal = ({
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  deviceLang
+}) => {
   const router = useRouter();
   const { locale } = router;
 
-  const [consentCookie, setConsentCookie] = React.useState(true);
   const description = locale === 'en' ? descriptionsEnglish : descriptionsSpanish;
-  const metatags = props.metatagsDescriptions.filter((desc) => desc.id === 'photos');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
 
   return (
     <Layout segmentName="legal" title={metatags.title} description={metatags[0].description}>
-      <Navbar textContent={props.navbarLang} lang={props.deviceLang} cta={['default']}/>
+      <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
 
       <div className="flex flex-col items-center py-32 pt-44 px-6 md:px-0 mt-0 m-6 md:m-10 md:mt-0 lg:m-32 lg:mt-0 xl:mx-auto max-w-5xl">
         <div className="flex flex-col mb-16">
@@ -1227,7 +1231,7 @@ const Legal = (props) => {
       </div>
 
       <div className="bg-neutral-10">
-        <Footer textContent={props.footerLang} hideNewsletter={false}/>
+        <Footer textContent={footerLang} hideNewsletter={false} />
       </div>
     </Layout>
   );
@@ -1244,7 +1248,9 @@ export async function getServerSideProps(ctx) {
   cookies.setReferralCookie(ctx);
 
   return {
-    props: { metatagsDescriptions, navbarLang, deviceLang, footerLang },
+    props: {
+      metatagsDescriptions, navbarLang, deviceLang, footerLang
+    },
   };
 }
 
