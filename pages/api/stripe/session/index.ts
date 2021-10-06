@@ -20,6 +20,7 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
   const cancelUrl = `${req.headers.origin}/payment/cancel?sid={CHECKOUT_SESSION_ID}`;
 
   const params: Stripe.Checkout.SessionCreateParams = {
+    allow_promotion_codes: true,
     mode: PRODUCT.mode,
     payment_method_types: ['card'],
     success_url: successUrl,

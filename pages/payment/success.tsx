@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
-import Stripe from 'stripe';
 import Layout from '../../components/layout/Layout';
+import { getProductProperties } from '../api/stripe/stripeProducts';
 
 export default function Success(props) {
   useEffect(() => {
@@ -9,15 +9,13 @@ export default function Success(props) {
     }, 5000);
 
     if (props.email && props.token) {
-      /*
-        await stripe.prices.retrieve(
-          'plan_Gd68ayqEhY7ElV'
-        ).then(res => console.log(res));
-        // window.analytics.track('Order Completed');
-      */
-      window.analytics.track('Order Completed', {
-        // price: 299
-      }, () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const properties = getProductProperties(urlParams.get('product'));
+      const impact = sessionStorage.getItem('irclickid') ? 'impact' : null;
+      const other = 'organic';
+      const affiliate = [impact, other].find((o) => typeof o !== 'undefined' && o !== null);
+      properties.affiliate = affiliate;
+      window.analytics.track('Order Completed', properties, () => {
         setTimeout(() => {
           window.location = props.redirectUrl;
         }, 5000);
@@ -45,11 +43,7 @@ export default function Success(props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const host = (ctx.req.headers['host'].match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers['host'];
-  const stripe = new Stripe(
-    process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST,
-    { apiVersion: '2020-08-27' }
-  );
+  const host = (ctx.req.headers.host.match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers.host;
 
   if (!ctx.query.sid) {
     return {
@@ -61,7 +55,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     };
   }
 
-  const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`).then(res => {
+  const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`).then((res) => {
     if (res.status !== 200) {
       return null;
     }

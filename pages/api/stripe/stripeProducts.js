@@ -18,6 +18,14 @@ const STRIPE_PRODUCT = {
           lifetime_tier: 'lifetime'
         }
       },
+    },
+    properties: {
+      product: 'prod_ISkQSK3akiz4wR',
+      currency: 'EUR',
+      revenue: 299,
+      type: 'one_time',
+      price_id: 'price_1HrovfFAOdcgaBMQP33yyJdt',
+      quantity: 1,
     }
   },
   lifetime2TBLanding: {
@@ -39,6 +47,14 @@ const STRIPE_PRODUCT = {
           lifetime_tier: 'lifetime'
         }
       },
+    },
+    properties: {
+      currency: 'EUR',
+      product: 'prod_ISkQSK3akiz4wR',
+      revenue: 99,
+      type: 'one_time',
+      price_id: 'price_1Jed1uFAOdcgaBMQyU0Ebkuy',
+      quantity: 1,
     }
   },
   lifetime10TB: {
@@ -61,6 +77,14 @@ const STRIPE_PRODUCT = {
           lifetime_tier: 'exclusive-lifetime'
         }
       },
+    },
+    properties: {
+      currency: 'EUR',
+      product: 'prod_Iy3zE5F34DgOoS',
+      revenue: 499,
+      type: 'one_time',
+      price_id: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
+      quantity: 1,
     }
   },
   lifetime10TBLanding: {
@@ -83,6 +107,14 @@ const STRIPE_PRODUCT = {
           lifetime_tier: 'exclusive-lifetime'
         }
       },
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 299,
+      type: 'one_time',
+      product: 'prod_Iy3zE5F34DgOoS',
+      price_id: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
+      quantity: 1,
     }
   },
   infiniteLifetime: {
@@ -105,6 +137,14 @@ const STRIPE_PRODUCT = {
           lifetime_tier: 'infinite'
         }
       },
+    },
+    properties: {
+      currency: 'EUR',
+      product: 'prod_JaJ08LPLqf9nu0',
+      revenue: 999,
+      type: 'one_time',
+      price_id: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
+      quantity: 1,
     }
   },
   GB2012: {
@@ -117,6 +157,14 @@ const STRIPE_PRODUCT = {
           quantity: 1,
         }
       ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 10.68,
+      type: 'recurrent',
+      price_id: 'plan_Frb29JIJYJ4e8G',
+      quantity: 1,
+      product: 'prod_Frb0EaIua4Dpdt',
     }
   },
   GB20012: {
@@ -129,6 +177,14 @@ const STRIPE_PRODUCT = {
           quantity: 1,
         }
       ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 41.68,
+      type: 'recurrent',
+      price_id: 'plan_F2FebxiAYyZC7m',
+      quantity: 1,
+      product: 'prod_EUaOAFtvLBFJmC',
     }
   },
   TB212: {
@@ -142,6 +198,14 @@ const STRIPE_PRODUCT = {
           quantity: 1,
         }
       ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 107.88,
+      type: 'recurrent',
+      price_id: 'plan_FkTXxEg3GZW0pg',
+      quantity: 1,
+      product: 'prod_EUaUAiDCK1Etz1',
     }
   },
   GB201: {
@@ -155,6 +219,14 @@ const STRIPE_PRODUCT = {
           quantity: 1,
         }
       ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 0.99,
+      type: 'recurrent',
+      price_id: 'plan_Frb0qIcAlz2lDm',
+      quantity: 1,
+      product: 'prod_Frb0EaIua4Dpdt'
     }
   },
   GB2001: {
@@ -168,6 +240,14 @@ const STRIPE_PRODUCT = {
           quantity: 1,
         }
       ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 4.49,
+      type: 'recurrent',
+      price_id: 'plan_EUaU5KuX0bbmMZ',
+      quantity: 1,
+      product: 'prod_EUaOAFtvLBFJmC',
     }
   },
   TB21: {
@@ -183,6 +263,14 @@ const STRIPE_PRODUCT = {
       ]
     }
   },
+  properties: {
+    currency: 'EUR',
+    revenue: 9.99,
+    type: 'recurrent',
+    price_id: 'plan_F7ptyrVRmyL8Gn',
+    quantity: 1,
+    product: 'prod_EUaUAiDCK1Etz1',
+  }
 };
 
 function getStripeProduct(product) {
@@ -191,4 +279,8 @@ function getStripeProduct(product) {
   return selectedProduct;
 }
 
-module.exports = { getStripeProduct };
+function getProductProperties(product) {
+  return STRIPE_PRODUCT[product].properties;
+}
+
+module.exports = { getStripeProduct, getProductProperties };
