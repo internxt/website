@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 
 import HeroSection from '../components/token/HeroSection';
@@ -10,10 +9,12 @@ import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
 
 const Token = ({
-  lang, metatagsDescriptions, langJson, navbarLang, footerLang, downloadUrl, deviceLang
+  metatagsDescriptions,
+  langJson,
+  navbarLang,
+  footerLang,
+  deviceLang
 }) => {
-  const router = useRouter();
-  const [consentCookie, setConsentCookie] = useState(true);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'token');
 
   useEffect(() => {
@@ -21,15 +22,33 @@ const Token = ({
   }, []);
 
   return (
+
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="token">
+
       <div>
-        <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
-        <HeroSection textContent={langJson["HeroSection"]} download={downloadUrl} lang={deviceLang}/>
+
+        <Navbar
+          textContent={navbarLang}
+          lang={deviceLang}
+          cta={['default']}
+        />
+
+        <HeroSection
+          textContent={langJson.HeroSection}
+        />
+
       </div>
+
       <div className="bg-neutral-10">
-        <Footer textContent={footerLang} lang={deviceLang} hideNewsletter={false}/>
+        <Footer
+          textContent={footerLang}
+          lang={deviceLang}
+          hideNewsletter={false}
+        />
       </div>
+
     </Layout>
+
   );
 };
 
