@@ -64,14 +64,23 @@ const PriceTable = ({
       }
     },
     lifetime: {
-      TB2: {
-        stripeID: 'lifetime2TB',
-        storage: '2TB',
+      TB1: {
+        stripeID: 'lifetime1TB',
+        storage: '1TB',
+        price: {
+          '-1': '99'
+        },
+        priceBefore: '299',
+        popular: false
+      },
+      TB5: {
+        stripeID: 'lifetime5TB',
+        storage: '5TB',
         price: {
           '-1': '299'
         },
         priceBefore: '499',
-        popular: false
+        popular: true
       },
       TB10: {
         stripeID: 'lifetime10TB',
@@ -79,16 +88,7 @@ const PriceTable = ({
         price: {
           '-1': '499'
         },
-        priceBefore: '2500',
-        popular: true
-      },
-      Infinite: {
-        stripeID: 'infiniteLifetime',
-        storage: 'Infinite Storage',
-        price: {
-          '-1': '999'
-        },
-        priceBefore: '9999',
+        priceBefore: '999',
         popular: false
       }
     },
@@ -156,9 +156,9 @@ const PriceTable = ({
             <PriceCard planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('TB2')]} popular={pricings.individuals.TB2.popular} lang={lang} />
           </div>
           <div className={`${billingFrequency === -1 ? 'flex' : 'hidden'} content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
-            <PriceCard planType="individual" storage={pricings.lifetime.TB2.storage} price={billingPrice(pricings.lifetime.TB2.price)} priceBefore={pricings.lifetime.TB2.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.TB2.stripeID}`]} popular={pricings.lifetime.TB2.popular} lang={lang} />
+            <PriceCard planType="individual" storage={pricings.lifetime.TB1.storage} price={billingPrice(pricings.lifetime.TB1.price)} priceBefore={pricings.lifetime.TB1.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.TB1.stripeID}`]} popular={pricings.lifetime.TB1.popular} lang={lang} />
+            <PriceCard planType="individual" storage={pricings.lifetime.TB5.storage} price={billingPrice(pricings.lifetime.TB5.price)} priceBefore={pricings.lifetime.TB5.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.TB5.stripeID}`]} popular={pricings.lifetime.TB5.popular} lang={lang} />
             <PriceCard planType="individual" storage={pricings.lifetime.TB10.storage} price={billingPrice(pricings.lifetime.TB10.price)} priceBefore={pricings.lifetime.TB10.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.TB10.stripeID}`]} popular={pricings.lifetime.TB10.popular} lang={lang} />
-            <PriceCard planType="individual" storage={pricings.lifetime.Infinite.storage} price={billingPrice(pricings.lifetime.Infinite.price)} priceBefore={pricings.lifetime.Infinite.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.Infinite.stripeID}`]} popular={pricings.lifetime.Infinite.popular} lang={lang} />
           </div>
         </Transition>
 
