@@ -28,6 +28,16 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/lifetime-2tb',
+        destination: '/lifetime',
+        permanent: false,
+      },
+      {
+        source: '/lifetime-10tb',
+        destination: '/lifetime',
+        permanent: false,
+      },
+      {
         source: '/es/exclusive-lifetime',
         destination: '/es/lifetime',
         permanent: false,
