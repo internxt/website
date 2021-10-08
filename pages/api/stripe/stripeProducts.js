@@ -1,5 +1,34 @@
 const STRIPE_PRODUCT = {
-  lifetime2TB: {
+  lifetime1TB: {
+    production: 'price_1JiFXDFAOdcgaBMQWwxbraL4',
+    debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
+    mode: 'payment',
+    session: {
+      line_items: [
+        {
+          quantity: 1
+        }
+      ],
+      metadata: {
+        member_tier: 'lifetime'
+      },
+      payment_intent_data: {
+        metadata: {
+          member_tier: 'lifetime',
+          lifetime_tier: 'lifetime'
+        }
+      },
+    },
+    properties: {
+      product: 'prod_KMzWb5ycXjMzIE',
+      currency: 'EUR',
+      revenue: 99,
+      type: 'one_time',
+      price_id: 'price_1JiFXDFAOdcgaBMQWwxbraL4',
+      quantity: 1,
+    }
+  },
+  lifetime5TB: {
     production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
     debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
     mode: 'payment',
@@ -25,35 +54,6 @@ const STRIPE_PRODUCT = {
       revenue: 299,
       type: 'one_time',
       price_id: 'price_1HrovfFAOdcgaBMQP33yyJdt',
-      quantity: 1,
-    }
-  },
-  lifetime2TBLanding: {
-    production: 'price_1Jed1uFAOdcgaBMQyU0Ebkuy',
-    debug: 'price_1Jed7vFAOdcgaBMQdqghGT0w',
-    mode: 'payment',
-    session: {
-      line_items: [
-        {
-          quantity: 1
-        }
-      ],
-      metadata: {
-        member_tier: 'lifetime'
-      },
-      payment_intent_data: {
-        metadata: {
-          member_tier: 'lifetime',
-          lifetime_tier: 'lifetime'
-        }
-      },
-    },
-    properties: {
-      currency: 'EUR',
-      product: 'prod_ISkQSK3akiz4wR',
-      revenue: 99,
-      type: 'one_time',
-      price_id: 'price_1Jed1uFAOdcgaBMQyU0Ebkuy',
       quantity: 1,
     }
   },
@@ -84,66 +84,6 @@ const STRIPE_PRODUCT = {
       revenue: 499,
       type: 'one_time',
       price_id: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
-      quantity: 1,
-    }
-  },
-  lifetime10TBLanding: {
-    production: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
-    debug: 'price_1Jed8vFAOdcgaBMQC8sdLZdd',
-    mode: 'payment',
-    session: {
-      line_items: [
-        {
-          price: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
-          quantity: 1
-        }
-      ],
-      metadata: {
-        member_tier: 'lifetime'
-      },
-      payment_intent_data: {
-        metadata: {
-          member_tier: 'lifetime',
-          lifetime_tier: 'exclusive-lifetime'
-        }
-      },
-    },
-    properties: {
-      currency: 'EUR',
-      revenue: 299,
-      type: 'one_time',
-      product: 'prod_Iy3zE5F34DgOoS',
-      price_id: 'price_1JecyEFAOdcgaBMQEMnWOjn5',
-      quantity: 1,
-    }
-  },
-  infiniteLifetime: {
-    production: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
-    debug: 'price_1JZYmRFAOdcgaBMQfADnPmSf',
-    mode: 'payment',
-    session: {
-      line_items: [
-        {
-          price: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
-          quantity: 1
-        }
-      ],
-      metadata: {
-        member_tier: 'lifetime'
-      },
-      payment_intent_data: {
-        metadata: {
-          member_tier: 'lifetime',
-          lifetime_tier: 'infinite'
-        }
-      },
-    },
-    properties: {
-      currency: 'EUR',
-      product: 'prod_JaJ08LPLqf9nu0',
-      revenue: 999,
-      type: 'one_time',
-      price_id: 'price_1Ix8QoFAOdcgaBMQ42h0k22u',
       quantity: 1,
     }
   },
