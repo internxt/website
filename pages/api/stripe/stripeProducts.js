@@ -15,7 +15,7 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime'
+          lifetime_tier: 'lifetime_1tb'
         }
       },
     },
@@ -44,7 +44,7 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime'
+          lifetime_tier: 'lifetime_5tb'
         }
       },
     },
@@ -74,7 +74,7 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'exclusive-lifetime'
+          lifetime_tier: 'lifetime_10tb'
         }
       },
     },
