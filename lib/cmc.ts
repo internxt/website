@@ -17,7 +17,9 @@ export default async function getInxtValues() {
     const inxtToBTC = await getInxtConversion('BTC');
     const inxtToETH = await getInxtConversion('ETH');
     const inxtToLTC = await getInxtConversion('LTC');
-    const data = { inxtToEUR, inxtToBTC, inxtToETH, inxtToLTC, cache: false };
+    const data = {
+      inxtToEUR, inxtToBTC, inxtToETH, inxtToLTC, cache: false
+    };
     cache.put('cmc', data, 5 * 60 * 1000 * 4);
   } else {
     cachedData.cache = true;

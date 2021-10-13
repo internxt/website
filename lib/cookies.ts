@@ -1,54 +1,53 @@
-import { GetServerSidePropsContext } from "next";
+import { GetServerSidePropsContext } from 'next';
 
-const Cookies = require('cookies')
-const moment = require('moment')
-const url = require('url')
-const queryString = require('querystring')
+const Cookies = require('cookies');
+const moment = require('moment');
+const url = require('url');
+const queryString = require('querystring');
 
 function parseUri(ctx: GetServerSidePropsContext) {
-    const query = url.parse(ctx.req.url).query;
-    const parsedQuery = queryString.parse(query);
-    return parsedQuery;
+  const { query } = url.parse(ctx.req.url);
+  const parsedQuery = queryString.parse(query);
+  return parsedQuery;
 }
 
 function setReferralCookie(ctx: GetServerSidePropsContext): void {
+  const parsedUri = parseUri(ctx);
 
-    const parsedUri = parseUri(ctx);
+  if (!parsedUri.ref) {
+    return;
+  }
 
-    if (!parsedUri.ref) {
-        return;
-    }
+  const referralId = parsedUri.ref;
 
-    const referral_id = parsedUri.ref;
+  const expires = moment().add(2, 'days').toDate();
+  const cookies = new Cookies(ctx.req, ctx.res);
 
-    const expires = moment().add(2, 'days').toDate()
-    const cookies = new Cookies(ctx.req, ctx.res);
+  cookies.set('REFERRAL', referralId, {
+    domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
+    expires,
+    overwrite: true,
+    httpOnly: false
+  });
 
-    cookies.set('REFERRAL', referral_id, {
-        domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
-        expires: expires,
-        overwrite: true,
-        httpOnly: false
-    });
-
-    // httpOnly must be false in order to be accesible by JavaScript
+  // httpOnly must be false in order to be accesible by JavaScript
 }
 
 function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: string): void {
-    const cookies = new Cookies(ctx.req, ctx.res);
+  const cookies = new Cookies(ctx.req, ctx.res);
 
-    const expires = moment().add(2, 'days').toDate()
+  const expires = moment().add(2, 'days').toDate();
 
-    cookies.set(name, value, {
-        domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
-        expires: expires,
-        overwrite: true,
-        httpOnly: false
-    });
+  cookies.set(name, value, {
+    domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
+    expires,
+    overwrite: true,
+    httpOnly: false
+  });
 }
 
 export default {
-    parseUri,
-    setReferralCookie,
-    setPublicCookie
-}
+  parseUri,
+  setReferralCookie,
+  setPublicCookie
+};
