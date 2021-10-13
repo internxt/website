@@ -9,14 +9,23 @@ const PriceTable = ({
   const billingPrice = (price) => price[billingFrequency];
 
   const pricings = {
-    TB2: {
-      stripeID: 'lifetime2TB',
-      storage: '2TB',
+    TB1: {
+      stripeID: 'lifetime1TB',
+      storage: '1TB',
+      price: {
+        '-1': '99'
+      },
+      priceBefore: '299',
+      popular: false
+    },
+    TB5: {
+      stripeID: 'lifetime5TB',
+      storage: '5TB',
       price: {
         '-1': '299'
       },
       priceBefore: '499',
-      popular: false
+      popular: true
     },
     TB10: {
       stripeID: 'lifetime10TB',
@@ -24,18 +33,9 @@ const PriceTable = ({
       price: {
         '-1': '499'
       },
-      priceBefore: '2500',
-      popular: true
-    },
-    Infinite: {
-      stripeID: 'infiniteLifetime',
-      storage: 'Infinite Storage',
-      price: {
-        '-1': '999'
-      },
-      priceBefore: '9999',
+      priceBefore: '999',
       popular: false
-    }
+    },
   };
 
   return (
@@ -45,15 +45,25 @@ const PriceTable = ({
       <div className="flex flex-col items-center">
 
         <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end px-6">
+          <PriceCard
+            planType="individual"
+            storage={pricings.TB1.storage}
+            price={billingPrice(pricings.TB1.price)}
+            priceBefore={pricings.TB1.priceBefore}
+            billingFrequency={billingFrequency}
+            cta={['checkout', `${pricings.TB1.stripeID}`]}
+            popular={pricings.TB1.popular}
+            lang={lang}
+          />
 
           <PriceCard
             planType="individual"
-            storage={pricings.TB2.storage}
-            price={billingPrice(pricings.TB2.price)}
-            priceBefore={pricings.TB2.priceBefore}
+            storage={pricings.TB5.storage}
+            price={billingPrice(pricings.TB5.price)}
+            priceBefore={pricings.TB5.priceBefore}
             billingFrequency={billingFrequency}
-            cta={['checkout', `${pricings.TB2.stripeID}`]}
-            popular={pricings.TB2.popular}
+            cta={['checkout', `${pricings.TB5.stripeID}`]}
+            popular={pricings.TB5.popular}
             lang={lang}
           />
 
@@ -67,18 +77,6 @@ const PriceTable = ({
             popular={pricings.TB10.popular}
             lang={lang}
           />
-
-          <PriceCard
-            planType="individual"
-            storage={pricings.Infinite.storage}
-            price={billingPrice(pricings.Infinite.price)}
-            priceBefore={pricings.Infinite.priceBefore}
-            billingFrequency={billingFrequency}
-            cta={['checkout', `${pricings.Infinite.stripeID}`]}
-            popular={pricings.Infinite.popular}
-            lang={lang}
-          />
-
         </div>
 
       </div>
