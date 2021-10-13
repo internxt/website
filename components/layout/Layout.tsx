@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 interface LayoutProps {
   children: React.ReactNode
   title: string
@@ -26,6 +26,20 @@ export default function Layout({
   isProduction = process.env.NODE_ENV === 'production'
 }: LayoutProps) {
 
+  const page = useRef<string>();
+  const [segmentScript, setSegmentScript] = useState<string>('');
+
+  useEffect(() => {
+    if (segmentName !== page.current) {
+      page.current = segmentName;
+      console.log('page')
+      setSegmentScript(`console.log(\'PAGE ${segmentName}\'); analytics.page(\'${segmentName}\')`);
+    } else {
+      console.log('no page')
+      setSegmentScript('');
+    }
+  }, [segmentName]);
+
   useEffect(() => {
     AOS.init()
   }, []);
@@ -48,7 +62,7 @@ export default function Layout({
         <meta name="description" content={description}></meta>
         <link rel="icon" href="/favicon.ico" />
         {isProduction ? <script src="https://internxt.com/js/sg.js"></script> : <script src="/js/segment.js"></script>}
-        <script dangerouslySetInnerHTML={{ __html: `console.log(\'PAGE ${segmentName}\'); analytics.page(\'${segmentName}\')` }} />
+        <script dangerouslySetInnerHTML={{ __html: segmentScript }} />
         {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
         {!disableDrift && <script src="/js/drift.js"></script>}
         <script dangerouslySetInnerHTML={{
