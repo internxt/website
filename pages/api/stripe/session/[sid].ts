@@ -6,11 +6,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const sessionId = <string>req.query.sid;
     const isTest = !!sessionId.match(/^cs_test_/);
 
+    console.log('Stripe session ID: %s', sessionId);
+
     const KEY = !isTest ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST
     const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
     try {
         const session = await stripe.checkout.sessions.retrieve(sessionId).catch(() => null);
+        console.log('Stripe session ID: %s, result: %s', session);
         if (session && session.payment_status === 'paid') {
             // const customer = await stripe.customers.retrieve(<string>session.customer);
 

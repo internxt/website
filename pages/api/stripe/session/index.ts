@@ -1,12 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
-import fs from 'fs';
 import { getStripeProduct } from '../stripeProducts';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    fs.appendFileSync('logs.txt', new Date() + '\t' + req.body.email + '\n')
-  } catch { }
+  console.log('Stripe new session request: %s', JSON.stringify(req.body));
   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
   const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
