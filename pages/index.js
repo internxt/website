@@ -27,7 +27,7 @@ const Home = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="home">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Homepage">
 
       <div className="heroSectionHome">
 
