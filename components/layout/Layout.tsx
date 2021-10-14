@@ -37,12 +37,6 @@ export default function Layout({
     AOS.init()
   }, []);
 
-  // document.onreadystatechange = function () {
-  //   if (document.readyState == "interactive") {
-  //     console.log(window && window.location.search);
-  //   }
-  // }
-
   return (
     <>
       <Head>
