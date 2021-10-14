@@ -15,7 +15,7 @@ const Pricing = ({
 
   return (
 
-    <Layout segmentName="pricing" title={metatags[0].title} description={metatags[0].description}>
+    <Layout segmentName="Pricing Individuals Annually" title={metatags[0].title} description={metatags[0].description}>
 
       <Navbar
         textContent={navbarLang}

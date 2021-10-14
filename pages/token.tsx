@@ -23,7 +23,7 @@ const Token = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="token">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Token">
 
       <div>
 
