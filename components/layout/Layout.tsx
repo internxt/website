@@ -30,14 +30,7 @@ export default function Layout({
   const [segmentScript, setSegmentScript] = useState<string>('');
 
   useEffect(() => {
-    if (segmentName !== page.current) {
-      page.current = segmentName;
-      console.log('page')
-      setSegmentScript(`console.log(\'PAGE ${segmentName}\'); analytics.page(\'${segmentName}\')`);
-    } else {
-      console.log('no page')
-      setSegmentScript('');
-    }
+    setSegmentScript(`analytics.page(\'${segmentName}\')`);
   }, [segmentName]);
 
   useEffect(() => {
@@ -61,7 +54,7 @@ export default function Layout({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description}></meta>
         <link rel="icon" href="/favicon.ico" />
-        {isProduction ? <script src="https://internxt.com/js/sg.js"></script> : <script src="/js/segment.js"></script>}
+        {isProduction ? <script src="/js/analyticsSnippet.js"></script> : <script src="/js/segment.js"></script>}
         <script dangerouslySetInnerHTML={{ __html: segmentScript }} />
         {!disableMailerlite && <script src="/js/mailerlite.js"></script>}
         {!disableDrift && <script src="/js/drift.js"></script>}
