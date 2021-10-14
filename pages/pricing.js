@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import PriceTable from '../components/prices/PriceTable';
@@ -13,9 +13,11 @@ const Pricing = ({
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
+  const [pageName, setPageName] = useState('Pricing Individuals Annually');
+
   return (
 
-    <Layout segmentName="Pricing Individuals Annually" title={metatags[0].title} description={metatags[0].description}>
+    <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description}>
 
       <Navbar
         textContent={navbarLang}
@@ -24,6 +26,7 @@ const Pricing = ({
       />
 
       <PriceTable
+        setSegmentPageName={setPageName}
         lang={lang}
       />
 
