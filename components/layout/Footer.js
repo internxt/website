@@ -69,6 +69,19 @@ export default function Footer({ textContent, lang, hideNewsletter }) {
 
         </div>
 
+        <div className={`${lang === 'es' ? 'flex' : 'hidden'} flex-col space-y-6 sm:space-x-20 py-12 mb-8 justify-center mx-6 md:mx-10 lg:mx-32 bg-neutral-10 rounded-2xl`}>
+          <div className="flex flex-col max-w-2xl px-6 mx-auto">
+            <div className="flex flex-row justify-center items-center flex-wrap mb-8">
+              <img loading="lazy" className="h-12 mx-4" src="../../logos/investors/camara_espana.webp" alt="Cámara de España" draggable="false" />
+              <img loading="lazy" className="h-12 mx-4" src="../../logos/investors/camara_valencia.webp" alt="Cámara de Valencia" draggable="false" />
+              <img loading="lazy" className="h-16 mx-4" src="../../logos/investors/ciberseguridad.webp" alt="Ciberseguridad Cámara España" draggable="false" />
+              <img loading="lazy" className="h-16 mx-4" src="../../logos/investors/ue.webp" alt="Unión Europea" draggable="false" />
+            </div>
+
+            <h3 className="text-center text-base md:text-sm text-neutral-500">Internxt ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha podido trabajar en aumentar la seguridad de la infraestructura para la mejora de competitividad y productividad de la empresa. 21.09.2021. Para ello ha contado con el apoyo del del programa Ciberseguridad 2021 de la Cámara de Comercio de Valencia.</h3>
+          </div>
+        </div>
+
         <footer className="border-0 md:border-t md:border-neutral-20">
 
           <div className="hidden md:flex md:flex-col lg:flex-row sm:p-10 py-14 md:space-y-14 lg:space-y-0 lg:space-x-20 justify-between mx-0 md:mx-6">
