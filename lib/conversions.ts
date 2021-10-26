@@ -19,17 +19,7 @@ export default async function setUTM() {
       }
     }
   }
-  // decorates the URL with query params
-  function decorateUrl(urlToDecorate) {
-    urlToDecorate = (urlToDecorate.indexOf('?') === -1) ? `${urlToDecorate}?` : `${urlToDecorate}&`;
-    const collectedQueryParams = [];
-    for (let queryIndex = 0; queryIndex < queryParams.length; queryIndex++) {
-      if (getQueryParam(queryParams[queryIndex])) {
-        collectedQueryParams.push(`${queryParams[queryIndex]}=${getQueryParam(queryParams[queryIndex])}`);
-      }
-    }
-    return urlToDecorate + collectedQueryParams.join('&');
-  }
+  
   // a function that retrieves the value of a query parameter
   function getQueryParam(name) {
     const key = name;
@@ -50,5 +40,17 @@ export default async function setUTM() {
       // console.log("Found '" + key + "' in local sotrage with value '" + search[1] + "'")
       return storage;
     }
+  }
+
+  // decorates the URL with query params
+  function decorateUrl(urlToDecorate) {
+    urlToDecorate = (urlToDecorate.indexOf('?') === -1) ? `${urlToDecorate}?` : `${urlToDecorate}&`;
+    const collectedQueryParams = [];
+    for (let queryIndex = 0; queryIndex < queryParams.length; queryIndex++) {
+      if (getQueryParam(queryParams[queryIndex])) {
+        collectedQueryParams.push(`${queryParams[queryIndex]}=${getQueryParam(queryParams[queryIndex])}`);
+      }
+    }
+    return urlToDecorate + collectedQueryParams.join('&');
   }
 }
