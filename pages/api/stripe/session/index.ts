@@ -12,9 +12,10 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
   }
 
   const PRODUCT = getStripeProduct(req.body.product);
+  const CANCEL_URL = req.body.cancelUrl;
 
   const successUrl = `${req.headers.origin}/payment/success?product=${req.body.product}&sid={CHECKOUT_SESSION_ID}`;
-  const cancelUrl = `${req.headers.origin}/payment/cancel?sid={CHECKOUT_SESSION_ID}`;
+  const cancelUrl = `${req.headers.origin}/payment/cancel?sid={CHECKOUT_SESSION_ID}&cancelUrl=${CANCEL_URL}`;
 
   const params: Stripe.Checkout.SessionCreateParams = {
     allow_promotion_codes: true,
