@@ -3,12 +3,16 @@ import { GetServerSideProps } from 'next';
 import Layout from '../../components/layout/Layout';
 import { getProductProperties } from '../api/stripe/stripeProducts';
 
-export default function Success(props) {
+export default function Success({
+  email,
+  token,
+  redirectUrl
+}) {
   useEffect(() => {
     setTimeout(() => {
     }, 5000);
 
-    if (props.email && props.token) {
+    if (email && token) {
       const urlParams = new URLSearchParams(window.location.search);
       const properties = getProductProperties(urlParams.get('product'));
       const impact = sessionStorage.getItem('irclickid') ? 'impact' : null;
@@ -17,13 +21,13 @@ export default function Success(props) {
       properties.affiliate = affiliate;
       window.analytics.track('Order Completed', properties, () => {
         setTimeout(() => {
-          window.location = props.redirectUrl;
+          window.location = redirectUrl;
         }, 5000);
       });
     } else {
-      window.location = props.redirectUrl;
+      window.location = redirectUrl;
     }
-  }, []);
+  });
   return (
     <Layout
       segmentName="Order Completed"
@@ -35,7 +39,7 @@ export default function Success(props) {
       <div>
         Redirecting to
         {' '}
-        <a href={props.redirectUrl}>Drive Web</a>
+        <a href={redirectUrl}>Drive Web</a>
         ...
       </div>
     </Layout>
