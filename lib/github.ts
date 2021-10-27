@@ -1,18 +1,19 @@
-import cache from 'memory-cache'
+/* eslint-disable import/prefer-default-export */
+import cache from 'memory-cache';
+
 interface AssetInfo {
   browser_download_url: string
 }
 
 interface LatestReleaseInfo {
-  id: number
-  name: string
-  published_at: Date
+  id: number,
+  name: string,
+  published_at: Date,
   assets: AssetInfo[]
 }
 
 export async function getLatestReleaseInfo(user: string, repo: string) {
-
-  const cachedData = cache.get(user + '/' + repo);
+  const cachedData = cache.get(`${user}/${repo}`);
 
   if (cachedData) {
     cachedData.cached = true;
@@ -32,9 +33,8 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
   let linux = null;
   let macos = null;
 
-  info.assets.forEach(asset => {
-
-    const match = asset.browser_download_url.match(/\.(\w+)$/)
+  info.assets.forEach((asset) => {
+    const match = asset.browser_download_url.match(/\.(\w+)$/);
 
     switch (match[1]) {
       case 'exe':
@@ -46,9 +46,10 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
       case 'deb':
         linux = asset.browser_download_url;
         break;
-
+      default:
+        break;
     }
-  })
+  });
 
   const newCachedData = {
     version: info.name,
@@ -56,9 +57,9 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
       windows, linux, macos
     },
     cached: false
-  }
+  };
 
-  cache.put(user + '/' + repo, newCachedData, 1000 *  60 * 5); // 5 minutes
+  cache.put(`${user}/${repo}`, newCachedData, 1000 * 60 * 5); // 5 minutes
 
   return newCachedData;
 }
