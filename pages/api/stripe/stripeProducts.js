@@ -115,35 +115,6 @@ const STRIPE_PRODUCT = {
       quantity: 1,
     }
   },
-  lifetime1TB: {
-    production: 'price_1JiFXDFAOdcgaBMQWwxbraL4',
-    debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
-    mode: 'payment',
-    session: {
-      line_items: [
-        {
-          quantity: 1
-        }
-      ],
-      metadata: {
-        member_tier: 'lifetime'
-      },
-      payment_intent_data: {
-        metadata: {
-          member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_1tb'
-        }
-      },
-    },
-    properties: {
-      product: 'prod_KMzWb5ycXjMzIE',
-      currency: 'EUR',
-      revenue: 99,
-      type: 'one_time',
-      price_id: 'price_1JiFXDFAOdcgaBMQWwxbraL4',
-      quantity: 1,
-    }
-  },
   lifetime5TB: {
     production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
     debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
