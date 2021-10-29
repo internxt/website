@@ -16,6 +16,19 @@ module.exports = {
       transparentw: 'rgba(255,255,255,0)',
       current: 'currentColor',
       black: '#000000',
+      'cool-gray': {
+        5: '#F9FAFC',
+        10: '#F2F4F8',
+        20: '#DDE1E6',
+        30: '#C1C7CD',
+        40: '#A2A9B0',
+        50: '#878D96',
+        60: '#697077',
+        70: '#4D5358',
+        80: '#343A3F',
+        90: '#21272A',
+        100: '#121619'
+      },
       gray: {
         10: '#f4f4f4',
         20: '#e0e0e0',
@@ -261,6 +274,7 @@ module.exports = {
     borderWidth: {
       DEFAULT: '1px',
       0: '0px',
+      px: '1px',
       2: '2px',
       4: '4px',
       8: '8px'
@@ -744,6 +758,7 @@ module.exports = {
       'top-left': 'top left'
     },
     transitionDelay: {
+      50: '50ms',
       75: '75ms',
       100: '100ms',
       150: '150ms',

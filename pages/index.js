@@ -29,21 +29,17 @@ const Home = ({
 
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home">
 
-      <div className="heroSectionHome">
+      <Navbar
+        textContent={navbarLang}
+        lang={deviceLang}
+        cta={['default']}
+      />
 
-        <Navbar
-          textContent={navbarLang}
-          lang={deviceLang}
-          cta={['default']}
-        />
-
-        <HeroSection
-          textContent={langJson.HeroSection}
-          download={downloadUrl}
-          lang={deviceLang}
-        />
-
-      </div>
+      <HeroSection
+        textContent={langJson.HeroSection}
+        download={downloadUrl}
+        lang={deviceLang}
+      />
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
