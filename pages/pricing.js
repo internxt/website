@@ -23,6 +23,7 @@ const Pricing = ({
         textContent={navbarLang}
         lang={lang}
         cta={['default']}
+        fixed
       />
 
       <PriceTable

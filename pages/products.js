@@ -35,6 +35,7 @@ const Products = ({
           textContent={navbarLang}
           lang={deviceLang}
           cta={['default']}
+          fixed
         />
 
         <HeroSection

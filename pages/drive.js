@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
+import React from 'react';
 
-import HeroSection from '../components/home/HeroSection';
-import GetStartedSection from '../components/home/GetStartedSection';
-import InvestorsSection from '../components/home/InvestorsSection';
-import FeaturesSection from '../components/home/FeaturesSection';
+import HeroSection from '../components/drive/HeroSection';
+import FeaturesSection from '../components/drive/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
@@ -21,13 +18,9 @@ const Home = ({
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive">
 
       <Navbar
         textContent={navbarLang}
@@ -44,25 +37,17 @@ const Home = ({
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
+        download={downloadUrl}
         lang={deviceLang}
       />
 
-      <InvestorsSection
-        textContent={langJson.InvestorsSection}
-      />
-
-      <div className="getStartedSection">
-        <GetStartedSection
-          textContent={langJson.GetStartedSection}
-          lang={deviceLang}
-        />
-      </div>
-
-      <Footer
+      {/*
+        <Footer
         textContent={footerLang}
         lang={deviceLang}
         hideNewsletter={false}
       />
+      */}
 
     </Layout>
 
