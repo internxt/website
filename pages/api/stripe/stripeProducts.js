@@ -16,9 +16,11 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          name: 'drive_2tb_halloween2021_lifetime',
           maxSpaceBytes: bytes('2tb'),
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_2tb'
+          lifetime_tier: 'lifetime_2tb',
+          planType: 'one_time'
         }
       },
     },
@@ -46,9 +48,11 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          name: 'drive_10tb_halloween2021_lifetime',
           maxSpaceBytes: bytes('10tb'),
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_10tb'
+          lifetime_tier: 'lifetime_10tb',
+          planType: 'one_time'
         }
       },
     },
@@ -78,7 +82,9 @@ const STRIPE_PRODUCT = {
         metadata: {
           maxspaceBytes: bytes('20tb'),
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_20tb'
+          lifetime_tier: 'lifetime_20tb',
+          name: 'drive_20tb_halloween2021_lifetime',
+          planType: 'one_time'
         }
       },
     },
@@ -109,6 +115,8 @@ const STRIPE_PRODUCT = {
           member_tier: 'lifetime',
           lifetime_tier: 'lifetime_1tb',
           maxSpaceBytes: bytes('10tb'),
+          name: 'drive_1tb_lifetime',
+          planType: 'one_time'
         }
       },
     },
@@ -139,6 +147,8 @@ const STRIPE_PRODUCT = {
           member_tier: 'lifetime',
           lifetime_tier: 'lifetime_5tb',
           maxSpaceBytes: bytes('5tb'),
+          name: 'drive_5tb_lifetime',
+          planType: 'one:time'
         }
       },
     },
@@ -170,6 +180,8 @@ const STRIPE_PRODUCT = {
           member_tier: 'lifetime',
           lifetime_tier: 'lifetime_10tb',
           maxSpaceBytes: bytes('10tb'),
+          name: 'drive_5tb_lifetime',
+          planType: 'one_time'
         }
       },
     },
