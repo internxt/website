@@ -1,3 +1,5 @@
+import bytes from 'bytes';
+
 const STRIPE_PRODUCT = {
   lifetime2TBHalloween: {
     production: 'price_1Joq2RFAOdcgaBMQxR7f10Wh',
@@ -14,6 +16,7 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          maxSpaceBytes: bytes('2tb'),
           member_tier: 'lifetime',
           lifetime_tier: 'lifetime_2tb'
         }
@@ -43,6 +46,7 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          maxSpaceBytes: bytes('10tb'),
           member_tier: 'lifetime',
           lifetime_tier: 'lifetime_10tb'
         }
@@ -72,6 +76,7 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          maxspaceBytes: bytes('20tb'),
           member_tier: 'lifetime',
           lifetime_tier: 'lifetime_20tb'
         }
@@ -102,7 +107,8 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_1tb'
+          lifetime_tier: 'lifetime_1tb',
+          maxSpaceBytes: bytes('10tb'),
         }
       },
     },
@@ -131,7 +137,8 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_5tb'
+          lifetime_tier: 'lifetime_5tb',
+          maxSpaceBytes: bytes('5tb'),
         }
       },
     },
@@ -161,7 +168,8 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_10tb'
+          lifetime_tier: 'lifetime_10tb',
+          maxSpaceBytes: bytes('10tb'),
         }
       },
     },
