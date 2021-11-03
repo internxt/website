@@ -12,21 +12,21 @@ const HeroSection = ({
       <div className="text-center">
 
         <h2 className="text-base font-semibold text-cool-gray-90 mb-2">
-          INTERNXT DRIVE
+          INTERNXT PHOTOS
         </h2>
 
         <h1 className="text-6xl font-semibold text-cool-gray-90 mb-10">
-          The safest place for all your
+          Your picture-perfect moments
           <br />
-          files, photos and more.
+          under lock and key.
         </h1>
 
         <h3 className="text-base font-normal text-cool-gray-80 mb-20">
-          Syncing, backing up and sharing your files in total privacy couldn’t be easier.
+          Relive, share and keep your best memories safe all in one place.
           <br />
-          With Internxt Drive we focus in a user-friendly cloud storage with military-grade
+          With Internxt Photos focus on privacy and security
           <br />
-          encryption, so only you have the control over your files and data.
+          your photos are yours and yours alone.
         </h3>
 
       </div>
@@ -35,7 +35,7 @@ const HeroSection = ({
       <div
         className="py-72 rounded-xl bg-cool-gray-10 border border-cool-gray-20 mt-8 mb-12"
         style={{
-          width: 884,
+          width: 720,
           height: 505
         }}
       />

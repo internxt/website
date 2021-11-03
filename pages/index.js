@@ -19,7 +19,7 @@ const Home = ({
   downloadUrl,
   deviceLang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   useEffect(() => {
     AOS.init();

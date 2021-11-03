@@ -1,14 +1,14 @@
 import React from 'react';
 
-import HeroSection from '../components/drive/HeroSection';
-import FeaturesSection from '../components/drive/FeaturesSection';
+import HeroSection from '../components/photos/HeroSection';
+import FeaturesSection from '../components/photos/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
 
-const Drive = ({
+const Photos = ({
   metatagsDescriptions,
   langJson,
   navbarLang,
@@ -16,11 +16,11 @@ const Drive = ({
   downloadUrl,
   deviceLang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Photos">
 
       <Navbar
         textContent={navbarLang}
@@ -74,4 +74,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Drive;
+export default Photos;

@@ -160,7 +160,7 @@ export default function Navbar({
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 -translate-y-1"
                       >
-                        <Popover.Panel className="absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 bg-white rounded-xl shadow-xl border border-black border-opacity-5 overflow-hidden">
+                        <Popover.Panel className="absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 bg-white rounded-xl shadow-subtle border border-black border-opacity-5 overflow-hidden">
 
                           <div className="relative grid gap-0 lg:grid-cols-1">
 

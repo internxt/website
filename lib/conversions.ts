@@ -19,7 +19,7 @@ export default async function setUTM() {
       }
     }
   }
-  
+
   // a function that retrieves the value of a query parameter
   function getQueryParam(name) {
     const key = name;
