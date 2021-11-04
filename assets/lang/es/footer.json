@@ -1,6 +1,6 @@
 {
 	"NewsletterSection": {
-		"title": "Mantenme al día",
+		"title": "Newsletter",
 		"description": {"line1": "¿Quieres saber de nosotros cuando lancemos nuevos", "line2": "productos o una nueva actualización? Introduce tu", "line3": "correo y nosotros nos haremos cargo del resto."},
 		"input": "Tu correo",
 		"info": "Puedes cancelar tu suscripción en cualquier momento",
@@ -9,27 +9,33 @@
 	"FooterSection": {
 		"description": "La misión de Internxt es ayudar a dar forma a un mundo que respete el derecho a la privacidad. Para ello, desarrollamos una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger este derecho fundamental.",
 		"copyright": "Copyright © 2021, Internxt Universal Technologies SL",
+		"comingSoon": "Próximamente",
 		"sections": {
 			"products": {
 				"title": "Productos",
-				"driveWeb": "Drive Web",
-				"driveDesktop": "Drive Desktop",
-				"driveMobile": "Drive Mobile"
+				"drive": "Drive",
+				"photos": "Photos",
+				"send": "Send"
 			},
 			"company": {
 				"title": "Compañía",
+				"privacy": "Privacidad",
 				"about": "Sobre nosotros",
 				"contact": "Contacto",
-				"terms": "Terminos & Privacidad"
+				"legal": "Legal"
 			},
 			"join": {
 				"title": "Únete",
 				"signup": "Crear cuenta",
-				"login": "Iniciar sesión",
-				"downloads": "Descargas"
+				"login": "Iniciar sesión"
 			},
 			"follow": {
-				"title": "Síguemos"
+				"title": "Síguemos",
+				"twitter": "Twitter",
+				"linkedin": "LinkedIn",
+				"instagram": "Instagram",
+				"github": "Github",
+				"blog": "Blog"
 			}
 		}
 	},

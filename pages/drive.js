@@ -4,6 +4,7 @@ import HeroSection from '../components/drive/HeroSection';
 import FeaturesSection from '../components/drive/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
+import ProductsNavigation from '../components/layout/ProductsNavigation';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
@@ -29,6 +30,12 @@ const Drive = ({
         fixed
       />
 
+      <ProductsNavigation
+        textContent={navbarLang}
+        lang={deviceLang}
+        selectedItem="drive"
+      />
+
       <HeroSection
         textContent={langJson.HeroSection}
         download={downloadUrl}
@@ -41,13 +48,10 @@ const Drive = ({
         lang={deviceLang}
       />
 
-      {/*
-        <Footer
+      <Footer
         textContent={footerLang}
         lang={deviceLang}
-        hideNewsletter={false}
       />
-      */}
 
     </Layout>
 

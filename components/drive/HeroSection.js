@@ -5,7 +5,7 @@ const HeroSection = ({
   textContent,
   download
 }) => (
-  <section className="flex flex-col w-full pt-16">
+  <section className="flex flex-col w-full pt-36">
     <div className="flex flex-col items-center py-40">
 
       {/* Main title */}

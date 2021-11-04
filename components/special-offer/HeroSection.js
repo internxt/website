@@ -13,7 +13,7 @@ const HeroSection = ({
 
       <img className="fixed top-0 right-0 h-48 sm:max-h-80 pointer-events-none" loading="lazy" src="../../images/lifetime/cobweb.png" alt="Internxt logo" draggable="false" />
 
-      <img className="my-10" loading="lazy" src="../../logos/internxt/internxtWhite.svg" alt="Internxt logo" draggable="false" />
+      <img className="my-10" loading="lazy" src="../../logos/internxt/white.svg" alt="Internxt logo" draggable="false" />
 
       <div className="flex flex-col items-center my-8 sm:my-12 text-center text-gray-10 px-6">
 

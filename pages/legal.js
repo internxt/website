@@ -1236,9 +1236,7 @@ const Legal = ({
         </div>
       </div>
 
-      <div className="bg-neutral-10">
-        <Footer textContent={footerLang} hideNewsletter={false} />
-      </div>
+      <Footer textContent={footerLang} hideNewsletter={false} />
     </Layout>
   );
 };

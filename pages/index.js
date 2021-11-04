@@ -61,7 +61,6 @@ const Home = ({
       <Footer
         textContent={footerLang}
         lang={deviceLang}
-        hideNewsletter={false}
       />
 
     </Layout>

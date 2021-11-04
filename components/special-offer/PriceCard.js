@@ -58,7 +58,7 @@ const PriceCard = ({
 
             <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-semibold`}>{contentText.perUser}</span>
 
-            <p className="flex flex-row items-start text-neutral-700 font-semibold space-x-0.5">
+            <p className="flex flex-row items-start font-semibold space-x-0.5">
               <span className={`currency ${price <= 0 ? 'hidden' : ''} text-white`}>€</span>
               <span className="price text-4xl font-bold text-white">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>

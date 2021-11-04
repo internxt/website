@@ -10,7 +10,7 @@ const HeroSection = ({
 
       <div className="flex-shrink-0 px-6 md:px-0 mx-6 -mb-20 md:mx-10 lg:mx-32 flex flex-col items-center justify-center min-h-screen pt-20 pb-0 text-center">
 
-        <p className="mb-2 md:mb-2 text-base text-neutral-50 font-semibold">
+        <p className="mb-2 md:mb-2 text-base font-semibold">
           {textContent.eyebrow}
         </p>
 
@@ -21,7 +21,7 @@ const HeroSection = ({
           {textContent.title.line2}
         </h1>
 
-        <p className="mb-8 text-lg lg:text-xl text-neutral-500">
+        <p className="mb-8 text-lg lg:text-xl">
           {textContent.subtitle.line1}
           <br className="hidden sm:inline-flex" />
           {' '}

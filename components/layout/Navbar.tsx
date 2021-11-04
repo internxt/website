@@ -44,9 +44,14 @@ export default function Navbar({
                 <div className="my-6 font-medium">
 
                   <Link href="/pricing" locale={lang}>
-                    <div role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className={`cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-100 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                    <a
+                      role="link"
+                      tabIndex={0}
+                      onClick={() => { setMenuState(false); }}
+                      className={`flex w-full px-8 py-3 transition duration-300 delay-100 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                    >
                       {textContent.links.pricing}
-                    </div>
+                    </a>
                   </Link>
 
                   <Disclosure as="div">
@@ -85,10 +90,12 @@ export default function Navbar({
                                 </a>
                               </Link>
 
-                              <a className="flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-80">
-                                <span>{textContent.products.send}</span>
-                                <span className="ml-3 text-sm text-orange-50 font-normal">{textContent.products.comingSoon}</span>
-                              </a>
+                              <Link href="" locale={lang}>
+                                <a className="flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-80">
+                                  <span>{textContent.products.send}</span>
+                                  <span className="ml-3 text-sm text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                                </a>
+                              </Link>
 
                             </Disclosure.Panel>
 
@@ -100,15 +107,25 @@ export default function Navbar({
                   </Disclosure>
 
                   <Link href="/privacy" locale={lang}>
-                    <div role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className={`cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                    <a
+                      role="link"
+                      tabIndex={0}
+                      onClick={() => { setMenuState(false); }}
+                      className={`cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                    >
                       {textContent.links.privacy}
-                    </div>
+                    </a>
                   </Link>
 
                   <Link href="/about" locale={lang}>
-                    <div role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className={`cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                    <a
+                      role="link"
+                      tabIndex={0}
+                      onClick={() => { setMenuState(false); }}
+                      className={`cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                    >
                       {textContent.links.about}
-                    </div>
+                    </a>
                   </Link>
 
                   <a onClick={() => { setMenuState(false); }} href="https://drive.internxt.com/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
@@ -181,9 +198,9 @@ export default function Navbar({
                             </Popover.Button>
 
                             <Popover.Button>
-                              <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-80">
+                              <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30">
                                 <span>{textContent.products.send}</span>
-                                <span className="ml-2 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                                <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
                               </a>
                             </Popover.Button>
 

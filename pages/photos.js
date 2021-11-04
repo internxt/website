@@ -4,6 +4,7 @@ import HeroSection from '../components/photos/HeroSection';
 import FeaturesSection from '../components/photos/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
+import ProductsNavigation from '../components/layout/ProductsNavigation';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { getDriveDownloadUrl } from '../lib/get-download-url';
@@ -29,6 +30,12 @@ const Photos = ({
         fixed
       />
 
+      <ProductsNavigation
+        textContent={navbarLang}
+        lang={deviceLang}
+        selectedItem="photos"
+      />
+
       <HeroSection
         textContent={langJson.HeroSection}
         download={downloadUrl}
@@ -41,13 +48,10 @@ const Photos = ({
         lang={deviceLang}
       />
 
-      {/*
-        <Footer
+      <Footer
         textContent={footerLang}
         lang={deviceLang}
-        hideNewsletter={false}
       />
-      */}
 
     </Layout>
 

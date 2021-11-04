@@ -15,7 +15,7 @@ const HeroSection = ({
           <h1 className="title mb-4 md:mb-8 text-4xl md:text-5xl lg:text-6xl">
             {textContent.title}
           </h1>
-          <h2 className="mb-8 md:mb-8 text-lg lg:text-xl text-neutral-500">
+          <h2 className="mb-8 md:mb-8 text-lg lg:text-xl">
             {textContent.subtitle.line1}
             <br className="hidden md:inline-flex" />
             {' '}
