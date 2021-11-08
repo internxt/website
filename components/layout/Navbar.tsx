@@ -92,7 +92,7 @@ export default function Navbar({
                               </Link>
 
                               <Link href="" locale={lang}>
-                                <a className="flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-80">
+                                <a className="flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-40">
                                   <span>{textContent.products.send}</span>
                                   <span className="ml-3 text-sm text-orange-50 font-normal">{textContent.products.comingSoon}</span>
                                 </a>

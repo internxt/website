@@ -31,7 +31,7 @@ const FeaturesSection = ({
               leaveFrom="opacity-100 transform translate-y-0"
               leaveTo="opacity-0 transform translate-y-6"
             >
-              A synced gallery for
+              {textContent.section1.title.line1}
             </Transition>
             <Transition
               show={anim.trigger(percentage)}
@@ -42,7 +42,7 @@ const FeaturesSection = ({
               leaveFrom="opacity-100 transform translate-y-0"
               leaveTo="opacity-0 transform translate-y-2"
             >
-              all your devices.
+              {textContent.section1.title.line2}
             </Transition>
           </h2>
         )}
@@ -68,26 +68,32 @@ const FeaturesSection = ({
 
                 <div className="flex flex-col mt-24 px-10 lg:px-0">
                   <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6">
-                    Upload from your
+                    {textContent.section2.title.line1}
                     {' '}
                     <br className="hidden sm:flex" />
-                    smartphone, access
+                    {textContent.section2.title.line2}
                     {' '}
                     <br className="hidden sm:flex" />
-                    wherever you want.
+                    {textContent.section2.title.line3}
+                    {' '}
+                    <br className="hidden sm:flex" />
+                    {textContent.section2.title.line4}
                   </h3>
 
                   <p className="text-base text-cool-gray-80">
-                    Your photo library will always be up to
+                    {textContent.section2.subtitle.line1}
                     {' '}
                     <br className="hidden sm:flex" />
-                    date in all your devices. This means that
+                    {textContent.section2.subtitle.line2}
                     {' '}
                     <br className="hidden sm:flex" />
-                    you can access your synced photos even
+                    {textContent.section2.subtitle.line3}
                     {' '}
                     <br className="hidden sm:flex" />
-                    when your device is lost, stolen or broken.
+                    {textContent.section2.subtitle.line4}
+                    {' '}
+                    <br className="hidden sm:flex" />
+                    {textContent.section2.subtitle.line5}
                   </p>
                 </div>
               </div>
@@ -128,23 +134,29 @@ const FeaturesSection = ({
             <div className="flex flex-col items-center lg:items-start lg:pl-10">
               <div className="flex flex-col mb-24 px-10 lg:px-0">
                 <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-20">
-                  Share your photos
+                  {textContent.section3.title.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  with your friends
+                  {textContent.section3.title.line2}
                   {' '}
                   <br className="hidden sm:flex" />
-                  and family.
+                  {textContent.section3.title.line3}
+                  {' '}
+                  <br className="hidden sm:flex" />
+                  {textContent.section3.title.line4}
                 </h3>
 
                 <p className="text-base text-cool-gray-80">
-                  Generate a share link so you can
+                  {textContent.section3.subtitle.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  control how many times a photo
+                  {textContent.section3.subtitle.line2}
                   {' '}
                   <br className="hidden sm:flex" />
-                  can be accessed and downloaded.
+                  {textContent.section3.subtitle.line3}
+                  {' '}
+                  <br className="hidden sm:flex" />
+                  {textContent.section3.subtitle.line4}
                 </p>
               </div>
 
@@ -164,10 +176,10 @@ const FeaturesSection = ({
 
       <div className="flex flex-col items-center w-full pb-10 lg:py-20 px-10 lg:px-0">
         <h3 className="text-3xl font-semibold text-center text-cool-gray-90 mb-12">
-          Start syncing your photos
+          {textContent.section4.title.line1}
           {' '}
           <br className="hidden sm:flex" />
-          in total privacy.
+          {textContent.section4.title.line2}
         </h3>
 
         {/* Download links */}
@@ -181,60 +193,63 @@ const FeaturesSection = ({
 
       <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-10 lg:px-0">
         <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">
-          All your files.
+          {textContent.section5.title.line1}
           <br />
-          Secure and private.
+          {textContent.section5.title.line2}
         </h3>
 
         <p className="text-base text-cool-gray-80 mb-6">
-          Privacy and security are our core, we don’t run our business on data or advertising,
+          {textContent.section5.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
-          but on trust. We respect your rights and build amazing tools around them, not against.
+          {textContent.section5.subtitle.line2}
+          {' '}
+          <br className="hidden sm:flex" />
+          {textContent.section5.subtitle.line3}
         </p>
 
         <Link href="/privacy" locale={lang}>
-          <a className="flex flex-row items-center space-x-1 text-base text-blue-50 mb-32">
-            <span>Our commitment in privacy</span>
+          <a className="flex flex-row items-center space-x-1 text-base text-blue-60 mb-32">
+            <span>{textContent.section5.cta}</span>
             <UilAngleRightB className="w-4 h-4" />
           </a>
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-20 lg:gap-48 text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-20 lg:gap-32 xl:gap-48 text-center">
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Military-grade encription.
+              {textContent.section5.card1.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              We take your privacy very seriously, that’s why your photos are encripted so only you can access your photos.
+              {textContent.section5.card1.subtitle}
             </h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Zero-knowledge technology.
+              {textContent.section5.card2.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              We never store or transmit files, user passwords or encryption keys in an unencrypted or unhashed form.
+              {textContent.section5.card2.subtitle}
             </h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Privacy by design.
+              {textContent.section5.card3.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              We develop our products with the user in mind, and it’s privacy is a must in the data driven world we live in.
+              {textContent.section5.card3.subtitle}
             </h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Secure from the core
+              {textContent.section5.card4.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers.
+              {textContent.section5.card4.subtitle}
             </h5>
           </div>
 

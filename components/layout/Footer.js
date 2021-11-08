@@ -236,7 +236,7 @@ export default function Footer({
                         <a>{textContent.FooterSection.sections.products.photos}</a>
                       </Link>
                       <Link href="" locale={lang}>
-                        <a className="flex flex-row items-center text-cool-gray-40">
+                        <a className={`flex flex-row items-center ${darkMode ? 'text-cool-gray-60' : 'text-cool-gray-40'}`}>
                           <div>
                             {textContent.FooterSection.sections.products.send}
                           </div>

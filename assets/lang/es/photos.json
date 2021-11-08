@@ -1,8 +1,16 @@
 {
 	"HeroSection":
 	{
-		"title": {"line1": "Guarda archivos", "line2": "de forma segura"},
-		"subtitle": {"line1": "Internxt Drive es un servicio de almacenamiento", "line2": " en la nube basado en la privacidad y seguridad"},
+		"eyebrow": "INTERNXT PHOTOS",
+		"title": {
+			"line1": "Tus mejores recuerdos",
+			"line2": "a salvo en la nube."
+		},
+		"subtitle": {
+			"line1": "Revive, comparte y mantén a salvo tus mejores recuerdos en",
+			"line2": "un solo lugar. Con Internxt Photos centrado en la privacidad",
+			"line3": "y la seguridad, tus fotos son tuyas y solo tuyas."
+		},
 		"DownloadLinks": {
 			"or": "o",
 			"downloadFor": "Descargar para",
@@ -21,13 +29,73 @@
 	},
 	"FeaturesSection":
 	{
-		"eyebrow": "INTERNXT DRIVE",
-		"title": {"line1": "El mejor lugar para", "line2": "todos tus archivos"},
-		"subtitle": {"line1": "Nuestros productos se basan en tu privacidad y seguridad.", "line2": "Internxt Drive es solo el comienzo de una gran familia de", "line3": "productos enfocados en ti y en tu privacidad."},
-		"cta": "Descubre Internxt Drive",
-		"feature1": {"title": {"line1": "Diseñado para", "line2": "protegerte"}, "description": "Tus archivos son encriptados antes de salir de tu dispositivo, así que sólo tú puedes acceder a tus archivos, sin trucos, sin letra pequeña, eso es privacidad, eso es Internxt.", "cta": "Qué es zero-knowledge"},
-		"feature2": {"title": {"line1": "Multi", "line2": "dispositivo"}, "description": "Accede a toda la familia de aplicaciones adaptadas a todos tus dispositivos para satisfacer todas tus necesidades.", "cta": "Descargar aplicaciones"},
-		"feature3": {"title": {"line1": "Privacidad, esa", "line2": "es la cuestión"}, "description": "A diferencia de nuestros competidores, nuestro negocio no se basa en la publicidad, se basa en ti. Nosotros no vendemos tus datos.", "cta": "Privacidad en Internxt"},
+		"section1": {
+			"title": {
+				"line1": "Una galería sincronizada",
+				"line2": "en todos tus dispositivos."
+			}
+		},
+		"section2": {
+			"title": {
+				"line1": "Sube fotos desde",
+				"line2": "tu smartphone,",
+				"line3": "accede desde",
+				"line4": "cualquier sitio."
+			},
+			"subtitle": {
+				"line1": "Tu biblioteca de fotos estará siempre",
+				"line2": "actualizada actualizada en todos tus",
+				"line3": "dispositivos. Esto significa que puedes",
+				"line4": "acceder a tus fotos sincronizadas incluso",
+				"line5": "cuando tu dispositivo se pierda o se rompa."
+			}
+		},
+		"section3": {
+			"title": {
+				"line1": "Compearte tus",
+				"line2": "fotos con tu",
+				"line3": "familia y amigos."
+			},
+			"subtitle": {
+				"line1": "Genera un link y controla",
+				"line2": "cuantas veces quieres que",
+				"line3": "se puede acceder a la fotos."
+			}
+		},
+		"section4": {
+			"title": {
+				"line1": "Empieza ahora a",
+				"line2": "sincronizar tus fotos."
+			}
+		},
+		"section5": {
+			"title": {
+				"line1": "Diseñado para protegerte",
+				"line2": "a ti y tus fotos."
+			},
+			"subtitle": {
+				"line1": "La privacidad y la seguridad estan en nuestro núcleo, nuestro negocio no se",
+				"line2": "basa la publicidad ni los datos, sino en la confianza. Respetamos tus derechos",
+				"line3": "y construimos productos increíbles en torno a ellos, no en su contra."
+			},
+			"cta": "Nuestro compromiso con la privacidad",
+			"card1": {
+				"title": "Encriptación de grado militar.",
+				"subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus fotos están codificadas para que sólo tú puedas acceder a ellas."
+			},
+			"card2": {
+				"title": "Tecnología de conocimiento cero.",
+				"subtitle": "Nunca almacenamos ni transmitimos archivos, contraseñas de usuario o claves de cifrado de forma no cifrada o no encriptada."
+			},
+			"card3": {
+				"title": "Privacidad por diseño.",
+				"subtitle": "Desarrollamos nuestros productos pensando en el usuario, y su privacidad es una prioridad en el mundo impulsado por datos en el que vivimos."
+			},
+			"card4": {
+				"title": "Seguro desde el núcleo.",
+				"subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada dia, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
+			}
+		},
 		"DownloadLinks": {
 			"or": "o",
 			"downloadFor": "Descargar para",

@@ -14,24 +14,24 @@ const HeroSection = ({
       <div className="text-center px-6">
 
         <h2 className="text-sm lg:text-base font-semibold text-cool-gray-90 mb-2">
-          INTERNXT PHOTOS
+          {textContent.eyebrow}
         </h2>
 
         <h1 className="text-4xl lg:text-6xl font-semibold text-cool-gray-90 px-4 mb-10">
-          Your picture-perfect moments
+          {textContent.title.line1}
           {' '}
           <br className="hidden sm:flex" />
-          under lock and key.
+          {textContent.title.line2}
         </h1>
 
         <h3 className="text-base font-normal text-cool-gray-80 mb-10 lg:mb-20">
-          Relive, share and keep your best memories safe all in one place.
+          {textContent.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
-          With Internxt Photos focus on privacy and security
+          {textContent.subtitle.line2}
           {' '}
           <br className="hidden sm:flex" />
-          your photos are yours and yours alone.
+          {textContent.subtitle.line3}
         </h3>
 
       </div>

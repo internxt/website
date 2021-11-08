@@ -1,8 +1,17 @@
 {
 	"HeroSection":
 	{
-		"title": {"line1": "Guarda archivos", "line2": "de forma segura"},
-		"subtitle": {"line1": "Internxt Drive es un servicio de almacenamiento", "line2": " en la nube basado en la privacidad y seguridad"},
+		"eyebrow": "INTERNXT DRIVE",
+		"title": {
+			"line1": "El cloud storage más ",
+			"line2": "seguro para tus archivos,",
+			"line3": "fotos y mucho más."
+		},
+		"subtitle": {
+			"line1": "Sincronizar, hacer backups y compartir tus archivos en total privacidad no puede ser más",
+			"line2": "fácil. En Internxt Drive nos centramos en un almacenamiento encriptado fácil de usar con",
+			"line3": "encriptación de grado militar para que sólo tu tenga el control de sus archivos y datos."
+		},
 		"DownloadLinks": {
 			"or": "o",
 			"downloadFor": "Descargar para",
@@ -21,13 +30,112 @@
 	},
 	"FeaturesSection":
 	{
-		"eyebrow": "INTERNXT DRIVE",
-		"title": {"line1": "El mejor lugar para", "line2": "todos tus archivos"},
-		"subtitle": {"line1": "Nuestros productos se basan en tu privacidad y seguridad.", "line2": "Internxt Drive es solo el comienzo de una gran familia de", "line3": "productos enfocados en ti y en tu privacidad."},
-		"cta": "Descubre Internxt Drive",
-		"feature1": {"title": {"line1": "Diseñado para", "line2": "protegerte"}, "description": "Tus archivos son encriptados antes de salir de tu dispositivo, así que sólo tú puedes acceder a tus archivos, sin trucos, sin letra pequeña, eso es privacidad, eso es Internxt.", "cta": "Qué es zero-knowledge"},
-		"feature2": {"title": {"line1": "Multi", "line2": "dispositivo"}, "description": "Accede a toda la familia de aplicaciones adaptadas a todos tus dispositivos para satisfacer todas tus necesidades.", "cta": "Descargar aplicaciones"},
-		"feature3": {"title": {"line1": "Privacidad, esa", "line2": "es la cuestión"}, "description": "A diferencia de nuestros competidores, nuestro negocio no se basa en la publicidad, se basa en ti. Nosotros no vendemos tus datos.", "cta": "Privacidad en Internxt"},
+		"section1": {
+			"title": {
+				"line1": "Todo tipo de archivos.",
+				"line2": "En todos tus dispositivos."
+			}
+		},
+		"section2": {
+			"title": {
+				"line1": "Todos tus archivos",
+				"line2": "disponibles en todos",
+				"line3": "tus dispositivos."
+			},
+			"subtitle": {
+				"line1": "Accede de forma segura a todos tus",
+				"line2": "archivos desde su ordenador,",
+				"line3": "smartphone, tableta o cualquier tipo",
+				"line4": "de dispositivo con conexión a internet",
+				"line5": "a través de la aplicación cloud storage",
+				"line6": "más segura."
+			}
+		},
+		"section3": {
+			"title": {
+				"line1": "Tus archivos",
+				"line2": "organizados y",
+				"line3": "accesibles desde",
+				"line4": "cualquier lugar."
+			},
+			"subtitle": {
+				"line1": "Internxt Drive te permite organizar tus",
+				"line2": "archivos en carpetas, renombrarlos y",
+				"line3": "filtrar listas de archivos para encontrar",
+				"line4": "lo que quieres más rápido. Incluso puedes",
+				"line5": "hacer una copia de seguridad de tu",
+				"line6": "ordenador como, la carpeta de documentos",
+				"line7": "para que para que siempre tenga los",
+				"line8": "archivos más importantes actualizados."
+			}
+		},
+		"section4": {
+			"title": {
+				"line1": "Comparte tus archivos",
+				"line2": "con facilidad, la",
+				"line3": "seguridad corre a",
+				"line4": "nuestra cuenta."
+			},
+			"subtitle": {
+				"line1": "Internxt Drive se centra en la privacidad",
+				"line2": "y la seguridad, para que sólo tengas que",
+				"line3": "centrarte en lo que te importa, como",
+				"line4": "compartir archivos con tus compañeros",
+				"line5": "de trabajo, o las fotos de tu último",
+				"line6": "viaje con tu familia. Tu eliges con",
+				"line7": "quién quieres compartirlo y cuántas",
+				"line8": "veces quieres que se descargue."
+			}
+		},
+		"section5": {
+			"eyebrow": "NUEVO",
+			"title": {
+				"line1": "Resguarda lo",
+				"line2": "que te importa."
+			},
+			"subtitle": {
+				"line1": "Ahora puedes guardar la última versión",
+				"line2": "de ese proyecto súper importante en",
+				"line3": "el que en el que estás trabajando,",
+				"line4": "tu carpeta de documentos o tus deberes",
+				"line5": "de la universidad, todos ellos a",
+				"line6": "salvo en tu Internxt Drive."
+			}
+		},
+		"section6": {
+			"title": {
+				"line1": "Sincronizar ahora tus",
+				"line2": "archivos en total privacidad."
+			}
+		},
+		"section7": {
+			"title": {
+				"line1": "Todos tus archivos.",
+				"line2": "Seguros y privados."
+			},
+			"subtitle": {
+				"line1": "La privacidad y la seguridad estan en nuestro núcleo, nuestro negocio no se",
+				"line2": "basa la publicidad ni los datos, sino en la confianza. Respetamos tus derechos",
+				"line3": "y construimos productos increíbles en torno a ellos, no en su contra."
+			},
+			"cta": "Nuestro compromiso con la privacidad",
+			"card1": {
+				"title": "Encriptación de grado militar.",
+				"subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus archivos están codificados para que sólo tú puedas acceder a ellos."
+			},
+			"card2": {
+				"title": "Tecnología de conocimiento cero.",
+				"subtitle": "Nunca almacenamos ni transmitimos archivos, contraseñas de usuario o claves de cifrado de forma no cifrada o no encriptada."
+			},
+			"card3": {
+				"title": "Privacidad por diseño.",
+				"subtitle": "Desarrollamos nuestros productos pensando en el usuario, y su privacidad es una prioridad en el mundo impulsado por datos en el que vivimos."
+			},
+			"card4": {
+				"title": "Seguro desde el núcleo.",
+				"subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada dia, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
+			}
+		},
 		"DownloadLinks": {
 			"or": "o",
 			"downloadFor": "Descargar para",

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import DownloadComponent from './DownloadComponent';
 
@@ -14,24 +15,27 @@ const HeroSection = ({
       <div className="text-center px-6">
 
         <h2 className="text-sm lg:text-base font-semibold text-cool-gray-90 mb-2">
-          INTERNXT DRIVE
+          {textContent.eyebrow}
         </h2>
 
         <h1 className="text-4xl lg:text-6xl font-semibold text-cool-gray-90 px-4 mb-10">
-          The safest cloud storage for all
+          {textContent.title.line1}
           {' '}
           <br className="hidden sm:flex" />
-          your files, photos and more.
+          {textContent.title.line2}
+          {' '}
+          <br className="hidden sm:flex" />
+          {textContent.title.line3}
         </h1>
 
         <h3 className="text-base font-normal text-cool-gray-80 mb-10 lg:mb-20">
-          Syncing, backing up and sharing your files in total privacy couldn’t be easier.
+          {textContent.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
-          With Internxt Drive we focus in a user-friendly encrypted storage with military-grade
+          {textContent.subtitle.line2}
           {' '}
           <br className="hidden sm:flex" />
-          encryption, so only you have the control over your files and data.
+          {textContent.subtitle.line3}
         </h3>
 
       </div>

@@ -1,8 +1,16 @@
 {
 	"HeroSection":
 	{
-		"title": {"line1": "Store your files", "line2": "in total privacy"},
-		"subtitle": {"line1": "Internxt Drive is a zero-knowledge file storage", "line2": "service based on best-in-class privacy and security"},
+		"eyebrow": "INTERNXT DRIVE",
+		"title": {
+			"line1": "The safest cloud storage for all",
+			"line2": "your files, photos and more."
+		},
+		"subtitle": {
+			"line1": "Syncing, backing up and sharing your files in total privacy couldn’t be easier.",
+			"line2": "With Internxt Drive we focus in a user-friendly encrypted storage with military-grade",
+			"line3": "encryption, so only you have the control over your files and data."
+		},
 		"DownloadLinks": {
 			"or": "or",
 			"downloadFor": "Download for",
@@ -21,13 +29,107 @@
 	},
 	"FeaturesSection":
 	{
-		"eyebrow": "INTERNXT DRIVE",
-		"title": {"line1": "The perfect place", "line2": "for all your files"},
-		"subtitle": {"line1": "Our products are based on your privacy and security.", "line2": "Internxt Drive is just the begining of a full family of", "line3": "products focused on you and your privacy."},
-		"cta": "Discover Internxt Drive",
-		"feature1": {"title": {"line1": "Secure", "line2": "by design"}, "description": "Your files are encrypted before leaving your device, so only you can access your files, no tricks, no hidden things, just privacy, that’s Internxt.", "cta": "How zero-knowledge works"},
-		"feature2": {"title": {"line1": "Multi", "line2": "device"}, "description": "Access the whole family of apps adapted for all your devices to suit all your needs.", "cta": "Download apps"},
-		"feature3": {"title": {"line1": "Privacy, that's", "line2": "the question"}, "description": "Unlike other competitors, our business model is not based on ads, but on you. We don’t access or sell your data.", "cta": "Privacy at Internxt"},
+		"section1": {
+			"title": {
+				"line1": "All kind of files.",
+				"line2": "On all your devices."
+			}
+		},
+		"section2": {
+			"title": {
+				"line1": "All your files",
+				"line2": "available in all",
+				"line3": "your devices."
+			},
+			"subtitle": {
+				"line1": "Securelly access all your files from",
+				"line2": "your computer, smartphone, tablet or",
+				"line3": "any kind of device with connection to",
+				"line4": "internet via the most secure cloud",
+				"line5": "storage app."
+			}
+		},
+		"section3": {
+			"title": {
+				"line1": "Keep your files",
+				"line2": "organized and",
+				"line3": "accessible from",
+				"line4": "anywhere."
+			},
+			"subtitle": {
+				"line1": "Internxt Drive lets you organize your",
+				"line2": "files in folders, rename them and filter",
+				"line3": "list of files to find what you want faster.",
+				"line4": "You can even backup your computer",
+				"line5": "folders like your documents folder, so",
+				"line6": "you always have the most recent",
+				"line7": "changes of your most important files."
+			}
+		},
+		"section4": {
+			"title": {
+				"line1": "Share your files",
+				"line2": "with ease,",
+				"line3": "security is on us."
+			},
+			"subtitle": {
+				"line1": "Internxt Drive focuses on privacy and",
+				"line2": "security, so you only have to focus on",
+				"line3": "what matters to you, like sharing files",
+				"line4": "with your coworkers, or the photos of",
+				"line5": "your last travel with your family. You",
+				"line6": "choose with who you want to share",
+				"line7": "them and how many times you want",
+				"line8": "it to be downloaded."
+			}
+		},
+		"section5": {
+			"eyebrow": "NEW FEATURE",
+			"title": {
+				"line1": "Backup what",
+				"line2": "matters to you."
+			},
+			"subtitle": {
+				"line1": "Now you can keep the last version",
+				"line2": "of that super important project you",
+				"line3": "are working on, your documents",
+				"line4": "folder, or your university homework,",
+				"line5": "all of them safe in your Internxt Drive."
+			}
+		},
+		"section6": {
+			"title": {
+				"line1": "Start syncing your files",
+				"line2": "in total privacy."
+			}
+		},
+		"section7": {
+			"title": {
+				"line1": "All your files.",
+				"line2": "Secure and private."
+			},
+			"subtitle": {
+				"line1": "Privacy and security are our core, we don’t run our business on data or advertising,",
+				"line2": "but on trust. We respect your rights and build amazing tools around them, not against."
+			},
+			"cta": "Our commitment in privacy",
+			"card1": {
+				"title": "Military-grade encription.",
+				"subtitle": "We take your privacy very seriously, that’s why your photos are encripted so only you can access your photos."
+			},
+			"card2": {
+				"title": "Zero-knowledge technology.",
+				"subtitle": "We never store or transmit files, user passwords or encryption keys in an unencrypted or unhashed form."
+			},
+			"card3": {
+				"title": "Privacy by design.",
+				"subtitle": "We develop our products with the user in mind, and it’s privacy is a must in the data driven world we live in."
+			},
+			"card4": {
+				"title": "Secure from the core.",
+				"subtitle": "As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers."
+			}
+		},
 		"DownloadLinks": {
 			"or": "or",
 			"downloadFor": "Download for",

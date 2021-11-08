@@ -5,7 +5,6 @@ import { UilAngleRightB } from '@iconscout/react-unicons';
 
 const ManifestoSection = ({
   textContent,
-  device,
   lang
 }) => (
   <section className="relative flex flex-col w-full">
@@ -53,7 +52,7 @@ const ManifestoSection = ({
     {/* How we ensure user privacy */}
     <div className="flex flex-col items-center py-20 lg:pb-40 lg:pt-20 z-10">
 
-      <div className="text-center px-6">
+      <div className="flex flex-col items-center text-center px-6">
 
         <h2 className="text-3xl lg:text-4xl font-semibold mb-10">
           {textContent.section2.title.line1}
@@ -69,7 +68,7 @@ const ManifestoSection = ({
           {textContent.section2.subtitle.line2}
         </h3>
 
-        <div className="grid grid-cols-2 grid-rows-2 gap-20 text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-rows-2 gap-10 lg:gap-20 text-left">
 
           <div className="flex flex-col items-start justify-start p-10 w-80 h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
@@ -113,19 +112,18 @@ const ManifestoSection = ({
 
     </div>
 
-    {/* Apps designed to protect your privacyå */}
+    {/* Apps designed to protect your privacy */}
     <div className="flex flex-col items-center py-20 lg:py-40 z-10 bg-cool-gray-100 text-white">
 
       <div className="text-center px-6">
 
         <h2 className="text-3xl lg:text-5xl font-semibold mb-10">
           {textContent.section3.title.line1}
-          {' '}
-          <br className="hidden sm:flex" />
+          <br />
           {textContent.section3.title.line2}
         </h2>
 
-        <h3 className="text-base font-normal mb-40">
+        <h3 className="text-base font-normal px-6 mb-40">
           {textContent.section3.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
@@ -134,7 +132,7 @@ const ManifestoSection = ({
 
         <div className="grid grid-cols-1 grid-rows-2 gap-20 text-left">
 
-          <div className="grid grid-cols-2 grid-rows-1 gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-rows-1 gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
 
             <div className="m-20 w-80 h-80">
               <h4 className="text-2xl lg:text-4xl font-semibold mb-10">
@@ -151,9 +149,9 @@ const ManifestoSection = ({
               </Link>
             </div>
 
-            <div className="relative m-20 w-80 h-80">
+            <div className="relative lg:m-20 w-80 h-80">
               <div
-                className="absolute top-5 left-5 bg-cool-gray-80 rounded-3xl border border-cool-gray-70 shadow-subtle"
+                className="absolute -top-10 lg:top-5 left-16 lg:left-5 bg-cool-gray-80 rounded-3xl border border-cool-gray-70 shadow-subtle"
                 style={{
                   width: 645,
                   height: 430
@@ -163,7 +161,7 @@ const ManifestoSection = ({
 
           </div>
 
-          <div className="grid grid-cols-2 grid-rows-1 gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-rows-1 gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
 
             <div className="m-20 w-80 h-80">
               <h4 className="text-2xl lg:text-4xl font-semibold mb-10">
@@ -180,9 +178,9 @@ const ManifestoSection = ({
               </Link>
             </div>
 
-            <div className="relative m-20 w-80 h-80">
+            <div className="relative lg:m-20 w-80 h-80">
               <div
-                className="absolute top-5 left-5 bg-cool-gray-80 rounded-3xl border border-cool-gray-70 shadow-subtle"
+                className="absolute -top-10 lg:top-5 left-16 lg:left-5 bg-cool-gray-80 rounded-3xl border border-cool-gray-70 shadow-subtle"
                 style={{
                   width: 320,
                   height: 600

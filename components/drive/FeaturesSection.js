@@ -31,7 +31,7 @@ const FeaturesSection = ({
               leaveFrom="opacity-100 transform translate-y-0"
               leaveTo="opacity-0 transform translate-y-6"
             >
-              All kind of files.
+              {textContent.section1.title.line1}
             </Transition>
             <Transition
               show={anim.trigger(percentage)}
@@ -42,7 +42,7 @@ const FeaturesSection = ({
               leaveFrom="opacity-100 transform translate-y-0"
               leaveTo="opacity-0 transform translate-y-2"
             >
-              On all your devices.
+              {textContent.section1.title.line2}
             </Transition>
           </h2>
         )}
@@ -77,29 +77,32 @@ const FeaturesSection = ({
 
               <div className="flex flex-col mt-24 px-10 lg:px-0">
                 <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6">
-                  All your files
+                  {textContent.section2.title.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  available in all
+                  {textContent.section2.title.line2}
                   {' '}
                   <br className="hidden sm:flex" />
-                  your devices.
+                  {textContent.section2.title.line3}
                 </h3>
 
                 <p className="text-base text-cool-gray-80">
-                  Securelly access all your files from
+                  {textContent.section2.subtitle.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  your computer, smartphone, tablet or
+                  {textContent.section2.subtitle.line2}
                   {' '}
                   <br className="hidden sm:flex" />
-                  any kind of device with connection to
+                  {textContent.section2.subtitle.line3}
                   {' '}
                   <br className="hidden sm:flex" />
-                  internet via the most secure cloud
+                  {textContent.section2.subtitle.line4}
                   {' '}
                   <br className="hidden sm:flex" />
-                  storage app.
+                  {textContent.section2.subtitle.line5}
+                  {' '}
+                  <br className="hidden sm:flex" />
+                  {textContent.section2.subtitle.line6}
                 </p>
               </div>
             </div>
@@ -119,38 +122,41 @@ const FeaturesSection = ({
               <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
                 <div className="flex flex-col mb-20 lg:mb-24 px-10 lg:px-0">
                   <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-20">
-                    Keep your files
+                    {textContent.section3.title.line1}
                     {' '}
                     <br className="hidden sm:flex" />
-                    organized and
+                    {textContent.section3.title.line2}
                     {' '}
                     <br className="hidden sm:flex" />
-                    accessible from
+                    {textContent.section3.title.line3}
                     {' '}
                     <br className="hidden sm:flex" />
-                    anywhere.
+                    {textContent.section3.title.line4}
                   </h3>
 
                   <p className="text-base text-cool-gray-80">
-                    Internxt Drive lets you organize your
+                    {textContent.section3.subtitle.line1}
                     {' '}
                     <br className="hidden sm:flex" />
-                    files in folders, rename them and filter
+                    {textContent.section3.subtitle.line2}
                     {' '}
                     <br className="hidden sm:flex" />
-                    list of files to find what you want faster.
+                    {textContent.section3.subtitle.line3}
                     {' '}
                     <br className="hidden sm:flex" />
-                    You can even backup your computer
+                    {textContent.section3.subtitle.line4}
                     {' '}
                     <br className="hidden sm:flex" />
-                    folders like your documents folder, so
+                    {textContent.section3.subtitle.line5}
                     {' '}
                     <br className="hidden sm:flex" />
-                    you always have the most recent
+                    {textContent.section3.subtitle.line6}
                     {' '}
                     <br className="hidden sm:flex" />
-                    changes of your most important files.
+                    {textContent.section3.subtitle.line7}
+                    {' '}
+                    <br className="hidden sm:flex" />
+                    {textContent.section3.subtitle.line8}
                   </p>
                 </div>
 
@@ -165,7 +171,7 @@ const FeaturesSection = ({
               </div>
             </div>
 
-            <div className="hidden sm:flex flex-col items-start">
+            <div className="hidden lg:flex flex-col items-start">
               <div
                 className="bg-cool-gray-10 rounded-2xl border border-cool-gray-20 shadow-subtle"
                 style={{
@@ -210,38 +216,41 @@ const FeaturesSection = ({
 
               <div className="flex flex-col mb-20 lg:mb-24 px-10 lg:px-0">
                 <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-20">
-                  Share your files
+                  {textContent.section4.title.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  with ease,
+                  {textContent.section4.title.line2}
                   {' '}
                   <br className="hidden sm:flex" />
-                  security is on us.
+                  {textContent.section4.title.line3}
+                  {' '}
+                  <br className="hidden sm:flex" />
+                  {textContent.section4.title.line4}
                 </h3>
 
                 <p className="text-base text-cool-gray-80">
-                  Internxt Drive focuses on privacy and
+                  {textContent.section4.subtitle.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  security, so you only have to focus on
+                  {textContent.section4.subtitle.line2}
                   {' '}
                   <br className="hidden sm:flex" />
-                  what matters to you, like sharing files
+                  {textContent.section4.subtitle.line3}
                   {' '}
                   <br className="hidden sm:flex" />
-                  with your coworkers, or the photos of
+                  {textContent.section4.subtitle.line4}
                   {' '}
                   <br className="hidden sm:flex" />
-                  your last travel with your family. You
+                  {textContent.section4.subtitle.line5}
                   {' '}
                   <br className="hidden sm:flex" />
-                  choose with who you want to share
+                  {textContent.section4.subtitle.line6}
                   {' '}
                   <br className="hidden sm:flex" />
-                  them and how many times you want
+                  {textContent.section4.subtitle.line7}
                   {' '}
                   <br className="hidden sm:flex" />
-                  it to be downloaded.
+                  {textContent.section4.subtitle.line8}
                 </p>
               </div>
             </div>
@@ -269,30 +278,33 @@ const FeaturesSection = ({
 
               <div className="flex flex-col mb-24 px-10 lg:px-0">
                 <h4 className=" text-xs font-semibold text-orange-50 mb-2 pt-10">
-                  NEW FEATURE
+                  {textContent.section5.eyebrow}
                 </h4>
 
                 <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6">
-                  Backup what
+                  {textContent.section5.title.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  matters to you.
+                  {textContent.section5.title.line2}
                 </h3>
 
                 <p className="text-base text-cool-gray-80">
-                  Now you can keep the last version
+                  {textContent.section5.subtitle.line1}
                   {' '}
                   <br className="hidden sm:flex" />
-                  of that super important project you
+                  {textContent.section5.subtitle.line2}
                   {' '}
                   <br className="hidden sm:flex" />
-                  are working on, your documents
+                  {textContent.section5.subtitle.line3}
                   {' '}
                   <br className="hidden sm:flex" />
-                  folder, or your university homework,
+                  {textContent.section5.subtitle.line4}
                   {' '}
                   <br className="hidden sm:flex" />
-                  all of them safe in your Internxt Drive.
+                  {textContent.section5.subtitle.line5}
+                  {' '}
+                  <br className="hidden sm:flex" />
+                  {textContent.section5.subtitle.line6}
                 </p>
               </div>
             </div>
@@ -314,10 +326,10 @@ const FeaturesSection = ({
 
       <div className="flex flex-col items-center w-full pb-10 lg:py-20 px-10 lg:px-0">
         <h3 className="text-3xl font-semibold text-center text-cool-gray-90 mb-12">
-          Start syncing your files
+          {textContent.section6.title.line1}
           {' '}
           <br className="hidden sm:flex" />
-          in total privacy.
+          {textContent.section6.title.line2}
         </h3>
 
         {/* Download links */}
@@ -331,60 +343,63 @@ const FeaturesSection = ({
 
       <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-10 lg:px-0">
         <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">
-          All your files.
+          {textContent.section7.title.line1}
           <br />
-          Secure and private.
+          {textContent.section7.title.line2}
         </h3>
 
         <p className="text-base text-cool-gray-80 mb-6">
-          Privacy and security are our core, we don’t run our business on data or advertising,
+          {textContent.section7.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
-          but on trust. We respect your rights and build amazing tools around them, not against.
+          {textContent.section7.subtitle.line2}
+          {' '}
+          <br className="hidden sm:flex" />
+          {textContent.section7.subtitle.line3}
         </p>
 
         <Link href="/privacy" locale={lang}>
-          <a className="flex flex-row items-center space-x-1 text-base text-blue-50 mb-32">
-            <span>Our commitment in privacy</span>
+          <a className="flex flex-row items-center space-x-1 text-base text-blue-60 mb-32">
+            <span>{textContent.section7.cta}</span>
             <UilAngleRightB className="w-4 h-4" />
           </a>
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-20 lg:gap-48 text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-20 lg:gap-32 xl:gap-48 text-center">
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Military-grade encription.
+              {textContent.section7.card1.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              We take your privacy very seriously, that’s why your photos are encripted so only you can access your photos.
+              {textContent.section7.card1.subtitle}
             </h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Zero-knowledge technology.
+              {textContent.section7.card2.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              We never store or transmit files, user passwords or encryption keys in an unencrypted or unhashed form.
+              {textContent.section7.card2.subtitle}
             </h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Privacy by design.
+              {textContent.section7.card3.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              We develop our products with the user in mind, and it’s privacy is a must in the data driven world we live in.
+              {textContent.section7.card3.subtitle}
             </h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">
-              Secure from the core
+              {textContent.section7.card4.title}
             </h4>
             <h5 className="text-base text-cool-gray-80">
-              As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers.
+              {textContent.section7.card4.subtitle}
             </h5>
           </div>
 
