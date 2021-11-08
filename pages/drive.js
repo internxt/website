@@ -1,5 +1,5 @@
 import React from 'react';
-
+import userAgent from 'useragent';
 import HeroSection from '../components/drive/HeroSection';
 import FeaturesSection from '../components/drive/FeaturesSection';
 import Footer from '../components/layout/Footer';
@@ -7,15 +7,16 @@ import Navbar from '../components/layout/Navbar';
 import ProductsNavigation from '../components/layout/ProductsNavigation';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import { getDriveDownloadUrl } from '../lib/get-download-url';
+import { downloadDriveByPlatform } from '../lib/get-download-url';
 
 const Drive = ({
   metatagsDescriptions,
+  download,
   langJson,
   navbarLang,
   footerLang,
-  downloadUrl,
-  deviceLang
+  deviceLang,
+  device
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
@@ -38,14 +39,16 @@ const Drive = ({
 
       <HeroSection
         textContent={langJson.HeroSection}
-        download={downloadUrl}
         lang={deviceLang}
+        device={device}
+        download={download}
       />
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
-        download={downloadUrl}
         lang={deviceLang}
+        device={device}
+        download={download}
       />
 
       <Footer
@@ -59,13 +62,16 @@ const Drive = ({
 };
 
 export async function getServerSideProps(ctx) {
-  const downloadUrl = await getDriveDownloadUrl(ctx);
+  const download = await downloadDriveByPlatform(ctx);
+
+  const ua = ctx.req.headers['user-agent'];
+  const device = userAgent.parse(ua).os.family;
 
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/home.json`);
+  const langJson = require(`../assets/lang/${lang}/drive.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
@@ -73,7 +79,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang, download, device, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }

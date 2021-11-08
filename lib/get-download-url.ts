@@ -27,6 +27,21 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
   }
 }
 
+export const downloadDriveByPlatform = async () => {
+  const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
+
+  const platforms = {
+    ios: 'https://apps.apple.com/es/app/internxt-drive/id1465869889',
+    android: 'https://play.google.com/store/apps/details?id=com.internxt.cloud&hl=es',
+    linux: info.links.linux || 'https://internxt.com/downloads/drive.deb',
+    windows: info.links.windows || 'https://internxt.com/downloads/drive.exe',
+    mac: info.links.macos || 'https://internxt.com/downloads/drive.dmg',
+    all: 'https://github.com/internxt/drive-desktop/releases'
+  };
+
+  return platforms;
+};
+
 export async function getPlatform(ctx: GetServerSidePropsContext) {
   const ua = ctx.req.headers['user-agent'];
   const uaParsed = userAgent.parse(ua);

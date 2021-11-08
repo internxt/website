@@ -73,14 +73,14 @@ export default function Footer({
               name="fields[email]"
               type="email"
               placeholder={`${textContent.NewsletterSection.input}`}
-              className={`flex flex-row w-full md:w-64 h-auto px-4 py-2 outline-none rounded-lg ${darkMode ? 'bg-cool-gray-90 border-cool-gray-70 focus:border-blue-60 focus:ring-opacity-30' : 'bg-white border-cool-gray-20 focus:border-blue-50 focus:ring-opacity-20'} border focus:ring-2 focus:ring-blue-60 transition-all duration-150 text-left appearance-none mb-2`}
+              className={`flex flex-row w-full md:w-64 h-auto px-4 py-3 sm:py-2 outline-none rounded-lg ${darkMode ? 'bg-cool-gray-90 border-cool-gray-70 focus:border-blue-60 focus:ring-opacity-30' : 'bg-white border-cool-gray-20 focus:border-blue-50 focus:ring-opacity-20'} border focus:ring-3 focus:ring-blue-60 transition-all duration-150 text-left appearance-none mb-2`}
               required
             />
             <input
               name="signup"
               type="submit"
               value={`${textContent.NewsletterSection.cta}`}
-              className="flex justify-center w-full sm:w-auto items-center px-4 py-2 border border-transparent rounded-lg text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:outline-none transition-all duration-75 cursor-pointer"
+              className="flex justify-center w-full sm:w-auto items-center px-4 py-3 sm:py-2 border border-transparent rounded-lg text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:outline-none transition-all duration-75 cursor-pointer"
             />
           </form>
 

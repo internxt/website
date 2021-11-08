@@ -53,7 +53,6 @@ export const parallaxMinMax = (percentage, min, max, forceMax) => {
 /* ======================================================================================= */
 
 export const trigger = (percentage, triggerPoint) => {
-  console.log(percentage)
   if (triggerPoint) {
     return percentage >= (triggerPoint / 100)
   }

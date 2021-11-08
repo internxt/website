@@ -1,0 +1,47 @@
+{
+	"HeroSection":
+	{
+		"title": {"line1": "Guarda archivos", "line2": "de forma segura"},
+		"subtitle": {"line1": "Internxt Drive es un servicio de almacenamiento", "line2": " en la nube basado en la privacidad y seguridad"},
+		"DownloadLinks": {
+			"or": "o",
+			"downloadFor": "Descargar para",
+			"orDownloadFor": "O descargar para",
+			"downloadOnThe": "Descargar en",
+			"orDownloadOnThe": "O descargar en",
+			"getOn": "Conseguir en",
+			"orGetOn": "O conseguir en",
+			"openDriveWeb": "Abrir Drive Web",
+			"ios": "App Store",
+			"android": "Play Store",
+			"windows": "Windows",
+			"linux": "Linux",
+			"mac": "Mac"
+		}
+	},
+	"FeaturesSection":
+	{
+		"eyebrow": "INTERNXT DRIVE",
+		"title": {"line1": "El mejor lugar para", "line2": "todos tus archivos"},
+		"subtitle": {"line1": "Nuestros productos se basan en tu privacidad y seguridad.", "line2": "Internxt Drive es solo el comienzo de una gran familia de", "line3": "productos enfocados en ti y en tu privacidad."},
+		"cta": "Descubre Internxt Drive",
+		"feature1": {"title": {"line1": "Diseñado para", "line2": "protegerte"}, "description": "Tus archivos son encriptados antes de salir de tu dispositivo, así que sólo tú puedes acceder a tus archivos, sin trucos, sin letra pequeña, eso es privacidad, eso es Internxt.", "cta": "Qué es zero-knowledge"},
+		"feature2": {"title": {"line1": "Multi", "line2": "dispositivo"}, "description": "Accede a toda la familia de aplicaciones adaptadas a todos tus dispositivos para satisfacer todas tus necesidades.", "cta": "Descargar aplicaciones"},
+		"feature3": {"title": {"line1": "Privacidad, esa", "line2": "es la cuestión"}, "description": "A diferencia de nuestros competidores, nuestro negocio no se basa en la publicidad, se basa en ti. Nosotros no vendemos tus datos.", "cta": "Privacidad en Internxt"},
+		"DownloadLinks": {
+			"or": "o",
+			"downloadFor": "Descargar para",
+			"orDownloadFor": "O descargar para",
+			"downloadOnThe": "Descargar en",
+			"orDownloadOnThe": "O descargar en",
+			"getOn": "Conseguir en",
+			"orGetOn": "O conseguir en",
+			"openDriveWeb": "Abrir Drive Web",
+			"ios": "App Store",
+			"android": "Play Store",
+			"windows": "Windows",
+			"linux": "Linux",
+			"mac": "Mac"
+		}
+	}
+}
