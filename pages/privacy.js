@@ -31,14 +31,10 @@ const Privacy = ({
 
       <HeroSection
         textContent={langJson.HeroSection}
-        lang={deviceLang}
-        device={device}
       />
 
       <ManifestoSection
         textContent={langJson.ManifestoSection}
-        lang={deviceLang}
-        device={device}
       />
 
       <Footer
@@ -60,7 +56,7 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/drive.json`);
+  const langJson = require(`../assets/lang/${lang}/privacy.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 

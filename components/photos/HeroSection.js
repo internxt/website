@@ -17,7 +17,7 @@ const HeroSection = ({
           INTERNXT PHOTOS
         </h2>
 
-        <h1 className="text-4xl lg:text-6xl font-semibold text-cool-gray-90 mb-10">
+        <h1 className="text-4xl lg:text-6xl font-semibold text-cool-gray-90 px-4 mb-10">
           Your picture-perfect moments
           {' '}
           <br className="hidden sm:flex" />

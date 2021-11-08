@@ -3,7 +3,7 @@
 	{
 		"title": {"line1": "Guarda archivos", "line2": "de forma segura"},
 		"subtitle": {"line1": "Internxt Drive es un servicio de almacenamiento", "line2": " en la nube basado en la privacidad y seguridad"},
-		"cta1": "Consigue 2GB",
+		"cta1": "Consigue hasta 10GB",
 		"cta1detail": "gratis",
 		"cta2": {"mobile": "Obtener App", "desktop": "Descargar"}
 	},
@@ -24,7 +24,7 @@
 	},
 	"GetStartedSection":
 	{
-		"title": {"line1": "Empieza ahora y", "line2": "consige 2GB gratis"},
+		"title": {"line1": "Empieza ahora y", "line2": "consige hasta 10GB gratis"},
 		"subtitle": {"line1": "Nuestros clientes estan muy contentos con Internxt Drive, pero", "line2": "estan más contentos sabiendo que es totalmente privado."},
 		"cta1": "Empezar ahora"
 	}

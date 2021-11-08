@@ -1,0 +1,76 @@
+{
+	"HeroSection":
+	{
+		"title": "Privacy",
+		"subtitle": {
+			"line1": "Privacy is a fundamental human right. At Internxt we believe that any kind of product",
+			"line2": "should be designed with privacy in it’s core. What you share from your devices and",
+			"line3": "who you share it with should be up to you. We design and develop products that",
+			"line4": "protects your privacy and puts you back in control over your information."
+		},
+		"cta": "Watch the video"
+	},
+	"ManifestoSection":
+	{
+		"section1": {
+			"title": {
+				"line1": "Why privacy is",
+				"line2": "so important."
+			},
+			"subtitle": {
+				"line1": "Today the Internet is controlled by technology giants that offer services and products that",
+				"line2": "are a means to an end. Services that have become essential in our lives and are used to",
+				"line3": "collect data from users to better profile them, as they really live off advertising.",
+				"line4": "Privacy should not have such a high cost.",
+				"line5": "We believe in a more ethic internet, where the user privacy is at its core."
+			},
+			"signature": "Fran Villalba, Internxt CEO"
+		},
+		"section2": {
+			"title": {
+				"line1": "How we ensure",
+				"line2": "user privacy."
+			},
+			"subtitle": {
+				"line1": "We take privacy and security very seriously, thats why we have a stack of technologies",
+				"line2": "and protocols to always ensure that your data remains safe and private."
+			},
+			"square1": {
+				"title": "Military-grade encription.",
+				"description": "All the data you store in your Internxt account is encrypted with AES-256. This means that the most powerfull processor in the world would need twice the age of the universe to decrypt a small file."
+			},
+			"square2": {
+				"title": "Zero-knowledge technology.",
+				"description": "We ensure that there is no point in time where files, photos, passwords or any kind of unencrypted data is visible to unauthorized users or servers."
+			},
+			"square3": {
+				"title": "GDPR-compliant synchronization.",
+				"description": "Our commitment is to conform with all GDPR provisions such as privacy by design, the right to information and the right to be forgotten among many others and meet future provisions."
+			},
+			"square4": {
+				"title": "End-to-end encryption.",
+				"description": "Everything you store or transfer is encrypted before leaving your device, making impossible to decrypt without the user permission, even us can’t access your files, photos or passwords."
+			}
+		},
+		"section3": {
+			"title": {
+				"line1": "Apps designed to",
+				"line2": "protect your privacy."
+			},
+			"subtitle": {
+				"line1": "When you use free products from big technology companies the price is your data.",
+				"line2": "Our products will never sell your data, even our free plans are on us."
+			},
+			"square1": {
+				"title": "Drive lets you choose what to store and share.",
+				"description": "Drive doesn’t access your personal data or files for ad purposes, instead is designed to give you back the control over your files and protect you from data collection and advertising companies.",
+				"cta": "Take back control over my files"
+			},
+			"square2": {
+				"title": "With Photos privacy is always on focus.",
+				"description": "Photos is designed and developed to help you keep a synced gallery of your most perfect moments and give you the control of who you want to share them.",
+				"cta": "Start syncing my photos"
+			}
+		}
+	}
+}

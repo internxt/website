@@ -40,11 +40,11 @@
 	},
 	"features": {
 		"enjoyForever": {
-			"enjoy": "Disfruta de",
+			"enjoyUpTo": "Disfruta de hasta",
 			"forFree": "gratis",
 			"forever": "para siempre"
 		},
-		"moneyBack": "30 días de garantía o devolución",
+		"moneyBack": "30 días de garantía o te devolvemos el dinero",
 		"encryptedFiles": "Guarda y comparte archivos encriptados",
 		"accessFromAnywhere": "Tus archivos en todos tus dispositivos",
 		"allServices": "Acceso a todos nuestros servicios"

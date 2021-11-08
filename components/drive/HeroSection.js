@@ -17,7 +17,7 @@ const HeroSection = ({
           INTERNXT DRIVE
         </h2>
 
-        <h1 className="text-4xl lg:text-6xl font-semibold text-cool-gray-90 mb-10">
+        <h1 className="text-4xl lg:text-6xl font-semibold text-cool-gray-90 px-4 mb-10">
           The safest cloud storage for all
           {' '}
           <br className="hidden sm:flex" />

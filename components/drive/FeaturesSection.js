@@ -1,6 +1,9 @@
+/* eslint-disable max-len */
 import React from 'react';
+import Link from 'next/link';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
+import { UilAngleRightB } from '@iconscout/react-unicons';
 import DownloadComponent from './DownloadComponent';
 import * as anim from '../../public/js/anim';
 
@@ -324,6 +327,68 @@ const FeaturesSection = ({
           device={device}
           download={download}
         />
+      </div>
+
+      <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-10 lg:px-0">
+        <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">
+          All your files.
+          <br />
+          Secure and private.
+        </h3>
+
+        <p className="text-base text-cool-gray-80 mb-6">
+          Privacy and security are our core, we don’t run our business on data or advertising,
+          {' '}
+          <br className="hidden sm:flex" />
+          but on trust. We respect your rights and build amazing tools around them, not against.
+        </p>
+
+        <Link href="/privacy" locale={lang}>
+          <a className="flex flex-row items-center space-x-1 text-base text-blue-50 mb-32">
+            <span>Our commitment in privacy</span>
+            <UilAngleRightB className="w-4 h-4" />
+          </a>
+        </Link>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-20 lg:gap-48 text-center">
+
+          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
+            <h4 className="text-2xl font-semibold mb-4">
+              Military-grade encription.
+            </h4>
+            <h5 className="text-base text-cool-gray-80">
+              We take your privacy very seriously, that’s why your photos are encripted so only you can access your photos.
+            </h5>
+          </div>
+
+          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
+            <h4 className="text-2xl font-semibold mb-4">
+              Zero-knowledge technology.
+            </h4>
+            <h5 className="text-base text-cool-gray-80">
+              We never store or transmit files, user passwords or encryption keys in an unencrypted or unhashed form.
+            </h5>
+          </div>
+
+          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
+            <h4 className="text-2xl font-semibold mb-4">
+              Privacy by design.
+            </h4>
+            <h5 className="text-base text-cool-gray-80">
+              We develop our products with the user in mind, and it’s privacy is a must in the data driven world we live in.
+            </h5>
+          </div>
+
+          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
+            <h4 className="text-2xl font-semibold mb-4">
+              Secure from the core
+            </h4>
+            <h5 className="text-base text-cool-gray-80">
+              As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers.
+            </h5>
+          </div>
+
+        </div>
       </div>
 
     </div>

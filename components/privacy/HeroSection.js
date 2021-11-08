@@ -3,47 +3,45 @@ import { UilPlayCircle } from '@iconscout/react-unicons';
 import styles from './HeroSection.module.scss';
 
 const HeroSection = ({
-  textContent,
-  device,
-  lang
+  textContent
 }) => (
-  <section className="relative flex flex-col w-full pt-32 bg-cool-gray-100">
+  <section className="relative flex flex-col w-full pt-32 bg-cool-gray-100 overflow-hidden">
     <div className="flex flex-col items-center py-20 lg:py-40 z-10">
 
       {/* Main title */}
       <div className="text-center px-10">
 
         <h1 className="text-6xl lg:text-7xl font-semibold text-white mb-10">
-          Privacy
+          {textContent.title}
         </h1>
 
         <h2 className="text-base font-normal text-white mb-10">
-          Privacy is a fundamental human right. At Internxt we believe that any kind of product
+          {textContent.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
-          should be designed with privacy in it’s core. What you share from your devices and
+          {textContent.subtitle.line2}
           {' '}
           <br className="hidden sm:flex" />
-          who you share it with should be up to you. We design and develop products that
+          {textContent.subtitle.line3}
           {' '}
           <br className="hidden sm:flex" />
-          protects your privacy and puts you back in control over your information.
+          {textContent.subtitle.line4}
         </h2>
 
         <a
           className="flex flex-row space-x-2 items-center justify-center text-blue-50"
-          href=""
+          href="https://youtu.be/SlU5zQCM1Lk"
           target="_blank"
           rel="noreferrer"
         >
-          <span>Watch the movie</span>
+          <span>{textContent.cta}</span>
           <UilPlayCircle className="w-5 h-5" />
         </a>
 
       </div>
 
     </div>
-    <div className={`absolute -top-4 left-0 w-full h-full ${styles.neonBlur} pointer-events-none filter blur-lg`} />
+    <div className={`absolute top-0 left-0 w-full h-full ${styles.neonBlur} pointer-events-none filter blur-lg transform scale-110 origin-center`} />
 
   </section>
 );

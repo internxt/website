@@ -146,7 +146,7 @@ export default function Navbar({
 
           </div>
 
-          {/* Links */}
+          {/* Desktop links */}
           <div className="links">
             <div className="hidden lg:inline-flex space-x-3">
 
@@ -163,7 +163,7 @@ export default function Navbar({
                   {({ open }) => (
                     <>
                       <Popover.Button>
-                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${light ? 'text-white hover:text-cool-gray-20 hover:bg-cool-gray-90' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && light) ? 'bg-cool-gray-90 hover:bg-cool-gray-90 text-cool-gray-20' : ''} ${(open && !light) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
+                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${light ? 'text-white bg-white bg-opacity-0 hover:text-cool-gray-20 hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && light) ? 'bg-white bg-opacity-10 hover:bg-opacity-10 text-cool-gray-20' : ''} ${(open && !light) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
                           <span>{textContent.links.products}</span>
                           <UilAngleDown className={`w-6 h-6 transition duration-150 ease-in-out transform translate-y-px ${open ? 'text-cool-gray-30' : 'text-cool-gray-20'}`} />
                         </span>
@@ -178,13 +178,13 @@ export default function Navbar({
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 -translate-y-1"
                       >
-                        <Popover.Panel className={`absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 ${light ? 'bg-cool-gray-90 border-white' : 'bg-white border-black'} rounded-xl shadow-subtle border border-opacity-5 overflow-hidden`}>
+                        <Popover.Panel className="absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 bg-white border-black rounded-xl shadow-subtle border border-opacity-5 overflow-hidden">
 
                           <div className="relative grid gap-0 lg:grid-cols-1">
 
                             <Popover.Button>
                               <Link href="/drive" locale={lang}>
-                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium ${light ? 'text-white hover:bg-cool-gray-80' : 'text-cool-gray-80 hover:bg-cool-gray-5'}`}>
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${light ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
                                   {textContent.products.drive}
                                 </a>
                               </Link>
@@ -192,14 +192,14 @@ export default function Navbar({
 
                             <Popover.Button>
                               <Link href="/photos" locale={lang}>
-                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium ${light ? 'text-white hover:bg-cool-gray-80' : 'text-cool-gray-80 hover:bg-cool-gray-5'}`}>
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${light ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
                                   {textContent.products.photos}
                                 </a>
                               </Link>
                             </Popover.Button>
 
                             <Popover.Button>
-                              <a className={`py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium ${light ? 'text-cool-gray-60' : 'text-cool-gray-30'}`}>
+                              <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30">
                                 <span>{textContent.products.send}</span>
                                 <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
                               </a>
