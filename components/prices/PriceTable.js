@@ -25,7 +25,7 @@ const PriceTable = ({
     individuals: {
       free: {
         stripeID: '2GB',
-        storage: '10GB',
+        storage: '2GB',
         price: {
           1: '0',
           6: '0',
