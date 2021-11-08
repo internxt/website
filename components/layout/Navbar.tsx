@@ -139,7 +139,7 @@ export default function Navbar({
             {/* Logo */}
             <Link href="/" locale={lang}>
               <a className="flex flex-shrink-0">
-                <img loading="lazy" className="select-none" src="../../logos/internxt/internxt.svg" alt="Internxt logo" />
+                <img loading="lazy" className="select-none" src="../../logos/internxt/cool-gray-90.svg" alt="Internxt logo" />
               </a>
             </Link>
 
@@ -162,7 +162,7 @@ export default function Navbar({
                   {({ open }) => (
                     <>
                       <Popover.Button>
-                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium text-cool-gray-70 rounded-lg hover:bg-cool-gray-5 ${open ? 'bg-cool-gray-10 hover:bg-cool-gray-10' : ''}`}>
+                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium text-cool-gray-70 rounded-lg hover:bg-cool-gray-5 hover:text-cool-gray-90 ${open ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
                           <span>{textContent.links.products}</span>
                           <UilAngleDown className={`w-6 h-6 transition duration-150 ease-in-out transform translate-y-px ${open ? 'text-cool-gray-30' : 'text-cool-gray-20'}`} />
                         </span>
@@ -215,13 +215,13 @@ export default function Navbar({
               </div>
 
               <Link href="/privacy" locale={lang}>
-                <a className="whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out text-neutral-700 focus:text-neutral-80 font-medium">
+                <a className="whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out text-cool-gray-70 hover:text-cool-gray-90 text-base font-medium">
                   {textContent.links.privacy}
                 </a>
               </Link>
 
               <Link href="/about" locale={lang}>
-                <a className="whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out text-neutral-700 focus:text-neutral-80 font-medium">
+                <a className="whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out text-cool-gray-70 hover:text-cool-gray-90 text-base font-medium">
                   {textContent.links.about}
                 </a>
               </Link>

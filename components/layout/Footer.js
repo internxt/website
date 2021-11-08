@@ -73,7 +73,7 @@ export default function Footer({
               name="fields[email]"
               type="email"
               placeholder={`${textContent.NewsletterSection.input}`}
-              className={`flex flex-row w-full md:w-64 h-auto px-4 py-2 outline-none rounded-lg ${darkMode ? 'bg-cool-gray-90 border-cool-gray-70 focus:border-blue-60' : 'bg-white border-cool-gray-20 focus:border-blue-50'} border-2 focus:ring-3 focus:ring-opacity-20 focus:ring-blue-60 transition-all duration-150 text-left appearance-none mb-2`}
+              className={`flex flex-row w-full md:w-64 h-auto px-4 py-2 outline-none rounded-lg ${darkMode ? 'bg-cool-gray-90 border-cool-gray-70 focus:border-blue-60 focus:ring-opacity-30' : 'bg-white border-cool-gray-20 focus:border-blue-50 focus:ring-opacity-20'} border focus:ring-2 focus:ring-blue-60 transition-all duration-150 text-left appearance-none mb-2`}
               required
             />
             <input
@@ -112,16 +112,14 @@ export default function Footer({
                       <a>{textContent.FooterSection.sections.products.photos}</a>
                     </Link>
 
-                    <Link href="" locale={lang}>
-                      <div className="flex flex-row items-center text-cool-gray-60">
-                        <div>
-                          {textContent.FooterSection.sections.products.send}
-                        </div>
-                        <div className="text-orange-50 text-supporting-2 whitespace-nowrap ml-3 pointer-events-none">
-                          {textContent.FooterSection.comingSoon}
-                        </div>
+                    <a className={`flex flex-row items-center ${darkMode ? 'text-cool-gray-60' : 'text-cool-gray-30'}`}>
+                      <div>
+                        {textContent.FooterSection.sections.products.send}
                       </div>
-                    </Link>
+                      <div className="text-orange-50 text-supporting-2 whitespace-nowrap ml-3 mt-0.5 pointer-events-none">
+                        {textContent.FooterSection.comingSoon}
+                      </div>
+                    </a>
 
                   </div>
                 </div>
@@ -395,7 +393,8 @@ export default function Footer({
         </footer>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="500" className={`cookies ${styles.cookiesBlur} ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 left-0 sm:bottom-8 sm:left-8 z-50 p-4 sm:p-6 bg-cool-gray-5 sm:rounded-lg w-full sm:max-w-xs justify-between ring-1 ring-cool-gray-10 shadow-subtle`}>
+      {/* Cookies modal */}
+      <div data-aos="fade-up" data-aos-duration="350" data-aos-offset="500" className={`${styles.cookiesBgFallback} ${consentCookie ? 'hidden' : 'flex'} fixed bottom-0 left-0 sm:bottom-8 sm:left-8 z-50 p-4 sm:p-6 bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg sm:rounded-lg w-full sm:max-w-xs justify-between border border-black border-opacity-5 shadow-2xl`}>
         <div className="flex flex-row sm:flex-col items-center justify-between w-full space-x-4 sm:space-y-8 sm:space-x-0">
 
           <div className="flex flex-col space-y-2">
@@ -412,7 +411,7 @@ export default function Footer({
               <button
                 type="button"
                 onClick={handleAcceptCookies}
-                className="flex justify-center items-center h-10 p-0 w-full sm:px-4 sm:py-2 border border-transparent rounded-lg text-base font-medium text-cool-gray-60 bg-cool-gray-10 active:bg-cool-gray-20 focus:outline-none transition-all duration-75 cursor-pointer"
+                className="flex justify-center items-center h-10 p-0 w-full sm:px-4 sm:py-2 border border-transparent rounded-lg text-base font-medium text-cool-gray-60 bg-black bg-opacity-5 active:bg-cool-gray-20 focus:outline-none transition-all duration-75 cursor-pointer"
               >
                 <span className="flex">{textContent.Cookies.close}</span>
               </button>

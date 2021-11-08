@@ -128,7 +128,7 @@ const PriceTable = ({
   };
 
   return (
-    <section className="bg-neutral-10">
+    <section className="bg-gradient-to-b from-white to-cool-gray-5">
 
       <div className="flex flex-col items-center">
         <h1 className="pt-36 px-4 text-center text-5xl">
@@ -138,10 +138,10 @@ const PriceTable = ({
           {individual ? `${contentText.changePlan.toBusiness}` : `${contentText.changePlan.toIndividuals}`}
         </button>
 
-        <div className="flex flex-row p-0.5 text-sm bg-neutral-20 rounded-lg">
-          <button type="button" onClick={() => { setBillingFrequency(1); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`); }} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>{contentText.billingFrequency.monthly}</button>
-          <button type="button" onClick={() => { setBillingFrequency(12); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`); }} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'}`}>{contentText.billingFrequency.annually}</button>
-          <button type="button" onClick={() => { setBillingFrequency(-1); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Lifetime`); }} className={`py-1 px-6 rounded-lg font-medium ${billingFrequency === -1 ? 'text-neutral-700 shadow-sm bg-white' : 'text-neutral-80'} ${individual ? '' : 'hidden'}`}>{contentText.billingFrequency.lifetime}</button>
+        <div className="flex flex-row p-0.5 text-sm bg-cool-gray-10 rounded-lg">
+          <button type="button" onClick={() => { setBillingFrequency(1); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`); }} className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'}`}>{contentText.billingFrequency.monthly}</button>
+          <button type="button" onClick={() => { setBillingFrequency(12); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`); }} className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'}`}>{contentText.billingFrequency.annually}</button>
+          <button type="button" onClick={() => { setBillingFrequency(-1); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Lifetime`); }} className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === -1 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'} ${individual ? '' : 'hidden'}`}>{contentText.billingFrequency.lifetime}</button>
         </div>
 
         <Transition
