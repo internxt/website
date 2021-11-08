@@ -9,6 +9,7 @@ export default function Navbar({
   textContent,
   lang,
   cta,
+  light,
   fixed
 }) {
   const [menuState, setMenuState] = React.useState(false);
@@ -24,7 +25,7 @@ export default function Navbar({
 
   return (
 
-    <section className={`flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-blur-none ${styles.nabvarBgFallback} bg-opacity-0 ${scrolled ? 'bg-opacity-95 border-opacity-5 backdrop-blur-lg' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
+    <section className={`flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-blur-none ${styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-95 border-opacity-5 backdrop-blur-lg' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
 
       <div className="content w-full">
 
@@ -34,7 +35,7 @@ export default function Navbar({
           <div className=" flex flex-row flex-grow flex-shrink-0 flex-1 justify-start items-center space-x-4 lg:space-x-0">
 
             <div className="flex lg:hidden">
-              <Hamburger label="Show menu" size={24} color="#253858" toggled={menuState} toggle={setMenuState} />
+              <Hamburger label="Show menu" size={24} color={light ? '#fff' : '#253858'} toggled={menuState} toggle={setMenuState} />
 
               {/* Mobile hamburger menu background */}
               <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${menuState ? 'opacity-100' : 'opacity-0'}`} />
@@ -139,7 +140,7 @@ export default function Navbar({
             {/* Logo */}
             <Link href="/" locale={lang}>
               <a className="flex flex-shrink-0">
-                <img loading="lazy" className="select-none" src="../../logos/internxt/cool-gray-90.svg" alt="Internxt logo" />
+                <img loading="lazy" className="select-none" src={`../../logos/internxt/${light ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
               </a>
             </Link>
 
@@ -150,7 +151,7 @@ export default function Navbar({
             <div className="hidden lg:inline-flex space-x-3">
 
               <Link href="/pricing" locale={lang}>
-                <a className="whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out text-cool-gray-70 hover:text-cool-gray-90 text-base font-medium">
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
                   {textContent.links.pricing}
                 </a>
               </Link>
@@ -162,7 +163,7 @@ export default function Navbar({
                   {({ open }) => (
                     <>
                       <Popover.Button>
-                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium text-cool-gray-70 rounded-lg hover:bg-cool-gray-5 hover:text-cool-gray-90 ${open ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
+                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${light ? 'text-white hover:text-cool-gray-20 hover:bg-cool-gray-90' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && light) ? 'bg-cool-gray-90 hover:bg-cool-gray-90 text-cool-gray-20' : ''} ${(open && !light) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
                           <span>{textContent.links.products}</span>
                           <UilAngleDown className={`w-6 h-6 transition duration-150 ease-in-out transform translate-y-px ${open ? 'text-cool-gray-30' : 'text-cool-gray-20'}`} />
                         </span>
@@ -177,13 +178,13 @@ export default function Navbar({
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 -translate-y-1"
                       >
-                        <Popover.Panel className="absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 bg-white rounded-xl shadow-subtle border border-black border-opacity-5 overflow-hidden">
+                        <Popover.Panel className={`absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 ${light ? 'bg-cool-gray-90 border-white' : 'bg-white border-black'} rounded-xl shadow-subtle border border-opacity-5 overflow-hidden`}>
 
                           <div className="relative grid gap-0 lg:grid-cols-1">
 
                             <Popover.Button>
                               <Link href="/drive" locale={lang}>
-                                <a className="py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 hover:bg-cool-gray-5">
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium ${light ? 'text-white hover:bg-cool-gray-80' : 'text-cool-gray-80 hover:bg-cool-gray-5'}`}>
                                   {textContent.products.drive}
                                 </a>
                               </Link>
@@ -191,14 +192,14 @@ export default function Navbar({
 
                             <Popover.Button>
                               <Link href="/photos" locale={lang}>
-                                <a className="py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 hover:bg-cool-gray-5">
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium ${light ? 'text-white hover:bg-cool-gray-80' : 'text-cool-gray-80 hover:bg-cool-gray-5'}`}>
                                   {textContent.products.photos}
                                 </a>
                               </Link>
                             </Popover.Button>
 
                             <Popover.Button>
-                              <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30">
+                              <a className={`py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium ${light ? 'text-cool-gray-60' : 'text-cool-gray-30'}`}>
                                 <span>{textContent.products.send}</span>
                                 <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
                               </a>
@@ -215,13 +216,13 @@ export default function Navbar({
               </div>
 
               <Link href="/privacy" locale={lang}>
-                <a className="whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out text-cool-gray-70 hover:text-cool-gray-90 text-base font-medium">
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
                   {textContent.links.privacy}
                 </a>
               </Link>
 
               <Link href="/about" locale={lang}>
-                <a className="whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out text-cool-gray-70 hover:text-cool-gray-90 text-base font-medium">
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
                   {textContent.links.about}
                 </a>
               </Link>
@@ -233,7 +234,7 @@ export default function Navbar({
           {/* Login and CTA */}
           <div className="flex flex-row flex-grow flex-shrink-0 flex-1 justify-end items-center">
 
-            <a href="https://drive.internxt.com/login" className="hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 text-blue-60 focus:text-blue-70 text-sm font-medium">
+            <a href="https://drive.internxt.com/login" className={`hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 ${light ? 'text-white focus:opacity-80' : 'text-blue-60 focus:text-blue-70'} text-sm font-medium`}>
               {textContent.links.login}
             </a>
 
@@ -242,7 +243,7 @@ export default function Navbar({
                 href="https://drive.internxt.com/new"
                 target="_blank"
                 rel="noreferrer"
-                className="flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
+                className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${light ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10' : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'} focus:outline-none transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{textContent.links.getStarted}</p>
               </a>
