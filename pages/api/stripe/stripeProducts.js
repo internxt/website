@@ -114,7 +114,7 @@ const STRIPE_PRODUCT = {
         metadata: {
           member_tier: 'lifetime',
           lifetime_tier: 'lifetime_1tb',
-          maxSpaceBytes: bytes('10tb'),
+          maxSpaceBytes: bytes('1tb'),
           name: 'drive_1tb_lifetime',
           planType: 'one_time'
         }
