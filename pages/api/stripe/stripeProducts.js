@@ -323,6 +323,12 @@ const STRIPE_PRODUCT = {
 function getStripeProduct(product) {
   const selectedProduct = STRIPE_PRODUCT[product];
   selectedProduct.session.line_items[0].price = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+  if (selectedProduct.mode === 'subscription') {
+    selectedProduct.subscription_data = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+  } else {
+    const priceId = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+    selectedProduct.session.payment_intent_data.metadata = { price_id: priceId };
+  }
   return selectedProduct;
 }
 
