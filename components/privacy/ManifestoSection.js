@@ -50,7 +50,7 @@ const ManifestoSection = ({
     </div>
 
     {/* How we ensure user privacy */}
-    <div className="flex flex-col items-center py-20 lg:pb-40 lg:pt-20 z-10">
+    <div className="flex flex-col items-center py-20 lg:pb-40 lg:pt-0 z-10">
 
       <div className="flex flex-col items-center text-center px-6">
 

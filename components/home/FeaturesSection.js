@@ -1,6 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { UilAngleRightB } from '@iconscout/react-unicons';
 import styles from './FeaturesSection.module.scss';
 
 const FeaturesSection = ({ textContent, lang }) => {
@@ -9,10 +11,12 @@ const FeaturesSection = ({ textContent, lang }) => {
   return (
     <section className="bg-neutral-10">
       <div className="content px-6 pb-24 flex flex-col">
-        <div className="flex flex-col items-center justify-center w-full text-center flex-shrink-0 py-20 md:py-24">
+        <div className="flex flex-col items-center justify-center w-full text-center flex-shrink-0 py-20 pt-24 md:py-24 md:pt-32">
+          {/*
           <h4 className="mb-1 text-base font-medium text-neutral-50">
             {textContent.eyebrow}
           </h4>
+          */}
           <h2 className="mb-6 text-4xl sm:text-5xl font-semibold">
             {textContent.title.line1}
             <br className="hidden sm:flex" />
@@ -24,16 +28,23 @@ const FeaturesSection = ({ textContent, lang }) => {
             <br className="hidden sm:inline-flex" />
             {' '}
             {textContent.subtitle.line2}
-            <br className="hidden sm:inline-flex" />
-            {' '}
-            {textContent.subtitle.line3}
           </h3>
-          <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="text-lg font-semibold sm:font-normal text-blue-60">
-            <div className="flex flex-row items-center">
-              {textContent.cta}
-              <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBoldBlue60.svg" draggable="false" alt="arrow right" />
-            </div>
-          </a>
+
+          <div className="flex flex-col items-center justify-center sm:flex-row space-y-2 sm:space-y-0 sm:space-x-10">
+            <Link href="/photos" lang={lang}>
+              <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-60">
+                <span>{textContent.cta.photos}</span>
+                <UilAngleRightB className="w-4 h-4" />
+              </a>
+            </Link>
+
+            <Link href="/drive" lang={lang}>
+              <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-60">
+                <span>{textContent.cta.drive}</span>
+                <UilAngleRightB className="w-4 h-4" />
+              </a>
+            </Link>
+          </div>
         </div>
 
         <div className="grid mx-auto grid-cols-2 grid-rows-1 gap-6 sm:gap-10 lg:p-10 max-w-5xl">

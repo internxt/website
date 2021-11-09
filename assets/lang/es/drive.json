@@ -88,10 +88,11 @@
 			}
 		},
 		"section5": {
-			"eyebrow": "NUEVO",
+			"eyebrow": "NUEVA CARACTERÍSTICA",
 			"title": {
-				"line1": "Resguarda lo",
-				"line2": "que te importa."
+				"line1": "Haz copia de",
+				"line2": "seguridad de",
+				"line3": "lo que importa."
 			},
 			"subtitle": {
 				"line1": "Ahora puedes guardar la última versión",

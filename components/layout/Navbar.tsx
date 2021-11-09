@@ -162,7 +162,7 @@ export default function Navbar({
                 <Popover className="relative">
                   {({ open }) => (
                     <>
-                      <Popover.Button>
+                      <Popover.Button className="outline-none">
                         <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${light ? 'text-white bg-white bg-opacity-0 hover:text-cool-gray-20 hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && light) ? 'bg-white bg-opacity-10 hover:bg-opacity-10 text-cool-gray-20' : ''} ${(open && !light) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
                           <span>{textContent.links.products}</span>
                           <UilAngleDown className={`w-6 h-6 transition duration-150 ease-in-out transform translate-y-px ${open ? 'text-cool-gray-30' : 'text-cool-gray-20'}`} />

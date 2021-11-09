@@ -42,10 +42,11 @@ const HeroSection = ({
 
       {/* Main title Mockup */}
       <div
-        className="hidden lg:flex py-72 rounded-xl bg-cool-gray-10 border border-cool-gray-20 mt-8 mb-12"
+        className="hidden lg:flex py-72 my-8 bg-no-repeat bg-cover bg-center-top"
         style={{
-          width: 884,
-          height: 505
+          backgroundImage: 'url(/images/drive/landing.webp)',
+          width: 929,
+          height: 617
         }}
       />
       {/*
