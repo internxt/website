@@ -49,7 +49,7 @@ export default function Navbar({
                       role="link"
                       tabIndex={0}
                       onClick={() => { setMenuState(false); }}
-                      className={`flex w-full px-8 py-3 transition duration-300 delay-100 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                      className={`outline-none flex w-full px-8 py-3 transition duration-300 delay-100 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
                     >
                       {textContent.links.pricing}
                     </a>
@@ -80,23 +80,21 @@ export default function Navbar({
                             <Disclosure.Panel className="flex flex-col py-3 text-cool-gray-80 mb-4">
 
                               <Link href="/drive" locale={lang}>
-                                <a className="flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
+                                <a role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
                                   {textContent.products.drive}
                                 </a>
                               </Link>
 
-                              <Link href="/drive" locale={lang}>
-                                <a className="flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
+                              <Link href="/photos" locale={lang}>
+                                <a role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
                                   {textContent.products.photos}
                                 </a>
                               </Link>
 
-                              <Link href="" locale={lang}>
-                                <a className="flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-40">
-                                  <span>{textContent.products.send}</span>
-                                  <span className="ml-3 text-sm text-orange-50 font-normal">{textContent.products.comingSoon}</span>
-                                </a>
-                              </Link>
+                              <a className="outline-none flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-40">
+                                <span>{textContent.products.send}</span>
+                                <span className="ml-3 text-sm text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                              </a>
 
                             </Disclosure.Panel>
 
@@ -112,7 +110,7 @@ export default function Navbar({
                       role="link"
                       tabIndex={0}
                       onClick={() => { setMenuState(false); }}
-                      className={`cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
                     >
                       {textContent.links.privacy}
                     </a>
@@ -123,13 +121,13 @@ export default function Navbar({
                       role="link"
                       tabIndex={0}
                       onClick={() => { setMenuState(false); }}
-                      className={`cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
                     >
                       {textContent.links.about}
                     </a>
                   </Link>
 
-                  <a onClick={() => { setMenuState(false); }} href="https://drive.internxt.com/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                  <a onClick={() => { setMenuState(false); }} tabIndex={0} href="https://drive.internxt.com/login" className={`outline-none flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
                     {textContent.links.login}
                   </a>
 

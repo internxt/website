@@ -290,6 +290,7 @@ module.exports = {
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       subtle: '0 32px 40px 0 rgba(18, 22, 25, 0.04)',
+      'subtle-hard': '0 32px 40px 0 rgba(18, 22, 25, 0.08)',
       none: 'none'
     },
     container: {},

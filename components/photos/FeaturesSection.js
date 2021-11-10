@@ -58,13 +58,21 @@ const FeaturesSection = ({
               {/* Keep items aligned to the left */}
               <div className="flex flex-col items-center lg:items-start">
                 <div
-                  className="bg-cool-gray-10 rounded-2xl border border-cool-gray-20 shadow-subtle"
+                  className="relative"
                   style={{
                     transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
-                    width: 272,
-                    height: 491
+                    width: 250,
+                    height: 505
                   }}
-                />
+                >
+                  <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
+                  <div
+                    className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
+                    style={{
+                      backgroundImage: 'url(/images/photos/mobile-photos-gallery-mockup.webp)'
+                    }}
+                  />
+                </div>
 
                 <div className="flex flex-col mt-24 px-10 lg:px-0">
                   <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6">
@@ -99,13 +107,19 @@ const FeaturesSection = ({
               </div>
             </div>
 
-            <div className="hidden lg:flex flex-col items-start">
+            <div
+              className="relative hidden lg:flex flex-col items-start"
+              style={{
+                transform: `translate(0px, -${anim.parallaxMinMax(percentage, -40, 24)}px)`,
+                width: 646,
+                height: 844
+              }}
+            >
+              <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
               <div
-                className="bg-cool-gray-10 rounded-2xl border border-cool-gray-20 shadow-subtle"
+                className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
                 style={{
-                  transform: `translate(0px, -${anim.parallaxMinMax(percentage, -40, 24)}px)`,
-                  width: 884,
-                  height: 884
+                  backgroundImage: 'url(/images/photos/photos-gallery-years-mockup.webp)',
                 }}
               />
             </div>
@@ -120,13 +134,20 @@ const FeaturesSection = ({
         renderLayer={(percentage) => (
           <>
 
-            <div className="hidden lg:flex flex-col items-end">
+            <div
+              className="relative hidden lg:flex flex-col w-full items-end"
+              style={{
+                transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
+                height: 844
+              }}
+            >
+              <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
               <div
-                className="bg-cool-gray-10 rounded-2xl border border-cool-gray-20 shadow-subtle"
+                className="absolute w-full h-full bg-no-repeat bg-cover bg-right-top"
                 style={{
-                  transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
-                  width: 884,
-                  height: 884
+                  backgroundImage: 'url(/images/photos/photos-preview-mockup.webp)',
+                  width: 646,
+                  height: 844
                 }}
               />
             </div>
@@ -161,19 +182,29 @@ const FeaturesSection = ({
               </div>
 
               <div
-                className="order-first lg:order-last bg-cool-gray-10 rounded-2xl border border-cool-gray-20 shadow-subtle"
+                className="relative order-first lg:order-last"
                 style={{
                   transform: `translate(0px, ${anim.parallaxMinMax(percentage, 40, 0)}px)`,
-                  width: 272,
-                  height: 491
+                  width: 250,
+                  height: 505
                 }}
-              />
+              >
+                <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
+                <div
+                  className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
+                  style={{
+                    backgroundImage: 'url(/images/photos/mobile-photos-share-mockup.webp)'
+                  }}
+                />
+              </div>
             </div>
 
           </>
         )}
       />
 
+      {/* Download links */}
+      {/*
       <div className="flex flex-col items-center w-full pb-10 lg:py-20 px-10 lg:px-0">
         <h3 className="text-3xl font-semibold text-center text-cool-gray-90 mb-12">
           {textContent.section4.title.line1}
@@ -182,7 +213,6 @@ const FeaturesSection = ({
           {textContent.section4.title.line2}
         </h3>
 
-        {/* Download links */}
         <DownloadComponent
           textContent={textContent.DownloadLinks}
           lang={lang}
@@ -190,6 +220,7 @@ const FeaturesSection = ({
           download={download}
         />
       </div>
+      */}
 
       <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-10 lg:px-0">
         <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">

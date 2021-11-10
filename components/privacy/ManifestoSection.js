@@ -119,23 +119,24 @@ const ManifestoSection = ({
 
         <h2 className="text-3xl lg:text-5xl font-semibold mb-10">
           {textContent.section3.title.line1}
-          <br />
+          {' '}
+          <br className="hidden sm:flex" />
           {textContent.section3.title.line2}
         </h2>
 
-        <h3 className="text-base font-normal px-6 mb-40">
+        <h3 className="text-base font-normal mb-40">
           {textContent.section3.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
           {textContent.section3.subtitle.line2}
         </h3>
 
-        <div className="grid grid-cols-1 grid-rows-2 gap-20 text-left">
+        <div className="flex flex-col space-y-20 lg:space-y-0 lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 text-left">
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-rows-1 gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
 
-            <div className="m-20 w-80 h-80">
-              <h4 className="text-2xl lg:text-4xl font-semibold mb-10">
+            <div className="mb-0 m-10 lg:mb-20 lg:m-20 w-auto lg:w-80 lg:h-80">
+              <h4 className="text-3xl lg:text-4xl font-semibold mb-10">
                 {textContent.section3.square1.title}
               </h4>
               <h5 className="text-base text-cool-gray-20 mb-4">
@@ -149,22 +150,31 @@ const ManifestoSection = ({
               </Link>
             </div>
 
-            <div className="relative lg:m-20 w-80 h-80">
+            <div className="relative mx-auto mt-16 lg:mx-20 lg:m-20 w-80 lg:h-80">
               <div
-                className="absolute -top-10 lg:top-5 left-16 lg:left-5 bg-cool-gray-80 rounded-3xl border border-cool-gray-70 shadow-subtle"
+                className="hidden lg:flex absolute shadow-subtle-hard bg-no-repeat bg-contain bg-center-top"
                 style={{
-                  width: 645,
-                  height: 430
+                  backgroundImage: 'url(/images/privacy/mobile-drive-ipad.webp)',
+                  width: 400,
+                  height: 400
+                }}
+              />
+              <div
+                className="flex lg:hidden mx-auto shadow-subtle-hard bg-no-repeat bg-contain bg-center-top"
+                style={{
+                  backgroundImage: 'url(/images/privacy/mobile-drive-list-mockup.webp)',
+                  width: 240,
+                  height: 300
                 }}
               />
             </div>
 
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-rows-1 gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0 items-start justify-start bg-cool-gray-90 rounded-2xl overflow-hidden">
 
-            <div className="m-20 w-80 h-80">
-              <h4 className="text-2xl lg:text-4xl font-semibold mb-10">
+            <div className="mb-0 m-10 lg:mb-20 lg:m-20 w-auto lg:w-80 lg:h-80">
+              <h4 className="text-3xl lg:text-4xl font-semibold mb-10">
                 {textContent.section3.square2.title}
               </h4>
               <h5 className="text-base text-cool-gray-20 mb-4">
@@ -178,12 +188,21 @@ const ManifestoSection = ({
               </Link>
             </div>
 
-            <div className="relative lg:m-20 w-80 h-80">
+            <div className="relative mx-auto mt-16 lg:mx-20 lg:m-20 w-80 lg:h-80">
               <div
-                className="absolute -top-10 lg:top-5 left-16 lg:left-5 bg-cool-gray-80 rounded-3xl border border-cool-gray-70 shadow-subtle"
+                className="hidden lg:flex absolute shadow-subtle-hard bg-no-repeat bg-contain bg-center-top"
                 style={{
+                  backgroundImage: 'url(/images/privacy/mobile-photos-preview-mockup.webp)',
                   width: 320,
-                  height: 600
+                  height: 400
+                }}
+              />
+              <div
+                className="flex lg:hidden mx-auto shadow-subtle-hard bg-no-repeat bg-contain bg-center-top"
+                style={{
+                  backgroundImage: 'url(/images/privacy/mobile-photos-preview-mockup.webp)',
+                  width: 240,
+                  height: 300
                 }}
               />
             </div>

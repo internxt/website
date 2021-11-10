@@ -90,17 +90,15 @@
 		"section5": {
 			"eyebrow": "NUEVA CARACTERÍSTICA",
 			"title": {
-				"line1": "Haz copia de",
-				"line2": "seguridad de",
-				"line3": "lo que importa."
+				"line1": "Mantén una copia",
+				"line2": "de lo que importa."
 			},
 			"subtitle": {
 				"line1": "Ahora puedes guardar la última versión",
-				"line2": "de ese proyecto súper importante en",
-				"line3": "el que en el que estás trabajando,",
-				"line4": "tu carpeta de documentos o tus deberes",
-				"line5": "de la universidad, todos ellos a",
-				"line6": "salvo en tu Internxt Drive."
+				"line2": "de ese proyecto súper importante en el",
+				"line3": "que estás trabajando, tu carpeta de",
+				"line4": "documentos o tus trabajos de la uni,",
+				"line5": "todos a salvo en la nube."
 			}
 		},
 		"section6": {

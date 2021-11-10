@@ -11,6 +11,7 @@
 			"line2": "un solo lugar. Con Internxt Photos centrado en la privacidad",
 			"line3": "y la seguridad, tus fotos son tuyas y solo tuyas."
 		},
+		"availableSoon": "Disponible muy pronto",
 		"DownloadLinks": {
 			"or": "o",
 			"downloadFor": "Descargar para",
@@ -52,7 +53,7 @@
 		},
 		"section3": {
 			"title": {
-				"line1": "Compearte tus",
+				"line1": "Comparte tus",
 				"line2": "fotos con tu",
 				"line3": "familia y amigos."
 			},

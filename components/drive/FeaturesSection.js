@@ -189,14 +189,19 @@ const FeaturesSection = ({
               </div>
             </div>
 
-            <div className="hidden lg:flex flex-col items-start">
+            <div
+              className="relative hidden lg:flex flex-col items-start"
+              style={{
+                transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
+                width: 1253,
+                height: 847
+              }}
+            >
+              <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
               <div
-                className="bg-no-repeat bg-cover bg-right-top"
+                className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
                 style={{
-                  transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
                   backgroundImage: 'url(/images/drive/web-drive-list.webp)',
-                  width: 1253,
-                  height: 847
                 }}
               />
             </div>
@@ -215,7 +220,7 @@ const FeaturesSection = ({
               <div
                 className="rounded-lg shadow-subtle bg-no-repeat bg-cover bg-right-top"
                 style={{
-                  transform: `translate(0px, ${anim.parallaxMinMax(percentage, 0, -40)}px)`,
+                  transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
                   backgroundImage: 'url(/images/drive/web-work-share.webp)',
                   width: 935,
                   height: 580

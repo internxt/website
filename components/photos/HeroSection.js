@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import DownloadComponent from './DownloadComponent';
 
@@ -24,7 +25,7 @@ const HeroSection = ({
           {textContent.title.line2}
         </h1>
 
-        <h3 className="text-base font-normal text-cool-gray-80 mb-10 lg:mb-20">
+        <h3 className="text-base font-normal text-cool-gray-80 mb-10">
           {textContent.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
@@ -34,9 +35,14 @@ const HeroSection = ({
           {textContent.subtitle.line3}
         </h3>
 
+        <h3 className="text-base font-normal text-orange-50">
+          {textContent.availableSoon}
+        </h3>
+
       </div>
 
       {/* Main title Mockup */}
+      {/*
       <div
         className="hidden lg:flex py-72 rounded-xl bg-cool-gray-10 border border-cool-gray-20 mt-8 mb-12"
         style={{
@@ -44,6 +50,7 @@ const HeroSection = ({
           height: 505
         }}
       />
+      */}
       {/*
       <div
         className="flex lg:hidden bg-cool-gray-10 rounded-2xl border border-cool-gray-20 shadow-subtle mb-12"
@@ -55,12 +62,14 @@ const HeroSection = ({
       */}
 
       {/* Download links */}
+      {/*
       <DownloadComponent
         textContent={textContent.DownloadLinks}
         lang={lang}
         device={device}
         download={download}
       />
+      */}
 
     </div>
 
