@@ -308,30 +308,32 @@ const STRIPE_PRODUCT = {
           quantity: 1,
         }
       ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 9.99,
+      type: 'recurrent',
+      price_id: 'plan_F7ptyrVRmyL8Gn',
+      quantity: 1,
+      product: 'prod_EUaUAiDCK1Etz1',
     }
   },
-  properties: {
-    currency: 'EUR',
-    revenue: 9.99,
-    type: 'recurrent',
-    price_id: 'plan_F7ptyrVRmyL8Gn',
-    quantity: 1,
-    product: 'prod_EUaUAiDCK1Etz1',
-  }
 };
-
-export function getStripeProduct(product) {
-  const selectedProduct = STRIPE_PRODUCT[product];
-  selectedProduct.session.line_items[0].price = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
-  if (selectedProduct.mode === 'subscription') {
-    selectedProduct.subscription_data = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
-  } else {
-    const priceId = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
-    selectedProduct.session.payment_intent_data.metadata = { price_id: priceId };
-  }
-  return selectedProduct;
-}
 
 export function getProductProperties(product) {
   return STRIPE_PRODUCT[product].properties;
+}
+
+export function getStripeProduct(opt) {
+  const { product, anonymousId, impactId } = opt;
+  const selectedProduct = STRIPE_PRODUCT[product];
+  selectedProduct.session.line_items[0].price = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+  const productProperties = getProductProperties(product);
+  selectedProduct.session.metadata = productProperties;
+  Object.assign(selectedProduct.session.metadata, {
+    anonymousId,
+    source: 'website',
+    impact_id: impactId
+  });
+  return selectedProduct;
 }

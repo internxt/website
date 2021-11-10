@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import Layout from '../../components/layout/Layout';
-import { getProductProperties } from '../api/stripe/stripeProducts';
 
 export default function Success({
   email,
@@ -11,22 +10,7 @@ export default function Success({
   useEffect(() => {
     setTimeout(() => {
     }, 5000);
-
-    if (email && token) {
-      const urlParams = new URLSearchParams(window.location.search);
-      const properties = getProductProperties(urlParams.get('product'));
-      const impact = sessionStorage.getItem('irclickid') ? 'impact' : null;
-      const other = 'organic';
-      const affiliate = [impact, other].find((o) => typeof o !== 'undefined' && o !== null);
-      properties.affiliate = affiliate;
-      window.analytics.track('Order Completed', properties, () => {
-        setTimeout(() => {
-          window.location = redirectUrl;
-        }, 5000);
-      });
-    } else {
-      window.location = redirectUrl;
-    }
+    window.location = redirectUrl;
   });
   return (
     <Layout

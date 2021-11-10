@@ -11,7 +11,7 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).send({ error: 'Unknown origin' });
   }
 
-  const PRODUCT = getStripeProduct(req.body.product);
+  const PRODUCT = getStripeProduct(req.body);
   const CANCEL_URL = req.body.cancelUrl;
 
   const successUrl = `${req.headers.origin}/payment/success?product=${req.body.product}&sid={CHECKOUT_SESSION_ID}`;

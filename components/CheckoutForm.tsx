@@ -11,6 +11,8 @@ interface CheckoutFormProps {
 
 export async function redirectToCheckoutAction(stripeObject) {
   // Create a Checkout Session.
+  const anonymousId = JSON.parse(window.localStorage.getItem('ajs_anonymous_id'));
+  const impactId = window.sessionStorage.getItem('irclickid');
   const response = await fetch('/api/stripe/session', {
     method: 'post',
     headers: {
@@ -18,6 +20,8 @@ export async function redirectToCheckoutAction(stripeObject) {
     },
     body: JSON.stringify({
       ...stripeObject,
+      anonymousId,
+      impactId,
       amount: 1,
     })
   });
