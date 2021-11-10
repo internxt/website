@@ -92,8 +92,7 @@ const FeaturesSection = ({ textContent, lang }) => {
 
           <div data-aos="fade-up" data-aos-duration="500" className="card-soft col-span-2 sm:col-span-1 flex flex-col justify-self-start md:flex-1 p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8 z-20">
             <div className="flex flex-col">
-              <img loading="lazy" className="hidden sm:flex lg:max-w-xs mb-6" src="/images/home/privacy-c-2.webp" draggable="false" alt="privacy green lock icon" />
-              <img loading="lazy" className="flex sm:hidden h-16 w-12 sm:h-24 sm:w-20 mb-2 sm:mb-6" src="/icons/lock.svg" draggable="false" alt="privacy green lock icon" />
+              <img loading="lazy" className="flex lg:max-w-xs mb-6" src="/images/home/privacy-shield.webp" draggable="false" alt="privacy green shield icon" />
             </div>
             <div className="flex flex-col text-left space-y-6">
               <h3 className="text-4xl font-semibold">
