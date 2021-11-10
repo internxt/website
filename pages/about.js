@@ -27,6 +27,7 @@ const AboutUs = ({
         textContent={navbarLang}
         lang={lang}
         cta={['default']}
+        fixed
       />
 
       <HeroSection

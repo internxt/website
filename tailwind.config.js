@@ -16,6 +16,19 @@ module.exports = {
       transparentw: 'rgba(255,255,255,0)',
       current: 'currentColor',
       black: '#000000',
+      'cool-gray': {
+        5: '#F9FAFC',
+        10: '#F2F4F8',
+        20: '#DDE1E6',
+        30: '#C1C7CD',
+        40: '#A2A9B0',
+        50: '#878D96',
+        60: '#697077',
+        70: '#4D5358',
+        80: '#343A3F',
+        90: '#21272A',
+        100: '#121619'
+      },
       gray: {
         10: '#f4f4f4',
         20: '#e0e0e0',
@@ -256,11 +269,14 @@ module.exports = {
       xl: '0.75rem',
       '2xl': '1rem',
       '3xl': '1.5rem',
+      '4xl': '2.75rem',
+      '5xl': '4rem',
       full: '9999px'
     },
     borderWidth: {
       DEFAULT: '1px',
       0: '0px',
+      px: '1px',
       2: '2px',
       4: '4px',
       8: '8px'
@@ -273,6 +289,8 @@ module.exports = {
       xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+      subtle: '0 32px 40px 0 rgba(18, 22, 25, 0.04)',
+      'subtle-hard': '0 32px 40px 0 rgba(18, 22, 25, 0.08)',
       none: 'none'
     },
     container: {},
@@ -318,6 +336,8 @@ module.exports = {
       ]
     },
     fontSize: {
+      'supporting-1': ['0.5rem', { lineHeight: '0.625rem' }],
+      'supporting-2': ['0.625rem', { lineHeight: '0.75rem' }],
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
       base: ['1rem', { lineHeight: '1.5rem' }],
@@ -659,6 +679,7 @@ module.exports = {
       0: '0px',
       1: '1px',
       2: '2px',
+      3: '3px',
       4: '4px',
       8: '8px'
     },
@@ -671,6 +692,7 @@ module.exports = {
       0: '0px',
       1: '1px',
       2: '2px',
+      3: '3px',
       4: '4px',
       8: '8px'
     },
@@ -744,6 +766,7 @@ module.exports = {
       'top-left': 'top left'
     },
     transitionDelay: {
+      50: '50ms',
       75: '75ms',
       100: '100ms',
       150: '150ms',

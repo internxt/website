@@ -3,16 +3,25 @@
 	{
 		"title": {"line1": "Store your files", "line2": "in total privacy"},
 		"subtitle": {"line1": "Internxt Drive is a zero-knowledge file storage", "line2": "service based on best-in-class privacy and security"},
-		"cta1": "Get 2GB",
+		"cta1": "Get up to 10GB",
 		"cta1detail": "for free",
 		"cta2": {"mobile": "Get App", "desktop": "Download"}
 	},
 	"FeaturesSection":
 	{
 		"eyebrow": "INTERNXT DRIVE",
-		"title": {"line1": "The perfect place", "line2": "for all your files"},
-		"subtitle": {"line1": "Our products are based on your privacy and security.", "line2": "Internxt Drive is just the begining of a full family of", "line3": "products focused on you and your privacy."},
-		"cta": "Discover Internxt Drive",
+		"title": {
+			"line1": "The most secure cloud for",
+			"line2": "all your files and photos"
+		},
+		"subtitle": {
+			"line1": "Our products are based on your privacy and security. Drive and Photos are just",
+			"line2": "the begining of a full family of products focused on you and your privacy."
+		},
+		"cta": {
+			"drive": "Explore Drive",
+			"photos": "Discover Photos"
+		},
 		"feature1": {"title": {"line1": "Secure", "line2": "by design"}, "description": "Your files are encrypted before leaving your device, so only you can access your files, no tricks, no hidden things, just privacy, that’s Internxt.", "cta": "How zero-knowledge works"},
 		"feature2": {"title": {"line1": "Multi", "line2": "device"}, "description": "Access the whole family of apps adapted for all your devices to suit all your needs.", "cta": "Download apps"},
 		"feature3": {"title": {"line1": "Privacy, that's", "line2": "the question"}, "description": "Unlike other competitors, our business model is not based on ads, but on you. We don’t access or sell your data.", "cta": "Privacy at Internxt"}
@@ -24,7 +33,7 @@
 	},
 	"GetStartedSection":
 	{
-		"title": {"line1": "Get started and", "line2": "get 2GB for free"},
+		"title": {"line1": "Get started and", "line2": "get up to 10GB for free"},
 		"subtitle": {"line1": "Our clients are very happy with Internxt Drive, but", "line2": "they are happier knowing they are in total privacy."},
 		"cta1": "Get started"
 	}

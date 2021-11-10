@@ -1,29 +1,17 @@
 {
-    "products": "Productos",
-    "about": "Sobre nosotros",
-    "pricing": "Precios",
-    "login": "Iniciar sesión",
-    "getStarted": "Empezar ahora",
-    "checkout": "Reclamar oferta!",
-    "productsMenu" : {
-        "allProducts": "Ver todos los productos",
-        "web": {
-            "title": "Web",
-            "titleMenu": "Drive Web",
-            "description": "Accede a tus archivos sin salir del navegador",
-            "link": "Abrir Drive Web"
-        },
-        "desktop": {
-            "title": "Desktop",
-            "titleMenu": "Drive Desktop",
-            "description": "Sincroniza tu nube con tu ordenador",
-            "link": "Descargar Desktop app"
-        },
-        "mobile": {
-            "title": "Mobile",
-            "titleMenu": "Drive Mobile",
-            "description": "Todos tus archivos en la palma de tu mano",
-            "link": "Obtener app"
-        }
+    "links" : {
+        "products": "Productos",
+        "about": "Sobre nosotros",
+        "privacy": "Privacidad",
+        "pricing": "Precios",
+        "login": "Iniciar sesión",
+        "getStarted": "Empezar ahora",
+        "checkout": "Reclamar oferta!"
+    },
+    "products" : {
+        "drive": "Drive",
+        "photos": "Photos",
+        "send": "Send",
+        "comingSoon": "Próximamente"
     }
 }

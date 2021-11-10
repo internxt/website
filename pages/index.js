@@ -19,7 +19,7 @@ const Home = ({
   downloadUrl,
   deviceLang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   useEffect(() => {
     AOS.init();
@@ -29,21 +29,18 @@ const Home = ({
 
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home">
 
-      <div className="heroSectionHome">
+      <Navbar
+        textContent={navbarLang}
+        lang={deviceLang}
+        cta={['default']}
+        fixed
+      />
 
-        <Navbar
-          textContent={navbarLang}
-          lang={deviceLang}
-          cta={['default']}
-        />
-
-        <HeroSection
-          textContent={langJson.HeroSection}
-          download={downloadUrl}
-          lang={deviceLang}
-        />
-
-      </div>
+      <HeroSection
+        textContent={langJson.HeroSection}
+        download={downloadUrl}
+        lang={deviceLang}
+      />
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
@@ -64,7 +61,6 @@ const Home = ({
       <Footer
         textContent={footerLang}
         lang={deviceLang}
-        hideNewsletter={false}
       />
 
     </Layout>

@@ -1,29 +1,17 @@
 {
-    "products": "Products",
-    "about": "About us",
-    "pricing": "Pricing",
-    "login": "Log in",
-    "getStarted": "Get started",
-    "checkout": "Claim now!",
-    "productsMenu" : {
-        "allProducts": "Explore all products",
-        "web": {
-            "title": "Web",
-            "titleMenu": "Drive Web",
-            "description": "Manage your files without leaving the browser",
-            "link": "Launch Drive Web"
-        },
-        "desktop": {
-            "title": "Desktop",
-            "titleMenu": "Drive Desktop",
-            "description": "Sync your cloud with your computer",
-            "link": "Download Desktop app"
-        },
-        "mobile": {
-            "title": "Mobile",
-            "titleMenu": "Drive Mobile",
-            "description": "Access your files from your pocket",
-            "link": "Get app"
-        }
+    "links" : {
+        "products": "Products",
+        "about": "About us",
+        "privacy": "Privacy",
+        "pricing": "Pricing",
+        "login": "Log in",
+        "getStarted": "Get started",
+        "checkout": "Claim now!"
+    },
+    "products" : {
+        "drive": "Drive",
+        "photos": "Photos",
+        "send": "Send",
+        "comingSoon": "Coming soon"
     }
 }

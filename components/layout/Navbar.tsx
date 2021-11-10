@@ -1,46 +1,70 @@
 import React, { Fragment } from 'react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { Popover, Transition, Disclosure } from '@headlessui/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
-
-import { MinusIcon } from '@heroicons/react/solid';
+import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
 import styles from './Navbar.module.scss';
 
-export default function Navbar({ textContent, lang, cta }) {
-  const router = useRouter();
+export default function Navbar({
+  textContent,
+  lang,
+  cta,
+  light,
+  fixed
+}) {
   const [menuState, setMenuState] = React.useState(false);
-  const [navbarBG, setNavbarBG] = React.useState(true);
-  const handleScroll = () => {
-    (window.pageYOffset > 0) ? setNavbarBG(true) : setNavbarBG(false);
-  };
-  cta[0] ? cta[0] : (cta = ['default', null]);
+  const [scrolled, setScrolled] = React.useState(true);
+  const ctaAction = cta[0] ? cta : ['default', null];
+
+  const handleScroll = () => setScrolled(window.pageYOffset > 0);
 
   React.useEffect(() => {
-    handleScroll;
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
   });
 
   return (
-    <section className={`flex items-center fixed w-full h-16 transition-all duration-75 sm:duration-250 ${menuState || navbarBG ? styles.navbarBlur : ''} ${menuState ? styles.navbarSolid : ''} ${navbarBG ? styles.nabvarScrolled : ''} z-40`}>
-      <div className="content w-full">
-        <div className="navbar items-center flex justify-between px-4 md:px-10 lg:px-32">
-          <div className="flex flex-row space-x-4 md:space-x-0">
-            <div className="flex md:hidden">
-              <Hamburger label="Show menu" size={24} color="#253858" toggled={menuState} toggle={setMenuState} />
 
+    <section className={`flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-blur-none ${styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-95 border-opacity-5 backdrop-blur-lg' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
+
+      <div className="content w-full">
+
+        <div className="navbar items-center flex justify-between px-4 lg:px-10 xl:px-32">
+
+          {/* Left side of navbar: Logo / Hamburguer menu */}
+          <div className=" flex flex-row flex-grow flex-shrink-0 flex-1 justify-start items-center space-x-4 lg:space-x-0">
+
+            <div className="flex lg:hidden">
+              <Hamburger label="Show menu" size={24} color={light ? '#fff' : '#253858'} toggled={menuState} toggle={setMenuState} />
+
+              {/* Mobile hamburger menu background */}
               <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${menuState ? 'opacity-100' : 'opacity-0'}`} />
+
+              {/* Mobile hamburger menu */}
               <div className={`transition-all duration-500 flex flex-col fixed left-0 w-full top-14 overflow-hidden bg-white text-xl ${menuState ? 'h-screen pb-14 overflow-y-auto' : 'h-0'}`}>
                 <div className="my-6 font-medium">
+
+                  <Link href="/pricing" locale={lang}>
+                    <a
+                      role="link"
+                      tabIndex={0}
+                      onClick={() => { setMenuState(false); }}
+                      className={`outline-none flex w-full px-8 py-3 transition duration-300 delay-100 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                    >
+                      {textContent.links.pricing}
+                    </a>
+                  </Link>
+
                   <Disclosure as="div">
                     {({ open }) => (
-                      <div className={`transition duration-300 delay-200 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
-                        <div className={`${open ? 'bg-neutral-20' : ''}`}>
+                      <div className={`transition duration-300 delay-150 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                        <div className={`${open ? 'bg-cool-gray-5' : ''}`}>
 
-                          <Disclosure.Button className={`flex justify-between items-center w-full px-8 py-3 font-medium ${open ? 'bg-neutral-10' : ''}`}>
-                            <div className="flex flex-row">{textContent.products}</div>
+                          <Disclosure.Button className={`flex justify-between items-center w-full px-8 py-3 font-medium ${open ? 'bg-cool-gray-10' : ''}`}>
+                            <div className="flex flex-row">{textContent.links.products}</div>
                             <div className="relative w-6 h-6">
-                              <MinusIcon className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-neutral-100' : 'text-neutral-50 -rotate-180'}`} />
-                              <MinusIcon className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-neutral-100' : 'text-neutral-50 -rotate-90'}`} />
+                              <UilMinus className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-180'}`} />
+                              <UilMinus className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-90'}`} />
                             </div>
                           </Disclosure.Button>
 
@@ -52,164 +76,191 @@ export default function Navbar({ textContent, lang, cta }) {
                             leaveFrom="transform scale-100 opacity-100"
                             leaveTo="transform scale-95 opacity-0"
                           >
-                            <Disclosure.Panel className="flex flex-col py-3 text-neutral-500 mb-4">
-                              <a onClick={() => { setMenuState(false); }} href={`${router.pathname === '/products' ? '#web' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products#web`)}`} className="flex w-full px-8 py-3">{textContent.productsMenu.web.titleMenu}</a>
-                              <a onClick={() => { setMenuState(false); }} href={`${router.pathname === '/products' ? '#desktop' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products#desktop`)}`} className="flex w-full px-8 py-3">{textContent.productsMenu.desktop.titleMenu}</a>
-                              <a onClick={() => { setMenuState(false); }} href={`${router.pathname === '/products' ? '#mobile' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products#mobile`)}`} className="flex w-full px-8 py-3">{textContent.productsMenu.mobile.titleMenu}</a>
-                              <a onClick={() => { setMenuState(false); }} href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="flex w-full px-8 py-3 font-normal text-lg text-neutral-100">{textContent.productsMenu.allProducts}</a>
+
+                            <Disclosure.Panel className="flex flex-col py-3 text-cool-gray-80 mb-4">
+
+                              <Link href="/drive" locale={lang}>
+                                <a role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
+                                  {textContent.products.drive}
+                                </a>
+                              </Link>
+
+                              <Link href="/photos" locale={lang}>
+                                <a role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
+                                  {textContent.products.photos}
+                                </a>
+                              </Link>
+
+                              <a className="outline-none flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-40">
+                                <span>{textContent.products.send}</span>
+                                <span className="ml-3 text-sm text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                              </a>
+
                             </Disclosure.Panel>
+
                           </Transition>
 
                         </div>
                       </div>
                     )}
                   </Disclosure>
-                  <a onClick={() => { setMenuState(false); }} href={`${router.pathname === '/pricing' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/pricing`)}`} className={`flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
-                    {textContent.pricing}
+
+                  <Link href="/privacy" locale={lang}>
+                    <a
+                      role="link"
+                      tabIndex={0}
+                      onClick={() => { setMenuState(false); }}
+                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                    >
+                      {textContent.links.privacy}
+                    </a>
+                  </Link>
+
+                  <Link href="/about" locale={lang}>
+                    <a
+                      role="link"
+                      tabIndex={0}
+                      onClick={() => { setMenuState(false); }}
+                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}
+                    >
+                      {textContent.links.about}
+                    </a>
+                  </Link>
+
+                  <a onClick={() => { setMenuState(false); }} tabIndex={0} href="https://drive.internxt.com/login" className={`outline-none flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
+                    {textContent.links.login}
                   </a>
-                  <a onClick={() => { setMenuState(false); }} href={`${router.pathname === '/about' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/about`)}`} className={`flex w-full px-8 py-3 transition duration-300 delay-300 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
-                    {textContent.about}
-                  </a>
-                  <a onClick={() => { setMenuState(false); }} href="https://drive.internxt.com/login" className={`flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-350 transform translate-y-0 ${menuState ? 'opacity-100' : '-translate-y-4 opacity-0'}`}>
-                    {textContent.login}
-                  </a>
+
                 </div>
               </div>
             </div>
-            <a href={`${(lang ? (`/${lang}`) : '/')}`} className="flex flex-shrink-0">
-              <img loading="lazy" className="select-none" src="../../logos/internxt/internxt.svg" alt="Internxt logo" />
-            </a>
+
+            {/* Logo */}
+            <Link href="/" locale={lang}>
+              <a className="flex flex-shrink-0">
+                <img loading="lazy" className="select-none" src={`../../logos/internxt/${light ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
+              </a>
+            </Link>
+
           </div>
 
+          {/* Desktop links */}
           <div className="links">
-            <div className="hidden md:inline-flex">
-              <a href={`${router.pathname === '/pricing' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/pricing`)}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">
-                {textContent.pricing}
-              </a>
-              <div className="max-w-sm mr-6 lg:mr-8">
+            <div className="hidden lg:inline-flex space-x-3">
+
+              <Link href="/pricing" locale={lang}>
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
+                  {textContent.links.pricing}
+                </a>
+              </Link>
+
+              <div className="max-w-sm">
+
+                {/* Products popover menu (desktop) */}
                 <Popover className="relative">
                   {({ open }) => (
                     <>
-                      <Popover.Button className="transition duration-150 ease-in-out font-medium text-neutral-700">
-                        <span className={`flex ${open ? 'text-neutral-80' : ''}`}>
-                          {textContent.products}
-                          <img loading="lazy" className="mt-0.5 ml-3 transform rotate-90 select-none" src="/icons/chevronBoldNeutral80.svg" draggable="false" />
+                      <Popover.Button className="outline-none">
+                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${light ? 'text-white bg-white bg-opacity-0 hover:text-cool-gray-20 hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && light) ? 'bg-white bg-opacity-10 hover:bg-opacity-10 text-cool-gray-20' : ''} ${(open && !light) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
+                          <span>{textContent.links.products}</span>
+                          <UilAngleDown className={`w-6 h-6 transition duration-150 ease-in-out transform translate-y-px ${open ? 'text-cool-gray-30' : 'text-cool-gray-20'}`} />
                         </span>
                       </Popover.Button>
 
                       <Transition
                         as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="opacity-0 -translate-y-2"
+                        enter="transition ease-out duration-50"
+                        enterFrom="opacity-0 -translate-y-1"
                         enterTo="opacity-100 translate-y-0"
-                        leave="transition ease-in duration-150"
+                        leave="transition ease-in duration-100"
                         leaveFrom="opacity-100 translate-y-0"
-                        leaveTo="opacity-0 -translate-y-2"
+                        leaveTo="opacity-0 -translate-y-1"
                       >
-                        <Popover.Panel className="absolute z-10 w-screen max-w-sm transform -translate-x-1/2 left-1/2 lg:max-w-3xl mt-4">
-                          <div className="p-10 pt-8 pb-12 bg-neutral-10 rounded-lg shadow-xl ring-1 ring-neutral-30 overflow-hidden">
+                        <Popover.Panel className="absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 bg-white border-black rounded-xl shadow-subtle border border-opacity-5 overflow-hidden">
 
-                            <div className="flex pb-4 justify-between items-end">
-                              <div className="text-xs font-semibold text-neutral-100">INTERNXT DRIVE</div>
-                              <Popover.Button>
-                                <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="flex flex-row text-xs font-medium text-neutral-100 hover:text-neutral-300 focus:text-neutral-100 bg-neutral-20 p-1 px-3 rounded-xl">
-                                  <span className="flex-shrink-0">{textContent.productsMenu.allProducts}</span>
-                                  <img loading="lazy" className=" ml-1.5 transform scale-75 select-none" src="/icons/chevronNeutral80.svg" draggable="false" />
+                          <div className="relative grid gap-0 lg:grid-cols-1">
+
+                            <Popover.Button>
+                              <Link href="/drive" locale={lang}>
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${light ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
+                                  {textContent.products.drive}
                                 </a>
-                              </Popover.Button>
-                            </div>
+                              </Link>
+                            </Popover.Button>
 
-                            <div className="relative grid gap-8 lg:grid-cols-3 lg:gap-16">
-
-                              <Popover.Button className={`${styles.popoverItem}`}>
-                                <a href="https://drive.internxt.com" target="_blank" className={`flex flex-col space-y-4 ${styles.popoverItem}`} rel="noreferrer">
-                                  <div className="flex flex-col text-left space-y-2">
-                                    <p className="text-2xl font-medium text-neutral-700">
-                                      {textContent.productsMenu.web.title}
-                                    </p>
-                                    <p className="text-normal text-neutral-500">
-                                      {textContent.productsMenu.web.description}
-                                    </p>
-                                  </div>
-                                  <div className="flex flex-row items-center text-sm text-blue-60 font-semibold">
-                                    <img loading="lazy" className="mt-0.5 mr-2 select-none" src="/icons/newTab.svg" draggable="false" />
-                                    {textContent.productsMenu.web.link}
-                                  </div>
+                            <Popover.Button>
+                              <Link href="/photos" locale={lang}>
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${light ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
+                                  {textContent.products.photos}
                                 </a>
-                              </Popover.Button>
+                              </Link>
+                            </Popover.Button>
 
-                              <Popover.Button className={`${styles.popoverItem}`}>
-                                <a href={`${router.pathname === '/products' ? '#desktop' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products#desktop`)}`} className="flex flex-col space-y-4">
-                                  <div className="flex flex-col text-left space-y-2">
-                                    <p className="text-2xl font-medium text-neutral-700">
-                                      {textContent.productsMenu.desktop.title}
-                                    </p>
-                                    <p className="text-normal text-neutral-500">
-                                      {textContent.productsMenu.desktop.description}
-                                    </p>
-                                  </div>
-                                  <div className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
-                                    <span className="flex flex-shrink-0">{textContent.productsMenu.desktop.link}</span>
-                                    <img loading="lazy" className="mt-0.5 transform scale-50 select-none" src="/icons/chevronBoldBlue60.svg" draggable="false" />
-                                  </div>
-                                </a>
-                              </Popover.Button>
-
-                              <Popover.Button className={`${styles.popoverItem}`}>
-                                <a href={`${router.pathname === '/products' ? '#mobile' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products#mobile`)}`} className="flex flex-col space-y-4">
-                                  <div className="flex flex-col text-left space-y-2">
-                                    <p className="text-2xl font-medium text-neutral-700">
-                                      {textContent.productsMenu.mobile.title}
-                                    </p>
-                                    <p className="text-normal text-neutral-500">
-                                      {textContent.productsMenu.mobile.description}
-                                    </p>
-                                  </div>
-                                  <div className="flex flex-row space-x-1.5 text-sm text-blue-60 font-semibold">
-                                    <span className="flex flex-shrink-0">
-                                      {textContent.productsMenu.mobile.link}
-                                    </span>
-                                    <img loading="lazy" className="mt-0.5 transform scale-50 select-none" src="/icons/chevronBoldBlue60.svg" draggable="false" />
-                                  </div>
-                                </a>
-                              </Popover.Button>
-
-                            </div>
+                            <Popover.Button>
+                              <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30">
+                                <span>{textContent.products.send}</span>
+                                <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                              </a>
+                            </Popover.Button>
 
                           </div>
+
                         </Popover.Panel>
                       </Transition>
                     </>
                   )}
                 </Popover>
+
               </div>
-              <a href={`${router.pathname === '/about' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/about`)}`} className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-neutral-700 focus:text-neutral-80 font-medium">{textContent.about}</a>
-              <a href="https://drive.internxt.com/login" className="transition duration-150 ease-in-out mr-6 lg:mr-8 text-blue-60 focus:text-blue-70 font-medium">{textContent.login}</a>
+
+              <Link href="/privacy" locale={lang}>
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
+                  {textContent.links.privacy}
+                </a>
+              </Link>
+
+              <Link href="/about" locale={lang}>
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
+                  {textContent.links.about}
+                </a>
+              </Link>
+
             </div>
 
-            {(cta[0] === 'default') ? (
-              <a href="https://drive.internxt.com/new" target="_blank" rel="noreferrer">
-                <button
-                  type="button"
-                  className="flex justify-center sm:inline-flex px-4 py-1 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
-                >
-                  <p className="whitespace-nowrap">{textContent.getStarted}</p>
-                </button>
+          </div>
+
+          {/* Login and CTA */}
+          <div className="flex flex-row flex-grow flex-shrink-0 flex-1 justify-end items-center">
+
+            <a href="https://drive.internxt.com/login" className={`hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 ${light ? 'text-white focus:opacity-80' : 'text-blue-60 focus:text-blue-70'} text-sm font-medium`}>
+              {textContent.links.login}
+            </a>
+
+            {(ctaAction[0] === 'default') ? (
+              <a
+                href="https://drive.internxt.com/new"
+                target="_blank"
+                rel="noreferrer"
+                className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${light ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10' : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'} focus:outline-none transition-all duration-75`}
+              >
+                <p className="whitespace-nowrap">{textContent.links.getStarted}</p>
               </a>
             ) : ''}
 
-            {(cta[0] === 'checkout') ? (
+            {(ctaAction[0] === 'checkout') ? (
               <button
                 type="button"
-                onClick={cta[1]}
-                className="flex justify-center sm:inline-flex px-4 py-1 border border-transparent rounded-full text-base font-medium text-blue-60 md:text-white bg-blue-10 md:bg-blue-60 active:bg-blue-20 focus:bg-blue-20 md:active:bg-blue-70 md:focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
+                onClick={ctaAction[1]}
+                className="flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
               >
-                <p className="whitespace-nowrap">{textContent.checkout}</p>
+                <p className="whitespace-nowrap">{textContent.links.checkout}</p>
               </button>
             ) : ''}
 
           </div>
+
         </div>
+
       </div>
 
     </section>

@@ -1,12 +1,17 @@
 [
     {
+        "id": "home",
+        "title": "Internxt – Be limitless",
+        "description": "Internxt Drive es un servicio de cloud privado, seguro y gratis. Haz el cambio de a la nube del futuro. Encriptación de punto a punto, tecnología distribuída y blockchain."
+    },
+    {
         "id": "drive",
-        "title": "Internxt – Be limitless.",
+        "title": "Internxt – Drive",
         "description": "Internxt Drive es un servicio de cloud privado, seguro y gratis. Haz el cambio de a la nube del futuro. Encriptación de punto a punto, tecnología distribuída y blockchain."
     },
     {
         "id": "photos",
-        "title": "Internxt Photos – Alternativa a Google Photos.",
+        "title": "Internxt – Photos",
         "description": "Guarda todas tus fotos en una nube segura, completamente privada. Nube encriptada de punto a punto. Alternative segura y gratis a Google Photos."
     },
     {
@@ -16,22 +21,22 @@
     },
     {
         "id": "about",
-        "title": "Internxt – Sobre nosotros.",
+        "title": "Internxt – Sobre nosotros",
         "description": "Conoce al Equipo de Internxt. Fran Villalba Segarra, Fundador y CEO de Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
     },
     {
         "id": "token",
-        "title": "Internxt Token – Nuestro asset tokenizado.",
+        "title": "Internxt – Token",
         "description": "Internxt token. Conoce el asset tokenizado de Internxt."
     },
     {
         "id": "core",
-        "title": "Internxt Core – Alquila espacio de tu centro de datos.",
+        "title": "Internxt – Core",
         "description": "Cobra por alquilar el espacio inutilizado de los servidores en tu centro de datos."
     },
     {
         "id": "legal",
-        "title": "Internxt – Términos y Condiciones.",
+        "title": "Internxt – Legal",
         "description": ""
     }
 ]

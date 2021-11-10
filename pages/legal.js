@@ -21,7 +21,13 @@ const Legal = ({
 
   return (
     <Layout segmentName="Legal" title={metatags.title} description={metatags[0].description}>
-      <Navbar textContent={navbarLang} lang={deviceLang} cta={['default']} />
+
+      <Navbar
+        textContent={navbarLang}
+        lang={deviceLang}
+        cta={['default']}
+        fixed
+      />
 
       <div className="flex flex-col items-center py-32 pt-44 px-6 md:px-0 mt-0 m-6 md:m-10 md:mt-0 lg:m-32 lg:mt-0 xl:mx-auto max-w-5xl">
         <div className="flex flex-col mb-16">
@@ -1230,9 +1236,7 @@ const Legal = ({
         </div>
       </div>
 
-      <div className="bg-neutral-10">
-        <Footer textContent={footerLang} hideNewsletter={false} />
-      </div>
+      <Footer textContent={footerLang} hideNewsletter={false} />
     </Layout>
   );
 };

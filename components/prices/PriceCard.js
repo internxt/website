@@ -143,7 +143,7 @@ const PriceCard = ({
             <img loading="lazy" className="mt-0.5 transform translate-y-px select-none" src="/icons/checkNeutral500.svg" draggable="false" alt="check icon" />
             <span className={`${price <= 0 ? 'hidden' : 'flex'}`}>{billingFrequency < 0 ? `${contentText.features.enjoyForever.enjoy} ${storage} ${contentText.features.enjoyForever.forever}` : `${contentText.features.moneyBack}`}</span>
             <span className={`${price <= 0 ? 'flex' : 'hidden'}`}>
-              {contentText.features.enjoyForever.enjoy}
+              {contentText.features.enjoyForever.enjoyUpTo}
               {' '}
               {storage}
               {' '}

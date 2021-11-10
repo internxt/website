@@ -3,19 +3,9 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/drive',
-        destination: '/',
-        permanent: true,
-      },
-      {
         source: '/ivacy',
         destination: '/',
         permanent: true,
-      },
-      {
-        source: '/es/drive',
-        destination: '/es',
-        permanent: false,
       },
       {
         source: '/login',

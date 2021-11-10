@@ -1,12 +1,17 @@
 [
     {
+        "id": "home",
+        "title": "Internxt – Be limitless",
+        "description": "Internxt Drive is a private, secure, free cloud storage service. Make the switch to a better cloud. Zero-knowledge encryption, distributed and blockchain technology."
+    },
+    {
         "id": "drive",
-        "title": "Internxt – Be limitless.",
+        "title": "Internxt – Drive",
         "description": "Internxt Drive is a private, secure, free cloud storage service. Make the switch to a better cloud. Zero-knowledge encryption, distributed and blockchain technology."
     },
     {
         "id": "photos",
-        "title": "Internxt Photos – Alternative to Google Photos.",
+        "title": "Internxt – Photos",
         "description": "All your photos in one secure place that's completely private. Client-side encrypted. Secure alternative to Google Photos."
     },
     {
@@ -16,22 +21,22 @@
     },
     {
         "id": "about",
-        "title": "Internxt – About us.",
+        "title": "Internxt – About us",
         "description": "Meet Internxt's Team. Fran Villalba Segarra, Founder and CEO at Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
     },
     {
         "id": "token",
-        "title": "Internxt Token – Our tokenized asset.",
+        "title": "Internxt – Token",
         "description": "Internxt token. Learn all about our cryptocurrency, INXT."
     },
     {
         "id": "core",
-        "title": "Internxt Core – Get paid to share.",
+        "title": "Internxt – Core",
         "description": "Get paid to share the exceeding disk space of your computer to host encrypted shards of data as part of a decentralized network of servers."
     },
     {
         "id": "legal",
-        "title": "Internxt – Terms and conditions.",
+        "title": "Internxt – Legal",
         "description": ""
     }
 ]
