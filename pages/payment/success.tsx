@@ -71,7 +71,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if (request) {
     body = await request.json().catch(() => ({}));
 
-    redirectUrl = `${process.env.DRIVE_WEB}/appsumo?email=${body.email}&token=${body.token}`;
+    redirectUrl = `${process.env.DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}`;
   }
 
   // console.warn('[%s] %s', body.email, redirectUrl);

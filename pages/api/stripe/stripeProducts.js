@@ -1,3 +1,5 @@
+import bytes from 'bytes';
+
 const STRIPE_PRODUCT = {
   lifetime2TBHalloween: {
     production: 'price_1Joq2RFAOdcgaBMQxR7f10Wh',
@@ -14,8 +16,11 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          name: 'drive_2tb_halloween2021_lifetime',
+          maxSpaceBytes: bytes('2tb'),
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_2tb'
+          lifetime_tier: 'lifetime_2tb',
+          planType: 'one_time'
         }
       },
     },
@@ -43,8 +48,11 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          name: 'drive_10tb_halloween2021_lifetime',
+          maxSpaceBytes: bytes('10tb'),
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_10tb'
+          lifetime_tier: 'lifetime_10tb',
+          planType: 'one_time'
         }
       },
     },
@@ -72,8 +80,11 @@ const STRIPE_PRODUCT = {
       },
       payment_intent_data: {
         metadata: {
+          maxspaceBytes: bytes('20tb'),
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_20tb'
+          lifetime_tier: 'lifetime_20tb',
+          name: 'drive_20tb_halloween2021_lifetime',
+          planType: 'one_time'
         }
       },
     },
@@ -102,7 +113,10 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_1tb'
+          lifetime_tier: 'lifetime_1tb',
+          maxSpaceBytes: bytes('1tb'),
+          name: 'drive_1tb_lifetime',
+          planType: 'one_time'
         }
       },
     },
@@ -131,7 +145,10 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_5tb'
+          lifetime_tier: 'lifetime_5tb',
+          maxSpaceBytes: bytes('5tb'),
+          name: 'drive_5tb_lifetime',
+          planType: 'one_time'
         }
       },
     },
@@ -161,7 +178,10 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_10tb'
+          lifetime_tier: 'lifetime_10tb',
+          maxSpaceBytes: bytes('10tb'),
+          name: 'drive_5tb_lifetime',
+          planType: 'one_time'
         }
       },
     },
@@ -300,14 +320,18 @@ const STRIPE_PRODUCT = {
   }
 };
 
-function getStripeProduct(product) {
+export function getStripeProduct(product) {
   const selectedProduct = STRIPE_PRODUCT[product];
   selectedProduct.session.line_items[0].price = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+  if (selectedProduct.mode === 'subscription') {
+    selectedProduct.subscription_data = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+  } else {
+    const priceId = process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+    selectedProduct.session.payment_intent_data.metadata = { price_id: priceId };
+  }
   return selectedProduct;
 }
 
-function getProductProperties(product) {
+export function getProductProperties(product) {
   return STRIPE_PRODUCT[product].properties;
 }
-
-module.exports = { getStripeProduct, getProductProperties };

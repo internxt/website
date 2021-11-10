@@ -4,7 +4,6 @@ import Stripe from 'stripe';
 import { getStripeProduct } from '../stripeProducts';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
-  console.log('Stripe new session request: %s', JSON.stringify(req.body));
   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
   const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
