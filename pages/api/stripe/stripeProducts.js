@@ -333,7 +333,7 @@ export function getStripeProduct(opt) {
   Object.assign(selectedProduct.session.metadata, {
     anonymousId,
     source: 'website',
-    impact_id: impactId
+    impactId
   });
   return selectedProduct;
 }
