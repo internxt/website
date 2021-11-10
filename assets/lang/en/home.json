@@ -2,7 +2,7 @@
 	"HeroSection":
 	{
 		"title": {"line1": "Store your files", "line2": "in total privacy"},
-		"subtitle": {"line1": "Internxt Drive is a zero-knowledge file storage", "line2": "service based on best-in-class privacy and security"},
+		"subtitle": {"line1": "Internxt Drive is a zero-knowledge cloud storage", "line2": "service based on best-in-class privacy and security"},
 		"cta1": "Get up to 10GB",
 		"cta1detail": "for free",
 		"cta2": {"mobile": "Get App", "desktop": "Download"}

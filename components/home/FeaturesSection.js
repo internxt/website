@@ -70,7 +70,9 @@ const FeaturesSection = ({ textContent, lang }) => {
           </div>
 
           <div data-aos="fade-up" data-aos-duration="500" className="card-soft col-span-2 sm:col-span-1 flex flex-col md:flex-1 justify-self-start p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8 z-10">
-            <img loading="lazy" className="flex lg:max-w-xs mb-6" src="/images/home/devicesDesc.webp" draggable="false" alt="dektop, laptop and phone with Internxt app" />
+            <div className="flex flex-col">
+              <img loading="lazy" className="flex lg:max-w-xs mb-6" src="/images/home/devicesDesc.webp" draggable="false" alt="dektop, laptop and phone with Internxt app" />
+            </div>
             <div className="flex flex-col text-left space-y-6">
               <h3 className="text-4xl font-semibold">
                 {textContent.feature2.title.line1}
