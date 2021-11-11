@@ -1,42 +1,42 @@
 [
     {
         "id": "home",
-        "title": "Internxt – Be limitless",
+        "title": "Internxt – Be limitless (España)",
         "description": "Internxt Drive es un servicio de cloud privado, seguro y gratis. Haz el cambio de a la nube del futuro. Encriptación de punto a punto, tecnología distribuída y blockchain."
     },
     {
         "id": "drive",
-        "title": "Internxt – Drive",
+        "title": "Internxt – Drive (España)",
         "description": "Internxt Drive es un servicio de cloud privado, seguro y gratis. Haz el cambio de a la nube del futuro. Encriptación de punto a punto, tecnología distribuída y blockchain."
     },
     {
         "id": "photos",
-        "title": "Internxt – Photos",
+        "title": "Internxt – Photos (España)",
         "description": "Guarda todas tus fotos en una nube segura, completamente privada. Nube encriptada de punto a punto. Alternative segura y gratis a Google Photos."
     },
     {
         "id": "pricing",
-        "title": "Internxt – Precios",
+        "title": "Internxt – Precios (España)",
         "description": "Precio Internxt. Un plan común para todos nuestros servicios. Internxt Drive, Internxt Send, Internxt Photos. Bienvenido al Universo de Internxt."
     },
     {
         "id": "about",
-        "title": "Internxt – Sobre nosotros",
+        "title": "Internxt – Sobre nosotros (España)",
         "description": "Conoce al Equipo de Internxt. Fran Villalba Segarra, Fundador y CEO de Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
     },
     {
         "id": "token",
-        "title": "Internxt – Token",
+        "title": "Internxt – Token (España)",
         "description": "Internxt token. Conoce el asset tokenizado de Internxt."
     },
     {
         "id": "core",
-        "title": "Internxt – Core",
+        "title": "Internxt – Core (España)",
         "description": "Cobra por alquilar el espacio inutilizado de los servidores en tu centro de datos."
     },
     {
         "id": "legal",
-        "title": "Internxt – Legal",
+        "title": "Internxt – Legal (España)",
         "description": ""
     }
 ]

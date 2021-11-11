@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
@@ -140,14 +142,14 @@ const PriceCard = ({
 
         </div>
 
-        <button
-          type="button"
+        <div
+          tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => { cta[0] === 'checkout' ? redirectToCheckoutAction(stripeObject) : location.href = cta[1]; }}
           className="flex flex-row w-full"
         >
 
-          <button type="button" className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60  active:bg-blue-70 transform origin-center active:translate-y-0.5 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
+          <div className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60  active:bg-blue-70 transform origin-center active:translate-y-0.5 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
 
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.buy}
@@ -159,9 +161,9 @@ const PriceCard = ({
 
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
 
-          </button>
+          </div>
 
-        </button>
+        </div>
 
       </div>
 

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition, Disclosure } from '@headlessui/react';
@@ -25,7 +27,7 @@ export default function Navbar({
 
   return (
 
-    <section className={`flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-saturate-100 backdrop-blur-none ${light ? '' : styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-90 border-opacity-5 backdrop-blur-lg backdrop-saturate-150' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
+    <div className={`section flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-saturate-100 backdrop-blur-none ${light ? '' : styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-90 border-opacity-5 backdrop-blur-lg backdrop-saturate-150' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
 
       <div className="content w-full">
 
@@ -35,7 +37,7 @@ export default function Navbar({
           <div className=" flex flex-row flex-grow flex-shrink-0 flex-1 justify-start items-center space-x-4 lg:space-x-0">
 
             <div className="flex lg:hidden">
-              <Hamburger label="Show menu" size={24} color={light ? '#fff' : '#253858'} toggled={menuState} toggle={setMenuState} />
+              <Hamburger label="Show menu" size={24} color={(light && !menuState) ? '#fff' : '#253858'} toggled={menuState} toggle={setMenuState} />
 
               {/* Mobile hamburger menu background */}
               <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${menuState ? 'opacity-100' : 'opacity-0'}`} />
@@ -61,11 +63,11 @@ export default function Navbar({
                         <div className={`${open ? 'bg-cool-gray-5' : ''}`}>
 
                           <Disclosure.Button className={`flex justify-between items-center w-full px-8 py-3 font-medium ${open ? 'bg-cool-gray-10' : ''}`}>
-                            <div className="flex flex-row">{textContent.links.products}</div>
-                            <div className="relative w-6 h-6">
+                            <span>{textContent.links.products}</span>
+                            <span className="relative w-6 h-6">
                               <UilMinus className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-180'}`} />
                               <UilMinus className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-90'}`} />
-                            </div>
+                            </span>
                           </Disclosure.Button>
 
                           <Transition
@@ -80,13 +82,13 @@ export default function Navbar({
                             <Disclosure.Panel className="flex flex-col py-3 text-cool-gray-80 mb-4">
 
                               <Link href="/drive" locale={lang}>
-                                <a role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
+                                <a tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
                                   {textContent.products.drive}
                                 </a>
                               </Link>
 
                               <Link href="/photos" locale={lang}>
-                                <a role="link" tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
+                                <a tabIndex={0} onClick={() => { setMenuState(false); }} className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80">
                                   {textContent.products.photos}
                                 </a>
                               </Link>
@@ -138,7 +140,7 @@ export default function Navbar({
             {/* Logo */}
             <Link href="/" locale={lang}>
               <a className="flex flex-shrink-0">
-                <img loading="lazy" className="select-none" src={`../../logos/internxt/${light ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
+                <img loading="lazy" className="select-none" src={`../../logos/internxt/${(light && !menuState) ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
               </a>
             </Link>
 
@@ -232,7 +234,7 @@ export default function Navbar({
           {/* Login and CTA */}
           <div className="flex flex-row flex-grow flex-shrink-0 flex-1 justify-end items-center">
 
-            <a href="https://drive.internxt.com/login" className={`hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 ${light ? 'text-white focus:opacity-80' : 'text-blue-60 focus:text-blue-70'} text-sm font-medium`}>
+            <a href="https://drive.internxt.com/login" className={`hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 ${(light && !menuState) ? 'text-white focus:opacity-80' : 'text-blue-60 focus:text-blue-70'} text-sm font-medium`}>
               {textContent.links.login}
             </a>
 
@@ -241,7 +243,7 @@ export default function Navbar({
                 href="https://drive.internxt.com/new"
                 target="_blank"
                 rel="noreferrer"
-                className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${light ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10' : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'} focus:outline-none transition-all duration-75`}
+                className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${(light && !menuState) ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10' : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'} focus:outline-none transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{textContent.links.getStarted}</p>
               </a>
@@ -263,7 +265,7 @@ export default function Navbar({
 
       </div>
 
-    </section>
+    </div>
 
   );
 }

@@ -13,6 +13,21 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/products',
+        destination: '/drive',
+        permanent: false,
+      },
+      {
+        source: '/en/products',
+        destination: '/drive',
+        permanent: false,
+      },
+      {
+        source: '/es/products',
+        destination: '/drive',
+        permanent: false,
+      },
+      {
         source: '/exclusive-lifetime',
         destination: '/lifetime',
         permanent: false,

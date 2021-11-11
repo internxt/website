@@ -19,13 +19,13 @@ const GetStartedSection = ({
           {textContent.subtitle.line2}
         </h3>
         <div>
-          <a href="https://drive.internxt.com/new" target="_blank" rel="noreferrer">
-            <button
-              type="button"
-              className="inline-flex justify-center w-auto items-center px-6 py-2 border border-transparent rounded-full text-lg sm:text-base font-medium text-blue-60 bg-white active:bg-blue-10 focus:bg-blue-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-50 focus:ring-blue-20 transition-all duration-75"
-            >
-              {textContent.cta1}
-            </button>
+          <a
+            href="https://drive.internxt.com/new"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex justify-center w-auto items-center px-6 py-2 border border-transparent rounded-full text-lg sm:text-base font-medium text-blue-60 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-50 focus:ring-blue-30 transition-all duration-75"
+          >
+            {textContent.cta1}
           </a>
         </div>
       </div>

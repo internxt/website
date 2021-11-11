@@ -34,16 +34,18 @@ const YoutubeEmbed = ({
   useEffect(() => {
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        document.activeElement.blur();
+        if (document.activeElement instanceof HTMLElement) {
+          document.activeElement.blur();
+        }
         hideModal();
       }
     });
   });
 
   return (
-    <div className={`fixed flex flex-col items-end justify-center top-0 left-0 w-full h-full p-10 lg:p-20 xl:px-40 xl:py-24 bg-cool-gray-100 bg-opacity-80 backdrop-filter backdrop-blur transition-all duration-250 z-50 ${show ? 'opacity-100 pointer-events-all' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed flex flex-col items-center justify-center top-0 left-0 w-full h-full p-10 lg:p-20 xl:px-40 xl:py-24 bg-cool-gray-100 bg-opacity-80 backdrop-filter backdrop-blur transition-all duration-250 z-50 ${show ? 'opacity-100 pointer-events-all' : 'opacity-0 pointer-events-none'}`}>
 
-      <div className="relative flex flex-col items-end justify-center w-full max-w-7xl h-full mx-auto">
+      <div className="relative flex flex-col items-center justify-center w-full max-w-7xl h-full mx-auto">
 
         <a
           role="link"
@@ -57,7 +59,7 @@ const YoutubeEmbed = ({
         <button
           type="button"
           onClick={hideModal}
-          className="flex flex-col flex-shrink-0 items-center justify-center m-8 mr-0 w-10 h-10 bg-white bg-opacity-5 hover:bg-opacity-15 focus:bg-opacity-10 text-white rounded-full z-10"
+          className="fixed left-4 top-4 flex flex-col flex-shrink-0 items-center justify-center w-10 h-10 backdrop-filter backdrop-blur backdrop-brightness-150 bg-white bg-opacity-15 hover:bg-opacity-20 focus:bg-opacity-10 focus:text-cool-gray-30 text-white rounded-full z-10"
         >
           <UilTimes width="24px" height="24px" />
         </button>

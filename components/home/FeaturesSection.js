@@ -66,7 +66,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                 </div>
               </a>
             </div>
-            <div className={`${styles.securebydesignImage}`} role="img" alt="file being encrypted" aria-label="file being encrypted" />
+            <div className={`${styles.securebydesignImage}`} role="img" aria-label="file being encrypted" />
           </div>
 
           <div data-aos="fade-up" data-aos-duration="500" className="card-soft col-span-2 sm:col-span-1 flex flex-col md:flex-1 justify-self-start p-12 px-8 lg:p-16 lg:py-14 bg-white rounded-3xl overflow-hidden space-y-8 z-10">

@@ -216,13 +216,13 @@ export default function Footer({
                 <div>
 
                   <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
-                    <h3 className="flex flex-row">
+                    <span className="flex flex-row">
                       {textContent.FooterSection.sections.products.title}
-                    </h3>
-                    <div className="relative w-5 h-5">
+                    </span>
+                    <span className="relative w-5 h-5">
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`} />
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`} />
-                    </div>
+                    </span>
                   </Disclosure.Button>
 
                   <Transition
@@ -260,13 +260,13 @@ export default function Footer({
                 <div>
 
                   <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
-                    <h3 className="flex flex-row">
+                    <span className="flex flex-row">
                       {textContent.FooterSection.sections.company.title}
-                    </h3>
-                    <div className="relative w-5 h-5">
+                    </span>
+                    <span className="relative w-5 h-5">
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`} />
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`} />
-                    </div>
+                    </span>
                   </Disclosure.Button>
 
                   <Transition
@@ -305,13 +305,13 @@ export default function Footer({
                 <div>
 
                   <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
-                    <h3 className="flex flex-row">
+                    <span className="flex flex-row">
                       {textContent.FooterSection.sections.join.title}
-                    </h3>
-                    <div className="relative w-5 h-5">
+                    </span>
+                    <span className="relative w-5 h-5">
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`} />
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`} />
-                    </div>
+                    </span>
                   </Disclosure.Button>
 
                   <Transition
@@ -342,13 +342,13 @@ export default function Footer({
                 <div>
 
                   <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
-                    <h3 className="flex flex-row">
+                    <span className="flex flex-row">
                       {textContent.FooterSection.sections.follow.title}
-                    </h3>
-                    <div className="relative w-5 h-5">
+                    </span>
+                    <span className="relative w-5 h-5">
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`} />
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`} />
-                    </div>
+                    </span>
                   </Disclosure.Button>
 
                   <Transition
