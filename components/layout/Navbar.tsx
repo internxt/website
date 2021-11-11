@@ -25,7 +25,7 @@ export default function Navbar({
 
   return (
 
-    <section className={`flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-blur-none ${light ? '' : styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-95 border-opacity-5 backdrop-blur-lg' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
+    <section className={`flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-saturate-100 backdrop-blur-none ${light ? '' : styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-90 border-opacity-5 backdrop-blur-lg backdrop-saturate-150' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
 
       <div className="content w-full">
 
