@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UilPlayCircle } from '@iconscout/react-unicons';
-import YoutubeEmbed from '../../lib/youtube';
+import YoutubeEmbed from '../utils/youtube';
 import styles from './HeroSection.module.scss';
 
 const HeroSection = ({
@@ -48,7 +48,7 @@ const HeroSection = ({
         <div className={`absolute top-0 left-0 w-full h-full ${styles.neonBlur} pointer-events-none filter blur-lg transform scale-110 origin-center`} />
 
       </section>
-      <YoutubeEmbed videoID="SlU5zQCM1Lk" show={isOpen} setShow={setIsOpen} autoplay muted hidecontrols hideinfo jsapi />
+      <YoutubeEmbed videoID="SlU5zQCM1Lk" show={isOpen} setShow={setIsOpen} autoplay mute loop hideinfo jsapi />
     </>
   );
 };
