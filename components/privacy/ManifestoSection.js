@@ -29,9 +29,8 @@ const ManifestoSection = ({
           {' '}
           <br className="hidden sm:flex" />
           {textContent.section1.subtitle.line3}
-        </h3>
-
-        <h3 className="text-base font-normal text-cool-gray-80 mb-10">
+          {' '}
+          <br className="hidden sm:flex" />
           {textContent.section1.subtitle.line4}
           {' '}
           <br className="hidden sm:flex" />
@@ -39,7 +38,7 @@ const ManifestoSection = ({
         </h3>
 
         <div className="flex flex-col items-center">
-          <p className="text-supporting-2 font-medium text-cool-gray-40 mb-4">
+          <p className="text-xs font-medium text-cool-gray-40 mb-4">
             {textContent.section1.signature}
           </p>
           <img loading="lazy" className="w-24 select-none" src="/images/privacy/signature.webp" draggable="false" alt="Fran's signature" />

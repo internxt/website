@@ -61,7 +61,7 @@ const YoutubeEmbed = ({
         <button
           type="button"
           onClick={hideModal}
-          className="fixed left-8 top-8 flex flex-col flex-shrink-0 items-center justify-center w-12 h-12 backdrop-filter backdrop-blur backdrop-brightness-150 bg-white bg-opacity-15 hover:bg-opacity-20 focus:bg-opacity-10 focus:text-cool-gray-30 text-white rounded-full z-10"
+          className="fixed left-8 top-8 flex flex-col flex-shrink-0 items-center justify-center w-12 h-12 backdrop-filter backdrop-blur backdrop-brightness-150 bg-white bg-opacity-15 hover:bg-opacity-20 focus:bg-opacity-15 focus:text-cool-gray-30 text-white rounded-full z-10"
         >
           <UilTimes width="24px" height="24px" />
         </button>

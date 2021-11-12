@@ -3,10 +3,10 @@
 	{
 		"title": "Privacidad",
 		"subtitle": {
-			"line1": "La privacidad es un derecho humano fundamental. En Internxt creemos que cualquier tipo de",
-			"line2": "producto debe ser diseñado con la privacidad en su núcleo. Lo que compartes desde tus dispositivos",
-			"line3": "y con quién lo compartes debería depender solo de ti. Diseñamos y desarrollamos productos que",
-			"line4": "protegen tu privacidad y te devuelven el control sobre tu información."
+			"line1": "La privacidad es un derecho humano fundamental. En Internxt creemos que lo que la humanidad puede",
+			"line2": "lograr es extraordinario, y que los productos deben permitir a la sociedad alcanzar la excelencia.",
+			"line3": "Estos productos no sólo deben empoderar, sino que también deben ser respetuosos con la sociedad.",
+			"line4": "Diga hola a Internxt. Privado por defecto, seguro por diseño, y libre como la libertad."
 		},
 		"cta": "Ver el video"
 	},
@@ -18,11 +18,10 @@
 				"line2": "es tan importante"
 			},
 			"subtitle": {
-				"line1": "Hoy en día Internet está controlada por gigantes tecnológicos que ofrecen servicios y productos que",
-				"line2": "son un medio para un fin. Servicios que se han convertido en imprescindibles en nuestras vidas y que",
-				"line3": "se utilizan para recoger datos de los usuarios para perfilarlos mejor, ya que realmente viven de la publicidad.",
-				"line4": "La privacidad no debería tener un coste tan elevado.",
-				"line5": "Creemos en una Internet más ética, en la que la privacidad del usuario esté en el centro."
+				"line1": "Hoy en día Internet está controlado por gigantes tecnológicos que ofrecen servicios y productos que son un medio",
+				"line2": "para un fin. Servicios que se han convertido en imprescindibles en nuestras vidas y que se utilizan para recoger",
+				"line3": "datos de los usuarios para perfilarlos mejor, ya que realmente viven de la publicidad. La privacidad no debería tener",
+				"line4": "un coste tan elevado. Creemos en una Internet más ética, en la que la privacidad del usuario esté en el centro."
 			},
 			"signature": "Fran Villalba, CEO de Internxt"
 		},

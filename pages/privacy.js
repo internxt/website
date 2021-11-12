@@ -1,5 +1,4 @@
 import React from 'react';
-import userAgent from 'useragent';
 import HeroSection from '../components/privacy/HeroSection';
 import ManifestoSection from '../components/privacy/ManifestoSection';
 import Footer from '../components/layout/Footer';
@@ -12,8 +11,7 @@ const Privacy = ({
   langJson,
   navbarLang,
   footerLang,
-  deviceLang,
-  device
+  deviceLang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
@@ -49,9 +47,6 @@ const Privacy = ({
 };
 
 export async function getServerSideProps(ctx) {
-  const ua = ctx.req.headers['user-agent'];
-  const device = userAgent.parse(ua).os.family;
-
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
@@ -64,7 +59,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, device, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }

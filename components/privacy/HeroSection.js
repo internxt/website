@@ -48,7 +48,7 @@ const HeroSection = ({
         <div className={`absolute top-0 left-0 w-full h-full ${styles.neonBlur} pointer-events-none filter blur-lg transform scale-110 origin-center`} />
 
       </section>
-      <YoutubeEmbed videoID="SlU5zQCM1Lk" show={isOpen} setShow={setIsOpen} autoplay mute loop hideinfo jsapi />
+      <YoutubeEmbed videoID="SlU5zQCM1Lk" show={isOpen} setShow={setIsOpen} autoplay loop hideinfo jsapi />
     </>
   );
 };

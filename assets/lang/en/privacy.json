@@ -3,10 +3,11 @@
 	{
 		"title": "Privacy",
 		"subtitle": {
-			"line1": "Privacy is a fundamental human right. At Internxt we believe that any kind of product",
-			"line2": "should be designed with privacy in it’s core. What you share from your devices and",
-			"line3": "who you share it with should be up to you. We design and develop products that",
-			"line4": "protects your privacy and puts you back in control over your information."
+			"line1": "Privacy is a fundamental human right. Here, at Internxt we believe that what humanity can",
+			"line2": "achieve is extraordinary, and that products should enable society to achieve excellence.",
+			"line3": "These products should not only empower, but must also be respectful with society.",
+			"line4": "Say hello to Internxt. Private by default, secure by design, and free as in freedom.",
+			"line5": "Start using Internxt Drive today, a secure, private, encrypted, free, cloud storage service."
 		},
 		"cta": "Watch the video"
 	},
@@ -19,10 +20,9 @@
 			},
 			"subtitle": {
 				"line1": "Today the Internet is controlled by technology giants that offer services and products that",
-				"line2": "are a means to an end. Services that have become essential in our lives and are used to",
-				"line3": "collect data from users to better profile them, as they really live off advertising.",
-				"line4": "Privacy should not have such a high cost.",
-				"line5": "We believe in a more ethic internet, where the user privacy is at its core."
+				"line2": "are a means to an end. Services that have become essential in our lives and are used to collect",
+				"line3": "data from users to better profile them, as they really live off advertising. Privacy should not",
+				"line4": "have such a high cost. We believe in a more ethic internet, where the user privacy is at its core."
 			},
 			"signature": "Fran Villalba, Internxt CEO"
 		},
