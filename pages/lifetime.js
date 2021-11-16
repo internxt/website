@@ -16,7 +16,7 @@ const Lifetime = ({
   footerLang,
   deviceLang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
 
   useEffect(() => {
     AOS.init();

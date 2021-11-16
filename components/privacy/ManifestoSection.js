@@ -12,7 +12,7 @@ const ManifestoSection = ({
     {/* Why privacy is so important */}
     <div className="flex flex-col items-center py-20 lg:py-40 z-10">
 
-      <div className="text-center px-6">
+      <div className="text-left sm:text-center px-6">
 
         <h2 className="text-3xl lg:text-4xl font-semibold mb-10">
           {textContent.section1.title.line1}
@@ -21,7 +21,7 @@ const ManifestoSection = ({
           {textContent.section1.title.line2}
         </h2>
 
-        <h3 className="text-base font-normal text-cool-gray-80 mb-10">
+        <h3 className="text-lg sm:text-base font-normal text-cool-gray-80 mb-10">
           {textContent.section1.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
@@ -38,7 +38,7 @@ const ManifestoSection = ({
         </h3>
 
         <div className="flex flex-col items-center">
-          <p className="text-xs font-medium text-cool-gray-40 mb-4">
+          <p className="text-sm sm:text-xs font-medium text-cool-gray-40 mb-4">
             {textContent.section1.signature}
           </p>
           <img loading="lazy" className="w-24 select-none" src="/images/privacy/signature.webp" draggable="false" alt="Fran's signature" />
@@ -60,47 +60,47 @@ const ManifestoSection = ({
           {textContent.section2.title.line2}
         </h2>
 
-        <h3 className="text-base font-normal text-cool-gray-80 mb-20">
+        <h3 className="text-lg sm:text-base font-normal text-cool-gray-80 mb-20">
           {textContent.section2.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
           {textContent.section2.subtitle.line2}
         </h3>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-rows-2 gap-10 lg:gap-20 text-left">
+        <div className="flex flex-col space-y-16 sm:space-y-0 sm:grid sm:grid-cols-1 lg:grid-cols-2 sm:grid-flow-row lg:grid-rows-2 sm:gap-10 lg:gap-20 text-left">
 
-          <div className="flex flex-col items-start justify-start p-10 w-80 h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square1.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section2.square1.description}
             </h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start p-10 w-80 h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square2.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section2.square2.description}
             </h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start p-10 w-80 h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square3.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section2.square3.description}
             </h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start p-10 w-80 h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square4.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section2.square4.description}
             </h5>
           </div>
@@ -114,16 +114,16 @@ const ManifestoSection = ({
     {/* Apps designed to protect your privacy */}
     <div className="flex flex-col items-center py-20 lg:py-40 z-10 bg-cool-gray-100 text-white">
 
-      <div className="text-center px-6">
+      <div className="text-left sm:text-center px-6">
 
-        <h2 className="text-3xl lg:text-5xl font-semibold mb-10">
+        <h2 className="text-4xl font-semibold mb-10">
           {textContent.section3.title.line1}
           {' '}
           <br className="hidden sm:flex" />
           {textContent.section3.title.line2}
         </h2>
 
-        <h3 className="text-base font-normal mb-40">
+        <h3 className="text-lg sm:text-base font-normal mb-40">
           {textContent.section3.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
@@ -138,18 +138,18 @@ const ManifestoSection = ({
               <h4 className="text-3xl lg:text-4xl font-semibold mb-10">
                 {textContent.section3.square1.title}
               </h4>
-              <h5 className="text-base text-cool-gray-20 mb-4">
+              <h5 className="text-lg sm:text-base text-cool-gray-20 mb-4">
                 {textContent.section3.square1.description}
               </h5>
               <Link href="/drive" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-base text-blue-50">
+                <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-50">
                   <span>{textContent.section3.square1.cta}</span>
                   <UilAngleRightB className="w-4 h-4" />
                 </a>
               </Link>
             </div>
 
-            <div className="relative mx-auto mt-16 lg:mx-20 lg:m-20 w-80 lg:h-80">
+            <div className="relative mx-auto mt-16 lg:mx-20 lg:m-20 lg:w-80 lg:h-80">
               <div
                 className="hidden lg:flex absolute shadow-subtle-hard bg-no-repeat bg-contain bg-center-top"
                 style={{
@@ -176,18 +176,18 @@ const ManifestoSection = ({
               <h4 className="text-3xl lg:text-4xl font-semibold mb-10">
                 {textContent.section3.square2.title}
               </h4>
-              <h5 className="text-base text-cool-gray-20 mb-4">
+              <h5 className="text-lg sm:text-base text-cool-gray-20 mb-4">
                 {textContent.section3.square2.description}
               </h5>
               <Link href="/photos" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-base text-blue-50">
+                <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-50">
                   <span>{textContent.section3.square2.cta}</span>
                   <UilAngleRightB className="w-4 h-4" />
                 </a>
               </Link>
             </div>
 
-            <div className="relative mx-auto mt-16 lg:mx-20 lg:m-20 w-80 lg:h-80">
+            <div className="relative mx-auto mt-16 lg:mx-20 lg:m-20 lg:w-80 lg:h-80">
               <div
                 className="hidden lg:flex absolute shadow-subtle-hard bg-no-repeat bg-contain bg-center-top"
                 style={{

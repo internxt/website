@@ -40,6 +40,7 @@
 	},
 	"features": {
 		"enjoyForever": {
+			"enjoy": "Disfruta de",
 			"enjoyUpTo": "Disfruta de hasta",
 			"forFree": "gratis",
 			"forever": "para siempre"

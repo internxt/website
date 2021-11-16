@@ -40,6 +40,7 @@
 	},
 	"features": {
 		"enjoyForever": {
+			"enjoy": "Enjoy",
 			"enjoyUpTo": "Enjoy up to",
 			"forFree": "for free",
 			"forever": "forever"

@@ -95,7 +95,7 @@ const FeaturesSection = ({
                   {textContent.section2.title.line3}
                 </h3>
 
-                <p className="text-base text-cool-gray-80">
+                <p className="text-lg sm:text-base text-cool-gray-80">
                   {textContent.section2.subtitle.line1}
                   {' '}
                   <br className="hidden sm:flex" />
@@ -143,7 +143,7 @@ const FeaturesSection = ({
                     {textContent.section3.title.line4}
                   </h3>
 
-                  <p className="text-base text-cool-gray-80">
+                  <p className="text-lg sm:text-base text-cool-gray-80">
                     {textContent.section3.subtitle.line1}
                     {' '}
                     <br className="hidden sm:flex" />
@@ -261,7 +261,7 @@ const FeaturesSection = ({
                   {textContent.section4.title.line4}
                 </h3>
 
-                <p className="text-base text-cool-gray-80">
+                <p className="text-lg sm:text-base text-cool-gray-80">
                   {textContent.section4.subtitle.line1}
                   {' '}
                   <br className="hidden sm:flex" />
@@ -325,7 +325,7 @@ const FeaturesSection = ({
                   {textContent.section5.title.line3}
                 </h3>
 
-                <p className="text-base text-cool-gray-80">
+                <p className="text-lg sm:text-base text-cool-gray-80">
                   {textContent.section5.subtitle.line1}
                   {' '}
                   <br className="hidden sm:flex" />
@@ -379,14 +379,14 @@ const FeaturesSection = ({
         />
       </div>
 
-      <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-10 lg:px-0">
+      <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-6 lg:px-0">
         <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">
           {textContent.section7.title.line1}
           <br />
           {textContent.section7.title.line2}
         </h3>
 
-        <p className="text-base text-cool-gray-80 mb-6">
+        <p className="text-lg sm:text-base text-cool-gray-80 mb-6">
           {textContent.section7.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
@@ -397,7 +397,7 @@ const FeaturesSection = ({
         </p>
 
         <Link href="/privacy" locale={lang}>
-          <a className="flex flex-row items-center space-x-1 text-base text-blue-60 mb-32">
+          <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-60 mb-32">
             <span>{textContent.section7.cta}</span>
             <UilAngleRightB className="w-4 h-4" />
           </a>
@@ -409,7 +409,7 @@ const FeaturesSection = ({
             <h4 className="text-2xl font-semibold mb-4">
               {textContent.section7.card1.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section7.card1.subtitle}
             </h5>
           </div>
@@ -418,7 +418,7 @@ const FeaturesSection = ({
             <h4 className="text-2xl font-semibold mb-4">
               {textContent.section7.card2.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section7.card2.subtitle}
             </h5>
           </div>
@@ -427,7 +427,7 @@ const FeaturesSection = ({
             <h4 className="text-2xl font-semibold mb-4">
               {textContent.section7.card3.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section7.card3.subtitle}
             </h5>
           </div>
@@ -436,7 +436,7 @@ const FeaturesSection = ({
             <h4 className="text-2xl font-semibold mb-4">
               {textContent.section7.card4.title}
             </h4>
-            <h5 className="text-base text-cool-gray-80">
+            <h5 className="text-lg sm:text-base text-cool-gray-80">
               {textContent.section7.card4.subtitle}
             </h5>
           </div>

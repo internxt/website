@@ -2,22 +2,22 @@
     {
         "id": "home",
         "title": "Internxt – Be limitless (España)",
-        "description": "Internxt Drive es un servicio de cloud privado, seguro y gratis. Haz el cambio de a la nube del futuro. Encriptación de punto a punto, tecnología distribuída y blockchain."
+        "description": "La misión de Internxt es ayudar a dar forma a un mundo que respete los derechos de privacidad de las personas. Internxt Drive ofrece un servicio de almacenamiento en la nube seguro, privado y cifrado."
     },
     {
         "id": "drive",
         "title": "Internxt – Drive (España)",
-        "description": "Internxt Drive es un servicio de cloud privado, seguro y gratis. Haz el cambio de a la nube del futuro. Encriptación de punto a punto, tecnología distribuída y blockchain."
+        "description": "Internxt Drive es una alternativa privada y segura a Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive y MediaFire. Zero-knowledge, distribuido, almacenamiento en la nube blockchain."
     },
     {
         "id": "photos",
         "title": "Internxt – Photos (España)",
-        "description": "Guarda todas tus fotos en una nube segura, completamente privada. Nube encriptada de punto a punto. Alternative segura y gratis a Google Photos."
+        "description": "Alternativa cifrada, privada, gratuita y segura a Google Photos. Almacena tus fotos en la nube de forma segura y gratuita."
     },
     {
         "id": "pricing",
         "title": "Internxt – Precios (España)",
-        "description": "Precio Internxt. Un plan común para todos nuestros servicios. Internxt Drive, Internxt Send, Internxt Photos. Bienvenido al Universo de Internxt."
+        "description": "Precio Internxt. Un plan común para todos nuestros servicios. Internxt Drive, Internxt Send, Internxt Photos. Bienvenido a Internxt."
     },
     {
         "id": "about",
@@ -27,16 +27,21 @@
     {
         "id": "token",
         "title": "Internxt – Token (España)",
-        "description": "Internxt token. Conoce el asset tokenizado de Internxt."
-    },
-    {
-        "id": "core",
-        "title": "Internxt – Core (España)",
-        "description": "Cobra por alquilar el espacio inutilizado de los servidores en tu centro de datos."
+        "description": "Internxt token. Conoce el asset tokenizado de Internxt. Compra Internxt Tokens en Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
     },
     {
         "id": "legal",
         "title": "Internxt – Legal (España)",
         "description": ""
+    },
+    {
+        "id": "privacy",
+        "title": "Internxt – Privacidad (España)",
+        "description": "La privacidad es un derecho fundamental, y los productos Internxt están diseñados para protegerla."
+    },
+    {
+        "id": "lifetime",
+        "title": "Internxt – Lifetime de almacenamiento en la nube (España)",
+        "description": "Consige el mejor, más barato y más seguro almacenamiento en la nube de por vida. Paga una vez y disfruta de Internxt para siempre. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
     }
 ]

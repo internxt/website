@@ -40,6 +40,8 @@ export default function Layout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="icon" href="/favicon.ico" />
         {isProduction ? <script src="/js/analyticsSnippet.js" /> : <script src="/js/segment.js" />}
         {!disableMailerlite && <script src="/js/mailerlite.js" />}

@@ -45,7 +45,7 @@ const YoutubeEmbed = ({
   });
 
   return (
-    <div className={`fixed flex flex-col items-center justify-center top-0 left-0 w-full h-full p-10 lg:p-20 xl:px-40 xl:py-24 bg-black bg-opacity-90 backdrop-filter backdrop-blur transition-all duration-250 z-50 ${show ? 'opacity-100 pointer-events-all' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed flex flex-col items-center justify-center top-0 left-0 w-full h-full p-6 sm:p-10 lg:p-20 xl:px-40 xl:py-24 bg-black bg-opacity-90 backdrop-filter backdrop-blur transition-all duration-250 z-50 ${show ? 'opacity-100 pointer-events-all' : 'opacity-0 pointer-events-none'}`}>
 
       <div className="relative flex flex-col items-center justify-center w-full max-w-7xl h-full mx-auto">
 
@@ -61,7 +61,7 @@ const YoutubeEmbed = ({
         <button
           type="button"
           onClick={hideModal}
-          className="fixed left-8 top-8 flex flex-col flex-shrink-0 items-center justify-center w-12 h-12 backdrop-filter backdrop-blur backdrop-brightness-150 bg-white bg-opacity-15 hover:bg-opacity-20 focus:bg-opacity-15 focus:text-cool-gray-30 text-white rounded-full z-10"
+          className="fixed left-6 sm:left-8 top-6 sm:top-8 flex flex-col flex-shrink-0 items-center justify-center w-12 h-12 backdrop-filter backdrop-blur backdrop-brightness-150 bg-white bg-opacity-15 hover:bg-opacity-20 focus:bg-opacity-15 focus:text-cool-gray-30 text-white rounded-full z-10"
         >
           <UilTimes width="24px" height="24px" />
         </button>

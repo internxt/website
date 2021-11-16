@@ -25,7 +25,7 @@ const HeroSection = ({
           {textContent.title.line2}
         </h1>
 
-        <h3 className="text-base font-normal text-cool-gray-80 mb-10">
+        <h3 className="text-lg sm:text-base font-normal text-cool-gray-80 mb-10">
           {textContent.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />
@@ -35,7 +35,7 @@ const HeroSection = ({
           {textContent.subtitle.line3}
         </h3>
 
-        <h3 className="text-base font-normal text-orange-50">
+        <h3 className="text-lg sm:text-base font-normal text-orange-50">
           {textContent.availableSoon}
         </h3>
 

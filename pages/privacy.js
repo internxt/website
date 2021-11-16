@@ -13,11 +13,11 @@ const Privacy = ({
   footerLang,
   deviceLang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy">
 
       <Navbar
         textContent={navbarLang}
