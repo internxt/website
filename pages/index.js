@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 
+import cookies from '../lib/cookies';
+import { getDriveDownloadUrl } from '../lib/get-download-url';
 import HeroSection from '../components/home/HeroSection';
 import GetStartedSection from '../components/home/GetStartedSection';
 import InvestorsSection from '../components/home/InvestorsSection';
@@ -8,8 +10,6 @@ import FeaturesSection from '../components/home/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import { getDriveDownloadUrl } from '../lib/get-download-url';
 
 const Home = ({
   metatagsDescriptions,

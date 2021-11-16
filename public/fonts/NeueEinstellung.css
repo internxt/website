@@ -23,7 +23,6 @@
   font-style: normal;
   font-display: auto;
   src: local("Neue Einstellung Thin"),
-       url("./NeueEinstellung-Thin.otf") format("otf"),
        url("./NeueEinstellung-Thin.ttf") format("truetype"),
        url("./NeueEinstellung-Thin.woff") format("woff"),
        url("./NeueEinstellung-Thin.woff2") format("woff2");
@@ -35,7 +34,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung Extralight"),
-       url("./NeueEinstellung-Extralight.otf") format("otf"),
        url("./NeueEinstellung-Extralight.ttf") format("truetype"),
        url("./NeueEinstellung-Extralight.woff") format("woff"),
        url("./NeueEinstellung-Extralight.woff2") format("woff2");
@@ -47,7 +45,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung Light"),
-       url("./NeueEinstellung-Light.otf") format("otf"),
        url("./NeueEinstellung-Light.ttf") format("truetype"),
        url("./NeueEinstellung-Light.woff") format("woff"),
        url("./NeueEinstellung-Light.woff2") format("woff2");
@@ -59,7 +56,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung Regular"),
-       url("./NeueEinstellung-Regular.otf") format("otf"),
        url("./NeueEinstellung-Regular.ttf") format("truetype"),
        url("./NeueEinstellung-Regular.woff") format("woff"),
        url("./NeueEinstellung-Regular.woff2") format("woff2");
@@ -71,7 +67,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung"),
-       url("./NeueEinstellung-Medium.otf") format("otf"),
        url("./NeueEinstellung-Medium.ttf") format("truetype"),
        url("./NeueEinstellung-Medium.woff") format("woff"),
        url("./NeueEinstellung-Medium.woff2") format("woff2");
@@ -83,7 +78,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung Semibold"),
-       url("./NeueEinstellung-Semibold.otf") format("otf"),
        url("./NeueEinstellung-Semibold.ttf") format("truetype"),
        url("./NeueEinstellung-Semibold.woff") format("woff"),
        url("./NeueEinstellung-Semibold.woff2") format("woff2");
@@ -95,7 +89,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung Bold"),
-       url("./NeueEinstellung-Bold.otf") format("otf"),
        url("./NeueEinstellung-Bold.ttf") format("truetype"),
        url("./NeueEinstellung-Bold.woff") format("woff"),
        url("./NeueEinstellung-Bold.woff2") format("woff2");
@@ -107,7 +100,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung Extrabold"),
-       url("./NeueEinstellung-Extrabold.otf") format("otf"),
        url("./NeueEinstellung-Extrabold.ttf") format("truetype"),
        url("./NeueEinstellung-Extrabold.woff") format("woff"),
        url("./NeueEinstellung-Extrabold.woff2") format("woff2");
@@ -119,7 +111,6 @@
   font-style: normal;
   font-display: auto;
   src: local("NeueEinstellung Black"),
-       url("./NeueEinstellung-Black.otf") format("otf"),
        url("./NeueEinstellung-Black.ttf") format("truetype"),
        url("./NeueEinstellung-Black.woff") format("woff"),
        url("./NeueEinstellung-Black.woff2") format("woff2");
