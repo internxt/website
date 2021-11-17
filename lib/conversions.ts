@@ -7,7 +7,11 @@ export default async function setUTM() {
     'utm_source',
     'utm_campaign',
     'gclid',
-    'irclickid'
+    'irclickid',
+    'ga_campaign',
+    'ga_adgroup',
+    'ga_keyword',
+    'ga_network'
   ];
   const links = document.querySelectorAll('a');
 
