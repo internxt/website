@@ -21,19 +21,15 @@ const ManifestoSection = ({
           {textContent.section1.title.line2}
         </h2>
 
-        <h3 className="text-lg sm:text-base font-normal text-cool-gray-80 mb-10">
+        <h3 className="text-lg sm:text-base font-normal w-full max-w-2xl text-cool-gray-80 mb-10">
           {textContent.section1.subtitle.line1}
           {' '}
-          <br className="hidden sm:flex" />
           {textContent.section1.subtitle.line2}
           {' '}
-          <br className="hidden sm:flex" />
           {textContent.section1.subtitle.line3}
           {' '}
-          <br className="hidden sm:flex" />
           {textContent.section1.subtitle.line4}
           {' '}
-          <br className="hidden sm:flex" />
           {textContent.section1.subtitle.line5}
         </h3>
 
@@ -51,7 +47,7 @@ const ManifestoSection = ({
     {/* How we ensure user privacy */}
     <div className="flex flex-col items-center py-20 lg:pb-40 lg:pt-0 z-10">
 
-      <div className="flex flex-col items-center text-center px-6">
+      <div className="flex flex-col items-center text-left sm:text-center px-6">
 
         <h2 className="text-3xl lg:text-4xl font-semibold mb-10">
           {textContent.section2.title.line1}
@@ -60,16 +56,15 @@ const ManifestoSection = ({
           {textContent.section2.title.line2}
         </h2>
 
-        <h3 className="text-lg sm:text-base font-normal text-cool-gray-80 mb-20">
+        <h3 className="text-lg sm:text-base font-normal w-full max-w-md text-cool-gray-80 mb-20">
           {textContent.section2.subtitle.line1}
           {' '}
-          <br className="hidden sm:flex" />
           {textContent.section2.subtitle.line2}
         </h3>
 
-        <div className="flex flex-col space-y-16 sm:space-y-0 sm:grid sm:grid-cols-1 lg:grid-cols-2 sm:grid-flow-row lg:grid-rows-2 sm:gap-10 lg:gap-20 text-left">
+        <div className="flex flex-col space-y-16 sm:space-y-0 sm:grid sm:grid-cols-1 md:grid-cols-2 sm:grid-flow-row md:grid-rows-2 sm:gap-10 md:gap-20 text-left">
 
-          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 md:w-80 md:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square1.title}
             </h4>
@@ -78,7 +73,7 @@ const ManifestoSection = ({
             </h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 md:w-80 md:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square2.title}
             </h4>
@@ -87,7 +82,7 @@ const ManifestoSection = ({
             </h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 md:w-80 md:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square3.title}
             </h4>
@@ -96,7 +91,7 @@ const ManifestoSection = ({
             </h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start p-8 sm:p-10 lg:w-80 lg:h-80 bg-cool-gray-5 rounded-2xl">
+          <div className="flex flex-col items-start justify-start p-8 sm:p-10 md:w-80 md:h-80 bg-cool-gray-5 rounded-2xl">
             <h4 className="text-2xl font-semibold mb-6">
               {textContent.section2.square4.title}
             </h4>
@@ -123,7 +118,7 @@ const ManifestoSection = ({
           {textContent.section3.title.line2}
         </h2>
 
-        <h3 className="text-lg sm:text-base font-normal mb-40">
+        <h3 className="text-lg sm:text-base font-normal text-cool-gray-20 mb-40">
           {textContent.section3.subtitle.line1}
           {' '}
           <br className="hidden sm:flex" />

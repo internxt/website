@@ -1,7 +1,7 @@
 {
 	"NewsletterSection": {
 		"title": "Newsletter",
-		"description": {"line1": "Want to hear from us when we launch", "line2": "new products or release a new update?", "line3": "Type you mail adress and we’ll do the rest!"},
+		"description": {"line1": "Want to hear from us when we launch", "line2": "new products or release a new update?", "line3": "Type your mail address and we’ll do the rest!"},
 		"input": "Your email adress",
 		"info": "You can unsubscribe at any time",
 		"cta": "Subscribe"

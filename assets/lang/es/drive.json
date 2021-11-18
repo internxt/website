@@ -10,7 +10,7 @@
 		"subtitle": {
 			"line1": "Sincronizar, hacer backups y compartir tus archivos en total privacidad no puede ser más",
 			"line2": "fácil. En Internxt Drive nos centramos en un almacenamiento encriptado fácil de usar con",
-			"line3": "encriptación de grado militar para que sólo tu tenga el control de sus archivos y datos."
+			"line3": "encriptación de grado militar para que solo tú tengas el control de sus archivos y datos."
 		},
 		"DownloadLinks": {
 			"or": "o",
@@ -44,7 +44,7 @@
 			},
 			"subtitle": {
 				"line1": "Accede de forma segura a todos tus",
-				"line2": "archivos desde su ordenador,",
+				"line2": "archivos desde tu ordenador,",
 				"line3": "smartphone, tableta o cualquier tipo",
 				"line4": "de dispositivo con conexión a internet",
 				"line5": "a través de la aplicación cloud storage",
@@ -65,8 +65,8 @@
 				"line4": "lo que quieres más rápido. Incluso puedes",
 				"line5": "hacer una copia de seguridad de tu",
 				"line6": "ordenador como, la carpeta de documentos",
-				"line7": "para que para que siempre tenga los",
-				"line8": "archivos más importantes actualizados."
+				"line7": "para que siempre tenga los archivos más",
+				"line8": "importantes actualizados."
 			}
 		},
 		"section4": {
@@ -78,11 +78,11 @@
 			},
 			"subtitle": {
 				"line1": "Internxt Drive se centra en la privacidad",
-				"line2": "y la seguridad, para que sólo tengas que",
+				"line2": "y la seguridad, para que solo tengas que",
 				"line3": "centrarte en lo que te importa, como",
 				"line4": "compartir archivos con tus compañeros",
 				"line5": "de trabajo, o las fotos de tu último",
-				"line6": "viaje con tu familia. Tu eliges con",
+				"line6": "viaje con tu familia. Tú eliges con",
 				"line7": "quién quieres compartirlo y cuántas",
 				"line8": "veces quieres que se descargue."
 			}
@@ -95,7 +95,7 @@
 			},
 			"subtitle": {
 				"line1": "Ahora puedes guardar la última versión",
-				"line2": "de ese proyecto súper importante en el",
+				"line2": "de ese proyecto superimportante en el",
 				"line3": "que estás trabajando, tu carpeta de",
 				"line4": "documentos o tus trabajos de la uni,",
 				"line5": "todos a salvo en la nube."
@@ -113,14 +113,14 @@
 				"line2": "Seguros y privados."
 			},
 			"subtitle": {
-				"line1": "La privacidad y la seguridad estan en nuestro núcleo, nuestro negocio no se",
+				"line1": "La privacidad y la seguridad están en nuestro núcleo, nuestro negocio no se",
 				"line2": "basa la publicidad ni los datos, sino en la confianza. Respetamos tus derechos",
 				"line3": "y construimos productos increíbles en torno a ellos, no en su contra."
 			},
 			"cta": "Nuestro compromiso con la privacidad",
 			"card1": {
 				"title": "Encriptación de grado militar.",
-				"subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus archivos están codificados para que sólo tú puedas acceder a ellos."
+				"subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus archivos están codificados para que solo tú puedas acceder a ellos."
 			},
 			"card2": {
 				"title": "Tecnología de conocimiento cero.",
@@ -132,7 +132,7 @@
 			},
 			"card4": {
 				"title": "Seguro desde el núcleo.",
-				"subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada dia, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
+				"subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada día, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
 			}
 		},
 		"DownloadLinks": {

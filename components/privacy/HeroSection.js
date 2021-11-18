@@ -20,23 +20,22 @@ const HeroSection = ({
               {textContent.title}
             </h1>
 
-            <h2 className="text-xl sm:text-base font-normal text-white mb-8 sm:mb-10">
+            <h2 className="text-xl sm:text-base font-normal w-full max-w-2xl text-white mb-8 sm:mb-10">
               {textContent.subtitle.line1}
               {' '}
-              <br className="hidden sm:flex" />
               {textContent.subtitle.line2}
               {' '}
-              <br className="hidden sm:flex" />
               {textContent.subtitle.line3}
               {' '}
-              <br className="hidden sm:flex" />
               {textContent.subtitle.line4}
+              {' '}
+              {textContent.subtitle.line5}
             </h2>
 
             <button
               type="button"
               onClick={() => setIsOpen(true)}
-              className="flex flex-row md:mx-auto space-x-2 items-center justify-center text-xl sm:text-base text-blue-50"
+              className="flex flex-row sm:mx-auto space-x-2 items-center justify-center text-xl sm:text-base text-blue-50"
             >
               <span>{textContent.cta}</span>
               <UilPlayCircle className="w-5 h-5" />

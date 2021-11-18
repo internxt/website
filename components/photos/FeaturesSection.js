@@ -4,14 +4,11 @@ import Link from 'next/link';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 import { UilAngleRightB } from '@iconscout/react-unicons';
-import DownloadComponent from './DownloadComponent';
 import * as anim from '../../public/js/anim';
 
 const FeaturesSection = ({
   textContent,
-  device,
-  lang,
-  download
+  lang
 }) => (
   <section className="flex flex-col w-full">
 
@@ -141,9 +138,15 @@ const FeaturesSection = ({
                 height: 844
               }}
             >
-              <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
               <div
-                className="absolute w-full h-full bg-no-repeat bg-cover bg-right-top"
+                className="absolute right-0 flex rounded-4xl shadow-subtle"
+                style={{
+                  width: 646,
+                  height: 844
+                }}
+              />
+              <div
+                className="absolute bg-no-repeat bg-cover bg-right-top"
                 style={{
                   backgroundImage: 'url(/images/photos/photos-preview-mockup.webp)',
                   width: 646,

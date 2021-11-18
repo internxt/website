@@ -9,7 +9,7 @@
 		"subtitle": {
 			"line1": "Revive, comparte y mantén a salvo tus mejores recuerdos en",
 			"line2": "un solo lugar. Con Internxt Photos centrado en la privacidad",
-			"line3": "y la seguridad, tus fotos son tuyas y solo tuyas."
+			"line3": "y la seguridad, tus fotos son tuyas y solamente tuyas."
 		},
 		"availableSoon": "Disponible muy pronto",
 		"DownloadLinks": {
@@ -45,10 +45,10 @@
 			},
 			"subtitle": {
 				"line1": "Tu biblioteca de fotos estará siempre",
-				"line2": "actualizada actualizada en todos tus",
-				"line3": "dispositivos. Esto significa que puedes",
-				"line4": "acceder a tus fotos sincronizadas incluso",
-				"line5": "cuando tu dispositivo se pierda o se rompa."
+				"line2": "actualizada en todos tus dispositivos.",
+				"line3": "Esto significa que puedes acceder a tus",
+				"line4": "fotos sincronizadas incluso cuando tu",
+				"line5": "dispositivo se pierda o se rompa."
 			}
 		},
 		"section3": {
@@ -60,7 +60,7 @@
 			"subtitle": {
 				"line1": "Genera un link y controla",
 				"line2": "cuantas veces quieres que",
-				"line3": "se puede acceder a la fotos."
+				"line3": "se pueda acceder a las fotos."
 			}
 		},
 		"section4": {
@@ -75,14 +75,14 @@
 				"line2": "a ti y tus fotos."
 			},
 			"subtitle": {
-				"line1": "La privacidad y la seguridad estan en nuestro núcleo, nuestro negocio no se",
+				"line1": "La privacidad y la seguridad están en nuestro núcleo, nuestro negocio no se",
 				"line2": "basa la publicidad ni los datos, sino en la confianza. Respetamos tus derechos",
 				"line3": "y construimos productos increíbles en torno a ellos, no en su contra."
 			},
 			"cta": "Nuestro compromiso con la privacidad",
 			"card1": {
 				"title": "Encriptación de grado militar.",
-				"subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus fotos están codificadas para que sólo tú puedas acceder a ellas."
+				"subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus fotos están codificadas para que solo tú puedas acceder a ellas."
 			},
 			"card2": {
 				"title": "Tecnología de conocimiento cero.",
@@ -94,7 +94,7 @@
 			},
 			"card4": {
 				"title": "Seguro desde el núcleo.",
-				"subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada dia, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
+				"subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada día, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
 			}
 		},
 		"DownloadLinks": {

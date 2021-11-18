@@ -4,12 +4,12 @@
 		"eyebrow": "INTERNXT DRIVE",
 		"title": {
 			"line1": "The safest cloud storage for all",
-			"line2": "your files, photos and more."
+			"line2": "your files, photos, and more."
 		},
 		"subtitle": {
-			"line1": "Syncing, backing up and sharing your files in total privacy couldn’t be easier.",
-			"line2": "With Internxt Drive we focus in a user-friendly encrypted storage with military-grade",
-			"line3": "encryption, so only you have the control over your files and data."
+			"line1": "Syncing, backing up, and sharing your files in total privacy couldn’t be easier.",
+			"line2": "With Internxt Drive we focus on user-friendly encrypted storage with military-grade",
+			"line3": "encryption, so only you have control over your files and data."
 		},
 		"DownloadLinks": {
 			"or": "or",
@@ -31,22 +31,22 @@
 	{
 		"section1": {
 			"title": {
-				"line1": "All kind of files.",
+				"line1": "All kinds of files.",
 				"line2": "On all your devices."
 			}
 		},
 		"section2": {
 			"title": {
-				"line1": "All your files",
-				"line2": "available in all",
+				"line1": "All your files are",
+				"line2": "available on all",
 				"line3": "your devices."
 			},
 			"subtitle": {
-				"line1": "Securelly access all your files from",
-				"line2": "your computer, smartphone, tablet or",
-				"line3": "any kind of device with connection to",
-				"line4": "internet via the most secure cloud",
-				"line5": "storage app."
+				"line1": "Securely access all your files from",
+				"line2": "your computer, smartphone, tablet,",
+				"line3": "or any device with a connection to",
+				"line4": "the internet via the most secure",
+				"line5": "cloud storage app."
 			}
 		},
 		"section3": {
@@ -58,8 +58,8 @@
 			},
 			"subtitle": {
 				"line1": "Internxt Drive lets you organize your",
-				"line2": "files in folders, rename them and filter",
-				"line3": "list of files to find what you want faster.",
+				"line2": "files in folders, rename them, and filter",
+				"line3": "a list of files to find what you want faster.",
 				"line4": "You can even backup your computer",
 				"line5": "folders like your documents folder, so",
 				"line6": "you always have the most recent",
@@ -80,13 +80,13 @@
 				"line5": "your last travel with your family. You",
 				"line6": "choose with who you want to share",
 				"line7": "them and how many times you want",
-				"line8": "it to be downloaded."
+				"line8": "them to be downloaded."
 			}
 		},
 		"section5": {
 			"eyebrow": "NEW FEATURE",
 			"title": {
-				"line1": "Backup what",
+				"line1": "Back up what",
 				"line2": "matters to you."
 			},
 			"subtitle": {
@@ -109,21 +109,21 @@
 				"line2": "Secure and private."
 			},
 			"subtitle": {
-				"line1": "Privacy and security are our core, we don’t run our business on data or advertising,",
-				"line2": "but on trust. We respect your rights and build amazing tools around them, not against."
+				"line1": "Privacy and security are our core, we don’t run our business on data or advertising, but",
+				"line2": "on trust. We respect your rights and build amazing tools around them, not against them."
 			},
-			"cta": "Our commitment in privacy",
+			"cta": "Our commitment on privacy",
 			"card1": {
-				"title": "Military-grade encription.",
-				"subtitle": "We take your privacy very seriously, that’s why your photos are encripted so only you can access your photos."
+				"title": "Military-grade encryption.",
+				"subtitle": "We take your privacy very seriously, that’s why your files are encrypted so only you can access your files."
 			},
 			"card2": {
 				"title": "Zero-knowledge technology.",
-				"subtitle": "We never store or transmit files, user passwords or encryption keys in an unencrypted or unhashed form."
+				"subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
 			},
 			"card3": {
 				"title": "Privacy by design.",
-				"subtitle": "We develop our products with the user in mind, and it’s privacy is a must in the data driven world we live in."
+				"subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
 			},
 			"card4": {
 				"title": "Secure from the core.",
