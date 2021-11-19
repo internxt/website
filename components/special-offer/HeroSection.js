@@ -11,14 +11,14 @@ const HeroSection = ({
       price: '4.49',
       priceBefore: '8.99',
       bill: '53.88',
-      stripeID: 'price_1JxXCDFAOdcgaBMQeIxcx8YI'
+      stripeID: 'TB2_50_OFF_Annual'
     },
     {
       id: 1,
       price: '4.99',
       priceBefore: '9.99',
       bill: '4.99',
-      stripeID: 'price_1JxXDLFAOdcgaBMQAw3ygbQa'
+      stripeID: 'TB2_50_OFF_Monthly'
     }
   ];
 
