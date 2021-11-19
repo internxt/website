@@ -8,16 +8,16 @@ const HeroSection = ({
   const plans = [
     {
       id: 0,
-      name: 'Annual',
       price: '4.49',
       priceBefore: '8.99',
+      bill: '53.88',
       stripeID: 'price_1JxXCDFAOdcgaBMQeIxcx8YI'
     },
     {
       id: 1,
-      name: 'Monthly',
       price: '4.99',
       priceBefore: '9.99',
+      bill: '4.99',
       stripeID: 'price_1JxXDLFAOdcgaBMQAw3ygbQa'
     }
   ];
@@ -32,19 +32,16 @@ const HeroSection = ({
         <div className="flex flex-col text-left">
 
           <h1 className="text-5xl sm:text-6xl font-semibold text-white mb-6 sm:mb-10">
-            <p>50% DE</p>
-            <p>DESCUENTO EN </p>
-            <p>
-              TU PLAN DE&nbsp;
-              <span className="underline">2TB</span>
-            </p>
-            <p>PARA SIEMPRE.</p>
+            <p>{textContent.title.line1}</p>
+            <p>{textContent.title.line2}</p>
+            <p>{textContent.title.line3}</p>
+            <p>{textContent.title.line4}</p>
           </h1>
 
           <div className="flex flex-col space-y-2 sm:space-y-4">
 
             <h3 className="text-sm font-normal w-full text-cool-gray-60">
-              Oferta por tiempo limitado, termina el 30 de Noviembre.
+              {textContent.legal.endtime}
             </h3>
 
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 w-full text-white">
@@ -58,7 +55,7 @@ const HeroSection = ({
                 >
 
                   <div className="flex flex-row w-full justify-between items-center">
-                    <span className="text-sm">{plan.name}</span>
+                    <span className="text-sm">{textContent.plans.name[plan.id]}</span>
                     <div className={`flex flex-col justify-center items-center ${selected === plan.id ? 'opacity-100' : 'opacity-0'} rounded-full bg-blue-60 text-white -m-0.5 lg:m-0 p-0.5`}>
                       <UilCheck className="w-5 lg:w-4 h-5 lg:h-4" />
                     </div>
@@ -77,7 +74,7 @@ const HeroSection = ({
                         <span className="text-base font-medium">{plan.priceBefore}</span>
                         <div className="absolute top-1/2 left-0 w-full h-0.5 transform -translate-y-1/2 bg-white" />
                       </div>
-                      <span className="text-supporting-2 font-bold">/mes</span>
+                      <span className="text-supporting-2 font-bold">{textContent.plans.monthly}</span>
                     </div>
 
                   </div>

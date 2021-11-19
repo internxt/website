@@ -11,8 +11,10 @@
 			"warn": "(*): IF AT ANY TIME YOU CANCEL YOUR SUBSCRIPTION, CHANGE YOUR SUBSCRIPTION OR NO LONGER MAINTAIN A VALID PAYMENT METHOD, YOU WILL LOSE THE BENEFIT OF THIS OFFER."
 		},
 		"plans": {
-			"annual": "Annual",
-			"month": "Monthly",
+			"name": {
+				"0": "Annual",
+				"1": "Monthly"
+			},
 			"monthly": "monthly",
 			"billing": {
 				"0": {
