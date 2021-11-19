@@ -318,6 +318,48 @@ const STRIPE_PRODUCT = {
       product: 'prod_EUaUAiDCK1Etz1',
     }
   },
+  TB2_50_OFF_Annual: {
+    production: 'price_1JxXCDFAOdcgaBMQeIxcx8YI',
+    debug: 'price_1JxaIsFAOdcgaBMQOS6Do2qh',
+    return: 'pricing',
+    mode: 'subscription',
+    session: {
+      line_items: [
+        {
+          quantity: 1,
+        }
+      ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 53.88,
+      type: 'recurrent',
+      price_id: 'price_1JxXCDFAOdcgaBMQeIxcx8YI',
+      quantity: 1,
+      product: 'prod_EUaUAiDCK1Etz1',
+    }
+  },
+  TB2_50_OFF_Monthly: {
+    production: 'price_1JxXDLFAOdcgaBMQAw3ygbQa',
+    debug: 'price_1JxaGTFAOdcgaBMQA25twZLD',
+    return: 'pricing',
+    mode: 'subscription',
+    session: {
+      line_items: [
+        {
+          quantity: 1,
+        }
+      ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 4.99,
+      type: 'recurrent',
+      price_id: 'price_1JxXDLFAOdcgaBMQAw3ygbQa',
+      quantity: 1,
+      product: 'prod_EUaUAiDCK1Etz1',
+    }
+  }
 };
 
 export function getProductProperties(product) {
