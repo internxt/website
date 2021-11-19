@@ -32,7 +32,7 @@ const Token = ({
           lang={deviceLang}
           cta={['default']}
           fixed
-          light={false}
+          darkMode={false}
         />
 
         <HeroSection

@@ -1,23 +1,23 @@
 import React from 'react';
-import HeroSection from '../components/privacy/HeroSection';
-import ManifestoSection from '../components/privacy/ManifestoSection';
+import HeroSection from '../components/special-offer/HeroSection';
+// import FeatureSection from '../components/special-offer/FeatureSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
-const Privacy = ({
+const SpecialOffer = ({
   metatagsDescriptions,
   langJson,
   navbarLang,
   footerLang,
   deviceLang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Special Offer">
 
       <Navbar
         textContent={navbarLang}
@@ -31,9 +31,11 @@ const Privacy = ({
         textContent={langJson.HeroSection}
       />
 
-      <ManifestoSection
+      {/*
+      <FeatureSection
         textContent={langJson.ManifestoSection}
       />
+      */}
 
       <Footer
         textContent={footerLang}
@@ -51,7 +53,7 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/privacy.json`);
+  const langJson = require(`../assets/lang/${lang}/special-offer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
@@ -64,4 +66,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Privacy;
+export default SpecialOffer;
