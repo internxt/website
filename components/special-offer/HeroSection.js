@@ -45,7 +45,10 @@ const HeroSection = ({
       const distance = end - now;
       if (distance < 0) {
         clearInterval(timer);
-
+        setCountdownDisableDays(false);
+        setCountdownDisableHours(false);
+        setCountdownDisableMinutes(false);
+        setCountdownDisableSeconds(false);
         return;
       }
       const days = Math.floor(distance / day);
@@ -58,10 +61,10 @@ const HeroSection = ({
       if (minutes === 0 && hours === 0 && days === 0) setCountdownDisableMinutes(true);
       if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) setCountdownDisableSeconds(true);
 
-      document.querySelector(`#${id} .days`).innerHTML = (days < 10) ? `0${days}` : days;
-      document.querySelector(`#${id} .hours`).innerHTML = (hours < 10) ? `0${hours}` : hours;
-      document.querySelector(`#${id} .minutes`).innerHTML = (minutes < 10) ? `0${minutes}` : minutes;
-      document.querySelector(`#${id} .seconds`).innerHTML = (seconds < 10) ? `0${seconds}` : seconds;
+      document.querySelector(`#${id} .days`).innerHTML = days;
+      document.querySelector(`#${id} .hours`).innerHTML = (hours < 10 && days > 0) ? `0${hours}` : hours;
+      document.querySelector(`#${id} .minutes`).innerHTML = (minutes < 10 && hours > 0 && days > 0) ? `0${minutes}` : minutes;
+      document.querySelector(`#${id} .seconds`).innerHTML = (seconds < 10 && minutes > 0 && hours > 0 && days > 0) ? `0${seconds}` : seconds;
     }
 
     timer = setInterval(showRemaining, 1000);
@@ -196,19 +199,19 @@ const HeroSection = ({
 
         <div className="flex flex-row space-x-0 md:space-x-16">
           <div className="flex w-20 flex-col items-center justify-center">
-            <p className={`days text-4xl md:text-6xl font-bold ${countdownDisableDays ? 'text-cool-gray-80' : 'text-white'}`}>0</p>
+            <p className={`days text-4xl md:text-6xl font-bold ${countdownDisableDays ? 'text-cool-gray-80' : 'text-white'} transition-colors duration-150 delay-350`}>0</p>
             <p className="text-sm font-medium text-cool-gray-60">{textContent.days}</p>
           </div>
           <div className="flex w-20 flex-col items-center justify-center">
-            <p className={`hours text-4xl md:text-6xl font-bold ${countdownDisableHours ? 'text-cool-gray-80' : 'text-white'}`}>0</p>
+            <p className={`hours text-4xl md:text-6xl font-bold ${countdownDisableHours ? 'text-cool-gray-80' : 'text-white'} transition-colors duration-150 delay-350`}>0</p>
             <p className="text-sm font-medium text-cool-gray-60">{textContent.hours}</p>
           </div>
           <div className="flex w-20 flex-col items-center justify-center">
-            <p className={`minutes text-4xl md:text-6xl font-bold ${countdownDisableMinutes ? 'text-cool-gray-80' : 'text-white'}`}>0</p>
+            <p className={`minutes text-4xl md:text-6xl font-bold ${countdownDisableMinutes ? 'text-cool-gray-80' : 'text-white'} transition-colors duration-150 delay-350`}>0</p>
             <p className="text-sm font-medium text-cool-gray-60">{textContent.minutes}</p>
           </div>
           <div className="flex w-20 flex-col items-center justify-center">
-            <p className={`seconds text-4xl md:text-6xl font-bold ${countdownDisableSeconds ? 'text-cool-gray-80' : 'text-white'}`}>0</p>
+            <p className={`seconds text-4xl md:text-6xl font-bold ${countdownDisableSeconds ? 'text-cool-gray-80' : 'text-white'} transition-colors duration-150 delay-350`}>0</p>
             <p className="text-sm font-medium text-cool-gray-60">{textContent.seconds}</p>
           </div>
         </div>
