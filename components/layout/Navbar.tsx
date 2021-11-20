@@ -11,7 +11,7 @@ export default function Navbar({
   textContent,
   lang,
   cta,
-  light,
+  darkMode,
   fixed
 }) {
   const [menuState, setMenuState] = React.useState(false);
@@ -27,7 +27,7 @@ export default function Navbar({
 
   return (
 
-    <div className={`section flex items-center ${fixed ? 'fixed' : 'absolute'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-saturate-100 backdrop-blur-none ${light ? '' : styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-90 border-opacity-5 backdrop-blur-lg backdrop-saturate-150' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
+    <div className={`section flex items-center ${(!menuState && !fixed) ? 'absolute' : 'fixed'} w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-saturate-100 backdrop-blur-none ${darkMode ? '' : styles.nabvarBgFallback} bg-opacity-0 ${(scrolled && fixed) ? 'bg-opacity-90 border-opacity-5 backdrop-blur-lg backdrop-saturate-150' : 'border-opacity-0 bg-opacity-0'} ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}>
 
       <div className="content w-full">
 
@@ -37,7 +37,7 @@ export default function Navbar({
           <div className=" flex flex-row flex-grow flex-shrink-0 flex-1 justify-start items-center space-x-4 lg:space-x-0">
 
             <div className="flex lg:hidden">
-              <Hamburger label="Show menu" size={24} color={(light && !menuState) ? '#fff' : '#253858'} toggled={menuState} toggle={setMenuState} />
+              <Hamburger label="Show menu" size={24} color={(darkMode && !menuState) ? '#fff' : '#253858'} toggled={menuState} toggle={setMenuState} />
 
               {/* Mobile hamburger menu background */}
               <div className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${menuState ? 'opacity-100' : 'opacity-0'}`} />
@@ -140,7 +140,7 @@ export default function Navbar({
             {/* Logo */}
             <Link href="/" locale={lang}>
               <a className="flex flex-shrink-0">
-                <img loading="lazy" className="select-none" src={`../../logos/internxt/${(light && !menuState) ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
+                <img loading="lazy" className="select-none" src={`../../logos/internxt/${(darkMode && !menuState) ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
               </a>
             </Link>
 
@@ -151,7 +151,7 @@ export default function Navbar({
             <div className="hidden lg:inline-flex space-x-3">
 
               <Link href="/pricing" locale={lang}>
-                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
                   {textContent.links.pricing}
                 </a>
               </Link>
@@ -163,7 +163,7 @@ export default function Navbar({
                   {({ open }) => (
                     <>
                       <Popover.Button className="outline-none">
-                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${light ? 'text-white bg-white bg-opacity-0 hover:text-cool-gray-20 hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && light) ? 'bg-white bg-opacity-10 hover:bg-opacity-10 text-cool-gray-20' : ''} ${(open && !light) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
+                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${darkMode ? 'text-white bg-white bg-opacity-0 hover:text-cool-gray-20 hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && darkMode) ? 'bg-white bg-opacity-10 hover:bg-opacity-10 text-cool-gray-20' : ''} ${(open && !darkMode) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
                           <span>{textContent.links.products}</span>
                           <UilAngleDown className={`w-6 h-6 transition duration-150 ease-in-out transform translate-y-px ${open ? 'text-cool-gray-30' : 'text-cool-gray-20'}`} />
                         </span>
@@ -184,7 +184,7 @@ export default function Navbar({
 
                             <Popover.Button>
                               <Link href="/drive" locale={lang}>
-                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${light ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
                                   {textContent.products.drive}
                                 </a>
                               </Link>
@@ -192,7 +192,7 @@ export default function Navbar({
 
                             <Popover.Button>
                               <Link href="/photos" locale={lang}>
-                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${light ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
+                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
                                   {textContent.products.photos}
                                 </a>
                               </Link>
@@ -216,13 +216,13 @@ export default function Navbar({
               </div>
 
               <Link href="/privacy" locale={lang}>
-                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
                   {textContent.links.privacy}
                 </a>
               </Link>
 
               <Link href="/about" locale={lang}>
-                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${light ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
+                <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>
                   {textContent.links.about}
                 </a>
               </Link>
@@ -234,7 +234,7 @@ export default function Navbar({
           {/* Login and CTA */}
           <div className="flex flex-row flex-grow flex-shrink-0 flex-1 justify-end items-center">
 
-            <a href="https://drive.internxt.com/login" className={`hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 ${(light && !menuState) ? 'text-white focus:opacity-80' : 'text-blue-60 focus:text-blue-70'} text-sm font-medium`}>
+            <a href="https://drive.internxt.com/login" className={`hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 ${(darkMode && !menuState) ? 'text-white focus:opacity-80' : 'text-blue-60 focus:text-blue-70'} text-sm font-medium`}>
               {textContent.links.login}
             </a>
 
@@ -243,7 +243,7 @@ export default function Navbar({
                 href="https://drive.internxt.com/new"
                 target="_blank"
                 rel="noreferrer"
-                className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${(light && !menuState) ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10' : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'} focus:outline-none transition-all duration-75`}
+                className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${(darkMode && !menuState) ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10' : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'} focus:outline-none transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{textContent.links.getStarted}</p>
               </a>
