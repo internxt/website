@@ -58,10 +58,10 @@ const HeroSection = ({
       if (minutes === 0 && hours === 0 && days === 0) setCountdownDisableMinutes(true);
       if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) setCountdownDisableSeconds(true);
 
-      if (!Number.isNaN(days)) document.querySelector(`#${id} .days`).innerHTML = days;
-      if (!Number.isNaN(hours)) document.querySelector(`#${id} .hours`).innerHTML = hours;
-      if (!Number.isNaN(minutes)) document.querySelector(`#${id} .minutes`).innerHTML = minutes;
-      if (!Number.isNaN(seconds)) document.querySelector(`#${id} .seconds`).innerHTML = seconds;
+      document.querySelector(`#${id} .days`).innerHTML = (days < 10) ? `0${days}` : days;
+      document.querySelector(`#${id} .hours`).innerHTML = (hours < 10) ? `0${hours}` : hours;
+      document.querySelector(`#${id} .minutes`).innerHTML = (minutes < 10) ? `0${minutes}` : minutes;
+      document.querySelector(`#${id} .seconds`).innerHTML = (seconds < 10) ? `0${seconds}` : seconds;
     }
 
     timer = setInterval(showRemaining, 1000);
