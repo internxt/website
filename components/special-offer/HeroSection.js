@@ -76,9 +76,9 @@ const HeroSection = ({
 
   return (
 
-    <section id="buy" className="relative flex flex-col w-full pt-32 sm:pt-20 bg-cool-gray-100 overflow-hidden">
+    <section id="buy" className="relative flex flex-col w-full pt-10 bg-cool-gray-100 overflow-hidden">
 
-      <div className="flex flex-col lg:flex-row items-center justify-center px-8 lg:px-0 py-16 pb-20 lg:py-40 space-y-20 lg:space-y-0 lg:space-x-20 xl:space-x-40">
+      <div className="flex flex-col lg:flex-row items-center justify-center px-8 lg:px-0 py-24 pb-20 lg:py-32 space-y-20 lg:space-y-0 lg:space-x-20 xl:space-x-40">
 
         {/* Main title */}
         <div className="flex flex-col text-left">
