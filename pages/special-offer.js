@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/special-offer/HeroSection';
-// import FeatureSection from '../components/special-offer/FeatureSection';
+import FeatureSection from '../components/special-offer/FeatureSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
@@ -11,7 +11,8 @@ const SpecialOffer = ({
   langJson,
   navbarLang,
   footerLang,
-  deviceLang
+  deviceLang,
+  lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
 
@@ -29,13 +30,12 @@ const SpecialOffer = ({
 
       <HeroSection
         textContent={langJson.HeroSection}
+        lang={lang}
       />
 
-      {/*
       <FeatureSection
-        textContent={langJson.ManifestoSection}
+        textContent={langJson.FeatureSection}
       />
-      */}
 
       <Footer
         textContent={footerLang}

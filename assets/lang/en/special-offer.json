@@ -8,7 +8,10 @@
 		},
 		"legal": {
 			"endtime": "Limited time offer, ends November 30.",
-			"warn": "(*): IF AT ANY TIME YOU CANCEL YOUR SUBSCRIPTION, CHANGE YOUR SUBSCRIPTION OR NO LONGER MAINTAIN A VALID PAYMENT METHOD, YOU WILL LOSE THE BENEFIT OF THIS OFFER."
+			"warn": {
+				"line1": "(*): IF AT ANY TIME YOU CANCEL YOUR SUBSCRIPTION, CHANGE YOUR SUBSCRIPTION OR NO",
+				"line2": "LONGER MAINTAIN A VALID PAYMENT METHOD, YOU WILL LOSE THE BENEFIT OF THIS OFFER."
+			}
 		},
 		"plans": {
 			"name": {
@@ -27,7 +30,13 @@
 				}
 			}
 		},
-		"cta": "Buy now"
+		"cta": "BUY NOW",
+		"ctaLoading": "REDIRECTING TO CHECKOUT",
+		"timeEnding": "This one-time offer ends in:",
+		"days": "DAYS",
+		"hours": "HOURS",
+		"minutes": "MINUTES",
+		"seconds": "SECONDS"
 	},
 	"FeatureSection": {
 		"title": {
@@ -43,7 +52,7 @@
 					"line3": "share or sell your data."
 				}
 			},
-			"unlimited": {
+			"multiplatform": {
 				"title": "Multiplatform",
 				"description": {
 					"line1": "Manage and access all your photos",
@@ -82,13 +91,13 @@
 					"line3": "for us you are part of the family."
 				}
 			}
-		}
-	},
-	"GetLifetimeSection": {
-		"title": {
-			"line1": "Designed to protect you.",
-			"line2": "Powered by trust."
 		},
-		"cta": "Buy now"
+		"buyNowSection": {
+			"title": {
+				"line1": "Designed to protect you.",
+				"line2": "Powered by trust."
+			},
+			"cta": "BUY NOW"
+		}
 	}
 }
