@@ -48,18 +48,12 @@ export default function Footer({
         )}
 
         {/* Newsletter */}
-        <div className={`${hideNewsletter ? 'hidden' : 'flex'} w-full flex-col md:flex-row space-y-6 md:space-x-20 md:space-y-0 justify-center items-center mb-16`}>
+        <div className={`${hideNewsletter ? 'hidden' : 'flex'} w-full flex-col md:flex-row space-y-6 md:space-x-20 md:space-y-0 justify-center items-start mb-16`}>
 
-          <div className="flex flex-col space-y-1">
+          <div className="flex flex-col space-y-1 w-full md:max-w-sm">
             <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
             <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-              {textContent.NewsletterSection.description.line1}
-              <br className="hidden md:flex" />
-              {' '}
-              {textContent.NewsletterSection.description.line2}
-              <br className="hidden md:flex" />
-              {' '}
-              {textContent.NewsletterSection.description.line3}
+              {textContent.NewsletterSection.description}
             </p>
           </div>
 
@@ -69,7 +63,7 @@ export default function Footer({
             target="_blank"
             rel="noopener"
             action="https://app.mailerlite.com/webforms/submit/r3s4c1"
-            className="flex flex-col w-full md:w-auto justify-items-start"
+            className="flex flex-col w-full md:w-auto justify-center items-center"
           >
             <input type="hidden" name="ml-submit" value="1" />
             <input
@@ -83,8 +77,15 @@ export default function Footer({
               name="signup"
               type="submit"
               value={`${textContent.NewsletterSection.cta}`}
-              className="flex justify-center w-full sm:w-auto items-center px-4 py-3 sm:py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:outline-none transition-all duration-75 cursor-pointer"
+              className="flex justify-center w-full items-center px-4 py-3 sm:py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:outline-none transition-all duration-75 cursor-pointer mb-6 sm:mb-2"
             />
+            <span className="text-xs sm:text-supporting-2 text-cool-gray-40">
+              {textContent.NewsletterSection.privacy}
+              {' '}
+              <Link href="/legal" locale={lang}>
+                <span className="underline cursor-pointer">{textContent.NewsletterSection.privacyLink}</span>
+              </Link>
+            </span>
           </form>
 
         </div>

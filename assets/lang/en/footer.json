@@ -1,10 +1,12 @@
 {
 	"NewsletterSection": {
 		"title": "Newsletter",
-		"description": {"line1": "Want to hear from us when we launch", "line2": "new products or release a new update?", "line3": "Type your mail address and we’ll do the rest!"},
+		"description": "Want to hear from us when we launch new products or release a new update? Type your mail address and we’ll do the rest!",
 		"input": "Your email adress",
 		"info": "You can unsubscribe at any time",
-		"cta": "Subscribe"
+		"cta": "Subscribe",
+		"privacy": "By subscribing you agree to our",
+		"privacyLink": "privacy policy."
 	},
 	"FooterSection": {
 		"description": "Internxt’s mission is to help shape a world that respects humanity’s privacy rights. To do so, we are releasing a series of services, which all have the common goal of helping humanity protect this fundamental right.",
