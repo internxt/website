@@ -46,7 +46,7 @@ const PriceTable = ({
 
         <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end px-6">
           <div className="relative">
-            <img loading="lazy" className="absolute select-none -top-6 sm:-top-4 -right-5 sm:-right-4 transform -translate-y-3 w-full" src="../../images/lifetime/special-landings/snow/snow1.png" draggable="false" alt="snow" />
+            <img loading="lazy" className="absolute select-none -top-6 sm:-top-4 -right-5 sm:-right-4 transform -translate-y-3 w-full" src="../../images/lifetime/special-landings/snow/snow1.webp" draggable="false" alt="snow" />
             <PriceCard
               planType="individual"
               storage={pricings.TB1.storage}
@@ -60,7 +60,7 @@ const PriceTable = ({
           </div>
 
           <div className="relative mt-10 md:mt-0">
-            <img loading="lazy" className="absolute select-none -top-5 sm:-top-4 -right-1 sm:-right-1 transform -translate-y-3 scale-105 sm:scale-100 w-full" src="../../images/lifetime/special-landings/snow/snow2.png" draggable="false" alt="snow" />
+            <img loading="lazy" className="absolute select-none -top-5 sm:-top-4 -right-1 sm:-right-1 transform -translate-y-3 scale-105 sm:scale-100 w-full" src="../../images/lifetime/special-landings/snow/snow2.webp" draggable="false" alt="snow" />
             <PriceCard
               planType="individual"
               storage={pricings.TB5.storage}
@@ -74,7 +74,7 @@ const PriceTable = ({
           </div>
 
           <div className="relative mt-10 xl:mt-0">
-            <img loading="lazy" className="absolute select-none -top-4 sm:-top-3 right-1 sm:right-1 transform -translate-y-3 w-full" src="../../images/lifetime/special-landings/snow/snow3.png" draggable="false" alt="snow" />
+            <img loading="lazy" className="absolute select-none -top-4 sm:-top-3 right-1 sm:right-1 transform -translate-y-3 w-full" src="../../images/lifetime/special-landings/snow/snow3.webp" draggable="false" alt="snow" />
             <PriceCard
               planType="individual"
               storage={pricings.TB10.storage}
