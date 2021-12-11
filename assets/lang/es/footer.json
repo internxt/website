@@ -17,7 +17,8 @@
 				"title": "Productos",
 				"drive": "Drive",
 				"photos": "Photos",
-				"send": "Send"
+				"send": "Send",
+				"token": "Token"
 			},
 			"company": {
 				"title": "Compañía",

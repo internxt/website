@@ -125,6 +125,10 @@ export default function Footer({
                       </div>
                     </a>
 
+                    <Link href="/token" locale={lang}>
+                      <a>{textContent.FooterSection.sections.products.token}</a>
+                    </Link>
+
                   </div>
                 </div>
               </div>
@@ -248,6 +252,9 @@ export default function Footer({
                             {textContent.FooterSection.comingSoon}
                           </div>
                         </a>
+                      </Link>
+                      <Link href="/token" locale={lang}>
+                        <a>{textContent.FooterSection.sections.products.token}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

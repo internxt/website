@@ -31,8 +31,8 @@ const Token = ({
           textContent={navbarLang}
           lang={deviceLang}
           cta={['default']}
-          fixed={false}
-          darkMode
+          fixed
+          darkMode={false}
         />
 
         <HeroSection
@@ -41,12 +41,14 @@ const Token = ({
 
       </div>
 
-      <Footer
-        textContent={footerLang}
-        lang={deviceLang}
-        hideNewsletter={false}
-        darkMode
-      />
+      <div className="bg-neutral-10">
+        <Footer
+          textContent={footerLang}
+          lang={deviceLang}
+          hideNewsletter={false}
+          darkMode={false}
+        />
+      </div>
 
     </Layout>
 
