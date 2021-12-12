@@ -13,7 +13,7 @@ const HeroSection = ({
         {/* Main title */}
         <div className="flex flex-col text-left z-10">
 
-          <p className="mb-4 text-base font-semibold text-cool-gray-60">
+          <p className="mb-4 text-base font-semibold text-cool-gray-20">
             {textContent.eyebrow}
           </p>
 
@@ -41,20 +41,19 @@ const HeroSection = ({
               {textContent.cta}
             </button>
 
-            <button
-              type="button"
-              tabIndex={0}
+            <a
+              href="#buy"
               className="flex justify-center w-full sm:w-auto items-center px-6 py-3 border border-cool-gray-20 rounded-lg text-base tracking-wider text-cool-gray-20 bg-cool-gray-100 outline-none transition-colors duration-75 cursor-pointer select-none"
             >
               {textContent.buy}
-            </button>
+            </a>
 
           </div>
 
         </div>
 
-        {/* Features grid */}
-        <div className="flex flex-col justify-center items-center border">
+        {/* Token icon and info */}
+        <div className="flex flex-col justify-center items-center">
           <div className="relative">
             <div
               className="flex"
@@ -78,9 +77,8 @@ const HeroSection = ({
 
           {/* Widget */}
           <div className="flex flex-col items-center w-full z-10">
-            <div className="bg-red-60 text-white py-2 px-6 rounded-lg">Widget should be here</div>
-            <script src="https://crypto.com/price/static/widget/index.js"></script>
-            <div id="crypto-widget-CoinList" data-transparent="true" data-theme="dark" data-design="modern" data-coins="internxt"></div>
+            <script src="https://crypto.com/price/static/widget/index.js" />
+            <div className="flex flex-col w-full" id="crypto-widget-CoinList" data-transparent="true" data-theme="dark" data-design="modern" data-coins="internxt" />
           </div>
         </div>
 
@@ -105,7 +103,7 @@ const HeroSection = ({
       </div>
 
       <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-16 pb-20">
-        <p>{textContent.trade}</p>
+        <p id="buy">{textContent.trade}</p>
 
         <div className="flex flex-row space-x-8">
           <a href="https://global.bittrex.com/Market/Index?MarketName=BTC-INXT" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/bittrex.webp" draggable="false" alt="bittrex logo" /></a>
