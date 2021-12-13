@@ -1,5 +1,6 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
+import Widget from './Widget';
 
 const HeroSection = ({
   textContent
@@ -45,14 +46,23 @@ const HeroSection = ({
 
       {/* Token icon and info */}
       <div className="flex flex-col justify-center items-center z-10">
-        <div className="relative w-64 h-64 pointer-events-none">
+        <div className="relative w-screen sm:w-96 h-32 sm:h-64 pointer-events-none">
           <div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            className="hidden sm:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
             style={{
               backgroundImage: 'url(/images/token/img/token.png)',
               backgroundSize: 'cover',
               width: 256,
               height: 256
+            }}
+          />
+          <div
+            className="flex sm:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            style={{
+              backgroundImage: 'url(/images/token/img/token.png)',
+              backgroundSize: 'cover',
+              width: 128,
+              height: 128
             }}
           />
           <div
@@ -68,8 +78,7 @@ const HeroSection = ({
 
         {/* Widget */}
         <div className="flex flex-col items-center w-full z-10">
-          <script src="https://crypto.com/price/static/widget/index.js" />
-          <div className="flex flex-col w-full" id="crypto-widget-CoinList" data-transparent="true" data-theme="dark" data-design="modern" data-coins="internxt" />
+          <Widget />
         </div>
       </div>
 
