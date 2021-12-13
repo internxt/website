@@ -6,7 +6,7 @@ const HeroSection = ({
   textContent
 }) => (
 
-  <section id="buy" className="relative flex flex-col w-full pt-10 bg-white overflow-hidden">
+  <section id="buy" className="relative flex flex-col w-full py-10 bg-white overflow-hidden">
 
     <div className="flex flex-col-reverse lg:flex-row items-center justify-center px-8 lg:px-0 pt-8 pb-10 lg:pt-32 space-y-20 lg:space-y-0 lg:space-x-20 xl:space-x-40">
 
@@ -17,18 +17,19 @@ const HeroSection = ({
           {textContent.eyebrow}
         </p>
 
-        <h1 className="text-5xl sm:text-6xl font-semibold text-cool-gray-100 mb-4 sm:mb-6">
+        <h1 className="text-5xl sm:text-7xl font-semibold text-cool-gray-100 mb-4 sm:mb-6">
           <p>{textContent.title.line1}</p>
           <p>{textContent.title.line2}</p>
           <p>{textContent.title.line3}</p>
           <p>{textContent.title.line4}</p>
         </h1>
 
-        <div className="flex flex-col text-sm font-normal w-full text-cool-gray-60 mb-6 sm:mb-12">
+        <div className="flex flex-col text-base font-normal w-full text-cool-gray-60 mb-6 sm:mb-12">
           {textContent.subtitle.line1}
           <br className="hidden sm:inline-flex" />
           {' '}
           {textContent.subtitle.line2}
+          <br className="hidden sm:inline-flex" />
         </div>
 
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 w-full">
@@ -77,7 +78,7 @@ const HeroSection = ({
         </div>
 
         {/* Widget */}
-        <div className="flex flex-col items-center w-full z-10">
+        <div className="hidden flex-col items-center w-full z-10">
           <Widget />
         </div>
       </div>
@@ -87,48 +88,50 @@ const HeroSection = ({
     {/* Brands */}
     <div className="flex flex-row flex-wrap items-center justify-around w-full max-w-7xl mx-auto pt-20 px-6 md:px-14 bg-white text-sm uppercase text-cool-gray-90 font-medium">
 
-      <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-16 pb-20">
+      <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-6 pb-20">
         <p>{textContent.metrics}</p>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://crypto.com/price/internxt" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/crypto.webp" draggable="false" alt="crypto.com logo" /></a>
+          <a href="https://crypto.com/price/internxt" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/crypto.webp" draggable="false" alt="crypto.com logo" /></a>
         </div>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://coinmarketcap.com/currencies/internxt/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/coinmarketcap.webp" draggable="false" alt="coinmarketcap logo" /></a>
-          <a href="https://wallet.coinbase.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/coinbasewallet.webp" draggable="false" alt="coinbase logo" /></a>
+          <a href="https://coinmarketcap.com/currencies/internxt/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/coinmarketcap.webp" draggable="false" alt="coinmarketcap logo" /></a>
+          <a href="https://wallet.coinbase.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/coinbasewallet.webp" draggable="false" alt="coinbase logo" /></a>
         </div>
       </div>
 
-      <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-16 pb-20">
+      <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-6 pb-20">
         <p id="buy">{textContent.trade}</p>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://global.bittrex.com/Market/Index?MarketName=BTC-INXT" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/bittrex.webp" draggable="false" alt="bittrex logo" /></a>
-          <a href="https://exrates.me/trading/INXTBTC" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/exrates.webp" draggable="false" alt="exrates logo" /></a>
+          <a href="https://global.bittrex.com/Market/Index?MarketName=BTC-INXT" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/bittrex.webp" draggable="false" alt="bittrex logo" /></a>
+          <a href="https://exrates.me/trading/INXTBTC" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/exrates.webp" draggable="false" alt="exrates logo" /></a>
         </div>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://latoken.com/exchange/INXT_BTC" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/latoken.webp" draggable="false" alt="latoken logo" /></a>
-          <a href="https://mercatox.com/exchange/INXT/BTC" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/mercatox.webp" draggable="false" alt="mercatox logo" /></a>
+          <a href="https://latoken.com/exchange/INXT_BTC" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/latoken.webp" draggable="false" alt="latoken logo" /></a>
+          <a href="https://mercatox.com/exchange/INXT/BTC" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/mercatox.webp" draggable="false" alt="mercatox logo" /></a>
         </div>
       </div>
 
-      <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-16 pb-20">
+      <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-6 pb-20">
         <p>{textContent.store}</p>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://www.binance.com/es" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/binance.webp" draggable="false" alt="binance logo" /></a>
-          <a href="https://wallet.coinbase.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/coinbasewallet.webp" draggable="false" alt="coinbase logo" /></a>
+          <a href="https://www.binance.com/es" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/binance.webp" draggable="false" alt="binance logo" /></a>
+          <a href="https://wallet.coinbase.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/coinbasewallet.webp" draggable="false" alt="coinbase logo" /></a>
         </div>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://trezor.io/coins/#INXT" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/trezor.webp" draggable="false" alt="trezor logo" /></a>
-          <a href="https://www.ledger.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6" src="../../images/token/ledger.webp" draggable="false" alt="ledger logo" /></a>
+          <a href="https://trezor.io/coins/#INXT" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/trezor.webp" draggable="false" alt="trezor logo" /></a>
+          <a href="https://www.ledger.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/ledger.webp" draggable="false" alt="ledger logo" /></a>
         </div>
       </div>
 
     </div>
+
+    <Widget />
 
   </section>
 
