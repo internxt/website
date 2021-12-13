@@ -5,89 +5,79 @@ const HeroSection = ({
   textContent
 }) => (
 
-  <section id="buy" className="relative flex flex-col w-full pt-10 bg-cool-gray-100 overflow-hidden">
+  <section id="buy" className="relative flex flex-col w-full pt-10 bg-white overflow-hidden">
 
-    <div className="overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center justify-center px-8 lg:px-0 py-24 lg:pt-32 space-y-20 lg:space-y-0 lg:space-x-20 xl:space-x-40">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-center px-8 lg:px-0 pt-8 pb-10 lg:pt-32 space-y-20 lg:space-y-0 lg:space-x-20 xl:space-x-40">
 
-        {/* Main title */}
-        <div className="flex flex-col text-left z-10">
+      {/* Main title */}
+      <div className="flex flex-col text-left z-10 mt-20 lg:mt-0">
 
-          <p className="mb-4 text-base font-semibold text-cool-gray-20">
-            {textContent.eyebrow}
-          </p>
+        <p className="mb-4 text-base font-semibold text-cool-gray-60">
+          {textContent.eyebrow}
+        </p>
 
-          <h1 className="text-5xl sm:text-6xl font-semibold text-white mb-4 sm:mb-6">
-            <p>{textContent.title.line1}</p>
-            <p>{textContent.title.line2}</p>
-            <p>{textContent.title.line3}</p>
-            <p>{textContent.title.line4}</p>
-          </h1>
+        <h1 className="text-5xl sm:text-6xl font-semibold text-cool-gray-100 mb-4 sm:mb-6">
+          <p>{textContent.title.line1}</p>
+          <p>{textContent.title.line2}</p>
+          <p>{textContent.title.line3}</p>
+          <p>{textContent.title.line4}</p>
+        </h1>
 
-          <div className="flex flex-col text-sm font-normal w-full text-cool-gray-60 mb-6 sm:mb-12">
-            {textContent.subtitle.line1}
-            <br className="hidden sm:inline-flex" />
-            {' '}
-            {textContent.subtitle.line2}
-          </div>
+        <div className="flex flex-col text-sm font-normal w-full text-cool-gray-60 mb-6 sm:mb-12">
+          {textContent.subtitle.line1}
+          <br className="hidden sm:inline-flex" />
+          {' '}
+          {textContent.subtitle.line2}
+        </div>
 
-          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 w-full">
+        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 w-full">
 
-            <button
-              type="button"
-              tabIndex={0}
-              className="flex justify-center w-full sm:w-auto items-center px-6 py-3 border border-transparent rounded-lg text-base font-medium tracking-wider text-white bg-blue-60 active:bg-blue-70 outline-none transition-colors duration-75 cursor-pointer select-none"
-            >
-              {textContent.cta}
-            </button>
-
-            <a
-              href="#buy"
-              className="flex justify-center w-full sm:w-auto items-center px-6 py-3 border border-cool-gray-20 rounded-lg text-base tracking-wider text-cool-gray-20 bg-cool-gray-100 outline-none transition-colors duration-75 cursor-pointer select-none"
-            >
-              {textContent.buy}
-            </a>
-
-          </div>
+          <button
+            type="button"
+            tabIndex={0}
+            className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 transition-all duration-75"
+          >
+            {textContent.cta}
+          </button>
 
         </div>
 
-        {/* Token icon and info */}
-        <div className="flex flex-col justify-center items-center">
-          <div className="relative">
-            <div
-              className="flex"
-              style={{
-                backgroundImage: 'url(/images/token/img/token.webp)',
-                backgroundSize: 'cover',
-                width: 400,
-                height: 300
-              }}
-            />
-            <div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-50"
-              style={{
-                backgroundImage: 'url(/images/token/img/rings.webp)',
-                backgroundSize: 'cover',
-                width: 1907,
-                height: 1907
-              }}
-            />
-          </div>
+      </div>
 
-          {/* Widget */}
-          <div className="flex flex-col items-center w-full z-10">
-            <script src="https://crypto.com/price/static/widget/index.js" />
-            <div className="flex flex-col w-full" id="crypto-widget-CoinList" data-transparent="true" data-theme="dark" data-design="modern" data-coins="internxt" />
-          </div>
+      {/* Token icon and info */}
+      <div className="flex flex-col justify-center items-center z-10">
+        <div className="relative w-64 h-64 pointer-events-none">
+          <div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            style={{
+              backgroundImage: 'url(/images/token/img/token.png)',
+              backgroundSize: 'cover',
+              width: 256,
+              height: 256
+            }}
+          />
+          <div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            style={{
+              backgroundImage: 'url(/images/token/img/blur-bg.png)',
+              backgroundSize: 'cover',
+              width: 1462,
+              height: 1152
+            }}
+          />
         </div>
 
+        {/* Widget */}
+        <div className="flex flex-col items-center w-full z-10">
+          <script src="https://crypto.com/price/static/widget/index.js" />
+          <div className="flex flex-col w-full" id="crypto-widget-CoinList" data-transparent="true" data-theme="dark" data-design="modern" data-coins="internxt" />
+        </div>
       </div>
 
     </div>
 
     {/* Brands */}
-    <div className="flex flex-row flex-wrap items-center justify-around w-full pt-20 px-6 md:px-14 bg-white text-sm uppercase text-cool-gray-90 font-medium">
+    <div className="flex flex-row flex-wrap items-center justify-around w-full max-w-7xl mx-auto pt-20 px-6 md:px-14 bg-white text-sm uppercase text-cool-gray-90 font-medium">
 
       <div className="flex flex-col items-center space-y-8 flex-shrink-0 px-10 xl:px-16 pb-20">
         <p>{textContent.metrics}</p>

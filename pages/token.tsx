@@ -30,8 +30,8 @@ const Token = ({
           textContent={navbarLang}
           lang={deviceLang}
           cta={['default']}
-          fixed={false}
-          darkMode
+          fixed
+          darkMode={false}
         />
 
         <HeroSection
@@ -44,7 +44,7 @@ const Token = ({
         textContent={footerLang}
         lang={deviceLang}
         hideNewsletter={false}
-        darkMode
+        darkMode={false}
       />
 
     </Layout>
