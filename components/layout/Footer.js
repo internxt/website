@@ -13,7 +13,7 @@ export default function Footer({
   darkMode
 }) {
   const [consentCookie, setConsentCookie] = React.useState(true);
-  const showSupporters = false;
+  const showSupporters = true;
 
   const handleAcceptCookies = () => {
     localStorage.setItem('CookieConsent', 'true');
@@ -36,13 +36,14 @@ export default function Footer({
           <div className="flex flex-col space-y-6 sm:space-x-20 py-12 justify-center mx-6 md:mx-10 lg:mx-32 bg-white border border-cool-gray-10 rounded-2xl mb-16">
             <div className="flex flex-col max-w-2xl px-16 mx-auto">
               <div className="flex flex-row justify-center items-center flex-wrap mb-8">
-                <img loading="lazy" className="h-8 mx-4" src="../../logos/investors/camara_espana.webp" alt="Cámara de España" draggable="false" />
-                <img loading="lazy" className="h-8 mx-4" src="../../logos/investors/camara_valencia.webp" alt="Cámara de Valencia" draggable="false" />
-                <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/ciberseguridad.webp" alt="Ciberseguridad Cámara España" draggable="false" />
-                <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/ue.webp" alt="Unión Europea" draggable="false" />
+                <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/ticcamaras.png" alt="Unión Europea" draggable="false" />
               </div>
 
-              <div className="text-center text-xs text-cool-gray-40">Internxt ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha podido trabajar en aumentar la seguridad de la infraestructura para la mejora de competitividad y productividad de la empresa. 21.09.2021. Para ello ha contado con el apoyo del del programa Ciberseguridad 2021 de la Cámara de Comercio de Valencia.</div>
+              <div className="text-center text-xs text-cool-gray-40">Internxt Universal Technologies SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha [descripción de la operación] para la mejora de competitividad y productividad de la empresa. Del 19/05/2021 al 31/12/2021. Para ello ha contado con el apoyo del programa TICCámaras de la Cámara de Comercio de València. Una manera de hacer Europa.</div>
+
+              <div className="flex flex-row justify-center items-center flex-wrap mt-8">
+                <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/group.png" alt="Unión Europea" draggable="false" />
+              </div>
             </div>
           </div>
         )}
@@ -124,6 +125,10 @@ export default function Footer({
                         {textContent.FooterSection.comingSoon}
                       </div>
                     </a>
+
+                    <Link href="/token" locale={lang}>
+                      <a>{textContent.FooterSection.sections.products.token}</a>
+                    </Link>
 
                   </div>
                 </div>
@@ -248,6 +253,9 @@ export default function Footer({
                             {textContent.FooterSection.comingSoon}
                           </div>
                         </a>
+                      </Link>
+                      <Link href="/token" locale={lang}>
+                        <a>{textContent.FooterSection.sections.products.token}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

@@ -22,6 +22,7 @@ const Token = ({
   }, []);
 
   return (
+
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Token">
 
       <div>
@@ -40,12 +41,14 @@ const Token = ({
 
       </div>
 
-      <Footer
-        textContent={footerLang}
-        lang={deviceLang}
-        hideNewsletter={false}
-        darkMode={false}
-      />
+      <div className="bg-neutral-10">
+        <Footer
+          textContent={footerLang}
+          lang={deviceLang}
+          hideNewsletter={false}
+          darkMode={false}
+        />
+      </div>
 
     </Layout>
 
