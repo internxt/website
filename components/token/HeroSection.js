@@ -32,13 +32,12 @@ const HeroSection = ({
 
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 w-full">
 
-          <button
-            type="button"
-            tabIndex={0}
+          <a
+            href="mailto:hello@intertnxt.com?subjectClaim%20my%20INXT%20benefits"
             className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 transition-all duration-75"
           >
             {textContent.cta}
-          </button>
+          </a>
 
         </div>
 
