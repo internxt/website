@@ -131,8 +131,6 @@ const HeroSection = ({
 
     </div>
 
-    <Widget />
-
   </section>
 
 );
