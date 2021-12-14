@@ -79,7 +79,7 @@ const HeroSection = ({
 
         {/* Widget */}
         <div className="hidden flex-col items-center w-full z-10">
-          <Widget />
+          {/* <Widget /> */}
         </div>
       </div>
 
@@ -130,6 +130,8 @@ const HeroSection = ({
       </div>
 
     </div>
+
+    <Widget />
 
   </section>
 
