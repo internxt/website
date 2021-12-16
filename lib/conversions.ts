@@ -6,6 +6,7 @@ export default async function setUTM() {
     'utm_medium',
     'utm_source',
     'utm_campaign',
+    'utm_id',
     'gclid',
     'irclickid',
     'ga_campaign',
