@@ -1,12 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
-import DownloadComponent from './DownloadComponent';
 
 const HeroSection = ({
-  textContent,
-  device,
-  lang,
-  download
+  textContent
 }) => (
   <section className="flex flex-col w-full pt-36">
     <div className="flex flex-col items-center py-20 lg:py-40">

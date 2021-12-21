@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Head from 'next/head';
 import 'aos/dist/aos.css';
 import AOS from 'aos';

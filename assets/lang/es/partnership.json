@@ -1,17 +1,14 @@
 {
 	"HeroSection": {
 		"title": {
-			"line1": "50% DE",
-			"line2": "DESCUENTO EN",
-			"line3": "TU PLAN DE 2TB",
-			"line4": "PARA SIEMPRE."
+			"line1": "Mantén tus archivos",
+			"line2": "privados y obtén",
+			"line3": "$10 de descuento."
 		},
-		"legal": {
-			"endtime": "Oferta por tiempo limitado, termina el 30 de Noviembre.",
-			"warn": {
-				"line1": "(*): SI EN CUALQUIER MOMENTO CANCELAS TU SUSCRIPCIÓN, CAMBIAS TU SUSCRIPCIÓN O",
-				"line2": "YA NO MANTIENES UN MÉTODO DE PAGO VÁLIDO, PERDERÁS EL BENEFICIO DE ESTA OFERTA."
-			}
+		"description": {
+			"line1": "Internxt Drive handles all security and privacy.",
+			"line2": "Focus on what matters to you, upload, share,",
+			"line3": "download or backup any kind of file."
 		},
 		"plans": {
 			"name": {
@@ -94,8 +91,7 @@
 		},
 		"buyNowSection": {
 			"title": {
-				"line1": "Tus archivos seguros y",
-				"line2": "privados para siempre."
+				"line1": "¡No dejes pasar esta oferta!"
 			},
 			"cta": "COMPRAR YA"
 		}
