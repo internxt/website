@@ -48,5 +48,10 @@
         "id": "black-friday",
         "title": "Internxt – Black Friday",
         "description": "Grab the best, cheapest, most secure cloud storage deal now with 50% off. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    },
+    {
+        "id": "partnership",
+        "title": "Internxt – Partnership",
+        "description": "Grab the best deals for the most secure cloud storage. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
     }
 ]

@@ -18,7 +18,6 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
   const cancelUrl = `${req.headers.origin}/payment/cancel?sid={CHECKOUT_SESSION_ID}&cancelUrl=${CANCEL_URL}`;
 
   const params: Stripe.Checkout.SessionCreateParams = {
-    allow_promotion_codes: true,
     mode: PRODUCT.mode,
     payment_method_types: ['card'],
     success_url: successUrl,
@@ -27,6 +26,11 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     billing_address_collection: 'required',
     customer_email: req.body.email ? req.body.email : undefined
   };
+
+  if (!('discounts' in PRODUCT.session)) {
+    params.allow_promotion_codes = true;
+  }
+
   try {
     const checkoutSession: Stripe.Checkout.Session = await stripe.checkout.sessions.create(params);
     res.status(200).json(checkoutSession);

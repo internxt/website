@@ -48,5 +48,10 @@
         "id": "black-friday",
         "title": "Internxt – Black Friday (España)",
         "description": "Consige el mejor, más barato y más seguro almacenamiento en la nube ahora con un 50% descuento. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+    },
+    {
+        "id": "partnership",
+        "title": "Internxt – Partnership (España)",
+        "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
     }
 ]
