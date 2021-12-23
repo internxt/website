@@ -28,7 +28,7 @@ const FeatureSection = ({
 
       <div className="flex flex-row flex-wrap justify-center w-full max-w-7xl">
 
-        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
+        <div className="flex flex-col w-full sm:w-80 items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilEyeSlash className="w-12 h-12 text-blue-50" />
 
@@ -40,9 +40,9 @@ const FeatureSection = ({
 
             <span className="text-cool-gray-80">
               {textContent.features.privacy.description.line1}
-              <br />
+              {' '}
               {textContent.features.privacy.description.line2}
-              <br />
+              {' '}
               {textContent.features.privacy.description.line3}
             </span>
 
@@ -50,7 +50,7 @@ const FeatureSection = ({
 
         </div>
 
-        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
+        <div className="flex flex-col w-full sm:w-80 items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilTachometerFast className="w-12 h-12 text-blue-50" />
 
@@ -62,9 +62,9 @@ const FeatureSection = ({
 
             <span className="text-cool-gray-80">
               {textContent.features.speed.description.line1}
-              <br />
+              {' '}
               {textContent.features.speed.description.line2}
-              <br />
+              {' '}
               {textContent.features.speed.description.line3}
             </span>
 
@@ -72,7 +72,7 @@ const FeatureSection = ({
 
         </div>
 
-        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
+        <div className="flex flex-col w-full sm:w-80 items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilLock className="w-12 h-12 text-blue-50" />
 
@@ -84,9 +84,9 @@ const FeatureSection = ({
 
             <span className="text-cool-gray-80">
               {textContent.features.security.description.line1}
-              <br />
+              {' '}
               {textContent.features.security.description.line2}
-              <br />
+              {' '}
               {textContent.features.security.description.line3}
             </span>
 
@@ -94,7 +94,7 @@ const FeatureSection = ({
 
         </div>
 
-        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
+        <div className="flex flex-col w-full sm:w-80 items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilDesktop className="w-12 h-12 text-blue-50" />
 
@@ -106,9 +106,9 @@ const FeatureSection = ({
 
             <span className="text-cool-gray-80">
               {textContent.features.multiplatform.description.line1}
-              <br />
+              {' '}
               {textContent.features.multiplatform.description.line2}
-              <br />
+              {' '}
               {textContent.features.multiplatform.description.line3}
             </span>
 
@@ -116,7 +116,7 @@ const FeatureSection = ({
 
         </div>
 
-        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
+        <div className="flex flex-col w-full sm:w-80 items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilChatBubbleUser className="w-12 h-12 text-blue-50" />
 
@@ -128,9 +128,9 @@ const FeatureSection = ({
 
             <span className="text-cool-gray-80">
               {textContent.features.support.description.line1}
-              <br />
+              {' '}
               {textContent.features.support.description.line2}
-              <br />
+              {' '}
               {textContent.features.support.description.line3}
             </span>
 

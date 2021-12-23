@@ -25,10 +25,10 @@ const HeroSection = ({
 
     <section id="buy" className="relative flex flex-col w-full pt-16 bg-gradient-to-b from-white via-neutral-10 to-white">
 
-      <div className={`flex flex-row p-6 sm:p-0 sm:h-16 justify-center items-center text-center ${showCoupon ? 'bg-blue-60 text-blue-20' : 'bg-white text-blue-40'} transition-colors duration-750 ease-in-out select-all`}>
+      <div className={`flex flex-row p-6 sm:p-0 sm:h-16 justify-center items-center text-center ${showCoupon ? 'bg-blue-60 text-blue-20' : 'bg-white text-blue-40'} transition-colors duration-1000 ease-in-out select-all`}>
         <div>
           <span className="select-none">{textContent.coupon.before}</span>
-          <span className={`${showCoupon ? 'text-white' : 'text-blue-50'} font-bold underline px-1.5 tracking-wide transition-colors duration-500 ease-in-out select-all`}>CLOUDWARDS</span>
+          <span className={`${showCoupon ? 'text-white' : 'text-blue-50'} font-bold underline px-1.5 tracking-wide transition-colors duration-650 ease-in-out select-all`}>CLOUDWARDS</span>
           <span className="select-none">{textContent.coupon.after}</span>
         </div>
       </div>
