@@ -1,13 +1,11 @@
 import React from 'react';
 import {
-  UilRocket,
   UilEyeSlash,
-  UilUsersAlt,
+  UilTachometerFast,
   UilLock,
-  UilListOl,
+  UilDesktop,
   UilChatBubbleUser
 } from '@iconscout/react-unicons';
-import styles from './FeatureSection.module.scss';
 
 const FeatureSection = ({
   textContent
@@ -15,9 +13,9 @@ const FeatureSection = ({
 
   <section>
 
-    <div className="flex flex-col items-center py-32">
+    <div className="flex flex-col items-center py-16">
 
-      <div className="flex flex-col items-center text-center mb-24 font-semibold px-6">
+      <div className="flex flex-col items-center text-center mb-10 lg:mb-16 font-semibold px-6">
 
         <h2 className="eyebrow text-4xl">
           {textContent.title.line1}
@@ -28,9 +26,9 @@ const FeatureSection = ({
 
       </div>
 
-      <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 md:gap-24">
+      <div className="flex flex-row flex-wrap justify-center w-full max-w-7xl">
 
-        <div className="flex flex-col items-center text-center space-y-8">
+        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilEyeSlash className="w-12 h-12 text-blue-50" />
 
@@ -52,51 +50,29 @@ const FeatureSection = ({
 
         </div>
 
-        <div className="flex flex-col items-center text-center space-y-8">
+        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
-          <UilRocket className="w-12 h-12 text-blue-50" />
+          <UilTachometerFast className="w-12 h-12 text-blue-50" />
 
           <div className="flex flex-col items-center text-center space-y-3">
 
             <span className="font-semibold text-xl text-cool-gray-100">
-              {textContent.features.multiplatform.title}
+              {textContent.features.speed.title}
             </span>
 
             <span className="text-cool-gray-80">
-              {textContent.features.multiplatform.description.line1}
+              {textContent.features.speed.description.line1}
               <br />
-              {textContent.features.multiplatform.description.line2}
+              {textContent.features.speed.description.line2}
               <br />
-              {textContent.features.multiplatform.description.line3}
+              {textContent.features.speed.description.line3}
             </span>
 
           </div>
 
         </div>
 
-        <div className="flex flex-col items-center text-center space-y-8">
-
-          <UilUsersAlt className="w-12 h-12 text-blue-50" />
-
-          <div className="flex flex-col items-center text-center space-y-3">
-
-            <span className="font-semibold text-xl text-cool-gray-100">
-              {textContent.features.improvement.title}
-            </span>
-
-            <span className="text-cool-gray-80">
-              {textContent.features.improvement.description.line1}
-              <br />
-              {textContent.features.improvement.description.line2}
-              <br />
-              {textContent.features.improvement.description.line3}
-            </span>
-
-          </div>
-
-        </div>
-
-        <div className="flex flex-col items-center text-center space-y-8">
+        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilLock className="w-12 h-12 text-blue-50" />
 
@@ -118,29 +94,29 @@ const FeatureSection = ({
 
         </div>
 
-        <div className="flex flex-col items-center text-center space-y-8">
+        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
-          <UilListOl className="w-12 h-12 text-blue-50" />
+          <UilDesktop className="w-12 h-12 text-blue-50" />
 
           <div className="flex flex-col items-center text-center space-y-3">
 
             <span className="font-semibold text-xl text-cool-gray-100">
-              {textContent.features.new.title}
+              {textContent.features.multiplatform.title}
             </span>
 
             <span className="text-cool-gray-80">
-              {textContent.features.new.description.line1}
+              {textContent.features.multiplatform.description.line1}
               <br />
-              {textContent.features.new.description.line2}
+              {textContent.features.multiplatform.description.line2}
               <br />
-              {textContent.features.new.description.line3}
+              {textContent.features.multiplatform.description.line3}
             </span>
 
           </div>
 
         </div>
 
-        <div className="flex flex-col items-center text-center space-y-8">
+        <div className="flex flex-col flex-1 min-w-max items-center text-center space-y-8 mx-12 my-6 lg:my-10">
 
           <UilChatBubbleUser className="w-12 h-12 text-blue-50" />
 
@@ -168,18 +144,28 @@ const FeatureSection = ({
 
     <div className="relative">
 
-      <div className={`${styles.bloom} absolute top-0 left-0 w-full h-full z-0`} />
+      <div className="absolute top-0 left-0 w-full h-full z-0" />
 
       <div className="relative flex flex-col items-center py-20 z-20">
 
-        <div className="flex flex-col items-center text-center mb-8 font-semibold px-6">
+        <div className="flex flex-col items-center text-center mb-8 px-6">
 
-          <h2 className="eyebrow text-4xl">
+          <h3 className="text-4xl font-semibold mb-4">
             {textContent.buyNowSection.title.line1}
             <br className="hidden sm:inline-flex" />
             {' '}
             {textContent.buyNowSection.title.line2}
-          </h2>
+          </h3>
+
+          <h4 className="text-lg lg:text-xl text-cool-gray-80">
+            {textContent.buyNowSection.description.line1}
+            <br className="hidden sm:inline-flex" />
+            {' '}
+            {textContent.buyNowSection.description.line2}
+            <br className="hidden sm:inline-flex" />
+            {' '}
+            {textContent.buyNowSection.description.line3}
+          </h4>
 
         </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSection from '../components/partnership/HeroSection';
-import FeatureSection from '../components/partnership/FeatureSection';
+import HeroSection from '../components/partnerships/cloudwards/HeroSection';
+import FeatureSection from '../components/partnerships/cloudwards/FeatureSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
@@ -29,12 +29,12 @@ const SpecialOffer = ({
       />
 
       <HeroSection
-        textContent={langJson.HeroSection}
+        textContent={langJson.Cloudwards.HeroSection}
         lang={lang}
       />
 
       <FeatureSection
-        textContent={langJson.FeatureSection}
+        textContent={langJson.Cloudwards.FeatureSection}
       />
 
       <Footer
@@ -53,7 +53,7 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/partnership.json`);
+  const langJson = require(`../assets/lang/${lang}/partnerships.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 

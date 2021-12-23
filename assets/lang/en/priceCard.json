@@ -1,5 +1,6 @@
 {
 	"mostPopular": "Most popular",
+	"onlyForNewClients": "Only for new subscriptors or free plan users",
 	"planTitles": {
 		"individuals": "Plans for Individuals",
 		"business": "Plans for Business"
@@ -18,7 +19,8 @@
 		"lifetime": "One-time payment",
 		"monthly": "billed monthly",
     "semiannually": "billed semiannually",
-    "annually": "billed annually"
+    "annually": "billed annually",
+		"afterMonth": "after 30 days"
 	},
 	"billingFrequencyLabelSmall": {
 		"monthly": "/monthly",
@@ -33,10 +35,12 @@
 		"free": "Free forever"
 	},
 	"perMonth": "/month",
+	"firstMonth": "First 30 days",
 	"cta": {
 		"getStarted": "Get started",
 		"signUpNow": "Sign up now",
-		"buy": "Buy"
+		"buy": "Buy",
+		"claimTheDeal": "Claim the deal"
 	},
 	"features": {
 		"enjoyForever": {
