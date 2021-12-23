@@ -12,7 +12,7 @@ const HeroSection = ({
     TB2: {
       storage: '2TB',
       price: '9.99',
-      stripeID: 'TB2_Free_30_Days-Guru99_Monthly'
+      stripeID: 'TB2_Free_30_Days_Guru99_Monthly'
     }
   };
   const [showCoupon, setShowCoupon] = useState(false);
