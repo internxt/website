@@ -53,5 +53,10 @@
         "id": "cloudwards",
         "title": "Internxt – CloudWards Partnership",
         "description": "Grab the best deals for the most secure cloud storage. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    },
+    {
+        "id": "guru99",
+        "title": "Internxt – Guru99 Partnership",
+        "description": "Grab the best deals for the most secure cloud storage. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
     }
 ]

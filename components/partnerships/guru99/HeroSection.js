@@ -12,7 +12,7 @@ const HeroSection = ({
     TB2: {
       storage: '2TB',
       price: '9.99',
-      stripeID: 'TB2_Free_30_Days_Cloudwards_Monthly'
+      stripeID: 'TB2_Free_30_Days-Guru99_Monthly'
     }
   };
   const [showCoupon, setShowCoupon] = useState(false);
@@ -28,7 +28,7 @@ const HeroSection = ({
       <div className={`flex flex-row p-6 sm:p-0 sm:h-16 justify-center items-center text-center ${showCoupon ? 'bg-blue-60 text-blue-20' : 'bg-white text-blue-40'} transition-colors duration-1000 ease-in-out select-all`}>
         <div>
           <span className="select-none">{textContent.coupon.before}</span>
-          <span className={`${showCoupon ? 'text-white' : 'text-blue-50'} font-bold underline px-1.5 tracking-wide transition-colors duration-650 ease-in-out select-all`}>CLOUDWARDS</span>
+          <span className={`${showCoupon ? 'text-white' : 'text-blue-50'} font-bold underline px-1.5 tracking-wide transition-colors duration-650 ease-in-out select-all`}>GURU99</span>
           <span className="select-none">{textContent.coupon.after}</span>
         </div>
       </div>
@@ -41,9 +41,9 @@ const HeroSection = ({
           <div className="flex flex-row items-center justify-center self-start h-10 px-5 bg-cool-gray-10 rounded-lg mb-4">
             <p className="mr-2 text-base font-medium text-cool-gray-80">{textContent.partnershipWith}</p>
             <Image
-              src="/images/partnerships/cloudwards/logo.webp"
-              width={102}
-              height={24}
+              src="/images/partnerships/guru99/logo.webp"
+              width={61.5}
+              height={16}
               className="pointer-events-none"
             />
           </div>

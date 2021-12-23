@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSection from '../components/partnerships/cloudwards/HeroSection';
-import FeatureSection from '../components/partnerships/cloudwards/FeatureSection';
+import HeroSection from '../components/partnerships/guru99/HeroSection';
+import FeatureSection from '../components/partnerships/guru99/FeatureSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
@@ -14,11 +14,11 @@ const SpecialOffer = ({
   deviceLang,
   lang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'guru99');
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Cloudwards Partnership">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Guru99 Partnership">
 
       <Navbar
         textContent={navbarLang}

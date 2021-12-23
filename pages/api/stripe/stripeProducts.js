@@ -318,7 +318,7 @@ const STRIPE_PRODUCT = {
       product: 'prod_EUaUAiDCK1Etz1',
     }
   },
-  TB2_Free_30_Days_Monthly: {
+  TB2_Free_30_Days_Cloudwards_Monthly: {
     production: 'plan_F7ptyrVRmyL8Gn',
     debug: 'plan_Gd6Dvdm1yJxoQq',
     return: 'pricing',
@@ -326,6 +326,30 @@ const STRIPE_PRODUCT = {
     session: {
       discounts: [{
         promotion_code: 'promo_1K8kqLFAOdcgaBMQX5phJSfd',
+      }],
+      line_items: [
+        {
+          quantity: 1,
+        }
+      ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 9.99,
+      type: 'recurrent',
+      price_id: 'plan_F7ptyrVRmyL8Gn',
+      quantity: 1,
+      product: 'prod_EUaUAiDCK1Etz1',
+    }
+  },
+  TB2_Free_30_Days_Guru99_Monthly: {
+    production: 'plan_F7ptyrVRmyL8Gn',
+    debug: 'plan_Gd6Dvdm1yJxoQq',
+    return: 'pricing',
+    mode: 'subscription',
+    session: {
+      discounts: [{
+        promotion_code: 'promo_1K9sLDFAOdcgaBMQMlHOfxhx',
       }],
       line_items: [
         {
