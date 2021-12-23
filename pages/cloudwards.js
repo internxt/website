@@ -14,11 +14,11 @@ const SpecialOffer = ({
   deviceLang,
   lang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'partnership');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partnership">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Cloudwards Partnership">
 
       <Navbar
         textContent={navbarLang}

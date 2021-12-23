@@ -325,7 +325,7 @@ const STRIPE_PRODUCT = {
     mode: 'subscription',
     session: {
       discounts: [{
-        promotion_code: 'promo_1K9qcMFAOdcgaBMQHegw2Hap',
+        promotion_code: 'promo_1K8kqLFAOdcgaBMQX5phJSfd',
       }],
       line_items: [
         {
