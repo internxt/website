@@ -35,10 +35,13 @@
 			"follow": {
 				"title": "Síguemos",
 				"twitter": "Twitter",
+				"facebook": "Facebook",
 				"linkedin": "LinkedIn",
+				"youtube": "Youtube",
 				"instagram": "Instagram",
 				"github": "Github",
-				"blog": "Blog"
+				"blog": "Blog",
+				"mastodon": "Mastodon"
 			}
 		}
 	},

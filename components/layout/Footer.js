@@ -182,18 +182,27 @@ export default function Footer({
                       <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                         <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`} draggable="false" alt="twitter icon" />
                       </a>
+                      <a href="https://www.facebook.com/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`} draggable="false" alt="facebook icon" />
+                      </a>
                       <a href="https://linkedin.com/company/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                         <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`} draggable="false" alt="linkedin icon" />
+                      </a>
+                      <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`} draggable="false" alt="youtube icon" />
                       </a>
                       <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                         <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`} draggable="false" alt="instagram icon" />
                       </a>
                     </div>
                     <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
-                      Github
+                      {textContent.FooterSection.sections.follow.github}
                     </a>
                     <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
-                      Blog
+                      {textContent.FooterSection.sections.follow.blog}
+                    </a>
+                    <a href="https://mastodon.social/web/@Internxt" target="_blank" rel="noreferrer">
+                      {textContent.FooterSection.sections.follow.mastodon}
                     </a>
                   </div>
                 </div>
@@ -370,8 +379,14 @@ export default function Footer({
                       <a href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.follow.twitter}
                       </a>
+                      <a href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.follow.facebook}
+                      </a>
                       <a href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.follow.linkedin}
+                      </a>
+                      <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.follow.youtube}
                       </a>
                       <a href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.follow.instagram}
@@ -381,6 +396,9 @@ export default function Footer({
                       </a>
                       <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.follow.blog}
+                      </a>
+                      <a href="https://mastodon.social/web/@Internxt" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.follow.mastodon}
                       </a>
                     </Disclosure.Panel>
                   </Transition>
