@@ -1,125 +1,73 @@
 {
 	"HeroSection": {
-		"theTeam": "Nuestro equipo",
+		"title": {
+			"line1": "Diseñamos y desarrollamos",
+			"line2": {
+				"substring1": "",
+				"substring2": "aplicaciones increíbles que"
+			},
+			"line3": {
+				"substring1": "respetan tu",
+				"substring2": "privacidad"
+			}
+		},
+		"figures": {
+			"activeUsers": {
+				"figure": "110K",
+				"caption": "Usuarios confían en Internxt"
+			},
+			"awards": {
+				"figure": "30",
+				"caption": "Premios y Menciones"
+			}
+		},
 		"description": {
-			"line1": "Cuando decimos equipo, decimos familia, aquí en Internxt aprendemos los unos",
-			"line2": "de los otros y tratamos de dar lo mejor de nosotros mismos cada día para",
-			"line3": "desarrollar productos increíbles diseñados con las personas en el centro."
+			"line1": "Desde 2018 hemos estado trabajando sin descanso para crear herramientas",
+			"line2": "para conseguir un internet más seguro y privado que respete a sus usuarios."
+		},
+		"recognitions": {
+			"title": "Reconocidos por los mejores",
+			"brands": {
+				"forbes": {
+					"caption1": "Next 1000"
+				},
+				"southsummit": {
+					"caption1": "Best Startup"
+				},
+				"tnw": {
+					"caption1": "T500"
+				},
+				"startupvalencia": {
+					"caption1": "Best Startup"
+				}
+			}
 		}
 	},
-	"TeamSection": {
-		"title": "Liderazgo en Internxt",
-		"employees": [
-			{
-				"name": "Fran Villalba Segarra",
-				"position": "Chief Executive Officer",
-				"photoId": "Fran",
-				"linkedin": "fvsegarra"
-			},
-			{
-				"name": "Carlos Sala",
-				"position": "Software Engineer",
-				"photoId": "Carlos",
-				"linkedin": "carlos-sala-samper-43629863"
-			},
-			{
-				"name": "Alex Menor",
-				"position": "Software Engineer",
-				"photoId": "Alex",
-				"linkedin": "alejandro-menor-molinero-a34595176"
-			},
-			{
-				"name": "Sergio Gutierrez",
-				"position": "Software Engineer",
-				"photoId": "Sergio",
-				"linkedin": "sergiogutierrezvillalba"
-			},
-			{
-				"name": "Joan Mora",
-				"position": "Product Manager",
-				"photoId": "Joan",
-				"linkedin": "joan-mora"
-			},
-			{
-				"name": "Álvaro Hernández",
-				"position": "Product Designer",
-				"photoId": "Alvaro",
-				"linkedin": "alvarohernandezperales"
-			},
-			{
-				"name": "Sasha Yudina",
-				"position": "Human Resource Manager",
-				"photoId": "Sasha",
-				"linkedin": "sashayudina"
-			},
-			{
-				"name": "Ainhoa Ribes",
-				"position": "Marketing Assistant",
-				"photoId": "Ainhoa",
-				"linkedin": "ainhoa-ribes-a245401b9"
-			},
-			{
-				"name": "Vicente Belda",
-				"position": "Marketing Assistant",
-				"photoId": "Vicente",
-				"linkedin": "vicente-belda"
-			},
-			{
-				"name": "Cadi Silla",
-				"position": "Marketing Assistant",
-				"photoId": "Cadi",
-				"linkedin": "cadi-silla-fati"
-			}
-		],
-		"Investors": [
-			{
-				"name": "Esade Ban",
-				"bio": "La escuela de negocios con más reputación"
-			},
-			{
-				"name": "Angels Capital",
-				"bio": "Inversores de Zeleros y Airhopping"
-			},
-			{
-				"name": "The Venture City",
-				"bio": "Inversores de Cabify y Peoople"
-			}
-		],
-		"Partners": [
-			{
-				"name": "Blackberry",
-				"bio": {
-					"line1": "La innovación está cambiando la forma en que los negocios trabajan, ya que los clientes exigen cada vez más soluciones seguras.",
-					"line2": "BlackBerry ayuda a Internxt a evaluar el cifrado, las vulnerabilidades de la infraestructura, la autenticación y la prevención de la fuga de datos."
-				}
-			},
-			{
-				"name": "Y Combinator",
-				"bio": {
-					"line1": "Las Startups son más productivas cuando pasan la mayoría de su tiempo construyendo.",
-					"line2": "El objetivo de Y Combinator es crear un entorno en el que podamos centrarnos exclusivamente en la construcción de productos y en hablar con los usuarios sobre cómo mejorar."
-				}
-			},
-			{
-				"name": "Lanzadera",
-				"bio": {
-					"line1": "Juan Roig es conocido por ser el dueño de Mercadona, una de las mayores corporaciones europeas.",
-					"line2": "Internxt recibirá la ayuda estratégica necesaria para llevar Internxt al siguiente nivel. Lanzadera también ayudará a cubrir cualquier necesidad de financiación."
-				}
-			},
-			{
-				"name": "500 Startups",
-				"bio": {
-					"line1": "500 Startups es una de las empresas de capital riesgo más activas del mundo y ha comprometido más de $454 millones en inversiones a nivel mundial.",
-					"line2": "500 startups ha elegido a Internxt como una de las mejores startups del SAAS de todo el mundo."
+	"CompanySection": {
+		"values": {
+			"title": "Nuestros valores",
+			"items": {
+				"achieve": {
+					"title": "Esfuerzo",
+					"description": "Creemos de verdad que si algo parece imposible es sólo porque no se ha intentado suficiente, hacemos que lo imposible ocurra."
+				},
+				"privacy": {
+					"title": "Aprendizaje",
+					"description": "Todos sabemos mucho de un poco y poco de mucho... compartiendo lo que sabemos todos ganamos y aprendemos algo nuevo cada día."
+				},
+				"family": {
+					"title": "Equipo",
+					"description": "Tanto si trabajas desde casa como si vienes a la oficina, queremos que sientas que eres parte de la familia. Nos encanta pasar tiempo juntos fuera del trabajo."
+				},
+				"growth": {
+					"title": "Crecimiento",
+					"description": "Internxt es lo que es hoy gracias a nuestro equipo. Queremos que crezcan personalmente para que lleguen donde quieran en la vida y dentro de la empresa."
 				}
 			}
-		],
-		"quote": "Creemos que lo que la humanidad puede lograr es extraordinario. Queremos convertirnos en una fuerza de cambio positivo que empuje a la sociedad hacia un futuro mejor y más brillante. Para ello, estamos rediseñando por completo el statu quo de diversas industrias, mediante la aplicación de la innovación de forma coherente."
-	},
-	"Articles": {
-		"title": "Últimos artículos publicados",
-    "morePosts": "Leer más posts",
-		"read": "Leer artículo"
+		},
+		"careers": {
+			"title": "Construyamos el futuro juntos",
+			"link": "Trabaja en Internxt"
+		}
 	}
 }

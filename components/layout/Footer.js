@@ -33,8 +33,8 @@ export default function Footer({
 
         {/* Supporters from EU and 'Camara de comercio de España' (Only in Spanish) */}
         {(lang === 'es' && showSupporters) && (
-          <div className="flex flex-col space-y-6 sm:space-x-20 py-12 justify-center mx-6 md:mx-10 lg:mx-32 bg-white border border-cool-gray-10 rounded-2xl mb-16">
-            <div className="flex flex-col max-w-2xl px-16 mx-auto">
+          <div className="flex flex-col space-y-6 sm:space-x-20 py-4 justify-center mx-6 md:mx-10 lg:mx-32 bg-white border border-cool-gray-10 rounded-2xl mb-16">
+            <div className="flex flex-col max-w-2xl px-8 mx-auto">
               <div className="flex flex-row justify-center items-center flex-wrap mb-8">
                 <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/ticcamaras.png" alt="Unión Europea" draggable="false" />
               </div>
@@ -147,7 +147,7 @@ export default function Footer({
                       <a>{textContent.FooterSection.sections.company.about}</a>
                     </Link>
                     <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
-                      {textContent.FooterSection.sections.company.contact}
+                      {textContent.FooterSection.sections.company.support}
                     </a>
                     <Link href="/legal" locale={lang}>
                       <a>{textContent.FooterSection.sections.company.legal}</a>
@@ -304,7 +304,7 @@ export default function Footer({
                       </Link>
 
                       <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.company.contact}
+                        {textContent.FooterSection.sections.company.support}
                       </a>
 
                       <Link href="/legal" locale={lang}>
