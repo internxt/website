@@ -70,7 +70,7 @@ const HeroSection = ({ textContent }) => (
             </div>
             <div className="flex flex-col flex-auto flex-shrink-0 px-12 sm:p-0">
               <div className="flex flex-col items-center space-y-3 flex-shrink-0">
-                <Image src="/images/about/logos/tnw.webp" width={131} height={32} />
+                <Image src="/images/about/logos/tnw.webp" width={112} height={32} />
                 <p className="text-base whitespace-nowrap">{textContent.recognitions.brands.tnw.caption1}</p>
               </div>
             </div>
