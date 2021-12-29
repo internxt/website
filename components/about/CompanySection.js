@@ -22,7 +22,7 @@ const CompanySection = ({ textContent }) => (
           </div>
         </div>
 
-        <img loading="lazy" className="absolute top-2/3 right-0 transform translate-y-1/2 scale-400 filter blur-xl pointer-events-none select-none" src="/images/about/assets/stain-small-1.webp" draggable="false" alt="stain" />
+        <img loading="lazy" className="absolute top-2/3 right-0 transform translate-y-1/2 scale-400 filter blur-xl saturate-150 pointer-events-none select-none" src="/images/about/assets/stain-small-1.webp" draggable="false" alt="stain" />
       </div>
 
       {/* Our values */}
@@ -68,7 +68,7 @@ const CompanySection = ({ textContent }) => (
           <span>{textContent.careers.link}</span>
           <UilAngleRightB className="w-4 h-4" />
         </a>
-        <img loading="lazy" className="absolute top-1/2 left-0 transform translate-y-1/2 scale-400 filter blur-3xl pointer-events-none select-none" src="/images/about/assets/stain-small-2.webp" draggable="false" alt="stain" />
+        <img loading="lazy" className="absolute top-1/2 left-0 transform translate-y-1/2 scale-400 filter blur-3xl saturate-150 pointer-events-none select-none" src="/images/about/assets/stain-small-2.webp" draggable="false" alt="stain" />
       </div>
 
     </div>

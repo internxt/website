@@ -83,7 +83,7 @@ const HeroSection = ({ textContent }) => (
           </div>
         </div>
 
-        <img loading="lazy" className="absolute -top-10 left-1/2 transform -translate-x-1/2 scale-500 filter blur-2xl pointer-events-none select-none" src="/images/about/assets/stain-big.webp" draggable="false" alt="stain" />
+        <img loading="lazy" className="absolute -top-10 left-1/2 transform -translate-x-1/2 scale-500 filter blur-xl saturate-150 pointer-events-none select-none" src="/images/about/assets/stain-big.webp" draggable="false" alt="stain" />
 
       </div>
 
