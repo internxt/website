@@ -33,7 +33,7 @@ export default function Footer({
 
         {/* Supporters from EU and 'Camara de comercio de España' (Only in Spanish) */}
         {(lang === 'es' && showSupporters) && (
-          <div className="flex flex-col space-y-6 sm:space-x-20 py-4 justify-center mx-6 md:mx-10 lg:mx-32 bg-white border border-cool-gray-10 rounded-2xl mb-16">
+          <div className="flex flex-col space-y-6 sm:space-x-20 py-4 justify-center bg-white border border-cool-gray-10 rounded-2xl mb-16">
             <div className="flex flex-col max-w-2xl px-8 mx-auto">
               <div className="flex flex-row justify-center items-center flex-wrap mb-8">
                 <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/ticcamaras.png" alt="Unión Europea" draggable="false" />
@@ -42,7 +42,7 @@ export default function Footer({
               <div className="text-center text-xs text-cool-gray-40">Internxt Universal Technologies SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha [descripción de la operación] para la mejora de competitividad y productividad de la empresa. Del 19/05/2021 al 31/12/2021. Para ello ha contado con el apoyo del programa TICCámaras de la Cámara de Comercio de València. Una manera de hacer Europa.</div>
 
               <div className="flex flex-row justify-center items-center flex-wrap mt-8">
-                <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/group.png" alt="Unión Europea" draggable="false" />
+                <img loading="lazy" className="w-60 mx-4" src="../../logos/investors/group.png" alt="Unión Europea" draggable="false" />
               </div>
             </div>
           </div>
