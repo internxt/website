@@ -17,7 +17,7 @@ const FeaturesSection = ({ textContent, lang }) => {
             {textContent.eyebrow}
           </h4>
           */}
-          <h2 className="mb-6 text-4xl sm:text-5xl font-semibold">
+          <h2 className="mb-6 text-4xl sm:text-5xl font-medium">
             {textContent.title.line1}
             <br className="hidden sm:flex" />
             {' '}
