@@ -3,6 +3,21 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: '/en/team',
+        destination: '/en/about',
+        permanent: true,
+      },
+      {
+        source: '/es/team',
+        destination: '/es/about',
+        permanent: true,
+      },
+      {
+        source: '/team',
+        destination: '/about',
+        permanent: true,
+      },
+      {
         source: '/ivacy',
         destination: '/',
         permanent: true,
@@ -66,7 +81,32 @@ module.exports = {
         source: '/infinite',
         destination: '/lifetime',
         permanent: false,
-      }
+      },
+      {
+        source: '/inxt',
+        destination: '/token',
+        permanent: true,
+      },
+      {
+        source: '/sharewareonsale',
+        destination: '/pricing',
+        permanent: false,
+      },
+      {
+        source: '/special-offer',
+        destination: '/pricing',
+        permanent: false,
+      },
+      {
+        source: '/default.htm',
+        destination: '/',
+        permanent: false,
+      },
+      {
+        source: '/default.html',
+        destination: '/',
+        permanent: false,
+      },
     ];
   },
   i18n: {
