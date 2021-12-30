@@ -56,25 +56,25 @@ const HeroSection = ({ textContent }) => (
           <h4 className="text-base font-medium">{textContent.recognitions.title}</h4>
 
           <div className="flex flex-row items-start justify-between w-full flex-wrap">
-            <div className="flex flex-col flex-auto flex-shrink-0 px-12 pb-12 sm:p-0">
+            <div className="flex flex-col flex-auto flex-shrink-0 sm:px-12 pb-12 sm:p-0">
               <div className="flex flex-col items-center space-y-3 flex-shrink-0">
                 <Image src="/images/about/logos/forbes.webp" width={125} height={32} />
                 <p className="text-base whitespace-nowrap">{textContent.recognitions.brands.forbes.caption1}</p>
               </div>
             </div>
-            <div className="flex flex-col flex-auto flex-shrink-0 px-12 pb-12 sm:p-0">
+            <div className="flex flex-col flex-auto flex-shrink-0 sm:px-12 pb-12 sm:p-0">
               <div className="flex flex-col items-center space-y-3 flex-shrink-0">
                 <Image src="/images/about/logos/southsummit.webp" width={70} height={32} />
                 <p className="text-base whitespace-nowrap">{textContent.recognitions.brands.southsummit.caption1}</p>
               </div>
             </div>
-            <div className="flex flex-col flex-auto flex-shrink-0 px-12 sm:p-0">
+            <div className="flex flex-col flex-auto flex-shrink-0 sm:px-12 pb-12 sm:p-0">
               <div className="flex flex-col items-center space-y-3 flex-shrink-0">
                 <Image src="/images/about/logos/tnw.webp" width={112} height={32} />
                 <p className="text-base whitespace-nowrap">{textContent.recognitions.brands.tnw.caption1}</p>
               </div>
             </div>
-            <div className="flex flex-col flex-auto flex-shrink-0 px-12 sm:p-0">
+            <div className="flex flex-col flex-auto flex-shrink-0 sm:px-12 pb-12 sm:p-0">
               <div className="flex flex-col items-center space-y-3 flex-shrink-0">
                 <Image src="/images/about/logos/startupvalencia.webp" width={90} height={32} />
                 <p className="text-base whitespace-nowrap">{textContent.recognitions.brands.startupvalencia.caption1}</p>
