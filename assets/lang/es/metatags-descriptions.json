@@ -50,8 +50,18 @@
         "description": "Consige el mejor, más barato y más seguro almacenamiento en la nube ahora con un 50% descuento. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
     },
     {
+        "id": "cloudwards",
+        "title": "Internxt – Cloudwards Partnership (España)",
+        "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Cloudwards. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+    },
+    {
         "id": "guru99",
         "title": "Internxt – Guru99 Partnership (España)",
+        "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Guru99. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+    },
+    {
+        "id": "freemonth",
+        "title": "Internxt – Consigue 1 Mes gratis (España)",
         "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
     }
 ]
