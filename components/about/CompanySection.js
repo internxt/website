@@ -6,7 +6,7 @@ const CompanySection = ({ textContent }) => (
     <div className="content flex flex-col items-center">
 
       {/* Images */}
-      <div className="relative w-full max-w-6xl px-10">
+      <div className="relative w-full max-w-6xl px-4 md:px-6">
         <div className="relative grid grid-cols-6 grid-flow-row gap-2 z-10">
           <div className="col-span-6 md:col-span-4 h-60 sm:h-72 lg:h-80 bg-red-10 rounded-md overflow-hidden select-none">
             <img loading="lazy" className="object-cover object-center w-full h-full" src="/images/about/photos/photo-1.webp" draggable="false" alt="lanzadera building" />
@@ -26,7 +26,7 @@ const CompanySection = ({ textContent }) => (
       </div>
 
       {/* Our values */}
-      <div className="relative flex flex-col text-left sm:items-center justify-center px-6 pt-20 pb-10 space-y-16 sm:space-y-20 z-10">
+      <div className="relative flex flex-col text-left sm:items-center justify-center px-6 pt-20 pb-10 space-y-10 sm:space-y-20 z-10">
         <h4 className="text-4xl font-semibold">{textContent.values.title}</h4>
 
         <div className="flex flex-col space-y-10 lg:space-y-20">
