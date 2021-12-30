@@ -49,19 +49,19 @@
 			"items": {
 				"achieve": {
 					"title": "Esfuerzo",
-					"description": "Creemos de verdad que si algo parece imposible es sólo porque no se ha intentado suficiente, hacemos que lo imposible ocurra."
+					"description": "Estamos realmente convencidos de que si algo parece imposible, es que no se ha intentado lo suficiente. Tratamos de superar los límites de la tecnología, para brindar soluciones innovadoras."
 				},
 				"privacy": {
 					"title": "Aprendizaje",
-					"description": "Todos sabemos mucho de un poco y poco de mucho... compartiendo lo que sabemos todos ganamos y aprendemos algo nuevo cada día."
+					"description": "Desarrollar iteraciones periódicas de varios productos al mismo tiempo nos empuja a ser analíticos e inconformistas. Siempre buscamos cómo aprender y mejorar nuestros productos."
 				},
 				"family": {
 					"title": "Equipo",
 					"description": "Tanto si trabajas desde casa como si vienes a la oficina, queremos que te sientas parte de la familia. Nos encanta pasar tiempo juntos tanto dentro como fuera del horario de trabajo."
 				},
 				"growth": {
-					"title": "Crecimiento",
-					"description": "Internxt es lo que es hoy gracias a nuestro equipo. Queremos que crezcan personalmente para que lleguen donde quieran en la vida y dentro de la empresa."
+					"title": "Compromiso",
+					"description": "Damos forma a la tecnología que nos gustaría utilizar en el futuro, segura, privada y centrada en el usuario. Nos comprometemos a crear una tecnología más respetuosa con las personas."
 				}
 			}
 		},

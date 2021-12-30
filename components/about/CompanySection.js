@@ -31,24 +31,24 @@ const CompanySection = ({ textContent }) => (
 
         <div className="flex flex-col space-y-10 lg:space-y-20">
           <div className="flex w-full flex-col lg:flex-row flex-wrap space-y-10 lg:space-y-0 lg:space-x-16">
-            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-8">
+            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-0">
               <p className="text-2xl font-semibold">{textContent.values.items.achieve.title}</p>
               <p className="text-lg">{textContent.values.items.achieve.description}</p>
             </div>
 
-            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-8">
+            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-0">
               <p className="text-2xl font-semibold">{textContent.values.items.privacy.title}</p>
               <p className="text-lg">{textContent.values.items.privacy.description}</p>
             </div>
           </div>
 
           <div className="flex w-full flex-col lg:flex-row flex-wrap space-y-10 lg:space-y-0 lg:space-x-16">
-            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-8">
+            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-0">
               <p className="text-2xl font-semibold">{textContent.values.items.family.title}</p>
               <p className="text-lg">{textContent.values.items.family.description}</p>
             </div>
 
-            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-8">
+            <div className="flex flex-col space-y-3 w-full md:max-w-xl lg:max-w-sm sm:px-20 md:px-0">
               <p className="text-2xl font-semibold">{textContent.values.items.growth.title}</p>
               <p className="text-lg">{textContent.values.items.growth.description}</p>
             </div>
