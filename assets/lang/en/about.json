@@ -13,7 +13,7 @@
 		},
 		"figures": {
 			"activeUsers": {
-				"figure": "110K",
+				"figure": "1M",
 				"caption": "Users trust Internxt"
 			},
 			"awards": {
@@ -22,7 +22,7 @@
 			}
 		},
 		"description": {
-			"line1": "Since 2018 we’ve been working hard to create powerful tools",
+			"line1": "Since 2020 we’ve been working hard to create powerful tools",
 			"line2": "for a safer and more private internet that respects their users."
 		},
 		"recognitions": {

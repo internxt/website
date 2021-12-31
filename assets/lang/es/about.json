@@ -13,7 +13,7 @@
 		},
 		"figures": {
 			"activeUsers": {
-				"figure": "110K",
+				"figure": "1M",
 				"caption": "Usuarios confían en Internxt"
 			},
 			"awards": {
@@ -22,7 +22,7 @@
 			}
 		},
 		"description": {
-			"line1": "Desde 2018 hemos estado trabajando sin descanso para crear herramientas",
+			"line1": "Desde 2020 hemos estado trabajando sin descanso para crear herramientas",
 			"line2": "para conseguir un internet más seguro y privado que respete a sus usuarios."
 		},
 		"recognitions": {
