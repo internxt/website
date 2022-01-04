@@ -48,24 +48,24 @@ const HeroSection = ({
             />
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-semibold mb-4 sm:mb-8">
-            <span className="leading-tight">{textContent.title.line1}</span>
+          <h1 className="text-5xl md:text-6xl font-semibold mb-4 sm:mb-8 leading-tight">
+            {textContent.title.line1}
             <br className="hidden sm:inline-flex" />
             {' '}
-            <span className="leading-tight">{textContent.title.line2}</span>
+            {textContent.title.line2}
             <br className="hidden sm:inline-flex" />
             {' '}
-            <span className="leading-tight">{textContent.title.line3}</span>
+            {textContent.title.line3}
           </h1>
 
           <h2 className="text-lg sm:text-xl text-cool-gray-80">
-            <span>{textContent.description.line1}</span>
+            {textContent.description.line1}
             <br className="hidden sm:inline-flex" />
             {' '}
-            <span>{textContent.description.line2}</span>
+            {textContent.description.line2}
             <br className="hidden sm:inline-flex" />
             {' '}
-            <span>{textContent.description.line3}</span>
+            {textContent.description.line3}
           </h2>
 
         </div>

@@ -1,0 +1,38 @@
+{
+	"HeroSection": {
+		"title": {
+			"line1": "Cloud Storage",
+			"line2": "Security comparison"
+		},
+		"description": "Compare all the security options to choose the right cloud storage solution.",
+		"cta": "Get 10GB for Free",
+		"noCredirCardNeeded": "No credit card needed",
+		"table": {
+
+		}
+	},
+	"FeatureSection": {
+		"whyStartUsingInternxt": {
+			"title": {
+				"line1": "Why start using Internxt?"
+			},
+			"description": {
+				"line1": "Unlike other competitors, advertising is not our business model.",
+				"line2": "Your data should only be yours. We focus on the security and privacy",
+				"line3": "of you and your files and photos. Using Internxt you can feel secure again."
+			}
+		},
+		"createAccount": {
+			"title": {
+				"line1": "Get up to 10GB of",
+				"line2": "encrypted storage",
+				"line3": "with your free account."
+			},
+			"description": {
+				"line1": "Create your account and start",
+				"line2": "syncing your files in total privacy."
+			},
+			"cta": "Create account"
+		}
+	}
+}
