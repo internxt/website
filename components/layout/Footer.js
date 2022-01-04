@@ -198,6 +198,9 @@ export default function Footer({
                         <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`} draggable="false" alt="instagram icon" />
                       </a>
                     </div>
+                    <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
+                      {textContent.FooterSection.sections.follow.telegram}
+                    </a>
                     <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
                       {textContent.FooterSection.sections.follow.github}
                     </a>
@@ -391,14 +394,17 @@ export default function Footer({
                       <a href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.follow.instagram}
                       </a>
+                      <a href="https://mastodon.social/web/@Internxt" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.follow.mastodon}
+                      </a>
+                      <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.follow.telegram}
+                      </a>
                       <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.follow.github}
                       </a>
                       <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.follow.blog}
-                      </a>
-                      <a href="https://mastodon.social/web/@Internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.mastodon}
                       </a>
                     </Disclosure.Panel>
                   </Transition>
