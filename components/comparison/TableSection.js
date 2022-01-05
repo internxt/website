@@ -53,7 +53,7 @@ const HeroSection = ({
           <table className="relative border-collapse table-auto text-base text-center text-cool-gray-80 bg-none mb-20">
 
             {/* Competitors */}
-            <thead className="sticky top-16 h-44 z-10 text-cool-gray-90">
+            <thead className="sticky top-16 h-44 text-cool-gray-90 z-20">
               <tr className="relative z-10 bg-white bg-opacity-80 backdrop-filter backdrop-blur-md">
                 <th> </th>
                 <th className="relative w-32 align-bottom p-0 text-lg font-medium">
@@ -70,7 +70,7 @@ const HeroSection = ({
             </thead>
 
             {/* Section */}
-            <thead className="sticky top-60 h-12 text-left text-cool-gray-90">
+            <thead className="sticky top-60 h-12 text-left text-cool-gray-90 z-10">
               <tr className="bg-cool-gray-10 font-medium h-12">
                 <td className="rounded-l-lg px-6">Encryption & Security</td>
                 <td />
@@ -109,7 +109,7 @@ const HeroSection = ({
             </tbody>
 
             {/* Section */}
-            <thead className="sticky top-60 h-12 text-left text-cool-gray-90">
+            <thead className="sticky top-60 h-12 text-left text-cool-gray-90 z-10">
               <tr className="bg-cool-gray-10 font-medium h-12">
                 <td className="rounded-l-lg px-6">Storage & File management</td>
                 <td />
