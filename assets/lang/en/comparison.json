@@ -13,9 +13,7 @@
 	},
 	"FeatureSection": {
 		"whyStartUsingInternxt": {
-			"title": {
-				"line1": "Why start using Internxt?"
-			},
+			"title": "Why start using Internxt?",
 			"description": {
 				"line1": "Unlike other competitors, advertising is not our business model.",
 				"line2": "Your data should only be yours. We focus on the security and privacy",
@@ -29,10 +27,30 @@
 				"line3": "with your free account."
 			},
 			"description": {
-				"line1": "Create your account and start",
-				"line2": "syncing your files in total privacy."
+				"line1": "Create your account and start syncing",
+				"line2": "your files with privacy and security."
 			},
 			"cta": "Create account"
+		},
+		"whyPeopleLoveInternxt": {
+			"title": "Why people love Internxt?",
+			"cards": [
+				{
+					"quote": "Using Internxt you can rest assured knowing that only you have the control over your files",
+					"author": "Alexis Rodas",
+					"company": "Forbes"
+				},
+				{
+					"quote": "Now Internxt is the most private, secure and easy to use cloud storage service out there",
+					"author": "Adams Doe",
+					"company": "Techcrunch"
+				},
+				{
+					"quote": "Only Internxt delivers the level of privacy and security that my clients need for their projects",
+					"author": "Justin Tse",
+					"company": "Clap Studio"
+				}
+			]
 		}
 	}
 }
