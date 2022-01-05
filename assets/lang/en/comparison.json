@@ -8,7 +8,19 @@
 		"cta": "Get 10GB for Free",
 		"noCredirCardNeeded": "No credit card needed",
 		"table": {
-
+			"sections": {
+				"encryption_and_security": {
+					"name": "Encryption & Security",
+					"features": {
+						"encryption_in_data_transit": "Encryption in data transit",
+						"end_to_end_encrypted_storage": "End-to-end encrypted storage",
+						"end_to_end_encrypted_file_sharing": "End-to-end encrypted file sharing",
+						"zero_knowledge_encryption": "Zero-knowledge encryption",
+						"two_factor_authentication": "Two-Factor authentication"
+					}
+				}
+			},
+			"startNow": "Start now"
 		}
 	},
 	"FeatureSection": {
