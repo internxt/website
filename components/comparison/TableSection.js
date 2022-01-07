@@ -359,13 +359,14 @@ const HeroSection = ({
         {/* Table */}
         <div className="flex flex-col items-center justify-start py-10 bg-white w-screen overflow-x-auto xl:overflow-x-visible">
           <div className="flex flex-col items-center justify-center px-6 mx-auto">
-            <table className="relative border-collapse table-auto text-base text-center text-cool-gray-80 bg-none mb-20">
+            <table className="group relative border-collapse table-auto text-base text-center text-cool-gray-80 bg-none mb-20">
 
               {/* Competitors */}
               <thead className="xl:sticky top-16 h-44 text-cool-gray-90 z-20">
                 <tr className="relative z-10 bg-white bg-opacity-80 backdrop-filter backdrop-blur-md">
+                  {/* Drag hint */}
                   <th className="h-44 pointer-events-none align-bottom">
-                    <div className="flex xl:hidden flex-row items-center justify-start h-32 space-x-4 p-6">
+                    <div className="flex xl:hidden flex-row items-center justify-start h-32 space-x-4 p-6 opacity-100 group-hover:opacity-0 delay-1000 transition-opacity duration-250">
                       <img loading="lazy" className="object-cover object-center w-8 h-8" src="/images/comparison/drag_horizontal.webp" draggable="false" alt="Drag horizontal" />
                       <div className="flex flex-col items-start justify-center text-sm text-left text-cool-gray-40 mt-1 leading-tight font-medium">
                         <span>{textContent.table.drag.line1}</span>
