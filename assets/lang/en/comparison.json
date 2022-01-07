@@ -55,6 +55,10 @@
 					}
 				}
 			},
+			"drag": {
+				"line1": "Drag horizontally",
+				"line2": "to show competitors"
+			},
 			"startNow": "Start now"
 		}
 	},

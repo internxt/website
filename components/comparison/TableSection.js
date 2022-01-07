@@ -325,11 +325,11 @@ const HeroSection = ({
       <div className="flex flex-col">
 
         {/* Header */}
-        <div className="relative flex flex-col items-center justify-center px-3 pt-20 md:pt-32 pb-16 bg-blue-60 text-white overflow-hidden z-20">
+        <div className="relative flex flex-col items-center justify-center px-6 pt-20 md:pt-32 pb-16 bg-blue-60 text-white overflow-hidden z-20">
           <div className="relative flex flex-col items-center justify-center mb-16 md:mb-8 z-10">
-            <h1 className="text-5xl md:text-6xl font-medium text-center mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-center mb-4">
               {textContent.title.line1}
-              <br />
+              <br className="hidden sm:inline-flex" />
               {textContent.title.line2}
             </h1>
 
@@ -364,7 +364,15 @@ const HeroSection = ({
               {/* Competitors */}
               <thead className="xl:sticky top-16 h-44 text-cool-gray-90 z-20">
                 <tr className="relative z-10 bg-white bg-opacity-80 backdrop-filter backdrop-blur-md">
-                  <th className="h-44"> </th>
+                  <th className="h-44 pointer-events-none align-bottom">
+                    <div className="flex xl:hidden flex-row items-center justify-start h-32 space-x-4 p-6">
+                      <img loading="lazy" className="object-cover object-center w-8 h-8" src="/images/comparison/drag_horizontal.webp" draggable="false" alt="Drag horizontal" />
+                      <div className="flex flex-col items-start justify-center text-sm text-left text-cool-gray-40 mt-1 leading-tight">
+                        <span>{textContent.table.drag.line1}</span>
+                        <span>{textContent.table.drag.line2}</span>
+                      </div>
+                    </div>
+                  </th>
                   <th className="relative p-16 text-lg font-medium">
                     {' '}
                     <div className="absolute bottom-0 left-0 flex flex-col items-center justify-center w-32 h-32 bg-blue-10 rounded-t-2xl space-y-1.5">
@@ -399,7 +407,7 @@ const HeroSection = ({
                     {section.rows.map((row, rowIndex) => (
                       <tr className="h-14 md:h-12" key={row.title}>
                         <td className="text-left text-base px-6 whitespace-nowrap">{row.title}</td>
-                        <td className={`${rowIndex === 0 ? 'border-t border-b' : 'border-b'} border-blue-20 bg-blue-10`}>
+                        <td className={`${rowIndex !== 0 && 'border-t border-blue-20 border-opacity-50'} bg-blue-10`}>
                           <div className="flex flex-col items-center justify-center h-full">
                             {((typeof row.feature[0]) === 'boolean') && (row.feature[0] ? <UilCheck className="w-6 h-6 text-blue-50" /> : <UilMinus className="w-6 h-6 text-blue-20" />)}
                             {((typeof row.feature[0]) === 'string') && (<span className="text-blue-60 font-medium">{row.feature[0]}</span>) }

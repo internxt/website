@@ -55,6 +55,10 @@
 					}
 				}
 			},
+			"drag": {
+				"line1": "Desplazar horizontalmente",
+				"line2": "para mostrar competidores"
+			},
 			"startNow": "Empezar ya"
 		}
 	},
@@ -63,7 +67,7 @@
 			"title": "¿Por qué usar Internxt?",
 			"description": {
 				"line1": "A diferencia de otros competidores, la publicidad no es nuestro modelo de negocio.",
-				"line2": "Tus datos son sólo tuyos. Nos centramos en tu seguridad y la privacidad y la de",
+				"line2": "Tus datos son sólo tuyos. Nos centramos en tu seguridad y privacidad y la de",
 				"line3": "tus archivos y fotos. Usando Internxt puedes volver a sentirte seguro."
 			}
 		},
