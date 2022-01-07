@@ -330,6 +330,7 @@ const HeroSection = ({
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-center mb-4">
               {textContent.title.line1}
               <br className="hidden sm:inline-flex" />
+              {' '}
               {textContent.title.line2}
             </h1>
 
