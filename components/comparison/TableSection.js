@@ -367,7 +367,7 @@ const HeroSection = ({
                   <th className="h-44 pointer-events-none align-bottom">
                     <div className="flex xl:hidden flex-row items-center justify-start h-32 space-x-4 p-6">
                       <img loading="lazy" className="object-cover object-center w-8 h-8" src="/images/comparison/drag_horizontal.webp" draggable="false" alt="Drag horizontal" />
-                      <div className="flex flex-col items-start justify-center text-sm text-left text-cool-gray-40 mt-1 leading-tight">
+                      <div className="flex flex-col items-start justify-center text-sm text-left text-cool-gray-40 mt-1 leading-tight font-medium">
                         <span>{textContent.table.drag.line1}</span>
                         <span>{textContent.table.drag.line2}</span>
                       </div>
