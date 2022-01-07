@@ -1,0 +1,107 @@
+{
+	"HeroSection": {
+		"title": {
+			"line1": "Cloud Storage",
+			"line2": "Security comparison"
+		},
+		"description": "Compare all the security options to choose the right cloud storage solution.",
+		"cta": "Get 10GB for Free",
+		"noCredirCardNeeded": "No credit card needed",
+		"table": {
+			"sections": {
+				"encryption_and_security": {
+					"name": "Encryption & Security",
+					"features": {
+						"encryption_at_rest_and_in_transit": "Encryption at rest and in transit",
+						"end_to_end_encrypted_storage": "End-to-end encrypted storage",
+						"end_to_end_encrypted_file_sharing": "End-to-end encrypted file sharing",
+						"zero_knowledge_encryption": "Zero-knowledge encryption",
+						"two_factor_authentication": "Two-Factor authentication",
+						"gdpr_compliant_synchronization": "GDPR Compliant synchronization",
+						"aes_256_encryption": "AES-256 Encryption",
+						"zero_knowledge_access_from_browsers": "Zero-knowledge access from browsers",
+						"no_third_party_file_access": "No third-party file access"
+					}
+				},
+				"storage_and_file_management": {
+					"name": "Storage & File management",
+					"features": {
+						"sync_any_folders": "Sync any folders",
+						"web_app": "Web app",
+						"windows_desktop_app": "Windows desktop app",
+						"mac_desktop_app": "Mac desktop app",
+						"linux_desktop_app": "Linux desktop app",
+						"android_app": "Android app",
+						"ios_app": "iOS app",
+						"backup_folders_and_files": "Backup folders and files",
+						"file_sharding": "File Sharding",
+						"free_account_storage": "Free account storage"
+					}
+				},
+				"deployment": {
+					"name": "Deployment",
+					"features": {
+						"support_center": "Support center",
+						"live_chat_support": "Live chat support",
+						"open_source": "Open source"
+					}
+				},
+				"controlled_file_sharing": {
+					"name": "Controlled file sharing",
+					"features": {
+						"file_requests": "File requests",
+						"password_protection_for_links": "Password protection for links",
+						"download_limits_for_links": "Download limits for links"
+					}
+				}
+			},
+			"drag": {
+				"line1": "Drag horizontally",
+				"line2": "to show competitors"
+			},
+			"startNow": "Start now"
+		}
+	},
+	"FeatureSection": {
+		"whyStartUsingInternxt": {
+			"title": "Why start using Internxt?",
+			"description": {
+				"line1": "Unlike other competitors, advertising is not our business model.",
+				"line2": "Your data should only be yours. We focus on the security and privacy",
+				"line3": "of you and your files and photos. Using Internxt you can feel secure again."
+			}
+		},
+		"createAccount": {
+			"title": {
+				"line1": "Get up to 10GB of",
+				"line2": "encrypted storage",
+				"line3": "with your free account."
+			},
+			"description": {
+				"line1": "Create your account and start syncing",
+				"line2": "your files with privacy and security."
+			},
+			"cta": "Create account"
+		},
+		"whyPeopleLoveInternxt": {
+			"title": "Why people love Internxt?",
+			"cards": [
+				{
+					"quote": "Internxt has been quietly working on an ambitious plan to make decentralized cloud storage massively accessible",
+					"author": "Natasha Lomas",
+					"company": "TechCrunch"
+				},
+				{
+					"quote": "Is more secure and more private than mainstream cloud-based apps such as those offered by tech giants like Google",
+					"author": "Alison Coleman",
+					"company": "Forbes"
+				},
+				{
+					"quote": "The big Internet giants have a catch: the exploitation of data for advertising. [...] Internxt combats this by offering an encrypted and distributed cloud",
+					"author": "Miguel Ángel Moreno",
+					"company": "Business Insider"
+				}
+			]
+		}
+	}
+}

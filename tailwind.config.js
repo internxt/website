@@ -272,7 +272,8 @@ module.exports = {
       '3xl': '1.5rem',
       '4xl': '2.75rem',
       '5xl': '4rem',
-      full: '9999px'
+      full: '9999px',
+      'full-percentage': '100%'
     },
     borderWidth: {
       DEFAULT: '1px',
@@ -754,6 +755,17 @@ module.exports = {
       3: '3deg',
       6: '6deg',
       12: '12deg'
+    },
+    blur: {
+      none: 0,
+      sm: '4px',
+      DEFAULT: '8px',
+      md: '12px',
+      lg: '16px',
+      xl: '24px',
+      '2xl': '40px',
+      '3xl': '64px',
+      '4xl': '128px'
     },
     space: (theme, { negative }) => ({
       ...theme('spacing'),

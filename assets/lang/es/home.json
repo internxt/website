@@ -22,19 +22,19 @@
 			"drive": "Explorar Drive",
 			"photos": "Descubre Photos"
 		},
-		"feature1": {"title": {"line1": "Diseñado para", "line2": "protegerte"}, "description": "Tus archivos son encriptados antes de salir de tu dispositivo, así que sólo tú puedes acceder a tus archivos, sin trucos, sin letra pequeña, eso es privacidad, eso es Internxt.", "cta": "Qué es zero-knowledge"},
+		"feature1": {"title": {"line1": "Diseñado para", "line2": "protegerte"}, "description": "Tus archivos son fragmentados y cifrados antes de salir de tu dispositivo. Sin trucos, sin cosas ocultas, privado por defecto, seguro por diseño, eso es Internxt.", "cta": "Qué es zero-knowledge"},
 		"feature2": {"title": {"line1": "Multi", "line2": "dispositivo"}, "description": "Accede a toda la familia de aplicaciones adaptadas a todos tus dispositivos para satisfacer todas tus necesidades.", "cta": "Descargar aplicaciones"},
 		"feature3": {"title": {"line1": "Privacidad, esa", "line2": "es la cuestión"}, "description": "A diferencia de nuestros competidores, nuestro negocio no se basa en la publicidad, se basa en ti. Nosotros no vendemos tus datos.", "cta": "Privacidad en Internxt"}
 	},
 	"InvestorsSection":
 	{
 		"title": "Confían en nosotros",
-		"subtitle": {"line1": "Nuestros inversores y patrocinadores confían tanto en", "line2": "nosotros que hemos levantado más de 2M en solo 2 años."}
+		"subtitle": {"line1": "Nuestros inversores y patrocinadores confían tanto en", "line2": "nosotros que hemos crecido un 1400% el primer año."}
 	},
 	"GetStartedSection":
 	{
 		"title": {"line1": "Empieza ahora y", "line2": "consige hasta 10GB gratis"},
-		"subtitle": {"line1": "Nuestros clientes estan muy contentos con Internxt Drive, pero", "line2": "estan más contentos sabiendo que es totalmente privado."},
+		"subtitle": {"line1": "Nuestros clientes están muy contentos con Internxt Drive, pero", "line2": "lo están aún más sabiendo que es totalmente privado."},
 		"cta1": "Empezar ahora"
 	}
 }

@@ -62,22 +62,22 @@ export async function getPlatform(ctx: GetServerSidePropsContext) {
   }
 }
 
-export async function getCoreDownloadUrl(ctx: GetServerSidePropsContext) {
-  const ua = ctx.req.headers['user-agent'];
-  const uaParsed = userAgent.parse(ua);
-  return 'https://github.com/internxt/core-daemon';
+// export async function getCoreDownloadUrl(ctx: GetServerSidePropsContext) {
+//   const ua = ctx.req.headers['user-agent'];
+//   const uaParsed = userAgent.parse(ua);
+//   return 'https://github.com/internxt/core-daemon';
 
-  // switch (uaParsed.os.family) {
-  //   case 'Ubuntu':
-  //     return 'https://internxt.com/downloads/core.deb';
-  //   case 'Windows':
-  //     return 'https://internxt.com/downloads/core.exe';
-  //   case 'Mac OS X':
-  //     return 'https://internxt.com/downloads/core.dmg';
-  //   default:
-  //     // No borrar
-  //     // eslint-disable-next-line no-console
-  //     console.log('Unknown device %s. User-Agent: %s', uaParsed.os.family, ua);
-  //     return 'https://github.com/internxt/core-daemon';
-  // }
-}
+//   // switch (uaParsed.os.family) {
+//   //   case 'Ubuntu':
+//   //     return 'https://internxt.com/downloads/core.deb';
+//   //   case 'Windows':
+//   //     return 'https://internxt.com/downloads/core.exe';
+//   //   case 'Mac OS X':
+//   //     return 'https://internxt.com/downloads/core.dmg';
+//   //   default:
+//   //     // No borrar
+//   //     // eslint-disable-next-line no-console
+//   //     console.log('Unknown device %s. User-Agent: %s', uaParsed.os.family, ua);
+//   //     return 'https://github.com/internxt/core-daemon';
+//   // }
+// }

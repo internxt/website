@@ -12,7 +12,7 @@ const FeaturesSection = ({
 }) => (
   <section className="flex flex-col w-full">
 
-    <div className="flex flex-col items-center pt-16 lg:pt-20 pb-32">
+    <div className="flex flex-col items-center pb-32">
 
       {/* Title */}
       <Parallax
@@ -225,7 +225,7 @@ const FeaturesSection = ({
       </div>
       */}
 
-      <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-6 lg:px-0">
+      <div className="flex flex-col items-center text-center w-full lg:pb-16 px-6 lg:px-0">
         <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">
           {textContent.section5.title.line1}
           <br />
@@ -249,7 +249,7 @@ const FeaturesSection = ({
           </a>
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-20 lg:gap-32 xl:gap-48 text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-16 lg:gap-20 xl:gap-32 text-center">
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">

@@ -16,7 +16,7 @@ const Photos = ({
   footerLang,
   download,
   device,
-  deviceLang
+  lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
 
@@ -26,34 +26,34 @@ const Photos = ({
 
       <Navbar
         textContent={navbarLang}
-        lang={deviceLang}
+        lang={lang}
         cta={['default']}
         fixed
       />
 
       <ProductsNavigation
         textContent={navbarLang}
-        lang={deviceLang}
+        lang={lang}
         selectedItem="photos"
       />
 
       <HeroSection
         textContent={langJson.HeroSection}
-        lang={deviceLang}
+        lang={lang}
         device={device}
         download={download}
       />
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
-        lang={deviceLang}
+        lang={lang}
         device={device}
         download={download}
       />
 
       <Footer
         textContent={footerLang}
-        lang={deviceLang}
+        lang={lang}
       />
 
     </Layout>
@@ -68,7 +68,6 @@ export async function getServerSideProps(ctx) {
   const device = userAgent.parse(ua).os.family;
 
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/photos.json`);
@@ -79,7 +78,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, download, device, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang, download, device, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }
