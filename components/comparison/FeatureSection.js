@@ -29,17 +29,17 @@ const FeatureSection = ({
           <div className="flex flex-col space-y-2">
             <h3 className="text-2xl md:text-3xl font-semibold">
               {textContent.createAccount.title.line1}
-              <br className="hidden sm:inline-flex" />
+              <br className="hidden md:inline-flex" />
               {' '}
               {textContent.createAccount.title.line2}
-              <br className="hidden sm:inline-flex" />
+              <br className="hidden md:inline-flex" />
               {' '}
               {textContent.createAccount.title.line3}
             </h3>
 
-            <p className="text-lg">
+            <p className="text-lg text-cool-gray-80">
               {textContent.createAccount.description.line1}
-              <br className="hidden sm:inline-flex" />
+              <br className="hidden md:inline-flex" />
               {' '}
               {textContent.createAccount.description.line2}
             </p>
@@ -55,7 +55,7 @@ const FeatureSection = ({
           </a>
         </div>
 
-        <div className="flex flex-col w-full md:w-80 pt-10 md:pt-16 px-8 md:px-0">
+        <div className="flex flex-col w-full md:w-64 lg:w-80 pt-10 md:pt-16 px-8 md:px-0">
           <img loading="lazy" className="object-cover object-left-top w-full h-full" src="/images/comparison/iphone-and-mac.webp" draggable="false" alt="Internxt Drive web and mobile apps" />
         </div>
       </div>
@@ -67,10 +67,10 @@ const FeatureSection = ({
         </h3>
 
         <div className="flex flex-col w-screen overflow-x-auto">
-          <div className="relative flex flex-row items-start justify-center text-left space-x-5 md:space-x-10 px-6 mx-auto">
+          <div className="relative flex flex-row items-stretch justify-center text-left space-x-5 md:space-x-10 px-6 mx-auto">
 
             {textContent.whyPeopleLoveInternxt.cards.map((card) => (
-              <div className="flex flex-col flex-shrink-0 w-80 p-8 rounded-2xl bg-cool-gray-10 space-y-4" key={card.author}>
+              <div className="flex flex-col flex-shrink-0 justify-between w-72 md:w-96 p-8 rounded-2xl bg-cool-gray-10 space-y-4" key={card.author}>
                 <h3 className="text-lg">
                   {`“${card.quote}”`}
                 </h3>

@@ -1,6 +1,7 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import PriceCard from './PriceCard';
 
 const PriceTable = ({
@@ -177,11 +178,11 @@ const PriceTable = ({
           </div>
         </Transition>
 
-        <Link href="/cloud-storage-comparison" lang={lang}>
+        {/* <Link href="/cloud-storage-comparison" lang={lang}>
           <a className="flex flex-col justify-center items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-semibold text-blue-60 bg-blue-10 focus:outline-none">
             Compare with our competitors
           </a>
-        </Link>
+        </Link> */}
       </div>
 
     </section>

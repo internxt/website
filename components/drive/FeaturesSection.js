@@ -15,7 +15,7 @@ const FeaturesSection = ({
 }) => (
   <section className="flex flex-col w-full">
 
-    <div className="flex flex-col items-center pt-16 lg:pt-20 pb-32">
+    <div className="flex flex-col items-center pb-32">
 
       {/* Title */}
       <Parallax
@@ -84,7 +84,7 @@ const FeaturesSection = ({
                 />
               </div>
 
-              <div className="flex flex-col mt-28 px-10 lg:px-0">
+              <div className="flex flex-col mt-16 lg:mt-28 px-10 lg:px-0">
                 <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6">
                   {textContent.section2.title.line1}
                   {' '}
@@ -130,7 +130,7 @@ const FeaturesSection = ({
               {/* Keep items aligned to the left */}
               <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
                 <div className="flex flex-col mb-20 lg:mb-28 px-10 lg:px-0">
-                  <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-20">
+                  <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-16 lg:pt-20">
                     {textContent.section3.title.line1}
                     {' '}
                     <br className="hidden sm:flex" />
@@ -212,7 +212,7 @@ const FeaturesSection = ({
 
       {/* Feature #3 - Share your files with ease, security is on us */}
       <Parallax
-        className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 w-full justify-center pt-20 lg:pb-20"
+        className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 w-full justify-center pt-16 lg:pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
 
@@ -248,7 +248,7 @@ const FeaturesSection = ({
               </div>
 
               <div className="flex flex-col mb-20 lg:mb-24 px-10 lg:px-0">
-                <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-20">
+                <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-16 lg:pt-20">
                   {textContent.section4.title.line1}
                   {' '}
                   <br className="hidden sm:flex" />
@@ -294,7 +294,7 @@ const FeaturesSection = ({
 
       {/* Feature #4 - Backup what matters to you. */}
       <Parallax
-        className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full justify-center pt-20 lg:pb-20"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full justify-center pt-16 lg:pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
 
@@ -311,7 +311,7 @@ const FeaturesSection = ({
               </div>
 
               <div className="flex flex-col mb-24 px-10 lg:px-0">
-                <h4 className=" text-xs font-semibold text-orange-50 mb-2 pt-10">
+                <h4 className="text-xs font-semibold text-orange-50 mb-2 pt-10">
                   {textContent.section5.eyebrow}
                 </h4>
 
@@ -362,7 +362,7 @@ const FeaturesSection = ({
         )}
       />
 
-      <div className="flex flex-col items-center w-full pb-10 lg:py-20 px-10 lg:px-0">
+      <div className="flex flex-col items-center w-full pb-10 lg:pb-20 px-10 lg:px-0">
         <h3 className="text-3xl font-semibold text-center text-cool-gray-90 mb-12">
           {textContent.section6.title.line1}
           {' '}
@@ -379,7 +379,7 @@ const FeaturesSection = ({
         />
       </div>
 
-      <div className="flex flex-col items-center text-center w-full py-16 lg:py-32 lg:pb-16 px-6 lg:px-0">
+      <div className="flex flex-col items-center text-center w-full py-16 lg:py-20 pb-0 px-6 lg:px-0">
         <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">
           {textContent.section7.title.line1}
           <br />
@@ -403,7 +403,7 @@ const FeaturesSection = ({
           </a>
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-20 lg:gap-32 xl:gap-48 text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-16 lg:gap-20 xl:gap-32 text-center">
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
             <h4 className="text-2xl font-semibold mb-4">

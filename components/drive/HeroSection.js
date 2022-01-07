@@ -8,8 +8,8 @@ const HeroSection = ({
   lang,
   download
 }) => (
-  <section className="flex flex-col w-full pt-36">
-    <div className="flex flex-col items-center py-20 lg:py-40">
+  <section className="flex flex-col w-full pt-10">
+    <div className="flex flex-col items-center py-40">
 
       {/* Main title */}
       <div className="text-center px-6">

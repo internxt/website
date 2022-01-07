@@ -1,0 +1,103 @@
+{
+	"HeroSection": {
+		"title": {
+			"line1": "Comparación de seguridad",
+			"line2": "de almacenamiento cloud"
+		},
+		"description": "Compara todas las opciones para elegir la solución de almacenamiento cloud más segura.",
+		"cta": "Consigue 10GB gratis",
+		"noCredirCardNeeded": "No requiere tarjeta de crédito",
+		"table": {
+			"sections": {
+				"encryption_and_security": {
+					"name": "Cifrado y Seguridad",
+					"features": {
+						"encryption_at_rest_and_in_transit": "Cifrado en reposo y en tránsito",
+						"end_to_end_encrypted_storage": "Almacenamiento cifrado de extremo a extremo",
+						"end_to_end_encrypted_file_sharing": "Archivos compartidos cifrados de extremo a extremo",
+						"zero_knowledge_encryption": "Cifrado de conocimiento cero",
+						"two_factor_authentication": "Autenticación de dos factores",
+						"gdpr_compliant_synchronization": "Sincronización conforme al GDPR",
+						"aes_256_encryption": "Cifrado AES-256",
+						"zero_knowledge_access_from_browsers": "Acceso de conocimiento cero desde navegador",
+						"no_third_party_file_access": "Terceros no tienen acceso a tus archivos"
+					}
+				},
+				"storage_and_file_management": {
+					"name": "Almacenamiento y Gestión",
+					"features": {
+						"sync_any_folders": "Sincroniza cualquier carpeta",
+						"web_app": "Aplicación Web",
+						"windows_desktop_app": "Aplicación para Windows",
+						"mac_desktop_app": "Aplicación para Mac",
+						"linux_desktop_app": "Aplicación para Linux",
+						"android_app": "Aplicación para Android",
+						"ios_app": "Aplicación para iOS",
+						"backup_folders_and_files": "Copia de seguridad",
+						"file_sharding": "Fragmentación de archivos",
+						"free_account_storage": "Almacenamiento gratuíto"
+					}
+				},
+				"deployment": {
+					"name": "Despliegue",
+					"features": {
+						"support_center": "Centro de Soporte",
+						"live_chat_support": "Ayuda por chat en vivo",
+						"open_source": "Código abierto y público"
+					}
+				},
+				"controlled_file_sharing": {
+					"name": "Control de archivos compartidos",
+					"features": {
+						"file_requests": "Petición de archivos",
+						"password_protection_for_links": "Protección de links con contraseña",
+						"download_limits_for_links": "Límite de acceso a links"
+					}
+				}
+			},
+			"startNow": "Empezar ya"
+		}
+	},
+	"FeatureSection": {
+		"whyStartUsingInternxt": {
+			"title": "¿Por qué usar Internxt?",
+			"description": {
+				"line1": "A diferencia de otros competidores, la publicidad no es nuestro modelo de negocio.",
+				"line2": "Tus datos son sólo tuyos. Nos centramos en tu seguridad y la privacidad y la de",
+				"line3": "tus archivos y fotos. Usando Internxt puedes volver a sentirte seguro."
+			}
+		},
+		"createAccount": {
+			"title": {
+				"line1": "Consigue hasta 10GB",
+				"line2": "de espacio encriptado",
+				"line3": "con tu cuenta gratuita."
+			},
+			"description": {
+				"line1": "Crea tu cuenta y empieza a sincronizar",
+				"line2": "tus archivos de forma privada y segura."
+			},
+			"cta": "Crear cuenta"
+		},
+		"whyPeopleLoveInternxt": {
+			"title": "¿Por qué a la gente le encanta Internxt?",
+			"cards": [
+				{
+					"quote": "Internxt ha estado trabajando silenciosamente en un ambicioso plan para hacer accesible de forma masiva el almacenamiento descentralizado en la nube",
+					"author": "Natasha Lomas",
+					"company": "TechCrunch"
+				},
+				{
+					"quote": "Es más segura y privada que las aplicaciones basadas en la nube como las que ofrecen gigantes tecnológicos como Google",
+					"author": "Alison Coleman",
+					"company": "Forbes"
+				},
+				{
+					"quote": "Los grandes gigantes de internet tiene una contrapartida: el aprovechamiento de los datos para publicidad. [...] Internxt combate eso ofreciendo una nube encriptada y distribuida",
+					"author": "Miguel Ángel Moreno",
+					"company": "Business Insider"
+				}
+			]
+		}
+	}
+}

@@ -45,48 +45,38 @@ const PriceTable = ({
       <div className="flex flex-col items-center">
 
         <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end px-6">
-          <div className="relative">
-            <img loading="lazy" className="absolute select-none -top-6 sm:-top-4 -right-5 sm:-right-4 transform -translate-y-3 w-full" src="../../images/lifetime/special-landings/snow/snow1.webp" draggable="false" alt="snow" />
-            <PriceCard
-              planType="individual"
-              storage={pricings.TB1.storage}
-              price={billingPrice(pricings.TB1.price)}
-              priceBefore={pricings.TB1.priceBefore}
-              billingFrequency={billingFrequency}
-              cta={['checkout', `${pricings.TB1.stripeID}`]}
-              popular={pricings.TB1.popular}
-              lang={lang}
-            />
-          </div>
+          <PriceCard
+            planType="individual"
+            storage={pricings.TB1.storage}
+            price={billingPrice(pricings.TB1.price)}
+            priceBefore={pricings.TB1.priceBefore}
+            billingFrequency={billingFrequency}
+            cta={['checkout', `${pricings.TB1.stripeID}`]}
+            popular={pricings.TB1.popular}
+            lang={lang}
+          />
 
-          <div className="relative mt-10 md:mt-0">
-            <img loading="lazy" className="absolute select-none -top-5 sm:-top-4 -right-1 sm:-right-1 transform -translate-y-3 scale-105 sm:scale-100 w-full" src="../../images/lifetime/special-landings/snow/snow2.webp" draggable="false" alt="snow" />
-            <PriceCard
-              planType="individual"
-              storage={pricings.TB5.storage}
-              price={billingPrice(pricings.TB5.price)}
-              priceBefore={pricings.TB5.priceBefore}
-              billingFrequency={billingFrequency}
-              cta={['checkout', `${pricings.TB5.stripeID}`]}
-              popular={pricings.TB5.popular}
-              lang={lang}
-            />
-          </div>
+          <PriceCard
+            planType="individual"
+            storage={pricings.TB5.storage}
+            price={billingPrice(pricings.TB5.price)}
+            priceBefore={pricings.TB5.priceBefore}
+            billingFrequency={billingFrequency}
+            cta={['checkout', `${pricings.TB5.stripeID}`]}
+            popular={pricings.TB5.popular}
+            lang={lang}
+          />
 
-          <div className="relative mt-10 xl:mt-0">
-            <img loading="lazy" className="absolute select-none -top-4 sm:-top-3 right-1 sm:right-1 transform -translate-y-3 w-full" src="../../images/lifetime/special-landings/snow/snow3.webp" draggable="false" alt="snow" />
-            <PriceCard
-              planType="individual"
-              storage={pricings.TB10.storage}
-              price={billingPrice(pricings.TB10.price)}
-              priceBefore={pricings.TB10.priceBefore}
-              billingFrequency={billingFrequency}
-              cta={['checkout', `${pricings.TB10.stripeID}`]}
-              popular={pricings.TB10.popular}
-              lang={lang}
-            />
-          </div>
-
+          <PriceCard
+            planType="individual"
+            storage={pricings.TB10.storage}
+            price={billingPrice(pricings.TB10.price)}
+            priceBefore={pricings.TB10.priceBefore}
+            billingFrequency={billingFrequency}
+            cta={['checkout', `${pricings.TB10.stripeID}`]}
+            popular={pricings.TB10.popular}
+            lang={lang}
+          />
         </div>
 
       </div>
