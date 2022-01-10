@@ -1,5 +1,7 @@
 import bytes from 'bytes';
 
+const isTest = process.env.NODE_ENV === 'development';
+
 const STRIPE_PRODUCT = {
   lifetime2TBHalloween: {
     production: 'price_1Joq2RFAOdcgaBMQxR7f10Wh',
@@ -325,7 +327,7 @@ const STRIPE_PRODUCT = {
     mode: 'subscription',
     session: {
       discounts: [{
-        promotion_code: 'promo_1K8kqLFAOdcgaBMQX5phJSfd',
+        promotion_code: isTest ? 'promo_1KGO2GFAOdcgaBMQVVXcV9T5' : 'promo_1K8kqLFAOdcgaBMQX5phJSfd',
       }],
       line_items: [
         {
@@ -349,7 +351,7 @@ const STRIPE_PRODUCT = {
     mode: 'subscription',
     session: {
       discounts: [{
-        promotion_code: 'promo_1K9sLDFAOdcgaBMQMlHOfxhx',
+        promotion_code: isTest ? 'promo_1KGO2GFAOdcgaBMQVVXcV9T5' : 'promo_1K9sLDFAOdcgaBMQMlHOfxhx',
       }],
       line_items: [
         {
@@ -373,7 +375,7 @@ const STRIPE_PRODUCT = {
     mode: 'subscription',
     session: {
       discounts: [{
-        promotion_code: 'promo_1KCKBwFAOdcgaBMQLRPX8ona',
+        promotion_code: isTest ? 'promo_1KGO2GFAOdcgaBMQVVXcV9T5' : 'promo_1KCKBwFAOdcgaBMQLRPX8ona',
       }],
       line_items: [
         {
