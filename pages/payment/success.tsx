@@ -76,20 +76,24 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     body = await request.json().catch(() => ({}));
     redirectUrl = `${process.env.DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}`;
 
-    const checkoutSession = await getCheckoutSession(ctx.query.sid);
-    if (checkoutSession.payment_status === 'paid') {
-      const userId = await getUserId(body.email);
-      analytics = {
-        email: body.email,
-        userId,
-        properties: {
-          price_id: checkoutSession.metadata.price_id,
-          email: checkoutSession.customer_details.email,
-          currency: checkoutSession.metadata.currency.toUpperCase(),
-          value: checkoutSession.amount_total * 0.01,
-          type: checkoutSession.metadata.type
-        }
-      };
+    try {
+      const checkoutSession = await getCheckoutSession(ctx.query.sid);
+      if (checkoutSession.payment_status === 'paid') {
+        const userId = await getUserId(body.email);
+        analytics = {
+          email: body.email,
+          userId,
+          properties: {
+            price_id: checkoutSession.metadata.price_id,
+            email: checkoutSession.customer_details.email,
+            currency: checkoutSession.metadata.currency.toUpperCase(),
+            value: checkoutSession.amount_total * 0.01,
+            type: checkoutSession.metadata.type
+          }
+        };
+      }
+    } catch (error) {
+      analytics = {};
     }
   }
 
