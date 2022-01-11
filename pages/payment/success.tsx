@@ -6,7 +6,8 @@ import getUserId from '../../lib/utils';
 import Layout from '../../components/layout/Layout';
 
 function getCheckoutSession(sid) {
-  const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY_TEST, { apiVersion: '2020-08-27' });
+  const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
+  const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
   return stripe.checkout.sessions.retrieve(sid);
 }
 
