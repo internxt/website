@@ -9,7 +9,7 @@ function getBridgeAuth(): { username: string, password: string } {
   return auth;
 }
 
-export default function getUserId(email: string) {
+export function getUserId(email: string) {
   const auth = getBridgeAuth();
 
   return axios.post(`${process.env.BRIDGE_URL}/gateway/uuid`, { email },
@@ -19,4 +19,18 @@ export default function getUserId(email: string) {
   }).catch((err) => {
     throw new Error(err);
   });
+}
+
+export function checkRegisterCompleted(email: string) {
+  const auth = getBridgeAuth();
+
+  return axios.get(`${process.env.DRIVE_API_URL}/api/gateway/registercompleted`, {
+    params: {
+      email
+    },
+    auth
+  }).then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err);
+    });
 }
