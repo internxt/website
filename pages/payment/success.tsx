@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import Stripe from 'stripe';
 import _ from 'lodash';
-import getUserId from '../../lib/utils';
+import { checkRegisterCompleted } from '../../lib/utils';
 import Layout from '../../components/layout/Layout';
 
 function getCheckoutSession(sid) {
@@ -79,18 +79,22 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     try {
       const checkoutSession = await getCheckoutSession(ctx.query.sid);
       if (checkoutSession.payment_status === 'paid') {
-        const userId = await getUserId(body.email);
-        analytics = {
-          email: body.email,
-          userId,
-          properties: {
-            price_id: checkoutSession.metadata.price_id,
-            email: checkoutSession.customer_details.email,
-            currency: checkoutSession.metadata.currency.toUpperCase(),
-            value: checkoutSession.amount_total * 0.01,
-            type: checkoutSession.metadata.type
-          }
-        };
+        // const userId = await getUserId(body.email);
+        const { uuid, registerCompleted } = await checkRegisterCompleted(body.email);
+        redirectUrl += `&price_id=${checkoutSession.metadata.price_id}`;
+        if (registerCompleted) {
+          analytics = {
+            email: body.email,
+            userId: uuid,
+            properties: {
+              price_id: checkoutSession.metadata.price_id,
+              email: checkoutSession.customer_details.email,
+              currency: checkoutSession.metadata.currency.toUpperCase(),
+              value: checkoutSession.amount_total * 0.01,
+              type: checkoutSession.metadata.type
+            }
+          };
+        }
       }
     } catch (error) {
       analytics = {};
