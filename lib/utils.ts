@@ -21,10 +21,10 @@ export function getUserId(email: string) {
   });
 }
 
-export function checkRegisterCompleted(email: string) {
+export function getUser(email: string) {
   const auth = getBridgeAuth();
 
-  return axios.get(`${process.env.DRIVE_API_URL}/api/gateway/registercompleted`, {
+  return axios.get(`${process.env.DRIVE_API_URL}/api/gateway/users`, {
     params: {
       email
     },
