@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import Stripe from 'stripe';
 import _ from 'lodash';
-import { checkRegisterCompleted } from '../../lib/utils';
+import { getUser } from '../../lib/utils';
 import Layout from '../../components/layout/Layout';
 
 function getCheckoutSession(sid) {
@@ -79,8 +79,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     try {
       const checkoutSession = await getCheckoutSession(ctx.query.sid);
       if (checkoutSession.payment_status === 'paid') {
-        // const userId = await getUserId(body.email);
-        const { uuid, registerCompleted } = await checkRegisterCompleted(body.email);
+        const { uuid, registerCompleted } = await getUser(body.email);
         redirectUrl += `&price_id=${checkoutSession.metadata.price_id}`;
         if (registerCompleted) {
           analytics = {
@@ -100,8 +99,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       analytics = {};
     }
   }
-
-  // console.warn('[%s] %s', body.email, redirectUrl);
 
   return {
     props: {
