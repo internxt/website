@@ -19,10 +19,10 @@ const InvestorsSection = ({ textContent }) => (
             <img loading="lazy" src="../../logos/investors/theventurecity.svg" draggable="false" alt="theventurecity logo" />
           </div>
           <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-            <img loading="lazy" src="../../logos/investors/esade.svg" draggable="false" alt="esade logo" />
+            <img loading="lazy" src="../../logos/investors/esade.webp" className="h-7 mx-auto" draggable="false" alt="esade logo" />
           </div>
           <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-            <img loading="lazy" src="../../logos/investors/ycombinator.svg" draggable="false" alt="ycombinator logo" />
+            <img loading="lazy" src="../../logos/investors/crypto.com.webp" className="h-7 mx-auto" draggable="false" alt="crypto.com logo" />
           </div>
           <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
             <img loading="lazy" src="../../logos/investors/angelscapital.svg" draggable="false" alt="angelscapital logo" />

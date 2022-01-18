@@ -20,11 +20,13 @@
 			"getOn": "Get on",
 			"orGetOn": "Or get on",
 			"openDriveWeb": "Open Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
+			"iPhone": "App Store",
+			"iPad": "App Store",
+			"Android": "Play Store",
+			"Windows": "Windows",
+			"Linux": "Linux",
+			"UNIX": "Linux",
+			"MacOS": "Mac"
 		}
 	},
 	"FeaturesSection":
@@ -139,11 +141,13 @@
 			"getOn": "Get on",
 			"orGetOn": "Or get on",
 			"openDriveWeb": "Open Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
+			"iPhone": "App Store",
+			"iPad": "App Store",
+			"Android": "Play Store",
+			"Windows": "Windows",
+			"Linux": "Linux",
+			"UNIX": "Linux",
+			"MacOS": "Mac"
 		}
 	}
 }

@@ -21,11 +21,13 @@
 			"getOn": "Conseguir en",
 			"orGetOn": "O conseguir en",
 			"openDriveWeb": "Abrir Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
+			"iPhone": "App Store",
+			"iPad": "App Store",
+			"Android": "Play Store",
+			"Windows": "Windows",
+			"Linux": "Linux",
+			"UNIX": "Linux",
+			"MacOS": "Mac"
 		}
 	},
 	"FeaturesSection":
@@ -144,11 +146,13 @@
 			"getOn": "Conseguir en",
 			"orGetOn": "O conseguir en",
 			"openDriveWeb": "Abrir Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
+			"iPhone": "App Store",
+			"iPad": "App Store",
+			"Android": "Play Store",
+			"Windows": "Windows",
+			"Linux": "Linux",
+			"UNIX": "Linux",
+			"MacOS": "Mac"
 		}
 	}
 }

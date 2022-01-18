@@ -22,6 +22,7 @@
 			},
 			"company": {
 				"title": "Company",
+				"comparison": "Comparison",
 				"privacy": "Privacy",
 				"about": "About us",
 				"support": "Support",

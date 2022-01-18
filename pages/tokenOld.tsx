@@ -6,7 +6,6 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import { getDriveDownloadUrl } from '../lib/get-download-url';
 
 const Token = ({
   metatagsDescriptions,
@@ -56,8 +55,6 @@ const Token = ({
 };
 
 export async function getServerSideProps(ctx) {
-  const downloadUrl = await getDriveDownloadUrl(ctx);
-
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
@@ -70,7 +67,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }

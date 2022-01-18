@@ -9,7 +9,6 @@ import * as anim from '../../public/js/anim';
 
 const FeaturesSection = ({
   textContent,
-  device,
   lang,
   download
 }) => (
@@ -374,7 +373,6 @@ const FeaturesSection = ({
         <DownloadComponent
           textContent={textContent.DownloadLinks}
           lang={lang}
-          device={device}
           download={download}
         />
       </div>

@@ -4,7 +4,6 @@ import DownloadComponent from './DownloadComponent';
 
 const HeroSection = ({
   textContent,
-  device,
   lang,
   download
 }) => (
@@ -49,21 +48,11 @@ const HeroSection = ({
           height: 617
         }}
       />
-      {/*
-      <div
-        className="flex lg:hidden bg-cool-gray-10 rounded-2xl border border-cool-gray-20 shadow-subtle mb-12"
-        style={{
-          width: 272,
-          height: 491
-        }}
-      />
-      */}
 
       {/* Download links */}
       <DownloadComponent
         textContent={textContent.DownloadLinks}
         lang={lang}
-        device={device}
         download={download}
       />
 

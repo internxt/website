@@ -13,7 +13,6 @@ export default function Footer({
   darkMode
 }) {
   const [consentCookie, setConsentCookie] = React.useState(true);
-  const showSupporters = true;
 
   const handleAcceptCookies = () => {
     localStorage.setItem('CookieConsent', 'true');
@@ -30,23 +29,6 @@ export default function Footer({
   return (
     <section className={`flex flex-col w-full ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-cool-gray-5'}`}>
       <div className="flex flex-col items-center justify-center w-full px-6 py-16 sm:p-20">
-
-        {/* Supporters from EU and 'Camara de comercio de España' (Only in Spanish) */}
-        {(lang === 'es' && showSupporters) && (
-          <div className="flex flex-col space-y-6 sm:space-x-20 py-4 justify-center bg-white border border-cool-gray-10 rounded-2xl mb-16">
-            <div className="flex flex-col max-w-2xl px-8 mx-auto">
-              <div className="flex flex-row justify-center items-center flex-wrap mb-8">
-                <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/ticcamaras.png" alt="Unión Europea" draggable="false" />
-              </div>
-
-              <div className="text-center text-xs text-cool-gray-40">Internxt Universal Technologies SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha [descripción de la operación] para la mejora de competitividad y productividad de la empresa. Del 19/05/2021 al 31/12/2021. Para ello ha contado con el apoyo del programa TICCámaras de la Cámara de Comercio de València. Una manera de hacer Europa.</div>
-
-              <div className="flex flex-row justify-center items-center flex-wrap mt-8">
-                <img loading="lazy" className="w-60 mx-4" src="../../logos/investors/group.png" alt="Unión Europea" draggable="false" />
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Newsletter */}
         <div className={`${hideNewsletter ? 'hidden' : 'flex'} w-full flex-col md:flex-row space-y-6 md:space-x-20 md:space-y-0 justify-center items-start mb-16`}>
@@ -140,6 +122,9 @@ export default function Footer({
                     {textContent.FooterSection.sections.company.title}
                   </h3>
                   <div className={`flex flex-col space-y-3 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                    <Link href="/cloud-storage-comparison" locale={lang}>
+                      <a>{textContent.FooterSection.sections.company.comparison}</a>
+                    </Link>
                     <Link href="/privacy" locale={lang}>
                       <a>{textContent.FooterSection.sections.company.privacy}</a>
                     </Link>
@@ -297,6 +282,10 @@ export default function Footer({
                     leave="transition duration-0"
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
+
+                      <Link href="/cloud-storage-comparison" locale={lang}>
+                        <a>{textContent.FooterSection.sections.company.comparison}</a>
+                      </Link>
 
                       <Link href="/privacy" locale={lang}>
                         <a>{textContent.FooterSection.sections.company.privacy}</a>
@@ -463,22 +452,13 @@ export default function Footer({
 }
 
 export async function getServerSideProps(ctx) {
-  // eslint-disable-next-line no-undef
-  const downloadUrl = await getDriveDownloadUrl(ctx);
-  // eslint-disable-next-line no-undef
-  const devicePlatform = await getPlatform(ctx);
-
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   cookies.setReferralCookie(ctx);
 
   return {
     props: {
-      lang,
-      downloadUrl,
-      devicePlatform,
-      deviceLang
+      lang
     },
   };
 }

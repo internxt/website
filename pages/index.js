@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
-
+import { isMobile } from 'react-device-detect';
 import cookies from '../lib/cookies';
-import { getDriveDownloadUrl } from '../lib/get-download-url';
+import { downloadDriveLinks } from '../lib/get-download-url';
 import HeroSection from '../components/home/HeroSection';
 import GetStartedSection from '../components/home/GetStartedSection';
 import InvestorsSection from '../components/home/InvestorsSection';
@@ -16,14 +16,32 @@ const Home = ({
   langJson,
   navbarLang,
   footerLang,
-  downloadUrl,
+  downloadURL,
   deviceLang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const [downloadUrl, setDownloadUrl] = useState(null);
+
+  function getOS() {
+    const osList = [
+      { keyword: 'Android', name: 'Android' },
+      { keyword: 'iPad', name: 'iPad' },
+      { keyword: 'iPhone', name: 'iPhone' },
+      { keyword: 'Win', name: 'Windows' },
+      { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
+      { keyword: 'X11', name: 'UNIX' },
+      { keyword: 'Linux', name: 'Linux' },
+    ];
+
+    const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
+
+    return res ? res.name : `Not known (${window.navigator.appVersion})`;
+  }
 
   useEffect(() => {
+    setDownloadUrl(downloadURL[getOS()]);
     AOS.init();
-  }, []);
+  }, [downloadURL]);
 
   return (
 
@@ -69,7 +87,7 @@ const Home = ({
 };
 
 export async function getServerSideProps(ctx) {
-  const downloadUrl = await getDriveDownloadUrl(ctx);
+  const downloadURL = await downloadDriveLinks(ctx);
 
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
@@ -83,7 +101,13 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, downloadUrl, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang,
+      downloadURL,
+      deviceLang,
+      metatagsDescriptions,
+      langJson,
+      navbarLang,
+      footerLang,
     },
   };
 }

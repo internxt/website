@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { Fragment } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Popover, Transition, Disclosure } from '@headlessui/react';
+import { Transition, Disclosure } from '@headlessui/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
 import styles from './Navbar.module.scss';
@@ -156,63 +156,36 @@ export default function Navbar({
                 </a>
               </Link>
 
-              <div className="max-w-sm">
+              <div className={`group relative flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${darkMode ? 'text-white hover:text-cool-gray-20 hover:bg-white hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-100 hover:bg-opacity-5'} rounded-lg cursor-pointer`}>
+                <span>{textContent.links.products}</span>
+                <UilAngleDown className="w-6 h-6 transition duration-150 ease-in-out transform translate-y-px text-cool-gray-20 group-hover:text-cool-gray-30" />
 
-                {/* Products popover menu (desktop) */}
-                <Popover className="relative">
-                  {({ open }) => (
-                    <>
-                      <Popover.Button className="outline-none">
-                        <span className={`flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${darkMode ? 'text-white bg-white bg-opacity-0 hover:text-cool-gray-20 hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-10'} rounded-lg ${(open && darkMode) ? 'bg-white bg-opacity-10 hover:bg-opacity-10 text-cool-gray-20' : ''} ${(open && !darkMode) ? 'bg-cool-gray-10 hover:bg-cool-gray-10 text-cool-gray-90' : ''}`}>
-                          <span>{textContent.links.products}</span>
-                          <UilAngleDown className={`w-6 h-6 transition duration-150 ease-in-out transform translate-y-px ${open ? 'text-cool-gray-30' : 'text-cool-gray-20'}`} />
-                        </span>
-                      </Popover.Button>
+                {/* Menu items */}
+                <div className="absolute top-full left-1/2 z-10 w-52 transform -translate-x-1/2 opacity-0 translate-y-0 group-hover:translate-y-1 group-hover:opacity-100 p-1.5 bg-white border-black rounded-xl shadow-subtle border border-opacity-5 transition duration-150 ease-in-out pointer-events-none group-hover:pointer-events-auto">
+                  <div className="absolute -top-4 left-1/2 w-4/5 h-4 transform -translate-x-1/2" />
 
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-50"
-                        enterFrom="opacity-0 -translate-y-1"
-                        enterTo="opacity-100 translate-y-0"
-                        leave="transition ease-in duration-100"
-                        leaveFrom="opacity-100 translate-y-0"
-                        leaveTo="opacity-0 -translate-y-1"
-                      >
-                        <Popover.Panel className="absolute z-10 w-56 transform -translate-x-1/2 left-1/2 mt-1.5 p-1.5 bg-white border-black rounded-xl shadow-subtle border border-opacity-5 overflow-hidden">
+                  <div className="relative grid gap-0 lg:grid-cols-1 whitespace-nowrap">
 
-                          <div className="relative grid gap-0 lg:grid-cols-1">
+                    <Link href="/drive" locale={lang}>
+                      <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
+                        {textContent.products.drive}
+                      </a>
+                    </Link>
 
-                            <Popover.Button>
-                              <Link href="/drive" locale={lang}>
-                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
-                                  {textContent.products.drive}
-                                </a>
-                              </Link>
-                            </Popover.Button>
+                    <Link href="/photos" locale={lang}>
+                      <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
+                        {textContent.products.photos}
+                      </a>
+                    </Link>
 
-                            <Popover.Button>
-                              <Link href="/photos" locale={lang}>
-                                <a className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
-                                  {textContent.products.photos}
-                                </a>
-                              </Link>
-                            </Popover.Button>
+                    <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30">
+                      <span>{textContent.products.send}</span>
+                      <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                    </a>
 
-                            <Popover.Button>
-                              <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30">
-                                <span>{textContent.products.send}</span>
-                                <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
-                              </a>
-                            </Popover.Button>
+                  </div>
 
-                          </div>
-
-                        </Popover.Panel>
-                      </Transition>
-                    </>
-                  )}
-                </Popover>
-
+                </div>
               </div>
 
               <Link href="/privacy" locale={lang}>

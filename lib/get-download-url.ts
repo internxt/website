@@ -1,6 +1,30 @@
 import { GetServerSidePropsContext } from 'next';
 import userAgent from 'useragent';
+import { isMobile } from 'react-device-detect';
 import { getLatestReleaseInfo } from './github';
+
+const iosURL = 'https://apps.apple.com/es/app/internxt-drive/id1465869889';
+const androidURL = 'https://play.google.com/store/apps/details?id=com.internxt.cloud&hl=es';
+const windowsURL = 'https://internxt.com/downloads/drive.exe';
+const macosURL = 'https://internxt.com/downloads/drive.dmg';
+const linuxURL = 'https://internxt.com/downloads/drive.deb';
+const lastReleaseURL = 'https://github.com/internxt/drive-desktop/releases';
+
+export function getOS() {
+  const osList = [
+    { keyword: 'Android', name: 'Android' },
+    { keyword: 'iPad', name: 'iPad' },
+    { keyword: 'iPhone', name: 'iPhone' },
+    { keyword: 'Win', name: 'Windows' },
+    { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
+    { keyword: 'X11', name: 'UNIX' },
+    { keyword: 'Linux', name: 'Linux' },
+  ];
+
+  const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
+
+  return res ? res.name : `Not known (${window.navigator.appVersion})`;
+}
 
 export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
   const ua = ctx.req.headers['user-agent'];
@@ -27,57 +51,34 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
   }
 }
 
-export const downloadDriveByPlatform = async () => {
-  const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
+export const downloadDriveLinks = async () => {
+  const release = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
 
   const platforms = {
-    ios: 'https://apps.apple.com/es/app/internxt-drive/id1465869889',
-    android: 'https://play.google.com/store/apps/details?id=com.internxt.cloud&hl=es',
-    linux: info.links.linux || 'https://internxt.com/downloads/drive.deb',
-    windows: info.links.windows || 'https://internxt.com/downloads/drive.exe',
-    mac: info.links.macos || 'https://internxt.com/downloads/drive.dmg',
-    all: 'https://github.com/internxt/drive-desktop/releases'
+    Android: androidURL,
+    iPad: iosURL,
+    iPhone: iosURL,
+    Windows: release.links.windows || windowsURL,
+    MacOS: release.links.macos || macosURL,
+    UNIX: release.links.linux || linuxURL,
+    Linux: release.links.linux || linuxURL,
+    all: lastReleaseURL
   };
 
   return platforms;
 };
 
-export async function getPlatform(ctx: GetServerSidePropsContext) {
-  const ua = ctx.req.headers['user-agent'];
-  const uaParsed = userAgent.parse(ua);
+export const downloadDriveByPlatform = async () => {
+  const release = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
 
-  switch (uaParsed.os.family) {
-    case 'iOS':
-      return 'iOS';
-    case 'Android':
-      return 'Android';
-    case 'Ubuntu':
-      return 'Linux';
-    case 'Windows':
-      return 'Windows';
-    case 'Mac OS X':
-      return 'macOS';
-    default:
-      return null;
-  }
-}
+  const platforms = {
+    ios: iosURL,
+    android: androidURL,
+    linux: release.links.linux || linuxURL,
+    windows: release.links.windows || windowsURL,
+    mac: release.links.macos || macosURL,
+    all: lastReleaseURL
+  };
 
-// export async function getCoreDownloadUrl(ctx: GetServerSidePropsContext) {
-//   const ua = ctx.req.headers['user-agent'];
-//   const uaParsed = userAgent.parse(ua);
-//   return 'https://github.com/internxt/core-daemon';
-
-//   // switch (uaParsed.os.family) {
-//   //   case 'Ubuntu':
-//   //     return 'https://internxt.com/downloads/core.deb';
-//   //   case 'Windows':
-//   //     return 'https://internxt.com/downloads/core.exe';
-//   //   case 'Mac OS X':
-//   //     return 'https://internxt.com/downloads/core.dmg';
-//   //   default:
-//   //     // No borrar
-//   //     // eslint-disable-next-line no-console
-//   //     console.log('Unknown device %s. User-Agent: %s', uaParsed.os.family, ua);
-//   //     return 'https://github.com/internxt/core-daemon';
-//   // }
-// }
+  return platforms;
+};

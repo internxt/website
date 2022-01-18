@@ -1,24 +1,27 @@
 module.exports = {
-  basePath: '',
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en',
+  },
   async redirects() {
     return [
-      {
-        source: '/en/team',
-        destination: '/en/about',
-        permanent: true,
-      },
-      {
-        source: '/es/team',
-        destination: '/es/about',
-        permanent: true,
-      },
       {
         source: '/team',
         destination: '/about',
         permanent: true,
       },
       {
+        source: '/:lang/team',
+        destination: '/:lang/about',
+        permanent: true,
+      },
+      {
         source: '/ivacy',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/:lang/ivacy',
         destination: '/',
         permanent: true,
       },
@@ -28,18 +31,18 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/login',
+        destination: 'https://drive.internxt.com/login',
+        permanent: false,
+      },
+      {
         source: '/products',
         destination: '/drive',
         permanent: false,
       },
       {
-        source: '/en/products',
-        destination: '/drive',
-        permanent: false,
-      },
-      {
-        source: '/es/products',
-        destination: '/drive',
+        source: '/:lang/products',
+        destination: '/:lang/drive',
         permanent: false,
       },
       {
@@ -48,8 +51,18 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/exclusive-lifetime',
+        destination: '/:lang/lifetime',
+        permanent: false,
+      },
+      {
         source: '/lifetime-2tb',
         destination: '/lifetime',
+        permanent: false,
+      },
+      {
+        source: '/:lang/lifetime-2tb',
+        destination: '/:lang/lifetime',
         permanent: false,
       },
       {
@@ -58,23 +71,18 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/es/exclusive-lifetime',
-        destination: '/es/lifetime',
+        source: '/:lang/lifetime-10tb',
+        destination: '/:lang/lifetime',
         permanent: false,
       },
       {
-        source: '/en/exclusive-lifetime',
-        destination: '/en/lifetime',
+        source: '/exclusive-lifetime',
+        destination: '/lifetime',
         permanent: false,
       },
       {
-        source: '/es/infinite',
-        destination: '/es/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/en/infinite',
-        destination: '/en/lifetime',
+        source: '/:lang/exclusive-lifetime',
+        destination: '/:lang/lifetime',
         permanent: false,
       },
       {
@@ -83,8 +91,18 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/infinite',
+        destination: '/:lang/lifetime',
+        permanent: false,
+      },
+      {
         source: '/inxt',
         destination: '/token',
+        permanent: true,
+      },
+      {
+        source: '/:lang/inxt',
+        destination: '/:lang/token',
         permanent: true,
       },
       {
@@ -93,8 +111,18 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/sharewareonsale',
+        destination: '/:lang/pricing',
+        permanent: false,
+      },
+      {
         source: '/special-offer',
         destination: '/pricing',
+        permanent: false,
+      },
+      {
+        source: '/:lang/special-offer',
+        destination: '/:lang/pricing',
         permanent: false,
       },
       {
@@ -103,15 +131,31 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/default.htm',
+        destination: '/:lang/',
+        permanent: false,
+      },
+      {
         source: '/default.html',
         destination: '/',
         permanent: false,
       },
+      {
+        source: '/:lang/default.html',
+        destination: '/:lang/',
+        permanent: false,
+      },
+      {
+        source: '/comparison',
+        destination: '/cloud-storage-comparison',
+        permanent: false,
+      },
+      {
+        source: '/:lang/comparison',
+        destination: '/:lang/cloud-storage-comparison',
+        permanent: false,
+      },
     ];
-  },
-  i18n: {
-    locales: ['en', 'es'],
-    defaultLocale: 'en',
   },
   images: {
     domains: ['cdn-images-1.medium.com'],

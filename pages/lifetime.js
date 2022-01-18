@@ -7,7 +7,6 @@ import GetLifetimeSection from '../components/lifetime/GetLifetimeSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import { getDriveDownloadUrl } from '../lib/get-download-url';
 
 const Lifetime = ({
   lang,
@@ -53,8 +52,6 @@ const Lifetime = ({
 };
 
 export async function getServerSideProps(ctx) {
-  const downloadUrl = await getDriveDownloadUrl(ctx);
-
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
@@ -68,7 +65,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      downloadUrl,
       deviceLang,
       metatagsDescriptions,
       langJson,
