@@ -21,7 +21,7 @@ const GetStartedSection = ({
         <div>
           <a
             href="https://drive.internxt.com/new"
-            target="_blank"
+            target="_top"
             rel="noreferrer"
             className="inline-flex justify-center w-auto items-center px-6 py-2 border border-transparent rounded-full text-lg sm:text-base font-medium text-blue-60 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-50 focus:ring-blue-30 transition-all duration-75"
           >

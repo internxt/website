@@ -47,7 +47,7 @@ const FeatureSection = ({
 
           <a
             href="https://drive.internxt.com/new"
-            target="_blank"
+            target="_top"
             rel="noreferrer"
             className="flex flex-col justify-center items-center px-6 py-2 w-full md:w-auto border border-transparent rounded-xl text-lg sm:text-base font-semibold text-blue-60 bg-blue-10 focus:outline-none whitespace-nowrap"
           >

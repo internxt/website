@@ -352,7 +352,7 @@ const HeroSection = ({
           <div className="relative flex flex-col items-center justify-center z-10">
             <a
               href="https://drive.internxt.com/new"
-              target="_blank"
+              target="_top"
               rel="noreferrer"
               className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-semibold text-blue-60 bg-white focus:outline-none"
             >
@@ -446,7 +446,7 @@ const HeroSection = ({
                   <td className="relative p-0">
                     <a
                       href="https://drive.internxt.com/new"
-                      target="_blank"
+                      target="_top"
                       rel="noreferrer"
                       className="absolute top-full left-0 h-14 md:h-10 w-full flex flex-col items-center justify-center rounded-b-2xl bg-blue-60 text-white text-lg md:text-base font-medium whitespace-nowrap"
                     >

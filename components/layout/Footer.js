@@ -147,10 +147,10 @@ export default function Footer({
                     {textContent.FooterSection.sections.join.title}
                   </h3>
                   <div className={`flex flex-col space-y-3 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                    <a href="https://drive.internxt.com/new" target="_self">
+                    <a href="https://drive.internxt.com/new" target="_top">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
-                    <a href="https://drive.internxt.com/login" target="_self">
+                    <a href="https://drive.internxt.com/login" target="_top">
                       {textContent.FooterSection.sections.join.login}
                     </a>
                   </div>
@@ -332,11 +332,11 @@ export default function Footer({
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
 
-                      <a href="https://drive.internxt.com/new" target="_self">
+                      <a href="https://drive.internxt.com/new" target="_top">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
 
-                      <a href="https://drive.internxt.com/login" target="_self">
+                      <a href="https://drive.internxt.com/login" target="_top">
                         {textContent.FooterSection.sections.join.login}
                       </a>
 
