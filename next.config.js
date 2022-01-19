@@ -5,25 +5,54 @@ module.exports = {
   },
   async redirects() {
     return [
+      // REDIRECTS TO HOME
+      ...['/cloud', '/roadmap', '/core', '/ivacy', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map((src) => ({
+        source: src,
+        destination: '/',
+        permanent: false,
+      })),
+      // REDIRECTS TO HOME (WITH LANG)
+      ...['/cloud', '/roadmap', '/core', '/ivacy', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map((src) => ({
+        source: `/:lang${src}`,
+        destination: '/:lang',
+        permanent: false,
+      })),
+      // =======================================================
+      // REDIRECTS TO PRICING
+      ...['/sharewareonsale', '/special-offer'].map((src) => ({
+        source: src,
+        destination: '/pricing',
+        permanent: false,
+      })),
+      // REDIRECTS TO PRICING (WITH LANG)
+      ...['/sharewareonsale', '/special-offer'].map((src) => ({
+        source: `/:lang${src}`,
+        destination: '/:lang/pricing',
+        permanent: false,
+      })),
+      // =======================================================
+      // REDIRECTS TO LIFETIME
+      ...['/exclusive-lifetime', '/lifetime-2tb', '/lifetime-10tb', '/infinite'].map((src) => ({
+        source: src,
+        destination: '/lifetime',
+        permanent: false,
+      })),
+      // REDIRECTS TO LIFETIME (WITH LANG)
+      ...['/exclusive-lifetime', '/lifetime-2tb', '/lifetime-10tb', '/infinite'].map((src) => ({
+        source: `/:lang${src}`,
+        destination: '/:lang/lifetime',
+        permanent: false,
+      })),
+      // =======================================================
       {
         source: '/team',
         destination: '/about',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/:lang/team',
         destination: '/:lang/about',
-        permanent: true,
-      },
-      {
-        source: '/ivacy',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/:lang/ivacy',
-        destination: '/',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/login',
@@ -46,103 +75,13 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/exclusive-lifetime',
-        destination: '/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/:lang/exclusive-lifetime',
-        destination: '/:lang/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/lifetime-2tb',
-        destination: '/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/:lang/lifetime-2tb',
-        destination: '/:lang/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/lifetime-10tb',
-        destination: '/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/:lang/lifetime-10tb',
-        destination: '/:lang/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/exclusive-lifetime',
-        destination: '/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/:lang/exclusive-lifetime',
-        destination: '/:lang/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/infinite',
-        destination: '/lifetime',
-        permanent: false,
-      },
-      {
-        source: '/:lang/infinite',
-        destination: '/:lang/lifetime',
-        permanent: false,
-      },
-      {
         source: '/inxt',
         destination: '/token',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/:lang/inxt',
         destination: '/:lang/token',
-        permanent: true,
-      },
-      {
-        source: '/sharewareonsale',
-        destination: '/pricing',
-        permanent: false,
-      },
-      {
-        source: '/:lang/sharewareonsale',
-        destination: '/:lang/pricing',
-        permanent: false,
-      },
-      {
-        source: '/special-offer',
-        destination: '/pricing',
-        permanent: false,
-      },
-      {
-        source: '/:lang/special-offer',
-        destination: '/:lang/pricing',
-        permanent: false,
-      },
-      {
-        source: '/default.htm',
-        destination: '/',
-        permanent: false,
-      },
-      {
-        source: '/:lang/default.htm',
-        destination: '/:lang/',
-        permanent: false,
-      },
-      {
-        source: '/default.html',
-        destination: '/',
-        permanent: false,
-      },
-      {
-        source: '/:lang/default.html',
-        destination: '/:lang/',
         permanent: false,
       },
       {

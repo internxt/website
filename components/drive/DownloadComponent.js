@@ -37,7 +37,7 @@ const DownloadComponent = ({
         <div className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-row flex-grow flex-1 justify-end`}>
           <div className="flex flex-col items-center space-y-1">
             <a
-              className="flex flex-row space-x-2 items-center text-base font-medium text-blue-60"
+              className="flex flex-row space-x-1 items-center text-base font-medium text-blue-60"
               href={download[OS]}
             >
               <span>
@@ -124,7 +124,7 @@ const DownloadComponent = ({
       {/* Open Drive Web */}
       {!isMobile && (
         <a
-          className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-row space-x-2 items-center text-base font-medium text-blue-60`}
+          className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-row space-x-1 items-center text-base font-medium text-blue-60`}
           href="https://drive.internxt.com/app"
           target="_blank"
           rel="noreferrer"
@@ -158,7 +158,7 @@ const DownloadComponent = ({
             {((!isMobile && (OS === 'MacOS')) || (isMobile && (OS === 'iPhone' || OS === 'iPad'))) && (
               <>
                 <a
-                  className="flex flex-row space-x-2 items-center text-base font-medium text-blue-60"
+                  className="flex flex-row space-x-1 items-center text-base font-medium text-blue-60"
                   href={download.iPhone}
                   target="_blank"
                   rel="noreferrer"
@@ -190,7 +190,7 @@ const DownloadComponent = ({
             {((!isMobile && !(OS === 'MacOS')) || (isMobile && (OS === 'Android'))) && (
               <>
                 <a
-                  className="flex flex-row space-x-2 items-center text-base font-medium text-blue-60"
+                  className="flex flex-row space-x-1 items-center text-base font-medium text-blue-60"
                   href={download.Android}
                   target="_blank"
                   rel="noreferrer"

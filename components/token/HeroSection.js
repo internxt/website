@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
 import Widget from './Widget';
@@ -92,7 +93,7 @@ const HeroSection = ({
         <p>{textContent.metrics}</p>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://crypto.com/price/internxt" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/crypto.webp" draggable="false" alt="crypto.com logo" /></a>
+          <a href="https://crypto.com/price/internxt" target="_blank"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/crypto.webp" draggable="false" alt="crypto.com logo" /></a>
         </div>
 
         <div className="flex flex-row space-x-8">
