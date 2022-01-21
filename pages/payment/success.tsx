@@ -13,11 +13,12 @@ export default function Success({
   user
 }) {
   useEffect(() => {
-    setTimeout(() => {
-      trackPayment({
+    setTimeout(async () => {
+      await trackPayment({
         session,
         user
       });
+      window.location = redirectUrl;
     }, 3000);
   });
   return (
