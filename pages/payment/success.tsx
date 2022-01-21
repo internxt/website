@@ -1,33 +1,23 @@
+/* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
-import Stripe from 'stripe';
-import _ from 'lodash';
-import { getUser } from '../../lib/utils';
+import { getCheckoutSession, getUser } from '../../lib/utils';
 import Layout from '../../components/layout/Layout';
-
-function getCheckoutSession(sid) {
-  const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
-  const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
-  return stripe.checkout.sessions.retrieve(sid);
-}
+import { trackPayment } from '../../lib/analytics';
 
 export default function Success({
   token,
   email,
   redirectUrl,
-  analytics
+  session,
+  user
 }) {
   useEffect(() => {
-    setTimeout(() => {
-      if (!_.isEmpty(analytics)) {
-        window.analytics.identify(
-          analytics.userId
-        );
-        window.analytics.track(
-          'Payment Conversion',
-          analytics.properties
-        );
-      }
+    setTimeout(async () => {
+      await trackPayment({
+        session,
+        user
+      });
       window.location = redirectUrl;
     }, 3000);
   });
@@ -51,6 +41,8 @@ export default function Success({
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const host = (ctx.req.headers.host.match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers.host;
+  let session = {};
+  let user = {};
 
   if (!ctx.query.sid) {
     return {
@@ -70,34 +62,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   }).catch(() => null);
 
   let redirectUrl = 'https://www.internxt.com';
-  let analytics = {};
   let body = { email: null, token: null };
   if (request) {
     body = await request.json().catch(() => ({}));
-    redirectUrl = `${process.env.DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}`;
-
-    try {
-      const checkoutSession = await getCheckoutSession(ctx.query.sid);
-      if (checkoutSession.payment_status === 'paid') {
-        const { uuid, registerCompleted } = await getUser(body.email);
-        redirectUrl += `&price_id=${checkoutSession.metadata.price_id}`;
-        if (registerCompleted) {
-          analytics = {
-            email: body.email,
-            userId: uuid,
-            properties: {
-              price_id: checkoutSession.metadata.price_id,
-              email: checkoutSession.customer_details.email,
-              currency: checkoutSession.metadata.currency.toUpperCase(),
-              value: checkoutSession.amount_total * 0.01,
-              type: checkoutSession.metadata.type
-            }
-          };
-        }
-      }
-    } catch (error) {
-      analytics = {};
-    }
+    redirectUrl = `${process.env.DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}&cs_id=${ctx.query.sid}`;
+    session = await getCheckoutSession(ctx.query.sid);
+    user = await getUser(body.email);
   }
 
   return {
@@ -105,7 +75,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       token: body.token,
       email: body.email,
       redirectUrl,
-      analytics,
+      session,
+      user
     }
   };
 };

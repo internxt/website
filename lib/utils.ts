@@ -34,3 +34,18 @@ export function getUser(email: string) {
       throw new Error(err);
     });
 }
+
+export function getCheckoutSession(sessionId: string) {
+  const auth = getBridgeAuth();
+  const API = process.env.DRIVE_API_URL;
+
+  return axios.get(`${API}/api/gateway/checkout/session`, {
+    params: {
+      sessionId
+    },
+    auth
+  }).then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err);
+    });
+}

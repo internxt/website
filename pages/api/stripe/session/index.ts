@@ -40,7 +40,6 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
 }
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  // if (method === 'GET') { return getSession(req, res); }
   if (req.method === 'POST') { return postSession(req, res); }
 
   return res.status(500).end(`Cannot ${req.method} on ${req.url}`);
