@@ -64,10 +64,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   let redirectUrl = 'https://www.internxt.com';
   let body = { email: null, token: null };
   if (request) {
+    const sid = ctx.query.sid as string;
     body = await request.json().catch(() => ({}));
     redirectUrl = `${process.env.DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}&cs_id=${ctx.query.sid}`;
-    session = await getCheckoutSession(ctx.query.sid);
-    user = await getUser(body.email);
+
+    [session, user] = await Promise.all([getCheckoutSession(sid), getUser(body.email)]);
   }
 
   return {
