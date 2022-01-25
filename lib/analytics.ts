@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-function getCheckoutSessionData(session) {
+export function getCheckoutSessionData(session) {
   const conversionData = {
     coupon: {},
     properties: {},

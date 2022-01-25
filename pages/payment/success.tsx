@@ -1,9 +1,10 @@
 /* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
+import _ from 'lodash';
 import { getCheckoutSession, getUser } from '../../lib/utils';
 import Layout from '../../components/layout/Layout';
-import { trackPayment } from '../../lib/analytics';
+import { getCheckoutSessionData } from '../../lib/analytics';
 
 export default function Success({
   token,
@@ -15,12 +16,16 @@ export default function Success({
     setTimeout(async () => {
       try {
         const [session, user] = await Promise.all([getCheckoutSession(sid), getUser(email)]);
-        await trackPayment({
-          session,
-          user
-        });
+        if (user.registerCompleted && session.payment_status === 'paid') {
+          const conversionData = getCheckoutSessionData(session);
+          window.analytics.identify(user.uuid, conversionData.traits);
+          window.analytics.track('Payment Conversion', conversionData.properties);
+          if (!_.isEmpty(conversionData.coupon)) {
+            window.analytics.track('Coupon Redeemed', conversionData.coupon);
+          }
+        }
       } catch (err) {
-        // No op
+        window.analytics.track('Conversion Tracking Error');
       }
       window.location = redirectUrl;
     }, 3000);
