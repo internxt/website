@@ -9,15 +9,19 @@ export default function Success({
   token,
   email,
   redirectUrl,
-  session,
-  user
+  sid
 }) {
   useEffect(() => {
     setTimeout(async () => {
-      await trackPayment({
-        session,
-        user
-      });
+      try {
+        const [session, user] = await Promise.all([getCheckoutSession(sid), getUser(email)]);
+        await trackPayment({
+          session,
+          user
+        });
+      } catch (err) {
+        // No op
+      }
       window.location = redirectUrl;
     }, 3000);
   });
@@ -64,11 +68,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   let redirectUrl = 'https://www.internxt.com';
   let body = { email: null, token: null };
   if (request) {
-    const sid = ctx.query.sid as string;
     body = await request.json().catch(() => ({}));
     redirectUrl = `${process.env.DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}&cs_id=${ctx.query.sid}`;
-
-    [session, user] = await Promise.all([getCheckoutSession(sid), getUser(body.email)]);
   }
 
   return {
@@ -76,8 +77,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       token: body.token,
       email: body.email,
       redirectUrl,
-      session,
-      user
+      sid: ctx.query.sid
     }
   };
 };

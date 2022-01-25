@@ -4,12 +4,14 @@ import Layout from '../../components/layout/Layout';
 
 export default function Cancelled() {
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const cancelUrl = urlParams.get('cancelUrl');
-
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const checkoutSessionId = urlSearchParams.get('sid');
     window.analytics.track(
       'Order Canceled',
-      () => { window.location.assign(urlParams.has('cancelUrl') ? cancelUrl : (`${window.location.host}/pricing`)); }
+      {
+        cs_id: checkoutSessionId
+      },
+      () => { window.location = 'http://internxt.com/pricing'; }
     );
   }, []);
 
