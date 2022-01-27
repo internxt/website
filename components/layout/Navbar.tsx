@@ -156,7 +156,7 @@ export default function Navbar({
                 </a>
               </Link>
 
-              <div className={`group relative flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${darkMode ? 'text-white hover:text-cool-gray-20 hover:bg-white hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-100 hover:bg-opacity-5'} rounded-lg cursor-pointer`}>
+              <div className={`group relative flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${darkMode ? 'text-white hover:text-cool-gray-20 hover:bg-white hover:bg-opacity-10' : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-100 hover:bg-opacity-5'} rounded-lg cursor-default`}>
                 <span>{textContent.links.products}</span>
                 <UilAngleDown className="w-6 h-6 transition duration-150 ease-in-out transform translate-y-px text-cool-gray-20 group-hover:text-cool-gray-30" />
 
@@ -178,7 +178,7 @@ export default function Navbar({
                       </a>
                     </Link>
 
-                    <a className="py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30">
+                    <a className={`py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
                       <span>{textContent.products.send}</span>
                       <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
                     </a>
