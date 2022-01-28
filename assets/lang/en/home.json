@@ -22,7 +22,7 @@
 			"drive": "Explore Drive",
 			"photos": "Discover Photos"
 		},
-		"feature1": {"title": {"line1": "Secure", "line2": "by design"}, "description": "Your files are fragmented & encrypted before leaving your device. No tricks, no hidden things, private by default, secure by design, that’s Internxt.", "cta": "How zero-knowledge works"},
+		"feature1": {"title": {"line1": "Secure", "line2": "by design"}, "description": "Your files are fragmented & encrypted before leaving your device. No tricks, no hidden things, private by default, secure by design, that’s Internxt. Say hello to Web3.", "cta": "How zero-knowledge works"},
 		"feature2": {"title": {"line1": "Multi", "line2": "device"}, "description": "Access the whole family of apps adapted for all your devices to suit all your needs.", "cta": "Download apps"},
 		"feature3": {"title": {"line1": "Privacy, that's", "line2": "the question"}, "description": "Unlike other competitors, our business model is not based on ads, but on you. We don’t access or sell your data.", "cta": "Privacy at Internxt"}
 	},

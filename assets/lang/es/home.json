@@ -22,7 +22,7 @@
 			"drive": "Explorar Drive",
 			"photos": "Descubre Photos"
 		},
-		"feature1": {"title": {"line1": "Diseñado para", "line2": "protegerte"}, "description": "Tus archivos son fragmentados y cifrados antes de salir de tu dispositivo. Sin trucos, sin cosas ocultas, privado por defecto, seguro por diseño, eso es Internxt.", "cta": "Qué es zero-knowledge"},
+		"feature1": {"title": {"line1": "Diseñado para", "line2": "protegerte"}, "description": "Tus archivos son fragmentados y cifrados antes de salir de tu dispositivo. Sin trucos, sin cosas ocultas, privado por defecto, seguro por diseño, eso es Internxt. Bienvenido a Web3.", "cta": "Qué es zero-knowledge"},
 		"feature2": {"title": {"line1": "Multi", "line2": "dispositivo"}, "description": "Accede a toda la familia de aplicaciones adaptadas a todos tus dispositivos para satisfacer todas tus necesidades.", "cta": "Descargar aplicaciones"},
 		"feature3": {"title": {"line1": "Privacidad, esa", "line2": "es la cuestión"}, "description": "A diferencia de nuestros competidores, nuestro negocio no se basa en la publicidad, se basa en ti. Nosotros no vendemos tus datos.", "cta": "Privacidad en Internxt"}
 	},
