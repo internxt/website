@@ -172,9 +172,9 @@ const PriceTable = ({
           enterTo="transform scale-100 translate-y-0 opacity-100"
         >
           <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
-            <PriceCard planType="business" storage={pricings.business.GB200.storage} price={billingPrice(pricings.business.GB200.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/new?']} popular={pricings.business.GB200.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={lang} />
-            <PriceCard planType="business" storage={pricings.business.TB2.storage} price={billingPrice(pricings.business.TB2.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/new?']} popular={pricings.business.TB2.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={lang} />
-            <PriceCard planType="business" storage={pricings.business.twentyTB.storage} price={billingPrice(pricings.business.twentyTB.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/new?']} popular={pricings.business.twentyTB.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={lang} />
+            <PriceCard planType="business" storage={pricings.business.GB200.storage} price={billingPrice(pricings.business.GB200.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/account?tab=plans']} popular={pricings.business.GB200.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={lang} />
+            <PriceCard planType="business" storage={pricings.business.TB2.storage} price={billingPrice(pricings.business.TB2.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/account?tab=plans']} popular={pricings.business.TB2.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={lang} />
+            <PriceCard planType="business" storage={pricings.business.twentyTB.storage} price={billingPrice(pricings.business.twentyTB.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/account?tab=plans']} popular={pricings.business.twentyTB.popular} setUsers={parentSetUserCount} getUsers={userCount} lang={lang} />
           </div>
         </Transition>
 
