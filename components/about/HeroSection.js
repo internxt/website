@@ -26,7 +26,7 @@ const HeroSection = ({ textContent }) => (
           <div className="flex flex-row items-start justify-left sm:justify-center w-full sm:w-auto space-x-20 md:space-x-24">
 
             <div className="flex flex-col items-start sm:items-center justify-center">
-              <span className="relative text-6xl sm:text-7xl md:text-8xl font-extralight text-blue-60 tracking-tighter">
+              <span className="relative text-6xl sm:text-7xl md:text-8xl font-extralight text-blue-60 tracking-tighter -ml-2 sm:-ml-4">
                 {textContent.figures.activeUsers.figure}
                 <span className="absolute -top-2.5 -right-6 md:-right-8 transform translate-x-0.5 text-5xl md:text-6xl text-blue-30">+</span>
               </span>
