@@ -42,7 +42,7 @@
         var t = document.createElement("script");
         t.type = "text/javascript";
         t.async = !0;
-        t.src = "https://internxt.com/js/sg.js";
+        t.src = "https://drive.internxt.com/js/website.js";
         var n = document.getElementsByTagName("script")[0];
         n.parentNode.insertBefore(t, n);
         analytics._loadOptions = e
