@@ -47,7 +47,7 @@
         n.parentNode.insertBefore(t, n);
         analytics._loadOptions = e
       };
-      analytics._writeKey = "MjwYepo8W8FT01kQELMdOiF0pbDQr1cv";
+      analytics._writeKey = "uEUiW7CGVHP8WDeA4UtK0hEgVZsmPFtb";
       analytics.SNIPPET_VERSION = "4.15.3";
       analytics.load("uEUiW7CGVHP8WDeA4UtK0hEgVZsmPFtb");
   }
