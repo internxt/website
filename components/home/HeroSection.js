@@ -90,7 +90,7 @@ const HeroSection = ({
               </a>
 
               <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank" rel="noreferrer">
-                <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="62" height="16" alt="elpais logo" />
+                <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="82" height="16" alt="elpais logo" />
               </a>
 
             </div>
@@ -124,7 +124,7 @@ const HeroSection = ({
             </a>
 
             <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank" rel="noreferrer">
-              <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="62" height="16" alt="elpais logo" />
+              <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="82" height="16" alt="elpais logo" />
             </a>
 
           </div>
