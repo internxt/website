@@ -1,6 +1,6 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
-import { UilArrowUpRight, UilArrowCircleDown } from '@iconscout/react-unicons';
+import { UilArrowCircleDown } from '@iconscout/react-unicons';
 
 const DownloadComponent = ({
   textContent,
@@ -20,8 +20,9 @@ const DownloadComponent = ({
     <div className="flex flex-row w-full justify-center items-center lg:items-start lg:space-x-32">
 
       {/* Open Drive Web */}
-      <div
-        className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-row flex-grow flex-1 space-x-2 items-center justify-end text-base font-medium text-blue-60`}
+      {/* <div
+        className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-row flex-grow flex-1 space-x-2
+                    items-center justify-end text-base font-medium text-blue-60`}
       >
         <a
           className="lg:flex flex-row space-x-2 items-center justify-end"
@@ -32,10 +33,12 @@ const DownloadComponent = ({
           <span>{textContent.openDriveWeb}</span>
           <UilArrowUpRight className="w-5 h-5" />
         </a>
-      </div>
+      </div> */}
 
       {/* Download for mobile */}
-      <div className={`${isMobile ? 'justify-center' : 'justify-start'} flex flex-row flex-grow flex-1`}>
+      {/* <div className={`${isMobile ? 'justify-center' : 'justify-start'}
+                           flex flex-row flex-grow flex-1`}> */}
+      <div className="justify-center flex flex-row flex-grow flex-1">
 
         <a
           className="flex lg:hidden flex-col w-full"

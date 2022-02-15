@@ -5,10 +5,13 @@ import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 import { UilAngleRightB } from '@iconscout/react-unicons';
 import * as anim from '../../public/js/anim';
+import DownloadComponent from './DownloadComponent';
 
 const FeaturesSection = ({
   textContent,
-  lang
+  lang,
+  device,
+  download
 }) => (
   <section className="flex flex-col w-full">
 
@@ -207,12 +210,12 @@ const FeaturesSection = ({
       />
 
       {/* Download links */}
-      {/*
+
       <div className="flex flex-col items-center w-full pb-10 lg:py-20 px-10 lg:px-0">
         <h3 className="text-3xl font-semibold text-center text-cool-gray-90 mb-12">
           {textContent.section4.title.line1}
           {' '}
-          <br className="hidden sm:flex" />
+          {/* <br className="hidden sm:flex" /> */}
           {textContent.section4.title.line2}
         </h3>
 
@@ -223,7 +226,6 @@ const FeaturesSection = ({
           download={download}
         />
       </div>
-      */}
 
       <div className="flex flex-col items-center text-center w-full lg:pb-16 px-6 lg:px-0">
         <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">

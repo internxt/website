@@ -1,8 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
+import DownloadComponent from './DownloadComponent';
 
 const HeroSection = ({
-  textContent
+  textContent,
+  lang,
+  device,
+  download
 }) => (
   <section className="flex flex-col w-full pt-10">
     <div className="flex flex-col items-center py-40">
@@ -31,10 +35,6 @@ const HeroSection = ({
           {textContent.subtitle.line3}
         </h3>
 
-        <h3 className="text-lg sm:text-base font-normal text-orange-50">
-          {textContent.availableSoon}
-        </h3>
-
       </div>
 
       {/* Main title Mockup */}
@@ -58,14 +58,13 @@ const HeroSection = ({
       */}
 
       {/* Download links */}
-      {/*
+
       <DownloadComponent
         textContent={textContent.DownloadLinks}
         lang={lang}
         device={device}
         download={download}
       />
-      */}
 
     </div>
 
