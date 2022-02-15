@@ -2,7 +2,8 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 
 const HeroSection = ({
-  textContent
+  textContent,
+  lang
 }) => (
 
   <section>
@@ -60,6 +61,15 @@ const HeroSection = ({
         </div>
 
       </div>
+
+      {(lang === 'es') && (
+        <div className="flex justify-center sm:-mt-6 md:mt-0 lg:-mt-6 mb-4">
+          <div className="flex items-center h-12 px-4 rounded-lg ring-3 ring-cool-gray-10 border border-cool-gray-30">
+            <img loading="lazy" className="h-8" src="../../logos/investors/ue.webp" alt="Unión Europea" draggable="false" />
+            <span className="text-sm">Fondo Europeo de Desarrollo Regional</span>
+          </div>
+        </div>
+      )}
 
       <div className="featuredMarquee">
 

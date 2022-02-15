@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
 import { UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
@@ -12,14 +12,15 @@ export default function Footer({
   hideNewsletter,
   darkMode
 }) {
-  const [consentCookie, setConsentCookie] = React.useState(true);
+  const [consentCookie, setConsentCookie] = useState(true);
+  const showSupporters = true;
 
   const handleAcceptCookies = () => {
     localStorage.setItem('CookieConsent', 'true');
     setConsentCookie(true);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const cookie = localStorage.getItem('CookieConsent');
     setUTM();
 
@@ -29,6 +30,20 @@ export default function Footer({
   return (
     <section className={`flex flex-col w-full ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-cool-gray-5'}`}>
       <div className="flex flex-col items-center justify-center w-full px-6 py-16 sm:p-20">
+
+        {/* Supporters from Spain and EU (Only in Spanish) */}
+        {(lang === 'es' && showSupporters) && (
+          <div className="flex flex-col space-y-6 sm:space-x-20 py-8 justify-center bg-white border border-cool-gray-10 rounded-lg mb-16">
+            <div className="flex flex-col max-w-2xl px-8 mx-auto">
+              <div className="flex flex-row justify-center items-center flex-wrap mb-8">
+                <img loading="lazy" className="h-10 mx-4" src="../../logos/investors/icex.jpeg" alt="Unión Europea" draggable="false" />
+              </div>
+
+              <p className="text-center text-xs text-cool-gray-40">Una manera de hacer Europa.</p>
+              <p className="text-center text-xs text-cool-gray-40">Internxt Universal Technologies S.L. en el marco del Programa ICEX Next, ha contado con el apoyo de ICEX y con la cofinanciación del fondo europeo FEDER. La finalidad de este apoyo es contribuir al desarrollo internacional de la empresa y de su entorno.</p>
+            </div>
+          </div>
+        )}
 
         {/* Newsletter */}
         <div className={`${hideNewsletter ? 'hidden' : 'flex'} w-full flex-col md:flex-row space-y-6 md:space-x-20 md:space-y-0 justify-center items-start mb-16`}>
