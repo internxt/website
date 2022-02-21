@@ -29,6 +29,9 @@ export default function Layout({
   useEffect(() => {
     window.analytics.page(segmentName);
     AOS.init();
+    const linkList = Array(document.querySelectorAll('[id=get-started-link]'));
+
+    linkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
 

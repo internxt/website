@@ -46,6 +46,7 @@ const FeatureSection = ({
           </div>
 
           <a
+            id="get-started-link"
             href="https://drive.internxt.com/new"
             target="_top"
             rel="noreferrer"
