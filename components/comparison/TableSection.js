@@ -446,6 +446,7 @@ const HeroSection = ({
                   <td className="relative p-0">
                     <a
                       href="https://drive.internxt.com/new"
+                      onClick={window.analytics.track('Clicked Get Started')}
                       target="_top"
                       rel="noreferrer"
                       className="absolute top-full left-0 h-14 md:h-10 w-full flex flex-col items-center justify-center rounded-b-2xl bg-blue-60 text-white text-lg md:text-base font-medium whitespace-nowrap"

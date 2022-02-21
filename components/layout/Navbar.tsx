@@ -216,6 +216,7 @@ export default function Navbar({
                 href="https://drive.internxt.com/new"
                 target="_top"
                 rel="noreferrer"
+                onClick={window.analytics.track('Clicked Get Started')}
                 className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${(darkMode && !menuState) ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10' : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'} focus:outline-none transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{textContent.links.getStarted}</p>

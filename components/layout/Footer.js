@@ -162,7 +162,7 @@ export default function Footer({
                     {textContent.FooterSection.sections.join.title}
                   </h3>
                   <div className={`flex flex-col space-y-3 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                    <a href="https://drive.internxt.com/new" target="_top">
+                    <a href="https://drive.internxt.com/new" target="_top" onClick={window.analytics.track('Clicked Get Started')}>
                       {textContent.FooterSection.sections.join.signup}
                     </a>
                     <a href="https://drive.internxt.com/login" target="_top">
