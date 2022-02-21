@@ -6,16 +6,18 @@ import { getCheckoutSession, getUser } from '../../lib/utils';
 import Layout from '../../components/layout/Layout';
 import { getCheckoutSessionData } from '../../lib/analytics';
 
+
 export default function Success({
   token,
   email,
   redirectUrl,
-  sid
+  sid,
+  user,
+  session
 }) {
   useEffect(() => {
-    setTimeout(async () => {
+    setTimeout(() => {
       try {
-        const [session, user] = await Promise.all([getCheckoutSession(sid), getUser(email)]);
         if (user.registerCompleted && session.payment_status === 'paid') {
           const conversionData = getCheckoutSessionData(session);
           window.analytics.identify(user.uuid, conversionData.traits);
@@ -49,6 +51,7 @@ export default function Success({
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const DRIVE_WEB = (ctx.req.headers.host.match(/^localhost/) ? 'http://localhost:3000' : 'https://drive.internxt.com');
   const host = (ctx.req.headers.host.match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers.host;
   let session = {};
   let user = {};
@@ -74,7 +77,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   let body = { email: null, token: null };
   if (request) {
     body = await request.json().catch(() => ({}));
-    redirectUrl = `${process.env.DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}&cs_id=${ctx.query.sid}`;
+
+    redirectUrl = `${DRIVE_WEB}/appsumo?register=activate&email=${body.email}&token=${body.token}&cs_id=${ctx.query.sid}`;
+  }
+
+  try {
+    [session, user] = await Promise.all([getCheckoutSession(ctx.query.sid), getUser(body.email)]);
+  } catch (err) {
+    // NO OP
   }
 
   return {
@@ -82,7 +92,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       token: body.token,
       email: body.email,
       redirectUrl,
-      sid: ctx.query.sid
+      sid: ctx.query.sid,
+      session,
+      user
     }
   };
 };

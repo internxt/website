@@ -2,8 +2,8 @@ import axios from 'axios';
 
 function getBridgeAuth(): { username: string, password: string } {
   const auth: { username: string, password: string } = {
-    username: process.env.BRIDGE_GATEWAY_USERNAME || '',
-    password: process.env.BRIDGE_GATEWAY_PASS || ''
+    username: process.env.NEXT_BRIDGE_GATEWAY_USERNAME || '',
+    password: process.env.NEXT_BRIDGE_GATEWAY_PASS || ''
   };
 
   return auth;
@@ -12,7 +12,7 @@ function getBridgeAuth(): { username: string, password: string } {
 export function getUserId(email: string) {
   const auth = getBridgeAuth();
 
-  return axios.post(`${process.env.BRIDGE_URL}/gateway/uuid`, { email },
+  return axios.post(`${process.env.NEXT_BRIDGE_URL}/gateway/uuid`, { email },
     { auth }).then((response) => {
     const { uuid } = response.data;
     return uuid;
@@ -24,7 +24,7 @@ export function getUserId(email: string) {
 export function getUser(email: string) {
   const auth = getBridgeAuth();
 
-  return axios.get(`${process.env.DRIVE_API_URL}/api/gateway/users`, {
+  return axios.get(`${process.env.NEXT_DRIVE_API_URL}/api/gateway/users`, {
     params: {
       email
     },
@@ -37,7 +37,7 @@ export function getUser(email: string) {
 
 export function getCheckoutSession(sessionId: string) {
   const auth = getBridgeAuth();
-  const API = process.env.DRIVE_API_URL;
+  const API = process.env.NEXT_DRIVE_API_URL;
 
   return axios.get(`${API}/api/gateway/checkout/session`, {
     params: {
