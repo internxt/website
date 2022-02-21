@@ -51,7 +51,7 @@ export default function Success({
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const DRIVE_WEB = (ctx.req.headers.host.match(/^localhost/) ? 'http://localhost:3000' : 'https://drive.internxt.com');
+  const DRIVE_WEB = 'https://drive.internxt.com';
   const host = (ctx.req.headers.host.match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers.host;
   let session = {};
   let user = {};
