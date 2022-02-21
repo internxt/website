@@ -66,35 +66,6 @@ const PriceTable = ({
         popular: false
       }
     },
-    lifetime: {
-      TB1: {
-        stripeID: 'lifetime1TB',
-        storage: '1TB',
-        price: {
-          '-1': '99'
-        },
-        priceBefore: '299',
-        popular: false
-      },
-      TB5: {
-        stripeID: 'lifetime5TB',
-        storage: '5TB',
-        price: {
-          '-1': '299'
-        },
-        priceBefore: '499',
-        popular: true
-      },
-      TB10: {
-        stripeID: 'lifetime10TB',
-        storage: '10TB',
-        price: {
-          '-1': '499'
-        },
-        priceBefore: '999',
-        popular: false
-      }
-    },
     business: {
       GB200: {
         stripeID: '200GB',
@@ -143,7 +114,6 @@ const PriceTable = ({
         <div className="flex flex-row p-0.5 text-sm bg-cool-gray-10 rounded-lg">
           <button type="button" onClick={() => { setBillingFrequency(1); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`); }} className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'}`}>{contentText.billingFrequency.monthly}</button>
           <button type="button" onClick={() => { setBillingFrequency(12); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`); }} className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'}`}>{contentText.billingFrequency.annually}</button>
-          <button type="button" onClick={() => { setBillingFrequency(-1); setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Lifetime`); }} className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === -1 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'} ${individual ? '' : 'hidden'}`}>{contentText.billingFrequency.lifetime}</button>
         </div>
 
         <Transition
@@ -152,16 +122,11 @@ const PriceTable = ({
           enterFrom="transform scale-95 translate-y-20 opacity-0"
           enterTo="transform scale-100 translate-y-0 opacity-100"
         >
-          <div className={`${billingFrequency !== -1 ? 'flex' : 'hidden'} content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
+          <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
             <PriceCard planType="individual" storage={pricings.individuals.free.storage} price={billingPrice(pricings.individuals.free.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/new?']} popular={pricings.individuals.free.popular} lang={lang} />
             <PriceCard planType="individual" storage={pricings.individuals.GB20.storage} price={billingPrice(pricings.individuals.GB20.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('GB20')]} popular={pricings.individuals.GB20.popular} lang={lang} />
             <PriceCard planType="individual" storage={pricings.individuals.GB200.storage} price={billingPrice(pricings.individuals.GB200.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('GB200')]} popular={pricings.individuals.GB200.popular} lang={lang} />
             <PriceCard planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('TB2')]} popular={pricings.individuals.TB2.popular} lang={lang} />
-          </div>
-          <div className={`${billingFrequency === -1 ? 'flex' : 'hidden'} content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20`}>
-            <PriceCard planType="individual" storage={pricings.lifetime.TB1.storage} price={billingPrice(pricings.lifetime.TB1.price)} priceBefore={pricings.lifetime.TB1.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.TB1.stripeID}`]} popular={pricings.lifetime.TB1.popular} lang={lang} />
-            <PriceCard planType="individual" storage={pricings.lifetime.TB5.storage} price={billingPrice(pricings.lifetime.TB5.price)} priceBefore={pricings.lifetime.TB5.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.TB5.stripeID}`]} popular={pricings.lifetime.TB5.popular} lang={lang} />
-            <PriceCard planType="individual" storage={pricings.lifetime.TB10.storage} price={billingPrice(pricings.lifetime.TB10.price)} priceBefore={pricings.lifetime.TB10.priceBefore} billingFrequency={billingFrequency} cta={['checkout', `${pricings.lifetime.TB10.stripeID}`]} popular={pricings.lifetime.TB10.popular} lang={lang} />
           </div>
         </Transition>
 
