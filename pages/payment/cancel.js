@@ -7,7 +7,7 @@ export default function Cancelled() {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const checkoutSessionId = urlSearchParams.get('sid');
     window.analytics.track(
-      'Order Canceled',
+      'Checkout Canceled',
       {
         cs_id: checkoutSessionId
       },
