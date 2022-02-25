@@ -1,0 +1,27 @@
+{
+	"title": {
+		"line1": "File Scan"
+	},
+	"subtitle1": {
+		"line1": "Drag and drop suspicious files",
+		"line2": "to detect malware and other",
+		"line3": "breaches for free."
+	},
+	"subtitle2": {
+		"line1": "Scan any type of image, pdf,",
+		"line2": "html document and other files."
+	},
+	"dropFile": {
+		"line1": "Drop file to analyze"
+	},
+	"or": "OR",
+	"selectFile": "Select file",
+	"dropHere": "Drop the file here",
+	"table": {
+		"analyzing": "Analyzing file...",
+		"scanTime":  "Scan time",
+		"engine":  "Engine",
+		"detection":  "Detection",
+		"brand":  "Brand"
+	}
+}

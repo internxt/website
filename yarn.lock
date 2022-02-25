@@ -2371,6 +2371,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+clamscan@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/clamscan/-/clamscan-2.0.1.tgz#84a26957570e930d5b2b0bb61aeac083ef7e9f6d"
+  integrity sha512-WQmp+Pn8YhcTV2IaKSUOJQSkh60t4HM2Gps/yJl2RIXZTT0aEz5gA3PB53xxDQ542EgCTVhrI4G4Y2g91rdoVA==
+
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/class-utils/-/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -2932,6 +2937,11 @@ detective@^5.2.0:
     acorn-node "^1.6.1"
     defined "^1.0.0"
     minimist "^1.1.1"
+
+dgram@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dgram/-/dgram-1.0.1.tgz#37f3b200f8033a5ff759303089c81ce361b651c3"
+  integrity sha1-N/OyAPgDOl/3WTAwicgc42G2UcM=
 
 didyoumean@^1.2.2:
   version "1.2.2"
@@ -5150,6 +5160,11 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+net@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/net/-/net-1.0.2.tgz#d1757ec9a7fb2371d83cf4755ce3e27e10829388"
+  integrity sha1-0XV+yaf7I3HYPPR1XOPifhCCk4g=
 
 next-tick@~1.0.0:
   version "1.0.0"

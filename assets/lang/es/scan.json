@@ -1,0 +1,29 @@
+{
+	"title": {
+		"line1": "Escaneo de",
+		"line2": "Archivos"
+	},
+	"subtitle1": {
+		"line1": "Arrastre y suelte los archivos",
+		"line2": "sospechosos para detectar malware",
+		"line3": "y otras infracciones gratis."
+	},
+	"subtitle2": {
+		"line1": "Escanea cualquier tipo de imagen,",
+		"line2": "pdf, archivo html y otros archivos."
+	},
+	"dropFile": {
+		"line1": "Suelta archivo para",
+		"line2": "empezar a analizar"
+	},
+	"or": "O",
+	"selectFile": "Seleccionar archivo",
+	"dropHere": "Suelta el archivo aquí",
+	"table": {
+		"analyzing": "Analizando archivo...",
+		"scanTime":  "Tiempo de escaneo",
+		"engine":  "Motor",
+		"detection":  "Detección",
+		"brand":  "Marca"
+	}
+}

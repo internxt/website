@@ -40,6 +40,11 @@
         "description": "Privacy is a fundamental human right, at Internxt we design all our applications with privacy and security in mind. We stand for privacy and we always will."
     },
     {
+        "id": "scan",
+        "title": "Internxt – File Scan",
+        "description": "Virus File Scan find out if your files are infected."
+    },
+    {
         "id": "lifetime",
         "title": "Internxt – Best Lifetime Cloud Storage",
         "description": "Grab the best, cheapest, most secure Lifetime Cloud Storage deal. Pay once, enjoy Internxt forever. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Lifetime Encrypted Cloud storage."
