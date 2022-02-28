@@ -12,7 +12,7 @@ const Token = ({
   langJson,
   navbarLang,
   footerLang,
-  deviceLang
+  lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'token');
 
@@ -22,13 +22,13 @@ const Token = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Token">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Token" lang={lang}>
 
       <div>
 
         <Navbar
           textContent={navbarLang}
-          lang={deviceLang}
+          lang={lang}
           cta={['default']}
           fixed
           darkMode={false}
@@ -43,7 +43,7 @@ const Token = ({
       <div className="bg-neutral-10">
         <Footer
           textContent={footerLang}
-          lang={deviceLang}
+          lang={lang}
           hideNewsletter={false}
           darkMode={false}
         />
@@ -56,7 +56,6 @@ const Token = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/token.json`);
@@ -67,7 +66,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }

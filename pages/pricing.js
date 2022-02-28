@@ -17,7 +17,12 @@ const Pricing = ({
 
   return (
 
-    <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description}>
+    <Layout
+      segmentName={pageName}
+      title={metatags[0].title}
+      description={metatags[0].description}
+      lang={lang}
+    >
 
       <Navbar
         textContent={navbarLang}

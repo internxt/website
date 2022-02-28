@@ -3,7 +3,7 @@
 		"line1": "File Scan"
 	},
 	"subtitle1": {
-		"line1": "Drag and drop suspicious files",
+		"line1": "Drag and drop a suspicious file",
 		"line2": "to detect malware and other",
 		"line3": "breaches for free."
 	},
@@ -15,13 +15,23 @@
 		"line1": "Drop file to analyze"
 	},
 	"or": "OR",
+	"fileSelected": "File selected for scanning",
+	"cancel": "Cancel",
+	"scanNow": "Scan now",
 	"selectFile": "Select file",
 	"dropHere": "Drop the file here",
+	"scanAgain": "Scan another file",
 	"table": {
+		"loading": "Loading...",
+		"virusDetected": "Virus detected",
+		"detected": "Detected",
+		"undetected": "Undetected",
+		"unableToProcess": "Unable to process",
 		"analyzing": "Analyzing file...",
-		"scanTime":  "Scan time",
-		"engine":  "Engine",
-		"detection":  "Detection",
-		"brand":  "Brand"
+		"scanTime": "Scan time",
+		"name": "Name",
+		"engine": "Engine",
+		"detection": "Detection",
+		"brand": "Brand"
 	}
 }

@@ -14,7 +14,7 @@ const Legal = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'legal');
 
   return (
-    <Layout segmentName="Legal" title={metatags.title} description={metatags[0].description}>
+    <Layout segmentName="Legal" title={metatags.title} description={metatags[0].description} lang={lang}>
 
       <Navbar
         textContent={navbarLang}

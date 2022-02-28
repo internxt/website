@@ -11,17 +11,17 @@ const Privacy = ({
   langJson,
   navbarLang,
   footerLang,
-  deviceLang
+  lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
 
       <Navbar
         textContent={navbarLang}
-        lang={deviceLang}
+        lang={lang}
         cta={['default']}
         fixed={false}
         darkMode
@@ -37,7 +37,7 @@ const Privacy = ({
 
       <Footer
         textContent={footerLang}
-        lang={deviceLang}
+        lang={lang}
         darkMode
       />
 
@@ -48,7 +48,6 @@ const Privacy = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/privacy.json`);
@@ -59,7 +58,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }

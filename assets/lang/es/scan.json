@@ -4,8 +4,8 @@
 		"line2": "Archivos"
 	},
 	"subtitle1": {
-		"line1": "Arrastre y suelte los archivos",
-		"line2": "sospechosos para detectar malware",
+		"line1": "Arrastre y suelte un archivo",
+		"line2": "sospechoso para detectar malware",
 		"line3": "y otras infracciones gratis."
 	},
 	"subtitle2": {
@@ -17,13 +17,23 @@
 		"line2": "empezar a analizar"
 	},
 	"or": "O",
+	"fileSelected": "Archivo seleccionado para escaneo",
+	"cancel": "Cancelar",
+	"scanNow": "Escanear",
 	"selectFile": "Seleccionar archivo",
 	"dropHere": "Suelta el archivo aquí",
+	"scanAgain": "Escanear otro archivo",
 	"table": {
+		"loading": "Cargando...",
+		"virusDetected": "Virus detectados",
+		"detected": "Detectado",
+		"undetected": "No detectado",
+		"unableToProcess": "Imposible procesar",
 		"analyzing": "Analizando archivo...",
-		"scanTime":  "Tiempo de escaneo",
-		"engine":  "Motor",
-		"detection":  "Detección",
-		"brand":  "Marca"
+		"scanTime": "Tiempo de escaneo",
+		"name": "Nombre",
+		"engine": "Motor",
+		"detection": "Detección",
+		"brand": "Marca"
 	}
 }
