@@ -130,7 +130,7 @@ const HeroSection = ({
 
   return (
     <section
-      className="relative bg-white py-36 space-y-10"
+      className="relative bg-white py-20 space-y-10"
       onDragEnter={(e) => { e.stopPropagation(); e.preventDefault(); handleDragEnter(); }}
     >
       <label htmlFor="uploadFile" className="absolute pointer-events-none w-0 h-0 overflow-hidden">
@@ -155,8 +155,8 @@ const HeroSection = ({
         onDragOver={(e) => e.preventDefault()}
       >
         {/* Title and subtitle */}
-        <div className="flex flex-col flex-shrink-0 space-y-5 items-center lg:items-start text-center lg:text-left mb-20 lg:mb-0 pt-10">
-          <h1 className="text-7xl">
+        <div className="flex flex-col flex-shrink-0 space-y-5 items-center lg:items-start text-center lg:text-left mb-20 lg:mb-0 pt-6">
+          <h1 className="text-7xl tracking-tighter">
             {textContent.title.line1}
             <br />
             {textContent.title.line2}
