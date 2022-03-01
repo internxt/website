@@ -8,6 +8,7 @@ import {
   UilExclamationOctagon,
   UilEyeSlash
 } from '@iconscout/react-unicons';
+import clamavScan from '../../pages/api/clamav/clamscan';
 
 const HeroSection = ({
   textContent
@@ -20,7 +21,7 @@ const HeroSection = ({
   const isDragging = dragEnter;
 
   const handleDragEnter = () => {
-    if (!dragEnter) {
+    if (!dragEnter && (!isScannig || !isScanFinished)) {
       setDragEnter(true);
       setIsSelectedFile(false);
     }
@@ -32,24 +33,11 @@ const HeroSection = ({
 
   const scanFiles = (scanFile) => {
     const form = new FormData();
-    // console.log(scanFile);
     form.append('file', scanFile);
 
-    const options = {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'x-apikey': '9bcaac2fa88a6abb2bd3986bb64f73365f18b38e40a06035474ce9ac0417a291',
-        'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundarysH4NCZu1JoAXA9tB'
-      }
-    };
-    options.body = form;
-
-    // fetch('https://try.readme.io/https://www.virustotal.com/api/v3/files', options)
-    fetch('https://www.virustotal.com/api/v3/files', options)
-      .then((response) => response.json())
+    clamavScan(form)
       .then((response) => console.log(response))
-      .catch((err) => console.error(err));
+      .then(() => setIsScanFinished(true));
   };
 
   const handleRestartScan = () => {
@@ -66,7 +54,7 @@ const HeroSection = ({
   const handleConfirmScan = () => {
     setIsScannig(true);
     scanFiles(file);
-    setTimeout(() => { setIsScanFinished(true); }, 4000);
+    // setTimeout(() => { setIsScanFinished(true); }, 4000);
   };
 
   const handleFiles = (files) => {
