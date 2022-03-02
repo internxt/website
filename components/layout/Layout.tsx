@@ -57,7 +57,7 @@ export default function Layout({
         {!disableAdtrack && <script defer src="/js/adtrack.js" />}
       </Head>
 
-      <Link href="/scan">
+      <Link href="/virus-scanner">
         <a className="group fixed bottom-0 left-0 w-screen h-16 bg-blue-60 z-50 text-white">
           <div className="relative flex flex-row items-center justify-between lg:justify-center h-full mx-auto max-w-screen-xl lg:space-x-10 px-5">
             <div className="flex flex-row items-center space-x-3 whitespace-nowrap">

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable max-len */
+import React from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
 import { UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
@@ -12,15 +13,14 @@ export default function Footer({
   hideNewsletter,
   darkMode
 }) {
-  const [consentCookie, setConsentCookie] = useState(true);
-  const showSupporters = true;
+  const [consentCookie, setConsentCookie] = React.useState(true);
 
   const handleAcceptCookies = () => {
     localStorage.setItem('CookieConsent', 'true');
     setConsentCookie(true);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const cookie = localStorage.getItem('CookieConsent');
     setUTM();
 
@@ -32,7 +32,7 @@ export default function Footer({
       <div className="flex flex-col items-center justify-center w-full px-6 py-16 sm:p-20">
 
         {/* Supporters from Spain and EU (Only in Spanish) */}
-        {(lang === 'es' && showSupporters) && (
+        {(lang === 'es') && (
           <div className="flex flex-col space-y-6 sm:space-x-20 py-8 justify-center bg-white border border-cool-gray-10 rounded-lg mb-16">
             <div className="flex flex-col max-w-2xl px-8 mx-auto">
               <div className="flex flex-row justify-center items-center flex-wrap mb-8">
@@ -97,20 +97,20 @@ export default function Footer({
           {/* Desktop version */}
           <div className="hidden md:flex flex-col md:space-y-16 items-center">
 
-            <div className="flex flex-row w-full lg:space-x-40 justify-between lg:justify-center">
+            <div className="flex flex-row w-full lg:space-x-20 xl:space-x-32 justify-between md:justify-center">
 
               <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-4">
+                <div className="flex flex-col flex-shrink-0 space-y-3">
                   <h3 className="text-lg font-semibold">
                     {textContent.FooterSection.sections.products.title}
                   </h3>
-                  <div className={`flex flex-col space-y-3 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                  <div className={`flex flex-col space-y-1.5 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
 
-                    <Link href="/drive" locale={lang}>
+                    <Link href="/drive" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.products.drive}</a>
                     </Link>
 
-                    <Link href="/photos" locale={lang}>
+                    <Link href="/photos" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.products.photos}</a>
                     </Link>
 
@@ -123,61 +123,68 @@ export default function Footer({
                       </div>
                     </a>
 
-                    <Link href="/token" locale={lang}>
+                    <Link href="/token" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.products.token}</a>
                     </Link>
 
+                    <Link href="/pricing" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.products.pricing}</a>
+                    </Link>
+
+                    {/*
+                    <Link href="/security" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.products.security}</a>
+                    </Link>
+                    */}
+
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-4">
+                <div className="flex flex-col flex-shrink-0 space-y-3">
                   <h3 className="text-lg font-semibold">
                     {textContent.FooterSection.sections.company.title}
                   </h3>
-                  <div className={`flex flex-col space-y-3 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                    <Link href="/cloud-storage-comparison" locale={lang}>
-                      <a>{textContent.FooterSection.sections.company.comparison}</a>
-                    </Link>
-                    <Link href="/privacy" locale={lang}>
-                      <a>{textContent.FooterSection.sections.company.privacy}</a>
-                    </Link>
-                    <Link href="/about" locale={lang}>
+                  <div className={`flex flex-col space-y-1.5 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+
+                    <Link href="/about" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.company.about}</a>
                     </Link>
-                    <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
-                      {textContent.FooterSection.sections.company.support}
-                    </a>
-                    <Link href="/legal" locale={lang}>
+
+                    <Link href="/privacy" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.company.privacy}</a>
+                    </Link>
+
+                    <Link href="/legal" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.company.legal}</a>
                     </Link>
+
+                    {/*
+                    <Link href="/why-internxt" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.company.whyInternxt}</a>
+                    </Link>
+                    */}
+
+                    <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
+                      {textContent.FooterSection.sections.company.contactUs}
+                    </a>
+
+                    <Link href="/cloud-storage-comparison" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.company.comparison}</a>
+                    </Link>
+
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-4">
+                <div className="flex flex-col flex-shrink-0 space-y-3">
                   <h3 className="text-lg font-semibold">
                     {textContent.FooterSection.sections.join.title}
                   </h3>
-                  <div className={`flex flex-col space-y-3 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                    <a href="https://drive.internxt.com/new" target="_top" id="get-started-link">
-                      {textContent.FooterSection.sections.join.signup}
-                    </a>
-                    <a href="https://drive.internxt.com/login" target="_top">
-                      {textContent.FooterSection.sections.join.login}
-                    </a>
-                  </div>
-                </div>
-              </div>
+                  <div className={`flex flex-col space-y-1.5 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
 
-              <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-4">
-                  <h3 className="text-lg font-semibold">
-                    {textContent.FooterSection.sections.follow.title}
-                  </h3>
-                  <div className={`flex flex-col space-y-3 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                     <div className="flex flex-row space-x-1">
                       <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                         <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`} draggable="false" alt="twitter icon" />
@@ -198,15 +205,60 @@ export default function Footer({
                         <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`} draggable="false" alt="instagram icon" />
                       </a>
                     </div>
+
+                    <a href="https://drive.internxt.com/new" target="_top">
+                      {textContent.FooterSection.sections.join.signup}
+                    </a>
+
+                    <a href="https://drive.internxt.com/login" target="_top">
+                      {textContent.FooterSection.sections.join.login}
+                    </a>
+
                     <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
-                      {textContent.FooterSection.sections.follow.telegram}
+                      {textContent.FooterSection.sections.join.community}
                     </a>
+
                     <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
-                      {textContent.FooterSection.sections.follow.github}
+                      {textContent.FooterSection.sections.join.github}
                     </a>
+
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col flex-1 lg:flex-none items-center">
+                <div className="flex flex-col flex-shrink-0 space-y-3">
+                  <h3 className="text-lg font-semibold">
+                    {textContent.FooterSection.sections.resources.title}
+                  </h3>
+                  <div className={`flex flex-col space-y-1.5 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+
                     <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
-                      {textContent.FooterSection.sections.follow.blog}
+                      {textContent.FooterSection.sections.resources.blog}
                     </a>
+
+                    {/*
+                    <Link href="/directory-of-privacy-organizations" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
+                    </Link>
+
+                    <Link href="/library" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.library}</a>
+                    </Link>
+
+                    <Link href="/write-for-us" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.writeForUs}</a>
+                    </Link>
+
+                    <Link href="/glossary" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.cyberSecurityGlossary}</a>
+                    </Link>
+                    */}
+
+                    <Link href="/virus-scanner" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
+                    </Link>
+
                   </div>
                 </div>
               </div>
@@ -250,13 +302,16 @@ export default function Footer({
                     leave="transition duration-0"
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
-                      <Link href="/drive" locale={lang}>
+
+                      <Link href="/drive" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.drive}</a>
                       </Link>
-                      <Link href="/photos" locale={lang}>
+
+                      <Link href="/photos" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.photos}</a>
                       </Link>
-                      <Link href="" locale={lang}>
+
+                      <Link href="" locale={lang} passHref>
                         <a className={`flex flex-row items-center ${darkMode ? 'text-cool-gray-60' : 'text-cool-gray-40'}`}>
                           <div>
                             {textContent.FooterSection.sections.products.send}
@@ -266,9 +321,21 @@ export default function Footer({
                           </div>
                         </a>
                       </Link>
-                      <Link href="/token" locale={lang}>
+
+                      <Link href="/token" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.token}</a>
                       </Link>
+
+                      <Link href="/pricing" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.products.pricing}</a>
+                      </Link>
+
+                      {/*
+                      <Link href="/security" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.products.security}</a>
+                      </Link>
+                      */}
+
                     </Disclosure.Panel>
                   </Transition>
 
@@ -298,24 +365,30 @@ export default function Footer({
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
 
-                      <Link href="/cloud-storage-comparison" locale={lang}>
-                        <a>{textContent.FooterSection.sections.company.comparison}</a>
-                      </Link>
-
-                      <Link href="/privacy" locale={lang}>
-                        <a>{textContent.FooterSection.sections.company.privacy}</a>
-                      </Link>
-
-                      <Link href="/about" locale={lang}>
+                      <Link href="/about" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.about}</a>
                       </Link>
 
+                      <Link href="/privacy" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.privacy}</a>
+                      </Link>
+
+                      <Link href="/legal" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.legal}</a>
+                      </Link>
+
                       <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.company.support}
+                        {textContent.FooterSection.sections.company.contactUs}
                       </a>
 
-                      <Link href="/legal" locale={lang}>
-                        <a>{textContent.FooterSection.sections.company.legal}</a>
+                      {/*
+                      <Link href="/why-internxt" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.whyInternxt}</a>
+                      </Link>
+                      */}
+
+                      <Link href="/cloud-storage-comparison" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.comparison}</a>
                       </Link>
 
                     </Disclosure.Panel>
@@ -347,12 +420,41 @@ export default function Footer({
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
 
-                      <a href="https://drive.internxt.com/new" target="_top" id="get-started-link">
+                      <div className="flex flex-row space-x-1">
+                        <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`} draggable="false" alt="twitter icon" />
+                        </a>
+                        <a href="https://www.facebook.com/internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`} draggable="false" alt="facebook icon" />
+                        </a>
+                        <a href="https://linkedin.com/company/internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`} draggable="false" alt="linkedin icon" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`} draggable="false" alt="youtube icon" />
+                        </a>
+                        <a href="https://instagram.com/internxt/" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`} draggable="false" alt="instagram icon" />
+                        </a>
+                        <a href="https://mastodon.social/web/@Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`} draggable="false" alt="instagram icon" />
+                        </a>
+                      </div>
+
+                      <a href="https://drive.internxt.com/new" target="_top">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
 
                       <a href="https://drive.internxt.com/login" target="_top">
                         {textContent.FooterSection.sections.join.login}
+                      </a>
+
+                      <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.join.community}
+                      </a>
+
+                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.join.github}
                       </a>
 
                     </Disclosure.Panel>
@@ -368,7 +470,7 @@ export default function Footer({
 
                   <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
                     <span className="flex flex-row">
-                      {textContent.FooterSection.sections.follow.title}
+                      {textContent.FooterSection.sections.resources.title}
                     </span>
                     <span className="relative w-5 h-5">
                       <UilMinus className={`absolute top-0 left-0 w-full h-full ${((open && darkMode) || (!open && !darkMode)) ? 'text-cool-gray-30' : 'text-cool-gray-60'} transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`} />
@@ -383,33 +485,33 @@ export default function Footer({
                     leave="transition duration-0"
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
-                      <a href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.twitter}
-                      </a>
-                      <a href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.facebook}
-                      </a>
-                      <a href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.linkedin}
-                      </a>
-                      <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.youtube}
-                      </a>
-                      <a href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.instagram}
-                      </a>
-                      <a href="https://mastodon.social/web/@Internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.mastodon}
-                      </a>
-                      <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.telegram}
-                      </a>
-                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.github}
-                      </a>
+
                       <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.follow.blog}
+                        {textContent.FooterSection.sections.resources.blog}
                       </a>
+
+                      {/*
+                      <Link href="/directory-of-privacy-organizations" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
+                      </Link>
+
+                      <Link href="/library" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.library}</a>
+                      </Link>
+
+                      <Link href="/write-for-us" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.writeForUs}</a>
+                      </Link>
+
+                      <Link href="/glossary" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.cyberSecurityGlossary}</a>
+                      </Link>
+                      */}
+
+                      <Link href="/virus-scanner" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
+                      </Link>
+
                     </Disclosure.Panel>
                   </Transition>
 

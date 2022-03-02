@@ -11,7 +11,7 @@ const Scan = ({
   footerLang,
   lang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'scan');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
 
   return (
 

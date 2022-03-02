@@ -40,9 +40,9 @@
         "description": "La privacidad es un derecho humano fundamental, en Internxt diseñamos todas nuestras aplicaciones pensando en la privacidad y seguridad. Nosotros defendemos la privacidad y siempre lo haremos."
     },
     {
-        "id": "scan",
-        "title": "Internxt – Escaneo de virus (España)",
-        "description": "Escaneo de virus de archivos, descubre si algún archivo está infectado."
+        "id": "virus-scanner",
+        "title": "Internxt – Escáner de virus de archivos online gratuito (España)",
+        "description": "Herramienta gratuita para escanear archivos en busca de virus y malware. Proteja sus documentos personales, datos y hardware del fraude en línea con un escaneo rápido y sencillo."
     },
     {
         "id": "lifetime",
