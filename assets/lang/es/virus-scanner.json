@@ -35,11 +35,16 @@
 		"detected": "Detectado",
 		"undetected": "No detectado",
 		"unableToProcess": "Imposible procesar",
+		"noVirusesDetected": "No se han detectado viruses",
 		"analyzing": "Analizando archivo...",
 		"scanTime": "Tiempo de escaneo",
 		"name": "Nombre",
 		"engine": "Motor",
 		"detection": "Detección",
 		"brand": "Marca"
+	},
+	"error": {
+		"title": "Error",
+		"description": "Se ha producido un error al enviar el archivo, inténtelo de nuevo más tarde"
 	}
 }

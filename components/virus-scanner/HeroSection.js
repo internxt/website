@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-console */
 import React, { useState, Fragment } from 'react';
@@ -5,6 +8,7 @@ import { Transition } from '@headlessui/react';
 import {
   UilRedo,
   UilExclamationOctagon,
+  UilCheckCircle
 } from '@iconscout/react-unicons';
 
 const HeroSection = ({
@@ -174,7 +178,9 @@ const HeroSection = ({
                     <div className="flex flex-row items-center justify-between flex-shrink-0 w-full h-16 bg-cool-gray-10 border-b border-cool-gray-20 px-5">
                       {isScanFinished ? (
                         <div className="flex flex-row items-end space-x-1.5">
-                          <span className="text-3xl font-semibold">0</span>
+                          <span className={`text-3xl font-semibold ${scanResult.isInfected && 'text-red-60'}`}>
+                            {scanResult && (scanResult.isInfected ? scanResult.viruses.length : '0')}
+                          </span>
                           <span className="text-lg text-cool-gray-60">{textContent.table.virusDetected}</span>
                         </div>
                       ) : (
@@ -189,50 +195,44 @@ const HeroSection = ({
 
                     {isScanFinished ? (
                       <>
-                        <div className="flex flex-row items-center justify-between flex-shrink-0 w-full h-8 bg-cool-gray-5 border-b border-cool-gray-20 px-5 text-cool-gray-40 text-sm">
-                          <div className="w-52">
-                            {textContent.table.detection}
-                          </div>
-                          <div className="flex-1">
-                            {textContent.table.name}
-                          </div>
-                        </div>
-
-                        <div className="flex flex-col w-full divide-y divide-cool-gray-10 overflow-auto">
-
-                          {/* Detected */}
-                          <div
-                            className="flex flex-row items-center justify-start flex-shrink-0 h-12 px-5"
-                          >
-                            <div
-                              className="flex flex-row items-center w-52 text-red-60 space-x-1.5"
-                            >
-                              <UilExclamationOctagon className="w-5 h-5" />
-                              <span>{textContent.table.detected}</span>
+                        {scanResult && scanResult.isInfected ? (
+                          <>
+                            <div className="flex flex-row items-center justify-between flex-shrink-0 w-full h-8 bg-cool-gray-5 border-b border-cool-gray-20 px-5 text-cool-gray-40 text-sm">
+                              <div className="w-52">
+                                {textContent.table.detection}
+                              </div>
+                              <div className="flex-1">
+                                {textContent.table.name}
+                              </div>
                             </div>
-                            <div className="flex-1">
-                              Virus name goes here
-                            </div>
-                          </div>
 
-                          {/* Undetected */}
-                          {/*
-                          <div
-                            className="flex flex-row items-center justify-start flex-shrink-0 h-12
-                                       px-5"
-                          >
-                            <div
-                              className="flex flex-row items-center w-52 text-green-50 space-x-1.5"
-                            >
-                              <UilCheckCircle className="w-5 h-5" />
-                              <span>{textContent.table.undetected}</span>
-                            </div>
-                            <div className="flex-1 text-cool-gray-40">
-                              Virus name goes here
-                            </div>
-                          </div> */}
+                            <div className="flex flex-col w-full divide-y divide-cool-gray-10 overflow-auto">
 
-                        </div>
+                              {/* Virus list */}
+                              {scanResult.viruses && scanResult.viruses.map((virus) => (
+                                <div className="flex flex-row items-center justify-start flex-shrink-0 h-12 px-5 hover:bg-cool-gray-5">
+                                  <div className="flex flex-row items-center w-52 text-red-60 space-x-1.5">
+                                    <UilExclamationOctagon className="w-5 h-5" />
+                                    <span>{textContent.table.detected}</span>
+                                  </div>
+                                  <div className="flex-1 font-medium">
+                                    {virus}
+                                  </div>
+                                </div>
+                              ))}
+
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="flex flex-col items-center justify-center w-full h-full space-y-4">
+                              <div className="flex flex-row items-center h-10 pl-3 pr-4 rounded-full bg-green-10 bg-opacity-65 space-x-2">
+                                <UilCheckCircle className="w-5 h-5 text-green-50" />
+                                <span className="text-green-70">{textContent.table.noVirusesDetected}</span>
+                              </div>
+                            </div>
+                          </>
+                        )}
                       </>
                     ) : (
                       <>
@@ -435,26 +435,36 @@ const HeroSection = ({
             </div>
           </Transition>
 
-          <Transition
-            as={Fragment}
-            show={isError}
-            enter="transition duration-200 ease-in-out"
-            enterFrom="opacity-0 pt-10"
-            enterTo="opacity-100 pt-0"
-          >
-            <div className="absolute inset-0 flex flex-row justify-center items-center w-full h-full bg-black bg-opacity-40 rounded-3xl z-50">
-              <div className="realtive flex flex-col justify-center items-center w-64 p-5 bg-white rounded-xl space-y-4">
-                <p>Error</p>
-                <button
-                  type="button"
-                  className="flex flex-row items-center justify-center -bottom-14 h-10 w-full px-5 bg-blue-10 text-blue-60 rounded-lg space-x-2 transform active:scale-98 transition duration-150 ease-out z-10"
+          {isError && (
+            <>
+              <div className="absolute inset-0 flex flex-row justify-center items-center w-full h-full bg-white bg-opacity-75 rounded-3xl z-50 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-black bg-opacity-40 cursor-pointer"
                   onClick={() => { handleRestartScan(); }}
+                />
+                <Transition
+                  as={Fragment}
+                  show={isError}
+                  enter="transform transition duration-200 ease-in-out"
+                  enterFrom="opacity-0 translate-y-4"
+                  enterTo="opacity-100 translate-y-0"
                 >
-                  <p>{textContent.close}</p>
-                </button>
+                  <div className="realtive flex flex-col justify-center items-center w-80 p-5 bg-white rounded-xl space-y-4 z-10 shadow-subtle-hard">
+                    <p className="text-xl font-medium">{textContent.error.title}</p>
+                    <p className="text-sm text-cool-gray-40 w-full text-center">{textContent.error.description}</p>
+                    <button
+                      type="button"
+                      className="flex flex-row items-center justify-center -bottom-14 h-10 w-full px-5 bg-blue-10 text-blue-60 rounded-lg space-x-2 transform active:scale-98 transition duration-150 ease-out z-10"
+                      onClick={() => { handleRestartScan(); }}
+                    >
+                      <p>{textContent.close}</p>
+                    </button>
+                  </div>
+                </Transition>
               </div>
-            </div>
-          </Transition>
+            </>
+          )}
+
         </div>
 
       </div>

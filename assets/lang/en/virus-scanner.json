@@ -33,11 +33,16 @@
 		"detected": "Detected",
 		"undetected": "Undetected",
 		"unableToProcess": "Unable to process",
+		"noVirusesDetected": "No viruses detected",
 		"analyzing": "Analyzing file...",
 		"scanTime": "Scan time",
 		"name": "Name",
 		"engine": "Engine",
 		"detection": "Detection",
 		"brand": "Brand"
+	},
+	"error": {
+		"title": "Error",
+		"description": "An error occurred while sending the file, please try again in a moment"
 	}
 }

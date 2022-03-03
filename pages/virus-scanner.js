@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
-import HeroSection from '../components/scan/HeroSection';
+import HeroSection from '../components/virus-scanner/HeroSection';
 
 const Scan = ({
   metatagsDescriptions,
@@ -42,7 +42,7 @@ const Scan = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/scan.json`);
+  const langJson = require(`../assets/lang/${lang}/virus-scanner.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
