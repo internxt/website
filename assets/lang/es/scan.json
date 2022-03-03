@@ -19,10 +19,16 @@
 	"or": "O",
 	"fileSelected": "Archivo seleccionado para escaneo",
 	"cancel": "Cancelar",
+	"close": "Cerrar",
 	"scanNow": "Escanear",
 	"selectFile": "Seleccionar archivo",
 	"dropHere": "Suelta el archivo aquí",
 	"scanAgain": "Escanear otro archivo",
+	"loading": "Cargando...",
+	"maxFileSize": {
+		"title": "Máximo tamaño de archivo alcanzado",
+		"description": "Tamaño máximo de 1GB"
+	},
 	"table": {
 		"loading": "Cargando...",
 		"virusDetected": "Virus detectados",

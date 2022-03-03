@@ -57,24 +57,28 @@ export default function Layout({
         {!disableAdtrack && <script defer src="/js/adtrack.js" />}
       </Head>
 
-      <Link href="/virus-scanner">
-        <a className="group fixed bottom-0 left-0 w-screen h-16 bg-blue-60 z-50 text-white">
-          <div className="relative flex flex-row items-center justify-between lg:justify-center h-full mx-auto max-w-screen-xl lg:space-x-10 px-5">
-            <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
-              <div className="flex flex-row items-center h-6 px-2 text-sm rounded-full font-bold bg-white text-blue-60">{lang === 'en' ? 'NEW' : 'NUEVO'}</div>
-              <span className="font-medium text-lg">{lang === 'en' ? 'File Virus Scan' : 'Escaneo de malware'}</span>
-              <span className="opacity-75 hidden md:flex">{lang === 'en' ? 'Scan suspicious files to detect malware for free.' : 'Escanea de archivos sospechosos gratis.'}</span>
-            </div>
-            <div className="flex flex-row items-center h-9 px-4 text-lg rounded-full font-medium group-hover:bg-white group-hover:bg-opacity-15 space-x-1 transition duration-200 ease-in-out">
-              <div className="whitespace-nowrap">
-                <span className="hidden sm:flex">{lang === 'en' ? 'Try now for free' : 'Probar gratis ahora'}</span>
-                <span className="flex sm:hidden">{lang === 'en' ? 'Try now' : 'Probar ahora'}</span>
+      {(segmentName && segmentName !== 'Virus Scanner') && (
+        <>
+          <Link href="/virus-scanner">
+            <a className="group fixed bottom-0 left-0 w-screen h-16 bg-blue-60 z-50 text-white">
+              <div className="relative flex flex-row items-center justify-between lg:justify-center h-full mx-auto max-w-screen-xl lg:space-x-10 px-5">
+                <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
+                  <div className="flex flex-row items-center h-6 px-2 text-sm rounded-full font-bold bg-white text-blue-60">{lang === 'en' ? 'NEW' : 'NUEVO'}</div>
+                  <span className="font-medium text-lg">{lang === 'en' ? 'File Virus Scan' : 'Escaneo de malware'}</span>
+                  <span className="opacity-75 hidden md:flex">{lang === 'en' ? 'Scan suspicious files to detect malware for free.' : 'Escanea de archivos sospechosos gratis.'}</span>
+                </div>
+                <div className="flex flex-row items-center h-9 px-4 text-lg rounded-full font-medium group-hover:bg-white group-hover:bg-opacity-15 space-x-1 transition duration-200 ease-in-out">
+                  <div className="whitespace-nowrap">
+                    <span className="hidden sm:flex">{lang === 'en' ? 'Try now for free' : 'Probar gratis ahora'}</span>
+                    <span className="flex sm:hidden">{lang === 'en' ? 'Try now' : 'Probar ahora'}</span>
+                  </div>
+                  <UilArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition duration-200 ease-in-out" />
+                </div>
               </div>
-              <UilArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition duration-200 ease-in-out" />
-            </div>
-          </div>
-        </a>
-      </Link>
+            </a>
+          </Link>
+        </>
+      )}
 
       {children}
     </>

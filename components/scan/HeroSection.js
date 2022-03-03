@@ -4,21 +4,22 @@ import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import {
   UilRedo,
-  UilCheckCircle,
   UilExclamationOctagon,
-  UilEyeSlash
 } from '@iconscout/react-unicons';
-import clamavScan from '../../pages/api/clamav/clamscan';
 
 const HeroSection = ({
   textContent
 }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isScannig, setIsScannig] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [isScanFinished, setIsScanFinished] = useState(false);
+  const [scanResult, setScanResult] = useState(null);
   const [dragEnter, setDragEnter] = useState(false);
+  const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
   const [file, setFile] = useState({});
   const isDragging = dragEnter;
+  const maxFileSize = 104_857_600;
 
   const handleDragEnter = () => {
     if (!dragEnter && (!isScannig || !isScanFinished)) {
@@ -31,19 +32,43 @@ const HeroSection = ({
     setDragEnter(false);
   };
 
-  const scanFiles = (scanFile) => {
-    const form = new FormData();
-    form.append('file', scanFile);
+  const scanFiles = () => {
+    setScanResult(null);
+    const fileInput = document.querySelector('#uploadFile');
+    const formdata = new FormData();
+    formdata.append('', fileInput.files[0], 'test.txt');
 
-    clamavScan(form)
-      .then((response) => console.log(response))
-      .then(() => setIsScanFinished(true));
+    const requestOptions = {
+      method: 'POST',
+      body: formdata,
+      redirect: 'follow'
+    };
+
+    fetch('https://clamav.internxt.com/filescan', requestOptions)
+      .then(async (res) => {
+        if (res.status === 200) {
+          const data = await res.json();
+          console.log(data);
+          setScanResult(data);
+          setIsScanFinished(true);
+        } else {
+          setIsError(true);
+          setIsSelectedFile(false);
+          setIsScannig(false);
+          setIsScanFinished(false);
+        }
+      })
+      .catch((error) => {
+        console.error('error', error);
+      });
   };
 
   const handleRestartScan = () => {
+    setScanResult(null);
     setIsSelectedFile(false);
     setIsScannig(false);
     setIsScanFinished(false);
+    setIsError(false);
     setFile({});
   };
 
@@ -53,45 +78,27 @@ const HeroSection = ({
 
   const handleConfirmScan = () => {
     setIsScannig(true);
-    scanFiles(file);
-    // setTimeout(() => { setIsScanFinished(true); }, 4000);
+    scanFiles();
   };
 
-  const handleFiles = (files) => {
-    if (files) {
+  const handleFiles = () => {
+    const fileInput = document.querySelector('#uploadFile');
+    if (fileInput.files) {
       setDragEnter(false);
+      setFileSizeLimitReached(false);
       setIsSelectedFile(true);
-      const reader = new FileReader();
-
-      reader.addEventListener('load', () => {
-        const blob = new File(
-          [reader.result],
-          files[0].name,
-          { ...files[0], type: files[0].type }
-        );
-        setFile(blob);
-      }, false);
-
-      if (files) {
-        reader.readAsDataURL(files[0]);
+      if (fileInput.files[0].size >= maxFileSize) {
+        setFileSizeLimitReached(true);
+      } else {
+        setFile(fileInput.files[0]);
       }
-      setFile(files[0]);
-      // if (files.length === 1) {
-      //   // File dropped
-      //   console.log(files[0]);
-      // } else if (files.length > 1) {
-      //   // Files dropped
-      //   Array.from(files).forEach((fileItem) => {
-      //     console.log(fileItem);
-      //   });
-      // }
     } else {
-      console.error('No files dropped');
+      console.error('No files to scan');
     }
   };
 
   const handleFileInput = () => {
-    handleFiles([document.querySelector('input[type=file]').files[0]]);
+    handleFiles();
   };
 
   const handleOpenFileExplorer = () => {
@@ -101,18 +108,8 @@ const HeroSection = ({
   const handleDrop = async (e) => {
     e.preventDefault();
     if (!isScannig) {
-      const dropeedFiles = e.dataTransfer.items;
-      // Transform from DataTransferItem to array of Files
-      const getFiles = async () => {
-        const files = [];
-        Array.from(dropeedFiles).forEach((fileItem) => {
-          files.push(fileItem.getAsFile());
-        });
-        return files;
-      };
-      await getFiles().then(
-        (files) => handleFiles(files)
-      );
+      document.querySelector('#uploadFile').files = e.dataTransfer.files;
+      handleFiles();
     }
   };
 
@@ -204,8 +201,12 @@ const HeroSection = ({
                         <div className="flex flex-col w-full divide-y divide-cool-gray-10 overflow-auto">
 
                           {/* Detected */}
-                          <div className="flex flex-row items-center justify-start flex-shrink-0 h-12 px-5 bg-red-10 bg-opacity-50 font-medium">
-                            <div className="flex flex-row items-center w-52 text-red-60 space-x-1.5">
+                          <div
+                            className="flex flex-row items-center justify-start flex-shrink-0 h-12 px-5"
+                          >
+                            <div
+                              className="flex flex-row items-center w-52 text-red-60 space-x-1.5"
+                            >
                               <UilExclamationOctagon className="w-5 h-5" />
                               <span>{textContent.table.detected}</span>
                             </div>
@@ -215,26 +216,21 @@ const HeroSection = ({
                           </div>
 
                           {/* Undetected */}
-                          <div className="flex flex-row items-center justify-start flex-shrink-0 h-12 px-5">
-                            <div className="flex flex-row items-center w-52 text-green-50 space-x-1.5">
+                          {/*
+                          <div
+                            className="flex flex-row items-center justify-start flex-shrink-0 h-12
+                                       px-5"
+                          >
+                            <div
+                              className="flex flex-row items-center w-52 text-green-50 space-x-1.5"
+                            >
                               <UilCheckCircle className="w-5 h-5" />
                               <span>{textContent.table.undetected}</span>
                             </div>
                             <div className="flex-1 text-cool-gray-40">
                               Virus name goes here
                             </div>
-                          </div>
-
-                          {/* Can't process */}
-                          <div className="flex flex-row items-center justify-start flex-shrink-0 h-12 px-5">
-                            <div className="flex flex-row items-center w-52 text-cool-gray-30 space-x-1.5">
-                              <UilEyeSlash className="w-5 h-5" />
-                              <span>{textContent.table.unableToProcess}</span>
-                            </div>
-                            <div className="flex-1 text-cool-gray-30">
-                              Virus name goes here
-                            </div>
-                          </div>
+                          </div> */}
 
                         </div>
                       </>
@@ -268,42 +264,81 @@ const HeroSection = ({
                 </>
               ) : (
                 <>
-                  {/* Scan confirmation */}
-                  <div className="flex flex-col items-center justify-center w-full h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
+                  {fileSizeLimitReached ? (
+                    <>
+                      {/* File size limit reached */}
+                      <div className="flex flex-col items-center justify-center w-full h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
 
-                    <Transition
-                      as="div"
-                      show={isSelectedFile}
-                      enter="transform transition duration-200 ease-out"
-                      enterFrom="opacity-0 translate-y-2"
-                      enterTo="opacity-100 translate-y-0"
-                    >
-                      <div className="flex flex-col items-center space-y-6">
-                        <div className="flex flex-col items-center">
-                          <p className="text-2xl font-medium">{textContent.fileSelected}</p>
-                          <p className="text-xl text-cool-gray-60">{`"${file.name}"`}</p>
-                        </div>
+                        <Transition
+                          as="div"
+                          show={isSelectedFile}
+                          enter="transform transition duration-200 ease-out"
+                          enterFrom="opacity-0 translate-y-2"
+                          enterTo="opacity-100 translate-y-0"
+                        >
+                          <div className="flex flex-col items-center space-y-6">
+                            <div className="flex flex-col items-center">
+                              <p className="text-2xl font-medium">{textContent.maxFileSize.title}</p>
+                              <p className="text-xl text-cool-gray-60">{textContent.maxFileSize.description}</p>
+                            </div>
 
-                        <div className="flex flex-row items-center justify-center space-x-4">
-                          <button
-                            type="button"
-                            className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-10 text-blue-60 font-medium transform active:scale-98 transition duration-150 ease-out"
-                            onClick={() => { handleCancelScan(); }}
-                          >
-                            {textContent.cancel}
-                          </button>
-
-                          <button
-                            type="button"
-                            className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-60 text-white font-medium transform active:scale-98 transition duration-150 ease-out"
-                            onClick={() => { handleConfirmScan(); }}
-                          >
-                            {textContent.scanNow}
-                          </button>
-                        </div>
+                            <button
+                              type="button"
+                              className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-10 text-blue-60 font-medium transform active:scale-98 transition duration-150 ease-out"
+                              onClick={() => { handleCancelScan(); }}
+                            >
+                              {textContent.scanAgain}
+                            </button>
+                          </div>
+                        </Transition>
                       </div>
-                    </Transition>
-                  </div>
+                    </>
+                  ) : (
+                    <>
+                      {/* Scan confirmation */}
+                      <div className="flex flex-col items-center justify-center w-full h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
+
+                        <Transition
+                          as="div"
+                          show={isSelectedFile}
+                          enter="transform transition duration-200 ease-out"
+                          enterFrom="opacity-0 translate-y-2"
+                          enterTo="opacity-100 translate-y-0"
+                        >
+                          <div className="flex flex-col items-center space-y-6">
+                            <div className="flex flex-col items-center">
+                              <p className="text-2xl font-medium">{textContent.fileSelected}</p>
+                              <div className="flex flex-row items-center text-xl text-cool-gray-60">
+                                &quot;
+                                <div className="max-w-lg truncate">
+                                  {file.name}
+                                </div>
+                                &quot;
+                              </div>
+                            </div>
+
+                            <div className="flex flex-row items-center justify-center space-x-4">
+                              <button
+                                type="button"
+                                className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-10 text-blue-60 font-medium transform active:scale-98 transition duration-150 ease-out"
+                                onClick={() => { handleCancelScan(); }}
+                              >
+                                {textContent.cancel}
+                              </button>
+
+                              <button
+                                type="button"
+                                className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-60 text-white font-medium transform active:scale-98 transition duration-150 ease-out"
+                                onClick={() => { handleConfirmScan(); }}
+                              >
+                                {textContent.scanNow}
+                              </button>
+                            </div>
+                          </div>
+                        </Transition>
+                      </div>
+                    </>
+                  )}
                 </>
               )}
             </>
@@ -354,6 +389,7 @@ const HeroSection = ({
                               </filter>
                             </defs>
                           </svg>
+                          <div className="absolute flex flex-row items-center -bottom-14 left-1/2 h-8 px-4 rounded-full transform -translate-x-1/2 text-sm text-cool-gray-40 bg-cool-gray-10 whitespace-nowrap">{textContent.maxFileSize.description}</div>
                         </div>
 
                         <div className="flex flex-col items-center space-y-2">
@@ -382,7 +418,7 @@ const HeroSection = ({
 
           <Transition
             as={Fragment}
-            show={isScanFinished}
+            show={(!isError && isScanFinished)}
             enter="transform transition duration-200 ease-in-out"
             enterFrom="opacity-0 translate-y-2"
             enterTo="opacity-100 translate-y-0"
@@ -396,6 +432,27 @@ const HeroSection = ({
                 <UilRedo className="w-4 h-4 transform group-hover:rotate-full transition duration-0 group-hover:duration-500 ease-out" />
                 <p>{textContent.scanAgain}</p>
               </button>
+            </div>
+          </Transition>
+
+          <Transition
+            as={Fragment}
+            show={isError}
+            enter="transition duration-200 ease-in-out"
+            enterFrom="opacity-0 pt-10"
+            enterTo="opacity-100 pt-0"
+          >
+            <div className="absolute inset-0 flex flex-row justify-center items-center w-full h-full bg-black bg-opacity-40 rounded-3xl z-50">
+              <div className="realtive flex flex-col justify-center items-center w-64 p-5 bg-white rounded-xl space-y-4">
+                <p>Error</p>
+                <button
+                  type="button"
+                  className="flex flex-row items-center justify-center -bottom-14 h-10 w-full px-5 bg-blue-10 text-blue-60 rounded-lg space-x-2 transform active:scale-98 transition duration-150 ease-out z-10"
+                  onClick={() => { handleRestartScan(); }}
+                >
+                  <p>{textContent.close}</p>
+                </button>
+              </div>
             </div>
           </Transition>
         </div>
