@@ -35,7 +35,7 @@ export function getUser(email: string) {
     });
 }
 
-export function getCheckoutSession(sessionId: string) {
+export function getCheckoutSession(sessionId: string | string[]) {
   const auth = getBridgeAuth();
   const API = process.env.NEXT_DRIVE_API_URL;
 
