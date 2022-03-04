@@ -3,6 +3,7 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/virus-scanner/HeroSection';
+import FeaturesSection from '../components/virus-scanner/FeaturesSection';
 
 const Scan = ({
   metatagsDescriptions,
@@ -25,7 +26,11 @@ const Scan = ({
       />
 
       <HeroSection
-        textContent={langJson}
+        textContent={langJson.HeroSection}
+      />
+
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
       />
 
       <Footer

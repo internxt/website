@@ -24,8 +24,6 @@
     "cookies": "^0.8.0",
     "dgram": "^1.0.1",
     "dotenv": "^8.2.0",
-    "form-data": "^4.0.0",
-    "fs": "^0.0.1-security",
     "hamburger-react": "^2.4.1",
     "jquery": "^3.5.1",
     "jsonwebtoken": "^8.5.1",
