@@ -1,0 +1,83 @@
+{
+	"HeroSection": {
+		"title": {
+			"line1": "Virus",
+			"line2": "Scanner"
+		},
+		"subtitle1": {
+			"line1": "Drag and drop any type of",
+			"line2": "suspicious file to detect",
+			"line3": "viruses and malware for free."
+		},
+		"dropFile": {
+			"line1": "Drop file to analyze"
+		},
+		"or": "OR",
+		"fileSelected": "File selected for scanning",
+		"cancel": "Cancel",
+		"close": "Close",
+		"scanNow": "Scan now",
+		"selectFile": "Select file",
+		"dropHere": "Drop the file here",
+		"scanAgain": "Scan another file",
+		"loading": "Loading...",
+		"maxFileSize": {
+			"title": "File size limit exceeded",
+			"description": "Max file size of 1GB"
+		},
+		"table": {
+			"loading": "Loading...",
+			"virusDetected": "Virus detected",
+			"detected": "Detected",
+			"undetected": "Undetected",
+			"unableToProcess": "Unable to process",
+			"noVirusesDetected": "No viruses detected",
+			"analyzing": "Analyzing file...",
+			"scanTime": "Scan time",
+			"name": "Name",
+			"detection": "Detection"
+		},
+		"error": {
+			"title": "Something went wrong",
+			"description": "An error occurred while sending the file, please try again later"
+		}
+	},
+	"FeaturesSection": {
+		"marketing": {
+			"whyToScan": {
+				"title": {
+					"line1": "Why it’s important to scan",
+					"line2": "your files for viruses"
+				},
+				"description1": {
+					"line1": "A potent virus can steal sensitive information like your credentials or passwords,",
+					"line2": "encrypt and lock you out of your data, make individual transactions within apps, monitor",
+					"line3": "your computer, and even attack other devices on connected networks. A virus has the",
+					"line4": "potential to  access nearly everything that is locked away on your hardware."
+				},
+				"description2": {
+					"line1": "Once the virus has propagated onto your laptop or desktop, it can infect all your",
+					"line2": "programs and applications without prejudice. Its destructive code can, and likely",
+					"line3": "will spread everywhere. That is why is crucial to get a scan for viruses."
+				}
+			}
+		},
+		"createAccount": {
+			"title": {
+				"line1": "At Internxt, we create secure,",
+				"line2": "encrypted, and zero-knowledge",
+				"line3": "technologies."
+			},
+			"description": {
+				"line1": "All our services are designed with the user's",
+				"line2": "privacy in mind and we always make sure our",
+				"line3": "services keep your data totally safe."
+			},
+			"cta": "Create account"
+		},
+		"disclaimer": {
+			"text": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our",
+			"link": "Terms and Conditions of Service and Privacy Policy"
+		}
+	}
+}

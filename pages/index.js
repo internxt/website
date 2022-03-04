@@ -14,10 +14,10 @@ import Layout from '../components/layout/Layout';
 const Home = ({
   metatagsDescriptions,
   langJson,
+  lang,
   navbarLang,
   footerLang,
-  downloadURL,
-  deviceLang
+  downloadURL
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const [downloadUrl, setDownloadUrl] = useState(null);
@@ -45,11 +45,11 @@ const Home = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
 
       <Navbar
         textContent={navbarLang}
-        lang={deviceLang}
+        lang={lang}
         cta={['default']}
         fixed
       />
@@ -57,12 +57,12 @@ const Home = ({
       <HeroSection
         textContent={langJson.HeroSection}
         download={downloadUrl}
-        lang={deviceLang}
+        lang={lang}
       />
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
-        lang={deviceLang}
+        lang={lang}
       />
 
       <InvestorsSection
@@ -72,13 +72,13 @@ const Home = ({
       <div className="getStartedSection">
         <GetStartedSection
           textContent={langJson.GetStartedSection}
-          lang={deviceLang}
+          lang={lang}
         />
       </div>
 
       <Footer
         textContent={footerLang}
-        lang={deviceLang}
+        lang={lang}
       />
 
     </Layout>
@@ -90,7 +90,6 @@ export async function getServerSideProps(ctx) {
   const downloadURL = await downloadDriveLinks(ctx);
 
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/home.json`);
@@ -103,7 +102,6 @@ export async function getServerSideProps(ctx) {
     props: {
       lang,
       downloadURL,
-      deviceLang,
       metatagsDescriptions,
       langJson,
       navbarLang,

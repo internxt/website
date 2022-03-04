@@ -40,6 +40,11 @@
         "description": "La privacidad es un derecho humano fundamental, en Internxt diseñamos todas nuestras aplicaciones pensando en la privacidad y seguridad. Nosotros defendemos la privacidad y siempre lo haremos."
     },
     {
+        "id": "virus-scanner",
+        "title": "Internxt – Escáner de virus de archivos online gratuito (España)",
+        "description": "Herramienta gratuita para escanear archivos en busca de virus y malware. Proteja sus documentos personales, datos y hardware del fraude en línea con un escaneo rápido y sencillo."
+    },
+    {
         "id": "lifetime",
         "title": "Internxt – Lifetime de almacenamiento en la nube (España)",
         "description": "Consige el mejor, más barato y más seguro almacenamiento en la nube de por vida. Paga una vez y disfruta de Internxt para siempre. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."

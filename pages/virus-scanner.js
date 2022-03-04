@@ -1,28 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
-import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
+import HeroSection from '../components/virus-scanner/HeroSection';
+import FeaturesSection from '../components/virus-scanner/FeaturesSection';
 
-const Pricing = ({
+const Scan = ({
   metatagsDescriptions,
+  langJson,
   navbarLang,
   footerLang,
   lang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-
-  const [pageName, setPageName] = useState('Pricing Individuals Annually');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
 
   return (
 
-    <Layout
-      segmentName={pageName}
-      title={metatags[0].title}
-      description={metatags[0].description}
-      lang={lang}
-    >
+    <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
 
       <Navbar
         textContent={navbarLang}
@@ -31,9 +25,12 @@ const Pricing = ({
         fixed
       />
 
-      <PriceTable
-        setSegmentPageName={setPageName}
-        lang={lang}
+      <HeroSection
+        textContent={langJson.HeroSection}
+      />
+
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
       />
 
       <Footer
@@ -50,14 +47,14 @@ const Pricing = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/${lang}/virus-scanner.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {
       metatagsDescriptions,
+      langJson,
       footerLang,
       navbarLang,
       lang
@@ -65,4 +62,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Pricing;
+export default Scan;

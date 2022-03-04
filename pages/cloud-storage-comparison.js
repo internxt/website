@@ -17,7 +17,7 @@ const CloudStorageComparison = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Cloud Storage Comparison">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Cloud Storage Comparison" lang={lang}>
 
       <Navbar
         textContent={navbarLang}

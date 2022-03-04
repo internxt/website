@@ -18,32 +18,40 @@
 				"drive": "Drive",
 				"photos": "Photos",
 				"send": "Send",
-				"token": "Token"
+				"token": "Token",
+				"pricing": "Pricing",
+				"security": "Security"
 			},
 			"company": {
 				"title": "Company",
-				"comparison": "Comparison",
-				"privacy": "Privacy",
 				"about": "About us",
-				"support": "Support",
-				"legal": "Legal"
+				"privacy": "Privacy",
+				"legal": "Legal",
+				"contactUs": "Contact us",
+				"whyInternxt": "Why Internxt?",
+				"comparison": "Comparison"
 			},
 			"join": {
 				"title": "Join us",
 				"signup": "Create account",
-				"login": "Log in"
-			},
-			"follow": {
-				"title": "Follow us",
+				"login": "Log in",
+				"community": "Community",
+				"github": "GitHub",
 				"twitter": "Twitter",
 				"facebook": "Facebook",
 				"linkedin": "LinkedIn",
 				"youtube": "Youtube",
 				"instagram": "Instagram",
-				"github": "Github",
-				"telegram": "Community",
-				"blog": "Blog",
 				"mastodon": "Mastodon"
+			},
+			"resources": {
+				"title": "Resources",
+				"blog": "Blog",
+				"directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
+				"library": "Library",
+				"writeForUs": "Write for us",
+				"cyberSecurityGlossary": "Cyber Security Glossary",
+				"fileVirusScan": "File Virus Scan"
 			}
 		}
 	},
