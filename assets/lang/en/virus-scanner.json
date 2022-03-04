@@ -7,7 +7,13 @@
 		"subtitle1": {
 			"line1": "Drag and drop any type of",
 			"line2": "suspicious file to detect",
-			"line3": "viruses and malware for free."
+			"line3": "viruses and malware in seconds."
+		},
+		"subtitle2": {
+			"line1": "Safeguard your privacy with our",
+			"line2": "free virus scanner, designed to",
+			"line3": "help you avoid infection and",
+			"line4": "protect your computer."
 		},
 		"dropFile": {
 			"line1": "Drop file to analyze"
@@ -73,7 +79,10 @@
 				"line2": "privacy in mind and we always make sure our",
 				"line3": "services keep your data totally safe."
 			},
-			"cta": "Create account"
+			"cta": {
+				"getUpTo10GB": "Get up to 10GB",
+				"forFree": "— for free"
+			}
 		},
 		"disclaimer": {
 			"text": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our",

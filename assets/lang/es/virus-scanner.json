@@ -6,8 +6,14 @@
 		},
 		"subtitle1": {
 			"line1": "Arrastre y suelte cualquier tipo",
-			"line2": "de archivo sospechoso para",
-			"line3": "detectar virus y malware gratis."
+			"line2": "de archivo sospechoso para detectar",
+			"line3": "virus y malware en segundos."
+		},
+		"subtitle2": {
+			"line1": "Proteja su privacidad con nuestro",
+			"line2": "escáner de virus gratuito, diseñado",
+			"line3": "para ayudarle a evitar infecciones",
+			"line4": "y proteger su ordenador."
 		},
 		"dropFile": {
 			"line1": "Suelta archivo para",
@@ -74,7 +80,10 @@
 				"line2": "la privacidad y siempre nos aseguramos de que nuestros",
 				"line3": "servicios mantengan sus datos totalmente seguros."
 			},
-			"cta": "Crear cuenta"
+			"cta": {
+				"getUpTo10GB": "Consigue hasta 10GB",
+				"forFree": "— gratis"
+			}
 		},
 		"disclaimer": {
 			"text": "Internxt no se hace responsable de la información personal que usted proporcione. Al enviar sus archivos, usted acepta nuestra",

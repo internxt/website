@@ -67,12 +67,12 @@ export default function Layout({
                   <span className="font-medium text-lg">{lang === 'en' ? 'File Virus Scan' : 'Escaneo de malware'}</span>
                   <span className="opacity-75 hidden md:flex">{lang === 'en' ? 'Scan suspicious files to detect malware for free.' : 'Escanea de archivos sospechosos gratis.'}</span>
                 </div>
-                <div className="flex flex-row items-center h-9 px-4 text-lg rounded-full font-medium group-hover:bg-white group-hover:bg-opacity-15 space-x-1 transition duration-200 ease-in-out">
-                  <div className="whitespace-nowrap">
+                <div className="flex flex-row items-center h-9 sm:px-4 text-lg rounded-full font-medium sm:group-hover:bg-white group-hover:bg-opacity-15 sm:space-x-1 transition duration-200 ease-in-out">
+                  <div className="whitespace-nowrap hidden sm:flex">
                     <span className="hidden sm:flex">{lang === 'en' ? 'Try now for free' : 'Probar gratis ahora'}</span>
                     <span className="flex sm:hidden">{lang === 'en' ? 'Try now' : 'Probar ahora'}</span>
                   </div>
-                  <UilArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition duration-200 ease-in-out" />
+                  <UilArrowRight className="w-8 sm:w-6 h-8 sm:h-6 transform sm:group-hover:translate-x-1 transition duration-200 ease-in-out" />
                 </div>
               </div>
             </a>

@@ -67,7 +67,7 @@ const HeroSection = ({
         <div className="flex justify-center sm:-mt-6 md:mt-0 lg:-mt-6 mb-4">
           <div className="flex items-center h-12 px-4 rounded-lg ring-3 ring-cool-gray-10 border border-cool-gray-30">
             <img loading="lazy" className="h-8" src="../../logos/investors/ue.webp" alt="Unión Europea" draggable="false" />
-            <span className="text-sm">Fondo Europeo de Desarrollo Regional</span>
+            <span className="text-sm whitespace-nowrap">Fondo Europeo de Desarrollo Regional</span>
           </div>
         </div>
       )}

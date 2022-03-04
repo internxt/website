@@ -101,7 +101,10 @@ const HeroSection = ({
   };
 
   const handleFileInput = () => {
-    handleFiles();
+    const fileInput = document.querySelector('#uploadFile');
+    if (fileInput.files) {
+      handleFiles();
+    }
   };
 
   const handleOpenFileExplorer = () => {
@@ -138,26 +141,43 @@ const HeroSection = ({
       />
 
       <div
-        className={`relative flex flex-col lg:flex-row lg:space-x-32 px-8 lg:p-16 w-full mx-auto max-w-screen-xl z-20 ${(!isScannig && isDragging) ? 'pointer-events-none' : ''}`}
+        className={`relative flex flex-col lg:flex-row lg:space-x-32 px-6 lg:p-16 w-full mx-auto max-w-screen-xl z-20 ${(!isScannig && isDragging) ? 'pointer-events-none' : ''}`}
         onDrop={(e) => e.preventDefault()}
         onDragOver={(e) => e.preventDefault()}
       >
         {/* Title and subtitle */}
-        <div className="flex flex-col flex-shrink-0 space-y-5 items-center lg:items-start text-center lg:text-left mb-10 lg:mb-0 pt-6">
-          <h1 className="text-7xl tracking-tighter">
+        <div className="flex flex-col flex-shrink-0 space-y-5 items-center lg:items-start text-center lg:text-left mb-10 lg:mb-0 pt-8 sm:pt-2">
+          <h1 className="text-4xl lg:text-7xl font-medium lg:font-normal tracking-tighter">
             {textContent.title.line1}
             {' '}
             <br className="hidden lg:flex" />
             {textContent.title.line2}
           </h1>
 
-          <h2 className="text-xl text-cool-gray-60">
-            {textContent.subtitle1.line1}
-            <br className="hidden lg:flex" />
-            {textContent.subtitle1.line2}
-            <br className="hidden lg:flex" />
-            {textContent.subtitle1.line3}
-          </h2>
+          <div className="flex flex-col lg:space-y-5">
+            <h2 className="text-lg text-cool-gray-60">
+              {textContent.subtitle1.line1}
+              {' '}
+              <br className="hidden lg:flex" />
+              {textContent.subtitle1.line2}
+              {' '}
+              <br className="hidden lg:flex" />
+              {textContent.subtitle1.line3}
+              {' '}
+              <div className="hidden lg:flex h-3" />
+              {textContent.subtitle2.line1}
+              {' '}
+              <br className="hidden lg:flex" />
+              {textContent.subtitle2.line2}
+              {' '}
+              <br className="hidden lg:flex" />
+              {textContent.subtitle2.line3}
+              {' '}
+              <br className="hidden lg:flex" />
+              {textContent.subtitle2.line4}
+            </h2>
+
+          </div>
         </div>
 
         <div className="relative w-full">
@@ -167,7 +187,7 @@ const HeroSection = ({
               {isScannig ? (
                 <>
                   {/* Scan process */}
-                  <div className="relative flex flex-col items-start justify-start w-full h-96 rounded-xl bg-white border border-cool-gray-20 overflow-hidden shadow-subtle">
+                  <div className="relative flex flex-col items-start justify-start w-full h-80 sm:h-96 rounded-xl bg-white border border-cool-gray-20 overflow-hidden shadow-subtle">
 
                     <div className="flex flex-row items-center justify-between flex-shrink-0 w-full h-16 bg-cool-gray-10 border-b border-cool-gray-20 px-5">
                       {isScanFinished ? (
@@ -181,8 +201,8 @@ const HeroSection = ({
                         <div>{textContent.table.loading}</div>
                       )}
 
-                      <div className="flex flex-col items-end w-1/2">
-                        <p className="text-base text-cool-gray-80 font-medium max-w-full truncate">{file.name}</p>
+                      <div className="hidden sm:flex flex-col items-end w-1/2">
+                        <p className="text-base text-cool-gray-80 font-medium max-w-xs truncate">{file.name}</p>
                         <p className="text-sm text-cool-gray-60">{file.type}</p>
                       </div>
                     </div>
@@ -261,7 +281,7 @@ const HeroSection = ({
                   {fileSizeLimitReached ? (
                     <>
                       {/* File size limit reached */}
-                      <div className="flex flex-col items-center justify-center w-full h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
+                      <div className="flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
 
                         <Transition
                           as="div"
@@ -290,7 +310,7 @@ const HeroSection = ({
                   ) : (
                     <>
                       {/* Scan confirmation */}
-                      <div className="flex flex-col items-stretch justify-center w-full h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
+                      <div className="flex flex-col items-stretch justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
 
                         <Transition
                           as="div"
@@ -301,8 +321,8 @@ const HeroSection = ({
                         >
                           <div className="flex flex-col items-center w-full space-y-6">
                             <div className="flex flex-col flex-shrink items-center w-full overflow-hidden">
-                              <p className="text-2xl font-medium">{textContent.fileSelected}</p>
-                              <p className="text-xl w-full lg:w-auto lg:max-w-md xl:max-w-xl truncate text-cool-gray-60 px-10">
+                              <p className="text-2xl font-medium px-4 text-center">{textContent.fileSelected}</p>
+                              <p className="text-xl text-center w-full lg:w-auto lg:max-w-md xl:max-w-xl truncate text-cool-gray-60 px-10">
                                 {file.name}
                               </p>
                             </div>
@@ -310,7 +330,7 @@ const HeroSection = ({
                             <div className="flex flex-row items-center justify-center space-x-4">
                               <button
                                 type="button"
-                                className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-10 text-blue-60 font-medium transform active:scale-98 transition duration-150 ease-out"
+                                className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-10 text-blue-60 font-medium transform active:scale-98 transition duration-150 ease-out"
                                 onClick={() => { handleCancelScan(); }}
                               >
                                 {textContent.cancel}
@@ -318,7 +338,7 @@ const HeroSection = ({
 
                               <button
                                 type="button"
-                                className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-60 text-white font-medium transform active:scale-98 transition duration-150 ease-out"
+                                className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-60 text-white font-medium transform active:scale-98 transition duration-150 ease-out"
                                 onClick={() => { handleConfirmScan(); }}
                               >
                                 {textContent.scanNow}
@@ -336,19 +356,19 @@ const HeroSection = ({
             <>
               <label
                 htmlFor="uploadFile"
-                className={`flex flex-col w-full h-96 ${!isScannig && (isDragging && 'pointer-events-none')}`}
+                className={`flex flex-col w-full h-60 sm:h-96 ${!isScannig && (isDragging && 'pointer-events-none')}`}
               >
                 {isDragging ? (
                   <>
                     {/* Drop file here */}
-                    <div className="flex flex-col items-center justify-center w-full h-96 rounded-3xl bg-blue-10 border-2 border-blue-60 border-dashed ring-5 ring-blue-10">
-                      <p className="text-5xl text-blue-60 font-medium">{textContent.dropHere}</p>
+                    <div className="flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 border-2 border-blue-60 border-dashed ring-5 ring-blue-10">
+                      <p className="text-2xl sm:text-5xl text-blue-60 font-medium">{textContent.dropHere}</p>
                     </div>
                   </>
                 ) : (
                   <>
                     {/* Default state */}
-                    <div className="group flex flex-col items-center justify-center w-full h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10 cursor-pointer">
+                    <div className="group flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10 cursor-pointer">
                       <div className="flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:space-x-20">
                         {/* Icons */}
                         <div className="relative w-32 h-32 hidden sm:flex lg:hidden xl:flex">
@@ -391,7 +411,7 @@ const HeroSection = ({
                           <p className="text-cool-gray-40">{textContent.or}</p>
                           <button
                             type="button"
-                            className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-10 group-hover:bg-blue-60 focus-visible:bg-blue-60 text-blue-60 group-hover:text-white focus-visible:text-white font-medium transform active:scale-98 transition duration-150 ease-out"
+                            className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-10 group-hover:bg-blue-60 focus-visible:bg-blue-60 text-blue-60 group-hover:text-white focus-visible:text-white font-medium transform active:scale-98 transition duration-150 ease-out"
                             onClick={() => { handleOpenFileExplorer(); }}
                           >
                             {textContent.selectFile}
@@ -416,10 +436,10 @@ const HeroSection = ({
             <div className="absolute flex flex-row justify-center w-full">
               <button
                 type="button"
-                className="absolute group flex flex-row items-center justify-center -bottom-14 h-10 px-5 bg-blue-10 text-blue-60 rounded-lg space-x-2 transform active:scale-98 transition duration-150 ease-out z-10"
+                className="absolute group flex flex-row items-center justify-center -bottom-16 sm:-bottom-14 h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base bg-blue-10 text-blue-60 rounded-lg space-x-2 transform active:scale-98 transition duration-150 ease-out z-10"
                 onClick={() => { handleRestartScan(); }}
               >
-                <UilRedo className="w-4 h-4 transform group-hover:rotate-full transition duration-0 group-hover:duration-500 ease-out" />
+                <UilRedo className="w-5 sm:w-4 h-5 sm:h-4 transform group-hover:rotate-full transition duration-0 group-hover:duration-500 ease-out" />
                 <p>{textContent.scanAgain}</p>
               </button>
             </div>
