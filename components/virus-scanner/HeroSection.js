@@ -52,7 +52,7 @@ const HeroSection = ({
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
-          window.analitycs.track('File Scan Completed', {
+          window.analytics.track('File Scan Completed', {
             infected: data.isInfected
           });
           setScanResult(data);
