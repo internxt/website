@@ -167,7 +167,7 @@ export default function Footer({
                     */}
 
                     <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
-                      {textContent.FooterSection.sections.company.contactUs}
+                      {textContent.FooterSection.sections.company.support}
                     </a>
 
                     <Link href="/cloud-storage-comparison" locale={lang} passHref>
@@ -378,7 +378,7 @@ export default function Footer({
                       </Link>
 
                       <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.company.contactUs}
+                        {textContent.FooterSection.sections.company.support}
                       </a>
 
                       {/*
