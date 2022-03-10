@@ -26,7 +26,6 @@ const HeroSection = ({
   const maxFileSize = 1_000_000_000;
 
   const handleDragEnter = () => {
-    console.log(`dragEnter: ${dragEnter}, isScanning: ${isScannig}, isScanFinished: ${isScanFinished}`);
     if (!dragEnter && (!isScannig && !isScanFinished)) {
       setDragEnter(true);
       setIsSelectedFile(false);
@@ -53,6 +52,7 @@ const HeroSection = ({
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
+          console.log(data)
           setScanResult(data);
           setIsScanFinished(true);
         } else {
