@@ -52,7 +52,9 @@ const HeroSection = ({
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
-          console.log(data)
+          window.analitycs.track('File Scan Completed', {
+            infected: data.isInfected
+          });
           setScanResult(data);
           setIsScanFinished(true);
         } else {
@@ -63,6 +65,10 @@ const HeroSection = ({
         }
       })
       .catch((error) => {
+        setIsError(true);
+        setIsSelectedFile(false);
+        setIsScannig(false);
+        setIsScanFinished(false);
         console.error('error', error);
       });
   };
