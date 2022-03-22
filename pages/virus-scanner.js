@@ -16,7 +16,7 @@ const Scan = ({
 
   return (
 
-    <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+    <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description}>
 
       <Navbar
         textContent={navbarLang}

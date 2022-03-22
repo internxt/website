@@ -1,8 +1,6 @@
 /* eslint-disable react/no-danger */
 import Head from 'next/head';
 import React, { useEffect } from 'react';
-import { UilArrowRight } from '@iconscout/react-unicons';
-import Link from 'next/link';
 
 interface LayoutProps {
   children: React.ReactNode,
@@ -25,8 +23,7 @@ export default function Layout({
   disableMailerlite = false,
   disableDrift = true,
   disableAdtrack = false,
-  isProduction = process.env.NODE_ENV === 'production',
-  lang = ''
+  isProduction = process.env.NODE_ENV === 'production'
 }: LayoutProps) {
   useEffect(() => {
     window.analytics.page(segmentName);
@@ -56,29 +53,6 @@ export default function Layout({
         <script defer src="/js/reddit.js" />
         {!disableAdtrack && <script defer src="/js/adtrack.js" />}
       </Head>
-
-      {(segmentName && segmentName !== 'Virus Scanner') && (
-        <>
-          <Link href="/virus-scanner">
-            <a className="group fixed bottom-0 left-0 w-screen h-16 bg-blue-60 z-50 text-white">
-              <div className="relative flex flex-row items-center justify-between lg:justify-center h-full mx-auto max-w-screen-xl lg:space-x-10 px-5">
-                <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
-                  <div className="flex flex-row items-center h-6 px-2 text-sm rounded-full font-bold bg-white text-blue-60">{lang === 'en' ? 'NEW' : 'NUEVO'}</div>
-                  <span className="font-medium text-lg">{lang === 'en' ? 'File Virus Scan' : 'Escaneo de malware'}</span>
-                  <span className="opacity-75 hidden md:flex">{lang === 'en' ? 'Scan suspicious files to detect malware for free.' : 'Escanea de archivos sospechosos gratis.'}</span>
-                </div>
-                <div className="flex flex-row items-center h-9 sm:px-4 text-lg rounded-full font-medium sm:group-hover:bg-white sm:group-hover:bg-opacity-15 sm:space-x-1 transition duration-200 ease-in-out">
-                  <div className="whitespace-nowrap hidden sm:flex">
-                    <span className="hidden sm:flex">{lang === 'en' ? 'Try now for free' : 'Probar gratis ahora'}</span>
-                    <span className="flex sm:hidden">{lang === 'en' ? 'Try now' : 'Probar ahora'}</span>
-                  </div>
-                  <UilArrowRight className="w-8 sm:w-6 h-8 sm:h-6 transform sm:group-hover:translate-x-1 transition duration-200 ease-in-out" />
-                </div>
-              </div>
-            </a>
-          </Link>
-        </>
-      )}
 
       {children}
     </>

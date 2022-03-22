@@ -18,7 +18,7 @@ const SpecialOffer = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Freemonth Partnership" lang={lang}>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Freemonth Partnership">
 
       <Navbar
         textContent={navbarLang}
