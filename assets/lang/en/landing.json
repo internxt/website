@@ -1,0 +1,109 @@
+{
+	"HeroSection":
+	{
+		"eyebrow": "INTERNXT",
+		"title": "Choose the best plan for you.",
+		"switch": {
+			"monthly": "Monthly",
+			"annually": "Annually"
+		},
+		"priceCards": {
+			"mostPopular": "Most popular",
+			"monthlyCost": "€/month",
+			"billed": "€ billed",
+			"monthly": "monthly",
+			"annually": "annually",
+			"buy": "Buy",
+			"features": [
+				"30 days money-back guarantee",
+				"Encrypted file storage and sharing",
+				"Access your files from any device",
+				"Get access to all our services"
+			]
+		}
+	},
+	"FeaturesSection":
+	{
+		"title": {
+			"line1": "Powerful features.",
+			"line2": "Easy to use."
+		},
+		"summaryCards": {
+			"card1": {
+				"line1": "All your photos.",
+				"line2": "One gallery."
+			},
+			"card2": {
+				"line1": "Backup your computer.",
+				"line2": "Access from everywhere."
+			},
+			"card3": {
+				"line1": "Keep your files",
+				"line2": "always up to date."
+			}
+		},
+		"features": {
+			"section1": {
+				"title": {
+					"line1": "Ultra secure.",
+					"line2": "Super private."
+				},
+				"subtitle": "Security comes as standard. We use client-side encryption for ensuring that your images, videos, and documents stay only yours."
+			},
+			"section2": {
+				"title": "Available in all platforms.",
+				"subtitle": "Manage your files from any device and transfer documents, images and videos between devices."
+			},
+			"section3": {
+				"title": "Simple and easy.",
+				"subtitle": {
+					"line1": "Preview files directly on the web.",
+					"line2": "Share via link and limit the number of times users can open this link.",
+					"line3": "Search folders and files."
+				}
+			},
+			"getStartedSection": {
+				"eyebrow": "INTERNXT",
+				"title": "Get started.",
+				"cta": "Choose your plan"
+			}
+		}
+	},
+	"FaqSection":
+	{
+		"title": {
+			"line1": "Did you miss",
+			"line2": "something?"
+		},
+		"faq": [
+			{
+				"question": "What is Internxt?",
+				"answer": ""
+			},
+			{
+				"question": "What is Internxt Drive?",
+				"answer": ""
+			},
+			{
+				"question": "What is Internxt Photos?",
+				"answer": ""
+			},
+			{
+				"question": "How is Internxt so secure?",
+				"answer": ""
+			},
+			{
+				"question": "What devices are supported?",
+				"answer": ""
+			}
+		],
+		"getStartedSection": {
+			"title": {
+				"line1": "Secure and private storage for",
+				"line2": "less than a buck a month."
+			},
+			"subtitle": "Starting at only 0.89 €/month",
+			"cta": "Upgrade to Internxt"
+		}
+	}
+}

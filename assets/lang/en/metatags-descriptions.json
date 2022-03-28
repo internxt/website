@@ -73,5 +73,10 @@
         "id": "freemonth",
         "title": "Internxt – Get 1 Month for free",
         "description": "Grab the best deals for the most secure cloud storage and get 1 month for free. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    },
+    {
+        "id": "landing",
+        "title": "Internxt - Most Secure Cloud Storage",
+        "description": "Internxt provides secure, private and encrypted cloud services like Internxt Drive and Internxt Photos."
     }
 ]

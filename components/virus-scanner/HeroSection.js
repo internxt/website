@@ -199,7 +199,7 @@ const HeroSection = ({
                     <div className="flex flex-row items-center justify-between flex-shrink-0 w-full h-16 bg-cool-gray-10 border-b border-cool-gray-20 px-5">
                       {isScanFinished ? (
                         <div className="flex flex-row items-end space-x-1.5">
-                          <span className={`text-3xl font-semibold ${scanResult.isInfected && 'text-red-60'}`}>
+                          <span className={`text-3xl font-semibold ${scanResult.isInfected && 'text-red-old-60'}`}>
                             {scanResult && (scanResult.isInfected ? scanResult.viruses.length : '0')}
                           </span>
                           <span className="text-lg text-cool-gray-60">{textContent.table.virusDetected}</span>
@@ -232,7 +232,7 @@ const HeroSection = ({
                               {/* Virus list */}
                               {scanResult.viruses && scanResult.viruses.map((virus) => (
                                 <div className="flex flex-row items-center justify-start flex-shrink-0 h-12 px-5 hover:bg-cool-gray-5">
-                                  <div className="flex flex-row items-center w-52 text-red-60 space-x-1.5">
+                                  <div className="flex flex-row items-center w-52 text-red-old-60 space-x-1.5">
                                     <UilExclamationOctagon className="w-5 h-5" />
                                     <span>{textContent.table.detected}</span>
                                   </div>
@@ -246,9 +246,9 @@ const HeroSection = ({
                           </>
                         ) : (
                           <>
-                            <div className="flex flex-col items-center justify-center w-full h-full bg-green-10 bg-opacity-65 space-y-5">
-                              <UilCheckCircle className="w-8 h-8 text-green-50" />
-                              <span className="text-xl text-green-70 text-center">
+                            <div className="flex flex-col items-center justify-center w-full h-full bg-green-old-10 bg-opacity-65 space-y-5">
+                              <UilCheckCircle className="w-8 h-8 text-green-old-50" />
+                              <span className="text-xl text-green-old-70 text-center">
                                 {textContent.table.noVirusesDetected}
                               </span>
                             </div>
