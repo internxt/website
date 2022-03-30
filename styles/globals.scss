@@ -1,3 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button-primary {
+    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-lg cursor-pointer
+  }
+  .button-primary-rounded {
+    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-full cursor-pointer
+  }
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+.will-change-height {
+  will-change: height;
+}
+
 // Colors
 
 $black: #000000;
@@ -16,17 +36,7 @@ $cool-gray-20: #dde1e6;
 $cool-gray-10: #f2f4f8;
 $cool-gray-5: #f9fafc;
 
-$gray-100: #161616;
-$gray-90: #262626;
-$gray-90: #161616;
-$gray-80: #393939;
-$gray-70: #525252;
-$gray-50: #8d8d8d;
-$gray-60: #6f6f6f;
-$gray-40: #a8a8a8;
-$gray-30: #c6c6c6;
-$gray-20: #e0e0e0;
-$gray-10: #f4f4f4;
+$gray-100: #18181B;
 
 $blue-100: #001141;
 $blue-90: #001d6c;
@@ -83,61 +93,6 @@ $red-30: #ffb3b8;
 $red-20: #ffd7d9;
 $red-10: #fff1f1;
 
-$purple-100: #1c0f30;
-$purple-90: #31135e;
-$purple-80: #491d8b;
-$purple-70: #6929c4;
-$purple-60: #8a3ffc;
-$purple-50: #a56eff;
-$purple-40: #be95ff;
-$purple-30: #d4bbff;
-$purple-20: #e8daff;
-$purple-10: #f6f2ff;
-
-$cyan-900: #164e63;
-$cyan-800: #155e75;
-$cyan-700: #0e7490;
-$cyan-600: #0891b2;
-$cyan-500: #06b6d4;
-$cyan-400: #22d3ee;
-$cyan-200: #a5f3fc;
-$cyan-300: #67e8f9;
-$cyan-100: #cffafe;
-$cyan-50: #ecfeff;
-
-$indigo-900: #312e81;
-$indigo-800: #3730a3;
-$indigo-700: #4338ca;
-$indigo-600: #4f46e5;
-$indigo-500: #3b82f6;
-$indigo-400: #60a5fa;
-$indigo-300: #93c5fd;
-$indigo-200: #bfdbfe;
-$indigo-100: #dbeafe;
-$indigo-50: #eff6ff;
-
-$fuchsia-900: #701a75;
-$fuchsia-800: #86198f;
-$fuchsia-700: #a21caf;
-$fuchsia-600: #c026d3;
-$fuchsia-500: #d946ef;
-$fuchsia-400: #e879f9;
-$fuchsia-300: #f0abfc;
-$fuchsia-100: #fae8ff;
-$fuchsia-200: #f5d0fe;
-$fuchsia-50: #fdf4ff;
-
-$pink-900: #831843;
-$pink-800: #9d174d;
-$pink-700: #be185d;
-$pink-600: #db2777;
-$pink-500: #ec4899;
-$pink-400: #f472b6;
-$pink-300: #f9a8d4;
-$pink-200: #fbcfe8;
-$pink-100: #fce7f3;
-$pink-50: #fdf2f8;
-
 $neutral-900: #091e42;
 $neutral-800: #172b4d;
 $neutral-700: #253858;
@@ -174,7 +129,7 @@ body {
   margin: 0;
   font-family: "NeueEinstellung" !important;
   // overflow-x: hidden;
-  color: $cool-gray-90;
+  color: $gray-100;
 }
 
 main {

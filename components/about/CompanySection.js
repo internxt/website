@@ -8,16 +8,16 @@ const CompanySection = ({ textContent }) => (
       {/* Images */}
       <div className="relative w-full max-w-6xl px-4 md:px-6">
         <div className="relative grid grid-cols-6 grid-flow-row gap-2 z-10">
-          <div className="col-span-6 md:col-span-4 h-60 sm:h-72 lg:h-80 bg-red-10 rounded-md overflow-hidden select-none">
+          <div className="col-span-6 md:col-span-4 h-60 sm:h-72 lg:h-80 bg-red-old-10 rounded-md overflow-hidden select-none">
             <img loading="lazy" className="object-cover object-center w-full h-full" src="/images/about/photos/photo-1.webp" draggable="false" alt="lanzadera building" />
           </div>
-          <div className="col-span-6 md:col-span-2 h-60 sm:h-72 lg:h-80 bg-red-10 rounded-md overflow-hidden select-none">
+          <div className="col-span-6 md:col-span-2 h-60 sm:h-72 lg:h-80 bg-red-old-10 rounded-md overflow-hidden select-none">
             <img loading="lazy" className="object-cover object-center w-full h-full" src="/images/about/photos/photo-2.webp" draggable="false" alt="lanzadera entrance" />
           </div>
-          <div className="col-span-6 md:col-span-3 h-60 sm:h-72 lg:h-80 bg-red-10 rounded-md overflow-hidden select-none">
+          <div className="col-span-6 md:col-span-3 h-60 sm:h-72 lg:h-80 bg-red-old-10 rounded-md overflow-hidden select-none">
             <img loading="lazy" className="object-cover object-center w-full h-full" src="/images/about/photos/photo-3.webp" draggable="false" alt="team members" />
           </div>
-          <div className="col-span-6 md:col-span-3 h-60 sm:h-72 lg:h-80 bg-red-10 rounded-md overflow-hidden select-none">
+          <div className="col-span-6 md:col-span-3 h-60 sm:h-72 lg:h-80 bg-red-old-10 rounded-md overflow-hidden select-none">
             <img loading="lazy" className="object-cover object-center w-full h-full" src="/images/about/photos/photo-4.webp" draggable="false" alt="work area" />
           </div>
         </div>

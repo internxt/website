@@ -73,5 +73,10 @@
         "id": "freemonth",
         "title": "Internxt – Consigue 1 Mes gratis (España)",
         "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+    },
+    {
+        "id": "landing",
+        "title": "Internxt - Almacenamiento seguro y privado",
+        "description": "Internxt ofrece servicios en la nube seguros, privados y cifrados tales como Internxt Drive e Internxt Photos."
     }
 ]

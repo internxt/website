@@ -61,7 +61,7 @@ const PriceCard = ({
             <div className={`priceBreakdown flex ${planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end' : 'flex-col items-center'}`}>
               <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-semibold`}>{contentText.perUser}</span>
 
-              <p className="flex flex-row items-start text-green-50 font-semibold space-x-0.5">
+              <p className="flex flex-row items-start text-green-old-50 font-semibold space-x-0.5">
                 <span className={`currency ${price <= 0 ? 'hidden' : ''} text-2xl`}>€</span>
                 <span className="price text-5xl font-bold">0.00</span>
                 <span className={`currency ${price <= 0 ? 'hidden' : ''} text-2xl opacity-0 pointer-events-none`}>€</span>
