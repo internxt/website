@@ -1032,19 +1032,6 @@ module.exports = {
   plugins: [
     plugin(({ addComponents, theme }) => {
       const newComponents = {
-        btn: {
-          height: 56,
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: 8
-        },
-        'btn-primary': {
-          backgroundColor: theme('colors.blue.60')
-        },
-        'btn-label': {
-          color: '#FFF',
-          fontSize: 16
-        },
         'text-base': {
           fontFamily: theme('fontFamily.NeueEinstellung.Regular')
         },

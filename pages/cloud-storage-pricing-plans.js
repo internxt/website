@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import HeroSection from '../components/landing/HeroSection';
-import FeaturesSection from '../components/landing/FeaturesSection';
-import FaqSection from '../components/landing/FaqSection';
+import HeroSection from '../components/cloud-storage-pricing-plans/HeroSection';
+import FeaturesSection from '../components/cloud-storage-pricing-plans/FeaturesSection';
+import FaqSection from '../components/cloud-storage-pricing-plans/FaqSection';
 
-const Landing = ({
+const CloudStoragePricingPlans = ({
   metatagsDescriptions,
   langJson,
   // lang
@@ -35,7 +35,7 @@ const Landing = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/landing.json`);
+  const langJson = require(`../assets/lang/${lang}/cloud-storage-pricing-plans.json`);
 
   return {
     props: {
@@ -46,4 +46,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Landing;
+export default CloudStoragePricingPlans;

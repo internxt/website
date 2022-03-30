@@ -35,31 +35,47 @@ const HeroSection = ({
 
   return (
     <section className="relative bg-gray-5">
-      <div className="flex flex-col items-center p-6 sm:p-10 lg:p-16 space-y-10 sm:space-y-20">
-        <div className="flex flex-col items-center space-y text-center">
+      <div className="flex flex-col items-center p-6 sm:p-10 lg:py-16 lg:px-8 space-y-10 sm:space-y-20">
+
+        {/* Title */}
+        <div className="flex flex-col items-center space-y text-center px-4">
           <h2 className="text-lg sm:text-2xl font-semibold text">{textContent.eyebrow}</h2>
-          <h1 className="text-3xl lg:text-5xl font-semibold">{textContent.title}</h1>
+          <h1 className="text-3xl lg:text-5xl font-medium">{textContent.title}</h1>
         </div>
 
         <div className="flex flex-col items-center space-y-3 sm:space-y-8">
-          <div className="flex flex-row p-1 lg:p-0.5 bg-gray-10 text-gray-50 font-medium text-lg lg:text-base rounded-lg">
-            <button
-              type="button"
-              onClick={() => { setBilling(1); }}
-              className={`flex flex-row items-center h-10 lg:h-8 px-6 rounded-lg ${billing === 1 && 'bg-white text-gray-100 shadow-switch-button'}`}
-            >
-              {textContent.switch.monthly}
-            </button>
-            <button
-              type="button"
-              onClick={() => { setBilling(12); }}
-              className={`flex flex-row items-center h-10 lg:h-8 px-6 rounded-lg ${billing === 12 && 'bg-white text-gray-100 shadow-switch-button'}`}
-            >
-              {textContent.switch.annually}
-            </button>
+
+          {/* Switch */}
+          <div className="relative flex flex-row p-0.5 bg-gray-10 text-gray-50 font-medium text-lg md:text-base rounded-xl md:rounded-lg">
+
+            <div className="absolute inset-0.5 flex flex-row pointer-events-none">
+              <div className={`${billing === 1 ? 'w-0' : 'w-28'} transition-all duration-200 ease-in-out`} />
+              <div className="flex flex-row items-center justify-center h-9 md:h-8 w-28 rounded-xl md:rounded-lg bg-white shadow-switch-button" />
+            </div>
+
+            <div className="flex flex-row items-center justify-center z-10">
+              <button
+                type="button"
+                onClick={() => { setBilling(1); }}
+                className={`flex flex-row items-center justify-center h-9 md:h-8 w-28 ${billing === 1 && 'text-gray-100'} transition-colors duration-200 ease-in-out`}
+              >
+                {textContent.switch.monthly}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => { setBilling(12); }}
+                className={`flex flex-row items-center justify-center h-9 md:h-8 w-28 ${billing === 12 && 'text-gray-100'} transition-colors duration-200 ease-in-out`}
+              >
+                {textContent.switch.annually}
+              </button>
+            </div>
+
           </div>
 
+          {/* Price table */}
           <div className="flex flex-row items-start justify-center flex-wrap">
+
             <PriceCard
               textContent={textContent.priceCards}
               storage={priceCardData.GB20.storage}
@@ -82,8 +98,10 @@ const HeroSection = ({
               billing={billing}
               plan={checkoutPlan('TB2')}
             />
+
           </div>
 
+          {/* (SMALL SCREENS) Plan features */}
           <div className="flex sm:hidden flex-col items-center justify-start space-y-2 py-6">
             <div className="flex flex-row items-center justify-center space-x-2">
               <Check weight="bold" size={20} className="my-0.5" />
@@ -105,7 +123,9 @@ const HeroSection = ({
               <span>{textContent.priceCards.features[3]}</span>
             </div>
           </div>
+
         </div>
+
       </div>
     </section>
   );

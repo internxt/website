@@ -45,10 +45,13 @@
 		"features": {
 			"section1": {
 				"title": {
-					"line1": "Ultra secure.",
-					"line2": "Super private."
+					"line1": "Ultra secure",
+					"line2": "Super private"
 				},
-				"subtitle": "Security comes as standard. We use client-side encryption for ensuring that your images, videos, and documents stay only yours."
+				"subtitle": {
+					"line1": "Security comes as standard.",
+					"line2": " We use client-side encryption for ensuring that your images, videos, and documents stay only yours."
+				}
 			},
 			"section2": {
 				"title": "Available in all platforms.",
@@ -61,45 +64,45 @@
 					"line2": "Share via link and limit the number of times users can open this link.",
 					"line3": "Search folders and files."
 				}
-			},
-			"getStartedSection": {
-				"eyebrow": "INTERNXT",
-				"title": "Get started.",
-				"cta": "Choose your plan"
 			}
+		},
+		"getStartedSection": {
+			"eyebrow": "INTERNXT",
+			"title": "Get started.",
+			"cta": "Choose your plan"
 		}
 	},
 	"FaqSection":
 	{
 		"title": {
 			"line1": "Did you miss",
-			"line2": "something?"
+			"line2": "anything?"
 		},
 		"faq": [
 			{
 				"question": "What is Internxt?",
-				"answer": ""
+				"answer": "Internxt Drive is a zero-knowledge cloud storage service based on best-in-class privacy and security."
 			},
 			{
 				"question": "What is Internxt Drive?",
-				"answer": ""
+				"answer": "Internxt Drive is an encrypted cloud storage service that allows you to upload, download, share, sync, backup, and access your files from any device."
 			},
 			{
 				"question": "What is Internxt Photos?",
-				"answer": ""
+				"answer": "Iternxt Photos is a cloud photo gallery that groups photos from all your devices in one place. It is the best way to store your memories in a secure, encrypted and private way."
 			},
 			{
 				"question": "How is Internxt so secure?",
-				"answer": ""
+				"answer": "To ensure the security and privacy of your data and files we use state-of-the-art technologies such as military-grade encryption, zero-knowledge technology, end-to-end encryption, and synchronization under GDPR. This way, only you can access your data."
 			},
 			{
 				"question": "What devices are supported?",
-				"answer": ""
+				"answer": "Internxt services work on devices with an equivalent or higher version of MacOS 10.9 Mavericks, Windows 7, Ubuntu 14.04, iOS 11 or Android 5.0 Lollipop. If you want to use another device, you can access via a web browser."
 			}
 		],
 		"getStartedSection": {
 			"title": {
-				"line1": "Secure and private storage for",
+				"line1": "Security and privacy for",
 				"line2": "less than a buck a month."
 			},
 			"subtitle": "Starting at only 0.89 €/month",
