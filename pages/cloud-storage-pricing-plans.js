@@ -7,7 +7,8 @@ import FaqSection from '../components/cloud-storage-pricing-plans/FaqSection';
 
 const CloudStoragePricingPlans = ({
   metatagsDescriptions,
-  langJson,
+  textContent,
+  lang
   // lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'landing');
@@ -17,19 +18,20 @@ const CloudStoragePricingPlans = ({
     <Layout segmentName="Ads Landing" title={metatags[0].title} description={metatags[0].description}>
 
       <HeroSection
-        textContent={langJson.HeroSection}
+        textContent={textContent.HeroSection}
       />
 
       <PricingSection
-        textContent={langJson.PricingSection}
+        textContent={textContent.PricingSection}
       />
 
       <FeaturesSection
-        textContent={langJson.FeaturesSection}
+        textContent={textContent.FeaturesSection}
       />
 
       <FaqSection
-        textContent={langJson.FaqSection}
+        textContent={textContent.FaqSection}
+        lang={lang}
       />
 
     </Layout>
@@ -40,12 +42,12 @@ const CloudStoragePricingPlans = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/cloud-storage-pricing-plans.json`);
+  const textContent = require(`../assets/lang/${lang}/cloud-storage-pricing-plans.json`);
 
   return {
     props: {
       metatagsDescriptions,
-      langJson,
+      textContent,
       lang
     },
   };

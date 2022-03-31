@@ -1,8 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import FaqAccordion from './FaqAccordion';
 
 const FaqSection = ({
-  textContent
+  textContent,
+  lang
 }) => (
   <section className="relative bg-gray-5">
     <div className="flex flex-col items-center px-6 py-10 lg:p-20 space-y-10 sm:space-y-20">
@@ -40,6 +42,18 @@ const FaqSection = ({
         >
           {textContent.getStartedSection.cta}
         </a>
+      </div>
+
+      {/* Footer Info */}
+      <div className="flex flex-col items-center text-center font-medium space-y-2">
+        <p>{textContent.footer.copyright}</p>
+
+        <div className="flex flex-row items-center justify-center text-gray-50 space-x-8 md:space-x-5">
+          <a href="mailto:hello@internxt.com" className="hover:text-primary">{textContent.footer.contactUs}</a>
+          <Link href="/privacy" locale={lang} passHref>
+            <a className="hover:text-primary">{textContent.footer.privacy}</a>
+          </Link>
+        </div>
       </div>
 
     </div>

@@ -138,6 +138,11 @@
 			},
 			"subtitle": "A partir de sólo 0,89 €/mes",
 			"cta": "Empezar en Internxt"
+		},
+		"footer": {
+			"copyright": "Copyright © 2022, Internxt Universal Technologies SL",
+			"contactUs": "Contacta con nosotros",
+			"privacy": "Privacidad"
 		}
 	}
 }

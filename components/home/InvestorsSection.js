@@ -14,7 +14,7 @@ const InvestorsSection = ({ textContent }) => (
             <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovhcloud logo" />
           </div>
           <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
-            <img loading="lazy" src="../../logos/investors/blackberry.svg" draggable="false" alt="blackberry logo" />
+            <img loading="lazy" src="../../logos/investors/telefonica.svg" draggable="false" alt="telefonica logo" />
           </div>
           <div className="flex flex-shrink-0 w-2/5 md:w-1/3 xl:w-44 h-20 items-center justify-center">
             <img loading="lazy" src="../../logos/investors/theventurecity.svg" draggable="false" alt="theventurecity logo" />

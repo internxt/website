@@ -120,6 +120,11 @@
 			},
 			"subtitle": "Starting at only 0.89 €/month",
 			"cta": "Upgrade to Internxt"
+		},
+		"footer": {
+			"copyright": "Copyright © 2022, Internxt Universal Technologies SL",
+			"contactUs": "Contact us",
+			"privacy": "Privacy"
 		}
 	}
 }
