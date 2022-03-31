@@ -6,97 +6,15 @@ const FeaturesSection = ({
   <section className="relative bg-white overflow-hidden">
     <div className="flex flex-col items-center px-4 py-10 lg:py-20 space-y-10 md:space-y-20 lg:space-y-32">
 
-      {/* Features quick summary */}
-      <div className="flex flex-col items-center text-center space-y-10 md:space-y-16">
-
-        {/* Title */}
-        <h2 className="text-4xl lg:text-5xl font-semibold text-center">
-          {textContent.title.line1}
-          <br />
-          {textContent.title.line2}
-        </h2>
-
-        {/* Info cards */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-center flex-wrap">
-
-          {/* Card 1: "All your photos. One gallery." */}
-          <div className="flex flex-col w-full md:w-72 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3">
-            <div className="flex flex-col items-center justify-start w-full h-52">
-              <img
-                src="./images/landing/summary_photos.webp"
-                draggable="false"
-                className="w-52 h-52 -mt-8"
-                alt="Internxt Photos gallery"
-                style={{
-                  // Custom image shadow
-                  filter: 'drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.12)) drop-shadow(0px 16px 32px rgba(24, 24, 27, 0.06)) drop-shadow(0px 0px 8px rgba(24, 24, 27, 0.06)) drop-shadow(0px 8px 32px rgba(24, 24, 27, 0.16))',
-                }}
-              />
-            </div>
-
-            <div className="flex flex-col items-center p-8 pt-0 md:p-10 md:pt-0 text-center text-2xl font-semibold">
-              {textContent.summaryCards.card1.line1}
-              <br />
-              {textContent.summaryCards.card1.line2}
-            </div>
-          </div>
-
-          {/* Card 2: "Backup your computer. Access from everywhere." */}
-          <div className="flex flex-col w-full md:w-96 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3 order-last lg:order-none">
-            <div className="flex flex-col items-center p-8 pb-0 md:p-10 md:pb-0 text-center text-2xl font-semibold">
-              {textContent.summaryCards.card2.line1}
-              <br />
-              {textContent.summaryCards.card2.line2}
-            </div>
-
-            <div className="flex flex-col items-start justify-start w-full h-52">
-              <img
-                src="./images/landing/summary_web.webp"
-                draggable="false"
-                className="w-96 h-52 mt-8 ml-8"
-                alt="Internxt Drive Web application in Backups tab"
-                style={{
-                  // Custom image shadow
-                  filter: 'drop-shadow(0px 0px 0.5px rgba(0, 0, 0, 0.24)) drop-shadow(0px 32px 64px rgba(24, 24, 27, 0.06)) drop-shadow(0px 0px 8px rgba(24, 24, 27, 0.04)) drop-shadow(0px 12px 24px rgba(24, 24, 27, 0.06))',
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Card 3: "Keep your files always up to date." */}
-          <div className="flex flex-col w-full md:w-72 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3">
-            <div className="flex flex-col items-center p-8 pb-0 md:p-10 md:pb-0 text-center text-2xl font-semibold">
-              {textContent.summaryCards.card3.line1}
-              <br />
-              {textContent.summaryCards.card3.line2}
-            </div>
-
-            <div className="flex flex-col items-center justify-end w-full h-52">
-              <img
-                src="./images/landing/summary_desktop.webp"
-                draggable="false"
-                className="w-56 h-52 -mb-8"
-                alt="Internxt Desktop widget showing files syncing with the cloud"
-                style={{
-                  // Custom image shadow
-                  filter: 'drop-shadow(0px 0px 0.5px rgba(0, 0, 0, 0.24)) drop-shadow(0px 32px 64px rgba(24, 24, 27, 0.06)) drop-shadow(0px 0px 8px rgba(24, 24, 27, 0.04)) drop-shadow(0px 12px 24px rgba(24, 24, 27, 0.06))',
-                }}
-              />
-            </div>
-          </div>
-
-        </div>
-      </div>
-
       {/* Detailed features with mockups */}
       <div className="flex flex-col items-center space-y-4 sm:space-y-0 md:space-y-32 px-4 md:px-0">
 
         {/* Section 1: "Ultra secure. Super private." */}
         <div className="flex flex-row w-full items-stretch justify-center lg:space-x-20">
 
-          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-16 md:pb-32 space-y-4 md:space-y-6">
+          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-10 md:pb-32 space-y-4 md:space-y-6">
 
-            <div className="relative w-screen mt-4 -mx-8 h-64 -mb-14 xs:h-96 xs:-mb-24 flex md:hidden overflow-hidden pointer-events-none">
+            <div className="relative w-screen mt-4 -mx-8 h-60 -mb-14 xs:h-96 xs:-mb-24 flex md:hidden overflow-hidden pointer-events-none">
               <div
                 className="relative mx-auto hidden xs:flex"
                 style={{
@@ -129,7 +47,7 @@ const FeaturesSection = ({
               </div>
             </div>
 
-            <h4 className="text-4xl sm:text-5xl md:text-6xl font-semibold">
+            <h4 className="text-4xl md:text-5xl lg:text-6xl font-semibold">
               {textContent.features.section1.title.line1}
               <br />
               {textContent.features.section1.title.line2}
@@ -195,9 +113,9 @@ const FeaturesSection = ({
             </div>
           </div>
 
-          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-16 md:pb-48 space-y-1 md:space-y-2">
+          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-10 md:pb-40 space-y-1 md:space-y-2">
 
-            <div className="relative w-full h-60 -mb-3 xs:h-80 xs:mb-6 flex md:hidden">
+            <div className="relative w-full h-60 -mb-5 xs:h-80 xs:mb-0 flex md:hidden">
               <div
                 className="relative mx-auto hidden xs:flex"
                 style={{
@@ -244,9 +162,9 @@ const FeaturesSection = ({
         {/* Section 3: "Simple and easy." */}
         <div className="flex flex-row w-full items-stretch justify-center md:space-x-16 lg:space-x-20">
 
-          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-16 md:pb-40 lg:pb-20 space-y-1 md:space-y-2">
+          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-6 md:pb-40 lg:pb-20 space-y-1 md:space-y-2">
 
-            <div className="relative w-full h-52 xs:h-80 flex md:hidden">
+            <div className="relative w-full h-52 -mb-2 xs:h-80 xs:-mb-8 flex md:hidden">
               <div
                 className="relative mx-auto hidden xs:flex"
                 style={{
@@ -324,13 +242,12 @@ const FeaturesSection = ({
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-semibold sm:font-medium text-center">{textContent.getStartedSection.title}</h3>
         </div>
 
-        <button
-          type="button"
-          onClick={() => { window.scrollTo(0, 0); }}
+        <a
+          href="#pricing"
           className="button-primary-rounded"
         >
           {textContent.getStartedSection.cta}
-        </button>
+        </a>
 
       </div>
 

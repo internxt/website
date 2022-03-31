@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/cloud-storage-pricing-plans/HeroSection';
+import PricingSection from '../components/cloud-storage-pricing-plans/PricingSection';
 import FeaturesSection from '../components/cloud-storage-pricing-plans/FeaturesSection';
 import FaqSection from '../components/cloud-storage-pricing-plans/FaqSection';
 
@@ -17,6 +18,10 @@ const CloudStoragePricingPlans = ({
 
       <HeroSection
         textContent={langJson.HeroSection}
+      />
+
+      <PricingSection
+        textContent={langJson.PricingSection}
       />
 
       <FeaturesSection

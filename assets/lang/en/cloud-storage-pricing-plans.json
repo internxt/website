@@ -2,7 +2,38 @@
 	"HeroSection":
 	{
 		"eyebrow": "INTERNXT",
-		"title": "Choose the best plan for you.",
+		"title": {
+			"line1": "The safest cloud storage for all",
+			"line2": "your files, photos, and more."
+		},
+		"subtitle": {
+			"line1": "All Internxt accounts include Internxt Drive, which lets you sync",
+			"line2": "your folders and files, and Internxt Photos, a cloud gallery",
+			"line3": "to keep all your memories synced and ready to share."
+		},
+		"summaryCards": {
+			"card1": {
+				"line1": "All your photos.",
+				"line2": "One gallery."
+			},
+			"card2": {
+				"line1": "Backup your computer.",
+				"line2": "Access from everywhere."
+			},
+			"card3": {
+				"line1": "Keep your files",
+				"line2": "always up to date."
+			}
+		},
+		"getStartedSection": {
+			"subtitle": "Starting at only 0.89 €/month",
+			"cta": "Get started now"
+		}
+	},
+	"PricingSection":
+	{
+		"title": "The biggest bang for your buck.",
+		"subtitle": "Get the best-in-class privacy for you and your files with one of these three plans:",
 		"switch": {
 			"monthly": "Monthly",
 			"annually": "Annually"
@@ -24,24 +55,6 @@
 	},
 	"FeaturesSection":
 	{
-		"title": {
-			"line1": "Powerful features.",
-			"line2": "Easy to use."
-		},
-		"summaryCards": {
-			"card1": {
-				"line1": "All your photos.",
-				"line2": "One gallery."
-			},
-			"card2": {
-				"line1": "Backup your computer.",
-				"line2": "Access from everywhere."
-			},
-			"card3": {
-				"line1": "Keep your files",
-				"line2": "always up to date."
-			}
-		},
 		"features": {
 			"section1": {
 				"title": {

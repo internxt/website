@@ -34,13 +34,12 @@ const FaqSection = ({
 
         <span className="text-gray-50">{textContent.getStartedSection.subtitle}</span>
 
-        <button
-          type="button"
-          onClick={() => { window.scrollTo(0, 0); }}
+        <a
+          href="#pricing"
           className="button-primary-rounded"
         >
           {textContent.getStartedSection.cta}
-        </button>
+        </a>
       </div>
 
     </div>

@@ -2,7 +2,38 @@
 	"HeroSection":
 	{
 		"eyebrow": "INTERNXT",
-		"title": "Elige el mejor plan para ti.",
+		"title": {
+			"line1": "El almacenamiento cloud más seguro",
+			"line2": "para tus archivos, fotos y más."
+		},
+		"subtitle": {
+			"line1": "Todas las cuentas de Internxt incluyen Internxt Drive, que te permite ",
+			"line2": "sincronizar tus carpetas y archivos, e Internxt Photos, una galería en la nube",
+			"line3": "para mantener todos tus recuerdos sincronizados y listos para compartir."
+		},
+		"summaryCards": {
+			"card1": {
+				"line1": "Todas tus fotos.",
+				"line2": "Una gallería."
+			},
+			"card2": {
+				"line1": "Haz copias de seguridad.",
+				"line2": "Accede desde donde sea."
+			},
+			"card3": {
+				"line1": "Tus archivos",
+				"line2": "siempre a punto."
+			}
+		},
+		"getStartedSection": {
+			"subtitle": "A partir de sólo 0,89 €/mes",
+			"cta": "Empieza ahora"
+		}
+	},
+	"PricingSection":
+	{
+		"title": "Ahorra sin recortar en seguridad.",
+		"subtitle": "Obtén la mejor privacidad para ti y tus archivos con uno de estos tres planes:",
 		"switch": {
 			"monthly": "Mensual",
 			"annually": "Anual"

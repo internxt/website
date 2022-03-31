@@ -1,134 +1,130 @@
-import React, { useState } from 'react';
-import { Check } from 'phosphor-react';
-import PriceCard from './PriceCard';
+import React from 'react';
 
 const HeroSection = ({
   textContent
-}) => {
-  const [billing, setBilling] = useState(12);
+}) => (
+  <section className="relative bg-white">
+    <div className="flex flex-col items-center p-6 sm:p-10 lg:py-16 lg:px-8 space-y-8 sm:space-y-12">
 
-  const checkoutPlan = (plan) => `${plan}${billing}`;
-
-  const priceCardData = {
-    GB20: {
-      storage: '20GB',
-      price: {
-        1: '0.99',
-        12: '0.89'
-      }
-    },
-    GB200: {
-      storage: '200GB',
-      price: {
-        1: '4.49',
-        12: '3.49'
-      }
-    },
-    TB2: {
-      storage: '2TB',
-      price: {
-        1: '9.99',
-        12: '8.99'
-      }
-    }
-  };
-
-  return (
-    <section className="relative bg-gray-5">
-      <div className="flex flex-col items-center p-6 sm:p-10 lg:py-16 lg:px-8 space-y-10 sm:space-y-20">
+      {/* Fold */}
+      <div className="flex flex-col items-center space-y-4 md:space-y-8 text-center">
 
         {/* Title */}
-        <div className="flex flex-col items-center space-y text-center px-4">
-          <h2 className="text-lg sm:text-2xl font-semibold text">{textContent.eyebrow}</h2>
-          <h1 className="text-3xl lg:text-5xl font-medium">{textContent.title}</h1>
+        <div className="flex flex-col space-y">
+          <h2 className="text-base sm:text-xl font-semibold text">{textContent.eyebrow}</h2>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold sm:font-medium">
+            {textContent.title.line1}
+            {' '}
+            <br className="hidden md:flex" />
+            {textContent.title.line2}
+          </h1>
         </div>
 
-        <div className="flex flex-col items-center space-y-3 sm:space-y-8">
+        {/* Description */}
+        <h2 className="text-lg lg:text-xl">
+          {textContent.subtitle.line1}
+          {' '}
+          <br className="hidden md:flex" />
+          {textContent.subtitle.line2}
+          {' '}
+          <br className="hidden md:flex" />
+          {textContent.subtitle.line3}
+        </h2>
 
-          {/* Switch */}
-          <div className="relative flex flex-row p-0.5 bg-gray-10 text-gray-50 font-medium text-lg md:text-base rounded-xl md:rounded-lg">
+        {/* CTA Section */}
+        <div className="flex flex-col items-center space-y-3">
 
-            <div className="absolute inset-0.5 flex flex-row pointer-events-none">
-              <div className={`${billing === 1 ? 'w-0' : 'w-28'} transition-all duration-200 ease-in-out`} />
-              <div className="flex flex-row items-center justify-center h-9 md:h-8 w-28 rounded-xl md:rounded-lg bg-white shadow-switch-button" />
-            </div>
+          <h4 className="text-gray-50">{textContent.getStartedSection.subtitle}</h4>
 
-            <div className="flex flex-row items-center justify-center z-10">
-              <button
-                type="button"
-                onClick={() => { setBilling(1); }}
-                className={`flex flex-row items-center justify-center h-9 md:h-8 w-28 ${billing === 1 && 'text-gray-100'} transition-colors duration-200 ease-in-out`}
-              >
-                {textContent.switch.monthly}
-              </button>
-
-              <button
-                type="button"
-                onClick={() => { setBilling(12); }}
-                className={`flex flex-row items-center justify-center h-9 md:h-8 w-28 ${billing === 12 && 'text-gray-100'} transition-colors duration-200 ease-in-out`}
-              >
-                {textContent.switch.annually}
-              </button>
-            </div>
-
-          </div>
-
-          {/* Price table */}
-          <div className="flex flex-row items-start justify-center flex-wrap">
-
-            <PriceCard
-              textContent={textContent.priceCards}
-              storage={priceCardData.GB20.storage}
-              price={priceCardData.GB20.price[billing]}
-              billing={billing}
-              plan={checkoutPlan('GB20')}
-            />
-            <PriceCard
-              textContent={textContent.priceCards}
-              storage={priceCardData.GB200.storage}
-              price={priceCardData.GB200.price[billing]}
-              billing={billing}
-              plan={checkoutPlan('GB200')}
-              popular
-            />
-            <PriceCard
-              textContent={textContent.priceCards}
-              storage={priceCardData.TB2.storage}
-              price={priceCardData.TB2.price[billing]}
-              billing={billing}
-              plan={checkoutPlan('TB2')}
-            />
-
-          </div>
-
-          {/* (SMALL SCREENS) Plan features */}
-          <div className="flex sm:hidden flex-col items-center justify-start space-y-2 py-6">
-            <div className="flex flex-row items-center justify-center space-x-2">
-              <Check weight="bold" size={20} className="my-0.5" />
-              <span className="font-semibold">{textContent.priceCards.features[0]}</span>
-            </div>
-
-            <div className="flex flex-row items-center justify-center space-x-2">
-              <Check weight="bold" size={20} className="my-0.5" />
-              <span>{textContent.priceCards.features[1]}</span>
-            </div>
-
-            <div className="flex flex-row items-center justify-center space-x-2">
-              <Check weight="bold" size={20} className="my-0.5" />
-              <span>{textContent.priceCards.features[2]}</span>
-            </div>
-
-            <div className="flex flex-row items-center justify-center space-x-2">
-              <Check weight="bold" size={20} className="my-0.5" />
-              <span>{textContent.priceCards.features[3]}</span>
-            </div>
-          </div>
+          <a
+            href="#pricing"
+            className="button-primary-rounded"
+          >
+            {textContent.getStartedSection.cta}
+          </a>
 
         </div>
 
       </div>
-    </section>
-  );
-};
+
+      {/* Features quick summary */}
+      <div className="flex flex-col items-center text-center space-y-10 md:space-y-16">
+
+        {/* Info cards */}
+        <div className="w-full flex flex-col md:flex-row items-center justify-center flex-wrap">
+
+          {/* Card 1: "All your photos. One gallery." */}
+          <div className="flex flex-col w-full md:w-72 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3">
+            <div className="flex flex-col items-center justify-start w-full h-52">
+              <img
+                src="./images/landing/summary_photos.webp"
+                draggable="false"
+                className="w-52 h-52 -mt-8"
+                alt="Internxt Photos gallery"
+                style={{
+                  // Custom image shadow
+                  filter: 'drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.12)) drop-shadow(0px 16px 32px rgba(24, 24, 27, 0.06)) drop-shadow(0px 0px 8px rgba(24, 24, 27, 0.06)) drop-shadow(0px 8px 32px rgba(24, 24, 27, 0.16))',
+                }}
+              />
+            </div>
+
+            <div className="flex flex-col items-center p-8 pt-0 md:p-10 md:pt-0 text-center text-2xl font-semibold">
+              {textContent.summaryCards.card1.line1}
+              <br />
+              {textContent.summaryCards.card1.line2}
+            </div>
+          </div>
+
+          {/* Card 2: "Backup your computer. Access from everywhere." */}
+          <div className="flex flex-col w-full md:w-96 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3 order-last lg:order-none">
+            <div className="flex flex-col items-center p-8 pb-0 md:p-10 md:pb-0 text-center text-2xl font-semibold">
+              {textContent.summaryCards.card2.line1}
+              {' '}
+              <br className="hidden sm:flex" />
+              {textContent.summaryCards.card2.line2}
+            </div>
+
+            <div className="flex flex-col items-start justify-start w-full h-52">
+              <img
+                src="./images/landing/summary_web.webp"
+                draggable="false"
+                className="w-96 h-52 mt-8 ml-8"
+                alt="Internxt Drive Web application in Backups tab"
+                style={{
+                  // Custom image shadow
+                  filter: 'drop-shadow(0px 0px 0.5px rgba(0, 0, 0, 0.24)) drop-shadow(0px 32px 64px rgba(24, 24, 27, 0.06)) drop-shadow(0px 0px 8px rgba(24, 24, 27, 0.04)) drop-shadow(0px 12px 24px rgba(24, 24, 27, 0.06))',
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Card 3: "Keep your files always up to date." */}
+          <div className="flex flex-col w-full md:w-72 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3">
+            <div className="flex flex-col items-center p-8 pb-0 md:p-10 md:pb-0 text-center text-2xl font-semibold">
+              {textContent.summaryCards.card3.line1}
+              <br />
+              {textContent.summaryCards.card3.line2}
+            </div>
+
+            <div className="flex flex-col items-center justify-end w-full h-52">
+              <img
+                src="./images/landing/summary_desktop.webp"
+                draggable="false"
+                className="w-56 h-52 -mb-8"
+                alt="Internxt Desktop widget showing files syncing with the cloud"
+                style={{
+                  // Custom image shadow
+                  filter: 'drop-shadow(0px 0px 0.5px rgba(0, 0, 0, 0.24)) drop-shadow(0px 32px 64px rgba(24, 24, 27, 0.06)) drop-shadow(0px 0px 8px rgba(24, 24, 27, 0.04)) drop-shadow(0px 12px 24px rgba(24, 24, 27, 0.06))',
+                }}
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+);
 
 export default HeroSection;
