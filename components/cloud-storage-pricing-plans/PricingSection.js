@@ -35,7 +35,7 @@ const HeroSection = ({
 
   return (
     <section className="relative bg-gray-5" id="pricing">
-      <div className="flex flex-col items-center p-6 pt-10 sm:p-10 sm:pt-12 lg:py-16 lg:px-8 space-y-10 sm:space-y-20">
+      <div className="flex flex-col items-center p-6 pt-10 sm:p-10 sm:pt-12 lg:py-16 lg:px-8 space-y-10">
 
         {/* Title */}
         <div className="flex flex-col items-center space-y-3 text-center">
