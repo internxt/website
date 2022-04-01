@@ -118,7 +118,7 @@ export default function Footer({
                       <div>
                         {textContent.FooterSection.sections.products.send}
                       </div>
-                      <div className="text-orange-50 text-supporting-2 whitespace-nowrap ml-3 mt-0.5 pointer-events-none">
+                      <div className="text-orange-dark text-supporting-2 whitespace-nowrap ml-3 mt-0.5 pointer-events-none">
                         {textContent.FooterSection.comingSoon}
                       </div>
                     </a>
@@ -316,7 +316,7 @@ export default function Footer({
                           <div>
                             {textContent.FooterSection.sections.products.send}
                           </div>
-                          <div className={`${darkMode ? 'text-orange-40' : 'text-orange-50'} text-supporting-2 whitespace-nowrap ml-3 pointer-events-none`}>
+                          <div className={`${darkMode ? 'text-orange' : 'text-orange-dark'} text-supporting-2 whitespace-nowrap ml-3 pointer-events-none`}>
                             {textContent.FooterSection.comingSoon}
                           </div>
                         </a>

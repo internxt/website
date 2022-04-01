@@ -310,7 +310,7 @@ const FeaturesSection = ({
               </div>
 
               <div className="flex flex-col mb-24 px-10 lg:px-0">
-                <h4 className="text-xs font-semibold text-orange-50 mb-2 pt-10">
+                <h4 className="text-xs font-semibold text-orange-dark mb-2 pt-10">
                   {textContent.section5.eyebrow}
                 </h4>
 

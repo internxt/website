@@ -95,7 +95,7 @@ export default function Navbar({
 
                               <a className="outline-none flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-40">
                                 <span>{textContent.products.send}</span>
-                                <span className="ml-3 text-sm text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                                <span className="ml-3 text-sm text-orange-dark font-normal">{textContent.products.comingSoon}</span>
                               </a>
 
                             </Disclosure.Panel>
@@ -180,7 +180,7 @@ export default function Navbar({
 
                     <a className={`py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-30 ${darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'}`}>
                       <span>{textContent.products.send}</span>
-                      <span className="ml-3 text-xs text-orange-50 font-normal">{textContent.products.comingSoon}</span>
+                      <span className="ml-3 text-xs text-orange-dark font-normal">{textContent.products.comingSoon}</span>
                     </a>
 
                   </div>
