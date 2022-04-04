@@ -148,7 +148,7 @@ export default function Navbar({
 
           {/* Desktop links */}
           <div className="links">
-            <div className="hidden lg:inline-flex space-x-3">
+            <div className="hidden lg:inline-flex space-x-2">
 
               <Link href="/pricing" locale={lang}>
                 <a className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'} text-base font-medium`}>

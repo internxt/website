@@ -1,0 +1,61 @@
+{
+	"HeroSection":
+	{
+		"title": "Directorio de Organizaciones de Privacidad",
+		"subtitle": "Lista de organizaciones que ayudan a la privacidad",
+		"brief": {
+			"intro": {
+				"line1": "EN Internxt creemos que la humanidad puede lograr grandes cosas, por eso nuestros productos están construidos",
+				"line2": "no sólo para empoderar a las personas, sino también para promover la equidad y las prácticas éticas online."
+			},
+			"body": {
+				"card": {
+					"title": "Internxt lucha por el derecho a la privacidad digital",
+					"cta": {
+						"line1": "Leer mas sobre el compromiso",
+						"line2": "de privacidad de Internxt"
+					}
+				},
+				"paragraph1": "Desde 2020, nos esforzamos por crear una solución alternativa de almacenamiento en la nube para ofrecer una experiencia online más segura y privada, sin sacrificar la comodidad y el respeto al usuario.",
+				"paragraph2": "Creemos firmemente que una marea creciente levanta todos los barcos, y sólo juntos podemos crear un internet que respete a todos.",
+				"paragraph3": "Aquí hemos recopilado una lista actualizada de organizaciones que defiendem la privacidad y los derechos digitales. Cada una de las organizaciones que figuran en nuestro directorio se esfuerza por crear un internet libre y equitativo.",
+				"paragraph4": "Nos enorgullece contarnos entre las instituciones que se enumeran a continuación y esperamos un largo futuro trabajando junto a las numerosas organizaciones que promueven, apoyan y defienden la privacidad para todos."
+			}
+		}
+	},
+	"WikiSection": {
+		"title": {
+			"line1": "Organizaciones de defensa de la",
+			"line2": "privacidad y los derechos digitales"
+		},
+		"ngos": [
+			{
+				"id": "european-digital-rights",
+				"name": "European Digital Rights",
+				"short": "EDRi",
+				"description": "The European Digital Rights Initiative is a coalition of groups working to defend civil rights in the information society, specifically regarding the internet, copyright, and privacy in the European Union.",
+				"url": "https://edri.org/"
+			},
+			{
+				"id": "the-electronic-frontier-foundation",
+				"name": "The Electronic Frontier Foundation",
+				"short": "EEF",
+				"description": "EFF is a leading international digital-rights non-profit group working to protect our fundamental rights with regard to technology. Their mission is to educate the press, policymakers, and general public on digital civil liberties issues and to act as a defender of those liberties.",
+				"url": "https://www.eff.org/"
+			},
+			{
+				"id": "foundation-for-technology-and-privacy-outreach",
+				"name": "Foundation for Technology and Privacy Outreach",
+				"description": "Engages in educational initiatives aimed at increasing the public’s awareness of advances in technology, online privacy, and identity issues to foster innovation and promote consumer privacy.",
+				"url": "https://www.onlineprivacymatters.org/"
+			},
+			{
+				"id": "electronic-privacy-information-center",
+				"name": "Electronic Privacy Information Center",
+				"short": "EPIC",
+				"description": "A nonprofit research and advocacy center that produces policy research, conduct public education campaigns and engages in legislative advocacy. EPIC’s mission is to focus public attention on emerging privacy and civil liberties issues and to protect privacy, freedom of expression, and democratic values in the information age.",
+				"url": "https://epic.org/"
+			}
+		]
+	}
+}

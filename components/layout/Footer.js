@@ -29,7 +29,7 @@ export default function Footer({
 
   return (
     <section className={`flex flex-col w-full ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-cool-gray-5'}`}>
-      <div className="flex flex-col items-center justify-center w-full px-6 py-16 sm:p-20">
+      <div className="flex flex-col items-center justify-center w-full px-6 py-16 sm:p-20 sm:py-12">
 
         {/* Supporters from Spain and EU (Only in Spanish) */}
         {(lang === 'es') && (
@@ -46,7 +46,7 @@ export default function Footer({
         )}
 
         {/* Newsletter */}
-        <div className={`${hideNewsletter ? 'hidden' : 'flex'} w-full flex-col md:flex-row space-y-6 md:space-x-20 md:space-y-0 justify-center items-start mb-16`}>
+        <div className={`${hideNewsletter ? 'hidden' : 'flex'} w-full flex-col md:flex-row space-y-6 md:space-x-20 md:space-y-0 justify-center items-start mb-10`}>
 
           <div className="flex flex-col space-y-1 w-full md:max-w-sm">
             <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
@@ -89,7 +89,7 @@ export default function Footer({
         </div>
 
         {/* Separator */}
-        <div className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} mb-16`} />
+        <div className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} mb-10`} />
 
         {/* Footer content */}
         <footer className="w-full">
@@ -237,11 +237,11 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
 
-                    {/*
-                    <Link href="/directory-of-privacy-organizations" locale={lang} passHref>
+                    <Link href="/privacy-directory" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                     </Link>
 
+                    {/*
                     <Link href="/library" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.library}</a>
                     </Link>
@@ -265,7 +265,7 @@ export default function Footer({
 
             </div>
 
-            <div className="flex flex-col items-center space-y-4 mt-16">
+            <div className="flex flex-col items-center space-y-4 mt-10">
               <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                 {textContent.FooterSection.copyright}
               </p>
@@ -490,11 +490,11 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.blog}
                       </a>
 
-                      {/*
-                      <Link href="/directory-of-privacy-organizations" locale={lang} passHref>
+                      <Link href="/privacy-directory" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                       </Link>
 
+                      {/*
                       <Link href="/library" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.library}</a>
                       </Link>
