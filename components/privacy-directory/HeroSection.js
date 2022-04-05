@@ -10,8 +10,8 @@ const HeroSection = ({
     <div className="flex flex-col items-start w-full max-w-screen-lg pt-24 pb-10 sm:pt-24 lg:pt-36 lg:px-0 space-y-8 sm:space-y-12">
 
       {/* Title */}
-      <div className="flex flex-col space-y-2">
-        <h1 className="text-5xl lg:text-6xl font-semibold sm:font-medium">
+      <div className="flex flex-col w-full space-y-2">
+        <h1 className="text-4xl lg:text-6xl font-semibold sm:font-medium">
           {textContent.title}
         </h1>
         <h2 className="text-lg sm:text-2xl font-medium text-gray-50">{textContent.subtitle}</h2>
@@ -19,10 +19,7 @@ const HeroSection = ({
 
       {/* Description */}
       <h2 className="text-xl lg:text-2xl font-medium">
-        {textContent.brief.intro.line1}
-        {' '}
-        <br className="hidden lg:flex" />
-        {textContent.brief.intro.line2}
+        {textContent.brief.intro}
       </h2>
 
       {/* Body */}
@@ -60,7 +57,7 @@ const HeroSection = ({
           {/* Card */}
           <Link href="/privacy" locale={lang} passHref>
             <div
-              className="flex flex-col flex-shrink-0 items-start w-full sm:w-96 bg-black text-white p-8 sm:p-12 pb-48 sm:pb-60 space-y-6 bg-cover bg-center rounded-3xl shadow-subtle cursor-pointer"
+              className="flex flex-col flex-shrink-0 items-start w-full sm:w-96 bg-black text-white p-8 sm:p-12 pb-48 sm:pb-60 space-y-6 bg-cover bg-center rounded-3xl cursor-pointer"
               style={{
                 backgroundImage: 'url("./images/privacy-directory/typing.webp")',
               }}
@@ -69,7 +66,7 @@ const HeroSection = ({
 
               <div className="flex flex-col text-lg sm:text-xl -space-y-1.5 sm:space-y-0">
                 <p>{textContent.brief.body.card.cta.line1}</p>
-                <p className="flex flex.row items-end">
+                <p className="flex flex-row items-end">
                   {textContent.brief.body.card.cta.line2}
                   <CaretRight size={16} weight="bold" className="mb-1 ml-1" />
                 </p>

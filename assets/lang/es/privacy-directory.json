@@ -4,10 +4,7 @@
 		"title": "Directorio de Organizaciones de Privacidad",
 		"subtitle": "Lista de organizaciones que ayudan a la privacidad",
 		"brief": {
-			"intro": {
-				"line1": "EN Internxt creemos que la humanidad puede lograr grandes cosas, por eso nuestros productos están construidos",
-				"line2": "no sólo para empoderar a las personas, sino también para promover la equidad y las prácticas éticas online."
-			},
+			"intro": "En Internxt creemos que la humanidad puede lograr grandes cosas, por eso nuestros productos están construidos no sólo para empoderar a las personas, sino también para promover la equidad y las prácticas éticas online.",
 			"body": {
 				"card": {
 					"title": "Internxt lucha por el derecho a la privacidad digital",
@@ -25,37 +22,211 @@
 	},
 	"WikiSection": {
 		"title": {
-			"line1": "Organizaciones de defensa de la",
-			"line2": "privacidad y los derechos digitales"
+			"line1": "Privacy and digital",
+			"line2": "rights organizations"
 		},
 		"ngos": [
 			{
 				"id": "european-digital-rights",
 				"name": "European Digital Rights",
 				"short": "EDRi",
-				"description": "The European Digital Rights Initiative is a coalition of groups working to defend civil rights in the information society, specifically regarding the internet, copyright, and privacy in the European Union.",
+				"description": "The European Digital Rights Initiative es una coalición de grupos que trabajan en la defensa de los derechos civiles en la sociedad de la información, concretamente en lo que respecta a Internet, los derechos de autor y la privacidad en la Unión Europea.",
 				"url": "https://edri.org/"
 			},
 			{
 				"id": "the-electronic-frontier-foundation",
 				"name": "The Electronic Frontier Foundation",
 				"short": "EEF",
-				"description": "EFF is a leading international digital-rights non-profit group working to protect our fundamental rights with regard to technology. Their mission is to educate the press, policymakers, and general public on digital civil liberties issues and to act as a defender of those liberties.",
+				"description": "La EFF es un grupo internacional líder en derechos digitales sin ánimo de lucro que trabaja para proteger nuestros derechos fundamentales en relación con la tecnología. Su misión es educar a la prensa, a los responsables políticos y al público en general sobre las cuestiones relativas a las libertades civiles digitales y actuar como defensores de esas libertades.",
 				"url": "https://www.eff.org/"
 			},
 			{
 				"id": "foundation-for-technology-and-privacy-outreach",
 				"name": "Foundation for Technology and Privacy Outreach",
-				"description": "Engages in educational initiatives aimed at increasing the public’s awareness of advances in technology, online privacy, and identity issues to foster innovation and promote consumer privacy.",
+				"description": "Participa en iniciativas educativas destinadas a aumentar la concienciación del público sobre los avances tecnológicos, la privacidad online y las cuestiones de identidad para fomentar la innovación y promover la privacidad del consumidor.",
 				"url": "https://www.onlineprivacymatters.org/"
 			},
 			{
 				"id": "electronic-privacy-information-center",
 				"name": "Electronic Privacy Information Center",
 				"short": "EPIC",
-				"description": "A nonprofit research and advocacy center that produces policy research, conduct public education campaigns and engages in legislative advocacy. EPIC’s mission is to focus public attention on emerging privacy and civil liberties issues and to protect privacy, freedom of expression, and democratic values in the information age.",
+				"description": "Un centro de investigación y abogacía sin ánimo de lucro que produce investigación política, realiza campañas de educación pública y se compromete con la defensa legislativa. La misión de EPIC es centrar la atención pública en los nuevos problemas de privacidad y libertades civiles y proteger la privacidad, la libertad de expresión y los valores democráticos en la era de la información.",
 				"url": "https://epic.org/"
+			},
+			{
+				"id": "center-for-democracy-and-technology",
+				"name": "Center for Democracy and Technology",
+				"short": "CDT",
+				"description": "La CDT trabaja para promover los valores democráticos dando forma a la política y la arquitectura tecnológica, centrándose en los derechos del individuo y proporcionando liderazgo y defensa para ayudar a dar forma a la política pública y a las mejores prácticas de la industria, al tiempo que proporciona un foro para el diálogo entre las partes interesadas.",
+				"url": "https://cdt.org/"
+			},
+			{
+				"id": "privacy-international",
+				"name": "Privacy International",
+				"short": "PI",
+				"description": "Una organización benéfica registrada comprometida con la lucha por la protección de la democracia, la defensa de la dignidad de las personas y la exigencia de responsabilidades a las instituciones que violan la confianza pública. PI investiga y cuestiona la vigilancia gubernamental, denuncia a las empresas que la hacen posible y aboga por leyes sólidas que protejan la privacidad.",
+				"url": "https://www.privacyinternational.org/"
+			},
+			{
+				"id": "the-international-association-of-privacy-professionals",
+				"name": "The International Association of Privacy Professionals",
+				"short": "IAPP",
+				"description": "La IAPP, políticamente neutral, es la mayor y más completa comunidad global de privacidad de la información, es un recurso para los profesionales que ayudan a sus organizaciones a gestionar con éxito los riesgos para la privacidad y la seguridad de los datos.",
+				"url": "https://iapp.org/"
+			},
+			{
+				"id": "fight-for-the-future",
+				"name": "Fight for the Future",
+				"description": "Fight for the Future es una organización sin ánimo de lucro que crea campañas de alto nivel basadas en la web para “garantizar que la web siga manteniendo la libertad de expresión y la creatividad en su núcleo, sin interferencias ni censura y con total privacidad“.",
+				"url": "https://www.fightforthefuture.org/"
+			},
+			{
+				"id": "privacy-rights-clearinghouse",
+				"name": "Privacy Rights Clearinghouse",
+				"description": "Una organización sin ánimo de lucro centrada exclusivamente en los derechos de privacidad de los consumidores y en el empoderamiento de las personas. Privacy Rights Clearinghouse proporciona claridad sobre temas complejos de privacidad mediante la publicación de amplios materiales educativos y guías para el consumidor, al tiempo que ofrece varios servicios en línea, incluido un Centro de Reclamaciones donde los consumidores pueden denunciar violaciones de la privacidad y malas prácticas de privacidad.",
+				"url": "https://privacyrights.org/"
+			},
+			{
+				"id": "internet-free-expression-alliance",
+				"name": "Internet Free Expression Alliance",
+				"short": "IFEA",
+				"description": "La IFEA es un grupo de 30 miembros compuesto por editores online, organizaciones periodísticas, grupos académicos y otras instituciones centradas en la privacidad que se oponen a la adopción de técnicas y normas que limitan a Internet como algo distinto a una plataforma de comunicación abierta, diversa y democrática.",
+				"url": "http://ifea.net/"
+			},
+			{
+				"id": "future-of-privacy-forum",
+				"name": "Future of Privacy Forum",
+				"short": "FPF",
+				"description": "Un foro colectivo para apoyar el liderazgo en materia de privacidad y la beca que promueve prácticas de datos basadas en principios en apoyo de las tecnologías emergentes. El FPF reúne a la industria, los académicos, los defensores de los consumidores y otros líderes de opinión para explorar los desafíos que plantea la innovación tecnológica y desarrollar protecciones de la privacidad, normas éticas y prácticas empresariales viables.",
+				"url": "https://fpf.org/"
+			},
+			{
+				"id": "triangle-privacy-research-hub",
+				"name": "Triangle Privacy Research Hub",
+				"short": "TPRH",
+				"description": "TPRH es una organización sin ánimo de lucro comprometida con el avance del uso innovador y ético de los datos mediante la creación de conexiones entre académicos, estudiantes, líderes de la industria y defensores de la política. El trabajo realizado por TPRH explora enfoques políticos que permitan el uso de datos, protegiendo al mismo tiempo la privacidad individual, para mejorar cuestiones como el acceso a la información, la educación, la violencia de género y sexual, la asistencia sanitaria y la seguridad nacional y el cumplimiento de la ley.",
+				"url": "https://www.triangleprivacyhub.org/"
+			},
+			{
+				"id": "demand-progress",
+				"name": "Demand Progress",
+				"description": "Demand Progress aprovecha las tácticas de las bases para oponerse a todas las medidas de vigilancia y “proteger el carácter democrático de Internet, y utilizarlo para impugnar el poder concentrado de las empresas y hacer que los gobiernos rindan cuentas”, adquiriendo notoriedad por su campaña contra la Stop Online Piracy Act (SOPA).",
+				"url": "https://demandprogress.org/"
+			},
+			{
+				"id": "noyb",
+				"name": "NOYB",
+				"description": "A nongovernmental organization for the protection of privacy on the internet, noyb uses best practices from consumer rights groups, privacy activists, hackers, and legal tech initiatives and merges them into a stable European enforcement platform.",
+				"url": "https://noyb.eu/"
+			},
+			{
+				"id": "privaterra",
+				"name": "Privaterra",
+				"description": "Privaterra is an organization that provides technical education and support for civil society organizations (especially Human Rights NGOs) in the area of data privacy, secure communications, and information security.",
+				"url": "http://www.privaterra.org/"
+			},
+			{
+				"id": "agencia-espanola-de-proteccion-de-datos",
+				"name": "Agencia Española de Protección de Datos",
+				"short": "AEPD",
+				"description": "La AEPD es una autoridad pública independiente encargada de garantizar la privacidad y la protección de datos de los ciudadanos españoles. La agencia protege los derechos de los ciudadanos de acceso, rectificación, limitación, oposición, supresión ('derecho al olvido'), portabilidad y oposición al tratamiento de decisiones automatizadas.",
+				"url": "https://www.aepd.es/"
+			},
+			{
+				"id": "instituto-nacional-de-ciberseguridad",
+				"name": "Instituto Nacional de Ciberseguridad",
+				"short": "INCIBE",
+				"description": "INCIBE es una sociedad mercantil estatal, organizada como sociedad anónima, propiedad del Ministerio de Economía y Transformación Digital de España. INCIBE es una institución de referencia en cuanto al desarrollo de la ciberseguridad, y la confianza digital para el público en general, para RedIRIS (la red académica y de investigación española), y las empresas, especialmente los sectores de importancia estratégica.",
+				"url": "https://www.incibe.es/"
+			},
+			{
+				"id": "asociacion-profesional-espanola-de-privacidad",
+				"name": "Asociación Profesional Española de Privacidad",
+				"short": "APEP",
+				"description": "Asociación que integra a los profesionales de la protección de datos personales y de la privacidad, la APEP tiene como objetivo proporcionar estándares de calidad en materia de privacidad, promover el conocimiento y la valoración social del derecho fundamental a la protección de datos personales, y defender el interés general de los expertos en privacidad asegurando su reconocimiento público.",
+				"url": "https://www.apep.es/"
+			},
+			{
+				"id": "protege-tus-datos",
+				"name": "Protege tus datos",
+				"description": "Una ONG española, formada principalmente por jóvenes profesionales, especializada en las nuevas tecnologías de la información y la comunicación y preocupada por la protección de los datos personales en Internet. Protege Tus Datos imparte formación sobre seguridad informática, promueve la legislación regional sobre privacidad e investiga las tecnologías nuevas y emergentes en relación con la privacidad y la seguridad de los usuarios.",
+				"url": "http://www.protegetusdatos.org/"
+			},
+			{
+				"id": "derechos-digitales",
+				"name": "Derechos Digitales",
+				"description": "Derechos Digitales es una ONG cuya misión es la protección y promoción de los derechos fundamentales en el entorno online, a través de un enfoque integral de Internet desde la perspectiva de los derechos humanos, la libertad de expresión y la privacidad, así como los derechos de autor y el acceso al conocimiento, los derechos civiles y políticos, y los derechos sociales y culturales.",
+				"url": "https://www.derechosdigitales.org/"
+			},
+			{
+				"id": "datos-protegidos",
+				"name": "Datos Protegidos",
+				"description": "Una fundación chilena sin ánimo de lucro con el objetivo de promover prácticas saludables y seguras para proteger su información centrándose en los riesgos asociados a los dispositivos y plataformas que las personas utilizan a diario.",
+				"url": "https://datosprotegidos.org/"
+			},
+			{
+				"id": "instituto-nacional-de-proteccion-de-datos",
+				"name": "Instituto Nacional de Protección de Datos",
+				"short": "INPD",
+				"description": "Institución jurídica española de consultoría en derecho de la privacidad, el INPD ofrece servicios integrales para el cumplimiento de la legislación vigente en materia de Protección de Datos de Carácter Personal y de la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico para empresas y autónomos.",
+				"url": "https://institutoprotecciondatos.com/"
+			},
+			{
+				"id": "xnet",
+				"name": "Xnet",
+				"description": "Xnet es una plataforma activista que trabaja para avanzar en soluciones en los ámbitos de la libertad de expresión, la neutralidad de la red, los derechos digitales y la privacidad, los mecanismos de transparencia, la libre circulación de la cultura, el conocimiento y la información, entre otros.",
+				"url": "https://xnet-x.net/"
+			},
+			{
+				"id": "bits-of-freedom",
+				"name": "Bits of Freedom",
+				"description": "Bits of Freedom es una fundación neerlandesa independiente de derechos digitales que se centra en la privacidad y la libertad de comunicación en la era digital y trabaja para influir en la legislación y la autorregulación, al tiempo que capacita a los ciudadanos y usuarios mediante el fomento de la concienciación, el uso y el desarrollo de tecnologías que mejoran la libertad.",
+				"url": "https://www.bitsoffreedom.nl/english/"
+			},
+			{
+				"id": "the-confederation-of-european-data-protection-organisations",
+				"name": "The Confederation of European Data Protection Organisations",
+				"short": "CEDPO",
+				"description": "El objetivo de la CEDPO es promover el papel del responsable de la protección de datos (RPD) de la UE asesorando sobre una protección de datos equilibrada, practicable y eficaz, al tiempo que contribuye a una mejor armonización de la legislación y las prácticas de protección de datos en toda la UE/EEE.",
+				"url": "https://cedpo.eu/"
+			},
+			{
+				"id": "identity-theft-resource-center",
+				"name": "Identity Theft Resource Center",
+				"short": "ITRC",
+				"description": "La ITRC es una organización sin ánimo de lucro creada para apoyar a las víctimas del robo de identidad en la resolución de sus casos, que también trabaja para ampliar la educación y la concienciación del público en la comprensión del robo de identidad, las violaciones de datos, la ciberseguridad, las estafas, el fraude y los problemas de privacidad.",
+				"url": "https://www.idtheftcenter.org/"
+			},
+			{
+				"id": "open-source-initiative",
+				"name": "Open Source Initiative",
+				"short": "OSI",
+				"description": "OSI es una organización sin ánimo de lucro con sede en California que promueve la importancia del software no propietario a través de la defensa pública, la educación y la creación de comunidades. OSI trabaja para potenciar un software transparente, revisado por pares, de alta calidad y asequible, en un esfuerzo por poner fin a la dependencia de los proveedores.",
+				"url": "https://opensource.org/"
+			},
+			{
+				"id": "access-now",
+				"name": "Access Now",
+				"description": "Access Now es un grupo de defensa que lucha por defender y ampliar los derechos digitales de los usuarios. Mediante el funcionamiento de una línea telefónica de seguridad digital 24/7, la organización de la conferencia anual RightsCon y la concesión de subvenciones a organizaciones de base que trabajan para dar forma a la política legal digital.  Access Now se ha consolidado como una fuerza mundial para el bien en la era digital.",
+				"url": "https://www.accessnow.org/"
 			}
 		]
+	},
+	"SupportNGOsSection": {
+		"cardTitle": {
+			"line1": "Juntos",
+			"line2": "hacemos ",
+			"line3": "del mundo un",
+			"line4": "lugar mejor."
+		},
+		"body": {
+			"title": "Internxt apoya a las ONG",
+			"paragraph1": "El derecho a la privacidad debe ser protegido a toda costa. Solo trabajando juntos podremos garantizar los derechos fundamentales a la propiedad de los datos y la privacidad digital para todos.",
+			"paragraph2": {
+				"regular": "Internxt se compromete a apoyar a las organizaciones sin ánimo de lucro y a las ONG que trabajan para hacer de Internet un lugar mejor. Si tú o tu equipo trabajáis por un Internet más libre y ético, puedes pedir un",
+				"semibold": "50% de descuento en los planes de suscripción poniéndote en contacto con nosotros."
+			},
+			"cta": "Contacta para precios para ONGs"
+		}
 	}
 }

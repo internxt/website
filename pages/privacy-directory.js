@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/privacy-directory/HeroSection';
 import WikiSection from '../components/privacy-directory/WikiSection';
-import GetStartedSection from '../components/privacy-directory/GetStartedSection';
+import SupportNGOsSection from '../components/privacy-directory/SupportNGOsSection';
 import Footer from '../components/layout/Footer';
 
 const PrivacyDirectory = ({
@@ -36,9 +36,9 @@ const PrivacyDirectory = ({
         textContent={textContent.WikiSection}
       />
 
-      {/* <GetStartedSection
-        textContent={textContent.GetStartedSection}
-      /> */}
+      <SupportNGOsSection
+        textContent={textContent.SupportNGOsSection}
+      />
 
       <Footer
         textContent={footerLang}

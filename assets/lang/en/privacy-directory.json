@@ -4,10 +4,7 @@
 		"title": "Data Privacy Directory",
 		"subtitle": "List of organizations that help in privacy",
 		"brief": {
-			"intro": {
-				"line1": "Internxt believes that humanity can achieve great things, that’s why our products are built to",
-				"line2": "not only empower people but also to promote fairness and ethical practices online."
-			},
+			"intro": "Internxt believes that humanity can achieve great things, that’s why our products are built to not only empower people but also to promote fairness and ethical practices online.",
 			"body": {
 				"card": {
 					"title": "Internxt fights for individuals’ right to digital privacy",
@@ -33,7 +30,7 @@
 				"id": "european-digital-rights",
 				"name": "European Digital Rights",
 				"short": "EDRi",
-				"description": "The European Digital Rights Initiative is a coalition of groups working to defend civil rights in the information society, specifically regarding the internet, copyright, and privacy in the European Union.",
+				"description": "European Digital Rights Initiative is a coalition of groups working to defend civil rights in the information society, specifically regarding the internet, copyright, and privacy in the European Union.",
 				"url": "https://edri.org/"
 			},
 			{
@@ -58,7 +55,7 @@
 			},
 			{
 				"id": "center-for-democracy-and-technology",
-				"name": "Center for Democracy & Technology",
+				"name": "Center for Democracy and Technology",
 				"short": "CDT",
 				"description": "CDT works to promote democratic values by shaping technology policy and architecture, with a focus on the rights of the individual providing leadership and advocacy to help shape public policy and industry best practices while providing a forum for stakeholder dialogue.",
 				"url": "https://cdt.org/"
@@ -129,22 +126,22 @@
 				"url": "http://www.privaterra.org/"
 			},
 			{
-				"id": "spanish-agency-for-data-protection",
-				"name": "Spanish Agency for Data Protection",
+				"id": "agencia-espanola-de-proteccion-de-datos",
+				"name": "Agencia Española de Protección de Datos",
 				"short": "AEPD",
 				"description": "The AEPD is an independent public authority charged with ensuring the privacy and data protection of Spanish citizens. The agency protects citizens’ rights of access, rectification, limitation, opposition, deletion ('right to be forgotten'), portability, and opposition to the processing of automated decisions.",
 				"url": "https://www.aepd.es/"
 			},
 			{
-				"id": "spanish-national-institute-of-cybersecurity",
-				"name": "Spanish National Institute of Cybersecurity",
+				"id": "instituto-nacional-de-ciberseguridad",
+				"name": "Instituto Nacional de Ciberseguridad",
 				"short": "INCIBE",
 				"description": "INCIBE is a state-owned commercial company, organized as a public limited company, owned by the Spanish Ministry of Economic Affairs and Digital Transformation. INCIBE is a benchmark institution concerning the development of cybersecurity, and digital trust for the general public, for RedIRIS (the Spanish academic and research network), and businesses, especially sectors of strategic importance.",
 				"url": "https://www.incibe.es/"
 			},
 			{
-				"id": "spanish-privacy-professional-association",
-				"name": "Spanish Privacy Professional Association",
+				"id": "asociacion-profesional-espanola-de-privacidad",
+				"name": "Asociación Profesional Española de Privacidad",
 				"short": "APEP",
 				"description": "An association that integrates professionals in the protection of personal data and privacy, APEP’s purpose is to provide quality privacy standards, promote knowledge and social appreciation of the fundamental right to the protection of personal data, and defend the general interest of privacy experts ensuring their public recognition.",
 				"url": "https://www.apep.es/"
@@ -169,11 +166,67 @@
 			},
 			{
 				"id": "instituto-nacional-de-proteccion-de-datos",
-				"name": "Instituto nacional de protección de datos",
+				"name": "Instituto Nacional de Protección de Datos",
 				"short": "INPD",
 				"description": "A Spanish legal institution providing privacy law consulting, INPD offers comprehensive services for compliance with the current legislation on Personal Data Protection and the Law on Services of the Information Society and Electronic Commerce for companies and freelancers.",
 				"url": "https://institutoprotecciondatos.com/"
+			},
+			{
+				"id": "xnet",
+				"name": "Xnet",
+				"description": "Xnet is an activist platform working to advance solutions in the fields of freedom of expression, net neutrality, digital rights and privacy, mechanisms for transparency, the free circulation of culture, knowledge, and information, among others.",
+				"url": "https://xnet-x.net/"
+			},
+			{
+				"id": "bits-of-freedom",
+				"name": "Bits of Freedom",
+				"description": "An independent Dutch digital rights foundation, Bits of Freedom focuses on privacy and freedom of communication in the digital age, working to influence legislation and self-regulation while empowering citizens and users by advancing the awareness, use, and development of freedom-enhancing technologies.",
+				"url": "https://www.bitsoffreedom.nl/english/"
+			},
+			{
+				"id": "the-confederation-of-european-data-protection-organisations",
+				"name": "The Confederation of European Data Protection Organisations",
+				"short": "CEDPO",
+				"description": "CEDPO aims to promote the role of the EU’s Data Protection Officer (DPO) by providing advice on balanced, practicable, and effective data protection while also contributing to a better harmonization of data protection law and practices throughout the EU/EEA.",
+				"url": "https://cedpo.eu/"
+			},
+			{
+				"id": "identity-theft-resource-center",
+				"name": "Identity Theft Resource Center",
+				"short": "ITRC",
+				"description": "ITRC is a nonprofit organization established to support victims of identity theft in resolving their cases that also works to broaden public education and awareness in the understanding of identity theft, data breaches, cybersecurity, scams, fraud, and privacy issues.",
+				"url": "https://www.idtheftcenter.org/"
+			},
+			{
+				"id": "open-source-initiative",
+				"name": "Open Source Initiative",
+				"short": "OSI",
+				"description": "OSI is a California-based non-profit promoting the importance of non-proprietary software through public-advocacy, education, and community building. OSI works to empower transparent, peer-reviewed, high-quality, and affordable software in an effort to bring an end to predatory vendor lock-in.",
+				"url": "https://opensource.org/"
+			},
+			{
+				"id": "access-now",
+				"name": "Access Now",
+				"description": "Access Now is an advocacy group fighting to defend and extend user’s digital rights. By operating a 24/7 Digital Security Hotline, organizing the annual RightsCon conference, and providing grants to grassroots organizations working to shape digital legal policy. Access Now has cemented itself as a world-wide force for good in the digital age.",
+				"url": "https://www.accessnow.org/"
 			}
 		]
+	},
+	"SupportNGOsSection": {
+		"cardTitle": {
+			"line1": "Together",
+			"line2": "we make",
+			"line3": "the world a",
+			"line4": "better place."
+		},
+		"body": {
+			"title": "Internxt supports NGOs",
+			"paragraph1": "Humanity’s right to privacy must be protected at all costs. Only by working together we can ensure fundamental rights to data ownership and digital privacy for everyone.",
+			"paragraph2": {
+				"regular": "Internxt is committed to supporting nonprofits and NGOs working to make the internet a better place. If you or your team are working towards a more free and ethical internet, you can sign up for",
+				"semibold": "50% off subscription plans by contacting us."
+			},
+			"cta": "Contact us for special NGO pricing"
+		}
 	}
 }
