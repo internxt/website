@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import Head from 'next/head';
 import React, { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 
 interface LayoutProps {
   children: React.ReactNode,
@@ -27,6 +28,7 @@ export default function Layout({
 }: LayoutProps) {
   useEffect(() => {
     window.analytics.page(segmentName);
+    TagManager.initialize({ gtmId: 'GTM-TH667N7' });
     const getStartedLinkList = Array(document.querySelectorAll('[id=get-started-link]'));
 
     getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
