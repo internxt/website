@@ -9,21 +9,21 @@
 				"card": {
 					"title": "Internxt lucha por el derecho a la privacidad digital",
 					"cta": {
-						"line1": "Leer mas sobre el compromiso",
+						"line1": "Lee más sobre el compromiso",
 						"line2": "de privacidad de Internxt"
 					}
 				},
 				"paragraph1": "Desde 2020, nos esforzamos por crear una solución alternativa de almacenamiento en la nube para ofrecer una experiencia online más segura y privada, sin sacrificar la comodidad y el respeto al usuario.",
-				"paragraph2": "Creemos firmemente que una marea creciente levanta todos los barcos, y sólo juntos podemos crear un internet que respete a todos.",
-				"paragraph3": "Aquí hemos recopilado una lista actualizada de organizaciones que defiendem la privacidad y los derechos digitales. Cada una de las organizaciones que figuran en nuestro directorio se esfuerza por crear un internet libre y equitativo.",
-				"paragraph4": "Nos enorgullece contarnos entre las instituciones que se enumeran a continuación y esperamos un largo futuro trabajando junto a las numerosas organizaciones que promueven, apoyan y defienden la privacidad para todos."
+				"paragraph2": "Creemos firmemente en que sólo juntos podemos crear un internet que respete a todo el mundo.",
+				"paragraph3": "Aquí hemos recopilado una lista actualizada de organizaciones que defienden la privacidad y los derechos digitales. Cada una de las organizaciones que figuran en nuestro directorio se esfuerza por crear un internet libre y equitativo.",
+				"paragraph4": "Nos enorgullece encontranos entre las instituciones que se enumeran a continuación y esperamos poder trabajar en el futuro junto a estas organizaciones que promueven, apoyan y defienden la privacidad para todos."
 			}
 		}
 	},
 	"WikiSection": {
 		"title": {
-			"line1": "Privacy and digital",
-			"line2": "rights organizations"
+			"line1": "Organizaciones de defensa de la",
+			"line2": "privacidad y los derechos digitales"
 		},
 		"ngos": [
 			{
@@ -64,7 +64,7 @@
 				"id": "privacy-international",
 				"name": "Privacy International",
 				"short": "PI",
-				"description": "Una organización benéfica registrada comprometida con la lucha por la protección de la democracia, la defensa de la dignidad de las personas y la exigencia de responsabilidades a las instituciones que violan la confianza pública. PI investiga y cuestiona la vigilancia gubernamental, denuncia a las empresas que la hacen posible y aboga por leyes sólidas que protejan la privacidad.",
+				"description": "Una organización benéfica comprometida con la lucha por la protección de la democracia, la defensa de la dignidad de las personas y la exigencia de responsabilidades a las instituciones que violan la confianza pública. PI investiga y cuestiona la vigilancia gubernamental, denuncia a las empresas que la hacen posible y aboga por leyes sólidas que protejan la privacidad.",
 				"url": "https://www.privacyinternational.org/"
 			},
 			{
@@ -77,7 +77,7 @@
 			{
 				"id": "fight-for-the-future",
 				"name": "Fight for the Future",
-				"description": "Fight for the Future es una organización sin ánimo de lucro que crea campañas de alto nivel basadas en la web para “garantizar que la web siga manteniendo la libertad de expresión y la creatividad en su núcleo, sin interferencias ni censura y con total privacidad“.",
+				"description": "Fight for the Future es una organización sin ánimo de lucro que crea campañas de alto nivel basadas en la web para garantizar que la web siga manteniendo la libertad de expresión y la creatividad en su núcleo, sin interferencias ni censura y con total privacidad.",
 				"url": "https://www.fightforthefuture.org/"
 			},
 			{
@@ -110,33 +110,33 @@
 			{
 				"id": "demand-progress",
 				"name": "Demand Progress",
-				"description": "Demand Progress aprovecha las tácticas de las bases para oponerse a todas las medidas de vigilancia y “proteger el carácter democrático de Internet, y utilizarlo para impugnar el poder concentrado de las empresas y hacer que los gobiernos rindan cuentas”, adquiriendo notoriedad por su campaña contra la Stop Online Piracy Act (SOPA).",
+				"description": "Demand Progress aprovecha las tácticas de las bases para oponerse a todas las medidas de vigilancia y proteger el carácter democrático de Internet, y utilizarlo para impugnar el poder concentrado de las empresas y hacer que los gobiernos rindan cuentas, adquiriendo notoriedad por su campaña contra la Stop Online Piracy Act (SOPA).",
 				"url": "https://demandprogress.org/"
 			},
 			{
 				"id": "noyb",
 				"name": "NOYB",
-				"description": "A nongovernmental organization for the protection of privacy on the internet, noyb uses best practices from consumer rights groups, privacy activists, hackers, and legal tech initiatives and merges them into a stable European enforcement platform.",
+				"description": "Organización no gubernamental para la protección de la privacidad en Internet, NOYB utiliza las mejores prácticas de los grupos de derechos de los consumidores, los activistas de la privacidad, los hackers y las iniciativas de tecnología legal y las fusiona en una plataforma europea estable de aplicación.",
 				"url": "https://noyb.eu/"
 			},
 			{
 				"id": "privaterra",
 				"name": "Privaterra",
-				"description": "Privaterra is an organization that provides technical education and support for civil society organizations (especially Human Rights NGOs) in the area of data privacy, secure communications, and information security.",
+				"description": "Privaterra es una organización que ofrece formación técnica y apoyo a las organizaciones de la sociedad civil (especialmente a las ONG de derechos humanos) en el ámbito de la privacidad de los datos, las comunicaciones seguras y la seguridad de la información.",
 				"url": "http://www.privaterra.org/"
 			},
 			{
 				"id": "agencia-espanola-de-proteccion-de-datos",
 				"name": "Agencia Española de Protección de Datos",
 				"short": "AEPD",
-				"description": "La AEPD es una autoridad pública independiente encargada de garantizar la privacidad y la protección de datos de los ciudadanos españoles. La agencia protege los derechos de los ciudadanos de acceso, rectificación, limitación, oposición, supresión ('derecho al olvido'), portabilidad y oposición al tratamiento de decisiones automatizadas.",
+				"description": "La AEPD es una autoridad pública independiente encargada de garantizar la privacidad y la protección de datos de los ciudadanos españoles. La agencia protege los derechos de los ciudadanos de acceso, rectificación, limitación, oposición, supresión (derecho al olvido), portabilidad y oposición al tratamiento de decisiones automatizadas.",
 				"url": "https://www.aepd.es/"
 			},
 			{
 				"id": "instituto-nacional-de-ciberseguridad",
 				"name": "Instituto Nacional de Ciberseguridad",
 				"short": "INCIBE",
-				"description": "INCIBE es una sociedad mercantil estatal, organizada como sociedad anónima, propiedad del Ministerio de Economía y Transformación Digital de España. INCIBE es una institución de referencia en cuanto al desarrollo de la ciberseguridad, y la confianza digital para el público en general, para RedIRIS (la red académica y de investigación española), y las empresas, especialmente los sectores de importancia estratégica.",
+				"description": "INCIBE es una sociedad mercantil estatal, organizada como sociedad anónima, propiedad del Ministerio de Economía y Transformación Digital de España. INCIBE es una institución de referencia en cuanto al desarrollo de la ciberseguridad, y la confianza digital para el público en general, para RedIRIS (la Red Académica y de Investigación Española), y las empresas, especialmente los sectores de importancia estratégica.",
 				"url": "https://www.incibe.es/"
 			},
 			{
@@ -226,7 +226,10 @@
 				"regular": "Internxt se compromete a apoyar a las organizaciones sin ánimo de lucro y a las ONG que trabajan para hacer de Internet un lugar mejor. Si tú o tu equipo trabajáis por un Internet más libre y ético, puedes pedir un",
 				"semibold": "50% de descuento en los planes de suscripción poniéndote en contacto con nosotros."
 			},
-			"cta": "Contacta para precios para ONGs"
+			"cta": {
+				"line1": "Contacta para obtener nuestro",
+				"line2": "descuento para ONGs"
+			}
 		}
 	}
 }

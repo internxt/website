@@ -77,7 +77,7 @@
 			{
 				"id": "fight-for-the-future",
 				"name": "Fight for the Future",
-				"description": "Fight for the Future is a nonprofit organization that creates high-profile, web-based campaigns to 'ensure that the web continues to hold freedom of expression and creativity at its core—free of interference or censorship and with full privacy.'",
+				"description": "Fight for the Future is a nonprofit organization that creates high-profile, web-based campaigns to ensure that the web continues to hold freedom of expression and creativity at its core—free of interference or censorship and with full privacy.",
 				"url": "https://www.fightforthefuture.org/"
 			},
 			{
@@ -110,13 +110,13 @@
 			{
 				"id": "demand-progress",
 				"name": "Demand Progress",
-				"description": "Demand Progress harnesses grassroots tactics to oppose all measures of surveillance and  “to protect the democratic character of the internet — and wield it to contest concentrated corporate power and hold government accountable”, gaining notoriety for its campaign against the Stop Online Piracy Act (SOPA).",
+				"description": "Demand Progress harnesses grassroots tactics to oppose all measures of surveillance and to protect the democratic character of the internet — and wield it to contest concentrated corporate power and hold government accountable, gaining notoriety for its campaign against the Stop Online Piracy Act (SOPA).",
 				"url": "https://demandprogress.org/"
 			},
 			{
 				"id": "noyb",
 				"name": "NOYB",
-				"description": "A nongovernmental organization for the protection of privacy on the internet, noyb uses best practices from consumer rights groups, privacy activists, hackers, and legal tech initiatives and merges them into a stable European enforcement platform.",
+				"description": "A nongovernmental organization for the protection of privacy on the internet, NOYB uses best practices from consumer rights groups, privacy activists, hackers, and legal tech initiatives and merges them into a stable European enforcement platform.",
 				"url": "https://noyb.eu/"
 			},
 			{
@@ -129,7 +129,7 @@
 				"id": "agencia-espanola-de-proteccion-de-datos",
 				"name": "Agencia Española de Protección de Datos",
 				"short": "AEPD",
-				"description": "The AEPD is an independent public authority charged with ensuring the privacy and data protection of Spanish citizens. The agency protects citizens’ rights of access, rectification, limitation, opposition, deletion ('right to be forgotten'), portability, and opposition to the processing of automated decisions.",
+				"description": "The AEPD is an independent public authority charged with ensuring the privacy and data protection of Spanish citizens. The agency protects citizens’ rights of access, rectification, limitation, opposition, deletion (right to be forgotten), portability, and opposition to the processing of automated decisions.",
 				"url": "https://www.aepd.es/"
 			},
 			{
@@ -226,7 +226,10 @@
 				"regular": "Internxt is committed to supporting nonprofits and NGOs working to make the internet a better place. If you or your team are working towards a more free and ethical internet, you can sign up for",
 				"semibold": "50% off subscription plans by contacting us."
 			},
-			"cta": "Contact us for special NGO pricing"
+			"cta": {
+				"line1": "Contact us for special NGO",
+				"line2": "pricing"
+			}
 		}
 	}
 }

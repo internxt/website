@@ -50,9 +50,15 @@ const SupportNGOsSection = ({
 
         {/* CTAs */}
         <div className="flex flex-row text-primary">
-          <a href="mailto:hello@internxt.com" className="flex flex-row items-end text-xl">
-            {textContent.body.cta}
-            <CaretRight size={18} weight="bold" className="mb-0.75 ml-0.5" />
+          <a href="mailto:hello@internxt.com" className="flex flex-row flex-wrap justify-start text-xl">
+            <span className="flex flex-row items-end">
+              {textContent.body.cta.line1}
+            </span>
+            &nbsp;
+            <span className="flex flex-row items-end">
+              {textContent.body.cta.line2}
+              <CaretRight size={18} weight="bold" className="mb-0.75 ml-0.5" />
+            </span>
           </a>
         </div>
       </div>
