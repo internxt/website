@@ -18,7 +18,7 @@ const PrivacyDirectory = ({
 
   return (
 
-    <Layout segmentName="Ads Landing" title={metatags[0].title} description={metatags[0].description}>
+    <Layout segmentName="Privacy Directory" title={metatags[0].title} description={metatags[0].description}>
 
       <Navbar
         textContent={navbarLang}
