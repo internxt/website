@@ -14,7 +14,7 @@ const PrivacyDirectory = ({
   lang
   // lang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'landing');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy-directory');
 
   return (
 

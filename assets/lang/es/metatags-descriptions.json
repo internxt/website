@@ -78,5 +78,10 @@
         "id": "landing",
         "title": "Internxt - Almacenamiento seguro y privado",
         "description": "Internxt ofrece servicios en la nube seguros, privados y cifrados tales como Internxt Drive e Internxt Photos."
+    },
+    {
+        "id": "privacy-directory",
+        "title": "Internxt - Directorio de organizaciones, instituciones y ONG de protección de la privacidad",
+        "description": "Directorio de organizaciones, instituciones y ONG de derechos digitales que trabajan junto a Internxt para promover, apoyar y defender la privacidad para todos."
     }
 ]

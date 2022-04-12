@@ -78,5 +78,10 @@
         "id": "landing",
         "title": "Internxt - Most Secure Cloud Storage",
         "description": "Internxt provides secure, private and encrypted cloud services like Internxt Drive and Internxt Photos."
+    },
+    {
+        "id": "privacy-directory",
+        "title": "Internxt - Directory of Privacy Organizations, Institutions, and NGOs",
+        "description": "Directory of digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
     }
 ]
