@@ -185,27 +185,6 @@ export default function Footer({
                   </h3>
                   <div className={`flex flex-col space-y-1.5 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
 
-                    <div className="flex flex-row space-x-1">
-                      <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`} draggable="false" alt="twitter icon" />
-                      </a>
-                      <a href="https://www.facebook.com/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`} draggable="false" alt="facebook icon" />
-                      </a>
-                      <a href="https://linkedin.com/company/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`} draggable="false" alt="linkedin icon" />
-                      </a>
-                      <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`} draggable="false" alt="youtube icon" />
-                      </a>
-                      <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`} draggable="false" alt="instagram icon" />
-                      </a>
-                      <a href="https://mastodon.social/web/@Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                        <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`} draggable="false" alt="instagram icon" />
-                      </a>
-                    </div>
-
                     <a href="https://drive.internxt.com/new" target="_top">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
@@ -266,14 +245,37 @@ export default function Footer({
             </div>
 
             <div className="flex flex-col items-center space-y-4 mt-10">
+              <div className="flex flex-row space-x-1">
+                <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                  <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`} draggable="false" alt="twitter icon" />
+                </a>
+                <a href="https://www.facebook.com/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                  <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`} draggable="false" alt="facebook icon" />
+                </a>
+                <a href="https://linkedin.com/company/internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                  <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`} draggable="false" alt="linkedin icon" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                  <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`} draggable="false" alt="youtube icon" />
+                </a>
+                <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                  <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`} draggable="false" alt="instagram icon" />
+                </a>
+                <a href="https://mastodon.social/web/@Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                  <img loading="lazy" className="h-4" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`} draggable="false" alt="instagram icon" />
+                </a>
+              </div>
+
               <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                 {textContent.FooterSection.copyright}
               </p>
+
               <Link href="/" locale={lang}>
                 <a className="flex flex-shrink-0">
                   <img loading="lazy" src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
                 </a>
               </Link>
+
             </div>
 
           </div>
@@ -420,27 +422,6 @@ export default function Footer({
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
 
-                      <div className="flex flex-row space-x-1">
-                        <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
-                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`} draggable="false" alt="twitter icon" />
-                        </a>
-                        <a href="https://www.facebook.com/internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
-                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`} draggable="false" alt="facebook icon" />
-                        </a>
-                        <a href="https://linkedin.com/company/internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
-                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`} draggable="false" alt="linkedin icon" />
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
-                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`} draggable="false" alt="youtube icon" />
-                        </a>
-                        <a href="https://instagram.com/internxt/" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
-                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`} draggable="false" alt="instagram icon" />
-                        </a>
-                        <a href="https://mastodon.social/web/@Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
-                          <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`} draggable="false" alt="instagram icon" />
-                        </a>
-                      </div>
-
                       <a href="https://drive.internxt.com/new" target="_top">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
@@ -520,14 +501,38 @@ export default function Footer({
             </Disclosure>
 
             <div className="flex flex-col items-center space-y-4 mt-16">
+
+              <div className="flex flex-row space-x-1">
+                <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                  <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`} draggable="false" alt="twitter icon" />
+                </a>
+                <a href="https://www.facebook.com/internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                  <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`} draggable="false" alt="facebook icon" />
+                </a>
+                <a href="https://linkedin.com/company/internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                  <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`} draggable="false" alt="linkedin icon" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                  <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`} draggable="false" alt="youtube icon" />
+                </a>
+                <a href="https://instagram.com/internxt/" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                  <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`} draggable="false" alt="instagram icon" />
+                </a>
+                <a href="https://mastodon.social/web/@Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                  <img loading="lazy" className="h-5" src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`} draggable="false" alt="instagram icon" />
+                </a>
+              </div>
+
               <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                 {textContent.FooterSection.copyright}
               </p>
+
               <Link href="/" locale={lang}>
                 <a className="flex flex-shrink-0">
                   <img loading="lazy" src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
                 </a>
               </Link>
+
             </div>
 
           </div>
