@@ -19,13 +19,13 @@
 				"photos": "Photos",
 				"send": "Send",
 				"token": "Token",
-				"pricing": "Precios",
-				"security": "Seguridad"
+				"pricing": "Precios"
 			},
 			"company": {
 				"title": "Compañía",
 				"about": "Sobre nosotros",
 				"privacy": "Privacidad",
+				"security": "Seguridad",
 				"legal": "Legal",
 				"support": "Soporte",
 				"whyInternxt": "¿Por qué Internxt?",
