@@ -38,7 +38,12 @@
 			"detected": "Detectado",
 			"undetected": "No detectado",
 			"unableToProcess": "Imposible procesar",
-			"noVirusesDetected": "No se ha detectado ningún virus",
+			"noVirusesDetected": {
+				"message": "No se ha detectado ningún virus",
+				"title": "Mantén tus archivos seguros",
+				"subtitle": "Internxt es la forma más fácil de mantener la privacidad de tus archivos con cifrado.",
+				"cta": "Empieza en Internxt gratis"
+			},
 			"analyzing": "Analizando archivo...",
 			"scanTime": "Tiempo de escaneo",
 			"name": "Nombre",

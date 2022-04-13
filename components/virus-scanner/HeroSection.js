@@ -7,9 +7,9 @@ import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import {
   UilRedo,
-  UilExclamationOctagon,
-  UilCheckCircle
+  UilExclamationOctagon
 } from '@iconscout/react-unicons';
+import { CheckCircle } from 'phosphor-react';
 
 const HeroSection = ({
   textContent
@@ -246,11 +246,34 @@ const HeroSection = ({
                           </>
                         ) : (
                           <>
-                            <div className="flex flex-col items-center justify-center w-full h-full bg-green-old-10 bg-opacity-65 space-y-5">
-                              <UilCheckCircle className="w-8 h-8 text-green-old-50" />
-                              <span className="text-xl text-green-old-70 text-center">
-                                {textContent.table.noVirusesDetected}
-                              </span>
+                            <div className="flex flex-col items-center justify-center w-full h-full bg-white space-y-8 text-gray-80 text-center overflow-hidden">
+
+                              {/* No viruses found */}
+                              <div className="flex flex-row items-center space-x-1.5">
+                                <CheckCircle weight="fill" size={22} className="w-8 h-8 text-green" />
+                                <span className="text-xl font-medium">
+                                  {textContent.table.noVirusesDetected.message}
+                                </span>
+                              </div>
+
+                              {/* CTA */}
+                              <div className="flex flex-col items-center justify-center p-4 bg-white border border-gray-10 rounded-xl shadow-subtle">
+                                <div className="flex flex-col w-80 items-center justify-center space-y-4">
+
+                                  <span className="text-xl font-semibold">
+                                    {textContent.table.noVirusesDetected.title}
+                                  </span>
+
+                                  <span>
+                                    {textContent.table.noVirusesDetected.subtitle}
+                                  </span>
+
+                                  <a href="https://drive.internxt.com/new" target="_top" className="button-primary w-full">
+                                    {textContent.table.noVirusesDetected.cta}
+                                  </a>
+                                </div>
+                              </div>
+
                             </div>
                           </>
                         )}

@@ -37,7 +37,12 @@
 			"detected": "Detected",
 			"undetected": "Undetected",
 			"unableToProcess": "Unable to process",
-			"noVirusesDetected": "No viruses detected",
+			"noVirusesDetected": {
+				"message": "No viruses detected",
+				"title": "Keep your files secure",
+				"subtitle": "Internxt is the easiest way to keep your files private with the best-in-class encryption.",
+				"cta": "Join Internxt for FREE"
+			},
 			"analyzing": "Analyzing file...",
 			"scanTime": "Scan time",
 			"name": "Name",
