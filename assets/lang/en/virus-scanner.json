@@ -39,9 +39,9 @@
 			"unableToProcess": "Unable to process",
 			"noVirusesDetected": {
 				"message": "No viruses detected",
-				"title": "Keep your files secure",
-				"subtitle": "Internxt is the easiest way to keep your files private with the best-in-class encryption.",
-				"cta": "Join Internxt for FREE"
+				"title": "Want to keep your files safe?",
+				"subtitle": "Internxt is a cloud storage service with a built-in virus scan & best in-class encryption",
+				"cta": "Get free secure cloud storage"
 			},
 			"analyzing": "Analyzing file...",
 			"scanTime": "Scan time",
