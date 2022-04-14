@@ -2,7 +2,7 @@
 	"NewsletterSection": {
 		"title": "Newsletter",
 		"description": "Want to hear from us when we launch new products or release a new update? Type your mail address and we’ll do the rest!",
-		"input": "Your email adress",
+		"input": "Your email address",
 		"info": "You can unsubscribe at any time",
 		"cta": "Subscribe",
 		"privacy": "By subscribing you agree to our",
