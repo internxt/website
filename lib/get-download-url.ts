@@ -4,7 +4,7 @@ import { isMobile } from 'react-device-detect';
 import { getLatestReleaseInfo } from './github';
 
 const iosURL = 'https://apps.apple.com/es/app/internxt-drive/id1465869889';
-const androidURL = 'https://play.google.com/store/apps/details?id=com.internxt.cloud&hl=es';
+const androidURL = 'https://play.google.com/store/apps/details?id=com.internxt.cloud';
 const windowsURL = 'https://internxt.com/downloads/drive.exe';
 const macosURL = 'https://internxt.com/downloads/drive.dmg';
 const linuxURL = 'https://internxt.com/downloads/drive.deb';
@@ -36,7 +36,7 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
     case 'iOS':
       return 'https://apps.apple.com/es/app/internxt-drive/id1465869889';
     case 'Android':
-      return 'https://play.google.com/store/apps/details?id=com.internxt.cloud&hl=es';
+      return 'https://play.google.com/store/apps/details?id=com.internxt.cloud';
     case 'Ubuntu':
       return info.links.linux || 'https://internxt.com/downloads/drive.deb';
     case 'Windows':
