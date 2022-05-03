@@ -165,11 +165,10 @@
 				"url": "https://datosprotegidos.org/"
 			},
 			{
-				"id": "instituto-nacional-de-proteccion-de-datos",
-				"name": "Instituto Nacional de Protección de Datos",
-				"short": "INPD",
-				"description": "A Spanish legal institution providing privacy law consulting, INPD offers comprehensive services for compliance with the current legislation on Personal Data Protection and the Law on Services of the Information Society and Electronic Commerce for companies and freelancers.",
-				"url": "https://institutoprotecciondatos.com/"
+				"id": "tugesto",
+				"name": "Tugesto",
+				"description": "A Spanish legal institution providing privacy law consulting, tugesto offers comprehensive services for compliance with the current legislation on Personal Data Protection and the Law on Services of the Information Society and Electronic Commerce for companies and freelancers.",
+				"url": "https://tugesto.com/"
 			},
 			{
 				"id": "bits-of-freedom",

@@ -156,7 +156,7 @@ export default function Footer({
                       <a>{textContent.FooterSection.sections.company.privacy}</a>
                     </Link>
 
-                    <a href="https://blog.internxt.com/how-internxt-protects-your-data/" target="_blank" rel="noreferrer">
+                    <a href={`https://blog.internxt.com/${lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'}`} target="_blank" rel="noreferrer">
                       {textContent.FooterSection.sections.company.security}
                     </a>
 
@@ -378,6 +378,10 @@ export default function Footer({
                       <Link href="/privacy" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.privacy}</a>
                       </Link>
+
+                      <a href={`https://blog.internxt.com/${lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'}`} target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.company.security}
+                      </a>
 
                       <Link href="/legal" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.legal}</a>
