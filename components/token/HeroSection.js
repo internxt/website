@@ -107,7 +107,6 @@ const HeroSection = ({
 
         <div className="flex flex-row space-x-8">
           <a href="https://global.bittrex.com/Market/Index?MarketName=BTC-INXT" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/bittrex.webp" draggable="false" alt="bittrex logo" /></a>
-          <a href="https://exrates.me/trading/INXTBTC" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/exrates.webp" draggable="false" alt="exrates logo" /></a>
         </div>
 
         <div className="flex flex-row space-x-8">
@@ -120,7 +119,7 @@ const HeroSection = ({
         <p>{textContent.store}</p>
 
         <div className="flex flex-row space-x-8">
-          <a href="https://www.binance.com/es" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/binance.webp" draggable="false" alt="binance logo" /></a>
+          <a href="https://trustwallet.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/trustwallet.webp" draggable="false" alt="trustwallet logo" /></a>
           <a href="https://wallet.coinbase.com/" target="_blank" rel="noreferrer"><img loading="lazy" className="h-6 sm:h-8" src="../../images/token/coinbasewallet.webp" draggable="false" alt="coinbase logo" /></a>
         </div>
 

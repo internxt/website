@@ -1,7 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 
 const FeaturesSection = ({
-  textContent
+  textContent,
+  lang
 }) => (
   <section className="relative bg-gradient-to-b from-cool-gray-5 to-white py-20 lg:pt-10 lg:pb-0">
 
@@ -91,14 +93,15 @@ const FeaturesSection = ({
       <div className="max-w-lg text-center text-base md:text-sm text-cool-gray-40">
         {textContent.disclaimer.text}
         {' '}
-        <a
-          href="https://drive.internxt.com/new"
-          target="_top"
-          rel="noreferrer"
-          className="text-cool-gray-60 hover:underline"
-        >
-          {textContent.disclaimer.link}
-        </a>
+        <Link href="/legal" lang={lang} passHref>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="text-cool-gray-60 hover:underline"
+          >
+            {textContent.disclaimer.link}
+          </a>
+        </Link>
       </div>
     </div>
 

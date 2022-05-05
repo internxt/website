@@ -31,6 +31,7 @@ const Scan = ({
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
+        lang={lang}
       />
 
       <Footer

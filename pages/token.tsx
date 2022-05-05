@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
+import React from 'react';
 
 import HeroSection from '../components/token/HeroSection';
 import Footer from '../components/layout/Footer';
@@ -15,10 +14,6 @@ const Token = ({
   lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'token');
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Token">
