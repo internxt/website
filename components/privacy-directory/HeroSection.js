@@ -57,7 +57,7 @@ const HeroSection = ({
           {/* Card */}
           <Link href="/privacy" locale={lang} passHref>
             <div
-              className="flex flex-col flex-shrink-0 items-start w-full sm:w-96 bg-black text-white p-8 sm:p-12 pb-48 sm:pb-60 space-y-6 bg-cover bg-center rounded-3xl cursor-pointer"
+              className="flex flex-col flex-shrink-0 items-start w-full sm:w-96 bg-cool-gray-10 text-white p-8 sm:p-12 pb-48 sm:pb-60 space-y-6 bg-cover bg-center rounded-3xl cursor-pointer"
               style={{
                 backgroundImage: 'url("./images/privacy-directory/typing.webp")',
               }}

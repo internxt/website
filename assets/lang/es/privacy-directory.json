@@ -165,9 +165,10 @@
 				"url": "https://datosprotegidos.org/"
 			},
 			{
-				"id": "tugesto",
-				"name": "Tugesto",
-				"description": "Institución jurídica española de consultoría en derecho de la privacidad, tugesto ofrece servicios integrales para el cumplimiento de la legislación vigente en materia de Protección de Datos de Carácter Personal y de la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico para empresas y autónomos.",
+				"id": "instituto-nacional-de-proteccion-de-datos",
+				"name": "Instituto Nacional de Protección de Datos",
+				"short": "INPD",
+				"description": "Institución jurídica española de consultoría en derecho de la privacidad, perteneciente a tugesto, ofrece servicios integrales para el cumplimiento de la legislación vigente en materia de Protección de Datos de Carácter Personal y de la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico para empresas y autónomos.",
 				"url": "https://tugesto.com/"
 			},
 			{
