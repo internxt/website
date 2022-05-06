@@ -1,20 +1,8 @@
 {
 	"HeroSection": {
-		"title": {
-			"line1": "Escáner",
-			"line2": "de Virus"
-		},
-		"subtitle1": {
-			"line1": "Arrastre y suelte cualquier tipo",
-			"line2": "de archivo sospechoso para detectar",
-			"line3": "virus y malware en segundos."
-		},
-		"subtitle2": {
-			"line1": "Proteja su privacidad con nuestro",
-			"line2": "escáner de virus gratuito, diseñado",
-			"line3": "para ayudarle a evitar infecciones",
-			"line4": "y proteger su ordenador."
-		},
+		"title": "Escáner de Virus",
+		"subtitle1": "Arrastre y suelte cualquier tipo de archivo sospechoso para detectar virus y malware en segundos.",
+		"subtitle2": "Proteja su privacidad con nuestro escáner de virus gratuito, diseñado para ayudarle a evitar infecciones y proteger su ordenador.",
 		"dropFile": {
 			"line1": "Suelta archivo para",
 			"line2": "empezar a analizar"
@@ -57,21 +45,18 @@
 	"FeaturesSection": {
 		"marketing": {
 			"whyToScan": {
-				"title": {
-					"line1": "Por qué es importante analizar tus",
-					"line2": "archivos en busca de virus"
+				"title": "Por qué es importante usar un escáner de virus",
+				"description1": "Un potente virus puede robar información sensible como sus credenciales o contraseñas, cifrar y bloquear sus datos, realizar transacciones individuales dentro de las apps, monitorizar tu ordenador, e incluso atacar a otros dispositivos en redes conectadas. Un virus tiene el potencial de acceder a casi todo lo que está bloqueado en su hardware.",
+				"description2": "Una vez que el virus se ha propagado en su ordenador portátil o de sobremesa, puede infectar todos sus programas y aplicaciones, sin perjuicio. Su código destructivo puede, y probablemente se propagará por todas partes. Por eso es crucial que se haga un escaneo en busca de virus."
+			},
+			"freeScanner": {
+				"title": "El antivirus online en el que puedes confiar",
+				"description": {
+					"line1": "Internxt ha dado y dará siempre prioridad a la privacidad y seguridad de los usuarios. Nos comprometemos a crear un Internet más justo, más libre y más transparente para todos. Por eso hemos creado nuestro escáner de virus online gratuito, para arrojar luz sobre los virus y exponer el",
+					"line2": "malware malicioso",
+					"line3": ". Escanea archivos en busca de virus con total confianza."
 				},
-				"description1": {
-					"line1": "Un potente virus puede robar información sensible como sus credenciales o contraseñas,",
-					"line2": "cifrar y bloquear sus datos, realizar transacciones individuales dentro de las apps, monitorizar",
-					"line3": "tu ordenador, e incluso atacar a otros dispositivos en redes conectadas. Un virus tiene el",
-					"line4": "potencial de acceder a casi todo lo que está bloqueado en su hardware."
-				},
-				"description2": {
-					"line1": "Una vez que el virus se ha propagado en su ordenador portátil o de sobremesa, puede infectar",
-					"line2": "todos sus programas y aplicaciones, sin perjuicio. Su código destructivo puede, y probablemente",
-					"line3": " se propagará por todas partes. Por eso es crucial que se haga un escaneo en busca de virus."
-				}
+				"cta": "La seguridad está a un solo clic."
 			}
 		},
 		"createAccount": {

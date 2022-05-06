@@ -44,6 +44,13 @@ module.exports = {
         permanent: false,
       })),
       // =======================================================
+      // REDIRECTS TO INTERNXT DESIGN SYSTEM DOCUMENTATION
+      {
+        source: '/ids',
+        destination: 'https://inxt.atlassian.net/wiki/spaces/DESIGN',
+        permanent: false,
+      },
+      // =======================================================
       {
         source: '/team',
         destination: '/about',

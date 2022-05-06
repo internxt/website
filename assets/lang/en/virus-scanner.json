@@ -1,20 +1,8 @@
 {
 	"HeroSection": {
-		"title": {
-			"line1": "Virus",
-			"line2": "Scanner"
-		},
-		"subtitle1": {
-			"line1": "Drag and drop any type of",
-			"line2": "suspicious file to detect",
-			"line3": "viruses and malware in seconds."
-		},
-		"subtitle2": {
-			"line1": "Safeguard your privacy with our",
-			"line2": "free virus scanner, designed to",
-			"line3": "help you avoid infection and",
-			"line4": "protect your computer."
-		},
+		"title": "Virus Scanner",
+		"subtitle1": "Drag and drop any type of suspicious file to detect viruses and malware in seconds.",
+		"subtitle2": "Safeguard your privacy with our free virus scanner, designed to help you avoid infection and protect your computer.",
 		"dropFile": {
 			"line1": "Drop file to analyze"
 		},
@@ -56,21 +44,18 @@
 	"FeaturesSection": {
 		"marketing": {
 			"whyToScan": {
-				"title": {
-					"line1": "Why it’s important to scan",
-					"line2": "your files for viruses"
+				"title": "Why it’s important to use a virus scanner",
+				"description1": "A potent virus can steal sensitive information like your credentials or passwords, encrypt and lock you out of your data, make individual transactions within apps, monitor your computer, and even attack other devices on connected networks. A virus has the potential to  access nearly everything that is locked away on your hardware.",
+				"description2": "Once a virus has propagated onto your laptop or desktop, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why it is crucial to utilize a virus scanner."
+			},
+			"freeScanner": {
+				"title": "A free online virus scanner you can trust",
+				"description": {
+					"line1": "Internxt has and will always put users’ privacy and security first. We are committed to creating a more fair, more free, and more transparent internet for all. That’s why we created our free online virus scanner, to shine a light on stealthy viruses and expose",
+					"line2": "malicious malware",
+					"line3": ". Scan files for viruses in complete confidence."
 				},
-				"description1": {
-					"line1": "A potent virus can steal sensitive information like your credentials or passwords,",
-					"line2": "encrypt and lock you out of your data, make individual transactions within apps, monitor",
-					"line3": "your computer, and even attack other devices on connected networks. A virus has the",
-					"line4": "potential to  access nearly everything that is locked away on your hardware."
-				},
-				"description2": {
-					"line1": "Once the virus has propagated onto your laptop or desktop, it can infect all your",
-					"line2": "programs and applications without prejudice. Its destructive code can, and likely",
-					"line3": "will spread everywhere. That is why is crucial to get a scan for viruses."
-				}
+				"cta": "Safety’s only a click away."
 			}
 		},
 		"createAccount": {

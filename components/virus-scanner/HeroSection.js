@@ -148,40 +148,21 @@ const HeroSection = ({
       />
 
       <div
-        className={`relative flex flex-col lg:flex-row lg:space-x-32 px-6 lg:p-16 w-full mx-auto max-w-screen-xl z-20 ${(!isScannig && isDragging) ? 'pointer-events-none' : ''}`}
+        className={`relative flex flex-col lg:flex-row lg:space-x-24 px-6 lg:p-16 w-full mx-auto max-w-screen-xl z-20 ${(!isScannig && isDragging) ? 'pointer-events-none' : ''}`}
         onDrop={(e) => e.preventDefault()}
         onDragOver={(e) => e.preventDefault()}
       >
         {/* Title and subtitle */}
-        <div className="flex flex-col flex-shrink-0 space-y-5 items-center lg:items-start text-center lg:text-left mb-10 lg:mb-0 pt-8 sm:pt-2">
-          <h1 className="text-4xl lg:text-7xl font-medium lg:font-normal tracking-tighter">
-            {textContent.title.line1}
-            {' '}
-            <br className="hidden lg:flex" />
-            {textContent.title.line2}
+        <div className="flex flex-col flex-shrink-0 space-y-5 items-center lg:items-start text-center lg:text-left mb-10 lg:mb-0 pt-8">
+          <h1 className="text-4xl lg:text-5xl font-medium lg:font-normal tracking-tighter">
+            {textContent.title}
           </h1>
 
-          <div className="flex flex-col lg:space-y-5">
-            <h2 className="text-lg text-cool-gray-60">
-              {textContent.subtitle1.line1}
-              {' '}
-              <br className="hidden lg:flex" />
-              {textContent.subtitle1.line2}
-              {' '}
-              <br className="hidden lg:flex" />
-              {textContent.subtitle1.line3}
-              {' '}
+          <div className="flex flex-col w-full lg:w-80 lg:space-y-5">
+            <h2 className="text-lg text-cool-gray-80">
+              {textContent.subtitle1}
               <div className="hidden lg:flex h-3" />
-              {textContent.subtitle2.line1}
-              {' '}
-              <br className="hidden lg:flex" />
-              {textContent.subtitle2.line2}
-              {' '}
-              <br className="hidden lg:flex" />
-              {textContent.subtitle2.line3}
-              {' '}
-              <br className="hidden lg:flex" />
-              {textContent.subtitle2.line4}
+              {textContent.subtitle2}
             </h2>
 
           </div>

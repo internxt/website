@@ -10,35 +10,39 @@ const FeaturesSection = ({
     <div className="flex flex-col items-center justify-center px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
 
       {/* Marketing text */}
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full space-y-16">
 
-        <div className="flex flex-col items-start md:items-center text-left md:text-center space-y-5 md:space-y-10 px-4">
-          <h3 className="text-3xl font-medium">
-            {textContent.marketing.whyToScan.title.line1}
-            {' '}
-            <br className="hidden lg:flex" />
-            {textContent.marketing.whyToScan.title.line2}
+        <div className="flex flex-col items-start md:items-center text-left md:text-center space-y-6 px-4">
+          <h3 className="text-2xl font-medium">
+            {textContent.marketing.whyToScan.title}
           </h3>
-          <p className="text-lg text-cool-gray-80">
-            {textContent.marketing.whyToScan.description1.line1}
-            {' '}
-            <br className="hidden lg:flex" />
-            {textContent.marketing.whyToScan.description1.line2}
-            {' '}
-            <br className="hidden lg:flex" />
-            {textContent.marketing.whyToScan.description1.line3}
-            {' '}
-            <br className="hidden lg:flex" />
-            {textContent.marketing.whyToScan.description1.line4}
+          <p className="text-lg text-cool-gray-80 lg:max-w-2xl">
+            {textContent.marketing.whyToScan.description1}
           </p>
-          <p className="text-lg text-cool-gray-80">
-            {textContent.marketing.whyToScan.description2.line1}
+          <p className="text-lg text-cool-gray-80 lg:max-w-2xl">
+            {textContent.marketing.whyToScan.description2}
+          </p>
+        </div>
+
+        <div className="flex flex-col items-start md:items-center text-left md:text-center space-y-6 px-4">
+          <h3 className="text-2xl font-medium">
+            {textContent.marketing.freeScanner.title}
+          </h3>
+          <p className="text-lg text-cool-gray-80 lg:max-w-2xl">
+            {textContent.marketing.freeScanner.description.line1}
             {' '}
-            <br className="hidden lg:flex" />
-            {textContent.marketing.whyToScan.description2.line2}
-            {' '}
-            <br className="hidden lg:flex" />
-            {textContent.marketing.whyToScan.description2.line3}
+            <a
+              href={`https://blog.internxt.com/${lang === 'es' ? 'es/que-es-un-malware/' : 'what-is-malware/'}`}
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary hover:underline"
+            >
+              {textContent.marketing.freeScanner.description.line2}
+            </a>
+            {textContent.marketing.freeScanner.description.line3}
+          </p>
+          <p className="text-lg text-cool-gray-80 font-medium lg:max-w-2xl">
+            {textContent.marketing.freeScanner.cta}
           </p>
         </div>
 
