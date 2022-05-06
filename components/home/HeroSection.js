@@ -74,19 +74,21 @@ const HeroSection = ({
 
       <div className="featuredMarquee">
 
-        <div className="flex lg:hidden">
+        <div className="flex xl:hidden">
 
           <Marquee className="bg-white" gradientColor="[255,255,255]" gradientWidth="32px" speed="30">
 
             <div className="featured flex flex-row w-full p-6">
 
-              <a href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=6881c2ac70ee" target="_blank" rel="noreferrer">
+              <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
                 <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
               </a>
 
-              <a href="https://www.businessinsider.es/internxt-nube-espanola-apuesta-privacidad-google-750951" target="_blank" rel="noreferrer">
-                <img loading="lazy" className="mr-12" src="../../logos/featured/businessinsider.svg" draggable="false" width="52" height="16" alt="businessinsider logo" />
-              </a>
+              {lang === 'es' && (
+                <a href="https://www.elconfidencial.com/empresas/2022-04-25/telefonica-juan-roig-google-drive-espanol_3413834/" target="_blank" rel="noreferrer">
+                  <img loading="lazy" className="mr-12" src="../../logos/featured/elconfidencial.svg" draggable="false" width="144" height="16" alt="elconfidencial logo" />
+                </a>
+              )}
 
               <a href="https://www.techradar.com/news/how-decentralized-models-are-reimagining-the-cloud" target="_blank" rel="noreferrer">
                 <img loading="lazy" className="mr-12" src="../../logos/featured/techradar.svg" draggable="false" width="94" height="16" alt="techradar logo" />
@@ -96,13 +98,21 @@ const HeroSection = ({
                 <img loading="lazy" className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" width="113" height="16" alt="techcrunch logo" />
               </a>
 
-              <a href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html" target="_blank" rel="noreferrer">
-                <img loading="lazy" className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false" width="152" height="16" alt="lavanguardia logo" />
+              <a href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/" target="_blank" rel="noreferrer">
+                <img loading="lazy" className="mr-12" src="../../logos/featured/venturebeat.svg" draggable="false" width="125" height="16" alt="venturebeat logo" />
               </a>
 
-              <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank" rel="noreferrer">
-                <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="82" height="16" alt="elpais logo" />
-              </a>
+              {lang === 'es' && (
+                <a href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html" target="_blank" rel="noreferrer">
+                  <img loading="lazy" className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false" width="152" height="16" alt="lavanguardia logo" />
+                </a>
+              )}
+
+              {lang === 'es' && (
+                <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank" rel="noreferrer">
+                  <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="82" height="16" alt="elpais logo" />
+                </a>
+              )}
 
             </div>
 
@@ -110,17 +120,19 @@ const HeroSection = ({
 
         </div>
 
-        <div className="overflow-hidden hidden lg:flex">
+        <div className="overflow-hidden hidden xl:flex">
 
           <div className="featured flex flex-row justify-center w-full p-6 md:px-10 lg:px-32 bg-white overflow-x-auto">
 
-            <a href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=6881c2ac70ee" target="_blank" rel="noreferrer">
+            <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
               <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
             </a>
 
-            <a href="https://www.businessinsider.es/internxt-nube-espanola-apuesta-privacidad-google-750951" target="_blank" rel="noreferrer">
-              <img loading="lazy" className="mr-12" src="../../logos/featured/businessinsider.svg" draggable="false" width="52" height="16" alt="businessinsider logo" />
-            </a>
+            {lang === 'es' && (
+              <a href="https://www.elconfidencial.com/empresas/2022-04-25/telefonica-juan-roig-google-drive-espanol_3413834/" target="_blank" rel="noreferrer">
+                <img loading="lazy" className="mr-12" src="../../logos/featured/elconfidencial.svg" draggable="false" width="144" height="16" alt="elconfidencial logo" />
+              </a>
+            )}
 
             <a href="https://www.techradar.com/news/how-decentralized-models-are-reimagining-the-cloud" target="_blank" rel="noreferrer">
               <img loading="lazy" className="mr-12" src="../../logos/featured/techradar.svg" draggable="false" width="94" height="16" alt="techradar logo" />
@@ -130,13 +142,21 @@ const HeroSection = ({
               <img loading="lazy" className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" width="113" height="16" alt="techcrunch logo" />
             </a>
 
-            <a href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html" target="_blank" rel="noreferrer">
-              <img loading="lazy" className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false" width="152" height="16" alt="lavanguardia logo" />
+            <a href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/" target="_blank" rel="noreferrer">
+              <img loading="lazy" className="mr-12" src="../../logos/featured/venturebeat.svg" draggable="false" width="125" height="16" alt="venturebeat logo" />
             </a>
 
-            <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank" rel="noreferrer">
-              <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="82" height="16" alt="elpais logo" />
-            </a>
+            {lang === 'es' && (
+              <a href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html" target="_blank" rel="noreferrer">
+                <img loading="lazy" className="mr-12" src="../../logos/featured/lavanguardia.svg" draggable="false" width="152" height="16" alt="lavanguardia logo" />
+              </a>
+            )}
+
+            {lang === 'es' && (
+              <a href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html" target="_blank" rel="noreferrer">
+                <img loading="lazy" src="../../logos/featured/elpais.svg" draggable="false" width="82" height="16" alt="elpais logo" />
+              </a>
+            )}
 
           </div>
 
