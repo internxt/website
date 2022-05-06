@@ -84,6 +84,16 @@ const HeroSection = ({
                 <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
               </a>
 
+              {lang === 'es' ? (
+                <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
+                  <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
+                </a>
+              ) : (
+                <a href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=7108d8d570ee" target="_blank" rel="noreferrer">
+                  <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
+                </a>
+              )}
+
               {lang === 'es' && (
                 <a href="https://www.elconfidencial.com/empresas/2022-04-25/telefonica-juan-roig-google-drive-espanol_3413834/" target="_blank" rel="noreferrer">
                   <img loading="lazy" className="mr-12" src="../../logos/featured/elconfidencial.svg" draggable="false" width="144" height="16" alt="elconfidencial logo" />
@@ -97,6 +107,12 @@ const HeroSection = ({
               <a href="https://techcrunch.com/2021/06/17/internxt-gets-1m-to-be-the-coinbase-of-decentralized-storage/" target="_blank" rel="noreferrer">
                 <img loading="lazy" className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" width="113" height="16" alt="techcrunch logo" />
               </a>
+
+              {lang === 'en' && (
+                <a href="https://cointelegraph.com/news/breaking-google-s-monopoly-internxt-pushes-decentralized-cloud-as-privacy-concerns-grow" target="_blank" rel="noreferrer">
+                  <img loading="lazy" className="mr-12" src="../../logos/featured/cointelegraph.svg" draggable="false" width="169" height="16" alt="cointelegraph logo" />
+                </a>
+              )}
 
               <a href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/" target="_blank" rel="noreferrer">
                 <img loading="lazy" className="mr-12" src="../../logos/featured/venturebeat.svg" draggable="false" width="125" height="16" alt="venturebeat logo" />
@@ -124,9 +140,15 @@ const HeroSection = ({
 
           <div className="featured flex flex-row justify-center w-full p-6 md:px-10 lg:px-32 bg-white overflow-x-auto">
 
-            <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
-              <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
-            </a>
+            {lang === 'es' ? (
+              <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
+                <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
+              </a>
+            ) : (
+              <a href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=7108d8d570ee" target="_blank" rel="noreferrer">
+                <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
+              </a>
+            )}
 
             {lang === 'es' && (
               <a href="https://www.elconfidencial.com/empresas/2022-04-25/telefonica-juan-roig-google-drive-espanol_3413834/" target="_blank" rel="noreferrer">
@@ -141,6 +163,12 @@ const HeroSection = ({
             <a href="https://techcrunch.com/2021/06/17/internxt-gets-1m-to-be-the-coinbase-of-decentralized-storage/" target="_blank" rel="noreferrer">
               <img loading="lazy" className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" width="113" height="16" alt="techcrunch logo" />
             </a>
+
+            {lang === 'en' && (
+              <a href="https://cointelegraph.com/news/breaking-google-s-monopoly-internxt-pushes-decentralized-cloud-as-privacy-concerns-grow" target="_blank" rel="noreferrer">
+                <img loading="lazy" className="mr-12" src="../../logos/featured/cointelegraph.svg" draggable="false" width="169" height="16" alt="cointelegraph logo" />
+              </a>
+            )}
 
             <a href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/" target="_blank" rel="noreferrer">
               <img loading="lazy" className="mr-12" src="../../logos/featured/venturebeat.svg" draggable="false" width="125" height="16" alt="venturebeat logo" />
