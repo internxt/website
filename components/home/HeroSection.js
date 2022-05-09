@@ -108,12 +108,6 @@ const HeroSection = ({
                 <img loading="lazy" className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" width="113" height="16" alt="techcrunch logo" />
               </a>
 
-              {lang === 'en' && (
-                <a href="https://cointelegraph.com/news/breaking-google-s-monopoly-internxt-pushes-decentralized-cloud-as-privacy-concerns-grow" target="_blank" rel="noreferrer">
-                  <img loading="lazy" className="mr-12" src="../../logos/featured/cointelegraph.svg" draggable="false" width="169" height="16" alt="cointelegraph logo" />
-                </a>
-              )}
-
               <a href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/" target="_blank" rel="noreferrer">
                 <img loading="lazy" className="mr-12" src="../../logos/featured/venturebeat.svg" draggable="false" width="125" height="16" alt="venturebeat logo" />
               </a>
@@ -163,12 +157,6 @@ const HeroSection = ({
             <a href="https://techcrunch.com/2021/06/17/internxt-gets-1m-to-be-the-coinbase-of-decentralized-storage/" target="_blank" rel="noreferrer">
               <img loading="lazy" className="mr-12" src="../../logos/featured/techcrunch.svg" draggable="false" width="113" height="16" alt="techcrunch logo" />
             </a>
-
-            {lang === 'en' && (
-              <a href="https://cointelegraph.com/news/breaking-google-s-monopoly-internxt-pushes-decentralized-cloud-as-privacy-concerns-grow" target="_blank" rel="noreferrer">
-                <img loading="lazy" className="mr-12" src="../../logos/featured/cointelegraph.svg" draggable="false" width="169" height="16" alt="cointelegraph logo" />
-              </a>
-            )}
 
             <a href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/" target="_blank" rel="noreferrer">
               <img loading="lazy" className="mr-12" src="../../logos/featured/venturebeat.svg" draggable="false" width="125" height="16" alt="venturebeat logo" />
