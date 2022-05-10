@@ -50,7 +50,8 @@
     "sass": "^1.38.0",
     "stripe": "^8.135.0",
     "tailwindcss": "^2.1.2",
-    "useragent": "^2.3.0"
+    "useragent": "^2.3.0",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "@types/memory-cache": "^0.2.1",

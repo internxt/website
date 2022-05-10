@@ -83,5 +83,10 @@
         "id": "privacy-directory",
         "title": "Internxt - Directory of Privacy Organizations, Institutions, and NGOs",
         "description": "Directory of digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
+    },
+    {
+        "id": "password-checker",
+        "title": "Internxt - Free & Secure Password Checker",
+        "description": "Free password security checker. Check the strength of your passwords with Internxt’s secure online tool."
     }
 ]

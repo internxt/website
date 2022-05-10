@@ -12,7 +12,7 @@ const PasswordChecker = ({
   footerLang,
   lang
 }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-checker');
 
   return (
 
@@ -48,7 +48,7 @@ const PasswordChecker = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/virus-scanner.json`);
+  const langJson = require(`../assets/lang/${lang}/password-checker.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
