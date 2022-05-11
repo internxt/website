@@ -2,7 +2,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
 import zxcvbn from 'zxcvbn';
-import { Eye, EyeSlash } from 'phosphor-react';
+import {
+  Info,
+  Eye,
+  EyeSlash,
+  WarningCircle
+} from 'phosphor-react';
 import pwnedpasswords from '../../lib/checker';
 
 const HeroSection = ({
@@ -22,6 +27,28 @@ const HeroSection = ({
   const toggleShowPassword = () => {
     setInputTypePassword(!inputTypePassword);
     document.getElementById('input').focus();
+  };
+
+  const getFeedbackTranslation = (feedback) => {
+    const translations = textContent.result.feedback.cases;
+    return translations[feedback];
+  };
+
+  const hasNumber = (string) => /\d/.test(string);
+
+  const getTimeTranslation = (displaytTime) => {
+    const timecases = textContent.result.crack.cases;
+    const displaytTimeHasNumbers = hasNumber(displaytTime);
+
+    // Time is composed of a number and one or more words
+    if (displaytTimeHasNumbers) {
+      const number = displaytTime.split(' ')[0]; // Get number (1 year --> 1)
+      const timecase = displaytTime.split(' ')[1]; // Get timecase (1 year --> year)
+      return `${number} ${timecases[timecase]}`;
+    }
+
+    // Time has only words
+    return timecases[displaytTime];
   };
 
   const checkPassword = (pswrd) => {
@@ -47,37 +74,43 @@ const HeroSection = ({
       // Check for crack time and get anti-crack feedback
       const crack = zxcvbn(password);
       if (crack.feedback.warning !== '') {
-        setCrackFeedback(crack.feedback.warning);
+        setCrackFeedback(getFeedbackTranslation(crack.feedback.warning));
       } else {
         setCrackFeedback('-');
       }
       setCrackScore(crack.score);
-      setCrackTime(crack.crack_times_display.offline_fast_hashing_1e10_per_second);
-      setCrackTimeInSeconds(crack.crack_times_seconds.offline_fast_hashing_1e10_per_second);
+      setCrackTime(
+        getTimeTranslation(crack.crack_times_display.offline_slow_hashing_1e4_per_second)
+      );
+      setCrackTimeInSeconds(crack.crack_times_seconds.offline_slow_hashing_1e4_per_second);
     }
   };
 
   return (
-    <section
-      className="relative flex flex-col items-center bg-white pt-32 pb-16 space-y-16"
-    >
-      <div className="flex flex-col items-center space-y-2">
-        <h1 className="text-5xl font-medium">{textContent.title}</h1>
-        <h2 className="text-center text-lg">
+    <section className="relative flex flex-col items-center bg-white pt-32 pb-16 space-y-12 md:space-y-16">
+      <div className="flex flex-col items-center text-center space-y-2 px-4 lg:px-0">
+        <h1 className="text-3xl lg:text-5xl font-medium">
+          {textContent.title}
+        </h1>
+        <h2 className="text-lg">
           {textContent.subtitle1}
           <br />
           {textContent.subtitle2}
         </h2>
       </div>
 
-      <div className="flex flex-col items-center w-full max-w-lg space-y-5">
+      <div className="flex flex-col items-center w-full max-w-lg space-y-5 px-4 lg:px-0">
+        <div className="flex flex-row items-center text-sm text-gray-50 space-x-1">
+          <Info size={16} />
+          <span>{textContent.subtitle3}</span>
+        </div>
         <div className="relative w-full">
           <input
             onKeyUp={(e) => checkPassword(e)}
             id="input"
             type={inputTypePassword ? 'password' : 'text'}
             placeholder={textContent.placeholder}
-            className="h-14 w-full bg-white rounded-xl border-2 border-gray-10 focus:border-primary ring-5 ring-primary ring-opacity-0 focus:ring-opacity-10 px-4 text-2xl placeholder-gray-30 appearance-none outline-none shadow-subtle focus:shadow-subtle-hard transition-all duration-150 ease-out delay-150"
+            className="h-14 w-full bg-white rounded-lg border-2 border-gray-10 focus:border-primary ring-5 ring-primary ring-opacity-0 focus:ring-opacity-10 pl-4 pr-14 text-2xl placeholder-gray-30 appearance-none outline-none shadow-subtle transition-all duration-150 ease-out delay-150"
           />
           <label
             onClick={() => toggleShowPassword()}
@@ -91,38 +124,38 @@ const HeroSection = ({
           </label>
         </div>
 
-        <div className="flex flex-row w-full h-1.5 bg-gray-10 rounded-full overflow-hidden">
-          <div
-            // eslint-disable-next-line no-nested-ternary
-            className={`${crackScore > 3 ? 'bg-green' : (crackScore > 1 ? 'bg-orange' : 'bg-red')} h-full rounded-full transition-all duration-75 ease-out`}
-            style={{
-              width: `${20 + (crackScore / 4) * 80}%`
-            }}
-          />
+        <div className="flex flex-row w-full h-1.5 space-x-1.5">
+          {['0', '1', '2', '3', '4'].map((step, index) => (
+            <>
+              {index <= crackScore ? (
+                // eslint-disable-next-line no-nested-ternary
+                <div key={step} className={`${crackScore > 3 ? 'bg-green' : (crackScore > 1 ? 'bg-orange' : 'bg-red')} h-full w-full rounded-full transition-all duration-75 ease-out`} />
+              ) : (
+                <div key={step} className="bg-gray-10 h-full w-full rounded-full transition-all duration-75 ease-out" />
+              )}
+            </>
+          ))}
         </div>
-
-        <span className="text-sm text-gray-30">
-          {textContent.subtitle3}
-        </span>
       </div>
 
-      <div className="flex flex-row items-stretch h-48 space-x-5">
+      {/* Password dynamic feedback */}
+      <div className="flex flex-col lg:flex-row items-stretch w-full lg:w-auto lg:h-48 space-y-4 lg:space-y-0 lg:space-x-5 px-4">
 
-        <div className="flex flex-col w-64 bg-gray-5 rounded-2xl p-8 space-y-1">
-          <span className="text-xs font-semibold text-gray-60">
-            {textContent.result.security.title}
+        <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8 space-y-1">
+          <span className="text-xs font-semibold text-gray-50">
+            {textContent.result.feedback.title}
           </span>
-          <span className={`${crackFeedback === '-' ? 'text-4xl' : 'text-xl'} font-medium`}>
+          <span className={`${crackFeedback === '-' ? 'text-4xl font-normal' : 'text-xl font-medium'}`}>
             {crackFeedback}
           </span>
         </div>
 
-        <div className="flex flex-col w-64 bg-gray-5 rounded-2xl p-8">
+        <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8 relative">
           <div className="flex flex-col h-full space-y-1">
-            <span className="text-xs font-semibold text-gray-60">
+            <span className="text-xs font-semibold text-gray-50">
               {textContent.result.pwned.title}
             </span>
-            <span className="text-4xl font-medium">
+            <span className="text-4xl font-normal">
               {pwned}
             </span>
           </div>
@@ -130,14 +163,18 @@ const HeroSection = ({
           <span className="text-sm text-gray-40">
             {textContent.result.pwned.subtitle}
           </span>
+
+          <div className={`absolute top-8 right-8 text-red-dark transition-opacity duration-100 ease-out ${(hasNumber(pwned) && pwned.toString() !== '0') ? 'opacity-100' : 'opacity-0'}`}>
+            <WarningCircle weight="fill" size={24} />
+          </div>
         </div>
 
-        <div className="flex flex-col w-64 bg-gray-5 rounded-2xl p-8">
+        <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8">
           <div className="flex flex-col h-full space-y-1">
-            <span className="text-xs font-semibold text-gray-60">
+            <span className="text-xs font-semibold text-gray-50">
               {textContent.result.crack.title}
             </span>
-            <span className={`${(crackTimeInSeconds < 1 && crackTime !== '-') ? 'text-xl' : 'text-4xl'} font-medium`}>
+            <span className={`${(crackTimeInSeconds < 1 && crackTime !== '-') ? 'text-xl font-medium' : 'text-4xl font-normal'}`}>
               {crackTime}
             </span>
           </div>

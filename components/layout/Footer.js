@@ -28,7 +28,7 @@ export default function Footer({
   }, []);
 
   return (
-    <section className={`flex flex-col w-full ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-cool-gray-5'}`}>
+    <section className={`flex flex-col w-full ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}>
       <div className="flex flex-col items-center justify-center w-full px-6 py-16 sm:p-20 sm:py-12">
 
         {/* Supporters from Spain and EU (Only in Spanish) */}
@@ -216,7 +216,7 @@ export default function Footer({
                   </h3>
                   <div className={`flex flex-col space-y-1.5 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
 
-                    <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
+                    <a href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`} target="_blank" rel="noreferrer">
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
 
@@ -475,7 +475,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'} p-4 pt-2 space-y-4`}>
 
-                      <a href="https://blog.internxt.com/" target="_blank" rel="noreferrer">
+                      <a href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`} target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.resources.blog}
                       </a>
 

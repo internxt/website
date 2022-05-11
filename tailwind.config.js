@@ -235,9 +235,10 @@ module.exports = {
       xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-      subtle: '0 32px 40px 0 rgba(18, 22, 25, 0.04)',
+      subtle: '0 32px 40px 0 rgba(24, 24, 27, 0.04)',
       'switch-button': '0px 8px 12px rgba(0, 0, 0, 0.04)',
-      'subtle-hard': '0 32px 40px 0 rgba(18, 22, 25, 0.08)',
+      'subtle-hard': '0 32px 40px 0 rgba(24, 24, 27, 0.08)',
+      'box-floating': '0 0 96px 0 rgba(24, 24, 27, 0.06), 0 0 48px 0 rgba(24, 24, 27, 0.02)',
       none: 'none'
     },
     container: {},
@@ -550,7 +551,8 @@ module.exports = {
     maxHeight: (theme) => ({
       ...theme('spacing'),
       full: '100%',
-      screen: '100vh'
+      screen: '100vh',
+      'double-screen': '200vh'
     }),
     maxWidth: (theme, { breakpoints }) => ({
       none: 'none',

@@ -3,7 +3,7 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/password-checker/HeroSection';
-import FeaturesSection from '../components/password-checker/FeaturesSection';
+import FeaturesSection from '../components/password-checker/FeaturesSection.js';
 
 const PasswordChecker = ({
   metatagsDescriptions,
