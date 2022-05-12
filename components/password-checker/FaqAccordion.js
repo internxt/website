@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { PlusCircle } from 'phosphor-react';
+import ReactMarkdown from 'react-markdown';
 
 const FaqAccordion = ({
   question,
-  children
+  answer
 }) => {
   const [active, setActive] = useState(false);
 
@@ -18,8 +19,12 @@ const FaqAccordion = ({
         <PlusCircle size={32} className={`transform ${active && 'rotate-45'} transition-transform duration-250 ease-in-out`} />
       </button>
 
-      <p className={`flex overflow-hidden will-change-height h-auto ${active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'} text-left text-lg w-full pr-14 whitespace-pre-wrap text-gray-60 transition-all duration-250 ease-in-out`}>
-        {children}
+      <p className={`markdown flex flex-col space-y-3 overflow-hidden will-change-height h-auto ${active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'} text-left text-lg w-full pr-14 whitespace-pre-wrap text-gray-60 transition-all duration-250 ease-in-out`}>
+        {answer.map((text) => (
+          <ReactMarkdown key={text}>
+            {text}
+          </ReactMarkdown>
+        ))}
       </p>
     </div>
   );

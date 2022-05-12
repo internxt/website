@@ -270,9 +270,7 @@ const FeaturesSection = ({
 
           <div className="flex flex-col w-full max-w-screen-sm divide-y divide-gray-10">
             {textContent.faq.faq.map((item) => (
-              <FaqAccordion key={item.question} question={item.question}>
-                {item.answer}
-              </FaqAccordion>
+              <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
             ))}
           </div>
 
