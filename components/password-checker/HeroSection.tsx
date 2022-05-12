@@ -126,14 +126,11 @@ const HeroSection = ({
 
         <div className="flex flex-row w-full h-1.5 space-x-1.5">
           {['0', '1', '2', '3', '4'].map((step, index) => (
-            <>
-              {index <= crackScore ? (
-                // eslint-disable-next-line no-nested-ternary
-                <div key={step} className={`${crackScore > 3 ? 'bg-green' : (crackScore > 1 ? 'bg-orange' : 'bg-red')} h-full w-full rounded-full transition-all duration-75 ease-out`} />
-              ) : (
-                <div key={step} className="bg-gray-10 h-full w-full rounded-full transition-all duration-75 ease-out" />
-              )}
-            </>
+            <div
+              key={step}
+              // eslint-disable-next-line no-nested-ternary
+              className={`${index <= crackScore ? (crackScore > 3 ? 'bg-green' : (crackScore > 1 ? 'bg-orange' : 'bg-red')) : 'bg-gray-10'} h-full w-full rounded-full transition-all duration-75 ease-out`}
+            />
           ))}
         </div>
       </div>
