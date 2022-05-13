@@ -56,7 +56,7 @@ const FeaturesSection = ({
             <div className="grid auto-rows-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-1 lg:max-w-max">
               {textContent.section2.tips.map((tip, index) => (
                 <div key={tip} className="flex flex-row sm:flex-col lg:w-64 lg:h-48 bg-white rounded-2xl p-8">
-                  <div className="flex flex-col h-full text-primary pb-6 pr-6">
+                  <div className="flex flex-col h-full text-primary pb-3 pr-6">
                     {tipIcons[index]}
                   </div>
 
