@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import {
   Info,
@@ -20,9 +20,10 @@ const HeroSection = ({
   const [crackTime, setCrackTime] = useState('-');
   const [crackTimeInSeconds, setCrackTimeInSeconds] = useState(0);
 
-  useEffect(() => {
-    document.getElementById('input').focus();
-  });
+  // useEffect(() => {
+  //   // Autofocus password input
+  //   document.getElementById('input').focus();
+  // });
 
   const toggleShowPassword = () => {
     setInputTypePassword(!inputTypePassword);
