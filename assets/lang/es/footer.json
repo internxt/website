@@ -51,7 +51,8 @@
 				"library": "Biblioteca",
 				"writeForUs": "Escribe para nosotros",
 				"cyberSecurityGlossary": "Glosario de ciberseguridad",
-				"fileVirusScan": "Escaner de Virus"
+				"fileVirusScan": "Escaner de Virus",
+				"passwordChecker": "Comprobador de contraseñas"
 			}
 		}
 	},

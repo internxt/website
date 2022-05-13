@@ -238,6 +238,10 @@ export default function Footer({
                     </Link>
                     */}
 
+                    <Link href="/password-checker" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
+                    </Link>
+
                     <Link href="/virus-scanner" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
                     </Link>
@@ -496,6 +500,10 @@ export default function Footer({
                         <a>{textContent.FooterSection.sections.resources.cyberSecurityGlossary}</a>
                       </Link>
                       */}
+
+                      <Link href="/password-checker" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
+                      </Link>
 
                       <Link href="/virus-scanner" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
