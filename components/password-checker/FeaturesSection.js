@@ -29,11 +29,11 @@ const FeaturesSection = ({
 
       {/* Password tips and rules */}
       <div className="flex flex-col w-full items-center justify-center bg-gray-5 bg-opacity-50">
-        <div className="flex flex-col items-center justify-center pt-20 pb-5 px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
+        <div className="flex flex-col items-center justify-center py-10 sm:pt-20 px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
 
           <div className="flex flex-col w-full items-center space-y-16">
 
-            <div className="flex flex-col space-y-3 px-4">
+            <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-3xl lg:text-2xl font-medium">
                 {textContent.section1.title}
               </h3>
@@ -43,7 +43,7 @@ const FeaturesSection = ({
               </p>
             </div>
 
-            <div className="flex flex-col space-y-3 px-4">
+            <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-3xl lg:text-2xl font-medium">
                 {textContent.section2.title}
               </h3>
@@ -73,11 +73,11 @@ const FeaturesSection = ({
 
       {/* Password tool info */}
       <div className="flex flex-col w-full items-center justify-center bg-white">
-        <div className="flex flex-col items-center justify-center pt-20 pb-5 px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
+        <div className="flex flex-col items-center justify-center py-10 sm:pt-20 px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
 
           <div className="flex flex-col items-center w-full space-y-16">
 
-            <div className="flex flex-col space-y-3 px-4">
+            <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-2xl font-medium">
                 {textContent.section3.title}
               </h3>
@@ -86,7 +86,7 @@ const FeaturesSection = ({
                 {textContent.section3.subtitle}
               </p>
 
-              <ul className="lg:max-w-2xl list-disc pl-4 space-y-1.5">
+              <ul className="lg:max-w-2xl list-disc pl-6 space-y-1.5">
                 {textContent.section3.features.map((feature) => (
                   <li key={feature} className="text-lg font-medium">
                     {feature}
@@ -95,7 +95,7 @@ const FeaturesSection = ({
               </ul>
             </div>
 
-            <div className="flex flex-col space-y-3 px-4">
+            <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-2xl font-medium">
                 {textContent.section4.title}
               </h3>
@@ -120,7 +120,7 @@ const FeaturesSection = ({
               </p>
             </div>
 
-            <div className="flex flex-col space-y-3 px-4">
+            <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-2xl font-medium">
                 {textContent.section5.title}
               </h3>
@@ -206,7 +206,7 @@ const FeaturesSection = ({
             </div>
           </div>
 
-          <div className="flex flex-col space-y-3 px-4">
+          <div className="flex flex-col space-y-3 px-2">
             <h3 className="text-2xl font-medium">
               {textContent.section6.title}
             </h3>

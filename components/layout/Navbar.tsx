@@ -138,7 +138,7 @@ export default function Navbar({
             </div>
 
             {/* Logo */}
-            <Link href="/" locale={lang}>
+            <Link href="/" locale={lang} passHref>
               <a className="flex flex-shrink-0">
                 <img loading="lazy" className="select-none" src={`../../logos/internxt/${(darkMode && !menuState) ? 'white' : 'cool-gray-90'}.svg`} alt="Internxt logo" />
               </a>

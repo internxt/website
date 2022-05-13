@@ -14,6 +14,7 @@ const HeroSection = ({
   textContent
 }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
+  const [passwordLength, setPasswordLength] = useState(0);
   const [pwned, setPwned] = useState('-');
   const [crackFeedback, setCrackFeedback] = useState('-');
   const [crackScore, setCrackScore] = useState(0);
@@ -54,6 +55,7 @@ const HeroSection = ({
 
   const checkPassword = (pswrd) => {
     const password = pswrd.target.value;
+    setPasswordLength(password.length);
 
     if (password === '') {
       setPwned('-');
@@ -88,7 +90,7 @@ const HeroSection = ({
   };
 
   return (
-    <section className="relative flex flex-col items-center bg-white pt-32 pb-16 space-y-12 md:space-y-16">
+    <section className="relative flex flex-col items-center bg-white pt-32 pb-10 sm:pb-16 space-y-12 md:space-y-16">
       <div className="flex flex-col items-center text-center space-y-2 px-4 lg:px-0">
         <h1 className="text-3xl lg:text-5xl font-medium">
           {textContent.title}
@@ -131,7 +133,7 @@ const HeroSection = ({
             <div
               key={step}
               // eslint-disable-next-line no-nested-ternary
-              className={`${index <= crackScore ? (crackScore > 3 ? 'bg-green' : (crackScore > 1 ? 'bg-orange' : 'bg-red')) : 'bg-gray-10'} h-full w-full rounded-full transition-all duration-75 ease-out`}
+              className={`${(index <= crackScore && passwordLength !== 0) ? (crackScore > 3 ? 'bg-green' : (crackScore > 1 ? 'bg-orange' : 'bg-red')) : 'bg-gray-10'} h-full w-full rounded-full transition-all duration-75 ease-out`}
             />
           ))}
         </div>
