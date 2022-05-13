@@ -110,7 +110,7 @@ const HeroSection = ({
             id="input"
             type={inputTypePassword ? 'password' : 'text'}
             placeholder={textContent.placeholder}
-            autoComplete="false"
+            autoComplete="off"
             className="h-14 w-full bg-white rounded-lg border-2 border-gray-10 focus:border-primary ring-5 ring-primary ring-opacity-0 focus:ring-opacity-10 pl-4 pr-14 text-2xl placeholder-gray-30 appearance-none outline-none shadow-subtle transition-all duration-150 ease-out delay-150"
           />
           <label
