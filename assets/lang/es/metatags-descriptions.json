@@ -83,5 +83,10 @@
         "id": "privacy-directory",
         "title": "Internxt - Directorio de organizaciones, instituciones y ONG de protección de la privacidad",
         "description": "Directorio de organizaciones, instituciones y ONG de derechos digitales que trabajan junto a Internxt para promover, apoyar y defender la privacidad para todos."
+    },
+    {
+        "id": "password-checker",
+        "title": "Internxt - Verificación gratuita y segura de contraseñas",
+        "description": "Chequeo de seguridad de contraseñas gratuito. Compruebe la solidez de sus contraseñas con la herramienta segura en línea de Internxt."
     }
 ]
