@@ -22,7 +22,7 @@ const Photos = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Photos">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Photos" lang={lang}>
 
       <Navbar
         textContent={navbarLang}

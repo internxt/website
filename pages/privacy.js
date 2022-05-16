@@ -17,7 +17,7 @@ const Privacy = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
 
       <Navbar
         textContent={navbarLang}

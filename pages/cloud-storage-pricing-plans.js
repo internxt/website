@@ -15,7 +15,7 @@ const CloudStoragePricingPlans = ({
 
   return (
 
-    <Layout segmentName="Ads Landing" title={metatags[0].title} description={metatags[0].description}>
+    <Layout segmentName="Ads Landing" title={metatags[0].title} description={metatags[0].description} lang={lang}>
 
       <HeroSection
         textContent={textContent.HeroSection}

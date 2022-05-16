@@ -45,7 +45,7 @@ const Home = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
 
       <Navbar
         textContent={navbarLang}

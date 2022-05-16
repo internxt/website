@@ -23,7 +23,7 @@ const Lifetime = ({
 
   return (
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime Landing Page">
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime Landing Page" lang={lang}>
 
       <HeroSection
         lang={lang}
