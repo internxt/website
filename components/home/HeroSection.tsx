@@ -1,5 +1,7 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { ArrowUpRight } from 'phosphor-react';
 
 const HeroSection = ({
   textContent,
@@ -8,9 +10,9 @@ const HeroSection = ({
 
   <section>
 
-    <div className="content pt-24">
+    <div className="pt-24">
 
-      <div className="flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
+      <div className="content flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
 
         <div className="flex flex-col w-auto md:hidden mx-20 mb-6">
           <img loading="lazy" src="/images/home/devicesMobileView.webp" draggable="false" alt="laptop and phone with Internxt app" />
@@ -72,11 +74,11 @@ const HeroSection = ({
         </div>
       )}
 
-      <div className="featuredMarquee">
+      <div className="relative">
 
         <div className="flex xl:hidden">
 
-          <Marquee className="bg-white" gradientColor="[255,255,255]" gradientWidth="32px" speed="30">
+          <Marquee className="bg-white" gradientColor={[255, 255, 255]} gradientWidth="32px" speed={30}>
 
             <div className="featured flex flex-row w-full p-6">
 
@@ -178,6 +180,91 @@ const HeroSection = ({
 
         </div>
 
+      </div>
+
+      <div className="relative w-screen py-10 border-b border-gray-10">
+        <div className="absolute top-0 left-0 md:w-40 h-full z-10 bg-gradient-to-r from-white via-white to-transparentw pointer-events-none" />
+        <div className="absolute top-0 right-0 md:w-40 h-full z-10 bg-gradient-to-l from-white via-white to-transparentw pointer-events-none" />
+        {/* Mobile swiper */}
+        <Swiper
+          className="w-full flex sm:hidden"
+          slidesPerView="auto"
+          centeredSlides
+          autoHeight
+          loop
+          grabCursor
+          scrollbar={{
+            draggable: true,
+          }}
+        >
+          {textContent.testimonials.map(
+            (testimonial) => (
+              <SwiperSlide
+                className="flex flex-row max-w-lg px-4 md:px-5"
+                key={`desktop_${testimonial.quote}`}
+              >
+                <a
+                  className="flex flex-col w-full p-8 md:p-10 bg-gray-1 rounded-2xl text-gray-80"
+                  href={testimonial.url ?? undefined}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className="text-lg mb-5">{testimonial.quote}</p>
+                  <p className="text-base font-medium text-gray-100">
+                    <span>—</span>
+                    <span className="ml-2">{testimonial.user}</span>
+                  </p>
+                  {testimonial.source && (
+                    <p className="flex flex-row items-center text-sm text-gray-50">
+                      <span className="mr-1">{`${textContent.testimonialFrom} ${testimonial.source}`}</span>
+                      <ArrowUpRight size={16} />
+                    </p>
+                  )}
+                </a>
+              </SwiperSlide>
+            )
+          )}
+        </Swiper>
+
+        {/* Desktop swiper */}
+        <Swiper
+          className="w-full hidden sm:flex"
+          slidesPerView="auto"
+          centeredSlides
+          loop
+          grabCursor
+          scrollbar={{
+            draggable: true,
+          }}
+        >
+          {textContent.testimonials.map(
+            (testimonial) => (
+              <SwiperSlide
+                className="flex flex-row max-w-lg px-4 md:px-5"
+                key={`desktop_${testimonial.quote}`}
+              >
+                <a
+                  className="flex flex-col w-full p-8 md:p-10 bg-gray-1 rounded-2xl text-gray-80"
+                  href={testimonial.url ?? undefined}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className="text-lg mb-5">{testimonial.quote}</p>
+                  <p className="text-base font-medium text-gray-100">
+                    <span>—</span>
+                    <span className="ml-2">{testimonial.user}</span>
+                  </p>
+                  {testimonial.source && (
+                    <p className="flex flex-row items-center text-sm text-gray-50">
+                      <span className="mr-1">{`${textContent.testimonialFrom} ${testimonial.source}`}</span>
+                      <ArrowUpRight size={16} />
+                    </p>
+                  )}
+                </a>
+              </SwiperSlide>
+            )
+          )}
+        </Swiper>
       </div>
 
     </div>

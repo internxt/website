@@ -9,7 +9,7 @@ const FeaturesSection = ({ textContent, lang }) => {
   const router = useRouter();
 
   return (
-    <section className="bg-neutral-10">
+    <section className="bg-gray-1">
       <div className="content px-6 pb-24 flex flex-col">
         <div className="flex flex-col items-center justify-center w-full text-center flex-shrink-0 py-20 pt-24 md:py-24 md:pt-32">
           {/*
@@ -32,14 +32,14 @@ const FeaturesSection = ({ textContent, lang }) => {
 
           <div className="flex flex-col items-center justify-center sm:flex-row space-y-2 sm:space-y-0 sm:space-x-10">
             <Link href="/photos" lang={lang}>
-              <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-60">
+              <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-primary">
                 <span>{textContent.cta.photos}</span>
                 <UilAngleRightB className="w-4 h-4" />
               </a>
             </Link>
 
             <Link href="/drive" lang={lang}>
-              <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-60">
+              <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-primary">
                 <span>{textContent.cta.drive}</span>
                 <UilAngleRightB className="w-4 h-4" />
               </a>
@@ -59,7 +59,7 @@ const FeaturesSection = ({ textContent, lang }) => {
               <span className="text-lg text-neutral-500">
                 {textContent.feature1.description}
               </span>
-              <a href="https://help.internxt.com/en/articles/5387164-what-is-zero-knowledge-encryption" target="_blank" className="text-lg text-blue-60" rel="noreferrer">
+              <a href="https://help.internxt.com/en/articles/5387164-what-is-zero-knowledge-encryption" target="_blank" className="text-lg text-primary" rel="noreferrer">
                 <div className="flex flex-row items-center">
                   {textContent.feature1.cta}
                   <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" alt="arrow right" />
@@ -83,7 +83,7 @@ const FeaturesSection = ({ textContent, lang }) => {
               <span className="text-lg text-neutral-500">
                 {textContent.feature2.description}
               </span>
-              <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="text-lg text-blue-60">
+              <a href={`${router.pathname === '/products' ? '' : (`${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`)}`} className="text-lg text-primary">
                 <div className="flex flex-row items-center">
                   {textContent.feature2.cta}
                   <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" alt="arrow right" />
@@ -106,7 +106,7 @@ const FeaturesSection = ({ textContent, lang }) => {
               <span className="text-lg text-neutral-500">
                 {textContent.feature3.description}
               </span>
-              <a href={`${(lang ? (`/${lang}`) : '/')}`} target="_blank" className="text-lg text-blue-60 hidden" rel="noreferrer">
+              <a href={`${(lang ? (`/${lang}`) : '/')}`} target="_blank" className="text-lg text-primary hidden" rel="noreferrer">
                 <div className="flex flex-row items-center">
                   {textContent.feature3.cta}
                   <img loading="lazy" className="mt-0.5 ml-2" src="/icons/chevronBlue60.svg" draggable="false" alt="arrow right" />
