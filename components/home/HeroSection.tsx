@@ -82,10 +82,6 @@ const HeroSection = ({
 
             <div className="featured flex flex-row w-full p-6">
 
-              <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
-                <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
-              </a>
-
               {lang === 'es' ? (
                 <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
                   <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
