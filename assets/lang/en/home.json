@@ -5,7 +5,32 @@
 		"subtitle": {"line1": "Internxt Drive is a zero-knowledge cloud storage", "line2": "service based on best-in-class privacy and security"},
 		"cta1": "Get up to 10GB",
 		"cta1detail": "for free",
-		"cta2": {"mobile": "Get App", "desktop": "Download"},
+		"cta2": {"mobile": "Get App", "desktop": "Download"}
+	},
+	"FeaturesSection":
+	{
+		"eyebrow": "INTERNXT DRIVE",
+		"title": {
+			"line1": "The most secure cloud for",
+			"line2": "all your files and photos"
+		},
+		"subtitle": {
+			"line1": "Our products are based on your privacy and security. Drive and Photos are just",
+			"line2": "the beginning of a full family of products focused on you and your privacy."
+		},
+		"cta": {
+			"drive": "Explore Drive",
+			"photos": "Discover Photos"
+		},
+		"feature1": {"title": {"line1": "Secure", "line2": "by design"}, "description": "Your files are fragmented & encrypted before leaving your device. No tricks, no hidden things, private by default, secure by design, that’s Internxt. Say hello to Web3.", "cta": "How zero-knowledge works"},
+		"feature2": {"title": {"line1": "Multi", "line2": "device"}, "description": "Access the whole family of apps adapted for all your devices to suit all your needs.", "cta": "Download apps"},
+		"feature3": {"title": {"line1": "Privacy, that's", "line2": "the question"}, "description": "Unlike other competitors, our business model is not based on ads, but on you. We don’t access or sell your data.", "cta": "Privacy at Internxt"}
+	},
+	"InvestorsSection":
+	{
+		"title": "Brands that trust us",
+		"subtitle": {"line1": "Brands and investors trust us so strongly that", "line2": "we raised more than 1M in 2 years."},
+		"title2": "What users says about us",
 		"testimonialFrom": "Review from",
 		"testimonials": [
 			{
@@ -49,30 +74,6 @@
 				"source": "AlternativeTo"
 			}
 		]
-	},
-	"FeaturesSection":
-	{
-		"eyebrow": "INTERNXT DRIVE",
-		"title": {
-			"line1": "The most secure cloud for",
-			"line2": "all your files and photos"
-		},
-		"subtitle": {
-			"line1": "Our products are based on your privacy and security. Drive and Photos are just",
-			"line2": "the beginning of a full family of products focused on you and your privacy."
-		},
-		"cta": {
-			"drive": "Explore Drive",
-			"photos": "Discover Photos"
-		},
-		"feature1": {"title": {"line1": "Secure", "line2": "by design"}, "description": "Your files are fragmented & encrypted before leaving your device. No tricks, no hidden things, private by default, secure by design, that’s Internxt. Say hello to Web3.", "cta": "How zero-knowledge works"},
-		"feature2": {"title": {"line1": "Multi", "line2": "device"}, "description": "Access the whole family of apps adapted for all your devices to suit all your needs.", "cta": "Download apps"},
-		"feature3": {"title": {"line1": "Privacy, that's", "line2": "the question"}, "description": "Unlike other competitors, our business model is not based on ads, but on you. We don’t access or sell your data.", "cta": "Privacy at Internxt"}
-	},
-	"InvestorsSection":
-	{
-		"title": "Brands that trust us",
-		"subtitle": {"line1": "Brands and investors trust us so strongly that", "line2": "we raised more than 1M in 2 years."}
 	},
 	"GetStartedSection":
 	{
