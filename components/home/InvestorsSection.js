@@ -39,6 +39,7 @@ const InvestorsSection = ({ textContent }) => (
         <div className="relative w-screen">
           <div className="absolute top-0 left-0 md:w-40 h-full z-10 bg-gradient-to-r from-white via-white to-transparentw pointer-events-none" />
           <div className="absolute top-0 right-0 md:w-40 h-full z-10 bg-gradient-to-l from-white via-white to-transparentw pointer-events-none" />
+
           {/* Mobile swiper */}
           <Swiper
             className="w-full flex sm:hidden"
@@ -47,14 +48,11 @@ const InvestorsSection = ({ textContent }) => (
             autoHeight
             loop
             grabCursor
-            scrollbar={{
-              draggable: true,
-            }}
           >
             {textContent.testimonials.map(
               (testimonial) => (
                 <SwiperSlide
-                  className="flex flex-row max-w-lg px-4 md:px-5 text-left"
+                  className="flex flex-row max-w-lg px-4 md:px-5 text-center"
                   key={`desktop_${testimonial.quote}`}
                 >
                   <a
@@ -63,13 +61,10 @@ const InvestorsSection = ({ textContent }) => (
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <p className="text-lg mb-5">{testimonial.quote}</p>
-                    <p className="text-base font-semibold text-gray-100">
-                      <span>—</span>
-                      <span className="ml-2">{testimonial.user}</span>
-                    </p>
+                    <p className="text-lg mb-6">{testimonial.quote}</p>
+                    <p className="text-base font-semibold text-gray-100">{testimonial.user}</p>
                     {testimonial.source && (
-                      <p className="flex flex-row items-center text-sm text-gray-50">
+                      <p className="flex flex-row items-center justify-center  text-sm text-gray-50">
                         <span className="mr-1">{`${textContent.testimonialFrom} ${testimonial.source}`}</span>
                         <ArrowUpRight size={16} />
                       </p>
@@ -87,14 +82,11 @@ const InvestorsSection = ({ textContent }) => (
             centeredSlides
             loop
             grabCursor
-            scrollbar={{
-              draggable: true,
-            }}
           >
             {textContent.testimonials.map(
               (testimonial) => (
                 <SwiperSlide
-                  className="flex flex-row max-w-lg px-4 md:px-5 text-left"
+                  className="flex flex-row max-w-lg px-4 md:px-5 text-center"
                   key={`desktop_${testimonial.quote}`}
                 >
                   <a
@@ -103,13 +95,10 @@ const InvestorsSection = ({ textContent }) => (
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <p className="text-lg mb-5">{testimonial.quote}</p>
-                    <p className="text-base font-semibold text-gray-100">
-                      <span>—</span>
-                      <span className="ml-2">{testimonial.user}</span>
-                    </p>
+                    <p className="text-lg mb-6">{testimonial.quote}</p>
+                    <p className="text-base font-semibold text-gray-100">{testimonial.user}</p>
                     {testimonial.source && (
-                      <p className="flex flex-row items-center text-sm text-gray-50">
+                      <p className="flex flex-row items-center justify-center text-sm text-gray-50">
                         <span className="mr-1">{`${textContent.testimonialFrom} ${testimonial.source}`}</span>
                         <ArrowUpRight size={16} />
                       </p>
@@ -119,6 +108,7 @@ const InvestorsSection = ({ textContent }) => (
               )
             )}
           </Swiper>
+
         </div>
       </div>
     </div>
