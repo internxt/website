@@ -5,7 +5,7 @@ import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '../lib/get-download-url';
 import HeroSection from '../components/home/HeroSection';
 import GetStartedSection from '../components/home/GetStartedSection';
-import InvestorsSection from '../components/home/InvestorsSection';
+import SocialProofSection from '../components/home/SocialProofSection';
 import FeaturesSection from '../components/home/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
@@ -65,7 +65,7 @@ const Home = ({
         lang={lang}
       />
 
-      <InvestorsSection
+      <SocialProofSection
         textContent={langJson.InvestorsSection}
       />
 

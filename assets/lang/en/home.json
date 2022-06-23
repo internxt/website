@@ -35,43 +35,53 @@
 		"testimonials": [
 			{
 				"quote": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.",
-				"user": "Eva Wiliams, photographer and software journalist at FixThePhoto.com",
+				"photo": "22788963.jpg",
+				"name": "Eva Wiliams",
+				"title": "Photographer and software journalist at FixThePhoto.com",
 				"url": "http://fixthephoto.com/",
 				"source": "FixThePhoto.com"
 			},
 			{
 				"quote": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt. For now, all my doubts and questions have been answered in a few minutes, and I love knowing that there's always someone who is willing to help me.",
-				"user": "Josep Carrizo",
+				"photo": "89039475.jpg",
+				"name": "Josep Carrizo",
+				"title": "User of Trustpilot",
 				"url": "https://www.trustpilot.com/users/620109fdeb4e5a00120ccf23",
 				"source": "Trustpilot"
 			},
 			{
 				"quote": "A fairly new approach to cloud storage. It uses solid techniques to store your data that can only be accessed by you and it supports 2FA. So you do not need tools to encrypt your data before uploading. It makes sense that uploading will take some time. That said it is a great service..",
-				"user": "Eric",
+				"name": "Eric",
+				"title": "User of Trustpilot",
 				"url": "https://www.trustpilot.com/reviews/6289deaf4b16276ac98cb377",
 				"source": "Trustpilot"
 			},
 			{
 				"quote": "Excellent upload speed. Very nice mobile app. Very good security features. Generous free space.",
-				"user": "Sunil T.",
+				"name": "Sunil T.",
+				"title": "User of Trustpilot",
 				"url": "https://www.trustpilot.com/users/628cd38ca677f30012ec6f80",
 				"source": "Trustpilot"
 			},
 			{
-				"quote": "I love that a) my files are encrypted right away, and that the company can't actually access the files. Dropbox & Drive still scan the files [...] I know that Internxt won't delete my files since they don't scan the content. And b) Internxt stores the files shards in 8 different locations - so if one, two or even 4 distributed servers go down, my content is still safe as it's decentralized privately.",
-				"user": "User in Media Production - Small-Business",
-				"url": "https://www.g2.com/products/internxt-drive/reviews/internxt-drive-review-5268828",
-				"source": "G2"
-			},
-			{
 				"quote": "The Future of Cloud Storage. Pros: Love the fact that finally we have an affordable decentralised cloud storage software that also has a very cool look and is user-friendly.",
-				"user": "Luca C.",
+				"name": "Luca C.",
+				"title": "User of GetApp",
 				"url": "https://www.getapp.com/collaboration-software/a/internxt-drive/reviews/fdc005779c/",
 				"source": "GetApp"
 			},
 			{
+				"quote": "I love that a) my files are encrypted right away, and that the company can't actually access the files. Dropbox & Drive still scan the files [...] I know that Internxt won't delete my files since they don't scan the content. And b) Internxt stores the files shards in 8 different locations - so if one, two or even 4 distributed servers go down, my content is still safe as it's decentralized privately.",
+				"name": "Anonymous",
+				"title": "User in Media Production - Small-Business",
+				"url": "https://www.g2.com/products/internxt-drive/reviews/internxt-drive-review-5268828",
+				"source": "G2"
+			},
+			{
 				"quote": "I really like Internxt Drive. This decentralized cloud uploads files quickly, you can modify your files (colors, vectors), making them easier to organize than others. I started with their free plan but now I have the 200GB plan for less than a breakfast per month.",
-				"user": "Annie Bridge",
+				"photo": "60518239.webp",
+				"name": "Annie Bridge",
+				"title": "User of AlternativeTo",
 				"url": "https://alternativeto.net/software/x-cloud/about/#app-comment-90438",
 				"source": "AlternativeTo"
 			}

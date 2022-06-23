@@ -2,8 +2,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ArrowUpRight } from 'phosphor-react';
+import Testimonial from './Testimonial';
 
-const InvestorsSection = ({ textContent }) => (
+const SocialProofSection = ({ textContent }) => (
   <section>
     <div className="content">
       <div className="flex flex-col items-center justify-center w-full text-center flex-shrink-0 px-10 md:px-0 py-12 md:py-24">
@@ -36,7 +37,90 @@ const InvestorsSection = ({ textContent }) => (
           {textContent.title2}
         </h3>
 
-        <div className="relative w-screen">
+        <div className="relative flex flex-col items-center px-6 w-screen">
+          <div className="w-full max-w-7xl grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden">
+            {/* 3 Columns */}
+            <ul className="hidden lg:flex flex-col space-y-6 lg:space-y-8">
+              {textContent.testimonials.filter((_, i) => i % 3 === 0).map((item) => (
+                <Testimonial
+                  key={item}
+                  url={item.url}
+                  photo={item.photo}
+                  name={item.name}
+                  title={item.title}
+                  quote={item.quote}
+                />
+              ))}
+            </ul>
+            <ul className="hidden lg:flex flex-col space-y-6 lg:space-y-8">
+              {textContent.testimonials.filter((_, i) => (i - 1) % 3 === 0).map((item) => (
+                <Testimonial
+                  key={item}
+                  url={item.url}
+                  photo={item.photo}
+                  name={item.name}
+                  title={item.title}
+                  quote={item.quote}
+                />
+              ))}
+            </ul>
+            <ul className="hidden lg:flex flex-col space-y-6 lg:space-y-8">
+              {textContent.testimonials.filter((_, i) => (i - 2) % 3 === 0).map((item) => (
+                <Testimonial
+                  key={item}
+                  url={item.url}
+                  photo={item.photo}
+                  name={item.name}
+                  title={item.title}
+                  quote={item.quote}
+                />
+              ))}
+            </ul>
+
+            {/* 2 Columns */}
+            <ul className="hidden sm:flex lg:hidden flex-col space-y-6 lg:space-y-8">
+              {textContent.testimonials.filter((_, i) => i % 2 === 0).map((item) => (
+                <Testimonial
+                  key={item}
+                  url={item.url}
+                  photo={item.photo}
+                  name={item.name}
+                  title={item.title}
+                  quote={item.quote}
+                />
+              ))}
+            </ul>
+            <ul className="hidden sm:flex lg:hidden flex-col space-y-6 lg:space-y-8">
+              {textContent.testimonials.filter((_, i) => i % 2 !== 0).map((item) => (
+                <Testimonial
+                  key={item}
+                  url={item.url}
+                  photo={item.photo}
+                  name={item.name}
+                  title={item.title}
+                  quote={item.quote}
+                />
+              ))}
+            </ul>
+
+            {/* 1 Columns */}
+            <ul className="flex sm:hidden flex-col space-y-6 lg:space-y-8">
+              {textContent.testimonials.map((item) => (
+                <Testimonial
+                  key={item}
+                  url={item.url}
+                  photo={item.photo}
+                  name={item.name}
+                  title={item.title}
+                  quote={item.quote}
+                />
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* To remove */}
+        <div className="relative hidden w-screen">
           <div className="absolute top-0 left-0 md:w-40 h-full z-10 bg-gradient-to-r from-white via-white to-transparentw pointer-events-none" />
           <div className="absolute top-0 right-0 md:w-40 h-full z-10 bg-gradient-to-l from-white via-white to-transparentw pointer-events-none" />
 
@@ -115,4 +199,4 @@ const InvestorsSection = ({ textContent }) => (
   </section>
 );
 
-export default InvestorsSection;
+export default SocialProofSection;
