@@ -22,7 +22,6 @@ const PriceCard = ({
   const stripeObject = { product: cta[1] };
 
   const billingFrequencyList = {
-    '-1': 'lifetime',
     1: 'monthly',
     6: 'semiannually',
     12: 'annually'

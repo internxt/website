@@ -21,7 +21,6 @@ const PriceCard = ({
   const [stripeObject, setStripeObject] = useState({});
 
   const billingFrequencyList = {
-    '-1': 'lifetime',
     1: 'monthly',
     6: 'semiannually',
     12: 'annually'

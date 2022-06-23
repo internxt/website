@@ -10,13 +10,11 @@
 		"toBusiness": "Change to Plans for Business"
 	},
 	"billingFrequency": {
-		"lifetime": "Lifetime",
 		"monthly": "Monthly",
 		"semiannually": "Semiannually",
 		"annually": "Annually"
 	},
 	"billingFrequencyLabel": {
-		"lifetime": "One-time payment",
 		"monthly": "billed monthly",
     "semiannually": "billed semiannually",
     "annually": "billed annually",

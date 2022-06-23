@@ -174,7 +174,7 @@ const FeatureSection = ({
         </a>
 
         <div className="flex flex-col px-6">
-          <img className="max-h-96" loading="lazy" src="../../images/lifetime/devices.png" alt="Eye slash" draggable="false" />
+          <img className="max-h-96" loading="lazy" src="../../images/partnerships/devices.png" alt="Eye slash" draggable="false" />
         </div>
 
       </div>
