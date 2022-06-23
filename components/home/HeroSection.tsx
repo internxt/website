@@ -8,9 +8,9 @@ const HeroSection = ({
 
   <section>
 
-    <div className="content pt-24">
+    <div className="pt-24 border-b border-gray-5">
 
-      <div className="flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
+      <div className="content flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
 
         <div className="flex flex-col w-auto md:hidden mx-20 mb-6">
           <img loading="lazy" src="/images/home/devicesMobileView.webp" draggable="false" alt="laptop and phone with Internxt app" />
@@ -72,17 +72,13 @@ const HeroSection = ({
         </div>
       )}
 
-      <div className="featuredMarquee">
+      <div className="relative">
 
         <div className="flex xl:hidden">
 
-          <Marquee className="bg-white" gradientColor="[255,255,255]" gradientWidth="32px" speed="30">
+          <Marquee className="bg-white" gradientColor={[255, 255, 255]} gradientWidth="32px" speed={30}>
 
             <div className="featured flex flex-row w-full p-6">
-
-              <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
-                <img loading="lazy" className="mr-12" src="../../logos/featured/forbes.svg" draggable="false" width="62" height="16" alt="forbes logo" />
-              </a>
 
               {lang === 'es' ? (
                 <a href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/" target="_blank" rel="noreferrer">
