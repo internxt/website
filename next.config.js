@@ -19,13 +19,13 @@ module.exports = {
       })),
       // =======================================================
       // REDIRECTS TO PRICING
-      ...['/sharewareonsale', '/special-offer'].map((src) => ({
+      ...['/sharewareonsale', '/special-offer', '/lifetime'].map((src) => ({
         source: src,
         destination: '/pricing',
         permanent: false,
       })),
       // REDIRECTS TO PRICING (WITH LANG)
-      ...['/sharewareonsale', '/special-offer'].map((src) => ({
+      ...['/sharewareonsale', '/special-offer', '/lifetime'].map((src) => ({
         source: `/:lang${src}`,
         destination: '/:lang/pricing',
         permanent: false,
