@@ -31,13 +31,14 @@ const SocialProofSection = ({ textContent }) => (
           </div>
         </div>
 
-        <h3 className="my-8 text-3xl font-semibold">
+        {/* <h3 className="my-8 text-3xl font-semibold">
           {textContent.title2}
-        </h3>
+        </h3> */}
 
+        {/*
         <div className="relative flex flex-col items-center px-6 w-screen">
           <div className="w-full max-w-7xl grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden">
-            {/* 3 Columns */}
+
             <ul className="hidden lg:flex flex-col space-y-6 lg:space-y-8">
               {textContent.testimonials.filter((_, i) => i % 3 === 0).map((item) => (
                 <Testimonial
@@ -75,7 +76,6 @@ const SocialProofSection = ({ textContent }) => (
               ))}
             </ul>
 
-            {/* 2 Columns */}
             <ul className="hidden sm:flex lg:hidden flex-col space-y-6 lg:space-y-8">
               {textContent.testimonials.filter((_, i) => i % 2 === 0).map((item) => (
                 <Testimonial
@@ -101,7 +101,6 @@ const SocialProofSection = ({ textContent }) => (
               ))}
             </ul>
 
-            {/* 1 Columns */}
             <ul className="flex sm:hidden flex-col space-y-6 lg:space-y-8">
               {textContent.testimonials.map((item) => (
                 <Testimonial
@@ -116,6 +115,7 @@ const SocialProofSection = ({ textContent }) => (
             </ul>
           </div>
         </div>
+        */}
       </div>
     </div>
   </section>
