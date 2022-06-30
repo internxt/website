@@ -18,10 +18,10 @@ const ProductsNavigation = ({
           {textContent.products.photos}
         </a>
       </Link>
-      <a className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${selectedItem === 'send' ? 'text-cool-gray-70' : 'text-cool-gray-40'} text-base sm:text-sm font-medium`}>
+      <a href="https://send.internxt.com" target="_blank" rel="noreferrer" className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${selectedItem === 'send' ? 'text-cool-gray-70' : 'text-cool-gray-40 hover:text-cool-gray-50'} text-base sm:text-sm font-medium`}>
         {textContent.products.send}
         <span className="absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none text-orange-dark text-supporting-2">
-          {textContent.products.comingSoon}
+          {textContent.products.new}
         </span>
       </a>
     </div>

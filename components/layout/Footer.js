@@ -114,12 +114,12 @@ export default function Footer({
                       <a>{textContent.FooterSection.sections.products.photos}</a>
                     </Link>
 
-                    <a className={`flex flex-row items-center ${darkMode ? 'text-cool-gray-60' : 'text-cool-gray-40'}`}>
+                    <a href="https://send.internxt.com" target="_blank" rel="noreferrer" className="flex flex-row items-center">
                       <div>
                         {textContent.FooterSection.sections.products.send}
                       </div>
-                      <div className="text-orange-dark text-supporting-2 whitespace-nowrap ml-3 mt-0.5 pointer-events-none">
-                        {textContent.FooterSection.comingSoon}
+                      <div className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-1 whitespace-nowrap ml-2 pointer-events-none uppercase font-semibold">
+                        {textContent.FooterSection.new}
                       </div>
                     </a>
 
@@ -321,16 +321,14 @@ export default function Footer({
                         <a>{textContent.FooterSection.sections.products.photos}</a>
                       </Link>
 
-                      <Link href="" locale={lang} passHref>
-                        <a className={`flex flex-row items-center ${darkMode ? 'text-cool-gray-60' : 'text-cool-gray-40'}`}>
-                          <div>
-                            {textContent.FooterSection.sections.products.send}
-                          </div>
-                          <div className={`${darkMode ? 'text-orange' : 'text-orange-dark'} text-supporting-2 whitespace-nowrap ml-3 pointer-events-none`}>
-                            {textContent.FooterSection.comingSoon}
-                          </div>
-                        </a>
-                      </Link>
+                      <a href="https://send.internxt.com" target="_blank" rel="noreferrer" className="flex flex-row items-center">
+                        <div>
+                          {textContent.FooterSection.sections.products.send}
+                        </div>
+                        <div className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-1 whitespace-nowrap ml-2 pointer-events-none uppercase font-semibold">
+                          {textContent.FooterSection.new}
+                        </div>
+                      </a>
 
                       <Link href="/token" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.token}</a>
