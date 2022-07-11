@@ -203,6 +203,12 @@
 				"name": "Access Now",
 				"description": "Access Now es un grupo de defensa que lucha por defender y ampliar los derechos digitales de los usuarios. Mediante el funcionamiento de una línea telefónica de seguridad digital 24/7, la organización de la conferencia anual RightsCon y la concesión de subvenciones a organizaciones de base que trabajan para dar forma a la política legal digital.  Access Now se ha consolidado como una fuerza mundial para el bien en la era digital.",
 				"url": "https://www.accessnow.org/"
+			},
+			{
+				"id": "cyberpeaceinstitute",
+				"name": "CyberPeace Institute",
+				"description": "La CyberPeace Institute es una organización no gubernamenta cuya misión es garantizar los derechos de las personas a la seguridad, y asiste y protege a las comunidades vulnerables para que puedan estar preparadas y recuperarse de los ciberataques que pretenden interrumpir su trabajo.",
+				"url": "https://www.cyberpeaceinstitute.org/"
 			}
 		]
 	},

@@ -203,6 +203,12 @@
 				"name": "Access Now",
 				"description": "Access Now is an advocacy group fighting to defend and extend user’s digital rights. By operating a 24/7 Digital Security Hotline, organizing the annual RightsCon conference, and providing grants to grassroots organizations working to shape digital legal policy. Access Now has cemented itself as a world-wide force for good in the digital age.",
 				"url": "https://www.accessnow.org/"
+			},
+			{
+				"id": "cyberpeaceinstitute",
+				"name": "CyberPeace Institute",
+				"description": "The CyberPeace Institute nongovernmental organization whose mission is to ensure the rights of people to security, assist and protect vulnerable communities so they can be prepared for and recover from cyberattacks that aim to disrupt their work.",
+				"url": "https://www.cyberpeaceinstitute.org/"
 			}
 		]
 	},
