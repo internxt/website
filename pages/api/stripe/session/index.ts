@@ -19,7 +19,6 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
 
   const params: Stripe.Checkout.SessionCreateParams = {
     mode: PRODUCT.mode,
-    payment_method_types: ['card'],
     success_url: successUrl,
     cancel_url: cancelUrl,
     ...PRODUCT.session,
