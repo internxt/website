@@ -4,6 +4,8 @@ import Layout from '../../components/layout/Layout';
 
 export default function Cancelled() {
   useEffect(() => {
+    window.location = 'http://internxt.com/pricing';
+    /*
     try {
       const urlSearchParams = new URLSearchParams(window.location.search);
       const checkoutSessionId = urlSearchParams.get('sid');
@@ -11,12 +13,12 @@ export default function Cancelled() {
         'Checkout Canceled',
         {
           cs_id: checkoutSessionId
-        },
-        () => { window.location = 'http://internxt.com/pricing'; }
+        }
       );
     } catch (err) {
       window.location = 'http://internxt.com/pricing';
     }
+    */
   }, []);
 
   return (
