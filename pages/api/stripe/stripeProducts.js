@@ -197,6 +197,30 @@ const STRIPE_PRODUCT = {
       product: 'prod_EUaUAiDCK1Etz1',
     }
   },
+  TB2_Free_1_Year_Summer_Offer: {
+    production: 'plan_FkTXxEg3GZW0pg',
+    debug: 'plan_Gd6EiK5twY0akg',
+    return: 'pricing',
+    mode: 'subscription',
+    session: {
+      discounts: [{
+        promotion_code: isTest ? 'promo_1LUwGJFAOdcgaBMQ6KGXz3k8' : 'promo_1LUwGJFAOdcgaBMQ6KGXz3k8',
+      }],
+      line_items: [
+        {
+          quantity: 1,
+        }
+      ]
+    },
+    properties: {
+      currency: 'EUR',
+      revenue: 9.99,
+      type: 'recurrent',
+      price_id: 'plan_F7ptyrVRmyL8Gn',
+      quantity: 1,
+      product: 'prod_EUaUAiDCK1Etz1',
+    }
+  },
   TB2_50_OFF_Annual: {
     production: 'price_1JxXCDFAOdcgaBMQeIxcx8YI',
     debug: 'price_1JxaIsFAOdcgaBMQOS6Do2qh',
