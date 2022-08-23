@@ -69,7 +69,7 @@ const HeroSection = ({
         setIsSelectedFile(false);
         setIsScannig(false);
         setIsScanFinished(false);
-        console.error('error', error);
+
       });
   };
 

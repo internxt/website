@@ -36,7 +36,6 @@ export async function redirectToCheckoutAction(stripeObject) {
   });
 
   if (response.status === 500) {
-    console.error(response.statusText);
     return;
   }
 

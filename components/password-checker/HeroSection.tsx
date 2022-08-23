@@ -71,7 +71,7 @@ const HeroSection = ({
         })
         .catch((err) => {
           // eslint-disable-next-line no-console
-          console.error(err);
+
         });
 
       // Check for crack time and get anti-crack feedback
