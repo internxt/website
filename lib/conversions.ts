@@ -38,12 +38,12 @@ export default async function setUTM() {
       if (search[1] !== null) {
         // window.localStorage.setItem(key, search[1])
         window.sessionStorage.setItem(key, search[1]);
-        // console.log("Found '" + key + "' in url with value '" + search[1] + "' (saving in local storage)")
+
         return search[1];
       }
     } else if (storage) {
       // name is found in local storage
-      // console.log("Found '" + key + "' in local sotrage with value '" + search[1] + "'")
+
       return storage;
     }
   }

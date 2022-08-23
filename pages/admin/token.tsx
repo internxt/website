@@ -89,7 +89,7 @@ export async function getServerSideProps(ctx) {
     }
   } catch (e) {
     isAuth = false;
-    console.log('Unauthorized', e.message);
+
     ctx.res.setHeader('WWW-Authenticate', 'Basic realm="Password", charset="UTF-8"');
     ctx.res.statusCode = 401;
   }
