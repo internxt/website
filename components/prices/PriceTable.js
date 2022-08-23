@@ -123,11 +123,11 @@ const PriceTable = ({
           enterTo="transform scale-100 translate-y-0 opacity-100"
         >
           <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
-            <PriceCard className="flex md:hidden" planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('TB2')]} popular={pricings.individuals.TB2.popular} lang={lang} />
+            <PriceCard className={billingFrequency === 12 ? 'flex md:hidden' : 'hidden'} planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('TB2')]} popular={pricings.individuals.TB2.popular} lang={lang} />
             <PriceCard planType="individual" storage={pricings.individuals.free.storage} price={billingPrice(pricings.individuals.free.price)} billingFrequency={billingFrequency} cta={['link', 'https://drive.internxt.com/new?']} popular={pricings.individuals.free.popular} lang={lang} />
             <PriceCard planType="individual" storage={pricings.individuals.GB20.storage} price={billingPrice(pricings.individuals.GB20.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('GB20')]} popular={pricings.individuals.GB20.popular} lang={lang} />
             <PriceCard planType="individual" storage={pricings.individuals.GB200.storage} price={billingPrice(pricings.individuals.GB200.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('GB200')]} popular={pricings.individuals.GB200.popular} lang={lang} />
-            <PriceCard className="hidden md:flex" planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('TB2')]} popular={pricings.individuals.TB2.popular} lang={lang} />
+            <PriceCard className={billingFrequency === 12 ? 'hidden md:flex' : ''} planType="individual" storage={pricings.individuals.TB2.storage} price={billingPrice(pricings.individuals.TB2.price)} billingFrequency={billingFrequency} cta={['checkout', checkoutPlan('TB2')]} popular={pricings.individuals.TB2.popular} lang={lang} />
           </div>
         </Transition>
 
