@@ -50,7 +50,7 @@ const PriceCard = ({
             </div>
 
             <div
-              className={`planPrice flex flex-col p-10 justify-center items-center ${
+              className={`planPrice flex flex-col py-10 justify-center items-center ${
                 priceBefore ? 'space-y-1' : 'space-y-4'
               }`}
             >
@@ -97,11 +97,18 @@ const PriceCard = ({
                     10.78
                     {' '}
                   </span>
-                  <span className="billingFrequency">
+                  <span>
                     {
-                      contentText.billingFrequencyLabel[
-                        billingFrequencyList[billingFrequency]
-                      ]
+                      lang === 'es' ? 'el primer año, después' : 'first year, then'
+                    }
+                  </span>
+                  <span>
+                    {' '}
+                    €107.88
+                  </span>
+                  <span>
+                    {
+                      lang === 'es' ? '/año' : '/year'
                     }
                   </span>
                 </p>
@@ -181,7 +188,7 @@ const PriceCard = ({
         <div
           className={`priceCard card ${
             popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''
-          } flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2`}
+          } flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2 ${className}`}
         >
           <div
             className={`mostPopular ${
