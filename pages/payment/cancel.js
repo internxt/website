@@ -4,7 +4,7 @@ import Layout from '../../components/layout/Layout';
 
 export default function Cancelled() {
   useEffect(() => {
-    window.location = 'http://internxt.com/pricing';
+    window.location = 'https://internxt.com/pricing';
     /*
     try {
       const urlSearchParams = new URLSearchParams(window.location.search);
