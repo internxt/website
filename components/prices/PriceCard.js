@@ -35,17 +35,13 @@ const PriceCard = ({
 
   return (
     <>
-      {(storage === '2TB' && billingFrequency === 12 && planType.toLowerCase() === 'individual') ? (
+      {storage === '2TB' && billingFrequency === 12 && planType.toLowerCase() === 'individual' ? (
         <div
           className={`relative priceCard card flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2 ${className}`}
         >
           <img src="./images/prices/bg.png" alt="" className="absolute w-full h-full object-center object-cover z-0" />
-          <div
-            className="info flex flex-col p-6 items-center justify-center z-10"
-          >
-            <div
-              className="storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min bg-white bg-opacity-15 text-white font-semibold rounded-full"
-            >
+          <div className="info flex flex-col p-6 items-center justify-center z-10">
+            <div className="storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min bg-white bg-opacity-15 text-white font-medium rounded-full">
               {storage}
             </div>
 
@@ -56,28 +52,20 @@ const PriceCard = ({
             >
               <div
                 className={`priceBreakdown flex ${
-                  planType.toLowerCase() === 'individual'
-                    ? 'flex-row space-x-px items-end'
-                    : 'flex-col items-center'
+                  planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end' : 'flex-col items-center'
                 }`}
               >
-                <p className="flex flex-row items-start text-white font-semibold space-x-0.5">
+                <p className="flex flex-row items-start text-white font-medium space-x-0.5">
                   <span className="relative priceBefore text-2xl line-through font-medium text-white opacity-50 mr-2">
                     €8.99
                   </span>
-                  <span className={`currency text-lg -mt-1 ${price <= 0 ? 'hidden' : ''}`}>
-                    €
-                  </span>
-                  <span className="relative price text-5xl h-10 pl-0.5 flex flex-row items-center font-semibold">
+                  <span className={`currency text-lg -mt-1 ${price <= 0 ? 'hidden' : ''}`}>€</span>
+                  <span className="relative price text-5xl h-10 pl-0.5 flex flex-row items-center font-medium">
                     <span>0.89</span>
                   </span>
                 </p>
                 {/* eslint-disable-next-line no-nested-ternary */}
-                <span
-                  className={`perMonth text-white ${
-                    price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''
-                  }`}
-                >
+                <span className={`perMonth text-white ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}>
                   {contentText.perMonth}
                 </span>
               </div>
@@ -88,29 +76,13 @@ const PriceCard = ({
                 } flex-row text-white opacity-75 text-xs`}
               >
                 <p className={`${price <= 0 ? 'hidden' : ''}`}>
-                  <span
-                    className={`totalBilled ${
-                      billingFrequency < 0 ? 'hidden' : ''
-                    }`}
-                  >
+                  <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
                     <span className="currency text-supporting-2">€</span>
-                    10.78
-                    {' '}
+                    10.78{' '}
                   </span>
-                  <span>
-                    {
-                      lang === 'es' ? 'el primer año, después' : 'first year, then'
-                    }
-                  </span>
-                  <span>
-                    {' '}
-                    €107.88
-                  </span>
-                  <span>
-                    {
-                      lang === 'es' ? '/año' : '/year'
-                    }
-                  </span>
+                  <span>{lang === 'es' ? 'el primer año, después' : 'first year, then'}</span>
+                  <span> €107.88</span>
+                  <span>{lang === 'es' ? '/año' : '/year'}</span>
                 </p>
               </div>
             </div>
@@ -121,16 +93,14 @@ const PriceCard = ({
               className="flex flex-row w-full"
             >
               <div className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-blue-60 bg-white  active:bg-blue-10 transform origin-center active:translate-y-0.5 focus:outline-none transition-all duration-75 cursor-pointer select-none">
-                {contentText.cta.buy}
-                {' '}
-                {storage}
+                {contentText.cta.buy} {storage}
               </div>
             </div>
           </div>
 
           <div className="featureList flex flex-col p-6 text-white bg-black bg-opacity-20 border-t border-black border-opacity-10 backdrop-filter backdrop-blur-sm z-10">
             <div className="flex flex-col space-y-2">
-              <div className="flex flex-row items-start space-x-2 font-semibold">
+              <div className="flex flex-row items-start space-x-2 font-medium">
                 <img
                   loading="lazy"
                   className="mt-0.5 transform translate-y-px select-none"
@@ -144,11 +114,7 @@ const PriceCard = ({
                     : `${contentText.features.moneyBack}`}
                 </span>
                 <span className={`${price <= 0 ? 'flex' : 'hidden'}`}>
-                  {contentText.features.enjoyForever.enjoyUpTo}
-                  {' '}
-                  {storage}
-                  {' '}
-                  {contentText.features.enjoyForever.forever}
+                  {contentText.features.enjoyForever.enjoyUpTo} {storage} {contentText.features.enjoyForever.forever}
                 </span>
               </div>
               <div className="flex flex-row items-start space-x-2">
@@ -193,30 +159,22 @@ const PriceCard = ({
           <div
             className={`mostPopular ${
               popular ? '' : 'hidden'
-            } flex flex-col py-2 items-center justify-center text-xs font-semibold text-white`}
+            } flex flex-col py-2 items-center justify-center text-xs font-medium text-white`}
           >
             {contentText.mostPopular}
           </div>
 
           <div
-            className={`info flex flex-col p-6 items-center justify-center bg-white ${
-              popular ? 'rounded-t-2xl' : ''
-            }`}
+            className={`info flex flex-col p-6 items-center justify-center bg-white ${popular ? 'rounded-t-2xl' : ''}`}
           >
             <div
               className={`storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min ${
-                popular
-                  ? 'bg-blue-10 text-blue-60'
-                  : 'bg-neutral-20 text-neutral-80'
-              } font-semibold rounded-full`}
+                popular ? 'bg-blue-10 text-blue-60' : 'bg-neutral-20 text-neutral-80'
+              } font-medium rounded-full`}
             >
               <p>
                 {storage}
-                <span
-                  className={`${
-                    planType.toLowerCase() === 'individual' ? 'hidden' : ''
-                  } text-sm`}
-                >
+                <span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>
                   {contentText.perUserSlash}
                 </span>
               </p>
@@ -229,32 +187,20 @@ const PriceCard = ({
             >
               <div
                 className={`priceBreakdown flex ${
-                  planType.toLowerCase() === 'individual'
-                    ? 'flex-row space-x-px items-end'
-                    : 'flex-col items-center'
+                  planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end' : 'flex-col items-center'
                 }`}
               >
                 <span
-                  className={`perUser ${
-                    planType.toLowerCase() === 'individual' ? 'hidden' : ''
-                  } text-xs font-semibold`}
+                  className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}
                 >
                   {contentText.perUser}
                 </span>
-                <p className="flex flex-row items-start text-neutral-700 font-semibold space-x-0.5">
-                  <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>
-                    €
-                  </span>
-                  <span className="price text-4xl font-bold">
-                    {price <= 0 ? `${contentText.freePlan}` : price}
-                  </span>
+                <p className="flex flex-row items-start text-neutral-700 font-medium space-x-0.5">
+                  <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span>
+                  <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
                 </p>
                 {/* eslint-disable-next-line no-nested-ternary */}
-                <span
-                  className={`perMonth ${
-                    price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''
-                  }`}
-                >
+                <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}>
                   {contentText.perMonth}
                 </span>
               </div>
@@ -264,8 +210,7 @@ const PriceCard = ({
                   priceBefore ? 'flex' : 'hidden'
                 } text-base text-neutral-80 font-medium line-through`}
               >
-                €
-                {priceBefore}
+                €{priceBefore}
               </span>
 
               <div
@@ -274,26 +219,15 @@ const PriceCard = ({
                 } flex-row text-neutral-80 text-xs`}
               >
                 <p className={`${price <= 0 ? 'hidden' : ''}`}>
-                  <span
-                    className={`totalBilled ${
-                      billingFrequency < 0 ? 'hidden' : ''
-                    }`}
-                  >
+                  <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
                     <span className="currency text-supporting-2">€</span>
-                    {totalBilled}
-                    {' '}
+                    {totalBilled}{' '}
                   </span>
                   <span className="billingFrequency">
-                    {
-                      contentText.billingFrequencyLabel[
-                        billingFrequencyList[billingFrequency]
-                      ]
-                    }
+                    {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
                   </span>
                 </p>
-                <p className={`${price <= 0 ? '' : 'hidden'}`}>
-                  {contentText.price.free}
-                </p>
+                <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.free}</p>
               </div>
             </div>
 
@@ -340,16 +274,10 @@ const PriceCard = ({
                   <div className="relative flex flex-row h-full items-center">
                     <span
                       className={`pointer-events-none ${
-                        Number.isNaN(getUsers)
-                        || getUsers === ''
-                        || getUsers < 1
-                          ? ''
-                          : 'opacity-0'
+                        Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? '' : 'opacity-0'
                       }`}
                     >
-                      {Number.isNaN(getUsers) || getUsers === '' || getUsers < 1
-                        ? 0
-                        : getUsers}
+                      {Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? 0 : getUsers}
                     </span>
                     <input
                       id={`users_${storage}`}
@@ -362,30 +290,16 @@ const PriceCard = ({
                       // eslint-disable-next-line no-unused-expressions
                       onChange={(e) => {
                         e.target.value.toString().startsWith('0')
-                          ? (e.target.value = e.target.value
-                            .toString()
-                            .slice(1, e.target.value.toString().length))
-                          : setUsers(
-                            e.target.value > MAX_USERS
-                              ? MAX_USERS
-                              : e.target.value
-                          );
+                          ? (e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length))
+                          : setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value);
                       }}
                       // eslint-disable-next-line max-len
                       onBlur={(e) => {
-                        setUsers(
-                          e.target.value > MAX_USERS
-                            ? MAX_USERS
-                            : e.target.value < 2
-                              ? 2
-                              : e.target.value
-                        );
+                        setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value < 2 ? 2 : e.target.value);
                       }}
                       // eslint-disable-next-line no-unused-expressions
                       onKeyDown={(e) => {
-                        e.key === 'Enter' || e.key === 'Escape'
-                          ? e.target.blur()
-                          : null;
+                        e.key === 'Enter' || e.key === 'Escape' ? e.target.blur() : null;
                       }}
                       className="absolute left-0 bg-transparent font-medium appearance-none outline-none w-14 min-w-full"
                     />
@@ -395,18 +309,14 @@ const PriceCard = ({
               </div>
 
               <div className="flex flex-row w-full justify-between text-neutral-700 mt-4">
-                <span className="font-semibold">Total:</span>
+                <span className="font-medium">Total:</span>
                 <div className="flex flex-row items-end">
                   <div className="flex flex-row items-start">
                     <span className="text-xs mt-0.5 mr-0.5">€</span>
                     <span>{teamsBilled}</span>
                   </div>
                   <span className="text-xs text-neutral-100 mb-1 ml-0.5">
-                    {
-                      contentText.billingFrequencyLabelSmall[
-                        billingFrequencyList[billingFrequency]
-                      ]
-                    }
+                    {contentText.billingFrequencyLabelSmall[billingFrequencyList[billingFrequency]]}
                   </span>
                 </div>
               </div>
@@ -415,36 +325,24 @@ const PriceCard = ({
             <div
               tabIndex={0}
               onClick={() => {
-                cta[0] === 'checkout'
-                  ? redirectToCheckoutAction(stripeObject)
-                  : (location.href = cta[1]);
+                cta[0] === 'checkout' ? redirectToCheckoutAction(stripeObject) : (location.href = cta[1]);
               }}
               className="flex flex-row w-full"
             >
               <div className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60  active:bg-blue-70 transform origin-center active:translate-y-0.5 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
                 <p
-                  className={`${price <= 0 ? 'hidden' : ''} ${
-                    planType.toLowerCase() === 'individual' ? '' : 'hidden'
-                  }`}
+                  className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}
                 >
-                  {contentText.cta.buy}
-                  {' '}
-                  {storage}
+                  {contentText.cta.buy} {storage}
                 </p>
 
                 <p
-                  className={`${price <= 0 ? '' : 'hidden'} ${
-                    planType.toLowerCase() === 'individual' ? '' : 'hidden'
-                  }`}
+                  className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}
                 >
                   {contentText.cta.signUpNow}
                 </p>
 
-                <p
-                  className={`${
-                    planType.toLowerCase() === 'individual' ? 'hidden' : ''
-                  }`}
-                >
+                <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>
                   {contentText.cta.getStarted}
                 </p>
               </div>
@@ -453,7 +351,7 @@ const PriceCard = ({
 
           <div className="featureList flex flex-col p-6 text-neutral-500 bg-neutral-10 border-t border-neutral-20">
             <div className="flex flex-col space-y-2">
-              <div className="flex flex-row items-start space-x-2 font-semibold">
+              <div className="flex flex-row items-start space-x-2 font-medium">
                 <img
                   loading="lazy"
                   className="mt-0.5 transform translate-y-px select-none"
@@ -467,11 +365,7 @@ const PriceCard = ({
                     : `${contentText.features.moneyBack}`}
                 </span>
                 <span className={`${price <= 0 ? 'flex' : 'hidden'}`}>
-                  {contentText.features.enjoyForever.enjoyUpTo}
-                  {' '}
-                  {storage}
-                  {' '}
-                  {contentText.features.enjoyForever.forever}
+                  {contentText.features.enjoyForever.enjoyUpTo} {storage} {contentText.features.enjoyForever.forever}
                 </span>
               </div>
               <div className="flex flex-row items-start space-x-2">

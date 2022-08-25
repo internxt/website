@@ -4,17 +4,17 @@
 
 @layer components {
   .button-primary {
-    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-lg cursor-pointer
+    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-lg cursor-pointer;
   }
   .button-primary-rounded {
-    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-full cursor-pointer
+    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-full cursor-pointer;
   }
   .markdown {
     a {
-      @apply text-primary underline
+      @apply text-primary underline;
     }
     strong {
-      @apply font-semibold
+      @apply font-medium;
     }
   }
 }
@@ -44,7 +44,7 @@ $cool-gray-20: #dde1e6;
 $cool-gray-10: #f2f4f8;
 $cool-gray-5: #f9fafc;
 
-$gray-100: #18181B;
+$gray-100: #18181b;
 
 $blue-100: #001141;
 $blue-90: #001d6c;
@@ -119,10 +119,10 @@ $neutral-30: #ebecf0;
 $neutral-20: #f4f5f7;
 $neutral-10: #fafbfc;
 
-
 // Fonts
 
-@import url("../public/fonts/NeueEinstellung.css");
+@import url('../public/fonts/NeueEinstellung/NeueEinstellung.css');
+@import url('../public/fonts/Aeonik/Aeonik.css');
 
 // Global styles
 
@@ -135,7 +135,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "NeueEinstellung" !important;
+  font-family: 'Aeonik' !important;
   // overflow-x: hidden;
   color: $gray-100;
 }
@@ -144,7 +144,8 @@ main {
   max-width: 1400px;
   margin: 0 auto;
 }
-section, .section {
+section,
+.section {
   .content {
     max-width: 1400px;
     margin: 0 auto;
@@ -175,11 +176,13 @@ header {
   z-index: 1;
 }
 
-p, h1{ 
+p,
+h1 {
   margin: 0;
 }
 
-.title, .eyebrow {
+.title,
+.eyebrow {
   font-weight: 600;
 }
 .subtitle {
@@ -187,10 +190,10 @@ p, h1{
 }
 
 .card {
-  box-shadow: 0 32px 64px rgba(0,0,0,.08);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08);
 }
 .card-soft {
-  box-shadow: 0 40px 64px rgba(0,0,0,.04);
+  box-shadow: 0 40px 64px rgba(0, 0, 0, 0.04);
 }
 
 .getStartedSection {
@@ -202,9 +205,9 @@ p, h1{
 
 .logo {
   background-image: url('../public/logos/internxt/internxt.svg');
-	background-position: left top;
-	background-size: cover;
-	background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -215,13 +218,14 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
 //  Video modal responsive
 
-.videoModal, #videoModal {
+.videoModal,
+#videoModal {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;

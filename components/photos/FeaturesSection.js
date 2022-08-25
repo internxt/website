@@ -7,21 +7,14 @@ import { UilAngleRightB } from '@iconscout/react-unicons';
 import * as anim from '../../public/js/anim';
 import DownloadComponent from './DownloadComponent';
 
-const FeaturesSection = ({
-  textContent,
-  lang,
-  device,
-  download
-}) => (
+const FeaturesSection = ({ textContent, lang, device, download }) => (
   <section className="flex flex-col w-full">
-
     <div className="flex flex-col items-center pb-32">
-
       {/* Title */}
       <Parallax
         className="flex flex-col w-full justify-center items-center text-center"
         renderLayer={(percentage) => (
-          <h2 className="relative text-3xl lg:text-5xl font-semibold text-cool-gray-90 mb-10 lg:mb-20">
+          <h2 className="relative text-3xl lg:text-5xl font-medium text-cool-gray-90 mb-10 lg:mb-20">
             <Transition
               show={anim.trigger(percentage)}
               enter="transition-all duration-500"
@@ -53,7 +46,6 @@ const FeaturesSection = ({
         className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full justify-center pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
-
             <div className="flex flex-col items-center lg:items-end lg:pr-10">
               {/* Keep items aligned to the left */}
               <div className="flex flex-col items-center lg:items-start">
@@ -62,45 +54,31 @@ const FeaturesSection = ({
                   style={{
                     transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
                     width: 250,
-                    height: 505
+                    height: 505,
                   }}
                 >
                   <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
                   <div
                     className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
                     style={{
-                      backgroundImage: 'url(/images/photos/mobile-photos-gallery-mockup.webp)'
+                      backgroundImage: 'url(/images/photos/mobile-photos-gallery-mockup.webp)',
                     }}
                   />
                 </div>
 
                 <div className="flex flex-col mt-24 px-10 lg:px-0">
-                  <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6">
-                    {textContent.section2.title.line1}
-                    {' '}
-                    <br className="hidden sm:flex" />
-                    {textContent.section2.title.line2}
-                    {' '}
-                    <br className="hidden sm:flex" />
-                    {textContent.section2.title.line3}
-                    {' '}
-                    <br className="hidden sm:flex" />
+                  <h3 className="text-3xl lg:text-4xl font-medium text-cool-gray-90 mb-6">
+                    {textContent.section2.title.line1} <br className="hidden sm:flex" />
+                    {textContent.section2.title.line2} <br className="hidden sm:flex" />
+                    {textContent.section2.title.line3} <br className="hidden sm:flex" />
                     {textContent.section2.title.line4}
                   </h3>
 
                   <p className="text-lg sm:text-base text-cool-gray-80">
-                    {textContent.section2.subtitle.line1}
-                    {' '}
-                    <br className="hidden sm:flex" />
-                    {textContent.section2.subtitle.line2}
-                    {' '}
-                    <br className="hidden sm:flex" />
-                    {textContent.section2.subtitle.line3}
-                    {' '}
-                    <br className="hidden sm:flex" />
-                    {textContent.section2.subtitle.line4}
-                    {' '}
-                    <br className="hidden sm:flex" />
+                    {textContent.section2.subtitle.line1} <br className="hidden sm:flex" />
+                    {textContent.section2.subtitle.line2} <br className="hidden sm:flex" />
+                    {textContent.section2.subtitle.line3} <br className="hidden sm:flex" />
+                    {textContent.section2.subtitle.line4} <br className="hidden sm:flex" />
                     {textContent.section2.subtitle.line5}
                   </p>
                 </div>
@@ -112,7 +90,7 @@ const FeaturesSection = ({
               style={{
                 transform: `translate(0px, -${anim.parallaxMinMax(percentage, -40, 24)}px)`,
                 width: 646,
-                height: 844
+                height: 844,
               }}
             >
               <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
@@ -123,7 +101,6 @@ const FeaturesSection = ({
                 }}
               />
             </div>
-
           </>
         )}
       />
@@ -133,19 +110,18 @@ const FeaturesSection = ({
         className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full justify-center pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
-
             <div
               className="relative hidden lg:flex flex-col w-full items-end"
               style={{
                 transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
-                height: 844
+                height: 844,
               }}
             >
               <div
                 className="absolute right-0 flex rounded-4xl shadow-subtle"
                 style={{
                   width: 646,
-                  height: 844
+                  height: 844,
                 }}
               />
               <div
@@ -153,36 +129,24 @@ const FeaturesSection = ({
                 style={{
                   backgroundImage: 'url(/images/photos/photos-preview-mockup.webp)',
                   width: 646,
-                  height: 844
+                  height: 844,
                 }}
               />
             </div>
 
             <div className="flex flex-col items-center lg:items-start lg:pl-10">
               <div className="flex flex-col mb-24 px-10 lg:px-0">
-                <h3 className="text-3xl lg:text-4xl font-semibold text-cool-gray-90 mb-6 pt-20">
-                  {textContent.section3.title.line1}
-                  {' '}
-                  <br className="hidden sm:flex" />
-                  {textContent.section3.title.line2}
-                  {' '}
-                  <br className="hidden sm:flex" />
-                  {textContent.section3.title.line3}
-                  {' '}
-                  <br className="hidden sm:flex" />
+                <h3 className="text-3xl lg:text-4xl font-medium text-cool-gray-90 mb-6 pt-20">
+                  {textContent.section3.title.line1} <br className="hidden sm:flex" />
+                  {textContent.section3.title.line2} <br className="hidden sm:flex" />
+                  {textContent.section3.title.line3} <br className="hidden sm:flex" />
                   {textContent.section3.title.line4}
                 </h3>
 
                 <p className="text-lg sm:text-base text-cool-gray-80">
-                  {textContent.section3.subtitle.line1}
-                  {' '}
-                  <br className="hidden sm:flex" />
-                  {textContent.section3.subtitle.line2}
-                  {' '}
-                  <br className="hidden sm:flex" />
-                  {textContent.section3.subtitle.line3}
-                  {' '}
-                  <br className="hidden sm:flex" />
+                  {textContent.section3.subtitle.line1} <br className="hidden sm:flex" />
+                  {textContent.section3.subtitle.line2} <br className="hidden sm:flex" />
+                  {textContent.section3.subtitle.line3} <br className="hidden sm:flex" />
                   {textContent.section3.subtitle.line4}
                 </p>
               </div>
@@ -192,19 +156,18 @@ const FeaturesSection = ({
                 style={{
                   transform: `translate(0px, ${anim.parallaxMinMax(percentage, 40, 0)}px)`,
                   width: 250,
-                  height: 505
+                  height: 505,
                 }}
               >
                 <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
                 <div
                   className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
                   style={{
-                    backgroundImage: 'url(/images/photos/mobile-photos-share-mockup.webp)'
+                    backgroundImage: 'url(/images/photos/mobile-photos-share-mockup.webp)',
                   }}
                 />
               </div>
             </div>
-
           </>
         )}
       />
@@ -212,35 +175,24 @@ const FeaturesSection = ({
       {/* Download links */}
 
       <div className="flex flex-col items-center w-full pb-10 lg:py-20 px-10 lg:px-0">
-        <h3 className="text-3xl font-semibold text-center text-cool-gray-90 mb-12">
-          {textContent.section4.title.line1}
-          {' '}
-          {/* <br className="hidden sm:flex" /> */}
+        <h3 className="text-3xl font-medium text-center text-cool-gray-90 mb-12">
+          {textContent.section4.title.line1} {/* <br className="hidden sm:flex" /> */}
           {textContent.section4.title.line2}
         </h3>
 
-        <DownloadComponent
-          textContent={textContent.DownloadLinks}
-          lang={lang}
-          device={device}
-          download={download}
-        />
+        <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} device={device} download={download} />
       </div>
 
       <div className="flex flex-col items-center text-center w-full lg:pb-16 px-6 lg:px-0">
-        <h3 className="text-3xl lg:text-5xl font-semibold text-center text-cool-gray-90 mb-10">
+        <h3 className="text-3xl lg:text-5xl font-medium text-center text-cool-gray-90 mb-10">
           {textContent.section5.title.line1}
           <br />
           {textContent.section5.title.line2}
         </h3>
 
         <p className="text-lg sm:text-base text-cool-gray-80 mb-6">
-          {textContent.section5.subtitle.line1}
-          {' '}
-          <br className="hidden sm:flex" />
-          {textContent.section5.subtitle.line2}
-          {' '}
-          <br className="hidden sm:flex" />
+          {textContent.section5.subtitle.line1} <br className="hidden sm:flex" />
+          {textContent.section5.subtitle.line2} <br className="hidden sm:flex" />
           {textContent.section5.subtitle.line3}
         </p>
 
@@ -252,48 +204,28 @@ const FeaturesSection = ({
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-16 lg:gap-20 xl:gap-32 text-center">
-
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-semibold mb-4">
-              {textContent.section5.card1.title}
-            </h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">
-              {textContent.section5.card1.subtitle}
-            </h5>
+            <h4 className="text-2xl font-medium mb-4">{textContent.section5.card1.title}</h4>
+            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section5.card1.subtitle}</h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-semibold mb-4">
-              {textContent.section5.card2.title}
-            </h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">
-              {textContent.section5.card2.subtitle}
-            </h5>
+            <h4 className="text-2xl font-medium mb-4">{textContent.section5.card2.title}</h4>
+            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section5.card2.subtitle}</h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-semibold mb-4">
-              {textContent.section5.card3.title}
-            </h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">
-              {textContent.section5.card3.subtitle}
-            </h5>
+            <h4 className="text-2xl font-medium mb-4">{textContent.section5.card3.title}</h4>
+            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section5.card3.subtitle}</h5>
           </div>
 
           <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-semibold mb-4">
-              {textContent.section5.card4.title}
-            </h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">
-              {textContent.section5.card4.subtitle}
-            </h5>
+            <h4 className="text-2xl font-medium mb-4">{textContent.section5.card4.title}</h4>
+            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section5.card4.subtitle}</h5>
           </div>
-
         </div>
       </div>
-
     </div>
-
   </section>
 );
 

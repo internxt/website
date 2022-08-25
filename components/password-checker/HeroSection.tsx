@@ -2,17 +2,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import zxcvbn from 'zxcvbn';
-import {
-  Info,
-  Eye,
-  EyeSlash,
-  WarningCircle
-} from 'phosphor-react';
+import { Info, Eye, EyeSlash, WarningCircle } from 'phosphor-react';
 import pwnedpasswords from '../../lib/checker';
 
-const HeroSection = ({
-  textContent
-}) => {
+const HeroSection = ({ textContent }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
   const [passwordLength, setPasswordLength] = useState(0);
   const [pwned, setPwned] = useState('-');
@@ -71,7 +64,6 @@ const HeroSection = ({
         })
         .catch((err) => {
           // eslint-disable-next-line no-console
-
         });
 
       // Check for crack time and get anti-crack feedback
@@ -82,9 +74,7 @@ const HeroSection = ({
         setCrackFeedback('-');
       }
       setCrackScore(crack.score);
-      setCrackTime(
-        getTimeTranslation(crack.crack_times_display.offline_slow_hashing_1e4_per_second)
-      );
+      setCrackTime(getTimeTranslation(crack.crack_times_display.offline_slow_hashing_1e4_per_second));
       setCrackTimeInSeconds(crack.crack_times_seconds.offline_slow_hashing_1e4_per_second);
     }
   };
@@ -92,9 +82,7 @@ const HeroSection = ({
   return (
     <section className="relative flex flex-col items-center bg-white pt-32 pb-10 sm:pb-16 space-y-12 md:space-y-16">
       <div className="flex flex-col items-center text-center space-y-2 px-4 lg:px-0">
-        <h1 className="text-3xl lg:text-5xl font-medium">
-          {textContent.title}
-        </h1>
+        <h1 className="text-3xl lg:text-5xl font-medium">{textContent.title}</h1>
         <h2 className="text-lg">
           {textContent.subtitle1}
           <br />
@@ -120,11 +108,7 @@ const HeroSection = ({
             onClick={() => toggleShowPassword()}
             className="absolute top-3 right-4 flex flex-col items-center justify-center w-8 h-8 text-gray-80 cursor-pointer"
           >
-            {inputTypePassword ? (
-              <EyeSlash size={28} />
-            ) : (
-              <Eye size={28} />
-            )}
+            {inputTypePassword ? <EyeSlash size={28} /> : <Eye size={28} />}
           </label>
         </div>
 
@@ -133,7 +117,15 @@ const HeroSection = ({
             <div
               key={step}
               // eslint-disable-next-line no-nested-ternary
-              className={`${(index <= crackScore && passwordLength !== 0) ? (crackScore > 3 ? 'bg-green' : (crackScore > 1 ? 'bg-orange' : 'bg-red')) : 'bg-gray-10'} h-full w-full rounded-full transition-all duration-75 ease-out`}
+              className={`${
+                index <= crackScore && passwordLength !== 0
+                  ? crackScore > 3
+                    ? 'bg-green'
+                    : crackScore > 1
+                    ? 'bg-orange'
+                    : 'bg-red'
+                  : 'bg-gray-10'
+              } h-full w-full rounded-full transition-all duration-75 ease-out`}
             />
           ))}
         </div>
@@ -141,11 +133,8 @@ const HeroSection = ({
 
       {/* Password dynamic feedback */}
       <div className="flex flex-col lg:flex-row items-stretch w-full lg:w-auto lg:h-48 space-y-4 lg:space-y-0 lg:space-x-5 px-4">
-
         <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8 space-y-1">
-          <span className="text-xs font-semibold text-gray-50">
-            {textContent.result.feedback.title}
-          </span>
+          <span className="text-xs font-medium text-gray-50">{textContent.result.feedback.title}</span>
           <span className={`${crackFeedback === '-' ? 'text-4xl font-normal' : 'text-xl font-medium'}`}>
             {crackFeedback}
           </span>
@@ -153,38 +142,35 @@ const HeroSection = ({
 
         <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8 relative">
           <div className="flex flex-col h-full space-y-1">
-            <span className="text-xs font-semibold text-gray-50">
-              {textContent.result.pwned.title}
-            </span>
-            <span className="text-4xl font-normal">
-              {pwned}
-            </span>
+            <span className="text-xs font-medium text-gray-50">{textContent.result.pwned.title}</span>
+            <span className="text-4xl font-normal">{pwned}</span>
           </div>
 
-          <span className="text-sm text-gray-40">
-            {textContent.result.pwned.subtitle}
-          </span>
+          <span className="text-sm text-gray-40">{textContent.result.pwned.subtitle}</span>
 
-          <div className={`absolute top-8 right-8 text-red-dark transition-opacity duration-100 ease-out ${(hasNumber(pwned) && pwned.toString() !== '0') ? 'opacity-100' : 'opacity-0'}`}>
+          <div
+            className={`absolute top-8 right-8 text-red-dark transition-opacity duration-100 ease-out ${
+              hasNumber(pwned) && pwned.toString() !== '0' ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
             <WarningCircle weight="fill" size={24} />
           </div>
         </div>
 
         <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8">
           <div className="flex flex-col h-full space-y-1">
-            <span className="text-xs font-semibold text-gray-50">
-              {textContent.result.crack.title}
-            </span>
-            <span className={`${(crackTimeInSeconds < 1 && crackTime !== '-') ? 'text-xl font-medium' : 'text-4xl font-normal'}`}>
+            <span className="text-xs font-medium text-gray-50">{textContent.result.crack.title}</span>
+            <span
+              className={`${
+                crackTimeInSeconds < 1 && crackTime !== '-' ? 'text-xl font-medium' : 'text-4xl font-normal'
+              }`}
+            >
               {crackTime}
             </span>
           </div>
 
-          <span className="text-sm text-gray-40">
-            {textContent.result.crack.subtitle}
-          </span>
+          <span className="text-sm text-gray-40">{textContent.result.crack.subtitle}</span>
         </div>
-
       </div>
     </section>
   );
