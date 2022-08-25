@@ -1,76 +1,10 @@
 {
-  "root": true,
-  "parser": "babel-eslint",
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "airbnb"
-  ],
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    },
-    "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      }
-    }
-  },
-  "plugins": [
-    "unused-imports"
-  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "import/no-dynamic-require": 0,
-    "import/extensions": 0,
-    "global-require": 0,
-    "react/destructuring-assignment": "warn",
-    "react/prop-types": 0,
-    "react/jsx-filename-extension": 0,
-    "eslintjsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/anchor-is-valid": 0,
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
-    ],
-    "comma-dangle": 0,
-    "indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ]
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "linebreak-style": ["error", "unix"],
+    "no-console": "off",
+    "max-len": "off"
   }
 }
