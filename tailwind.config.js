@@ -1,7 +1,6 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  mode: 'jit',
   // important: true, // overide bootstrap
   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
@@ -51,6 +50,9 @@ module.exports = {
         80: 'rgb(58,58,59)',
         90: 'rgb(44,44,48)',
         100: 'rgb(24,24,27)',
+      },
+      gradients: {
+        'electric-cyan': 'rgb(0,191,255)',
       },
       // OLD DESIGN SYSTEM
       'cool-gray': {

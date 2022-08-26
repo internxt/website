@@ -31,8 +31,8 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           : 'border-opacity-0 bg-opacity-0'
       } ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}
     >
-      <div className="content w-full">
-        <div className="navbar items-center flex justify-between px-4 lg:px-10 xl:px-32">
+      <div className="w-full mx-4 lg:mx-10 xl:mx-32">
+        <div className="navbar items-center flex justify-between max-w-screen-xl mx-auto">
           {/* Left side of navbar: Logo / Hamburguer menu */}
           <div className=" flex flex-row flex-grow flex-shrink-0 flex-1 justify-start items-center space-x-4 lg:space-x-0">
             <div className="flex lg:hidden">

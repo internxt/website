@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Marquee from 'react-fast-marquee';
 
 export default function HeroSection({ textContent, lang }) {
+  useEffect(() => {
+    if (window) {
+      window.onmessage = function (e) {
+        if (e.data == 'redirect') {
+          redirectToDrive();
+        }
+      };
+    }
+  });
+
+  const redirectToDrive = () => window.location.replace('https://drive.internxt.com');
   return (
     <section>
-      <div className="pt-24 border-b border-gray-5">
-        <div className="content flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
+      <div className="mx-4 lg:mx-10 xl:mx-32 pt-24 border-b border-gray-5">
+        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
           <div className="flex flex-col w-auto md:hidden mx-20 mb-6">
             <img
               loading="lazy"
@@ -15,35 +26,18 @@ export default function HeroSection({ textContent, lang }) {
             />
           </div>
 
-          <div className="flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 lg:mr-16 flex flex-col w-screen sm:w-auto text-center md:text-left">
-            <h1 className="mb-4 pb-4 bg-clip-text text-transparent bg-gradient-to-tr from-primary to-[#00BFFF] md:mb-8 font-medium text-4xl md:text-5xl lg:text-7xl">
-              {textContent.title.line1}
-              <br className="hidden sm:inline-flex" /> {textContent.title.line2}
+          <div className="flex-shrink-0 my-6 md:my-8 md:ml-2 lg:my-20 lg:ml-0 flex flex-col items-center md:items-start w-screen sm:w-auto text-center md:text-left">
+            <h1 className="pb-5 lg:pb-10 bg-clip-text text-transparent bg-gradient-to-tr from-primary to-gradients-electric-cyan font-medium text-5xl lg:text-7xl max-w-md lg:max-w-lg">
+              {textContent.title}
             </h1>
 
-            <h2 className="mb-8 md:mb-8 text-lg lg:text-xl text-neutral-500">
-              {textContent.subtitle.line1}
-              <br className="hidden sm:inline-flex" /> {textContent.subtitle.line2}
-            </h2>
+            <h2 className="mb-5 md:mb-10 text-lg lg:text-xl text-gray-80 max-w-md">{textContent.subtitle}</h2>
 
-            <div>
-              <a
-                href="https://drive.internxt.com/new"
-                id="get-started-link"
-                target="_top"
-                rel="noreferrer"
-                className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
-              >
-                {textContent.cta1}{' '}
-                <span className="font-normal text-blue-30">
-                  <span className="px-1.5">—</span>
-                  {textContent.cta1detail}
-                </span>
-              </a>
-            </div>
+            <h3 className="pb-2.5 font-medium">{textContent.ctaSubtitle}</h3>
+            <iframe className="w-full h-52 md:h-32" src="https://drive.internxt.com/signupwebsite"></iframe>
           </div>
 
-          <div className="hidden md:flex flex-grow flex-col max-w-2xl mr-0 xl:mr-32">
+          <div className="hidden md:flex flex-grow flex-col max-w-2xl ml-5 xl:ml-20">
             <img
               loading="lazy"
               className="hidden xl:flex"
@@ -54,7 +48,7 @@ export default function HeroSection({ textContent, lang }) {
 
             <img
               loading="lazy"
-              className="flex xl:hidden"
+              className="flex xl:hidden transform translate-x-10"
               src="/images/home/devicesAscCut.webp"
               draggable="false"
               alt="desktop, laptop and phone with Internxt app"

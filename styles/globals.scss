@@ -120,8 +120,6 @@ $neutral-20: #f4f5f7;
 $neutral-10: #fafbfc;
 
 // Fonts
-
-@import url('../public/fonts/NeueEinstellung/NeueEinstellung.css');
 @import url('../public/fonts/Aeonik/Aeonik.css');
 
 // Global styles
@@ -137,18 +135,16 @@ body {
   margin: 0;
   font-family: 'Aeonik' !important;
   // overflow-x: hidden;
-  color: $gray-100;
+  @apply text-gray-100;
 }
 
 main {
-  max-width: 1400px;
-  margin: 0 auto;
+  @apply max-w-screen-xl mx-auto;
 }
 section,
 .section {
   .content {
-    max-width: 1400px;
-    margin: 0 auto;
+    @apply max-w-screen-xl mx-auto;
   }
 }
 
