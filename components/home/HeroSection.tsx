@@ -13,6 +13,7 @@ export default function HeroSection({ textContent, lang }) {
   });
 
   const redirectToDrive = () => window.location.replace('https://drive.internxt.com');
+
   return (
     <section>
       <div className="mx-4 lg:mx-10 xl:mx-32 pt-24 border-b border-gray-5">
@@ -27,14 +28,17 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="flex-shrink-0 my-6 md:my-8 md:ml-2 lg:my-20 lg:ml-0 flex flex-col items-center md:items-start w-screen sm:w-auto text-center md:text-left">
-            <h1 className="pb-5 lg:pb-10 bg-clip-text text-transparent bg-gradient-to-tr from-primary to-gradients-electric-cyan font-medium text-5xl lg:text-7xl max-w-md lg:max-w-lg">
+            <h1 className="pb-5 lg:pb-10 bg-clip-text text-transparent bg-gradient-to-tr from-primary to-gradients-electric-cyan font-medium text-5xl lg:text-6xl max-w-md lg:max-w-lg">
               {textContent.title}
             </h1>
 
             <h2 className="mb-5 md:mb-10 text-lg lg:text-xl text-gray-80 max-w-md">{textContent.subtitle}</h2>
 
             <h3 className="pb-2.5 font-medium">{textContent.ctaSubtitle}</h3>
-            <iframe className="w-full h-52 md:h-32" src="https://drive.internxt.com/signupwebsite"></iframe>
+            <iframe
+              className="w-full px-4 sm:px-0 h-64 sm:h-64 lg:h-40"
+              src="https://drive.internxt.com/signupwebsite"
+            ></iframe>
           </div>
 
           <div className="hidden md:flex flex-grow flex-col max-w-2xl ml-5 xl:ml-20">
