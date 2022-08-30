@@ -1,20 +1,56 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Transition, Disclosure } from '@headlessui/react';
+import { Transition, Disclosure, Dialog } from '@headlessui/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
 import styles from './Navbar.module.scss';
+import { X } from 'phosphor-react';
 
 export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
-  const [menuState, setMenuState] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(true);
+  const [menuState, setMenuState] = useState(false);
+  const [scrolled, setScrolled] = useState(true);
   const ctaAction = cta[0] ? cta : ['default', null];
+
+  // Auth
+  useEffect(() => {
+    if (window) {
+      window.onmessage = function (e) {
+        if (e.data == 'redirect') {
+          redirectToDrive();
+        } else if (e.data == 'openDialogLogin') {
+          openAuth('login');
+        } else if (e.data == 'openDialogSignup') {
+          openAuth('signup');
+        }
+      };
+    }
+  });
+
+  const [showAuth, setShowAuth] = useState<boolean>(false);
+  const [showIframe, setShowIframe] = useState<boolean>(true);
+  const [showLoader, setShowLoader] = useState<boolean>(true);
+  const [authMethod, setAuthMethod] = useState<'login' | 'signup'>('signup');
+  const hideAuth = () => {
+    setShowAuth(false);
+    setAuthMethod('signup');
+    setShowLoader(true);
+  };
+  const openAuth = (view: 'login' | 'signup') => {
+    setShowIframe(true);
+    setAuthMethod(view);
+    setShowAuth(true);
+  };
+  const redirectToDrive = () => {
+    setShowIframe(false);
+    setShowLoader(true);
+    window.location.replace('https://drive.internxt.com');
+  };
 
   const handleScroll = () => setScrolled(window.pageYOffset > 0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     handleScroll();
     window.addEventListener('scroll', handleScroll);
   });
@@ -23,12 +59,10 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     <div
       className={`section flex items-center ${
         !menuState && !fixed ? 'absolute' : 'fixed'
-      } w-full h-16 transition-all duration-500 bg-white backdrop-filter backdrop-saturate-100 backdrop-blur-none ${
-        darkMode ? '' : styles.nabvarBgFallback
-      } bg-opacity-0 ${
-        scrolled && fixed
-          ? 'bg-opacity-90 border-opacity-5 backdrop-blur-lg backdrop-saturate-150'
-          : 'border-opacity-0 bg-opacity-0'
+      } w-full h-16 transition-all duration-100 bg-white ${
+        fixed && 'backdrop-filter backdrop-saturate-150 backdrop-blur-lg'
+      } ${darkMode ? '' : styles.nabvarBgFallback} ${
+        scrolled && fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'
       } ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}
     >
       <div className="w-full mx-4 lg:mx-10 xl:mx-32">
@@ -300,29 +334,29 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
           {/* Login and CTA */}
           <div className="flex flex-row flex-grow flex-shrink-0 flex-1 justify-end items-center">
-            <a
-              href="https://drive.internxt.com/login"
-              className={`hidden md:flex whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out mr-1 ${
-                darkMode && !menuState ? 'text-white focus:opacity-80' : 'text-blue-60 focus:text-blue-70'
+            <button
+              onClick={() => openAuth('login')}
+              className={`hidden md:flex whitespace-nowrap py-1.5 px-4 rounded-full border focus:border focus:outline-none transition duration-150 ease-in-out mr-2 ${
+                darkMode && !menuState
+                  ? 'text-white focus:opacity-80 border-white'
+                  : 'text-primary border-primary active:text-primary-dark active:border-primary-dark'
               } text-sm font-medium`}
             >
               {textContent.links.login}
-            </a>
+            </button>
 
             {ctaAction[0] === 'default' ? (
-              <a
-                href="https://drive.internxt.com/new"
-                target="_top"
-                rel="noreferrer"
+              <button
+                onClick={() => openAuth('signup')}
                 id="get-started-link"
-                className={`flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-sm font-medium ${
+                className={`focus:outline-none flex justify-center sm:inline-flex py-1.5 px-4 border border-transparent rounded-full text-sm font-medium ${
                   darkMode && !menuState
                     ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10'
-                    : 'text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70'
-                } focus:outline-none transition-all duration-75`}
+                    : 'text-white bg-primary active:bg-primary-dark'
+                } transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{textContent.links.getStarted}</p>
-              </a>
+              </button>
             ) : (
               ''
             )}
@@ -331,7 +365,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
               <button
                 type="button"
                 onClick={ctaAction[1]}
-                className="flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
+                className="outline-none flex justify-center sm:inline-flex py-1 px-4 border border-transparent rounded-full text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
               >
                 <p className="whitespace-nowrap">{textContent.links.checkout}</p>
               </button>
@@ -341,6 +375,74 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           </div>
         </div>
       </div>
+
+      {/* Auth dialog */}
+      <Transition appear show={showAuth} as={Fragment}>
+        <Dialog as="div" className="relative z-50" onClose={hideAuth}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-150"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-100"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-20 backdrop-filter backdrop-blur-sm" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex flex-col min-h-full items-center justify-center xs:p-4">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-200"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-100"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-screen xs:w-full h-screen xs:h-auto xs:max-w-sm transform overflow-hidden xs:rounded-xl bg-white px-6 py-8 shadow-subtle-hard transition-all">
+                  <div
+                    onClick={hideAuth}
+                    className="flex flex-col items-center justify-center h-9 w-9 cursor-pointer absolute top-6 right-6 rounded-md hover:bg-gray-1 active:bg-gray-5 text-gray-80 z-10"
+                  >
+                    <X className="h-6 w-6" />
+                  </div>
+
+                  {showLoader && (
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-6 w-6 flex flex-col items-center justify-center">
+                      <svg
+                        className="animate-spin"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 6.10352e-05C9.3688 6.10515e-05 10.7147 0.35127 11.909 1.02009C13.1032 1.68892 14.1059 2.65298 14.8211 3.82007C15.5363 4.98716 15.9401 6.31824 15.9938 7.68598C16.0476 9.05372 15.7495 10.4124 15.1281 11.632C14.5066 12.8516 13.5827 13.8914 12.4446 14.6518C11.3064 15.4123 9.99225 15.868 8.62767 15.9754C7.2631 16.0828 5.89379 15.8383 4.65072 15.2652C3.40766 14.6921 2.33242 13.8097 1.52787 12.7023L3.1459 11.5268C3.74932 12.3573 4.55575 13.0191 5.48804 13.4489C6.42034 13.8787 7.44732 14.0621 8.47076 13.9816C9.49419 13.901 10.4798 13.5592 11.3334 12.9889C12.187 12.4185 12.88 11.6387 13.346 10.724C13.8121 9.8093 14.0357 8.79031 13.9954 7.7645C13.9551 6.7387 13.6522 5.74039 13.1158 4.86507C12.5794 3.98975 11.8274 3.2667 10.9317 2.76508C10.036 2.26347 9.0266 2.00006 8 2.00006V6.10352e-05Z"
+                          fill="#636367"
+                        />
+                      </svg>
+                    </div>
+                  )}
+
+                  {showIframe ? (
+                    <iframe
+                      onLoad={() => setShowLoader(false)}
+                      className="relative w-full h-96"
+                      src={`https://drive.internxt.com/${authMethod === 'login' ? 'logindialog' : 'signupdialog'}`}
+                    ></iframe>
+                  ) : (
+                    <div className="relative w-full h-96" />
+                  )}
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
     </div>
   );
 }

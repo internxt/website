@@ -36,7 +36,7 @@ const PriceCard = ({
     <div
       className={`priceCard card ${
         popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''
-      } flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2`}
+      } flex flex-col flex-shrink-0 flex-grow-0 w-full xs:w-72 rounded-2xl overflow-hidden m-2`}
     >
       <div
         className={`mostPopular ${
@@ -46,7 +46,9 @@ const PriceCard = ({
         {contentText.mostPopular}
       </div>
 
-      <div className={`info flex flex-col p-6 items-center justify-center bg-white ${popular ? 'rounded-t-2xl' : ''}`}>
+      <div
+        className={`info flex flex-col p-4 pt-6 items-center justify-center bg-white ${popular ? 'rounded-t-2xl' : ''}`}
+      >
         <div
           className={`storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min ${
             popular ? 'bg-blue-10 text-blue-60' : 'bg-neutral-20 text-neutral-80'
@@ -61,7 +63,7 @@ const PriceCard = ({
         </div>
 
         <div
-          className={`planPrice flex flex-col p-10 justify-center items-center ${
+          className={`planPrice flex flex-col py-8 justify-center items-center ${
             priceBefore ? 'space-y-1' : 'space-y-4'
           }`}
         >
@@ -222,7 +224,7 @@ const PriceCard = ({
       </div>
 
       <div className="featureList flex flex-col p-6 text-neutral-500 bg-neutral-10 border-t border-neutral-20">
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 text-sm">
           <div className="flex flex-row items-start space-x-2 font-medium">
             <img
               loading="lazy"

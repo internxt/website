@@ -6,6 +6,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { redirectToCheckoutAction } from '../CheckoutForm';
+import openAuthDialog from '../../lib/authDialog';
 
 const PriceCard = ({
   planType,
@@ -37,19 +38,15 @@ const PriceCard = ({
     <>
       {storage === '2TB' && billingFrequency === 12 && planType.toLowerCase() === 'individual' ? (
         <div
-          className={`relative priceCard card flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2 ${className}`}
+          className={`relative priceCard card flex flex-col flex-shrink-0 flex-grow-0 w-full xs:w-72 rounded-2xl overflow-hidden m-2 ${className}`}
         >
           <img src="./images/prices/bg.png" alt="" className="absolute w-full h-full object-center object-cover z-0" />
-          <div className="info flex flex-col p-6 items-center justify-center z-10">
+          <div className="info flex flex-col p-4 pt-6 items-center justify-center z-10">
             <div className="storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min bg-white bg-opacity-15 text-white font-medium rounded-full">
               {storage}
             </div>
 
-            <div
-              className={`planPrice flex flex-col py-10 justify-center items-center ${
-                priceBefore ? 'space-y-1' : 'space-y-4'
-              }`}
-            >
+            <div className="planPrice flex flex-col py-8 justify-center items-center space-y-2">
               <div
                 className={`priceBreakdown flex ${
                   planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end' : 'flex-col items-center'
@@ -99,7 +96,7 @@ const PriceCard = ({
           </div>
 
           <div className="featureList flex flex-col p-6 text-white bg-black bg-opacity-20 border-t border-black border-opacity-10 backdrop-filter backdrop-blur-sm z-10">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 text-sm">
               <div className="flex flex-row items-start space-x-2 font-medium">
                 <img
                   loading="lazy"
@@ -154,7 +151,7 @@ const PriceCard = ({
         <div
           className={`priceCard card ${
             popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''
-          } flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2 ${className}`}
+          } flex flex-col flex-shrink-0 flex-grow-0 w-full xs:w-72 rounded-2xl overflow-hidden m-2 ${className}`}
         >
           <div
             className={`mostPopular ${
@@ -165,7 +162,9 @@ const PriceCard = ({
           </div>
 
           <div
-            className={`info flex flex-col p-6 items-center justify-center bg-white ${popular ? 'rounded-t-2xl' : ''}`}
+            className={`info flex flex-col p-4 pt-6 items-center justify-center bg-white ${
+              popular ? 'rounded-t-2xl' : ''
+            }`}
           >
             <div
               className={`storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min ${
@@ -180,11 +179,7 @@ const PriceCard = ({
               </p>
             </div>
 
-            <div
-              className={`planPrice flex flex-col p-10 justify-center items-center ${
-                priceBefore ? 'space-y-1' : 'space-y-4'
-              }`}
-            >
+            <div className="planPrice flex flex-col py-8 justify-center items-center space-y-2">
               <div
                 className={`priceBreakdown flex ${
                   planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end' : 'flex-col items-center'
@@ -325,7 +320,7 @@ const PriceCard = ({
             <div
               tabIndex={0}
               onClick={() => {
-                cta[0] === 'checkout' ? redirectToCheckoutAction(stripeObject) : (location.href = cta[1]);
+                cta[0] === 'checkout' ? redirectToCheckoutAction(stripeObject) : openAuthDialog('signup');
               }}
               className="flex flex-row w-full"
             >
@@ -350,7 +345,7 @@ const PriceCard = ({
           </div>
 
           <div className="featureList flex flex-col p-6 text-neutral-500 bg-neutral-10 border-t border-neutral-20">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 text-sm">
               <div className="flex flex-row items-start space-x-2 font-medium">
                 <img
                   loading="lazy"

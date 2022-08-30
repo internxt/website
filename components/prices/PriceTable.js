@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
-// import Link from 'next/link';
 import PriceCard from './PriceCard';
 
 const PriceTable = ({ setSegmentPageName, lang }) => {
@@ -105,7 +104,7 @@ const PriceTable = ({ setSegmentPageName, lang }) => {
         </h1>
         <button
           type="button"
-          className="mt-4 mb-10 text-center text-blue-60 active:text-blue-50 font-medium cursor-pointer"
+          className="mt-4 mb-6 text-center text-blue-60 active:text-blue-50 font-medium cursor-pointer"
           onClick={() => {
             setIndividual(!individual);
             setSegmentPageName(
@@ -247,12 +246,6 @@ const PriceTable = ({ setSegmentPageName, lang }) => {
             />
           </div>
         </Transition>
-
-        {/* <Link href="/cloud-storage-comparison" lang={lang}>
-          <a className="flex flex-col justify-center items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-blue-60 bg-blue-10 focus:outline-none">
-            Compare with our competitors
-          </a>
-        </Link> */}
       </div>
     </section>
   );

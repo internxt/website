@@ -105,7 +105,7 @@ const PriceTable = ({ setSegmentPageName, lang }) => {
         </h1>
         <button
           type="button"
-          className="mt-4 mb-10 text-center text-blue-60 active:text-blue-50 font-medium cursor-pointer"
+          className="mt-4 mb-6 text-center text-blue-60 active:text-blue-50 font-medium cursor-pointer"
           onClick={() => {
             setIndividual(!individual);
             setSegmentPageName(
