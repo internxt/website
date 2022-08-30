@@ -1,19 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Marquee from 'react-fast-marquee';
 
 export default function HeroSection({ textContent, lang }) {
-  useEffect(() => {
-    if (window) {
-      window.onmessage = function (e) {
-        if (e.data == 'redirect') {
-          redirectToDrive();
-        }
-      };
-    }
-  });
-
-  const redirectToDrive = () => window.location.replace('https://drive.internxt.com');
-
   return (
     <section>
       <div className="mx-4 lg:mx-10 xl:mx-32 pt-24 border-b border-gray-5">

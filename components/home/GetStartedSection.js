@@ -1,4 +1,5 @@
 import React from 'react';
+import openAuthDialog from '../../lib/authDialog';
 
 const GetStartedSection = ({ textContent }) => (
   <section className="text-white">
@@ -13,15 +14,13 @@ const GetStartedSection = ({ textContent }) => (
           <br className="hidden sm:inline-flex" /> {textContent.subtitle.line2}
         </h3>
         <div>
-          <a
-            href="https://drive.internxt.com/new"
+          <button
+            onClick={() => openAuthDialog('signup')}
             id="get-started-link"
-            target="_top"
-            rel="noreferrer"
-            className="inline-flex justify-center w-auto items-center px-6 py-2 border border-transparent rounded-full text-lg sm:text-base font-medium text-blue-60 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-50 focus:ring-blue-30 transition-all duration-75"
+            className="inline-flex justify-center w-auto items-center px-6 py-2 border border-transparent rounded-full text-lg sm:text-base font-medium text-primary bg-white focus:outline-none"
           >
             {textContent.cta1}
-          </a>
+          </button>
         </div>
       </div>
     </div>

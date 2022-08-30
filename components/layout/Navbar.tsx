@@ -17,12 +17,20 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   useEffect(() => {
     if (window) {
       window.onmessage = function (e) {
-        if (e.data == 'redirect') {
-          redirectToDrive();
-        } else if (e.data == 'openDialogLogin') {
-          openAuth('login');
-        } else if (e.data == 'openDialogSignup') {
-          openAuth('signup');
+        const permitedDomains = [
+          'https://drive.internxt.com',
+          'https://internxt.com',
+          process.env.NODE_ENV === 'development' && 'http://localhost:3001',
+          process.env.NODE_ENV === 'development' && 'http://localhost:3000',
+        ];
+        if (permitedDomains.includes(e.origin)) {
+          if (e.data === 'redirect') {
+            redirectToDrive();
+          } else if (e.data === 'openDialogLogin') {
+            openAuth('login');
+          } else if (e.data === 'openDialogSignup') {
+            openAuth('signup');
+          }
         }
       };
     }
