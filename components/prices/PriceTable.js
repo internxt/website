@@ -4,7 +4,7 @@ import { Transition } from '@headlessui/react';
 // import Link from 'next/link';
 import PriceCard from './PriceCard';
 
-const PriceTable = ({ setSegmentPageName, lang }) => {
+export default function PriceTable({ setSegmentPageName, lang }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -105,7 +105,7 @@ const PriceTable = ({ setSegmentPageName, lang }) => {
         </h1>
         <button
           type="button"
-          className="mt-4 mb-10 text-center text-blue-60 active:text-blue-50 font-medium cursor-pointer"
+          className="mt-4 mb-6 text-center text-blue-60 active:text-blue-50 font-medium cursor-pointer"
           onClick={() => {
             setIndividual(!individual);
             setSegmentPageName(
@@ -156,16 +156,6 @@ const PriceTable = ({ setSegmentPageName, lang }) => {
         >
           <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
             <PriceCard
-              className={billingFrequency === 12 ? 'flex md:hidden' : 'hidden'}
-              planType="individual"
-              storage={pricings.individuals.TB2.storage}
-              price={billingPrice(pricings.individuals.TB2.price)}
-              billingFrequency={billingFrequency}
-              cta={['checkout', checkoutPlan('TB2')]}
-              popular={pricings.individuals.TB2.popular}
-              lang={lang}
-            />
-            <PriceCard
               planType="individual"
               storage={pricings.individuals.free.storage}
               price={billingPrice(pricings.individuals.free.price)}
@@ -193,7 +183,6 @@ const PriceTable = ({ setSegmentPageName, lang }) => {
               lang={lang}
             />
             <PriceCard
-              className={billingFrequency === 12 ? 'hidden md:flex' : ''}
               planType="individual"
               storage={pricings.individuals.TB2.storage}
               price={billingPrice(pricings.individuals.TB2.price)}
@@ -256,6 +245,4 @@ const PriceTable = ({ setSegmentPageName, lang }) => {
       </div>
     </section>
   );
-};
-
-export default PriceTable;
+}
