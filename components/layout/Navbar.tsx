@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { Fragment, useEffect, useState } from 'react';
 import Link from 'next/link';
+import { isMobile, isAndroid, isIOS } from 'react-device-detect';
 import { Transition, Disclosure, Dialog } from '@headlessui/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
@@ -55,7 +56,16 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     setShowWhiteScreen(true);
     setShowIframe(false);
     setShowLoader(true);
-    window.location.replace('https://drive.internxt.com');
+
+    if (isMobile) {
+      if (isAndroid) {
+        window.location.replace('https://play.google.com/store/apps/details?id=com.internxt.cloud');
+      } else if (isIOS) {
+        window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
+      }
+    } else {
+      window.location.replace('https://drive.internxt.com');
+    }
   };
 
   const handleScroll = () => setScrolled(window.pageYOffset > 0);
