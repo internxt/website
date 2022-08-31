@@ -32,7 +32,7 @@ export default function HeroSection({ textContent, lang }) {
                 id="get-started-link"
                 target="_top"
                 rel="noreferrer"
-                className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
+                className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary active:bg-primary-dark focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
               >
                 {textContent.cta1}{' '}
                 <span className="font-normal text-blue-30">

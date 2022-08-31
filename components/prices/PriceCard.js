@@ -35,7 +35,7 @@ export default function PriceCard({
   return (
     <div
       className={`priceCard card ${
-        popular ? 'bg-blue-60 ring-2 ring-blue-60 shadow-lg' : ''
+        popular ? 'bg-primary ring-2 ring-primary shadow-lg' : ''
       } flex flex-col flex-shrink-0 flex-grow-0 w-full xs:w-72 rounded-2xl overflow-hidden m-2`}
     >
       <div
@@ -51,7 +51,7 @@ export default function PriceCard({
       >
         <div
           className={`storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min ${
-            popular ? 'bg-blue-10 text-blue-60' : 'bg-neutral-20 text-neutral-80'
+            popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
           } font-medium rounded-full`}
         >
           <p>
@@ -126,7 +126,7 @@ export default function PriceCard({
               }}
               className={`flex flex-row items-center justify-center h-10 w-10 sm:h-8 sm:w-8 ${
                 getUsers > 2
-                  ? 'bg-blue-60 text-white active:bg-blue-70'
+                  ? 'bg-primary text-white active:bg-primary-dark'
                   : 'bg-neutral-30 text-neutral-80 active:bg-neutral-40 cursor-not-allowed'
               } text-2xl font-light z-10 rounded-l-lg transition-all sm:duration-50 select-none`}
             >
@@ -141,7 +141,7 @@ export default function PriceCard({
               }}
               className={`flex flex-row items-center justify-center h-10 w-10 sm:h-8 sm:w-8 ${
                 getUsers < MAX_USERS
-                  ? 'bg-blue-60 text-white active:bg-blue-70'
+                  ? 'bg-primary text-white active:bg-primary-dark'
                   : 'bg-neutral-30 text-neutral-80 active:bg-neutral-40 cursor-not-allowed'
               } text-2xl font-light z-10 rounded-r-lg transition-all sm:duration-50 select-none`}
             >
@@ -209,7 +209,7 @@ export default function PriceCard({
           }}
           className="flex flex-row w-full"
         >
-          <div className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60  active:bg-blue-70 transform origin-center active:translate-y-0.5 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
+          <div className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary  active:bg-primary-dark origin-center active:translate-y-0.5 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.buy} {storage}
             </p>
@@ -228,7 +228,7 @@ export default function PriceCard({
           <div className="flex flex-row items-start space-x-2 font-medium">
             <img
               loading="lazy"
-              className="mt-0.5 transform translate-y-px select-none"
+              className="mt-0.5 translate-y-px select-none"
               src="/icons/checkNeutral500.svg"
               draggable="false"
               alt="check icon"
@@ -245,7 +245,7 @@ export default function PriceCard({
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
-              className="mt-0.5 transform translate-y-px select-none"
+              className="mt-0.5 translate-y-px select-none"
               src="/icons/checkNeutral500.svg"
               draggable="false"
               alt="check icon"
@@ -255,7 +255,7 @@ export default function PriceCard({
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
-              className="mt-0.5 transform translate-y-px select-none"
+              className="mt-0.5 translate-y-px select-none"
               src="/icons/checkNeutral500.svg"
               draggable="false"
               alt="check icon"
@@ -265,7 +265,7 @@ export default function PriceCard({
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
-              className="mt-0.5 transform translate-y-px select-none"
+              className="mt-0.5 translate-y-px select-none"
               src="/icons/checkNeutral500.svg"
               draggable="false"
               alt="check icon"

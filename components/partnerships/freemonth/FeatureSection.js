@@ -99,7 +99,7 @@ const FeatureSection = ({ textContent }) => (
 
         <a
           href="#buy"
-          className="flex justify-center sm:inline-flex px-6 py-2 mb-16 border border-transparent rounded-full text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 outline-none transition-all duration-75"
+          className="flex justify-center sm:inline-flex px-6 py-2 mb-16 border border-transparent rounded-full text-base font-medium text-white bg-primary active:bg-primary-dark focus:bg-primary-dark outline-none transition-all duration-75"
         >
           <span className="whitespace-nowrap">{textContent.buyNowSection.freemonth}</span>
         </a>
