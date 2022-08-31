@@ -7,6 +7,7 @@ import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
 import styles from './Navbar.module.scss';
 import { X } from 'phosphor-react';
+import { isAndroid, isIOS, isMobile } from 'react-device-detect';
 
 export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   const [menuState, setMenuState] = useState(false);
@@ -55,7 +56,16 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     setShowWhiteScreen(true);
     setShowIframe(false);
     setShowLoader(true);
-    window.location.replace('https://drive.internxt.com');
+
+    if (isMobile) {
+      if (isAndroid) {
+        window.location.replace('https://play.google.com/store/apps/details?id=com.internxt.cloud');
+      } else if (isIOS) {
+        window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
+      }
+    } else {
+      window.location.replace('https://drive.internxt.com');
+    }
   };
 
   const handleScroll = () => setScrolled(window.pageYOffset > 0);
