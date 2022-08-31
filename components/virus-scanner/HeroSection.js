@@ -251,7 +251,7 @@ const HeroSection = ({ textContent }) => {
                         <div className="flex flex-col items-center justify-center w-full h-full space-y-4">
                           <div className="relative">
                             <div className="absolute inset-1">
-                              <div className="absolute left-0 w-full h-1 rounded bg-blue-60 shadow-2xl transform -translate-y-1/2 animate-pingpong-v z-10" />
+                              <div className="absolute left-0 w-full h-1 rounded bg-primary shadow-2xl -translate-y-1/2 animate-pingpong-v z-10" />
                             </div>
                             <svg
                               width="80"
@@ -298,11 +298,11 @@ const HeroSection = ({ textContent }) => {
                   {fileSizeLimitReached ? (
                     <>
                       {/* File size limit reached */}
-                      <div className="flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
+                      <div className="flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-primary ring-5 ring-blue-10">
                         <Transition
                           as="div"
                           show={isSelectedFile}
-                          enter="transform transition duration-200 ease-out"
+                          enter="transition duration-200 ease-out"
                           enterFrom="opacity-0 translate-y-2"
                           enterTo="opacity-100 translate-y-0"
                         >
@@ -314,7 +314,7 @@ const HeroSection = ({ textContent }) => {
 
                             <button
                               type="button"
-                              className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-10 text-blue-60 font-medium transform active:scale-98 transition duration-150 ease-out"
+                              className="flex flex-row items-center h-10 px-5 rounded-lg bg-blue-10 text-primary font-medium active:scale-98 transition duration-150 ease-out"
                               onClick={() => {
                                 handleCancelScan();
                               }}
@@ -328,11 +328,11 @@ const HeroSection = ({ textContent }) => {
                   ) : (
                     <>
                       {/* Scan confirmation */}
-                      <div className="flex flex-col items-stretch justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10">
+                      <div className="flex flex-col items-stretch justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-primary ring-5 ring-blue-10">
                         <Transition
                           as="div"
                           show={isSelectedFile}
-                          enter="transform transition duration-200 ease-out"
+                          enter="transition duration-200 ease-out"
                           enterFrom="opacity-0 translate-y-2"
                           enterTo="opacity-100 translate-y-0"
                         >
@@ -347,7 +347,7 @@ const HeroSection = ({ textContent }) => {
                             <div className="flex flex-row items-center justify-center space-x-4">
                               <button
                                 type="button"
-                                className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-10 text-blue-60 font-medium transform active:scale-98 transition duration-150 ease-out"
+                                className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-10 text-primary font-medium active:scale-98 transition duration-150 ease-out"
                                 onClick={() => {
                                   handleCancelScan();
                                 }}
@@ -357,7 +357,7 @@ const HeroSection = ({ textContent }) => {
 
                               <button
                                 type="button"
-                                className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-60 text-white font-medium transform active:scale-98 transition duration-150 ease-out"
+                                className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-primary text-white font-medium active:scale-98 transition duration-150 ease-out"
                                 onClick={() => {
                                   handleConfirmScan();
                                 }}
@@ -382,14 +382,14 @@ const HeroSection = ({ textContent }) => {
                 {isDragging ? (
                   <>
                     {/* Drop file here */}
-                    <div className="flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 border-2 border-blue-60 border-dashed ring-5 ring-blue-10">
-                      <p className="text-2xl sm:text-5xl text-blue-60 font-medium">{textContent.dropHere}</p>
+                    <div className="flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 border-2 border-primary border-dashed ring-5 ring-blue-10">
+                      <p className="text-2xl sm:text-5xl text-primary font-medium">{textContent.dropHere}</p>
                     </div>
                   </>
                 ) : (
                   <>
                     {/* Default state */}
-                    <div className="group flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-blue-60 ring-5 ring-blue-10 cursor-pointer">
+                    <div className="group flex flex-col items-center justify-center w-full h-60 sm:h-96 rounded-3xl bg-blue-10 bg-opacity-20 border-2 border-primary ring-5 ring-blue-10 cursor-pointer">
                       <div className="flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:space-x-20">
                         {/* Icons */}
                         <div className="relative w-32 h-32 hidden sm:flex lg:hidden xl:flex">
@@ -399,7 +399,7 @@ const HeroSection = ({ textContent }) => {
                             viewBox="0 0 128 128"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="absolute -top-2.5 left-7 transform rotate-10 filter drop-shadow-soft"
+                            className="absolute -top-2.5 left-7 rotate-10 filter drop-shadow-soft"
                           >
                             <path
                               d="M0 6C0 2.68629 2.68629 0 6 0L122 0C125.314 0 128 2.68629 128 6V122C128 125.314 125.314 128 122 128H6C2.68629 128 0 125.314 0 122L0 6Z"
@@ -429,7 +429,7 @@ const HeroSection = ({ textContent }) => {
                             viewBox="0 0 128 128"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="absolute top-0.5 -left-7 transform rotate-10- filter drop-shadow-soft"
+                            className="absolute top-0.5 -left-7 rotate-10- filter drop-shadow-soft"
                           >
                             <g filter="url(#filter0_i_1551_1125)">
                               <path
@@ -479,7 +479,7 @@ const HeroSection = ({ textContent }) => {
                               </filter>
                             </defs>
                           </svg>
-                          <div className="absolute flex flex-row items-center -bottom-14 left-1/2 h-8 px-4 rounded-full transform -translate-x-1/2 text-sm text-cool-gray-40 bg-cool-gray-10 whitespace-nowrap">
+                          <div className="absolute flex flex-row items-center -bottom-14 left-1/2 h-8 px-4 rounded-full -translate-x-1/2 text-sm text-cool-gray-40 bg-cool-gray-10 whitespace-nowrap">
                             {textContent.maxFileSize.description}
                           </div>
                         </div>
@@ -493,7 +493,7 @@ const HeroSection = ({ textContent }) => {
                           <p className="text-cool-gray-40">{textContent.or}</p>
                           <button
                             type="button"
-                            className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-10 group-hover:bg-blue-60 focus-visible:bg-blue-60 text-blue-60 group-hover:text-white focus-visible:text-white font-medium transform active:scale-98 transition duration-150 ease-out"
+                            className="flex flex-row items-center h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base rounded-lg bg-blue-10 group-hover:bg-primary focus-visible:bg-primary text-primary group-hover:text-white focus-visible:text-white font-medium active:scale-98 transition duration-150 ease-out"
                             onClick={() => {
                               handleOpenFileExplorer();
                             }}
@@ -512,19 +512,19 @@ const HeroSection = ({ textContent }) => {
           <Transition
             as={Fragment}
             show={!isError && isScanFinished}
-            enter="transform transition duration-200 ease-in-out"
+            enter="transition duration-200 ease-in-out"
             enterFrom="opacity-0 translate-y-2"
             enterTo="opacity-100 translate-y-0"
           >
             <div className="absolute flex flex-row justify-center w-full">
               <button
                 type="button"
-                className="absolute group flex flex-row items-center justify-center -bottom-16 sm:-bottom-14 h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base bg-blue-10 text-blue-60 rounded-lg space-x-2 transform active:scale-98 transition duration-150 ease-out z-10"
+                className="absolute group flex flex-row items-center justify-center -bottom-16 sm:-bottom-14 h-12 sm:h-10 px-6 sm:px-5 text-lg sm:text-base bg-blue-10 text-primary rounded-lg space-x-2 active:scale-98 transition duration-150 ease-out z-10"
                 onClick={() => {
                   handleRestartScan();
                 }}
               >
-                <UilRedo className="w-5 sm:w-4 h-5 sm:h-4 transform group-hover:rotate-full transition duration-0 group-hover:duration-500 ease-out" />
+                <UilRedo className="w-5 sm:w-4 h-5 sm:h-4 group-hover:rotate-full transition duration-0 group-hover:duration-500 ease-out" />
                 <p>{textContent.scanAgain}</p>
               </button>
             </div>
@@ -542,7 +542,7 @@ const HeroSection = ({ textContent }) => {
                 <Transition
                   as={Fragment}
                   show={isError}
-                  enter="transform transition duration-200 ease-in-out"
+                  enter="transition duration-200 ease-in-out"
                   enterFrom="opacity-0 translate-y-4"
                   enterTo="opacity-100 translate-y-0"
                 >
@@ -551,7 +551,7 @@ const HeroSection = ({ textContent }) => {
                     <p className="text-sm text-cool-gray-40 w-full text-center">{textContent.error.description}</p>
                     <button
                       type="button"
-                      className="flex flex-row items-center justify-center -bottom-14 h-10 w-full px-5 bg-blue-10 text-blue-60 rounded-lg space-x-2 transform active:scale-98 transition duration-150 ease-out z-10"
+                      className="flex flex-row items-center justify-center -bottom-14 h-10 w-full px-5 bg-blue-10 text-primary rounded-lg space-x-2 active:scale-98 transition duration-150 ease-out z-10"
                       onClick={() => {
                         handleRestartScan();
                       }}

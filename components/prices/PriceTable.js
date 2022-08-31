@@ -105,7 +105,7 @@ export default function PriceTable({ setSegmentPageName, lang }) {
         </h1>
         <button
           type="button"
-          className="mt-4 mb-6 text-center text-blue-60 active:text-blue-50 font-medium cursor-pointer"
+          className="mt-4 mb-6 text-center text-primary active:text-blue-50 font-medium cursor-pointer"
           onClick={() => {
             setIndividual(!individual);
             setSegmentPageName(
@@ -151,8 +151,8 @@ export default function PriceTable({ setSegmentPageName, lang }) {
         <Transition
           show={individual}
           enter="transition duration-500 ease-out"
-          enterFrom="transform scale-95 translate-y-20 opacity-0"
-          enterTo="transform scale-100 translate-y-0 opacity-100"
+          enterFrom="scale-95 translate-y-20 opacity-0"
+          enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
             <PriceCard
@@ -197,8 +197,8 @@ export default function PriceTable({ setSegmentPageName, lang }) {
         <Transition
           show={!individual}
           enter="transition duration-500 ease-out"
-          enterFrom="transform scale-95 translate-y-20 opacity-0"
-          enterTo="transform scale-100 translate-y-0 opacity-100"
+          enterFrom="scale-95 translate-y-20 opacity-0"
+          enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
             <PriceCard
@@ -238,7 +238,7 @@ export default function PriceTable({ setSegmentPageName, lang }) {
         </Transition>
 
         {/* <Link href="/cloud-storage-comparison" lang={lang}>
-          <a className="flex flex-col justify-center items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-blue-60 bg-blue-10 focus:outline-none">
+          <a className="flex flex-col justify-center items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-primary bg-blue-10 focus:outline-none">
             Compare with our competitors
           </a>
         </Link> */}

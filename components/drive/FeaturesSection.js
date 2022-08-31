@@ -18,22 +18,22 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             <Transition
               show={anim.trigger(percentage)}
               enter="transition-all duration-500"
-              enterFrom="opacity-0 transform translate-y-6"
-              enterTo="opacity-100 transform translate-y-0"
+              enterFrom="opacity-0 translate-y-6"
+              enterTo="opacity-100 translate-y-0"
               leave="transition-all duration-500 delay-250"
-              leaveFrom="opacity-100 transform translate-y-0"
-              leaveTo="opacity-0 transform translate-y-6"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-6"
             >
               {textContent.section1.title.line1}
             </Transition>
             <Transition
               show={anim.trigger(percentage)}
               enter="transition-all duration-500 delay-250"
-              enterFrom="opacity-0 transform translate-y-2"
-              enterTo="opacity-100 transform translate-y-0"
+              enterFrom="opacity-0 translate-y-2"
+              enterTo="opacity-100 translate-y-0"
               leave="transition-all duration-500"
-              leaveFrom="opacity-100 transform translate-y-0"
-              leaveTo="opacity-0 transform translate-y-2"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-2"
             >
               {textContent.section1.title.line2}
             </Transition>
@@ -304,7 +304,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         </p>
 
         <Link href="/privacy" locale={lang}>
-          <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-blue-60 mb-32">
+          <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-primary mb-32">
             <span>{textContent.section7.cta}</span>
             <UilAngleRightB className="w-4 h-4" />
           </a>
