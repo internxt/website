@@ -36,6 +36,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     }
   });
 
+  const [showWhiteScreen, setShowWhiteScreen] = useState<boolean>(false);
   const [showAuth, setShowAuth] = useState<boolean>(false);
   const [showIframe, setShowIframe] = useState<boolean>(true);
   const [showLoader, setShowLoader] = useState<boolean>(true);
@@ -51,6 +52,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     setShowAuth(true);
   };
   const redirectToDrive = () => {
+    setShowWhiteScreen(true);
     setShowIframe(false);
     setShowLoader(true);
     window.location.replace('https://drive.internxt.com');
@@ -451,6 +453,8 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           </div>
         </Dialog>
       </Transition>
+
+      <div className={`${!showWhiteScreen && 'hidden'} fixed z-50 bg-white top-0 left-0 w-screen h-screen`} />
     </div>
   );
 }
