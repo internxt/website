@@ -139,7 +139,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                                 className="outline-none flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-80"
                               >
                                 <span>{textContent.products.send}</span>
-                                <span className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                                <span className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
                                   {textContent.products.new}
                                 </span>
                               </a>
@@ -266,7 +266,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       }`}
                     >
                       <span>{textContent.products.send}</span>
-                      <span className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                      <span className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
                         {textContent.products.new}
                       </span>
                     </a>
