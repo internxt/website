@@ -47,7 +47,7 @@ const CompanySection = ({ textContent }) => (
 
         <img
           loading="lazy"
-          className="absolute top-2/3 right-0 transform translate-y-1/2 scale-400 filter blur-xl saturate-150 pointer-events-none select-none"
+          className="absolute top-2/3 right-0 translate-y-1/2 scale-400 filter blur-xl saturate-150 pointer-events-none select-none"
           src="/images/about/assets/stain-small-1.webp"
           draggable="false"
           alt="stain"
@@ -89,7 +89,7 @@ const CompanySection = ({ textContent }) => (
       <div className="relative flex flex-col items-center justify-center px-6 py-20 space-y-4 text-center">
         <h4 className="z-10 text-4xl font-medium">{textContent.careers.title}</h4>
         <a
-          className="z-10 flex flex-row items-center space-x-1 text-lg sm:text-base font-medium text-blue-60"
+          className="z-10 flex flex-row items-center space-x-1 text-lg sm:text-base font-medium text-primary"
           href="https://www.linkedin.com/company/internxt/jobs/"
           target="_blank"
           rel="noreferrer"
@@ -99,7 +99,7 @@ const CompanySection = ({ textContent }) => (
         </a>
         <img
           loading="lazy"
-          className="absolute top-1/2 left-0 transform translate-y-1/2 scale-400 filter blur-3xl saturate-150 pointer-events-none select-none"
+          className="absolute top-1/2 left-0 translate-y-1/2 scale-400 filter blur-3xl saturate-150 pointer-events-none select-none"
           src="/images/about/assets/stain-small-2.webp"
           draggable="false"
           alt="stain"

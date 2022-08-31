@@ -26,99 +26,6 @@
   will-change: height;
 }
 
-// Colors
-
-$black: #000000;
-
-$white: #ffffff;
-
-$cool-gray-100: #121619;
-$cool-gray-90: #21272a;
-$cool-gray-80: #343a3f;
-$cool-gray-70: #4d5358;
-$cool-gray-60: #697077;
-$cool-gray-50: #878d96;
-$cool-gray-40: #a2a9b0;
-$cool-gray-30: #c1c7cd;
-$cool-gray-20: #dde1e6;
-$cool-gray-10: #f2f4f8;
-$cool-gray-5: #f9fafc;
-
-$gray-100: #18181b;
-
-$blue-100: #001141;
-$blue-90: #001d6c;
-$blue-70: #0043ce;
-$blue-80: #002d9c;
-$blue-60: #0f62fe;
-$blue-50: #4589ff;
-$blue-30: #a6c8ff;
-$blue-40: #78a9ff;
-$blue-20: #d0e2ff;
-$blue-10: #edf5ff;
-
-$green-100: #071908;
-$green-90: #022d0d;
-$green-80: #044317;
-$green-70: #0e6027;
-$green-60: #198038;
-$green-50: #24a148;
-$green-40: #42be65;
-$green-30: #6fdc8c;
-$green-20: #a7f0ba;
-$green-10: #defbe6;
-
-$yellow-100: #1c1500;
-$yellow-90: #302400;
-$yellow-80: #483700;
-$yellow-70: #684e00;
-$yellow-60: #8e6a00;
-$yellow-50: #b28600;
-$yellow-40: #d2a106;
-$yellow-20: #fddc69;
-$yellow-30: #f1c21b;
-$yellow-10: #fcf4d6;
-
-$orange-100: #231000;
-$orange-90: #3e1a00;
-$orange-80: #5e2900;
-$orange-70: #8a3800;
-$orange-60: #ba4e00;
-$orange-50: #eb6200;
-$orange-40: #ff832b;
-$orange-30: #ffb784;
-$orange-20: #ffd9be;
-$orange-10: #fff2e8;
-
-$red-100: #2d0709;
-$red-90: #520408;
-$red-80: #750e13;
-$red-70: #a2191f;
-$red-60: #da1e28;
-$red-50: #fa4d56;
-$red-40: #ff8389;
-$red-30: #ffb3b8;
-$red-20: #ffd7d9;
-$red-10: #fff1f1;
-
-$neutral-900: #091e42;
-$neutral-800: #172b4d;
-$neutral-700: #253858;
-$neutral-600: #344563;
-$neutral-500: #42526e;
-$neutral-400: #505f79;
-$neutral-300: #5e6c84;
-$neutral-200: #6b778c;
-$neutral-100: #7a869a;
-$neutral-80: #97a0af;
-$neutral-70: #a5adba;
-$neutral-60: #b3bac5;
-$neutral-50: #c1c7d0;
-$neutral-40: #dfe1e6;
-$neutral-30: #ebecf0;
-$neutral-20: #f4f5f7;
-$neutral-10: #fafbfc;
-
 // Fonts
 
 @import url('../public/fonts/NeueEinstellung/NeueEinstellung.css');
@@ -136,8 +43,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Aeonik' !important;
-  // overflow-x: hidden;
-  color: $gray-100;
+}
+
+@layer {
+  html,
+  body {
+    @apply text-gray-100;
+  }
 }
 
 main {
@@ -184,9 +96,6 @@ h1 {
 .title,
 .eyebrow {
   font-weight: 600;
-}
-.subtitle {
-  color: $neutral-500;
 }
 
 .card {

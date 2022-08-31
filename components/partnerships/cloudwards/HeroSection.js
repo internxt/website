@@ -27,7 +27,7 @@ const HeroSection = ({ textContent, lang }) => {
     >
       <div
         className={`flex flex-row p-6 sm:p-0 sm:h-16 justify-center items-center text-center ${
-          showCoupon ? 'bg-blue-60 text-blue-20' : 'bg-white text-blue-40'
+          showCoupon ? 'bg-primary text-blue-20' : 'bg-white text-blue-40'
         } transition-colors duration-1000 ease-in-out select-all`}
       >
         <div>

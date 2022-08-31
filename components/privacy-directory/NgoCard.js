@@ -17,8 +17,8 @@ const NgoCard = ({ id, name, short, description, url }) => {
         <Transition
           show={showTrigger.length > 1 || anim.trigger(percentage)}
           enter="transition-all duration-350"
-          enterFrom="opacity-0 transform translate-y-10 scale-99"
-          enterTo="opacity-100 transform translate-y-0 scale-100"
+          enterFrom="opacity-0 translate-y-10 scale-99"
+          enterTo="opacity-100 translate-y-0 scale-100"
         >
           <a
             href={url}
