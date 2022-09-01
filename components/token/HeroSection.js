@@ -26,7 +26,7 @@ const HeroSection = ({ textContent }) => (
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 w-full">
           <a
             href="mailto:hello@intertnxt.com?subjectClaim%20my%20INXT%20benefits"
-            className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:bg-blue-70 transition-all duration-75"
+            className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary active:bg-primary-dark focus:bg-primary-dark transition-all duration-75"
           >
             {textContent.cta}
           </a>
@@ -37,7 +37,7 @@ const HeroSection = ({ textContent }) => (
       <div className="flex flex-col justify-center items-center z-10">
         <div className="relative w-screen sm:w-96 h-32 sm:h-64 pointer-events-none">
           <div
-            className="hidden sm:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            className="hidden sm:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
             style={{
               backgroundImage: 'url(/images/token/img/token.png)',
               backgroundSize: 'cover',
@@ -46,7 +46,7 @@ const HeroSection = ({ textContent }) => (
             }}
           />
           <div
-            className="flex sm:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            className="flex sm:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
             style={{
               backgroundImage: 'url(/images/token/img/token.png)',
               backgroundSize: 'cover',
@@ -55,7 +55,7 @@ const HeroSection = ({ textContent }) => (
             }}
           />
           <div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             style={{
               backgroundImage: 'url(/images/token/img/blur-bg.png)',
               backgroundSize: 'cover',

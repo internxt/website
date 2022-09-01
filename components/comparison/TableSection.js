@@ -333,7 +333,7 @@ const HeroSection = ({ textContent }) => {
     >
       <div className="flex flex-col">
         {/* Header */}
-        <div className="relative flex flex-col items-center justify-center px-6 pt-20 md:pt-32 pb-16 bg-blue-60 text-white overflow-hidden z-20">
+        <div className="relative flex flex-col items-center justify-center px-6 pt-20 md:pt-32 pb-16 bg-primary text-white overflow-hidden z-20">
           <div className="relative flex flex-col items-center justify-center mb-16 md:mb-8 z-10">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-center mb-4">
               {textContent.title.line1}
@@ -349,7 +349,7 @@ const HeroSection = ({ textContent }) => {
               id="get-started-link"
               target="_top"
               rel="noreferrer"
-              className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-blue-60 bg-white focus:outline-none"
+              className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-primary bg-white focus:outline-none"
             >
               {textContent.cta}
             </a>
@@ -357,7 +357,7 @@ const HeroSection = ({ textContent }) => {
             <p className="text-base md:text-xs text-center mt-1.5 opacity-80">{textContent.noCredirCardNeeded}</p>
           </div>
 
-          <div className="absolute top-2/3 left-0 w-full h-full rounded-t-full-percentage transform scale-y-200 filter blur-4xl bg-blue-70" />
+          <div className="absolute top-2/3 left-0 w-full h-full rounded-t-full-percentage scale-y-200 filter blur-3xl bg-primary-dark" />
         </div>
 
         {/* Table */}
@@ -444,7 +444,7 @@ const HeroSection = ({ textContent }) => {
                                 <UilMinus className="w-6 h-6 text-blue-20" />
                               ))}
                             {typeof row.feature[0] === 'string' && (
-                              <span className="text-blue-60 font-medium">{row.feature[0]}</span>
+                              <span className="text-primary font-medium">{row.feature[0]}</span>
                             )}
                           </div>
                         </td>
@@ -480,7 +480,7 @@ const HeroSection = ({ textContent }) => {
                       id="get-started-link"
                       target="_top"
                       rel="noreferrer"
-                      className="absolute top-full left-0 h-14 md:h-10 w-full flex flex-col items-center justify-center rounded-b-2xl bg-blue-60 text-white text-lg md:text-base font-medium whitespace-nowrap"
+                      className="absolute top-full left-0 h-14 md:h-10 w-full flex flex-col items-center justify-center rounded-b-2xl bg-primary text-white text-lg md:text-base font-medium whitespace-nowrap"
                     >
                       {textContent.table.startNow}
                     </a>

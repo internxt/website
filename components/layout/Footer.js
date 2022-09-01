@@ -77,16 +77,16 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
               placeholder={`${textContent.NewsletterSection.input}`}
               className={`flex flex-row w-full md:w-64 h-auto px-4 py-3 sm:py-2 outline-none rounded-lg text-lg sm:text-base ${
                 darkMode
-                  ? 'bg-cool-gray-90 border-cool-gray-70 focus:border-blue-60 focus:ring-opacity-30'
+                  ? 'bg-cool-gray-90 border-cool-gray-70 focus:border-primary focus:ring-opacity-30'
                   : 'bg-white border-cool-gray-20 focus:border-blue-50 focus:ring-opacity-20'
-              } border focus:ring-3 focus:ring-blue-60 transition-all duration-150 text-left appearance-none mb-2`}
+              } border focus:ring focus:ring-primary transition-all duration-150 text-left appearance-none mb-2`}
               required
             />
             <input
               name="signup"
               type="submit"
               value={`${textContent.NewsletterSection.cta}`}
-              className="flex justify-center w-full items-center px-4 py-3 sm:py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-blue-60 active:bg-blue-70 focus:outline-none transition-all duration-75 cursor-pointer mb-6 sm:mb-2"
+              className="flex justify-center w-full items-center px-4 py-3 sm:py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary active:bg-primary-dark focus:outline-none transition-all duration-75 cursor-pointer mb-6 sm:mb-2"
             />
             <span className="text-xs sm:text-supporting-2 text-cool-gray-40">
               {textContent.NewsletterSection.privacy}{' '}
@@ -132,7 +132,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       className="flex flex-row items-center"
                     >
                       <div>{textContent.FooterSection.sections.products.send}</div>
-                      <div className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-1 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                      <div className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-1 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
                         {textContent.FooterSection.new}
                       </div>
                     </a>
@@ -379,20 +379,20 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
                     </span>
                   </Disclosure.Button>
 
                   <Transition
                     enter="transition duration-200 ease-out"
-                    enterFrom="transform -translate-y-10 opacity-0"
-                    enterTo="transform translate-y-0 opacity-100"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
                     leave="transition duration-0"
                   >
                     <Disclosure.Panel
@@ -448,20 +448,20 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
                     </span>
                   </Disclosure.Button>
 
                   <Transition
                     enter="transition duration-200 ease-out"
-                    enterFrom="transform -translate-y-10 opacity-0"
-                    enterTo="transform translate-y-0 opacity-100"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
                     leave="transition duration-0"
                   >
                     <Disclosure.Panel
@@ -519,20 +519,20 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
                     </span>
                   </Disclosure.Button>
 
                   <Transition
                     enter="transition duration-200 ease-out"
-                    enterFrom="transform -translate-y-10 opacity-0"
-                    enterTo="transform translate-y-0 opacity-100"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
                     leave="transition duration-0"
                   >
                     <Disclosure.Panel
@@ -570,20 +570,20 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
                         className={`absolute top-0 left-0 w-full h-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 transform ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
                     </span>
                   </Disclosure.Button>
 
                   <Transition
                     enter="transition duration-200 ease-out"
-                    enterFrom="transform -translate-y-10 opacity-0"
-                    enterTo="transform translate-y-0 opacity-100"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
                     leave="transition duration-0"
                   >
                     <Disclosure.Panel

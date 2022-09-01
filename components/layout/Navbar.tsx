@@ -119,7 +119,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       onClick={() => {
                         setMenuState(false);
                       }}
-                      className={`outline-none flex w-full px-8 py-3 transition duration-300 delay-100 transform translate-y-0 ${
+                      className={`outline-none flex w-full px-8 py-3 transition duration-300 delay-100 translate-y-0 ${
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
@@ -130,7 +130,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                   <Disclosure as="div">
                     {({ open }) => (
                       <div
-                        className={`transition duration-300 delay-150 transform translate-y-0 ${
+                        className={`transition duration-300 delay-150 translate-y-0 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                         }`}
                       >
@@ -143,12 +143,12 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                             <span>{textContent.links.products}</span>
                             <span className="relative w-6 h-6">
                               <UilMinus
-                                className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${
+                                className={`absolute top-0 left-0 w-6 h-6 transition duration-300 ${
                                   open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-180'
                                 }`}
                               />
                               <UilMinus
-                                className={`absolute top-0 left-0 w-6 h-6 transition duration-300 transform ${
+                                className={`absolute top-0 left-0 w-6 h-6 transition duration-300 ${
                                   open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-90'
                                 }`}
                               />
@@ -157,11 +157,11 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
                           <Transition
                             enter="transition duration-200 ease-out"
-                            enterFrom="transform scale-95 opacity-0"
-                            enterTo="transform scale-100 opacity-100"
+                            enterFrom="scale-95 opacity-0"
+                            enterTo="scale-100 opacity-100"
                             leave="transition duration-200 ease-out"
-                            leaveFrom="transform scale-100 opacity-100"
-                            leaveTo="transform scale-95 opacity-0"
+                            leaveFrom="scale-100 opacity-100"
+                            leaveTo="scale-95 opacity-0"
                           >
                             <Disclosure.Panel className="flex flex-col py-3 text-cool-gray-80 mb-4">
                               <Link href="/drive" locale={lang}>
@@ -195,7 +195,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                                 className="outline-none flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-80"
                               >
                                 <span>{textContent.products.send}</span>
-                                <span className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                                <span className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
                                   {textContent.products.new}
                                 </span>
                               </a>
@@ -213,7 +213,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       onClick={() => {
                         setMenuState(false);
                       }}
-                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 transform translate-y-0 ${
+                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 translate-y-0 ${
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
@@ -228,7 +228,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       onClick={() => {
                         setMenuState(false);
                       }}
-                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 transform translate-y-0 ${
+                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 translate-y-0 ${
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
@@ -242,7 +242,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                     }}
                     tabIndex={0}
                     href="https://drive.internxt.com/login"
-                    className={`outline-none flex w-full px-8 py-3 text-blue-60 transition duration-300 delay-300 transform translate-y-0 ${
+                    className={`outline-none flex w-full px-8 py-3 text-primary transition duration-300 delay-300 translate-y-0 ${
                       menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                     }`}
                   >
@@ -286,11 +286,11 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                 } rounded-lg cursor-default`}
               >
                 <span>{textContent.links.products}</span>
-                <UilAngleDown className="w-6 h-6 transition duration-150 ease-in-out transform translate-y-px text-cool-gray-20 group-hover:text-cool-gray-30" />
+                <UilAngleDown className="w-6 h-6 transition duration-150 ease-in-out translate-y-px text-cool-gray-20 group-hover:text-cool-gray-30" />
 
                 {/* Menu items */}
-                <div className="absolute top-full left-1/2 z-10 w-52 transform -translate-x-1/2 opacity-0 translate-y-0 group-hover:translate-y-1 group-hover:opacity-100 p-1.5 bg-white border-black rounded-xl shadow-subtle border border-opacity-5 transition duration-150 ease-in-out pointer-events-none group-hover:pointer-events-auto">
-                  <div className="absolute -top-4 left-1/2 w-4/5 h-4 transform -translate-x-1/2" />
+                <div className="absolute top-full left-1/2 z-10 w-52 -translate-x-1/2 opacity-0 translate-y-0 group-hover:translate-y-1 group-hover:opacity-100 p-1.5 bg-white border-black rounded-xl shadow-subtle border border-opacity-5 transition duration-150 ease-in-out pointer-events-none group-hover:pointer-events-auto">
+                  <div className="absolute -top-4 left-1/2 w-4/5 h-4 -translate-x-1/2" />
 
                   <div className="relative grid gap-0 lg:grid-cols-1 whitespace-nowrap">
                     <Link href="/drive" locale={lang}>
@@ -322,7 +322,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       }`}
                     >
                       <span>{textContent.products.send}</span>
-                      <span className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                      <span className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
                         {textContent.products.new}
                       </span>
                     </a>
