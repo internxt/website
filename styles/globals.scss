@@ -9,6 +9,7 @@
   .button-primary-rounded {
     @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-full cursor-pointer;
   }
+
   .markdown {
     a {
       @apply text-primary underline;
