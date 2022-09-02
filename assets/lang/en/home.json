@@ -5,7 +5,27 @@
     "ctaSubtitle": "GET 10GB FOR FREE",
     "cta1": "Get up to 10GB",
     "cta1detail": "for free",
-    "cta2": { "mobile": "Get App", "desktop": "Download" }
+    "cta2": { "mobile": "Get App", "desktop": "Download" },
+    "Auth": {
+      "SignUp": {
+        "title": "GET 10GB FOR FREE",
+        "disclaimer": {
+          "text": "By creating an account you accept the",
+          "link": "terms and conditions"
+        },
+        "fields": {
+          "email": {
+            "label": "Email",
+            "placeholder": "Email"
+          },
+          "password": {
+            "label": "Password",
+            "placeholder": "Password"
+          },
+          "submit": "Get started"
+        }
+      }
+    }
   },
   "FeaturesSection": {
     "eyebrow": "INTERNXT DRIVE",

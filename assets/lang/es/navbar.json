@@ -1,18 +1,73 @@
 {
-    "links" : {
-        "products": "Productos",
-        "about": "Sobre nosotros",
-        "privacy": "Privacidad",
-        "pricing": "Precios",
-        "login": "Iniciar sesión",
-        "getStarted": "Empezar ahora",
-        "checkout": "Reclamar oferta!"
+  "links": {
+    "products": "Productos",
+    "about": "Sobre nosotros",
+    "privacy": "Privacidad",
+    "pricing": "Precios",
+    "login": "Iniciar sesión",
+    "getStarted": "Empezar ahora",
+    "checkout": "Reclamar oferta!"
+  },
+  "products": {
+    "drive": "Drive",
+    "photos": "Photos",
+    "send": "Send",
+    "comingSoon": "Próximamente",
+    "new": "Nuevo"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Crear cuenta en Internxt",
+      "or": "o",
+      "login": "Iniciar sesión",
+      "disclaimer": {
+        "text": "Al crear una cuenta aceptas los",
+        "link": "términos y condiciones"
+      },
+      "fields": {
+        "email": {
+          "label": "Correo",
+          "placeholder": "Correo"
+        },
+        "password": {
+          "label": "Contraseña",
+          "placeholder": "Contraseña"
+        },
+        "submit": "Crear cuenta"
+      }
     },
-    "products" : {
-        "drive": "Drive",
-        "photos": "Photos",
-        "send": "Send",
-        "comingSoon": "Próximamente",
-        "new": "Nuevo"
+    "LogIn": {
+      "title": "Iniciar sesión en Internxt",
+      "or": "o",
+      "signup": "Crear cuenta",
+      "fields": {
+        "email": {
+          "label": "Correo",
+          "placeholder": "Correo"
+        },
+        "password": {
+          "label": "Contraseña",
+          "placeholder": "Contraseña",
+          "helper": "¿Has olvidado tu contraseña?"
+        },
+        "submit": "Iniciar sesión"
+      }
+    },
+    "Recover": {
+      "title": "Recuperar cuenta",
+      "back": "Volver a inicio de sesión",
+      "disclaimer": "As specified in the app settings, only you have access to your password, therefore we can't restore your account without it. You can sign up again by entering your email below so we can delete your account and all your files.",
+      "fields": {
+        "email": {
+          "label": "Correo",
+          "placeholder": "Correo"
+        },
+        "submit": "Enviar confirmación"
+      },
+      "success": {
+        "title": "Revisa tu correo",
+        "subtitle": "Te hemos enviado un link de reseteo a"
+      }
     }
+  }
 }

@@ -1,12 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
+import { redirect } from '../../lib/auth';
+import SignUpInline from '../auth/SignUpInline';
 
 export default function HeroSection({ textContent, lang }) {
+  const [formError, setFormError] = useState<string | null>(null);
+  const [formLoading, setFormLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (window) {
+      const auth = window.document.getElementById('auth')['contentWindow'];
+      const postMessage = (data) => {
+        auth.postMessage(
+          data,
+          process.env.NODE_ENV === 'development' ? 'http://localhost:3000/auth' : 'https://drive.internxt.com/auth',
+        );
+      };
+
+      window.onmessage = function (e) {
+        const permitedDomains = [
+          'https://drive.internxt.com',
+          'https://internxt.com',
+          process.env.NODE_ENV === 'development' && 'http://localhost:3001',
+          process.env.NODE_ENV === 'development' && 'http://localhost:3000',
+        ];
+
+        if (permitedDomains.includes(e.origin)) {
+          if (e.data.action === 'redirect') {
+            redirect();
+          } else if (e.data.action === 'signup') {
+            setFormError(null);
+            setFormLoading(true);
+            postMessage(e.data);
+          } else if (e.data.action === 'error_inline') {
+            setFormLoading(false);
+            setFormError(e.data.msg);
+          }
+        }
+      };
+    }
+  });
+
   return (
     <section>
-      <div className="mx-4 lg:mx-10 xl:mx-32 pt-24 border-b border-gray-5">
-        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
-          <div className="flex flex-col w-auto md:hidden mx-20 mb-6">
+      <div className="mx-4 border-b border-gray-5 pt-24 lg:mx-10 xl:mx-32">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row">
+          <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
             <img
               loading="lazy"
               src="/images/home/devicesMobileView.webp"
@@ -15,21 +54,17 @@ export default function HeroSection({ textContent, lang }) {
             />
           </div>
 
-          <div className="flex-shrink-0 my-6 md:my-8 md:ml-2 lg:my-20 lg:ml-0 flex flex-col items-center md:items-start w-screen sm:w-auto text-center md:text-left">
-            <h1 className="pb-5 lg:pb-10 bg-clip-text text-transparent bg-gradient-to-tr from-primary to-gradients-electric-cyan font-medium text-5xl lg:text-6xl max-w-md lg:max-w-lg">
+          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:items-start md:text-left lg:my-20 lg:ml-0">
+            <h1 className="max-w-md bg-gradient-to-tr from-primary to-gradients-electric-cyan bg-clip-text pb-5 text-4xl font-medium text-transparent sm:text-5xl lg:max-w-lg lg:pb-10 lg:text-6xl">
               {textContent.title}
             </h1>
 
-            <h2 className="mb-5 md:mb-10 text-lg lg:text-xl text-gray-80 max-w-md">{textContent.subtitle}</h2>
+            <h2 className="mb-4 max-w-md text-lg text-gray-80 md:mb-8 lg:text-xl">{textContent.subtitle}</h2>
 
-            <h3 className="pb-2.5 font-medium">{textContent.ctaSubtitle}</h3>
-            <iframe
-              className="w-full px-4 sm:px-0 h-64 sm:h-64 lg:h-40"
-              src="https://drive.internxt.com/signupwebsite"
-            ></iframe>
+            <SignUpInline error={formError} loading={formLoading} textContent={textContent.Auth} />
           </div>
 
-          <div className="hidden md:flex flex-grow flex-col max-w-2xl ml-5 xl:ml-20">
+          <div className="ml-5 hidden max-w-2xl flex-grow flex-col md:flex xl:ml-20">
             <img
               loading="lazy"
               className="hidden xl:flex"
@@ -40,7 +75,7 @@ export default function HeroSection({ textContent, lang }) {
 
             <img
               loading="lazy"
-              className="flex xl:hidden transform translate-x-10"
+              className="flex translate-x-10 transform xl:hidden"
               src="/images/home/devicesAscCut.webp"
               draggable="false"
               alt="desktop, laptop and phone with Internxt app"
@@ -51,7 +86,7 @@ export default function HeroSection({ textContent, lang }) {
         <div className="relative">
           <div className="flex xl:hidden">
             <Marquee className="bg-white" gradientColor={[255, 255, 255]} gradientWidth="32px" speed={30}>
-              <div className="featured flex flex-row w-full p-6">
+              <div className="featured flex w-full flex-row p-6">
                 {lang === 'es' ? (
                   <a
                     href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"
@@ -190,8 +225,8 @@ export default function HeroSection({ textContent, lang }) {
             </Marquee>
           </div>
 
-          <div className="overflow-hidden hidden xl:flex">
-            <div className="featured flex flex-row justify-center w-full p-6 md:px-10 lg:px-32 bg-white overflow-x-auto">
+          <div className="hidden overflow-hidden xl:flex">
+            <div className="featured flex w-full flex-row justify-center overflow-x-auto bg-white p-6 md:px-10 lg:px-32">
               {lang === 'es' ? (
                 <a
                   href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"
