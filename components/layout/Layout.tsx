@@ -51,7 +51,7 @@ export default function Layout({
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="icon" href="/favicon.ico" />
         {isProduction ? <script src="/js/analyticsSnippet.js" /> : <script src="/js/segment.js" />}
-        <script src="/js/rudder.js" />
+        <script src="/js/rudderlib.js" />
         {!disableMailerlite && <script defer src="/js/mailerlite.js" />}
         {!disableDrift && <script defer src="/js/drift.js" />}
         <script
