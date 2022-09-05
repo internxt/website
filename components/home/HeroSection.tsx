@@ -1,46 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Marquee from 'react-fast-marquee';
-import { redirect } from '../../lib/auth';
-import SignUpInline from '../auth/SignUpInline';
+import { openAuthDialog } from '../../lib/auth';
 
 export default function HeroSection({ textContent, lang }) {
-  const [formError, setFormError] = useState<string | null>(null);
-  const [formLoading, setFormLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (window) {
-      const auth = window.document.getElementById('auth')['contentWindow'];
-      const postMessage = (data) => {
-        auth.postMessage(
-          data,
-          process.env.NODE_ENV === 'development' ? 'http://localhost:3000/auth' : 'https://drive.internxt.com/auth',
-        );
-      };
-
-      window.onmessage = function (e) {
-        const permitedDomains = [
-          'https://drive.internxt.com',
-          'https://internxt.com',
-          process.env.NODE_ENV === 'development' && 'http://localhost:3001',
-          process.env.NODE_ENV === 'development' && 'http://localhost:3000',
-        ];
-
-        if (permitedDomains.includes(e.origin)) {
-          if (e.data.action === 'redirect') {
-            redirect();
-          } else if (e.data.action === 'signup') {
-            setFormError(null);
-            setFormLoading(true);
-            postMessage(e.data);
-          } else if (e.data.action === 'error_inline') {
-            setFormLoading(false);
-            setFormError(e.data.msg);
-          }
-        }
-      };
-    }
-  });
-
   return (
     <section>
       <div className="mx-4 border-b border-gray-5 pt-24 lg:mx-10 xl:mx-32">
@@ -61,7 +23,16 @@ export default function HeroSection({ textContent, lang }) {
 
             <h2 className="mb-4 max-w-md text-lg text-gray-80 md:mb-8 lg:text-xl">{textContent.subtitle}</h2>
 
-            <SignUpInline error={formError} loading={formLoading} textContent={textContent.Auth} />
+            <button
+              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-full bg-primary px-5 text-lg text-white shadow-2xl shadow-primary/25 transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:px-9"
+              onClick={() => openAuthDialog('signup')}
+            >
+              <div className="flex flex-row items-center space-x-2">
+                <span>{textContent.cta.title}</span>
+                <span>{'—'}</span>
+                <span className="opacity-60">{textContent.cta.subtitle}</span>
+              </div>
+            </button>
           </div>
 
           <div className="ml-5 hidden max-w-2xl flex-grow flex-col md:flex xl:ml-20">
