@@ -2,29 +2,9 @@
   "HeroSection": {
     "title": "Guarda archivos en total privacidad",
     "subtitle": "En Internxt hemos creado un conjunto de servicios de Internet centrados en la seguridad y la privacidad.",
-    "ctaSubtitle": "CONSIGUE 10GB GRATIS",
-    "cta1": "Consigue hasta 10GB",
-    "cta1detail": "gratis",
-    "cta2": { "mobile": "Obtener App", "desktop": "Descargar" },
-    "Auth": {
-      "SignUp": {
-        "title": "CONSIGUE 10GB GRATIS",
-        "disclaimer": {
-          "text": "Al crear una cuenta aceptas los",
-          "link": "términos y condiciones"
-        },
-        "fields": {
-          "email": {
-            "label": "Correo",
-            "placeholder": "Correo"
-          },
-          "password": {
-            "label": "Contraseña",
-            "placeholder": "Contraseña"
-          },
-          "submit": "Empezar ahora"
-        }
-      }
+    "cta": {
+      "title": "Consigue hasta 10GB",
+      "subtitle": "GRATIS"
     }
   },
   "FeaturesSection": {

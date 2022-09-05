@@ -31,7 +31,13 @@
         },
         "password": {
           "label": "Contraseña",
-          "placeholder": "Contraseña"
+          "placeholder": "Contraseña",
+          "strength": {
+            "complexity": "La contraseña no es compleja",
+            "length": "La contraseña debe tener mínimo 8 dígitos",
+            "weak": "La contraseña es débil",
+            "strong": "La contraseña es fuerte"
+          }
         },
         "submit": "Crear cuenta"
       }
@@ -50,13 +56,18 @@
           "placeholder": "Contraseña",
           "helper": "¿Has olvidado tu contraseña?"
         },
+        "tfa": {
+          "label": "Autenticación de doble factor",
+          "placeholder": "Código de doble factor",
+          "hint": "El código 2FA debe tener 6 dígitos"
+        },
         "submit": "Iniciar sesión"
       }
     },
     "Recover": {
       "title": "Recuperar cuenta",
       "back": "Volver a inicio de sesión",
-      "disclaimer": "As specified in the app settings, only you have access to your password, therefore we can't restore your account without it. You can sign up again by entering your email below so we can delete your account and all your files.",
+      "disclaimer": "Como se especifica en la configuración de la aplicación, sólo tú tienes acceso a tu contraseña, por lo que no podemos restaurar tu cuenta sin ella. Puedes volver a registrarte introduciendo tu correo electrónico a continuación para que podamos eliminar tu cuenta y todos tus archivos.",
       "fields": {
         "email": {
           "label": "Correo",

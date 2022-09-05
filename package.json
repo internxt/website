@@ -13,6 +13,7 @@
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
+    "@internxt/lib": "1.2.0",
     "@headlessui/react": "1.6.6",
     "@iconscout/react-unicons": "^1.1.6",
     "@sendgrid/mail": "^7.4.0",

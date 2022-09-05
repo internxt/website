@@ -31,7 +31,13 @@
         },
         "password": {
           "label": "Password",
-          "placeholder": "Password"
+          "placeholder": "Password",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
         },
         "submit": "Sign up"
       }
@@ -49,6 +55,11 @@
           "label": "Password",
           "placeholder": "Password",
           "helper": "Forgot your password?"
+        },
+        "tfa": {
+          "label": "Two Factor Authentication",
+          "placeholder": "2FA Code",
+          "hint": "2FA Code must be 6 digits"
         },
         "submit": "Log in"
       }

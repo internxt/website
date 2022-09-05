@@ -6,6 +6,10 @@ export function openAuthDialog(view: 'login' | 'signup' | 'recover') {
   }
 }
 
+export function checkSession() {
+  window.top?.postMessage({ action: 'check_session' }, window.location.origin);
+}
+
 export function login(data) {
   window.top?.postMessage({ action: 'login', ...data }, window.location.origin);
 }
@@ -18,7 +22,7 @@ export function recover(data) {
   window.top?.postMessage({ action: 'recover', ...data }, window.location.origin);
 }
 
-export function toggleAuthMethod(view?: 'login' | 'signup' | 'recover') {
+export function toggleAuthMethod(view: 'login' | 'signup' | 'recover') {
   window.top?.postMessage({ action: 'toggleAuthMethod', view: view }, window.location.origin);
 }
 

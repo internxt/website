@@ -2,7 +2,10 @@ import TextInput from '../components/TextInput';
 import PasswordInput from '../components/PasswordInput';
 import PrimaryButton from '../components/PrimaryButton';
 import { signup, toggleAuthMethod } from '../../lib/auth';
+import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStrength';
 import { WarningCircle } from 'phosphor-react';
+import { useState } from 'react';
+import PasswordStrength from '../components/PasswordStrength';
 
 interface SignUpProps {
   textContent: any;
@@ -11,10 +14,33 @@ interface SignUpProps {
 }
 
 export default function SignUp(props: SignUpProps) {
+  const [passwordState, setPasswordState] = useState<{
+    tag: 'error' | 'warning' | 'success';
+    label: string;
+  } | null>(null);
+
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
     signup({ email: form.email.value, password: form.password.value });
+  };
+
+  const checkPassword = (input) => {
+    const password = input.target.value;
+    const result = testPasswordStrength(password, '');
+    if (!result.valid) {
+      setPasswordState({
+        tag: 'error',
+        label:
+          result.reason === 'NOT_COMPLEX_ENOUGH'
+            ? props.textContent.SignUp.fields.password.strength.complexity
+            : props.textContent.SignUp.fields.password.strength.length,
+      });
+    } else if (result.strength === 'medium') {
+      setPasswordState({ tag: 'warning', label: props.textContent.SignUp.fields.password.strength.weak });
+    } else {
+      setPasswordState({ tag: 'success', label: props.textContent.SignUp.fields.password.strength.strong });
+    }
   };
 
   return (
@@ -27,7 +53,7 @@ export default function SignUp(props: SignUpProps) {
         <span>
           {props.textContent.SignUp.or}{' '}
           <a
-            onClick={() => !props.loading && toggleAuthMethod()}
+            onClick={() => !props.loading && toggleAuthMethod('login')}
             className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
           >
             {props.textContent.SignUp.login}
@@ -54,9 +80,14 @@ export default function SignUp(props: SignUpProps) {
             name="password"
             placeholder={props.textContent.SignUp.fields.password.placeholder}
             autoComplete="off"
+            pattern={
+              passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success') ? '[\\s\\S]+' : ''
+            }
             required
             disabled={props.loading}
+            onChange={(e) => checkPassword(e)}
           />
+          {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
         </label>
 
         {props.error && (
@@ -74,6 +105,14 @@ export default function SignUp(props: SignUpProps) {
           disabled={props.loading}
           loading={props.loading}
         />
+
+        <span className="text-center text-sm text-gray-50">
+          <span>{props.textContent.SignUp.disclaimer.text}</span>{' '}
+          <a href="/legal" target="_blank" className="hover:text-gray-60 hover:underline active:text-gray-80">
+            {props.textContent.SignUp.disclaimer.link}
+          </a>
+          {'.'}
+        </span>
       </form>
     </>
   );

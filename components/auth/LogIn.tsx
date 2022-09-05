@@ -6,6 +6,7 @@ import { WarningCircle } from 'phosphor-react';
 
 interface LogInProps {
   textContent: any;
+  tfa?: boolean;
   error?: string;
   loading?: boolean;
 }
@@ -14,7 +15,11 @@ export default function LogIn(props: LogInProps) {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    login({ email: form.email.value, password: form.password.value });
+    if (props.tfa) {
+      login({ email: form.email.value, password: form.password.value, tfa: form.tfa.value });
+    } else {
+      login({ email: form.email.value, password: form.password.value });
+    }
   };
 
   return (
@@ -27,7 +32,7 @@ export default function LogIn(props: LogInProps) {
         <span>
           {props.textContent.LogIn.or}{' '}
           <a
-            onClick={() => !props.loading && toggleAuthMethod()}
+            onClick={() => !props.loading && toggleAuthMethod('signup')}
             className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
           >
             {props.textContent.LogIn.signup}
@@ -65,16 +70,31 @@ export default function LogIn(props: LogInProps) {
             required
             disabled={props.loading}
           />
-
-          {props.error && (
-            <div className="flex w-full flex-row items-start">
-              <div className="flex h-5 flex-row items-center">
-                <WarningCircle weight="fill" className="mr-1 h-4 text-red" />
-              </div>
-              <span className="text-sm text-red">{props.error}</span>
-            </div>
-          )}
         </label>
+
+        {props.tfa && (
+          <label className="space-y-0.5">
+            <div className="text-sm">{props.textContent.LogIn.fields.tfa.label}</div>
+            <PasswordInput
+              name="tfa"
+              placeholder={props.textContent.LogIn.fields.tfa.placeholder}
+              autoComplete="one-time-code"
+              pattern="[0-9]{6}"
+              patternHint={props.textContent.LogIn.fields.tfa.hint}
+              required
+              disabled={props.loading}
+            />
+          </label>
+        )}
+
+        {props.error && (
+          <div className="flex w-full flex-row items-start">
+            <div className="flex h-5 flex-row items-center">
+              <WarningCircle weight="fill" className="mr-1 h-4 text-red" />
+            </div>
+            <span className="text-sm text-red">{props.error}</span>
+          </div>
+        )}
 
         <PrimaryButton
           type="submit"

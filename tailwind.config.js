@@ -153,6 +153,9 @@ module.exports = {
           '50%': { top: '100%' },
         },
       },
+      transitionDelay: {
+        250: '250ms',
+      },
       opacity: {
         1: '0.01',
         2: '0.02',

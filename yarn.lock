@@ -158,6 +158,11 @@
   dependencies:
     react ">=15.0.0 <17.0.0"
 
+"@internxt/lib@1.2.0":
+  version "1.2.0"
+  resolved "https://npm.pkg.github.com/download/@internxt/lib/1.2.0/172d7929abb3dc34fda044ad9977875791f7a471#172d7929abb3dc34fda044ad9977875791f7a471"
+  integrity sha512-14byNxSU0S0KSc3g+BWiJb7/fcHUfqxkHQRz9fwJhAHNmgOo+Bhx13xXk07KKUzeNX1JymSGEZkVCk0AOQiM+Q==
+
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.2.tgz#c1aedc61e853f2bb9f5dfe6d4442d3b565b253b9"

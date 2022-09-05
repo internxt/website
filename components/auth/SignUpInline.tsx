@@ -20,10 +20,13 @@ export default function SignUpInline(props: SignUpInlineProps) {
   };
 
   return (
-    <form className="flex w-full flex-col items-center space-y-2 pt-8 md:items-start md:pt-0" onSubmit={onSubmit}>
-      <h3 className="text-lg font-medium">{props.textContent.SignUp.title}</h3>
+    <form className="flex w-full flex-col items-center space-y-2 pt-10 md:items-start md:pt-0" onSubmit={onSubmit}>
+      <div className="flex w-full flex-col pb-6 sm:pb-5">
+        <h3 className="text-2xl font-medium">{props.textContent.SignUp.title}</h3>
+        <p className="text-lg text-gray-60">{props.textContent.SignUp.subtitle}</p>
+      </div>
 
-      <div className="flex w-full flex-col space-x-0 space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
+      <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-y-0 md:space-x-3">
         <label className="flex w-full flex-col items-start space-y-0.5">
           <div className="text-sm">{props.textContent.SignUp.fields.email.label}</div>
           <TextInput
@@ -57,9 +60,9 @@ export default function SignUpInline(props: SignUpInlineProps) {
         </div>
       )}
 
-      <div className="flex w-full flex-col items-center justify-start space-x-0 space-y-2 sm:flex-row sm:space-x-6 sm:space-y-0 md:w-auto">
+      <div className="flex w-full flex-col items-center justify-start space-x-0 space-y-2 pt-2 sm:flex-row sm:space-x-6 sm:space-y-0 sm:pt-0 md:w-auto">
         <PrimaryButton
-          className="h-12 w-full rounded-full text-lg shadow-xl shadow-primary/10 sm:w-auto sm:px-9"
+          className="h-12 w-full rounded-full text-lg shadow-2xl shadow-primary/25 sm:w-auto sm:px-9"
           type="submit"
           label={props.textContent.SignUp.fields.submit}
           disabled={props.loading}

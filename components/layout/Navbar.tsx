@@ -24,10 +24,11 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   const [authMethod, setAuthMethod] = useState<'login' | 'signup' | 'recover'>('signup');
   const [formError, setFormError] = useState<string | null>(null);
   const [formLoading, setFormLoading] = useState<boolean>(false);
+  const [form2FA, setForm2FA] = useState<boolean>(false);
   const [recoverSent, setRecoverSent] = useState<boolean>(false);
 
   const authView = {
-    login: <LogIn error={formError} loading={formLoading} textContent={textContent.Auth} />,
+    login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={textContent.Auth} />,
     signup: <SignUp error={formError} loading={formLoading} textContent={textContent.Auth} />,
     recover: (
       <ForgotPassword sent={recoverSent} error={formError} loading={formLoading} textContent={textContent.Auth} />
@@ -40,17 +41,20 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
   const openAuth = (view: 'login' | 'signup') => {
     setAuthMethod(view);
-    setShowAuth(true);
     setFormError(null);
+    setShowAuth(true);
+    setForm2FA(false);
   };
 
-  const toggleAuthMethod = () => {
-    if (session && authMethod === 'signup') {
+  const toggleAuthMethod = (view?: 'login' | 'signup') => {
+    setRecoverSent(false);
+    setFormError(null);
+    setForm2FA(false);
+    if (session && view === 'login') {
       redirectToDrive();
       hideAuth();
     } else {
-      setFormError(null);
-      setAuthMethod(authMethod === 'signup' ? 'login' : 'signup');
+      setAuthMethod(view);
     }
   };
 
@@ -62,74 +66,70 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
         window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
       }
     } else {
-      //! CHANGE
-      // window.location.replace('https://drive.internxt.com');
-      window.location.replace('http://localhost:3000/app');
+      window.location.replace('https://drive.internxt.com/app');
     }
   };
 
   // MESSAGE FILTERING
 
   useEffect(() => {
-    if (window) {
-      const auth = window.document.getElementById('auth')['contentWindow'];
-      const postMessage = (data) => {
-        auth.postMessage(
-          data,
-          process.env.NODE_ENV === 'development' ? 'http://localhost:3000/auth' : 'https://drive.internxt.com/auth',
-        );
-      };
+    const auth = window.document.getElementById('auth')['contentWindow'];
+    const postMessage = (data) => {
+      auth.postMessage(data, 'https://drive.internxt.com/auth');
+    };
+    const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
 
-      window.onmessage = function (e) {
-        const permitedDomains = [
-          'https://drive.internxt.com',
-          'https://internxt.com',
-          process.env.NODE_ENV === 'development' && 'http://localhost:3001',
-          process.env.NODE_ENV === 'development' && 'http://localhost:3000',
-        ];
-
-        if (permitedDomains.includes(e.origin)) {
-          if (e.data.action === 'redirect') {
+    const onRecieveMessage = (e) => {
+      if (permitedDomains.includes(e.origin)) {
+        if (e.data.action === 'redirect') {
+          redirectToDrive();
+        } else if (e.data.action === 'signup') {
+          setFormLoading(true);
+          postMessage(e.data);
+        } else if (e.data.action === 'check_session') {
+          postMessage(e.data);
+        } else if (e.data.action === 'session') {
+          setSession(e.data.session);
+        } else if (e.data.action === 'login') {
+          setFormLoading(true);
+          postMessage(e.data);
+        } else if (e.data.action === '2fa') {
+          setFormLoading(false);
+          setFormError(null);
+          setForm2FA(true);
+          postMessage(e.data);
+        } else if (e.data.action === 'recover') {
+          setFormLoading(true);
+          setFormError(null);
+          postMessage(e.data);
+        } else if (e.data.action === 'recover_email_sent') {
+          setFormLoading(false);
+          setRecoverSent(true);
+        } else if (e.data.action === 'error') {
+          setFormError(e.data.msg);
+          setFormLoading(false);
+        } else if (e.data.action === 'error_inline') {
+          setFormLoading(false);
+        } else if (e.data.action === 'openDialogLogin') {
+          if (session) {
             redirectToDrive();
-          } else if (e.data.action === 'signup') {
-            setFormLoading(true);
-            postMessage(e.data);
-          } else if (e.data.action === 'session') {
-            setSession(e.data.session);
-          } else if (e.data.action === 'login') {
-            setFormLoading(true);
-            postMessage(e.data);
-          } else if (e.data.action === 'recover') {
-            setFormLoading(true);
-            setFormError(null);
-            postMessage(e.data);
-          } else if (e.data.action === 'recover_email_sent') {
-            setFormLoading(false);
-            setRecoverSent(true);
-          } else if (e.data.action === 'error') {
-            setFormError(e.data.msg);
-            setFormLoading(false);
-          } else if (e.data.action === 'openDialogLogin') {
-            if (session) {
-              redirectToDrive();
-            } else {
-              openAuth('login');
-            }
-          } else if (e.data.action === 'openDialogSignup') {
-            openAuth('signup');
-          } else if (e.data.action === 'toggleAuthMethod') {
-            setRecoverSent(false);
-            if (e.data.view) {
-              setAuthMethod(e.data.view);
-              setFormError(null);
-            } else {
-              toggleAuthMethod();
-            }
+          } else {
+            openAuth('login');
           }
+        } else if (e.data.action === 'openDialogSignup') {
+          openAuth('signup');
+        } else if (e.data.action === 'toggleAuthMethod') {
+          toggleAuthMethod(e.data.view);
         }
-      };
-    }
-  });
+      }
+    };
+
+    window.addEventListener('message', onRecieveMessage);
+
+    return () => {
+      window.removeEventListener('message', onRecieveMessage);
+    };
+  }, [session]);
 
   useEffect(() => {
     if (authMethod === 'login' && session) {
@@ -299,7 +299,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       onClick={() => {
                         setMenuState(false);
                       }}
-                      className={`delay-250 flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition duration-300 ${
+                      className={`flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition delay-250 duration-300 ${
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
@@ -468,8 +468,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
       </div>
 
       {/* Auth iframe */}
-      {/* <iframe className="hidden" src="https://drive.internxt.com/auth" /> */}
-      <iframe id="auth" className="hidden" src="http://localhost:3000/auth" />
+      <iframe id="auth" className="hidden" src="https://drive.internxt.com/auth" />
 
       {/* Auth dialog */}
       <Transition appear show={showAuth} as={Fragment}>
