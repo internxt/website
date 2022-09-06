@@ -24,7 +24,7 @@ export default function HeroSection({ textContent, lang }) {
             <h2 className="mb-4 max-w-md text-lg text-gray-80 md:mb-8 lg:text-xl">{textContent.subtitle}</h2>
 
             <button
-              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-full bg-primary px-5 text-lg text-white shadow-2xl shadow-primary/25 transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:px-9"
+              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-8 text-lg text-white shadow-2xl shadow-primary/25 transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto"
               onClick={() => openAuthDialog('signup')}
             >
               <div className="flex flex-row items-center space-x-2">
@@ -196,8 +196,8 @@ export default function HeroSection({ textContent, lang }) {
             </Marquee>
           </div>
 
-          <div className="hidden overflow-hidden xl:flex">
-            <div className="featured flex w-full flex-row justify-center overflow-x-auto bg-white p-6 md:px-10 lg:px-32">
+          <div className="mx-auto hidden w-full max-w-screen-xl overflow-hidden xl:flex">
+            <div className="featured flex w-full flex-row items-center justify-center overflow-x-auto py-8 px-4">
               {lang === 'es' ? (
                 <a
                   href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"

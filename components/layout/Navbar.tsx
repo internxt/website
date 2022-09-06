@@ -427,7 +427,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
             <button
               onClick={() => openAuthDialog('login')}
-              className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
+              className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                 darkMode && !menuState
                   ? 'border-white text-white focus:opacity-80'
                   : 'border-primary text-primary active:border-primary-dark active:text-primary-dark'
@@ -440,7 +440,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
               <button
                 onClick={() => openAuthDialog('signup')}
                 id="get-started-link"
-                className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
+                className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
                     : 'bg-primary text-white active:bg-primary-dark'
@@ -456,7 +456,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
               <button
                 type="button"
                 onClick={ctaAction[1]}
-                className="flex justify-center rounded-full border border-transparent bg-blue-60 py-1 px-4 text-base font-medium text-white outline-none transition-all duration-75 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:bg-blue-70 sm:inline-flex"
+                className="flex justify-center rounded-lg border border-transparent bg-blue-60 py-1 px-4 text-base font-medium text-white outline-none transition-all duration-75 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:bg-blue-70 sm:inline-flex"
               >
                 <p className="whitespace-nowrap">{textContent.links.checkout}</p>
               </button>
