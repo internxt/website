@@ -4,10 +4,10 @@
 
 @layer components {
   .button-primary {
-    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-lg cursor-pointer;
+    @apply flex h-12 cursor-pointer flex-row items-center justify-center rounded-lg bg-primary px-5 text-lg font-medium text-white transition-colors duration-100 ease-in-out active:bg-primary-dark md:h-10 md:text-base;
   }
   .button-primary-rounded {
-    @apply flex flex-row justify-center items-center text-lg md:text-base font-medium text-white px-5 h-12 md:h-10 bg-primary active:bg-primary-dark transition-colors duration-100 ease-in-out rounded-full cursor-pointer;
+    @apply flex h-12 cursor-pointer flex-row items-center justify-center rounded-full bg-primary px-5 text-lg font-medium text-white transition-colors duration-100 ease-in-out active:bg-primary-dark md:h-10 md:text-base;
   }
 
   .markdown {
@@ -28,7 +28,7 @@
 }
 
 // Fonts
-@import url('../public/fonts/Aeonik/Aeonik.css');
+@import url('../public/fonts/NeueEinstellung/NeueEinstellung.css');
 
 // Global styles
 
@@ -41,7 +41,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Aeonik' !important;
+  font-family: 'Neue Einstellung' !important;
 }
 
 @layer {
@@ -52,12 +52,12 @@ body {
 }
 
 main {
-  @apply max-w-screen-xl mx-auto;
+  @apply mx-auto max-w-screen-xl;
 }
 section,
 .section {
   .content {
-    @apply max-w-screen-xl mx-auto;
+    @apply mx-auto max-w-screen-xl;
   }
 }
 
