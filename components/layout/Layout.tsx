@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import React, { useEffect } from 'react';
 import { ArrowRight } from 'phosphor-react';
+import isBrave from '../../lib/brave';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -24,9 +25,12 @@ export default function Layout({
   isProduction = process.env.NODE_ENV === 'production',
   lang,
 }: // lang
-LayoutProps) {
+  LayoutProps) {
   useEffect(() => {
     window.analytics.page(segmentName);
+    window.rudderanalytics.page(segmentName, {
+      brave: isBrave()
+    });
     const getStartedLinkList = Array(document.querySelectorAll('[id=get-started-link]'));
 
     getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
@@ -47,6 +51,7 @@ LayoutProps) {
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="icon" href="/favicon.ico" />
         {isProduction ? <script src="/js/analyticsSnippet.js" /> : <script src="/js/segment.js" />}
+        <script src="/js/rudderlib.js" />
         {!disableMailerlite && <script defer src="/js/mailerlite.js" />}
         {!disableDrift && <script defer src="/js/drift.js" />}
         <script

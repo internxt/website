@@ -1,3 +1,4 @@
 interface Window {
-    analytics: any
+    analytics: any;
+    rudderanalytics: any
 }
