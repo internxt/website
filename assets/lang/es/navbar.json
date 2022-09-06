@@ -1,18 +1,84 @@
 {
-    "links" : {
-        "products": "Productos",
-        "about": "Sobre nosotros",
-        "privacy": "Privacidad",
-        "pricing": "Precios",
-        "login": "Iniciar sesión",
-        "getStarted": "Empezar ahora",
-        "checkout": "Reclamar oferta!"
+  "links": {
+    "products": "Productos",
+    "about": "Sobre nosotros",
+    "privacy": "Privacidad",
+    "pricing": "Precios",
+    "login": "Iniciar sesión",
+    "getStarted": "Empezar ahora",
+    "checkout": "Reclamar oferta!"
+  },
+  "products": {
+    "drive": "Drive",
+    "photos": "Photos",
+    "send": "Send",
+    "comingSoon": "Próximamente",
+    "new": "Nuevo"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Crear cuenta en Internxt",
+      "or": "o",
+      "login": "Iniciar sesión",
+      "disclaimer": {
+        "text": "Al crear una cuenta aceptas los",
+        "link": "términos y condiciones"
+      },
+      "fields": {
+        "email": {
+          "label": "Correo",
+          "placeholder": "Correo"
+        },
+        "password": {
+          "label": "Contraseña",
+          "placeholder": "Contraseña",
+          "strength": {
+            "complexity": "La contraseña no es compleja",
+            "length": "La contraseña debe tener mínimo 8 dígitos",
+            "weak": "La contraseña es débil",
+            "strong": "La contraseña es fuerte"
+          }
+        },
+        "submit": "Crear cuenta"
+      }
     },
-    "products" : {
-        "drive": "Drive",
-        "photos": "Photos",
-        "send": "Send",
-        "comingSoon": "Próximamente",
-        "new": "Nuevo"
+    "LogIn": {
+      "title": "Iniciar sesión en Internxt",
+      "or": "o",
+      "signup": "Crear cuenta",
+      "fields": {
+        "email": {
+          "label": "Correo",
+          "placeholder": "Correo"
+        },
+        "password": {
+          "label": "Contraseña",
+          "placeholder": "Contraseña",
+          "helper": "¿Has olvidado tu contraseña?"
+        },
+        "tfa": {
+          "label": "Autenticación de doble factor",
+          "placeholder": "Código de doble factor",
+          "hint": "El código 2FA debe tener 6 dígitos"
+        },
+        "submit": "Iniciar sesión"
+      }
+    },
+    "Recover": {
+      "title": "Recuperar cuenta",
+      "back": "Volver a inicio de sesión",
+      "disclaimer": "Como se especifica en la configuración de la aplicación, sólo tú tienes acceso a tu contraseña, por lo que no podemos restaurar tu cuenta sin ella. Puedes volver a registrarte introduciendo tu correo electrónico a continuación para que podamos eliminar tu cuenta y todos tus archivos.",
+      "fields": {
+        "email": {
+          "label": "Correo",
+          "placeholder": "Correo"
+        },
+        "submit": "Enviar confirmación"
+      },
+      "success": {
+        "title": "Revisa tu correo",
+        "subtitle": "Te hemos enviado un link de reseteo a"
+      }
     }
+  }
 }

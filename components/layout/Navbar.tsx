@@ -1,16 +1,143 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Transition, Disclosure } from '@headlessui/react';
+import { Transition, Disclosure, Dialog } from '@headlessui/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
-import styles from './Navbar.module.scss';
+import { X } from 'phosphor-react';
+import { isAndroid, isIOS, isMobile } from 'react-device-detect';
+
+import LogIn from '../auth/LogIn';
+import SignUp from '../auth/SignUp';
+import ForgotPassword from '../auth/ForgotPassword';
+
+import { openAuthDialog } from '../../lib/auth';
 
 export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
   const ctaAction = cta[0] ? cta : ['default', null];
+
+  // DIALOG MANAGEMENT
+
+  const [session, setSession] = useState<boolean>(false);
+  const [showAuth, setShowAuth] = useState<boolean>(false);
+  const [authMethod, setAuthMethod] = useState<'login' | 'signup' | 'recover'>('signup');
+  const [formError, setFormError] = useState<string | null>(null);
+  const [formLoading, setFormLoading] = useState<boolean>(false);
+  const [form2FA, setForm2FA] = useState<boolean>(false);
+  const [recoverSent, setRecoverSent] = useState<boolean>(false);
+
+  const authView = {
+    login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={textContent.Auth} />,
+    signup: <SignUp error={formError} loading={formLoading} textContent={textContent.Auth} />,
+    recover: (
+      <ForgotPassword sent={recoverSent} error={formError} loading={formLoading} textContent={textContent.Auth} />
+    ),
+  };
+
+  const hideAuth = () => {
+    setShowAuth(false);
+  };
+
+  const openAuth = (view: 'login' | 'signup') => {
+    setAuthMethod(view);
+    setFormError(null);
+    setShowAuth(true);
+    setForm2FA(false);
+  };
+
+  const toggleAuthMethod = (view?: 'login' | 'signup') => {
+    setRecoverSent(false);
+    setFormError(null);
+    setForm2FA(false);
+    if (session && view === 'login') {
+      redirectToDrive();
+      hideAuth();
+    } else {
+      setAuthMethod(view);
+    }
+  };
+
+  const redirectToDrive = () => {
+    if (isMobile) {
+      if (isAndroid) {
+        window.location.replace('https://play.google.com/store/apps/details?id=com.internxt.cloud');
+      } else if (isIOS) {
+        window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
+      }
+    } else {
+      window.location.replace('https://drive.internxt.com/app');
+    }
+  };
+
+  // MESSAGE FILTERING
+
+  useEffect(() => {
+    const auth = window.document.getElementById('auth')['contentWindow'];
+    const postMessage = (data) => {
+      auth.postMessage(data, 'https://drive.internxt.com/auth');
+    };
+    const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
+
+    const onRecieveMessage = (e) => {
+      if (permitedDomains.includes(e.origin)) {
+        if (e.data.action === 'redirect') {
+          redirectToDrive();
+        } else if (e.data.action === 'signup') {
+          setFormLoading(true);
+          postMessage(e.data);
+        } else if (e.data.action === 'check_session') {
+          postMessage(e.data);
+        } else if (e.data.action === 'session') {
+          setSession(e.data.session);
+        } else if (e.data.action === 'login') {
+          setFormLoading(true);
+          postMessage(e.data);
+        } else if (e.data.action === '2fa') {
+          setFormLoading(false);
+          setFormError(null);
+          setForm2FA(true);
+          postMessage(e.data);
+        } else if (e.data.action === 'recover') {
+          setFormLoading(true);
+          setFormError(null);
+          postMessage(e.data);
+        } else if (e.data.action === 'recover_email_sent') {
+          setFormLoading(false);
+          setRecoverSent(true);
+        } else if (e.data.action === 'error') {
+          setFormError(e.data.msg);
+          setFormLoading(false);
+        } else if (e.data.action === 'error_inline') {
+          setFormLoading(false);
+        } else if (e.data.action === 'openDialogLogin') {
+          if (session) {
+            redirectToDrive();
+          } else {
+            openAuth('login');
+          }
+        } else if (e.data.action === 'openDialogSignup') {
+          openAuth('signup');
+        } else if (e.data.action === 'toggleAuthMethod') {
+          toggleAuthMethod(e.data.view);
+        }
+      }
+    };
+
+    window.addEventListener('message', onRecieveMessage);
+
+    return () => {
+      window.removeEventListener('message', onRecieveMessage);
+    };
+  }, [session]);
+
+  useEffect(() => {
+    if (authMethod === 'login' && session) {
+      redirectToDrive();
+    }
+  }, [authMethod, session]);
+
+  // SCROLL EFFECTS
 
   const handleScroll = () => setScrolled(window.pageYOffset > 0);
 
@@ -23,16 +150,16 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     <div
       className={`section flex items-center ${
         !menuState && !fixed ? 'absolute' : 'fixed'
-      } w-full h-16 transition-all duration-100 bg-white ${
-        fixed && 'backdrop-filter backdrop-saturate-150 backdrop-blur-lg'
-      } ${darkMode ? '' : styles.nabvarBgFallback} ${
-        scrolled && fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'
-      } ${menuState ? 'bg-opacity-100' : ''} border-b border-black z-40`}
+      } h-16 w-full bg-white transition-all duration-100 ${
+        fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
+      } ${scrolled && fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'} ${
+        menuState ? 'bg-opacity-100' : ''
+      } z-40 border-b border-black`}
     >
-      <div className="w-full mx-4 lg:mx-10 xl:mx-32">
-        <div className="navbar items-center flex justify-between max-w-screen-xl mx-auto">
+      <div className="mx-4 w-full lg:mx-10 xl:mx-32">
+        <div className="navbar mx-auto flex max-w-screen-xl items-center justify-between">
           {/* Left side of navbar: Logo / Hamburguer menu */}
-          <div className=" flex flex-row flex-grow flex-shrink-0 flex-1 justify-start items-center space-x-4 lg:space-x-0">
+          <div className=" flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
             <div className="flex lg:hidden">
               <Hamburger
                 label="Show menu"
@@ -44,15 +171,15 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
               {/* Mobile hamburger menu background */}
               <div
-                className={`pointer-events-none transition-all duration-500 flex fixed left-0 w-full h-full top-14 bg-white ${
+                className={`pointer-events-none fixed left-0 top-14 flex h-full w-full bg-white transition-all duration-500 ${
                   menuState ? 'opacity-100' : 'opacity-0'
                 }`}
               />
 
               {/* Mobile hamburger menu */}
               <div
-                className={`transition-all duration-500 flex flex-col fixed left-0 w-full top-14 overflow-hidden bg-white text-xl ${
-                  menuState ? 'h-screen pb-14 overflow-y-auto' : 'h-0'
+                className={`fixed left-0 top-14 flex w-full flex-col overflow-hidden bg-white text-xl transition-all duration-500 ${
+                  menuState ? 'h-screen overflow-y-auto pb-14' : 'h-0'
                 }`}
               >
                 <div className="my-6 font-medium">
@@ -63,7 +190,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       onClick={() => {
                         setMenuState(false);
                       }}
-                      className={`outline-none flex w-full px-8 py-3 transition duration-300 delay-100 translate-y-0 ${
+                      className={`flex w-full translate-y-0 px-8 py-3 outline-none transition delay-100 duration-300 ${
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
@@ -74,26 +201,26 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                   <Disclosure as="div">
                     {({ open }) => (
                       <div
-                        className={`transition duration-300 delay-150 translate-y-0 ${
+                        className={`translate-y-0 transition delay-150 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                         }`}
                       >
                         <div className={`${open ? 'bg-cool-gray-5' : ''}`}>
                           <Disclosure.Button
-                            className={`flex justify-between items-center w-full px-8 py-3 font-medium ${
+                            className={`flex w-full items-center justify-between px-8 py-3 font-medium ${
                               open ? 'bg-cool-gray-10' : ''
                             }`}
                           >
                             <span>{textContent.links.products}</span>
-                            <span className="relative w-6 h-6">
+                            <span className="relative h-6 w-6">
                               <UilMinus
-                                className={`absolute top-0 left-0 w-6 h-6 transition duration-300 ${
-                                  open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-180'
+                                className={`absolute top-0 left-0 h-6 w-6 transition duration-300 ${
+                                  open ? 'text-cool-gray-60' : '-rotate-180 text-cool-gray-40'
                                 }`}
                               />
                               <UilMinus
-                                className={`absolute top-0 left-0 w-6 h-6 transition duration-300 ${
-                                  open ? 'text-cool-gray-60' : 'text-cool-gray-40 -rotate-90'
+                                className={`absolute top-0 left-0 h-6 w-6 transition duration-300 ${
+                                  open ? 'text-cool-gray-60' : '-rotate-90 text-cool-gray-40'
                                 }`}
                               />
                             </span>
@@ -107,14 +234,14 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                             leaveFrom="scale-100 opacity-100"
                             leaveTo="scale-95 opacity-0"
                           >
-                            <Disclosure.Panel className="flex flex-col py-3 text-cool-gray-80 mb-4">
+                            <Disclosure.Panel className="mb-4 flex flex-col py-3 text-cool-gray-80">
                               <Link href="/drive" locale={lang}>
                                 <a
                                   tabIndex={0}
                                   onClick={() => {
                                     setMenuState(false);
                                   }}
-                                  className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80"
+                                  className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
                                 >
                                   {textContent.products.drive}
                                 </a>
@@ -126,7 +253,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                                   onClick={() => {
                                     setMenuState(false);
                                   }}
-                                  className="outline-none flex w-full px-8 py-3 justify-start text-lg font-medium text-cool-gray-80"
+                                  className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
                                 >
                                   {textContent.products.photos}
                                 </a>
@@ -136,10 +263,10 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                                 href="https://send.internxt.com"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="outline-none flex w-full px-8 py-3 justify-start items-center text-lg font-medium text-cool-gray-80"
+                                className="flex w-full items-center justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
                               >
                                 <span>{textContent.products.send}</span>
-                                <span className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                                <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
                                   {textContent.products.new}
                                 </span>
                               </a>
@@ -157,7 +284,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       onClick={() => {
                         setMenuState(false);
                       }}
-                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-200 translate-y-0 ${
+                      className={`flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition delay-200 duration-300 ${
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
@@ -172,7 +299,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       onClick={() => {
                         setMenuState(false);
                       }}
-                      className={`outline-none cursor-pointer flex w-full px-8 py-3 transition duration-300 delay-250 translate-y-0 ${
+                      className={`flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition delay-250 duration-300 ${
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
@@ -186,7 +313,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                     }}
                     tabIndex={0}
                     href="https://drive.internxt.com/login"
-                    className={`outline-none flex w-full px-8 py-3 text-primary transition duration-300 delay-300 translate-y-0 ${
+                    className={`flex w-full translate-y-0 px-8 py-3 text-primary outline-none transition delay-300 duration-300 ${
                       menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                     }`}
                   >
@@ -211,7 +338,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
           {/* Desktop links */}
           <div className="links">
-            <div className="hidden lg:inline-flex space-x-2">
+            <div className="hidden space-x-2 lg:inline-flex">
               <Link href="/pricing" locale={lang}>
                 <a
                   className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
@@ -223,23 +350,23 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
               </Link>
 
               <div
-                className={`group relative flex py-1.5 px-4 pr-2 space-x-1 transition duration-150 ease-in-out font-medium ${
+                className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
                   darkMode
-                    ? 'text-white hover:text-cool-gray-20 hover:bg-white hover:bg-opacity-10'
-                    : 'text-cool-gray-70 hover:text-cool-gray-90 hover:bg-cool-gray-100 hover:bg-opacity-5'
-                } rounded-lg cursor-default`}
+                    ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
+                    : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-cool-gray-90'
+                } cursor-default rounded-lg`}
               >
                 <span>{textContent.links.products}</span>
-                <UilAngleDown className="w-6 h-6 transition duration-150 ease-in-out translate-y-px text-cool-gray-20 group-hover:text-cool-gray-30" />
+                <UilAngleDown className="h-6 w-6 translate-y-px text-cool-gray-20 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
 
                 {/* Menu items */}
-                <div className="absolute top-full left-1/2 z-10 w-52 -translate-x-1/2 opacity-0 translate-y-0 group-hover:translate-y-1 group-hover:opacity-100 p-1.5 bg-white border-black rounded-xl shadow-subtle border border-opacity-5 transition duration-150 ease-in-out pointer-events-none group-hover:pointer-events-auto">
-                  <div className="absolute -top-4 left-1/2 w-4/5 h-4 -translate-x-1/2" />
+                <div className="pointer-events-none absolute top-full left-1/2 z-10 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+                  <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
-                  <div className="relative grid gap-0 lg:grid-cols-1 whitespace-nowrap">
+                  <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
                     <Link href="/drive" locale={lang}>
                       <a
-                        className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${
+                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                           darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
                         }`}
                       >
@@ -249,7 +376,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
                     <Link href="/photos" locale={lang}>
                       <a
-                        className={`py-2 px-4 rounded-lg flex flex-row justify-start text-base font-medium text-cool-gray-80 ${
+                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                           darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
                         }`}
                       >
@@ -261,12 +388,12 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                       href="https://send.internxt.com"
                       target="_blank"
                       rel="noreferrer"
-                      className={`py-2 px-4 rounded-lg flex flex-row justify-start items-center text-base font-medium text-cool-gray-80 ${
+                      className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                         darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
                       }`}
                     >
                       <span>{textContent.products.send}</span>
-                      <span className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-2 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                      <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
                         {textContent.products.new}
                       </span>
                     </a>
@@ -297,30 +424,30 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           </div>
 
           {/* Login and CTA */}
-          <div className="flex flex-row flex-grow flex-shrink-0 flex-1 justify-end items-center">
-            <a
-              href="https://drive.internxt.com/login"
-              className={`hidden md:flex whitespace-nowrap py-1.5 px-4 rounded-full border focus:border focus:outline-none transition duration-150 ease-in-out mr-2 ${
+          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
+            <button
+              onClick={() => openAuthDialog('login')}
+              className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                 darkMode && !menuState
-                  ? 'text-white focus:opacity-80 border-white'
-                  : 'text-primary border-primary active:text-primary-dark active:border-primary-dark'
+                  ? 'border-white text-white focus:opacity-80'
+                  : 'border-primary text-primary active:border-primary-dark active:text-primary-dark'
               } text-sm font-medium`}
             >
               {textContent.links.login}
-            </a>
+            </button>
 
             {ctaAction[0] === 'default' ? (
-              <a
-                href="https://drive.internxt.com/new"
+              <button
+                onClick={() => openAuthDialog('signup')}
                 id="get-started-link"
-                className={`focus:outline-none flex justify-center sm:inline-flex py-1.5 px-4 border border-transparent rounded-full text-sm font-medium ${
+                className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   darkMode && !menuState
-                    ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10'
-                    : 'text-white bg-primary active:bg-primary-dark'
+                    ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
+                    : 'bg-primary text-white active:bg-primary-dark'
                 } transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{textContent.links.getStarted}</p>
-              </a>
+              </button>
             ) : (
               ''
             )}
@@ -329,11 +456,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
               <button
                 type="button"
                 onClick={ctaAction[1]}
-                className={`focus:outline-none flex justify-center sm:inline-flex py-1.5 px-4 border border-transparent rounded-full text-sm font-medium ${
-                  darkMode && !menuState
-                    ? 'text-cool-gray-90 bg-white active:bg-cool-gray-10 focus:bg-cool-gray-10'
-                    : 'text-white bg-primary active:bg-primary-dark'
-                } transition-all duration-75`}
+                className="flex justify-center rounded-lg border border-transparent bg-blue-60 py-1 px-4 text-base font-medium text-white outline-none transition-all duration-75 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:bg-blue-70 sm:inline-flex"
               >
                 <p className="whitespace-nowrap">{textContent.links.checkout}</p>
               </button>
@@ -343,6 +466,51 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           </div>
         </div>
       </div>
+
+      {/* Auth iframe */}
+      <iframe id="auth" className="hidden" src="https://drive.internxt.com/auth" />
+
+      {/* Auth dialog */}
+      <Transition appear show={showAuth} as={Fragment}>
+        <Dialog as="div" className="relative z-50" onClose={() => !formLoading && hideAuth()}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-150"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-100"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm backdrop-filter" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full flex-col items-center justify-center sm:p-4">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-200"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-100"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="relative flex h-screen w-screen flex-col justify-center bg-white px-8 py-10 sm:h-auto sm:w-96 sm:justify-start sm:rounded-2xl sm:shadow-subtle-hard">
+                  <div
+                    onClick={() => !formLoading && hideAuth()}
+                    className="absolute top-6 right-6 z-10 flex h-9 w-9 cursor-pointer flex-col items-center justify-center rounded-md text-gray-80 hover:bg-gray-1 active:bg-gray-5"
+                  >
+                    <X className="h-6 w-6" />
+                  </div>
+
+                  <div className="mt-4 flex w-full flex-col items-center space-y-6">{authView[authMethod]}</div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
     </div>
   );
 }

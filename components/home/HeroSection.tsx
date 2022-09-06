@@ -1,12 +1,13 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import { openAuthDialog } from '../../lib/auth';
 
 export default function HeroSection({ textContent, lang }) {
   return (
     <section>
-      <div className="pt-24 border-b border-gray-5">
-        <div className="content flex flex-col md:flex-row items-center justify-between w-full sm:mb-6">
-          <div className="flex flex-col w-auto md:hidden mx-20 mb-6">
+      <div className="mx-4 border-b border-gray-5 pt-24 lg:mx-10 xl:mx-32">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row">
+          <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
             <img
               loading="lazy"
               src="/images/home/devicesMobileView.webp"
@@ -15,35 +16,26 @@ export default function HeroSection({ textContent, lang }) {
             />
           </div>
 
-          <div className="flex-shrink-0 px-6 md:px-0 m-6 md:m-10 lg:m-32 lg:mr-16 flex flex-col w-screen sm:w-auto text-center md:text-left">
-            <h1 className="mb-4 pb-4 bg-clip-text text-transparent bg-gradient-to-tr from-primary to-[#00BFFF] md:mb-8 font-medium text-4xl md:text-5xl lg:text-7xl">
-              {textContent.title.line1}
-              <br className="hidden sm:inline-flex" /> {textContent.title.line2}
+          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:items-start md:text-left lg:my-20 lg:ml-0">
+            <h1 className="max-w-md bg-gradient-to-tr from-primary to-gradients-electric-cyan bg-clip-text pb-5 text-4xl font-medium text-transparent sm:text-5xl lg:max-w-lg lg:pb-10 lg:text-6xl">
+              {textContent.title}
             </h1>
 
-            <h2 className="mb-8 md:mb-8 text-lg lg:text-xl text-neutral-500">
-              {textContent.subtitle.line1}
-              <br className="hidden sm:inline-flex" /> {textContent.subtitle.line2}
-            </h2>
+            <h2 className="mb-4 max-w-md text-lg text-gray-80 md:mb-8 lg:text-xl">{textContent.subtitle}</h2>
 
-            <div>
-              <a
-                href="https://drive.internxt.com/new"
-                id="get-started-link"
-                target="_top"
-                rel="noreferrer"
-                className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary active:bg-primary-dark focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75"
-              >
-                {textContent.cta1}{' '}
-                <span className="font-normal text-blue-30">
-                  <span className="px-1.5">—</span>
-                  {textContent.cta1detail}
-                </span>
-              </a>
-            </div>
+            <button
+              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-8 text-lg text-white shadow-2xl shadow-primary/25 transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto"
+              onClick={() => openAuthDialog('signup')}
+            >
+              <div className="flex flex-row items-center space-x-2">
+                <span>{textContent.cta.title}</span>
+                <span>{'—'}</span>
+                <span className="opacity-60">{textContent.cta.subtitle}</span>
+              </div>
+            </button>
           </div>
 
-          <div className="hidden md:flex flex-grow flex-col max-w-2xl mr-0 xl:mr-32">
+          <div className="ml-5 hidden max-w-2xl flex-grow flex-col md:flex xl:ml-20">
             <img
               loading="lazy"
               className="hidden xl:flex"
@@ -54,7 +46,7 @@ export default function HeroSection({ textContent, lang }) {
 
             <img
               loading="lazy"
-              className="flex xl:hidden"
+              className="flex translate-x-10 transform xl:hidden"
               src="/images/home/devicesAscCut.webp"
               draggable="false"
               alt="desktop, laptop and phone with Internxt app"
@@ -65,7 +57,7 @@ export default function HeroSection({ textContent, lang }) {
         <div className="relative">
           <div className="flex xl:hidden">
             <Marquee className="bg-white" gradientColor={[255, 255, 255]} gradientWidth="32px" speed={30}>
-              <div className="featured flex flex-row w-full p-6">
+              <div className="featured flex w-full flex-row p-6">
                 {lang === 'es' ? (
                   <a
                     href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"
@@ -204,8 +196,8 @@ export default function HeroSection({ textContent, lang }) {
             </Marquee>
           </div>
 
-          <div className="overflow-hidden hidden xl:flex">
-            <div className="featured flex flex-row justify-center w-full p-6 md:px-10 lg:px-32 bg-white overflow-x-auto">
+          <div className="mx-auto hidden w-full max-w-screen-xl overflow-hidden xl:flex">
+            <div className="featured flex w-full flex-row items-center justify-center overflow-x-auto py-8 px-4">
               {lang === 'es' ? (
                 <a
                   href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"

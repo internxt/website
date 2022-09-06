@@ -1,13 +1,11 @@
 {
   "HeroSection": {
-    "title": { "line1": "Store your files", "line2": "in complete privacy" },
-    "subtitle": {
-      "line1": "Here at Internxt, we've created a suite of Internet",
-      "line2": "services with a focus on security and privacy."
-    },
-    "cta1": "Get up to 10GB",
-    "cta1detail": "for free",
-    "cta2": { "mobile": "Get App", "desktop": "Download" }
+    "title": "Store your files in total privacy",
+    "subtitle": "Here at Internxt, we've created a suite of Internet services focused on security and privacy.",
+    "cta": {
+      "title": "Get up to 10GB",
+      "subtitle": "FOR FREE"
+    }
   },
   "FeaturesSection": {
     "eyebrow": "INTERNXT DRIVE",

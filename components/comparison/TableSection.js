@@ -357,7 +357,7 @@ const HeroSection = ({ textContent }) => {
             <p className="text-base md:text-xs text-center mt-1.5 opacity-80">{textContent.noCredirCardNeeded}</p>
           </div>
 
-          <div className="absolute top-2/3 left-0 w-full h-full rounded-t-full-percentage scale-y-200 filter blur-4xl bg-primary-dark" />
+          <div className="absolute top-2/3 left-0 w-full h-full rounded-t-full-percentage scale-y-200 filter blur-3xl bg-primary-dark" />
         </div>
 
         {/* Table */}

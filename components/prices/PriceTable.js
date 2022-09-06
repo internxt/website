@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
-// import Link from 'next/link';
 import PriceCard from './PriceCard';
 
 export default function PriceTable({ setSegmentPageName, lang }) {

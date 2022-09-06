@@ -6,17 +6,21 @@ module.exports = {
   async redirects() {
     return [
       // REDIRECTS TO HOME
-      ...['/cloud', '/roadmap', '/core', '/ivacy', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map((src) => ({
-        source: src,
-        destination: '/',
-        permanent: false,
-      })),
+      ...['/cloud', '/roadmap', '/core', '/ivacy', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map(
+        (src) => ({
+          source: src,
+          destination: '/',
+          permanent: false,
+        }),
+      ),
       // REDIRECTS TO HOME (WITH LANG)
-      ...['/cloud', '/roadmap', '/core', '/ivacy', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map((src) => ({
-        source: `/:lang${src}`,
-        destination: '/:lang',
-        permanent: false,
-      })),
+      ...['/cloud', '/roadmap', '/core', '/ivacy', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map(
+        (src) => ({
+          source: `/:lang${src}`,
+          destination: '/:lang',
+          permanent: false,
+        }),
+      ),
       // =======================================================
       // REDIRECTS TO PRICING
       ...['/sharewareonsale', '/special-offer', '/lifetime'].map((src) => ({
@@ -96,7 +100,4 @@ module.exports = {
   env: {
     SEGMENT_API_KEY_PROD: process.env.SEGMENT_API_KEY_PROD,
   },
-  future: {
-    webpack5: true
-  }
 };
