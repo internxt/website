@@ -32,7 +32,7 @@ export default function SignUp(props: SignUpProps) {
       setPasswordState({
         tag: 'error',
         label:
-          result.reason === 'NOT_COMPLEX_ENOUGH'
+          result['reason'] === 'NOT_COMPLEX_ENOUGH'
             ? props.textContent.SignUp.fields.password.strength.complexity
             : props.textContent.SignUp.fields.password.strength.length,
       });
