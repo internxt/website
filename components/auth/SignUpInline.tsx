@@ -21,34 +21,28 @@ export default function SignUpInline(props: SignUpInlineProps) {
 
   return (
     <form className="flex w-full flex-col items-center space-y-2 pt-10 md:items-start md:pt-0" onSubmit={onSubmit}>
-      <div className="flex w-full flex-col pb-6 sm:pb-5">
-        <h3 className="text-2xl font-medium">{props.textContent.SignUp.title}</h3>
-        <p className="text-lg text-gray-60">{props.textContent.SignUp.subtitle}</p>
+      <div className="flex w-full flex-col pb-2">
+        <h3 className="text-2xl font-medium">{props.textContent.title}</h3>
+        <p className="text-lg text-gray-60">{props.textContent.subtitle}</p>
       </div>
 
       <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-y-0 md:space-x-3">
-        <label className="flex w-full flex-col items-start space-y-0.5">
-          <div className="text-sm">{props.textContent.SignUp.fields.email.label}</div>
-          <TextInput
-            name="email"
-            placeholder={props.textContent.SignUp.fields.email.placeholder}
-            type="email"
-            autoComplete="off"
-            required
-            disabled={props.loading}
-          />
-        </label>
+        <TextInput
+          name="email"
+          placeholder={props.textContent.fields.email.placeholder}
+          type="email"
+          autoComplete="email"
+          required
+          disabled={props.loading}
+        />
 
-        <label className="flex w-full flex-col items-start space-y-0.5">
-          <div className="text-sm">{props.textContent.SignUp.fields.password.label}</div>
-          <PasswordInput
-            name="password"
-            placeholder={props.textContent.SignUp.fields.password.placeholder}
-            autoComplete="off"
-            required
-            disabled={props.loading}
-          />
-        </label>
+        <PasswordInput
+          name="password"
+          placeholder={props.textContent.fields.password.placeholder}
+          autoComplete="password"
+          required
+          disabled={props.loading}
+        />
       </div>
 
       {props.error && (
@@ -64,17 +58,15 @@ export default function SignUpInline(props: SignUpInlineProps) {
         <PrimaryButton
           className="h-12 w-full rounded-full text-lg shadow-2xl shadow-primary/25 sm:w-auto sm:px-9"
           type="submit"
-          label={props.textContent.SignUp.fields.submit}
+          label={props.textContent.fields.submit}
           disabled={props.loading}
         />
 
         <span className="w-full pb-8 text-xs text-gray-50 sm:w-44 sm:pb-0 sm:text-left">
-          <span>{props.textContent.SignUp.disclaimer.text}</span>{' '}
-          <Link href={'/legal'} passHref>
-            <a className="hover:text-gray-60 hover:underline active:text-gray-80">
-              {props.textContent.SignUp.disclaimer.link}
-            </a>
-          </Link>
+          <span>{props.textContent.disclaimer.text}</span>{' '}
+          <a href="/legal" target="_blank" className="hover:text-gray-60 hover:underline active:text-gray-80">
+            {props.textContent.disclaimer.link}
+          </a>
           <span>{'.'}</span>
         </span>
       </div>

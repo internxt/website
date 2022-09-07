@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
-import { openAuthDialog } from '../../lib/auth';
+import { openAuthDialog, redirect } from '../../lib/auth';
+import SignUpInline from '../auth/SignUpInline';
 
 export default function HeroSection({ textContent, lang }) {
+  const [formError, setFormError] = useState<string | null>(null);
+  const [formLoading, setFormLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (window) {
+      const auth = window.document.getElementById('auth')['contentWindow'];
+      const postMessage = (data) => {
+        auth.postMessage(data, 'https://drive.internxt.com/auth');
+      };
+
+      window.onmessage = function (e) {
+        const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
+
+        if (permitedDomains.includes(e.origin)) {
+          if (e.data.action === 'redirect') {
+            redirect();
+          } else if (e.data.action === 'signup') {
+            setFormError(null);
+            setFormLoading(true);
+            postMessage(e.data);
+          } else if (e.data.action === 'error_inline') {
+            setFormLoading(false);
+            setFormError(e.data.msg);
+          }
+        }
+      };
+    }
+  });
+
   return (
     <section>
       <div className="mx-4 border-b border-gray-5 pt-24 lg:mx-10 xl:mx-32">
@@ -17,14 +47,14 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:items-start md:text-left lg:my-20 lg:ml-0">
-            <h1 className="max-w-md pb-5 text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-primary to-[#00BFFF] sm:text-5xl lg:max-w-lg lg:pb-10 lg:text-6xl">
+            <h1 className="max-w-md bg-gradient-to-tr from-primary to-[#00BFFF] bg-clip-text pb-5 text-4xl font-semibold text-transparent sm:text-5xl lg:max-w-lg lg:pb-10 lg:text-6xl">
               {textContent.title}
             </h1>
 
             <h2 className="mb-4 max-w-md text-lg text-gray-80 md:mb-8 lg:text-xl">{textContent.subtitle}</h2>
 
             <button
-              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-6 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto"
+              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-6 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto md:hidden"
               onClick={() => openAuthDialog('signup')}
             >
               <div className="flex flex-row items-center space-x-2">
@@ -33,6 +63,10 @@ export default function HeroSection({ textContent, lang }) {
                 <span className="opacity-60">{textContent.cta.subtitle}</span>
               </div>
             </button>
+
+            <div className="hidden w-full md:flex">
+              <SignUpInline error={formError} loading={formLoading} textContent={textContent.SignUp} />
+            </div>
           </div>
 
           <div className="ml-5 hidden max-w-2xl flex-grow flex-col md:flex xl:ml-20">

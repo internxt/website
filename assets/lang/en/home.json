@@ -5,6 +5,24 @@
     "cta": {
       "title": "Get up to 10GB",
       "subtitle": "FOR FREE"
+    },
+    "SignUp": {
+      "title": "GET 10GB FOR FREE",
+      "disclaimer": {
+        "text": "By creating an account you accept the",
+        "link": "terms and conditions"
+      },
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password"
+        },
+        "submit": "Get started"
+      }
     }
   },
   "FeaturesSection": {

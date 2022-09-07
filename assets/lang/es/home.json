@@ -5,6 +5,24 @@
     "cta": {
       "title": "Consigue hasta 10GB",
       "subtitle": "GRATIS"
+    },
+    "SignUp": {
+      "title": "CONSIGUE 10GB GRATIS",
+      "disclaimer": {
+        "text": "Al crear una cuenta aceptas los",
+        "link": "términos y condiciones"
+      },
+      "fields": {
+        "email": {
+          "label": "Correo",
+          "placeholder": "Correo"
+        },
+        "password": {
+          "label": "Contraseña",
+          "placeholder": "Contraseña"
+        },
+        "submit": "Empezar ahora"
+      }
     }
   },
   "FeaturesSection": {

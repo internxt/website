@@ -45,9 +45,7 @@ export default function SignUp(props: SignUpProps) {
 
   return (
     <>
-      <img className="h-16 w-16 rounded-xl shadow-subtle" src="/favicon.ico" draggable={false} />
-
-      <div className="flex w-full flex-col items-center text-center">
+      <div className="flex w-full flex-col items-center pt-3 text-center">
         <h1 className="text-2xl font-medium">{props.textContent.SignUp.title}</h1>
 
         <span>
@@ -62,20 +60,16 @@ export default function SignUp(props: SignUpProps) {
       </div>
 
       <form className="flex w-full flex-col space-y-3" onSubmit={onSubmit}>
-        <label className="space-y-0.5">
-          <div className="text-sm">{props.textContent.SignUp.fields.email.label}</div>
-          <TextInput
-            name="email"
-            placeholder={props.textContent.SignUp.fields.email.placeholder}
-            type="email"
-            autoComplete="off"
-            required
-            disabled={props.loading}
-          />
-        </label>
+        <TextInput
+          name="email"
+          placeholder={props.textContent.SignUp.fields.email.placeholder}
+          type="email"
+          autoComplete="off"
+          required
+          disabled={props.loading}
+        />
 
-        <label className="space-y-0.5">
-          <div className="text-sm">{props.textContent.SignUp.fields.password.label}</div>
+        <div className="space-y-0.5">
           <PasswordInput
             name="password"
             placeholder={props.textContent.SignUp.fields.password.placeholder}
@@ -88,7 +82,7 @@ export default function SignUp(props: SignUpProps) {
             onChange={(e) => checkPassword(e)}
           />
           {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
-        </label>
+        </div>
 
         {props.error && (
           <div className="flex w-full flex-row items-start">
