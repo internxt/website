@@ -17,7 +17,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:items-start md:text-left lg:my-20 lg:ml-0">
-            <h1 className="max-w-md pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:max-w-lg lg:pb-10 lg:text-6xl">
+            <h1 className="max-w-md pb-5 text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-primary to-[#00BFFF] sm:text-5xl lg:max-w-lg lg:pb-10 lg:text-6xl">
               {textContent.title}
             </h1>
 
@@ -27,7 +27,7 @@ export default function HeroSection({ textContent, lang }) {
               className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-6 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto"
               onClick={() => openAuthDialog('signup')}
             >
-              <div className="flex flex-row items-center space-x-2.5">
+              <div className="flex flex-row items-center space-x-2">
                 <span className="font-medium">{textContent.cta.title}</span>
                 <span className="opacity-60">{'—'}</span>
                 <span className="opacity-60">{textContent.cta.subtitle}</span>

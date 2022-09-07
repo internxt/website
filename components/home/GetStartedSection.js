@@ -17,7 +17,7 @@ const GetStartedSection = ({ textContent }) => (
           <button
             onClick={() => openAuthDialog('signup')}
             id="get-started-link"
-            className="inline-flex w-auto items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:text-base"
+            className="inline-flex w-auto items-center justify-center rounded-full border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:text-base"
           >
             {textContent.cta1}
           </button>
