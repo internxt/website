@@ -54,7 +54,7 @@ export default function HeroSection({ textContent, lang }) {
             <h2 className="mb-4 max-w-md text-lg text-gray-80 md:mb-8 lg:text-xl">{textContent.subtitle}</h2>
 
             <button
-              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-6 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto md:hidden"
+              className="relative mt-3 flex h-12 w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-6 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto"
               onClick={() => openAuthDialog('signup')}
             >
               <div className="flex flex-row items-center space-x-2">
@@ -64,9 +64,9 @@ export default function HeroSection({ textContent, lang }) {
               </div>
             </button>
 
-            <div className="hidden w-full md:flex">
+            {/* <div className="hidden w-full md:flex">
               <SignUpInline error={formError} loading={formLoading} textContent={textContent.SignUp} />
-            </div>
+            </div> */}
           </div>
 
           <div className="ml-5 hidden max-w-2xl flex-grow flex-col md:flex xl:ml-20">
