@@ -23,16 +23,16 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
   }, []);
 
   return (
-    <section className={`flex flex-col w-full ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}>
-      <div className="flex flex-col items-center justify-center w-full px-6 py-16 sm:p-20 sm:py-12">
+    <section className={`flex w-full flex-col ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}>
+      <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
         {/* Supporters from Spain and EU (Only in Spanish) */}
         {lang === 'es' && (
-          <div className="flex flex-col space-y-6 sm:space-x-20 py-8 justify-center bg-white border border-cool-gray-10 rounded-lg mb-16">
-            <div className="flex flex-col max-w-2xl px-8 mx-auto">
-              <div className="flex flex-row justify-center items-center flex-wrap mb-8">
+          <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-cool-gray-10 bg-white py-8 sm:space-x-20">
+            <div className="mx-auto flex max-w-2xl flex-col px-8">
+              <div className="mb-8 flex flex-row flex-wrap items-center justify-center">
                 <img
                   loading="lazy"
-                  className="h-10 mx-4"
+                  className="mx-4 h-10"
                   src="../../logos/investors/icex.jpeg"
                   alt="Unión Europea"
                   draggable="false"
@@ -53,9 +53,9 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
         <div
           className={`${
             hideNewsletter ? 'hidden' : 'flex'
-          } w-full flex-col md:flex-row space-y-6 md:space-x-20 md:space-y-0 justify-center items-start mb-10`}
+          } mb-10 w-full flex-col items-start justify-center space-y-6 md:flex-row md:space-x-20 md:space-y-0`}
         >
-          <div className="flex flex-col space-y-1 w-full md:max-w-sm">
+          <div className="flex w-full flex-col space-y-1 md:max-w-sm">
             <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
             <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
               {textContent.NewsletterSection.description}
@@ -68,30 +68,30 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
             target="_blank"
             rel="noopener"
             action="https://app.mailerlite.com/webforms/submit/r3s4c1"
-            className="flex flex-col w-full md:w-auto justify-center items-center"
+            className="flex w-full flex-col items-center justify-center md:w-auto"
           >
             <input type="hidden" name="ml-submit" value="1" />
             <input
               name="fields[email]"
               type="email"
               placeholder={`${textContent.NewsletterSection.input}`}
-              className={`flex flex-row w-full md:w-64 h-auto px-4 py-3 sm:py-2 outline-none rounded-lg text-lg sm:text-base ${
+              className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
                 darkMode
-                  ? 'bg-cool-gray-90 border-cool-gray-70 focus:border-primary focus:ring-opacity-30'
-                  : 'bg-white border-cool-gray-20 focus:border-blue-50 focus:ring-opacity-20'
-              } border focus:ring focus:ring-primary transition-all duration-150 text-left appearance-none mb-2`}
+                  ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
+                  : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
+              } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
               required
             />
             <input
               name="signup"
               type="submit"
               value={`${textContent.NewsletterSection.cta}`}
-              className="flex justify-center w-full items-center px-4 py-3 sm:py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary active:bg-primary-dark focus:outline-none transition-all duration-75 cursor-pointer mb-6 sm:mb-2"
+              className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
             />
-            <span className="text-xs sm:text-supporting-2 text-cool-gray-40">
+            <span className="text-xs text-cool-gray-40 sm:text-supporting-2">
               {textContent.NewsletterSection.privacy}{' '}
               <Link href="/legal" locale={lang}>
-                <span className="underline cursor-pointer">{textContent.NewsletterSection.privacyLink}</span>
+                <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
               </Link>
             </span>
           </form>
@@ -107,10 +107,10 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
         {/* Footer content */}
         <footer className="w-full">
           {/* Desktop version */}
-          <div className="hidden md:flex flex-col md:space-y-16 items-center">
-            <div className="flex flex-row w-full lg:space-x-20 xl:space-x-32 justify-between md:justify-center">
-              <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-3">
+          <div className="hidden flex-col items-center md:flex md:space-y-16">
+            <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20 xl:space-x-32">
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
@@ -132,7 +132,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       className="flex flex-row items-center"
                     >
                       <div>{textContent.FooterSection.sections.products.send}</div>
-                      <div className="flex flex-row items-center px-2 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-1 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                      <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
                         {textContent.FooterSection.new}
                       </div>
                     </a>
@@ -154,8 +154,8 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                 </div>
               </div>
 
-              <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-3">
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.company.title}</h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
@@ -201,8 +201,8 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                 </div>
               </div>
 
-              <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-3">
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.join.title}</h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
@@ -228,8 +228,8 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                 </div>
               </div>
 
-              <div className="flex flex-col flex-1 lg:flex-none items-center">
-                <div className="flex flex-col flex-shrink-0 space-y-3">
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.resources.title}</h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
@@ -274,7 +274,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
               </div>
             </div>
 
-            <div className="flex flex-col items-center space-y-4 mt-10">
+            <div className="mt-10 flex flex-col items-center space-y-4">
               <div className="flex flex-row space-x-1">
                 <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                   <img
@@ -336,20 +336,6 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     alt="instagram icon"
                   />
                 </a>
-                <a
-                  href="https://mastodon.social/web/@Internxt"
-                  target="_blank"
-                  className="h-6 py-1.5 pr-2"
-                  rel="noreferrer"
-                >
-                  <img
-                    loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`}
-                    draggable="false"
-                    alt="instagram icon"
-                  />
-                </a>
               </div>
 
               <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
@@ -373,16 +359,16 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
             <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
               {({ open }) => (
                 <div>
-                  <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
-                    <span className="relative w-5 h-5">
+                    <span className="relative h-5 w-5">
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
@@ -398,7 +384,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     <Disclosure.Panel
                       className={`flex flex-col ${
                         darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } p-4 pt-2 space-y-4`}
+                      } space-y-4 p-4 pt-2`}
                     >
                       <Link href="/drive" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.drive}</a>
@@ -415,7 +401,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                         className="flex flex-row items-center"
                       >
                         <div>{textContent.FooterSection.sections.products.send}</div>
-                        <div className="flex flex-row items-center px-2 py-1 rounded-full bg-orange bg-opacity-15 text-orange text-supporting-1 whitespace-nowrap ml-2 pointer-events-none uppercase font-medium">
+                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 py-1 text-supporting-1 font-medium uppercase text-orange">
                           {textContent.FooterSection.new}
                         </div>
                       </a>
@@ -442,16 +428,16 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
             <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
               {({ open }) => (
                 <div>
-                  <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
                     <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
-                    <span className="relative w-5 h-5">
+                    <span className="relative h-5 w-5">
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
@@ -467,7 +453,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     <Disclosure.Panel
                       className={`flex flex-col ${
                         darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } p-4 pt-2 space-y-4`}
+                      } space-y-4 p-4 pt-2`}
                     >
                       <Link href="/about" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.about}</a>
@@ -513,16 +499,16 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
             <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
               {({ open }) => (
                 <div>
-                  <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
                     <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
-                    <span className="relative w-5 h-5">
+                    <span className="relative h-5 w-5">
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
@@ -538,7 +524,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     <Disclosure.Panel
                       className={`flex flex-col ${
                         darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } p-4 pt-2 space-y-4`}
+                      } space-y-4 p-4 pt-2`}
                     >
                       <a href="https://drive.internxt.com/new" target="_top">
                         {textContent.FooterSection.sections.join.signup}
@@ -564,16 +550,16 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
             <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
               {({ open }) => (
                 <div>
-                  <Disclosure.Button className="flex justify-between items-center w-full py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
-                    <span className="relative w-5 h-5">
+                    <span className="relative h-5 w-5">
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
                       />
                       <UilMinus
-                        className={`absolute top-0 left-0 w-full h-full ${
+                        className={`absolute top-0 left-0 h-full w-full ${
                           (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
                         } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
                       />
@@ -589,7 +575,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     <Disclosure.Panel
                       className={`flex flex-col ${
                         darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } p-4 pt-2 space-y-4`}
+                      } space-y-4 p-4 pt-2`}
                     >
                       <a
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -630,7 +616,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
               )}
             </Disclosure>
 
-            <div className="flex flex-col items-center space-y-4 mt-16">
+            <div className="mt-16 flex flex-col items-center space-y-4">
               <div className="flex flex-row space-x-1">
                 <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
                   <img
@@ -692,20 +678,6 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     alt="instagram icon"
                   />
                 </a>
-                <a
-                  href="https://mastodon.social/web/@Internxt"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
-                  <img
-                    loading="lazy"
-                    className="h-5"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/mastodon.svg`}
-                    draggable="false"
-                    alt="instagram icon"
-                  />
-                </a>
               </div>
 
               <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
@@ -733,13 +705,13 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
         data-aos-offset="500"
         className={`${styles.cookiesBgFallback} ${
           consentCookie ? 'hidden' : 'flex'
-        } fixed bottom-0 left-0 sm:bottom-8 sm:left-8 z-50 p-4 sm:p-6 bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg sm:rounded-lg w-full sm:max-w-xs justify-between border border-black border-opacity-5 shadow-2xl`}
+        } fixed bottom-0 left-0 z-50 w-full justify-between border border-black border-opacity-5 bg-white bg-opacity-95 p-4 shadow-2xl backdrop-blur-lg backdrop-filter sm:bottom-8 sm:left-8 sm:max-w-xs sm:rounded-lg sm:p-6`}
       >
-        <div className="flex flex-row sm:flex-col items-center justify-between w-full space-x-4 sm:space-y-8 sm:space-x-0">
+        <div className="flex w-full flex-row items-center justify-between space-x-4 sm:flex-col sm:space-y-8 sm:space-x-0">
           <div className="flex flex-col space-y-2">
-            <p className="text-cool-gray-90 text-base font-medium">{textContent.Cookies.title}</p>
+            <p className="text-base font-medium text-cool-gray-90">{textContent.Cookies.title}</p>
             <Link href="/legal" locale={lang}>
-              <a className="flex flex-row text-cool-gray-60 text-sm items-center cursor-pointer">
+              <a className="flex cursor-pointer flex-row items-center text-sm text-cool-gray-60">
                 <img
                   loading="lazy"
                   className="mt-0.5 mr-2"
@@ -754,7 +726,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
               <button
                 type="button"
                 onClick={handleAcceptCookies}
-                className="flex justify-center items-center h-10 p-0 w-full sm:px-4 sm:py-2 border border-transparent rounded-lg text-base font-medium text-cool-gray-60 bg-black bg-opacity-5 active:bg-cool-gray-20 focus:outline-none transition-all duration-75 cursor-pointer"
+                className="flex h-10 w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-black bg-opacity-5 p-0 text-base font-medium text-cool-gray-60 transition-all duration-75 focus:outline-none active:bg-cool-gray-20 sm:px-4 sm:py-2"
               >
                 <span className="flex">{textContent.Cookies.close}</span>
               </button>

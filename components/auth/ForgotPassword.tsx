@@ -48,8 +48,6 @@ export default function ForgotPassword(props: ForgotPasswordProps) {
         </>
       ) : (
         <>
-          <img className="h-16 w-16 rounded-xl shadow-subtle" src="/favicon.ico" draggable={false} />
-
           <div className="flex w-full flex-col items-center">
             <h1 className="text-2xl font-medium">{props.textContent.Recover.title}</h1>
             <a
@@ -68,17 +66,14 @@ export default function ForgotPassword(props: ForgotPasswordProps) {
               {props.textContent.Recover.disclaimer}
             </div>
 
-            <label className="space-y-0.5">
-              <div className="text-sm">{props.textContent.Recover.fields.email.label}</div>
-              <TextInput
-                name="email"
-                placeholder={props.textContent.Recover.fields.email.placeholder}
-                type="email"
-                autoComplete="email"
-                required
-                disabled={props.loading}
-              />
-            </label>
+            <TextInput
+              name="email"
+              placeholder={props.textContent.Recover.fields.email.placeholder}
+              type="email"
+              autoComplete="email"
+              required
+              disabled={props.loading}
+            />
 
             {props.error && (
               <div className="flex w-full flex-row items-start">

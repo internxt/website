@@ -24,9 +24,7 @@ export default function LogIn(props: LogInProps) {
 
   return (
     <>
-      <img className="h-16 w-16 rounded-xl shadow-subtle" src="/favicon.ico" draggable={false} />
-
-      <div className="flex w-full flex-col items-center text-center">
+      <div className="flex w-full flex-col items-center pt-3 text-center">
         <h1 className="text-2xl font-medium">{props.textContent.LogIn.title}</h1>
 
         <span>
@@ -41,50 +39,33 @@ export default function LogIn(props: LogInProps) {
       </div>
 
       <form className="flex w-full flex-col space-y-3" onSubmit={onSubmit}>
-        <label className="space-y-0.5">
-          <div className="text-sm">{props.textContent.LogIn.fields.email.label}</div>
-          <TextInput
-            name="email"
-            placeholder={props.textContent.LogIn.fields.email.placeholder}
-            type="email"
-            autoComplete="email"
-            required
-            disabled={props.loading}
-          />
-        </label>
+        <TextInput
+          name="email"
+          placeholder={props.textContent.LogIn.fields.email.placeholder}
+          type="email"
+          autoComplete="email"
+          required
+          disabled={props.loading}
+        />
 
-        <label className="space-y-0.5">
-          <div className="flex w-full flex-row justify-between text-sm">
-            <span>{props.textContent.LogIn.fields.password.label}</span>
-            <a
-              onClick={() => !props.loading && toggleAuthMethod('recover')}
-              className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
-            >
-              {props.textContent.LogIn.fields.password.helper}
-            </a>
-          </div>
-          <PasswordInput
-            name="password"
-            placeholder={props.textContent.LogIn.fields.password.placeholder}
-            autoComplete="password"
-            required
-            disabled={props.loading}
-          />
-        </label>
+        <PasswordInput
+          name="password"
+          placeholder={props.textContent.LogIn.fields.password.placeholder}
+          autoComplete="password"
+          required
+          disabled={props.loading}
+        />
 
         {props.tfa && (
-          <label className="space-y-0.5">
-            <div className="text-sm">{props.textContent.LogIn.fields.tfa.label}</div>
-            <PasswordInput
-              name="tfa"
-              placeholder={props.textContent.LogIn.fields.tfa.placeholder}
-              autoComplete="one-time-code"
-              pattern="[0-9]{6}"
-              patternHint={props.textContent.LogIn.fields.tfa.hint}
-              required
-              disabled={props.loading}
-            />
-          </label>
+          <PasswordInput
+            name="tfa"
+            placeholder={props.textContent.LogIn.fields.tfa.placeholder}
+            autoComplete="one-time-code"
+            pattern="[0-9]{6}"
+            patternHint={props.textContent.LogIn.fields.tfa.hint}
+            required
+            disabled={props.loading}
+          />
         )}
 
         {props.error && (
@@ -102,6 +83,13 @@ export default function LogIn(props: LogInProps) {
           disabled={props.loading}
           loading={props.loading}
         />
+
+        <a
+          onClick={() => !props.loading && toggleAuthMethod('recover')}
+          className={`text-center text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
+        >
+          {props.textContent.LogIn.fields.password.helper}
+        </a>
       </form>
     </>
   );
