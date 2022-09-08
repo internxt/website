@@ -25,30 +25,6 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
   return (
     <section className={`flex w-full flex-col ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}>
       <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
-        {/* Supporters from Spain and EU (Only in Spanish) */}
-        {lang === 'es' && (
-          <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-cool-gray-10 bg-white py-8 sm:space-x-20">
-            <div className="mx-auto flex max-w-2xl flex-col px-8">
-              <div className="mb-8 flex flex-row flex-wrap items-center justify-center">
-                <img
-                  loading="lazy"
-                  className="mx-4 h-10"
-                  src="../../logos/investors/icex.jpeg"
-                  alt="Unión Europea"
-                  draggable="false"
-                />
-              </div>
-
-              <p className="text-center text-xs text-cool-gray-40">Una manera de hacer Europa.</p>
-              <p className="text-center text-xs text-cool-gray-40">
-                Internxt Universal Technologies S.L. en el marco del Programa ICEX Next, ha contado con el apoyo de ICEX
-                y con la cofinanciación del fondo europeo FEDER. La finalidad de este apoyo es contribuir al desarrollo
-                internacional de la empresa y de su entorno.
-              </p>
-            </div>
-          </div>
-        )}
-
         {/* Newsletter */}
         <div
           className={`${
