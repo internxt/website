@@ -20,29 +20,32 @@ export default function SignUpInline(props: SignUpInlineProps) {
   };
 
   return (
-    <form className="flex w-full flex-col items-center space-y-2 pt-10 md:items-start md:pt-0" onSubmit={onSubmit}>
-      <div className="flex w-full flex-col pb-2">
-        <h3 className="text-2xl font-medium">{props.textContent.title}</h3>
-        <p className="text-lg text-gray-60">{props.textContent.subtitle}</p>
-      </div>
-
+    <form
+      className="flex w-full max-w-lg flex-col items-center space-y-2 pt-10 md:items-start md:pt-0"
+      onSubmit={onSubmit}
+    >
       <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-y-0 md:space-x-3">
-        <TextInput
-          name="email"
-          placeholder={props.textContent.fields.email.placeholder}
-          type="email"
-          autoComplete="email"
-          required
-          disabled={props.loading}
-        />
+        <div className="w-full">
+          <TextInput
+            id="email"
+            name="email"
+            placeholder={props.textContent.fields.email.placeholder}
+            type="email"
+            autoComplete="email"
+            required
+            disabled={props.loading}
+          />
+        </div>
 
-        <PasswordInput
-          name="password"
-          placeholder={props.textContent.fields.password.placeholder}
-          autoComplete="password"
-          required
-          disabled={props.loading}
-        />
+        <div className="w-full">
+          <PasswordInput
+            name="password"
+            placeholder={props.textContent.fields.password.placeholder}
+            autoComplete="password"
+            required
+            disabled={props.loading}
+          />
+        </div>
       </div>
 
       {props.error && (
@@ -54,15 +57,21 @@ export default function SignUpInline(props: SignUpInlineProps) {
         </div>
       )}
 
-      <div className="flex w-full flex-col items-center justify-start space-x-0 space-y-2 pt-2 sm:flex-row sm:space-x-6 sm:space-y-0 sm:pt-0 md:w-auto">
+      <div className="flex w-full flex-row items-center space-x-3">
         <PrimaryButton
-          className="h-12 w-full rounded-full text-lg shadow-2xl shadow-primary/25 sm:w-auto sm:px-9"
+          className="h-auto w-full max-w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 sm:text-base"
           type="submit"
-          label={props.textContent.fields.submit}
+          label={
+            <div className="flex flex-row items-center space-x-1.5">
+              <span>{props.textContent.fields.submit.get}</span>
+              <span className="opacity-50">{'—'}</span>
+              <span className="opacity-50">{props.textContent.fields.submit.free}</span>
+            </div>
+          }
           disabled={props.loading}
         />
 
-        <span className="w-full pb-8 text-xs text-gray-50 sm:w-44 sm:pb-0 sm:text-left">
+        <span className="w-full text-xs text-gray-50 sm:text-left">
           <span>{props.textContent.disclaimer.text}</span>{' '}
           <a href="/legal" target="_blank" className="hover:text-gray-60 hover:underline active:text-gray-80">
             {props.textContent.disclaimer.link}
