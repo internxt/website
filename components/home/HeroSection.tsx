@@ -8,29 +8,41 @@ export default function HeroSection({ textContent, lang }) {
   const [formLoading, setFormLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    if (window) {
-      const auth = window.document.getElementById('auth')['contentWindow'];
-      const postMessage = (data) => {
-        auth.postMessage(data, 'https://drive.internxt.com/auth');
-      };
+    const auth = window.document.getElementById('auth')['contentWindow'];
+    const postMessage = (data) => {
+      auth.postMessage(data, 'http://localhost:3000/auth');
+      // auth.postMessage(data, 'https://drive.internxt.com/auth');
+      //! DELETE ########################################################################################################################################################################################################
+    };
+    const permitedDomains = [
+      'https://drive.internxt.com',
+      'https://internxt.com',
+      'http://localhost:3000',
+      'http://localhost:3001',
+    ];
+    // const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
+    //! DELETE ########################################################################################################################################################################################################
 
-      window.onmessage = function (e) {
-        const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
-
-        if (permitedDomains.includes(e.origin)) {
-          if (e.data.action === 'redirect') {
-            redirect();
-          } else if (e.data.action === 'signup') {
-            setFormError(null);
-            setFormLoading(true);
-            postMessage(e.data);
-          } else if (e.data.action === 'error_inline') {
-            setFormLoading(false);
-            setFormError(e.data.msg);
-          }
+    const onRecieveMessage = (e) => {
+      if (permitedDomains.includes(e.origin)) {
+        if (e.data.action === 'redirect') {
+          redirect();
+        } else if (e.data.action === 'signup') {
+          setFormError(null);
+          setFormLoading(true);
+          postMessage(e.data);
+        } else if (e.data.action === 'error_inline') {
+          setFormLoading(false);
+          setFormError(e.data.msg);
         }
-      };
-    }
+      }
+    };
+
+    window.addEventListener('message', onRecieveMessage);
+
+    return () => {
+      window.removeEventListener('message', onRecieveMessage);
+    };
   });
 
   return (
@@ -54,7 +66,7 @@ export default function HeroSection({ textContent, lang }) {
             <h2 className="mb-4 max-w-md text-lg text-gray-80 md:mb-8 lg:text-xl">{textContent.subtitle}</h2>
 
             <button
-              className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base"
+              className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"
               onClick={() => openAuthDialog('signup')}
             >
               <div className="flex flex-row items-center space-x-2">
@@ -64,9 +76,9 @@ export default function HeroSection({ textContent, lang }) {
               </div>
             </button>
 
-            {/* <div className="hidden w-full md:flex">
+            <div className="hidden w-full md:flex">
               <SignUpInline error={formError} loading={formLoading} textContent={textContent.SignUp} />
-            </div> */}
+            </div>
           </div>
 
           <div className="ml-5 hidden max-w-2xl flex-grow flex-col md:flex xl:ml-20">

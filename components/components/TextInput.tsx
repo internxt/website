@@ -1,8 +1,10 @@
 export interface TextInputProps {
+  className?: string;
   type?: 'text' | 'email' | 'number' | 'password';
   value?: string;
   placeholder?: string;
   required?: boolean;
+  id?: string;
   name?: string;
   disabled?: boolean;
   autoComplete?:
@@ -52,6 +54,7 @@ export default function TextInput(props: TextInputProps) {
       placeholder={props.placeholder}
       value={props.value}
       required={props.required}
+      id={props.id}
       name={props.name}
       pattern={props.pattern}
       title={props.patternHint}
@@ -59,7 +62,9 @@ export default function TextInput(props: TextInputProps) {
       autoComplete={props.autoComplete ?? 'off'}
       className={`h-11 w-full appearance-none rounded-lg border border-gray-30 bg-white px-3 ${
         props.isPasswordInput && 'pr-12'
-      } text-lg text-gray-100 shadow-sm transition duration-100 focus:border-primary focus:shadow-none focus:outline-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 disabled:text-gray-30 md:text-base`}
+      } text-lg text-gray-100 shadow-sm transition duration-100 focus:border-primary focus:shadow-none focus:outline-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 disabled:text-gray-30 md:text-base ${
+        props.className ?? ''
+      }`}
       onChange={props.onChange}
       onFocus={props.onFocus}
       onBlur={props.onBlur}

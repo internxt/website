@@ -4,10 +4,13 @@
     "subtitle": "Here at Internxt, we've created a suite of Internet services focused on security and privacy.",
     "cta": {
       "title": "Get up to 10GB",
-      "subtitle": "FOR FREE"
+      "subtitle": "For free!"
     },
     "SignUp": {
-      "title": "GET 10GB FOR FREE",
+      "cta": {
+        "title": "Get started with Internxt",
+        "subtitle": "Create an account now and get 10GB for FREE"
+      },
       "disclaimer": {
         "text": "By creating an account you accept the",
         "link": "terms and conditions"
@@ -21,7 +24,10 @@
           "label": "Password",
           "placeholder": "Password"
         },
-        "submit": "Get started"
+        "submit": {
+          "get": "Get started",
+          "free": "10GB Free"
+        }
       }
     }
   },

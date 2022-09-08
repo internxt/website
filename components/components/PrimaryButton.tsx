@@ -1,6 +1,6 @@
 export interface PrimaryButtonProps {
   type?: 'button' | 'submit';
-  label?: string;
+  label?: string | JSX.Element;
   disabled?: boolean;
   loading?: boolean;
   className?: string;
@@ -13,9 +13,9 @@ export default function PrimaryButton(props: PrimaryButtonProps) {
       disabled={props.disabled}
       className={`${
         props.className ?? ''
-      } relative flex h-11 flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 text-white shadow-sm transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark disabled:cursor-not-allowed disabled:text-white/75`}
+      } relative flex h-11 flex-row items-center justify-center space-x-4 whitespace-nowrap rounded-lg bg-primary px-5 text-white shadow-sm transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark disabled:cursor-not-allowed disabled:text-white/75`}
     >
-      <span>{props.label}</span>
+      {typeof props.label === 'string' ? <span>{props.label}</span> : props.label}
       {props.loading && (
         <svg
           className="absolute right-4 animate-spin"
