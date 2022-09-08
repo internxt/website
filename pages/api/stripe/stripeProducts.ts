@@ -265,3 +265,9 @@ export function getStripeProduct(opt) {
   });
   return selectedProduct;
 }
+
+export function getPlanId(stripeObject: Record<string, string>): string {
+  return process.env.NODE_ENV === 'production'
+    ? STRIPE_PRODUCT[stripeObject.product].production
+    : STRIPE_PRODUCT[stripeObject.product].debug;
+}

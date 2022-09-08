@@ -5,8 +5,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import { redirectToCheckoutAction } from '../CheckoutForm';
-import { openAuthDialog } from '../../lib/auth';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { openAuthDialog, checkout } from '../../lib/auth';
 
 export default function PriceCard({
   planType,
@@ -206,7 +206,7 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            cta[0] === 'checkout' ? redirectToCheckoutAction(stripeObject) : openAuthDialog('signup');
+            cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
           }}
           className="flex w-full flex-row"
         >

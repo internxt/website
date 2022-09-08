@@ -22,6 +22,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   const [session, setSession] = useState<boolean>(false);
   const [showAuth, setShowAuth] = useState<boolean>(false);
   const [authMethod, setAuthMethod] = useState<'login' | 'signup' | 'recover'>('signup');
+  const [planId, setPlanId] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
   const [formLoading, setFormLoading] = useState<boolean>(false);
   const [form2FA, setForm2FA] = useState<boolean>(false);
@@ -37,6 +38,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
   const hideAuth = () => {
     setShowAuth(false);
+    setPlanId(null);
   };
 
   const openAuth = (view: 'login' | 'signup') => {
@@ -51,23 +53,31 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     setFormError(null);
     setForm2FA(false);
     if (session && view === 'login') {
-      redirectToDrive();
+      redirect();
       hideAuth();
     } else {
       setAuthMethod(view);
     }
   };
 
-  const redirectToDrive = () => {
-    if (isMobile) {
-      if (isAndroid) {
-        window.location.replace('https://play.google.com/store/apps/details?id=com.internxt.cloud');
-      } else if (isIOS) {
-        window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
-      }
+  const redirect = () => {
+    if (planId) {
+      redirectToCheckout(planId);
     } else {
-      window.location.replace('https://drive.internxt.com/app');
+      if (isMobile) {
+        if (isAndroid) {
+          window.location.replace('https://play.google.com/store/apps/details?id=com.internxt.cloud');
+        } else if (isIOS) {
+          window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
+        }
+      } else {
+        window.location.replace('https://drive.internxt.com/app');
+      }
     }
+  };
+
+  const redirectToCheckout = (planId: string) => {
+    window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
   };
 
   // MESSAGE FILTERING
@@ -82,7 +92,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     const onRecieveMessage = (e) => {
       if (permitedDomains.includes(e.origin)) {
         if (e.data.action === 'redirect') {
-          redirectToDrive();
+          redirect();
         } else if (e.data.action === 'signup') {
           setFormLoading(true);
           postMessage(e.data);
@@ -90,6 +100,13 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           postMessage(e.data);
         } else if (e.data.action === 'session') {
           setSession(e.data.session);
+        } else if (e.data.action === 'checkout') {
+          if (session) {
+            redirectToCheckout(e.data.planId);
+          } else {
+            setPlanId(e.data.planId);
+            openAuth('signup');
+          }
         } else if (e.data.action === 'login') {
           setFormLoading(true);
           postMessage(e.data);
@@ -112,7 +129,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           setFormLoading(false);
         } else if (e.data.action === 'openDialogLogin') {
           if (session) {
-            redirectToDrive();
+            redirect();
           } else {
             openAuth('login');
           }
@@ -129,11 +146,11 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     return () => {
       window.removeEventListener('message', onRecieveMessage);
     };
-  }, [session]);
+  });
 
   useEffect(() => {
     if (authMethod === 'login' && session) {
-      redirectToDrive();
+      redirect();
     }
   }, [authMethod, session]);
 
