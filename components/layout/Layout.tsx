@@ -27,13 +27,13 @@ export default function Layout({
 }: // lang
   LayoutProps) {
   useEffect(() => {
-    window.analytics.page(segmentName);
+    // window.analytics.page(segmentName);
     window.rudderanalytics.page(segmentName, {
       brave: isBrave()
     });
     const getStartedLinkList = Array(document.querySelectorAll('[id=get-started-link]'));
 
-    getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
+    // getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
 
@@ -50,7 +50,6 @@ export default function Layout({
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="icon" href="/favicon.ico" />
-        {isProduction ? <script src="/js/analyticsSnippet.js" /> : <script src="/js/segment.js" />}
         <script src="/js/rudderlib.js" />
         {!disableMailerlite && <script defer src="/js/mailerlite.js" />}
         {!disableDrift && <script defer src="/js/drift.js" />}

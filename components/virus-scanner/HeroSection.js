@@ -47,7 +47,7 @@ const HeroSection = ({ textContent }) => {
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
-          window.analytics.track('File Scan Completed', {
+          window.rudderanalytics.track('File Scan Completed', {
             infected: data.isInfected,
           });
           setScanResult(data);
@@ -145,9 +145,8 @@ const HeroSection = ({ textContent }) => {
       />
 
       <div
-        className={`relative flex flex-col lg:flex-row lg:space-x-24 px-6 lg:p-16 w-full mx-auto max-w-screen-xl z-20 ${
-          !isScannig && isDragging ? 'pointer-events-none' : ''
-        }`}
+        className={`relative flex flex-col lg:flex-row lg:space-x-24 px-6 lg:p-16 w-full mx-auto max-w-screen-xl z-20 ${!isScannig && isDragging ? 'pointer-events-none' : ''
+          }`}
         onDrop={(e) => e.preventDefault()}
         onDragOver={(e) => e.preventDefault()}
       >

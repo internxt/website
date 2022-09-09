@@ -19,15 +19,15 @@ export default function Success({
     setTimeout(() => {
       try {
         if (user.registerCompleted && session.payment_status === 'paid') {
-          const conversionData = getCheckoutSessionData(session);
+          /* const conversionData = getCheckoutSessionData(session);
           window.analytics.identify(user.uuid, conversionData.traits);
           window.analytics.track('Payment Conversion', conversionData.properties);
           if (!_.isEmpty(conversionData.coupon)) {
             window.analytics.track('Coupon Redeemed', conversionData.coupon);
-          }
+          } */
         }
       } catch (err) {
-        window.analytics.track('Conversion Tracking Error');
+        /* window.analytics.track('Conversion Tracking Error'); */
       }
       window.location = redirectUrl;
     }, 3000);
@@ -52,7 +52,7 @@ export default function Success({
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const DRIVE_WEB = 'https://drive.internxt.com';
-  const host = (ctx.req.headers.host.match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers.host;let session = {};let user = {};
+  const host = (ctx.req.headers.host.match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers.host; let session = {}; let user = {};
 
   if (!ctx.query.sid) {
     return {

@@ -20,7 +20,7 @@ export async function redirectToCheckoutAction(stripeObject) {
     anonymousId,
   });
   if (stripeInfo.mode === 'subscription') {
-    window.analytics.track('Checkout Opened', stripeInfo.properties);
+    // window.analytics.track('Checkout Opened', stripeInfo.properties);
   }
   const response = await fetch('/api/stripe/session', {
     method: 'post',
@@ -56,7 +56,7 @@ export default function CheckoutForm(props: CheckoutFormProps) {
     setLoading(true);
 
     if (window && window.analytics) {
-      window.analytics.track('landing-lifetime-enter-checkout');
+      // window.analytics.track('landing-lifetime-enter-checkout');
     }
 
     const stripeObj = {

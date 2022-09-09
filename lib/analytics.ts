@@ -49,12 +49,13 @@ export function getCheckoutSessionData(session) {
 
 // eslint-disable-next-line import/prefer-default-export
 export async function trackPayment({ session, user }) {
-  if (user.registerCompleted && session.payment_status === 'paid') {
-    const conversionData = getCheckoutSessionData(session);
-    window.analytics.identify(user.uuid, conversionData.traits);
-    window.analytics.track('Payment Conversion', conversionData.properties);
-    if (!_.isEmpty(conversionData.coupon)) {
-      window.analytics.track('Coupon Redeemed', conversionData.coupon);
-    }
-  }
+  /*  if (user.registerCompleted && session.payment_status === 'paid') {
+     const conversionData = getCheckoutSessionData(session);
+     window.analytics.identify(user.uuid, conversionData.traits);
+     window.analytics.track('Payment Conversion', conversionData.properties);
+     if (!_.isEmpty(conversionData.coupon)) {
+       window.analytics.track('Coupon Redeemed', conversionData.coupon);
+     }
+   } */
+  // NOP
 }
