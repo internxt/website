@@ -58,18 +58,20 @@ export default function SignUpInline(props: SignUpInlineProps) {
       )}
 
       <div className="flex w-full flex-row items-center space-x-3">
-        <PrimaryButton
-          className="h-auto w-full max-w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 sm:text-base"
-          type="submit"
-          label={
-            <div className="flex flex-row items-center space-x-1.5">
-              <span>{props.textContent.fields.submit.get}</span>
-              <span className="opacity-50">{'—'}</span>
-              <span className="opacity-50">{props.textContent.fields.submit.free}</span>
-            </div>
-          }
-          disabled={props.loading}
-        />
+        <div className="w-full">
+          <PrimaryButton
+            className="h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 sm:text-base"
+            type="submit"
+            label={
+              <div className="flex flex-row items-center space-x-1.5">
+                <span>{props.textContent.fields.submit.get}</span>
+                <span className="opacity-50">{'—'}</span>
+                <span className="opacity-50">{props.textContent.fields.submit.free}</span>
+              </div>
+            }
+            disabled={props.loading}
+          />
+        </div>
 
         <span className="w-full text-xs text-gray-50 sm:text-left">
           <span>{props.textContent.disclaimer.text}</span>{' '}
