@@ -1,7 +1,10 @@
 {
   "HeroSection": {
-    "title": "Store your files in total privacy",
-    "subtitle": "Here at Internxt, we've created a suite of Internet services focused on security and privacy.",
+    "title": {
+      "line1": "Say hi to privacy",
+      "line2": "Switch to Internxt"
+    },
+    "subtitle": "Here at Internxt, we've created a suite of services truly focused on you. Switch to Internxt Drive, Photos, Send and more.",
     "cta": {
       "title": "Get up to 10GB",
       "subtitle": "For free!"
@@ -25,8 +28,8 @@
           "placeholder": "Password"
         },
         "submit": {
-          "get": "Get started",
-          "free": "10GB Free"
+          "get": "Get up to 10GB",
+          "free": "For free!"
         }
       }
     }

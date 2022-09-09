@@ -1,7 +1,10 @@
 {
   "HeroSection": {
-    "title": "Guarda archivos de forma segura",
-    "subtitle": "En Internxt hemos creado un conjunto de servicios de Internet centrados en la seguridad y la privacidad.",
+    "title": {
+      "line1": "Elige Internxt,",
+      "line2": "valora tu privacidad"
+    },
+    "subtitle": "En Internxt hemos creado un conjunto de servicios realmente centrados en ti. Cambia a Internxt Drive, Photos, Send y más.",
     "cta": {
       "title": "Consigue hasta 10GB",
       "subtitle": "Gratis!"
@@ -25,8 +28,8 @@
           "placeholder": "Contraseña"
         },
         "submit": {
-          "get": "Empezar ahora",
-          "free": "10GB Gratis"
+          "get": "Consigue 10GB",
+          "free": "Gratis!"
         }
       }
     }
