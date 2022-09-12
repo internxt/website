@@ -33,6 +33,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
             type="email"
             autoComplete="email"
             required
+            autoCompleteOnFocus
             disabled={props.loading}
           />
         </div>
@@ -43,6 +44,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
             placeholder={props.textContent.fields.password.placeholder}
             autoComplete="password"
             required
+            autoCompleteOnFocus
             disabled={props.loading}
           />
         </div>

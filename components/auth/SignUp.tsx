@@ -64,8 +64,9 @@ export default function SignUp(props: SignUpProps) {
           name="email"
           placeholder={props.textContent.SignUp.fields.email.placeholder}
           type="email"
-          autoComplete="off"
+          autoComplete="email"
           required
+          autoCompleteOnFocus
           disabled={props.loading}
         />
 
@@ -73,11 +74,12 @@ export default function SignUp(props: SignUpProps) {
           <PasswordInput
             name="password"
             placeholder={props.textContent.SignUp.fields.password.placeholder}
-            autoComplete="off"
+            autoComplete="password"
             pattern={
               passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success') ? '[\\s\\S]+' : ''
             }
             required
+            autoCompleteOnFocus
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
           />

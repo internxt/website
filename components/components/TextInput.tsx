@@ -6,10 +6,14 @@ export interface TextInputProps {
   required?: boolean;
   id?: string;
   name?: string;
+  min?: string | number;
+  max?: string | number;
   disabled?: boolean;
+  readonly?: boolean;
   autoComplete?:
+    | 'false'
     | 'off'
-    | 'om'
+    | 'on'
     | 'name'
     | 'username'
     | 'email'
@@ -45,6 +49,7 @@ export interface TextInputProps {
   onChange?: (e: any) => void | (() => void);
   onFocus?: (e: any) => void | (() => void);
   onBlur?: (e: any) => void | (() => void);
+  autoCompleteOnFocus?: boolean;
 }
 
 export default function TextInput(props: TextInputProps) {
@@ -56,9 +61,12 @@ export default function TextInput(props: TextInputProps) {
       required={props.required}
       id={props.id}
       name={props.name}
+      min={props.min}
+      max={props.max}
       pattern={props.pattern}
       title={props.patternHint}
       disabled={props.disabled}
+      readOnly={props.readonly || props.autoCompleteOnFocus}
       autoComplete={props.autoComplete ?? 'off'}
       className={`h-11 w-full appearance-none rounded-lg border border-gray-30 bg-white px-3 ${
         props.isPasswordInput && 'pr-12'
@@ -66,7 +74,14 @@ export default function TextInput(props: TextInputProps) {
         props.className ?? ''
       }`}
       onChange={props.onChange}
-      onFocus={props.onFocus}
+      onFocus={(e) => {
+        if (props.autoCompleteOnFocus) {
+          e.target.removeAttribute('readonly');
+        }
+        if (props.onFocus) {
+          props.onFocus(e);
+        }
+      }}
       onBlur={props.onBlur}
     />
   );
