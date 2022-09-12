@@ -1,10 +1,10 @@
 /* eslint-disable consistent-return */
 import { NextApiRequest, NextApiResponse } from 'next';
-import Stripe from 'stripe';
+// import Stripe from 'stripe';
 import { getStripeProduct } from '../stripeProducts';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
-  const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
+/*   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
   const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
   if (!req.headers.origin) {
@@ -35,11 +35,11 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(checkoutSession);
   } catch (e) {
     res.status(500).send({ error: e.message });
-  }
+  } */
 }
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'POST') { return postSession(req, res); }
+  if (req.method === 'POST') { return /* postSession(req, res)*/; }
 
   return res.status(500).end(`Cannot ${req.method} on ${req.url}`);
 };

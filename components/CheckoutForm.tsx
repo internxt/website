@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getStripe } from '../lib/getstripe';
+// import { getStripe } from '../lib/getstripe';
 import { getStripeProduct } from '../pages/api/stripe/stripeProducts';
 
 interface CheckoutFormProps {
@@ -41,10 +41,10 @@ export async function redirectToCheckoutAction(stripeObject) {
 
   const body = await response.json();
 
-  const stripe = await getStripe();
+  /* const stripe = await getStripe();
   const { error } = await stripe.redirectToCheckout({ sessionId: body.id });
 
-  console.warn(error.message);
+  console.warn(error.message); */
 }
 
 export default function CheckoutForm(props: CheckoutFormProps) {

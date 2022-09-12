@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import Stripe from 'stripe';
+// import Stripe from 'stripe';
 import jsonwebtoken from 'jsonwebtoken'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -7,9 +7,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const isTest = !!sessionId.match(/^cs_test_/);
 
     const KEY = !isTest ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST
-    const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
+    // const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
-    try {
+    /* try {
         const session = await stripe.checkout.sessions.retrieve(sessionId).catch(() => null);
         if (session && session.payment_status === 'paid') {
             // const customer = await stripe.customers.retrieve(<string>session.customer);
@@ -24,6 +24,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         throw Error();
     } catch {
         return res.status(401).send({ msg: 'Unauthoraized' });
-    }
+    } */
 
 }
