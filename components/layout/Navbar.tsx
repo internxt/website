@@ -133,7 +133,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
           setFormLoading(false);
           setRecoverSent(true);
         } else if (e.data.action === 'error') {
-          setFormError(e.data.msg);
+          // setFormError(e.data.msg);
           setFormLoading(false);
         } else if (e.data.action === 'error_inline') {
           setFormLoading(false);

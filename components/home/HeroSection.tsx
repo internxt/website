@@ -25,7 +25,7 @@ export default function HeroSection({ textContent, lang }) {
           postMessage(e.data);
         } else if (e.data.action === 'error_inline') {
           setFormLoading(false);
-          setFormError(e.data.msg);
+          // setFormError(e.data.msg);
         }
       }
     };
