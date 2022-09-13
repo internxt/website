@@ -10,18 +10,10 @@ export default function HeroSection({ textContent, lang }) {
   useEffect(() => {
     const auth = window.document.getElementById('auth')['contentWindow'];
     const postMessage = (data) => {
-      auth.postMessage(data, 'http://localhost:3000/auth');
-      // auth.postMessage(data, 'https://drive.internxt.com/auth');
-      //! DELETE ########################################################################################################################################################################################################
+      auth.postMessage(data, 'https://drive.internxt.com/auth');
     };
-    const permitedDomains = [
-      'https://drive.internxt.com',
-      'https://internxt.com',
-      'http://localhost:3000',
-      'http://localhost:3001',
-    ];
-    // const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
-    //! DELETE ########################################################################################################################################################################################################
+
+    const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
 
     const onRecieveMessage = (e) => {
       if (permitedDomains.includes(e.origin)) {
