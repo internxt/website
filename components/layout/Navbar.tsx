@@ -42,21 +42,31 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   };
 
   const openAuth = (view: 'login' | 'signup') => {
-    setAuthMethod(view);
-    setFormError(null);
-    setShowAuth(true);
-    setForm2FA(false);
+    // Temporal fix
+    if (isMobile && view === 'signup') {
+      window.location.replace('https://drive.internxt.com/new');
+    } else {
+      setAuthMethod(view);
+      setFormError(null);
+      setShowAuth(true);
+      setForm2FA(false);
+    }
   };
 
   const toggleAuthMethod = (view?: 'login' | 'signup') => {
-    setRecoverSent(false);
-    setFormError(null);
-    setForm2FA(false);
-    if (session && view === 'login') {
-      redirect();
-      hideAuth();
+    // Temporal fix
+    if (isMobile && view === 'signup') {
+      window.location.replace('https://drive.internxt.com/new');
     } else {
-      setAuthMethod(view);
+      setRecoverSent(false);
+      setFormError(null);
+      setForm2FA(false);
+      if (session && view === 'login') {
+        redirect();
+        hideAuth();
+      } else {
+        setAuthMethod(view);
+      }
     }
   };
 
