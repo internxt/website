@@ -26,10 +26,6 @@ export function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
   window.top?.postMessage({ action: 'toggleAuthMethod', view: view }, window.location.origin);
 }
 
-export function redirect(): void {
-  window.top?.postMessage({ action: 'redirect' }, window.location.origin);
-}
-
 export function checkout(planId: string): void {
   window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
 }

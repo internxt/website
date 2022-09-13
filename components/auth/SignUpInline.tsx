@@ -3,7 +3,6 @@ import PasswordInput from '../components/PasswordInput';
 import PrimaryButton from '../components/PrimaryButton';
 import { signup } from '../../lib/auth';
 import { WarningCircle } from 'phosphor-react';
-import Link from 'next/link';
 
 interface SignUpInlineProps {
   textContent: any;

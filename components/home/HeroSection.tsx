@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
-import { openAuthDialog, redirect } from '../../lib/auth';
+import { openAuthDialog } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
 
 export default function HeroSection({ textContent, lang }) {
@@ -8,24 +8,16 @@ export default function HeroSection({ textContent, lang }) {
   const [formLoading, setFormLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    const auth = window.document.getElementById('auth')['contentWindow'];
-    const postMessage = (data) => {
-      auth.postMessage(data, 'https://drive.internxt.com/auth');
-    };
-
     const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
 
     const onRecieveMessage = (e) => {
       if (permitedDomains.includes(e.origin)) {
-        if (e.data.action === 'redirect') {
-          redirect();
-        } else if (e.data.action === 'signup') {
+        if (e.data.action === 'signup') {
           setFormError(null);
           setFormLoading(true);
-          postMessage(e.data);
         } else if (e.data.action === 'error_inline') {
           setFormLoading(false);
-          // setFormError(e.data.msg);
+          setFormError(e.data.msg);
         }
       }
     };
