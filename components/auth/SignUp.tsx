@@ -14,6 +14,7 @@ interface SignUpProps {
 }
 
 export default function SignUp(props: SignUpProps) {
+  const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
   const [passwordState, setPasswordState] = useState<{
     tag: 'error' | 'warning' | 'success';
     label: string;
@@ -59,14 +60,20 @@ export default function SignUp(props: SignUpProps) {
         </span>
       </div>
 
-      <form className="flex w-full flex-col space-y-3" onSubmit={onSubmit}>
+      <form
+        className="flex w-full flex-col space-y-3"
+        onClick={() => {
+          autoCompleteOnFocus && setAutoCompleteOnFocus(false);
+        }}
+        onSubmit={onSubmit}
+      >
         <TextInput
           name="email"
           placeholder={props.textContent.SignUp.fields.email.placeholder}
           type="email"
           autoComplete="email"
           required
-          autoCompleteOnFocus
+          autoCompleteOnFocus={autoCompleteOnFocus}
           disabled={props.loading}
         />
 
@@ -81,7 +88,7 @@ export default function SignUp(props: SignUpProps) {
                 : '^[]{1}'
             }
             required
-            autoCompleteOnFocus
+            autoCompleteOnFocus={autoCompleteOnFocus}
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
           />
