@@ -78,7 +78,7 @@ export default function SignUp(props: SignUpProps) {
             pattern={
               passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success')
                 ? '[\\s\\S]+'
-                : '^[]'
+                : '^[]{1}'
             }
             required
             autoCompleteOnFocus

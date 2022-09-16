@@ -70,7 +70,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
             pattern={
               passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success')
                 ? '[\\s\\S]+'
-                : '^[]'
+                : '^[]{1}'
             }
             patternHint={passwordState && passwordState.label}
             required
