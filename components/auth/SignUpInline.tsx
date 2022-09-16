@@ -68,7 +68,9 @@ export default function SignUpInline(props: SignUpInlineProps) {
             placeholder={props.textContent.fields.password.placeholder}
             autoComplete="password"
             pattern={
-              passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success') ? '[\\s\\S]+' : ''
+              passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success')
+                ? '[\\s\\S]+'
+                : '^[]'
             }
             patternHint={passwordState && passwordState.label}
             required

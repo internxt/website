@@ -76,7 +76,9 @@ export default function SignUp(props: SignUpProps) {
             placeholder={props.textContent.SignUp.fields.password.placeholder}
             autoComplete="password"
             pattern={
-              passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success') ? '[\\s\\S]+' : ''
+              passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success')
+                ? '[\\s\\S]+'
+                : '^[]'
             }
             required
             autoCompleteOnFocus
