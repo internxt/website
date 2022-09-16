@@ -25,7 +25,13 @@
         },
         "password": {
           "label": "Contraseña",
-          "placeholder": "Contraseña"
+          "placeholder": "Contraseña",
+          "strength": {
+            "complexity": "La contraseña no es compleja",
+            "length": "La contraseña debe tener mínimo 8 dígitos",
+            "weak": "La contraseña es débil",
+            "strong": "La contraseña es fuerte"
+          }
         },
         "submit": {
           "get": "Consigue 10GB",

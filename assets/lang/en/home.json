@@ -25,7 +25,13 @@
         },
         "password": {
           "label": "Password",
-          "placeholder": "Password"
+          "placeholder": "Password",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
         },
         "submit": {
           "get": "Get up to 10GB",

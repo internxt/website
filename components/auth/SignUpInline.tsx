@@ -2,7 +2,9 @@ import TextInput from '../components/TextInput';
 import PasswordInput from '../components/PasswordInput';
 import PrimaryButton from '../components/PrimaryButton';
 import { signup } from '../../lib/auth';
+import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStrength';
 import { WarningCircle } from 'phosphor-react';
+import { useState } from 'react';
 
 interface SignUpInlineProps {
   textContent: any;
@@ -11,11 +13,34 @@ interface SignUpInlineProps {
 }
 
 export default function SignUpInline(props: SignUpInlineProps) {
+  const [passwordState, setPasswordState] = useState<{
+    tag: 'error' | 'warning' | 'success';
+    label: string;
+  } | null>(null);
+
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
     // "inline" attribute allows to differenciate Hero's inline form errors from auth dialog errors
     signup({ email: form.email.value, password: form.password.value, inline: true });
+  };
+
+  const checkPassword = (input) => {
+    const password = input.target.value;
+    const result = testPasswordStrength(password, '');
+    if (!result.valid) {
+      setPasswordState({
+        tag: 'error',
+        label:
+          result['reason'] === 'NOT_COMPLEX_ENOUGH'
+            ? props.textContent.fields.password.strength.complexity
+            : props.textContent.fields.password.strength.length,
+      });
+    } else if (result.strength === 'medium') {
+      setPasswordState({ tag: 'warning', label: props.textContent.fields.password.strength.weak });
+    } else {
+      setPasswordState({ tag: 'success', label: props.textContent.fields.password.strength.strong });
+    }
   };
 
   return (
@@ -42,9 +67,14 @@ export default function SignUpInline(props: SignUpInlineProps) {
             name="password"
             placeholder={props.textContent.fields.password.placeholder}
             autoComplete="password"
+            pattern={
+              passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success') ? '[\\s\\S]+' : ''
+            }
+            patternHint={passwordState && passwordState.label}
             required
             autoCompleteOnFocus
             disabled={props.loading}
+            onChange={(e) => checkPassword(e)}
           />
         </div>
       </div>
