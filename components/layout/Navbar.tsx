@@ -27,6 +27,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   const [formLoading, setFormLoading] = useState<boolean>(false);
   const [form2FA, setForm2FA] = useState<boolean>(false);
   const [recoverSent, setRecoverSent] = useState<boolean>(false);
+  const [iframeKey, setIframeKey] = useState<number>(0);
 
   const authView = {
     login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={textContent.Auth} />,
@@ -36,37 +37,31 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     ),
   };
 
+  const reloadIframe = () => {
+    setIframeKey(iframeKey + 1);
+  };
+
   const hideAuth = () => {
     setShowAuth(false);
     setPlanId(null);
   };
 
   const openAuth = (view: 'login' | 'signup') => {
-    // Temporal fix
-    if (isMobile && view === 'signup') {
-      window.location.replace('https://drive.internxt.com/new');
-    } else {
-      setAuthMethod(view);
-      setFormError(null);
-      setShowAuth(true);
-      setForm2FA(false);
-    }
+    setAuthMethod(view);
+    setFormError(null);
+    setShowAuth(true);
+    setForm2FA(false);
   };
 
   const toggleAuthMethod = (view?: 'login' | 'signup') => {
-    // Temporal fix
-    if (isMobile && view === 'signup') {
-      window.location.replace('https://drive.internxt.com/new');
+    setRecoverSent(false);
+    setFormError(null);
+    setForm2FA(false);
+    if (session && view === 'login') {
+      redirect();
+      hideAuth();
     } else {
-      setRecoverSent(false);
-      setFormError(null);
-      setForm2FA(false);
-      if (session && view === 'login') {
-        redirect();
-        hideAuth();
-      } else {
-        setAuthMethod(view);
-      }
+      setAuthMethod(view);
     }
   };
 
@@ -76,18 +71,18 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
     } else {
       if (isMobile) {
         if (isAndroid) {
-          window.location.replace('https://play.google.com/store/apps/details?id=com.internxt.cloud');
+          window.location.assign('https://play.google.com/store/apps/details?id=com.internxt.cloud');
         } else if (isIOS) {
-          window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
+          window.location.assign('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
         }
       } else {
-        window.location.replace('https://drive.internxt.com/app');
+        window.location.assign('https://drive.internxt.com/app');
       }
     }
   };
 
   const redirectToCheckout = (planId: string) => {
-    window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
+    window.location.assign(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
   };
 
   // MESSAGE FILTERING
@@ -135,8 +130,10 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
         } else if (e.data.action === 'error') {
           setFormError(e.data.msg);
           setFormLoading(false);
+          reloadIframe();
         } else if (e.data.action === 'error_inline') {
           setFormLoading(false);
+          reloadIframe();
         } else if (e.data.action === 'openDialogLogin') {
           if (session) {
             redirect();
@@ -334,18 +331,18 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
                     </a>
                   </Link>
 
-                  <a
+                  <div
                     onClick={() => {
                       setMenuState(false);
+                      openAuthDialog('login');
                     }}
                     tabIndex={0}
-                    href="https://drive.internxt.com/login"
                     className={`flex w-full translate-y-0 px-8 py-3 text-primary outline-none transition delay-300 duration-300 ${
                       menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                     }`}
                   >
                     {textContent.links.login}
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -495,7 +492,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
       </div>
 
       {/* Auth iframe */}
-      <iframe id="auth" className="hidden" src="https://drive.internxt.com/auth" />
+      <iframe id="auth" key={iframeKey} className="hidden" src="https://drive.internxt.com/auth" />
 
       {/* Auth dialog */}
       <Transition appear show={showAuth} as={Fragment}>
