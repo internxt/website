@@ -82,7 +82,9 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
   };
 
   const redirectToCheckout = (planId: string) => {
-    window.location.assign(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
+    setTimeout(() => {
+      window.location.assign(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
+    }, 2000);
   };
 
   // MESSAGE FILTERING
