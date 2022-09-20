@@ -32,7 +32,7 @@ const NgoCard = ({ id, name, short, description, url }) => {
             {/* Logo */}
             <div className="relative w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gray-10">
               <img
-                src={`./logos/ngos/${id}.webp`}
+                src={`/logos/ngos/${id}.webp`}
                 draggable="false"
                 className="absolute w-full h-full bg-white overflow-hidden"
                 alt={`${name} logo`}
