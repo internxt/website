@@ -37,7 +37,7 @@ const HeroSection = ({ textContent, lang }) => (
             <div
               className="flex flex-col flex-shrink-0 items-start w-full sm:w-96 bg-cool-gray-10 text-white p-8 sm:p-12 pb-48 sm:pb-60 space-y-6 bg-cover bg-center rounded-3xl cursor-pointer"
               style={{
-                backgroundImage: 'url("./images/privacy-directory/typing.webp")',
+                backgroundImage: 'url("/images/privacy-directory/typing.webp")',
               }}
             >
               <h3 className="text-3xl sm:text-4xl font-medium">{textContent.brief.body.card.title}</h3>

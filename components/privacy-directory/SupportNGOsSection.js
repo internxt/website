@@ -16,7 +16,7 @@ const SupportNGOsSection = ({ textContent }) => (
         <div
           className="flex flex-col w-full h-56 bg-cover bg-top"
           style={{
-            backgroundImage: 'url("./images/privacy-directory/globe.webp")',
+            backgroundImage: 'url("/images/privacy-directory/globe.webp")',
           }}
         />
       </div>
