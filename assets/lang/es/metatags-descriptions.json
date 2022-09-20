@@ -1,87 +1,87 @@
 [
-    {
-        "id": "home",
-        "title": "Internxt - El almacenamiento en la nube más seguro del mundo (España)",
-        "description": "La misión de Internxt es ayudar a dar forma a un mundo que respete los derechos de privacidad de las personas. Internxt Drive ofrece un servicio de almacenamiento en la nube seguro, privado y cifrado."
-    },
-    {
-        "id": "drive",
-        "title": "Internxt – Drive (España)",
-        "description": "Internxt Drive es una alternativa privada y segura a Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive y MediaFire. Zero-knowledge, distribuido, almacenamiento en la nube blockchain."
-    },
-    {
-        "id": "photos",
-        "title": "Internxt – Photos (España)",
-        "description": "Alternativa cifrada, privada, gratuita y segura a Google Photos. Almacena tus fotos en la nube de forma segura y gratuita."
-    },
-    {
-        "id": "pricing",
-        "title": "Internxt – Precios (España)",
-        "description": "Precio Internxt. Un plan común para todos nuestros servicios. Internxt Drive, Internxt Send, Internxt Photos. Bienvenido a Internxt."
-    },
-    {
-        "id": "about",
-        "title": "Internxt – Sobre nosotros (España)",
-        "description": "Conoce al Equipo de Internxt. Fran Villalba Segarra, Fundador y CEO de Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
-    },
-    {
-        "id": "token",
-        "title": "Internxt – Token, la esencia de Internxt (España)",
-        "description": "Internxt token. Conoce el asset tokenizado de Internxt. Compra Internxt Tokens en Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
-    },
-    {
-        "id": "legal",
-        "title": "Internxt – Legal (España)",
-        "description": "Internxt, términos y condiciones legales. Lee todos los términos y condiciones de uso donde se explica como procesamos tus datos."
-    },
-    {
-        "id": "privacy",
-        "title": "Internxt – Privacidad (España)",
-        "description": "La privacidad es un derecho humano fundamental, en Internxt diseñamos todas nuestras aplicaciones pensando en la privacidad y seguridad. Nosotros defendemos la privacidad y siempre lo haremos."
-    },
-    {
-        "id": "virus-scanner",
-        "title": "Internxt – Escáner de virus de archivos online gratuito (España)",
-        "description": "Herramienta gratuita para escanear archivos en busca de virus y malware. Proteja sus documentos personales, datos y hardware del fraude en línea con un escaneo rápido y sencillo."
-    },
-    {
-        "id": "comparison",
-        "title": "Internxt – Comparativa de Almacenamiento en la nube (España)",
-        "description": "Compara Internxt con todos los demás servicios del mercado. Internxt es la opción con más privacidad y seguridad alternativa a Google Drive, Dropbox, Tresorit, pCloud, Icedrive, Storj y Sync.com."
-    },
-    {
-        "id": "black-friday",
-        "title": "Internxt – Black Friday (España)",
-        "description": "Consige el mejor, más barato y más seguro almacenamiento en la nube ahora con un 50% descuento. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
-    },
-    {
-        "id": "cloudwards",
-        "title": "Internxt – Cloudwards Partnership (España)",
-        "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Cloudwards. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
-    },
-    {
-        "id": "guru99",
-        "title": "Internxt – Guru99 Partnership (España)",
-        "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Guru99. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
-    },
-    {
-        "id": "freemonth",
-        "title": "Internxt – Consigue 1 Mes gratis (España)",
-        "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
-    },
-    {
-        "id": "landing",
-        "title": "Internxt - Almacenamiento seguro y privado",
-        "description": "Internxt ofrece servicios en la nube seguros, privados y cifrados tales como Internxt Drive e Internxt Photos."
-    },
-    {
-        "id": "privacy-directory",
-        "title": "Internxt - Directorio de organizaciones, instituciones y ONG de protección de la privacidad",
-        "description": "Directorio de organizaciones, instituciones y ONG de derechos digitales que trabajan junto a Internxt para promover, apoyar y defender la privacidad para todos."
-    },
-    {
-        "id": "password-checker",
-        "title": "Internxt - Verificación gratuita y segura de contraseñas",
-        "description": "Chequeo de seguridad de contraseñas gratuito. Compruebe la solidez de sus contraseñas con la herramienta segura en línea de Internxt."
-    }
+  {
+    "id": "home",
+    "title": "Internxt - El almacenamiento en la nube más seguro del mundo (España)",
+    "description": "La misión de Internxt es proteger los datos del usuario con la tecnología blockchain, siendo la plataforma de almacenamiento en la nube más segura del mundo."
+  },
+  {
+    "id": "drive",
+    "title": "Internxt – Drive (España)",
+    "description": "Internxt Drive es una alternativa segura a los servicios de almacenamiento en la nube. Con Internxt Drive, puedes almacenar tus archivos en la nube de forma segura y privada."
+  },
+  {
+    "id": "photos",
+    "title": "Internxt – Photos (España)",
+    "description": "Alternativa cifrada, privada, gratuita y segura a Google Photos. Almacena tus fotos en la nube de forma segura y gratuita."
+  },
+  {
+    "id": "pricing",
+    "title": "Internxt – Precios (España)",
+    "description": "Precio Internxt. Un plan común para todos nuestros servicios. Internxt Drive, Internxt Send, Internxt Photos. Bienvenido a Internxt."
+  },
+  {
+    "id": "about",
+    "title": "Internxt – Sobre nosotros (España)",
+    "description": "Conoce al Equipo de Internxt. Fran Villalba Segarra, Fundador y CEO de Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+  },
+  {
+    "id": "token",
+    "title": "Internxt – Token, la esencia de Internxt (España)",
+    "description": "Internxt token. Conoce el asset tokenizado de Internxt. Compra Internxt Tokens en Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
+  },
+  {
+    "id": "legal",
+    "title": "Internxt – Legal (España)",
+    "description": "Internxt, términos y condiciones legales. Lee todos los términos y condiciones de uso donde se explica como procesamos tus datos."
+  },
+  {
+    "id": "privacy",
+    "title": "Internxt – Privacidad (España)",
+    "description": "La privacidad es un derecho humano fundamental. En Internxt defendemos la privacidad y siempre lo haremos."
+  },
+  {
+    "id": "virus-scanner",
+    "title": "Internxt – Escáner de virus de archivos online gratuito (España)",
+    "description": "Proteja sus documentos personales, datos y hardware con nuestro escáner de malware gratuito."
+  },
+  {
+    "id": "comparison",
+    "title": "Internxt – Comparativa de Almacenamiento en la nube (España)",
+    "description": "Compara Internxt con todos los demás servicios del mercado. Internxt es la opción con más privacidad y seguridad."
+  },
+  {
+    "id": "black-friday",
+    "title": "Internxt – Black Friday (España)",
+    "description": "Consige el mejor, más barato y más seguro almacenamiento en la nube ahora con un 50% descuento. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+  },
+  {
+    "id": "cloudwards",
+    "title": "Internxt – Cloudwards Partnership (España)",
+    "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Cloudwards. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+  },
+  {
+    "id": "guru99",
+    "title": "Internxt – Guru99 Partnership (España)",
+    "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Guru99. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+  },
+  {
+    "id": "freemonth",
+    "title": "Internxt – Consigue 1 Mes gratis (España)",
+    "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+  },
+  {
+    "id": "landing",
+    "title": "Internxt - Almacenamiento seguro y privado",
+    "description": "Internxt ofrece servicios en la nube seguros, privados y cifrados tales como Internxt Drive e Internxt Photos."
+  },
+  {
+    "id": "privacy-directory",
+    "title": "Internxt - Directorio de organizaciones, instituciones y ONG de protección de la privacidad",
+    "description": "Directorio de organizaciones, instituciones y ONG de derechos digitales que trabajan junto a Internxt para promover, apoyar y defender la privacidad para todos."
+  },
+  {
+    "id": "password-checker",
+    "title": "Internxt - Verificación gratuita y segura de contraseñas",
+    "description": "Chequeo de seguridad de contraseñas gratuito. Compruebe la solidez de sus contraseñas con la herramienta segura en línea de Internxt."
+  }
 ]
