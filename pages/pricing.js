@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-
 
 const Pricing = ({
   metatagsDescriptions,
@@ -13,40 +12,11 @@ const Pricing = ({
   lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [country, setCountry] = useState('US');
-
-  async function getLocation() {
-    const url = `${process.env.NEXT_PUBLIC_BRIDGE_URL}/drive/device/geolocation`;
-    let credentials = (`${process.env.NEXT_PUBLIC_AUTH_BASIC_USERNAME}:${process.env.NEXT_PUBLIC_AUTH_BASIC_PASSWORD}`);
-    const resp = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Basic ${window.btoa(credentials)}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ip: "181.174.186.6"
-      }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        return data;
-      });
-    return resp;
-  }
-
-  useEffect(() => {
-    getLocation()
-      .then(data => {
-        console.log(data);
-        // setCountry(data.country);
-      })
-  },);
-
-
 
   return (
+
     <Layout
       segmentName={pageName}
       title={metatags[0].title}
@@ -64,7 +34,6 @@ const Pricing = ({
       <PriceTable
         setSegmentPageName={setPageName}
         lang={lang}
-        country={country}
       />
 
       <Footer

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 
-export default function PriceTable({ setSegmentPageName, lang, country }) {
+export default function PriceTable({ setSegmentPageName, lang }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -127,8 +127,9 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
               setBillingFrequency(1);
               setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`);
             }}
-            className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'
-              }`}
+            className={`py-1.5 px-6 rounded-lg font-medium ${
+              billingFrequency === 1 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'
+            }`}
           >
             {contentText.billingFrequency.monthly}
           </button>
@@ -138,8 +139,9 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
               setBillingFrequency(12);
               setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`);
             }}
-            className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'
-              }`}
+            className={`py-1.5 px-6 rounded-lg font-medium ${
+              billingFrequency === 12 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'
+            }`}
           >
             {contentText.billingFrequency.annually}
           </button>
@@ -160,7 +162,6 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
               cta={['link', 'https://drive.internxt.com/new?']}
               popular={pricings.individuals.free.popular}
               lang={lang}
-              country={country}
             />
             <PriceCard
               planType="individual"
@@ -170,7 +171,6 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
               cta={['checkout', checkoutPlan('GB20')]}
               popular={pricings.individuals.GB20.popular}
               lang={lang}
-              country={country}
             />
             <PriceCard
               planType="individual"
@@ -180,7 +180,6 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
               cta={['checkout', checkoutPlan('GB200')]}
               popular={pricings.individuals.GB200.popular}
               lang={lang}
-              country={country}
             />
             <PriceCard
               planType="individual"
@@ -190,7 +189,6 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
               cta={['checkout', checkoutPlan('TB2')]}
               popular={pricings.individuals.TB2.popular}
               lang={lang}
-              country={country}
             />
           </div>
         </Transition>
