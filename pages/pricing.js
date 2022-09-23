@@ -15,7 +15,7 @@ const Pricing = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [country, setCountry] = useState('es')
+  const [country, setCountry] = useState('us');
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
