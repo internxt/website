@@ -10,28 +10,28 @@ const Pricing = ({
   metatagsDescriptions,
   navbarLang,
   footerLang,
-  lang
+  lang,
+  ip
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [country, setCountry] = useState('us');
+  const [country, setCountry] = useState('ES');
+
+  async function getCountryCode() {
+    const options = {
+      method: 'GET',
+      url: `https://api.country.is/${ip}`,
+    };
+    const countryCode = await axios(options);
+    return countryCode;
+  }
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const options = {
-        method: 'POST',
-        url: `https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}`,
-      };
-      axios(options)
-        .then(function (response) {
-          let parser = new DOMParser();
-          let country_code = parser.parseFromString(response.data, 'application/xml');
-          setCountry(country_code.getElementsByTagName('country_code')[0].innerHTML);
-        }).catch(function (error) {
-          console.error(error);
-        });
-    })
+    getCountryCode()
+      .then((res) => {
+        setCountry(res.data.country);
+      })
   });
 
 
@@ -70,6 +70,8 @@ const Pricing = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
+  const forwarded = ctx.req.headers['x-forwarded-for'];
+  const ip = forwarded ? forwarded.split(/, /)[0] : ctx.req.connection.remoteAddress;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
@@ -81,7 +83,8 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       footerLang,
       navbarLang,
-      lang
+      lang,
+      ip
     },
   };
 }
