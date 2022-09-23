@@ -16,8 +16,6 @@ const Pricing = ({
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [country, setCountry] = useState('es');
-  let latitude;
-  let longitude;
 
   function getXMLValue(tagName, xmlStr) {
     let tagValue = xmlStr.substring(
