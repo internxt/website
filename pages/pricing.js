@@ -21,7 +21,7 @@ const Pricing = ({
   async function getCountryCode() {
     const options = {
       method: 'GET',
-      url: `https://api.country.is/${ip}`,
+      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
     };
     const countryCode = await axios(options);
     return countryCode;
