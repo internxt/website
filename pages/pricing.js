@@ -6,7 +6,7 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import axios from 'axios';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, ip }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -44,8 +44,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, ip }) => 
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const forwarded = ctx.req.headers['x-forwarded-for'];
-  const ip = forwarded ? forwarded.split(/, /)[0] : ctx.req.connection.remoteAddress;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
@@ -58,7 +56,6 @@ export async function getServerSideProps(ctx) {
       footerLang,
       navbarLang,
       lang,
-      ip,
     },
   };
 }
