@@ -73,7 +73,7 @@ export default function PriceCard({
               {contentText.perUser}
             </span>
             <p className="flex flex-row items-start space-x-0.5 font-medium text-neutral-700">
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country === 'us' ? '$' : '€'}</span>
               <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>
             {/* eslint-disable-next-line no-nested-ternary */}
@@ -95,7 +95,7 @@ export default function PriceCard({
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">€</span>
+                <span className="currency text-supporting-2">{country === 'us' ? '$' : '€'}</span>
                 {totalBilled}{' '}
               </span>
               <span className="billingFrequency">

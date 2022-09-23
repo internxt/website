@@ -12,7 +12,7 @@ function getBridgeAuth(): { username: string, password: string } {
 export function getUserId(email: string) {
   const auth = getBridgeAuth();
 
-  return axios.post(`${process.env.NEXT_PUBLIC_BRIDGE_URL}/gateway/uuid`, { email },
+  return axios.post(`${process.env.NEXT_STORAGE_API_URL}/gateway/uuid`, { email },
     { auth }).then((response) => {
       const { uuid } = response.data;
       return uuid;
