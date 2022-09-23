@@ -15,16 +15,7 @@ const Pricing = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [country, setCountry] = useState('es');
-
-  function getXMLValue(tagName, xmlStr) {
-    let tagValue = xmlStr.substring(
-      xmlStr.lastIndexOf(tagName) + tagName.length,
-      xmlStr.lastIndexOf(tagName.replace("<", "</"))
-    );
-    console.log(tagValue);
-    return tagValue;
-  }
+  const [country, setCountry] = useState('es')
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -34,8 +25,9 @@ const Pricing = ({
       };
       axios(options)
         .then(function (response) {
-          let xml = response.data;
-          setCountry(getXMLValue('<country_code>', xml));
+          let parser = new DOMParser();
+          let country_code = parser.parseFromString(response.data, 'application/xml');
+          setCountry(country_code.getElementsByTagName('country_code')[0].innerHTML);
         }).catch(function (error) {
           console.error(error);
         });
