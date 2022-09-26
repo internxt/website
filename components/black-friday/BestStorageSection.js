@@ -4,7 +4,7 @@ import styles from './BF-HeroSection.module.scss';
 const BestStorageSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center py-24 px-20">
+      <div className="flex flex-col items-center py-24 px-20 text-center">
         <div className="top-24 flex flex-col items-center space-y-5">
           <h1 className="text-6xl font-bold text-white">{textContent.BestStorage.title}</h1>
           <h3 className="text-xl font-normal text-white">{textContent.BestStorage.subtitle}</h3>

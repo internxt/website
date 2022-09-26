@@ -8,8 +8,6 @@ const HeroSection = ({ textContent, lang }) => {
   const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
   const [countdownDisableSeconds, setCountdownDisableSeconds] = useState(false);
 
-  console.log(new Date('2022-11-27T00:00:00'));
-
   function CountDownTimer(dt, id) {
     const end = new Date(dt);
 
@@ -60,12 +58,12 @@ const HeroSection = ({ textContent, lang }) => {
       <div className="mx-4 border-b pt-24 lg:mx-10 xl:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between border-blue-10 sm:mb-6 md:flex-row">
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-20 lg:ml-0 lg:max-w-lg">
-            <h1 className="text-left text-6xl font-semibold text-white">
+            <h1 className="text-center text-6xl font-semibold text-white md:text-left">
               {textContent.HeroSection.title.line1}
               <br />
               {textContent.HeroSection.title.line2}
             </h1>
-            <p className="mt-8 text-left text-xl text-white">
+            <p className="mt-8 text-center text-xl text-white  md:text-left">
               {textContent.HeroSection.description1}
               <br />
               {textContent.HeroSection.description2}
@@ -122,7 +120,7 @@ const HeroSection = ({ textContent, lang }) => {
         id="countdown"
         className="flex w-full flex-col items-center justify-center space-y-12 bg-white py-20 text-white md:space-y-20"
       >
-        <h className="text-center text-4xl font-semibold text-black">{textContent.HeroSection.timer.timeTitle}</h>
+        <h2 className="text-center text-4xl font-semibold text-black">{textContent.HeroSection.timer.timeTitle}</h2>
 
         <div className="flex flex-row space-x-0 md:space-x-16">
           <div className="flex w-20 flex-col items-center justify-center">

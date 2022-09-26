@@ -7,6 +7,9 @@ import BestStorageSection from '../components/black-friday/BestStorageSection';
 import SuiteSection from '../components/black-friday/SuiteSection';
 import CtaSection from '../components/black-friday/CtaSection';
 import FeatureSection from '../components/black-friday/FeatureSection';
+import PlatformSection from '../components/black-friday/PlatformSection';
+import TestimonialsSection from '../components/black-friday/TestimonialsSection';
+import FAQSection from '../components/black-friday/FAQSection';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
@@ -23,6 +26,14 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
       <CtaSection textContent={langJson.cta1} />
 
       <FeatureSection textContent={langJson.blackFriday} />
+
+      <PlatformSection textContent={langJson.blackFriday} />
+
+      <TestimonialsSection textContent={langJson.blackFriday} />
+
+      <FAQSection textContent={langJson.blackFriday} />
+
+      <CtaSection textContent={langJson.cta2} />
     </Layout>
   );
 };
