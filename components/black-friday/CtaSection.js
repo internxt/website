@@ -4,7 +4,7 @@ import styles from './BF-HeroSection.module.scss';
 const CtaSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
-      <div className="center mt-20 mb-20 flex flex-col items-center space-y-10">
+      <div className="center my-20 flex flex-col items-center space-y-10">
         <div className="center flex flex-col items-center space-y-5">
           <p className="text-4xl font-semibold text-white">{textContent.title}</p>
           <p className="text-xl font-light text-white">{textContent.subtitle}</p>
