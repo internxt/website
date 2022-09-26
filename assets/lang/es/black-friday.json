@@ -1,0 +1,45 @@
+{
+  "blackFriday": {
+    "HeroSection": {
+      "title": {
+        "line1": "El Black Friday",
+        "line2": "está aquí!"
+      },
+      "description1": "¡Ahorra en tranquilidad y privacidad!",
+      "description2": "Obtén un 60% de descuento en nuestro plan anual de 2TB.",
+      "button": {
+        "text": "Obtén la oferta"
+      },
+      "pricingTable": {
+        "plan": "2TB",
+        "discount": "60% de descuento",
+        "priceNow": "3.59 €/mes",
+        "priceBefore": "8.99 €/mes",
+        "footer": {
+          "line1": "Almacenar y compartir archivos encriptado",
+          "line2": "Accede a los archivos desde cualquier dispositivo",
+          "line3": "Accede desde todos los dispositivos"
+        }
+      }
+    },
+    "timer": {
+      "timerTitle": "La oferta de Black Friday termina en:",
+      "days": "días",
+      "hours": "horas",
+      "minutes": "minutos",
+      "seconds": "segundos"
+    },
+    "BestStorage": {
+      "title": "La mejor oferta de Black Friday de almacenamiento en la nube",
+      "subtitle": "Internxt ofrece un descuento en privacidad y tranquilidad."
+    },
+    "SuiteSection": {
+      "title": "Qué está incluido en la oferta del Black Friday de Internxt",
+      "subtitle": "Internxt tiene un conjunto completo de servicios de nube privada diseñados para ayudarlo a usted y a su familia a mantenerse seguros en línea."
+    },
+    "drive": {
+      "title": "Internxt Drive",
+      "subtitle": "Realice una copia de seguridad de sus preciadas recetas familiares con nuestro servicio de almacenamiento en la nube seguro y protegido, Internxt Drive."
+    }
+  }
+}

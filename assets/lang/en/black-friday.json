@@ -1,0 +1,62 @@
+{
+  "blackFriday": {
+    "HeroSection": {
+      "title": {
+        "line1": "Black Friday",
+        "line2": "is here!"
+      },
+      "description1": "Save big on privacy and peace of mind!",
+      "description2": "Get 60% off our annual 2TB plan.",
+      "button": {
+        "text": "Get the deal"
+      },
+      "pricingTable": {
+        "plan": "2TB",
+        "discount": "60% off",
+        "priceNow": "3.59 €/mo",
+        "priceBefore": "8.99 €/mo",
+        "footer": {
+          "line1": "Encrypted file storage and sharing",
+          "line2": "Access your files from any device",
+          "line3": "Get access to all our services"
+        }
+      },
+      "timer": {
+        "timeTitle": "Back Friday deal will expire in:",
+        "days": "days",
+        "hours": "hours",
+        "minutes": "minutes",
+        "seconds": "seconds"
+      }
+    },
+    "BestStorage": {
+      "title": "The best cloud storage Black Friday deal",
+      "subtitle": "Internxt is offering a discount on privacy and peace of mind."
+    },
+    "SuiteSection": {
+      "title": "What's included in Internxt's Black Friday deal",
+      "subtitle": "Internxt has a whole suite of private cloud services designed to help you and your family stay safe online.",
+      "drive": {
+        "title": "Internxt Drive",
+        "subtitle": "Back up your treasured family recipes with",
+        "subtitle2": "our safe and secure cloud storage service,"
+      },
+      "photos": {
+        "title": "Internxt Photos",
+        "subtitle": "Save all of your family photos this holiday ",
+        "subtitle2": "season with a cloud-based gallery, Internxt",
+        "subtitle3": " Photos."
+      },
+      "send": {
+        "title": "Internxt Send",
+        "subtitle": "Share your travel itineraries and tickets with",
+        "subtitle2": " our encrypted file-transfer service, Internxt",
+        "subtitle3": " Send."
+      }
+    }
+  },
+  "cta1": {
+    "title": "Activate your 60% off Black Friday deal!",
+    "subtitle": "Get 60% off one whole year of our largest 2TB plan!"
+  }
+}
