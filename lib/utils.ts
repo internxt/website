@@ -12,13 +12,13 @@ function getBridgeAuth(): { username: string, password: string } {
 export function getUserId(email: string) {
   const auth = getBridgeAuth();
 
-  return axios.post(`${process.env.NEXT_BRIDGE_URL}/gateway/uuid`, { email },
+  return axios.post(`${process.env.NEXT_STORAGE_API_URL}/gateway/uuid`, { email },
     { auth }).then((response) => {
-    const { uuid } = response.data;
-    return uuid;
-  }).catch((err) => {
-    throw new Error(err);
-  });
+      const { uuid } = response.data;
+      return uuid;
+    }).catch((err) => {
+      throw new Error(err);
+    });
 }
 
 export function getUser(email: string) {
