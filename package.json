@@ -17,6 +17,7 @@
     "@iconscout/react-unicons": "^1.1.6",
     "@internxt/lib": "1.2.0",
     "@sendgrid/mail": "^7.4.0",
+    "@stripe/stripe-js": "^1.38.1",
     "aos": "^2.3.4",
     "autoprefixer": "^10.0.2",
     "axios": "^0.24.0",
