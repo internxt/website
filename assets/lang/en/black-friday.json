@@ -22,7 +22,7 @@
         }
       },
       "timer": {
-        "timeTitle": "Back Friday deal will expire in:",
+        "timeTitle": "Black Friday deal will expire in:",
         "days": "days",
         "hours": "hours",
         "minutes": "minutes",
@@ -31,7 +31,10 @@
     },
     "BestStorage": {
       "title": "The best cloud storage Black Friday deal",
-      "subtitle": "Internxt is offering a discount on privacy and peace of mind."
+      "subtitle": "Internxt is offering a discount on privacy and peace of mind.",
+      "button": {
+        "text": "Get the deal"
+      }
     },
     "SuiteSection": {
       "title": "What's included in Internxt's Black Friday deal",
@@ -104,14 +107,73 @@
         "text": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.",
         "footer": "Eva"
       }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "faq": [
+        {
+          "question": "How can I get the Black Friday discount?",
+          "answer": [
+            "To take advantage of our Black Friday discount, you must click on Activate your ‘Black Friday deal!’ at the top of this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan."
+          ]
+        },
+        {
+          "question": "When does the promotion end?",
+          "answer": ["Our Black Friday Sale runs from November 21st until December 5th, 2022."]
+        },
+        {
+          "question": "Who is eligible for this discount?",
+          "answer": [
+            "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Black Friday Sale."
+          ]
+        },
+        {
+          "question": "Will I keep the discount when my plan ends?",
+          "answer": [
+            "The discount is applied for the first full year of service. Therefore, you will have access to our 2TB subscription plan at this discounted price for only one year.",
+            "If you choose to continue your service, your account will be charged at the standard 2TB plan price for the following year."
+          ]
+        },
+        {
+          "question": "How much will it cost to renew the plan after the first year?",
+          "answer": [
+            "The 2TB plan costs €9.99/month paid monthly or €8.99/month when paid annually. You can check out all [our pricing and subscription plans](https://internxt.com/pricing) on the Internxt website."
+          ]
+        },
+        {
+          "question": "What payment methods does Internxt accept?",
+          "answer": [
+            "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit, and [Internxt Token](https://internxt.com/token)."
+          ]
+        },
+        {
+          "question": "Do you offer any discounts for nonprofits or students?",
+          "answer": [
+            "Yes, you can get 50% off any Internxt subscription plan if you are a member of a nonprofit organization or NGO. Contact us at [hello@internxt.com](mailto:hello@internxt.com) with your organization's credentials so that we can verify your eligibility and apply for your discount.",
+            "You can also get a 50% discount if you are a student. Request the discount and verify your eligibility by emailing us at [hello@internxt.com](mailto:hello@internxt.com) from your university email address."
+          ]
+        },
+        {
+          "question": "Have more questions?",
+          "answer": [
+            "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+          ]
+        }
+      ]
     }
   },
   "cta1": {
     "title": "Activate your 60% off Black Friday deal!",
-    "subtitle": "Get 60% off one whole year of our largest 2TB plan!"
+    "subtitle": "Get 60% off one whole year of our largest 2TB plan!",
+    "button": {
+      "text": "Get the deal"
+    }
   },
   "cta2": {
     "title": "Stand with privacy. Choose Internxt!",
-    "subtitle": "Get a discount on privacy and peace of mind. Get 60% off one whole year of our largest 2TB plan!"
+    "subtitle": "Get a discount on privacy and peace of mind. Get 60% off one whole year of our largest 2TB plan!",
+    "button": {
+      "text": "Get the deal"
+    }
   }
 }

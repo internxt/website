@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
+import ButtonDeal from './components/ButtonDeal';
 
-const CtaSection = ({ textContent }) => {
+const CtaSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
       <div className="center my-20 flex flex-col items-center space-y-10 px-10">
@@ -10,12 +11,7 @@ const CtaSection = ({ textContent }) => {
           <p className="text-xl font-light text-white">{textContent.subtitle}</p>
         </div>
         <div className="flex">
-          <button
-            className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:text-base"
-            onClick={() => console.log('signup')}
-          >
-            Get the deal
-          </button>
+          <ButtonDeal textContent={lang} />
         </div>
       </div>
       <div

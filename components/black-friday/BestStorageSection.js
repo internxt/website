@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
+import ButtonDeal from './components/ButtonDeal';
 
 const BestStorageSection = ({ textContent, lang }) => {
   return (
@@ -9,13 +10,8 @@ const BestStorageSection = ({ textContent, lang }) => {
           <h1 className="text-6xl font-bold text-white">{textContent.BestStorage.title}</h1>
           <h3 className="text-xl font-normal text-white">{textContent.BestStorage.subtitle}</h3>
         </div>
-        <div className="py-9">
-          <button
-            className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:text-base"
-            onClick={() => console.log('signup')}
-          >
-            {textContent.HeroSection.button.text}
-          </button>
+        <div className="pb-9">
+          <ButtonDeal textContent={lang} />
         </div>
         <img
           // loading="lazy"

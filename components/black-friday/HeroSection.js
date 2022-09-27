@@ -1,6 +1,7 @@
 import { Check } from 'phosphor-react';
 import React, { useState, useEffect } from 'react';
 import styles from './BF-HeroSection.module.scss';
+import ButtonDeal from './components/ButtonDeal';
 
 const HeroSection = ({ textContent, lang }) => {
   const [countdownDisableDays, setCountdownDisableDays] = useState(false);
@@ -68,16 +69,9 @@ const HeroSection = ({ textContent, lang }) => {
               <br />
               {textContent.HeroSection.description2}
             </p>
-            <div className="pt-14">
-              <button
-                className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:text-base"
-                onClick={() => console.log('signup')}
-              >
-                {textContent.HeroSection.button.text}
-              </button>
-            </div>
+            <ButtonDeal textContent={lang} />
           </div>
-          <div className="center my-14 flex h-96 w-80 flex-col items-center rounded-2xl bg-white py-20">
+          <div className="center my-14 flex h-96 w-80 flex-col items-center rounded-2xl bg-white py-10">
             <div className="h-8 w-16 rounded-2xl	bg-blue-10 pl-5">
               <p className="items-center">{textContent.HeroSection.pricingTable.plan}</p>
             </div>
@@ -93,7 +87,7 @@ const HeroSection = ({ textContent, lang }) => {
             <div className="flex w-full flex-row px-8 py-5">
               <div className="w-full border-b border-gray-20" />
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col">
               <div className="flex flex-row items-center space-x-2">
                 <div className="h-4 w-4">
                   <Check size={18} weight={'bold'} />

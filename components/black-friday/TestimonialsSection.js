@@ -7,7 +7,7 @@ const TestimonialsSection = ({ textContent }) => {
         <div className="center flex flex-col items-center text-center">
           <p className="text-4xl font-semibold">{textContent.TestimonialSection.title}</p>
         </div>
-        <div className="flex flex-row flex-wrap justify-center gap-y-10 p-5 sm:justify-around">
+        <div className="flex flex-row flex-wrap justify-center gap-y-10 p-5 sm:justify-evenly lg:pt-12 xl:px-40">
           <div className="h-full w-full rounded-2xl bg-gray-5 lg:h-64 lg:w-80">
             <div className="p-8">
               <p className="text-xl font-normal">{textContent.TestimonialSection.cristian.text}</p>
