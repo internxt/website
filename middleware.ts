@@ -18,7 +18,11 @@ const Middleware = (req) => {
   if (req.nextUrl.pathname !== req.nextUrl.pathname.toLowerCase()) {
     const url = req.nextUrl.clone();
     url.pathname = url.pathname.toLowerCase();
-    return NextResponse.redirect(decodeURIComponent(url).replace(/\s/g, '-'));
+    return NextResponse.rewrite(decodeURIComponent(url).replace(/\s/g, '-'), {
+      headers: {
+        rel: 'canonical',
+      },
+    });
   }
   return NextResponse.next();
 };
