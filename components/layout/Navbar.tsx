@@ -95,8 +95,8 @@ export default function Navbar(props: NavbarProps) {
     }
   };
 
-  const redirectToCheckout = (planId: string) => {
-    window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
+  const redirectToCheckout = (planId: string, couponCode?: string) => {
+    window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}?coupon=${couponCode}`);
   };
 
   // MESSAGE FILTERING

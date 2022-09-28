@@ -41,20 +41,15 @@
       "subtitle": "Internxt has a whole suite of private cloud services designed to help you and your family stay safe online.",
       "drive": {
         "title": "Internxt Drive",
-        "subtitle": "Back up your treasured family recipes with",
-        "subtitle2": "our safe and secure cloud storage service,"
+        "subtitle": "Back up your treasured family recipes with our safe and secure cloud storage service, Internxt Drive."
       },
       "photos": {
         "title": "Internxt Photos",
-        "subtitle": "Save all of your family photos this holiday ",
-        "subtitle2": "season with a cloud-based gallery, Internxt",
-        "subtitle3": " Photos."
+        "subtitle": "Save all of your family photos this holiday season with a cloud-based gallery, Internxt Photos."
       },
       "send": {
         "title": "Internxt Send",
-        "subtitle": "Share your travel itineraries and tickets with",
-        "subtitle2": " our encrypted file-transfer service, Internxt",
-        "subtitle3": " Send."
+        "subtitle": "Share your travel itineraries and tickets with our encrypted file-transfer service, Internxt Send."
       }
     },
     "FeatureSection": {

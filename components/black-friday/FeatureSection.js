@@ -5,7 +5,7 @@ const FeatureSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
       <div className="content flex flex-1 flex-col items-center bg-white px-10 py-20 text-center">
-        <div className="center flex w-1/2 flex-col items-center pb-16">
+        <div className="center flex flex-col items-center pb-16 lg:w-1/2">
           <p className="text-4xl font-semibold">{textContent.FeatureSection.title}</p>
           <p className="mt-4 text-center text-xl font-normal">{textContent.FeatureSection.subtitle}</p>
         </div>

@@ -69,7 +69,9 @@ const HeroSection = ({ textContent, lang }) => {
               <br />
               {textContent.HeroSection.description2}
             </p>
-            <ButtonDeal textContent={lang} />
+            <div className="pt-12">
+              <ButtonDeal textContent={lang} />
+            </div>
           </div>
           <div className="center my-14 flex h-96 w-80 flex-col items-center rounded-2xl bg-white py-10">
             <div className="h-8 w-16 rounded-2xl	bg-blue-10 pl-5">
