@@ -29,6 +29,17 @@ export default function PriceCard({
     12: 'annually',
   };
 
+  const currency = () => {
+    switch (country) {
+      case 'US':
+        return '$';
+      case 'GB':
+        return '£';
+      default:
+        return '€';
+    }
+  };
+
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
@@ -78,9 +89,7 @@ export default function PriceCard({
               {contentText.perUser}
             </span>
             <p className="flex flex-row items-start space-x-0.5 font-medium text-neutral-700">
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>
-                {country === 'US' ? '$' : country === 'GB' ? '£' : '€'}
-              </span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>
             {/* eslint-disable-next-line no-nested-ternary */}
@@ -94,7 +103,7 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } text-base font-medium text-neutral-80 line-through`}
           >
-            {country === 'US' ? '$' : country === 'GB' ? '£' : '€'}
+            {currency()}
             {priceBefore}
           </span>
 
@@ -105,9 +114,7 @@ export default function PriceCard({
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">
-                  {country === 'US' ? '$' : country === 'GB' ? '£' : '€'}
-                </span>
+                <span className="currency text-supporting-2">{currency()}</span>
                 {totalBilled}{' '}
               </span>
               <span className="billingFrequency">
