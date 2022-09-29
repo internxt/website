@@ -19,7 +19,7 @@ export default function PriceCard({
   getUsers,
   popular,
   lang,
-  country
+  country,
 }) {
   const stripeObject = { product: cta[1] };
 
@@ -36,12 +36,14 @@ export default function PriceCard({
 
   return (
     <div
-      className={`priceCard card ${popular ? 'bg-primary shadow-lg ring-2 ring-primary' : ''
-        } m-2 flex w-full flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      className={`priceCard card ${
+        popular ? 'bg-primary shadow-lg ring-2 ring-primary' : ''
+      } m-2 flex w-full flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
-        className={`mostPopular ${popular ? '' : 'hidden'
-          } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
+        className={`mostPopular ${
+          popular ? '' : 'hidden'
+        } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
         {contentText.mostPopular}
       </div>
@@ -50,8 +52,9 @@ export default function PriceCard({
         className={`info flex flex-col items-center justify-center bg-white p-4 pt-6 ${popular ? 'rounded-t-2xl' : ''}`}
       >
         <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
-            } rounded-full font-medium`}
+          className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
+            popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
+          } rounded-full font-medium`}
         >
           <p>
             {storage}
@@ -62,18 +65,22 @@ export default function PriceCard({
         </div>
 
         <div
-          className={`planPrice flex flex-col items-center justify-center py-8 ${priceBefore ? 'space-y-1' : 'space-y-4'
-            }`}
+          className={`planPrice flex flex-col items-center justify-center py-8 ${
+            priceBefore ? 'space-y-1' : 'space-y-4'
+          }`}
         >
           <div
-            className={`priceBreakdown flex ${planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
-              }`}
+            className={`priceBreakdown flex ${
+              planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
+            }`}
           >
             <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
               {contentText.perUser}
             </span>
             <p className="flex flex-row items-start space-x-0.5 font-medium text-neutral-700">
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country === 'US' ? '$' : '€'}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>
+                {country === 'US' ? '$' : country === 'GB' ? '£' : '€'}
+              </span>
               <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>
             {/* eslint-disable-next-line no-nested-ternary */}
@@ -83,19 +90,24 @@ export default function PriceCard({
           </div>
 
           <span
-            className={`priceBefore ${priceBefore ? 'flex' : 'hidden'
-              } text-base font-medium text-neutral-80 line-through`}
+            className={`priceBefore ${
+              priceBefore ? 'flex' : 'hidden'
+            } text-base font-medium text-neutral-80 line-through`}
           >
-            €{priceBefore}
+            {country === 'US' ? '$' : country === 'GB' ? '£' : '€'}
+            {priceBefore}
           </span>
 
           <div
-            className={`totalBilling ${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-              } flex-row text-xs text-neutral-80`}
+            className={`totalBilling ${
+              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
+            } flex-row text-xs text-neutral-80`}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">{country === 'US' ? '$' : '€'}</span>
+                <span className="currency text-supporting-2">
+                  {country === 'US' ? '$' : country === 'GB' ? '£' : '€'}
+                </span>
                 {totalBilled}{' '}
               </span>
               <span className="billingFrequency">
@@ -107,8 +119,9 @@ export default function PriceCard({
         </div>
 
         <div
-          className={`businessUserCount ${planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'
-            } mb-4 w-full flex-col rounded-lg bg-neutral-10 p-4 ring-1 ring-neutral-20`}
+          className={`businessUserCount ${
+            planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'
+          } mb-4 w-full flex-col rounded-lg bg-neutral-10 p-4 ring-1 ring-neutral-20`}
         >
           <div className="input relative flex flex-row justify-between rounded-lg bg-white ring-1 ring-neutral-30">
             <button
@@ -118,10 +131,11 @@ export default function PriceCard({
                   setUsers(parseInt(getUsers, 10) - 1);
                 } else setUsers(2);
               }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${getUsers > 2
-                ? 'bg-primary text-white active:bg-primary-dark'
-                : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-                } sm:duration-50 z-10 select-none rounded-l-lg text-2xl font-light transition-all`}
+              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
+                getUsers > 2
+                  ? 'bg-primary text-white active:bg-primary-dark'
+                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
+              } sm:duration-50 z-10 select-none rounded-l-lg text-2xl font-light transition-all`}
             >
               <span className="mb-1">-</span>
             </button>
@@ -132,10 +146,11 @@ export default function PriceCard({
                   setUsers(parseInt(getUsers, 10) + 1);
                 } else setUsers(MAX_USERS);
               }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${getUsers < MAX_USERS
-                ? 'bg-primary text-white active:bg-primary-dark'
-                : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-                } sm:duration-50 z-10 select-none rounded-r-lg text-2xl font-light transition-all`}
+              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
+                getUsers < MAX_USERS
+                  ? 'bg-primary text-white active:bg-primary-dark'
+                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
+              } sm:duration-50 z-10 select-none rounded-r-lg text-2xl font-light transition-all`}
             >
               <span className="mb-1">+</span>
             </button>
@@ -145,8 +160,9 @@ export default function PriceCard({
             >
               <div className="relative flex h-full flex-row items-center">
                 <span
-                  className={`pointer-events-none ${Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? '' : 'opacity-0'
-                    }`}
+                  className={`pointer-events-none ${
+                    Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? '' : 'opacity-0'
+                  }`}
                 >
                   {Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? 0 : getUsers}
                 </span>
