@@ -3,11 +3,22 @@ import React, { useState, useEffect } from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
-const HeroSection = ({ textContent, lang }) => {
+const HeroSection = ({ textContent, lang, country }) => {
   const [countdownDisableDays, setCountdownDisableDays] = useState(false);
   const [countdownDisableHours, setCountdownDisableHours] = useState(false);
   const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
   const [countdownDisableSeconds, setCountdownDisableSeconds] = useState(false);
+
+  const currency = () => {
+    switch (country) {
+      case 'US':
+        return '$';
+      case 'GB':
+        return '£';
+      default:
+        return '€';
+    }
+  };
 
   function CountDownTimer(dt, id) {
     const end = new Date(dt);
@@ -81,9 +92,13 @@ const HeroSection = ({ textContent, lang }) => {
               <p className="text-6xl font-semibold text-primary">{textContent.HeroSection.pricingTable.discount}</p>
             </div>
             <div className="pt-5">
-              <p className="text-3xl font-medium">{textContent.HeroSection.pricingTable.priceNow}</p>
+              <p className="text-3xl font-medium">
+                {textContent.HeroSection.pricingTable.priceNow} {currency()}
+                {textContent.HeroSection.pricingTable.month}
+              </p>
               <p className="text-1xl pl-8 pt-4 font-normal text-gray-40 line-through">
-                {textContent.HeroSection.pricingTable.priceBefore}
+                {textContent.HeroSection.pricingTable.priceBefore} {currency()}
+                {textContent.HeroSection.pricingTable.month}
               </p>
             </div>
             <div className="flex w-full flex-row px-8 py-5">

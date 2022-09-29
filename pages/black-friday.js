@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import cookies from '../lib/cookies';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -11,9 +11,27 @@ import PlatformSection from '../components/black-friday/PlatformSection';
 import TestimonialsSection from '../components/black-friday/TestimonialsSection';
 import FaqSection from '../components/black-friday/FaqSection';
 import FooterSection from '../components/black-friday/FooterSection';
+import axios from 'axios';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
+  const [country, setCountry] = React.useState('ES');
+
+  async function getCountryCode() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
+    };
+    const countryCode = await axios(options);
+    return countryCode;
+  }
+
+  useEffect(() => {
+    getCountryCode().then((res) => {
+      setCountry(res.data.country);
+    });
+  });
+
   return (
     <Layout
       title={metatags[0].title}
@@ -23,7 +41,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
     >
       <Navbar lang={deviceLang} textContent={navbarLang} cta={['checkout']} hideLogin={true} />
 
-      <HeroSection lang={lang} textContent={langJson.blackFriday} />
+      <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} />
 
       <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
 

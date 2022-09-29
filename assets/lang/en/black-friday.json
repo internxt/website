@@ -13,8 +13,9 @@
       "pricingTable": {
         "plan": "2TB",
         "discount": "60% off",
-        "priceNow": "3.59 €/mo",
-        "priceBefore": "8.99 €/mo",
+        "priceNow": "3.59",
+        "month": "/mo",
+        "priceBefore": "8.99",
         "footer": {
           "line1": "Encrypted file storage and sharing",
           "line2": "Access your files from any device",
