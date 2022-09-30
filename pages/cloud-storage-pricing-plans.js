@@ -17,7 +17,7 @@ const CloudStoragePricingPlans = ({
 
   return (
     <Layout segmentName="Ads Landing" title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} className={true} lang={lang} cta={['default']} />
+      <Navbar textContent={navbarLang} hide={true} lang={lang} cta={['default']} />
 
       <HeroSection textContent={textContent.HeroSection} />
 
