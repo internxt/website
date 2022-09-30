@@ -10,13 +10,14 @@ const CloudStoragePricingPlans = ({
   metatagsDescriptions,
   textContent,
   lang,
+  navbarLang,
   // lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'landing');
 
   return (
     <Layout segmentName="Ads Landing" title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar className={true} lang={lang} cta={['default']} />
+      <Navbar textContent={navbarLang} className={true} lang={lang} cta={['default']} />
 
       <HeroSection textContent={textContent.HeroSection} />
 
@@ -33,12 +34,14 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`../assets/lang/${lang}/cloud-storage-pricing-plans.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
   return {
     props: {
       metatagsDescriptions,
       textContent,
       lang,
+      navbarLang,
     },
   };
 }
