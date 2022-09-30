@@ -4,38 +4,28 @@ import HeroSection from '../components/cloud-storage-pricing-plans/HeroSection';
 import PricingSection from '../components/cloud-storage-pricing-plans/PricingSection';
 import FeaturesSection from '../components/cloud-storage-pricing-plans/FeaturesSection';
 import FaqSection from '../components/cloud-storage-pricing-plans/FaqSection';
+import Navbar from '../components/layout/Navbar';
 
 const CloudStoragePricingPlans = ({
   metatagsDescriptions,
   textContent,
-  lang
+  lang,
   // lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'landing');
 
   return (
-
     <Layout segmentName="Ads Landing" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+      <Navbar className={true} lang={lang} cta={['default']} />
 
-      <HeroSection
-        textContent={textContent.HeroSection}
-      />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <PricingSection
-        textContent={textContent.PricingSection}
-      />
+      <PricingSection textContent={textContent.PricingSection} />
 
-      <FeaturesSection
-        textContent={textContent.FeaturesSection}
-      />
+      <FeaturesSection textContent={textContent.FeaturesSection} />
 
-      <FaqSection
-        textContent={textContent.FaqSection}
-        lang={lang}
-      />
-
+      <FaqSection textContent={textContent.FaqSection} lang={lang} />
     </Layout>
-
   );
 };
 
@@ -48,7 +38,7 @@ export async function getServerSideProps(ctx) {
     props: {
       metatagsDescriptions,
       textContent,
-      lang
+      lang,
     },
   };
 }

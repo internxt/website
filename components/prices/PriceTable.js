@@ -99,12 +99,12 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
   return (
     <section className="bg-gradient-to-b from-white to-cool-gray-5">
       <div className="flex flex-col items-center">
-        <h1 className="pt-36 px-4 text-center text-5xl">
+        <h1 className="px-4 pt-36 text-center text-5xl">
           {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
         </h1>
         <button
           type="button"
-          className="mt-4 mb-6 text-center text-primary active:text-blue-50 font-medium cursor-pointer"
+          className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary active:text-blue-50"
           onClick={() => {
             setIndividual(!individual);
             setSegmentPageName(
@@ -120,15 +120,16 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
           {individual ? `${contentText.changePlan.toBusiness}` : `${contentText.changePlan.toIndividuals}`}
         </button>
 
-        <div className="flex flex-row p-0.5 text-sm bg-cool-gray-10 rounded-lg">
+        <div className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
           <button
             type="button"
             onClick={() => {
               setBillingFrequency(1);
               setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`);
             }}
-            className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 1 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'
-              }`}
+            className={`rounded-lg py-1.5 px-6 font-medium ${
+              billingFrequency === 1 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+            }`}
           >
             {contentText.billingFrequency.monthly}
           </button>
@@ -138,8 +139,9 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
               setBillingFrequency(12);
               setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`);
             }}
-            className={`py-1.5 px-6 rounded-lg font-medium ${billingFrequency === 12 ? 'text-cool-gray-80 shadow-sm bg-white' : 'text-cool-gray-50'
-              }`}
+            className={`rounded-lg py-1.5 px-6 font-medium ${
+              billingFrequency === 12 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+            }`}
           >
             {contentText.billingFrequency.annually}
           </button>
@@ -151,7 +153,7 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
             <PriceCard
               planType="individual"
               storage={pricings.individuals.free.storage}
@@ -201,7 +203,7 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="flex content flex-row flex-wrap justify-center justify-items-center items-end p-6 py-14 pb-20">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
             <PriceCard
               planType="business"
               storage={pricings.business.GB200.storage}

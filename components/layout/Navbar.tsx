@@ -12,7 +12,7 @@ import ForgotPassword from '../auth/ForgotPassword';
 
 import { openAuthDialog } from '../../lib/auth';
 
-export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
+export default function Navbar({ textContent, lang, cta, darkMode, fixed, className }) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
   const ctaAction = cta[0] ? cta : ['default', null];
@@ -175,7 +175,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed }) {
 
   return (
     <div
-      className={`section flex items-center ${
+      className={`${className ? 'hidden' : ''} section flex items-center ${
         !menuState && !fixed ? 'absolute' : 'fixed'
       } h-16 w-full bg-white transition-all duration-100 ${
         fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'

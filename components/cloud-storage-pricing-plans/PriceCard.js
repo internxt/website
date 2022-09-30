@@ -1,31 +1,28 @@
 import React from 'react';
 import { Check } from 'phosphor-react';
-import { redirectToCheckoutAction } from '../CheckoutForm';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { openAuthDialog, checkout } from '../../lib/auth';
 
-const PriceCard = ({ textContent, storage, price, billing, plan, popular }) => {
-  const checkout = () => {
-    const stripeObject = { product: plan };
-    redirectToCheckoutAction(stripeObject);
-  };
-
+const PriceCard = ({ textContent, storage, price, billing, popular, cta }) => {
+  const stripeObject = { product: cta[1] };
   return (
     <div
-      className={`flex flex-col w-80 p-6 sm:p-8 space-y-4 sm:space-y-6 bg-white rounded-xl m-3 ${
+      className={`m-3 flex w-80 flex-col space-y-4 rounded-xl bg-white p-6 sm:space-y-6 sm:p-8 ${
         popular && 'border border-primary ring-6 ring-primary ring-opacity-10'
       }`}
     >
-      <div className="flex flex-row space-x-2 items-start justify-start">
+      <div className="flex flex-row items-start justify-start space-x-2">
         {/* Storage / Plan */}
         <h2 className="text-4xl font-medium text-primary">{storage}</h2>
         {popular && (
-          <h3 className="flex flex-row items-center h-8 sm:h-6 px-4 sm:px-3 text-base sm:text-xs font-medium text-primary bg-primary bg-opacity-10 rounded-full">
+          <h3 className="flex h-8 flex-row items-center rounded-full bg-primary bg-opacity-10 px-4 text-base font-medium text-primary sm:h-6 sm:px-3 sm:text-xs">
             {textContent.mostPopular}
           </h3>
         )}
       </div>
 
       {/* Separator */}
-      <div className="w-full h-px bg-gray-10" />
+      <div className="h-px w-full bg-gray-10" />
 
       {/* Prices and billing */}
       <div className="flex flex-col">
@@ -39,7 +36,7 @@ const PriceCard = ({ textContent, storage, price, billing, plan, popular }) => {
       <button
         type="button"
         onClick={() => {
-          checkout();
+          cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
         }}
         className="button-primary"
       >
@@ -47,7 +44,7 @@ const PriceCard = ({ textContent, storage, price, billing, plan, popular }) => {
       </button>
 
       {/* Plan features */}
-      <div className="hidden sm:flex flex-col items-start justify-start space-y-1.5 text-sm">
+      <div className="hidden flex-col items-start justify-start space-y-1.5 text-sm sm:flex">
         <div className="flex flex-row items-start justify-start space-x-2">
           <Check weight="bold" size={18} className="my-px" />
           <span className="font-medium">{textContent.features[0]}</span>
