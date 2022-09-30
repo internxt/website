@@ -11,23 +11,33 @@ const PlatformSection = ({ textContent }) => {
         </div>
         <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 lg:gap-x-40">
           <div className="flex flex-col items-center space-y-6">
-            <img src="/images/special-offer/black-friday/Linux.png" width={26.5} height={32} />
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
+              <img src="/images/special-offer/black-friday/Linux.svg" width={26.5} height={32} />
+            </div>
             <p className="text-white">{textContent.PlatformSection.linux}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
-            <img src="/images/special-offer/black-friday/Frame.png" width={26.5} height={32} />
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
+              <img src="/images/special-offer/black-friday/MacOs.svg" width={32} height={32} />
+            </div>
             <p className="text-white">{textContent.PlatformSection.mac}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
-            <AppleLogo size={32} color="white" weight="fill" />
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
+              <img src="/images/special-offer/black-friday/iOS.svg" width={26.5} height={32} />
+            </div>
             <p className="text-white">{textContent.PlatformSection.iOS}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
-            <img src="/images/special-offer/black-friday/Union.png" width={26.5} height={32} />
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
+              <img src="/images/special-offer/black-friday/Android.svg" width={26.5} height={32} />
+            </div>
             <p className="text-white">{textContent.PlatformSection.android}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
-            <WindowsLogo size={32} color="white" weight="fill" />
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
+              <img src="/images/special-offer/black-friday/Windows.svg" width={26.5} height={32} />
+            </div>
             <p className="text-white">{textContent.PlatformSection.windows}</p>
           </div>
         </div>
