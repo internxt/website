@@ -39,7 +39,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
       segmentName="Black Friday"
       isSendSnackbar={false}
     >
-      <Navbar lang={deviceLang} textContent={navbarLang} cta={['checkout']} hideLogin={true} />
+      <Navbar lang={deviceLang} textContent={navbarLang} cta={['checkout', 'TB2']} hideLogin={true} />
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} />
 

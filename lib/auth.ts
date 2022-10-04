@@ -28,7 +28,7 @@ export function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
 
 export function checkout(planId: string, couponCode?: string): void {
   window.top?.postMessage(
-    { action: 'checkout', planId: planId, couponCode: couponCode !== null ? couponCode : null },
+    { action: 'checkout', planId: planId, couponCode: couponCode ?? null },
     window.location.origin,
   );
 }

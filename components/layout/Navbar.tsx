@@ -15,9 +15,10 @@ import { openAuthDialog } from '../../lib/auth';
 export interface NavbarProps {
   textContent: any;
   lang: string;
-  cta: string;
+  cta: string[];
   darkMode?: boolean;
   fixed: boolean;
+  hide?: boolean;
   hideLogin?: boolean;
 }
 
@@ -184,7 +185,7 @@ export default function Navbar(props: NavbarProps) {
 
   return (
     <div
-      className={`section flex items-center ${
+      className={`${props.hide ? 'hidden' : ''} section flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
       } h-16 w-full bg-white transition-all duration-100 ${
         props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
@@ -461,9 +462,7 @@ export default function Navbar(props: NavbarProps) {
 
           {/* Login and CTA */}
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
-            {props.hideLogin === true ? (
-              ''
-            ) : (
+            {props.hideLogin ? null : (
               <button
                 onClick={() => openAuthDialog('login')}
                 className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
@@ -495,7 +494,7 @@ export default function Navbar(props: NavbarProps) {
             {ctaAction[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={ctaAction[1]}
+                onClick={() => ctaAction[1]}
                 className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
