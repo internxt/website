@@ -3,6 +3,8 @@ import cookies from '../lib/cookies';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/cyber-awareness/HeroSection';
+import Footer from '../components/layout/Footer';
+import InfoSection from '../components/cyber-awareness/InfoSection';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
   return (
@@ -10,6 +12,10 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
       <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
 
       <HeroSection textContent={textContent.HeroSection} />
+
+      <InfoSection textContent={textContent.InfoSection} />
+
+      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 };

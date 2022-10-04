@@ -16,5 +16,29 @@
     },
     "footer": "Your files secure and private forever.",
     "button": "Choose an Internxt plan"
+  },
+  "InfoSection": {
+    "title": "Cyber Awareness is about knowledge and action!",
+    "subTitle": "We aim to highlight awareness and promote not simply a pursuit of technical knowledge but purposeful, thoughtful action to actively protect critical data and digital information throughout our communities and businesses",
+    "panel": {
+      "title": "Cyber Awareness information",
+      "card-1": "What is phishing?",
+      "card-2": "What is a VPN?",
+      "card-3": "Stay safe while working remotely",
+      "card-4": "Improve your email security",
+      "card-5": "What is cloud security?",
+      "card-6": "Common cyber threats?",
+      "card-7": "Cybersecurity basics",
+      "card-8": "How to create a strong password?"
+    },
+    "footer": {
+      "title": "It's easy stay safe online!",
+      "body": {
+        "part1": "Your data may not seem like much, but it's valuable. The amount of information about you that can be gathered by monitoring your online activity and raiding your accounts is enormous. Knowing how to protect yourself can save you from identify theft, phishing scams, and data breaches down the road.",
+        "part2": "Employees, too, must understand their role in enhancing a company's cybersecurity. Training and educating personnel is the best defense. Cyber Awareness teaches your staff about the methods employed by cybercriminals, how they might be targeted, how to identify possible dangers, and what they can do to avoid becoming a victim of these threats.",
+        "part3": "Once everyone knows the cybersecurity basics, it's time to test their effectiveness with a Cyber Awareness challenge. Involving employees and staff with a cyber security challenge is a great way to boost Cybersecurity Awareness, competence, and confidence.",
+        "part4": "How else to stay safe? Find the right educational resources, security services, and privacy tools."
+      }
+    }
   }
 }
