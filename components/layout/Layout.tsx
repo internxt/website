@@ -29,7 +29,6 @@ export default function Layout({
 }: // lang
 LayoutProps) {
   useEffect(() => {
-    // window.analytics.page(segmentName);
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
