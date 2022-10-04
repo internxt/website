@@ -33,7 +33,7 @@
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
     "net": "^1.0.2",
-    "next": "^12.3.0",
+    "next": "^12.2.5",
     "phosphor-react": "1.4.1",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
