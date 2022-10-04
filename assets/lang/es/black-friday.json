@@ -12,22 +12,22 @@
       },
       "pricingTable": {
         "plan": "2TB",
-        "discount": "60% de descuento",
+        "discount": "60% des.",
         "priceNow": "3.59 €/mes",
         "priceBefore": "8.99 €/mes",
         "footer": {
-          "line1": "Almacenar y compartir archivos encriptado",
+          "line1": "Almacenar y compartir archivos encriptados",
           "line2": "Accede a los archivos desde cualquier dispositivo",
           "line3": "Accede desde todos los dispositivos"
         }
+      },
+      "timer": {
+        "timeTitle": "La oferta de Black Friday termina en:",
+        "days": "días",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "segundos"
       }
-    },
-    "timer": {
-      "timerTitle": "La oferta de Black Friday termina en:",
-      "days": "días",
-      "hours": "horas",
-      "minutes": "minutos",
-      "seconds": "segundos"
     },
     "BestStorage": {
       "title": "La mejor oferta de Black Friday de almacenamiento en la nube",
@@ -35,11 +35,133 @@
     },
     "SuiteSection": {
       "title": "Qué está incluido en la oferta del Black Friday de Internxt",
-      "subtitle": "Internxt tiene un conjunto completo de servicios de nube privada diseñados para ayudarlo a usted y a su familia a mantenerse seguros en línea."
+      "subtitle": "Internxt tiene un conjunto completo de servicios de nube privada diseñados para ayudarlo a usted y a su familia a mantenerse seguros en línea.",
+      "drive": {
+        "title": "Internxt Drive",
+        "subtitle": "Realice una copia de seguridad de sus preciadas recetas familiares con nuestro servicio de almacenamiento en la nube seguro y protegido, Internxt Drive."
+      },
+      "photos": {
+        "title": "Fotos Internxt",
+        "subtitle": "Guarda todas las fotos de tu familia esta temporada navideña con una galería basada en la nube, Fotos de Internxt"
+      },
+      "send": {
+        "title": "Envío interno",
+        "subtitle": "Comparta sus itinerarios de viaje y boletos con nuestro servicio de transferencia de archivos cifrados, Internxt Send"
+      }
     },
-    "drive": {
-      "title": "Internxt Drive",
-      "subtitle": "Realice una copia de seguridad de sus preciadas recetas familiares con nuestro servicio de almacenamiento en la nube seguro y protegido, Internxt Drive."
+    "FeatureSection": {
+      "title": "¿Por qué elegir Internxt?",
+      "subtitle": "Privacidad hecha para todos y seguridad en línea fácil de usar que no necesita ser un experto para entender. Potente pero familiar, Internxt es un almacenamiento en la nube encriptado creado para el uso diario en todos los ámbitos de la vida",
+      "feature1": {
+        "title": "Privado por defecto",
+        "subtitle1": "¡Ningún acceso directo o de terceros a su archivo nunca! Usted tiene el control total de sus datos"
+      },
+      "feature2": {
+        "title": "Sincronización rápida",
+        "subtitle1": "Cifrar, codificar, fragmentar, distribuir y transferir, todo en un abrir y cerrar de ojos"
+      },
+      "feature3": {
+        "title": "Seguro desde el núcleo",
+        "subtitle1": "Construido en blockchain, encriptado de extremo a extremo y descentralizado en una vasta red de igual a igual"
+      },
+      "feature4": {
+        "title": "Compartir de forma segura",
+        "subtitle1": "Envíe archivos y fotos encriptados de un lado a otro a sus personas favoritas a través de un enlace y un correo electrónico"
+      },
+      "feature5": {
+        "title": "Multiplataforma",
+        "subtitle1": "¡Privacidad para todos los dispositivos, navegadores y sistemas operativos! Linux, Windows, macOS, iOS, Android"
+      },
+      "feature6": {
+        "title": "Conocimiento cero",
+        "subtitle1": "Tú eres el único con acceso a tus datos. ¡Ni siquiera internxt puede ver tus archivos!"
+      }
+    },
+    "PlatformSection": {
+      "title": "Disponible en todas las plataformas",
+      "linux": "Linux",
+      "windows": "Windows",
+      "mac": "MacOS",
+      "android": "Android",
+      "iOS": "iOS"
+    },
+    "TestimonialSection": {
+      "title": "Lo que dicen nuestros usuarios sobre Internxt",
+      "cristian": {
+        "text": "Necesitábamos una alternativa de Dropbox que nos permitiera almacenar archivos de clientes y trabajo (archivos de redes sociales) y, como Internxt es compatible con GDPR, ¡se adaptaba perfectamente a nosotros!",
+        "footer": "Cristian"
+      },
+      "josep": {
+        "text": "Uso Google Drive desde hace varios años, pero necesitaba una alternativa que me otorgara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me mudé a Internxt . Por ahora todas mis dudas y preguntas han sido respondidas en unos minutos, y me encanta saber que siempre hay alguien dispuesto a ayudarme.",
+        "footer": "Josep"
+      },
+      "eva": {
+        "text": "Internxt es un servicio de almacenamiento en la nube conveniente para clientes que cuidan su presupuesto. Tiene una interfaz optimizada y un equipo de soporte confiable, lo que lo convierte en una excelente opción para aquellos que necesitan almacenar sus archivos de forma segura",
+        "footer": "Eva"
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "faq": [
+        {
+          "question": "¿Cómo puedo obtener el descuento del Black Friday?",
+          "answer": [
+            "Para aprovechar nuestro descuento de Black Friday, debe hacer clic en Activar su 'oferta de Black Friday' en la parte superior de esta página, y será redirigido directamente a pagar con el descuento ya aplicado a su nuevo plan Internxt de 2 TB"
+          ]
+        },
+        {
+          "question": "¿Cuándo termina la promoción?",
+          "answer": [
+            "Nuestra oferta del Black Friday se extiende desde el 21 de noviembre hasta el 5 de diciembre de 2022"
+          ]
+        },
+        {
+          "question": "¿Quién es elegible para este descuento?",
+          "answer": [
+            "Los nuevos usuarios o cualquier persona con un plan de suscripción gratuito de Internxt de 20 GB o 200 GB son elegibles para participar en nuestra oferta de Black Friday"
+          ]
+        },
+        {
+          "question": "¿Mantendré el descuento cuando finalice mi plan?",
+          "answer": [
+            "El descuento se aplica durante el primer año completo de servicio. Por lo tanto, tendrá acceso a nuestro plan de suscripción de 2 TB a este precio con descuento solo por un año",
+            "Si elige continuar con su servicio, se le cobrará a su cuenta el precio estándar del plan de 2 TB para el año siguiente"
+          ]
+        },
+        {
+          "question": "¿Cuánto costará renovar el plan después del primer año?",
+          "answer": [
+            "El plan de 2 TB cuesta 9,99 €/mes pagado mensualmente o 8,99 €/mes cuando se paga anualmente. Puede consultar todos [nuestros planes de precios y suscripción](https://internxt.com/pricing) en la página web de Internxt"
+          ]
+        },
+        {
+          "question": "¿Qué métodos de pago acepta Internxt?",
+          "answer": [
+            "Actualmente aceptamos pagos con tarjetas de crédito y débito (Mastercard, VISA, American Express, etc.). También puede pagar con Apple y Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, Débito Directo SEPA y [Token de Internxt](https://internxt.com/token)"
+          ]
+        },
+        {
+          "question": "¿Ofrecen algún descuento para organizaciones sin fines de lucro o estudiantes?",
+          "answer": [
+            "Sí, puede obtener un 50% de descuento en cualquier plan de suscripción de Internxt si es miembro de una organización sin fines de lucro u ONG. Contáctenos en [hello@internxt.com](mailto:hello@internxt.com) con las credenciales de su organización para que podemos verificar su elegibilidad y solicitar su descuento.",
+            "También puede obtener un descuento del 50 % si es estudiante. Solicite el descuento y verifique su elegibilidad enviándonos un correo electrónico a [hello@internxt.com](mailto:hello@internxt.com) desde la dirección de correo electrónico de su universidad"
+          ]
+        },
+        {
+          "question": "¿Tienes más preguntas?",
+          "answer": [
+            "Si tiene más preguntas, no dude en comunicarse con nosotros en [hello@internxt.com](mailto:hello@internxt.com) o saludarnos en las redes sociales. ¡Siempre estamos encantados de recibirte!"
+          ]
+        }
+      ]
     }
+  },
+  "cta1": {
+    "title": "¡Activa tu oferta del Black Friday con un 60 % de descuento!",
+    "subtitle": "¡Obtén un 60 % de descuento durante todo un año en nuestro plan de 2 TB más grande!"
+  },
+  "cta2": {
+    "title": "Defiende la privacidad. ¡Elige Internxt!",
+    "subtitle": "Obtenga un descuento en privacidad y tranquilidad. ¡Obtenga un 60 % de descuento durante todo un año de nuestro plan de 2 TB más grande!"
   }
 }

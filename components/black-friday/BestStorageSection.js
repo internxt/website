@@ -11,7 +11,7 @@ const BestStorageSection = ({ textContent, lang }) => {
           <h3 className="text-xl font-thin text-white md:font-normal">{textContent.BestStorage.subtitle}</h3>
         </div>
         <div className="py-9">
-          <ButtonDeal textContent={lang} />
+          <ButtonDeal lang={lang} />
         </div>
         <img
           // loading="lazy"

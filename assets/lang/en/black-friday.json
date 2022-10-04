@@ -160,16 +160,10 @@
   },
   "cta1": {
     "title": "Activate your 60% off Black Friday deal!",
-    "subtitle": "Get 60% off one whole year of our largest 2TB plan!",
-    "button": {
-      "text": "Get the deal"
-    }
+    "subtitle": "Get 60% off one whole year of our largest 2TB plan!"
   },
   "cta2": {
     "title": "Stand with privacy. Choose Internxt!",
-    "subtitle": "Get a discount on privacy and peace of mind. Get 60% off one whole year of our largest 2TB plan!",
-    "button": {
-      "text": "Get the deal"
-    }
+    "subtitle": "Get a discount on privacy and peace of mind. Get 60% off one whole year of our largest 2TB plan!"
   }
 }

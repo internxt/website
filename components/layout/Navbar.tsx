@@ -10,7 +10,7 @@ import LogIn from '../auth/LogIn';
 import SignUp from '../auth/SignUp';
 import ForgotPassword from '../auth/ForgotPassword';
 
-import { openAuthDialog } from '../../lib/auth';
+import { checkout, openAuthDialog } from '../../lib/auth';
 
 export interface NavbarProps {
   textContent: any;
@@ -494,7 +494,7 @@ export default function Navbar(props: NavbarProps) {
             {ctaAction[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={() => ctaAction[1]}
+                onClick={() => checkout(ctaAction[1])}
                 className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'

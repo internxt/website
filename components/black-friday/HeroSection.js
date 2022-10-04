@@ -89,7 +89,11 @@ const HeroSection = ({ textContent, lang, country }) => {
               <ButtonDeal lang={lang} cta={['checkout', checkoutPlan('TB2')]} />
             </div>
           </div>
-          <div className="center my-14 flex h-96 w-80 flex-col items-center rounded-2xl bg-white py-10">
+          <div
+            className={`center my-14 flex ${
+              lang === 'es' ? 'h-[105]' : 'h-96'
+            } w-80 flex-col items-center rounded-2xl bg-white py-10`}
+          >
             <div className="h-8 w-16 rounded-2xl	bg-blue-10 pl-5">
               <p className="items-center">{textContent.HeroSection.pricingTable.plan}</p>
             </div>
@@ -110,19 +114,19 @@ const HeroSection = ({ textContent, lang, country }) => {
               <div className="w-full border-b border-gray-20" />
             </div>
             <div className="flex flex-col">
-              <div className="flex flex-row items-center space-x-2">
+              <div className={`flex flex-row ${lang === 'es' ? 'ml-6 items-start' : 'items-center '} space-x-2`}>
                 <div className="h-4 w-4">
                   <Check size={18} weight={'bold'} />
                 </div>
                 <p>{textContent.HeroSection.pricingTable.footer.line1}</p>
               </div>
-              <div className="flex flex-row items-center space-x-2">
+              <div className={`flex flex-row ${lang === 'es' ? 'ml-6 items-start' : 'items-center'} space-x-2`}>
                 <div className="h-4 w-4">
                   <Check size={18} weight={'bold'} />
                 </div>
                 <p>{textContent.HeroSection.pricingTable.footer.line2}</p>
               </div>
-              <div className="flex flex-row items-center space-x-2">
+              <div className={`flex flex-row ${lang === 'es' ? 'ml-6 items-start' : 'items-center'} space-x-2`}>
                 <div className="h-4 w-4">
                   <Check size={18} weight={'bold'} />
                 </div>

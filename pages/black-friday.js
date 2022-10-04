@@ -12,6 +12,7 @@ import TestimonialsSection from '../components/black-friday/TestimonialsSection'
 import FaqSection from '../components/black-friday/FaqSection';
 import FooterSection from '../components/black-friday/FooterSection';
 import axios from 'axios';
+import { checkout } from '../lib/auth';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
@@ -39,7 +40,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
       segmentName="Black Friday"
       isSendSnackbar={false}
     >
-      <Navbar lang={deviceLang} textContent={navbarLang} cta={['checkout', 'TB2']} hideLogin={true} />
+      <Navbar lang={deviceLang} textContent={navbarLang} cta={['checkout', 'plan_FkTXxEg3GZW0pg']} hideLogin={true} />
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} />
 
@@ -47,7 +48,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <SuiteSection textContent={langJson.blackFriday} />
 
-      <CtaSection textContent={langJson.cta1} />
+      <CtaSection textContent={langJson.cta1} lang={lang} />
 
       <FeatureSection textContent={langJson.blackFriday} />
 
@@ -59,7 +60,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <CtaSection textContent={langJson.cta2} lang={lang} />
 
-      <FooterSection textContent={footerLang} />
+      <FooterSection textContent={footerLang} lang={lang} />
     </Layout>
   );
 };

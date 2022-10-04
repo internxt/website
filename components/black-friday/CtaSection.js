@@ -2,12 +2,8 @@ import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
-const CtaSection = ({ textContent, lang, cta }) => {
+const CtaSection = ({ textContent, lang }) => {
   const billingFrequency = 12;
-
-  function checkoutPlan(plan) {
-    return `${plan}${billingFrequency}`;
-  }
 
   return (
     <section className="overflow-hidden">
@@ -17,7 +13,7 @@ const CtaSection = ({ textContent, lang, cta }) => {
           <p className="text-xl font-light text-white">{textContent.subtitle}</p>
         </div>
         <div className="flex">
-          <ButtonDeal textContent={lang} />
+          <ButtonDeal lang={lang} />
         </div>
       </div>
       <div
