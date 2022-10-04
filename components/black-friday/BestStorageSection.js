@@ -7,7 +7,7 @@ const BestStorageSection = ({ textContent, lang }) => {
     <section className="overflow-hidden">
       <div className="flex flex-col items-center py-24 px-10 text-center md:px-20">
         <div className="top-24 flex flex-col items-center space-y-5">
-          <h1 className="text-3xl text-white md:text-6xl md:font-bold">{textContent.BestStorage.title}</h1>
+          <h1 className="text-4xl font-semibold text-white">{textContent.BestStorage.title}</h1>
           <h3 className="text-xl font-thin text-white md:font-normal">{textContent.BestStorage.subtitle}</h3>
         </div>
         <div className="py-9">
