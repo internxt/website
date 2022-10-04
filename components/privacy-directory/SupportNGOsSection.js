@@ -24,7 +24,7 @@ const SupportNGOsSection = ({ textContent }) => (
       {/* Text */}
       <div className="flex flex-col items-start space-y-6">
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-medium sm:font-medium">{textContent.body.title}</h1>
+        <h2 className="text-base lg:text-5xl sm:font-medium">{textContent.body.title}</h2>
 
         {/* Paragraphs */}
         <div className="flex flex-col space-y-4">
