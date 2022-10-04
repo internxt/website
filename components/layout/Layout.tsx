@@ -12,6 +12,7 @@ interface LayoutProps {
   disableMailerlite?: boolean;
   disableDrift?: boolean;
   isProduction?: boolean;
+  isSendSnackbar?: boolean;
   lang?: string;
 }
 
@@ -21,15 +22,16 @@ export default function Layout({
   description = 'Internxt',
   segmentName = null,
   disableMailerlite = false,
+  isSendSnackbar = true,
   disableDrift = true,
   isProduction = process.env.NODE_ENV === 'production',
   lang,
 }: // lang
-  LayoutProps) {
+LayoutProps) {
   useEffect(() => {
     // window.analytics.page(segmentName);
     window.rudderanalytics.page(segmentName, {
-      brave: isBrave()
+      brave: isBrave(),
     });
     const getStartedLinkList = Array(document.querySelectorAll('[id=get-started-link]'));
 
@@ -62,35 +64,37 @@ export default function Layout({
         />
       </Head>
 
-      <a
-        href="https://send.internxt.com"
-        target="_blank"
-        rel="noreferrer"
-        className="group fixed bottom-0 left-0 w-screen h-16 bg-primary z-50 text-white"
-      >
-        <div className="relative flex flex-row items-center justify-between lg:justify-center h-full mx-auto max-w-screen-xl lg:space-x-10 px-5">
-          <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
-            <div className="flex flex-row items-center h-6 px-2 text-sm rounded-full font-bold bg-white text-primary">
-              {lang === 'en' ? 'NEW' : 'NUEVO'}
+      {isSendSnackbar && (
+        <a
+          href="https://send.internxt.com"
+          target="_blank"
+          rel="noreferrer"
+          className="group fixed bottom-0 left-0 z-50 h-16 w-screen bg-primary text-white"
+        >
+          <div className="relative mx-auto flex h-full max-w-screen-xl flex-row items-center justify-between px-5 lg:justify-center lg:space-x-10">
+            <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
+              <div className="flex h-6 flex-row items-center rounded-full bg-white px-2 text-sm font-bold text-primary">
+                {lang === 'en' ? 'NEW' : 'NUEVO'}
+              </div>
+              <span className="text-lg font-medium">{lang === 'en' ? 'Internxt Send' : 'Internxt Send'}</span>
+              <span className="hidden opacity-75 md:flex">
+                {lang === 'en' ? 'Share files fast in total privacy' : 'Comparte archivos de forma rápida y segura'}
+              </span>
             </div>
-            <span className="font-medium text-lg">{lang === 'en' ? 'Internxt Send' : 'Internxt Send'}</span>
-            <span className="opacity-75 hidden md:flex">
-              {lang === 'en' ? 'Share files fast in total privacy' : 'Comparte archivos de forma rápida y segura'}
-            </span>
-          </div>
-          <div className="flex flex-row items-center h-9 sm:px-4 text-lg rounded-full font-medium sm:group-hover:bg-white sm:group-hover:bg-opacity-15 sm:space-x-1 transition duration-200 ease-in-out">
-            <div className="whitespace-nowrap hidden sm:flex">
-              <span className="hidden sm:flex">{lang === 'en' ? 'Find out now' : 'Probar ahora'}</span>
-              <span className="flex sm:hidden">{lang === 'en' ? 'Find out' : 'Probar ahora'}</span>
+            <div className="flex h-9 flex-row items-center rounded-full text-lg font-medium transition duration-200 ease-in-out sm:space-x-1 sm:px-4 sm:group-hover:bg-white sm:group-hover:bg-opacity-15">
+              <div className="hidden whitespace-nowrap sm:flex">
+                <span className="hidden sm:flex">{lang === 'en' ? 'Find out now' : 'Probar ahora'}</span>
+                <span className="flex sm:hidden">{lang === 'en' ? 'Find out' : 'Probar ahora'}</span>
+              </div>
+              <ArrowRight
+                size={20}
+                weight="bold"
+                className="h-8 w-8 transition duration-200 ease-in-out sm:h-6 sm:w-6 sm:group-hover:translate-x-1"
+              />
             </div>
-            <ArrowRight
-              size={20}
-              weight="bold"
-              className="w-8 sm:w-6 h-8 sm:h-6 sm:group-hover:translate-x-1 transition duration-200 ease-in-out"
-            />
           </div>
-        </div>
-      </a>
+        </a>
+      )}
 
       {children}
     </>

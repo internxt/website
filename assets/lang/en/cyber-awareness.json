@@ -1,0 +1,18 @@
+{
+  "HeroSection": {
+    "paragraph1": {
+      "title": "What is Cyber Awareness?",
+      "body": "Cyber or Cybersecurity Awareness is the continuous process of teaching and training yourself, friends, coworkers, or employees about cyberspace and how to prevent threats and security incidents better.",
+      "body2": "Cyber Awareness aims to give a sense of proactive responsibility for the safety and security of personal or business online information. It's all about being aware of current security risks, cybersecurity best practices, the dangers of clicking on malicious links or downloading an infected attachment, engaging online, giving personal information, and so forth."
+    },
+    "paragraph2": {
+      "title": "What is Cybersecurity Awareness Month?",
+      "body": "October is Cybersecurity Awareness Month, reminding us of the importance of cybersecurity and online security. Many companies and organizations will initiate a cyber awareness challenge encouraging coworkers to improve their cybersecurity skills.",
+      "body2": "Cybersecurity Awareness Month has steadily grown in reach and involvement over the last few years. It has the participation of many tech industry partners who engage and educate customers, employees, and the general public, as well as universities, organizations, and other groups, to raise awareness of the value of robust cybersecurity."
+    },
+    "paragraph3": {
+      "title": "Why is Cyber Awareness important?",
+      "body": "Cyber threats are rising, so Cyber Awareness is critical for keeping your employees and organization secure online. Human mistakes are the primary cause of most data breaches. 80% of all data breaches are caused by human error, meaning 80% of breaches can be avoided with a bit of Cyber Awareness."
+    }
+  }
+}
