@@ -12,7 +12,6 @@ import TestimonialsSection from '../components/black-friday/TestimonialsSection'
 import FaqSection from '../components/black-friday/FaqSection';
 import FooterSection from '../components/black-friday/FooterSection';
 import axios from 'axios';
-import { checkout } from '../lib/auth';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
