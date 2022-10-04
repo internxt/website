@@ -14,14 +14,12 @@ const BestStorageSection = ({ textContent, lang }) => {
           <ButtonDeal lang={lang} />
         </div>
         <img
-          // loading="lazy"
           className="mb-6 hidden md:flex lg:max-w-3xl"
           src="/images/special-offer/black-friday/devices.webp"
           draggable="false"
           alt="Desktop, laptop and phone with Internxt app"
         />
         <img
-          // loading="lazy"
           className="mb-6 flex md:hidden "
           src="/images/home/devicesMobileView.png"
           draggable="false"
