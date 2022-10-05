@@ -26,22 +26,22 @@ const SuiteSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center space-y-20 p-20">
+      <div className="flex flex-col items-center space-y-20 p-10 sm:p-20">
         <p className="text-center text-4xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
-        <div className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-20 md:grid-cols-2 xl:gap-x-20">
+        <div className="grid grid-cols-1 justify-items-center gap-x-80 gap-y-20 md:grid-cols-2">
           {suiteCards.map((card, index) => (
-            <div key={index} className="flex w-96 flex-col space-y-3">
+            <div key={index} className="flex w-96 flex-col space-y-4">
               <img src={card.img} width={32} height={32} />
               <p className="text-2xl font-medium">{card.title}</p>
               <p className="text-lg font-normal">{card.body}</p>
             </div>
           ))}
         </div>
-        <div className="flex h-80 w-full max-w-3xl flex-col items-center justify-between rounded-3xl bg-gradient-to-t from-primary to-primary-dark md:flex-row">
-          <div className="flex h-32 w-96 flex-col justify-center p-16">
+        <div className="flex h-80 w-full max-w-3xl flex-row items-center justify-center rounded-3xl bg-gradient-to-t from-primary to-primary-dark">
+          <div className="flex h-32 w-96 flex-col justify-center p-16 text-center md:text-left">
             <p className="text-3xl font-semibold text-white">{textContent.panel.title}</p>
             <p className="pt-2 text-lg font-light text-white">{textContent.panel.body}</p>
-            <div className="flex pt-8">
+            <div className="flex justify-center pt-8 md:justify-start">
               <a href="/images/cyber-awareness/Checklist.pdf" download={true}>
                 <button className="h-10 w-40 rounded-full bg-white px-6 py-2 text-primary">
                   {textContent.panel.button}
@@ -49,7 +49,7 @@ const SuiteSection = ({ textContent }) => {
               </a>
             </div>
           </div>
-          <img src={'/images/cyber-awareness/Checklist-image.svg'} className="pr-24" />
+          <img src={'/images/cyber-awareness/Checklist-image.svg'} className="hidden pl-16 pr-24 md:flex" />
         </div>
       </div>
     </section>

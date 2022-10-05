@@ -23,13 +23,21 @@
     "cards": {
       "title": "Cyber Awareness information",
       "card-1": "What is phishing?",
+      "link-1": "https://blog.internxt.com/phising-attacks/",
       "card-2": "What is a VPN?",
+      "link-2": "https://blog.internxt.com/best-vpn-services/",
       "card-3": "Stay safe while working remotely",
+      "link-3": "https://blog.internxt.com/remote-work-information-security/",
       "card-4": "Improve your email security",
+      "link-4": "https://blog.internxt.com/email-security-tips/",
       "card-5": "What is cloud security?",
+      "link-5": "https://blog.internxt.com/cloud-security-questions/",
       "card-6": "Common cyber threats?",
+      "link-6": "https://blog.internxt.com/common-cybersecurity-mistakes/",
       "card-7": "Cybersecurity basics",
-      "card-8": "How to create a strong password?"
+      "link-7": "https://blog.internxt.com/is-cybersecurity-hard/",
+      "card-8": "How to create a strong password?",
+      "link-8": "https://blog.internxt.com/how-to-create-a-strong-password/"
     },
     "footer": {
       "title": "It's easy stay safe online!",
@@ -60,8 +68,6 @@
     }
   },
   "VideoSection": {
-    "title": "Want to know more? Here are some informative Cyber Awareness videos",
-    "video-1": "The Five Laws of Cybersecurity | Nick Espinosa | TEDxFondduLac",
-    "video-2": "Why Cybersecurity is Important! | Romeo Farinacci | TEDxGrandCanyonUniversity"
+    "title": "Want to know more? Here are some informative Cyber Awareness videos"
   }
 }
