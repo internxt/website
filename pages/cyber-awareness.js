@@ -6,6 +6,7 @@ import HeroSection from '../components/cyber-awareness/HeroSection';
 import Footer from '../components/layout/Footer';
 import InfoSection from '../components/cyber-awareness/InfoSection';
 import SuiteSection from '../components/cyber-awareness/SuiteSection';
+import VideoSection from '../components/cyber-awareness/VideoSection';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
   return (
@@ -17,6 +18,8 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
       <InfoSection textContent={textContent.InfoSection} />
 
       <SuiteSection textContent={textContent.SuiteSection} />
+
+      <VideoSection textContent={textContent.VideoSection} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
