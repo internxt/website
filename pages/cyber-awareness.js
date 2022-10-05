@@ -5,6 +5,7 @@ import Layout from '../components/layout/Layout';
 import HeroSection from '../components/cyber-awareness/HeroSection';
 import Footer from '../components/layout/Footer';
 import InfoSection from '../components/cyber-awareness/InfoSection';
+import SuiteSection from '../components/cyber-awareness/SuiteSection';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
   return (
@@ -14,6 +15,8 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
       <HeroSection textContent={textContent.HeroSection} />
 
       <InfoSection textContent={textContent.InfoSection} />
+
+      <SuiteSection textContent={textContent.SuiteSection} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
