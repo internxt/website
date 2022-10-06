@@ -5,8 +5,6 @@ const YoutubeFrame = ({ videoId }) => {
     <div className="mx-10 flex flex-col items-center justify-center pb-20 first-letter:flex">
       <iframe
         id="embeddedVideo"
-        // width={893}
-        // height={503}
         src={`https://www.youtube.com/embed/${videoId}`}
         className="md:h-[503px] md:w-[893px]"
         frameBorder="0"
