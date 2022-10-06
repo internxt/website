@@ -12,7 +12,21 @@ import ForgotPassword from '../auth/ForgotPassword';
 
 import { openAuthDialog } from '../../lib/auth';
 
-export default function Navbar({ textContent, lang, cta, darkMode, fixed, className }) {
+export default function Navbar({
+  textContent,
+  lang,
+  cta,
+  darkMode,
+  fixed,
+  className,
+}: {
+  textContent: any;
+  lang: string;
+  cta: string[];
+  darkMode?: boolean;
+  fixed?: boolean;
+  className?: string;
+}) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
   const ctaAction = cta[0] ? cta : ['default', null];
@@ -482,7 +496,7 @@ export default function Navbar({ textContent, lang, cta, darkMode, fixed, classN
             {ctaAction[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={ctaAction[1]}
+                onClick={() => ctaAction[1]}
                 className="flex justify-center rounded-lg border border-transparent bg-blue-60 py-1 px-4 text-base font-medium text-white outline-none transition-all duration-75 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:bg-blue-70 sm:inline-flex"
               >
                 <p className="whitespace-nowrap">{textContent.links.checkout}</p>
