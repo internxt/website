@@ -1,87 +1,92 @@
 [
-    {
-        "id": "home",
-        "title": "Internxt - World's Most Secure Cloud Storage",
-        "description": "Internxt's mission is to help shape a world that respects human privacy rights. Internxt Drive provides a secure, private, encrypted cloud storage service."
-    },
-    {
-        "id": "drive",
-        "title": "Internxt – Drive",
-        "description": "Internxt Drive is a private, secure alternative to Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive and MediaFire. Zero-knowledge encryption, distributed, blockchain cloud storage."
-    },
-    {
-        "id": "photos",
-        "title": "Internxt – Photos",
-        "description": "Zero-knowledge encrypted, private, free and secure alternative to Google Photos. Store your photos on the cloud securely for free."
-    },
-    {
-        "id": "pricing",
-        "title": "Internxt – Pricing",
-        "description": "Internxt's pricing. One membership for all our services. Internxt Drive, Internxt Send, Internxt Photos. Welcome to Internxt."
-    },
-    {
-        "id": "about",
-        "title": "Internxt – About us",
-        "description": "Meet Internxt's Team. Fran Villalba Segarra, Founder and CEO at Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
-    },
-    {
-        "id": "token",
-        "title": "Internxt – Token, the essence that moves Internxt.",
-        "description": "Internxt token. Learn all about our cryptocurrency, INXT. Buy Internxt Tokens from Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
-    },
-    {
-        "id": "legal",
-        "title": "Internxt – Legal Terms and Conditions of use",
-        "description": "Internxt legal terms and conditions of use. Read all terms and conditions where we explain how we process your data."
-    },
-    {
-        "id": "privacy",
-        "title": "Internxt – Privacy",
-        "description": "Privacy is a fundamental human right, at Internxt we design all our applications with privacy and security in mind. We stand for privacy and we always will."
-    },
-    {
-        "id": "virus-scanner",
-        "title": "Internxt – Free Online File Virus Scanner",
-        "description": "Free tool for scanning files for viruses and malware. Protect your personal documents, data, and hardware from online fraud with a quick and easy scan."
-    },
-    {
-        "id": "comparison",
-        "title": "Internxt – Cloud Storage Comparison",
-        "description": "Compare Internxt with all the other services out there. Internxt is the most private and secure alternative to Google Drive, Dropbox, Tresorit, pCloud, Icedrive, Storj, and Sync.com."
-    },
-    {
-        "id": "black-friday",
-        "title": "Internxt – Black Friday",
-        "description": "Grab the best, cheapest, most secure cloud storage deal now with 50% off. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
-    },
-    {
-        "id": "cloudwards",
-        "title": "Internxt – CloudWards Partnership",
-        "description": "Grab the best deals for the most secure cloud storage thanks to Cloudwards. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
-    },
-    {
-        "id": "guru99",
-        "title": "Internxt – Guru99 Partnership",
-        "description": "Grab the best deals for the most secure cloud storage thanks to Guru99. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
-    },
-    {
-        "id": "freemonth",
-        "title": "Internxt – Get 1 Month for free",
-        "description": "Grab the best deals for the most secure cloud storage and get 1 month for free. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
-    },
-    {
-        "id": "landing",
-        "title": "Internxt - Most Secure Cloud Storage",
-        "description": "Internxt provides secure, private and encrypted cloud services like Internxt Drive and Internxt Photos."
-    },
-    {
-        "id": "privacy-directory",
-        "title": "Internxt - Directory of Privacy Organizations, Institutions, and NGOs",
-        "description": "Directory of digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
-    },
-    {
-        "id": "password-checker",
-        "title": "Internxt - Free and Secure Password Checker",
-        "description": "Free password security checker. Check the strength of your passwords with Internxt’s secure online tool."
-    }
+  {
+    "id": "home",
+    "title": "Internxt - World's Most Secure Cloud Storage",
+    "description": "Internxt's mission is to help shape a world that respects human privacy rights. Internxt Drive provides a secure, private, encrypted cloud storage service."
+  },
+  {
+    "id": "drive",
+    "title": "Internxt – Drive",
+    "description": "Internxt Drive is a private, secure alternative to Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive and MediaFire. Zero-knowledge encryption, distributed, blockchain cloud storage."
+  },
+  {
+    "id": "photos",
+    "title": "Internxt – Photos",
+    "description": "Zero-knowledge encrypted, private, free and secure alternative to Google Photos. Store your photos on the cloud securely for free."
+  },
+  {
+    "id": "pricing",
+    "title": "Internxt – Pricing",
+    "description": "Internxt's pricing. One membership for all our services. Internxt Drive, Internxt Send, Internxt Photos. Welcome to Internxt."
+  },
+  {
+    "id": "about",
+    "title": "Internxt – About us",
+    "description": "Meet Internxt's Team. Fran Villalba Segarra, Founder and CEO at Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+  },
+  {
+    "id": "token",
+    "title": "Internxt – Token, the essence that moves Internxt.",
+    "description": "Internxt token. Learn all about our cryptocurrency, INXT. Buy Internxt Tokens from Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
+  },
+  {
+    "id": "legal",
+    "title": "Internxt – Legal Terms and Conditions of use",
+    "description": "Internxt legal terms and conditions of use. Read all terms and conditions where we explain how we process your data."
+  },
+  {
+    "id": "privacy",
+    "title": "Internxt – Privacy",
+    "description": "Privacy is a fundamental human right, at Internxt we design all our applications with privacy and security in mind. We stand for privacy and we always will."
+  },
+  {
+    "id": "virus-scanner",
+    "title": "Internxt – Free Online File Virus Scanner",
+    "description": "Free tool for scanning files for viruses and malware. Protect your personal documents, data, and hardware from online fraud with a quick and easy scan."
+  },
+  {
+    "id": "comparison",
+    "title": "Internxt – Cloud Storage Comparison",
+    "description": "Compare Internxt with all the other services out there. Internxt is the most private and secure alternative to Google Drive, Dropbox, Tresorit, pCloud, Icedrive, Storj, and Sync.com."
+  },
+  {
+    "id": "black-friday",
+    "title": "Internxt – Black Friday",
+    "description": "Grab the best, cheapest, most secure cloud storage deal now with 50% off. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+  },
+  {
+    "id": "cloudwards",
+    "title": "Internxt – CloudWards Partnership",
+    "description": "Grab the best deals for the most secure cloud storage thanks to Cloudwards. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+  },
+  {
+    "id": "guru99",
+    "title": "Internxt – Guru99 Partnership",
+    "description": "Grab the best deals for the most secure cloud storage thanks to Guru99. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+  },
+  {
+    "id": "freemonth",
+    "title": "Internxt – Get 1 Month for free",
+    "description": "Grab the best deals for the most secure cloud storage and get 1 month for free. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+  },
+  {
+    "id": "landing",
+    "title": "Internxt - Most Secure Cloud Storage",
+    "description": "Internxt provides secure, private and encrypted cloud services like Internxt Drive and Internxt Photos."
+  },
+  {
+    "id": "privacy-directory",
+    "title": "Internxt - Directory of Privacy Organizations, Institutions, and NGOs",
+    "description": "Directory of digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
+  },
+  {
+    "id": "password-checker",
+    "title": "Internxt - Free and Secure Password Checker",
+    "description": "Free password security checker. Check the strength of your passwords with Internxt’s secure online tool."
+  },
+  {
+    "id": "cyber-awareness",
+    "title": "Cyber Awareness | Internxt",
+    "description": "What is cyber awareness, how to stay safe online, and everything you need to know about Cybersecurity Awareness Month this October."
+  }
 ]
