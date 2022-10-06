@@ -9,8 +9,15 @@ import SuiteSection from '../components/cyber-awareness/SuiteSection';
 import VideoSection from '../components/cyber-awareness/VideoSection';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
+
   return (
-    <Layout segmentName={'Cyber Awareness'} isSendSnackbar={false}>
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName={'Cyber Awareness'}
+      isSendSnackbar={false}
+    >
       <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
 
       <HeroSection textContent={textContent.HeroSection} />
@@ -28,10 +35,10 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`../assets/lang/${lang}/cyber-awareness.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const textContent = require(`../assets/lang/en/cyber-awareness.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
 
   cookies.setReferralCookie(ctx);
 
