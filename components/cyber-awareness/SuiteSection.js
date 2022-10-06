@@ -42,7 +42,7 @@ const SuiteSection = ({ textContent }) => {
             <p className="text-3xl font-semibold text-white">{textContent.panel.title}</p>
             <p className="pt-2 text-lg font-light text-white">{textContent.panel.body}</p>
             <div className="flex justify-center sm:pt-8 md:justify-start">
-              <a href="/images/cyber-awareness/Checklist.pdf" download={true}>
+              <a href="/images/cyber-awareness/Internxt-Checklist.pdf" download={true}>
                 <button className="h-10 w-40 rounded-full bg-white px-6 py-2 text-primary">
                   {textContent.panel.button}
                 </button>

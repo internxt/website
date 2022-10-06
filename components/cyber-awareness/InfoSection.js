@@ -21,10 +21,6 @@ export const InfoCard = ({ id, title, img, link }) => {
         if (e.target.id == id) setIsShareIcon(id);
       }}
       onMouseLeave={() => setIsShareIcon(false)}
-      onClick={() => {
-        window.open(link, '_blank');
-        console.log(link);
-      }}
       className={`${
         isShareIcon === id
           ? 'flex h-48 w-64 flex-col space-y-4 rounded-2xl bg-white p-3'
@@ -32,7 +28,13 @@ export const InfoCard = ({ id, title, img, link }) => {
       } 
         `}
     >
-      <button className="flex flex-col items-start space-y-8">
+      <button
+        className="flex flex-col items-start space-y-8"
+        onClick={() => {
+          window.open(link, '_blank');
+          console.log(link);
+        }}
+      >
         <img key={id} src={img} width={32} height={32} />
         <p className="flex text-left text-2xl font-medium">{title}</p>
       </button>
