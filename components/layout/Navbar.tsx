@@ -17,7 +17,7 @@ export interface NavbarProps {
   lang: string;
   cta: string[];
   darkMode?: boolean;
-  fixed: boolean;
+  fixed?: boolean;
   hide?: boolean;
   hideLogin?: boolean;
 }
