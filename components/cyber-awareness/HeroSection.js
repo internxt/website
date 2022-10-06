@@ -13,7 +13,7 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <div className="pt-16">
         <div className=" flex h-60 items-center justify-center border-b border-white bg-gradient-to-b from-primary to-primary-dark">
-          <h1 className="text-center text-6xl font-semibold text-white">Cyber Awareness</h1>
+          <h1 className="text-center text-5xl font-semibold text-white sm:text-6xl">Cyber Awareness</h1>
         </div>
         <div className="flex flex-col items-center justify-center p-5 md:p-20">
           <div className="pt-10 xl:px-80">

@@ -26,11 +26,11 @@ const SuiteSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center space-y-20 p-10 sm:p-20">
+      <div className="flex flex-col items-center space-y-20 p-10 px-2 sm:p-20">
         <p className="text-center text-4xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
         <div className="grid grid-cols-1 justify-items-center gap-x-80 gap-y-20 md:grid-cols-2">
           {suiteCards.map((card, index) => (
-            <div key={index} className="flex w-96 flex-col space-y-4">
+            <div key={index} className="flex w-72 flex-col space-y-4 px-2 sm:w-96">
               <img src={card.img} width={32} height={32} />
               <p className="text-2xl font-medium">{card.title}</p>
               <p className="text-lg font-normal">{card.body}</p>
@@ -41,7 +41,7 @@ const SuiteSection = ({ textContent }) => {
           <div className="flex h-32 w-96 flex-col justify-center p-16 text-center md:text-left">
             <p className="text-3xl font-semibold text-white">{textContent.panel.title}</p>
             <p className="pt-2 text-lg font-light text-white">{textContent.panel.body}</p>
-            <div className="flex justify-center pt-8 md:justify-start">
+            <div className="flex justify-center sm:pt-8 md:justify-start">
               <a href="/images/cyber-awareness/Checklist.pdf" download={true}>
                 <button className="h-10 w-40 rounded-full bg-white px-6 py-2 text-primary">
                   {textContent.panel.button}
