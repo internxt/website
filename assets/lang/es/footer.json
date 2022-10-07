@@ -1,65 +1,66 @@
 {
-	"NewsletterSection": {
-		"title": "Newsletter",
-		"description": "¿Quieres saber de nosotros cuando lancemos nuevos productos o una nueva actualización? Introduce tu correo y nosotros nos haremos cargo del resto.",
-		"input": "Tu correo",
-		"info": "Puedes cancelar tu suscripción en cualquier momento",
-		"cta": "Suscribirse",
-		"privacy": "Al suscribirte aceptas nuestra",
-		"privacyLink": "política de privacidad."
-	},
-	"FooterSection": {
-		"description": "La misión de Internxt es ayudar a dar forma a un mundo que respete el derecho a la privacidad. Para ello, desarrollamos una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger este derecho fundamental.",
-		"copyright": "Copyright © 2022, Internxt Universal Technologies SL",
-		"comingSoon": "Próximamente",
-		"new": "Nuevo",
-		"sections": {
-			"products": {
-				"title": "Productos",
-				"drive": "Drive",
-				"photos": "Photos",
-				"send": "Send",
-				"token": "Token",
-				"pricing": "Precios"
-			},
-			"company": {
-				"title": "Compañía",
-				"about": "Sobre nosotros",
-				"privacy": "Privacidad",
-				"security": "Seguridad",
-				"legal": "Legal",
-				"support": "Soporte",
-				"whyInternxt": "¿Por qué Internxt?",
-				"comparison": "Comparativa"
-			},
-			"join": {
-				"title": "Únete",
-				"signup": "Crear cuenta",
-				"login": "Iniciar sesión",
-				"community": "Comunidad",
-				"github": "GitHub",
-				"twitter": "Twitter",
-				"facebook": "Facebook",
-				"linkedin": "LinkedIn",
-				"youtube": "Youtube",
-				"instagram": "Instagram",
-				"mastodon": "Mastodon"
-			},
-			"resources": {
-				"title": "Recursos",
-				"blog": "Blog",
-				"directoryOfPrivacyOrganizations": "Directorio de Organizaciones de Privacidad",
-				"library": "Biblioteca",
-				"writeForUs": "Escribe para nosotros",
-				"cyberSecurityGlossary": "Glosario de ciberseguridad",
-				"fileVirusScan": "Escaner de Virus",
-				"passwordChecker": "Comprobador de Contraseñas"
-			}
-		}
-	},
-	"Cookies": {
-		"title": "Internxt usa cookies para mejorar la experiencia de navegación",
-		"link": "Más información sobre nuestras cookies",
-		"close": "Ok, cerrar"
-	}
+  "NewsletterSection": {
+    "title": "Newsletter",
+    "description": "¿Quieres saber de nosotros cuando lancemos nuevos productos o una nueva actualización? Introduce tu correo y nosotros nos haremos cargo del resto.",
+    "input": "Tu correo",
+    "info": "Puedes cancelar tu suscripción en cualquier momento",
+    "cta": "Suscribirse",
+    "privacy": "Al suscribirte aceptas nuestra",
+    "privacyLink": "política de privacidad."
+  },
+  "FooterSection": {
+    "description": "La misión de Internxt es ayudar a dar forma a un mundo que respete el derecho a la privacidad. Para ello, desarrollamos una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger este derecho fundamental.",
+    "copyright": "Copyright © 2022, Internxt Universal Technologies SL",
+    "comingSoon": "Próximamente",
+    "new": "Nuevo",
+    "sections": {
+      "products": {
+        "title": "Productos",
+        "drive": "Drive",
+        "photos": "Photos",
+        "send": "Send",
+        "token": "Token",
+        "pricing": "Precios"
+      },
+      "company": {
+        "title": "Compañía",
+        "about": "Sobre nosotros",
+        "privacy": "Privacidad",
+        "security": "Seguridad",
+        "legal": "Legal",
+        "support": "Soporte",
+        "whyInternxt": "¿Por qué Internxt?",
+        "comparison": "Comparativa"
+      },
+      "join": {
+        "title": "Únete",
+        "signup": "Crear cuenta",
+        "login": "Iniciar sesión",
+        "community": "Comunidad",
+        "github": "GitHub",
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "youtube": "Youtube",
+        "instagram": "Instagram",
+        "mastodon": "Mastodon"
+      },
+      "resources": {
+        "title": "Recursos",
+        "blog": "Blog",
+        "directoryOfPrivacyOrganizations": "Directorio de Organizaciones de Privacidad",
+        "library": "Biblioteca",
+        "writeForUs": "Escribe para nosotros",
+        "cyberSecurityGlossary": "Glosario de ciberseguridad",
+        "fileVirusScan": "Escaner de Virus",
+        "passwordChecker": "Comprobador de Contraseñas",
+        "cyberAwareness": "Cyber Awareness"
+      }
+    }
+  },
+  "Cookies": {
+    "title": "Internxt usa cookies para mejorar la experiencia de navegación",
+    "link": "Más información sobre nuestras cookies",
+    "close": "Ok, cerrar"
+  }
 }
