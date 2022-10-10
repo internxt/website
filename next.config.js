@@ -74,6 +74,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/cyber-awareness',
+        destination: '/cyber-awareness',
+        permanent: false,
+      },
+      {
         source: '/:lang/login',
         destination: 'https://drive.internxt.com/login',
         permanent: false,
