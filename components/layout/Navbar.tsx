@@ -11,6 +11,7 @@ import SignUp from '../auth/SignUp';
 import ForgotPassword from '../auth/ForgotPassword';
 
 import { checkout, openAuthDialog } from '../../lib/auth';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 export interface NavbarProps {
   textContent: any;
@@ -20,12 +21,15 @@ export interface NavbarProps {
   fixed?: boolean;
   hide?: boolean;
   hideLogin?: boolean;
+  coupon?: string;
 }
 
 export default function Navbar(props: NavbarProps) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
-  const ctaAction = props.cta[0] ? props.cta : [null];
+  const stripeObject = { product: props.cta[1] };
+
+  const isCoupon = props.coupon ? true : false;
 
   // DIALOG MANAGEMENT
 
@@ -96,8 +100,10 @@ export default function Navbar(props: NavbarProps) {
     }
   };
 
-  const redirectToCheckout = (planId: string, couponCode?: string) => {
-    window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}?coupon=${couponCode}`);
+  const redirectToCheckout = (planId: string) => {
+    isCoupon
+      ? window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}&couponCode=${props.coupon}`)
+      : window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
   };
 
   // MESSAGE FILTERING
@@ -475,7 +481,7 @@ export default function Navbar(props: NavbarProps) {
               </button>
             )}
 
-            {ctaAction[0] === 'default' ? (
+            {props.cta[0] === 'default' ? (
               <button
                 onClick={() => openAuthDialog('signup')}
                 id="get-started-link"
@@ -491,10 +497,10 @@ export default function Navbar(props: NavbarProps) {
               ''
             )}
 
-            {ctaAction[0] === 'checkout' ? (
+            {props.cta[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={() => checkout(ctaAction[1])}
+                onClick={() => checkout(getPlanId(stripeObject))}
                 className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'

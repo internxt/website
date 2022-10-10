@@ -12,10 +12,15 @@ import TestimonialsSection from '../components/black-friday/TestimonialsSection'
 import FaqSection from '../components/black-friday/FaqSection';
 import FooterSection from '../components/black-friday/FooterSection';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
   const [country, setCountry] = React.useState('ES');
+  const router = useRouter();
+  const { coupon } = router.query;
+
+  const couponCode = coupon ? coupon : 'BLACKFRIDAY';
 
   async function getCountryCode() {
     const options = {
@@ -39,7 +44,13 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
       segmentName="Black Friday"
       isSendSnackbar={false}
     >
-      <Navbar lang={deviceLang} textContent={navbarLang} cta={['checkout', 'plan_FkTXxEg3GZW0pg']} hideLogin={true} />
+      <Navbar
+        lang={deviceLang}
+        textContent={navbarLang}
+        coupon={couponCode}
+        cta={['checkout', 'TB212']}
+        hideLogin={true}
+      />
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} />
 
@@ -72,6 +83,7 @@ export async function getServerSideProps(ctx) {
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  // const coupon = ctx.query.coupon ? ctx.query.coupon : null;
 
   cookies.setReferralCookie(ctx);
 
@@ -83,6 +95,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       footerLang,
       langJson,
+      // coupon,
     },
   };
 }

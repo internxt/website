@@ -8,11 +8,6 @@ const HeroSection = ({ textContent, lang, country }) => {
   const [countdownDisableHours, setCountdownDisableHours] = useState(false);
   const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
   const [countdownDisableSeconds, setCountdownDisableSeconds] = useState(false);
-  const billingFrequency = 12;
-
-  function checkoutPlan(plan) {
-    return `${plan}${billingFrequency}`;
-  }
 
   const currency = () => {
     switch (country) {
@@ -86,7 +81,7 @@ const HeroSection = ({ textContent, lang, country }) => {
               {textContent.HeroSection.description2}
             </p>
             <div className="pt-12">
-              <ButtonDeal lang={lang} cta={['checkout', checkoutPlan('TB2')]} />
+              <ButtonDeal lang={lang} />
             </div>
           </div>
           <div

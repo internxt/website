@@ -3,8 +3,6 @@ import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
 const CtaSection = ({ textContent, lang }) => {
-  const billingFrequency = 12;
-
   return (
     <section className="overflow-hidden">
       <div className="center my-12 flex flex-col items-center space-y-10 px-10">
