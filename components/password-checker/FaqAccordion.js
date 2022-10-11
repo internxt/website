@@ -12,21 +12,21 @@ const FaqAccordion = ({ question, answer }) => {
         onClick={() => {
           setActive(!active);
         }}
-        className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
+        className="flex flex-row items-center justify-between my-5 text-left space-x-6 hover:text-primary cursor-pointer"
       >
-        <span className="w-full text-lg font-medium sm:text-lg md:text-xl">{question}</span>
-        <PlusCircle size={32} className={`${active && 'rotate-45'} duration-250 transition-transform ease-in-out`} />
+        <span className="w-full text-lg sm:text-lg md:text-xl font-medium">{question}</span>
+        <PlusCircle size={32} className={`${active && 'rotate-45'} transition-transform duration-250 ease-in-out`} />
       </button>
 
-      <span
-        className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
+      <p
+        className={`markdown flex flex-col space-y-3 overflow-hidden will-change-height h-auto ${
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
-        } duration-250 w-full whitespace-pre-wrap pr-14 text-left text-lg text-gray-60 transition-all ease-in-out`}
+        } text-left text-lg w-full pr-14 whitespace-pre-wrap text-gray-60 transition-all duration-250 ease-in-out`}
       >
         {answer.map((text) => (
           <ReactMarkdown key={text}>{text}</ReactMarkdown>
         ))}
-      </span>
+      </p>
     </div>
   );
 };
