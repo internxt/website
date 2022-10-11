@@ -6,19 +6,43 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
-const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
+const Privacy = ({
+  metatagsDescriptions,
+  langJson,
+  navbarLang,
+  footerLang,
+  lang
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
 
   return (
+
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed={false} darkMode />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['default']}
+        fixed={false}
+        darkMode
+      />
 
-      <ManifestoSection textContent={langJson.ManifestoSection} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+      />
 
-      <Footer textContent={footerLang} lang={lang} darkMode />
+      <ManifestoSection
+        textContent={langJson.ManifestoSection}
+      />
+
+      <Footer
+        textContent={footerLang}
+        lang={lang}
+        darkMode
+      />
+
     </Layout>
+
   );
 };
 
@@ -34,11 +58,7 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang,
-      metatagsDescriptions,
-      langJson,
-      navbarLang,
-      footerLang,
+      lang, metatagsDescriptions, langJson, navbarLang, footerLang
     },
   };
 }
