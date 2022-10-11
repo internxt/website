@@ -1,0 +1,169 @@
+{
+  "blackFriday": {
+    "HeroSection": {
+      "title": {
+        "line1": "Le Black friday ",
+        "line2": "est arrivé!"
+      },
+      "description1": "Économisez de l'argent et passez à la confidentialité!",
+      "description2": "Obtenez 60% de réduction sur notre offre annuelle de 2 To.",
+      "button": {
+        "text": "Profitez de l'offre"
+      },
+      "pricingTable": {
+        "plan": "2TB",
+        "discount": "60% off",
+        "priceNow": "3.59",
+        "month": "/mois",
+        "priceBefore": "8.99",
+        "footer": {
+          "line1": "Stockage et partage de fichiers cryptés",
+          "line2": "Accédez à vos fichiers depuis tous les appareils",
+          "line3": "Accédez à tous nos services"
+        }
+      },
+      "timer": {
+        "timeTitle": "L'offre du Black Friday expirera dans:",
+        "days": "Jours",
+        "hours": "heures",
+        "minutes": "minutes",
+        "seconds": "secondes"
+      }
+    },
+    "BestStorage": {
+      "title": "La meilleure offre de stockage en nuage du Black Friday.",
+      "subtitle": "Internxt offre une réduction sur la confidentialité et la sécurité.",
+      "button": {
+        "text": "Obtenez l'offre"
+      }
+    },
+    "SuiteSection": {
+      "title": "Que comprend l'offre Black Friday d'Internxt?",
+      "subtitle": "Internxt propose toute une gamme de services de cloud privé conçus pour vous aider à rester en sécurité en ligne.",
+      "drive": {
+        "title": "Internxt Drive",
+        "subtitle": "Sauvegardez vos recettes de famille les plus précieuses grâce à notre service de stockage en ligne sécurisé, Internxt Drive."
+      },
+      "photos": {
+        "title": "Internxt Photos",
+        "subtitle": "Sauvegardez toutes vos photos de famille dans une galerie en ligne, Internxt Photos."
+      },
+      "send": {
+        "title": "Internxt Send",
+        "subtitle": "Partagez vos itinéraires de voyage et vos billets avec notre service de transfert de fichiers chiffrés, Internxt Send."
+      }
+    },
+    "FeatureSection": {
+      "title": "Pourquoi choisir Internxt?",
+      "subtitle": "Une confidentialité accessible à tous et une sécurité en ligne simple à utiliser qu'il n'est pas nécessaire d'être un expert pour comprendre. Puissant mais familier, Internxt est un stockage en nuage crypté conçu pour une utilisation quotidienne dans tous les domaines.",
+      "feature1": {
+        "title": "Privé par défaut",
+        "subtitle1": "Personne ne pourra jamais accéder à vos fichiers ! Vous avez le contrôle total de vos données."
+      },
+      "feature2": {
+        "title": "Synchronisation rapide",
+        "subtitle1": "Cryptez, brouillez, fragmentez, distribuez et transférez, tout cela très rapidement."
+      },
+      "feature3": {
+        "title": "Sécurisé de bout en bout",
+        "subtitle1": "Construit sur la blockchain, crypté de bout en bout et décentralisé sur un grand réseau peer-to-peer."
+      },
+      "feature4": {
+        "title": "Partage et collaboration en toute sécurité",
+        "subtitle1": "Envoyez des fichiers et des photos chiffrés à vos personnes préférées par lien et par e-mail."
+      },
+      "feature5": {
+        "title": "Multiplateforme",
+        "subtitle1": "Confidentialité pour tous les appareils, navigateurs et systèmes d'exploitation! Linux, Windows, macOS, iOS, Android."
+      },
+      "feature6": {
+        "title": "Connaissance zéro",
+        "subtitle1": "Vous êtes le seul à avoir accès à vos données. Même Internxt ne peut pas voir vos fichiers!"
+      }
+    },
+    "PlatformSection": {
+      "title": "Disponible sur toutes les plateformes",
+      "linux": "Linux",
+      "windows": "Windows",
+      "mac": "MacOS",
+      "android": "Android",
+      "iOS": "iOS"
+    },
+    "TestimonialSection": {
+      "title": "Ce que nos utilisateurs disent d'Internxt",
+      "cristian": {
+        "text": "Nous avions besoin d'une alternative à Dropbox qui nous permette de stocker les fichiers des clients et le travail (fichiers de réseaux sociaux) et, comme Internxt est compatible avec le GDPR, il nous convenait parfaitement!",
+        "footer": "Cristian"
+      },
+      "josep": {
+        "text": "J'utilise Google Drive depuis plusieurs années, mais j'avais besoin d'une alternative qui me garantissait la confidentialité de mes données. Quelque chose que Google ou d'autres plateformes bien connues ne peuvent pas faire. C'est pour cela que je suis passé à Internxt. Pour l'instant, tous mes doutes et toutes mes questions ont trouvé une réponse en quelques minutes, et j'aime savoir qu'il y a toujours quelqu'un qui est prêt à m'aider.",
+        "footer": "Josep"
+      },
+      "eva": {
+        "text": "Internxt est un service de stockage en nuage pratique pour les clients qui se soucient du rapport qualité-prix. Il dispose d'une interface simplifiée et d'une équipe d'assistance fiable, ce qui en fait une excellente option pour ceux qui ont besoin de sauvegarder leurs fichiers en toute sécurité.",
+        "footer": "Eva"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquemment posées",
+      "faq": [
+        {
+          "question": "Comment puis-je bénéficier de la remise du Black Friday?",
+          "answer": [
+            "Pour profiter de notre réduction Black Friday, vous devez cliquer sur \"Obtenir l'offre Black Friday\" sur cette page, et vous serez redirigé directement vers la caisse avec la réduction déjà appliquée à votre plan Internxt de 2 To."
+          ]
+        },
+        {
+          "question": "Quand la promotion prend-elle fin?",
+          "answer": ["Notre vente Black Friday se déroule du 21 novembre au 5 décembre 2022."]
+        },
+        {
+          "question": "Qui peut bénéficier de cette réduction?",
+          "answer": [
+            "Les nouveaux utilisateurs ou toute personne ayant un plan d'abonnement Internxt gratuit, de 20 Go ou de 200 Go peuvent profiter de notre Black Friday Sale."
+          ]
+        },
+        {
+          "question": "Est-ce que je conserverai la réduction à la fin de mon abonnement?",
+          "answer": [
+            "La réduction est appliquée pour la première année complète de service. Par conséquent, vous aurez accès à notre plan d'abonnement de 2 To à ce prix réduit pendant un an seulement.",
+            "Si vous décidez de continuer à utiliser ce plan, votre compte sera facturé au prix standard du plan de 2 To pour l'année suivante."
+          ]
+        },
+        {
+          "question": "Combien coûte le renouvellement de l'abonnement après la première année?",
+          "answer": [
+            "Le plan 2 To coûte 9,99 €/mois en paiement mensuel ou 8,99 €/mois en paiement annuel. Vous pouvez consulter l'ensemble de nos tarifs et plans d'abonnement sur le site d'Internxt."
+          ]
+        },
+        {
+          "question": "Quels sont les moyens de paiement acceptés par Internxt?",
+          "answer": [
+            "Nous acceptons actuellement les paiements par cartes de crédit et de débit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer par Apple et Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit, et [Internxt Token](https://internxt.com/token)."
+          ]
+        },
+        {
+          "question": "Offrez-vous des réductions pour les organisations à but non lucratif ou les étudiants?",
+          "answer": [
+            "Oui, vous pouvez bénéficier d'une réduction de 50% sur tout abonnement Internxt si vous êtes membre d'une organisation à but non lucratif ou d'une ONG. Contactez-nous à l'adresse [hello@internxt.com](mailto:hello@internxt.com) avec les informations d'identification de votre organisation afin que nous puissions vérifier votre éligibilité et demander votre réduction.",
+            "Vous pouvez également bénéficier d'une réduction de 50% si vous êtes étudiant. Demandez la réduction et vérifiez votre éligibilité en nous envoyant un courriel à [hello@internxt.com](mailto:hello@internxt.com) avec votre adresse électronique universitaire."
+          ]
+        },
+        {
+          "question": "Vous avez d'autres questions?",
+          "answer": [
+            "Si vous avez d'autres questions, n'hésitez pas à nous contacter à l'adresse [hello@internxt.com](mailto:hello@internxt.com). Nous sommes toujours ravis d'avoir de vos nouvelles!"
+          ]
+        }
+      ]
+    }
+  },
+  "cta1": {
+    "title": "Activez votre offre de 60% de réduction pour le Black Friday!",
+    "subtitle": "Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!"
+  },
+  "cta2": {
+    "title": "Soutenez la confidentialité. Choisissez Internxt!",
+    "subtitle": "Obtenez offre une réduction sur la confidentialité et la sécurité! Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!"
+  }
+}

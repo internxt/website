@@ -1,0 +1,5 @@
+@supports not (backdrop-filter: none) {
+  .nabvarBgFallback {
+    --tw-bg-opacity: 1;
+  }
+}
