@@ -10,26 +10,26 @@ import LogIn from '../auth/LogIn';
 import SignUp from '../auth/SignUp';
 import ForgotPassword from '../auth/ForgotPassword';
 
-import { checkout, openAuthDialog } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { openAuthDialog } from '../../lib/auth';
 
-export interface NavbarProps {
+export default function Navbar({
+  textContent,
+  lang,
+  cta,
+  darkMode,
+  fixed,
+  className,
+}: {
   textContent: any;
   lang: string;
   cta: string[];
   darkMode?: boolean;
   fixed?: boolean;
-  hide?: boolean;
-  hideLogin?: boolean;
-  coupon?: string;
-}
-
-export default function Navbar(props: NavbarProps) {
+  className?: string;
+}) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
-  const stripeObject = { product: props.cta[1] };
-
-  const isCoupon = props.coupon ? true : false;
+  const ctaAction = cta[0] ? cta : ['default', null];
 
   // DIALOG MANAGEMENT
 
@@ -43,10 +43,10 @@ export default function Navbar(props: NavbarProps) {
   const [recoverSent, setRecoverSent] = useState<boolean>(false);
 
   const authView = {
-    login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={props.textContent.Auth} />,
-    signup: <SignUp error={formError} loading={formLoading} textContent={props.textContent.Auth} />,
+    login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={textContent.Auth} />,
+    signup: <SignUp error={formError} loading={formLoading} textContent={textContent.Auth} />,
     recover: (
-      <ForgotPassword sent={recoverSent} error={formError} loading={formLoading} textContent={props.textContent.Auth} />
+      <ForgotPassword sent={recoverSent} error={formError} loading={formLoading} textContent={textContent.Auth} />
     ),
   };
 
@@ -101,9 +101,7 @@ export default function Navbar(props: NavbarProps) {
   };
 
   const redirectToCheckout = (planId: string) => {
-    isCoupon
-      ? window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}&couponCode=${props.coupon}`)
-      : window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
+    window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
   };
 
   // MESSAGE FILTERING
@@ -191,11 +189,11 @@ export default function Navbar(props: NavbarProps) {
 
   return (
     <div
-      className={`${props.hide ? 'hidden' : ''} section flex items-center ${
-        !menuState && !props.fixed ? 'absolute' : 'fixed'
+      className={`${className ? 'hidden' : ''} section flex items-center ${
+        !menuState && !fixed ? 'absolute' : 'fixed'
       } h-16 w-full bg-white transition-all duration-100 ${
-        props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
-      } ${scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'} ${
+        fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
+      } ${scrolled && fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
       } z-40 border-b border-black`}
     >
@@ -207,7 +205,7 @@ export default function Navbar(props: NavbarProps) {
               <Hamburger
                 label="Show menu"
                 size={24}
-                color={props.darkMode && !menuState ? '#fff' : '#253858'}
+                color={darkMode && !menuState ? '#fff' : '#253858'}
                 toggled={menuState}
                 toggle={setMenuState}
               />
@@ -226,7 +224,7 @@ export default function Navbar(props: NavbarProps) {
                 }`}
               >
                 <div className="my-6 font-medium">
-                  <Link href="/pricing" locale={props.lang}>
+                  <Link href="/pricing" locale={lang}>
                     <a
                       role="link"
                       tabIndex={0}
@@ -237,7 +235,7 @@ export default function Navbar(props: NavbarProps) {
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
-                      {props.textContent.links.pricing}
+                      {textContent.links.pricing}
                     </a>
                   </Link>
 
@@ -254,7 +252,7 @@ export default function Navbar(props: NavbarProps) {
                               open ? 'bg-cool-gray-10' : ''
                             }`}
                           >
-                            <span>{props.textContent.links.products}</span>
+                            <span>{textContent.links.products}</span>
                             <span className="relative h-6 w-6">
                               <UilMinus
                                 className={`absolute top-0 left-0 h-6 w-6 transition duration-300 ${
@@ -278,7 +276,7 @@ export default function Navbar(props: NavbarProps) {
                             leaveTo="scale-95 opacity-0"
                           >
                             <Disclosure.Panel className="mb-4 flex flex-col py-3 text-cool-gray-80">
-                              <Link href="/drive" locale={props.lang}>
+                              <Link href="/drive" locale={lang}>
                                 <a
                                   tabIndex={0}
                                   onClick={() => {
@@ -286,11 +284,11 @@ export default function Navbar(props: NavbarProps) {
                                   }}
                                   className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
                                 >
-                                  {props.textContent.products.drive}
+                                  {textContent.products.drive}
                                 </a>
                               </Link>
 
-                              <Link href="/photos" locale={props.lang}>
+                              <Link href="/photos" locale={lang}>
                                 <a
                                   tabIndex={0}
                                   onClick={() => {
@@ -298,7 +296,7 @@ export default function Navbar(props: NavbarProps) {
                                   }}
                                   className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
                                 >
-                                  {props.textContent.products.photos}
+                                  {textContent.products.photos}
                                 </a>
                               </Link>
 
@@ -308,9 +306,9 @@ export default function Navbar(props: NavbarProps) {
                                 rel="noreferrer"
                                 className="flex w-full items-center justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
                               >
-                                <span>{props.textContent.products.send}</span>
+                                <span>{textContent.products.send}</span>
                                 <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
-                                  {props.textContent.products.new}
+                                  {textContent.products.new}
                                 </span>
                               </a>
                             </Disclosure.Panel>
@@ -320,7 +318,7 @@ export default function Navbar(props: NavbarProps) {
                     )}
                   </Disclosure>
 
-                  <Link href="/privacy" locale={props.lang}>
+                  <Link href="/privacy" locale={lang}>
                     <a
                       role="link"
                       tabIndex={0}
@@ -331,11 +329,11 @@ export default function Navbar(props: NavbarProps) {
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
-                      {props.textContent.links.privacy}
+                      {textContent.links.privacy}
                     </a>
                   </Link>
 
-                  <Link href="/about" locale={props.lang}>
+                  <Link href="/about" locale={lang}>
                     <a
                       role="link"
                       tabIndex={0}
@@ -346,7 +344,7 @@ export default function Navbar(props: NavbarProps) {
                         menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                       }`}
                     >
-                      {props.textContent.links.about}
+                      {textContent.links.about}
                     </a>
                   </Link>
 
@@ -360,19 +358,19 @@ export default function Navbar(props: NavbarProps) {
                       menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                     }`}
                   >
-                    {props.textContent.links.login}
+                    {textContent.links.login}
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Logo */}
-            <Link href="/" locale={props.lang} passHref>
+            <Link href="/" locale={lang} passHref>
               <a className="flex flex-shrink-0">
                 <img
                   loading="lazy"
                   className="select-none"
-                  src={`../../logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`}
+                  src={`../../logos/internxt/${darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`}
                   alt="Internxt logo"
                 />
               </a>
@@ -382,24 +380,24 @@ export default function Navbar(props: NavbarProps) {
           {/* Desktop links */}
           <div className="links">
             <div className="hidden space-x-2 lg:inline-flex">
-              <Link href="/pricing" locale={props.lang}>
+              <Link href="/pricing" locale={lang}>
                 <a
                   className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
+                    darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
                   } text-base font-medium`}
                 >
-                  {props.textContent.links.pricing}
+                  {textContent.links.pricing}
                 </a>
               </Link>
 
               <div
                 className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
-                  props.darkMode
+                  darkMode
                     ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
                     : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-cool-gray-90'
                 } cursor-default rounded-lg`}
               >
-                <span>{props.textContent.links.products}</span>
+                <span>{textContent.links.products}</span>
                 <UilAngleDown className="h-6 w-6 translate-y-px text-cool-gray-20 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
 
                 {/* Menu items */}
@@ -407,23 +405,23 @@ export default function Navbar(props: NavbarProps) {
                   <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
                   <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
-                    <Link href="/drive" locale={props.lang}>
+                    <Link href="/drive" locale={lang}>
                       <a
                         className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
                         }`}
                       >
-                        {props.textContent.products.drive}
+                        {textContent.products.drive}
                       </a>
                     </Link>
 
-                    <Link href="/photos" locale={props.lang}>
+                    <Link href="/photos" locale={lang}>
                       <a
                         className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
                         }`}
                       >
-                        {props.textContent.products.photos}
+                        {textContent.products.photos}
                       </a>
                     </Link>
 
@@ -432,35 +430,35 @@ export default function Navbar(props: NavbarProps) {
                       target="_blank"
                       rel="noreferrer"
                       className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                        props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                        darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
                       }`}
                     >
-                      <span>{props.textContent.products.send}</span>
+                      <span>{textContent.products.send}</span>
                       <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
-                        {props.textContent.products.new}
+                        {textContent.products.new}
                       </span>
                     </a>
                   </div>
                 </div>
               </div>
 
-              <Link href="/privacy" locale={props.lang}>
+              <Link href="/privacy" locale={lang}>
                 <a
                   className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
+                    darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
                   } text-base font-medium`}
                 >
-                  {props.textContent.links.privacy}
+                  {textContent.links.privacy}
                 </a>
               </Link>
 
-              <Link href="/about" locale={props.lang}>
+              <Link href="/about" locale={lang}>
                 <a
                   className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
+                    darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
                   } text-base font-medium`}
                 >
-                  {props.textContent.links.about}
+                  {textContent.links.about}
                 </a>
               </Link>
             </div>
@@ -468,46 +466,40 @@ export default function Navbar(props: NavbarProps) {
 
           {/* Login and CTA */}
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
-            {props.hideLogin ? null : (
-              <button
-                onClick={() => openAuthDialog('login')}
-                className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
-                  props.darkMode && !menuState
-                    ? 'border-white text-white focus:opacity-80'
-                    : 'border-primary text-primary active:border-primary-dark active:text-primary-dark'
-                } text-sm font-medium`}
-              >
-                {props.textContent.links.login}
-              </button>
-            )}
+            <button
+              onClick={() => openAuthDialog('login')}
+              className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
+                darkMode && !menuState
+                  ? 'border-white text-white focus:opacity-80'
+                  : 'border-primary text-primary active:border-primary-dark active:text-primary-dark'
+              } text-sm font-medium`}
+            >
+              {textContent.links.login}
+            </button>
 
-            {props.cta[0] === 'default' ? (
+            {ctaAction[0] === 'default' ? (
               <button
                 onClick={() => openAuthDialog('signup')}
                 id="get-started-link"
                 className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
-                  props.darkMode && !menuState
+                  darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
                     : 'bg-primary text-white active:bg-primary-dark'
                 } transition-all duration-75`}
               >
-                <p className="whitespace-nowrap">{props.textContent.links.getStarted}</p>
+                <p className="whitespace-nowrap">{textContent.links.getStarted}</p>
               </button>
             ) : (
               ''
             )}
 
-            {props.cta[0] === 'checkout' ? (
+            {ctaAction[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={() => checkout(getPlanId(stripeObject))}
-                className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
-                  props.darkMode && !menuState
-                    ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
-                    : 'bg-primary text-white active:bg-primary-dark'
-                } transition-all duration-75`}
+                onClick={() => ctaAction[1]}
+                className="flex justify-center rounded-lg border border-transparent bg-blue-60 py-1 px-4 text-base font-medium text-white outline-none transition-all duration-75 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:bg-blue-70 sm:inline-flex"
               >
-                <p className="whitespace-nowrap">{props.textContent.links.checkout}</p>
+                <p className="whitespace-nowrap">{textContent.links.checkout}</p>
               </button>
             ) : (
               ''
