@@ -1,0 +1,66 @@
+{
+  "NewsletterSection": {
+    "title": "Newsletter",
+    "description": "Vous voulez être tenu au courant du lancement de nouveaux produits ou de nouvelles mises à jour? Saisissez votre adresse électronique et nous nous occuperons du reste.",
+    "input": "Adresse électronique",
+    "info": "Puedes cancelar tu suscripción en cualquier momento",
+    "cta": "S’àbonner",
+    "privacy": "En vous abonnant, vous acceptez",
+    "privacyLink": "notre politique de confidentialité."
+  },
+  "FooterSection": {
+    "description": "La misión de Internxt es ayudar a dar forma a un mundo que respete el derecho a la privacidad. Para ello, desarrollamos una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger este derecho fundamental.",
+    "copyright": "Copyright © 2022, Internxt Universal Technologies SL",
+    "comingSoon": "Próximamente",
+    "new": "Nuevo",
+    "sections": {
+      "products": {
+        "title": "Produits",
+        "drive": "Drive",
+        "photos": "Photos",
+        "send": "Send",
+        "token": "Token",
+        "pricing": "Tarifs"
+      },
+      "company": {
+        "title": "Enterprise",
+        "about": "À propos",
+        "privacy": "Confidentialité",
+        "security": "Securité",
+        "legal": "Mentions légales",
+        "support": "Support",
+        "whyInternxt": "¿Por qué Internxt?",
+        "comparison": "Comparatif"
+      },
+      "join": {
+        "title": "Rejoindre",
+        "signup": "Créer un compte",
+        "login": "Connexion",
+        "community": "Communauté",
+        "github": "GitHub",
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "youtube": "Youtube",
+        "instagram": "Instagram",
+        "mastodon": "Mastodon"
+      },
+      "resources": {
+        "title": "Ressources",
+        "blog": "Blog",
+        "directoryOfPrivacyOrganizations": "Annuaire des organismes de protection de la vie privée",
+        "library": "Biblioteca",
+        "writeForUs": "Escribe para nosotros",
+        "cyberSecurityGlossary": "Glosario de ciberseguridad",
+        "fileVirusScan": "Scanner de virus",
+        "passwordChecker": "Vérifier mot de passe",
+        "cyberAwareness": "Cyber Awareness"
+      }
+    }
+  },
+  "Cookies": {
+    "title": "Internxt utilise des cookies pour améliorer l'expérience de navigation",
+    "link": "Plus d'informations sur nos cookies",
+    "close": "D'accord, fermer"
+  }
+}

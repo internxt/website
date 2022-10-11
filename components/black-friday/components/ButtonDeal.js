@@ -12,7 +12,7 @@ const ButtonDeal = ({ lang }) => {
           checkout(getPlanId(stripeObject));
         }}
       >
-        {lang === 'es' ? 'Obtén la oferta' : 'Get the deal'}
+        {lang === 'fr' ? "Obtenez l'offre" : 'Get the deal'}
       </button>
     </>
   );

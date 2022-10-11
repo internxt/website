@@ -79,6 +79,8 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
+  lang === 'en' ? (ctx.locale = 'en') : (ctx.locale = 'fr');
+
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
