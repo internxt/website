@@ -76,16 +76,16 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
+  const language = ctx.locale;
   const deviceLang = ctx.locale;
+  let lang;
 
-  lang === 'en' ? (ctx.locale = 'en') : (ctx.locale = 'fr');
+  language === 'fr' ? (lang = 'fr') : (lang = 'en');
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  // const coupon = ctx.query.coupon ? ctx.query.coupon : null;
 
   cookies.setReferralCookie(ctx);
 
