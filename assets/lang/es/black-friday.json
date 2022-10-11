@@ -106,7 +106,7 @@
         {
           "question": "¿Cómo puedo obtener el descuento del Black Friday?",
           "answer": [
-            "Para aprovechar nuestro descuento de Black Friday, debe hacer clic en Activar su 'oferta de Black Friday' en la parte superior de esta página, y será redirigido directamente a pagar con el descuento ya aplicado a su nuevo plan Internxt de 2 TB"
+            "Para aprovechar nuestro descuento del Black Friday, debe hacer clic en uno de los botones “Obtener la oferta” ubicados en esta página, y será redirigido directamente al pago con el descuento ya aplicado a su nuevo plan Internxt de 2 TB."
           ]
         },
         {
@@ -124,14 +124,14 @@
         {
           "question": "¿Mantendré el descuento cuando finalice mi plan?",
           "answer": [
-            "El descuento se aplica durante el primer año completo de servicio. Por lo tanto, tendrá acceso a nuestro plan de suscripción de 2 TB a este precio con descuento solo por un año",
-            "Si elige continuar con su servicio, se le cobrará a su cuenta el precio estándar del plan de 2 TB para el año siguiente"
+            "El descuento se aplica para el primer año completo de servicio. Por lo tanto, tendrá acceso a nuestro plan de suscripción de 2 TB a este precio con descuento por solo un año.",
+            "Si elige continuar con su servicio, se le cobrará a su cuenta el precio estándar del plan de 2 TB el año siguiente."
           ]
         },
         {
           "question": "¿Cuánto costará renovar el plan después del primer año?",
           "answer": [
-            "El plan de 2 TB cuesta 9,99 €/mes pagado mensualmente o 8,99 €/mes cuando se paga anualmente. Puede consultar todos [nuestros planes de precios y suscripción](https://internxt.com/pricing) en la página web de Internxt"
+            "El plan de 2 TB cuesta 9,99 €/mes mensualmente o 8,99 €/mes cuando se paga anualmente. Puede consultar todos [nuestros planes de precios y suscripción](https://internxt.com/pricing) en la página web de Internxt"
           ]
         },
         {
@@ -144,7 +144,7 @@
           "question": "¿Ofrecen algún descuento para organizaciones sin fines de lucro o estudiantes?",
           "answer": [
             "Sí, puede obtener un 50% de descuento en cualquier plan de suscripción de Internxt si es miembro de una organización sin fines de lucro u ONG. Contáctenos en [hello@internxt.com](mailto:hello@internxt.com) con las credenciales de su organización para que podemos verificar su elegibilidad y solicitar su descuento.",
-            "También puede obtener un descuento del 50 % si es estudiante. Solicite el descuento y verifique su elegibilidad enviándonos un correo electrónico a [hello@internxt.com](mailto:hello@internxt.com) desde la dirección de correo electrónico de su universidad"
+            "También puede obtener un descuento del 50% si es estudiante. Solicite el descuento y verifique su elegibilidad enviándonos un correo electrónico a [hello@internxt.com](mailto:hello@internxt.com) desde la dirección de correo electrónico de su universidad"
           ]
         },
         {
@@ -157,11 +157,11 @@
     }
   },
   "cta1": {
-    "title": "¡Activa tu oferta del Black Friday con un 60 % de descuento!",
-    "subtitle": "¡Obtén un 60 % de descuento durante todo un año en nuestro plan de 2 TB más grande!"
+    "title": "¡Activa tu oferta del Black Friday con un 60% de descuento!",
+    "subtitle": "¡Obtén un 60% de descuento durante todo un año en nuestro plan de 2 TB, el más grande!"
   },
   "cta2": {
     "title": "Defiende la privacidad. ¡Elige Internxt!",
-    "subtitle": "Obtenga un descuento en privacidad y tranquilidad. ¡Obtenga un 60 % de descuento durante todo un año de nuestro plan de 2 TB más grande!"
+    "subtitle": "Obtenga un descuento en privacidad y tranquilidad. ¡Obtenga un 60% de descuento durante todo un año de nuestro plan de 2 TB más grande!"
   }
 }
