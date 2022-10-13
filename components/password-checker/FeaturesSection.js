@@ -17,25 +17,25 @@ const FeaturesSection = ({ textContent, lang }) => {
   return (
     <section className="relative">
       {/* Password tips and rules */}
-      <div className="flex w-full flex-col items-center justify-center bg-gray-5 bg-opacity-50">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
-          <div className="flex w-full flex-col items-center space-y-16">
+      <div className="flex flex-col w-full items-center justify-center bg-gray-5 bg-opacity-50">
+        <div className="flex flex-col items-center justify-center py-10 sm:pt-20 px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
+          <div className="flex flex-col w-full items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2">
-              <h3 className="text-3xl font-medium lg:text-2xl">{textContent.section1.title}</h3>
+              <h3 className="text-3xl lg:text-2xl font-medium">{textContent.section1.title}</h3>
 
               <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section1.subtitle}</p>
             </div>
 
             <div className="flex flex-col space-y-3 px-2">
-              <h3 className="text-3xl font-medium lg:text-2xl">{textContent.section2.title}</h3>
+              <h3 className="text-3xl lg:text-2xl font-medium">{textContent.section2.title}</h3>
 
               <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section2.subtitle}</p>
             </div>
 
-            <div className="grid auto-rows-auto grid-cols-1 gap-5 px-1 sm:grid-cols-2 lg:max-w-max lg:grid-cols-3">
+            <div className="grid auto-rows-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-1 lg:max-w-max">
               {textContent.section2.tips.map((tip, index) => (
-                <div key={tip} className="flex flex-row rounded-2xl bg-white p-8 sm:flex-col lg:h-48 lg:w-64">
-                  <div className="flex h-full flex-col pb-3 pr-6 text-primary">{tipIcons[index]}</div>
+                <div key={tip} className="flex flex-row sm:flex-col lg:w-64 lg:h-48 bg-white rounded-2xl p-8">
+                  <div className="flex flex-col h-full text-primary pb-3 pr-6">{tipIcons[index]}</div>
 
                   <span className="text-2xl tracking-tight">{tip}</span>
                 </div>
@@ -46,15 +46,15 @@ const FeaturesSection = ({ textContent, lang }) => {
       </div>
 
       {/* Password tool info */}
-      <div className="flex w-full flex-col items-center justify-center bg-white">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
-          <div className="flex w-full flex-col items-center space-y-16">
+      <div className="flex flex-col w-full items-center justify-center bg-white">
+        <div className="flex flex-col items-center justify-center py-10 sm:pt-20 px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
+          <div className="flex flex-col items-center w-full space-y-16">
             <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-2xl font-medium">{textContent.section3.title}</h3>
 
               <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section3.subtitle}</p>
 
-              <ul className="list-disc space-y-1.5 pl-6 lg:max-w-2xl">
+              <ul className="lg:max-w-2xl list-disc pl-6 space-y-1.5">
                 {textContent.section3.features.map((feature) => (
                   <li key={feature} className="text-lg font-medium">
                     {feature}
@@ -114,10 +114,10 @@ const FeaturesSection = ({ textContent, lang }) => {
           </div>
 
           {/* Create account */}
-          <div className="flex flex-col-reverse items-stretch justify-center overflow-hidden rounded-3xl bg-white shadow-box-floating md:flex-row">
-            <div className="flex flex-col items-start justify-start space-y-8 p-8 md:mr-6 md:p-16">
+          <div className="flex flex-col-reverse md:flex-row items-stretch justify-center bg-white shadow-box-floating rounded-3xl overflow-hidden">
+            <div className="flex flex-col items-start justify-start p-8 md:p-16 md:mr-6 space-y-8">
               <div className="flex flex-col space-y-2">
-                <h3 className="text-2xl font-medium md:text-3xl">
+                <h3 className="text-2xl md:text-3xl font-medium">
                   {textContent.createAccount.title.line1}
                   <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line2}
                   <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line3}
@@ -134,20 +134,20 @@ const FeaturesSection = ({ textContent, lang }) => {
                 href="https://drive.internxt.com/new"
                 target="_top"
                 rel="noreferrer"
-                className="flex h-11 w-full flex-row items-center justify-center rounded-lg border border-transparent bg-primary px-5 text-lg font-medium text-white focus:bg-primary-dark focus:outline-none sm:whitespace-nowrap sm:text-base md:w-auto"
+                className="flex flex-row justify-center items-center px-5 h-11 w-full md:w-auto border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary focus:bg-primary-dark focus:outline-none sm:whitespace-nowrap"
               >
                 <span>
                   {textContent.createAccount.cta.getUpTo10GB}
                   &nbsp;
                 </span>
-                <span className="font-normal opacity-75">{textContent.createAccount.cta.forFree}</span>
+                <span className="opacity-75 font-normal">{textContent.createAccount.cta.forFree}</span>
               </a>
             </div>
 
-            <div className="flex w-full flex-col px-8 pt-10 md:w-64 md:px-0 md:pt-16 lg:w-80">
+            <div className="flex flex-col w-full md:w-64 lg:w-80 pt-10 md:pt-16 px-8 md:px-0">
               <img
                 loading="lazy"
-                className="h-full w-full object-cover object-left-top"
+                className="object-cover object-left-top w-full h-full"
                 src="/images/comparison/iphone-and-mac.webp"
                 draggable="false"
                 alt="Internxt Drive web and mobile apps"
@@ -199,11 +199,11 @@ const FeaturesSection = ({ textContent, lang }) => {
       </div>
 
       {/* Password FAQ */}
-      <div className="flex w-full flex-col items-center justify-center bg-gray-5 bg-opacity-50">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-12 px-6 pt-20 pb-5 lg:p-16">
-          <h4 className="text-center text-3xl font-medium lg:text-4xl">{textContent.faq.title}</h4>
+      <div className="flex flex-col w-full items-center justify-center bg-gray-5 bg-opacity-50">
+        <div className="flex flex-col items-center justify-center pt-20 pb-5 px-6 lg:p-16 w-full mx-auto max-w-screen-xl space-y-12">
+          <h4 className="text-3xl lg:text-4xl font-medium text-center">{textContent.faq.title}</h4>
 
-          <div className="flex w-full max-w-screen-sm flex-col divide-y divide-gray-10">
+          <div className="flex flex-col w-full max-w-screen-sm divide-y divide-gray-10">
             {textContent.faq.faq.map((item) => (
               <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
             ))}
