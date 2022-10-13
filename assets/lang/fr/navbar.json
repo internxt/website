@@ -1,0 +1,84 @@
+{
+  "links": {
+    "products": "Produits",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "pricing": "Tarifs",
+    "login": "Se connecter",
+    "getStarted": "Commencer",
+    "checkout": "Offre de réclamation"
+  },
+  "products": {
+    "drive": "Drive",
+    "photos": "Photos",
+    "send": "Send",
+    "comingSoon": "Proximité",
+    "new": "Nouveauvo"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Créer un compte en Internxt",
+      "or": "o",
+      "login": "Se connecter",
+      "disclaimer": {
+        "text": "Al crear una cuenta aceptas los",
+        "link": "términos y condiciones"
+      },
+      "fields": {
+        "email": {
+          "label": "Courrier",
+          "placeholder": "Courrier"
+        },
+        "password": {
+          "label": "Mot de passe",
+          "placeholder": "Mot de passe",
+          "strength": {
+            "complexity": "La contraseña no es compleja",
+            "length": "La contraseña debe tener mínimo 8 dígitos",
+            "weak": "La contraseña es débil",
+            "strong": "La contraseña es fuerte"
+          }
+        },
+        "submit": "commencez maintenant"
+      }
+    },
+    "LogIn": {
+      "title": "Se connecter Internxt",
+      "or": "o",
+      "signup": "Créer un compte",
+      "fields": {
+        "email": {
+          "label": "Courrier",
+          "placeholder": "Courrier"
+        },
+        "password": {
+          "label": "mot de passe",
+          "placeholder": "mot de passe",
+          "helper": "¿Oublié votre mot de passe?"
+        },
+        "tfa": {
+          "label": "Authentification à deux facteurs",
+          "placeholder": "Code facteur double",
+          "hint": "Le code 2FA doit comporter 6 chiffres"
+        },
+        "submit": "Commencer"
+      }
+    },
+    "Recover": {
+      "title": "Récupérer le compte",
+      "back": "Retour connexion",
+      "disclaimer": "Comme spécifié dans les paramètres de l'application, vous seul avez accès à votre mot de passe, nous ne pouvons donc pas restaurer votre compte sans celui-ci. Vous pouvez vous réinscrire en entrant votre email ci-dessous afin que nous puissions supprimer votre compte et tous vos fichiers.",
+      "fields": {
+        "email": {
+          "label": "Courrier",
+          "placeholder": "Courrier"
+        },
+        "submit": "Envoyer la confirmation"
+      },
+      "success": {
+        "title": "Vérifie ton courrier",
+        "subtitle": "Nous vous avons envoyé un lien de réinitialisation pour"
+      }
+    }
+  }
+}

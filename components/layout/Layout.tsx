@@ -21,15 +21,14 @@ export default function Layout({
   title = 'Internxt',
   description = 'Internxt',
   segmentName = null,
-  isSendSnackbar = true,
   disableMailerlite = false,
   disableDrift = true,
   isProduction = process.env.NODE_ENV === 'production',
+  isSendSnackbar = true,
   lang,
 }: // lang
 LayoutProps) {
   useEffect(() => {
-    // window.analytics.page(segmentName);
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
@@ -63,7 +62,8 @@ LayoutProps) {
           }}
         />
       </Head>
-      {isSendSnackbar ?? (
+
+      {isSendSnackbar && (
         <a
           href="https://send.internxt.com"
           target="_blank"
@@ -94,7 +94,6 @@ LayoutProps) {
           </div>
         </a>
       )}
-
       {children}
     </>
   );
