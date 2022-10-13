@@ -76,11 +76,8 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 };
 
 export async function getServerSideProps(ctx) {
-  const language = ctx.locale;
+  const lang = ctx.locale;
   const deviceLang = ctx.locale;
-  let lang;
-
-  language === 'fr' ? (lang = 'fr') : (lang = 'en');
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
@@ -97,7 +94,6 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       footerLang,
       langJson,
-      // coupon,
     },
   };
 }
