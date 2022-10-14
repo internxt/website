@@ -3,11 +3,14 @@ import React, { useState, useEffect } from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
-const HeroSection = ({ textContent, lang, country }) => {
+const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
   const [countdownDisableDays, setCountdownDisableDays] = useState(false);
   const [countdownDisableHours, setCountdownDisableHours] = useState(false);
   const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
   const [countdownDisableSeconds, setCountdownDisableSeconds] = useState(false);
+  const HeroSectionDescription2 = isAffiliate
+    ? textContent.HeroSection.description2.replace('6', '7')
+    : textContent.HeroSection.description2;
 
   const currency = () => {
     switch (country) {
@@ -62,15 +65,15 @@ const HeroSection = ({ textContent, lang, country }) => {
   }
 
   useEffect(() => {
-    CountDownTimer('2022-11-27T00:00:00', 'countdown');
+    CountDownTimer('2022-12-05T00:00:00', 'countdown');
   });
 
   return (
     <section className="overflow-hidden">
-      <div className="mx-4 border-b pt-24 lg:mx-10 xl:mx-32">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between border-blue-10 sm:mb-6 md:flex-row">
+      <div className="mx-4 border-b py-24 lg:mx-10 xl:mx-32">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-around border-primary/5 sm:mb-6 md:flex-row">
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-20 lg:ml-0 lg:max-w-lg">
-            <h1 className="text-center text-6xl font-semibold text-white md:text-left">
+            <h1 className="text-center text-7xl font-semibold text-white md:text-left">
               {textContent.HeroSection.title.line1}
               <br />
               {textContent.HeroSection.title.line2}
@@ -78,26 +81,24 @@ const HeroSection = ({ textContent, lang, country }) => {
             <p className="mt-8 text-center text-xl text-white  md:text-left">
               {textContent.HeroSection.description1}
               <br />
-              {textContent.HeroSection.description2}
+              {HeroSectionDescription2}
             </p>
             <div className="pt-12">
               <ButtonDeal lang={lang} />
             </div>
           </div>
-          <div
-            className={`center my-14 flex ${
-              lang === 'fr' ? 'h-[100]' : 'h-96'
-            } w-80 flex-col items-center rounded-2xl bg-white py-10`}
-          >
-            <div className="h-8 w-16 rounded-2xl	bg-blue-10 pl-5">
-              <p className="items-center">{textContent.HeroSection.pricingTable.plan}</p>
+          <div className={`my-14 flex w-[320px] flex-col items-center rounded-2xl bg-white py-10`}>
+            <div className="h-8 w-16 rounded-2xl bg-primary/5 pl-5">
+              <p className="items-center pt-1 text-primary">{textContent.HeroSection.pricingTable.plan}</p>
             </div>
             <div className="pt-4">
-              <p className="text-6xl font-semibold text-primary">{textContent.HeroSection.pricingTable.discount}</p>
+              <p className="text-6xl font-semibold text-primary">
+                {isAffiliate === true ? '70% off' : textContent.HeroSection.pricingTable.discount}
+              </p>
             </div>
             <div className="pt-5">
               <p className="text-3xl font-medium">
-                {textContent.HeroSection.pricingTable.priceNow} {currency()}
+                {isAffiliate ? '2.69' : textContent.HeroSection.pricingTable.priceNow} {currency()}
                 {textContent.HeroSection.pricingTable.month}
               </p>
               <p className="text-1xl pl-8 pt-4 font-normal text-gray-40 line-through">
@@ -108,14 +109,14 @@ const HeroSection = ({ textContent, lang, country }) => {
             <div className="flex w-full flex-row px-8 py-5">
               <div className="w-full border-b border-gray-20" />
             </div>
-            <div className="flex flex-col">
-              <div className={`flex flex-row ${lang === 'fr' ? 'ml-6 items-start' : 'items-center '} space-x-2`}>
+            <div className="flex w-full flex-col px-8">
+              <div className={`flex flex-row items-start space-x-2`}>
                 <div className="h-4 w-4">
                   <Check size={18} weight={'bold'} />
                 </div>
                 <p>{textContent.HeroSection.pricingTable.footer.line1}</p>
               </div>
-              <div className={`flex flex-row ${lang === 'fr' ? 'ml-6 items-start' : 'items-center'} space-x-2`}>
+              <div className={`flex flex-row items-start space-x-2`}>
                 <div className="h-4 w-4">
                   <Check size={18} weight={'bold'} />
                 </div>

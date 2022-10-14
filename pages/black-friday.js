@@ -15,12 +15,14 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 
 const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
+const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
   const { coupon } = router.query;
+  const isAffiliate = coupon === BLACK_FRIDAY_AFFILIATES_COUPON_ID ? true : false;
 
   const couponCode = coupon ? coupon : BLACK_FRIDAY_COUPON_ID;
 
@@ -54,13 +56,13 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
         hideLogin={true}
       />
 
-      <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} />
+      <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />
 
       <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
 
       <SuiteSection textContent={langJson.blackFriday} />
 
-      <CtaSection textContent={langJson.cta1} lang={lang} />
+      <CtaSection textContent={langJson.cta1} lang={lang} isAffiliates={isAffiliate} />
 
       <FeatureSection textContent={langJson.blackFriday} />
 
@@ -70,7 +72,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <FaqSection textContent={langJson.blackFriday} />
 
-      <CtaSection textContent={langJson.cta2} lang={lang} />
+      <CtaSection textContent={langJson.cta2} lang={lang} isAffiliates={isAffiliate} />
 
       <FooterSection textContent={footerLang} lang={lang} />
     </Layout>
