@@ -9,7 +9,7 @@ import CtaSection from '../components/black-friday/CtaSection';
 import FeatureSection from '../components/black-friday/FeatureSection';
 import PlatformSection from '../components/black-friday/PlatformSection';
 import TestimonialsSection from '../components/black-friday/TestimonialsSection';
-import FaqSection from '../components/black-friday/FaqSection';
+import FaqSection from '../components/black-friday/FAQSection';
 import FooterSection from '../components/black-friday/FooterSection';
 import axios from 'axios';
 import { useRouter } from 'next/router';
