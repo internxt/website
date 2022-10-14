@@ -21,9 +21,8 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
   const { coupon } = router.query;
-  const [couponCode, setCouponCode] = React.useState('');
 
-  coupon ? setCouponCode(coupon) : setCouponCode(BLACK_FRIDAY_COUPON_ID);
+  const couponCode = coupon ? coupon : BLACK_FRIDAY_COUPON_ID;
 
   async function getCountryCode() {
     const options = {
