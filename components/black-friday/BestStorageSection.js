@@ -15,7 +15,7 @@ const BestStorageSection = ({ textContent, lang }) => {
         </div>
         <img
           className="mb-6 hidden md:flex lg:max-w-3xl"
-          src="/images/special-offer/black-friday/devices.webp"
+          src="/images/special-offer/black-friday/Devices.png"
           draggable="false"
           alt="Desktop, laptop and phone with Internxt app"
         />
