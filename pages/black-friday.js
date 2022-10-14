@@ -14,13 +14,16 @@ import FooterSection from '../components/black-friday/FooterSection';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
+const BLACK_FRIDAY_COUPON_ID = 'pkYefOz';
+
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
   const { coupon } = router.query;
+  const [couponCode, setCouponCode] = React.useState('');
 
-  const couponCode = coupon ? coupon : 'BLACKFRIDAY';
+  coupon ? setCouponCode(coupon) : setCouponCode(BLACK_FRIDAY_COUPON_ID);
 
   async function getCountryCode() {
     const options = {
