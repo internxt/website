@@ -14,7 +14,7 @@ import FooterSection from '../components/black-friday/FooterSection';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
-const BLACK_FRIDAY_COUPON_ID = 'pkYefOz';
+const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
