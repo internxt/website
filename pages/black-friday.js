@@ -16,15 +16,14 @@ import { useRouter } from 'next/router';
 
 const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
+const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
   const { coupon } = router.query;
   const isAffiliate = coupon === BLACK_FRIDAY_AFFILIATES_COUPON_ID ? true : false;
-  const metatags = isAffiliate
-    ? metatagsDescriptions.filter((desc) => desc.id === 'black-friday-affiliates')
-    : metatagsDescriptions.filter((desc) => desc.id === 'black-friday');
 
   const couponCode = coupon ? coupon : BLACK_FRIDAY_COUPON_ID;
 
