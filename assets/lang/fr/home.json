@@ -1,0 +1,144 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "Choisissez Internxt",
+      "line2": "Choisissez la confidentialité"
+    },
+    "subtitle": "Chez Internxt, nous avons créé un ensemble de services qui sont véritablement centrés sur vous. Passez à Internxt Drive, Photos, Send et plus encore.",
+    "cta": {
+      "title": "Obtenez 10GB",
+      "subtitle": "Gratuit!"
+    },
+    "SignUp": {
+      "cta": {
+        "title": "Get started with Internxt",
+        "subtitle": "Create an account now and get 10GB for FREE"
+      },
+      "disclaimer": {
+        "text": " En créant un compte, vous acceptez",
+        "link": "les termes et conditions, et politique de confidentialité"
+      },
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Mot de passe",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
+        },
+        "submit": {
+          "get": "Get up to 10GB",
+          "free": "For free!"
+        }
+      }
+    }
+  },
+  "FeaturesSection": {
+    "eyebrow": "INTERNXT DRIVE",
+    "title": {
+      "line1": "Le cloud le plus sûr pour",
+      "line2": "vos fichiers et photos"
+    },
+    "subtitle": {
+      "line1": "Nos produits sont basés sur le respect de votre vie privée et votre sécurité. Drive, Photos et Send ne sont",
+      "line2": " que le début d'une grande famille de produits axés sur vous et votre vie privée."
+    },
+    "cta": {
+      "drive": "Explorez Drive",
+      "photos": "Découvrez Photos"
+    },
+    "feature1": {
+      "title": { "line1": "Conçu", "line2": "pour vous protéger" },
+      "description": "Vos fichiers sont fragmentés et cryptés avant de sortir de votre appareil. Pas d'astuces, pas de trucs cachés. Privé par défaut, sécurisé par conception, c'est ça Internxt. Bienvenue sur Web3.",
+      "cta": "Qu'est-ce que la connaissance zéro?"
+    },
+    "feature2": {
+      "title": { "line1": "Multi", "line2": "device" },
+      "description": "Accédez à toute la famille d'applications adaptées à tous vos appareils pour satisfaire tous vos besoins.",
+      "cta": "Téléchargez les applications"
+    },
+    "feature3": {
+      "title": { "line1": "La vie privée,", "line2": "c'est le but." },
+      "description": "Contrairement à nos compétiteurs, notre activité n'est pas basée sur la publicité, elle est basée sur vous. Nous ne vendons pas vos données.",
+      "cta": "Privacy at Internxt"
+    }
+  },
+  "InvestorsSection": {
+    "title": "Ils nous font confiance",
+    "subtitle": {
+      "line1": "Brands and investors trust us so strongly that",
+      "line2": "we raised more than 1M in 2 years."
+    },
+    "title2": "What users say about us",
+    "testimonialFrom": "Review from",
+    "testimonials": [
+      {
+        "quote": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.",
+        "photo": "22788963.jpg",
+        "name": "Eva Wiliams",
+        "title": "Photographer and software journalist at FixThePhoto.com",
+        "url": "http://fixthephoto.com/",
+        "source": "FixThePhoto.com"
+      },
+      {
+        "quote": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt. For now, all my doubts and questions have been answered in a few minutes, and I love knowing that there's always someone who is willing to help me.",
+        "photo": "89039475.jpg",
+        "name": "Josep Carrizo",
+        "title": "User of Trustpilot",
+        "url": "https://www.trustpilot.com/users/620109fdeb4e5a00120ccf23",
+        "source": "Trustpilot"
+      },
+      {
+        "quote": "A fairly new approach to cloud storage. It uses solid techniques to store your data that can only be accessed by you and it supports 2FA. So you do not need tools to encrypt your data before uploading. It makes sense that uploading will take some time. That said it is a great service..",
+        "name": "Eric",
+        "title": "User of Trustpilot",
+        "url": "https://www.trustpilot.com/reviews/6289deaf4b16276ac98cb377",
+        "source": "Trustpilot"
+      },
+      {
+        "quote": "Excellent upload speed. Very nice mobile app. Very good security features. Generous free space.",
+        "name": "Sunil T.",
+        "title": "User of Trustpilot",
+        "url": "https://www.trustpilot.com/users/628cd38ca677f30012ec6f80",
+        "source": "Trustpilot"
+      },
+      {
+        "quote": "The Future of Cloud Storage. Pros: Love the fact that finally we have an affordable decentralised cloud storage software that also has a very cool look and is user-friendly.",
+        "name": "Luca C.",
+        "title": "User of GetApp",
+        "url": "https://www.getapp.com/collaboration-software/a/internxt-drive/reviews/fdc005779c/",
+        "source": "GetApp"
+      },
+      {
+        "quote": "I love that a) my files are encrypted right away, and that the company can't actually access the files. Dropbox & Drive still scan the files [...] I know that Internxt won't delete my files since they don't scan the content. And b) Internxt stores the files shards in 8 different locations - so if one, two or even 4 distributed servers go down, my content is still safe as it's decentralized privately.",
+        "name": "Anonymous",
+        "title": "User in Media Production - Small-Business",
+        "url": "https://www.g2.com/products/internxt-drive/reviews/internxt-drive-review-5268828",
+        "source": "G2"
+      },
+      {
+        "quote": "I really like Internxt Drive. This decentralized cloud uploads files quickly, you can modify your files (colors, vectors), making them easier to organize than others. I started with their free plan but now I have the 200GB plan for less than a breakfast per month.",
+        "photo": "60518239.webp",
+        "name": "Annie Bridge",
+        "title": "User of AlternativeTo",
+        "url": "https://alternativeto.net/software/x-cloud/about/#app-comment-90438",
+        "source": "AlternativeTo"
+      }
+    ]
+  },
+  "GetStartedSection": {
+    "title": { "line1": "Commencez maintenant et", "line2": "gobtenez jusqu'à 10 Go gratuits" },
+    "subtitle": {
+      "line1": "Nos clients sont très satisfaite d'Internxt Drive, mais",
+      "line2": "d'autant plus en sachant qu'il est totalement privé."
+    },
+    "cta1": "Commencez maintenant"
+  }
+}
