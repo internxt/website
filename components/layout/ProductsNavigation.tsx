@@ -2,22 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 
 const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
-  <div className="absolute top-16 h-14 flex flex-row items-center justify-start sm:justify-center w-full px-6 overflow-x-auto bg-cool-gray-5">
+  <div className="absolute top-16 z-10 flex h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center">
     <div className="mx-auto space-x-8 sm:space-x-6">
-      <Link href="/drive" locale={lang}>
+      <Link href="/drive" locale={lang} passHref>
         <a
           className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
             selectedItem === 'drive' ? 'text-cool-gray-70' : 'text-cool-gray-40 hover:text-cool-gray-50'
-          } text-base sm:text-sm font-medium`}
+          } text-base font-medium sm:text-sm`}
         >
           {textContent.products.drive}
         </a>
       </Link>
-      <Link href="/photos" locale={lang}>
+      <Link href="/photos" locale={lang} passHref>
         <a
           className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
             selectedItem === 'photos' ? 'text-cool-gray-70' : 'text-cool-gray-40 hover:text-cool-gray-50'
-          } text-base sm:text-sm font-medium`}
+          } text-base font-medium sm:text-sm`}
         >
           {textContent.products.photos}
         </a>
@@ -28,10 +28,10 @@ const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
         rel="noreferrer"
         className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
           selectedItem === 'send' ? 'text-cool-gray-70' : 'text-cool-gray-40 hover:text-cool-gray-50'
-        } text-base sm:text-sm font-medium`}
+        } text-base font-medium sm:text-sm`}
       >
         {textContent.products.send}
-        <span className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none text-orange-dark text-supporting-2">
+        <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 text-supporting-2 text-orange-dark">
           {textContent.products.new}
         </span>
       </a>
