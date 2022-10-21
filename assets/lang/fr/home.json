@@ -73,68 +73,68 @@
   "InvestorsSection": {
     "title": "Ils nous font confiance",
     "subtitle": {
-      "line1": "Brands and investors trust us so strongly that",
-      "line2": "we raised more than 1M in 2 years."
+      "line1": "Les marques et les investisseurs nous font tellement confiance que",
+      "line2": "nous avons levé plus de 1M en 2 ans."
     },
-    "title2": "What users say about us",
-    "testimonialFrom": "Review from",
+    "title2": "Ce que les utilisateurs disent de nous",
+    "testimonialFrom": "Avis de",
     "testimonials": [
       {
-        "quote": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.",
+        "quote": "Internxt est un service de stockage en nuage pratique pour les clients soucieux de leur budget. Il dispose d'une interface simplifiée et d'une équipe d'assistance fiable, ce qui en fait une excellente option pour ceux qui ont besoin de stocker leurs fichiers en toute sécurité",
         "photo": "22788963.jpg",
         "name": "Eva Wiliams",
-        "title": "Photographer and software journalist at FixThePhoto.com",
+        "title": "Photographe et journaliste logiciel chez FixThePhoto.com",
         "url": "http://fixthephoto.com/",
         "source": "FixThePhoto.com"
       },
       {
-        "quote": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt. For now, all my doubts and questions have been answered in a few minutes, and I love knowing that there's always someone who is willing to help me.",
+        "quote": "J'utilise Google Drive depuis plusieurs années, mais j'avais besoin d'une alternative qui me garantisse la confidentialité de mes données. Quelque chose que Google ou d'autres plates-formes bien connues ne peuvent pas faire. C'est pourquoi j'ai déménagé chez Internxt. Pour l'instant, tous mes doutes et questions ont été répondus en quelques minutes, et j'aime savoir qu'il y a toujours quelqu'un qui est prêt à m'aider.",
         "photo": "89039475.jpg",
         "name": "Josep Carrizo",
-        "title": "User of Trustpilot",
+        "title": "Utilisateur de Trustpilot",
         "url": "https://www.trustpilot.com/users/620109fdeb4e5a00120ccf23",
         "source": "Trustpilot"
       },
       {
-        "quote": "A fairly new approach to cloud storage. It uses solid techniques to store your data that can only be accessed by you and it supports 2FA. So you do not need tools to encrypt your data before uploading. It makes sense that uploading will take some time. That said it is a great service..",
+        "quote": "Une approche assez nouvelle du stockage en nuage. Il utilise des techniques solides pour stocker vos données auxquelles vous seul pouvez accéder et il prend en charge 2FA. Vous n'avez donc pas besoin d'outils pour chiffrer vos données avant de les télécharger. Il est logique que le téléchargement prenne un certain temps. Cela dit c'est un super service..",
         "name": "Eric",
-        "title": "User of Trustpilot",
+        "title": "Utilisateur de Trustpilot",
         "url": "https://www.trustpilot.com/reviews/6289deaf4b16276ac98cb377",
         "source": "Trustpilot"
       },
       {
-        "quote": "Excellent upload speed. Very nice mobile app. Very good security features. Generous free space.",
+        "quote": "Excellente vitesse de téléchargement. Très belle application mobile. Très bonnes fonctionnalités de sécurité. Espace libre généreux.",
         "name": "Sunil T.",
-        "title": "User of Trustpilot",
+        "title": "Utilisateur de Trustpilot",
         "url": "https://www.trustpilot.com/users/628cd38ca677f30012ec6f80",
         "source": "Trustpilot"
       },
       {
-        "quote": "The Future of Cloud Storage. Pros: Love the fact that finally we have an affordable decentralised cloud storage software that also has a very cool look and is user-friendly.",
+        "quote": "L'avenir du stockage en nuage. Avantages: J'adore le fait que nous ayons enfin un logiciel de stockage cloud décentralisé abordable qui a également un look très cool et qui est convivial.",
         "name": "Luca C.",
-        "title": "User of GetApp",
+        "title": "Utilisateur de GetApp",
         "url": "https://www.getapp.com/collaboration-software/a/internxt-drive/reviews/fdc005779c/",
         "source": "GetApp"
       },
       {
-        "quote": "I love that a) my files are encrypted right away, and that the company can't actually access the files. Dropbox & Drive still scan the files [...] I know that Internxt won't delete my files since they don't scan the content. And b) Internxt stores the files shards in 8 different locations - so if one, two or even 4 distributed servers go down, my content is still safe as it's decentralized privately.",
+        "quote": "J'aime le fait que a) mes fichiers soient cryptés immédiatement et que l'entreprise ne puisse pas réellement accéder aux fichiers. Dropbox & Drive analysent toujours les fichiers [...] Je sais qu'Internxt ne supprimera pas mes fichiers car ils n'analysent pas le contenu. Et b) Internxt stocke les fragments de fichiers dans 8 emplacements différents - donc si un, deux ou même 4 serveurs distribués tombent en panne, mon contenu est toujours en sécurité car il est décentralisé en privé.",
         "name": "Anonymous",
         "title": "User in Media Production - Small-Business",
         "url": "https://www.g2.com/products/internxt-drive/reviews/internxt-drive-review-5268828",
         "source": "G2"
       },
       {
-        "quote": "I really like Internxt Drive. This decentralized cloud uploads files quickly, you can modify your files (colors, vectors), making them easier to organize than others. I started with their free plan but now I have the 200GB plan for less than a breakfast per month.",
+        "quote": "J'aime beaucoup Internxt Drive. Ce cloud décentralisé télécharge rapidement les fichiers, vous pouvez modifier vos fichiers (couleurs, vecteurs), les rendant plus faciles à organiser que les autres. J'ai commencé avec leur forfait gratuit, mais maintenant j'ai le forfait de 200 Go pour moins d'un petit-déjeuner par mois.",
         "photo": "60518239.webp",
         "name": "Annie Bridge",
-        "title": "User of AlternativeTo",
+        "title": "Utilisateur de AlternativeTo",
         "url": "https://alternativeto.net/software/x-cloud/about/#app-comment-90438",
         "source": "AlternativeTo"
       }
     ]
   },
   "GetStartedSection": {
-    "title": { "line1": "Commencez maintenant et", "line2": "gobtenez jusqu'à 10Go gratuits" },
+    "title": { "line1": "Commencez maintenant et", "line2": "gobtenez jusqu'à 10 Go gratuits" },
     "subtitle": {
       "line1": "Nos clients sont très satisfaite d'Internxt Drive, mais",
       "line2": "d'autant plus en sachant qu'il est totalement privé."
