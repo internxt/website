@@ -73,17 +73,25 @@ LayoutProps) {
           <div className="relative mx-auto flex h-full max-w-screen-xl flex-row items-center justify-between px-5 lg:justify-center lg:space-x-10">
             <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
               <div className="flex h-6 flex-row items-center rounded-full bg-white px-2 text-sm font-bold text-primary">
-                {lang === 'en' ? 'NEW' : 'NUEVO'}
+                {lang === 'en' ? 'NEW' : lang === 'fr' ? 'NOUVEAU' : 'NUEVO'}
               </div>
               <span className="text-lg font-medium">{lang === 'en' ? 'Internxt Send' : 'Internxt Send'}</span>
               <span className="hidden opacity-75 md:flex">
-                {lang === 'en' ? 'Share files fast in total privacy' : 'Comparte archivos de forma rápida y segura'}
+                {lang === 'en'
+                  ? 'Share files fast in total privacy'
+                  : lang === 'fr'
+                  ? 'Partagez des fichiers en toute sécurité et rapidement'
+                  : 'Comparte archivos de forma rápida y segura'}
               </span>
             </div>
             <div className="flex h-9 flex-row items-center rounded-full text-lg font-medium transition duration-200 ease-in-out sm:space-x-1 sm:px-4 sm:group-hover:bg-white sm:group-hover:bg-opacity-15">
               <div className="hidden whitespace-nowrap sm:flex">
-                <span className="hidden sm:flex">{lang === 'en' ? 'Find out now' : 'Probar ahora'}</span>
-                <span className="flex sm:hidden">{lang === 'en' ? 'Find out' : 'Probar ahora'}</span>
+                <span className="hidden sm:flex">
+                  {lang === 'en' ? 'Find out now' : lang === 'fr' ? 'Essayez maintenant' : 'Probar ahora'}
+                </span>
+                <span className="flex sm:hidden">
+                  {lang === 'en' ? 'Find out' : lang === 'fr' ? 'Essayez maintenant' : 'Probar ahora'}
+                </span>
               </div>
               <ArrowRight
                 size={20}

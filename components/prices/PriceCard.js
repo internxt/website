@@ -239,7 +239,7 @@ export default function PriceCard({
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2 text-sm">
-          <div className="flex flex-row items-start space-x-2 font-medium">
+          <div className={`flex flex-row items-start space-x-2 font-medium`}>
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
@@ -252,7 +252,7 @@ export default function PriceCard({
                 ? `${contentText.features.enjoyForever.enjoy} ${storage} ${contentText.features.enjoyForever.forever}`
                 : `${contentText.features.moneyBack}`}
             </span>
-            <span className={`${price <= 0 ? 'flex' : 'hidden'}`}>
+            <span className={`${price <= 0 ? 'flex' : 'hidden'} ${lang === 'fr' ? 'pb-5' : ''}`}>
               {contentText.features.enjoyForever.enjoyUpTo} {storage} {contentText.features.enjoyForever.forever}
             </span>
           </div>

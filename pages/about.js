@@ -6,42 +6,19 @@ import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import cookies from '../lib/cookies';
 
-const AboutUs = ({
-  lang,
-  textContent,
-  footerLang,
-  navbarLang,
-  metatagsDescriptions
-}) => {
+const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
   return (
-
     <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <Navbar
-        textContent={navbarLang}
-        lang={lang}
-        cta={['default']}
-        fixed
-      />
+      <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
-      <HeroSection
-        textContent={textContent.HeroSection}
-      />
+      <CompanySection textContent={textContent.CompanySection} />
 
-      <CompanySection
-        textContent={textContent.CompanySection}
-      />
-
-      <Footer
-        textContent={footerLang}
-        lang={lang}
-        hideNewsletter={false}
-      />
-
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
-
   );
 };
 
@@ -59,7 +36,7 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       footerLang,
       navbarLang,
-      textContent
+      textContent,
     },
   };
 }
