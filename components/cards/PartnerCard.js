@@ -12,14 +12,14 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link
   const [cardstyle, setCardstyle] = useState(`${styles.PartnerCard}`);
   const [companystyle, setCompanystyle] = useState(`${styles.company}`);
   const [biostyle, setBiostyle] = useState(`${styles.bio}`);
-  const [readmorestyle, setReadmorestyle] = useState(`${styles.read_more}`);
+  const [readmorestyle, setReadmorestyle] = useState(`${styles['read-more']}`);
 
   const changeClass = () => {
     if (!blue) {
       setCardstyle(`${styles.PartnerCard} ${styles.reverse}`);
-      setCompanystyle(`${styles.company} ${styles.text_black}`);
-      setBiostyle(`${styles.bio} ${styles.text_black}`);
-      setReadmorestyle(`${styles.read_more} ${styles.text_black}`);
+      setCompanystyle(`${styles.company} ${styles['text-black']}`);
+      setBiostyle(`${styles.bio} ${styles['text-black']}`);
+      setReadmorestyle(`${styles.read_more} ${styles['text-black']}`);
     }
   };
 

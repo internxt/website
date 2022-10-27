@@ -34,7 +34,7 @@
   margin: 2rem 0 1.5rem;
 }
 
-.text_black {
+.text-black {
   color: black !important;
 }
 
@@ -47,7 +47,7 @@
   color: white;
 }
 
-.read_more {
+.read-more {
   position: absolute;
   bottom: 0;
   font-size: 16px;
@@ -56,6 +56,6 @@
   color: white;
 }
 
-.read_more:hover {
+.read-more:hover {
   color: white;
 }

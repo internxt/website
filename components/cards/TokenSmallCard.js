@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './TokenSmallCard.module.css';
 
 const TokenSmallCard = ({ title, subtitle, colored }) => {
-  // Esta funcion cambiara el color de una determinada cadena de texto
-  const formattedText = (label, value) => {
+  // Esta función cambiara el color de una determinada cadena de texto
+  const changeColorDependingOnLabel = (label, value) => {
     if (!value) {
       return label;
     }
@@ -26,7 +26,9 @@ const TokenSmallCard = ({ title, subtitle, colored }) => {
 
   return (
     <div className={`${styles.card} sm:pl-14 sm:pr-0`}>
-      <p className={`${styles.title} sm:w-44 sm:text-4xl lg:w-40 lg:text-4xl`}>{formattedText(title, colored)}</p>
+      <p className={`${styles.title} sm:w-44 sm:text-4xl lg:w-40 lg:text-4xl`}>
+        {changeColorDependingOnLabel(title, colored)}
+      </p>
 
       <p className={`${styles.subtitle} sm:text-4xl lg:w-44 lg:text-4xl`}>{subtitle}</p>
     </div>

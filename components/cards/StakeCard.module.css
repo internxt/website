@@ -20,7 +20,7 @@
   color: #ff55b1;
 }
 
-.percentage_container {
+.percentage-container {
   display: flex;
   flex-direction: row;
 }
@@ -42,12 +42,12 @@
   padding: 1rem 0 0;
 }
 
-.per_year {
+.per-year-label {
   font-size: 18px;
   line-height: 1.39;
   letter-spacing: -0.24px;
   text-align: center;
-  color: #7f7f7f;
+  color: '#7f7f7f';
 }
 
 .inxt {
@@ -66,7 +66,7 @@
   margin: 36px 0 0;
 }
 
-.get_started {
+.get-started-style {
   font-size: 14px;
   line-height: 2.71;
   letter-spacing: normal;
