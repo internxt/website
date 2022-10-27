@@ -50,18 +50,6 @@ module.exports = {
         destination: '/:lang/pricing',
         permanent: false,
       })),
-      // REDIRECTS TO LIFETIME
-      ...['/exclusive-lifetime', '/lifetime-2tb', '/lifetime-10tb', '/infinite'].map((src) => ({
-        source: src,
-        destination: '/lifetime',
-        permanent: false,
-      })),
-      // REDIRECTS TO LIFETIME (WITH LANG)
-      ...['/exclusive-lifetime', '/lifetime-2tb', '/lifetime-10tb', '/infinite'].map((src) => ({
-        source: `/:lang${src}`,
-        destination: '/:lang/lifetime',
-        permanent: false,
-      })),
       // =======================================================
       // REDIRECTS TO INTERNXT DESIGN SYSTEM DOCUMENTATION
       {
