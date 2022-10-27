@@ -13,7 +13,6 @@ export const getServerSideProps = ({ res }) => {
     index: '1.0',
     about: '1.0',
     legal: '0.5',
-    lifetime: '0.8',
     pricing: '1.0',
     products: '0.8',
   };
