@@ -9,23 +9,20 @@
     "subtitle": "Who says best-in-class security can't be affordable? Protect your privacy and take back total control of your data with any one of our three plans:",
     "billedAnnually": "billed annually",
     "popular": "Most popular",
-    "button": "Buy ",
+    "month": "/month",
     "card1": {
       "plan": "20GB",
       "price": "0.89",
-      "month": "/month",
       "annualPrice": "10.68"
     },
     "card2": {
       "plan": "200GB",
       "price": "3.49",
-      "month": "/month",
       "annualPrice": "41.88"
     },
     "card3": {
       "plan": "2TB",
       "price": "8.99",
-      "month": "/month",
       "annualPrice": "107.88"
     },
     "infoPlan": {
