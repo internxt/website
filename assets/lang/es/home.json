@@ -47,12 +47,13 @@
       "line2": "tus archivos y fotos"
     },
     "subtitle": {
-      "line1": "Nuestros productos se basan en tu privacidad y seguridad. Drive y Photos son solo",
+      "line1": "Nuestros productos se basan en tu privacidad y seguridad. Drive, Photos y Send son solo",
       "line2": "el comienzo de una gran familia de productos enfocados en ti y en tu privacidad."
     },
     "cta": {
       "drive": "Explorar Drive",
-      "photos": "Descubre Photos"
+      "photos": "Descubre Photos",
+      "send": "Prueba Send"
     },
     "feature1": {
       "title": { "line1": "Diseñado para", "line2": "protegerte" },
