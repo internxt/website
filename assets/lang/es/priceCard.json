@@ -1,56 +1,58 @@
 {
-	"mostPopular": "Más popular",
-	"onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
-	"planTitles": {
-		"individuals": "Planes Individuales",
-		"business": "Planes para Empresas"
-	},
-	"changePlan": {
-		"toIndividuals": "Cambiar a Planes Individuales",
-		"toBusiness": "Cambiar a Planes para Empresas"
-	},
-	"billingFrequency": {
-		"monthly": "Mensual",
+  "mostPopular": "Más popular",
+  "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
+  "planTitles": {
+    "individuals": "Planes Individuales",
+    "business": "Planes para Empresas"
+  },
+  "changePlan": {
+    "toIndividuals": "Cambiar a Planes Individuales",
+    "toBusiness": "Cambiar a Planes para Empresas"
+  },
+  "billingFrequency": {
+    "lifetime": "Lifetime",
+    "monthly": "Mensual",
     "semiannually": "Semianual",
     "annually": "Anual"
-	},
-	"billingFrequencyLabel": {
-		"monthly": "facturado al mes",
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "Pago único",
+    "monthly": "facturado al mes",
     "semiannually": "facturado cada 6 meses",
     "annually": "facturado al año",
-		"afterMonth": "después de 30 días"
-	},
-	"billingFrequencyLabelSmall": {
-		"monthly": "/mes",
+    "afterMonth": "después de 30 días"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/mes",
     "semiannually": "/6 meses",
     "annually": "/año"
-	},
-	"perUserSlash": "/usuario",
-	"perUser": "Por usuario",
-	"users": "usuarios",
-	"freePlan": "Gratis",
-	"price": {
-		"free": "Gratis para siempre"
-	},
-	"perMonth": "/mes",
-	"firstMonth": "Los primeros 30 días",
-	"cta": {
-		"getStarted": "Empezar ahora",
-		"signUpNow": "Regístrate gratis ahora",
-		"buy": "Conseguir",
-		"claimTheDeal": "Obtener descuento",
-		"freemonth": "Consigue 30 días gratis"
-	},
-	"features": {
-		"enjoyForever": {
-			"enjoy": "Disfruta de",
-			"enjoyUpTo": "Disfruta de hasta",
-			"forFree": "gratis",
-			"forever": "para siempre"
-		},
-		"moneyBack": "30 días de garantía o te devolvemos el dinero",
-		"encryptedFiles": "Guarda y comparte archivos encriptados",
-		"accessFromAnywhere": "Tus archivos en todos tus dispositivos",
-		"allServices": "Acceso a todos nuestros servicios"
-	}
+  },
+  "perUserSlash": "/usuario",
+  "perUser": "Por usuario",
+  "users": "usuarios",
+  "freePlan": "Gratis",
+  "price": {
+    "free": "Gratis para siempre"
+  },
+  "perMonth": "/mes",
+  "firstMonth": "Los primeros 30 días",
+  "cta": {
+    "getStarted": "Empezar ahora",
+    "signUpNow": "Regístrate gratis ahora",
+    "buy": "Conseguir",
+    "claimTheDeal": "Obtener descuento",
+    "freemonth": "Consigue 30 días gratis"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Disfruta de",
+      "enjoyUpTo": "Disfruta de hasta",
+      "forFree": "gratis",
+      "forever": "para siempre"
+    },
+    "moneyBack": "30 días de garantía o te devolvemos el dinero",
+    "encryptedFiles": "Guarda y comparte archivos encriptados",
+    "accessFromAnywhere": "Tus archivos en todos tus dispositivos",
+    "allServices": "Acceso a todos nuestros servicios"
+  }
 }
