@@ -39,15 +39,27 @@ module.exports = {
       })),
       // =======================================================
       // REDIRECTS TO PRICING
-      ...['/sharewareonsale', '/special-offer', '/lifetime', '/pricing-individuals-annually'].map((src) => ({
+      ...['/sharewareonsale', '/special-offer', '/pricing-individuals-annually'].map((src) => ({
         source: src,
         destination: '/pricing',
         permanent: false,
       })),
       // REDIRECTS TO PRICING (WITH LANG)
-      ...['/sharewareonsale', '/special-offer', '/lifetime', '/pricing-individuals-annually'].map((src) => ({
+      ...['/sharewareonsale', '/special-offer', '/pricing-individuals-annually'].map((src) => ({
         source: `/:lang${src}`,
         destination: '/:lang/pricing',
+        permanent: false,
+      })),
+      // REDIRECTS TO LIFETIME
+      ...['/exclusive-lifetime', '/lifetime-2tb', '/lifetime-10tb', '/infinite'].map((src) => ({
+        source: src,
+        destination: '/lifetime',
+        permanent: false,
+      })),
+      // REDIRECTS TO LIFETIME (WITH LANG)
+      ...['/exclusive-lifetime', '/lifetime-2tb', '/lifetime-10tb', '/infinite'].map((src) => ({
+        source: `/:lang${src}`,
+        destination: '/:lang/lifetime',
         permanent: false,
       })),
       // =======================================================
