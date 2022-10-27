@@ -96,15 +96,10 @@ const ManifestoSection = ({ textContent, lang }) => (
               </Link>
             </div>
 
-            <div className="relative mx-auto mt-16 lg:m-20 lg:mx-20 lg:h-80 lg:w-80">
-              <div
-                className="bg-center-top absolute hidden bg-contain bg-no-repeat shadow-subtle-hard lg:flex"
-                style={{
-                  backgroundImage: 'url(/images/privacy/mobile-drive-ipad.webp)',
-                  width: 400,
-                  height: 400,
-                }}
-              />
+            <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
+              <div className="hidden lg:flex lg:max-w-[480px]">
+                <img src="/images/privacy/drive-image.png" />
+              </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
                 style={{
@@ -130,15 +125,10 @@ const ManifestoSection = ({ textContent, lang }) => (
               </Link>
             </div>
 
-            <div className="relative mx-auto mt-16 lg:m-20 lg:mx-20 lg:h-80 lg:w-80">
-              <div
-                className="bg-center-top absolute hidden bg-contain bg-no-repeat shadow-subtle-hard lg:flex"
-                style={{
-                  backgroundImage: 'url(/images/privacy/mobile-photos-preview-mockup.webp)',
-                  width: 320,
-                  height: 400,
-                }}
-              />
+            <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
+              <div className="hidden lg:flex lg:max-w-[480px]">
+                <img src="/images/privacy/photos-image.png" />
+              </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
                 style={{
@@ -163,7 +153,7 @@ const ManifestoSection = ({ textContent, lang }) => (
               </Link>
             </div>
 
-            <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
+            <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
                 <img src="/images/privacy/send-image.png" />
               </div>
