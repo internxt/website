@@ -113,7 +113,8 @@ h1 {
 .partnerHeroSection {
   background-image: url('../public/images/home/wavesBlue.webp');
   background-size: cover;
-  background-position: left;
+  background-position: initial;
+  background-repeat: no-repeat;
 }
 
 .logo {
