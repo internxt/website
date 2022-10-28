@@ -108,7 +108,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
         </>
       ) : (
         <section className=" partnerHeroSection overflow-hidden">
-          <div className="partnerHeroSection mt-[77px] mb-20 flex flex-col justify-center lg:flex-row lg:justify-between">
+          <div className="mt-[77px] mb-20 flex flex-col justify-center lg:flex-row lg:justify-between">
             <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
               <img
                 loading="lazy"
