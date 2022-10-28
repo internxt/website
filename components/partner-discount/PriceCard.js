@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check } from 'phosphor-react';
 
-const PriceCard = ({ plan, price, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
+const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
   const features = [
     {
       feat: info.info1,
@@ -16,6 +16,17 @@ const PriceCard = ({ plan, price, annualPrice, billedAnnually, cta, info, month,
       feat: info.info4,
     },
   ];
+
+  const getCurrency = () => {
+    switch (country) {
+      case 'US':
+        return '$';
+      case 'GB':
+        return '£';
+      default:
+        return '€';
+    }
+  };
 
   const getFeatures = () => {
     return features.map((feature, index) => {
@@ -52,10 +63,12 @@ const PriceCard = ({ plan, price, annualPrice, billedAnnually, cta, info, month,
       {/* Prices and billing */}
       <div className="flex flex-col">
         <span className="text-2xl font-medium">
-          {price} €{month}
+          {price} {getCurrency()}
+          {month}
         </span>
         <span className="text-gray-50">
-          {annualPrice}€ {billedAnnually}
+          {annualPrice}
+          {getCurrency()} {billedAnnually}
         </span>
       </div>
 

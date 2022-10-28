@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import cookies from '../lib/cookies';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/partner-discount/HeroSection';
 import PaymentsSection from '../components/partner-discount/PaymentsSection';
+import InfoSection from '../components/partner-discount/InfoSection';
+import Footer from '../components/layout/Footer';
+import axios from 'axios';
 
-const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson }) => {
+const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'partner-discount');
+  const [country, setCountry] = React.useState('ES');
+
+  async function getCountryCode() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
+    };
+    const countryCode = await axios(options);
+    return countryCode;
+  }
+
+  useEffect(() => {
+    getCountryCode().then((res) => {
+      setCountry(res.data.country);
+    });
+  });
 
   return (
     <Layout
@@ -20,7 +39,11 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson }) =
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentsSection textContent={langJson.PaymentSection} />
+      <PaymentsSection textContent={langJson.PaymentSection} country={country} />
+
+      <InfoSection textContent={langJson.InfoSection} />
+
+      <Footer textContent={footerLang} />
     </Layout>
   );
 };
