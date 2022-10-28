@@ -37,7 +37,9 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <div className="partnerHeroSection">
+        <HeroSection textContent={langJson.HeroSection} />
+      </div>
 
       <PaymentsSection textContent={langJson.PaymentSection} country={country} />
 

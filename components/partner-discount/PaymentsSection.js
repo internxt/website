@@ -3,7 +3,7 @@ import PriceCard from './PriceCard';
 
 const PaymentsSection = ({ textContent, country }) => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden" id="pricing">
       <div className="flex flex-col items-center bg-gray-5 p-20">
         <div className="flex max-w-[641px] flex-col space-y-4 text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
