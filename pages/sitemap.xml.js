@@ -14,28 +14,28 @@ export const getServerSideProps = ({ res }) => {
     about: '1.0',
     legal: '0.5',
     pricing: '1.0',
-    products: '0.8'
+    products: '0.8',
   };
 
   const staticPages = fs
     .readdirSync('pages')
-    .filter((staticPage) => Object.keys(
-      pages
-    ).includes(path.parse(staticPage).name))
+    .filter((staticPage) => Object.keys(pages).includes(path.parse(staticPage).name))
     .map((staticPagePath) => `${path.parse(staticPagePath).name}`);
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${staticPages
-    .map((page) => `
+        .map(
+          (page) => `
             <url>
               <loc>${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
               <priority>${pages[page]}</priority>
             </url>
-          `)
-    .join('')}
+          `,
+        )
+        .join('')}
     </urlset>
   `;
 
