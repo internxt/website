@@ -94,7 +94,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
                     <p className="text-3xl font-normal text-gray-60">{textContent.card}</p>
                   </div>
                   <div className="flex flex-col items-center justify-center">
-                    <p className="flex max-w-[149px] flex-col text-center text-gray-60">Recommended by:</p>
+                    <p className="flex flex-col pb-2 text-center text-lg text-gray-60">Recommended by:</p>
                     <img src="/images/partners-discount/Techradar.svg" />
                   </div>
                 </div>
