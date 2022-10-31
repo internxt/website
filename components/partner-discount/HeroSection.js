@@ -49,7 +49,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
     setOpen(true);
   };
 
-  if (open === true) {
+  if (open) {
     setTimeout(() => {
       setOpen(false);
     }, 5000);
