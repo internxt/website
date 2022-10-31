@@ -84,22 +84,30 @@ const HeroSection = ({ textContent, isTechradar }) => {
                   </a>
                 </div>
               </div>
-              <div></div>
-              <div className="z-20 flex flex-col items-center justify-center rounded-2xl bg-white p-8 sm:p-10 lg:pt-0">
-                <div className=" flex max-w-[401px] flex-col p-10 text-center">
-                  <p className="text-3xl font-normal text-gray-60">{textContent.card}</p>
+              <div className="relative px-10 pt-20 lg:px-0 lg:pt-10">
+                <div className="absolute z-10 hidden flex-row pr-5 lg:-top-10 lg:flex">
+                  <img src="/images/partners-discount/Vector.svg" className="pr-3" />
+                  <img src="/images/partners-discount/Vector.svg" />
                 </div>
-                <div>
-                  <p className="flex max-w-[149px] flex-col text-center">Recommended by:</p>
-                  <b className="text-4xl">techradar</b>
+                <div className="z-20 flex flex-col items-center justify-center rounded-2xl bg-white p-5 sm:p-10 lg:pt-10">
+                  <div className=" flex max-w-[401px] flex-col p-10 text-center">
+                    <p className="text-3xl font-normal text-gray-60">{textContent.card}</p>
+                  </div>
+                  <div className="flex flex-col items-center justify-center">
+                    <p className="flex max-w-[149px] flex-col text-center text-gray-60">Recommended by:</p>
+                    <img src="/images/partners-discount/Techradar.svg" />
+                  </div>
                 </div>
               </div>
             </div>
             <ShowSnackbar open={open} />
           </section>
           <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
-            {FeatureSection.map((item) => (
-              <div className="flex max-w-[200px] flex-col items-center justify-center space-y-8 text-center">
+            {FeatureSection.map((item, index) => (
+              <div
+                key={index}
+                className="flex max-w-[185px] flex-col items-center justify-center space-y-8 text-center"
+              >
                 <item.icon size={40} className="text-primary" />
                 <p className="text-2xl font-normal">{item.title}</p>
               </div>
