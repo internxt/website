@@ -31,7 +31,7 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
   const getFeatures = () => {
     return features.map((feature, index) => {
       return (
-        <div className={'flex flex-row items-start justify-start space-x-2'}>
+        <div className={'flex flex-row items-start justify-start space-x-2'} key={index}>
           <Check weight="bold" size={18} className="my-px" />
           <span className={`${index === 0 ? 'font-semibold' : ''}`}>{feature.feat}</span>
         </div>
