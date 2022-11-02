@@ -5,9 +5,9 @@ import ShowSnackbar from '../ShowSnackbar';
 const HeroSection = ({ textContent, isTechradar }) => {
   const [open, setOpen] = React.useState(false);
 
-  const subtitle1Partner = textContent.subtitle.split('FLASH')[0];
-  const subtitle2Partner = textContent.subtitle.split('FLASH')[1];
-  const flash = textContent.subtitle.substr(textContent.subtitle.indexOf('FLASH'), 5);
+  const subtitle1Partner = textContent.subtitle.split('SPECIAL15')[0];
+  const subtitle2Partner = textContent.subtitle.split('SPECIAL15')[1];
+  const flash = textContent.subtitle.substr(textContent.subtitle.indexOf('SPECIAL15'), 9);
 
   const subtitleTechradar = textContent.subtitle1.split('TECHRADAR')[0];
   const techradar = textContent.subtitle1.substr(textContent.subtitle1.indexOf('TECHRADAR'), 9);

@@ -34,8 +34,8 @@
           }
         },
         "submit": {
-          "get": "Get up to 10GB",
-          "free": "For free!"
+          "get": "Obtenez 10GB",
+          "free": "Gratuit!"
         }
       }
     }
@@ -52,7 +52,8 @@
     },
     "cta": {
       "drive": "Explorez Drive",
-      "photos": "Découvrez Photos"
+      "photos": "Découvrez Photos",
+      "send": "Essayez Send"
     },
     "feature1": {
       "title": { "line1": "Conçu", "line2": "pour vous protéger" },
