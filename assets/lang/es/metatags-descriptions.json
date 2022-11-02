@@ -6,18 +6,18 @@
   },
   {
     "id": "drive",
-    "title": "Internxt – Drive",
-    "description": "Internxt Drive es una alternativa segura a los servicios de almacenamiento en la nube. Con Internxt Drive, puedes almacenar tus archivos en la nube de forma segura y privada."
+    "title": "Internxt Drive – Almacenamiento privado y seguro en la nube",
+    "description": "Almacena, comparte y haz copias de seguridad de tus archivos y fotos en la nube con Internxt Drive. Almacenamiento de archivos encriptados de código abierto y copia de seguridad en línea de extremo a extremo."
   },
   {
     "id": "photos",
-    "title": "Internxt – Photos",
-    "description": "Alternativa cifrada, privada, gratuita y segura a Google Photos. Almacena tus fotos en la nube de forma segura y gratuita."
+    "title": "Internxt Photos – Almacenamiento seguro de fotos y copia de seguridad de imágenes",
+    "description": "Guarda, visualiza y sincroniza tus fotos e imágenes en todos los dispositivos con Internxt Photos. Compartición de fotos en la nube encriptada de extremo a extremo y copia de seguridad de imágenes."
   },
   {
     "id": "pricing",
-    "title": "Internxt – Precios",
-    "description": "Precio Internxt. Un plan común para todos nuestros servicios. Internxt Drive, Internxt Send, Internxt Photos. Bienvenido a Internxt."
+    "title": "Internxt Precios – Obtén 10GB gratis!",
+    "description": "Regístrate para obtener una suscripción de almacenamiento seguro en la nube de Internxt y obtén acceso a nuestro boletín mensual lleno de las últimas noticias y actualizaciones tecnológicas."
   },
   {
     "id": "about",
@@ -26,18 +26,18 @@
   },
   {
     "id": "token",
-    "title": "Internxt – Token",
-    "description": "Internxt token. Conoce el asset tokenizado de Internxt. Compra Internxt Tokens en Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
+    "title": "Internxt Token – Token, la esencia que mueve a Internxt.",
+    "description": "Ficha de Internxt. Aprende todo sobre nuestra criptomoneda, INXT. Compra fichas de Internxt en Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
   },
   {
     "id": "legal",
-    "title": "Internxt – Legal",
-    "description": "Internxt, términos y condiciones legales. Lee todos los términos y condiciones de uso donde se explica como procesamos tus datos."
+    "title": "Internxt Legal – Condiciones legales de uso",
+    "description": "Condiciones legales de uso de Internxt. Lee todos los términos y condiciones donde explicamos cómo procesamos sus datos."
   },
   {
     "id": "privacy",
-    "title": "Internxt – Privacidad",
-    "description": "La privacidad es un derecho humano fundamental. En Internxt defendemos la privacidad y siempre lo haremos."
+    "title": "Internxt Privacidad – Herramientas y recursos gratuitos para la privacidad",
+    "description": "Herramientas gratuitas para proteger tu privacidad en línea: Chequeo de contraseñas, escáner de virus, directorio de organizaciones de protección de la intimidad, etc. Internxt defiende tu derecho a la privacidad."
   },
   {
     "id": "virus-scanner",
@@ -56,23 +56,23 @@
   },
   {
     "id": "black-friday",
-    "title": "Internxt Black Friday Deal",
+    "title": "Internxt Black Friday Deal – ¡Rebajas en el almacenamiento en la nube!",
     "description": "Internxt Black Friday Deal 2022: Sign up or upgrade and get over half off Internxt’s 2TB subscription for 1 year. Get your Black Friday discount on Internxt’s largest cloud storage plan today!"
   },
   {
     "id": "cloudwards",
     "title": "Internxt – Cloudwards Partnership",
-    "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Cloudwards. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+    "description": "Consigue las mejores ofertas para el almacenamiento en la nube más seguro gracias a Cloudwards. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
   },
   {
     "id": "guru99",
     "title": "Internxt – Guru99 Partnership",
-    "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro gracias a Guru99. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+    "description": "Consigue las mejores ofertas para el almacenamiento en la nube más seguro gracias a Guru99. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
   },
   {
     "id": "freemonth",
     "title": "Internxt – Consigue 1 Mes gratis",
-    "description": "Consige las mejores ofertas para el almacenamiento en la nube más seguro. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
+    "description": "Consigue las mejores ofertas para el almacenamiento en la nube más seguro. Una alternativa más barata y segura a pCloud, IceDrive y AppSumo."
   },
   {
     "id": "landing",
@@ -87,6 +87,6 @@
   {
     "id": "password-checker",
     "title": "Internxt - Verificación gratuita y segura de contraseñas",
-    "description": "Chequeo de seguridad de contraseñas gratuito. Compruebe la solidez de sus contraseñas con la herramienta segura en línea de Internxt."
+    "description": "Chequeo de seguridad de contraseñas gratuito. Comprueba la solidez de tus contraseñas con la herramienta segura en línea de Internxt."
   }
 ]
