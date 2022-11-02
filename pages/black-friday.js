@@ -55,6 +55,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
         coupon={couponCode}
         cta={['checkout', 'TB212']}
         hideLogin={true}
+        isLinksHidden
       />
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />

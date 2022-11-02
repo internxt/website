@@ -122,7 +122,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
                 </div>
                 <p>{textContent.HeroSection.pricingTable.footer.line2}</p>
               </div>
-              <div className={`flex flex-row ${lang === 'fr' ? 'ml-6 items-start' : 'items-center'} space-x-2`}>
+              <div className={`flex flex-row items-start space-x-2`}>
                 <div className="h-4 w-4">
                   <Check size={18} weight={'bold'} />
                 </div>

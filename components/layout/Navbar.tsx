@@ -22,6 +22,7 @@ export interface NavbarProps {
   hide?: boolean;
   hideLogin?: boolean;
   coupon?: string;
+  isLinksHidden?: boolean;
 }
 
 export default function Navbar(props: NavbarProps) {
@@ -203,168 +204,172 @@ export default function Navbar(props: NavbarProps) {
         <div className="navbar mx-auto flex max-w-screen-xl items-center justify-between">
           {/* Left side of navbar: Logo / Hamburguer menu */}
           <div className=" flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
-            <div className="flex lg:hidden">
-              <Hamburger
-                label="Show menu"
-                size={24}
-                color={props.darkMode && !menuState ? '#fff' : '#253858'}
-                toggled={menuState}
-                toggle={setMenuState}
-              />
+            {!props.isLinksHidden && (
+              <div className="flex lg:hidden">
+                <Hamburger
+                  label="Show menu"
+                  size={24}
+                  color={props.darkMode && !menuState ? '#fff' : '#253858'}
+                  toggled={menuState}
+                  toggle={setMenuState}
+                />
 
-              {/* Mobile hamburger menu background */}
-              <div
-                className={`pointer-events-none fixed left-0 top-14 flex h-full w-full bg-white transition-all duration-500 ${
-                  menuState ? 'opacity-100' : 'opacity-0'
-                }`}
-              />
+                {/* Mobile hamburger menu background */}
+                <div
+                  className={`pointer-events-none fixed left-0 top-14 flex h-full w-full bg-white transition-all duration-500 ${
+                    menuState ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
 
-              {/* Mobile hamburger menu */}
-              <div
-                className={`fixed left-0 top-14 flex w-full flex-col overflow-hidden bg-white text-xl transition-all duration-500 ${
-                  menuState ? 'h-screen overflow-y-auto pb-14' : 'h-0'
-                }`}
-              >
-                <div className="my-6 font-medium">
-                  <Link href="/pricing" locale={props.lang}>
-                    <a
-                      role="link"
-                      tabIndex={0}
-                      onClick={() => {
-                        setMenuState(false);
-                      }}
-                      className={`flex w-full translate-y-0 px-8 py-3 outline-none transition delay-100 duration-300 ${
-                        menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                      }`}
-                    >
-                      {props.textContent.links.pricing}
-                    </a>
-                  </Link>
+                {/* Mobile hamburger menu */}
+                {
+                  <div
+                    className={`fixed left-0 top-14 flex w-full flex-col overflow-hidden bg-white text-xl transition-all duration-500 ${
+                      menuState ? 'h-screen overflow-y-auto pb-14' : 'h-0'
+                    }`}
+                  >
+                    <div className="my-6 font-medium">
+                      <Link href="/pricing" locale={props.lang}>
+                        <a
+                          role="link"
+                          tabIndex={0}
+                          onClick={() => {
+                            setMenuState(false);
+                          }}
+                          className={`flex w-full translate-y-0 px-8 py-3 outline-none transition delay-100 duration-300 ${
+                            menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                          }`}
+                        >
+                          {props.textContent.links.pricing}
+                        </a>
+                      </Link>
 
-                  <Disclosure as="div">
-                    {({ open }) => (
-                      <div
-                        className={`translate-y-0 transition delay-150 duration-300 ${
+                      <Disclosure as="div">
+                        {({ open }) => (
+                          <div
+                            className={`translate-y-0 transition delay-150 duration-300 ${
+                              menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                            }`}
+                          >
+                            <div className={`${open ? 'bg-cool-gray-5' : ''}`}>
+                              <Disclosure.Button
+                                className={`flex w-full items-center justify-between px-8 py-3 font-medium ${
+                                  open ? 'bg-cool-gray-10' : ''
+                                }`}
+                              >
+                                <span>{props.textContent.links.products}</span>
+                                <span className="relative h-6 w-6">
+                                  <UilMinus
+                                    className={`absolute top-0 left-0 h-6 w-6 transition duration-300 ${
+                                      open ? 'text-cool-gray-60' : '-rotate-180 text-cool-gray-40'
+                                    }`}
+                                  />
+                                  <UilMinus
+                                    className={`absolute top-0 left-0 h-6 w-6 transition duration-300 ${
+                                      open ? 'text-cool-gray-60' : '-rotate-90 text-cool-gray-40'
+                                    }`}
+                                  />
+                                </span>
+                              </Disclosure.Button>
+
+                              <Transition
+                                enter="transition duration-200 ease-out"
+                                enterFrom="scale-95 opacity-0"
+                                enterTo="scale-100 opacity-100"
+                                leave="transition duration-200 ease-out"
+                                leaveFrom="scale-100 opacity-100"
+                                leaveTo="scale-95 opacity-0"
+                              >
+                                <Disclosure.Panel className="mb-4 flex flex-col py-3 text-cool-gray-80">
+                                  <Link href="/drive" locale={props.lang}>
+                                    <a
+                                      tabIndex={0}
+                                      onClick={() => {
+                                        setMenuState(false);
+                                      }}
+                                      className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
+                                    >
+                                      {props.textContent.products.drive}
+                                    </a>
+                                  </Link>
+
+                                  <Link href="/photos" locale={props.lang}>
+                                    <a
+                                      tabIndex={0}
+                                      onClick={() => {
+                                        setMenuState(false);
+                                      }}
+                                      className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
+                                    >
+                                      {props.textContent.products.photos}
+                                    </a>
+                                  </Link>
+
+                                  <a
+                                    href="https://send.internxt.com"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex w-full items-center justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
+                                  >
+                                    <span>{props.textContent.products.send}</span>
+                                    <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
+                                      {props.textContent.products.new}
+                                    </span>
+                                  </a>
+                                </Disclosure.Panel>
+                              </Transition>
+                            </div>
+                          </div>
+                        )}
+                      </Disclosure>
+
+                      <Link href="/privacy" locale={props.lang}>
+                        <a
+                          role="link"
+                          tabIndex={0}
+                          onClick={() => {
+                            setMenuState(false);
+                          }}
+                          className={`flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition delay-200 duration-300 ${
+                            menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                          }`}
+                        >
+                          {props.textContent.links.privacy}
+                        </a>
+                      </Link>
+
+                      <Link href="/about" locale={props.lang}>
+                        <a
+                          role="link"
+                          tabIndex={0}
+                          onClick={() => {
+                            setMenuState(false);
+                          }}
+                          className={`flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition delay-250 duration-300 ${
+                            menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                          }`}
+                        >
+                          {props.textContent.links.about}
+                        </a>
+                      </Link>
+
+                      <a
+                        onClick={() => {
+                          setMenuState(false);
+                        }}
+                        tabIndex={0}
+                        href="https://drive.internxt.com/login"
+                        className={`flex w-full translate-y-0 px-8 py-3 text-primary outline-none transition delay-300 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                         }`}
                       >
-                        <div className={`${open ? 'bg-cool-gray-5' : ''}`}>
-                          <Disclosure.Button
-                            className={`flex w-full items-center justify-between px-8 py-3 font-medium ${
-                              open ? 'bg-cool-gray-10' : ''
-                            }`}
-                          >
-                            <span>{props.textContent.links.products}</span>
-                            <span className="relative h-6 w-6">
-                              <UilMinus
-                                className={`absolute top-0 left-0 h-6 w-6 transition duration-300 ${
-                                  open ? 'text-cool-gray-60' : '-rotate-180 text-cool-gray-40'
-                                }`}
-                              />
-                              <UilMinus
-                                className={`absolute top-0 left-0 h-6 w-6 transition duration-300 ${
-                                  open ? 'text-cool-gray-60' : '-rotate-90 text-cool-gray-40'
-                                }`}
-                              />
-                            </span>
-                          </Disclosure.Button>
-
-                          <Transition
-                            enter="transition duration-200 ease-out"
-                            enterFrom="scale-95 opacity-0"
-                            enterTo="scale-100 opacity-100"
-                            leave="transition duration-200 ease-out"
-                            leaveFrom="scale-100 opacity-100"
-                            leaveTo="scale-95 opacity-0"
-                          >
-                            <Disclosure.Panel className="mb-4 flex flex-col py-3 text-cool-gray-80">
-                              <Link href="/drive" locale={props.lang}>
-                                <a
-                                  tabIndex={0}
-                                  onClick={() => {
-                                    setMenuState(false);
-                                  }}
-                                  className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
-                                >
-                                  {props.textContent.products.drive}
-                                </a>
-                              </Link>
-
-                              <Link href="/photos" locale={props.lang}>
-                                <a
-                                  tabIndex={0}
-                                  onClick={() => {
-                                    setMenuState(false);
-                                  }}
-                                  className="flex w-full justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
-                                >
-                                  {props.textContent.products.photos}
-                                </a>
-                              </Link>
-
-                              <a
-                                href="https://send.internxt.com"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex w-full items-center justify-start px-8 py-3 text-lg font-medium text-cool-gray-80 outline-none"
-                              >
-                                <span>{props.textContent.products.send}</span>
-                                <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
-                                  {props.textContent.products.new}
-                                </span>
-                              </a>
-                            </Disclosure.Panel>
-                          </Transition>
-                        </div>
-                      </div>
-                    )}
-                  </Disclosure>
-
-                  <Link href="/privacy" locale={props.lang}>
-                    <a
-                      role="link"
-                      tabIndex={0}
-                      onClick={() => {
-                        setMenuState(false);
-                      }}
-                      className={`flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition delay-200 duration-300 ${
-                        menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                      }`}
-                    >
-                      {props.textContent.links.privacy}
-                    </a>
-                  </Link>
-
-                  <Link href="/about" locale={props.lang}>
-                    <a
-                      role="link"
-                      tabIndex={0}
-                      onClick={() => {
-                        setMenuState(false);
-                      }}
-                      className={`flex w-full translate-y-0 cursor-pointer px-8 py-3 outline-none transition delay-250 duration-300 ${
-                        menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                      }`}
-                    >
-                      {props.textContent.links.about}
-                    </a>
-                  </Link>
-
-                  <a
-                    onClick={() => {
-                      setMenuState(false);
-                    }}
-                    tabIndex={0}
-                    href="https://drive.internxt.com/login"
-                    className={`flex w-full translate-y-0 px-8 py-3 text-primary outline-none transition delay-300 duration-300 ${
-                      menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                    }`}
-                  >
-                    {props.textContent.links.login}
-                  </a>
-                </div>
+                        {props.textContent.links.login}
+                      </a>
+                    </div>
+                  </div>
+                }
               </div>
-            </div>
+            )}
 
             {/* Logo */}
             <Link href="/" locale={props.lang} passHref>
@@ -380,91 +385,99 @@ export default function Navbar(props: NavbarProps) {
           </div>
 
           {/* Desktop links */}
-          <div className="links">
-            <div className="hidden space-x-2 lg:inline-flex">
-              <Link href="/pricing" locale={props.lang}>
-                <a
-                  className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
-                  } text-base font-medium`}
+          {!props.isLinksHidden && (
+            <div className="links">
+              <div className="hidden space-x-2 lg:inline-flex">
+                <Link href="/pricing" locale={props.lang}>
+                  <a
+                    className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                      props.darkMode
+                        ? 'text-white hover:text-cool-gray-20'
+                        : 'text-cool-gray-70 hover:text-cool-gray-90'
+                    } text-base font-medium`}
+                  >
+                    {props.textContent.links.pricing}
+                  </a>
+                </Link>
+
+                <div
+                  className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
+                    props.darkMode
+                      ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
+                      : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-cool-gray-90'
+                  } cursor-default rounded-lg`}
                 >
-                  {props.textContent.links.pricing}
-                </a>
-              </Link>
+                  <span>{props.textContent.links.products}</span>
+                  <UilAngleDown className="h-6 w-6 translate-y-px text-cool-gray-20 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
 
-              <div
-                className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
-                  props.darkMode
-                    ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
-                    : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-cool-gray-90'
-                } cursor-default rounded-lg`}
-              >
-                <span>{props.textContent.links.products}</span>
-                <UilAngleDown className="h-6 w-6 translate-y-px text-cool-gray-20 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+                  {/* Menu items */}
+                  <div className="pointer-events-none absolute top-full left-1/2 z-10 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+                    <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
-                {/* Menu items */}
-                <div className="pointer-events-none absolute top-full left-1/2 z-10 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
-                  <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
+                    <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
+                      <Link href="/drive" locale={props.lang}>
+                        <a
+                          className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                            props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          }`}
+                        >
+                          {props.textContent.products.drive}
+                        </a>
+                      </Link>
 
-                  <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
-                    <Link href="/drive" locale={props.lang}>
+                      <Link href="/photos" locale={props.lang}>
+                        <a
+                          className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                            props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          }`}
+                        >
+                          {props.textContent.products.photos}
+                        </a>
+                      </Link>
+
                       <a
-                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                        href="https://send.internxt.com"
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                           props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
                         }`}
                       >
-                        {props.textContent.products.drive}
+                        <span>{props.textContent.products.send}</span>
+                        <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
+                          {props.textContent.products.new}
+                        </span>
                       </a>
-                    </Link>
-
-                    <Link href="/photos" locale={props.lang}>
-                      <a
-                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}
-                      >
-                        {props.textContent.products.photos}
-                      </a>
-                    </Link>
-
-                    <a
-                      href="https://send.internxt.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                        props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                      }`}
-                    >
-                      <span>{props.textContent.products.send}</span>
-                      <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
-                        {props.textContent.products.new}
-                      </span>
-                    </a>
+                    </div>
                   </div>
                 </div>
+
+                <Link href="/privacy" locale={props.lang}>
+                  <a
+                    className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                      props.darkMode
+                        ? 'text-white hover:text-cool-gray-20'
+                        : 'text-cool-gray-70 hover:text-cool-gray-90'
+                    } text-base font-medium`}
+                  >
+                    {props.textContent.links.privacy}
+                  </a>
+                </Link>
+
+                <Link href="/about" locale={props.lang}>
+                  <a
+                    className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                      props.darkMode
+                        ? 'text-white hover:text-cool-gray-20'
+                        : 'text-cool-gray-70 hover:text-cool-gray-90'
+                    } text-base font-medium`}
+                  >
+                    {props.textContent.links.about}
+                  </a>
+                </Link>
               </div>
-
-              <Link href="/privacy" locale={props.lang}>
-                <a
-                  className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
-                  } text-base font-medium`}
-                >
-                  {props.textContent.links.privacy}
-                </a>
-              </Link>
-
-              <Link href="/about" locale={props.lang}>
-                <a
-                  className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode ? 'text-white hover:text-cool-gray-20' : 'text-cool-gray-70 hover:text-cool-gray-90'
-                  } text-base font-medium`}
-                >
-                  {props.textContent.links.about}
-                </a>
-              </Link>
             </div>
-          </div>
+          )}
 
           {/* Login and CTA */}
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
