@@ -1,0 +1,108 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "Comparaison de la sécurité",
+      "line2": "du stockage en nuage"
+    },
+    "description": "Comparez toutes les options pour choisir la solution de stockage en nuage la plus sûre.",
+    "cta": "Obtenez 10GB gratuits",
+    "noCredirCardNeeded": "Pas de carte de crédit requise",
+    "table": {
+      "sections": {
+        "encryption_and_security": {
+          "name": "Cryptage et sécurité",
+          "features": {
+            "encryption_at_rest_and_in_transit": "Cryptage au repos et en transit",
+            "end_to_end_encrypted_storage": "Stockage crypté de bout en bout",
+            "end_to_end_encrypted_file_sharing": "Partage de fichiers chiffrés de bout en bout",
+            "zero_knowledge_encryption": "Cryptage à connaissance zéro",
+            "two_factor_authentication": "Authentification à deux facteurs",
+            "gdpr_compliant_synchronization": "Synchronisation conforme au GDPR",
+            "aes_256_encryption": "Cryptage AES-256",
+            "zero_knowledge_access_from_browsers": "Accès à connaissance zéro à partir des navigateurs",
+            "no_third_party_file_access": "Les tiers n'ont pas accès à vos fichiers"
+          }
+        },
+        "storage_and_file_management": {
+          "name": "Stockage et gestion",
+          "features": {
+            "sync_any_folders": "Synchronisation de tous les dossiers",
+            "web_app": "Application web",
+            "windows_desktop_app": "Application Windows",
+            "mac_desktop_app": "Application Mac",
+            "linux_desktop_app": "Application Linux",
+            "android_app": "Application Android",
+            "ios_app": "Application iOS",
+            "backup_folders_and_files": "Sauvegarde et récupération",
+            "file_sharding": "Fragmentation des fichiers",
+            "unlimited_bandwidth": "Bande passante illimitée",
+            "free_account_storage": "Stockage gratuit"
+          }
+        },
+        "deployment": {
+          "name": "Déploiement",
+          "features": {
+            "support_center": "Centre d’assistance",
+            "live_chat_support": "Aide par chat en direct",
+            "open_source": "Source ouverte et publique"
+          }
+        },
+        "controlled_file_sharing": {
+          "name": "Contrôle du partage de fichiers",
+          "features": {
+            "file_requests": "Demandes d'accès à des fichiers",
+            "password_protection_for_links": "Protection des liens par mot de passe",
+            "download_limits_for_links": "Limitation de l'accès aux liaisons"
+          }
+        }
+      },
+      "drag": {
+        "line1": "Faites glisser horizontalement",
+        "line2": "pour montrer aux concurrents"
+      },
+      "startNow": "Commencer"
+    }
+  },
+  "FeatureSection": {
+    "whyStartUsingInternxt": {
+      "title": "Pourquoi commencer à utiliser Internxt?",
+      "description": {
+        "line1": "Contrairement à d'autres services, la publicité n'est pas notre modèle d'entreprise.",
+        "line2": "Vos données n'appartiennent qu'à vous. Nous nous concentrons sur la sécurité et la confidentialité",
+        "line3": "de vos fichiers et de vos photos. Avec Internxt, vous pouvez vous sentir en sécurité."
+      }
+    },
+    "createAccount": {
+      "title": {
+        "line1": "Obtenez jusqu'à",
+        "line2": "10Gb avec votre",
+        "line3": "compte gratuit."
+      },
+      "description": {
+        "line1": "Créez votre compte et commencez à synchroniser vos",
+        "line2": "fichiers en toute confidentialité et en toute sécurité."
+      },
+      "cta": "Créer un compte"
+    },
+    "whyPeopleLoveInternxt": {
+      "title": "Pourquoi les gens aiment Internxt?",
+      "cards": [
+        {
+          "quote": "Internxt a travaillé sur un plan ambitieux pour rendre le stockage en nuage décentralisé massivement accessible",
+          "author": "Natasha Lomas",
+          "company": "TechCrunch"
+        },
+        {
+          "quote": "Il est plus sûr et plus privé que les applications classiques basées sur le cloud, telles que celles proposées par les géants de la technologie comme Google",
+          "author": "Alison Coleman",
+          "company": "Forbes"
+        },
+        {
+          "quote": "Les grands géants de l'internet ont une contrepartie: l'exploitation des données à des fins publicitaires. [...] Internxt combat ce problème en offrant un nuage distribué et crypté",
+          "author": "Miguel Ángel Moreno",
+          "company": "Business Insider"
+        }
+      ]
+    }
+  }
+}

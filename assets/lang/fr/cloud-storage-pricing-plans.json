@@ -1,0 +1,126 @@
+{
+  "HeroSection": {
+    "eyebrow": "INTERNXT",
+    "title": {
+      "line1": "The safest cloud storage for all",
+      "line2": "your files, photos, and more."
+    },
+    "subtitle": {
+      "line1": "All Internxt accounts include Internxt Drive, which lets you sync",
+      "line2": "your folders and files, and Internxt Photos, a cloud gallery",
+      "line3": "to keep all your memories synced and ready to share."
+    },
+    "summaryCards": {
+      "card1": {
+        "line1": "All your photos.",
+        "line2": "One gallery."
+      },
+      "card2": {
+        "line1": "Backup your computer.",
+        "line2": "Access from everywhere."
+      },
+      "card3": {
+        "line1": "Keep your files",
+        "line2": "always up to date."
+      }
+    },
+    "getStartedSection": {
+      "subtitle": "Starting at only 0.89 €/month",
+      "cta": "Get started now"
+    }
+  },
+  "PricingSection": {
+    "title": "The biggest bang for your buck.",
+    "subtitle": "Get the best-in-class privacy for you and your files with one of these three plans:",
+    "switch": {
+      "monthly": "Monthly",
+      "annually": "Annually"
+    },
+    "priceCards": {
+      "mostPopular": "Most popular",
+      "monthlyCost": "€/month",
+      "billed": "€ billed",
+      "monthly": "monthly",
+      "annually": "annually",
+      "buy": "Buy",
+      "features": [
+        "30 days money-back guarantee",
+        "Encrypted file storage and sharing",
+        "Access your files from any device",
+        "Get access to all our services"
+      ]
+    }
+  },
+  "FeaturesSection": {
+    "features": {
+      "section1": {
+        "title": {
+          "line1": "Ultra secure",
+          "line2": "Super private"
+        },
+        "subtitle": {
+          "line1": "Security comes as standard.",
+          "line2": " We use client-side encryption for ensuring that your images, videos, and documents stay only yours."
+        }
+      },
+      "section2": {
+        "title": "Available in all platforms.",
+        "subtitle": "Manage your files from any device and transfer documents, images and videos between devices."
+      },
+      "section3": {
+        "title": "Simple and easy.",
+        "subtitle": {
+          "line1": "Preview files directly on the web.",
+          "line2": "Share via link and limit the number of times users can open this link.",
+          "line3": "Search folders and files."
+        }
+      }
+    },
+    "getStartedSection": {
+      "eyebrow": "INTERNXT",
+      "title": "Get started.",
+      "cta": "Choose your plan"
+    }
+  },
+  "FaqSection": {
+    "title": {
+      "line1": "Did you miss",
+      "line2": "anything?"
+    },
+    "faq": [
+      {
+        "question": "What is Internxt?",
+        "answer": "Internxt Drive is a zero-knowledge cloud storage service based on best-in-class privacy and security."
+      },
+      {
+        "question": "What is Internxt Drive?",
+        "answer": "Internxt Drive is an encrypted cloud storage service that allows you to upload, download, share, sync, backup, and access your files from any device."
+      },
+      {
+        "question": "What is Internxt Photos?",
+        "answer": "Iternxt Photos is a cloud photo gallery that groups photos from all your devices in one place. It is the best way to store your memories in a secure, encrypted and private way."
+      },
+      {
+        "question": "How is Internxt so secure?",
+        "answer": "To ensure the security and privacy of your data and files we use state-of-the-art technologies such as military-grade encryption, zero-knowledge technology, end-to-end encryption, and synchronization under GDPR. This way, only you can access your data."
+      },
+      {
+        "question": "What devices are supported?",
+        "answer": "Internxt services work on devices with an equivalent or higher version of MacOS 10.9 Mavericks, Windows 7, Ubuntu 14.04, iOS 11 or Android 5.0 Lollipop. If you want to use another device, you can access via a web browser."
+      }
+    ],
+    "getStartedSection": {
+      "title": {
+        "line1": "Security and privacy for",
+        "line2": "less than a buck a month."
+      },
+      "subtitle": "Starting at only 0.89 €/month",
+      "cta": "Upgrade to Internxt"
+    },
+    "footer": {
+      "copyright": "Copyright © 2022, Internxt Universal Technologies SL",
+      "contactUs": "Contact us",
+      "privacy": "Privacy"
+    }
+  }
+}

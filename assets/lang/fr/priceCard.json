@@ -1,0 +1,56 @@
+{
+  "mostPopular": "Le plus populaire",
+  "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
+  "planTitles": {
+    "individuals": "Plans Individuels",
+    "business": "Plans Professionels"
+  },
+  "changePlan": {
+    "toIndividuals": "Passer aux plans Individuels",
+    "toBusiness": "Passer aux plans Professionels"
+  },
+  "billingFrequency": {
+    "monthly": "Mensuel",
+    "semiannually": "Semiannually",
+    "annually": "Annuel"
+  },
+  "billingFrequencyLabel": {
+    "monthly": "facturé mensuellement",
+    "semiannually": "facturé semestriellement",
+    "annually": "facturé annuellement",
+    "afterMonth": "après 30 jours"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/mensuel",
+    "semiannually": "/semiannually",
+    "annually": "/an"
+  },
+  "perUserSlash": "/utilisateur",
+  "perUser": "Par utilisateur",
+  "users": "utilisateurs",
+  "freePlan": "Gratuit",
+  "price": {
+    "free": "Gratuit pour toujours"
+  },
+  "perMonth": "/mois",
+  "firstMonth": "30 premiers jours",
+  "cta": {
+    "getStarted": "Commencer",
+    "signUpNow": "S'inscrire gratuitement",
+    "buy": "Obtenir",
+    "claimTheDeal": "Réclamer l'affaire",
+    "freemonth": "Obtenez 30 jours gratuits"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Enjoy",
+      "enjoyUpTo": "Profitez jusqu'à",
+      "forFree": "gratuitement",
+      "forever": "toujours"
+    },
+    "moneyBack": "Garantie de remboursement de 30 jours",
+    "encryptedFiles": "Stockez et partagez des fichiers cryptés",
+    "accessFromAnywhere": "Vos fichiers sur tous vos apparells",
+    "allServices": "Accès à tous nos services"
+  }
+}
