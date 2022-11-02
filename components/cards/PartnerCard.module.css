@@ -1,0 +1,61 @@
+.PartnerCard {
+  display: flex;
+  flex-direction: row;
+  width: 943px;
+  height: 485px;
+  border-radius: 7px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.04);
+  background-color: #0d80ff;
+
+  margin: 2rem 0 0;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  color: black;
+  background-color: white;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  padding: 3rem 3.75rem 0;
+}
+
+.company {
+  font-size: 30px;
+  line-height: 1.34;
+  letter-spacing: -0.3px;
+  color: white;
+
+  margin: 2rem 0 1.5rem;
+}
+
+.text-black {
+  color: black !important;
+}
+
+.bio {
+  position: relative;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.69;
+  letter-spacing: normal;
+  color: white;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  line-height: 2.07;
+  letter-spacing: -0.15px;
+  color: white;
+}
+
+.read-more:hover {
+  color: white;
+}

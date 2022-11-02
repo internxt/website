@@ -10,35 +10,47 @@ const FeatureSection = ({ textContent }) => {
           <p className="mt-4 text-center text-xl font-normal">{textContent.FeatureSection.subtitle}</p>
         </div>
         <div className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:grid-cols-2 md:gap-x-0 lg:grid-cols-3">
-          <div className="flex flex-col items-center md:w-64 md:flex-auto">
+          <div className="flex flex-col items-center space-y-6 md:w-64 md:flex-auto">
             <EyeSlash size={56} color={'rgb(0, 102, 255)'} />
-            <p className="text-xl font-semibold">{textContent.FeatureSection.feature1.title}</p>
-            <p className="text-center text-xl font-light">{textContent.FeatureSection.feature1.subtitle1}</p>
+            <div className="flex flex-col items-center gap-x-40 space-y-5 text-center">
+              <p className="text-xl font-semibold">{textContent.FeatureSection.feature1.title}</p>
+              <p className="text-center text-xl font-light">{textContent.FeatureSection.feature1.subtitle1}</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center md:w-64 md:flex-auto">
+          <div className="flex flex-col items-center space-y-6 md:w-64 md:flex-auto">
             <Gauge size={56} color={'rgb(0, 102, 255)'} />
-            <p className="text-xl font-semibold">{textContent.FeatureSection.feature2.title}</p>
-            <p className="text-center text-xl font-light">{textContent.FeatureSection.feature2.subtitle1}</p>
+            <div className="flex flex-col items-center gap-x-40 space-y-5 text-center">
+              <p className="text-xl font-semibold">{textContent.FeatureSection.feature2.title}</p>
+              <p className="text-center text-xl font-light">{textContent.FeatureSection.feature2.subtitle1}</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center md:w-64 md:flex-auto">
+          <div className="flex flex-col items-center space-y-6 md:w-64 md:flex-auto">
             <LockSimple size={56} color={'rgb(0, 102, 255)'} />
-            <p className="text-xl font-semibold">{textContent.FeatureSection.feature3.title}</p>
-            <p className="text-center text-xl font-light">{textContent.FeatureSection.feature3.subtitle1}</p>
+            <div className="flex flex-col items-center gap-x-40 space-y-5 text-center">
+              <p className="text-xl font-semibold">{textContent.FeatureSection.feature3.title}</p>
+              <p className="text-center text-xl font-light">{textContent.FeatureSection.feature3.subtitle1}</p>
+            </div>
           </div>
-          <div className=" flex flex-col items-center md:w-64 md:flex-auto">
+          <div className=" flex flex-col items-center space-y-6 md:w-64 md:flex-auto">
             <ArrowsClockwise size={56} color={'rgb(0, 102, 255)'} />
-            <p className="text-xl font-semibold">{textContent.FeatureSection.feature4.title}</p>
-            <p className="text-center text-xl font-light">{textContent.FeatureSection.feature4.subtitle1}</p>
+            <div className="flex flex-col items-center gap-x-40 space-y-5 text-center">
+              <p className="text-xl font-semibold">{textContent.FeatureSection.feature4.title}</p>
+              <p className="text-center text-xl font-light">{textContent.FeatureSection.feature4.subtitle1}</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center md:w-64 md:flex-auto">
+          <div className="flex flex-col items-center space-y-6 md:w-64 md:flex-auto">
             <Monitor size={56} color={'rgb(0, 102, 255)'} />
-            <p className="text-xl font-semibold">{textContent.FeatureSection.feature5.title}</p>
-            <p className="text-center text-xl font-light">{textContent.FeatureSection.feature5.subtitle1}</p>
+            <div className="flex flex-col items-center gap-x-40 space-y-5 text-center">
+              <p className="text-xl font-semibold">{textContent.FeatureSection.feature5.title}</p>
+              <p className="text-center text-xl font-light">{textContent.FeatureSection.feature5.subtitle1}</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center md:w-64 md:flex-auto">
+          <div className="flex flex-col items-center space-y-6 md:w-64 md:flex-auto">
             <User size={56} color={'rgb(0, 102, 255)'} />
-            <p className="text-xl font-semibold">{textContent.FeatureSection.feature6.title}</p>
-            <p className="text-center text-xl font-light">{textContent.FeatureSection.feature6.subtitle1}</p>
+            <div className="flex flex-col items-center gap-x-40 space-y-5 text-center">
+              <p className="text-xl font-semibold">{textContent.FeatureSection.feature6.title}</p>
+              <p className="text-center text-xl font-light">{textContent.FeatureSection.feature6.subtitle1}</p>
+            </div>
           </div>
         </div>
       </div>

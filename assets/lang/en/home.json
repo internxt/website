@@ -47,12 +47,13 @@
       "line2": "all your files and photos"
     },
     "subtitle": {
-      "line1": "Our products are based on your privacy and security. Drive and Photos are just",
+      "line1": "Our products are based on your privacy and security. Drive, Photos and Send are just",
       "line2": "the beginning of a full family of products focused on you and your privacy."
     },
     "cta": {
       "drive": "Explore Drive",
-      "photos": "Discover Photos"
+      "photos": "Discover Photos",
+      "send": "Try Send"
     },
     "feature1": {
       "title": { "line1": "Secure", "line2": "by design" },

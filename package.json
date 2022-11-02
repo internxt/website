@@ -13,9 +13,12 @@
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@headlessui/react": "1.6.6",
     "@iconscout/react-unicons": "^1.1.6",
     "@internxt/lib": "1.2.0",
+    "@mui/material": "^5.10.11",
     "@sendgrid/mail": "^7.4.0",
     "aos": "^2.3.4",
     "autoprefixer": "^10.0.2",

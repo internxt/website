@@ -1,76 +1,79 @@
 {
-	"HeroSection":
-	{
-		"title": "Privacidad",
-		"subtitle": {
-			"line1": "La privacidad es un derecho humano fundamental. En Internxt creemos que lo que la humanidad puede",
-			"line2": "lograr es extraordinario, y que los productos deben permitir a la sociedad alcanzar la excelencia.",
-			"line3": "Estos productos no solo deben empoderar, sino que también deben ser respetuosos con la sociedad.",
-			"line4": "Diga hola a Internxt. Privado por defecto, seguro por diseño, y libre como la libertad.",
-			"line5": "Empieza a utilizar hoy mismo Internxt Drive, un servicio de almacenamiento en la nube seguro, privado, distribuido, de código abierto, cifrado y gratuito."
-		},
-		"cta": "Ver el video"
-	},
-	"ManifestoSection":
-	{
-		"section1": {
-			"title": {
-				"line1": "Por qué la privacidad",
-				"line2": "es tan importante"
-			},
-			"subtitle": {
-				"line1": "Hoy en día Internet está controlado por gigantes tecnológicos que ofrecen servicios y productos que son un medio",
-				"line2": "para un fin. Servicios que se han convertido en imprescindibles en nuestras vidas y que se utilizan para recoger",
-				"line3": "datos de los usuarios para perfilarlos mejor, ya que realmente viven de la publicidad. La privacidad no debería tener",
-				"line4": "un coste tan elevado. Creemos en una Internet más ética, en la que la privacidad del usuario esté en el centro."
-			},
-			"signature": "Fran Villalba, CEO de Internxt"
-		},
-		"section2": {
-			"title": {
-				"line1": "Cómo aseguramos la",
-				"line2": "privacidad del usuario."
-			},
-			"subtitle": {
-				"line1": "Nos tomamos la privacidad y la seguridad muy en serio, por eso tenemos una pila de tecnologías",
-				"line2": " y protocolos para garantizar siempre que sus datos permanezcan seguros y privados."
-			},
-			"square1": {
-				"title": "Encriptación de grado militar.",
-				"description": "Todos los datos almacenados en tu cuenta están cifrados con AES-256. Es decir, el procesador más potente tardaría el doble de la edad del universo para descifrar un archivo pequeño."
-			},
-			"square2": {
-				"title": "Tecnología de conocimiento cero.",
-				"description": "Nos aseguramos de que en ningún momento los archivos, fotos, contraseñas o cualquier tipo de datos no cifrado sea visible a usuarios o servidores no autorizados."
-			},
-			"square3": {
-				"title": "Sincronización en el marco del GDPR.",
-				"description": "Nos comprometemos a cumplir con todas las provisiones actuales y futuras del GDPR, como la privacidad por diseño, el derecho a la información y el derecho a ser olvidado, entre muchas otras."
-			},
-			"square4": {
-				"title": "Cifrado de extremo a extremo.",
-				"description": "Todo lo que almacena o transfiere es encriptado antes de salir de tu dispositivo, siendo imposible de descifrar sin la clave del usuario, ni siquiera nosotros podemos acceder a tus archivos."
-			}
-		},
-		"section3": {
-			"title": {
-				"line1": "Aplicaciones diseñadas para",
-				"line2": "proteger tu privacidad."
-			},
-			"subtitle": {
-				"line1": "Cuando usas productos gratuitos de las grandes tecnológicas el precio son tus datos.",
-				"line2": "Nuestros productos nunca venderán tus datos, incluso nuestros planes gratuitos corren a nuestra cuenta."
-			},
-			"square1": {
-				"title": "Drive te deja elegir qué almacenar y compartir.",
-				"description": "Drive no accede a tus archivos personales con fines publicitarios, en cambio está diseñado para devolverte el control sobre tus archivos y protegerte de las empresas de recopilación de datos y publicidad.",
-				"cta": "Recuperar el control de mis archivos"
-			},
-			"square2": {
-				"title": "Photos pone el foco en la privacidad.",
-				"description": "Photos está diseñado y desarrollado para ayudarte a mantener una galería sincronizada de tus momentos más perfectos y darte el control de quién quieres que los vea.",
-				"cta": "Empezar a sincronizar mis fotos"
-			}
-		}
-	}
+  "HeroSection": {
+    "title": "Privacidad",
+    "subtitle": {
+      "line1": "La privacidad es un derecho humano fundamental. En Internxt creemos que lo que la humanidad puede",
+      "line2": "lograr es extraordinario, y que los productos deben permitir a la sociedad alcanzar la excelencia.",
+      "line3": "Estos productos no solo deben empoderar, sino que también deben ser respetuosos con la sociedad.",
+      "line4": "Diga hola a Internxt. Privado por defecto, seguro por diseño, y libre como la libertad.",
+      "line5": "Empieza a utilizar hoy mismo Internxt Drive, un servicio de almacenamiento en la nube seguro, privado, distribuido, de código abierto, cifrado y gratuito."
+    },
+    "cta": "Ver el video"
+  },
+  "ManifestoSection": {
+    "section1": {
+      "title": {
+        "line1": "Por qué la privacidad",
+        "line2": "es tan importante"
+      },
+      "subtitle": {
+        "line1": "Hoy en día Internet está controlado por gigantes tecnológicos que ofrecen servicios y productos que son un medio",
+        "line2": "para un fin. Servicios que se han convertido en imprescindibles en nuestras vidas y que se utilizan para recoger",
+        "line3": "datos de los usuarios para perfilarlos mejor, ya que realmente viven de la publicidad. La privacidad no debería tener",
+        "line4": "un coste tan elevado. Creemos en una Internet más ética, en la que la privacidad del usuario esté en el centro."
+      },
+      "signature": "Fran Villalba, CEO de Internxt"
+    },
+    "section2": {
+      "title": {
+        "line1": "Cómo aseguramos la",
+        "line2": "privacidad del usuario."
+      },
+      "subtitle": {
+        "line1": "Nos tomamos la privacidad y la seguridad muy en serio, por eso tenemos una pila de tecnologías",
+        "line2": " y protocolos para garantizar siempre que sus datos permanezcan seguros y privados."
+      },
+      "square1": {
+        "title": "Encriptación de grado militar.",
+        "description": "Todos los datos almacenados en tu cuenta están cifrados con AES-256. Es decir, el procesador más potente tardaría el doble de la edad del universo para descifrar un archivo pequeño."
+      },
+      "square2": {
+        "title": "Tecnología de conocimiento cero.",
+        "description": "Nos aseguramos de que en ningún momento los archivos, fotos, contraseñas o cualquier tipo de datos no cifrado sea visible a usuarios o servidores no autorizados."
+      },
+      "square3": {
+        "title": "Sincronización en el marco del GDPR.",
+        "description": "Nos comprometemos a cumplir con todas las provisiones actuales y futuras del GDPR, como la privacidad por diseño, el derecho a la información y el derecho a ser olvidado, entre muchas otras."
+      },
+      "square4": {
+        "title": "Cifrado de extremo a extremo.",
+        "description": "Todo lo que almacena o transfiere es encriptado antes de salir de tu dispositivo, siendo imposible de descifrar sin la clave del usuario, ni siquiera nosotros podemos acceder a tus archivos."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Aplicaciones diseñadas para",
+        "line2": "proteger tu privacidad."
+      },
+      "subtitle": {
+        "line1": "Cuando usas productos gratuitos de las grandes tecnológicas el precio son tus datos.",
+        "line2": "Nuestros productos nunca venderán tus datos, incluso nuestros planes gratuitos corren a nuestra cuenta."
+      },
+      "square1": {
+        "title": "Drive te deja elegir qué almacenar y compartir.",
+        "description": "Drive no accede a tus archivos personales con fines publicitarios, en cambio está diseñado para devolverte el control sobre tus archivos y protegerte de las empresas de recopilación de datos y publicidad.",
+        "cta": "Recuperar el control de mis archivos"
+      },
+      "square2": {
+        "title": "Photos pone el foco en la privacidad.",
+        "description": "Photos está diseñado y desarrollado para ayudarte a mantener una galería sincronizada de tus momentos más perfectos y darte el control de quién quieres que los vea.",
+        "cta": "Empezar a sincronizar mis fotos"
+      },
+      "square3": {
+        "title": "Envíe con absoluta seguridad.",
+        "description": "Send te permite cifrar y compartir rápidamente archivos de gran tamaño sin que tengas que preocuparte por la seguridad de tus documentos, imágenes o vídeos. Envía archivos a cualquier persona con total confidencialidad.",
+        "cta": "Envía un archivo cifrado"
+      }
+    }
+  }
 }

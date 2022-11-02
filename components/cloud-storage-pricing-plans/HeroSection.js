@@ -2,13 +2,13 @@ import React from 'react';
 
 const HeroSection = ({ textContent }) => (
   <section className="relative bg-white">
-    <div className="flex flex-col items-center p-6 sm:p-10 lg:py-16 lg:px-8 space-y-8 sm:space-y-12">
+    <div className="flex flex-col items-center space-y-8 p-6 sm:space-y-12 sm:p-10 lg:py-16 lg:px-8">
       {/* Fold */}
-      <div className="flex flex-col items-center space-y-4 md:space-y-8 text-center">
+      <div className="flex flex-col items-center space-y-4 text-center md:space-y-8">
         {/* Title */}
-        <div className="flex flex-col space-y">
-          <h2 className="text-base sm:text-xl font-medium text">{textContent.eyebrow}</h2>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium sm:font-medium">
+        <div className="space-y flex flex-col">
+          <h2 className="text text-base font-medium sm:text-xl">{textContent.eyebrow}</h2>
+          <h1 className="text-3xl font-medium sm:text-4xl sm:font-medium lg:text-5xl">
             {textContent.title.line1} <br className="hidden md:flex" />
             {textContent.title.line2}
           </h1>
@@ -32,16 +32,16 @@ const HeroSection = ({ textContent }) => (
       </div>
 
       {/* Features quick summary */}
-      <div className="flex flex-col items-center text-center space-y-10 md:space-y-16">
+      <div className="flex flex-col items-center space-y-10 text-center md:space-y-16">
         {/* Info cards */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-center flex-wrap">
+        <div className="flex w-full flex-col flex-wrap items-center justify-center md:flex-row">
           {/* Card 1: "All your photos. One gallery." */}
-          <div className="flex flex-col w-full md:w-72 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3">
-            <div className="flex flex-col items-center justify-start w-full h-52">
+          <div className="my-3 flex w-full flex-col overflow-hidden rounded-xl bg-gray-5 md:m-3 md:w-72">
+            <div className="flex h-52 w-full flex-col items-center justify-start">
               <img
                 src="./images/landing/summary_photos.webp"
                 draggable="false"
-                className="w-52 h-52 -mt-8"
+                className="-mt-8 h-52 w-52"
                 alt="Internxt Photos gallery"
                 style={{
                   // Custom image shadow
@@ -51,7 +51,7 @@ const HeroSection = ({ textContent }) => (
               />
             </div>
 
-            <div className="flex flex-col items-center p-8 pt-0 md:p-10 md:pt-0 text-center text-2xl font-medium">
+            <div className="flex flex-col items-center p-8 pt-0 text-center text-2xl font-medium md:p-10 md:pt-0">
               {textContent.summaryCards.card1.line1}
               <br />
               {textContent.summaryCards.card1.line2}
@@ -59,17 +59,17 @@ const HeroSection = ({ textContent }) => (
           </div>
 
           {/* Card 2: "Backup your computer. Access from everywhere." */}
-          <div className="flex flex-col w-full md:w-96 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3 order-last lg:order-none">
-            <div className="flex flex-col items-center p-8 pb-0 md:p-10 md:pb-0 text-center text-2xl font-medium">
+          <div className="order-last my-3 flex w-full flex-col overflow-hidden rounded-xl bg-gray-5 md:m-3 md:w-96 lg:order-none">
+            <div className="flex flex-col items-center p-8 pb-0 text-center text-2xl font-medium md:p-10 md:pb-0">
               {textContent.summaryCards.card2.line1} <br className="hidden sm:flex" />
               {textContent.summaryCards.card2.line2}
             </div>
 
-            <div className="flex flex-col items-start justify-start w-full h-52">
+            <div className="flex h-52 w-full flex-col items-start justify-start">
               <img
                 src="./images/landing/summary_web.webp"
                 draggable="false"
-                className="w-96 h-52 mt-8 ml-8"
+                className="mt-8 ml-8 h-52 w-96"
                 alt="Internxt Drive Web application in Backups tab"
                 style={{
                   // Custom image shadow
@@ -81,18 +81,18 @@ const HeroSection = ({ textContent }) => (
           </div>
 
           {/* Card 3: "Keep your files always up to date." */}
-          <div className="flex flex-col w-full md:w-72 bg-gray-5 rounded-xl overflow-hidden my-3 md:m-3">
-            <div className="flex flex-col items-center p-8 pb-0 md:p-10 md:pb-0 text-center text-2xl font-medium">
+          <div className="my-3 flex w-full flex-col overflow-hidden rounded-xl bg-gray-5 md:m-3 md:w-72">
+            <div className="flex flex-col items-center p-8 pb-0 text-center text-2xl font-medium md:p-10 md:pb-0">
               {textContent.summaryCards.card3.line1}
               <br />
               {textContent.summaryCards.card3.line2}
             </div>
 
-            <div className="flex flex-col items-center justify-end w-full h-52">
+            <div className="flex h-52 w-full flex-col items-center justify-end">
               <img
                 src="./images/landing/summary_desktop.webp"
                 draggable="false"
-                className="w-56 h-52 -mb-8"
+                className="-mb-8 h-52 w-56"
                 alt="Internxt Desktop widget showing files syncing with the cloud"
                 style={{
                   // Custom image shadow
