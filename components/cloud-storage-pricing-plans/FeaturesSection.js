@@ -1,14 +1,14 @@
 import React from 'react';
 
 const FeaturesSection = ({ textContent }) => (
-  <section className="relative bg-white overflow-hidden">
-    <div className="flex flex-col items-center px-4 py-10 lg:py-20 space-y-10 md:space-y-20 lg:space-y-32">
+  <section className="relative overflow-hidden bg-white">
+    <div className="flex flex-col items-center space-y-10 px-4 py-10 md:space-y-20 lg:space-y-32 lg:py-20">
       {/* Detailed features with mockups */}
-      <div className="flex flex-col items-center space-y-4 sm:space-y-0 md:space-y-32 px-4 md:px-0">
+      <div className="flex flex-col items-center space-y-4 px-4 sm:space-y-0 md:space-y-32 md:px-0">
         {/* Section 1: "Ultra secure. Super private." */}
-        <div className="flex flex-row w-full items-stretch justify-center lg:space-x-20">
-          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-10 md:pb-32 space-y-4 md:space-y-6">
-            <div className="relative w-screen mt-4 -mx-8 h-60 -mb-14 xs:h-96 xs:-mb-24 flex md:hidden overflow-hidden pointer-events-none">
+        <div className="flex w-full flex-row items-stretch justify-center lg:space-x-20">
+          <div className="flex w-full flex-col space-y-4 pb-10 sm:pt-10 md:w-80 md:space-y-6 md:pb-32 lg:w-96">
+            <div className="pointer-events-none relative -mx-8 mt-4 -mb-14 flex h-60 w-screen overflow-hidden md:hidden xs:-mb-24 xs:h-96">
               <div
                 className="relative mx-auto hidden xs:flex"
                 style={{
@@ -18,9 +18,9 @@ const FeaturesSection = ({ textContent }) => (
                 }}
               >
                 <img
-                  src="./images/landing/mockup_mac.webp"
+                  src="/images/landing/mockup_mac.webp"
                   draggable="false"
-                  className="absolute w-full h-full"
+                  className="absolute h-full w-full"
                   alt="Macbook Pro with Finder and Internxt Desktop apps open"
                 />
               </div>
@@ -33,28 +33,28 @@ const FeaturesSection = ({ textContent }) => (
                 }}
               >
                 <img
-                  src="./images/landing/mockup_mac.webp"
+                  src="/images/landing/mockup_mac.webp"
                   draggable="false"
-                  className="absolute w-full h-full"
+                  className="absolute h-full w-full"
                   alt="Macbook Pro with Finder and Internxt Desktop apps open"
                 />
               </div>
             </div>
 
-            <h4 className="text-4xl md:text-5xl lg:text-6xl font-medium">
+            <h4 className="text-4xl font-medium md:text-5xl lg:text-6xl">
               {textContent.features.section1.title.line1}
               <br />
               {textContent.features.section1.title.line2}
             </h4>
 
-            <h4 className="text-xl lg:text-2xl font-medium w-full">
+            <h4 className="w-full text-xl font-medium lg:text-2xl">
               {textContent.features.section1.subtitle.line1}
               <br />
               {textContent.features.section1.subtitle.line2}
             </h4>
           </div>
 
-          <div className="relative w-60 lg:w-96 hidden md:flex">
+          <div className="relative hidden w-60 md:flex lg:w-96">
             <div
               className="absolute"
               style={{
@@ -63,9 +63,9 @@ const FeaturesSection = ({ textContent }) => (
               }}
             >
               <img
-                src="./images/landing/mockup_mac.webp"
+                src="/images/landing/mockup_mac.webp"
                 draggable="false"
-                className="absolute w-full h-full"
+                className="absolute h-full w-full"
                 alt="Macbook Pro with Finder and Internxt Desktop apps open"
               />
             </div>
@@ -73,8 +73,8 @@ const FeaturesSection = ({ textContent }) => (
         </div>
 
         {/* Section 2: "Available in all platforms." */}
-        <div className="flex flex-row w-full items-stretch justify-center md:space-x-16 lg:space-x-20">
-          <div className="relative w-60 lg:w-96 hidden md:flex">
+        <div className="flex w-full flex-row items-stretch justify-center md:space-x-16 lg:space-x-20">
+          <div className="relative hidden w-60 md:flex lg:w-96">
             <div
               className="absolute"
               style={{
@@ -83,9 +83,9 @@ const FeaturesSection = ({ textContent }) => (
               }}
             >
               <img
-                src="./images/landing/mockup_phones.webp"
+                src="/images/landing/mockup_phones.webp"
                 draggable="false"
-                className="absolute w-full h-full hidden lg:flex"
+                className="absolute hidden h-full w-full lg:flex"
                 alt="Samsung and Apple phones side by side with Internxt Drive App open"
                 style={{
                   top: '-121px',
@@ -93,9 +93,9 @@ const FeaturesSection = ({ textContent }) => (
                 }}
               />
               <img
-                src="./images/landing/mockup_phones.webp"
+                src="/images/landing/mockup_phones.webp"
                 draggable="false"
-                className="absolute w-full h-full flex lg:hidden"
+                className="absolute flex h-full w-full lg:hidden"
                 alt="Samsung and Apple phones side by side with Internxt Drive App open"
                 style={{
                   top: '-121px',
@@ -105,8 +105,8 @@ const FeaturesSection = ({ textContent }) => (
             </div>
           </div>
 
-          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-10 md:pb-40 space-y-1 md:space-y-2">
-            <div className="relative w-full h-60 -mb-5 xs:h-80 xs:mb-0 flex md:hidden">
+          <div className="flex w-full flex-col space-y-1 pb-10 sm:pt-10 md:w-80 md:space-y-2 md:pb-40 lg:w-96">
+            <div className="relative -mb-5 flex h-60 w-full md:hidden xs:mb-0 xs:h-80">
               <div
                 className="relative mx-auto hidden xs:flex"
                 style={{
@@ -116,9 +116,9 @@ const FeaturesSection = ({ textContent }) => (
                 }}
               >
                 <img
-                  src="./images/landing/mockup_phones.webp"
+                  src="/images/landing/mockup_phones.webp"
                   draggable="false"
-                  className="absolute w-full h-full"
+                  className="absolute h-full w-full"
                   alt="Samsung and Apple phones side by side with Internxt Drive App open"
                 />
               </div>
@@ -131,9 +131,9 @@ const FeaturesSection = ({ textContent }) => (
                 }}
               >
                 <img
-                  src="./images/landing/mockup_phones.webp"
+                  src="/images/landing/mockup_phones.webp"
                   draggable="false"
-                  className="absolute w-full h-full"
+                  className="absolute h-full w-full"
                   alt="Samsung and Apple phones side by side with Internxt Drive App open"
                 />
               </div>
@@ -141,16 +141,16 @@ const FeaturesSection = ({ textContent }) => (
 
             <h4 className="text-2xl font-medium">{textContent.features.section2.title}</h4>
 
-            <h4 className="text-xl lg:text-2xl font-medium text-gray-50 w-full">
+            <h4 className="w-full text-xl font-medium text-gray-50 lg:text-2xl">
               {textContent.features.section2.subtitle}
             </h4>
           </div>
         </div>
 
         {/* Section 3: "Simple and easy." */}
-        <div className="flex flex-row w-full items-stretch justify-center md:space-x-16 lg:space-x-20">
-          <div className="flex flex-col w-full md:w-80 lg:w-96 sm:pt-10 pb-6 md:pb-40 lg:pb-20 space-y-1 md:space-y-2">
-            <div className="relative w-full h-52 -mb-2 xs:h-80 xs:-mb-8 flex md:hidden">
+        <div className="flex w-full flex-row items-stretch justify-center md:space-x-16 lg:space-x-20">
+          <div className="flex w-full flex-col space-y-1 pb-6 sm:pt-10 md:w-80 md:space-y-2 md:pb-40 lg:w-96 lg:pb-20">
+            <div className="relative -mb-2 flex h-52 w-full md:hidden xs:-mb-8 xs:h-80">
               <div
                 className="relative mx-auto hidden xs:flex"
                 style={{
@@ -160,9 +160,9 @@ const FeaturesSection = ({ textContent }) => (
                 }}
               >
                 <img
-                  src="./images/landing/mockup_ipad.webp"
+                  src="/images/landing/mockup_ipad.webp"
                   draggable="false"
-                  className="absolute w-full h-full"
+                  className="absolute h-full w-full"
                   alt="iPad Pro showing Internxt Drive Web app in Safari with a file preview open"
                 />
               </div>
@@ -175,9 +175,9 @@ const FeaturesSection = ({ textContent }) => (
                 }}
               >
                 <img
-                  src="./images/landing/mockup_ipad.webp"
+                  src="/images/landing/mockup_ipad.webp"
                   draggable="false"
-                  className="absolute w-full h-full"
+                  className="absolute h-full w-full"
                   alt="iPad Pro showing Internxt Drive Web app in Safari with a file preview open"
                 />
               </div>
@@ -185,7 +185,7 @@ const FeaturesSection = ({ textContent }) => (
 
             <h4 className="text-2xl font-medium">{textContent.features.section3.title}</h4>
 
-            <h4 className="text-xl lg:text-2xl font-medium text-gray-50 w-full">
+            <h4 className="w-full text-xl font-medium text-gray-50 lg:text-2xl">
               {textContent.features.section3.subtitle.line1}
               <br />
               {textContent.features.section3.subtitle.line2}
@@ -194,7 +194,7 @@ const FeaturesSection = ({ textContent }) => (
             </h4>
           </div>
 
-          <div className="relative w-60 lg:w-96 hidden md:flex">
+          <div className="relative hidden w-60 md:flex lg:w-96">
             <div
               className="absolute"
               style={{
@@ -203,9 +203,9 @@ const FeaturesSection = ({ textContent }) => (
               }}
             >
               <img
-                src="./images/landing/mockup_ipad.webp"
+                src="/images/landing/mockup_ipad.webp"
                 draggable="false"
-                className="absolute w-full h-full"
+                className="absolute h-full w-full"
                 alt="iPad Pro showing Internxt Drive Web app in Safari with a file preview open"
                 style={{
                   top: '-121px',
@@ -219,8 +219,8 @@ const FeaturesSection = ({ textContent }) => (
       {/* CTA Section */}
       <div className="flex flex-col items-center space-y-6 md:space-y-4">
         <div className="flex flex-col items-center">
-          <h4 className="text-lg md:text-xl font-medium">{textContent.getStartedSection.eyebrow}</h4>
-          <h3 className="text-4xl sm:text-5xl md:text-6xl font-medium sm:font-medium text-center">
+          <h4 className="text-lg font-medium md:text-xl">{textContent.getStartedSection.eyebrow}</h4>
+          <h3 className="text-center text-4xl font-medium sm:text-5xl sm:font-medium md:text-6xl">
             {textContent.getStartedSection.title}
           </h3>
         </div>

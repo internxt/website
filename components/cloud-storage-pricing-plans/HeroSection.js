@@ -39,7 +39,7 @@ const HeroSection = ({ textContent }) => (
           <div className="my-3 flex w-full flex-col overflow-hidden rounded-xl bg-gray-5 md:m-3 md:w-72">
             <div className="flex h-52 w-full flex-col items-center justify-start">
               <img
-                src="./images/landing/summary_photos.webp"
+                src="/images/landing/summary_photos.webp"
                 draggable="false"
                 className="-mt-8 h-52 w-52"
                 alt="Internxt Photos gallery"
@@ -67,7 +67,7 @@ const HeroSection = ({ textContent }) => (
 
             <div className="flex h-52 w-full flex-col items-start justify-start">
               <img
-                src="./images/landing/summary_web.webp"
+                src="/images/landing/summary_web.webp"
                 draggable="false"
                 className="mt-8 ml-8 h-52 w-96"
                 alt="Internxt Drive Web application in Backups tab"
@@ -90,7 +90,7 @@ const HeroSection = ({ textContent }) => (
 
             <div className="flex h-52 w-full flex-col items-center justify-end">
               <img
-                src="./images/landing/summary_desktop.webp"
+                src="/images/landing/summary_desktop.webp"
                 draggable="false"
                 className="-mb-8 h-52 w-56"
                 alt="Internxt Desktop widget showing files syncing with the cloud"
