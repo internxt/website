@@ -70,9 +70,9 @@
         "cta": "Commencer à synchroniser mes photos"
       },
       "square3": {
-        "title": "Envoyez avec une certitude absolue.",
-        "description": "Send vous permet de crypter et de partager rapidement des fichiers volumineux sans vous soucier de la sécurité de vos documents, images ou vidéos. Transférez à qui vous voulez en toute confidentialité.",
-        "cta": "Envoyez quelque chose de sensible"
+        "title": "Envoyez en toute sécurité.",
+        "description": "Send vous permet de chiffrer et de partager rapidement des fichiers de grande taille sans avoir à vous soucier de la sécurité de vos documents, images ou vidéos. Envoyez des fichiers à n'importe qui en toute confidentialité.",
+        "cta": "Envoyer un fichier chiffré"
       }
     }
   }
