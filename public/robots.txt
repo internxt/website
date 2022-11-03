@@ -1,2 +1,8 @@
 User-agent: *
 Allow: /
+
+#Host
+Host: https://internxt.com
+
+#Sitemaps
+Sitemap: https://internxt.com/sitemap.xml
