@@ -35,19 +35,19 @@
       },
       "square1": {
         "title": "Cryptage de qualité militaire.",
-        "description": "Toutes les données que vous stockez dans votre compte Internxt sont cryptées avec AES-256. Cela signifie que le processeur le plus puissant du monde aurait besoin de deux fois l'âge de l'univers pour décrypter un petit fichier."
+        "description": "Toutes les données que vous stockez dans votre compte Internxt sont cryptées avec AES-256. Cela signifie qu'il faudrait deux fois l'âge de l'univers pour décrypter un petit fichier."
       },
       "square2": {
         "title": "Technologie connaissance zéro.",
         "description": "Nous nous assurons qu'à aucun moment les fichiers, photos, mots de passe ou tout type de données non cryptées ne sont visibles par des utilisateurs ou des serveurs non autorisés."
       },
       "square3": {
-        "title": "Synchronisation conforme au GDPR.",
-        "description": "Notre engagement est de nous conformer à toutes les dispositions du GDPR, telles que la protection de la vie privée dès la conception, le droit à l'information et le droit à l'oubli,  entre beaucoup d'autres."
+        "title": "Conformité au RGPD.",
+        "description": "Notre engagement est de nous conformer à toutes les dispositions du GDPR, telles que la protection de la vie privée dès la conception, le droit à l'information et le droit à l'oubli."
       },
       "square4": {
         "title": "Cryptage de bout en bout.",
-        "description": "Tout ce que vous stockez ou transférez est crypté avant de quitter votre appareil, ce qui rend impossible le décryptage sans l'autorisation de l'utilisateur, même nous ne pouvons pas accéder à vos fichiers, photos ou mots de passe."
+        "description": "Tout ce que vous stockez ou transférez est crypté avant de quitter votre appareil, ce qui rend impossible le décryptage sans l'autorisation de l'utilisateur, même nous ne pouvons pas accéder à vos fichiers."
       }
     },
     "section3": {
