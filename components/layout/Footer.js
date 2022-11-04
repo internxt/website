@@ -115,9 +115,9 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       </div>
                     </a>
 
-                    <Link href="/token" locale={lang} passHref>
+                    {/* <Link href="/token" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.products.token}</a>
-                    </Link>
+                    </Link> */}
 
                     <Link href="/pricing" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.products.pricing}</a>
@@ -388,9 +388,9 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                         </div>
                       </a>
 
-                      <Link href="/token" locale={lang} passHref>
+                      {/* <Link href="/token" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.token}</a>
-                      </Link>
+                      </Link> */}
 
                       <Link href="/pricing" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.pricing}</a>
