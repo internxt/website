@@ -6,18 +6,18 @@
   },
   {
     "id": "drive",
-    "title": "Internxt – Drive",
-    "description": "Internxt Drive is a private, secure alternative to Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive and MediaFire. Zero-knowledge encryption, distributed, blockchain cloud storage."
+    "title": "Internxt Drive – Private & Secure Cloud Storage",
+    "description": "Store, share, and back up your files and photos to the cloud with Internxt Drive. Open-source and end-to-end encrypted file storage and online backup."
   },
   {
     "id": "photos",
-    "title": "Internxt – Photos",
-    "description": "Zero-knowledge encrypted, private, free and secure alternative to Google Photos. Store your photos on the cloud securely for free."
+    "title": "Internxt Photos – Safe Photo Storage & Image Backup",
+    "description": "Save, view, and sync your photos and images across all devices with Internxt Photos. End-to-end encrypted cloud photo sharing and image backup."
   },
   {
     "id": "pricing",
-    "title": "Internxt – Pricing",
-    "description": "Internxt's pricing. One membership for all our services. Internxt Drive, Internxt Send, Internxt Photos. Welcome to Internxt."
+    "title": "Internxt Pricing – Get Up To 10GB Free!",
+    "description": "Sign up for an Internxt secure cloud storage subscription and get access to our monthly newsletter filled with the latest tech news and updates."
   },
   {
     "id": "about",
@@ -36,8 +36,8 @@
   },
   {
     "id": "privacy",
-    "title": "Internxt – Privacy",
-    "description": "Privacy is a fundamental human right, at Internxt we design all our applications with privacy and security in mind. We stand for privacy and we always will."
+    "title": "Internxt Privacy – Free Privacy Tools & Resources",
+    "description": "Free tools to protect your privacy online: Password Checker, Virus Scanner, Directory of Privacy Organizations, and more. Internxt defends your right to privacy."
   },
   {
     "id": "virus-scanner",
@@ -55,13 +55,18 @@
     "description": "Redeem your exclusive coupon code provided by a certified Internxt partner. Get a special discount on Internxt secure cloud storage."
   },
   {
+    "id": "techradar-discount",
+    "title": "TechRadar Partner Deals - Save big on Internxt cloud storage!",
+    "description": "Redeem your exclusive coupon code provided by our partner TechRadar. Get a special discount on Internxt secure cloud storage."
+  },
+  {
     "id": "comparison",
     "title": "Internxt – Cloud Storage Comparison",
     "description": "Compare Internxt with all the other services out there. Internxt is the most private and secure alternative to Google Drive, Dropbox, Tresorit, pCloud, Icedrive, Storj, and Sync.com."
   },
   {
     "id": "black-friday",
-    "title": "Internxt Black Friday Deal",
+    "title": "Internxt Black Friday Deal – Cloud Storage Sale!",
     "description": "Internxt Black Friday Deal 2022: Sign up or upgrade and get over half off Internxt’s 2TB subscription for 1 year. Get your Black Friday discount on Internxt’s largest cloud storage plan today!"
   },
   {

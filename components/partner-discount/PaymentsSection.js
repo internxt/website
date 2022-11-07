@@ -14,7 +14,7 @@ const PaymentsSection = ({ textContent, country }) => {
             plan={textContent.card1.plan}
             price={textContent.card1.price}
             country={country}
-            cta={'GB2012'}
+            cta={['checkout', 'GB2012']}
             month={textContent.month}
             annualPrice={textContent.card1.annualPrice}
             billedAnnually={textContent.billedAnnually}
@@ -25,7 +25,7 @@ const PaymentsSection = ({ textContent, country }) => {
             price={textContent.card2.price}
             country={country}
             month={textContent.month}
-            cta={'GB20012'}
+            cta={['checkout', 'GB20012']}
             annualPrice={textContent.card2.annualPrice}
             billedAnnually={textContent.billedAnnually}
             info={textContent.infoPlan}
@@ -37,7 +37,7 @@ const PaymentsSection = ({ textContent, country }) => {
             month={textContent.month}
             annualPrice={textContent.card3.annualPrice}
             billedAnnually={textContent.billedAnnually}
-            cta={'TB212'}
+            cta={['checkout', 'TB212']}
             info={textContent.infoPlan}
             isPopular
             mostPopular={textContent.popular}
