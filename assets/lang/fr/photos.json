@@ -12,14 +12,14 @@
     },
     "availableSoon": "Available soon",
     "DownloadLinks": {
-      "or": "or",
-      "downloadFor": "Download for",
-      "orDownloadFor": "Or download for",
+      "or": "ou",
+      "downloadFor": "Téléchargez pour",
+      "orDownloadFor": "Ou téléchargez pour",
       "downloadOnThe": "Obtenir sur",
-      "orDownloadOnThe": "Or download on the",
-      "getOn": "Get on",
+      "orDownloadOnThe": "Ou téléchargez sur",
+      "getOn": "Téléchargez sur",
       "orGetOn": "Ou téléchargez sur",
-      "openDriveWeb": "View your photos on Drive Web",
+      "openDriveWeb": "Afficher vos photos sur Drive Web",
       "ios": "App Store",
       "android": "Play Store",
       "windows": "Windows",
@@ -50,8 +50,8 @@
     "section3": {
       "title": {
         "line1": "Partagez vos photos",
-        "line2": "with your friends",
-        "line3": "and family."
+        "line2": "avec votre famille",
+        "line3": "et vos amis."
       },
       "subtitle": {
         "line1": "Créez un lien et contrôlez le nombre",
@@ -93,14 +93,14 @@
       }
     },
     "DownloadLinks": {
-      "or": "or",
-      "downloadFor": "Download for",
-      "orDownloadFor": "Or download for",
+      "or": "ou",
+      "downloadFor": "Téléchargez pour",
+      "orDownloadFor": "Ou téléchargez pour",
       "downloadOnThe": "Obtenir sur",
-      "orDownloadOnThe": "Or download on the",
-      "getOn": "Get on",
+      "orDownloadOnThe": "Ou téléchargez sur",
+      "getOn": "Téléchargez sur",
       "orGetOn": "Ou téléchargez sur",
-      "openDriveWeb": "View your photos on Drive Web",
+      "openDriveWeb": "Afficher vos photos sur Drive Web",
       "ios": "App Store",
       "android": "Play Store",
       "windows": "Windows",
