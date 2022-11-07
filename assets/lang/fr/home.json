@@ -1,36 +1,36 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "Choisissez Internxt",
-      "line2": "Choisissez la confidentialité"
+      "line1": "Choisissez la",
+      "line2": "confidentialité"
     },
-    "subtitle": "Chez Internxt, nous avons créé un ensemble de services qui sont véritablement centrés sur vous. Passez à Internxt Drive, Photos, Send et plus encore.",
+    "subtitle": "Chez Internxt, nous avons créé un ensemble de services centrés sur vous. Passez à Internxt Drive, Photos et Send.",
     "cta": {
       "title": "Obtenez 10GB",
       "subtitle": "Gratuit!"
     },
     "SignUp": {
       "cta": {
-        "title": "Get started with Internxt",
-        "subtitle": "Create an account now and get 10GB for FREE"
+        "title": "Commencez avec Internxt",
+        "subtitle": "Créez un compte maintenant et obtenez 10GB GRATUITEMENT"
       },
       "disclaimer": {
         "text": " En créant un compte, vous acceptez",
-        "link": "les termes et conditions, et politique de confidentialité"
+        "link": "les termes et conditions, et la politique de confidentialité"
       },
       "fields": {
         "email": {
-          "label": "Email",
-          "placeholder": "Email"
+          "label": "Adresse électronique",
+          "placeholder": "Adresse électronique"
         },
         "password": {
-          "label": "Password",
+          "label": "Mot de passe",
           "placeholder": "Mot de passe",
           "strength": {
-            "complexity": "Password is not complex enough",
-            "length": "Password has to be at least 8 characters long",
-            "weak": "Password is weak",
-            "strong": "Password is strong"
+            "complexity": "Le mot de passe n'est pas assez complexe",
+            "length": "Le mot de passe doit comporter au moins 8 caractères",
+            "weak": "Le mot de passe est faible",
+            "strong": "Le mot de passe est fort"
           }
         },
         "submit": {
@@ -56,7 +56,7 @@
       "send": "Essayez Send"
     },
     "feature1": {
-      "title": { "line1": "Conçu", "line2": "pour vous protéger" },
+      "title": { "line1": "Conçu pour", "line2": "vous protéger" },
       "description": "Vos fichiers sont fragmentés et cryptés avant de sortir de votre appareil. Pas d'astuces, pas de trucs cachés. Privé par défaut, sécurisé par conception, c'est ça Internxt. Bienvenue sur Web3.",
       "cta": "Qu'est-ce que la connaissance zéro?"
     },
@@ -66,7 +66,7 @@
       "cta": "Téléchargez les applications"
     },
     "feature3": {
-      "title": { "line1": "La vie privée,", "line2": "c'est le but." },
+      "title": { "line1": "La vie privée,", "line2": "c'est le but" },
       "description": "Contrairement à nos compétiteurs, notre activité n'est pas basée sur la publicité, elle est basée sur vous. Nous ne vendons pas vos données.",
       "cta": "Privacy at Internxt"
     }
@@ -135,7 +135,7 @@
     ]
   },
   "GetStartedSection": {
-    "title": { "line1": "Commencez maintenant et", "line2": "gobtenez jusqu'à 10 Go gratuits" },
+    "title": { "line1": "Commencez maintenant et", "line2": "obtenez jusqu'à 10 Go gratuits" },
     "subtitle": {
       "line1": "Nos clients sont très satisfaite d'Internxt Drive, mais",
       "line2": "d'autant plus en sachant qu'il est totalement privé."

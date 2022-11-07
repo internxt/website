@@ -21,25 +21,25 @@
       "or": "o",
       "login": "Se connecter",
       "disclaimer": {
-        "text": "Al crear una cuenta aceptas los",
-        "link": "términos y condiciones"
+        "text": "En vous abonnant, vous acceptez",
+        "link": "notre politique de confidentialité"
       },
       "fields": {
         "email": {
-          "label": "Courrier",
-          "placeholder": "Courrier"
+          "label": "Adresse électronique",
+          "placeholder": "Adresse électronique"
         },
         "password": {
           "label": "Mot de passe",
           "placeholder": "Mot de passe",
           "strength": {
-            "complexity": "La contraseña no es compleja",
-            "length": "La contraseña debe tener mínimo 8 dígitos",
-            "weak": "La contraseña es débil",
-            "strong": "La contraseña es fuerte"
+            "complexity": "Le mot de passe n'est pas assez complexe",
+            "length": "Le mot de passe doit comporter au moins 8 caractères",
+            "weak": "Le mot de passe est faible",
+            "strong": "Le mot de passe est fort"
           }
         },
-        "submit": "commencez maintenant"
+        "submit": "Commencez maintenant"
       }
     },
     "LogIn": {

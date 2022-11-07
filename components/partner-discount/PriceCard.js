@@ -4,7 +4,7 @@ import { checkout } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
-  const stripeObject = { product: cta };
+  const stripeObject = { product: cta[1] };
   const features = [
     {
       feat: info.info1,
@@ -79,7 +79,7 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       <button
         type="button"
         onClick={() => {
-          checkout(getPlanId(stripeObject));
+          cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
         }}
         className="button-primary"
       >

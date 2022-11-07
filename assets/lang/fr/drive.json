@@ -14,8 +14,8 @@
       "or": "ou",
       "downloadFor": "Téléchargez pour",
       "orDownloadFor": "Ou téléchargez pour",
-      "downloadOnThe": "Download on the",
-      "orDownloadOnThe": "Or download on the",
+      "downloadOnThe": "Téléchargez sur",
+      "orDownloadOnThe": "Ou téléchargez sur",
       "getOn": "Téléchargez sur",
       "orGetOn": "Ou téléchargez sur",
       "openDriveWeb": "Ouvrez Drive Web",
@@ -70,7 +70,7 @@
       "title": {
         "line1": "Partagez vos fichiers",
         "line2": "en toute simplicité,",
-        "line3": "a sécurité est de notre côté."
+        "line3": "la sécurité est de notre côté."
       },
       "subtitle": {
         "line1": "Internxt Drive se concentre sur la confidentialité",
@@ -86,7 +86,7 @@
     "section5": {
       "eyebrow": "NOUVELLE FONCTION",
       "title": {
-        "line1": "Faites une copie de sauvegarde",
+        "line1": "Faitez une copie de sauvegarde",
         "line2": "de ce qui compte pour vous."
       },
       "subtitle": {
@@ -134,8 +134,8 @@
       "or": "ou",
       "downloadFor": "Téléchargez pour",
       "orDownloadFor": "Ou téléchargez pour",
-      "downloadOnThe": "Download on the",
-      "orDownloadOnThe": "Or download on the",
+      "downloadOnThe": "Téléchargez sur",
+      "orDownloadOnThe": "Ou téléchargez sur",
       "getOn": "Téléchargez sur",
       "orGetOn": "Ou téléchargez sur",
       "openDriveWeb": "Ouvrez Drive Web",

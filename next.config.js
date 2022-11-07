@@ -84,6 +84,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/techradar-discount',
+        destination: '/techradar-discount',
+        permanent: false,
+      },
+      {
         source: '/:lang/login',
         destination: 'https://drive.internxt.com/login',
         permanent: false,
