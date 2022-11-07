@@ -18,7 +18,7 @@ const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
+const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
@@ -73,11 +73,11 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <TestimonialsSection textContent={langJson.blackFriday} />
 
-      <FaqSection textContent={langJson.blackFriday} />
-
       <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
 
-      <FooterSection textContent={footerLang} lang={lang} />
+      <FaqSection textContent={langJson.blackFriday} />
+
+      <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} />
     </Layout>
   );
 };
@@ -89,7 +89,6 @@ export async function getServerSideProps(ctx) {
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -99,7 +98,6 @@ export async function getServerSideProps(ctx) {
       deviceLang,
       metatagsDescriptions,
       navbarLang,
-      footerLang,
       langJson,
     },
   };

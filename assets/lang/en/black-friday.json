@@ -155,6 +155,11 @@
           ]
         }
       ]
+    },
+    "FooterSection": {
+      "title": "Stand with privacy. Choose Internxt!",
+      "subtitle": "Get a discount on privacy and peace of mind.",
+      "subtitle1": "Get 60% off one whole year of our largest 2TB plan!"
     }
   },
   "cta": {

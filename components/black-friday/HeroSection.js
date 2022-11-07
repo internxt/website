@@ -40,9 +40,9 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
   ];
 
   return (
-    <section className="relative -mt-16 flex w-full flex-col overflow-hidden pt-16">
-      <div className="relative mx-4 mb-16 flex overflow-hidden lg:mx-10 xl:mx-24">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-around border-primary/5 sm:mb-6 md:flex-row">
+    <section className="relative -mt-16 flex w-full flex-col overflow-hidden">
+      <div className="relative flex overflow-hidden">
+        <div className="mx-4 flex w-full max-w-screen-xl flex-col items-center justify-around border-primary/5 py-16 sm:mb-6 md:flex-row lg:mx-10 xl:mx-24">
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:max-w-md md:items-start md:text-left lg:ml-0 lg:max-w-lg">
             <div className="flex flex-row items-center pb-6">
               <Alarm size={32} className="mr-4 text-primary" />
@@ -59,15 +59,18 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
               <ButtonDeal lang={lang} />
             </div>
           </div>
-          <div className="justify-center¡ relative z-10 flex h-[590px] w-full items-center">
+          <div className="relative z-10 flex h-[590px] items-center justify-center px-5 pl-11 lg:px-0">
             <div className="flex">
               <img src="/images/special-offer/black-friday/file_icons.png" />
-              <div className="absolute flex py-40">
-                <img src="/images/special-offer/black-friday/discount.png" />
-              </div>
+            </div>
+            <div className="absolute right-0 top-0 left-0 bottom-0 m-auto flex max-h-[263px] max-w-[612px]">
+              <img src="/images/special-offer/black-friday/discount.png" />
             </div>
           </div>
         </div>
+        <div
+          className={`absolute top-0 left-0 -z-10 flex h-full w-screen ${styles.neonBlur} pointer-events-none origin-center`}
+        />
       </div>
       <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
         {features.map((feature) => (
@@ -77,9 +80,6 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
           </div>
         ))}
       </div>
-      <div
-        className={`absolute top-0 left-0 -z-10 flex h-screen w-screen ${styles.neonBlur} pointer-events-none origin-center`}
-      />
     </section>
   );
 };
