@@ -1,10 +1,22 @@
+import { CurrencyBtc } from 'phosphor-react';
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
-const CtaSection = ({ textContent, lang, isAffiliates }) => {
+const CtaSection = ({ textContent, lang, country, isAffiliates }) => {
   const affiliates = isAffiliates ? textContent.title.replace('6', '7') : textContent.title;
   const subtitleAffiliates = isAffiliates ? textContent.subtitle.replace('6', '7') : textContent.subtitle;
+
+  const currency = () => {
+    switch (country) {
+      case 'US':
+        return '$';
+      case 'GB':
+        return '£';
+      default:
+        return '€';
+    }
+  };
 
   return (
     <section className="overflow-hidden">
@@ -12,6 +24,9 @@ const CtaSection = ({ textContent, lang, isAffiliates }) => {
         <div className="center flex flex-col items-center space-y-5 text-center">
           <p className="text-4xl font-semibold text-white">{affiliates}</p>
           <p className="text-xl font-light text-white">{subtitleAffiliates}</p>
+        </div>
+        <div>
+          <p className="text-5xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
         </div>
         <div className="flex">
           <ButtonDeal lang={lang} />
