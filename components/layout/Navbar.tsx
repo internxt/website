@@ -20,7 +20,6 @@ export interface NavbarProps {
   darkMode?: boolean;
   fixed?: boolean;
   hide?: boolean;
-  hideLogin?: boolean;
   coupon?: string;
   isLinksHidden?: boolean;
 }
@@ -481,7 +480,7 @@ export default function Navbar(props: NavbarProps) {
 
           {/* Login and CTA */}
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
-            {props.hideLogin ? null : (
+            {props.cta[0] === 'Hide Login' ? null : (
               <button
                 onClick={() => openAuthDialog('login')}
                 className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${

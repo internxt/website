@@ -1,16 +1,13 @@
-import { Check } from 'phosphor-react';
+import { Alarm, Check, CircleWavyCheck, Clock } from 'phosphor-react';
 import React, { useState, useEffect } from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
+import Countdown from './components/Countdown';
 
 const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
-  const [countdownDisableDays, setCountdownDisableDays] = useState(false);
-  const [countdownDisableHours, setCountdownDisableHours] = useState(false);
-  const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
-  const [countdownDisableSeconds, setCountdownDisableSeconds] = useState(false);
-  const HeroSectionDescription2 = isAffiliate
-    ? textContent.HeroSection.description2.replace('6', '7')
-    : textContent.HeroSection.description2;
+  const HeroSectionDescription = isAffiliate
+    ? textContent.HeroSection.description.replace('6', '7')
+    : textContent.HeroSection.description;
 
   const currency = () => {
     switch (country) {
@@ -23,166 +20,65 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
     }
   };
 
-  function CountDownTimer(dt, id) {
-    const end = new Date(dt);
-
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-    let timer;
-
-    function showRemaining() {
-      const now = new Date();
-      const distance = end - now;
-      if (distance < 0) {
-        clearInterval(timer);
-        setCountdownDisableDays(false);
-        setCountdownDisableHours(false);
-        setCountdownDisableMinutes(false);
-        setCountdownDisableSeconds(false);
-        return;
-      }
-      const days = Math.floor(distance / day);
-      const hours = Math.floor((distance % day) / hour);
-      const minutes = Math.floor((distance % hour) / minute);
-      const seconds = Math.floor((distance % minute) / second);
-
-      if (days === 0) setCountdownDisableDays(true);
-      if (hours === 0 && days === 0) setCountdownDisableHours(true);
-      if (minutes === 0 && hours === 0 && days === 0) setCountdownDisableMinutes(true);
-      if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) setCountdownDisableSeconds(true);
-
-      document.querySelector(`#${id} .days`).innerHTML = days;
-      document.querySelector(`#${id} .hours`).innerHTML = hours < 10 && days > 0 ? `0${hours}` : hours;
-      document.querySelector(`#${id} .minutes`).innerHTML =
-        minutes < 10 && hours > 0 && days > 0 ? `0${minutes}` : minutes;
-      document.querySelector(`#${id} .seconds`).innerHTML =
-        seconds < 10 && minutes > 0 && hours > 0 && days > 0 ? `0${seconds}` : seconds;
-    }
-
-    timer = setInterval(showRemaining, 1000);
-  }
-
-  useEffect(() => {
-    CountDownTimer('2022-12-05T00:00:00', 'countdown');
-  });
+  const features = [
+    {
+      id: 1,
+      text: 'Encrypted file storage and sharing',
+    },
+    {
+      id: 2,
+      text: 'Access your files from any device',
+    },
+    {
+      id: 3,
+      text: 'Get access to al our services',
+    },
+    {
+      id: 4,
+      text: 'No unauthorized data access',
+    },
+  ];
 
   return (
-    <section className="overflow-hidden">
-      <div className="mx-4 border-b py-24 lg:mx-10 xl:mx-32">
+    <section className="relative -mt-16 flex w-full flex-col overflow-hidden pt-16">
+      <div className="relative mx-4 mb-16 flex overflow-hidden lg:mx-10 xl:mx-24">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-around border-primary/5 sm:mb-6 md:flex-row">
-          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-20 lg:ml-0 lg:max-w-lg">
+          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:max-w-md md:items-start md:text-left lg:ml-0 lg:max-w-lg">
+            <div className="flex flex-row items-center pb-6">
+              <Alarm size={32} className="mr-4 text-primary" />
+              <Countdown />
+            </div>
             <h1 className="text-center text-7xl font-semibold text-white md:text-left">
               {textContent.HeroSection.title.line1}
               <br />
               {textContent.HeroSection.title.line2}
             </h1>
-            <p className="mt-8 text-center text-xl text-white  md:text-left">
-              {textContent.HeroSection.description1}
-              <br />
-              {HeroSectionDescription2}
-            </p>
-            <div className="pt-12">
+            <p className="mt-6 text-center text-3xl text-white md:text-left">{HeroSectionDescription}</p>
+            <p className="pt-3 text-3xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
+            <div className="pt-10">
               <ButtonDeal lang={lang} />
             </div>
           </div>
-          <div className={`my-14 flex w-[320px] flex-col items-center rounded-2xl bg-white py-10`}>
-            <div className="h-8 w-16 rounded-2xl bg-primary/5 pl-5">
-              <p className="items-center pt-1 text-primary">{textContent.HeroSection.pricingTable.plan}</p>
-            </div>
-            <div className="pt-4">
-              <p className="text-6xl font-semibold text-primary">
-                {isAffiliate === true ? '70% off' : textContent.HeroSection.pricingTable.discount}
-              </p>
-            </div>
-            <div className="pt-5">
-              <p className="text-3xl font-medium">
-                {isAffiliate ? '2.69' : textContent.HeroSection.pricingTable.priceNow} {currency()}
-                {textContent.HeroSection.pricingTable.month}
-              </p>
-              <p className="text-1xl pl-8 pt-4 font-normal text-gray-40 line-through">
-                {textContent.HeroSection.pricingTable.priceBefore} {currency()}
-                {textContent.HeroSection.pricingTable.month}
-              </p>
-            </div>
-            <div className="flex w-full flex-row px-8 py-5">
-              <div className="w-full border-b border-gray-20" />
-            </div>
-            <div className="flex w-full flex-col px-8">
-              <div className={`flex flex-row items-start space-x-2`}>
-                <div className="h-4 w-4">
-                  <Check size={18} weight={'bold'} />
-                </div>
-                <p>{textContent.HeroSection.pricingTable.footer.line1}</p>
-              </div>
-              <div className={`flex flex-row items-start space-x-2`}>
-                <div className="h-4 w-4">
-                  <Check size={18} weight={'bold'} />
-                </div>
-                <p>{textContent.HeroSection.pricingTable.footer.line2}</p>
-              </div>
-              <div className={`flex flex-row items-start space-x-2`}>
-                <div className="h-4 w-4">
-                  <Check size={18} weight={'bold'} />
-                </div>
-                <p>{textContent.HeroSection.pricingTable.footer.line3}</p>
+          <div className="justify-center¡ relative z-10 flex h-[590px] w-full items-center">
+            <div className="flex">
+              <img src="/images/special-offer/black-friday/file_icons.png" />
+              <div className="absolute flex py-40">
+                <img src="/images/special-offer/black-friday/discount.png" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        id="countdown"
-        className="flex w-full flex-col items-center justify-center space-y-12 bg-white py-20 text-white md:space-y-20"
-      >
-        <h2 className="text-center text-4xl font-semibold text-black">{textContent.HeroSection.timer.timeTitle}</h2>
-
-        <div className="flex flex-row space-x-0 md:space-x-16">
-          <div className="flex w-20 flex-col items-center justify-center">
-            <p
-              className={`days text-4xl font-light md:text-6xl ${
-                countdownDisableDays ? 'text-white' : 'text-primary'
-              } delay-350 transition-colors duration-150`}
-            >
-              0
-            </p>
-            <p className="text-sm font-light text-black">{textContent.HeroSection.timer.days}</p>
+      <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
+        {features.map((feature) => (
+          <div className="flex max-w-[185px] flex-col items-center justify-center space-y-4 text-center">
+            <CircleWavyCheck size={40} weight="fill" className="mr-4 text-primary" />
+            <p className="text-xl font-semibold ">{feature.text}</p>
           </div>
-          <div className="flex w-20 flex-col items-center justify-center">
-            <p
-              className={`hours text-4xl font-light md:text-6xl ${
-                countdownDisableHours ? 'text-white' : 'text-primary'
-              } delay-350 transition-colors duration-150`}
-            >
-              0
-            </p>
-            <p className="text-sm font-light text-black">{textContent.HeroSection.timer.hours}</p>
-          </div>
-          <div className="flex w-20 flex-col items-center justify-center">
-            <p
-              className={`minutes text-4xl font-light md:text-6xl ${
-                countdownDisableMinutes ? 'text-white' : 'text-primary'
-              } delay-350 transition-colors duration-150`}
-            >
-              0
-            </p>
-            <p className="text-sm font-light text-black">{textContent.HeroSection.timer.minutes}</p>
-          </div>
-          <div className="flex w-20 flex-col items-center justify-center">
-            <p
-              className={`seconds text-4xl font-light md:text-6xl ${
-                countdownDisableSeconds ? 'text-white' : 'text-primary'
-              } delay-350 transition-colors duration-150`}
-            >
-              0
-            </p>
-            <p className="text-sm font-light text-black">{textContent.HeroSection.timer.seconds}</p>
-          </div>
-        </div>
+        ))}
       </div>
       <div
-        className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.neonBlur} pointer-events-none origin-center`}
+        className={`absolute top-0 left-0 -z-10 flex h-screen w-screen ${styles.neonBlur} pointer-events-none origin-center`}
       />
     </section>
   );
