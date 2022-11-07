@@ -1,7 +1,7 @@
 [
   {
     "id": "home",
-    "title": "Internxt - El almacenamiento en la nube más seguro",
+    "title": "Internxt – Elige privacidad",
     "description": "La misión de Internxt es proteger los datos del usuario, siendo la plataforma de almacenamiento en la nube más segura del mundo."
   },
   {
@@ -76,17 +76,17 @@
   },
   {
     "id": "landing",
-    "title": "Internxt - Almacenamiento seguro y privado",
+    "title": "Internxt – Almacenamiento seguro y privado",
     "description": "Internxt ofrece servicios en la nube seguros, privados y cifrados tales como Internxt Drive e Internxt Photos."
   },
   {
     "id": "privacy-directory",
-    "title": "Internxt - Directorio de privacidad",
+    "title": "Internxt – Directorio de privacidad",
     "description": "Directorio de organizaciones, instituciones y ONG de derechos digitales que trabajan junto a Internxt para promover, apoyar y defender la privacidad para todos."
   },
   {
     "id": "password-checker",
-    "title": "Internxt - Verificación gratuita y segura de contraseñas",
-    "description": "Chequeo de seguridad de contraseñas gratuito. Comprueba la solidez de tus contraseñas con la herramienta segura en línea de Internxt."
+    "title": "Internxt – Verificación gratuita y segura de contraseñas",
+    "description": "Chequeo de seguridad de contraseñas gratuito. Compruebe la solidez de sus contraseñas con la herramienta segura en línea de Internxt."
   }
 ]

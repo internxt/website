@@ -38,6 +38,60 @@ LayoutProps) {
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
 
+  const newLabel = () => {
+    switch (lang) {
+      case 'es':
+        return 'NUEVO';
+      case 'en':
+        return 'NEW';
+      case 'fr':
+        return 'NOUVEAU';
+
+      default:
+        return 'NEW';
+    }
+  };
+
+  const sendTitle = () => {
+    switch (lang) {
+      case 'es':
+        return 'Comparte archivos de forma rápida y segura';
+      case 'en':
+        return 'Share files fast in total privacy';
+      case 'fr':
+        return 'Partagez des fichiers en toute sécurité et rapidement';
+
+      default:
+        return 'Share files fast in total privacy';
+    }
+  };
+
+  const sendFindLabel = () => {
+    switch (lang) {
+      case 'es':
+        return 'Probar ahora';
+      case 'en':
+        return 'Find out now';
+      case 'fr':
+        return 'Essayez maintenant';
+      default:
+        return 'Find';
+    }
+  };
+
+  const sendFindLabelMobile = () => {
+    switch (lang) {
+      case 'es':
+        return 'Probar ahora';
+      case 'en':
+        return 'Find out';
+      case 'fr':
+        return 'Essayez maintenant';
+      default:
+        return 'Find';
+    }
+  };
+
   return (
     <>
       <Head>
@@ -73,17 +127,15 @@ LayoutProps) {
           <div className="relative mx-auto flex h-full max-w-screen-xl flex-row items-center justify-between px-5 lg:justify-center lg:space-x-10">
             <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
               <div className="flex h-6 flex-row items-center rounded-full bg-white px-2 text-sm font-bold text-primary">
-                {lang === 'en' ? 'NEW' : 'NUEVO'}
+                {newLabel()}
               </div>
-              <span className="text-lg font-medium">{lang === 'en' ? 'Internxt Send' : 'Internxt Send'}</span>
-              <span className="hidden opacity-75 md:flex">
-                {lang === 'en' ? 'Share files fast in total privacy' : 'Comparte archivos de forma rápida y segura'}
-              </span>
+              <span className="text-lg font-medium">Internxt Send</span>
+              <span className="hidden opacity-75 md:flex">{sendTitle()}</span>
             </div>
             <div className="flex h-9 flex-row items-center rounded-full text-lg font-medium transition duration-200 ease-in-out sm:space-x-1 sm:px-4 sm:group-hover:bg-white sm:group-hover:bg-opacity-15">
               <div className="hidden whitespace-nowrap sm:flex">
-                <span className="hidden sm:flex">{lang === 'en' ? 'Find out now' : 'Probar ahora'}</span>
-                <span className="flex sm:hidden">{lang === 'en' ? 'Find out' : 'Probar ahora'}</span>
+                <span className="hidden sm:flex">{sendFindLabel()}</span>
+                <span className="flex sm:hidden">{sendFindLabelMobile()}</span>
               </div>
               <ArrowRight
                 size={20}

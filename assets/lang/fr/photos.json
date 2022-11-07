@@ -1,0 +1,111 @@
+{
+  "HeroSection": {
+    "eyebrow": "INTERNXT PHOTOS",
+    "title": {
+      "line1": "Vos meilleurs souvenirs en",
+      "line2": "sécurité dans le nuage."
+    },
+    "subtitle": {
+      "line1": "Revivez, partagez et gardez vos souvenirs en sécurité en un seul endroit.",
+      "line2": "Avec Internxt Photos qui se concentre sur la vie privée et de sécurité,",
+      "line3": "vos photos n'appartiennent qu'à vous."
+    },
+    "availableSoon": "Available soon",
+    "DownloadLinks": {
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Obtenir sur",
+      "orDownloadOnThe": "Or download on the",
+      "getOn": "Get on",
+      "orGetOn": "Ou téléchargez sur",
+      "openDriveWeb": "View your photos on Drive Web",
+      "ios": "App Store",
+      "android": "Play Store",
+      "windows": "Windows",
+      "linux": "Linux",
+      "mac": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "Une seule galerie synchronisée",
+        "line2": "sur tous vos appareils."
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Téléchargez des photos",
+        "line2": "depuis votre smartphone et",
+        "line3": "accédez-y depuis n'importe où."
+      },
+      "subtitle": {
+        "line1": "Votre bibliothèque de photos sera toujours à",
+        "line2": "jour sur tous vos appareils. Cela signifie que",
+        "line3": "vous pouvez accéder à vos photos synchronisées",
+        "line4": "même si votre appareil est perdu ou cassé."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Partagez vos photos",
+        "line2": "with your friends",
+        "line3": "and family."
+      },
+      "subtitle": {
+        "line1": "Créez un lien et contrôlez le nombre",
+        "line2": "de fois que vous souhaitez que les",
+        "line3": "photos soient accessibles."
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Commencez à synchroniser vos photos",
+        "line2": "dès maintenant."
+      }
+    },
+    "section5": {
+      "title": {
+        "line1": "Toutes vos photos, en toute",
+        "line2": "sécurité et confidentialité."
+      },
+      "subtitle": {
+        "line1": "La confidentialité et la sécurité sont au cœur de notre activité. Notre activité ne repose pas sur la publicité ou les données, mais",
+        "line2": "sur la confiance. Nous respectons vos droits et construisons des produits extraordinaires autour d'eux, pas contre eux."
+      },
+      "cta": "Notre engagement en matière de respect de la vie privée",
+      "card1": {
+        "title": "Cryptage de qualité militaire.",
+        "subtitle": "Nous prenons votre vie privée au sérieux, c'est pourquoi vos photos sont cryptées afin que vous soyez le seul à pouvoir y accéder."
+      },
+      "card2": {
+        "title": "La connaissance zéro.",
+        "subtitle": "Nous ne stockons ni ne transmettons jamais de fichiers, de mots de passe, ou de clés de cryptage non chiffrés."
+      },
+      "card3": {
+        "title": "La confidentialité dès la conception.",
+        "subtitle": "Nous développons nos produits en pensant à vous, et votre vie privée est une priorité pour nous."
+      },
+      "card4": {
+        "title": "Sécurisé à partir du noyau.",
+        "subtitle": "Alors que les failles de sécurité et les scandales font l'actualité quotidienne, nous veillons à ce que nos systèmes protègent vos données et vos fichiers contre les attaquants."
+      }
+    },
+    "DownloadLinks": {
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Obtenir sur",
+      "orDownloadOnThe": "Or download on the",
+      "getOn": "Get on",
+      "orGetOn": "Ou téléchargez sur",
+      "openDriveWeb": "View your photos on Drive Web",
+      "ios": "App Store",
+      "android": "Play Store",
+      "windows": "Windows",
+      "linux": "Linux",
+      "mac": "Mac"
+    }
+  }
+}

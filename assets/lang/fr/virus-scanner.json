@@ -1,0 +1,82 @@
+{
+	"HeroSection": {
+		"title": "Virus Scanner",
+		"subtitle1": "Drag and drop any type of suspicious file to detect viruses and malware in seconds.",
+		"subtitle2": "Safeguard your privacy with our free virus scanner, designed to help you avoid infection and protect your computer.",
+		"dropFile": {
+			"line1": "Drop file to analyze"
+		},
+		"or": "OR",
+		"fileSelected": "File selected for scanning",
+		"cancel": "Cancel",
+		"close": "Close",
+		"scanNow": "Scan now",
+		"selectFile": "Select file",
+		"dropHere": "Drop the file here",
+		"scanAgain": "Scan another file",
+		"loading": "Loading...",
+		"maxFileSize": {
+			"title": "File size limit exceeded",
+			"description": "Max file size of 1GB"
+		},
+		"table": {
+			"loading": "Loading...",
+			"virusDetected": "Virus detected",
+			"detected": "Detected",
+			"undetected": "Undetected",
+			"unableToProcess": "Unable to process",
+			"noVirusesDetected": {
+				"message": "No viruses detected",
+				"title": "Want to keep your files safe?",
+				"subtitle": "Internxt is a cloud storage service with a built-in virus scan & best in-class encryption",
+				"cta": "Get free secure cloud storage"
+			},
+			"analyzing": "Analyzing file...",
+			"scanTime": "Scan time",
+			"name": "Name",
+			"detection": "Detection"
+		},
+		"error": {
+			"title": "Something went wrong",
+			"description": "An error occurred while sending the file, please try again later"
+		}
+	},
+	"FeaturesSection": {
+		"marketing": {
+			"whyToScan": {
+				"title": "Why it’s important to use a virus scanner",
+				"description1": "A potent virus can steal sensitive information like your credentials or passwords, encrypt and lock you out of your data, make individual transactions within apps, monitor your computer, and even attack other devices on connected networks. A virus has the potential to  access nearly everything that is locked away on your hardware.",
+				"description2": "Once a virus has propagated onto your laptop or desktop, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why it is crucial to utilize a virus scanner."
+			},
+			"freeScanner": {
+				"title": "A free online virus scanner you can trust",
+				"description": {
+					"line1": "Internxt has and will always put users’ privacy and security first. We are committed to creating a more fair, more free, and more transparent internet for all. That’s why we created our free online virus scanner, to shine a light on stealthy viruses and expose",
+					"line2": "malicious malware",
+					"line3": ". Scan files for viruses in complete confidence."
+				},
+				"cta": "Safety’s only a click away."
+			}
+		},
+		"createAccount": {
+			"title": {
+				"line1": "At Internxt, we create secure,",
+				"line2": "encrypted, and zero-knowledge",
+				"line3": "technologies."
+			},
+			"description": {
+				"line1": "All our services are designed with the user's",
+				"line2": "privacy in mind and we always make sure our",
+				"line3": "services keep your data totally safe."
+			},
+			"cta": {
+				"getUpTo10GB": "Get 10GB now",
+				"forFree": "— for free"
+			}
+		},
+		"disclaimer": {
+			"text": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our",
+			"link": "Terms and Conditions of Service and Privacy Policy"
+		}
+	}
+}
