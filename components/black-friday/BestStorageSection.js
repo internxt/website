@@ -8,7 +8,7 @@ const BestStorageSection = ({ textContent, lang }) => {
       <div className="flex flex-col items-center py-16 px-10 text-center md:px-20">
         <div className="top-24 flex flex-col items-center space-y-5">
           <h1 className="text-4xl font-semibold text-white">{textContent.BestStorage.title}</h1>
-          <h3 className="text-xl font-thin text-white md:font-normal">{textContent.BestStorage.subtitle}</h3>
+          <h3 className="text-xl text-white md:font-normal">{textContent.BestStorage.subtitle}</h3>
         </div>
         <div className="py-9">
           <ButtonDeal lang={lang} />
