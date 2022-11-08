@@ -28,13 +28,7 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
   });
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      isSendSnackbar={false}
-      segmentName="Partners"
-      lang={lang}
-    >
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} isTechradar />

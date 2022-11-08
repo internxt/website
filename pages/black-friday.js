@@ -43,12 +43,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
   });
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Black Friday"
-      isSendSnackbar={false}
-    >
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <Navbar
         lang={deviceLang}
         textContent={navbarLang}

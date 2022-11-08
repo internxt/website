@@ -12,7 +12,6 @@ interface LayoutProps {
   disableMailerlite?: boolean;
   disableDrift?: boolean;
   isProduction?: boolean;
-  isSendSnackbar?: boolean;
   lang?: string;
 }
 
@@ -24,7 +23,6 @@ export default function Layout({
   disableMailerlite = false,
   disableDrift = true,
   isProduction = process.env.NODE_ENV === 'production',
-  isSendSnackbar = true,
   lang,
 }: // lang
 LayoutProps) {
@@ -117,35 +115,6 @@ LayoutProps) {
         />
       </Head>
 
-      {isSendSnackbar && (
-        <a
-          href="https://send.internxt.com"
-          target="_blank"
-          rel="noreferrer"
-          className="group fixed bottom-0 left-0 z-50 h-16 w-screen bg-primary text-white"
-        >
-          <div className="relative mx-auto flex h-full max-w-screen-xl flex-row items-center justify-between px-5 lg:justify-center lg:space-x-10">
-            <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
-              <div className="flex h-6 flex-row items-center rounded-full bg-white px-2 text-sm font-bold text-primary">
-                {newLabel()}
-              </div>
-              <span className="text-lg font-medium">Internxt Send</span>
-              <span className="hidden opacity-75 md:flex">{sendTitle()}</span>
-            </div>
-            <div className="flex h-9 flex-row items-center rounded-full text-lg font-medium transition duration-200 ease-in-out sm:space-x-1 sm:px-4 sm:group-hover:bg-white sm:group-hover:bg-opacity-15">
-              <div className="hidden whitespace-nowrap sm:flex">
-                <span className="hidden sm:flex">{sendFindLabel()}</span>
-                <span className="flex sm:hidden">{sendFindLabelMobile()}</span>
-              </div>
-              <ArrowRight
-                size={20}
-                weight="bold"
-                className="h-8 w-8 transition duration-200 ease-in-out sm:h-6 sm:w-6 sm:group-hover:translate-x-1"
-              />
-            </div>
-          </div>
-        </a>
-      )}
       {children}
     </>
   );
