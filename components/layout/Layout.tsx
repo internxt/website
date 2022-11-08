@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
 import Head from 'next/head';
 import React, { useEffect } from 'react';
-import { ArrowRight } from 'phosphor-react';
 import isBrave from '../../lib/brave';
+import styles from 'components/black-friday/BF-HeroSection.module.scss';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -114,6 +114,14 @@ LayoutProps) {
           }}
         />
       </Head>
+      <div className="absolute bottom-8 right-8 z-10 hidden max-h-[400px] max-w-[400px] py-10 px-5 lg:flex">
+        <div className="flex flex-col items-center justify-center text-center text-white">
+          <p className="text-4xl font-bold">Black Friday is here!</p>
+        </div>
+        <div
+          className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.neonBlur} pointer-events-none origin-center`}
+        />
+      </div>
 
       {children}
     </>
