@@ -20,13 +20,13 @@ const CtaSection = ({ textContent, lang, country, isAffiliates }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="center my-12 flex flex-col items-center space-y-10 px-10">
+      <div className="center my-12 flex flex-col items-center space-y-10 px-2 sm:px-10">
         <div className="center flex flex-col items-center space-y-5 text-center">
           <p className="text-4xl font-semibold text-white">{affiliates}</p>
           <p className="text-xl font-light text-white">{subtitleAffiliates}</p>
         </div>
         <div>
-          <p className="text-5xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
+          <p className="text-center text-5xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
         </div>
         <div className="flex">
           <ButtonDeal lang={lang} />

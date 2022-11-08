@@ -14,13 +14,13 @@ const TestimonialsSection = ({ textContent }) => {
               <p className="text-lg font-bold">— {textContent.TestimonialSection.cristian.footer}</p>
             </div>
           </div>
-          <div className="h-56 w-full rounded-2xl bg-gray-5 lg:h-80 lg:w-80">
+          <div className="h-full w-full rounded-2xl bg-gray-5 lg:h-80 lg:w-80">
             <div className="p-8">
               <p className="text-xl font-normal">{textContent.TestimonialSection.josep.text}</p>
               <p className="mt-2 text-lg font-bold">— {textContent.TestimonialSection.josep.footer}</p>
             </div>
           </div>
-          <div className="h-56 w-full  rounded-2xl bg-gray-5 lg:h-80 lg:w-80">
+          <div className="h-full w-full  rounded-2xl bg-gray-5 lg:h-80 lg:w-80">
             <div className="p-8">
               <p className="text-xl font-normal">{textContent.TestimonialSection.eva.text}</p>
               <p className="mt-2 text-lg font-bold">— {textContent.TestimonialSection.eva.footer}</p>

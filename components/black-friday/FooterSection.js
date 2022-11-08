@@ -25,12 +25,12 @@ const FooterSection = ({ textContent, lang, country }) => {
             />
           </div>
           <div className="z-10 flex max-w-[585px] flex-col items-center justify-center space-y-4 py-20 text-center text-white">
-            <p className="text-3xl font-semibold">{textContent.FooterSection.title}</p>
+            <p className="text-4xl font-semibold">{textContent.FooterSection.title}</p>
             <div>
               <p className="text-xl font-normal">{textContent.FooterSection.subtitle}</p>
               <p className="text-xl font-semibold">{textContent.FooterSection.subtitle1}</p>
             </div>
-            <p className="pt-4 text-3xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
+            <p className="pt-4 text-5xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
             <div className="pt-4">
               <ButtonDeal lang={lang} />
             </div>

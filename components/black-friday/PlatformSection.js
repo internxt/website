@@ -7,7 +7,7 @@ const PlatformSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <div className="flex flex-col items-center py-12">
         <div className="center flex items-center px-20 pb-16 text-center">
-          <p className="text-semibold text-4xl text-white">{textContent.PlatformSection.title}</p>
+          <p className="text-4xl font-semibold text-white">{textContent.PlatformSection.title}</p>
         </div>
         <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 lg:gap-x-40">
           <div className="flex flex-col items-center space-y-6">
