@@ -10,8 +10,7 @@
         "text": "Profitez de l'offre"
       },
       "pricingTable": {
-        "plan": "2TB",
-        "discount": "60% off",
+        "only": "Seulement",
         "priceNow": "3.59",
         "month": "/mois",
         "priceBefore": "8.99",
@@ -159,11 +158,17 @@
     "FooterSection": {
       "title": "Respectez la vie privée. Choisissez Internxt!",
       "subtitle": "Obtenez une réduction sur la confidentialité.",
-      "subtitle1": "Obtenez 60% de réduction sur un an sur notre plan de 2TB!"
+      "subtitle1": "Obtenez 60% de réduction sur un an sur notre plan de 2TB!",
+      "only": "Seulement",
+      "priceNow": "3.59",
+      "month": "/mois"
     }
   },
   "cta": {
     "title": "Activez votre offre de 60% de réduction pour le Black Friday!",
-    "subtitle": "Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!"
+    "subtitle": "Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!",
+    "only": "Seulement",
+    "priceNow": "3.59",
+    "month": "/mois"
   }
 }

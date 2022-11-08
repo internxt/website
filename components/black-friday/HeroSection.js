@@ -54,7 +54,10 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
               {textContent.HeroSection.title.line2}
             </h1>
             <p className="mt-6 text-3xl text-white">{HeroSectionDescription}</p>
-            <p className="pt-3 text-5xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
+            <p className="pt-3 text-5xl font-bold text-primary">
+              {textContent.HeroSection.pricingTable.only} {textContent.HeroSection.pricingTable.priceNow} {currency()}
+              {textContent.HeroSection.pricingTable.month}
+            </p>
             <div className="pt-10">
               <ButtonDeal lang={lang} />
             </div>

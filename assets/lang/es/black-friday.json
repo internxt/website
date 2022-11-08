@@ -10,8 +10,7 @@
         "text": "Get the deal"
       },
       "pricingTable": {
-        "plan": "2TB",
-        "discount": "60% off",
+        "only": "Only",
         "priceNow": "3.59",
         "month": "/mo",
         "priceBefore": "8.99",
@@ -159,11 +158,17 @@
     "FooterSection": {
       "title": "Stand with privacy. Choose Internxt!",
       "subtitle": "Get a discount on privacy and peace of mind.",
-      "subtitle1": "Get 60% off one whole year of our largest 2TB plan!"
+      "subtitle1": "Get 60% off one whole year of our largest 2TB plan!",
+      "only": "Only",
+      "priceNow": "3.59",
+      "month": "/mo"
     }
   },
   "cta": {
     "title": "Activate your 60% off Black Friday deal!",
-    "subtitle": "Get 60% off one whole year of our largest 2TB plan!"
+    "subtitle": "Get 60% off one whole year of our largest 2TB plan!",
+    "only": "Only",
+    "priceNow": "3.59",
+    "month": "/mo"
   }
 }
