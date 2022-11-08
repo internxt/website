@@ -2,7 +2,11 @@ import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
-const FooterSection = ({ textContent, lang, country }) => {
+const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
+  const affiliates = isAffiliates
+    ? textContent.FooterSection.subtitle1.replace('6', '7')
+    : textContent.FooterSection.subtitle1;
+
   const currency = () => {
     switch (country) {
       case 'US':
@@ -28,7 +32,7 @@ const FooterSection = ({ textContent, lang, country }) => {
             <p className="text-4xl font-semibold">{textContent.FooterSection.title}</p>
             <div>
               <p className="text-xl font-normal">{textContent.FooterSection.subtitle}</p>
-              <p className="text-xl font-semibold">{textContent.FooterSection.subtitle1}</p>
+              <p className="text-xl font-semibold">{affiliates}</p>
             </div>
             <p className="pt-4 text-5xl font-bold text-primary">Only 3.59 {currency()}/mo</p>
             <div className="pt-4">

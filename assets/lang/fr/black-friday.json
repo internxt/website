@@ -5,8 +5,7 @@
         "line1": "Le Black friday ",
         "line2": "est arrivé!"
       },
-      "description1": "Économisez de l'argent et passez à la confidentialité!",
-      "description2": "Obtenez 60% de réduction sur notre offre annuelle de 2 To.",
+      "description": "Obtenez 60% de réduction sur notre offre annuelle de 2TB.",
       "button": {
         "text": "Profitez de l'offre"
       },
@@ -156,14 +155,15 @@
           ]
         }
       ]
+    },
+    "FooterSection": {
+      "title": "Respectez la vie privée. Choisissez Internxt!",
+      "subtitle": "Obtenez une réduction sur la confidentialité.",
+      "subtitle1": "Obtenez 60% de réduction sur un an sur notre plan de 2TB!"
     }
   },
-  "cta1": {
+  "cta": {
     "title": "Activez votre offre de 60% de réduction pour le Black Friday!",
     "subtitle": "Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!"
-  },
-  "cta2": {
-    "title": "Soutenez la confidentialité. Choisissez Internxt!",
-    "subtitle": "Obtenez offre une réduction sur la confidentialité et la sécurité! Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!"
   }
 }
