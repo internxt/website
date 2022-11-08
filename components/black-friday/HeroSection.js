@@ -74,7 +74,10 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
       </div>
       <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
         {features.map((feature) => (
-          <div className="flex max-w-[185px] flex-col items-center justify-center space-y-4 text-center">
+          <div
+            className="flex max-w-[185px] flex-col items-center justify-center space-y-4 text-center"
+            key={feature.index}
+          >
             <CircleWavyCheck size={40} weight="fill" className="mr-4 text-primary" />
             <p className="text-xl font-semibold ">{feature.text}</p>
           </div>
