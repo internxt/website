@@ -5,9 +5,9 @@ import styles from './BF-HeroSection.module.scss';
 const PlatformSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center pb-32">
-        <div className="center flex items-center py-24 px-20 text-center">
-          <p className="text-semibold text-4xl text-white">{textContent.PlatformSection.title}</p>
+      <div className="flex flex-col items-center py-12">
+        <div className="center flex items-center px-20 pb-16 text-center">
+          <p className="text-4xl font-semibold text-white">{textContent.PlatformSection.title}</p>
         </div>
         <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 lg:gap-x-40">
           <div className="flex flex-col items-center space-y-6">
