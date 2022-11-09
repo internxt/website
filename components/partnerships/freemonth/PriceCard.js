@@ -1,10 +1,6 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { redirectToCheckoutAction } from '../../CheckoutForm';
+import { checkout } from '../../../lib/auth';
+import { getPlanId } from '../../../pages/api/stripe/stripeProducts';
 
 const PriceCard = ({
   planType,
@@ -41,22 +37,22 @@ const PriceCard = ({
   return (
     <div
       className={`priceCard card ${
-        popular ? 'bg-primary ring-2 ring-primary shadow-lg' : ''
-      } flex flex-col flex-shrink-0 flex-grow-0 max-w-xs rounded-2xl overflow-hidden m-2 sm:m-4`}
+        popular ? 'bg-primary shadow-lg ring-2 ring-primary' : ''
+      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl sm:m-4`}
     >
       <div
         className={`mostPopular ${
           popular ? '' : 'hidden'
-        } flex flex-col py-2 items-center justify-center text-xs font-medium text-white`}
+        } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
         {contentText.mostPopular}
       </div>
 
-      <div className={`info flex flex-col p-6 items-center justify-center bg-white ${popular ? 'rounded-t-2xl' : ''}`}>
+      <div className={`info flex flex-col items-center justify-center bg-white p-6 ${popular ? 'rounded-t-2xl' : ''}`}>
         <div
-          className={`storage flex flex-row whitespace-nowrap py-1 pb-0.5 px-4 max-w-min ${
+          className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
             popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
-          } font-medium rounded-full`}
+          } rounded-full font-medium`}
         >
           <p>
             {storage}
@@ -67,14 +63,14 @@ const PriceCard = ({
         </div>
 
         <div
-          className={`planPrice flex flex-col py-8 justify-center items-center ${
+          className={`planPrice flex flex-col items-center justify-center py-8 ${
             priceBefore ? 'space-y-1' : 'space-y-2'
           }`}
         >
           <div className="flex flex-col items-center">
             <div
               className={`priceBreakdown flex ${
-                planType.toLowerCase() === 'individual' ? 'flex-row space-x-px items-end' : 'flex-col items-center'
+                planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
               }`}
             >
               <span
@@ -83,22 +79,22 @@ const PriceCard = ({
                 {contentText.perUser}
               </span>
 
-              <p className="flex flex-row items-start text-green-old-50 font-medium space-x-0.5">
+              <p className="flex flex-row items-start space-x-0.5 font-medium text-green-old-50">
                 <span className={`currency ${price <= 0 ? 'hidden' : ''} text-2xl`}>€</span>
                 <span className="price text-5xl font-bold">0.00</span>
-                <span className={`currency ${price <= 0 ? 'hidden' : ''} text-2xl opacity-0 pointer-events-none`}>
+                <span className={`currency ${price <= 0 ? 'hidden' : ''} pointer-events-none text-2xl opacity-0`}>
                   €
                 </span>
               </p>
             </div>
 
-            <p className="text-cool-gray-100 text-lg font-medium">{contentText.firstMonth}</p>
+            <p className="text-lg font-medium text-cool-gray-100">{contentText.firstMonth}</p>
           </div>
 
           <span
             className={`priceBefore ${
               priceBefore ? 'flex' : 'hidden'
-            } text-base text-neutral-80 font-medium line-through`}
+            } text-base font-medium text-neutral-80 line-through`}
           >
             €{priceBefore}
           </span>
@@ -106,7 +102,7 @@ const PriceCard = ({
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-neutral-80 text-xs`}
+            } flex-row text-xs text-neutral-80`}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
@@ -127,9 +123,9 @@ const PriceCard = ({
         <div
           className={`businessUserCount ${
             planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'
-          } flex-col w-full bg-neutral-10 ring-1 ring-neutral-20 rounded-lg p-4 mb-4`}
+          } mb-4 w-full flex-col rounded-lg bg-neutral-10 p-4 ring-1 ring-neutral-20`}
         >
-          <div className="input relative flex flex-row justify-between bg-white rounded-lg ring-1 ring-neutral-30">
+          <div className="input relative flex flex-row justify-between rounded-lg bg-white ring-1 ring-neutral-30">
             <button
               type="button"
               onClick={() => {
@@ -137,11 +133,11 @@ const PriceCard = ({
                   setUsers(parseInt(getUsers, 10) - 1);
                 } else setUsers(2);
               }}
-              className={`flex flex-row items-center justify-center h-10 w-10 sm:h-8 sm:w-8 ${
+              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
                 getUsers > 2
                   ? 'bg-primary text-white active:bg-primary-dark'
-                  : 'bg-neutral-30 text-neutral-80 active:bg-neutral-40 cursor-not-allowed'
-              } text-2xl font-light z-10 rounded-l-lg transition-all sm:duration-50 select-none`}
+                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
+              } sm:duration-50 z-10 select-none rounded-l-lg text-2xl font-light transition-all`}
             >
               <span className="mb-1">-</span>
             </button>
@@ -153,20 +149,20 @@ const PriceCard = ({
                   setUsers(parseInt(getUsers, 10) + 1);
                 } else setUsers(MAX_USERS);
               }}
-              className={`flex flex-row items-center justify-center h-10 w-10 sm:h-8 sm:w-8 ${
+              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
                 getUsers < MAX_USERS
                   ? 'bg-primary text-white active:bg-primary-dark'
-                  : 'bg-neutral-30 text-neutral-80 active:bg-neutral-40 cursor-not-allowed'
-              } text-2xl font-light z-10 rounded-r-lg transition-all sm:duration-50 select-none`}
+                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
+              } sm:duration-50 z-10 select-none rounded-r-lg text-2xl font-light transition-all`}
             >
               <span className="mb-1">+</span>
             </button>
 
             <label
               htmlFor={`users_${storage}`}
-              className="absolute top-0 left-0 h-full w-full flex flex-row items-center justify-center text-xl sm:text-base font-medium cursor-text"
+              className="absolute top-0 left-0 flex h-full w-full cursor-text flex-row items-center justify-center text-xl font-medium sm:text-base"
             >
-              <div className="relative flex flex-row h-full items-center">
+              <div className="relative flex h-full flex-row items-center">
                 <span
                   className={`pointer-events-none ${
                     Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? '' : 'opacity-0'
@@ -192,7 +188,7 @@ const PriceCard = ({
                   onBlur={(e) => {
                     setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value < 2 ? 2 : e.target.value);
                   }}
-                  className="absolute left-0 bg-transparent font-medium appearance-none outline-none w-14 min-w-full"
+                  className="absolute left-0 w-14 min-w-full appearance-none bg-transparent font-medium outline-none"
                 />
               </div>
 
@@ -200,17 +196,17 @@ const PriceCard = ({
             </label>
           </div>
 
-          <div className="flex flex-row w-full justify-between text-neutral-700 mt-4">
+          <div className="mt-4 flex w-full flex-row justify-between text-neutral-700">
             <span className="font-medium">Total:</span>
 
             <div className="flex flex-row items-end">
               <div className="flex flex-row items-start">
-                <span className="text-xs mt-0.5 mr-0.5">€</span>
+                <span className="mt-0.5 mr-0.5 text-xs">€</span>
 
                 <span>{teamsBilled}</span>
               </div>
 
-              <span className="text-xs text-neutral-100 mb-1 ml-0.5">
+              <span className="mb-1 ml-0.5 text-xs text-neutral-100">
                 {contentText.billingFrequencyLabelSmall[billingFrequencyList[billingFrequency]]}
               </span>
             </div>
@@ -221,11 +217,11 @@ const PriceCard = ({
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
-            cta[0] === 'checkout' ? redirectToCheckoutAction(stripeObject) : (location.href = cta[1]);
+            cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : (location.href = cta[1]);
           }}
-          className="flex flex-col items-center text-center w-full"
+          className="flex w-full flex-col items-center text-center"
         >
-          <div className="subscribePlan flex justify-center w-full items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary  active:bg-primary-dark origin-center active:translate-y-0.5 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer select-none">
+          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.freemonth}
             </p>
@@ -237,11 +233,11 @@ const PriceCard = ({
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
 
-          <p className="text-xs text-cool-gray-40 mt-2">{contentText.onlyForNewClients}</p>
+          <p className="mt-2 text-xs text-cool-gray-40">{contentText.onlyForNewClients}</p>
         </div>
       </div>
 
-      <div className="featureList flex flex-col p-6 text-neutral-500 bg-neutral-10 border-t border-neutral-20">
+      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2">
           <div className="flex flex-row items-start space-x-2 font-medium">
             <img
