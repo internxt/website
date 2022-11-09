@@ -22,27 +22,27 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
 
   const features = [
     {
-      id: 1,
+      id: 0,
       text: 'Encrypted file storage and sharing',
     },
     {
-      id: 2,
+      id: 1,
       text: 'Access your files from any device',
     },
     {
-      id: 3,
+      id: 2,
       text: 'Get access to all our services',
     },
     {
-      id: 4,
+      id: 3,
       text: 'No unauthorized data access',
     },
   ];
 
   return (
     <section className="relative -mt-16 flex w-full flex-col overflow-hidden">
-      <div className="relative flex overflow-hidden">
-        <div className="flex w-full max-w-screen-xl flex-col py-16 sm:mb-6 md:flex-row lg:mx-32 lg:justify-between">
+      <div className="relative flex items-center justify-center overflow-hidden">
+        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center py-16 sm:mb-6 md:flex-row lg:mx-32">
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
             <div className="flex flex-row pb-6">
               <Alarm size={32} className="mr-4 text-primary" />
@@ -62,12 +62,14 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
               <ButtonDeal lang={lang} />
             </div>
           </div>
-          <div className="relative flex h-[590px] items-center justify-center">
-            <div className="flex">
-              <img src="/images/special-offer/black-friday/file_icons.png" />
-            </div>
-            <div className="absolute m-auto flex max-h-[263px] max-w-[612px]">
-              <img src="/images/special-offer/black-friday/discount.png" />
+          <div className="mt-8 flex w-full max-w-md flex-col md:mx-0 md:mt-0 md:max-w-none md:flex-row ">
+            <div className="relative flex h-[590px] items-center justify-center lg:left-16">
+              <div className="flex">
+                <img src="/images/special-offer/black-friday/file_icons.png" />
+              </div>
+              <div className="absolute m-auto flex max-h-[263px] max-w-[612px]">
+                <img src="/images/special-offer/black-friday/discount.png" />
+              </div>
             </div>
           </div>
         </div>
@@ -75,6 +77,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
           className={`absolute top-0 left-0 -z-10 flex h-full w-screen ${styles.neonBlur} pointer-events-none origin-center`}
         />
       </div>
+
       <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
         {features.map((feature) => (
           <div

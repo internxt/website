@@ -14,10 +14,12 @@ const SuiteSection = ({ textContent, lang }) => {
 
           <div className="flex flex-col space-y-20 text-left text-white lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
             <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
-              <div className="w-auto space-y-10 p-20 lg:h-[480px] lg:w-[480px]">
-                <HardDrives size={40} className="text-primary" />
-                <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.drive.title}</h4>
-                <h5 className="text-base sm:text-xl">{textContent.SuiteSection.drive.subtitle}</h5>
+              <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
+                <div className="flex flex-col space-y-10">
+                  <HardDrives size={40} className="text-primary" />
+                  <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.drive.title}</h4>
+                  <h5 className="text-xl">{textContent.SuiteSection.drive.subtitle}</h5>
+                </div>
               </div>
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
@@ -28,10 +30,12 @@ const SuiteSection = ({ textContent, lang }) => {
             </div>
 
             <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
-              <div className="w-auto space-y-10 p-20 lg:h-[480px] lg:w-[480px]">
-                <Image size={40} className="text-primary" />
-                <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.photos.title}</h4>
-                <h5 className="text-base sm:text-xl">{textContent.SuiteSection.photos.subtitle}</h5>
+              <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
+                <div className="flex flex-col space-y-10">
+                  <Image size={40} className="text-primary" />
+                  <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.photos.title}</h4>
+                  <h5 className="text-xl">{textContent.SuiteSection.photos.subtitle}</h5>
+                </div>
               </div>
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
@@ -41,10 +45,12 @@ const SuiteSection = ({ textContent, lang }) => {
               </div>
             </div>
             <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
-              <div className="w-auto space-y-10 p-20 lg:h-[480px] lg:w-[480px]">
-                <PaperPlaneTilt size={40} className="text-primary" />
-                <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.send.title}</h4>
-                <h5 className="text-base sm:text-xl">{textContent.SuiteSection.send.subtitle}</h5>
+              <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
+                <div className="flex flex-col space-y-10">
+                  <PaperPlaneTilt size={40} className="text-primary" />
+                  <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.send.title}</h4>
+                  <h5 className="text-xl">{textContent.SuiteSection.send.subtitle}</h5>
+                </div>
               </div>
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
