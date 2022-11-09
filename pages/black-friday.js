@@ -77,7 +77,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <FaqSection textContent={langJson.blackFriday} />
 
-      <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} sAffiliates={isAffiliate} />
+      <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} isAffiliates={isAffiliate} />
     </Layout>
   );
 };

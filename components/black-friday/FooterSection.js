@@ -41,9 +41,15 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             <div className="pt-4">
               <ButtonDeal lang={lang} />
             </div>
-            <div className="pt-16">
-              <img src="/images/special-offer/black-friday/discount.png" />
-            </div>
+            {isAffiliates ? (
+              <div className="pt-16">
+                <img src="/images/special-offer/black-friday/discount-70.png" />
+              </div>
+            ) : (
+              <div className="pt-16">
+                <img src="/images/special-offer/black-friday/discount.png" />
+              </div>
+            )}
           </div>
           <div className="absolute right-0 h-full w-1/2 pt-20 lg:w-80">
             <img
