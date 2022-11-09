@@ -34,10 +34,10 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/ivacy.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/en/ivacy.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

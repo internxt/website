@@ -63,6 +63,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/ivacy',
+        destination: '/ivacy',
+        permanent: false,
+      },
+      {
         source: '/:lang/partner-discount',
         destination: '/partner-discount',
         permanent: false,

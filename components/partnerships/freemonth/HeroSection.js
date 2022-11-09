@@ -40,7 +40,7 @@ const HeroSection = ({ textContent, lang }) => {
           price={pricings.TB2.price}
           billingFrequency={1}
           cta={['checkout', 'TB21']}
-          lang={lang === 'fr' ? 'en' : lang}
+          lang={'en'}
         />
       </div>
     </section>
