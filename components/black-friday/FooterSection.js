@@ -35,7 +35,7 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
               <p className="text-xl font-semibold">{affiliates}</p>
             </div>
             <p className="pt-4 text-5xl font-bold text-primary">
-              {textContent.FooterSection.only} {textContent.FooterSection.priceNow} {currency()}
+              {textContent.FooterSection.only} {isAffiliates ? '2.69' : textContent.FooterSection.priceNow} {currency()}
               {textContent.FooterSection.month}
             </p>
             <div className="pt-4">

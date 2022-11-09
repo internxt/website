@@ -27,7 +27,7 @@ const CtaSection = ({ textContent, lang, country, isAffiliates }) => {
         </div>
         <div>
           <p className="text-center text-5xl font-bold text-primary">
-            {textContent.only} {textContent.priceNow} {currency()}
+            {textContent.only} {isAffiliates ? '2.69' : textContent.priceNow} {currency()}
             {textContent.month}
           </p>
         </div>

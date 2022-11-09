@@ -55,7 +55,8 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
             </h1>
             <p className="mt-6 text-3xl text-white">{HeroSectionDescription}</p>
             <p className="pt-3 text-5xl font-bold text-primary">
-              {textContent.HeroSection.pricingTable.only} {textContent.HeroSection.pricingTable.priceNow} {currency()}
+              {textContent.HeroSection.pricingTable.only}{' '}
+              {isAffiliate ? '2.69' : textContent.HeroSection.pricingTable.priceNow} {currency()}
               {textContent.HeroSection.pricingTable.month}
             </p>
             <div className="pt-10">
@@ -84,13 +85,13 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
         />
       </div>
 
-      <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
+      <div className="sm:gap-x-30 flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-20 py-14">
         {features.map((feature) => (
           <div
             className="flex max-w-[185px] flex-col items-center justify-center space-y-4 text-center"
             key={feature.index}
           >
-            <CircleWavyCheck size={40} weight="fill" className="mr-4 text-primary" />
+            <CircleWavyCheck size={40} weight="fill" className="text-primary" />
             <p className="text-xl font-semibold ">{feature.text}</p>
           </div>
         ))}
