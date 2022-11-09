@@ -2,6 +2,7 @@ import React from 'react';
 import styles from 'components/black-friday/BF-HeroSection.module.scss';
 import { X } from 'phosphor-react';
 import ButtonDeal from '../black-friday/components/ButtonDeal';
+import Link from 'next/link';
 
 const Popup = ({ lang }) => {
   const [hidePopup, setHidePopup] = React.useState(false);
@@ -31,7 +32,11 @@ const Popup = ({ lang }) => {
       <div className="flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-2xl font-bold">Black Friday is here!</p>
         <img src="/images/special-offer/black-friday/discount.png" className="flex h-auto w-auto" />
-        <ButtonDeal lang={lang} />
+        <Link href="/black-friday">
+          <button className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
+            {lang === 'fr' ? "Obtenez l'offre" : 'Get the deal'}
+          </button>
+        </Link>
       </div>
       <div
         className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.neonBlur} pointer-events-none origin-center`}
