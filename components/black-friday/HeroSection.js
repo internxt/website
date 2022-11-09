@@ -24,18 +24,22 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
     {
       id: 0,
       text: 'Encrypted file storage and sharing',
+      frenchText: 'Stockage et partage de fichiers cryptés',
     },
     {
       id: 1,
       text: 'Access your files from any device',
+      frenchText: 'Accédez à vos fichiers depuis tous vos appareils',
     },
     {
       id: 2,
       text: 'Get access to all our services',
+      frenchText: 'Accédez à tous nos services',
     },
     {
       id: 3,
       text: 'No unauthorized data access',
+      frenchText: 'Aucun accès non autorisé aux données',
     },
   ];
 
@@ -88,11 +92,13 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
       <div className="sm:gap-x-30 flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-20 py-14">
         {features.map((feature) => (
           <div
-            className="flex max-w-[185px] flex-col items-center justify-center space-y-4 text-center"
+            className={`flex ${
+              lang === 'fr' ? 'max-w-[230px]' : 'max-w-[185px]'
+            } flex-col items-center justify-center space-y-4 text-center`}
             key={feature.index}
           >
             <CircleWavyCheck size={40} weight="fill" className="text-primary" />
-            <p className="text-xl font-semibold ">{feature.text}</p>
+            <p className="text-xl font-semibold ">{lang === 'fr' ? feature.frenchText : feature.text}</p>
           </div>
         ))}
       </div>
