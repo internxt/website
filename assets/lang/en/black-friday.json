@@ -5,14 +5,12 @@
         "line1": "Black Friday",
         "line2": "is here!"
       },
-      "description1": "Save big on privacy and peace of mind!",
-      "description2": "Get 60% off our annual 2TB plan.",
+      "description": "Get 60% off our annual 2TB plan.",
       "button": {
         "text": "Get the deal"
       },
       "pricingTable": {
-        "plan": "2TB",
-        "discount": "60% off",
+        "only": "Only",
         "priceNow": "3.59",
         "month": "/mo",
         "priceBefore": "8.99",
@@ -92,15 +90,15 @@
     "TestimonialSection": {
       "title": "What our users are saying about Internxt",
       "cristian": {
-        "text": "We needed a Dropbox alternative that allowed us to store client files and work (social media files) and, as Internxt is GDPR friendly, fit perfectly for us!",
+        "text": "\"We needed a Dropbox alternative that allowed us to store client files and work (social media files) and, as Internxt is GDPR friendly, fit perfectly for us!\"",
         "footer": "Cristian"
       },
       "josep": {
-        "text": "I've been using Google Drive for several years, but I needed an alternative that granted me the privacy of my data. Something that Google or other well-known platforms can't do. That's why I moved to Internxt. For now, all my doubts and questions have been answered in a few minutes, and I love knowing that there's always someone who is willing to help me.",
+        "text": "\"I've been using Google Drive for several years, but I needed an alternative that granted me the privacy of my data. Something that Google or other well-known platforms can't do. That's why I moved to Internxt.\"",
         "footer": "Josep"
       },
       "eva": {
-        "text": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.",
+        "text": "\"Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.\"",
         "footer": "Eva"
       }
     },
@@ -156,14 +154,21 @@
           ]
         }
       ]
+    },
+    "FooterSection": {
+      "title": "Stand with privacy. Choose Internxt!",
+      "subtitle": "Get a discount on privacy and peace of mind.",
+      "subtitle1": "Get 60% off one whole year of our largest 2TB plan!",
+      "only": "Only",
+      "priceNow": "3.59",
+      "month": "/mo"
     }
   },
-  "cta1": {
+  "cta": {
     "title": "Activate your 60% off Black Friday deal!",
-    "subtitle": "Get 60% off one whole year of our largest 2TB plan!"
-  },
-  "cta2": {
-    "title": "Stand with privacy. Choose Internxt!",
-    "subtitle": "Get a discount on privacy and peace of mind. Get 60% off one whole year of our largest 2TB plan!"
+    "subtitle": "Get 60% off one whole year of our largest 2TB plan!",
+    "only": "Only",
+    "priceNow": "3.59",
+    "month": "/mo"
   }
 }

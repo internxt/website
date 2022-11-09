@@ -1,48 +1,63 @@
 import React from 'react';
+import { HardDrives, Image, PaperPlaneTilt } from 'phosphor-react';
 
-const SuiteSection = ({ textContent }) => {
+const SuiteSection = ({ textContent, lang }) => {
   return (
-    <section className="overflow-hidden">
-      <div className=" py-24">
-        <div className="center flex flex-col items-center px-5 text-center">
-          <h1 className="text-4xl font-semibold">{textContent.SuiteSection.title}</h1>
-          <p className="pt-5 text-xl font-normal">{textContent.SuiteSection.subtitle}</p>
-        </div>
-        <div className="mx-10 mt-16 flex-col space-y-12 md:mx-0">
-          <div className=" flex w-full flex-col-reverse items-center justify-center space-y-5 space-y-reverse pt-10 md:flex-row  md:space-y-0">
-            <div className="flex flex-1 flex-col items-center justify-center self-stretch text-center md:flex-shrink-0 md:text-left">
-              <p className="w-full text-3xl font-semibold lg:w-96">{textContent.SuiteSection.drive.title}</p>
-              <p className="mt-5 w-full text-xl font-normal lg:w-96">{textContent.SuiteSection.drive.subtitle}</p>
-            </div>
-            <div className="flex-1">
-              <img
-                src="/images/special-offer/black-friday/Drive.png"
-                className="aspect-[19/13] w-full rounded-2xl md:rounded-none md:rounded-l-2xl"
-              />
-            </div>
+    <section className="relative flex w-full flex-col">
+      {/* Apps designed to protect your privacy */}
+      <div className="z-10 flex flex-col items-center py-16">
+        <div className="px-6 text-left sm:text-center">
+          <div className="flex flex-col items-center px-5 pb-16 text-center">
+            <h1 className="text-4xl font-semibold">{textContent.SuiteSection.title}</h1>
+            <p className="max-w-[756px] pt-5 text-xl font-normal">{textContent.SuiteSection.subtitle}</p>
           </div>
-          <div className=" flex w-full flex-col items-center justify-center space-y-5 pt-10 md:flex-row  md:space-y-0">
-            <div className="flex-1">
-              <img
-                src="/images/special-offer/black-friday/Photos.png"
-                className="aspect-[19/13] w-full rounded-2xl md:rounded-none md:rounded-r-2xl"
-              />
+
+          <div className="flex flex-col space-y-20 text-left text-white lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
+            <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+              <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
+                <div className="flex flex-col space-y-10">
+                  <HardDrives size={40} className="text-primary" />
+                  <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.drive.title}</h4>
+                  <h5 className="text-xl">{textContent.SuiteSection.drive.subtitle}</h5>
+                </div>
+              </div>
+
+              <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
+                <div className="hidden lg:flex lg:max-w-[480px]">
+                  <img src="/images/privacy/drive-image.png" />
+                </div>
+              </div>
             </div>
-            <div className="mx-5 flex flex-1 flex-col items-center justify-center self-stretch text-center md:flex-shrink-0 md:text-left">
-              <p className="w-full text-3xl font-semibold lg:w-96">{textContent.SuiteSection.photos.title}</p>
-              <p className="mt-5 w-full text-xl font-normal lg:w-96">{textContent.SuiteSection.photos.subtitle}</p>
+
+            <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+              <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
+                <div className="flex flex-col space-y-10">
+                  <Image size={40} className="text-primary" />
+                  <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.photos.title}</h4>
+                  <h5 className="text-xl">{textContent.SuiteSection.photos.subtitle}</h5>
+                </div>
+              </div>
+
+              <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
+                <div className="hidden lg:flex lg:max-w-[480px]">
+                  <img src="/images/privacy/photos-image.png" />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className=" flex w-full flex-col-reverse items-center justify-center space-y-5 space-y-reverse pt-10 md:flex-row  md:space-y-0">
-            <div className="flex flex-1 flex-col items-center justify-center self-stretch text-center md:flex-shrink-0 md:text-left ">
-              <p className="w-full text-3xl font-semibold lg:w-96">{textContent.SuiteSection.send.title}</p>
-              <p className="mt-5 w-full text-xl font-normal lg:w-96">{textContent.SuiteSection.send.subtitle}</p>
-            </div>
-            <div className="flex-1">
-              <img
-                src="/images/special-offer/black-friday/Send.png"
-                className="aspect-[19/13] w-full rounded-2xl md:rounded-none md:rounded-l-2xl"
-              />
+            <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+              <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
+                <div className="flex flex-col space-y-10">
+                  <PaperPlaneTilt size={40} className="text-primary" />
+                  <h4 className="text-4xl font-medium lg:text-4xl">{textContent.SuiteSection.send.title}</h4>
+                  <h5 className="text-xl">{textContent.SuiteSection.send.subtitle}</h5>
+                </div>
+              </div>
+
+              <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
+                <div className="hidden lg:flex lg:max-w-[480px]">
+                  <img src="/images/privacy/send-image.png" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

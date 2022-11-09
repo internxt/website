@@ -5,14 +5,12 @@
         "line1": "Le Black friday ",
         "line2": "est arrivé!"
       },
-      "description1": "Économisez de l'argent et passez à la confidentialité!",
-      "description2": "Obtenez 60% de réduction sur notre offre annuelle de 2 To.",
+      "description": "Obtenez 60% de réduction sur notre offre annuelle de 2TB.",
       "button": {
         "text": "Profitez de l'offre"
       },
       "pricingTable": {
-        "plan": "2TB",
-        "discount": "60% off",
+        "only": "Seulement",
         "priceNow": "3.59",
         "month": "/mois",
         "priceBefore": "8.99",
@@ -96,7 +94,7 @@
         "footer": "Cristian"
       },
       "josep": {
-        "text": "J'utilise Google Drive depuis plusieurs années, mais j'avais besoin d'une alternative qui me garantissait la confidentialité de mes données. Quelque chose que Google ou d'autres plateformes bien connues ne peuvent pas faire. C'est pour cela que je suis passé à Internxt. Pour l'instant, tous mes doutes et toutes mes questions ont trouvé une réponse en quelques minutes, et j'aime savoir qu'il y a toujours quelqu'un qui est prêt à m'aider.",
+        "text": "J'utilise Google Drive depuis plusieurs années, mais j'avais besoin d'une alternative qui me garantissait la confidentialité de mes données. Quelque chose que Google ou d'autres plateformes bien connues ne peuvent pas faire. C'est pour cela que je suis passé à Internxt.",
         "footer": "Josep"
       },
       "eva": {
@@ -156,14 +154,21 @@
           ]
         }
       ]
+    },
+    "FooterSection": {
+      "title": "Respectez la vie privée. Choisissez Internxt!",
+      "subtitle": "Obtenez une réduction sur la confidentialité.",
+      "subtitle1": "Obtenez 60% de réduction sur un an sur notre plan de 2TB!",
+      "only": "Seulement",
+      "priceNow": "3.59",
+      "month": "/mois"
     }
   },
-  "cta1": {
+  "cta": {
     "title": "Activez votre offre de 60% de réduction pour le Black Friday!",
-    "subtitle": "Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!"
-  },
-  "cta2": {
-    "title": "Soutenez la confidentialité. Choisissez Internxt!",
-    "subtitle": "Obtenez offre une réduction sur la confidentialité et la sécurité! Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!"
+    "subtitle": "Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!",
+    "only": "Seulement",
+    "priceNow": "3.59",
+    "month": "/mois"
   }
 }
