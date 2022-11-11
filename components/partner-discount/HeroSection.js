@@ -60,8 +60,8 @@ const HeroSection = ({ textContent, isTechradar }) => {
       {isTechradar ? (
         <>
           <section className=" partnerHeroSection overflow-hidden">
-            <div className="mt-[77px] mb-20 flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-between xl:mx-32">
-              <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:max-w-[456px] lg:items-start lg:text-start">
+            <div className="mt-[77px] mb-20 flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-evenly xl:mx-32">
+              <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:mr-52 lg:max-w-[456px]  lg:items-start lg:text-start">
                 <div>
                   <h1 className=" text-6xl font-semibold">{textContent.title1.line1}</h1>
                   <p className="pt-2 text-3xl font-semibold">{textContent.title1.line2}</p>
