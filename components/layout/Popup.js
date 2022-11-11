@@ -32,7 +32,7 @@ const Popup = ({ lang }) => {
       <div className="flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-2xl font-bold">Black Friday is here!</p>
         <img src="/images/special-offer/black-friday/discount.png" className="flex h-auto w-auto" />
-        <Link href="/black-friday">
+        <Link href="https://internxt.com/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday">
           <button className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
             {lang === 'fr' ? "Obtenez l'offre" : 'Get the deal'}
           </button>
