@@ -3,22 +3,23 @@ import React from 'react';
 import styles from '../black-friday/BF-HeroSection.module.scss';
 
 const BFBanner = ({ bannerJson }) => {
-  const [hidePopup, setHidePopup] = React.useState(false);
+  const [hideBanner, setHideBanner] = React.useState(false);
   const [showBanner, setShowBanner] = React.useState(false);
 
   setTimeout(() => {
     setShowBanner(true);
+    window.dispatchEvent(new Event('CloseSquare'));
   }, 40000);
 
   const handleClose = () => {
     localStorage.setItem('hideLoginBanner', true);
-    setHidePopup(true);
+    setHideBanner(true);
   };
 
   React.useEffect(() => {
     const hideBanner = localStorage.getItem('hideLoginBanner');
     if (hideBanner === 'true') {
-      setHidePopup(true);
+      setHideBanner(true);
     }
     window.addEventListener('beforeunload', function (e) {
       e.preventDefault();
@@ -61,11 +62,11 @@ const BFBanner = ({ bannerJson }) => {
       <div
         className={`${
           !hideBanner ? 'flex' : 'hidden'
-        }  absolute top-0 left-0 right-0 bottom-0 z-50 bg-black bg-opacity-50`}
+        }  fixed top-0 left-0 right-0 bottom-0 z-50 bg-black bg-opacity-50`}
       >
         <div
           className={`${
-            hidePopup ? 'hidden' : 'flex'
+            hideBanner ? 'hidden' : 'flex'
           } fixed top-1/2 left-1/2 z-50 h-auto -translate-y-[50%] -translate-x-[50%] overflow-hidden rounded-2xl`}
         >
           <button className="absolute right-0 m-7 flex text-white" onClick={handleClose}>
@@ -75,7 +76,7 @@ const BFBanner = ({ bannerJson }) => {
             <div className="flex flex-col items-center justify-center text-center md:items-start md:justify-between md:pr-20 md:text-start">
               <div className="flex w-72 flex-col">
                 <p className="text-3xl font-semibold text-white">{bannerJson.LoginBanner.head}</p>
-                <p className="pt-5 text-5xl font-bold text-white">{bannerJson.LoginBanner.title}</p>
+                <p className="pt-8 text-5xl font-bold text-white">{bannerJson.LoginBanner.title}</p>
               </div>
               <div className="flex pt-7 md:pt-24">
                 <button

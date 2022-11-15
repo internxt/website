@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from 'components/black-friday/BF-HeroSection.module.scss';
 import { X } from 'phosphor-react';
-import ButtonDeal from '../black-friday/components/ButtonDeal';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -29,12 +28,15 @@ const Popup = ({ lang }) => {
   }, []);
 
   React.useEffect(() => {
-    if (localStorage.getItem('hideBanner') === 'true') {
-      setHideBanner(true);
-    }
+    window.addEventListener('CloseSquare', () => {
+      setHidePopup(true);
+    });
+    return () => {
+      window.removeEventListener('CloseSquare', () => {});
+    };
   }, []);
 
-  return router.pathname === '/black-friday' ? null : (
+  return (
     <div
       className={`fixed bottom-8 right-8 z-50 hidden max-h-[350px] max-w-[300px] flex-col py-5 px-8 lg:${
         hidePopup ? 'hidden' : 'flex'
