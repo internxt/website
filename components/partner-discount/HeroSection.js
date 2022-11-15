@@ -125,7 +125,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
                 alt="laptop and phone with Internxt app"
               />
             </div>
-            <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:ml-20 lg:max-w-[456px] lg:items-start lg:text-start">
+            <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:ml-32 lg:max-w-[456px] lg:items-start lg:text-start 2xl:ml-20">
               <h1 className=" text-6xl font-semibold">{textContent.title}</h1>
               <p className=" text-2xl font-normal">
                 {subtitle1Partner}
