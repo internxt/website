@@ -3,9 +3,11 @@ import styles from 'components/black-friday/BF-HeroSection.module.scss';
 import { X } from 'phosphor-react';
 import ButtonDeal from '../black-friday/components/ButtonDeal';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Popup = ({ lang }) => {
   const [hidePopup, setHidePopup] = React.useState(false);
+  const router = useRouter();
 
   const handleClose = () => {
     localStorage.setItem('hidePopup', true);
@@ -14,13 +16,25 @@ const Popup = ({ lang }) => {
 
   React.useEffect(() => {
     const hidePopup = localStorage.getItem('hidePopup');
-    if (hidePopup) {
+    if (hidePopup === 'true') {
       setHidePopup(true);
     }
-    window.onbeforeunload = localStorage.removeItem('hidePopup');
+    window.addEventListener('beforeunload', function (e) {
+      e.preventDefault();
+      localStorage.removeItem('hidePopup');
+    });
+    return () => {
+      window.removeEventListener('beforeunload', () => {});
+    };
   }, []);
 
-  return (
+  React.useEffect(() => {
+    if (localStorage.getItem('hideBanner') === 'true') {
+      setHideBanner(true);
+    }
+  }, []);
+
+  return router.pathname === '/black-friday' ? null : (
     <div
       className={`fixed bottom-8 right-8 z-50 hidden max-h-[350px] max-w-[300px] flex-col py-5 px-8 lg:${
         hidePopup ? 'hidden' : 'flex'

@@ -1,0 +1,28 @@
+{
+  "LoginBanner": {
+    "head": "Try before you buy.",
+    "title": "Get Internxt for free!",
+    "buttonText": "Sign up now",
+    "card": {
+      "title1": "Get up to 10GB free",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available on all devices"
+    }
+  },
+  "BFBanner": {
+    "head": "Save big on privacy.",
+    "title": "Internxt’s Black Friday Deal",
+    "buttonText": "Get the deal",
+    "card": {
+      "title1": "Get 60% off our 2TB plan",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available until Dec 5th"
+    }
+  }
+}

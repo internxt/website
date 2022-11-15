@@ -13,12 +13,13 @@ import FaqSection from '../components/black-friday/FAQSection';
 import FooterSection from '../components/black-friday/FooterSection';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import LoginBanner from '../components/layout/LoginBanner';
 
 const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang }) => {
+const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, bannerJson, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
@@ -43,7 +44,12 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
   });
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      bannerLang={bannerJson}
+      segmentName="Black Friday"
+    >
       <Navbar
         lang={deviceLang}
         textContent={navbarLang}
@@ -53,6 +59,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
         isLinksHidden
         darkMode={true}
       />
+      <LoginBanner bannerJson={bannerJson} />
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />
 
@@ -83,6 +90,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
+  const bannerJson = require(`../assets/lang/en/banners.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
   cookies.setReferralCookie(ctx);
@@ -92,6 +100,7 @@ export async function getServerSideProps(ctx) {
       lang,
       deviceLang,
       metatagsDescriptions,
+      bannerJson,
       navbarLang,
       langJson,
     },
