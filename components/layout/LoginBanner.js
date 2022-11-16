@@ -91,18 +91,6 @@ const BFBanner = ({ bannerJson }) => {
                 </button>
               </div>
             </div>
-            {/* <div className="hidden items-center md:flex">
-              <div className="flex w-[331px] flex-col">
-                {cards.map((card, index) => (
-                  <div className="flex flex-row items-stretch py-3">
-                    <div className="flex">
-                      <card.icon size={32} className="mr-4 text-primary" />
-                      <p className="text-xl font-semibold text-white">{card.title}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
             <div className="hidden items-center md:flex">
               <div className="flex w-[340px] flex-col">
                 <div className="flex flex-col">

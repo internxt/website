@@ -66,6 +66,19 @@ const Popup = () => {
     }
   };
 
+  const buttonLinks = () => {
+    switch (lang) {
+      case 'en':
+        return 'https://internxt.com/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday';
+      case 'es':
+        return 'https://internxt.com/es/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday';
+      case 'fr':
+        return 'https://internxt.com/fr/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday';
+      default:
+        return 'https://internxt.com/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday';
+    }
+  };
+
   return (
     <div
       className={`fixed bottom-8 right-8 z-50 hidden max-h-[350px] max-w-[300px] flex-col py-5 px-8 lg:${
@@ -80,7 +93,7 @@ const Popup = () => {
       <div className="flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-2xl font-bold">{title()}</p>
         <img src="/images/special-offer/black-friday/discount.png" className="flex h-auto w-auto" />
-        <Link href="https://internxt.com/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday">
+        <Link href={buttonLinks()}>
           <button className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
             {buttonDeal()}
           </button>
