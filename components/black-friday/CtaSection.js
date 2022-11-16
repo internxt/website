@@ -27,8 +27,18 @@ const CtaSection = ({ textContent, lang, country, isAffiliates }) => {
         </div>
         <div>
           <p className="text-center text-5xl font-bold text-primary">
-            {textContent.only} {isAffiliates ? '2.69' : textContent.priceNow} {currency()}
-            {textContent.month}
+            {currency() === '€' ? (
+              <>
+                {textContent.only} {currency()}
+                {isAffiliates ? '2.69' : textContent.priceNow}
+                <span className="text-3xl">{textContent.month}</span>
+              </>
+            ) : (
+              <>
+                {textContent.only} {isAffiliates ? '2.69' : textContent.priceNow} {currency()}
+                {textContent.month}
+              </>
+            )}
           </p>
         </div>
         <div className="flex">
