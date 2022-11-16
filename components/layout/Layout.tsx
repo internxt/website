@@ -61,7 +61,7 @@ LayoutProps) {
           }}
         />
       </Head>
-      <Popup lang={lang} />
+      <Popup />
       <BFBanner />
       {children}
     </>
