@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { buttonDeal, buttonLink } from '../TextWithoutJson';
 import { BFBannerText } from '../TextWithoutJson';
 
-const BFBanner = ({ bannerJson }) => {
+const BFBanner = () => {
   const [hideBanner, setHideBanner] = React.useState(false);
   const [showBanner, setShowBanner] = React.useState(false);
   const router = useRouter();

@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import isBrave from '../../lib/brave';
 import Popup from './Popup';
 import BFBanner from './BFBanner';
-import bannerJson from '../../assets/lang/en/banners.json';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -63,7 +62,7 @@ LayoutProps) {
         />
       </Head>
       <Popup lang={lang} />
-      <BFBanner bannerJson={bannerJson} />
+      <BFBanner />
       {children}
     </>
   );
