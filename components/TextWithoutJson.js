@@ -23,7 +23,7 @@ export const BFBannerText = {
     },
   },
   es: {
-    head: '¡La privacidad no tiene por qué ser cara!',
+    head: '¡Elige la privacidad!',
     title: 'Oferta de Internxt de Black Friday',
     cards: {
       title1: '60% de descuento en el plan de 2TB',
@@ -35,8 +35,8 @@ export const BFBannerText = {
     },
   },
   fr: {
-    head: "Économisez de l'argent sur la confidentialité.",
-    title: "Offre du Black Friday d'Internxt",
+    head: 'Choisissez la confidentialité.',
+    title: 'Offre du Black Friday',
     cards: {
       title1: '-60% sur notre plan de 2To',
       title2: 'Stockage en nuage sécurisé',

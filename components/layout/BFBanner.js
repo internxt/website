@@ -81,7 +81,7 @@ const BFBanner = ({ bannerJson }) => {
                 <p className="text-3xl font-semibold text-white">{BFBannerText[lang].head}</p>
                 <p className="pt-5 text-5xl font-bold text-white">{BFBannerText[lang].title}</p>
               </div>
-              <div className="flex pt-7 md:pt-24">
+              <div className="flex pt-7 md:pt-10">
                 <button
                   className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                   onClick={() => {
@@ -96,7 +96,7 @@ const BFBanner = ({ bannerJson }) => {
               <div className="flex w-[340px] flex-col">
                 <div className="flex flex-col">
                   {cards.map((card, index) => (
-                    <div className="flex flex-row pb-7 last:pb-0" key={index}>
+                    <div className="flex flex-row pb-5 last:pb-0" key={index}>
                       <CircleWavyCheck size={32} weight="fill" className="mr-4 text-primary" />
                       <p className="text-xl font-semibold text-white">{card.title}</p>
                     </div>
