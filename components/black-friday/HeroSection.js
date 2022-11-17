@@ -59,9 +59,19 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
             </h1>
             <p className="mt-6 text-3xl text-white">{HeroSectionDescription}</p>
             <p className="pt-3 text-5xl font-bold text-primary">
-              {textContent.HeroSection.pricingTable.only}{' '}
-              {isAffiliate ? '2.69' : textContent.HeroSection.pricingTable.priceNow} {currency()}
-              {textContent.HeroSection.pricingTable.month}
+              {currency() === '€' ? (
+                <>
+                  {textContent.HeroSection.pricingTable.only} {currency()}
+                  {isAffiliate ? '2.69' : textContent.HeroSection.pricingTable.priceNow}
+                  <span className="text-3xl">{textContent.HeroSection.pricingTable.month}</span>
+                </>
+              ) : (
+                <>
+                  {textContent.HeroSection.pricingTable.only}{' '}
+                  {isAffiliate ? '2.69' : textContent.HeroSection.pricingTable.priceNow} {currency()}
+                  {textContent.HeroSection.pricingTable.month}
+                </>
+              )}
             </p>
             <div className="pt-10">
               <ButtonDeal lang={lang} />

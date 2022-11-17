@@ -27,7 +27,7 @@ function setReferralCookie(ctx: GetServerSidePropsContext): void {
     domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
     expires,
     overwrite: true,
-    httpOnly: false
+    httpOnly: false,
   });
 
   // httpOnly must be false in order to be accesible by JavaScript
@@ -42,12 +42,12 @@ function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: st
     domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
     expires,
     overwrite: true,
-    httpOnly: false
+    httpOnly: false,
   });
 }
 
 export default {
   parseUri,
   setReferralCookie,
-  setPublicCookie
+  setPublicCookie,
 };

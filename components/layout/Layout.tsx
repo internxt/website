@@ -1,8 +1,9 @@
 /* eslint-disable react/no-danger */
 import Head from 'next/head';
 import React, { useEffect } from 'react';
-import { ArrowRight } from 'phosphor-react';
 import isBrave from '../../lib/brave';
+import Popup from './Popup';
+import BFBanner from './BFBanner';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,7 +13,6 @@ interface LayoutProps {
   disableMailerlite?: boolean;
   disableDrift?: boolean;
   isProduction?: boolean;
-  isSendSnackbar?: boolean;
   lang?: string;
 }
 
@@ -24,7 +24,6 @@ export default function Layout({
   disableMailerlite = false,
   disableDrift = true,
   isProduction = process.env.NODE_ENV === 'production',
-  isSendSnackbar = true,
   lang,
 }: // lang
 LayoutProps) {
@@ -37,60 +36,6 @@ LayoutProps) {
     // getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
-
-  const newLabel = () => {
-    switch (lang) {
-      case 'es':
-        return 'NUEVO';
-      case 'en':
-        return 'NEW';
-      case 'fr':
-        return 'NOUVEAU';
-
-      default:
-        return 'NEW';
-    }
-  };
-
-  const sendTitle = () => {
-    switch (lang) {
-      case 'es':
-        return 'Comparte archivos de forma rápida y segura';
-      case 'en':
-        return 'Share files fast in total privacy';
-      case 'fr':
-        return 'Partagez des fichiers en toute sécurité et rapidement';
-
-      default:
-        return 'Share files fast in total privacy';
-    }
-  };
-
-  const sendFindLabel = () => {
-    switch (lang) {
-      case 'es':
-        return 'Probar ahora';
-      case 'en':
-        return 'Find out now';
-      case 'fr':
-        return 'Essayez maintenant';
-      default:
-        return 'Find';
-    }
-  };
-
-  const sendFindLabelMobile = () => {
-    switch (lang) {
-      case 'es':
-        return 'Probar ahora';
-      case 'en':
-        return 'Find out';
-      case 'fr':
-        return 'Essayez maintenant';
-      default:
-        return 'Find';
-    }
-  };
 
   return (
     <>
@@ -116,36 +61,8 @@ LayoutProps) {
           }}
         />
       </Head>
-
-      {isSendSnackbar && (
-        <a
-          href="https://send.internxt.com"
-          target="_blank"
-          rel="noreferrer"
-          className="group fixed bottom-0 left-0 z-50 h-16 w-screen bg-primary text-white"
-        >
-          <div className="relative mx-auto flex h-full max-w-screen-xl flex-row items-center justify-between px-5 lg:justify-center lg:space-x-10">
-            <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
-              <div className="flex h-6 flex-row items-center rounded-full bg-white px-2 text-sm font-bold text-primary">
-                {newLabel()}
-              </div>
-              <span className="text-lg font-medium">Internxt Send</span>
-              <span className="hidden opacity-75 md:flex">{sendTitle()}</span>
-            </div>
-            <div className="flex h-9 flex-row items-center rounded-full text-lg font-medium transition duration-200 ease-in-out sm:space-x-1 sm:px-4 sm:group-hover:bg-white sm:group-hover:bg-opacity-15">
-              <div className="hidden whitespace-nowrap sm:flex">
-                <span className="hidden sm:flex">{sendFindLabel()}</span>
-                <span className="flex sm:hidden">{sendFindLabelMobile()}</span>
-              </div>
-              <ArrowRight
-                size={20}
-                weight="bold"
-                className="h-8 w-8 transition duration-200 ease-in-out sm:h-6 sm:w-6 sm:group-hover:translate-x-1"
-              />
-            </div>
-          </div>
-        </a>
-      )}
+      <Popup />
+      <BFBanner />
       {children}
     </>
   );

@@ -35,8 +35,19 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
               <p className="text-xl font-semibold">{affiliates}</p>
             </div>
             <p className="pt-4 text-5xl font-bold text-primary">
-              {textContent.FooterSection.only} {isAffiliates ? '2.69' : textContent.FooterSection.priceNow} {currency()}
-              {textContent.FooterSection.month}
+              {currency() === '€' ? (
+                <>
+                  {textContent.FooterSection.only} {currency()}
+                  {isAffiliates ? '2.69' : textContent.FooterSection.priceNow}
+                  <span className="text-3xl">{textContent.FooterSection.month}</span>
+                </>
+              ) : (
+                <>
+                  {textContent.FooterSection.only} {isAffiliates ? '2.69' : textContent.FooterSection.priceNow}{' '}
+                  {currency()}
+                  {textContent.FooterSection.month}
+                </>
+              )}
             </p>
             <div className="pt-4">
               <ButtonDeal lang={lang} />
