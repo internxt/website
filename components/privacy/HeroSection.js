@@ -8,7 +8,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <>
-      <section className="relative -mt-16 flex w-full flex-col overflow-hidden bg-cool-gray-100 pt-16">
+      <section className="relative flex w-full flex-col overflow-hidden bg-cool-gray-100 pt-16">
         <div className="z-10 flex flex-col items-center py-16 pb-20 lg:py-40">
           {/* Main title */}
           <div className="px-6 text-left sm:text-center">
