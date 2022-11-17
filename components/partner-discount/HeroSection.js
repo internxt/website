@@ -1,6 +1,7 @@
 import { Globe, SketchLogo, CloudCheck, FileArrowUp, ClockCounterClockwise } from 'phosphor-react';
 import React from 'react';
 import ShowSnackbar from '../ShowSnackbar';
+import styles from './Background.module.scss';
 
 const HeroSection = ({ textContent, isTechradar }) => {
   const [open, setOpen] = React.useState(false);
@@ -59,7 +60,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
     <>
       {isTechradar ? (
         <>
-          <section className=" partnerHeroSection overflow-hidden">
+          <section className="overflow-hidden pt-16">
             <div className="mt-[77px] mb-20 flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-evenly xl:mx-32">
               <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:mr-52 lg:max-w-[456px]  lg:items-start lg:text-start">
                 <div>
@@ -100,6 +101,9 @@ const HeroSection = ({ textContent, isTechradar }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`absolute top-16 left-0 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
+            />
             <ShowSnackbar open={open} />
           </section>
           <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
@@ -115,8 +119,8 @@ const HeroSection = ({ textContent, isTechradar }) => {
           </div>
         </>
       ) : (
-        <section className=" partnerHeroSection overflow-hidden">
-          <div className="mt-[77px] mb-20 flex flex-col justify-center lg:flex-row lg:justify-between 2xl:justify-evenly">
+        <section className="overflow-hidden pt-16">
+          <div className=" mt-[77px] mb-20 flex flex-col justify-center lg:flex-row lg:justify-between 2xl:justify-evenly">
             <div className="mx-20 mb-6 flex w-auto flex-col lg:hidden">
               <img
                 loading="lazy"
@@ -154,6 +158,9 @@ const HeroSection = ({ textContent, isTechradar }) => {
             </div>
           </div>
           <ShowSnackbar open={open} />
+          <div
+            className={`absolute top-16 left-0 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
+          />
         </section>
       )}
     </>

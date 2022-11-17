@@ -27,7 +27,7 @@ const BestStorageSection = ({ textContent, lang }) => {
         />
       </div>
       <div
-        className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.neonBlur} pointer-events-none origin-center`}
+        className={`absolute top-0 left-0 -z-10 flex h-full w-screen ${styles.neonBlur} pointer-events-none origin-center`}
       />
     </section>
   );

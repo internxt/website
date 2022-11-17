@@ -2,7 +2,6 @@ import { ArrowsClockwise, ClockCounterClockwise, CloudCheck, Fingerprint, Gift, 
 import React from 'react';
 import styles from '../black-friday/BF-HeroSection.module.scss';
 import { useRouter } from 'next/router';
-import { LanguageServiceMode } from 'typescript';
 
 const cardsTitles = {
   en: {

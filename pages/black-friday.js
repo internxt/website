@@ -45,6 +45,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <Navbar
         lang={deviceLang}
+        isBlackFriday={true}
         textContent={navbarLang}
         coupon={couponCode}
         hideLogin={true}
