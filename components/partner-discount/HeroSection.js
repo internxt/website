@@ -60,8 +60,8 @@ const HeroSection = ({ textContent, isTechradar }) => {
       {isTechradar ? (
         <>
           <section className=" partnerHeroSection overflow-hidden">
-            <div className="mt-[77px] mb-20 flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-between xl:mx-32">
-              <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:max-w-[456px] lg:items-start lg:text-start">
+            <div className="mt-[77px] mb-20 flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-evenly xl:mx-32">
+              <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:mr-52 lg:max-w-[456px]  lg:items-start lg:text-start">
                 <div>
                   <h1 className=" text-6xl font-semibold">{textContent.title1.line1}</h1>
                   <p className="pt-2 text-3xl font-semibold">{textContent.title1.line2}</p>
@@ -116,8 +116,8 @@ const HeroSection = ({ textContent, isTechradar }) => {
         </>
       ) : (
         <section className=" partnerHeroSection overflow-hidden">
-          <div className="mt-[77px] mb-20 flex flex-col justify-center lg:flex-row lg:justify-between">
-            <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
+          <div className="mt-[77px] mb-20 flex flex-col justify-center lg:flex-row lg:justify-between 2xl:justify-evenly">
+            <div className="mx-20 mb-6 flex w-auto flex-col lg:hidden">
               <img
                 loading="lazy"
                 src="/images/home/devicesMobileView.webp"
@@ -125,7 +125,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
                 alt="laptop and phone with Internxt app"
               />
             </div>
-            <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:ml-10 lg:max-w-[456px] lg:items-start lg:text-start xl:ml-32 2xl:ml-80">
+            <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:ml-32 lg:max-w-[456px] lg:items-start lg:text-start 2xl:ml-20">
               <h1 className=" text-6xl font-semibold">{textContent.title}</h1>
               <p className=" text-2xl font-normal">
                 {subtitle1Partner}
@@ -146,12 +146,11 @@ const HeroSection = ({ textContent, isTechradar }) => {
                 </a>
               </div>
             </div>
-            <div className="hidden flex-col pl-32 pt-8 lg:flex lg:pt-0">
-              <img
-                src="/images/partners-discount/partners-image.png"
-                alt="Laptop and smartphone image"
-                className="max-w-[679px]"
-              />
+            <div className="hidden max-w-[679px] flex-col pl-32 pt-8 lg:flex lg:pt-0 2xl:hidden">
+              <img src="/images/partners-discount/partners-image.png" alt="Devices image" className="" />
+            </div>
+            <div className="hidden 2xl:flex">
+              <img src="/images/home/devicesDesc.png" alt="Devices image" />
             </div>
           </div>
           <ShowSnackbar open={open} />

@@ -28,7 +28,7 @@ const SuiteSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <div className="flex flex-col items-center space-y-20 p-10 px-2 sm:p-20">
         <p className="text-center text-4xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
-        <div className="grid grid-cols-1 justify-items-center gap-x-80 gap-y-20 md:grid-cols-2">
+        <div className="grid grid-cols-1 justify-items-center gap-x-40 gap-y-20 md:grid-cols-2">
           {suiteCards.map((card, index) => (
             <div key={index} className="flex w-72 flex-col space-y-4 px-2 sm:w-96">
               <img src={card.img} width={32} height={32} />
