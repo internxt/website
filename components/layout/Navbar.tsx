@@ -22,6 +22,7 @@ export interface NavbarProps {
   hide?: boolean;
   coupon?: string;
   isLinksHidden?: boolean;
+  isBlackfriday?: boolean;
 }
 
 export default function Navbar(props: NavbarProps) {
@@ -191,7 +192,7 @@ export default function Navbar(props: NavbarProps) {
 
   return (
     <div
-      className={`${props.hide ? 'hidden' : ''} section flex items-center ${
+      className={`${props.hide ? 'hidden' : ''} flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
       } h-16 w-full bg-white transition-all duration-100 ${
         props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'

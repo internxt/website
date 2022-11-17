@@ -1,5 +1,6 @@
-import { Alarm, Check, CircleWavyCheck, Clock } from 'phosphor-react';
-import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Alarm, CircleWavyCheck } from 'phosphor-react';
+import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 import Countdown from './components/Countdown';
@@ -48,7 +49,10 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
       <div className="relative flex items-center justify-center overflow-hidden">
         <div className="flex w-full max-w-screen-xl flex-col items-center justify-center py-16 sm:mb-6 md:flex-row lg:mx-32">
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
-            <div className="flex flex-row pb-6">
+            <Link href="/" passHref>
+              <img src="./../logos/internxt/white.svg" className="-mt-5 cursor-pointer" />
+            </Link>
+            <div className="flex flex-row pb-6 pt-16">
               <Alarm size={32} className="mr-4 text-primary" />
               <Countdown />
             </div>

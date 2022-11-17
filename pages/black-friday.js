@@ -19,15 +19,13 @@ const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, bannerJson, navbarLang }) => {
+const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
   const { coupon } = router.query;
   const isAffiliate = coupon === BLACK_FRIDAY_AFFILIATES_COUPON_ID ? true : false;
-
   const couponCode = coupon ? coupon : BLACK_FRIDAY_COUPON_ID;
-
   async function getCountryCode() {
     const options = {
       method: 'GET',
@@ -44,14 +42,10 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, bannerJ
   });
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      bannerLang={bannerJson}
-      segmentName="Black Friday"
-    >
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <Navbar
         lang={deviceLang}
+        isBlackFriday={true}
         textContent={navbarLang}
         coupon={couponCode}
         hideLogin={true}
@@ -59,7 +53,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, bannerJ
         isLinksHidden
         darkMode={true}
       />
-      <LoginBanner bannerJson={bannerJson} />
+      <LoginBanner />
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />
 
@@ -90,7 +84,6 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
-  const bannerJson = require(`../assets/lang/en/banners.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
   cookies.setReferralCookie(ctx);
@@ -100,7 +93,6 @@ export async function getServerSideProps(ctx) {
       lang,
       deviceLang,
       metatagsDescriptions,
-      bannerJson,
       navbarLang,
       langJson,
     },
