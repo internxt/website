@@ -70,18 +70,18 @@ const BFBanner = () => {
         <div
           className={`${
             hideBanner ? 'hidden' : 'flex'
-          } fixed top-1/2 left-1/2 h-auto -translate-y-[50%] -translate-x-[50%] overflow-hidden rounded-2xl`}
+          } fixed top-1/2 left-1/2 h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl`}
         >
-          <button className="absolute right-0 m-7 flex text-white" onClick={handleClose}>
+          <button className="absolute  right-0 m-7 flex text-white" onClick={handleClose}>
             <X size={32} />
           </button>
-          <div className="flex w-auto flex-col p-20 md:flex-row">
-            <div className="flex flex-col items-center justify-center text-center md:items-start md:justify-between md:pr-20 md:text-start">
-              <div className="flex w-72 flex-col">
+          <div className="flex w-auto flex-col p-14 lg:flex-row lg:p-20">
+            <div className="flex flex-col items-center justify-center text-center lg:items-start lg:justify-between lg:pr-20 lg:text-start">
+              <div className="flex flex-col lg:w-72">
                 <p className="text-3xl font-semibold text-white">{BFBannerText[lang].head}</p>
                 <p className="pt-5 text-5xl font-bold text-white">{BFBannerText[lang].title}</p>
               </div>
-              <div className="flex pt-7 md:pt-10">
+              <div className="flex pt-7 lg:pt-10">
                 <button
                   className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                   onClick={() => {
@@ -92,7 +92,7 @@ const BFBanner = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden items-center md:flex">
+            <div className="hidden items-center lg:flex">
               <div className="flex w-[340px] flex-col">
                 <div className="flex flex-col">
                   {cards.map((card, index) => (
@@ -106,7 +106,7 @@ const BFBanner = () => {
             </div>
           </div>
           <div
-            className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.neonBlur} pointer-events-none origin-center`}
+            className={`absolute top-0 left-0 -z-10 flex h-full w-full px-5 ${styles.neonBlur} pointer-events-none origin-center`}
           />
         </div>
       </div>
