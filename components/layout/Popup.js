@@ -25,9 +25,9 @@ const Popup = () => {
     if (hidePopup === 'true') {
       setHidePopup(true);
     }
-    ['beforeunload', 'CloseSquare'].forEach((event) => {
+    ['unload', 'CloseSquare'].forEach((event) => {
       window.addEventListener(event, function (e) {
-        if (event === 'beforeunload') {
+        if (event === 'unload') {
           e.preventDefault();
           localStorage.removeItem('hidePopup');
         } else {
@@ -37,7 +37,7 @@ const Popup = () => {
       });
     });
     return () => {
-      ['beforeunload', 'CloseSquare'].forEach((event) => {
+      ['unload', 'CloseSquare'].forEach((event) => {
         window.removeEventListener(event, () => {});
       });
     };
