@@ -51,12 +51,12 @@ const BFBanner = () => {
     if (hideBanner === 'true') {
       setHideBanner(true);
     }
-    window.addEventListener('beforeunload', function (e) {
+    window.addEventListener('unload', function (e) {
       e.preventDefault();
       localStorage.removeItem('hideLoginBanner');
     });
     return () => {
-      window.removeEventListener('beforeunload', () => {});
+      window.removeEventListener('unload', () => {});
     };
   }, []);
 
