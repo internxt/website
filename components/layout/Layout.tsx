@@ -13,6 +13,7 @@ interface LayoutProps {
   disableMailerlite?: boolean;
   disableDrift?: boolean;
   isProduction?: boolean;
+  imgLink?: string;
   lang?: string;
 }
 
@@ -23,6 +24,7 @@ export default function Layout({
   segmentName = null,
   disableMailerlite = false,
   disableDrift = true,
+  imgLink,
   isProduction = process.env.NODE_ENV === 'production',
   lang,
 }: // lang
@@ -43,8 +45,10 @@ LayoutProps) {
         <title>{title}</title>
         <link rel="alternate" hrefLang="en" href={`https://internxt.com/${pageURL}`} />
         <link rel="alternate" hrefLang="es" href={`https://internxt.com/es/${pageURL}`} />
+        <link rel="alternate" hrefLang="fr" href={`https://internxt.com/fr/${pageURL}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
+        {imgLink && <meta property="og:image" content={imgLink} />}
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
