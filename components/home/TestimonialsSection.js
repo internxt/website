@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CaretLeft, CaretRight } from 'phosphor-react';
+import Link from 'next/link';
 
 const TestimonialsSection = ({ textContent }) => {
   const data = textContent.cards;
@@ -30,18 +31,19 @@ const TestimonialsSection = ({ textContent }) => {
 
   return (
     <section className="bg-gray-1 pb-20 pt-16">
-      <div className="flex items-center justify-center pb-[70px]">
-        <p className="text-center text-5xl font-semibold">{textContent.title}</p>
+      <div className="flex items-center justify-center p-6 pb-[70px]">
+        <p className="mb-6 text-center text-4xl font-medium sm:text-5xl">{textContent.title}</p>
       </div>
+      {/* Web View */}
       <div className="hidden w-full flex-row items-center justify-center space-x-12 xl:flex">
-        <div className="relative flex h-full flex-1 flex-row justify-end space-x-10 overflow-hidden">
+        <div className="relative flex h-full flex-1 flex-row items-center justify-end space-x-10 overflow-hidden">
           {beforeIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-2xl bg-white p-10 opacity-40 drop-shadow-md"
+              className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" sizes="52.16 48" />
+                <img src="/images/home/testimonials/Comas.svg" />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   <p className="text-lg font-light text-gray-50">{card.enterprise}</p>
@@ -50,7 +52,7 @@ const TestimonialsSection = ({ textContent }) => {
               <p className="pt-9 text-lg font-normal">{card.review}</p>
             </div>
           ))}
-          <div className="absolute top-1/2 bottom-1/2 flex">
+          <div className="absolute flex">
             <button
               className="z-10 hidden h-10 w-10 items-center justify-center rounded-full bg-primary bg-opacity-40  text-3xl text-white drop-shadow-lg hover:bg-opacity-100 xl:flex"
               onClick={onPrev}
@@ -63,21 +65,27 @@ const TestimonialsSection = ({ textContent }) => {
           {current.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-2xl bg-white p-10 drop-shadow-lg"
+              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" sizes="52.16 48" />
+                <img src="/images/home/testimonials/Comas.svg" />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
-                  <p className="text-lg font-light text-gray-50">{card.enterprise}</p>
+                  {card.name.includes('Eva') ? (
+                    <Link href={'https://fixthephoto.com/internxt-review.html'}>
+                      <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
+                    </Link>
+                  ) : (
+                    <p className="text-lg font-normal text-gray-50">{card.enterprise}</p>
+                  )}
                 </div>
               </div>
               <p className="pt-9 text-lg font-normal">{card.review}</p>
             </div>
           ))}
         </div>
-        <div className="relative flex h-full flex-1 flex-row justify-start space-x-10 overflow-hidden">
-          <div className="absolute top-1/2 bottom-1/2 ml-5 flex">
+        <div className="relative flex h-full flex-1 flex-row items-center justify-start space-x-10 overflow-hidden">
+          <div className="absolute ml-5 flex">
             <button
               className="z-10 hidden h-10 w-10 items-center justify-center rounded-full bg-primary bg-opacity-50 text-3xl text-white drop-shadow-lg hover:bg-opacity-100 xl:flex"
               onClick={onNext}
@@ -88,10 +96,10 @@ const TestimonialsSection = ({ textContent }) => {
           {afterIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-2xl bg-white p-10 opacity-40 drop-shadow-md"
+              className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" sizes="52.16 48" />
+                <img src="/images/home/testimonials/Comas.svg" />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   <p className="text-lg font-light text-gray-50">{card.enterprise}</p>
@@ -102,22 +110,30 @@ const TestimonialsSection = ({ textContent }) => {
           ))}
         </div>
       </div>
-      {/*Mobile View*/}
-      <div className="flex snap-x snap-mandatory flex-row overflow-scroll px-5 pb-3 xl:hidden">
-        <div className="flex space-x-10">
+
+      {/*Mobile/Tablet View*/}
+      <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-6 xl:hidden">
+        <div className="flex justify-center">
           {textContent.cards.map((card, index) => (
-            <div
-              key={index}
-              className="z-10 flex max-h-[339px] max-w-[380px] shrink-0 snap-center flex-col rounded-2xl bg-white p-10  px-10 drop-shadow-lg"
-            >
-              <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" sizes="52.16 48" />
-                <div className="flex flex-col pl-4">
-                  <p className="text-xl font-semibold">{card.name}</p>
-                  <p className="text-lg font-light text-gray-50">{card.enterprise}</p>
+            <div className="flex w-screen px-6">
+              <div key={index} className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
+                <div className="flex w-auto max-w-[300px] flex-col">
+                  <div className="flex w-[331px] flex-row">
+                    <img src="/images/home/testimonials/Comas.svg" />
+                    <div className="flex flex-col pl-4">
+                      <p className="text-xl font-semibold">{card.name}</p>
+                      {card.name.includes('Eva') ? (
+                        <Link href={'https://fixthephoto.com/internxt-review.html'}>
+                          <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
+                        </Link>
+                      ) : (
+                        <p className="text-lg font-normal text-gray-50">{card.enterprise}</p>
+                      )}
+                    </div>
+                  </div>
+                  <p className="pt-9 text-lg font-normal">{card.review}</p>
                 </div>
               </div>
-              <p className="pt-9 text-lg font-normal">{card.review}</p>
             </div>
           ))}
         </div>
