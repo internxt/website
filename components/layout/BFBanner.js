@@ -14,7 +14,6 @@ const BFBanner = () => {
   setTimeout(() => {
     if (router.pathname !== '/black-friday') {
       setShowBanner(true);
-      window.dispatchEvent(new Event('CloseSquare'));
     }
   }, 20000);
 
@@ -24,6 +23,9 @@ const BFBanner = () => {
   };
 
   React.useEffect(() => {
+    if (showBanner) {
+      window.dispatchEvent(new Event('CloseSquare'));
+    }
     const hideBanner = localStorage.getItem('hideBanner');
     if (hideBanner === 'true') {
       setHideBanner(true);
@@ -35,7 +37,7 @@ const BFBanner = () => {
     return () => {
       window.removeEventListener('unload', () => {});
     };
-  }, []);
+  }, [showBanner]);
 
   const cards = [
     {
@@ -72,7 +74,7 @@ const BFBanner = () => {
             hideBanner ? 'hidden' : 'flex'
           } fixed top-1/2 left-1/2 h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl`}
         >
-          <button className="absolute  right-0 m-7 flex text-white" onClick={handleClose}>
+          <button className="absolute right-0 m-7 flex text-white" onClick={handleClose}>
             <X size={32} />
           </button>
           <div className="flex w-auto flex-col p-14 lg:flex-row lg:p-20">

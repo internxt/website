@@ -72,70 +72,10 @@
     }
   },
   "InvestorsSection": {
-    "title": "Confían en nosotros",
-    "subtitle": {
-      "line1": "Nuestros inversores y patrocinadores confían tanto en",
-      "line2": "nosotros que hemos crecido un 1400% el primer año."
-    },
-    "title2": "Qué piénsan nuestros usuarios",
-    "testimonialFrom": "Reseña de",
-    "testimonials": [
-      {
-        "quote": "Internxt es un cómodo servicio de almacenamiento en la nube para clientes con presupuesto limitado. Cuenta con una interfaz optimizada y un equipo de asistencia fiable, lo que lo convierte en una gran opción para quienes necesitan almacenar sus archivos de forma segura.",
-        "photo": "22788963.jpg",
-        "name": "Eva Wiliams",
-        "title": "Fotógrafa y periodista de software en FixThePhoto.com",
-        "url": "http://fixthephoto.com/",
-        "source": "FixThePhoto.com"
-      },
-      {
-        "quote": "Llevo varios años utilizando Google Drive, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google y otras plataformas conocidas no pueden hacer. Por eso me he pasado a Internxt. Por ahora, todas mis dudas han sido resueltas en pocos minutos, y me gusta saber que siempre hay alguien dispuesto a ayudarme.",
-        "photo": "89039475.jpg",
-        "name": "Josep Carrizo",
-        "title": "Usuario de Trustpilot",
-        "url": "https://www.trustpilot.com/users/620109fdeb4e5a00120ccf23",
-        "source": "Trustpilot"
-      },
-      {
-        "quote": "Un enfoque bastante nuevo para el almacenamiento en la nube. Utiliza técnicas sólidas para almacenar tus datos a los que solo puedes acceder tú y admite 2FA. Con este servicio no necesitas herramientas para encriptar tus datos antes de subirlos. Es lógico que la subida de datos lleve algún tiempo. Dicho esto, es un gran servicio.",
-        "name": "Eric",
-        "title": "Usuario de Trustpilot",
-        "url": "https://www.trustpilot.com/reviews/6289deaf4b16276ac98cb377",
-        "source": "Trustpilot"
-      },
-      {
-        "quote": "Excelente velocidad de subida. Muy buena aplicación móvil. Muy buenas características de seguridad.",
-        "name": "Sunil T.",
-        "title": "Usuario de Trustpilot",
-        "url": "https://www.trustpilot.com/users/628cd38ca677f30012ec6f80",
-        "source": "Trustpilot"
-      },
-      {
-        "quote": "Me encanta el hecho de que por fin tengamos un software de almacenamiento en la nube descentralizado y asequible que, además, tiene un aspecto muy atractivo y es fácil de usar.",
-        "name": "Luca C.",
-        "title": "Usuario de GetApp",
-        "url": "https://www.getapp.com/collaboration-software/a/internxt-drive/reviews/fdc005779c/",
-        "source": "GetApp"
-      },
-      {
-        "quote": "Me encanta que mis archivos estén encriptados de inmediato y que la empresa no pueda acceder a los archivos. Dropbox y Drive escanean los archivos y detectan cualquier contenido potencialmente protegido por derechos de autor; el problema es que a menudo utilizo el contenido con fines documentales o de proyección, no comerciales, así que sé que Internxt no borrará mis archivos ya que no escanea el contenido. Internxt almacena los fragmentos de archivos en 8 ubicaciones diferentes - por lo que si uno, dos o incluso 4 servidores distribuidos se caen, mi contenido sigue siendo seguro ya que está descentralizado de forma segura.",
-        "name": "Anónimo",
-        "title": "Usuario en la producción de medios de comunicación - Pequeña empresa",
-        "url": "https://www.g2.com/products/internxt-drive/reviews/internxt-drive-review-5268828",
-        "source": "G2"
-      },
-      {
-        "quote": "Me gusta mucho Internxt Drive. Esta nube descentralizada sube los archivos rapidamente, puedes modificar tus archivos con colores o vectores, y es fácil organizarlos. Empecé con el plan gratuito pero ahora tengo el plan de 200GB que cuesta menos que un desayuno al mes!",
-        "photo": "60518239.webp",
-        "name": "Annie Bridge",
-        "title": "Usuario de AlternativeTo",
-        "url": "https://alternativeto.net/software/x-cloud/about/#app-comment-90438",
-        "source": "AlternativeTo"
-      }
-    ]
+    "title": "Confían en nosotros"
   },
   "GetStartedSection": {
-    "title": { "line1": "Empieza ahora y", "line2": "consige hasta 10GB gratis" },
+    "title": { "line1": "Empieza ahora y", "line2": "consigue hasta 10GB gratis" },
     "subtitle": {
       "line1": "Nuestros clientes están muy contentos con Internxt Drive, pero",
       "line2": "lo están aún más sabiendo que es totalmente privado."
