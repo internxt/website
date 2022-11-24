@@ -72,67 +72,7 @@
     }
   },
   "InvestorsSection": {
-    "title": "Ils nous font confiance",
-    "subtitle": {
-      "line1": "Les marques et les investisseurs nous font tellement confiance que",
-      "line2": "nous avons levé plus de 1M en 2 ans."
-    },
-    "title2": "Ce que les utilisateurs disent de nous",
-    "testimonialFrom": "Avis de",
-    "testimonials": [
-      {
-        "quote": "Internxt est un service de stockage en nuage pratique pour les clients soucieux de leur budget. Il dispose d'une interface simplifiée et d'une équipe d'assistance fiable, ce qui en fait une excellente option pour ceux qui ont besoin de stocker leurs fichiers en toute sécurité",
-        "photo": "22788963.jpg",
-        "name": "Eva Wiliams",
-        "title": "Photographe et journaliste logiciel chez FixThePhoto.com",
-        "url": "http://fixthephoto.com/",
-        "source": "FixThePhoto.com"
-      },
-      {
-        "quote": "J'utilise Google Drive depuis plusieurs années, mais j'avais besoin d'une alternative qui me garantisse la confidentialité de mes données. Quelque chose que Google ou d'autres plates-formes bien connues ne peuvent pas faire. C'est pourquoi j'ai déménagé chez Internxt. Pour l'instant, tous mes doutes et questions ont été répondus en quelques minutes, et j'aime savoir qu'il y a toujours quelqu'un qui est prêt à m'aider.",
-        "photo": "89039475.jpg",
-        "name": "Josep Carrizo",
-        "title": "Utilisateur de Trustpilot",
-        "url": "https://www.trustpilot.com/users/620109fdeb4e5a00120ccf23",
-        "source": "Trustpilot"
-      },
-      {
-        "quote": "Une approche assez nouvelle du stockage en nuage. Il utilise des techniques solides pour stocker vos données auxquelles vous seul pouvez accéder et il prend en charge 2FA. Vous n'avez donc pas besoin d'outils pour chiffrer vos données avant de les télécharger. Il est logique que le téléchargement prenne un certain temps. Cela dit c'est un super service..",
-        "name": "Eric",
-        "title": "Utilisateur de Trustpilot",
-        "url": "https://www.trustpilot.com/reviews/6289deaf4b16276ac98cb377",
-        "source": "Trustpilot"
-      },
-      {
-        "quote": "Excellente vitesse de téléchargement. Très belle application mobile. Très bonnes fonctionnalités de sécurité. Espace libre généreux.",
-        "name": "Sunil T.",
-        "title": "Utilisateur de Trustpilot",
-        "url": "https://www.trustpilot.com/users/628cd38ca677f30012ec6f80",
-        "source": "Trustpilot"
-      },
-      {
-        "quote": "L'avenir du stockage en nuage. Avantages: J'adore le fait que nous ayons enfin un logiciel de stockage cloud décentralisé abordable qui a également un look très cool et qui est convivial.",
-        "name": "Luca C.",
-        "title": "Utilisateur de GetApp",
-        "url": "https://www.getapp.com/collaboration-software/a/internxt-drive/reviews/fdc005779c/",
-        "source": "GetApp"
-      },
-      {
-        "quote": "J'aime le fait que a) mes fichiers soient cryptés immédiatement et que l'entreprise ne puisse pas réellement accéder aux fichiers. Dropbox & Drive analysent toujours les fichiers [...] Je sais qu'Internxt ne supprimera pas mes fichiers car ils n'analysent pas le contenu. Et b) Internxt stocke les fragments de fichiers dans 8 emplacements différents - donc si un, deux ou même 4 serveurs distribués tombent en panne, mon contenu est toujours en sécurité car il est décentralisé en privé.",
-        "name": "Anonymous",
-        "title": "User in Media Production - Small-Business",
-        "url": "https://www.g2.com/products/internxt-drive/reviews/internxt-drive-review-5268828",
-        "source": "G2"
-      },
-      {
-        "quote": "J'aime beaucoup Internxt Drive. Ce cloud décentralisé télécharge rapidement les fichiers, vous pouvez modifier vos fichiers (couleurs, vecteurs), les rendant plus faciles à organiser que les autres. J'ai commencé avec leur forfait gratuit, mais maintenant j'ai le forfait de 200 Go pour moins d'un petit-déjeuner par mois.",
-        "photo": "60518239.webp",
-        "name": "Annie Bridge",
-        "title": "Utilisateur de AlternativeTo",
-        "url": "https://alternativeto.net/software/x-cloud/about/#app-comment-90438",
-        "source": "AlternativeTo"
-      }
-    ]
+    "title": "Ils nous font confiance"
   },
   "GetStartedSection": {
     "title": { "line1": "Commencez maintenant et", "line2": "obtenez jusqu'à 10 Go gratuits" },
