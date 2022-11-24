@@ -26,7 +26,7 @@ const BFBanner = () => {
     if (showBanner) {
       window.dispatchEvent(new Event('CloseSquare'));
     }
-    if (hideBanner) {
+    if (Boolean(hideBanner)) {
       setShowBanner(false);
     }
     window.addEventListener('unload', function (e) {
