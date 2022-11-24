@@ -10,9 +10,15 @@ import FeaturesSection from '../components/home/FeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
-import TestimonialsSection from '../components/home/TestimonialsSection';
 
-const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
+const Home = ({
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+  downloadURL
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const [downloadUrl, setDownloadUrl] = useState(null);
 
@@ -38,23 +44,45 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
   }, [downloadURL]);
 
   return (
+
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} download={downloadUrl} lang={lang} />
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['default']}
+        fixed
+      />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        download={downloadUrl}
+        lang={lang}
+      />
 
-      <TestimonialsSection textContent={langJson.TestimonialsSection} />
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        lang={lang}
+      />
 
-      <SocialProofSection textContent={langJson.InvestorsSection} />
+      <SocialProofSection
+        textContent={langJson.InvestorsSection}
+      />
 
       <div className="getStartedSection">
-        <GetStartedSection textContent={langJson.GetStartedSection} lang={lang} />
+        <GetStartedSection
+          textContent={langJson.GetStartedSection}
+          lang={lang}
+        />
       </div>
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer
+        textContent={footerLang}
+        lang={lang}
+      />
+
     </Layout>
+
   );
 };
 
