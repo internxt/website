@@ -38,6 +38,7 @@ const BFBanner = () => {
 
   setTimeout(() => {
     setShowBanner(true);
+    window.dispatchEvent(new Event('CloseSquare'));
   }, 300000);
 
   const handleClose = () => {
@@ -46,9 +47,6 @@ const BFBanner = () => {
   };
 
   React.useEffect(() => {
-    if (showBanner) {
-      window.dispatchEvent(new Event('CloseSquare'));
-    }
     const hideBanner = localStorage.getItem('hideLoginBanner');
     if (hideBanner === 'true') {
       setHideBanner(true);
@@ -60,7 +58,7 @@ const BFBanner = () => {
     return () => {
       window.removeEventListener('unload', () => {});
     };
-  }, [showBanner]);
+  }, []);
 
   const cards = [
     {
