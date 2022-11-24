@@ -6,7 +6,6 @@ import { buttonDeal, buttonLink } from '../TextWithoutJson';
 import { BFBannerText } from '../TextWithoutJson';
 
 const BFBanner = () => {
-  const [hideBanner, setHideBanner] = React.useState(false);
   const [showBanner, setShowBanner] = React.useState(false);
   const router = useRouter();
   const lang = router.locale;
@@ -14,19 +13,21 @@ const BFBanner = () => {
   setTimeout(() => {
     if (router.pathname !== '/black-friday') {
       setShowBanner(true);
-      window.dispatchEvent(new Event('CloseSquare'));
     }
   }, 20000);
 
   const handleClose = () => {
-    localStorage.setItem('hideBanner', true);
-    setHideBanner(true);
+    localStorage.setItem('hideBanner', false);
+    setShowBanner(false);
   };
 
   React.useEffect(() => {
     const hideBanner = localStorage.getItem('hideBanner');
-    if (hideBanner === 'true') {
-      setHideBanner(true);
+    if (showBanner) {
+      window.dispatchEvent(new Event('CloseSquare'));
+    }
+    if (Boolean(hideBanner)) {
+      setShowBanner(false);
     }
     window.addEventListener('unload', function (e) {
       e.preventDefault();
@@ -35,7 +36,7 @@ const BFBanner = () => {
     return () => {
       window.removeEventListener('unload', () => {});
     };
-  }, []);
+  }, [showBanner]);
 
   const cards = [
     {
@@ -61,16 +62,10 @@ const BFBanner = () => {
   return (
     showBanner && (
       //Background
-      <div
-        className={`${
-          !hideBanner ? 'flex' : 'hidden'
-        }  fixed top-0 left-0 right-0 bottom-0 z-50 bg-black bg-opacity-50`}
-      >
+      <div className={`fixed top-0 left-0 right-0 bottom-0 z-50 flex bg-black bg-opacity-50`}>
         {/* Banner */}
         <div
-          className={`${
-            hideBanner ? 'hidden' : 'flex'
-          } fixed top-1/2 left-1/2 h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl`}
+          className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl`}
         >
           <button className="absolute  right-0 m-7 flex text-white" onClick={handleClose}>
             <X size={32} />

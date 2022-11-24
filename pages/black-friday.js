@@ -19,7 +19,7 @@ const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang }) => {
+const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang, host }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
@@ -39,6 +39,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
     getCountryCode().then((res) => {
       setCountry(res.data.country);
     });
+    console.log(host);
   });
 
   return (
@@ -46,7 +47,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
       title={metatags[0].title}
       description={metatags[0].description}
       segmentName="Black Friday"
-      imgLink="./images/special-offer/black-friday/imgLink.png"
+      imgLink={`${host}/images/special-offer/black-friday/imgLink.png`}
     >
       <Navbar
         lang={deviceLang}
@@ -86,6 +87,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
+  const host = ctx.req.headers.host;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/black-friday.json`);
@@ -100,6 +102,7 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       navbarLang,
       langJson,
+      host,
     },
   };
 }
