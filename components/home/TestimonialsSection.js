@@ -8,10 +8,7 @@ const TestimonialsSection = ({ textContent }) => {
 
   const beforeIndex =
     currentIndex !== 0 ? textContent.cards.slice(0, currentIndex) : textContent.cards.slice(4, data.length);
-  const current =
-    // currentIndex === 5
-    //   ? textContent.cards.slice(currentIndex, 0)
-    textContent.cards.slice(currentIndex, currentIndex + 2);
+  const current = textContent.cards.slice(currentIndex, currentIndex + 2);
   const afterIndex =
     currentIndex !== 4 ? textContent.cards.slice(currentIndex + 2, data.length) : textContent.cards.slice(0, 2);
 
