@@ -72,68 +72,44 @@
     }
   },
   "InvestorsSection": {
-    "title": "Brands that trust us",
-    "subtitle": {
-      "line1": "Brands and investors trust us so strongly that",
-      "line2": "we raised more than 1M in 2 years."
-    },
-    "title2": "What users say about us",
-    "testimonialFrom": "Review from",
-    "testimonials": [
+    "title": "Brands that trust us"
+  },
+  "TestimonialsSection": {
+    "title": "Honest reviews from our users",
+    "cards": [
       {
-        "quote": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.",
-        "photo": "22788963.jpg",
-        "name": "Eva Wiliams",
-        "title": "Photographer and software journalist at FixThePhoto.com",
-        "url": "http://fixthephoto.com/",
-        "source": "FixThePhoto.com"
+        "name": "Eva W.",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
       },
       {
-        "quote": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt. For now, all my doubts and questions have been answered in a few minutes, and I love knowing that there's always someone who is willing to help me.",
-        "photo": "89039475.jpg",
-        "name": "Josep Carrizo",
-        "title": "User of Trustpilot",
-        "url": "https://www.trustpilot.com/users/620109fdeb4e5a00120ccf23",
-        "source": "Trustpilot"
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
       },
       {
-        "quote": "A fairly new approach to cloud storage. It uses solid techniques to store your data that can only be accessed by you and it supports 2FA. So you do not need tools to encrypt your data before uploading. It makes sense that uploading will take some time. That said it is a great service..",
-        "name": "Eric",
-        "title": "User of Trustpilot",
-        "url": "https://www.trustpilot.com/reviews/6289deaf4b16276ac98cb377",
-        "source": "Trustpilot"
+        "name": "Josep C.",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
       },
       {
-        "quote": "Excellent upload speed. Very nice mobile app. Very good security features. Generous free space.",
-        "name": "Sunil T.",
-        "title": "User of Trustpilot",
-        "url": "https://www.trustpilot.com/users/628cd38ca677f30012ec6f80",
-        "source": "Trustpilot"
+        "name": "Pat G.",
+        "enterprise": "Review from Capterra",
+        "review": "I am storing files for a non-profit organization and working with Internxt was marvelous! This drive was very easy to use. I didn't have to do anything but upload and download. The program and drive did the rest!"
       },
       {
-        "quote": "The Future of Cloud Storage. Pros: Love the fact that finally we have an affordable decentralised cloud storage software that also has a very cool look and is user-friendly.",
         "name": "Luca C.",
-        "title": "User of GetApp",
-        "url": "https://www.getapp.com/collaboration-software/a/internxt-drive/reviews/fdc005779c/",
-        "source": "GetApp"
+        "enterprise": "Review from GetApp",
+        "review": "The future of cloud storage! Love the fact that finally we have an affordable encrypted and secure cloud storage software that also has a very cool look and is user-friendly."
       },
       {
-        "quote": "I love that a) my files are encrypted right away, and that the company can't actually access the files. Dropbox & Drive still scan the files [...] I know that Internxt won't delete my files since they don't scan the content. And b) Internxt stores the files shards in 8 different locations - so if one, two or even 4 distributed servers go down, my content is still safe as it's decentralized privately.",
-        "name": "Anonymous",
-        "title": "User in Media Production - Small-Business",
-        "url": "https://www.g2.com/products/internxt-drive/reviews/internxt-drive-review-5268828",
-        "source": "G2"
-      },
-      {
-        "quote": "I really like Internxt Drive. This decentralized cloud uploads files quickly, you can modify your files (colors, vectors), making them easier to organize than others. I started with their free plan but now I have the 200GB plan for less than a breakfast per month.",
-        "photo": "60518239.webp",
-        "name": "Annie Bridge",
-        "title": "User of AlternativeTo",
-        "url": "https://alternativeto.net/software/x-cloud/about/#app-comment-90438",
-        "source": "AlternativeTo"
+        "name": "Binet S.",
+        "enterprise": "Review from Trustpilot",
+        "review": "Fast, reliable, and inexpensive - best components of any product! The ample storage space is definitely appreciated! I have enough of space to save all of my photos and files. I also like how simple it is to share files."
       }
     ]
   },
+
   "GetStartedSection": {
     "title": { "line1": "Get started and", "line2": "get up to 10GB for free" },
     "subtitle": {

@@ -14,7 +14,6 @@ const BFBanner = () => {
   setTimeout(() => {
     if (router.pathname !== '/black-friday') {
       setShowBanner(true);
-      window.dispatchEvent(new Event('CloseSquare'));
     }
   }, 20000);
 
@@ -25,6 +24,9 @@ const BFBanner = () => {
 
   React.useEffect(() => {
     const hideBanner = localStorage.getItem('hideBanner');
+    if (showBanner) {
+      window.dispatchEvent(new Event('CloseSquare'));
+    }
     if (hideBanner === 'true') {
       setHideBanner(true);
     }
@@ -35,7 +37,7 @@ const BFBanner = () => {
     return () => {
       window.removeEventListener('unload', () => {});
     };
-  }, []);
+  }, [showBanner]);
 
   const cards = [
     {
