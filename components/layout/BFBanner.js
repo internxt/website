@@ -17,7 +17,7 @@ const BFBanner = () => {
   }, 20000);
 
   const handleClose = () => {
-    localStorage.setItem('hideBanner', false);
+    localStorage.setItem('hideBanner', true);
     setShowBanner(false);
   };
 
