@@ -47,9 +47,6 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
   return (
     <>
-      <Head>
-        <meta property="og:image" content={imgLink} />
-      </Head>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
         <Navbar
           lang={deviceLang}
