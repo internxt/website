@@ -16,7 +16,6 @@ import TestimonialsSection from '../components/black-friday/TestimonialsSection'
 import FaqSection from '../components/black-friday/FAQSection';
 import FooterSection from '../components/black-friday/FooterSection';
 import LoginBanner from '../components/layout/LoginBanner';
-import imgLink from '/images/special-offer/black-friday/imgLink.png';
 
 const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
