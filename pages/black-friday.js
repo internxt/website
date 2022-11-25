@@ -45,44 +45,44 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
   });
 
   return (
-    <>
-      <Head>
-        <meta property="og:image" content={imgLink} />
-      </Head>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
-        <Navbar
-          lang={deviceLang}
-          isBlackFriday={true}
-          textContent={navbarLang}
-          coupon={couponCode}
-          hideLogin={true}
-          cta={['Hide Login']}
-          isLinksHidden
-          darkMode={true}
-        />
-        <LoginBanner />
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="Black Friday"
+      imgLink={`${host}/images/special-offer/black-friday/imgLink.png`}
+    >
+      <Navbar
+        lang={deviceLang}
+        isBlackFriday={true}
+        textContent={navbarLang}
+        coupon={couponCode}
+        hideLogin={true}
+        cta={['Hide Login']}
+        isLinksHidden
+        darkMode={true}
+      />
+      <LoginBanner />
 
-        <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />
+      <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />
 
-        <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
+      <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
 
-        <SuiteSection textContent={langJson.blackFriday} />
+      <SuiteSection textContent={langJson.blackFriday} />
 
-        <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
+      <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
 
-        <FeatureSection textContent={langJson.blackFriday} />
+      <FeatureSection textContent={langJson.blackFriday} />
 
-        <PlatformSection textContent={langJson.blackFriday} />
+      <PlatformSection textContent={langJson.blackFriday} />
 
-        <TestimonialsSection textContent={langJson.blackFriday} lang={lang} />
+      <TestimonialsSection textContent={langJson.blackFriday} lang={lang} />
 
-        <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
+      <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
 
-        <FaqSection textContent={langJson.blackFriday} />
+      <FaqSection textContent={langJson.blackFriday} />
 
-        <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} isAffiliates={isAffiliate} />
-      </Layout>
-    </>
+      <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} isAffiliates={isAffiliate} />
+    </Layout>
   );
 };
 
