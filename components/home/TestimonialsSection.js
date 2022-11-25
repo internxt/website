@@ -112,8 +112,8 @@ const TestimonialsSection = ({ textContent }) => {
       <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-6 xl:hidden">
         <div className="flex justify-center">
           {textContent.cards.map((card, index) => (
-            <div className="flex w-screen justify-center px-6 md:w-auto">
-              <div key={index} className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
+            <div key={index} className="flex w-screen justify-center px-6 md:w-auto">
+              <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                 <div className="flex w-auto max-w-[300px] flex-col">
                   <div className="flex w-[331px] flex-row">
                     <img src="/images/home/testimonials/Comas.svg" />

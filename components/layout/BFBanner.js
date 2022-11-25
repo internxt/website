@@ -10,16 +10,18 @@ const BFBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  setTimeout(() => {
-    if (router.pathname !== '/black-friday') {
-      setShowBanner(true);
-    }
-  }, 20000);
-
   const handleClose = () => {
     localStorage.setItem('hideBanner', true);
     setShowBanner(false);
   };
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      if (router.pathname !== '/black-friday') {
+        setShowBanner(true);
+      }
+    }, 20000);
+  }, []);
 
   React.useEffect(() => {
     const hideBanner = localStorage.getItem('hideBanner');
