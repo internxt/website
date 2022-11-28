@@ -6,18 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import { redirectToCheckoutAction } from '../CheckoutForm';
 
-const PriceCard = ({
-  planType,
-  storage,
-  price,
-  priceBefore,
-  billingFrequency,
-  cta,
-  setUsers,
-  getUsers,
-  popular,
-  lang,
-}) => {
+const PriceCard = ({ planType, storage, price, billingFrequency, cta, setUsers, getUsers, popular, lang }) => {
   const [stripeObject, setStripeObject] = useState({});
 
   const billingFrequencyList = {
@@ -42,7 +31,7 @@ const PriceCard = ({
   return (
     <div
       className={`priceCard card ${
-        popular ? 'bg-blue-60 shadow-lg ring-2 ring-blue-60' : ''
+        popular ? 'border-2 border-primary  bg-blue-60 shadow-lg ring-2 ring-blue-60' : ''
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl sm:m-4`}
     >
       <div
@@ -55,9 +44,7 @@ const PriceCard = ({
 
       <div className={`info flex flex-col items-center justify-center bg-white p-6 ${popular ? 'rounded-t-2xl' : ''}`}>
         <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
-            popular ? 'bg-blue-10 text-blue-60' : 'bg-neutral-20 text-neutral-80'
-          } rounded-full font-semibold`}
+          className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full bg-blue-10 py-1 px-4 pb-0.5 font-semibold text-blue-60`}
         >
           <p>
             {storage}
@@ -67,11 +54,7 @@ const PriceCard = ({
           </p>
         </div>
 
-        <div
-          className={`planPrice flex flex-col items-center justify-center p-10 ${
-            priceBefore ? 'space-y-1' : 'space-y-4'
-          }`}
-        >
+        <div className={`planPrice flex flex-col items-center justify-center p-10`}>
           <div
             className={`priceBreakdown flex ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
@@ -85,21 +68,13 @@ const PriceCard = ({
 
             <p className="flex flex-row items-start space-x-0.5 font-semibold text-neutral-700">
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span>
-              <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
+              <span className="price text-4xl font-bold">{price}</span>
             </p>
 
             <span className={`perMonth ${price <= 0 || billingFrequency < 0 ? 'hidden' : ''}`}>
               {contentText.perMonth}
             </span>
           </div>
-
-          <span
-            className={`priceBefore ${
-              priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-80 line-through`}
-          >
-            €{priceBefore}
-          </span>
 
           <div
             className={`totalBilling ${
@@ -122,99 +97,6 @@ const PriceCard = ({
         </div>
 
         <div
-          className={`businessUserCount ${
-            planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'
-          } mb-4 w-full flex-col rounded-lg bg-neutral-10 p-4 ring-1 ring-neutral-20`}
-        >
-          <div className="input relative flex flex-row justify-between rounded-lg bg-white ring-1 ring-neutral-30">
-            <button
-              type="button"
-              onClick={() => {
-                if (getUsers >= 3) {
-                  setUsers(parseInt(getUsers, 10) - 1);
-                } else setUsers(2);
-              }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
-                getUsers > 2
-                  ? 'bg-blue-60 text-white active:bg-blue-70'
-                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-              } sm:duration-50 z-10 select-none rounded-l-lg text-2xl font-light transition-all`}
-            >
-              <span className="mb-1">-</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => {
-                if (getUsers <= MAX_USERS - 1) {
-                  setUsers(parseInt(getUsers, 10) + 1);
-                } else setUsers(MAX_USERS);
-              }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
-                getUsers < MAX_USERS
-                  ? 'bg-blue-60 text-white active:bg-blue-70'
-                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-              } sm:duration-50 z-10 select-none rounded-r-lg text-2xl font-light transition-all`}
-            >
-              <span className="mb-1">+</span>
-            </button>
-
-            <label
-              htmlFor={`users_${storage}`}
-              className="absolute top-0 left-0 flex h-full w-full cursor-text flex-row items-center justify-center text-xl font-medium sm:text-base"
-            >
-              <div className="relative flex h-full flex-row items-center">
-                <span
-                  className={`pointer-events-none ${
-                    Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? '' : 'opacity-0'
-                  }`}
-                >
-                  {Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? 0 : getUsers}
-                </span>
-
-                {/* eslint-disable-next-line no-unused-expressions */}
-                <input
-                  id={`users_${storage}`}
-                  type="number"
-                  inputMode="numeric"
-                  min="2"
-                  max={MAX_USERS}
-                  step="1"
-                  value={getUsers}
-                  onChange={(e) => {
-                    e.target.value.toString().startsWith('0')
-                      ? (e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length))
-                      : setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value);
-                  }}
-                  onBlur={(e) => {
-                    setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value < 2 ? 2 : e.target.value);
-                  }}
-                  className="absolute left-0 w-14 min-w-full appearance-none bg-transparent font-medium outline-none"
-                />
-              </div>
-
-              <span className="ml-1 select-none">{contentText.users}</span>
-            </label>
-          </div>
-
-          <div className="mt-4 flex w-full flex-row justify-between text-neutral-700">
-            <span className="font-semibold">Total:</span>
-
-            <div className="flex flex-row items-end">
-              <div className="flex flex-row items-start">
-                <span className="mt-0.5 mr-0.5 text-xs">€</span>
-
-                <span>{teamsBilled}</span>
-              </div>
-
-              <span className="mb-1 ml-0.5 text-xs text-neutral-100">
-                {contentText.billingFrequencyLabelSmall[billingFrequencyList[billingFrequency]]}
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
@@ -224,7 +106,7 @@ const PriceCard = ({
         >
           <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2  text-lg font-medium text-white transition-all duration-75 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.buy} {storage}
+              {contentText.cta.get} {storage}
             </p>
 
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
@@ -238,7 +120,7 @@ const PriceCard = ({
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2">
-          <div className="flex flex-row items-start space-x-2 font-semibold">
+          <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
@@ -247,13 +129,17 @@ const PriceCard = ({
               alt="check icon"
             />
 
-            <span className={`${price <= 0 ? 'hidden' : 'flex'}`}>
-              {billingFrequency < 0
-                ? `${contentText.features.enjoyForever.enjoy} ${storage} ${contentText.features.enjoyForever.forever}`
-                : `${contentText.features.moneyBack}`}
-            </span>
-
-            <span className={`${price <= 0 ? 'flex' : 'hidden'}`}>
+            <span>{contentText.features.moneyBack}</span>
+          </div>
+          <div className="flex flex-row items-start space-x-2 font-semibold">
+            <img
+              loading="lazy"
+              className="mt-0.5 translate-y-px transform select-none"
+              src="/icons/checkNeutral500.svg"
+              draggable="false"
+              alt="check icon"
+            />
+            <span className={'flex'}>
               {contentText.features.enjoyForever.enjoy} {storage} {contentText.features.enjoyForever.forever}
             </span>
           </div>
@@ -292,6 +178,17 @@ const PriceCard = ({
             />
 
             <span>{contentText.features.allServices}</span>
+          </div>
+          <div className="flex flex-row items-start space-x-2">
+            <img
+              loading="lazy"
+              className="mt-0.5 translate-y-px transform select-none"
+              src="/icons/checkNeutral500.svg"
+              draggable="false"
+              alt="check icon"
+            />
+
+            <span>{contentText.features.dataAccess}</span>
           </div>
         </div>
       </div>

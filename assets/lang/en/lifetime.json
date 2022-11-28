@@ -1,14 +1,8 @@
 {
-  "HeroSection": {
-    "eyebrow": "Lifetime Membership",
-    "title": {
-      "line1": "Your files and memories",
-      "line2": "forever with you."
-    },
-    "description": {
-      "line1": "Lifetime Membership is one-time payment.",
-      "line2": "Say bye bye to lifelong subscriptions."
-    },
+  "HeroSection": {},
+  "PaymentSection": {
+    "title": "Explore all of our lifetime plans",
+    "description": "Buy only once and get a lifetime of privacy and security.",
     "securePayment": "100% Secure payment, powered by Stripe"
   },
   "FeatureSection": {

@@ -38,6 +38,7 @@
     "getStarted": "Get started",
     "signUpNow": "Sign up now",
     "buy": "Buy",
+    "get": "Get",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Get 30 days for free"
   },
@@ -51,6 +52,7 @@
     "moneyBack": "30-days money-back guarantee",
     "encryptedFiles": "Encrypted file storage and sharing",
     "accessFromAnywhere": "Access your files from any device",
-    "allServices": "Get access to all our services"
+    "allServices": "Get access to all our services",
+    "dataAccess": "No unauthorized data access"
   }
 }
