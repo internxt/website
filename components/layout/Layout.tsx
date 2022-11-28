@@ -48,7 +48,7 @@ LayoutProps) {
         <link rel="alternate" hrefLang="fr" href={`https://internxt.com/fr/${pageURL}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
-        {imgLink && <meta property="og:image" content={'/images/special-offer/black-friday/imgLink.png'} />}
+        {imgLink ? <meta property="og:image" content={'/images/special-offer/black-friday/imgLink.png'} /> : null}
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
