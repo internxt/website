@@ -9,6 +9,7 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import PaymentSection from '../components/lifetime/PaymentSection';
 import Navbar from '../components/layout/Navbar';
+import CtaSection from '../components/lifetime/CtaSection';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -31,9 +32,11 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
+      <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
+
       <FeatureSection lang={lang} textContent={langJson.FeatureSection} />
 
-      <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
+      <CtaSection textContent={langJson.CtaSection} />
 
       <Footer textContent={footerLang} lang={deviceLang} hideNewsletter />
     </Layout>

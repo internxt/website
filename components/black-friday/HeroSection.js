@@ -54,7 +54,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
             </Link>
             <div className="flex flex-row pb-6 pt-16">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown />
+              <Countdown dt={'2022-12-05T00:00:00'} />
             </div>
             <h1 className="text-7xl font-semibold text-white">
               {textContent.HeroSection.title.line1}

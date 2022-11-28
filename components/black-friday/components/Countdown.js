@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const Countdown = () => {
+const Countdown = ({ dt }) => {
   const [countdownDisableDays, setCountdownDisableDays] = useState(false);
   const [countdownDisableHours, setCountdownDisableHours] = useState(false);
   const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
   const [countdownDisableSeconds, setCountdownDisableSeconds] = useState(false);
 
-  function CountDownTimer(dt, id) {
+  function CountDownTimer(id) {
     const end = new Date(dt);
 
     const second = 1000;
@@ -48,7 +48,7 @@ const Countdown = () => {
   }
 
   useEffect(() => {
-    CountDownTimer('2022-12-05T00:00:00', 'countdown');
+    CountDownTimer('countdown');
   });
 
   return (

@@ -3,8 +3,8 @@ import PriceTable from './PriceTable';
 
 const PaymentSection = ({ lang, textContent }) => {
   return (
-    <section className="overflow-hidden pt-10">
-      <div className="flex flex-col justify-center pt-10 text-center">
+    <section id="payment" className="overflow-hidden pt-10">
+      <div className="flex flex-col justify-center px-6 pt-10 text-center">
         <p className="text-4xl font-semibold">{textContent.title}</p>
         <p className="pt-4 text-xl font-normal">{textContent.description}</p>
       </div>
