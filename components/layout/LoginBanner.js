@@ -35,9 +35,11 @@ const BFBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  setTimeout(() => {
-    setShowBanner(true);
-  }, 300000);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setShowBanner(true);
+    }, 300000);
+  }, []);
 
   const handleClose = () => {
     localStorage.setItem('hideLoginBanner', true);
