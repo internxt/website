@@ -12,9 +12,9 @@ const CtaSection = ({ textContent }) => {
           onClick={() => {
             window.location.href = `#payment`;
           }}
-          className="mt-8 flex max-w-[243px] cursor-pointer flex-col items-center rounded-full bg-white"
+          className="mt-8 flex max-w-[260px] cursor-pointer flex-col items-center rounded-full bg-white"
         >
-          <p className="px-9 py-3 font-sans text-lg text-primary">{textContent.cta}</p>
+          <p className="px-9 py-3 text-center font-sans text-lg text-primary">{textContent.cta}</p>
         </div>
       </div>
     </section>

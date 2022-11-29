@@ -6,7 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import { redirectToCheckoutAction } from '../CheckoutForm';
 
-const PriceCard = ({ planType, storage, price, billingFrequency, cta, setUsers, getUsers, popular, lang }) => {
+const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
   const [stripeObject, setStripeObject] = useState({});
 
   const billingFrequencyList = {
@@ -16,9 +16,18 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, setUsers, 
     12: 'annually',
   };
 
+  const currency = () => {
+    switch (country) {
+      case 'US':
+        return '$';
+      case 'GB':
+        return '£';
+      default:
+        return '€';
+    }
+  };
+
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
-  const teamsBilled = (totalBilled * getUsers).toFixed(2);
-  const MAX_USERS = 200;
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   useEffect(() => {
@@ -56,24 +65,14 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, setUsers, 
 
         <div className={`planPrice flex flex-col items-center justify-center p-10`}>
           <div
-            className={`priceBreakdown flex ${
-              planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
-            }`}
+            className={`priceBreakdown flex flex-col items-center
+            `}
           >
-            <span
-              className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-semibold`}
-            >
-              {contentText.perUser}
-            </span>
-
             <p className="flex flex-row items-start space-x-0.5 font-semibold text-neutral-700">
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">{price}</span>
             </p>
-
-            <span className={`perMonth ${price <= 0 || billingFrequency < 0 ? 'hidden' : ''}`}>
-              {contentText.perMonth}
-            </span>
+            <p className="pt-2 text-xs font-normal text-gray-50">{contentText.oneTime}</p>
           </div>
 
           <div
@@ -83,7 +82,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, setUsers, 
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">€</span>
+                <span className="currency text-supporting-2">{currency()}</span>
                 {totalBilled}{' '}
               </span>
 

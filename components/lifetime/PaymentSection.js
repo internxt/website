@@ -1,7 +1,7 @@
 import React from 'react';
 import PriceTable from './PriceTable';
 
-const PaymentSection = ({ lang, textContent }) => {
+const PaymentSection = ({ lang, textContent, country }) => {
   return (
     <section id="payment" className="overflow-hidden pt-10">
       <div className="flex flex-col justify-center px-6 pt-10 text-center">
@@ -9,7 +9,7 @@ const PaymentSection = ({ lang, textContent }) => {
         <p className="pt-4 text-xl font-normal">{textContent.description}</p>
       </div>
       <div className="my-8 sm:my-12" id="priceTable">
-        <PriceTable lang={lang} textContent={textContent} />
+        <PriceTable lang={lang} textContent={textContent} country={country} />
       </div>
 
       <div className="mb-20 flex flex-row items-center justify-center space-x-1">

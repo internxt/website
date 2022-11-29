@@ -5,6 +5,7 @@
     "individuals": "Plans for Individuals",
     "business": "Plans for Business"
   },
+  "oneTime": "One-time payment",
   "changePlan": {
     "toIndividuals": "Change to Plans for Individuals",
     "toBusiness": "Change to Plans for Business"

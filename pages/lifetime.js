@@ -10,9 +10,26 @@ import cookies from '../lib/cookies';
 import PaymentSection from '../components/lifetime/PaymentSection';
 import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
+import axios from 'axios';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+  const [country, setCountry] = React.useState('ES');
+
+  async function getCountryCode() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
+    };
+    const countryCode = await axios(options);
+    return countryCode;
+  }
+
+  useEffect(() => {
+    getCountryCode().then((res) => {
+      setCountry(res.data.country);
+    });
+  });
 
   useEffect(() => {
     AOS.init();
@@ -30,7 +47,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection lang={lang} textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
 
       <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
 

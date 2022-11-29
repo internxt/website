@@ -1,7 +1,7 @@
 import React from 'react';
 import PriceCard from './PriceCard';
 
-const PriceTable = ({ lang, textContent }) => {
+const PriceTable = ({ lang, country }) => {
   const billingFrequency = -1;
 
   const billingPrice = (price) => price[billingFrequency];
@@ -45,6 +45,7 @@ const PriceTable = ({ lang, textContent }) => {
             cta={['checkout', `${pricings.TB10.stripeID}`]}
             popular={pricings.TB10.popular}
             lang={lang}
+            country={country}
           />
           <PriceCard
             planType="individual"
@@ -53,6 +54,7 @@ const PriceTable = ({ lang, textContent }) => {
             billingFrequency={billingFrequency}
             cta={['checkout', `${pricings.TB5.stripeID}`]}
             lang={lang}
+            country={country}
           />
 
           <PriceCard
@@ -63,6 +65,7 @@ const PriceTable = ({ lang, textContent }) => {
             cta={['checkout', `${pricings.TB2.stripeID}`]}
             popular={pricings.TB2.popular}
             lang={lang}
+            country={country}
           />
         </div>
       </div>

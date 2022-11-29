@@ -19,7 +19,7 @@ const HeroSection = ({ lang, textContent }) => {
             onClick={() => {
               window.location.href = `#payment`;
             }}
-            className="flex max-w-[243px] cursor-pointer flex-col items-center rounded-full bg-white"
+            className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-full bg-white text-center"
           >
             <p className="px-9 py-3 font-sans text-lg text-primary">{textContent.cta}</p>
           </div>
