@@ -10,58 +10,32 @@
     "securePayment": "100% Secure payment, powered by Stripe"
   },
   "FeatureSection": {
-    "title": {
-      "line1": "Designed to protect you.",
-      "line2": "Powered by trust."
-    },
+    "title": "Why choose Internxt?",
+    "description": "Privacy made for everyone and simple-to-use online security that you don't have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
     "features": {
       "privacy": {
         "title": "Private",
-        "description": {
-          "line1": "Internxt is not just another cloud",
-          "line2": "storage solution, we don’t",
-          "line3": "share or sell your data."
-        }
+        "description": "No first or third-party access to your file ever! You have total control of your data."
       },
-      "unlimited": {
-        "title": "Unlimited access",
-        "description": {
-          "line1": "One payment to keep your files,",
-          "line2": "videos, photos and memories",
-          "line3": "safe with you forever and ever."
-        }
-      },
-      "improvement": {
-        "title": "Continuous improvement",
-        "description": {
-          "line1": "We love to listen to our community",
-          "line2": "in order to keep improving the things",
-          "line3": "that matter the most to you."
-        }
+      "fastSync": {
+        "title": "Fast sync",
+        "description": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
       },
       "security": {
-        "title": "Secure",
-        "description": {
-          "line1": "We use zero-knowledge to ensure",
-          "line2": "that your data remains private by",
-          "line3": "client-side encrypting it."
-        }
+        "title": "Secure from the core",
+        "description": "Open-source code, end-to-end encrypted, and safely hosted across a vast distributed network."
       },
-      "new": {
-        "title": "Get new features",
-        "description": {
-          "line1": "You will be able to access all the",
-          "line2": "current features and all the new",
-          "line3": "to come with each release."
-        }
+      "sharing": {
+        "title": "Safe sharing",
+        "description": "Send encrypted files and photos back and forth to your favorite people via link and email."
       },
-      "support": {
-        "title": "Premium support",
-        "description": {
-          "line1": "You will always have the best",
-          "line2": "treatment from our customer service,",
-          "line3": "for us you are part of the family."
-        }
+      "multiplatform": {
+        "title": "Multiplatform",
+        "description": "Privacy for all devices, browsers, and operating systems! Linux, Windows, macOS, iOS, Android."
+      },
+      "zeroKnowledge": {
+        "title": "Zero-knowledge",
+        "description": "You are the only one with access to your data. Not even Internxt can view your files!"
       }
     }
   },

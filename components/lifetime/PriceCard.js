@@ -28,7 +28,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
   };
 
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   useEffect(() => {
     if (cta[0] === 'checkout') {
@@ -119,7 +119,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2">
-          <div className="flex flex-row items-start space-x-2">
+          <div className="flex flex-row items-start space-x-2 font-semibold">
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
@@ -130,7 +130,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
 
             <span>{contentText.features.moneyBack}</span>
           </div>
-          <div className="flex flex-row items-start space-x-2 font-semibold">
+          <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"

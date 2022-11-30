@@ -48,6 +48,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/:lang/lifetime',
+        destination: '/lifetime',
+        permanent: false,
+      },
+      {
         source: '/:lang/team',
         destination: '/:lang/about',
         permanent: false,

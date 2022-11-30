@@ -10,6 +10,7 @@ import cookies from '../lib/cookies';
 import PaymentSection from '../components/lifetime/PaymentSection';
 import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
+
 import axios from 'axios';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
@@ -64,10 +65,10 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/lifetime.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/en/lifetime.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

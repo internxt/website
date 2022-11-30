@@ -6,7 +6,7 @@ const HeroSection = ({ lang, textContent }) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className="flex flex-col justify-center bg-primary-dark py-24 lg:flex-row lg:items-stretch">
-        <div className="ml-4 flex shrink-0 flex-col items-center lg:ml-10 lg:items-start xl:ml-32">
+        <div className="flex flex-col items-center lg:ml-10 lg:shrink-0 lg:items-start xl:ml-32">
           <div className="flex flex-row pb-6">
             <Alarm size={32} className="mr-4 text-white" />
             <Countdown dt={'2022-12-31T00:00:00'} />
@@ -21,10 +21,10 @@ const HeroSection = ({ lang, textContent }) => {
             }}
             className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-full bg-white text-center"
           >
-            <p className="px-9 py-3 font-sans text-lg text-primary">{textContent.cta}</p>
+            <p className="px-9 py-3 text-lg font-medium text-primary">{textContent.cta}</p>
           </div>
         </div>
-        <div className="hidden w-full flex-col items-end  lg:flex">
+        <div className="hidden w-full flex-col items-end lg:flex">
           <div className=" flex w-[770px] flex-col">
             <img
               src="/images/lifetime/Infinity.svg"
@@ -32,7 +32,7 @@ const HeroSection = ({ lang, textContent }) => {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center px-20 pt-16 lg:hidden">
+        <div className="flex flex-col items-center justify-center px-20 pt-12 lg:hidden">
           <img src="/images/lifetime/Infinity.svg" className="flex" />
         </div>
       </div>
