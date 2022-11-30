@@ -25,6 +25,8 @@ export interface NavbarProps {
   isBlackfriday?: boolean;
 }
 
+const DRIVE_WEB_URL = 'https://drive.internxt.com';
+
 export default function Navbar(props: NavbarProps) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
@@ -58,30 +60,22 @@ export default function Navbar(props: NavbarProps) {
 
   const openAuth = (view: 'login' | 'signup') => {
     // Temporal fix
-    if (isMobile && view === 'signup') {
-      window.location.replace('https://drive.internxt.com/new');
-    } else {
-      setAuthMethod(view);
-      setFormError(null);
-      setShowAuth(true);
-      setForm2FA(false);
-    }
+    setAuthMethod(view);
+    setFormError(null);
+    setShowAuth(true);
+    setForm2FA(false);
   };
 
   const toggleAuthMethod = (view?: 'login' | 'signup') => {
     // Temporal fix
-    if (isMobile && view === 'signup') {
-      window.location.replace('https://drive.internxt.com/new');
+    setRecoverSent(false);
+    setFormError(null);
+    setForm2FA(false);
+    if (session && view === 'login') {
+      redirect();
+      hideAuth();
     } else {
-      setRecoverSent(false);
-      setFormError(null);
-      setForm2FA(false);
-      if (session && view === 'login') {
-        redirect();
-        hideAuth();
-      } else {
-        setAuthMethod(view);
-      }
+      setAuthMethod(view);
     }
   };
 
@@ -96,15 +90,15 @@ export default function Navbar(props: NavbarProps) {
           window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
         }
       } else {
-        window.location.replace('https://drive.internxt.com/app');
+        window.location.replace(`${DRIVE_WEB_URL}/app`);
       }
     }
   };
 
   const redirectToCheckout = (planId: string) => {
     isCoupon
-      ? window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}&couponCode=${props.coupon}`)
-      : window.location.replace(`https://drive.internxt.com/checkout-plan?planId=${planId}`);
+      ? window.location.replace(`${DRIVE_WEB_URL}/checkout-plan?planId=${planId}&couponCode=${props.coupon}`)
+      : window.location.replace(`${DRIVE_WEB_URL}/checkout-plan?planId=${planId}`);
   };
 
   // MESSAGE FILTERING
@@ -112,9 +106,9 @@ export default function Navbar(props: NavbarProps) {
   useEffect(() => {
     const auth = window.document.getElementById('auth')['contentWindow'];
     const postMessage = (data) => {
-      auth.postMessage(data, 'https://drive.internxt.com/auth');
+      auth.postMessage(data, `${DRIVE_WEB_URL}/auth`);
     };
-    const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
+    const permitedDomains = [DRIVE_WEB_URL, 'https://internxt.com'];
 
     const onRecieveMessage = (e) => {
       if (permitedDomains.includes(e.origin)) {
@@ -530,7 +524,7 @@ export default function Navbar(props: NavbarProps) {
       </div>
 
       {/* Auth iframe */}
-      <iframe id="auth" className="hidden" src="https://drive.internxt.com/auth" />
+      <iframe id="auth" className="hidden" src={`${DRIVE_WEB_URL}/auth`} />
 
       {/* Auth dialog */}
       <Transition appear show={showAuth} as={Fragment}>
