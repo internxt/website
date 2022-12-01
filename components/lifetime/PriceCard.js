@@ -4,7 +4,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { redirectToCheckoutAction } from '../CheckoutForm';
+import { checkout, openAuthDialog } from '../../lib/auth';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
   const [stripeObject, setStripeObject] = useState({});
@@ -99,7 +100,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
-            cta[0] === 'checkout' ? redirectToCheckoutAction(stripeObject) : (location.href = cta[1]);
+            cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
           }}
           className="flex w-full flex-row"
         >
