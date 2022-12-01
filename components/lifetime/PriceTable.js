@@ -8,7 +8,7 @@ const PriceTable = ({ lang, country }) => {
 
   const pricings = {
     TB2: {
-      stripeID: 'lifetime5TB',
+      stripeID: 'lifetime2TB',
       storage: '2TB',
       price: {
         '-1': '299',

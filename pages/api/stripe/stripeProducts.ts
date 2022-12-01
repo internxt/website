@@ -3,8 +3,8 @@ import bytes from 'bytes';
 const isTest = process.env.NODE_ENV === 'development';
 
 const STRIPE_PRODUCT = {
-  lifetime1TB: {
-    production: 'price_1JiFXDFAOdcgaBMQWwxbraL4',
+  lifetime2TB: {
+    production: 'price_1MAFx4FAOdcgaBMQN5AwXBYp',
     debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
     mode: 'payment',
     session: {
@@ -19,8 +19,8 @@ const STRIPE_PRODUCT = {
       payment_intent_data: {
         metadata: {
           member_tier: 'lifetime',
-          lifetime_tier: 'lifetime_1tb',
-          maxSpaceBytes: bytes('1tb'),
+          lifetime_tier: 'lifetime_2tb',
+          maxSpaceBytes: bytes('2tb'),
           name: 'drive_1tb_lifetime',
           planType: 'one_time',
         },
@@ -29,14 +29,14 @@ const STRIPE_PRODUCT = {
     properties: {
       product: 'prod_KMzWb5ycXjMzIE',
       currency: 'EUR',
-      revenue: 99,
+      revenue: 299,
       type: 'one_time',
       price_id: 'price_1JiFXDFAOdcgaBMQWwxbraL4',
       quantity: 1,
     },
   },
   lifetime5TB: {
-    production: 'price_1HrovfFAOdcgaBMQP33yyJdt',
+    production: 'price_1MAFstFAOdcgaBMQGnCE44ub',
     debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
     mode: 'payment',
     session: {
@@ -61,20 +61,19 @@ const STRIPE_PRODUCT = {
     properties: {
       product: 'prod_ISkQSK3akiz4wR',
       currency: 'EUR',
-      revenue: 299,
+      revenue: 499,
       type: 'one_time',
       price_id: 'price_1HrovfFAOdcgaBMQP33yyJdt',
       quantity: 1,
     },
   },
   lifetime10TB: {
-    production: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
+    production: 'price_1MAG9hFAOdcgaBMQ3UAbbR7h',
     debug: 'price_1JZYkSFAOdcgaBMQItAo6Ev3',
     mode: 'payment',
     session: {
       line_items: [
         {
-          price: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
           quantity: 1,
         },
       ],
@@ -94,7 +93,7 @@ const STRIPE_PRODUCT = {
     properties: {
       currency: 'EUR',
       product: 'prod_Iy3zE5F34DgOoS',
-      revenue: 499,
+      revenue: 999,
       type: 'one_time',
       price_id: 'price_1IMA0AFAOdcgaBMQiZyoSIYU',
       quantity: 1,
