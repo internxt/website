@@ -2,12 +2,16 @@
   "HeroSection": {
     "title": "Get a lifetime Internxt plan!",
     "description": "Secure all your files and memories forever with a single, one-time payment.",
-    "cta": "Browse lifetime plans"
+    "cta": "Browse lifetime deals"
   },
   "PaymentSection": {
-    "title": "Explore all of our lifetime plans",
-    "description": "Buy only once and get a lifetime of privacy and security.",
+    "title": "Explore all of our exclusive lifetime plans",
+    "description": "This week only, buy once and get privacy and security forever.",
     "securePayment": "100% Secure payment, powered by Stripe"
+  },
+  "GetLifetimeSection": {
+    "title": "Life is not short! But this limited-time deal is...",
+    "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
   },
   "FeatureSection": {
     "title": "Why choose Internxt?",
@@ -39,10 +43,7 @@
       }
     }
   },
-  "GetLifetimeSection": {
-    "title": "Life is not short! Don't short-change your privacy",
-    "description": "Internxt is offering a forever deal on privacy and peace of mind."
-  },
+
   "CtaSection": {
     "title": "Your files secure and private forever",
     "description": "We treat our users like family and family is forever!",

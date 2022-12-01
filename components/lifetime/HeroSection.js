@@ -6,7 +6,7 @@ const HeroSection = ({ lang, textContent }) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className="flex flex-col justify-center bg-primary-dark py-24 lg:flex-row lg:items-stretch">
-        <div className="flex flex-col items-center lg:ml-10 lg:shrink-0 lg:items-start xl:ml-32">
+        <div className="flex flex-col items-center lg:ml-10 lg:shrink-0 lg:items-start xl:ml-32 2xl:ml-80">
           <div className="flex flex-row pb-6">
             <Alarm size={32} className="mr-4 text-white" />
             <Countdown dt={'2022-12-31T00:00:00'} />
@@ -25,7 +25,7 @@ const HeroSection = ({ lang, textContent }) => {
           </div>
         </div>
         <div className="hidden w-full flex-col items-end lg:flex">
-          <div className=" flex w-[770px] flex-col">
+          <div className=" flex w-[770px] flex-col 2xl:w-[900px]">
             <img
               src="/images/lifetime/Infinity.svg"
               className="relative h-full w-full translate-x-36 object-contain object-left"
@@ -35,6 +35,9 @@ const HeroSection = ({ lang, textContent }) => {
         <div className="flex flex-col items-center justify-center px-20 pt-12 lg:hidden">
           <img src="/images/lifetime/Infinity.svg" className="flex" />
         </div>
+        {/* <div className="ml-16 hidden w-[770px] flex-col pt-12 2xl:flex">
+          <img src="/images/lifetime/Infinity.svg" />
+        </div> */}
       </div>
     </section>
   );
