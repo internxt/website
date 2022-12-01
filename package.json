@@ -7,7 +7,7 @@
     "prebuild": "node ./scripts/check-envs.js",
     "dev": "next dev -p 3001",
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
-    "build": "next build",
+    "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
     "prod": "next export",
     "lint": "eslint './**/*.{js,ts,tsx}'"
