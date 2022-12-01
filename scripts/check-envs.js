@@ -1,7 +1,15 @@
 /* eslint-disable no-console */
+
+const { loadEnvConfig } = require('@next/env');
+
+loadEnvConfig(process.cwd());
+
 const path = require('path');
 const envExample = require('dotenv').config({ path: path.join(__dirname, '..', '.env.local.example') }).parsed;
-const env = require('dotenv').config({ path: path.join(__dirname, '..', '.env.local') }).parsed;
+const env =
+  process.env.VERCEL === '1'
+    ? process.env
+    : require('dotenv').config({ path: path.join(__dirname, '..', '.env.local') }).parsed;
 
 const keysExample = Object.keys(envExample);
 const keysEnv = Object.keys(env);
