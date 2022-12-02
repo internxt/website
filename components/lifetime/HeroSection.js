@@ -6,7 +6,7 @@ const HeroSection = ({ lang, textContent }) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className="bg-primary-dark">
-        <div className="mx-4 pt-16 lg:mx-10 xl:mx-32">
+        <div className="pt-16 lg:mx-10 xl:mx-32">
           <div className="mx-auto flex w-full max-w-screen-xl flex-col sm:mb-24 lg:flex-row">
             <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center text-center sm:w-auto sm:px-0 md:my-8  lg:my-20 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
               <div className="flex flex-row pb-6">
