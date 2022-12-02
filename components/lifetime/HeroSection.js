@@ -29,8 +29,8 @@ const HeroSection = ({ lang, textContent }) => {
               <div className="hidden w-full md:flex"></div>
             </div>
 
-            <div className="hidden w-full flex-col items-end lg:flex">
-              <div className=" flex-colv flex w-[770px] 2xl:w-[850px]">
+            <div className="hidden w-full flex-col items-end pb-20 lg:flex">
+              <div className=" flex w-[770px] flex-col 2xl:w-[850px]">
                 <img
                   src="/images/lifetime/infinity.svg"
                   className="relative h-full w-full translate-x-56 object-contain object-left 2xl:translate-x-96"
