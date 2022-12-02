@@ -25,7 +25,6 @@ export default function Layout({
   segmentName = null,
   disableMailerlite = false,
   disableDrift = true,
-  host,
   isProduction = process.env.NODE_ENV === 'production',
   lang,
 }: // lang
@@ -49,7 +48,7 @@ LayoutProps) {
         <link rel="alternate" hrefLang="fr" href={`https://internxt.com/fr/${pageURL}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
-        <meta property="og:image" content={`${host}/images/special-offer/black-friday/imgLink.png`} />
+        <meta property="og:image" content={`https://internxt.com/images/special-offer/black-friday/imgLink.png`} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
