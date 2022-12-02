@@ -86,13 +86,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
                 <span className="currency text-supporting-2">{currency()}</span>
                 {totalBilled}{' '}
               </span>
-
-              <span className="billingFrequency">
-                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
-              </span>
             </p>
-
-            <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.free}</p>
           </div>
         </div>
 

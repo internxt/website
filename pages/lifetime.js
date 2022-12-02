@@ -44,7 +44,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       lang={lang}
       cta={['Default']}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
       <HeroSection lang={lang} textContent={langJson.HeroSection} />
 

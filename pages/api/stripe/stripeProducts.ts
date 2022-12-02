@@ -4,7 +4,7 @@ const isTest = process.env.NODE_ENV === 'development';
 
 const STRIPE_PRODUCT = {
   lifetime2TB: {
-    production: 'price_1MAFx4FAOdcgaBMQN5AwXBYp',
+    production: 'price_1MAaFMFAOdcgaBMQiiVP4aMC',
     debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
     mode: 'payment',
     session: {
@@ -68,7 +68,7 @@ const STRIPE_PRODUCT = {
     },
   },
   lifetime10TB: {
-    production: 'price_1MAG9hFAOdcgaBMQ3UAbbR7h',
+    production: 'price_1MAaIbFAOdcgaBMQsxNt02PX',
     debug: 'price_1JZYkSFAOdcgaBMQItAo6Ev3',
     mode: 'payment',
     session: {
