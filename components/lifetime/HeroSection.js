@@ -37,7 +37,7 @@ const HeroSection = ({ lang, textContent }) => {
                 />
               </div>
             </div>
-            <div className="mb-20 flex flex-col items-center justify-center px-20 pt-12 lg:hidden">
+            <div className="mb-20 flex flex-col items-center justify-center px-10 pt-12 lg:hidden">
               <img src="/images/lifetime/infinity.svg" className="flex" />
             </div>
           </div>
