@@ -27,13 +27,13 @@ const HeroSection = ({ lang, textContent }) => {
         <div className="hidden w-full flex-col items-end lg:flex">
           <div className=" flex w-[770px] flex-col 2xl:w-[900px]">
             <img
-              src="/images/lifetime/Infinity.svg"
+              src="/images/lifetime/infinity.svg"
               className="relative h-full w-full translate-x-36 object-contain object-left"
             />
           </div>
         </div>
         <div className="flex flex-col items-center justify-center px-20 pt-12 lg:hidden">
-          <img src="/images/lifetime/Infinity.svg" className="flex" />
+          <img src="/images/lifetime/infinity.svg" className="flex" />
         </div>
         {/* <div className="ml-16 hidden w-[770px] flex-col pt-12 2xl:flex">
           <img src="/images/lifetime/Infinity.svg" />
