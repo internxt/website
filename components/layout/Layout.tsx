@@ -52,13 +52,9 @@ LayoutProps) {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://internxt.com/${lang}/${pageURL}`} />
-        <meta property="og:url" content={`https://internxt.com/es/${pageURL}`} />
-        <meta property="og:url" content={`https://internxt.com/fr/${pageURL}`} />
         <meta property="og:image" content={`https://internxt.com/images/special-offer/black-friday/imgLink.png`} />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`https://internxt.com/${lang}/${pageURL}`} />
-        <meta property="twitter:url" content={`https://internxt.com/es/${pageURL}`} />
-        <meta property="twitter:url" content={`https://internxt.com/fr/${pageURL}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content="https://internxt.com/images/special-offer/black-friday/imgLink.png" />
