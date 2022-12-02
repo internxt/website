@@ -62,7 +62,7 @@ LayoutProps) {
         <meta property="twitter:image" content={`${INTERNXT_URL}/images/special-offer/black-friday/imgLink.png`} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
-        <meta name="thumbnail" content={'Tumbnail img'} />
+        {/* <meta name="thumbnail" content={'Tumbnail img'} /> */}
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="icon" href="/favicon.ico" />
