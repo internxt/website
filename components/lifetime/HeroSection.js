@@ -1,50 +1,46 @@
 import React from 'react';
-import PriceTable from './PriceTable';
+import Countdown from '../black-friday/components/Countdown';
+import { Alarm } from 'phosphor-react';
 
-const HeroSection = ({ lang, textContent }) => (
-  <section className="bg-gradient-to-b from-white via-neutral-10 to-white">
-    <div className="flex flex-col items-center">
-      <img
-        className="my-10"
-        loading="lazy"
-        src="../../logos/internxt/internxt.svg"
-        alt="Internxt logo"
-        draggable="false"
-      />
-
-      <div className="my-8 flex flex-col items-center px-6 text-center text-neutral-900 sm:my-12">
-        <div className="mb-10 flex flex-col items-center font-semibold">
-          <h3 className="eyebrow text-lg md:text-xl">{textContent.eyebrow}</h3>
-
-          <h1 className="eyebrow text-4xl md:text-6xl">
-            {textContent.title.line1}
-            <br className="hidden sm:inline-flex" /> {textContent.title.line2}
-          </h1>
+const HeroSection = ({ lang, textContent }) => {
+  return (
+    <section className="overflow-hidden pt-16">
+      <div className="flex flex-col justify-center bg-primary-dark py-24 lg:flex-row lg:items-stretch">
+        <div className="flex flex-col items-center lg:ml-10 lg:shrink-0 lg:items-start xl:ml-32 2xl:ml-80">
+          <div className="flex flex-row pb-6">
+            <Alarm size={32} className="mr-4 text-white" />
+            <Countdown dt={'2022-12-31T00:00:00'} />
+          </div>
+          <div className="flex max-w-[448px] flex-col pb-10 text-center text-white md:text-start">
+            <p className="text-7xl font-bold">{textContent.title}</p>
+            <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
+          </div>
+          <div
+            onClick={() => {
+              window.location.href = `#payment`;
+            }}
+            className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-full bg-white text-center"
+          >
+            <p className="px-9 py-3 text-lg font-medium text-primary">{textContent.cta}</p>
+          </div>
         </div>
-
-        <p className="eyebrow text-lg font-normal text-neutral-500 md:text-xl">
-          {textContent.description.line1}
-          <br className="hidden sm:inline-flex" /> {textContent.description.line2}
-        </p>
+        <div className="hidden w-full flex-col items-end lg:flex">
+          <div className=" flex w-[770px] flex-col 2xl:w-[900px]">
+            <img
+              src="/images/lifetime/infinity.svg"
+              className="relative h-full w-full translate-x-36 object-contain object-left"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center px-20 pt-12 lg:hidden">
+          <img src="/images/lifetime/infinity.svg" className="flex" />
+        </div>
+        {/* <div className="ml-16 hidden w-[770px] flex-col pt-12 2xl:flex">
+          <img src="/images/lifetime/Infinity.svg" />
+        </div> */}
       </div>
-
-      <div className="my-8 sm:my-12" id="priceTable">
-        <PriceTable lang={lang} />
-      </div>
-
-      <div className="mb-20 flex flex-row items-center space-x-1">
-        <img
-          className="h-5"
-          loading="lazy"
-          src="../../images/lifetime/icons/lock-green-icon.png"
-          alt="Lock"
-          draggable="false"
-        />
-
-        <span className="text-normal font-medium text-neutral-100 md:text-sm">{textContent.securePayment}</span>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default HeroSection;

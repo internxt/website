@@ -23,6 +23,7 @@ export interface NavbarProps {
   coupon?: string;
   isLinksHidden?: boolean;
   isBlackfriday?: boolean;
+  mode?: 'payment' | 'subscription';
 }
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
@@ -96,9 +97,12 @@ export default function Navbar(props: NavbarProps) {
   };
 
   const redirectToCheckout = (planId: string) => {
-    isCoupon
-      ? window.location.replace(`${DRIVE_WEB_URL}/checkout-plan?planId=${planId}&couponCode=${props.coupon}`)
-      : window.location.replace(`${DRIVE_WEB_URL}/checkout-plan?planId=${planId}`);
+    const isPaymentMode = props.mode === 'payment';
+    window.location.replace(
+      `${DRIVE_WEB_URL}/checkout-plan?planId=${planId}${isCoupon ? '&couponCode=' + props.coupon : ''}${
+        isPaymentMode ? '&mode=' + props.mode : '&mode=subscription'
+      }`,
+    );
   };
 
   // MESSAGE FILTERING

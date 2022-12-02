@@ -23,13 +23,13 @@ module.exports = {
       ),
       // =======================================================
       // REDIRECTS TO PRICING
-      ...['/sharewareonsale', '/special-offer', '/lifetime', '/pricing-individuals-annually'].map((src) => ({
+      ...['/sharewareonsale', '/special-offer', '/pricing-individuals-annually'].map((src) => ({
         source: src,
         destination: '/pricing',
         permanent: false,
       })),
       // REDIRECTS TO PRICING (WITH LANG)
-      ...['/sharewareonsale', '/special-offer', '/lifetime', '/pricing-individuals-annually'].map((src) => ({
+      ...['/sharewareonsale', '/special-offer', '/pricing-individuals-annually'].map((src) => ({
         source: `/:lang${src}`,
         destination: '/:lang/pricing',
         permanent: false,
@@ -45,6 +45,11 @@ module.exports = {
       {
         source: '/team',
         destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/:lang/lifetime',
+        destination: '/lifetime',
         permanent: false,
       },
       {

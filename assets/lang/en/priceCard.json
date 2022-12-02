@@ -5,6 +5,7 @@
     "individuals": "Plans for Individuals",
     "business": "Plans for Business"
   },
+  "oneTime": "One-time payment",
   "changePlan": {
     "toIndividuals": "Change to Plans for Individuals",
     "toBusiness": "Change to Plans for Business"
@@ -38,6 +39,7 @@
     "getStarted": "Get started",
     "signUpNow": "Sign up now",
     "buy": "Buy",
+    "get": "Get",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Get 30 days for free"
   },
@@ -48,9 +50,10 @@
       "forFree": "for free",
       "forever": "forever"
     },
-    "moneyBack": "30-days money-back guarantee",
+    "moneyBack": "30-day money-back guarantee",
     "encryptedFiles": "Encrypted file storage and sharing",
     "accessFromAnywhere": "Access your files from any device",
-    "allServices": "Get access to all our services"
+    "allServices": "Get access to all our services",
+    "dataAccess": "No unauthorized data access"
   }
 }
