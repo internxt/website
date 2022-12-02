@@ -48,7 +48,16 @@ LayoutProps) {
         <link rel="alternate" hrefLang="fr" href={`https://internxt.com/fr/${pageURL}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://internxt.com/${lang}/${pageURL}`} />
         <meta property="og:image" content={`https://internxt.com/images/special-offer/black-friday/imgLink.png`} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://internxt.com/${lang}/${pageURL}`} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="https://internxt.com/images/special-offer/black-friday/imgLink.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
