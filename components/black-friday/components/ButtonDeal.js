@@ -7,12 +7,13 @@ const ButtonDeal = ({ lang }) => {
   return (
     <>
       <button
-        className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+        className="relative flex flex-row items-center justify-center space-x-4 rounded-4xl bg-primary py-4 px-9 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
         onClick={() => {
-          checkout(getPlanId(stripeObject));
+          // checkout(getPlanId(stripeObject));
+          window.location.href = 'https://internxt.com/pricing';
         }}
       >
-        {lang === 'fr' ? "Obtenez l'offre" : 'Get the deal'}
+        {lang === 'fr' ? "Obtenez l'offre" : 'Get our subscription plans'}
       </button>
     </>
   );

@@ -25,7 +25,7 @@ const CtaSection = ({ textContent, lang, country, isAffiliates }) => {
           <p className="text-4xl font-semibold text-white">{affiliates}</p>
           <p className="text-xl font-light text-white">{subtitleAffiliates}</p>
         </div>
-        <div>
+        {/* <div>
           <p className="text-center text-5xl font-bold text-primary">
             {currency() === '€' ? (
               <>
@@ -40,7 +40,7 @@ const CtaSection = ({ textContent, lang, country, isAffiliates }) => {
               </>
             )}
           </p>
-        </div>
+        </div> */}
         <div className="flex">
           <ButtonDeal lang={lang} />
         </div>
