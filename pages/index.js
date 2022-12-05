@@ -47,7 +47,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
 
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
-      <SocialProofSection textContent={langJson.InvestorsSection} />
+      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 
       <div className="getStartedSection">
         <GetStartedSection textContent={langJson.GetStartedSection} lang={lang} />
