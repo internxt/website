@@ -4,7 +4,7 @@ import PriceTable from './PriceTable';
 const PaymentSection = ({ lang, textContent, country }) => {
   return (
     <section id="payment" className="overflow-hidden pt-10">
-      <div className="flex flex-col justify-center px-6 pt-10 text-center">
+      <div className="flex flex-col justify-center px-6 text-center">
         <p className="text-4xl font-semibold">{textContent.title}</p>
         <p className="pt-4 text-xl font-normal">{textContent.description}</p>
       </div>
