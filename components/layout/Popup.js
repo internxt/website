@@ -46,19 +46,19 @@ const Popup = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return 'Black Friday is here!';
+        return 'Lifetime deal!';
       case 'es':
-        return '¡Black Friday ya está aquí!';
+        return '¡Plan lifetime!';
       case 'fr':
-        return 'Le Black Friday est arrivé!';
+        return 'Plan lifetime!';
       default:
-        return 'Black Friday is here!';
+        return 'Lifetime deal!';
     }
   };
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 hidden max-h-[350px] max-w-[300px] flex-col py-5 px-8 lg:${
+      className={`fixed bottom-8 right-8 z-50 hidden h-[300px] w-[300px] flex-col overflow-hidden rounded-2xl bg-primary-dark py-5 px-8 lg:${
         hidePopup ? 'hidden' : 'flex'
       }`}
     >
@@ -67,18 +67,17 @@ const Popup = () => {
           <X className=" text-white" size={32} />
         </button>
       </div>
-      <div className="flex flex-col items-center justify-center space-y-5 text-center text-white">
-        <p className="text-2xl font-bold">{title()}</p>
-        <img src="/images/special-offer/black-friday/discount.png" className="flex h-auto w-auto" />
-        <Link href={buttonLink[lang]}>
-          <button className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
+      <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
+        <p className="text-6xl font-bold">{title()}</p>
+        <Link href={'https://internxt.com/lifetime?utm_source=website&utm_medium=banner&utm_campaign=lifetime'}>
+          <button className="flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-white px-8 text-base text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
             {buttonDeal[lang]}
           </button>
         </Link>
+        <div className="absolute -left-1 -z-40 flex h-[213px] w-[313px] pb-3">
+          <img src="/images/lifetime/infinity.svg" className="flex h-auto w-auto" />
+        </div>
       </div>
-      <div
-        className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.neonBlur} pointer-events-none origin-center rounded-2xl`}
-      />
     </div>
   );
 };

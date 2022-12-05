@@ -71,7 +71,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <TestimonialsSection textContent={langJson.blackFriday} lang={lang} />
 
-      <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
+      <CtaSection textContent={langJson.cta2} country={country} lang={lang} isAffiliates={isAffiliate} />
 
       <FaqSection textContent={langJson.blackFriday} />
 

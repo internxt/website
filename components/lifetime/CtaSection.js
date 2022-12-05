@@ -3,7 +3,7 @@ import React from 'react';
 const CtaSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-primary-dark">
-      <div className="flex flex-col items-center justify-center py-12 pb-7 lg:px-20">
+      <div className="flex flex-col items-center justify-center py-12 pb-12 lg:px-20">
         <div className="flex flex-col text-center text-white">
           <p className="text-3xl font-semibold">{textContent.title}</p>
           <p className="pt-4 pb-5 text-base font-normal">{textContent.description}</p>

@@ -59,7 +59,7 @@ const Countdown = ({ dt }) => {
             countdownDisableDays ? 'text-transparent' : 'text-white'
           } delay-350 transition-colors duration-150`}
         >
-          0
+          00
         </p>
         <p className={`${countdownDisableDays ? 'text-transparent' : 'text-white'} font-semibold`}> : </p>
         <p
@@ -67,7 +67,7 @@ const Countdown = ({ dt }) => {
             countdownDisableHours ? 'text-transparent' : 'text-white'
           } delay-350 transition-colors duration-150`}
         >
-          0
+          00
         </p>
         <p className={`${countdownDisableHours ? 'text-transparent' : 'text-white'} font-semibold`}>:</p>
         <p
@@ -75,7 +75,7 @@ const Countdown = ({ dt }) => {
             countdownDisableMinutes ? 'text-transparent' : 'text-white'
           } delay-350 transition-colors duration-150`}
         >
-          0
+          00
         </p>
         <p className={`${countdownDisableMinutes ? 'text-transparent' : 'text-white'} font-semibold`}>:</p>
         <p
@@ -83,7 +83,7 @@ const Countdown = ({ dt }) => {
             countdownDisableSeconds ? 'text-transparent' : 'text-white'
           } delay-350 transition-colors duration-150`}
         >
-          0
+          00
         </p>
       </div>
     </div>

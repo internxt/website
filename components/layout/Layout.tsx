@@ -65,8 +65,8 @@ LayoutProps) {
           }}
         />
       </Head>
-      <Popup />
-      <BFBanner />
+      {/* <Popup />
+      <BFBanner /> */}
       {children}
     </>
   );

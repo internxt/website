@@ -2,13 +2,10 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "Le Black friday ",
-        "line2": "est arrivé!"
+        "line1": "Le Black Friday",
+        "line2": "est terminé..."
       },
       "description": "Obtenez 60% de réduction sur notre offre annuelle de 2TB.",
-      "button": {
-        "text": "Profitez de l'offre"
-      },
       "pricingTable": {
         "only": "Seulement",
         "priceNow": "3.59",
@@ -30,7 +27,7 @@
     },
     "BestStorage": {
       "title": "La meilleure offre de stockage en nuage du Black Friday.",
-      "subtitle": "Internxt offre une réduction sur la confidentialité et la sécurité.",
+      "subtitle": "La remise d'Internxt sur la vie privée sera de retour l'année prochaine !",
       "button": {
         "text": "Obtenez l'offre"
       }
@@ -165,8 +162,15 @@
     }
   },
   "cta": {
-    "title": "Activez votre offre de 60% de réduction pour le Black Friday!",
-    "subtitle": "Bénéficiez d'une réduction de 60% sur une année complète de notre plus grand plan de 2TB!",
+    "title": "Le Black Friday est terminé...",
+    "subtitle": "Notre vente est terminée, mais vous pouvez encore obtenir une confidentialité abordable !",
+    "only": "Seulement",
+    "priceNow": "3.59",
+    "month": "/mois"
+  },
+  "cta2": {
+    "title": "Le Black Friday est terminé...",
+    "subtitle": "Notre vente est terminée, mais vous pouvez encore obtenir une confidentialité abordable !",
     "only": "Seulement",
     "priceNow": "3.59",
     "month": "/mois"
