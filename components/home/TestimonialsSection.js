@@ -70,7 +70,7 @@ const TestimonialsSection = ({ textContent }) => {
                   <p className="text-xl font-semibold">{card.name}</p>
                   {card.name.includes('Eva') ? (
                     <Link href={'https://fixthephoto.com/internxt-review.html'}>
-                      <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
+                      <a className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</a>
                     </Link>
                   ) : (
                     <p className="text-lg font-normal text-gray-50">{card.enterprise}</p>
