@@ -3,11 +3,11 @@
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "planTitles": {
     "individuals": "Plans Individuels",
-    "business": "Plans Professionels"
+    "business": "Plans d'Affaires"
   },
   "changePlan": {
     "toIndividuals": "Passer aux plans Individuels",
-    "toBusiness": "Passer aux plans Professionels"
+    "toBusiness": "Passer aux plans d'Affaires"
   },
   "billingFrequency": {
     "monthly": "Mensuel",

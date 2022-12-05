@@ -49,7 +49,7 @@ export const BFBannerText = {
 };
 
 export const buttonLink = {
-  en: 'https://internxt.com/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday',
-  es: 'https://internxt.com/es/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday',
-  fr: 'https://internxt.com/fr/black-friday?utm_source=website&utm_medium=banner&utm_campaign=blackfriday',
+  en: 'https://internxt.com/lifetime',
+  es: 'https://internxt.com/es/lifetime',
+  fr: 'https://internxt.com/fr/lifetime',
 };

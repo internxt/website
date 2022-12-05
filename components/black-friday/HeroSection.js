@@ -48,21 +48,21 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
     <section className="relative -mt-16 flex w-full flex-col overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden">
         <div className="flex w-full max-w-screen-xl flex-col items-center justify-center py-16 sm:mb-6 md:flex-row lg:mx-32">
-          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
+          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center pt-5 text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
             <Link href="/" passHref>
-              <img src="./../logos/internxt/white.svg" className="-mt-5 cursor-pointer" />
+              <img src="/logos/internxt/white.svg" className="-mt-5 cursor-pointer" />
             </Link>
             <div className="flex flex-row pb-6 pt-16">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown />
+              <Countdown dt={'2022-12-04T00:00:00'} />
             </div>
             <h1 className="text-7xl font-semibold text-white">
               {textContent.HeroSection.title.line1}
               <br />
               {textContent.HeroSection.title.line2}
             </h1>
-            <p className="mt-6 text-3xl text-white">{HeroSectionDescription}</p>
-            <p className="pt-3 text-5xl font-bold text-primary">
+            {/*<p className="mt-6 text-3xl text-white">{HeroSectionDescription}</p>
+             <p className="pt-3 text-5xl font-bold text-primary">
               {currency() === '€' ? (
                 <>
                   {textContent.HeroSection.pricingTable.only} {currency()}
@@ -76,7 +76,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
                   {textContent.HeroSection.pricingTable.month}
                 </>
               )}
-            </p>
+            </p> */}
             <div className="pt-10">
               <ButtonDeal lang={lang} />
             </div>
@@ -86,7 +86,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
               <div className="flex">
                 <img src="/images/special-offer/black-friday/file_icons.png" />
               </div>
-              {isAffiliate ? (
+              {/* {isAffiliate ? (
                 <div className="absolute m-auto flex max-h-[300px] max-w-[612px]">
                   <img src="/images/special-offer/black-friday/discount-70.png" />
                 </div>
@@ -94,7 +94,10 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
                 <div className="absolute m-auto flex max-h-[300px] max-w-[612px]">
                   <img src="/images/special-offer/black-friday/discount.png" />
                 </div>
-              )}
+              )} */}
+              <div className="absolute m-auto flex max-h-[300px] max-w-[300px]">
+                <img src="/images/special-offer/black-friday/inxtBF.png" />
+              </div>
             </div>
           </div>
         </div>
