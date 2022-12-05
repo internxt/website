@@ -13,7 +13,7 @@ const ButtonDeal = ({ lang }) => {
           window.location.href = '/pricing';
         }}
       >
-        {lang === 'fr' ? "Obtenez l'offre" : 'Get our subscription plans'}
+        {lang === 'fr' ? "Voir plans d'abonnement" : 'Get our subscription plans'}
       </button>
     </>
   );
