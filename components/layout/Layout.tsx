@@ -54,15 +54,21 @@ LayoutProps) {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
-        <meta property="og:image" content={`${INTERNXT_URL}/images/special-offer/black-friday/imgLink.png`} />
+        <meta
+          property="og:image"
+          content={`${INTERNXT_URL}/images/special-offer/black-friday/previewLinkBFEnded.png`}
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={`${INTERNXT_URL}/images/special-offer/black-friday/imgLink.png`} />
+        <meta
+          property="twitter:image"
+          content={`${INTERNXT_URL}/images/special-offer/black-friday/previewLinkBFEnded.png`}
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
-        {/* <meta name="thumbnail" content={'Tumbnail img'} /> */}
+        <meta name="thumbnail" content={`${INTERNXT_URL}/images/special-offer/black-friday/googleSearchBFEnded.png`} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="icon" href="/favicon.ico" />
