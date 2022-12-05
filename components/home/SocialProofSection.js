@@ -54,15 +54,16 @@ const SocialProofSection = ({ textContent, lang }) => (
             <div
               className="flex h-20 w-2/5 flex-shrink-0 cursor-pointer items-center justify-center md:w-1/3 xl:w-auto xl:px-6"
               onClick={() => {
-                window.location.href = 'https://opentrustedcloud.ovhcloud.com/es-es/';
+                window.open('https://opentrustedcloud.ovhcloud.com/es-es/', '_blank');
               }}
+              target="_blank"
             >
               <img
                 loading="lazy"
                 src="../../logos/investors/open–trusted-cloud.png"
                 draggable="false"
                 alt="OTC logo"
-                className="mx-auto h-7"
+                className="mx-auto h-[26px]"
               />
             </div>
           )}
