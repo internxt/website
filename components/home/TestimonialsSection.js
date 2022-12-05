@@ -69,9 +69,15 @@ const TestimonialsSection = ({ textContent }) => {
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   {card.name.includes('Eva') ? (
-                    <Link href={'https://fixthephoto.com/internxt-review.html'}>
-                      <a className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</a>
-                    </Link>
+                    <div>
+                      <a
+                        target={'_blank'}
+                        href={'https://fixthephoto.com/internxt-review.html'}
+                        className="cursor-pointer text-lg font-normal text-gray-50"
+                      >
+                        {card.enterprise}
+                      </a>
+                    </div>
                   ) : (
                     <p className="text-lg font-normal text-gray-50">{card.enterprise}</p>
                   )}
@@ -120,7 +126,7 @@ const TestimonialsSection = ({ textContent }) => {
                     <div className="flex flex-col pl-4">
                       <p className="text-xl font-semibold">{card.name}</p>
                       {card.name.includes('Eva') ? (
-                        <Link href={'https://fixthephoto.com/internxt-review.html'}>
+                        <Link href={'https://fixthephoto.com/internxt-review.html'} target="_blank">
                           <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
                         </Link>
                       ) : (
