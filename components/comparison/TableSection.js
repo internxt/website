@@ -31,7 +31,7 @@ const HeroSection = ({ textContent }) => {
         live_chat_support: true,
         open_source: true,
         file_requests: false,
-        password_protection_for_links: false,
+        password_protection_for_links: true,
         download_limits_for_links: true,
       },
     },
@@ -329,55 +329,55 @@ const HeroSection = ({ textContent }) => {
   return (
     <section
       id="buy"
-      className="relative flex flex-col w-full pt-16 bg-gradient-to-b from-white via-neutral-10 to-white"
+      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-16"
     >
       <div className="flex flex-col">
         {/* Header */}
-        <div className="relative flex flex-col items-center justify-center px-6 pt-20 md:pt-32 pb-16 bg-primary text-white overflow-hidden z-20">
-          <div className="relative flex flex-col items-center justify-center mb-16 md:mb-8 z-10">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-center mb-4">
+        <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-primary px-6 pt-20 pb-16 text-white md:pt-32">
+          <div className="relative z-10 mb-16 flex flex-col items-center justify-center md:mb-8">
+            <h1 className="mb-4 text-center text-4xl font-medium sm:text-5xl md:text-6xl">
               {textContent.title.line1}
               <br className="hidden sm:inline-flex" /> {textContent.title.line2}
             </h1>
 
-            <h2 className="text-xl md:text-lg text-center">{textContent.description}</h2>
+            <h2 className="text-center text-xl md:text-lg">{textContent.description}</h2>
           </div>
 
-          <div className="relative flex flex-col items-center justify-center z-10">
+          <div className="relative z-10 flex flex-col items-center justify-center">
             <a
               href="https://drive.internxt.com/new"
               id="get-started-link"
               target="_top"
               rel="noreferrer"
-              className="flex justify-center w-full sm:w-auto sm:inline-flex items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-primary bg-white focus:outline-none"
+              className="flex w-full items-center justify-center rounded-xl border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:inline-flex sm:w-auto sm:text-base"
             >
               {textContent.cta}
             </a>
 
-            <p className="text-base md:text-xs text-center mt-1.5 opacity-80">{textContent.noCredirCardNeeded}</p>
+            <p className="mt-1.5 text-center text-base opacity-80 md:text-xs">{textContent.noCredirCardNeeded}</p>
           </div>
 
-          <div className="absolute top-2/3 left-0 w-full h-full rounded-t-full-percentage scale-y-200 filter blur-3xl bg-primary-dark" />
+          <div className="absolute top-2/3 left-0 h-full w-full scale-y-200 rounded-t-full-percentage bg-primary-dark blur-3xl filter" />
         </div>
 
         {/* Table */}
-        <div className="flex flex-col items-center justify-start py-10 bg-white w-screen overflow-x-auto xl:overflow-x-visible">
-          <div className="flex flex-col items-center justify-center px-6 mx-auto">
-            <table className="group relative border-collapse table-auto text-base text-center text-cool-gray-80 bg-none mb-20">
+        <div className="flex w-screen flex-col items-center justify-start overflow-x-auto bg-white py-10 xl:overflow-x-visible">
+          <div className="mx-auto flex flex-col items-center justify-center px-6">
+            <table className="group relative mb-20 table-auto border-collapse bg-none text-center text-base text-cool-gray-80">
               {/* Competitors */}
-              <thead className="xl:sticky top-16 h-44 text-cool-gray-90 z-20">
-                <tr className="relative z-10 bg-white bg-opacity-80 backdrop-filter backdrop-blur-md">
+              <thead className="top-16 z-20 h-44 text-cool-gray-90 xl:sticky">
+                <tr className="relative z-10 bg-white bg-opacity-80 backdrop-blur-md backdrop-filter">
                   {/* Drag hint */}
-                  <th className="h-44 pointer-events-none align-bottom">
-                    <div className="flex xl:hidden flex-row items-center justify-start h-32 space-x-4 p-6 opacity-100 group-hover:opacity-0 delay-1000 transition-opacity duration-250">
+                  <th className="pointer-events-none h-44 align-bottom">
+                    <div className="duration-250 flex h-32 flex-row items-center justify-start space-x-4 p-6 opacity-100 transition-opacity delay-1000 group-hover:opacity-0 xl:hidden">
                       <img
                         loading="lazy"
-                        className="object-cover object-center w-8 h-8"
+                        className="h-8 w-8 object-cover object-center"
                         src="/images/comparison/drag_horizontal.webp"
                         draggable="false"
                         alt="Drag horizontal"
                       />
-                      <div className="flex flex-col items-start justify-center text-sm text-left text-cool-gray-40 mt-1 leading-tight font-medium">
+                      <div className="mt-1 flex flex-col items-start justify-center text-left text-sm font-medium leading-tight text-cool-gray-40">
                         <span>{textContent.table.drag.line1}</span>
                         <span>{textContent.table.drag.line2}</span>
                       </div>
@@ -385,10 +385,10 @@ const HeroSection = ({ textContent }) => {
                   </th>
                   <th className="relative p-16 text-lg font-medium">
                     {' '}
-                    <div className="absolute bottom-0 left-0 flex flex-col items-center justify-center w-32 h-32 bg-blue-10 rounded-t-2xl space-y-1.5">
+                    <div className="absolute bottom-0 left-0 flex h-32 w-32 flex-col items-center justify-center space-y-1.5 rounded-t-2xl bg-blue-10">
                       <img
                         loading="lazy"
-                        className="object-cover object-center w-12 h-12"
+                        className="h-12 w-12 object-cover object-center"
                         src={`/images/comparison/competitors/${competitors[0].logo}.webp`}
                         draggable="false"
                         alt={`${competitors[0].name} logo`}
@@ -400,13 +400,13 @@ const HeroSection = ({ textContent }) => {
                     <th className="relative p-14 font-normal" key={col.name}>
                       {' '}
                       <div
-                        className={`absolute bottom-0 left-0 flex flex-col items-center justify-center w-28 h-28 rounded-t-lg space-y-1 ${
+                        className={`absolute bottom-0 left-0 flex h-28 w-28 flex-col items-center justify-center space-y-1 rounded-t-lg ${
                           index % 2 !== 0 && 'bg-cool-gray-5'
                         }`}
                       >
                         <img
                           loading="lazy"
-                          className="object-cover object-center w-8 h-8"
+                          className="h-8 w-8 object-cover object-center"
                           src={`/images/comparison/competitors/${col.logo}.webp`}
                           draggable="false"
                           alt={`${col.name} logo`}
@@ -421,9 +421,9 @@ const HeroSection = ({ textContent }) => {
               {table.map((section) => (
                 <Fragment key={section.name}>
                   {/* Section */}
-                  <thead className="xl:sticky top-60 h-14 md:h-12 text-left text-cool-gray-90 z-10">
-                    <tr className="bg-cool-gray-10 font-medium h-14 md:h-12">
-                      <td className="px-6 rounded-l-lg text-lg whitespace-nowrap">{section.name}</td>
+                  <thead className="top-60 z-10 h-14 text-left text-cool-gray-90 md:h-12 xl:sticky">
+                    <tr className="h-14 bg-cool-gray-10 font-medium md:h-12">
+                      <td className="whitespace-nowrap rounded-l-lg px-6 text-lg">{section.name}</td>
                       {competitors.map((item) => (
                         <td key={item.name} />
                       ))}
@@ -434,17 +434,17 @@ const HeroSection = ({ textContent }) => {
                   <tbody className="divide-y divide-cool-gray-10">
                     {section.rows.map((row, rowIndex) => (
                       <tr className="h-14 md:h-12" key={row.title}>
-                        <td className="text-left text-base px-6 whitespace-nowrap">{row.title}</td>
+                        <td className="whitespace-nowrap px-6 text-left text-base">{row.title}</td>
                         <td className={`${rowIndex !== 0 && 'border-t border-blue-20 border-opacity-50'} bg-blue-10`}>
-                          <div className="flex flex-col items-center justify-center h-full">
+                          <div className="flex h-full flex-col items-center justify-center">
                             {typeof row.feature[0] === 'boolean' &&
                               (row.feature[0] ? (
-                                <UilCheck className="w-6 h-6 text-blue-50" />
+                                <UilCheck className="h-6 w-6 text-blue-50" />
                               ) : (
-                                <UilMinus className="w-6 h-6 text-blue-20" />
+                                <UilMinus className="h-6 w-6 text-blue-20" />
                               ))}
                             {typeof row.feature[0] === 'string' && (
-                              <span className="text-primary font-medium">{row.feature[0]}</span>
+                              <span className="font-medium text-primary">{row.feature[0]}</span>
                             )}
                           </div>
                         </td>
@@ -453,12 +453,12 @@ const HeroSection = ({ textContent }) => {
                             className={`${columnIndex % 2 !== 0 && 'bg-cool-gray-5'}`}
                             key={`${row.title}${columnIndex.toString()}`}
                           >
-                            <div className="flex flex-col items-center justify-center h-full">
+                            <div className="flex h-full flex-col items-center justify-center">
                               {typeof feature === 'boolean' &&
                                 (feature ? (
-                                  <UilCheck className="w-6 h-6 text-cool-gray-40" />
+                                  <UilCheck className="h-6 w-6 text-cool-gray-40" />
                                 ) : (
-                                  <UilMinus className="w-6 h-6 text-cool-gray-20" />
+                                  <UilMinus className="h-6 w-6 text-cool-gray-20" />
                                 ))}
                               {typeof feature === 'string' && <span className="text-cool-gray-40">{feature}</span>}
                             </div>
@@ -480,7 +480,7 @@ const HeroSection = ({ textContent }) => {
                       id="get-started-link"
                       target="_top"
                       rel="noreferrer"
-                      className="absolute top-full left-0 h-14 md:h-10 w-full flex flex-col items-center justify-center rounded-b-2xl bg-primary text-white text-lg md:text-base font-medium whitespace-nowrap"
+                      className="absolute top-full left-0 flex h-14 w-full flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white md:h-10 md:text-base"
                     >
                       {textContent.table.startNow}
                     </a>
