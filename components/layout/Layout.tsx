@@ -13,7 +13,7 @@ interface LayoutProps {
   disableMailerlite?: boolean;
   disableDrift?: boolean;
   isProduction?: boolean;
-  isSpecialOffer?: boolean;
+  specialOffer?: string;
   host?: string;
   lang?: string;
 }
@@ -26,7 +26,7 @@ export default function Layout({
   description = 'Internxt',
   segmentName = null,
   disableMailerlite = false,
-  isSpecialOffer = true,
+  specialOffer,
   disableDrift = true,
   isProduction = process.env.NODE_ENV === 'production',
   lang,
@@ -55,26 +55,12 @@ LayoutProps) {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
-        <meta
-          property="og:image"
-          content={
-            isSpecialOffer
-              ? `${INTERNXT_URL}/images/previewLink/Global.png`
-              : `${INTERNXT_URL}/images/previewLink/LifetimePreviewLink.png`
-          }
-        />
+        <meta property="og:image" content={specialOffer || `${INTERNXT_URL}/images/previewLink/Global.png`} />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta
-          property="twitter:image"
-          content={
-            isSpecialOffer
-              ? `${INTERNXT_URL}/images/previewLink/Global.png`
-              : `${INTERNXT_URL}/images/previewLink/LifetimePreviewLink.png`
-          }
-        />
+        <meta property="twitter:image" content={specialOffer || `${INTERNXT_URL}/images/previewLink/Global.png`} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="thumbnail" content={`${INTERNXT_URL}/images/previewLink/LifetimeGoogleSearch.png`} />
