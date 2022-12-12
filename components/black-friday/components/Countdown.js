@@ -8,7 +8,6 @@ const Countdown = ({ dt }) => {
 
   function CountDownTimer(id) {
     const end = new Date(dt);
-    console.log(end);
 
     const second = 1000;
     const minute = second * 60;
