@@ -42,7 +42,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       description={metatags[0].description}
       segmentName="Lifetime"
       lang={lang}
-      isSpecialOffer
+      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
       cta={['Default']}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
