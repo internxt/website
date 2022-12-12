@@ -36,7 +36,7 @@ const Countdown = ({ dt }) => {
       if (minutes === 0 && hours === 0 && days === 0) setCountdownDisableMinutes(true);
       if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) setCountdownDisableSeconds(true);
 
-      document.querySelector(`#${id} .days`).innerHTML = days;
+      document.querySelector(`#${id} .days`).innerHTML = days < 10 ? `0${days}` : days;
       document.querySelector(`#${id} .hours`).innerHTML = hours < 10 && days > 0 ? `0${hours}` : hours;
       document.querySelector(`#${id} .minutes`).innerHTML =
         minutes < 10 && hours > 0 && days > 0 ? `0${minutes}` : minutes;
