@@ -40,7 +40,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="Lifetime Landing Page"
+      segmentName="Lifetime"
       lang={lang}
       cta={['Default']}
     >
