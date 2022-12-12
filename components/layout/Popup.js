@@ -11,7 +11,7 @@ const Popup = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  if (router.pathname === '/black-friday') {
+  if (router.pathname === '/lifetime') {
     return null;
   }
 
