@@ -108,11 +108,11 @@ export default function Navbar(props: NavbarProps) {
   // MESSAGE FILTERING
 
   useEffect(() => {
-    const auth = window.document.getElementById('auth')['contentWindow'];
-    const postMessage = (data) => {
-      auth.postMessage(data, `${DRIVE_WEB_URL}/auth`);
-    };
-    const permitedDomains = [DRIVE_WEB_URL, 'https://internxt.com'];
+    // const auth = window.document.getElementById('auth')['contentWindow'];
+    // const postMessage = (data) => {
+    //   auth.postMessage(data, `${DRIVE_WEB_URL}/auth`);
+    // };
+    const permitedDomains = [DRIVE_WEB_URL, 'https://internxt.com', 'http://localhost:3001'];
 
     const onRecieveMessage = (e) => {
       if (permitedDomains.includes(e.origin)) {
@@ -528,7 +528,7 @@ export default function Navbar(props: NavbarProps) {
       </div>
 
       {/* Auth iframe */}
-      {/* <iframe id="auth" className="hidden" src={`${DRIVE_WEB_URL}/auth`} /> */}
+      {/* <iframe id="auth" className="hidden" src={`${DRIVE_WEB_URL}/auth`} />
 
       {/* Auth dialog */}
       <Transition appear show={showAuth} as={Fragment}>
