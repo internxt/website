@@ -50,7 +50,7 @@ LayoutProps) {
         <link rel="alternate" hrefLang="es" href={`${INTERNXT_URL}/es/${pageURL}`} />
         <link rel="alternate" hrefLang="fr" href={`${INTERNXT_URL}/fr/${pageURL}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
-        <link rel="preload" href="/fonts/NeueEinstellung" as="font" />
+        <link rel="preload" href="/fonts/NeueEinstellung/NeueEinstellung.css" as="font" type="font/css" />
         <link rel="preload" href="styles/globals.scss" as="style" />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
