@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import Testimonial from './Testimonial';
-import { OTCLink } from '../TextWithoutJson';
+import Image from 'next/image';
 
 const SocialProofSection = ({ textContent, lang }) => (
   <section>
@@ -25,11 +24,14 @@ const SocialProofSection = ({ textContent, lang }) => (
             />
           </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img
+            <Image
               loading="lazy"
-              src="../../logos/investors/esade.webp"
+              src="https://internxt.com/logos/investors/esade.webp"
               className="mx-auto h-7"
               draggable="false"
+              layout="responsive"
+              width={200}
+              height={50}
               alt="esade logo"
             />
           </div>
