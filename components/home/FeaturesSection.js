@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { UilAngleRightB } from '@iconscout/react-unicons';
 import styles from './FeaturesSection.module.scss';
+import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang }) => {
   const router = useRouter();
@@ -90,11 +91,14 @@ const FeaturesSection = ({ textContent, lang }) => {
             className="card-soft z-10 col-span-2 flex flex-col space-y-8 justify-self-start overflow-hidden rounded-3xl bg-white p-12 px-8 sm:col-span-1 md:flex-1 lg:p-16 lg:py-14"
           >
             <div className="flex flex-col">
-              <img
+              <Image
                 loading="lazy"
                 className="mb-6 flex lg:max-w-xs"
                 src="/images/home/devicesDesc.webp"
                 draggable="false"
+                width={600}
+                height={350}
+                layout="responsive"
                 alt="dektop, laptop and phone with Internxt app"
               />
             </div>
@@ -129,12 +133,15 @@ const FeaturesSection = ({ textContent, lang }) => {
             data-aos-duration="500"
             className="card-soft z-20 col-span-2 flex flex-col space-y-8 justify-self-start overflow-hidden rounded-3xl bg-white p-12 px-8 sm:col-span-1 md:flex-1 lg:p-16 lg:py-14"
           >
-            <div className="flex flex-col">
-              <img
+            <div className="relative flex flex-col">
+              <Image
                 loading="lazy"
                 className="mb-6 flex lg:max-w-xs"
                 src="/images/home/privacy-shield.webp"
                 draggable="false"
+                layout="responsive"
+                width={600}
+                height={350}
                 alt="privacy green shield icon"
               />
             </div>

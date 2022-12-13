@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import Testimonial from './Testimonial';
-import { OTCLink } from '../TextWithoutJson';
+import Image from 'next/image';
 
 const SocialProofSection = ({ textContent, lang }) => (
   <section>

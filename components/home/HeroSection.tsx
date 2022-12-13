@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
 import { openAuthDialog } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
+import Image from 'next/image';
 
 export default function HeroSection({ textContent, lang }) {
   const [formError, setFormError] = useState<string | null>(null);
@@ -34,11 +35,14 @@ export default function HeroSection({ textContent, lang }) {
       <div className="mx-4 border-b border-gray-5 pt-24 lg:mx-10 xl:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row">
           <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
-            <img
+            <Image
               loading="lazy"
               src="/images/home/devicesMobileView.webp"
               draggable="false"
+              layout="responsive"
               alt="laptop and phone with Internxt app"
+              width={270}
+              height={160}
             />
           </div>
 
@@ -67,18 +71,24 @@ export default function HeroSection({ textContent, lang }) {
             </div>
           </div>
 
-          <div className="ml-5 hidden max-w-2xl flex-grow flex-col md:flex xl:ml-20">
-            <img
+          <div className="ml-5 hidden max-w-2xl flex-grow flex-col xl:ml-20 xl:flex">
+            <Image
               loading="lazy"
               className="hidden xl:flex"
               src="/images/home/devicesAsc.webp"
               draggable="false"
+              width={600}
+              layout="responsive"
+              height={450}
               alt="desktop, laptop and phone with Internxt app"
             />
-
-            <img
+          </div>
+          <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex xl:ml-20 xl:hidden">
+            <Image
               loading="lazy"
-              className="flex translate-x-10 transform xl:hidden"
+              width={600}
+              height={450}
+              layout="responsive"
               src="/images/home/devicesAscCut.webp"
               draggable="false"
               alt="desktop, laptop and phone with Internxt app"
