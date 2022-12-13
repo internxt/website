@@ -40,7 +40,7 @@ const TestimonialsSection = ({ textContent }) => {
               className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" />
+                <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   <p className="text-lg font-light text-gray-50">{card.enterprise}</p>
@@ -65,7 +65,7 @@ const TestimonialsSection = ({ textContent }) => {
               className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" />
+                <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   {card.name.includes('Eva') ? (
@@ -102,7 +102,7 @@ const TestimonialsSection = ({ textContent }) => {
               className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" />
+                <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   <p className="text-lg font-light text-gray-50">{card.enterprise}</p>
@@ -122,7 +122,7 @@ const TestimonialsSection = ({ textContent }) => {
               <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                 <div className="flex w-auto max-w-[300px] flex-col">
                   <div className="flex w-[331px] flex-row">
-                    <img src="/images/home/testimonials/Comas.svg" />
+                    <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
                     <div className="flex flex-col pl-4">
                       <p className="text-xl font-semibold">{card.name}</p>
                       {card.name.includes('Eva') ? (

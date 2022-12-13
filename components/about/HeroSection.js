@@ -55,19 +55,31 @@ const HeroSection = ({ textContent, lang }) => (
           <div className="flex w-full flex-row flex-wrap items-start justify-between">
             <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
-                <Image src="/images/about/logos/forbes.webp" alt="Forbes Logo" width={125} height={32} />
+                <Image
+                  src="/images/about/logos/forbes.webp"
+                  alt="Forbes Logo"
+                  width={125}
+                  height={32}
+                  loading={'lazy'}
+                />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.forbes.caption1}</p>
               </div>
             </div>
             <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
-                <Image src="/images/about/logos/southsummit.webp" alt="South Summit Logo" width={70} height={32} />
+                <Image
+                  src="/images/about/logos/southsummit.webp"
+                  alt="South Summit Logo"
+                  width={70}
+                  height={32}
+                  loading={'lazy'}
+                />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.southsummit.caption1}</p>
               </div>
             </div>
             <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
-                <Image src="/images/about/logos/tnw.webp" alt="TNW Logo" width={112} height={32} />
+                <Image src="/images/about/logos/tnw.webp" alt="TNW Logo" width={112} height={32} loading={'lazy'} />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.tnw.caption1}</p>
               </div>
             </div>
@@ -78,6 +90,7 @@ const HeroSection = ({ textContent, lang }) => (
                   alt="Startup Valencia Logo"
                   width={90}
                   height={32}
+                  loading={'lazy'}
                 />
                 <p className="whitespace-nowrap text-base">
                   {textContent.recognitions.brands.startupvalencia.caption1}
