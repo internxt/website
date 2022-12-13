@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CaretLeft, CaretRight } from 'phosphor-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const TestimonialsSection = ({ textContent }) => {
   const data = textContent.cards;
@@ -40,7 +41,14 @@ const TestimonialsSection = ({ textContent }) => {
               className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
+                <Image
+                  src="/images/home/testimonials/Comas.svg"
+                  loading="lazy"
+                  draggable={false}
+                  width={53}
+                  height={56}
+                  alt="Quote symbol"
+                />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   <p className="text-lg font-light text-gray-50">{card.enterprise}</p>
@@ -53,6 +61,7 @@ const TestimonialsSection = ({ textContent }) => {
             <button
               className="z-10 hidden h-10 w-10 items-center justify-center rounded-full bg-primary bg-opacity-40  text-3xl text-white drop-shadow-lg hover:bg-opacity-100 xl:flex"
               onClick={onPrev}
+              aria-label="Prvious"
             >
               <CaretLeft size={32} />
             </button>
@@ -65,7 +74,14 @@ const TestimonialsSection = ({ textContent }) => {
               className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
+                <Image
+                  src="/images/home/testimonials/Comas.svg"
+                  loading="lazy"
+                  draggable={false}
+                  width={53}
+                  height={56}
+                  alt="Quote symbol"
+                />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   {card.name.includes('Eva') ? (
@@ -92,6 +108,7 @@ const TestimonialsSection = ({ textContent }) => {
             <button
               className="z-10 hidden h-10 w-10 items-center justify-center rounded-full bg-primary bg-opacity-50 text-3xl text-white drop-shadow-lg hover:bg-opacity-100 xl:flex"
               onClick={onNext}
+              aria-label="Next"
             >
               <CaretRight size={32} />
             </button>
@@ -102,7 +119,14 @@ const TestimonialsSection = ({ textContent }) => {
               className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-row">
-                <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
+                <Image
+                  src="/images/home/testimonials/Comas.svg"
+                  loading="lazy"
+                  draggable={false}
+                  width={53}
+                  height={56}
+                  alt="Quote symbol"
+                />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
                   <p className="text-lg font-light text-gray-50">{card.enterprise}</p>

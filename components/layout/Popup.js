@@ -70,7 +70,10 @@ const Popup = () => {
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-6xl font-bold">{title()}</p>
         <Link href={'https://internxt.com/lifetime?utm_source=website&utm_medium=banner&utm_campaign=lifetime'}>
-          <button className="flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-white px-8 text-base text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
+          <button
+            aria-label="Close popup"
+            className="flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-white px-8 text-base text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+          >
             {buttonDeal[lang]}
           </button>
         </Link>
