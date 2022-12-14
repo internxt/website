@@ -11,15 +11,6 @@ const Popup = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  if (router.pathname === '/lifetime') {
-    return null;
-  }
-
-  const handleClose = () => {
-    localStorage.setItem('hidePopup', true);
-    setHidePopup(true);
-  };
-
   React.useEffect(() => {
     const hidePopup = localStorage.getItem('hidePopup');
     if (hidePopup === 'true') {
@@ -36,12 +27,22 @@ const Popup = () => {
         }
       });
     });
+
     return () => {
       ['unload', 'CloseSquare'].forEach((event) => {
         window.removeEventListener(event, () => {});
       });
     };
   }, []);
+
+  if (router.pathname === '/lifetime') {
+    return null;
+  }
+
+  const handleClose = () => {
+    localStorage.setItem('hidePopup', true);
+    setHidePopup(true);
+  };
 
   const title = () => {
     switch (lang) {

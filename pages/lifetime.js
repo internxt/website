@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import AOS from 'aos';
 
 import HeroSection from '../components/lifetime/HeroSection';
 import FeatureSection from '../components/lifetime/FeatureSection';
@@ -31,10 +30,6 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       setCountry(res.data.country);
     });
   });
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <Layout

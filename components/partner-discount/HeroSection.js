@@ -2,9 +2,10 @@ import { Globe, SketchLogo, CloudCheck, FileArrowUp, ClockCounterClockwise } fro
 import React from 'react';
 import ShowSnackbar from '../ShowSnackbar';
 import styles from './Background.module.scss';
+import { toast } from 'react-toastify';
 
 const HeroSection = ({ textContent, isTechradar }) => {
-  const [open, setOpen] = React.useState(false);
+  const open = () => toast.success('Copied to clipboard!');
 
   const subtitle1Partner = textContent.subtitle.split('SPECIAL15')[0];
   const subtitle2Partner = textContent.subtitle.split('SPECIAL15')[1];
@@ -47,14 +48,8 @@ const HeroSection = ({ textContent, isTechradar }) => {
     } else {
       navigator.clipboard.writeText(flash);
     }
-    setOpen(true);
+    open();
   };
-
-  if (open) {
-    setTimeout(() => {
-      setOpen(false);
-    }, 5000);
-  }
 
   return (
     <>
@@ -104,7 +99,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
             <div
               className={`absolute top-16 left-0 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
             />
-            <ShowSnackbar open={open} />
+            <ShowSnackbar />
           </section>
           <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
             {FeatureSection.map((item, index) => (
@@ -157,7 +152,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
               <img src="/images/home/devicesDesc.png" alt="Devices image" />
             </div>
           </div>
-          <ShowSnackbar open={open} />
+          <ShowSnackbar />
           <div
             className={`absolute top-16 left-0 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
           />
