@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import isBrave from '../../lib/brave';
 import Popup from './Popup';
 import BFBanner from './BFBanner';
+import { LiveChatLoaderProvider, Intercom } from 'react-live-chat-loader';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -79,6 +80,9 @@ LayoutProps) {
         />
       </Head>
       <Popup />
+      <LiveChatLoaderProvider providerKey="ta2ffq6n" provider="intercom">
+        <Intercom color="#091E42" />
+      </LiveChatLoaderProvider>
       {/* <BFBanner /> */}
       {children}
     </>

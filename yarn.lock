@@ -2198,6 +2198,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-live-chat-loader@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/react-live-chat-loader/-/react-live-chat-loader-2.8.0.tgz#7ef889fbfc77156df03f429cf10d06af53b13686"
+  integrity sha512-hGKZLha2THVr46hP3oxuAQfhJup05LvzfNP2Bp3mQmiYs7EjSiI5hLF0FdZv+COajYpknV7emG5un50T0tDJwA==
+
 react-markdown@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-6.0.3.tgz#625ec767fa321d91801129387e7d31ee0cb99254"
