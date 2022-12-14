@@ -1,14 +1,17 @@
-import { Alert, Snackbar } from '@mui/material';
-import { ChatCentered } from 'phosphor-react';
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const ShowSnackbar = ({ open }) => {
+const ShowSnackbar = () => {
   return (
-    <Snackbar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} autoHideDuration={5000} bg-white>
-      <Alert severity="success" sx={{ width: '100%' }}>
-        Copy in clipboard!
-      </Alert>
-    </Snackbar>
+    <ToastContainer
+      theme="colored"
+      pauseOnFocusLoss={false}
+      position="bottom-center"
+      hideProgressBar
+      closeButton={false}
+      autoClose={5000}
+    />
   );
 };
 
