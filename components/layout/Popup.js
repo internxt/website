@@ -11,36 +11,11 @@ const Popup = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  React.useEffect(() => {
-    const hidePopup = localStorage.getItem('hidePopup');
-    if (hidePopup === 'true') {
-      setHidePopup(true);
-    }
-    ['unload', 'CloseSquare'].forEach((event) => {
-      window.addEventListener(event, function (e) {
-        if (event === 'unload') {
-          e.preventDefault();
-          localStorage.removeItem('hidePopup');
-        } else {
-          localStorage.setItem('hidePopup', true);
-          setHidePopup(true);
-        }
-      });
-    });
-
-    return () => {
-      ['unload', 'CloseSquare'].forEach((event) => {
-        window.removeEventListener(event, () => {});
-      });
-    };
-  }, []);
-
   if (router.pathname === '/lifetime') {
     return null;
   }
 
   const handleClose = () => {
-    localStorage.setItem('hidePopup', true);
     setHidePopup(true);
   };
 
