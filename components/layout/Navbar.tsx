@@ -528,7 +528,7 @@ export default function Navbar(props: NavbarProps) {
       </div>
 
       {/* Auth iframe */}
-      <iframe id="auth" className="hidden" loading="lazy" src={`${DRIVE_WEB_URL}/auth`} />
+      <iframe id="auth" className="hidden" src={`${DRIVE_WEB_URL}/auth`} />
 
       {/* Auth dialog */}
       <Transition appear show={showAuth} as={Fragment}>

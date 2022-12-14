@@ -4,7 +4,7 @@ import { openAuthDialog } from '../../lib/auth';
 const GetStartedSection = ({ textContent }) => (
   <section className="text-white">
     <div className="content">
-      <div className="flex w-full flex-shrink-0 flex-col justify-center px-10 py-12 text-left sm:items-center sm:text-center md:px-0">
+      <div className="flex w-full flex-shrink-0 flex-col justify-center px-10 py-12 text-center sm:items-center md:px-0">
         <h2 className="mb-4 text-3xl font-medium sm:text-2xl">
           {textContent.title.line1}
           <br className="sm:hidden" /> {textContent.title.line2}
