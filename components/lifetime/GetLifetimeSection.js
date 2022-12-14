@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const GetLifetimeSection = ({ textContent }) => (
   <section className="bg-primary-dark">
@@ -9,10 +10,25 @@ const GetLifetimeSection = ({ textContent }) => (
       </div>
 
       <div className="hidden flex-col px-8 pt-4 lg:flex">
-        <img className="max-w-[673px] text-white" src="/images/lifetime/Devices.png" alt="iPhone, iPad, and Mac" />
+        <Image
+          loading="lazy"
+          width={673}
+          height={354}
+          layout="intrinsic"
+          draggable={false}
+          src="/images/lifetime/Devices.png"
+          alt="iPhone, iPad, and Mac"
+        />
       </div>
       <div className="flex flex-col px-8 pt-4 lg:hidden">
-        <img className="max-h-96 text-white" src="/images/home/devicesMobileView.png" alt="iPhone, iPad, and Mac" />
+        <Image
+          height={384}
+          width={600}
+          loading="lazy"
+          layout="intrinsic"
+          src="/images/home/devicesMobileView.png"
+          alt="iPhone, iPad, and Mac"
+        />
       </div>
     </div>
   </section>

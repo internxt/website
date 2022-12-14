@@ -115,19 +115,9 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       </div>
                     </a>
 
-                    {/* <Link href="/token" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.token}</a>
-                    </Link> */}
-
                     <Link href="/pricing" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.products.pricing}</a>
                     </Link>
-
-                    {/*
-                    <Link href="/security" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.security}</a>
-                    </Link>
-                    */}
                   </div>
                 </div>
               </div>
@@ -161,12 +151,6 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     <Link href="/legal" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.company.legal}</a>
                     </Link>
-
-                    {/*
-                    <Link href="/why-internxt" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.whyInternxt}</a>
-                    </Link>
-                    */}
 
                     <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
                       {textContent.FooterSection.sections.company.support}
@@ -225,20 +209,6 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     <Link href="/privacy-directory" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                     </Link>
-
-                    {/*
-                    <Link href="/library" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.library}</a>
-                    </Link>
-
-                    <Link href="/write-for-us" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.writeForUs}</a>
-                    </Link>
-
-                    <Link href="/glossary" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.cyberSecurityGlossary}</a>
-                    </Link>
-                    */}
 
                     <Link href="/password-checker" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
@@ -388,19 +358,9 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                         </div>
                       </a>
 
-                      {/* <Link href="/token" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.token}</a>
-                      </Link> */}
-
                       <Link href="/pricing" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.products.pricing}</a>
                       </Link>
-
-                      {/*
-                      <Link href="/security" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.security}</a>
-                      </Link>
-                      */}
                     </Disclosure.Panel>
                   </Transition>
                 </div>
@@ -462,12 +422,6 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.company.support}
                       </a>
-
-                      {/*
-                      <Link href="/why-internxt" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.whyInternxt}</a>
-                      </Link>
-                      */}
 
                       <Link href="/cloud-storage-comparison" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.comparison}</a>
@@ -570,20 +524,6 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <Link href="/privacy-directory" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                       </Link>
-
-                      {/*
-                      <Link href="/library" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.library}</a>
-                      </Link>
-
-                      <Link href="/write-for-us" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.writeForUs}</a>
-                      </Link>
-
-                      <Link href="/glossary" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.cyberSecurityGlossary}</a>
-                      </Link>
-                      */}
 
                       <Link href="/password-checker" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
