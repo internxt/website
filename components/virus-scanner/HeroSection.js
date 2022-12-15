@@ -44,7 +44,7 @@ const HeroSection = ({ textContent }) => {
       redirect: 'follow',
     };
 
-    fetch(`${process.env.NEXT_PUBLIC_FILE_SCANNER_URL}/filescan`, requestOptions)
+    fetch(`https://clamav.internxt.com/filescan`, requestOptions)
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
