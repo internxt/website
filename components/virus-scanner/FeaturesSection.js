@@ -1,89 +1,98 @@
 import React from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 
-const FeaturesSection = ({ textContent, lang }) => (
-  <section className="relative bg-gradient-to-b from-cool-gray-5 to-white py-20 lg:pt-10 lg:pb-0">
-    <div className="flex flex-col items-center justify-center px-4 lg:p-16 w-full mx-auto max-w-screen-xl space-y-20">
-      {/* Marketing text */}
-      <div className="flex flex-col w-full space-y-16">
-        <div className="flex flex-col items-start md:items-center text-left md:text-center space-y-6 px-4">
-          <h3 className="text-2xl font-medium">{textContent.marketing.whyToScan.title}</h3>
-          <p className="text-lg text-cool-gray-80 lg:max-w-2xl">{textContent.marketing.whyToScan.description1}</p>
-          <p className="text-lg text-cool-gray-80 lg:max-w-2xl">{textContent.marketing.whyToScan.description2}</p>
-        </div>
+const FeaturesSection = ({ textContent, lang }) => {
+  const maliciousMalwareText = textContent.scanFiles.description.split('malicious malware')[0];
 
-        <div className="flex flex-col items-start md:items-center text-left md:text-center space-y-6 px-4">
-          <h3 className="text-2xl font-medium">{textContent.marketing.freeScanner.title}</h3>
-          <p className="text-lg text-cool-gray-80 lg:max-w-2xl">
-            {textContent.marketing.freeScanner.description.line1}{' '}
-            <a
-              href={`https://blog.internxt.com/${lang === 'es' ? 'es/que-es-un-malware/' : 'what-is-malware/'}`}
-              target="_blank"
-              rel="noreferrer"
-              className="text-primary hover:underline"
-            >
-              {textContent.marketing.freeScanner.description.line2}
-            </a>
-            {textContent.marketing.freeScanner.description.line3}
-          </p>
-          <p className="text-lg text-cool-gray-80 font-medium lg:max-w-2xl">{textContent.marketing.freeScanner.cta}</p>
-        </div>
-      </div>
+  const maliciousMalware = textContent.scanFiles.description.substr(
+    textContent.scanFiles.description.indexOf('malicious malware'),
+    17,
+  );
 
-      {/* Create account */}
-      <div className="flex flex-col-reverse md:flex-row items-stretch justify-center bg-white shadow-subtle rounded-3xl overflow-hidden">
-        <div className="flex flex-col items-start justify-start p-8 md:p-16 md:mr-6 space-y-8">
-          <div className="flex flex-col space-y-2">
-            <h3 className="text-2xl md:text-3xl font-medium">
-              {textContent.createAccount.title.line1}
-              <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line2}
-              <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line3}
-            </h3>
-
-            <p className="text-lg text-cool-gray-80">
-              {textContent.createAccount.description.line1}
-              <br className="hidden md:inline-flex" /> {textContent.createAccount.description.line2}
-              <br className="hidden md:inline-flex" /> {textContent.createAccount.description.line3}
-            </p>
+  return (
+    <section className="relative bg-gradient-to-b from-cool-gray-5 to-white py-20 lg:pt-10 lg:pb-0">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-4 lg:p-16">
+        {/* Marketing text */}
+        <div className="flex w-full flex-col space-y-16">
+          <div className="flex flex-col items-center space-y-6 px-4 text-center">
+            <h3 className="text-4xl font-semibold">{textContent.whyToScan.title}</h3>
+            <div className="flex flex-col">
+              <p className="text-xl font-light text-gray-80">{textContent.whyToScan.description}</p>
+              <p className="text-xl font-light text-gray-80">{textContent.whyToScan.description1}</p>
+            </div>
           </div>
 
-          <a
-            id="get-started-link"
-            href="https://drive.internxt.com/new"
-            target="_top"
-            rel="noreferrer"
-            className="flex flex-row justify-center items-center px-5 h-11 w-full md:w-auto border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary focus:bg-primary-dark focus:outline-none sm:whitespace-nowrap"
-          >
-            <span>
-              {textContent.createAccount.cta.getUpTo10GB}
-              &nbsp;
-            </span>
-            <span className="opacity-75 font-normal">{textContent.createAccount.cta.forFree}</span>
-          </a>
-        </div>
-
-        <div className="flex flex-col w-full md:w-64 lg:w-80 pt-10 md:pt-16 px-8 md:px-0">
-          <img
-            loading="lazy"
-            className="object-cover object-left-top w-full h-full"
-            src="/images/comparison/iphone-and-mac.webp"
-            draggable="false"
-            alt="Internxt Drive web and mobile apps"
-          />
+          <div className="flex flex-col items-center justify-center space-y-16">
+            {/* Viruses hate privacy */}
+            <div className="flex flex-col items-center md:flex-row md:space-x-16">
+              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-center md:max-w-md md:pb-0 md:text-left">
+                <p className="text-3xl font-semibold">{textContent.virusesHatePrivacy.title}</p>
+                <p className="text-xl font-light">{textContent.virusesHatePrivacy.description}</p>
+              </div>
+              <div className="flex">
+                <Image
+                  src={`/images/virus-scanner/VirusesHatePrivacy.png`}
+                  width={573}
+                  height={390}
+                  alt="Viruses Hate Privacy"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            {/* Prevent malware */}
+            <div className="flex flex-col-reverse items-center md:flex-row md:space-x-16">
+              <div className="flex">
+                <Image
+                  src={`/images/virus-scanner/StopMalware.png`}
+                  width={573}
+                  height={390}
+                  alt="Viruses Hate Privacy"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-center md:max-w-md md:pb-0 md:text-left">
+                <p className="text-3xl font-semibold">{textContent.stopMalware.title}</p>
+                <p className="text-xl font-light">{textContent.stopMalware.description}</p>
+              </div>
+            </div>
+            {/* Free online scanner */}
+            <div className="flex flex-col justify-center space-y-5 px-10 text-center md:max-w-3xl">
+              <p className="text-3xl font-semibold">{textContent.freeOnlineScanner.title}</p>
+              <p className="text-xl font-light">{textContent.freeOnlineScanner.description}</p>
+            </div>
+            {/* Scan files card and info */}
+            <div className="flex flex-col items-center md:flex-row md:space-x-16">
+              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
+                <p className="text-center text-3xl font-semibold md:text-start">{textContent.scanFiles.title}</p>
+                <p className="text-xl font-light">
+                  {maliciousMalwareText}
+                  {
+                    <button
+                      onClick={() => {
+                        window.open('https://blog.internxt.com/what-is-malware/', '_blank');
+                      }}
+                    >
+                      <p className="text-primary underline underline-offset-4">{maliciousMalware}</p>
+                    </button>
+                  }
+                  .
+                </p>
+              </div>
+              <div className="flex">
+                <Image
+                  src={`/images/virus-scanner/ScanFiles.png`}
+                  width={573}
+                  height={390}
+                  alt="Viruses Hate Privacy"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Disclaimer */}
-      <div className="max-w-lg text-center text-base md:text-sm text-cool-gray-40">
-        {textContent.disclaimer.text}{' '}
-        <Link href="/legal" lang={lang} passHref>
-          <a target="_blank" rel="noreferrer" className="text-cool-gray-60 hover:underline">
-            {textContent.disclaimer.link}
-          </a>
-        </Link>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default FeaturesSection;

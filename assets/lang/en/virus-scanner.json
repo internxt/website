@@ -42,41 +42,46 @@
     }
   },
   "FeaturesSection": {
-    "marketing": {
-      "whyToScan": {
-        "title": "Why it’s important to use a virus scanner",
-        "description1": "A potent virus can steal sensitive information like your credentials or passwords, encrypt and lock you out of your data, make individual transactions within apps, monitor your computer, and even attack other devices on connected networks. A virus has the potential to  access nearly everything that is locked away on your hardware.",
-        "description2": "Once a virus has propagated onto your laptop or desktop, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why it is crucial to utilize a virus scanner."
-      },
-      "freeScanner": {
-        "title": "A free online virus scanner you can trust",
-        "description": {
-          "line1": "Internxt has and will always put users’ privacy and security first. We are committed to creating a more fair, more free, and more transparent internet for all. That’s why we created our free online virus scanner, to shine a light on stealthy viruses and expose",
-          "line2": "malicious malware",
-          "line3": ". Scan files for viruses in complete confidence."
-        },
-        "cta": "Safety’s only a click away."
-      }
+    "whyToScan": {
+      "title": "Why it’s vital to use a virus scanner",
+      "description": "Scan first, ask questions later.",
+      "description1": "Spot viruses before they infiltrate your devices."
     },
-    "createAccount": {
-      "title": {
-        "line1": "At Internxt, we create secure,",
-        "line2": "encrypted, and zero-knowledge",
-        "line3": "technologies."
-      },
-      "description": {
-        "line1": "All our services are designed with the user's",
-        "line2": "privacy in mind and we always make sure our",
-        "line3": "services keep your data totally safe."
-      },
-      "cta": {
-        "getUpTo10GB": "Get 10GB now",
-        "forFree": "— for free"
-      }
+    "virusesHatePrivacy": {
+      "title": "Viruses hate your privacy",
+      "description": "A potent virus can steal sensitive information like your credentials or passwords, encrypt and lock you out of your data, make individual transactions within apps, monitor your computer, and even attack other devices on connected networks. A virus has the potential to access nearly everything that is locked away on your hardware."
     },
-    "disclaimer": {
-      "text": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our",
-      "link": "Terms and Conditions of Service and Privacy Policy"
+    "stopMalware": {
+      "title": "Stop malware before it stops you",
+      "description": "Once a virus has propagated, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why t is crucial to utilize virus scanner."
+    },
+    "freeOnlineScanner": {
+      "title": "A free online virus scanner you can trust",
+      "description": "Safeguard your privacy with our free virus scanner, designed to help you avoid infection and protect your computer."
+    },
+    "scanFiles": {
+      "title": "Scan files for viruses in complete confidence",
+      "description": "Internxt has and will always put users' privacy nd security first. We are committed to creating  more fair, ore free, nd more transparent internet for all. That's why we created oru free online virus scanner, to shine a light on stealthy viruses and expose malicious malware."
     }
+  },
+  "createAccount": {
+    "title": {
+      "line1": "At Internxt, we create secure,",
+      "line2": "encrypted, and zero-knowledge",
+      "line3": "technologies."
+    },
+    "description": {
+      "line1": "All our services are designed with the user's",
+      "line2": "privacy in mind and we always make sure our",
+      "line3": "services keep your data totally safe."
+    },
+    "cta": {
+      "getUpTo10GB": "Get 10GB now",
+      "forFree": "— for free"
+    }
+  },
+  "disclaimer": {
+    "text": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our",
+    "link": "Terms and Conditions of Service and Privacy Policy"
   }
 }
