@@ -117,6 +117,11 @@ module.exports = {
         destination: '/:lang/cloud-storage-comparison',
         permanent: false,
       },
+      {
+        source: '/:lang/virus-scanner',
+        destination: '/virus-scanner',
+        permanent: false,
+      },
     ];
   },
   images: {
