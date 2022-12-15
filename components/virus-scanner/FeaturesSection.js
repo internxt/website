@@ -25,8 +25,10 @@ const FeaturesSection = ({ textContent, lang }) => {
           <div className="flex flex-col items-center justify-center space-y-16">
             {/* Viruses hate privacy */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
-              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-center md:max-w-md md:pb-0 md:text-left">
-                <p className="text-3xl font-semibold">{textContent.virusesHatePrivacy.title}</p>
+              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
+                <p className="text-center text-3xl font-semibold md:text-start">
+                  {textContent.virusesHatePrivacy.title}
+                </p>
                 <p className="text-xl font-light">{textContent.virusesHatePrivacy.description}</p>
               </div>
               <div className="flex">
@@ -50,14 +52,14 @@ const FeaturesSection = ({ textContent, lang }) => {
                   loading="lazy"
                 />
               </div>
-              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-center md:max-w-md md:pb-0 md:text-left">
-                <p className="text-3xl font-semibold">{textContent.stopMalware.title}</p>
+              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
+                <p className="text-center text-3xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
                 <p className="text-xl font-light">{textContent.stopMalware.description}</p>
               </div>
             </div>
             {/* Free online scanner */}
-            <div className="flex flex-col justify-center space-y-5 px-10 text-center md:max-w-3xl">
-              <p className="text-3xl font-semibold">{textContent.freeOnlineScanner.title}</p>
+            <div className="md;text-left flex flex-col justify-center space-y-5 px-10 py-7 text-center md:max-w-3xl md:py-0">
+              <p className="text-center text-3xl font-semibold">{textContent.freeOnlineScanner.title}</p>
               <p className="text-xl font-light">{textContent.freeOnlineScanner.description}</p>
             </div>
             {/* Scan files card and info */}

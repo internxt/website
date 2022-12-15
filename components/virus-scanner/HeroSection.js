@@ -7,6 +7,7 @@ import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import { UilRedo, UilExclamationOctagon } from '@iconscout/react-unicons';
 import { CheckCircle } from 'phosphor-react';
+import ReactMarkdown from 'react-markdown';
 
 const HeroSection = ({ textContent }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
@@ -161,9 +162,9 @@ const HeroSection = ({ textContent }) => {
               {textContent.subtitle2}
             </h2>
           </div>
-          <div className="flex w-full flex-col lg:w-[312px]">
-            <p className="text-sm font-light text-gray-50">{textContent.footer}</p>
-          </div>
+          <span className="flex w-full flex-row lg:w-[312px]">
+            <ReactMarkdown className="text-sm font-light text-gray-50">{textContent.footer}</ReactMarkdown>
+          </span>
         </div>
 
         <div className="relative w-full">
@@ -384,14 +385,14 @@ const HeroSection = ({ textContent }) => {
                 {isDragging ? (
                   <>
                     {/* Drop file here */}
-                    <div className="flex h-60 w-full flex-col items-center justify-center rounded-3xl border-dashed bg-blue-10 ring-5 ring-blue-10 sm:h-96">
+                    <div className="flex h-60 w-full flex-col items-center justify-center rounded-3xl border-2 border-dashed border-primary bg-blue-10 ring-5 ring-blue-10 sm:h-96">
                       <p className="text-2xl font-medium text-primary sm:text-5xl">{textContent.dropHere}</p>
                     </div>
                   </>
                 ) : (
                   <>
                     {/* Default state */}
-                    <div className="group flex h-60 w-full cursor-pointer flex-col items-center justify-center rounded-3xl bg-blue-10 bg-opacity-20 ring-5 ring-blue-10 sm:h-96">
+                    <div className="group flex h-60 w-full cursor-pointer flex-col items-center justify-center rounded-3xl border-2 border-primary bg-blue-10 bg-opacity-20 ring-5 ring-blue-10 sm:h-96">
                       <div className="flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:space-x-20">
                         {/* Icons */}
                         <div className="relative hidden h-32 w-32 sm:flex lg:hidden xl:flex">
@@ -456,7 +457,7 @@ const HeroSection = ({ textContent }) => {
                             />
                             <path
                               d="M38.095 52.5999V74.9999H42.767V65.8479H47.119C51.887 65.8479 54.255 63.2239 54.255 59.2879C54.255 55.4159 51.887 52.5999 47.119 52.5999H38.095ZM42.767 61.9759V56.7279H46.447C48.367 56.7279 49.615 57.3999 49.615 59.3519C49.615 61.3039 48.367 61.9759 46.447 61.9759H42.767ZM63.1423 74.9999C71.5903 74.9999 74.9183 69.9759 74.9183 63.7999C74.9183 57.6239 71.5903 52.5999 63.1423 52.5999H56.2623V74.9999H63.1423ZM60.9343 56.7279H62.9183C68.0703 56.7279 70.1183 59.7999 70.1183 63.7999C70.1183 67.7999 68.0703 70.8719 62.9183 70.8719H60.9343V56.7279ZM91.2 52.5999H77.44V74.9999H82.112V65.6559H89.952V61.5279H82.112V56.7279H91.2V52.5999Z"
-                              fill="#7A869A"
+                              fill="#F63831"
                             />
                             <defs>
                               <filter
@@ -483,7 +484,7 @@ const HeroSection = ({ textContent }) => {
                               </filter>
                             </defs>
                           </svg>
-                          <div className="absolute -bottom-14 left-1/2 flex h-8 -translate-x-1/2 flex-row items-center whitespace-nowrap rounded-full bg-cool-gray-10 px-4 text-base font-semibold">
+                          <div className="absolute -bottom-14 left-1/2 flex h-8 -translate-x-1/2 flex-row items-center whitespace-nowrap rounded-full bg-cool-gray-10 px-4 text-sm text-cool-gray-40">
                             {textContent.maxFileSize.description}
                           </div>
                         </div>

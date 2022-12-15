@@ -3,7 +3,7 @@
     "title": "Virus Scanner",
     "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
     "subtitle2": "Scan any document, image,pdf, or other file types.",
-    "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [https://internet.com/legal](Terms and Conditions of Service and Privacy Policy.)",
+    "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
     "dropFile": {
       "line1": "Drop file to scan"
     },
@@ -64,24 +64,9 @@
       "description": "Internxt has and will always put users' privacy nd security first. We are committed to creating  more fair, ore free, nd more transparent internet for all. That's why we created oru free online virus scanner, to shine a light on stealthy viruses and expose malicious malware."
     }
   },
-  "createAccount": {
-    "title": {
-      "line1": "At Internxt, we create secure,",
-      "line2": "encrypted, and zero-knowledge",
-      "line3": "technologies."
-    },
-    "description": {
-      "line1": "All our services are designed with the user's",
-      "line2": "privacy in mind and we always make sure our",
-      "line3": "services keep your data totally safe."
-    },
-    "cta": {
-      "getUpTo10GB": "Get 10GB now",
-      "forFree": "— for free"
-    }
-  },
-  "disclaimer": {
-    "text": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our",
-    "link": "Terms and Conditions of Service and Privacy Policy"
+  "CtaSection": {
+    "title": "Safety is only a click away",
+    "description": "Protect your personal data with Internxt's privacy suite.",
+    "cta": "Create account"
   }
 }
