@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Virus Scanner",
     "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
-    "subtitle2": "Scan any document, image,pdf, or other file types. Get an instant result on whether the file is infected or not. ",
+    "subtitle2": "Scan any document, image, pdf, or other file types. Get an instant result on whether the file is infected.",
     "footer": "",
     "dropFile": {
       "line1": "Drop file to scan"
