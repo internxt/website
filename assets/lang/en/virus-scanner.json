@@ -12,7 +12,7 @@
     "close": "Close",
     "scanNow": "Scan now",
     "selectFile": "or select file",
-    "dropHere": "Drop the file here",
+    "dropHere": "Drop file here",
     "scanAgain": "Scan another file",
     "loading": "Loading...",
     "maxFileSize": {
@@ -21,7 +21,8 @@
     },
     "table": {
       "loading": "Loading...",
-      "virusDetected": "Virus detected",
+      "virusDetected": "Virus detected for this file",
+      "noVirusDetected": "No virus detected for this file",
       "detected": "Detected",
       "undetected": "Undetected",
       "unableToProcess": "Unable to process",
