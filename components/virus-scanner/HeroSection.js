@@ -6,7 +6,7 @@
 import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import { UilRedo, UilExclamationOctagon } from '@iconscout/react-unicons';
-import { CheckCircle } from 'phosphor-react';
+import { CheckCircle, WarningCircle } from 'phosphor-react';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 
@@ -122,9 +122,33 @@ const HeroSection = ({ textContent }) => {
     }
   };
 
+  const scanAgainButton = () => {
+    return (
+      <Transition
+        as={Fragment}
+        show={!isError && isScanFinished}
+        enter="transition duration-200 ease-in-out"
+        enterFrom="opacity-0 translate-y-2"
+        enterTo="opacity-100 translate-y-0"
+      >
+        <div className="flex w-full flex-row justify-center">
+          <button
+            type="button"
+            className="group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-white px-6 text-lg text-black transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base"
+            onClick={() => {
+              handleRestartScan();
+            }}
+          >
+            <p className="text-base font-medium">{textContent.scanAgain}</p>
+          </button>
+        </div>
+      </Transition>
+    );
+  };
+
   return (
     <section
-      className="relative bg-white py-20"
+      className="relative py-20"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -147,7 +171,7 @@ const HeroSection = ({ textContent }) => {
       />
 
       <div
-        className={`relative z-20 mx-auto flex w-full max-w-screen-xl flex-col px-6 lg:flex-row lg:space-x-24 lg:p-16 ${
+        className={`relative z-20 mx-auto  flex w-full max-w-screen-xl flex-col px-6 lg:flex-row lg:space-x-24 lg:p-16 ${
           !isScannig && isDragging ? 'pointer-events-none' : ''
         }`}
         onDrop={(e) => e.preventDefault()}
@@ -156,8 +180,8 @@ const HeroSection = ({ textContent }) => {
         {/* Title and subtitle */}
         <div className="mb-10 flex flex-shrink-0 flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
           <div className="flex w-full flex-col lg:w-[312px] lg:space-y-5">
-            <h1 className="text-4xl font-medium tracking-tighter lg:text-5xl lg:font-normal">{textContent.title}</h1>
-            <h2 className="text-xl font-normal text-cool-gray-80">
+            <h1 className="text-5xl font-semibold tracking-tighter">{textContent.title}</h1>
+            <h2 className="pt-5 text-xl font-normal text-cool-gray-80 lg:pt-0">
               {textContent.subtitle1}
               <div className="hidden h-7 lg:flex" />
               {textContent.subtitle2}
@@ -168,22 +192,32 @@ const HeroSection = ({ textContent }) => {
           </span>
         </div>
 
-        <div className="relative w-full">
+        <div className="relative w-full rounded-2xl border-4 border-primary border-opacity-5">
           {/* Scan container (drop area & scan information) */}
           {isSelectedFile ? (
             <>
               {isScannig ? (
                 <>
                   {/* Scan process */}
-                  <div className="relative flex h-80 w-full flex-col items-start justify-start overflow-hidden rounded-xl border border-cool-gray-20 bg-white shadow-subtle sm:h-96">
-                    <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between border-b border-cool-gray-20 bg-cool-gray-10 px-5">
+                  <div className="relative flex h-80 w-full flex-col items-start justify-start overflow-hidden rounded-xl bg-white shadow-subtle sm:h-96">
+                    <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between border-b border-cool-gray-20 bg-primary bg-opacity-10 px-5">
                       {isScanFinished ? (
-                        <div className="flex flex-row items-end space-x-1.5">
-                          <span className={`text-3xl font-medium ${scanResult.isInfected && 'text-red-old-60'}`}>
+                        <div className="flex flex-row items-center space-x-1.5">
+                          {scanResult.isInfected ? (
+                            <WarningCircle weight="fill" size={24} className="text-red" />
+                          ) : (
+                            <CheckCircle weight="fill" size={24} className="text-green" />
+                          )}
+                          <span
+                            className={`text-lg font-semibold ${
+                              scanResult.isInfected ? 'text-red-old-60' : 'text-green-dark'
+                            }`}
+                          >
                             {scanResult &&
-                              (scanResult.isInfected ? scanResult.viruses.length : textContent.table.NoVirusDetected)}
+                              (scanResult.isInfected
+                                ? textContent.table.virusDetected
+                                : textContent.table.noVirusDetected)}
                           </span>
-                          <span className="text-lg text-cool-gray-60">{textContent.table.virusDetected}</span>
                         </div>
                       ) : (
                         <div>{textContent.table.loading}</div>
@@ -198,50 +232,37 @@ const HeroSection = ({ textContent }) => {
                     {isScanFinished ? (
                       <>
                         {scanResult && scanResult.isInfected ? (
-                          <>
-                            <div className="flex h-8 w-full flex-shrink-0 flex-row items-center justify-between border-b border-cool-gray-20 bg-cool-gray-5 px-5 text-sm text-cool-gray-40">
-                              <div className="w-52">{textContent.table.detection}</div>
-                              <div className="flex-1">{textContent.table.name}</div>
-                            </div>
-
-                            <div className="flex w-full flex-col divide-y divide-cool-gray-10 overflow-auto">
-                              {/* Virus list */}
+                          <div className="flex h-full w-full flex-col items-center justify-center">
+                            <p className="text-2xl font-semibold">Virus identified:</p>
+                            <div className="flex max-w-xl flex-row space-x-1 text-center">
                               {scanResult.viruses &&
                                 scanResult.viruses.map((virus) => (
-                                  <div className="flex h-12 flex-shrink-0 flex-row items-center justify-start px-5 hover:bg-cool-gray-5">
-                                    <div className="flex w-52 flex-row items-center space-x-1.5 text-red-old-60">
-                                      <UilExclamationOctagon className="h-5 w-5" />
-                                      <span>{textContent.table.detected}</span>
-                                    </div>
-                                    <div className="flex-1 font-medium">{virus}</div>
-                                  </div>
+                                  <p className="text-lg font-semibold text-gray-60">{virus};</p>
                                 ))}
                             </div>
-                          </>
+                            {scanAgainButton()}
+                          </div>
                         ) : (
                           <>
-                            <div className="flex h-full w-full flex-col items-center justify-center space-y-8 overflow-hidden bg-white text-center text-gray-80">
-                              {/* No viruses found */}
-                              <div className="flex flex-row items-center space-x-1.5"></div>
-
+                            <div className="flex h-full w-full flex-col items-center justify-center space-y-4 overflow-hidden bg-primary bg-opacity-3 text-center text-gray-80">
                               {/* CTA */}
-                              <div className="flex flex-col items-center justify-center rounded-xl border border-gray-10 bg-white p-4 shadow-subtle">
-                                <div className="flex w-80 flex-col items-center justify-center space-y-4">
-                                  <span className="text-xl font-medium">
-                                    {textContent.table.noVirusesDetected.title}
-                                  </span>
+                              <div className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20  bg-primary bg-opacity-6 shadow-subtle">
+                                <div className="flex flex-col items-center justify-center rounded-xl border border-primary p-4">
+                                  <div className="flex max-w-[427px] flex-col items-center justify-center space-y-5">
+                                    <div className="flex flex-col space-y-2">
+                                      <span className="text-xl font-medium">
+                                        {textContent.table.noVirusesDetected.title}
+                                      </span>
+                                      <span>{textContent.table.noVirusesDetected.subtitle}</span>
+                                    </div>
 
-                                  <span>{textContent.table.noVirusesDetected.subtitle}</span>
-
-                                  <a
-                                    href="https://drive.internxt.com/new"
-                                    target="_top"
-                                    className="button-primary w-full"
-                                  >
-                                    {textContent.table.noVirusesDetected.cta}
-                                  </a>
+                                    <a href="https://drive.internxt.com/new" target="_top" className="button-primary">
+                                      {textContent.table.noVirusesDetected.cta}
+                                    </a>
+                                  </div>
                                 </div>
                               </div>
+                              {scanAgainButton()}
                             </div>
                           </>
                         )}
@@ -298,7 +319,7 @@ const HeroSection = ({ textContent }) => {
                   {fileSizeLimitReached ? (
                     <>
                       {/* File size limit reached */}
-                      <div className="flex h-60 w-full flex-col items-center justify-center rounded-3xl  bg-blue-10 bg-opacity-20 ring-5 ring-blue-10 sm:h-96">
+                      <div className="flex h-60 w-full flex-col items-center justify-center rounded-3xl bg-blue-10 bg-opacity-15 ring-5 ring-blue-10 sm:h-96">
                         <Transition
                           as="div"
                           show={isSelectedFile}
@@ -314,7 +335,7 @@ const HeroSection = ({ textContent }) => {
 
                             <button
                               type="button"
-                              className="flex h-10 flex-row items-center rounded-lg bg-blue-10 px-5 font-medium text-primary transition duration-150 ease-out active:scale-98"
+                              className="flex h-10 flex-row items-center rounded-lg bg-primary px-5 font-medium text-white transition duration-150 ease-out active:scale-98"
                               onClick={() => {
                                 handleCancelScan();
                               }}
@@ -511,27 +532,6 @@ const HeroSection = ({ textContent }) => {
             </>
           )}
 
-          <Transition
-            as={Fragment}
-            show={!isError && isScanFinished}
-            enter="transition duration-200 ease-in-out"
-            enterFrom="opacity-0 translate-y-2"
-            enterTo="opacity-100 translate-y-0"
-          >
-            <div className="absolute flex w-full flex-row justify-center">
-              <button
-                type="button"
-                className="group absolute -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg bg-blue-10 px-6 text-lg text-primary transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base"
-                onClick={() => {
-                  handleRestartScan();
-                }}
-              >
-                <UilRedo className="group-hover:rotate-full duration-0 h-5 w-5 transition ease-out group-hover:duration-500 sm:h-4 sm:w-4" />
-                <p>{textContent.scanAgain}</p>
-              </button>
-            </div>
-          </Transition>
-
           {isError && (
             <>
               <div className="absolute inset-0 z-50 flex h-full w-full flex-row items-center justify-center overflow-hidden rounded-3xl bg-white bg-opacity-75">
@@ -548,7 +548,7 @@ const HeroSection = ({ textContent }) => {
                   enterFrom="opacity-0 translate-y-4"
                   enterTo="opacity-100 translate-y-0"
                 >
-                  <div className="realtive z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white p-5 shadow-subtle-hard">
+                  <div className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white p-5 shadow-subtle-hard">
                     <p className="text-xl font-medium">{textContent.error.title}</p>
                     <p className="w-full text-center text-sm text-cool-gray-40">{textContent.error.description}</p>
                     <button

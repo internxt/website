@@ -29,8 +29,8 @@
       "noVirusesDetected": {
         "message": "No viruses detected",
         "title": "Want to keep your files safe?",
-        "subtitle": "Internxt is a cloud storage service with a built-in virus scan & best in-class encryption",
-        "cta": "Get free secure cloud storage"
+        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
+        "cta": "Get started now"
       },
       "analyzing": "Analyzing file...",
       "scanTime": "Scan time",
