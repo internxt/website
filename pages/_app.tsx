@@ -1,7 +1,6 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import '../styles/globals.scss';
-import Popup from '../components/layout/Popup';
 import Script from 'next/script';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 
