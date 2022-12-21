@@ -183,7 +183,7 @@ const HeroSection = ({ textContent }) => {
           <div className="mb-10 flex flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
             <div className="flex w-full flex-col lg:w-[312px] lg:space-y-5">
               <h1 className="text-5xl font-semibold tracking-tighter">{textContent.title}</h1>
-              <h2 className="pt-5 text-xl font-normal text-cool-gray-80 lg:pt-0">
+              <h2 className="pt-5 text-xl font-light text-cool-gray-80 lg:pt-0">
                 {textContent.subtitle1}
                 <div className="hidden h-7 lg:flex" />
                 {textContent.subtitle2}
@@ -192,13 +192,13 @@ const HeroSection = ({ textContent }) => {
           </div>
 
           {/* Scan container (drop area & scan information) */}
-          <div className="flex w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3 shadow-subtle">
+          <div className="flex w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
               <>
                 {isScannig ? (
                   <>
                     {/* Scan process */}
-                    <div className="relative flex h-80 w-full flex-col items-start justify-start overflow-hidden rounded-xl shadow-subtle sm:h-96">
+                    <div className="relative flex h-80 w-full flex-col items-start justify-start overflow-hidden rounded-xl sm:h-96">
                       <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between bg-primary bg-opacity-6 px-5">
                         {isScanFinished ? (
                           <div className="flex flex-row items-center space-x-1.5">
