@@ -181,11 +181,11 @@ const HeroSection = ({ textContent }) => {
         >
           {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
-            <div className="flex w-full flex-col lg:w-[312px] lg:space-y-5">
+            <div className="flex w-full flex-col lg:w-[297px] lg:space-y-5">
               <h1 className="text-5xl font-semibold tracking-tighter">{textContent.title}</h1>
-              <h2 className="pt-5 text-xl font-light text-cool-gray-80 lg:pt-0">
+              <h2 className="pt-5 text-xl font-normal text-cool-gray-80 lg:pt-0">
                 {textContent.subtitle1}
-                <div className="hidden h-7 lg:flex" />
+                <div className="hidden h-5 lg:flex" />
                 {textContent.subtitle2}
               </h2>
             </div>
