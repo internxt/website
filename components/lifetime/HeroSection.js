@@ -9,10 +9,10 @@ const HeroSection = ({ lang, textContent }) => {
         <div className="lg:mx-10 xl:mx-32">
           <div className="mx-auto flex w-full max-w-screen-xl flex-col sm:mb-24 lg:flex-row">
             <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center text-center sm:w-auto sm:px-0 md:my-8 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
-              <div className="flex flex-row pb-6">
+              {/* <div className="flex flex-row pb-6">
                 <Alarm size={32} className="mr-4 text-white" />
                 <Countdown dt={'2022-12-18T23:59:59'} />
-              </div>
+              </div> */}
               <div className="flex max-w-[448px] flex-col pb-10 text-center text-white md:text-start">
                 <p className="text-7xl font-bold">{textContent.title}</p>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
