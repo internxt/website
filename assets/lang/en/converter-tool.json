@@ -35,21 +35,7 @@
       "description1": "For example, MB meaning megabytes which are larger than kilobytes(KB) and smaller than gigabytes(GB)."
     }
   },
-  "ctaSection1": {
-    "title": "Got tons of stored data?",
-    "description": "Protect your GB and TB with Internxt secure cloud storage.",
-    "cta": "Create account"
-  },
-  "ctaSection2": {
-    "title": "Got tons of stored data?",
-    "description": "Protect your GB and TB with Internxt secure cloud storage.",
-    "cta": "Create account"
-  },
-  "ctaSection3": {
-    "title": "Got tons of stored data?",
-    "description": "Protect your GB and TB with Internxt secure cloud storage.",
-    "cta": "Create account"
-  },
+
   "infoSection": {
     "title": "What is the difference between GB and TB and so on?",
     "description": "Want to know how many GB in a TB? Or, without the abbreviations, how many gigabytes are in a terabyte? First, you need to understand what a byte is, then it's super simple to know the difference between MB to KB or MB to GB.",
@@ -87,5 +73,61 @@
         }
       ]
     }
+  },
+  "ConversionTableSection": {
+    "title": "Byte Conversion Chart",
+    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many KB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers.",
+    "faq": {
+      "faq": [
+        {
+          "question": "How do I use the Byte Converter?",
+          "answer": [
+            "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, click on the ‘Convert’ button, and your answer will appear in the second section on the right."
+          ]
+        },
+        {
+          "question": "How do I convert terabytes to gigabytes and so on?",
+          "answer": [
+            "Simply input the byte value you want to convert into our Byte Converter and select the byte value you want to reformat in, the value will automatically be converted and displayed.",
+            "You may also use the conversion chart listed above if you want to manually do the calculation."
+          ]
+        },
+        {
+          "question": "How many gigabytes equal one terabyte?",
+          "answer": ["1024 GB equals 1 TB. So one TB of storage can hold 1024 GB of data."]
+        },
+        {
+          "question": "What is the difference between TB and GB?",
+          "answer": [
+            "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a KB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
+            "If you would like to see how they all stack up against each other or what’s MB meaning or what’s bigger than a terabyte, check out the conversion chart above on the page."
+          ]
+        },
+        {
+          "question": "Why is my 1 TB disk not 1 TB?",
+          "answer": [
+            "Though your 1 TB drive is listed as having 1 TB worth of storage, typically, you won’t be able to use the whole amount as part of the drive may be used for operational files."
+          ]
+        }
+      ]
+    }
+  },
+  "ctaSection1": {
+    "title": "Got tons of stored data?",
+    "description": "Protect your GB and TB with Internxt secure cloud storage.",
+    "cta": "Create account"
+  },
+  "ctaSection2": {
+    "title": "The more you save, the more to protect!",
+    "description": "Backup and safely store all your files Internxt.",
+    "cta": "Create account"
+  },
+  "ctaSection3": {
+    "title": "Safety is only a click away",
+    "description": "Protect your personal data with Internxt's privacy suite.",
+    "cta": "Create account"
   }
 }

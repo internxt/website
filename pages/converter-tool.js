@@ -5,6 +5,7 @@ import HeroSection from '../components/converter-tool/HeroSection';
 import ExplanationSection from '../components/converter-tool/ExplanationSection';
 import CtaSection from '../components/converter-tool/CtaSection';
 import InfoSection from '../components/converter-tool/InfoSection';
+import ConversionTableSection from '../components/converter-tool/ConversionTableSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -22,6 +23,10 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson }) => 
       <CtaSection textContent={langJson.ctaSection1} />
 
       <InfoSection textContent={langJson.infoSection} />
+
+      <CtaSection textContent={langJson.ctaSection2} />
+
+      <ConversionTableSection textContent={langJson.ConversionTableSection} />
     </Layout>
   );
 };
