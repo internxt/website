@@ -22,11 +22,11 @@
     "whyUseConverter": {
       "title": "Why use a byte converter and storage calculator tool?",
       "description": [
-        { "adv1": "Determine exactly how much cloud storage you need for your files" },
-        { "adv2": "make sure your files transfers fall under upload and download limits" },
-        { "adv3": "Convert byte values without the help of a calculator or pen and paper" },
-        { "adv4": "Quickly find out how much phone storage space you have left" },
-        { "adv5": "Discover if how much data your hard drive or portable drive can support" }
+        { "adv": "Determine exactly how much cloud storage you need for your files" },
+        { "adv": "make sure your files transfers fall under upload and download limits" },
+        { "adv": "Convert byte values without the help of a calculator or pen and paper" },
+        { "adv": "Quickly find out how much phone storage space you have left" },
+        { "adv": "Discover if how much data your hard drive or portable drive can support" }
       ]
     },
     "MBMeaning": {
@@ -34,5 +34,10 @@
       "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information.",
       "description1": "For example, MB meaning megabytes which are larger than kilobytes(KB) and smaller than gigabytes(GB)."
     }
+  },
+  "ctaSection1": {
+    "title": "Got tons of stored data?",
+    "description": "Protect your GB and TB with Internxt secure cloud storage.",
+    "cta": "Create account"
   }
 }

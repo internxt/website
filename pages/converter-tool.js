@@ -1,4 +1,5 @@
 import React from 'react';
+import ExplanationSection from '../components/converter-tool/ExplanationSection';
 import HeroSection from '../components/converter-tool/HeroSection';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -13,6 +14,8 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson }) => 
       <Navbar lang={lang} textContent={navbarLang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
+
+      <ExplanationSection textContent={langJson.ExplanationSection} />
     </Layout>
   );
 };
