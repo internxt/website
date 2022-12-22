@@ -1,0 +1,38 @@
+{
+  "HeroSection": {
+    "title": "Byte Converter: TB to GB",
+    "description": "Convert terabytes to gigabytes to megabytes!",
+    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many Gb in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter.",
+    "container": {
+      "cta": "Convert",
+      "from": "From",
+      "to": "To",
+      "result": "Result"
+    }
+  },
+  "ExplanationSection": {
+    "convertTo": {
+      "title": "How to convert terabytes to gigabytes or gigabytes to terabytes?",
+      "description": "Enter a value in the 'Gigabytes' section and click on the 'Convert' button. Your answer will appear in the 'Terabytes' section."
+    },
+    "convertToAgain": {
+      "title": "How to convert GB to TB and back again?",
+      "description": "Not sure if you have enough space on your device? Worried your hard drive is to small? Wondering how many 1GB files can fit in 2TB of cloud storage? Use our free byte converter and storage calculator to know exactly how many kilobytes, megabytes, gigabytes, or terabytes your files take up."
+    },
+    "whyUseConverter": {
+      "title": "Why use a byte converter and storage calculator tool?",
+      "description": [
+        { "adv1": "Determine exactly how much cloud storage you need for your files" },
+        { "adv2": "make sure your files transfers fall under upload and download limits" },
+        { "adv3": "Convert byte values without the help of a calculator or pen and paper" },
+        { "adv4": "Quickly find out how much phone storage space you have left" },
+        { "adv5": "Discover if how much data your hard drive or portable drive can support" }
+      ]
+    },
+    "MBMeaning": {
+      "title": "MB meaning?",
+      "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information.",
+      "description1": "For example, MB meaning megabytes which are larger than kilobytes(KB) and smaller than gigabytes(GB)."
+    }
+  }
+}
