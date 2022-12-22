@@ -32,8 +32,8 @@ const ExplanationSection = ({ textContent }) => {
           </p>
         </div>
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-2xl font-medium">{textContent.convertTo.title}</p>
-          <p className="text-lg font-normal text-gray-80">{textContent.convertTo.description}</p>
+          <p className="text-2xl font-medium">{textContent.MBMeaning.title}</p>
+          <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
         </div>
       </div>
     </section>

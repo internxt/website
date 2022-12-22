@@ -1,8 +1,9 @@
 import React from 'react';
-import ExplanationSection from '../components/converter-tool/ExplanationSection';
-import HeroSection from '../components/converter-tool/HeroSection';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
+import HeroSection from '../components/converter-tool/HeroSection';
+import ExplanationSection from '../components/converter-tool/ExplanationSection';
+import CtaSection from '../components/converter-tool/CtaSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -16,6 +17,8 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson }) => 
       <HeroSection textContent={langJson.HeroSection} />
 
       <ExplanationSection textContent={langJson.ExplanationSection} />
+
+      <CtaSection textContent={langJson.ctaSection1} />
     </Layout>
   );
 };
