@@ -12,9 +12,7 @@ const ConversionTableSection = ({ textContent }) => {
       abbreviation: 'kB',
       decimalValue: (
         <>
-          <p>
-            100<sup>1</sup> bytes
-          </p>
+          100<sup>1</sup> bytes
         </>
       ),
       decimalSize: '1,000 bytes',
@@ -24,9 +22,7 @@ const ConversionTableSection = ({ textContent }) => {
       abbreviation: 'MB',
       decimalValue: (
         <>
-          <p>
-            1000<sup>2</sup> bytes
-          </p>
+          1000<sup>2</sup> bytes
         </>
       ),
       decimalSize: '1,000,000 bytes',
@@ -36,9 +32,7 @@ const ConversionTableSection = ({ textContent }) => {
       abbreviation: 'GB',
       decimalValue: (
         <>
-          <p>
-            1000<sup>3</sup> bytes
-          </p>
+          1000<sup>3</sup> bytes
         </>
       ),
       decimalSize: '1,000,000,000 bytes',
@@ -48,9 +42,7 @@ const ConversionTableSection = ({ textContent }) => {
       abbreviation: 'TB',
       decimalValue: (
         <>
-          <p>
-            1000<sup>4</sup> bytes
-          </p>
+          1000<sup>4</sup> bytes
         </>
       ),
       decimalSize: '1,000,000,000,000 bytes',
@@ -60,9 +52,7 @@ const ConversionTableSection = ({ textContent }) => {
       abbreviation: 'PB',
       decimalValue: (
         <>
-          <p>
-            1000<sup>5</sup> bytes
-          </p>
+          1000<sup>5</sup> bytes
         </>
       ),
       decimalSize: '1,000,000,000,000,000 bytes',
@@ -72,9 +62,7 @@ const ConversionTableSection = ({ textContent }) => {
       abbreviation: 'EB',
       decimalValue: (
         <>
-          <p>
-            1000<sup>6</sup> bytes
-          </p>
+          1000<sup>6</sup> bytes
         </>
       ),
       decimalSize: '1,000,000,000,000,000,000 bytes',
@@ -84,9 +72,7 @@ const ConversionTableSection = ({ textContent }) => {
       abbreviation: 'ZB',
       decimalValue: (
         <>
-          <p>
-            1000<sup>7</sup> bytes
-          </p>
+          1000<sup>7</sup> bytes
         </>
       ),
       decimalSize: '1,000,000,000,000,000,000,000 bytes',

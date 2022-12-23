@@ -19,6 +19,8 @@ const HeroSection = ({ textContent }) => {
   const [convertTo, setConvertTo] = React.useState('kb');
   const [reverse, setReverse] = React.useState(false);
 
+  console.log(isMobile);
+
   function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
     const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
       unit: convertToMeasure,
@@ -41,7 +43,7 @@ const HeroSection = ({ textContent }) => {
             <p className="pt-6 text-xl font-normal text-gray-80">{textContent.description1}</p>
           </div>
           {/* Container */}
-          <div className="relative w-full">
+          <div className="relative w-full lg:flex lg:w-auto">
             <div
               className={`flex ${isMobile && reverse ? 'flex-col-reverse gap-y-2' : 'flex-col gap-y-2'}  lg:${
                 reverse ? 'flex-row-reverse gap-20' : 'flex-row gap-20'
@@ -49,7 +51,7 @@ const HeroSection = ({ textContent }) => {
             >
               <div
                 className={
-                  'flex w-full max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen'
+                  'flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen'
                 }
               >
                 <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
@@ -82,7 +84,7 @@ const HeroSection = ({ textContent }) => {
                   />
                 </div>
               </div>
-              <div className="flex max-w-[400px]  flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
+              <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
                 <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
                   {
                     <input
