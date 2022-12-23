@@ -42,7 +42,11 @@ const HeroSection = ({ textContent }) => {
           </div>
           {/* Container */}
           <div className="relative flex">
-            <div className={`flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-20`}>
+            <div
+              className={`flex ${isMobile && reverse ? 'flex-col-reverse gap-y-2' : 'flex-col gap-y-2'}  lg:${
+                reverse ? 'flex-row-reverse gap-20' : 'flex-row gap-20'
+              }  lg:space-y-0`}
+            >
               <div
                 className={
                   'flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen'
