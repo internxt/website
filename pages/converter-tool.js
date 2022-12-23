@@ -16,7 +16,7 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
-      <Navbar lang={lang} textContent={navbarLang} cta={['default']} fixed />
+      <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
 

@@ -46,6 +46,7 @@
     "react-live-chat-loader": "^2.8.0",
     "react-markdown": "6.0.3",
     "react-parallax": "^3.3.0",
+    "react-select": "^5.7.0",
     "react-toastify": "^9.1.1",
     "useragent": "^2.3.0",
     "zxcvbn": "^4.4.2"

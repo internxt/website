@@ -26,8 +26,8 @@ const ExplanationSection = ({ textContent }) => {
         <div className="flex w-full max-w-2xl flex-col">
           <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>
           <p className="ml-2 text-lg font-normal text-gray-80">
-            {textContent.whyUseConverter.description.map((feature) => (
-              <li>{feature.adv}</li>
+            {textContent.whyUseConverter.description.map((feature, index) => (
+              <li key={index}>{feature.adv}</li>
             ))}
           </p>
         </div>
