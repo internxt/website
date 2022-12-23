@@ -24,12 +24,12 @@ const ExplanationSection = ({ textContent }) => {
           />
         </div>
         <div className="flex w-full max-w-2xl flex-col">
-          <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>
-          <p className="ml-2 text-lg font-normal text-gray-80">
-            {textContent.whyUseConverter.description.map((feature, index) => (
-              <li key={index}>{feature.adv}</li>
-            ))}
-          </p>
+          <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>{' '}
+          {textContent.whyUseConverter.description.map((feature, index) => (
+            <li className="ml-2 text-lg font-normal text-gray-80" key={index}>
+              {feature.adv}
+            </li>
+          ))}
         </div>
         <div className="flex max-w-2xl flex-col space-y-3">
           <p className="text-2xl font-medium">{textContent.MBMeaning.title}</p>

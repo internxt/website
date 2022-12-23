@@ -1,4 +1,4 @@
-import { ArrowsLeftRight, ArrowUp } from 'phosphor-react';
+import { ArrowsLeftRight } from 'phosphor-react';
 import React from 'react';
 import Select from 'react-select';
 import bytes from 'bytes';
@@ -13,15 +13,16 @@ const options = [
 ];
 
 const HeroSection = ({ textContent }) => {
-  const [value, setValue] = React.useState(0);
+  const [value1, setValue1] = React.useState();
+  const [value2, setValue2] = React.useState();
   const [convertFrom, setConvertFrom] = React.useState('b');
   const [convertTo, setConvertTo] = React.useState('kb');
   const [reverse, setReverse] = React.useState(false);
 
-  function convert(valueToConvert) {
-    const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFrom), {
-      unit: convertTo,
-      decimalPlaces: 5,
+  function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
+    const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
+      unit: convertToMeasure,
+      decimalPlaces: 10,
       thousandsSeparator: '.',
       unitSeparator: ' ',
     });
@@ -40,18 +41,31 @@ const HeroSection = ({ textContent }) => {
             <p className="pt-6 text-xl font-normal text-gray-80">{textContent.description1}</p>
           </div>
           {/* Container */}
-          <div className="relative flex flex-row">
-            <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-20">
-              <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
+          <div className="relative flex">
+            <div className={`flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-20`}>
+              <div
+                className={
+                  'flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen'
+                }
+              >
                 <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
-                  <input
-                    className="ml-2 w-52 rounded-xl bg-transparent p-2 focus:outline-none"
-                    alt="convert to"
-                    onChange={(e) => {
-                      if (e.target.value === '') return;
-                      setValue(convert(e.target.value));
-                    }}
-                  />
+                  {
+                    <input
+                      className="ml-2 w-52 rounded-xl bg-transparent p-2 focus:outline-none"
+                      alt="convert to"
+                      value={value1}
+                      type="number"
+                      onChange={(e) => {
+                        if (!e.target.value) {
+                          setValue1('');
+                          setValue2('');
+                        } else {
+                          setValue1(e.target.value);
+                          setValue2(convert(e.target.value, convertFrom, convertTo));
+                        }
+                      }}
+                    />
+                  }
                   <Select
                     className="z-50 inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
                     defaultValue={options[0]}
@@ -60,18 +74,28 @@ const HeroSection = ({ textContent }) => {
                     menuPlacement={isMobile ? 'top' : 'bottom'}
                     onChange={(e) => setConvertFrom(e.value)}
                     options={options}
+                    instanceId="dropdown menu"
                   />
                 </div>
               </div>
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
                 <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
-                  <input
-                    className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
-                    onChange={(e) => {
-                      if (e.target.value === '') return;
-                      setValue(convert(e.target.value));
-                    }}
-                  />
+                  {
+                    <input
+                      className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
+                      value={value2}
+                      type="number"
+                      onChange={(e) => {
+                        if (e.target.value === '') {
+                          setValue1('');
+                          setValue2('');
+                        } else {
+                          setValue2(e.target.value);
+                          setValue1(convert(e.target.value, convertTo, convertFrom));
+                        }
+                      }}
+                    />
+                  }
                   <Select
                     className="inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
                     defaultValue={options[1]}
@@ -79,9 +103,8 @@ const HeroSection = ({ textContent }) => {
                     menuPlacement="auto"
                     menuPosition="fixed"
                     options={options}
-                    onChange={(e) => {
-                      setConvertTo(e.value);
-                    }}
+                    onChange={(e) => setConvertTo(e.value)}
+                    instanceId="dropdown menu"
                   />
                 </div>
               </div>

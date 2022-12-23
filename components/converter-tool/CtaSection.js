@@ -4,7 +4,7 @@ import styles from '/components/partner-discount/Background.module.scss';
 const CtaSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center justify-center space-y-8 py-14 text-white">
+      <div className="flex flex-col items-center justify-center space-y-8 px-4 py-14 text-white">
         <div className="flex flex-col space-y-4 text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="text-xl font-normal">{textContent.description}</p>
