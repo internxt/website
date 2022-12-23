@@ -32,7 +32,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="mx-4 flex py-32 md:mx-10 lg:mx-32">
+      <div className="mx-3 flex py-32 md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
           <div className=" flex w-full max-w-[700px] flex-col items-center justify-center text-center">
@@ -41,7 +41,7 @@ const HeroSection = ({ textContent }) => {
             <p className="pt-6 text-xl font-normal text-gray-80">{textContent.description1}</p>
           </div>
           {/* Container */}
-          <div className="relative flex">
+          <div className="relative w-full">
             <div
               className={`flex ${isMobile && reverse ? 'flex-col-reverse gap-y-2' : 'flex-col gap-y-2'}  lg:${
                 reverse ? 'flex-row-reverse gap-20' : 'flex-row gap-20'
@@ -49,7 +49,7 @@ const HeroSection = ({ textContent }) => {
             >
               <div
                 className={
-                  'flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen'
+                  'flex w-full max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen'
                 }
               >
                 <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
@@ -75,14 +75,14 @@ const HeroSection = ({ textContent }) => {
                     defaultValue={options[0]}
                     id="Dropdown menu"
                     menuPosition="fixed"
-                    menuPlacement={isMobile ? 'top' : 'bottom'}
+                    menuPlacement={isMobile && !reverse ? 'top' : 'bottom'}
                     onChange={(e) => setConvertFrom(e.value)}
                     options={options}
                     instanceId="dropdown menu"
                   />
                 </div>
               </div>
-              <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
+              <div className="flex max-w-[400px]  flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
                 <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
                   {
                     <input
@@ -101,11 +101,11 @@ const HeroSection = ({ textContent }) => {
                     />
                   }
                   <Select
-                    className="inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
+                    className="z-50 inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
                     defaultValue={options[1]}
                     id="Dropdown menu"
-                    menuPlacement="auto"
                     menuPosition="fixed"
+                    menuPlacement={isMobile && !reverse ? 'bottom' : 'top'}
                     options={options}
                     onChange={(e) => setConvertTo(e.value)}
                     instanceId="dropdown menu"

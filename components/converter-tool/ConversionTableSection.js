@@ -100,29 +100,32 @@ const ConversionTableSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-scroll">
-      <div className="flex flex-col items-center justify-center space-y-16 py-20 px-10">
-        <div className="flex w-full max-w-[835px] flex-col space-y-4 text-center">
+    <section className="">
+      <div className="flex flex-col space-y-16 py-20 lg:items-center lg:justify-center">
+        <div className="flex w-full max-w-[835px] flex-col items-center justify-center space-y-4 px-10 text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="text-xl font-normal text-gray-100">{textContent.description}</p>
         </div>
-        <div className="flex items-start ">
-          <div className="flex w-[740px] flex-col rounded-lg border-gray-10">
+        <div
+          className="flex 
+         items-start overflow-scroll px-5 lg:overflow-hidden"
+        >
+          <div className="flex max-w-[740px] flex-col rounded-lg border-gray-10">
             {table.map((item, index) => (
               <div
                 key={item.unit}
                 className="flex flex-row first:rounded-t-lg first:font-medium first:text-gray-100 last:rounded-b-lg odd:bg-gray-5 even:bg-white"
               >
-                <div className="flex w-full max-w-[105px] flex-col">
+                <div className="flex w-full max-w-[105px]   flex-col">
                   <p className="py-2 pl-4 pr-6 text-base">{item.unit}</p>
                 </div>
-                <div className="flex w-full max-w-[133px] flex-col">
+                <div className="flex w-full max-w-[133px]   flex-col">
                   <p className="py-2 pl-4 pr-6 text-base">{item.abbreviation}</p>
                 </div>
-                <div className="flex w-full max-w-[144px] flex-col">
+                <div className="flex w-full max-w-[144px]   flex-col">
                   <p className="py-2 pl-4 pr-6 text-base">{item.decimalValue}</p>
                 </div>
-                <div className="flex w-full max-w-[448px] flex-col">
+                <div className="flex w-screen max-w-[500px]  flex-col">
                   <p className="py-2 pl-4 pr-6 text-base">{item.decimalSize}</p>
                 </div>
               </div>
