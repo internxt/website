@@ -1,113 +1,115 @@
 {
-	"HeroSection":
-	{
-		"eyebrow": "INTERNXT PHOTOS",
-		"title": {
-			"line1": "Your picture-perfect moments,",
-			"line2": "under lock and key."
-		},
-		"subtitle": {
-			"line1": "Relive, share and keep your best memories safe all in one place.",
-			"line2": "With Internxt Photos focusing on privacy and security",
-			"line3": "your photos are yours and yours alone."
-		},
-		"availableSoon": "Available soon",
-		"DownloadLinks": {
-			"or": "or",
-			"downloadFor": "Download for",
-			"orDownloadFor": "Or download for",
-			"downloadOnThe": "Download on the",
-			"orDownloadOnThe": "Or download on the",
-			"getOn": "Get on",
-			"orGetOn": "Or get on",
-			"openDriveWeb": "View your photos on Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
-		}
-	},
-	"FeaturesSection":
-	{
-		"section1": {
-			"title": {
-				"line1": "A synced gallery for",
-				"line2": "all your devices."
-			}
-		},
-		"section2": {
-			"title": {
-				"line1": "Upload from your",
-				"line2": "smartphone, access",
-				"line3": "wherever you want."
-			},
-			"subtitle": {
-				"line1": "Your photo library will always be up to",
-				"line2": "date on all your devices. This means that",
-				"line3": "you can access your synced photos even",
-				"line4": "when your device is lost, stolen, or broken."
-			}
-		},
-		"section3": {
-			"title": {
-				"line1": "Share your photos",
-				"line2": "with your friends",
-				"line3": "and family."
-			},
-			"subtitle": {
-				"line1": "Generate a share link so you can",
-				"line2": "control how many times a photo",
-				"line3": "can be accessed and downloaded."
-			}
-		},
-		"section4": {
-			"title": {
-				"line1": "Start syncing your photos",
-				"line2": "in total privacy."
-			}
-		},
-		"section5": {
-			"title": {
-				"line1": "All your photos.",
-				"line2": "Secure and private."
-			},
-			"subtitle": {
-				"line1": "Privacy and security are our core, we don’t run our business on data or advertising, but",
-				"line2": "on trust. We respect your rights and build amazing tools around them, not against them."
-			},
-			"cta": "Our commitment on privacy",
-			"card1": {
-				"title": "Military-grade encryption.",
-				"subtitle": "We take your privacy very seriously, that’s why your photos are encrypted so only you can access your photos."
-			},
-			"card2": {
-				"title": "Zero-knowledge technology.",
-				"subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
-			},
-			"card3": {
-				"title": "Privacy by design.",
-				"subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
-			},
-			"card4": {
-				"title": "Secure from the core.",
-				"subtitle": "As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers."
-			}
-		},
-		"DownloadLinks": {
-			"or": "or",
-			"downloadFor": "Download for",
-			"orDownloadFor": "Or download for",
-			"downloadOnThe": "Download on the",
-			"orDownloadOnThe": "Or download on the",
-			"getOn": "Get on",
-			"orGetOn": "Or get on",
-			"openDriveWeb": "View your photos on Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
-		}
-	}
+  "HeroSection": {
+    "eyebrow": "INTERNXT PHOTOS",
+    "title": {
+      "line1": "Your picture-perfect moments,",
+      "line2": "under lock and key."
+    },
+    "subtitle": {
+      "line1": "Relive, share and keep your best memories safe all in one place.",
+      "line2": "With Internxt Photos focusing on privacy and security",
+      "line3": "your photos are yours and yours alone."
+    },
+    "availableSoon": "Available soon",
+    "DownloadLinks": {
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Download on the",
+      "orDownloadOnThe": "Or download on the",
+      "getOn": "Get on",
+      "orGetOn": "Or get on",
+      "openDriveWeb": "Open Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "A synced gallery for",
+        "line2": "all your devices."
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Upload from your",
+        "line2": "smartphone, access",
+        "line3": "wherever you want."
+      },
+      "subtitle": {
+        "line1": "Your photo library will always be up to",
+        "line2": "date on all your devices. This means that",
+        "line3": "you can access your synced photos even",
+        "line4": "when your device is lost, stolen, or broken."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Share your photos",
+        "line2": "with your friends",
+        "line3": "and family."
+      },
+      "subtitle": {
+        "line1": "Generate a share link so you can",
+        "line2": "control how many times a photo",
+        "line3": "can be accessed and downloaded."
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Start syncing your photos",
+        "line2": "in total privacy."
+      }
+    },
+    "section5": {
+      "title": {
+        "line1": "All your photos.",
+        "line2": "Secure and private."
+      },
+      "subtitle": {
+        "line1": "Privacy and security are our core, we don’t run our business on data or advertising, but",
+        "line2": "on trust. We respect your rights and build amazing tools around them, not against them."
+      },
+      "cta": "Our commitment on privacy",
+      "card1": {
+        "title": "Military-grade encryption.",
+        "subtitle": "We take your privacy very seriously, that’s why your photos are encrypted so only you can access your photos."
+      },
+      "card2": {
+        "title": "Zero-knowledge technology.",
+        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
+      },
+      "card3": {
+        "title": "Privacy by design.",
+        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
+      },
+      "card4": {
+        "title": "Secure from the core.",
+        "subtitle": "As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers."
+      }
+    },
+    "DownloadLinks": {
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Download on the",
+      "orDownloadOnThe": "Or download on the",
+      "getOn": "Get on",
+      "orGetOn": "Or get on",
+      "openDriveWeb": "Open Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  }
 }

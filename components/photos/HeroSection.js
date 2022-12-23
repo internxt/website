@@ -1,20 +1,20 @@
 /* eslint-disable max-len */
 import React from 'react';
-import DownloadComponent from './DownloadComponent';
+import DownloadComponent from '../drive/DownloadComponent';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
-  <section className="flex flex-col w-full pt-10">
+  <section className="flex w-full flex-col pt-10">
     <div className="flex flex-col items-center py-40">
       {/* Main title */}
-      <div className="text-center px-6">
-        <h2 className="text-sm lg:text-base font-medium text-cool-gray-90 mb-2">{textContent.eyebrow}</h2>
+      <div className="px-6 text-center">
+        <h2 className="mb-2 text-sm font-medium text-cool-gray-90 lg:text-base">{textContent.eyebrow}</h2>
 
-        <h1 className="text-4xl lg:text-6xl font-medium text-cool-gray-90 px-4 mb-10">
+        <h1 className="mb-10 px-4 text-4xl font-medium text-cool-gray-90 lg:text-6xl">
           {textContent.title.line1} <br className="hidden sm:flex" />
           {textContent.title.line2}
         </h1>
 
-        <h3 className="text-lg sm:text-base font-normal text-cool-gray-80 mb-10">
+        <h3 className="mb-10 text-lg font-normal text-cool-gray-80 sm:text-base">
           {textContent.subtitle.line1} <br className="hidden sm:flex" />
           {textContent.subtitle.line2} <br className="hidden sm:flex" />
           {textContent.subtitle.line3}
@@ -43,7 +43,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
 
       {/* Download links */}
 
-      <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} device={device} download={download} />
+      <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
     </div>
   </section>
 );
