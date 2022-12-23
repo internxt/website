@@ -1,30 +1,33 @@
 import { ArrowsLeftRight, ArrowUp } from 'phosphor-react';
 import React from 'react';
 import Select from 'react-select';
+import bytes from 'bytes';
+import { isMobile } from 'react-device-detect';
+
+const options = [
+  { value: 'b', label: 'Bytes' },
+  { value: 'kb', label: 'Kilobytes' },
+  { value: 'mb', label: 'Megabytes' },
+  { value: 'gb', label: 'Gigabytes' },
+  { value: 'tb', label: 'Terabytes' },
+];
 
 const HeroSection = ({ textContent }) => {
   const [value, setValue] = React.useState(0);
-  const [convertFrom, setConvertFrom] = React.useState();
-  const [convertTo, setConvertTo] = React.useState();
+  const [convertFrom, setConvertFrom] = React.useState('b');
+  const [convertTo, setConvertTo] = React.useState('kb');
   const [reverse, setReverse] = React.useState(false);
 
-  const options = [
-    { value: 'b', label: 'Bytes' },
-    { value: 'kb', label: 'Kilobytes' },
-    { value: 'mb', label: 'Megabytes' },
-    { value: 'gb', label: 'Gigabytes' },
-    { value: 'tb', label: 'Terabytes' },
-  ];
-
-  const formatGroupLabel = (data) => {
-    return (
-      <div className="absolute z-20 flex">
-        <span className="text-green">{data.label}</span>
-      </div>
-    );
-  };
-
-  function convert() {}
+  function convert(valueToConvert) {
+    const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFrom), {
+      unit: convertTo,
+      decimalPlaces: 5,
+      thousandsSeparator: '.',
+      unitSeparator: ' ',
+    });
+    const valueConvertedNumber = valueConverted.split(' ')[0];
+    return valueConvertedNumber;
+  }
 
   return (
     <section className="overflow-hidden">
@@ -41,27 +44,44 @@ const HeroSection = ({ textContent }) => {
             <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-20">
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
                 <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
-                  <input className="w-52 rounded-xl bg-transparent p-4 focus:outline-none" />
+                  <input
+                    className="ml-2 w-52 rounded-xl bg-transparent p-2 focus:outline-none"
+                    alt="convert to"
+                    onChange={(e) => {
+                      if (e.target.value === '') return;
+                      setValue(convert(e.target.value));
+                    }}
+                  />
                   <Select
                     className="z-50 inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
                     defaultValue={options[0]}
-                    id="convertTo"
-                    formatGroupLabel={formatGroupLabel}
+                    id="Dropdown menu"
                     menuPosition="fixed"
+                    menuPlacement={isMobile ? 'top' : 'bottom'}
+                    onChange={(e) => setConvertFrom(e.value)}
                     options={options}
                   />
                 </div>
               </div>
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
-                <div className="z-20 flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
-                  <input className="w-52 rounded-xl bg-transparent p-4 focus:outline-none" />
+                <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
+                  <input
+                    className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
+                    onChange={(e) => {
+                      if (e.target.value === '') return;
+                      setValue(convert(e.target.value));
+                    }}
+                  />
                   <Select
                     className="inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
                     defaultValue={options[1]}
-                    id="convertTo"
-                    formatGroupLabel={formatGroupLabel}
+                    id="Dropdown menu"
+                    menuPlacement="auto"
                     menuPosition="fixed"
                     options={options}
+                    onChange={(e) => {
+                      setConvertTo(e.value);
+                    }}
                   />
                 </div>
               </div>
