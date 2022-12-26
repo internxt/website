@@ -1,5 +1,5 @@
+import React, { useEffect } from 'react';
 import { ArrowsLeftRight } from 'phosphor-react';
-import React from 'react';
 import Select from 'react-select';
 import bytes from 'bytes';
 import { isMobile } from 'react-device-detect';
@@ -19,12 +19,10 @@ const HeroSection = ({ textContent }) => {
   const [convertTo, setConvertTo] = React.useState('kb');
   const [reverse, setReverse] = React.useState(false);
 
-  console.log(isMobile);
-
   function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
     const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
       unit: convertToMeasure,
-      decimalPlaces: 10,
+      decimalPlaces: 30,
       thousandsSeparator: '.',
       unitSeparator: ' ',
     });
@@ -44,10 +42,13 @@ const HeroSection = ({ textContent }) => {
           </div>
           {/* Container */}
           <div className="relative w-full lg:flex lg:w-auto">
+            {/*  */}
             <div
-              className={`flex ${isMobile && reverse ? 'flex-col-reverse gap-y-2' : 'flex-col gap-y-2'}  lg:${
-                reverse ? 'flex-row-reverse gap-20' : 'flex-row gap-20'
-              }  lg:space-y-0`}
+              className={`flex  ${
+                reverse
+                  ? 'flex-col-reverse gap-y-2 lg:flex-row-reverse lg:gap-20 lg:gap-y-0'
+                  : 'flex-col gap-y-2 lg:flex-row lg:gap-20 lg:gap-y-0'
+              }`}
             >
               <div
                 className={
@@ -77,7 +78,7 @@ const HeroSection = ({ textContent }) => {
                     defaultValue={options[0]}
                     id="Dropdown menu"
                     menuPosition="fixed"
-                    menuPlacement={isMobile && !reverse ? 'top' : 'bottom'}
+                    // menuPlacement={ ? 'top' : 'bottom'}
                     onChange={(e) => setConvertFrom(e.value)}
                     options={options}
                     instanceId="dropdown menu"
@@ -107,7 +108,7 @@ const HeroSection = ({ textContent }) => {
                     defaultValue={options[1]}
                     id="Dropdown menu"
                     menuPosition="fixed"
-                    menuPlacement={isMobile && !reverse ? 'bottom' : 'top'}
+                    // menuPlacement={reverseMobile ? 'top' : 'button'}
                     options={options}
                     onChange={(e) => setConvertTo(e.value)}
                     instanceId="dropdown menu"
