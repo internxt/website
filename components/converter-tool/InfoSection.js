@@ -17,6 +17,7 @@ const InfoSection = ({ textContent }) => {
             height={385.5}
             layout={'intrinsic'}
             loading="lazy"
+            alt="Gauge Image"
           />
         </div>
         <div className="flex w-full max-w-[850px] flex-col space-y-2 pt-10">

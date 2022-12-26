@@ -22,8 +22,7 @@ const HeroSection = ({ textContent }) => {
   function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
     const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
       unit: convertToMeasure,
-      decimalPlaces: 30,
-      thousandsSeparator: '.',
+      decimalPlaces: 100,
       unitSeparator: ' ',
     });
     const valueConvertedNumber = valueConverted.split(' ')[0];
@@ -36,9 +35,9 @@ const HeroSection = ({ textContent }) => {
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
           <div className=" flex w-full max-w-[700px] flex-col items-center justify-center text-center">
-            <h1 className="text-5xl font-semibold">{textContent.title}</h1>
-            <p className="pt-6 text-xl font-normal text-gray-80">{textContent.description}</p>
-            <p className="pt-6 text-xl font-normal text-gray-80">{textContent.description1}</p>
+            <h1 className="text-4xl font-semibold lg:text-5xl">{textContent.title}</h1>
+            <p className="pt-6 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description}</p>
+            <p className="pt-6 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description1}</p>
           </div>
           {/* Container */}
           <div className="relative w-full lg:flex lg:w-auto">
@@ -46,19 +45,19 @@ const HeroSection = ({ textContent }) => {
             <div
               className={`flex  ${
                 reverse
-                  ? 'flex-col-reverse gap-y-2 lg:flex-row-reverse lg:gap-20 lg:gap-y-0'
-                  : 'flex-col gap-y-2 lg:flex-row lg:gap-20 lg:gap-y-0'
+                  ? 'flex-col-reverse gap-y-4 lg:flex-row-reverse lg:gap-20 lg:gap-y-0'
+                  : 'flex-col gap-y-4 lg:flex-row lg:gap-20 lg:gap-y-0'
               }`}
             >
               <div
                 className={
-                  'flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen'
+                  'flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen'
                 }
               >
                 <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
                   {
                     <input
-                      className="ml-2 w-52 rounded-xl bg-transparent p-2 focus:outline-none"
+                      className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                       alt="convert to"
                       value={value1}
                       type="number"
@@ -74,7 +73,7 @@ const HeroSection = ({ textContent }) => {
                     />
                   }
                   <Select
-                    className="z-50 inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
+                    className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[0]}
                     id="Dropdown menu"
                     menuPosition="fixed"
@@ -85,7 +84,7 @@ const HeroSection = ({ textContent }) => {
                   />
                 </div>
               </div>
-              <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:border-2 focus-within:border-primary focus-within:border-opacity-6 md:w-screen">
+              <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
                 <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
                   {
                     <input
@@ -104,7 +103,7 @@ const HeroSection = ({ textContent }) => {
                     />
                   }
                   <Select
-                    className="z-50 inline-block w-screen max-w-[160px] rounded-lg border-gray-10 p-2"
+                    className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[1]}
                     id="Dropdown menu"
                     menuPosition="fixed"
@@ -117,7 +116,7 @@ const HeroSection = ({ textContent }) => {
               </div>
             </div>
             <div
-              className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-gray-20 bg-white p-2"
+              className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-20 bg-white p-2 lg:rotate-0"
               onClick={() => {
                 setReverse(!reverse);
               }}
