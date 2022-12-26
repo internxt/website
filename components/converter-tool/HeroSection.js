@@ -39,13 +39,13 @@ const HeroSection = ({ textContent }) => {
             <p className="pt-6 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description1}</p>
           </div>
           {/* Container */}
-          <div className="relative w-full lg:flex lg:w-auto">
+          <div className="relative w-full  lg:flex lg:w-auto">
             {/*  */}
             <div
               className={`flex  ${
                 reverse
-                  ? 'flex-col-reverse gap-y-4 lg:flex-row-reverse lg:gap-20 lg:gap-y-0'
-                  : 'flex-col gap-y-4 lg:flex-row lg:gap-20 lg:gap-y-0'
+                  ? 'flex-col-reverse items-center justify-center gap-y-4 lg:flex-row-reverse lg:gap-20 lg:gap-y-0'
+                  : 'flex-col items-center justify-center gap-y-4 lg:flex-row lg:gap-20 lg:gap-y-0'
               }`}
             >
               <div
