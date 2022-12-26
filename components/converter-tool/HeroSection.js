@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ArrowsLeftRight } from 'phosphor-react';
 import Select from 'react-select';
 import bytes from 'bytes';
-import { isMobile } from 'react-device-detect';
 
 const options = [
   { value: 'b', label: 'Bytes' },
@@ -55,23 +54,22 @@ const HeroSection = ({ textContent }) => {
                 }
               >
                 <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
-                  {
-                    <input
-                      className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
-                      alt="convert to"
-                      value={value1}
-                      type="number"
-                      onChange={(e) => {
-                        if (!e.target.value) {
-                          setValue1('');
-                          setValue2('');
-                        } else {
-                          setValue1(e.target.value);
-                          setValue2(convert(e.target.value, convertFrom, convertTo));
-                        }
-                      }}
-                    />
-                  }
+                  <input
+                    className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
+                    alt="convert to"
+                    value={value1}
+                    type="number"
+                    onChange={(e) => {
+                      if (!e.target.value) {
+                        setValue1('');
+                        setValue2('');
+                      } else {
+                        setValue1(e.target.value);
+                        setValue2(convert(e.target.value, convertFrom, convertTo));
+                      }
+                    }}
+                  />
+
                   <Select
                     className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[0]}
@@ -86,22 +84,21 @@ const HeroSection = ({ textContent }) => {
               </div>
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
                 <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
-                  {
-                    <input
-                      className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
-                      value={value2}
-                      type="number"
-                      onChange={(e) => {
-                        if (e.target.value === '') {
-                          setValue1('');
-                          setValue2('');
-                        } else {
-                          setValue2(e.target.value);
-                          setValue1(convert(e.target.value, convertTo, convertFrom));
-                        }
-                      }}
-                    />
-                  }
+                  <input
+                    className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
+                    value={value2}
+                    type="number"
+                    onChange={(e) => {
+                      if (e.target.value === '') {
+                        setValue1('');
+                        setValue2('');
+                      } else {
+                        setValue2(e.target.value);
+                        setValue1(convert(e.target.value, convertTo, convertFrom));
+                      }
+                    }}
+                  />
+
                   <Select
                     className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[1]}
