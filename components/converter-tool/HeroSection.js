@@ -83,7 +83,7 @@ const HeroSection = ({ textContent }) => {
                 </div>
               </div>
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
-                <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus:bg-white">
+                <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
                   <input
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     value={value2}
