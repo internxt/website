@@ -123,8 +123,8 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/:lang/converter-tool',
-        destination: '/converter-tool',
+        source: '/:lang/byte-converter',
+        destination: '/byte-converter',
         permanent: false,
       },
     ];

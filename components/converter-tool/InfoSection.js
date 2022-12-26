@@ -20,7 +20,7 @@ const InfoSection = ({ textContent }) => {
             alt="Gauge Image"
           />
         </div>
-        <div className="flex w-full max-w-[850px] flex-col space-y-2 pt-10">
+        <div className="flex w-full max-w-[850px] flex-col space-y-2">
           {textContent.faq.faq.map((item, index) => (
             <div className="rounded-lg border border-gray-20 px-5" key={index}>
               <FaqAccordion key={item.question} question={item.question} answer={item.answer} isQuestionBigger />

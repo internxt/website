@@ -12,7 +12,7 @@ const CtaSection = ({ textContent }) => {
         <div
           className="flex cursor-pointer rounded-full bg-white px-6 py-2"
           onClick={() => {
-            window.open('https://www.internxt.com/new', '_blank');
+            window.open('https://drive.internxt.com/new', '_blank');
           }}
         >
           <p className="text-base font-semibold text-primary">{textContent.cta}</p>
