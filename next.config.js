@@ -122,6 +122,11 @@ module.exports = {
         destination: '/virus-scanner',
         permanent: false,
       },
+      {
+        source: '/:lang/converter-tool',
+        destination: '/converter-tool',
+        permanent: false,
+      },
     ];
   },
   images: {
