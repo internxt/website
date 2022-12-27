@@ -42,8 +42,9 @@ export default function Success({ token, email, redirectUrl, sid, user, session 
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const DRIVE_WEB = 'https://drive.internxt.com';
-  const domain = ctx.req.headers.host;
-  const host = (domain.match(/^localhost/) ? 'http://' : 'https://') + domain;
+  const permitedDomains = ['https://drive.internxt.com', 'http://localhost'];
+  // const domain = ctx.req.headers.host;
+  // const host = (domain.match(/^localhost/) ? 'http://' : 'https://') + domain;
   let session = {};
   let user = {};
 
@@ -57,7 +58,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     };
   }
 
-  const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`)
+  const request = await fetch(`${permitedDomains}/api/stripe/session/${ctx.query.sid}`)
     .then((res) => {
       if (res.status !== 200) {
         return null;
