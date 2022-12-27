@@ -6,15 +6,7 @@ import { getCheckoutSession, getUser } from '../../lib/utils';
 import Layout from '../../components/layout/Layout';
 import { getCheckoutSessionData } from '../../lib/analytics';
 
-
-export default function Success({
-  token,
-  email,
-  redirectUrl,
-  sid,
-  user,
-  session
-}) {
+export default function Success({ token, email, redirectUrl, sid, user, session }) {
   useEffect(() => {
     setTimeout(() => {
       try {
@@ -41,9 +33,7 @@ export default function Success({
       description="Redirect"
     >
       <div>
-        Redirecting to
-        {' '}
-        <a href={redirectUrl}>Drive Web</a>
+        Redirecting to <a href={redirectUrl}>Drive Web</a>
         ...
       </div>
     </Layout>
@@ -52,24 +42,30 @@ export default function Success({
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const DRIVE_WEB = 'https://drive.internxt.com';
-  const host = (ctx.req.headers.host.match(/^localhost/) ? 'http://' : 'https://') + ctx.req.headers.host; let session = {}; let user = {};
+  const permitedDomains = ['https://drive.internxt.com', 'http://localhost'];
+  // const domain = ctx.req.headers.host;
+  // const host = (domain.match(/^localhost/) ? 'http://' : 'https://') + domain;
+  let session = {};
+  let user = {};
 
   if (!ctx.query.sid) {
     return {
       props: {
         token: '',
         email: '',
-        redirectUrl: '/'
-      }
+        redirectUrl: '/',
+      },
     };
   }
 
-  const request = await fetch(`${host}/api/stripe/session/${ctx.query.sid}`).then((res) => {
-    if (res.status !== 200) {
-      return null;
-    }
-    return res;
-  }).catch(() => null);
+  const request = await fetch(`${permitedDomains}/api/stripe/session/${ctx.query.sid}`)
+    .then((res) => {
+      if (res.status !== 200) {
+        return null;
+      }
+      return res;
+    })
+    .catch(() => null);
 
   let redirectUrl = 'https://www.internxt.com';
   let body = { email: null, token: null };
@@ -92,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       redirectUrl,
       sid: ctx.query.sid,
       session,
-      user
-    }
+      user,
+    },
   };
 };

@@ -5,21 +5,22 @@ import { User } from 'phosphor-react';
 const Testimonial = ({ url, photo, name, title, quote }) => (
   <a
     href={url ?? undefined}
+    rel="noopener noreferrer"
     target="_blank"
-    className="flex flex-col items-start space-y-5 p-6 rounded-xl bg-gray-1 text-sm text-left"
+    className="flex flex-col items-start space-y-5 rounded-xl bg-gray-1 p-6 text-left text-sm"
   >
     {/* Person card */}
     <div className="flex flex-row items-center space-x-4">
       {/* Image */}
       {photo ? (
         <img
-          className="flex flex-shrink-0 w-14 h-14 rounded-full bg-gray-5"
+          className="flex h-14 w-14 flex-shrink-0 rounded-full bg-gray-5"
           src={`./images/home/testimonials/${photo}`}
           alt="user avatar"
           draggable={false}
         />
       ) : (
-        <div className="flex flex-shrink-0 items-center justify-center w-14 h-14 rounded-full border border-gray-20 text-gray-20">
+        <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-gray-20 text-gray-20">
           <User size={28} />
         </div>
       )}

@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getStripeProduct } from '../stripeProducts';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
-/*   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
+  /*   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
   const stripe = new Stripe(KEY, { apiVersion: '2020-08-27' });
 
   if (!req.headers.origin) {
@@ -39,7 +39,9 @@ async function postSession(req: NextApiRequest, res: NextApiResponse) {
 }
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'POST') { return /* postSession(req, res)*/; }
+  if (req.method === 'POST') {
+    return /* postSession(req, res)*/;
+  }
 
-  return res.status(500).end(`Cannot ${req.method} on ${req.url}`);
+  return res.status(500).end(`Cannot ${encodeURI(req.method)} on ${encodeURI(req.url)}`);
 };
