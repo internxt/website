@@ -13,7 +13,7 @@
   "ExplanationSection": {
     "convertTo": {
       "title": "How to convert terabytes to gigabytes or gigabytes to terabytes?",
-      "description": "Enter a value in the 'Gigabytes' section and click on the 'Convert' button. Your answer will appear in the 'Terabytes' section."
+      "description": "Enter a value in the 'Gigabytes' section and your answer will appear in the 'Terabytes' section."
     },
     "convertToAgain": {
       "title": "How to convert GB to TB and back again?",
