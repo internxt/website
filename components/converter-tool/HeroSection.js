@@ -78,7 +78,9 @@ const HeroSection = ({ textContent }) => {
                     // menuPlacement={ ? 'top' : 'bottom'}
                     onChange={(e) => {
                       setConvertFrom(e.value);
-                      setValue2(convert(value1, e.value, convertTo));
+                      console.log(e.value);
+                      setValue1();
+                      setValue1(convert(value2, convertTo, e.value));
                     }}
                     options={options}
                     instanceId="dropdown menu"
@@ -111,7 +113,8 @@ const HeroSection = ({ textContent }) => {
                     options={options}
                     onChange={(e) => {
                       setConvertTo(e.value);
-                      setValue1(convert(value2, e.value, convertFrom));
+                      setValue2();
+                      setValue2(convert(value1, convertFrom, e.value));
                     }}
                     instanceId="dropdown menu"
                   />
