@@ -117,39 +117,19 @@ const ConversionTableSection = ({ textContent }) => {
             ))}
           </div>
         </div>
-        <div className="mx-5 flex max-w-4xl flex-row bg-gradient-to-tr from-blue-20 to-blue-10">
-          <div className="flex flex-col items-center justify-center px-4 pb-11 pt-12 text-center lg:items-start lg:justify-start lg:pl-11 lg:text-start">
-            <Image
-              src="/logos/internxt/internxt.svg"
-              width={98.5}
-              height={12}
-              layout="intrinsic"
-              loading="lazy"
-              alt="Cloud storage"
-            />
-            <div className="flex max-w-sm flex-col space-y-2 pt-6 pb-9">
-              <p className="text-4xl font-semibold">Is your password secure enough? </p>
-              <p className="text-xl font-medium">Type it in our free password strength checker and find out!</p>
-            </div>
-            <div
-              onClick={() => {
-                window.location.href = '/password-checker';
-              }}
-              className="flex cursor-pointer rounded-lg border border-primary bg-transparent text-primary"
-            >
-              <p className="px-5 py-3">Check password now</p>
-            </div>
-          </div>
-          <div className="hidden items-center justify-center lg:flex lg:px-14">
-            <Image
-              src="/images/converter-tool/keyLock.png"
-              width={411}
-              height={236}
-              layout="intrinsic"
-              loading="lazy"
-              alt="Cloud storage"
-            />
-          </div>
+        <div
+          onClick={() => {
+            window.open('/password-checker', '_blank');
+          }}
+          className="mx-5 flex max-w-4xl cursor-pointer flex-row "
+        >
+          <Image
+            src="/images/converter-tool/PasswordChecker.png"
+            width={897}
+            height={350}
+            layout="intrinsic"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

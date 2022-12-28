@@ -35,39 +35,19 @@ const ExplanationSection = ({ textContent }) => {
           <p className="text-2xl font-medium">{textContent.MBMeaning.title}</p>
           <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
         </div>
-        <div className="mx-5 flex max-w-4xl flex-row bg-gradient-to-tr from-blue-20 to-blue-10">
-          <div className="flex flex-col items-center justify-center px-4 pb-11 pt-12 text-center lg:items-start lg:justify-start lg:pl-11 lg:text-start">
-            <Image
-              src="/logos/internxt/internxt.svg"
-              width={98.5}
-              height={12}
-              layout="intrinsic"
-              loading="lazy"
-              alt="Cloud storage"
-            />
-            <div className="flex max-w-sm flex-col space-y-2 pt-6 pb-9">
-              <p className="text-4xl font-semibold">Scan files for viruses completely for free</p>
-              <p className="text-xl font-medium">Root out malware before it damages your device.</p>
-            </div>
-            <div
-              onClick={() => {
-                window.location.href = '/virus-scanner';
-              }}
-              className="flex rounded-lg border border-primary bg-transparent text-primary"
-            >
-              <p className="px-5 py-3">Scan files now</p>
-            </div>
-          </div>
-          <div className="hidden items-center justify-center lg:flex lg:px-14">
-            <Image
-              src="/images/converter-tool/keyLock.png"
-              width={411}
-              height={236}
-              layout="intrinsic"
-              loading="lazy"
-              alt="Cloud storage"
-            />
-          </div>
+        <div
+          onClick={() => {
+            window.open('/virus-scanner', '_blank');
+          }}
+          className="mx-5 flex max-w-4xl cursor-pointer flex-row"
+        >
+          <Image
+            src="/images/converter-tool/VirusScanner.png"
+            width={897}
+            height={350}
+            layout={'intrinsic'}
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
