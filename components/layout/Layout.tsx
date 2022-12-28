@@ -13,6 +13,7 @@ interface LayoutProps {
   disableDrift?: boolean;
   isProduction?: boolean;
   specialOffer?: string;
+  isBannerDisabled?: boolean;
   host?: string;
   lang?: string;
 }
@@ -27,6 +28,7 @@ export default function Layout({
   disableMailerlite = false,
   specialOffer,
   disableDrift = true,
+  isBannerDisabled,
   isProduction = process.env.NODE_ENV === 'production',
   lang,
 }: // lang
@@ -40,6 +42,36 @@ LayoutProps) {
     // getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
+
+  const New = () => {
+    if (lang === 'en') {
+      return 'NEW:';
+    } else if (lang === 'es') {
+      return 'NUEVO:';
+    } else if (lang === 'fr') {
+      return 'NOUVEAU:';
+    }
+  };
+
+  const ConvertTo = () => {
+    if (lang === 'en') {
+      return "Convert TB to GB and more with Internxt's free Byte Converter!";
+    } else if (lang === 'es') {
+      return 'Convierte TB en GB y más con el convertidor de unidades gratuito de Internxt!';
+    } else if (lang === 'fr') {
+      return "Convertissez des To en Go et plus avec le convertisseur d'octets gratuit d'Internxt!";
+    }
+  };
+
+  const tryNow = () => {
+    if (lang === 'en') {
+      return 'Try Now';
+    } else if (lang === 'es') {
+      return 'Pruébalo ahora';
+    } else if (lang === 'fr') {
+      return 'Essayez maintenant';
+    }
+  };
 
   return (
     <>
@@ -69,6 +101,26 @@ LayoutProps) {
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
+      {!isBannerDisabled ? (
+        <a
+          href="/byte-converter"
+          target="_blank"
+          rel="noreferrer"
+          className="group fixed bottom-0 left-0 z-50 flex h-16 w-screen items-center justify-center bg-primary text-white"
+        >
+          <div className=" mx-auto flex flex-row items-center justify-center space-x-2">
+            <div className="flex flex-row items-center justify-center space-x-1 ">
+              <p className="flex flex-row font-bold">{New()}</p>
+              <p className="flex flex-row font-normal">{ConvertTo()}</p>
+            </div>
+            <div className="flex flex-row transition duration-200 ease-in-out sm:space-x-1">
+              <div className="flex">
+                <span className="flex text-base font-semibold underline">{tryNow()}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      ) : null}
       {children}
       {/* <BFBanner /> */}
     </>

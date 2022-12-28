@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import FaqAccordion from '../password-checker/FaqAccordion';
 
 const InfoSection = ({ textContent }) => {
@@ -9,16 +8,6 @@ const InfoSection = ({ textContent }) => {
         <div className="flex max-w-[784px] flex-col space-y-4 text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="text-xl font-normal text-gray-100">{textContent.description}</p>
-        </div>
-        <div>
-          <Image
-            src="/images/converter-tool/GaugeImage.png"
-            width={784}
-            height={385.5}
-            layout={'intrinsic'}
-            loading="lazy"
-            alt="Gauge Image"
-          />
         </div>
         <div className="flex w-full max-w-[850px] flex-col space-y-2">
           {textContent.faq.faq.map((item, index) => (
