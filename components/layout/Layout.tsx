@@ -3,6 +3,7 @@ import Head from 'next/head';
 import React, { useEffect } from 'react';
 import isBrave from '../../lib/brave';
 import Script from 'next/script';
+import Link from 'next/link';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -102,19 +103,16 @@ LayoutProps) {
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
       {!isBannerDisabled ? (
-        <a
-          href="/byte-converter"
-          target="_blank"
-          rel="noreferrer"
-          className="group fixed bottom-0 left-0 z-50 hidden h-16 w-screen items-center justify-center bg-primary text-white md:flex"
-        >
-          <div className=" space-x- mx-auto flex flex-row items-center justify-center space-x-2">
-            <p className="flex flex-row rounded-full  font-bold">{New()}</p>
-            <p className="flex flex-row font-normal">{ConvertTo()}</p>
+        <div className="group fixed bottom-0 left-0 z-50 hidden h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex">
+          <Link href="/byte-converter" target="_blank" rel="noreferrer">
+            <div className="mx-auto flex flex-row items-center justify-center space-x-2">
+              <p className="flex flex-row rounded-full  font-bold">{New()}</p>
+              <p className="flex flex-row font-normal">{ConvertTo()}</p>
 
-            <p className="flex text-base font-semibold underline">{tryNow()}</p>
-          </div>
-        </a>
+              <p className="flex text-base font-semibold underline">{tryNow()}</p>
+            </div>
+          </Link>
+        </div>
       ) : null}
       {children}
       {/* <BFBanner /> */}
