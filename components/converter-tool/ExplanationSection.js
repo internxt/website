@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/Image';
+import Link from 'next/link';
 
 const ExplanationSection = ({ textContent }) => {
   return (
@@ -35,10 +36,10 @@ const ExplanationSection = ({ textContent }) => {
           <p className="text-2xl font-medium">{textContent.MBMeaning.title}</p>
           <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
         </div>
-        <div
-          onClick={() => {
-            window.open('https://internxt.com/virus-scanner', '_blank');
-          }}
+        <Link
+          href={'/virus-scanner'}
+          rel="noreferrer"
+          target={'_blank'}
           className="mx-5 flex max-w-4xl cursor-pointer flex-row"
         >
           <Image
@@ -48,7 +49,7 @@ const ExplanationSection = ({ textContent }) => {
             layout={'intrinsic'}
             loading="lazy"
           />
-        </div>
+        </Link>
       </div>
     </section>
   );
