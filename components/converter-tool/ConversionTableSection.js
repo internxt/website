@@ -118,20 +118,22 @@ const ConversionTableSection = ({ textContent }) => {
             ))}
           </div>
         </div>
-        <Link
-          href="/password-checker"
-          rel="noreferrer"
-          target={'_blank'}
-          className="mx-5 flex max-w-4xl cursor-pointer flex-row "
-        >
-          <Image
-            src="/images/converter-tool/PasswordChecker.png"
-            width={897}
-            height={350}
-            layout="intrinsic"
-            loading="lazy"
-          />
-        </Link>
+        <div className="flex cursor-pointer">
+          <Link
+            href="/password-checker"
+            rel="noreferrer"
+            target={'_blank'}
+            className="mx-5 flex max-w-4xl cursor-pointer flex-row"
+          >
+            <Image
+              src="/images/converter-tool/PasswordChecker.png"
+              width={897}
+              height={350}
+              layout="intrinsic"
+              loading="lazy"
+            />
+          </Link>
+        </div>
       </div>
     </section>
   );
