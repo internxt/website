@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import Link from 'next/link';
+import { X } from 'phosphor-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -64,6 +65,16 @@ LayoutProps) {
     }
   };
 
+  const ConvertToMobile = () => {
+    if (lang === 'en') {
+      return 'Byte converter: TB to KB';
+    } else if (lang === 'es') {
+      return 'Conversor de unidades: TB a KB';
+    } else if (lang === 'fr') {
+      return "convertisseur d'unités: To en Go";
+    }
+  };
+
   const tryNow = () => {
     if (lang === 'en') {
       return 'Try Now';
@@ -103,16 +114,30 @@ LayoutProps) {
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
       {!isBannerDisabled ? (
-        <div className="group fixed bottom-0 left-0 z-50 hidden h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex">
-          <Link href="/byte-converter" target="_blank" rel="noreferrer">
-            <div className="mx-auto flex flex-row items-center justify-center space-x-2">
-              <p className="flex flex-row rounded-full  font-bold">{New()}</p>
-              <p className="flex flex-row font-normal">{ConvertTo()}</p>
+        <>
+          <div className="group fixed bottom-0 left-0 z-50 hidden h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex">
+            <Link href="/byte-converter" target="_blank" rel="noreferrer">
+              <div className="mx-auto flex flex-row items-center justify-center space-x-2">
+                <p className="flex flex-row rounded-full  font-bold">{New()}</p>
+                <p className="flex flex-row font-normal">{ConvertTo()}</p>
 
-              <p className="flex text-base font-semibold underline">{tryNow()}</p>
-            </div>
-          </Link>
-        </div>
+                <p className="flex text-base font-semibold underline">{tryNow()}</p>
+              </div>
+            </Link>
+          </div>
+          <div
+            className={`group fixed bottom-0 left-0 z-50 flex h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+          >
+            <Link href="/byte-converter" target="_blank" rel="noreferrer">
+              <div className="flex flex-row">
+                <div className="flex flex-row items-center justify-center space-x-2">
+                  <p className="flex flex-row rounded-full  font-bold">{New()}</p>
+                  <p className="flex flex-row font-normal">{ConvertToMobile()}</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </>
       ) : null}
       {children}
       {/* <BFBanner /> */}
