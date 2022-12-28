@@ -106,18 +106,13 @@ LayoutProps) {
           href="/byte-converter"
           target="_blank"
           rel="noreferrer"
-          className="group fixed bottom-0 left-0 z-50 flex h-16 w-screen items-center justify-center bg-primary text-white"
+          className="group fixed bottom-0 left-0 z-50 hidden h-16 w-screen items-center justify-center bg-primary text-white md:flex"
         >
-          <div className=" mx-auto flex flex-row items-center justify-center space-x-2">
-            <div className="flex flex-row items-center justify-center space-x-1 ">
-              <p className="flex flex-row font-bold">{New()}</p>
-              <p className="flex flex-row font-normal">{ConvertTo()}</p>
-            </div>
-            <div className="flex flex-row transition duration-200 ease-in-out sm:space-x-1">
-              <div className="flex">
-                <span className="flex text-base font-semibold underline">{tryNow()}</span>
-              </div>
-            </div>
+          <div className=" space-x- mx-auto flex flex-row items-center justify-center space-x-2">
+            <p className="flex flex-row rounded-full  font-bold">{New()}</p>
+            <p className="flex flex-row font-normal">{ConvertTo()}</p>
+
+            <p className="flex text-base font-semibold underline">{tryNow()}</p>
           </div>
         </a>
       ) : null}
