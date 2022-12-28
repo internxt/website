@@ -119,7 +119,7 @@ const ConversionTableSection = ({ textContent }) => {
         </div>
         <div
           onClick={() => {
-            window.open('/password-checker', '_blank');
+            window.open('https://internxt.com/password-checker', '_blank');
           }}
           className="mx-5 flex max-w-4xl cursor-pointer flex-row "
         >

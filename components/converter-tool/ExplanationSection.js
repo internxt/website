@@ -37,7 +37,7 @@ const ExplanationSection = ({ textContent }) => {
         </div>
         <div
           onClick={() => {
-            window.open('/virus-scanner', '_blank');
+            window.open('https://internxt.com/virus-scanner', '_blank');
           }}
           className="mx-5 flex max-w-4xl cursor-pointer flex-row"
         >
