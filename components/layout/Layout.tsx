@@ -35,6 +35,8 @@ export default function Layout({
   lang,
 }: // lang
 LayoutProps) {
+  const [colseBannerOnMobile, setColseBannerOnMobile] = React.useState(false);
+
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
@@ -126,16 +128,26 @@ LayoutProps) {
             </Link>
           </div>
           <div
-            className={`group fixed bottom-0 left-0 z-50 flex h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+            className={`group fixed bottom-0 left-0 z-30 ${
+              colseBannerOnMobile ? 'hidden' : 'flex'
+            } h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
           >
-            <Link href="/byte-converter" target="_blank" rel="noreferrer">
-              <div className="flex flex-row">
+            <div className="flex flex-row">
+              <Link href="/byte-converter" target="_blank" rel="noreferrer">
                 <div className="flex flex-row items-center justify-center space-x-2">
                   <p className="flex flex-row rounded-full  font-bold">{New()}</p>
                   <p className="flex flex-row font-normal">{ConvertToMobile()}</p>
                 </div>
-              </div>
-            </Link>
+              </Link>
+              <button
+                className="absolute top-3 right-3 flex flex-col"
+                onClick={() => {
+                  setColseBannerOnMobile(true);
+                }}
+              >
+                <X size={36} className="z-50" />
+              </button>
+            </div>
           </div>
         </>
       ) : null}
