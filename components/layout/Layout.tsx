@@ -128,7 +128,7 @@ LayoutProps) {
             </Link>
           </div>
           <div
-            className={`group fixed bottom-0 left-0 z-30 ${
+            className={`group fixed top-16 left-0 z-30 ${
               colseBannerOnMobile ? 'hidden' : 'flex'
             } h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
           >
