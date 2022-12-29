@@ -5,8 +5,8 @@ import { CaretRight } from 'phosphor-react';
 const BannersSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center justify-center space-y-16 py-20">
-        <div className="flex">
+      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
+        <div className="flex text-center">
           <p className="text-2xl font-semibold text-gray-100 md:text-4xl">{textContent.title}</p>
         </div>
         <div className="flex flex-col space-y-9 md:flex-row md:space-y-0 md:space-x-9">
