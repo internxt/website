@@ -12,7 +12,12 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName={'Cyber Awareness'}>
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      isBannerDisabled
+      segmentName={'Cyber Awareness'}
+    >
       <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
 
       <HeroSection textContent={textContent.HeroSection} />
