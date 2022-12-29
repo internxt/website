@@ -5,6 +5,7 @@ import Layout from '../components/layout/Layout';
 import HeroSection from '../components/virus-scanner/HeroSection';
 import FeaturesSection from '../components/virus-scanner/FeaturesSection';
 import CtaSection from '../components/virus-scanner/CtaSection';
+import BannersSection from '../components/virus-scanner/BannersSection';
 
 const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
@@ -16,6 +17,8 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) 
       <HeroSection textContent={langJson.HeroSection} />
 
       <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
+
+      <BannersSection textContent={langJson.BannersSection} />
 
       <CtaSection textContent={langJson.CtaSection} />
 

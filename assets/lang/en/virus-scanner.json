@@ -70,5 +70,16 @@
     "title": "Safety is only a click away",
     "description": "Protect your personal data with Internxt's privacy suite.",
     "cta": "Create account"
+  },
+  "BannersSection": {
+    "title": "Try out Internxt's free online security tools:",
+    "passwordCheckerBanner": {
+      "title": "Password Strength Checker",
+      "cta": "Check now"
+    },
+    "byteConverterBanner": {
+      "title": "Byte Unit Converter",
+      "cta": "Convert now"
+    }
   }
 }

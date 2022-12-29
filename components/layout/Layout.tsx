@@ -117,7 +117,7 @@ LayoutProps) {
       </Head>
       {!isBannerDisabled ? (
         <>
-          <div className="group fixed bottom-0 left-0 z-50 hidden h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex">
+          <div className="group fixed top-16 left-0 z-50 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex">
             <Link href="/byte-converter" target="_blank" rel="noreferrer">
               <div className="mx-auto flex flex-row items-center justify-center space-x-2">
                 <p className="flex flex-row rounded-full  font-bold">{New()}</p>
