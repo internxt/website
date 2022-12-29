@@ -77,7 +77,7 @@ const HeroSection = ({ textContent }) => {
                   />
 
                   <Select
-                    className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className="z-30 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[4]}
                     id="Dropdown menu"
                     menuPosition="absolute"
@@ -119,7 +119,7 @@ const HeroSection = ({ textContent }) => {
                   />
 
                   <Select
-                    className="z-30 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className="inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[3]}
                     id="Dropdown menu"
                     menuPosition="absolute"
