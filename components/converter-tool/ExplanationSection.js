@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ExplanationSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center justify-start space-y-16 px-10 pt-20 pb-16">
+      <div className="flex flex-col items-center justify-start space-y-16 px-5 pt-20 pb-16 lg:px-10">
         <div className="flex max-w-2xl flex-col space-y-3">
           <p className="text-2xl font-medium">{textContent.convertTo.title}</p>
           <p className="text-lg font-normal text-gray-80">{textContent.convertTo.description}</p>
@@ -34,6 +35,22 @@ const ExplanationSection = ({ textContent }) => {
         <div className="flex max-w-2xl flex-col space-y-3">
           <p className="text-2xl font-medium">{textContent.MBMeaning.title}</p>
           <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
+        </div>
+        <div className="flex cursor-pointer">
+          <div
+            onClick={() => {
+              window.open('https://internxt.com/virus-scanner', '_blank');
+            }}
+            className="flex max-w-4xl cursor-pointer flex-row"
+          >
+            <Image
+              src="/images/converter-tool/VirusScanner.png"
+              width={897}
+              height={350}
+              layout={'intrinsic'}
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>

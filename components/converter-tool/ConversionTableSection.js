@@ -1,6 +1,6 @@
-import { items } from '@internxt/lib';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ConversionTableSection = ({ textContent }) => {
   const table = [
@@ -116,6 +116,22 @@ const ConversionTableSection = ({ textContent }) => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="flex cursor-pointer">
+          <div
+            onClick={() => {
+              window.open('https://internxt.com/password-checker', '_blank');
+            }}
+            className="mx-5 flex max-w-4xl cursor-pointer flex-row"
+          >
+            <Image
+              src="/images/converter-tool/PasswordChecker.png"
+              width={897}
+              height={350}
+              layout="intrinsic"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

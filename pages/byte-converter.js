@@ -15,7 +15,12 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
   const metatags = metatagsDescriptions.filter((desc) => desc.id === CONVERTER_TOOL_METATAG_ID);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      isBannerDisabled
+      segmentName="Converter Tool"
+    >
       <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
