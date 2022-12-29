@@ -54,7 +54,7 @@ const Popup = () => {
           </button>
         </Link>
         <div className="absolute -left-1 -z-40 flex h-[213px] w-[313px] pb-3">
-          <img src="/images/lifetime/infinity.svg" className="flex h-auto w-auto" />
+          <img src="/images/lifetime/infinity.svg" alt="Infinity image" className="flex h-auto w-auto" />
         </div>
       </div>
     </div>

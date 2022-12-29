@@ -403,7 +403,12 @@ const HeroSection = ({ textContent }) => {
                     <>
                       {/* Drop file here */}
                       <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-primary bg-opacity-3 sm:h-96">
-                        <Image src="/images/virus-scanner/FileArrowUp.png" width={80} height={80} />
+                        <Image
+                          src="/images/virus-scanner/FileArrowUp.png"
+                          alt="File Arrow Up icon"
+                          width={80}
+                          height={80}
+                        />
                         <p className="pt-4 text-2xl font-semibold">{textContent.dropHere}</p>
                       </div>
                     </>

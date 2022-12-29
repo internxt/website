@@ -146,7 +146,7 @@ const TestimonialsSection = ({ textContent }) => {
               <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                 <div className="flex w-auto max-w-[300px] flex-col">
                   <div className="flex w-[331px] flex-row">
-                    <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
+                    <img src="/images/home/testimonials/Comas.svg" alt="Quote symbol" loading="lazy" />
                     <div className="flex flex-col pl-4">
                       <p className="text-xl font-semibold">{card.name}</p>
                       {card.name.includes('Eva') ? (

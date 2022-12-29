@@ -31,7 +31,7 @@ const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link
     <div className={`${cardstyle} sm:w-84 lg:h-90 sm:h-auto lg:w-8/12`}>
       <div className={`${styles.content} sm:w-auto sm:px-8 lg:p-0 lg:pt-8 lg:pl-12`}>
         <div className="w-32 sm:w-40">
-          <Image src={logourl} width={logoW} height={logoH} loading={'lazy'} />
+          <Image src={logourl} width={logoW} alt="Logo image" height={logoH} loading={'lazy'} />
         </div>
 
         <h1 className={`${companystyle} sm:text-2xl lg:my-4 lg:text-xl`}>{company}</h1>

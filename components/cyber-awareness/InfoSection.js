@@ -35,7 +35,7 @@ export const InfoCard = ({ id, title, img, link }) => {
           console.log(link);
         }}
       >
-        <img key={id} src={img} width={32} height={32} />
+        <img key={id} src={img} alt={`${title} image`} width={32} height={32} />
         <p className="flex text-left text-2xl font-medium">{title}</p>
       </button>
       <div className={`${isShareIcon === id ? '' : 'hidden'} flex flex-row space-x-2 border-black`}>

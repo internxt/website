@@ -16,6 +16,7 @@ interface LayoutProps {
   isProduction?: boolean;
   specialOffer?: string;
   isBannerDisabled?: boolean;
+  isBannerFixed?: boolean;
   host?: string;
   lang?: string;
 }
@@ -31,6 +32,7 @@ export default function Layout({
   specialOffer,
   disableDrift = true,
   isBannerDisabled,
+  isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
   lang,
 }: // lang
@@ -117,7 +119,11 @@ LayoutProps) {
       </Head>
       {!isBannerDisabled ? (
         <>
-          <div className="group fixed top-16 left-0 z-50 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex">
+          <div
+            className={`group ${
+              isBannerFixed ? 'absolute' : 'fixed'
+            } top-16 left-0 z-50 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
+          >
             <Link href="/byte-converter" target="_blank" rel="noreferrer">
               <div className="mx-auto flex flex-row items-center justify-center space-x-2">
                 <p className="flex flex-row rounded-full  font-bold">{New()}</p>

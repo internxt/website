@@ -34,11 +34,12 @@ const HeroSection = ({ lang, textContent }) => {
                 <img
                   src="/images/lifetime/infinity.svg"
                   className="relative h-full w-full translate-x-56 object-contain object-left 2xl:translate-x-96"
+                  alt="Infinity image"
                 />
               </div>
             </div>
             <div className="mb-20 flex flex-col items-center justify-center px-10 pt-12 lg:hidden">
-              <img src="/images/lifetime/infinity.svg" className="flex" />
+              <img src="/images/lifetime/infinity.svg" alt="infinity image" className="flex" />
             </div>
           </div>
         </div>

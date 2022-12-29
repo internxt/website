@@ -49,6 +49,7 @@ const ExplanationSection = ({ textContent }) => {
               height={350}
               layout={'intrinsic'}
               loading="lazy"
+              alt="Virus scanner image"
             />
           </div>
         </div>
