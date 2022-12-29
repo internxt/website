@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ArrowsLeftRight } from 'phosphor-react';
 import Select from 'react-select';
 import bytes from 'bytes';
+import { isMobile } from 'react-device-detect';
 
 const options = [
   { value: 'b', label: 'Bytes' },
@@ -34,7 +35,7 @@ const HeroSection = ({ textContent }) => {
   }
 
   return (
-    <section className="overflow-hidden">
+    <section className="">
       <div className="mx-3 flex pt-32 pb-20 md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
@@ -79,7 +80,7 @@ const HeroSection = ({ textContent }) => {
                     className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[4]}
                     id="Dropdown menu"
-                    menuPosition="fixed"
+                    menuPosition="absolute"
                     // menuPlacement={ ? 'top' : 'bottom'}
                     onChange={(e) => {
                       setConvertFrom(e.value);
@@ -118,10 +119,10 @@ const HeroSection = ({ textContent }) => {
                   />
 
                   <Select
-                    className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className="z-30 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     defaultValue={options[3]}
                     id="Dropdown menu"
-                    menuPosition="fixed"
+                    menuPosition="absolute"
                     // menuPlacement={reverseMobile ? 'top' : 'button'}
                     options={options}
                     onChange={(e) => {
