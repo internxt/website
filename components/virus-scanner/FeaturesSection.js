@@ -10,7 +10,7 @@ const FeaturesSection = ({ textContent, lang }) => {
   );
 
   return (
-    <section className="relative bg-gradient-to-b from-cool-gray-5 to-white py-20 lg:pt-10 lg:pb-0">
+    <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-4 lg:p-16">
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
