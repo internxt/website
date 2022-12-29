@@ -37,10 +37,10 @@ const ExplanationSection = ({ textContent }) => {
           <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
         </div>
         <div className="flex cursor-pointer">
-          <Link
-            href={'/virus-scanner'}
-            rel="noreferrer"
-            target={'_blank'}
+          <div
+            onClick={() => {
+              window.open('https://internxt.com/virus-scanner', '_blank');
+            }}
             className="mx-5 flex max-w-4xl cursor-pointer flex-row"
           >
             <Image
@@ -50,7 +50,7 @@ const ExplanationSection = ({ textContent }) => {
               layout={'intrinsic'}
               loading="lazy"
             />
-          </Link>
+          </div>
         </div>
       </div>
     </section>

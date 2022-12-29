@@ -119,10 +119,10 @@ const ConversionTableSection = ({ textContent }) => {
           </div>
         </div>
         <div className="flex cursor-pointer">
-          <Link
-            href="/password-checker"
-            rel="noreferrer"
-            target={'_blank'}
+          <div
+            onClick={() => {
+              window.open('https://internxt.com/password-checker', '_blank');
+            }}
             className="mx-5 flex max-w-4xl cursor-pointer flex-row"
           >
             <Image
@@ -132,7 +132,7 @@ const ConversionTableSection = ({ textContent }) => {
               layout="intrinsic"
               loading="lazy"
             />
-          </Link>
+          </div>
         </div>
       </div>
     </section>
