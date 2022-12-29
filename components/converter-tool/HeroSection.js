@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowsLeftRight } from 'phosphor-react';
 import Select from 'react-select';
 import bytes from 'bytes';
+import { isMobile } from 'react-device-detect';
 
 const options = [
   { value: 'b', label: 'Bytes' },
@@ -12,11 +13,16 @@ const options = [
 ];
 
 const HeroSection = ({ textContent }) => {
-  const [value1, setValue1] = React.useState();
+  const [value1, setValue1] = React.useState(1);
   const [value2, setValue2] = React.useState();
-  const [convertFrom, setConvertFrom] = React.useState('b');
-  const [convertTo, setConvertTo] = React.useState('kb');
+  const [convertFrom, setConvertFrom] = React.useState('tb');
+  const [convertTo, setConvertTo] = React.useState('gb');
   const [reverse, setReverse] = React.useState(false);
+
+  useEffect(() => {
+    if (!value1 && !value2) return;
+    setValue2(convert(value1, convertFrom, convertTo));
+  });
 
   function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
     const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
@@ -29,7 +35,7 @@ const HeroSection = ({ textContent }) => {
   }
 
   return (
-    <section className="overflow-hidden">
+    <section className="">
       <div className="mx-3 flex pt-32 pb-20 md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
@@ -71,10 +77,10 @@ const HeroSection = ({ textContent }) => {
                   />
 
                   <Select
-                    className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
-                    defaultValue={options[0]}
+                    className="z-30 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    defaultValue={options[4]}
                     id="Dropdown menu"
-                    menuPosition="fixed"
+                    menuPosition="absolute"
                     // menuPlacement={ ? 'top' : 'bottom'}
                     onChange={(e) => {
                       setConvertFrom(e.value);
@@ -113,10 +119,10 @@ const HeroSection = ({ textContent }) => {
                   />
 
                   <Select
-                    className="z-50 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
-                    defaultValue={options[1]}
+                    className="inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    defaultValue={options[3]}
                     id="Dropdown menu"
-                    menuPosition="fixed"
+                    menuPosition="absolute"
                     // menuPlacement={reverseMobile ? 'top' : 'button'}
                     options={options}
                     onChange={(e) => {
@@ -142,10 +148,11 @@ const HeroSection = ({ textContent }) => {
               className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-20 bg-white p-2 lg:rotate-0"
               onClick={() => {
                 setReverse(!reverse);
-                if (reverse) {
+                if (reverse && value1) {
                   setValue1(value2);
                   setValue2(convert(value2, convertFrom, convertTo));
                 } else {
+                  if (!value2) return;
                   setValue2(value1);
                   setValue1(convert(value1, convertTo, convertFrom));
                 }
