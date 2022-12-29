@@ -26,6 +26,7 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             <img
               src="/images/special-offer/black-friday/file_icons.png"
               className="h-full w-full object-cover object-right"
+              alt="file icons"
             />
           </div> */}
           <div className="z-10 flex max-w-[585px] flex-col items-center justify-center space-y-4 py-16 text-center text-white">
@@ -54,11 +55,11 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             </div>
             {/* {isAffiliates ? (
               <div className="pt-16">
-                <img src="/images/special-offer/black-friday/discount-70.png" />
+                <img src="/images/special-offer/black-friday/discount-70.png" alt="70% off image" />
               </div>
             ) : (
               <div className="pt-16">
-                <img src="/images/special-offer/black-friday/discount.png" />
+                <img src="/images/special-offer/black-friday/discount.png" alt="discount image" />
               </div>
             )} */}
           </div>
@@ -66,6 +67,7 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             <img
               src="/images/special-offer/black-friday/file_icons.png"
               className="h-full w-full object-cover object-left"
+              alt="file icons"
             />
           </div> */}
         </div>

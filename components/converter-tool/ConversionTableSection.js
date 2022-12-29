@@ -131,6 +131,7 @@ const ConversionTableSection = ({ textContent }) => {
               height={350}
               layout="intrinsic"
               loading="lazy"
+              alt="Password checker"
             />
           </div>
         </div>

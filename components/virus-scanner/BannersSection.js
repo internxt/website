@@ -17,6 +17,7 @@ const BannersSection = ({ textContent }) => {
               height={70}
               layout={'intrinsic'}
               loading={'lazy'}
+              alt="Password checker image"
             />
             <p className="max-w-[240px] text-2xl font-medium">{textContent.passwordCheckerBanner.title}</p>
             <div
@@ -34,6 +35,7 @@ const BannersSection = ({ textContent }) => {
               height={70}
               layout={'intrinsic'}
               loading={'lazy'}
+              alt="Byte converter image"
             />
             <p className="max-w-[200px] text-2xl font-medium">{textContent.byteConverterBanner.title}</p>
             <div

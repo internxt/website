@@ -49,7 +49,11 @@ const SuiteSection = ({ textContent }) => {
               </a>
             </div>
           </div>
-          <img src={'/images/cyber-awareness/Checklist-image.svg'} className="hidden pl-16 pr-24 md:flex" />
+          <img
+            src={'/images/cyber-awareness/Checklist-image.svg'}
+            alt="Checklist image"
+            className="hidden pl-16 pr-24 md:flex"
+          />
         </div>
       </div>
     </section>

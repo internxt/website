@@ -88,15 +88,15 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
               </div>
               {/* {isAffiliate ? (
                 <div className="absolute m-auto flex max-h-[300px] max-w-[612px]">
-                  <img src="/images/special-offer/black-friday/discount-70.png" />
+                  <img src="/images/special-offer/black-friday/discount-70.png" alt="70% off image" />
                 </div>
               ) : (
                 <div className="absolute m-auto flex max-h-[300px] max-w-[612px]">
-                  <img src="/images/special-offer/black-friday/discount.png" />
+                  <img src="/images/special-offer/black-friday/discount.png" alt="discount image" />
                 </div>
               )} */}
               <div className="absolute m-auto flex max-h-[300px] max-w-[300px]">
-                <img src="/images/special-offer/black-friday/inxtBF.png" />
+                <img src="/images/special-offer/black-friday/inxtBF.png" alt="inxtBF image" />
               </div>
             </div>
           </div>
