@@ -127,6 +127,16 @@ module.exports = {
         destination: '/byte-converter',
         permanent: false,
       },
+      {
+        source: '/:lang/converter-tool',
+        destination: '/byte-converter',
+        permanent: false,
+      },
+      {
+        source: '/converter-tool',
+        destination: '/byte-converter',
+        permanent: false,
+      },
     ];
   },
   images: {

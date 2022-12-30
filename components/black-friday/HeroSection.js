@@ -107,9 +107,9 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
       </div>
 
       <div className="sm:gap-x-30 flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-20 py-14">
-        {features.map((feature) => (
+        {features.map((feature, index) => (
           <div
-            key={feature.index}
+            key={index}
             className={`flex ${
               lang === 'fr' ? 'max-w-[230px]' : 'max-w-[185px]'
             } flex-col items-center justify-center space-y-4 text-center`}
