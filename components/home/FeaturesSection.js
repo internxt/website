@@ -82,7 +82,19 @@ const FeaturesSection = ({ textContent, lang }) => {
                 </div>
               </a>
             </div>
-            <div className={`${styles.securebydesignImage}`} role="img" aria-label="file being encrypted" />
+            <div className="flex flex-col">
+              <Image
+                loading="lazy"
+                className="mb-6 flex lg:max-w-xs"
+                src="/images/home/securebydesign.webp"
+                draggable="false"
+                width={472}
+                height={396}
+                layout="intrinsic"
+                alt="dektop, laptop and phone with Internxt app"
+              />
+            </div>
+            {/* <div className={`${styles.securebydesignImage}`} role="img" aria-label="file being encrypted" /> */}
           </div>
 
           <div
