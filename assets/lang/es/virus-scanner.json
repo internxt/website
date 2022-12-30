@@ -6,9 +6,9 @@
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
 
     "dropFile": {
-      "line1": "Arrastra un archivo para escanearlo"
+      "line1": "Arrastra un archivo"
     },
-    "fileSelected": "File selected for scanning",
+    "fileSelected": "Archivo detectado",
     "cancel": "Cancelar",
     "close": "Cerrar",
     "scanNow": "Escanear ahora",
@@ -18,7 +18,7 @@
     "loading": "Cargando...",
     "maxFileSize": {
       "title": "Tamaño de archivo superado",
-      "description": "Tamaño máximo de archivo 1 GB"
+      "description": "Tamaño máximo 1 GB"
     },
     "table": {
       "loading": "Cargando...",

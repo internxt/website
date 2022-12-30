@@ -2,12 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang }) => {
-  const maliciousMalwareText = textContent.scanFiles.description.split('malicious malware')[0];
+  const maliciousMalwareText =
+    lang === 'en'
+      ? textContent.scanFiles.description.split('malicious malware')[0]
+      : textContent.scanFiles.description.split('tipo de malware')[0];
 
-  const maliciousMalware = textContent.scanFiles.description.substr(
-    textContent.scanFiles.description.indexOf('malicious malware'),
-    17,
-  );
+  const maliciousMalware =
+    lang === 'en'
+      ? textContent.scanFiles.description.substr(textContent.scanFiles.description.indexOf('malicious malware'), 17)
+      : textContent.scanFiles.description.substr(textContent.scanFiles.description.indexOf('tipo de malware'), 16);
 
   return (
     <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
@@ -74,10 +77,9 @@ const FeaturesSection = ({ textContent, lang }) => {
                         window.open('https://blog.internxt.com/what-is-malware/', '_blank');
                       }}
                     >
-                      <p className="text-primary underline underline-offset-4">{maliciousMalware}</p>
+                      <p className="text-primary underline underline-offset-4">{maliciousMalware}.</p>
                     </button>
                   }
-                  .
                 </p>
               </div>
               <div className="flex">
