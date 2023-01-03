@@ -5,6 +5,7 @@ import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import Link from 'next/link';
 import { X } from 'phosphor-react';
+import { useRouter } from 'next/router';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -15,7 +16,6 @@ interface LayoutProps {
   disableDrift?: boolean;
   isProduction?: boolean;
   specialOffer?: string;
-  isBannerDisabled?: boolean;
   isBannerFixed?: boolean;
   host?: string;
   lang?: string;
@@ -31,7 +31,6 @@ export default function Layout({
   disableMailerlite = false,
   specialOffer,
   disableDrift = true,
-  isBannerDisabled,
   isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
   lang,
@@ -48,6 +47,8 @@ LayoutProps) {
     // getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
+  const router = useRouter();
+  const showBanner = router.pathname === '/';
 
   const New = () => {
     if (lang === 'en') {
@@ -117,7 +118,7 @@ LayoutProps) {
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
-      {!isBannerDisabled ? (
+      {showBanner ? (
         <>
           <div
             className={`group ${
