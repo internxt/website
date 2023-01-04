@@ -14,7 +14,11 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
   }
 
   function checkoutPlan(plan) {
-    return `${plan}${billingFrequency}`;
+    if (billingFrequency === -1) {
+      return plan;
+    } else {
+      return `${plan}${billingFrequency}`;
+    }
   }
 
   const billingPrice = (price) => price[billingFrequency];
