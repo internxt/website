@@ -12,7 +12,8 @@
   "billingFrequency": {
     "monthly": "Mensuel",
     "semiannually": "Semiannually",
-    "annually": "Annuel"
+    "annually": "Annuel",
+    "lifetime": "Lifetime"
   },
   "billingFrequencyLabel": {
     "monthly": "facturé mensuellement",
