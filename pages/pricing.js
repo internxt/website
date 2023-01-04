@@ -32,8 +32,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang }) => {
       });
   });
 
-  console.log('is lifetime', isLifetime);
-
   return (
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar
