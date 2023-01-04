@@ -40,17 +40,8 @@ const HeroSection = ({ textContent }) => {
           <img src="/images/cyber-awareness/all-eyes-of-you.png" alt="all eyes of you image" className="rounded-3xl" />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center p-5 pt-11 md:p-20 md:pt-0">
+      <div className="flex flex-col items-center justify-center p-5 py-11 md:p-20 md:pt-0">
         <p className="mb-4 text-center text-4xl font-semibold">{textContent.footer}</p>
-        <button
-          onClick={getPricingPage}
-          className="mt-8 flex h-10 w-56 items-center justify-center rounded-full bg-primary text-white"
-        >
-          {textContent.button}
-        </button>
-      </div>
-      <div className="flex flex-col items-center justify-center p-5 pt-11 md:p-20">
-        <p className="mb-4 text-center text-3xl font-semibold">{textContent.footer}</p>
         <button
           onClick={getPricingPage}
           className="mt-8 flex h-10 w-56 items-center justify-center rounded-full bg-primary text-white"
