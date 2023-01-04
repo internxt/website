@@ -10,7 +10,7 @@ import { CheckCircle, WarningCircle } from 'phosphor-react';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 
-const HeroSection = ({ textContent }) => {
+const HeroSection = ({ textContent, lang }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isScannig, setIsScannig] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -416,7 +416,7 @@ const HeroSection = ({ textContent }) => {
                     <>
                       {/* Default state */}
                       <div className="flex h-60 w-full cursor-pointer flex-col items-center justify-center rounded-xl sm:h-96">
-                        <div className="flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:space-x-20">
+                        <div className={`flex flex-row items-center  sm:space-x-20 lg:space-x-0 xl:space-x-20`}>
                           {/* Icons */}
                           <div className="relative hidden h-32 w-32 sm:flex lg:hidden xl:flex">
                             {/* Img icon */}
@@ -512,12 +512,8 @@ const HeroSection = ({ textContent }) => {
                             </div>
                           </div>
 
-                          <div className="flex flex-col items-center space-y-4">
-                            <p className="text-2xl font-medium">
-                              {textContent.dropFile.line1}
-                              <br />
-                              {textContent.dropFile.line2}
-                            </p>
+                          <div className="flex max-w-sm flex-col items-center space-y-4 text-center">
+                            <p className="text-2xl font-medium">{textContent.dropFile.line1}</p>
                             <button
                               type="button"
                               className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 group-hover:bg-primary group-hover:text-white sm:h-10 sm:px-5 sm:text-base"

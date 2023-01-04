@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { CaretRight } from 'phosphor-react';
 
-const BannersSection = ({ textContent }) => {
+const BannersSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
@@ -21,7 +21,7 @@ const BannersSection = ({ textContent }) => {
             />
             <p className="max-w-[240px] text-2xl font-medium">{textContent.passwordCheckerBanner.title}</p>
             <div
-              onClick={() => window.open('https://internxt.com/password-checker', '_blank')}
+              onClick={() => window.open(`https://internxt.com/${lang}/password-checker`, '_blank')}
               className="flex cursor-pointer flex-row items-center justify-center text-primary"
             >
               <p className="text-sm font-semibold">{textContent.passwordCheckerBanner.cta}</p>
@@ -39,7 +39,7 @@ const BannersSection = ({ textContent }) => {
             />
             <p className="max-w-[200px] text-2xl font-medium">{textContent.byteConverterBanner.title}</p>
             <div
-              onClick={() => window.open('https://internxt.com/byte-converter', '_blank')}
+              onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
               className="flex cursor-pointer flex-row items-center justify-center text-primary"
             >
               <p className="text-sm font-semibold">{textContent.byteConverterBanner.cta}</p>
