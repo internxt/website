@@ -128,48 +128,6 @@ const FeaturesSection = ({ textContent, lang }) => {
             </div>
           </div>
 
-          {/* Create account */}
-          <div className="flex flex-col-reverse items-stretch justify-center overflow-hidden rounded-3xl bg-white shadow-box-floating md:flex-row">
-            <div className="flex flex-col items-start justify-start space-y-8 p-8 md:mr-6 md:p-16">
-              <div className="flex flex-col space-y-2">
-                <h3 className="text-2xl font-medium md:text-3xl">
-                  {textContent.createAccount.title.line1}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line2}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line3}
-                </h3>
-
-                <p className="text-lg text-gray-80">
-                  {textContent.createAccount.description.line1}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.description.line2}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.description.line3}
-                </p>
-              </div>
-
-              <a
-                href="https://drive.internxt.com/new"
-                target="_top"
-                rel="noreferrer"
-                className="flex h-11 w-full flex-row items-center justify-center rounded-lg border border-transparent bg-primary px-5 text-lg font-medium text-white focus:bg-primary-dark focus:outline-none sm:whitespace-nowrap sm:text-base md:w-auto"
-              >
-                <span>
-                  {textContent.createAccount.cta.getUpTo10GB}
-                  &nbsp;
-                </span>
-                <span className="font-normal opacity-75">{textContent.createAccount.cta.forFree}</span>
-              </a>
-            </div>
-
-            <div className="flex w-full flex-col px-8 pt-10 md:w-64 md:px-0 md:pt-16 lg:w-80">
-              <img
-                loading="lazy"
-                className="h-full w-full object-cover object-left-top"
-                src="/images/comparison/iphone-and-mac.webp"
-                draggable="false"
-                alt="Internxt Drive web and mobile apps"
-              />
-            </div>
-          </div>
-
           <CtaSection textContent={textContent.CtaSection1} />
 
           <div className="flex flex-col space-y-3 px-2">
