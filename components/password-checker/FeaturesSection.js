@@ -92,7 +92,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                 width={897}
                 height={350}
                 layout="intrinsic"
-                loading="lazy"
+                loading="eager"
                 onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
               />
             </div>
@@ -218,7 +218,7 @@ const FeaturesSection = ({ textContent, lang }) => {
               width={897}
               height={350}
               layout="intrinsic"
-              loading="lazy"
+              loading="eager"
               onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
             />
           </div>
