@@ -87,14 +87,25 @@ const FeaturesSection = ({ textContent, lang }) => {
             </div>
 
             <div className="flex cursor-pointer">
-              <Image
-                src="/images/password-checker/virus-scanner.png"
-                width={897}
-                height={350}
-                layout="intrinsic"
-                loading="eager"
-                onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
-              />
+              {lang === 'es' ? (
+                <Image
+                  src="/images/password-checker/virus-scanner-es.png"
+                  width={897}
+                  height={350}
+                  layout="intrinsic"
+                  loading="eager"
+                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                />
+              ) : (
+                <Image
+                  src="/images/password-checker/virus-scanner.png"
+                  width={897}
+                  height={350}
+                  layout="intrinsic"
+                  loading="eager"
+                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                />
+              )}
             </div>
 
             <div className="flex flex-col space-y-3 px-2">
@@ -171,14 +182,25 @@ const FeaturesSection = ({ textContent, lang }) => {
             </p>
           </div>
           <div className="flex cursor-pointer">
-            <Image
-              src="/images/password-checker/byte-converter.png"
-              width={897}
-              height={350}
-              layout="intrinsic"
-              loading="eager"
-              onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
-            />
+            {lang === 'es' ? (
+              <Image
+                src="/images/password-checker/byte-converter-es.png"
+                width={897}
+                height={350}
+                layout="intrinsic"
+                loading="eager"
+                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+              />
+            ) : (
+              <Image
+                src="/images/password-checker/byte-converter.png"
+                width={897}
+                height={350}
+                layout="intrinsic"
+                loading="eager"
+                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+              />
+            )}
           </div>
         </div>
       </div>
