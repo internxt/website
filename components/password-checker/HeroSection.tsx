@@ -91,10 +91,6 @@ const HeroSection = ({ textContent }) => {
       </div>
 
       <div className="flex w-full max-w-lg flex-col items-center space-y-5 px-4 lg:px-0">
-        <div className="flex flex-row items-center space-x-1 text-sm text-gray-50">
-          <Info size={16} />
-          <span>{textContent.subtitle3}</span>
-        </div>
         <div className="relative w-full">
           <input
             onKeyUp={(e) => checkPassword(e)}
@@ -129,21 +125,23 @@ const HeroSection = ({ textContent }) => {
             />
           ))}
         </div>
+        <div className="flex flex-row items-center space-x-1 text-sm text-gray-50">
+          <Info size={16} />
+          <span>{textContent.subtitle3}</span>
+        </div>
       </div>
 
       {/* Password dynamic feedback */}
       <div className="flex w-full flex-col items-stretch space-y-4 px-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
         <div className="flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-5 p-8 lg:h-auto lg:w-64">
-          <span className="text-xs font-medium text-gray-50">{textContent.result.feedback.title}</span>
-          <span className={`${crackFeedback === '-' ? 'text-4xl font-normal' : 'text-xl font-medium'}`}>
-            {crackFeedback}
-          </span>
+          <span className="text-md font-medium text-gray-50">{textContent.result.feedback.title}</span>
+          <span className={`text-xl font-normal text-gray-80`}>{crackFeedback}</span>
         </div>
 
         <div className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-5 p-8 lg:h-auto lg:w-64">
           <div className="flex h-full flex-col space-y-1">
-            <span className="text-xs font-medium text-gray-50">{textContent.result.pwned.title}</span>
-            <span className="text-4xl font-normal">{pwned}</span>
+            <span className="text-md font-medium text-gray-50">{textContent.result.pwned.title}</span>
+            <span className="text-xl font-normal text-gray-80">{pwned}</span>
           </div>
 
           <span className="text-sm text-gray-40">{textContent.result.pwned.subtitle}</span>
@@ -159,14 +157,8 @@ const HeroSection = ({ textContent }) => {
 
         <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-5 p-8 lg:h-auto lg:w-64">
           <div className="flex h-full flex-col space-y-1">
-            <span className="text-xs font-medium text-gray-50">{textContent.result.crack.title}</span>
-            <span
-              className={`${
-                crackTimeInSeconds < 1 && crackTime !== '-' ? 'text-xl font-medium' : 'text-4xl font-normal'
-              }`}
-            >
-              {crackTime}
-            </span>
+            <span className="text-md font-medium text-gray-50">{textContent.result.crack.title}</span>
+            <span className={`text-xl font-normal text-gray-80`}>{crackTime}</span>
           </div>
 
           <span className="text-sm text-gray-40">{textContent.result.crack.subtitle}</span>
