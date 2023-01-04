@@ -87,7 +87,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         price: {
           '-1': '499',
         },
-        popular: false,
+        popular: true,
       },
       lifetime10TB: {
         stripeID: 'lifetime10TB',
@@ -95,7 +95,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         price: {
           '-1': '999',
         },
-        popular: true,
+        popular: false,
       },
     },
     business: {

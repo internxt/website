@@ -13,7 +13,7 @@ const PriceTable = ({ lang, country }) => {
       price: {
         '-1': '299',
       },
-      popular: true,
+      popular: false,
     },
     TB5: {
       stripeID: 'lifetime5TB',
@@ -39,11 +39,11 @@ const PriceTable = ({ lang, country }) => {
         <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center px-6">
           <PriceCard
             planType="individual"
-            storage={pricings.TB10.storage}
-            price={billingPrice(pricings.TB10.price)}
+            storage={pricings.TB2.storage}
+            price={billingPrice(pricings.TB2.price)}
             billingFrequency={billingFrequency}
-            cta={['checkout', `${pricings.TB10.stripeID}`]}
-            popular={pricings.TB10.popular}
+            cta={['checkout', `${pricings.TB2.stripeID}`]}
+            popular={pricings.TB2.popular}
             lang={lang}
             country={country}
           />
@@ -53,17 +53,17 @@ const PriceTable = ({ lang, country }) => {
             price={billingPrice(pricings.TB5.price)}
             billingFrequency={billingFrequency}
             cta={['checkout', `${pricings.TB5.stripeID}`]}
+            popular={pricings.TB5.popular}
             lang={lang}
             country={country}
           />
-
           <PriceCard
             planType="individual"
-            storage={pricings.TB2.storage}
-            price={billingPrice(pricings.TB2.price)}
+            storage={pricings.TB10.storage}
+            price={billingPrice(pricings.TB10.price)}
             billingFrequency={billingFrequency}
-            cta={['checkout', `${pricings.TB2.stripeID}`]}
-            popular={pricings.TB2.popular}
+            cta={['checkout', `${pricings.TB10.stripeID}`]}
+            popular={pricings.TB10.popular}
             lang={lang}
             country={country}
           />
