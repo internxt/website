@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from 'phosphor-react';
 import FaqAccordion from './FaqAccordion';
+import CtaSection from './CtaSection';
+import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang }) => {
   const iconSize = 32;
@@ -45,8 +47,10 @@ const FeaturesSection = ({ textContent, lang }) => {
         </div>
       </div>
 
+      <CtaSection textContent={textContent.CtaSection} />
+
       {/* Password tool info */}
-      <div className="flex w-full flex-col items-center justify-center bg-white">
+      <div className="flex w-full flex-col items-center justify-center">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
           <div className="flex w-full flex-col items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2">
@@ -80,6 +84,17 @@ const FeaturesSection = ({ textContent, lang }) => {
                 </a>{' '}
                 {textContent.section4.subtitle2.part2}
               </p>
+            </div>
+
+            <div className="flex cursor-pointer">
+              <Image
+                src="/images/password-checker/virus-scanner.png"
+                width={897}
+                height={350}
+                layout="intrinsic"
+                loading="lazy"
+                onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+              />
             </div>
 
             <div className="flex flex-col space-y-3 px-2">
@@ -155,6 +170,8 @@ const FeaturesSection = ({ textContent, lang }) => {
             </div>
           </div>
 
+          <CtaSection textContent={textContent.CtaSection1} />
+
           <div className="flex flex-col space-y-3 px-2">
             <h3 className="text-2xl font-medium">{textContent.section6.title}</h3>
 
@@ -195,6 +212,16 @@ const FeaturesSection = ({ textContent, lang }) => {
               {textContent.section6.subtitle3.part2}
             </p>
           </div>
+          <div className="flex cursor-pointer">
+            <Image
+              src="/images/password-checker/byte-converter.png"
+              width={897}
+              height={350}
+              layout="intrinsic"
+              loading="lazy"
+              onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+            />
+          </div>
         </div>
       </div>
 
@@ -203,9 +230,11 @@ const FeaturesSection = ({ textContent, lang }) => {
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-12 px-6 pt-20 pb-5 lg:p-16">
           <h4 className="text-center text-3xl font-medium lg:text-4xl">{textContent.faq.title}</h4>
 
-          <div className="flex w-full max-w-screen-sm flex-col divide-y divide-gray-10">
+          <div className="flex w-full max-w-[850px] flex-col space-y-2">
             {textContent.faq.faq.map((item) => (
-              <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
+              <div key={item.question} className="rounded-lg border border-gray-20 px-5">
+                <FaqAccordion key={item.question} question={item.question} answer={item.answer} isQuestionBigger />
+              </div>
             ))}
           </div>
         </div>
