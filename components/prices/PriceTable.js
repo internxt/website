@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 
-export default function PriceTable({ setSegmentPageName, lang, country }) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -11,6 +11,12 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
 
   function parentSetUserCount(count) {
     setUserCount(count);
+  }
+
+  if (billingFrequency === -1) {
+    setIsLifetime(true);
+  } else {
+    setIsLifetime(false);
   }
 
   function checkoutPlan(plan) {

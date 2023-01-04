@@ -11,6 +11,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang }) => {
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [country, setCountry] = useState('ES');
+  const [isLifetime, setIsLifetime] = useState(false);
 
   async function getCountryCode() {
     const options = {
@@ -31,11 +32,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang }) => {
       });
   });
 
+  console.log('is lifetime', isLifetime);
+
   return (
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['default']}
+        fixed
+        mode={isLifetime ? 'payment' : 'subscription'}
+      />
 
-      <PriceTable setSegmentPageName={setPageName} lang={lang} country={country} />
+      <PriceTable setSegmentPageName={setPageName} lang={lang} country={country} setIsLifetime={setIsLifetime} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
