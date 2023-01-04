@@ -39,7 +39,6 @@ export default function HeroSection({ textContent, lang }) {
               loading="lazy"
               src="/images/home/devicesMobileView.webp"
               draggable="false"
-              layout="intrinsic"
               alt="laptop and phone with Internxt app"
               width={370}
               height={230}
