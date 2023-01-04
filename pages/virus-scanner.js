@@ -18,7 +18,7 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) 
 
       <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
 
-      <BannersSection textContent={langJson.BannersSection} />
+      <BannersSection textContent={langJson.BannersSection} lang={lang} />
 
       <CtaSection textContent={langJson.CtaSection} />
 

@@ -46,8 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "Why it’s vital to use a virus scanner",
-      "description": "Scan first, ask questions later.",
-      "description1": "Spot viruses before they infiltrate your devices."
+      "description": ["Scan first, ask questions later.", "Spot viruses before they infiltrate your devices."]
     },
     "virusesHatePrivacy": {
       "title": "Viruses hate your privacy",

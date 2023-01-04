@@ -29,8 +29,8 @@
       "unableToProcess": "No se puede procesar",
       "noVirusesDetected": {
         "message": "No se ha detectado ningún virus",
-        "title": "Quieres mantener tus archivos seguros?",
-        "subtitle": "Internxt es un servicio de almacenamiento privado en la nube con antivirus integrado y cifrado de extremo a extremo.",
+        "title": "¿Quieres mantener tus archivos seguros?",
+        "subtitle": "Internxt es un servicio de almacenamiento en la nube totalmente seguro y  cifrado de extremo a extremo.",
         "cta": "Empieza ahora"
       },
       "analyzing": "Escaneando archivo...",
@@ -46,8 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "Por qué es vital utilizar un escáner de virus",
-      "description": "Escanea primero y pregunta después.",
-      "description1": "Detecta los virus antes de que se infiltren en tus dispositivos."
+      "description": ["Detecta los virus antes de que se infiltren en tus dispositivos."]
     },
     "virusesHatePrivacy": {
       "title": "Los virus odian tu privacidad",
