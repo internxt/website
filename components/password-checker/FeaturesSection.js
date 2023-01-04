@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from 'phosphor-react';
 import FaqAccordion from './FaqAccordion';
+import CtaSection from './CtaSection';
+import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang }) => {
   const iconSize = 32;
@@ -45,8 +47,10 @@ const FeaturesSection = ({ textContent, lang }) => {
         </div>
       </div>
 
+      <CtaSection textContent={textContent.CtaSection} />
+
       {/* Password tool info */}
-      <div className="flex w-full flex-col items-center justify-center bg-white">
+      <div className="flex w-full flex-col items-center justify-center">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
           <div className="flex w-full flex-col items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2">
@@ -82,6 +86,28 @@ const FeaturesSection = ({ textContent, lang }) => {
               </p>
             </div>
 
+            <div className="flex cursor-pointer">
+              {lang === 'es' ? (
+                <Image
+                  src="/images/password-checker/virus-scanner-es.png"
+                  width={897}
+                  height={350}
+                  layout="intrinsic"
+                  loading="eager"
+                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                />
+              ) : (
+                <Image
+                  src="/images/password-checker/virus-scanner.png"
+                  width={897}
+                  height={350}
+                  layout="intrinsic"
+                  loading="eager"
+                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                />
+              )}
+            </div>
+
             <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-2xl font-medium">{textContent.section5.title}</h3>
               <p className="text-lg text-gray-80 md:max-w-2xl">
@@ -113,47 +139,7 @@ const FeaturesSection = ({ textContent, lang }) => {
             </div>
           </div>
 
-          {/* Create account */}
-          <div className="flex flex-col-reverse items-stretch justify-center overflow-hidden rounded-3xl bg-white shadow-box-floating md:flex-row">
-            <div className="flex flex-col items-start justify-start space-y-8 p-8 md:mr-6 md:p-16">
-              <div className="flex flex-col space-y-2">
-                <h3 className="text-2xl font-medium md:text-3xl">
-                  {textContent.createAccount.title.line1}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line2}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.title.line3}
-                </h3>
-
-                <p className="text-lg text-gray-80">
-                  {textContent.createAccount.description.line1}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.description.line2}
-                  <br className="hidden md:inline-flex" /> {textContent.createAccount.description.line3}
-                </p>
-              </div>
-
-              <a
-                href="https://drive.internxt.com/new"
-                target="_top"
-                rel="noreferrer"
-                className="flex h-11 w-full flex-row items-center justify-center rounded-lg border border-transparent bg-primary px-5 text-lg font-medium text-white focus:bg-primary-dark focus:outline-none sm:whitespace-nowrap sm:text-base md:w-auto"
-              >
-                <span>
-                  {textContent.createAccount.cta.getUpTo10GB}
-                  &nbsp;
-                </span>
-                <span className="font-normal opacity-75">{textContent.createAccount.cta.forFree}</span>
-              </a>
-            </div>
-
-            <div className="flex w-full flex-col px-8 pt-10 md:w-64 md:px-0 md:pt-16 lg:w-80">
-              <img
-                loading="lazy"
-                className="h-full w-full object-cover object-left-top"
-                src="/images/comparison/iphone-and-mac.webp"
-                draggable="false"
-                alt="Internxt Drive web and mobile apps"
-              />
-            </div>
-          </div>
+          <CtaSection textContent={textContent.CtaSection1} />
 
           <div className="flex flex-col space-y-3 px-2">
             <h3 className="text-2xl font-medium">{textContent.section6.title}</h3>
@@ -195,6 +181,27 @@ const FeaturesSection = ({ textContent, lang }) => {
               {textContent.section6.subtitle3.part2}
             </p>
           </div>
+          <div className="flex cursor-pointer">
+            {lang === 'es' ? (
+              <Image
+                src="/images/password-checker/byte-converter-es.png"
+                width={897}
+                height={350}
+                layout="intrinsic"
+                loading="eager"
+                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+              />
+            ) : (
+              <Image
+                src="/images/password-checker/byte-converter.png"
+                width={897}
+                height={350}
+                layout="intrinsic"
+                loading="eager"
+                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+              />
+            )}
+          </div>
         </div>
       </div>
 
@@ -203,9 +210,11 @@ const FeaturesSection = ({ textContent, lang }) => {
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-12 px-6 pt-20 pb-5 lg:p-16">
           <h4 className="text-center text-3xl font-medium lg:text-4xl">{textContent.faq.title}</h4>
 
-          <div className="flex w-full max-w-screen-sm flex-col divide-y divide-gray-10">
+          <div className="flex w-full max-w-[850px] flex-col space-y-2">
             {textContent.faq.faq.map((item) => (
-              <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
+              <div key={item.question} className="rounded-lg border border-gray-20 px-5">
+                <FaqAccordion key={item.question} question={item.question} answer={item.answer} isQuestionBigger />
+              </div>
             ))}
           </div>
         </div>
