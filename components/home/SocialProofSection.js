@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import Image from 'next/image';
 
 const SocialProofSection = ({ textContent, lang }) => (
   <section>

@@ -1,0 +1,84 @@
+{
+  "HeroSection": {
+    "title": "Escáner de virus",
+    "subtitle1": "Arrastra y suelta tus archivos para detectar malware y otras vulneraciones de forma gratuita.",
+    "subtitle2": "Escanea cualquier documento, imagen, pdf u otro tipo de archivo. Asegúrate de que tus archivos son seguros y están libres de virus antes de abrirlos, con nuestro escáner de virus cifrado.",
+    "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
+
+    "dropFile": {
+      "line1": "Arrastra un archivo"
+    },
+    "fileSelected": "Archivo detectado",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "scanNow": "Escanear ahora",
+    "selectFile": "o selecciona un archivo",
+    "dropHere": "Drop file here",
+    "scanAgain": "Escanea otro archivo",
+    "loading": "Cargando...",
+    "maxFileSize": {
+      "title": "Tamaño de archivo superado",
+      "description": "Tamaño máximo 1 GB"
+    },
+    "table": {
+      "loading": "Cargando...",
+      "virusDetected": "Virus detectado en el archivo",
+      "noVirusDetected": "Ningún virus detectado",
+      "detected": "Detectado",
+      "undetected": "No detectado",
+      "unableToProcess": "No se puede procesar",
+      "noVirusesDetected": {
+        "message": "No se ha detectado ningún virus",
+        "title": "¿Quieres mantener tus archivos seguros?",
+        "subtitle": "Internxt es un servicio de almacenamiento en la nube totalmente seguro y  cifrado de extremo a extremo.",
+        "cta": "Empieza ahora"
+      },
+      "analyzing": "Escaneando archivo...",
+      "scanTime": "Tiempo de escaneo",
+      "name": "Nombre",
+      "detection": "Detección"
+    },
+    "error": {
+      "title": "Algo salió mal",
+      "description": "Se ha producido un error al enviar el archivo, inténtelo de nuevo más tarde"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "¿Por qué es vital utilizar un escáner de virus?",
+      "description": ["Detecta los virus antes de que se infiltren en tus dispositivos."]
+    },
+    "virusesHatePrivacy": {
+      "title": "Los virus odian tu privacidad",
+      "description": "Un virus potente puede acceder a información confidencial como tus credenciales o contraseñas, cifrar y bloquear tus datos, realizar transacciones individuales dentro de aplicaciones, monitorizar tu ordenador e incluso acceder a otros dispositivos en redes conectadas. Un virus tiene el potencial de acceder a casi todo lo que está bloqueado en tu hardware."
+    },
+    "stopMalware": {
+      "title": "Acaba con el malware cuanto antes",
+      "description": "Una vez que un virus se ha propagado, puede infectar todos tus programas y aplicaciones sin prejuicios. Su código destructivo puede propagarse por todas partes. Por eso es crucial utilizar un escáner de virus online."
+    },
+    "freeOnlineScanner": {
+      "title": "Un escáner de virus online gratuito en el que puedes confiar",
+      "description": "Protege tu privacidad con nuestro escáner gratuito, diseñado para ayudarte a proteger tu ordenador."
+    },
+    "scanFiles": {
+      "title": "Escanea archivos en busca de virus con total confianza",
+      "description": "Internxt siempre ha dado y dará prioridad a la privacidad y seguridad de los usuarios. Estamos comprometidos con la creación de un Internet más justo, más libre y más transparente para todos. Por eso hemos creado nuestro escáner de virus online gratuito, para proteger a nuestros usuarios de todo tipo de malware."
+    }
+  },
+  "CtaSection": {
+    "title": "La seguridad está a un solo clic!",
+    "description": "Protege tus datos personales con los servicios seguros de Internxt",
+    "cta": "Crear cuenta"
+  },
+  "BannersSection": {
+    "title": "Pruebe las herramientas gratuitas de seguridad en línea de Internxt:",
+    "passwordCheckerBanner": {
+      "title": "Comprobador de seguridad de contraseñas",
+      "cta": "Compruébalo ahora"
+    },
+    "byteConverterBanner": {
+      "title": "Conversor de unidades de bytes",
+      "cta": "Convertir ahora"
+    }
+  }
+}

@@ -16,7 +16,7 @@ const Article = ({ article, image, linkLabel }) => (
           loading="lazy"
           className="flex w-full flex-col"
           src="/images/about/articles/placeholder.png"
-          alt=""
+          alt="Placeholder image"
           draggable="false"
         />
       )}

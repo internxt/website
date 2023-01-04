@@ -82,8 +82,8 @@ const HeroSection = ({ textContent, isTechradar }) => {
               </div>
               <div className="relative px-10 pt-20 lg:px-0 lg:pt-10">
                 <div className="absolute z-10 hidden flex-row pr-5 lg:-top-10 lg:flex">
-                  <img src="/images/partners-discount/Vector.svg" className="pr-3" />
-                  <img src="/images/partners-discount/Vector.svg" />
+                  <img src="/images/partners-discount/Vector.svg" alt="Vector image" className="pr-3" />
+                  <img src="/images/partners-discount/Vector.svg" alt="Vector image" />
                 </div>
                 <div className="z-20 flex flex-col items-center justify-center rounded-2xl bg-white p-5 sm:p-10 lg:pt-10">
                   <div className=" flex max-w-[401px] flex-col p-10 text-center">
@@ -91,7 +91,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
                   </div>
                   <div className="flex flex-col items-center justify-center">
                     <p className="flex flex-col pb-2 text-center text-lg text-gray-60">Recommended by:</p>
-                    <img src="/images/partners-discount/Techradar.svg" />
+                    <img src="/images/partners-discount/Techradar.svg" alt="Techradar image" />
                   </div>
                 </div>
               </div>

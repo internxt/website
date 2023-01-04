@@ -15,16 +15,18 @@
       "or": "ou",
       "downloadFor": "Téléchargez pour",
       "orDownloadFor": "Ou téléchargez pour",
-      "downloadOnThe": "Obtenir sur",
+      "downloadOnThe": "Téléchargez sur",
       "orDownloadOnThe": "Ou téléchargez sur",
       "getOn": "Téléchargez sur",
       "orGetOn": "Ou téléchargez sur",
-      "openDriveWeb": "Afficher vos photos sur Drive Web",
-      "ios": "App Store",
-      "android": "Play Store",
-      "windows": "Windows",
-      "linux": "Linux",
-      "mac": "Mac"
+      "openDriveWeb": "Ouvrez Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
     }
   },
   "FeaturesSection": {
@@ -96,16 +98,18 @@
       "or": "ou",
       "downloadFor": "Téléchargez pour",
       "orDownloadFor": "Ou téléchargez pour",
-      "downloadOnThe": "Obtenir sur",
+      "downloadOnThe": "Téléchargez sur",
       "orDownloadOnThe": "Ou téléchargez sur",
       "getOn": "Téléchargez sur",
       "orGetOn": "Ou téléchargez sur",
-      "openDriveWeb": "Afficher vos photos sur Drive Web",
-      "ios": "App Store",
-      "android": "Play Store",
-      "windows": "Windows",
-      "linux": "Linux",
-      "mac": "Mac"
+      "openDriveWeb": "Ouvrez Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
     }
   }
 }

@@ -1,116 +1,118 @@
 {
-	"HeroSection":
-	{
-		"eyebrow": "INTERNXT PHOTOS",
-		"title": {
-			"line1": "Tus mejores recuerdos",
-			"line2": "seguros en la nube."
-		},
-		"subtitle": {
-			"line1": "Revive, comparte y mantén a salvo tus recuerdos en un",
-			"line2": "solo lugar. Con Internxt Photos centrado en la privacidad",
-			"line3": "y la seguridad, tus fotos son solamente tuyas."
-		},
-		"availableSoon": "Disponible muy pronto",
-		"DownloadLinks": {
-			"or": "o",
-			"downloadFor": "Descargar para",
-			"orDownloadFor": "O descargar para",
-			"downloadOnThe": "Descargar en",
-			"orDownloadOnThe": "O descargar en",
-			"getOn": "Conseguir en",
-			"orGetOn": "O conseguir en",
-			"openDriveWeb": "Ver tus fotos en Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
-		}
-	},
-	"FeaturesSection":
-	{
-		"section1": {
-			"title": {
-				"line1": "Una galería sincronizada",
-				"line2": "en todos tus dispositivos."
-			}
-		},
-		"section2": {
-			"title": {
-				"line1": "Sube fotos desde",
-				"line2": "tu smartphone,",
-				"line3": "accede desde",
-				"line4": "cualquier sitio."
-			},
-			"subtitle": {
-				"line1": "Tu biblioteca de fotos estará siempre",
-				"line2": "actualizada en todos tus dispositivos.",
-				"line3": "Esto significa que puedes acceder a tus",
-				"line4": "fotos sincronizadas incluso cuando tu",
-				"line5": "dispositivo se pierda o se rompa."
-			}
-		},
-		"section3": {
-			"title": {
-				"line1": "Comparte tus",
-				"line2": "fotos con tu",
-				"line3": "familia y amigos."
-			},
-			"subtitle": {
-				"line1": "Genera un link y controla",
-				"line2": "cuantas veces quieres que",
-				"line3": "se pueda acceder a las fotos."
-			}
-		},
-		"section4": {
-			"title": {
-				"line1": "Empieza ahora a",
-				"line2": "sincronizar tus fotos."
-			}
-		},
-		"section5": {
-			"title": {
-				"line1": "Diseñado para protegerte",
-				"line2": "a ti y tus fotos."
-			},
-			"subtitle": {
-				"line1": "La privacidad y la seguridad están en nuestro núcleo, nuestro negocio no se",
-				"line2": "basa la publicidad ni los datos, sino en la confianza. Respetamos tus derechos",
-				"line3": "y construimos productos increíbles en torno a ellos, no en su contra."
-			},
-			"cta": "Nuestro compromiso con la privacidad",
-			"card1": {
-				"title": "Encriptación de grado militar.",
-				"subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus fotos están codificadas para que solo tú puedas acceder a ellas."
-			},
-			"card2": {
-				"title": "Tecnología de conocimiento cero.",
-				"subtitle": "Nunca almacenamos ni transmitimos archivos, contraseñas de usuario o claves de cifrado de forma no cifrada o no encriptada."
-			},
-			"card3": {
-				"title": "Privacidad por diseño.",
-				"subtitle": "Desarrollamos nuestros productos pensando en el usuario, y su privacidad es una prioridad en el mundo impulsado por datos en el que vivimos."
-			},
-			"card4": {
-				"title": "Seguro desde el núcleo.",
-				"subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada día, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
-			}
-		},
-		"DownloadLinks": {
-			"or": "o",
-			"downloadFor": "Descargar para",
-			"orDownloadFor": "O descargar para",
-			"downloadOnThe": "Descargar en",
-			"orDownloadOnThe": "O descargar en",
-			"getOn": "Conseguir en",
-			"orGetOn": "O conseguir en",
-			"openDriveWeb": "Ver tus fotos en Drive Web",
-			"ios": "App Store",
-			"android": "Play Store",
-			"windows": "Windows",
-			"linux": "Linux",
-			"mac": "Mac"
-		}
-	}
+  "HeroSection": {
+    "eyebrow": "INTERNXT PHOTOS",
+    "title": {
+      "line1": "Tus mejores recuerdos",
+      "line2": "seguros en la nube."
+    },
+    "subtitle": {
+      "line1": "Revive, comparte y mantén a salvo tus recuerdos en un",
+      "line2": "solo lugar. Con Internxt Photos centrado en la privacidad",
+      "line3": "y la seguridad, tus fotos son solamente tuyas."
+    },
+    "availableSoon": "Disponible muy pronto",
+    "DownloadLinks": {
+      "or": "o",
+      "downloadFor": "Descargar para",
+      "orDownloadFor": "O descargar para",
+      "downloadOnThe": "Descargar en",
+      "orDownloadOnThe": "O descargar en",
+      "getOn": "Conseguir en",
+      "orGetOn": "O conseguir en",
+      "openDriveWeb": "Abrir Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "Una galería sincronizada",
+        "line2": "en todos tus dispositivos."
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Sube fotos desde",
+        "line2": "tu smartphone,",
+        "line3": "accede desde",
+        "line4": "cualquier sitio."
+      },
+      "subtitle": {
+        "line1": "Tu biblioteca de fotos estará siempre",
+        "line2": "actualizada en todos tus dispositivos.",
+        "line3": "Esto significa que puedes acceder a tus",
+        "line4": "fotos sincronizadas incluso cuando tu",
+        "line5": "dispositivo se pierda o se rompa."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Comparte tus",
+        "line2": "fotos con tu",
+        "line3": "familia y amigos."
+      },
+      "subtitle": {
+        "line1": "Genera un link y controla",
+        "line2": "cuantas veces quieres que",
+        "line3": "se pueda acceder a las fotos."
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Empieza ahora a",
+        "line2": "sincronizar tus fotos."
+      }
+    },
+    "section5": {
+      "title": {
+        "line1": "Diseñado para protegerte",
+        "line2": "a ti y tus fotos."
+      },
+      "subtitle": {
+        "line1": "La privacidad y la seguridad están en nuestro núcleo, nuestro negocio no se",
+        "line2": "basa la publicidad ni los datos, sino en la confianza. Respetamos tus derechos",
+        "line3": "y construimos productos increíbles en torno a ellos, no en su contra."
+      },
+      "cta": "Nuestro compromiso con la privacidad",
+      "card1": {
+        "title": "Encriptación de grado militar.",
+        "subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus fotos están codificadas para que solo tú puedas acceder a ellas."
+      },
+      "card2": {
+        "title": "Tecnología de conocimiento cero.",
+        "subtitle": "Nunca almacenamos ni transmitimos archivos, contraseñas de usuario o claves de cifrado de forma no cifrada o no encriptada."
+      },
+      "card3": {
+        "title": "Privacidad por diseño.",
+        "subtitle": "Desarrollamos nuestros productos pensando en el usuario, y su privacidad es una prioridad en el mundo impulsado por datos en el que vivimos."
+      },
+      "card4": {
+        "title": "Seguro desde el núcleo.",
+        "subtitle": "Siendo los fallos de seguridad y los escándalos de privacidad el pan de cada día, nos aseguramos de que nuestros sistemas mantengan sus datos y archivos a salvo de los atacantes."
+      }
+    },
+    "DownloadLinks": {
+      "or": "o",
+      "downloadFor": "Descargar para",
+      "orDownloadFor": "O descargar para",
+      "downloadOnThe": "Descargar en",
+      "orDownloadOnThe": "O descargar en",
+      "getOn": "Conseguir en",
+      "orGetOn": "O conseguir en",
+      "openDriveWeb": "Abrir Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  }
 }

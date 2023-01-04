@@ -2,8 +2,9 @@
   "HeroSection": {
     "title": "Virus Scanner",
     "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
-    "subtitle2": "Scan any document, image,pdf, or other file types.",
+    "subtitle2": "Scan any document, image, pdf, or other file types. Make sure your files are safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
+
     "dropFile": {
       "line1": "Drop file to scan"
     },
@@ -12,7 +13,7 @@
     "close": "Close",
     "scanNow": "Scan now",
     "selectFile": "or select file",
-    "dropHere": "Drop the file here",
+    "dropHere": "Drop file here",
     "scanAgain": "Scan another file",
     "loading": "Loading...",
     "maxFileSize": {
@@ -21,17 +22,18 @@
     },
     "table": {
       "loading": "Loading...",
-      "virusDetected": "Virus detected",
+      "virusDetected": "Virus detected for this file",
+      "noVirusDetected": "No virus detected for this file",
       "detected": "Detected",
       "undetected": "Undetected",
       "unableToProcess": "Unable to process",
       "noVirusesDetected": {
         "message": "No viruses detected",
         "title": "Want to keep your files safe?",
-        "subtitle": "Internxt is a cloud storage service with a built-in virus scan & best in-class encryption",
-        "cta": "Get free secure cloud storage"
+        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
+        "cta": "Get started now"
       },
-      "analyzing": "Analyzing file...",
+      "analyzing": "Scanning file...",
       "scanTime": "Scan time",
       "name": "Name",
       "detection": "Detection"
@@ -44,8 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "Why it’s vital to use a virus scanner",
-      "description": "Scan first, ask questions later.",
-      "description1": "Spot viruses before they infiltrate your devices."
+      "description": ["Scan first, ask questions later.", "Spot viruses before they infiltrate your devices."]
     },
     "virusesHatePrivacy": {
       "title": "Viruses hate your privacy",
@@ -68,5 +69,16 @@
     "title": "Safety is only a click away",
     "description": "Protect your personal data with Internxt's privacy suite.",
     "cta": "Create account"
+  },
+  "BannersSection": {
+    "title": "Try out Internxt's free online security tools:",
+    "passwordCheckerBanner": {
+      "title": "Password Strength Checker",
+      "cta": "Check now"
+    },
+    "byteConverterBanner": {
+      "title": "Byte Unit Converter",
+      "cta": "Convert now"
+    }
   }
 }

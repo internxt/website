@@ -23,19 +23,19 @@ const HeroSection = ({ textContent, lang }) => {
   return (
     <section
       id="buy"
-      className="relative flex flex-col w-full pt-16 bg-gradient-to-b from-white via-neutral-10 to-white"
+      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-16"
     >
       <div
-        className={`flex flex-row p-6 sm:p-0 sm:h-16 justify-center items-center text-center ${
+        className={`flex flex-row items-center justify-center p-6 text-center sm:h-16 sm:p-0 ${
           showCoupon ? 'bg-primary text-blue-20' : 'bg-white text-blue-40'
-        } transition-colors duration-1000 ease-in-out select-all`}
+        } select-all transition-colors duration-1000 ease-in-out`}
       >
         <div>
           <span className="select-none">{textContent.coupon.before}</span>
           <span
             className={`${
               showCoupon ? 'text-white' : 'text-blue-50'
-            } font-bold underline px-1.5 tracking-wide transition-colors duration-650 ease-in-out select-all`}
+            } duration-650 select-all px-1.5 font-bold tracking-wide underline transition-colors ease-in-out`}
           >
             GURU99
           </span>
@@ -43,26 +43,27 @@ const HeroSection = ({ textContent, lang }) => {
         </div>
       </div>
 
-      <div className="flex flex-col xl:flex-row items-center justify-center px-8 lg:px-32 py-20 xl:py-24 space-y-20 xl:space-y-0 xl:space-x-40">
+      <div className="flex flex-col items-center justify-center space-y-20 px-8 py-20 lg:px-32 xl:flex-row xl:space-y-0 xl:space-x-40 xl:py-24">
         {/* Main title */}
-        <div className="flex flex-col flex-shrink-0 text-left">
-          <div className="flex flex-row items-center justify-center self-start h-10 px-5 bg-cool-gray-10 rounded-lg mb-4">
+        <div className="flex flex-shrink-0 flex-col text-left">
+          <div className="mb-4 flex h-10 flex-row items-center justify-center self-start rounded-lg bg-cool-gray-10 px-5">
             <p className="mr-2 text-base font-medium text-cool-gray-80">{textContent.partnershipWith}</p>
             <Image
               src="/images/partnerships/guru99/logo.webp"
               width={61.5}
               height={16}
               className="pointer-events-none"
+              alt="Logo image"
             />
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-medium mb-4 sm:mb-8 leading-tight">
+          <h1 className="mb-4 text-5xl font-medium leading-tight sm:mb-8 md:text-6xl">
             {textContent.title.line1}
             <br className="hidden sm:inline-flex" /> {textContent.title.line2}
             <br className="hidden sm:inline-flex" /> {textContent.title.line3}
           </h1>
 
-          <h2 className="text-lg sm:text-xl text-cool-gray-80">
+          <h2 className="text-lg text-cool-gray-80 sm:text-xl">
             {textContent.description.line1}
             <br className="hidden sm:inline-flex" /> {textContent.description.line2}
             <br className="hidden sm:inline-flex" /> {textContent.description.line3}

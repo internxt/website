@@ -26,27 +26,27 @@ const DownloadComponent = ({ textContent, lang, download }) => {
   }, [download]);
 
   return (
-    <div className="flex flex-row w-full justify-center items-center lg:items-start lg:space-x-32">
+    <div className="flex w-full flex-row items-center justify-center lg:items-start lg:space-x-32">
       {/* Download for desktop */}
       {!isMobile && (
-        <div className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-row flex-grow flex-1 justify-end`}>
+        <div className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-1 flex-grow flex-row justify-end`}>
           <div className="flex flex-col items-center space-y-1">
-            <a className="flex flex-row space-x-1 items-center text-base font-medium text-primary" href={download[OS]}>
+            <a className="flex flex-row items-center space-x-1 text-base font-medium text-primary" href={download[OS]}>
               <span>
                 {textContent.downloadFor} {textContent[OS]}
               </span>
-              <UilArrowCircleDown className="w-5 h-5" />
+              <UilArrowCircleDown className="h-5 w-5" />
             </a>
 
             <div className="text-xs text-cool-gray-60">
               {textContent.orDownloadFor} {/* Secondary downloads when is mac */}
               {OS === 'MacOS' && (
                 <>
-                  <a className="underline text-cool-gray-70 font-medium" href={download.Linux}>
+                  <a className="font-medium text-cool-gray-70 underline" href={download.Linux}>
                     {textContent.Linux}
                   </a>{' '}
                   {textContent.or}{' '}
-                  <a className="underline text-cool-gray-70 font-medium" href={download.Windows}>
+                  <a className="font-medium text-cool-gray-70 underline" href={download.Windows}>
                     {textContent.Windows}
                   </a>
                 </>
@@ -54,11 +54,11 @@ const DownloadComponent = ({ textContent, lang, download }) => {
               {/* Secondary downloads when is linux */}
               {(OS === 'Linux' || OS === 'UNIX') && (
                 <>
-                  <a className="underline text-cool-gray-70 font-medium" href={download.MacOS}>
+                  <a className="font-medium text-cool-gray-70 underline" href={download.MacOS}>
                     {textContent.MacOS}
                   </a>{' '}
                   {textContent.or}{' '}
-                  <a className="underline text-cool-gray-70 font-medium" href={download.Windows}>
+                  <a className="font-medium text-cool-gray-70 underline" href={download.Windows}>
                     {textContent.Windows}
                   </a>
                 </>
@@ -66,11 +66,11 @@ const DownloadComponent = ({ textContent, lang, download }) => {
               {/* Secondary downloads when is windows */}
               {OS === 'Windows' && (
                 <>
-                  <a className="underline text-cool-gray-70 font-medium" href={download.MacOS}>
+                  <a className="font-medium text-cool-gray-70 underline" href={download.MacOS}>
                     {textContent.MacOS}
                   </a>{' '}
                   {textContent.or}{' '}
-                  <a className="underline text-cool-gray-70 font-medium" href={download.Linux}>
+                  <a className="font-medium text-cool-gray-70 underline" href={download.Linux}>
                     {textContent.Linux}
                   </a>
                 </>
@@ -85,21 +85,21 @@ const DownloadComponent = ({ textContent, lang, download }) => {
         <a
           className={`${
             isMobile ? 'hidden' : 'hidden lg:flex'
-          } flex-row space-x-1 items-center text-base font-medium text-primary`}
+          } flex-row items-center space-x-1 text-base font-medium text-primary`}
           href="https://drive.internxt.com/app"
           target="_blank"
           rel="noreferrer"
         >
           <span>{textContent.openDriveWeb}</span>
-          <UilArrowUpRight className="w-5 h-5" />
+          <UilArrowUpRight className="h-5 w-5" />
         </a>
       )}
 
       {/* Download for mobile */}
-      <div className={`${isMobile ? 'justify-center' : 'justify-start'} flex flex-row flex-grow flex-1`}>
+      <div className={`flex flex-1 flex-grow flex-row justify-center lg:justify-start`}>
         {isMobile && (
           <a
-            className="flex flex-col w-full"
+            className="flex w-full flex-col"
             href={OS === 'iPhone' || OS === 'iPad' || OS === 'MacOS' ? download.iPhone : download.Android}
             target="_blank"
             rel="noreferrer"
@@ -145,7 +145,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
             {((!isMobile && OS === 'MacOS') || (isMobile && (OS === 'iPhone' || OS === 'iPad'))) && (
               <>
                 <a
-                  className="flex flex-row space-x-1 items-center text-base font-medium text-primary"
+                  className="flex flex-row items-center space-x-1 text-base font-medium text-primary"
                   href={download.iPhone}
                   target="_blank"
                   rel="noreferrer"
@@ -153,13 +153,13 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                   <span>
                     {textContent.downloadOnThe} {textContent.iPhone}
                   </span>
-                  <UilArrowCircleDown className="w-5 h-5" />
+                  <UilArrowCircleDown className="h-5 w-5" />
                 </a>
 
                 <div className="text-xs text-cool-gray-60">
                   {textContent.orGetOn}{' '}
                   <a
-                    className="underline text-cool-gray-70 font-medium"
+                    className="font-medium text-cool-gray-70 underline"
                     href={download.Android}
                     target="_blank"
                     rel="noreferrer"
@@ -174,7 +174,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
             {((!isMobile && !(OS === 'MacOS')) || (isMobile && OS === 'Android')) && (
               <>
                 <a
-                  className="flex flex-row space-x-1 items-center text-base font-medium text-primary"
+                  className="flex flex-row items-center space-x-1 text-base font-medium text-primary"
                   href={download.Android}
                   target="_blank"
                   rel="noreferrer"
@@ -182,13 +182,13 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                   <span>
                     {textContent.getOn} {textContent.Android}
                   </span>
-                  <UilArrowCircleDown className="w-5 h-5" />
+                  <UilArrowCircleDown className="h-5 w-5" />
                 </a>
 
                 <div className="text-xs text-cool-gray-60">
                   {textContent.orDownloadOnThe}{' '}
                   <a
-                    className="underline text-cool-gray-70 font-medium"
+                    className="font-medium text-cool-gray-70 underline"
                     href={download.iPhone}
                     target="_blank"
                     rel="noreferrer"

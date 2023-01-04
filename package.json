@@ -29,7 +29,7 @@
     "dotenv": "^8.2.0",
     "hamburger-react": "^2.4.1",
     "jquery": "^3.5.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
@@ -46,6 +46,7 @@
     "react-live-chat-loader": "^2.8.0",
     "react-markdown": "6.0.3",
     "react-parallax": "^3.3.0",
+    "react-select": "^5.7.0",
     "react-toastify": "^9.1.1",
     "useragent": "^2.3.0",
     "zxcvbn": "^4.4.2"

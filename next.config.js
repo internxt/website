@@ -122,6 +122,21 @@ module.exports = {
         destination: '/virus-scanner',
         permanent: false,
       },
+      {
+        source: '/:lang/byte-converter',
+        destination: '/byte-converter',
+        permanent: false,
+      },
+      {
+        source: '/:lang/converter-tool',
+        destination: '/byte-converter',
+        permanent: false,
+      },
+      {
+        source: '/converter-tool',
+        destination: '/byte-converter',
+        permanent: false,
+      },
     ];
   },
   images: {

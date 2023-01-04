@@ -10,15 +10,18 @@ const FeaturesSection = ({ textContent, lang }) => {
   );
 
   return (
-    <section className="relative bg-gradient-to-b from-cool-gray-5 to-white py-20 lg:pt-10 lg:pb-0">
+    <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-4 lg:p-16">
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
           <div className="flex flex-col items-center space-y-6 px-4 text-center">
             <h3 className="text-4xl font-semibold">{textContent.whyToScan.title}</h3>
             <div className="flex flex-col">
-              <p className="text-xl font-light text-gray-80">{textContent.whyToScan.description}</p>
-              <p className="text-xl font-light text-gray-80">{textContent.whyToScan.description1}</p>
+              {textContent.whyToScan.description.map((text, index) => (
+                <p key={index} className="text-xl font-light">
+                  {text}
+                </p>
+              ))}
             </div>
           </div>
 
@@ -68,16 +71,15 @@ const FeaturesSection = ({ textContent, lang }) => {
                 <p className="text-center text-3xl font-semibold md:text-start">{textContent.scanFiles.title}</p>
                 <p className="text-xl font-light">
                   {maliciousMalwareText}
-                  {
+                  {lang === 'en' && (
                     <button
                       onClick={() => {
                         window.open('https://blog.internxt.com/what-is-malware/', '_blank');
                       }}
                     >
-                      <p className="text-primary underline underline-offset-4">{maliciousMalware}</p>
+                      <p className="text-primary underline underline-offset-4">{maliciousMalware}.</p>
                     </button>
-                  }
-                  .
+                  )}
                 </p>
               </div>
               <div className="flex">

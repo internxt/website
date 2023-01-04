@@ -8,7 +8,7 @@ const InvestorCard = ({ company, description, investor, w, h }) => {
   return (
     <div className={`${styles.card} col-span-1`}>
       <div className="flex justify-center lg:w-40">
-        <Image src={url} width={w} height={h} className="lg:w-full" />
+        <Image src={url} width={w} alt="Investor image" height={h} className="lg:w-full" />
       </div>
 
       <h1 className={`${styles.name} sm:pt-6 sm:text-xl lg:pt-8 lg:text-base`}>{company}</h1>

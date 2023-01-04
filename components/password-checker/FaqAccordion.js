@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PlusCircle } from 'phosphor-react';
 import ReactMarkdown from 'react-markdown';
 
-const FaqAccordion = ({ question, answer }) => {
+const FaqAccordion = ({ question, answer, isQuestionBigger = false }) => {
   const [active, setActive] = useState(false);
 
   return (
@@ -14,7 +14,9 @@ const FaqAccordion = ({ question, answer }) => {
         }}
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
-        <span className="w-full text-lg font-medium sm:text-lg md:text-xl">{question}</span>
+        <span className={`w-full text-lg font-medium ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}>
+          {question}
+        </span>
         <PlusCircle size={32} className={`${active && 'rotate-45'} duration-250 transition-transform ease-in-out`} />
       </button>
 

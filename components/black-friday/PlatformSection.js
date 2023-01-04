@@ -12,31 +12,31 @@ const PlatformSection = ({ textContent }) => {
         <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 lg:gap-x-40">
           <div className="flex flex-col items-center space-y-6">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
-              <img src="/images/special-offer/black-friday/Linux.svg" width={26.5} height={32} />
+              <img src="/images/special-offer/black-friday/Linux.svg" width={26.5} height={32} alt="Linux image" />
             </div>
             <p className="text-white">{textContent.PlatformSection.linux}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
-              <img src="/images/special-offer/black-friday/MacOs.svg" width={32} height={32} />
+              <img src="/images/special-offer/black-friday/MacOs.svg" width={32} height={32} alt="MacOs image" />
             </div>
             <p className="text-white">{textContent.PlatformSection.mac}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
-              <img src="/images/special-offer/black-friday/iOS.svg" width={26.5} height={32} />
+              <img src="/images/special-offer/black-friday/iOS.svg" width={26.5} height={32} alt="iOS image" />
             </div>
             <p className="text-white">{textContent.PlatformSection.iOS}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
-              <img src="/images/special-offer/black-friday/Android.svg" width={26.5} height={32} />
+              <img src="/images/special-offer/black-friday/Android.svg" width={26.5} height={32} alt="Android image" />
             </div>
             <p className="text-white">{textContent.PlatformSection.android}</p>
           </div>
           <div className="flex flex-col items-center space-y-6">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
-              <img src="/images/special-offer/black-friday/Windows.svg" width={26.5} height={32} />
+              <img src="/images/special-offer/black-friday/Windows.svg" width={26.5} height={32} alt="Windows image" />
             </div>
             <p className="text-white">{textContent.PlatformSection.windows}</p>
           </div>
