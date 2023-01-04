@@ -76,7 +76,7 @@ const TestimonialsSection = ({ textContent }) => {
               <div className="flex flex-row">
                 <Image
                   src="/images/home/testimonials/Comas.webp"
-                  loading="lazy"
+                  loading="eager"
                   draggable={false}
                   width={53}
                   height={56}
