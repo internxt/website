@@ -48,7 +48,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                   src={`/images/virus-scanner/StopMalware.png`}
                   width={573}
                   height={390}
-                  alt="Viruses Hate Privacy"
+                  alt="Stop malware image"
                   loading="lazy"
                 />
               </div>
@@ -85,7 +85,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                   src={`/images/virus-scanner/ScanFiles.png`}
                   width={573}
                   height={390}
-                  alt="Viruses Hate Privacy"
+                  alt="Scan files image"
                   loading="lazy"
                 />
               </div>

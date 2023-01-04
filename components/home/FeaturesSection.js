@@ -91,10 +91,9 @@ const FeaturesSection = ({ textContent, lang }) => {
                 width={472}
                 height={396}
                 layout="intrinsic"
-                alt="dektop, laptop and phone with Internxt app"
+                alt="Secure by design image"
               />
             </div>
-            {/* <div className={`${styles.securebydesignImage}`} role="img" aria-label="file being encrypted" /> */}
           </div>
 
           <div
@@ -111,7 +110,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                 width={600}
                 height={350}
                 layout="responsive"
-                alt="dektop, laptop and phone with Internxt app"
+                alt="desktop, laptop and phone with Internxt app"
               />
             </div>
             <div className="flex flex-col space-y-6 text-left">

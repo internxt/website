@@ -146,7 +146,13 @@ const TestimonialsSection = ({ textContent }) => {
               <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                 <div className="flex w-auto max-w-[300px] flex-col">
                   <div className="flex w-[331px] flex-row">
-                    <Image src="/images/home/testimonials/Comas.webp" loading="lazy" width={53} height={56} />
+                    <Image
+                      src="/images/home/testimonials/Comas.webp"
+                      loading="lazy"
+                      width={53}
+                      height={56}
+                      alt="Quote symbol"
+                    />
                     <div className="flex flex-col pl-4">
                       <p className="text-xl font-semibold">{card.name}</p>
                       {card.name.includes('Eva') ? (
