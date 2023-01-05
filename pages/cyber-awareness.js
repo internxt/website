@@ -3,10 +3,10 @@ import cookies from '../lib/cookies';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/cyber-awareness/HeroSection';
-import Footer from '../components/layout/Footer';
 import InfoSection from '../components/cyber-awareness/InfoSection';
 import SuiteSection from '../components/cyber-awareness/SuiteSection';
 import VideoSection from '../components/cyber-awareness/VideoSection';
+import Footer from '../components/layout/Footer';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');

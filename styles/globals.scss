@@ -37,6 +37,12 @@ html {
   overflow-x: hidden;
 }
 
+@-moz-document url-prefix() {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 html,
 body {
   padding: 0;
