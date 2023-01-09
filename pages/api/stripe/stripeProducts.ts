@@ -231,7 +231,7 @@ const STRIPE_PRODUCT = {
     session: {
       discounts: [
         {
-          promotion_code: isTest ? 'promo_1KGO2GFAOdcgaBMQVVXcV9T5' : 'promo_1K8kqLFAOdcgaBMQX5phJSfd',
+          promotion_code: !isTest ? 'promo_1KGO2GFAOdcgaBMQVVXcV9T5' : 'promo_1MC85cFAOdcgaBMQh3OnAXMN',
         },
       ],
       line_items: [
@@ -353,7 +353,7 @@ export function getStripeProduct(opt) {
   const { product, anonymousId, impactId } = opt;
   const selectedProduct = STRIPE_PRODUCT[product];
   selectedProduct.session.line_items[0].price =
-    process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+    process.env.NODE_ENV !== 'production' ? selectedProduct.production : selectedProduct.debug;
   const productProperties = getProductProperties(product);
   selectedProduct.session.metadata = productProperties;
   Object.assign(selectedProduct.session.metadata, {
@@ -365,7 +365,7 @@ export function getStripeProduct(opt) {
 }
 
 export function getPlanId(stripeObject: Record<string, string>): string {
-  return process.env.NODE_ENV === 'production'
+  return process.env.NODE_ENV !== 'production'
     ? STRIPE_PRODUCT[stripeObject.product].production
     : STRIPE_PRODUCT[stripeObject.product].debug;
 }
