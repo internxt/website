@@ -70,20 +70,20 @@ export default function CheckoutForm(props: CheckoutFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col sm:flex-row space-y-2 sm:space-x-2 sm:space-y-0 items-center justify-center"
+      className="flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
     >
       <input
         type="email"
         placeholder={props.input}
         onChange={(e) => setEmail(e.target.value)}
-        className={`flex flex-row h-auto w-full sm:w-auto px-4 py-3 sm:py-2 outline-none rounded-lg border-2 border-neutral-40 focus:border-neutral-50 transition-all duration-150 bg-neutral-10 text-left appearance-none`}
+        className={`flex h-auto w-full appearance-none flex-row rounded-lg border-2 border-neutral-40 bg-neutral-10 px-4 py-3 text-left outline-none transition-all duration-150 focus:border-neutral-50 sm:w-auto sm:py-2`}
         required
       />
 
       <button
         type="submit"
         disabled={loading}
-        className="flex flex-row justify-center w-full sm:w-auto items-center px-6 py-2 border border-transparent rounded-lg text-lg sm:text-base font-medium text-white bg-primary active:bg-primary-dark focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-20 transition-all duration-75 cursor-pointer"
+        className="flex w-full cursor-pointer flex-row items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:bg-primary-dark sm:w-auto sm:text-base"
       >
         {loading ? props.loading : props.value}
       </button>

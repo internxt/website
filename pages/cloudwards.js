@@ -6,44 +6,33 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
-const SpecialOffer = ({
-  metatagsDescriptions,
-  langJson,
-  navbarLang,
-  footerLang,
-  lang
-}) => {
+const CLOUDWARDS_COUPON_ID = '0eu0T11z';
+
+const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
 
   return (
-
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Cloudwards Partnership" lang={lang}>
-
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="Cloudwards Partnership"
+      lang={lang}
+    >
       <Navbar
         textContent={navbarLang}
         lang={lang}
         cta={['default']}
         fixed
         darkMode={false}
+        coupon={CLOUDWARDS_COUPON_ID}
       />
 
-      <HeroSection
-        textContent={langJson.template.HeroSection}
-        lang={lang}
-      />
+      <HeroSection textContent={langJson.template.HeroSection} lang={lang} />
 
-      <FeatureSection
-        textContent={langJson.template.FeatureSection}
-      />
+      <FeatureSection textContent={langJson.template.FeatureSection} />
 
-      <Footer
-        textContent={footerLang}
-        lang={lang}
-        darkMode={false}
-      />
-
+      <Footer textContent={footerLang} lang={lang} darkMode={false} />
     </Layout>
-
   );
 };
 
@@ -63,7 +52,7 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       langJson,
       navbarLang,
-      footerLang
+      footerLang,
     },
   };
 }
