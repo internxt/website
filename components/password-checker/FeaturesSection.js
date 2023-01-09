@@ -94,6 +94,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                   height={350}
                   layout="intrinsic"
                   loading="eager"
+                  alt="Virus Scanner image"
                   onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
                 />
               ) : (
@@ -103,6 +104,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                   height={350}
                   layout="intrinsic"
                   loading="eager"
+                  alt="Virus Scanner image"
                   onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
                 />
               )}
@@ -189,6 +191,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                 height={350}
                 layout="intrinsic"
                 loading="eager"
+                alt="Byte converter image"
                 onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
               />
             ) : (
@@ -198,6 +201,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                 height={350}
                 layout="intrinsic"
                 loading="eager"
+                alt="Byte converter image"
                 onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
               />
             )}
