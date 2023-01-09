@@ -22,7 +22,7 @@ export async function redirectToCheckoutAction(stripeObject) {
   if (stripeInfo.mode === 'subscription') {
     // window.analytics.track('Checkout Opened', stripeInfo.properties);
   }
-  const response = await fetch('https://drive.internxt.com/api/stripe/session', {
+  const response = await fetch('/api/stripe/session', {
     method: 'post',
     headers: {
       'Content-type': 'application/json',
