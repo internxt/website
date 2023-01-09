@@ -3,7 +3,7 @@ import { Parallax } from 'react-parallax';
 import { Transition } from '@headlessui/react';
 import * as anim from '../../public/js/anim';
 
-const NgoCard = ({ id, name, short, description, url }) => {
+const NgoCard = ({ id, name, short, description }) => {
   // Constant to avoid unnecessary re-renders
   const showTrigger = [];
   const setShowTrigger = () => {
@@ -12,7 +12,7 @@ const NgoCard = ({ id, name, short, description, url }) => {
 
   return (
     <Parallax
-      className="relative flex flex-col w-full transition-all duration-250 ease-in-out hover:shadow-subtle"
+      className="duration-250 relative flex w-full flex-col transition-all ease-in-out hover:shadow-subtle"
       renderLayer={(percentage) => (
         <Transition
           show={showTrigger.length > 1 || anim.trigger(percentage)}
@@ -20,37 +20,32 @@ const NgoCard = ({ id, name, short, description, url }) => {
           enterFrom="opacity-0 translate-y-10 scale-99"
           enterTo="opacity-100 translate-y-0 scale-100"
         >
-          <a
-            href={url}
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-col w-full p-8 space-y-5 rounded-xl bg-white"
-          >
+          <div target="_blank" rel="noreferrer" className="flex w-full flex-col space-y-5 rounded-xl bg-white p-8">
             {/* Make animation only happen first time is scrolled */}
             {showTrigger.length <= 1 && percentage > 0 && setShowTrigger()}
 
             {/* Logo */}
-            <div className="relative w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gray-10">
+            <div className="relative h-10 w-10 rounded-xl bg-gray-10 sm:h-12 sm:w-12">
               <img
                 src={`/logos/ngos/${id}.webp`}
                 draggable="false"
-                className="absolute w-full h-full bg-white overflow-hidden"
+                className="absolute h-full w-full overflow-hidden bg-white"
                 alt={`${name} logo`}
               />
             </div>
 
             {/* Acronym and Name */}
             <div className={`flex flex-col ${short && 'space-y-0.5'}`}>
-              {short && <p className="text-gray-50 font-medium">{short}</p>}
+              {short && <p className="font-medium text-gray-50">{short}</p>}
               <p className="text-3xl font-medium">{name}</p>
             </div>
 
             {/* Separator */}
-            <div className="w-full h-px bg-gray-10" />
+            <div className="h-px w-full bg-gray-10" />
 
             {/* Description */}
             <p className="text-gray-80">{description}</p>
-          </a>
+          </div>
         </Transition>
       )}
     />

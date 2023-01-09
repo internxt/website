@@ -57,10 +57,10 @@ const HeroSection = ({ textContent, lang }) => (
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
                 <Image
                   src="/images/about/logos/forbes.webp"
-                  alt="Forbes Logo"
                   width={125}
                   height={32}
                   loading={'lazy'}
+                  alt="Forbes Logo"
                 />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.forbes.caption1}</p>
               </div>
@@ -69,10 +69,10 @@ const HeroSection = ({ textContent, lang }) => (
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
                 <Image
                   src="/images/about/logos/southsummit.webp"
-                  alt="South Summit Logo"
                   width={70}
                   height={32}
                   loading={'lazy'}
+                  alt="South Summit Logo"
                 />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.southsummit.caption1}</p>
               </div>
@@ -105,7 +105,7 @@ const HeroSection = ({ textContent, lang }) => (
           className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 scale-500 select-none blur-xl saturate-150 filter"
           src="/images/about/assets/stain-big.webp"
           draggable="false"
-          alt="stain"
+          alt="stain-big logo"
         />
       </div>
     </div>

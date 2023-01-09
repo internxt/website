@@ -1,6 +1,6 @@
-import { items } from '@internxt/lib';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ConversionTableSection = ({ textContent }) => {
   const table = [
@@ -100,22 +100,39 @@ const ConversionTableSection = ({ textContent }) => {
             {table.map((item, index) => (
               <div
                 key={item.unit}
-                className="flex flex-row first:rounded-t-lg first:font-medium first:text-gray-100 last:rounded-b-lg odd:bg-gray-5 even:bg-white"
+                className="flex flex-row text-base first:rounded-t-lg first:font-medium first:text-white last:rounded-b-lg odd:bg-primary odd:bg-opacity-6 even:bg-white first-of-type:bg-primary"
               >
                 <div className="flex w-full max-w-[105px]   flex-col">
-                  <p className="py-2 pl-4 pr-6 text-base">{item.unit}</p>
+                  <p className="py-2 pl-4 pr-6">{item.unit}</p>
                 </div>
                 <div className="flex w-full max-w-[133px]   flex-col">
-                  <p className="py-2 pl-4 pr-6 text-base">{item.abbreviation}</p>
+                  <p className="py-2 pl-4 pr-6">{item.abbreviation}</p>
                 </div>
                 <div className="flex w-full max-w-[144px]   flex-col">
-                  <p className="py-2 pl-4 pr-6 text-base">{item.decimalValue}</p>
+                  <p className="py-2 pl-4 pr-6">{item.decimalValue}</p>
                 </div>
                 <div className="flex w-screen max-w-[500px]  flex-col">
-                  <p className="py-2 pl-4 pr-6 text-base">{item.decimalSize}</p>
+                  <p className="py-2 pl-4 pr-6">{item.decimalSize}</p>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="flex cursor-pointer">
+          <div
+            onClick={() => {
+              window.open('https://internxt.com/password-checker', '_blank');
+            }}
+            className="mx-5 flex max-w-4xl cursor-pointer flex-row"
+          >
+            <Image
+              src="/images/converter-tool/PasswordChecker.png"
+              width={897}
+              height={350}
+              layout="intrinsic"
+              loading="lazy"
+              alt="Password checker"
+            />
           </div>
         </div>
       </div>

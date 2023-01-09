@@ -122,9 +122,11 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
               draggable="false"
               alt="check icon"
             />
-
-            <span>{contentText.features.moneyBack}</span>
+            <span className={'flex'}>
+              {contentText.features.enjoyForever.enjoy} {storage} {contentText.features.enjoyForever.forever}
+            </span>
           </div>
+
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
@@ -133,9 +135,8 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
               draggable="false"
               alt="check icon"
             />
-            <span className={'flex'}>
-              {contentText.features.enjoyForever.enjoy} {storage} {contentText.features.enjoyForever.forever}
-            </span>
+
+            <span>{contentText.features.moneyBack}</span>
           </div>
 
           <div className="flex flex-row items-start space-x-2">

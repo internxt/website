@@ -10,10 +10,10 @@
     "toBusiness": "Cambiar a Planes para Empresas"
   },
   "billingFrequency": {
-    "lifetime": "Lifetime",
     "monthly": "Mensual",
     "semiannually": "Semianual",
-    "annually": "Anual"
+    "annually": "Anual",
+    "lifetime": "Lifetime"
   },
   "billingFrequencyLabel": {
     "lifetime": "Pago único",

@@ -88,15 +88,15 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
               </div>
               {/* {isAffiliate ? (
                 <div className="absolute m-auto flex max-h-[300px] max-w-[612px]">
-                  <img src="/images/special-offer/black-friday/discount-70.png" />
+                  <img src="/images/special-offer/black-friday/discount-70.png" alt="70% off image" />
                 </div>
               ) : (
                 <div className="absolute m-auto flex max-h-[300px] max-w-[612px]">
-                  <img src="/images/special-offer/black-friday/discount.png" />
+                  <img src="/images/special-offer/black-friday/discount.png" alt="discount image" />
                 </div>
               )} */}
               <div className="absolute m-auto flex max-h-[300px] max-w-[300px]">
-                <img src="/images/special-offer/black-friday/inxtBF.png" />
+                <img src="/images/special-offer/black-friday/inxtBF.png" alt="inxtBF image" />
               </div>
             </div>
           </div>
@@ -107,12 +107,12 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
       </div>
 
       <div className="sm:gap-x-30 flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-20 py-14">
-        {features.map((feature) => (
+        {features.map((feature, index) => (
           <div
+            key={index}
             className={`flex ${
               lang === 'fr' ? 'max-w-[230px]' : 'max-w-[185px]'
             } flex-col items-center justify-center space-y-4 text-center`}
-            key={feature.index}
           >
             <CircleWavyCheck size={40} weight="fill" className="text-primary" />
             <p className="text-xl font-semibold ">{lang === 'fr' ? feature.frenchText : feature.text}</p>

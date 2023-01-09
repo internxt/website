@@ -80,21 +80,17 @@ const HeroSection = ({ textContent }) => {
   };
 
   return (
-    <section className="relative flex flex-col items-center bg-white pt-32 pb-10 sm:pb-16 space-y-12 md:space-y-16">
-      <div className="flex flex-col items-center text-center space-y-2 px-4 lg:px-0">
-        <h1 className="text-3xl lg:text-5xl font-medium">{textContent.title}</h1>
-        <h2 className="text-lg">
+    <section className="relative flex flex-col items-center space-y-12 bg-white pt-32 pb-10 sm:pb-16 md:space-y-16">
+      <div className="flex flex-col items-center space-y-5 px-4 text-center lg:px-0">
+        <h1 className="text-3xl font-medium lg:text-5xl">{textContent.title}</h1>
+        <h2 className="text-lg font-normal text-gray-80 lg:text-xl">
           {textContent.subtitle1}
           <br />
           {textContent.subtitle2}
         </h2>
       </div>
 
-      <div className="flex flex-col items-center w-full max-w-lg space-y-5 px-4 lg:px-0">
-        <div className="flex flex-row items-center text-sm text-gray-50 space-x-1">
-          <Info size={16} />
-          <span>{textContent.subtitle3}</span>
-        </div>
+      <div className="flex w-full max-w-lg flex-col items-center space-y-5 px-4 lg:px-0">
         <div className="relative w-full">
           <input
             onKeyUp={(e) => checkPassword(e)}
@@ -102,17 +98,17 @@ const HeroSection = ({ textContent }) => {
             type={inputTypePassword ? 'password' : 'text'}
             placeholder={textContent.placeholder}
             autoComplete="off"
-            className="h-14 w-full bg-white rounded-lg border-2 border-gray-10 focus:border-primary ring-5 ring-primary ring-opacity-0 focus:ring-opacity-10 pl-4 pr-14 text-2xl placeholder-gray-30 appearance-none outline-none shadow-subtle transition-all duration-150 ease-out delay-150"
+            className="h-14 w-full appearance-none rounded-lg border-2 border-gray-10 bg-white pl-4 pr-14 text-2xl placeholder-gray-30 shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out focus:border-primary focus:ring-opacity-10"
           />
           <label
             onClick={() => toggleShowPassword()}
-            className="absolute top-3 right-4 flex flex-col items-center justify-center w-8 h-8 text-gray-80 cursor-pointer"
+            className="absolute top-3 right-4 flex h-8 w-8 cursor-pointer flex-col items-center justify-center text-gray-80"
           >
             {inputTypePassword ? <EyeSlash size={28} /> : <Eye size={28} />}
           </label>
         </div>
 
-        <div className="flex flex-row w-full h-1.5 space-x-1.5">
+        <div className="flex h-1.5 w-full flex-row space-x-1.5">
           {['0', '1', '2', '3', '4'].map((step, index) => (
             <div
               key={step}
@@ -129,21 +125,23 @@ const HeroSection = ({ textContent }) => {
             />
           ))}
         </div>
+        <div className="flex flex-row items-center space-x-1 text-sm text-gray-50">
+          <Info size={16} />
+          <span>{textContent.subtitle3}</span>
+        </div>
       </div>
 
       {/* Password dynamic feedback */}
-      <div className="flex flex-col lg:flex-row items-stretch w-full lg:w-auto lg:h-48 space-y-4 lg:space-y-0 lg:space-x-5 px-4">
-        <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8 space-y-1">
-          <span className="text-xs font-medium text-gray-50">{textContent.result.feedback.title}</span>
-          <span className={`${crackFeedback === '-' ? 'text-4xl font-normal' : 'text-xl font-medium'}`}>
-            {crackFeedback}
-          </span>
+      <div className="flex w-full flex-col items-stretch space-y-4 px-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
+        <div className="flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-5 p-8 lg:h-auto lg:w-64">
+          <span className="text-md font-medium text-gray-50">{textContent.result.feedback.title}</span>
+          <span className={`text-xl font-normal text-gray-80`}>{crackFeedback}</span>
         </div>
 
-        <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8 relative">
-          <div className="flex flex-col h-full space-y-1">
-            <span className="text-xs font-medium text-gray-50">{textContent.result.pwned.title}</span>
-            <span className="text-4xl font-normal">{pwned}</span>
+        <div className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-5 p-8 lg:h-auto lg:w-64">
+          <div className="flex h-full flex-col space-y-1">
+            <span className="text-md font-medium text-gray-50">{textContent.result.pwned.title}</span>
+            <span className="text-xl font-normal text-gray-80">{pwned}</span>
           </div>
 
           <span className="text-sm text-gray-40">{textContent.result.pwned.subtitle}</span>
@@ -157,16 +155,10 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
 
-        <div className="flex flex-col w-full lg:w-64 h-40 lg:h-auto bg-gray-5 rounded-2xl p-8">
-          <div className="flex flex-col h-full space-y-1">
-            <span className="text-xs font-medium text-gray-50">{textContent.result.crack.title}</span>
-            <span
-              className={`${
-                crackTimeInSeconds < 1 && crackTime !== '-' ? 'text-xl font-medium' : 'text-4xl font-normal'
-              }`}
-            >
-              {crackTime}
-            </span>
+        <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-5 p-8 lg:h-auto lg:w-64">
+          <div className="flex h-full flex-col space-y-1">
+            <span className="text-md font-medium text-gray-50">{textContent.result.crack.title}</span>
+            <span className={`text-xl font-normal text-gray-80`}>{crackTime}</span>
           </div>
 
           <span className="text-sm text-gray-40">{textContent.result.crack.subtitle}</span>

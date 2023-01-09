@@ -98,7 +98,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/drive-image.png" />
+                <img src="/images/privacy/drive-image.png" alt="Drive image" />
               </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
@@ -127,7 +127,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/photos-image.png" />
+                <img src="/images/privacy/photos-image.png" alt="Photos image" />
               </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
@@ -155,11 +155,8 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/send-image.png" />
+                <img src="/images/privacy/send-image.png" alt="Send image" />
               </div>
-              {/* <div className="relative mx-auto mt-16 h-auto w-[300px] bg-contain bg-no-repeat shadow-subtle-hard lg:hidden">
-                <img src="/images/privacy/send-image.png" className="rounded-t-2xl" />
-              </div> */}
             </div>
           </div>
         </div>

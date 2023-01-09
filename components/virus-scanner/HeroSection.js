@@ -7,7 +7,6 @@ import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import { UilRedo, UilExclamationOctagon } from '@iconscout/react-unicons';
 import { CheckCircle, WarningCircle } from 'phosphor-react';
-import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent }) => {
@@ -182,7 +181,7 @@ const HeroSection = ({ textContent }) => {
           {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
             <div className="flex w-full flex-col lg:w-[297px] lg:space-y-5">
-              <h1 className="text-5xl font-semibold tracking-tighter">{textContent.title}</h1>
+              <h1 className="text-5xl font-semibold">{textContent.title}</h1>
               <h2 className="pt-5 text-xl font-normal text-cool-gray-80 lg:pt-0">
                 {textContent.subtitle1}
                 <div className="hidden h-5 lg:flex" />
@@ -403,7 +402,12 @@ const HeroSection = ({ textContent }) => {
                     <>
                       {/* Drop file here */}
                       <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-primary bg-opacity-3 sm:h-96">
-                        <Image src="/images/virus-scanner/FileArrowUp.png" width={80} height={80} />
+                        <Image
+                          src="/images/virus-scanner/FileArrowUp.png"
+                          alt="File Arrow Up icon"
+                          width={80}
+                          height={80}
+                        />
                         <p className="pt-4 text-2xl font-semibold">{textContent.dropHere}</p>
                       </div>
                     </>
@@ -411,7 +415,7 @@ const HeroSection = ({ textContent }) => {
                     <>
                       {/* Default state */}
                       <div className="flex h-60 w-full cursor-pointer flex-col items-center justify-center rounded-xl sm:h-96">
-                        <div className="flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:space-x-20">
+                        <div className={`flex flex-row items-center  sm:space-x-20 lg:space-x-0 xl:space-x-20`}>
                           {/* Icons */}
                           <div className="relative hidden h-32 w-32 sm:flex lg:hidden xl:flex">
                             {/* Img icon */}
@@ -507,12 +511,8 @@ const HeroSection = ({ textContent }) => {
                             </div>
                           </div>
 
-                          <div className="flex flex-col items-center space-y-4">
-                            <p className="text-2xl font-medium">
-                              {textContent.dropFile.line1}
-                              <br />
-                              {textContent.dropFile.line2}
-                            </p>
+                          <div className="flex max-w-sm flex-col items-center space-y-4 text-center">
+                            <p className="text-2xl font-medium">{textContent.dropFile.line1}</p>
                             <button
                               type="button"
                               className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 group-hover:bg-primary group-hover:text-white sm:h-10 sm:px-5 sm:text-base"

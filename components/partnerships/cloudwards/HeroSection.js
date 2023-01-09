@@ -50,6 +50,7 @@ const HeroSection = ({ textContent, lang }) => {
             <p className="mr-2 text-base font-medium text-cool-gray-80">{textContent.partnershipWith}</p>
             <Image
               src="/images/partnerships/cloudwards/logo.webp"
+              alt="Logo image"
               width={102}
               height={24}
               className="pointer-events-none"

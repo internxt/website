@@ -1,25 +1,19 @@
 import React from 'react';
 import NgoCard from './NgoCard';
 
-const WikiSection = ({
-  textContent
-}) => (
+const WikiSection = ({ textContent }) => (
   <section className="relative flex flex-col items-center bg-gray-5 px-6">
-    <div className="flex flex-col items-center w-full max-w-screen-lg py-16 sm:py-24 space-y-16 sm:space-y-24">
-
+    <div className="flex w-full max-w-screen-lg flex-col items-center space-y-16 py-16 sm:space-y-24 sm:py-24">
       {/* Title */}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-center">
-        {textContent.title.line1}
-        {' '}
-        <br className="hidden sm:flex" />
+      <h2 className="text-center text-3xl font-medium md:text-4xl lg:text-5xl">
+        {textContent.title.line1} <br className="hidden sm:flex" />
         {textContent.title.line2}
       </h2>
 
       {/* Cards */}
-      <div className="hidden md:flex flex-row space-x-8">
-
+      <div className="hidden flex-row space-x-8 md:flex">
         {/* Column 1 */}
-        <div className="flex flex-col w-full items-stretch space-y-8">
+        <div className="flex w-full flex-col items-stretch space-y-8">
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
               {i % 2 === 0 && (
@@ -28,7 +22,7 @@ const WikiSection = ({
                   name={ngo.name}
                   short={ngo.short}
                   description={ngo.description}
-                  url={ngo.url}
+                  // url={ngo.url}
                 />
               )}
             </React.Fragment>
@@ -36,26 +30,19 @@ const WikiSection = ({
         </div>
 
         {/* Column 2 */}
-        <div className="flex flex-col w-full items-stretch space-y-8">
+        <div className="flex w-full flex-col items-stretch space-y-8">
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
               {i % 2 === 1 && (
-                <NgoCard
-                  id={ngo.id}
-                  name={ngo.name}
-                  short={ngo.short}
-                  description={ngo.description}
-                  url={ngo.url}
-                />
+                <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} url={ngo.url} />
               )}
             </React.Fragment>
           ))}
         </div>
-
       </div>
 
       {/* Cards (mobile) */}
-      <div className="flex md:hidden flex-col w-full items-stretch space-y-6">
+      <div className="flex w-full flex-col items-stretch space-y-6 md:hidden">
         {textContent.ngos.map((ngo) => (
           <NgoCard
             key={`${ngo.id}-mobile`}
@@ -67,7 +54,6 @@ const WikiSection = ({
           />
         ))}
       </div>
-
     </div>
   </section>
 );

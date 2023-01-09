@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 
-export default function PriceTable({ setSegmentPageName, lang, country }) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -13,11 +13,23 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
     setUserCount(count);
   }
 
+  if (billingFrequency === -1) {
+    setIsLifetime(true);
+  } else {
+    setIsLifetime(false);
+  }
+
   function checkoutPlan(plan) {
-    return `${plan}${billingFrequency}`;
+    if (billingFrequency === -1) {
+      return plan;
+    } else {
+      return `${plan}${billingFrequency}`;
+    }
   }
 
   const billingPrice = (price) => price[billingFrequency];
+
+  const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
 
   const pricings = {
     individuals: {
@@ -58,6 +70,30 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
           1: '9.99',
           6: '9.49',
           12: '8.99',
+        },
+        popular: false,
+      },
+      lifetime2TB: {
+        stripeID: 'lifetime2TB',
+        storage: '2TB',
+        price: {
+          '-1': '299',
+        },
+        popular: false,
+      },
+      lifetime5TB: {
+        stripeID: 'lifetime5TB',
+        storage: '5TB',
+        price: {
+          '-1': '499',
+        },
+        popular: true,
+      },
+      lifetime10TB: {
+        stripeID: 'lifetime10TB',
+        storage: '10TB',
+        price: {
+          '-1': '999',
         },
         popular: false,
       },
@@ -108,7 +144,7 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
           onClick={() => {
             setIndividual(!individual);
             setSegmentPageName(
-              `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequency === 1 ? 'Monthly' : 'Annually'}`,
+              `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequencySegment.billingFrequency}`,
             );
             if (billingFrequency === -1) {
               setTimeout(() => {
@@ -145,6 +181,17 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
           >
             {contentText.billingFrequency.annually}
           </button>
+          <button
+            type="button"
+            onClick={() => {
+              setBillingFrequency(-1);
+            }}
+            className={`rounded-lg py-1.5 px-6 font-medium ${
+              billingFrequency === -1 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+            } ${!individual && 'hidden'}`}
+          >
+            {contentText.billingFrequency.lifetime}
+          </button>
         </div>
 
         <Transition
@@ -154,46 +201,83 @@ export default function PriceTable({ setSegmentPageName, lang, country }) {
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <PriceCard
-              planType="individual"
-              storage={pricings.individuals.free.storage}
-              price={billingPrice(pricings.individuals.free.price)}
-              billingFrequency={billingFrequency}
-              cta={['link', 'https://drive.internxt.com/new?']}
-              popular={pricings.individuals.free.popular}
-              lang={lang}
-              country={country}
-            />
-            <PriceCard
-              planType="individual"
-              storage={pricings.individuals.GB20.storage}
-              price={billingPrice(pricings.individuals.GB20.price)}
-              billingFrequency={billingFrequency}
-              cta={['checkout', checkoutPlan('GB20')]}
-              popular={pricings.individuals.GB20.popular}
-              lang={lang}
-              country={country}
-            />
-            <PriceCard
-              planType="individual"
-              storage={pricings.individuals.GB200.storage}
-              price={billingPrice(pricings.individuals.GB200.price)}
-              billingFrequency={billingFrequency}
-              cta={['checkout', checkoutPlan('GB200')]}
-              popular={pricings.individuals.GB200.popular}
-              lang={lang}
-              country={country}
-            />
-            <PriceCard
-              planType="individual"
-              storage={pricings.individuals.TB2.storage}
-              price={billingPrice(pricings.individuals.TB2.price)}
-              billingFrequency={billingFrequency}
-              cta={['checkout', checkoutPlan('TB2')]}
-              popular={pricings.individuals.TB2.popular}
-              lang={lang}
-              country={country}
-            />
+            {billingFrequency === -1 ? (
+              <>
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.lifetime2TB.storage}
+                  price={billingPrice(pricings.individuals.lifetime2TB.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('lifetime2TB')]}
+                  popular={pricings.individuals.lifetime2TB.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.lifetime5TB.storage}
+                  price={billingPrice(pricings.individuals.lifetime5TB.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('lifetime5TB')]}
+                  popular={pricings.individuals.lifetime5TB.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.lifetime10TB.storage}
+                  price={billingPrice(pricings.individuals.lifetime10TB.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('lifetime10TB')]}
+                  popular={pricings.individuals.lifetime10TB.popular}
+                  lang={lang}
+                  country={country}
+                />
+              </>
+            ) : (
+              <>
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.free.storage}
+                  price={billingPrice(pricings.individuals.free.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['link', 'https://drive.internxt.com/new?']}
+                  popular={pricings.individuals.free.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.GB20.storage}
+                  price={billingPrice(pricings.individuals.GB20.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('GB20')]}
+                  popular={pricings.individuals.GB20.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.GB200.storage}
+                  price={billingPrice(pricings.individuals.GB200.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('GB200')]}
+                  popular={pricings.individuals.GB200.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.TB2.storage}
+                  price={billingPrice(pricings.individuals.TB2.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('TB2')]}
+                  popular={pricings.individuals.TB2.popular}
+                  lang={lang}
+                  country={country}
+                />
+              </>
+            )}
           </div>
         </Transition>
 

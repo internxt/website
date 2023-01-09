@@ -42,7 +42,7 @@ const TestimonialsSection = ({ textContent }) => {
             >
               <div className="flex flex-row">
                 <Image
-                  src="/images/home/testimonials/Comas.svg"
+                  src="/images/home/testimonials/Comas.webp"
                   loading="lazy"
                   draggable={false}
                   width={53}
@@ -61,7 +61,7 @@ const TestimonialsSection = ({ textContent }) => {
             <button
               className="z-10 hidden h-10 w-10 items-center justify-center rounded-full bg-primary bg-opacity-40  text-3xl text-white drop-shadow-lg hover:bg-opacity-100 xl:flex"
               onClick={onPrev}
-              aria-label="Prvious"
+              aria-label="Previous"
             >
               <CaretLeft size={32} />
             </button>
@@ -75,8 +75,8 @@ const TestimonialsSection = ({ textContent }) => {
             >
               <div className="flex flex-row">
                 <Image
-                  src="/images/home/testimonials/Comas.svg"
-                  loading="lazy"
+                  src="/images/home/testimonials/Comas.webp"
+                  loading="eager"
                   draggable={false}
                   width={53}
                   height={56}
@@ -120,7 +120,7 @@ const TestimonialsSection = ({ textContent }) => {
             >
               <div className="flex flex-row">
                 <Image
-                  src="/images/home/testimonials/Comas.svg"
+                  src="/images/home/testimonials/Comas.webp"
                   loading="lazy"
                   draggable={false}
                   width={53}
@@ -146,7 +146,13 @@ const TestimonialsSection = ({ textContent }) => {
               <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                 <div className="flex w-auto max-w-[300px] flex-col">
                   <div className="flex w-[331px] flex-row">
-                    <img src="/images/home/testimonials/Comas.svg" loading="lazy" />
+                    <Image
+                      src="/images/home/testimonials/Comas.webp"
+                      loading="lazy"
+                      width={53}
+                      height={56}
+                      alt="Quote symbol"
+                    />
                     <div className="flex flex-col pl-4">
                       <p className="text-xl font-semibold">{card.name}</p>
                       {card.name.includes('Eva') ? (

@@ -196,7 +196,7 @@ export default function Navbar(props: NavbarProps) {
         props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
       } ${scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
-      } z-40 border-b border-black`}
+      } z-50 border-b border-black`}
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="navbar mx-auto flex max-w-screen-xl items-center justify-between">
@@ -409,7 +409,7 @@ export default function Navbar(props: NavbarProps) {
                   <UilAngleDown className="h-6 w-6 translate-y-px text-cool-gray-20 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
 
                   {/* Menu items */}
-                  <div className="pointer-events-none absolute top-full left-1/2 z-10 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+                  <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
                     <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
                     <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
