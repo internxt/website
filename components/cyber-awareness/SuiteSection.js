@@ -31,7 +31,7 @@ const SuiteSection = ({ textContent }) => {
         <div className="grid grid-cols-1 justify-items-center gap-x-40 gap-y-20 md:grid-cols-2">
           {suiteCards.map((card, index) => (
             <div key={index} className="flex w-72 flex-col space-y-4 px-2 sm:w-96">
-              <img src={card.img} width={32} height={32} />
+              <img src={card.img} width={32} height={32} alt={`${card.title} image`} />
               <p className="text-2xl font-medium">{card.title}</p>
               <p className="text-lg font-normal">{card.body}</p>
             </div>

@@ -49,7 +49,7 @@ LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const showBanner = router.pathname === '/';
-  const pathname = router.pathname;
+  const pathname = router.pathname === '/' ? '' : router.pathname;
 
   const New = () => {
     if (lang === 'en') {
