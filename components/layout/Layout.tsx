@@ -49,6 +49,7 @@ LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const showBanner = router.pathname === '/';
+  const pathname = router.pathname;
 
   const New = () => {
     if (lang === 'en') {
@@ -94,9 +95,10 @@ LayoutProps) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="alternate" hrefLang="en" href={`${INTERNXT_URL}/${pageURL}`} />
-        <link rel="alternate" hrefLang="es" href={`${INTERNXT_URL}/es/${pageURL}`} />
-        <link rel="alternate" hrefLang="fr" href={`${INTERNXT_URL}/fr/${pageURL}`} />
+        <link rel="canonical" href={`${INTERNXT_URL}/${lang}${pathname}`} />
+        <link rel="alternate" hrefLang="en" href={`${INTERNXT_URL}${pathname}`} />
+        <link rel="alternate" hrefLang="es" href={`${INTERNXT_URL}/es${pathname}`} />
+        <link rel="alternate" hrefLang="fr" href={`${INTERNXT_URL}/fr${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
