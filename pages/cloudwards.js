@@ -6,6 +6,8 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
+const CLOUDWARDS_COUPON_ID = '0eu0T11z';
+
 const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
 
@@ -16,7 +18,14 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
       segmentName="Cloudwards Partnership"
       lang={lang}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} coupon="0eu0T11z" />
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['default']}
+        fixed
+        darkMode={false}
+        coupon={CLOUDWARDS_COUPON_ID}
+      />
 
       <HeroSection textContent={langJson.template.HeroSection} lang={lang} />
 

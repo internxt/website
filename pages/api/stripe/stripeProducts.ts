@@ -231,7 +231,7 @@ const STRIPE_PRODUCT = {
     session: {
       discounts: [
         {
-          promotion_code: !isTest ? 'promo_1KGO2GFAOdcgaBMQVVXcV9T5' : 'promo_1MC85cFAOdcgaBMQh3OnAXMN',
+          promotion_code: isTest ? 'promo_1KGO2GFAOdcgaBMQVVXcV9T5' : 'promo_1MC85cFAOdcgaBMQh3OnAXMN',
         },
       ],
       line_items: [
