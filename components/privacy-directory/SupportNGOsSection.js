@@ -3,7 +3,7 @@ import { CaretRight } from 'phosphor-react';
 
 const SupportNGOsSection = ({ textContent }) => (
   <section className="relative flex flex-col items-center bg-white px-6">
-    <div className="flex w-full max-w-screen-lg flex-col items-center justify-start space-y-10 py-16 sm:py-24 md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 lg:px-0">
+    <div className="flex w-full max-w-screen-lg flex-col items-center justify-center space-y-10 py-16 sm:py-24 md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 lg:px-0">
       {/* Card */}
       <div className="flex w-full flex-shrink-0 flex-col overflow-hidden rounded-3xl bg-black text-white md:w-96">
         <h3 className="p-8 pb-5 text-center text-4xl font-medium sm:p-12 sm:pb-5 sm:text-5xl md:text-left">
