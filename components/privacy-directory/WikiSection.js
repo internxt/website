@@ -16,15 +16,7 @@ const WikiSection = ({ textContent }) => (
         <div className="flex w-full flex-col items-stretch space-y-8">
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
-              {i % 2 === 0 && (
-                <NgoCard
-                  id={ngo.id}
-                  name={ngo.name}
-                  short={ngo.short}
-                  description={ngo.description}
-                  // url={ngo.url}
-                />
-              )}
+              {i % 2 === 0 && <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} />}
             </React.Fragment>
           ))}
         </div>
@@ -33,9 +25,7 @@ const WikiSection = ({ textContent }) => (
         <div className="flex w-full flex-col items-stretch space-y-8">
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
-              {i % 2 === 1 && (
-                <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} url={ngo.url} />
-              )}
+              {i % 2 === 1 && <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} />}
             </React.Fragment>
           ))}
         </div>
@@ -50,7 +40,6 @@ const WikiSection = ({ textContent }) => (
             name={ngo.name}
             short={ngo.short}
             description={ngo.description}
-            url={ngo.url}
           />
         ))}
       </div>
