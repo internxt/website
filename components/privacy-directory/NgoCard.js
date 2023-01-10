@@ -20,7 +20,7 @@ const NgoCard = ({ id, name, short, description }) => {
           enterFrom="opacity-0 translate-y-10 scale-99"
           enterTo="opacity-100 translate-y-0 scale-100"
         >
-          <div target="_blank" rel="noreferrer" className="flex w-full flex-col space-y-5 rounded-xl bg-white p-8">
+          <div className="flex w-full flex-col space-y-5 rounded-xl bg-white p-8">
             {/* Make animation only happen first time is scrolled */}
             {showTrigger.length <= 1 && percentage > 0 && setShowTrigger()}
 
