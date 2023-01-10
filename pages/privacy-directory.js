@@ -11,42 +11,23 @@ const PrivacyDirectory = ({
   textContent,
   navbarLang,
   footerLang,
-  lang
+  lang,
   // lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy-directory');
 
   return (
-
     <Layout segmentName="Privacy Directory" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
 
-      <Navbar
-        textContent={navbarLang}
-        lang={lang}
-        cta={['default']}
-        fixed
-      />
+      <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
-      <HeroSection
-        textContent={textContent.HeroSection}
-        lang={lang}
-      />
+      <WikiSection textContent={textContent.WikiSection} />
 
-      <WikiSection
-        textContent={textContent.WikiSection}
-      />
+      <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
 
-      <SupportNGOsSection
-        textContent={textContent.SupportNGOsSection}
-      />
-
-      <Footer
-        textContent={footerLang}
-        lang={lang}
-      />
-
+      <Footer textContent={footerLang} lang={lang} />
     </Layout>
-
   );
 };
 
@@ -63,7 +44,7 @@ export async function getServerSideProps(ctx) {
       textContent,
       navbarLang,
       footerLang,
-      lang
+      lang,
     },
   };
 }

@@ -1,66 +1,54 @@
 import React from 'react';
+import styles from '/components/privacy/HeroSection.module.scss';
+import Image from 'next/image';
 import Link from 'next/link';
-import { CaretRight } from 'phosphor-react';
 
 const HeroSection = ({ textContent, lang }) => (
-  <section className="relative flex flex-col items-center bg-white px-6">
-    <div className="flex flex-col items-start w-full max-w-screen-lg pt-24 pb-10 sm:pt-24 lg:pt-36 lg:px-0 space-y-8 sm:space-y-12">
-      {/* Title */}
-      <div className="flex flex-col w-full space-y-2">
-        <h1 className="text-4xl lg:text-6xl font-medium sm:font-medium">{textContent.title}</h1>
-        <h2 className="text-lg sm:text-2xl font-medium text-gray-50">{textContent.subtitle}</h2>
-      </div>
-
-      {/* Description */}
-      <h2 className="text-xl lg:text-2xl font-medium">{textContent.brief.intro}</h2>
-
-      {/* Body */}
-      <div className="flex flex-col space-y-8 sm:space-y-4 md:space-y-0">
-        {/* Paragraphs (mobile) */}
-        <div className="flex sm:hidden flex-col space-y-4">
-          <p className="text-lg lg:text-xl">{textContent.brief.body.paragraph1}</p>
-          <p className="text-lg lg:text-xl">{textContent.brief.body.paragraph2}</p>
+  <>
+    <section className={`relative flex w-full flex-col overflow-hidden pt-10 filter ${styles.neonBlur}`}>
+      <div className="flex h-[300px] w-screen flex-col items-center justify-center">
+        <div className="flex w-screen flex-col px-10 text-center">
+          <h1 className="text-4xl font-medium text-white lg:text-6xl">{textContent.title}</h1>
         </div>
-
-        {/* Paragraphs & Card */}
-        <div className="flex flex-row items-start justify-center sm:justify-between sm:space-x-12">
-          {/* Paragraphs (desktop) */}
-          <div className="hidden sm:flex flex-col space-y-4 pt-4">
-            <p className="text-lg lg:text-xl">{textContent.brief.body.paragraph1}</p>
-            <p className="text-lg lg:text-xl">{textContent.brief.body.paragraph2}</p>
-            <p className="text-lg lg:text-xl hidden md:flex">{textContent.brief.body.paragraph3}</p>
-            <p className="text-lg lg:text-xl hidden md:flex">{textContent.brief.body.paragraph4}</p>
+      </div>
+    </section>
+    <section className="flex flex-col  py-16">
+      <div className="flex flex-col items-center justify-center space-y-16 px-10">
+        <div className="flex max-w-[720px] flex-col items-center justify-center space-y-16">
+          <p className="text-center text-2xl font-semibold">{textContent.brief.intro}</p>
+          <div className="flex flex-col justify-center">
+            <p className="text-lg font-normal">{textContent.brief.body.paragraph1}</p>
+            <p className="pt-7 text-lg font-normal">{textContent.brief.body.paragraph2}</p>
+            <p className="text-lg font-normal">{textContent.brief.body.paragraph3}</p>
+            <p className="pt-7 text-lg font-normal">{textContent.brief.body.paragraph4}</p>
           </div>
-
-          {/* Card */}
-          <Link href="/privacy" locale={lang} passHref>
-            <div
-              className="flex flex-col flex-shrink-0 items-start w-full sm:w-96 bg-cool-gray-10 text-white p-8 sm:p-12 pb-48 sm:pb-60 space-y-6 bg-cover bg-center rounded-3xl cursor-pointer"
-              style={{
-                backgroundImage: 'url("/images/privacy-directory/typing.webp")',
-              }}
-            >
-              <h3 className="text-3xl sm:text-4xl font-medium">{textContent.brief.body.card.title}</h3>
-
-              <div className="flex flex-col text-lg sm:text-xl -space-y-1.5 sm:space-y-0">
-                <p>{textContent.brief.body.card.cta.line1}</p>
-                <p className="flex flex-row items-end">
-                  {textContent.brief.body.card.cta.line2}
-                  <CaretRight size={16} weight="bold" className="mb-1 ml-1" />
-                </p>
-              </div>
-            </div>
-          </Link>
         </div>
-
-        {/* Paragraphs (mobile) */}
-        <div className="flex flex-col space-y-4">
-          <p className="text-lg lg:text-xl flex md:hidden">{textContent.brief.body.paragraph3}</p>
-          <p className="text-lg lg:text-xl flex md:hidden">{textContent.brief.body.paragraph4}</p>
+        <div className="flex h-full max-w-[800px] flex-col-reverse items-center justify-center overflow-hidden rounded-3xl bg-gray-100 md:w-screen md:flex-row md:justify-between">
+          <div className="flex flex-col items-center justify-center space-y-8 py-6 text-center md:items-start md:px-16 md:py-10 md:text-start ">
+            <div className="flex w-full max-w-[441px] flex-col text-white">
+              <p className=" text-4xl font-semibold text-white">{textContent.brief.body.card.title}</p>
+            </div>
+            <button className="flex w-36 cursor-pointer items-center justify-center rounded-lg bg-primary px-5 py-3">
+              {/* <Link href="https://internxt.com/privacy" rel={'noopener noreferrer'} target={'_blank'}> */}
+              <p className="font-medium text-white">{textContent.brief.body.card.cta.line1}</p>
+              {/* </Link> */}
+            </button>
+          </div>
+          <div className="flex h-full flex-col">
+            <Image
+              src="/images/privacy-directory/CardImage.png"
+              width={335}
+              height={290}
+              layout="fixed"
+              loading="eager"
+              alt="Card image (Team working)"
+              className="w-full rounded-t-3xl object-cover md:rounded-t-none md:rounded-r-3xl"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </>
 );
 
 export default HeroSection;

@@ -3,10 +3,10 @@ import { CaretRight } from 'phosphor-react';
 
 const SupportNGOsSection = ({ textContent }) => (
   <section className="relative flex flex-col items-center bg-white px-6">
-    <div className="flex flex-col md:flex-row justify-start items-center w-full max-w-screen-lg py-16 sm:py-24 lg:px-0 space-y-10 md:space-y-0 md:space-x-10 lg:space-x-20">
+    <div className="flex w-full max-w-screen-lg flex-col items-center justify-start space-y-10 py-16 sm:py-24 md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 lg:px-0">
       {/* Card */}
-      <div className="flex flex-col flex-shrink-0 w-full md:w-96 bg-black text-white rounded-3xl overflow-hidden">
-        <h3 className="text-4xl sm:text-5xl font-medium p-8 pb-5 sm:p-12 sm:pb-5 text-center md:text-left">
+      <div className="flex w-full flex-shrink-0 flex-col overflow-hidden rounded-3xl bg-black text-white md:w-96">
+        <h3 className="p-8 pb-5 text-center text-4xl font-medium sm:p-12 sm:pb-5 sm:text-5xl md:text-left">
           {textContent.cardTitle.line1} <br className="hidden md:flex" />
           {textContent.cardTitle.line2} <br className="hidden md:flex" />
           {textContent.cardTitle.line3} <br className="hidden md:flex" />
@@ -14,7 +14,7 @@ const SupportNGOsSection = ({ textContent }) => (
         </h3>
 
         <div
-          className="flex flex-col w-full h-56 bg-cover bg-top"
+          className="flex h-56 w-full flex-col bg-cover bg-top"
           style={{
             backgroundImage: 'url("/images/privacy-directory/globe.webp")',
           }}
@@ -24,7 +24,7 @@ const SupportNGOsSection = ({ textContent }) => (
       {/* Text */}
       <div className="flex flex-col items-start space-y-6">
         {/* Title */}
-        <h2 className="text-base lg:text-5xl sm:font-medium">{textContent.body.title}</h2>
+        <h2 className="text-base sm:font-medium lg:text-5xl">{textContent.body.title}</h2>
 
         {/* Paragraphs */}
         <div className="flex flex-col space-y-4">
