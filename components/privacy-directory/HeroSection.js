@@ -37,12 +37,13 @@ const HeroSection = ({ textContent, lang }) => (
           <div className="flex h-full flex-col">
             <Image
               src="/images/privacy-directory/CardImage.png"
-              width={335}
-              height={290}
+              width={320}
+              height={285}
+              quality={'100%'}
               layout="fixed"
               loading="eager"
               alt="Card image (Team working)"
-              className="w-full rounded-t-3xl object-cover md:rounded-t-none md:rounded-r-3xl"
+              className="h-full w-full rounded-t-3xl object-cover md:rounded-t-none md:rounded-r-3xl"
             />
           </div>
         </div>
