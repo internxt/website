@@ -24,25 +24,27 @@ const SupportNGOsSection = ({ textContent }) => (
       {/* Text */}
       <div className="flex flex-col items-start space-y-6">
         {/* Title */}
-        <h2 className="text-base sm:font-medium lg:text-5xl">{textContent.body.title}</h2>
+        <h2 className="text-base sm:font-semibold lg:text-4xl">{textContent.body.title}</h2>
 
         {/* Paragraphs */}
-        <div className="flex flex-col space-y-4">
-          <p className="text-xl">{textContent.body.paragraph1}</p>
-          <p className="text-xl">
-            {textContent.body.paragraph2.regular}{' '}
-            <span className="font-medium">{textContent.body.paragraph2.semibold}</span>
+        <div className="flex max-w-[387px] flex-col space-y-4">
+          <p className="text-lg">{textContent.body.paragraph1}</p>
+          <p className="text-lg">
+            {textContent.body.paragraph2.regular} <span>{textContent.body.paragraph2.semibold}</span>
           </p>
         </div>
 
         {/* CTAs */}
         <div className="flex flex-row text-primary">
-          <a href="mailto:hello@internxt.com" className="flex flex-row flex-wrap justify-start text-xl">
+          <a
+            href="mailto:hello@internxt.com"
+            className="flex flex-row flex-wrap items-center justify-start text-lg font-semibold"
+          >
             <span className="flex flex-row items-end">{textContent.body.cta.line1}</span>
             &nbsp;
             <span className="flex flex-row items-end">
               {textContent.body.cta.line2}
-              <CaretRight size={18} weight="bold" className="mb-0.75 ml-0.5" />
+              <CaretRight size={18} weight="bold" className="mb-1 ml-0.5" />
             </span>
           </a>
         </div>
