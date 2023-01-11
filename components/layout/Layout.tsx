@@ -21,7 +21,7 @@ interface LayoutProps {
   lang?: string;
 }
 
-const INTERNXT_URL = 'https://internxt.com';
+const INTERNXT_URL = 'https://5158-178-237-226-145.eu.ngrok.io';
 
 export default function Layout({
   children,
@@ -36,15 +36,12 @@ export default function Layout({
   lang,
 }: // lang
 LayoutProps) {
-  const [colseBannerOnMobile, setColseBannerOnMobile] = React.useState(false);
+  const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
 
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
-    const getStartedLinkList = Array(document.querySelectorAll('[id=get-started-link]'));
-
-    // getStartedLinkList.map((link) => window.analytics.trackLink(link, 'Clicked Get Started'));
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
@@ -91,18 +88,6 @@ LayoutProps) {
     }
   };
 
-  const previewLink = [
-    {
-      en: `${INTERNXT_URL}/images/previewLink/PreviewLinkEN.png`,
-    },
-    {
-      es: `${INTERNXT_URL}/images/previewLink/PreviewLinkES.png`,
-    },
-    {
-      fr: `${INTERNXT_URL}/images/previewLink/PreviewLinkFR.png`,
-    },
-  ];
-
   return (
     <>
       <Head>
@@ -117,12 +102,18 @@ LayoutProps) {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
-        <meta property="og:image" content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLinkEN.png`} />
+        <meta
+          property="og:image"
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${lang.toLocaleUpperCase()}.png`}
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={specialOffer || previewLink[lang]} />
+        <meta
+          property="twitter:image"
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${lang.toLocaleUpperCase()}.png`}
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="thumbnail" content={`${INTERNXT_URL}/images/previewLink/LifetimeGoogleSearch.png`} />
@@ -150,7 +141,7 @@ LayoutProps) {
           </div>
           <div
             className={`group fixed top-16 left-0 z-30 ${
-              colseBannerOnMobile ? 'hidden' : 'flex'
+              closeBannerOnMobile ? 'hidden' : 'flex'
             } h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
           >
             <div className="flex flex-row">
@@ -163,7 +154,7 @@ LayoutProps) {
               <button
                 className="absolute top-3 right-3 flex flex-col"
                 onClick={() => {
-                  setColseBannerOnMobile(true);
+                  setCloseBannerOnMobile(true);
                 }}
               >
                 <X size={36} className="z-50" />
