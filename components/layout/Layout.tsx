@@ -21,7 +21,7 @@ interface LayoutProps {
   lang?: string;
 }
 
-const INTERNXT_URL = 'https://5158-178-237-226-145.eu.ngrok.io';
+const INTERNXT_URL = 'https://internxt.com';
 
 export default function Layout({
   children,
