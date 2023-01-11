@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X } from 'phosphor-react';
 import Image from 'next/image';
 
 const SendBanner = ({ textContent }) => {
-  const [sendBannerVisible, setIsSendBannerVisible] = useState(true);
+  const [sendBannerVisible, setIsSendBannerVisible] = useState(false);
   const onClose = () => {
     setIsSendBannerVisible(false);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsSendBannerVisible(true);
+    }, 10000);
+  }, []);
 
   return (
     <div
@@ -38,7 +44,7 @@ const SendBanner = ({ textContent }) => {
                 className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
                   window.open(
-                    'https://send.internxt.com/?utm_source=website&utm_medium=banner&utm_campaign=send',
+                    'https://internxt.com/?utm_source=website&utm_medium=banner&utm_campaign=internxt',
                     '_blank',
                   );
                 }}

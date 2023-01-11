@@ -82,8 +82,8 @@
     }
   },
   "SendBanner": {
-    "title": "Pruébalo tu mismo.",
-    "description": "Cifra y comparte archivos con Internxt.",
-    "cta": "Envía gratis"
+    "title": "Try Internxt",
+    "description": "Secure file storage with built-in virus scanner.",
+    "cta": "Try for free!"
   }
 }

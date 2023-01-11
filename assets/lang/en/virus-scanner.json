@@ -82,8 +82,8 @@
     }
   },
   "SendBanner": {
-    "title": "Try it for yourself.",
-    "description": "Encrypt and share large files with Internxt.",
-    "cta": "Send for free!"
+    "title": "Try Internxt",
+    "description": "Secure file storage with built-in virus scanner.",
+    "cta": "Try for free!"
   }
 }
