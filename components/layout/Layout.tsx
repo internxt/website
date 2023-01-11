@@ -33,22 +33,23 @@ export default function Layout({
   disableDrift = true,
   isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
-  lang,
 }: // lang
 LayoutProps) {
+  const pageURL = segmentName === 'home' ? '' : segmentName;
+  const router = useRouter();
+  const showBanner = router.pathname === '/';
+  const pathname = router.pathname === '/' ? '' : router.pathname;
+  const lang = router.locale.toLocaleUpperCase();
   const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
-  const [langToUpperCase, setLangToUpperCase] = React.useState('EN');
+  const [langToUpperCase, setLangToUpperCase] = React.useState<string>();
 
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
-    setLangToUpperCase(lang?.toLocaleUpperCase());
-  }, [segmentName]);
-  const pageURL = segmentName === 'home' ? '' : segmentName;
-  const router = useRouter();
-  const showBanner = router.pathname === '/';
-  const pathname = router.pathname === '/' ? '' : router.pathname;
+    setLangToUpperCase(lang);
+    console.log(lang);
+  }, [segmentName, lang]);
 
   const New = () => {
     if (lang === 'en') {
@@ -106,7 +107,7 @@ LayoutProps) {
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
         <meta
           property="og:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${lang}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
@@ -114,7 +115,7 @@ LayoutProps) {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${lang}.png`}
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
