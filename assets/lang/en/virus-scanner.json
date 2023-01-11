@@ -80,5 +80,10 @@
       "title": "Byte Unit Converter",
       "cta": "Convert now"
     }
+  },
+  "SendBanner": {
+    "title": "Try it for yourself.",
+    "description": "Encrypt and share large files with internxt.",
+    "cta": "Send for free!"
   }
 }

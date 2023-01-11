@@ -6,6 +6,7 @@ import HeroSection from '../components/virus-scanner/HeroSection';
 import FeaturesSection from '../components/virus-scanner/FeaturesSection';
 import CtaSection from '../components/virus-scanner/CtaSection';
 import BannersSection from '../components/virus-scanner/BannersSection';
+import SendBanner from '../components/virus-scanner/SendBanner';
 
 const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
@@ -13,6 +14,8 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) 
   return (
     <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
+      <SendBanner textContent={langJson.SendBanner} />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
