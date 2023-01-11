@@ -29,9 +29,9 @@ const SendBanner = ({ textContent }) => {
         </button>
         <div className="flex flex-col space-x-20 p-14 lg:flex-row lg:p-20">
           <div className="flex w-full flex-col items-center justify-center text-center lg:items-start lg:text-left">
-            <div className="flex max-w-[350px] flex-col items-start">
+            <div className="flex max-w-[323px] flex-col items-start">
               <p className="text-5xl font-bold text-white ">{textContent.title}</p>
-              <p className=" pt-4 text-3xl font-medium text-white lg:w-96">{textContent.description}</p>
+              <p className=" pt-4 text-3xl font-medium text-white lg:w-[323px]">{textContent.description}</p>
             </div>
             <div className="flex pt-6">
               <button
