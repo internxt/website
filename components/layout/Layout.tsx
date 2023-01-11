@@ -47,7 +47,6 @@ LayoutProps) {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
-    console.log(lang);
   }, [segmentName]);
 
   const New = () => {
@@ -109,7 +108,7 @@ LayoutProps) {
           content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
+        <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta
