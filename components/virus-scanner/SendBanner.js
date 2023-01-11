@@ -11,7 +11,7 @@ const SendBanner = ({ textContent }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsSendBannerVisible(true);
-    }, 10000);
+    }, 15000);
   }, []);
 
   return (
