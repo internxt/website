@@ -37,11 +37,13 @@ export default function Layout({
 }: // lang
 LayoutProps) {
   const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
+  const [langToUpperCase, setLangToUpperCase] = React.useState('EN');
 
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
+    setLangToUpperCase(lang?.toLocaleUpperCase());
   }, [segmentName]);
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
@@ -104,7 +106,7 @@ LayoutProps) {
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
         <meta
           property="og:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${lang.toLocaleUpperCase()}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
@@ -112,7 +114,7 @@ LayoutProps) {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${lang.toLocaleUpperCase()}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
