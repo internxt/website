@@ -56,7 +56,7 @@ const SendBanner = ({ textContent }) => {
           <div className="ml-80 hidden items-center lg:flex">
             <div className="flex w-[340px]">
               <Image
-                src="/images/virus-scanner/Progress.png"
+                src="/images/virus-scanner/ImageBanner.png"
                 alt="hero"
                 width={208}
                 height={208}
