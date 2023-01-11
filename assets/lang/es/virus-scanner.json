@@ -80,5 +80,10 @@
       "title": "Conversor de unidades de bytes",
       "cta": "Convertir ahora"
     }
+  },
+  "SendBanner": {
+    "title": "Pruébalo tu mismo.",
+    "description": "Cifra y comparte archivos con Internxt.",
+    "cta": "Envía gratis"
   }
 }
