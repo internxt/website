@@ -103,16 +103,6 @@ LayoutProps) {
     },
   ];
 
-  // const previewLink = () => {
-  //   if (lang === 'en') {
-  //     return `${INTERNXT_URL}/images/previewLink/PreviewLinkEN.png`;
-  //   } else if (lang === 'es') {
-  //     return `${INTERNXT_URL}/images/previewLink/PreviewLinkES.png`;
-  //   } else if (lang === 'fr') {
-  //     return `${INTERNXT_URL}/images/previewLink/PreviewLinkFR.png`;
-  //   }
-  // };
-
   return (
     <>
       <Head>
@@ -127,7 +117,7 @@ LayoutProps) {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
-        <meta property="og:image" content={specialOffer || previewLink[lang]} />
+        <meta property="og:image" content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLinkEN.png`} />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
         <meta property="twitter:title" content={title} />
