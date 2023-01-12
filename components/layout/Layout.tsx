@@ -102,7 +102,7 @@ LayoutProps) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${INTERNXT_URL}/${lang}/${pageURL}`} />
+        <meta property="og:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
         <meta
           property="og:image"
           content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
