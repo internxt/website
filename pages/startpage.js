@@ -44,8 +44,6 @@ export async function getServerSideProps(ctx) {
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
-  cookies.setReferralCookie(ctx);
-
   return {
     props: {
       lang,
