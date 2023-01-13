@@ -9,7 +9,7 @@ import cookies from '../lib/cookies';
 const CLOUDWARDS_COUPON_ID = 'zJz11IA6';
 
 const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'startpage');
 
   return (
     <Layout
@@ -43,8 +43,6 @@ export async function getServerSideProps(ctx) {
   const langJson = require(`../assets/lang/${lang}/partnerships.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {
