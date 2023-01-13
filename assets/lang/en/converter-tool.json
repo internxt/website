@@ -26,7 +26,7 @@
         { "adv": "make sure your files transfers fall under upload and download limits" },
         { "adv": "Convert byte values without the help of a calculator or pen and paper" },
         { "adv": "Quickly find out how much phone storage space you have left" },
-        { "adv": "Discover if how much data your hard drive or portable drive can support" }
+        { "adv": "Discover how much data your hard drive or portable drive can support" }
       ]
     },
     "MBMeaning": {
@@ -85,7 +85,7 @@
         {
           "question": "How do I use the Byte Converter?",
           "answer": [
-            "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, click on the ‘Convert’ button, and your answer will appear in the second section on the right."
+            "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
           ]
         },
         {
@@ -122,7 +122,7 @@
   },
   "ctaSection2": {
     "title": "The more you save, the more to protect!",
-    "description": "Backup and safely store all your files Internxt.",
+    "description": "Backup and safely store all your files with Internxt.",
     "cta": "Create account"
   },
   "ctaSection3": {
