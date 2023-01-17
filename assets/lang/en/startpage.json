@@ -1,0 +1,117 @@
+{
+  "HeroSection": {
+    "header": "Partnership with",
+    "title": "Store your files in total privacy, free for the first 30 days",
+    "cta": "Claim the deal",
+    "card": {
+      "header": "Free for the first 30 days",
+      "price": "0.00",
+      "plan": "2TB plan",
+      "footerPrice": "8.99",
+      "footer": "/month after 30 days"
+    }
+  },
+  "AdvantagesSection": {
+    "features": [
+      { "card1": "Encrypted file storage and sharing" },
+      { "card2": "Access your files from any device" },
+      { "card3": "Get access to all our services" },
+      { "card4": "No unauthorized data access" }
+    ]
+  },
+  "BestStorageSection": {
+    "title": "Protect your data with Internxt",
+    "description": "Let us take care of your security and privacy. You focus on what matters to you. Encrypt, store, share, send, and back up all your files and photos with Internxt.",
+    "cta": "Claim the deal"
+  },
+  "FeaturesSection": {
+    "title": "Why choose Internxt?",
+    "description": "Privacy made for everyone and simple-to-use online security that you don’t have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
+    "cards": [
+      {
+        "icon": "EyeSlash",
+        "title": "Private by default",
+        "description": "No first or third-party access to your files ever! You have total control of your data."
+      },
+      {
+        "icon": "Gauge",
+        "title": "Fast async",
+        "description": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
+      },
+      {
+        "icon": "LockSimple",
+        "title": "Secure from the core",
+        "description": "End-to-end encrypted, fragmented, and scattered across a vast distributed network."
+      },
+      {
+        "icon": "ArrowsClockwise",
+        "title": "Safe sharing",
+        "description": "Send encrypted files and photos back and forth to your favorite people via link and email."
+      },
+      {
+        "icon": "ListChecks",
+        "title": "Multiplatform",
+        "description": "Privacy for all devices, browsers, and operating systems: Linux, Windows, macOS, iOS, Android."
+      },
+      {
+        "icon": "User",
+        "title": "Zero-knowledge",
+        "description": "You are the only one with access to your data. Not even Internxt can view your files!"
+      }
+    ]
+  },
+  "StartpagePartnershipSection": {
+    "title": "The world's most private cloud storage meets the world's most private search engine.",
+    "description1": "Internxt is proud to announce our partnership with Startpage!",
+    "description2": "Startpage shares any of he same values with Internxt and we couldn't be happier to collaborate with a search engine that helps you protect your personal data, hide from trackers, and browse entirely anonymously."
+  },
+  "DealSection": {
+    "title": "Our 2TB deal includes:",
+    "adv": [
+      { "card1": "30-day money-back guarantee" },
+      { "card2": "Encrypted file storage and sharing" },
+      { "card3": "Sync files and photos on any device" },
+      { "card4": "Access to all our services: Drive, Photos, and Send" }
+    ],
+    "footer": "Deal is valid only for new subscribers or free plan users.",
+    "card": {
+      "title": "Free for the first 30 days",
+      "amount": "0.00",
+      "priceBefore": "8.99",
+      "month": "/month after 30 days",
+      "cta": "Claim the deal"
+    }
+  },
+  "FaqSection": {
+    "Faq": [
+      {
+        "question": "How can I get the Startpage deal discount?",
+        "answer": "To take advantage of our Startpage discount, you must click one of the “Claim the deal” buttons located on this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan. Or, simply, use the code STARTPAGE at checkout."
+      },
+      {
+        "question": "When does the promotion end?",
+        "answer": "Our Startpage deal runs from February 20th until March 6th, 2023."
+      },
+      {
+        "question": "Who is eligible for this discount?",
+        "answer": "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Startpage deal."
+      },
+      {
+        "question": "Will I keep the discount when my plan ends?",
+        "answer": "The discount is only applied for the first 30 days of the first full year of service. If you choose to continue your subscription after using the deal, your account will be charged at the standard 2TB plan price for the following months or year."
+      },
+      {
+        "question": "How much will the plan cost after the first month?",
+        "answer": "After the first 30 days free, the 2TB plan costs €9.99/month paid monthly or €8.99/month when paid annually. You can check out all our [pricing and subscription plans](https://internxt.com/pricing) on the Internxt website."
+      },
+      {
+        "question": "What payment methods does Internxt accept?",
+        "answer": "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit, and (Internxt Token)[https://internxt.com/token]."
+      },
+      {
+        "question": "Have more questions?",
+        "answer": "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+      }
+    ]
+  }
+}

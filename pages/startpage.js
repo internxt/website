@@ -39,6 +39,15 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
+  if (lang !== 'en') {
+    return {
+      redirect: {
+        destination: '/startpage',
+        permanent: false,
+      },
+    };
+  }
+
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/partnerships.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);

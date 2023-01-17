@@ -25,24 +25,6 @@ const HeroSection = ({ textContent, lang }) => {
       id="buy"
       className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-16"
     >
-      <div
-        className={`flex flex-row items-center justify-center p-6 text-center sm:h-16 sm:p-0 ${
-          showCoupon ? 'bg-primary text-blue-20' : 'bg-white text-blue-40'
-        } select-all transition-colors duration-1000 ease-in-out`}
-      >
-        <div>
-          <span className="select-none">{textContent.coupon.before}</span>
-          <span
-            className={`${
-              showCoupon ? 'text-white' : 'text-blue-50'
-            } duration-650 select-all px-1.5 font-bold tracking-wide underline transition-colors ease-in-out`}
-          >
-            STARTPAGE
-          </span>
-          <span className="select-none">{textContent.coupon.after}</span>
-        </div>
-      </div>
-
       <div className="flex flex-col items-center justify-center space-y-20 px-8 py-20 lg:px-32 xl:flex-row xl:space-y-0 xl:space-x-40 xl:py-24">
         {/* Main title */}
         <div className="flex flex-shrink-0 flex-col text-left">
