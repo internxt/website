@@ -2,21 +2,14 @@
   "HeroSection": {
     "header": "Partnership with",
     "title": "Store your files in total privacy, free for the first 30 days",
-    "cta": "Claim the deal",
-    "card": {
-      "header": "Free for the first 30 days",
-      "price": "0.00",
-      "plan": "2TB plan",
-      "footerPrice": "8.99",
-      "footer": "/month after 30 days"
-    }
+    "cta": "Claim the deal"
   },
   "AdvantagesSection": {
     "features": [
-      { "card1": "Encrypted file storage and sharing" },
-      { "card2": "Access your files from any device" },
-      { "card3": "Get access to all our services" },
-      { "card4": "No unauthorized data access" }
+      "Encrypted file storage and sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "No unauthorized data access"
     ]
   },
   "BestStorageSection": {

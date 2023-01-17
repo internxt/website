@@ -5,6 +5,7 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
+import AdvantagesSection from '../components/partnerships/start-page/AdvantagesSection';
 
 const CLOUDWARDS_COUPON_ID = 'zJz11IA6';
 
@@ -27,9 +28,11 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
         coupon={CLOUDWARDS_COUPON_ID}
       />
 
-      <HeroSection textContent={langJson.template.HeroSection} lang={lang} />
+      <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FeatureSection textContent={langJson.template.FeatureSection} />
+      <AdvantagesSection textContent={langJson.AdvantagesSection} />
+
+      {/* <FeatureSection textContent={langJson.template.FeatureSection} /> */}
 
       <Footer textContent={footerLang} lang={lang} darkMode={false} />
     </Layout>
@@ -48,10 +51,10 @@ export async function getServerSideProps(ctx) {
     };
   }
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/partnerships.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/en/startpage.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
 
   return {
     props: {

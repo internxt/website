@@ -3,8 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PriceCard from './PriceCard';
+import { checkout } from '../../../lib/auth';
+import { getPlanId } from '../../../pages/api/stripe/stripeProducts';
 
 const HeroSection = ({ textContent, lang }) => {
+  const freeSegment1 = textContent.title.split('free')[0];
+  const freeSegment2 = textContent.title.split('free')[1];
+  const free = textContent.title.substr(textContent.title.indexOf('free'), 4);
+  const stripeObject = { product: 'TB21' };
+
   const pricings = {
     TB2: {
       storage: '2TB',
@@ -12,24 +19,14 @@ const HeroSection = ({ textContent, lang }) => {
       stripeID: 'TB2_Free_30_Days_Cloudwards_Monthly',
     },
   };
-  const [showCoupon, setShowCoupon] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowCoupon(true);
-    }, 350);
-  }, []);
 
   return (
-    <section
-      id="buy"
-      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-16"
-    >
-      <div className="flex flex-col items-center justify-center space-y-20 px-8 py-20 lg:px-32 xl:flex-row xl:space-y-0 xl:space-x-40 xl:py-24">
+    <section id="buy" className="pt-16">
+      <div className="mb-4 flex flex-col items-center justify-center space-y-20 px-8 py-20 lg:mx-32 xl:flex-row xl:space-y-0 xl:space-x-80 xl:py-24">
         {/* Main title */}
-        <div className="flex flex-shrink-0 flex-col text-left">
-          <div className="mb-4 flex h-10 flex-row items-center justify-center self-start rounded-lg bg-cool-gray-10 px-5">
-            <p className="mr-2 text-base font-medium text-cool-gray-80">{textContent.partnershipWith}</p>
+        <div className="flex flex-col text-center lg:-ml-10 lg:text-left">
+          <div className="m-auto flex h-10 flex-row items-center justify-center self-start rounded-lg bg-cool-gray-10 px-5 lg:m-0 lg:mb-4">
+            <p className="mr-2 text-base font-medium text-cool-gray-80">{textContent.header}</p>
             <Image
               src="/images/partnerships/start-page/startpage-logo.svg"
               alt="Logo image"
@@ -40,29 +37,25 @@ const HeroSection = ({ textContent, lang }) => {
               layout="intrinsic"
             />
           </div>
-
-          <h1 className="mb-4 text-5xl font-medium leading-tight sm:mb-8 md:text-6xl">
-            {textContent.title.line1}
-            <br className="hidden sm:inline-flex" /> {textContent.title.line2}
-            <br className="hidden sm:inline-flex" /> {textContent.title.line3}
-          </h1>
-
-          <h2 className="text-lg text-cool-gray-80 sm:text-xl">
-            {textContent.description.line1}
-            <br className="hidden sm:inline-flex" /> {textContent.description.line2}
-            <br className="hidden sm:inline-flex" /> {textContent.description.line3}
-          </h2>
+          <div className="flex max-w-[550px]">
+            <h1 className="mb-4 text-5xl font-medium sm:mb-8 md:text-6xl">
+              {freeSegment1}
+              {<span className="text-primary">{free}</span>}
+              {freeSegment2}
+            </h1>
+          </div>
+          <div
+            onClick={() => {
+              checkout(getPlanId(stripeObject));
+            }}
+            className="w-48 cursor-pointer rounded-full bg-primary px-9 py-4 text-center"
+          >
+            <p className="text-lg font-medium text-white">{textContent.cta}</p>
+          </div>
         </div>
 
         {/* Features grid */}
-        <PriceCard
-          planType="individual"
-          storage={pricings.TB2.storage}
-          price={pricings.TB2.price}
-          billingFrequency={1}
-          cta={['checkout', `${pricings.TB2.stripeID}`]}
-          lang={lang}
-        />
+        <PriceCard lang={lang} />
       </div>
     </section>
   );
