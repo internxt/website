@@ -12,6 +12,7 @@ import ForgotPassword from '../auth/ForgotPassword';
 
 import { checkout, openAuthDialog } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { useRouter } from 'next/router';
 
 export interface NavbarProps {
   textContent: any;
@@ -32,6 +33,7 @@ export default function Navbar(props: NavbarProps) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
   const stripeObject = { product: props.cta[1] };
+  const router = useRouter();
 
   const isCoupon = props.coupon ? true : false;
 
@@ -60,11 +62,23 @@ export default function Navbar(props: NavbarProps) {
   };
 
   const openAuth = (view: 'login' | 'signup') => {
-    // Temporal fix
-    setAuthMethod(view);
-    setFormError(null);
-    setShowAuth(true);
-    setForm2FA(false);
+    if (
+      navigator.userAgent.match('Firefox') ||
+      navigator.userAgent.match('OPR') ||
+      navigator.userAgent.match('Chrome')
+    ) {
+      // Temporal fix
+      setAuthMethod(view);
+      setFormError(null);
+      setShowAuth(true);
+      setForm2FA(false);
+    } else {
+      if (view === 'login') {
+        router.replace(`${DRIVE_WEB_URL}/login`);
+      } else {
+        router.replace(`${DRIVE_WEB_URL}/new`);
+      }
+    }
   };
 
   const toggleAuthMethod = (view?: 'login' | 'signup') => {
@@ -118,7 +132,7 @@ export default function Navbar(props: NavbarProps) {
       if (permitedDomains.includes(e.origin)) {
         if (e.data.action === 'redirect') {
           redirect();
-        } else if (e.data.action === 'signup') {
+        } else if (e.data.action === 'signup' || e.data.action === 'login') {
           setFormLoading(true);
           postMessage(e.data);
         } else if (e.data.action === 'check_session') {
@@ -132,9 +146,6 @@ export default function Navbar(props: NavbarProps) {
             setPlanId(e.data.planId);
             openAuth('signup');
           }
-        } else if (e.data.action === 'login') {
-          setFormLoading(true);
-          postMessage(e.data);
         } else if (e.data.action === '2fa') {
           setFormLoading(false);
           setFormError(null);
