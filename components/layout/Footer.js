@@ -27,6 +27,44 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
+        {/* FEDER */}
+        {lang === 'es' && (
+          <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-gray-5 bg-white py-8 sm:space-x-20">
+            <div className="mx-auto flex max-w-2xl flex-col items-center px-8">
+              <div className="mb-8 flex flex-row flex-wrap items-center justify-center">
+                <img
+                  loading="lazy"
+                  className="mx-4 h-16"
+                  src="../../logos/investors/eu.webp"
+                  alt="Unión Europea"
+                  draggable="false"
+                />
+                <img
+                  loading="lazy"
+                  className="mx-4 h-14"
+                  src="../../logos/investors/generalitat.webp"
+                  alt="Generalitat Valenciana"
+                  draggable="false"
+                />
+              </div>
+              <p className="text-gray- text-center text-xs">
+                <span className="font-medium">
+                  PROYECTO DE DESARROLLO TECNOLÓGICO DE NUEVOS PRODUCTOS CLOUD BASADOS EN REDES DESCENTRALIZADAS Y
+                  TECNOLOGÍAS BLOCKCHAIN:
+                </span>{' '}
+                <span>
+                  Desarrollo de Internxt Photos, un producto de almacenamiento e intercambio de fotografías y API
+                  Internxt IaaS,
+                </span>
+              </p>
+              <p className="mt-4 text-center text-base font-medium lg:mt-6 lg:max-w-lg">
+                “Proyecto cofinanciado por los fondos FEDER dentro del Programa Operativo FEDER de la Comunitat
+                Valenciana 2014-2020”
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Newsletter */}
         <div
           className={`${
