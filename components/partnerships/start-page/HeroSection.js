@@ -3,22 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PriceCard from './PriceCard';
-import { checkout } from '../../../lib/auth';
-import { getPlanId } from '../../../pages/api/stripe/stripeProducts';
+import ButtonDeal from './ButtonDeal';
 
 const HeroSection = ({ textContent, lang }) => {
   const freeSegment1 = textContent.title.split('free')[0];
   const freeSegment2 = textContent.title.split('free')[1];
   const free = textContent.title.substr(textContent.title.indexOf('free'), 4);
-  const stripeObject = { product: 'TB21' };
-
-  const pricings = {
-    TB2: {
-      storage: '2TB',
-      price: '9.99',
-      stripeID: 'TB2_Free_30_Days_Cloudwards_Monthly',
-    },
-  };
 
   return (
     <section id="buy" className="pt-16">
@@ -44,14 +34,7 @@ const HeroSection = ({ textContent, lang }) => {
               {freeSegment2}
             </h1>
           </div>
-          <div
-            onClick={() => {
-              checkout(getPlanId(stripeObject));
-            }}
-            className="w-48 cursor-pointer rounded-full bg-primary px-9 py-4 text-center"
-          >
-            <p className="text-lg font-medium text-white">{textContent.cta}</p>
-          </div>
+          <ButtonDeal textContent={textContent} />
         </div>
 
         {/* Features grid */}
