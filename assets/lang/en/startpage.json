@@ -19,39 +19,7 @@
   },
   "FeaturesSection": {
     "title": "Why choose Internxt?",
-    "description": "Privacy made for everyone and simple-to-use online security that you don’t have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
-    "cards": [
-      {
-        "icon": "EyeSlash",
-        "title": "Private by default",
-        "description": "No first or third-party access to your files ever! You have total control of your data."
-      },
-      {
-        "icon": "Gauge",
-        "title": "Fast async",
-        "description": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
-      },
-      {
-        "icon": "LockSimple",
-        "title": "Secure from the core",
-        "description": "End-to-end encrypted, fragmented, and scattered across a vast distributed network."
-      },
-      {
-        "icon": "ArrowsClockwise",
-        "title": "Safe sharing",
-        "description": "Send encrypted files and photos back and forth to your favorite people via link and email."
-      },
-      {
-        "icon": "ListChecks",
-        "title": "Multiplatform",
-        "description": "Privacy for all devices, browsers, and operating systems: Linux, Windows, macOS, iOS, Android."
-      },
-      {
-        "icon": "User",
-        "title": "Zero-knowledge",
-        "description": "You are the only one with access to your data. Not even Internxt can view your files!"
-      }
-    ]
+    "description": "Privacy made for everyone and simple-to-use online security that you don’t have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life."
   },
   "StartpagePartnershipSection": {
     "title": "The world's most private cloud storage meets the world's most private search engine.",
