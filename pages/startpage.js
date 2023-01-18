@@ -8,6 +8,7 @@ import AdvantagesSection from '../components/partnerships/start-page/AdvantagesS
 import BestStorageSection from '../components/partnerships/start-page/BestStorageSection';
 import FeaturesSection from '../components/partnerships/start-page/FeaturesSection';
 import PartnershipSection from '../components/partnerships/start-page/PartnershipSection';
+import FaqSection from '../components/partnerships/start-page/FaqSection';
 
 const CLOUDWARDS_COUPON_ID = 'zJz11IA6';
 
@@ -39,6 +40,8 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
       <FeaturesSection textContent={langJson.FeaturesSection} />
 
       <PartnershipSection textContent={langJson.PartnershipSection} />
+
+      <FaqSection textContent={langJson.FaqSection} />
 
       <Footer textContent={footerLang} lang={lang} darkMode={false} />
     </Layout>

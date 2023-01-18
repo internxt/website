@@ -29,10 +29,10 @@
   "DealSection": {
     "title": "Our 2TB deal includes:",
     "adv": [
-      { "card1": "30-day money-back guarantee" },
-      { "card2": "Encrypted file storage and sharing" },
-      { "card3": "Sync files and photos on any device" },
-      { "card4": "Access to all our services: Drive, Photos, and Send" }
+      { "title": "30-day money-back guarantee" },
+      { "title": "Encrypted file storage and sharing" },
+      { "title": "Sync files and photos on any device" },
+      { "title": "Access to all our services: Drive, Photos, and Send" }
     ],
     "footer": "Deal is valid only for new subscribers or free plan users.",
     "card": {
@@ -44,34 +44,47 @@
     }
   },
   "FaqSection": {
-    "Faq": [
+    "title": "Questions? We have answers",
+    "faq": [
       {
         "question": "How can I get the Startpage deal discount?",
-        "answer": "To take advantage of our Startpage discount, you must click one of the “Claim the deal” buttons located on this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan. Or, simply, use the code STARTPAGE at checkout."
+        "answer": [
+          "To take advantage of our Startpage discount, you must click one of the “Claim the deal” buttons located on this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan. Or, simply, use the code STARTPAGE at checkout."
+        ]
       },
       {
         "question": "When does the promotion end?",
-        "answer": "Our Startpage deal runs from February 20th until March 6th, 2023."
+        "answer": ["Our Startpage deal runs from February 20th until March 6th, 2023."]
       },
       {
         "question": "Who is eligible for this discount?",
-        "answer": "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Startpage deal."
+        "answer": [
+          "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Startpage deal."
+        ]
       },
       {
         "question": "Will I keep the discount when my plan ends?",
-        "answer": "The discount is only applied for the first 30 days of the first full year of service. If you choose to continue your subscription after using the deal, your account will be charged at the standard 2TB plan price for the following months or year."
+        "answer": [
+          "The discount is only applied for the first 30 days of the first full year of service. If you choose to continue your subscription after using the deal, your account will be charged at the standard 2TB plan price for the following months or year."
+        ]
       },
       {
         "question": "How much will the plan cost after the first month?",
-        "answer": "After the first 30 days free, the 2TB plan costs €9.99/month paid monthly or €8.99/month when paid annually. You can check out all our [pricing and subscription plans](https://internxt.com/pricing) on the Internxt website."
+        "answer": [
+          "After the first 30 days free, the 2TB plan costs €9.99/month paid monthly or €8.99/month when paid annually. You can check out all our [pricing and subscription plans](https://internxt.com/pricing) on the Internxt website."
+        ]
       },
       {
         "question": "What payment methods does Internxt accept?",
-        "answer": "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit, and (Internxt Token)[https://internxt.com/token]."
+        "answer": [
+          "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit, and [Internxt Token](https://internxt.com/token)."
+        ]
       },
       {
         "question": "Have more questions?",
-        "answer": "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+        "answer": [
+          "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+        ]
       }
     ]
   }
