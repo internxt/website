@@ -18,6 +18,7 @@ const HeroSection = ({ textContent, lang }) => {
             <Image
               src="/images/partnerships/start-page/Startpage_logo.svg"
               alt="Logo image"
+              quality={100}
               width={102}
               height={24}
               layout="fixed"

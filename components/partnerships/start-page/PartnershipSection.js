@@ -13,7 +13,13 @@ const PartnershipSection = ({ textContent }) => {
         </div>
         <div className="flex flex-row space-x-8">
           <div>
-            <Image src="/images/partnerships/start-page/Startpage_logo.svg" width={115} height={25} alt="Partnership" />
+            <Image
+              src="/images/partnerships/start-page/Startpage_logo.svg"
+              width={115}
+              height={25}
+              quality={100}
+              alt="Partnership"
+            />
           </div>
           <div>
             <X width={25} height={24} className="text-primary" weight="bold" accentHeight={10} fontWeight={150} />
