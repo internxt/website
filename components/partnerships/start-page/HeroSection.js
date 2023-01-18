@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PriceCard from './PriceCard';
-import ButtonDeal from './ButtonDeal';
+import ButtonDeal from './components/ButtonDeal';
 
 const HeroSection = ({ textContent, lang }) => {
   const freeSegment1 = textContent.title.split('free')[0];
@@ -18,7 +18,7 @@ const HeroSection = ({ textContent, lang }) => {
           <div className="m-auto flex h-10 flex-row items-center justify-center self-start rounded-lg bg-cool-gray-10 px-5 lg:m-0 lg:mb-4">
             <p className="mr-2 text-base font-medium text-cool-gray-80">{textContent.header}</p>
             <Image
-              src="/images/partnerships/start-page/startpage-logo.svg"
+              src="/images/partnerships/start-page/startpage.png"
               alt="Logo image"
               quality={100}
               width={102}

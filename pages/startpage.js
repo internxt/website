@@ -7,6 +7,7 @@ import cookies from '../lib/cookies';
 import AdvantagesSection from '../components/partnerships/start-page/AdvantagesSection';
 import BestStorageSection from '../components/partnerships/start-page/BestStorageSection';
 import FeaturesSection from '../components/partnerships/start-page/FeaturesSection';
+import PartnershipSection from '../components/partnerships/start-page/PartnershipSection';
 
 const CLOUDWARDS_COUPON_ID = 'zJz11IA6';
 
@@ -36,6 +37,8 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
       <BestStorageSection textContent={langJson.BestStorageSection} />
 
       <FeaturesSection textContent={langJson.FeaturesSection} />
+
+      <PartnershipSection textContent={langJson.PartnershipSection} />
 
       <Footer textContent={footerLang} lang={lang} darkMode={false} />
     </Layout>

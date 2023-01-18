@@ -1,6 +1,6 @@
 import React from 'react';
-import { checkout } from '../../../lib/auth';
-import { getPlanId } from '../../../pages/api/stripe/stripeProducts';
+import { checkout } from '../../../../lib/auth';
+import { getPlanId } from '../../../../pages/api/stripe/stripeProducts';
 
 const ButtonDeal = ({ textContent }) => {
   const stripeObject = { product: 'TB21' };

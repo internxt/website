@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonDeal from './ButtonDeal';
+import ButtonDeal from './components/ButtonDeal';
 import Image from 'next/image';
 
 const BestStorageSection = ({ textContent }) => {
@@ -19,6 +19,7 @@ const BestStorageSection = ({ textContent }) => {
             height={335}
             layout="intrinsic"
             loading="lazy"
+            alt="Devices (Mobile, Tablet, Desktop)"
           />
         </div>
       </div>
