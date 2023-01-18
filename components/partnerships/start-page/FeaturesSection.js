@@ -10,7 +10,7 @@ const FeaturesSection = ({ textContent }) => {
     },
     {
       Icon: Gauge,
-      title: 'Fast async',
+      title: 'Fast sync',
       description: 'Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye.',
     },
     {
@@ -37,7 +37,7 @@ const FeaturesSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden bg-gray-1 py-20">
-      <div className="flex flex-col items-center px-10 text-center">
+      <div className="flex flex-col items-center px-8 text-center">
         <div className="center flex flex-col items-center pb-16 lg:max-w-[778px]">
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="mt-4 text-center text-xl font-normal">{textContent.description}</p>

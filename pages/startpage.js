@@ -3,12 +3,12 @@ import HeroSection from '../components/partnerships/start-page/HeroSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
 import AdvantagesSection from '../components/partnerships/start-page/AdvantagesSection';
 import BestStorageSection from '../components/partnerships/start-page/BestStorageSection';
 import FeaturesSection from '../components/partnerships/start-page/FeaturesSection';
 import PartnershipSection from '../components/partnerships/start-page/PartnershipSection';
 import FaqSection from '../components/partnerships/start-page/FaqSection';
+import DealSection from '../components/partnerships/start-page/DealSection';
 
 const CLOUDWARDS_COUPON_ID = 'zJz11IA6';
 
@@ -40,6 +40,8 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
       <FeaturesSection textContent={langJson.FeaturesSection} />
 
       <PartnershipSection textContent={langJson.PartnershipSection} />
+
+      <DealSection textContent={langJson.DealSection} />
 
       <FaqSection textContent={langJson.FaqSection} />
 

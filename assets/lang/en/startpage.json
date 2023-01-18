@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "header": "Partnership with",
-    "title": "Store your files in total privacy, free for the first 30 days",
+    "title": { "line1": "Store your files in", "line2": "total privacy, free", "line3": "for the first 30 days" },
     "cta": "Claim the deal"
   },
   "AdvantagesSection": {
@@ -32,7 +32,7 @@
       { "title": "30-day money-back guarantee" },
       { "title": "Encrypted file storage and sharing" },
       { "title": "Sync files and photos on any device" },
-      { "title": "Access to all our services: Drive, Photos, and Send" }
+      { "title": "Access to all our services: \nDrive, Photos, and Send" }
     ],
     "footer": "Deal is valid only for new subscribers or free plan users.",
     "card": {

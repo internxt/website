@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const BestStorageSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden py-20">
+    <section className="overflow-hidden py-20 px-8">
       <div className="flex flex-col items-center justify-center space-y-9 text-center">
         <div className="flex max-w-[723px] flex-col space-y-4">
           <p className="text-4xl font-semibold">{textContent.title}</p>
