@@ -1,0 +1,138 @@
+{
+  "HeroSection": {
+    "title": "Conversor de unidades: TB a GB",
+    "description": "Convierte terabytes a gigabytes o megabytes.",
+    "description1": "MB a KB, GB a TB, MB a GB, y mucho más! Averigua cuántos GB hay en un TB o cuánto almacenamiento en la nube, en el teléfono o en tu disco duro te queda realmente con el convertidor de unidades gratuito de Internxt."
+  },
+  "ExplanationSection": {
+    "convertTo": {
+      "title": "¿Cómo convertir terabytes a gigabytes o gigabytes a terabytes?",
+      "description": "Introduce un valor en la sección 'Gigabytes' y la respuesta aparecerá en la sección 'Terabytes'."
+    },
+    "convertToAgain": {
+      "title": "¿Cómo convertir GB a MB y viceversa?",
+      "description": "¿No estás seguro de si tienes suficiente espacio en tu móvil? ¿Te preocupa que tu disco duro sea demasiado pequeño? ¿Te preguntas cuántos archivos de 1 GB caben en 2 TB de almacenamiento en la nube? Utiliza nuestro conversor gratuito de unidades bytes para saber exactamente cuántos kilobytes, megabytes, gigabytes o terabytes ocupan tus archivos."
+    },
+    "whyUseConverter": {
+      "title": "¿Por qué utilizar un convertidor de unidades y un conversor de bytes?",
+      "description": [
+        { "adv": "Determina exactamente cuánto almacenamiento en la nube necesitas para tus archivos" },
+        { "adv": "Asegúrate de que tus transferencias de archivos entran dentro de los límites de carga y descarga" },
+        { "adv": "Convierte valores en bytes sin la ayuda de una calculadora o papel y lápiz" },
+        { "adv": "Averigua rápidamente cuánto espacio de almacenamiento te queda en el teléfono" },
+        { "adv": "Descubre la cantidad de datos que puede soportar tu disco duro o unidad portátil" }
+      ]
+    },
+    "MBMeaning": {
+      "title": "¿Qué significa MB?",
+      "description": "Ya sea MB, KB, TB o GB, todas estas abreviaturas representan la cantidad de bytes. La cantidad o el número de bytes se utilizan para medir el tamaño o la cantidad de información digital."
+    }
+  },
+
+  "infoSection": {
+    "title": "¿Cuál es la diferencia entre GB y TB?",
+    "description": "¿Quieres saber cuántos GB hay en un TB? O, sin las abreviaturas, ¿cuántos gigabytes hay en un terabyte? En primer lugar, es necesario entender lo que es un byte, y a partir de ahí es súper simple saber la diferencia entre MB a KB o MB a GB.",
+    "faq": {
+      "faq": [
+        {
+          "question": "¿Qué es un byte?",
+          "answer": [
+            "Básicamente, un byte (B) es la unidad más pequeña de información digital. Es la forma que tenemos de medir y cuantificar la información en línea. Un archivo se compone de determinados bytes, cuantos más bytes, más grande es el archivo.",
+            "En concreto, el byte es una unidad de información digital que suele constar de ocho bits. Los bits (b) son aún más pequeños que los bytes, pero para la mayoría de los usuarios de tecnología, un byte es lo más pequeño que necesitarás.",
+            "1 byte (B) = 8 bits (b)"
+          ]
+        },
+        {
+          "question": "¿Qué es un kilobyte?",
+          "answer": ["1 kilobyte (KB) = 1024 bytes (B)"]
+        },
+        {
+          "question": "¿Qué es un megabyte?",
+          "answer": ["1 megabyte (MB) = 1.024 kilobytes (KB)"]
+        },
+        {
+          "question": "¿Qué es un gigabyte?",
+          "answer": ["1 gigabyte (GB) = 1.024 megabytes (MB)"]
+        },
+        {
+          "question": "¿Qué es un terabyte?",
+          "answer": ["1 terabyte (TB) = 1.024 gigabytes (GB)"]
+        },
+        {
+          "question": "¿Qué es lo siguiente?",
+          "answer": [
+            "A un terabyte (TB) le siguen exponencialmente un petabyte (PB), un exabyte (EB), un zetabyte (ZB), un yottabyte (YB), y todo lo que sea más grande que eso, es difícil de entender."
+          ]
+        }
+      ]
+    }
+  },
+  "ConversionTableSection": {
+    "title": "Tabla de conversión de bytes",
+    "description": "¿Tienes dudas sobre cuántos gigabytes equivalen a un terabyte? ¿O cuántos gigabytes hay en un terabyte? ¿Quieres saber cuántos MB hay en un GB o cuántos KB en un MB o cuántos GB en un TB, etc.? Convierte unidades de bytes por tu cuenta con nuestra práctica tabla de conversión de bytes:",
+    "header": {
+      "unit": "Unidad",
+      "abbr": "Abreviatura",
+      "decValue": "Valor decimal",
+      "decSize": "conversión decimal"
+    },
+    "firstRow": {
+      "unit": "Bit",
+      "abbr": "b",
+      "decValue": "0 o 1",
+      "decSize": "⅛ de un byte"
+    }
+  },
+  "FaqSection": {
+    "title": "Preguntas más frecuentes (FAQ)",
+    "faq": {
+      "faq": [
+        {
+          "question": "¿Cómo se utiliza el conversor de unidades?",
+          "answer": [
+            "Selecciona el valor que quieras convertir y selecciona el valor al que quieres convertir (por ejemplo: KB a MB). Introduce un valor en la primera sección de la izquierda, y tu respuesta aparecerá en la segunda sección de la derecha."
+          ]
+        },
+        {
+          "question": "¿Cómo convierto terabytes en gigabytes, etc.?",
+          "answer": [
+            "Solo tienes que introducir el valor en bytes que quieras convertir en nuestro Conversor de unidades y seleccionar el valor en bytes que quieras convertir y el valor se mostrará automáticamente.",
+            "También puedes utilizar la tabla de conversión que aparece más arriba si deseas realizar el cálculo manualmente."
+          ]
+        },
+        {
+          "question": "¿Cuántos gigabytes equivalen a un terabyte?",
+          "answer": ["1024 GB equivalen a 1 TB. Por tanto, un TB de almacenamiento puede contener 1024 GB de datos."]
+        },
+        {
+          "question": "¿Cuál es la diferencia entre TB y GB? ¿Y cuál es la diferencia entre B, KB, MB, GB y TB?",
+          "answer": [
+            "TB y GB solo se diferencian en el tamaño. Un terabyte está formado por más bytes, las unidades más pequeñas de datos, que un gigabyte. En general, un B es más pequeña que un KB, un MB es más grande, un GB es aún más grande y un TB es aún mayor.",
+            ""
+          ]
+        },
+        {
+          "question": "¿Por qué mi disco de 1 TB no es de 1 TB?",
+          "answer": [
+            "Aunque tu disco de 1 TB está catalogado como un disco con 1 TB de almacenamiento, normalmente no podrás utilizar toda la capacidad, ya que parte del disco puede estar destinado a archivos operativos."
+          ]
+        }
+      ]
+    }
+  },
+  "ctaSection1": {
+    "title": "¿Tienes muchos datos almacenados?",
+    "description": "Protege tus GB y TB con el almacenamiento seguro en la nube de Internxt.",
+    "cta": "Crear cuenta"
+  },
+  "ctaSection2": {
+    "title": "¡Cuanto más almacenes, más tendrás que proteger!",
+    "description": "Haz copias de seguridad y guarda de forma segura tus archivos con Internxt.",
+    "cta": "Crear cuenta"
+  },
+  "ctaSection3": {
+    "title": "Tu seguridad al alcance de un clic",
+    "description": "Protege tus datos personales con los servicios de privacidad de Internxt.",
+    "cta": "Crear cuenta"
+  }
+}

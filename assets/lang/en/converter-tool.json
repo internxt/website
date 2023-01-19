@@ -2,13 +2,7 @@
   "HeroSection": {
     "title": "Byte Converter: TB to GB",
     "description": "Convert terabytes to gigabytes to megabytes!",
-    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many Gb in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter.",
-    "container": {
-      "cta": "Convert",
-      "from": "From",
-      "to": "To",
-      "result": "Result"
-    }
+    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many Gb in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
   },
   "ExplanationSection": {
     "convertTo": {
@@ -23,7 +17,7 @@
       "title": "Why use a byte converter and storage calculator tool?",
       "description": [
         { "adv": "Determine exactly how much cloud storage you need for your files" },
-        { "adv": "make sure your files transfers fall under upload and download limits" },
+        { "adv": "Make sure your files transfers fall under upload and download limits" },
         { "adv": "Convert byte values without the help of a calculator or pen and paper" },
         { "adv": "Quickly find out how much phone storage space you have left" },
         { "adv": "Discover how much data your hard drive or portable drive can support" }
@@ -31,8 +25,7 @@
     },
     "MBMeaning": {
       "title": "MB meaning?",
-      "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information.",
-      "description1": "For example, MB meaning megabytes which are larger than kilobytes(KB) and smaller than gigabytes(GB)."
+      "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
     }
   },
 
@@ -76,7 +69,19 @@
   },
   "ConversionTableSection": {
     "title": "Byte Conversion Chart",
-    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many KB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:"
+    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many KB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:",
+    "header": {
+      "unit": "Unit",
+      "abbr": "Abbreviation",
+      "decValue": "Decimal value",
+      "decSize": "Decimal size"
+    },
+    "firstRow": {
+      "unit": "Bit",
+      "abbr": "b",
+      "decValue": "0 or 1",
+      "decSize": "⅛ of a byte"
+    }
   },
   "FaqSection": {
     "title": "Questions? We have answers.",
