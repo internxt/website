@@ -2,7 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ExplanationSection = ({ textContent }) => {
+const ExplanationSection = ({ textContent, lang }) => {
+  const langUpperCase = lang.toUpperCase();
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-start space-y-16 px-5 pt-20 pb-16 lg:px-10">
@@ -27,9 +28,9 @@ const ExplanationSection = ({ textContent }) => {
         <div className="flex w-full max-w-2xl flex-col">
           <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>{' '}
           {textContent.whyUseConverter.description.map((feature, index) => (
-            <li className="ml-2 text-lg font-normal text-gray-80" key={index}>
+            <p className="ml-5 list-item pb-1 text-lg font-normal text-gray-80" key={index}>
               {feature.adv}
-            </li>
+            </p>
           ))}
         </div>
         <div className="flex max-w-2xl flex-col space-y-3">
@@ -39,12 +40,12 @@ const ExplanationSection = ({ textContent }) => {
         <div className="flex cursor-pointer">
           <div
             onClick={() => {
-              window.open('https://internxt.com/virus-scanner', '_blank');
+              window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank');
             }}
             className="flex max-w-4xl cursor-pointer flex-row"
           >
             <Image
-              src="/images/converter-tool/VirusScanner.png"
+              src={`/images/converter-tool/VirusScanner${langUpperCase}.png`}
               width={897}
               height={350}
               layout={'intrinsic'}
