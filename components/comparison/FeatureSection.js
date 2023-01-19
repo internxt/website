@@ -21,7 +21,7 @@ const FeatureSection = ({ textContent }) => {
             <br className="hidden sm:inline-flex" /> {splitInternxtFromDescriptionPart1}
             <b
               onClick={() => window.open('https://internxt.com', '_self')}
-              className="cursor-pointer underline underline-offset-4"
+              className="cursor-pointer text-primary underline underline-offset-4"
             >
               {internxt}
             </b>
