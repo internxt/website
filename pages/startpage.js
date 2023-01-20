@@ -1,10 +1,14 @@
 import React from 'react';
 import HeroSection from '../components/partnerships/start-page/HeroSection';
-import FeatureSection from '../components/partnerships/start-page/FeatureSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
+import AdvantagesSection from '../components/partnerships/start-page/AdvantagesSection';
+import BestStorageSection from '../components/partnerships/start-page/BestStorageSection';
+import FeaturesSection from '../components/partnerships/start-page/FeaturesSection';
+import PartnershipSection from '../components/partnerships/start-page/PartnershipSection';
+import FaqSection from '../components/partnerships/start-page/FaqSection';
+import DealSection from '../components/partnerships/start-page/DealSection';
 
 const CLOUDWARDS_COUPON_ID = 'zJz11IA6';
 
@@ -27,9 +31,19 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
         coupon={CLOUDWARDS_COUPON_ID}
       />
 
-      <HeroSection textContent={langJson.template.HeroSection} lang={lang} />
+      <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FeatureSection textContent={langJson.template.FeatureSection} />
+      <AdvantagesSection textContent={langJson.AdvantagesSection} />
+
+      <BestStorageSection textContent={langJson.BestStorageSection} />
+
+      <FeaturesSection textContent={langJson.FeaturesSection} />
+
+      <PartnershipSection textContent={langJson.PartnershipSection} />
+
+      <DealSection textContent={langJson.DealSection} />
+
+      <FaqSection textContent={langJson.FaqSection} />
 
       <Footer textContent={footerLang} lang={lang} darkMode={false} />
     </Layout>
@@ -39,10 +53,19 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/partnerships.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  if (lang !== 'en') {
+    return {
+      redirect: {
+        destination: '/startpage',
+        permanent: false,
+      },
+    };
+  }
+
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/en/startpage.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
 
   return {
     props: {
