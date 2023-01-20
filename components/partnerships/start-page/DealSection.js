@@ -21,7 +21,7 @@ const DealSection = ({ textContent }) => {
           <p className="text-center text-lg font-normal text-gray-60 lg:text-start">{textContent.footer}</p>
         </div>
         {/* Card */}
-        <div className="flex flex-col items-center space-y-8 rounded-2xl border-8 border-primary border-opacity-20 py-6 shadow-xl">
+        <div className="flex flex-col items-center space-y-8 rounded-2xl border-8 border-primary border-opacity-20 px-12 py-6 shadow-xl">
           <div
             className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full bg-neutral-20 py-1 px-4 pb-0.5
           text-xl font-medium text-black`}
