@@ -44,7 +44,7 @@ const FeaturesSection = ({ textContent }) => {
         </div>
         <div className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:grid-cols-2 md:gap-x-0 lg:grid-cols-3">
           {features.map((feature) => (
-            <div className="flex flex-col items-center space-y-6 md:w-64 md:flex-auto" keu={feature.title}>
+            <div className="flex flex-col items-center space-y-6 md:w-64 md:flex-auto" key={feature.title}>
               <feature.Icon size={56} color={'rgb(0, 102, 255)'} />
               <div className="flex flex-col items-center gap-x-40 space-y-5 text-center">
                 <p className="text-xl font-semibold">{feature.title}</p>
