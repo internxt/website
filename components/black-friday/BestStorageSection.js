@@ -21,7 +21,7 @@ const BestStorageSection = ({ textContent, lang }) => {
         />
         <img
           className="flex md:hidden"
-          src="/images/home/devicesMobileView.png"
+          src="/images/home/devicesMobileView.webp"
           draggable="false"
           alt="Laptop and phone with Internxt app"
         />
