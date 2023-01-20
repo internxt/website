@@ -104,7 +104,7 @@ const FeaturesSection = ({ textContent, lang }) => {
             <div className="flex flex-col">
               <Image
                 loading="lazy"
-                className="mb-6 flex lg:max-w-xs"
+                className="mb-6 flex object-contain lg:max-w-xs"
                 src="/images/home/devicesDesc.webp"
                 draggable="false"
                 width={600}

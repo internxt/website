@@ -37,6 +37,7 @@ export default function HeroSection({ textContent, lang }) {
           <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
             <Image
               loading="eager"
+              className="object-contain"
               src="/images/home/devicesMobileView.webp"
               draggable="false"
               alt="laptop and phone with Internxt app"
@@ -73,7 +74,7 @@ export default function HeroSection({ textContent, lang }) {
           <div className="ml-5 hidden max-w-2xl flex-grow flex-col xl:ml-20 xl:flex">
             <Image
               loading="eager"
-              className="hidden xl:flex"
+              className="hidden object-contain xl:flex"
               src="/images/home/devicesAsc.webp"
               draggable="false"
               width={600}
@@ -82,9 +83,10 @@ export default function HeroSection({ textContent, lang }) {
               alt="desktop, laptop and phone with Internxt app"
             />
           </div>
-          <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex xl:ml-20 xl:hidden">
+          <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex lg:-mr-7 xl:ml-20 xl:hidden">
             <Image
               loading="eager"
+              className="object-contain"
               width={600}
               height={450}
               layout="responsive"

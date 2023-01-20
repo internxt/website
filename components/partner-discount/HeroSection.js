@@ -149,7 +149,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
               <img src="/images/partners-discount/partners-image.png" alt="Devices image" className="" />
             </div>
             <div className="hidden 2xl:flex">
-              <img src="/images/home/devicesDesc.png" alt="Devices image" />
+              <img src="/images/home/devicesDesc.webp" alt="Devices image" />
             </div>
           </div>
           <ShowSnackbar />

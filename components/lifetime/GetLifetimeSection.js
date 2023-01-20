@@ -26,7 +26,8 @@ const GetLifetimeSection = ({ textContent }) => (
           width={600}
           loading="lazy"
           layout="intrinsic"
-          src="/images/home/devicesMobileView.png"
+          className="object-contain"
+          src="/images/home/devicesMobileView.webp"
           alt="iPhone, iPad, and Mac"
         />
       </div>
