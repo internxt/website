@@ -110,7 +110,7 @@ const InfoSection = ({ textContent }) => {
   ];
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center bg-black bg-opacity-5 pt-20 md:p-20">
+      <div className="flex flex-col items-center bg-black bg-opacity-5 pt-20">
         <div className="flex flex-col items-center space-y-10">
           <p className="text-center text-3xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
           <p className="p-5 text-center text-lg font-normal md:w-full md:max-w-2xl">{textContent.subTitle}</p>

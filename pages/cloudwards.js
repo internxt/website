@@ -1,21 +1,23 @@
 import React from 'react';
 import HeroSection from '../components/partnerships/cloudwards/HeroSection';
-import FeatureSection from '../components/partnerships/cloudwards/FeatureSection';
+import AdvantagesSection from '../components/partnerships/cloudwards/AdvantagesSection';
+import BestStorageSection from '../components/partnerships/cloudwards/BestStorageSection';
+import FeaturesSection from '../components/partnerships/cloudwards/FeaturesSection';
+import DealSection from '../components/partnerships/cloudwards/DealSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
 
 const CLOUDWARDS_COUPON_ID = '0eu0T11z';
 
-const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
+const Cloudwards = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
 
   return (
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="Cloudwards Partnership"
+      segmentName="StartPage Partnership"
       lang={lang}
     >
       <Navbar
@@ -27,9 +29,19 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
         coupon={CLOUDWARDS_COUPON_ID}
       />
 
-      <HeroSection textContent={langJson.template.HeroSection} lang={lang} />
+      <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FeatureSection textContent={langJson.template.FeatureSection} />
+      <AdvantagesSection textContent={langJson.AdvantagesSection} />
+
+      <BestStorageSection textContent={langJson.BestStorageSection} />
+
+      <FeaturesSection textContent={langJson.FeaturesSection} />
+
+      {/* <PartnershipSection textContent={langJson.PartnershipSection} /> */}
+
+      <DealSection textContent={langJson.DealSection} />
+
+      {/* <FaqSection textContent={langJson.FaqSection} /> */}
 
       <Footer textContent={footerLang} lang={lang} darkMode={false} />
     </Layout>
@@ -39,12 +51,19 @@ const SpecialOffer = ({ metatagsDescriptions, langJson, navbarLang, footerLang, 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/partnerships.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  if (lang !== 'en') {
+    return {
+      redirect: {
+        destination: '/startpage',
+        permanent: false,
+      },
+    };
+  }
 
-  cookies.setReferralCookie(ctx);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/en/startpage.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
 
   return {
     props: {
@@ -57,4 +76,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default SpecialOffer;
+export default Cloudwards;
