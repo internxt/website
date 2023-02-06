@@ -54,7 +54,7 @@ export async function getServerSideProps(ctx) {
   if (lang !== 'en') {
     return {
       redirect: {
-        destination: '/startpage',
+        destination: '/cloudwards',
         permanent: false,
       },
     };
