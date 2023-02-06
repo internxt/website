@@ -3,8 +3,6 @@ import HeroSection from '../components/partnerships/cloudwards/HeroSection';
 import AdvantagesSection from '../components/partnerships/cloudwards/AdvantagesSection';
 import BestStorageSection from '../components/partnerships/cloudwards/BestStorageSection';
 import FeaturesSection from '../components/partnerships/cloudwards/FeaturesSection';
-import PartnershipSection from '../components/partnerships/cloudwards/PartnershipSection';
-import FaqSection from '../components/partnerships/cloudwards/FaqSection';
 import DealSection from '../components/partnerships/cloudwards/DealSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
