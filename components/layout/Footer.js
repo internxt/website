@@ -59,7 +59,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
               </p>
               <p className="mt-4 text-center text-base font-medium lg:mt-6 lg:max-w-lg">
                 “Proyecto cofinanciado por los fondos FEDER dentro del Programa Operativo FEDER de la Comunitat
-                Valenciana 2014-2020”
+                Valenciana 2021-2027”
               </p>
             </div>
           </div>
