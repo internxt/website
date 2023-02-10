@@ -26,7 +26,7 @@ export interface NavbarProps {
   mode?: 'payment' | 'subscription';
 }
 
-const DRIVE_WEB_URL = 'https://drive.internxt.com';
+const DRIVE_WEB_URL = 'http://localhost:3000';
 
 export default function Navbar(props: NavbarProps) {
   const [menuState, setMenuState] = useState(false);

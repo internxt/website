@@ -6,11 +6,15 @@ import ShowSnackbar from '../ShowSnackbar';
 import { toast } from 'react-toastify';
 import { checkout } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import Navbar from '../layout/Navbar';
 
-const Banner = () => {
+const VALENTINES_COUPON_ID = 'G8Ti4z1k';
+
+const ValentinesBanner = () => {
   const [sendBannerVisible, setIsSendBannerVisible] = useState(false);
   const { locale } = useRouter();
   const textContent = require(`../../assets/lang/${locale}/banners.json`);
+  const navbar = require(`../../assets/lang/${locale}/navbar.json`);
   const subtitle = textContent.valentinesBanner.subtitle.split('VDAY')[0];
   const VDAY = textContent.valentinesBanner.subtitle.substr(textContent.valentinesBanner.subtitle.indexOf('VDAY'), 4);
   const stripeObject = { product: 'TB212' };
@@ -29,7 +33,7 @@ const Banner = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsSendBannerVisible(true);
-    }, 1000);
+    }, 5000);
   }, []);
 
   return (
@@ -38,6 +42,7 @@ const Banner = () => {
         sendBannerVisible ? 'flex' : 'hidden'
       }  fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
+      <Navbar hide={true} cta={['default']} textContent={navbar} coupon={VALENTINES_COUPON_ID} />
       <div
         className={`${sendBannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2 flex
         w-auto max-w-[800px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl text-neutral-900`}
@@ -51,7 +56,7 @@ const Banner = () => {
         <button className="absolute right-0 m-7 flex w-auto text-white" onClick={onClose}>
           <X size={32} />
         </button>
-        <div className="flex flex-col p-14 lg:flex-row lg:py-20">
+        <div className="flex flex-col p-14 lg:flex-row lg:py-16">
           <div className="flex w-full flex-col  items-center justify-center text-center lg:items-start lg:text-left">
             <div className="flex max-w-[323px] flex-col items-start">
               <p className="text-5xl font-bold text-white ">{textContent.valentinesBanner.title}</p>
@@ -93,4 +98,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default ValentinesBanner;
