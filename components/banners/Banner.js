@@ -1,17 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'phosphor-react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import ShowSnackbar from '../ShowSnackbar';
+import { toast } from 'react-toastify';
+import { checkout } from '../../lib/auth';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
-const SendBanner = ({ textContent }) => {
+const Banner = () => {
   const [sendBannerVisible, setIsSendBannerVisible] = useState(false);
+  const { locale } = useRouter();
+  const textContent = require(`../../assets/lang/${locale}/banners.json`);
+  const subtitle = textContent.valentinesBanner.subtitle.split('VDAY')[0];
+  const VDAY = textContent.valentinesBanner.subtitle.substr(textContent.valentinesBanner.subtitle.indexOf('VDAY'), 4);
+  const stripeObject = { product: 'TB212' };
+
+  const openToast = () => toast.success(textContent.valentinesBanner.toast);
+
   const onClose = () => {
     setIsSendBannerVisible(false);
+  };
+
+  const copyCoupon = () => {
+    navigator.clipboard.writeText(VDAY);
+    openToast();
   };
 
   useEffect(() => {
     setTimeout(() => {
       setIsSendBannerVisible(true);
-    }, 15000);
+    }, 1000);
   }, []);
 
   return (
@@ -24,7 +42,7 @@ const SendBanner = ({ textContent }) => {
         className={`${sendBannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2 flex
         w-auto max-w-[800px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl text-neutral-900`}
         style={{
-          backgroundImage: `url(/images/virus-scanner/banner-bg.png)`,
+          backgroundImage: `url('/images/privacy/neonBlur.webp')`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -33,33 +51,36 @@ const SendBanner = ({ textContent }) => {
         <button className="absolute right-0 m-7 flex w-auto text-white" onClick={onClose}>
           <X size={32} />
         </button>
-        <div className="flex flex-col space-x-20 p-14 lg:flex-row lg:p-20">
-          <div className="flex w-full flex-col items-center justify-center text-center lg:items-start lg:text-left">
+        <div className="flex flex-col p-14 lg:flex-row lg:py-20">
+          <div className="flex w-full flex-col  items-center justify-center text-center lg:items-start lg:text-left">
             <div className="flex max-w-[323px] flex-col items-start">
-              <p className="text-5xl font-bold text-white ">{textContent.title}</p>
-              <p className=" pt-4 text-3xl font-medium text-white lg:w-[323px]">{textContent.description}</p>
+              <p className="text-5xl font-bold text-white ">{textContent.valentinesBanner.title}</p>
+              <p className=" pt-4 text-2xl font-medium text-white lg:w-[323px]">
+                {subtitle}
+                <span className="cursor-pointer text-primary" onClick={copyCoupon}>
+                  {VDAY}
+                </span>
+              </p>
             </div>
             <div className="flex pt-6">
               <button
                 className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
-                  window.open(
-                    'https://internxt.com/?utm_source=website&utm_medium=banner&utm_campaign=internxt',
-                    '_blank',
-                  );
+                  checkout(getPlanId(stripeObject));
                 }}
               >
-                {textContent.cta}
+                {textContent.valentinesBanner.cta}
               </button>
             </div>
           </div>
-          <div className="ml-80 hidden items-center lg:flex">
+          <div className="hidden pl-[81px] lg:flex">
             <div className="flex w-[340px]">
               <Image
-                src="/images/virus-scanner/ImageBanner.png"
+                src="/images/banners/hearts.png"
                 alt="hero"
-                width={208}
-                height={208}
+                quality={100}
+                width={382}
+                height={308}
                 layout="intrinsic"
                 loading="lazy"
               />
@@ -67,8 +88,9 @@ const SendBanner = ({ textContent }) => {
           </div>
         </div>
       </div>
+      <ShowSnackbar />
     </div>
   );
 };
 
-export default SendBanner;
+export default Banner;
