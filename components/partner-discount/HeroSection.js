@@ -148,7 +148,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
             <div className="hidden max-w-[679px] flex-col pl-32 pt-8 lg:flex lg:pt-0 2xl:hidden">
               <img src="/images/partners-discount/partners-image.png" alt="Devices image" className="" />
             </div>
-            <div className="hidden 2xl:flex">
+            <div className="hidden max-w-5xl object-contain 2xl:flex">
               <img src="/images/home/devicesDesc.webp" alt="Devices image" />
             </div>
           </div>

@@ -24,5 +24,11 @@
       "title5": "No unauthorized access",
       "title6": "Available until Dec 5th"
     }
+  },
+  "valentinesBanner": {
+    "title": "Love without limits!",
+    "subtitle": "Get 90% off our 2TB plan with code VDAY",
+    "cta": "Get the deal",
+    "toast": "Copied to clipboard!"
   }
 }

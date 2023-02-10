@@ -129,7 +129,7 @@ LayoutProps) {
           <div
             className={`group ${
               isBannerFixed ? 'absolute' : 'fixed'
-            } top-16 left-0 z-50 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
+            } top-16 left-0 z-40 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
           >
             <Link href="/byte-converter" target="_blank" rel="noreferrer">
               <div className="mx-auto flex flex-row items-center justify-center space-x-2">
