@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { checkout } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import Navbar from '../layout/Navbar';
+import { isMobile } from 'react-device-detect';
 
 const VALENTINES_COUPON_ID = 'G8Ti4z1k';
 
@@ -71,7 +72,15 @@ const ValentinesBanner = () => {
               <button
                 className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
-                  checkout(getPlanId(stripeObject));
+                  if (isMobile) {
+                    window.location.replace(
+                      `https://drive.internxt.com/new?planId=${getPlanId(
+                        stripeObject,
+                      )}&couponCode=${VALENTINES_COUPON_ID}&mode=subscription`,
+                    );
+                  } else {
+                    checkout(getPlanId(stripeObject));
+                  }
                 }}
               >
                 {textContent.valentinesBanner.cta}
