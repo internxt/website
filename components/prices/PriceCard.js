@@ -7,6 +7,7 @@
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { openAuthDialog, checkout } from '../../lib/auth';
+import { isMobile } from 'react-device-detect';
 
 export default function PriceCard({
   planType,
@@ -39,6 +40,12 @@ export default function PriceCard({
       default:
         return '€';
     }
+  };
+
+  // const planId = ;
+
+  const onMobilePayment = () => {
+    window.location.replace(`https://drive.internxt.com/new?planId=${getPlanId(stripeObject)}&mode=subscription`);
   };
 
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
@@ -220,7 +227,11 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+            if (isMobile) {
+              cta[0] === 'checkout' && onMobilePayment();
+            } else {
+              cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+            }
           }}
           className="flex w-full flex-row"
         >
