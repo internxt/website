@@ -2,10 +2,22 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ConversionTableSection = ({ textContent }) => {
+const ConversionTableSection = ({ textContent, lang }) => {
+  const langUpperCase = lang.toUpperCase();
+
   const table = [
-    { unit: 'Unit', abbreviation: 'Abbreviation', decimalValue: 'Decimal Value', decimalSize: 'Decimal Size' },
-    { unit: 'Bit', abbreviation: 'b', decimalValue: '0 or 1', decimalSize: '⅛ of a byte' },
+    {
+      unit: textContent.header.unit,
+      abbreviation: textContent.header.abbr,
+      decimalValue: textContent.header.decValue,
+      decimalSize: textContent.header.decSize,
+    },
+    {
+      unit: textContent.firstRow.unit,
+      abbreviation: textContent.firstRow.abbr,
+      decimalValue: textContent.firstRow.decValue,
+      decimalSize: textContent.firstRow.decSize,
+    },
     { unit: 'Byte', abbreviation: 'B', decimalValue: '8 bits', decimalSize: '1 byte' },
     {
       unit: 'Kilobyte',
@@ -70,11 +82,7 @@ const ConversionTableSection = ({ textContent }) => {
     {
       unit: 'Zettabyte',
       abbreviation: 'ZB',
-      decimalValue: (
-        <>
-          1000<sup>7</sup> bytes
-        </>
-      ),
+      decimalValue: '1000¹ bytes',
       decimalSize: '1,000,000,000,000,000,000,000 bytes',
     },
     {
@@ -121,12 +129,12 @@ const ConversionTableSection = ({ textContent }) => {
         <div className="flex cursor-pointer">
           <div
             onClick={() => {
-              window.open('https://internxt.com/password-checker', '_blank');
+              window.open(`https://internxt.com/${lang}/password-checker`, '_blank');
             }}
             className="mx-5 flex max-w-4xl cursor-pointer flex-row"
           >
             <Image
-              src="/images/converter-tool/PasswordChecker.png"
+              src={`/images/converter-tool/PasswordChecker${langUpperCase}.png`}
               width={897}
               height={350}
               layout="intrinsic"

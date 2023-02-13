@@ -7,17 +7,17 @@
   {
     "id": "drive",
     "title": "Internxt Drive – Almacenamiento privado y seguro en la nube",
-    "description": "Almacena, comparte y haz copias de seguridad de tus archivos y fotos en la nube con Internxt Drive. Almacenamiento de archivos encriptados de código abierto y copia de seguridad en línea de extremo a extremo."
+    "description": "Internxt Drive – Almacenamiento privado y seguro"
   },
   {
     "id": "photos",
-    "title": "Internxt Photos – Almacenamiento seguro de fotos y copia de seguridad de imágenes",
-    "description": "Guarda, visualiza y sincroniza tus fotos e imágenes en todos los dispositivos con Internxt Photos. Compartición de fotos en la nube encriptada de extremo a extremo y copia de seguridad de imágenes."
+    "title": "Internxt Photos – Almacenamiento seguro de fotos y videos",
+    "description": "Internxt Photos – Almacenamiento de fotos y copia de seguridad"
   },
   {
     "id": "pricing",
     "title": "Internxt Precios – Obtén 10GB gratis!",
-    "description": "Regístrate para obtener una suscripción de almacenamiento seguro en la nube de Internxt y obtén acceso a nuestro boletín mensual lleno de las últimas noticias y actualizaciones tecnológicas."
+    "description": "Internxt – Precios y planes"
   },
   {
     "id": "about",
@@ -36,8 +36,8 @@
   },
   {
     "id": "privacy",
-    "title": "Internxt Privacidad – Herramientas y recursos gratuitos para la privacidad",
-    "description": "Herramientas gratuitas para proteger tu privacidad en línea: Chequeo de contraseñas, escáner de virus, directorio de organizaciones de protección de la intimidad, etc. Internxt defiende tu derecho a la privacidad."
+    "title": "Internxt Privacidad – Herramientas y recursos gratuitos",
+    "description": "Internxt Privacidad – Herramientas y recursos gratuitos"
   },
   {
     "id": "virus-scanner",
@@ -46,8 +46,8 @@
   },
   {
     "id": "converter-tool",
-    "title": "Conversor de unidades: GB a TB | Internxt",
-    "description": "El conversor de unidades gratuito de Internxt: averigua cuánto espacio de almacenamiento tienes, cuántos gigabytes hay en un terabyte y convierte de B, KB, MB, GB a TB."
+    "title": "Conversor de unidades online gratuito | Internxt",
+    "description": "Conversor de unidades gratuito de Internxt: averigua cuánto espacio de almacenamiento tienes, cuántos gigabytes hay en un terabyte y convierte de B, KB, MB, GB y TB."
   },
   {
     "id": "lifetime",

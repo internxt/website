@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
 const excludedPaths: string[] = [
   `/_next/static`,
@@ -12,13 +12,19 @@ const excludedPaths: string[] = [
   `DPA.pdf`,
 ];
 
-const Middleware = (req) => {
-  const isExcludedPath = excludedPaths.findIndex((path) => req.nextUrl.pathname.includes(path)) !== -1;
+const Middleware = (res) => {
+  const isExcludedPath = excludedPaths.findIndex((path) => res.nextUrl.pathname.includes(path)) !== -1;
   if (isExcludedPath) return NextResponse.next();
-  if (req.nextUrl.pathname !== req.nextUrl.pathname.toLowerCase() || req.nextUrl.pathname.includes('%20')) {
-    const url = req.nextUrl.clone();
-    url.pathname = url.pathname.toLowerCase();
-    return NextResponse.redirect(decodeURIComponent(url).replace(/\s/, '-'));
+  if (res.nextUrl.pathname !== res.nextUrl.pathname.toLowerCase() || res.nextUrl.pathname.includes('%20')) {
+    const url = res.nextUrl.clone();
+    if (url.pathname.includes('%20')) {
+      const replaced = decodeURIComponent(url.pathname).replace(/\s/, '-');
+      url.pathname = replaced.toLowerCase();
+      return NextResponse.redirect(decodeURIComponent(url));
+    } else {
+      url.pathname = url.pathname.toLowerCase();
+      return NextResponse.redirect(url);
+    }
   }
   return NextResponse.next();
 };

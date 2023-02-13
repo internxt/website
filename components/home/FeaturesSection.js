@@ -104,7 +104,7 @@ const FeaturesSection = ({ textContent, lang }) => {
             <div className="flex flex-col">
               <Image
                 loading="lazy"
-                className="mb-6 flex lg:max-w-xs"
+                className="mb-6 flex object-contain lg:max-w-xs"
                 src="/images/home/devicesDesc.webp"
                 draggable="false"
                 width={600}
@@ -119,12 +119,7 @@ const FeaturesSection = ({ textContent, lang }) => {
                 <br className="flex sm:hidden" /> {textContent.feature2.title.line2}
               </h3>
               <span className="text-lg text-neutral-500">{textContent.feature2.description}</span>
-              <a
-                href={`${
-                  router.pathname === '/products' ? '' : `${lang ? (lang === 'en' ? '' : `/${lang}`) : ''}/products`
-                }`}
-                className="text-lg text-primary"
-              >
+              <a href={`${lang === 'en' ? '' : lang}/drive`} className="text-lg text-primary">
                 <div className="flex flex-row items-center">
                   {textContent.feature2.cta}
                   <img

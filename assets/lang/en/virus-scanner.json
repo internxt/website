@@ -80,5 +80,10 @@
       "title": "Byte Unit Converter",
       "cta": "Convert now"
     }
+  },
+  "SendBanner": {
+    "title": "Try Internxt",
+    "description": "Secure file storage with built-in virus scanner.",
+    "cta": "Sign up for free"
   }
 }

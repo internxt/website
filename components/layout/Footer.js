@@ -27,6 +27,44 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
+        {/* FEDER */}
+        {lang === 'es' && (
+          <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-gray-5 bg-white py-8 sm:space-x-20">
+            <div className="mx-auto flex max-w-2xl flex-col items-center px-8">
+              <div className="mb-8 flex flex-row flex-wrap items-center justify-center">
+                <img
+                  loading="lazy"
+                  className="mx-4 h-16"
+                  src="../../logos/investors/eu.webp"
+                  alt="Unión Europea"
+                  draggable="false"
+                />
+                <img
+                  loading="lazy"
+                  className="mx-4 h-14"
+                  src="../../logos/investors/generalitat.webp"
+                  alt="Generalitat Valenciana"
+                  draggable="false"
+                />
+              </div>
+              <p className="text-gray- text-center text-xs">
+                <span className="font-medium">
+                  PROYECTO DE DESARROLLO TECNOLÓGICO DE NUEVOS PRODUCTOS CLOUD BASADOS EN REDES DESCENTRALIZADAS Y
+                  TECNOLOGÍAS BLOCKCHAIN:
+                </span>{' '}
+                <span>
+                  Desarrollo de Internxt Photos, un producto de almacenamiento e intercambio de fotografías y API
+                  Internxt IaaS,
+                </span>
+              </p>
+              <p className="mt-4 text-center text-base font-medium lg:mt-6 lg:max-w-lg">
+                “Proyecto cofinanciado por los fondos FEDER dentro del Programa Operativo FEDER de la Comunitat
+                Valenciana 2021-2027”
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Newsletter */}
         <div
           className={`${
@@ -629,51 +667,12 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
           </div>
         </footer>
       </div>
-
-      {/* Cookies modal */}
-      <div
-        data-aos="fade-up"
-        data-aos-duration="350"
-        data-aos-offset="500"
-        className={`${styles.cookiesBgFallback} ${
-          consentCookie ? 'hidden' : 'flex'
-        } fixed bottom-0 left-0 z-50 w-full justify-between border border-black border-opacity-5 bg-white bg-opacity-95 p-4 shadow-2xl backdrop-blur-lg backdrop-filter sm:bottom-8 sm:left-8 sm:max-w-xs sm:rounded-lg sm:p-6`}
-      >
-        <div className="flex w-full flex-row items-center justify-between space-x-4 sm:flex-col sm:space-y-8 sm:space-x-0">
-          <div className="flex flex-col space-y-2">
-            <p className="text-base font-medium text-cool-gray-90">{textContent.Cookies.title}</p>
-            <Link href="/legal" locale={lang}>
-              <a className="flex cursor-pointer flex-row items-center text-sm text-cool-gray-60">
-                <img
-                  loading="lazy"
-                  className="mt-0.5 mr-2"
-                  src="/icons/newTabNeutral40.svg"
-                  draggable="false"
-                  alt="new tab icon"
-                />
-                {textContent.Cookies.link}
-              </a>
-            </Link>
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={handleAcceptCookies}
-                className="flex h-10 w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-black bg-opacity-5 p-0 text-base font-medium text-cool-gray-60 transition-all duration-75 focus:outline-none active:bg-cool-gray-20 sm:px-4 sm:py-2"
-              >
-                <span className="flex">{textContent.Cookies.close}</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {
