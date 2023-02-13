@@ -60,11 +60,7 @@ export default function PriceCard({
     if (isMobile) {
       onMobilePayment();
     } else {
-      cta[0] === 'checkout'
-        ? window.location.replace(
-            'https://drive.internxt.com/checkout-plan?planId=plan_FkTXxEg3GZW0pg&couponCode=G8Ti4z1k&mode=subscription',
-          )
-        : openAuthDialog('signup');
+      cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
     }
   };
 
