@@ -66,7 +66,7 @@ export default function PriceCard({
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
-        {contentText.mostPopular}
+        {contentText.valentines}
       </div>
 
       <div

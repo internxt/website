@@ -59,33 +59,33 @@ LayoutProps) {
     }
   };
 
-  const ConvertTo = () => {
+  const obtainDeal = () => {
     if (lang === 'en') {
-      return "Convert TB to GB and more with Internxt's free Byte Converter!";
+      return 'Be our Valentine and get 90% OFF our 2TB plan with the code VDAY.';
     } else if (lang === 'es') {
-      return 'Convierte TB en GB y más con el convertidor de unidades gratuito de Internxt!';
+      return 'Sé nuestro Valentín y consigue un 90% de DESCUENTO en nuestro plan de 2TB con el código VDAY.';
     } else if (lang === 'fr') {
-      return "Convertissez des To en Go et plus avec le convertisseur d'octets gratuit d'Internxt!";
+      return 'Soyez notre Valentine et obtenez 90% de réduction sur notre plan de 2TB avec le code VDAY.';
     }
   };
 
   const ConvertToMobile = () => {
     if (lang === 'en') {
-      return 'Byte converter: TB to KB';
+      return "Pick up the Valentine's deal";
     } else if (lang === 'es') {
-      return 'Conversor de unidades: TB a KB';
+      return 'Obtén nuestra oferta de San Valentín';
     } else if (lang === 'fr') {
-      return "convertisseur d'unités: To en Go";
+      return "Reprendre l'affaire de la Saint-Valentin";
     }
   };
 
-  const tryNow = () => {
+  const pickUp = () => {
     if (lang === 'en') {
-      return 'Try Now';
+      return 'Pick up the deal';
     } else if (lang === 'es') {
-      return 'Pruébalo ahora';
+      return 'Obtén la oferta';
     } else if (lang === 'fr') {
-      return 'Essayez maintenant';
+      return "Reprendre l'affaire";
     }
   };
 
@@ -131,14 +131,19 @@ LayoutProps) {
               isBannerFixed ? 'absolute' : 'fixed'
             } top-16 left-0 z-40 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
           >
-            <Link href="/byte-converter" target="_blank" rel="noreferrer">
-              <div className="mx-auto flex flex-row items-center justify-center space-x-2">
-                <p className="flex flex-row rounded-full  font-bold">{New()}</p>
-                <p className="flex flex-row font-normal">{ConvertTo()}</p>
+            <div
+              className="mx-auto flex flex-row items-center justify-center space-x-2"
+              onClick={() =>
+                window.location.replace(
+                  'https://internxt.com/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines',
+                )
+              }
+            >
+              {/* <p className="flex flex-row rounded-full  font-bold">{New()}</p> */}
+              <p className="flex flex-row font-normal">{obtainDeal()}</p>
 
-                <p className="flex text-base font-semibold underline">{tryNow()}</p>
-              </div>
-            </Link>
+              <p className="flex text-base font-semibold underline">{pickUp()}</p>
+            </div>
           </div>
           <div
             className={`group fixed top-16 left-0 z-30 ${
@@ -146,12 +151,18 @@ LayoutProps) {
             } h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
           >
             <div className="flex flex-row">
-              <Link href="/byte-converter" target="_blank" rel="noreferrer">
-                <div className="flex flex-row items-center justify-center space-x-2">
-                  <p className="flex flex-row rounded-full  font-bold">{New()}</p>
-                  <p className="flex flex-row font-normal">{ConvertToMobile()}</p>
-                </div>
-              </Link>
+              <div
+                className="flex flex-row items-center justify-center space-x-2"
+                onClick={() =>
+                  window.location.replace(
+                    'https://internxt.com/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines',
+                  )
+                }
+              >
+                {/* <p className="flex flex-row rounded-full  font-bold">{New()}</p> */}
+                <p className="flex flex-row font-normal">{ConvertToMobile()}</p>
+              </div>
+
               <button
                 className="absolute top-3 right-3 flex flex-col"
                 onClick={() => {
