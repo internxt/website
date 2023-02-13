@@ -42,10 +42,12 @@ export default function PriceCard({
     }
   };
 
-  // const planId = ;
-
   const onMobilePayment = () => {
-    window.location.replace(`https://drive.internxt.com/new?planId=${getPlanId(stripeObject)}&mode=subscription`);
+    if (billingFrequency === -1) {
+      window.location.replace(`https://drive.internxt.com/new?planId=${getPlanId(stripeObject)}&mode=payment`);
+    } else {
+      window.location.replace(`https://drive.internxt.com/new?planId=${getPlanId(stripeObject)}&mode=subscription`);
+    }
   };
 
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
