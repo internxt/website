@@ -46,9 +46,7 @@ export default function PriceCard({
 
   const onMobilePayment = () => {
     if (popular) {
-      window.location.replace(
-        `${DRIVE_WEB_URL}/checkout-plan?planId=plan_FkTXxEg3GZW0pg&couponCode=G8Ti4z1k&mode=subscription`,
-      );
+      window.location.replace(`${DRIVE_WEB_URL}/new?planId=plan_FkTXxEg3GZW0pg&couponCode=G8Ti4z1k&mode=subscription`);
     } else {
       if (billingFrequency === -1) {
         window.location.replace(`${DRIVE_WEB_URL}/new?planId=${getPlanId(stripeObject)}&mode=payment`);
