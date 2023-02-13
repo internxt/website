@@ -63,9 +63,9 @@ LayoutProps) {
     if (lang === 'en') {
       return 'Be our Valentine and get 90% OFF our 2TB plan with the code VDAY.';
     } else if (lang === 'es') {
-      return 'Sé nuestro Valentín y consigue un 90% de DESCUENTO en nuestro plan de 2TB con el código VDAY.';
+      return 'Este San Valentín consigue un 90% de descuento en nuestro plan de 2TB con el código VDAY.';
     } else if (lang === 'fr') {
-      return 'Soyez notre Valentine et obtenez 90% de réduction sur notre plan de 2TB avec le code VDAY.';
+      return 'Obtenez un 90 % de réduction sur notre plan de 2 To avec le code VDAY.';
     }
   };
 
@@ -73,9 +73,9 @@ LayoutProps) {
     if (lang === 'en') {
       return "Pick up the Valentine's deal";
     } else if (lang === 'es') {
-      return 'Obtén nuestra oferta de San Valentín';
+      return 'Obtén la oferta';
     } else if (lang === 'fr') {
-      return "Reprendre l'affaire de la Saint-Valentin";
+      return "Profitez de l'offre";
     }
   };
 
@@ -135,7 +135,7 @@ LayoutProps) {
               className="mx-auto flex flex-row items-center justify-center space-x-2"
               onClick={() =>
                 window.location.replace(
-                  'https://internxt.com/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines',
+                  `https://internxt.com/${lang}/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines`,
                 )
               }
             >
@@ -155,7 +155,7 @@ LayoutProps) {
                 className="flex flex-row items-center justify-center space-x-2"
                 onClick={() =>
                   window.location.replace(
-                    'https://internxt.com/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines',
+                    `https://internxt.com/${lang}/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines`,
                   )
                 }
               >
