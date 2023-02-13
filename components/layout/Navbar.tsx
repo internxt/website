@@ -99,9 +99,9 @@ export default function Navbar(props: NavbarProps) {
   const redirectToCheckout = (planId: string) => {
     const isPaymentMode = props.mode === 'payment';
     window.location.replace(
-      `${DRIVE_WEB_URL}/checkout-plan?planId=${planId}${isCoupon ? '&couponCode=' + props.coupon : ''}${
-        isPaymentMode ? '&mode=' + props.mode : '&mode=subscription'
-      }`,
+      `${DRIVE_WEB_URL}/checkout-plan?planId=${planId}${
+        isCoupon ? '&couponCode=' + props.coupon : planId === 'plan_FkTXxEg3GZW0pg' ? '&couponCode=G8Ti4z1k' : ''
+      }${isPaymentMode ? '&mode=' + props.mode : '&mode=subscription'}`,
     );
   };
 

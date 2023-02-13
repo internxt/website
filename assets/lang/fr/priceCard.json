@@ -1,5 +1,6 @@
 {
   "mostPopular": "Le plus populaire",
+  "valentines": "Offre spéciale pour la Saint-Valentin!",
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "planTitles": {
     "individuals": "Plans Individuels",
@@ -37,8 +38,9 @@
   "firstMonth": "30 premiers jours",
   "cta": {
     "getStarted": "Commencer",
-    "signUpNow": "S'inscrire gratuitement",
+    "signUpNow": "Obtenez Internxt",
     "buy": "Obtenir",
+    "get": "Obtenir",
     "claimTheDeal": "Réclamer l'affaire",
     "freemonth": "Obtenez 30 jours gratuits"
   },

@@ -1,5 +1,6 @@
 {
   "mostPopular": "Most popular",
+  "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "planTitles": {
     "individuals": "Plans for Individuals",
@@ -38,7 +39,7 @@
   "firstMonth": "First 30 days",
   "cta": {
     "getStarted": "Get started",
-    "signUpNow": "Sign up now",
+    "signUpNow": "Get Internxt for free",
     "buy": "Buy",
     "get": "Get",
     "claimTheDeal": "Claim the deal",
