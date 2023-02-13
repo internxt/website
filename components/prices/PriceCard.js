@@ -9,6 +9,8 @@ import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { openAuthDialog, checkout } from '../../lib/auth';
 import { isMobile } from 'react-device-detect';
 
+const DRIVE_WEB_URL = 'https://drive.internxt.com';
+
 export default function PriceCard({
   planType,
   storage,
@@ -43,10 +45,28 @@ export default function PriceCard({
   };
 
   const onMobilePayment = () => {
-    if (billingFrequency === -1) {
-      window.location.replace(`https://drive.internxt.com/new?planId=${getPlanId(stripeObject)}&mode=payment`);
+    if (popular) {
+      window.location.replace(
+        `${DRIVE_WEB_URL}/checkout-plan?planId=plan_FkTXxEg3GZW0pg&couponCode=G8Ti4z1k&mode=subscription`,
+      );
     } else {
-      window.location.replace(`https://drive.internxt.com/new?planId=${getPlanId(stripeObject)}&mode=subscription`);
+      if (billingFrequency === -1) {
+        window.location.replace(`${DRIVE_WEB_URL}/new?planId=${getPlanId(stripeObject)}&mode=payment`);
+      } else {
+        window.location.replace(`${DRIVE_WEB_URL}/new?planId=${getPlanId(stripeObject)}&mode=subscription`);
+      }
+    }
+  };
+
+  const onOfferClick = () => {
+    if (isMobile) {
+      onMobilePayment();
+    } else {
+      cta[0] === 'checkout'
+        ? window.location.replace(
+            'https://drive.internxt.com/checkout-plan?planId=plan_FkTXxEg3GZW0pg&couponCode=G8Ti4z1k&mode=subscription',
+          )
+        : openAuthDialog('signup');
     }
   };
 
@@ -70,7 +90,9 @@ export default function PriceCard({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center bg-white p-4 pt-6 ${popular ? 'rounded-t-2xl' : ''}`}
+        className={`info flex flex-col items-center justify-center  p-4 pt-6 ${
+          popular ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover' : ''
+        }`}
       >
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
@@ -91,14 +113,14 @@ export default function PriceCard({
           }`}
         >
           <div
-            className={`priceBreakdown flex ${
+            className={`priceBreakdown flex ${popular ? 'text-white' : 'text-neutral-700'} ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
             <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
               {contentText.perUser}
             </span>
-            <p className="flex flex-row items-start space-x-0.5 font-medium text-neutral-700">
+            <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>
@@ -118,9 +140,9 @@ export default function PriceCard({
           </span>
 
           <div
-            className={`totalBilling ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-neutral-80`}
+            className={`totalBilling ${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} flex-row text-xs ${
+              popular ? 'text-white' : 'text-neutral-80'
+            }`}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
@@ -229,17 +251,21 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            if (isMobile) {
-              cta[0] === 'checkout' && onMobilePayment();
+            if (popular) {
+              onOfferClick();
             } else {
-              cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+              if (isMobile) {
+                cta[0] === 'checkout' && onMobilePayment();
+              } else {
+                cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+              }
             }
           }}
           className="flex w-full flex-row"
         >
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.buy} {storage}
+              {contentText.cta.get} {storage}
             </p>
 
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>

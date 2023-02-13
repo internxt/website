@@ -6,7 +6,6 @@ import ShowSnackbar from '../ShowSnackbar';
 import { toast } from 'react-toastify';
 import { checkout } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import Navbar from '../layout/Navbar';
 import { isMobile } from 'react-device-detect';
 
 const VALENTINES_COUPON_ID = 'G8Ti4z1k';
@@ -15,7 +14,6 @@ const ValentinesBanner = () => {
   const [sendBannerVisible, setIsSendBannerVisible] = useState(false);
   const { locale } = useRouter();
   const textContent = require(`../../assets/lang/${locale}/banners.json`);
-  const navbar = require(`../../assets/lang/${locale}/navbar.json`);
   const subtitle = textContent.valentinesBanner.subtitle.split('VDAY')[0];
   const VDAY = textContent.valentinesBanner.subtitle.substr(textContent.valentinesBanner.subtitle.indexOf('VDAY'), 4);
   const stripeObject = { product: 'TB212' };
@@ -43,7 +41,6 @@ const ValentinesBanner = () => {
         sendBannerVisible ? 'flex' : 'hidden'
       }  fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
-      <Navbar hide={true} cta={['default']} textContent={navbar} coupon={VALENTINES_COUPON_ID} />
       <div
         className={`${sendBannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2 flex
         w-auto max-w-[800px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl text-neutral-900`}

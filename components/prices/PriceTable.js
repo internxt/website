@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
+import Tooltip from './ToolTip';
 
 export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime }) {
   const [individual, setIndividual] = useState(true);
@@ -26,6 +27,16 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
       return `${plan}${billingFrequency}`;
     }
   }
+
+  const toolTipText = () => {
+    if (lang === 'en') {
+      return 'Get 90% off our 2TB plan';
+    } else if (lang === 'es') {
+      return 'Obtén un 90% de descuento';
+    } else if (lang === 'fr') {
+      return 'Obtenez 90% de réduction';
+    }
+  };
 
   const billingPrice = (price) => price[billingFrequency];
 
@@ -266,16 +277,19 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   lang={lang}
                   country={country}
                 />
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.TB2.storage}
-                  price={billingPrice(pricings.individuals.TB2.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('TB2')]}
-                  popular={pricings.individuals.TB2.popular}
-                  lang={lang}
-                  country={country}
-                />
+                <div className="flex flex-col items-center justify-center">
+                  <PriceCard
+                    planType="individual"
+                    storage={pricings.individuals.TB2.storage}
+                    price={billingPrice(pricings.individuals.TB2.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('TB2')]}
+                    popular={pricings.individuals.TB2.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                  <Tooltip title={toolTipText()} popsFrom={'bottom'} className="bg-primary" />
+                </div>
               </>
             )}
           </div>
