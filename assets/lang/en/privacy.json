@@ -24,6 +24,15 @@
       },
       "signature": "Fran Villalba, Internxt CEO"
     },
+    "securitum": {
+      "title": "Internxt Successfully Passes Independent Security Audit",
+      "subtitle": "Read the complete security audit reports:",
+      "links": {
+        "desk": "Internxt Desktop security audit",
+        "web": "Internxt Web security audit",
+        "mobile": "Internxt Mobile security audit"
+      }
+    },
     "section2": {
       "title": {
         "line1": "How we ensure",

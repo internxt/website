@@ -24,6 +24,15 @@
       },
       "signature": "Fran Villalba, CEO de Internxt"
     },
+    "securitum": {
+      "title": "Internxt supera con éxito una auditoría de seguridad independiente",
+      "subtitle": "Lee los informes completos de la auditoría de seguridad:",
+      "links": {
+        "desk": "Auditoría de seguridad desktop de internxt",
+        "web": "Auditoría de seguridad web de Internxt",
+        "mobile": "Auditoría de seguridad móvil de Internxt"
+      }
+    },
     "section2": {
       "title": {
         "line1": "Cómo aseguramos la",

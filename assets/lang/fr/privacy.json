@@ -24,6 +24,15 @@
       },
       "signature": "Fran Villalba, PDG d'Internxt"
     },
+    "securitum": {
+      "title": "Internxt passe avec succès un audit de sécurité indépendant",
+      "subtitle": "Lisez les rapports complets d'audit de sécurité:",
+      "links": {
+        "desk": "Audit de sécurité du bureau d'Internxt",
+        "web": "Audit de sécurité web Internxt",
+        "mobile": "Audit de sécurité mobile Internxt"
+      }
+    },
     "section2": {
       "title": {
         "line1": "Comment nous assurons la vie",
