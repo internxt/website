@@ -80,21 +80,21 @@ const ManifestoSection = ({ textContent, lang }) => (
         <div className="flex flex-wrap items-center justify-center gap-32">
           <div
             className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
-            onClick={() => window.open('/securitum/SecuritumWeb.pdf', '_blank')}
+            onClick={() => window.open('/securitum/securitumweb.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.web}</p>
             <ArrowUpRight size={18} weight="bold" />
           </div>
           <div
             className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
-            onClick={() => window.open('/securitum/SecuritumMobile.pdf', '_blank')}
+            onClick={() => window.open('/securitum/securitummobile.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.mobile}</p>
             <ArrowUpRight size={18} weight="bold" />
           </div>
           <div
             className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
-            onClick={() => window.open('/securitum/SecuritumDesktop.pdf', '_blank')}
+            onClick={() => window.open('/securitum/securitumdesk.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.desk}</p>
             <ArrowUpRight size={18} weight="bold" />
