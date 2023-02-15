@@ -288,7 +288,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                     lang={lang}
                     country={country}
                   />
-                  <Tooltip title={toolTipText()} popsFrom={'bottom'} className="bg-primary" />
+                  {billingFrequency === 12 && (
+                    <Tooltip title={toolTipText()} popsFrom={'bottom'} className="bg-primary" />
+                  )}
                 </div>
               </>
             )}
