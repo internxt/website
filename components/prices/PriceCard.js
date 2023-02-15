@@ -80,17 +80,19 @@ export default function PriceCard({
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
-        {contentText.valentines}
+        {popular && billingFrequency === 12 ? contentText.valentines : contentText.mostPopular}
       </div>
 
       <div
         className={`info flex flex-col items-center justify-center  p-4 pt-6 ${
-          popular ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover' : ''
+          popular && billingFrequency === 12
+            ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover'
+            : 'bg-white'
         }`}
       >
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
-            popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
+            popular && billingFrequency === 12 ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
           } rounded-full font-medium`}
         >
           <p>
@@ -107,7 +109,7 @@ export default function PriceCard({
           }`}
         >
           <div
-            className={`priceBreakdown flex ${popular ? 'text-white' : 'text-neutral-700'} ${
+            className={`priceBreakdown flex ${popular && billingFrequency === 12 ? 'text-white' : 'text-neutral-700'} ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
@@ -135,7 +137,7 @@ export default function PriceCard({
 
           <div
             className={`totalBilling ${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} flex-row text-xs ${
-              popular ? 'text-white' : 'text-neutral-80'
+              popular && billingFrequency === 12 ? 'text-white' : 'text-neutral-80'
             }`}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
