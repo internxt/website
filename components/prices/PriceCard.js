@@ -6,7 +6,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { openAuthDialog, checkout } from '../../lib/auth';
+import { checkout, goToLoginURL } from '../../lib/auth';
 import { isMobile } from 'react-device-detect';
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
@@ -253,7 +253,9 @@ export default function PriceCard({
               if (isMobile) {
                 cta[0] === 'checkout' && onMobilePayment();
               } else {
-                cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+                cta[0] === 'checkout'
+                  ? checkout(getPlanId(stripeObject))
+                  : goToLoginURL({ redirectURL: window.location.href });
               }
             }
           }}

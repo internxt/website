@@ -3,6 +3,7 @@ import PrimaryButton from '../components/PrimaryButton';
 import { recover, toggleAuthMethod } from '../../lib/auth';
 import { CaretLeft, EnvelopeSimple, WarningCircle } from 'phosphor-react';
 import { useState } from 'react';
+import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 interface ForgotPasswordProps {
   textContent: any;
@@ -12,6 +13,7 @@ interface ForgotPasswordProps {
 }
 
 export default function ForgotPassword(props: ForgotPasswordProps) {
+  const globalDialogs = useGlobalDialog();
   const [email, setEmail] = useState('');
 
   const onSubmit = (event) => {
@@ -39,7 +41,11 @@ export default function ForgotPassword(props: ForgotPasswordProps) {
           </div>
 
           <a
-            onClick={() => !props.loading && toggleAuthMethod('login')}
+            onClick={() => {
+              if (!props.loading) {
+                globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'login' } });
+              }
+            }}
             className="flex flex-row items-center space-x-0.5 text-primary active:text-primary-dark"
           >
             <CaretLeft className="-mb-0.5 h-4 w-4" weight="bold" />
@@ -51,7 +57,11 @@ export default function ForgotPassword(props: ForgotPasswordProps) {
           <div className="flex w-full flex-col items-center">
             <h1 className="text-2xl font-medium">{props.textContent.Recover.title}</h1>
             <a
-              onClick={() => !props.loading && toggleAuthMethod('login')}
+              onClick={() => {
+                if (!props.loading) {
+                  globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'login' } });
+                }
+              }}
               className={`flex flex-row items-center space-x-0.5 text-primary active:text-primary-dark ${
                 props.loading && 'cursor-not-allowed'
               }`}

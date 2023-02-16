@@ -10,8 +10,9 @@ import LogIn from '../auth/LogIn';
 import SignUp from '../auth/SignUp';
 import ForgotPassword from '../auth/ForgotPassword';
 
-import { checkout, openAuthDialog } from '../../lib/auth';
+import { checkout, IFRAME_AUTH_ENABLED, openAuthDialog } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 export interface NavbarProps {
   textContent: any;
@@ -29,6 +30,8 @@ export interface NavbarProps {
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
 export default function Navbar(props: NavbarProps) {
+  const globalDialogs = useGlobalDialog();
+
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
   const stripeObject = { product: props.cta[1] };
@@ -39,13 +42,16 @@ export default function Navbar(props: NavbarProps) {
 
   const [session, setSession] = useState<boolean>(false);
   const [showAuth, setShowAuth] = useState<boolean>(false);
-  const [authMethod, setAuthMethod] = useState<'login' | 'signup' | 'recover'>('signup');
   const [planId, setPlanId] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
   const [formLoading, setFormLoading] = useState<boolean>(false);
   const [form2FA, setForm2FA] = useState<boolean>(false);
   const [recoverSent, setRecoverSent] = useState<boolean>(false);
 
+  const dialogData = globalDialogs.getDialogData(GlobalDialog.Auth) as { mode?: 'login' | 'signup' | 'recover' };
+
+  console.log('dialog', dialogData);
+  const authMethod = dialogData && dialogData.mode ? dialogData.mode : 'login';
   const authView = {
     login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={props.textContent.Auth} />,
     signup: <SignUp error={formError} loading={formLoading} textContent={props.textContent.Auth} />,
@@ -61,7 +67,9 @@ export default function Navbar(props: NavbarProps) {
 
   const openAuth = (view: 'login' | 'signup') => {
     // Temporal fix
-    setAuthMethod(view);
+    globalDialogs.openDialog(GlobalDialog.Auth, {
+      data: { mode: view },
+    });
     setFormError(null);
     setShowAuth(true);
     setForm2FA(false);
@@ -76,9 +84,13 @@ export default function Navbar(props: NavbarProps) {
       redirect();
       hideAuth();
     } else {
-      setAuthMethod(view);
+      globalDialogs.openDialog(GlobalDialog.Auth, {
+        data: { mode: view },
+      });
     }
   };
+
+  console.log('dialog', dialogData);
 
   const redirect = () => {
     if (planId) {
@@ -108,6 +120,7 @@ export default function Navbar(props: NavbarProps) {
   // MESSAGE FILTERING
 
   useEffect(() => {
+    if (!IFRAME_AUTH_ENABLED) return;
     const auth = window.document.getElementById('auth')['contentWindow'];
     const postMessage = (data) => {
       auth.postMessage(data, `${DRIVE_WEB_URL}/auth`);
@@ -481,7 +494,7 @@ export default function Navbar(props: NavbarProps) {
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
             {props.cta[0] === 'Hide Login' ? null : (
               <button
-                onClick={() => openAuthDialog('login')}
+                onClick={() => globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'login' } })}
                 className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'border-white text-white focus:opacity-80'
@@ -494,7 +507,7 @@ export default function Navbar(props: NavbarProps) {
 
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => openAuthDialog('signup')}
+                onClick={() => globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'signup' } })}
                 id="get-started-link"
                 className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
@@ -511,7 +524,11 @@ export default function Navbar(props: NavbarProps) {
             {props.cta[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={() => checkout(getPlanId(stripeObject))}
+                onClick={() =>
+                  checkout({
+                    planId: getPlanId(stripeObject),
+                  })
+                }
                 className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
@@ -528,10 +545,10 @@ export default function Navbar(props: NavbarProps) {
       </div>
 
       {/* Auth iframe */}
-      <iframe id="auth" className="hidden" src={`${DRIVE_WEB_URL}/auth`} />
+      {IFRAME_AUTH_ENABLED ? <iframe id="auth" className="hidden" src={`${DRIVE_WEB_URL}/auth`} /> : null}
 
       {/* Auth dialog */}
-      <Transition appear show={showAuth} as={Fragment}>
+      <Transition appear show={globalDialogs.dialogIsOpen(GlobalDialog.Auth)} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={() => !formLoading && hideAuth()}>
           <Transition.Child
             as={Fragment}
@@ -558,7 +575,7 @@ export default function Navbar(props: NavbarProps) {
               >
                 <Dialog.Panel className="relative flex h-screen w-screen flex-col justify-center bg-white px-8 py-10 sm:h-auto sm:w-96 sm:justify-start sm:rounded-2xl sm:shadow-subtle-hard">
                   <div
-                    onClick={() => !formLoading && hideAuth()}
+                    onClick={() => !formLoading && globalDialogs.closeDialog(GlobalDialog.Auth)}
                     className="absolute top-6 right-6 z-10 flex h-9 w-9 cursor-pointer flex-col items-center justify-center rounded-md text-gray-80 hover:bg-gray-1 active:bg-gray-5"
                   >
                     <X className="h-6 w-6" />

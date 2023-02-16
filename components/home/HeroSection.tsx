@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
-import { openAuthDialog } from '../../lib/auth';
+import { goToSignUpURL } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
 import Image from 'next/image';
 
@@ -57,7 +57,7 @@ export default function HeroSection({ textContent, lang }) {
 
             <button
               className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"
-              onClick={() => openAuthDialog('signup')}
+              onClick={() => goToSignUpURL({ redirectURL: window.location.href })}
             >
               <div className="flex flex-row items-center space-x-2">
                 <span className="font-medium">{textContent.cta.title}</span>

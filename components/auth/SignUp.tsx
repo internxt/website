@@ -6,6 +6,7 @@ import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStreng
 import { WarningCircle } from 'phosphor-react';
 import { useState } from 'react';
 import PasswordStrength from '../components/PasswordStrength';
+import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 interface SignUpProps {
   textContent: any;
@@ -14,6 +15,7 @@ interface SignUpProps {
 }
 
 export default function SignUp(props: SignUpProps) {
+  const globalDialogs = useGlobalDialog();
   const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
   const [passwordState, setPasswordState] = useState<{
     tag: 'error' | 'warning' | 'success';
@@ -52,7 +54,11 @@ export default function SignUp(props: SignUpProps) {
         <span>
           {props.textContent.SignUp.or}{' '}
           <a
-            onClick={() => !props.loading && toggleAuthMethod('login')}
+            onClick={() => {
+              if (!props.loading) {
+                globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'login' } });
+              }
+            }}
             className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
           >
             {props.textContent.SignUp.login}
