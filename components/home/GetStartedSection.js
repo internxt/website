@@ -15,7 +15,7 @@ const GetStartedSection = ({ textContent }) => (
         </h3>
         <div>
           <button
-            onClick={() => goToSignUpURL(window.location.href)}
+            onClick={() => goToSignUpURL()}
             id="get-started-link"
             className="inline-flex w-auto items-center justify-center rounded-full border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:text-base"
           >
