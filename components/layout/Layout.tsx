@@ -16,7 +16,6 @@ interface LayoutProps {
   disableDrift?: boolean;
   isProduction?: boolean;
   specialOffer?: string;
-  isBannerFixed?: boolean;
   host?: string;
   lang?: string;
 }
@@ -31,7 +30,6 @@ export default function Layout({
   disableMailerlite = false,
   specialOffer,
   disableDrift = true,
-  isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
 }: // lang
 LayoutProps) {
@@ -124,57 +122,7 @@ LayoutProps) {
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
-      {showBanner ? (
-        <>
-          <div
-            className={`group ${
-              isBannerFixed ? 'absolute' : 'fixed'
-            } top-16 left-0 z-40 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
-          >
-            <div
-              className="mx-auto flex flex-row items-center justify-center space-x-2"
-              onClick={() =>
-                window.location.replace(
-                  `https://internxt.com/${lang}/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines`,
-                )
-              }
-            >
-              {/* <p className="flex flex-row rounded-full  font-bold">{New()}</p> */}
-              <p className="flex flex-row font-normal">{obtainDeal()}</p>
 
-              <p className="flex text-base font-semibold underline">{pickUp()}</p>
-            </div>
-          </div>
-          <div
-            className={`group fixed top-16 left-0 z-30 ${
-              closeBannerOnMobile ? 'hidden' : 'flex'
-            } h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
-          >
-            <div className="flex flex-row">
-              <div
-                className="flex flex-row items-center justify-center space-x-2"
-                onClick={() =>
-                  window.location.replace(
-                    `https://internxt.com/${lang}/pricing?utm_source=website&utm_medium=banner&utm_campaign=valentines`,
-                  )
-                }
-              >
-                {/* <p className="flex flex-row rounded-full  font-bold">{New()}</p> */}
-                <p className="flex flex-row font-normal">{ConvertToMobile()}</p>
-              </div>
-
-              <button
-                className="absolute top-3 right-3 flex flex-col"
-                onClick={() => {
-                  setCloseBannerOnMobile(true);
-                }}
-              >
-                <X size={36} className="z-50" />
-              </button>
-            </div>
-          </div>
-        </>
-      ) : null}
       {children}
       {/* <BFBanner /> */}
     </>

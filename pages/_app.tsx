@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
-        <ValentinesBanner />
         <Component {...pageProps} />
         <Intercom />
       </GlobalUIManager>

@@ -65,19 +65,16 @@ export default function PriceCard({
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
-        {popular && billingFrequency === 12 ? contentText.valentines : contentText.mostPopular}
+        {contentText.mostPopular}
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center  p-4 pt-6 ${
-          popular && billingFrequency === 12
-            ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover'
-            : 'bg-white'
-        }`}
+        className={`info flex flex-col items-center justify-center  bg-white p-4 pt-6
+        `}
       >
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
-            popular && billingFrequency === 12 ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
+            popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
           } rounded-full font-medium`}
         >
           <p>
@@ -94,7 +91,7 @@ export default function PriceCard({
           }`}
         >
           <div
-            className={`priceBreakdown flex ${popular && billingFrequency === 12 ? 'text-white' : 'text-neutral-700'} ${
+            className={`priceBreakdown flex text-neutral-700 ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
@@ -121,9 +118,10 @@ export default function PriceCard({
           </span>
 
           <div
-            className={`totalBilling ${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} flex-row text-xs ${
-              popular && billingFrequency === 12 ? 'text-white' : 'text-neutral-80'
-            }`}
+            className={`totalBilling ${
+              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
+            } flex-row text-xs text-neutral-80
+            `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
@@ -232,14 +230,10 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            if (popular && billingFrequency === 12) {
-              onOfferClick();
-            } else {
-              checkout({
-                planId: getPlanId(stripeObject),
-                mode: billingFrequency === -1 ? 'payment' : 'subscription',
-              });
-            }
+            checkout({
+              planId: getPlanId(stripeObject),
+              mode: billingFrequency === -1 ? 'payment' : 'subscription',
+            });
           }}
           className="flex w-full flex-row"
         >
