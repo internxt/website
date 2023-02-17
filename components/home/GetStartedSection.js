@@ -1,5 +1,5 @@
 import React from 'react';
-import { openAuthDialog } from '../../lib/auth';
+import { goToSignUpURL } from '../../lib/auth';
 
 const GetStartedSection = ({ textContent }) => (
   <section className="text-white">
@@ -15,7 +15,7 @@ const GetStartedSection = ({ textContent }) => (
         </h3>
         <div>
           <button
-            onClick={() => openAuthDialog('signup')}
+            onClick={() => goToSignUpURL()}
             id="get-started-link"
             className="inline-flex w-auto items-center justify-center rounded-full border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:text-base"
           >

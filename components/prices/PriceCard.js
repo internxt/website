@@ -6,10 +6,8 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { openAuthDialog, checkout } from '../../lib/auth';
+import { checkout, goToLoginURL } from '../../lib/auth';
 import { isMobile } from 'react-device-detect';
-
-const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
 export default function PriceCard({
   planType,
@@ -44,24 +42,11 @@ export default function PriceCard({
     }
   };
 
-  const onMobilePayment = () => {
-    if (popular) {
-      window.location.replace(`${DRIVE_WEB_URL}/new?planId=plan_FkTXxEg3GZW0pg&couponCode=G8Ti4z1k&mode=subscription`);
-    } else {
-      if (billingFrequency === -1) {
-        window.location.replace(`${DRIVE_WEB_URL}/new?planId=${getPlanId(stripeObject)}&mode=payment`);
-      } else {
-        window.location.replace(`${DRIVE_WEB_URL}/new?planId=${getPlanId(stripeObject)}&mode=subscription`);
-      }
-    }
-  };
-
   const onOfferClick = () => {
-    if (isMobile) {
-      onMobilePayment();
-    } else {
-      cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
-    }
+    checkout({
+      planId: getPlanId(stripeObject),
+      couponCode: 'G8Ti4z1k',
+    });
   };
 
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
@@ -247,14 +232,13 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            if (popular) {
+            if (popular && billingFrequency === 12) {
               onOfferClick();
             } else {
-              if (isMobile) {
-                cta[0] === 'checkout' && onMobilePayment();
-              } else {
-                cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
-              }
+              checkout({
+                planId: getPlanId(stripeObject),
+                mode: billingFrequency === -1 ? 'payment' : 'subscription',
+              });
             }
           }}
           className="flex w-full flex-row"

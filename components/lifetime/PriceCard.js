@@ -4,7 +4,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { checkout, openAuthDialog } from '../../lib/auth';
+import { checkout, goToLoginURL } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
@@ -94,7 +94,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
-            cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+            checkout({ planId: getPlanId(stripeObject), mode: 'payment' });
           }}
           className="flex w-full flex-row"
         >
