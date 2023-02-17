@@ -79,9 +79,7 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       <button
         type="button"
         onClick={() => {
-          cta[0] === 'checkout'
-            ? checkout({ planId: getPlanId(stripeObject) })
-            : goToSignUpURL({ redirectURL: 'signup' });
+          checkout({ planId: getPlanId(stripeObject) });
         }}
         className="button-primary"
       >
