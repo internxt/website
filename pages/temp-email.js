@@ -1,81 +1,59 @@
 import React from 'react';
 
-const TempEmail = ({ getAllMessages }) => {
-  const { allMessages } = getAllMessages;
-  console.log(allMessages);
-  const parsedMessages = JSON.parse(allMessages);
+const TempEmail = ({ email }) => {
+  console.log(email);
 
   return (
     <section>
       <div className="flex flex-col items-center justify-center space-y-5 p-20">
         <h1 className="text-xl font-bold text-black">Internxt Temp Email</h1>
-        <div className="flex flex-col items-center rounded-lg border-2 border-primary border-opacity-30 p-5">
-          {parsedMessages.map((message) => {
-            return (
-              <div key={message.uid} className="flex flex-col space-y-3">
-                <div className="flex w-full flex-row justify-between">
-                  <p className="font-medium text-black">Sent by: {message.name}</p>
-                  <p className="font-medium text-black">Email: {message.from}</p>
-                </div>
-                <div className="flex w-full flex-row rounded-full border border-primary border-opacity-30" />
-                <p className="">Subject: {message.subject}</p>
-                <p>Body: {message.text}</p>
-              </div>
-            );
-          })}
-        </div>
+        <div className="flex flex-col items-center rounded-lg border-2 border-primary border-opacity-30 p-5"></div>
       </div>
     </section>
   );
 };
 
-export async function getServerSideProps(ctx) {
-  const { newClient, connect, getLastMessage, getMessages, closeConnection } = require('imap-functions');
+export async function getServerSideProps() {
+  const axios = require('axios');
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-  const client = newClient({
-    host: 'imap.hostinger.com',
-    port: 993,
-    secure: true,
-    auth: {
-      user: 'test@inxt.me',
-      pass: 'Test$1234',
+  function generateString(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+  }
+
+  const options = {
+    method: 'GET',
+    url: 'https://privatix-temp-mail-v1.p.rapidapi.com/request/domains/',
+    headers: {
+      'X-RapidAPI-Key': 'fa412fdc21mshf29036fd1a47accp134251jsn61840135c872',
+      'X-RapidAPI-Host': 'privatix-temp-mail-v1.p.rapidapi.com',
     },
-    emitLogs: false,
-  });
+  };
 
-  // Wait until client connects and authorizes
-  await connect(client);
+  const randomId = generateString(10);
 
-  // Select and lock a mailbox. Throws if mailbox does not exist
-  let lock = await client.getMailboxLock('INBOX', {
-    readOnly: true,
-  });
+  const domains = await axios
+    .request(options)
+    .then(function (response) {
+      return response.data;
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 
-  // fetch latest message source
-  // client.mailbox includes information about currently selected mailbox
-  // "exists" value is also the largest sequence number available in the mailbox
-  const lastMessage = await getLastMessage(client).then((message) => console.log('Last message:', message));
+  const domain = domains[Math.floor(Math.random() * domains.length)];
 
-  // list subjects for all messages
-  // uid value is always included in FETCH response, envelope strings are in unicode.
-  const getAllMessages = await getMessages(client).then((messages) => {
-    const allMessages = JSON.stringify(messages);
-    return {
-      allMessages,
-    };
-  });
-
-  // Make sure lock is released, otherwise next `getMailboxLock()` never returns
-  lock.release();
-
-  // log out and close connection
-  await closeConnection(client);
+  const email = `${randomId}${domain}`;
 
   return {
     props: {
-      // props for your component
-      getAllMessages,
-      // userDisconnect,
+      email,
     },
   };
 }
