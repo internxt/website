@@ -50,7 +50,6 @@ export default function Navbar(props: NavbarProps) {
 
   const dialogData = globalDialogs.getDialogData(GlobalDialog.Auth) as { mode?: 'login' | 'signup' | 'recover' };
 
-  console.log('dialog', dialogData);
   const authMethod = dialogData && dialogData.mode ? dialogData.mode : 'login';
   const authView = {
     login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={props.textContent.Auth} />,
@@ -89,8 +88,6 @@ export default function Navbar(props: NavbarProps) {
       });
     }
   };
-
-  console.log('dialog', dialogData);
 
   const redirect = () => {
     if (planId) {
