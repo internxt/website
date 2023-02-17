@@ -115,7 +115,7 @@ const prepareAuthFlow = (credentials: { email: string; password: string; tfaCode
 
   const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(
     expiration,
-  ).toUTCString()};domain='internxt.com'; Path=/`;
+  ).toUTCString()};domain=internxt.com; Path=/`;
 
   document.cookie = cookie;
 };
