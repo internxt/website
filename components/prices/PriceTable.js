@@ -277,21 +277,16 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   lang={lang}
                   country={country}
                 />
-                <div className="flex flex-col items-center justify-center">
-                  <PriceCard
-                    planType="individual"
-                    storage={pricings.individuals.TB2.storage}
-                    price={billingPrice(pricings.individuals.TB2.price)}
-                    billingFrequency={billingFrequency}
-                    cta={['checkout', checkoutPlan('TB2')]}
-                    popular={pricings.individuals.TB2.popular}
-                    lang={lang}
-                    country={country}
-                  />
-                  {billingFrequency === 12 && (
-                    <Tooltip title={toolTipText()} popsFrom={'bottom'} className="bg-primary" />
-                  )}
-                </div>
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.TB2.storage}
+                  price={billingPrice(pricings.individuals.TB2.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('TB2')]}
+                  popular={pricings.individuals.TB2.popular}
+                  lang={lang}
+                  country={country}
+                />
               </>
             )}
           </div>
