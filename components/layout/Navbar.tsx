@@ -10,7 +10,7 @@ import LogIn from '../auth/LogIn';
 import SignUp from '../auth/SignUp';
 import ForgotPassword from '../auth/ForgotPassword';
 
-import { checkout, IFRAME_AUTH_ENABLED, openAuthDialog } from '../../lib/auth';
+import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
@@ -494,7 +494,7 @@ export default function Navbar(props: NavbarProps) {
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
             {props.cta[0] === 'Hide Login' ? null : (
               <button
-                onClick={() => globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'login' } })}
+                onClick={() => goToLoginURL()}
                 className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'border-white text-white focus:opacity-80'
@@ -507,7 +507,7 @@ export default function Navbar(props: NavbarProps) {
 
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'signup' } })}
+                onClick={() => goToSignUpURL()}
                 id="get-started-link"
                 className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState

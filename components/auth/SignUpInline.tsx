@@ -22,8 +22,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    // "inline" attribute allows to differenciate Hero's inline form errors from auth dialog errors
-    signup({ email: form.email.value, password: form.password.value, inline: true }, window.location.href);
+    signup({ email: form.email.value, password: form.password.value });
   };
 
   const checkPassword = (input) => {

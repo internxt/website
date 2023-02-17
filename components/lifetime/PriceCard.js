@@ -94,9 +94,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
-            cta[0] === 'checkout'
-              ? checkout(getPlanId(stripeObject))
-              : goToLoginURL({ redirectURL: window.location.href });
+            checkout({ planId: getPlanId(stripeObject), mode: 'payment' });
           }}
           className="flex w-full flex-row"
         >
