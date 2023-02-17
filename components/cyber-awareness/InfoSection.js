@@ -32,7 +32,6 @@ export const InfoCard = ({ id, title, img, link }) => {
         className="flex flex-col items-start space-y-8"
         onClick={() => {
           window.open(link, '_blank');
-          console.log(link);
         }}
       >
         <img key={id} src={img} alt={`${title} image`} width={32} height={32} />

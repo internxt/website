@@ -237,7 +237,7 @@ export default function PriceCard({
             } else {
               checkout({
                 planId: getPlanId(stripeObject),
-                mode: billingFrequency == '-1' ? 'payment' : 'subscription',
+                mode: billingFrequency === -1 ? 'payment' : 'subscription',
               });
             }
           }}
