@@ -9,8 +9,6 @@ import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { checkout, goToLoginURL } from '../../lib/auth';
 import { isMobile } from 'react-device-detect';
 
-const DRIVE_WEB_URL = 'https://drive.internxt.com';
-
 export default function PriceCard({
   planType,
   storage,
@@ -47,7 +45,7 @@ export default function PriceCard({
   const onOfferClick = () => {
     checkout({
       planId: getPlanId(stripeObject),
-      mode: billingFrequency === billingFrequencyList[billingFrequency] ? 'payment' : 'subscription',
+      couponCode: 'G8Ti4z1k',
     });
   };
 
@@ -234,12 +232,12 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            if (popular) {
+            if (popular && billingFrequency === 12) {
               onOfferClick();
             } else {
               checkout({
                 planId: getPlanId(stripeObject),
-                mode: billingFrequency === '-1' ? 'payment' : 'subscription',
+                mode: billingFrequency == '-1' ? 'payment' : 'subscription',
               });
             }
           }}

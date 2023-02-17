@@ -3,19 +3,18 @@ import { isMobile } from 'react-device-detect';
 import { checkout } from '../../../../lib/auth';
 import { getPlanId } from '../../../../pages/api/stripe/stripeProducts';
 
+const CLOUDWARDS_COUPON_ID = '0eu0T11z';
+
 const ButtonDeal = ({ textContent, large }) => {
   const stripeObject = { product: 'TB21' };
 
   return (
     <div
       onClick={() => {
-        if (isMobile) {
-          window.location.replace(
-            `https://drive.internxt.com/new?planId=${getPlanId(stripeObject)}&couponCode=0eu0T11z&mode=subscription`,
-          );
-        } else {
-          checkout(getPlanId(stripeObject));
-        }
+        checkout({
+          planId: getPlanId(stripeObject),
+          couponCode: CLOUDWARDS_COUPON_ID,
+        });
       }}
       className={`${large ? 'w-full' : 'w-48'}  cursor-pointer rounded-full bg-primary px-9 py-3 text-center`}
     >
