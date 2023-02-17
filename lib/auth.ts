@@ -113,9 +113,9 @@ const prepareAuthFlow = (credentials: { email: string; password: string; tfaCode
   // 1 min
   const expiration = Date.now() + 1000 * 60;
 
-  const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(expiration).toUTCString()};domain=${
-    process.env.NODE_ENV === 'development' ? 'localhost' : 'internxt.com'
-  }; Path=/`;
+  const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(
+    expiration,
+  ).toUTCString()};domain='internxt.com'; Path=/`;
 
   document.cookie = cookie;
 };
