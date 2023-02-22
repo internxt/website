@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Copy, CopySimple, Trash, Tray } from 'phosphor-react';
+import { Copy, Trash, Tray } from 'phosphor-react';
 import React, { useState } from 'react';
 
 const API_ENDPOINT = 'https://www.1secmail.com/api/v1/';
@@ -43,7 +43,7 @@ const HeroSection = () => {
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-10">
         <div className="flex flex-col space-y-2 text-center">
-          <p className="text-5xl font-semibold">Free Temporary Email</p>
+          <h1 className="text-5xl font-semibold">Free Temporary Email</h1>
           <p className="text-xl text-gray-80">
             Email anonymously with our free, private, and secure temporary email address generator.
           </p>
