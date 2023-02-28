@@ -21,8 +21,8 @@ const open = () => toast.success('Copied to clipboard!');
 const HeroSection = () => {
   const [email, setEmail] = useState('');
   const [inbox, setInbox] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [itemSelected, setItemSelected] = useState({});
+  const [isRefreshed, setIsRefreshed] = useState(false);
+
   // (if someone want to clear after 8hrs simply change hours=8)
   const hours = 3; // to clear the localStorage after 1 hour
   const now = new Date().getTime();
@@ -49,16 +49,18 @@ const HeroSection = () => {
   useEffect(() => {
     if (email) {
       getInbox(email).then((res) => {
-        showAllEmailData(email, res).then((res) => {
-          console.log(res);
+        showAllEmailData(email, res).then((res, index) => {
+          res.map((item) => {
+            console.log('sisoy', item);
+          });
           setInbox(res);
         });
       });
     }
-  }, []);
+  }, [isRefreshed]);
 
   return (
-    <section className="overflow-hidden py-20">
+    <section className="overflow-hidden bg-gradient-to-t from-white to-gray-1 py-20">
       <div className="flex flex-col items-center justify-center space-y-10">
         <div className="flex flex-col space-y-2 text-center">
           <h1 className="text-5xl font-semibold">Free Temporary Email</h1>
@@ -103,7 +105,7 @@ const HeroSection = () => {
           </div>
           <p className="text-xs text-gray-60">Email and inbox will expire after 3 hours of inactivity</p>
         </div>
-        {inbox ? <Inbox inbox={inbox} /> : <EmptyInbox />}
+        {inbox ? <Inbox inbox={inbox} setIsRefreshed={setIsRefreshed} setInbox={setInbox} /> : <EmptyInbox />}
         <ShowSnackbar />
       </div>
     </section>
