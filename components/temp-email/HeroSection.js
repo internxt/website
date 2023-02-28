@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { Copy, Trash, Tray } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
-import { createEmail } from './components/temp-api';
+import { createEmail, getInbox, showAllEmailData } from './components/temp-api';
 import ShowSnackbar from '../ShowSnackbar';
 import { toast } from 'react-toastify';
 import EmptyInbox from './components/EmptyInbox';
-import Inbox from './components/Inbox';
+import Inbox from './components/InboxView';
 
 function copy(email) {
   navigator.clipboard.writeText(email);
@@ -45,6 +45,17 @@ const HeroSection = () => {
       });
     }
   }, [generateEmail]);
+
+  useEffect(() => {
+    if (email) {
+      getInbox(email).then((res) => {
+        showAllEmailData(email, res).then((res) => {
+          console.log(res);
+          setInbox(res);
+        });
+      });
+    }
+  }, []);
 
   return (
     <section className="overflow-hidden py-20">
@@ -92,8 +103,7 @@ const HeroSection = () => {
           </div>
           <p className="text-xs text-gray-60">Email and inbox will expire after 3 hours of inactivity</p>
         </div>
-        <Inbox />
-        <EmptyInbox />
+        {inbox ? <Inbox inbox={inbox} /> : <EmptyInbox />}
         <ShowSnackbar />
       </div>
     </section>

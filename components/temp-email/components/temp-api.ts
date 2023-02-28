@@ -6,13 +6,18 @@ async function createEmail() {
   return email.data;
 }
 
-async function showAllEmailData(email: string, itemId: number) {
-  const allData = await axios(
-    `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=readMessage&login=${email.split('@')[0]}&domain=${
-      email.split('@')[1]
-    }&id=${itemId}`,
-  );
-  return allData.data;
+async function showAllEmailData(email: string, itemId: []) {
+  const fullMessages = [];
+  itemId.map(async (item: any) => {
+    const allData = await axios(
+      `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=readMessage&login=${email.split('@')[0]}&domain=${
+        email.split('@')[1]
+      }&id=${item.id}`,
+    );
+    fullMessages.push(allData.data);
+  });
+
+  return fullMessages;
 }
 
 const getInbox = async (email) => {
