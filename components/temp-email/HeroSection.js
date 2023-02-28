@@ -1,43 +1,50 @@
 import axios from 'axios';
 import { Copy, Trash, Tray } from 'phosphor-react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { createEmail } from './components/temp-api';
+import ShowSnackbar from '../ShowSnackbar';
+import { toast } from 'react-toastify';
+import EmptyInbox from './components/EmptyInbox';
+import Inbox from './components/Inbox';
 
-const API_ENDPOINT = 'https://www.1secmail.com/api/v1/';
+function copy(email) {
+  navigator.clipboard.writeText(email);
+}
 
-const getInbox = async (email) => {
-  const userEmail = email.split('@')[0];
-  const domain = email.split('@')[1];
-  const inbox = await axios(`${API_ENDPOINT}?action=getMessages&login=${userEmail}&domain=${domain}`).then((res) => {
-    console.log(res.data);
-    return res.data;
-  });
-  return inbox;
-};
+function removeLocalStorage() {
+  localStorage.removeItem('email');
+  localStorage.removeItem('setupTime');
+}
 
-const createEmail = async () => {
-  const email = await axios(`${API_ENDPOINT}?action=genRandomMailbox&count=1`).then((res) => {
-    console.log(res.data);
-    return res.data;
-  });
-
-  return email;
-};
-
-const showAllEmailData = async ({ email, itemId }) => {
-  const allData = await axios(
-    `${API_ENDPOINT}?action=readMessage&login=${email.split('@')[0]}&domain=${email.split('@')[1]}&id=${itemId}`,
-  ).then((res) => {
-    return res.data;
-  });
-
-  return allData;
-};
+const open = () => toast.success('Copied to clipboard!');
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
   const [inbox, setInbox] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
+  // (if someone want to clear after 8hrs simply change hours=8)
+  const hours = 3; // to clear the localStorage after 1 hour
+  const now = new Date().getTime();
+  const [generateEmail, setGenerateEmail] = useState(false);
+
+  useEffect(() => {
+    const setupTime = localStorage.getItem('setupTime');
+    if (setupTime !== null) {
+      if (now - setupTime > hours * 60 * 60 * 1000) {
+        removeLocalStorage();
+      }
+    }
+    if (localStorage.getItem('email') !== null) {
+      setEmail(localStorage.getItem('email'));
+    } else {
+      localStorage.setItem('setupTime', now);
+      createEmail().then((res) => {
+        localStorage.setItem('email', res[0]);
+        setEmail(res[0]);
+      });
+    }
+  }, [generateEmail]);
 
   return (
     <section className="overflow-hidden py-20">
@@ -50,28 +57,44 @@ const HeroSection = () => {
         </div>
         <div className="flex w-full max-w-[325px] flex-col items-center space-y-3">
           <div className="flex w-full flex-row items-center justify-between rounded-xl border border-gray-20 px-4 py-3">
-            <p>email</p>
-            <Copy size={24} className="text-gray-50" />
+            <p>{email ? email : 'Generating random email...'}</p>
+            <Copy
+              size={24}
+              className="cursor-pointer text-gray-50"
+              onClick={() => {
+                open();
+                copy(email);
+              }}
+            />
           </div>
           <div className="flex w-full flex-row items-center justify-between">
-            <button className="flex flex-row items-center justify-center space-x-2 rounded-lg bg-primary px-5 py-2 text-white shadow-sm">
-              <Copy />
+            <button
+              className="flex flex-row items-center justify-center space-x-2 rounded-lg bg-primary px-5 py-2 text-white shadow-sm"
+              onClick={() => {
+                open();
+                copy(email);
+              }}
+            >
+              <Copy size={24} />
               <p>Copy email</p>
             </button>
-            <button className="flex flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm">
+            <button
+              className="flex flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm"
+              onClick={() => {
+                removeLocalStorage();
+                setEmail('');
+                setGenerateEmail(!generateEmail);
+              }}
+            >
               <Trash size={24} />
               <p>Delete email</p>
             </button>
           </div>
           <p className="text-xs text-gray-60">Email and inbox will expire after 3 hours of inactivity</p>
         </div>
-        <div className="flex h-max w-max flex-col items-center justify-center space-y-2 rounded-xl border border-gray-10 py-56 px-80 text-center shadow-subtle-hard">
-          <Tray size={48} className="text-gray-50" weight="light" />
-          <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium">Your inbox is empty</p>
-            <p className="text-xs text-gray-50">Waiting for incoming messages</p>
-          </div>
-        </div>
+        <Inbox />
+        <EmptyInbox />
+        <ShowSnackbar />
       </div>
     </section>
   );

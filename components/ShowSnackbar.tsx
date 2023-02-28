@@ -10,7 +10,7 @@ const ShowSnackbar = () => {
       position="bottom-center"
       hideProgressBar
       closeButton={false}
-      autoClose={5000}
+      autoClose={3000}
     />
   );
 };
