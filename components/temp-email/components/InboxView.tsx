@@ -46,9 +46,9 @@ const messageSelected = ({ item }) => {
 };
 
 const Inbox = ({ inbox, setIsRefreshed }) => {
-  console.log('inbox de los cojones', inbox);
-  const [messages, setMessages] = React.useState([]);
+  const [messages, setMessages] = React.useState(inbox);
   const [selectedMessage, setSelectedMessage] = React.useState(null);
+  console.log('inbox de los cojones', inbox);
 
   useEffect(() => {
     setMessages(getMessages(inbox));
@@ -72,11 +72,11 @@ const Inbox = ({ inbox, setIsRefreshed }) => {
             />
           </div>
           <div className="flex flex-col overflow-y-scroll">
-            {messages.map((item, index) => {
+            {inbox.map((item, index) => {
               const date = moment(item.date);
               return (
                 <button
-                  key={index}
+                  key={item.id}
                   onClick={() => {
                     setSelectedMessage(item);
                     const newMessages = [...messages];
@@ -84,7 +84,7 @@ const Inbox = ({ inbox, setIsRefreshed }) => {
                     setMessages(newMessages);
                   }}
                   className={`flex h-full ${
-                    !item.opened ? 'border-l-2 border-l-primary' : ''
+                    !item.opened ? 'border-l-4 border-l-primary' : ''
                   } w-full flex-col px-4 text-start  focus:bg-primary focus:bg-opacity-10`}
                 >
                   <div className="flex flex-col border-b border-gray-10 py-4">

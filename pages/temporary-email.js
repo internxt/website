@@ -5,6 +5,7 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/temp-email/HeroSection';
 import InfoSection from '../components/temp-email/InfoSection';
+import ToolsSection from '../components/temp-email/ToolsSection';
 
 //Delete mailbox
 // action=deleteMailbox&login=${this.username}&domain=${this.domain}
@@ -20,6 +21,8 @@ const TempEmail = ({ metatagsDescriptions, langJson, footerLang, navbarLang, lan
 
       <InfoSection />
 
+      <ToolsSection lang={lang} />
+
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
   );
@@ -27,10 +30,10 @@ const TempEmail = ({ metatagsDescriptions, langJson, footerLang, navbarLang, lan
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  if (lang === 'fr') {
+  if (lang !== 'en') {
     return {
       redirect: {
-        destination: '/virus-scanner',
+        destination: '/temporary-email',
         permanent: false,
       },
     };

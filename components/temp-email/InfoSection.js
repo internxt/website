@@ -1,16 +1,16 @@
 import Image from 'next/image';
-import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from 'phosphor-react';
 import React from 'react';
+import { steps, infoCards, bulletedList } from './components/cards';
 
 const InfoSection = () => {
   return (
-    <section className="overflow-hidden py-20">
+    <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16">
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">Internxt’s free temporary email</p>
           <p className="text-lg font-normal leading-5 text-gray-80">
             No more spam, ads, newsletters, promotions, hackers, scammers, and bots. Keep your real inbox clean, secure,
-            and free of sketchy emails.  Our disposable email account generator is Internxt's is Internxt's newest
+            and free of sketchy emails. Our disposable email account generator is Internxt's is Internxt's newest
             privacy tool built to provide free, anonymous, temporary, and random addresses without storing any of your
             personal data.
           </p>
@@ -27,23 +27,13 @@ const InfoSection = () => {
         </div>
         <div className="flex flex-col items-center justify-center space-y-9">
           <p className="text-2xl font-medium">How to use Internxt’s temporary email address generator</p>
-          <div className="gap flex flex-row flex-wrap gap-x-5">
-            <div className="flex max-w-[256px] flex-col space-y-1 p-8">
-              <p className="text-sm font-semibold text-gray-60">Step 1</p>
-              <p className="text-xl font-medium">Copy your disposable email address</p>
-            </div>
-            <div className="flex max-w-[256px] flex-col space-y-1 p-8">
-              <p className="text-sm font-semibold text-gray-60">Step 2</p>
-              <p className="text-xl font-medium">Use the address on your desired service</p>
-            </div>
-            <div className="flex max-w-[256px] flex-col space-y-1 p-8">
-              <p className="text-sm font-semibold text-gray-60">Step 3</p>
-              <p className="text-xl font-medium">Wait a few moments for a response or verification email</p>
-            </div>
-            <div className="flex max-w-[256px] flex-col space-y-1 p-8">
-              <p className="text-sm font-semibold text-gray-60">Step 4</p>
-              <p className="text-xl font-medium">All emails received will appear in your inbox above</p>
-            </div>
+          <div className="flex flex-row flex-wrap justify-center gap-x-5 text-center sm:justify-start sm:text-start">
+            {steps.map((step, index) => (
+              <div className="flex max-w-[256px] flex-col space-y-1 p-8" key={step.title}>
+                <p className="text-sm font-semibold text-gray-60">{step.title}</p>
+                <p className="text-xl font-medium">{step.description}</p>
+              </div>
+            ))}
           </div>
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className="text-2xl font-medium">What is a temporary email address?</p>
@@ -63,59 +53,17 @@ const InfoSection = () => {
             </p>
           </div>
           <div className="flex flex-col space-y-8">
-            <div className="mt-16 flex flex-row flex-wrap justify-center space-y-8 px-8 sm:space-y-0 sm:space-x-8">
-              <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
-                <Bug className="mb-6 text-4xl text-primary" />
-                <p className="mb-6 text-2xl font-medium">Avoid spam email and annoying subscriptions</p>
-                <p className="text-lg text-cool-gray-80 sm:text-base">
-                  Sign up for anything without compromising your real email account and overloading your personal inbox.
-                  Perfect for snagging coupon codes and sign-up offers. 
-                </p>
-              </div>
-              <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
-                <EyeSlash className="mb-6 text-4xl text-primary" />
-                <p className="mb-6 text-2xl font-medium">Hide personal information with a temporary email account</p>
-                <p className="text-lg text-cool-gray-80 sm:text-base">
-                  Recipients won't get any access to your name, photo, phone number, email address, or any other
-                  personal information associated with your real account.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row flex-wrap justify-center px-8 md:space-x-8">
-              <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
-                <Tray className="mb-6 text-4xl text-primary" />
-                <p className="mb-6 text-2xl font-medium">Send and receive from a temporary mailbox</p>
-                <p className="text-lg text-cool-gray-80 sm:text-base">
-                  Hold a full conversation and respond back from your temp mail address. It’s temporary mail, not
-                  instantly disposable mail.
-                </p>
-              </div>
-              <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
-                <Detective className="mb-6 text-4xl text-primary" />
-                <p className="mb-6 text-2xl font-medium">Message anonymously from a random address</p>
-                <p className="text-lg text-cool-gray-80 sm:text-base">
-                  Not sure if your intended recipient can be trusted? Is the site you want to contact suspicious? Afraid
-                  of malware? Use a random address thanks to Internxt's fake address generator.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row flex-wrap justify-center px-8 md:space-x-8">
-              <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
-                <UserPlus className="mb-6 text-4xl text-primary" />
-                <p className="mb-6 text-2xl font-medium">No need for a temp or new Gmail account</p>
-                <p className="text-lg text-cool-gray-80 sm:text-base">
-                  Don’t juggle real accounts anymore. With Internxt's fake mail, simply create an account, use it, and
-                  ditch it when you're ready. Don’t get weighed down managing multiple accounts.
-                </p>
-              </div>
-              <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
-                <Gift className="mb-6 text-4xl text-primary" />
-                <p className="mb-6 text-2xl font-medium">Get referral perks without inviting friends</p>
-                <p className="text-lg text-cool-gray-80 sm:text-base">
-                  Want to get a discount or extra perks from an online service, but you're not comfortable giving away
-                  your friends' emails? Invite your temp email instead!
-                </p>
-              </div>
+            <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-x-8 space-y-8 sm:grid-cols-2 sm:space-y-0">
+              {infoCards.map((card, index) => (
+                <div
+                  key={card.title}
+                  className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]"
+                >
+                  <card.icon className="mb-6 text-4xl text-primary" />
+                  <p className="mb-6 text-2xl font-medium">{card.title}</p>
+                  <p className="text-lg text-cool-gray-80 sm:text-base">{card.description}</p>
+                </div>
+              ))}
             </div>
           </div>
           <div>
@@ -140,16 +88,9 @@ const InfoSection = () => {
               examples of when to use fake mail:
             </p>
             <ul className="list-disc space-y-1.5 pl-6 text-lg lg:max-w-2xl">
-              <li>Sign up for free trials</li>
-              <li>Test you app</li>
-              <li>Sign up for a double (or multiple) accounts</li>
-              <li>Eliminate spam</li>
-              <li>Sign up for store loyalty card</li>
-              <li>Communicate with suspicious accounts</li>
-              <li>Create anonymous accounts</li>
-              <li>Try out online services risk-free</li>
-              <li>Verify trivial accounts</li>
-              <li>Prank friends</li>
+              {bulletedList.map((item, index) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
