@@ -20,7 +20,6 @@ const open = () => toast.success('Copied to clipboard!');
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
-  const [inbox, setInbox] = useState([]);
 
   // (if someone want to clear after 8hrs simply change hours=8)
   const hours = 3; // to clear the localStorage after 1 hour

@@ -19,7 +19,7 @@ const NoMessageSelected = () => {
   );
 };
 
-const MessageSelected = ({ email, item }) => {
+const MessageSelected = ({ email, item }): JSX.Element => {
   const date = moment(item.date);
 
   return (
@@ -65,7 +65,7 @@ const MessageSelected = ({ email, item }) => {
                     });
                   }}
                 >
-                  <ItemIconComponent height={20} width={20} className="shadow-md" />
+                  <ItemIconComponent width={20} height={20} className="shadow-md" />
                   <div className="flex max-w-[120px] flex-col">
                     <p className=" truncate text-xs font-medium">{file.filename}</p>
                     <p className="text-xs text-gray-60">{PrettySize(file.size)}</p>
@@ -87,27 +87,34 @@ const Inbox = ({ email }) => {
   const [isRefreshed, setIsRefreshed] = useState(false);
 
   useEffect(() => {
+    getInbox(email).then((res) => {
+      //Get all messages and set opened to false
+      showAllEmailData(email, res).then((res: any) => {
+        setMessages(res);
+      });
+    });
+  }, [email, isRefreshed]);
+
+  useEffect(() => {
+    console.log('Autorefresh triggered');
+
     function getMailInbox() {
       getInbox(email).then((res) => {
-        res.map((item) => {
-          showAllEmailData(email, item.id).then((res: any) => {
-            setMessages([
-              {
-                ...res,
-                opened: false,
-              },
-            ]);
-          });
+        //Get all messages and set opened to false
+        showAllEmailData(email, res).then((res: any) => {
+          console.log(res);
+          setMessages(res);
         });
       });
     }
+
     const interval = setInterval(() => getMailInbox(), 10000);
     return () => {
       clearInterval(interval);
     };
-  }, [isRefreshed, email]);
+  }, [email]);
 
-  console.log('messages', messages);
+  console.log('messages', messages.length);
 
   return messages.length > 0 ? (
     <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
