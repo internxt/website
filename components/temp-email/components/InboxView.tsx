@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { ArrowsClockwise, Download, DownloadSimple, Envelope, File, Paperclip, Tray } from 'phosphor-react';
+import { ArrowsClockwise, DownloadSimple, Envelope, Paperclip, Tray } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
 import EmptyInbox from './EmptyInbox';
 import { downloadFile, getInbox, showAllEmailData } from './temp-api';
