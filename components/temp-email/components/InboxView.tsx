@@ -52,11 +52,14 @@ const MessageSelected = ({ email, item }) => {
 
               return (
                 <div
+                  key={file.filename}
                   className="flex cursor-pointer flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 p-2"
                   onClick={async () => {
                     await downloadFile(email, item.id, file.filename).then((download) => {
                       console.log('downloaded', download);
                       //download file
+
+                      console.log('hexHash', String.fromCharCode(download.data));
                     });
                   }}
                 >
