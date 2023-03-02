@@ -201,6 +201,22 @@ export default function HeroSection({ textContent, lang }) {
                   />
                 </a>
 
+                <a
+                  href="https://www.hostingadvice.com/blog/internxt-delivers-secure-by-design-cloud-storage-with-user-privacy-locked-in/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    loading="lazy"
+                    className="mr-12"
+                    src="../../logos/featured/hosting-advice.png"
+                    draggable="false"
+                    width="168"
+                    height="18"
+                    alt="Hosting Advice logo"
+                  />
+                </a>
+
                 {lang === 'es' && (
                   <a
                     href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html"
@@ -338,6 +354,22 @@ export default function HeroSection({ textContent, lang }) {
                   width="125"
                   height="16"
                   alt="venturebeat logo"
+                />
+              </a>
+
+              <a
+                href="https://www.hostingadvice.com/blog/internxt-delivers-secure-by-design-cloud-storage-with-user-privacy-locked-in/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  loading="lazy"
+                  className="mr-12"
+                  src="../../logos/featured/hosting-advice.png"
+                  draggable="false"
+                  width="168"
+                  height="18"
+                  alt="Hosting Advice logo"
                 />
               </a>
 
