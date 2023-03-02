@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
+import Tooltip from './ToolTip';
 
 export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime }) {
   const [individual, setIndividual] = useState(true);
@@ -26,6 +27,16 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
       return `${plan}${billingFrequency}`;
     }
   }
+
+  const toolTipText = () => {
+    if (lang === 'en') {
+      return 'Get 90% off our 2TB plan';
+    } else if (lang === 'es') {
+      return 'Obtén un 90% de descuento';
+    } else if (lang === 'fr') {
+      return 'Obtenez 90% de réduction';
+    }
+  };
 
   const billingPrice = (price) => price[billingFrequency];
 

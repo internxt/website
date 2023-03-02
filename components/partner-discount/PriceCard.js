@@ -1,6 +1,6 @@
 import React from 'react';
 import { Check } from 'phosphor-react';
-import { checkout } from '../../lib/auth';
+import { checkout, goToSignUpURL } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
@@ -79,7 +79,7 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       <button
         type="button"
         onClick={() => {
-          cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+          checkout({ planId: getPlanId(stripeObject) });
         }}
         className="button-primary"
       >

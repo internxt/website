@@ -3,6 +3,7 @@ import PasswordInput from '../components/PasswordInput';
 import PrimaryButton from '../components/PrimaryButton';
 import { login, toggleAuthMethod } from '../../lib/auth';
 import { WarningCircle } from 'phosphor-react';
+import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 interface LogInProps {
   textContent: any;
@@ -12,13 +13,14 @@ interface LogInProps {
 }
 
 export default function LogIn(props: LogInProps) {
+  const globalDialogs = useGlobalDialog();
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
     if (props.tfa) {
-      login({ email: form.email.value, password: form.password.value, tfa: form.tfa.value });
+      login({ email: form.email.value, password: form.password.value, tfa: form.tfa.value }, window.location.href);
     } else {
-      login({ email: form.email.value, password: form.password.value });
+      login({ email: form.email.value, password: form.password.value }, window.location.href);
     }
   };
 
@@ -30,7 +32,11 @@ export default function LogIn(props: LogInProps) {
         <span>
           {props.textContent.LogIn.or}{' '}
           <a
-            onClick={() => !props.loading && toggleAuthMethod('signup')}
+            onClick={() => {
+              if (!props.loading) {
+                globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'signup' } });
+              }
+            }}
             className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
           >
             {props.textContent.LogIn.signup}
@@ -85,7 +91,11 @@ export default function LogIn(props: LogInProps) {
         />
 
         <a
-          onClick={() => !props.loading && toggleAuthMethod('recover')}
+          onClick={() => {
+            if (!props.loading) {
+              globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'recover' } });
+            }
+          }}
           className={`text-center text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
         >
           {props.textContent.LogIn.fields.password.helper}

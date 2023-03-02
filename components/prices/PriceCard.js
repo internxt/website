@@ -6,7 +6,8 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { openAuthDialog, checkout } from '../../lib/auth';
+import { checkout, goToLoginURL } from '../../lib/auth';
+import { isMobile } from 'react-device-detect';
 
 export default function PriceCard({
   planType,
@@ -41,6 +42,13 @@ export default function PriceCard({
     }
   };
 
+  const onOfferClick = () => {
+    checkout({
+      planId: getPlanId(stripeObject),
+      couponCode: 'G8Ti4z1k',
+    });
+  };
+
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
@@ -61,7 +69,8 @@ export default function PriceCard({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center bg-white p-4 pt-6 ${popular ? 'rounded-t-2xl' : ''}`}
+        className={`info flex flex-col items-center justify-center  bg-white p-4 pt-6
+        `}
       >
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
@@ -82,14 +91,14 @@ export default function PriceCard({
           }`}
         >
           <div
-            className={`priceBreakdown flex ${
+            className={`priceBreakdown flex text-neutral-700 ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
             <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
               {contentText.perUser}
             </span>
-            <p className="flex flex-row items-start space-x-0.5 font-medium text-neutral-700">
+            <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>
@@ -111,7 +120,8 @@ export default function PriceCard({
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-neutral-80`}
+            } flex-row text-xs text-neutral-80
+            `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
@@ -220,13 +230,16 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : openAuthDialog('signup');
+            checkout({
+              planId: getPlanId(stripeObject),
+              mode: billingFrequency === -1 ? 'payment' : 'subscription',
+            });
           }}
           className="flex w-full flex-row"
         >
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.buy} {storage}
+              {contentText.cta.get} {storage}
             </p>
 
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>

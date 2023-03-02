@@ -2,11 +2,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { UilAngleRightB } from '@iconscout/react-unicons';
+import { ArrowUpRight } from 'phosphor-react';
 
 const ManifestoSection = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col">
     {/* Why privacy is so important */}
-    <div className="z-10 flex flex-col items-center py-20 lg:py-40">
+    <div className="z-10 flex flex-col items-center py-20 ">
       <div className="px-6 text-left sm:text-center">
         <h2 className="mb-10 text-3xl font-medium lg:text-4xl">
           {textContent.section1.title.line1} <br className="hidden sm:flex" />
@@ -68,8 +69,42 @@ const ManifestoSection = ({ textContent, lang }) => (
       </div>
     </div>
 
+    <div className="bg- flex flex-col bg-gray-1 py-20">
+      <div className="flex flex-col items-center justify-center space-y-16 px-6">
+        {/* Text content */}
+        <div className="flex max-w-[450px] flex-col space-y-10 text-center">
+          <p className="text-4xl font-semibold">{textContent.securitum.title}</p>
+          <p className="text-xl">{textContent.securitum.subtitle}</p>
+        </div>
+        {/* Links to PDFs */}
+        <div className="flex flex-wrap items-center justify-center gap-32">
+          <div
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            onClick={() => window.open('/securitum/securitum-web.pdf', '_blank')}
+          >
+            <p className="text-lg font-semibold">{textContent.securitum.links.web}</p>
+            <ArrowUpRight size={18} weight="bold" />
+          </div>
+          <div
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            onClick={() => window.open('/securitum/securitum-mobile.pdf', '_blank')}
+          >
+            <p className="text-lg font-semibold">{textContent.securitum.links.mobile}</p>
+            <ArrowUpRight size={18} weight="bold" />
+          </div>
+          <div
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            onClick={() => window.open('/securitum/securitum-desk.pdf', '_blank')}
+          >
+            <p className="text-lg font-semibold">{textContent.securitum.links.desk}</p>
+            <ArrowUpRight size={18} weight="bold" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     {/* Apps designed to protect your privacy */}
-    <div className="z-10 flex flex-col items-center bg-cool-gray-100 py-20 text-white lg:py-40">
+    <div className="z-10 flex flex-col items-center bg-cool-gray-100 py-20 text-white ">
       <div className="px-6 text-left sm:text-center">
         <h2 className="mb-10 text-4xl font-medium">
           {textContent.section3.title.line1} <br className="hidden sm:flex" />

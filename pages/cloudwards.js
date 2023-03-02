@@ -8,8 +8,6 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 
-const CLOUDWARDS_COUPON_ID = '0eu0T11z';
-
 const Cloudwards = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
 
@@ -20,14 +18,7 @@ const Cloudwards = ({ metatagsDescriptions, langJson, navbarLang, footerLang, la
       segmentName="StartPage Partnership"
       lang={lang}
     >
-      <Navbar
-        textContent={navbarLang}
-        lang={lang}
-        cta={['default']}
-        fixed
-        darkMode={false}
-        coupon={CLOUDWARDS_COUPON_ID}
-      />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
