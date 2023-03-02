@@ -1,17 +1,10 @@
 import moment from 'moment';
-import { ArrowsClockwise, Envelope, Tray } from 'phosphor-react';
-import React, { useEffect } from 'react';
-
-function getMessages(inbox) {
-  const messages = [];
-  inbox.map((item) => {
-    messages.push({
-      ...item,
-      opened: false,
-    });
-  });
-  return messages;
-}
+import { ArrowsClockwise, Download, DownloadSimple, Envelope, File, Paperclip, Tray } from 'phosphor-react';
+import React, { useEffect, useState } from 'react';
+import EmptyInbox from './EmptyInbox';
+import { downloadFile, getInbox, showAllEmailData } from './temp-api';
+import PrettySize from 'prettysize';
+import iconService from './icon-service';
 
 const NoMessageSelected = () => {
   return (
@@ -25,36 +18,87 @@ const NoMessageSelected = () => {
   );
 };
 
-const messageSelected = ({ item }) => {
+const MessageSelected = ({ email, item }) => {
   const date = moment(item.date);
+
   return (
-    <div className="flex flex-row">
-      <p title={item.from} className="text-xs font-medium text-gray-50">
-        {item.from}
-      </p>
-      <p title={item.subject} className="text-sm font-semibold">
-        {item.subject}
-      </p>
-      <div className="flex flex-row items-end justify-end space-x-2">
-        <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
-        <p className="text-supporting-2 font-semibold text-gray-60">
-          {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
+    <div className="flex flex-col space-y-10 overflow-y-scroll p-10">
+      <div className="flex flex-col space-y-2">
+        <p title={item.subject} className="text-xl font-medium text-gray-100 line-clamp-3">
+          {item.subject}
         </p>
+        <div className="flex flex-row">
+          <div className="flex flex-col">
+            <p title={item.from} className="truncate text-sm font-medium text-gray-80">
+              {item.from}
+            </p>
+            <p title={item.date} className="text-xs">
+              {item.date}
+            </p>
+          </div>
+        </div>
       </div>
+
+      <div dangerouslySetInnerHTML={{ __html: item.body }} className="flex flex-col space-x-2" />
+      {item.attachments.length > 0 && (
+        <div className="flex flex-col space-y-4">
+          <div className="flex flex-row justify-between">
+            <p className="text-sm font-medium">{item.attachments.length} Attachments</p>
+            <p className="text-sm text-primary">Download All</p>
+          </div>
+          <div className="grid grid-cols-2 gap-x-2">
+            {item.attachments.map((file) => {
+              const ItemIconComponent = iconService.getItemIcon(false, file.contentType.split('/')[1]);
+
+              return (
+                <div
+                  className="flex cursor-pointer flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 p-2"
+                  onClick={async () => {
+                    await downloadFile(email, item.id, file.filename).then((download) => {
+                      console.log('downloaded', download);
+                      //download file
+                    });
+                  }}
+                >
+                  <ItemIconComponent height={20} width={20} />
+                  <div className="flex max-w-[120px] flex-col">
+                    <p className=" truncate text-xs font-medium">{file.filename}</p>
+                    <p className="text-xs text-gray-60">{PrettySize(file.size)}</p>
+                  </div>
+                  <DownloadSimple size={20} className="text-gray-50" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-const Inbox = ({ inbox, setIsRefreshed }) => {
-  const [messages, setMessages] = React.useState(inbox);
+const Inbox = ({ email }) => {
+  const [messages, setMessages] = React.useState([]);
   const [selectedMessage, setSelectedMessage] = React.useState(null);
-  console.log('inbox de los cojones', inbox);
+  const [isRefreshed, setIsRefreshed] = useState(false);
 
   useEffect(() => {
-    setMessages(getMessages(inbox));
-  }, []);
+    getInbox(email).then((res) => {
+      res.map((item) => {
+        showAllEmailData(email, item.id).then((res: any) => {
+          setMessages([
+            {
+              ...res,
+              opened: false,
+            },
+          ]);
+        });
+      });
+    });
+  }, [isRefreshed, email]);
 
-  return (
+  console.log('messages', messages);
+
+  return messages.length > 0 ? (
     <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
       <div className="flex flex-col">
         <div className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10">
@@ -72,7 +116,7 @@ const Inbox = ({ inbox, setIsRefreshed }) => {
             />
           </div>
           <div className="flex flex-col overflow-y-scroll">
-            {inbox.map((item, index) => {
+            {messages.map((item, index) => {
               const date = moment(item.date);
               return (
                 <button
@@ -85,15 +129,24 @@ const Inbox = ({ inbox, setIsRefreshed }) => {
                   }}
                   className={`flex h-full ${
                     !item.opened ? 'border-l-4 border-l-primary' : ''
-                  } w-full flex-col px-4 text-start  focus:bg-primary focus:bg-opacity-10`}
+                  } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                 >
                   <div className="flex flex-col border-b border-gray-10 py-4">
                     <p title={item.from} className="text-xs font-medium text-gray-50">
                       {item.from}
                     </p>
-                    <p title={item.subject} className="text-sm font-semibold">
-                      {item.subject}
-                    </p>
+                    {item.attachments.length > 0 ? (
+                      <div className="flex flex-row items-center space-x-1">
+                        <Paperclip size={14} className="text-gray-60" />
+                        <p title={item.subject} className="flex-row text-sm font-semibold">
+                          {item.subject}
+                        </p>
+                      </div>
+                    ) : (
+                      <p title={item.subject} className="flex-row text-sm font-semibold">
+                        {item.subject}
+                      </p>
+                    )}
                     <div className="flex flex-row items-end justify-end space-x-2">
                       <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
                       <p className="text-supporting-2 font-semibold text-gray-60">
@@ -107,9 +160,10 @@ const Inbox = ({ inbox, setIsRefreshed }) => {
           </div>
         </div>
       </div>
-
-      <NoMessageSelected />
+      {selectedMessage ? <MessageSelected email={email} item={selectedMessage} /> : <NoMessageSelected />}
     </div>
+  ) : (
+    <EmptyInbox />
   );
 };
 

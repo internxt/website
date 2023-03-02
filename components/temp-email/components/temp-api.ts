@@ -7,17 +7,13 @@ async function createEmail() {
 }
 
 async function showAllEmailData(email: string, itemId: []) {
-  const fullMessages = [];
-  itemId.map(async (item: any) => {
-    const allData = await axios(
-      `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=readMessage&login=${email.split('@')[0]}&domain=${
-        email.split('@')[1]
-      }&id=${item.id}`,
-    );
-    fullMessages.push(allData.data);
-  });
-
-  return fullMessages;
+  const allData = await axios(
+    `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=readMessage&login=${email.split('@')[0]}&domain=${
+      email.split('@')[1]
+    }&id=${itemId}`,
+  );
+  console.log(allData.data);
+  return allData.data;
 }
 
 const getInbox = async (email) => {
@@ -29,4 +25,14 @@ const getInbox = async (email) => {
   return inbox.data;
 };
 
-export { createEmail, showAllEmailData, getInbox };
+const downloadFile = async (email: string, itemId: number, itemName: string) => {
+  const userEmail = email.split('@')[0];
+  const domain = email.split('@')[1];
+  const downloadFile = await axios(
+    `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=download&login=${userEmail}&domain=${domain}&id=${itemId}&file=${itemName}`,
+  );
+
+  return downloadFile;
+};
+
+export { createEmail, showAllEmailData, getInbox, downloadFile };
