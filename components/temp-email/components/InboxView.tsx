@@ -60,10 +60,8 @@ const MessageSelected = ({ email, item }) => {
                   className="flex cursor-pointer flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 p-2"
                   onClick={async () => {
                     await downloadFile(email, item.id, file.filename).then((download) => {
-                      console.log('downloaded', download);
                       //download file
                       fileDownload(download.data, file.filename);
-                      console.log('hexHash', download.data);
                     });
                   }}
                 >
@@ -89,18 +87,24 @@ const Inbox = ({ email }) => {
   const [isRefreshed, setIsRefreshed] = useState(false);
 
   useEffect(() => {
-    getInbox(email).then((res) => {
-      res.map((item) => {
-        showAllEmailData(email, item.id).then((res: any) => {
-          setMessages([
-            {
-              ...res,
-              opened: false,
-            },
-          ]);
+    function getMailInbox() {
+      getInbox(email).then((res) => {
+        res.map((item) => {
+          showAllEmailData(email, item.id).then((res: any) => {
+            setMessages([
+              {
+                ...res,
+                opened: false,
+              },
+            ]);
+          });
         });
       });
-    });
+    }
+    const interval = setInterval(() => getMailInbox(), 10000);
+    return () => {
+      clearInterval(interval);
+    };
   }, [isRefreshed, email]);
 
   console.log('messages', messages);

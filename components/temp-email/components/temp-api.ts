@@ -12,7 +12,6 @@ async function showAllEmailData(email: string, itemId: []) {
       email.split('@')[1]
     }&id=${itemId}`,
   );
-  console.log(allData.data);
   return allData.data;
 }
 
