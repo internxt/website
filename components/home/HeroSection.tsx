@@ -208,7 +208,7 @@ export default function HeroSection({ textContent, lang }) {
                 >
                   <img
                     loading="lazy"
-                    className="mr-12"
+                    className="mr-10"
                     src="../../logos/featured/hosting-advice.png"
                     draggable="false"
                     width="168"
@@ -364,7 +364,7 @@ export default function HeroSection({ textContent, lang }) {
               >
                 <img
                   loading="lazy"
-                  className="mr-12"
+                  className={lang !== 'en' && 'mr-12'}
                   src="../../logos/featured/hosting-advice.png"
                   draggable="false"
                   width="168"
