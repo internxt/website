@@ -1,11 +1,12 @@
 import moment from 'moment';
 import { ArrowsClockwise, DownloadSimple, Envelope, Paperclip, Tray } from 'phosphor-react';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import EmptyInbox from './EmptyInbox';
 import { downloadFile, getInbox, showAllEmailData } from './temp-api';
 import PrettySize from 'prettysize';
 import iconService from './icon-service';
 import fileDownload from 'js-file-download';
+import useWindowFocus from './useWindowFocus';
 
 const NoMessageSelected = () => {
   return (
@@ -85,6 +86,7 @@ const Inbox = ({ email }) => {
   const [messages, setMessages] = React.useState([]);
   const [selectedMessage, setSelectedMessage] = React.useState(null);
   const [isRefreshed, setIsRefreshed] = useState(false);
+  const isFocused = useWindowFocus();
 
   useEffect(() => {
     getInbox(email).then((res) => {
@@ -96,23 +98,19 @@ const Inbox = ({ email }) => {
   }, [email, isRefreshed]);
 
   useEffect(() => {
-    console.log('Autorefresh triggered');
-
     function getMailInbox() {
       getInbox(email).then((res) => {
         //Get all messages and set opened to false
         showAllEmailData(email, res).then((res: any) => {
-          console.log(res);
           setMessages(res);
         });
       });
     }
-
-    const interval = setInterval(() => getMailInbox(), 10000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [email]);
+    if (isFocused) {
+      const interval = setInterval(() => getMailInbox(), 5000);
+      return () => clearInterval(interval);
+    }
+  }, [email, isFocused]);
 
   console.log('messages', messages.length);
 
@@ -146,7 +144,7 @@ const Inbox = ({ email }) => {
                     setMessages(newMessages);
                   }}
                   className={`flex h-full ${
-                    !item.opened ? 'border-l-4 border-l-primary' : ''
+                    !item.opened ? 'border-l-2 border-l-primary' : ''
                   } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                 >
                   <div className="flex flex-col border-b border-gray-10 py-4">

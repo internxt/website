@@ -36,6 +36,7 @@ const downloadFile = async (email: string, itemId: number, itemName: string) => 
       responseType: 'blob',
     },
   );
+  console.log(downloadFile);
 
   return downloadFile;
 };

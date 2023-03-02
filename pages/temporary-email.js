@@ -6,6 +6,8 @@ import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/temp-email/HeroSection';
 import InfoSection from '../components/temp-email/InfoSection';
 import ToolsSection from '../components/temp-email/ToolsSection';
+import QASection from '../components/temp-email/QASection';
+import SignupSection from '../components/temp-email/SignupSection';
 
 //Delete mailbox
 // action=deleteMailbox&login=${this.username}&domain=${this.domain}
@@ -22,6 +24,10 @@ const TempEmail = ({ metatagsDescriptions, langJson, footerLang, navbarLang, lan
       <InfoSection />
 
       <ToolsSection lang={lang} />
+
+      <QASection />
+
+      <SignupSection />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
