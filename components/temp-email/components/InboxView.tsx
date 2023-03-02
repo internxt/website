@@ -5,6 +5,7 @@ import EmptyInbox from './EmptyInbox';
 import { downloadFile, getInbox, showAllEmailData } from './temp-api';
 import PrettySize from 'prettysize';
 import iconService from './icon-service';
+import fileDownload from 'js-file-download';
 
 const NoMessageSelected = () => {
   return (
@@ -27,7 +28,10 @@ const MessageSelected = ({ email, item }) => {
         <p title={item.subject} className="text-xl font-medium text-gray-100 line-clamp-3">
           {item.subject}
         </p>
-        <div className="flex flex-row">
+        <div className="flex flex-row space-x-2">
+          <div className="flex flex-col items-center justify-center rounded-full bg-primary bg-opacity-10 py-2 px-4">
+            <p className="text-lg text-primary">{item.from.charAt().toUpperCase()}</p>
+          </div>
           <div className="flex flex-col">
             <p title={item.from} className="truncate text-sm font-medium text-gray-80">
               {item.from}
@@ -58,12 +62,12 @@ const MessageSelected = ({ email, item }) => {
                     await downloadFile(email, item.id, file.filename).then((download) => {
                       console.log('downloaded', download);
                       //download file
-
-                      console.log('hexHash', String.fromCharCode(download.data));
+                      fileDownload(download.data, file.filename);
+                      console.log('hexHash', download.data);
                     });
                   }}
                 >
-                  <ItemIconComponent height={20} width={20} />
+                  <ItemIconComponent height={20} width={20} className="shadow-md" />
                   <div className="flex max-w-[120px] flex-col">
                     <p className=" truncate text-xs font-medium">{file.filename}</p>
                     <p className="text-xs text-gray-60">{PrettySize(file.size)}</p>

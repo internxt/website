@@ -29,6 +29,7 @@
     "dotenv": "^8.2.0",
     "hamburger-react": "^2.4.1",
     "jquery": "^3.5.1",
+    "js-file-download": "^0.4.12",
     "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
