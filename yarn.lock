@@ -3482,6 +3482,11 @@ js-file-download@^0.4.12:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
+js-url-downloader@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/js-url-downloader/-/js-url-downloader-0.1.6.tgz#a426ba6c8cc3835ad59cff6def6756b565f5ee45"
+  integrity sha512-w/md3g2aDutSe995g8V43KvA6DosEXr8/FQIYkuU8BHtqkDnMxwGp0dChs9xO7VcXWAgLQNiVzWYLqJ1EeSPXQ==
+
 js-yaml@^3.13.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"

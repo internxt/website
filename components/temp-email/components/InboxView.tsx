@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { ArrowsClockwise, CaretLeft, CaretRight, Envelope, Paperclip, Tray } from 'phosphor-react';
+import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
 import EmptyInbox from './EmptyInbox';
 import { getInbox, showAllEmailData } from '../services/api/temp-api';
@@ -89,7 +89,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                 />
               </div>
 
-              <div className="flex flex-col overflow-y-scroll">
+              <div className="flex w-full flex-col overflow-y-scroll">
                 {messages.map((item, index) => {
                   const date = moment(item.date);
                   return (
@@ -161,7 +161,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
-    <div className="flex h-[480px] w-auto max-w-sm flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
+    <div className="flex h-[480px] w-full max-w-sm flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
       {messages.length > 0 ? (
         //Render message selected
         <>
@@ -194,8 +194,9 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
             enter="transition-opacity duration-800"
             enterFrom="opacity-0"
             enterTo="opacity-100"
+            className={'flex w-full overflow-y-scroll'}
           >
-            <div className="flex flex-col">
+            <div className="flex w-full flex-col">
               <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 px-4 py-5">
                 <div className="flex flex-row items-center space-x-1">
                   <Tray size={20} weight="bold" />
@@ -209,7 +210,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                   }}
                 />
               </div>
-              <div className="flex flex-col overflow-y-scroll">
+              <div className="flex w-full flex-col overflow-y-scroll">
                 {/* Render messages list */}
                 {messages.map((item, index) => {
                   const date = moment(item.date);
@@ -226,7 +227,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                         !item.opened ? 'border-l-2 border-l-primary' : ''
                       } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                     >
-                      <div className="flex flex-col border-b border-gray-10 py-4">
+                      <div className="flex w-full flex-col border-b border-gray-10 py-4">
                         <p title={item.from} className="text-xs font-medium text-gray-50">
                           {item.from}
                         </p>

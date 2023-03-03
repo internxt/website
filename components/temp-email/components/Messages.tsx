@@ -46,7 +46,21 @@ const MessageSelected = ({ email, item }): JSX.Element => {
         <div className="flex flex-col space-y-4">
           <div className="flex flex-row justify-between">
             <p className="text-sm font-medium">{item.attachments.length} Attachments</p>
-            <p className="text-sm text-primary">Download All</p>
+            <p
+              className="cursor-pointer text-sm text-primary"
+              onClick={() => {
+                item.attachments.forEach(async (file) => {
+                  await downloadFile(email, item.id, file.filename).then((download) => {
+                    console.log(download.data);
+                    const blob = new Blob([download.data], { type: file.contentType });
+                    console.log(blob);
+                    fileDownload(blob, file.filename);
+                  });
+                });
+              }}
+            >
+              Download All
+            </p>
           </div>
           <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
             {item.attachments.map((file) => {
@@ -58,8 +72,10 @@ const MessageSelected = ({ email, item }): JSX.Element => {
                   className="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-lg border border-gray-10 p-2 md:justify-center"
                   onClick={async () => {
                     await downloadFile(email, item.id, file.filename).then((download) => {
-                      //download file
-                      fileDownload(download.data, file.filename);
+                      console.log(download.data);
+                      const blob = new Blob([download.data], { type: file.contentType });
+                      console.log(blob);
+                      fileDownload(blob, file.filename);
                     });
                   }}
                 >
