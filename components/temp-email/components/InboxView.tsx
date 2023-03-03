@@ -136,10 +136,10 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
 
           <Transition
             show={selectedMessage ? true : false}
-            enter="transition-opacity duration-800"
+            enter="transition-opacity easy-in-out duration-800"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="transition-opacity duration-800"
+            leave="transition-opacity easy-in-out duration-800"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             className={'flex overflow-y-scroll'}
@@ -161,7 +161,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
-    <div className="flex h-[480px] w-auto max-w-sm flex-row space-y-2 overflow-visible rounded-xl border border-gray-10 shadow-subtle-hard">
+    <div className="flex h-[480px] w-auto max-w-sm flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
       {messages.length > 0 ? (
         //Render message selected
         <>
@@ -170,6 +170,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
             enter="transition-opacity duration-800"
             enterFrom="opacity-0"
             enterTo="opacity-100"
+            className={'flex overflow-y-scroll'}
           >
             <div className="flex flex-col">
               <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 px-4 py-5">
