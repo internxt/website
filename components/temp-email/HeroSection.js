@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Copy, Trash, Tray } from 'phosphor-react';
 import React, { useEffect, useState } from 'react';
-import { createEmail, getInbox, showAllEmailData } from './components/temp-api';
+import { createEmail } from './services/api/temp-api';
 import ShowSnackbar from '../ShowSnackbar';
 import { toast } from 'react-toastify';
 
@@ -14,6 +14,7 @@ function copy(email) {
 function removeLocalStorage() {
   localStorage.removeItem('email');
   localStorage.removeItem('setupTime');
+  localStorage.removeItem('inbox');
 }
 
 const open = () => toast.success('Copied to clipboard!');
@@ -46,7 +47,7 @@ const HeroSection = () => {
 
   return (
     <section className="overflow-hidden bg-gradient-to-t from-white to-gray-1 py-20">
-      <div className="flex flex-col items-center justify-center space-y-10">
+      <div className="flex flex-col items-center justify-center space-y-10 px-5">
         <div className="flex flex-col space-y-2 text-center">
           <h1 className="text-5xl font-semibold">Free Temporary Email</h1>
           <p className="text-xl text-gray-80">
@@ -90,6 +91,7 @@ const HeroSection = () => {
           </div>
           <p className="text-xs text-gray-60">Email and inbox will expire after 3 hours of inactivity</p>
         </div>
+
         <Inbox email={email} />
         <ShowSnackbar />
       </div>

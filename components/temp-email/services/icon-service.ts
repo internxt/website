@@ -15,7 +15,7 @@ import XlsFile from '/public/icons/file-types/excel.svg';
 import XmlFile from '/public/icons/file-types/code.svg';
 import CsvFile from '/public/icons/file-types/csv.svg';
 import ZipFile from '/public/icons/file-types/zip.svg';
-import fileExtensionGroups from './file-types';
+import fileExtensionGroups from '../components/file-types';
 
 export enum FileExtensionGroup {
   Audio,

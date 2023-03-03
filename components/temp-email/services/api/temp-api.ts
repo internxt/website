@@ -13,7 +13,7 @@ async function showAllEmailData(email: string, item: Record<string, any>[]) {
         email.split('@')[1]
       }&id=${item.id}`,
     );
-    return data.data;
+    return { ...data.data, opened: false };
   });
   return Promise.all(allData);
 }
