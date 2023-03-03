@@ -71,7 +71,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
 
   return (
     <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
-      {messages.length < 0 ? (
+      {messages.length > 0 ? (
         <>
           <div className="flex flex-col">
             <div className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10">
@@ -142,6 +142,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
             leave="transition-opacity duration-800"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
+            className={'flex overflow-y-scroll'}
           >
             <Messages.MessageSelected email={email} item={selectedMessage} />
           </Transition>
