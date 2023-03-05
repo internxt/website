@@ -16,31 +16,43 @@ const Inbox = ({ email }) => {
   const [isRefreshed, setIsRefreshed] = useState(false);
   const isFocused = useWindowFocus();
 
+  //Get inbox on mount or when the inbox is refreshed
   useEffect(() => {
-    getInbox(email).then((res) => {
-      //Get all messages and set opened to false
-      showAllEmailData(email, res).then((res: any) => {
-        setMessages(res);
-      });
-    });
+    getMailInbox();
   }, [email, isRefreshed]);
 
+  //Get inbox every 5 seconds when the window is focused
   useEffect(() => {
-    function getMailInbox() {
-      getInbox(email).then((res) => {
-        //Get all messages and set opened to false
-        showAllEmailData(email, res).then((res: any) => {
-          setMessages(res);
-        });
-      });
-    }
     if (isFocused) {
       const interval = setInterval(() => getMailInbox(), 5000);
       return () => clearInterval(interval);
     }
   }, [email, isFocused]);
 
-  console.log('messages', messages.length);
+  //Get inbox function
+  function getMailInbox() {
+    getInbox(email).then((res) => {
+      //Get all messages and set opened to false
+      showAllEmailData(email, res).then((res: any) => {
+        if (!localStorage.getItem('inbox')) {
+          localStorage.setItem('inbox', JSON.stringify(res));
+          setMessages(res);
+        } else {
+          if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
+            setMessages(JSON.parse(localStorage.getItem('inbox')));
+            return;
+          }
+          const inbox = JSON.parse(localStorage.getItem('inbox'));
+          const newMessages = res.filter((item) => {
+            return !inbox.find((inboxItem) => inboxItem.id === item.id);
+          });
+          const allMessages = [...newMessages, ...inbox];
+          localStorage.setItem('inbox', JSON.stringify(allMessages));
+          setMessages(allMessages);
+        }
+      });
+    });
+  }
 
   return !isMobile ? (
     <InboxWeb
@@ -48,6 +60,7 @@ const Inbox = ({ email }) => {
       getProps={{
         messages,
         selectedMessage,
+        setMessages,
         setSelectedMessage,
         setIsRefreshed,
       }}
@@ -58,6 +71,7 @@ const Inbox = ({ email }) => {
       getProps={{
         messages,
         selectedMessage,
+        setMessages,
         setSelectedMessage,
         setIsRefreshed,
       }}
@@ -67,7 +81,7 @@ const Inbox = ({ email }) => {
 
 //Web Inbox View
 const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string, any> }) => {
-  const { messages, selectedMessage, setSelectedMessage, setIsRefreshed } = getProps;
+  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed } = getProps;
 
   return (
     <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
@@ -96,9 +110,12 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                     <button
                       key={item.id}
                       onClick={() => {
-                        setSelectedMessage(item);
-                        const newMessages = [...messages];
+                        //Update the message to local storage
+                        const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
                         newMessages[index].opened = true;
+                        setMessages(newMessages);
+                        localStorage.setItem('inbox', JSON.stringify(newMessages));
+                        setSelectedMessage(item);
                       }}
                       className={`flex h-full ${
                         !item.opened ? 'border-l-2 border-l-primary' : ''

@@ -18,7 +18,8 @@ const NoMessageSelected = (): JSX.Element => {
 };
 
 const MessageSelected = ({ email, item }): JSX.Element => {
-  const date = moment(item.date);
+  //Format date as Wednesday 22, February 2023 at 13:03 with moment.js
+  const date = moment(item.date).format('dddd DD, MMMM YYYY,  HH:mm');
 
   return (
     <div className="flex flex-col space-y-10 overflow-y-scroll p-10">
@@ -34,8 +35,8 @@ const MessageSelected = ({ email, item }): JSX.Element => {
             <p title={item.from} className="truncate text-sm font-medium text-gray-80">
               {item.from}
             </p>
-            <p title={item.date} className="text-xs">
-              {item.date}
+            <p title={date} className="text-xs">
+              {date}
             </p>
           </div>
         </div>
@@ -51,9 +52,7 @@ const MessageSelected = ({ email, item }): JSX.Element => {
               onClick={() => {
                 item.attachments.forEach(async (file) => {
                   await downloadFile(email, item.id, file.filename).then((download) => {
-                    console.log(download.data);
                     const blob = new Blob([download.data], { type: file.contentType });
-                    console.log(blob);
                     fileDownload(blob, file.filename);
                   });
                 });
@@ -72,9 +71,7 @@ const MessageSelected = ({ email, item }): JSX.Element => {
                   className="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-lg border border-gray-10 p-2 md:justify-center"
                   onClick={async () => {
                     await downloadFile(email, item.id, file.filename).then((download) => {
-                      console.log(download.data);
                       const blob = new Blob([download.data], { type: file.contentType });
-                      console.log(blob);
                       fileDownload(blob, file.filename);
                     });
                   }}
