@@ -30,7 +30,7 @@ const cardsTitles = {
   },
 };
 
-const BFBanner = () => {
+const LoginBFBanner = () => {
   const [showBanner, setShowBanner] = React.useState(false);
   const router = useRouter();
   const lang = router.locale;
@@ -173,4 +173,4 @@ const BFBanner = () => {
   );
 };
 
-export default BFBanner;
+export default LoginBFBanner;
