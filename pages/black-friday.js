@@ -15,7 +15,7 @@ import PlatformSection from '../components/black-friday/PlatformSection';
 import TestimonialsSection from '../components/black-friday/TestimonialsSection';
 import FaqSection from '../components/black-friday/FAQSection';
 import FooterSection from '../components/black-friday/FooterSection';
-import LoginBanner from '../components/layout/LoginBanner';
+import LoginBFBanner from '../components/banners/LoginBFBanner';
 
 const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
@@ -55,7 +55,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
         isLinksHidden
         darkMode={true}
       />
-      <LoginBanner />
+      <LoginBFBanner />
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />
 
