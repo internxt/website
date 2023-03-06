@@ -28,11 +28,11 @@ const InfoSection = () => {
         <div className="flex flex-col items-center space-y-9">
           <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">How to use Internxt’s temporary email address generator</p>
-            <ul className="list-disc space-y-3 pl-6 text-lg">
+            <ul className="list-disc space-y-3 pl-6">
               {steps.map((item, index) => (
                 <li key={item}>
                   <span className="text-lg font-medium text-primary">{item.title}: </span>
-                  <span className="text-lg font-medium text-gray-80">{item.description}</span>
+                  <span className="text-lg text-gray-80">{item.description}</span>
                 </li>
               ))}
             </ul>
