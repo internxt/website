@@ -9,7 +9,7 @@ const NoMessageSelected = ({ messagesLength }: { messagesLength: number }): JSX.
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <Envelope size={48} className="text-gray-50" weight="thin" />
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
         <p className="text-sm font-medium">You have {messagesLength} new messages</p>
         <p className="text-sm text-gray-50">Select a message to open</p>
       </div>

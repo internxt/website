@@ -5,7 +5,7 @@ import { steps, infoCards, bulletedList } from './components/cards';
 const InfoSection = () => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 py-8">
+      <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">Internxt’s free temporary email</p>
           <p className="text-lg text-gray-80 md:max-w-2xl">
