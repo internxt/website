@@ -6,7 +6,6 @@ import moment from 'moment';
 import PrettySize from 'prettysize';
 
 const NoMessageSelected = ({ messagesLength }: { messagesLength: number }): JSX.Element => {
-  console.log(messagesLength);
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <Envelope size={48} className="text-gray-50" weight="thin" />

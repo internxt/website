@@ -16,10 +16,12 @@ const Inbox = ({ email }) => {
   const [isRefreshed, setIsRefreshed] = useState(false);
   const isFocused = useWindowFocus();
   const [openedMessages, setOpenedMessages] = useState(0);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   //Get inbox on mount or when the inbox is refreshed
   useEffect(() => {
     getMailInbox();
+    setIsMobileView(isMobile);
   }, [email, isRefreshed]);
 
   //Get inbox every 5 seconds when the window is focused
@@ -60,7 +62,7 @@ const Inbox = ({ email }) => {
     });
   }
 
-  return !isMobile ? (
+  return !isMobileView ? (
     <InboxWeb
       email={email}
       getProps={{
@@ -261,12 +263,12 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                           <div className="flex flex-row items-center space-x-1">
                             <Paperclip size={14} className="text-gray-60" />
                             <p title={item.subject} className="flex-row text-sm font-semibold">
-                              {item.subject}
+                              {item.subject ? item.subject : '(no subject)'}
                             </p>
                           </div>
                         ) : (
                           <p title={item.subject} className="flex-row text-sm font-semibold">
-                            {item.subject}
+                            {item.subject ? item.subject : '(no subject)'}
                           </p>
                         )}
                         <div className="flex flex-row items-end justify-end space-x-2">
