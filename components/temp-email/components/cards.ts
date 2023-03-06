@@ -60,21 +60,21 @@ export const infoCards = [
 
 export const toolsCards = [
   {
-    url: '/images/virus-scanner/PasswordChecker.png',
+    url: '/images/temp-email/password-checker.svg',
     UrlRedirectName: 'password-checker',
     width: 125,
     title: 'Free Password Strength Checker',
     description: 'Check now',
   },
   {
-    url: '/images/temp-email/virus-scanner.png',
+    url: '/images/temp-email/virus-scanner.svg',
     UrlRedirectName: 'virus-scanner',
     width: 105,
     title: 'Free Virus Scanner',
     description: 'Scan now',
   },
   {
-    url: '/images/virus-scanner/ByteConverter.png',
+    url: '/images/temp-email/byte-converter.svg',
     UrlRedirectName: 'virus-converter',
     width: 95,
     title: 'Free Byte Converter',

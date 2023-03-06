@@ -15,6 +15,7 @@ const Inbox = ({ email }) => {
   const [selectedMessage, setSelectedMessage] = React.useState(null);
   const [isRefreshed, setIsRefreshed] = useState(false);
   const isFocused = useWindowFocus();
+  const [openedMessages, setOpenedMessages] = useState(0);
 
   //Get inbox on mount or when the inbox is refreshed
   useEffect(() => {
@@ -49,6 +50,11 @@ const Inbox = ({ email }) => {
           const allMessages = [...newMessages, ...inbox];
           localStorage.setItem('inbox', JSON.stringify(allMessages));
           setMessages(allMessages);
+          allMessages.forEach((item) => {
+            if (!item.opened) {
+              setOpenedMessages((prevState) => prevState + 1);
+            }
+          });
         }
       });
     });
@@ -63,6 +69,7 @@ const Inbox = ({ email }) => {
         setMessages,
         setSelectedMessage,
         setIsRefreshed,
+        openedMessages,
       }}
     />
   ) : (
@@ -74,6 +81,7 @@ const Inbox = ({ email }) => {
         setMessages,
         setSelectedMessage,
         setIsRefreshed,
+        openedMessages,
       }}
     />
   );
@@ -81,7 +89,7 @@ const Inbox = ({ email }) => {
 
 //Web Inbox View
 const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string, any> }) => {
-  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed } = getProps;
+  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed, openedMessages } = getProps;
 
   return (
     <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
@@ -96,7 +104,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                 </div>
                 <ArrowsClockwise
                   size={24}
-                  className="cursor-pointer text-gray-50"
+                  className="cursor-pointer text-gray-50 hover:text-gray-80"
                   onClick={() => {
                     setIsRefreshed((prevState) => !prevState);
                   }}
@@ -121,7 +129,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                         !item.opened ? 'border-l-2 border-l-primary' : ''
                       } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                     >
-                      <div className="flex flex-col border-b border-gray-10 py-4">
+                      <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 py-4">
                         <p title={item.from} className="text-xs font-medium text-gray-50">
                           {item.from}
                         </p>
@@ -129,12 +137,12 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                           <div className="flex flex-row items-center space-x-1">
                             <Paperclip size={14} className="text-gray-60" />
                             <p title={item.subject} className="flex-row text-sm font-semibold">
-                              {item.subject}
+                              {item.subject ? item.subject : '(no subject)'}
                             </p>
                           </div>
                         ) : (
                           <p title={item.subject} className="flex-row text-sm font-semibold">
-                            {item.subject}
+                            {item.subject ? item.subject : '(no subject)'}
                           </p>
                         )}
                         <div className="flex flex-row items-end justify-end space-x-2">
@@ -163,7 +171,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
           >
             <Messages.MessageSelected email={email} item={selectedMessage} />
           </Transition>
-          {!selectedMessage && <Messages.NoMessageSelected />}
+          {!selectedMessage && <Messages.NoMessageSelected messagesLength={openedMessages} />}
         </>
       ) : (
         <EmptyInbox />

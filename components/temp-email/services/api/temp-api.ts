@@ -32,8 +32,10 @@ const downloadFile = async (email: string, itemId: number, itemName: string) => 
   const domain = email.split('@')[1];
   const downloadFile = await axios.get(
     `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=download&login=${userEmail}&domain=${domain}&id=${itemId}&file=${itemName}`,
+    {
+      responseType: 'blob',
+    },
   );
-  console.log(downloadFile);
 
   return downloadFile;
 };
