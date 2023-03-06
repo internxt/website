@@ -29,6 +29,8 @@
     "dotenv": "^8.2.0",
     "hamburger-react": "^2.4.1",
     "jquery": "^3.5.1",
+    "js-file-download": "^0.4.12",
+    "js-url-downloader": "^0.1.6",
     "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
@@ -38,6 +40,7 @@
     "next-share": "^0.18.1",
     "phosphor-react": "1.4.1",
     "popper.js": "^1.16.1",
+    "prettysize": "^2.0.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.4.0",
     "react-device-detect": "^1.17.0",
@@ -52,6 +55,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "@tailwindcss/line-clamp": "0.4.0",
     "@types/jest": "^29.4.0",
     "@types/memory-cache": "^0.2.1",
