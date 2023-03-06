@@ -13,7 +13,7 @@ import SignupSection from '../components/temp-email/SignupSection';
 // action=deleteMailbox&login=${this.username}&domain=${this.domain}
 
 const TempEmail = ({ metatagsDescriptions, langJson, footerLang, navbarLang, lang }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
 
   return (
     <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
