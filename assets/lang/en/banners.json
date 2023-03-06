@@ -30,5 +30,10 @@
     "subtitle": "Get 90% off our 2TB plan with code VDAY",
     "cta": "Get the deal",
     "toast": "Copied to clipboard!"
+  },
+  "virusScannerBanner": {
+    "title": "Try Internxt",
+    "description": "Secure file storage with built-in virus scanner.",
+    "cta": "Sign up for free"
   }
 }
