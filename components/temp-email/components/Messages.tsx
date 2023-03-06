@@ -19,7 +19,7 @@ const NoMessageSelected = (): JSX.Element => {
 
 const MessageSelected = ({ email, item }): JSX.Element => {
   //Format date as Wednesday 22, February 2023 at 13:03 with moment.js
-  const date = moment(item.date).format('dddd DD, MMMM YYYY,  HH:mm');
+  const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
 
   return (
     <div className="flex flex-col space-y-10 overflow-y-scroll p-10">

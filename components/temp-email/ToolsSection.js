@@ -6,7 +6,7 @@ import { CaretRight } from 'phosphor-react';
 const ToolsSection = ({ lang }) => {
   return (
     <section className="overflow-hidden py-20">
-      <div className="flex flex-col items-center justify-center space-y-16">
+      <div className="flex flex-col items-center justify-center space-y-16 px-5">
         <div className="flex max-w-[450px] text-center">
           <p className="text-4xl font-semibold">Other free privacy tools like our temporary mailbox</p>
         </div>
