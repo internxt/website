@@ -12,7 +12,8 @@ const BannersSection = ({ textContent, lang }) => {
         <div className="flex flex-col space-y-9 md:flex-row md:space-y-0 md:space-x-9">
           <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center">
             <Image
-              src="/images/virus-scanner/PasswordChecker.png"
+              src="/images/temp-email/password-checker.svg"
+              quality={100}
               width={125}
               height={70}
               layout={'intrinsic'}
@@ -30,7 +31,8 @@ const BannersSection = ({ textContent, lang }) => {
           </div>
           <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center">
             <Image
-              src="/images/virus-scanner/ByteConverter.png"
+              src="/images/temp-email/byte-converter.svg"
+              quality={100}
               width={95}
               height={70}
               layout={'intrinsic'}
