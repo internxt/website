@@ -225,6 +225,10 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     <Link href="/cyber-awareness" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
                     </Link>
+
+                    <Link href="/temporary-email" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -541,6 +545,9 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       </Link>
                       <Link href="/cyber-awareness" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      </Link>
+                      <Link href="/temporary-email" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

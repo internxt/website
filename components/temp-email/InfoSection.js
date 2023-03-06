@@ -79,7 +79,7 @@ const InfoSection = () => {
               quality={100}
               className="cursor-pointer"
               onClick={() => {
-                window.location.replace('https://drive.internxt.com/new', '_blank');
+                window.open('https://drive.internxt.com/new', '_blank');
               }}
             />
           </div>

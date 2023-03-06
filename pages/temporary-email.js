@@ -12,7 +12,7 @@ import SignupSection from '../components/temp-email/SignupSection';
 //Delete mailbox
 // action=deleteMailbox&login=${this.username}&domain=${this.domain}
 
-const TempEmail = ({ metatagsDescriptions, langJson, footerLang, navbarLang, lang }) => {
+const TempEmail = ({ metatagsDescriptions, footerLang, navbarLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
 
   return (
@@ -44,15 +44,13 @@ export async function getServerSideProps(ctx) {
       },
     };
   }
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/virus-scanner.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
 
   return {
     props: {
       metatagsDescriptions,
-      langJson,
       footerLang,
       navbarLang,
       lang,
