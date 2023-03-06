@@ -25,16 +25,19 @@ const InfoSection = () => {
             quality={100}
           />
         </div>
-        <div className="flex flex-col items-center justify-center space-y-9">
-          <p className="text-2xl font-medium">How to use Internxt’s temporary email address generator</p>
-          <div className="flex flex-row flex-wrap justify-center gap-5 text-center sm:justify-start sm:text-start">
-            {steps.map((step, index) => (
-              <div className="flex max-w-[256px] flex-col space-y-4 rounded-lg bg-white p-8" key={step.title}>
-                <p className="text-lg font-semibold text-primary">{step.title}</p>
-                <p className="text-xl font-medium">{step.description}</p>
-              </div>
-            ))}
+        <div className="flex flex-col items-center space-y-9">
+          <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
+            <p className="text-3xl font-medium lg:text-2xl">How to use Internxt’s temporary email address generator</p>
+            <ul className="list-disc space-y-3 pl-6 text-lg">
+              {steps.map((item, index) => (
+                <li key={item}>
+                  <span className="text-lg font-medium text-primary">{item.title}: </span>
+                  <span className="text-lg font-medium text-gray-80">{item.description}</span>
+                </li>
+              ))}
+            </ul>
           </div>
+
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">What is a temporary email address?</p>
             <p className="text-lg text-gray-80 md:max-w-2xl">
@@ -79,7 +82,7 @@ const InfoSection = () => {
               quality={100}
               className="cursor-pointer"
               onClick={() => {
-                window.location.replace('https://drive.internxt.com/new', '_blank');
+                window.open('https://drive.internxt.com/new', '_blank');
               }}
             />
           </div>

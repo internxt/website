@@ -75,7 +75,7 @@ export const toolsCards = [
   },
   {
     url: '/images/temp-email/byte-converter.svg',
-    UrlRedirectName: 'virus-converter',
+    UrlRedirectName: 'byte-converter',
     width: 95,
     title: 'Free Byte Converter',
     description: 'Convert now',

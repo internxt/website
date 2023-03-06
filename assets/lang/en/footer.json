@@ -55,7 +55,8 @@
         "fileVirusScan": "File Virus Scanner",
         "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter",
-        "cyberAwareness": "Cyber Awareness"
+        "cyberAwareness": "Cyber Awareness",
+        "temporaryEmail": "Temporary Email"
       }
     }
   },
