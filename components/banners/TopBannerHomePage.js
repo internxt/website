@@ -55,8 +55,9 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() =>
-            window.location.replace(
+            window.open (
               `https://internxt.com/temporary-email?utm_source=website&utm_medium=banner&utm_campaign=tempmail`,
+              '_blank'
             )
           }
         >
