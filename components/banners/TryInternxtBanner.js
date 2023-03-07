@@ -44,7 +44,7 @@ const TryInternxtBanner = ({ textContent }) => {
                 className="relative flex flex-row items-center justify-center space-x-4 rounded-full bg-primary py-3 px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
                   window.open(
-                    'https://internxt.com/?utm_source=website&utm_medium=banner&utm_campaign=internxt',
+                    'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt',
                     '_blank',
                   );
                 }}
