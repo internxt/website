@@ -10,9 +10,8 @@ const InfoSection = () => {
           <p className="text-2xl font-medium">Internxt’s free temporary email</p>
           <p className="text-lg text-gray-80 md:max-w-2xl">
             No more spam, ads, newsletters, promotions, hackers, scammers, and bots. Keep your real inbox clean, secure,
-            and free of sketchy emails. Our disposable email account generator is Internxt's is Internxt's newest
-            privacy tool built to provide free, anonymous, temporary, and random addresses without storing any of your
-            personal data.
+            and free of sketchy emails. Our disposable email account generator is Internxt's newest privacy tool built
+            to provide free, anonymous, temporary, and random addresses without storing any of your personal data.
           </p>
         </div>
         <div className="flex flex-col">

@@ -32,7 +32,7 @@ export default function HeroSection({ textContent, lang }) {
 
   return (
     <section>
-      <div className="mx-4 border-b border-gray-5 pt-24 lg:mx-10 xl:mx-32">
+      <div className="mx-4 border-b border-gray-5 pt-36 lg:mx-10 xl:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row">
           <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
             <Image
@@ -364,7 +364,7 @@ export default function HeroSection({ textContent, lang }) {
               >
                 <img
                   loading="lazy"
-                  className={lang !== 'en' && 'mr-12'}
+                  className={lang !== 'en' ? 'mr-12' : undefined}
                   src="../../logos/featured/hosting-advice.png"
                   draggable="false"
                   width="168"
