@@ -34,9 +34,8 @@ export const infoCards = [
   },
   {
     icon: Tray,
-    title: 'Send and receive from a temporary mailbox',
-    description:
-      'Hold a full conversation and respond back from your temp mail address. It’s temporary mail, not instantly disposable mail.',
+    title: 'Receive messages to a temporary mailbox',
+    description: 'Receive the emails you expect instantly. It’s temporary mail, not instantly disposable mail.',
   },
   {
     icon: Detective,
@@ -84,7 +83,7 @@ export const toolsCards = [
 
 export const bulletedList = [
   'Sign up for free trials',
-  'Test you app',
+  'Test your app',
   'Sign up for a double (or multiple) accounts',
   'Eliminate spam',
   'Sign up for store loyalty card',

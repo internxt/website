@@ -6,6 +6,7 @@ import Script from 'next/script';
 import Link from 'next/link';
 import { X } from 'phosphor-react';
 import { useRouter } from 'next/router';
+import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ interface LayoutProps {
   isProduction?: boolean;
   specialOffer?: string;
   host?: string;
+  isBannerFixed?: boolean;
   lang?: string;
 }
 
@@ -30,6 +32,7 @@ export default function Layout({
   disableMailerlite = false,
   specialOffer,
   disableDrift = true,
+  isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
 }: // lang
 LayoutProps) {
@@ -46,46 +49,6 @@ LayoutProps) {
       brave: isBrave(),
     });
   }, [segmentName]);
-
-  const New = () => {
-    if (lang === 'en') {
-      return 'NEW:';
-    } else if (lang === 'es') {
-      return 'NUEVO:';
-    } else if (lang === 'fr') {
-      return 'NOUVEAU:';
-    }
-  };
-
-  const obtainDeal = () => {
-    if (lang === 'en') {
-      return 'Be our Valentine and get 90% OFF our 2TB plan with the code VDAY.';
-    } else if (lang === 'es') {
-      return 'Este San Valentín consigue un 90% de descuento en nuestro plan de 2TB con el código VDAY.';
-    } else if (lang === 'fr') {
-      return 'Obtenez un 90 % de réduction sur notre plan de 2 To avec le code VDAY.';
-    }
-  };
-
-  const ConvertToMobile = () => {
-    if (lang === 'en') {
-      return "Pick up the Valentine's deal";
-    } else if (lang === 'es') {
-      return 'Obtén la oferta';
-    } else if (lang === 'fr') {
-      return "Profitez de l'offre";
-    }
-  };
-
-  const pickUp = () => {
-    if (lang === 'en') {
-      return 'Pick up the deal';
-    } else if (lang === 'es') {
-      return 'Obtén la oferta';
-    } else if (lang === 'fr') {
-      return "Reprendre l'affaire";
-    }
-  };
 
   return (
     <>
@@ -122,7 +85,13 @@ LayoutProps) {
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
-
+      {showBanner ? (
+        <TopBannerHomePage
+          isBannerFixed={isBannerFixed}
+          closeBannerOnMobile={closeBannerOnMobile}
+          setCloseBannerOnMobile={setCloseBannerOnMobile}
+        />
+      ) : null}
       {children}
       {/* <BFBanner /> */}
     </>
