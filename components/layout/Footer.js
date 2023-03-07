@@ -222,12 +222,12 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
                     </Link>
 
-                    <Link href="/cyber-awareness" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
-                    </Link>
-
                     <Link href="/temporary-email" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
+                    </Link>
+
+                    <Link href="/cyber-awareness" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
                     </Link>
                   </div>
                 </div>
@@ -540,14 +540,17 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       <Link href="/virus-scanner" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
                       </Link>
+
                       <Link href="/byte-converter" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
                       </Link>
-                      <Link href="/cyber-awareness" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
-                      </Link>
+
                       <Link href="/temporary-email" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
+                      </Link>
+
+                      <Link href="/cyber-awareness" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
