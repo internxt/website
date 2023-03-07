@@ -7,21 +7,21 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
 
   const New = () => {
     if (lang === 'en') {
-      return 'NEW:';
+      return 'NEW';
     } else if (lang === 'es') {
-      return 'NUEVO:';
+      return 'NUEVO';
     } else if (lang === 'fr') {
-      return 'NOUVEAU:';
+      return 'NOUVEAU';
     }
   };
 
   const textForWeb = () => {
     if (lang === 'en') {
-      return "Protect your inbox with Internxt's free Temporary Email";
+      return "Protect your inbox with Internxt's free Temporary Email service";
     } else if (lang === 'es') {
-      return 'Protege tu bandeja de entrada con el correo electrónico temporal gratuito de Internxt';
+      return 'Protege tu bandeja de entrada con el Correo Temporal gratuito de Internxt';
     } else if (lang === 'fr') {
-      return "Protégez votre boîte de réception avec le courriel temporaire gratuit d'Internxt";
+      return "Protégez votre boîte de réception avec le Courriel Temporaire gratuit d'Internxt";
     }
   };
 
