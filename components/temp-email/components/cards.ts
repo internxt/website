@@ -34,9 +34,8 @@ export const infoCards = [
   },
   {
     icon: Tray,
-    title: 'Receive from a temporary mailbox',
-    description:
-      'Hold a full conversation and respond back from your temp mail address. It’s temporary mail, not instantly disposable mail.',
+    title: 'Receive messages to a temporary mailbox',
+    description: 'Receive the emails you expect instantly. It’s temporary mail, not instantly disposable mail.',
   },
   {
     icon: Detective,

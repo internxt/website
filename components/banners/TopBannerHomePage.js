@@ -27,11 +27,11 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
 
   const textForMobile = () => {
     if (lang === 'en') {
-      return "Pick up the Valentine's deal";
+      return ' Internxt’s Free Temporary Email';
     } else if (lang === 'es') {
-      return 'Obtén la oferta';
+      return 'Correo Temporal gratuito de Internxt';
     } else if (lang === 'fr') {
-      return "Profitez de l'offre";
+      return 'Courriel Temporaire Gratuit d’Internet';
     }
   };
 
@@ -81,7 +81,7 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
             }
           >
             <p className="flex flex-row rounded-full  font-bold">{New()}</p>
-            <p className="flex flex-row font-normal">{textForWeb()}</p>
+            <p className="flex flex-row font-normal">{textForMobile()}</p>
           </div>
 
           <button
