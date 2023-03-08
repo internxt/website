@@ -135,7 +135,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                       className={`flex h-full ${
                         !item.opened ? 'border-l-2 border-l-primary' : ''
                       } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
-                        item.id === selectedMessage.id ? 'bg-primary bg-opacity-10' : null
+                        item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
                       } `}
                     >
                       <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 py-4">
