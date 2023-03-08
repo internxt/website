@@ -31,9 +31,14 @@
     "cta": "Get the deal",
     "toast": "Copied to clipboard!"
   },
-  "virusScannerBanner": {
+  "tryOutInternxtGeneralBanner": {
     "title": "Try Internxt",
-    "description": "Secure file storage with built-in virus scanner.",
+    "description": "Secure cloud storage based on total privacy and encryption.",
+    "cta": "Sign up for free"
+  },
+  "tryOutInternxtPasswordCheckerBanner": {
+    "title": "Try Internxt",
+    "description": "Secure file storage with password-protected technology for your files.",
     "cta": "Sign up for free"
   }
 }

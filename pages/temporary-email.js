@@ -8,16 +8,22 @@ import InfoSection from '../components/temp-email/InfoSection';
 import ToolsSection from '../components/temp-email/ToolsSection';
 import QASection from '../components/temp-email/QASection';
 import SignupSection from '../components/temp-email/SignupSection';
+import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 //Delete mailbox
 // action=deleteMailbox&login=${this.username}&domain=${this.domain}
 
-const TempEmail = ({ metatagsDescriptions, footerLang, navbarLang, lang }) => {
+const TempEmail = ({ metatagsDescriptions, footerLang, navbarLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
 
   return (
     <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
+      <TryInternxtBanner
+        textContent={bannerLang.tryOutInternxtGeneralBanner}
+        url={'https://drive.internxt.com/new?utm_source=website&utm_medium=popupbanner&utm_campaign=tempmail'}
+      />
 
       <HeroSection />
 
@@ -47,6 +53,7 @@ export async function getServerSideProps(ctx) {
   const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
   const footerLang = require(`../assets/lang/en/footer.json`);
   const navbarLang = require(`../assets/lang/en/navbar.json`);
+  const bannerLang = require(`../assets/lang/en/banners.json`);
 
   return {
     props: {
@@ -54,6 +61,7 @@ export async function getServerSideProps(ctx) {
       footerLang,
       navbarLang,
       lang,
+      bannerLang,
     },
   };
 }
