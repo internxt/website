@@ -43,7 +43,6 @@ const Inbox = ({ email }) => {
         } else {
           if (JSON.parse(localStorage.getItem('selectedMessage'))) {
             setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
-            console.log('Hay mensaje seleccionado');
           } else if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
             setMessages(JSON.parse(localStorage.getItem('inbox')));
             return;
