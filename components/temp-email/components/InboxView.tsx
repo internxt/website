@@ -41,10 +41,10 @@ const Inbox = ({ email }) => {
           localStorage.setItem('inbox', JSON.stringify(res));
           setMessages(res);
         } else {
-          if (JSON.parse(localStorage.getItem('selectedMessage')))
+          if (JSON.parse(localStorage.getItem('selectedMessage'))) {
             setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
-
-          if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
+            console.log('Hay mensaje seleccionado');
+          } else if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
             setMessages(JSON.parse(localStorage.getItem('inbox')));
             return;
           }
@@ -56,6 +56,7 @@ const Inbox = ({ email }) => {
           const allMessages = [...newMessages, ...inbox];
           localStorage.setItem('inbox', JSON.stringify(allMessages));
           setMessages(allMessages);
+          setOpenedMessages(0);
           allMessages.forEach((item) => {
             if (!item.opened) {
               setOpenedMessages((prevState) => prevState + 1);
