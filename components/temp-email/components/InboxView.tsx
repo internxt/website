@@ -41,10 +41,13 @@ const Inbox = ({ email }) => {
           localStorage.setItem('inbox', JSON.stringify(res));
           setMessages(res);
         } else {
-          if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
+          if (JSON.parse(localStorage.getItem('selectedMessage'))) {
+            setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
+          } else if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
             setMessages(JSON.parse(localStorage.getItem('inbox')));
             return;
           }
+
           const inbox = JSON.parse(localStorage.getItem('inbox'));
           const newMessages = res.filter((item) => {
             return !inbox.find((inboxItem) => inboxItem.id === item.id);
@@ -52,6 +55,7 @@ const Inbox = ({ email }) => {
           const allMessages = [...newMessages, ...inbox];
           localStorage.setItem('inbox', JSON.stringify(allMessages));
           setMessages(allMessages);
+          setOpenedMessages(0);
           allMessages.forEach((item) => {
             if (!item.opened) {
               setOpenedMessages((prevState) => prevState + 1);
@@ -124,26 +128,29 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                         const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
                         newMessages[index].opened = true;
                         setMessages(newMessages);
-                        localStorage.setItem('inbox', JSON.stringify(newMessages));
                         setSelectedMessage(item);
+                        localStorage.setItem('inbox', JSON.stringify(newMessages));
+                        localStorage.setItem('selectedMessage', JSON.stringify(item));
                       }}
                       className={`flex h-full ${
                         !item.opened ? 'border-l-2 border-l-primary' : ''
-                      } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
+                      } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
+                        item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
+                      } `}
                     >
                       <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 py-4">
-                        <p title={item.from} className="text-xs font-medium text-gray-50">
+                        <p title={item.from} className="truncate text-xs font-medium text-gray-50">
                           {item.from}
                         </p>
                         {item.attachments.length > 0 ? (
                           <div className="flex flex-row items-center space-x-1">
                             <Paperclip size={14} className="text-gray-60" />
-                            <p title={item.subject} className="flex-row text-sm font-semibold">
+                            <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
                               {item.subject ? item.subject : '(no subject)'}
                             </p>
                           </div>
                         ) : (
-                          <p title={item.subject} className="flex-row text-sm font-semibold">
+                          <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
                             {item.subject ? item.subject : '(no subject)'}
                           </p>
                         )}
@@ -171,7 +178,9 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
             leaveTo="opacity-0"
             className={'flex overflow-y-scroll'}
           >
-            <Messages.MessageSelected email={email} item={selectedMessage} />
+            <div className="flex h-full w-screen">
+              <Messages.MessageSelected email={email} item={selectedMessage} />
+            </div>
           </Transition>
           {!selectedMessage && <Messages.NoMessageSelected messagesLength={openedMessages} />}
         </>
@@ -184,7 +193,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
 
 //Mobile Inbox View
 const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<string, any> }) => {
-  const { messages, selectedMessage, setSelectedMessage, setIsRefreshed } = getProps;
+  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed } = getProps;
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
@@ -197,9 +206,9 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
             enter="transition-opacity duration-800"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            className={'flex overflow-y-scroll'}
+            className={'flex w-full overflow-y-scroll'}
           >
-            <div className="flex flex-col">
+            <div className="flex w-full flex-col">
               <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 px-4 py-5">
                 <div className="flex flex-row items-center space-x-1">
                   <CaretLeft
@@ -212,7 +221,9 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                   <p className="text-base font-medium">Back to inbox</p>
                 </div>
               </div>
-              <Messages.MessageSelected email={email} item={selectedMessage} />
+              <div className="flex h-full w-full">
+                <Messages.MessageSelected email={email} item={selectedMessage} />
+              </div>
             </div>
           </Transition>
           {/* Render messages list */}
@@ -245,10 +256,13 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                     <button
                       key={item.id}
                       onClick={() => {
-                        setSelectedMessage(item);
-                        const newMessages = [...messages];
+                        const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
                         newMessages[index].opened = true;
-                        setIsMessageOpen(!isMessageOpen);
+                        setMessages(newMessages);
+                        setSelectedMessage(item);
+                        localStorage.setItem('inbox', JSON.stringify(newMessages));
+                        localStorage.setItem('selectedMessage', JSON.stringify(item));
+                        setIsMessageOpen(true);
                       }}
                       className={`flex h-full ${
                         !item.opened ? 'border-l-2 border-l-primary' : ''

@@ -18,12 +18,11 @@ const NoMessageSelected = ({ messagesLength }: { messagesLength: number }): JSX.
 };
 
 const MessageSelected = ({ email, item }): JSX.Element => {
-  //Format date as Wednesday 22, February 2023 at 13:03 with moment.js
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
 
   return (
-    <div className="flex flex-col space-y-5 overflow-y-scroll p-10">
-      <div className="flex flex-col space-y-2">
+    <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">
+      <div className="flex w-full flex-col space-y-2">
         <p title={item.subject} className="text-xl font-medium text-gray-100 line-clamp-3">
           {item.subject ? item.subject : '(no subject)'}
         </p>
@@ -44,12 +43,12 @@ const MessageSelected = ({ email, item }): JSX.Element => {
 
       <div className="flex w-full border border-gray-5" />
 
-      <div dangerouslySetInnerHTML={{ __html: item.body }} className="flex flex-col space-x-2" />
+      <div dangerouslySetInnerHTML={{ __html: item.body }} className="flex w-full flex-col space-x-2" />
 
       <div className="flex w-full border border-gray-5" />
 
       {item.attachments.length > 0 && (
-        <div className="flex flex-col space-y-4">
+        <div className="flex w-full flex-col space-y-4">
           <div className="flex flex-row justify-between">
             <p className="text-sm font-medium">{item.attachments.length} Attachments</p>
             <p

@@ -15,6 +15,7 @@ function removeLocalStorage() {
   localStorage.removeItem('email');
   localStorage.removeItem('setupTime');
   localStorage.removeItem('inbox');
+  localStorage.removeItem('selectedMessage');
 }
 
 const open = () => toast.success('Copied to clipboard!');
