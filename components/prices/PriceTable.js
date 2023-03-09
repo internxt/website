@@ -136,7 +136,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
 
   return (
     <section className="bg-gray-1">
-      <div className="flex flex-col items-center pb-16">
+      <div className="flex flex-col items-center ">
         <h1 className="px-4 pt-36 text-center text-5xl">
           {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
         </h1>
@@ -202,9 +202,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+          <>
             {billingFrequency === -1 ? (
-              <>
+              <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
                 <PriceCard
                   planType="individual"
                   storage={pricings.individuals.lifetime2TB.storage}
@@ -235,52 +235,56 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   lang={lang}
                   country={country}
                 />
-              </>
+              </div>
             ) : (
-              <>
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.free.storage}
-                  price={billingPrice(pricings.individuals.free.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['link', 'https://drive.internxt.com/new?']}
-                  popular={pricings.individuals.free.popular}
-                  lang={lang}
-                  country={country}
-                />
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.GB20.storage}
-                  price={billingPrice(pricings.individuals.GB20.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('GB20')]}
-                  popular={pricings.individuals.GB20.popular}
-                  lang={lang}
-                  country={country}
-                />
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.GB200.storage}
-                  price={billingPrice(pricings.individuals.GB200.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('GB200')]}
-                  popular={pricings.individuals.GB200.popular}
-                  lang={lang}
-                  country={country}
-                />
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.TB2.storage}
-                  price={billingPrice(pricings.individuals.TB2.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('TB2')]}
-                  popular={pricings.individuals.TB2.popular}
-                  lang={lang}
-                  country={country}
-                />
-              </>
+              <div className="flex flex-col flex-wrap items-center justify-center space-y-10 pt-10">
+                <div>
+                  <PriceCard
+                    planType="individual"
+                    storage={pricings.individuals.TB2.storage}
+                    price={billingPrice(pricings.individuals.TB2.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('TB2')]}
+                    popular={pricings.individuals.TB2.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                </div>
+                <div className="flex flex-row">
+                  <PriceCard
+                    planType="individual"
+                    storage={pricings.individuals.free.storage}
+                    price={billingPrice(pricings.individuals.free.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['link', 'https://drive.internxt.com/new?']}
+                    popular={pricings.individuals.free.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                  <PriceCard
+                    planType="individual"
+                    storage={pricings.individuals.GB20.storage}
+                    price={billingPrice(pricings.individuals.GB20.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('GB20')]}
+                    popular={pricings.individuals.GB20.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                  <PriceCard
+                    planType="individual"
+                    storage={pricings.individuals.GB200.storage}
+                    price={billingPrice(pricings.individuals.GB200.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('GB200')]}
+                    popular={pricings.individuals.GB200.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                </div>
+              </div>
             )}
-          </div>
+          </>
         </Transition>
 
         <Transition
@@ -325,18 +329,18 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             />
           </div>
         </Transition>
-        <div className="flex flex-row flex-wrap items-center justify-center space-x-32">
-          <div className="flex max-w-[183px] flex-col space-y-3">
+        <div className="flex flex-row flex-wrap items-center justify-center space-x-32 py-20 text-center">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
-            <p>{textContent.featureSection.firstFeature}</p>
+            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>
           </div>
-          <div className="flex max-w-[114px] flex-col space-y-3">
+          <div className="flex max-w-[114px] flex-col items-center space-y-3">
             <CreditCard size={40} className="text-primary" />
-            <p>{textContent.featureSection.secondFeature}</p>
+            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.secondFeature}</p>
           </div>
-          <div className="flex max-w-[153px] flex-col space-y-3">
+          <div className="flex max-w-[153px] flex-col items-center space-y-3">
             <Detective size={40} className="text-primary" />
-            <p>{textContent.featureSection.thirdFeature}</p>
+            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.thirdFeature}</p>
           </div>
         </div>
       </div>

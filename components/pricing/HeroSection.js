@@ -1,9 +1,11 @@
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Coin, CreditCard, Detective } from 'phosphor-react';
-import React from 'react';
+import { Alarm, Coin, CreditCard, Detective } from 'phosphor-react';
 import Countdown from '../components/Countdown';
+import moment from 'moment';
 
 const HeroSection = ({ textContent }) => {
+  const [countdownDate, setCountdownDate] = useState();
   const feeds = [
     {
       icon: Coin,
@@ -19,11 +21,32 @@ const HeroSection = ({ textContent }) => {
     },
   ];
 
+  //Set the countdown date. If the is ended, the date will be 1 day and 20 min after the current date
+  useEffect(() => {
+    if (
+      !localStorage.getItem('countdownDate') ||
+      localStorage.getItem('countdownDate') === localStorage.getItem('actualDate')
+    ) {
+      localStorage.setItem('actualDate', moment().toISOString());
+      localStorage.setItem('countdownDate', moment().add(1, 'days').add(20, 'minutes').toISOString());
+      setCountdownDate(moment().add(1, 'days').add(20, 'minutes').toISOString());
+      return;
+    } else if (localStorage.getItem('countdownDate')) {
+      setCountdownDate(localStorage.getItem('countdownDate'));
+      return;
+    }
+  }, []);
+
+  //Manage the countdown date. If the is ended, the date will be 1 day and 20 min after the current date
+
   return (
     <section className="overflow-hidden pt-24">
       <div className="flex flex-row items-center justify-center space-x-48 py-24">
         <div className="flex max-w-[470px] flex-col items-start justify-center space-y-10">
-          <Countdown dt={'2023-03-09T20:00:00'} />
+          <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
+            <Alarm size={32} className="mr-4 text-primary" />
+            <Countdown dt={countdownDate} textColor={'black'} />
+          </div>
           <div className="flex flex-col space-y-16">
             <div className="flex flex-col">
               <p className="text-7xl font-bold">{textContent.title.line1}</p>

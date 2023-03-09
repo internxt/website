@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Countdown = ({ dt, className }) => {
+const Countdown = ({ dt, textColor }) => {
   const [countdownDisableDays, setCountdownDisableDays] = useState(false);
   const [countdownDisableHours, setCountdownDisableHours] = useState(false);
   const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
@@ -38,8 +38,7 @@ const Countdown = ({ dt, className }) => {
 
       document.querySelector(`#${id} .days`).innerHTML = days < 10 ? `0${days}` : days;
       document.querySelector(`#${id} .hours`).innerHTML = hours < 10 ? `0${hours}` : hours;
-      document.querySelector(`#${id} .minutes`).innerHTML =
-        minutes < 10 && hours > 0 && days > 0 ? `0${minutes}` : minutes;
+      document.querySelector(`#${id} .minutes`).innerHTML = minutes < 10 ? `0${minutes}` : minutes;
       document.querySelector(`#${id} .seconds`).innerHTML = seconds < 10 ? `0${seconds}` : seconds;
     }
 
@@ -51,8 +50,8 @@ const Countdown = ({ dt, className }) => {
   });
 
   return (
-    <div id="countdown" className="flex text-black">
-      <div className="flex flex-row items-end space-x-1 text-2xl">
+    <div id="countdown" className={`flex text-${textColor}`}>
+      <div className="flex flex-row items-end space-x-2 text-2xl">
         <p
           className={`days delay-350 
             
