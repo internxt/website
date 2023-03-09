@@ -267,7 +267,7 @@ export default function PriceCard({
               </span>
             </div>
           )}
-          {price > 0 ? (
+          {/* {price > 0 ? (
             <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
               <img
                 loading="lazy"
@@ -291,7 +291,7 @@ export default function PriceCard({
                 className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}
               >{`${contentText.features.enjoyForever.enjoyUpTo} ${storage} ${contentText.features.enjoyForever.forever}`}</span>
             </div>
-          )}
+          )} */}
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"

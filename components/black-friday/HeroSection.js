@@ -3,7 +3,7 @@ import { Alarm, CircleWavyCheck } from 'phosphor-react';
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
-import Countdown from './components/Countdown';
+import Countdown from '../components/Countdown';
 
 const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
   const HeroSectionDescription = isAffiliate

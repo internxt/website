@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import Tooltip from './ToolTip';
+import { Coin, CreditCard, Detective } from 'phosphor-react';
 
-export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime }) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -27,16 +28,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
       return `${plan}${billingFrequency}`;
     }
   }
-
-  const toolTipText = () => {
-    if (lang === 'en') {
-      return 'Get 90% off our 2TB plan';
-    } else if (lang === 'es') {
-      return 'Obtén un 90% de descuento';
-    } else if (lang === 'fr') {
-      return 'Obtenez 90% de réduction';
-    }
-  };
 
   const billingPrice = (price) => price[billingFrequency];
 
@@ -72,7 +63,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '3.99',
           12: '3.49',
         },
-        popular: true,
+        popular: false,
       },
       TB2: {
         stripeID: '2TB',
@@ -82,7 +73,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '9.49',
           12: '8.99',
         },
-        popular: false,
+        popular: true,
       },
       lifetime2TB: {
         stripeID: 'lifetime2TB',
@@ -144,8 +135,8 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   };
 
   return (
-    <section className="bg-gradient-to-b from-white to-cool-gray-5">
-      <div className="flex flex-col items-center">
+    <section className="bg-gray-1">
+      <div className="flex flex-col items-center pb-16">
         <h1 className="px-4 pt-36 text-center text-5xl">
           {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
         </h1>
@@ -334,12 +325,20 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             />
           </div>
         </Transition>
-
-        {/* <Link href="/cloud-storage-comparison" lang={lang}>
-          <a className="flex flex-col justify-center items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-primary bg-blue-10 focus:outline-none">
-            Compare with our competitors
-          </a>
-        </Link> */}
+        <div className="flex flex-row flex-wrap items-center justify-center space-x-32">
+          <div className="flex max-w-[183px] flex-col space-y-3">
+            <Coin size={40} className="text-primary" />
+            <p>{textContent.featureSection.firstFeature}</p>
+          </div>
+          <div className="flex max-w-[114px] flex-col space-y-3">
+            <CreditCard size={40} className="text-primary" />
+            <p>{textContent.featureSection.secondFeature}</p>
+          </div>
+          <div className="flex max-w-[153px] flex-col space-y-3">
+            <Detective size={40} className="text-primary" />
+            <p>{textContent.featureSection.thirdFeature}</p>
+          </div>
+        </div>
       </div>
     </section>
   );

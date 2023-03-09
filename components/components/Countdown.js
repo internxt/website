@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Countdown = ({ dt }) => {
+const Countdown = ({ dt, className }) => {
   const [countdownDisableDays, setCountdownDisableDays] = useState(false);
   const [countdownDisableHours, setCountdownDisableHours] = useState(false);
   const [countdownDisableMinutes, setCountdownDisableMinutes] = useState(false);
@@ -37,11 +37,10 @@ const Countdown = ({ dt }) => {
       if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) setCountdownDisableSeconds(true);
 
       document.querySelector(`#${id} .days`).innerHTML = days < 10 ? `0${days}` : days;
-      document.querySelector(`#${id} .hours`).innerHTML = hours < 10 && days > 0 ? `0${hours}` : hours;
+      document.querySelector(`#${id} .hours`).innerHTML = hours < 10 ? `0${hours}` : hours;
       document.querySelector(`#${id} .minutes`).innerHTML =
         minutes < 10 && hours > 0 && days > 0 ? `0${minutes}` : minutes;
-      document.querySelector(`#${id} .seconds`).innerHTML =
-        seconds < 10 && minutes > 0 && hours > 0 && days > 0 ? `0${seconds}` : seconds;
+      document.querySelector(`#${id} .seconds`).innerHTML = seconds < 10 ? `0${seconds}` : seconds;
     }
 
     timer = setInterval(showRemaining, 1000);
@@ -52,39 +51,21 @@ const Countdown = ({ dt }) => {
   });
 
   return (
-    <div id="countdown" className="flex text-white">
+    <div id="countdown" className="flex text-black">
       <div className="flex flex-row items-end space-x-1 text-2xl">
         <p
-          className={`days font-semibold ${
-            countdownDisableDays ? 'text-transparent' : 'text-white'
-          } delay-350 transition-colors duration-150`}
+          className={`days delay-350 
+            
+           font-semibold transition-colors duration-150`}
         >
           00
         </p>
-        <p className={`${countdownDisableDays ? 'text-transparent' : 'text-white'} font-semibold`}> : </p>
-        <p
-          className={`hours font-semibold ${
-            countdownDisableHours ? 'text-transparent' : 'text-white'
-          } delay-350 transition-colors duration-150`}
-        >
-          00
-        </p>
-        <p className={`${countdownDisableHours ? 'text-transparent' : 'text-white'} font-semibold`}>:</p>
-        <p
-          className={`minutes font-semibold ${
-            countdownDisableMinutes ? 'text-transparent' : 'text-white'
-          } delay-350 transition-colors duration-150`}
-        >
-          00
-        </p>
-        <p className={`${countdownDisableMinutes ? 'text-transparent' : 'text-white'} font-semibold`}>:</p>
-        <p
-          className={`seconds font-semibold ${
-            countdownDisableSeconds ? 'text-transparent' : 'text-white'
-          } delay-350 transition-colors duration-150`}
-        >
-          00
-        </p>
+        <p className={` font-semibold`}> : </p>
+        <p className={`hours delay-350  font-semibold transition-colors duration-150`}>00</p>
+        <p className={` font-semibold`}>:</p>
+        <p className={`minutes delay-350  font-semibold transition-colors duration-150`}>00</p>
+        <p className={` font-semibold`}>:</p>
+        <p className={`seconds delay-350  font-semibold transition-colors duration-150`}>00</p>
       </div>
     </div>
   );
