@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Alarm, Coin, CreditCard, Detective } from 'phosphor-react';
 import Countdown from '../components/Countdown';
-import moment from 'moment';
+import { checkout } from '../../lib/auth';
+
+const TWOTB_OFF_COUPON = 'P8PSpVs6';
 
 const HeroSection = ({ textContent }) => {
-  const [countdownDate, setCountdownDate] = useState();
   const feeds = [
     {
       icon: Coin,
@@ -21,30 +22,13 @@ const HeroSection = ({ textContent }) => {
     },
   ];
 
-  //Set the countdown date. If the is ended, the date will be 1 day and 20 min after the current date
-  // useEffect(() => {
-  //   if (
-  //     !localStorage.getItem('countdownDate') ||
-  //     localStorage.getItem('countdownDate') === localStorage.getItem('actualDate')
-  //   ) {
-  //     localStorage.setItem('actualDate', moment().toISOString());
-  //     localStorage.setItem('countdownDate', moment().add(1, 'days').add(20, 'days').toISOString());
-  //     setCountdownDate(moment().add(1, 'days').add(20, 'days').toISOString());
-  //     return;
-  //   }
-  //   if (localStorage.getItem('countdownDate')) {
-  //     setCountdownDate(localStorage.getItem('countdownDate'));
-  //     return;
-  //   }
-  // }, []);
-
   return (
     <section className="overflow-hidden pt-12 md:pt-24">
       <div className="flex flex-col items-center justify-center space-y-10 py-24 px-6 md:flex-row md:space-y-0 md:space-x-48">
         <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 md:items-start">
           <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
             <Alarm size={32} className="mr-4 text-primary" />
-            {/* <Countdown textColor={'black'} dt={'2023-09-10'} /> */}
+            <Countdown textColor={'black'} />
           </div>
           <div className="flex flex-col space-y-16">
             <div className="flex flex-col text-center md:text-start">
@@ -60,7 +44,17 @@ const HeroSection = ({ textContent }) => {
               ))}
             </div>
           </div>
-          <button className="flex rounded-lg bg-primary px-5 py-3 font-semibold text-white">{textContent.cta}</button>
+          <button
+            className="flex rounded-lg bg-primary px-5 py-3 font-semibold text-white"
+            onClick={() =>
+              checkout({
+                planId: 'plan_FkTXxEg3GZW0pg',
+                couponCode: TWOTB_OFF_COUPON,
+              })
+            }
+          >
+            {textContent.cta}
+          </button>
         </div>
         <div className="flex flex-col">
           <Image

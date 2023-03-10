@@ -6,14 +6,14 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { checkout, goToLoginURL } from '../../lib/auth';
-import { isMobile } from 'react-device-detect';
+import { checkout } from '../../lib/auth';
+
+const TWOTB_OFF_COUPON = 'P8PSpVs6';
 
 export default function SpecialPriceCard({
   planType,
   storage,
   price,
-  priceBefore,
   billingFrequency,
   cta,
   setUsers,
@@ -45,7 +45,7 @@ export default function SpecialPriceCard({
   const onOfferClick = () => {
     checkout({
       planId: getPlanId(stripeObject),
-      couponCode: 'G8Ti4z1k',
+      couponCode: TWOTB_OFF_COUPON,
     });
   };
 
@@ -236,10 +236,7 @@ export default function SpecialPriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            checkout({
-              planId: getPlanId(stripeObject),
-              mode: billingFrequency === -1 ? 'payment' : 'subscription',
-            });
+            onOfferClick();
           }}
           className="flex w-full flex-row"
         >
@@ -274,31 +271,6 @@ export default function SpecialPriceCard({
               </span>
             </div>
           )}
-          {/* {price > 0 ? (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}>{contentText.features.moneyBack}</span>
-            </div>
-          ) : (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span
-                className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}
-              >{`${contentText.features.enjoyForever.enjoyUpTo} ${storage} ${contentText.features.enjoyForever.forever}`}</span>
-            </div>
-          )} */}
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
