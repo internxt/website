@@ -64,7 +64,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require('../assets/lang/en/pricing.json');
+  const textContent = require(`../assets/lang/${lang}/pricing.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 

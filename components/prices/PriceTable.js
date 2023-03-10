@@ -203,7 +203,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <>
+          <div className="flex px-6">
             {billingFrequency === -1 ? (
               <div className="flex flex-row flex-wrap items-end justify-center pt-10">
                 <PriceCard
@@ -294,7 +294,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                 )}
               </div>
             )}
-          </>
+          </div>
         </Transition>
 
         <Transition
@@ -339,7 +339,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             />
           </div>
         </Transition>
-        <div className="flex flex-row flex-wrap items-center justify-center space-x-32 py-20 text-center">
+        <div className="flex flex-col items-center  justify-center space-y-8 py-20 text-center md:flex-row md:space-y-0 md:space-x-32">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>

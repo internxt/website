@@ -245,7 +245,8 @@ export default function SpecialPriceCard({
         >
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {popular && billingFrequency === 12 ? contentText.cta.discount : contentText.cta.get} {storage}
+              {popular && billingFrequency === 12 ? contentText.cta.discount : contentText.cta.get}{' '}
+              {lang === 'en' && storage}
             </p>
 
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
