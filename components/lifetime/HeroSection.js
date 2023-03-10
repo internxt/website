@@ -1,5 +1,4 @@
 import React from 'react';
-import Countdown from '../black-friday/components/Countdown';
 import { Alarm } from 'phosphor-react';
 
 const HeroSection = ({ lang, textContent }) => {

@@ -3,7 +3,7 @@ import { Alarm, CircleWavyCheck } from 'phosphor-react';
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
-import Countdown from './components/Countdown';
+import Countdown from '../components/Countdown';
 
 const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
   const HeroSectionDescription = isAffiliate
@@ -52,10 +52,10 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
             <Link href="/" passHref>
               <img src="/logos/internxt/white.svg" className="-mt-5 cursor-pointer" />
             </Link>
-            <div className="flex flex-row pb-6 pt-16">
+            {/* <div className="flex flex-row pb-6 pt-16">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown dt={'2022-12-04T00:00:00'} />
-            </div>
+              <Countdown dt={'2022-12-04T00:00:00'} textColor={'white'} />
+            </div> */}
             <h1 className="text-7xl font-semibold text-white">
               {textContent.HeroSection.title.line1}
               <br />
