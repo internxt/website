@@ -4,6 +4,7 @@ import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import Tooltip from './ToolTip';
 import { Coin, CreditCard, Detective } from 'phosphor-react';
+import SpecialPriceCard from './SpecialPriceCard';
 
 export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
   const [individual, setIndividual] = useState(true);
@@ -204,7 +205,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         >
           <>
             {billingFrequency === -1 ? (
-              <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+              <div className="flex flex-row flex-wrap items-end justify-center pt-10">
                 <PriceCard
                   planType="individual"
                   storage={pricings.individuals.lifetime2TB.storage}
@@ -237,8 +238,49 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                 />
               </div>
             ) : (
-              <div className="flex flex-col flex-wrap items-center justify-center space-y-10 pt-10">
-                <div>
+              <div className="flex flex-row flex-wrap items-end justify-center pt-10">
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.free.storage}
+                  price={billingPrice(pricings.individuals.free.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['link', 'https://drive.internxt.com/new?']}
+                  popular={pricings.individuals.free.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.GB20.storage}
+                  price={billingPrice(pricings.individuals.GB20.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('GB20')]}
+                  popular={pricings.individuals.GB20.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.GB200.storage}
+                  price={billingPrice(pricings.individuals.GB200.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('GB200')]}
+                  popular={pricings.individuals.GB200.popular}
+                  lang={lang}
+                  country={country}
+                />
+                {pricings.individuals.TB2.popular && billingFrequency === 12 ? (
+                  <SpecialPriceCard
+                    planType="individual"
+                    storage={pricings.individuals.TB2.storage}
+                    price={billingPrice(pricings.individuals.TB2.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('TB2')]}
+                    popular={pricings.individuals.TB2.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                ) : (
                   <PriceCard
                     planType="individual"
                     storage={pricings.individuals.TB2.storage}
@@ -249,39 +291,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                     lang={lang}
                     country={country}
                   />
-                </div>
-                <div className="flex flex-row">
-                  <PriceCard
-                    planType="individual"
-                    storage={pricings.individuals.free.storage}
-                    price={billingPrice(pricings.individuals.free.price)}
-                    billingFrequency={billingFrequency}
-                    cta={['link', 'https://drive.internxt.com/new?']}
-                    popular={pricings.individuals.free.popular}
-                    lang={lang}
-                    country={country}
-                  />
-                  <PriceCard
-                    planType="individual"
-                    storage={pricings.individuals.GB20.storage}
-                    price={billingPrice(pricings.individuals.GB20.price)}
-                    billingFrequency={billingFrequency}
-                    cta={['checkout', checkoutPlan('GB20')]}
-                    popular={pricings.individuals.GB20.popular}
-                    lang={lang}
-                    country={country}
-                  />
-                  <PriceCard
-                    planType="individual"
-                    storage={pricings.individuals.GB200.storage}
-                    price={billingPrice(pricings.individuals.GB200.price)}
-                    billingFrequency={billingFrequency}
-                    cta={['checkout', checkoutPlan('GB200')]}
-                    popular={pricings.individuals.GB200.popular}
-                    lang={lang}
-                    country={country}
-                  />
-                </div>
+                )}
               </div>
             )}
           </>

@@ -23,20 +23,23 @@ const HeroSection = ({ textContent }) => {
 
   //Set the countdown date. If the is ended, the date will be 1 day and 20 min after the current date
   useEffect(() => {
+    if (localStorage.getItem('countdownDate') && moment(localStorage.getItem('countdownDate')).isBefore(moment())) {
+      return;
+    }
     if (
       !localStorage.getItem('countdownDate') ||
       localStorage.getItem('countdownDate') === localStorage.getItem('actualDate')
     ) {
       localStorage.setItem('actualDate', moment().toISOString());
-      localStorage.setItem('countdownDate', moment().add(1, 'days').add(20, 'minutes').toISOString());
-      setCountdownDate(moment().add(1, 'days').add(20, 'minutes').toISOString());
+      localStorage.setItem('countdownDate', moment().add(1, 'days').add(20, 'days').toISOString());
+      setCountdownDate(moment().add(1, 'days').add(20, 'days').toISOString());
       return;
-    } else if (localStorage.getItem('countdownDate')) {
+    }
+    if (localStorage.getItem('countdownDate')) {
       setCountdownDate(localStorage.getItem('countdownDate'));
       return;
     }
   }, []);
-
   //Manage the countdown date. If the is ended, the date will be 1 day and 20 min after the current date
 
   return (
