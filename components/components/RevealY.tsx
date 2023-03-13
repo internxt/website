@@ -8,7 +8,7 @@ interface RevealProps {
 const RevealY = ({ children, className }: RevealProps) => {
   useEffect(() => {
     function reveal() {
-      var reveals = document.querySelectorAll('.reveal');
+      var reveals = document.querySelectorAll('.revealY');
 
       for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;

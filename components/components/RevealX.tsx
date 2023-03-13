@@ -8,7 +8,7 @@ interface RevealProps {
 const RevealY = ({ children, className }: RevealProps) => {
   useEffect(() => {
     function reveal() {
-      var reveals = document.querySelectorAll('.reveal');
+      var reveals = document.querySelectorAll('.revealX');
 
       for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
@@ -30,7 +30,7 @@ const RevealY = ({ children, className }: RevealProps) => {
       window.removeEventListener('scroll', reveal);
     };
   }, []);
-  return <div className={`reveal ${className}`}>{children}</div>;
+  return <div className={`revealX ${className}`}>{children}</div>;
 };
 
 export default RevealY;
