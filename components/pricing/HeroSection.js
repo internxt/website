@@ -48,7 +48,7 @@ const HeroSection = ({ textContent }) => {
           </div>
           <div className="flex flex-col space-x-8 md:flex-row md:items-center md:justify-center">
             <button
-              className="flex items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
+              className="flex w-full items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
               onClick={() =>
                 checkout({
                   planId: 'plan_FkTXxEg3GZW0pg',

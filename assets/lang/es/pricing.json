@@ -7,8 +7,8 @@
       "thirdFeed": "Crea una cuenta anónima"
     },
     "cta": {
-      "title": "90% de descuento en el plan de 2TB",
-      "description": "Oferta válida durante un año. El plan se renovará al precio sin descuento para el año siguiente"
+      "title": "Obtén la oferta",
+      "description": "Oferta válida durante un año. El plan se renovará al precio sin descuento para el año siguiente."
     }
   },
   "tableSection": {
@@ -31,7 +31,7 @@
         {
           "question": "¿Cuánto costará el plan al renovarse después del primer año?",
           "answer": [
-            "El plan de 2 TB cuesta 9,99 euros al mes si se paga mensualmente o 8,99 euros al mes (107,88 euros al año) si se paga anualmente. También puedes optar por cambiar a otros planes después del primer año, la información adicional del plan y los precios se encuentran más arriba."
+            "El plan de 2 TB cuesta 9,99 € al mes si se paga mensualmente o 8,99 € al mes (107,88 € al año) si se paga anualmente. También puedes optar por cambiar a otros planes después del primer año, la información adicional del plan y los precios se encuentran más arriba."
           ]
         },
         {
@@ -96,6 +96,6 @@
   "CtaSection": {
     "title": "Prueba Internxt sin riesgos",
     "description": "Protege tus archivos realmente importantes con el almacenamiento en la nube seguro, privado y cifrado de Internxt",
-    "cta": "Selecciona un plan ahora"
+    "cta": "Selecciona un plan"
   }
 }

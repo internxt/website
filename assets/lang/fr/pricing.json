@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": { "line1": "90% de réduction", "line2": "sur notre plan 2TB" },
+    "title": { "line1": "90% de réduction", "line2": "sur le plan 2TB" },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
       "secondFeed": "Paiement 100% sécurisé",
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "90% de réduction",
+      "title": "Obtenez l'offre",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
