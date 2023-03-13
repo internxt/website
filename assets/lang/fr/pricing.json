@@ -37,14 +37,14 @@
         {
           "question": "Internxt peut-il accéder à mes fichiers ?",
           "answer": [
-            "Non. Internxt ne peut pas accéder à vos fichiers, photos ou données",
+            "Non. Internxt ne peut pas accéder à vos fichiers, photos ou données.",
             " Les services Internxt sont dotés d'un chiffrement à connaissance nulle, ce qui signifie que vous êtes le seul à pouvoir accéder à vos données privées. L'architecture d'Internxt fragmente vos fichiers avant de les chiffrer, de sorte qu'un serveur ne contient jamais un fichier entier, mais seulement un morceau chiffré, que vos seul pouvez décrypter."
           ]
         },
         {
           "question": "Internxt sauvegarde-t-il mon mot de passe ?",
           "answer": [
-            "Non. Internxt ne stocke pas (et ne peut pas stocker) votre mot de passe",
+            "Non. Internxt ne stocke pas (et ne peut pas stocker) votre mot de passe.",
             "Votre mot de passe Internxt est unique et utilisé pour crypter et décrypter vos données Internxt. Mais si vous souhaitez changer votre mot de passe, vous pouvez le faire depuis notre application."
           ]
         },
@@ -58,22 +58,22 @@
         {
           "question": "Comment créer un compte Internxt ?",
           "answer": [
-            "Pour créer un compte Internxt, il suffit de cliquer sur un plan ci-dessus et de suivre les instructions",
+            "Pour créer un compte Internxt, il suffit de cliquer sur un plan ci-dessus et de suivre les instructions.",
             "Ou rendez-vous sur notre page d'accueil et cliquez sur \"Démarrer\". Vous obtiendrez instantanément 10 Go de stockage gratuit à vie avec Internxt. Vous pouvez utiliser tous nos services. Pour vous inscrire, il vous suffit de saisir votre nom et votre adresse e-mail. Aucune vérification n'est requise pour commencer à utiliser les services d'Internxt."
           ]
         },
         {
           "question": "Puis-je payer avec une carte de crédit, PayPal ou une crypto-monnaie ?",
           "answer": [
-            "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc). Vous pouvez également payer via Apple et Google Pay. Nous n'acceptons pas PayPal",
+            "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc). Vous pouvez également payer via Apple et Google Pay. Nous n'acceptons pas PayPal.",
             "Sur demande, nous acceptons également iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24 et Sofort. Pour demander une facture en utilisant l'une des méthodes alternatives décrites ci-dessus, il suffit de nous envoyer un courriel à hello@internxt.com."
           ]
         },
         {
           "question": "Quelle est la politique de remboursement d'Internxt ?",
           "answer": [
-            "Internxt offre une garantie de remboursement standard de 30 jours pour tous ses abonnements payants, qui commence à compter dès que vous vous abonnez",
-            "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement. Nous répondrons votre demande, sans poser de questions !"
+            "Internxt offre une garantie de remboursement standard de 30 jours pour tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
+            "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement. Nous répondrons votre demande, sans poser de questions!"
           ]
         },
         {
