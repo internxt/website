@@ -3,12 +3,13 @@ import React, { useEffect } from 'react';
 interface RevealProps {
   children: React.ReactNode;
   className?: string;
+  direction?: 'left' | 'right';
 }
 
-const RevealY = ({ children, className }: RevealProps) => {
+const RevealX = ({ children, className, direction }: RevealProps) => {
   useEffect(() => {
     function reveal() {
-      var reveals = document.querySelectorAll('.revealX');
+      var reveals = document.querySelectorAll(direction === 'left' ? '.revealXLeft' : '.revealXRight');
 
       for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
@@ -30,7 +31,7 @@ const RevealY = ({ children, className }: RevealProps) => {
       window.removeEventListener('scroll', reveal);
     };
   }, []);
-  return <div className={`revealX ${className}`}>{children}</div>;
+  return <div className={`${direction === 'left' ? 'revealXLeft' : 'revealXRight'}  ${className}`}>{children}</div>;
 };
 
-export default RevealY;
+export default RevealX;

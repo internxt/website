@@ -21,6 +21,7 @@
 }
 
 .revealY {
+  will-change: transform;
   transform: translateY(150px);
   opacity: 0;
   transition: 1s all ease;
@@ -31,13 +32,26 @@
   opacity: 1;
 }
 
-.revealX {
+.revealXRight {
+  will-change: transform;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.revealXRight.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.revealXLeft {
+  will-change: transform;
   transform: translateX(150px);
   opacity: 0;
   transition: 1s all ease;
 }
 
-.revealX.active {
+.revealXLeft.active {
   transform: translateX(0);
   opacity: 1;
 }

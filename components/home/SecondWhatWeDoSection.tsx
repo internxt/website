@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { CaretRight } from 'phosphor-react';
 import React from 'react';
 import RevealY from '../components/RevealY';
+import RevealX from '../components/RevealX';
 
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (
@@ -15,7 +16,10 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
           </div>
 
           <div className="flex flex-col space-y-20 text-left text-white lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
-            <RevealY className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+            <RevealX
+              direction="right"
+              className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+            >
               <div className="m-10 mb-0 w-auto space-y-6 lg:m-20 lg:mb-20 lg:h-80 lg:w-80">
                 <h4 className="mb-10 text-3xl font-medium lg:text-4xl">{textContent.square1.title}</h4>
                 <p className="text-xl font-bold">{textContent.square1.subtitle}</p>
@@ -33,9 +37,12 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                   <img src="/images/privacy/drive-image.png" alt="Drive image" />
                 </div>
               </div>
-            </RevealY>
+            </RevealX>
 
-            <RevealY className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+            <RevealX
+              direction="left"
+              className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+            >
               <div className="m-10 mb-0 w-auto space-y-6 lg:m-20 lg:mb-20 lg:h-80 lg:w-80">
                 <h4 className="mb-10 text-3xl font-medium lg:text-4xl">{textContent.square2.title}</h4>
                 <p className="text-xl font-bold">{textContent.square2.subtitle}</p>
@@ -53,8 +60,11 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                   <img src="/images/privacy/photos-image.png" alt="Photos image" />
                 </div>
               </div>
-            </RevealY>
-            <RevealY className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+            </RevealX>
+            <RevealX
+              direction="right"
+              className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+            >
               <div className="m-10 mb-0 w-auto space-y-6 lg:m-20 lg:mb-20 lg:h-80 lg:w-80">
                 <h4 className="mb-10 text-3xl font-medium lg:text-4xl">{textContent.square3.title}</h4>
                 <p className="text-xl font-bold">{textContent.square3.subtitle}</p>
@@ -72,7 +82,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                   <img src="/images/privacy/send-image.png" alt="Send image" />
                 </div>
               </div>
-            </RevealY>
+            </RevealX>
           </div>
         </RevealY>
       </div>

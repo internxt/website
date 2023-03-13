@@ -15,6 +15,7 @@ import InfoSection from '../components/home/InfoSection';
 import SecondFeaturesSection from '../components/home/SecondFeaturesSection';
 import SecondWhatWeDoSection from '../components/home/SecondWhatWeDoSection';
 import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
+import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
@@ -63,6 +64,8 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
       <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
 
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
+
+      <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 
       <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 

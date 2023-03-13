@@ -91,6 +91,28 @@
       }
     ]
   },
+  "ThirdFeaturesSection": {
+    "title": "Get up to 10GB for free!",
+    "description": "Create your free account now and get full access to our suite of online privacy services.",
+    "cta": "Get started"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "Built for the future",
+      "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
+      "cta": "The fight for privacy"
+    },
+    "card2": {
+      "title": "All your devices, one seamless experience",
+      "description": "Internxt is available on all platforms, even Linux! Sync your files and photos with our mobile, web, and desktop apps, each engineered to supercharge your encrypted storage on the go.",
+      "cta": "Download apps"
+    },
+    "card3": {
+      "title": "Try Internxt for free",
+      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
+      "cta": "Create free account"
+    }
+  },
   "SecondWhatWeDoSection": {
     "title": "You are not the product",
     "description": "Our services are tools built for you. Drive, Photos and Send are just the beginning of a full family of products that put you back in charge of your privacy.",
@@ -113,6 +135,7 @@
       "cta": "Share with Send"
     }
   },
+
   "InvestorsSection": {
     "title": "Brands that trust us"
   },
