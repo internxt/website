@@ -185,6 +185,20 @@ module.exports = {
         400: '4',
         500: '5',
       },
+      animation: {
+        'fade-in-r-large': '1s cubic-bezier(.25,.65,.35,1) fade-r-large',
+        'fade-in-r': '0.75s cubic-bezier(.25,.65,.35,1) fade-r',
+      },
+      keyframes: {
+        'fade-r-large': {
+          '0%': { transform: 'translateX(80px)', opacity: 0 },
+          '100%': { transform: 'translateX(0px)', opacity: 100 },
+        },
+        'fade-r': {
+          '0%': { transform: 'translateX(24px)', opacity: 0 },
+          '100%': { transform: 'translateX(0px)', opacity: 100 },
+        },
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
