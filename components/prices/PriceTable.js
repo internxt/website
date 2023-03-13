@@ -339,7 +339,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             />
           </div>
         </Transition>
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-16">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>

@@ -8,31 +8,31 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
 
   const New = () => {
     if (lang === 'en') {
-      return 'Special offer';
+      return 'Special offer:';
     } else if (lang === 'es') {
-      return 'Oferta special';
+      return 'Oferta special:';
     } else if (lang === 'fr') {
-      return 'Offre spéciale';
+      return 'Offre spéciale:';
     }
   };
 
   const textForWeb = () => {
     if (lang === 'en') {
-      return '90% discount on 2TB plan';
+      return 'Get 90% off our 2TB plan for one year!';
     } else if (lang === 'es') {
-      return '90% de descuento en el plan de 2TB';
+      return '¡Obtén un 90% de descuento en el plan de 2TB por un año!';
     } else if (lang === 'fr') {
-      return '90% de réduction sur le plan 2TB';
+      return '90% de réduction sur le plan 2TB pendant un an !';
     }
   };
 
   const textForMobile = () => {
     if (lang === 'en') {
-      return ' Internxt’s Free Temporary Email';
+      return 'Get 90% off our 2TB plan for one year!';
     } else if (lang === 'es') {
-      return 'Correo Temporal gratuito de Internxt';
+      return '¡90% de descuento en el plan de 2TB!';
     } else if (lang === 'fr') {
-      return 'Courriel Temporaire Gratuit d’Internet';
+      return '90% de réduction sur le plan 2TB pendant un an !';
     }
   };
 
@@ -71,11 +71,11 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
       <div
         className={`group fixed top-16 left-0 z-30 ${
           closeBannerOnMobile ? 'hidden' : 'flex'
-        } h-16 w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+        } h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
       >
-        <div className="flex flex-row">
+        <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div
-            className="flex flex-row items-center justify-center space-x-2"
+            className="flex flex-col items-center justify-center"
             onClick={() =>
               checkout({
                 planId: 'plan_FkTXxEg3GZW0pg',
@@ -84,17 +84,17 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
             }
           >
             <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
-            <p className="flex flex-row font-normal">{textForWeb()}</p>
+            <p className="flex flex-row font-normal">{textForMobile()}</p>
           </div>
 
-          <button
+          {/* <button
             className="absolute top-3 right-3 flex flex-col"
             onClick={() => {
               setCloseBannerOnMobile(true);
             }}
           >
             <X size={36} className="z-50" />
-          </button>
+          </button> */}
         </div>
       </div>
     </>
