@@ -54,7 +54,6 @@ const SocialProofSection = ({ textContent, lang }) => (
               onClick={() => {
                 window.open('https://opentrustedcloud.ovhcloud.com/es-es/', '_blank');
               }}
-              target="_blank"
             >
               <img
                 loading="lazy"

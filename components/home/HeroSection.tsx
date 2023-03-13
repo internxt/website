@@ -8,6 +8,9 @@ export default function HeroSection({ textContent, lang }) {
   const [formError, setFormError] = useState<string | null>(null);
   const [formLoading, setFormLoading] = useState<boolean>(false);
 
+  const title = textContent.title.line1.split('Internxt')[0];
+  const Internxt = textContent.title.line1.substr(textContent.title.line1.indexOf('Internxt'), 8);
+
   useEffect(() => {
     const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
 
@@ -47,10 +50,9 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-8 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-20 lg:ml-0 lg:max-w-lg">
-            <h1 className="bg-gradient-to-tr from-primary to-[#00BFFF] bg-clip-text pb-5 text-4xl font-semibold text-transparent sm:text-5xl lg:max-w-lg lg:pb-8 lg:text-6xl">
-              {textContent.title.line1}
-              <br />
-              {textContent.title.line2}
+            <h1 className="bg-clip-text pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:max-w-lg lg:pb-8 lg:text-6xl">
+              {title}
+              <span className="text-primary">{Internxt}</span>
             </h1>
 
             <h2 className="mb-4 text-lg text-gray-80 md:mb-8">{textContent.subtitle}</h2>

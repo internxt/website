@@ -1,8 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "Say hi to privacy",
-      "line2": "Switch to Internxt"
+      "line1": "Stand for privacy, switch to Internxt"
     },
     "subtitle": "Here at Internxt, we've created a suite of services truly focused on you. Switch to Internxt Drive, Photos, Send and more.",
     "cta": {
@@ -35,40 +34,83 @@
         },
         "submit": {
           "get": "Get up to 10GB",
-          "free": "For free!"
+          "free": "Free!"
         }
       }
     }
   },
-  "FeaturesSection": {
-    "eyebrow": "INTERNXT DRIVE",
+  "FirstFeaturesSection": {
     "title": {
       "line1": "The most secure cloud for",
       "line2": "all your files and photos"
     },
-    "subtitle": {
-      "line1": "Our products are based on your privacy and security. Drive, Photos and Send are just",
-      "line2": "the beginning of a full family of products focused on you and your privacy."
+    "subtitle": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
+
+    "cta": "Create free account"
+  },
+  "InfoSection": {
+    "title": "Secure cloud storage with unmatched privacy",
+    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "cta": "Introducing the Internxt Team",
+    "cards": [
+      {
+        "title": "Private by design",
+        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are fragmented and end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+      }
+    ]
+  },
+  "SecondFeaturesSection": {
+    "info": [
+      {
+        "title": "Speed without limits",
+        "description": "Have the need for speed? Our distributed service is optimized across lightning-fast servers scattered throughout the EU, so you can get the best performance out of your connection."
+      },
+      {
+        "title": "Frictionless workflows",
+        "description": "Internxt products are streamlined to be as usable as possible while providing a clean look to enhance and boost your productivity. Business security, made easy."
+      },
+      {
+        "title": "Backup storage on demand",
+        "description": "Save your data from disaster with built-in redundancy. Back up your essential work and projects, across multiple fast servers throughout the EU, and access them from all your devices."
+      },
+      {
+        "title": "Protection for your best moments",
+        "description": "Store all your photos in one gallery and access them from everywhere. Save your memories straight to your phone and view them from anywhere."
+      }
+    ]
+  },
+  "SecondWhatWeDoSection": {
+    "title": "You are not the product",
+    "description": "Our services are tools built for you. Drive, Photos and Send are just the beginning of a full family of products that put you back in charge of your privacy.",
+    "square1": {
+      "title": "Internxt Drive",
+      "subtitle": "The safest cloud storage for all your files, photos, and more",
+      "description": "Take back control of your files and data with Internxt Drive. Storing and backing up your files in complete privacy couldn’t be any easier. Modern cloud storage meets military-grade encryption.",
+      "cta": "Save with Drive"
     },
-    "cta": {
-      "drive": "Explore Drive",
-      "photos": "Discover Photos",
-      "send": "Try Send"
+    "square2": {
+      "title": "Internxt Photos",
+      "subtitle": "Secure online photo storage for all your picture-perfect moments",
+      "description": "Relive, share, and keep your best memories safe all in one place with Internxt Photos. Always have your photos on hand and conveniently sync images back and forth between devices.",
+      "cta": "Sync with Photos"
     },
-    "feature1": {
-      "title": { "line1": "Secure", "line2": "by design" },
-      "description": "Your files are fragmented & encrypted before leaving your device. No tricks, no hidden things, private by default, secure by design, that’s Internxt. Say hello to Web3.",
-      "cta": "How zero-knowledge works"
-    },
-    "feature2": {
-      "title": { "line1": "Multi", "line2": "device" },
-      "description": "Access the whole family of apps adapted for all your devices to suit all your needs.",
-      "cta": "Download apps"
-    },
-    "feature3": {
-      "title": { "line1": "Privacy, that's", "line2": "the question" },
-      "description": "Unlike other competitors, our business model is not based on ads, but on you. We don’t access or sell your data.",
-      "cta": "Privacy at Internxt"
+    "square3": {
+      "title": "Internxt Send",
+      "subtitle": "Encrypt, share, and send large files with absolute certainty",
+      "description": "Send allows you to end-to-end encrypt and share large files fast without worrying about the security of your documents, images, or videos. Transfer to anyone in total confidentiality.",
+      "cta": "Share with Send"
     }
   },
   "InvestorsSection": {

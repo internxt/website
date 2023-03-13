@@ -7,7 +7,17 @@ import cookies from '../../lib/cookies';
 import setUTM from '../../lib/conversions';
 import styles from './Footer.module.scss';
 
-export default function Footer({ textContent, lang, hideNewsletter, darkMode }) {
+export default function Footer({
+  textContent,
+  lang,
+  hideNewsletter,
+  darkMode,
+}: {
+  textContent: any;
+  lang: string;
+  hideNewsletter?: boolean;
+  darkMode?: boolean;
+}) {
   const [consentCookie, setConsentCookie] = React.useState(true);
 
   const handleAcceptCookies = () => {
