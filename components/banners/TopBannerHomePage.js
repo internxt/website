@@ -18,11 +18,11 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
 
   const textForWeb = () => {
     if (lang === 'en') {
-      return '90% discount on 2TB plan';
+      return 'Get 90% off our 2TB plan for one year!';
     } else if (lang === 'es') {
-      return '90% de descuento en el plan de 2TB';
+      return '90% de descuento en el plan de 2TB por un año';
     } else if (lang === 'fr') {
-      return '90% de réduction sur le plan 2TB';
+      return '90% de réduction sur le plan 2TB pour un an';
     }
   };
 
