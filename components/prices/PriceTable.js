@@ -136,9 +136,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   };
 
   return (
-    <section className="bg-gray-1">
-      <div className="flex flex-col items-center ">
-        <h1 className="px-4 pt-36 text-center text-5xl">
+    <section id="priceTable" className="bg-gray-1">
+      <div className="flex flex-col items-center py-20">
+        <h1 className="text-center text-4xl font-semibold">
           {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
         </h1>
         <button
@@ -203,9 +203,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="flex px-6">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
             {billingFrequency === -1 ? (
-              <div className="flex flex-row flex-wrap items-end justify-center pt-10">
+              <>
                 <PriceCard
                   planType="individual"
                   storage={pricings.individuals.lifetime2TB.storage}
@@ -236,9 +236,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   lang={lang}
                   country={country}
                 />
-              </div>
+              </>
             ) : (
-              <div className="flex flex-row flex-wrap items-end justify-center pt-10">
+              <>
                 <PriceCard
                   planType="individual"
                   storage={pricings.individuals.free.storage}
@@ -292,7 +292,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                     country={country}
                   />
                 )}
-              </div>
+              </>
             )}
           </div>
         </Transition>
@@ -339,7 +339,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             />
           </div>
         </Transition>
-        <div className="flex flex-col items-center  justify-center space-y-8 py-20 text-center md:flex-row md:space-y-0 md:space-x-32">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-16">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>

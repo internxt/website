@@ -6,8 +6,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { checkout, goToLoginURL } from '../../lib/auth';
-import { isMobile } from 'react-device-detect';
+import { checkout } from '../../lib/auth';
 
 export default function PriceCard({
   planType,
@@ -42,13 +41,6 @@ export default function PriceCard({
     }
   };
 
-  const onOfferClick = () => {
-    checkout({
-      planId: getPlanId(stripeObject),
-      couponCode: 'G8Ti4z1k',
-    });
-  };
-
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
@@ -69,7 +61,7 @@ export default function PriceCard({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center  bg-white p-4 pt-6
+        className={`info flex flex-col items-center justify-center  rounded-t-2xl bg-white bg-cover p-4 pt-6
         `}
       >
         <div

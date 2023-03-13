@@ -33,7 +33,7 @@ const Countdown = ({ textColor }) => {
 
   return (
     <div id="countdown" className={`flex text-${textColor}`}>
-      <div className="flex flex-row items-end space-x-1 text-2xl">
+      <div className="flex flex-row items-end space-x-2 text-2xl">
         <div id={'days'} className={`days delay-350  font-semibold transition-colors duration-150`}>
           -
         </div>

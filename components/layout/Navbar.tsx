@@ -492,7 +492,7 @@ export default function Navbar(props: NavbarProps) {
             {props.cta[0] === 'Hide Login' ? null : (
               <button
                 onClick={() => goToLoginURL()}
-                className={`mr-2 hidden whitespace-nowrap rounded-full border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
+                className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'border-white text-white focus:opacity-80'
                     : 'border-primary text-primary active:border-primary-dark active:text-primary-dark'
@@ -506,7 +506,7 @@ export default function Navbar(props: NavbarProps) {
               <button
                 onClick={() => goToSignUpURL()}
                 id="get-started-link"
-                className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
+                className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
                     : 'bg-primary text-white active:bg-primary-dark'
@@ -526,7 +526,7 @@ export default function Navbar(props: NavbarProps) {
                     planId: getPlanId(stripeObject),
                   })
                 }
-                className={`flex justify-center rounded-full border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
+                className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
                     : 'bg-primary text-white active:bg-primary-dark'
