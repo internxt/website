@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Alarm, Coin, CreditCard, Detective } from 'phosphor-react';
 import Countdown from '../components/Countdown';
@@ -23,40 +23,45 @@ const HeroSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden pt-12 md:pt-24">
+    <section className="overflow-hidden pt-12">
       <div className="flex flex-col items-center justify-center space-y-10 py-24 px-6 md:flex-row md:space-y-0 md:space-x-48">
-        <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 md:items-start">
-          <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
-            <Alarm size={32} className="mr-4 text-primary" />
-            <Countdown textColor={'black'} />
-          </div>
-          <div className="flex flex-col space-y-16">
-            <div className="flex flex-col text-center md:text-start">
-              <p className="text-7xl font-bold">{textContent.title.line1}</p>
-              <p className="text-7xl font-bold text-primary">{textContent.title.line2}</p>
+        <div className="flex flex-col space-y-10">
+          <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 md:items-start">
+            <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
+              <Alarm size={32} className="mr-4 text-primary" />
+              <Countdown textColor={'black'} />
             </div>
-            <div className="flex flex-col">
-              {feeds.map((feed) => (
-                <div className="flex flex-row items-center space-x-4" key={feed.title}>
-                  <feed.icon size={32} className="text-primary" />
-                  <p className="text-xl font-medium text-gray-80">{feed.title}</p>
-                </div>
-              ))}
+            <div className="flex flex-col space-y-16">
+              <div className="flex flex-col text-center md:text-start">
+                <p className="text-7xl font-bold">{textContent.title.line1}</p>
+                <p className="text-7xl font-bold text-primary">{textContent.title.line2}</p>
+              </div>
+              <div className="flex flex-col space-y-4">
+                {feeds.map((feed) => (
+                  <div className="flex flex-row items-center space-x-4" key={feed.title}>
+                    <feed.icon size={32} className="text-primary" />
+                    <p className="text-xl font-medium text-gray-80">{feed.title}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <button
-            className="flex rounded-lg bg-primary px-5 py-3 font-semibold text-white"
-            onClick={() =>
-              checkout({
-                planId: 'plan_FkTXxEg3GZW0pg',
-                couponCode: TWOTB_OFF_COUPON,
-              })
-            }
-          >
-            {textContent.cta}
-          </button>
+          <div className="flex flex-col space-x-8 md:flex-row md:items-center md:justify-center">
+            <button
+              className="flex w-full items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
+              onClick={() =>
+                checkout({
+                  planId: 'plan_FkTXxEg3GZW0pg',
+                  couponCode: TWOTB_OFF_COUPON,
+                })
+              }
+            >
+              {textContent.cta.title}
+            </button>
+            <p className="max-w-[275px] text-sm text-gray-50">{textContent.cta.description}</p>
+          </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1 shadow-2xl">
           <Image
             alt="Woman with laptop"
             src="/images/pricing/WomanWithLaptop.png"

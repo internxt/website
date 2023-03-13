@@ -183,7 +183,7 @@ export function checkout({ planId, couponCode, mode }: PaymentCheckoutConfig): v
     couponCode && params.set('couponCode', couponCode);
     params.set('mode', mode ? mode : 'subscription');
 
-    const checkoutUrl = getAuthFlowLoginURL({
+    const checkoutUrl = getAuthFlowCreateUserURL({
       redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
       enableAutoSubmit: false,
     });

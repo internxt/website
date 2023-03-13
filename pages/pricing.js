@@ -7,6 +7,7 @@ import cookies from '../lib/cookies';
 import axios from 'axios';
 import FAQSection from '../components/pricing/FAQSection';
 import HeroSection from '../components/pricing/HeroSection';
+import CtaSection from '../components/pricing/CtaSection';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -55,6 +56,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       />
 
       <FAQSection textContent={textContent.FaqSection} />
+
+      <CtaSection textContent={textContent.CtaSection} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
