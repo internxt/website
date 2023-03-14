@@ -22,7 +22,11 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        bannerText={bannerLang.SignUpPwdCheckerBanner}
+        lang={lang}
+      />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>

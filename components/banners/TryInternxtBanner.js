@@ -15,14 +15,14 @@ const TryInternxtBanner = ({ textContent, url }) => {
   }, []);
 
   return (
-    <div
+    <section
       className={`${
         bannerVisible ? 'flex' : 'hidden'
       }  fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
       <div
-        className={`${bannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2 flex
-        w-full max-w-[800px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl text-neutral-900`}
+        className={`${bannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2
+        flex w-full max-w-[800px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl text-neutral-900`}
         style={{
           backgroundImage: `url(/images/virus-scanner/banner-bg.png)`,
           backgroundPosition: 'center',
@@ -64,7 +64,7 @@ const TryInternxtBanner = ({ textContent, url }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
