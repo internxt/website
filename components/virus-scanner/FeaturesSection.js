@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import SignUpBanner from '../banners/SignUpBanner';
 
-const FeaturesSection = ({ textContent, lang }) => {
+const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const maliciousMalwareText = textContent.scanFiles.description.split('malicious malware')[0];
 
   const maliciousMalware = textContent.scanFiles.description.substr(
@@ -12,6 +13,7 @@ const FeaturesSection = ({ textContent, lang }) => {
   return (
     <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-4 lg:p-16">
+        <SignUpBanner textContent={bannerText} lang={lang} />
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
           <div className="flex flex-col items-center space-y-6 px-4 text-center">

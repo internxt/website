@@ -22,7 +22,11 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        bannerText={bannerLang.SignUpVirusScannerBanner}
+        lang={lang}
+      />
 
       <BannersSection textContent={langJson.BannersSection} lang={lang} />
 
