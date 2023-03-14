@@ -4,5 +4,10 @@
     "subtitle": "90% de réduction sur notre plan 2 To avec le code VDAY",
     "cta": "Obtenez l'offre",
     "toast": "Copié sur le presse-papiers"
+  },
+  "tryOutInternxtGeneralBanner": {
+    "title": "Internxt",
+    "description": "Stockage en nuage basé sur la confidentialité.",
+    "cta": "Essayez-le gratuitement"
   }
 }
