@@ -9,5 +9,10 @@
     "title": "Prueba Internxt",
     "description": "Almacenamiento seguro de archivos con antivirus integrado.",
     "cta": "Regístrate gratis"
+  },
+  "tryOutInternxtGeneralBanner": {
+    "title": "Pásate a Internxt",
+    "description": "Almacenamiento seguro en la nube basado en la privacidad.",
+    "cta": "Pruébalo gratis"
   }
 }
