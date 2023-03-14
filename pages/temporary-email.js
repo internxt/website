@@ -27,7 +27,7 @@ const TempEmail = ({ metatagsDescriptions, footerLang, navbarLang, lang, bannerL
 
       <HeroSection />
 
-      <InfoSection />
+      <InfoSection bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
       <ToolsSection lang={lang} />
 

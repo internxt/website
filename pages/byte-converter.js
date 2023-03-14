@@ -26,7 +26,11 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <ExplanationSection textContent={langJson.ExplanationSection} lang={lang} />
+      <ExplanationSection
+        textContent={langJson.ExplanationSection}
+        bannerText={bannerLang.SignUpByteConverterBanner}
+        lang={lang}
+      />
 
       <CtaSection textContent={langJson.ctaSection1} />
 
