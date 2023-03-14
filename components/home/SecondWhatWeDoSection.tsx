@@ -6,7 +6,7 @@ import RevealX from '../components/RevealX';
 
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="z-10 flex flex-col items-center bg-gray-1 py-20 text-black">
         <RevealY className="space-y-16 px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">

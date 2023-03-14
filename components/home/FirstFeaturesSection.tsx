@@ -6,7 +6,7 @@ import RevealY from '../components/RevealY';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
   return (
-    <section className="bg-gray-1">
+    <section className="overflow-hidden bg-gray-1">
       <RevealY className="content flex flex-col items-center space-y-6 px-5 py-20">
         <div className="flex w-full flex-shrink-0 flex-col items-center justify-center text-center">
           <h2 className="mb-6 text-4xl font-medium sm:text-5xl">

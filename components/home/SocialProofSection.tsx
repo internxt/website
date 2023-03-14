@@ -2,7 +2,7 @@
 import React from 'react';
 
 const SocialProofSection = ({ textContent, lang }) => (
-  <section>
+  <section className="overflow-hidden">
     <div className="content">
       <div className="flex w-full flex-shrink-0 flex-col items-center justify-center px-10 py-12 text-center md:px-0 md:py-24">
         <h3 className="mb-8 text-4xl font-medium">{textContent.title}</h3>

@@ -34,7 +34,7 @@ export default function HeroSection({ textContent, lang }) {
   });
 
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="mx-4 border-b border-gray-5 pt-36 lg:mx-10 xl:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row">
           <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
