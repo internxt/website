@@ -206,8 +206,13 @@ export default function HeroSection({ textContent, lang }) {
 
             {/* File preview */}
             <div
-              className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20 bottom-28`}
-              style={{ filter: 'drop-shadow(16px 32px 24px rgba(0,0,0,.1))', width: '164px', height: '178px' }}
+              className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20`}
+              style={{
+                filter: 'drop-shadow(16px 32px 24px rgba(0,0,0,.1))',
+                width: '164px',
+                height: '178px',
+                bottom: '120px',
+              }}
             >
               <Image
                 loading="eager"
@@ -252,7 +257,7 @@ export default function HeroSection({ textContent, lang }) {
           </div> */}
         </div>
 
-        <div className="relative left-1/2 w-screen -translate-x-1/2">
+        <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-white">
           <div className="flex xl:hidden">
             <Marquee className="bg-white" gradientColor={[255, 255, 255]} gradientWidth="32px" speed={30}>
               <div className="featured flex w-full flex-row p-6">
