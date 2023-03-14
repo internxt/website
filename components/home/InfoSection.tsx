@@ -28,7 +28,7 @@ const InfoSection = ({ textContent, lang }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center justify-center space-y-20 py-16">
+      <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
         <RevealY className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="text-5xl font-semibold">{textContent.title}</p>
           <p className="text-xl">{textContent.description}</p>

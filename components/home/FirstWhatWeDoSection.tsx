@@ -35,7 +35,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
-        <RevealY className="flex flex-col items-center justify-center md:flex-row md:space-x-20">
+        <RevealY className="flex flex-col-reverse items-center justify-center space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20">
           <div className="flex h-[520px] w-[496px] flex-col rounded-3xl bg-black"></div>
           <div className="flex w-full max-w-[390px] flex-col space-y-6">
             <p className="text-5xl font-semibold">{textContent.card1.title}</p>
@@ -72,7 +72,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             </RevealX>
           </div>
         </RevealY>
-        <RevealY className="flex flex-col items-center justify-center md:flex-row md:space-x-20">
+        <RevealY className="flex flex-col-reverse items-center justify-center space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20">
           <div className="flex h-[520px] w-[496px] flex-col rounded-3xl bg-black"></div>
           <div className="flex w-full max-w-[390px] flex-col space-y-6">
             <p className="text-5xl font-semibold">{textContent.card3.title}</p>
