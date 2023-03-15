@@ -15,6 +15,7 @@ import TestimonialsSection from '../components/home/TestimonialsSection';
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const [downloadUrl, setDownloadUrl] = useState(null);
+  console.log(process.env.NODE_ENV);
 
   function getOS() {
     const osList = [

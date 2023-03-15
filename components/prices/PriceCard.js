@@ -6,7 +6,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { checkout } from '../../lib/auth';
+import { checkout, goToSignUpURL } from '../../lib/auth';
 
 export default function PriceCard({
   planType,
@@ -216,28 +216,42 @@ export default function PriceCard({
             </div>
           </div>
         </div>
-
+      </div>
+      <div
+        tabIndex={0}
+        className="flex w-full flex-row justify-center bg-white px-4 pb-4"
+        // title={price <= 0 ? contentText.cta.signUpNow : contentText.cta.get + ' ' + storage}
+      >
         <div
-          tabIndex={0}
           onClick={() => {
-            checkout({
-              planId: getPlanId(stripeObject),
-              mode: billingFrequency === -1 ? 'payment' : 'subscription',
-            });
+            if (cta[1].startsWith('https')) {
+              goToSignUpURL();
+            } else {
+              checkout({
+                planId: getPlanId(stripeObject),
+                mode: billingFrequency === -1 ? 'payment' : 'subscription',
+              });
+            }
           }}
-          className="flex w-full flex-row"
+          className="subscribePlan flex w-full cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base"
         >
-          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
-            <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {popular && billingFrequency === 12 ? contentText.cta.discount : contentText.cta.get} {storage}
-            </p>
+          <p
+            className={`${price <= 0 ? 'hidden' : 'flex'} ${
+              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
+            }`}
+          >
+            {contentText.cta.get + ' ' + storage}
+          </p>
 
-            <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.signUpNow}
-            </p>
+          <p
+            className={`${price <= 0 ? 'flex' : 'hidden'} ${
+              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
+            }`}
+          >
+            {contentText.cta.signUpNow}
+          </p>
 
-            <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
-          </div>
+          <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
         </div>
       </div>
 

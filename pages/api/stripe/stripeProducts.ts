@@ -2,7 +2,7 @@ import bytes from 'bytes';
 
 const isTest = process.env.NODE_ENV === 'development';
 
-const STRIPE_PRODUCT = {
+export const STRIPE_PRODUCT = {
   lifetime2TB: {
     production: 'price_1MAaFMFAOdcgaBMQiiVP4aMC',
     debug: 'price_1JZBJVFAOdcgaBMQPDjuJsEh',
@@ -349,11 +349,12 @@ export function getProductProperties(product) {
   return STRIPE_PRODUCT[product].properties;
 }
 
+//!TODO: Fix the conditional because always is development and the products aren't created in stripe
 export function getStripeProduct(opt) {
   const { product, anonymousId, impactId } = opt;
   const selectedProduct = STRIPE_PRODUCT[product];
-  selectedProduct.session.line_items[0].price =
-    process.env.NODE_ENV === 'production' ? selectedProduct.production : selectedProduct.debug;
+  selectedProduct.session.line_items[0].price = selectedProduct.production;
+  // process.env.NODE_ENV.trim() === 'production' ? selectedProduct.production : selectedProduct.debug;
   const productProperties = getProductProperties(product);
   selectedProduct.session.metadata = productProperties;
   Object.assign(selectedProduct.session.metadata, {
@@ -365,7 +366,8 @@ export function getStripeProduct(opt) {
 }
 
 export function getPlanId(stripeObject: Record<string, string>): string {
-  return process.env.NODE_ENV === 'production'
-    ? STRIPE_PRODUCT[stripeObject.product].production
-    : STRIPE_PRODUCT[stripeObject.product].debug;
+  return STRIPE_PRODUCT[stripeObject.product].production;
+  // process.env.NODE_ENV.trim() === 'production'
+  //   ? STRIPE_PRODUCT[stripeObject.product].production
+  //   : STRIPE_PRODUCT[stripeObject.product].debug;
 }
