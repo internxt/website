@@ -7,7 +7,7 @@ describe('Pricing landing', () => {
   const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
   const TWOTB_OFF_COUPON = 'P8PSpVs6';
 
-  const params = ({ planId, couponCode, mode }: { planId: string; couponCode?: string; mode?: string }) => {
+  const url = ({ planId, couponCode, mode }: { planId: string; couponCode?: string; mode?: string }) => {
     return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(
       DRIVE_WEB_URL + '/checkout-plan',
     )}${encodeURIComponent(
@@ -34,7 +34,7 @@ describe('Pricing landing', () => {
           cy.get('#priceTable').contains('Monthly').click();
           cy.get('#priceTable').contains('Get 20GB').click();
 
-          cy.url().should('eq', params({ planId: STRIPE_PRODUCT.GB201.production }));
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB201.production }));
         });
       });
       describe('Annual', () => {
@@ -42,7 +42,7 @@ describe('Pricing landing', () => {
           cy.visit('/pricing', { timeout: 10000 });
           cy.get('#priceTable').contains('Get 20GB').click();
 
-          cy.url().should('eq', params({ planId: STRIPE_PRODUCT.GB2012.production }));
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB2012.production }));
         });
       });
     });
@@ -54,7 +54,7 @@ describe('Pricing landing', () => {
           cy.get('#priceTable').contains('Monthly').click();
           cy.get('#priceTable').contains('Get 200GB').click();
 
-          cy.url().should('eq', params({ planId: STRIPE_PRODUCT.GB2001.production }));
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB2001.production }));
         });
       });
       describe('Annual', () => {
@@ -62,7 +62,7 @@ describe('Pricing landing', () => {
           cy.visit('/pricing', { timeout: 10000 });
           cy.get('#priceTable').contains('Get 200GB').click();
 
-          cy.url().should('eq', params({ planId: STRIPE_PRODUCT.GB20012.production }));
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB20012.production }));
         });
       });
     });
@@ -74,7 +74,7 @@ describe('Pricing landing', () => {
           cy.get('#priceTable').contains('Monthly').click();
           cy.get('#priceTable').contains('Get 2TB').click();
 
-          cy.url().should('eq', params({ planId: STRIPE_PRODUCT.TB21.production }));
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.TB21.production }));
         });
       });
       describe('Annual', () => {
@@ -82,7 +82,7 @@ describe('Pricing landing', () => {
           cy.visit('/pricing', { timeout: 10000 });
           cy.contains('Get 90% off 2TB').click();
 
-          cy.url().should('eq', params({ planId: STRIPE_PRODUCT.TB212.production, couponCode: TWOTB_OFF_COUPON }));
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.TB212.production, couponCode: TWOTB_OFF_COUPON }));
         });
       });
     });
@@ -95,7 +95,7 @@ describe('Pricing landing', () => {
 
           cy.url().should(
             'eq',
-            params({ planId: STRIPE_PRODUCT.lifetime2TB.production, mode: STRIPE_PRODUCT.lifetime2TB.mode }),
+            url({ planId: STRIPE_PRODUCT.lifetime2TB.production, mode: STRIPE_PRODUCT.lifetime2TB.mode }),
           );
         });
       });
@@ -107,7 +107,7 @@ describe('Pricing landing', () => {
 
           cy.url().should(
             'eq',
-            params({ planId: STRIPE_PRODUCT.lifetime5TB.production, mode: STRIPE_PRODUCT.lifetime5TB.mode }),
+            url({ planId: STRIPE_PRODUCT.lifetime5TB.production, mode: STRIPE_PRODUCT.lifetime5TB.mode }),
           );
         });
       });
@@ -119,7 +119,7 @@ describe('Pricing landing', () => {
 
           cy.url().should(
             'eq',
-            params({ planId: STRIPE_PRODUCT.lifetime10TB.production, mode: STRIPE_PRODUCT.lifetime10TB.mode }),
+            url({ planId: STRIPE_PRODUCT.lifetime10TB.production, mode: STRIPE_PRODUCT.lifetime10TB.mode }),
           );
         });
       });
