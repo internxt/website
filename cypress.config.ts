@@ -6,7 +6,6 @@ export default defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'http://localhost:3001',
-    chromeWebSecurity: false,
     viewportWidth: 1500,
     viewportHeight: 660,
     scrollBehavior: 'center',

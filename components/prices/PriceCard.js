@@ -217,14 +217,10 @@ export default function PriceCard({
           </div>
         </div>
       </div>
-      <div
-        tabIndex={0}
-        className="flex w-full flex-row justify-center bg-white px-4 pb-4"
-        // title={price <= 0 ? contentText.cta.signUpNow : contentText.cta.get + ' ' + storage}
-      >
+      <div tabIndex={0} className="flex w-full flex-row justify-center bg-white px-4 pb-4">
         <div
           onClick={() => {
-            if (cta[1].startsWith('https')) {
+            if (cta[1] === 'Free plan') {
               goToSignUpURL();
             } else {
               checkout({
