@@ -8,7 +8,6 @@ import InfoSection from '../components/converter-tool/InfoSection';
 import ConversionTableSection from '../components/converter-tool/ConversionTableSection';
 import FaqSection from '../components/converter-tool/FaqSection';
 import Footer from '../components/layout/Footer';
-import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -18,11 +17,6 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
       <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
-
-      <TryInternxtBanner
-        textContent={bannerLang.tryOutInternxtGeneralBanner}
-        url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
-      />
 
       <HeroSection textContent={langJson.HeroSection} />
 
