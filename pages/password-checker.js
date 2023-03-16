@@ -13,6 +13,13 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
     <Layout segmentName="Password Checker" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
+      <TryInternxtBanner
+        textContent={
+          lang === 'en' ? bannerLang.tryOutInternxtPasswordCheckerBanner : bannerLang.tryOutInternxtGeneralBanner
+        }
+        url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtpw'}
+      />
+
       <HeroSection textContent={langJson.HeroSection} />
 
       <FeaturesSection

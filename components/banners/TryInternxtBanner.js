@@ -11,7 +11,7 @@ const TryInternxtBanner = ({ textContent, url }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsBannerVisible(true);
-    }, 1000);
+    }, 15000);
   }, []);
 
   return (

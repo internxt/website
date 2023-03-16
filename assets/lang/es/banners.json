@@ -27,5 +27,11 @@
     "line1": "Usa miles de bytes en la nube de almacenamiento segura",
     "blueText": "de Internxt"
   },
-  "SignUpTempMailBanner": { "line1": "Mantén tu correo limpio y tus archivos a salvo", "blueText": "con Internxt" }
+  "SignUpTempMailBanner": { "line1": "Mantén tu correo limpio y tus archivos a salvo", "blueText": "con Internxt" },
+  "GeneralBanner": {
+    "title": "Antes de que te vayas...",
+    "description": "Obtén un 90% de descuento en nuestro plan de 2TB durante un año.",
+    "cta": "Sí, quiero la oferta",
+    "ctaCancel": "No, gracias"
+  }
 }

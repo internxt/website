@@ -5,7 +5,7 @@ import Script from 'next/script';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
-import TryInternxtBanner from '../components/banners/TryInternxtBanner';
+import GeneralBanner from '../components/banners/GeneralBanner';
 
 const excludedPaths = ['/byte-converter', '/virus-scanner', '/password-checker', '/temporary-email'];
 
@@ -21,12 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
-        {isExcludedPath ? null : (
-          <TryInternxtBanner
-            textContent={bannerLang.tryOutInternxtGeneralBanner}
-            url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
-          />
-        )}
+        {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />}
         <Intercom />
       </GlobalUIManager>
     </LiveChatLoaderProvider>
