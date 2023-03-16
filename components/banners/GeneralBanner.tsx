@@ -12,7 +12,7 @@ const GeneralBanner = ({ textContent }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsBannerVisible(true);
-    }, 500);
+    }, 20000);
   }, []);
 
   return (
@@ -40,7 +40,7 @@ const GeneralBanner = ({ textContent }) => {
               <p className="text-5xl font-bold text-white ">{textContent.title}</p>
               <p className=" pt-4 text-3xl font-medium text-white">{textContent.description}</p>
             </div>
-            <div className="flex flex-col items-center space-y-6">
+            <div className="flex flex-col items-center justify-center space-y-6">
               <div
                 className="relative flex cursor-pointer flex-col items-center justify-center rounded-full bg-primary py-4 px-9 text-base text-white focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
