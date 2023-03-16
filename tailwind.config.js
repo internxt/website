@@ -188,6 +188,8 @@ module.exports = {
       animation: {
         'fade-in-r-large': '1s cubic-bezier(.25,.65,.35,1) fade-r-large',
         'fade-in-r': '0.75s cubic-bezier(.25,.65,.35,1) fade-r',
+        'scroll-y': '40s linear scroll-y normal infinite',
+        'scroll-y-reverse': '40s linear scroll-y reverse infinite',
       },
       keyframes: {
         'fade-r-large': {
@@ -198,6 +200,25 @@ module.exports = {
           '0%': { transform: 'translateX(24px)', opacity: 0 },
           '100%': { transform: 'translateX(0px)', opacity: 100 },
         },
+        'scroll-y': {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(25%)' },
+        },
+      },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '3/4': '3 / 4',
+        '2/1': '2 / 1',
+        '1/2': '1 / 2',
+        '16/9': '16 / 9',
+        '9/16': '9 / 16',
+      },
+      dropShadow: {
+        'float-soft': [
+          '0 2px 0 rgba(255,255,255,0.25)',
+          '-80px 100px 24px rgba(0, 0, 0, 0.1)',
+          '-40px 80px 40px rgba(0, 0, 0, 0.05)',
+        ],
       },
     },
   },

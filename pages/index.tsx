@@ -16,6 +16,7 @@ import SecondFeaturesSection from '../components/home/SecondFeaturesSection';
 import SecondWhatWeDoSection from '../components/home/SecondWhatWeDoSection';
 import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
 import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
+import FileParallaxSection from '../components/home/FileParallaxSection';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
@@ -52,9 +53,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
 
       <InfoSection textContent={langJson.InfoSection} lang={lang} />
 
-      <div className="h-96 items-center justify-center bg-black">
-        <p className="text-9xl text-white">mask group</p>
-      </div>
+      <FileParallaxSection />
 
       {/* !TODO: Finish the design */}
       <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
