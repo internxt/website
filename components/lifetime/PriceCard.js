@@ -6,8 +6,9 @@
 import React, { useEffect, useState } from 'react';
 import { checkout, goToLoginURL } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { Check } from 'phosphor-react';
 
-const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
+const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang, actualPrice }) => {
   const [stripeObject, setStripeObject] = useState({});
 
   const billingFrequencyList = {
@@ -49,44 +50,43 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-xs font-semibold text-white`}
       >
-        {contentText.mostPopular}
+        {contentText.mostPopularPlan}
       </div>
 
-      <div className={`info flex flex-col items-center justify-center bg-white p-6 ${popular ? 'rounded-t-2xl' : ''}`}>
+      <div
+        className={`info flex flex-col items-center justify-center bg-white p-6 ${
+          popular ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover' : ''
+        }`}
+      >
         <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full bg-blue-10 py-1 px-4 pb-0.5 font-semibold text-blue-60`}
+          className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full ${
+            popular ? 'text-primary' : 'text-gray-50'
+          } bg-neutral-20 py-1 px-4 pb-0.5 font-semibold`}
         >
-          <p>
-            {storage}
-            <span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>
-              {contentText.perUserSlash}
-            </span>
-          </p>
+          <p>{storage}</p>
         </div>
 
-        <div className={`planPrice flex flex-col items-center justify-center p-10`}>
+        <div className={`planPrice flex flex-col items-center justify-center p-5`}>
           <div
             className={`priceBreakdown flex flex-col items-center
             `}
           >
-            <p className="flex flex-row items-start space-x-0.5 font-semibold text-neutral-700">
+            <p
+              className={`flex flex-row items-start space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}
+            >
+              <span className={`currency`}>{currency()}</span>
+              <span className="price text-4xl font-bold">{actualPrice}</span>
+            </p>
+          </div>
+          <div
+            className={`priceBreakdown flex flex-col items-center
+            `}
+          >
+            <p className="flex flex-row items-start space-x-0.5 font-semibold text-gray-50 line-through">
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-              <span className="price text-4xl font-bold">{price}</span>
+              <span className="price text-2xl font-semibold">{price}</span>
             </p>
             <p className="pt-2 text-xs font-normal text-gray-50">{contentText.oneTime}</p>
-          </div>
-
-          <div
-            className={`totalBilling ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-neutral-80`}
-          >
-            <p className={`${price <= 0 ? 'hidden' : ''}`}>
-              <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">{currency()}</span>
-                {totalBilled}{' '}
-              </span>
-            </p>
           </div>
         </div>
 
@@ -114,36 +114,11 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2">
-          <div className="flex flex-row items-start space-x-2 font-semibold">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkNeutral500.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span className={'flex'}>
-              {contentText.features.enjoyForever.enjoy} {storage} {contentText.features.enjoyForever.forever}
-            </span>
-          </div>
-
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkNeutral500.svg"
-              draggable="false"
-              alt="check icon"
-            />
-
-            <span>{contentText.features.moneyBack}</span>
-          </div>
-
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -155,7 +130,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -167,23 +142,12 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
 
             <span>{contentText.features.allServices}</span>
-          </div>
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkNeutral500.svg"
-              draggable="false"
-              alt="check icon"
-            />
-
-            <span>{contentText.features.dataAccess}</span>
           </div>
         </div>
       </div>

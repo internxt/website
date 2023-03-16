@@ -2,12 +2,17 @@
   "HeroSection": {
     "title": "Get a lifetime Internxt plan!",
     "description": "Secure all your files and memories forever with a single, one-time payment.",
-    "cta": "Browse lifetime deals"
+    "cta": "Get 25% OFF now!"
   },
   "PaymentSection": {
-    "title": "Explore all of our exclusive lifetime plans",
+    "limitedOffer": "Limited time offer!",
+    "title": "Explore all of our exclusive lifetime plans.",
     "description": "This week only, buy once and get privacy and security forever.",
-    "securePayment": "100% Secure payment, powered by Stripe"
+    "securePayment": "100% Secure payment, powered by Stripe",
+
+    "firstFeed": "30-day money-back guarantee",
+    "secondFeed": "100% secure payment",
+    "thirdFeed": "Anonymous account creation"
   },
   "GetLifetimeSection": {
     "title": "Life is not short! But this limited-time deal is...",
