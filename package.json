@@ -10,6 +10,7 @@
     "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
     "prod": "next export",
+    "cypress": "cypress open",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
