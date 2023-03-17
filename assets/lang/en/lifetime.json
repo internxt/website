@@ -6,7 +6,7 @@
   },
   "PaymentSection": {
     "limitedOffer": "Limited time offer!",
-    "title": { "blueText": "Get 25% OFF", "normalText": " all our exclusive lifetime plans." },
+    "title": { "blueText": "Get 25% OFF", "normalText": " all our exclusive lifetime plans" },
     "description": "Buy once and get privacy and security forever.",
     "securePayment": "100% Secure payment, powered by Stripe",
 
