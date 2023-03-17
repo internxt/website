@@ -188,8 +188,8 @@ module.exports = {
       animation: {
         'fade-in-r-large': '1s cubic-bezier(.25,.65,.35,1) fade-r-large',
         'fade-in-r': '0.75s cubic-bezier(.25,.65,.35,1) fade-r',
-        'scroll-y': '40s linear scroll-y normal infinite',
-        'scroll-y-reverse': '40s linear scroll-y reverse infinite',
+        'scroll-y': '60s linear scroll-y normal infinite',
+        'scroll-y-reverse': '60s linear scroll-y reverse infinite',
       },
       keyframes: {
         'fade-r-large': {
@@ -206,6 +206,7 @@ module.exports = {
         },
       },
       aspectRatio: {
+        '1/1': '1 / 1',
         '4/3': '4 / 3',
         '3/4': '3 / 4',
         '2/1': '2 / 1',
@@ -219,6 +220,7 @@ module.exports = {
           '-80px 100px 24px rgba(0, 0, 0, 0.1)',
           '-40px 80px 40px rgba(0, 0, 0, 0.05)',
         ],
+        float: ['-120px 100px 24px rgba(0, 0, 0, 0.1)'],
       },
     },
   },
