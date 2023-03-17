@@ -13,7 +13,8 @@ const PriceTable = ({ lang, country }) => {
       price: {
         '-1': '299',
       },
-      popular: false,
+      popular: true,
+      actualPrice: '224',
     },
     TB5: {
       stripeID: 'lifetime5TB',
@@ -21,7 +22,8 @@ const PriceTable = ({ lang, country }) => {
       price: {
         '-1': '499',
       },
-      popular: true,
+      popular: false,
+      actualPrice: '374',
     },
     TB10: {
       stripeID: 'lifetime10TB',
@@ -30,44 +32,49 @@ const PriceTable = ({ lang, country }) => {
         '-1': '999',
       },
       popular: false,
+      actualPrice: '749',
     },
   };
 
   return (
-    <section>
-      <div className="flex flex-col items-center">
-        <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center px-6">
-          <PriceCard
-            planType="individual"
-            storage={pricings.TB2.storage}
-            price={billingPrice(pricings.TB2.price)}
-            billingFrequency={billingFrequency}
-            cta={['checkout', `${pricings.TB2.stripeID}`]}
-            popular={pricings.TB2.popular}
-            lang={lang}
-            country={country}
-          />
-          <PriceCard
-            planType="individual"
-            storage={pricings.TB5.storage}
-            price={billingPrice(pricings.TB5.price)}
-            billingFrequency={billingFrequency}
-            cta={['checkout', `${pricings.TB5.stripeID}`]}
-            popular={pricings.TB5.popular}
-            lang={lang}
-            country={country}
-          />
-          <PriceCard
-            planType="individual"
-            storage={pricings.TB10.storage}
-            price={billingPrice(pricings.TB10.price)}
-            billingFrequency={billingFrequency}
-            cta={['checkout', `${pricings.TB10.stripeID}`]}
-            popular={pricings.TB10.popular}
-            lang={lang}
-            country={country}
-          />
-        </div>
+    <section className="overflow-hidden">
+      <div
+        id="priceTable"
+        className="content mb-10 flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
+      >
+        <PriceCard
+          planType="individual"
+          storage={pricings.TB5.storage}
+          price={billingPrice(pricings.TB5.price)}
+          billingFrequency={billingFrequency}
+          cta={['checkout', 'lifetime5TB']}
+          popular={pricings.TB5.popular}
+          lang={lang}
+          country={country}
+          actualPrice={pricings.TB5.actualPrice}
+        />
+        <PriceCard
+          planType="individual"
+          storage={pricings.TB2.storage}
+          price={billingPrice(pricings.TB2.price)}
+          billingFrequency={billingFrequency}
+          cta={['checkout', 'lifetime2TB']}
+          popular={pricings.TB2.popular}
+          lang={lang}
+          country={country}
+          actualPrice={pricings.TB2.actualPrice}
+        />
+        <PriceCard
+          planType="individual"
+          storage={pricings.TB10.storage}
+          price={billingPrice(pricings.TB10.price)}
+          billingFrequency={billingFrequency}
+          cta={['checkout', 'lifetime10TB']}
+          popular={pricings.TB10.popular}
+          lang={lang}
+          country={country}
+          actualPrice={pricings.TB10.actualPrice}
+        />
       </div>
     </section>
   );

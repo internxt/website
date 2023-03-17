@@ -61,6 +61,15 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
+  if (ctx.locale !== 'en') {
+    return {
+      redirect: {
+        destination: '/lifetime',
+        permanent: false,
+      },
+    };
+  }
+
   const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/en/lifetime.json`);
   const navbarLang = require(`../assets/lang/en/navbar.json`);
