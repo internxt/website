@@ -72,11 +72,10 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
             className={`priceBreakdown flex flex-col items-center
             `}
           >
-            <p
-              className={`flex flex-row items-start space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}
-            >
-              <span className={`currency`}>{currency()}</span>
+            <p className={`flex flex-row  space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}>
+              <span className={`currency items-start`}>{currency()}</span>
               <span className="price text-4xl font-bold">{actualPrice}</span>
+              <span className={`flex items-end justify-end pl-1`}>,25</span>
             </p>
           </div>
           <div
