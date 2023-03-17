@@ -6,7 +6,8 @@
 import React, { useEffect, useState } from 'react';
 import { checkout, goToLoginURL } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { Check } from 'phosphor-react';
+
+const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
 
 const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang, actualPrice }) => {
   const [stripeObject, setStripeObject] = useState({});
@@ -94,7 +95,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
-            checkout({ planId: getPlanId(stripeObject), mode: 'payment' });
+            checkout({ planId: getPlanId(stripeObject), couponCode: GENERAL_COUPON_DISCOUNT, mode: 'payment' });
           }}
           className="flex w-full flex-row"
         >
