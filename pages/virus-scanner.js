@@ -15,12 +15,12 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
     <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
+      <HeroSection textContent={langJson.HeroSection} lang={lang} />
+
       <TryInternxtBanner
         textContent={bannerLang.tryOutInternxtGeneralBanner}
         url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt'}
       />
-
-      <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}
