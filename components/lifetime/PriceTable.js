@@ -38,7 +38,10 @@ const PriceTable = ({ lang, country }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+      <div
+        id="priceTable"
+        className="content mb-10 flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
+      >
         <PriceCard
           planType="individual"
           storage={pricings.TB5.storage}
