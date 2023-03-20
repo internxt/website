@@ -8,6 +8,8 @@ import axios from 'axios';
 import FAQSection from '../components/pricing/FAQSection';
 import HeroSection from '../components/pricing/HeroSection';
 import CtaSection from '../components/pricing/CtaSection';
+import { stripeProducts } from './api/stripe/stripeProducts';
+import bytes from 'bytes';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, products }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -15,6 +17,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [country, setCountry] = useState('ES');
   const [isLifetime, setIsLifetime] = useState(false);
+
+  console.log('products', JSON.parse(products));
 
   async function getCountryCode() {
     const options = {
@@ -80,14 +84,14 @@ export async function getServerSideProps(ctx) {
     .then((res) => {
       return res.map((product) => {
         const id = product.interval + bytes(product.bytes);
-        if (product.interval === 'lifetime')
-          pushObjects[id] = {
-            storage: bytes(product.bytes),
-            price: product.amount / 100,
-            planId: product.id,
-            popular: id === 'lifetime2TB' ? true : false,
-            actualPrice: (product.amount * 75) / 100 / 100,
-          };
+
+        pushObjects[id] = {
+          storage: bytes(product.bytes),
+          price: product.amount / 100,
+          planId: product.id,
+          popular: id === 'lifetime2TB' ? true : false,
+          actualPrice: (product.amount * 75) / 100 / 100,
+        };
       });
     });
 
@@ -98,7 +102,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       textContent,
-      products: pushObjects,
+      products: JSON.stringify(pushObjects),
     },
   };
 }

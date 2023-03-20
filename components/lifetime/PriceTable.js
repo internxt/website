@@ -3,7 +3,6 @@ import PriceCard from './PriceCard';
 
 const PriceTable = ({ lang, country, products }) => {
   const billingFrequency = -1;
-  console.log('products in PriceTable', products);
 
   return (
     <section className="overflow-hidden">
