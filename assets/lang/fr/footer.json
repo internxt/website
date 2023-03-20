@@ -52,11 +52,14 @@
         "library": "Biblioteca",
         "writeForUs": "Escribe para nosotros",
         "cyberSecurityGlossary": "Glosario de ciberseguridad",
+        "cyberAwareness": "Cyber Awareness"
+      },
+      "tools": {
+        "title": "Free tools",
+        "temporaryEmail": "Courriel Temporaire",
         "fileVirusScan": "Scanner de virus",
         "passwordChecker": "Vérifier mot de passe",
-        "byteConverter": "Convertisseur d'octets",
-        "cyberAwareness": "Cyber Awareness",
-        "temporaryEmail": "Courriel Temporaire"
+        "byteConverter": "Convertisseur d'octets"
       }
     }
   },

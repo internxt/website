@@ -23,7 +23,12 @@ export default function FileParallaxSection() {
             } ${['z-[4]', 'z-[3]', 'z-[2]', 'z-1'][i]}`}
           >
             {col.concat(col, col, col).map((item, i) => (
-              <img src={`/images/home/files-parallax/${item}`} className="isolate w-52 rounded-lg" draggable={false} />
+              <img
+                key={i}
+                src={`/images/home/files-parallax/${item}`}
+                className="isolate w-52 rounded-lg"
+                draggable={false}
+              />
             ))}
           </div>
         ))}

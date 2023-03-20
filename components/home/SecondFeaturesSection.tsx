@@ -5,7 +5,6 @@ import { Gauge } from 'phosphor-react';
 
 const SecondFeaturesSection = ({ textContent }) => {
   const [cardIndex, setCardIndex] = React.useState(0);
-  const [itemSelected, setItemSelected] = React.useState(0);
 
   return (
     <section className="overflow-hidden bg-gray-1 py-24">
@@ -20,7 +19,6 @@ const SecondFeaturesSection = ({ textContent }) => {
                 } cursor-pointer flex-row items-center border-r-4  pr-8`}
                 onClick={() => {
                   setCardIndex(index);
-                  setItemSelected(index);
                 }}
               >
                 <p className="text-2xl font-medium">{info.title}</p>
@@ -42,7 +40,7 @@ const SecondFeaturesSection = ({ textContent }) => {
         </RevealX>
       </div>
       <div className="flex flex-col items-center justify-center space-y-10 px-5 lg:hidden">
-        {textContent.info.map((info, index) => (
+        {textContent.info.map((info) => (
           <div key={info.title} className={`revealY flex flex-col items-start space-y-6 rounded-2xl bg-white p-4`}>
             <Gauge className="text-primary" size={64} />
             <p className="text-4xl font-semibold">{info.title}</p>

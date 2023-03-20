@@ -120,9 +120,9 @@ export default function Footer({
                       className="flex flex-row items-center"
                     >
                       <div>{textContent.FooterSection.sections.products.send}</div>
-                      <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
+                      {/* <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
                         {textContent.FooterSection.new}
-                      </div>
+                      </div> */}
                     </a>
 
                     <Link href="/pricing" locale={lang} passHref>
@@ -220,24 +220,38 @@ export default function Footer({
                       <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                     </Link>
 
+                    <Link href="/cyber-awareness" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
+                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
+                  <div
+                    className={`flex flex-col space-y-1.5 text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                    }`}
+                  >
+                    <a
+                      href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {textContent.FooterSection.sections.tools.byteConverter}
+                    </a>
+
+                    <Link href="/privacy-directory" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                    </Link>
+
                     <Link href="/password-checker" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
+                      <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
                     </Link>
 
                     <Link href="/virus-scanner" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
-                    </Link>
-
-                    <Link href="/byte-converter" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
-                    </Link>
-
-                    <Link href="/temporary-email" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
-                    </Link>
-
-                    <Link href="/cyber-awareness" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                     </Link>
                   </div>
                 </div>
