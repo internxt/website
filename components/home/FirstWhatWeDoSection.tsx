@@ -29,8 +29,9 @@ const FirstWhatWeDoSection = ({ textContent }) => {
           <div className="flex w-full max-w-[390px] flex-col space-y-6">
             <p className="text-5xl font-semibold">{textContent.card3.title}</p>
             <p className="text-xl">{textContent.card3.description}</p>
-            <div className="flex flex-row items-center text-primary">
+            <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
               <p>{textContent.card3.cta}</p>
+              <CaretRight size={8} />
             </div>
           </div>
         </RevealY>
@@ -38,7 +39,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
           <div className="flex w-full max-w-[390px] flex-col space-y-6">
             <p className="text-5xl font-semibold">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
-            <div className="flex flex-row items-center text-primary">
+            <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
               <p>{textContent.card2.cta}</p>
               <CaretRight size={8} />
             </div>
@@ -75,10 +76,12 @@ const FirstWhatWeDoSection = ({ textContent }) => {
               <Referrals />
             </RevealX>
           </div>
-          <div className="flex w-full max-w-[390px] flex-col space-y-6">
-            <p className="text-5xl font-semibold">{textContent.card3.title}</p>
-            <p className="text-xl">{textContent.card3.description}</p>
-            <div className="flex flex-row items-center text-primary">
+          <div className="flex w-full flex-col space-y-5">
+            <div className="flex max-w-[390px] flex-col space-y-6">
+              <p className="text-5xl font-semibold">{textContent.card3.title}</p>
+              <p className="text-xl">{textContent.card3.description}</p>
+            </div>
+            <div className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white">
               <p>{textContent.card3.cta}</p>
             </div>
           </div>
