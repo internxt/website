@@ -92,10 +92,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Lifetime').click();
           cy.get('#priceTable').contains('Get 2TB').click();
 
-          cy.url().should(
-            'eq',
-            url({ planId: STRIPE_PRODUCT.lifetime2TB.production, mode: STRIPE_PRODUCT.lifetime2TB.mode }),
-          );
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.lifetime2TB.production, mode: 'payment' }));
         });
       });
       describe('When the plan is 5TB of space', () => {
@@ -104,10 +101,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Lifetime').click();
           cy.get('#priceTable').contains('Get 5TB').click();
 
-          cy.url().should(
-            'eq',
-            url({ planId: STRIPE_PRODUCT.lifetime5TB.production, mode: STRIPE_PRODUCT.lifetime5TB.mode }),
-          );
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.lifetime5TB.production, mode: 'payment' }));
         });
       });
       describe('When the plan is 2TB of space', () => {
@@ -116,10 +110,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Lifetime').click();
           cy.get('#priceTable').contains('Get 10TB').click();
 
-          cy.url().should(
-            'eq',
-            url({ planId: STRIPE_PRODUCT.lifetime10TB.production, mode: STRIPE_PRODUCT.lifetime10TB.mode }),
-          );
+          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.lifetime10TB.production, mode: 'payment' }));
         });
       });
     });

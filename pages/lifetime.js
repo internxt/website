@@ -11,24 +11,24 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
 
 import axios from 'axios';
+import { stripeProducts } from './api/stripe/stripeProducts';
+import bytes from 'bytes';
 
-const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
+const Lifetime = ({
+  lang,
+  metatagsDescriptions,
+  langJson,
+  footerLang,
+  deviceLang,
+  navbarLang,
+  products,
+  countryCode,
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const [country, setCountry] = React.useState('ES');
 
-  async function getCountryCode() {
-    const options = {
-      method: 'GET',
-      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
-    };
-    const countryCode = await axios(options);
-    return countryCode;
-  }
-
   useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
-    });
+    setCountry(countryCode);
   });
 
   return (
@@ -44,7 +44,12 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection lang={lang} textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <PaymentSection
+        textContent={langJson.PaymentSection}
+        lang={lang}
+        country={country}
+        products={JSON.parse(products)}
+      />
 
       <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
 
@@ -60,6 +65,29 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
+  const pushObjects = {};
+
+  const options = {
+    method: 'GET',
+    url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
+  };
+  const countryCode = await axios(options);
+
+  await stripeProducts()
+    .products()
+    .then((res) => {
+      return res.map((product) => {
+        const id = product.interval + bytes(product.bytes);
+        if (product.interval === 'lifetime')
+          pushObjects[id] = {
+            storage: bytes(product.bytes),
+            price: product.amount / 100,
+            planId: product.id,
+            popular: id === 'lifetime2TB' ? true : false,
+            actualPrice: (product.amount * 75) / 100 / 100,
+          };
+      });
+    });
 
   if (ctx.locale !== 'en') {
     return {
@@ -85,6 +113,8 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
+      products: JSON.stringify(pushObjects),
+      countryCode: countryCode.data.country,
     },
   };
 }

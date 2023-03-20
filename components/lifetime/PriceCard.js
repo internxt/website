@@ -9,15 +9,10 @@ import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
 
-const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang, actualPrice }) => {
+const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, actualPrice }) => {
   const [stripeObject, setStripeObject] = useState({});
-
-  const billingFrequencyList = {
-    '-1': 'lifetime',
-    1: 'monthly',
-    6: 'semiannually',
-    12: 'annually',
-  };
+  const priceWithDiscount = actualPrice.toString().split('.')[0];
+  const decimals = actualPrice.toString().split('.')[1];
 
   const currency = () => {
     switch (country) {
@@ -30,7 +25,6 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
     }
   };
 
-  const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   useEffect(() => {
@@ -69,14 +63,13 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
 
         <div className={`planPrice flex flex-col items-center justify-center p-5`}>
           <div
-            className={`priceBreakdown flex flex-col items-center
+            className={`priceBreakdown flex flex-row 
             `}
           >
-            <p
-              className={`flex flex-row items-start space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}
-            >
-              <span className={`currency`}>{currency()}</span>
-              <span className="price text-4xl font-bold">{actualPrice}</span>
+            <p className={`flex flex-row  space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}>
+              <span className={`currency items-start`}>{currency()}</span>
+              <span className="price text-4xl font-bold">{priceWithDiscount}</span>
+              <span className={`flex items-end justify-end pl-1`}>,{decimals}</span>
             </p>
           </div>
           <div

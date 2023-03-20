@@ -1,40 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PriceCard from './PriceCard';
 
-const PriceTable = ({ lang, country }) => {
+const PriceTable = ({ lang, country, products }) => {
   const billingFrequency = -1;
-
-  const billingPrice = (price) => price[billingFrequency];
-
-  const pricings = {
-    TB2: {
-      stripeID: 'lifetime2TB',
-      storage: '2TB',
-      price: {
-        '-1': '299',
-      },
-      popular: true,
-      actualPrice: '224',
-    },
-    TB5: {
-      stripeID: 'lifetime5TB',
-      storage: '5TB',
-      price: {
-        '-1': '499',
-      },
-      popular: false,
-      actualPrice: '374',
-    },
-    TB10: {
-      stripeID: 'lifetime10TB',
-      storage: '10TB',
-      price: {
-        '-1': '999',
-      },
-      popular: false,
-      actualPrice: '749',
-    },
-  };
+  console.log('products in PriceTable', products);
 
   return (
     <section className="overflow-hidden">
@@ -44,36 +13,36 @@ const PriceTable = ({ lang, country }) => {
       >
         <PriceCard
           planType="individual"
-          storage={pricings.TB5.storage}
-          price={billingPrice(pricings.TB5.price)}
+          storage={products.lifetime5TB.storage}
+          price={products.lifetime5TB.price}
           billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime5TB']}
-          popular={pricings.TB5.popular}
+          popular={products.lifetime5TB.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB5.actualPrice}
+          actualPrice={products.lifetime5TB.actualPrice}
         />
         <PriceCard
           planType="individual"
-          storage={pricings.TB2.storage}
-          price={billingPrice(pricings.TB2.price)}
+          storage={products.lifetime2TB.storage}
+          price={products.lifetime2TB.price}
           billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime2TB']}
-          popular={pricings.TB2.popular}
+          popular={products.lifetime2TB.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB2.actualPrice}
+          actualPrice={products.lifetime2TB.actualPrice}
         />
         <PriceCard
           planType="individual"
-          storage={pricings.TB10.storage}
-          price={billingPrice(pricings.TB10.price)}
+          storage={products.lifetime10TB.storage}
+          price={products.lifetime10TB.price}
           billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime10TB']}
-          popular={pricings.TB10.popular}
+          popular={products.lifetime10TB.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB10.actualPrice}
+          actualPrice={products.lifetime10TB.actualPrice}
         />
       </div>
     </section>

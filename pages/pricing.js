@@ -9,7 +9,7 @@ import FAQSection from '../components/pricing/FAQSection';
 import HeroSection from '../components/pricing/HeroSection';
 import CtaSection from '../components/pricing/CtaSection';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, products }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -73,6 +73,24 @@ export async function getServerSideProps(ctx) {
 
   cookies.setReferralCookie(ctx);
 
+  const pushObjects = {};
+
+  await stripeProducts()
+    .products()
+    .then((res) => {
+      return res.map((product) => {
+        const id = product.interval + bytes(product.bytes);
+        if (product.interval === 'lifetime')
+          pushObjects[id] = {
+            storage: bytes(product.bytes),
+            price: product.amount / 100,
+            planId: product.id,
+            popular: id === 'lifetime2TB' ? true : false,
+            actualPrice: (product.amount * 75) / 100 / 100,
+          };
+      });
+    });
+
   return {
     props: {
       metatagsDescriptions,
@@ -80,6 +98,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       textContent,
+      products: pushObjects,
     },
   };
 }
