@@ -64,7 +64,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
         <RevealY className="flex flex-col-reverse items-center justify-center space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20">
           <div className="relative rounded-3xl">
             <Image
-              src="/images/home/GirlWithLaptop.jpg"
+              src="/images/home/GirlWithLaptop.png"
               width={496}
               height={520}
               quality={100}
