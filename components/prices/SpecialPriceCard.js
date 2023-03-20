@@ -44,13 +44,12 @@ export default function SpecialPriceCard({
 
   const onOfferClick = () => {
     checkout({
-      planId: getPlanId(stripeObject),
+      planId: cta[1],
       couponCode: TWOTB_OFF_COUPON,
     });
   };
 
-  const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
-  const teamsBilled = (totalBilled * getUsers).toFixed(2);
+  const teamsBilled = (price * getUsers).toFixed(2);
   const MAX_USERS = 200;
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
@@ -94,7 +93,7 @@ export default function SpecialPriceCard({
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 10) / 100).toFixed(2)}</span>
+            <span className="price text-4xl font-semibold">{Math.abs((price * 10) / 100).toFixed(2)}</span>
           </p>
           <div
             className={`priceBreakdown flex text-neutral-50 ${
@@ -107,7 +106,7 @@ export default function SpecialPriceCard({
             <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-2xl font-semibold line-through">
-                {price <= 0 ? `${contentText.freePlan}` : totalBilled}
+                {price <= 0 ? `${contentText.freePlan}` : price}
               </span>
             </p>
             {/* eslint-disable-next-line no-nested-ternary */}
@@ -130,10 +129,6 @@ export default function SpecialPriceCard({
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
-              {/* <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">{currency()}</span>
-                {totalBilled}
-              </span> */}
               <span className="billingFrequency">
                 {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
               </span>

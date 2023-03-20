@@ -20,8 +20,9 @@ export default function PriceCard({
   popular,
   lang,
   country,
+  products,
 }) {
-  const stripeObject = { product: cta[1] };
+  console.log(products);
 
   const billingFrequencyList = {
     '-1': 'lifetime',
@@ -92,7 +93,9 @@ export default function PriceCard({
             </span>
             <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-              <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : totalBilled}</span>
+              <span className="price text-4xl font-bold">
+                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? totalBilled : price}
+              </span>
             </p>
             {/* eslint-disable-next-line no-nested-ternary */}
             <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}></span>
@@ -114,10 +117,6 @@ export default function PriceCard({
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
-              {/* <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">{currency()}</span>
-                {totalBilled}
-              </span> */}
               <span className="billingFrequency">
                 {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
               </span>
@@ -223,10 +222,11 @@ export default function PriceCard({
             if (cta[1] === 'Free plan') {
               goToSignUpURL();
             } else {
-              checkout({
-                planId: getPlanId(stripeObject),
-                mode: billingFrequency === -1 ? 'payment' : 'subscription',
-              });
+              console.log('plan id', cta[1]);
+              // checkout({
+              //   planId: planId,
+              //   mode: billingFrequency === -1 ? 'payment' : 'subscription',
+              // });
             }
           }}
           className="subscribePlan flex w-full cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base"
@@ -267,31 +267,6 @@ export default function PriceCard({
               </span>
             </div>
           )}
-          {/* {price > 0 ? (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}>{contentText.features.moneyBack}</span>
-            </div>
-          ) : (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span
-                className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}
-              >{`${contentText.features.enjoyForever.enjoyUpTo} ${storage} ${contentText.features.enjoyForever.forever}`}</span>
-            </div>
-          )} */}
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"

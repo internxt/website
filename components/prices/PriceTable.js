@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import Tooltip from './ToolTip';
@@ -11,8 +11,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
-
-  console.log(products);
 
   function parentSetUserCount(count) {
     setUserCount(count);
@@ -49,56 +47,56 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         popular: false,
       },
       GB20: {
-        stripeID: '20GB',
-        storage: '20GB',
+        stripeID: { 1: products.month20GB.planId, 12: products.year20GB.planId },
+        storage: products.month20GB.storage,
         price: {
-          1: '0.99',
-          6: '0.95',
-          12: '0.89',
+          1: products.month20GB.price,
+          12: products.year20GB.price,
         },
         popular: false,
       },
       GB200: {
-        stripeID: '200GB',
-        storage: '200GB',
+        stripeID: { 1: products.month200GB.planId, 12: products.year200GB.planId },
+        storage: products.month200GB.storage,
         price: {
-          1: '4.49',
-          6: '3.99',
-          12: '3.49',
+          1: products.month200GB.price,
+          12: products.year200GB.price,
         },
         popular: false,
       },
       TB2: {
-        stripeID: '2TB',
-        storage: '2TB',
+        stripeID: {
+          1: products.month2TB.planId,
+          12: products.year2TB.planId,
+        },
+        storage: products.month2TB.storage,
         price: {
-          1: '9.99',
-          6: '9.49',
-          12: '8.99',
+          1: products.month2TB.price,
+          12: products.year2TB.price,
         },
         popular: true,
       },
       lifetime2TB: {
-        stripeID: 'lifetime2TB',
-        storage: '2TB',
+        stripeID: products.lifetime2TB.planId,
+        storage: products.lifetime2TB.storage,
         price: {
-          '-1': '299',
+          '-1': products.lifetime2TB.price,
         },
         popular: false,
       },
       lifetime5TB: {
-        stripeID: 'lifetime5TB',
-        storage: '5TB',
+        stripeID: products.lifetime5TB.planId,
+        storage: products.lifetime5TB.storage,
         price: {
-          '-1': '499',
+          '-1': products.lifetime5TB.price,
         },
         popular: true,
       },
       lifetime10TB: {
-        stripeID: 'lifetime10TB',
-        storage: '10TB',
+        stripeID: products.lifetime10TB.planId,
+        storage: products.lifetime10TB.storage,
         price: {
-          '-1': '999',
+          '-1': products.lifetime10TB.price,
         },
         popular: false,
       },
@@ -213,7 +211,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   storage={pricings.individuals.lifetime2TB.storage}
                   price={billingPrice(pricings.individuals.lifetime2TB.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('lifetime2TB')]}
+                  cta={['checkout', pricings.individuals.lifetime2TB.stripeID]}
                   popular={pricings.individuals.lifetime2TB.popular}
                   lang={lang}
                   country={country}
@@ -223,7 +221,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   storage={pricings.individuals.lifetime5TB.storage}
                   price={billingPrice(pricings.individuals.lifetime5TB.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('lifetime5TB')]}
+                  cta={['checkout', pricings.individuals.lifetime5TB.stripeID]}
                   popular={pricings.individuals.lifetime5TB.popular}
                   lang={lang}
                   country={country}
@@ -233,7 +231,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   storage={pricings.individuals.lifetime10TB.storage}
                   price={billingPrice(pricings.individuals.lifetime10TB.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('lifetime10TB')]}
+                  cta={['checkout', pricings.individuals.lifetime10TB.stripeID]}
                   popular={pricings.individuals.lifetime10TB.popular}
                   lang={lang}
                   country={country}
@@ -256,7 +254,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   storage={pricings.individuals.GB20.storage}
                   price={billingPrice(pricings.individuals.GB20.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('GB20')]}
+                  cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
                   popular={pricings.individuals.GB20.popular}
                   lang={lang}
                   country={country}
@@ -266,7 +264,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   storage={pricings.individuals.GB200.storage}
                   price={billingPrice(pricings.individuals.GB200.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('GB200')]}
+                  cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
                   popular={pricings.individuals.GB200.popular}
                   lang={lang}
                   country={country}
@@ -277,7 +275,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                     storage={pricings.individuals.TB2.storage}
                     price={billingPrice(pricings.individuals.TB2.price)}
                     billingFrequency={billingFrequency}
-                    cta={['checkout', checkoutPlan('TB2')]}
+                    cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
                     popular={pricings.individuals.TB2.popular}
                     lang={lang}
                     country={country}
@@ -288,7 +286,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                     storage={pricings.individuals.TB2.storage}
                     price={billingPrice(pricings.individuals.TB2.price)}
                     billingFrequency={billingFrequency}
-                    cta={['checkout', checkoutPlan('TB2')]}
+                    cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
                     popular={pricings.individuals.TB2.popular}
                     lang={lang}
                     country={country}
