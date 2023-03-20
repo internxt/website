@@ -18,8 +18,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [country, setCountry] = useState('ES');
   const [isLifetime, setIsLifetime] = useState(false);
 
-  console.log('products', JSON.parse(products));
-
   async function getCountryCode() {
     const options = {
       method: 'GET',
@@ -57,6 +55,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         country={country}
         setIsLifetime={setIsLifetime}
         textContent={textContent.tableSection}
+        products={JSON.parse(products)}
       />
 
       <FAQSection textContent={textContent.FaqSection} />
@@ -90,7 +89,6 @@ export async function getServerSideProps(ctx) {
           price: product.amount / 100,
           planId: product.id,
           popular: id === 'lifetime2TB' ? true : false,
-          actualPrice: (product.amount * 75) / 100 / 100,
         };
       });
     });

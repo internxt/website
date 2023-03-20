@@ -6,11 +6,13 @@ import Tooltip from './ToolTip';
 import { Coin, CreditCard, Detective } from 'phosphor-react';
 import SpecialPriceCard from './SpecialPriceCard';
 
-export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent, products }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+
+  console.log(products);
 
   function parentSetUserCount(count) {
     setUserCount(count);

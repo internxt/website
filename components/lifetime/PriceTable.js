@@ -4,6 +4,8 @@ import PriceCard from './PriceCard';
 const PriceTable = ({ lang, country, products }) => {
   const billingFrequency = -1;
 
+  console.log('products', products);
+
   return (
     <section className="overflow-hidden">
       <div
@@ -15,7 +17,7 @@ const PriceTable = ({ lang, country, products }) => {
           storage={products.lifetime5TB.storage}
           price={products.lifetime5TB.price}
           billingFrequency={billingFrequency}
-          cta={['checkout', 'lifetime5TB']}
+          cta={['checkout', products.lifetime5TB.planId]}
           popular={products.lifetime5TB.popular}
           lang={lang}
           country={country}
@@ -26,7 +28,7 @@ const PriceTable = ({ lang, country, products }) => {
           storage={products.lifetime2TB.storage}
           price={products.lifetime2TB.price}
           billingFrequency={billingFrequency}
-          cta={['checkout', 'lifetime2TB']}
+          cta={['checkout', products.lifetime2TB.planId]}
           popular={products.lifetime2TB.popular}
           lang={lang}
           country={country}
@@ -37,7 +39,7 @@ const PriceTable = ({ lang, country, products }) => {
           storage={products.lifetime10TB.storage}
           price={products.lifetime10TB.price}
           billingFrequency={billingFrequency}
-          cta={['checkout', 'lifetime10TB']}
+          cta={['checkout', products.lifetime10TB.planId]}
           popular={products.lifetime10TB.popular}
           lang={lang}
           country={country}
