@@ -12,8 +12,15 @@ export const stripeProducts = () => {
     return productsRequest.data;
   }
 
+  async function getPlanId(interval: string, storage: number) {
+    const productsRequest = await axios.get(`https://api.internxt.com/payments/prices`);
+    const plan = productsRequest.data.find((plan: any) => plan.interval === interval && plan.storage === storage);
+    return plan;
+  }
+
   return {
     products,
+    getPlanId,
   };
 };
 

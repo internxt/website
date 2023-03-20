@@ -21,6 +21,7 @@ export default function SpecialPriceCard({
   popular,
   lang,
   country,
+  products,
 }) {
   const stripeObject = { product: cta[1] };
 
@@ -43,8 +44,9 @@ export default function SpecialPriceCard({
   };
 
   const onOfferClick = () => {
+    const id = billingFrequency === 1 ? 'month' + storage : 'year' + storage;
     checkout({
-      planId: cta[1],
+      planId: products[id]?.planId,
       couponCode: TWOTB_OFF_COUPON,
     });
   };

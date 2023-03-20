@@ -22,14 +22,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
     setIsLifetime(false);
   }
 
-  function checkoutPlan(plan) {
-    if (billingFrequency === -1) {
-      return plan;
-    } else {
-      return `${plan}${billingFrequency}`;
-    }
-  }
-
   const billingPrice = (price) => price[billingFrequency];
 
   const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
@@ -37,11 +29,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   const pricings = {
     individuals: {
       free: {
-        stripeID: '2GB',
         storage: '10GB',
         price: {
           1: '0',
-          6: '0',
           12: '0',
         },
         popular: false,
@@ -248,26 +238,29 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   popular={pricings.individuals.free.popular}
                   lang={lang}
                   country={country}
+                  products={products}
                 />
                 <PriceCard
                   planType="individual"
                   storage={pricings.individuals.GB20.storage}
                   price={billingPrice(pricings.individuals.GB20.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
+                  cta={['checkout', pricings.individuals.GB20.stripeID]}
                   popular={pricings.individuals.GB20.popular}
                   lang={lang}
                   country={country}
+                  products={products}
                 />
                 <PriceCard
                   planType="individual"
                   storage={pricings.individuals.GB200.storage}
                   price={billingPrice(pricings.individuals.GB200.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
+                  cta={['checkout', pricings.individuals.GB20.stripeID]}
                   popular={pricings.individuals.GB200.popular}
                   lang={lang}
                   country={country}
+                  products={products}
                 />
                 {pricings.individuals.TB2.popular && billingFrequency === 12 ? (
                   <SpecialPriceCard
@@ -275,10 +268,11 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                     storage={pricings.individuals.TB2.storage}
                     price={billingPrice(pricings.individuals.TB2.price)}
                     billingFrequency={billingFrequency}
-                    cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
+                    cta={['checkout', pricings.individuals.GB20.stripeID]}
                     popular={pricings.individuals.TB2.popular}
                     lang={lang}
                     country={country}
+                    products={products}
                   />
                 ) : (
                   <PriceCard
@@ -286,10 +280,11 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                     storage={pricings.individuals.TB2.storage}
                     price={billingPrice(pricings.individuals.TB2.price)}
                     billingFrequency={billingFrequency}
-                    cta={['checkout', pricings.individuals.GB20.stripeID[billingFrequency]]}
+                    cta={['checkout', pricings.individuals.GB20.stripeID]}
                     popular={pricings.individuals.TB2.popular}
                     lang={lang}
                     country={country}
+                    products={products}
                   />
                 )}
               </>
