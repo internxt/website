@@ -31,7 +31,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             <p className="text-xl">{textContent.card3.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
               <p>{textContent.card3.cta}</p>
-              <CaretRight size={8} />
+              <CaretRight size={12} />
             </div>
           </div>
         </RevealY>
@@ -41,7 +41,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             <p className="text-xl">{textContent.card2.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
               <p>{textContent.card2.cta}</p>
-              <CaretRight size={8} />
+              <CaretRight size={12} />
             </div>
           </div>
           <div className="relative rounded-3xl">
