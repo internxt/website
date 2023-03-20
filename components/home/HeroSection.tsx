@@ -18,7 +18,11 @@ export default function HeroSection({ textContent, lang }) {
   const [headerAnimation7, setHeaderAnimation7] = useState<boolean>(false);
 
   const title = textContent.title.line1.split('Internxt')[0];
-  const Internxt = textContent.title.line1.substr(textContent.title.line1.indexOf('Internxt'), 8);
+  const Internxt =
+    textContent.title.line1.includes('Internxt') &&
+    textContent.title.line1.substr(textContent.title.line1.indexOf('Internxt'), 8);
+
+  console.log(title);
 
   useEffect(() => {
     const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
