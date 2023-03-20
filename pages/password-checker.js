@@ -14,13 +14,19 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <TryInternxtBanner
-        textContent={bannerLang.tryOutInternxtPasswordCheckerBanner}
+        textContent={
+          lang === 'en' ? bannerLang.tryOutInternxtPasswordCheckerBanner : bannerLang.tryOutInternxtGeneralBanner
+        }
         url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtpw'}
       />
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        bannerText={bannerLang.SignUpPwdCheckerBanner}
+        lang={lang}
+      />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
@@ -43,7 +49,7 @@ export async function getServerSideProps(ctx) {
   const langJson = require(`../assets/lang/${lang}/password-checker.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const bannerLang = require(`../assets/lang/en/banners.json`);
+  const bannerLang = require(`../assets/lang/${lang}/banners.json`);
 
   return {
     props: {

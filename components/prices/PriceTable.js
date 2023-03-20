@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import Tooltip from './ToolTip';
+import { Coin, CreditCard, Detective } from 'phosphor-react';
+import SpecialPriceCard from './SpecialPriceCard';
 
-export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime }) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -27,16 +29,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
       return `${plan}${billingFrequency}`;
     }
   }
-
-  const toolTipText = () => {
-    if (lang === 'en') {
-      return 'Get 90% off our 2TB plan';
-    } else if (lang === 'es') {
-      return 'Obtén un 90% de descuento';
-    } else if (lang === 'fr') {
-      return 'Obtenez 90% de réduction';
-    }
-  };
 
   const billingPrice = (price) => price[billingFrequency];
 
@@ -72,7 +64,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '3.99',
           12: '3.49',
         },
-        popular: true,
+        popular: false,
       },
       TB2: {
         stripeID: '2TB',
@@ -82,7 +74,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '9.49',
           12: '8.99',
         },
-        popular: false,
+        popular: true,
       },
       lifetime2TB: {
         stripeID: 'lifetime2TB',
@@ -144,9 +136,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   };
 
   return (
-    <section className="bg-gradient-to-b from-white to-cool-gray-5">
-      <div className="flex flex-col items-center">
-        <h1 className="px-4 pt-36 text-center text-5xl">
+    <section id="priceTable" className="bg-gray-1">
+      <div className="flex flex-col items-center py-20">
+        <h1 className="text-center text-4xl font-semibold">
           {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
         </h1>
         <button
@@ -252,7 +244,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   storage={pricings.individuals.free.storage}
                   price={billingPrice(pricings.individuals.free.price)}
                   billingFrequency={billingFrequency}
-                  cta={['link', 'https://drive.internxt.com/new?']}
+                  cta={['link', 'Free plan']}
                   popular={pricings.individuals.free.popular}
                   lang={lang}
                   country={country}
@@ -277,16 +269,29 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   lang={lang}
                   country={country}
                 />
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.TB2.storage}
-                  price={billingPrice(pricings.individuals.TB2.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('TB2')]}
-                  popular={pricings.individuals.TB2.popular}
-                  lang={lang}
-                  country={country}
-                />
+                {pricings.individuals.TB2.popular && billingFrequency === 12 ? (
+                  <SpecialPriceCard
+                    planType="individual"
+                    storage={pricings.individuals.TB2.storage}
+                    price={billingPrice(pricings.individuals.TB2.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('TB2')]}
+                    popular={pricings.individuals.TB2.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                ) : (
+                  <PriceCard
+                    planType="individual"
+                    storage={pricings.individuals.TB2.storage}
+                    price={billingPrice(pricings.individuals.TB2.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('TB2')]}
+                    popular={pricings.individuals.TB2.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                )}
               </>
             )}
           </div>
@@ -334,12 +339,20 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             />
           </div>
         </Transition>
-
-        {/* <Link href="/cloud-storage-comparison" lang={lang}>
-          <a className="flex flex-col justify-center items-center px-6 py-2 border border-transparent rounded-xl text-lg sm:text-base font-medium text-primary bg-blue-10 focus:outline-none">
-            Compare with our competitors
-          </a>
-        </Link> */}
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
+            <Coin size={40} className="text-primary" />
+            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>
+          </div>
+          <div className="flex max-w-[114px] flex-col items-center space-y-3">
+            <CreditCard size={40} className="text-primary" />
+            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.secondFeature}</p>
+          </div>
+          <div className="flex max-w-[153px] flex-col items-center space-y-3">
+            <Detective size={40} className="text-primary" />
+            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.thirdFeature}</p>
+          </div>
+        </div>
       </div>
     </section>
   );

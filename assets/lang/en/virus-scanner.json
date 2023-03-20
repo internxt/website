@@ -6,7 +6,7 @@
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
 
     "dropFile": {
-      "line1": "Drop file to scan"
+      "line1": "Drop file to scan for viruses"
     },
     "fileSelected": "File selected for scanning",
     "cancel": "Cancel",
@@ -54,7 +54,7 @@
     },
     "stopMalware": {
       "title": "Stop malware before it stops you",
-      "description": "Once a virus has propagated, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why t is crucial to utilize virus scanner."
+      "description": "Once a virus has propagated, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why it is crucial to utilize virus scanner."
     },
     "freeOnlineScanner": {
       "title": "A free online virus scanner you can trust",

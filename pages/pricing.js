@@ -5,8 +5,11 @@ import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import axios from 'axios';
+import FAQSection from '../components/pricing/FAQSection';
+import HeroSection from '../components/pricing/HeroSection';
+import CtaSection from '../components/pricing/CtaSection';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -42,7 +45,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang }) => {
         mode={isLifetime ? 'payment' : 'subscription'}
       />
 
-      <PriceTable setSegmentPageName={setPageName} lang={lang} country={country} setIsLifetime={setIsLifetime} />
+      <HeroSection textContent={textContent.HeroSection} />
+
+      <PriceTable
+        setSegmentPageName={setPageName}
+        lang={lang}
+        country={country}
+        setIsLifetime={setIsLifetime}
+        textContent={textContent.tableSection}
+      />
+
+      <FAQSection textContent={textContent.FaqSection} />
+
+      <CtaSection textContent={textContent.CtaSection} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
@@ -52,6 +67,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang }) => {
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`../assets/lang/${lang}/pricing.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
@@ -63,6 +79,7 @@ export async function getServerSideProps(ctx) {
       footerLang,
       navbarLang,
       lang,
+      textContent,
     },
   };
 }

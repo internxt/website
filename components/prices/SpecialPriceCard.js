@@ -6,13 +6,14 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { checkout, goToSignUpURL } from '../../lib/auth';
+import { checkout } from '../../lib/auth';
 
-export default function PriceCard({
+const TWOTB_OFF_COUPON = 'P8PSpVs6';
+
+export default function SpecialPriceCard({
   planType,
   storage,
   price,
-  priceBefore,
   billingFrequency,
   cta,
   setUsers,
@@ -41,6 +42,13 @@ export default function PriceCard({
     }
   };
 
+  const onOfferClick = () => {
+    checkout({
+      planId: getPlanId(stripeObject),
+      couponCode: TWOTB_OFF_COUPON,
+    });
+  };
+
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
@@ -61,8 +69,11 @@ export default function PriceCard({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center  rounded-t-2xl bg-white bg-cover p-4 pt-6
-        `}
+        className={`info flex flex-col items-center justify-center  p-4 pt-6 ${
+          popular && billingFrequency === 12
+            ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover'
+            : 'bg-white'
+        }`}
       >
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
@@ -78,39 +89,44 @@ export default function PriceCard({
         </div>
 
         <div
-          className={`planPrice flex flex-col items-center justify-center py-8 ${
-            priceBefore ? 'space-y-1' : 'space-y-4'
-          }`}
+          className={`planPrice flex flex-col items-center justify-center space-y-2
+            py-8`}
         >
+          <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
+            <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
+            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 10) / 100).toFixed(2)}</span>
+          </p>
           <div
-            className={`priceBreakdown flex text-neutral-700 ${
+            className={`priceBreakdown flex text-neutral-50 ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
-            <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
+            {/* <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
               {contentText.perUser}
-            </span>
+            </span> */}
             <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-              <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : totalBilled}</span>
+              <span className="price text-2xl font-semibold line-through">
+                {price <= 0 ? `${contentText.freePlan}` : totalBilled}
+              </span>
             </p>
             {/* eslint-disable-next-line no-nested-ternary */}
             <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}></span>
           </div>
 
-          <span
+          {/* <span
             className={`priceBefore ${
               priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-80 line-through`}
+            } text-base font-medium text-neutral-50 line-through`}
           >
             {currency()}
             {priceBefore}
-          </span>
+          </span> */}
 
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-neutral-80
+            } flex-row text-xs text-neutral-50
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
@@ -216,38 +232,26 @@ export default function PriceCard({
             </div>
           </div>
         </div>
-      </div>
-      <div tabIndex={0} className="flex w-full flex-row justify-center bg-white px-4 pb-4">
+
         <div
+          tabIndex={0}
           onClick={() => {
-            if (cta[1] === 'Free plan') {
-              goToSignUpURL();
-            } else {
-              checkout({
-                planId: getPlanId(stripeObject),
-                mode: billingFrequency === -1 ? 'payment' : 'subscription',
-              });
-            }
+            onOfferClick();
           }}
-          className="subscribePlan flex w-full cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base"
+          className="flex w-full flex-row"
         >
-          <p
-            className={`${price <= 0 ? 'hidden' : 'flex'} ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            }`}
-          >
-            {contentText.cta.get + ' ' + storage}
-          </p>
+          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
+            <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
+              {popular && billingFrequency === 12 ? contentText.cta.discount : contentText.cta.get}{' '}
+              {lang === 'en' && storage}
+            </p>
 
-          <p
-            className={`${price <= 0 ? 'flex' : 'hidden'} ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            }`}
-          >
-            {contentText.cta.signUpNow}
-          </p>
+            <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
+              {contentText.cta.signUpNow}
+            </p>
 
-          <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
+            <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
+          </div>
         </div>
       </div>
 
@@ -267,31 +271,6 @@ export default function PriceCard({
               </span>
             </div>
           )}
-          {/* {price > 0 ? (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}>{contentText.features.moneyBack}</span>
-            </div>
-          ) : (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span
-                className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}
-              >{`${contentText.features.enjoyForever.enjoyUpTo} ${storage} ${contentText.features.enjoyForever.forever}`}</span>
-            </div>
-          )} */}
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"

@@ -1,0 +1,100 @@
+{
+  "HeroSection": {
+    "title": { "line1": "90% OFF", "line2": "our 2TB plan" },
+    "feeds": {
+      "firstFeed": "30-day money-back guarantee",
+      "secondFeed": "100% secure payment",
+      "thirdFeed": "Anonymous account creation"
+    },
+    "cta": {
+      "title": "Get 90% off 2TB",
+      "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
+    }
+  },
+  "tableSection": {
+    "featureSection": {
+      "firstFeature": "30-day money-back guarantee",
+      "secondFeature": "100% secure payment",
+      "thirdFeature": "Anonymous account creation"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": {
+      "faq": [
+        {
+          "question": "Will I keep the discount when my plan ends?",
+          "answer": [
+            "The discount is only applied for the first full year of service. Therefore, you will have access to our 2TB subscription plan at this discounted price for only one year. After one year your account will automatically be renewed at the standard 2TB plan price for the following year."
+          ]
+        },
+        {
+          "question": "How much will it cost to renew the discounted plan?",
+          "answer": [
+            "The 2TB plan costs €9.99/month paid monthly or €8.99/month (€107.88/year) when paid annually. You can also choose to downgrade to our other plans after the first year, additional plan information and pricing is listed above."
+          ]
+        },
+        {
+          "question": "Can Internxt access my files?",
+          "answer": [
+            "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
+            " Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+          ]
+        },
+        {
+          "question": "Does Internxt store my password?",
+          "answer": [
+            "No. As such, Internxt does not (and cannot) store your password.",
+            "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+          ]
+        },
+        {
+          "question": "Can I enable 2FA?",
+          "answer": [
+            "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
+            "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+          ]
+        },
+        {
+          "question": "How do I create an Internxt account?",
+          "answer": [
+            "To create a free Internxt account, simply click the best plan above and follow the instructions.",
+            "Or head to our homepage and click on “Get started”. There, you will instantly get 10GB of free storage for life with a free Internxt membership. You can use your free membership across all our services. To sign up, simply enter a name and email address. No identity nor email verification is required to start using Internxt's services."
+          ]
+        },
+        {
+          "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+          "answer": [
+            "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via Apple and Google Pay. We do not accept PayPal.",
+            "Under request, we also accept iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24, and Sofort. To request an invoice using one of the alternative methods described above, simply email us at hello@internxt.com."
+          ]
+        },
+        {
+          "question": "What is Internxt’s refund policy?",
+          "answer": [
+            "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+            "And if you're ever unsatisfied with our service, reach out to us at hello@internxt.com and request a refund. We will honor your request, no questions asked!"
+          ]
+        },
+        {
+          "question": "How can I cancel my subscription?",
+          "answer": [
+            "Canceling your subscription is very straightforward and can be done easily through the Internxt app, by going into settings and deleting your account. This will terminate your subscription and your account.",
+            "If you would like to cancel a paid plan and remain with our free service, you can email us at hello@internxt.com and we’ll process the subscription cancellation so that you can keep your account live on our free plan."
+          ]
+        },
+        {
+          "question": "How do I contact support?",
+          "answer": [
+            "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
+          ]
+        }
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect your really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
+  }
+}

@@ -4,8 +4,9 @@ import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from 'pho
 import FaqAccordion from './FaqAccordion';
 import CtaSection from './CtaSection';
 import Image from 'next/image';
+import SignUpBanner from '../banners/SignUpBanner';
 
-const FeaturesSection = ({ textContent, lang }) => {
+const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const iconSize = 32;
   const tipIcons = [
     <Ruler size={iconSize} />,
@@ -19,8 +20,9 @@ const FeaturesSection = ({ textContent, lang }) => {
   return (
     <section className="relative">
       {/* Password tips and rules */}
-      <div className="flex w-full flex-col items-center justify-center bg-gray-5 bg-opacity-50">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
+      <div className="flex w-full flex-col items-center justify-center space-y-20 bg-gray-5 bg-opacity-50 px-4 py-10 sm:pt-20 lg:p-16">
+        <SignUpBanner textContent={bannerText} lang={lang} />
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center ">
           <div className="flex w-full flex-col items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2">
               <h3 className="text-3xl font-medium lg:text-2xl">{textContent.section1.title}</h3>
