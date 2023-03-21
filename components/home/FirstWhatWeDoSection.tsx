@@ -27,10 +27,10 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             </RevealX>
           </div>
           <div className="flex w-full max-w-[390px] flex-col space-y-6">
-            <p className="text-5xl font-semibold">{textContent.card3.title}</p>
-            <p className="text-xl">{textContent.card3.description}</p>
+            <p className="text-5xl font-semibold">{textContent.card1.title}</p>
+            <p className="text-xl">{textContent.card1.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
-              <p>{textContent.card3.cta}</p>
+              <p>{textContent.card1.cta}</p>
               <CaretRight size={12} />
             </div>
           </div>

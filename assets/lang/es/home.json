@@ -54,7 +54,7 @@
     "cards": [
       {
         "title": "Privado por diseño",
-        "description": "No almacenamos contraseñas ni datos de usuario y todos tus datos están encriptados en tránsito y en reposo. Internxt le da el control total de sus archivos. Tú gestionas tus datos y nosotros los protegemos"
+        "description": "No almacenamos contraseñas ni datos de usuario y todos tus datos están encriptados en tránsito y en reposo. Internxt le da el control total de sus archivos. Tú gestionas tus datos y nosotros los protegemos."
       },
       {
         "title": "Seguridad sin compromisos",
@@ -62,7 +62,7 @@
       },
       {
         "title": "Código abierto y transparente",
-        "description": "Estamos orgullosos de lo que hacemos, por eso nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, salvo tus datos"
+        "description": "Estamos orgullosos de lo que hacemos, por eso nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, salvo tus datos."
       },
       {
         "title": "Verificado de forma independiente",
@@ -78,10 +78,10 @@
       },
       {
         "title": "Flujos de trabajo sin fricciones",
-        "description": "Los productos de Internxt están diseñados para ser lo más usables posible, a la vez que ofrecen una interfaz limpia para mejorar e impulsar su productividad. Seguridad empresarial, hecha fácil"
+        "description": "Los productos de Internxt están diseñados para ser lo más usables posible, a la vez que ofrecen una interfaz limpia para mejorar e impulsar su productividad. Seguridad empresarial, hecha fácil."
       },
       {
-        "title": "Almacenamiento de copias de seguridad bajo demanda",
+        "title": "Almacenamiento de copias de seguridad",
         "description": "Copia tus datos gracias a la redundancia integrada. Haz copias de seguridad de tu trabajo y proyectos esenciales, a través de múltiples servidores rápidos en toda la UE, y accede a ellos desde todos tus dispositivos."
       },
       {
@@ -92,13 +92,13 @@
   },
   "ThirdFeaturesSection": {
     "title": "¡Consigue hasta 10 GB gratis!",
-    "description": "Crea tu cuenta gratuita ahora y tendrás acceso completo a nuestro conjunto de servicios de privacidad en línea",
+    "description": "Crea tu cuenta gratuita ahora y tendrás acceso completo a nuestro conjunto de servicios de privacidad en línea.",
     "cta": "Comenzar"
   },
   "FirstWhatWeDoSection": {
     "card1": {
       "title": "Construido para el futuro",
-      "description": "Queremos construir una World Wide Web mejor, que sea justa, segura y equitativa para todos. La batalla se está librando por el futuro de la privacidad en Internet, y nosotros estamos en primera línea",
+      "description": "Queremos construir una World Wide Web mejor, que sea justa, segura y equitativa para todos. La batalla se está librando por el futuro de la privacidad en Internet, y nosotros estamos en primera línea.",
       "cta": "La lucha por la privacidad"
     },
     "card2": {
@@ -113,7 +113,7 @@
     }
   },
   "SecondWhatWeDoSection": {
-    "title": "No eres el producto",
+    "title": "Tú no eres el producto",
     "description": "Nuestros servicios son herramientas creadas para ti. Drive, Photos y Send son solo el principio de un conjunto de productos que te devuelven el control de tu privacidad.",
     "square1": {
       "title": "Internxt Drive",
@@ -125,12 +125,12 @@
       "title": "Internxt Photos",
       "subtitle": "Almacenamiento seguro de fotos para todos tus momentos perfectos en imágenes",
       "description": "Revive, comparte y mantén a salvo tus mejores recuerdos en un solo lugar con Internxt Photos. Ten siempre tus fotos a mano y sincroniza cómodamente las imágenes de un dispositivo a otro.",
-      "cta": "Sincronizar con Fotos"
+      "cta": "Sincronizar con Photos"
     },
     "square3": {
       "title": "Internxt Send",
       "subtitle": "Cifra, comparte y envía archivos de gran tamaño con total seguridad",
-      "description": "Send te permite cifrar de extremo a extremo y compartir archivos de gran tamaño rápidamente sin preocuparte por la seguridad de tus documentos, imágenes o vídeos. Transfiere a quien quieras con total confidencialidad",
+      "description": "Send te permite cifrar de extremo a extremo y compartir archivos de gran tamaño rápidamente sin preocuparte por la seguridad de tus documentos, imágenes o vídeos. Transfiere a quien quieras con total confidencialidad.",
       "cta": "Comparte con Send"
     }
   },
@@ -153,12 +153,12 @@
       {
         "name": "Josep C.",
         "enterprise": "Reseña de Trustpilot",
-        "review": "Llevo varios años utilizando Google Drive, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me pasé a Internxt"
+        "review": "Llevo varios años utilizando Google Drive, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me pasé a Internxt."
       },
       {
         "name": "Pat G.",
         "enterprise": "Reseña de Capterra",
-        "review": "¡Estoy almacenando archivos para una organización sin ánimo de lucro y trabajar con Internxt fue maravilloso! Esta unidad fue muy fácil de usar. No tuve que hacer nada más que cargar y descargar. El programa y la unidad hicieron el resto"
+        "review": "¡Estoy almacenando archivos para una organización sin ánimo de lucro y trabajar con Internxt fue maravilloso! Esta unidad fue muy fácil de usar. No tuve que hacer nada más que cargar y descargar. El programa y la unidad hicieron el resto."
       },
       {
         "name": "Luca C.",
@@ -168,7 +168,7 @@
       {
         "name": "Binet S.",
         "enterprise": "Reseña de Trustpilot",
-        "review": "Rápido, fiable y barato: ¡los mejores componentes de cualquier producto! ¡El amplio espacio de almacenamiento es definitivamente apreciado! Tengo espacio suficiente para guardar todas mis fotos y archivos. También me gusta lo sencillo que es compartir archivos"
+        "review": "Rápido, fiable y barato: ¡los mejores componentes de cualquier producto! ¡El amplio espacio de almacenamiento es definitivamente apreciado! Tengo espacio suficiente para guardar todas mis fotos y archivos. También me gusta lo sencillo que es compartir archivos."
       }
     ]
   },
@@ -176,7 +176,7 @@
     "title": { "line1": "Regístrate y", "line2": "consigue hasta 10 GB gratis" },
     "subtitle": {
       "line1": "Nuestros clientes están muy contentos con Internxt Drive, pero",
-      "line2": "son más felices sabiendo que están bajo total privacidad"
+      "line2": "son más felices sabiendo que están bajo total privacidad."
     },
     "cta1": "Empezar"
   }

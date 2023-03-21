@@ -44,7 +44,7 @@
       "line1": "Le nuage le plus sécurisé pour",
       "line2": "tous vos fichiers et photos"
     },
-    "subtitle": "Internxt crée des services de cloud privé sécurisés conçus pour vous rendre le contrôle de vos données. Protégeant vos fichiers et votre droit fondamental à la vie privée, tous les services Internxt sont conçus dès le départ pour une sécurité totale",
+    "subtitle": "Internxt crée des services de cloud privé sécurisés conçus pour vous rendre le contrôle de vos données. Protégeant vos fichiers et votre droit fondamental à la vie privée, tous les services Internxt sont conçus dès le départ pour une sécurité totale.",
     "cta": "Créer un compte gratuit"
   },
   "InfoSection": {
@@ -92,18 +92,18 @@
   },
   "ThirdFeaturesSection": {
     "title": "Obtenez jusqu'à 10 Go gratuitement !",
-    "description": "Créez votre compte gratuit maintenant et obtenez un accès complet à notre suite de services de protection de la vie privée en ligne",
+    "description": "Créez votre compte gratuit maintenant et obtenez un accès complet à notre suite de services de protection de la vie privée en ligne.",
     "cta": "Commencer"
   },
   "FirstWhatWeDoSection": {
     "card1": {
       "title": "Construit pour l'avenir",
-      "description": "Nous voulons construire un meilleur World Wide Web, qui soit juste, sûr et équitable pour tous., et nous sommes en première ligne",
+      "description": "Nous voulons construire un meilleur World Wide Web, qui soit juste, sûr et équitable pour tous., et nous sommes en première ligne.",
       "cta": "Le combat pour la vie privée"
     },
     "card2": {
       "title": "Sur tous vos appareils, une expérience unique",
-      "description": "Internxt est disponible sur toutes les plateformes, même Linux ! Synchronisez vos fichiers et vos photos avec nos applications mobiles, web et de bureau, toutes conçues pour optimiser votre stockage chiffré",
+      "description": "Internxt est disponible sur toutes les plateformes, même Linux ! Synchronisez vos fichiers et vos photos avec nos applications mobiles, web et de bureau, toutes conçues pour optimiser votre stockage chiffré.",
       "cta": "Télécharger les applications"
     },
     "card3": {
@@ -118,19 +118,19 @@
     "square1": {
       "title": "Internxt Drive",
       "subtitle": "Le stockage cloud le plus sûr pour tous vos fichiers, photos, et plus encore",
-      "description": "Reprenez le contrôle de vos fichiers et de vos données avec Internxt Drive. Stocker et sauvegarder vos fichiers en toute confidentialité ne pourrait pas être plus facile. Le stockage en nuage moderne rencontre le chiffrement de niveau militaire",
+      "description": "Reprenez le contrôle de vos fichiers et de vos données avec Internxt Drive. Stocker et sauvegarder vos fichiers en toute confidentialité ne pourrait pas être plus facile. Le stockage en nuage moderne rencontre le chiffrement de niveau militaire.",
       "cta": "Sauvagardez avec Drive"
     },
     "square2": {
       "title": "Internxt Photos",
       "subtitle": "Stockage sécurisé de photos en ligne pour tous vos moments parfaits",
-      "description": "Revivez, partagez et conservez vos meilleurs souvenirs en un seul endroit avec Internxt Photos. Ayez toujours vos photos proche et synchronisez vos images d'un appareil à l'autre",
+      "description": "Revivez, partagez et conservez vos meilleurs souvenirs en un seul endroit avec Internxt Photos. Ayez toujours vos photos proche et synchronisez vos images d'un appareil à l'autre.",
       "cta": "Synchroniser avec Photos"
     },
     "square3": {
       "title": "Internxt Send",
       "subtitle": "Chiffrer, partager et envoyer des fichiers volumineux avec une certitude absolue",
-      "description": "Send vous permet de chiffrer de bout en bout et de partager rapidement des fichiers volumineux sans vous soucier de la sécurité de vos documents, images ou vidéos. Transférez à n'importe qui en toute confidentialité",
+      "description": "Send vous permet de chiffrer de bout en bout et de partager rapidement des fichiers volumineux sans vous soucier de la sécurité de vos documents, images ou vidéos. Transférez à n'importe qui en toute confidentialité.",
       "cta": "Partagez avec Send"
     }
   },
@@ -176,7 +176,7 @@
     "title": { "line1": "Commencez et", "line2": "obtenez jusqu'à 10 Go gratuitement" },
     "subtitle": {
       "line1": "Nos clients sont très satisfaits d'Internxt Drive, mais",
-      "ligne2": "ils sont plus heureux de savoir qu'ils sont dans une totale confidentialité"
+      "ligne2": "ils sont plus heureux de savoir qu'ils sont dans une totale confidentialité."
     },
     "cta1": "Commencer"
   }

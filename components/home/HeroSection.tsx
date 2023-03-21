@@ -22,30 +22,6 @@ export default function HeroSection({ textContent, lang }) {
     textContent.title.line1.includes('Internxt') &&
     textContent.title.line1.substr(textContent.title.line1.indexOf('Internxt'), 8);
 
-  console.log(title);
-
-  useEffect(() => {
-    const permitedDomains = ['https://drive.internxt.com', 'https://internxt.com'];
-
-    const onRecieveMessage = (e) => {
-      if (permitedDomains.includes(e.origin)) {
-        if (e.data.action === 'signup') {
-          setFormError(null);
-          setFormLoading(true);
-        } else if (e.data.action === 'error_inline') {
-          setFormLoading(false);
-          setFormError(e.data.msg);
-        }
-      }
-    };
-
-    window.addEventListener('message', onRecieveMessage);
-
-    return () => {
-      window.removeEventListener('message', onRecieveMessage);
-    };
-  });
-
   useEffect(() => {
     setTimeout(() => {
       setHeaderAnimation1(true);

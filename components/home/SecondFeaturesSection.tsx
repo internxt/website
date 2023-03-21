@@ -27,7 +27,7 @@ const SecondFeaturesSection = ({ textContent }) => {
             </>
           ))}
         </RevealX>
-        <RevealX direction="left" className="flex flex-col pb-6">
+        <RevealX direction="left" key={textContent.info[cardIndex].title} className="flex flex-col pb-6">
           <div className="flex w-auto justify-center px-6">
             <div className="flex flex-col rounded-3xl p-8">
               <div className="flex h-80 w-auto max-w-[384px] flex-col space-y-6">
