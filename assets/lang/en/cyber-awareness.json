@@ -69,5 +69,22 @@
   },
   "VideoSection": {
     "title": "Want to know more? Here are some informative Cyber Awareness videos"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is Cyber Awareness?",
+        "answer": [
+          "Cybersecurity Awareness is the continuous process of teaching and training about cyberspace and how to better prevent threats and security incidents. Cyber Awareness aims to give a sense of proactive responsibility for the safety and security of personal or business online information."
+        ]
+      },
+      {
+        "question": "Why is Cyber Awareness important?",
+        "answer": [
+          "Cyber threats are ever-rising, so Cyber Awareness is critical for keeping your employees and organization secure online. Human mistakes are the primary cause of most data breaches. 80% of all data breaches are caused by human error, meaning 80% of breaches can be avoided with Cyber Awareness."
+        ]
+      }
+    ]
   }
 }
