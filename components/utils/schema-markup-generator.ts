@@ -27,7 +27,7 @@ export const sm_faq = (faq) => {
     }
 
     data += `"
-      }`;
+      }}`;
     if (i + 1 < arr.length) data += ',';
   });
   data += `]}`;
