@@ -8,7 +8,7 @@ const SecondFeaturesSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden bg-gray-1 py-24">
-      <div className="hidden flex-row items-center justify-center lg:flex">
+      <RevealY className="hidden flex-row items-center justify-center lg:flex">
         <RevealX direction="right" className="flex max-w-[250px] flex-col">
           {textContent.info.map((info, index) => (
             <>
@@ -27,18 +27,18 @@ const SecondFeaturesSection = ({ textContent }) => {
             </>
           ))}
         </RevealX>
-        <RevealX direction="left" key={textContent.info[cardIndex].title} className="flex flex-col pb-6">
+        <div key={textContent.info[cardIndex].title} className="flex h-[460px] flex-col pb-6">
           <div className="flex w-auto justify-center px-6">
             <div className="flex flex-col rounded-3xl p-8">
-              <div className="flex h-80 w-auto max-w-[384px] flex-col space-y-6">
+              <div className="flex  w-full max-w-[384px] flex-col space-y-6">
                 <Gauge className="text-primary" size={64} />
                 <p className="text-4xl font-semibold">{textContent.info[cardIndex].title}</p>
                 <p className="text-lg font-normal">{textContent.info[cardIndex].description}</p>
               </div>
             </div>
           </div>
-        </RevealX>
-      </div>
+        </div>
+      </RevealY>
       <div className="flex flex-col items-center justify-center space-y-10 px-5 lg:hidden">
         {textContent.info.map((info) => (
           <div key={info.title} className={`revealY flex flex-col items-start space-y-6 rounded-2xl bg-white p-4`}>
