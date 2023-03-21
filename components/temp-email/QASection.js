@@ -31,6 +31,18 @@ const QASection = () => {
         'No. Unfortunately when you delete the emails you sent or received with the used domain, they are gone for good. We do this so your privacy is protected and your deleted emails aren’t left exposed.',
       ],
     },
+    {
+      question: 'What is a temporary email?',
+      answer: [
+        'An email that is only valid for a brief time before being automatically destroyed is referred to as a transitory email. Internxt Temporary Email is a free disposable email really useful.',
+      ],
+    },
+    {
+      question: 'Why use a temporary email?',
+      answer: [
+        'Keep your email account clean, secure, and free of any unwanted mail with Internxt’s free Temporary Email. Email anonymously by opening a temporary mailbox and generating random email addresses to use however you see fit. Save your real account for the important stuff.',
+      ],
+    },
   ];
 
   return (
