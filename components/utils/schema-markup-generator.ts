@@ -20,7 +20,6 @@ export const sm_faq = (faq) => {
     if (item.answer.length > 1) {
       item.answer.forEach((answer, i, arr) => {
         data += `<p>${answer}</p>`;
-        if (i + 1 < arr.length) data += ' ';
       });
     } else {
       data += `${item.answer[0]}`;

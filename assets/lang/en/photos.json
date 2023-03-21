@@ -111,5 +111,24 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How do I sync my files and photos in Internxt?",
+        "answer": [
+          "To sync and encrypt your photos from your phone library to the Internxt cloud, simply:",
+          "1. Open the Internxt mobile app",
+          "2. Select 'Photos' and your photos will start syncing automatically"
+        ]
+      },
+      {
+        "question": "How can I upload files from my phone?",
+        "answer": [
+          "Open the Internxt mobile app, and tap the blue plus (+) icon at the bottom-center of the screen. Select 'Upload files' or 'Upload from camera roll' to upload a photo."
+        ]
+      }
+    ]
   }
 }
