@@ -88,9 +88,37 @@
           "answer": [
             "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
           ]
+        },
+        {
+          "question": "How much does an Internxt plan cost?",
+          "answer": [
+            "Need more storage? We also offer individual plans that range from 20 GB to 2 TB, from as low as €0.89/month."
+          ]
+        },
+        {
+          "question": "Does Internxt have lifetime plans?",
+          "answer": [
+            "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+          ]
         }
       ]
     }
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "How much does an Internxt plan cost?",
+        "answer": [
+          "Need more storage? We also offer individual plans that range from 20 GB to 2 TB, from as low as €0.89/month."
+        ]
+      },
+      {
+        "question": "Does Internxt have lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+        ]
+      }
+    ]
   },
   "CtaSection": {
     "title": "Try Internxt risk-free",
