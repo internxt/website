@@ -1,4 +1,6 @@
+import Script from 'next/script';
 import React from 'react';
+
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/converter-tool/HeroSection';
@@ -10,42 +12,50 @@ import FaqSection from '../components/converter-tool/FaqSection';
 import Footer from '../components/layout/Footer';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
+import { sm_faq } from '../components/utils/schema-markup-generator';
+
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
 const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === CONVERTER_TOOL_METATAG_ID);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
-      <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(langJson.SchemaMarkupQuestions.faq)}
+      </Script>
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
+        <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
 
-      <TryInternxtBanner
-        textContent={bannerLang.tryOutInternxtGeneralBanner}
-        url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
-      />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <ExplanationSection
-        textContent={langJson.ExplanationSection}
-        bannerText={bannerLang.SignUpByteConverterBanner}
-        lang={lang}
-      />
+        <TryInternxtBanner
+          textContent={bannerLang.tryOutInternxtGeneralBanner}
+          url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
+        />
 
-      <CtaSection textContent={langJson.ctaSection1} />
+        <ExplanationSection
+          textContent={langJson.ExplanationSection}
+          bannerText={bannerLang.SignUpByteConverterBanner}
+          lang={lang}
+        />
 
-      <InfoSection textContent={langJson.infoSection} />
+        <CtaSection textContent={langJson.ctaSection1} />
 
-      <CtaSection textContent={langJson.ctaSection2} />
+        <InfoSection textContent={langJson.infoSection} />
 
-      <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} />
+        <CtaSection textContent={langJson.ctaSection2} />
 
-      <FaqSection textContent={langJson.FaqSection} />
+        <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} />
 
-      <CtaSection textContent={langJson.ctaSection3} />
+        <FaqSection textContent={langJson.FaqSection} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <CtaSection textContent={langJson.ctaSection3} />
+
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 
