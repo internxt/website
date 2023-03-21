@@ -231,7 +231,7 @@
     }
   },
   "FaqSection": {
-    "title": "¿Preguntas? Tenemos respuestas",
+    "title": "Questions? We have answers",
     "faq": [
       {
         "question": "What is a privacy directory?",
