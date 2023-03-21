@@ -142,17 +142,17 @@
     "cards": [
       {
         "name": "Eva W.",
-        "entreprise": "Journaliste pour FixThePhoto.com",
+        "enterprise": "Journaliste pour FixThePhoto.com",
         "review": "Internxt est un service de stockage en nuage pratique pour les clients soucieux de leur budget. Il dispose d'une interface simplifiée et d'une équipe d'assistance fiable, ce qui en fait une excellente option pour ceux qui ont besoin de stocker leurs fichiers en toute sécurité."
       },
       {
         "name": "Cristian M.",
-        "entreprise": "Avis de GetApp",
+        "enterprise": "Avis de GetApp",
         "review": "La meilleure alternative cryptée à Dropbox. Dans l'ensemble : Nous avions besoin d'une alternative qui nous permette de stocker des fichiers clients et du travail (fichiers de médias sociaux) et comme Internxt est compatible avec le GDPR, il nous convient parfaitement !"
       },
       {
         "name": "Josep C.",
-        "entreprise": "Avis de Trustpilot",
+        "enterprise": "Avis de Trustpilot",
         "review": "J'utilise Google Drive depuis plusieurs années, mais j'avais besoin d'une alternative qui me garantisse la confidentialité de mes données. Quelque chose que Google ou d'autres plateformes bien connues ne peuvent pas faire. C'est pourquoi j'ai opté pour Internxt."
       },
       {
@@ -167,7 +167,7 @@
       },
       {
         "name": "Binet S.",
-        "entreprise": "Avis de Trustpilot",
+        "enterprise": "Avis de Trustpilot",
         "review": "Rapide, fiable et peu coûteux - les meilleurs éléments de tout produit ! Le grand espace de stockage est vraiment apprécié ! J'ai assez d'espace pour sauvegarder toutes mes photos et tous mes fichiers. J'apprécie également la simplicité avec laquelle il est possible de partager des fichiers."
       }
     ]
