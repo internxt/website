@@ -1,39 +1,52 @@
+import Script from 'next/script';
 import React from 'react';
+
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/virus-scanner/HeroSection';
 import FeaturesSection from '../components/virus-scanner/FeaturesSection';
 import CtaSection from '../components/virus-scanner/CtaSection';
+import FAQSection from '../components/virus-scanner/FAQSection';
 import BannersSection from '../components/virus-scanner/BannersSection';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
+
+import { sm_faq } from '../components/utils/schema-markup-generator';
 
 const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
 
   return (
-    <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(langJson.FaqSection.faq)}
+      </Script>
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} />
+      <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <TryInternxtBanner
-        textContent={bannerLang.tryOutInternxtGeneralBanner}
-        url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt'}
-      />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FeaturesSection
-        textContent={langJson.FeaturesSection}
-        bannerText={bannerLang.SignUpVirusScannerBanner}
-        lang={lang}
-      />
+        <TryInternxtBanner
+          textContent={bannerLang.tryOutInternxtGeneralBanner}
+          url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt'}
+        />
 
-      <BannersSection textContent={langJson.BannersSection} lang={lang} />
+        <FeaturesSection
+          textContent={langJson.FeaturesSection}
+          bannerText={bannerLang.SignUpVirusScannerBanner}
+          lang={lang}
+        />
 
-      <CtaSection textContent={langJson.CtaSection} />
+        <BannersSection textContent={langJson.BannersSection} lang={lang} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
-    </Layout>
+        <CtaSection textContent={langJson.CtaSection} />
+
+        <FAQSection textContent={langJson.FaqSection} />
+
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      </Layout>
+    </>
   );
 };
 
