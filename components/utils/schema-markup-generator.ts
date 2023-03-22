@@ -32,3 +32,25 @@ export const sm_faq = (faq) => {
   data += `]}`;
   return data;
 };
+
+// Single Breadcrumb Data Structure generator
+// Additional information: https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
+
+export const sm_breadcrumb = (name, url) => {
+  return `{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://internxt.com/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "${name}",
+          "item": "https://internxt.com/${url}"
+        }
+      ]}`;
+};

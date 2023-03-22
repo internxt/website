@@ -11,7 +11,7 @@ import FAQSection from '../components/pricing/FAQSection';
 import HeroSection from '../components/pricing/HeroSection';
 import CtaSection from '../components/pricing/CtaSection';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -43,6 +43,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.SchemaMarkupQuestions.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Pricing', 'pricing')}
       </Script>
 
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>

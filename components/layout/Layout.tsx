@@ -3,8 +3,6 @@ import Head from 'next/head';
 import React, { useEffect } from 'react';
 import isBrave from '../../lib/brave';
 import Script from 'next/script';
-import Link from 'next/link';
-import { X } from 'phosphor-react';
 import { useRouter } from 'next/router';
 import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
 
