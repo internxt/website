@@ -1,5 +1,5 @@
 import React from 'react';
-import FaqAccordion from '../password-checker/FaqAccordion';
+import FaqAccordion from '../shared/FAQAccordion';
 
 const InfoSection = ({ textContent }) => {
   return (
