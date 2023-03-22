@@ -16,7 +16,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [country, setCountry] = useState('ES');
-  const [isLifetime, setIsLifetime] = useState(false);
 
   async function getCountryCode() {
     const options = {
@@ -39,13 +38,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   return (
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar
-        textContent={navbarLang}
-        lang={lang}
-        cta={['default']}
-        fixed
-        mode={isLifetime ? 'payment' : 'subscription'}
-      />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={textContent.HeroSection} />
 
@@ -53,7 +46,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         setSegmentPageName={setPageName}
         lang={lang}
         country={country}
-        setIsLifetime={setIsLifetime}
         textContent={textContent.tableSection}
         products={JSON.parse(products)}
       />
@@ -87,8 +79,7 @@ export async function getServerSideProps(ctx) {
         pushObjects[id] = {
           storage: bytes(product.bytes),
           price: product.amount / 100,
-          planId: product.id,
-          popular: id === 'lifetime2TB' ? true : false,
+          popular: (id === 'lifetime2TB') | 'month2TB' | 'year2TB' ? true : false,
         };
       });
     });

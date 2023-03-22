@@ -12,10 +12,14 @@ export const stripeProducts = () => {
     return productsRequest.data;
   }
 
-  async function getPlanId(interval: string, storage: number) {
-    const productsRequest = await axios.get(`https://api.internxt.com/payments/prices`);
-    const plan = productsRequest.data.find((plan: any) => plan.interval === interval && plan.storage === storage);
-    return plan;
+  async function getPlanId(interval: string, storage: string) {
+    const getProducts = await products();
+    const plan = getProducts.filter((product: Record<string, unknown>) => {
+      if (product.interval === interval && bytes(product.bytes) === storage) {
+        return product;
+      }
+    });
+    return plan[0].id;
   }
 
   return {
@@ -23,9 +27,3 @@ export const stripeProducts = () => {
     getPlanId,
   };
 };
-
-// export function getPlanId(stripeObject: Record<string, string>): string {
-//   return process.env.NODE_ENV.trim() === 'production'
-//     ? STRIPE_PRODUCT[stripeObject.product].production
-//     : STRIPE_PRODUCT[stripeObject.product].debug;
-// }

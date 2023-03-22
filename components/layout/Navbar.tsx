@@ -11,7 +11,6 @@ import SignUp from '../auth/SignUp';
 import ForgotPassword from '../auth/ForgotPassword';
 
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 export interface NavbarProps {
@@ -521,11 +520,11 @@ export default function Navbar(props: NavbarProps) {
             {props.cta[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={() =>
-                  checkout({
-                    planId: getPlanId(stripeObject),
-                  })
-                }
+                onClick={() => {
+                  // checkout({
+                  //   planId: getPlanId(stripeObject),
+                  // })
+                }}
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'

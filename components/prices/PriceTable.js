@@ -5,8 +5,9 @@ import PriceCard from './PriceCard';
 import Tooltip from './ToolTip';
 import { Coin, CreditCard, Detective } from 'phosphor-react';
 import SpecialPriceCard from './SpecialPriceCard';
+import { stripeProducts } from '../../pages/api/stripe/stripeProducts';
 
-export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent, products }) {
+export default function PriceTable({ setSegmentPageName, lang, country, textContent, products }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -14,12 +15,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
 
   function parentSetUserCount(count) {
     setUserCount(count);
-  }
-
-  if (billingFrequency === -1) {
-    setIsLifetime(true);
-  } else {
-    setIsLifetime(false);
   }
 
   const billingPrice = (price) => price[billingFrequency];
@@ -37,7 +32,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         popular: false,
       },
       GB20: {
-        stripeID: { 1: products.month20GB.planId, 12: products.year20GB.planId },
         storage: products.month20GB.storage,
         price: {
           1: products.month20GB.price,
@@ -46,7 +40,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         popular: false,
       },
       GB200: {
-        stripeID: { 1: products.month200GB.planId, 12: products.year200GB.planId },
         storage: products.month200GB.storage,
         price: {
           1: products.month200GB.price,
@@ -55,10 +48,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         popular: false,
       },
       TB2: {
-        stripeID: {
-          1: products.month2TB.planId,
-          12: products.year2TB.planId,
-        },
         storage: products.month2TB.storage,
         price: {
           1: products.month2TB.price,

@@ -29,6 +29,12 @@ export default function PriceCard({
     12: 'annually',
   };
 
+  const stripeInterval = {
+    '-1': 'lifetime',
+    1: 'month',
+    12: 'year',
+  };
+
   const currency = () => {
     switch (country) {
       case 'US':
@@ -220,12 +226,15 @@ export default function PriceCard({
             if (cta[1] === 'Free plan') {
               goToSignUpURL();
             } else {
-              const id = billingFrequency === 1 ? 'month' + storage : 'year' + storage;
-
-              checkout({
-                planId: products[id]?.planId,
-                mode: billingFrequency === -1 ? 'payment' : 'subscription',
-              });
+              const interval = stripeInterval[billingFrequency];
+              stripeProducts()
+                .getPlanId(interval, storage)
+                .then((planId) => {
+                  checkout({
+                    planId: planId,
+                    mode: billingFrequency === -1 ? 'payment' : 'subscription',
+                  });
+                });
             }
           }}
           className="subscribePlan flex w-full cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base"

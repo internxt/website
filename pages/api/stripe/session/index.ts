@@ -1,7 +1,6 @@
 /* eslint-disable consistent-return */
 import { NextApiRequest, NextApiResponse } from 'next';
 // import Stripe from 'stripe';
-import { getStripeProduct } from '../stripeProducts';
 
 async function postSession(req: NextApiRequest, res: NextApiResponse) {
   /*   const KEY = process.env.NODE_ENV === 'production' ? process.env.STRIPE_PRIVATE_KEY : process.env.STRIPE_PRIVATE_KEY_TEST;
