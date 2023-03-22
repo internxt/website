@@ -28,9 +28,9 @@ const FirstWhatWeDoSection = ({ textContent }) => {
           </div>
           <div className="flex w-full max-w-[390px] flex-col space-y-6">
             <p className="text-5xl font-semibold">{textContent.card1.title}</p>
-            <p className="text-xl">{textContent.card1.description}</p>
+            <p className="text-xl font-normal">{textContent.card1.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
-              <p>{textContent.card1.cta}</p>
+              <p className="text-lg font-semibold">{textContent.card1.cta}</p>
               <CaretRight size={12} />
             </div>
           </div>
@@ -40,7 +40,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             <p className="text-5xl font-semibold">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
-              <p>{textContent.card2.cta}</p>
+              <p className="text-lg font-semibold">{textContent.card2.cta}</p>
               <CaretRight size={12} />
             </div>
           </div>

@@ -21,7 +21,7 @@ const SecondFeaturesSection = ({ textContent }) => {
                   setCardIndex(index);
                 }}
               >
-                <p className="text-2xl font-medium">{info.title}</p>
+                <p className="text-2xl font-medium text-gray-100">{info.title}</p>
               </div>
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </>
@@ -32,8 +32,8 @@ const SecondFeaturesSection = ({ textContent }) => {
             <div className="flex flex-col rounded-3xl p-8">
               <div className="flex  w-full max-w-[384px] flex-col space-y-6">
                 <Gauge className="text-primary" size={64} />
-                <p className="text-4xl font-semibold">{textContent.info[cardIndex].title}</p>
-                <p className="text-lg font-normal">{textContent.info[cardIndex].description}</p>
+                <p className="text-4xl font-semibold text-gray-100">{textContent.info[cardIndex].title}</p>
+                <p className="text-xl font-normal text-gray-80">{textContent.info[cardIndex].description}</p>
               </div>
             </div>
           </div>
