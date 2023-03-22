@@ -12,21 +12,24 @@ const FirstWhatWeDoSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
-        <RevealY className="flex flex-col-reverse items-center justify-center space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20">
+        <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0  md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative rounded-3xl">
             <Image
               src="/images/home/GlobalImg.png"
               width={496}
               height={520}
               quality={100}
-              layout="fixed"
+              draggable={false}
               className="rounded-3xl"
             />
-            <RevealX direction="right" className="absolute top-12 -left-20 rounded-lg bg-white shadow-xl">
+            <RevealX
+              direction="right"
+              className="absolute top-12 -left-20 hidden rounded-lg bg-white shadow-xl lg:flex"
+            >
               <Image src="/images/home/TaskLogger.svg" width={319} height={287} quality={100} className="rounded-lg" />
             </RevealX>
           </div>
-          <div className="flex w-full max-w-[390px] flex-col space-y-6">
+          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
             <p className="text-5xl font-semibold leading-tight">{textContent.card1.title}</p>
             <p className="text-xl font-normal">{textContent.card1.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
@@ -35,8 +38,8 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             </div>
           </div>
         </RevealY>
-        <RevealY className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-20">
-          <div className="flex w-full max-w-[390px] flex-col space-y-6">
+        <RevealY className="flex flex-col space-y-5 md:flex-row md:space-x-20 lg:items-center lg:justify-center">
+          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
             <p className="text-5xl font-semibold leading-tight">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
@@ -44,7 +47,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
               <CaretRight size={12} />
             </div>
           </div>
-          <div className="relative rounded-3xl">
+          <div className="relative w-full rounded-3xl">
             <Image
               src="/images/home/GirlAlone.png"
               width={444}
@@ -55,28 +58,32 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             />
             <RevealX
               direction="left"
-              className="absolute top-14 -right-12 rounded-lg bg-gradient-to-b from-white to-gray-1 shadow-xl"
+              className="absolute top-14 -right-12 hidden flex-col rounded-lg bg-gradient-to-b from-white to-gray-1 shadow-xl lg:flex"
             >
               <FileItem encrypted title={'Cybersecurity_Presentation.ppt'} className="rounded-t-lg" ItemImg={PPTItem} />
               <FileItem title="Invoice.pdf" className="rounded-b-lg" ItemImg={PdfItem} />
             </RevealX>
           </div>
         </RevealY>
-        <RevealY className="flex flex-col-reverse items-center justify-center space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20">
-          <div className="relative rounded-3xl">
+        <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
+          <div className="relative w-full rounded-3xl">
             <Image
               src="/images/home/GirlWithLaptop.png"
               width={496}
               height={520}
               quality={100}
-              layout="fixed"
+              draggable={false}
               className="rounded-3xl"
             />
-            <RevealX direction="right" className="absolute top-44 -left-20 rounded-lg bg-gray-1 shadow-lg">
+            <RevealX
+              direction="right"
+              className="absolute top-12 -left-20 hidden rounded-lg bg-white shadow-xl lg:flex"
+            >
               <DriveSidenav />
             </RevealX>
           </div>
-          <div className="flex w-full flex-col space-y-5">
+
+          <div className="flex w-full flex-col space-y-5 text-start">
             <div className="flex max-w-[390px] flex-col space-y-6">
               <p className="text-5xl font-semibold leading-tight">{textContent.card3.title}</p>
               <p className="text-xl">{textContent.card3.description}</p>
