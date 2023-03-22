@@ -7,7 +7,7 @@ const SocialProofSection = ({ textContent, lang }) => (
       <div className="flex w-full flex-shrink-0 flex-col items-center justify-center px-10 py-12 text-center md:px-0 md:py-24">
         <h3 className="mb-8 text-4xl font-medium">{textContent.title}</h3>
 
-        <div className="mb-8 flex flex-row flex-wrap justify-around sm:px-10">
+        <div className="flex flex-row flex-wrap justify-around sm:px-10">
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovh cloud logo" />
           </div>

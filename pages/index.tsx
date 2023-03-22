@@ -68,10 +68,6 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
 
       <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 
-      <div className="getStartedSection">
-        <GetStartedSection textContent={langJson.GetStartedSection} />
-      </div>
-
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
