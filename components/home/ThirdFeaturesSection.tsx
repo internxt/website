@@ -24,7 +24,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
         >
           <Gift size={60} className="text-primary" />
           <p className="text-5xl font-semibold">{textContent.title}</p>
-          <p className="text-2xl text-gray-80">{textContent.description}</p>
+          <p className="text-xl">{textContent.description}</p>
           <div>
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white"

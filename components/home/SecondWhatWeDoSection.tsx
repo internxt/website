@@ -21,11 +21,11 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
               className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
             >
               <div className="m-10 mb-0 w-auto space-y-6 lg:m-20 lg:mb-20 lg:h-80 lg:w-80">
-                <h4 className="mb-10 text-3xl font-medium lg:text-4xl">{textContent.square1.title}</h4>
+                <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square1.title}</h4>
                 <p className="text-xl font-bold">{textContent.square1.subtitle}</p>
-                <h5 className="mb-4 text-lg sm:text-base">{textContent.square1.description}</h5>
+                <h5 className="mb-4 text-xl sm:text-base">{textContent.square1.description}</h5>
                 <Link href="/drive" locale={lang}>
-                  <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                  <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
                     <span>{textContent.square1.cta}</span>
                     <CaretRight size={16} />
                   </a>
@@ -44,11 +44,11 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
               className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
             >
               <div className="m-10 mb-0 w-auto space-y-6 lg:m-20 lg:mb-20 lg:h-80 lg:w-80">
-                <h4 className="mb-10 text-3xl font-medium lg:text-4xl">{textContent.square2.title}</h4>
+                <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square2.title}</h4>
                 <p className="text-xl font-bold">{textContent.square2.subtitle}</p>
-                <h5 className="mb-4 text-lg sm:text-base">{textContent.square2.description}</h5>
+                <h5 className="mb-4 text-xl sm:text-base">{textContent.square2.description}</h5>
                 <Link href="/photos" locale={lang}>
-                  <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                  <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
                     <span>{textContent.square2.cta}</span>
                     <CaretRight size={16} />
                   </a>
@@ -66,11 +66,11 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
               className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-cool-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
             >
               <div className="m-10 mb-0 w-auto space-y-6 lg:m-20 lg:mb-20 lg:h-80 lg:w-80">
-                <h4 className="mb-10 text-3xl font-medium lg:text-4xl">{textContent.square3.title}</h4>
+                <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square3.title}</h4>
                 <p className="text-xl font-bold">{textContent.square3.subtitle}</p>
-                <h5 className="mb-4 text-lg sm:text-base">{textContent.square3.description}</h5>
+                <h5 className="mb-4 text-xl sm:text-base">{textContent.square3.description}</h5>
                 <Link href="/photos" locale={lang}>
-                  <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                  <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
                     <span>{textContent.square3.cta}</span>
                     <CaretRight size={16} />
                   </a>
