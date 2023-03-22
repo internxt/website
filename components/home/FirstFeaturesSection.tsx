@@ -9,11 +9,11 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
     <section className="overflow-hidden bg-gray-1">
       <RevealY className="content flex flex-col items-center space-y-6 px-5 py-20">
         <div className="flex w-full flex-shrink-0 flex-col items-center justify-center text-center">
-          <h2 className="mb-6 text-4xl font-medium sm:text-5xl">
+          <h2 className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">
             {textContent.title.line1}
             <br className="hidden sm:flex" /> {textContent.title.line2}
           </h2>
-          <h3 className="mb-6 w-full max-w-3xl text-lg text-neutral-500">{textContent.subtitle}</h3>
+          <h3 className="mb-6 w-full max-w-3xl text-xl font-normal text-gray-80">{textContent.subtitle}</h3>
         </div>
 
         <button
