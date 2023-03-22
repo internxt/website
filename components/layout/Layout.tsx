@@ -90,13 +90,13 @@ LayoutProps) {
           crossOrigin="anonymous"
         />
       </Head>
-      {/* {showBanner ? (
+      {showBanner ? (
         <TopBannerHomePage
           isBannerFixed={isBannerFixed}
           closeBannerOnMobile={closeBannerOnMobile}
           setCloseBannerOnMobile={setCloseBannerOnMobile}
         />
-      ) : null} */}
+      ) : null}
       {children}
       {/* <BFBanner /> */}
     </>
