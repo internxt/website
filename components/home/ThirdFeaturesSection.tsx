@@ -23,7 +23,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
           className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start"
         >
           <Gift size={60} className="text-primary" />
-          <p className="text-5xl font-semibold">{textContent.title}</p>
+          <p className="text-5xl font-semibold leading-tight">{textContent.title}</p>
           <p className="text-xl">{textContent.description}</p>
           <div>
             <button
