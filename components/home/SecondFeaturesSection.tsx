@@ -29,9 +29,11 @@ const SecondFeaturesSection = ({ textContent }) => {
     },
   ];
 
+  const DescriptionIcon = cardInfo[cardIndex].icon;
+
   return (
     <section className="overflow-hidden bg-gray-1 py-24">
-      <RevealY className="hidden flex-row items-center justify-center lg:flex">
+      <RevealY className="hidden flex-row items-start justify-center lg:flex">
         <RevealX direction="right" className="flex max-w-[250px] flex-col">
           {textContent.info.map((info, index) => (
             <>
@@ -50,11 +52,11 @@ const SecondFeaturesSection = ({ textContent }) => {
             </>
           ))}
         </RevealX>
-        <div key={textContent.info[cardIndex].title} className="flex h-[460px] flex-col justify-center pb-6">
+        <div key={textContent.info[cardIndex].title} className="flex flex-col justify-start">
           <div className="flex w-auto justify-center px-6">
-            <div className="flex flex-col rounded-3xl p-8">
+            <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex  w-full max-w-[384px] flex-col space-y-6">
-                <Gauge className="text-primary" size={64} />
+                <DescriptionIcon className="text-primary" size={64} />
                 <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
                 <p className="text-xl font-normal text-gray-80">{cardInfo[cardIndex].description}</p>
               </div>
