@@ -12,7 +12,7 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { downloadDriveByPlatform } from '../lib/get-download-url';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, download, device, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
@@ -21,6 +21,10 @@ const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, downlo
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.FaqSection.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Photos', 'photos')}
       </Script>
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Photos" lang={lang}>

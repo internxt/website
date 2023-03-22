@@ -9,7 +9,7 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
@@ -18,6 +18,10 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.FaqSection.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Cloud Storage Comparison', 'comparison')}
       </Script>
 
       <Layout

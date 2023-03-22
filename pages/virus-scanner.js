@@ -11,7 +11,7 @@ import FAQSection from '../components/virus-scanner/FAQSection';
 import BannersSection from '../components/virus-scanner/BannersSection';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
@@ -20,6 +20,10 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.FaqSection.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Virus Scanner', 'virus-scanner')}
       </Script>
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>

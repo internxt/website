@@ -11,7 +11,7 @@ import QASection from '../components/temp-email/QASection';
 import SignupSection from '../components/temp-email/SignupSection';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 //Delete mailbox
 // action=deleteMailbox&login=${this.username}&domain=${this.domain}
@@ -23,6 +23,10 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.SchemaMarkupQuestions.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Temporary Email', 'temporary-email')}
       </Script>
 
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>

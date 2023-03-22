@@ -12,7 +12,7 @@ import FaqSection from '../components/converter-tool/FaqSection';
 import Footer from '../components/layout/Footer';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -23,6 +23,10 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.SchemaMarkupQuestions.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Byte Converter', 'byte-converter')}
       </Script>
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">

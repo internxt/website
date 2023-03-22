@@ -27,6 +27,10 @@ const PrivacyDirectory = ({
         {sm_faq(textContent.FaqSection.faq)}
       </Script>
 
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Privacy Directory', 'privacy-directory')}
+      </Script>
+
       <Layout
         segmentName="Privacy Directory"
         title={metatags[0].title}

@@ -11,7 +11,7 @@ import SuiteSection from '../components/cyber-awareness/SuiteSection';
 import VideoSection from '../components/cyber-awareness/VideoSection';
 import Footer from '../components/layout/Footer';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
@@ -20,6 +20,10 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.FaqSection.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Cyber Awareness', 'cyber-awareness')}
       </Script>
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName={'Cyber Awareness'}>

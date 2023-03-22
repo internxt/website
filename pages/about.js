@@ -1,4 +1,6 @@
+import Script from 'next/script';
 import React from 'react';
+
 import HeroSection from '../components/about/HeroSection';
 import CompanySection from '../components/about/CompanySection';
 import Footer from '../components/layout/Footer';
@@ -6,19 +8,27 @@ import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import cookies from '../lib/cookies';
 
+import { sm_breadcrumb } from '../components/utils/schema-markup-generator';
+
 const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
   return (
-    <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('About', 'about')}
+      </Script>
 
-      <HeroSection textContent={textContent.HeroSection} lang={lang} />
+      <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <CompanySection textContent={textContent.CompanySection} />
+        <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
-    </Layout>
+        <CompanySection textContent={textContent.CompanySection} />
+
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      </Layout>
+    </>
   );
 };
 
