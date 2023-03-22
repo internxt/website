@@ -5,7 +5,7 @@ import PPTItem from '../../public/icons/file-types/ppt.svg';
 import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
 import FileItem from './components/FileItem';
-import Referrals from './components/Referrals';
+import DriveSidenav from './components/DriveSidenav';
 import { useState } from 'react';
 
 const FirstWhatWeDoSection = ({ textContent }) => {
@@ -22,8 +22,8 @@ const FirstWhatWeDoSection = ({ textContent }) => {
               layout="fixed"
               className="rounded-3xl"
             />
-            <RevealX direction="right" className="absolute top-14 -left-20 rounded-lg bg-gray-1">
-              <Referrals />
+            <RevealX direction="right" className="absolute top-12 -left-20 rounded-lg bg-white shadow-xl">
+              <Image src="/images/home/TaskLogger.svg" width={319} height={287} quality={100} className="rounded-lg" />
             </RevealX>
           </div>
           <div className="flex w-full max-w-[390px] flex-col space-y-6">
@@ -50,12 +50,12 @@ const FirstWhatWeDoSection = ({ textContent }) => {
               width={444}
               height={520}
               quality={100}
-              layout="intrinsic"
+              draggable={false}
               className="rounded-3xl"
             />
             <RevealX
               direction="left"
-              className="absolute top-14 -right-12 rounded-lg bg-gradient-to-b from-white to-gray-1"
+              className="absolute top-14 -right-12 rounded-lg bg-gradient-to-b from-white to-gray-1 shadow-xl"
             >
               <FileItem encrypted title={'Cybersecurity_Presentation.ppt'} className="rounded-t-lg" ItemImg={PPTItem} />
               <FileItem title="Invoice.pdf" className="rounded-b-lg" ItemImg={PdfItem} />
@@ -72,8 +72,8 @@ const FirstWhatWeDoSection = ({ textContent }) => {
               layout="fixed"
               className="rounded-3xl"
             />
-            <RevealX direction="right" className="absolute top-14 -left-20 rounded-lg bg-gray-1">
-              <Referrals />
+            <RevealX direction="right" className="absolute top-44 -left-20 rounded-lg bg-gray-1 shadow-lg">
+              <DriveSidenav />
             </RevealX>
           </div>
           <div className="flex w-full flex-col space-y-5">

@@ -68,12 +68,12 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-lg">
-            <h1 className="bg-clip-text pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:max-w-lg lg:pb-8 lg:text-6xl">
+            <h1 className="bg-clip-text pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:pb-8 lg:text-6xl lg:leading-tight">
               {title}
-              <span className="text-primary">{Internxt}</span>
+              <span className=" text-primary">{Internxt}</span>
             </h1>
 
-            <h2 className="mb-4 text-lg text-gray-80 md:mb-8">{textContent.subtitle}</h2>
+            <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8">{textContent.subtitle}</h2>
 
             <button
               className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"

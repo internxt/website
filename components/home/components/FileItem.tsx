@@ -13,7 +13,7 @@ const FileItem = ({
   encrypted?: boolean;
 }) => {
   return (
-    <div className={`${className} flex w-[375px] flex-row bg-white px-4 py-3 shadow-2xl`}>
+    <div className={`${className} flex w-[375px] flex-row bg-white px-4 py-3`}>
       <div className={`flex w-full flex-row items-center justify-between space-x-2`}>
         <div className="flex flex-row space-x-2">
           <ItemImg className={`h-10 w-10 ${encrypted && 'opacity-40'}`} />
