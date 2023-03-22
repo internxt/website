@@ -104,5 +104,16 @@
         }
       ]
     }
+  },
+  "FaqSection": {
+    "title": "Questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Quel est le service de stockage en nuage le plus sûr ?",
+        "answer": [
+          "Si vous comparez Internxt avec tous les autres services, vous constaterez qu'Internxt est l'alternative la plus privée et la plus sûre à Google Drive, Dropbox et d'autres services populaires."
+        ]
+      }
+    ]
   }
 }
