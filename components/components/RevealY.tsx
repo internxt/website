@@ -8,12 +8,12 @@ interface RevealProps {
 const RevealY = ({ children, className }: RevealProps) => {
   useEffect(() => {
     function reveal() {
-      var reveals = document.querySelectorAll('.revealY');
+      const reveals = document.querySelectorAll('.revealY');
 
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
 
         if (elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add('active');
