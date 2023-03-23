@@ -235,9 +235,9 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
-                      {textContent.FooterSection.sections.tools.byteConverter}
-                    </a>
+                    <Link href="/byte-converter" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.tools.byteConverter}</a>
+                    </Link>
 
                     <Link href="/temporary-email" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
