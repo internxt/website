@@ -79,7 +79,7 @@ LayoutProps) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="thumbnail" content={`${INTERNXT_URL}/images/previewLink/LifetimeGoogleSearch.png`} />
-        <meta name="apple-itunes-app" content="app-id=id1465869889" />
+        <meta name={`apple-itunes-app" content="app-id=${process.env.NEXT_PUBLIC_IOS_APP_ID}`} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="icon" href="/favicon.ico" />
