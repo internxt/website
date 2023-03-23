@@ -235,15 +235,11 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <a
-                      href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
+                    <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
                       {textContent.FooterSection.sections.tools.byteConverter}
                     </a>
 
-                    <Link href="/privacy-directory" locale={lang} passHref>
+                    <Link href="/temporary-email" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
                     </Link>
 
@@ -570,24 +566,86 @@ export default function Footer({
                         <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                       </Link>
 
+                      <Link href="/cyber-awareness" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-0"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col ${
+                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                      } space-y-4 p-4 pt-2`}
+                    >
+                      <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.tools.byteConverter}
+                      </a>
+
+                      <Link href="/temporary-email" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                      </Link>
+
                       <Link href="/password-checker" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
+                        <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
                       </Link>
 
                       <Link href="/virus-scanner" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
+                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                       </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </div>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
+              {({ open }) => (
+                <div>
+                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
+                    <span className="relative h-5 w-5">
+                      <UilMinus
+                        className={`absolute top-0 left-0 h-full w-full ${
+                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
+                      />
+                      <UilMinus
+                        className={`absolute top-0 left-0 h-full w-full ${
+                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
+                      />
+                    </span>
+                  </Disclosure.Button>
 
-                      <Link href="/byte-converter" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
-                      </Link>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-0"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col ${
+                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                      } space-y-4 p-4 pt-2`}
+                    >
+                      <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.tools.byteConverter}
+                      </a>
 
                       <Link href="/temporary-email" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
+                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
                       </Link>
 
-                      <Link href="/cyber-awareness" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      <Link href="/password-checker" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
+                      </Link>
+
+                      <Link href="/virus-scanner" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
