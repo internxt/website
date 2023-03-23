@@ -1,120 +1,183 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "Escoge Internxt,",
-      "line2": "elige privacidad"
+      "line1": "Defiende tu privacidad, escoge Internxt"
     },
-    "subtitle": "En Internxt hemos creado un conjunto de servicios realmente centrados en ti. Cambia a Internxt Drive, Photos, Send y más.",
+    "subtitle": "Protege tu privacidad con nuestros servicios seguros en la nube, cifrados y de código abierto. Internxt Drive, Photos, Send y mucho más.",
     "cta": {
-      "title": "Consigue hasta 10GB",
-      "subtitle": "Gratis!"
+      "title": "Consigue hasta 10 GB",
+      "subtitle": "¡Gratis!"
     },
     "SignUp": {
       "cta": {
-        "title": "Empieza con Internxt",
-        "subtitle": "Crea una cuenta ahora y consigue 10GB GRATIS"
+        "title": "Empieza a trabajar con Internxt",
+        "subtitle": "Crea una cuenta ahora y consigue 10 GB GRATIS"
       },
       "disclaimer": {
-        "text": "Al crear una cuenta aceptas los",
-        "link": "términos de servicio, y la política de privacidad"
+        "text": "Al crear una cuenta aceptas los.",
+        "link": " términos de servicio, y la política de privacidad"
       },
       "fields": {
         "email": {
-          "label": "Correo",
-          "placeholder": "Correo"
+          "label": "Email",
+          "placeholder": "Email"
         },
         "password": {
           "label": "Contraseña",
           "placeholder": "Contraseña",
           "strength": {
-            "complexity": "La contraseña no es compleja",
-            "length": "La contraseña debe tener mínimo 8 dígitos",
+            "complexity": "La contraseña no es lo suficientemente compleja",
+            "length": "La contraseña debe tener al menos 8 caracteres",
             "weak": "La contraseña es débil",
             "strong": "La contraseña es fuerte"
           }
         },
         "submit": {
-          "get": "Consigue 10GB",
-          "free": "Gratis!"
+          "get": "Consigue hasta 10 GB",
+          "free": "¡Gratis!"
         }
       }
     }
   },
-  "FeaturesSection": {
-    "eyebrow": "INTERNXT DRIVE",
+  "FirstFeaturesSection": {
     "title": {
       "line1": "La nube más segura para",
       "line2": "tus archivos y fotos"
     },
-    "subtitle": {
-      "line1": "Nuestros productos se basan en tu privacidad y seguridad. Drive, Photos y Send son solo",
-      "line2": "el comienzo de una gran familia de productos enfocados en ti y en tu privacidad."
+    "subtitle": "Internxt crea servicios en la nube seguros diseñados para devolverte a ti el control de tus datos. Protegiendo tus archivos y tu derecho fundamental a la privacidad, todos los servicios de Internxt están construidos desde cero para una seguridad y protección sin precedentes.",
+    "cta": "Crear cuenta gratuita"
+  },
+  "InfoSection": {
+    "title": "Almacenamiento seguro en la nube con una privacidad inigualable",
+    "description": "¿Qué hace que Internxt sea tan especial? Somos un equipo unido de profesionales completamente dedicados a protegerte. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos para que no sean explotados.",
+    "cta": "Presentación del equipo de Internxt",
+    "cards": [
+      {
+        "title": "Privado por diseño",
+        "description": "No almacenamos contraseñas ni datos de usuario y todos tus datos están encriptados en tránsito y en reposo. Internxt le da el control total de sus archivos. Tú gestionas tus datos y nosotros los protegemos."
+      },
+      {
+        "title": "Seguridad sin compromisos",
+        "description": "Tus archivos se fragmentan y se cifran de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres el único que tiene acceso a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por eso nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, salvo tus datos."
+      },
+      {
+        "title": "Verificado de forma independiente",
+        "description": "Cumplimos totalmente con GDPR y somos 100% seguros, pero no te fíes de nuestra palabra. Internxt ha sido auditada y verificada de forma independiente por la empresa líder en Europa en pruebas de penetración, Securitum."
+      }
+    ]
+  },
+  "SecondFeaturesSection": {
+    "info": [
+      {
+        "title": "Velocidad sin límites",
+        "description": "¿Necesitas velocidad? Nuestro servicio distribuido está optimizado en servidores ultrarrápidos repartidos por toda la UE, para que puedas obtener el máximo rendimiento de tu conexión."
+      },
+      {
+        "title": "Flujos de trabajo sin fricciones",
+        "description": "Los productos de Internxt están diseñados para ser lo más usables posible, a la vez que ofrecen una interfaz limpia para mejorar e impulsar su productividad. Seguridad empresarial, hecha fácil."
+      },
+      {
+        "title": "Almacenamiento de copias de seguridad",
+        "description": "Copia tus datos gracias a la redundancia integrada. Haz copias de seguridad de tu trabajo y proyectos esenciales, a través de múltiples servidores rápidos en toda la UE, y accede a ellos desde todos tus dispositivos."
+      },
+      {
+        "title": "Protección para tus mejores momentos",
+        "description": "Almacena todas tus fotos en una galería y accede a ellas desde cualquier lugar. Guarda tus recuerdos directamente en tu teléfono y visualízalos desde cualquier lugar."
+      }
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "¡Consigue hasta 10 GB gratis!",
+    "description": "Crea tu cuenta gratuita ahora y tendrás acceso completo a nuestro conjunto de servicios de privacidad en línea.",
+    "cta": "Comenzar"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "Construido para el futuro",
+      "description": "Queremos construir una World Wide Web mejor, que sea justa, segura y equitativa para todos. La batalla se está librando por el futuro de la privacidad en Internet, y nosotros estamos en primera línea.",
+      "cta": "La lucha por la privacidad"
     },
-    "cta": {
-      "drive": "Explorar Drive",
-      "photos": "Descubre Photos",
-      "send": "Prueba Send"
-    },
-    "feature1": {
-      "title": { "line1": "Diseñado para", "line2": "protegerte" },
-      "description": "Tus archivos son fragmentados y cifrados antes de salir de tu dispositivo. Sin trucos, sin cosas ocultas, privado por defecto, seguro por diseño, eso es Internxt. Bienvenido a Web3.",
-      "cta": "Qué es zero-knowledge"
-    },
-    "feature2": {
-      "title": { "line1": "Multi", "line2": "dispositivo" },
-      "description": "Accede a toda la familia de aplicaciones adaptadas a todos tus dispositivos para satisfacer todas tus necesidades.",
+    "card2": {
+      "title": "En todos tus dispositivos, una experiencia única",
+      "description": "Internxt está disponible en todas las plataformas, ¡incluso Linux! Sincroniza tus archivos y fotos con nuestras aplicaciones móviles, web y de escritorio, cada una diseñada para potenciar tu almacenamiento cifrado.",
       "cta": "Descargar aplicaciones"
     },
-    "feature3": {
-      "title": { "line1": "Privacidad, esa", "line2": "es la cuestión" },
-      "description": "A diferencia de nuestros competidores, nuestro negocio no se basa en la publicidad, se basa en ti. Nosotros no vendemos tus datos.",
-      "cta": "Privacidad en Internxt"
+    "card3": {
+      "title": "Prueba Internxt gratis",
+      "description": "Consigue hasta 10 GB gratis y comprueba si la privacidad te conviene antes de lanzarte a por todas. Obtén 2 GB al crearte una cuenta, y luego amplía tu almacenamiento gratuito hasta los 10 GB totales completando unas simples acciones.",
+      "cta": "Crear cuenta gratuita"
+    }
+  },
+  "SecondWhatWeDoSection": {
+    "title": "Tú no eres el producto",
+    "description": "Nuestros servicios son herramientas creadas para ti. Drive, Photos y Send son solo el principio de un conjunto de productos que te devuelven el control de tu privacidad.",
+    "square1": {
+      "title": "Internxt Drive",
+      "subtitle": "El almacenamiento en la nube más seguro para todos tus archivos, fotos y mucho más",
+      "description": "Recupera el control de tus archivos y datos con Internxt Drive. Almacenar y hacer copias de seguridad de tus archivos con total privacidad no podría ser más fácil. El moderno almacenamiento en la nube se une a la encriptación de grado militar.",
+      "cta": "Guarda en Drive"
+    },
+    "square2": {
+      "title": "Internxt Photos",
+      "subtitle": "Almacenamiento seguro de fotos para todos tus momentos perfectos en imágenes",
+      "description": "Revive, comparte y mantén a salvo tus mejores recuerdos en un solo lugar con Internxt Photos. Ten siempre tus fotos a mano y sincroniza cómodamente las imágenes de un dispositivo a otro.",
+      "cta": "Sincronizar con Photos"
+    },
+    "square3": {
+      "title": "Internxt Send",
+      "subtitle": "Cifra, comparte y envía archivos de gran tamaño con total seguridad",
+      "description": "Send te permite cifrar de extremo a extremo y compartir archivos de gran tamaño rápidamente sin preocuparte por la seguridad de tus documentos, imágenes o vídeos. Transfiere a quien quieras con total confidencialidad.",
+      "cta": "Comparte con Send"
     }
   },
   "InvestorsSection": {
-    "title": "Confían en nosotros"
+    "title": "Marcas que confían en nosotros"
   },
   "TestimonialsSection": {
-    "title": "Honest reviews from our users",
+    "title": "Opiniones de nuestros usuarios",
     "cards": [
       {
         "name": "Eva W.",
-        "enterprise": "Journalist for FixThePhoto.com",
-        "review": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+        "enterprise": "Periodista en FixThePhoto.com",
+        "review": "Internxt es un servicio de almacenamiento en la nube para clientes preocupados por su presupuesto. Cuenta con una interfaz optimizada y un equipo de asistencia fiable, lo que lo convierte en una gran opción para quienes necesitan almacenar sus archivos de forma segura."
       },
       {
         "name": "Cristian M.",
-        "enterprise": "Review from GetApp",
-        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+        "enterprise": "Reseña de GetApp",
+        "review": "La mejor alternativa cifrada a Dropbox. En general: necesitábamos una alternativa que nos permitiera almacenar archivos de clientes y trabajo (archivos de redes sociales) y, como Internxt es compatible con GDPR, ¡se ajustaba perfectamente a nosotros!"
       },
       {
         "name": "Josep C.",
-        "enterprise": "Review from Trustpilot",
-        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+        "enterprise": "Reseña de Trustpilot",
+        "review": "Llevo varios años utilizando Google Drive, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me pasé a Internxt."
       },
       {
         "name": "Pat G.",
-        "enterprise": "Review from Capterra",
-        "review": "I am storing files for a non-profit organization and working with Internxt was marvelous! This drive was very easy to use. I didn't have to do anything but upload and download. The program and drive did the rest!"
+        "enterprise": "Reseña de Capterra",
+        "review": "¡Estoy almacenando archivos para una organización sin ánimo de lucro y trabajar con Internxt fue maravilloso! Esta unidad fue muy fácil de usar. No tuve que hacer nada más que cargar y descargar. El programa y la unidad hicieron el resto."
       },
       {
         "name": "Luca C.",
-        "enterprise": "Review from GetApp",
-        "review": "The future of cloud storage! Love the fact that finally we have an affordable encrypted and secure cloud storage software that also has a very cool look and is user-friendly."
+        "enterprise": "Reseña de GetApp",
+        "review": "¡El futuro del almacenamiento en la nube! Me encanta el hecho de que por fin tengamos un software de almacenamiento en la nube cifrado y seguro asequible que además tiene un aspecto muy chulo y es fácil de usar."
       },
       {
         "name": "Binet S.",
-        "enterprise": "Review from Trustpilot",
-        "review": "Fast, reliable, and inexpensive - best components of any product! The ample storage space is definitely appreciated! I have enough of space to save all of my photos and files. I also like how simple it is to share files."
+        "enterprise": "Reseña de Trustpilot",
+        "review": "Rápido, fiable y barato: ¡los mejores componentes de cualquier producto! ¡El amplio espacio de almacenamiento es definitivamente apreciado! Tengo espacio suficiente para guardar todas mis fotos y archivos. También me gusta lo sencillo que es compartir archivos."
       }
     ]
   },
   "GetStartedSection": {
-    "title": { "line1": "Empieza ahora y", "line2": "consige hasta 10GB gratis" },
+    "title": { "line1": "Regístrate y", "line2": "consigue hasta 10 GB gratis" },
     "subtitle": {
       "line1": "Nuestros clientes están muy contentos con Internxt Drive, pero",
-      "line2": "lo están aún más sabiendo que es totalmente privado."
+      "line2": "son más felices sabiendo que están bajo total privacidad."
     },
-    "cta1": "Empezar ahora"
+    "cta1": "Empezar"
   }
 }

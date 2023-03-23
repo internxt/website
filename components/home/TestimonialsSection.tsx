@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CaretLeft, CaretRight } from 'phosphor-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import RevealY from '../components/RevealY';
 
 const TestimonialsSection = ({ textContent }) => {
   const data = textContent.cards;
@@ -28,12 +29,12 @@ const TestimonialsSection = ({ textContent }) => {
   };
 
   return (
-    <section className="bg-gray-1 pb-20 pt-16">
-      <div className="flex items-center justify-center p-6 pb-[70px]">
+    <section className="overflow-hidden bg-white pb-20 pt-16">
+      <RevealY className="flex items-center justify-center p-6 pb-[70px]">
         <p className="mb-6 text-center text-4xl font-medium sm:text-5xl">{textContent.title}</p>
-      </div>
+      </RevealY>
       {/* Web View */}
-      <div className="hidden w-full flex-row items-center justify-center space-x-12 xl:flex">
+      <RevealY className="hidden w-full flex-row items-center justify-center space-x-12 xl:flex">
         <div className="relative flex h-full flex-1 flex-row items-center justify-end space-x-10 overflow-hidden">
           {beforeIndex.map((card, index) => (
             <div
@@ -71,7 +72,7 @@ const TestimonialsSection = ({ textContent }) => {
           {current.map((card, index) => (
             <div
               key={index}
-              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10"
+              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 drop-shadow-lg"
             >
               <div className="flex flex-row">
                 <Image
@@ -136,13 +137,13 @@ const TestimonialsSection = ({ textContent }) => {
             </div>
           ))}
         </div>
-      </div>
+      </RevealY>
 
       {/*Mobile/Tablet View*/}
       <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-6 xl:hidden">
         <div className="flex justify-center">
           {textContent.cards.map((card, index) => (
-            <div key={index} className="flex w-screen justify-center px-6 md:w-auto">
+            <div key={index} className="flex w-screen justify-center px-6 drop-shadow-lg md:w-auto">
               <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                 <div className="flex w-auto max-w-[300px] flex-col">
                   <div className="flex w-[331px] flex-row">

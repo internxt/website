@@ -52,12 +52,16 @@
         "library": "Library",
         "writeForUs": "Write for us",
         "cyberSecurityGlossary": "Cyber Security Glossary",
+        "cyberAwareness": "Cyber Awareness"
+      },
+      "tools": {
+        "title": "Free tools",
+        "temporaryEmail": "Temporary Email",
         "fileVirusScan": "File Virus Scanner",
         "passwordChecker": "Password Checker",
-        "byteConverter": "Byte Converter",
-        "cyberAwareness": "Cyber Awareness",
-        "temporaryEmail": "Temporary Email"
-      }
+        "byteConverter": "Byte Converter"
+      },
+      "language": "Language"
     }
   },
   "Cookies": {

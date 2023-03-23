@@ -109,9 +109,9 @@ export default function SignUpInline(props: SignUpInlineProps) {
           />
         </div>
 
-        <span className="w-full text-xs text-gray-50 sm:text-left">
+        <span className="w-full text-sm text-gray-50 sm:text-left">
           <span>{props.textContent.disclaimer.text}</span>{' '}
-          <a href="/legal" target="_blank" className="hover:text-gray-60 hover:underline active:text-gray-80">
+          <a href="/legal" target="_blank" className="underline hover:text-gray-60 active:text-gray-80">
             {props.textContent.disclaimer.link}
           </a>
           <span>{'.'}</span>
