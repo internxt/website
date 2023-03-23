@@ -30,7 +30,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white"
               onClick={() => {
-                goToSignUpURL();
+                window.open('https://drive.internxt.com/new', '_blank');
               }}
             >
               {textContent.cta}
