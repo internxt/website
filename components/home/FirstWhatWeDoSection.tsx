@@ -15,7 +15,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0  md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative rounded-3xl">
             <Image
-              src="/images/home/GlobalImg.png"
+              src="/images/home/Secure-file-upload.webp"
               width={496}
               height={520}
               quality={100}
@@ -26,7 +26,14 @@ const FirstWhatWeDoSection = ({ textContent }) => {
               direction="right"
               className="absolute top-12 -left-20 hidden rounded-lg bg-white shadow-xl lg:flex"
             >
-              <Image src="/images/home/TaskLogger.svg" width={319} height={287} quality={100} className="rounded-lg" />
+              <Image
+                src="/images/home/TaskLogger.svg"
+                width={320}
+                height={290}
+                quality={100}
+                draggable={false}
+                className="rounded-lg"
+              />
             </RevealX>
           </div>
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
@@ -49,7 +56,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
           </div>
           <div className="relative w-full rounded-3xl">
             <Image
-              src="/images/home/GirlAlone.png"
+              src="/images/home/End-to-end encrypted-cloud-storage.webp"
               width={444}
               height={520}
               quality={100}
@@ -68,7 +75,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative w-full rounded-3xl">
             <Image
-              src="/images/home/GirlWithLaptop.png"
+              src="/images/home/Free-cloud-storage-account.webp"
               width={496}
               height={520}
               quality={100}
@@ -77,7 +84,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             />
             <RevealX
               direction="right"
-              className="absolute top-12 -left-20 hidden rounded-lg bg-white shadow-xl lg:flex"
+              className="absolute top-32 -left-20 hidden rounded-lg bg-white shadow-xl lg:flex"
             >
               <DriveSidenav />
             </RevealX>

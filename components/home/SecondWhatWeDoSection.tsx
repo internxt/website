@@ -3,6 +3,7 @@ import { CaretRight } from 'phosphor-react';
 import React from 'react';
 import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
+import Image from 'next/image';
 
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (
@@ -32,9 +33,16 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 </Link>
               </div>
 
-              <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
-                <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/drive-image.png" alt="Drive image" />
+              <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
+                <div className="hidden rounded-r-2xl lg:flex lg:max-w-[480px]">
+                  <Image
+                    src="/images/home/Internxt-Drive.webp"
+                    height={480}
+                    width={480}
+                    quality={100}
+                    draggable={false}
+                    alt="Internxt Drive image"
+                  />
                 </div>
               </div>
             </RevealX>
@@ -57,7 +65,14 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/photos-image.png" alt="Photos image" />
+                  <Image
+                    src="/images/home/Internxt-Photos.webp"
+                    width={480}
+                    height={480}
+                    quality={100}
+                    draggable={false}
+                    alt="Internxt Photos image"
+                  />
                 </div>
               </div>
             </RevealX>
@@ -79,7 +94,14 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/send-image.png" alt="Send image" />
+                  <Image
+                    src="/images/privacy/Internxt-Send.png"
+                    width={480}
+                    height={480}
+                    quality={100}
+                    draggable={false}
+                    alt="Internxt Send image"
+                  />
                 </div>
               </div>
             </RevealX>

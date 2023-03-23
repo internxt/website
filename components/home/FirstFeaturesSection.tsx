@@ -26,12 +26,12 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
         </button>
         <RevealY className="flex flex-col pt-6">
           <Image
-            src="/images/special-offer/black-friday/Devices.png"
-            alt="Devices image"
-            width={673}
-            height={400}
-            layout="intrinsic"
+            src="/images/home/Internxt-secure-cloud-storage.webp"
+            alt="Internxt secure cloud storage"
+            width={757}
+            height={420}
             quality={100}
+            draggable={false}
           />
         </RevealY>
       </RevealY>
