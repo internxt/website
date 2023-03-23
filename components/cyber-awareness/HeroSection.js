@@ -1,8 +1,10 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import SignUpBanner from '../banners/SignUpBanner';
 
-const HeroSection = ({ textContent }) => {
+const HeroSection = ({ textContent, bannerText }) => {
   const router = useRouter();
+  const lang = router.locale;
 
   const getPricingPage = (event) => {
     event.preventDefault();
@@ -21,7 +23,7 @@ const HeroSection = ({ textContent }) => {
           <p className="mt-8 text-lg font-normal">{textContent.paragraph1.body2}</p>
         </div>
         <div className="mt-16 flex xl:px-64">
-          <img src="/images/cyber-awareness/phising-emails.png" alt="phising emails" className="rounded-3xl" />
+          <SignUpBanner textContent={bannerText} lang={lang} />
         </div>
       </div>
       <div className="flex flex-col items-center justify-center p-5 pt-11 md:p-20 md:pt-0">

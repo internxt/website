@@ -48,6 +48,10 @@
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
+  "SignUpCyberAwareness": {
+    "line1": "Now that you’re aware, protect yourself with",
+    "blueText": "Internxt secure cloud storage"
+  },
   "GeneralBanner": {
     "title": "Before you bounce...",
     "description": "Get 90% off our 2TB plan for the first year.",
