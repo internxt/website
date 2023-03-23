@@ -3,6 +3,7 @@ import Marquee from 'react-fast-marquee';
 import { goToSignUpURL } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
 import Image from 'next/image';
+import RevealX from '../components/RevealX';
 
 export default function HeroSection({ textContent, lang }) {
   const [formError, setFormError] = useState<string | null>(null);
@@ -55,11 +56,11 @@ export default function HeroSection({ textContent, lang }) {
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
           {/* Mobile view */}
-          <div className="mx-20 mb-6 flex w-auto flex-col md:hidden">
+          <div className="mb-6 flex w-auto flex-col md:hidden">
             <Image
               loading="eager"
               className="object-contain"
-              src="/images/home/devicesMobileView.webp"
+              src="/images/home/Drive-image-for-mobile.webp"
               draggable="false"
               alt="laptop and phone with Internxt app"
               width={370}

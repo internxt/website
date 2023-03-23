@@ -64,12 +64,18 @@ const SecondFeaturesSection = ({ textContent }) => {
           </div>
         </div>
       </RevealY>
+      {/* Mobile view */}
       <div className="flex flex-col items-center justify-center space-y-10 px-5 lg:hidden">
         {cardInfo.map((info) => (
-          <div key={info.title} className={`revealY flex flex-col items-start space-y-6 rounded-2xl bg-white p-4`}>
-            <info.icon className="text-primary" size={64} />
-            <p className="text-4xl font-semibold">{info.title}</p>
-            <p className="text-lg font-normal">{info.description}</p>
+          <div
+            key={info.title}
+            className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]"
+          >
+            <info.icon className="mb-6 text-4xl text-primary" size={32} />
+            <div className="flex w-full max-w-[400px] flex-col">
+              <p className="mb-6 text-2xl font-medium text-gray-100">{info.title}</p>
+              <p className="text-base text-cool-gray-80 sm:text-lg">{info.description}</p>
+            </div>
           </div>
         ))}
       </div>

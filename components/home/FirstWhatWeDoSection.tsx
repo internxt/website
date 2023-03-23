@@ -37,7 +37,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
             </RevealX>
           </div>
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
-            <p className="text-5xl font-semibold leading-tight">{textContent.card1.title}</p>
+            <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card1.title}</p>
             <p className="text-xl font-normal">{textContent.card1.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
               <p className="text-lg font-semibold">{textContent.card1.cta}</p>
@@ -47,7 +47,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
         </RevealY>
         <RevealY className="flex flex-col space-y-5 md:flex-row md:space-x-20 lg:items-center lg:justify-center">
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
-            <p className="text-5xl font-semibold leading-tight">{textContent.card2.title}</p>
+            <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
             <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
               <p className="text-lg font-semibold">{textContent.card2.cta}</p>
@@ -92,7 +92,7 @@ const FirstWhatWeDoSection = ({ textContent }) => {
 
           <div className="flex w-full flex-col space-y-5 text-start">
             <div className="flex max-w-[390px] flex-col space-y-6">
-              <p className="text-5xl font-semibold leading-tight">{textContent.card3.title}</p>
+              <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card3.title}</p>
               <p className="text-xl">{textContent.card3.description}</p>
             </div>
             <div className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white">

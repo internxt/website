@@ -11,7 +11,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
       <div className="z-10 flex flex-col items-center bg-gray-1 py-20 text-black">
         <RevealY className="space-y-16 px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h2 className="text-4xl font-semibold">{textContent.title}</h2>
+            <h2 className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
 
             <h3 className="max-w-3xl text-xl font-normal text-gray-80">{textContent.description}</h3>
           </div>

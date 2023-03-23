@@ -30,7 +30,7 @@ const InfoSection = ({ textContent, lang }) => {
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
         <RevealY className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
-          <p className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</p>
+          <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
           <div className="flex flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary">
             <p>{textContent.cta}</p>
