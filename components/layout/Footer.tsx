@@ -6,7 +6,7 @@ import Link from 'next/link';
 import cookies from '../../lib/cookies';
 import setUTM from '../../lib/conversions';
 import styles from './Footer.module.scss';
-import MyListbox from './components/LanguageBox';
+import LanguageBox from './components/LanguageBox';
 
 export default function Footer({
   textContent,
@@ -96,7 +96,7 @@ export default function Footer({
         {/* Footer content */}
         <footer className="w-full">
           {/* Desktop version */}
-          <div className="hidden flex-col items-center md:flex md:space-y-16">
+          <div className="hidden flex-col items-center px-36 md:flex md:space-y-16">
             <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20 xl:space-x-32">
               <div className="flex flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
@@ -218,7 +218,9 @@ export default function Footer({
                     </a>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
+                      <a className="max-w-[150px] line-clamp-2">
+                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
+                      </a>
                     </Link>
 
                     <Link href="/cyber-awareness" locale={lang} passHref>
@@ -261,7 +263,7 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <MyListbox />
+                    <LanguageBox />
                   </div>
                 </div>
               </div>
@@ -568,34 +570,6 @@ export default function Footer({
 
                       <Link href="/cyber-awareness" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
-                      </Link>
-                    </Disclosure.Panel>
-                  </Transition>
-                  <Transition
-                    enter="transition duration-200 ease-out"
-                    enterFrom="-translate-y-10 opacity-0"
-                    enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-0"
-                  >
-                    <Disclosure.Panel
-                      className={`flex flex-col ${
-                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } space-y-4 p-4 pt-2`}
-                    >
-                      <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.tools.byteConverter}
-                      </a>
-
-                      <Link href="/temporary-email" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
-                      </Link>
-
-                      <Link href="/password-checker" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
-                      </Link>
-
-                      <Link href="/virus-scanner" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
