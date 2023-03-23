@@ -8,7 +8,7 @@ import { Card } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-export default function Language(): JSX.Element {
+export default function LanguageBox(): JSX.Element {
   const [currentLangText, setCurrentLangText] = React.useState<string>('EN');
   const router = useRouter();
 
