@@ -61,7 +61,8 @@
         "fileVirusScan": "Escaner de Virus",
         "passwordChecker": "Comprobador de Contraseñas",
         "byteConverter": "Conversor de unidades"
-      }
+      },
+      "language": "Idioma"
     }
   },
   "Cookies": {

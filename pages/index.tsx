@@ -58,7 +58,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
       {/* !TODO: Finish the design */}
       <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
 
-      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} />
+      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} />
 
       <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
 

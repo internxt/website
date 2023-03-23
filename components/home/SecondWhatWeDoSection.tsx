@@ -25,7 +25,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square1.title}</h4>
                 <p className="text-xl font-bold">{textContent.square1.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square1.description}</h5>
-                <Link href="/drive" locale={lang}>
+                <Link href="/drive" locale={lang} target="_blank">
                   <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
                     <span>{textContent.square1.cta}</span>
                     <CaretRight size={16} />
@@ -55,7 +55,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square2.title}</h4>
                 <p className="text-xl font-bold">{textContent.square2.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square2.description}</h5>
-                <Link href="/photos" locale={lang}>
+                <Link href="/photos" locale={lang} target="_blank">
                   <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
                     <span>{textContent.square2.cta}</span>
                     <CaretRight size={16} />
@@ -84,7 +84,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square3.title}</h4>
                 <p className="text-xl font-bold">{textContent.square3.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square3.description}</h5>
-                <Link href="/photos" locale={lang}>
+                <Link href="/photos" locale={lang} target="_blank">
                   <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
                     <span>{textContent.square3.cta}</span>
                     <CaretRight size={16} />

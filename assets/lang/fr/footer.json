@@ -60,7 +60,8 @@
         "fileVirusScan": "Scanner de virus",
         "passwordChecker": "Vérifier mot de passe",
         "byteConverter": "Convertisseur d'octets"
-      }
+      },
+      "language": "Langue"
     }
   },
   "Cookies": {

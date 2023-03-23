@@ -8,7 +8,7 @@ import FileItem from './components/FileItem';
 import DriveSidenav from './components/DriveSidenav';
 import { useState } from 'react';
 
-const FirstWhatWeDoSection = ({ textContent }) => {
+const FirstWhatWeDoSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
@@ -39,7 +39,12 @@ const FirstWhatWeDoSection = ({ textContent }) => {
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card1.title}</p>
             <p className="text-xl font-normal">{textContent.card1.description}</p>
-            <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
+            <div
+              className="flex cursor-pointer flex-row items-center space-x-2 text-primary"
+              onClick={() => {
+                window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/privacy`, '_blank');
+              }}
+            >
               <p className="text-lg font-semibold">{textContent.card1.cta}</p>
               <CaretRight size={12} />
             </div>
@@ -49,7 +54,12 @@ const FirstWhatWeDoSection = ({ textContent }) => {
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
-            <div className="flex cursor-pointer flex-row items-center space-x-2 text-primary">
+            <div
+              className="flex cursor-pointer flex-row items-center space-x-2 text-primary"
+              onClick={() => {
+                window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
+              }}
+            >
               <p className="text-lg font-semibold">{textContent.card2.cta}</p>
               <CaretRight size={12} />
             </div>
@@ -95,7 +105,12 @@ const FirstWhatWeDoSection = ({ textContent }) => {
               <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card3.title}</p>
               <p className="text-xl">{textContent.card3.description}</p>
             </div>
-            <div className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white">
+            <div
+              className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white"
+              onClick={() => {
+                window.open(`https://drive.internxt.com/new`, '_blank');
+              }}
+            >
               <p>{textContent.card3.cta}</p>
             </div>
           </div>
