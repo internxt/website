@@ -57,15 +57,7 @@ export default function HeroSection({ textContent, lang }) {
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
           {/* Mobile view */}
           <div className="mb-6 flex w-auto flex-col md:hidden">
-            <Image
-              loading="eager"
-              className="object-contain"
-              src="/images/home/Drive-image-for-mobile.webp"
-              draggable="false"
-              alt="laptop and phone with Internxt app"
-              width={370}
-              height={230}
-            />
+            <img loading="eager" src="/images/home/Mobile_Header.webp" alt="laptop and phone with Internxt app" />
           </div>
 
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-lg">
