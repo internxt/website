@@ -10,7 +10,6 @@ import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
 
 const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, actualPrice }) => {
-  const [stripeObject, setStripeObject] = useState({});
   const priceWithDiscount = actualPrice.toString().split('.')[0];
   const decimals = actualPrice.toString().split('.')[1];
 
@@ -26,13 +25,6 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
   };
 
   const contentText = require(`../../assets/lang/en/priceCard.json`);
-
-  useEffect(() => {
-    if (cta[0] === 'checkout') {
-      const stripeObj = { product: cta[1] };
-      setStripeObject(stripeObj);
-    }
-  }, [cta]);
 
   return (
     <div
