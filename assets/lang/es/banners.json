@@ -28,6 +28,10 @@
     "blueText": "de Internxt"
   },
   "SignUpTempMailBanner": { "line1": "Mantén tu correo limpio y tus archivos a salvo", "blueText": "con Internxt" },
+  "SignUpCyberAwareness": {
+    "line1": "Mantén tu correo limpio y tus archivos a salvo",
+    "blueText": "con Internxt"
+  },
   "GeneralBanner": {
     "title": "Antes de que te vayas...",
     "description": "Obtén un 90% de descuento en nuestro plan de 2TB durante un año.",

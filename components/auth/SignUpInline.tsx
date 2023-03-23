@@ -45,7 +45,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
 
   return (
     <form
-      className="flex w-full max-w-lg flex-col items-center space-y-2 pt-10 md:items-start md:pt-0"
+      className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0"
       onClick={() => {
         autoCompleteOnFocus && setAutoCompleteOnFocus(false);
       }}
@@ -109,9 +109,9 @@ export default function SignUpInline(props: SignUpInlineProps) {
           />
         </div>
 
-        <span className="w-full text-xs text-gray-50 sm:text-left">
+        <span className="w-full text-sm text-gray-50 sm:text-left">
           <span>{props.textContent.disclaimer.text}</span>{' '}
-          <a href="/legal" target="_blank" className="hover:text-gray-60 hover:underline active:text-gray-80">
+          <a href="/legal" target="_blank" className="underline hover:text-gray-60 active:text-gray-80">
             {props.textContent.disclaimer.link}
           </a>
           <span>{'.'}</span>

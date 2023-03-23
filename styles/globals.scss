@@ -20,11 +20,58 @@
   }
 }
 
+.revealY {
+  will-change: transform;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.21, 1.23, 1, 0.97);
+}
+
+.revealY.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.revealXRight {
+  will-change: transform;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.21, 1.23, 1, 0.97);
+}
+
+.revealXRight.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.revealXLeft {
+  will-change: transform;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.21, 1.23, 1, 0.97);
+}
+
+.revealXLeft.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .will-change-auto {
   will-change: auto;
 }
 .will-change-height {
   will-change: height;
+}
+
+.mask-radial-blur {
+	&:after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		backdrop-filter: blur(3px);
+		mask: radial-gradient(transparent 40%, black 85%);
+	}
 }
 
 // Fonts

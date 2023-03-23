@@ -6,8 +6,19 @@ import Link from 'next/link';
 import cookies from '../../lib/cookies';
 import setUTM from '../../lib/conversions';
 import styles from './Footer.module.scss';
+import LanguageBox from './components/LanguageBox';
 
-export default function Footer({ textContent, lang, hideNewsletter, darkMode }) {
+export default function Footer({
+  textContent,
+  lang,
+  hideNewsletter,
+  darkMode,
+}: {
+  textContent: any;
+  lang: string;
+  hideNewsletter?: boolean;
+  darkMode?: boolean;
+}) {
   const [consentCookie, setConsentCookie] = React.useState(true);
 
   const handleAcceptCookies = () => {
@@ -85,7 +96,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
         {/* Footer content */}
         <footer className="w-full">
           {/* Desktop version */}
-          <div className="hidden flex-col items-center md:flex md:space-y-16">
+          <div className="hidden flex-col items-center px-36 md:flex md:space-y-16">
             <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20 xl:space-x-32">
               <div className="flex flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
@@ -110,9 +121,9 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       className="flex flex-row items-center"
                     >
                       <div>{textContent.FooterSection.sections.products.send}</div>
-                      <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
+                      {/* <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
                         {textContent.FooterSection.new}
-                      </div>
+                      </div> */}
                     </a>
 
                     <Link href="/pricing" locale={lang} passHref>
@@ -207,28 +218,52 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     </a>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
-                    </Link>
-
-                    <Link href="/password-checker" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
-                    </Link>
-
-                    <Link href="/virus-scanner" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
-                    </Link>
-
-                    <Link href="/byte-converter" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
-                    </Link>
-
-                    <Link href="/temporary-email" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
+                      <a className="max-w-[150px] line-clamp-2">
+                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
+                      </a>
                     </Link>
 
                     <Link href="/cyber-awareness" locale={lang} passHref>
                       <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
                     </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
+                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
+                  <div
+                    className={`flex flex-col space-y-1.5 text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                    }`}
+                  >
+                    <Link href="/byte-converter" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.tools.byteConverter}</a>
+                    </Link>
+
+                    <Link href="/temporary-email" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                    </Link>
+
+                    <Link href="/password-checker" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
+                    </Link>
+
+                    <Link href="/virus-scanner" locale={lang} passHref>
+                      <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
+                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.language}</h3>
+                  <div
+                    className={`flex flex-col space-y-1.5 text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                    }`}
+                  >
+                    <LanguageBox />
                   </div>
                 </div>
               </div>
@@ -533,24 +568,58 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                         <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                       </Link>
 
+                      <Link href="/cyber-awareness" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </div>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
+              {({ open }) => (
+                <div>
+                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
+                    <span className="relative h-5 w-5">
+                      <UilMinus
+                        className={`absolute top-0 left-0 h-full w-full ${
+                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
+                      />
+                      <UilMinus
+                        className={`absolute top-0 left-0 h-full w-full ${
+                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
+                      />
+                    </span>
+                  </Disclosure.Button>
+
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-0"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col ${
+                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                      } space-y-4 p-4 pt-2`}
+                    >
+                      <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.tools.byteConverter}
+                      </a>
+
+                      <Link href="/temporary-email" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                      </Link>
+
                       <Link href="/password-checker" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
+                        <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
                       </Link>
 
                       <Link href="/virus-scanner" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
-                      </Link>
-
-                      <Link href="/byte-converter" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
-                      </Link>
-
-                      <Link href="/temporary-email" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
-                      </Link>
-
-                      <Link href="/cyber-awareness" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
