@@ -25,12 +25,16 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square1.title}</h4>
                 <p className="text-xl font-bold">{textContent.square1.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square1.description}</h5>
-                <Link href="/drive" locale={lang} target="_blank">
-                  <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
-                    <span>{textContent.square1.cta}</span>
-                    <CaretRight size={16} />
-                  </a>
-                </Link>
+
+                <div
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  onClick={() => {
+                    window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
+                  }}
+                >
+                  <span>{textContent.square1.cta}</span>
+                  <CaretRight size={16} />
+                </div>
               </div>
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
@@ -55,12 +59,15 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square2.title}</h4>
                 <p className="text-xl font-bold">{textContent.square2.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square2.description}</h5>
-                <Link href="/photos" locale={lang} target="_blank">
-                  <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
-                    <span>{textContent.square2.cta}</span>
-                    <CaretRight size={16} />
-                  </a>
-                </Link>
+                <div
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  onClick={() => {
+                    window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/photos`, '_blank');
+                  }}
+                >
+                  <span>{textContent.square2.cta}</span>
+                  <CaretRight size={16} />
+                </div>
               </div>
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
@@ -84,12 +91,16 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h4 className="mb-10 text-3xl font-semibold lg:text-4xl">{textContent.square3.title}</h4>
                 <p className="text-xl font-bold">{textContent.square3.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square3.description}</h5>
-                <Link href="/photos" locale={lang} target="_blank">
-                  <a className="flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
-                    <span>{textContent.square3.cta}</span>
-                    <CaretRight size={16} />
-                  </a>
-                </Link>
+
+                <div
+                  onClick={() => {
+                    window.open('https://send.internxt.com/', '_blank');
+                  }}
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                >
+                  <span>{textContent.square3.cta}</span>
+                  <CaretRight size={16} />
+                </div>
               </div>
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">

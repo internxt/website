@@ -13,11 +13,9 @@ export default function Language(): JSX.Element {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(router.pathname);
     //Get the language from navigator
     const deviceLanguage = navigator.language;
     //Set the language text
-    console.log(deviceLanguage.toLocaleLowerCase());
     setCurrentLangText(deviceLanguage.split('-')[0].toUpperCase());
   }, []);
 
