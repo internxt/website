@@ -82,6 +82,7 @@ LayoutProps) {
         <meta name={`apple-itunes-app" content="app-id=${process.env.NEXT_PUBLIC_IOS_APP_ID}`} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+        <meta name="apple-itunes-app" content={`app-id=${process.env.NEXT_PUBLIC_IOS_APP_ID}`} />
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
