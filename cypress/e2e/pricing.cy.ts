@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 export {};
+import bytes from 'bytes';
 
 //Check if the buttons works properly
 describe('Pricing page', () => {
@@ -14,107 +15,157 @@ describe('Pricing page', () => {
     )}`;
   };
 
-  // describe('When the free plan button is clicked', () => {
-  //   it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
-  //     cy.visit('/pricing');
+  describe('When the free plan button is clicked', () => {
+    it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
+      cy.visit('/pricing');
 
-  //     cy.get('#priceTable').contains('Get Internxt for free').click();
+      cy.get('#priceTable').contains('Get Internxt for free').click();
 
-  //     cy.url().should('eq', 'https://drive.internxt.com/new');
-  //   });
-  // });
+      cy.url().should('eq', 'https://drive.internxt.com/new');
+    });
+  });
 
   describe('When the payment plan button is clicked', () => {
     describe('When the payment plan is monthly', () => {
       describe('When the plan is 20GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Monthly').click();
+          cy.get('#priceTable').contains('Get 20GB').click();
           cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
-            cy.visit('/pricing');
-            cy.get('#priceTable').contains('Monthly').click();
-            cy.get('#priceTable').contains('Get 20GB').click();
-
-            cy.url().should('eq', url({ planId: response.body[3].id }));
+            response.body.map((plan) => {
+              if (bytes(plan.bytes) === '20GB' && plan.interval === 'month') {
+                cy.url().should('eq', url({ planId: plan.id }));
+              }
+            });
           });
         });
       });
     });
 
-    //   describe('When the plan is 200GB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.get('#priceTable').contains('Monthly').click();
-    //       cy.get('#priceTable').contains('Get 200GB').click();
+    describe('When the plan is 200GB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.visit('/pricing');
+        cy.get('#priceTable').contains('Monthly').click();
+        cy.get('#priceTable').contains('Get 200GB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB2001.production }));
-    //     });
-    //   });
+        cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+          response.body.map((plan) => {
+            if (bytes(plan.bytes) === '200GB' && plan.interval === 'month') {
+              cy.url().should('eq', url({ planId: plan.id }));
+            }
+          });
+        });
+      });
+    });
 
-    //   describe('When the plan is 2TB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.get('#priceTable').contains('Monthly').click();
-    //       cy.get('#priceTable').contains('Get 2TB').click();
+    describe('When the plan is 2TB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.visit('/pricing');
+        cy.get('#priceTable').contains('Monthly').click();
+        cy.get('#priceTable').contains('Get 2TB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.TB21.production }));
-    //     });
-    //   });
-    // });
+        cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+          response.body.map((plan) => {
+            if (bytes(plan.bytes) === '2TB' && plan.interval === 'month') {
+              cy.url().should('eq', url({ planId: plan.id }));
+            }
+          });
+        });
+      });
+    });
 
-    // describe('When the payment plan is annually', () => {
-    //   describe('When the plan is 20GB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.get('#priceTable').contains('Get 20GB').click();
+    describe('When the payment plan is annually', () => {
+      describe('When the plan is 20GB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Get 20GB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB2012.production }));
-    //     });
-    //   });
-    //   describe('When the plan is 200GB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.get('#priceTable').contains('Get 200GB').click();
+          cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+            response.body.map((plan) => {
+              if (bytes(plan.bytes) === '20GB' && plan.interval === 'year') {
+                cy.url().should('eq', url({ planId: plan.id }));
+              }
+            });
+          });
+        });
+      });
+      describe('When the plan is 200GB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Get 200GB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB20012.production }));
-    //     });
-    //   });
-    //   describe('When the plan is 2TB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.contains('Get 90% off 2TB').click();
+          cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+            response.body.map((plan) => {
+              if (bytes(plan.bytes) === '200GB' && plan.interval === 'year') {
+                cy.url().should('eq', url({ planId: plan.id }));
+              }
+            });
+          });
+        });
+      });
+      describe('When the plan is 2TB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.contains('Get 90% off 2TB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.TB212.production, couponCode: TWOTB_OFF_COUPON }));
-    //     });
-    //   });
-    // });
+          cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+            response.body.map((plan) => {
+              if (bytes(plan.bytes) === '2TB' && plan.interval === 'year') {
+                cy.url().should('eq', url({ planId: plan.id, couponCode: TWOTB_OFF_COUPON }));
+              }
+            });
+          });
+        });
+      });
+    });
 
-    // describe('When the payment plan is lifetime', () => {
-    //   describe('When the plan is 2TB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.get('#priceTable').contains('Lifetime').click();
-    //       cy.get('#priceTable').contains('Get 2TB').click();
+    describe('When the payment plan is lifetime', () => {
+      describe('When the plan is 2TB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Lifetime').click();
+          cy.get('#priceTable').contains('Get 2TB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.lifetime2TB.production, mode: 'payment' }));
-    //     });
-    //   });
-    //   describe('When the plan is 5TB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.get('#priceTable').contains('Lifetime').click();
-    //       cy.get('#priceTable').contains('Get 5TB').click();
+          cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+            response.body.map((plan) => {
+              if (bytes(plan.bytes) === '2TB' && plan.interval === 'lifetime') {
+                cy.url().should('eq', url({ planId: plan.id, mode: 'payment' }));
+              }
+            });
+          });
+        });
+      });
+      describe('When the plan is 5TB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Lifetime').click();
+          cy.get('#priceTable').contains('Get 5TB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.lifetime5TB.production, mode: 'payment' }));
-    //     });
-    //   });
-    //   describe('When the plan is 2TB of space', () => {
-    //     it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //       cy.visit('/pricing');
-    //       cy.get('#priceTable').contains('Lifetime').click();
-    //       cy.get('#priceTable').contains('Get 10TB').click();
+          cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+            response.body.map((plan) => {
+              if (bytes(plan.bytes) === '5TB' && plan.interval === 'lifetime') {
+                cy.url().should('eq', url({ planId: plan.id, mode: 'payment' }));
+              }
+            });
+          });
+        });
+      });
+      describe('When the plan is 2TB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Lifetime').click();
+          cy.get('#priceTable').contains('Get 10TB').click();
 
-    //       cy.url().should('eq', url({ planId: STRIPE_PRODUCT.lifetime10TB.production, mode: 'payment' }));
-    //     });
-    //   });
-    // });
+          cy.request('get', 'https://api.internxt.com/payments/prices').then((response) => {
+            response.body.map((plan) => {
+              if (bytes(plan.bytes) === '10TB' && plan.interval === 'lifetime') {
+                cy.url().should('eq', url({ planId: plan.id, mode: 'payment' }));
+              }
+            });
+          });
+        });
+      });
+    });
   });
 });
