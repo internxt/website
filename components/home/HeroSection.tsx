@@ -60,7 +60,7 @@ export default function HeroSection({ textContent, lang }) {
             <img loading="eager" src="/images/home/Mobile_Header.webp" alt="laptop and phone with Internxt app" />
           </div>
 
-          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-lg">
+          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
             <h1 className="bg-clip-text pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:pb-8 lg:text-6xl lg:leading-tight">
               {title}
               <span className=" text-primary">{Internxt}</span>

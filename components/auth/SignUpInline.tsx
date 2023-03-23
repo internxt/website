@@ -45,7 +45,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
 
   return (
     <form
-      className="flex w-full max-w-lg flex-col items-center space-y-2 pt-10 md:items-start md:pt-0"
+      className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0"
       onClick={() => {
         autoCompleteOnFocus && setAutoCompleteOnFocus(false);
       }}
