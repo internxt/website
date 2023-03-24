@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PlusCircle } from 'phosphor-react';
 import ReactMarkdown from 'react-markdown';
 
-const FaqAccordion = ({ question, answer, isQuestionBigger = false }) => {
+export default function FaqAccordion({ question, answer, isQuestionBigger = false }) {
   const [active, setActive] = useState(false);
 
   return (
@@ -23,7 +23,7 @@ const FaqAccordion = ({ question, answer, isQuestionBigger = false }) => {
       <span
         className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
-        } duration-250 w-full whitespace-pre-wrap pr-14 text-left text-lg text-gray-60 transition-all ease-in-out`}
+        } duration-250 whitespace-wrap w-full pr-14 text-left text-lg text-gray-60 transition-all ease-in-out`}
       >
         {answer.map((text) => (
           <ReactMarkdown key={text}>{text}</ReactMarkdown>
@@ -31,6 +31,4 @@ const FaqAccordion = ({ question, answer, isQuestionBigger = false }) => {
       </span>
     </div>
   );
-};
-
-export default FaqAccordion;
+}

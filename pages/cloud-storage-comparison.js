@@ -1,49 +1,46 @@
+import Script from 'next/script';
 import React from 'react';
+
 import TableSection from '../components/comparison/TableSection';
 import FeatureSection from '../components/comparison/FeatureSection';
+import FAQSection from '../components/comparison/FAQSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
-const CloudStorageComparison = ({
-  metatagsDescriptions,
-  langJson,
-  navbarLang,
-  footerLang,
-  lang
-}) => {
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+
+const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
 
   return (
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(langJson.FaqSection.faq)}
+      </Script>
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Cloud Storage Comparison" lang={lang}>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Cloud Storage Comparison', 'comparison')}
+      </Script>
 
-      <Navbar
-        textContent={navbarLang}
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Cloud Storage Comparison"
         lang={lang}
-        cta={['default']}
-        fixed
-        darkMode={false}
-      />
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
 
-      <TableSection
-        textContent={langJson.HeroSection}
-        lang={lang}
-      />
+        <TableSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FeatureSection
-        textContent={langJson.FeatureSection}
-      />
+        <FeatureSection textContent={langJson.FeatureSection} />
 
-      <Footer
-        textContent={footerLang}
-        lang={lang}
-        darkMode={false}
-      />
+        <FAQSection textContent={langJson.FaqSection} />
 
-    </Layout>
-
+        <Footer textContent={footerLang} lang={lang} darkMode={false} />
+      </Layout>
+    </>
   );
 };
 
@@ -63,7 +60,7 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       langJson,
       navbarLang,
-      footerLang
+      footerLang,
     },
   };
 }

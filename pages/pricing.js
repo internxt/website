@@ -1,4 +1,6 @@
+import Script from 'next/script';
 import React, { useState, useEffect } from 'react';
+
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import PriceTable from '../components/prices/PriceTable';
@@ -8,6 +10,8 @@ import axios from 'axios';
 import FAQSection from '../components/pricing/FAQSection';
 import HeroSection from '../components/pricing/HeroSection';
 import CtaSection from '../components/pricing/CtaSection';
+
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -36,31 +40,41 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   });
 
   return (
-    <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar
-        textContent={navbarLang}
-        lang={lang}
-        cta={['default']}
-        fixed
-        mode={isLifetime ? 'payment' : 'subscription'}
-      />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.SchemaMarkupQuestions.faq)}
+      </Script>
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Pricing', 'pricing')}
+      </Script>
 
-      <PriceTable
-        setSegmentPageName={setPageName}
-        lang={lang}
-        country={country}
-        setIsLifetime={setIsLifetime}
-        textContent={textContent.tableSection}
-      />
+      <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar
+          textContent={navbarLang}
+          lang={lang}
+          cta={['default']}
+          fixed
+          mode={isLifetime ? 'payment' : 'subscription'}
+        />
 
-      <FAQSection textContent={textContent.FaqSection} />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <CtaSection textContent={textContent.CtaSection} />
+        <PriceTable
+          setSegmentPageName={setPageName}
+          lang={lang}
+          country={country}
+          setIsLifetime={setIsLifetime}
+          textContent={textContent.tableSection}
+        />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
-    </Layout>
+        <FAQSection textContent={textContent.FaqSection} />
+
+        <CtaSection textContent={textContent.CtaSection} />
+
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      </Layout>
+    </>
   );
 };
 

@@ -1,7 +1,10 @@
+import Script from 'next/script';
 import React from 'react';
+
 import userAgent from 'useragent';
 import HeroSection from '../components/photos/HeroSection';
 import FeaturesSection from '../components/photos/FeaturesSection';
+import FAQSection from '../components/photos/FAQSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import ProductsNavigation from '../components/layout/ProductsNavigation';
@@ -9,55 +12,35 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { downloadDriveByPlatform } from '../lib/get-download-url';
 
-const Photos = ({
-  metatagsDescriptions,
-  langJson,
-  navbarLang,
-  footerLang,
-  download,
-  device,
-  lang
-}) => {
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+
+const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, download, device, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
 
   return (
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(langJson.FaqSection.faq)}
+      </Script>
 
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Photos" lang={lang}>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Photos', 'photos')}
+      </Script>
 
-      <Navbar
-        textContent={navbarLang}
-        lang={lang}
-        cta={['default']}
-        fixed
-      />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Photos" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <ProductsNavigation
-        textContent={navbarLang}
-        lang={lang}
-        selectedItem="photos"
-      />
+        <ProductsNavigation textContent={navbarLang} lang={lang} selectedItem="photos" />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        lang={lang}
-        device={device}
-        download={download}
-      />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} device={device} download={download} />
 
-      <FeaturesSection
-        textContent={langJson.FeaturesSection}
-        lang={lang}
-        device={device}
-        download={download}
-      />
+        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} device={device} download={download} />
 
-      <Footer
-        textContent={footerLang}
-        lang={lang}
-      />
+        <FAQSection textContent={langJson.FaqSection} />
 
-    </Layout>
-
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 
@@ -78,7 +61,13 @@ export async function getServerSideProps(ctx) {
 
   return {
     props: {
-      lang, download, device, metatagsDescriptions, langJson, navbarLang, footerLang
+      lang,
+      download,
+      device,
+      metatagsDescriptions,
+      langJson,
+      navbarLang,
+      footerLang,
     },
   };
 }

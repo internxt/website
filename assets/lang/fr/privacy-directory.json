@@ -229,5 +229,16 @@
         "line2": "spéciaux pour les ONG"
       }
     }
+  },
+  "FaqSection": {
+    "title": "Questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'un annuaire de protection de la vie privée?",
+        "answer": [
+          "L'annuaire des organisations de défense de la vie privée d'Internxt présente les organisations de défense des droits numériques, les institutions et les ONG qui travaillent aux côtés d'Internxt pour faire progresser, soutenir et défendre la vie privée pour tous."
+        ]
+      }
+    ]
   }
 }

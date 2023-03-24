@@ -1,30 +1,47 @@
+import Script from 'next/script';
 import React from 'react';
+
 import cookies from '../lib/cookies';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/cyber-awareness/HeroSection';
 import InfoSection from '../components/cyber-awareness/InfoSection';
+import FAQSection from '../components/cyber-awareness/FAQSection';
 import SuiteSection from '../components/cyber-awareness/SuiteSection';
 import VideoSection from '../components/cyber-awareness/VideoSection';
 import Footer from '../components/layout/Footer';
 
-const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+
+const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName={'Cyber Awareness'}>
-      <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.FaqSection.faq)}
+      </Script>
 
-      <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Cyber Awareness', 'cyber-awareness')}
+      </Script>
 
-      <InfoSection textContent={textContent.InfoSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName={'Cyber Awareness'}>
+        <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
 
-      <SuiteSection textContent={textContent.SuiteSection} />
+        <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
 
-      <VideoSection textContent={textContent.VideoSection} />
+        <InfoSection textContent={textContent.InfoSection} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <SuiteSection textContent={textContent.SuiteSection} />
+
+        <VideoSection textContent={textContent.VideoSection} />
+
+        <FAQSection textContent={textContent.FaqSection} />
+
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 

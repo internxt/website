@@ -83,6 +83,29 @@
         "description": "Send allows you to encrypt and share large files fast without worrying about the security of your documents, images, or videos. Transfer to anyone in total confidentiality.",
         "cta": "Send something sensitive"
       }
+    },
+    "FaqSection": {
+      "title": "Questions? We have answers",
+      "faq": [
+        {
+          "question": "Is Internxt’s cloud storage secure?",
+          "answer": [
+            "Internxt Drive is a zero-knowledge file storage service that's built for absolute privacy and strict security. Our service doesn't access your personal data or files for ad purposes, instead is designed to give you back control over your files and protect you from data collection and advertising companies."
+          ]
+        },
+        {
+          "question": "What is the most private cloud storage?",
+          "answer": [
+            "Many cloud providers say their service is private, but Internxt goes a step above and beyond. Internxt is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Internxt cannot access your data stored in the cloud storage."
+          ]
+        },
+        {
+          "question": "Is Internxt private?",
+          "answer": [
+            "Unlike some of our competitors, we don't operate based on advertising or data collection. Your data is exclusively yours. We prioritize your security, privacy, and the security of your file and photos. Using Internxt, you can be sure you're secure."
+          ]
+        }
+      ]
     }
   }
 }

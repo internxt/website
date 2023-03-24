@@ -89,9 +89,37 @@
           "answer": [
             "¿No encuentras lo que buscas? Puedes ponerte en contacto con nuestro equipo a través del chat en directo o enviando un correo electrónico a hello@internxt.com."
           ]
+        },
+        {
+          "question": "¿Cuánto cuesta un plan de Internxt?",
+          "answer": [
+            "En Internxt ofrecemos planes individuales que van desde 20 GB a 2 TB, desde tan sólo 0,89 euros/mes."
+          ]
+        },
+        {
+          "question": "¿Internxt tiene planes de por vida?",
+          "answer": [
+            "Ofrecemos planes de por vida que puedes adquirir desde nuestra web. Estos planes te dan acceso de por vida a nuestros planes, con hasta 10 TB de almacenamiento, por un pago único."
+          ]
         }
       ]
     }
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "¿Cuánto cuesta un plan de Internxt?",
+        "answer": [
+          "En Internxt ofrecemos planes individuales que van desde 20 GB a 2 TB, desde tan sólo 0,89 euros/mes."
+        ]
+      },
+      {
+        "question": "¿Internxt tiene planes de por vida?",
+        "answer": [
+          "Ofrecemos planes de por vida que puedes adquirir desde nuestra web. Estos planes te dan acceso de por vida a nuestros planes, con hasta 10 TB de almacenamiento, por un pago único."
+        ]
+      }
+    ]
   },
   "CtaSection": {
     "title": "Prueba Internxt sin riesgos",

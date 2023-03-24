@@ -1,10 +1,15 @@
+import Script from 'next/script';
 import React from 'react';
+
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/privacy-directory/HeroSection';
 import WikiSection from '../components/privacy-directory/WikiSection';
 import SupportNGOsSection from '../components/privacy-directory/SupportNGOsSection';
 import Footer from '../components/layout/Footer';
+import FAQSection from '../components/privacy-directory/FAQSection';
+
+import { sm_faq } from '../components/utils/schema-markup-generator';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
@@ -17,17 +22,34 @@ const PrivacyDirectory = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy-directory');
 
   return (
-    <Layout segmentName="Privacy Directory" title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.FaqSection.faq)}
+      </Script>
 
-      <HeroSection textContent={textContent.HeroSection} lang={lang} />
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Privacy Directory', 'privacy-directory')}
+      </Script>
 
-      <WikiSection textContent={textContent.WikiSection} />
+      <Layout
+        segmentName="Privacy Directory"
+        title={metatags[0].title}
+        description={metatags[0].description}
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
 
-      <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
+        <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <WikiSection textContent={textContent.WikiSection} />
+
+        <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
+
+        <FAQSection textContent={textContent.FaqSection} />
+
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 

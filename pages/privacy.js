@@ -1,4 +1,6 @@
+import Script from 'next/script';
 import React from 'react';
+
 import HeroSection from '../components/privacy/HeroSection';
 import ManifestoSection from '../components/privacy/ManifestoSection';
 import Footer from '../components/layout/Footer';
@@ -6,19 +8,31 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed={false} darkMode />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(langJson.ManifestoSection.FaqSection.faq)}
+      </Script>
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Privacy', 'privacy')}
+      </Script>
 
-      <ManifestoSection textContent={langJson.ManifestoSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed={false} darkMode />
 
-      <Footer textContent={footerLang} lang={lang} darkMode />
-    </Layout>
+        <HeroSection textContent={langJson.HeroSection} />
+
+        <ManifestoSection textContent={langJson.ManifestoSection} />
+
+        <Footer textContent={footerLang} lang={lang} darkMode />
+      </Layout>
+    </>
   );
 };
 

@@ -229,5 +229,16 @@
         "line2": "descuento para ONGs"
       }
     }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es un directorio de privacidad?",
+        "answer": [
+          "El Directorio de Organizaciones de Privacidad de Internxt proporciona organizaciones de derechos digitales, instituciones y ONGs que trabajan junto a Internxt para avanzar, apoyar y defender la privacidad para todos."
+        ]
+      }
+    ]
   }
 }

@@ -83,6 +83,29 @@
         "description": "Send vous permet de chiffrer et de partager rapidement des fichiers de grande taille sans avoir à vous soucier de la sécurité de vos documents, images ou vidéos. Envoyez des fichiers à n'importe qui en toute confidentialité.",
         "cta": "Envoyer un fichier chiffré"
       }
+    },
+    "FaqSection": {
+      "title": "Questions ? Nous avons les réponses",
+      "faq": [
+        {
+          "question": "Le stockage sur le cloud d'Internxt est-il sécurisé ?",
+          "answer": [
+            "Internxt Drive est un service de stockage de fichiers à connaissance nulle, conçu pour une confidentialité absolue et une sécurité stricte. Notre service n'accède pas à vos données personnelles ou à vos fichiers à des fins publicitaires, mais il est conçu pour vous redonner le contrôle de vos fichiers et vous protéger des sociétés de collecte de données et de publicité."
+          ]
+        },
+        {
+          "question": "Quel est le stockage en nuage le plus privé?",
+          "answer": [
+            "De nombreux de services en ligne affirment que leur service est privé, mais Internxt va encore plus loin. Internxt est un service de stockage de fichiers à connaissance nulle, conçu pour une confidentialité absolue et une sécurité renforcée. Internxt ne peut pas accéder à vos données stockées dans le nuage."
+          ]
+        },
+        {
+          "question": "Internxt est-il privé ?",
+          "answer": [
+            "Contrairement à certains de nos concurrents, nous ne fonctionnons pas sur la base de la publicité ou de la collecte de données. Vos données vous appartiennent exclusivement. Nous donnons la priorité à votre vie privée et à la sécurité de vos fichiers et de vos photos. En utilisant Internxt, vous pouvez être sûr que vous êtes en sécurité."
+          ]
+        }
+      ]
     }
   }
 }

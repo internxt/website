@@ -229,5 +229,16 @@
         "line2": "pricing"
       }
     }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is a privacy directory?",
+        "answer": [
+          "Internxt's Privacy Organizations Directory provides digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
+        ]
+      }
+    ]
   }
 }

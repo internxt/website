@@ -70,6 +70,41 @@
     "description": "Protect your personal data with Internxt's privacy suite.",
     "cta": "Create account"
   },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How to check if a file is infected?",
+        "answer": [
+          "Internxt’s Virus Scanner is a tool to help you locate any viruses that may have compromised your files. Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos."
+        ]
+      },
+      {
+        "question": "How to know if your files have malware?",
+        "answer": [
+          "Submit your files, and relax knowing that your files are safe and secure. Using our Virus Scanner is a safe practice to evade a privacy nightmare. Scan before you click!"
+        ]
+      },
+      {
+        "question": "How to scan a file for viruses?",
+        "answer": [
+          "Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos. Drag and drop the chosen file in the Virus Scanner toolbar, and it will automatically scan the file for any viruses or malware."
+        ]
+      },
+      {
+        "question": "How to scan a file online?",
+        "answer": [
+          "With Internxt Virus Scanner you can drag and drop suspicious files into the toolbar to detect malware and other breaches for free."
+        ]
+      },
+      {
+        "question": "How to scan a PDF file?",
+        "answer": [
+          "Drag and drop the PDF into the toolbar like you would with any other file. With Internxt Virus Scanner, you can scan any document, image, PDF, or other file type. Make sure your files are safe and free from viruses before you open them with Internxt's Virus Scanner."
+        ]
+      }
+    ]
+  },
   "BannersSection": {
     "title": "Try out Internxt's free online security tools:",
     "passwordCheckerBanner": {
