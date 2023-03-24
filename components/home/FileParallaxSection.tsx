@@ -1,8 +1,8 @@
 export default function FileParallaxSection() {
   return (
-    <section className="pointer-events-none relative flex h-[440px] select-none items-center justify-center overflow-hidden bg-gray-5">
+    <section className="pointer-events-none relative flex h-96 select-none items-center justify-center overflow-hidden bg-gray-5 md:h-[440px]">
       <div
-        className="flex transform-gpu items-center justify-center space-x-20 will-change-transform"
+        className="flex shrink-0 transform-gpu items-center justify-center space-x-12 will-change-transform md:space-x-20"
         style={{
           perspective: '1000px',
           transformStyle: 'preserve-3d',
@@ -18,7 +18,7 @@ export default function FileParallaxSection() {
         ].map((col, i) => (
           <div
             key={`col-${i}`}
-            className={`flex flex-col space-y-20 drop-shadow-float ${
+            className={`flex flex-col space-y-12 drop-shadow-float md:space-y-20 ${
               i % 2 === 0 ? ' animate-scroll-y pt-32' : 'animate-scroll-y-reverse pb-32'
             } ${['z-[4]', 'z-[3]', 'z-[2]', 'z-1'][i]}`}
           >
@@ -26,7 +26,7 @@ export default function FileParallaxSection() {
               <img
                 key={i}
                 src={`/images/home/files-parallax/${item}`}
-                className="isolate w-52 rounded-lg"
+                className="isolate w-36 rounded-lg md:w-52"
                 draggable={false}
               />
             ))}
