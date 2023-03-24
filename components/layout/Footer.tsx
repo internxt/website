@@ -75,7 +75,7 @@ export default function Footer({
               name="signup"
               type="submit"
               value={`${textContent.NewsletterSection.cta}`}
-              className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
+              className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
             />
             <span className="text-xs text-cool-gray-40 sm:text-supporting-2">
               {textContent.NewsletterSection.privacy}{' '}
@@ -107,18 +107,18 @@ export default function Footer({
                     }`}
                   >
                     <Link href="/drive" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.drive}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.drive}</a>
                     </Link>
 
                     <Link href="/photos" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.photos}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.photos}</a>
                     </Link>
 
                     <a
                       href="https://send.internxt.com"
                       target="_blank"
                       rel="noreferrer"
-                      className="flex flex-row items-center"
+                      className="flex flex-row items-center hover:text-primary"
                     >
                       <div>{textContent.FooterSection.sections.products.send}</div>
                       {/* <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
@@ -127,7 +127,7 @@ export default function Footer({
                     </a>
 
                     <Link href="/pricing" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.pricing}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.pricing}</a>
                     </Link>
                   </div>
                 </div>
@@ -142,11 +142,11 @@ export default function Footer({
                     }`}
                   >
                     <Link href="/about" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.about}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.about}</a>
                     </Link>
 
                     <Link href="/privacy" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.privacy}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.privacy}</a>
                     </Link>
 
                     <a
@@ -155,20 +155,26 @@ export default function Footer({
                       }`}
                       target="_blank"
                       rel="noreferrer"
+                      className="hover:text-primary"
                     >
                       {textContent.FooterSection.sections.company.security}
                     </a>
 
                     <Link href="/legal" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.legal}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.legal}</a>
                     </Link>
 
-                    <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://help.internxt.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.company.support}
                     </a>
 
                     <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.comparison}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.comparison}</a>
                     </Link>
                   </div>
                 </div>
@@ -182,19 +188,24 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <a href="https://drive.internxt.com/new" target="_top">
+                    <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
 
-                    <a href="https://drive.internxt.com/login" target="_top">
+                    <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}
                     </a>
 
-                    <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
+                    <a href="https://t.me/internxt" target="_blank" rel="noreferrer" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.community}
                     </a>
 
-                    <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://github.com/internxt"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.join.github}
                     </a>
                   </div>
@@ -213,18 +224,21 @@ export default function Footer({
                       href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
                       target="_blank"
                       rel="noreferrer"
+                      className="hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a className="max-w-[150px] line-clamp-2">
+                      <a className="max-w-[150px] line-clamp-2 hover:text-primary">
                         {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </a>
                     </Link>
 
                     <Link href="/cyber-awareness" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      <a className="hover:text-primary">
+                        {textContent.FooterSection.sections.resources.cyberAwareness}
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -238,19 +252,19 @@ export default function Footer({
                     }`}
                   >
                     <Link href="/byte-converter" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.tools.byteConverter}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.byteConverter}</a>
                     </Link>
 
                     <Link href="/temporary-email" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.temporaryEmail}</a>
                     </Link>
 
                     <Link href="/password-checker" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.passwordChecker}</a>
                     </Link>
 
                     <Link href="/virus-scanner" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                     </Link>
                   </div>
                 </div>
