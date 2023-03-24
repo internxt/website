@@ -40,12 +40,12 @@ const SecondFeaturesSection = ({ textContent }) => {
               <div
                 className={`flex ${
                   cardIndex === index ? 'border-gray-80' : 'border-gray-10'
-                } cursor-pointer flex-row items-center border-r-4  pr-8`}
+                } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                 onClick={() => {
                   setCardIndex(index);
                 }}
               >
-                <p className="text-2xl font-medium text-gray-100">{info.title}</p>
+                <p className="text-2xl font-medium text-gray-100  hover:text-primary">{info.title}</p>
               </div>
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </Fragment>
