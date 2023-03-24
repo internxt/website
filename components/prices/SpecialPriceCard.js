@@ -5,7 +5,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { getPlanId, stripeProducts } from '../../pages/api/stripe/stripeProducts';
 import { checkout } from '../../lib/auth';
 
 const TWOTB_OFF_COUPON = 'P8PSpVs6';
@@ -23,8 +23,6 @@ export default function SpecialPriceCard({
   country,
   products,
 }) {
-  const stripeObject = { product: cta[1] };
-
   const billingFrequencyList = {
     '-1': 'lifetime',
     1: 'monthly',
@@ -43,12 +41,19 @@ export default function SpecialPriceCard({
     }
   };
 
+  console.log('products', products);
+
   const onOfferClick = () => {
-    const id = billingFrequency === 1 ? 'month' + storage : 'year' + storage;
-    checkout({
-      planId: products[id]?.planId,
-      couponCode: TWOTB_OFF_COUPON,
-    });
+    const interval = billingFrequency === 1 ? 'month' : 'year';
+    stripeProducts()
+      .getPlanId(interval, storage)
+      .then((planId) => {
+        checkout({
+          planId: planId,
+          couponCode: TWOTB_OFF_COUPON,
+          mode: billingFrequency === -1 ? 'payment' : 'subscription',
+        });
+      });
   };
 
   const teamsBilled = (price * getUsers).toFixed(2);

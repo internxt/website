@@ -521,9 +521,9 @@ export default function Navbar(props: NavbarProps) {
               <button
                 type="button"
                 onClick={() => {
-                  // checkout({
-                  //   planId: getPlanId(stripeObject),
-                  // })
+                  checkout({
+                    planId: '',
+                  });
                 }}
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState

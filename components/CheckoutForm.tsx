@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import { getStripe } from '../lib/getstripe';
 
 interface CheckoutFormProps {
   product: string;
@@ -13,14 +12,6 @@ export async function redirectToCheckoutAction(stripeObject) {
   // Create a Checkout Session.
   const anonymousId = JSON.parse(window.localStorage.getItem('ajs_anonymous_id'));
   const impactId = window.sessionStorage.getItem('irclickid');
-  // const stripeInfo = getStripeProduct({
-  //   product: stripeObject.product,
-  //   impactId,
-  //   anonymousId,
-  // });
-  // if (stripeInfo.mode === 'subscription') {
-  //   // window.analytics.track('Checkout Opened', stripeInfo.properties);
-  // }
   const response = await fetch('/api/stripe/session', {
     method: 'post',
     headers: {
@@ -39,11 +30,6 @@ export async function redirectToCheckoutAction(stripeObject) {
   }
 
   const body = await response.json();
-
-  /* const stripe = await getStripe();
-  const { error } = await stripe.redirectToCheckout({ sessionId: body.id });
-
-  console.warn(error.message); */
 }
 
 export default function CheckoutForm(props: CheckoutFormProps) {

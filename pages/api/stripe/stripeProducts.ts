@@ -8,7 +8,7 @@ const envVariable = isTest ? 'STRIPE_TEST' : 'STRIPE_LIVE';
 
 export const stripeProducts = () => {
   async function products() {
-    const productsRequest = await axios.get(`https://api.internxt.com/payments/prices`);
+    const productsRequest = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`);
     return productsRequest.data;
   }
 
