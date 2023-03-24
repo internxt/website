@@ -58,25 +58,25 @@ describe('Pricing page', () => {
           cy.url().should('eq', url({ planId: products.month20GB.planId }));
         });
       });
-    });
 
-    describe('When the plan is 200GB of space', () => {
-      it('Redirect to stripe checkout with the correct planId and mode', () => {
-        cy.visit('/pricing');
-        cy.get('#priceTable').contains('Monthly').click();
-        cy.get('#priceTable').contains('Get 200GB').click();
+      describe('When the plan is 200GB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Monthly').click();
+          cy.get('#priceTable').contains('Get 200GB').click();
 
-        cy.url().should('eq', url({ planId: products.month200GB.planId }));
+          cy.url().should('eq', url({ planId: products.month200GB.planId }));
+        });
       });
-    });
 
-    describe('When the plan is 2TB of space', () => {
-      it('Redirect to stripe checkout with the correct planId and mode', () => {
-        cy.visit('/pricing');
-        cy.get('#priceTable').contains('Monthly').click();
-        cy.get('#priceTable').contains('Get 2TB').click();
+      describe('When the plan is 2TB of space', () => {
+        it('Redirect to stripe checkout with the correct planId and mode', () => {
+          cy.visit('/pricing');
+          cy.get('#priceTable').contains('Monthly').click();
+          cy.get('#priceTable').contains('Get 2TB').click();
 
-        cy.url().should('eq', url({ planId: products.month2TB.planId }));
+          cy.url().should('eq', url({ planId: products.month2TB.planId }));
+        });
       });
     });
 
