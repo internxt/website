@@ -53,7 +53,7 @@ describe('Pricing page', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Monthly').click();
-          cy.get('#priceTable').contains('Get 20GB').click();
+          cy.get('#priceTable').contains(`Get ${products.month20GB.storage}`).click();
 
           cy.url().should('eq', url({ planId: products.month20GB.planId }));
         });
@@ -63,7 +63,7 @@ describe('Pricing page', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Monthly').click();
-          cy.get('#priceTable').contains('Get 200GB').click();
+          cy.get('#priceTable').contains(`Get ${products.month200GB.storage}`).click();
 
           cy.url().should('eq', url({ planId: products.month200GB.planId }));
         });
@@ -73,7 +73,7 @@ describe('Pricing page', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Monthly').click();
-          cy.get('#priceTable').contains('Get 2TB').click();
+          cy.get('#priceTable').contains(`Get ${products.month2TB.storage}`).click();
 
           cy.url().should('eq', url({ planId: products.month2TB.planId }));
         });
@@ -84,7 +84,7 @@ describe('Pricing page', () => {
       describe('When the plan is 20GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.get('#priceTable').contains('Get 20GB').click();
+          cy.get('#priceTable').contains(`Get ${products.year20GB.planId}`).click();
 
           cy.url().should('eq', url({ planId: products.year20GB.planId }));
         });
@@ -92,7 +92,7 @@ describe('Pricing page', () => {
       describe('When the plan is 200GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.get('#priceTable').contains('Get 200GB').click();
+          cy.get('#priceTable').contains(`Get ${products.year200GB.storage}`).click();
 
           cy.url().should('eq', url({ planId: products.year200GB.planId }));
         });
