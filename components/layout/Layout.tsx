@@ -83,9 +83,10 @@ LayoutProps) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="thumbnail" content={`${INTERNXT_URL}/images/previewLink/LifetimeGoogleSearch.png`} />
+        <meta name="apple-itunes-app" content={`app-id=${process.env.NEXT_PUBLIC_IOS_APP_ID}`} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
-        <meta name="apple-itunes-app" content={`app-id=${process.env.NEXT_PUBLIC_IOS_APP_ID}`} />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
@@ -120,6 +121,7 @@ LayoutProps) {
           setCloseBannerOnMobile={setCloseBannerOnMobile}
         />
       ) : null}
+
       {children}
       {/* <BFBanner /> */}
     </>
