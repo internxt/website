@@ -52,12 +52,16 @@
         "library": "Biblioteca",
         "writeForUs": "Escribe para nosotros",
         "cyberSecurityGlossary": "Glosario de ciberseguridad",
-        "fileVirusScan": "Scanner de Virus",
-        "passwordChecker": "Vérificateur de Mot de Passe",
-        "byteConverter": "Convertisseur d'Octets",
-        "temporaryEmail": "Courriel Temporaire",
         "cyberAwareness": "Cyber Awareness"
-      }
+      },
+      "tools": {
+        "title": "Free tools",
+        "temporaryEmail": "Courriel Temporaire",
+        "fileVirusScan": "Scanner de virus",
+        "passwordChecker": "Vérifier mot de passe",
+        "byteConverter": "Convertisseur d'octets"
+      },
+      "language": "Langue"
     }
   },
   "Cookies": {

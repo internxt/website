@@ -45,7 +45,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
 
   return (
     <form
-      className="flex w-full max-w-lg flex-col items-center space-y-2 pt-10 md:items-start md:pt-0"
+      className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0"
       onClick={() => {
         autoCompleteOnFocus && setAutoCompleteOnFocus(false);
       }}
@@ -96,7 +96,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
       <div className="flex w-full flex-row items-center space-x-3">
         <div className="w-full">
           <PrimaryButton
-            className="h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 sm:text-base"
+            className="h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 hover:bg-primary-dark sm:text-base"
             type="submit"
             label={
               <div className="flex flex-row items-center space-x-1.5">
@@ -109,9 +109,9 @@ export default function SignUpInline(props: SignUpInlineProps) {
           />
         </div>
 
-        <span className="w-full text-xs text-gray-50 sm:text-left">
+        <span className="w-full text-sm text-gray-50 sm:text-left">
           <span>{props.textContent.disclaimer.text}</span>{' '}
-          <a href="/legal" target="_blank" className="hover:text-gray-60 hover:underline active:text-gray-80">
+          <a href="/legal" target="_blank" className="underline hover:text-gray-60 active:text-gray-80">
             {props.textContent.disclaimer.link}
           </a>
           <span>{'.'}</span>

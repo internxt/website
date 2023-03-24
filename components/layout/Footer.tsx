@@ -6,8 +6,19 @@ import Link from 'next/link';
 import cookies from '../../lib/cookies';
 import setUTM from '../../lib/conversions';
 import styles from './Footer.module.scss';
+import LanguageBox from './components/LanguageBox';
 
-export default function Footer({ textContent, lang, hideNewsletter, darkMode }) {
+export default function Footer({
+  textContent,
+  lang,
+  hideNewsletter,
+  darkMode,
+}: {
+  textContent: any;
+  lang: string;
+  hideNewsletter?: boolean;
+  darkMode?: boolean;
+}) {
   const [consentCookie, setConsentCookie] = React.useState(true);
 
   const handleAcceptCookies = () => {
@@ -64,7 +75,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
               name="signup"
               type="submit"
               value={`${textContent.NewsletterSection.cta}`}
-              className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
+              className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
             />
             <span className="text-xs text-cool-gray-40 sm:text-supporting-2">
               {textContent.NewsletterSection.privacy}{' '}
@@ -85,7 +96,7 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
         {/* Footer content */}
         <footer className="w-full">
           {/* Desktop version */}
-          <div className="hidden flex-col items-center md:flex md:space-y-16">
+          <div className="hidden flex-col items-center px-36 md:flex md:space-y-16">
             <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20 xl:space-x-32">
               <div className="flex flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
@@ -96,27 +107,27 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     }`}
                   >
                     <Link href="/drive" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.drive}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.drive}</a>
                     </Link>
 
                     <Link href="/photos" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.photos}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.photos}</a>
                     </Link>
 
                     <a
                       href="https://send.internxt.com"
                       target="_blank"
                       rel="noreferrer"
-                      className="flex flex-row items-center"
+                      className="flex flex-row items-center hover:text-primary"
                     >
                       <div>{textContent.FooterSection.sections.products.send}</div>
-                      <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
+                      {/* <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
                         {textContent.FooterSection.new}
-                      </div>
+                      </div> */}
                     </a>
 
                     <Link href="/pricing" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.products.pricing}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.pricing}</a>
                     </Link>
                   </div>
                 </div>
@@ -131,11 +142,11 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                     }`}
                   >
                     <Link href="/about" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.about}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.about}</a>
                     </Link>
 
                     <Link href="/privacy" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.privacy}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.privacy}</a>
                     </Link>
 
                     <a
@@ -144,20 +155,26 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       }`}
                       target="_blank"
                       rel="noreferrer"
+                      className="hover:text-primary"
                     >
                       {textContent.FooterSection.sections.company.security}
                     </a>
 
                     <Link href="/legal" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.legal}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.legal}</a>
                     </Link>
 
-                    <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://help.internxt.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.company.support}
                     </a>
 
                     <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.company.comparison}</a>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.comparison}</a>
                     </Link>
                   </div>
                 </div>
@@ -171,19 +188,24 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <a href="https://drive.internxt.com/new" target="_top">
+                    <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
 
-                    <a href="https://drive.internxt.com/login" target="_top">
+                    <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}
                     </a>
 
-                    <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
+                    <a href="https://t.me/internxt" target="_blank" rel="noreferrer" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.community}
                     </a>
 
-                    <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://github.com/internxt"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.join.github}
                     </a>
                   </div>
@@ -202,33 +224,60 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                       href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
                       target="_blank"
                       rel="noreferrer"
+                      className="hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
-                    </Link>
-
-                    <Link href="/password-checker" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
-                    </Link>
-
-                    <Link href="/virus-scanner" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
-                    </Link>
-
-                    <Link href="/byte-converter" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
-                    </Link>
-
-                    <Link href="/temporary-email" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
+                      <a className="max-w-[150px] line-clamp-2 hover:text-primary">
+                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
+                      </a>
                     </Link>
 
                     <Link href="/cyber-awareness" locale={lang} passHref>
-                      <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      <a className="hover:text-primary">
+                        {textContent.FooterSection.sections.resources.cyberAwareness}
+                      </a>
                     </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
+                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
+                  <div
+                    className={`flex flex-col space-y-1.5 text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                    }`}
+                  >
+                    <Link href="/byte-converter" locale={lang} passHref>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.byteConverter}</a>
+                    </Link>
+
+                    <Link href="/temporary-email" locale={lang} passHref>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                    </Link>
+
+                    <Link href="/password-checker" locale={lang} passHref>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.passwordChecker}</a>
+                    </Link>
+
+                    <Link href="/virus-scanner" locale={lang} passHref>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.fileVirusScan}</a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
+                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.language}</h3>
+                  <div
+                    className={`flex flex-col space-y-1.5 text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                    }`}
+                  >
+                    <LanguageBox />
                   </div>
                 </div>
               </div>
@@ -533,24 +582,58 @@ export default function Footer({ textContent, lang, hideNewsletter, darkMode }) 
                         <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
                       </Link>
 
+                      <Link href="/cyber-awareness" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </div>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
+              {({ open }) => (
+                <div>
+                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
+                    <span className="relative h-5 w-5">
+                      <UilMinus
+                        className={`absolute top-0 left-0 h-full w-full ${
+                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
+                      />
+                      <UilMinus
+                        className={`absolute top-0 left-0 h-full w-full ${
+                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
+                      />
+                    </span>
+                  </Disclosure.Button>
+
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-0"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col ${
+                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                      } space-y-4 p-4 pt-2`}
+                    >
+                      <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.tools.byteConverter}
+                      </a>
+
+                      <Link href="/temporary-email" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                      </Link>
+
                       <Link href="/password-checker" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.passwordChecker}</a>
+                        <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
                       </Link>
 
                       <Link href="/virus-scanner" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.fileVirusScan}</a>
-                      </Link>
-
-                      <Link href="/byte-converter" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.byteConverter}</a>
-                      </Link>
-
-                      <Link href="/temporary-email" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.temporaryEmail}</a>
-                      </Link>
-
-                      <Link href="/cyber-awareness" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

@@ -52,12 +52,17 @@
         "library": "Biblioteca",
         "writeForUs": "Escribe para nosotros",
         "cyberSecurityGlossary": "Glosario de ciberseguridad",
+
+        "cyberAwareness": "Cyber Awareness"
+      },
+      "tools": {
+        "title": "Herramientas gratuitas",
+        "temporaryEmail": "Correo Temporal",
         "fileVirusScan": "Escaner de Virus",
         "passwordChecker": "Comprobador de Contraseñas",
-        "byteConverter": "Conversor de Unidades",
-        "cyberAwareness": "Cyber Awareness",
-        "temporaryEmail": "Correo Temporal"
-      }
+        "byteConverter": "Conversor de unidades"
+      },
+      "language": "Idioma"
     }
   },
   "Cookies": {

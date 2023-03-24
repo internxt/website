@@ -42,6 +42,12 @@ LayoutProps) {
   const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
   const langToUpperCase = lang.toLocaleUpperCase();
 
+  const slogan = {
+    en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
+    es: 'Internxt es un servicio seguro de almacenamiento en la nube basado en el cifrado y la privacidad absoluta. El conjunto de servicios de código abierto de Internxt protege tu privacidad. Internxt Drive, Photos, Send y mucho más.',
+    fr: "Internxt est un service de stockage en ligne sécurisé basé sur le chiffrage et la confidentialité absolue. La suite open-source de services de stockage en nuage d'Internxt protège votre droit à la vie privée. Internxt Drive, Photos, Send, et plus encore.",
+  };
+
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
@@ -77,17 +83,37 @@ LayoutProps) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="thumbnail" content={`${INTERNXT_URL}/images/previewLink/LifetimeGoogleSearch.png`} />
+        <meta name="apple-itunes-app" content={`app-id=1465869889`} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6684818764777307"
-          crossOrigin="anonymous"
-        />
       </Head>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {`{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Internxt",
+          "url": "https://www.internxt.com/",
+          "logo": "https://internxt.com/logos/internxt/cool-gray-90.svg",
+          "founder": "Fran Villalba Segarra",
+          "foundingDate": "2020",
+          "location": "Valencia, Spain",
+          "legalName": "Internxt Universal Technologies SL",
+          "slogan": "${slogan[lang]}",
+          "sameAs": [
+            "https://twitter.com/Internxt",
+            "https://www.facebook.com/internxt",
+            "https://es.linkedin.com/company/internxt",
+            "https://www.instagram.com/internxt/",
+            "https://github.com/internxt"
+          ]
+        }`}
+      </Script>
+
       {showBanner ? (
         <TopBannerHomePage
           isBannerFixed={isBannerFixed}
@@ -95,6 +121,7 @@ LayoutProps) {
           setCloseBannerOnMobile={setCloseBannerOnMobile}
         />
       ) : null}
+
       {children}
       {/* <BFBanner /> */}
     </>

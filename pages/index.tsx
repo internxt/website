@@ -6,11 +6,17 @@ import { downloadDriveLinks } from '../lib/get-download-url';
 import HeroSection from '../components/home/HeroSection';
 import GetStartedSection from '../components/home/GetStartedSection';
 import SocialProofSection from '../components/home/SocialProofSection';
-import FeaturesSection from '../components/home/FeaturesSection';
+import FirstFeaturesSection from '../components/home/FirstFeaturesSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import TestimonialsSection from '../components/home/TestimonialsSection';
+import InfoSection from '../components/home/InfoSection';
+import SecondFeaturesSection from '../components/home/SecondFeaturesSection';
+import SecondWhatWeDoSection from '../components/home/SecondWhatWeDoSection';
+import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
+import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
+import FileParallaxSection from '../components/home/FileParallaxSection';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
@@ -41,17 +47,26 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} download={downloadUrl} lang={lang} />
+      <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
+      <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
+
+      <InfoSection textContent={langJson.InfoSection} lang={lang} />
+
+      <FileParallaxSection />
+
+      {/* !TODO: Finish the design */}
+      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
+
+      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} />
+
+      <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
 
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
-      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
+      <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 
-      <div className="getStartedSection">
-        <GetStartedSection textContent={langJson.GetStartedSection} lang={lang} />
-      </div>
+      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
@@ -59,7 +74,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
 };
 
 export async function getServerSideProps(ctx) {
-  const downloadURL = await downloadDriveLinks(ctx);
+  const downloadURL = await downloadDriveLinks();
 
   const lang = ctx.locale;
 

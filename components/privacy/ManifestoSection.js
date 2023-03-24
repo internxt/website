@@ -137,7 +137,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/drive-image.png" alt="Drive image" />
+                <img src="/images/privacy/drive-image.png" alt="Internxt Drive image" />
               </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
@@ -166,7 +166,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/photos-image.png" alt="Photos image" />
+                <img src="/images/privacy/photos-image.png" alt="Internxt Photos image" />
               </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
@@ -194,7 +194,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/send-image.png" alt="Send image" />
+                <img src="/images/privacy/Internxt-Send.png" alt="Internxt Send image" />
               </div>
             </div>
           </div>
