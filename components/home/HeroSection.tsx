@@ -352,6 +352,17 @@ export default function HeroSection({ textContent, lang }) {
                   />
                 </a>
 
+                <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
+                  <img
+                    src="../../logos/featured/wired.svg"
+                    width={82}
+                    height={16}
+                    alt="Wired logo"
+                    loading="lazy"
+                    className="mr-10"
+                  />
+                </a>
+
                 {lang === 'es' && (
                   <a
                     href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html"
@@ -499,12 +510,23 @@ export default function HeroSection({ textContent, lang }) {
               >
                 <img
                   loading="lazy"
-                  className={lang !== 'en' ? 'mr-12' : undefined}
+                  className={'mr-12'}
                   src="../../logos/featured/hosting-advice.png"
                   draggable="false"
                   width="168"
                   height="18"
                   alt="Hosting Advice logo"
+                />
+              </a>
+
+              <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
+                <img
+                  src="../../logos/featured/wired.svg"
+                  width={82}
+                  height={16}
+                  alt="Wired logo"
+                  className="mr-12"
+                  loading="lazy"
                 />
               </a>
 
