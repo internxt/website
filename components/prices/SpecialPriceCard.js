@@ -41,8 +41,6 @@ export default function SpecialPriceCard({
     }
   };
 
-  console.log('products', products);
-
   const onOfferClick = () => {
     const interval = billingFrequency === 1 ? 'month' : 'year';
     stripeProducts()
