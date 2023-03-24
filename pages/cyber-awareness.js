@@ -13,7 +13,7 @@ import Footer from '../components/layout/Footer';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
-const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang }) => {
+const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
 
   return (
