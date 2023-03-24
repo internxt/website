@@ -27,7 +27,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square1.description}</h5>
 
                 <div
-                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                   onClick={() => {
                     window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
                   }}
@@ -60,7 +60,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <p className="text-xl font-bold">{textContent.square2.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square2.description}</h5>
                 <div
-                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                   onClick={() => {
                     window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/photos`, '_blank');
                   }}
@@ -96,7 +96,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                   onClick={() => {
                     window.open('https://send.internxt.com/', '_blank');
                   }}
-                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                 >
                   <span>{textContent.square3.cta}</span>
                   <CaretRight size={16} />

@@ -40,7 +40,7 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card1.title}</p>
             <p className="text-xl font-normal">{textContent.card1.description}</p>
             <div
-              className="flex cursor-pointer flex-row items-center space-x-2 text-primary"
+              className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
               onClick={() => {
                 window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/privacy`, '_blank');
               }}
@@ -55,7 +55,7 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
             <div
-              className="flex cursor-pointer flex-row items-center space-x-2 text-primary"
+              className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
               onClick={() => {
                 window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
               }}
@@ -106,7 +106,7 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
               <p className="text-xl">{textContent.card3.description}</p>
             </div>
             <div
-              className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white"
+              className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
               onClick={() => {
                 window.open(`https://drive.internxt.com/new`, '_blank');
               }}

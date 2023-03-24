@@ -33,7 +33,7 @@ const InfoSection = ({ textContent, lang }) => {
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
           <div
-            className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary"
+            className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
             onClick={() => {
               window.open('https://internxt.com/about', '_blank');
             }}

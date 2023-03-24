@@ -495,7 +495,7 @@ export default function Navbar(props: NavbarProps) {
                 className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'border-white text-white focus:opacity-80'
-                    : 'border-primary text-primary active:border-primary-dark active:text-primary-dark'
+                    : 'border-primary text-primary hover:bg-primary hover:bg-opacity-10 active:border-primary-dark active:text-primary-dark'
                 } text-sm font-medium`}
               >
                 {props.textContent.links.login}
@@ -509,7 +509,7 @@ export default function Navbar(props: NavbarProps) {
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
-                    : 'bg-primary text-white active:bg-primary-dark'
+                    : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
                 } transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.getStarted}</p>
@@ -529,7 +529,7 @@ export default function Navbar(props: NavbarProps) {
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
-                    : 'bg-primary text-white active:bg-primary-dark'
+                    : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
                 } transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.checkout}</p>
