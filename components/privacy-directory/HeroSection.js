@@ -29,9 +29,9 @@ const HeroSection = ({ textContent, lang }) => (
               <p className=" text-4xl font-semibold text-white">{textContent.brief.body.card.title}</p>
             </div>
             <button className="flex w-36 cursor-pointer items-center justify-center rounded-lg bg-primary px-5 py-3">
-              {/* <Link href="https://internxt.com/privacy" rel={'noopener noreferrer'} target={'_blank'}> */}
-              <p className="font-medium text-white">{textContent.brief.body.card.cta.line1}</p>
-              {/* </Link> */}
+              <Link href="https://internxt.com/privacy" rel={'noopener noreferrer'} target={'_blank'}>
+                <p className="font-medium text-white">{textContent.brief.body.card.cta.line1}</p>
+              </Link>
             </button>
           </div>
           <div className="flex h-full flex-col">
