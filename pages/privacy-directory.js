@@ -9,7 +9,7 @@ import SupportNGOsSection from '../components/privacy-directory/SupportNGOsSecti
 import Footer from '../components/layout/Footer';
 import FAQSection from '../components/privacy-directory/FAQSection';
 
-import { sm_faq } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
