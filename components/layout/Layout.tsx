@@ -36,10 +36,10 @@ export default function Layout({
 LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
-  const showBanner = router.pathname === '/';
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
+  // const showBanner = router.pathname === '/';
+  // const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
   const langToUpperCase = lang.toLocaleUpperCase();
 
   const slogan = {
@@ -114,13 +114,13 @@ LayoutProps) {
         }`}
       </Script>
 
-      {showBanner ? (
+      {/* {showBanner ? (
         <TopBannerHomePage
           isBannerFixed={isBannerFixed}
           closeBannerOnMobile={closeBannerOnMobile}
           setCloseBannerOnMobile={setCloseBannerOnMobile}
         />
-      ) : null}
+      ) : null} */}
 
       {children}
       {/* <BFBanner /> */}
