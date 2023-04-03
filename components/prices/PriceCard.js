@@ -68,13 +68,13 @@ export default function PriceCard({
         `}
       >
         <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap bg-neutral-20 py-1 px-4 pb-0.5 ${
-            popular ? 'text-gray-100' : ' text-neutral-80'
+          className={`storage flex max-w-min flex-row whitespace-nowrap bg-neutral-20 py-1 px-4 pb-0.5 text-base font-semibold ${
+            popular ? 'text-gray-100' : ' text-gray-50'
           } rounded-full font-medium`}
         >
           <p>
             {price <= 0 ? (
-              <span className="text-sm font-medium">
+              <span className="">
                 {contentText.price.free}
                 {storage}
               </span>
@@ -99,7 +99,7 @@ export default function PriceCard({
             <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
               {contentText.perUser}
             </span>
-            <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
+            <p className={` flex flex-row items-start space-x-0.5 font-medium text-gray-100`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>
@@ -112,7 +112,7 @@ export default function PriceCard({
           <span
             className={`priceBefore ${
               priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-80 line-through`}
+            } text-base font-medium text-neutral-100 line-through`}
           >
             {currency()}
             {priceBefore}
@@ -120,7 +120,7 @@ export default function PriceCard({
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-neutral-80
+            } flex-row text-sm font-medium text-neutral-50
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
@@ -246,7 +246,7 @@ export default function PriceCard({
           </div>
         </div>
       </div>
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
+      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {billingFrequency === -1 && (
             <div className={`flex flex-row items-start space-x-2 font-semibold`}>
@@ -283,7 +283,7 @@ export default function PriceCard({
                 alt="check icon"
               />
               <span
-                className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}
+                className={`flex ${lang === 'fr' ? 'pb-5' : ''} `}
               >{`${contentText.features.enjoyForever.enjoyUpTo} ${storage} ${contentText.features.enjoyForever.forever}`}</span>
             </div>
           )}
