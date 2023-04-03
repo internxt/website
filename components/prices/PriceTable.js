@@ -138,26 +138,33 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   return (
     <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
-        <h1 className="text-center text-4xl font-semibold">
-          {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
-        </h1>
-        <button
-          type="button"
-          className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary active:text-blue-50"
-          onClick={() => {
-            setIndividual(!individual);
-            setSegmentPageName(
-              `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequencySegment.billingFrequency}`,
-            );
-            if (billingFrequency === -1) {
-              setTimeout(() => {
-                setBillingFrequency(12);
-              }, 50);
-            }
-          }}
-        >
-          {individual ? `${contentText.changePlan.toBusiness}` : `${contentText.changePlan.toIndividuals}`}
-        </button>
+        <div className="flex flex-col items-center space-y-10">
+          <div className="flex flex-col items-center px-5">
+            <h1 className="text-center text-4xl font-semibold">
+              {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
+            </h1>
+            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">{contentText.planDescription}</p>
+          </div>
+          <div className="items center flex flex-col">
+            <button
+              type="button"
+              className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary active:text-blue-50"
+              onClick={() => {
+                setIndividual(!individual);
+                setSegmentPageName(
+                  `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequencySegment.billingFrequency}`,
+                );
+                if (billingFrequency === -1) {
+                  setTimeout(() => {
+                    setBillingFrequency(12);
+                  }, 50);
+                }
+              }}
+            >
+              {individual ? `${contentText.changePlan.toBusiness}` : `${contentText.changePlan.toIndividuals}`}
+            </button>
+          </div>
+        </div>
 
         <div className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
           <button

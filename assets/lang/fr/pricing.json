@@ -120,5 +120,46 @@
     "title": "Essayez Internxt sans risque",
     "description": "Protégez vos données vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
     "cta": "Sélectionnez un plan maintenant"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "Privé dès la conception",
+      "description": "Nous plaçons l'utilisateur et ses droits au premier plan dans tout ce que nous faisons. Notre mission est simple : créer de meilleurs outils et services qui redonnent le pouvoir à l'utilisateur final",
+      "cta": "Notre engagement en matière de protection de la vie privée"
+    },
+    "card2": {
+      "title": "Une expérience unique",
+      "description": "Internxt est disponible sur toutes les plateformes, même Linux ! Synchronisez vos fichiers et vos photos avec nos applications mobiles, web et de bureau, chacune conçue pour optimiser votre stockage chiffré en déplacement",
+      "cta": "Télécharger l'application"
+    },
+    "card3": {
+      "title": "Essayez Internxt gratuitement !",
+      "description": "Obtenez jusqu'à 10 Go gratuits et voyez si la confidentialité vous convient avant de vous lancer à fond ! 2 Go pour la création d'un compte, puis étendez votre stockage gratuit à 10 Go pour recommander le service",
+      "cta": "Créer un compte gratuit"
+    }
+  },
+  "BestStorageSection": {
+    "title": "Construit pour l'avenir",
+    "description": "Nous voulons construire un meilleur World Wide Web, qui soit juste, sûr et équitable pour tous. La bataille fait rage pour l'avenir de la protection de la vie privée sur l'internet, et nous sommes en première ligne",
+    "card1": {
+      "title": "Travail distribué"
+    },
+    "card2": {
+      "title": "Cryptage AES-256"
+    },
+    "card3": {
+      "title": "Redondance intégrée"
+    },
+    "card4": {
+      "title": "Code source ouvert"
+    },
+    "card5": {
+      "title": "Vérifié de manière indépendante"
+    }
+  },
+  "lastCtaSection": {
+    "title": "Le stockage en nuage le plus securisée du monde",
+    "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
+    "cta": "Sélectionnez un plan maintenant"
   }
 }
