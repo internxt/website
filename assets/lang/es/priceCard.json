@@ -6,6 +6,7 @@
     "individuals": "Planes Individuales",
     "business": "Planes para Empresas"
   },
+  "planDescription": "Todos los planes de Internxt ofrecen acceso total a todos nuestros servicios de privacidad. Seguridad a todos los niveles",
   "changePlan": {
     "toIndividuals": "Cambiar a Planes Individuales",
     "toBusiness": "Cambiar a Planes para Empresas"

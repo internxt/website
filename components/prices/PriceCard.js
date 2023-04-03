@@ -4,10 +4,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
+
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { checkout, goToLoginURL } from '../../lib/auth';
-import { isMobile } from 'react-device-detect';
+import { checkout } from '../../lib/auth';
+
 export default function PriceCard({
   planType,
   storage,
@@ -226,7 +227,7 @@ export default function PriceCard({
           }}
           className="flex w-full flex-row"
         >
-          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
+          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg font-medium  text-white transition-all duration-75 hover:bg-primary-dark focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.get} {storage}
             </p>
@@ -245,7 +246,7 @@ export default function PriceCard({
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
+                src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
@@ -259,7 +260,7 @@ export default function PriceCard({
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
+                src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
@@ -270,7 +271,7 @@ export default function PriceCard({
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
+                src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
@@ -283,7 +284,7 @@ export default function PriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -293,7 +294,7 @@ export default function PriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -303,7 +304,7 @@ export default function PriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />

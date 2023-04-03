@@ -136,11 +136,11 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   };
 
   return (
-    <section id="priceTable" className="bg-gray-1">
+    <section id="priceTable" className="">
       <div className="flex flex-col items-center py-20">
-        <div className="flex flex-col items-center space-y-10">
+        <div className="flex flex-col items-center space-y-10 pt-12">
           <div className="flex flex-col items-center px-5">
-            <h1 className="text-center text-4xl font-semibold">
+            <h1 className="text-center text-6xl font-semibold">
               {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
             </h1>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">{contentText.planDescription}</p>
