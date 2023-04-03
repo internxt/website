@@ -3,10 +3,11 @@ import React from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
 import { UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
-import cookies from '../../lib/cookies';
 import setUTM from '../../lib/conversions';
-import styles from './Footer.module.scss';
-import LanguageBox from './components/LanguageBox';
+import { useRouter } from 'next/router';
+import { Globe } from 'phosphor-react';
+import { UilAngleDown } from '@iconscout/react-unicons';
+import LanguageMobileBox from './components/LanguageMobileBox';
 
 export default function Footer({
   textContent,
@@ -20,6 +21,7 @@ export default function Footer({
   darkMode?: boolean;
 }) {
   const [consentCookie, setConsentCookie] = React.useState(true);
+  const router = useRouter();
 
   const handleAcceptCookies = () => {
     localStorage.setItem('CookieConsent', 'true');
@@ -629,9 +631,8 @@ export default function Footer({
               )}
             </Disclosure>
 
-            {/* <div className="flex sm:hidden">
-              <LanguageBox darkMode={darkMode} />
-            </div> */}
+            {/* Language selection for mobile view */}
+            <LanguageMobileBox />
 
             <div className="mt-16 flex flex-col items-center space-y-4">
               <div className="flex flex-row space-x-1">
