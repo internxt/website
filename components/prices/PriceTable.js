@@ -64,7 +64,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '3.99',
           12: '3.49',
         },
-        popular: false,
+        popular: true,
       },
       TB2: {
         stripeID: '2TB',
@@ -74,7 +74,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '9.49',
           12: '8.99',
         },
-        popular: true,
+        popular: false,
       },
       lifetime2TB: {
         stripeID: 'lifetime2TB',

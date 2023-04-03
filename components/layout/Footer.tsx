@@ -269,18 +269,6 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
-                <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.language}</h3>
-                  <div
-                    className={`flex flex-col space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
-                  >
-                    <LanguageBox />
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="mt-10 flex flex-col items-center space-y-4">

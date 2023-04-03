@@ -13,6 +13,7 @@ import ForgotPassword from '../auth/ForgotPassword';
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import LanguageBox from './components/LanguageBox';
 
 export interface NavbarProps {
   textContent: any;
@@ -488,7 +489,7 @@ export default function Navbar(props: NavbarProps) {
           )}
 
           {/* Login and CTA */}
-          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
+          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end space-x-5">
             {props.cta[0] === 'Hide Login' ? null : (
               <button
                 onClick={() => goToLoginURL()}
@@ -537,6 +538,9 @@ export default function Navbar(props: NavbarProps) {
             ) : (
               ''
             )}
+            <div className=" flex items-center justify-center bg-transparent">
+              <LanguageBox />
+            </div>
           </div>
         </div>
       </div>

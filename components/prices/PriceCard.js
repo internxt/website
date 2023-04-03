@@ -57,7 +57,9 @@ export default function PriceCard({
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
-        {popular && billingFrequency === 12 ? contentText.cta.discount + ' ' + storage : contentText.mostPopular}
+        {popular && billingFrequency === 12 && storage === '2TB'
+          ? contentText.cta.discount + ' ' + storage
+          : contentText.mostPopular}
       </div>
 
       <div
