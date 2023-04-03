@@ -538,7 +538,7 @@ export default function Navbar(props: NavbarProps) {
             ) : (
               ''
             )}
-            <div className=" flex items-center justify-center bg-transparent">
+            <div className="hidden items-center justify-center bg-transparent lg:flex">
               <LanguageBox />
             </div>
           </div>

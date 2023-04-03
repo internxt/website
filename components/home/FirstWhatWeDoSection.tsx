@@ -8,9 +8,9 @@ import FileItem from './components/FileItem';
 import DriveSidenav from './components/DriveSidenav';
 import { useState } from 'react';
 
-const FirstWhatWeDoSection = ({ textContent, lang }) => {
+const FirstWhatWeDoSection = ({ textContent, lang, backgroundColor }) => {
   return (
-    <section className="overflow-hidden py-20">
+    <section className={`overflow-hidden py-20 ${backgroundColor ? backgroundColor : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0  md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative rounded-3xl">
@@ -36,11 +36,11 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
               />
             </RevealX>
           </div>
-          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
+          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-center lg:text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card1.title}</p>
             <p className="text-xl font-normal">{textContent.card1.description}</p>
             <div
-              className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
+              className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
                 window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/privacy`, '_blank');
               }}
@@ -51,11 +51,11 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
           </div>
         </RevealY>
         <RevealY className="flex flex-col space-y-5 md:flex-row md:space-x-20 lg:items-center lg:justify-center">
-          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
+          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-center lg:text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
             <div
-              className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
+              className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
                 window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
               }}
@@ -100,18 +100,20 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
             </RevealX>
           </div>
 
-          <div className="flex w-full flex-col space-y-5 text-start">
-            <div className="flex max-w-[390px] flex-col space-y-6">
+          <div className="flex w-full flex-col space-y-5 text-center lg:text-start">
+            <div className="flex w-full max-w-[390px] flex-col space-y-6">
               <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card3.title}</p>
-              <p className="text-xl">{textContent.card3.description}</p>
+              <p className=" text-xl">{textContent.card3.description}</p>
             </div>
-            <div
-              className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
-              onClick={() => {
-                window.open(`https://drive.internxt.com/new`, '_blank');
-              }}
-            >
-              <p>{textContent.card3.cta}</p>
+            <div className="flex justify-center lg:justify-start">
+              <div
+                className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
+                onClick={() => {
+                  window.open(`https://drive.internxt.com/new`, '_blank');
+                }}
+              >
+                <p>{textContent.card3.cta}</p>
+              </div>
             </div>
           </div>
         </RevealY>

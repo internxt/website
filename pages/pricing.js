@@ -8,12 +8,15 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import axios from 'axios';
 import FAQSection from '../components/pricing/FAQSection';
-import HeroSection from '../components/pricing/HeroSection';
 import CtaSection from '../components/pricing/CtaSection';
+import FileParallaxSection from '../components/home/FileParallaxSection';
+import InfoSection from '../components/home/InfoSection';
+import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
+import BestStorageSection from '../components/pricing/BestStorageSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -68,9 +71,23 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
         />
 
+        <CtaSection textContent={textContent.CtaSection} freePlan />
+
+        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
+
+        <FirstWhatWeDoSection
+          textContent={textContent.FirstWhatWeDoSection}
+          lang={lang}
+          backgroundColor={'bg-gray-1'}
+        />
+
+        <BestStorageSection textContent={textContent.BestStorageSection} />
+
+        <FileParallaxSection />
+
         <FAQSection textContent={textContent.FaqSection} />
 
-        <CtaSection textContent={textContent.CtaSection} />
+        <CtaSection textContent={textContent.lastCtaSection} />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>
@@ -84,6 +101,7 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`../assets/lang/${lang}/pricing.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const homeComponentsLang = require(`../assets/lang/${lang}/home.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -94,6 +112,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       textContent,
+      homeComponentsLang,
     },
   };
 }
