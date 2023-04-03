@@ -3,10 +3,11 @@ import React from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
 import { UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
-import cookies from '../../lib/cookies';
 import setUTM from '../../lib/conversions';
-import styles from './Footer.module.scss';
-import LanguageBox from './components/LanguageBox';
+import { useRouter } from 'next/router';
+import { Globe } from 'phosphor-react';
+import { UilAngleDown } from '@iconscout/react-unicons';
+import LanguageMobileBox from './components/LanguageMobileBox';
 
 export default function Footer({
   textContent,
@@ -20,6 +21,7 @@ export default function Footer({
   darkMode?: boolean;
 }) {
   const [consentCookie, setConsentCookie] = React.useState(true);
+  const router = useRouter();
 
   const handleAcceptCookies = () => {
     localStorage.setItem('CookieConsent', 'true');
@@ -266,18 +268,6 @@ export default function Footer({
                     <Link href="/virus-scanner" locale={lang} passHref>
                       <a className="hover:text-primary">{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                     </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
-                <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.language}</h3>
-                  <div
-                    className={`flex flex-col space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
-                  >
-                    <LanguageBox />
                   </div>
                 </div>
               </div>
@@ -640,6 +630,9 @@ export default function Footer({
                 </div>
               )}
             </Disclosure>
+
+            {/* Language selection for mobile view */}
+            <LanguageMobileBox />
 
             <div className="mt-16 flex flex-col items-center space-y-4">
               <div className="flex flex-row space-x-1">

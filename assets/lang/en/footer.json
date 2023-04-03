@@ -33,7 +33,7 @@
         "comparison": "Comparison"
       },
       "join": {
-        "title": "Join us",
+        "title": "Join Us",
         "signup": "Create account",
         "login": "Log in",
         "community": "Community",
@@ -55,13 +55,12 @@
         "cyberAwareness": "Cyber Awareness"
       },
       "tools": {
-        "title": "Free tools",
+        "title": "Free Tools",
         "temporaryEmail": "Temporary Email",
         "fileVirusScan": "File Virus Scanner",
         "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter"
-      },
-      "language": "Language"
+      }
     }
   },
   "Cookies": {

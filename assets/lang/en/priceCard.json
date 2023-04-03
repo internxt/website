@@ -7,6 +7,7 @@
     "individuals": "Plans for Individuals",
     "business": "Plans for Business"
   },
+  "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
   "oneTime": "One-time payment",
   "changePlan": {
     "toIndividuals": "Change to Plans for Individuals",
@@ -34,13 +35,14 @@
   "users": "users",
   "freePlan": "Free",
   "price": {
-    "free": "Free forever"
+    "freeForever": "Free forever",
+    "free": "Up to "
   },
   "perMonth": "/month",
   "firstMonth": "First 30 days",
   "cta": {
     "getStarted": "Get started",
-    "signUpNow": "Get Internxt for free",
+    "signUpNow": "Sign up now",
     "buy": "Buy",
     "get": "Get",
     "discount": "Get 90% off",
