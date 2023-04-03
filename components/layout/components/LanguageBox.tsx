@@ -3,14 +3,18 @@ import { Globe } from 'phosphor-react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
 
-export default function LanguageBox() {
+export default function LanguageBox({ darkMode }) {
   const router = useRouter();
   return (
     <div
       className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
     >
-      <Globe size={24} />
-      <UilAngleDown className="h-6 w-6 translate-y-px text-cool-gray-20 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+      <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
+      <UilAngleDown
+        className={`${
+          darkMode ? 'text-white' : 'text-gray-60'
+        } h-6 w-6 translate-y-px transition duration-150 ease-in-out`}
+      />
 
       {/* Menu items */}
       <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">

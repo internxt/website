@@ -120,9 +120,10 @@ export default function PriceCard({
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-sm font-medium text-neutral-50
+            } flex-row text-sm font-medium text-gray-50
             `}
           >
+            <p className={`${billingFrequency === -1 ? 'flex' : 'hidden'}`}>{contentText.oneTime}</p>
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
                 <span className="currency text-supporting-2">{currency()}</span>
@@ -271,7 +272,7 @@ export default function PriceCard({
                 draggable="false"
                 alt="check icon"
               />
-              <span className={`flex ${lang === 'fr' ? 'pb-5' : ''}`}>{contentText.features.moneyBack}</span>
+              <span className={`flex `}>{contentText.features.moneyBack}</span>
             </div>
           ) : (
             <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>

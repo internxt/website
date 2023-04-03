@@ -40,6 +40,7 @@ export default function Navbar(props: NavbarProps) {
 
   const isCoupon = props.coupon ? true : false;
   const router = useRouter();
+  const getTitles = require(`../../assets/lang/en/navbar.json`);
 
   // DIALOG MANAGEMENT
 
@@ -255,10 +256,10 @@ export default function Navbar(props: NavbarProps) {
                     className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                       props.darkMode
                         ? `text-white hover:text-cool-gray-20 ${
-                            router.pathname.split('/')[1] === props.textContent.links.pricing.trim().toLowerCase() &&
+                            router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase() &&
                             'text-primary'
                           }`
-                        : router.pathname.split('/')[1] === props.textContent.links.pricing.trim().toLowerCase()
+                        : router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase()
                         ? 'text-primary'
                         : 'text-cool-gray-70 hover:text-primary'
                     }  text-base font-medium`}
@@ -311,9 +312,6 @@ export default function Navbar(props: NavbarProps) {
                         }`}
                       >
                         <span>{props.textContent.products.send}</span>
-                        <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
-                          {props.textContent.products.new}
-                        </span>
                       </a>
                     </div>
                   </div>
@@ -324,10 +322,10 @@ export default function Navbar(props: NavbarProps) {
                     className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                       props.darkMode
                         ? `text-white hover:text-cool-gray-20 ${
-                            router.pathname.split('/')[1] === props.textContent.links.privacy.trim().toLowerCase() &&
+                            router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase() &&
                             'text-primary'
                           }`
-                        : router.pathname.split('/')[1] === props.textContent.links.privacy.trim().toLowerCase()
+                        : router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase()
                         ? 'text-primary'
                         : 'text-cool-gray-70 hover:text-primary'
                     }
@@ -342,10 +340,10 @@ export default function Navbar(props: NavbarProps) {
                     className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                       props.darkMode
                         ? `text-white hover:text-cool-gray-20 ${
-                            router.pathname.split('/')[1] ===
-                              props.textContent.links.about.split(' ')[0].toLowerCase() && 'text-primary'
+                            router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
+                            'text-primary'
                           }`
-                        : router.pathname.split('/')[1] === props.textContent.links.about.split(' ')[0].toLowerCase()
+                        : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
                         ? 'text-primary'
                         : 'text-cool-gray-70 hover:text-primary'
                     }
@@ -409,7 +407,7 @@ export default function Navbar(props: NavbarProps) {
               ''
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
-              <LanguageBox />
+              <LanguageBox darkMode={props.darkMode} />
             </div>
           </div>
         </div>
