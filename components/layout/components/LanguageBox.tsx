@@ -12,7 +12,7 @@ export default function LanguageBox({ darkMode }) {
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
       <UilAngleDown
         className={`${
-          darkMode ? 'text-white' : 'text-gray-60'
+          darkMode ? 'text-white' : 'text-gray-40'
         } h-6 w-6 translate-y-px transition duration-150 ease-in-out`}
       />
 
