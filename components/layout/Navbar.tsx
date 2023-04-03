@@ -357,7 +357,7 @@ export default function Navbar(props: NavbarProps) {
           )}
 
           {/* Login and CTA */}
-          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end space-x-5">
+          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
             {props.cta[0] === 'Hide Login' ? null : (
               <button
                 onClick={() => goToLoginURL()}

@@ -629,6 +629,10 @@ export default function Footer({
               )}
             </Disclosure>
 
+            {/* <div className="flex sm:hidden">
+              <LanguageBox darkMode={darkMode} />
+            </div> */}
+
             <div className="mt-16 flex flex-col items-center space-y-4">
               <div className="flex flex-row space-x-1">
                 <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">

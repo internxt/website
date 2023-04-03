@@ -81,9 +81,9 @@ export default function PriceCard({
             ) : (
               storage
             )}
-            <span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>
+            {/* <span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>
               {contentText.perUserSlash}
-            </span>
+            </span> */}
           </p>
         </div>
         <div
@@ -92,23 +92,27 @@ export default function PriceCard({
           }`}
         >
           <div
-            className={`priceBreakdown flex text-neutral-700 ${
-              planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
-            }`}
+            className={`priceBreakdown flex flex-row
+              items-end space-x-px text-neutral-700
+            `}
           >
-            <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
-              {contentText.perUser}
-            </span>
-            <p className={` flex flex-row items-start space-x-0.5 font-medium text-gray-100`}>
+            <p className={` flex flex-row items-start space-x-0.5 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
             </p>
-            {/* eslint-disable-next-line no-nested-ternary */}
             <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}>
               {contentText.perMonth}
             </span>
-          </div>
 
+            {/* eslint-disable-next-line no-nested-ternary */}
+          </div>
+          <span
+            className={`perUser ${
+              planType.toLowerCase() === 'individual' ? 'hidden' : ''
+            } text-sm font-medium text-gray-50`}
+          >
+            {contentText.perUser}
+          </span>
           <span
             className={`priceBefore ${
               priceBefore ? 'flex' : 'hidden'
