@@ -8,7 +8,15 @@ import FileItem from './components/FileItem';
 import DriveSidenav from './components/DriveSidenav';
 import { useState } from 'react';
 
-const FirstWhatWeDoSection = ({ textContent, lang, backgroundColor }) => {
+const FirstWhatWeDoSection = ({
+  textContent,
+  lang,
+  backgroundColor,
+}: {
+  textContent;
+  lang: string;
+  backgroundColor?: string;
+}) => {
   return (
     <section className={`overflow-hidden py-20 ${backgroundColor ? backgroundColor : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
