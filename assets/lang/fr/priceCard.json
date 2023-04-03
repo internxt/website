@@ -33,7 +33,8 @@
   "users": "utilisateurs",
   "freePlan": "Gratuit",
   "price": {
-    "free": "Gratuit pour toujours"
+    "freeForever": "Gratuit pour toujours",
+    "free": "Jusqu'à "
   },
   "perMonth": "/mois",
   "firstMonth": "30 premiers jours",

@@ -73,7 +73,14 @@ export default function PriceCard({
           } rounded-full font-medium`}
         >
           <p>
-            {storage}
+            {price <= 0 ? (
+              <span className="text-sm font-medium">
+                {contentText.price.free}
+                {storage}
+              </span>
+            ) : (
+              storage
+            )}
             <span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>
               {contentText.perUserSlash}
             </span>
@@ -125,7 +132,7 @@ export default function PriceCard({
                 {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
               </span>
             </p>
-            <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.free}</p>
+            <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
           </div>
         </div>
         <div

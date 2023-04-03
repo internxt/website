@@ -49,8 +49,8 @@ function LangDropdown({ menuItems }: { menuItems: ReactNode[] }) {
         <Menu.Items className={'flex w-full rounded-md bg-white py-1.5 drop-shadow'}>
           {menuItems && (
             <div className="border-translate w-full border-gray-10">
-              {menuItems?.map((item) => (
-                <div className={'pt-2'} key={'menuitem-' + item}>
+              {menuItems?.map((item, index) => (
+                <div className={'pt-2'} key={'menuitem-' + index}>
                   <Menu.Item>{item}</Menu.Item>
                 </div>
               ))}
@@ -79,13 +79,13 @@ export default function LanguageBox(): JSX.Element {
           <LangDropdown
             menuItems={[
               <MenuItem lang="en" setCurrentLangText={setCurrentLangText} key={'en'}>
-                <p>EN</p>
+                EN
               </MenuItem>,
               <MenuItem lang="es" setCurrentLangText={setCurrentLangText} key={'es'}>
-                <p>ES</p>
+                ES
               </MenuItem>,
               <MenuItem lang="fr" setCurrentLangText={setCurrentLangText} key={'fr'}>
-                <p>FR</p>
+                FR
               </MenuItem>,
             ]}
           />
