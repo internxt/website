@@ -52,6 +52,10 @@
     "line1": "Now that you’re aware, protect yourself with",
     "blueText": "Internxt secure cloud storage"
   },
+  "privacyDirectoryBanner": {
+    "line1": "Join the fight for privacy and build a better internet",
+    "blueText": "with Internxt"
+  },
   "GeneralBanner": {
     "title": "Before you bounce...",
     "description": "Get 90% off our 2TB plan for the first year.",

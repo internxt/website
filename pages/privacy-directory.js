@@ -17,6 +17,7 @@ const PrivacyDirectory = ({
   navbarLang,
   footerLang,
   lang,
+  bannerText,
   // lang
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy-directory');
@@ -39,7 +40,7 @@ const PrivacyDirectory = ({
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
 
-        <HeroSection textContent={textContent.HeroSection} lang={lang} />
+        <HeroSection textContent={textContent.HeroSection} lang={lang} bannerText={bannerText.privacyDirectoryBanner} />
 
         <WikiSection textContent={textContent.WikiSection} />
 
@@ -59,6 +60,7 @@ export async function getServerSideProps(ctx) {
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const textContent = require(`../assets/lang/${lang}/privacy-directory.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const bannerText = require(`../assets/lang/${lang}/banners.json`);
 
   return {
     props: {
@@ -67,6 +69,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       footerLang,
       lang,
+      bannerText,
     },
   };
 }
