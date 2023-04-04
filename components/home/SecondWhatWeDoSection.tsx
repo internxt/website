@@ -45,7 +45,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                     width={480}
                     quality={100}
                     draggable={false}
-                    alt="Internxt Drive image"
+                    alt="Internxt Drive secure service"
                   />
                 </div>
               </div>
@@ -78,7 +78,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                     height={480}
                     quality={100}
                     draggable={false}
-                    alt="Internxt Photos image"
+                    alt="Internxt Photos secure service"
                   />
                 </div>
               </div>
@@ -111,7 +111,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                     height={480}
                     quality={100}
                     draggable={false}
-                    alt="Internxt Send image"
+                    alt="Internxt Send transfer service"
                   />
                 </div>
               </div>
