@@ -6,7 +6,6 @@ import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
 import FileItem from './components/FileItem';
 import DriveSidenav from './components/DriveSidenav';
-import { useState } from 'react';
 
 const FirstWhatWeDoSection = ({
   textContent,
@@ -29,6 +28,7 @@ const FirstWhatWeDoSection = ({
               quality={100}
               draggable={false}
               className="rounded-3xl"
+              alt="Secure cloud storage"
             />
             <RevealX
               direction="right"
@@ -41,6 +41,7 @@ const FirstWhatWeDoSection = ({
                 quality={100}
                 draggable={false}
                 className="rounded-lg"
+                alt="TaskLogger image"
               />
             </RevealX>
           </div>
@@ -74,12 +75,13 @@ const FirstWhatWeDoSection = ({
           </div>
           <div className="relative w-full rounded-3xl">
             <Image
-              src="/images/home/End-to-end encrypted-cloud-storage.webp"
+              src="/images/home/End-to-end-encrypted-cloud-storage.webp"
               width={444}
               height={520}
               quality={100}
               draggable={false}
               className="rounded-3xl"
+              alt="End-to-end encrypted cloud storage"
             />
             <RevealX
               direction="left"
@@ -99,6 +101,7 @@ const FirstWhatWeDoSection = ({
               quality={100}
               draggable={false}
               className="rounded-3xl"
+              alt="Free cloud storage account"
             />
             <RevealX
               direction="right"
