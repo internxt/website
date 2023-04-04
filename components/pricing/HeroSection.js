@@ -56,9 +56,9 @@ const HeroSection = ({ textContent }) => {
             <button
               className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
               onClick={() =>
-                checkout({
-                  planId: 'plan_FkTXxEg3GZW0pg',
-                  couponCode: TWOTB_OFF_COUPON,
+                window.scrollTo({
+                  top: document.getElementById('priceTable').offsetTop,
+                  behavior: 'smooth',
                 })
               }
             >
@@ -66,7 +66,7 @@ const HeroSection = ({ textContent }) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1 shadow-2xl">
+        <div className="relative flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1 shadow-2xl">
           <Image
             alt="Woman with laptop"
             src="/images/pricing/purchase-Internxt-plan.png"
@@ -77,7 +77,7 @@ const HeroSection = ({ textContent }) => {
             loading="eager"
             quality={100}
           />
-          <Infinity className="w-ful absolute bottom-36 right-16 h-48 max-w-[415px]" />
+          <Infinity className="w-ful absolute bottom-6 -right-20 h-48 max-w-[415px]" />
         </div>
       </div>
     </section>
