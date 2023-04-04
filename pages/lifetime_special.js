@@ -12,7 +12,6 @@ import CtaSection from '../components/lifetime/CtaSection';
 
 import axios from 'axios';
 
-//!TODO: Add the correct pathname to this page (it is the same as the lifetime page but without a timer)
 const yepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const [country, setCountry] = React.useState('ES');
