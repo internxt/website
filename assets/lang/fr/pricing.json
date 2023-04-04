@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " Plan d'Internxt ! " },
+    "title": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
       "secondFeed": "Paiement 100% sécurisé",
@@ -13,9 +13,9 @@
   },
   "tableSection": {
     "featureSection": {
-      "firstFeature": "Garantie de remboursement de 30 jours",
-      "secondFeature": "Paiement 100% sécurisé",
-      "thirdFeature": "Création de compte anonyme"
+      "firstFeature": "Remboursement de 30 jours",
+      "secondFeature": "Paiement 100% sûr",
+      "thirdFeature": "Compte anonyme"
     }
   },
   "FaqSection": {
