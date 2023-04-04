@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": { "line1": "90% OFF", "line2": "our 2TB plan" },
+    "title": { "line1": "Get a", "blueText": " lifetime ", "line2": " Internxt plan!" },
     "feeds": {
       "firstFeed": "30-day money-back guarantee",
       "secondFeed": "100% secure payment",
       "thirdFeed": "Anonymous account creation"
     },
     "cta": {
-      "title": "Get 90% off 2TB",
+      "title": "Get 50% OFF now",
       "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },
@@ -22,18 +22,6 @@
     "title": "Questions? We have answers",
     "faq": {
       "faq": [
-        {
-          "question": "Will I keep the discount when my plan ends?",
-          "answer": [
-            "The discount is only applied for the first full year of service. Therefore, you will have access to our 2TB subscription plan at this discounted price for only one year. After one year your account will automatically be renewed at the standard 2TB plan price for the following year."
-          ]
-        },
-        {
-          "question": "How much will it cost to renew the discounted plan?",
-          "answer": [
-            "The 2TB plan costs €9.99/month paid monthly or €8.99/month (€107.88/year) when paid annually. You can also choose to downgrade to our other plans after the first year, additional plan information and pricing is listed above."
-          ]
-        },
         {
           "question": "Can Internxt access my files?",
           "answer": [
@@ -87,18 +75,6 @@
           "question": "How do I contact support?",
           "answer": [
             "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
-          ]
-        },
-        {
-          "question": "How much does an Internxt plan cost?",
-          "answer": [
-            "Need more storage? We also offer individual plans that range from 20GB to 2TB, from as low as €0.89/month."
-          ]
-        },
-        {
-          "question": "Does Internxt have lifetime plans?",
-          "answer": [
-            "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
           ]
         }
       ]
@@ -162,8 +138,8 @@
     }
   },
   "lastCtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "title": "Your files secure and private forever",
+    "description": "We treat our users like family and family is forever!",
     "cta": "Select a plan now"
   }
 }

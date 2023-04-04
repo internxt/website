@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": { "line1": "90% de réduction", "line2": "sur le plan 2TB" },
+    "title": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " Plan d'Internxt ! " },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
       "secondFeed": "Paiement 100% sécurisé",
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "Obtenez l'offre",
+      "title": "Obtenez une réduction de 50%",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
@@ -22,18 +22,6 @@
     "title": "Questions ? Nous avons les réponses",
     "faq": {
       "faq": [
-        {
-          "question": "Est-ce que je conserverai la réduction à la fin de mon plan ?",
-          "answer": [
-            "La réduction n'est appliquée que pour la première année complète de service. Par conséquent, vous aurez accès à notre plan d'abonnement de 2 To à ce prix réduit pendant un an seulement. Après un an, votre compte sera automatiquement renouvelé au prix de l'abonnement standard de 2 To pour l'année suivante."
-          ]
-        },
-        {
-          "question": "Combien coûtera le renouvellement du plan à prix réduit après la première année ?",
-          "answer": [
-            "Le plan de 2 To coûte 9,99 €/mois payé mensuellement ou 8,99 €/mois (107,88 €/an) payé annuellement. Vous pouvez également choisir autres plans après la première année. Des informations supplémentaires sur les plans et les prix sont indiquées ci-dessus."
-          ]
-        },
         {
           "question": "Internxt peut-il accéder à mes fichiers ?",
           "answer": [
@@ -87,16 +75,6 @@
           "question": "Comment puis-je contacter l'assistance ?",
           "answer": [
             "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe par chat en direct ou en envoyant un e-mail à hello@internxt.com."
-          ]
-        },
-        {
-          "question": "Combien coûte un plan Internxt ?",
-          "answer": ["Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
-        },
-        {
-          "question": "Internxt a-t-il des plans à vie ?",
-          "answer": [
-            "Nous offrons des plans à vie que vous pouvez acheter sur notre site web. Ces plans vous donnent un accès à vie à nos plans, avec jusqu'à 10To de stockage, pour un paiement unique."
           ]
         }
       ]
@@ -158,8 +136,8 @@
     }
   },
   "lastCtaSection": {
-    "title": "Le stockage en nuage le plus securisée du monde",
-    "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
-    "cta": "Sélectionnez un plan maintenant"
+    "title": "Vos fichiers sécurisés et privés pour toujours",
+    "description": "Nous traitons nos utilisateurs comme des membres de la famille et la famille est éternelle !",
+    "cta": "Sélectionnez un plan"
   }
 }

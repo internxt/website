@@ -60,7 +60,7 @@ export default function PriceCard({
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
-        {contentText.mostPopular}
+        {contentText.mostPopularPlan}
       </div>
 
       <div
@@ -127,7 +127,9 @@ export default function PriceCard({
             } flex-row text-sm font-medium text-gray-50
             `}
           >
-            <p className={`${billingFrequency === -1 ? 'flex' : 'hidden'}`}>{contentText.oneTime}</p>
+            <p className={`${billingFrequency === -1 ? 'flex' : 'hidden'}`}>
+              {contentText.billingFrequencyLabel.lifetime}
+            </p>
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
                 <span className="currency text-supporting-2">{currency()}</span>

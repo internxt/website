@@ -5,12 +5,14 @@ import PriceCard from './PriceCard';
 import Tooltip from './ToolTip';
 import { Coin, CreditCard, Detective } from 'phosphor-react';
 import SpecialPriceCard from './SpecialPriceCard';
+import LifetimeCard from '../lifetime/PriceCard';
 
 export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
   const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState(12);
+  const [billingFrequency, setBillingFrequency] = useState(-1);
   const [userCount, setUserCount] = useState(2);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const isLifetime = billingFrequency === -1;
 
   function parentSetUserCount(count) {
     setUserCount(count);
@@ -33,6 +35,15 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   const billingPrice = (price) => price[billingFrequency];
 
   const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
+
+  const LifetimeTitle = () => {
+    return (
+      <>
+        <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
+        <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
+      </>
+    );
+  };
 
   const pricings = {
     individuals: {
@@ -80,9 +91,10 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         stripeID: 'lifetime2TB',
         storage: '2TB',
         price: {
-          '-1': '299',
+          '-1': '149',
         },
-        popular: false,
+        popular: true,
+        actualPrice: '149',
       },
       lifetime5TB: {
         stripeID: 'lifetime5TB',
@@ -90,7 +102,8 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         price: {
           '-1': '499',
         },
-        popular: true,
+        popular: false,
+        actualPrice: '249',
       },
       lifetime10TB: {
         stripeID: 'lifetime10TB',
@@ -99,6 +112,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           '-1': '999',
         },
         popular: false,
+        actualPrice: '499',
       },
     },
     business: {
@@ -136,14 +150,24 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   };
 
   return (
-    <section id="priceTable" className="">
+    <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
           <div className="flex flex-col items-center px-5">
-            <h1 className="text-center text-6xl font-semibold">
-              {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
+            <h1 className="max-w-2xl text-center text-6xl font-semibold">
+              {individual ? (
+                isLifetime ? (
+                  <LifetimeTitle />
+                ) : (
+                  contentText.planTitles.individuals
+                )
+              ) : (
+                `${contentText.planTitles.business}`
+              )}
             </h1>
-            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">{contentText.planDescription}</p>
+            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
+              {isLifetime ? contentText.lifetimeDescription : contentText.planDescription}
+            </p>
           </div>
           <div className="items center flex flex-col">
             <button
@@ -154,7 +178,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                 setSegmentPageName(
                   `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequencySegment.billingFrequency}`,
                 );
-                if (billingFrequency === -1) {
+                if (isLifetime) {
                   setTimeout(() => {
                     setBillingFrequency(12);
                   }, 50);
@@ -213,35 +237,41 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
             {billingFrequency === -1 ? (
               <>
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.lifetime2TB.storage}
-                  price={billingPrice(pricings.individuals.lifetime2TB.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('lifetime2TB')]}
-                  popular={pricings.individuals.lifetime2TB.popular}
-                  lang={lang}
-                  country={country}
-                />
-                <PriceCard
+                <LifetimeCard
                   planType="individual"
                   storage={pricings.individuals.lifetime5TB.storage}
                   price={billingPrice(pricings.individuals.lifetime5TB.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('lifetime5TB')]}
+                  cta={['checkout', 'lifetime5TB']}
                   popular={pricings.individuals.lifetime5TB.popular}
                   lang={lang}
                   country={country}
+                  actualPrice={pricings.individuals.lifetime5TB.actualPrice}
+                  isCampaign
                 />
-                <PriceCard
+                <LifetimeCard
+                  planType="individual"
+                  storage={pricings.individuals.lifetime2TB.storage}
+                  price={billingPrice(pricings.individuals.lifetime2TB.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', 'lifetime2TB']}
+                  popular={pricings.individuals.lifetime2TB.popular}
+                  lang={lang}
+                  country={country}
+                  actualPrice={pricings.individuals.lifetime2TB.actualPrice}
+                  isCampaign
+                />
+                <LifetimeCard
                   planType="individual"
                   storage={pricings.individuals.lifetime10TB.storage}
                   price={billingPrice(pricings.individuals.lifetime10TB.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('lifetime10TB')]}
+                  cta={['checkout', 'lifetime10TB']}
                   popular={pricings.individuals.lifetime10TB.popular}
                   lang={lang}
                   country={country}
+                  actualPrice={pricings.individuals.lifetime10TB.actualPrice}
+                  isCampaign
                 />
               </>
             ) : (
