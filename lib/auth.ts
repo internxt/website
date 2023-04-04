@@ -1,6 +1,6 @@
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
-const AUTH_FLOW_URL = 'https://drive.internxt.com';
+const AUTH_FLOW_URL = 'https://drive-web-git-bugfix-wt-369-avoid-inte-7a1ae3-internxt-web-team.vercel.app';
 
 export function openAuthDialog(view: 'login' | 'signup' | 'recover'): void {
   if (view === 'login') {
@@ -115,7 +115,7 @@ const prepareAuthFlow = (credentials: { email: string; password: string; tfaCode
 
   const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(
     expiration,
-  ).toUTCString()};domain=internxt.com; Path=/`;
+  ).toUTCString()};domain=vercel.app; Path=/`;
 
   document.cookie = cookie;
 };
@@ -148,7 +148,10 @@ export function signup(data: { email: string; password: string }, redirectURL?: 
   if (REDIRECT_AUTH_ENABLED) {
     checkAuthFlowAvailable();
     prepareAuthFlow(data);
+    console.log({ data });
+    console.log({ redirectURL });
     const createUserUrl = getAuthFlowCreateUserURL({ redirectURL, enableAutoSubmit: true });
+    console.log({ createUserUrl });
     window.location.href = createUserUrl;
   }
   if (IFRAME_AUTH_ENABLED) {
