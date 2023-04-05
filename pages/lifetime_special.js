@@ -6,11 +6,12 @@ import GetLifetimeSection from '../components/lifetime/GetLifetimeSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import PaymentSection from '../components/lifetime/PaymentSection';
 import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
+import PaymentSection from '../components/lifetime/PaymentSection';
 
 import axios from 'axios';
+import NormalPaymentSection from '../components/lifetime/NormalPaymentSection';
 
 const yepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -44,7 +45,7 @@ const yepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, 
 
       <HeroSection lang={lang} textContent={langJson.HeroSection} hideTimer />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <NormalPaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
 
       <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
 

@@ -25,7 +25,9 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
                 }}
                 className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center"
               >
-                <p className="px-9 py-3 text-lg font-medium text-primary">{textContent.cta}</p>
+                <p className="px-9 py-3 text-lg font-medium text-primary">
+                  {hideTimer ? textContent.cta2 : textContent.cta1}
+                </p>
               </div>
 
               <div className="hidden w-full md:flex"></div>
