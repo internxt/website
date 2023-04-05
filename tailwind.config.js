@@ -190,7 +190,7 @@ module.exports = {
         'fade-in-r': '0.75s cubic-bezier(.25,.65,.35,1) fade-r',
         'scroll-y': '60s linear scroll-y normal infinite',
         'scroll-y-reverse': '60s linear scroll-y reverse infinite',
-        'spin-slow': 'spin 1s linear infinite',
+        'spin-slow': 'spin 3s linear infinite',
         'spin-refresh': 'spin 1s',
       },
       keyframes: {
