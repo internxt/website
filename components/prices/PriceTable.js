@@ -154,7 +154,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
           <div className="flex flex-col items-center px-5">
-            <h1 className="max-w-2xl text-center text-6xl font-semibold">
+            <h1 className="max-w-2xl text-center text-5xl font-semibold">
               {individual ? (
                 isLifetime ? (
                   <LifetimeTitle />
