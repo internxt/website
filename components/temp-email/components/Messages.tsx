@@ -10,7 +10,7 @@ const Loader = (): JSX.Element => {
     <svg
       width="96"
       height="86"
-      className="animate-spin"
+      className="animate-spin-slow"
       viewBox="0 0 96 86"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -60,13 +60,14 @@ const NoMessageSelected = ({ messagesLength }: { messagesLength: number }): JSX.
       </div>
       <div className="flex flex-col items-center">
         <p className="text-sm font-medium">You have {messages} new messages</p>
-        <p className="text-sm text-gray-50">Select a message to open</p>
+
+        <p className="text-sm text-gray-50">{messages ? 'Waiting for incoming email' : 'Select a message to open'}</p>
       </div>
     </div>
   );
 };
 
-const MessageSelected = ({ email, item }): JSX.Element => {
+const MessageSelected = ({ email, item }: { email: string; item: Record<string, any> }): JSX.Element => {
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
 
   return (
