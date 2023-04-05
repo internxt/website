@@ -96,6 +96,15 @@ const Inbox = ({ email }) => {
 //Web Inbox View
 const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string, any> }) => {
   const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed, openedMessages } = getProps;
+  const [animation, setAnimation] = useState(false);
+
+  useEffect(() => {
+    if (animation) {
+      setTimeout(() => {
+        setAnimation(false);
+      }, 1000);
+    }
+  }, [animation]);
 
   return (
     <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
@@ -109,8 +118,9 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
               </div>
               <ArrowsClockwise
                 size={24}
-                className="cursor-pointer text-gray-50 hover:text-gray-80"
+                className={`cursor-pointer text-gray-50 hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
                 onClick={() => {
+                  setAnimation(true);
                   setIsRefreshed((prevState) => !prevState);
                 }}
               />
