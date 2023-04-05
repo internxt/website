@@ -66,18 +66,18 @@ const HeroSection = ({ textContent }) => {
             </button>
           </div>
         </div>
-        <div className="relative flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1 shadow-2xl">
+        <div className="flex flex-col rounded-3xl">
+          <div className="absolute h-[520px] w-[487px] rounded-3xl shadow-2xl" />
           <Image
-            alt="Woman with laptop"
-            src="/images/pricing/purchase-Internxt-plan.png"
-            className=" rounded-3xl"
-            width={496}
+            alt="Internxt lifetime plan"
+            src="/images/pricing/internxt-lifetime-plan.png"
+            className="z-10 shadow-2xl"
+            width={613}
             height={520}
             layout="intrinsic"
             loading="eager"
             quality={100}
           />
-          <Infinity className="w-ful absolute bottom-6 -right-20 h-48 max-w-[415px]" />
         </div>
       </div>
     </section>

@@ -91,7 +91,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         stripeID: 'lifetime2TB',
         storage: '2TB',
         price: {
-          '-1': '149',
+          '-1': '299',
         },
         popular: true,
         actualPrice: '149',

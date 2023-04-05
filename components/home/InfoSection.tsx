@@ -2,7 +2,7 @@ import React from 'react';
 import RevealY from '../components/RevealY';
 import { CaretLeft, CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from 'phosphor-react';
 
-const InfoSection = ({ textContent, lang }) => {
+const InfoSection = ({ textContent, isPricingPage }) => {
   const Cards = [
     {
       icon: ShieldCheck,
@@ -32,15 +32,17 @@ const InfoSection = ({ textContent, lang }) => {
         <RevealY className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
-          <div
-            className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
-            onClick={() => {
-              window.open('https://internxt.com/about', '_blank');
-            }}
-          >
-            <p>{textContent.cta}</p>
-            <CaretRight size={16} weight="bold" />
-          </div>
+          {!isPricingPage && (
+            <div
+              className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
+              onClick={() => {
+                window.open('https://internxt.com/about', '_blank');
+              }}
+            >
+              <p>{textContent.cta}</p>
+              <CaretRight size={16} weight="bold" />
+            </div>
+          )}
         </RevealY>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {Cards.map((card) => (
