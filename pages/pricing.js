@@ -74,7 +74,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         {/* <CtaSection textContent={textContent.CtaSection} freePlan /> */}
 
-        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} isPricingPage />
+        <InfoSection textContent={homeComponentsLang.InfoSection} isPricingPage />
 
         {/* <FirstWhatWeDoSection
           textContent={textContent.FirstWhatWeDoSection}

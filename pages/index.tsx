@@ -51,7 +51,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
 
       <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
 
-      <InfoSection textContent={langJson.InfoSection} lang={lang} />
+      <InfoSection textContent={langJson.InfoSection} />
 
       <FileParallaxSection />
 

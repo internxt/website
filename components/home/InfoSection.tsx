@@ -2,7 +2,7 @@ import React from 'react';
 import RevealY from '../components/RevealY';
 import { CaretLeft, CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from 'phosphor-react';
 
-const InfoSection = ({ textContent, isPricingPage }) => {
+const InfoSection = ({ textContent, isPricingPage }: { textContent: any; isPricingPage?: boolean }) => {
   const Cards = [
     {
       icon: ShieldCheck,
