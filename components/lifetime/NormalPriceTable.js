@@ -1,9 +1,7 @@
 import React from 'react';
-import PriceCard from './PriceCard';
-import NormalPaymentSection from './NormalPaymentSection';
 import NormalPriceCard from './NormalPriceCard';
 
-const PriceTable = ({ lang, country }) => {
+const NormalPriceTable = ({ lang, country }) => {
   const billingFrequency = -1;
 
   const billingPrice = (price) => price[billingFrequency];
@@ -41,21 +39,10 @@ const PriceTable = ({ lang, country }) => {
   return (
     <section className="overflow-hidden">
       <div
-        id="priceTable"
+        id="NormalPriceTable"
         className="content mb-10 flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
       >
-        <PriceCard
-          planType="individual"
-          storage={pricings.TB10.storage}
-          price={billingPrice(pricings.TB10.price)}
-          billingFrequency={billingFrequency}
-          cta={['checkout', 'lifetime10TB']}
-          popular={pricings.TB10.popular}
-          lang={lang}
-          country={country}
-          actualPrice={pricings.TB10.actualPrice}
-        />
-        <PriceCard
+        <NormalPriceCard
           planType="individual"
           storage={pricings.TB2.storage}
           price={billingPrice(pricings.TB2.price)}
@@ -66,7 +53,7 @@ const PriceTable = ({ lang, country }) => {
           country={country}
           actualPrice={pricings.TB2.actualPrice}
         />
-        <PriceCard
+        <NormalPriceCard
           planType="individual"
           storage={pricings.TB5.storage}
           price={billingPrice(pricings.TB5.price)}
@@ -77,9 +64,20 @@ const PriceTable = ({ lang, country }) => {
           country={country}
           actualPrice={pricings.TB5.actualPrice}
         />
+        <NormalPriceCard
+          planType="individual"
+          storage={pricings.TB10.storage}
+          price={billingPrice(pricings.TB10.price)}
+          billingFrequency={billingFrequency}
+          cta={['checkout', 'lifetime10TB']}
+          popular={pricings.TB10.popular}
+          lang={lang}
+          country={country}
+          actualPrice={pricings.TB10.actualPrice}
+        />
       </div>
     </section>
   );
 };
 
-export default PriceTable;
+export default NormalPriceTable;
