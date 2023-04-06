@@ -1,19 +1,19 @@
 {
   "HeroSection": {
-    "title": { "line1": "90% OFF", "line2": "en el plan de 2TB" },
+    "title": { "line1": "Consigue un", "blueText": " plan de por vida ", "line2": "de Internxt!" },
     "feeds": {
       "firstFeed": "Garantía de devolución del dinero en 30 días",
       "secondFeed": "Pago 100% seguro",
       "thirdFeed": "Crea una cuenta anónima"
     },
     "cta": {
-      "title": "Obtén la oferta",
+      "title": "Consigue un 50% de descuento",
       "description": "Oferta válida durante un año. El plan se renovará al precio sin descuento para el año siguiente."
     }
   },
   "tableSection": {
     "featureSection": {
-      "firstFeature": "Garantía de devolución del dinero en 30 días",
+      "firstFeature": "Garantía de devolución en 30 días",
       "secondFeature": "Pago 100% seguro",
       "thirdFeature": "Creación de cuenta anónima"
     }
@@ -22,18 +22,6 @@
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": {
       "faq": [
-        {
-          "question": "¿Se mantendrá el descuento cuando finalice mi plan?",
-          "answer": [
-            "El descuento solo se aplica durante el primer año completo de servicio. Por lo tanto, tendrás acceso a nuestro plan de suscripción de 2 TB a este precio con descuento sólo durante un año. Después de un año, tu cuenta se renovará automáticamente al precio estándar del plan de 2 TB para el año siguiente."
-          ]
-        },
-        {
-          "question": "¿Cuánto costará el plan al renovarse después del primer año?",
-          "answer": [
-            "El plan de 2 TB cuesta 9,99 € al mes si se paga mensualmente o 8,99 € al mes (107,88 € al año) si se paga anualmente. También puedes optar por cambiar a otros planes después del primer año, la información adicional del plan y los precios se encuentran más arriba."
-          ]
-        },
         {
           "question": "¿Puede Internxt acceder a mis archivos?",
           "answer": [
@@ -88,18 +76,6 @@
           "question": "¿Cómo me pongo en contacto con el servicio de asistencia?",
           "answer": [
             "¿No encuentras lo que buscas? Puedes ponerte en contacto con nuestro equipo a través del chat en directo o enviando un correo electrónico a hello@internxt.com."
-          ]
-        },
-        {
-          "question": "¿Cuánto cuesta un plan de Internxt?",
-          "answer": [
-            "En Internxt ofrecemos planes individuales que van desde 20 GB a 2 TB, desde tan sólo 0,89 euros/mes."
-          ]
-        },
-        {
-          "question": "¿Internxt tiene planes de por vida?",
-          "answer": [
-            "Ofrecemos planes de por vida que puedes adquirir desde nuestra web. Estos planes te dan acceso de por vida a nuestros planes, con hasta 10 TB de almacenamiento, por un pago único."
           ]
         }
       ]
@@ -163,8 +139,8 @@
     }
   },
   "lastCtaSection": {
-    "title": "El almacenamiento en la nube más seguro del mundo",
-    "description": "Protege las cosas realmente importantes con el almacenamiento en la nube seguro, privado y cifrado de Internxt",
-    "cta": "Seleccione un plan ahora"
+    "title": "Tus archivos seguros y privados para siempre",
+    "description": "¡Tratamos a nuestros usuarios como familia y la familia es para siempre!",
+    "cta": "Selecciona un plan ahora"
   }
 }

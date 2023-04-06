@@ -8,31 +8,31 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
 
   const New = () => {
     if (lang === 'en') {
-      return 'Special offer:';
+      return 'Limited-Time Deal:';
     } else if (lang === 'es') {
       return 'Oferta special:';
     } else if (lang === 'fr') {
-      return 'Offre spéciale:';
+      return 'Offre limitée :';
     }
   };
 
   const textForWeb = () => {
     if (lang === 'en') {
-      return 'Get 90% off our 2TB plan for one year!';
+      return 'Get 50% OFF All Lifetime Plans';
     } else if (lang === 'es') {
-      return '¡Obtén un 90% de descuento en el plan de 2TB por un año!';
+      return '50% de descuento en los planes Lifetime';
     } else if (lang === 'fr') {
-      return '90% de réduction sur le plan 2TB pendant un an !';
+      return '50% de réduction sur tous les plans à vie';
     }
   };
 
   const textForMobile = () => {
     if (lang === 'en') {
-      return 'Get 90% off our 2TB plan for one year!';
+      return 'Get 50% OFF All Lifetime Plans';
     } else if (lang === 'es') {
-      return '¡90% de descuento en el plan de 2TB!';
+      return '50% de descuento en los planes Lifetime';
     } else if (lang === 'fr') {
-      return '90% de réduction sur le plan 2TB pendant un an !';
+      return '50% de réduction sur tous les plans à vie';
     }
   };
 
@@ -56,10 +56,10 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() =>
-            checkout({
-              planId: 'plan_FkTXxEg3GZW0pg',
-              couponCode: 'P8PSpVs6',
-            })
+            window.open(
+              `https://internxt.com/${lang}/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
+              '_blank',
+            )
           }
         >
           <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
@@ -77,10 +77,12 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
           <div
             className="flex flex-col items-center justify-center"
             onClick={() =>
-              checkout({
-                planId: 'plan_FkTXxEg3GZW0pg',
-                couponCode: 'P8PSpVs6',
-              })
+              window.open(
+                `https://internxt.com/${
+                  lang === 'en' ? '' : lang
+                }/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
+                '_blank',
+              )
             }
           >
             <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>

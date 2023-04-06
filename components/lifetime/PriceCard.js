@@ -8,16 +8,21 @@ import { checkout, goToLoginURL } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
+const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
 
-const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang, actualPrice }) => {
+const PriceCard = ({
+  planType,
+  storage,
+  price,
+  billingFrequency,
+  cta,
+  country,
+  popular,
+  lang,
+  actualPrice,
+  isCampaign,
+}) => {
   const [stripeObject, setStripeObject] = useState({});
-
-  const billingFrequencyList = {
-    '-1': 'lifetime',
-    1: 'monthly',
-    6: 'semiannually',
-    12: 'annually',
-  };
 
   const currency = () => {
     switch (country) {
@@ -30,8 +35,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
     }
   };
 
-  const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
-  const contentText = require(`../../assets/lang/en/priceCard.json`);
+  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   useEffect(() => {
     if (cta[0] === 'checkout') {
@@ -75,7 +79,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
             <p className={`flex flex-row  space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}>
               <span className={`currency items-start`}>{currency()}</span>
               <span className="price text-4xl font-bold">{actualPrice}</span>
-              <span className={`flex items-end justify-end pl-1`}>,25</span>
+              {!isCampaign && <span className={`flex items-end justify-end pl-1`}>,25</span>}
             </p>
           </div>
           <div
@@ -86,7 +90,7 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-2xl font-semibold">{price}</span>
             </p>
-            <p className="pt-2 text-xs font-normal text-gray-50">{contentText.oneTime}</p>
+            <p className="pt-2 text-xs font-normal text-gray-50">{contentText.billingFrequencyLabel.lifetime}</p>
           </div>
         </div>
 
@@ -94,7 +98,11 @@ const PriceCard = ({ planType, storage, price, billingFrequency, cta, country, p
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
-            checkout({ planId: getPlanId(stripeObject), couponCode: GENERAL_COUPON_DISCOUNT, mode: 'payment' });
+            checkout({
+              planId: getPlanId(stripeObject),
+              couponCode: isCampaign ? SPECIAL_COUPON_DISCOUNT : GENERAL_COUPON_DISCOUNT,
+              mode: 'payment',
+            });
           }}
           className="flex w-full flex-row"
         >

@@ -4,8 +4,13 @@
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
   "planTitles": {
     "individuals": "Planes Individuales",
-    "business": "Planes para Empresas"
+    "business": "Planes para Empresas",
+    "lifetimeCampaign": {
+      "blueText": "50% de descuento",
+      "normalText": "en todos nuestros planes exclusivos de por vida"
+    }
   },
+  "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
   "planDescription": "Todos los planes de Internxt ofrecen acceso total a todos nuestros servicios de privacidad. Seguridad a todos los niveles",
   "changePlan": {
     "toIndividuals": "Cambiar a Planes Individuales",

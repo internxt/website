@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Alarm, Coin, CreditCard, Detective } from 'phosphor-react';
 import Countdown from '../components/Countdown';
 import { checkout } from '../../lib/auth';
+import Infinity from '/public/images/lifetime/infinity.svg';
 
 const TWOTB_OFF_COUPON = 'P8PSpVs6';
 
@@ -29,12 +30,15 @@ const HeroSection = ({ textContent }) => {
           <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 lg:items-start">
             <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown textColor={'black'} />
+              <Countdown textColor={'black'} dt={'2023-04-25T00:00:00'} />
             </div>
             <div className="flex flex-col space-y-16">
               <div className="flex flex-col text-center lg:text-start">
-                <p className="text-7xl font-bold">{textContent.title.line1}</p>
-                <p className="text-7xl font-bold text-primary">{textContent.title.line2}</p>
+                <p className="text-7xl font-bold">
+                  {textContent.title.line1}
+                  <span className="text-primary">{textContent.title.blueText}</span>
+                  {textContent.title.line2}
+                </p>
               </div>
               <div className="flex flex-col items-center justify-center lg:items-start">
                 <div className="flex flex-col items-start space-y-4">
@@ -48,27 +52,27 @@ const HeroSection = ({ textContent }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center space-y-5 space-x-8 lg:flex-row lg:space-y-0">
+          <div className="flex flex-col space-y-5 space-x-8 lg:flex-row lg:space-y-0">
             <button
-              className="flex w-full items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
+              className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
               onClick={() =>
-                checkout({
-                  planId: 'plan_FkTXxEg3GZW0pg',
-                  couponCode: TWOTB_OFF_COUPON,
+                window.scrollTo({
+                  top: document.getElementById('priceTable').offsetTop,
+                  behavior: 'smooth',
                 })
               }
             >
               {textContent.cta.title}
             </button>
-            <p className="max-w-[275px] text-sm text-gray-50">{textContent.cta.description}</p>
           </div>
         </div>
-        <div className="flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1 shadow-2xl">
+        <div className="flex flex-col rounded-3xl">
+          <div className="absolute h-[520px] w-[487px] rounded-3xl shadow-2xl" />
           <Image
-            alt="Woman with laptop"
-            src="/images/pricing/WomanWithLaptop.png"
-            className=" rounded-3xl"
-            width={496}
+            alt="Internxt lifetime plan"
+            src="/images/pricing/internxt-lifetime-plan.png"
+            className="z-10 shadow-2xl"
+            width={613}
             height={520}
             layout="intrinsic"
             loading="eager"

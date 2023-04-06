@@ -4,10 +4,14 @@
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "planTitles": {
     "individuals": "Plans Individuels",
-    "business": "Plans d'Affaires"
+    "business": "Plans d'Affaires",
+    "lifetimeCampaign": {
+      "blueText": "50% de réduction",
+      "normalText": "tous nos plans exclusifs à vie"
+    }
   },
+  "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours",
   "planDescription": "Tous les plans Internxt sont complets et offrent un accès total à tous nos services de protection de la vie privée. La sécurité à tous les niveaux",
-  "oneTime": "Paiement unique",
   "changePlan": {
     "toIndividuals": "Passer aux plans Individuels",
     "toBusiness": "Passer aux plans d'Affaires"
@@ -19,6 +23,7 @@
     "lifetime": "Lifetime"
   },
   "billingFrequencyLabel": {
+    "lifetime": "Paiement unique",
     "monthly": "facturé mensuellement",
     "semiannually": "facturé semestriellement",
     "annually": "facturé annuellement",
