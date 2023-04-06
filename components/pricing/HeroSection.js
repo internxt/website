@@ -66,7 +66,7 @@ const HeroSection = ({ textContent }) => {
             </button>
           </div>
         </div>
-        <div className="hidden flex-col rounded-3xl md:flex">
+        <div className="hidden flex-col rounded-3xl lg:flex">
           {/* <div className="absolute h-[520px] w-[487px] rounded-3xl shadow-2xl" /> */}
           <Image
             alt="Internxt lifetime plan"
