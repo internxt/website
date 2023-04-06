@@ -9,12 +9,8 @@ import InfoSection from '../components/temp-email/InfoSection';
 import ToolsSection from '../components/temp-email/ToolsSection';
 import QASection from '../components/temp-email/QASection';
 import SignupSection from '../components/temp-email/SignupSection';
-import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-
-//Delete mailbox
-// action=deleteMailbox&login=${this.username}&domain=${this.domain}
 
 const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
@@ -32,10 +28,10 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <TryInternxtBanner
+        {/* <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=popupbanner&utm_campaign=tempmail'}
-        />
+        /> */}
 
         <HeroSection />
 
