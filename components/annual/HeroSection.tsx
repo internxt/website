@@ -9,15 +9,15 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden pt-12">
       <div className="flex flex-col items-center justify-center space-y-10 py-24 px-6 lg:flex-row lg:space-y-0 lg:space-x-48">
         <div className="flex flex-col space-y-10">
-          <div className="flex max-w-[560px] flex-col items-center justify-center space-y-10 lg:items-start">
+          <div className="flex max-w-[468px] flex-col items-center justify-center space-y-10 lg:items-start">
             <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
               <p className="text-xl font-medium text-gray-80">{textContent.header}</p>
             </div>
             <div className="flex flex-col space-y-16">
               <div className="flex flex-col text-center lg:text-start">
-                <p className="text-7xl font-bold">
+                <p className="text-6xl font-semibold">
                   {textContent.title.normalText}
-                  <span className="text-7xl font-bold text-primary">{textContent.title.blueText}</span>
+                  <span className="text-6xl font-semibold text-primary">{textContent.title.blueText}</span>
                 </p>
               </div>
             </div>
