@@ -121,7 +121,7 @@ const PriceCard = ({
       </div>
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 text-sm">
           <div className="flex flex-row items-start space-x-2">
             <img
               loading="lazy"

@@ -53,7 +53,7 @@ export default function PriceCard({
     <div
       className={`priceCard card ${
         popular ? 'border-2 border-primary bg-primary shadow-subtle ring-2 ring-primary' : ''
-      } m-2 flex w-full flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`mostPopular ${
@@ -64,7 +64,7 @@ export default function PriceCard({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center rounded-t-2xl  bg-white p-4 pt-6 
+        className={`info flex flex-col items-center justify-center rounded-t-2xl  bg-white p-6 pt-6 
         `}
       >
         <div
@@ -241,7 +241,7 @@ export default function PriceCard({
           }}
           className="flex w-full flex-row"
         >
-          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg font-medium  text-white transition-all duration-75 hover:bg-primary-dark focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
+          <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2  text-lg font-medium text-white transition-all duration-75 focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.get} {storage}
             </p>
@@ -249,6 +249,7 @@ export default function PriceCard({
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.signUpNow}
             </p>
+
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
         </div>
