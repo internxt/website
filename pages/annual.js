@@ -42,7 +42,7 @@ export async function getServerSideProps(ctx) {
   if (ctx.locale !== 'en') {
     return {
       redirect: {
-        destination: '/lifetime',
+        destination: '/annual',
         permanent: false,
       },
     };
