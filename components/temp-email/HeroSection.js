@@ -22,6 +22,7 @@ const open = () => toast.success('Copied to clipboard!');
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
+  const [borderColor, setBorderColor] = useState(false);
 
   // (if someone want to clear after 8hrs simply change hours=8)
   const hours = 3; // to clear the localStorage after 1 hour
@@ -46,6 +47,14 @@ const HeroSection = () => {
     }
   }, [generateEmail]);
 
+  useEffect(() => {
+    if (borderColor) {
+      setTimeout(() => {
+        setBorderColor(false);
+      }, 4000);
+    }
+  }, [borderColor]);
+
   return (
     <section className="overflow-hidden bg-gradient-to-b from-white to-gray-1 pb-20 pt-32">
       <div className="flex flex-col items-center justify-center space-y-10 px-5">
@@ -57,11 +66,18 @@ const HeroSection = () => {
         </div>
         <div className="flex flex-col items-center ">
           <div className="flex w-full max-w-[325px] flex-col space-y-3">
-            <div className="flex w-full flex-row items-center justify-between rounded-xl border border-gray-20 px-4 py-3">
+            <div
+              className={`flex w-full flex-row items-center justify-between rounded-xl border ${
+                borderColor ? 'border-primary' : 'border-gray-20'
+              } px-4 py-3`}
+              onClick={() => {
+                setBorderColor(true);
+              }}
+            >
               <p>{email ? email : 'Generating random email...'}</p>
               <Copy
                 size={24}
-                className="cursor-pointer text-gray-50"
+                className={`cursor-pointer ${borderColor ? 'text-primary' : 'text-gray-50'}`}
                 onClick={() => {
                   open();
                   copy(email);
@@ -70,7 +86,7 @@ const HeroSection = () => {
             </div>
             <div className="flex w-full flex-row items-center justify-between">
               <button
-                className="flex flex-row items-center justify-center space-x-2 rounded-lg bg-primary px-5 py-2 text-white shadow-sm"
+                className="flex flex-row items-center justify-center space-x-2 rounded-lg bg-primary px-5 py-2 text-white shadow-sm hover:bg-primary-dark"
                 onClick={() => {
                   open();
                   copy(email);
@@ -80,7 +96,7 @@ const HeroSection = () => {
                 <p>Copy email</p>
               </button>
               <button
-                className="flex flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm"
+                className="flex flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm hover:bg-gray-10"
                 onClick={() => {
                   removeLocalStorage();
                   setEmail('');
