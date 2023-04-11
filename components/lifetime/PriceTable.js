@@ -16,7 +16,7 @@ const PriceTable = ({ lang, country }) => {
         '-1': '299',
       },
       popular: true,
-      actualPrice: '224',
+      actualPrice: '149',
     },
     TB5: {
       stripeID: 'lifetime5TB',
@@ -25,7 +25,7 @@ const PriceTable = ({ lang, country }) => {
         '-1': '499',
       },
       popular: false,
-      actualPrice: '374',
+      actualPrice: '249',
     },
     TB10: {
       stripeID: 'lifetime10TB',
@@ -34,7 +34,7 @@ const PriceTable = ({ lang, country }) => {
         '-1': '999',
       },
       popular: false,
-      actualPrice: '749',
+      actualPrice: '499',
     },
   };
 
@@ -46,14 +46,15 @@ const PriceTable = ({ lang, country }) => {
       >
         <PriceCard
           planType="individual"
-          storage={pricings.TB10.storage}
-          price={billingPrice(pricings.TB10.price)}
+          storage={pricings.TB5.storage}
+          price={billingPrice(pricings.TB5.price)}
           billingFrequency={billingFrequency}
-          cta={['checkout', 'lifetime10TB']}
-          popular={pricings.TB10.popular}
+          cta={['checkout', 'lifetime5TB']}
+          popular={pricings.TB5.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB10.actualPrice}
+          actualPrice={pricings.TB5.actualPrice}
+          isCampaign
         />
         <PriceCard
           planType="individual"
@@ -65,17 +66,20 @@ const PriceTable = ({ lang, country }) => {
           lang={lang}
           country={country}
           actualPrice={pricings.TB2.actualPrice}
+          isCampaign
         />
+
         <PriceCard
           planType="individual"
-          storage={pricings.TB5.storage}
-          price={billingPrice(pricings.TB5.price)}
+          storage={pricings.TB10.storage}
+          price={billingPrice(pricings.TB10.price)}
           billingFrequency={billingFrequency}
-          cta={['checkout', 'lifetime5TB']}
-          popular={pricings.TB5.popular}
+          cta={['checkout', 'lifetime10TB']}
+          popular={pricings.TB10.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB5.actualPrice}
+          actualPrice={pricings.TB10.actualPrice}
+          isCampaign
         />
       </div>
     </section>
