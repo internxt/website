@@ -2,14 +2,17 @@ import { useRouter } from 'next/router';
 import { Globe } from 'phosphor-react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function LanguageBox({ darkMode }) {
   const router = useRouter();
+  const [langSelected, setLangSelected] = useState('EN');
   return (
     <div
       className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
     >
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
+      <p className="text-gray-60">{langSelected}</p>
       <UilAngleDown
         className={`${
           darkMode ? 'text-white' : 'text-gray-40'
@@ -24,6 +27,7 @@ export default function LanguageBox({ darkMode }) {
           <Link href={router.pathname} locale="en">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+              onClick={() => setLangSelected('EN')}
             >
               EN
             </a>
@@ -32,6 +36,7 @@ export default function LanguageBox({ darkMode }) {
           <Link href={router.pathname} locale="es">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+              onClick={() => setLangSelected('ES')}
             >
               ES
             </a>
@@ -40,6 +45,7 @@ export default function LanguageBox({ darkMode }) {
           <Link href={router.pathname} locale="fr">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+              onClick={() => setLangSelected('FR')}
             >
               FR
             </a>
