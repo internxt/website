@@ -11,7 +11,7 @@ const SignupSection = () => (
         </p>
       </div>
       <div
-        className="flex cursor-pointer rounded-full bg-white px-6 py-2"
+        className="flex cursor-pointer rounded-lg bg-white px-6 py-2"
         onClick={() => {
           window.open('https://drive.internxt.com/new', '_blank');
         }}

@@ -67,22 +67,27 @@ const HeroSection = () => {
         <div className="flex flex-col items-center ">
           <div className="flex w-full max-w-[325px] flex-col space-y-3">
             <div
-              className={`flex w-full flex-row items-center justify-between rounded-xl border ${
-                borderColor ? 'border-primary' : 'border-gray-20'
-              } px-4 py-3`}
-              onClick={() => {
-                setBorderColor(true);
-              }}
+              className={`flex h-full w-full items-center justify-center rounded-xl ${
+                borderColor ? 'ring   ring-primary ring-opacity-15' : 'border border-gray-20'
+              }`}
             >
-              <p>{email ? email : 'Generating random email...'}</p>
-              <Copy
-                size={24}
-                className={`cursor-pointer ${borderColor ? 'text-primary' : 'text-gray-50'}`}
-                onClick={() => {
-                  open();
-                  copy(email);
-                }}
-              />
+              <div
+                disabled
+                className={`flex h-full w-full cursor-default flex-row items-center justify-between rounded-xl bg-gray-1 shadow-sm ${
+                  borderColor ? 'border border-primary' : ''
+                } px-4 py-3`}
+              >
+                <p>{email ? email : 'Generating random email...'}</p>
+                <Copy
+                  size={24}
+                  className={`cursor-pointer ${borderColor ? 'text-primary' : 'text-gray-50'}`}
+                  onClick={() => {
+                    setBorderColor(true);
+                    open();
+                    copy(email);
+                  }}
+                />
+              </div>
             </div>
             <div className="flex w-full flex-row items-center justify-between">
               <button
