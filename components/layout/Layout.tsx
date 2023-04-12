@@ -38,7 +38,7 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = router.pathname === '/';
+  const showBanner = router.pathname !== '/pricing';
   const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
   const langToUpperCase = lang.toLocaleUpperCase();
 
