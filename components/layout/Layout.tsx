@@ -38,7 +38,6 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = router.pathname === '/';
   const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
   const langToUpperCase = lang.toLocaleUpperCase();
 
@@ -114,13 +113,11 @@ LayoutProps) {
         }`}
       </Script>
 
-      {showBanner ? (
-        <TopBannerHomePage
-          isBannerFixed={isBannerFixed}
-          closeBannerOnMobile={closeBannerOnMobile}
-          setCloseBannerOnMobile={setCloseBannerOnMobile}
-        />
-      ) : null}
+      <TopBannerHomePage
+        isBannerFixed={isBannerFixed}
+        closeBannerOnMobile={closeBannerOnMobile}
+        setCloseBannerOnMobile={setCloseBannerOnMobile}
+      />
 
       {children}
       {/* <BFBanner /> */}
