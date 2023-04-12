@@ -113,8 +113,8 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
           <div className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10">
             <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 px-4 py-5">
               <div className="flex flex-row items-center space-x-1">
-                <Tray size={20} weight="bold" />
-                <p className="text-base font-medium">Inbox</p>
+                <Tray size={24} className="text-gray-80" />
+                <p className="text-base font-medium text-gray-100">Inbox</p>
               </div>
               <ArrowsClockwise
                 size={24}
