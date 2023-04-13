@@ -50,6 +50,16 @@ export default function LanguageBox({ darkMode }) {
               FR
             </a>
           </Link>
+          <Link href={router.pathname} locale="ita">
+            <a
+              className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                darkMode ? 'text-white' : 'text-cool-gray-80'
+              }`}
+              onClick={() => setLangSelected('FR')}
+            >
+              ITA
+            </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,70 @@
+{
+  "mostPopular": "Most popular",
+  "mostPopularPlan": "Most Popular Plan",
+  "valentines": "Special Valentine’s Day offer!",
+  "onlyForNewClients": "Only for new subscriptors or free plan users",
+  "planTitles": {
+    "individuals": "Plans for Individuals",
+    "business": "Plans for Business",
+    "lifetimeCampaign": {
+      "blueText": "Get 50% OFF",
+      "normalText": "all our exclusive lifetime plans"
+    }
+  },
+  "lifetimeDescription": "Buy once and get privacy and security forever.",
+  "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+  "changePlan": {
+    "toIndividuals": "Change to Plans for Individuals",
+    "toBusiness": "Change to Plans for Business"
+  },
+  "billingFrequency": {
+    "monthly": "Monthly",
+    "semiannually": "Semiannually",
+    "annually": "Annually",
+    "lifetime": "Lifetime"
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "One-time payment",
+    "monthly": "billed monthly",
+    "semiannually": "billed semiannually",
+    "annually": "billed annually",
+    "afterMonth": "after 30 days"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/monthly",
+    "semiannually": "/semiannually",
+    "annually": "/annually"
+  },
+  "perUserSlash": "/user",
+  "perUser": "Per user",
+  "users": "users",
+  "freePlan": "Free",
+  "price": {
+    "freeForever": "Free forever",
+    "free": "Up to "
+  },
+  "perMonth": "/month",
+  "firstMonth": "First 30 days",
+  "cta": {
+    "getStarted": "Get started",
+    "signUpNow": "Sign up now",
+    "buy": "Buy",
+    "get": "Get",
+    "discount": "Get 90% off",
+    "claimTheDeal": "Claim the deal",
+    "freemonth": "Get 30 days for free"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Enjoy",
+      "enjoyUpTo": "Enjoy up to",
+      "forFree": "for free",
+      "forever": "forever"
+    },
+    "moneyBack": "Garanzia di rimborso di 30 giorni",
+    "encryptedFiles": "Encrypted file storage and sharing",
+    "accessFromAnywhere": "Access your files from any device",
+    "allServices": "Get access to all our services",
+    "dataAccess": "No unauthorized data access"
+  }
+}

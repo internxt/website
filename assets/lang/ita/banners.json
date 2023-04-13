@@ -1,0 +1,65 @@
+{
+  "LoginBanner": {
+    "head": "Try before you buy.",
+    "title": "Get Internxt for free!",
+    "buttonText": "Sign up now",
+    "card": {
+      "title1": "Get up to 10GB free",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available on all devices"
+    }
+  },
+  "BFBanner": {
+    "head": "Save big on privacy.",
+    "title": "Internxt’s Black Friday Deal",
+    "buttonText": "Get the deal",
+    "card": {
+      "title1": "Get 60% off our 2TB plan",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available until Dec 5th"
+    }
+  },
+  "valentinesBanner": {
+    "title": "Love without limits!",
+    "subtitle": "Get 90% off our 2TB plan with code VDAY",
+    "cta": "Get the deal",
+    "toast": "Copied to clipboard!"
+  },
+  "tryOutInternxtGeneralBanner": {
+    "title": "Try Internxt",
+    "description": "Secure cloud storage based on total privacy and encryption.",
+    "cta": "Sign up for free"
+  },
+  "tryOutInternxtPasswordCheckerBanner": {
+    "title": "Try Internxt",
+    "description": "Secure file storage with password-protected technology for your files.",
+    "cta": "Sign up for free"
+  },
+  "SignUpPwdCheckerBanner": {
+    "line1": "Put that strong password to use with a",
+    "blueText": "free Internxt account"
+  },
+  "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
+  "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
+  "SignUpCyberAwareness": {
+    "line1": "Now that you’re aware, protect yourself with",
+    "blueText": "Internxt secure cloud storage"
+  },
+  "privacyDirectoryBanner": {
+    "line1": "Join the fight for privacy and build a better internet",
+    "blueText": "with Internxt"
+  },
+  "GeneralBanner": {
+    "title": "Before you bounce...",
+    "description": "Get 90% off our 2TB plan for the first year.",
+    "cta": "Sure, I'll try it out",
+    "ctaCancel": "No, thanks"
+  }
+}
