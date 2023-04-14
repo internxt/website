@@ -172,7 +172,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           <div className="items center flex flex-col">
             <button
               type="button"
-              className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary active:text-blue-50"
+              className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary  hover:underline active:text-blue-50"
               onClick={() => {
                 setIndividual(!individual);
                 setSegmentPageName(

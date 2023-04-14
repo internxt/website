@@ -23,7 +23,7 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
                 onClick={() => {
                   window.location.href = `#payment`;
                 }}
-                className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center"
+                className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
               >
                 <p className="px-9 py-3 text-lg font-medium text-primary">
                   {hideTimer ? textContent.cta2 : textContent.cta1}

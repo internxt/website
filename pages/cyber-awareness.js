@@ -26,7 +26,12 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
         {sm_breadcrumb('Cyber Awareness', 'cyber-awareness')}
       </Script>
 
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName={'Cyber Awareness'}>
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        isBannerFixed
+        segmentName={'Cyber Awareness'}
+      >
         <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
 
         <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />

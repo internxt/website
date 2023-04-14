@@ -23,7 +23,7 @@ const BannersSection = ({ textContent, lang }) => {
             <p className="max-w-[240px] text-2xl font-medium">{textContent.passwordCheckerBanner.title}</p>
             <div
               onClick={() => window.open(`https://internxt.com/${lang}/password-checker`, '_blank')}
-              className="flex cursor-pointer flex-row items-center justify-center text-primary"
+              className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
             >
               <p className="text-sm font-semibold">{textContent.passwordCheckerBanner.cta}</p>
               <CaretRight size={14} weight={'bold'} />
@@ -42,7 +42,7 @@ const BannersSection = ({ textContent, lang }) => {
             <p className="max-w-[200px] text-2xl font-medium">{textContent.byteConverterBanner.title}</p>
             <div
               onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
-              className="flex cursor-pointer flex-row items-center justify-center text-primary"
+              className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
             >
               <p className="text-sm font-semibold">{textContent.byteConverterBanner.cta}</p>
               <CaretRight size={14} weight={'bold'} />

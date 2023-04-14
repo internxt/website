@@ -79,7 +79,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                         window.open('https://blog.internxt.com/what-is-malware/', '_blank');
                       }}
                     >
-                      <p className="text-primary underline underline-offset-4">{maliciousMalware}</p>
+                      <p className="text-primary underline underline-offset-4 hover:no-underline">{maliciousMalware}</p>
                     </button>
                   )}
                 </p>

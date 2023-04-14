@@ -54,7 +54,7 @@ const HeroSection = ({ textContent }) => {
           </div>
           <div className="flex flex-col space-y-5 space-x-8 lg:flex-row lg:space-y-0">
             <button
-              className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
+              className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
               onClick={() =>
                 window.scrollTo({
                   top: document.getElementById('priceTable').offsetTop,
