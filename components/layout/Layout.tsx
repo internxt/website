@@ -70,7 +70,7 @@ LayoutProps) {
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
         <meta
           property="og:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
@@ -78,7 +78,7 @@ LayoutProps) {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
