@@ -1,0 +1,186 @@
+{
+  "HeroSection": {
+    "eyebrow": "INTERNXT DRIVE",
+    "title": {
+      "line1": "L'archiviazione cloud più sicura",
+      "line2": "per tutti i tuoi file, le tue foto e altro."
+    },
+    "subtitle": {
+      "line1": "Archiviare, backuppare e condividere i tuoi file in totale privacy non potrebbe essere più semplice.",
+      "line2": "Con Internxt Drive ci focalizziamo su un'archiviazione facile da utilizzare ma con crittografia di livello militare",
+      "line3": "e file sharding, per fare in modo che solo tu abbia il controllo sui tuoi file e sui tuoi dati."
+    },
+    "DownloadLinks": {
+      "or": "o",
+      "downloadFor": "Scarica per",
+      "orDownloadFor": "O scarica per",
+      "downloadOnThe": "Scaricare sul sito",
+      "orDownloadOnThe": "O Scaricare sul sito",
+      "getOn": "Salire",
+      "orGetOn": "O salire",
+      "openDriveWeb": "Aprire Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "Tutti i tipi di file,",
+        "line2": "con ogni dispositivo"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Tutti i tuoi file",
+        "line2": "disponibili, su",
+        "line3": "tutti i tuoi dispositivi."
+      },
+      "subtitle": {
+        "line1": "Accedi in modo sicuro a tutti i tuoi",
+        "line2": "file dal tuo computer, dal tuo smartphone, tablet",
+        "line3": "o da qualsiasi dispositivo dotato di connessione",
+        "line4": "a Internet, tramite una app di archiviazione",
+        "line5": "cloud che ti assicura la massima sicurezza possibile."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Organizza i tuoi",
+        "line2": "file e accedi a",
+        "line3": "loro da qualsiasi",
+        "line4": "luogo."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive ti consente di organizzare i tuoi",
+        "line2": " file in cartelle, di rinominarli e di filtrarli",
+        "line3": "per trovare velocemente ciò che desideri.",
+        "line4": "Puoi persino eseguire il backup delle cartelle",
+        "line5": "del tuo computer, come ad esempio la cartella Documenti,",
+        "line6": " in modo da avere sempre al sicuro le versioni",
+        "line7": "più recenti dei tuoi file più importanti."
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Condividi facilmente",
+        "line2": "i tuoi file, alla",
+        "line3": "sicurezza ci pensiamo noi."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive si occupa della privacy e",
+        "line2": "della sicurezza, in modo che tu possa concentrarti",
+        "line3": " solo su ciò che per te è importante, come condividere",
+        "line4": "dei file con i tuoi colleghi, oppure i biglietti aerei",
+        "line5": "per la prossima vacanza con la tua famiglia. Scegli",
+        "line6": "con chi vuoi condividere i tuoi file e quante volte",
+        "line7": " vuoi che possano essere scaricati.",
+        "line8": ""
+      }
+    },
+    "section5": {
+      "eyebrow": "NUOVA FUNZIONALITÀ",
+      "title": {
+        "line1": "Esegui il backup di",
+        "line2": "ciò che per te è importante."
+      },
+      "subtitle": {
+        "line1": "Ora puoi conservare al sicuro l'ultima versione",
+        "line2": "di quel progetto importante su cui stai lavorando,",
+        "line3": "oppure la tua cartella Documenti, o i tuoi compiti",
+        "line4": "universitari: tutto al sicuro nel tuo Internxt Drive.",
+        "line5": ""
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "Inizia ora a sincronizzare",
+        "line2": "i tuoi file, in totale privacy."
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "Tutti i tuoi file,",
+        "line2": "al sicuro e privati."
+      },
+      "subtitle": {
+        "line1": "La privacy e la sicurezza sono al centro di ogni cosa che facciamo la nostra attività non è basata sull’utilizzo dei dati o",
+        "line2": "sulla pubblicità, ma sulla fiducia. Noi rispettiamo i tuoi diritti e costruiamo strumenti straordinari intorno a loro, non contro di loro."
+      },
+      "cta": "Il nostro impegno per la privacy",
+      "card1": {
+        "title": "Crittografia di livello militare.",
+        "subtitle": "Prendiamo molto sul serio la tua privacy, ecco perché i tuoi file sono crittografati in modo che solo tu possa accedervi."
+      },
+      "card2": {
+        "title": "Tecnologia zero-knowledge.",
+        "subtitle": "Non archiviamo e non trasmettiamo mai nessun file, nessuna password utente o chiave di crittografia in forma non crittografata o senza hashing."
+      },
+      "card3": {
+        "title": "Privacy by design.",
+        "subtitle": "Sviluppiamo i nostri prodotti pensando all'utente e, nel mondo basato sui dati in cui viviamo, consideriamo la sua privacy sacra."
+      },
+      "card4": {
+        "title": "Sicuro fin dalle fondamenta.",
+        "subtitle": "Poiché le falle di sicurezza e gli scandali sono all'ordine del giorno, ci assicuriamo che i nostri sistemi proteggano i tuoi dati e i tuoi file da ogni aggressione."
+      }
+    },
+    "DownloadLinks": {
+      "or": "o",
+      "downloadFor": "Scarica per",
+      "orDownloadFor": "O scarica per",
+      "downloadOnThe": "Scaricare sul sito",
+      "orDownloadOnThe": "O Scaricare sul sito",
+      "getOn": "Salire",
+      "orGetOn": "O salire",
+      "openDriveWeb": "Aprire Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Che cos'è Internxt Drive?",
+        "answer": [
+          "Internxt Drive è un servizio di archiviazione di file a conoscenza zero, costruito per garantire una privacy assoluta e una sicurezza rigorosa. Il nostro servizio non accede ai vostri dati o file personali. È invece progettato per restituirvi il controllo sui vostri file e per proteggervi dai collezionisti di dati."
+        ]
+      },
+      {
+        "question": "Come creare un account Internxt?",
+        "answer": [
+          "Visitate il nostro sito web e fate clic su \"Inizia\" nell'angolo in alto a destra. Compilate il modulo di registrazione inserendo un indirizzo e-mail, quindi create la vostra password. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
+        ]
+      },
+      {
+        "question": "Come caricare i file su Internxt Drive",
+        "answer": [
+          "Visitare Drive Web e accedere. Trascinare e rilasciare i file o le foto scelti direttamente nella finestra del browser. È anche possibile fare clic su \"Nuovo\" nell'angolo destro del browser, per aprire Explorer o Finder e selezionare i file da caricare."
+        ]
+      },
+      {
+        "question": "Come installare l'app di Internxt?",
+        "answer": [
+          "Andate sul sito web di Internxt, scorrete la pagina iniziale e selezionate \"Download apps\". L'applicazione Internxt è disponibile anche su Play Store o App Store. Una volta completato il processo di download, vi verrà chiesto di eseguire l'applicazione."
+        ]
+      },
+      {
+        "question": "Posso configurare la 2FA con Internxt?",
+        "answer": [
+          "Sì. È possibile configurare l'autenticazione a due fattori (2FA) per il proprio account Internxt dall'app Drive Web. Inoltre, è possibile utilizzare Authy o qualsiasi altro strumento 2FA per generare il codice 2FA con Internxt."
+        ]
+      }
+    ]
+  }
+}

@@ -13,8 +13,8 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
       return 'Oferta special:';
     } else if (lang === 'fr') {
       return 'Offre limitée :';
-    } else {
-      return 'Offre limitée :';
+    } else if (lang === 'ita') {
+      return 'Offerta limitata:';
     }
   };
 
@@ -25,8 +25,8 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
       return '50% de descuento en los planes Lifetime';
     } else if (lang === 'fr') {
       return '50% de réduction sur tous les plans à vie';
-    } else {
-      return '50% de réduction sur tous les plans à vie';
+    } else if (lang === 'ita') {
+      return '50% di sconto su tutti i piani a vita';
     }
   };
 
@@ -37,8 +37,8 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
       return '50% de descuento en los planes Lifetime';
     } else if (lang === 'fr') {
       return '50% de réduction sur tous les plans à vie';
-    } else {
-      return '50% de réduction sur tous les plans à vie';
+    } else if (lang === 'ita') {
+      return '50% di sconto su tutti i piani a vita';
     }
   };
 

@@ -1,0 +1,73 @@
+{
+	"HeroSection": {
+		"title": {
+			"line1": "We design and build",
+			"line2": {
+				"substring1": "world-class",
+				"substring2": "applications"
+			},
+			"line3": {
+				"substring1": "that respect your",
+				"substring2": "privacy"
+			}
+		},
+		"figures": {
+			"activeUsers": {
+				"figure": "1M",
+				"caption": "Users trust Internxt"
+			},
+			"awards": {
+				"figure": "30",
+				"caption": "Awards and Mentions"
+			}
+		},
+		"description": {
+			"line1": "Since 2020 we’ve been working hard to create powerful tools",
+			"line2": "for a safer and more private internet that respects their users."
+		},
+		"recognitions": {
+			"title": "Proudly recognised by the best",
+			"brands": {
+				"forbes": {
+					"caption1": "Next 1000"
+				},
+				"southsummit": {
+					"caption1": "Best Startup"
+				},
+				"tnw": {
+					"caption1": "T500"
+				},
+				"startupvalencia": {
+					"caption1": "Best Startup"
+				}
+			}
+		}
+	},
+	"CompanySection": {
+		"values": {
+			"title": "Our core values",
+			"items": {
+				"achieve": {
+					"title": "Effort",
+					"description": "We are sure that something seems impossible because it has not been tried enough. We strive to push the limits of technology even further to provide innovative solutions."
+				},
+				"privacy": {
+					"title": "Learning",
+					"description": "Developing periodic iterations of several products at once pushes us to be on the move and never settle. We are always looking for ways to learn and improve our products."
+				},
+				"family": {
+					"title": "Team",
+					"description": "Whether you work from home or come to the office, we want you to feel like part of the family. We love spending time together both on and off the office hours."
+				},
+				"growth": {
+					"title": "Compromise",
+					"description": "We are shaping the technology we would love to use in the future, led by security, privacy, and user-centered design. We are committed to creating technology that respects people."
+				}
+			}
+		},
+		"careers": {
+			"title": "Let’s build the future together",
+			"link": "Careers at Internxt"
+		}
+	}
+}

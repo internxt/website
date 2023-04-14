@@ -2,11 +2,20 @@ import { useRouter } from 'next/router';
 import { Globe } from 'phosphor-react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function LanguageBox({ darkMode }) {
   const router = useRouter();
-  const [langSelected, setLangSelected] = useState('EN');
+  const [langSelected, setLangSelected] = useState<string>('');
+
+  useEffect(() => {
+    if (!localStorage.getItem('langSelected')) {
+      localStorage.setItem('langSelected', langSelected);
+    } else {
+      setLangSelected(localStorage.getItem('langSelected'));
+    }
+  }, [langSelected]);
+
   return (
     <div
       className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
@@ -55,7 +64,7 @@ export default function LanguageBox({ darkMode }) {
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
                 darkMode ? 'text-white' : 'text-cool-gray-80'
               }`}
-              onClick={() => setLangSelected('FR')}
+              onClick={() => setLangSelected('ITA')}
             >
               ITA
             </a>
