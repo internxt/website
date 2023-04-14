@@ -72,7 +72,7 @@ const TestimonialsSection = ({ textContent }) => {
           {current.map((card, index) => (
             <div
               key={index}
-              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 drop-shadow-lg"
+              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 shadow-subtle-hard"
             >
               <div className="flex flex-row">
                 <Image
