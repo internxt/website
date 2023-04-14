@@ -24,7 +24,7 @@ const HeroSection = ({ textContent }) => {
             <button
               type="button"
               onClick={() => setIsOpen(true)}
-              className="flex flex-row items-center justify-center space-x-2 text-xl text-blue-50 sm:mx-auto sm:text-base"
+              className="flex flex-row items-center justify-center space-x-2 text-xl text-blue-50 hover:underline sm:mx-auto sm:text-base"
             >
               <span>{textContent.cta}</span>
               <UilPlayCircle className="h-5 w-5" />

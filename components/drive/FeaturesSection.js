@@ -8,13 +8,13 @@ import DownloadComponent from './DownloadComponent';
 import * as anim from '../../public/js/anim';
 
 const FeaturesSection = ({ textContent, lang, download }) => (
-  <section className="flex flex-col w-full">
+  <section className="flex w-full flex-col">
     <div className="flex flex-col items-center pb-32">
       {/* Title */}
       <Parallax
-        className="flex flex-col w-full justify-center items-center text-center"
+        className="flex w-full flex-col items-center justify-center text-center"
         renderLayer={(percentage) => (
-          <h2 className="relative text-3xl lg:text-5xl font-medium text-cool-gray-90 mb-10 lg:mb-20">
+          <h2 className="relative mb-10 text-3xl font-medium text-cool-gray-90 lg:mb-20 lg:text-5xl">
             <Transition
               show={anim.trigger(percentage)}
               enter="transition-all duration-500"
@@ -43,12 +43,12 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
       {/* Feature #1 - All your files available in all your devices */}
       <Parallax
-        className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full justify-center pt-20 lg:pb-20"
+        className="grid w-full grid-cols-1 justify-center gap-20 pt-20 lg:grid-cols-2 lg:pb-20"
         renderLayer={(percentage) => (
           <>
-            <div className="hidden lg:flex flex-col items-end">
+            <div className="hidden flex-col items-end lg:flex">
               <div
-                className="bg-no-repeat bg-cover bg-right-top"
+                className="bg-cover bg-right-top bg-no-repeat"
                 style={{
                   transform: `translate(0px, -${anim.parallaxMinMax(percentage, -40, 24)}px)`,
                   backgroundImage: 'url(/images/drive/desktop-internxtFolder-filelogger-mockup.webp)',
@@ -67,23 +67,23 @@ const FeaturesSection = ({ textContent, lang, download }) => (
                   height: 505,
                 }}
               >
-                <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
+                <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
                 <div
-                  className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
+                  className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
                   style={{
                     backgroundImage: 'url(/images/drive/mobile-work-list-mockup.webp)',
                   }}
                 />
               </div>
 
-              <div className="flex flex-col mt-16 lg:mt-28 px-10 lg:px-0">
-                <h3 className="text-3xl lg:text-4xl font-medium text-cool-gray-90 mb-6">
+              <div className="mt-16 flex flex-col px-10 lg:mt-28 lg:px-0">
+                <h3 className="mb-6 text-3xl font-medium text-cool-gray-90 lg:text-4xl">
                   {textContent.section2.title.line1} <br className="hidden sm:flex" />
                   {textContent.section2.title.line2} <br className="hidden sm:flex" />
                   {textContent.section2.title.line3}
                 </h3>
 
-                <p className="text-lg sm:text-base text-cool-gray-80">
+                <p className="text-lg text-cool-gray-80 sm:text-base">
                   {textContent.section2.subtitle.line1} <br className="hidden sm:flex" />
                   {textContent.section2.subtitle.line2} <br className="hidden sm:flex" />
                   {textContent.section2.subtitle.line3} <br className="hidden sm:flex" />
@@ -99,21 +99,21 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
       {/* Feature #2 - Keep your files organized and accessible from anywhere */}
       <Parallax
-        className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 w-full justify-center pt-20 lg:pb-20"
+        className="grid w-full grid-cols-1 justify-center pt-20 lg:grid-cols-2 lg:gap-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
             <div className="flex flex-col items-center lg:items-end lg:pr-20">
               {/* Keep items aligned to the left */}
-              <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
-                <div className="flex flex-col mb-20 lg:mb-28 px-10 lg:px-0">
-                  <h3 className="text-3xl lg:text-4xl font-medium text-cool-gray-90 mb-6 pt-16 lg:pt-20">
+              <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
+                <div className="mb-20 flex flex-col px-10 lg:mb-28 lg:px-0">
+                  <h3 className="mb-6 pt-16 text-3xl font-medium text-cool-gray-90 lg:pt-20 lg:text-4xl">
                     {textContent.section3.title.line1} <br className="hidden sm:flex" />
                     {textContent.section3.title.line2} <br className="hidden sm:flex" />
                     {textContent.section3.title.line3} <br className="hidden sm:flex" />
                     {textContent.section3.title.line4}
                   </h3>
 
-                  <p className="text-lg sm:text-base text-cool-gray-80">
+                  <p className="text-lg text-cool-gray-80 sm:text-base">
                     {textContent.section3.subtitle.line1} <br className="hidden sm:flex" />
                     {textContent.section3.subtitle.line2} <br className="hidden sm:flex" />
                     {textContent.section3.subtitle.line3} <br className="hidden sm:flex" />
@@ -133,9 +133,9 @@ const FeaturesSection = ({ textContent, lang, download }) => (
                     height: 505,
                   }}
                 >
-                  <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
+                  <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
                   <div
-                    className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
+                    className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
                     style={{
                       backgroundImage: 'url(/images/drive/mobile-drive-grid-mockup.webp)',
                     }}
@@ -145,16 +145,16 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             </div>
 
             <div
-              className="relative hidden lg:flex flex-col items-start"
+              className="relative hidden flex-col items-start lg:flex"
               style={{
                 transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
                 width: 1253,
                 height: 847,
               }}
             >
-              <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
+              <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
               <div
-                className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
+                className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
                 style={{
                   backgroundImage: 'url(/images/drive/web-drive-list.webp)',
                 }}
@@ -166,12 +166,12 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
       {/* Feature #3 - Share your files with ease, security is on us */}
       <Parallax
-        className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 w-full justify-center pt-16 lg:pt-20 lg:pb-20"
+        className="grid w-full grid-cols-1 justify-center pt-16 lg:grid-cols-2 lg:gap-20 lg:pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
-            <div className="hidden lg:flex flex-col items-end">
+            <div className="hidden flex-col items-end lg:flex">
               <div
-                className="rounded-lg shadow-subtle bg-no-repeat bg-cover bg-right-top"
+                className="rounded-lg bg-cover bg-right-top bg-no-repeat shadow-subtle"
                 style={{
                   transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
                   backgroundImage: 'url(/images/drive/web-work-share.webp)',
@@ -181,33 +181,33 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               />
             </div>
 
-            <div className="flex flex-col items-center lg:items-start lg:pl-10 w-full lg:w-auto">
+            <div className="flex w-full flex-col items-center lg:w-auto lg:items-start lg:pl-10">
               <div
-                className="relative flex lg:hidden rounded-4xl shadow-subtle bg-no-repeat bg-cover bg-left-top"
+                className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat shadow-subtle lg:hidden"
                 style={{
                   transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
                   width: 250,
                   height: 505,
                 }}
               >
-                <div className="absolute flex rounded-4xl w-full h-full shadow-subtle" />
+                <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
                 <div
-                  className="absolute w-full h-full bg-no-repeat bg-cover bg-left-top"
+                  className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
                   style={{
                     backgroundImage: 'url(/images/drive/mobile-work-list-share-mockup.webp)',
                   }}
                 />
               </div>
 
-              <div className="flex flex-col mb-20 lg:mb-24 px-10 lg:px-0">
-                <h3 className="text-3xl lg:text-4xl font-medium text-cool-gray-90 mb-6 pt-16 lg:pt-20">
+              <div className="mb-20 flex flex-col px-10 lg:mb-24 lg:px-0">
+                <h3 className="mb-6 pt-16 text-3xl font-medium text-cool-gray-90 lg:pt-20 lg:text-4xl">
                   {textContent.section4.title.line1} <br className="hidden sm:flex" />
                   {textContent.section4.title.line2} <br className="hidden sm:flex" />
                   {textContent.section4.title.line3} <br className="hidden sm:flex" />
                   {textContent.section4.title.line4}
                 </h3>
 
-                <p className="text-lg sm:text-base text-cool-gray-80">
+                <p className="text-lg text-cool-gray-80 sm:text-base">
                   {textContent.section4.subtitle.line1} <br className="hidden sm:flex" />
                   {textContent.section4.subtitle.line2} <br className="hidden sm:flex" />
                   {textContent.section4.subtitle.line3} <br className="hidden sm:flex" />
@@ -225,12 +225,12 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
       {/* Feature #4 - Backup what matters to you. */}
       <Parallax
-        className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full justify-center pt-16 lg:pt-20 lg:pb-20"
+        className="grid w-full grid-cols-1 justify-center gap-20 pt-16 lg:grid-cols-2 lg:pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
             <div className="flex flex-col items-center lg:items-end lg:pr-20">
               <div
-                className="flex lg:hidden flex-col mx-10"
+                className="mx-10 flex flex-col lg:hidden"
                 style={{
                   transform: `translate(0px, ${anim.parallaxMinMax(percentage, 0, -40)}px)`,
                   maxWidth: 554,
@@ -238,23 +238,23 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               >
                 <img
                   loading="lazy"
-                  className="shadow-subtle w-full"
+                  className="w-full shadow-subtle"
                   src="/images/drive/desktop-backups.webp"
                   draggable="false"
                   alt="Internxt Desktop backups new feature"
                 />
               </div>
 
-              <div className="flex flex-col mb-24 px-10 lg:px-0">
-                <h4 className="text-xs font-medium text-orange-dark mb-2 pt-10">{textContent.section5.eyebrow}</h4>
+              <div className="mb-24 flex flex-col px-10 lg:px-0">
+                <h4 className="mb-2 pt-10 text-xs font-medium text-orange-dark">{textContent.section5.eyebrow}</h4>
 
-                <h3 className="text-3xl lg:text-4xl font-medium text-cool-gray-90 mb-6">
+                <h3 className="mb-6 text-3xl font-medium text-cool-gray-90 lg:text-4xl">
                   {textContent.section5.title.line1} <br className="hidden sm:flex" />
                   {textContent.section5.title.line2} <br className="hidden sm:flex" />
                   {textContent.section5.title.line3}
                 </h3>
 
-                <p className="text-lg sm:text-base text-cool-gray-80">
+                <p className="text-lg text-cool-gray-80 sm:text-base">
                   {textContent.section5.subtitle.line1} <br className="hidden sm:flex" />
                   {textContent.section5.subtitle.line2} <br className="hidden sm:flex" />
                   {textContent.section5.subtitle.line3} <br className="hidden sm:flex" />
@@ -265,9 +265,9 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               </div>
             </div>
 
-            <div className="hidden lg:flex flex-col items-start">
+            <div className="hidden flex-col items-start lg:flex">
               <div
-                className="bg-cool-gray-10 rounded-xl shadow-subtle bg-no-repeat bg-cover bg-left-top"
+                className="rounded-xl bg-cool-gray-10 bg-cover bg-left-top bg-no-repeat shadow-subtle"
                 style={{
                   transform: `translate(0px, ${anim.parallaxMinMax(percentage, 0, -40)}px)`,
                   backgroundImage: 'url(/images/drive/desktop-backups.webp)',
@@ -280,8 +280,8 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         )}
       />
 
-      <div className="flex flex-col items-center w-full pb-10 lg:pb-20 px-10 lg:px-0">
-        <h3 className="text-3xl font-medium text-center text-cool-gray-90 mb-12">
+      <div className="flex w-full flex-col items-center px-10 pb-10 lg:px-0 lg:pb-20">
+        <h3 className="mb-12 text-center text-3xl font-medium text-cool-gray-90">
           {textContent.section6.title.line1} <br className="hidden sm:flex" />
           {textContent.section6.title.line2}
         </h3>
@@ -290,45 +290,45 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
       </div>
 
-      <div className="flex flex-col items-center text-center w-full py-16 lg:py-20 pb-0 px-6 lg:px-0">
-        <h3 className="text-3xl lg:text-5xl font-medium text-center text-cool-gray-90 mb-10">
+      <div className="flex w-full flex-col items-center py-16 px-6 pb-0 text-center lg:py-20 lg:px-0">
+        <h3 className="mb-10 text-center text-3xl font-medium text-cool-gray-90 lg:text-5xl">
           {textContent.section7.title.line1}
           <br />
           {textContent.section7.title.line2}
         </h3>
 
-        <p className="text-lg sm:text-base text-cool-gray-80 mb-6">
+        <p className="mb-6 text-lg text-cool-gray-80 sm:text-base">
           {textContent.section7.subtitle.line1} <br className="hidden sm:flex" />
           {textContent.section7.subtitle.line2} <br className="hidden sm:flex" />
           {textContent.section7.subtitle.line3}
         </p>
 
         <Link href="/privacy" locale={lang}>
-          <a className="flex flex-row items-center space-x-1 text-lg sm:text-base text-primary mb-32">
+          <a className="mb-32 flex flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base">
             <span>{textContent.section7.cta}</span>
-            <UilAngleRightB className="w-4 h-4" />
+            <UilAngleRightB className="h-4 w-4" />
           </a>
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 grid-row-4 lg:grid-rows-2 gap-16 lg:gap-20 xl:gap-32 text-center">
-          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-medium mb-4">{textContent.section7.card1.title}</h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section7.card1.subtitle}</h5>
+        <div className="grid-row-4 grid grid-cols-1 gap-16 text-center lg:grid-cols-2 lg:grid-rows-2 lg:gap-20 xl:gap-32">
+          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
+            <h4 className="mb-4 text-2xl font-medium">{textContent.section7.card1.title}</h4>
+            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section7.card1.subtitle}</h5>
           </div>
 
-          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-medium mb-4">{textContent.section7.card2.title}</h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section7.card2.subtitle}</h5>
+          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
+            <h4 className="mb-4 text-2xl font-medium">{textContent.section7.card2.title}</h4>
+            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section7.card2.subtitle}</h5>
           </div>
 
-          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-medium mb-4">{textContent.section7.card3.title}</h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section7.card3.subtitle}</h5>
+          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
+            <h4 className="mb-4 text-2xl font-medium">{textContent.section7.card3.title}</h4>
+            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section7.card3.subtitle}</h5>
           </div>
 
-          <div className="flex flex-col items-center w-full px-2 lg:px-0 lg:w-96">
-            <h4 className="text-2xl font-medium mb-4">{textContent.section7.card4.title}</h4>
-            <h5 className="text-lg sm:text-base text-cool-gray-80">{textContent.section7.card4.subtitle}</h5>
+          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
+            <h4 className="mb-4 text-2xl font-medium">{textContent.section7.card4.title}</h4>
+            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section7.card4.subtitle}</h5>
           </div>
         </div>
       </div>

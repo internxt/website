@@ -37,6 +37,7 @@ const PrivacyDirectory = ({
         title={metatags[0].title}
         description={metatags[0].description}
         lang={lang}
+        isBannerFixed
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
 

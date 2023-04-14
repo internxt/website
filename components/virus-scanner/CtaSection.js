@@ -13,7 +13,7 @@ const CtaSection = ({ textContent }) => {
           onClick={() => {
             window.open('https://drive.internxt.com/new');
           }}
-          className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-full bg-white text-center"
+          className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
         >
           <p className="px-9 py-3 text-base font-semibold text-primary">{textContent.cta}</p>
         </div>

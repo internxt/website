@@ -9,7 +9,7 @@ const FeatureSection = ({ textContent }) => (
         <h2 className="max-w-xl text-5xl font-semibold text-gray-100">{textContent.title}</h2>
         <p className="max-w-3xl text-xl font-normal text-gray-100">{textContent.description}</p>
         <button
-          className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white"
+          className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-dark"
           onClick={() => {
             window.scrollTo({
               top: document.getElementById('payment').offsetTop,

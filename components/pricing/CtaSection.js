@@ -10,7 +10,7 @@ const CtaSection = ({ textContent, freePlan }) => {
           <p className="w-full max-w-[570px] text-xl font-normal">{textContent.description}</p>
         </div>
         <button
-          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary"
+          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
             freePlan
               ? goToSignUpURL()
