@@ -5,6 +5,7 @@ import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
+import SquareBanner from '../banners/SquareBanner';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -115,11 +116,14 @@ LayoutProps) {
       </Script>
 
       {showBanner ? (
-        <TopBannerHomePage
-          isBannerFixed={isBannerFixed}
-          closeBannerOnMobile={closeBannerOnMobile}
-          setCloseBannerOnMobile={setCloseBannerOnMobile}
-        />
+        <>
+          <TopBannerHomePage
+            isBannerFixed={isBannerFixed}
+            closeBannerOnMobile={closeBannerOnMobile}
+            setCloseBannerOnMobile={setCloseBannerOnMobile}
+          />
+          <SquareBanner />
+        </>
       ) : null}
 
       {children}
