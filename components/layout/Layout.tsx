@@ -58,7 +58,7 @@ LayoutProps) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="canonical" href={`${INTERNXT_URL}/${lang === 'en' ? '' : lang}${pathname}`} />
+        <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <link rel="alternate" hrefLang="en" href={`${INTERNXT_URL}${pathname}`} />
         <link rel="alternate" hrefLang="es" href={`${INTERNXT_URL}/es${pathname}`} />
         <link rel="alternate" hrefLang="fr" href={`${INTERNXT_URL}/fr${pathname}`} />
