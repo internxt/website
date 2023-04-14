@@ -349,7 +349,7 @@ const HeroSection = ({ textContent }) => {
               id="get-started-link"
               target="_top"
               rel="noreferrer"
-              className="flex w-full items-center justify-center rounded-xl border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:inline-flex sm:w-auto sm:text-base"
+              className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-auto sm:text-base"
             >
               {textContent.cta}
             </a>
@@ -480,7 +480,7 @@ const HeroSection = ({ textContent }) => {
                       id="get-started-link"
                       target="_top"
                       rel="noreferrer"
-                      className="absolute top-full left-0 flex h-14 w-full flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white md:h-10 md:text-base"
+                      className="absolute top-full left-0 flex h-14 w-full flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
                     >
                       {textContent.table.startNow}
                     </a>
