@@ -91,6 +91,11 @@ LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
+         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6684818764777307"
+          crossOrigin="anonymous"
+        />
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
