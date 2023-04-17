@@ -122,7 +122,7 @@ LayoutProps) {
             closeBannerOnMobile={closeBannerOnMobile}
             setCloseBannerOnMobile={setCloseBannerOnMobile}
           />
-          <SquareBanner />
+          {/* <SquareBanner /> */}
         </>
       ) : null}
 
