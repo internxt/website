@@ -33,15 +33,15 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=popupbanner&utm_campaign=tempmail'}
         /> */}
 
-        <HeroSection />
+        <HeroSection textContent={textContent.HeroSection} />
 
-        <InfoSection bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
+        <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
-        <ToolsSection lang={lang} />
+        <ToolsSection textContent={textContent.ToolsSection} lang={lang} />
 
-        <QASection />
+        <QASection textContent={textContent.QASection} />
 
-        <SignupSection />
+        <SignupSection textContent={textContent.SignupSection} />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>

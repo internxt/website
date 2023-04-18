@@ -48,7 +48,13 @@ const EnvelopeWithColor = (): JSX.Element => {
   );
 };
 
-const NoMessageSelected = ({ messagesLength }: { messagesLength: number }): JSX.Element => {
+const NoMessageSelected = ({
+  messagesLength,
+  textContent,
+}: {
+  messagesLength: number;
+  textContent: any;
+}): JSX.Element => {
   const messages = messagesLength === 0 && ' no ';
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
@@ -59,22 +65,32 @@ const NoMessageSelected = ({ messagesLength }: { messagesLength: number }): JSX.
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <p className="text-sm font-medium">You have {messages} new messages</p>
+        <p className="text-sm font-medium">
+          {textContent.youHave} {messages} {textContent.newMessages}
+        </p>
 
-        <p className="text-sm text-gray-50">{messages ? 'Waiting for incoming email' : 'Select a message to open'}</p>
+        <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
       </div>
     </div>
   );
 };
 
-const MessageSelected = ({ email, item }: { email: string; item: Record<string, any> }): JSX.Element => {
+const MessageSelected = ({
+  email,
+  item,
+  textContent,
+}: {
+  email: string;
+  item: Record<string, any>;
+  textContent: any;
+}): JSX.Element => {
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
 
   return (
     <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">
       <div className="flex w-full flex-col space-y-2">
         <p title={item.subject} className="text-xl font-medium text-gray-100 line-clamp-3">
-          {item.subject ? item.subject : '(no subject)'}
+          {item.subject ? item.subject : textContent.noSubject}
         </p>
         <div className="flex flex-row space-x-2">
           <div className="flex flex-col items-center justify-center rounded-full bg-primary bg-opacity-10 py-2 px-4">
@@ -100,7 +116,9 @@ const MessageSelected = ({ email, item }: { email: string; item: Record<string, 
       {item.attachments.length > 0 && (
         <div className="flex w-full flex-col space-y-4">
           <div className="flex flex-row justify-between">
-            <p className="text-sm font-medium">{item.attachments.length} Attachments</p>
+            <p className="text-sm font-medium">
+              {item.attachments.length} {textContent.attachment}
+            </p>
             <p
               className="cursor-pointer text-sm text-primary"
               onClick={() => {
@@ -112,7 +130,7 @@ const MessageSelected = ({ email, item }: { email: string; item: Record<string, 
                 });
               }}
             >
-              Download All
+              {textContent.downloadAll}
             </p>
           </div>
           <div className="grid grid-cols-1 gap-x-2 md:grid-cols-2">
