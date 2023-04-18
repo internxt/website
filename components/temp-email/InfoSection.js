@@ -3,18 +3,14 @@ import React from 'react';
 import { steps, infoCards, bulletedList } from './components/cards';
 import SignUpBanner from '../banners/SignUpBanner';
 
-const InfoSection = ({ bannerText, lang }) => {
+const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
-          <p className="text-2xl font-medium">Internxt’s free temporary email</p>
-          <p className="text-lg text-gray-80 md:max-w-2xl">
-            No more spam, ads, newsletters, promotions, hackers, scammers, and bots. Keep your real inbox clean, secure,
-            and free of sketchy emails. Our disposable email account generator is Internxt's newest privacy tool built
-            to provide free, anonymous, temporary, and random addresses without storing any of your personal data.
-          </p>
+          <p className="text-2xl font-medium">{textContent.title}</p>
+          <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.subtitle}</p>
         </div>
         <div className="flex flex-col">
           <Image
@@ -28,9 +24,9 @@ const InfoSection = ({ bannerText, lang }) => {
         </div>
         <div className="flex flex-col items-center space-y-9">
           <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
-            <p className="text-3xl font-medium lg:text-2xl">How to use Internxt’s temporary email address generator</p>
+            <p className="text-3xl font-medium lg:text-2xl">{textContent.steps.title}</p>
             <ul className="list-disc space-y-3 pl-6">
-              {steps.map((item) => (
+              {textContent.steps.steps.map((item) => (
                 <li key={item.title}>
                   <span className="text-lg font-medium text-primary">{item.title}: </span>
                   <span className="text-lg text-gray-80">{item.description}</span>
@@ -40,21 +36,12 @@ const InfoSection = ({ bannerText, lang }) => {
           </div>
 
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
-            <p className="text-3xl font-medium lg:text-2xl">What is a temporary email address?</p>
-            <p className="text-lg text-gray-80 md:max-w-2xl">
-              A temporary or disposable email address is a tool for a user with a unique email address to obtain a
-              temporary email address for your current contact. A temporary email address service allows you to create a
-              new email address that passes validity needed to sign-up for services or newsletters or website accounts
-              without having to hand over your true identity.
-            </p>
+            <p className="text-3xl font-medium lg:text-2xl">{textContent.whatIsTempMail.title}</p>
+            <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.whatIsTempMail.description}</p>
           </div>
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
-            <p className="text-3xl font-medium lg:text-2xl">Why use disposable mail services?</p>
-            <p className="text-lg text-gray-80 md:max-w-2xl">
-              Your email address is like your online ID, you shouldn’t just hand it over to anyone. Protect your main
-              account and keep your inbox clean by using a temporary email address for one-time or short-term
-              communications. 
-            </p>
+            <p className="text-3xl font-medium lg:text-2xl">{textContent.whyUseDisposableMail.title}</p>
+            <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.whyUseDisposableMail.description}</p>
           </div>
           <div className="flex flex-col space-y-8">
             <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
@@ -88,14 +75,10 @@ const InfoSection = ({ bannerText, lang }) => {
             />
           </div>
           <div className="flex max-w-2xl flex-col space-y-3">
-            <p className="text-3xl font-medium lg:text-2xl">When to use a temporary email address?</p>
-            <p className="text-lg">
-              The sky's the limit when it comes to use cases for a temporary mailbox. Anything that needs an email can
-              instantly be made anonymous and commitment free with a temporary email address. Below are the best
-              examples of when to use fake mail:
-            </p>
+            <p className="text-3xl font-medium lg:text-2xl">{textContent.whenUseTempMail.title}</p>
+            <p className="text-lg">{textContent.whenUseTempMail.description}</p>
             <ul className="list-disc space-y-1.5 pl-6 text-lg lg:max-w-2xl">
-              {bulletedList.map((item, index) => (
+              {textContent.whenUseTempMail.bulletedList.map((item, index) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>

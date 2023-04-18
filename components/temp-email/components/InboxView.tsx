@@ -10,7 +10,7 @@ import Messages from './Messages';
 import { isMobile } from 'react-device-detect';
 import { Transition } from '@headlessui/react';
 
-const Inbox = ({ email }) => {
+const Inbox = ({ email, textContent }) => {
   const [messages, setMessages] = React.useState([]);
   const [selectedMessage, setSelectedMessage] = React.useState(null);
   const [isRefreshed, setIsRefreshed] = useState(false);
@@ -76,6 +76,7 @@ const Inbox = ({ email }) => {
         setSelectedMessage,
         setIsRefreshed,
         openedMessages,
+        textContent,
       }}
     />
   ) : (
@@ -88,6 +89,7 @@ const Inbox = ({ email }) => {
         setSelectedMessage,
         setIsRefreshed,
         openedMessages,
+        textContent,
       }}
     />
   );
@@ -95,7 +97,8 @@ const Inbox = ({ email }) => {
 
 //Web Inbox View
 const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string, any> }) => {
-  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed, openedMessages } = getProps;
+  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed, openedMessages, textContent } =
+    getProps;
   const [animation, setAnimation] = useState(false);
 
   useEffect(() => {
@@ -114,7 +117,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
             <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 px-4 py-5">
               <div className="flex flex-row items-center space-x-1">
                 <Tray size={24} className="text-gray-80" />
-                <p className="text-base font-medium text-gray-100">Inbox</p>
+                <p className="text-base font-medium text-gray-100">{textContent.title}</p>
               </div>
               <ArrowsClockwise
                 size={24}
@@ -188,10 +191,10 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
           className={'flex overflow-y-scroll'}
         >
           <div className="flex h-full w-screen">
-            <Messages.MessageSelected email={email} item={selectedMessage} />
+            <Messages.MessageSelected email={email} item={selectedMessage} textContent={textContent} />
           </div>
         </Transition>
-        {!selectedMessage && <Messages.NoMessageSelected messagesLength={openedMessages} />}
+        {!selectedMessage && <Messages.NoMessageSelected messagesLength={openedMessages} textContent={textContent} />}
       </>
     </div>
   );
@@ -199,7 +202,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
 
 //Mobile Inbox View
 const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<string, any> }) => {
-  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed } = getProps;
+  const { messages, selectedMessage, setMessages, setSelectedMessage, setIsRefreshed, textContent } = getProps;
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
@@ -228,7 +231,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                 </div>
               </div>
               <div className="flex h-full w-full">
-                <Messages.MessageSelected email={email} item={selectedMessage} />
+                <Messages.MessageSelected email={email} item={selectedMessage} textContent={textContent} />
               </div>
             </div>
           </Transition>
@@ -306,7 +309,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
           </Transition>
         </>
       ) : (
-        !selectedMessage && <Messages.NoMessageSelected messagesLength={0} />
+        !selectedMessage && <Messages.NoMessageSelected messagesLength={0} textContent={textContent} />
       )}
     </div>
   );
