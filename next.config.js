@@ -26,7 +26,6 @@ module.exports = {
 
     return config;
   },
-
   async redirects() {
     return [
       // REDIRECTS TO HOME
