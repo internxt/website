@@ -1,0 +1,81 @@
+{
+  "template": {
+    "HeroSection": {
+      "coupon": {
+        "before": "GET FIRST 30 DAYS FOR FREE USING",
+        "after": "COUPON DURING CHECKOUT"
+      },
+      "partnershipWith": "Partnership with",
+      "title": {
+        "line1": "2TB secure storage",
+        "line2": "for free for a month",
+        "line3": "thanks to IvacyVPN."
+      },
+      "description": {
+        "line1": "Internxt Drive handles all security and privacy.",
+        "line2": "Focus on what matters to you, upload, share,",
+        "line3": "download, or backup any kind, any size of files."
+      }
+    },
+    "FeatureSection": {
+      "title": {
+        "line1": "Designed to protect you.",
+        "line2": "Feel secure again."
+      },
+      "features": {
+        "privacy": {
+          "title": "Private by default",
+          "description": {
+            "line1": "Internxt keeps your data private",
+            "line2": "from third parties and criminals, your",
+            "line3": "files and photos are only yours."
+          }
+        },
+        "speed": {
+          "title": "Fast sync",
+          "description": {
+            "line1": "Internxt will find the best possible server",
+            "line2": "option, so you can upload and download",
+            "line3": "at the fastest and more stable speed."
+          }
+        },
+        "security": {
+          "title": "Secure from the core",
+          "description": {
+            "line1": "Stay safe when managing your files,",
+            "line2": "Internxt secures your data with encryption",
+            "line3": "technologies like zero-knowledge."
+          }
+        },
+        "multiplatform": {
+          "title": "Multiplatform",
+          "description": {
+            "line1": "Internxt works on all popular platforms including",
+            "line2": "Windows, macOS, Linux, Android, and iOS.",
+            "line3": "You can even access it from your web browser."
+          }
+        },
+        "support": {
+          "title": "Premium support",
+          "description": {
+            "line1": "Need assistance? Our professionals and",
+            "line2": "friendly tech support agents are here to",
+            "line3": "help you anytime you need them."
+          }
+        }
+      },
+      "buyNowSection": {
+        "title": {
+          "line1": "Why start using Internxt?"
+        },
+        "description": {
+          "line1": "Unlike other competitors, advertising is not our business model.",
+          "line2": "Your data should only be yours. We focus on the security and privacy",
+          "line3": "of you and your files and photos. Using Internxt you can feel secure again."
+        },
+        "cta": "Claim the deal",
+        "freemonth": "Get 30 days for free"
+      }
+    }
+  }
+}

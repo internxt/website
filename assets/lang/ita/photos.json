@@ -119,8 +119,9 @@
         "question": "Come si sincronizzano i file e le foto in Internxt?",
         "answer": [
           "Per sincronizzare e crittografare le foto dalla libreria del telefono al cloud di Internxt, è sufficiente:",
-          "1. Aprire l'applicazione mobile Internxt",
-          "2. Selezionare \"Foto\" e le foto inizieranno a essere sincronizzate automaticamente."
+
+          "1.Aprire l'applicazione mobile Internxt",
+          "2.Selezionare \"Foto\" e le foto inizieranno a essere sincronizzate automaticamente."
         ]
       },
       {

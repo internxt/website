@@ -25,9 +25,10 @@ export default function FaqAccordion({ question, answer, isQuestionBigger = fals
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
         } duration-250 whitespace-wrap w-full pr-14 text-left text-lg text-gray-60 transition-all ease-in-out`}
       >
-        {answer.map((text) => (
-          <ReactMarkdown key={text}>{text}</ReactMarkdown>
-        ))}
+        {answer.map((text) => {
+          console.log(text);
+          return <ReactMarkdown key={text}>{text}</ReactMarkdown>;
+        })}
       </span>
     </div>
   );
