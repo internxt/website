@@ -3,12 +3,12 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CaretDown, Check, Globe } from 'phosphor-react';
 import { useRouter } from 'next/router';
 
-const people = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { ita: 'ita' }];
+const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { ita: 'ita' }];
 
 export default function Example() {
   const router = useRouter();
   const lang = router.locale.toLowerCase().split('-')[0];
-  const [selected, setSelected] = useState(people.filter((person) => person[lang])[0][lang]);
+  const [selected, setSelected] = useState(languages.filter((person) => person[lang])[0][lang]);
 
   return (
     <div className="relative flex">
@@ -22,7 +22,7 @@ export default function Example() {
           </Listbox.Button>
           <Transition as={Fragment} leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0">
             <Listbox.Options className="mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {people.map((person, personIdx) => (
+              {languages.map((person, personIdx) => (
                 <Listbox.Option
                   key={personIdx}
                   className={({ active }) =>
