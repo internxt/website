@@ -72,7 +72,7 @@ const TestimonialsSection = ({ textContent }) => {
           {current.map((card, index) => (
             <div
               key={index}
-              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 drop-shadow-lg"
+              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 shadow-subtle-hard"
             >
               <div className="flex flex-row">
                 <Image
@@ -143,7 +143,7 @@ const TestimonialsSection = ({ textContent }) => {
       <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-6 xl:hidden">
         <div className="flex justify-center">
           {textContent.cards.map((card, index) => (
-            <div key={index} className="flex w-screen justify-center px-6 drop-shadow-lg md:w-auto">
+            <div key={index} className="flex w-screen justify-center px-6 shadow-subtle-hard md:w-auto">
               <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                 <div className="flex w-auto max-w-[300px] flex-col">
                   <div className="flex w-[331px] flex-row">

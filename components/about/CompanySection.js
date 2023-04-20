@@ -89,7 +89,7 @@ const CompanySection = ({ textContent }) => (
       <div className="relative flex flex-col items-center justify-center space-y-4 px-6 py-20 text-center">
         <h4 className="z-10 text-4xl font-medium">{textContent.careers.title}</h4>
         <a
-          className="z-10 flex flex-row items-center space-x-1 text-lg font-medium text-primary sm:text-base"
+          className="z-10 flex flex-row items-center space-x-1 text-lg font-medium text-primary hover:underline sm:text-base"
           href="https://www.linkedin.com/company/internxt/jobs/"
           target="_blank"
           rel="noreferrer"

@@ -86,8 +86,8 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
             className="flex flex-col items-center justify-center"
             onClick={() =>
               window.open(
-                `https://internxt.com/${
-                  lang === 'en' ? '' : lang
+                `https://internxt.com${
+                  lang === 'en' ? '' : `/${lang}`
                 }/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
                 '_blank',
               )

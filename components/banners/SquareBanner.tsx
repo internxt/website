@@ -1,12 +1,9 @@
 import React from 'react';
-import styles from 'components/black-friday/BF-HeroSection.module.scss';
 import { X } from 'phosphor-react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { buttonDeal } from '../TextWithoutJson';
-import { buttonLink } from '../TextWithoutJson';
 
-const Popup = () => {
+const SquareBanner = () => {
   const [hidePopup, setHidePopup] = React.useState(false);
   const router = useRouter();
   const lang = router.locale;
@@ -16,8 +13,16 @@ const Popup = () => {
   }
 
   const handleClose = () => {
+    localStorage.setItem('hideSquareBanner', 'true');
     setHidePopup(true);
   };
+
+  React.useEffect(() => {
+    const hidePopup = localStorage.getItem('hideSquareBanner');
+    if (hidePopup) {
+      setHidePopup(true);
+    }
+  }, []);
 
   const title = () => {
     switch (lang) {
@@ -45,20 +50,26 @@ const Popup = () => {
       </div>
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-6xl font-bold">{title()}</p>
-        <Link href={'https://internxt.com/lifetime?utm_source=website&utm_medium=banner&utm_campaign=lifetime'}>
-          <button
-            aria-label="Close popup"
-            className="flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-white px-8 text-base text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
-          >
-            {buttonDeal[lang]}
-          </button>
-        </Link>
+        <button
+          className="flex flex-row items-center justify-center space-x-4 rounded-lg bg-white py-3 px-5 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+          onClick={() => {
+            window.open(
+              `https://internxt.com${
+                lang === 'en' ? '' : `/${lang}`
+              }/pricing?utm_source=website&utm_medium=popbanner&utm_campaign=lifetimeapril`,
+              '_blank',
+            );
+          }}
+        >
+          {buttonDeal[lang]}
+        </button>
+
         <div className="absolute -left-1 -z-40 flex h-[213px] w-[313px] pb-3">
-          <img src="/images/lifetime/infinity.svg" alt="Infinity image" className="flex h-auto w-auto" />
+          <img src="/images/lifetime/infinity.svg" className="flex h-auto w-auto" />
         </div>
       </div>
     </div>
   );
 };
 
-export default Popup;
+export default SquareBanner;

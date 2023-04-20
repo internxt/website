@@ -83,21 +83,21 @@ const ManifestoSection = ({ textContent, lang }) => (
         {/* Links to PDFs */}
         <div className="flex flex-wrap items-center justify-center gap-32">
           <div
-            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
             onClick={() => window.open('/securitum/securitum-web.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.web}</p>
             <ArrowUpRight size={18} weight="bold" />
           </div>
           <div
-            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
             onClick={() => window.open('/securitum/securitum-mobile.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.mobile}</p>
             <ArrowUpRight size={18} weight="bold" />
           </div>
           <div
-            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
             onClick={() => window.open('/securitum/securitum-desk.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.desk}</p>
@@ -128,7 +128,7 @@ const ManifestoSection = ({ textContent, lang }) => (
                 {textContent.section3.square1.description}
               </h5>
               <Link href="/drive" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline sm:text-base">
                   <span>{textContent.section3.square1.cta}</span>
                   <UilAngleRightB className="h-4 w-4" />
                 </a>
@@ -157,7 +157,7 @@ const ManifestoSection = ({ textContent, lang }) => (
                 {textContent.section3.square2.description}
               </h5>
               <Link href="/photos" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline sm:text-base">
                   <span>{textContent.section3.square2.cta}</span>
                   <UilAngleRightB className="h-4 w-4" />
                 </a>
@@ -185,7 +185,7 @@ const ManifestoSection = ({ textContent, lang }) => (
                 {textContent.section3.square3.description}
               </h5>
               <Link href="/photos" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline sm:text-base">
                   <span>{textContent.section3.square3.cta}</span>
                   <UilAngleRightB className="h-4 w-4" />
                 </a>

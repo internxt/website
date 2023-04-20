@@ -198,10 +198,6 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.login}
                     </a>
 
-                    <a href="https://t.me/internxt" target="_blank" rel="noreferrer" className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.community}
-                    </a>
-
                     <a
                       href="https://github.com/internxt"
                       target="_blank"
@@ -515,10 +511,6 @@ export default function Footer({
 
                       <a href="https://drive.internxt.com/login" target="_top">
                         {textContent.FooterSection.sections.join.login}
-                      </a>
-
-                      <a href="https://t.me/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.join.community}
                       </a>
 
                       <a href="https://github.com/internxt" target="_blank" rel="noreferrer">

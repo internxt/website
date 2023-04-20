@@ -5,6 +5,7 @@ import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
+import SquareBanner from '../banners/SquareBanner';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -58,7 +59,7 @@ LayoutProps) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="canonical" href={`${INTERNXT_URL}/${lang}${pathname}`} />
+        <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <link rel="alternate" hrefLang="en" href={`${INTERNXT_URL}${pathname}`} />
         <link rel="alternate" hrefLang="es" href={`${INTERNXT_URL}/es${pathname}`} />
         <link rel="alternate" hrefLang="fr" href={`${INTERNXT_URL}/fr${pathname}`} />
@@ -70,7 +71,7 @@ LayoutProps) {
         <meta property="og:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
         <meta
           property="og:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
@@ -78,7 +79,7 @@ LayoutProps) {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewLink${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
@@ -115,11 +116,14 @@ LayoutProps) {
       </Script>
 
       {showBanner ? (
-        <TopBannerHomePage
-          isBannerFixed={isBannerFixed}
-          closeBannerOnMobile={closeBannerOnMobile}
-          setCloseBannerOnMobile={setCloseBannerOnMobile}
-        />
+        <>
+          <TopBannerHomePage
+            isBannerFixed={isBannerFixed}
+            closeBannerOnMobile={closeBannerOnMobile}
+            setCloseBannerOnMobile={setCloseBannerOnMobile}
+          />
+          {/* <SquareBanner /> */}
+        </>
       ) : null}
 
       {children}

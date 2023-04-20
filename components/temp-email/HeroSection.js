@@ -20,7 +20,7 @@ function removeLocalStorage() {
 
 const open = () => toast.success('Copied to clipboard!');
 
-const HeroSection = () => {
+const HeroSection = ({ textContent }) => {
   const [email, setEmail] = useState('');
   const [borderColor, setBorderColor] = useState(false);
 
@@ -59,10 +59,8 @@ const HeroSection = () => {
     <section className="overflow-hidden bg-gradient-to-b from-white to-gray-1 pb-20 pt-32">
       <div className="flex flex-col items-center justify-center space-y-10 px-5">
         <div className="flex flex-col text-center">
-          <h1 className="text-4xl font-semibold lg:text-5xl">Free Temporary Email</h1>
-          <p className="pt-5 text-xl text-gray-80">
-            Email anonymously with our free, private, and secure temporary email address generator.
-          </p>
+          <h1 className="text-4xl font-semibold lg:text-5xl">{textContent.title}</h1>
+          <p className="pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
         <div className="flex flex-col items-center ">
           <div className="flex w-full max-w-[325px] flex-col space-y-3">
@@ -82,7 +80,7 @@ const HeroSection = () => {
                   copy(email);
                 }}
               >
-                <p>{email ? email : 'Generating random email...'}</p>
+                <p>{email ? email : textContent.generatingEmail}</p>
                 <Copy size={24} className={`${borderColor ? 'text-primary' : 'text-gray-50'}`} />
               </div>
             </div>
@@ -95,7 +93,7 @@ const HeroSection = () => {
                 }}
               >
                 <Copy size={24} />
-                <p>Copy email</p>
+                <p>{textContent.copyEmail}</p>
               </button>
               <button
                 className="flex flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm hover:bg-gray-10"
@@ -106,17 +104,17 @@ const HeroSection = () => {
                 }}
               >
                 <Trash size={24} />
-                <p>Delete email</p>
+                <p>{textContent.deleteEmail}</p>
               </button>
             </div>
           </div>
           <div className="flex flex-row items-center space-x-1 pt-2 text-sm text-gray-50">
             <Info size={16} />
-            <p>Email and inbox will expire after 3 hours of inactivity</p>
+            <p>{textContent.expireEmail}</p>
           </div>
         </div>
 
-        <Inbox email={email} />
+        <Inbox email={email} textContent={textContent.inbox} />
         <ShowSnackbar />
       </div>
     </section>

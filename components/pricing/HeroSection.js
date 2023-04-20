@@ -25,7 +25,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden pt-12">
-      <div className="flex flex-col items-center justify-between space-y-10 py-24 px-6 md:pl-10 lg:flex-row lg:space-y-0 xl:pl-32">
+      <div className="xl:pl-58 flex w-full flex-col items-center justify-center space-y-10 py-24 px-6 lg:flex-row lg:space-x-10 lg:space-y-0 xl:space-x-56 xl:pl-32">
         <div className="flex flex-col items-center justify-center space-y-10 lg:items-start lg:justify-start">
           <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 lg:items-start">
             <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
@@ -54,7 +54,7 @@ const HeroSection = ({ textContent }) => {
           </div>
           <div className="flex flex-col space-y-5 space-x-8 lg:flex-row lg:space-y-0">
             <button
-              className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
+              className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
               onClick={() =>
                 window.scrollTo({
                   top: document.getElementById('priceTable').offsetTop,

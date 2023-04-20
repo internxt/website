@@ -39,7 +39,7 @@ export default function LanguageBox({ darkMode }) {
       className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
     >
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
-      <p className="text-gray-60">{currentLangText}</p>
+      <p className={darkMode ? 'text-white' : 'text-gray-60'}>{currentLangText}</p>
       <UilAngleDown
         className={`${
           darkMode ? 'text-white' : 'text-gray-40'

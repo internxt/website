@@ -31,7 +31,10 @@ const DownloadComponent = ({ textContent, lang, download }) => {
       {!isMobile && (
         <div className={`${isMobile ? 'hidden' : 'hidden lg:flex'} flex-1 flex-grow flex-row justify-end`}>
           <div className="flex flex-col items-center space-y-1">
-            <a className="flex flex-row items-center space-x-1 text-base font-medium text-primary" href={download[OS]}>
+            <a
+              className="flex flex-row items-center space-x-1 text-base font-medium text-primary hover:underline"
+              href={download[OS]}
+            >
               <span>
                 {textContent.downloadFor} {textContent[OS]}
               </span>
@@ -85,7 +88,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
         <a
           className={`${
             isMobile ? 'hidden' : 'hidden lg:flex'
-          } flex-row items-center space-x-1 text-base font-medium text-primary`}
+          } flex-row items-center space-x-1 text-base font-medium text-primary hover:underline`}
           href="https://drive.internxt.com/app"
           target="_blank"
           rel="noreferrer"
@@ -145,7 +148,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
             {((!isMobile && OS === 'MacOS') || (isMobile && (OS === 'iPhone' || OS === 'iPad'))) && (
               <>
                 <a
-                  className="flex flex-row items-center space-x-1 text-base font-medium text-primary"
+                  className="flex flex-row items-center space-x-1 text-base font-medium text-primary hover:underline"
                   href={download.iPhone}
                   target="_blank"
                   rel="noreferrer"
