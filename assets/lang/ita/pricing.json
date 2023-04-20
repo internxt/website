@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "Get a", "blueText": " lifetime ", "line2": " Internxt plan!" },
+    "title": { "line1": "Ottenete un piano Internxt ", "blueText": " a vita", "line2": "!" },
     "feeds": {
       "firstFeed": "Garanzia di rimborso di 30 giorni",
       "secondFeed": "Pagamento sicuro al 100%",
@@ -83,58 +83,58 @@
   "SchemaMarkupQuestions": {
     "faq": [
       {
-        "question": "How much does an Internxt plan cost?",
+        "question": "Quanto costa un piano Internxt?",
         "answer": [
-          "Need more storage? We also offer individual plans that range from 20GB to 2TB, from as low as €0.89/month."
+          "Avete bisogno di più spazio di archiviazione? Offriamo anche piani individuali che vanno da 20 GB a 2 TB, a partire da 0,89 €/mese."
         ]
       },
       {
-        "question": "Does Internxt have lifetime plans?",
+        "question": "Internxt ha piani a vita?",
         "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+          "Offriamo piani a vita che potete acquistare dal nostro sito web. Questi vi garantiscono l'accesso a vita ai nostri piani, con un massimo di 10 TB di spazio di archiviazione, a fronte di un pagamento unico."
         ]
       }
     ]
   },
   "CtaSection": {
-    "title": "Try Internxt risk-free",
-    "description": "Sign up and get up to 10GB of Internxt's end-to-end encrypted cloud storage for free.",
-    "cta": "Create free account"
+    "title": "Prova Internxt senza rischi",
+    "description": "Iscrivetevi e ottenete gratuitamente fino a 10 GB di spazio di archiviazione cloud crittografato end-to-end di Internxt.",
+    "cta": "Crea un account gratuito"
   },
   "FirstWhatWeDoSection": {
     "card1": {
-      "title": "Private to the core",
-      "description": "We put the user and their rights first in everything that we do. Our mission is simple, to create better tools and services that return agency to the end user.",
-      "cta": "Our commitment to privacy"
+      "title": "Privato al nucleo",
+      "description": "Mettiamo l'utente e i suoi diritti al primo posto in tutto ciò che facciamo. La nostra missione è semplice: creare strumenti e servizi migliori che restituiscano l'agenzia all'utente finale.",
+      "cta": "Il nostro impegno per la privacy"
     },
     "card2": {
-      "title": "One seamless experience",
-      "description": "Internxt is available on all platforms, even Linux! Sync your files and photos with our mobile, web, and desktop apps, each engineered to supercharge your encrypted storage on the go.",
-      "cta": "Download app"
+      "title": "Un'unica esperienza senza soluzione di continuità",
+      "description": "Internxt è disponibile su tutte le piattaforme, anche su Linux! Sincronizza i tuoi file e le tue foto con le nostre app per cellulari, web e desktop, ognuna progettata per potenziare il tuo storage criptato in movimento",
+      "cta": "Scarica l'app"
     },
     "card3": {
-      "title": "Try Internxt for free!",
-      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
-      "cta": "Create free account"
+      "title": "Prova Internxt gratuitamente!",
+      "description": "Ottieni fino a 10GB gratuiti e vedi se la privacy ti si addice prima di fare il salto di qualità! 2GB per la creazione di un account, e poi espandi il tuo spazio di archiviazione gratuito fino a 10GB per contribuire a diffondere la notizia",
+      "cta": "Crea un account gratuito"
     }
   },
   "BestStorageSection": {
-    "title": "Built for the future",
-    "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
+    "title": "Costruito per il futuro",
+    "description": "Vogliamo costruire un World Wide Web migliore, che sia giusto, sicuro ed equo per tutti. La battaglia per il futuro della privacy su Internet è in corso e noi siamo in prima linea",
     "card1": {
-      "title": "Distributed work"
+      "title": "Lavoro distribuito"
     },
     "card2": {
-      "title": "AES-256 encryption"
+      "title": "Crittografia AES-256"
     },
     "card3": {
-      "title": "Built-in redundancy"
+      "title": "Ridondanza integrata"
     },
     "card4": {
-      "title": "Open-source code"
+      "title": "Codice open-source"
     },
     "card5": {
-      "title": "Independently verified"
+      "title": "Verificato in modo indipendente"
     }
   },
   "lastCtaSection": {

@@ -1,41 +1,41 @@
 {
   "NewsletterSection": {
     "title": "Newsletter",
-    "description": "Want to hear from us when we launch new products or release a new update? Type your mail address and we’ll do the rest!",
-    "input": "Your email address",
-    "info": "You can unsubscribe at any time",
-    "cta": "Subscribe",
-    "privacy": "By subscribing you agree to our",
-    "privacyLink": "privacy policy."
+    "description": "Vuoi essere informato quando lanciamo nuovi prodotti o rilasciamo un aggiornamento? Inserisci la tua e-mail e al resto pensiamo noi!",
+    "input": "Email",
+    "info": "È possibile annullare l'iscrizione in qualsiasi momento",
+    "cta": "Iscriviti alla Newsletter",
+    "privacy": "Iscrivendosi si accetta la nostra",
+    "privacyLink": "politica sulla privacy."
   },
   "FooterSection": {
-    "description": "Internxt’s mission is to help shape a world that respects humanity’s privacy rights. To do so, we are releasing a series of services, which all have the common goal of helping humanity protect this fundamental right.",
+    "description": "La missione di Internxt è contribuire a creare un mondo che rispetti i diritti alla privacy dell'umanità. A tal fine, stiamo rilasciando una serie di servizi che hanno tutti l'obiettivo comune di aiutare l'umanità a proteggere questo diritto fondamentale.",
     "copyright": "Copyright © 2023, Internxt Universal Technologies SL",
     "comingSoon": "Coming soon",
     "new": "New",
     "sections": {
       "products": {
-        "title": "Products",
+        "title": "Prodotti",
         "drive": "Drive",
         "photos": "Photos",
         "send": "Send",
         "token": "Token",
-        "pricing": "Pricing"
+        "pricing": "Prezzi"
       },
       "company": {
-        "title": "Company",
-        "about": "About us",
+        "title": "Azienda",
+        "about": "Chi siamo",
         "privacy": "Privacy",
-        "security": "Security",
-        "legal": "Legal",
-        "support": "Support",
-        "whyInternxt": "Why Internxt?",
-        "comparison": "Comparison"
+        "security": "Sicurezza",
+        "legal": "Legale",
+        "support": "Supporto",
+        "whyInternxt": "Perché Internxt?",
+        "comparison": "Confronto"
       },
       "join": {
         "title": "Join Us",
-        "signup": "Create account",
-        "login": "Log in",
+        "signup": "Crea account",
+        "login": "Accedi",
         "community": "Community",
         "github": "GitHub",
         "twitter": "Twitter",
@@ -46,18 +46,18 @@
         "mastodon": "Mastodon"
       },
       "resources": {
-        "title": "Resources",
+        "title": "Risorse",
         "blog": "Blog",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
         "library": "Library",
-        "writeForUs": "Write for us",
+        "writeForUs": "Scrivi per noi",
         "cyberSecurityGlossary": "Cyber Security Glossary",
-        "cyberAwareness": "Cyber Awareness"
+        "cyberAwareness": "Consapevolezza informatica"
       },
       "tools": {
-        "title": "Free Tools",
-        "temporaryEmail": "Temporary Email",
-        "fileVirusScan": "File Virus Scanner",
+        "title": "Strumenti gratuiti",
+        "temporaryEmail": "Email temporanea",
+        "fileVirusScan": "Scanner di file virus",
         "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter"
       }

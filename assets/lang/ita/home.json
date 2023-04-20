@@ -92,19 +92,19 @@
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "Get up to 10GB for free!",
-    "description": "Create your free account now and get full access to our suite of online privacy services.",
-    "cta": "Get started"
+    "title": "Fino a 10 GB gratis!",
+    "description": "Create subito il vostro account gratuito e ottenete l'accesso completo alla nostra suite di servizi per la privacy online.",
+    "cta": "Iniziare"
   },
   "FirstWhatWeDoSection": {
     "card1": {
-      "title": "Built for the future",
-      "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
-      "cta": "The fight for privacy"
+      "title": "Costruito per il futuro",
+      "description": "Vogliamo costruire un World Wide Web migliore, che sia giusto, sicuro ed equo per tutti. La battaglia per il futuro della privacy su Internet è in pieno svolgimento, e noi siamo in prima linea.",
+      "cta": "La lotta per la privacy"
     },
     "card2": {
       "title": "Tutti i tuoi dispositivi, un'unica esperienza d’uso",
-      "description": "nternxt è disponibile per tutte le piattaforme, incluso Linux! Sincronizza i tuoi file e le tue foto con le nostre app per dispositivi mobili, per il web e per desktop, ognuna di esse è stata progettata per valorizzare il tuo spazio di archiviazione crittografato, accessibile da ovunque.",
+      "description": "Internxt è disponibile per tutte le piattaforme, incluso Linux! Sincronizza i tuoi file e le tue foto con le nostre app per dispositivi mobili, per il web e per desktop, ognuna di esse è stata progettata per valorizzare il tuo spazio di archiviazione crittografato, accessibile da ovunque.",
       "cta": "Scarica le applicazioni"
     },
     "card3": {
