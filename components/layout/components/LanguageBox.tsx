@@ -4,24 +4,42 @@ import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+const currentLang = {
+  es: 'ES',
+  fr: 'FR',
+  en: 'EN',
+  ita: 'ITA',
+};
+
 export default function LanguageBox({ darkMode }) {
   const router = useRouter();
-  const [langSelected, setLangSelected] = useState<string>('');
+  const [lang, setLang] = useState<string>();
+  const [currentLangText, setCurrentLangText] = useState<string>();
+
+  function changeLang(lang: string) {
+    setCurrentLangText(currentLang[lang]);
+    setLang(lang);
+  }
 
   useEffect(() => {
-    if (!localStorage.getItem('langSelected')) {
-      localStorage.setItem('langSelected', langSelected);
+    const localStorageLanguage = localStorage.getItem('language');
+    if (localStorageLanguage) {
+      changeLang(localStorageLanguage);
     } else {
-      setLangSelected(localStorage.getItem('langSelected'));
+      changeLang(window.navigator.language.split('-')[0]);
     }
-  }, [langSelected]);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('language', lang as string);
+  }, [lang]);
 
   return (
     <div
       className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
     >
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
-      <p className="text-gray-60">{langSelected}</p>
+      <p className="text-gray-60">{currentLangText}</p>
       <UilAngleDown
         className={`${
           darkMode ? 'text-white' : 'text-gray-40'
@@ -36,7 +54,7 @@ export default function LanguageBox({ darkMode }) {
           <Link href={router.pathname} locale="en">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-              onClick={() => setLangSelected('EN')}
+              onClick={() => changeLang('en')}
             >
               EN
             </a>
@@ -45,7 +63,7 @@ export default function LanguageBox({ darkMode }) {
           <Link href={router.pathname} locale="es">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-              onClick={() => setLangSelected('ES')}
+              onClick={() => changeLang('es')}
             >
               ES
             </a>
@@ -54,7 +72,7 @@ export default function LanguageBox({ darkMode }) {
           <Link href={router.pathname} locale="fr">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-              onClick={() => setLangSelected('FR')}
+              onClick={() => changeLang('fr')}
             >
               FR
             </a>
@@ -64,7 +82,7 @@ export default function LanguageBox({ darkMode }) {
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
                 darkMode ? 'text-white' : 'text-cool-gray-80'
               }`}
-              onClick={() => setLangSelected('ITA')}
+              onClick={() => changeLang('ita')}
             >
               ITA
             </a>
