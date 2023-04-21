@@ -1,0 +1,189 @@
+{
+  "HeroSection": {
+    "title": "Correo electrónico temporal gratuito",
+    "subtitle": "Envía correos electrónicos de forma anónima con nuestro generador de correos electrónicos temporales gratuito, privado y seguro",
+    "generatingEmail": "Generando correo electrónico aleatorio",
+    "copyEmail": "Copiar correo electrónico",
+    "deleteEmail": "Borrar correo",
+    "expireEmail": "El correo electrónico y la bandeja de entrada caducarán tras 3 horas de inactividad",
+    "inbox": {
+      "title": "Bandeja de entrada",
+      "youHave": "Tienes",
+      "newMessages": "nuevos mensajes",
+      "waitingEmail": "Esperando correo electrónico entrante",
+      "selectMessage": "Seleccionar un mensaje para abrirlo",
+      "attachment": "Adjuntos",
+      "downloadAll": "Descargar todos",
+      "noSubject": "(sin asunto)"
+    }
+  },
+  "InfoSection": {
+    "title": "Correo Temporal Gratuito de Internxt",
+    "subtitle": "No más spam, anuncios, promociones, estafadores y bots. Mantén tu bandeja de entrada real limpia, segura y libre de correos electrónicos sospechosos. Nuestro generador de cuentas de correo temporal es la herramienta de privacidad más reciente de Internxt, creada para proporcionar direcciones de correo temporal gratuitas, anónimas, temporales y aleatorias sin almacenar tus datos personales.",
+    "steps": {
+      "title": "Cómo usar el generador de direcciones de correo temporal de Internxt",
+      "steps": [
+        {
+          "title": "Paso 1",
+          "descripción": "Copia tu dirección de correo temporal"
+        },
+        {
+          "title": "Paso 2",
+          "description": "Utiliza la dirección en la web que desees"
+        },
+        {
+          "title": "Paso 3",
+          "description": "Espera unos instantes a recibir una respuesta o un correo electrónico de verificación"
+        },
+        {
+          "title": "Paso 4",
+          "description": "Todos los correos recibidos aparecerán en tu bandeja de entrada arriba"
+        }
+      ]
+    },
+    "whatIsTempMail": {
+      "title": "¿Qué es una dirección de correo electrónico temporal?",
+      "description": "Una dirección de correo electrónico temporal o desechable es una herramienta para que un usuario con una dirección de correo electrónico única obtenga una dirección de correo electrónico temporal para su contacto actual. Un servicio de correo temporal te permite crear una nueva dirección de correo electrónico que pasa la validez necesaria para inscribirte en los boletines de noticias o cuentas de sitios web sin tener que entregar tu verdadera identidad."
+    },
+    "whyUseDisposableMail": {
+      "title": "¿Por qué utilizar servicios de correo temporal?",
+      "description": "Tu dirección de correo electrónico es como tu DNI online, no deberías dársela a cualquiera. Protege tu cuenta principal y mantén limpia tu bandeja de entrada utilizando una dirección de correo electrónico temporal para comunicaciones puntuales.",
+      "infoCards": [
+        {
+          "title": "Evita el correo basura y las suscripciones molestas",
+          "description": "Suscríbete a cualquier cosa sin comprometer tu cuenta de correo electrónico real y sobrecargar tu bandeja de entrada personal. Perfecto para enganchar códigos de cupones y ofertas de registro."
+        },
+        {
+          "title": "Oculta información personal con una cuenta de correo temporal",
+          "description": "Los destinatarios no tendrán acceso a tu nombre, foto, número de teléfono, dirección o cualquier otra información personal asociada a tu cuenta real."
+        },
+        {
+          "title": "Recibir mensajes en un buzón temporal",
+          "description": "Recibe los correos que esperas al instante. Es un correo temporal, no un correo desechable al instante."
+        },
+        {
+          "title": "Mensaje anónimo desde una dirección aleatoria",
+          "description": "¿No estás seguro de si el destinatario es de fiar? ¿Es sospechosa la webcon el que quieres contactar? ¿Miedo al malware? Utiliza una dirección aleatoria gracias al generador de correos falsos de Internxt."
+        },
+        {
+          "title": "Sin necesidad de una cuenta de Gmail temporal o nueva",
+          "description": "No hagas más malabarismos con cuentas reales. Con el correo temporal de Internxt, sólo tienes que crear una cuenta, utilizarla y deshacerte de ella cuando estés listo. No te agobies gestionando varias cuentas."
+        },
+        {
+          "title": "Consigue ventajas de referidos sin invitar a amigos",
+          "description": "¿Quieres conseguir un descuento o ventajas extra de un servicio online, pero no te sientes cómodo dando los emails de tus amigos? Invita a tu correo temporal en su lugar!"
+        }
+      ]
+    },
+    "whenUseTempMail": {
+      "title": "¿Cuándo utilizar una dirección de correo electrónico temporal?",
+      "description": "El cielo es el límite cuando se trata de casos de uso para un buzón temporal. Cualquier cosa que necesite un correo electrónico puede hacerse instantáneamente anónima y sin compromisos con una dirección de correo temporal. A continuación se presentan los mejores ejemplos de cuándo utilizar correo temporal:",
+      "bulletedList": [
+        "Registrarse para pruebas gratuitas",
+        "Probar una aplicación",
+        "Registrarse para obtener una cuenta doble (o varias)",
+        "Eliminar el spam",
+        "Inscribirse en la tarjeta de fidelidad de una tienda",
+        "Comunicarse con cuentas sospechosas",
+        "Crear cuentas anónimas",
+        "Probar servicios en línea sin riesgo",
+        "Verificar cuentas triviales",
+        "Bromear con amigos"
+      ]
+    }
+  },
+  "ToolsSection": {
+    "title": "Otras herramientas gratuitas de privacidad como nuestro buzón temporal",
+    "toolsCard": [
+      {
+        "url": "/images/email-temporal/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 125,
+        "title": "Comprobador gratuito de contraseñas",
+        "description": "Comprobar ahora"
+      },
+      {
+        "url": "/images/temp-email/virus-scanner.svg",
+        "UrlRedirectName": "virus-scanner",
+        "width": 105,
+        "title": "Escáner de virus gratuito",
+        "description": "Escanear ahora"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Convertidor de unidades gratuito",
+        "description": "Convertir ahora"
+      }
+    ]
+  },
+  "QASection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "preguntas": [
+      {
+        "pregunta": "¿Cuánto tiempo se guardan los correos electrónicos?",
+        "answer": [
+          "Los correos electrónicos se conservan mientras sigas utilizando tu dirección de correo electrónico temporal. En cuanto cierres tu dirección temporal, tus correos electrónicos se eliminarán junto con tu cuenta temporal."
+        ]
+      },
+      {
+        "question": "¿Los correos electrónicos siguen siendo privados?",
+        "answer": [
+          "Internxt no tiene ningún acceso a su correo electrónico temporal. No almacenamos ninguno de tus datos personales ni ninguno de los correos electrónicos que envías o recibes."
+        ]
+      },
+      {
+        "question": "¿Dónde puedo ver si he recibido un correo electrónico?",
+        "answer": [
+          "Los correos electrónicos que reciba en tu buzón temporal se mostrarán en la bandeja de entrada situada en la parte superior de esta página."
+        ]
+      },
+      {
+        "pregunta": "¿Cómo cambio la dirección de correo electrónico?",
+        "answer": [
+          "Cambia tu correo temporal generando una nueva dirección de correo electrónico en la barra de herramientas de la parte superior de la página."
+        ]
+      },
+      {
+        " question": "¿Se pueden recuperar los correos electrónicos eliminados?",
+        "answer": [
+          "No. Lamentablemente, cuando eliminas los correos electrónicos que envias o recibis con el dominio utilizado, desaparecen para siempre. Hacemos esto para que tu privacidad esté protegida y tus correos eliminados no queden expuestos."
+        ]
+      },
+      {
+        "question": "¿Qué es un correo electrónico temporal?",
+        "answer": [
+          "Un correo electrónico que sólo es válido durante un breve periodo de tiempo antes de ser destruido automáticamente se denomina correo electrónico transitorio. El correo electrónico temporal de Internxt es un correo electrónico desechable gratuito realmente útil."
+        ]
+      },
+      {
+        "question": "¿Por qué utilizar un correo electrónico temporal?",
+        "answer": [
+          "Mantén tu cuenta de correo principal limpia, segura y libre de cualquier correo no deseado con el correo electrónico temporal gratuito de Internxt. Correo electrónico anónimo mediante la apertura de un buzón de correo temporal y la generación de direcciones de correo electrónico al azar para utilizar como mejor le parezca. Guarda tu cuenta real para las cosas importantes."
+        ]
+      }
+    ]
+  },
+  "SignupSection": {
+    "title": "No siempre se puede enviar un correo electrónico...",
+    "description": "Protege las cosas realmente importantes con la nube segura, privada y cifrada de Internxt",
+    "createAccount": "Crear cuenta"
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "What is a temporary email?",
+        "answer": [
+          "An email that is only valid for a brief time before being automatically destroyed is referred to as a transitory email. Internxt Temporary Email is a free disposable email really useful."
+        ]
+      },
+      {
+        "question": "Why use a temporary email?",
+        "answer": [
+          "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s free Temporary Email. Email anonymously by opening a temporary mailbox and generating random email addresses to use however you see fit. Save your real account for the important stuff."
+        ]
+      }
+    ]
+  }
+}

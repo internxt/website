@@ -51,14 +51,7 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  if (lang !== 'en') {
-    return {
-      redirect: {
-        destination: '/temporary-email',
-        permanent: false,
-      },
-    };
-  }
+
   const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
   const textContent = require(`../assets/lang/en/temporary-email.json`);
   const footerLang = require(`../assets/lang/en/footer.json`);
