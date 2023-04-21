@@ -96,7 +96,7 @@
     "title": "Otras herramientas gratuitas de privacidad como nuestro buzón temporal",
     "toolsCard": [
       {
-        "url": "/images/email-temporal/password-checker.svg",
+        "url": "/images/temp-email/password-checker.svg",
         "UrlRedirectName": "password-checker",
         "width": 125,
         "title": "Comprobador gratuito de contraseñas",
