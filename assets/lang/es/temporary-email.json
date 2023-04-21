@@ -122,7 +122,7 @@
     "title": "¿Preguntas? Tenemos respuestas",
     "questions": [
       {
-        "pregunta": "¿Cuánto tiempo se guardan los correos electrónicos?",
+        "question": "¿Cuánto tiempo se guardan los correos electrónicos?",
         "answer": [
           "Los correos electrónicos se conservan mientras sigas utilizando tu dirección de correo electrónico temporal. En cuanto cierres tu dirección temporal, tus correos electrónicos se eliminarán junto con tu cuenta temporal."
         ]
@@ -140,13 +140,13 @@
         ]
       },
       {
-        "pregunta": "¿Cómo cambio la dirección de correo electrónico?",
+        "question": "¿Cómo cambio la dirección de correo electrónico?",
         "answer": [
           "Cambia tu correo temporal generando una nueva dirección de correo electrónico en la barra de herramientas de la parte superior de la página."
         ]
       },
       {
-        " question": "¿Se pueden recuperar los correos electrónicos eliminados?",
+        "question": "¿Se pueden recuperar los correos electrónicos eliminados?",
         "answer": [
           "No. Lamentablemente, cuando eliminas los correos electrónicos que envias o recibis con el dominio utilizado, desaparecen para siempre. Hacemos esto para que tu privacidad esté protegida y tus correos eliminados no queden expuestos."
         ]
