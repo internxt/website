@@ -1,0 +1,70 @@
+{
+  "mostPopular": "Più popolari",
+  "mostPopularPlan": "Piano più popolare",
+  "valentines": "Offerta speciale di San Valentino!",
+  "onlyForNewClients": "Solo per i nuovi abbonati o per gli utenti del piano gratuito",
+  "planTitles": {
+    "individuals": "Piani per Individui",
+    "business": "Piani per l'impresa",
+    "lifetimeCampaign": {
+      "blueText": "Sconto del 50% ",
+      "normalText": "su tutti i nostri piani esclusivi a vita"
+    }
+  },
+  "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
+  "planDescription": "Tutti i piani Internxt sono dotati di tutte le funzionalità e di un accesso completo a tutti i nostri servizi per la privacy. Sicurezza per tutte le forme e dimensioni.",
+  "changePlan": {
+    "toIndividuals": "Modifica dei piani per gli individui",
+    "toBusiness": "Modifica dei piani aziendali"
+  },
+  "billingFrequency": {
+    "monthly": "Mensile",
+    "semiannually": "Semestrale",
+    "annually": "Annualmente",
+    "lifetime": "Vita"
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "Pagamento unico",
+    "monthly": "fatturato mensilmente",
+    "semiannually": "fatturato semestralmente",
+    "annually": "fatturato annualmente",
+    "afterMonth": "dopo 30 giorni"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/mensile",
+    "semiannually": "/semestrale",
+    "annually": "/annuale"
+  },
+  "perUserSlash": "/user",
+  "perUser": "Per utente",
+  "users": "utenti",
+  "freePlan": "Free",
+  "price": {
+    "freeForever": "Gratis per sempre",
+    "free": "Fino a "
+  },
+  "perMonth": "/mese",
+  "firstMonth": "Primi 30 giorni",
+  "cta": {
+    "getStarted": "Inizia",
+    "signUpNow": "Iscriviti ora",
+    "buy": "Acquista",
+    "get": "Ottieni",
+    "discount": "Ottieni uno sconto del 90%",
+    "claimTheDeal": "Claim the deal",
+    "freemonth": "Ottieni 30 giorni gratis"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Enjoy",
+      "enjoyUpTo": "Enjoy up to",
+      "forFree": "for free",
+      "forever": "per sempre"
+    },
+    "moneyBack": "Garanzia di rimborso di 30 giorni",
+    "encryptedFiles": "Archiviazione e condivisione di file criptati",
+    "accessFromAnywhere": "Accesso ai file da qualsiasi dispositivo",
+    "allServices": "Accedi a tutti i nostri servizi",
+    "dataAccess": "No unauthorized data access"
+  }
+}

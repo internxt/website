@@ -53,7 +53,7 @@ export default function PriceCard({
     <div
       className={`priceCard card ${
         popular ? 'border-2 border-primary bg-primary shadow-subtle ring-2 ring-primary' : ''
-      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+      } m-2 flex max-w-[283px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`mostPopular ${

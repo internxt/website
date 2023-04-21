@@ -1,0 +1,145 @@
+{
+  "HeroSection": {
+    "title": { "line1": "Ottenete un piano Internxt ", "blueText": " a vita", "line2": "!" },
+    "feeds": {
+      "firstFeed": "Garanzia di rimborso di 30 giorni",
+      "secondFeed": "Pagamento sicuro al 100%",
+      "thirdFeed": "Creazione di un account anonimo"
+    },
+    "cta": {
+      "title": "Sconto del 50% ora",
+      "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo non scontato per l'anno successivo."
+    }
+  },
+  "tableSection": {
+    "featureSection": {
+      "firstFeature": "Garanzia di rimborso di 30 giorni",
+      "secondFeature": "Pagamento sicuro al 100%",
+      "thirdFeature": "Creazione di un account anonimo"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": {
+      "faq": [
+        {
+          "question": "Internxt può accedere ai miei file?",
+          "answer": [
+            "No. Internxt, così come qualsiasi altra terza parte, non può accedere ai vostri file, foto o dati.",
+            " I servizi Internxt sono dotati di crittografia a conoscenza zero, il che significa che solo voi potete accedere ai vostri dati privati. Inoltre, l'architettura di Internxt frammenta i vostri file prima di crittografarli, in modo che un server non conservi mai un file intero, ma solo un frammento crittografato che solo voi potete decifrare."
+          ]
+        },
+        {
+          "question": "Internxt memorizza la mia password?",
+          "answer": [
+            "No. Internxt non memorizza (e non può memorizzare) la vostra password.",
+            "La password Internxt è unica per voi e viene utilizzata per criptare e decriptare i vostri dati Internxt. Se volete cambiare la vostra password, potete farlo dalla nostra app."
+          ]
+        },
+        {
+          "question": "Posso abilitare la 2FA?",
+          "answer": [
+            "Sì. È possibile configurare l'autenticazione a due fattori per il proprio account tramite l'applicazione web Internxt.",
+            "È inoltre possibile utilizzare Authy o qualsiasi altro strumento 2FA per generare un codice 2FA personale con Internxt."
+          ]
+        },
+        {
+          "question": "Come si crea un account Internxt?",
+          "answer": [
+            "Per creare un account Internxt gratuito, è sufficiente fare clic sul piano migliore in alto e seguire le istruzioni.",
+            "Oppure visitate la nostra homepage e fate clic su \"Inizia\". In questo modo otterrete immediatamente 10 GB di spazio di archiviazione gratuito a vita con un abbonamento Internxt gratuito. L'iscrizione gratuita può essere utilizzata per tutti i nostri servizi. Per iscriversi è sufficiente inserire un nome e un indirizzo e-mail. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
+          ]
+        },
+        {
+          "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+          "answer": [
+            "Internxt accetta attualmente carte di debito e di credito (Mastercard, VISA, American Express, ecc.). È possibile pagare anche tramite Apple e Google Pay. Non accettiamo PayPal.",
+            "Su richiesta, accettiamo anche iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24 e Sofort. Per richiedere una fattura utilizzando uno dei metodi alternativi sopra descritti, è sufficiente inviare un'e-mail a hello@internxt.com."
+          ]
+        },
+        {
+          "question": "Qual è la politica di rimborso di Internxt?",
+          "answer": [
+            "Internxt offre una garanzia di rimborso standard di 30 giorni per tutti i suoi abbonamenti a pagamento, che inizia a decorrere dal momento dell'iscrizione.",
+            "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso. Accetteremo la vostra richiesta, senza fare domande!"
+          ]
+        },
+        {
+          "question": "Come posso cancellare il mio abbonamento?",
+          "answer": [
+            "L'annullamento dell'abbonamento è molto semplice e può essere fatto facilmente tramite l'app Internxt, entrando nelle impostazioni e cancellando il proprio account. In questo modo l'abbonamento e l'account verranno cancellati.",
+            "Se desiderate annullare un piano a pagamento e rimanere con il nostro servizio gratuito, potete inviarci un'e-mail all'indirizzo hello@internxt.com e provvederemo a elaborare la cancellazione dell'abbonamento in modo che possiate mantenere il vostro account sul piano gratuito."
+          ]
+        },
+        {
+          "question": "Come posso contattare l'assistenza?",
+          "answer": [
+            "Non riuscite a trovare quello che state cercando? Potete contattare il nostro team di Customer Success tramite live chat o inviando un'e-mail a hello@internxt.com."
+          ]
+        }
+      ]
+    }
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "Quanto costa un piano Internxt?",
+        "answer": [
+          "Avete bisogno di più spazio di archiviazione? Offriamo anche piani individuali che vanno da 20 GB a 2 TB, a partire da 0,89 €/mese."
+        ]
+      },
+      {
+        "question": "Internxt ha piani a vita?",
+        "answer": [
+          "Offriamo piani a vita che potete acquistare dal nostro sito web. Questi vi garantiscono l'accesso a vita ai nostri piani, con un massimo di 10 TB di spazio di archiviazione, a fronte di un pagamento unico."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Prova Internxt senza rischi",
+    "description": "Iscrivetevi e ottenete gratuitamente fino a 10 GB di spazio di archiviazione cloud crittografato end-to-end di Internxt.",
+    "cta": "Crea un account gratuito"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "Privato al nucleo",
+      "description": "Mettiamo l'utente e i suoi diritti al primo posto in tutto ciò che facciamo. La nostra missione è semplice: creare strumenti e servizi migliori che restituiscano l'agenzia all'utente finale.",
+      "cta": "Il nostro impegno per la privacy"
+    },
+    "card2": {
+      "title": "Un'unica esperienza senza soluzione di continuità",
+      "description": "Internxt è disponibile su tutte le piattaforme, anche su Linux! Sincronizza i tuoi file e le tue foto con le nostre app per cellulari, web e desktop, ognuna progettata per potenziare il tuo storage criptato in movimento",
+      "cta": "Scarica l'app"
+    },
+    "card3": {
+      "title": "Prova Internxt gratuitamente!",
+      "description": "Ottieni fino a 10GB gratuiti e vedi se la privacy ti si addice prima di fare il salto di qualità! 2GB per la creazione di un account, e poi espandi il tuo spazio di archiviazione gratuito fino a 10GB per contribuire a diffondere la notizia",
+      "cta": "Crea un account gratuito"
+    }
+  },
+  "BestStorageSection": {
+    "title": "Costruito per il futuro",
+    "description": "Vogliamo costruire un World Wide Web migliore, che sia giusto, sicuro ed equo per tutti. La battaglia per il futuro della privacy su Internet è in corso e noi siamo in prima linea",
+    "card1": {
+      "title": "Lavoro distribuito"
+    },
+    "card2": {
+      "title": "Crittografia AES-256"
+    },
+    "card3": {
+      "title": "Ridondanza integrata"
+    },
+    "card4": {
+      "title": "Codice open-source"
+    },
+    "card5": {
+      "title": "Verificato in modo indipendente"
+    }
+  },
+  "lastCtaSection": {
+    "title": "I vostri file sono sicuri e privati per sempre",
+    "description": "Trattiamo i nostri utenti come una famiglia e la famiglia è per sempre!",
+    "cta": "Seleziona un piano ora"
+  }
+}
