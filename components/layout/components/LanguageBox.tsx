@@ -8,7 +8,7 @@ const currentLang = {
   es: 'ES',
   fr: 'FR',
   en: 'EN',
-  ita: 'ITA',
+  it: 'IT',
 };
 
 export default function LanguageBox({ darkMode }) {
@@ -27,11 +27,19 @@ export default function LanguageBox({ darkMode }) {
       changeLang(localStorageLanguage);
     } else {
       changeLang(window.navigator.language.split('-')[0]);
+      localStorage.setItem('language', window.navigator.language.split('-')[0]);
     }
   }, []);
 
+  // useEffect(() => {
+  //   const localStorageLanguage = localStorage.getItem('language');
+  //   if (localStorageLanguage)
+  //   else
+  // }, []);
+
   useEffect(() => {
     localStorage.setItem('language', lang as string);
+    router.push(router.pathname, router.pathname, { locale: lang });
   }, [lang]);
 
   return (
@@ -77,14 +85,14 @@ export default function LanguageBox({ darkMode }) {
               FR
             </a>
           </Link>
-          <Link href={router.pathname} locale="ita">
+          <Link href={router.pathname} locale="it">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
                 darkMode ? 'text-white' : 'text-cool-gray-80'
               }`}
-              onClick={() => changeLang('ita')}
+              onClick={() => changeLang('it')}
             >
-              ITA
+              IT
             </a>
           </Link>
         </div>
