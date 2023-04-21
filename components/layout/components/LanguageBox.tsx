@@ -29,6 +29,7 @@ export default function LanguageBox({ darkMode }) {
       changeLang(window.navigator.language.split('-')[0]);
       localStorage.setItem('language', window.navigator.language.split('-')[0]);
     }
+    router.push(router.pathname, router.pathname, { locale: lang });
   }, []);
 
   // useEffect(() => {
