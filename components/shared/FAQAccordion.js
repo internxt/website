@@ -26,7 +26,6 @@ export default function FaqAccordion({ question, answer, isQuestionBigger = fals
         } duration-250 whitespace-wrap w-full pr-14 text-left text-lg text-gray-60 transition-all ease-in-out`}
       >
         {answer.map((text) => {
-          console.log(text);
           return <ReactMarkdown key={text}>{text}</ReactMarkdown>;
         })}
       </span>
