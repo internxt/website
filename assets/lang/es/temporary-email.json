@@ -3,8 +3,8 @@
     "title": "Correo electrónico temporal gratuito",
     "subtitle": "Envía correos electrónicos de forma anónima con nuestro generador de correos electrónicos temporales gratuito, privado y seguro",
     "generatingEmail": "Generando correo electrónico aleatorio",
-    "copyEmail": "Copiar correo electrónico",
-    "deleteEmail": "Borrar correo",
+    "copyEmail": "Copiar email",
+    "deleteEmail": "Borrar email",
     "expireEmail": "El correo electrónico y la bandeja de entrada caducarán tras 3 horas de inactividad",
     "inbox": {
       "title": "Bandeja de entrada",
@@ -25,7 +25,7 @@
       "steps": [
         {
           "title": "Paso 1",
-          "descripción": "Copia tu dirección de correo temporal"
+          "description": "Copia tu dirección de correo temporal"
         },
         {
           "title": "Paso 2",
@@ -120,7 +120,7 @@
   },
   "QASection": {
     "title": "¿Preguntas? Tenemos respuestas",
-    "preguntas": [
+    "questions": [
       {
         "pregunta": "¿Cuánto tiempo se guardan los correos electrónicos?",
         "answer": [

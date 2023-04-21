@@ -52,11 +52,11 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const textContent = require(`../assets/lang/en/temporary-email.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const bannerLang = require(`../assets/lang/en/banners.json`);
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`../assets/lang/${lang}/temporary-email.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const bannerLang = require(`../assets/lang/${lang}/banners.json`);
 
   return {
     props: {

@@ -45,7 +45,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
           </div>
           <div className="flex flex-col space-y-8">
             <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
-              {infoCards.map((card) => (
+              {infoCards(lang).map((card) => (
                 <div
                   key={card.title}
                   className="flex flex-col items-start justify-start bg-white p-8 sm:p-10 md:max-w-[488px]"
