@@ -21,28 +21,6 @@ export default function LanguageBox({ darkMode }) {
     setLang(lang);
   }
 
-  useEffect(() => {
-    const localStorageLanguage = localStorage.getItem('language');
-    if (localStorageLanguage) {
-      changeLang(localStorageLanguage);
-    } else {
-      changeLang(window.navigator.language.split('-')[0]);
-      localStorage.setItem('language', window.navigator.language.split('-')[0]);
-    }
-    router.push(router.pathname, router.pathname, { locale: lang });
-  }, []);
-
-  // useEffect(() => {
-  //   const localStorageLanguage = localStorage.getItem('language');
-  //   if (localStorageLanguage)
-  //   else
-  // }, []);
-
-  useEffect(() => {
-    localStorage.setItem('language', lang as string);
-    router.push(router.pathname, router.pathname, { locale: lang });
-  }, [lang]);
-
   return (
     <div
       className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
