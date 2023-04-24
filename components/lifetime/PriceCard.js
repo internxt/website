@@ -8,8 +8,8 @@ import { checkout, goToLoginURL } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
-const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
 
+const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
 const PriceCard = ({
   planType,
   storage,
