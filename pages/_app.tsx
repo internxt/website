@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
-        <button id="install-btn" />
+        <button id="install-btn" className="flex h-20 w-20 bg-black" />
         {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
         <Intercom />
       </GlobalUIManager>
