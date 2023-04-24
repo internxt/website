@@ -117,7 +117,7 @@ LayoutProps) {
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
-          <SquareBanner />
+          {/* <SquareBanner /> */}
         </>
       ) : null}
 
