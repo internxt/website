@@ -72,19 +72,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
         />
 
-        {/* <CtaSection textContent={textContent.CtaSection} freePlan /> */}
+        <CtaSection textContent={textContent.CtaSection} freePlan />
 
-        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} withoutCta />
+        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
 
-        {/* <FirstWhatWeDoSection
+        <FirstWhatWeDoSection
           textContent={textContent.FirstWhatWeDoSection}
           lang={lang}
           backgroundColor={'bg-gray-1'}
         />
 
-        <BestStorageSection textContent={textContent.BestStorageSection} /> */}
+        <BestStorageSection textContent={textContent.BestStorageSection} />
 
-        {/* <FileParallaxSection /> */}
+        <FileParallaxSection />
 
         <FAQSection textContent={textContent.FaqSection} />
 

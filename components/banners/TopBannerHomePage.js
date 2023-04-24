@@ -1,44 +1,43 @@
 import { useRouter } from 'next/router';
-import { X } from 'phosphor-react';
 import { checkout } from '../../lib/auth';
 
-const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerOnMobile }) => {
+const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile }) => {
   const router = useRouter();
   const lang = router.locale;
 
   const New = () => {
     if (lang === 'en') {
-      return 'Limited-Time Deal:';
+      return 'Special offer:';
     } else if (lang === 'es') {
       return 'Oferta special:';
     } else if (lang === 'fr') {
-      return 'Offre limitée :';
-    } else if (lang === 'it') {
-      return 'Offerta limitata:';
+      return 'Offre spéciale:';
+    } else {
+      return 'Special offer:';
     }
   };
 
   const textForWeb = () => {
     if (lang === 'en') {
-      return 'Get 50% OFF All Lifetime Plans';
+      return 'Get 80% off our 2TB plan for one year!';
     } else if (lang === 'es') {
-      return '50% de descuento en los planes Lifetime';
+      return '¡Obtén un 80% de descuento en el plan de 2TB por un año!';
     } else if (lang === 'fr') {
-      return '50% de réduction sur tous les plans à vie';
-    } else if (lang === 'it') {
-      return '50% di sconto su tutti i piani a vita';
+      return '80% de réduction sur le plan 2TB pendant un an !';
+    } else {
+      return 'Get 80% off our 2TB plan for one year!';
     }
   };
 
   const textForMobile = () => {
     if (lang === 'en') {
-      return 'Get 50% OFF All Lifetime Plans';
+      return 'Get 80% off our 2TB plan for one year!';
     } else if (lang === 'es') {
-      return '50% de descuento en los planes Lifetime';
+      return '¡80% de descuento en el plan de 2TB!';
     } else if (lang === 'fr') {
-      return '50% de réduction sur tous les plans à vie';
-    } else if (lang === 'it') {
-      return '50% di sconto su tutti i piani a vita';
+      return '80% de réduction sur le plan 2TB pendant un an !';
+    } else {
+      return 'Get 80% off our 2TB plan for one year!';
     }
   };
 
@@ -48,8 +47,6 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
     } else if (lang === 'es') {
       return 'Pruébalo ahora';
     } else if (lang === 'fr') {
-      return 'Essayez maintenant';
-    } else {
       return 'Essayez maintenant';
     }
   };
@@ -64,10 +61,10 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() =>
-            window.open(
-              `https://internxt.com/${lang}/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
-              '_blank',
-            )
+            checkout({
+              planId: 'plan_FkTXxEg3GZW0pg',
+              couponCode: 'P8PSpVs6',
+            })
           }
         >
           <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
@@ -85,12 +82,10 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
           <div
             className="flex flex-col items-center justify-center"
             onClick={() =>
-              window.open(
-                `https://internxt.com${
-                  lang === 'en' ? '' : `/${lang}`
-                }/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
-                '_blank',
-              )
+              checkout({
+                planId: 'plan_FkTXxEg3GZW0pg',
+                couponCode: 'P8PSpVs6',
+              })
             }
           >
             <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>

@@ -8,7 +8,7 @@ import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { checkout } from '../../lib/auth';
 
-const TWOTB_OFF_COUPON = 'P8PSpVs6';
+const TWOTB_OFF_COUPON = 'lxevN374';
 
 export default function SpecialPriceCard({
   planType,
@@ -262,7 +262,7 @@ export default function SpecialPriceCard({
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
+                src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
@@ -275,7 +275,7 @@ export default function SpecialPriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -285,7 +285,7 @@ export default function SpecialPriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -295,7 +295,7 @@ export default function SpecialPriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
