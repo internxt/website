@@ -61,5 +61,8 @@
     "description": "Get 90% off our 2TB plan for the first year.",
     "cta": "Sure, I'll try it out",
     "ctaCancel": "No, thanks"
+  },
+  "AndroidSmartBanner": {
+    "title": "Scarica Internxt Drive per Android"
   }
 }

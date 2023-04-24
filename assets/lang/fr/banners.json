@@ -36,5 +36,8 @@
     "description": "Bénéficiez de 90% de réduction sur notre plan 2 To pendant un an.",
     "cta": "Oui, je veux l'offre",
     "ctaCancel": "Non, merci"
+  },
+  "AndroidSmartBanner": {
+    "title": "Télécharger Internxt Drive pour Android"
   }
 }

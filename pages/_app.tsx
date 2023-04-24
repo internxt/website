@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
+import { isMobile } from 'react-device-detect';
 
 // const excludedPaths = ['/byte-converter', '/virus-scanner', '/password-checker', '/temporary-email'];
 
