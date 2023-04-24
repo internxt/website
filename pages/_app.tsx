@@ -11,28 +11,36 @@ import { isMobile } from 'react-device-detect';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
-  let deferredPrompt: any;
-  const [showPromoteBanner, setShowPromoteBanner] = React.useState(false);
+  let promptEvent: any;
   // const pathname = route.pathname;
   // const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
   // const bannerLang = require(`../assets/lang/${route.locale}/banners.json`);
 
+  // listen to install button clic
+  function listenToUserAction() {
+    const installBtn = document.querySelector('.install-btn');
+    installBtn.addEventListener('click', presentAddToHome);
+  }
+
+  // present install prompt to user
+  function presentAddToHome() {
+    promptEvent.prompt(); // Wait for the user to respond to the prompt
+    promptEvent.userChoice.then((choice) => {
+      if (choice.outcome === 'accepted') {
+        console.log('User accepted');
+      } else {
+        console.log('User dismissed');
+      }
+    });
+  }
+
   //Add promote banner for Android users to download the app
   useEffect(() => {
+    // Capture event and defer
     window.addEventListener('beforeinstallprompt', function (e) {
-      console.log('beforeinstallprompt Event fired');
-      // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
       e.preventDefault();
-      // Stash the event so it can be triggered later.
-      deferredPrompt = e;
-      // Update UI notify the user they can install the PWA
-      setShowPromoteBanner(true);
-
-      // Optionally, send analytics event that PWA install promo was shown.
-      console.log(`'beforeinstallprompt' event was fired.`);
-
-      // Show the prompt
-      deferredPrompt.prompt();
+      promptEvent = e;
+      listenToUserAction();
     });
   }, []);
 
@@ -42,11 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
-        {showPromoteBanner && (
-          <div className="bottom-0 flex w-full bg-black">
-            <p className="text-white">Promote banner works properly</p>
-          </div>
-        )}
+        <button id="install-btn" />
         {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
         <Intercom />
       </GlobalUIManager>
