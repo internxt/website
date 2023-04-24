@@ -41,12 +41,37 @@ LayoutProps) {
   const lang = router.locale;
   const showBanner = router.pathname !== '/pricing';
   const langToUpperCase = lang.toLocaleUpperCase();
+  const [promptReady, setPromptReady] = React.useState<any>();
+  let promptEvent: any;
 
   const slogan = {
     en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
     es: 'Internxt es un servicio seguro de almacenamiento en la nube basado en el cifrado y la privacidad absoluta. El conjunto de servicios de código abierto de Internxt protege tu privacidad. Internxt Drive, Photos, Send y mucho más.',
     fr: "Internxt est un service de stockage en ligne sécurisé basé sur le chiffrage et la confidentialité absolue. La suite open-source de services de stockage en nuage d'Internxt protège votre droit à la vie privée. Internxt Drive, Photos, Send, et plus encore.",
   };
+
+  // present install prompt to user
+  function presentAddToHome() {
+    console.log('presentAddToHome');
+    promptReady.prompt(); // Wait for the user to respond to the prompt
+    promptReady.userChoice.then((choice) => {
+      if (choice.outcome === 'accepted') {
+        console.log('User accepted');
+      } else {
+        console.log('User dismissed');
+      }
+    });
+  }
+
+  //Add promote banner for Android users to download the app
+  useEffect(() => {
+    // Capture event and defer
+    window.addEventListener('beforeinstallprompt', function (e) {
+      console.log('beforeinstallprompt');
+      e.preventDefault();
+      setPromptReady(e);
+    });
+  }, []);
 
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
@@ -113,13 +138,17 @@ LayoutProps) {
           ]
         }`}
       </Script>
-
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
           {/* <SquareBanner /> */}
         </>
       ) : null}
+
+      <button
+        className="fixed top-24 left-0 z-30 flex h-10 w-screen flex-col items-center justify-center bg-black"
+        onClick={presentAddToHome}
+      />
 
       {children}
       {/* <BFBanner /> */}
