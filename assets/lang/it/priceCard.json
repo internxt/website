@@ -7,7 +7,7 @@
     "individuals": "Piani per Individui",
     "business": "Piani per l'impresa",
     "lifetimeCampaign": {
-      "blueText": "Sconto del 50% ",
+      "blueText": "Sconto del 80%",
       "normalText": "su tutti i nostri piani esclusivi a vita"
     }
   },
@@ -50,7 +50,7 @@
     "signUpNow": "Iscriviti ora",
     "buy": "Acquista",
     "get": "Ottieni",
-    "discount": "Ottieni uno sconto del 90%",
+    "discount": "Ottieni uno sconto del 80%",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Ottieni 30 giorni gratis"
   },

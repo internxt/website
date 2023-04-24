@@ -2,17 +2,14 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
-import Tooltip from './ToolTip';
 import { Coin, CreditCard, Detective } from 'phosphor-react';
 import SpecialPriceCard from './SpecialPriceCard';
-import LifetimeCard from '../lifetime/PriceCard';
 
 export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
   const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState(-1);
+  const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
-  const isLifetime = billingFrequency === -1;
 
   function parentSetUserCount(count) {
     setUserCount(count);
@@ -35,15 +32,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   const billingPrice = (price) => price[billingFrequency];
 
   const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
-
-  const LifetimeTitle = () => {
-    return (
-      <>
-        <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
-        <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
-      </>
-    );
-  };
 
   const pricings = {
     individuals: {
@@ -75,7 +63,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '3.99',
           12: '3.49',
         },
-        popular: true,
+        popular: false,
       },
       TB2: {
         stripeID: '2TB',
@@ -85,7 +73,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           6: '9.49',
           12: '8.99',
         },
-        popular: false,
+        popular: true,
       },
       lifetime2TB: {
         stripeID: 'lifetime2TB',
@@ -93,8 +81,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         price: {
           '-1': '299',
         },
-        popular: true,
-        actualPrice: '149',
+        popular: false,
       },
       lifetime5TB: {
         stripeID: 'lifetime5TB',
@@ -102,8 +89,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
         price: {
           '-1': '499',
         },
-        popular: false,
-        actualPrice: '249',
+        popular: true,
       },
       lifetime10TB: {
         stripeID: 'lifetime10TB',
@@ -112,7 +98,6 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           '-1': '999',
         },
         popular: false,
-        actualPrice: '499',
       },
     },
     business: {
@@ -150,35 +135,25 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
   };
 
   return (
-    <section id="priceTable" className="bg-gray-1">
+    <section id="priceTable" className="">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
           <div className="flex flex-col items-center px-5">
-            <h1 className="max-w-2xl text-center text-5xl font-semibold">
-              {individual ? (
-                isLifetime ? (
-                  <LifetimeTitle />
-                ) : (
-                  contentText.planTitles.individuals
-                )
-              ) : (
-                `${contentText.planTitles.business}`
-              )}
+            <h1 className="text-center text-6xl font-semibold">
+              {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
             </h1>
-            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
-              {isLifetime ? contentText.lifetimeDescription : contentText.planDescription}
-            </p>
+            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">{contentText.planDescription}</p>
           </div>
           <div className="items center flex flex-col">
             <button
               type="button"
-              className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary  hover:underline active:text-blue-50"
+              className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary active:text-blue-50"
               onClick={() => {
                 setIndividual(!individual);
                 setSegmentPageName(
                   `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequencySegment.billingFrequency}`,
                 );
-                if (isLifetime) {
+                if (billingFrequency === -1) {
                   setTimeout(() => {
                     setBillingFrequency(12);
                   }, 50);
@@ -237,41 +212,35 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
             {billingFrequency === -1 ? (
               <>
-                <LifetimeCard
-                  planType="individual"
-                  storage={pricings.individuals.lifetime5TB.storage}
-                  price={billingPrice(pricings.individuals.lifetime5TB.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', 'lifetime5TB']}
-                  popular={pricings.individuals.lifetime5TB.popular}
-                  lang={lang}
-                  country={country}
-                  actualPrice={pricings.individuals.lifetime5TB.actualPrice}
-                  isCampaign
-                />
-                <LifetimeCard
+                <PriceCard
                   planType="individual"
                   storage={pricings.individuals.lifetime2TB.storage}
                   price={billingPrice(pricings.individuals.lifetime2TB.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', 'lifetime2TB']}
+                  cta={['checkout', checkoutPlan('lifetime2TB')]}
                   popular={pricings.individuals.lifetime2TB.popular}
                   lang={lang}
                   country={country}
-                  actualPrice={pricings.individuals.lifetime2TB.actualPrice}
-                  isCampaign
                 />
-                <LifetimeCard
+                <PriceCard
+                  planType="individual"
+                  storage={pricings.individuals.lifetime5TB.storage}
+                  price={billingPrice(pricings.individuals.lifetime5TB.price)}
+                  billingFrequency={billingFrequency}
+                  cta={['checkout', checkoutPlan('lifetime5TB')]}
+                  popular={pricings.individuals.lifetime5TB.popular}
+                  lang={lang}
+                  country={country}
+                />
+                <PriceCard
                   planType="individual"
                   storage={pricings.individuals.lifetime10TB.storage}
                   price={billingPrice(pricings.individuals.lifetime10TB.price)}
                   billingFrequency={billingFrequency}
-                  cta={['checkout', 'lifetime10TB']}
+                  cta={['checkout', checkoutPlan('lifetime10TB')]}
                   popular={pricings.individuals.lifetime10TB.popular}
                   lang={lang}
                   country={country}
-                  actualPrice={pricings.individuals.lifetime10TB.actualPrice}
-                  isCampaign
                 />
               </>
             ) : (
@@ -376,7 +345,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             />
           </div>
         </Transition>
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4 lg:items-start">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>

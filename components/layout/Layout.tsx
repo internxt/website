@@ -40,7 +40,6 @@ LayoutProps) {
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
   const showBanner = router.pathname !== '/pricing';
-  const [closeBannerOnMobile, setCloseBannerOnMobile] = React.useState(false);
   const langToUpperCase = lang.toLocaleUpperCase();
 
   const slogan = {
@@ -117,12 +116,8 @@ LayoutProps) {
 
       {showBanner ? (
         <>
-          <TopBannerHomePage
-            isBannerFixed={isBannerFixed}
-            closeBannerOnMobile={closeBannerOnMobile}
-            setCloseBannerOnMobile={setCloseBannerOnMobile}
-          />
-          <SquareBanner />
+          <TopBannerHomePage isBannerFixed={isBannerFixed} />
+          {/* <SquareBanner /> */}
         </>
       ) : null}
 

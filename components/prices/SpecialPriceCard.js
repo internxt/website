@@ -8,7 +8,7 @@ import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { checkout } from '../../lib/auth';
 
-const TWOTB_OFF_COUPON = 'P8PSpVs6';
+const TWOTB_OFF_COUPON = 'lxevN374';
 
 export default function SpecialPriceCard({
   planType,
@@ -94,7 +94,7 @@ export default function SpecialPriceCard({
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 10) / 100).toFixed(2)}</span>
+            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 20) / 100).toFixed(2)}</span>
           </p>
           <div
             className={`priceBreakdown flex text-neutral-50 ${
@@ -262,7 +262,7 @@ export default function SpecialPriceCard({
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
+                src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
@@ -275,7 +275,7 @@ export default function SpecialPriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -285,7 +285,7 @@ export default function SpecialPriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -295,7 +295,7 @@ export default function SpecialPriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />

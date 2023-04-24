@@ -39,12 +39,7 @@ export default function PriceCard({
         return '€';
     }
   };
-  const onOfferClick = () => {
-    checkout({
-      planId: getPlanId(stripeObject),
-      couponCode: 'G8Ti4z1k',
-    });
-  };
+
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
@@ -53,7 +48,7 @@ export default function PriceCard({
     <div
       className={`priceCard card ${
         popular ? 'border-2 border-primary bg-primary shadow-subtle ring-2 ring-primary' : ''
-      } m-2 flex max-w-[283px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`mostPopular ${
@@ -81,9 +76,6 @@ export default function PriceCard({
             ) : (
               storage
             )}
-            {/* <span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>
-              {contentText.perUserSlash}
-            </span> */}
           </p>
         </div>
         <div
@@ -96,13 +88,10 @@ export default function PriceCard({
               items-end space-x-px text-neutral-700
             `}
           >
-            <p className={` flex flex-row items-start space-x-0.5 whitespace-nowrap font-medium text-gray-100`}>
+            <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-              <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
+              <span className="price text-4xl font-bold">{price <= 0 ? `${contentText.freePlan}` : totalBilled}</span>
             </p>
-            <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}>
-              {contentText.perMonth}
-            </span>
 
             {/* eslint-disable-next-line no-nested-ternary */}
           </div>
@@ -127,14 +116,7 @@ export default function PriceCard({
             } flex-row text-sm font-medium text-gray-50
             `}
           >
-            <p className={`${billingFrequency === -1 ? 'flex' : 'hidden'}`}>
-              {contentText.billingFrequencyLabel.lifetime}
-            </p>
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
-              <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">{currency()}</span>
-                {totalBilled}{' '}
-              </span>
               <span className="billingFrequency">
                 {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
               </span>
@@ -268,31 +250,6 @@ export default function PriceCard({
               <span className="flex">
                 {`${contentText.features.enjoyForever.enjoy} ${storage} ${contentText.features.enjoyForever.forever}`}
               </span>
-            </div>
-          )}
-          {price > 0 ? (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkPrimary.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span className={`flex `}>{contentText.features.moneyBack}</span>
-            </div>
-          ) : (
-            <div className={`flex flex-row items-start space-x-2 ${billingFrequency > 0 && 'font-semibold'}`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkPrimary.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span
-                className={`flex ${lang === 'fr' ? 'pb-5' : ''} `}
-              >{`${contentText.features.enjoyForever.enjoyUpTo} ${storage} ${contentText.features.enjoyForever.forever}`}</span>
             </div>
           )}
           <div className="flex flex-row items-start space-x-2">
