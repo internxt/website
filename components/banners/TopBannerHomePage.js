@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { checkout } from '../../lib/auth';
 
-const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile }) => {
+const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -74,9 +74,7 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile }) => {
         </div>
       </div>
       <div
-        className={`group fixed top-16 left-0 z-30 ${
-          closeBannerOnMobile ? 'hidden' : 'flex'
-        } h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+        className={`group fixed top-16 left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div
