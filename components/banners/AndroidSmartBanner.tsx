@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const AndroidSmartBanner = ({ installPrompt }) => {
   const [showBanner, setShowBanner] = useState(true);
+  const router = useRouter();
+  const bannerLang = require(`../../assets/lang/${router.locale}/banners.json`);
+
   return (
     <button
       className={`fixed bottom-0 z-50 ${
@@ -20,7 +24,7 @@ const AndroidSmartBanner = ({ installPrompt }) => {
         }
       }}
     >
-      Download Internxt Drive for Android
+      {bannerLang.AndroidSmartBanner.title}
     </button>
   );
 };
