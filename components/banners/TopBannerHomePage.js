@@ -63,7 +63,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           onClick={() =>
             checkout({
               planId: 'plan_FkTXxEg3GZW0pg',
-              couponCode: 'P8PSpVs6',
+              couponCode: 'lxevN374',
             })
           }
         >
