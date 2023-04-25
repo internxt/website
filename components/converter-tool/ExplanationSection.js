@@ -2,8 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import SignUpBanner from '../banners/SignUpBanner';
 
+const language = {
+  en: 'EN',
+  es: 'ES',
+};
 const ExplanationSection = ({ textContent, bannerText, lang }) => {
-  const langUpperCase = lang.toUpperCase();
+  const langUpperCase = language[lang] || 'EN';
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-start space-y-16 px-5 pt-20 pb-16 lg:px-10">

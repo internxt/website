@@ -2,8 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const language = {
+  en: 'EN',
+  es: 'ES',
+};
+
 const ConversionTableSection = ({ textContent, lang }) => {
-  const langUpperCase = lang.toUpperCase();
+  const langUpperCase = language[lang] || 'EN';
 
   const table = [
     {

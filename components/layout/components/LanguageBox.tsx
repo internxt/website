@@ -14,7 +14,7 @@ const currentLang = {
 export default function LanguageBox({ darkMode }) {
   const router = useRouter();
   const [lang, setLang] = useState<string>();
-  const [currentLangText, setCurrentLangText] = useState<string>();
+  const [currentLangText, setCurrentLangText] = useState<string>(currentLang[router.locale]);
 
   function changeLang(lang: string) {
     setCurrentLangText(currentLang[lang]);

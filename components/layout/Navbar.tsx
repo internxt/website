@@ -1,18 +1,12 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Transition, Disclosure, Dialog } from '@headlessui/react';
+import { Transition, Disclosure } from '@headlessui/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
-import { X } from 'phosphor-react';
-import { isAndroid, isIOS, isMobile } from 'react-device-detect';
-
-import LogIn from '../auth/LogIn';
-import SignUp from '../auth/SignUp';
-import ForgotPassword from '../auth/ForgotPassword';
 
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import { useGlobalDialog } from '../../contexts/GlobalUIManager';
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
 
