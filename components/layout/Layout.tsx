@@ -37,11 +37,12 @@ export default function Layout({
   isProduction = process.env.NODE_ENV === 'production',
 }: // lang
 LayoutProps) {
+  const excludedURL = ['/pricing', '/black-friday'];
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = router.pathname !== '/pricing';
+  const showBanner = !excludedURL.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<any>();
 
