@@ -3,7 +3,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CaretDown, Check, Globe } from 'phosphor-react';
 import { useRouter } from 'next/router';
 
-const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { it: 'IT' }];
+const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { it: 'IT' }, { cn: 'CN' }];
 
 export default function Example() {
   const router = useRouter();
@@ -34,12 +34,12 @@ export default function Example() {
                     const lang = Object.keys(person)[0];
                     router.push(router.pathname, router.pathname, { locale: lang });
                   }}
-                  value={person.en || person.es || person.fr}
+                  value={person.en || person.es || person.fr || person.it || person.cn}
                 >
                   {({ selected }) => (
                     <>
                       <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
-                        {person.en || person.es || person.fr}
+                        {person.en || person.es || person.fr || person.it || person.cn}
                       </span>
                       {selected ? (
                         <span className="text-amber-600 absolute inset-y-0 left-0 flex items-center pl-3">

@@ -5,10 +5,11 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const currentLang = {
-  es: 'ES',
-  fr: 'FR',
-  en: 'EN',
-  it: 'IT',
+  es: 'Español (ES)',
+  fr: 'Français (FR)',
+  en: 'English (EN)',
+  it: 'Italiano (IT)',
+  cn: '中国 (CN)',
 };
 
 export default function LanguageBox({ darkMode }) {
@@ -43,7 +44,7 @@ export default function LanguageBox({ darkMode }) {
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
               onClick={() => changeLang('en')}
             >
-              EN
+              {currentLang.en}
             </a>
           </Link>
 
@@ -52,7 +53,7 @@ export default function LanguageBox({ darkMode }) {
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
               onClick={() => changeLang('es')}
             >
-              ES
+              {currentLang.es}
             </a>
           </Link>
 
@@ -61,7 +62,7 @@ export default function LanguageBox({ darkMode }) {
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
               onClick={() => changeLang('fr')}
             >
-              FR
+              {currentLang.fr}
             </a>
           </Link>
           <Link href={router.pathname} locale="it">
@@ -71,7 +72,17 @@ export default function LanguageBox({ darkMode }) {
               }`}
               onClick={() => changeLang('it')}
             >
-              IT
+              {currentLang.it}
+            </a>
+          </Link>
+          <Link href={router.pathname} locale="cn">
+            <a
+              className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                darkMode ? 'text-white' : 'text-cool-gray-80'
+              }`}
+              onClick={() => changeLang('cn')}
+            >
+              {currentLang.cn}
             </a>
           </Link>
         </div>

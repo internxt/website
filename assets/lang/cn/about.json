@@ -1,0 +1,73 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "我们设计和建造",
+      "line2": {
+        "substring1": "世界级的",
+        "substring2": "的应用程序"
+      },
+      "line3": {
+        "substring1": "构建世界级的应用程序，重视数字",
+        "substring2": "权利"
+      }
+    },
+    "figures": {
+      "activeUsers": {
+        "figure": "1M",
+        "caption": "Users trust Internxt"
+      },
+      "awards": {
+        "figure": "30",
+        "caption": "Awards and Mentions"
+      }
+    },
+    "description": {
+      "line1": "我们创造强大的工具和服务，尊重并赋予用户权力。",
+      "line2": ""
+    },
+    "recognitions": {
+      "title": "因出色的工作而自豪地获得认可",
+      "brands": {
+        "forbes": {
+          "caption1": "Next 1000"
+        },
+        "southsummit": {
+          "caption1": "Best Startup"
+        },
+        "tnw": {
+          "caption1": "T500"
+        },
+        "startupvalencia": {
+          "caption1": "Best Startup"
+        }
+      }
+    }
+  },
+  "CompanySection": {
+    "values": {
+      "title": "我们的核心价值观",
+      "items": {
+        "achieve": {
+          "title": "Effort",
+          "description": "We are sure that something seems impossible because it has not been tried enough. We strive to push the limits of technology even further to provide innovative solutions."
+        },
+        "privacy": {
+          "title": "Learning",
+          "description": "Developing periodic iterations of several products at once pushes us to be on the move and never settle. We are always looking for ways to learn and improve our products."
+        },
+        "family": {
+          "title": "Team",
+          "description": "Whether you work from home or come to the office, we want you to feel like part of the family. We love spending time together both on and off the office hours."
+        },
+        "growth": {
+          "title": "Compromise",
+          "description": "We are shaping the technology we would love to use in the future, led by security, privacy, and user-centered design. We are committed to creating technology that respects people."
+        }
+      }
+    },
+    "careers": {
+      "title": "让我们一起建设更美好的未来",
+      "link": "Internxt 的职业"
+    }
+  }
+}

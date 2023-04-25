@@ -1,0 +1,186 @@
+{
+  "HeroSection": {
+    "eyebrow": "INTERNXT DRIVE",
+    "title": {
+      "line1": "最安全的云存储 ",
+      "line2": "你的所有文件、照片和更多"
+    },
+    "subtitle": {
+      "line1": "在完全隐私的情况下存储、备份和共享您的文件再简单不过了。",
+      "line2": "通过Internxt Drive，我们专注于对用户友好的加密和军事级别的存储。",
+      "line3": "文件经过加密和拆分，所以只有你能控制你的文件和数据。"
+    },
+    "DownloadLinks": {
+      "or": "或",
+      "downloadFor": "下载为",
+      "orDownloadFor": "或下载为",
+      "downloadOnThe": "在上下载",
+      "orDownloadOnThe": "或在上下载",
+      "getOn": "上车",
+      "orGetOn": "或上车",
+      "openDriveWeb": "打开驱动网",
+      "iPhone": "应用商店",
+      "iPad": "应用商店",
+      "Android": "播放商店",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "各类文件",
+        "line2": "各类设备"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "你的所有文件",
+        "line2": "都可以在",
+        "line3": "您的所有设备"
+      },
+      "subtitle": {
+        "line1": "从你的电脑、智能手机和平板电脑安全地访问你的所有文件",
+        "line2": "你的电脑、智能手机、平板电脑 ",
+        "line3": "或任何连接互联网的设备 ",
+        "line4": "具备最安全的云存储应用 ",
+        "line5": "存储应用。"
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "让你的文件井井有条,",
+        "line2": "并可从任何地方访问。",
+        "line3": "",
+        "line4": ""
+      },
+      "subtitle": {
+        "line1": "Internxt Drive让你在文件夹中组织你的",
+        "line2": "文件夹中，重命名它们，并过滤",
+        "line3": "文件列表，以便更快地找到你想要的东西。",
+        "line4": "你甚至可以备份你的电脑",
+        "line5": "文件夹，比如你的文档文件夹，所以",
+        "line6": "你总是有最新的",
+        "line7": "你最重要的文件的最新变化。"
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "轻松地分享你的文件、",
+        "line2": "我们负责",
+        "line3": "的安全问题"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive专注于隐私和",
+        "line2": "安全性，所以你只需要关注",
+        "line3": "对你来说很重要的事情，比如与同事分享",
+        "line4": "与同事分享文件或飞机票",
+        "line5": "与你的家人分享文件或机票。你 ",
+        "line6": "你可以选择你想与谁分享",
+        "line7": "哪些人，以及你希望下载多少次",
+        "line8": "他们被下载的次数。"
+      }
+    },
+    "section5": {
+      "eyebrow": "NEW FEATURE",
+      "title": {
+        "line1": "备份重要的东西",
+        "line2": "对你来说很重要"
+      },
+      "subtitle": {
+        "line1": "现在你可以保留你的那个超级重要的项目的最后一个版本",
+        "line2": "你正在进行的那个超级重要项目的",
+        "line3": "你正在进行的那个超级重要的项目的最后一个版本，你的文档文件夹、",
+        "line4": "或你的大学作业、",
+        "line5": "都安全地保存在你的Internxt Drive中。"
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "同步你的文件",
+        "line2": "在完全保密的情况下"
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "你的所有文件",
+        "line2": "安全和隐私"
+      },
+      "subtitle": {
+        "line1": "隐私和安全是我们一切工作的核心，我们的业务并不依赖于数据或广告，而是依赖于",
+        "line2": "于信任。我们尊重你的权利，并围绕它们建立惊人的工具，而不是反对它们。"
+      },
+      "cta": "我们对隐私的承诺",
+      "card1": {
+        "title": "军用级加密",
+        "subtitle": "我们非常重视你的隐私，这就是为什么你的文件是加密的，只有你能访问你的文件。"
+      },
+      "card2": {
+        "title": "零知识技术",
+        "subtitle": "我们从不以未加密或未散列的形式存储或传输文件、用户密码或加密密钥。"
+      },
+      "card3": {
+        "title": "为隐私而生",
+        "subtitle": "我们在开发产品时考虑到了用户，在我们所处的数据驱动的世界里，用户的隐私是必须的。"
+      },
+      "card4": {
+        "title": "来自核心的安全",
+        "subtitle": "由于安全缺陷和丑闻是每天的新闻，我们确保我们的系统保持你的数据和文件不受攻击。"
+      }
+    },
+    "DownloadLinks": {
+      "or": "或",
+      "downloadFor": "下载为",
+      "orDownloadFor": "或下载为",
+      "downloadOnThe": "在上下载",
+      "orDownloadOnThe": "或在上下载",
+      "getOn": "上车",
+      "orGetOn": "或上车",
+      "openDriveWeb": "打开驱动网",
+      "iPhone": "应用商店",
+      "iPad": "应用商店",
+      "Android": "播放商店",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FaqSection": {
+    "title": "问题？我们有答案",
+    "faq": [
+      {
+        "question": "什么是Internxt Drive?",
+        "answer": [
+          "Internxt Drive是一个零知识的文件存储服务，为绝对的隐私和严格的安全而建立。我们的服务不会访问你的个人数据或文件。相反，它的目的是让你重新控制你的文件，并保护你免受数据收集者的影响。"
+        ]
+      },
+      {
+        "question": "如何创建一个Internxt账户？",
+        "answer": [
+          "前往我们的网站，点击右上角的'开始'。通过输入电子邮件地址填写注册表，然后创建你的密码。开始使用Internxt的服务时，不需要身份或电子邮件验证。"
+        ]
+      },
+      {
+        "question": "如何上传文件到Internxt Drive",
+        "answer": [
+          "访问Drive Web并登录。把你选择的文件或照片直接拖到浏览器窗口。你也可以点击浏览器右上角的'新建'，这将打开资源管理器或查找器，并选择你想上传的文件。"
+        ]
+      },
+      {
+        "question": "如何安装Internxt的应用程序？",
+        "answer": [
+          "进入Internxt网站，向下滚动主页，并选择'下载应用程序'。Internxt应用程序也可以在Play Store或App Store中找到。一旦下载过程完成，你将被要求运行该应用程序。"
+        ]
+      },
+      {
+        "question": "我可以用Internxt配置2FA吗？",
+        "answer": [
+          "是的，你可以为你的Internxt账户配置双因素认证（2FA），从Drive Web应用程序。此外，你可以使用Authy或任何其他2FA工具，用Internxt生成你的2FA代码。"
+        ]
+      }
+    ]
+  }
+}

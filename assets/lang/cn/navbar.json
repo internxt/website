@@ -1,0 +1,84 @@
+{
+  "links": {
+    "products": "Products",
+    "about": "About us",
+    "privacy": "Privacy",
+    "pricing": "Pricing",
+    "login": "Log in",
+    "getStarted": "Get started",
+    "checkout": "Claim now!"
+  },
+  "products": {
+    "drive": "Drive",
+    "photos": "Photos",
+    "send": "Send",
+    "comingSoon": "Coming soon",
+    "new": "New"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Create an Internxt account",
+      "or": "or",
+      "login": "Log in",
+      "disclaimer": {
+        "text": "By creating an account you accept the",
+        "link": "terms and conditions"
+      },
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
+        },
+        "submit": "Get started"
+      }
+    },
+    "LogIn": {
+      "title": "Log in to Internxt",
+      "or": "or",
+      "signup": "Create account",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "helper": "Forgot your password?"
+        },
+        "tfa": {
+          "label": "Two Factor Authentication",
+          "placeholder": "2FA Code",
+          "hint": "2FA Code must be 6 digits"
+        },
+        "submit": "Log in"
+      }
+    },
+    "Recover": {
+      "title": "Recover account",
+      "back": "Back to log in",
+      "disclaimer": "As specified in the app settings, only you have access to your password, therefore we can't restore your account without it. You can sign up again by entering your email below so we can delete your account and all your files.",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "submit": "Send confirmation email"
+      },
+      "success": {
+        "title": "Check your email",
+        "subtitle": "We've send an account reset link to"
+      }
+    }
+  }
+}

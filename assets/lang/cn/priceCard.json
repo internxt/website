@@ -1,0 +1,70 @@
+{
+  "mostPopular": "最受欢迎",
+  "mostPopularPlan": "最受欢迎的计划",
+  "valentines": "Special Valentine’s Day offer!",
+  "onlyForNewClients": "Only for new subscriptors or free plan users",
+  "planTitles": {
+    "individuals": "针对个人的计划",
+    "business": "业务计划",
+    "lifetimeCampaign": {
+      "blueText": "Get 50% OFF",
+      "normalText": "all our exclusive lifetime plans"
+    }
+  },
+  "lifetimeDescription": "购买一次，永远获得隐私和安全。",
+  "planDescription": "所有Internxt计划都有完整的功能，可以完全访问我们所有的隐私服务。所有形状和大小的安全。",
+  "changePlan": {
+    "toIndividuals": "改变为个人的计划",
+    "toBusiness": "变更为企业的计划"
+  },
+  "billingFrequency": {
+    "monthly": "月度",
+    "semiannually": "Semiannually",
+    "annually": "每年一次",
+    "lifetime": "终身"
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "一次性付款",
+    "monthly": "按月结算",
+    "semiannually": "每半年结算一次",
+    "annually": "每年计费",
+    "afterMonth": "30天之后"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/每月",
+    "semiannually": "/半年度",
+    "annually": "/每年"
+  },
+  "perUserSlash": "/用户",
+  "perUser": "每个用户",
+  "users": "用户",
+  "freePlan": "免费",
+  "price": {
+    "freeForever": "永远免费",
+    "free": "高达"
+  },
+  "perMonth": "/月",
+  "firstMonth": "前30天",
+  "cta": {
+    "getStarted": "开始",
+    "signUpNow": "现在注册",
+    "buy": "买",
+    "get": "获得",
+    "discount": "获得80%的折扣",
+    "claimTheDeal": "声称交易",
+    "freemonth": "免费获得30天"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "享受",
+      "enjoyUpTo": "享受至多",
+      "forFree": "免费的",
+      "forever": "永远"
+    },
+    "moneyBack": "30天退款保证",
+    "encryptedFiles": "加密的文件存储和共享",
+    "accessFromAnywhere": "从任何设备上访问你的文件",
+    "allServices": "获得我们所有的服务",
+    "dataAccess": "没有未经授权的数据访问"
+  }
+}
