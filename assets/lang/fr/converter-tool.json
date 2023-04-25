@@ -1,0 +1,213 @@
+{
+  "HeroSection": {
+    "title": "Byte Converter: TB to GB",
+    "description": "Convert terabytes to gigabytes to megabytes!",
+    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many Gb in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
+  },
+  "ExplanationSection": {
+    "convertTo": {
+      "title": "How to convert terabytes to gigabytes or gigabytes to terabytes?",
+      "description": "Enter a value in the 'Gigabytes' section and your answer will appear in the 'Terabytes' section."
+    },
+    "convertToAgain": {
+      "title": "How to convert GB to TB and back again?",
+      "description": "Not sure if you have enough space on your device? Worried your hard drive is to small? Wondering how many 1GB files can fit in 2TB of cloud storage? Use our free byte converter and storage calculator to know exactly how many kilobytes, megabytes, gigabytes, or terabytes your files take up."
+    },
+    "whyUseConverter": {
+      "title": "Why use a byte converter and storage calculator tool?",
+      "description": [
+        { "adv": "Determine exactly how much cloud storage you need for your files" },
+        { "adv": "Make sure your files transfers fall under upload and download limits" },
+        { "adv": "Convert byte values without the help of a calculator or pen and paper" },
+        { "adv": "Quickly find out how much phone storage space you have left" },
+        { "adv": "Discover how much data your hard drive or portable drive can support" }
+      ]
+    },
+    "MBMeaning": {
+      "title": "MB meaning?",
+      "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
+    }
+  },
+  "infoSection": {
+    "title": "What is the difference between GB and TB and so on?",
+    "description": "Want to know how many GB in a TB? Or, without the abbreviations, how many gigabytes are in a terabyte? First, you need to understand what a byte is, then it's super simple to know the difference between MB to KB or MB to GB.",
+    "faq": {
+      "faq": [
+        {
+          "question": "What is a byte?",
+          "answer": [
+            "A byte (B) is the smallest unit of digital information. It’s a unit of digital information that most commonly consists of eight bits. A file is made up of so many bytes–the more bytes, the bigger the file."
+          ]
+        },
+        {
+          "question": "What is a kilobyte?",
+          "answer": [
+            "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
+          ]
+        },
+        {
+          "question": "What is a megabyte?",
+          "answer": [
+            "A megabyte (MB) is a multiple of the digital informational unit byte. The suggested unit symbol for it is MB. In the International System of Units (SI), the unit prefix mega is multiplied by 100,000 to determine the unit. As a result, one megabyte is equal to one million bytes of data."
+          ]
+        },
+        {
+          "question": "What is a gigabyte?",
+          "answer": [
+            "A gigabyte (GB) is a multiple of the digital informational unit byte. A gigabyte is equal to one billion bytes. The gigabyte is denoted by the letters GB."
+          ]
+        },
+        {
+          "question": "What is a terabyte?",
+          "answer": [
+            "Digital data is measured in terabytes (TB), which are about 1 trillion bytes. A terabyte is exactly 1 trillion bytes when written in decimal notation (base 10). A terabyte, or 1,099,511,627,776 bytes, is equivalent to 240 bytes in binary notation."
+          ]
+        },
+        {
+          "question": "What's next?",
+          "answer": [
+            "A terabyte (TB) is then followed in the same pattern exponentially by a petabyte (PB), then exabyte (EB), then zetabyte (ZB), then yottabyte (YB), and then anything bigger than that is difficult to fathom."
+          ]
+        }
+      ]
+    }
+  },
+  "ConversionTableSection": {
+    "title": "Byte Conversion Chart",
+    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many KB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:",
+    "header": {
+      "unit": "Unit",
+      "abbr": "Abbreviation",
+      "decValue": "Decimal value",
+      "decSize": "Decimal size"
+    },
+    "firstRow": {
+      "unit": "Bit",
+      "abbr": "b",
+      "decValue": "0 or 1",
+      "decSize": "⅛ of a byte"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers.",
+    "faq": {
+      "faq": [
+        {
+          "question": "How do I use the Byte Converter?",
+          "answer": [
+            "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
+          ]
+        },
+        {
+          "question": "How do I convert terabytes to gigabytes and so on?",
+          "answer": [
+            "Simply input the byte value you want to convert into our Byte Converter and select the byte value you want to reformat in, the value will automatically be converted and displayed.",
+            "You may also use the conversion chart listed above if you want to manually do the calculation."
+          ]
+        },
+        {
+          "question": "How many gigabytes equal one terabyte?",
+          "answer": ["1024 GB equals 1 TB. So one TB of storage can hold 1024 GB of data."]
+        },
+        {
+          "question": "What is the difference between TB and GB?",
+          "answer": [
+            "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a KB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
+            "If you would like to see how they all stack up against each other or what’s MB meaning or what’s bigger than a terabyte, check out the conversion chart above on the page."
+          ]
+        },
+        {
+          "question": "Why is my 1 TB disk not 1 TB?",
+          "answer": [
+            "Though your 1 TB drive is listed as having 1 TB worth of storage, typically, you won’t be able to use the whole amount as part of the drive may be used for operational files."
+          ]
+        },
+        {
+          "question": "How much is 2TB?",
+          "answer": [
+            "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
+          ]
+        },
+        {
+          "question": "How much is 1TB?",
+          "answer": [
+            "1 terabyte (TB) equals 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+          ]
+        }
+      ]
+    }
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "How many GB to a TB?",
+        "answer": [
+          "Use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
+        ]
+      },
+      {
+        "question": "How many TB to GB?",
+        "answer": [
+          "If you want to know how many terabytes are in a gigabyte, use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
+        ]
+      },
+      {
+        "question": "What is a byte?",
+        "answer": [
+          "A byte (B) is the smallest unit of digital information. It’s a unit of digital information that most commonly consists of eight bits. A file is made up of so many bytes–the more bytes, the bigger the file."
+        ]
+      },
+      {
+        "question": "What is a kilobyte?",
+        "answer": [
+          "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
+        ]
+      },
+      {
+        "question": "What is a megabyte?",
+        "answer": [
+          "A megabyte (MB) is a multiple of the digital informational unit byte. The suggested unit symbol for it is MB. In the International System of Units (SI), the unit prefix mega is multiplied by 100,000 to determine the unit. As a result, one megabyte is equal to one million bytes of data."
+        ]
+      },
+      {
+        "question": "What is a gigabyte?",
+        "answer": [
+          "A gigabyte (GB) is a multiple of the digital informational unit byte. A gigabyte is equal to one billion bytes. The gigabyte is denoted by the letters GB."
+        ]
+      },
+      {
+        "question": "What is a terabyte?",
+        "answer": [
+          "Digital data is measured in terabytes (TB), which are about 1 trillion bytes. A terabyte is exactly 1 trillion bytes when written in decimal notation (base 10). A terabyte, or 1,099,511,627,776 bytes, is equivalent to 240 bytes in binary notation."
+        ]
+      },
+      {
+        "question": "How much is 2TB?",
+        "answer": [
+          "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
+        ]
+      },
+      {
+        "question": "How much is 1TB?",
+        "answer": [
+          "1 terabyte (TB) equals 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+        ]
+      }
+    ]
+  },
+  "ctaSection1": {
+    "title": "Got tons of stored data?",
+    "description": "Protect your GB and TB with Internxt secure cloud storage.",
+    "cta": "Create account"
+  },
+  "ctaSection2": {
+    "title": "The more you save, the more to protect!",
+    "description": "Backup and safely store all your files with Internxt.",
+    "cta": "Create account"
+  },
+  "ctaSection3": {
+    "title": "Safety is only a click away",
+    "description": "Protect your personal data with Internxt's privacy suite.",
+    "cta": "Create account"
+  }
+}

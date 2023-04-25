@@ -56,14 +56,7 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  if (lang === 'fr') {
-    return {
-      redirect: {
-        destination: '/virus-scanner',
-        permanent: false,
-      },
-    };
-  }
+
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/virus-scanner.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);

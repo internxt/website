@@ -36,7 +36,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section className="">
-      <div className="mx-3 flex pt-32 pb-20 md:mx-10 lg:mx-32">
+      <div className="mx-3 flex pt-44 pb-20 md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
           <div className=" flex w-full max-w-[700px] flex-col items-center justify-center text-center">
@@ -64,6 +64,7 @@ const HeroSection = ({ textContent }) => {
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     alt="convert to"
                     value={value1}
+                    autoComplete="off"
                     type="number"
                     onChange={(e) => {
                       if (!e.target.value) {
@@ -107,6 +108,7 @@ const HeroSection = ({ textContent }) => {
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     value={value2}
                     type="number"
+                    autoComplete="off"
                     onChange={(e) => {
                       if (e.target.value === '') {
                         setValue1('');
