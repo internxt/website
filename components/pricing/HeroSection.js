@@ -60,13 +60,13 @@ const HeroSection = ({ textContent }) => {
             >
               {textContent.cta.title}
             </button>
-            <p className="max-w-[275px] text-sm text-gray-50">{textContent.cta.description}</p>
+            <p className="max-w-[290px] text-sm text-gray-50">{textContent.cta.description}</p>
           </div>
         </div>
         <div className="flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1 shadow-2xl">
           <Image
-            alt="Woman with laptop"
-            src="/images/pricing/WomanWithLaptop.png"
+            alt="woman using file storage"
+            src="/images/pricing/woman-using-file-storage.png"
             className=" rounded-3xl"
             width={496}
             height={520}
