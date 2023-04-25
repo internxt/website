@@ -66,15 +66,6 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  if (lang === 'fr') {
-    return {
-      redirect: {
-        destination: '/byte-converter',
-        permanent: false,
-      },
-    };
-  }
-
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/converter-tool.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);

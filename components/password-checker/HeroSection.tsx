@@ -80,7 +80,7 @@ const HeroSection = ({ textContent }) => {
   };
 
   return (
-    <section className="relative flex flex-col items-center space-y-12 bg-white pt-32 pb-10 sm:pb-16 md:space-y-16">
+    <section className="relative flex flex-col items-center space-y-12 bg-white pt-44 pb-10 sm:pb-16 md:space-y-16">
       <div className="flex flex-col items-center space-y-5 px-4 text-center lg:px-0">
         <h1 className="text-3xl font-medium lg:text-5xl">{textContent.title}</h1>
         <h2 className="text-lg font-normal text-gray-80 lg:text-xl">

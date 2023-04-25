@@ -58,15 +58,6 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  if (lang === 'fr') {
-    return {
-      redirect: {
-        destination: '/password-checker',
-        permanent: false,
-      },
-    };
-  }
-
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/password-checker.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
