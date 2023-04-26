@@ -1,11 +1,11 @@
 {
   "HeroSection": {
     "title": "Free Temporary Email",
-    "subtitle": "Email anonymously with our free, private, and secure temporary email address generator.",
+    "subtitle": "Receive emails anonymously with our free, private, and secure temporary email address generator.",
     "generatingEmail": "Generating random email...",
     "copyEmail": "Copy email",
     "deleteEmail": "Delete email",
-    "expireEmail": "Email and inbox will expire after 3 hours of inactivity",
+    "expireEmail": "Email address and inbox will expire after 3 hours of inactivity",
     "inbox": {
       "title": "Inbox",
       "youHave": "You have",
@@ -62,11 +62,11 @@
           "description": "Receive the emails you expect instantly. It’s temporary mail, not instantly disposable mail."
         },
         {
-          "title": "Message anonymously from a random address",
+          "title": "Sign up anonymously from a random address",
           "description": "Not sure if your intended recipient can be trusted? Is the site you want to contact suspicious? Afraid of malware? Use a random address thanks to Internxt's fake address generator."
         },
         {
-          "title": "No need for a temp or new Gmail account",
+          "title": "No need for a Gmail account",
           "description": "Don’t juggle real accounts anymore. With Internxt's fake mail, simply create an account, use it, and ditch it when you're ready. Don’t get weighed down managing multiple accounts."
         },
         {
