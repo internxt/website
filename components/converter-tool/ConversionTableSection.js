@@ -87,7 +87,11 @@ const ConversionTableSection = ({ textContent, lang }) => {
     {
       unit: 'Zettabyte',
       abbreviation: 'ZB',
-      decimalValue: '1000¹ bytes',
+        decimalValue: (
+        <>
+          1000<sup>7</sup> bytes
+        </>
+      ),
       decimalSize: '1,000,000,000,000,000,000,000 bytes',
     },
     {
