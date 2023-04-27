@@ -48,20 +48,20 @@
       "title": "我们的核心价值观",
       "items": {
         "achieve": {
-          "title": "Effort",
-          "description": "We are sure that something seems impossible because it has not been tried enough. We strive to push the limits of technology even further to provide innovative solutions."
+          "title": "当努力与道德相遇时，成功就会到来 ",
+          "description": "我们确信，当某件事看起来不可能时，那只是因为还没有足够的尝试。 我们正在进一步突破技术极限，为现代问题提供创新和合乎道德的解决方案。"
         },
         "privacy": {
-          "title": "Learning",
-          "description": "Developing periodic iterations of several products at once pushes us to be on the move and never settle. We are always looking for ways to learn and improve our products."
+          "title": "生活和工作学习",
+          "description": "同时开发多个产品的周期性迭代会促使我们不断前进，并迫使我们永不满足。 我们愿意出于正确的理由承担一些风险，并且一直在寻求学习和改进我们的产品。"
         },
         "family": {
-          "title": "Team",
-          "description": "Whether you work from home or come to the office, we want you to feel like part of the family. We love spending time together both on and off the office hours."
+          "title": "我们的核心价值观",
+          "description": "无论您是在家工作还是喜欢将一切都留在办公室，我们都希望您感觉自己是团队中重要的一员。 没有我们的团队成员，Internx 什么都不是。 我们分享奋斗，我们分享成功。"
         },
         "growth": {
-          "title": "Compromise",
-          "description": "We are shaping the technology we would love to use in the future, led by security, privacy, and user-centered design. We are committed to creating technology that respects people."
+          "title": "妥协，这并不是我们的原则",
+          "description": "我们正在开发我们希望在未来看到的技术。 仅受安全、隐私和以用户为中心的设计的限制，我们构建的一切都必须改善人类的在线体验并尊重基本的数字权利。"
         }
       }
     },

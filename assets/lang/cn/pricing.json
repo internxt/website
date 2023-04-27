@@ -1,21 +1,21 @@
 {
   "HeroSection": {
-    "title": { "line1": "80%的折扣", "line2": "我们的2TB计划" },
+    "title": { "line1": "80% OFF", "line2": "our 2TB plan" },
     "feeds": {
-      "firstFeed": "30天退款保证",
-      "secondFeed": "100%安全支付",
-      "thirdFeed": "匿名账户创建"
+      "firstFeed": "30-day money-back guarantee",
+      "secondFeed": "100% secure payment",
+      "thirdFeed": "Anonymous account creation"
     },
     "cta": {
-      "title": "2TB获得80%的折扣",
-      "description": "优惠有效期为一年。计划将在下一年以非折扣价续订。"
+      "title": "Get 80% off 2TB",
+      "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },
   "tableSection": {
     "featureSection": {
-      "firstFeature": "30天退款保证",
-      "secondFeature": "100%安全支付",
-      "thirdFeature": "匿名账户创建"
+      "firstFeature": "30-day money-back guarantee",
+      "secondFeature": "100% secure payment",
+      "thirdFeature": "Anonymous account creation"
     }
   },
   "FaqSection": {

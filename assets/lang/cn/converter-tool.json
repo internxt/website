@@ -1,137 +1,135 @@
 {
   "HeroSection": {
-    "title": "Byte Converter: TB to GB",
-    "description": "Convert terabytes to gigabytes to megabytes!",
-    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many Gb in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
+    "title": "字节转换器：从TB 到 GB",
+    "description": "将太字节转换为千兆字节再转换为兆字节！",
+    "description1": "MB 到 KB、GB 到 TB 或 MB 到 GB 等等。 使用 Internxt 的免费字节转换器，了解一个 TB 中有多少 Gb，或者您真正还剩下多少云、手机或驱动器存储空间。"
   },
   "ExplanationSection": {
     "convertTo": {
-      "title": "How to convert terabytes to gigabytes or gigabytes to terabytes?",
-      "description": "Enter a value in the 'Gigabytes' section and your answer will appear in the 'Terabytes' section."
+      "title": "如何将太字节转换为千兆字节或千兆字节转换为太字节？",
+      "description": "在“千兆字节”部分输入一个值，您的答案将显示在“兆字节”部分。"
     },
     "convertToAgain": {
-      "title": "How to convert GB to TB and back again?",
-      "description": "Not sure if you have enough space on your device? Worried your hard drive is to small? Wondering how many 1GB files can fit in 2TB of cloud storage? Use our free byte converter and storage calculator to know exactly how many kilobytes, megabytes, gigabytes, or terabytes your files take up."
+      "title": "如何将 GB 转换为 TB，然后再转换回来？",
+      "description": "不确定您的设备上是否有足够的空间？ 担心你的硬盘太小？ 想知道 2TB 的云存储可以容纳多少 1GB 的文件？ 使用我们的免费字节转换器和存储计算器可以准确了解您的文件占用了多少千字节、兆字节、千兆字节或太字节。"
     },
     "whyUseConverter": {
-      "title": "Why use a byte converter and storage calculator tool?",
+      "title": "为什么要使用字节转换器和存储计算器工具？",
       "description": [
-        { "adv": "Determine exactly how much cloud storage you need for your files" },
-        { "adv": "Make sure your files transfers fall under upload and download limits" },
-        { "adv": "Convert byte values without the help of a calculator or pen and paper" },
-        { "adv": "Quickly find out how much phone storage space you have left" },
-        { "adv": "Discover how much data your hard drive or portable drive can support" }
+        { "adv": "准确确定您的文件需要多少云存储空间" },
+        { "adv": "确保您的文件传输在上传和下载限制之内" },
+        { "adv": "无需计算器或笔和纸的帮助即可转换字节值r" },
+        { "adv": "快速查看您的手机剩余存储空间" },
+        { "adv": "了解您的硬盘驱动器或便携式驱动器可以支持多少数据" }
       ]
     },
     "MBMeaning": {
-      "title": "MB meaning?",
-      "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
+      "title": "MB是什么意思？",
+      "description": "无论是 MB、KB、TB 还是 GB，所有这些缩写都代表字节数。 字节数或字节数用于衡量数字信息的大小或数量。"
     }
   },
   "infoSection": {
-    "title": "What is the difference between GB and TB and so on?",
-    "description": "Want to know how many GB in a TB? Or, without the abbreviations, how many gigabytes are in a terabyte? First, you need to understand what a byte is, then it's super simple to know the difference between MB to KB or MB to GB.",
+    "title": "GB和TB 等有什么区别?",
+    "description": "想知道一个 TB 中有多少 GB？ 或者，如果没有缩写，一 TB 中有多少 GB？ 首先，您需要了解什么是字节，然后非常简单地了解 MB 到 KB 或 MB 到 GB 之间的区别。",
     "faq": {
       "faq": [
         {
-          "question": "What is a byte?",
+          "question": "什么是字节?",
           "answer": [
-            "A byte (B) is the smallest unit of digital information. It’s a unit of digital information that most commonly consists of eight bits. A file is made up of so many bytes–the more bytes, the bigger the file."
+            "字节（B）是数字信息的最小单位。 它是一个数字信息单元，通常由八位组成。 一个文件由很多字节组成——字节越多，文件越大."
           ]
         },
         {
-          "question": "What is a kilobyte?",
+          "question": "什么是千字节？",
           "answer": [
-            "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
+            "千字节 (KB) 是数字信息单位字节的倍数。 根据国际单位制 (SI) 中前缀千的含义，即 1,000，一千字节等于 1,000 字节。 千字节由全球接受的单位符号 KB 表示。"
           ]
         },
         {
-          "question": "What is a megabyte?",
+          "question": "什么是兆字节？",
           "answer": [
-            "A megabyte (MB) is a multiple of the digital informational unit byte. The suggested unit symbol for it is MB. In the International System of Units (SI), the unit prefix mega is multiplied by 100,000 to determine the unit. As a result, one megabyte is equal to one million bytes of data."
+            "兆字节 (MB) 是数字信息单位字节的倍数。 建议的单位符号是 MB。 在国际单位制 (SI) 中，单位前缀兆乘以 100,000 来确定单位。 因此，一兆字节等于一百万字节的数据。"
           ]
         },
         {
-          "question": "What is a gigabyte?",
+          "question": "什么是千兆字节？",
+          "answer": ["千兆字节 (GB) 是数字信息单位字节的倍数。 一千兆字节等于十亿字节。 千兆字节由字母 GB 表示。"]
+        },
+        {
+          "question": "什么是太字节？",
           "answer": [
-            "A gigabyte (GB) is a multiple of the digital informational unit byte. A gigabyte is equal to one billion bytes. The gigabyte is denoted by the letters GB."
+            "数字数据以太字节 (TB) 为单位，大约为 1 万亿字节。 以十进制表示法（基数 10）表示时，1 TB 恰好是 1 万亿字节。 1 TB 或 1,099,511,627,776 字节相当于二进制表示法中的 240 字节。"
           ]
         },
         {
-          "question": "What is a terabyte?",
+          "question": "下一步是什么？",
           "answer": [
-            "Digital data is measured in terabytes (TB), which are about 1 trillion bytes. A terabyte is exactly 1 trillion bytes when written in decimal notation (base 10). A terabyte, or 1,099,511,627,776 bytes, is equivalent to 240 bytes in binary notation."
-          ]
-        },
-        {
-          "question": "What's next?",
-          "answer": [
-            "A terabyte (TB) is then followed in the same pattern exponentially by a petabyte (PB), then exabyte (EB), then zetabyte (ZB), then yottabyte (YB), and then anything bigger than that is difficult to fathom."
+            "太字节 (TB) 之后以相同的模式呈指数增长，然后是拍字节 (PB)、艾字节 (EB)、泽字节 (ZB)、亿字节 (YB)，然后任何比这更大的数字都难以理解。"
           ]
         }
       ]
     }
   },
   "ConversionTableSection": {
-    "title": "Byte Conversion Chart",
-    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many KB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:",
+    "title": "字节转换表",
+    "description": "对多少 GB 等于 1 TB 感到困惑？ 或者 1 TB 中有多少 GB？ 想知道 1 GB 中有多少 MB 或 1 MB 中有多少 KB 或 TB 中有多少 GB 等等？ 使用下面我们方便的字节转换表自行转换字节值：",
     "header": {
-      "unit": "Unit",
-      "abbr": "Abbreviation",
-      "decValue": "Decimal value",
-      "decSize": "Decimal size"
+      "unit": "单位",
+      "abbr": "缩写",
+      "decValue": "十进制值",
+      "decSize": "十进制大小"
     },
     "firstRow": {
       "unit": "Bit",
       "abbr": "b",
-      "decValue": "0 or 1",
-      "decSize": "⅛ of a byte"
+      "decValue": "0 或 1",
+      "decSize": "⅛ 个字节"
     }
   },
   "FaqSection": {
-    "title": "Questions? We have answers.",
+    "title": "问题？ 我们有答案。",
     "faq": {
       "faq": [
         {
-          "question": "How do I use the Byte Converter?",
+          "question": "如何使用字节转换器？",
           "answer": [
-            "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
+            "选择要转换的值，然后选择要将其转换成的值（例如：KB 到 MB）。 在左侧的第一部分中输入一个值，您的答案将出现在右侧的第二部分中。"
           ]
         },
         {
-          "question": "How do I convert terabytes to gigabytes and so on?",
+          "question": "如何将太字节转换为千兆字节等？",
           "answer": [
-            "Simply input the byte value you want to convert into our Byte Converter and select the byte value you want to reformat in, the value will automatically be converted and displayed.",
-            "You may also use the conversion chart listed above if you want to manually do the calculation."
+            "只需将要转换的字节值输入我们的字节转换器并选择要重新格式化的字节值，该值将自动转换并显示。",
+            "如果您想手动进行计算，您也可以使用上面列出的换算表。"
           ]
         },
         {
-          "question": "How many gigabytes equal one terabyte?",
-          "answer": ["1024 GB equals 1 TB. So one TB of storage can hold 1024 GB of data."]
+          "question": "多少 GB 等于 1 TB？",
+          "answer": ["1024 GB 等于 1 TB。 因此 1 TB 的存储可以容纳 1024 GB 的数据。"]
         },
         {
-          "question": "What is the difference between TB and GB?",
+          "question": "TB 和 GB 有什么区别？",
           "answer": [
-            "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a KB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
-            "If you would like to see how they all stack up against each other or what’s MB meaning or what’s bigger than a terabyte, check out the conversion chart above on the page."
+            "TB 和 GB 只是大小不同。 1 TB 由比 1 GB 多的字节（最小数据单位）组成。 一般来说，B小于KB，MB大于KB，GB更大，TB更大。",
+            "如果您想了解它们是如何相互叠加的，或者 MB 是什么意思，或者什么比 TB 大，请查看页面上方的转换表."
           ]
         },
         {
-          "question": "Why is my 1 TB disk not 1 TB?",
+          "question": "为什么我的 1 TB 磁盘不是 1 TB？",
           "answer": [
-            "Though your 1 TB drive is listed as having 1 TB worth of storage, typically, you won’t be able to use the whole amount as part of the drive may be used for operational files."
+            "虽然您的 1 TB 驱动器被列为具有 1 TB 的存储空间，但通常情况下，您将无法使用全部容量，因为驱动器的一部分可能用于操作文件。"
           ]
         },
         {
-          "question": "How much is 2TB?",
+          "question": "2TB是多少？",
           "answer": [
-            "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
+            "2 太字节 (TB) 等于 2,000 千兆字节 (GB) 或 2,000,000 兆字节 (MB)。 凭借 2TB 的数据，您可以使用当今的智能手机平均存储 200,000 张照片，大约 500,000 份文档可以存储在 2TB 的驱动器上。"
           ]
         },
         {
-          "question": "How much is 1TB?",
+          "question": "1TB是多少?",
           "answer": [
-            "1 terabyte (TB) equals 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+            "1 太字节 (TB) 等于 1,000 千兆字节 (GB) 或 1,000,000 兆字节 (MB)。 使用 1TB 的数据，您可以使用当今的智能手机平均存储 100,000 张照片，大约 250,000 份文档可以存储在 1TB 的驱动器上。"
           ]
         }
       ]
@@ -140,74 +138,72 @@
   "SchemaMarkupQuestions": {
     "faq": [
       {
-        "question": "How many GB to a TB?",
+        "question": "多少 GB 到 TB？",
         "answer": [
-          "Use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
+          "使用我们的免费字节转换器并找出答案！ Internxt 的字节转换器是一种安全工具，可让您将 TB 转换为 GB 等。 MB 到 KB、GB 到 TB 或 MB 到 GB——只要您输入数量，就可以快速转换您能想到的任何组合。"
         ]
       },
       {
-        "question": "How many TB to GB?",
+        "question": "多少 TB 到 GB？",
         "answer": [
-          "If you want to know how many terabytes are in a gigabyte, use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
+          "如果您想知道 1 GB 中有多少 TB，请使用我们的免费字节转换器并找出答案！ Internxt 的字节转换器是一种安全工具，可让您将 TB 转换为 GB 等。 MB 到 KB、GB 到 TB 或 MB 到 GB——只要您输入数量，就可以快速转换您能想到的任何组合。"
         ]
       },
       {
-        "question": "What is a byte?",
+        "question": "什么是字节？",
         "answer": [
-          "A byte (B) is the smallest unit of digital information. It’s a unit of digital information that most commonly consists of eight bits. A file is made up of so many bytes–the more bytes, the bigger the file."
+          "字节（B）是数字信息的最小单位。 它是一个数字信息单元，通常由八位组成。 一个文件由很多字节组成——字节越多，文件就越大。"
         ]
       },
       {
-        "question": "What is a kilobyte?",
+        "question": "什么是千字节？",
         "answer": [
-          "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
+          "千字节 (KB) 是数字信息单位字节的倍数。 根据国际单位制 (SI) 中前缀千的含义，即 1,000，一千字节等于 1,000 字节。 千字节由全球接受的单位符号 KB 表示。"
         ]
       },
       {
-        "question": "What is a megabyte?",
+        "question": "什么是兆字节？",
         "answer": [
-          "A megabyte (MB) is a multiple of the digital informational unit byte. The suggested unit symbol for it is MB. In the International System of Units (SI), the unit prefix mega is multiplied by 100,000 to determine the unit. As a result, one megabyte is equal to one million bytes of data."
+          "兆字节 (MB) 是数字信息单位字节的倍数。 建议的单位符号是 MB。 在国际单位制 (SI) 中，单位前缀兆乘以 100,000 来确定单位。 因此，一兆字节等于一百万字节的数据。"
         ]
       },
       {
-        "question": "What is a gigabyte?",
+        "question": "什么是千兆字节？",
+        "answer": ["千兆字节 (GB) 是数字信息单位字节的倍数。 一千兆字节等于十亿字节。 千兆字节由字母 GB 表示。"]
+      },
+      {
+        "question": "什么是太字节？",
         "answer": [
-          "A gigabyte (GB) is a multiple of the digital informational unit byte. A gigabyte is equal to one billion bytes. The gigabyte is denoted by the letters GB."
+          "数字数据以太字节 (TB) 为单位，大约为 1 万亿字节。 以十进制表示法（基数 10）表示时，1 TB 恰好是 1 万亿字节。 1 TB 或 1,099,511,627,776 字节相当于二进制表示法中的 240 字节。"
         ]
       },
       {
-        "question": "What is a terabyte?",
+        "question": "2TB是多少？",
         "answer": [
-          "Digital data is measured in terabytes (TB), which are about 1 trillion bytes. A terabyte is exactly 1 trillion bytes when written in decimal notation (base 10). A terabyte, or 1,099,511,627,776 bytes, is equivalent to 240 bytes in binary notation."
+          "2 太字节 (TB) 等于 2,000 千兆字节 (GB) 或 2,000,000 兆字节 (MB)。 凭借 2TB 的数据，您可以使用当今的智能手机平均存储 200,000 张照片，大约 500,000 份文档可以存储在 2TB 的驱动器上。"
         ]
       },
       {
-        "question": "How much is 2TB?",
+        "question": "1TB 是多少？",
         "answer": [
-          "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
-        ]
-      },
-      {
-        "question": "How much is 1TB?",
-        "answer": [
-          "1 terabyte (TB) equals 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+          "1 太字节 (TB) 等于 1,000 千兆字节 (GB) 或 1,000,000 兆字节 (MB)。 使用 1TB 的数据，您可以使用当今的智能手机平均存储 100,000 张照片，大约 250,000 份文档可以存储在 1TB 的驱动器上。"
         ]
       }
     ]
   },
   "ctaSection1": {
-    "title": "Got tons of stored data?",
-    "description": "Protect your GB and TB with Internxt secure cloud storage.",
-    "cta": "Create account"
+    "title": "有大量存储数据？",
+    "description": "使用 Internxt 安全云存储保护您的 GB 和 TB。",
+    "cta": "创建账号"
   },
   "ctaSection2": {
-    "title": "The more you save, the more to protect!",
-    "description": "Backup and safely store all your files with Internxt.",
-    "cta": "Create account"
+    "title": "您节省的越多，保护的就越多！",
+    "description": "使用 Internxt 备份并安全地存储您的所有文件。",
+    "cta": "创建账号"
   },
   "ctaSection3": {
-    "title": "Safety is only a click away",
-    "description": "Protect your personal data with Internxt's privacy suite.",
-    "cta": "Create account"
+    "title": "安全只需点击一下",
+    "description": "使用 Internxt 的隐私套件保护您的个人数据。",
+    "cta": "创建账号"
   }
 }
