@@ -1,19 +1,19 @@
 {
   "links": {
-    "products": "Products",
-    "about": "About us",
-    "privacy": "Privacy",
-    "pricing": "Pricing",
-    "login": "Log in",
-    "getStarted": "Get started",
-    "checkout": "Claim now!"
+    "products": "产品",
+    "about": "关于我们",
+    "privacy": "隐私",
+    "pricing": "价格",
+    "login": "登录",
+    "getStarted": "开始吧",
+    "checkout": "现在宣称！"
   },
   "products": {
     "drive": "Drive",
     "photos": "Photos",
     "send": "Send",
-    "comingSoon": "Coming soon",
-    "new": "New"
+    "comingSoon": "即将推出",
+    "new": "新的"
   },
   "Auth": {
     "SignUp": {

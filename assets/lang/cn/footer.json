@@ -3,69 +3,69 @@
     "title": "通讯",
     "description": "想在我们推出新产品或发布更新时听到我们的消息吗？请输入你的电子邮件，我们会处理剩下的事情!",
     "input": "你的电子邮件地址",
-    "info": "You can unsubscribe at any time",
+    "info": "您可以随时取消订阅",
     "cta": " 订阅",
-    "privacy": "By subscribing you agree to our",
-    "privacyLink": "privacy policy."
+    "privacy": "订阅即表示您同意我们的",
+    "privacyLink": "隐私政策。"
   },
   "FooterSection": {
-    "description": "Internxt’s mission is to help shape a world that respects humanity’s privacy rights. To do so, we are releasing a series of services, which all have the common goal of helping humanity protect this fundamental right.",
+    "description": "Internxt 的使命是帮助塑造一个尊重人类隐私权的世界。 为此，我们发布了一系列服务，所有这些服务的共同目标都是帮助人类保护这项基本权利。",
     "copyright": "Copyright © 2023, Internxt Universal Technologies SL",
-    "comingSoon": "Coming soon",
-    "new": "New",
+    "comingSoon": "即将推出",
+    "new": "新的",
     "sections": {
       "products": {
-        "title": "Products",
+        "title": "产品",
         "drive": "Drive",
         "photos": "Photos",
         "send": "Send",
         "token": "Token",
-        "pricing": "Pricing"
+        "pricing": "价格"
       },
       "company": {
-        "title": "Company",
-        "about": "About us",
-        "privacy": "Privacy",
-        "security": "Security",
-        "legal": "Legal",
-        "support": "Support",
-        "whyInternxt": "Why Internxt?",
-        "comparison": "Comparison"
+        "title": "公司",
+        "about": "关于我们",
+        "privacy": "隐私",
+        "security": "安全",
+        "legal": "法律",
+        "support": "支持",
+        "whyInternxt": "为什么选择 Internxt？",
+        "comparison": "比较"
       },
       "join": {
-        "title": "Join Us",
-        "signup": "Create account",
-        "login": "Log in",
-        "community": "Community",
+        "title": "加入我们",
+        "signup": "创建账户",
+        "login": "登录",
+        "community": "社区",
         "github": "GitHub",
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "linkedin": "LinkedIn",
-        "youtube": "Youtube",
+        "twitter": "推特",
+        "facebook": "脸书",
+        "linkedin": "领英",
+        "youtube": "油管",
         "instagram": "Instagram",
         "mastodon": "Mastodon"
       },
       "resources": {
-        "title": "Resources",
-        "blog": "Blog",
-        "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
-        "library": "Library",
-        "writeForUs": "Write for us",
-        "cyberSecurityGlossary": "Cyber Security Glossary",
-        "cyberAwareness": "Cyber Awareness"
+        "title": "资源",
+        "blog": "博客(英文)",
+        "directoryOfPrivacyOrganizations": "隐私组织目录(英文)",
+        "library": "图书馆",
+        "writeForUs": "为我们写信",
+        "cyberSecurityGlossary": "网络安全词汇表",
+        "cyberAwareness": "网络意识"
       },
       "tools": {
-        "title": "Free Tools",
-        "temporaryEmail": "Temporary Email",
-        "fileVirusScan": "File Virus Scanner",
-        "passwordChecker": "Password Checker",
-        "byteConverter": "Byte Converter"
+        "title": "免费的工具",
+        "temporaryEmail": "临时邮箱",
+        "fileVirusScan": "文件病毒扫描器",
+        "passwordChecker": "密码检查器",
+        "byteConverter": "字节转换器"
       }
     }
   },
   "Cookies": {
-    "title": "Internxt uses cookies to make this website easier to use",
-    "link": "Learn more about cookies",
-    "close": "Ok, close"
+    "title": "Internxt 使用 cookies 使本网站更易于使用",
+    "link": "了解有关 cookies 的更多信息",
+    "close": "好的，关闭"
   }
 }

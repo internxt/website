@@ -1,9 +1,9 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "站在业私的角度，切业到 Internxt"
+      "line1": "站在隐私的角度，切换到Internxt"
     },
-    "subtitle": "用我业的开源和加密的安全云服业套件来保业你的业私。Internxt Drive, Photos, Send, 和更多.",
+    "subtitle": "用我们的开源和加密的安全云服务套件来保护你的隐私。Internxt Drive, Photos, Send, 和更多。",
     "cta": {
       "title": "获得高达10GB的免费容量",
       "subtitle": "For free!"
@@ -23,8 +23,8 @@
           "placeholder": "电子邮件"
         },
         "password": {
-          "label": "密码]",
-          "placeholder": "密码]",
+          "label": "密码",
+          "placeholder": "密码",
           "strength": {
             "complexity": "Password is not complex enough",
             "length": "Password has to be at least 8 characters long",
@@ -41,12 +41,12 @@
   },
   "FirstFeaturesSection": {
     "title": {
-      "line1": "业你的所有文件和照片提供最私密的云服",
+      "line1": "为你的所有文件和照片提供最私密的云服务",
       "line2": ""
     },
-    "subtitle": "Internxt业建了私人和安全的云服业，旨在业你，用业，重新业业你的数据。保业你的文件和你的基本业私业，所有 Internxt的服业都是从基业开始建立的，具有无可比业的安全保障.",
+    "subtitle": "Internxt创建了私人和安全的云服务，旨在让你，用户，重新负责你的数据。保护你的文件和你的基本隐私权，所有Internxt的服务都是从基础开始建立的，具有无可比拟的安全保障。",
 
-    "cta": "业建一个免业业业"
+    "cta": " 创建一个免费账户"
   },
   "InfoSection": {
     "title": "安全的云存储，拥有无与伦比的隐私",
@@ -114,8 +114,8 @@
     }
   },
   "SecondWhatWeDoSection": {
-    "title": "You are not the product",
-    "description": "Our services are tools built for you. Drive, Photos and Send are just the beginning of a full family of products that put you back in charge of your privacy.",
+    "title": "你不是产品",
+    "description": "我们的服务是为您打造的工具。 Drive、Photos 和 Send 只是让您重新掌控自己隐私的完整产品系列的开始。",
     "square1": {
       "title": "Internxt Drive",
       "subtitle": "为您的所有文件、照片和更多内容提供最安全的云存储服务",

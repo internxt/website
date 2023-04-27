@@ -8,7 +8,7 @@
       "line4": "设计安全, 默认隐私。",
       "line5": "今天就开始使用Internxt Drive，这是一个安全的、私有的、分布式的、开源的、加密的、免费的云存储服务。"
     },
-    "cta": "Watch the video"
+    "cta": "观看视频"
   },
   "ManifestoSection": {
     "section1": {
@@ -25,12 +25,12 @@
       "signature": "Fran Villalba Segarra, Internxt创始人兼CEO"
     },
     "securitum": {
-      "title": "Internxt Successfully Passes Independent Security Audit",
-      "subtitle": "Read the complete security audit reports:",
+      "title": "Internxt 已成功通过独立安全审计",
+      "subtitle": "阅读完整的安全审计报告：",
       "links": {
-        "desk": "Internxt Desktop security audit",
-        "web": "Internxt Web security audit",
-        "mobile": "Internxt Mobile security audit"
+        "desk": "Internxt桌面端安全审计",
+        "web": "Internxt 网页端安全审计",
+        "mobile": "Internxt移动端安全审计"
       }
     },
     "section2": {
@@ -79,30 +79,30 @@
         "cta": "同步你的照片和纪念物"
       },
       "square3": {
-        "title": "Send with absolute certainty.",
-        "description": "Send allows you to encrypt and share large files fast without worrying about the security of your documents, images, or videos. Transfer to anyone in total confidentiality.",
-        "cta": "Send something sensitive"
+        "title": "绝对确定地发送。",
+        "description": "Send 允许您快速加密和共享大型文件，而无需担心文档、图像或视频的安全性。 完全保密地转移给任何人。",
+        "cta": "发送一些敏感的东西"
       }
     },
     "FaqSection": {
-      "title": "Questions? We have answers",
+      "title": "问题？ 我们有答案",
       "faq": [
         {
-          "question": "Is Internxt’s cloud storage secure?",
+          "question": "Internxt的云存储安全吗？",
           "answer": [
-            "Internxt Drive is a zero-knowledge file storage service that's built for absolute privacy and strict security. Our service doesn't access your personal data or files for ad purposes, instead is designed to give you back control over your files and protect you from data collection and advertising companies."
+            "Internxt Drive 是一种零知识文件存储服务，专为绝对隐私和严格安全而构建。 我们的服务不会出于广告目的访问您的个人数据或文件，而是旨在让您重新控制您的文件并保护您免受数据收集和广告公司的侵害。"
           ]
         },
         {
-          "question": "What is the most private cloud storage?",
+          "question": "什么是最私密的云存储？",
           "answer": [
-            "Many cloud providers say their service is private, but Internxt goes a step above and beyond. Internxt is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Internxt cannot access your data stored in the cloud storage."
+            "许多云提供商表示他们的服务是私有的，但 Internxt 更进一步。 Internxt 是一种零知识文件存储服务，专为绝对隐私和严格安全而构建。 Internxt 无法访问您存储在云存储中的数据。"
           ]
         },
         {
-          "question": "Is Internxt private?",
+          "question": "Internxt 是私有的吗？",
           "answer": [
-            "Unlike some of our competitors, we don't operate based on advertising or data collection. Your data is exclusively yours. We prioritize your security, privacy, and the security of your file and photos. Using Internxt, you can be sure you're secure."
+            "与我们的一些竞争对手不同，我们的运营不基于广告或数据收集。 您的数据完全属于您。 我们优先考虑您的安全、隐私以及您的文件和照片的安全。 使用 Internxt，您可以确保自己是安全的。"
           ]
         }
       ]
