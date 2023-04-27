@@ -36,37 +36,37 @@
         {
           "question": "What is a byte?",
           "answer": [
-            "A byte (B) is the smallest unit of digital information. It’s a unit of digital information that most commonly consists of eight bits. A file is made up of so many bytes–the more bytes, the bigger the file."
+            "A byte (B) is the smallest unit of digital information. It is how we humans measure and quantify information online. A byte is a unit of digital information that consists of eight bits (b). Bits (b) are even smaller than bytes, but a byte is as small as you need to go for most tech users. A file comprises so many bytes–the more bytes, the bigger the file. 1 byte (B) = 8 bits (b)"
           ]
         },
         {
           "question": "What is a kilobyte?",
           "answer": [
-            "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
+            "A kilobyte (KB) is a multiple of the unit byte for digital information. The International System of Units (SI) prefix kilo represents 1,000, so one kilobyte equals around 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol KB. 1 kilobyte (KB) = 1024 bytes (B)"
           ]
         },
         {
           "question": "What is a megabyte?",
           "answer": [
-            "A megabyte (MB) is a multiple of the digital informational unit byte. The suggested unit symbol for it is MB. In the International System of Units (SI), the unit prefix mega is multiplied by 100,000 to determine the unit. As a result, one megabyte is equal to one million bytes of data."
+            "A megabyte (MB) is a multiple of the digital informational unit byte. The unit symbol for the megabyte is MB. The unit prefix mega represents one million in the International System of Units (SI). As a result, one megabyte is equal to about one million bytes of data. 1 megabyte (MB) = 1,024 kilobytes (KB)"
           ]
         },
         {
           "question": "What is a gigabyte?",
           "answer": [
-            "A gigabyte (GB) is a multiple of the digital informational unit byte. A gigabyte is equal to one billion bytes. The gigabyte is denoted by the letters GB."
+            "A gigabyte (GB) is a widely-used multiple of the digital informational unit byte. According to SI, the prefix giga represents one billion. The gigabyte is denoted by the letters GB. A gigabyte is equal to about one billion bytes. 1 gigabyte (GB) = 1,024 megabytes (MB)"
           ]
         },
         {
           "question": "What is a terabyte?",
           "answer": [
-            "Digital data is measured in terabytes (TB), which are about 1 trillion bytes. A terabyte is exactly 1 trillion bytes when written in decimal notation (base 10). A terabyte, or 1,099,511,627,776 bytes, is equivalent to 240 bytes in binary notation."
+            "Most digital data is measured in terabytes (TB). The prefix tera within the International System of Units (SI) denotes a value of one trillion. A terabyte is labeled with the letters TB and is roughly 1 trillion bytes. 1 terabyte (TB) = 1,024 gigabytes (GB)"
           ]
         },
         {
           "question": "What's next?",
           "answer": [
-            "A terabyte (TB) is then followed in the same pattern exponentially by a petabyte (PB), then exabyte (EB), then zetabyte (ZB), then yottabyte (YB), and then anything bigger than that is difficult to fathom."
+            "A terabyte (TB) is then followed in the same pattern exponentially by a petabyte (PB), an exabyte (EB), then a zettabyte (ZB), and a yottabyte (YB). Then anything bigger than that is difficult to fathom"
           ]
         }
       ]
@@ -89,7 +89,7 @@
     }
   },
   "FaqSection": {
-    "title": "Questions? We have answers.",
+    "title": "Questions? We have answers",
     "faq": {
       "faq": [
         {
@@ -117,7 +117,7 @@
           ]
         },
         {
-          "question": "Why is my 1 TB disk not 1 TB?",
+          "question": "Why is my 1 TB disk not 1TB?",
           "answer": [
             "Though your 1 TB drive is listed as having 1 TB worth of storage, typically, you won’t be able to use the whole amount as part of the drive may be used for operational files."
           ]
@@ -131,7 +131,7 @@
         {
           "question": "How much is 1TB?",
           "answer": [
-            "1 terabyte (TB) equals 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+            "1 terabyte (TB) equals about 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
           ]
         }
       ]
