@@ -54,7 +54,7 @@ const SquareBanner = () => {
           className="flex flex-row items-center justify-center space-x-4 rounded-lg bg-white py-3 px-5 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
           onClick={() => {
             window.open(
-              `https://internxt.com${
+              `${window.location.origin}${
                 lang === 'en' ? '' : `/${lang}`
               }/pricing?utm_source=website&utm_medium=popbanner&utm_campaign=lifetimeapril`,
               '_blank',

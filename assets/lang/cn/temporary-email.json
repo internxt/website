@@ -1,0 +1,183 @@
+{
+  "HeroSection": {
+    "title": "免费的临时电子邮件",
+    "subtitle": "使用我们免费、私密且安全的临时电子邮件地址生成器来匿名发送电子邮件。",
+    "generatingEmail": "正在生成随机电子邮件...",
+    "copyEmail": "复制电子邮件",
+    "deleteEmail": "删除电子邮件",
+    "expireEmail": "电子邮件和收件箱将在 3 小时不活动后过期",
+    "inbox": {
+      "title": "收件箱",
+      "youHave": "你有",
+      "newMessages": "新消息",
+      "waitingEmail": "等待收到的电子邮件",
+      "selectMessage": "选择要打开的消息",
+      "attachment": "附件",
+      "downloadAll": "全部下载",
+      "noSubject": "(无主题)"
+    }
+  },
+  "InfoSection": {
+    "title": "Internxt的免费临时邮箱",
+    "subtitle": "不再有垃圾邮件、广告、时事通讯、促销、黑客、诈骗者和机器人程序。 保持您真正的收件箱干净、安全，并且没有粗略的电子邮件。 我们的一次性电子邮件帐户生成器是 Internxt 的最新隐私工具，旨在提供免费、匿名、临时和随机的地址，而无需存储您的任何个人数据。",
+    "steps": {
+      "title": "如何使用 Internxt 的临时电子邮件地址生成器",
+      "steps": [
+        {
+          "title": "第一步",
+          "description": "复制您的一次性电子邮件地址"
+        },
+        {
+          "title": "第二步",
+          "description": "使用所需服务的地址"
+        },
+        {
+          "title": "第三步",
+          "description": "稍等片刻，等待回复或验证邮件"
+        },
+        {
+          "title": "第四步",
+          "description": "收到的所有电子邮件都会显示在上方的收件箱中"
+        }
+      ]
+    },
+    "whatIsTempMail": {
+      "title": "什么是临时电子邮件地址？",
+      "description": "临时或一次性电子邮件地址是具有唯一电子邮件地址的用户为您当前的联系人获取临时电子邮件地址的工具。 临时电子邮件地址服务允许您创建一个新的电子邮件地址，该地址通过注册服务或新闻通讯或网站帐户所需的有效性，而无需交出您的真实身份。"
+    },
+    "whyUseDisposableMail": {
+      "title": "为什么要使用临时电子邮件服务？",
+      "description": "您的电子邮件地址就像您的在线 ID，您不应该将其交给任何人。 通过使用临时电子邮件地址进行一次性或短期通信，保护您的主帐户并保持收件箱整洁。",
+      "infoCards": [
+        {
+          "title": "避免垃圾邮件和烦人的订阅",
+          "description": "在不损害您的真实电子邮件帐户和使您的个人收件箱超载的情况下注册任何内容。 非常适合获取优惠券代码和注册优惠。"
+        },
+        {
+          "title": "使用临时电子邮件账户来隐藏个人信息",
+          "description": "收件人无法访问您的姓名、照片、电话号码、电子邮件地址或与您的真实账户相关的其他任何的个人信息。"
+        },
+        {
+          "title": "将消息接收到临时邮箱",
+          "description": "立即收到您期望的电子邮件。 这是临时邮件，不是一次性邮件。"
+        },
+        {
+          "title": "从随机地址匿名发送消息",
+          "description": "不确定您的预期收件人是否可以信任？ 您要联系的网站是否可疑？ 害怕恶意软件？ 借助 Internxt 的假地址生成器，使用随机地址。"
+        },
+        {
+          "title": "无需临时或新的 Gmail 帐户",
+          "description": "不要再玩弄真实账户了。 使用 Internxt 的假邮件，只需创建一个帐户，使用它，并在准备就绪时抛弃它。 不要因为管理多个帐户而感到压力。"
+        },
+        {
+          "title": "无需邀请朋友即可获得推荐津贴",
+          "description": "想从在线服务中获得折扣或额外津贴，但又不愿意泄露朋友的电子邮件？ 请改为邀请您的临时电子邮件！"
+        }
+      ]
+    },
+    "whenUseTempMail": {
+      "title": "何时使用临时电子邮件地址？",
+      "description": "临时邮箱的用例没有限制。 任何需要电子邮件的事情都可以通过临时电子邮件地址立即匿名和免费承诺。 以下是何时使用假邮件的最佳示例：",
+      "bulletedList": [
+        "注册来免费试用",
+        "测试您的应用",
+        "注册一个双（或多个）账户",
+        "消除垃圾邮件",
+        "注册商店会员卡",
+        "与可疑账户沟通",
+        "创建匿名账户",
+        "无风险试用在线服务",
+        "验证琐碎的帐户",
+        "恶作剧朋友"
+      ]
+    }
+  },
+  "ToolsSection": {
+    "title": "其他免费隐私工具，例如我们的临时邮箱",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 125,
+        "title": "免费密码强度检查器",
+        "description": "现在检查"
+      },
+      {
+        "url": "/images/temp-email/virus-scanner.svg",
+        "UrlRedirectName": "virus-scanner",
+        "width": 105,
+        "title": "免费病毒扫描程序",
+        "description": "现在扫描"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "免费字节转换器",
+        "description": "立即转换"
+      }
+    ]
+  },
+  "QASection": {
+    "title": "问题？ 我们有答案",
+    "questions": [
+      {
+        "question": "电子邮件保存多长时间？",
+        "answer": [
+          "只要您继续使用您的临时电子邮件地址，电子邮件就会一直保留。 一旦您关闭临时地址，您的电子邮件将与您的临时帐户一起被删除。"
+        ]
+      },
+      {
+        "question": "电子邮件保持私密性吗？",
+        "answer": ["Internxt 无权访问您的临时电子邮件。 我们不会存储您的任何个人信息或您发送或接收的任何电子邮件。"]
+      },
+      {
+        "question": "我在哪里可以查看我是否收到了电子邮件？",
+        "answer": ["您收到的临时邮箱的电子邮件将显示在位于此页面顶部的收件箱中。"]
+      },
+      {
+        "question": "如何更改电子邮件地址？",
+        "answer": ["通过在页面顶部的工具栏中生成一个新的电子邮件地址来更改您的临时邮件。"]
+      },
+      {
+        "question": "你可以恢复已删除的电子邮件吗？",
+        "answer": [
+          "不会。不幸的是，当您删除使用所用域发送或接收的电子邮件时，它们就永远消失了。 我们这样做是为了保护您的隐私，并且您已删除的电子邮件不会暴露。"
+        ]
+      },
+      {
+        "question": "什么是临时邮箱？",
+        "answer": [
+          "在自动销毁之前仅在短时间内有效的电子邮件称为临时电子邮件。 Internxt Temporary Email 是一款非常有用的免费一次性电子邮件。"
+        ]
+      },
+      {
+        "question": "为什么要使用临时电子邮件？",
+        "answer": [
+          "使用 Internxt 的免费临时电子邮件，让您的电子邮件帐户保持干净、安全，并且没有任何不需要的邮件。 通过打开一个临时邮箱并生成随机电子邮件地址来匿名发送电子邮件，以使用您认为合适的方式。 为重要的事情保护你的真实账户。"
+        ]
+      }
+    ]
+  },
+  "SignupSection": {
+    "title": "您不能总是只发送电子邮件...",
+    "description": "使用 Internxt 的安全、私密和加密的云存储来保护真正重要的东西。",
+    "createAccount": "创建账户"
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "What is a temporary email?",
+        "answer": [
+          "An email that is only valid for a brief time before being automatically destroyed is referred to as a transitory email. Internxt Temporary Email is a free disposable email really useful."
+        ]
+      },
+      {
+        "question": "Why use a temporary email?",
+        "answer": [
+          "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s free Temporary Email. Email anonymously by opening a temporary mailbox and generating random email addresses to use however you see fit. Save your real account for the important stuff."
+        ]
+      }
+    ]
+  }
+}

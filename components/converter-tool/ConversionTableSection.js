@@ -138,7 +138,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
         <div className="flex cursor-pointer">
           <div
             onClick={() => {
-              window.open(`https://internxt.com/${lang}/password-checker`, '_blank');
+              window.open(`${window.location.origin}/${lang}/password-checker`, '_blank');
             }}
             className="mx-5 flex max-w-4xl cursor-pointer flex-row"
           >

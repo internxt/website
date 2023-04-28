@@ -1,0 +1,134 @@
+{
+  "HeroSection": {
+    "eyebrow": "INTERNXT PHOTOS",
+    "title": {
+      "line1": "你的风景如画的时刻、",
+      "line2": "牢牢锁定"
+    },
+    "subtitle": {
+      "line1": "在一个地方重温、分享和保护你最好的记忆。",
+      "line2": "Internxt Photos专注于隐私和安全、",
+      "line3": "你的照片只属于你自己。"
+    },
+    "availableSoon": "Available soon",
+    "DownloadLinks": {
+      "or": "或",
+      "downloadFor": "下载为",
+      "orDownloadFor": "或下载为",
+      "downloadOnThe": "在上下载",
+      "orDownloadOnThe": "或在上下载",
+      "getOn": "上车",
+      "orGetOn": "或上车",
+      "openDriveWeb": "打开驱动网",
+      "iPhone": "应用商店",
+      "iPad": "应用商店",
+      "Android": "播放商店",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "一个可以在所有设备上同步的画廊 ",
+        "line2": "在你所有的设备上同步"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "从你的",
+        "line2": "手机和访问",
+        "line3": "随时随地"
+      },
+      "subtitle": {
+        "line1": "你的画廊将永远是最新的",
+        "line2": "在你的所有设备上都是最新的。这意味着",
+        "line3": "即使你的设备丢失、被盗或损坏、",
+        "line4": "你仍然可以访问同步的照片。"
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "分享你的照片",
+        "line2": "与你的朋友",
+        "line3": "和家人。"
+      },
+      "subtitle": {
+        "line1": "生成一个分享链接，以便你可以",
+        "line2": "控制你的照片被访问和下载的次数",
+        "line3": "被访问和下载的次数。"
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "同步你的照片",
+        "line2": "在完全保密的情况下"
+      }
+    },
+    "section5": {
+      "title": {
+        "line1": "您的所有照片，",
+        "line2": "安全且私密"
+      },
+      "subtitle": {
+        "line1": "隐私和安全是我们所做的一切的核心，我们不以数据或广告为基础开展业务--我们是基于",
+        "line2": "信任。我们尊重你的权利，并围绕它们建立伟大的工具，而不是反对它们。"
+      },
+      "cta": "我们对隐私的承诺",
+      "card1": {
+        "title": "军用级加密",
+        "subtitle": "我们非常重视您的隐私，这就是为什么您的文件是端到端加密的，因此只有您可以访问您的文件。"
+      },
+      "card2": {
+        "title": "零知识技术",
+        "subtitle": "我们从不以未加密或未散列的形式存储或传输文件、用户密码或加密密钥。"
+      },
+      "card3": {
+        "title": "为隐私而生",
+        "subtitle": "我们在开发产品时考虑到了用户，在我们所处的数据驱动的世界里，用户的隐私是必须的。"
+      },
+      "card4": {
+        "title": "来自核心的安全",
+        "subtitle": "由于安全缺陷和丑闻是每天的新闻，我们确保我们的系统保持你的数据和文件不受攻击。"
+      }
+    },
+    "DownloadLinks": {
+      "or": "或",
+      "downloadFor": "下载为",
+      "orDownloadFor": "或下载为",
+      "downloadOnThe": "在上下载",
+      "orDownloadOnThe": "或在上下载",
+      "getOn": "上车",
+      "orGetOn": "或上车",
+      "openDriveWeb": "打开驱动网",
+      "iPhone": "应用商店",
+      "iPad": "应用商店",
+      "Android": "播放商店",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FaqSection": {
+    "title": "问题？我们有答案",
+    "faq": [
+      {
+        "question": "我如何在Internxt中同步我的文件和照片？",
+        "answer": [
+          "要从你的手机库中同步和加密你的照片到Internxt云，只需：",
+          "1.打开Internxt手机应用程序",
+          "2.选择'照片'，你的照片将开始自动同步"
+        ]
+      },
+      {
+        "question": "我如何从我的手机上传文件？",
+        "answer": [
+          "打开Internxt手机应用程序，并点击屏幕底部中央的蓝色加号（+）图标。选择 \"上传文件\" 或 \"从相机卷上传\" 来上传照片。"
+        ]
+      }
+    ]
+  }
+}

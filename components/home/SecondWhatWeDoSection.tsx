@@ -29,7 +29,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <div
                   className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                   onClick={() => {
-                    window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
+                    window.open(`${window.location.origin}/${lang === 'en' ? '' : lang}/drive`, '_blank');
                   }}
                 >
                   <span>{textContent.square1.cta}</span>
@@ -62,7 +62,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <div
                   className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                   onClick={() => {
-                    window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/photos`, '_blank');
+                    window.open(`${window.location.origin}/${lang === 'en' ? '' : lang}/photos`, '_blank');
                   }}
                 >
                   <span>{textContent.square2.cta}</span>

@@ -96,7 +96,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   layout="intrinsic"
                   loading="eager"
                   alt="Virus Scanner image"
-                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                  onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
                 />
               ) : (
                 <Image
@@ -106,7 +106,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   layout="intrinsic"
                   loading="eager"
                   alt="Virus Scanner image"
-                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                  onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
                 />
               )}
             </div>
@@ -193,7 +193,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 layout="intrinsic"
                 loading="eager"
                 alt="Byte converter image"
-                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+                onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
               />
             ) : (
               <Image
@@ -203,7 +203,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 layout="intrinsic"
                 loading="eager"
                 alt="Byte converter image"
-                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+                onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
               />
             )}
           </div>
