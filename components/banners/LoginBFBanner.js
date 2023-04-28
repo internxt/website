@@ -36,6 +36,14 @@ const cardsTitles = {
     title5: 'No unauthorized access',
     title6: 'Available on all devices',
   },
+  zh: {
+    title1: 'Get up to 10GB free',
+    title2: 'Safe and secure cloud storage',
+    title3: 'Private file and photo backup',
+    title4: 'End-to-end encrypted transfers',
+    title5: 'No unauthorized access',
+    title6: 'Available on all devices',
+  },
 };
 
 const LoginBFBanner = () => {
