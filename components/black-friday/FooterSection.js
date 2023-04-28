@@ -77,7 +77,7 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             <a href="https://www.internxt.com/privacy" className="text-sm">
               {lang !== 'es' ? <p>Privacy</p> : <p>Privacidad</p>}
             </a>
-            <a href="https://help.internxt.com/en/" className="text-sm">
+            <a href="https://help.internxt.com" className="text-sm">
               {lang !== 'es' ? <p>Contact us</p> : <p>Contacta con nosotros</p>}
             </a>
           </div>
