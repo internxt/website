@@ -16,7 +16,7 @@ const ButtonDeal = ({ textContent, large }) => {
           couponCode: CLOUDWARDS_COUPON_ID,
         });
       }}
-      className={`${large ? 'w-full' : 'w-48'}  cursor-pointer rounded-full bg-primary px-9 py-3 text-center`}
+      className={`${large ? 'w-full' : 'w-48'}  cursor-pointer rounded-lg bg-primary px-9 py-3 text-center`}
     >
       <p className="text-lg font-medium text-white">{textContent.cta}</p>
     </div>
