@@ -80,7 +80,7 @@ LayoutProps) {
         <link rel="alternate" hrefLang="es" href={`${INTERNXT_URL}/es${pathname}`} />
         <link rel="alternate" hrefLang="fr" href={`${INTERNXT_URL}/fr${pathname}`} />
         <link rel="alternate" hrefLang="it" href={`${INTERNXT_URL}/it${pathname}`} />
-        <link rel="alternate" hrefLang="zh" href={`${INTERNXT_URL}/cn${pathname}`} />
+        <link rel="alternate" hrefLang="zh" href={`${INTERNXT_URL}/zh${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
