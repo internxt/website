@@ -41,7 +41,7 @@ LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
-  const lang = router.locale;
+  const lang = router.locale === 'en' ? '' : router.locale;
   const showBanner = !excludedURL.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<any>();
@@ -67,20 +67,15 @@ LayoutProps) {
       brave: isBrave(),
     });
   }, [segmentName]);
+  console.log(lang);
+  console.log(`${INTERNXT_URL}/${lang}${pathname}`);
 
   return (
     <>
       <Head>
         <title>{title}</title>
-        <link
-          rel="canonical"
-          href={`${INTERNXT_URL}${lang === 'en' ? '' : lang === 'cn' ? `/zh` : `/${lang}`}${pathname}`}
-        />
-        <link rel="alternate" hrefLang="en" href={`${INTERNXT_URL}${pathname}`} />
-        <link rel="alternate" hrefLang="es" href={`${INTERNXT_URL}/es${pathname}`} />
-        <link rel="alternate" hrefLang="fr" href={`${INTERNXT_URL}/fr${pathname}`} />
-        <link rel="alternate" hrefLang="it" href={`${INTERNXT_URL}/it${pathname}`} />
-        <link rel="alternate" hrefLang="zh" href={`${INTERNXT_URL}/zh${pathname}`} />
+        <link rel="canonical" href={`${INTERNXT_URL}${`/${lang}`}${pathname}`} />
+        <link rel="alternate" hrefLang={lang} href={`${INTERNXT_URL}/${lang}${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
