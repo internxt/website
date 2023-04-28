@@ -9,7 +9,7 @@ const currentLang = {
   fr: 'Français (FR)',
   en: 'English (EN)',
   it: 'Italiano (IT)',
-  cn: '中国 (CN)',
+  zh: '中国 (ZH)',
 };
 
 export default function LanguageBox({ darkMode }) {
@@ -75,14 +75,14 @@ export default function LanguageBox({ darkMode }) {
               {currentLang.it}
             </a>
           </Link>
-          <Link href={router.pathname} locale="cn">
+          <Link href={router.pathname} locale="zh">
             <a
               className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
                 darkMode ? 'text-white' : 'text-cool-gray-80'
               }`}
-              onClick={() => changeLang('cn')}
+              onClick={() => changeLang('zh')}
             >
-              {currentLang.cn}
+              {currentLang.zh}
             </a>
           </Link>
         </div>

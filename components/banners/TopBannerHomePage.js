@@ -12,6 +12,8 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       return 'Oferta special:';
     } else if (lang === 'fr') {
       return 'Offre spéciale:';
+    } else if (lang === 'it') {
+      return 'Offerta speciale:';
     } else {
       return 'Special offer:';
     }
@@ -24,6 +26,8 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       return '¡Obtén un 80% de descuento en el plan de 2TB por un año!';
     } else if (lang === 'fr') {
       return '80% de réduction sur le plan 2TB pendant un an !';
+    } else if (lang === 'it') {
+      return "Ottenete l'80% di sconto sul nostro piano da 2TB per un anno!";
     } else {
       return 'Get 80% off our 2TB plan for one year!';
     }
@@ -36,6 +40,8 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       return '¡80% de descuento en el plan de 2TB!';
     } else if (lang === 'fr') {
       return '80% de réduction sur le plan 2TB pendant un an !';
+    } else if (lang === 'it') {
+      return '80% di sconto sul nostro piano da 2TB per un anno!';
     } else {
       return 'Get 80% off our 2TB plan for one year!';
     }
