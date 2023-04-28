@@ -1,122 +1,122 @@
 [
   {
     "id": "home",
-    "title": "Internxt – Private & Secure Cloud Storage",
-    "description": "Stand for privacy, switch to Internxt. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more."
+    "title": "Internxt – 私有和安全的云存储",
+    "description": "站在隐私的角度,切换到Internxt。用我们的开源和加密的安全云服务套件来保护你的隐私。Internxt Drive, Photos, Send, 和更多。"
   },
   {
     "id": "drive",
-    "title": "Internxt Drive – Private & Secure Cloud Storage",
-    "description": "Store, share, and back up your files and photos to the cloud with Internxt Drive. Open-source and end-to-end encrypted file storage and online backup."
+    "title": "Internxt Drive – 私有和安全的云存储",
+    "description": "使用 Internxt Drive 将您的文件和照片存储、共享和备份到云端。 开源和端到端的加密文件存储和在线备份。"
   },
   {
     "id": "photos",
-    "title": "Internxt Photos – Safe Photo Storage & Image Backup",
-    "description": "Save, view, and sync your photos and images across all devices with Internxt Photos. End-to-end encrypted cloud photo sharing and image backup."
+    "title": "Internxt Photos – 安全的照片存储和图像备份",
+    "description": "使用 Internxt Photos 在所有设备上保存、查看和同步您的照片和图像。 端到端加密的云照片共享和图像备份。"
   },
   {
     "id": "pricing",
-    "title": "Internxt Pricing – Get Up To 10GB Free!",
-    "description": "Sign up for an Internxt secure cloud storage subscription and get access to our monthly newsletter filled with the latest tech news and updates."
+    "title": "Internxt 价格 – 免费获得高达 10GB 的空间！",
+    "description": "注册一个 Internxt 安全云存储订阅并获得我们的每月时事通讯，其中包含最新的技术新闻和更新。"
   },
   {
     "id": "about",
-    "title": "Internxt – About us",
-    "description": "Meet Internxt's Team. Fran Villalba Segarra, Founder and CEO at Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+    "title": "Internxt – 关于我们",
+    "description": "认识 Internxt 的团队。 Internxt 创始人兼首席执行官 Fran Villalba Segarra。 Shuttle、Angels Capital、The Venture City、Internxt、ESADE BAN。"
   },
   {
     "id": "token",
-    "title": "Internxt – Token, the essence that moves Internxt.",
-    "description": "Internxt token. Learn all about our cryptocurrency, INXT. Buy Internxt Tokens from Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
+    "title": "Internxt – Token,移动Internxt的本质。",
+    "description": "Internxt token。全面了解我们的加密货币 INXT。 从 Bittrex、CoinBase、CoinMarketCap、Crypto、UniSwap 购买 Internxt 代币。"
   },
   {
     "id": "legal",
-    "title": "Internxt – Legal Terms and Conditions of use",
-    "description": "Internxt legal terms and conditions of use. Read all terms and conditions where we explain how we process your data."
+    "title": "Internxt – 法律使用条款和条件",
+    "description": "Internxt 法律使用条款和条件。 阅读我们解释我们如何处理您的数据的所有条款和条件。"
   },
   {
     "id": "privacy",
-    "title": "Internxt Privacy – Free Privacy Tools & Resources",
-    "description": "Free tools to protect your privacy online: Password Checker, Virus Scanner, Directory of Privacy Organizations, and more. Internxt defends your right to privacy."
+    "title": "Internxt 隐私 – 免费隐私工具和资源",
+    "description": "保护在线隐私的免费工具：密码检查器、病毒扫描程序、隐私组织目录等。 Internxt 捍卫您的隐私权。"
   },
   {
     "id": "virus-scanner",
-    "title": "Internxt – Free Online File Virus Scanner",
-    "description": "Free tool for scanning files for viruses and malware. Protect your personal documents, data, and hardware from online fraud with a quick and easy scan."
+    "title": "Internxt – 免费在线文件病毒扫描程序",
+    "description": "用于扫描文件中的病毒和恶意软件的免费工具。 通过快速简单的扫描，保护您的个人文档、数据和硬件免受在线欺诈。"
   },
   {
     "id": "temporary-email",
-    "title": "Internxt – Free Temporary Email",
-    "description": "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s Free Temporary Email. Internxt provides temporary, secure, anonymous and free email address."
+    "title": "Internxt – 免费临时邮箱",
+    "description": "使用 Internxt 的免费临时邮箱，让您的电子邮件帐户保持干净、安全，并且没有任何不需要的邮件。 Internxt 提供临时、安全、匿名和免费的电子邮件地址。"
   },
   {
     "id": "converter-tool",
-    "title": "Byte Converter: GB to TB | Internxt",
-    "description": "Internxt’s free Byte Converter: Find out how much storage you have, how many gigabytes are in a terabyte, and convert to-and-from B, KB, MB, GB, and TB."
+    "title": "字节转换器: 从GB 到 TB | Internxt",
+    "description": "Internxt 的免费字节转换器：了解您有多少存储空间，1 TB 中有多少千兆字节，并在 B、KB、MB、GB 和 TB 之间进行转换。"
   },
   {
     "id": "lifetime",
-    "title": "Internxt Lifetime Plans – Secure Cloud Storage For Life!",
-    "description": "Internxt Lifetime Deal: Pay once and get 2TB, 5TB, or 10TB of secure cloud storage forever. Sign up or upgrade to a Internxt lifetime plan for lifelong privacy! Only for a limited time."
+    "title": "Internxt 终身计划 – 终身安全的云存储！",
+    "description": "Internxt 终身优惠: 支付一次即可永久获得 2TB、5TB 或 10TB 的安全云存储空间。 注册或升级到 Internxt 终身计划以获得终身隐私！ 仅在有限的时间内。"
   },
   {
     "id": "partner-discount",
-    "title": "Partner Deals - Save big on Internxt cloud storage!",
-    "description": "Redeem your exclusive coupon code provided by a certified Internxt partner. Get a special discount on Internxt secure cloud storage."
+    "title": "合作伙伴交易 - 在 Internxt 云存储上节省大笔费用！",
+    "description": "兑换由经过认证的 Internxt 合作伙伴提供的专属优惠券代码。 获得 Internxt 安全云存储的特别折扣。"
   },
   {
     "id": "techradar-discount",
-    "title": "TechRadar Partner Deals - Save big on Internxt cloud storage!",
-    "description": "Redeem your exclusive coupon code provided by our partner TechRadar. Get a special discount on Internxt secure cloud storage."
+    "title": "TechRadar 合作伙伴优惠 - 在 Internxt 云存储上节省大笔费用！",
+    "description": "兑换我们的合作伙伴 TechRadar 提供的专属优惠券代码。 获得 Internxt 安全云存储的特别折扣。"
   },
   {
     "id": "comparison",
-    "title": "Internxt – Cloud Storage Comparison",
-    "description": "Compare Internxt with all the other services out there. Internxt is the most private and secure alternative to Google Drive, Dropbox, and other services."
+    "title": "Internxt – 云存储比较",
+    "description": "将 Internx 与其他所有服务进行比较。 Internxt 是 Google Drive、Dropbox 和其他服务的最私密和安全的替代方案。"
   },
   {
     "id": "black-friday",
-    "title": "Internxt Black Friday Deal – Cloud Storage Sale!",
-    "description": "Internxt Black Friday Deal 2022: Sign up or upgrade and get over half off Internxt’s 2TB subscription for 1 year. Get your Black Friday discount on Internxt’s largest cloud storage plan today!"
+    "title": "Internxt 黑色星期五特卖 – 云存储促销！",
+    "description": "2022 年黑色星期五特卖: 注册或升级并获得 1 年的 Internxt 2TB 订阅半价优惠。 立即获取互联网最大云存储计划的黑色星期五折扣！"
   },
   {
     "id": "cloudwards",
-    "title": "Internxt – CloudWards Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Cloudwards. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt – CloudWards 合作伙伴关系",
+    "description": "借助 Cloudwards，获得最安全的云存储的最优惠价格。 pCloud、IceDrive、AppSumo 加密云存储的更便宜、更安全的替代品。"
   },
   {
     "id": "startpage",
-    "title": "Internxt – Startpage Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Startpage. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt – Startpage 合作伙伴关系",
+    "description": "借助 Startpage，获得最安全的云存储的最优惠价格。 pCloud、IceDrive、AppSumo 加密云存储的更便宜、更安全的替代品。"
   },
   {
     "id": "guru99",
-    "title": "Internxt – Guru99 Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Guru99. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt – Guru99 合作伙伴关系",
+    "description": "借助 Guru99，获得最安全的云存储的最优惠价格。 pCloud、IceDrive、AppSumo 加密云存储的更便宜、更安全的替代品。"
   },
   {
     "id": "freemonth",
-    "title": "Internxt – Get 1 Month for free",
-    "description": "Grab the best deals for the most secure cloud storage and get 1 month for free. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt – 免费获得 1 个月",
+    "description": "获得最安全的云存储的最优惠价格，并免费获得 1 个月。 pCloud、IceDrive、AppSumo 加密云存储的更便宜、更安全的替代品。"
   },
   {
     "id": "landing",
-    "title": "Internxt – Most Secure Cloud Storage",
-    "description": "Internxt provides secure, private and encrypted cloud services like Internxt Drive and Internxt Photos."
+    "title": "Internxt – 最安全的云存储",
+    "description": "Internxt 提供安全、私有和加密的云服务，如 Internxt Drive 和 Internxt Photos。"
   },
   {
     "id": "privacy-directory",
-    "title": "Internxt – Directory of Privacy Organizations, Institutions, and NGOs",
-    "description": "Directory of digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
+    "title": "Internxt – 隐私组织、机构和非政府组织名录",
+    "description": "数字权利组织、机构和非政府组织的目录与 Internxt 合作以推进、支持和捍卫所有人的隐私。"
   },
   {
     "id": "password-checker",
-    "title": "Internxt – Free and Secure Password Checker",
-    "description": "Free password security checker. Check the strength of your passwords with Internxt’s secure online tool."
+    "title": "Internxt – 免费安全的密码检查器",
+    "description": "免费的密码安全检查器。 使用 Internxt 的安全在线工具检查您的密码强度。"
   },
   {
     "id": "cyber-awareness",
-    "title": "Cyber Awareness | Internxt",
-    "description": "What is cyber awareness, how to stay safe online, and everything you need to know about Cybersecurity Awareness Month this October."
+    "title": "网络意识 | Internxt",
+    "description": "什么是网络意识、如何保持在线安全以及您需要了解的有关今年 10 月网络安全意识月的所有信息。"
   }
 ]

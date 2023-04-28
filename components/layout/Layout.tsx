@@ -67,8 +67,6 @@ LayoutProps) {
       brave: isBrave(),
     });
   }, [segmentName]);
-  console.log(lang);
-  console.log(`${INTERNXT_URL}/${lang}${pathname}`);
 
   return (
     <>
