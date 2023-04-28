@@ -41,7 +41,7 @@ LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
-  const lang = router.locale === 'en' ? '' : router.locale;
+  const lang = router.locale;
   const showBanner = !excludedURL.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<any>();
@@ -72,7 +72,7 @@ LayoutProps) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="canonical" href={`${INTERNXT_URL}${`/${lang}`}${pathname}`} />
+        <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <link rel="alternate" hrefLang={lang} href={`${INTERNXT_URL}/${lang}${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
         <meta charSet="utf-8" />
