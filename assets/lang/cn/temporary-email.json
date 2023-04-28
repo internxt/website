@@ -97,21 +97,21 @@
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "密码检查器",
+        "UrlRedirectName": "password-checker",
         "width": 125,
         "title": "免费密码强度检查器",
         "description": "现在检查"
       },
       {
         "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "病毒扫描仪",
+        "UrlRedirectName": "virus-scanner",
         "width": 105,
         "title": "免费病毒扫描程序",
         "description": "现在扫描"
       },
       {
         "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "字节转换器",
+        "UrlRedirectName": "byte-converter",
         "width": 95,
         "title": "免费字节转换器",
         "description": "立即转换"

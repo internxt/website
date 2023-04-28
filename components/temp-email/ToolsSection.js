@@ -2,8 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 import { toolsCards } from './components/cards';
 import { CaretRight } from 'phosphor-react';
+import { useRouter } from 'next/router';
 
 const ToolsSection = ({ textContent, lang }) => {
+  const router = useRouter();
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
@@ -25,7 +27,9 @@ const ToolsSection = ({ textContent, lang }) => {
                 />
                 <p className="max-w-[200px] bg-gray-1 text-2xl font-medium">{item.title}</p>
                 <div
-                  onClick={() => window.open(`${window.location.origin}/${item.UrlRedirectName}`, '_blank')}
+                  onClick={() =>
+                    window.open(`${window.location.origin}/${router.locale}/${item.UrlRedirectName}`, '_blank')
+                  }
                   className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
                 >
                   <p className="text-sm font-semibold">{item.description}</p>
