@@ -6,6 +6,7 @@ import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
 import FileItem from './components/FileItem';
 import DriveSidenav from './components/DriveSidenav';
+import { useRouter } from 'next/router';
 
 const FirstWhatWeDoSection = ({
   textContent,
@@ -16,6 +17,7 @@ const FirstWhatWeDoSection = ({
   lang: string;
   backgroundColor?: string;
 }) => {
+  const router = useRouter();
   return (
     <section className={`overflow-hidden py-20 ${backgroundColor ? backgroundColor : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
@@ -51,7 +53,7 @@ const FirstWhatWeDoSection = ({
             <div
               className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
-                window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/privacy`, '_blank');
+                window.open(`${window.location.origin}/${router.locale}/privacy`, '_blank');
               }}
             >
               <p className="text-lg font-semibold">{textContent.card1.cta}</p>
@@ -66,7 +68,7 @@ const FirstWhatWeDoSection = ({
             <div
               className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
-                window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
+                window.open(`${window.location.origin}/${router.locale}/drive`, '_blank');
               }}
             >
               <p className="text-lg font-semibold">{textContent.card2.cta}</p>

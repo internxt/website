@@ -45,7 +45,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
         <div className="flex cursor-pointer">
           <div
             onClick={() => {
-              window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank');
+              window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank');
             }}
             className="flex max-w-4xl cursor-pointer flex-row"
           >

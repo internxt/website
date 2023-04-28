@@ -1,6 +1,7 @@
 import React from 'react';
 import RevealY from '../components/RevealY';
 import { CaretLeft, CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from 'phosphor-react';
+import { useRouter } from 'next/router';
 
 const InfoSection = ({
   textContent,
@@ -13,6 +14,8 @@ const InfoSection = ({
   withoutCta?: boolean;
   backgroundColor?: string;
 }) => {
+  const router = useRouter();
+
   const Cards = [
     {
       icon: ShieldCheck,
@@ -46,7 +49,7 @@ const InfoSection = ({
             <div
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
               onClick={() => {
-                window.open('https://internxt.com/about', '_blank');
+                window.open(`${window.location.origin}/${router.locale}/about`, '_blank');
               }}
             >
               <p>{textContent.cta}</p>

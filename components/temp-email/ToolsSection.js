@@ -25,7 +25,7 @@ const ToolsSection = ({ textContent, lang }) => {
                 />
                 <p className="max-w-[200px] bg-gray-1 text-2xl font-medium">{item.title}</p>
                 <div
-                  onClick={() => window.open(`https://internxt.com/${item.UrlRedirectName}`, '_blank')}
+                  onClick={() => window.open(`${window.location.origin}/${item.UrlRedirectName}`, '_blank')}
                   className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
                 >
                   <p className="text-sm font-semibold">{item.description}</p>
