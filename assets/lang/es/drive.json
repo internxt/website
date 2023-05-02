@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT DRIVE",
+    "eyebrow": "Internxt Drive",
     "title": {
       "line1": "El cloud storage más ",
       "line2": "seguro para tus archivos,",
@@ -12,6 +12,7 @@
       "line3": "grado militar y fragmentación de archivos, para que solo tú tengas el control de tus archivos y datos."
     },
     "DownloadLinks": {
+      "downloadTitle": "Descarga Internxt Drive",
       "or": "o",
       "downloadFor": "Descargar para",
       "orDownloadFor": "O descargar para",
@@ -32,8 +33,8 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "Todo tipo de archivos.",
-        "line2": "En todos tus dispositivos."
+        "line1": "Todo tipo de archivos,",
+        "line2": "en todos tus dispositivos"
       }
     },
     "section2": {

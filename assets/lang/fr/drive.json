@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT DRIVE",
+    "eyebrow": "Internxt Drive",
     "title": {
       "line1": "Le stockage en nuage le plus sûr pour",
       "line2": "vos fichiers, photos et autres."
@@ -11,6 +11,7 @@
       "line3": "niveau militaire, afin que vous soyez le seul à avoir le contrôle de vos fichiers et de vos données."
     },
     "DownloadLinks": {
+      "downloadTitle": "Télécharger Internxt Drive",
       "or": "ou",
       "downloadFor": "Téléchargez pour",
       "orDownloadFor": "Ou téléchargez pour",
@@ -31,8 +32,8 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "Tous les types de fichiers.",
-        "line2": "Sur tous vos appareils."
+        "line1": "Tous les types de fichiers,",
+        "line2": "sur tous vos appareils"
       }
     },
     "section2": {

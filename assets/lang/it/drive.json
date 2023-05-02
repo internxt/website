@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT DRIVE",
+    "eyebrow": "Internxt Drive",
     "title": {
       "line1": "L'archiviazione cloud più sicura",
       "line2": "per tutti i tuoi file, le tue foto e altro."
@@ -11,6 +11,7 @@
       "line3": "e file sharding, per fare in modo che solo tu abbia il controllo sui tuoi file e sui tuoi dati."
     },
     "DownloadLinks": {
+      "downloadTitle": "Scarica Internxt Drive",
       "or": "o",
       "downloadFor": "Scarica per",
       "orDownloadFor": "O scarica per",

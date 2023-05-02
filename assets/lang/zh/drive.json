@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT DRIVE",
+    "eyebrow": "Internxt Drive",
     "title": {
       "line1": "最安全的云存储 ",
       "line2": "你的所有文件、照片和更多"
@@ -11,6 +11,7 @@
       "line3": "文件经过加密和拆分，所以只有你能控制你的文件和数据。"
     },
     "DownloadLinks": {
+      "downloadTitle": "下载Internxt Drive",
       "or": "或",
       "downloadFor": "为",
       "orDownloadFor": "或为",

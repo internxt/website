@@ -6,18 +6,18 @@ const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
     <div className="mx-auto space-x-8 sm:space-x-6">
       <Link href="/drive" locale={lang} passHref>
         <a
-          className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-            selectedItem === 'drive' ? 'text-cool-gray-70' : 'text-cool-gray-40 hover:text-cool-gray-50'
-          } text-base font-medium sm:text-sm`}
+          className={`relative whitespace-nowrap py-1.5 px-4 font-semibold transition duration-150 ease-in-out ${
+            selectedItem === 'drive' ? 'text-primary' : 'text-gray-60 hover:text-primary-dark'
+          } text-base`}
         >
           {textContent.products.drive}
         </a>
       </Link>
       <Link href="/photos" locale={lang} passHref>
         <a
-          className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-            selectedItem === 'photos' ? 'text-cool-gray-70' : 'text-cool-gray-40 hover:text-cool-gray-50'
-          } text-base font-medium sm:text-sm`}
+          className={`relative whitespace-nowrap py-1.5 px-4 font-semibold transition duration-150 ease-in-out ${
+            selectedItem === 'photos' ? 'text-primary' : 'text-gray-60 hover:text-primary-dark'
+          } text-base`}
         >
           {textContent.products.photos}
         </a>
@@ -26,9 +26,9 @@ const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
         href="https://send.internxt.com"
         target="_blank"
         rel="noreferrer"
-        className={`relative whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-          selectedItem === 'send' ? 'text-cool-gray-70' : 'text-cool-gray-40 hover:text-cool-gray-50'
-        } text-base font-medium sm:text-sm`}
+        className={`relative whitespace-nowrap py-1.5 px-4 font-semibold transition duration-150 ease-in-out ${
+          selectedItem === 'send' ? 'text-primary' : 'text-gray-60 hover:text-primary-dark'
+        } text-base`}
       >
         {textContent.products.send}
       </a>

@@ -1,9 +1,9 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT DRIVE",
+    "eyebrow": "Internxt Drive",
     "title": {
-      "line1": "The safest cloud storage for all",
-      "line2": "your files, photos, and more."
+      "line1": "The safest cloud storage",
+      "line2": "for all your files, photos, and more"
     },
     "subtitle": {
       "line1": "Syncing, backing up, and sharing your files in total privacy couldn’t be easier.",
@@ -11,6 +11,7 @@
       "line3": "encryption and file sharding, so only you have control over your files and data."
     },
     "DownloadLinks": {
+      "downloadTitle": "Download Internxt Drive",
       "or": "or",
       "downloadFor": "Download for",
       "orDownloadFor": "Or download for",
@@ -31,8 +32,8 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "All kinds of files.",
-        "line2": "On all your devices."
+        "line1": "All kinds of files,",
+        "line2": "all kinds of devices"
       }
     },
     "section2": {

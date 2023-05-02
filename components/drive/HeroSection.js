@@ -3,19 +3,20 @@ import React from 'react';
 import DownloadComponent from './DownloadComponent';
 
 const HeroSection = ({ textContent, lang, download }) => (
-  <section className="flex flex-col w-full pt-10">
+  <section className="flex w-full flex-col pt-20">
     <div className="flex flex-col items-center py-40">
       {/* Main title */}
-      <div className="text-center px-6">
-        <h2 className="text-sm lg:text-base font-medium text-cool-gray-90 mb-2">{textContent.eyebrow}</h2>
+      <div className="flex flex-col items-center justify-center space-y-6 px-6 text-center">
+        <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 py-2 px-4">
+          <p className="text-sm font-medium text-gray-80 lg:text-xl">{textContent.eyebrow}</p>
+        </div>
 
-        <h1 className="text-4xl lg:text-6xl font-medium text-cool-gray-90 px-4 mb-10">
-          {textContent.title.line1} <br className="hidden sm:flex" />
-          {textContent.title.line2} <br className="hidden sm:flex" />
-          {textContent.title.line3}
+        <h1 className="px-4 text-4xl font-semibold text-gray-100 lg:text-6xl lg:leading-tight">
+          <span className="text-primary">{textContent.title.line1}</span> <br className="hidden sm:flex" />
+          {textContent.title.line2}
         </h1>
 
-        <h3 className="text-lg sm:text-base font-normal text-cool-gray-80 mb-10 lg:mb-20">
+        <h3 className="text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
           {textContent.subtitle.line1} <br className="hidden sm:flex" />
           {textContent.subtitle.line2} <br className="hidden sm:flex" />
           {textContent.subtitle.line3}
@@ -23,14 +24,16 @@ const HeroSection = ({ textContent, lang, download }) => (
       </div>
 
       {/* Main title Mockup */}
-      <div
-        className="hidden lg:flex py-72 my-8 bg-no-repeat bg-cover bg-center-top"
-        style={{
-          backgroundImage: 'url(/images/drive/landing.webp)',
-          width: 929,
-          height: 617,
-        }}
-      />
+      <div className="flex h-full w-full max-w-[757px] flex-col py-16">
+        <picture>
+          <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
+          <img
+            src="/images/home/Internxt-secure-cloud-storage.webp"
+            alt="Internxt secure cloud storage"
+            draggable={false}
+          />
+        </picture>
+      </div>
 
       {/* Download links */}
       <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
