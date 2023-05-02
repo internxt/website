@@ -166,14 +166,14 @@ export default function Footer({
                       <a className="hover:text-primary">{textContent.FooterSection.sections.company.legal}</a>
                     </Link>
 
-                    <a
-                      href="https://help.internxt.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-primary"
+                    <p
+                      onClick={() => {
+                        window.open('https://help.internxt.com', '_blank');
+                      }}
+                      className="cursor-pointer hover:text-primary"
                     >
                       {textContent.FooterSection.sections.company.support}
-                    </a>
+                    </p>
 
                     <Link href="/cloud-storage-comparison" locale={lang} passHref>
                       <a className="hover:text-primary">{textContent.FooterSection.sections.company.comparison}</a>
@@ -462,9 +462,13 @@ export default function Footer({
                         <a>{textContent.FooterSection.sections.company.legal}</a>
                       </Link>
 
-                      <a href="https://help.internxt.com/" target="_blank" rel="noreferrer">
+                      <p
+                        onClick={() => {
+                          window.open('https://help.internxt.com', '_blank');
+                        }}
+                      >
                         {textContent.FooterSection.sections.company.support}
-                      </a>
+                      </p>
 
                       <Link href="/cloud-storage-comparison" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.comparison}</a>

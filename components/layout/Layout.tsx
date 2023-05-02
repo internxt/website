@@ -73,19 +73,19 @@ LayoutProps) {
       <Head>
         <title>{title}</title>
         <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
-        <link rel="alternate" hrefLang={lang} href={`${INTERNXT_URL}/${lang}${pathname}`} />
-        <link rel="alternate" hrefLang="x-default" href="https://internxt.com/" />
+        <link rel="alternate" hrefLang={lang} href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
+        <link rel="alternate" hrefLang="x-default" href={INTERNXT_URL} />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
+        <meta property="og:url" content={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <meta
           property="og:image"
           content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`${INTERNXT_URL}/${lang}${pathname}`} />
+        <meta property="twitter:url" content={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta
