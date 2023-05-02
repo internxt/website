@@ -17,7 +17,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       <Parallax
         className="flex w-full flex-col items-center justify-center text-center"
         renderLayer={(percentage) => (
-          <h2 className="relative mb-10 text-3xl font-medium text-cool-gray-90 lg:mb-20 lg:text-5xl">
+          <h2 className="relative text-3xl font-medium text-cool-gray-90 lg:mb-20 lg:text-5xl">
             <Transition
               show={anim.trigger(percentage)}
               enter="transition-all duration-500"
@@ -45,21 +45,23 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       />
 
       {/* Feature #1 - All your files available in all your devices */}
-      <div className="relative grid w-full grid-cols-1 justify-center gap-20 pt-20 lg:grid-cols-2 lg:pb-20">
+      <div className="relative grid w-full grid-cols-1 justify-center gap-20 pt-10 lg:grid-cols-2 lg:pt-20 lg:pb-20">
         <RevealX
           className="hidden w-full max-w-[713px] flex-col object-contain object-right lg:right-0 lg:flex"
           direction="right"
         >
           <Image
-            className="h-full w-full"
+            className="w-full"
             src="/images/drive/desktop-internxtFolder-filelogger-mockup.png"
             width={713}
-            height={844}
+            height={894}
             quality={100}
+            unoptimized={true}
+            alt="Internxt Drive"
           />
         </RevealX>
 
-        <div className="flex w-full flex-col items-center justify-center lg:items-start lg:pl-10">
+        <div className="flex w-full flex-col items-center justify-center lg:-top-4 lg:items-start lg:pl-10">
           <div
             className="relative"
             style={{
@@ -76,7 +78,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             />
           </div>
 
-          <div className="mt-16 flex flex-col px-10 lg:px-0">
+          <div className="mt-10 flex flex-col px-10 lg:px-0">
             <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
               {textContent.section2.title.line1} <br className="hidden sm:flex" />
               {textContent.section2.title.line2} <br className="hidden sm:flex" />
@@ -96,11 +98,11 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       </div>
 
       {/* Feature #2 - Keep your files organized and accessible from anywhere */}
-      <div className="grid w-full grid-cols-1 justify-center pt-20 lg:grid-cols-2 lg:gap-20 lg:pb-20">
+      <div className="grid w-full grid-cols-1 justify-center pt-10 lg:grid-cols-2 lg:gap-20 lg:pb-20">
         <div className="flex flex-col items-center lg:items-end lg:pr-20">
           {/* Keep items aligned to the left */}
-          <div className="flex w-full flex-col items-center lg:w-auto lg:items-start">
-            <div className="mb-20 flex flex-col px-10 lg:mb-28 lg:px-0">
+          <div className="flex w-full flex-col items-center pt-10 lg:w-auto lg:items-start">
+            <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-28 lg:px-0">
               <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
                 {textContent.section3.title.line1} <br className="hidden sm:flex" />
                 {textContent.section3.title.line2} <br className="hidden sm:flex" />
@@ -144,15 +146,19 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               className="h-full w-full shadow-subtle-hard"
               src="/images/drive/desktop-internxt-drive-explorer.png"
               width={750}
-              height={847}
+              height={772}
               quality={100}
+              unoptimized={true}
+              objectPosition={'right'}
+              objectFit="contain"
+              alt="Internxt Drive Explorer"
             />
           </RevealX>
         </div>
       </div>
 
       {/* Feature #3 - Share your files with ease, security is on us */}
-      <div className="grid w-full grid-cols-1 justify-center pt-16 lg:grid-cols-2 lg:gap-20 lg:pt-20 lg:pb-20">
+      <div className="grid w-full grid-cols-1 items-center justify-center pt-10 lg:grid-cols-2 lg:gap-20 lg:pt-20 lg:pb-20">
         <div className="hidden h-full flex-col items-start object-contain object-left lg:left-0 lg:flex">
           <RevealX className="hidden flex-col lg:flex" direction="left">
             <Image
@@ -163,6 +169,8 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               draggable={false}
               layout="intrinsic"
               quality={100}
+              unoptimized={true}
+              alt="Internxt Drive Share Settings Menu"
             />
           </RevealX>
         </div>
@@ -184,7 +192,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             />
           </div>
 
-          <div className="mb-20 flex flex-col px-10 pt-20 lg:mb-24 lg:px-0">
+          <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
             <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
               {textContent.section4.title.line1} <br className="hidden sm:flex" />
               {textContent.section4.title.line2} <br className="hidden sm:flex" />
@@ -207,24 +215,19 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       </div>
 
       {/* Feature #4 - Backup what matters to you. */}
-      <div className="grid w-full grid-cols-1 justify-center gap-20 pt-16 lg:grid-cols-2 lg:pt-20 lg:pb-20">
+      <div className="grid w-full grid-cols-1 justify-center gap-20 pt-5 lg:grid-cols-2 lg:pt-20 lg:pb-20">
         <div className="flex flex-col items-center lg:items-end lg:pr-20">
-          <div
-            className="mx-10 flex flex-col lg:hidden"
-            style={{
-              maxWidth: 554,
-            }}
-          >
+          <div className="mx-12 flex w-full flex-col bg-transparent lg:hidden">
             <img
               loading="lazy"
-              className="w-full shadow-subtle"
-              src="/images/drive/backups-internxt-desktop.png"
+              className="w-full"
+              src="/images/drive/internxt-desktop-backups.png"
               draggable="false"
-              alt="Internxt Desktop backups new feature"
+              alt="Internxt Desktop backups"
             />
           </div>
 
-          <div className="mb-24 flex flex-col px-10 pt-10 lg:px-0">
+          <div className="mb-24 flex flex-col px-10 pt-10 lg:px-0 lg:pt-0">
             <h3 className="mb-6 text-3xl font-medium text-cool-gray-90 lg:text-4xl">
               {textContent.section5.title.line1} <br className="hidden sm:flex" />
               {textContent.section5.title.line2} <br className="hidden sm:flex" />
@@ -246,12 +249,14 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           <RevealX className="hidden flex-col lg:flex" direction="left">
             <Image
               className="object-contain shadow-subtle-hard"
-              src="/images/drive/Backups (This device).png"
-              width={600}
+              src="/images/drive/internxt-desktop-backups.png"
+              width={550}
               height={460}
               draggable={false}
               layout="intrinsic"
               quality={100}
+              unoptimized={true}
+              alt="Internxt Desktop backups"
             />
           </RevealX>
         </div>
