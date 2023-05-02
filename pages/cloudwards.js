@@ -52,7 +52,7 @@ export async function getServerSideProps(ctx) {
   }
 
   const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/startpage.json`);
+  const langJson = require(`../assets/lang/en/cloudwards.json`);
   const navbarLang = require(`../assets/lang/en/navbar.json`);
   const footerLang = require(`../assets/lang/en/footer.json`);
 

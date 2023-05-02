@@ -50,7 +50,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
         <div className="flex w-full max-w-screen-xl flex-col items-center justify-center py-16 sm:mb-6 md:flex-row lg:mx-32">
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center pt-5 text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
             <Link href="/" passHref>
-              <img src="/logos/internxt/white.svg" className="-mt-5 cursor-pointer" />
+              <img src="/logos/internxt/white.svg" alt="Internxt logo" className="-mt-5 cursor-pointer" />
             </Link>
             {/* <div className="flex flex-row pb-6 pt-16">
               <Alarm size={32} className="mr-4 text-primary" />
@@ -84,7 +84,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
           <div className="mt-8 flex w-full max-w-md flex-col md:mx-0 md:mt-0 md:max-w-none md:flex-row ">
             <div className="relative flex h-[590px] items-center justify-center lg:left-16">
               <div className="flex">
-                <img src="/images/special-offer/black-friday/file_icons.png" />
+                <img src="/images/special-offer/black-friday/file_icons.png" alt="File icons" />
               </div>
               {/* {isAffiliate ? (
                 <div className="absolute m-auto flex max-h-[300px] max-w-[612px]">
