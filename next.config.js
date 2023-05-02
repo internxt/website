@@ -121,16 +121,6 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/inxt',
-        destination: '/token',
-        permanent: false,
-      },
-      {
-        source: '/:lang/inxt',
-        destination: '/:lang/token',
-        permanent: false,
-      },
-      {
         source: '/comparison',
         destination: '/cloud-storage-comparison',
         permanent: false,
