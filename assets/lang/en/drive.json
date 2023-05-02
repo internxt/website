@@ -6,9 +6,9 @@
       "line2": "for all your files, photos, and more"
     },
     "subtitle": {
-      "line1": "Syncing, backing up, and sharing your files in total privacy couldn’t be easier.",
-      "line2": "With Internxt Drive we focus on user-friendly encrypted storage with military-grade",
-      "line3": "encryption and file sharding, so only you have control over your files and data."
+      "line1": "Storing, backing up, and sharing your files in total privacy couldn’t be any easier. With Internxt Drive, you",
+      "line2": "get user-friendly storage, military-grade encryption, and full control over your files and data.",
+      "line3": ""
     },
     "DownloadLinks": {
       "downloadTitle": "Download Internxt Drive",
@@ -38,15 +38,15 @@
     },
     "section2": {
       "title": {
-        "line1": "All your files are",
+        "line1": "All your files",
         "line2": "available on all",
-        "line3": "your devices."
+        "line3": "your devices"
       },
       "subtitle": {
-        "line1": "Securely access all your files from",
-        "line2": "your computer, smartphone, tablet,",
-        "line3": "or any device with a connection to",
-        "line4": "the internet via the most secure",
+        "line1": "Securely access all your files from ",
+        "line2": "your computer, smartphone, tablet, ",
+        "line3": "or any device with a connection to ",
+        "line4": "the internet via the most secure ",
         "line5": "cloud storage app."
       }
     },
@@ -55,7 +55,7 @@
         "line1": "Keep your files",
         "line2": "organized and",
         "line3": "accessible from",
-        "line4": "anywhere."
+        "line4": "anywhere"
       },
       "subtitle": {
         "line1": "Internxt Drive lets you organize your",
@@ -71,16 +71,16 @@
       "title": {
         "line1": "Share your files",
         "line2": "with ease,",
-        "line3": "security is on us."
+        "line3": "security is on us"
       },
       "subtitle": {
         "line1": "Internxt Drive focuses on privacy and",
         "line2": "security, so you only have to focus on",
         "line3": "what matters to you, like sharing files",
-        "line4": "with your coworkers, or the photos of",
-        "line5": "your last travel with your family. You",
-        "line6": "choose with who you want to share",
-        "line7": "them and how many times you want",
+        "line4": "with your coworkers, or the plane tickets",
+        "line5": "for your next holiday with family. You",
+        "line6": "choose who you want to share them",
+        "line7": "and how many times you want",
         "line8": "them to be downloaded."
       }
     },
@@ -100,14 +100,14 @@
     },
     "section6": {
       "title": {
-        "line1": "Start syncing your files",
-        "line2": "in total privacy."
+        "line1": "Sync your files in total privacy",
+        "line2": ""
       }
     },
     "section7": {
       "title": {
-        "line1": "All your files.",
-        "line2": "Secure and private."
+        "line1": "All your files,",
+        "line2": "secure and private"
       },
       "subtitle": {
         "line1": "Privacy and security are our core, we don’t run our business on data or advertising, but",
@@ -115,19 +115,19 @@
       },
       "cta": "Our commitment on privacy",
       "card1": {
-        "title": "Military-grade encryption.",
+        "title": "Military-grade encryption",
         "subtitle": "We take your privacy very seriously, that’s why your files are encrypted so only you can access your files."
       },
       "card2": {
-        "title": "Zero-knowledge technology.",
+        "title": "Zero-knowledge technology",
         "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
       },
       "card3": {
-        "title": "Privacy by design.",
+        "title": "Privacy by design",
         "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
       },
       "card4": {
-        "title": "Secure from the core.",
+        "title": "Secure from the core",
         "subtitle": "As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers."
       }
     },
@@ -148,6 +148,11 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "FeatureSection": {
+    "title": "Protect your files with Internxt Drive",
+    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
+    "cta": "Get started"
   },
   "FaqSection": {
     "title": "Questions? We have answers",
@@ -183,5 +188,10 @@
         ]
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
   }
 }
