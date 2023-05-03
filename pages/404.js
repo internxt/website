@@ -45,7 +45,7 @@ export default function Custom404() {
                   className="flex cursor-pointer select-none flex-col items-center justify-center space-y-4 rounded-lg bg-gray-1 px-4 py-8 text-center"
                   key={index}
                   onClick={() => {
-                    window.open('card.urlRedirect', '_blank');
+                    window.open(card.urlRedirect, '_self');
                   }}
                 >
                   <card.icon size={32} className="text-primary" />
