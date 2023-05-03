@@ -84,7 +84,7 @@ describe('Pricing page', () => {
       describe('When the plan is 20GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.get('#priceTable').contains(`Get ${products.year20GB.planId}`).click();
+          cy.get('#priceTable').contains(`Get ${products.year20GB.storage}`).click();
 
           cy.url().should('eq', url({ planId: products.year20GB.planId }));
         });
