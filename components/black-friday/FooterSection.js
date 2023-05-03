@@ -72,9 +72,9 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             </a>
             <div
               onClick={() => {
-                window.Intercom('showNewMessage');
+                window.open('https://help.internxt.com/en', '_blank');
               }}
-              className="text-sm"
+              className="cursor-pointer text-sm"
             >
               {lang !== 'es' ? <p>Contact us</p> : <p>Contacta con nosotros</p>}
             </div>
