@@ -18,7 +18,7 @@ const FeatureSection = ({ textContent }) => {
         </RevealX>
         <RevealX
           direction="left"
-          className="flex w-full max-w-[388px] flex-col items-center space-y-6 text-center lg:items-start lg:text-start"
+          className="flex w-full max-w-[388px] flex-col items-center space-y-6 pt-8 text-center lg:items-start lg:pt-0 lg:text-start"
         >
           <ShieldStar size={64} className="text-primary" weight="light" />
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
