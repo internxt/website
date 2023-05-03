@@ -154,6 +154,16 @@
       "MacOS": "Mac"
     }
   },
+  "FeatureSection": {
+    "title": "Protege tus archivos con Internxt Drive",
+    "description": "Con Internxt, eres único con acceso total a tus archivos. Almacena, comparte y haz copias de seguridad de tus datos con total privacidad.",
+    "cta": "Empezar"
+  },
+  "CtaSection": {
+    "title": "Prueba Internxt sin riesgos",
+    "description": "Protege lo realmente importante con el almacenamiento en la nube seguro, privado y cifrado de Internxt",
+    "cta": "Selecciona un plan ahora"
+  },
   "FaqSection": {
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [

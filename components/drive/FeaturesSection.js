@@ -160,7 +160,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       {/* Feature #3 - Share your files with ease, security is on us */}
       <div className="grid w-full grid-cols-1 items-center justify-center pt-10 lg:grid-cols-2 lg:gap-20 lg:pt-20 lg:pb-20">
         <div className="hidden h-full flex-col items-start object-contain object-left lg:left-0 lg:flex">
-          <RevealX className="hidden flex-col lg:flex" direction="left">
+          <RevealX className="hidden flex-col lg:flex" direction="right">
             <Image
               className="shadow-subtle-hard"
               src="/images/drive/share-settings-menu.png"
