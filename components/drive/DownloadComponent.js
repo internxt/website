@@ -45,7 +45,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                 <ArrowCircleDown size={18} weight="bold" />
               </a>
 
-              <div className="text-base font-semibold text-gray-80">
+              <div className="text-lg font-semibold text-gray-80">
                 {textContent.orDownloadFor} {/* Secondary downloads when is mac */}
                 {OS === 'MacOS' && (
                   <>
@@ -103,7 +103,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
         )}
 
         {/* Download for mobile */}
-        <div className={`flex flex-1 flex-grow flex-row justify-center lg:justify-start`}>
+        <div className={`flex flex-1 flex-grow flex-row justify-center text-lg lg:justify-start`}>
           {isMobile && (
             <a
               className="flex w-full flex-col"
@@ -163,7 +163,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                     <CaretRight size={16} weight="bold" />
                   </a>
 
-                  <div className="text-base font-semibold text-gray-80">
+                  <div className="text-lg font-semibold text-gray-80">
                     {textContent.orGetOn}{' '}
                     <a
                       className="font-medium text-gray-80 underline hover:no-underline"
