@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+import Image from 'next/image';
 import React from 'react';
 import DownloadComponent from './DownloadComponent';
 
@@ -25,14 +26,14 @@ const HeroSection = ({ textContent, lang, download }) => (
 
       {/* Main title Mockup */}
       <div className="flex h-full w-full max-w-[757px] flex-col px-5 py-16">
-        <picture>
-          <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
-          <img
-            src="/images/home/Internxt-secure-cloud-storage.webp"
-            alt="Internxt secure cloud storage"
-            draggable={false}
-          />
-        </picture>
+        <Image
+          src="/images/home/Internxt-secure-cloud-storage.webp"
+          alt="Internxt secure cloud storage"
+          draggable={false}
+          width={757}
+          height={419}
+          unoptimized={true}
+        />
       </div>
 
       {/* Download links */}
