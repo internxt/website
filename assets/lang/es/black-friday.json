@@ -132,7 +132,7 @@
         {
           "question": "What payment methods does Internxt accept?",
           "answer": [
-            "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit, and [Internxt Token](https://internxt.com/token)."
+            "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit."
           ]
         },
         {

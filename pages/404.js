@@ -16,7 +16,7 @@ export default function Custom404() {
       icon: Question,
       title: 'Visit Help Center',
       description: 'Troubleshoot common issues and browse our FAQ.',
-      urlRedirect: 'https://help.internxt.com/en/',
+      urlRedirect: 'https://help.internxt.com/',
     },
     {
       icon: Lifebuoy,
@@ -45,7 +45,7 @@ export default function Custom404() {
                   className="flex cursor-pointer select-none flex-col items-center justify-center space-y-4 rounded-lg bg-gray-1 px-4 py-8 text-center"
                   key={index}
                   onClick={() => {
-                    window.location.href = card.urlRedirect;
+                    window.open('card.urlRedirect', '_blank');
                   }}
                 >
                   <card.icon size={32} className="text-primary" />
