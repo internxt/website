@@ -9,7 +9,7 @@ const FeatureSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center px-5 lg:flex-row lg:space-x-20">
         <RevealX direction="right">
           <Image
-            src="/images/drive/protect-your-data.png"
+            src="/images/drive/secure-file-storage.webp"
             width={496}
             height={520}
             quality={100}

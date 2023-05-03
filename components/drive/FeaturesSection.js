@@ -71,7 +71,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             <div
               className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
               style={{
-                backgroundImage: 'url(/images/drive/mobile-work-list-mockup.png)',
+                backgroundImage: 'url(/images/drive/cloud-storage-app.webp)',
               }}
             />
           </div>
@@ -131,7 +131,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               <div
                 className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
                 style={{
-                  backgroundImage: 'url(/images/drive/mobile-drive-grid-mockup.png)',
+                  backgroundImage: 'url(/images/drive/Internxt-drive.webp)',
                 }}
               />
             </div>
@@ -139,15 +139,15 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         </div>
 
         <div className="absolute hidden w-full max-w-[750px] flex-col items-start object-contain object-right pt-10 lg:right-0 lg:flex">
-          <RevealX className="hidden flex-col lg:flex" direction="left">
+          <RevealX className="hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex" direction="left">
             <Image
-              className="h-full w-full shadow-subtle-hard"
-              src="/images/drive/desktop-internxt-drive-explorer.png"
+              className="h-full w-full bg-no-repeat "
+              src="/images/drive/document-folders.webp"
               width={750}
               height={900}
               quality={100}
               unoptimized={true}
-              objectPosition={'right'}
+              objectPosition={'left'}
               objectFit="cover"
               alt="Internxt Drive Explorer"
             />
@@ -157,18 +157,18 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
       {/* Feature #3 - Share your files with ease, security is on us */}
       <div className="grid w-full grid-cols-1 items-center justify-center lg:grid-cols-2 lg:gap-20 lg:pt-20 lg:pb-20">
-        <div className="hidden h-full flex-col items-start object-contain object-left lg:left-0 lg:flex">
-          <RevealX className="hidden flex-col lg:flex" direction="right">
+        <div className="hidden flex-col items-start object-contain object-left pt-10 lg:left-0 lg:flex">
+          <RevealX className="hidden flex-col shadow-subtle-hard lg:flex" direction="left">
             <Image
-              className="shadow-subtle-hard"
-              src="/images/drive/share-settings-menu.png"
-              width={690}
-              height={650}
-              draggable={false}
-              layout="intrinsic"
+              className="h-full w-full bg-no-repeat "
+              src="/images/drive/File-sharing.webp"
+              width={650}
+              height={545}
               quality={100}
               unoptimized={true}
-              alt="Internxt Drive Share Settings Menu"
+              objectPosition={'right'}
+              objectFit="cover"
+              alt="Internxt Drive Explorer"
             />
           </RevealX>
         </div>
@@ -219,7 +219,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             <img
               loading="lazy"
               className="w-full"
-              src="/images/drive/internxt-desktop-backups.png"
+              src="/images/drive/file-backup.webp"
               draggable="false"
               alt="Internxt Desktop backups"
             />
@@ -244,17 +244,15 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         </div>
 
         <div className="hidden h-full flex-col items-start object-cover object-left lg:flex">
-          <RevealX className="hidden flex-col lg:flex" direction="left">
+          <RevealX className="hidden flex-col rounded-xl shadow-subtle-hard lg:flex" direction="left">
             <Image
-              className="shadow-subtle-hard"
-              src="/images/drive/internxt-desktop-backups.png"
+              src="/images/drive/file-backup.webp"
               width={600}
               height={460}
               draggable={false}
-              layout="intrinsic"
               quality={100}
               unoptimized={true}
-              objectFit="cover"
+              objectFit="contain"
               alt="Internxt Desktop backups"
             />
           </RevealX>
