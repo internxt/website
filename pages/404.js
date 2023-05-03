@@ -9,7 +9,7 @@ export default function Custom404() {
     {
       icon: House,
       title: 'Return Home',
-      description: 'Go back to the Internxt Home Page.',
+      description: 'Go back to the Internxt homepage.',
       urlRedirect: 'https://internxt.com',
     },
     {

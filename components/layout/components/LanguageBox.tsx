@@ -12,13 +12,21 @@ const currentLang = {
   zh: '中国 (ZH)',
 };
 
+const selectedLang = {
+  es: 'ES',
+  fr: 'FR',
+  en: 'EN',
+  it: 'IT',
+  zh: 'ZH',
+};
+
 export default function LanguageBox({ darkMode }) {
   const router = useRouter();
   const [lang, setLang] = useState<string>();
-  const [currentLangText, setCurrentLangText] = useState<string>(currentLang[router.locale]);
+  const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale]);
 
   function changeLang(lang: string) {
-    setCurrentLangText(currentLang[lang]);
+    setCurrentLangText(selectedLang[lang]);
     setLang(lang);
   }
 
