@@ -4,7 +4,7 @@ import React from 'react';
 import DownloadComponent from './DownloadComponent';
 
 const HeroSection = ({ textContent, lang, download }) => (
-  <section className="flex w-full flex-col pt-40">
+  <section className="flex w-full flex-col pt-20">
     <div className="flex flex-col items-center py-20">
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
