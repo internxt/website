@@ -18,13 +18,13 @@ const TermsAndConditionsOverview = ({ textContent }) => {
   }, [itemSelected]);
 
   return (
-    <div className="sticky  flex flex-col overflow-hidden pt-24 text-start">
+    <div className="sticky flex flex-col overflow-hidden pt-24 text-start">
       <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary to-primary-dark py-20">
         <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
       </div>
       <div className="flex flex-row items-start space-x-16 overflow-hidden py-20 px-24">
         <SelectSection textContent={textContent} itemSelected={itemSelected} setItemSelected={setItemSelected} />
-        <div className="flex h-screen w-screen justify-end overflow-y-scroll" id="TableSection">
+        <div className="flex h-screen w-screen justify-end overflow-y-scroll">
           <div className="flex flex-col">
             <div className="mb-16 flex flex-col" id={textContent.title}>
               <p className="mb-3 text-2xl font-medium">{textContent.title}</p>

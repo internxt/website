@@ -24,7 +24,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
   ];
 
   return (
-    <div className="flex w-full max-w-xs flex-col space-y-6 rounded-lg border border-gray-10 px-6 py-9">
+    <div className="flex w-max flex-col space-y-6 rounded-lg border border-gray-10 px-6 py-9">
       <p className="select-none text-xl font-semibold text-gray-100">{textContent.category}</p>
       <div className="flex flex-col space-y-6">
         {linkTitles.map((link) => (
