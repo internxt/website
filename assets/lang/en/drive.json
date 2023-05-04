@@ -88,7 +88,7 @@
       "eyebrow": "NEW FEATURE",
       "title": {
         "line1": "Back up what",
-        "line2": "matters to you."
+        "line2": "matters to you"
       },
       "subtitle": {
         "line1": "Now you can keep the last version",
@@ -110,8 +110,8 @@
         "line2": "secure and private"
       },
       "subtitle": {
-        "line1": "Privacy and security are our core, we don’t run our business on data or advertising, but",
-        "line2": "on trust. We respect your rights and build amazing tools around them, not against them."
+        "line1": "Privacy and security are at the heart of all we do, we don’t run our business on data or",
+        "line2": "advertising, but on trust. We respect your rights and build amazing tools around them, not against them."
       },
       "cta": "Our commitment on privacy",
       "card1": {
@@ -170,7 +170,7 @@
         ]
       },
       {
-        "question": "How to upload files to Internxt Drive",
+        "question": "How to upload files to Internxt Drive?",
         "answer": [
           "Visit Drive Web and log in. Drag and drop your chosen files or photos directly into the browser window. You can also click 'New' in the right-hand corner of the browser, which will open Explorer or Finder, and select the files you wish to upload."
         ]

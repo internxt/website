@@ -13,6 +13,7 @@ const FeatureSection = ({ textContent }) => {
             width={496}
             height={520}
             quality={100}
+            draggable={false}
             alt="Protect your data"
           />
         </RevealX>

@@ -55,6 +55,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             height={894}
             quality={100}
             unoptimized={true}
+            draggable={false}
             alt="Internxt Drive"
           />
         </RevealX>
@@ -149,6 +150,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               unoptimized={true}
               objectPosition={'left'}
               objectFit="cover"
+              draggable={false}
               alt="Internxt Drive Explorer"
             />
           </RevealX>
@@ -168,6 +170,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               unoptimized={true}
               objectPosition={'right'}
               objectFit="cover"
+              draggable={false}
               alt="Internxt Drive Explorer"
             />
           </RevealX>
