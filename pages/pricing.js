@@ -19,7 +19,7 @@ import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generat
 import { stripeProducts } from './api/stripe/stripeProducts';
 import bytes from 'bytes';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang, products }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, products }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -70,6 +70,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           lang={lang}
           country={country}
           setIsLifetime={setIsLifetime}
+          products={products}
           textContent={textContent.tableSection}
         />
 
@@ -89,7 +90,6 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`../assets/lang/${lang}/pricing.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const homeComponentsLang = require(`../assets/lang/${lang}/home.json`);
 
   cookies.setReferralCookie(ctx);
 

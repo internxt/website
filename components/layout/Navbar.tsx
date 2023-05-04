@@ -5,7 +5,6 @@ import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
 
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { useGlobalDialog } from '../../contexts/GlobalUIManager';
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
