@@ -42,12 +42,18 @@
     "cta": "Sign up for free"
   },
   "SignUpPwdCheckerBanner": {
-    "line1": "Put that strong password to use with a",
-    "blueText": "free Internxt account"
+    "line1": "Utilizzate la vostra password forte con un",
+    "blueText": "conto Internxt gratuito"
   },
-  "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
-  "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
-  "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
+  "SignUpVirusScannerBanner": {
+    "line1": "Tieni al sicuro quei file ormai puliti",
+    "blueText": "unisciti gratuitamente a Internxt"
+  },
+  "SignUpByteConverterBanner": { "line1": "Ottieni byte e byte di cloud storage sicuro", "blueText": "con Internxt" },
+  "SignUpTempMailBanner": {
+    "line1": "Mantieni le tue e-mail pulite e i tuoi file al sicuro",
+    "blueText": "con Internxt"
+  },
   "SignUpCyberAwareness": {
     "line1": "Now that you’re aware, protect yourself with",
     "blueText": "Internxt secure cloud storage"

@@ -7,7 +7,7 @@
   "ExplanationSection": {
     "convertTo": {
       "title": "Come si convertono i terabyte in gigabyte o i gigabyte in terabyte?",
-      "description": "Enter a value in the 'Gigabytes' section and your answer will appear in the 'Terabytes' section."
+      "description": "Digita un valore nel riquadro 'Gigabytes' e la risposta apparirà nel riquardo 'Terabytes'."
     },
     "convertToAgain": {
       "title": "Come si convertono i GB in TB e poi viceversa?",
