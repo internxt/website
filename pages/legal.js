@@ -22,8 +22,8 @@ const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`../assets/lang/${lang}/terms-and-conditions.json`);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const textContent = require(`../assets/lang/en/terms-and-conditions.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
 
