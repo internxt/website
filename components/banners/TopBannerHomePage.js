@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
-import { X } from 'phosphor-react';
 import { checkout } from '../../lib/auth';
 
-const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerOnMobile }) => {
+const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -13,26 +12,38 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
       return 'Oferta special:';
     } else if (lang === 'fr') {
       return 'Offre spéciale:';
+    } else if (lang === 'it') {
+      return 'Offerta speciale:';
+    } else {
+      return 'Special offer:';
     }
   };
 
   const textForWeb = () => {
     if (lang === 'en') {
-      return 'Get 90% off our 2TB plan for one year!';
+      return 'Get 80% off our 2TB plan for one year!';
     } else if (lang === 'es') {
-      return '¡Obtén un 90% de descuento en el plan de 2TB por un año!';
+      return '¡Obtén un 80% de descuento en el plan de 2TB por un año!';
     } else if (lang === 'fr') {
-      return '90% de réduction sur le plan 2TB pendant un an !';
+      return '80% de réduction sur le plan 2TB pendant un an !';
+    } else if (lang === 'it') {
+      return "Ottenete l'80% di sconto sul nostro piano da 2TB per un anno!";
+    } else {
+      return 'Get 80% off our 2TB plan for one year!';
     }
   };
 
   const textForMobile = () => {
     if (lang === 'en') {
-      return 'Get 90% off our 2TB plan for one year!';
+      return 'Get 80% off our 2TB plan for one year!';
     } else if (lang === 'es') {
-      return '¡90% de descuento en el plan de 2TB!';
+      return '¡80% de descuento en el plan de 2TB!';
     } else if (lang === 'fr') {
-      return '90% de réduction sur le plan 2TB pendant un an !';
+      return '80% de réduction sur le plan 2TB pendant un an !';
+    } else if (lang === 'it') {
+      return '80% di sconto sul nostro piano da 2TB per un anno!';
+    } else {
+      return 'Get 80% off our 2TB plan for one year!';
     }
   };
 
@@ -58,7 +69,7 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
           onClick={() =>
             checkout({
               planId: 'plan_FkTXxEg3GZW0pg',
-              couponCode: 'P8PSpVs6',
+              couponCode: 'lxevN374',
             })
           }
         >
@@ -69,9 +80,7 @@ const TopBannerHomePage = ({ isBannerFixed, closeBannerOnMobile, setCloseBannerO
         </div>
       </div>
       <div
-        className={`group fixed top-16 left-0 z-30 ${
-          closeBannerOnMobile ? 'hidden' : 'flex'
-        } h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+        className={`group fixed top-16 left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div

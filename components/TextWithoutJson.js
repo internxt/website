@@ -2,6 +2,7 @@ export const buttonDeal = {
   en: 'Get the deal',
   es: 'Ir a la oferta',
   fr: "Obtenez l'offre",
+  it: 'Get the deal',
 };
 
 export const currency = {

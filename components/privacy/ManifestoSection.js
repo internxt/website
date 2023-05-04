@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import Link from 'next/link';
+import FAQSection from '../photos/FAQSection';
 import { UilAngleRightB } from '@iconscout/react-unicons';
 import { ArrowUpRight } from 'phosphor-react';
 
@@ -34,7 +35,7 @@ const ManifestoSection = ({ textContent, lang }) => (
     </div>
 
     {/* How we ensure user privacy */}
-    <div className="z-10 flex flex-col items-center py-20 lg:pb-40 lg:pt-0">
+    <div className="z-10 flex flex-col items-center py-20 lg:pt-0">
       <div className="flex flex-col items-center px-6 text-left sm:text-center">
         <h2 className="mb-10 text-3xl font-medium lg:text-4xl">
           {textContent.section2.title.line1} <br className="hidden sm:flex" />
@@ -69,6 +70,9 @@ const ManifestoSection = ({ textContent, lang }) => (
       </div>
     </div>
 
+    {/* FAQ Section */}
+    <FAQSection textContent={textContent.FaqSection} />
+
     <div className="bg- flex flex-col bg-gray-1 py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-6">
         {/* Text content */}
@@ -79,21 +83,21 @@ const ManifestoSection = ({ textContent, lang }) => (
         {/* Links to PDFs */}
         <div className="flex flex-wrap items-center justify-center gap-32">
           <div
-            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
             onClick={() => window.open('/securitum/securitum-web.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.web}</p>
             <ArrowUpRight size={18} weight="bold" />
           </div>
           <div
-            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
             onClick={() => window.open('/securitum/securitum-mobile.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.mobile}</p>
             <ArrowUpRight size={18} weight="bold" />
           </div>
           <div
-            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:text-primary-dark"
+            className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
             onClick={() => window.open('/securitum/securitum-desk.pdf', '_blank')}
           >
             <p className="text-lg font-semibold">{textContent.securitum.links.desk}</p>
@@ -124,7 +128,7 @@ const ManifestoSection = ({ textContent, lang }) => (
                 {textContent.section3.square1.description}
               </h5>
               <Link href="/drive" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline sm:text-base">
                   <span>{textContent.section3.square1.cta}</span>
                   <UilAngleRightB className="h-4 w-4" />
                 </a>
@@ -133,7 +137,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/drive-image.png" alt="Drive image" />
+                <img src="/images/privacy/drive-image.png" alt="Internxt Drive image" />
               </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
@@ -153,7 +157,7 @@ const ManifestoSection = ({ textContent, lang }) => (
                 {textContent.section3.square2.description}
               </h5>
               <Link href="/photos" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline sm:text-base">
                   <span>{textContent.section3.square2.cta}</span>
                   <UilAngleRightB className="h-4 w-4" />
                 </a>
@@ -162,7 +166,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/photos-image.png" alt="Photos image" />
+                <img src="/images/privacy/photos-image.png" alt="Internxt Photos image" />
               </div>
               {/* <div
                 className="bg-center-top mx-auto flex bg-contain bg-no-repeat shadow-subtle-hard lg:hidden"
@@ -181,7 +185,7 @@ const ManifestoSection = ({ textContent, lang }) => (
                 {textContent.section3.square3.description}
               </h5>
               <Link href="/photos" locale={lang}>
-                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 sm:text-base">
+                <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline sm:text-base">
                   <span>{textContent.section3.square3.cta}</span>
                   <UilAngleRightB className="h-4 w-4" />
                 </a>
@@ -190,7 +194,7 @@ const ManifestoSection = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/send-image.png" alt="Send image" />
+                <img src="/images/privacy/Internxt-Send.png" alt="Internxt Send image" />
               </div>
             </div>
           </div>

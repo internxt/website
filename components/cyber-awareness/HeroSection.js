@@ -46,7 +46,7 @@ const HeroSection = ({ textContent, bannerText }) => {
         <p className="mb-4 text-center text-4xl font-semibold">{textContent.footer}</p>
         <button
           onClick={getPricingPage}
-          className="mt-8 flex h-10 w-56 items-center justify-center rounded-full bg-primary text-white"
+          className="mt-8 flex h-10 w-56 items-center justify-center rounded-lg bg-primary text-white hover:bg-primary-dark"
         >
           {textContent.button}
         </button>

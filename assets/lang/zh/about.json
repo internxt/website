@@ -1,0 +1,73 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "我们设计和建造",
+      "line2": {
+        "substring1": "世界级的",
+        "substring2": "应用程序"
+      },
+      "line3": {
+        "substring1": "构建世界级的应用程序，重视数字",
+        "substring2": "权利"
+      }
+    },
+    "figures": {
+      "activeUsers": {
+        "figure": "1M",
+        "caption": "Users trust Internxt"
+      },
+      "awards": {
+        "figure": "30",
+        "caption": "Awards and Mentions"
+      }
+    },
+    "description": {
+      "line1": "我们创造强大的工具和服务，尊重并赋予用户权力。",
+      "line2": ""
+    },
+    "recognitions": {
+      "title": "因出色的工作而自豪地获得认可",
+      "brands": {
+        "forbes": {
+          "caption1": "Next 1000"
+        },
+        "southsummit": {
+          "caption1": "Best Startup"
+        },
+        "tnw": {
+          "caption1": "T500"
+        },
+        "startupvalencia": {
+          "caption1": "Best Startup"
+        }
+      }
+    }
+  },
+  "CompanySection": {
+    "values": {
+      "title": "我们的核心价值观",
+      "items": {
+        "achieve": {
+          "title": "当努力与道德相遇时，成功就会到来 ",
+          "description": "我们确信，当某件事看起来不可能时，那只是因为还没有足够的尝试。 我们正在进一步突破技术极限，为现代问题提供创新和合乎道德的解决方案。"
+        },
+        "privacy": {
+          "title": "生活和工作学习",
+          "description": "同时开发多个产品的周期性迭代会促使我们不断前进，并迫使我们永不满足。 我们愿意出于正确的理由承担一些风险，并且一直在寻求学习和改进我们的产品。"
+        },
+        "family": {
+          "title": "我们的核心价值观",
+          "description": "无论您是在家工作还是喜欢将一切都留在办公室，我们都希望您感觉自己是团队中重要的一员。 没有我们的团队成员，Internx 什么都不是。 我们分享奋斗，我们分享成功。"
+        },
+        "growth": {
+          "title": "妥协，这并不是我们的原则",
+          "description": "我们正在开发我们希望在未来看到的技术。 仅受安全、隐私和以用户为中心的设计的限制，我们构建的一切都必须改善人类的在线体验并尊重基本的数字权利。"
+        }
+      }
+    },
+    "careers": {
+      "title": "让我们一起建设更美好的未来",
+      "link": "Internxt 的职业"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 module.exports = {
   i18n: {
-    locales: ['en', 'es', 'fr'],
+    locales: ['en', 'es', 'fr', 'it', 'zh'],
     defaultLocale: 'en',
   },
   webpack(config) {
@@ -26,7 +26,6 @@ module.exports = {
 
     return config;
   },
-
   async redirects() {
     return [
       // REDIRECTS TO HOME
@@ -119,16 +118,6 @@ module.exports = {
       {
         source: '/:lang/products',
         destination: '/:lang/drive',
-        permanent: false,
-      },
-      {
-        source: '/inxt',
-        destination: '/token',
-        permanent: false,
-      },
-      {
-        source: '/:lang/inxt',
-        destination: '/:lang/token',
         permanent: false,
       },
       {

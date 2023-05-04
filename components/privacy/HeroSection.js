@@ -8,10 +8,10 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <>
-      <section className="relative flex w-full flex-col overflow-hidden bg-cool-gray-100 pt-16">
+      <section className="relative flex w-full flex-col overflow-hidden bg-cool-gray-100 pt-24">
         <div className="z-10 flex flex-col items-center py-16 pb-20 lg:py-40">
           {/* Main title */}
-          <div className="px-6 text-left sm:text-center">
+          <div className="flex flex-col items-center justify-center px-6 text-center">
             <h1 className="mb-6 text-5xl font-medium text-white sm:mb-10 sm:text-6xl lg:text-7xl">
               {textContent.title}
             </h1>
@@ -24,7 +24,7 @@ const HeroSection = ({ textContent }) => {
             <button
               type="button"
               onClick={() => setIsOpen(true)}
-              className="flex flex-row items-center justify-center space-x-2 text-xl text-blue-50 sm:mx-auto sm:text-base"
+              className="flex flex-row items-center justify-center space-x-2 text-xl text-blue-50 hover:underline sm:mx-auto sm:text-base"
             >
               <span>{textContent.cta}</span>
               <UilPlayCircle className="h-5 w-5" />

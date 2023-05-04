@@ -1,0 +1,186 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "站在隐私的角度，切换到Internxt"
+    },
+    "subtitle": "用我们的开源和加密的安全云服务套件来保护你的隐私。Internxt Drive, Photos, Send, 和更多。",
+    "cta": {
+      "title": "获得高达10GB的免费容量",
+      "subtitle": "For free!"
+    },
+    "SignUp": {
+      "cta": {
+        "title": "Get started with Internxt",
+        "subtitle": "Create an account now and get 10GB for FREE"
+      },
+      "disclaimer": {
+        "text": "通过创建一个账户，",
+        "link": "你接受我们的服务条款和隐私政策。"
+      },
+      "fields": {
+        "email": {
+          "label": "电子邮件",
+          "placeholder": "电子邮件"
+        },
+        "password": {
+          "label": "密码",
+          "placeholder": "密码",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
+        },
+        "submit": {
+          "get": "获得高达10GB",
+          "free": "的免费容量"
+        }
+      }
+    }
+  },
+  "FirstFeaturesSection": {
+    "title": {
+      "line1": "为你的所有文件和照片提供最私密的云服务",
+      "line2": ""
+    },
+    "subtitle": "Internxt创建了私人和安全的云服务，旨在让你，用户，重新负责你的数据。保护你的文件和你的基本隐私权，所有Internxt的服务都是从基础开始建立的，具有无可比拟的安全保障。",
+
+    "cta": " 创建一个免费账户"
+  },
+  "InfoSection": {
+    "title": "安全的云存储，拥有无与伦比的隐私",
+    "description": "是什么让 Internxt 如此特别？ 我们是一个紧密团结的专业团队，完全致力于保护您的在线安全。 我们所做的一切和做出的每一个决定都以保护您的数据不被利用为中心。",
+    "cta": "有关Internxt的更多信息",
+    "cards": [
+      {
+        "title": "为隐私而生",
+        "description": "我们不存储密码或用户数据，你的所有数据在传输途中和闲置时都被加密。Internxt让你完全控制你的文件。你的数据是你的业务。保护它是我们的事。"
+      },
+      {
+        "title": "不妥协的安全",
+        "description": "你的文件在离开你的设备之前就已经被分割和端到端加密了。由于采用了零知识架构的AES-256加密，你绝对是唯一能够访问你的数据的人。"
+      },
+      {
+        "title": "开源和透明化",
+        "description": "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。"
+      },
+      {
+        "title": "经独立验证",
+        "description": "我们完全符合GDPR标准和100%安全。行动胜于语言，Internxt已被欧洲领先的渗透测试公司Securitum独立审计和验证。"
+      }
+    ]
+  },
+  "SecondFeaturesSection": {
+    "info": [
+      {
+        "title": "速度无限制",
+        "description": "对速度有需求吗？我们的分布式服务通过散布在欧盟各地的闪电般的服务器进行优化，因此你可以从你的连接中获得最佳性能。"
+      },
+      {
+        "title": "顺畅的工作流程",
+        "description": "Internxt的产品经过精简，尽可能的可用，同时提供一个干净的外观，以加强和提高你的生产力。商业安全，变得简单。"
+      },
+      {
+        "title": "备份存储，安全无忧",
+        "description": "通过内置的冗余功能将你的数据从灾难中拯救出来。在欧盟各地的多个快速服务器上备份你的重要工作和项目，并从你的所有设备上访问它们。"
+      },
+      {
+        "title": "为您的最佳时刻提供保护",
+        "description": "将你的所有照片存储在一个图库中，并从任何地方访问它们。将你的回忆直接保存在你的手机上，并从任何地方查看它们。"
+      }
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "注册后可免费获得高达10GB的容量",
+    "description": "现在就创建你的免费账户，并获得对我们这套在线隐私服务的完全访问权。",
+    "cta": "开始吧"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "为未来而生",
+      "description": "我们希望建立一个更好的万维网，一个对所有人都公平、安全和公正的网络。互联网隐私的未来之战正在激烈进行，而我们正处于前线。",
+      "cta": "为隐私而战"
+    },
+    "card2": {
+      "title": "贯通你的所有设备，一个无缝体验",
+      "description": "Internxt可以在所有平台上使用，甚至是Linux! 用我们的移动、网络和桌面应用程序同步你的文件和照片，每一个应用程序都是为了增强你在旅途中的加密存储功能。",
+      "cta": "下载应用程序"
+    },
+    "card3": {
+      "title": "免费试用Internxt",
+      "description": "免费获得高达10GB的存储空间，在全身心投入之前，看看隐私是否适合你! 2GB用于创建一个账户，然后将你的免费存储空间扩大到整个10GB，用于帮助宣传。",
+      "cta": " 创建一个免费账户"
+    }
+  },
+  "SecondWhatWeDoSection": {
+    "title": "你不是产品",
+    "description": "我们的服务是为您打造的工具。 Drive、Photos 和 Send 只是让您重新掌控自己隐私的完整产品系列的开始。",
+    "square1": {
+      "title": "Internxt Drive",
+      "subtitle": "为您的所有文件、照片和更多内容提供最安全的云存储服务",
+      "description": "用Internxt Drive重新控制你的文件和数据。在完全保密的情况下存储和备份你的文件再容易不过了。现代云存储符合军事级别的加密。",
+      "cta": "使用 Drive存储"
+    },
+    "square2": {
+      "title": "Internxt Photos",
+      "subtitle": "为您所有的完美照片时刻提供安全的在线照片存储",
+      "description": "用Internxt Photos重温、分享和保存你最美好的回忆，并将其放在一个地方。始终将你的照片放在手边，并方便地在设备间来回同步图像。",
+      "cta": "使用Photos同步"
+    },
+    "square3": {
+      "title": "Internxt Send",
+      "subtitle": "加密、共享和发送大文件，绝对可靠",
+      "description": "Send允许你使用端到端加密并快速分享大文件，而不必担心你的文件、图像或视频的安全。在完全保密的情况下传输给任何人。",
+      "cta": "使用Send分享"
+    }
+  },
+
+  "InvestorsSection": {
+    "title": "信任我们的品牌"
+  },
+  "TestimonialsSection": {
+    "title": "来自我们用户的诚实的评价",
+    "cards": [
+      {
+        "name": "Eva W.",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+      },
+      {
+        "name": "Josep C.",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+      },
+      {
+        "name": "Pat G.",
+        "enterprise": "Review from Capterra",
+        "review": "I am storing files for a non-profit organization and working with Internxt was marvelous! This drive was very easy to use. I didn't have to do anything but upload and download. The program and drive did the rest!"
+      },
+      {
+        "name": "Luca C.",
+        "enterprise": "Review from GetApp",
+        "review": "The future of cloud storage! Love the fact that finally we have an affordable encrypted and secure cloud storage software that also has a very cool look and is user-friendly."
+      },
+      {
+        "name": "Binet S.",
+        "enterprise": "Review from Trustpilot",
+        "review": "Fast, reliable, and inexpensive - best components of any product! The ample storage space is definitely appreciated! I have enough of space to save all of my photos and files. I also like how simple it is to share files."
+      }
+    ]
+  },
+
+  "GetStartedSection": {
+    "title": { "line1": "Get started and", "line2": "get up to 10GB for free" },
+    "subtitle": {
+      "line1": "Our clients are very happy with Internxt Drive, but",
+      "line2": "they are happier knowing they are in total privacy."
+    },
+    "cta1": "Get started"
+  }
+}

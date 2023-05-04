@@ -152,5 +152,40 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es Internxt Drive?",
+        "answer": [
+          "Internxt Drive es un servicio de almacenamiento de archivos basado en la privacidad absoluta y cifrado total. Nuestro servicio no accede a tus datos o archivos personales. En su lugar, está diseñado para devolverte el control sobre sus archivos y protegerte de los recopiladores de datos."
+        ]
+      },
+      {
+        "question": "¿Cómo crear una cuenta en Internxt?",
+        "answer": [
+          "En nuestra web, haz clic en 'Comenzar' en la esquina superior derecha. Rellena el formulario de registro introduciendo una correo electrónico y, a continuación, crea tu contraseña. Para empezar a utilizar los servicios de Internxt no es necesario identificarse ni verificar el correo electrónico."
+        ]
+      },
+      {
+        "question": "¿Cómo subir archivos o fotos a la nube de Internxt Drive?",
+        "answer": [
+          "Visita Drive Web e inicia sesión. Arrastra y suelta los archivos que desees subir en la ventana del navegador para subir fotos a la nube de Internxt. También puedes hacer clic en 'Nuevo' en la esquina derecha del navegador y seleccionar los archivos que desees cargar."
+        ]
+      },
+      {
+        "question": "¿Cómo instalar la aplicación de Internxt?",
+        "answer": [
+          "En la página web de Internxt, desplázate por la página de inicio y selecciona 'Descargar aplicaciones'. La app de Internxt también está disponible en Play Store o App Store. Una vez completado el proceso de descarga, se te pedirá que ejecutes la aplicación."
+        ]
+      },
+      {
+        "question": "¿Puedo configurar 2FA con Internxt?",
+        "answer": [
+          "Sí. Puedes configurar la autenticación de dos factores (2FA) para tu cuenta Internxt desde la aplicación Drive Web. Además, puedes utilizar Authy o cualquier otra herramienta similar para generar tu código 2FA con Internxt."
+        ]
+      }
+    ]
   }
 }

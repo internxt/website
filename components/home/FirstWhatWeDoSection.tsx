@@ -6,11 +6,20 @@ import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
 import FileItem from './components/FileItem';
 import DriveSidenav from './components/DriveSidenav';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-const FirstWhatWeDoSection = ({ textContent, lang }) => {
+const FirstWhatWeDoSection = ({
+  textContent,
+  lang,
+  backgroundColor,
+}: {
+  textContent;
+  lang: string;
+  backgroundColor?: string;
+}) => {
+  const router = useRouter();
   return (
-    <section className="overflow-hidden py-20">
+    <section className={`overflow-hidden py-20 ${backgroundColor ? backgroundColor : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0  md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative rounded-3xl">
@@ -21,6 +30,7 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
               quality={100}
               draggable={false}
               className="rounded-3xl"
+              alt="Secure cloud storage"
             />
             <RevealX
               direction="right"
@@ -33,16 +43,17 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
                 quality={100}
                 draggable={false}
                 className="rounded-lg"
+                alt="TaskLogger image"
               />
             </RevealX>
           </div>
-          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
+          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-center lg:text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card1.title}</p>
             <p className="text-xl font-normal">{textContent.card1.description}</p>
             <div
-              className="flex cursor-pointer flex-row items-center space-x-2 text-primary"
+              className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
-                window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/privacy`, '_blank');
+                window.open(`${window.location.origin}/${router.locale}/privacy`, '_blank');
               }}
             >
               <p className="text-lg font-semibold">{textContent.card1.cta}</p>
@@ -51,13 +62,13 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
           </div>
         </RevealY>
         <RevealY className="flex flex-col space-y-5 md:flex-row md:space-x-20 lg:items-center lg:justify-center">
-          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-start">
+          <div className="flex w-full max-w-[390px] flex-col space-y-6 text-center lg:text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
             <div
-              className="flex cursor-pointer flex-row items-center space-x-2 text-primary"
+              className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
-                window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
+                window.open(`${window.location.origin}/${router.locale}/drive`, '_blank');
               }}
             >
               <p className="text-lg font-semibold">{textContent.card2.cta}</p>
@@ -66,12 +77,13 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
           </div>
           <div className="relative w-full rounded-3xl">
             <Image
-              src="/images/home/End-to-end encrypted-cloud-storage.webp"
+              src="/images/home/End-to-end-encrypted-cloud-storage.webp"
               width={444}
               height={520}
               quality={100}
               draggable={false}
               className="rounded-3xl"
+              alt="End-to-end encrypted cloud storage"
             />
             <RevealX
               direction="left"
@@ -91,6 +103,7 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
               quality={100}
               draggable={false}
               className="rounded-3xl"
+              alt="Free cloud storage account"
             />
             <RevealX
               direction="right"
@@ -100,18 +113,20 @@ const FirstWhatWeDoSection = ({ textContent, lang }) => {
             </RevealX>
           </div>
 
-          <div className="flex w-full flex-col space-y-5 text-start">
-            <div className="flex max-w-[390px] flex-col space-y-6">
+          <div className="flex w-full flex-col space-y-5 text-center lg:text-start">
+            <div className="flex w-full max-w-[390px] flex-col space-y-6">
               <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card3.title}</p>
-              <p className="text-xl">{textContent.card3.description}</p>
+              <p className=" text-xl">{textContent.card3.description}</p>
             </div>
-            <div
-              className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white"
-              onClick={() => {
-                window.open(`https://drive.internxt.com/new`, '_blank');
-              }}
-            >
-              <p>{textContent.card3.cta}</p>
+            <div className="flex justify-center lg:justify-start">
+              <div
+                className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
+                onClick={() => {
+                  window.open(`https://drive.internxt.com/new`, '_blank');
+                }}
+              >
+                <p>{textContent.card3.cta}</p>
+              </div>
             </div>
           </div>
         </RevealY>

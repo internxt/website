@@ -1,4 +1,6 @@
+import Script from 'next/script';
 import React from 'react';
+
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/converter-tool/HeroSection';
@@ -10,56 +12,59 @@ import FaqSection from '../components/converter-tool/FaqSection';
 import Footer from '../components/layout/Footer';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
+import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
 const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === CONVERTER_TOOL_METATAG_ID);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
-      <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(langJson.SchemaMarkupQuestions.faq)}
+      </Script>
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Byte Converter', 'byte-converter')}
+      </Script>
 
-      <TryInternxtBanner
-        textContent={bannerLang.tryOutInternxtGeneralBanner}
-        url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
-      />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
+        <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
 
-      <ExplanationSection
-        textContent={langJson.ExplanationSection}
-        bannerText={bannerLang.SignUpByteConverterBanner}
-        lang={lang}
-      />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <CtaSection textContent={langJson.ctaSection1} />
+        <TryInternxtBanner
+          textContent={bannerLang.tryOutInternxtGeneralBanner}
+          url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
+        />
 
-      <InfoSection textContent={langJson.infoSection} />
+        <ExplanationSection
+          textContent={langJson.ExplanationSection}
+          bannerText={bannerLang.SignUpByteConverterBanner}
+          lang={lang}
+        />
 
-      <CtaSection textContent={langJson.ctaSection2} />
+        <CtaSection textContent={langJson.ctaSection1} />
 
-      <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} />
+        <InfoSection textContent={langJson.infoSection} />
 
-      <FaqSection textContent={langJson.FaqSection} />
+        <CtaSection textContent={langJson.ctaSection2} />
 
-      <CtaSection textContent={langJson.ctaSection3} />
+        <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <FaqSection textContent={langJson.FaqSection} />
+
+        <CtaSection textContent={langJson.ctaSection3} />
+
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-
-  if (lang === 'fr') {
-    return {
-      redirect: {
-        destination: '/byte-converter',
-        permanent: false,
-      },
-    };
-  }
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/converter-tool.json`);

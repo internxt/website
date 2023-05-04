@@ -111,5 +111,24 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "FaqSection": {
+    "title": "Questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'un annuaire de protection de la vie privée?",
+        "answer": [
+          "Pour synchroniser et enregistrer vos photos de la bibliothèque de votre téléphone au réseau d'Internxt, il vous suffit de :",
+          "1.Ouvrir l'application mobile d'Internxt.",
+          "2.Sélectionner 'Photos' et vos photos seront automatiquement synchronisées."
+        ]
+      },
+      {
+        "question": "Comment puis-je charger des fichiers à partir de mon téléphone ?",
+        "answer": [
+          "Ouvrez l'application mobile d’Internxt, puis cliquez sur l'icône bleu (+) dans la partie inférieure centrale de l'écran. Sélectionnez 'Enregistrer les archives' ou 'Enregistrer à partir du disque' pour enregistrer une photo."
+        ]
+      }
+    ]
   }
 }

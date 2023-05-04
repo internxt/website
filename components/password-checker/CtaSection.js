@@ -10,7 +10,7 @@ const CtaSection = ({ textContent }) => {
           <p className="text-xl font-normal">{textContent.subtitle}</p>
         </div>
         <button
-          className="flex rounded-full bg-white px-6 py-2"
+          className="flex rounded-lg bg-white px-6 py-2 hover:bg-blue-10"
           onClick={() => window.open('https://drive.internxt.com/new', '_blank')}
         >
           <p className="text-base font-semibold text-primary">{textContent.cta}</p>

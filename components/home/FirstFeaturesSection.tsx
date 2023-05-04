@@ -17,7 +17,7 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
         </div>
 
         <button
-          className="flex rounded-lg bg-primary px-5 py-3 text-white"
+          className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
           onClick={() => {
             window.open('https://drive.internxt.com/new', '_blank');
           }}

@@ -27,9 +27,9 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square1.description}</h5>
 
                 <div
-                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                   onClick={() => {
-                    window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/drive`, '_blank');
+                    window.open(`${window.location.origin}/${lang === 'en' ? '' : lang}/drive`, '_blank');
                   }}
                 >
                   <span>{textContent.square1.cta}</span>
@@ -45,7 +45,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                     width={480}
                     quality={100}
                     draggable={false}
-                    alt="Internxt Drive image"
+                    alt="Internxt Drive secure service"
                   />
                 </div>
               </div>
@@ -60,9 +60,9 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 <p className="text-xl font-bold">{textContent.square2.subtitle}</p>
                 <h5 className="mb-4 text-xl sm:text-base">{textContent.square2.description}</h5>
                 <div
-                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                   onClick={() => {
-                    window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/photos`, '_blank');
+                    window.open(`${window.location.origin}/${lang === 'en' ? '' : lang}/photos`, '_blank');
                   }}
                 >
                   <span>{textContent.square2.cta}</span>
@@ -78,7 +78,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                     height={480}
                     quality={100}
                     draggable={false}
-                    alt="Internxt Photos image"
+                    alt="Internxt Photos secure service"
                   />
                 </div>
               </div>
@@ -96,7 +96,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                   onClick={() => {
                     window.open('https://send.internxt.com/', '_blank');
                   }}
-                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary sm:text-base"
+                  className="flex cursor-pointer flex-row items-center space-x-1 text-lg text-primary hover:underline sm:text-base"
                 >
                   <span>{textContent.square3.cta}</span>
                   <CaretRight size={16} />
@@ -111,7 +111,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                     height={480}
                     quality={100}
                     draggable={false}
-                    alt="Internxt Send image"
+                    alt="Internxt Send transfer service"
                   />
                 </div>
               </div>

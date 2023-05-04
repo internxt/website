@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from 'phosphor-react';
-import FaqAccordion from './FaqAccordion';
 import CtaSection from './CtaSection';
 import Image from 'next/image';
 import SignUpBanner from '../banners/SignUpBanner';
@@ -97,7 +96,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   layout="intrinsic"
                   loading="eager"
                   alt="Virus Scanner image"
-                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                  onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
                 />
               ) : (
                 <Image
@@ -107,7 +106,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   layout="intrinsic"
                   loading="eager"
                   alt="Virus Scanner image"
-                  onClick={() => window.open(`https://internxt.com/${lang}/virus-scanner`, '_blank')}
+                  onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
                 />
               )}
             </div>
@@ -194,7 +193,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 layout="intrinsic"
                 loading="eager"
                 alt="Byte converter image"
-                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+                onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
               />
             ) : (
               <Image
@@ -204,24 +203,9 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 layout="intrinsic"
                 loading="eager"
                 alt="Byte converter image"
-                onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+                onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
               />
             )}
-          </div>
-        </div>
-      </div>
-
-      {/* Password FAQ */}
-      <div className="flex w-full flex-col items-center justify-center bg-gray-5 bg-opacity-50">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-12 px-6 pt-20 pb-5 lg:p-16">
-          <h4 className="text-center text-3xl font-medium lg:text-4xl">{textContent.faq.title}</h4>
-
-          <div className="flex w-full max-w-[850px] flex-col space-y-2">
-            {textContent.faq.faq.map((item) => (
-              <div key={item.question} className="rounded-lg border border-gray-20 px-5">
-                <FaqAccordion key={item.question} question={item.question} answer={item.answer} isQuestionBigger />
-              </div>
-            ))}
           </div>
         </div>
       </div>

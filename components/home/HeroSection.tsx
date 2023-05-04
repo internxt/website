@@ -49,7 +49,7 @@ export default function HeroSection({ textContent, lang }) {
 
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 border-b border-gray-5 pt-36 lg:mx-10 xl:mx-32">
+      <div className="relative mx-4 border-b border-gray-5 pt-32 lg:mx-10 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
@@ -61,7 +61,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
-            <h1 className="bg-clip-text pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:pb-8 lg:text-6xl lg:leading-tight">
+            <h1 className="pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:pb-8 lg:text-6xl lg:leading-[1.125]">
               {title}
               <span className=" text-primary">{Internxt}</span>
             </h1>
@@ -84,7 +84,7 @@ export default function HeroSection({ textContent, lang }) {
             </div>
           </div>
 
-          {/* Drsktop view full */}
+          {/* Desktop view full */}
           <div className="relative ml-10 hidden max-w-2xl flex-grow md:flex xl:ml-20">
             {/* <Image
               loading="eager"
@@ -101,7 +101,12 @@ export default function HeroSection({ textContent, lang }) {
             <div className={`${headerAnimation1 ? 'animate-fade-in-r-large' : 'hidden'} absolute inset-0`}>
               <div
                 className="relative left-48 top-1/2 -translate-y-1/2"
-                style={{ filter: 'drop-shadow(56px 56px 64px rgba(0,0,0,.2))', width: '811px', height: '490px' }}
+                style={{
+                  boxShadow: '56px 56px 80px rgba(0,0,0,.2)',
+                  width: '811px',
+                  height: '490px',
+                  borderRadius: '24px',
+                }}
               >
                 <Image
                   loading="eager"
@@ -183,10 +188,11 @@ export default function HeroSection({ textContent, lang }) {
             <div
               className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20`}
               style={{
-                filter: 'drop-shadow(16px 32px 24px rgba(0,0,0,.1))',
+                boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
                 width: '164px',
                 height: '178px',
                 bottom: '120px',
+                borderRadius: '24px',
               }}
             >
               <Image
@@ -203,7 +209,12 @@ export default function HeroSection({ textContent, lang }) {
             {/* Tasklogger */}
             <div
               className={`${headerAnimation3 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-[416px] bottom-0`}
-              style={{ filter: 'drop-shadow(16px 32px 24px rgba(0,0,0,.1))', width: '211px', height: '190px' }}
+              style={{
+                boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
+                width: '211px',
+                height: '190px',
+                borderRadius: '24px',
+              }}
             >
               <Image
                 loading="eager"
@@ -349,6 +360,17 @@ export default function HeroSection({ textContent, lang }) {
                     width="168"
                     height="18"
                     alt="Hosting Advice logo"
+                  />
+                </a>
+
+                <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
+                  <img
+                    src="../../logos/featured/wired.svg"
+                    width={82}
+                    height={16}
+                    alt="Wired logo"
+                    loading="lazy"
+                    className="mr-10"
                   />
                 </a>
 
@@ -499,12 +521,23 @@ export default function HeroSection({ textContent, lang }) {
               >
                 <img
                   loading="lazy"
-                  className={lang !== 'en' ? 'mr-12' : undefined}
+                  className={'mr-12'}
                   src="../../logos/featured/hosting-advice.png"
                   draggable="false"
                   width="168"
                   height="18"
                   alt="Hosting Advice logo"
+                />
+              </a>
+
+              <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
+                <img
+                  src="../../logos/featured/wired.svg"
+                  width={82}
+                  height={16}
+                  alt="Wired logo"
+                  className="mr-12"
+                  loading="lazy"
                 />
               </a>
 

@@ -114,5 +114,24 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cómo sincronizo mis archivos y fotos en Internxt?",
+        "answer": [
+          "Para sincronizar y encriptar tus fotos desde la biblioteca de tu teléfono a la nube de Internxt, simplemente",
+          "1.Abre la aplicación móvil de Internxt",
+          "2.Selecciona 'Photos' y tus fotos en la nube comenzarán a sincronizarse automáticamente. Podrás recuperar fotos de la nube facilmente y acceder a ellas a través de las aplicaciones de Internxt, disponibles para iOS y Android."
+        ]
+      },
+      {
+        "question": "¿Cómo puedo subir archivos desde mi teléfono?",
+        "answer": [
+          "Subir fotos a la nube de Internxt es muy sencillo. Abre la aplicación móvil Internxt, y toca el icono azul más (+) en la parte inferior central de la pantalla. Selecciona 'Cargar archivos' o 'Cargar desde el carrete' para cargar una foto en la nube de Internxt."
+        ]
+      }
+    ]
   }
 }

@@ -4,6 +4,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
+
 import React from 'react';
 import { getPlanId, stripeProducts } from '../../pages/api/stripe/stripeProducts';
 import { checkout, goToSignUpURL } from '../../lib/auth';
@@ -50,74 +51,78 @@ export default function PriceCard({
   const teamsBilled = (totalBilled * getUsers).toFixed(2);
   const MAX_USERS = 200;
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
-
   return (
     <div
       className={`priceCard card ${
-        popular ? 'border-2 border-primary bg-primary shadow-lg ring-2 ring-primary' : ''
-      } m-2 flex w-full flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+        popular ? 'border-2 border-primary bg-primary shadow-subtle ring-2 ring-primary' : ''
+      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`mostPopular ${
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
       >
-        {popular && billingFrequency === 12 ? contentText.cta.discount + ' ' + storage : contentText.mostPopular}
+        {contentText.mostPopularPlan}
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center  rounded-t-2xl bg-white bg-cover p-4 pt-6
+        className={`info flex flex-col items-center justify-center rounded-t-2xl  bg-white p-6 pt-6 
         `}
       >
         <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
-            popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
+          className={`storage flex max-w-min flex-row whitespace-nowrap bg-neutral-20 py-1 px-4 pb-0.5 text-base font-semibold ${
+            popular ? 'text-gray-100' : ' text-gray-50'
           } rounded-full font-medium`}
         >
           <p>
-            {storage}
-            <span className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm`}>
-              {contentText.perUserSlash}
-            </span>
+            {price <= 0 ? (
+              <span className="">
+                {contentText.price.free}
+                {storage}
+              </span>
+            ) : (
+              storage
+            )}
           </p>
         </div>
-
         <div
           className={`planPrice flex flex-col items-center justify-center py-8 ${
             priceBefore ? 'space-y-1' : 'space-y-4'
           }`}
         >
           <div
-            className={`priceBreakdown flex text-neutral-700 ${
-              planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
-            }`}
+            className={`priceBreakdown flex flex-row
+              items-end space-x-px text-neutral-700
+            `}
           >
-            <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
-              {contentText.perUser}
-            </span>
-            <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
+            <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">
                 {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? totalBilled : price}
               </span>
             </p>
-            {/* eslint-disable-next-line no-nested-ternary */}
-            <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}></span>
-          </div>
 
+            {/* eslint-disable-next-line no-nested-ternary */}
+          </div>
+          <span
+            className={`perUser ${
+              planType.toLowerCase() === 'individual' ? 'hidden' : ''
+            } text-sm font-medium text-gray-50`}
+          >
+            {contentText.perUser}
+          </span>
           <span
             className={`priceBefore ${
               priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-80 line-through`}
+            } text-base font-medium text-neutral-100 line-through`}
           >
             {currency()}
             {priceBefore}
           </span>
-
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-neutral-80
+            } flex-row text-sm font-medium text-gray-50
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
@@ -125,10 +130,9 @@ export default function PriceCard({
                 {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
               </span>
             </p>
-            <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.free}</p>
+            <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
           </div>
         </div>
-
         <div
           className={`businessUserCount ${
             planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'
@@ -205,7 +209,6 @@ export default function PriceCard({
               <span className="ml-1 select-none">{contentText.users}</span>
             </label>
           </div>
-
           <div className="mt-4 flex w-full flex-row justify-between text-neutral-700">
             <span className="font-medium">Total:</span>
             <div className="flex flex-row items-end">
@@ -219,8 +222,6 @@ export default function PriceCard({
             </div>
           </div>
         </div>
-      </div>
-      <div tabIndex={0} className="flex w-full flex-row justify-center bg-white px-4 pb-4">
         <div
           onClick={(e) => {
             if (cta[1] === 'Free plan') {
@@ -237,36 +238,29 @@ export default function PriceCard({
                 });
             }
           }}
-          className="subscribePlan flex w-full cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base"
+          className="flex w-full flex-row"
         >
-          <p
-            className={`${price <= 0 ? 'hidden' : 'flex'} ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            }`}
-          >
-            {contentText.cta.get + ' ' + storage}
-          </p>
+          <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2  text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
+            <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
+              {contentText.cta.get} {storage}
+            </p>
 
-          <p
-            className={`${price <= 0 ? 'flex' : 'hidden'} ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            }`}
-          >
-            {contentText.cta.signUpNow}
-          </p>
+            <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
+              {contentText.cta.signUpNow}
+            </p>
 
-          <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
+            <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
+          </div>
         </div>
       </div>
-
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
+      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {billingFrequency === -1 && (
             <div className={`flex flex-row items-start space-x-2 font-semibold`}>
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkNeutral500.svg"
+                src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
@@ -279,7 +273,7 @@ export default function PriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -289,7 +283,7 @@ export default function PriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />
@@ -299,7 +293,7 @@ export default function PriceCard({
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkNeutral500.svg"
+              src="/icons/checkPrimary.svg"
               draggable="false"
               alt="check icon"
             />

@@ -20,8 +20,8 @@ const FeatureSection = ({ textContent }) => {
             <br className="hidden sm:inline-flex" /> {textContent.whyStartUsingInternxt.description.line2}
             <br className="hidden sm:inline-flex" /> {splitInternxtFromDescriptionPart1}
             <b
-              onClick={() => window.open('https://internxt.com', '_self')}
-              className="cursor-pointer text-primary underline underline-offset-4"
+              onClick={() => window.open(window.location.origin, '_self')}
+              className="cursor-pointer text-primary underline underline-offset-4 hover:no-underline"
             >
               {internxt}
             </b>
@@ -50,7 +50,7 @@ const FeatureSection = ({ textContent }) => {
               href="https://drive.internxt.com/new"
               target="_top"
               rel="noreferrer"
-              className="flex w-full flex-col items-center justify-center whitespace-nowrap rounded-xl border border-transparent bg-blue-10 px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:text-base md:w-auto"
+              className="flex w-full flex-col items-center justify-center whitespace-nowrap rounded-lg border border-transparent bg-blue-10 px-6 py-2 text-lg font-medium text-primary hover:bg-primary hover:text-white focus:outline-none sm:text-base md:w-auto"
             >
               {textContent.createAccount.cta}
             </a>

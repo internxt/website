@@ -70,6 +70,41 @@
     "description": "Protege tus datos personales con los servicios seguros de Internxt",
     "cta": "Crear cuenta"
   },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cómo comprobar si un archivo está infectado?",
+        "answer": [
+          "El Escáner de Virus de Internxt es una herramienta que le ayudará a localizar cualquier virus que pueda haber comprometido sus archivos. Nuestro Escáner de Virus gratuito fue diseñado para ayudarle a evitar infecciones e identificar el malware de sus documentos y fotos."
+        ]
+      },
+      {
+        "question": "¿Cómo saber si tus archivos tienen malware?",
+        "answer": [
+          "Envía tus archivos, y relájate sabiendo que tus archivos están a salvo y seguros. Utilizar nuestro escáner de virus es una práctica segura para evitar una pesadilla de privacidad. ¡Escanee antes de hacer clic!"
+        ]
+      },
+      {
+        "question": "¿Cómo analizar un fichero en busca de virus?",
+        "answer": [
+          "Nuestro Escáner de Virus gratuito fue diseñado para ayudarte a evitar infecciones e identificar malware en tus documentos y fotos. Arrastra y suelta el archivo elegido en la barra de herramientas del Escáner de Virus, y automáticamente escaneará el archivo en busca de cualquier virus o malware."
+        ]
+      },
+      {
+        "question": "¿Cómo escanear un archivo en línea?",
+        "answer": [
+          "Con Internxt Virus Scanner puedes arrastrar y soltar archivos sospechosos en la barra de herramientas para detectar malware y otras infracciones de forma gratuita."
+        ]
+      },
+      {
+        "question": "¿Cómo escanear un archivo PDF?",
+        "answer": [
+          "Arrastre y suelte el PDF en la barra de herramientas como lo haría con cualquier otro archivo. Con Internxt Virus Scanner, puede escanear cualquier documento, imagen, PDF u otro tipo de archivo. Asegúrese de que sus archivos son seguros y están libres de virus antes de abrirlos con el Escáner de Virus de Internxt."
+        ]
+      }
+    ]
+  },
   "BannersSection": {
     "title": "Pruebe las herramientas gratuitas de seguridad en línea de Internxt:",
     "passwordCheckerBanner": {

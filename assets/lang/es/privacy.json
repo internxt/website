@@ -83,6 +83,29 @@
         "description": "Send te permite cifrar y compartir rápidamente archivos de gran tamaño sin que tengas que preocuparte por la seguridad de tus documentos, imágenes o vídeos. Envía archivos a cualquier persona con total confidencialidad.",
         "cta": "Envía un archivo cifrado"
       }
+    },
+    "FaqSection": {
+      "title": "¿Preguntas? Tenemos respuestas",
+      "faq": [
+        {
+          "question": "¿Es seguro el almacenamiento en la nube de Internxt?",
+          "answer": [
+            "Internxt Drive es un servicio de almacenamiento de archivos de conocimiento cero construido para una privacidad absoluta y una seguridad estricta. Nuestro servicio no accede a sus datos personales o archivos con fines publicitarios, sino que está diseñado para devolverle el control sobre sus archivos y protegerle de las empresas de recopilación de datos y publicidad."
+          ]
+        },
+        {
+          "question": "¿Cuál es el almacenamiento en la nube más privado que existe?",
+          "answer": [
+            "Muchos proveedores de nube dicen que su servicio es privado, pero Internxt va un paso más allá. Internxt es un servicio de almacenamiento de archivos de conocimiento cero que está construido para una privacidad absoluta y una seguridad estricta. Internxt no puede acceder a sus datos almacenados en la nube."
+          ]
+        },
+        {
+          "question": "¿Es Internxt privado?",
+          "answer": [
+            "A diferencia de algunos de nuestros competidores, no operamos basándonos en la publicidad ni en la recopilación de datos. Sus datos son exclusivamente suyos. Damos prioridad a su seguridad, privacidad y a la seguridad de sus archivos y fotos. Usando Internxt, puedes estar seguro de que estás a salvo."
+          ]
+        }
+      ]
     }
   }
 }

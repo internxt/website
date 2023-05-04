@@ -147,5 +147,40 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "FaqSection": {
+    "title": "Questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce que Internxt Drive ?",
+        "answer": [
+          "Internxt Drive est un service de stockage en nuage de fichiers basé sur une confidentialité absolue et un chiffrement complet. Notre service est conçu pour vous redonner le contrôle de vos fichiers et vous protéger."
+        ]
+      },
+      {
+        "question": "Comment créer un compte Internxt ?",
+        "answer": [
+          "Sur notre site web, cliquez sur 'Commencer' en haut à droite. Remplissez le formulaire d'inscription en saisissant votre adresse e-mail, puis créez votre mot de passe. Aucun login ou vérification d'email n'est nécessaire pour commencer à utiliser les services d’Internxt."
+        ]
+      },
+      {
+        "question": "Comment télécharger des fichiers sur Internxt Drive ?",
+        "answer": [
+          "Affichez Drive Web et connectez-vous. Glissez-déposez les fichiers que vous souhaitez télécharger dans la fenêtre du navigateur. Vous pouvez également cliquer sur 'Nouveau' dans le coin droit du navigateur et sélectionner les fichiers que vous souhaitez télécharger."
+        ]
+      },
+      {
+        "question": "Comment installer l'application d’Internxt ?",
+        "answer": [
+          "Sur le site web d'Internxt, descendez sur la page d'accueil et sélectionnez 'Télécharger des applications'. L'application Internxt est également disponible sur le Play Store ou l'App Store. Une fois le téléchargement terminé, vous serez invité à lancer l'application"
+        ]
+      },
+      {
+        "question": "Peut-on configurer 2FA avec Internxt ?",
+        "answer": [
+          "Oui. Vous pouvez configurer l'authentification de deux facteurs (2FA) pour votre compte d’Internxt depuis l'application Drive Web. De plus, vous pouvez utiliser Authy ou tout autre outil similaire pour générer votre code 2FA avec Internxt."
+        ]
+      }
+    ]
   }
 }

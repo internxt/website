@@ -24,7 +24,7 @@ const SuiteSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/drive-image.png" alt="Drive image" />
+                  <img src="/images/privacy/drive-image.png" alt="Internxt Drive secure service" />
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const SuiteSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/photos-image.png" alt="Photos image" />
+                  <img src="/images/privacy/photos-image.png" alt="Internxt Photos secure service" />
                 </div>
               </div>
             </div>
@@ -55,7 +55,13 @@ const SuiteSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/send-image.png" alt="Send image" />
+                  <img
+                    src="/images/privacy/Internxt-Send.png"
+                    width={480}
+                    height={480}
+                    draggable={false}
+                    alt="Internxt Send transfer service"
+                  />
                 </div>
               </div>
             </div>

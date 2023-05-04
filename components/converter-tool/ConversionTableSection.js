@@ -2,8 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const language = {
+  en: 'EN',
+  es: 'ES',
+};
+
 const ConversionTableSection = ({ textContent, lang }) => {
-  const langUpperCase = lang.toUpperCase();
+  const langUpperCase = language[lang] || 'EN';
 
   const table = [
     {
@@ -82,7 +87,11 @@ const ConversionTableSection = ({ textContent, lang }) => {
     {
       unit: 'Zettabyte',
       abbreviation: 'ZB',
-      decimalValue: '1000¹ bytes',
+        decimalValue: (
+        <>
+          1000<sup>7</sup> bytes
+        </>
+      ),
       decimalSize: '1,000,000,000,000,000,000,000 bytes',
     },
     {
@@ -129,7 +138,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
         <div className="flex cursor-pointer">
           <div
             onClick={() => {
-              window.open(`https://internxt.com/${lang}/password-checker`, '_blank');
+              window.open(`${window.location.origin}/${lang}/password-checker`, '_blank');
             }}
             className="mx-5 flex max-w-4xl cursor-pointer flex-row"
           >

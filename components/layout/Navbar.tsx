@@ -1,17 +1,14 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Transition, Disclosure, Dialog } from '@headlessui/react';
+import { Transition, Disclosure } from '@headlessui/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
-import { X } from 'phosphor-react';
-import { isAndroid, isIOS, isMobile } from 'react-device-detect';
-
-import LogIn from '../auth/LogIn';
-import SignUp from '../auth/SignUp';
-import ForgotPassword from '../auth/ForgotPassword';
 
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { useGlobalDialog } from '../../contexts/GlobalUIManager';
+import LanguageBox from './components/LanguageBox';
+import { useRouter } from 'next/router';
 
 export interface NavbarProps {
   textContent: any;
@@ -36,157 +33,10 @@ export default function Navbar(props: NavbarProps) {
   const stripeObject = { product: props.cta[1] };
 
   const isCoupon = props.coupon ? true : false;
+  const router = useRouter();
+  const getTitles = require(`../../assets/lang/en/navbar.json`);
 
   // DIALOG MANAGEMENT
-
-  const [session, setSession] = useState<boolean>(false);
-  const [showAuth, setShowAuth] = useState<boolean>(false);
-  const [planId, setPlanId] = useState<string | null>(null);
-  const [formError, setFormError] = useState<string | null>(null);
-  const [formLoading, setFormLoading] = useState<boolean>(false);
-  const [form2FA, setForm2FA] = useState<boolean>(false);
-  const [recoverSent, setRecoverSent] = useState<boolean>(false);
-
-  const dialogData = globalDialogs.getDialogData(GlobalDialog.Auth) as { mode?: 'login' | 'signup' | 'recover' };
-
-  const authMethod = dialogData && dialogData.mode ? dialogData.mode : 'login';
-  const authView = {
-    login: <LogIn error={formError} loading={formLoading} tfa={form2FA} textContent={props.textContent.Auth} />,
-    signup: <SignUp error={formError} loading={formLoading} textContent={props.textContent.Auth} />,
-    recover: (
-      <ForgotPassword sent={recoverSent} error={formError} loading={formLoading} textContent={props.textContent.Auth} />
-    ),
-  };
-
-  const hideAuth = () => {
-    setShowAuth(false);
-    setPlanId(null);
-  };
-
-  const openAuth = (view: 'login' | 'signup') => {
-    // Temporal fix
-    globalDialogs.openDialog(GlobalDialog.Auth, {
-      data: { mode: view },
-    });
-    setFormError(null);
-    setShowAuth(true);
-    setForm2FA(false);
-  };
-
-  const toggleAuthMethod = (view?: 'login' | 'signup') => {
-    // Temporal fix
-    setRecoverSent(false);
-    setFormError(null);
-    setForm2FA(false);
-    if (session && view === 'login') {
-      redirect();
-      hideAuth();
-    } else {
-      globalDialogs.openDialog(GlobalDialog.Auth, {
-        data: { mode: view },
-      });
-    }
-  };
-
-  const redirect = () => {
-    if (planId) {
-      redirectToCheckout(planId);
-    } else {
-      if (isMobile) {
-        if (isAndroid) {
-          window.location.replace('https://play.google.com/store/apps/details?id=com.internxt.cloud');
-        } else if (isIOS) {
-          window.location.replace('https://apps.apple.com/us/app/internxt-drive-secure-file-storage/id1465869889');
-        }
-      } else {
-        window.location.replace(`${DRIVE_WEB_URL}/app`);
-      }
-    }
-  };
-
-  const redirectToCheckout = (planId: string) => {
-    const isPaymentMode = props.mode === 'payment';
-    window.location.replace(
-      `${DRIVE_WEB_URL}/checkout-plan?planId=${planId}${isCoupon ? '&couponCode=' + props.coupon : ''}${
-        isPaymentMode ? '&mode=' + props.mode : '&mode=subscription'
-      }`,
-    );
-  };
-
-  // MESSAGE FILTERING
-
-  useEffect(() => {
-    if (!IFRAME_AUTH_ENABLED) return;
-    const auth = window.document.getElementById('auth')['contentWindow'];
-    const postMessage = (data) => {
-      auth.postMessage(data, `${DRIVE_WEB_URL}/auth`);
-    };
-    const permitedDomains = [DRIVE_WEB_URL, 'https://internxt.com', 'http://localhost:3001'];
-
-    const onRecieveMessage = (e) => {
-      if (permitedDomains.includes(e.origin)) {
-        if (e.data.action === 'redirect') {
-          redirect();
-        } else if (e.data.action === 'signup') {
-          setFormLoading(true);
-          postMessage(e.data);
-        } else if (e.data.action === 'check_session') {
-          postMessage(e.data);
-        } else if (e.data.action === 'session') {
-          setSession(e.data.session);
-        } else if (e.data.action === 'checkout') {
-          if (session) {
-            redirectToCheckout(e.data.planId);
-          } else {
-            setPlanId(e.data.planId);
-            openAuth('signup');
-          }
-        } else if (e.data.action === 'login') {
-          setFormLoading(true);
-          postMessage(e.data);
-        } else if (e.data.action === '2fa') {
-          setFormLoading(false);
-          setFormError(null);
-          setForm2FA(true);
-          postMessage(e.data);
-        } else if (e.data.action === 'recover') {
-          setFormLoading(true);
-          setFormError(null);
-          postMessage(e.data);
-        } else if (e.data.action === 'recover_email_sent') {
-          setFormLoading(false);
-          setRecoverSent(true);
-        } else if (e.data.action === 'error') {
-          setFormError(e.data.msg);
-          setFormLoading(false);
-        } else if (e.data.action === 'error_inline') {
-          setFormLoading(false);
-        } else if (e.data.action === 'openDialogLogin') {
-          if (session) {
-            redirect();
-          } else {
-            openAuth('login');
-          }
-        } else if (e.data.action === 'openDialogSignup') {
-          openAuth('signup');
-        } else if (e.data.action === 'toggleAuthMethod') {
-          toggleAuthMethod(e.data.view);
-        }
-      }
-    };
-
-    window.addEventListener('message', onRecieveMessage);
-
-    return () => {
-      window.removeEventListener('message', onRecieveMessage);
-    };
-  });
-
-  useEffect(() => {
-    if (authMethod === 'login' && session) {
-      redirect();
-    }
-  }, [authMethod, session]);
 
   // SCROLL EFFECTS
 
@@ -399,9 +249,14 @@ export default function Navbar(props: NavbarProps) {
                   <a
                     className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                       props.darkMode
-                        ? 'text-white hover:text-cool-gray-20'
-                        : 'text-cool-gray-70 hover:text-cool-gray-90'
-                    } text-base font-medium`}
+                        ? `text-white hover:text-cool-gray-20 ${
+                            router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase() &&
+                            'text-primary'
+                          }`
+                        : router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase()
+                        ? 'text-primary'
+                        : 'text-cool-gray-70 hover:text-primary'
+                    }  text-base font-medium`}
                   >
                     {props.textContent.links.pricing}
                   </a>
@@ -411,11 +266,11 @@ export default function Navbar(props: NavbarProps) {
                   className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
                     props.darkMode
                       ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
-                      : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-cool-gray-90'
+                      : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
                   } cursor-default rounded-lg`}
                 >
                   <span>{props.textContent.links.products}</span>
-                  <UilAngleDown className="h-6 w-6 translate-y-px text-cool-gray-20 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+                  <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
 
                   {/* Menu items */}
                   <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
@@ -451,9 +306,6 @@ export default function Navbar(props: NavbarProps) {
                         }`}
                       >
                         <span>{props.textContent.products.send}</span>
-                        <span className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-2 font-medium uppercase text-orange">
-                          {props.textContent.products.new}
-                        </span>
                       </a>
                     </div>
                   </div>
@@ -463,8 +315,14 @@ export default function Navbar(props: NavbarProps) {
                   <a
                     className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                       props.darkMode
-                        ? 'text-white hover:text-cool-gray-20'
-                        : 'text-cool-gray-70 hover:text-cool-gray-90'
+                        ? `text-white hover:text-cool-gray-20 ${
+                            router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase() &&
+                            'text-primary'
+                          }`
+                        : router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase()
+                        ? 'text-primary'
+                        : 'text-cool-gray-70 hover:text-primary'
+                    }
                     } text-base font-medium`}
                   >
                     {props.textContent.links.privacy}
@@ -475,8 +333,14 @@ export default function Navbar(props: NavbarProps) {
                   <a
                     className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                       props.darkMode
-                        ? 'text-white hover:text-cool-gray-20'
-                        : 'text-cool-gray-70 hover:text-cool-gray-90'
+                        ? `text-white hover:text-cool-gray-20 ${
+                            router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
+                            'text-primary'
+                          }`
+                        : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
+                        ? 'text-primary'
+                        : 'text-cool-gray-70 hover:text-primary'
+                    }
                     } text-base font-medium`}
                   >
                     {props.textContent.links.about}
@@ -494,7 +358,7 @@ export default function Navbar(props: NavbarProps) {
                 className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'border-white text-white focus:opacity-80'
-                    : 'border-primary text-primary active:border-primary-dark active:text-primary-dark'
+                    : 'border-primary text-primary hover:bg-primary hover:bg-opacity-10 active:border-primary-dark active:text-primary-dark'
                 } text-sm font-medium`}
               >
                 {props.textContent.links.login}
@@ -508,7 +372,7 @@ export default function Navbar(props: NavbarProps) {
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
-                    : 'bg-primary text-white active:bg-primary-dark'
+                    : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
                 } transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.getStarted}</p>
@@ -528,7 +392,7 @@ export default function Navbar(props: NavbarProps) {
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
-                    : 'bg-primary text-white active:bg-primary-dark'
+                    : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
                 } transition-all duration-75`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.checkout}</p>
@@ -536,6 +400,9 @@ export default function Navbar(props: NavbarProps) {
             ) : (
               ''
             )}
+            <div className="hidden items-center justify-center bg-transparent lg:flex">
+              <LanguageBox darkMode={props.darkMode} />
+            </div>
           </div>
         </div>
       </div>
@@ -544,46 +411,6 @@ export default function Navbar(props: NavbarProps) {
       {IFRAME_AUTH_ENABLED ? <iframe id="auth" className="hidden" src={`${DRIVE_WEB_URL}/auth`} /> : null}
 
       {/* Auth dialog */}
-      <Transition appear show={globalDialogs.dialogIsOpen(GlobalDialog.Auth)} as={Fragment}>
-        <Dialog as="div" className="relative z-50" onClose={() => !formLoading && hideAuth()}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-150"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-100"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm backdrop-filter" />
-          </Transition.Child>
-
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full flex-col items-center justify-center sm:p-4">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-200"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-100"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <Dialog.Panel className="relative flex h-screen w-screen flex-col justify-center bg-white px-8 py-10 sm:h-auto sm:w-96 sm:justify-start sm:rounded-2xl sm:shadow-subtle-hard">
-                  <div
-                    onClick={() => !formLoading && globalDialogs.closeDialog(GlobalDialog.Auth)}
-                    className="absolute top-6 right-6 z-10 flex h-9 w-9 cursor-pointer flex-col items-center justify-center rounded-md text-gray-80 hover:bg-gray-1 active:bg-gray-5"
-                  >
-                    <X className="h-6 w-6" />
-                  </div>
-
-                  <div className="mt-4 flex w-full flex-col items-center space-y-6">{authView[authMethod]}</div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </div>
-        </Dialog>
-      </Transition>
     </div>
   );
 }

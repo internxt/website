@@ -2,17 +2,19 @@ import React from 'react';
 import { Alarm } from 'phosphor-react';
 import Countdown from '../components/Countdown';
 
-const HeroSection = ({ lang, textContent }) => {
+const HeroSection = ({ lang, textContent, hideTimer }) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className="bg-primary-dark">
         <div className="lg:mx-10 xl:mx-32">
           <div className="mx-auto flex w-full max-w-screen-xl flex-col sm:mb-24 lg:flex-row">
             <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 text-center sm:w-auto sm:px-0 md:my-8 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
-              <div className="flex flex-row rounded-lg py-2">
-                <Alarm size={32} className="mr-4 text-white" />
-                <Countdown textColor={'white'} />
-              </div>
+              {!hideTimer && (
+                <div className="flex flex-row rounded-lg py-2">
+                  <Alarm size={32} className="mr-4 text-white" />
+                  <Countdown textColor={'white'} />
+                </div>
+              )}
               <div className="flex max-w-[448px] flex-col pb-10 text-center text-white md:text-start">
                 <p className="text-7xl font-bold">{textContent.title}</p>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
@@ -21,9 +23,11 @@ const HeroSection = ({ lang, textContent }) => {
                 onClick={() => {
                   window.location.href = `#payment`;
                 }}
-                className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center"
+                className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
               >
-                <p className="px-9 py-3 text-lg font-medium text-primary">{textContent.cta}</p>
+                <p className="px-9 py-3 text-lg font-medium text-primary">
+                  {hideTimer ? textContent.cta2 : textContent.cta1}
+                </p>
               </div>
 
               <div className="hidden w-full md:flex"></div>

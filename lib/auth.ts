@@ -61,15 +61,18 @@ const getAuthFlowLoginURL = ({
  * - redirectUrl: URL to redirect after user creation success
  * - enableAutoSubmit: Allow auth app to auto submit if local credentials are found
  * - obtainAuthToken: Include an auth JWT token when redirecting to redirectURL option
+ * - skipSignupIfLoggedIn: Skip signup if user is logged in, and redirect to redirectURL
  */
 const getAuthFlowCreateUserURL = ({
   redirectURL,
   obtainAuthToken,
   enableAutoSubmit,
+  skipSignupIfLoggedIn,
 }: {
   redirectURL?: string;
   obtainAuthToken?: boolean;
   enableAutoSubmit: boolean;
+  skipSignupIfLoggedIn?: boolean;
 }) => {
   const url = `${AUTH_FLOW_URL}/new`;
   const search = new URLSearchParams();
@@ -83,6 +86,10 @@ const getAuthFlowCreateUserURL = ({
 
   if (enableAutoSubmit) {
     search.set('autoSubmit', 'true');
+  }
+
+  if (skipSignupIfLoggedIn) {
+    search.set('skipSignupIfLoggedIn', skipSignupIfLoggedIn.toString());
   }
 
   const searchQuery = search.toString();
@@ -186,6 +193,7 @@ export function checkout({ planId, couponCode, mode }: PaymentCheckoutConfig): v
     const checkoutUrl = getAuthFlowCreateUserURL({
       redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
       enableAutoSubmit: false,
+      skipSignupIfLoggedIn: true,
     });
 
     window.location.href = checkoutUrl;

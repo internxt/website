@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
 import { CloudCheck, Gauge, Image, SketchLogo } from 'phosphor-react';
@@ -36,23 +36,22 @@ const SecondFeaturesSection = ({ textContent }) => {
       <RevealY className="hidden flex-row items-start justify-center lg:flex">
         <RevealX direction="right" className="flex max-w-[250px] flex-col">
           {textContent.info.map((info, index) => (
-            <>
+            <Fragment key={info.title}>
               <div
-                key={info.title}
                 className={`flex ${
                   cardIndex === index ? 'border-gray-80' : 'border-gray-10'
-                } cursor-pointer flex-row items-center border-r-4  pr-8`}
+                } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                 onClick={() => {
                   setCardIndex(index);
                 }}
               >
-                <p className="text-2xl font-medium text-gray-100">{info.title}</p>
+                <p className="text-2xl font-medium text-gray-100  hover:text-primary">{info.title}</p>
               </div>
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
-            </>
+            </Fragment>
           ))}
         </RevealX>
-        <div key={textContent.info[cardIndex].title} className="flex flex-col justify-start">
+        <div className="flex flex-col justify-start">
           <div className="flex w-auto justify-center px-6">
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex  w-full max-w-[384px] flex-col space-y-6">

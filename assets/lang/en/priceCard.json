@@ -5,9 +5,14 @@
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "planTitles": {
     "individuals": "Plans for Individuals",
-    "business": "Plans for Business"
+    "business": "Plans for Business",
+    "lifetimeCampaign": {
+      "blueText": "Get 50% OFF",
+      "normalText": "all our exclusive lifetime plans"
+    }
   },
-  "oneTime": "One-time payment",
+  "lifetimeDescription": "Buy once and get privacy and security forever.",
+  "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
   "changePlan": {
     "toIndividuals": "Change to Plans for Individuals",
     "toBusiness": "Change to Plans for Business"
@@ -19,6 +24,7 @@
     "lifetime": "Lifetime"
   },
   "billingFrequencyLabel": {
+    "lifetime": "One-time payment",
     "monthly": "billed monthly",
     "semiannually": "billed semiannually",
     "annually": "billed annually",
@@ -34,16 +40,17 @@
   "users": "users",
   "freePlan": "Free",
   "price": {
-    "free": "Free forever"
+    "freeForever": "Free forever",
+    "free": "Up to "
   },
   "perMonth": "/month",
   "firstMonth": "First 30 days",
   "cta": {
     "getStarted": "Get started",
-    "signUpNow": "Get Internxt for free",
+    "signUpNow": "Sign up now",
     "buy": "Buy",
     "get": "Get",
-    "discount": "Get 90% off",
+    "discount": "Get 80% off",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Get 30 days for free"
   },

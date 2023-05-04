@@ -63,13 +63,6 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
               </div>
             )} */}
           </div>
-          {/* <div className="absolute right-0 h-full w-1/2 pt-20 lg:w-80">
-            <img
-              src="/images/special-offer/black-friday/file_icons.png"
-              className="h-full w-full object-cover object-left"
-              alt="file icons"
-            />
-          </div> */}
         </div>
         <div className="flex flex-col items-center py-5">
           <p className="text-md font-medium text-gray-50">Copyright © 2022, Internxt Universal Technologies SL</p>
@@ -77,9 +70,14 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             <a href="https://www.internxt.com/privacy" className="text-sm">
               {lang !== 'es' ? <p>Privacy</p> : <p>Privacidad</p>}
             </a>
-            <a href="https://help.internxt.com/en/" className="text-sm">
+            <div
+              onClick={() => {
+                window.open('https://help.internxt.com/en', '_blank');
+              }}
+              className="cursor-pointer text-sm"
+            >
               {lang !== 'es' ? <p>Contact us</p> : <p>Contacta con nosotros</p>}
-            </a>
+            </div>
           </div>
         </div>
       </div>

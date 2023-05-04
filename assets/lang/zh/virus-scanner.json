@@ -1,0 +1,117 @@
+{
+  "HeroSection": {
+    "title": "病毒扫描程序",
+    "subtitle1": "拖放可疑文件以免费检测恶意软件和其他违规行为。",
+    "subtitle2": "扫描任何文档、图像、pdf 或其他文件类型。 在使用 Internxt 的零知识病毒扫描程序打开文件之前，请确保您的文件安全且没有病毒。",
+    "footer": "Internxt 对您提供的任何个人信息概不负责。 提交您的文件，即表示您同意我们的[服务条款和条件以及隐私政策。](https://internxt.com/legal)",
+
+    "dropFile": {
+      "line1": "拖放文件以扫描病毒"
+    },
+    "fileSelected": "选择要扫描的文件",
+    "cancel": "取消",
+    "close": "关闭",
+    "scanNow": "立即扫描",
+    "selectFile": "或选择文件",
+    "dropHere": "将文件拖放到此处",
+    "scanAgain": "扫描另一个文件",
+    "loading": "加载中...",
+    "maxFileSize": {
+      "title": "超出文件大小限制",
+      "description": "最大文件大小为 1GB"
+    },
+    "table": {
+      "loading": "加载中..",
+      "virusDetected": "已检测到此文件的病毒",
+      "noVirusDetected": "未检测到此文件的病毒",
+      "detected": "检测到",
+      "undetected": "未检测到",
+      "unableToProcess": "无法处理",
+      "noVirusesDetected": {
+        "message": "未检测到病毒",
+        "title": "想要保护您的文件安全吗？",
+        "subtitle": "Internxt 是一种私有云存储服务，内置病毒扫描和端到端加密。",
+        "cta": "现在就开始"
+      },
+      "analyzing": "正在扫描文件...",
+      "scanTime": "扫描时间",
+      "name": "名称",
+      "detection": "检测"
+    },
+    "error": {
+      "title": "出了些问题",
+      "description": "发送文件时出错，请稍后重试"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "为什么使用病毒扫描程序至关重要",
+      "description": ["先扫描，再提问。", "在病毒渗入您的设备之前发现它们。"]
+    },
+    "virusesHatePrivacy": {
+      "title": "病毒讨厌你的隐私",
+      "description": "强大的病毒可以窃取您的凭据或密码等敏感信息，加密并锁定您的数据，在应用程序内进行个人交易，监控您的计算机，甚至攻击连接网络上的其他设备。 病毒有可能访问几乎所有锁定在您硬件上的东西。"
+    },
+    "stopMalware": {
+      "title": "在恶意软件阻止您之前阻止它",
+      "description": "一旦病毒传播开来，它就可以毫无偏见地感染您的所有程序和应用程序。 它的破坏性代码可以而且很可能会到处传播。 这就是为什么使用病毒扫描程序至关重要."
+    },
+    "freeOnlineScanner": {
+      "title": "您可以信赖的免费在线病毒扫描程序",
+      "description": "使用我们的免费病毒扫描程序保护您的隐私，旨在帮助您避免感染并保护您的计算机。"
+    },
+    "scanFiles": {
+      "title": "完全自信地扫描文件中的病毒",
+      "description": "Internxt 始终将用户的隐私和安全放在首位。 我们致力于为所有人创造更公平、更自由、更透明的互联网。 这就是为什么我们创建了免费的在线病毒扫描程序，以发现隐蔽的病毒并暴露恶意软件"
+    }
+  },
+  "CtaSection": {
+    "title": "安全只需点击一下",
+    "description": "使用 Internxt 的隐私套件保护您的个人数据。",
+    "cta": "创建账户"
+  },
+  "FaqSection": {
+    "title": "问题？ 我们有答案",
+    "faq": [
+      {
+        "question": "如何检查文件是否被感染？",
+        "answer": [
+          "Internxt 的 病毒扫描程序 是一种工具，可帮助您找到可能已危害您的文件的任何病毒。 我们的免费病毒扫描程序旨在帮助您避免感染并从您的文档和照片中识别恶意软件。"
+        ]
+      },
+      {
+        "question": "如何知道您的文件是否有恶意软件？",
+        "answer": [
+          "提交您的文件，并放心，因为您知道您的文件是安全的。 使用我们的病毒扫描程序是避免隐私噩梦的安全做法。 点击前扫描!"
+        ]
+      },
+      {
+        "question": "如何扫描文件中的病毒？",
+        "answer": [
+          "我们的免费病毒扫描程序旨在帮助您避免感染并从您的文档和照片中识别恶意软件。 将所选文件拖放到病毒扫描程序工具栏中，它会自动扫描文件中是否存在任何病毒或恶意软件。"
+        ]
+      },
+      {
+        "question": "如何在线扫描文件？",
+        "answer": ["使用 Internxt 病毒扫描器，您可以将可疑文件拖放到工具栏中，以免费检测恶意软件和其他漏洞。"]
+      },
+      {
+        "question": "如何扫描 PDF 文件？",
+        "answer": [
+          "将 PDF 拖放到工具栏中，就像处理任何其他文件一样。 使用 Internxt Virus Scanner，您可以扫描任何文档、图像、PDF 或其他文件类型。 在使用 Internxt 的病毒扫描程序打开文件之前，请确保您的文件安全且没有病毒。"
+        ]
+      }
+    ]
+  },
+  "BannersSection": {
+    "title": "试用 Internxt 的免费在线安全工具：",
+    "passwordCheckerBanner": {
+      "title": "密码强度检查器",
+      "cta": "立即检查"
+    },
+    "byteConverterBanner": {
+      "title": "字节单位转换器",
+      "cta": "立即转换"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "HeroSection": {
+    "title": "Free Temporary Email",
+    "subtitle": "Receive emails anonymously with our free, private, and secure temporary email address generator.",
+    "generatingEmail": "Generating random email...",
+    "copyEmail": "Copy email",
+    "deleteEmail": "Delete email",
+    "expireEmail": "Email address and inbox will expire after 3 hours of inactivity",
+    "inbox": {
+      "title": "Inbox",
+      "youHave": "You have",
+      "newMessages": "new messages",
+      "waitingEmail": "Waiting for incoming email",
+      "selectMessage": "Select a message to open",
+      "attachment": "Attachments",
+      "downloadAll": "Download all",
+      "noSubject": "(no subject)"
+    }
+  },
+  "InfoSection": {
+    "title": "Internxt’s free temporary email",
+    "subtitle": "No more spam, ads, newsletters, promotions, hackers, scammers, and bots. Keep your real inbox clean, secure, and free of sketchy emails. Our disposable email account generator is Internxt's newest privacy tool built to provide free, anonymous, temporary, and random addresses without storing any of your personal data.",
+    "steps": {
+      "title": "How to use Internxt’s temporary email address generator",
+      "steps": [
+        {
+          "title": "Step 1",
+          "description": "Copy your disposable email address"
+        },
+        {
+          "title": "Step 2",
+          "description": "Use the address on your desired service"
+        },
+        {
+          "title": "Step 3",
+          "description": "Wait a few moments for a response or verification email"
+        },
+        {
+          "title": "Step 4",
+          "description": "All emails received will appear in your inbox above"
+        }
+      ]
+    },
+    "whatIsTempMail": {
+      "title": "What is a temporary email address?",
+      "description": "A temporary or disposable email address is a tool for a user with a unique email address to obtain a temporary email address for your current contact. A temporary email address service allows you to create a new email address that passes validity needed to sign-up for services or newsletters or website accounts without having to hand over your true identity."
+    },
+    "whyUseDisposableMail": {
+      "title": "Why use temporary email services?",
+      "description": "Your email address is like your online ID, you shouldn’t just hand it over to anyone. Protect your main account and keep your inbox clean by using a temporary email address for one-time or short-term communications.",
+      "infoCards": [
+        {
+          "title": "Avoid spam email and annoying subscriptions",
+          "description": "Sign up for anything without compromising your real email account and overloading your personal inbox. Perfect for snagging coupon codes and sign-up offers."
+        },
+        {
+          "title": "Hide personal information with a temporary email account",
+          "description": "Recipients won't get any access to your name, photo, phone number, email address, or any other personal information associated with your real account."
+        },
+        {
+          "title": "Receive messages to a temporary mailbox",
+          "description": "Receive the emails you expect instantly. It’s temporary mail, not instantly disposable mail."
+        },
+        {
+          "title": "Sign up anonymously from a random address",
+          "description": "Not sure if your intended recipient can be trusted? Is the site you want to contact suspicious? Afraid of malware? Use a random address thanks to Internxt's fake address generator."
+        },
+        {
+          "title": "No need for a Gmail account",
+          "description": "Don’t juggle real accounts anymore. With Internxt's fake mail, simply create an account, use it, and ditch it when you're ready. Don’t get weighed down managing multiple accounts."
+        },
+        {
+          "title": "Get referral perks without inviting friends",
+          "description": "Want to get a discount or extra perks from an online service, but you're not comfortable giving away your friends' emails? Invite your temp email instead!"
+        }
+      ]
+    },
+    "whenUseTempMail": {
+      "title": "When to use a temporary email address?",
+      "description": "The sky's the limit when it comes to use cases for a temporary mailbox. Anything that needs an email can instantly be made anonymous and commitment free with a temporary email address. Below are the best examples of when to use fake mail:",
+      "bulletedList": [
+        "Sign up for free trials",
+        "Test your app",
+        "Sign up for a double (or multiple) accounts",
+        "Eliminate spam",
+        "Sign up for store loyalty card",
+        "Communicate with suspicious accounts",
+        "Create anonymous accounts",
+        "Try out online services risk-free",
+        "Verify trivial accounts",
+        "Prank friends"
+      ]
+    }
+  },
+  "ToolsSection": {
+    "title": "Other free privacy tools like our temporary mailbox",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 125,
+        "title": "Free Password Strength Checker",
+        "description": "Check now"
+      },
+      {
+        "url": "/images/temp-email/virus-scanner.svg",
+        "UrlRedirectName": "virus-scanner",
+        "width": 105,
+        "title": "Free Virus Scanner",
+        "description": "Scan now"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Free Byte Converter",
+        "description": "Convert now"
+      }
+    ]
+  },
+  "QASection": {
+    "title": "Questions? We have answers",
+    "questions": [
+      {
+        "question": "How long are emails kept?",
+        "answer": [
+          "Emails are kept as long as you continue to use your temporary email address. As soon as you close your temporary address, your emails will be deleted along with your temporary account."
+        ]
+      },
+      {
+        "question": "Do emails stay private?",
+        "answer": [
+          "Internxt does not have any access to your temporary email. We don’t store any of your personal information or any of the emails you receive."
+        ]
+      },
+      {
+        "question": "Where do I see if I've received an email?",
+        "answer": [
+          "Emails you receive to your temporary mailbox will be displayed in the inbox located at the top of this page."
+        ]
+      },
+      {
+        "question": "How do I change the email address?",
+        "answer": ["Change your temp mail by generating a new email address in the toolbar at the top of the page."]
+      },
+      {
+        "question": "Can you recover deleted emails?",
+        "answer": [
+          "No. Unfortunately when you delete the emails you sent or received with the used domain, they are gone for good. We do this so your privacy is protected and your deleted emails aren’t left exposed."
+        ]
+      },
+      {
+        "question": "What is a temporary email?",
+        "answer": [
+          "A temporary email is a disposable email address that is only valid for a brief time before being automatically destroyed. Temporary email is also sometimes referred to as a transitory email. Internxt’s Temporary Email is a free disposable email designed to keep your personal information private."
+        ]
+      },
+      {
+        "question": "Why use a temporary email?",
+        "answer": [
+          "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s free Temporary Email. Receive emails anonymously by opening a temporary mailbox and generating random email addresses to use however you see fit. Save your real email account for the important stuff."
+        ]
+      }
+    ]
+  },
+  "SignupSection": {
+    "title": "You can't always just send an email...",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "createAccount": "Create account"
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "What is a temporary email?",
+        "answer": [
+          "An email that is only valid for a brief time before being automatically destroyed is referred to as a transitory email. Internxt Temporary Email is a free disposable email really useful."
+        ]
+      },
+      {
+        "question": "Why use a temporary email?",
+        "answer": [
+          "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s free Temporary Email. Email anonymously by opening a temporary mailbox and generating random email addresses to use however you see fit. Save your real account for the important stuff."
+        ]
+      }
+    ]
+  }
+}

@@ -64,14 +64,14 @@
 }
 
 .mask-radial-blur {
-	&:after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		backdrop-filter: blur(3px);
-		mask: radial-gradient(transparent 40%, black 85%);
-	}
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    backdrop-filter: blur(3px);
+    mask: radial-gradient(transparent 40%, black 85%);
+  }
 }
 
 // Fonts

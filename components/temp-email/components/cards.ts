@@ -1,61 +1,40 @@
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from 'phosphor-react';
 
-export const steps = [
-  {
-    title: 'Step 1',
-    description: 'Copy your disposable email address',
-  },
-  {
-    title: 'Step 2',
-    description: 'Use the address on your desired service',
-  },
-  {
-    title: 'Step 3',
-    description: 'Wait a few moments for a response or verification email',
-  },
-  {
-    title: 'Step 4',
-    description: 'All emails received will appear in your inbox above',
-  },
-];
-
-export const infoCards = [
-  {
-    icon: Bug,
-    title: 'Avoid spam email and annoying subscriptions',
-    description:
-      'Sign up for anything without compromising your real email account and overloading your personal inbox. Perfect for snagging coupon codes and sign-up offers.',
-  },
-  {
-    icon: EyeSlash,
-    title: 'Hide personal information with a temporary email account',
-    description:
-      "Recipients won't get any access to your name, photo, phone number, email address, or any other personal information associated with your real account.",
-  },
-  {
-    icon: Tray,
-    title: 'Receive messages to a temporary mailbox',
-    description: 'Receive the emails you expect instantly. It’s temporary mail, not instantly disposable mail.',
-  },
-  {
-    icon: Detective,
-    title: 'Message anonymously from a random address',
-    description:
-      "Not sure if your intended recipient can be trusted? Is the site you want to contact suspicious? Afraid of malware? Use a random address thanks to Internxt's fake address generator.",
-  },
-  {
-    icon: UserPlus,
-    title: 'No need for a temp or new Gmail account',
-    description:
-      "Don’t juggle real accounts anymore. With Internxt's fake mail, simply create an account, use it, and ditch it when you're ready. Don’t get weighed down managing multiple accounts.",
-  },
-  {
-    icon: Gift,
-    title: 'Get referral perks without inviting friends',
-    description:
-      "Want to get a discount or extra perks from an online service, but you're not comfortable giving away your friends' emails? Invite your temp email instead!",
-  },
-];
+export const infoCards = (lang) => {
+  const textContent = require(`../../../assets/lang/${lang}/temporary-email.json`);
+  return [
+    {
+      icon: Bug,
+      title: textContent.InfoSection.whyUseDisposableMail.infoCards[0].title,
+      description: textContent.InfoSection.whyUseDisposableMail.infoCards[0].description,
+    },
+    {
+      icon: EyeSlash,
+      title: textContent.InfoSection.whyUseDisposableMail.infoCards[1].title,
+      description: textContent.InfoSection.whyUseDisposableMail.infoCards[1].description,
+    },
+    {
+      icon: Tray,
+      title: textContent.InfoSection.whyUseDisposableMail.infoCards[2].title,
+      description: textContent.InfoSection.whyUseDisposableMail.infoCards[2].description,
+    },
+    {
+      icon: Detective,
+      title: textContent.InfoSection.whyUseDisposableMail.infoCards[3].title,
+      description: textContent.InfoSection.whyUseDisposableMail.infoCards[3].description,
+    },
+    {
+      icon: UserPlus,
+      title: textContent.InfoSection.whyUseDisposableMail.infoCards[4].title,
+      description: textContent.InfoSection.whyUseDisposableMail.infoCards[4].description,
+    },
+    {
+      icon: Gift,
+      title: textContent.InfoSection.whyUseDisposableMail.infoCards[5].title,
+      description: textContent.InfoSection.whyUseDisposableMail.infoCards[5].description,
+    },
+  ];
+};
 
 export const toolsCards = [
   {
@@ -79,17 +58,4 @@ export const toolsCards = [
     title: 'Free Byte Converter',
     description: 'Convert now',
   },
-];
-
-export const bulletedList = [
-  'Sign up for free trials',
-  'Test your app',
-  'Sign up for a double (or multiple) accounts',
-  'Eliminate spam',
-  'Sign up for store loyalty card',
-  'Communicate with suspicious accounts',
-  'Create anonymous accounts',
-  'Try out online services risk-free',
-  'Verify trivial accounts',
-  'Prank friends',
 ];
