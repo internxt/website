@@ -46,7 +46,10 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "Perché è fondamentale utilizzare uno scanner dei virus",
-      "description": ["Scan first, ask questions later.", "Spot viruses before they infiltrate your devices."]
+      "description": [
+        "Prima di tutto fai una scansione, poi fai le domande.",
+        "Stana i virus prima che si diffondano nei tuoi dispositivi."
+      ]
     },
     "virusesHatePrivacy": {
       "title": "I virus odiano la tua privacy",

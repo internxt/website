@@ -69,8 +69,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           setSegmentPageName={setPageName}
           lang={lang}
           country={country}
+          setIsLifetime={setIsLifetime}
           textContent={textContent.tableSection}
-          products={JSON.parse(products)}
         />
 
         <FAQSection textContent={textContent.FaqSection} />

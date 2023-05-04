@@ -22,6 +22,19 @@ const PriceCard = ({
   actualPrice,
   isCampaign,
 }) => {
+const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
+const PriceCard = ({
+  planType,
+  storage,
+  price,
+  billingFrequency,
+  cta,
+  country,
+  popular,
+  lang,
+  actualPrice,
+  isCampaign,
+}) => {
   const [stripeObject, setStripeObject] = useState({});
 
   const currency = () => {

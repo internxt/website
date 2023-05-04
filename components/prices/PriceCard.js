@@ -248,6 +248,9 @@ export default function PriceCard({
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.signUpNow}
             </p>
+            <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
+              {contentText.cta.signUpNow}
+            </p>
 
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
