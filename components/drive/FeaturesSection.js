@@ -9,7 +9,7 @@ import RevealX from '../components/RevealX';
 import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang, download }) => (
-  <section className="flex w-full flex-col">
+  <section className="flex w-full flex-col pt-20">
     <div className="flex w-full flex-col items-center">
       {/* Title */}
       <Parallax
@@ -50,32 +50,18 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         >
           <Image
             className="w-full"
-            src="/images/drive/desktop-internxtFolder-filelogger-mockup.png"
+            src="/images/drive/secure-file-storage.png"
             width={713}
             height={894}
             quality={100}
             unoptimized={true}
             draggable={false}
-            alt="Internxt Drive"
+            alt="Secure file storage"
           />
         </RevealX>
 
         <div className="flex w-full flex-col items-center justify-center lg:-top-4 lg:items-start lg:pl-10">
-          <div
-            className="relative"
-            style={{
-              width: 250,
-              height: 505,
-            }}
-          >
-            <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
-            <div
-              className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
-              style={{
-                backgroundImage: 'url(/images/drive/cloud-storage-app.webp)',
-              }}
-            />
-          </div>
+          <img src={'/images/drive/cloud-storage-app.webp'} alt="Cloud storage app" width={250} height={505} />
 
           <div className="mt-10 flex flex-col px-10 lg:px-0">
             <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
@@ -121,20 +107,8 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               </p>
             </div>
 
-            <div
-              className="relative order-first lg:order-last"
-              style={{
-                width: 250,
-                height: 505,
-              }}
-            >
-              <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
-              <div
-                className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
-                style={{
-                  backgroundImage: 'url(/images/drive/Internxt-drive.webp)',
-                }}
-              />
+            <div className="relative order-first lg:order-last" style={{}}>
+              <img src={'/images/drive/Internxt-drive.webp'} width={250} height={505} alt="Internxt Drive" />
             </div>
           </div>
         </div>
@@ -151,7 +125,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               objectPosition={'left'}
               objectFit="cover"
               draggable={false}
-              alt="Internxt Drive Explorer"
+              alt="Document folders"
             />
           </RevealX>
         </div>
@@ -171,26 +145,14 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               objectPosition={'right'}
               objectFit="cover"
               draggable={false}
-              alt="Internxt Drive Explorer"
+              alt="File sharing"
             />
           </RevealX>
         </div>
 
         <div className="flex w-full flex-col items-center lg:w-auto lg:items-start lg:pl-10">
-          <div
-            className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat shadow-subtle lg:hidden"
-            style={{
-              width: 250,
-              height: 505,
-            }}
-          >
-            <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
-            <div
-              className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
-              style={{
-                backgroundImage: 'url(/images/drive/mobile-work-list-share-mockup.webp)',
-              }}
-            />
+          <div className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat shadow-subtle lg:hidden">
+            <img src={'/images/drive/mobile-work-list-share-mockup.webp'} width={250} height={505} alt="Work list" />
           </div>
 
           <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
@@ -224,7 +186,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               className="w-full"
               src="/images/drive/file-backup.webp"
               draggable="false"
-              alt="Internxt Desktop backups"
+              alt="File backups"
             />
           </div>
 
@@ -256,7 +218,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
               quality={100}
               unoptimized={true}
               objectFit="contain"
-              alt="Internxt Desktop backups"
+              alt="File backups"
             />
           </RevealX>
         </div>
