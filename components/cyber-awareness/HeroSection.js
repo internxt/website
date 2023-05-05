@@ -14,7 +14,7 @@ const HeroSection = ({ textContent, bannerText }) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className=" flex h-60 items-center justify-center border-b border-white bg-gradient-to-b from-primary to-primary-dark">
-        <h1 className="text-center text-5xl font-semibold text-white sm:text-6xl">Cyber Awareness</h1>
+        <h1 className="text-center text-5xl font-semibold text-white sm:text-6xl">{textContent.title}</h1>
       </div>
       <div className="flex flex-col items-center justify-center p-5 md:p-20">
         <div className="xl:px-80">
