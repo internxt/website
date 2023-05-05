@@ -3,10 +3,14 @@ import React from 'react';
 
 import HeroSection from '../components/drive/HeroSection';
 import FeaturesSection from '../components/drive/FeaturesSection';
+import FeatureSection from '../components/drive/FeatureSection';
 import FAQSection from '../components/drive/FAQSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import ProductsNavigation from '../components/layout/ProductsNavigation';
+import FileParallaxSection from '../components/home/FileParallaxSection';
+import WhatWeDoSection from '../components/drive/WhatWeDoSection';
+import CtaSection from '../components/drive/CtaSection';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '../lib/get-download-url';
@@ -35,7 +39,15 @@ const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLan
 
         <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={download} />
 
+        <FileParallaxSection />
+
+        <WhatWeDoSection textContent={langJson.FeaturesSection} lang={lang} />
+
+        <FeatureSection textContent={langJson.FeatureSection} />
+
         <FAQSection textContent={langJson.FaqSection} />
+
+        <CtaSection textContent={langJson.CtaSection} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>

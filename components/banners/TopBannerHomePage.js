@@ -62,7 +62,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
-        } top-16 left-0 z-40 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
+        } left-0 z-40 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
       >
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
@@ -80,7 +80,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         </div>
       </div>
       <div
-        className={`group fixed top-16 left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+        className={`group fixed left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div

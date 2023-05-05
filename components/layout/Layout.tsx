@@ -132,7 +132,7 @@ LayoutProps) {
           {/* <SquareBanner /> */}
         </>
       ) : null}
-      {children}
+      <div className="flex flex-col pt-16 md:pt-[54px]">{children}</div>
       {/* <BFBanner /> */}
     </>
   );
