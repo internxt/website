@@ -29,6 +29,16 @@
       "MacOS": "Mac"
     }
   },
+  "FeatureSection": {
+    "title": "使用 Internxt Drive 保护您的文件",
+    "description": "使用 Internxt，您绝对是唯一可以访问您的文件的人。 以完全隐私的方式存储、共享和备份您的数据。",
+    "cta": "开始吧"
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
+  },
   "FeaturesSection": {
     "section1": {
       "title": {
