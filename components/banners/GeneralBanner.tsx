@@ -6,13 +6,17 @@ import { checkout } from '../../lib/auth';
 const GeneralBanner = ({ textContent }) => {
   const [bannerVisible, setIsBannerVisible] = useState(false);
   const onClose = () => {
+    sessionStorage.setItem('generalBannerVisible', 'false');
     setIsBannerVisible(false);
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsBannerVisible(true);
-    }, 10000);
+    const isBannerVisible = sessionStorage.getItem('generalBannerVisible');
+    if (!isBannerVisible) {
+      setTimeout(() => {
+        setIsBannerVisible(true);
+      }, 10000);
+    }
   }, []);
 
   return (
