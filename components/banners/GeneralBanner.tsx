@@ -12,7 +12,7 @@ const GeneralBanner = ({ textContent }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsBannerVisible(true);
-    }, 20000);
+    }, 10000);
   }, []);
 
   return (
