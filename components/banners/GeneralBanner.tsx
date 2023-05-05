@@ -42,7 +42,7 @@ const GeneralBanner = ({ textContent }) => {
             </div>
             <div className="flex flex-col items-center justify-center space-y-6">
               <div
-                className="relative flex cursor-pointer flex-col items-center justify-center rounded-full bg-primary py-4 px-9 text-base text-white focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+                className="relative flex cursor-pointer flex-col items-center justify-center rounded-lg bg-primary py-4 px-9 text-base text-white focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
                   checkout({
                     planId: 'plan_FkTXxEg3GZW0pg',
@@ -53,7 +53,7 @@ const GeneralBanner = ({ textContent }) => {
                 {textContent.cta}
               </div>
               <div
-                className="relative flex w-auto cursor-pointer flex-col items-center justify-center  rounded-full border border-white bg-transparent py-4 px-9 text-base text-white transition duration-100 focus:outline-none active:bg-white active:text-black sm:text-lg"
+                className="relative flex w-auto cursor-pointer flex-col items-center justify-center  rounded-lg border border-white bg-transparent py-4 px-9 text-base text-white transition duration-100 focus:outline-none active:bg-white active:text-black sm:text-lg"
                 onClick={() => {
                   onClose();
                 }}
