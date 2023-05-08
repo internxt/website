@@ -1,61 +1,81 @@
 const MainSection = ({ textContent }) => {
   return (
     <>
-      <div className="mb-16 flex flex-col" id={textContent.title}>
-        <p className="mb-3 text-2xl font-medium">{textContent.title}</p>
+      <div className="mb-16 flex flex-col">
+        <p className="mb-3 text-2xl font-medium" id={textContent.title}>
+          {textContent.title}
+        </p>
         <p className="mb-6">{textContent.subtitle}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title2}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title2}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title2}>
+          {textContent.title2}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle2}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title3}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title3}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title3}>
+          {textContent.title3}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle3}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title4}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title4}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title4}>
+          {textContent.title4}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle4}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title5}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title5}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title5}>
+          {textContent.title5}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle5}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title6}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title6}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title6}>
+          {textContent.title6}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle6}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title7}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title7}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title7}>
+          {textContent.title7}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle7}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title8}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title8}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title8}>
+          {textContent.title8}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle8}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title9}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title9}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title9}>
+          {textContent.title9}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle9}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title10}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title10}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title10}>
+          {textContent.title10}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle10}</p>
 
@@ -64,42 +84,54 @@ const MainSection = ({ textContent }) => {
         <p className="mb-6">{textContent.subtitle103}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title11}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title11}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title11}>
+          {textContent.title11}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle11}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title12}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title12}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title12}>
+          {textContent.title12}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle12}</p>
 
         <p className="mb-6">{textContent.subtitle122}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title13}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title13}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title13}>
+          {textContent.title13}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle13}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title14}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title14}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title14}>
+          {textContent.title14}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle14}</p>
 
         <p className="mb-6">{textContent.subtitle142}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title15}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title15}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title15}>
+          {textContent.title15}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle15}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title16}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title16}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title16}>
+          {textContent.title16}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle16}</p>
 
@@ -116,46 +148,60 @@ const MainSection = ({ textContent }) => {
         <p className="mb-6">{textContent.subtitle167}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title17}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title17}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title17}>
+          {textContent.title17}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle17}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title18}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title18}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title18}>
+          {textContent.title18}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle18}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title19}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title19}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title19}>
+          {textContent.title19}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle19}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title20}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title20}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title20}>
+          {textContent.title20}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle20}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title21}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title21}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title21}>
+          {textContent.title21}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle21}</p>
 
         <p className="mb-6">{textContent.subtitle212}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title22}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title22}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title22}>
+          {textContent.title22}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle22}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title23}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title23}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title23}>
+          {textContent.title23}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle23}</p>
 
@@ -164,8 +210,10 @@ const MainSection = ({ textContent }) => {
         <p className="mb-6">{textContent.subtitle233}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title24}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title24}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title24}>
+          {textContent.title24}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle24}</p>
 
@@ -180,20 +228,26 @@ const MainSection = ({ textContent }) => {
         <p className="mb-6">{textContent.subtitle246}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title25}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title25}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title25}>
+          {textContent.title25}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle25}</p>
       </div>
 
-      <div className="mb-16 flex flex-col" id={textContent.title26}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title26}</h2>
+      <div className="mb-16 flex flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title26}>
+          {textContent.title26}
+        </h2>
 
         <p className="mb-6">{textContent.subtitle26}</p>
       </div>
 
-      <div className="mb-16 flex w-full flex-col" id={textContent.title27}>
-        <h2 className="mb-3 text-2xl font-medium">{textContent.title27}</h2>
+      <div className="mb-16 flex w-full flex-col">
+        <h2 className="mb-3 text-2xl font-medium" id={textContent.title27}>
+          {textContent.title27}
+        </h2>
 
         <p className="mb-6">{textContent.privacy_policy_intro_part1}</p>
 

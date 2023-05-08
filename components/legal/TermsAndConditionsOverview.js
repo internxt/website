@@ -12,7 +12,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
   useEffect(() => {
     if (itemSelected) {
       const element = document.getElementById(itemSelected);
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
     }
   }, [itemSelected]);
 
@@ -24,7 +24,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
         </div>
         <div className="flex flex-row items-start space-x-16 py-20 px-24">
           <SelectSection textContent={textContent} itemSelected={itemSelected} setItemSelected={setItemSelected} />
-          <div className="m-auto flex w-full flex-col space-y-8">
+          <div className="flex w-full flex-col space-y-8">
             <div className="flex flex-row items-center space-x-2 text-base text-gray-80">
               <CalendarBlank size={17} />
               <p>Last updated: 15 march 2023</p>

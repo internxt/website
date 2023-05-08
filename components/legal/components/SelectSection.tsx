@@ -19,7 +19,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
         <div className="flex flex-col space-y-6">
           {linkTitles().map((title) => (
             <a
-              // href={`#${title}`}
+              href={`#${title}`}
               key={title}
               className={`cursor-pointer text-base font-medium ${
                 itemSelected === title ? 'text-primary hover:text-primary-dark' : 'text-gray-60 hover:text-primary'
@@ -61,9 +61,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
                       value={title}
                     >
                       {({ selected }) => (
-                        <a href={`#${title}`} className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
-                          {title}
-                        </a>
+                        <p className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>{title}</p>
                       )}
                     </Listbox.Option>
                   ))}
