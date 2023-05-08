@@ -3,7 +3,7 @@ import React from 'react';
 const WhenWhyHowSection = ({ textContent }) => {
   return (
     <>
-      <div className="mb-16 flex flex-col">
+      <div className="mb-16 flex flex-col" id={textContent.privacy_policy_process_personal_data_title}>
         <h5 className=" mb-6 mt-24 text-4xl">{textContent.privacy_policy_process_personal_data_title}</h5>
 
         <h5 className=" text-3.5xl mb-6">{textContent.privacy_policy_process_personal_data_subtitle1}</h5>
@@ -361,13 +361,13 @@ const WhenWhyHowSection = ({ textContent }) => {
         </div>
       </div>
 
-      <div className="mb-16 flex flex-col">
+      <div className="mb-16 flex flex-col" id={textContent.title28}>
         <h2 className="mb-3 text-2xl font-medium">{textContent.title28}</h2>
 
         <p className="mb-6">{textContent.subtitle28}</p>
       </div>
 
-      <div className="mb-16 flex flex-col">
+      <div className="mb-16 flex flex-col" id={textContent.title29}>
         <h2 className="mb-3 text-2xl font-medium">{textContent.title29}</h2>
 
         <p className="mb-6">{textContent.subtitle29}</p>
@@ -379,13 +379,13 @@ const WhenWhyHowSection = ({ textContent }) => {
         <p className="mb-6">{textContent.subtitle294}</p>
       </div>
 
-      <div className="mb-16 flex flex-col">
+      <div className="mb-16 flex flex-col" id={textContent.title30}>
         <h2 className="mb-3 text-2xl font-medium">{textContent.title30}</h2>
 
         <p className="mb-6">{textContent.subtitle30}</p>
       </div>
 
-      <div className="mb-16 flex flex-col">
+      <div className="mb-16 flex flex-col" id={textContent.title31}>
         <h2 className="mb-3 text-2xl font-medium">{textContent.title31}</h2>
 
         <p className="mb-6">{textContent.subtitle31}</p>

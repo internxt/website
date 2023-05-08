@@ -3,7 +3,7 @@ import React from 'react';
 const CookiesSection = ({ textContent }) => {
   return (
     <>
-      <div className="mb-16 flex w-full flex-col">
+      <div className="mb-16 flex w-full flex-col" id={textContent.cookies_title}>
         <h2 className="mb-3 text-2xl font-medium">{textContent.cookies_title}</h2>
         <h5 className="mb-6 text-2xl">{textContent.cookies_subtitle1}</h5>
 
