@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 // const excludedPaths = ['/byte-converter', '/virus-scanner', '/password-checker', '/temporary-email'];
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const route = useRouter();
+  // const route = useRouter();
   // const pathname = route.pathname;
   // const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
   // const bannerLang = require(`../assets/lang/${route.locale}/banners.json`);
