@@ -24,8 +24,8 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
   const textContent = require(`../assets/lang/en/terms-and-conditions.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
 
   cookies.setReferralCookie(ctx);
 

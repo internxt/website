@@ -13,31 +13,28 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
     return titles;
   }
 
-  useEffect(() => {
-    console.log(linkTitles());
-  }, []);
-
   return (
     <>
-      <div className="hidden h-[700px] w-max flex-col space-y-6 overflow-y-scroll rounded-lg border border-gray-10 px-6 py-9 pr-20 lg:flex">
+      <div className="sticky top-[200px] hidden max-h-[700px] w-max flex-col space-y-6 overflow-y-scroll rounded-lg border border-gray-10 px-6 py-9 pr-20 lg:flex">
         <p className="select-none text-xl font-semibold text-gray-100">{textContent.category}</p>
         <div className="flex flex-col space-y-6">
-          {linkTitles().map((link) => (
-            <p
-              key={link}
+          {linkTitles().map((title) => (
+            <a
+              href={`#${title}`}
+              key={title}
               className={`cursor-pointer text-base font-medium ${
-                itemSelected === link ? 'text-primary hover:text-primary-dark' : 'text-gray-60 hover:text-primary'
+                itemSelected === title ? 'text-primary hover:text-primary-dark' : 'text-gray-60 hover:text-primary'
               } `}
               onClick={() => {
-                setItemSelected(link);
+                setItemSelected(title);
               }}
             >
-              {link}
-            </p>
+              {title}
+            </a>
           ))}
         </div>
       </div>
-      <div className="mb-10 flex flex-col rounded-lg border border-gray-10 lg:hidden">
+      <div className="mb-10 flex flex-col rounded-lg border border-gray-10 drop-shadow lg:hidden">
         <div className="flex flex-col">
           <Listbox value={itemSelected} onChange={setItemSelected}>
             <div className="mt-1 flex flex-col">
@@ -65,9 +62,9 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
                       value={title}
                     >
                       {({ selected }) => (
-                        <>
-                          <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>{title}</span>
-                        </>
+                        <a href={`#${title}`} className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
+                          {title}
+                        </a>
                       )}
                     </Listbox.Option>
                   ))}
