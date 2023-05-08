@@ -15,12 +15,11 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
 
   return (
     <>
-      <div className="sticky top-[200px] hidden max-h-[700px] w-max flex-col space-y-6 overflow-y-scroll rounded-lg border border-gray-10 px-6 py-9 pr-20 lg:flex">
-        <p className="select-none text-xl font-semibold text-gray-100">{textContent.category}</p>
+      <div className="sticky top-[200px] hidden max-h-[450px] w-max flex-col space-y-6 overflow-y-scroll rounded-lg border border-gray-10 px-6 py-9 pr-20 lg:flex">
         <div className="flex flex-col space-y-6">
           {linkTitles().map((title) => (
             <a
-              href={`#${title}`}
+              // href={`#${title}`}
               key={title}
               className={`cursor-pointer text-base font-medium ${
                 itemSelected === title ? 'text-primary hover:text-primary-dark' : 'text-gray-60 hover:text-primary'

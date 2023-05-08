@@ -8,6 +8,14 @@ import { CalendarBlank } from 'phosphor-react';
 const TermsAndConditionsOverview = ({ textContent }) => {
   const [itemSelected, setItemSelected] = useState();
 
+  // Set the scroll at center of the screen with anchor tag
+  useEffect(() => {
+    if (itemSelected) {
+      const element = document.getElementById(itemSelected);
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [itemSelected]);
+
   return (
     <>
       <div className="hidden flex-col pt-24 text-start lg:flex">
@@ -16,13 +24,13 @@ const TermsAndConditionsOverview = ({ textContent }) => {
         </div>
         <div className="flex flex-row items-start space-x-16 py-20 px-24">
           <SelectSection textContent={textContent} itemSelected={itemSelected} setItemSelected={setItemSelected} />
-          <div className="flex w-full flex-col space-y-8">
+          <div className="m-auto flex w-full flex-col space-y-8">
             <div className="flex flex-row items-center space-x-2 text-base text-gray-80">
               <CalendarBlank size={17} />
               <p>Last updated: 15 march 2023</p>
             </div>
             <div className="border border-gray-10" />
-            <div className="flex justify-end scroll-smooth">
+            <div className="flex scroll-smooth">
               <div className="flex flex-col">
                 <MainSection textContent={textContent} />
                 <CookiesSection textContent={textContent} />
