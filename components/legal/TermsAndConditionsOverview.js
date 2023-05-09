@@ -20,7 +20,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
 
   return (
     <>
-      <div className="hidden flex-col pt-24 text-start lg:flex lg:pt-16">
+      <div className="hidden flex-col pt-16 text-start lg:flex">
         <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary to-primary-dark py-20">
           <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
         </div>
@@ -44,7 +44,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
       </div>
 
       {/* Mobile view */}
-      <div className="flex flex-col overflow-hidden pt-36 lg:hidden">
+      <div className="flex flex-col overflow-hidden pt-16 lg:hidden">
         {/* <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary to-primary-dark py-20 text-center">
           <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
         </div> */}
