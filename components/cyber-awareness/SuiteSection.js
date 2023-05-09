@@ -38,9 +38,9 @@ const SuiteSection = ({ textContent }) => {
           ))}
         </div>
         <div className="flex flex-row items-center justify-center rounded-3xl bg-gradient-to-t from-primary via-primary to-primary-dark p-16">
-          <div className="flex h-32 w-96 flex-col justify-center p-16 text-center md:text-left">
+          <div className="flex flex-col justify-center p-5 text-center md:text-left">
             <p className="text-3xl font-semibold text-white">{textContent.panel.title}</p>
-            <p className="pt-2 text-lg font-light text-white">{textContent.panel.body}</p>
+            <p className="max-w-sm pt-2 text-lg font-light text-white">{textContent.panel.body}</p>
             <div className="flex justify-center sm:pt-8 md:justify-start">
               <a href="/images/cyber-awareness/Internxt-Checklist.pdf" download={true}>
                 <button className="rounded-lg bg-white px-6 py-2 text-primary hover:bg-gray-10">

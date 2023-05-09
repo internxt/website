@@ -9,8 +9,9 @@ import {
   RedditIcon,
 } from 'next-share';
 import React from 'react';
+import Tooltip from '../prices/ToolTip';
 
-export const InfoCard = ({ id, title, img, link }) => {
+export const InfoCard = ({ id, title, title1, img, link }) => {
   const [isShareIcon, setIsShareIcon] = React.useState(null);
   return (
     <div
@@ -18,25 +19,22 @@ export const InfoCard = ({ id, title, img, link }) => {
       key={title}
       onMouseEnter={(e) => {
         e.stopPropagation();
+
         if (e.target.id == id) setIsShareIcon(id);
       }}
-      onMouseLeave={() => setIsShareIcon(false)}
-      className={`${
-        isShareIcon === id
-          ? 'flex h-48 w-64 flex-col space-y-4 rounded-2xl bg-white p-3'
-          : 'flex h-48 w-64 flex-col rounded-2xl bg-white p-8'
-      } 
+      onMouseLeave={() => setIsShareIcon(null)}
+      className={`${'flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl bg-white p-8'} 
         `}
+      onClick={() => {
+        window.open(link, '_blank');
+      }}
     >
-      <button
-        className="flex flex-col items-start space-y-8"
-        onClick={() => {
-          window.open(link, '_blank');
-        }}
-      >
-        <img key={id} src={img} alt={`${title} image`} width={32} height={32} />
-        <p className="flex text-left text-2xl font-medium">{title}</p>
-      </button>
+      <img key={id} src={img} alt={`${title} image`} width={32} height={32} />
+      <p className="flex flex-col text-left text-2xl font-medium">
+        {title}
+        <span className="flex text-left text-2xl font-medium">{title1}</span>
+      </p>
+
       <div className={`${isShareIcon === id ? '' : 'hidden'} flex flex-row space-x-2 border-black`}>
         <LinkedinShareButton url={link} title={'LinkedIn'}>
           <LinkedinIcon size={24} round />
@@ -74,12 +72,14 @@ const InfoSection = ({ textContent }) => {
       id: 2,
       img: '/images/cyber-awareness/InfoSection/card-3.svg',
       title: textContent.cards['card-3'],
+      title1: textContent.cards['card-3b'],
       link: textContent.cards['link-3'],
     },
     {
       id: 3,
       img: '/images/cyber-awareness/InfoSection/card-4.svg',
       title: textContent.cards['card-4'],
+      title1: textContent.cards['card-4b'],
       link: textContent.cards['link-4'],
     },
     {
@@ -115,8 +115,8 @@ const InfoSection = ({ textContent }) => {
           <p className="p-5 text-center text-lg font-normal md:w-full md:max-w-2xl">{textContent.subTitle}</p>
           <p className="text-center text-3xl font-semibold md:w-full md:max-w-xl">{textContent.cards.title}</p>
           <div className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4 xl:gap-x-10">
-            {infoCards.map(({ title, id, img, link }) => (
-              <InfoCard id={id} title={title} img={img} link={link} key={title} />
+            {infoCards.map(({ title1, title, id, img, link }) => (
+              <InfoCard id={id} title={title} title1={title1} img={img} link={link} key={title} />
             ))}
           </div>
           <div className="flex flex-col space-y-3 p-5 sm:p-20">
