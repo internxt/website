@@ -24,7 +24,13 @@ const HeroSection = ({ textContent, lang, device, download }) => (
         </h3>
 
         <div className="flex h-full flex-col px-5 py-16">
-          <img src="/images/photos/hero-section-group.webp" alt="Internxt secure cloud storage" draggable="false" />
+          <Image
+            width={622}
+            height={483}
+            src="/images/photos/photo-storage.webp"
+            alt="Internxt secure cloud storage"
+            draggable="false"
+          />
         </div>
       </div>
 
