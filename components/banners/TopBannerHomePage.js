@@ -82,7 +82,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       </div>
       {/* Mobile view */}
       <div
-        className={`group fixed top-24 left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+        className={`group fixed left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div
