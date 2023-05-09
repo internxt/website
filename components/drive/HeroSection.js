@@ -5,11 +5,11 @@ import DownloadComponent from './DownloadComponent';
 
 const HeroSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col pt-20">
-    <div className="flex flex-col items-center py-20">
+    <div className="flex flex-col items-center py-40">
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 py-2 px-4">
-          <p className="text-xl font-medium text-gray-80">{textContent.eyebrow}</p>
+          <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
 
         <h1 className="px-4 text-4xl font-semibold text-gray-100 lg:text-6xl lg:leading-tight">

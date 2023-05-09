@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
+import Image from 'next/image';
 import React from 'react';
 import DownloadComponent from '../drive/DownloadComponent';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
-  <section className="flex w-full flex-col pt-10">
+  <section className="flex w-full flex-col pt-20">
     <div className="flex flex-col items-center py-40">
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
@@ -23,7 +24,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
         </h3>
 
         <div className="flex h-full flex-col px-5 py-16">
-          <img src="/images/photos/hero-section-group.png" alt="Internxt secure cloud storage" draggable="false" />
+          <img src="/images/photos/hero-section-group.webp" alt="Internxt secure cloud storage" draggable="false" />
         </div>
       </div>
 
