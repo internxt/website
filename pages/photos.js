@@ -48,8 +48,6 @@ const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, downlo
 
         <CtaSection textContent={langJson.CtaSection} />
 
-        <FAQSection textContent={langJson.FaqSection} />
-
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
     </>
