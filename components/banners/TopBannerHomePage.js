@@ -59,6 +59,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
 
   return (
     <>
+      {/* Desktop view */}
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
@@ -79,6 +80,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           {/* <p className="flex text-base font-semibold underline">{pickUp()}</p> */}
         </div>
       </div>
+      {/* Mobile view */}
       <div
         className={`group fixed left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
       >
