@@ -1,172 +1,175 @@
 {
   "HeroSection": {
-    "title": "Free Temporary Email",
-    "subtitle": "Email anonymously with our free, private, and secure temporary email address generator.",
-    "generatingEmail": "Generating random email...",
-    "copyEmail": "Copy email",
-    "deleteEmail": "Delete email",
-    "expireEmail": "Email and inbox will expire after 3 hours of inactivity",
+    "title": "Email Jetable Gratuit",
+    "subtitle": "Recevez des emails anonymes grâce à notre générateur d'adresses email temporaires gratuites, privées et sécurisées",
+    "generatingEmail": "Génération d'un email aléatoire...",
+    "copyEmail": "Copier l'email",
+    "deleteEmail": "Supprimer l'email",
+    "expireEmail": "Les emails et la boîte de réception expirent après 3 heures d'inactivité",
     "inbox": {
       "title": "Inbox",
-      "youHave": "You have",
-      "newMessages": "new messages",
-      "waitingEmail": "Waiting for incoming email",
-      "selectMessage": "Select a message to open",
-      "attachment": "Attachments",
-      "downloadAll": "Download all",
-      "noSubject": "(no subject)"
+      "youHave": "Vous avez",
+      "newMessages": "nouveaux messages",
+      "waitingEmail": "En attente d'un email entrant",
+      "selectMessage": "Sélectionner un message à ouvrir",
+      "attachment ": "Attachments",
+      "downloadAll": "Télécharger tout",
+      "noSubject": "(pas de sujet)"
     }
   },
   "InfoSection": {
-    "title": "Internxt’s free temporary email",
-    "subtitle": "No more spam, ads, newsletters, promotions, hackers, scammers, and bots. Keep your real inbox clean, secure, and free of sketchy emails. Our disposable email account generator is Internxt's newest privacy tool built to provide free, anonymous, temporary, and random addresses without storing any of your personal data.",
+    "title": "Email Jetable Gratuit d'Internxt",
+    "subtitle": "Fini le spam, les publicités, les newsletters, les promotions et les pirates. Gardez votre vraie boîte de réception propre, sécurisée et exempte d'emails douteux. Notre générateur de comptes email jetables est le dernier outil de confidentialité d'Internxt conçu pour fournir des adresses email temporaires, gratuites, anonymes, et aléatoires sans stocker aucune de vos données personnelles",
     "steps": {
-      "title": "How to use Internxt’s temporary email address generator",
+      "title": "Comment utiliser le générateur d'adresses email jetables d'Internxt",
       "steps": [
         {
-          "title": "Step 1",
-          "description": "Copy your disposable email address"
+          "title": "Étape 1",
+          "description": "Copiez votre adresse email jetable"
         },
         {
-          "title": "Step 2",
-          "description": "Use the address on your desired service"
+          "title": "Étape 2",
+          "description": "Utilisez l'adresse du service souhaité"
         },
         {
-          "title": "Step 3",
-          "description": "Wait a few moments for a response or verification email"
+          "title": "Étape 3",
+          "description": "Attendez quelques instants une réponse ou un email de vérification"
         },
         {
-          "title": "Step 4",
-          "description": "All emails received will appear in your inbox above"
+          "title": "Étape 4",
+          "description": "Tous les emails reçus apparaîtront dans votre boîte de réception ci-dessus"
         }
       ]
     },
     "whatIsTempMail": {
-      "title": "What is a temporary email address?",
-      "description": "A temporary or disposable email address is a tool for a user with a unique email address to obtain a temporary email address for your current contact. A temporary email address service allows you to create a new email address that passes validity needed to sign-up for services or newsletters or website accounts without having to hand over your true identity."
+      "title": "Qu'est-ce qu'une adresse email jetable ?",
+      "description": "Une adresse email jetable ou temporaire est un outil permettant à un utilisateur disposant d'une adresse email unique d'obtenir une email jetable pour son contact actuel. Un service d'adresses électroniques temporaires vous permet de créer une nouvelle adresse email valable pour vous inscrire à des services, à des bulletins d'information ou à des comptes de sites web sans avoir à décliner votre véritable identité."
     },
     "whyUseDisposableMail": {
-      "title": "Why use temporary email services?",
-      "description": "Your email address is like your online ID, you shouldn’t just hand it over to anyone. Protect your main account and keep your inbox clean by using a temporary email address for one-time or short-term communications.",
+      "title": "Pourquoi utiliser des services de email jetable ?",
+      "description": "Votre adresse email est comme votre carte d'identité en ligne, vous ne devriez pas la donner à n'importe qui. Protégez votre email principal et gardez votre boîte de réception propre en utilisant une adresse électronique temporaire pour des communications ponctuelles ou à court terme",
       "infoCards": [
         {
-          "title": "Avoid spam email and annoying subscriptions",
-          "description": "Sign up for anything without compromising your real email account and overloading your personal inbox. Perfect for snagging coupon codes and sign-up offers."
+          "title": "Évitez les spams et les abonnements ennuyeux",
+          "description": "Abonnez-vous à n'importe quoi sans compromettre votre compte email réel et sans surcharger votre boîte de réception personnelle. Parfait pour obtenir des codes de réduction et des offres d'inscription."
         },
         {
-          "title": "Hide personal information with a temporary email account",
-          "description": "Recipients won't get any access to your name, photo, phone number, email address, or any other personal information associated with your real account."
+          "title": "Cachez vos informations personnelles avec un compte d'email temporaire",
+          "description": "Les destinataires n'auront pas accès à votre nom, votre photo, votre numéro de téléphone ou toute autre information personnelle associée à votre vrai compte."
         },
         {
-          "title": "Receive messages to a temporary mailbox",
-          "description": "Receive the emails you expect instantly. It’s temporary mail, not instantly disposable mail."
+          "title": "Recevoir des messages dans une boîte temporaire",
+          "description": "Recevez instantanément les courriels que vous attendez. Il s'agit d'un courrier temporaire, pas d'un courrier jetable instantanément."
         },
         {
-          "title": "Message anonymously from a random address",
-          "description": "Not sure if your intended recipient can be trusted? Is the site you want to contact suspicious? Afraid of malware? Use a random address thanks to Internxt's fake address generator."
+          "title": "Message anonyme provenant d'une adresse aléatoire",
+          "description": "Vous n'êtes pas sûr que le destinataire soit digne de confiance ? Le site web que vous souhaitez contacter est suspect ? Utilisez une adresse aléatoire grâce au générateur de faux emails d'Internxt"
         },
         {
-          "title": "No need for a temp or new Gmail account",
-          "description": "Don’t juggle real accounts anymore. With Internxt's fake mail, simply create an account, use it, and ditch it when you're ready. Don’t get weighed down managing multiple accounts."
+          "title": "Plus besoin d'utiliser un compte Gmail",
+          "description": "Plus besoin d'utiliser vrais comptes. Avec l'email temporaire d'Internxt, il suffit de créer un compte, de l'utiliser et de s'en débarrasser quand vous le souhaitez. Ne vous encombrez plus de la gestion de plusieurs comptes"
         },
         {
-          "title": "Get referral perks without inviting friends",
-          "description": "Want to get a discount or extra perks from an online service, but you're not comfortable giving away your friends' emails? Invite your temp email instead!"
+          "title": "Obtenir des avantages de recommandation sans inviter d'amis",
+          "description": "Vous souhaitez obtenir des avantages supplémentaires auprès d'un service en ligne, mais vous ne vous sentez pas à l'aise à l'idée de divulguer les emails de vos amis ? Invitez plutôt votre adresse email jetable!"
         }
       ]
     },
     "whenUseTempMail": {
-      "title": "When to use a temporary email address?",
-      "description": "The sky's the limit when it comes to use cases for a temporary mailbox. Anything that needs an email can instantly be made anonymous and commitment free with a temporary email address. Below are the best examples of when to use fake mail:",
+      "title": "Quand utiliser une adresse email jetable ?",
+      "description": "Les possibilités d'utilisation d'une email jetable sont illimitées. Tout ce qui nécessite un courrier électronique peut être rendu instantanément anonyme et non compromis grâce à une adresse temporaire. Voici les meilleurs exemples d'utilisation d'une email jetable :",
       "bulletedList": [
-        "Sign up for free trials",
-        "Test your app",
-        "Sign up for a double (or multiple) accounts",
-        "Eliminate spam",
-        "Sign up for store loyalty card",
-        "Communicate with suspicious accounts",
-        "Create anonymous accounts",
-        "Try out online services risk-free",
-        "Verify trivial accounts",
-        "Prank friends"
+        "S'inscrire à des essais gratuits",
+        "Tester une application",
+        "S'inscrire à un double (ou multiple) compte",
+        "Supprimer le spam",
+        "S'inscrire à une carte de fidélité de magasin",
+        "Communiquer avec des comptes suspects",
+        "Créer des comptes anonymes",
+        "Tester les services en ligne sans risque",
+        "Vérifier des comptes insignifiants",
+        "Plaisanter avec des amis"
       ]
     }
   },
   "ToolsSection": {
-    "title": "Other free privacy tools like our temporary mailbox",
+    "title": "Autres outils gratuits de protection de la vie privée comme notre email jetable",
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "password-checker",
+        "urlRedirectName": "password-checker",
         "width": 125,
-        "title": "Free Password Strength Checker",
-        "description": "Check now"
+        "title": "Vérificateur de mot de passe gratuit",
+        "description": "Try it now"
       },
       {
         "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "virus-scanner",
+        "urlRedirectName": "virus-scanner",
         "width": 105,
-        "title": "Free Virus Scanner",
-        "description": "Scan now"
+        "title": "Scanner de virus gratuit",
+        "description": "Scanner maintenant"
       },
       {
         "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "byte-converter",
+        "urlRedirectName": "byte-converter",
         "width": 95,
-        "title": "Free Byte Converter",
-        "description": "Convert now"
+        "title": "Convertisseur d'octets gratuit",
+        "description": " Convertissez maintenant "
       }
     ]
   },
+
   "QASection": {
-    "title": "Questions? We have answers",
+    "title": "Des questions ? Nous avons les réponses.",
     "questions": [
       {
-        "question": "How long are emails kept?",
+        "question": "Combien de temps les emails sont-ils conservés ?",
         "answer": [
-          "Emails are kept as long as you continue to use your temporary email address. As soon as you close your temporary address, your emails will be deleted along with your temporary account."
+          "Les emails sont conservés aussi longtemps que vous continuez à utiliser votre adresse email temporaire. Dès que vous fermez votre adresse temporaire, vos courriels sont supprimés en même temps que votre compte temporaire."
         ]
       },
       {
-        "question": "Do emails stay private?",
+        "question": "Les emails restent-ils privés ?",
         "answer": [
-          "Internxt does not have any access to your temporary email. We don’t store any of your personal information or any of the emails you send or receive."
+          "Internxt n'a pas accès à votre messagerie temporaire. Nous ne conservons aucune de vos données personnelles ni aucun des emails que vous recevez."
         ]
       },
       {
-        "question": "Where do I see if I've received an email?",
+        "question": "Où puis-je voir si j'ai reçu un email ?",
         "answer": [
-          "Emails you receive to your temporary mailbox will be displayed in the inbox located at the top of this page."
+          "Les emails que je reçois dans votre boîte temporaire seront affichés dans la boîte de réception en haut de cette page."
         ]
       },
       {
-        "question": "How do I change the email address?",
-        "answer": ["Change your temp mail by generating a new email address in the toolbar at the top of the page."]
-      },
-      {
-        "question": "Can you recover deleted emails?",
+        "question": "Comment puis-je modifier mon adresse électronique ?",
         "answer": [
-          "No. Unfortunately when you delete the emails you sent or received with the used domain, they are gone for good. We do this so your privacy is protected and your deleted emails aren’t left exposed."
+          "Modifiez votre email jetable en générant une nouvelle adresse électronique dans la barre d'outils située en haut de la page."
         ]
       },
       {
-        "question": "What is a temporary email?",
+        "question": "Est-il possible de récupérer des emails supprimés ?",
         "answer": [
-          "An email that is only valid for a brief time before being automatically destroyed is referred to as a transitory email. Internxt Temporary Email is a free disposable email really useful."
+          "Malheureusement, lorsque vous supprimez les emails que vous recevez avec le domaine que vous utilisez, ils disparaissent à jamais. Nous faisons cela pour que votre vie privée soit protégée et que vos emails supprimés ne soient pas exposés."
         ]
       },
       {
-        "question": "Why use a temporary email?",
+        "question": "Qu'est-ce qu'un courriel jetable?",
         "answer": [
-          "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s free Temporary Email. Email anonymously by opening a temporary mailbox and generating random email addresses to use however you see fit. Save your real account for the important stuff."
+          "Un email qui n'est valide que pour une courte période de temps avant d'être automatiquement détruit est appelé un email temporaire. L'email temporaire d'Internxt est un email jetable gratuit très utile."
+        ]
+      },
+      {
+        "question": "Pourquoi utiliser un email temporaire ?",
+        "answer": [
+          "Gardez votre compte email principal propre, sécurisé et libre de tout courriel indésirable avec l'email temporaire gratuit d'Internxt. Recevez des emails de manière anonyme en ouvrant une boîte aux lettres temporaire et en générant des adresses email aléatoires. Gardez votre vrai compte pour les choses importantes."
         ]
       }
     ]
   },
   "SignupSection": {
-    "title": "You can't always just send an email...",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "createAccount": "Create account"
+    "title": "Vous ne pouvez pas toujours utiliser un email...",
+    "description": "Protégez les choses qui comptent vraiment avec le stockage en nuage sécurisé, privé et chiffré d'Internxt),",
+    "createAccount": "Créer un compte"
   },
   "SchemaMarkupQuestions": {
     "faq": [
