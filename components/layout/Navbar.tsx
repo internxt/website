@@ -51,7 +51,7 @@ export default function Navbar(props: NavbarProps) {
     <div
       className={`${props.hide ? 'hidden' : ''} flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
-      } h-24 w-full bg-gray-1 transition-all duration-100 lg:h-16 lg:bg-white ${
+      } h-20 w-full bg-gray-1 transition-all duration-100 lg:h-16 lg:bg-white ${
         props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
       } ${scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
