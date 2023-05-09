@@ -54,7 +54,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
             <p>{textContent.lastUpdated}</p>
           </div>
           <div className="border border-gray-10" />
-          <div className="flex flex-col">
+          <div classNAme="flex flex-col">
             <MainSection textContent={textContent} />
             <CookiesSection textContent={textContent} />
             <WhenWhyHowSection textContent={textContent} />
