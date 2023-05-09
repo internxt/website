@@ -4,13 +4,15 @@ import CookiesSection from './CookiesSection';
 import WhenWhyHowSection from './WhenWhyHowSection';
 import MainSection from './MainSection';
 import { CalendarBlank } from 'phosphor-react';
+import { isMobile } from 'react-device-detect';
+import Link from 'next/link';
 
 const TermsAndConditionsOverview = ({ textContent }) => {
   const [itemSelected, setItemSelected] = useState();
 
   // Set the scroll at center of the screen with anchor tag
   useEffect(() => {
-    if (itemSelected) {
+    if (itemSelected && !isMobile) {
       const element = document.getElementById(itemSelected);
       element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
     }
@@ -27,7 +29,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
           <div className="flex w-full flex-col space-y-8">
             <div className="flex flex-row items-center space-x-2 text-base text-gray-80">
               <CalendarBlank size={17} />
-              <p>Last updated: 15 march 2023</p>
+              <p>{textContent.lastUpdated}</p>
             </div>
             <div className="border border-gray-10" />
             <div className="flex scroll-smooth">
@@ -42,15 +44,21 @@ const TermsAndConditionsOverview = ({ textContent }) => {
       </div>
 
       {/* Mobile view */}
-      <div className="flex flex-col overflow-hidden pt-32 lg:hidden">
-        <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary to-primary-dark py-20 text-center">
+      <div className="flex flex-col overflow-hidden pt-36 lg:hidden">
+        {/* <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary to-primary-dark py-20 text-center">
           <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
-        </div>
-        <div className="flex flex-col py-10 px-5">
-          <SelectSection textContent={textContent} itemSelected={itemSelected} setItemSelected={setItemSelected} />
-          <MainSection textContent={textContent} />
-          <CookiesSection textContent={textContent} />
-          <WhenWhyHowSection textContent={textContent} />
+        </div> */}
+        <div className="flex flex-col space-y-8 py-10 px-5">
+          <div className="flex flex-row items-center space-x-2 text-base text-gray-80">
+            <CalendarBlank size={17} />
+            <p>{textContent.lastUpdated}</p>
+          </div>
+          <div className="border border-gray-10" />
+          <div classNAme="flex flex-col">
+            <MainSection textContent={textContent} />
+            <CookiesSection textContent={textContent} />
+            <WhenWhyHowSection textContent={textContent} />
+          </div>
         </div>
       </div>
     </>
