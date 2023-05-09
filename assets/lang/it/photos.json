@@ -131,5 +131,15 @@
         ]
       }
     ]
+  },
+  "FeatureSection": {
+    "title": "Proteggi i tuoi fotos con Internxt Photos",
+    "description": "Con Internxt, l'accesso completo ai vostri file è unico. Archiviate, condividete e fate il backup dei vostri dati con la massima privacy",
+    "cta": "start"
+  },
+  "CtaSection": {
+    "title": "Prova Internxt senza rischi",
+    "description": "Proteggi ciò che è veramente importante con il cloud storage sicuro, privato e criptato di Internxt",
+    "cta": "Seleziona un piano ora"
   }
 }

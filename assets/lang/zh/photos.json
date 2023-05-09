@@ -112,6 +112,11 @@
       "MacOS": "Mac"
     }
   },
+  "FeatureSection": {
+    "title": "使用 Internxt Photos 保护您的文件",
+    "description": "使用 Internxt，您绝对是唯一可以访问您的文件的人。 以完全隐私的方式存储、共享和备份您的数据。",
+    "cta": "开始吧"
+  },
   "FaqSection": {
     "title": "问题？我们有答案",
     "faq": [
@@ -130,5 +135,10 @@
         ]
       }
     ]
+  },
+  "CtaSection": {
+    "title": "无风险试用 Internxt",
+    "description": "使用 Internxt 的安全、私密和加密的云存储来保护真正重要的东西。",
+    "cta": "立即选择一个计划"
   }
 }

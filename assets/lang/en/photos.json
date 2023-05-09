@@ -64,7 +64,7 @@
     "section4": {
       "title": {
         "line1": "Sync your photos",
-        "line2": "in total privacy."
+        "line2": "in total privacy"
       }
     },
     "section5": {
@@ -112,6 +112,11 @@
       "MacOS": "Mac"
     }
   },
+  "FeatureSection": {
+    "title": "Protect your files with Internxt Photos",
+    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
+    "cta": "Get started"
+  },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
@@ -130,5 +135,10 @@
         ]
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
   }
 }
