@@ -57,9 +57,9 @@
       "tools": {
         "title": "Free tools",
         "temporaryEmail": "Courriel Temporaire",
-        "fileVirusScan": "Scanner de virus",
-        "passwordChecker": "Vérifier mot de passe",
-        "byteConverter": "Convertisseur d'octets"
+        "fileVirusScan": "Scanner de Virus",
+        "passwordChecker": "Vérifier Mot de Passe",
+        "byteConverter": "Convertisseur d'Octets"
       },
       "language": "Langue"
     }
