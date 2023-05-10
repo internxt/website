@@ -110,7 +110,7 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
 
       {/* Feature #2 - Share your photos with your friends and family */}
       <Parallax
-        className="grid w-full grid-cols-1 justify-center gap-20 pt-20 lg:grid-cols-2 lg:pb-20"
+        className="grid w-full grid-cols-1 justify-center gap-20 pt-5 lg:grid-cols-2 lg:pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
             <RevealX className="hidden w-full max-w-[713px] flex-col lg:right-0 lg:flex" direction="right">
@@ -166,7 +166,7 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
 
       {/* Download links */}
 
-      <div className="flex w-full flex-col items-center px-10 pb-10 lg:py-20 lg:px-0 lg:pb-0">
+      <div className="flex w-full flex-col items-center px-10 lg:py-20 lg:px-0 lg:pb-0">
         <h3 className="mb-12 text-center text-5xl font-semibold text-gray-100">
           {textContent.section4.title.line1} {/* <br className="hidden sm:flex" /> */}
           {textContent.section4.title.line2}

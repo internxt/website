@@ -5,9 +5,9 @@ import DownloadComponent from '../drive/DownloadComponent';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
   <section className="flex w-full flex-col pt-20">
-    <div className="flex flex-col items-center py-40">
+    <div className="flex flex-col items-center py-24 px-5 lg:py-40">
       {/* Main title */}
-      <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
+      <div className="flex flex-col items-center justify-center space-y-6 text-center">
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 py-2 px-4">
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
@@ -35,7 +35,6 @@ const HeroSection = ({ textContent, lang, device, download }) => (
       </div>
 
       {/* Download links */}
-
       <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
     </div>
   </section>

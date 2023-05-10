@@ -9,7 +9,7 @@ import RevealX from '../components/RevealX';
 import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang, download }) => (
-  <section className="flex w-full flex-col pt-20">
+  <section className="flex w-full flex-col lg:pt-20">
     <div className="flex w-full flex-col items-center">
       {/* Title */}
       <Parallax
@@ -151,8 +151,8 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         </div>
 
         <div className="flex w-full flex-col items-center lg:w-auto lg:items-start lg:pl-10">
-          <div className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat shadow-subtle lg:hidden">
-            <img src={'/images/drive/mobile-work-list-share-mockup.webp'} width={250} height={505} alt="Work list" />
+          <div className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat px-5 shadow-subtle lg:hidden">
+            <img src={'/images/drive/File-sharing.webp'} alt="Work list" />
           </div>
 
           <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
@@ -180,7 +180,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       {/* Feature #4 - Backup what matters to you. */}
       <div className="grid w-full grid-cols-1 justify-center gap-20 pt-5 lg:grid-cols-2 lg:pt-20 lg:pb-20">
         <div className="flex flex-col items-center justify-center lg:items-end lg:pr-20">
-          <div className="mx-12 flex w-full flex-col bg-transparent lg:hidden">
+          <div className="flex w-full flex-col bg-transparent px-5 lg:hidden">
             <img
               loading="lazy"
               className="w-full"
