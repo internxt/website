@@ -127,7 +127,7 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
             </RevealX>
 
             <div className="flex flex-col items-center lg:items-start ">
-              <div className="mb-24 flex flex-col px-10 lg:px-0">
+              <div className="flex flex-col px-10 lg:mb-24 lg:px-0">
                 <h3 className="mb-6 pt-20 text-3xl font-medium text-cool-gray-90 lg:text-4xl">
                   {textContent.section3.title.line1} <br className="hidden sm:flex" />
                   {textContent.section3.title.line2} <br className="hidden sm:flex" />
