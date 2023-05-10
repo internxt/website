@@ -230,7 +230,7 @@ export default function Navbar(props: NavbarProps) {
 
             {/* Logo */}
             <Link href="/" locale={props.lang} passHref>
-              <a className="flex flex-shrink-0">
+              <a className="flex flex-shrink-0 lg:hidden">
                 <img
                   loading="lazy"
                   className="select-none"
@@ -238,6 +238,16 @@ export default function Navbar(props: NavbarProps) {
                   alt="Internxt logo"
                   width="96"
                   height="10"
+                />
+              </a>
+            </Link>
+            <Link href={'/'} locale={props.lang} passHref>
+              <a className="hidden flex-shrink-0 lg:flex">
+                <img
+                  loading="lazy"
+                  className="select-none"
+                  src={`../../logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`}
+                  alt="Internxt logo"
                 />
               </a>
             </Link>
