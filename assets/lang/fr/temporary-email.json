@@ -100,7 +100,7 @@
         "urlRedirectName": "password-checker",
         "width": 125,
         "title": "Vérificateur de mot de passe gratuit",
-        "description": "Essayez maintenant"
+        "description": "Try it now"
       },
       {
         "url": "/images/temp-email/virus-scanner.svg",
@@ -168,7 +168,7 @@
   },
   "SignupSection": {
     "title": "Vous ne pouvez pas toujours utiliser un email...",
-    "description": "Protégez les choses qui comptent vraiment avec le stockage en nuage sécurisé, privé et chiffré d'Internxt).",
+    "description": "Protégez les choses qui comptent vraiment avec le stockage en nuage sécurisé, privé et chiffré d'Internxt),",
     "createAccount": "Créer un compte"
   },
   "SchemaMarkupQuestions": {
