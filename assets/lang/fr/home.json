@@ -33,7 +33,7 @@
           }
         },
         "submit": {
-          "get": "Obtenez jusqu'à 10 Go",
+          "get": "Obtenez 10 Go",
           "free": "Gratuit !"
         }
       }
