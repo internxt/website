@@ -12,7 +12,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
 
-        <h1 className="ium mb-10 px-4 text-4xl font-semibold text-cool-gray-90 lg:text-6xl lg:leading-tight">
+        <h1 className="mb-10 px-4 text-4xl font-semibold text-cool-gray-90 lg:text-6xl lg:leading-tight">
           {textContent.title.line1} <br className="hidden sm:flex" />
           <span className="text-primary">{textContent.title.line2}</span>
         </h1>
