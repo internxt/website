@@ -1,7 +1,9 @@
+import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
+import HeroSection from '../components/what-does-google-know-about-me/HeroSection';
 
-const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navbarLang, footerLang }) => {
+const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navbarLang, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
 
   return (
@@ -12,6 +14,10 @@ const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navba
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
+      <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
+
+      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 };
@@ -23,6 +29,7 @@ export async function getServerSideProps(ctx: any) {
   const langJson = require(`../assets/lang/${lang}/what-does-google-know-about-me.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const bannerLang = require(`../assets/lang/${lang}/banners.json`);
 
   return {
     props: {
@@ -31,6 +38,7 @@ export async function getServerSideProps(ctx: any) {
       navbarLang,
       footerLang,
       lang,
+      bannerLang,
     },
   };
 }

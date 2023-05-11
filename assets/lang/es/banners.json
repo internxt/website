@@ -44,5 +44,9 @@
   },
   "AndroidSmartBanner": {
     "title": "Descargar Internxt Drive para Android"
+  },
+  "GoogleLPBanner": {
+    "line1": "Don’t let Google cash in on your data,",
+    "blueText": "keep your files private with Internxt"
   }
 }

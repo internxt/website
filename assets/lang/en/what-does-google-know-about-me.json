@@ -1,11 +1,7 @@
 {
   "HeroSection": {
     "mainTitle": "What Does Google Know About Me?",
-    "CtaSection": {
-      "title": "Own your data",
-      "description": "Choose a service that protects your data instead of monetizing it.",
-      "cta": "Switch to Internxt"
-    },
+
     "section1": {
       "description": "For years, privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of the many cases of Google privacy violations. It's a poorly kept secret that Google tracks its users to gather information about them, through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more.",
       "footer": "In the meantime, to prevent Google from accessing your data you can (and should) adjust your Google controls and settings. Below, we’ll teach you how!"
@@ -41,6 +37,11 @@
       "line1": "Everyone involved benefits from your information except for you.",
       "line2": "You are the product."
     }
+  },
+  "CtaSection": {
+    "title": "Own your data",
+    "description": "Choose a service that protects your data instead of monetizing it.",
+    "cta": "Switch to Internxt"
   },
   "WhatGoogleKnowsSection": {
     "title": "Explore what Google knows about you",
