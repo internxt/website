@@ -40,7 +40,10 @@ const ManageGoogleDataSection = ({ textContent }) => {
           />
         </div>
         <img
-          className="max-w-[897px]"
+          onClick={() => {
+            window.open('https://drive.internxt.com/new', '_blank');
+          }}
+          className="max-w-[897px] cursor-pointer"
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.png"
           alt="google activity settings"
         />
@@ -71,9 +74,12 @@ const ManageGoogleDataSection = ({ textContent }) => {
           className="pt-16"
         />
         <img
+          onClick={() => {
+            window.open('https://drive.internxt.com/new', '_blank');
+          }}
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnowsAboutUs_EN.png"
           alt="Internxt CTA"
-          className="max-w-[897px]"
+          className="max-w-[897px] cursor-pointer"
         />
         {/* Seventh Section */}
         <div className="flex max-w-2xl flex-col space-y-3 py-16">

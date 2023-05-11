@@ -58,14 +58,14 @@
     "section2": {
       "title": "Google Web & App Activity",
       "description": [
-        "In My Activity, located under ‘History settings’ you will be able to see every search made and the websites you've visited (thanks to Google Analytics).",
+        "In [My Activity](https://myactivity.google.com/myactivity), located under ‘History settings’ you will be able to see every search made and the websites you've visited (thanks to Google Analytics).",
         "If you've ever used a Google app, that data will appear as well. All of your Google activity history is displayed by date, hour, and app used."
       ]
     },
     "section3": {
       "title": "Google Location History",
       "description": [
-        "Your location privacy is compromised every time you leave a review or access a location service. Find your Google Location History and Google Maps Timeline here.",
+        "Your location privacy is compromised every time you leave a review or access a location service. Find your Google Location History and Google Maps Timeline [here](https://maps.google.com/locationhistory).",
         "Google's location history page offers a complete list of where you've been, which you may have saved in Google Maps (specifically found in ‘Location History’). There is also Google ‘Maps Timeline,’ and the map will display all the areas Google knows you've visited."
       ]
     },
@@ -73,7 +73,7 @@
       "title": "YouTube History",
       "description": [
         "Google also keeps a history of your YouTube searches, the date when you watched the video, and the device you used to view the content.",
-        "Log into your Google account and check here: Select ‘YouTube watch and search history' and set it to auto-delete every 3 or 6 months, or select the option to not save any data at all."
+        "Log into your Google account and check [here](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): Select ‘YouTube watch and search history' and set it to auto-delete every 3 or 6 months, or select the option to not save any data at all."
       ]
     },
     "section5": {
@@ -84,13 +84,13 @@
       "title": "Content saved from Google services and third-party apps",
       "description": [
         "When you install third-party (non-Google) apps and extensions, many give you a Google sign in option to log in directly with your Google account to facilitate the process, this is one of the ways they access the data of those apps.",
-        "Log into your Google account and discover all the apps and extensions that are accessing your Google data under the section ‘Data from apps and services you use.’ There you’ll find a summary of services and third-party apps, as well as settings to browse and restrict your data."
+        "Log into your Google account and [discover all the apps and extensions that are accessing your Google data](https://security.google.com/settings/security/permissions) under the section ‘Data from apps and services you use.’ There you’ll find a summary of services and third-party apps, as well as settings to browse and restrict your data."
       ]
     },
     "section7": {
       "title": "Google Chrome cookies and bookmarks",
       "description": [
-        "Web cookies are data sets that a computer receives that contain information aimed to make the websites you visit more personalized. Cookies are commonly used to identify when someone visits a website and record this activity.",
+        "[Web cookies](https://blog.internxt.com/web-cookies-explained/) are data sets that a computer receives that contain information aimed to make the websites you visit more personalized. Cookies are commonly used to identify when someone visits a website and record this activity.",
         "In Google Chrome, you can check settings at chrome://settings/cookies to delete existing cookies, allow or block all cookies, and set cookie preferences for websites. You can allow all cookies, block third-party cookies, clear the cookies in your opened windows, block all cookies (recommended), and even select which web pages are never allowed to store cookies.",
         "Also, Google Chrome also has an Incognito mode that deletes your browser history and clears cookies after you close the open windows."
       ]
@@ -157,7 +157,7 @@
     "section6": {
       "title": "Google Ads personalization",
       "description": [
-        "You can check what Google knows about you under ‘Personalized ads’ in 'My Ad Center,’ where you can find information about your age range, languages, education and so on. You also have the option to turn-off all personalized ads by clicking a button located in the upper-right side of the ‘My Ad Center’ page.",
+        "You can check what Google knows about you under ‘Personalized ads’ in ['My Ad Center’](http://www.google.com/settings/ads/), where you can find information about your age range, languages, education and so on. You also have the option to turn-off all personalized ads by clicking a button located in the upper-right side of the ‘My Ad Center’ page.",
         "Or you can choose to customize your personalized ads or further manage your ad privacy setting, but as long as personalized ads are enabled, Google will still share some of your information with advertisers. "
       ]
     },
@@ -183,7 +183,9 @@
   },
   "ToolsSection": {
     "title": "Other privacy resources from Internxt",
-    "description": "Want to know more about protecting your data online? Google isn’t the only one harvesting your personal information. Visit our Cyber Awareness page for tons of best practices and strategies to make browsing online safer and more private.",
+    "description": [
+      "Want to know more about protecting your data online? Google isn’t the only one harvesting your personal information. Visit our [Cyber Awareness](https://internxt.com/cyber-awareness) page for tons of best practices and strategies to make browsing online safer and more private."
+    ],
     "tools": [
       {
         "url": "/images/temp-email/password-checker.svg",

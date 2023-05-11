@@ -54,9 +54,12 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           </div>
         </div>
         <img
+          onClick={() => {
+            window.open('https://drive.internxt.com/new', '_blank');
+          }}
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.webp"
           alt="google privacy settings"
-          className="w-full max-w-4xl py-16"
+          className="w-full max-w-4xl cursor-pointer py-16"
         />
         <div className="flex max-w-2xl flex-col space-y-16">
           {/* Forth section */}

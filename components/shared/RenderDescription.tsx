@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 
 const RenderDescription = ({ description }) => {
+  const text = description.map(() => {});
   return (
     <div className="markdown flex flex-col space-y-4">
       {description.map((item, index) => (
