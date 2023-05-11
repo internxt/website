@@ -1,7 +1,11 @@
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
+import CtaSection from '../components/shared/CtaSection';
 import HeroSection from '../components/what-does-google-know-about-me/HeroSection';
+import ManageGoogleDataSection from '../components/what-does-google-know-about-me/ManageGoogleDataSection';
+import ToolsSection from '../components/what-does-google-know-about-me/ToolsSection';
+import WhatGoogleKnowsSection from '../components/what-does-google-know-about-me/WhatGoogleKnowsSection';
 
 const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navbarLang, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
@@ -17,6 +21,17 @@ const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navba
 
       <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
+      <CtaSection textContent={langJson.CtaSection} />
+
+      <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
+
+      <CtaSection textContent={langJson.CtaSection1} />
+
+      <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
+
+      <ToolsSection textContent={langJson.ToolsSection} lang={lang} />
+
+      <CtaSection textContent={langJson.CtaSection2} />
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );

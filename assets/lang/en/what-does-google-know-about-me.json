@@ -186,24 +186,32 @@
     "description": "Want to know more about protecting your data online? Google isn’t the only one harvesting your personal information. Visit our Cyber Awareness page for tons of best practices and strategies to make browsing online safer and more private.",
     "tools": [
       {
-        "url": "",
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
         "title": "Free Password Strength Checker",
-        "cta": "Check now"
+        "width": 125,
+        "description": "Check now"
       },
       {
-        "url": "",
+        "url": "/images/temp-email/virus-scanner.svg",
+        "UrlRedirectName": "virus-scanner",
         "title": "Free Virus Scanner",
-        "cta": "Scan now"
+        "width": 105,
+        "description": "Scan now"
       },
       {
-        "url": "",
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
         "title": "Free Byte Converter",
-        "cta": "Convert now"
+        "width": 95,
+        "description": "Convert now"
       },
       {
-        "url": "",
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
         "title": "Temporary Email",
-        "cta": "Mail now"
+        "width": 95,
+        "description": "Mail now"
       }
     ]
   },
