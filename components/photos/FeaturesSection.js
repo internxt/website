@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Link from 'next/link';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
-import { UilAngleRightB } from '@iconscout/react-unicons';
 import * as anim from '../../public/js/anim';
 import DownloadComponent from '../drive/DownloadComponent';
+import RevealX from '../components/RevealX';
+import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang, device, download }) => (
   <section className="flex w-full flex-col">
@@ -61,7 +61,7 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
                   <div
                     className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
                     style={{
-                      backgroundImage: 'url(/images/photos/mobile-photos-gallery-mockup.webp)',
+                      backgroundImage: 'url(/images/photos/internxt-photos.webp)',
                     }}
                   />
                 </div>
@@ -85,21 +85,24 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
               </div>
             </div>
 
-            <div
-              className="relative hidden flex-col items-start lg:flex"
-              style={{
-                transform: `translate(0px, -${anim.parallaxMinMax(percentage, -40, 24)}px)`,
-                width: 646,
-                height: 844,
-              }}
-            >
-              <div className="absolute flex h-full w-full rounded-4xl shadow-subtle" />
-              <div
-                className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
-                style={{
-                  backgroundImage: 'url(/images/photos/photos-gallery-years-mockup.webp)',
-                }}
-              />
+            <div className="absolute hidden w-full max-w-[750px] flex-col items-start object-contain object-right pt-10 lg:right-0 lg:flex">
+              <RevealX
+                className="hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex"
+                direction="left"
+              >
+                <Image
+                  className="h-full w-full bg-no-repeat "
+                  src="/images/photos/synced-gallery.webp"
+                  width={750}
+                  height={900}
+                  quality={100}
+                  unoptimized={true}
+                  objectPosition={'left'}
+                  objectFit="cover"
+                  draggable={false}
+                  alt="Document folders"
+                />
+              </RevealX>
             </div>
           </>
         )}
@@ -107,35 +110,24 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
 
       {/* Feature #2 - Share your photos with your friends and family */}
       <Parallax
-        className="grid w-full grid-cols-1 justify-center gap-20 pt-20 lg:grid-cols-2 lg:pb-20"
+        className="grid w-full grid-cols-1 justify-center gap-20 pt-5 lg:grid-cols-2 lg:pt-20 lg:pb-20"
         renderLayer={(percentage) => (
           <>
-            <div
-              className="relative hidden w-full flex-col items-end lg:flex"
-              style={{
-                transform: `translate(0px, ${anim.parallaxMinMax(percentage, -40, 0)}px)`,
-                height: 844,
-              }}
-            >
-              <div
-                className="absolute right-0 flex rounded-4xl shadow-subtle"
-                style={{
-                  width: 646,
-                  height: 844,
-                }}
+            <RevealX className="hidden w-full max-w-[713px] flex-col lg:right-0 lg:flex" direction="right">
+              <Image
+                className="w-full -translate-x-12"
+                src="/images/photos/photo-sharing.webp"
+                width={713}
+                height={894}
+                quality={100}
+                unoptimized={true}
+                draggable={false}
+                alt="Secure file storage"
               />
-              <div
-                className="absolute bg-cover bg-right-top bg-no-repeat"
-                style={{
-                  backgroundImage: 'url(/images/photos/photos-preview-mockup.webp)',
-                  width: 646,
-                  height: 844,
-                }}
-              />
-            </div>
+            </RevealX>
 
-            <div className="flex flex-col items-center lg:items-start lg:pl-10">
-              <div className="mb-24 flex flex-col px-10 lg:px-0">
+            <div className="flex flex-col items-center lg:items-start ">
+              <div className="flex flex-col px-10 lg:mb-24 lg:px-0">
                 <h3 className="mb-6 pt-20 text-3xl font-medium text-cool-gray-90 lg:text-4xl">
                   {textContent.section3.title.line1} <br className="hidden sm:flex" />
                   {textContent.section3.title.line2} <br className="hidden sm:flex" />
@@ -163,7 +155,7 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
                 <div
                   className="absolute h-full w-full bg-cover bg-left-top bg-no-repeat"
                   style={{
-                    backgroundImage: 'url(/images/photos/mobile-photos-share-mockup.webp)',
+                    backgroundImage: 'url(/images/photos/share-link.webp)',
                   }}
                 />
               </div>
@@ -174,56 +166,13 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
 
       {/* Download links */}
 
-      <div className="flex w-full flex-col items-center px-10 pb-10 lg:py-20 lg:px-0">
-        <h3 className="mb-12 text-center text-3xl font-medium text-cool-gray-90">
+      <div className="flex w-full flex-col items-center px-10 lg:py-20 lg:px-0 lg:pb-0">
+        <h3 className="mb-12 text-center text-5xl font-semibold text-gray-100">
           {textContent.section4.title.line1} {/* <br className="hidden sm:flex" /> */}
           {textContent.section4.title.line2}
         </h3>
 
         <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
-      </div>
-
-      <div className="flex w-full flex-col items-center px-6 text-center lg:px-0 lg:pb-16">
-        <h3 className="mb-10 text-center text-3xl font-medium text-cool-gray-90 lg:text-5xl">
-          {textContent.section5.title.line1}
-          <br />
-          {textContent.section5.title.line2}
-        </h3>
-
-        <p className="mb-6 text-lg text-cool-gray-80 sm:text-base">
-          {textContent.section5.subtitle.line1} <br className="hidden sm:flex" />
-          {textContent.section5.subtitle.line2} <br className="hidden sm:flex" />
-          {textContent.section5.subtitle.line3}
-        </p>
-
-        <Link href="/privacy" locale={lang}>
-          <a className="mb-32 flex flex-row items-center space-x-1 text-lg text-primary sm:text-base">
-            <span>{textContent.section5.cta}</span>
-            <UilAngleRightB className="h-4 w-4" />
-          </a>
-        </Link>
-
-        <div className="grid-row-4 grid grid-cols-1 gap-16 text-center lg:grid-cols-2 lg:grid-rows-2 lg:gap-20 xl:gap-32">
-          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
-            <h4 className="mb-4 text-2xl font-medium">{textContent.section5.card1.title}</h4>
-            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section5.card1.subtitle}</h5>
-          </div>
-
-          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
-            <h4 className="mb-4 text-2xl font-medium">{textContent.section5.card2.title}</h4>
-            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section5.card2.subtitle}</h5>
-          </div>
-
-          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
-            <h4 className="mb-4 text-2xl font-medium">{textContent.section5.card3.title}</h4>
-            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section5.card3.subtitle}</h5>
-          </div>
-
-          <div className="flex w-full flex-col items-center px-2 lg:w-96 lg:px-0">
-            <h4 className="mb-4 text-2xl font-medium">{textContent.section5.card4.title}</h4>
-            <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section5.card4.subtitle}</h5>
-          </div>
-        </div>
       </div>
     </div>
   </section>

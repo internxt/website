@@ -4,6 +4,7 @@ import React from 'react';
 import userAgent from 'useragent';
 import HeroSection from '../components/photos/HeroSection';
 import FeaturesSection from '../components/photos/FeaturesSection';
+import FeatureSection from '../components/photos/FeatureSection';
 import FAQSection from '../components/photos/FAQSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
@@ -13,6 +14,9 @@ import cookies from '../lib/cookies';
 import { downloadDriveByPlatform } from '../lib/get-download-url';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import FileParallaxSection from '../components/home/FileParallaxSection';
+import WhatWeDoSection from '../components/photos/WhatWeDoSection';
+import CtaSection from '../components/drive/CtaSection';
 
 const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, download, device, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
@@ -36,7 +40,13 @@ const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, downlo
 
         <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} device={device} download={download} />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FileParallaxSection />
+
+        <WhatWeDoSection textContent={langJson.FeaturesSection} lang={device} />
+
+        <FeatureSection textContent={langJson.FeatureSection} />
+
+        <CtaSection textContent={langJson.CtaSection} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
