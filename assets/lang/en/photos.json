@@ -6,9 +6,9 @@
       "line2": "safe under lock and key"
     },
     "subtitle": {
-      "line1": "Relive, share and keep your best memories safe, all in one place.",
-      "line2": "With Internxt Photos focusing on privacy and security",
-      "line3": "your photos are yours and yours alone."
+      "line1": "Relive, share, and keep your best memories safe, all in one place. ",
+      "line2": "Let Internxt Photos focus on privacy and security, ",
+      "line3": "so you can concentrate on capturing the moments that matter to you."
     },
     "availableSoon": "Available soon",
     "DownloadLinks": {
@@ -114,7 +114,7 @@
     }
   },
   "FeatureSection": {
-    "title": "Protect your files with Internxt Photos",
+    "title": "Protect your pics with Internxt Photos",
     "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
     "cta": "Get started"
   },
