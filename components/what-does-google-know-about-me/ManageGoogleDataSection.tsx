@@ -22,10 +22,12 @@ const ManageGoogleDataSection = ({ textContent }) => {
             <p className="text-2xl font-medium text-gray-100">{textContent.section1.title}</p>
             <RenderDescription description={textContent.section1.description} />
           </div>
-          <img
-            src="/images/what-does-google-know-about-me/google-privacy-activity-settings.webp"
-            alt="google privacy activity settings"
-          />
+          <div className="flex justify-center bg-cover">
+            <img
+              src="/images/what-does-google-know-about-me/google-privacy-activity-settings.webp"
+              alt="google privacy activity settings"
+            />
+          </div>
           {/* Second Section */}
           <div className="flex flex-col space-y-3">
             <p className="text-2xl font-medium text-gray-100">{textContent.section2.title}</p>
