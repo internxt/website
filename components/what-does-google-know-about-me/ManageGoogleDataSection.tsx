@@ -26,6 +26,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
             <img
               src="/images/what-does-google-know-about-me/google-privacy-activity-settings.webp"
               alt="google privacy activity settings"
+              draggable={false}
             />
           </div>
           {/* Second Section */}
@@ -39,22 +40,28 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <img
             src="/images/what-does-google-know-about-me/google-activity-settings.png"
             alt="google activity settings"
+            draggable={false}
           />
         </div>
         <img
           onClick={() => {
             window.open('https://drive.internxt.com/new', '_blank');
           }}
-          className="max-w-[897px] cursor-pointer"
+          className="w-full max-w-[897px] cursor-pointer"
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.png"
           alt="google activity settings"
+          draggable={false}
         />
         <div className="flex max-w-2xl flex-col space-y-3 py-16">
           {/* Third Section */}
           <p className="text-2xl font-medium text-gray-100">{textContent.section3.title}</p>
           <p className="text-lg text-gray-80">{textContent.section3.description}</p>
         </div>
-        <img src="/images/what-does-google-know-about-me/google-activity-controls.png" alt="google activity controls" />
+        <img
+          src="/images/what-does-google-know-about-me/google-activity-controls.png"
+          alt="google activity controls"
+          draggable={false}
+        />
         {/* Forth Section */}
         <div className="flex max-w-2xl flex-col space-y-3">
           <p className="text-2xl font-medium text-gray-100">{textContent.section4.title}</p>
@@ -74,6 +81,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-ads-privacy-settings.png"
           alt="google ads privacy settings"
           className="pt-16"
+          draggable={false}
         />
         <img
           onClick={() => {
@@ -81,7 +89,8 @@ const ManageGoogleDataSection = ({ textContent }) => {
           }}
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnowsAboutUs_EN.png"
           alt="Internxt CTA"
-          className="max-w-[897px] cursor-pointer"
+          className="w-full max-w-[897px] cursor-pointer"
+          draggable={false}
         />
         {/* Seventh Section */}
         <div className="flex max-w-2xl flex-col space-y-3 py-16">
@@ -91,6 +100,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
         <img
           src="/images/what-does-google-know-about-me/google-access-personal-account.png"
           alt="google access personal account"
+          draggable={false}
         />
         {/* Eighth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 pb-16">
@@ -100,6 +110,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
         <img
           src="/images/what-does-google-know-about-me/google-search-privacy-settings.png"
           alt="google search privacy settings"
+          draggable={false}
         />
         {/* Ninth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 pb-16">
@@ -109,6 +120,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
         <img
           src="/images/what-does-google-know-about-me/google-privacy-settings-options.png"
           alt="google privacy settings options"
+          draggable={false}
         />
       </div>
     </section>

@@ -21,7 +21,7 @@ const HeroSection = ({ textContent, bannerText, lang }) => {
           </div>
           <SignUpBanner textContent={bannerText} lang={lang} />
           <div className="flex max-w-2xl flex-col items-center justify-center">
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col items-center space-y-3 text-center lg:items-start lg:text-start">
               <Eye size={48} weight="light" className="text-primary" />
               <p className="text-5xl font-semibold leading-tight text-gray-100">{textContent.section2.title}</p>
             </div>

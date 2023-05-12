@@ -21,7 +21,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center">
         <div className="flex max-w-2xl flex-col space-y-16">
           <div className="flex flex-col space-y-9">
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col items-center space-y-3 text-center lg:items-start lg:text-start">
               <MagnifyingGlass size={48} className="text-primary" />
               <p className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</p>
             </div>
@@ -39,6 +39,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-privacy-settings.webp"
           alt="google privacy settings"
           className="pt-16"
+          draggable={false}
         />
 
         <div className="flex max-w-2xl flex-col space-y-16">
@@ -60,6 +61,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.webp"
           alt="google privacy settings"
           className="w-full max-w-4xl cursor-pointer py-16"
+          draggable={false}
         />
         <div className="flex max-w-2xl flex-col space-y-16">
           {/* Forth section */}
@@ -77,6 +79,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-location-settings.webp"
           alt="google location privacy settings"
           className="pt-16"
+          draggable={false}
         />
         {/* Sixth section */}
         <div className="flex max-w-2xl flex-col space-y-3">
@@ -87,6 +90,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-account-privacy-settings.webp"
           alt="google privacy settings"
           className="pt-16"
+          draggable={false}
         />
         <div className="flex max-w-2xl flex-col space-y-16">
           {/* Seventh section */}
