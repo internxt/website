@@ -156,7 +156,7 @@ export function signup(data: { email: string; password: string }, redirectURL?: 
     checkAuthFlowAvailable();
     prepareAuthFlow(data);
     const createUserUrl = getAuthFlowCreateUserURL({ redirectURL, enableAutoSubmit: true });
-    isBlog ? (window.opener.location = createUserUrl) : (window.location.href = createUserUrl);
+    isBlog ? window.open(createUserUrl, '_blank') : (window.location.href = createUserUrl);
   }
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'signup', ...data }, window.location.origin);
