@@ -7,6 +7,8 @@ import ManageGoogleDataSection from '../components/what-does-google-know-about-m
 import ToolsSection from '../components/what-does-google-know-about-me/ToolsSection';
 import WhatGoogleKnowsSection from '../components/what-does-google-know-about-me/WhatGoogleKnowsSection';
 
+const URL_REDIRECT = 'https://drive.internxt.com/new';
+
 const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navbarLang, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'what-google-knows');
 
@@ -21,17 +23,17 @@ const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navba
 
       <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection} />
+      <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
       <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
 
-      <CtaSection textContent={langJson.CtaSection1} />
+      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
 
       <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
       <ToolsSection textContent={langJson.ToolsSection} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection2} />
+      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
