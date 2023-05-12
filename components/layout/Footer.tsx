@@ -238,6 +238,11 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.cyberAwareness}
                       </a>
                     </Link>
+                    <Link href="/cyber-awareness" locale={lang} passHref>
+                      <a className="max-w-[150px] hover:text-primary">
+                        {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -57,7 +57,11 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <p className="text-2xl font-medium text-gray-100">{textContent.section3.title}</p>
           <p className="text-lg text-gray-80">{textContent.section3.description}</p>
         </div>
-        <img
+        <Image
+          quality={100}
+          unoptimized={true}
+          width={494}
+          height={588}
           src="/images/what-does-google-know-about-me/google-activity-controls.png"
           alt="google activity controls"
           draggable={false}
