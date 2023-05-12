@@ -10,6 +10,7 @@ interface SignUpInlineProps {
   textContent: any;
   error?: string;
   loading?: boolean;
+  isBlog?: boolean;
 }
 
 export default function SignUpInline(props: SignUpInlineProps) {
@@ -22,7 +23,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    signup({ email: form.email.value, password: form.password.value });
+    signup({ email: form.email.value, password: form.password.value }, '', props.isBlog);
   };
 
   const checkPassword = (input) => {

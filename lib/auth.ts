@@ -151,12 +151,12 @@ export function goToSignUpURL(options?: { redirectURL?: string }) {
   window.location.href = createUserURL;
 }
 
-export function signup(data: { email: string; password: string }, redirectURL?: string): void {
+export function signup(data: { email: string; password: string }, redirectURL?: string, isBlog?: boolean): void {
   if (REDIRECT_AUTH_ENABLED) {
     checkAuthFlowAvailable();
     prepareAuthFlow(data);
     const createUserUrl = getAuthFlowCreateUserURL({ redirectURL, enableAutoSubmit: true });
-    window.location.href = createUserUrl;
+    isBlog ? window.open(createUserUrl, '_blank') : (window.location.href = createUserUrl);
   }
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'signup', ...data }, window.location.origin);
