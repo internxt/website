@@ -12,7 +12,7 @@ const SignupForm = () => {
             Make privacy a priority and join<span className="text-primary"> Internxt </span>today
           </p>
           <div className="flex w-full">
-            <SignUpInline textContent={signUpLang.HeroSection.SignUp} />
+            <SignUpInline textContent={signUpLang.HeroSection.SignUp} isBlog={true} />
           </div>
         </div>
         <div className="-ml-40 flex items-center">
