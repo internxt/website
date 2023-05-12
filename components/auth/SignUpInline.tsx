@@ -23,7 +23,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    signup({ email: form.email.value, password: form.password.value }, '', props.isBlog);
+    signup({ email: form.email.value, password: form.password.value });
   };
 
   const checkPassword = (input) => {
