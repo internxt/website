@@ -6,10 +6,12 @@ const currentLang = ['Español (ES)', 'Français (FR)', 'English (EN)', 'Italian
 const RenderDescription = ({ description }) => {
   useEffect(() => {
     const links = document.querySelectorAll('a');
+    const navbar = document.querySelector('#navbar');
+    const footer = document.querySelector('#footer');
 
     //Check if the link is not in the Language Box redirect
     links.forEach((link) => {
-      if (!currentLang.includes(link.textContent)) {
+      if (!navbar && !footer) {
         link.target = '_blank';
         link.rel = 'nofollow';
       }
