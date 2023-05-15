@@ -37,6 +37,7 @@ export default function Footer({
 
   return (
     <section
+      id="footer"
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
