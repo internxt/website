@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Transition, Disclosure } from '@headlessui/react';
-import Hamburger from 'hamburger-react';
+import { Squeeze as Hamburger } from 'hamburger-react';
 import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
 
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { useGlobalDialog } from '../../contexts/GlobalUIManager';
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
@@ -51,7 +50,7 @@ export default function Navbar(props: NavbarProps) {
     <div
       className={`${props.hide ? 'hidden' : ''} flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
-      } h-20 w-full bg-gray-1 transition-all duration-100 lg:h-16 lg:bg-white ${
+      } h-20 w-full bg-white transition-all duration-100 lg:h-16 ${
         props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
       } ${scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
@@ -230,7 +229,7 @@ export default function Navbar(props: NavbarProps) {
 
             {/* Logo */}
             <Link href="/" locale={props.lang} passHref>
-              <a className="flex flex-shrink-0">
+              <a className="flex flex-shrink-0 lg:hidden">
                 <img
                   loading="lazy"
                   className="select-none"
@@ -238,6 +237,16 @@ export default function Navbar(props: NavbarProps) {
                   alt="Internxt logo"
                   width="96"
                   height="10"
+                />
+              </a>
+            </Link>
+            <Link href={'/'} locale={props.lang} passHref>
+              <a className="hidden flex-shrink-0 lg:flex">
+                <img
+                  loading="lazy"
+                  className="select-none"
+                  src={`../../logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`}
+                  alt="Internxt logo"
                 />
               </a>
             </Link>
@@ -386,11 +395,11 @@ export default function Navbar(props: NavbarProps) {
             {props.cta[0] === 'checkout' ? (
               <button
                 type="button"
-                onClick={() =>
+                onClick={() => {
                   checkout({
-                    planId: getPlanId(stripeObject),
-                  })
-                }
+                    planId: '',
+                  });
+                }}
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'

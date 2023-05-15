@@ -10,6 +10,7 @@ interface SignUpInlineProps {
   textContent: any;
   error?: string;
   loading?: boolean;
+  isBlog?: boolean;
 }
 
 export default function SignUpInline(props: SignUpInlineProps) {
