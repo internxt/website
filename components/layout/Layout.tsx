@@ -24,6 +24,7 @@ interface LayoutProps {
 }
 
 const INTERNXT_URL = 'https://internxt.com';
+const excludedURL = ['/pricing', '/black-friday'];
 
 export default function Layout({
   children,
@@ -37,12 +38,11 @@ export default function Layout({
   isProduction = process.env.NODE_ENV === 'production',
 }: // lang
 LayoutProps) {
-  const excludedURL = ['/pricing', '/black-friday'];
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = !excludedURL.includes(router.pathname);
+  const showBanner = false; //excludedURL.includes(pathname) If we want to show the banner in the future
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<any>();
 
