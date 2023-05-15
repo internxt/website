@@ -9,7 +9,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
     </li>
   ));
   return (
-    <section className="overflow-hidden px-5 pt-20">
+    <section className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center justify-center">
         <div className="flex max-w-2xl flex-col space-y-16">
           <div className="flex flex-col items-center space-y-3 text-center lg:items-start lg:text-start">
@@ -22,26 +22,28 @@ const ManageGoogleDataSection = ({ textContent }) => {
             <p className="text-2xl font-medium text-gray-100">{textContent.section1.title}</p>
             <RenderDescription description={textContent.section1.description} />
           </div>
-          <img
-            src="/images/what-does-google-know-about-me/google-privacy-activity-settings.png"
-            alt="google privacy activity settings"
-            draggable={false}
-          />
-
-          {/* Second Section */}
-          <div className="flex flex-col space-y-3">
-            <p className="text-2xl font-medium text-gray-100">{textContent.section2.title}</p>
-            <p className="text-lg text-gray-80">{textContent.section2.description}</p>
-          </div>
-          <div className="flex flex-col">
-            <ul className="list-decimal space-y-3 pl-6">{numberedList}</ul>
-          </div>
-          <img
-            src="/images/what-does-google-know-about-me/google-activity-settings.png"
-            alt="google activity settings"
-            draggable={false}
-          />
         </div>
+        <img
+          src="/images/what-does-google-know-about-me/google-privacy-activity-settings.png"
+          alt="google privacy activity settings"
+          draggable={false}
+          className="w-full max-w-2xl"
+        />
+        {/* Second Section */}
+        <div className="flex max-w-2xl flex-col space-y-3">
+          <p className="text-2xl font-medium text-gray-100">{textContent.section2.title}</p>
+          <p className="text-lg text-gray-80">{textContent.section2.description}</p>
+        </div>
+        <div className="flex max-w-2xl flex-col">
+          <ul className="list-decimal space-y-3 pl-6">{numberedList}</ul>
+        </div>
+        <img
+          src="/images/what-does-google-know-about-me/google-activity-settings.png"
+          alt="google activity settings"
+          draggable={false}
+          className="w-full max-w-2xl"
+        />
+
         <img
           onClick={() => {
             window.open('https://drive.internxt.com/new', '_blank');
