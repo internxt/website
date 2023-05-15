@@ -7,9 +7,8 @@ const RenderDescription = ({ description }) => {
   useEffect(() => {
     const links = document.querySelectorAll('a');
 
-    // Check if the link is an external link
+    //Check if the link is not in the Language Box redirect
     links.forEach((link) => {
-      console.log(link.textContent);
       if (!currentLang.includes(link.textContent)) {
         link.target = '_blank';
         link.rel = 'nofollow';
