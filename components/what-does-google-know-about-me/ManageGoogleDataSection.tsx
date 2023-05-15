@@ -60,6 +60,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-activity-controls.png"
           alt="google activity controls"
           draggable={false}
+          className="w-full max-w-2xl"
         />
         {/* Forth Section */}
         <div className="flex max-w-2xl flex-col space-y-3">
@@ -79,7 +80,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
         <img
           src="/images/what-does-google-know-about-me/google-ads-privacy-settings.png"
           alt="google ads privacy settings"
-          className="pt-16"
+          className="w-full max-w-md pt-16"
           draggable={false}
         />
         <img
@@ -100,6 +101,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-access-personal-account.png"
           alt="google access personal account"
           draggable={false}
+          className="w-full max-w-2xl"
         />
         {/* Eighth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 pb-16">
@@ -110,6 +112,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-search-privacy-settings.png"
           alt="google search privacy settings"
           draggable={false}
+          className="w-full max-w-2xl"
         />
         {/* Ninth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 pb-16">
@@ -120,6 +123,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           src="/images/what-does-google-know-about-me/google-privacy-settings-options.png"
           alt="google privacy settings options"
           draggable={false}
+          className="w-full max-w-2xl"
         />
       </div>
     </section>

@@ -36,9 +36,9 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
         </div>
 
         <img
-          src="/images/what-does-google-know-about-me/google-privacy-settings.webp"
+          src="/images/what-does-google-know-about-me/google-privacy-settings.png"
           alt="google privacy settings"
-          className="pt-16"
+          className="w-full max-w-4xl pt-16"
           draggable={false}
         />
 
@@ -76,9 +76,9 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           </div>
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-location-settings.webp"
+          src="/images/what-does-google-know-about-me/google-location-settings.png"
           alt="google location privacy settings"
-          className="pt-16"
+          className="w-full max-w-4xl pt-16"
           draggable={false}
         />
         {/* Sixth section */}
@@ -87,9 +87,9 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           <RenderDescription description={textContent.section6.description} />
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-account-privacy-settings.webp"
+          src="/images/what-does-google-know-about-me/google-account-privacy-settings.png"
           alt="google privacy settings"
-          className="pt-16"
+          className="w-full max-w-4xl pt-16"
           draggable={false}
         />
         <div className="flex max-w-2xl flex-col space-y-16">
