@@ -42,11 +42,11 @@ const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navba
 export async function getServerSideProps(ctx: any) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/what-does-google-know-about-me.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
-  const bannerLang = require(`../assets/lang/en/banners.json`);
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/${lang}/what-does-google-know-about-me.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const bannerLang = require(`../assets/lang/${lang}/banners.json`);
 
   return {
     props: {

@@ -1,12 +1,19 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
+const currentLang = ['Español (ES)', 'Français (FR)', 'English (EN)', 'Italiano (IT)', '中国 (ZH)'];
+
 const RenderDescription = ({ description }) => {
   useEffect(() => {
     const links = document.querySelectorAll('a');
+
+    // Check if the link is an external link
     links.forEach((link) => {
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'nofollow');
+      console.log(link.textContent);
+      if (!currentLang.includes(link.textContent)) {
+        link.target = '_blank';
+        link.rel = 'nofollow';
+      }
     });
   }, []);
 
