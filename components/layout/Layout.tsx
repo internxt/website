@@ -42,9 +42,9 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = false; //excludedURL.includes(pathname) If we want to show the banner in the future
+  const showBanner = false; // / !excludedURL.includes(router.pathname); This is for the banner to be shown in all pages except the ones in the array (pricing and black friday)
   const langToUpperCase = lang.toLocaleUpperCase();
-  const [installPrompt, setInstallPrompt] = React.useState<any>();
+  const [installPrompt, setInstallPrompt] = React.useState<Event>();
 
   const slogan = {
     en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -56,7 +56,6 @@ LayoutProps) {
   useEffect(() => {
     // Capture event and defer
     window.addEventListener('beforeinstallprompt', function (e) {
-      console.log('beforeinstallprompt is fired');
       e.preventDefault();
       setInstallPrompt(e);
     });

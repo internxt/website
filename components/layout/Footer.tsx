@@ -37,6 +37,7 @@ export default function Footer({
 
   return (
     <section
+      id="footer"
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
@@ -236,6 +237,11 @@ export default function Footer({
                     <Link href="/cyber-awareness" locale={lang} passHref>
                       <a className="hover:text-primary">
                         {textContent.FooterSection.sections.resources.cyberAwareness}
+                      </a>
+                    </Link>
+                    <Link href="/what-does-google-know-about-me" locale={lang} passHref>
+                      <a className="max-w-[150px] hover:text-primary">
+                        {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </a>
                     </Link>
                   </div>
@@ -570,6 +576,10 @@ export default function Footer({
 
                       <Link href="/cyber-awareness" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      </Link>
+
+                      <Link href="/what-does-google-know-about-me" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
