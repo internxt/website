@@ -1,137 +1,137 @@
 {
   "HeroSection": {
-    "title": "Byte Converter: TB to GB",
-    "description": "Convert terabytes to gigabytes to megabytes!",
-    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many Gb in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
+    "title": "Convertisseur d'octets",
+    "description": "Convertissez des téraoctets en gigaoctets et plus !",
+    "description1": " Mo en Ko, Go en To ou Mo en Go et bien d'autres unités. Découvrez combien de Go dans un To ou combien de stockage sur le cloud, le téléphone ou le disque il vous reste vraiment avec le convertisseur d'octets gratuit d'Internxt."
   },
   "ExplanationSection": {
     "convertTo": {
-      "title": "How to convert terabytes to gigabytes or gigabytes to terabytes?",
-      "description": "Enter a value in the 'Gigabytes' section and your answer will appear in the 'Terabytes' section."
+      "title": "Comment convertir des téraoctets en gigaoctets ou des gigaoctets en téraoctets ?",
+      "description": "Entrez une valeur dans la section 'Gigaoctets' et votre réponse apparaîtra dans la section 'Téraoctets'"
     },
     "convertToAgain": {
-      "title": "How to convert GB to TB and back again?",
-      "description": "Not sure if you have enough space on your device? Worried your hard drive is to small? Wondering how many 1GB files can fit in 2TB of cloud storage? Use our free byte converter and storage calculator to know exactly how many kilobytes, megabytes, gigabytes, or terabytes your files take up."
+      "title": "Comment convertir des Go en To et inversement ?",
+      "description": "Vous n'êtes pas sûr d'avoir assez d'espace sur votre appareil ? Vous vous demandez combien de fichiers de 1 Go peuvent tenir dans un espace de stockage en ligne de 2 To ? Utilisez notre convertisseur d'octets et calculateur de stockage gratuits pour savoir exactement combien de kilo-octets, de méga-octets, de giga-octets ou de téra-octets vos fichiers occupent."
     },
     "whyUseConverter": {
-      "title": "Why use a byte converter and storage calculator tool?",
+      "title": "Pourquoi utiliser un convertisseur en octets ?",
       "description": [
-        { "adv": "Determine exactly how much cloud storage you need for your files" },
-        { "adv": "Make sure your files transfers fall under upload and download limits" },
-        { "adv": "Convert byte values without the help of a calculator or pen and paper" },
-        { "adv": "Quickly find out how much phone storage space you have left" },
-        { "adv": "Discover how much data your hard drive or portable drive can support" }
+        { "adv": "Déterminez exactement la quantité de stockage en nuage dont vous avez besoin pour vos fichiers" },
+        { "adv": "Assurez-vous que vos transferts de fichiers respectent les limites d'envoi et de téléchargement" },
+        { "adv": "Convertir des valeurs d'octets sans l'aide d'une calculatrice ou d'un papier " },
+        { "adv": "Découvrez rapidement l'espace de stockage restant sur votre téléphone" },
+        { "adv": "Découvrez le volume de données que peut contenir votre disque dur" }
       ]
     },
     "MBMeaning": {
-      "title": "MB meaning?",
-      "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
+      "title": " Que signifie Mo ? ",
+      "description": "Qu'il s'agisse de Mo, Ko, To ou Go, toutes ces abréviations représentent la quantité d'octets. La quantité ou le nombre d'octets sont utilisés pour mesurer la taille ou la quantité d'informations numériques."
     }
   },
   "infoSection": {
-    "title": "What is the difference between GB and TB and so on?",
-    "description": "Want to know how many GB in a TB? Or, without the abbreviations, how many gigabytes are in a terabyte? First, you need to understand what a byte is, then it's super simple to know the difference between MB to KB or MB to GB.",
+    "title": "Quelle est la différence entre Go et To et ainsi de suite ?",
+    "description": "Vous voulez savoir combien il y a de Go dans un To ? Ou, sans abréviations, combien de gigaoctets il y a dans un téraoctet ? Il faut d'abord comprendre ce qu'est un octet, puis il est super simple de connaître la différence entre Mo et Ko ou Mo et Go.",
     "faq": {
       "faq": [
         {
-          "question": "What is a byte?",
+          "question": "Qu'est-ce qu'un octet ?",
           "answer": [
-            "A byte (B) is the smallest unit of digital information. It’s a unit of digital information that most commonly consists of eight bits. A file is made up of so many bytes–the more bytes, the bigger the file."
+            "Un octet (B) est la plus petite unité d'information numérique. Il s'agit d'une unité d'information numérique qui se compose le plus souvent de huit bits. Un fichier est constitué d'un certain nombre d'octets - plus il y a d'octets, plus le fichier est volumineux."
           ]
         },
         {
-          "question": "What is a kilobyte?",
+          "question": "Qu'est-ce qu'un kilo-octet ?",
           "answer": [
-            "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
+            "Un kilo-octet (Ko) est un multiple de l'unité octet pour les informations numériques. Selon la signification du préfixe kilo dans le Système international d'unités (SI), qui est 1 000, un kilo-octet équivaut à 1 000 octets. Les kilo-octets sont désignés par le symbole d'unité mondialement accepté, Ko."
           ]
         },
         {
-          "question": "What is a megabyte?",
+          "question": "Qu'est-ce qu'un mégaoctet ?",
           "answer": [
-            "A megabyte (MB) is a multiple of the digital informational unit byte. The suggested unit symbol for it is MB. In the International System of Units (SI), the unit prefix mega is multiplied by 100,000 to determine the unit. As a result, one megabyte is equal to one million bytes of data."
+            "Un mégaoctet (Mo) est un multiple de l'unité d'information numérique qu'est l'octet. Le symbole d'unité suggéré est Mo. Dans le Système international d'unités (SI), le préfixe d'unité méga est multiplié par 100000 pour déterminer l'unité. Par conséquent, un mégaoctet est égal à un million d'octets de données"
           ]
         },
         {
-          "question": "What is a gigabyte?",
+          "question": "Qu'est-ce qu'un gigaoctet ?",
           "answer": [
-            "A gigabyte (GB) is a multiple of the digital informational unit byte. A gigabyte is equal to one billion bytes. The gigabyte is denoted by the letters GB."
+            "Un gigaoctet (Go) est un multiple de l'unité d'information numérique qu'est l'octet. Un gigaoctet est égal à un milliard d'octets. Le gigaoctet est désigné par les lettres Go."
           ]
         },
         {
-          "question": "What is a terabyte?",
+          "question": "Qu'est-ce qu'un téraoctet ?",
           "answer": [
-            "Digital data is measured in terabytes (TB), which are about 1 trillion bytes. A terabyte is exactly 1 trillion bytes when written in decimal notation (base 10). A terabyte, or 1,099,511,627,776 bytes, is equivalent to 240 bytes in binary notation."
+            "Les données numériques sont mesurées en téraoctets (To), qui représentent environ 1000 milliards d'octets. Un téraoctet correspond exactement à 1000 milliards d'octets lorsqu'il est écrit en notation décimale (base 10)."
           ]
         },
         {
-          "question": "What's next?",
+          "question": "Qu'est-ce qui suit ?",
           "answer": [
-            "A terabyte (TB) is then followed in the same pattern exponentially by a petabyte (PB), then exabyte (EB), then zetabyte (ZB), then yottabyte (YB), and then anything bigger than that is difficult to fathom."
+            "Un téraoctet (To) est ensuite suivi de manière exponentielle par un pétaoctet (Po), puis un exaoctet (Eo), un zétaoctet (Zo), un yottaoctet (Yo), et tout ce qui est plus grand que cela est difficile à comprendre"
           ]
         }
       ]
     }
   },
   "ConversionTableSection": {
-    "title": "Byte Conversion Chart",
-    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many KB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:",
+    "title": "Tableau de conversion des octets",
+    "description": "Vous ne savez pas combien de gigaoctets correspondent à un téraoctet ? Ou combien de gigaoctets contient un téraoctet ? Vous voulez savoir combien de Mo dans un Go, combien de Ko dans un Mo, combien de Go dans un To, etc. Convertissez vous-même les valeurs en octets à l'aide de notre tableau de conversion d'octets ci-dessous :",
     "header": {
-      "unit": "Unit",
-      "abbr": "Abbreviation",
-      "decValue": "Decimal value",
-      "decSize": "Decimal size"
+      "unit": "Unité",
+      "abbr": "Abréviation",
+      "decValue": "Valeur décimale",
+      "decSize": "Taille décimale"
     },
     "firstRow": {
       "unit": "Bit",
       "abbr": "b",
-      "decValue": "0 or 1",
-      "decSize": "⅛ of a byte"
+      "decValue": "0 ou 1",
+      "decSize": "⅛ d'un octet"
     }
   },
   "FaqSection": {
-    "title": "Questions? We have answers.",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": {
       "faq": [
         {
-          "question": "How do I use the Byte Converter?",
+          "question": "Comment utiliser le convertisseur d'octets ?",
           "answer": [
-            "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
+            "Sélectionnez la valeur que vous souhaitez convertir et sélectionnez la valeur en laquelle vous souhaitez la convertir (par exemple : Ko en Mo). Entrez une valeur dans la première section à gauche, et votre réponse apparaîtra dans la section à droite."
           ]
         },
         {
-          "question": "How do I convert terabytes to gigabytes and so on?",
+          "question": "Comment convertir des téraoctets en gigaoctets et plus d'unités ?",
           "answer": [
-            "Simply input the byte value you want to convert into our Byte Converter and select the byte value you want to reformat in, the value will automatically be converted and displayed.",
-            "You may also use the conversion chart listed above if you want to manually do the calculation."
+            "Entrez la valeur de l'octet que vous souhaitez convertir dans notre convertisseur d'octets et sélectionnez la valeur de l'octet que vous souhaitez reformater, la valeur sera automatiquement convertie et affichée",
+            "Vous pouvez également utiliser le tableau de conversion ci-dessus si vous souhaitez effectuer le calcul manuellement."
           ]
         },
         {
-          "question": "How many gigabytes equal one terabyte?",
-          "answer": ["1024 GB equals 1 TB. So one TB of storage can hold 1024 GB of data."]
+          "question": "Combien de gigaoctets correspondent à un téraoctet ?",
+          "answer": ["1024 Go égalent 1 To. 1 To de stockage peut donc contenir 1024 Go de données."]
         },
         {
-          "question": "What is the difference between TB and GB?",
+          "question": "Quelle est la différence entre To et Go ?",
           "answer": [
-            "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a KB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
-            "If you would like to see how they all stack up against each other or what’s MB meaning or what’s bigger than a terabyte, check out the conversion chart above on the page."
+            "Les To et les Go ne diffèrent que par leur taille. Un téraoctet est composé de plus d'octets, les plus petites unités de données, qu'un gigaoctet. En général, un B est plus petit qu'un Ko, un Mo est plus grand, un Go est encore plus grand et un To est encore plus grand",
+            "Si vous voulez voir comment ils se comparent les uns aux autres ou ce que signifie Mo ou ce qui est plus grand qu'un téraoctet, consultez le tableau de conversion plus haut sur la page."
           ]
         },
         {
-          "question": "Why is my 1 TB disk not 1 TB?",
+          "question": "Pourquoi mon disque de 1 To n'est-il pas de 1 To ?",
           "answer": [
-            "Though your 1 TB drive is listed as having 1 TB worth of storage, typically, you won’t be able to use the whole amount as part of the drive may be used for operational files."
+            "Bien que votre disque de 1 To soit indiqué comme ayant une capacité de stockage de 1 To, vous ne pourrez généralement pas utiliser la totalité de cette capacité, car une partie du disque peut être utilisée pour des fichiers opérationnels."
           ]
         },
         {
-          "question": "How much is 2TB?",
+          "question": " Combien représentent 2 To ? ",
           "answer": [
-            "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
+            "2 téraoctets (To) équivalent à 2000 gigaoctets (Go) ou 2000000 mégaoctets (Mo). Avec 2 To de données, vous pouvez stocker en moyenne 200000 photos avec les smartphones d'aujourd'hui, et environ 500000 documents peuvent tenir sur un disque de 2 To"
           ]
         },
         {
-          "question": "How much is 1TB?",
+          "question": "Combien représente 1 To ?",
           "answer": [
-            "1 terabyte (TB) equals 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+            "1 téraoctet (To) équivaut à 1000 gigaoctets (Go) ou 1000000 de mégaoctets (Mo). Avec 1 To de données, vous pouvez stocker en moyenne 100000 photos avec les smartphones d'aujourd'hui, et environ 250000 documents peuvent tenir sur un disque de 1 To"
           ]
         }
       ]
@@ -140,74 +140,32 @@
   "SchemaMarkupQuestions": {
     "faq": [
       {
-        "question": "How many GB to a TB?",
+        "question": " Combien représentent 2 To ? ",
         "answer": [
-          "Use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
+          "2 téraoctets (To) équivalent à 2 000 gigaoctets (Go) ou 2 000 000 de mégaoctets (Mo). Avec 2 To de données, vous pouvez stocker en moyenne 200 000 photos avec les smartphones d'aujourd'hui, et environ 500 000 documents peuvent tenir sur un disque de 2 To."
         ]
       },
       {
-        "question": "How many TB to GB?",
+        "question": "Combien représente 1 To ?",
         "answer": [
-          "If you want to know how many terabytes are in a gigabyte, use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
-        ]
-      },
-      {
-        "question": "What is a byte?",
-        "answer": [
-          "A byte (B) is the smallest unit of digital information. It’s a unit of digital information that most commonly consists of eight bits. A file is made up of so many bytes–the more bytes, the bigger the file."
-        ]
-      },
-      {
-        "question": "What is a kilobyte?",
-        "answer": [
-          "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
-        ]
-      },
-      {
-        "question": "What is a megabyte?",
-        "answer": [
-          "A megabyte (MB) is a multiple of the digital informational unit byte. The suggested unit symbol for it is MB. In the International System of Units (SI), the unit prefix mega is multiplied by 100,000 to determine the unit. As a result, one megabyte is equal to one million bytes of data."
-        ]
-      },
-      {
-        "question": "What is a gigabyte?",
-        "answer": [
-          "A gigabyte (GB) is a multiple of the digital informational unit byte. A gigabyte is equal to one billion bytes. The gigabyte is denoted by the letters GB."
-        ]
-      },
-      {
-        "question": "What is a terabyte?",
-        "answer": [
-          "Digital data is measured in terabytes (TB), which are about 1 trillion bytes. A terabyte is exactly 1 trillion bytes when written in decimal notation (base 10). A terabyte, or 1,099,511,627,776 bytes, is equivalent to 240 bytes in binary notation."
-        ]
-      },
-      {
-        "question": "How much is 2TB?",
-        "answer": [
-          "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
-        ]
-      },
-      {
-        "question": "How much is 1TB?",
-        "answer": [
-          "1 terabyte (TB) equals 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+          "1 téraoctet (To) équivaut à 1 000 gigaoctets (Go) ou 1 000 000 de mégaoctets (Mo). Avec 1 To de données, vous pouvez stocker en moyenne 100 000 photos avec les smartphones d'aujourd'hui, et environ 250 000 documents peuvent tenir sur un disque de 1 To"
         ]
       }
     ]
   },
   "ctaSection1": {
-    "title": "Got tons of stored data?",
-    "description": "Protect your GB and TB with Internxt secure cloud storage.",
-    "cta": "Create account"
+    "title": " Vous avez des milliers de données stockées ? ",
+    "description": "Protégez vos Go et vos To avec le stockage cloud sécurisé d'Internxt",
+    "cta": "Créer un compte"
   },
   "ctaSection2": {
-    "title": "The more you save, the more to protect!",
-    "description": "Backup and safely store all your files with Internxt.",
-    "cta": "Create account"
+    "title": "Plus vous épargnez, plus vous protégez !",
+    "description": "Sauvegardez en toute sécurité tous vos fichiers avec Internxt",
+    "cta": "Créer un compte"
   },
   "ctaSection3": {
-    "title": "Safety is only a click away",
-    "description": "Protect your personal data with Internxt's privacy suite.",
-    "cta": "Create account"
+    "title": "La sécurité n'est qu'à un clic",
+    "description": "Protégez vos données personnelles avec la suite de protection de la vie privée d'Internxt",
+    "cta": "Créer un compte"
   }
 }
