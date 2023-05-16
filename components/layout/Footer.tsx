@@ -230,7 +230,7 @@ export default function Footer({
                     </Link>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a className="max-w-[150px] line-clamp-2 hover:text-primary">
+                      <a className="max-w-[165px] hover:text-primary">
                         {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </a>
                     </Link>
