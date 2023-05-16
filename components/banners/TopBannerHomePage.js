@@ -9,7 +9,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
     if (lang === 'en') {
       return 'NEW RESOURCE:';
     } else {
-      return 'NEW RESOURCE:';
+      return '';
     }
   };
 
