@@ -23,18 +23,6 @@
     "faq": {
       "faq": [
         {
-          "question": "¿Se mantendrá el descuento cuando finalice mi plan?",
-          "answer": [
-            "El descuento solo se aplica durante el primer año completo de servicio. Por lo tanto, tendrás acceso a nuestro plan de suscripción de 2 TB a este precio con descuento sólo durante un año. Después de un año, tu cuenta se renovará automáticamente al precio estándar del plan de 2 TB para el año siguiente."
-          ]
-        },
-        {
-          "question": "¿Cuánto costará el plan al renovarse después del primer año?",
-          "answer": [
-            "El plan de 2 TB cuesta 9,99 € al mes si se paga mensualmente o 8,99 € al mes (107,88 € al año) si se paga anualmente. También puedes optar por cambiar a otros planes después del primer año, la información adicional del plan y los precios se encuentran más arriba."
-          ]
-        },
-        {
           "question": "¿Puede Internxt acceder a mis archivos?",
           "answer": [
             "No. Ni Internxt, ni cualquier otro tercero, puede acceder a tus archivos, fotos o datos.",
