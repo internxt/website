@@ -80,8 +80,8 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <RenderDescription description={textContent.section6.description} />
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-ads-privacy-settings.png"
-          alt="google ads privacy settings"
+          src="/images/what-does-google-know-about-me/google-security-settings.png"
+          alt="google security settings"
           className="w-full max-w-md pt-16"
           draggable={false}
         />
