@@ -4,8 +4,9 @@ import { CaretRight } from 'phosphor-react';
 import { useRouter } from 'next/router';
 import RenderDescription from '../shared/RenderDescription';
 
-const ToolsSection = ({ textContent, lang }) => {
+const ToolsSection = ({ textContent }) => {
   const router = useRouter();
+  const lang = router.locale === 'en' ? '' : `/${router.locale}`;
   return (
     <section className="overflow-hidden bg-gray-1 py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
@@ -28,9 +29,7 @@ const ToolsSection = ({ textContent, lang }) => {
                 />
                 <p className="max-w-[200px] text-2xl font-medium">{item.title}</p>
                 <div
-                  onClick={() =>
-                    window.open(`${window.location.origin}/${router.locale}/${item.UrlRedirectName}`, '_blank')
-                  }
+                  onClick={() => window.open(`${window.location.origin}${lang}/${item.UrlRedirectName}`, '_blank')}
                   className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
                 >
                   <p className="text-sm font-semibold">{item.description}</p>
