@@ -88,7 +88,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
               )
             }
           >
-            <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
+            {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
             <p className="flex flex-row font-normal">{textForMobile()}</p>
           </div>
 
