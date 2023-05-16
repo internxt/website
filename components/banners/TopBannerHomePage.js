@@ -7,41 +7,35 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
 
   const New = () => {
     if (lang === 'en') {
-      return 'Special offer:';
-    } else if (lang === 'es') {
-      return 'Oferta special:';
-    } else if (lang === 'fr') {
-      return 'Offre spéciale:';
-    } else if (lang === 'it') {
-      return 'Offerta speciale:';
+      return 'NEW RESOURCE:';
     } else {
-      return 'Special offer:';
+      return 'NEW RESOURCE:';
     }
   };
 
   const textForWeb = () => {
     if (lang === 'en') {
-      return 'Get 80% off our 2TB plan for one year!';
+      return 'Max out your Google privacy settings with our What Google Knows page';
     } else if (lang === 'es') {
-      return '¡Obtén un 80% de descuento en el plan de 2TB por un año!';
+      return 'Maximiza tu configuración de privacidad de Google con nuestra nueva página de privacidad';
     } else if (lang === 'fr') {
-      return '80% de réduction sur le plan 2TB pendant un an !';
+      return 'Optimisez vos paramètres de confidentialité Google avec notre nouvelle page sur la confidentialité';
     } else if (lang === 'it') {
-      return "Ottenete l'80% di sconto sul nostro piano da 2TB per un anno!";
+      return 'Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy';
     } else {
-      return 'Get 80% off our 2TB plan for one year!';
+      return 'Max out your Google privacy settings with our What Google Knows page';
     }
   };
 
   const textForMobile = () => {
     if (lang === 'en') {
-      return 'Get 80% off our 2TB plan for one year!';
+      return 'Max out your Google privacy settings with our What Google Knows page';
     } else if (lang === 'es') {
-      return '¡80% de descuento en el plan de 2TB!';
+      return 'Maximiza tu configuración de privacidad de Google con nuestra nueva página de privacidad';
     } else if (lang === 'fr') {
-      return '80% de réduction sur le plan 2TB pendant un an !';
+      return 'Optimisez vos paramètres de confidentialité Google avec notre nouvelle page sur la confidentialité';
     } else if (lang === 'it') {
-      return '80% di sconto sul nostro piano da 2TB per un anno!';
+      return 'Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy';
     } else {
       return 'Get 80% off our 2TB plan for one year!';
     }
@@ -68,10 +62,10 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() =>
-            checkout({
-              planId: 'plan_FkTXxEg3GZW0pg',
-              couponCode: 'lxevN374',
-            })
+            window.open(
+              'https://internxt.com/what-does-google-know-about-me/?utm_source=website&utm_medium=banner&utm_campaign=google_knows',
+              '_blank',
+            )
           }
         >
           <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
@@ -88,10 +82,10 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           <div
             className="flex flex-col items-center justify-center"
             onClick={() =>
-              checkout({
-                planId: 'plan_FkTXxEg3GZW0pg',
-                couponCode: 'P8PSpVs6',
-              })
+              window.open(
+                'https://internxt.com/what-does-google-know-about-me/?utm_source=website&utm_medium=banner&utm_campaign=google_knows',
+                '_blank',
+              )
             }
           >
             <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
