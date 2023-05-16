@@ -11,7 +11,7 @@ const RenderDescription = ({ description }) => {
 
     //Check if the link is not in the Language Box redirect
     links.forEach((link) => {
-      if (!navbar && !footer) {
+      if (!navbar.contains(link) && !footer.contains(link)) {
         link.target = '_blank';
         link.rel = 'nofollow';
       }
