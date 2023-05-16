@@ -3,8 +3,8 @@
     "mainTitle": "What Does Google Know About Me?",
 
     "section1": {
-      "description": "For years, privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of the many cases of Google privacy violations. It's a poorly kept secret that Google tracks its users to gather information about them, through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more.",
-      "footer": "In the meantime, to prevent Google from accessing your data you can (and should) adjust your Google controls and settings. Below, we’ll teach you how!"
+      "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
+      "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
     },
     "section2": {
       "title": "What does Google know about me based on Google activity?",
