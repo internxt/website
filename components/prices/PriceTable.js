@@ -250,7 +250,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
                   storage={pricings.individuals.free.storage}
                   price={billingPrice(pricings.individuals.free.price)}
                   billingFrequency={billingFrequency}
-                  cta={['link', 'Free plan']}
+                  cta={['link', 'Free']}
                   popular={pricings.individuals.free.popular}
                   lang={lang}
                   country={country}

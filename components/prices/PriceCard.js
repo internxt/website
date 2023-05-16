@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-import { checkout } from '../../lib/auth';
+import { checkout, goToSignUpURL } from '../../lib/auth';
 
 export default function PriceCard({
   planType,
@@ -216,10 +216,12 @@ export default function PriceCard({
         <div
           tabIndex={0}
           onClick={() => {
-            checkout({
-              planId: getPlanId(stripeObject),
-              mode: billingFrequency === -1 ? 'payment' : 'subscription',
-            });
+            cta[1] === 'Free'
+              ? goToSignUpURL()
+              : checkout({
+                  planId: getPlanId(stripeObject),
+                  mode: billingFrequency === -1 ? 'payment' : 'subscription',
+                });
           }}
           className="flex w-full flex-row"
         >
