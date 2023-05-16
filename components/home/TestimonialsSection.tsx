@@ -3,8 +3,11 @@ import { CaretLeft, CaretRight } from 'phosphor-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import RevealY from '../components/RevealY';
+import { useRouter } from 'next/router';
 
 const TestimonialsSection = ({ textContent }) => {
+  const router = useRouter();
+  const lang = router.locale;
   const data = textContent.cards;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -85,7 +88,7 @@ const TestimonialsSection = ({ textContent }) => {
                 />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
-                  {card.name.includes('Eva') ? (
+                  {card.name.includes('Eva') && lang === 'en' ? (
                     <div>
                       <a
                         target={'_blank'}
