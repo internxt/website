@@ -29,8 +29,7 @@
         "security": "Sicurezza",
         "legal": "Legale",
         "support": "Supporto",
-        "whyInternxt": "Perché Internxt?",
-        "comparison": "Confronto"
+        "whyInternxt": "Perché Internxt?"
       },
       "join": {
         "title": "Join Us",
@@ -53,7 +52,8 @@
         "writeForUs": "Scrivi per noi",
         "cyberSecurityGlossary": "Cyber Security Glossary",
         "cyberAwareness": "Consapevolezza informatica",
-        "whatGoogleKnowsAboutMe": "What Google Knows"
+        "whatGoogleKnowsAboutMe": "What Google Knows",
+        "comparison": "Confronto tra i servizi cloud"
       },
       "tools": {
         "title": "Strumenti gratuiti",

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
-  <div className="absolute top-16  z-10 flex h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center">
+  <div className="absolute top-[150px] z-10  flex h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center lg:top-[120px]">
     <div className="mx-auto space-x-8 sm:space-x-6">
       <Link href="/drive" locale={lang} passHref>
         <a

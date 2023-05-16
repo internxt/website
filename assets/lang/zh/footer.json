@@ -29,8 +29,7 @@
         "security": "安全",
         "legal": "法律",
         "support": "支持",
-        "whyInternxt": "为什么选择 Internxt？",
-        "comparison": "比较"
+        "whyInternxt": "为什么选择 Internxt？"
       },
       "join": {
         "title": "加入我们",
@@ -53,7 +52,8 @@
         "writeForUs": "为我们写信",
         "cyberSecurityGlossary": "网络安全词汇表",
         "cyberAwareness": "网络意识",
-        "whatGoogleKnowsAboutMe": "What Google Knows"
+        "whatGoogleKnowsAboutMe": "What Google Knows",
+        "comparison": "比较"
       },
       "tools": {
         "title": "免费的工具",

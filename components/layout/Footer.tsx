@@ -175,10 +175,6 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.company.support}
                     </p>
-
-                    <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.comparison}</a>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -227,6 +223,11 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
+                    <Link href="/cloud-storage-comparison" locale={lang} passHref>
+                      <a className="max-w-[150px] hover:text-primary">
+                        {textContent.FooterSection.sections.resources.comparison}
+                      </a>
+                    </Link>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
                       <a className="max-w-[150px] line-clamp-2 hover:text-primary">
