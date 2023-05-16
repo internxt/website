@@ -31,7 +31,7 @@ const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navba
 
       <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
-      <ToolsSection textContent={langJson.ToolsSection} lang={lang} />
+      <ToolsSection textContent={langJson.ToolsSection} />
 
       <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
       <Footer textContent={footerLang} lang={lang} />
