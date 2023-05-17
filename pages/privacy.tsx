@@ -14,6 +14,7 @@ import SecuritumSection from '../components/privacy/SecuritumSection';
 import InxtAppsSection from '../components/privacy/InxtAppsSection';
 import CtaSection from '../components/shared/CtaSection';
 import BetterTomorrowSection from '../components/privacy/BetterTomorrowSection';
+import FeatureSection from '../components/privacy/FeatureSection';
 
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
@@ -37,6 +38,8 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
         <FileParallaxSection />
 
         <ManifestoSection textContent={langJson.ManifestoSection} />
+
+        <FeatureSection textContent={langJson.FeatureSection} />
 
         <InxtAppsSection textContent={langJson.InxtAppsSection} lang={lang} />
 

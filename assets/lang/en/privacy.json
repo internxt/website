@@ -20,32 +20,35 @@
         "line4": "such a high cost. We believe in a more ethical internet, where user privacy is at its core."
       },
       "signature": "Fran Villalba, Internxt CEO"
-    },
-
-    "section2": {
-      "title": {
-        "line1": "How we ensure",
-        "line2": "user privacy."
+    }
+  },
+  "FeatureSection": {
+    "title": "Internxt protect user privacy",
+    "description": "We take privacy and security extremely seriously, that's why we’ve implemented a stack of technologies and protocols to always ensure that your data remains safe and private.",
+    "cards": {
+      "openSource": {
+        "title": "Open-source code",
+        "description": "Every bit of our code is open-source and published on GitHub. All of our systems are made public knowledge and can be independently authenticated. Check it out for yourself."
       },
-      "subtitle": {
-        "line1": "We take privacy and security very seriously, that's why we have a stack of technologies",
-        "line2": "and protocols to always ensure that your data remains safe and private."
+      "endToEnd": {
+        "title": "End-to-end encryption",
+        "description": "All the data you store with Internxt is AES-256 end-to-end encrypted. That means that the most powerful processor in the world would need twice the age of the universe to decrypt even a small file."
       },
-      "square1": {
-        "title": "Military-grade encryption.",
-        "description": "All the data you store in your Internxt account is encrypted with AES-256. This means that the most powerful processor in the world would need twice the age of the universe to decrypt a small file."
+      "zeroKnowledge": {
+        "title": "Zero-knowledge technology",
+        "description": "At absolutely no point in time are files, photos, passwords, or any kind of unencrypted raw data visible to unauthorized users or servers. You are always in complete control of who gets access."
       },
-      "square2": {
-        "title": "Zero-knowledge technology.",
-        "description": "We ensure that there is no point in time where files, photos, passwords, or any kind of unencrypted data is visible to unauthorized users or servers."
+      "gdpr": {
+        "title": "GDPR-compliant synchronization",
+        "description": "We now conform with all GDPR provisions such as the right to privacy, the right to information, and the right to be forgotten among many others, and promise to meet all future provisions."
       },
-      "square3": {
-        "title": "GDPR-compliant synchronization.",
-        "description": "Our commitment is to conform with all GDPR provisions such as privacy by design, the right to information, and the right to be forgotten among many others, and meet future provisions."
+      "noUnwantedAccess": {
+        "title": "No unwanted access to data",
+        "description": "Everything you store or share is encrypted before ever leaving your device, making it impossible to decrypt without permission. We can't even access your files, photos or passwords."
       },
-      "square4": {
-        "title": "End-to-end encryption.",
-        "description": "Everything you store or transfer is encrypted before leaving your device, making it impossible to decrypt without the user's permission, even we can’t access your files, photos or passwords."
+      "freeTools": {
+        "title": "Free online privacy tools",
+        "description": "We want everyone to be safer online, whether you subscribe to our services or not, and that's why we've created several free online tools that anyone can use to protect themselves while browsing the web."
       }
     }
   },
