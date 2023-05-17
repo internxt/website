@@ -1,13 +1,10 @@
 {
   "HeroSection": {
-    "title": "Privacy",
-    "subtitle": {
-      "line1": "Privacy is a fundamental human right. Here, at Internxt we believe that what humanity can achieve",
-      "line2": "is extraordinary and that products should enable society to achieve excellence. These products",
-      "line3": "should not only empower people but must also be respectful. Say hello to Internxt.",
-      "line4": "Private by default, secure by design, and free as in freedom.",
-      "line5": "Start using Internxt Drive today, a secure, private, distributed, open-source, encrypted, free, cloud storage service."
+    "title": {
+      "normalText": "Privacy is a ",
+      "blueText": "fundamental human right"
     },
+    "description": " Here, at Internxt, we believe that what humanity can achieve is extraordinary and that our products should enable society to achieve excellence. Our cloud services should not only empower people but must also respect the basic human individual rights. We are working to build a better, safer internet with respect for you, the user, at its core.",
     "cta": "Watch the video"
   },
   "ManifestoSection": {
@@ -24,15 +21,7 @@
       },
       "signature": "Fran Villalba, Internxt CEO"
     },
-    "securitum": {
-      "title": "Internxt Successfully Passes Independent Security Audit",
-      "subtitle": "Read the complete security audit reports:",
-      "links": {
-        "desk": "Internxt Desktop security audit",
-        "web": "Internxt Web security audit",
-        "mobile": "Internxt Mobile security audit"
-      }
-    },
+
     "section2": {
       "title": {
         "line1": "How we ensure",
@@ -58,54 +47,55 @@
         "title": "End-to-end encryption.",
         "description": "Everything you store or transfer is encrypted before leaving your device, making it impossible to decrypt without the user's permission, even we can’t access your files, photos or passwords."
       }
+    }
+  },
+  "InxtAppsSection": {
+    "title": {
+      "line1": "Apps designed to shield",
+      "line2": "your information"
     },
-    "section3": {
-      "title": {
-        "line1": "Apps designed to",
-        "line2": "protect your privacy."
+    "subtitle": "Free products from Big Tech companies aren't really free, you pay in personal data. Our products will never flip your information or sell your data. When we say free, we mean it.",
+    "square1": {
+      "title": "Drive lets you choose what to store and share",
+      "description": "Drive doesn’t access your personal data or files, instead it was designed from the ground up to give you back control over your files and protect you from data collectors and ad companies. Safeguard your storage.",
+      "cta": "Take back control over your files"
+    },
+    "square2": {
+      "title": "With Photos, privacy is always on focus",
+      "description": "Photos was developed to help you keep a synced gallery of your most perfect moments without fearing for your privacy and worrying about sudden data loss. Memories backed up, safe and sound.",
+      "cta": "Sync your photos and keepsakes"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt’s cloud storage secure?",
+        "answer": [
+          "Internxt Drive is a zero-knowledge file storage service that's built for absolute privacy and strict security. Our service doesn't access your personal data or files for ad purposes, instead is designed to give you back control over your files and protect you from data collection and advertising companies."
+        ]
       },
-      "subtitle": {
-        "line1": "When you use free products from big technology companies the price is your data.",
-        "line2": "Our products will never sell your data, even our free plans are on us."
+      {
+        "question": "What is the most private cloud storage?",
+        "answer": [
+          "Many cloud providers say their service is private, but Internxt goes a step above and beyond. Internxt is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Internxt cannot access your data stored in the cloud storage."
+        ]
       },
-      "square1": {
-        "title": "Drive lets you choose what to store and share.",
-        "description": "Drive doesn’t access your personal data or files for ad purposes, instead is designed to give you back control over your files and protect you from data collection and advertising companies.",
-        "cta": "Take back control over my files"
-      },
-      "square2": {
-        "title": "With Photos privacy is always on focus.",
-        "description": "Photos is designed and developed to help you keep a synced gallery of your most perfect moments and give you control of who you want to share them with.",
-        "cta": "Start syncing my photos"
-      },
-      "square3": {
-        "title": "Send with absolute certainty.",
-        "description": "Send allows you to encrypt and share large files fast without worrying about the security of your documents, images, or videos. Transfer to anyone in total confidentiality.",
-        "cta": "Send something sensitive"
+      {
+        "question": "Is Internxt private?",
+        "answer": [
+          "Unlike some of our competitors, we don't operate based on advertising or data collection. Your data is exclusively yours. We prioritize your security, privacy, and the security of your file and photos. Using Internxt, you can be sure you're secure."
+        ]
       }
-    },
-    "FaqSection": {
-      "title": "Questions? We have answers",
-      "faq": [
-        {
-          "question": "Is Internxt’s cloud storage secure?",
-          "answer": [
-            "Internxt Drive is a zero-knowledge file storage service that's built for absolute privacy and strict security. Our service doesn't access your personal data or files for ad purposes, instead is designed to give you back control over your files and protect you from data collection and advertising companies."
-          ]
-        },
-        {
-          "question": "What is the most private cloud storage?",
-          "answer": [
-            "Many cloud providers say their service is private, but Internxt goes a step above and beyond. Internxt is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Internxt cannot access your data stored in the cloud storage."
-          ]
-        },
-        {
-          "question": "Is Internxt private?",
-          "answer": [
-            "Unlike some of our competitors, we don't operate based on advertising or data collection. Your data is exclusively yours. We prioritize your security, privacy, and the security of your file and photos. Using Internxt, you can be sure you're secure."
-          ]
-        }
-      ]
+    ]
+  },
+  "SecuritumSection": {
+    "title": "Internxt successfully passes independent security audit",
+    "subtitle": "Read the complete security audit reports:",
+    "links": {
+      "desk": "Internxt Desktop security audit",
+      "web": "Internxt Web security audit",
+      "mobile": "Internxt Mobile security audit"
     }
   }
 }

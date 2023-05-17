@@ -2,6 +2,7 @@ import Script from 'next/script';
 import React from 'react';
 
 import HeroSection from '../components/privacy/HeroSection';
+import FileParallaxSection from '../components/home/FileParallaxSection';
 import ManifestoSection from '../components/privacy/ManifestoSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
@@ -9,6 +10,9 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import FAQSection from '../components/photos/FAQSection';
+import SecuritumSection from '../components/privacy/SecuritumSection';
+import InxtAppsSection from '../components/privacy/InxtAppsSection';
 
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
@@ -16,27 +20,27 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(langJson.ManifestoSection.FaqSection.faq)}
+        {sm_faq(langJson.FaqSection.faq)}
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Privacy', 'privacy')}
       </Script>
 
-      <Layout
-        title={metatags[0].title}
-        isBannerFixed
-        description={metatags[0].description}
-        segmentName="Privacy"
-        lang={lang}
-      >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed={false} darkMode />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         <HeroSection textContent={langJson.HeroSection} />
 
-        <ManifestoSection textContent={langJson.ManifestoSection} />
+        <FileParallaxSection />
 
-        <Footer textContent={footerLang} lang={lang} darkMode />
+        <ManifestoSection textContent={langJson.ManifestoSection} lang={lang} />
+
+        <InxtAppsSection textContent={langJson.InxtAppsSection} lang={lang} />
+
+        <SecuritumSection textContent={langJson.SecuritumSection} />
+
+        <Footer textContent={footerLang} lang={lang} />
       </Layout>
     </>
   );
