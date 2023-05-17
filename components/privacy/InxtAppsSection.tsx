@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { UilAngleRightB } from '@iconscout/react-unicons';
+import RevealX from '../components/RevealX';
 
 const InxtAppsSection = ({ textContent, lang }) => {
   return (
@@ -15,7 +16,10 @@ const InxtAppsSection = ({ textContent, lang }) => {
 
         <div className="flex flex-col space-y-20 text-left lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
           {/* Internxt Drive */}
-          <div className="flex flex-col  overflow-hidden rounded-2xl bg-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+          <RevealX
+            direction="right"
+            className="flex flex-col  overflow-hidden rounded-2xl bg-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+          >
             <div className="flex h-full flex-col items-start justify-center pl-20">
               <h4 className="mb-10 max-w-xs text-4xl font-semibold text-white lg:text-4xl">
                 {textContent.square1.title}
@@ -36,9 +40,12 @@ const InxtAppsSection = ({ textContent, lang }) => {
                 <img src="/images/privacy/drive-image.png" alt="Internxt Drive image" draggable={false} />
               </div>
             </div>
-          </div>
+          </RevealX>
           {/* Internxt Photos */}
-          <div className="flex flex-col  overflow-hidden rounded-2xl bg-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+          <RevealX
+            direction="left"
+            className="flex flex-col  overflow-hidden rounded-2xl bg-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+          >
             <div className="flex h-full flex-col items-start justify-center pl-20">
               <h4 className="mb-10 max-w-xs text-4xl font-semibold text-white lg:text-4xl">
                 {textContent.square2.title}
@@ -59,7 +66,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
                 <img src="/images/privacy/photos-image.png" alt="Internxt Photos image" />
               </div>
             </div>
-          </div>
+          </RevealX>
         </div>
       </div>
     </section>
