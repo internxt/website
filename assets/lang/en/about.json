@@ -43,8 +43,13 @@
     ],
     "BetterFutureSection": {
       "title": "Let’s build a better future together",
-      "description": "Is privacy as important to you as it is to us? If you think you have what it takes to make a difference and build a safer internet, we're hiring!",
-      "link": "Careers at Internxt"
+      "description": "Is privacy as important to you as it is to us? If you think you have what it takes to make a difference and build a safer internet, **we're hiring!**",
+      "cta": "Careers at Internxt"
     }
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
   }
 }

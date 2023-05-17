@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const HeroSection = ({ textContent, lang }) => (
+const HeroSection = ({ textContent }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20">
     <div className="relative flex flex-col items-center justify-center py-20">
       {/* Main title */}

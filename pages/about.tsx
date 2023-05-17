@@ -10,6 +10,9 @@ import Navbar from '../components/layout/Navbar';
 import cookies from '../lib/cookies';
 
 import { sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import CtaSection from '../components/shared/CtaSection';
+
+const CTA_URL = 'https://internxt.com/pricing';
 
 const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
@@ -22,11 +25,13 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={textContent.HeroSection} lang={lang} />
+        <HeroSection textContent={textContent.HeroSection} />
         {/* //!TODO: Check this section in mobile when the images are added */}
         <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
 
         <FeatureSection textContent={textContent.FeatureSection} />
+
+        <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>

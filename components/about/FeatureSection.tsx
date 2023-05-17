@@ -1,5 +1,15 @@
-import { HandHeart, Lightbulb, RocketLaunch, UsersThree } from '@phosphor-icons/react';
+import {
+  CaretLeft,
+  CaretRight,
+  HandHeart,
+  Lightbulb,
+  RocketLaunch,
+  ShieldStar,
+  UsersThree,
+} from '@phosphor-icons/react';
+import Image from 'next/image';
 import { Fragment, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import RevealX from '../components/RevealX';
 
 const FeatureSection = ({ textContent }) => {
@@ -31,9 +41,10 @@ const FeatureSection = ({ textContent }) => {
   const DescriptionIcon = cardInfo[cardIndex].icon;
 
   return (
-    <section className="overflow-hidden py-20">
-      <div className="hidden flex-row items-start justify-center lg:flex">
-        <RevealX direction="right" className="flex max-w-[250px] flex-col">
+    <section className="overflow-hidden">
+      {/* Info cards Section */}
+      <div className="hidden flex-row items-start justify-center py-20 lg:flex">
+        <RevealX direction="right" className="flex max-w-[288px] flex-col">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
               <div
@@ -76,6 +87,41 @@ const FeatureSection = ({ textContent }) => {
             </div>
           </div>
         ))}
+      </div>
+      {/* Hiring people Section */}
+      <div className="flex flex-col-reverse items-center justify-center bg-gray-1 px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
+        <RevealX direction="right" className="flex flex-col rounded-3xl pt-10 md:pt-0">
+          <Image
+            src="/images/home/Online-privacy-services.webp"
+            width={496}
+            height={520}
+            quality={100}
+            layout="intrinsic"
+            className="rounded-3xl"
+            draggable={false}
+            alt="Only privacy services image"
+          />
+        </RevealX>
+        <div className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start">
+          <ShieldStar size={60} className="text-primary" />
+          <p className="mb-6 text-4xl font-semibold text-gray-100 md:text-5xl md:leading-tight">
+            {textContent.BetterFutureSection.title}
+          </p>
+          <ReactMarkdown className="text-xl font-normal text-gray-80">
+            {textContent.BetterFutureSection.description}
+          </ReactMarkdown>
+          <div className="flex flex-row items-center space-x-1">
+            <p
+              className="cursor-pointer text-lg font-semibold text-primary hover:text-primary-dark hover:underline"
+              onClick={() => {
+                window.open('https://drive.internxt.com/new', '_blank');
+              }}
+            >
+              {textContent.BetterFutureSection.cta}
+            </p>
+            <CaretRight size={10} className="text-primary" />
+          </div>
+        </div>
       </div>
     </section>
   );
