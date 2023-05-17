@@ -141,7 +141,7 @@
       },
       {
         "question": "How do I change the email address?",
-        "answer": ["Change your temp mail by generating a new email address in the toolbar at the top of the page."]
+        "answer": ["Change your temp mail by refreshing the page, to generate a new email address that will appear in the toolbar at the top of the page."]
       },
       {
         "question": "Can you recover deleted emails?",
