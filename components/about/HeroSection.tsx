@@ -19,36 +19,36 @@ const HeroSection = ({ textContent }) => (
             <img
               loading="lazy"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-1.webp"
+              src="/images/about/photos/Internxt-headquarters.webp"
               draggable="false"
-              alt="lanzadera building"
+              alt="Internxt headquarters"
             />
           </div>
           <div className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 sm:h-72 md:col-span-2 lg:h-80">
             <img
               loading="lazy"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-2.webp"
+              src="/images/about/photos/Internxt-office.png"
               draggable="false"
-              alt="lanzadera entrance"
+              alt="Internxt office"
             />
           </div>
           <div className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 sm:h-72 md:col-span-3 lg:h-80">
             <img
               loading="lazy"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-3.webp"
+              src="/images/about/photos/internxt-team.webp"
               draggable="false"
-              alt="team members"
+              alt="Internxt team"
             />
           </div>
           <div className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 sm:h-72 md:col-span-3 lg:h-80">
             <img
               loading="lazy"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-4.webp"
+              src="/images/about/photos/team-at-Internxt.webp"
               draggable="false"
-              alt="work area"
+              alt="Team at Internxt"
             />
           </div>
         </div>

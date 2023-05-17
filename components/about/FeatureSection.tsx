@@ -92,14 +92,14 @@ const FeatureSection = ({ textContent }) => {
       <div className="flex flex-col-reverse items-center justify-center bg-gray-1 px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
         <RevealX direction="right" className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
-            src="/images/home/Online-privacy-services.webp"
+            src="/images/about/photos/Internxt-gift.png"
             width={496}
             height={520}
             quality={100}
             layout="intrinsic"
             className="rounded-3xl"
             draggable={false}
-            alt="Only privacy services image"
+            alt="Internxt gift"
           />
         </RevealX>
         <div className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start">
