@@ -2,7 +2,7 @@ import Script from 'next/script';
 import React from 'react';
 
 import HeroSection from '../components/about/HeroSection';
-import CompanySection from '../components/about/CompanySection';
+import WhatWeDoSection from '../components/about/WhatWeDoSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -21,11 +21,10 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-
         <HeroSection textContent={textContent.HeroSection} lang={lang} />
-
+        {/* //!TODO: Check this section in mobile when the images are added */}
+        <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
         {/* <CompanySection textContent={textContent.CompanySection} /> */}
-
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>
     </>
