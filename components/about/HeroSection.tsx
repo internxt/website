@@ -17,7 +17,7 @@ const HeroSection = ({ textContent }) => (
         <div className="grid max-w-6xl grid-flow-row grid-cols-6 gap-6">
           <div className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 sm:h-72 md:col-span-4 lg:h-80">
             <img
-              loading="lazy"
+              loading="eager"
               className="h-full w-full object-cover object-center"
               src="/images/about/photos/Internxt-headquarters.webp"
               draggable="false"
@@ -26,7 +26,7 @@ const HeroSection = ({ textContent }) => (
           </div>
           <div className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 sm:h-72 md:col-span-2 lg:h-80">
             <img
-              loading="lazy"
+              loading="eager"
               className="h-full w-full object-cover object-center"
               src="/images/about/photos/Internxt-office.png"
               draggable="false"
@@ -35,7 +35,7 @@ const HeroSection = ({ textContent }) => (
           </div>
           <div className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 sm:h-72 md:col-span-3 lg:h-80">
             <img
-              loading="lazy"
+              loading="eager"
               className="h-full w-full object-cover object-center"
               src="/images/about/photos/Internxt-team.webp"
               draggable="false"
@@ -44,7 +44,7 @@ const HeroSection = ({ textContent }) => (
           </div>
           <div className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 sm:h-72 md:col-span-3 lg:h-80">
             <img
-              loading="lazy"
+              loading="eager"
               className="h-full w-full object-cover object-center"
               src="/images/about/photos/team-at-Internxt.webp"
               draggable="false"

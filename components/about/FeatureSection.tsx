@@ -100,6 +100,7 @@ const FeatureSection = ({ textContent }) => {
             className="rounded-3xl"
             draggable={false}
             alt="Internxt gift"
+            loading="eager"
           />
         </RevealX>
         <div className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start">

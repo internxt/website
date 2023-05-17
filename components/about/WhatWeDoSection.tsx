@@ -14,6 +14,7 @@ const WhatWeDoSection = ({ textContent }) => {
               width={496}
               height={520}
               alt="Fran Villalba Segarra"
+              loading="eager"
             />
           </RevealX>
           <div className="flex max-w-sm flex-col items-center justify-center space-y-5 text-center lg:text-left">
@@ -43,7 +44,13 @@ const WhatWeDoSection = ({ textContent }) => {
             </div>
           </div>
           <RevealX direction="left" className="flex pt-7 lg:pt-0">
-            <Image src="/images/about/photos/work-at-Internxt.png" width={496} height={520} alt="Work at Internxt" />
+            <Image
+              src="/images/about/photos/work-at-Internxt.png"
+              loading="eager"
+              width={496}
+              height={520}
+              alt="Work at Internxt"
+            />
           </RevealX>
         </div>
       </div>
