@@ -24,7 +24,7 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
         <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
-        <CompanySection textContent={textContent.CompanySection} />
+        {/* <CompanySection textContent={textContent.CompanySection} /> */}
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>

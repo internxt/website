@@ -6,45 +6,6 @@ const CompanySection = ({ textContent }) => (
     <div className="content flex flex-col items-center">
       {/* Images */}
       <div className="relative w-full max-w-6xl px-4 md:px-6">
-        <div className="relative z-10 grid grid-flow-row grid-cols-6 gap-2">
-          <div className="col-span-6 h-60 select-none overflow-hidden rounded-md bg-red-old-10 sm:h-72 md:col-span-4 lg:h-80">
-            <img
-              loading="lazy"
-              className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-1.webp"
-              draggable="false"
-              alt="lanzadera building"
-            />
-          </div>
-          <div className="col-span-6 h-60 select-none overflow-hidden rounded-md bg-red-old-10 sm:h-72 md:col-span-2 lg:h-80">
-            <img
-              loading="lazy"
-              className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-2.webp"
-              draggable="false"
-              alt="lanzadera entrance"
-            />
-          </div>
-          <div className="col-span-6 h-60 select-none overflow-hidden rounded-md bg-red-old-10 sm:h-72 md:col-span-3 lg:h-80">
-            <img
-              loading="lazy"
-              className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-3.webp"
-              draggable="false"
-              alt="team members"
-            />
-          </div>
-          <div className="col-span-6 h-60 select-none overflow-hidden rounded-md bg-red-old-10 sm:h-72 md:col-span-3 lg:h-80">
-            <img
-              loading="lazy"
-              className="h-full w-full object-cover object-center"
-              src="/images/about/photos/photo-4.webp"
-              draggable="false"
-              alt="work area"
-            />
-          </div>
-        </div>
-
         <img
           loading="lazy"
           className="pointer-events-none absolute top-2/3 right-0 translate-y-1/2 scale-400 select-none blur-xl saturate-150 filter"
