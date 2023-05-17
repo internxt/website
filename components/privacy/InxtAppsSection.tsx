@@ -5,8 +5,8 @@ import RevealX from '../components/RevealX';
 const InxtAppsSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
-      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 pt-20 text-gray-100 ">
-        <div className="px-6 text-left sm:text-center">
+      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 px-5 pt-20 text-gray-100 ">
+        <div className="px-6 text-center">
           <h2 className="mb-10 text-5xl font-semibold">
             {textContent.title.line1} <br className="hidden sm:flex" />
             {textContent.title.line2}
@@ -20,7 +20,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
             direction="right"
             className="flex flex-col  overflow-hidden rounded-2xl bg-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
           >
-            <div className="flex h-full flex-col items-start justify-center pl-20">
+            <div className="flex h-full flex-col items-center justify-center p-5 text-center lg:items-start lg:pl-20 lg:text-start">
               <h4 className="mb-10 max-w-xs text-4xl font-semibold text-white lg:text-4xl">
                 {textContent.square1.title}
               </h4>
@@ -46,7 +46,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
             direction="left"
             className="flex flex-col  overflow-hidden rounded-2xl bg-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
           >
-            <div className="flex h-full flex-col items-start justify-center pl-20">
+            <div className="flex h-full flex-col items-center justify-center p-5 text-center lg:items-start lg:pl-20 lg:text-start">
               <h4 className="mb-10 max-w-xs text-4xl font-semibold text-white lg:text-4xl">
                 {textContent.square2.title}
               </h4>

@@ -5,7 +5,7 @@ const ManifestoSection = ({ textContent }) => (
   <section className="relative flex w-full flex-col bg-gray-1">
     {/* Why privacy is so important */}
     <div className="z-10 flex flex-col items-center py-20 ">
-      <div className="px-6 text-left sm:text-center">
+      <div className="px-6 text-center">
         <h2 className="mb-10 text-3xl font-medium lg:text-4xl">
           {textContent.section1.title.line1} <br className="hidden sm:flex" />
           {textContent.section1.title.line2}

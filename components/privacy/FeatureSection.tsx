@@ -36,7 +36,7 @@ const FeatureSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
           <p className="text-4xl font-semibold text-gray-100">{textContent.title}</p>
