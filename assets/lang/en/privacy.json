@@ -97,5 +97,15 @@
       "web": "Internxt Web security audit",
       "mobile": "Internxt Mobile security audit"
     }
+  },
+  "BetterTomorrowSection": {
+    "title": "Advocate for a better tomorrow",
+    "description": "It’s time to take your privacy into your own hands. We encourage everyone to become proactive in their own protection. Learn more about the right to privacy. Get involved with our curated list of reputable organizations advocating for digital rights.",
+    "cta": "Directory of digital rights organizations"
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
   }
 }

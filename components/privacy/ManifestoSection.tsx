@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-const ManifestoSection = ({ textContent, lang }) => (
-  <section className="relative flex w-full flex-col">
+const ManifestoSection = ({ textContent }) => (
+  <section className="relative flex w-full flex-col bg-gray-1">
     {/* Why privacy is so important */}
     <div className="z-10 flex flex-col items-center py-20 ">
       <div className="px-6 text-left sm:text-center">

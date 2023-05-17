@@ -10,12 +10,14 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import FAQSection from '../components/photos/FAQSection';
 import SecuritumSection from '../components/privacy/SecuritumSection';
 import InxtAppsSection from '../components/privacy/InxtAppsSection';
+import CtaSection from '../components/shared/CtaSection';
+import BetterTomorrowSection from '../components/privacy/BetterTomorrowSection';
 
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
+  const CTA_URL = `https://internxt.com/${lang}}/pricing`;
 
   return (
     <>
@@ -34,11 +36,15 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
 
         <FileParallaxSection />
 
-        <ManifestoSection textContent={langJson.ManifestoSection} lang={lang} />
+        <ManifestoSection textContent={langJson.ManifestoSection} />
 
         <InxtAppsSection textContent={langJson.InxtAppsSection} lang={lang} />
 
         <SecuritumSection textContent={langJson.SecuritumSection} />
+
+        <BetterTomorrowSection textContent={langJson.BetterTomorrowSection} lang={lang} />
+
+        <CtaSection textContent={langJson.CtaSection} url={CTA_URL} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
