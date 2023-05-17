@@ -3,6 +3,7 @@ import React from 'react';
 
 import HeroSection from '../components/about/HeroSection';
 import WhatWeDoSection from '../components/about/WhatWeDoSection';
+import FeatureSection from '../components/about/FeatureSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -24,7 +25,9 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
         <HeroSection textContent={textContent.HeroSection} lang={lang} />
         {/* //!TODO: Check this section in mobile when the images are added */}
         <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
-        {/* <CompanySection textContent={textContent.CompanySection} /> */}
+
+        <FeatureSection textContent={textContent.FeatureSection} />
+
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>
     </>

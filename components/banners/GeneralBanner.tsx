@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X } from 'phosphor-react';
+import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { checkout } from '../../lib/auth';
 

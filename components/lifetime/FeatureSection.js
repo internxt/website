@@ -1,4 +1,4 @@
-import { ArrowsClockwise, EyeSlash, Gauge, ListChecks, LockKey, User } from 'phosphor-react';
+import { ArrowsClockwise, EyeSlash, Gauge, ListChecks, LockKey, User } from '@phosphor-icons/react';
 import React from 'react';
 
 const FeatureSection = ({ textContent }) => (

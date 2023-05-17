@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import FAQSection from '../photos/FAQSection';
 import { UilAngleRightB } from '@iconscout/react-unicons';
-import { ArrowUpRight } from 'phosphor-react';
+import { ArrowUpRight } from '@phosphor-icons/react';
 
 const ManifestoSection = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col">

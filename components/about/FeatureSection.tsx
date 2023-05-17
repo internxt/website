@@ -1,29 +1,28 @@
-import React, { Fragment } from 'react';
-import RevealY from '../components/RevealY';
+import { HandHeart, Lightbulb, RocketLaunch, UsersThree } from '@phosphor-icons/react';
+import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
-import { CloudCheck, Gauge, Image, SketchLogo } from '@phosphor-icons/react';
 
-const SecondFeaturesSection = ({ textContent }) => {
-  const [cardIndex, setCardIndex] = React.useState(0);
+const FeatureSection = ({ textContent }) => {
+  const [cardIndex, setCardIndex] = useState(0);
 
   const cardInfo = [
     {
-      icon: Gauge,
+      icon: RocketLaunch,
       title: textContent.info[0].title,
       description: textContent.info[0].description,
     },
     {
-      icon: SketchLogo,
+      icon: Lightbulb,
       title: textContent.info[1].title,
       description: textContent.info[1].description,
     },
     {
-      icon: CloudCheck,
+      icon: UsersThree,
       title: textContent.info[2].title,
       description: textContent.info[2].description,
     },
     {
-      icon: Image,
+      icon: HandHeart,
       title: textContent.info[3].title,
       description: textContent.info[3].description,
     },
@@ -32,8 +31,8 @@ const SecondFeaturesSection = ({ textContent }) => {
   const DescriptionIcon = cardInfo[cardIndex].icon;
 
   return (
-    <section className="overflow-hidden bg-gray-1 py-24">
-      <RevealY className="hidden flex-row items-start justify-center lg:flex">
+    <section className="overflow-hidden py-20">
+      <div className="hidden flex-row items-start justify-center lg:flex">
         <RevealX direction="right" className="flex max-w-[250px] flex-col">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
@@ -62,7 +61,7 @@ const SecondFeaturesSection = ({ textContent }) => {
             </div>
           </div>
         </div>
-      </RevealY>
+      </div>
       {/* Mobile view */}
       <div className="flex flex-col items-center justify-center space-y-10 px-5 lg:hidden">
         {cardInfo.map((info) => (
@@ -82,4 +81,4 @@ const SecondFeaturesSection = ({ textContent }) => {
   );
 };
 
-export default SecondFeaturesSection;
+export default FeatureSection;

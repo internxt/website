@@ -1,4 +1,4 @@
-import { AppleLogo, LinuxLogo, WindowsLogo } from 'phosphor-react';
+import { AppleLogo, LinuxLogo, WindowsLogo } from '@phosphor-icons/react';
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 

@@ -3,7 +3,7 @@ import SelectSection from './components/SelectSection';
 import CookiesSection from './CookiesSection';
 import WhenWhyHowSection from './WhenWhyHowSection';
 import MainSection from './MainSection';
-import { CalendarBlank } from 'phosphor-react';
+import { CalendarBlank } from '@phosphor-icons/react';
 import { isMobile } from 'react-device-detect';
 import Link from 'next/link';
 

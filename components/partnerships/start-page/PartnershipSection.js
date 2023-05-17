@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { X } from 'phosphor-react';
+import { X } from '@phosphor-icons/react';
 
 const PartnershipSection = ({ textContent }) => {
   return (

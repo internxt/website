@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Alarm, CircleWavyCheck } from 'phosphor-react';
+import { Alarm, CircleWavyCheck } from '@phosphor-icons/react';
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';

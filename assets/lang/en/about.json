@@ -23,28 +23,28 @@
     }
   },
   "FeatureSection": {
-    "values": {
-      "achieve": {
+    "info": [
+      {
         "title": "Success comes when effort meets ethics",
         "description": "We are sure that when something seems impossible, it’s only because it has not been tried enough. We’re pushing the limits of technology even further to provide innovative and ethical solutions to modern problems."
       },
-      "privacy": {
+      {
         "title": "Live and work to learn",
         "description": "Developing periodic iterations of several products at once pushes us to be on the move and forces us to never settle. We are willing to take on some risk for the right reason and are always looking to learn and improve our products."
       },
-      "family": {
+      {
         "title": "Users first, team close second",
         "description": "Whether you work from home or love to leave it all in the office, we want you to feel like a valued part of the team. Internxt is nothing without our team members. We share in the struggle and we share in the success."
       },
-      "growth": {
+      {
         "title": "Compromise, just not our principles",
         "description": "We are developing technology we wish to see in the future. Limited only by security, privacy, and user-centered design, everything we build must improve humanity’s online experience and respect fundamental digital rights."
       }
+    ],
+    "BetterFutureSection": {
+      "title": "Let’s build a better future together",
+      "description": "Is privacy as important to you as it is to us? If you think you have what it takes to make a difference and build a safer internet, we're hiring!",
+      "link": "Careers at Internxt"
     }
-  },
-  "BetterFutureSection": {
-    "title": "Let’s build a better future together",
-    "description": "Is privacy as important to you as it is to us? If you think you have what it takes to make a difference and build a safer internet, we're hiring!",
-    "link": "Careers at Internxt"
   }
 }

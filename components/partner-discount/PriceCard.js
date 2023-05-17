@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check } from 'phosphor-react';
+import { Check } from '@phosphor-icons/react';
 import { checkout, goToSignUpURL } from '../../lib/auth';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
