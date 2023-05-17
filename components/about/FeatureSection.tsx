@@ -44,7 +44,7 @@ const FeatureSection = ({ textContent }) => {
     <section className="overflow-hidden">
       {/* Info cards Section */}
       <div className="hidden flex-row items-start justify-center py-20 lg:flex">
-        <RevealX direction="right" className="flex max-w-[288px] flex-col">
+        <div className="flex max-w-[288px] flex-col">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
               <div
@@ -60,8 +60,8 @@ const FeatureSection = ({ textContent }) => {
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </Fragment>
           ))}
-        </RevealX>
-        <div className="flex flex-col justify-start">
+        </div>
+        <RevealX direction="left" className="flex flex-col justify-start">
           <div className="flex w-auto justify-center px-6">
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex  w-full max-w-[384px] flex-col space-y-6">
@@ -71,7 +71,7 @@ const FeatureSection = ({ textContent }) => {
               </div>
             </div>
           </div>
-        </div>
+        </RevealX>
       </div>
       {/* Mobile view */}
       <div className="flex flex-col items-center justify-center space-y-10 px-5 lg:hidden">
