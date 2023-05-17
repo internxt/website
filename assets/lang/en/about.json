@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "We design and build world-class applications that",
+    "title": { "line1": "We design and build", "line2": " world-class applications that" },
     "blueText": "value digital rights",
     "description": "We create powerful tools and services that respect and empower users.",
     "recognitionsTitle": "Proudly recognized for outstanding work"

@@ -7,8 +7,9 @@ const HeroSection = ({ textContent }) => (
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-16 px-6">
         <div className="flex flex-col space-y-6 text-center">
-          <h1 className="flex w-full max-w-3xl flex-col whitespace-pre-line text-center text-6xl font-semibold text-gray-100">
-            {textContent.title} <span className="text-primary">{textContent.blueText}</span>
+          <h1 className="flex w-full max-w-4xl flex-col text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
+            {textContent.title.line1} <br />
+            {textContent.title.line2} <span className="text-primary">{textContent.blueText}</span>
           </h1>
           <p className="text-xl font-normal text-gray-80">{textContent.description}</p>
         </div>
