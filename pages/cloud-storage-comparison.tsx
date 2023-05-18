@@ -3,6 +3,7 @@ import React from 'react';
 
 import TableSection from '../components/comparison/TableSection';
 import FeatureSection from '../components/comparison/FeatureSection';
+import InfoSection from '../components/home/InfoSection';
 import FAQSection from '../components/comparison/FAQSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
@@ -10,6 +11,11 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import TestimonialsSection from '../components/home/TestimonialsSection';
+import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
+import CtaSection from '../components/shared/CtaSection';
+
+const URL_REDIRECT = 'https://drive.internxt.com/new';
 
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
@@ -32,11 +38,19 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
 
-        <TableSection textContent={langJson.HeroSection} lang={lang} />
+        <TableSection textContent={langJson.HeroSection} />
 
         <FeatureSection textContent={langJson.FeatureSection} />
 
+        <InfoSection textContent={langJson.InfoSection} lang={lang} />
+
+        <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
+
+        <TestimonialsSection textContent={langJson.TestimonialsSection} />
+
         <FAQSection textContent={langJson.FaqSection} />
+
+        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
         <Footer textContent={footerLang} lang={lang} darkMode={false} />
       </Layout>
