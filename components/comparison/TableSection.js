@@ -419,11 +419,11 @@ const HeroSection = ({ textContent }) => {
   return (
     <section
       id="buy"
-      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-16"
+      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-[88px] lg:pt-16"
     >
       <div className="flex flex-col">
         {/* Header */}
-        <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 pb-16 text-white md:pt-16">
+        <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 py-16 text-white md:pt-16">
           <div className="relative z-10 mb-16 flex flex-col items-center justify-center md:mb-8">
             <h1 className="mb-4 text-center text-4xl font-medium sm:text-5xl md:text-6xl">
               {textContent.title.line1}
