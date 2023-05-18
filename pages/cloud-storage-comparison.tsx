@@ -42,7 +42,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 
         <FeatureSection textContent={langJson.FeatureSection} />
 
-        <InfoSection textContent={langJson.InfoSection} lang={lang} />
+        <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="privacy" />
 
         <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 

@@ -8,11 +8,13 @@ const InfoSection = ({
   lang,
   withoutCta,
   backgroundColor,
+  redirect,
 }: {
   textContent: any;
   lang: string;
   withoutCta?: boolean;
   backgroundColor?: string;
+  redirect?: string;
 }) => {
   const router = useRouter();
 
@@ -49,7 +51,12 @@ const InfoSection = ({
             <div
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
               onClick={() => {
-                window.open(`${window.location.origin}/${router.locale}/about`, '_blank');
+                window.open(
+                  `${window.location.origin}${router.locale === 'en' ? '' : `/${router.locale}`}/${
+                    redirect ? redirect : 'about'
+                  }`,
+                  '_blank',
+                );
               }}
             >
               <p>{textContent.cta}</p>

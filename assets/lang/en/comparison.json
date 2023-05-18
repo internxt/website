@@ -10,7 +10,7 @@
     "table": {
       "sections": {
         "encryption_and_security": {
-          "name": "Encryption & Security",
+          "name": "Encryption and security",
           "features": {
             "encryption_at_rest_and_in_transit": "Encryption at rest and in transit",
             "end_to_end_encrypted_storage": "End-to-end encrypted storage",
@@ -18,13 +18,14 @@
             "zero_knowledge_encryption": "Zero-knowledge encryption",
             "two_factor_authentication": "Two-Factor authentication",
             "gdpr_compliant_synchronization": "GDPR Compliant synchronization",
-            "aes_256_encryption": "AES-256 Encryption",
+            "aes_256_encryption": "AES-256 encryption",
             "zero_knowledge_access_from_browsers": "Zero-knowledge access from browsers",
+            "open_source": "Open source",
             "no_third_party_file_access": "No third-party file access"
           }
         },
         "storage_and_file_management": {
-          "name": "Storage & File management",
+          "name": "Access and file management",
           "features": {
             "sync_any_folders": "Sync any folders",
             "web_app": "Web app",
@@ -33,26 +34,34 @@
             "linux_desktop_app": "Linux desktop app",
             "android_app": "Android app",
             "ios_app": "iOS app",
+            "availability": "Available on all devices",
             "backup_folders_and_files": "Backup folders and files",
-            "file_sharding": "File Sharding",
-            "unlimited_bandwidth": "Unlimited bandwidth",
-            "free_account_storage": "Free account storage"
-          }
-        },
-        "deployment": {
-          "name": "Deployment",
-          "features": {
-            "support_center": "Support center",
-            "live_chat_support": "Live chat support",
-            "open_source": "Open source"
+            "unlimited_bandwidth": "Unlimited bandwidth"
           }
         },
         "controlled_file_sharing": {
-          "name": "Controlled file sharing",
+          "name": "File Sharing",
           "features": {
-            "file_requests": "File requests",
             "password_protection_for_links": "Password protection for links",
-            "download_limits_for_links": "Download limits for links"
+            "download_limits_for_links": "Download limits for links",
+            "file_requests": "File requests"
+          }
+        },
+        "pricing": {
+          "name": "Pricing",
+          "features": {
+            "free_account_storage": "Free account storage",
+            "monthly_base_pricing": "Monthly base pricing",
+            "max_storage_amount": "Max storage amount",
+            "lifetime_plans": "Lifetime plans"
+          }
+        },
+        "deployment": {
+          "name": "Deployment and support",
+          "features": {
+            "business_plans": "Business plans",
+            "support_center": "Support center",
+            "live_chat_support": "Live chat support"
           }
         }
       },
@@ -60,7 +69,7 @@
         "line1": "Drag horizontally",
         "line2": "to show competitors"
       },
-      "startNow": "Start now"
+      "startNow": "Sign up now"
     }
   },
   "FeatureSection": {
@@ -71,7 +80,7 @@
   "InfoSection": {
     "title": "Secure cloud storage with unmatched privacy",
     "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Introducing the Internxt Team",
+    "cta": "Internxt's commitment to privacy",
     "cards": [
       {
         "title": "Private by design",
@@ -138,6 +147,24 @@
         "question": "What is the most secure cloud storage service?",
         "answer": [
           "If you compare Internxt with all the other services, you will find that Internxt is the most private and secure alternative to Google Drive, Dropbox, and other popular services."
+        ]
+      },
+      {
+        "question": "Which cloud storage service is the most private?",
+        "answer": [
+          " Internxt has no way to access your stored information and is the most private cloud service on the market today. While many cloud services offer advanced security features, very few of them don’t have access to your information."
+        ]
+      },
+      {
+        "question": "What is an open-source cloud storage service?",
+        "answer": [
+          "An open-source cloud service differs from a traditional service in that all of the service’s source code is made public. This allows individuals to independently verify that the service does what it says it does. Internxt is fully open source, and our code is posted publicly on GitHub."
+        ]
+      },
+      {
+        "question": "Which cloud providers have access to your stored data?",
+        "answer": [
+          "It’s difficult to know for sure which companies don’t access your data because very few of them keep their source code private, but almost none claim to ever access your data. Internxt, on the other hand, will never access your data, and that claim can be verified by auditing our source code."
         ]
       }
     ]
