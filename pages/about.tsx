@@ -26,7 +26,7 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
         <HeroSection textContent={textContent.HeroSection} />
-        {/* //!TODO: Check this section in mobile when the images are added */}
+
         <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
 
         <FeatureSection textContent={textContent.FeatureSection} />
