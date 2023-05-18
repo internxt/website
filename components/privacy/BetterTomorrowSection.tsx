@@ -32,7 +32,7 @@ const BetterTomorrowSection = ({ textContent, lang }) => {
               window.open(`https://internxt.com/${lang}`, '_blank');
             }}
           >
-            <p className="text-base font-semibold md:text-xl">{textContent.cta}</p>
+            <p className="text-lg font-semibold">{textContent.cta}</p>
             <CaretRight size={14} weight="bold" />
           </div>
         </RevealX>

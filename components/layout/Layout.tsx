@@ -129,7 +129,7 @@ LayoutProps) {
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
           {/* <SquareBanner /> */}
-          <div className="flex flex-col pt-16 md:pt-[54px]">{children}</div>
+          <div className="z-50 flex flex-col pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (
         children

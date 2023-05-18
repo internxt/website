@@ -49,13 +49,13 @@ export default function Navbar(props: NavbarProps) {
   return (
     <div
       id="navbar"
-      className={`${props.hide ? 'hidden' : ''} flex items-center ${
+      className={`${props.hide ? 'hidden' : ''} flex items-center overflow-hidden ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
       } h-20 w-full bg-white transition-all duration-100 lg:h-16 ${
         props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
       } ${scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0 bg-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
-      } z-40 border-b border-black`}
+      } z-30 border-b border-black`}
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="navbar mx-auto flex max-w-screen-xl items-center justify-between">

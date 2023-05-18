@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { CaretRight } from 'phosphor-react';
 import { checkout } from '../../lib/auth';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {
@@ -57,7 +58,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
-        } left-0 z-40 hidden h-[54px] w-screen cursor-pointer items-center justify-center bg-primary text-white md:flex`}
+        } left-0 z-40 hidden h-[54px] w-screen cursor-pointer items-center justify-center overflow-hidden bg-primary text-white md:flex`}
       >
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
@@ -70,13 +71,14 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         >
           <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
           <p className="flex flex-row font-normal">{textForWeb()}</p>
+          <CaretRight size={16} />
 
           {/* <p className="flex text-base font-semibold underline">{pickUp()}</p> */}
         </div>
       </div>
       {/* Mobile view */}
       <div
-        className={`group fixed left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center bg-primary text-white md:hidden`}
+        className={`group fixed left-0 z-30 flex h-auto w-screen cursor-pointer items-center justify-center overflow-hidden bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div
@@ -91,15 +93,6 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
             <p className="flex flex-row font-normal">{textForMobile()}</p>
           </div>
-
-          {/* <button
-            className="absolute top-3 right-3 flex flex-col"
-            onClick={() => {
-              setCloseBannerOnMobile(true);
-            }}
-          >
-            <X size={36} className="z-50" />
-          </button> */}
         </div>
       </div>
     </>

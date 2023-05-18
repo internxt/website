@@ -11,7 +11,7 @@ const SecuritumSection = ({ textContent }) => {
             <p className="text-xl text-gray-80">{textContent.subtitle}</p>
           </div>
           {/* Links to PDFs */}
-          <div className="flex flex-wrap items-center justify-center gap-32">
+          <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-32">
             <div
               className="flex cursor-pointer flex-row items-center space-x-2 text-primary hover:underline"
               onClick={() => window.open('/securitum/securitum-web.pdf', '_blank')}

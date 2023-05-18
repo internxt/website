@@ -10,8 +10,7 @@
   "ManifestoSection": {
     "section1": {
       "title": {
-        "line1": "Why privacy is",
-        "line2": "so important."
+        "line1": "Why does privacy matter?"
       },
       "subtitle": {
         "line1": "Today the Internet is controlled by technology giants that offer services and products that",
@@ -23,7 +22,7 @@
     }
   },
   "FeatureSection": {
-    "title": "Internxt protect user privacy",
+    "title": "Internxt protects user privacy",
     "description": "We take privacy and security extremely seriously, that's why we’ve implemented a stack of technologies and protocols to always ensure that your data remains safe and private.",
     "cards": {
       "openSource": {
