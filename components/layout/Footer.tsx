@@ -243,7 +243,7 @@ export default function Footer({
                     <Link href="/what-does-google-know-about-me" locale={lang} passHref>
                       <a className="flex  flex-row hover:text-primary">
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-primary bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-primary">
+                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-primary bg-opacity-15 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
                         </div>
                       </a>
