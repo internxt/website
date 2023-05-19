@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Trash } from 'phosphor-react';
+import { Trash } from '@phosphor-icons/react';
 import RenderDescription from '../shared/RenderDescription';
 
 const ManageGoogleDataSection = ({ textContent }) => {

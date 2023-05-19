@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CaretRight, DotsThree } from 'phosphor-react';
+import { CaretRight, DotsThree } from '@phosphor-icons/react';
 import PdfItem from '../../public/icons/file-types/pdf.svg';
 import PPTItem from '../../public/icons/file-types/ppt.svg';
 import RevealY from '../components/RevealY';

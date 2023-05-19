@@ -6,7 +6,7 @@
 import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import { UilRedo, UilExclamationOctagon } from '@iconscout/react-unicons';
-import { CheckCircle, WarningCircle } from 'phosphor-react';
+import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent }) => {

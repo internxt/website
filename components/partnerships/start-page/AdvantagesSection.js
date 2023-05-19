@@ -1,4 +1,4 @@
-import { Check } from 'phosphor-react';
+import { Check } from '@phosphor-icons/react';
 import React from 'react';
 
 const AdvantagesSection = ({ textContent }) => {

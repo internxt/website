@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CaretLeft, CaretRight } from 'phosphor-react';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import RevealY from '../components/RevealY';
@@ -143,7 +143,7 @@ const TestimonialsSection = ({ textContent }) => {
       </RevealY>
 
       {/*Mobile/Tablet View*/}
-      <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-6 xl:hidden">
+      <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-20 xl:hidden">
         <div className="flex justify-center">
           {textContent.cards.map((card, index) => (
             <div key={index} className="flex w-screen justify-center px-6 shadow-subtle-hard md:w-auto">

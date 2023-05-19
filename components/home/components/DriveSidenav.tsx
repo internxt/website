@@ -8,7 +8,7 @@ import {
   Link,
   Trash,
   Users,
-} from 'phosphor-react';
+} from '@phosphor-icons/react';
 import React from 'react';
 
 const driveItems = [

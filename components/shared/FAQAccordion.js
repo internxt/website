@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PlusCircle } from 'phosphor-react';
+import { PlusCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
 
 export default function FaqAccordion({ question, answer, isQuestionBigger = false }) {

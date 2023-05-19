@@ -1,4 +1,4 @@
-import { CircleWavyCheck, X } from 'phosphor-react';
+import { CircleWavyCheck, X } from '@phosphor-icons/react';
 import React from 'react';
 import styles from '../black-friday/BF-HeroSection.module.scss';
 import { useRouter } from 'next/router';

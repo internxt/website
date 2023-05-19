@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowsLeftRight } from 'phosphor-react';
+import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
 import bytes from 'bytes';
 import { isMobile } from 'react-device-detect';

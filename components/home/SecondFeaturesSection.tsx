@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
-import { CloudCheck, Gauge, Image, SketchLogo } from 'phosphor-react';
+import { CloudCheck, Gauge, Image, SketchLogo } from '@phosphor-icons/react';
 
 const SecondFeaturesSection = ({ textContent }) => {
   const [cardIndex, setCardIndex] = React.useState(0);

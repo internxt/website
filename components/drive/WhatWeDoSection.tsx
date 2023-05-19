@@ -1,6 +1,6 @@
 import React from 'react';
 import RevealY from '../components/RevealY';
-import { Password, CaretRight, LockKey, ShieldCheck, Key } from 'phosphor-react';
+import { Password, CaretRight, LockKey, ShieldCheck, Key } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 const WhatWeDoSection = ({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alarm } from 'phosphor-react';
+import { Alarm } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 
 const HeroSection = ({ lang, textContent, hideTimer }) => {

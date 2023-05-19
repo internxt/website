@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from 'phosphor-react';
+import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 import EmptyInbox from './EmptyInbox';
 import { getInbox, showAllEmailData } from '../services/api/temp-api';
