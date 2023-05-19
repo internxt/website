@@ -15,7 +15,9 @@ const ManifestoSection = ({ textContent }) => (
         </h3>
 
         <div className="flex flex-col items-center">
-          <p className="mb-4 text-sm font-medium text-cool-gray-40 sm:text-xs">{textContent.section1.signature}</p>
+          <p className="mb-4 text-sm font-medium text-gray-80  sm:text-base">
+            {textContent.section1.signature.line1} <br /> {textContent.section1.signature.line2}
+          </p>
           <img
             loading="lazy"
             className="w-24 select-none"

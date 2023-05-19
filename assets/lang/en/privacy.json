@@ -13,12 +13,12 @@
         "line1": "Why does privacy matter?"
       },
       "subtitle": {
-        "line1": "Today the Internet is controlled by technology giants that offer services and products that",
+        "line1": "\"Today the Internet is controlled by technology giants that offer services and products that",
         "line2": "are a means to an end. Services that have become essential in our lives and are used to collect",
         "line3": "data from users to better profile them, as they live off advertising. Privacy should not have",
-        "line4": "such a high cost. We believe in a more ethical internet, where user privacy is at its core."
+        "line4": "such a high cost. We believe in a more ethical internet, where user privacy is at its core.\""
       },
-      "signature": "Fran Villalba, Internxt CEO"
+      "signature": { "line1": "Fran Villalba Segarra,", "line2": "Founder and CEO of Internxt" }
     }
   },
   "FeatureSection": {
