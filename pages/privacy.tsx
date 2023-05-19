@@ -15,6 +15,8 @@ import InxtAppsSection from '../components/privacy/InxtAppsSection';
 import CtaSection from '../components/shared/CtaSection';
 import BetterTomorrowSection from '../components/privacy/BetterTomorrowSection';
 import FeatureSection from '../components/privacy/FeatureSection';
+import HeroSection2 from '../components/privacy/HeroSection2';
+import ManifestoSection2 from '../components/privacy/ManifestoSection2';
 
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
@@ -22,32 +24,56 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(langJson.FaqSection.faq)}
-      </Script>
+      {lang === 'en' ? (
+        <>
+          <Script type="application/ld+json" strategy="beforeInteractive">
+            {sm_faq(langJson.FaqSection.faq)}
+          </Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Privacy', 'privacy')}
-      </Script>
+          <Script type="application/ld+json" strategy="beforeInteractive">
+            {sm_breadcrumb('Privacy', 'privacy')}
+          </Script>
+        </>
+      ) : (
+        <>
+          <Script type="application/ld+json" strategy="beforeInteractive">
+            {sm_faq(langJson.ManifestoSection.FaqSection.faq)}
+          </Script>
+
+          <Script type="application/ld+json" strategy="beforeInteractive">
+            {sm_breadcrumb('Privacy', 'privacy')}
+          </Script>
+        </>
+      )}
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        {lang === 'en' ? (
+          <>
+            <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+            <HeroSection textContent={langJson.HeroSection} />
 
-        <HeroSection textContent={langJson.HeroSection} />
+            <FileParallaxSection />
 
-        <FileParallaxSection />
+            <ManifestoSection textContent={langJson.ManifestoSection} />
 
-        <ManifestoSection textContent={langJson.ManifestoSection} />
+            <FeatureSection textContent={langJson.FeatureSection} />
 
-        <FeatureSection textContent={langJson.FeatureSection} />
+            <InxtAppsSection textContent={langJson.InxtAppsSection} lang={lang} />
 
-        <InxtAppsSection textContent={langJson.InxtAppsSection} lang={lang} />
+            <SecuritumSection textContent={langJson.SecuritumSection} />
 
-        <SecuritumSection textContent={langJson.SecuritumSection} />
+            <BetterTomorrowSection textContent={langJson.BetterTomorrowSection} lang={lang} />
 
-        <BetterTomorrowSection textContent={langJson.BetterTomorrowSection} lang={lang} />
+            <CtaSection textContent={langJson.CtaSection} url={CTA_URL} />
+          </>
+        ) : (
+          <>
+            <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed={false} darkMode />
+            <HeroSection2 textContent={langJson.HeroSection} />
 
-        <CtaSection textContent={langJson.CtaSection} url={CTA_URL} />
+            <ManifestoSection2 textContent={langJson.ManifestoSection} lang={lang} />
+          </>
+        )}
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>

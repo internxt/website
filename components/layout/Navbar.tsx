@@ -49,7 +49,7 @@ export default function Navbar(props: NavbarProps) {
   return (
     <div
       id="navbar"
-      className={`${props.hide ? 'hidden' : ''} flex items-center overflow-hidden ${
+      className={`${props.hide ? 'hidden' : ''} flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
       } h-20 w-full bg-white transition-all duration-100 lg:h-16 ${
         props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
