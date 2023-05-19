@@ -562,15 +562,15 @@ const HeroSection = ({ textContent }) => {
                 <tr className="h-0">
                   <td className="p-0" />
                   <td className="relative p-0">
-                    <a
-                      href="https://drive.internxt.com/new"
+                    <p
+                      onClick={() => {
+                        window.open('https://drive.internxt.com/new', '_blank');
+                      }}
                       id="get-started-link"
-                      target="_top"
-                      rel="noreferrer"
-                      className="absolute top-full left-0 flex h-14 w-full flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
+                      className="absolute top-full left-0 flex h-14 w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
                     >
                       {textContent.table.startNow}
-                    </a>
+                    </p>
                   </td>
                 </tr>
               </tbody>
