@@ -14,6 +14,8 @@ import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generat
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
 import CtaSection from '../components/shared/CtaSection';
+import FeatureSection2 from '../components/comparison/FeatureSection2';
+import TableSection2 from '../components/comparison/TableSection2';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
@@ -37,20 +39,29 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
+        {lang === 'en' ? (
+          <>
+            <TableSection textContent={langJson.HeroSection} />
 
-        <TableSection textContent={langJson.HeroSection} />
+            <FeatureSection textContent={langJson.FeatureSection} />
 
-        <FeatureSection textContent={langJson.FeatureSection} />
+            <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="privacy" />
 
-        <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="privacy" />
+            <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 
-        <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
+            <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
-        <TestimonialsSection textContent={langJson.TestimonialsSection} />
+            <FAQSection textContent={langJson.FaqSection} />
 
-        <FAQSection textContent={langJson.FaqSection} />
-
-        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
+            <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
+          </>
+        ) : (
+          <>
+            <TableSection2 textContent={langJson.HeroSection} />
+            <FeatureSection2 textContent={langJson.FeatureSection} />
+            <FAQSection textContent={langJson.FaqSection} />
+          </>
+        )}
 
         <Footer textContent={footerLang} lang={lang} darkMode={false} />
       </Layout>
