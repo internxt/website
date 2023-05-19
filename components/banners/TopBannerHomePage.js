@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { CaretRight } from 'phosphor-react';
+import { CaretRight } from '@phosphor-icons/react';
 import { checkout } from '../../lib/auth';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {

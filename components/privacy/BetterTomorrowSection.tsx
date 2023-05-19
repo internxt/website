@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CaretRight, ShieldStar } from 'phosphor-react';
+import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '../components/RevealX';
 
 const BetterTomorrowSection = ({ textContent, lang }) => {

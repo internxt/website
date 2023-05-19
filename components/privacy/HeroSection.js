@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { UilPlayCircle } from '@iconscout/react-unicons';
 import YoutubeEmbed from '../utils/youtube';
 import styles from './HeroSection.module.scss';
-import { CaretRight } from 'phosphor-react';
+import { CaretRight } from '@phosphor-icons/react';
 
 const HeroSection = ({ textContent }) => {
   const [isOpen, setIsOpen] = useState(false);

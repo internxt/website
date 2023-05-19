@@ -1,4 +1,4 @@
-import { Eye, Fingerprint, Globe, LockKey, ShieldCheck, UserCircle } from 'phosphor-react';
+import { Eye, Fingerprint, Globe, LockKey, ShieldCheck, UserCircle } from '@phosphor-icons/react';
 import RevealY from '../components/RevealY';
 
 const FeatureSection = ({ textContent }) => {

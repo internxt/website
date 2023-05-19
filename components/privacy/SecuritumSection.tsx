@@ -1,4 +1,4 @@
-import { ArrowUpRight, CaretRight } from 'phosphor-react';
+import { ArrowUpRight, CaretRight } from '@phosphor-icons/react';
 
 const SecuritumSection = ({ textContent }) => {
   return (
