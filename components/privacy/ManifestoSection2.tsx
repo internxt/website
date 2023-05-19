@@ -1,11 +1,10 @@
-/* eslint-disable max-len */
 import React from 'react';
 import Link from 'next/link';
 import FAQSection from '../photos/FAQSection';
 import { UilAngleRightB } from '@iconscout/react-unicons';
 import { ArrowUpRight } from '@phosphor-icons/react';
 
-const ManifestoSection = ({ textContent, lang }) => (
+const ManifestoSection2 = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col">
     {/* Why privacy is so important */}
     <div className="z-10 flex flex-col items-center py-20 ">
@@ -204,4 +203,4 @@ const ManifestoSection = ({ textContent, lang }) => (
   </section>
 );
 
-export default ManifestoSection;
+export default ManifestoSection2;

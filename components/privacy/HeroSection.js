@@ -2,38 +2,36 @@ import React, { useState } from 'react';
 import { UilPlayCircle } from '@iconscout/react-unicons';
 import YoutubeEmbed from '../utils/youtube';
 import styles from './HeroSection.module.scss';
+import { CaretRight } from '@phosphor-icons/react';
 
 const HeroSection = ({ textContent }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <section className="relative flex w-full flex-col overflow-hidden bg-cool-gray-100 pt-24">
-        <div className="z-10 flex flex-col items-center py-16 pb-20 lg:py-40">
+      <section className="relative flex w-full flex-col overflow-hidden pt-14">
+        <div className="flex flex-col items-center py-16 pb-20 lg:py-20">
           {/* Main title */}
           <div className="flex flex-col items-center justify-center px-6 text-center">
-            <h1 className="mb-6 text-5xl font-medium text-white sm:mb-10 sm:text-6xl lg:text-7xl">
-              {textContent.title}
+            <h1 className="mb-6 max-w-[796px] text-5xl font-medium text-gray-100 sm:mb-10 sm:text-6xl lg:text-7xl">
+              {textContent.title.normalText}
+              <span className="text-primary">{textContent.title.blueText}</span>
             </h1>
 
-            <h2 className="mb-8 w-full max-w-2xl text-xl font-normal text-white sm:mb-10 sm:text-base">
-              {textContent.subtitle.line1} {textContent.subtitle.line2} {textContent.subtitle.line3}{' '}
-              {textContent.subtitle.line4} {textContent.subtitle.line5}
+            <h2 className="mb-8 w-full max-w-[850px] text-xl font-normal text-gray-80 sm:mb-10">
+              {textContent.description}
             </h2>
 
-            <button
+            <div
               type="button"
               onClick={() => setIsOpen(true)}
-              className="flex flex-row items-center justify-center space-x-2 text-xl text-blue-50 hover:underline sm:mx-auto sm:text-base"
+              className="flex flex-row items-center justify-center space-x-1 text-xl font-semibold text-blue-50 hover:underline sm:text-lg"
             >
-              <span>{textContent.cta}</span>
-              <UilPlayCircle className="h-5 w-5" />
-            </button>
+              <p>{textContent.cta}</p>
+              <CaretRight size={12} weight="bold" />
+            </div>
           </div>
         </div>
-        <div
-          className={`absolute top-0 left-0 h-full w-full ${styles.neonBlur} pointer-events-none origin-center scale-[105] blur-lg filter`}
-        />
       </section>
       <YoutubeEmbed videoID="SlU5zQCM1Lk" show={isOpen} setShow={setIsOpen} autoplay loop hideinfo jsapi />
     </>
