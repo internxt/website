@@ -11,6 +11,8 @@ import cookies from '../lib/cookies';
 
 import { sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import CtaSection from '../components/shared/CtaSection';
+import CompanySection from '../components/about/CompanySection';
+import HeroSection2 from '../components/about/HeroSection2';
 
 const CTA_URL = 'https://internxt.com/pricing';
 
@@ -25,13 +27,23 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={textContent.HeroSection} />
+        {lang === 'en' ? (
+          <>
+            <HeroSection textContent={textContent.HeroSection} />
 
-        <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
+            <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
 
-        <FeatureSection textContent={textContent.FeatureSection} />
+            <FeatureSection textContent={textContent.FeatureSection} />
 
-        <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
+            <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
+          </>
+        ) : (
+          <>
+            <HeroSection2 textContent={textContent.HeroSection} lang={lang} />
+
+            <CompanySection textContent={textContent.CompanySection} />
+          </>
+        )}
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>

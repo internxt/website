@@ -56,8 +56,8 @@ const HeroSection = ({ textContent }) => (
         {/* Recognitions */}
         <h4 className="text-center text-4xl font-semibold text-gray-100">{textContent.recognitionsTitle}</h4>
         <div className="flex flex-col items-center justify-center space-y-10">
-          <div className="flex w-full flex-row flex-wrap items-start justify-between">
-            <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
+          <div className="grid w-full grid-cols-1 gap-20 lg:grid-rows-1">
+            <div className="flex flex-auto flex-shrink-0 pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
                 <Image
                   src="/images/about/logos/forbes.webp"
