@@ -115,7 +115,7 @@ const FeatureSection = ({ textContent }) => {
             <p
               className="cursor-pointer text-lg font-semibold text-primary hover:text-primary-dark hover:underline"
               onClick={() => {
-                window.open('https://drive.internxt.com/new', '_blank');
+                window.open('mailTo:hello@internxt.com', '_blank');
               }}
             >
               {textContent.BetterFutureSection.cta}
