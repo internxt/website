@@ -3,6 +3,7 @@ import React from 'react';
 
 import TableSection from '../components/comparison/TableSection';
 import FeatureSection from '../components/comparison/FeatureSection';
+import InfoSection from '../components/home/InfoSection';
 import FAQSection from '../components/comparison/FAQSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
@@ -10,6 +11,13 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import TestimonialsSection from '../components/home/TestimonialsSection';
+import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
+import CtaSection from '../components/shared/CtaSection';
+import FeatureSection2 from '../components/comparison/FeatureSection2';
+import TableSection2 from '../components/comparison/TableSection2';
+
+const URL_REDIRECT = 'https://drive.internxt.com/new';
 
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
@@ -31,12 +39,29 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
+        {lang === 'en' ? (
+          <>
+            <TableSection textContent={langJson.HeroSection} />
 
-        <TableSection textContent={langJson.HeroSection} lang={lang} />
+            <FeatureSection textContent={langJson.FeatureSection} />
 
-        <FeatureSection textContent={langJson.FeatureSection} />
+            <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="privacy" />
 
-        <FAQSection textContent={langJson.FaqSection} />
+            <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
+
+            <TestimonialsSection textContent={langJson.TestimonialsSection} />
+
+            <FAQSection textContent={langJson.FaqSection} />
+
+            <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
+          </>
+        ) : (
+          <>
+            <TableSection2 textContent={langJson.HeroSection} />
+            <FeatureSection2 textContent={langJson.FeatureSection} />
+            <FAQSection textContent={langJson.FaqSection} />
+          </>
+        )}
 
         <Footer textContent={footerLang} lang={lang} darkMode={false} />
       </Layout>

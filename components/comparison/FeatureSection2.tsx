@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FeatureSection = ({ textContent }) => {
+const FeatureSection2 = ({ textContent }) => {
   const splitInternxtFromDescriptionPart1 = textContent.whyStartUsingInternxt.description.line3.split('Internxt')[0];
   const splitInternxtFromDescriptionPart2 = textContent.whyStartUsingInternxt.description.line3.split('Internxt')[1];
   const internxt = textContent.whyStartUsingInternxt.description.line3.substr(
@@ -97,4 +97,4 @@ const FeatureSection = ({ textContent }) => {
   );
 };
 
-export default FeatureSection;
+export default FeatureSection2;
