@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CaretLeft, CaretRight } from 'phosphor-react';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import RevealY from '../components/RevealY';

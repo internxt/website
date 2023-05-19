@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
-import { Coin, CreditCard, Detective } from 'phosphor-react';
+import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import SpecialPriceCard from './SpecialPriceCard';
 
 export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {

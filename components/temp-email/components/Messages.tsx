@@ -1,4 +1,4 @@
-import { DownloadSimple, Envelope } from 'phosphor-react';
+import { DownloadSimple, Envelope } from '@phosphor-icons/react';
 import { downloadFile } from '../services/api/temp-api';
 import fileDownload from 'js-file-download';
 import iconService from '../services/icon-service';

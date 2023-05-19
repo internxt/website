@@ -1,4 +1,4 @@
-import { ShieldStar } from 'phosphor-react';
+import { ShieldStar } from '@phosphor-icons/react';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import { goToSignUpURL } from '../../lib/auth';

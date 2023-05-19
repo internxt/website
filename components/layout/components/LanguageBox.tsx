@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Globe } from 'phosphor-react';
+import { Globe } from '@phosphor-icons/react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';

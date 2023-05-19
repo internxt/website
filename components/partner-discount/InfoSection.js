@@ -1,4 +1,4 @@
-import { ShieldCheck, LockKey, Scales, Fingerprint } from 'phosphor-react';
+import { ShieldCheck, LockKey, Scales, Fingerprint } from '@phosphor-icons/react';
 import React from 'react';
 
 const InfoSection = ({ textContent }) => {

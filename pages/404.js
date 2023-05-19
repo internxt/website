@@ -3,7 +3,7 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import navbarLang from '../assets/lang/en/navbar.json';
 import footerLang from '../assets/lang/en/footer.json';
-import { House, Lifebuoy, Question } from 'phosphor-react';
+import { House, Lifebuoy, Question } from '@phosphor-icons/react';
 export default function Custom404() {
   const cards = [
     {
