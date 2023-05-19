@@ -1,4 +1,4 @@
-import { Tray } from 'phosphor-react';
+import { Tray } from '@phosphor-icons/react';
 import React from 'react';
 
 const EmptyInbox = () => {

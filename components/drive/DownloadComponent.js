@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { UilArrowUpRight, UilArrowCircleDown } from '@iconscout/react-unicons';
-import { ArrowCircleDown, CaretRight } from 'phosphor-react';
+import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
 
 const DownloadComponent = ({ textContent, lang, download }) => {
   function getOS() {

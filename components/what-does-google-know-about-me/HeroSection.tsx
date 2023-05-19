@@ -1,4 +1,4 @@
-import { Eye } from 'phosphor-react';
+import { Eye } from '@phosphor-icons/react';
 import SignUpBanner from '../banners/SignUpBanner';
 
 const HeroSection = ({ textContent, bannerText, lang }) => {

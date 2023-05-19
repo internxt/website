@@ -1,4 +1,4 @@
-import { CircleWavyCheck, Database, Eye, Key, Recycle } from 'phosphor-react';
+import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
 import React from 'react';
 
 const BestStorageSection = ({ textContent }) => {

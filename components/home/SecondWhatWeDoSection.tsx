@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CaretRight } from 'phosphor-react';
+import { CaretRight } from '@phosphor-icons/react';
 import React from 'react';
 import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';

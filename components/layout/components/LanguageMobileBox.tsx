@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
-import { CaretDown, Check, Globe } from 'phosphor-react';
+import { CaretDown, Check, Globe } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { it: 'IT' }, { zh: 'ZH' }];

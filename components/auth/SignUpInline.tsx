@@ -3,7 +3,7 @@ import PasswordInput from '../components/PasswordInput';
 import PrimaryButton from '../components/PrimaryButton';
 import { signup } from '../../lib/auth';
 import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStrength';
-import { WarningCircle } from 'phosphor-react';
+import { WarningCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
 
 interface SignUpInlineProps {

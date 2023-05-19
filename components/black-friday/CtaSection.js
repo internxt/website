@@ -1,4 +1,4 @@
-import { CurrencyBtc } from 'phosphor-react';
+import { CurrencyBtc } from '@phosphor-icons/react';
 import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { X } from 'phosphor-react';
+import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { buttonDeal } from '../TextWithoutJson';
 

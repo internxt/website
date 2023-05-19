@@ -1,5 +1,5 @@
 import React from 'react';
-import { HardDrives, Image, PaperPlaneTilt } from 'phosphor-react';
+import { HardDrives, Image, PaperPlaneTilt } from '@phosphor-icons/react';
 
 const SuiteSection = ({ textContent, lang }) => {
   return (

@@ -1,7 +1,7 @@
 import TextInput from '../components/TextInput';
 import PrimaryButton from '../components/PrimaryButton';
 import { recover, toggleAuthMethod } from '../../lib/auth';
-import { CaretLeft, EnvelopeSimple, WarningCircle } from 'phosphor-react';
+import { CaretLeft, EnvelopeSimple, WarningCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 

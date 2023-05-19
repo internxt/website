@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import { User } from 'phosphor-react';
+import { User } from '@phosphor-icons/react';
 
 const Testimonial = ({ url, photo, name, title, quote }) => (
   <a
