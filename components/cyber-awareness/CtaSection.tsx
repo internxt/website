@@ -1,4 +1,4 @@
-const CtaSection = ({ textContent, url }) => {
+const CtaSection = ({ textContent }) => {
   return (
     <section
       style={{
@@ -7,18 +7,16 @@ const CtaSection = ({ textContent, url }) => {
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div className="flex  flex-col items-center space-y-4 text-center text-white">
+        <div className="flex  max-w-[462px] flex-col items-center space-y-4 text-center text-white">
           <p className="text-4xl font-semibold">{textContent.title}</p>
-          <p className="w-full max-w-[573px] text-xl font-normal">{textContent.description}</p>
         </div>
-        <button
+        <a
+          href="/pricing"
+          target={'_blank'}
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
-          onClick={() => {
-            window.open(url, '_blank');
-          }}
         >
           {textContent.cta}
-        </button>
+        </a>
       </div>
     </section>
   );
