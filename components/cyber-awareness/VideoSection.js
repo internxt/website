@@ -1,4 +1,5 @@
 import React from 'react';
+import RevealX from '../components/RevealX';
 import YoutubeFrame from './components/YoutubeFrame';
 
 const VideoSection = ({ textContent }) => {
@@ -8,8 +9,12 @@ const VideoSection = ({ textContent }) => {
         <p className="h-20 w-full max-w-3xl text-center text-4xl font-semibold">{textContent.title}</p>
       </div>
       <div className="mt-5 flex flex-col sm:mt-0">
-        <YoutubeFrame videoId="_nVq7f26-Uo" />
-        <YoutubeFrame videoId="JIJslcA8Q5g" />
+        <RevealX direction="right">
+          <YoutubeFrame videoId="_nVq7f26-Uo" />
+        </RevealX>
+        <RevealX direction="left">
+          <YoutubeFrame videoId="JIJslcA8Q5g" />
+        </RevealX>
       </div>
     </section>
   );

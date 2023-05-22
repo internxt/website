@@ -1,5 +1,6 @@
 import { CaretRight } from '@phosphor-icons/react';
 import React from 'react';
+import RevealY from '../components/RevealY';
 
 const SuiteSection = ({ textContent }) => {
   const suiteCards = [
@@ -37,7 +38,7 @@ const SuiteSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <div className="flex flex-col items-center space-y-20 p-10 px-5 sm:p-20">
         <p className="text-center text-5xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
-        <div className="grid grid-cols-1 justify-items-center gap-x-40 gap-y-20 md:grid-cols-2">
+        <RevealY className="grid grid-cols-1 justify-items-center gap-x-40 gap-y-20 md:grid-cols-2">
           {suiteCards.map((card, index) => (
             <div key={index} className="flex flex-col space-y-4 rounded-2xl bg-gray-1 p-10 ">
               <img src={card.img} width={32} height={32} alt={`${card.title} image`} />
@@ -54,7 +55,7 @@ const SuiteSection = ({ textContent }) => {
               </a>
             </div>
           ))}
-        </div>
+        </RevealY>
       </div>
     </section>
   );
