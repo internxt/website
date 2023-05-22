@@ -12,7 +12,7 @@ const NgoCard = ({ id, name, short, description }) => {
 
   return (
     <Parallax
-      className="duration-250 relative flex w-full flex-col transition-all ease-in-out hover:shadow-subtle"
+      className="duration-250 relative flex w-full select-none flex-col transition-all ease-in-out hover:shadow-subtle"
       renderLayer={(percentage) => (
         <Transition
           show={showTrigger.length > 1 || anim.trigger(percentage)}
