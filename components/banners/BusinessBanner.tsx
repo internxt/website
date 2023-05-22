@@ -7,7 +7,6 @@ const BusinessBanner = ({ textContent }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // Procesa tu lógica de envío del formulario aquí
     const form = event.target;
     const formData = new FormData(form);
 
@@ -16,7 +15,6 @@ const BusinessBanner = ({ textContent }) => {
         method: form.method,
         body: formData,
       });
-      // Si el envío del formulario es exitoso, llama a la función de éxito
 
       window.top.location.href = 'https://internxt.com/pricing';
     } catch (e) {
