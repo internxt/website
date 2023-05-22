@@ -8,7 +8,7 @@ const ManifestoSection = ({ textContent }) => (
       <div className="px-6 text-center">
         <h2 className="mb-10 text-3xl font-medium lg:text-4xl">{textContent.section1.title.line1}</h2>
 
-        <h3 className="mb-10 w-full max-w-2xl text-lg font-normal text-cool-gray-80 sm:text-base">
+        <h3 className="mb-10 w-full max-w-2xl text-lg font-normal text-gray-80 sm:text-xl">
           {textContent.section1.subtitle.line1} {textContent.section1.subtitle.line2}{' '}
           {textContent.section1.subtitle.line3} {textContent.section1.subtitle.line4}{' '}
           {textContent.section1.subtitle.line5}
