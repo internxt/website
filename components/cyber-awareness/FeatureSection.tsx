@@ -18,7 +18,11 @@ const FeatureSection = ({ textContent }) => {
           <div className="flex flex-col items-center space-y-6 lg:items-start">
             <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
             <p className="text-xl text-gray-80">{textContent.description}</p>
-            <button className="flex rounded-lg bg-primary px-5 py-3 font-medium text-white">{textContent.cta}</button>
+            <a href="/images/cyber-awareness/Internxt-Checklist.pdf" download={true}>
+              <button className="rounded-lg bg-primary px-6 py-2 font-medium text-white hover:bg-primary-dark">
+                {textContent.cta}
+              </button>
+            </a>
           </div>
         </RevealX>
       </div>

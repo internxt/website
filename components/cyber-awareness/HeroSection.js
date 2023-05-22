@@ -12,7 +12,7 @@ const HeroSection = ({ textContent, bannerText }) => {
         <h1 className="text-center text-5xl font-semibold text-white sm:text-6xl">{textContent.title}</h1>
       </div>
       <div className="flex flex-col items-center justify-center p-5 text-center md:p-20 lg:text-left">
-        <div className="xl:px-80">
+        <div className="flex w-full max-w-[672px] flex-col">
           <p className="text-2xl font-medium">{textContent.paragraph1.title}</p>
           <p className="mt-5 text-lg font-normal">{textContent.paragraph1.body}</p>
           <p className="mt-8 text-lg font-normal">{textContent.paragraph1.body2}</p>
@@ -22,14 +22,14 @@ const HeroSection = ({ textContent, bannerText }) => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center p-5 pt-11 text-center md:p-20 md:pt-0 lg:text-left">
-        <div className="xl:px-80">
+        <div className="flex w-full max-w-[672px] flex-col">
           <p className="text-2xl font-medium">{textContent.paragraph2.title}</p>
           <p className="mt-5 text-lg font-normal">{textContent.paragraph2.body}</p>
           <p className="mt-8 text-lg font-normal">{textContent.paragraph2.body2}</p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center p-5 pt-11 text-center md:p-20 md:pt-0 lg:text-left">
-        <div className="xl:px-80">
+        <div className="flex w-full max-w-[672px] flex-col">
           <p className="text-2xl font-medium">{textContent.paragraph3.title}</p>
           <p className="mt-5 text-lg font-normal">{textContent.paragraph3.body}</p>
         </div>
