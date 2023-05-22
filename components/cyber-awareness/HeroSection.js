@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="text-2xl font-medium">{textContent.paragraph3.title}</p>
           <p className="mt-5 text-lg font-normal">{textContent.paragraph3.body}</p>
         </div>
-        {lang === 'en' && (
+        {lang !== 'en' && (
           <>
             <div className="mt-16 flex xl:px-64">
               <img
@@ -43,14 +43,14 @@ const HeroSection = ({ textContent, bannerText }) => {
               />
             </div>
 
-            <div className="flex flex-col items-center justify-center p-5 py-11 md:p-20 md:pt-0">
+            <div className="flex flex-col items-center justify-center p-5 py-11 md:p-20">
               <p className="mb-4 text-center text-4xl font-semibold">{textContent.footer}</p>
-              <button
-                onClick={getPricingPage}
+              <a
+                href="/pricing"
                 className="mt-8 flex h-10 w-56 items-center justify-center rounded-lg bg-primary text-white hover:bg-primary-dark"
               >
                 {textContent.button}
-              </button>
+              </a>
             </div>
           </>
         )}
