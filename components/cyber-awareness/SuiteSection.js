@@ -43,7 +43,12 @@ const SuiteSection = ({ textContent }) => {
               <img src={card.img} width={32} height={32} alt={`${card.title} image`} />
               <p className="text-2xl font-medium">{card.title}</p>
               <p className="max-w-[408px] text-lg font-normal">{card.body}</p>
-              <a href={card.url} target={'_blank'} className="flex cursor-pointer flex-row items-center space-x-1">
+              <a
+                href={card.url}
+                rel="noopener noreferrer"
+                target={'_blank'}
+                className="flex cursor-pointer flex-row items-center space-x-1"
+              >
                 <p className="text-lg font-semibold text-primary">{card.textUrl}</p>
                 <CaretRight size={16} weight="bold" className="text-primary" />
               </a>
