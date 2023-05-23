@@ -8,12 +8,11 @@ export default async function handler(req, res) {
     res.status(200).json({ status: 'OK', data: user });
   } catch (error) {
     console.error('Error al procesar la solicitud:', error);
-    res.status(500).json({ status: 'Error', message: error });
+    res.status(500).json({ status: 'Error', message: 'Internal Server Error' });
   }
 }
 
 async function createUser(email) {
-  console.log('email', email);
   const createUser = await axios.post(
     `${process.env.MAILERLITE_API}/api/subscribers`,
     { email: email, groups: ['88604472985519229'] },
