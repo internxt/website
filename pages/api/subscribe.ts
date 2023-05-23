@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
-  const email = req.body.body;
+  const email = req.body.email;
+  console.log('email', email);
 
   try {
     const user = await createUser(email);
