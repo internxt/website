@@ -10,6 +10,10 @@ import Footer from '../components/layout/Footer';
 import FAQSection from '../components/privacy-directory/FAQSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import HeroSection2 from '../components/privacy-directory/HeroSection2';
+import CtaSection from '../components/shared/CtaSection';
+
+const CTA_URL_REDIRECT = 'https://drive.internxt.com/new';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
@@ -37,17 +41,38 @@ const PrivacyDirectory = ({
         title={metatags[0].title}
         description={metatags[0].description}
         lang={lang}
-        isBannerFixed
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
+        {lang !== 'en' ? (
+          <>
+            <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
+            <HeroSection
+              textContent={textContent.HeroSection}
+              lang={lang}
+              bannerText={bannerText.privacyDirectoryBanner}
+            />
 
-        <HeroSection textContent={textContent.HeroSection} lang={lang} bannerText={bannerText.privacyDirectoryBanner} />
+            <WikiSection textContent={textContent.WikiSection} />
 
-        <WikiSection textContent={textContent.WikiSection} />
+            <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
 
-        <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
+            <FAQSection textContent={textContent.FaqSection} />
+          </>
+        ) : (
+          <>
+            <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+            <HeroSection2
+              textContent={textContent.HeroSection}
+              lang={lang}
+              bannerText={bannerText.privacyDirectoryBanner}
+            />
 
-        <FAQSection textContent={textContent.FaqSection} />
+            <WikiSection textContent={textContent.WikiSection} />
+
+            <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
+
+            <CtaSection textContent={textContent.CtaSection} url={CTA_URL_REDIRECT} />
+          </>
+        )}
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
