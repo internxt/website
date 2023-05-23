@@ -8,7 +8,9 @@ import {
   TwitterShareButton,
   RedditIcon,
 } from 'next-share';
+import { useRouter } from 'next/router';
 import React from 'react';
+import RevealY from '../components/RevealY';
 import Tooltip from '../prices/ToolTip';
 
 export const InfoCard = ({ id, title, title1, img, link }) => {
@@ -54,6 +56,9 @@ export const InfoCard = ({ id, title, title1, img, link }) => {
 };
 
 const InfoSection = ({ textContent }) => {
+  const router = useRouter();
+  const lang = router.locale;
+
   const infoCards = [
     {
       id: 0,
@@ -109,25 +114,33 @@ const InfoSection = ({ textContent }) => {
   ];
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center bg-black bg-opacity-5 pt-20">
-        <div className="flex flex-col items-center space-y-10">
-          <p className="text-center text-3xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
-          <p className="p-5 text-center text-lg font-normal md:w-full md:max-w-2xl">{textContent.subTitle}</p>
-          <p className="text-center text-3xl font-semibold md:w-full md:max-w-xl">{textContent.cards.title}</p>
-          <div className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4 xl:gap-x-10">
+      <div className="flex flex-col items-center bg-black bg-opacity-5 px-5 py-20">
+        <div className="flex flex-col items-center space-y-16">
+          {lang === 'en' ? (
+            <div>
+              <p className="text-center text-5xl font-semibold">{textContent.title}</p>
+            </div>
+          ) : (
+            <>
+              <p className="text-center text-3xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
+              <p className="p-5 text-center text-lg font-normal md:w-full md:max-w-2xl">{textContent.subTitle}</p>
+              <p className="text-center text-3xl font-semibold md:w-full md:max-w-xl">{textContent.cards.title}</p>
+            </>
+          )}
+          <RevealY className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4 xl:gap-x-10">
             {infoCards.map(({ title1, title, id, img, link }) => (
               <InfoCard id={id} title={title} title1={title1} img={img} link={link} key={title} />
             ))}
-          </div>
-          <div className="flex flex-col space-y-3 p-5 sm:p-20">
+          </RevealY>
+          <RevealY className="flex flex-col space-y-3">
             <p className="text-center text-2xl font-medium sm:text-left">{textContent.footer.title}</p>
-            <div className="w-full max-w-2xl space-y-6 pt-3 text-justify sm:text-left">
+            <div className="w-full max-w-2xl space-y-6 pt-3 text-center sm:text-left">
               <p className="text-lg font-normal">{textContent.footer.body.part1}</p>
               <p className="text-lg font-normal">{textContent.footer.body.part2}</p>
               <p className="text-lg font-normal">{textContent.footer.body.part3}</p>
               <p className="text-lg font-normal">{textContent.footer.body.part4}</p>
             </div>
-          </div>
+          </RevealY>
         </div>
       </div>
     </section>

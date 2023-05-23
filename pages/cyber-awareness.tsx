@@ -6,12 +6,17 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/cyber-awareness/HeroSection';
 import InfoSection from '../components/cyber-awareness/InfoSection';
+import CtaSection from '../components/cyber-awareness/CtaSection';
+import CtaSection2 from '../components/shared/CtaSection';
 import FAQSection from '../components/cyber-awareness/FAQSection';
 import SuiteSection from '../components/cyber-awareness/SuiteSection';
+import SuiteSection2 from '../components/cyber-awareness/SuiteSection2';
 import VideoSection from '../components/cyber-awareness/VideoSection';
 import Footer from '../components/layout/Footer';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import FileParallaxSection from '../components/home/FileParallaxSection';
+import FeatureSection from '../components/cyber-awareness/FeatureSection';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
@@ -33,16 +38,39 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
         segmentName={'Cyber Awareness'}
       >
         <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
+        {lang === 'en' ? (
+          <>
+            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
 
-        <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
+            <CtaSection textContent={textContent.CtaSection} />
 
-        <InfoSection textContent={textContent.InfoSection} />
+            <InfoSection textContent={textContent.InfoSection} />
 
-        <SuiteSection textContent={textContent.SuiteSection} />
+            <FileParallaxSection />
 
-        <VideoSection textContent={textContent.VideoSection} />
+            <SuiteSection textContent={textContent.SuiteSection} />
 
-        <FAQSection textContent={textContent.FaqSection} />
+            <FeatureSection textContent={textContent.FeatureSection} />
+
+            <VideoSection textContent={textContent.VideoSection} />
+
+            <FAQSection textContent={textContent.FaqSection} />
+
+            <CtaSection2 textContent={textContent.CtaSection2} url="https://drive.internxt.com/new" />
+          </>
+        ) : (
+          <>
+            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
+
+            <InfoSection textContent={textContent.InfoSection} />
+
+            <SuiteSection2 textContent={textContent.SuiteSection} />
+
+            <VideoSection textContent={textContent.VideoSection} />
+
+            <FAQSection textContent={textContent.FaqSection} />
+          </>
+        )}
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
