@@ -1,15 +1,9 @@
 import axios from 'axios';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import TextInput from '../components/TextInput';
-import ShowSnackbar from '../ShowSnackbar';
+import { useState } from 'react';
 
-const BusinessBanner = ({ textContent }) => {
+const BusinessBanner = ({ textContent, setShowSnackbar }) => {
   const [email, setEmail] = useState('');
-  const success = () => toast.success('Successfully submitted');
-  const sendEmailError = () => toast.error('Something went wrong!');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,10 +13,10 @@ const BusinessBanner = ({ textContent }) => {
         email,
       });
 
-      success();
+      setShowSnackbar('success');
     } catch (error) {
       console.error(error);
-      sendEmailError();
+      setShowSnackbar('error');
     }
   };
   return (
@@ -80,7 +74,6 @@ const BusinessBanner = ({ textContent }) => {
           </div>
         </div>
       </div>
-      <ShowSnackbar />
     </section>
   );
 };

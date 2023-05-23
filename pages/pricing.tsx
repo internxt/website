@@ -16,6 +16,8 @@ import BestStorageSection from '../components/pricing/BestStorageSection';
 import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import { toast } from 'react-toastify';
+import ShowSnackbar from '../components/ShowSnackbar';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -23,13 +25,13 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [country, setCountry] = useState('ES');
   const [isLifetime, setIsLifetime] = useState(false);
+  const [showSnackbar, setShowSnackbar] = useState<'success' | 'error'>();
+  const success = () => toast.success('Successfully submitted');
+  const sendEmailError = () => toast.error('Something went wrong!');
+  const open = showSnackbar === 'success' ? success : sendEmailError;
 
   async function getCountryCode() {
-    const options = {
-      method: 'GET',
-      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
-    };
-    const countryCode = await axios(options);
+    const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
     return countryCode;
   }
 
@@ -41,7 +43,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       .catch((err) => {
         console.error(err);
       });
-  });
+  }, []);
+
+  useEffect(() => {
+    if (showSnackbar) open();
+  }, [showSnackbar]);
 
   return (
     <>
@@ -70,6 +76,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           country={country}
           setIsLifetime={setIsLifetime}
           textContent={textContent.tableSection}
+          setShowSnackbar={setShowSnackbar}
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
@@ -89,6 +96,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <FAQSection textContent={textContent.FaqSection} />
 
         <CtaSection textContent={textContent.lastCtaSection} />
+
+        <ShowSnackbar />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>

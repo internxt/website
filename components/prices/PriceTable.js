@@ -5,7 +5,7 @@ import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '../banners/BusinessBanner';
 
-export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent, setShowSnackbar }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
@@ -300,7 +300,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <BusinessBanner textContent={banner.BusinessBanner} />
+            <BusinessBanner textContent={banner.BusinessBanner} setShowSnackbar={setShowSnackbar} />
           </div>
         </Transition>
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">
