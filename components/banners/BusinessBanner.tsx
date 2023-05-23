@@ -11,15 +11,13 @@ const BusinessBanner = ({ textContent }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
 
     try {
       await axios.post(`api/subscribe`, {
         body: email,
       });
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
   return (
