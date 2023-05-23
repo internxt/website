@@ -1,27 +1,27 @@
+import axios from 'axios';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import TextInput from '../components/TextInput';
 
 const BusinessBanner = ({ textContent }) => {
+  const { locale, pathname } = useRouter();
   const [email, setEmail] = useState('');
+  const redirectUrl = `${window.origin}${locale === 'en' ? '' : `/${locale}`}${pathname}`;
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const form = event.target;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
     const formData = new FormData(form);
 
     try {
-      await fetch(form.action, {
-        method: form.method,
-        body: formData,
+      await axios.post(`api/subscribe`, {
+        body: email,
       });
-
-      window.top.location.href = 'https://internxt.com/pricing';
-    } catch (e) {
-      window.location.href = 'https://internxt.com/pricing';
+    } catch (error) {
+      console.log(error);
     }
   };
-
   return (
     <section className="hidden overflow-hidden bg-gradient-to-br from-blue-20 to-white lg:flex">
       <div className="flex flex-row items-center justify-center">
@@ -35,7 +35,6 @@ const BusinessBanner = ({ textContent }) => {
               className="-ml-4 flex flex-row items-start space-x-4"
               method="post"
               data-code="Y0NHkN"
-              action={`${process.env.NEXT_PUBLIC_MAILERLITE_API}/jsonp/16439/forms/88880115360990445/subscribe`}
               target="_blank"
               onSubmit={handleSubmit}
             >
@@ -45,10 +44,10 @@ const BusinessBanner = ({ textContent }) => {
                 aria-required="true"
                 type="email"
                 data-inputmask=""
-                name="fields[email]"
                 placeholder="Email"
                 autoComplete="email"
                 aria-invalid="false"
+                onChange={(e) => setEmail(e.target.value)}
                 className={`h-11 w-full appearance-none rounded-lg border border-gray-30 bg-white px-3  text-lg text-gray-100 shadow-sm transition duration-100 focus:border-primary focus:shadow-none focus:outline-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 disabled:text-gray-30 md:text-base `}
               />
               <div className="ml-form-embedSubmit">
