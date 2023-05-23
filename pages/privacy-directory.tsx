@@ -41,7 +41,6 @@ const PrivacyDirectory = ({
         title={metatags[0].title}
         description={metatags[0].description}
         lang={lang}
-        isBannerFixed
       >
         {lang !== 'en' ? (
           <>
@@ -60,7 +59,7 @@ const PrivacyDirectory = ({
           </>
         ) : (
           <>
-            <Navbar textContent={navbarLang} lang={lang} cta={['default']} />
+            <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
             <HeroSection2
               textContent={textContent.HeroSection}
               lang={lang}
