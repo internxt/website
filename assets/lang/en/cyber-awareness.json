@@ -92,6 +92,13 @@
         "answer": [
           "Cyber threats are ever-rising, so Cyber Awareness is critical for keeping your employees and organization secure online. Human mistakes are the primary cause of most data breaches. 80% of all data breaches are caused by human error, meaning 80% of breaches can be avoided with Cyber Awareness."
         ]
+      },
+      {
+        "question": "How can cyber awareness help against online scams?",
+        "answer": [
+          "Cyber awareness educates about common warning signs, such as unsolicited requests for personal information or offers that seem too good to be true. By understanding social engineering techniques and practicing caution with clicking links or downloading files, individuals can protect themselves from falling victim to scams.",
+          "Additionally, cyber awareness emphasizes the importance of verifying website authenticity and keeping software and security tools updated. Overall, it empowers individuals to make informed decisions, identify potential risks, and stay vigilant in their online activities."
+        ]
       }
     ]
   },

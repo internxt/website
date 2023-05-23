@@ -30,7 +30,7 @@ const SuiteSection = ({ textContent }) => {
       title: textContent.cards['title-4'],
       body: textContent.cards['body-4'],
       textUrl: textContent.cards['textUrl-4'],
-      url: '/mail',
+      url: 'https://help.internxt.com/en/articles/6220768-free-tools-for-improving-online-security',
     },
   ];
 
@@ -38,7 +38,7 @@ const SuiteSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <div className="flex flex-col items-center space-y-20 p-10 px-5 sm:p-20">
         <p className="text-center text-5xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
-        <RevealY className="grid grid-cols-1 justify-items-center gap-x-40 gap-y-20 md:grid-cols-2">
+        <RevealY className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2">
           {suiteCards.map((card, index) => (
             <div key={index} className="flex flex-col space-y-4 rounded-2xl bg-gray-1 p-10 ">
               <img src={card.img} width={32} height={32} alt={`${card.title} image`} />
