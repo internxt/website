@@ -2,12 +2,15 @@ import axios from 'axios';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import TextInput from '../components/TextInput';
+import ShowSnackbar from '../ShowSnackbar';
 
 const BusinessBanner = ({ textContent }) => {
   const { locale, pathname } = useRouter();
   const [email, setEmail] = useState('');
-  const redirectUrl = `${window.origin}${locale === 'en' ? '' : `/${locale}`}${pathname}`;
+  const success = () => toast.success('Copied to clipboard!');
+  const error = () => toast.error('Something went wrong!');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,8 +19,11 @@ const BusinessBanner = ({ textContent }) => {
       await axios.post(`api/subscribe`, {
         body: email,
       });
+
+      success();
     } catch (error) {
       console.error(error);
+      error();
     }
   };
   return (
@@ -71,6 +77,7 @@ const BusinessBanner = ({ textContent }) => {
           </div>
         </div>
       </div>
+      <ShowSnackbar />
     </section>
   );
 };
