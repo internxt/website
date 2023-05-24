@@ -465,7 +465,7 @@ const HeroSection = ({ textContent }) => {
                         draggable="false"
                         alt="Drag horizontal"
                       />
-                      <div className="mt-1 flex flex-col items-start justify-center text-left text-sm font-medium leading-tight text-cool-gray-40">
+                      <div className="mt-1 flex flex-col items-start justify-center text-left text-sm font-medium leading-tight text-gray-40">
                         <span>{textContent.table.drag.line1}</span>
                         <span>{textContent.table.drag.line2}</span>
                       </div>
@@ -547,7 +547,7 @@ const HeroSection = ({ textContent }) => {
                                 ) : (
                                   <UilMinus className="h-8 w-8 text-cool-gray-20" />
                                 ))}
-                              {typeof feature === 'string' && <span className="text-cool-gray-90">{feature}</span>}
+                              {typeof feature === 'string' && <span className="text-gray-60">{feature}</span>}
                             </div>
                           </td>
                         ))}

@@ -46,7 +46,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   }, []);
 
   useEffect(() => {
-    if (showSnackbar) open();
+    if (showSnackbar) {
+      open();
+      setShowSnackbar(undefined);
+    }
   }, [showSnackbar]);
 
   return (

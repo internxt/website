@@ -12,9 +12,8 @@ const BusinessBanner = ({ textContent, setShowSnackbar }) => {
       .post(`api/subscribe`, {
         email,
       })
-      .then((res) => {
+      .then(() => {
         setShowSnackbar('success');
-        console.log(res);
       })
       .catch((err) => {
         console.error(err);

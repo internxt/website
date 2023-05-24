@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import React from 'react';
 import DownloadComponent from '../drive/DownloadComponent';
+import RevealX from '../components/RevealX';
+import RevealY from '../components/RevealY';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
   <section className="flex w-full flex-col pt-12">
@@ -22,8 +24,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
           {textContent.subtitle.line2}
           {textContent.subtitle.line3}
         </h3>
-
-        <div className="flex h-full flex-col px-5 py-16">
+        <div className="flex h-full flex-col px-5 py-16 lg:hidden">
           <Image
             width={622}
             height={483}
@@ -31,6 +32,47 @@ const HeroSection = ({ textContent, lang, device, download }) => (
             alt="Internxt secure cloud storage"
             draggable="false"
           />
+        </div>
+        <div className="mx-auto hidden h-[700px] w-[622px] flex-col items-center justify-center object-contain lg:flex">
+          <div className="relative flex h-full w-full flex-col px-5 py-16">
+            {/* Dog image */}
+            <RevealX
+              direction="left"
+              className="absolute bottom-[147px] -right-5 z-20 flex  overflow-hidden rounded-3xl shadow-xl"
+            >
+              <Image
+                width={287}
+                height={287}
+                src="/images/photos/Dog-image.png"
+                alt="Internxt secure cloud storage"
+                draggable="false"
+              />
+            </RevealX>
+            {/*  Girl image */}
+            <RevealX
+              direction="right"
+              className="absolute bottom-[107px] -left-5 flex overflow-hidden rounded-3xl shadow-xl"
+            >
+              <Image
+                width={287}
+                height={287}
+                src="/images/photos/Girl-image.png"
+                alt="Internxt secure cloud storage"
+                draggable="false"
+              />
+            </RevealX>
+            {/* Skater image */}
+            <RevealY className="absolute bottom-[330px] left-[147px] z-10 flex w-max rounded-3xl shadow-xl">
+              <Image
+                width={287}
+                className="shadow-xl"
+                height={287}
+                src="/images/photos/Skater-image.png"
+                alt="Internxt secure cloud storage"
+                draggable="false"
+              />
+            </RevealY>
+          </div>
         </div>
       </div>
 

@@ -228,7 +228,7 @@ export default function HeroSection({ textContent, lang }) {
             </div>
           </div>
 
-          {/* Drsktop view reduced */}
+          {/* Desktop view reduced */}
           {/* <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex lg:-mr-7 xl:ml-20 xl:hidden">
             <Image
               loading="eager"
@@ -355,7 +355,7 @@ export default function HeroSection({ textContent, lang }) {
                   <img
                     loading="lazy"
                     className="mr-10"
-                    src="../../logos/featured/hosting-advice.png"
+                    src="../../logos/featured/HostingAdvice.png"
                     draggable="false"
                     width="168"
                     height="18"
@@ -413,168 +413,173 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="mx-auto hidden w-full max-w-screen-xl overflow-hidden xl:flex">
-            <div className="featured flex w-full flex-row items-center justify-center overflow-x-auto py-8 px-4">
-              {lang === 'es' ? (
+            <div className="featured flex w-full flex-row justify-center overflow-x-auto py-8 px-4">
+              <div className="mr-12 flex items-end">
+                <p className="text-xl font-semibold text-primary">{textContent.featuredIn}:</p>
+              </div>
+              <div className="flex flex-row items-center">
+                {lang === 'es' ? (
+                  <a
+                    href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      loading="lazy"
+                      className="mr-12"
+                      src="../../logos/featured/forbes.svg"
+                      draggable="false"
+                      width="62"
+                      height="16"
+                      alt="forbes logo"
+                    />
+                  </a>
+                ) : (
+                  <a
+                    href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=7108d8d570ee"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      loading="lazy"
+                      className="mr-12"
+                      src="../../logos/featured/forbes.svg"
+                      draggable="false"
+                      width="62"
+                      height="16"
+                      alt="forbes logo"
+                    />
+                  </a>
+                )}
+
+                {lang === 'es' && (
+                  <a
+                    href="https://www.elconfidencial.com/empresas/2022-04-25/telefonica-juan-roig-google-drive-espanol_3413834/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      loading="lazy"
+                      className="mr-12"
+                      src="../../logos/featured/elconfidencial.svg"
+                      draggable="false"
+                      width="144"
+                      height="16"
+                      alt="elconfidencial logo"
+                    />
+                  </a>
+                )}
+
                 <a
-                  href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"
+                  href="https://www.techradar.com/news/how-decentralized-models-are-reimagining-the-cloud"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <img
                     loading="lazy"
                     className="mr-12"
-                    src="../../logos/featured/forbes.svg"
+                    src="../../logos/featured/techradar.svg"
                     draggable="false"
-                    width="62"
+                    width="94"
                     height="16"
-                    alt="forbes logo"
+                    alt="techradar logo"
                   />
                 </a>
-              ) : (
+
                 <a
-                  href="https://www.forbes.com/sites/alisoncoleman/2021/07/13/hard-knocks-how-a-schoolboy-rugby-injury-inspired-this-tech-entrepreneur/?sh=7108d8d570ee"
+                  href="https://techcrunch.com/2021/06/17/internxt-gets-1m-to-be-the-coinbase-of-decentralized-storage/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <img
                     loading="lazy"
                     className="mr-12"
-                    src="../../logos/featured/forbes.svg"
+                    src="../../logos/featured/techcrunch.svg"
                     draggable="false"
-                    width="62"
+                    width="113"
                     height="16"
-                    alt="forbes logo"
+                    alt="techcrunch logo"
                   />
                 </a>
-              )}
 
-              {lang === 'es' && (
                 <a
-                  href="https://www.elconfidencial.com/empresas/2022-04-25/telefonica-juan-roig-google-drive-espanol_3413834/"
+                  href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <img
                     loading="lazy"
                     className="mr-12"
-                    src="../../logos/featured/elconfidencial.svg"
+                    src="../../logos/featured/venturebeat.svg"
                     draggable="false"
-                    width="144"
+                    width="125"
                     height="16"
-                    alt="elconfidencial logo"
+                    alt="venturebeat logo"
                   />
                 </a>
-              )}
 
-              <a
-                href="https://www.techradar.com/news/how-decentralized-models-are-reimagining-the-cloud"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  loading="lazy"
-                  className="mr-12"
-                  src="../../logos/featured/techradar.svg"
-                  draggable="false"
-                  width="94"
-                  height="16"
-                  alt="techradar logo"
-                />
-              </a>
-
-              <a
-                href="https://techcrunch.com/2021/06/17/internxt-gets-1m-to-be-the-coinbase-of-decentralized-storage/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  loading="lazy"
-                  className="mr-12"
-                  src="../../logos/featured/techcrunch.svg"
-                  draggable="false"
-                  width="113"
-                  height="16"
-                  alt="techcrunch logo"
-                />
-              </a>
-
-              <a
-                href="https://venturebeat.com/2022/04/25/web3-startup-internxt-valued-at-40m-aims-to-compete-with-google-drive/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  loading="lazy"
-                  className="mr-12"
-                  src="../../logos/featured/venturebeat.svg"
-                  draggable="false"
-                  width="125"
-                  height="16"
-                  alt="venturebeat logo"
-                />
-              </a>
-
-              <a
-                href="https://www.hostingadvice.com/blog/internxt-delivers-secure-by-design-cloud-storage-with-user-privacy-locked-in/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  loading="lazy"
-                  className={'mr-12'}
-                  src="../../logos/featured/hosting-advice.png"
-                  draggable="false"
-                  width="168"
-                  height="18"
-                  alt="Hosting Advice logo"
-                />
-              </a>
-
-              <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
-                <img
-                  src="../../logos/featured/wired.svg"
-                  width={82}
-                  height={16}
-                  alt="Wired logo"
-                  className="mr-12"
-                  loading="lazy"
-                />
-              </a>
-
-              {lang === 'es' && (
                 <a
-                  href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html"
+                  href="https://www.hostingadvice.com/blog/internxt-delivers-secure-by-design-cloud-storage-with-user-privacy-locked-in/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <img
                     loading="lazy"
+                    className={'mr-12'}
+                    src="../../logos/featured/HostingAdvice.png"
+                    draggable="false"
+                    width="168"
+                    height="18"
+                    alt="Hosting Advice logo"
+                  />
+                </a>
+
+                <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
+                  <img
+                    src="../../logos/featured/wired.svg"
+                    width={82}
+                    height={16}
+                    alt="Wired logo"
                     className="mr-12"
-                    src="../../logos/featured/lavanguardia.svg"
-                    draggable="false"
-                    width="152"
-                    height="16"
-                    alt="lavanguardia logo"
-                  />
-                </a>
-              )}
-
-              {lang === 'es' && (
-                <a
-                  href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
                     loading="lazy"
-                    src="../../logos/featured/elpais.svg"
-                    draggable="false"
-                    width="82"
-                    height="16"
-                    alt="elpais logo"
                   />
                 </a>
-              )}
+
+                {lang === 'es' && (
+                  <a
+                    href="https://www.lavanguardia.com/local/valencia/20210130/6207854/valenciano-emprendedor-joven-internxt-drive.html"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      loading="lazy"
+                      className="mr-12"
+                      src="../../logos/featured/lavanguardia.svg"
+                      draggable="false"
+                      width="152"
+                      height="16"
+                      alt="lavanguardia logo"
+                    />
+                  </a>
+                )}
+
+                {lang === 'es' && (
+                  <a
+                    href="https://cincodias.elpais.com/cincodias/2021/01/26/companias/1611660127_471030.html"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      loading="lazy"
+                      src="../../logos/featured/elpais.svg"
+                      draggable="false"
+                      width="82"
+                      height="16"
+                      alt="elpais logo"
+                    />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
