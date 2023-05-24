@@ -143,7 +143,9 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             <h1 className="text-center text-6xl font-semibold">
               {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
             </h1>
-            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">{contentText.planDescription}</p>
+            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
+              {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
+            </p>
           </div>
           <div className="items center flex flex-col">
             <button
