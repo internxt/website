@@ -38,7 +38,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
             {/* Dog image */}
             <RevealX
               direction="left"
-              className="absolute bottom-[147px] -right-5 z-30 flex  overflow-hidden rounded-3xl shadow-xl"
+              className="absolute bottom-[147px] -right-5 z-20 flex  overflow-hidden rounded-3xl shadow-xl"
             >
               <Image
                 width={287}
@@ -51,7 +51,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
             {/*  Girl image */}
             <RevealX
               direction="right"
-              className="absolute bottom-[107px] -left-5 z-10 flex overflow-hidden rounded-3xl shadow-xl"
+              className="absolute bottom-[107px] -left-5 flex overflow-hidden rounded-3xl shadow-xl"
             >
               <Image
                 width={287}
@@ -62,7 +62,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
               />
             </RevealX>
             {/* Skater image */}
-            <RevealY className="absolute bottom-[330px] left-[147px] z-20 flex w-max rounded-3xl shadow-xl">
+            <RevealY className="absolute bottom-[330px] left-[147px] z-10 flex w-max rounded-3xl shadow-xl">
               <Image
                 width={287}
                 className="shadow-xl"
