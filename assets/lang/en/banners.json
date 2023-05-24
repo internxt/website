@@ -68,5 +68,12 @@
   "GoogleLPBanner": {
     "line1": "Don’t let Google cash in on your data,",
     "blueText": "keep your files private with Internxt"
+  },
+  "BusinessBanner": {
+    "line1": "Are you interested in private cloud storage",
+    "blueText": "for your business?",
+    "subtitle": "Sign up to stay informed and get notified when our business plans become available.",
+    "placeHolder": "Your email address",
+    "cta": "Subscribe"
   }
 }

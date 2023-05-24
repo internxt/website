@@ -166,7 +166,7 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
 
       {/* Download links */}
 
-      <div className="flex w-full flex-col items-center px-10 lg:py-20 lg:px-0 lg:pb-0">
+      <div className="flex w-full flex-col items-center px-10 lg:px-0">
         <h3 className="mb-12 text-center text-5xl font-semibold text-gray-100">
           {textContent.section4.title.line1} {/* <br className="hidden sm:flex" /> */}
           {textContent.section4.title.line2}

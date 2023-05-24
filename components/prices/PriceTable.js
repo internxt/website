@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
-import SpecialPriceCard from './SpecialPriceCard';
+import BusinessBanner from '../banners/BusinessBanner';
 
-export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent }) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent, setShowSnackbar }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
   const [userCount, setUserCount] = useState(2);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const banner = require('../../assets/lang/en/banners.json');
 
   function parentSetUserCount(count) {
     setUserCount(count);
@@ -164,44 +165,45 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
             </button>
           </div>
         </div>
-
-        <div className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
-          <button
-            type="button"
-            onClick={() => {
-              setBillingFrequency(1);
-              setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`);
-            }}
-            className={`rounded-lg py-1.5 px-6 font-medium ${
-              billingFrequency === 1 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
-            }`}
-          >
-            {contentText.billingFrequency.monthly}
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setBillingFrequency(12);
-              setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`);
-            }}
-            className={`rounded-lg py-1.5 px-6 font-medium ${
-              billingFrequency === 12 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
-            }`}
-          >
-            {contentText.billingFrequency.annually}
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setBillingFrequency(-1);
-            }}
-            className={`rounded-lg py-1.5 px-6 font-medium ${
-              billingFrequency === -1 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
-            } ${!individual && 'hidden'}`}
-          >
-            {contentText.billingFrequency.lifetime}
-          </button>
-        </div>
+        {individual && (
+          <div className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
+            <button
+              type="button"
+              onClick={() => {
+                setBillingFrequency(1);
+                setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`);
+              }}
+              className={`rounded-lg py-1.5 px-6 font-medium ${
+                billingFrequency === 1 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+              }`}
+            >
+              {contentText.billingFrequency.monthly}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setBillingFrequency(12);
+                setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`);
+              }}
+              className={`rounded-lg py-1.5 px-6 font-medium ${
+                billingFrequency === 12 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+              }`}
+            >
+              {contentText.billingFrequency.annually}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setBillingFrequency(-1);
+              }}
+              className={`rounded-lg py-1.5 px-6 font-medium ${
+                billingFrequency === -1 ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+              } ${!individual && 'hidden'}`}
+            >
+              {contentText.billingFrequency.lifetime}
+            </button>
+          </div>
+        )}
 
         <Transition
           show={individual}
@@ -298,39 +300,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, setIsLif
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <PriceCard
-              planType="business"
-              storage={pricings.business.GB200.storage}
-              price={billingPrice(pricings.business.GB200.price)}
-              billingFrequency={billingFrequency}
-              cta={['link', 'https://drive.internxt.com/account?tab=plans']}
-              popular={pricings.business.GB200.popular}
-              setUsers={parentSetUserCount}
-              getUsers={userCount}
-              lang={lang}
-            />
-            <PriceCard
-              planType="business"
-              storage={pricings.business.TB2.storage}
-              price={billingPrice(pricings.business.TB2.price)}
-              billingFrequency={billingFrequency}
-              cta={['link', 'https://drive.internxt.com/account?tab=plans']}
-              popular={pricings.business.TB2.popular}
-              setUsers={parentSetUserCount}
-              getUsers={userCount}
-              lang={lang}
-            />
-            <PriceCard
-              planType="business"
-              storage={pricings.business.twentyTB.storage}
-              price={billingPrice(pricings.business.twentyTB.price)}
-              billingFrequency={billingFrequency}
-              cta={['link', 'https://drive.internxt.com/account?tab=plans']}
-              popular={pricings.business.twentyTB.popular}
-              setUsers={parentSetUserCount}
-              getUsers={userCount}
-              lang={lang}
-            />
+            <BusinessBanner textContent={banner.BusinessBanner} setShowSnackbar={setShowSnackbar} />
           </div>
         </Transition>
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">
