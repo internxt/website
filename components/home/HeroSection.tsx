@@ -413,7 +413,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="mx-auto hidden w-full max-w-screen-xl overflow-hidden xl:flex">
-            <div className="featured flex w-full flex-row justify-center overflow-x-auto py-6 px-4">
+            <div className="featured flex w-full flex-row justify-center overflow-x-auto px-4 pb-8 pt-10">
               <div className="mr-12 flex">
                 <p className="text-xl font-semibold text-primary">{textContent.featuredIn}:</p>
               </div>
