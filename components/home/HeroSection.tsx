@@ -256,7 +256,7 @@ export default function HeroSection({ textContent, lang }) {
                     <img
                       loading="lazy"
                       className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="../../logos/featured/Forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
@@ -272,7 +272,7 @@ export default function HeroSection({ textContent, lang }) {
                     <img
                       loading="lazy"
                       className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="../../logos/featured/Forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
@@ -427,7 +427,7 @@ export default function HeroSection({ textContent, lang }) {
                     <img
                       loading="lazy"
                       className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="../../logos/featured/Forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
@@ -443,7 +443,7 @@ export default function HeroSection({ textContent, lang }) {
                     <img
                       loading="lazy"
                       className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="../../logos/featured/Forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
