@@ -8,16 +8,18 @@ const BusinessBanner = ({ textContent, setShowSnackbar }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      await axios.post(`api/subscribe`, {
+    await axios
+      .post(`api/subscribe`, {
         email,
+      })
+      .then((res) => {
+        setShowSnackbar('success');
+        console.log(res);
+      })
+      .catch((err) => {
+        console.error(err);
+        setShowSnackbar('error');
       });
-
-      setShowSnackbar('success');
-    } catch (error) {
-      console.error(error);
-      setShowSnackbar('error');
-    }
   };
   return (
     <section className="flex overflow-hidden bg-gradient-to-br from-blue-20 to-white">
