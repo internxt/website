@@ -109,6 +109,21 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
     }
   }, [animation]);
 
+  useEffect(() => {
+    const links = document.querySelectorAll('a');
+
+    const navbar = document.querySelector('#navbar');
+    const footer = document.querySelector('#footer');
+
+    console.log(selectedMessage);
+    links.forEach((link) => {
+      if (!navbar.contains(link) && !footer.contains(link)) {
+        link.target = '_blank';
+        link.rel = 'nofollow';
+      }
+    });
+  }, [selectedMessage]);
+
   return (
     <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
       <>
