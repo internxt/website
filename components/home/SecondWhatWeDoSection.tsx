@@ -106,7 +106,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
               <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
                   <Image
-                    src="/images/privacy/Internxt-Send.png"
+                    src="/images/privacy/Share-by-email.webp"
                     width={480}
                     height={480}
                     quality={100}
