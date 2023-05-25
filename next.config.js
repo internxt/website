@@ -1,6 +1,6 @@
 module.exports = {
   i18n: {
-    locales: ['en', 'es', 'fr', 'it', 'zh', 'rs'],
+    locales: ['en', 'es', 'fr', 'it', 'zh', 'ru'],
     defaultLocale: 'en',
   },
   webpack(config) {

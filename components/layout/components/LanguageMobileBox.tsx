@@ -3,7 +3,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CaretDown, Check, Globe } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
-const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { it: 'IT' }, { zh: 'ZH' }, { rs: 'RS' }];
+const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { it: 'IT' }, { zh: 'ZH' }, { ru: 'RU' }];
 
 export default function Example() {
   const router = useRouter();
