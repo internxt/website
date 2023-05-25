@@ -10,6 +10,7 @@ const currentLang = {
   en: 'English (EN)',
   it: 'Italiano (IT)',
   zh: '中国 (ZH)',
+  rs: 'Русский (RS)',
 };
 
 const selectedLang = {
@@ -18,16 +19,16 @@ const selectedLang = {
   en: 'EN',
   it: 'IT',
   zh: 'ZH',
+  rs: 'RS',
 };
 
 export default function LanguageBox({ darkMode }) {
   const router = useRouter();
-  const [lang, setLang] = useState<string>();
+
   const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale]);
 
   function changeLang(lang: string) {
     setCurrentLangText(selectedLang[lang]);
-    setLang(lang);
   }
 
   return (
@@ -91,6 +92,16 @@ export default function LanguageBox({ darkMode }) {
               onClick={() => changeLang('zh')}
             >
               {currentLang.zh}
+            </a>
+          </Link>
+          <Link href={router.pathname} locale="rs">
+            <a
+              className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                darkMode ? 'text-white' : 'text-cool-gray-80'
+              }`}
+              onClick={() => changeLang('rs')}
+            >
+              {currentLang.rs}
             </a>
           </Link>
         </div>

@@ -1,0 +1,110 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Privacy is a ",
+      "blueText": "fundamental human right"
+    },
+    "description": " Here, at Internxt, we believe that what humanity can achieve is extraordinary and that our products should enable society to achieve excellence. Our cloud services should not only empower people but must also respect the basic human individual rights. We are working to build a better, safer internet with respect for you, the user, at its core.",
+    "cta": "Watch the video"
+  },
+  "ManifestoSection": {
+    "section1": {
+      "title": {
+        "line1": "Why does privacy matter?"
+      },
+      "subtitle": {
+        "line1": "\"Today the Internet is controlled by technology giants offering services and products that are nothing more than a means to an end. Services that have become essential in our lives are now used to collect enormous amounts of data weaponized to profile users, monitor habits, and target ads. Convenience and progress should not come at such a high cost. We believe in a more fair, ethical, and equitable internet, where user privacy comes first.\""
+      },
+      "signature": { "line1": "Fran Villalba Segarra,", "line2": "Founder and CEO of Internxt" }
+    }
+  },
+  "FeatureSection": {
+    "title": "Internxt protects user privacy",
+    "description": "We take privacy and security extremely seriously, that's why we’ve implemented a stack of technologies and protocols to always ensure that your data remains safe and private.",
+    "cards": {
+      "openSource": {
+        "title": "Open-source code",
+        "description": "Every bit of our code is open-source and published on GitHub. All of our systems are made public knowledge and can be independently authenticated. Check it out for yourself."
+      },
+      "endToEnd": {
+        "title": "End-to-end encryption",
+        "description": "All the data you store with Internxt is AES-256 end-to-end encrypted. That means that the most powerful processor in the world would need twice the age of the universe to decrypt even a small file."
+      },
+      "zeroKnowledge": {
+        "title": "Zero-knowledge technology",
+        "description": "At absolutely no point in time are files, photos, passwords, or any kind of unencrypted raw data visible to unauthorized users or servers. You are always in complete control of who gets access."
+      },
+      "gdpr": {
+        "title": "GDPR-compliant synchronization",
+        "description": "We now conform with all GDPR provisions such as the right to privacy, the right to information, and the right to be forgotten among many others, and promise to meet all future provisions."
+      },
+      "noUnwantedAccess": {
+        "title": "No unwanted access to data",
+        "description": "Everything you store or share is encrypted before ever leaving your device, making it impossible to decrypt without permission. We can't even access your files, photos or passwords."
+      },
+      "freeTools": {
+        "title": "Free online privacy tools",
+        "description": "We want everyone to be safer online, whether you subscribe to our services or not, and that's why we've created several free online tools that anyone can use to protect themselves while browsing the web."
+      }
+    }
+  },
+  "InxtAppsSection": {
+    "title": {
+      "line1": "Apps designed to shield",
+      "line2": "your information"
+    },
+    "subtitle": "Free products from Big Tech companies aren't really free, you pay in personal data. Our products will never flip your information or sell your data. When we say free, we mean it.",
+    "square1": {
+      "title": "Drive lets you choose what to store and share",
+      "description": "Drive doesn’t access your personal data or files, instead it was designed from the ground up to give you back control over your files and protect you from data collectors and ad companies. Safeguard your storage.",
+      "cta": "Take back control over your files"
+    },
+    "square2": {
+      "title": "With Photos, privacy is always on focus",
+      "description": "Photos was developed to help you keep a synced gallery of your most perfect moments without fearing for your privacy and worrying about sudden data loss. Memories backed up, safe and sound.",
+      "cta": "Sync your photos and keepsakes"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt’s cloud storage secure?",
+        "answer": [
+          "Internxt Drive is a zero-knowledge file storage service that's built for absolute privacy and strict security. Our service doesn't access your personal data or files for ad purposes, instead is designed to give you back control over your files and protect you from data collection and advertising companies."
+        ]
+      },
+      {
+        "question": "What is the most private cloud storage?",
+        "answer": [
+          "Many cloud providers say their service is private, but Internxt goes a step above and beyond. Internxt is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Internxt cannot access your data stored in the cloud storage."
+        ]
+      },
+      {
+        "question": "Is Internxt private?",
+        "answer": [
+          "Unlike some of our competitors, we don't operate based on advertising or data collection. Your data is exclusively yours. We prioritize your security, privacy, and the security of your file and photos. Using Internxt, you can be sure you're secure."
+        ]
+      }
+    ]
+  },
+  "SecuritumSection": {
+    "title": "Internxt successfully passes independent security audit",
+    "subtitle": "Read the complete security audit reports:",
+    "links": {
+      "desk": "Internxt Desktop security audit",
+      "web": "Internxt Web security audit",
+      "mobile": "Internxt Mobile security audit"
+    }
+  },
+  "BetterTomorrowSection": {
+    "title": "Advocate for a better tomorrow",
+    "description": "It’s time to take your privacy into your own hands. We encourage everyone to become proactive in their own protection. Learn more about the right to privacy. Get involved with our curated list of reputable organizations advocating for digital rights.",
+    "cta": "Directory of digital rights organizations"
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
+  }
+}

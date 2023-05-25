@@ -224,13 +224,13 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
                     <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                      <a className="max-w-[150px] hover:text-primary">
+                      <a className="w-full max-w-[160px] hover:text-primary">
                         {textContent.FooterSection.sections.resources.comparison}
                       </a>
                     </Link>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a className="max-w-[165px] hover:text-primary">
+                      <a className="w-full max-w-[265px] hover:text-primary">
                         {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </a>
                     </Link>
@@ -241,9 +241,9 @@ export default function Footer({
                       </a>
                     </Link>
                     <Link href="/what-does-google-know-about-me" locale={lang} passHref>
-                      <a className="flex  flex-row hover:text-primary">
+                      <a className="flex  hover:text-primary">
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-primary bg-opacity-15 px-2 text-xs font-medium uppercase text-primary">
+                        <div className=" ml-2 flex flex-row items-center rounded-full bg-primary bg-opacity-15 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
                         </div>
                       </a>

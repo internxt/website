@@ -39,7 +39,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
-        {lang === 'en' ? (
+        {lang === 'en' || lang === 'rs' ? (
           <>
             <TableSection textContent={langJson.HeroSection} />
 

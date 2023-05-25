@@ -1,0 +1,236 @@
+{
+  "HeroSection": {
+    "header": "Data Privacy Directory",
+    "title": "Privacy is a fundamental human right. Internxt is just one company fighting for individuals’ right to digital privacy and the protection of personal data.",
+    "description": " Here, we have compiled an ongoing list of privacy and digital rights organizations. Each one of the organizations listed in our directory is invested in creating a free and equitable internet.",
+    "cta": "Internxt's commitment to privacy"
+  },
+  "WikiSection": {
+    "title": {
+      "line1": "Privacy and digital rights organizations",
+      "line2": ""
+    },
+    "ngos": [
+      {
+        "id": "european-digital-rights",
+        "name": "European Digital Rights",
+        "short": "EDRi",
+        "description": "European Digital Rights Initiative is a coalition of groups working to defend civil rights in the information society, specifically regarding the internet, copyright, and privacy in the European Union.",
+        "url": "https://edri.org/"
+      },
+      {
+        "id": "the-electronic-frontier-foundation",
+        "name": "The Electronic Frontier Foundation",
+        "short": "EEF",
+        "description": "EFF is a leading international digital-rights non-profit group working to protect our fundamental rights with regard to technology. Their mission is to educate the press, policymakers, and general public on digital civil liberties issues and to act as a defender of those liberties.",
+        "url": "https://www.eff.org/"
+      },
+      {
+        "id": "foundation-for-technology-and-privacy-outreach",
+        "name": "Foundation for Technology and Privacy Outreach",
+        "description": "Engages in educational initiatives aimed at increasing the public’s awareness of advances in technology, online privacy, and identity issues to foster innovation and promote consumer privacy.",
+        "url": "https://www.onlineprivacymatters.org/"
+      },
+      {
+        "id": "electronic-privacy-information-center",
+        "name": "Electronic Privacy Information Center",
+        "short": "EPIC",
+        "description": "A nonprofit research and advocacy center that produces policy research, conduct public education campaigns and engages in legislative advocacy. EPIC’s mission is to focus public attention on emerging privacy and civil liberties issues and to protect privacy, freedom of expression, and democratic values in the information age.",
+        "url": "https://epic.org/"
+      },
+      {
+        "id": "center-for-democracy-and-technology",
+        "name": "Center for Democracy and Technology",
+        "short": "CDT",
+        "description": "CDT works to promote democratic values by shaping technology policy and architecture, with a focus on the rights of the individual providing leadership and advocacy to help shape public policy and industry best practices while providing a forum for stakeholder dialogue.",
+        "url": "https://cdt.org/"
+      },
+      {
+        "id": "privacy-international",
+        "name": "Privacy International",
+        "short": "PI",
+        "description": "A registered charity committed to fighting to protect democracy, defend people's dignity, and demand accountability from institutions who breach the public trust. PI investigates and challenges government surveillance, exposes companies that enable it, and advocates for strong laws that protect privacy.",
+        "url": "https://www.privacyinternational.org/"
+      },
+      {
+        "id": "the-international-association-of-privacy-professionals",
+        "name": "The International Association of Privacy Professionals",
+        "short": "IAPP",
+        "description": "Policy neutral and the world’s largest and most comprehensive global information privacy community, the IAPP is a resource for professionals helping their organizations successfully manage privacy risks and data security.",
+        "url": "https://iapp.org/"
+      },
+      {
+        "id": "fight-for-the-future",
+        "name": "Fight for the Future",
+        "description": "Fight for the Future is a nonprofit organization that creates high-profile, web-based campaigns to ensure that the web continues to hold freedom of expression and creativity at its core—free of interference or censorship and with full privacy.",
+        "url": "https://www.fightforthefuture.org/"
+      },
+      {
+        "id": "privacy-rights-clearinghouse",
+        "name": "Privacy Rights Clearinghouse",
+        "description": "A nonprofit organization focused exclusively on consumer privacy rights and empowering individuals, the Privacy Rights Clearinghouse provides clarity on complex privacy topics by publishing extensive educational materials and consumer guides while also offering various online services, including a Complaint Center where consumers can report privacy violations and poor privacy practices.",
+        "url": "https://privacyrights.org/"
+      },
+      {
+        "id": "internet-free-expression-alliance",
+        "name": "Internet Free Expression Alliance",
+        "short": "IFEA",
+        "description": "The IFEA is a 30-member group composed of online publishers, journalistic organizations, academic groups, and other privacy-centric institutions that oppose the adoption of techniques and standards that limit the internet as anything other than an open, diverse, and democratic communication platform.",
+        "url": "http://ifea.net/"
+      },
+      {
+        "id": "future-of-privacy-forum",
+        "name": "Future of Privacy Forum",
+        "short": "FPF",
+        "description": "A collective forum for supporting privacy leadership and scholarship that advances principled data practices in support of emerging technologies. The FPF brings together industry, academics, consumer advocates, and other thought leaders to explore the challenges posed by technological innovation and develop privacy protections, ethical norms, and workable business practices.",
+        "url": "https://fpf.org/"
+      },
+      {
+        "id": "triangle-privacy-research-hub",
+        "name": "Triangle Privacy Research Hub",
+        "short": "TPRH",
+        "description": "TPRH is a nonprofit organization committed to advancing the innovative and ethical use of data by creating connections between academics, students, industry leaders, and policy advocates. Work done by TPRH explores policy approaches to allow for use of data, while protecting individual privacy, to improve issues such as access to information, education, gender and sexual violence, healthcare, and national security/law enforcement.",
+        "url": "https://www.triangleprivacyhub.org/"
+      },
+      {
+        "id": "demand-progress",
+        "name": "Demand Progress",
+        "description": "Demand Progress harnesses grassroots tactics to oppose all measures of surveillance and to protect the democratic character of the internet — and wield it to contest concentrated corporate power and hold government accountable, gaining notoriety for its campaign against the Stop Online Piracy Act (SOPA).",
+        "url": "https://demandprogress.org/"
+      },
+      {
+        "id": "noyb",
+        "name": "NOYB",
+        "description": "A nongovernmental organization for the protection of privacy on the internet, NOYB uses best practices from consumer rights groups, privacy activists, hackers, and legal tech initiatives and merges them into a stable European enforcement platform.",
+        "url": "https://noyb.eu/"
+      },
+      {
+        "id": "privaterra",
+        "name": "Privaterra",
+        "description": "Privaterra is an organization that provides technical education and support for civil society organizations (especially Human Rights NGOs) in the area of data privacy, secure communications, and information security.",
+        "url": "http://www.privaterra.org/"
+      },
+      {
+        "id": "agencia-espanola-de-proteccion-de-datos",
+        "name": "Agencia Española de Protección de Datos",
+        "short": "AEPD",
+        "description": "The AEPD is an independent public authority charged with ensuring the privacy and data protection of Spanish citizens. The agency protects citizens’ rights of access, rectification, limitation, opposition, deletion (right to be forgotten), portability, and opposition to the processing of automated decisions.",
+        "url": "https://www.aepd.es/"
+      },
+      {
+        "id": "instituto-nacional-de-ciberseguridad",
+        "name": "Instituto Nacional de Ciberseguridad",
+        "short": "INCIBE",
+        "description": "INCIBE is a state-owned commercial company, organized as a public limited company, owned by the Spanish Ministry of Economic Affairs and Digital Transformation. INCIBE is a benchmark institution concerning the development of cybersecurity, and digital trust for the general public, for RedIRIS (the Spanish academic and research network), and businesses, especially sectors of strategic importance.",
+        "url": "https://www.incibe.es/"
+      },
+      {
+        "id": "asociacion-profesional-espanola-de-privacidad",
+        "name": "Asociación Profesional Española de Privacidad",
+        "short": "APEP",
+        "description": "An association that integrates professionals in the protection of personal data and privacy, APEP’s purpose is to provide quality privacy standards, promote knowledge and social appreciation of the fundamental right to the protection of personal data, and defend the general interest of privacy experts ensuring their public recognition.",
+        "url": "https://www.apep.es/"
+      },
+      {
+        "id": "protege-tus-datos",
+        "name": "Protege tus datos",
+        "description": "A Spanish NGO, made up primarily of young professionals, specializing in new information and communication technologies with a concern for the protection of personal data on the internet. Protege Tus Datos provides computer security training, promotes regional privacy legislation, and investigates new and emerging technologies with regard to the privacy and security of users.",
+        "url": "http://www.protegetusdatos.org/"
+      },
+      {
+        "id": "derechos-digitales",
+        "name": "Derechos Digitales",
+        "description": "Derechos Digitales is an NGO that’s mission is the protection and promotion of fundamental rights in the online environment, through a comprehensive approach to the internet from the perspective of human rights, freedom of expression and privacy, as well as copyright and access to knowledge, civil and political rights, and social and cultural rights.",
+        "url": "https://www.derechosdigitales.org/"
+      },
+      {
+        "id": "datos-protegidos",
+        "name": "Datos Protegidos",
+        "description": "A Chilean nonprofit foundation with the aim of promoting healthy and safe practices to protect your information focusing on risks associated with the devices and platforms people use every day.",
+        "url": "https://datosprotegidos.org/"
+      },
+      {
+        "id": "instituto-nacional-de-proteccion-de-datos",
+        "name": "Instituto Nacional de Protección de Datos",
+        "short": "INPD",
+        "description": "A Spanish legal institution providing privacy law consulting, belonging to tugesto, offers comprehensive services for compliance with the current legislation on Personal Data Protection and the Law on Services of the Information Society and Electronic Commerce for companies and freelancers.",
+        "url": "https://tugesto.com/"
+      },
+      {
+        "id": "bits-of-freedom",
+        "name": "Bits of Freedom",
+        "description": "An independent Dutch digital rights foundation, Bits of Freedom focuses on privacy and freedom of communication in the digital age, working to influence legislation and self-regulation while empowering citizens and users by advancing the awareness, use, and development of freedom-enhancing technologies.",
+        "url": "https://www.bitsoffreedom.nl/english/"
+      },
+      {
+        "id": "the-confederation-of-european-data-protection-organisations",
+        "name": "The Confederation of European Data Protection Organisations",
+        "short": "CEDPO",
+        "description": "CEDPO aims to promote the role of the EU’s Data Protection Officer (DPO) by providing advice on balanced, practicable, and effective data protection while also contributing to a better harmonization of data protection law and practices throughout the EU/EEA.",
+        "url": "https://cedpo.eu/"
+      },
+      {
+        "id": "identity-theft-resource-center",
+        "name": "Identity Theft Resource Center",
+        "short": "ITRC",
+        "description": "ITRC is a nonprofit organization established to support victims of identity theft in resolving their cases that also works to broaden public education and awareness in the understanding of identity theft, data breaches, cybersecurity, scams, fraud, and privacy issues.",
+        "url": "https://www.idtheftcenter.org/"
+      },
+      {
+        "id": "open-source-initiative",
+        "name": "Open Source Initiative",
+        "short": "OSI",
+        "description": "OSI is a California-based non-profit promoting the importance of non-proprietary software through public-advocacy, education, and community building. OSI works to empower transparent, peer-reviewed, high-quality, and affordable software in an effort to bring an end to predatory vendor lock-in.",
+        "url": "https://opensource.org/"
+      },
+      {
+        "id": "access-now",
+        "name": "Access Now",
+        "description": "Access Now is an advocacy group fighting to defend and extend user’s digital rights. By operating a 24/7 Digital Security Hotline, organizing the annual RightsCon conference, and providing grants to grassroots organizations working to shape digital legal policy. Access Now has cemented itself as a world-wide force for good in the digital age.",
+        "url": "https://www.accessnow.org/"
+      },
+      {
+        "id": "cyberpeaceinstitute",
+        "name": "CyberPeace Institute",
+        "description": "The CyberPeace Institute nongovernmental organization whose mission is to ensure the rights of people to security, assist and protect vulnerable communities so they can be prepared for and recover from cyberattacks that aim to disrupt their work.",
+        "url": "https://www.cyberpeaceinstitute.org/"
+      }
+    ]
+  },
+  "SupportNGOsSection": {
+    "cardTitle": {
+      "line1": "Together",
+      "line2": "we make",
+      "line3": "the world a",
+      "line4": "better place."
+    },
+    "body": {
+      "title": "Internxt supports NGOs",
+      "paragraph1": "Humanity’s right to privacy must be protected at all costs. Only by working together we can ensure fundamental rights to data ownership and digital privacy for everyone.",
+      "paragraph2": {
+        "regular": "Internxt is committed to supporting nonprofits and NGOs working to make the internet a better place. If you or your team are working towards a more free and ethical internet, you can sign up for",
+        "semibold": "50% off subscription plans by contacting us."
+      },
+      "cta": {
+        "line1": "Contact us for special NGO",
+        "line2": "pricing"
+      }
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is a privacy directory?",
+        "answer": [
+          "Internxt's Privacy Organizations Directory provides digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Safety is only a click away",
+    "description": "Protect your personal data with Internxt's privacy suite.",
+    "cta": "Create account"
+  }
+}

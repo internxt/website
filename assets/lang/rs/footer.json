@@ -1,0 +1,73 @@
+{
+  "NewsletterSection": {
+    "title": "Новостная рассылка",
+    "description": "Хотите получать от нас новости, о запуске обновлений и новых инструментов? Введите свой почтовый адрес, и вы будете добавлены в рассылку!",
+    "input": "Ваш адрес электронной почты",
+    "info": "Вы можете отказаться от рассылки в любое время",
+    "cta": "Подписаться",
+    "privacy": "Подписываясь, вы соглашаетесь с нашей",
+    "privacyLink": "политикой конфиденциальности."
+  },
+  "FooterSection": {
+    "description": "Цель Internxt заключается в том, чтобы сделать свой вклад в создание приложений, уважающих права человека на конфиденциальность. Для этого мы выпускаем ряд сервисов, общая цель которых - помочь человечеству защитить это фундаментальное право.",
+    "copyright": "Copyright © 2023, Internxt Universal Technologies SL",
+    "comingSoon": "В разработке",
+    "new": "Новые",
+    "sections": {
+      "products": {
+        "title": "Продукты",
+        "drive": "Drive",
+        "photos": "Photos",
+        "send": "Send",
+        "token": "Токен",
+        "pricing": "Тарифные планы."
+      },
+      "company": {
+        "title": "Компания",
+        "about": "О нас",
+        "privacy": "Конфиденциальность",
+        "security": "Безопасность",
+        "legal": "Условия и положения",
+        "support": "Служба поддержки",
+        "WhyInternxt": "Почему Internxt?",
+        "comparison": "Сравнение"
+      },
+      "join": {
+        "title": "Присоединяйтесь к нам",
+        "signup": "Создать аккаунт",
+        "login": "Войти",
+        "community": "Сообщество",
+        "github": "GitHub",
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "youtube": "Youtube",
+        "instagram": "Instagram",
+        "mastodon": "Mastodon"
+      },
+      "resources": {
+        "title": "Ресурсы",
+        "blog": "Блог",
+        "comparison": "Сравнение облачных хранилищ",
+        "directoryOfPrivacyOrganizations": "Справочник организаций, занимающихся вопросами конфиденциальности",
+        "library": "Библиотека",
+        "writeForUs": "Написать нам",
+        "cyberSecurityGlossary": "Глоссарий по кибербезопасности",
+        "cyberAwareness": "Осведомленность о кибербезопасности",
+        "whatGoogleKnowsAboutMe": "Что Google знает обо мне?"
+      },
+      "tools": {
+        "title": "Бесплатные инструменты",
+        "temporaryEmail": "Временная почта",
+        "fileVirusScan": "Сканер файлов на наличие вирусов",
+        "passwordChecker": "Программа проверки паролей",
+        "byteConverter": "Конвертер байтов"
+      }
+    }
+  },
+  "Cookies": {
+    "title": "Internxt использует файлы cookie, чтобы ускорить загрузку сайта",
+    "link": "Подробнее о файлах cookie",
+    "close": "Понятно, закрыть"
+  }
+}

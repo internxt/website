@@ -1,0 +1,137 @@
+{
+  "HeroSection": {
+    "eyebrow": "INTERNXT",
+    "title": {
+      "line1": "Надежное облачное хранилище для",
+      "line2": "файлов, фотографий и др."
+    },
+    "cta": {
+      "title": "Получите 80% скидку на 2 ТБ",
+      "description": "Предложение действительно в течение одного года. План будет продлен по не сниженной цене на следующий год."
+    },
+    "feeds": {
+      "firstFeature": "30-дневная гарантия возврата денег",
+      "secondFeature": "100% безопасная оплата",
+      "thirdFeature": "Анонимное создание счета"
+    }
+  },
+  "tableSection": {
+    "featureSection": {
+      "firstFeature": "30-дневная гарантия возврата денег",
+      "secondFeature": "100% безопасная оплата",
+      "thirdFeature": "Анонимное создание счета"
+    }
+  },
+
+  "FaqSection": {
+    "title": "Вы что-нибудь упустили?",
+
+    "faq": [
+      {
+        "question": "Что такое Internxt?",
+        "answer": [
+          "Internxt - это облачный сервис хранения данных с нулевым разглашением, основанный на принципах конфиденциальности и безопасности."
+        ]
+      },
+      {
+        "question": "Что такое Internxt Drive?",
+        "answer": [
+          "Internxt Drive - это облачный сервис хранения данных, который позволяет загружать файлы, скачивать, делиться, синхронизировать, создавать резервные копии и получать к ним доступ с любого устройства."
+        ]
+      },
+      {
+        "question": "Что такое Internxt Photos?",
+        "answer": [
+          "Internxt Photos - это облачная фотогалерея, позволяющая безопасно хранить фотографии со всех ваших устройств."
+        ]
+      },
+      {
+        "question": "Безопасен ли Internxt?",
+        "answer": [
+          "Для обеспечения безопасности и конфиденциальности ваших данных мы используем самые современные технологии, такие как шифрование военного класса, технология нулевого разглашения, сквозное шифрование и синхронизация в соответствии с GDPR. Таким образом, только у вас есть доступ к своим данным."
+        ]
+      },
+      {
+        "question": "Какие устройства поддерживаются?",
+        "answer": [
+          "Сервисы Internxt работают на устройствах с эквивалентной или более высокой версией MacOS 10.9 Mavericks, Windows 7, Ubuntu 14.04, iOS 11 или Android 5.0 Lollipop. Если вы хотите использовать другое устройство, можно получить доступ через веб-браузер."
+        ]
+      }
+    ],
+    "getStartedSection": {
+      "title": {
+        "line1": "Безопасность и конфиденциальность за",
+        "line2": "меньше, чем 1 доллар в месяц."
+      },
+      "subtitle": "Начиная от 0,89 €/месяц",
+      "cta": "Выбрать платный план"
+    },
+    "footer": {
+      "copyright": "Copyright © 2022, Internxt Universal Technologies SL",
+      "contactUs": "Свяжитесь с нами",
+      "privacy": "Безопасность"
+    }
+  },
+  "CtaSection": {
+    "title": "Попробуйте Internxt без риска",
+    "description": "Защитите действительно важные вещи с помощью безопасного, частного и зашифрованного облачного хранилища Internxt",
+    "cta": "Выберите тарифный план сейчас"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "Private to the core",
+      "description": "We put the user and their rights first in everything that we do. Our mission is simple, to create better tools and services that return agency to the end user.",
+      "cta": "Our commitment to privacy"
+    },
+    "card2": {
+      "title": "One seamless experience",
+      "description": "Internxt is available on all platforms, even Linux! Sync your files and photos with our mobile, web, and desktop apps, each engineered to supercharge your encrypted storage on the go.",
+      "cta": "Download app"
+    },
+    "card3": {
+      "title": "Try Internxt for free!",
+      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
+      "cta": "Create free account"
+    }
+  },
+  "BestStorageSection": {
+    "title": "Built for the future",
+    "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
+    "card1": {
+      "title": "Distributed work"
+    },
+    "card2": {
+      "title": "AES-256 encryption"
+    },
+    "card3": {
+      "title": "Built-in redundancy"
+    },
+    "card4": {
+      "title": "Open-source code"
+    },
+    "card5": {
+      "title": "Independently verified"
+    }
+  },
+  "lastCtaSection": {
+    "title": "The world's most private cloud storage",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "How much does an Internxt plan cost?",
+        "answer": [
+          "Need more storage? We also offer individual plans that range from 20GB to 2TB, from as low as €0.89/month."
+        ]
+      },
+      {
+        "question": "Does Internxt have lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+        ]
+      }
+    ]
+  }
+}

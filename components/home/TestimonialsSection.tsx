@@ -10,6 +10,7 @@ const TestimonialsSection = ({ textContent }) => {
   const lang = router.locale;
   const data = textContent.cards;
   const [currentIndex, setCurrentIndex] = useState(0);
+  console.log(data[0].name.includes('Eva'));
 
   const beforeIndex =
     currentIndex !== 0 ? textContent.cards.slice(0, currentIndex) : textContent.cards.slice(4, data.length);
@@ -145,34 +146,36 @@ const TestimonialsSection = ({ textContent }) => {
       {/*Mobile/Tablet View*/}
       <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-20 xl:hidden">
         <div className="flex justify-center">
-          {textContent.cards.map((card, index) => (
-            <div key={index} className="flex w-screen justify-center px-6 shadow-subtle-hard md:w-auto">
-              <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
-                <div className="flex w-auto max-w-[300px] flex-col">
-                  <div className="flex w-[331px] flex-row">
-                    <Image
-                      src="/images/home/testimonials/Comas.webp"
-                      loading="lazy"
-                      width={53}
-                      height={56}
-                      alt="Quote symbol"
-                    />
-                    <div className="flex flex-col pl-4">
-                      <p className="text-xl font-semibold">{card.name}</p>
-                      {card.name.includes('Eva') ? (
-                        <Link href={'https://fixthephoto.com/internxt-review.html'} target="_blank">
-                          <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
-                        </Link>
-                      ) : (
-                        <p className="text-lg font-normal text-gray-50">{card.enterprise}</p>
-                      )}
+          {data.map((card, index) => {
+            return (
+              <div key={index} className="flex w-screen justify-center px-6 shadow-subtle-hard md:w-auto">
+                <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
+                  <div className="flex w-auto max-w-[300px] flex-col">
+                    <div className="flex w-[331px] flex-row">
+                      <Image
+                        src="/images/home/testimonials/Comas.webp"
+                        loading="lazy"
+                        width={53}
+                        height={56}
+                        alt="Quote symbol"
+                      />
+                      <div className="flex flex-col pl-4">
+                        <p className="text-xl font-semibold">{card.name}</p>
+                        {lang === 'en' && card.name.includes('Eva') ? (
+                          <Link href={'https://fixthephoto.com/internxt-review.html'} target="_blank">
+                            <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
+                          </Link>
+                        ) : (
+                          <p className="text-lg font-normal text-gray-50">{card.enterprise}</p>
+                        )}
+                      </div>
                     </div>
+                    <p className="pt-9 text-lg font-normal">{card.review}</p>
                   </div>
-                  <p className="pt-9 text-lg font-normal">{card.review}</p>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CaretDown, Check, Globe } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
-const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { it: 'IT' }, { zh: 'ZH' }];
+const languages = [{ en: 'EN' }, { es: 'ES' }, { fr: 'FR' }, { it: 'IT' }, { zh: 'ZH' }, { rs: 'RS' }];
 
 export default function Example() {
   const router = useRouter();
@@ -32,7 +32,7 @@ export default function Example() {
                   }
                   onClick={() => {
                     const lang = Object.keys(person)[0];
-                    router.push(router.pathname, router.pathname, { locale: lang });
+                    router.push(router.pathname, router.pathname, { locale: lang }).catch((err) => console.log(err));
                   }}
                   value={person.en || person.es || person.fr || person.it || person.zh}
                 >
