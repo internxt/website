@@ -10,7 +10,6 @@ const TestimonialsSection = ({ textContent }) => {
   const lang = router.locale;
   const data = textContent.cards;
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(data[0].name.includes('Eva'));
 
   const beforeIndex =
     currentIndex !== 0 ? textContent.cards.slice(0, currentIndex) : textContent.cards.slice(4, data.length);
