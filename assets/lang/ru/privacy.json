@@ -1,110 +1,111 @@
 {
   "HeroSection": {
-    "title": {
-      "normalText": "Privacy is a ",
-      "blueText": "fundamental human right"
+    "title": "Конфиденциальность",
+    "subtitle": {
+      "line1": "Конфиденциальность - одно из основных прав человека. Мы, в Internxt, верим, что человечество может достичь",
+      "line2": "очень многого, и что современные технологии должны помогать обществу совершенствоваться. Эти технологии",
+      "line3": "должны не только расширять возможности людей, но и вызывать доверие. Познакомьтесь с Internxt",
+      "line4": "Безопасным и защищенным облачным хранилищем",
+      "line5": "Познакомьтесь с Internxt Drive - безопасным, приватным облачным сервисом хранения данных с открытым исходным кодом, использующий сквозное шифрование."
     },
-    "description": " Here, at Internxt, we believe that what humanity can achieve is extraordinary and that our products should enable society to achieve excellence. Our cloud services should not only empower people but must also respect the basic human individual rights. We are working to build a better, safer internet with respect for you, the user, at its core.",
-    "cta": "Watch the video"
+    "cta": "Смотреть видео"
   },
   "ManifestoSection": {
     "section1": {
       "title": {
-        "line1": "Why does privacy matter?"
+        "line1": "Почему приватность",
+        "line2": "так важна."
       },
       "subtitle": {
-        "line1": "\"Today the Internet is controlled by technology giants offering services and products that are nothing more than a means to an end. Services that have become essential in our lives are now used to collect enormous amounts of data weaponized to profile users, monitor habits, and target ads. Convenience and progress should not come at such a high cost. We believe in a more fair, ethical, and equitable internet, where user privacy comes first.\""
+        "line1": "Сегодня интернет контролируют технологические гиганты, которые предлагают услуги и продукты,",
+        "line2": "к которым мы так привыкли и которые также собирают",
+        "line3": "данные о пользователях, чтоб в последствии использовать их для рекламы. Приватность не должна иметь",
+        "line4": "такой высокой цены. Мы верим в более этичный интернет, где конфиденциальность пользователей является базой."
       },
-      "signature": { "line1": "Fran Villalba Segarra,", "line2": "Founder and CEO of Internxt" }
-    }
-  },
-  "FeatureSection": {
-    "title": "Internxt protects user privacy",
-    "description": "We take privacy and security extremely seriously, that's why we’ve implemented a stack of technologies and protocols to always ensure that your data remains safe and private.",
-    "cards": {
-      "openSource": {
-        "title": "Open-source code",
-        "description": "Every bit of our code is open-source and published on GitHub. All of our systems are made public knowledge and can be independently authenticated. Check it out for yourself."
-      },
-      "endToEnd": {
-        "title": "End-to-end encryption",
-        "description": "All the data you store with Internxt is AES-256 end-to-end encrypted. That means that the most powerful processor in the world would need twice the age of the universe to decrypt even a small file."
-      },
-      "zeroKnowledge": {
-        "title": "Zero-knowledge technology",
-        "description": "At absolutely no point in time are files, photos, passwords, or any kind of unencrypted raw data visible to unauthorized users or servers. You are always in complete control of who gets access."
-      },
-      "gdpr": {
-        "title": "GDPR-compliant synchronization",
-        "description": "We now conform with all GDPR provisions such as the right to privacy, the right to information, and the right to be forgotten among many others, and promise to meet all future provisions."
-      },
-      "noUnwantedAccess": {
-        "title": "No unwanted access to data",
-        "description": "Everything you store or share is encrypted before ever leaving your device, making it impossible to decrypt without permission. We can't even access your files, photos or passwords."
-      },
-      "freeTools": {
-        "title": "Free online privacy tools",
-        "description": "We want everyone to be safer online, whether you subscribe to our services or not, and that's why we've created several free online tools that anyone can use to protect themselves while browsing the web."
-      }
-    }
-  },
-  "InxtAppsSection": {
-    "title": {
-      "line1": "Apps designed to shield",
-      "line2": "your information"
+      "signature": "Fran Villalba, генеральный директор Internxt"
     },
-    "subtitle": "Free products from Big Tech companies aren't really free, you pay in personal data. Our products will never flip your information or sell your data. When we say free, we mean it.",
-    "square1": {
-      "title": "Drive lets you choose what to store and share",
-      "description": "Drive doesn’t access your personal data or files, instead it was designed from the ground up to give you back control over your files and protect you from data collectors and ad companies. Safeguard your storage.",
-      "cta": "Take back control over your files"
-    },
-    "square2": {
-      "title": "With Photos, privacy is always on focus",
-      "description": "Photos was developed to help you keep a synced gallery of your most perfect moments without fearing for your privacy and worrying about sudden data loss. Memories backed up, safe and sound.",
-      "cta": "Sync your photos and keepsakes"
-    }
-  },
-  "FaqSection": {
-    "title": "Questions? We have answers",
-    "faq": [
-      {
-        "question": "Is Internxt’s cloud storage secure?",
-        "answer": [
-          "Internxt Drive is a zero-knowledge file storage service that's built for absolute privacy and strict security. Our service doesn't access your personal data or files for ad purposes, instead is designed to give you back control over your files and protect you from data collection and advertising companies."
-        ]
-      },
-      {
-        "question": "What is the most private cloud storage?",
-        "answer": [
-          "Many cloud providers say their service is private, but Internxt goes a step above and beyond. Internxt is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Internxt cannot access your data stored in the cloud storage."
-        ]
-      },
-      {
-        "question": "Is Internxt private?",
-        "answer": [
-          "Unlike some of our competitors, we don't operate based on advertising or data collection. Your data is exclusively yours. We prioritize your security, privacy, and the security of your file and photos. Using Internxt, you can be sure you're secure."
-        ]
+    "securitum": {
+      "title": "Internxt успешно прошел независимый аудит безопасности",
+      "subtitle": "Полный отчет по аудиту безопасности:",
+      "links": {
+        "desk": "Аудит безопасности Internxt Desktop",
+        "web": "Аудит безопасности Internxt Web",
+        "mobile": "Аудит безопасности Internxt Mobile"
       }
-    ]
-  },
-  "SecuritumSection": {
-    "title": "Internxt successfully passes independent security audit",
-    "subtitle": "Read the complete security audit reports:",
-    "links": {
-      "desk": "Internxt Desktop security audit",
-      "web": "Internxt Web security audit",
-      "mobile": "Internxt Mobile security audit"
+    },
+    "section2": {
+      "title": {
+        "line1": "Как мы обеспечиваем",
+        "line2": "конфиденциальность пользователей."
+      },
+      "subtitle": {
+        "line1": "Мы очень серьезно относимся к конфиденциальности и безопасности, поэтому у нас есть стек технологий",
+        "line2": "и протоколов для гарантии, что ваши данные остаются безопасными и конфиденциальными."
+      },
+      "square1": {
+        "title": "Шифрование военного класса",
+        "description": "Все данные, которые хранятся в аккаунте Internxt, зашифрованы с помощью AES-256. Это означает, что для расшифровки даже небольшого файла самому мощному процессору в мире потребуется вдвое больше времени, чем возраст Вселенной."
+      },
+      "square2": {
+        "title": "Технология нулевого разглашения",
+        "description": "Мы гарантируем, что файлы, фотографии, пароли и любые незашифрованные данные никогда не будут доступны неавторизованным пользователям или серверам."
+      },
+      "square3": {
+        "title": "Синхронизация в соответствии с GDPR",
+        "description": "Наше обязательство - соответствовать всем положениям GDPR, таким как конфиденциальность путем проектирования, право на информацию и право быть забытым среди многих других, а также соответствовать будущим положениям."
+      },
+      "square4": {
+        "title": "Сквозное шифрование",
+        "description": "Все, что вы храните или передаете, шифруется перед тем, как покинуть ваше устройство, что делает невозможным расшифровку без разрешения пользователя, даже мы не можем получить доступ к вашим файлам, фотографиям или паролям."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Приложения, предназначенные для",
+        "line2": "защитить вашу конфиденциальность."
+      },
+      "subtitle": {
+        "line1": "Когда вы пользуетесь бесплатными продуктами крупных технологических компаний, цена - ваши данные",
+        "line2": "Наши продукты никогда не будут продавать ваши данные, даже наши бесплатные планы за наш счет."
+      },
+      "square1": {
+        "title": "Drive позволяет вам выбирать, что хранить и чем делиться",
+        "description": "Drive не получает доступ к вашим личным данным или файлам в рекламных целях, вместо этого он разработан, чтобы вернуть вам контроль над вашими файлами и защитить вас от сбора данных и рекламных компаний.",
+        "cta": "Верните контроль над моими файлами"
+      },
+      "square2": {
+        "title": "С Photos конфиденциальность всегда в центре внимания",
+        "description": "Photos создан и разработан, чтобы помочь вам сохранить синхронизированную галерею ваших самых совершенных моментов и дать вам контроль над тем, с кем вы хотите ими поделиться.",
+        "cta": "Начать синхронизацию моих фотографий"
+      },
+      "square3": {
+        "title": "Отправляйте с абсолютной уверенностью",
+        "description": "Send позволяет быстро шифровать и передавать большие файлы, не беспокоясь о безопасности ваших документов, изображений или видео. Передавайте кому угодно в условиях полной конфиденциальности.",
+        "cta": "Отправить что-то секретное"
+      }
+    },
+    "FaqSection": {
+      "title": "Вопросы? У нас есть ответы",
+      "faq": [
+        {
+          "вопрос": "Безопасно ли облачное хранилище Internxt?",
+          "answer": [
+            "Internxt Drive - это сервис хранения файлов с нулевым уровнем знаний, созданный для обеспечения абсолютной конфиденциальности и строгой безопасности. Наш сервис не получает доступ к вашим личным данным или файлам в рекламных целях, вместо этого он разработан, чтобы вернуть вам контроль над вашими файлами и защитить вас от сбора данных и рекламных компаний."
+          ]
+        },
+        {
+          "вопрос": "Какое облачное хранилище является самым приватным?",
+          "answer": [
+            "Многие облачные провайдеры заявляют, что их услуги являются частными, но Internxt идет на шаг выше и дальше. Internxt - это служба хранения файлов с нулевым уровнем знаний, созданная для обеспечения абсолютной конфиденциальности и строгой безопасности. Internxt не может получить доступ к вашим данным, хранящимся в облачном хранилище."
+          ]
+        },
+        {
+          "Вопрос": "Является ли Internxt частной?",
+          "answer": [
+            "В отличие от некоторых наших конкурентов, мы не работаем на основе рекламы или сбора данных. Ваши данные принадлежат исключительно вам. Мы ставим во главу угла вашу безопасность, конфиденциальность и сохранность ваших файлов и фотографий. Используя Internxt, вы можете быть уверены в безопасности ваших данных."
+          ]
+        }
+      ]
     }
-  },
-  "BetterTomorrowSection": {
-    "title": "Advocate for a better tomorrow",
-    "description": "It’s time to take your privacy into your own hands. We encourage everyone to become proactive in their own protection. Learn more about the right to privacy. Get involved with our curated list of reputable organizations advocating for digital rights.",
-    "cta": "Directory of digital rights organizations"
-  },
-  "CtaSection": {
-    "title": "Try Internxt risk-free",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
   }
 }
