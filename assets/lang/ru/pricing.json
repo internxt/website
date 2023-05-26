@@ -79,44 +79,44 @@
   },
   "FirstWhatWeDoSection": {
     "card1": {
-      "title": "Private to the core",
-      "description": "We put the user and their rights first in everything that we do. Our mission is simple, to create better tools and services that return agency to the end user.",
-      "cta": "Our commitment to privacy"
+      "title": "Безопасно по умолчанию",
+      "description": "Защитите важные файлы с помощью безопасного, зашифрованного облачного хранилища Internxt",
+      "cta": "Мы придерживаемся принципов конфиденциальности"
     },
     "card2": {
-      "title": "One seamless experience",
-      "description": "Internxt is available on all platforms, even Linux! Sync your files and photos with our mobile, web, and desktop apps, each engineered to supercharge your encrypted storage on the go.",
-      "cta": "Download app"
+      "title": "Синхронизация данных",
+      "description": "Internxt доступен на всех платформах, включая Linux! Синхронизируйте файлы и фотографии на всех устройствах, включая мобильные приложения, браузер, и программы установки на компьютер, которые разработаны специально для безопасного облачного хранения данных.",
+      "cta": "Загрузить приложение"
     },
     "card3": {
-      "title": "Try Internxt for free!",
-      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
-      "cta": "Create free account"
+      "title": "Скачать Internxt бесплатно!",
+      "description": "Получите до 10 ГБ бесплатно! Получите 2 ГБ хранилища сразу после регистрации аккаунта, а затем увеличьте объем памяти до 10 ГБ, выполнив несколько условий.",
+      "cta": "Создать бесплатный аккаунт"
     }
   },
   "BestStorageSection": {
-    "title": "Built for the future",
-    "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
+    "title": "Сервис будущего",
+    "description": "Мы за безопасные онлайн сервисы для пользователей. Компании борются за будущее безопасного Интернете, и мы делаем все, чтоб быть впереди.",
     "card1": {
-      "title": "Distributed work"
+      "title": "Распределенная система"
     },
     "card2": {
-      "title": "AES-256 encryption"
+      "title": "Шифрование данных AES-256"
     },
     "card3": {
-      "title": "Built-in redundancy"
+      "title": "Резервоное копирование данных"
     },
     "card4": {
-      "title": "Open-source code"
+      "title": "Открытый исходный код"
     },
     "card5": {
-      "title": "Independently verified"
+      "title": "Независимая проверка"
     }
   },
   "lastCtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
+    "title": "Одно из самых безопасных облачных хранилищ в мире",
+    "description": "Защитите свои важные файлы с помощью безопасного, зашифрованного облачного хранилища Internxt",
+    "cta": "Выбрать тарифный план"
   },
   "SchemaMarkupQuestions": {
     "faq": [

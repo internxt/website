@@ -207,7 +207,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[180px] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.resources.title}</h3>
                   <div
@@ -241,9 +241,9 @@ export default function Footer({
                       </a>
                     </Link>
                     <Link href="/what-does-google-know-about-me" locale={lang} passHref>
-                      <a className="flex  hover:text-primary">
+                      <a className="flex  items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                        <div className=" ml-2 flex flex-row items-center rounded-full bg-primary bg-opacity-15 px-2 text-xs font-medium uppercase text-primary">
+                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
                         </div>
                       </a>
@@ -251,7 +251,7 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[180px] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
                   <div
