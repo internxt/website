@@ -1,14 +1,27 @@
 {
   "HeroSection": {
-    "header": "Data Privacy Directory",
-    "title": "Privacy is a fundamental human right. Internxt is just one company fighting for individuals’ right to digital privacy and the protection of personal data.",
-    "description": " Here, we have compiled an ongoing list of privacy and digital rights organizations. Each one of the organizations listed in our directory is invested in creating a free and equitable internet.",
-    "cta": "Internxt's commitment to privacy"
+    "title": "Data Privacy Directory",
+    "subtitle": "List of organizations that help in privacy",
+    "brief": {
+      "intro": "Internxt believes that humanity can achieve great things, that’s why our products are built to not only empower people but also to promote fairness and ethical practices online.",
+      "body": {
+        "card": {
+          "title": "Internxt fights for individuals’ right to digital privacy",
+          "cta": {
+            "line1": "Learn more"
+          }
+        },
+        "paragraph1": "Since 2020, we’ve been working hard to create an alternative cloud storage solution to provide a safer and more private online experience, without sacrificing convenience and respect for the user.",
+        "paragraph2": "We steadfastly believe that a rising tide lifts all boats, and only together can we create an online space that respects everyone.",
+        "paragraph3": "Here, we have compiled an ongoing list of privacy and digital rights organizations. Each one of the organizations listed in our directory is invested in creating a free and equitable internet.",
+        "paragraph4": "We’re proud to be counted among the institutions listed below and look forward to a long future working alongside the many organizations that advance, support, and defend privacy for all."
+      }
+    }
   },
   "WikiSection": {
     "title": {
-      "line1": "Privacy and digital rights organizations",
-      "line2": ""
+      "line1": "Privacy and digital",
+      "line2": "rights organizations"
     },
     "ngos": [
       {
@@ -227,10 +240,5 @@
         ]
       }
     ]
-  },
-  "CtaSection": {
-    "title": "Safety is only a click away",
-    "description": "Protect your personal data with Internxt's privacy suite.",
-    "cta": "Create account"
   }
 }

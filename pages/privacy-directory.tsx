@@ -42,7 +42,7 @@ const PrivacyDirectory = ({
         description={metatags[0].description}
         lang={lang}
       >
-        {!['en', 'rs'].includes(lang) ? (
+        {!['en'].includes(lang) ? (
           <>
             <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
             <HeroSection
