@@ -6,7 +6,7 @@
 /* eslint-disable no-nested-ternary */
 
 import React from 'react';
-import { getPlanId, stripeProducts } from '../../pages/api/stripe/stripeProducts';
+import stripeService from '../../pages/api/stripe/stripeProducts';
 import { checkout, goToSignUpURL } from '../../lib/auth';
 
 export default function PriceCard({
@@ -21,7 +21,6 @@ export default function PriceCard({
   popular,
   lang,
   country,
-  products,
 }) {
   const billingFrequencyList = {
     '-1': 'lifetime',
@@ -48,7 +47,7 @@ export default function PriceCard({
   };
 
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
-  const teamsBilled = (totalBilled * getUsers).toFixed(2);
+  const teamsBilled = (Number(totalBilled) * getUsers).toFixed(2);
   const MAX_USERS = 200;
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   return (
@@ -193,16 +192,16 @@ export default function PriceCard({
                   onChange={(e) => {
                     e.target.value.toString().startsWith('0')
                       ? (e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length))
-                      : setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value);
+                      : setUsers(Number(e.target.value) > MAX_USERS ? MAX_USERS : e.target.value);
                   }}
                   // eslint-disable-next-line max-len
                   onBlur={(e) => {
-                    setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value < 2 ? 2 : e.target.value);
+                    setUsers(
+                      Number(e.target.value) > MAX_USERS ? MAX_USERS : Number(e.target.value) < 2 ? 2 : e.target.value,
+                    );
                   }}
                   // eslint-disable-next-line no-unused-expressions
-                  onKeyDown={(e) => {
-                    e.key === 'Enter' || e.key === 'Escape' ? e.target.blur() : null;
-                  }}
+
                   className="absolute left-0 w-14 min-w-full appearance-none bg-transparent font-medium outline-none"
                 />
               </div>
@@ -228,14 +227,12 @@ export default function PriceCard({
               goToSignUpURL();
             } else {
               const interval = stripeInterval[billingFrequency];
-              stripeProducts()
-                .getPlanId(interval, storage)
-                .then((planId) => {
-                  checkout({
-                    planId: planId,
-                    mode: billingFrequency === -1 ? 'payment' : 'subscription',
-                  });
+              stripeService.getPlanId(interval, storage).then((planId) => {
+                checkout({
+                  planId: planId,
+                  mode: billingFrequency === -1 ? 'payment' : 'subscription',
                 });
+              });
             }
           }}
           className="flex w-full flex-row"
