@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT PHOTOS",
+    "eyebrow": "Internxt Photos",
     "title": {
       "line1": "Ваши фотографии",
-      "line2": "надежно защищены."
+      "line2": "надежно защищены"
     },
     "subtitle": {
-      "line1": "Храните фотографии в безопасном месте и делитесь ими с друзьями",
-      "line2": "С Internxt Photos, для которых конфиденциальность и безопасность всегда на первом месте ",
+      "line1": "Храните фотографии в безопасном месте и делитесь ими с друзьями ",
+      "line2": "С Internxt Photos, для которых конфиденциальность и безопасность всегда на первом месте. ",
       "line3": "Ваши фотографии - ваши и только ваши."
     },
     "availableSoon": "В разработке",
@@ -91,7 +91,7 @@
       },
       "card4": {
         "title": "Безопасность по умолчанию",
-        "subtitle": "Поскольку мы все чаще слышим о недостатках в системе безопасности и утечке информации, мы следим за тем, чтобы наши системы обеспечивали безопасность данных и файлов от злоумышленников."
+        "subtitle": "Поскольку мы все чаще слышим о недостатках в системе безопасности и утечках информации, мы следим за тем, чтобы наши системы обеспечивали безопасность данных и файлов от злоумышленников."
       }
     },
     "DownloadLinks": {
@@ -113,14 +113,9 @@
     }
   },
   "FeatureSection": {
-    "title": "Защитите свои фотографии с помощью Internxt Photos",
-    "description": "С Internxt только вы имеете абсолютный доступ к своим файлам. Храните, делитесь и создавайте резервные копии своих данных в полной конфиденциальности.",
-    "cta": "Начать"
-  },
-  "CtaSection": {
-    "title": "Попробуйте Internxt без риска",
-    "description": "Защитите действительно важные вещи с помощью безопасного, частного и зашифрованного облачного хранилища Internxt",
-    "cta": "Выберите тарифный план сейчас"
+    "title": "Protect your pics with Internxt Photos",
+    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
+    "cta": "Get started"
   },
   "FaqSection": {
     "title": "Появились вопросы? У нас есть ответы",
@@ -140,5 +135,10 @@
         ]
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
   }
 }
