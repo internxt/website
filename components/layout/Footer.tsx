@@ -5,7 +5,7 @@ import { UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import setUTM from '../../lib/conversions';
 import { useRouter } from 'next/router';
-import { Globe } from 'phosphor-react';
+import { Globe } from '@phosphor-icons/react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import LanguageMobileBox from './components/LanguageMobileBox';
 
@@ -37,6 +37,7 @@ export default function Footer({
 
   return (
     <section
+      id="footer"
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
@@ -174,10 +175,6 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.company.support}
                     </p>
-
-                    <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.comparison}</a>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -226,9 +223,14 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
+                    <Link href="/cloud-storage-comparison" locale={lang} passHref>
+                      <a className="max-w-[150px] hover:text-primary">
+                        {textContent.FooterSection.sections.resources.comparison}
+                      </a>
+                    </Link>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a className="max-w-[150px] line-clamp-2 hover:text-primary">
+                      <a className="max-w-[165px] hover:text-primary">
                         {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </a>
                     </Link>
@@ -236,6 +238,14 @@ export default function Footer({
                     <Link href="/cyber-awareness" locale={lang} passHref>
                       <a className="hover:text-primary">
                         {textContent.FooterSection.sections.resources.cyberAwareness}
+                      </a>
+                    </Link>
+                    <Link href="/what-does-google-know-about-me" locale={lang} passHref>
+                      <a className="flex  flex-row hover:text-primary">
+                        {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
+                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-primary bg-opacity-15 px-2 text-xs font-medium uppercase text-primary">
+                          {textContent.FooterSection.new}
+                        </div>
                       </a>
                     </Link>
                   </div>
@@ -570,6 +580,10 @@ export default function Footer({
 
                       <Link href="/cyber-awareness" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      </Link>
+
+                      <Link href="/what-does-google-know-about-me" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

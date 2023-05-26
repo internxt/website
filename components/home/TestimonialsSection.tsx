@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { CaretLeft, CaretRight } from 'phosphor-react';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import RevealY from '../components/RevealY';
+import { useRouter } from 'next/router';
 
 const TestimonialsSection = ({ textContent }) => {
+  const router = useRouter();
+  const lang = router.locale;
   const data = textContent.cards;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -85,7 +88,7 @@ const TestimonialsSection = ({ textContent }) => {
                 />
                 <div className="flex flex-col pl-4">
                   <p className="text-xl font-semibold">{card.name}</p>
-                  {card.name.includes('Eva') ? (
+                  {card.name.includes('Eva') && lang === 'en' ? (
                     <div>
                       <a
                         target={'_blank'}
@@ -140,7 +143,7 @@ const TestimonialsSection = ({ textContent }) => {
       </RevealY>
 
       {/*Mobile/Tablet View*/}
-      <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-6 xl:hidden">
+      <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-20 xl:hidden">
         <div className="flex justify-center">
           {textContent.cards.map((card, index) => (
             <div key={index} className="flex w-screen justify-center px-6 shadow-subtle-hard md:w-auto">

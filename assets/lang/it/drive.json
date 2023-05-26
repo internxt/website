@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT DRIVE",
+    "eyebrow": "Internxt Drive",
     "title": {
       "line1": "L'archiviazione cloud più sicura",
       "line2": "per tutti i tuoi file, le tue foto e altro."
@@ -11,6 +11,7 @@
       "line3": "e file sharding, per fare in modo che solo tu abbia il controllo sui tuoi file e sui tuoi dati."
     },
     "DownloadLinks": {
+      "downloadTitle": "Scarica Internxt Drive",
       "or": "o",
       "downloadFor": "Scarica per",
       "orDownloadFor": "O scarica per",
@@ -42,10 +43,10 @@
         "line3": "tutti i tuoi dispositivi."
       },
       "subtitle": {
-        "line1": "Accedi in modo sicuro a tutti i tuoi",
-        "line2": "file dal tuo computer, dal tuo smartphone, tablet",
-        "line3": "o da qualsiasi dispositivo dotato di connessione",
-        "line4": "a Internet, tramite una app di archiviazione",
+        "line1": "Accedi in modo sicuro a tutti i tuoi ",
+        "line2": "file dal tuo computer, dal tuo smartphone, tablet ",
+        "line3": "o da qualsiasi dispositivo dotato di connessione ",
+        "line4": "a Internet, tramite una app di archiviazione ",
         "line5": "cloud che ti assicura la massima sicurezza possibile."
       }
     },
@@ -148,6 +149,17 @@
       "MacOS": "Mac"
     }
   },
+  "FeatureSection": {
+    "title": "Proteggi i tuoi file con Internxt Drive",
+    "description": "Con Internxt, l'accesso completo ai vostri file è unico. Archiviate, condividete e fate il backup dei vostri dati con la massima privacy",
+    "cta": "start"
+  },
+  "CtaSection": {
+    "title": "Prova Internxt senza rischi",
+    "description": "Proteggi ciò che è veramente importante con il cloud storage sicuro, privato e criptato di Internxt",
+    "cta": "Seleziona un piano ora"
+  },
+
   "FaqSection": {
     "title": "Domande? Abbiamo le risposte",
     "faq": [

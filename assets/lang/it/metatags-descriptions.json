@@ -10,8 +10,13 @@
     "description": "Archiviate, condividete ed eseguite il backup di file e foto nel cloud con Internxt Drive. Archiviazione di file e backup online crittografati end-to-end e open-source."
   },
   {
+    "id": "what-google-knows",
+    "title": "What Does Google Know About Me | Internxt",
+    "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
+  },
+  {
     "id": "photos",
-    "title": "Internxt Photos – Archiviazione sicura delle foto e backup delle immagini",
+    "title": "Internxt Photos – Archiviazione sicura delle foto",
     "description": "Salvate, visualizzate e sincronizzate le vostre foto e immagini su tutti i dispositivi con Internxt Photos. Condivisione di foto e backup di immagini nel cloud crittografato end-to-end."
   },
   {
@@ -76,7 +81,7 @@
   },
   {
     "id": "black-friday",
-    "title": "Offerta del venerdì nero di Internxt – Vendita di spazio di archiviazione cloud!",
+    "title": "Offerta del venerdì nero di Internxt",
     "description": "Internxt Black Friday Deal 2022: iscriviti o effettua l'upgrade e ottieni uno sconto di oltre la metà sull'abbonamento da 2 TB di Internxt per 1 anno. Approfittate dello sconto del Black Friday sul piano di cloud storage più grande di Internxt oggi stesso!"
   },
   {
@@ -106,7 +111,7 @@
   },
   {
     "id": "privacy-directory",
-    "title": "Internxt – Elenco di organizzazioni, istituzioni e ONG che si occupano di privacy",
+    "title": "Internxt – Elenco di organizzazioni e ONG di privacy",
     "description": "Elenco delle organizzazioni per i diritti digitali, delle istituzioni e delle ONG che lavorano al fianco di Internxt per promuovere, sostenere e difendere la privacy di tutti."
   },
   {

@@ -38,11 +38,15 @@
   },
   "GeneralBanner": {
     "title": "Antes de que te vayas...",
-    "description": "Obtén un 90% de descuento en nuestro plan de 2TB durante un año.",
+    "description": "Obtén un 80% de descuento en nuestro plan de 2TB durante un año.",
     "cta": "Sí, quiero la oferta",
     "ctaCancel": "No, gracias"
   },
   "AndroidSmartBanner": {
     "title": "Descargar Internxt Drive para Android"
+  },
+  "GoogleLPBanner": {
+    "line1": "Don’t let Google cash in on your data,",
+    "blueText": "keep your files private with Internxt"
   }
 }

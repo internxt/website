@@ -10,6 +10,11 @@
     "description": "Store, share, and back up your files and photos to the cloud with Internxt Drive. Open-source and end-to-end encrypted file storage and online backup."
   },
   {
+    "id": "what-google-knows",
+    "title": "What Does Google Know About Me | Internxt",
+    "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
+  },
+  {
     "id": "photos",
     "title": "Internxt Photos – Safe Photo Storage & Image Backup",
     "description": "Save, view, and sync your photos and images across all devices with Internxt Photos. End-to-end encrypted cloud photo sharing and image backup."
@@ -46,8 +51,8 @@
   },
   {
     "id": "temporary-email",
-    "title": "Internxt – Free Temporary Email",
-    "description": "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s Free Temporary Email. Internxt provides temporary, secure, anonymous and free email address."
+    "title": "Temp Mail - Free Temporary Email",
+    "description": "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s Free Temporary Email. Teamp Mail provides temporary, secure, anonymous and free email address."
   },
   {
     "id": "converter-tool",

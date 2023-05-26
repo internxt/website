@@ -10,6 +10,11 @@
     "description": "Internxt Drive est une alternative privée et sécurisée à Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive et MediaFire. Cryptage à connaissance zéro, distribué, stockage en nuage blockchain."
   },
   {
+    "id": "what-google-knows",
+    "title": "What Does Google Know About Me | Internxt",
+    "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
+  },
+  {
     "id": "photos",
     "title": "Internxt – Photos",
     "description": "Alternative cryptée, privée, gratuite et sécurisée à zéro connaissance à Google Photos. Stockez gratuitement vos photos sur le cloud en toute sécurité."
@@ -41,8 +46,8 @@
   },
   {
     "id": "virus-scanner",
-    "title": "Internxt – Analyseur de virus de fichiers en ligne gratuit",
-    "description": "Outil gratuit pour analyser les fichiers à la recherche de virus et de logiciels malveillants. Protégez vos documents personnels, vos données et votre matériel contre la fraude en ligne grâce à une analyse rapide et facile."
+    "title": "Internxt – Scanner de Virus en ligne",
+    "description": "Outil gratuit de recherche de virus et de logiciels malveillants dans les fichiers. Protégez vos documents personnels et vos données grâce à une analyse simple et rapide."
   },
   {
     "id": "temporary-email",
@@ -86,13 +91,13 @@
   },
   {
     "id": "privacy-directory",
-    "title": "Internxt – Répertoire des organisations, institutions et ONG de protection de la vie privée",
+    "title": "Internxt – Répertoire des organisations de protection de la vie privée",
     "description": "Annuaire des organisations, institutions et ONG de défense des droits numériques travaillant aux côtés d'Internxt pour faire progresser, soutenir et défendre la vie privée pour tous."
   },
   {
     "id": "password-checker",
-    "title": "Internxt – Vérificateur de mot de passe gratuit et sécurisé",
-    "description": "Vérificateur de sécurité de mot de passe gratuit. Vérifiez la force de vos mots de passe avec l'outil en ligne sécurisé d'Internxt."
+    "title": "Internxt – Vérificateur de Mot de Passe ",
+    "description": "Avec le vérificateur de sécurité des mots de passe d'Internxt, vous pouvez tester votre mot de passe et vous assurer qu'il est aussi sûr que possible."
   },
   {
     "id": "cyber-awareness",

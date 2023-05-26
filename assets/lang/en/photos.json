@@ -1,17 +1,18 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT PHOTOS",
+    "eyebrow": "Internxt Photos",
     "title": {
       "line1": "Your picture-perfect moments,",
-      "line2": "under lock and key."
+      "line2": "safe under lock and key"
     },
     "subtitle": {
-      "line1": "Relive, share and keep your best memories safe all in one place.",
-      "line2": "With Internxt Photos focusing on privacy and security",
-      "line3": "your photos are yours and yours alone."
+      "line1": "Relive, share, and keep your best memories safe, all in one place. ",
+      "line2": "Let Internxt Photos focus on privacy and security, ",
+      "line3": "so you can concentrate on capturing the moments that matter to you."
     },
     "availableSoon": "Available soon",
     "DownloadLinks": {
+      "downloadTitle": "Download Internxt Drive",
       "or": "or",
       "downloadFor": "Download for",
       "orDownloadFor": "Or download for",
@@ -32,15 +33,15 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "A synced gallery for",
-        "line2": "all your devices."
+        "line1": "A synced gallery on",
+        "line2": "all your devices"
       }
     },
     "section2": {
       "title": {
         "line1": "Upload from your",
         "line2": "smartphone, access",
-        "line3": "wherever you want."
+        "line3": "wherever you want"
       },
       "subtitle": {
         "line1": "Your photo library will always be up to",
@@ -53,7 +54,7 @@
       "title": {
         "line1": "Share your photos",
         "line2": "with your friends",
-        "line3": "and family."
+        "line3": "and family"
       },
       "subtitle": {
         "line1": "Generate a share link so you can",
@@ -63,14 +64,14 @@
     },
     "section4": {
       "title": {
-        "line1": "Start syncing your photos",
-        "line2": "in total privacy."
+        "line1": "Sync your photos",
+        "line2": "in total privacy"
       }
     },
     "section5": {
       "title": {
-        "line1": "All your photos.",
-        "line2": "Secure and private."
+        "line1": "All your files,",
+        "line2": "secure and private"
       },
       "subtitle": {
         "line1": "Privacy and security are our core, we don’t run our business on data or advertising, but",
@@ -78,19 +79,19 @@
       },
       "cta": "Our commitment on privacy",
       "card1": {
-        "title": "Military-grade encryption.",
+        "title": "Military-grade encryption",
         "subtitle": "We take your privacy very seriously, that’s why your photos are encrypted so only you can access your photos."
       },
       "card2": {
-        "title": "Zero-knowledge technology.",
+        "title": "Zero-knowledge technology",
         "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
       },
       "card3": {
-        "title": "Privacy by design.",
+        "title": "Privacy by design",
         "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
       },
       "card4": {
-        "title": "Secure from the core.",
+        "title": "Secure from the core",
         "subtitle": "As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers."
       }
     },
@@ -112,6 +113,11 @@
       "MacOS": "Mac"
     }
   },
+  "FeatureSection": {
+    "title": "Protect your pics with Internxt Photos",
+    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
+    "cta": "Get started"
+  },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
@@ -130,5 +136,10 @@
         ]
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
   }
 }

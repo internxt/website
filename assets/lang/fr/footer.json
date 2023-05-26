@@ -29,8 +29,7 @@
         "security": "Securité",
         "legal": "Mentions légales",
         "support": "Support",
-        "whyInternxt": "¿Por qué Internxt?",
-        "comparison": "Comparatif"
+        "whyInternxt": "¿Por qué Internxt?"
       },
       "join": {
         "title": "Rejoindre",
@@ -48,18 +47,20 @@
       "resources": {
         "title": "Ressources",
         "blog": "Blog",
-        "directoryOfPrivacyOrganizations": "Annuaire des organismes de protection de la vie privée",
+        "directoryOfPrivacyOrganizations": "Organismes de protection de la vie privée",
         "library": "Biblioteca",
         "writeForUs": "Escribe para nosotros",
         "cyberSecurityGlossary": "Glosario de ciberseguridad",
-        "cyberAwareness": "Cyber Awareness"
+        "cyberAwareness": "Cyber Awareness",
+        "whatGoogleKnowsAboutMe": "What Google Knows",
+        "comparison": "Comparaison des services en nuage"
       },
       "tools": {
         "title": "Free tools",
         "temporaryEmail": "Courriel Temporaire",
-        "fileVirusScan": "Scanner de virus",
-        "passwordChecker": "Vérifier mot de passe",
-        "byteConverter": "Convertisseur d'octets"
+        "fileVirusScan": "Scanner de Virus",
+        "passwordChecker": "Vérifier Mot de Passe",
+        "byteConverter": "Convertisseur d'Octets"
       },
       "language": "Langue"
     }

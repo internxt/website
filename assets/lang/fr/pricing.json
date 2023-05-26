@@ -23,18 +23,6 @@
     "faq": {
       "faq": [
         {
-          "question": "Est-ce que je conserverai la réduction à la fin de mon plan ?",
-          "answer": [
-            "La réduction n'est appliquée que pour la première année complète de service. Par conséquent, vous aurez accès à notre plan d'abonnement de 2 To à ce prix réduit pendant un an seulement. Après un an, votre compte sera automatiquement renouvelé au prix de l'abonnement standard de 2 To pour l'année suivante."
-          ]
-        },
-        {
-          "question": "Combien coûtera le renouvellement du plan à prix réduit après la première année ?",
-          "answer": [
-            "Le plan de 2 To coûte 9,99 €/mois payé mensuellement ou 8,99 €/mois (107,88 €/an) payé annuellement. Vous pouvez également choisir autres plans après la première année. Des informations supplémentaires sur les plans et les prix sont indiquées ci-dessus."
-          ]
-        },
-        {
           "question": "Internxt peut-il accéder à mes fichiers ?",
           "answer": [
             "Non. Internxt ne peut pas accéder à vos fichiers, photos ou données.",

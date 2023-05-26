@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT PHOTOS",
+    "eyebrow": "Internxt Photos",
     "title": {
       "line1": "Vos meilleurs souvenirs en",
       "line2": "sécurité dans le nuage."
@@ -112,6 +112,11 @@
       "MacOS": "Mac"
     }
   },
+  "FeatureSection": {
+    "title": "Protégez vos photos avec Internxt Photos",
+    "description": "Avec Internxt, vous êtes le seul à avoir accès à vos fichiers. Partagez et sauvegardez vos données en toute confidentialité",
+    "cta": "Démarrer"
+  },
   "FaqSection": {
     "title": "Questions ? Nous avons les réponses",
     "faq": [
@@ -130,5 +135,10 @@
         ]
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Essayez Internxt sans risque",
+    "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
+    "cta": "Sélectionnez un plan"
   }
 }

@@ -1,4 +1,4 @@
-import { DotsThree } from 'phosphor-react';
+import { DotsThree } from '@phosphor-icons/react';
 import React from 'react';
 
 const FileItem = ({

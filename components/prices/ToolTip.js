@@ -70,11 +70,14 @@ export default function Tooltip({ children, title, subtitle, popsFrom, style = '
         } ${visible ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}
       >
         <div
-          className={`w-max rounded-lg px-4 py-1.5 text-center ${
+          className={`flex w-max flex-col rounded-lg px-4 py-1.5 text-center ${
             style === 'dark' ? 'bg-gray-90' : 'bg-primary bg-opacity-10'
           }`}
         >
-          <h1 className={`text-base ${style === 'dark' ? 'text-white' : 'text-primary'}`}>{title}</h1>
+          <h1 className={`text-base ${style === 'dark' ? 'text-white' : 'text-primary'}`}>
+            {title}
+            {children}
+          </h1>
           {subtitle && (
             <h2 className={`-mt-1 text-sm ${style === 'dark' ? 'text-white opacity-50' : 'text-gray-50'}`}>
               {subtitle}
@@ -88,7 +91,6 @@ export default function Tooltip({ children, title, subtitle, popsFrom, style = '
           style={{ clipPath: triangle, marginTop: popsFrom === 'top' ? '-1px' : undefined }}
         ></div>
       </div>
-      {children}
     </div>
   );
 }

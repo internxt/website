@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from 'phosphor-react';
+import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@phosphor-icons/react';
 import CtaSection from './CtaSection';
 import Image from 'next/image';
 import SignUpBanner from '../banners/SignUpBanner';

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import zxcvbn from 'zxcvbn';
-import { Info, Eye, EyeSlash, WarningCircle } from 'phosphor-react';
+import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '../../lib/checker';
 
 const HeroSection = ({ textContent }) => {

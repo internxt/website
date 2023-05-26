@@ -1,10 +1,10 @@
 {
   "HeroSection": {
-    "eyebrow": "INTERNXT DRIVE",
+    "eyebrow": "Internxt Drive",
     "title": {
-      "line1": "El cloud storage más ",
-      "line2": "seguro para tus archivos,",
-      "line3": "fotos y mucho más."
+      "line1": "El cloud storage más seguro",
+      "line2": "para tus archivos fotos y mucho más.",
+      "line3": ""
     },
     "subtitle": {
       "line1": "Sincronizar, hacer backups y compartir tus archivos en total privacidad no puede ser más fácil.",
@@ -12,6 +12,7 @@
       "line3": "grado militar y fragmentación de archivos, para que solo tú tengas el control de tus archivos y datos."
     },
     "DownloadLinks": {
+      "downloadTitle": "Descarga Internxt Drive",
       "or": "o",
       "downloadFor": "Descargar para",
       "orDownloadFor": "O descargar para",
@@ -32,8 +33,8 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "Todo tipo de archivos.",
-        "line2": "En todos tus dispositivos."
+        "line1": "Todo tipo de archivos,",
+        "line2": "en todos tus dispositivos"
       }
     },
     "section2": {
@@ -43,11 +44,11 @@
         "line3": "tus dispositivos."
       },
       "subtitle": {
-        "line1": "Accede de forma segura a todos tus",
-        "line2": "archivos desde tu ordenador,",
-        "line3": "smartphone, tableta o cualquier tipo",
-        "line4": "de dispositivo con conexión a internet",
-        "line5": "a través de la aplicación cloud storage",
+        "line1": "Accede de forma segura a todos tus ",
+        "line2": "archivos desde tu ordenador, ",
+        "line3": "smartphone, tableta o cualquier tipo ",
+        "line4": "de dispositivo con conexión a internet ",
+        "line5": "a través de la aplicación cloud storage ",
         "line6": "más segura."
       }
     },
@@ -109,8 +110,8 @@
     },
     "section7": {
       "title": {
-        "line1": "Todos tus archivos.",
-        "line2": "Seguros y privados."
+        "line1": "Todos tus archivos,",
+        "line2": "seguros y privados."
       },
       "subtitle": {
         "line1": "La privacidad y la seguridad están en nuestro núcleo, nuestro negocio no se",
@@ -152,6 +153,16 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "FeatureSection": {
+    "title": "Protege tus archivos con Internxt Drive",
+    "description": "Con Internxt, eres único con acceso total a tus archivos. Almacena, comparte y haz copias de seguridad de tus datos con total privacidad.",
+    "cta": "Empezar"
+  },
+  "CtaSection": {
+    "title": "Prueba Internxt sin riesgos",
+    "description": "Protege lo realmente importante con el almacenamiento en la nube seguro, privado y cifrado de Internxt",
+    "cta": "Selecciona un plan ahora"
   },
   "FaqSection": {
     "title": "¿Preguntas? Tenemos respuestas",

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Copy, Info, Trash, Tray } from 'phosphor-react';
+import { Copy, Info, Trash, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 import { createEmail } from './services/api/temp-api';
 import ShowSnackbar from '../ShowSnackbar';

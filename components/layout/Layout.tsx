@@ -37,14 +37,13 @@ export default function Layout({
   isProduction = process.env.NODE_ENV === 'production',
 }: // lang
 LayoutProps) {
-  const excludedURL = ['/pricing', '/black-friday'];
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = !excludedURL.includes(router.pathname);
+  const showBanner = true;
   const langToUpperCase = lang.toLocaleUpperCase();
-  const [installPrompt, setInstallPrompt] = React.useState<any>();
+  const [installPrompt, setInstallPrompt] = React.useState<Event>();
 
   const slogan = {
     en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -56,7 +55,6 @@ LayoutProps) {
   useEffect(() => {
     // Capture event and defer
     window.addEventListener('beforeinstallprompt', function (e) {
-      console.log('beforeinstallprompt is fired');
       e.preventDefault();
       setInstallPrompt(e);
     });
@@ -72,9 +70,13 @@ LayoutProps) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
-        <link rel="alternate" hrefLang={lang} href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
-        <link rel="alternate" hrefLang="x-default" href={INTERNXT_URL} />
+        <link rel="canonical" href={`${INTERNXT_URL}${pathname}`} />
+        <link rel="alternate" hrefLang={'en'} href={`${INTERNXT_URL}${pathname}`} />
+        <link rel="alternate" hrefLang={'it'} href={`${INTERNXT_URL}/it${pathname}`} />
+        <link rel="alternate" hrefLang={'es'} href={`${INTERNXT_URL}/es${pathname}`} />
+        <link rel="alternate" hrefLang={'zh'} href={`${INTERNXT_URL}/zh${pathname}`} />
+        <link rel="alternate" hrefLang={'fr'} href={`${INTERNXT_URL}/fr${pathname}`} />
+        <link rel="alternate" hrefLang="x-default" href={`${INTERNXT_URL}${pathname}`} />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -130,9 +132,12 @@ LayoutProps) {
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
           {/* <SquareBanner /> */}
+          <div className="z-50 flex flex-col pt-[64px] md:pt-[54px]">{children}</div>
         </>
-      ) : null}
-      {children}
+      ) : (
+        children
+      )}
+
       {/* <BFBanner /> */}
     </>
   );

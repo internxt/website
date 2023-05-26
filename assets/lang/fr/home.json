@@ -8,6 +8,7 @@
       "title": "Obtenez jusqu'à 10 Go",
       "subtitle": "Gratuitement !"
     },
+    "featuredIn": "Présenté dans",
     "SignUp": {
       "cta": {
         "title": "Démarrer avec Internxt",
@@ -33,7 +34,7 @@
           }
         },
         "submit": {
-          "get": "Obtenez jusqu'à 10 Go",
+          "get": "Obtenez 10 Go",
           "free": "Gratuit !"
         }
       }

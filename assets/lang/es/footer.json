@@ -29,8 +29,7 @@
         "security": "Seguridad",
         "legal": "Legal",
         "support": "Soporte",
-        "whyInternxt": "¿Por qué Internxt?",
-        "comparison": "Comparativa"
+        "whyInternxt": "¿Por qué Internxt?"
       },
       "join": {
         "title": "Únete",
@@ -48,12 +47,13 @@
       "resources": {
         "title": "Recursos",
         "blog": "Blog",
-        "directoryOfPrivacyOrganizations": "Directorio de Organizaciones de Privacidad",
+        "comparison": "Comparación de servicios en la nube",
+        "directoryOfPrivacyOrganizations": "Directorio de organizaciones de privacidad",
         "library": "Biblioteca",
         "writeForUs": "Escribe para nosotros",
         "cyberSecurityGlossary": "Glosario de ciberseguridad",
-
-        "cyberAwareness": "Cyber Awareness"
+        "cyberAwareness": "Cyber Awareness",
+        "whatGoogleKnowsAboutMe": "What Google Knows"
       },
       "tools": {
         "title": "Herramientas gratuitas",
