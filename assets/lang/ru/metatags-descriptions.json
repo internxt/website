@@ -1,127 +1,122 @@
 [
   {
     "id": "home",
-    "title": "Internxt – Private & Secure Cloud Storage",
-    "description": "Stand for privacy, switch to Internxt. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more."
+    "title": "Internxt - надежное облачное хранилище",
+    "description": "Выбирайте надежность, переходите на Internxt. Облачные сервисы для хранения данных Internxt с открытым исходным кодом защищают ваше право на конфиденциальность. Internxt Drive, Photos, Send и многое другое."
   },
   {
     "id": "drive",
-    "title": "Internxt Drive – Private & Secure Cloud Storage",
-    "description": "Store, share, and back up your files and photos to the cloud with Internxt Drive. Open-source and end-to-end encrypted file storage and online backup."
-  },
-  {
-    "id": "what-google-knows",
-    "title": "What Does Google Know About Me | Internxt",
-    "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
+    "title": "Internxt Drive - безопасное облачное хранилище",
+    "description": "Храните файлы и фотографии, делитесь ими и создавайте резервные копии в облаке с помощью Internxt Drive. Хранилище файлов с открытым исходным кодом и сквозным шифрованием, а также резервное копирование онлайн."
   },
   {
     "id": "photos",
-    "title": "Internxt Photos – Safe Photo Storage & Image Backup",
-    "description": "Save, view, and sync your photos and images across all devices with Internxt Photos. End-to-end encrypted cloud photo sharing and image backup."
+    "title": "Internxt Photos - безопасное хранение и резервное копирование фотографий",
+    "description": "Сохраняйте, просматривайте и синхронизируйте фотографии на всех устройствах с помощью Internxt Photos. Зашифрованный облачный обмен фотографиями и резервное копирование."
   },
   {
     "id": "pricing",
-    "title": "Internxt Pricing – Get Up To 10GB Free!",
-    "description": "Sign up for an Internxt secure cloud storage subscription and get access to our monthly newsletter filled with the latest tech news and updates."
+    "title": "Internxt Pricing - Получите до 10 ГБ бесплатно!",
+    "description": "Зарегестрируйте аккаунт в Internxt и получите доступ к нашей ежемесячной рассылке с последними новостями и обновлениями."
   },
   {
     "id": "about",
-    "title": "Internxt – About us",
-    "description": "Meet Internxt's Team. Fran Villalba Segarra, Founder and CEO at Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+    "title": "Internxt - О нас",
+    "description": "Познакомьтесь с командой Internxt. Фран Виллальба Сегарра, основатель и генеральный директор Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
   },
   {
     "id": "token",
-    "title": "Internxt – Token, the essence that moves Internxt.",
-    "description": "Internxt token. Learn all about our cryptocurrency, INXT. Buy Internxt Tokens from Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
+    "title": "Internxt - токен движет Internxt",
+    "description": "Токен Internxt. Узнайте все о нашей криптовалюте INXT. Покупайте токены Internxt на Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
   },
   {
     "id": "legal",
-    "title": "Internxt – Legal Terms and Conditions of use",
-    "description": "Internxt legal terms and conditions of use. Read all terms and conditions where we explain how we process your data."
+    "title": "Internxt - условия использования",
+    "description": "Internxt - юридические условия использования. Прочитайте все положения и условия об обработке ваших данных."
   },
   {
     "id": "privacy",
-    "title": "Internxt Privacy – Free Privacy Tools & Resources",
-    "description": "Free tools to protect your privacy online: Password Checker, Virus Scanner, Directory of Privacy Organizations, and more. Internxt defends your right to privacy."
+    "title": "Internxt - Бесплатные инструменты для защиты вашей конфиденциальности",
+    "description": "Бесплатные инструменты для защиты вашей конфиденциальности в Интернете: Проверка паролей, сканер вирусов, каталог организаций по защите данных и многое другое. Internxt защищает ваше право на конфиденциальность."
   },
   {
     "id": "virus-scanner",
-    "title": "Internxt – Free Online File Virus Scanner",
-    "description": "Free tool for scanning files for viruses and malware. Protect your personal documents, data, and hardware from online fraud with a quick and easy scan."
+    "title": "Internxt - Бесплатный онлайн сканер файлов на наличие вирусов",
+    "description": "Бесплатный инструмент для сканирования файлов на наличие вирусов и вредоносных программ. Защитите свои личные документы, данные и оборудование от утечек с помощью быстрого и простого сканирования."
   },
   {
     "id": "temporary-email",
-    "title": "Temp Mail - Free Temporary Email",
-    "description": "Keep your email account clean, secure, and free of any unwanted mail with Internxt’s Free Temporary Email. Teamp Mail provides temporary, secure, anonymous and free email address."
+    "title": "Internxt - Бесплатная временная электронная почта",
+    "description": "Сервис временной почты от Internxt позволяет забыть о спаме, рекламных расылках и любой другой нежелательной почте. Internxt предоставляет временный, безопасный, анонимный и бесплатный адрес электронной почты."
   },
   {
     "id": "converter-tool",
-    "title": "Byte Converter: GB to TB | Internxt",
-    "description": "Internxt’s free Byte Converter: Find out how much storage you have, how many gigabytes are in a terabyte, and convert to-and-from B, KB, MB, GB, and TB."
+    "title": "Конвертер байтов: ГБ в ТБ | Internxt",
+    "description": "Бесплатный конвертер байтов от Internxt: узнайте, какой объем памяти доступен, сколько гигабайт содержится в терабайте, а также конвертируйте Б, КБ, MБ, ГБ и TБ."
   },
   {
     "id": "lifetime",
-    "title": "Internxt Lifetime Plans – Secure Cloud Storage For Life!",
-    "description": "Internxt Lifetime Deal: Pay once and get 2TB, 5TB, or 10TB of secure cloud storage forever. Sign up or upgrade to a Internxt lifetime plan for lifelong privacy! Only for a limited time."
+    "title": "Пожизненные планы Internxt - безопасное облачное хранилище навсегда!",
+    "description": "Пожизненное предложение Internxt: заплатите один раз и получите 2 ТБ, 5 ТБ или 10 ТБ безопасного облачного хранилища навсегда. Зарегистрируйтесь или перейдите на пожизненный тарифный план Internxt для обеспечения конфиденциальности на всю жизнь! План доступен в течение ограниченного времени."
   },
   {
     "id": "partner-discount",
-    "title": "Partner Deals - Save big on Internxt cloud storage!",
-    "description": "Redeem your exclusive coupon code provided by a certified Internxt partner. Get a special discount on Internxt secure cloud storage."
+    "title": "Скидки для партнеров - Сэкономьте по-крупному на облачном хранилище Internxt!",
+    "description": "Воспользуйтесь эксклюзивным кодом, предоставленным сертифицированными партнерами Internxt. Получите специальную скидку на безопасное облачное хранилище Internxt."
   },
   {
     "id": "techradar-discount",
-    "title": "TechRadar Partner Deals - Save big on Internxt cloud storage!",
-    "description": "Redeem your exclusive coupon code provided by our partner TechRadar. Get a special discount on Internxt secure cloud storage."
+    "title": "TechRadar партнерские скидки - Сэкономьте по-крупному на облачном хранилище Internxt!",
+    "description": "Воспользуйтесь эксклюзивным кодом, предоставленным нашим партнером TechRadar. Получите специальную скидку на безопасное облачное хранилище Internxt."
   },
   {
     "id": "comparison",
-    "title": "Internxt – Cloud Storage Comparison",
-    "description": "Compare Internxt with all the other services out there. Internxt is the most private and secure alternative to Google Drive, Dropbox, and other services."
+    "title": "Internxt - сравнение облачных хранилищ",
+    "description": "Сравните Internxt с другими сервисами. Internxt - это самая надежная и безопасная альтернатива Google Drive, Dropbox и другим сервисам."
   },
   {
     "id": "black-friday",
-    "title": "Internxt Black Friday Deal – Cloud Storage Sale!",
-    "description": "Internxt Black Friday Deal 2022: Sign up or upgrade and get over half off Internxt’s 2TB subscription for 1 year. Get your Black Friday discount on Internxt’s largest cloud storage plan today!"
+    "title": "Предложение на Черную Пятницу от Internxt - скидка на облачное хранилище!",
+    "description": "Предложение на Черную Пятницу от Internxt 2022: Зарегистрируйте аккаунт или обновите план и получите более 50% скидки на подписку Internxt на 2 ТБ на 1 год. Получите скидку на Черноую пятницу на самый большой тарифный план облачного хранилища Internxt уже сегодня!"
   },
   {
     "id": "cloudwards",
-    "title": "Internxt – CloudWards Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Cloudwards. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt - Партнерство с CloudWards",
+    "description": "Получите лучшие предложения на самое безопасное облачное хранилище благодаря Cloudwards. Более бюжетная и безопасная альтернатива pCloud, IceDrive, AppSumo."
   },
   {
     "id": "startpage",
-    "title": "Internxt – Startpage Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Startpage. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt - Партнерство со Startpage",
+    "description": "Получите лучшие предложения на самое безопасное облачное хранилище благодаря Startpage. Более дешевая и безопасная альтернатива pCloud, IceDrive, зашифрованному облачному хранилищу AppSumo."
   },
   {
     "id": "guru99",
-    "title": "Internxt – Guru99 Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Guru99. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt - Партнерство с Guru99",
+    "description": "Получите лучшие предложения на самые безопасные облачные хранилища благодаря Guru99. Более дешевая и безопасная альтернатива pCloud, IceDrive, AppSumo."
   },
   {
     "id": "freemonth",
-    "title": "Internxt – Get 1 Month for free",
-    "description": "Grab the best deals for the most secure cloud storage and get 1 month for free. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt - Получите 1 месяц бесплатно",
+    "description": "Воспользуйтесь лучшими предложениями на безопасное облачное хранилище и получите 1 месяц бесплатно. Более бюджетная и безопасная альтернатива pCloud, IceDrive, AppSumo."
   },
   {
     "id": "landing",
-    "title": "Internxt – Most Secure Cloud Storage",
-    "description": "Internxt provides secure, private and encrypted cloud services like Internxt Drive and Internxt Photos."
+    "title": "Internxt - безопасное облачное хранилище",
+    "description": "Internxt предоставляет безопасные, надежные, зашифрованные облачные сервисы Internxt Drive и Internxt Photos."
   },
   {
     "id": "privacy-directory",
-    "title": "Internxt – Directory of Privacy Organizations, Institutions, and NGOs",
-    "description": "Directory of digital rights organizations, institutions, and NGOs working alongside Internxt to advance, support, and defend privacy for all."
+    "title": "Internxt - Каталог организаций, учреждений и НПО, занимающихся вопросами конфиденциальности",
+    "description": "Каталог организаций, учреждений и НПО, занимающихся вопросами цифровых прав, работающих вместе с Internxt для продвижения, поддержки и защиты конфиденциальности."
   },
   {
     "id": "password-checker",
-    "title": "Internxt – Free and Secure Password Checker",
-    "description": "Free password security checker. Check the strength of your passwords with Internxt’s secure online tool."
+    "title": "Internxt - Бесплатная и безопасная программа для проверки надежности паролей",
+    "description": "Бесплатная программа для проверки надежности паролей. Проверьте пароль с помощью безопасного онлайн-инструмента Internxt."
   },
   {
     "id": "cyber-awareness",
-    "title": "Cyber Awareness | Internxt",
-    "description": "What is cyber awareness, how to stay safe online, and everything you need to know about Cybersecurity Awareness Month this October."
+    "title": "Кибербезопасность | Internxt",
+    "description": "Что такое кибербезопасность, как безопасно пользоваться интернетом, и все, что нужно знать о месяце кибербезопасности, который отмечают в октябре."
   }
 ]
