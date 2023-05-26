@@ -29,6 +29,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
             width={622}
             height={483}
             src="/images/photos/photo-storage.webp"
+            loading="eager"
             alt="Internxt secure cloud storage"
             draggable="false"
           />
@@ -44,6 +45,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
                 width={287}
                 height={287}
                 src="/images/photos/Dog-image.png"
+                loading="eager"
                 alt="Internxt secure cloud storage"
                 draggable="false"
               />
@@ -57,6 +59,7 @@ const HeroSection = ({ textContent, lang, device, download }) => (
                 width={287}
                 height={287}
                 src="/images/photos/Girl-image.png"
+                loading="eager"
                 alt="Internxt secure cloud storage"
                 draggable="false"
               />

@@ -20,65 +20,64 @@
   },
   "FaqSection": {
     "title": "Domande? Abbiamo le risposte",
-    "faq": {
-      "faq": [
-        {
-          "question": "Internxt può accedere ai miei file?",
-          "answer": [
-            "No. Internxt, così come qualsiasi altra terza parte, non può accedere ai vostri file, foto o dati.",
-            " I servizi Internxt sono dotati di crittografia a conoscenza zero, il che significa che solo voi potete accedere ai vostri dati privati. Inoltre, l'architettura di Internxt frammenta i vostri file prima di crittografarli, in modo che un server non conservi mai un file intero, ma solo un frammento crittografato che solo voi potete decifrare."
-          ]
-        },
-        {
-          "question": "Internxt memorizza la mia password?",
-          "answer": [
-            "No. Internxt non memorizza (e non può memorizzare) la vostra password.",
-            "La password Internxt è unica per voi e viene utilizzata per criptare e decriptare i vostri dati Internxt. Se volete cambiare la vostra password, potete farlo dalla nostra app."
-          ]
-        },
-        {
-          "question": "Posso abilitare la 2FA?",
-          "answer": [
-            "Sì. È possibile configurare l'autenticazione a due fattori per il proprio account tramite l'applicazione web Internxt.",
-            "È inoltre possibile utilizzare Authy o qualsiasi altro strumento 2FA per generare un codice 2FA personale con Internxt."
-          ]
-        },
-        {
-          "question": "Come si crea un account Internxt?",
-          "answer": [
-            "Per creare un account Internxt gratuito, è sufficiente fare clic sul piano migliore in alto e seguire le istruzioni.",
-            "Oppure visitate la nostra homepage e fate clic su \"Inizia\". In questo modo otterrete immediatamente 10 GB di spazio di archiviazione gratuito a vita con un abbonamento Internxt gratuito. L'iscrizione gratuita può essere utilizzata per tutti i nostri servizi. Per iscriversi è sufficiente inserire un nome e un indirizzo e-mail. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
-          ]
-        },
-        {
-          "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
-          "answer": [
-            "Internxt accetta attualmente carte di debito e di credito (Mastercard, VISA, American Express, ecc.). È possibile pagare anche tramite Apple e Google Pay. Non accettiamo PayPal.",
-            "Su richiesta, accettiamo anche iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24 e Sofort. Per richiedere una fattura utilizzando uno dei metodi alternativi sopra descritti, è sufficiente inviare un'e-mail a hello@internxt.com."
-          ]
-        },
-        {
-          "question": "Qual è la politica di rimborso di Internxt?",
-          "answer": [
-            "Internxt offre una garanzia di rimborso standard di 30 giorni per tutti i suoi abbonamenti a pagamento, che inizia a decorrere dal momento dell'iscrizione.",
-            "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso. Accetteremo la vostra richiesta, senza fare domande!"
-          ]
-        },
-        {
-          "question": "Come posso cancellare il mio abbonamento?",
-          "answer": [
-            "L'annullamento dell'abbonamento è molto semplice e può essere fatto facilmente tramite l'app Internxt, entrando nelle impostazioni e cancellando il proprio account. In questo modo l'abbonamento e l'account verranno cancellati.",
-            "Se desiderate annullare un piano a pagamento e rimanere con il nostro servizio gratuito, potete inviarci un'e-mail all'indirizzo hello@internxt.com e provvederemo a elaborare la cancellazione dell'abbonamento in modo che possiate mantenere il vostro account sul piano gratuito."
-          ]
-        },
-        {
-          "question": "Come posso contattare l'assistenza?",
-          "answer": [
-            "Non riuscite a trovare quello che state cercando? Potete contattare il nostro team di Customer Success tramite live chat o inviando un'e-mail a hello@internxt.com."
-          ]
-        }
-      ]
-    }
+
+    "faq": [
+      {
+        "question": "Internxt può accedere ai miei file?",
+        "answer": [
+          "No. Internxt, così come qualsiasi altra terza parte, non può accedere ai vostri file, foto o dati.",
+          " I servizi Internxt sono dotati di crittografia a conoscenza zero, il che significa che solo voi potete accedere ai vostri dati privati. Inoltre, l'architettura di Internxt frammenta i vostri file prima di crittografarli, in modo che un server non conservi mai un file intero, ma solo un frammento crittografato che solo voi potete decifrare."
+        ]
+      },
+      {
+        "question": "Internxt memorizza la mia password?",
+        "answer": [
+          "No. Internxt non memorizza (e non può memorizzare) la vostra password.",
+          "La password Internxt è unica per voi e viene utilizzata per criptare e decriptare i vostri dati Internxt. Se volete cambiare la vostra password, potete farlo dalla nostra app."
+        ]
+      },
+      {
+        "question": "Posso abilitare la 2FA?",
+        "answer": [
+          "Sì. È possibile configurare l'autenticazione a due fattori per il proprio account tramite l'applicazione web Internxt.",
+          "È inoltre possibile utilizzare Authy o qualsiasi altro strumento 2FA per generare un codice 2FA personale con Internxt."
+        ]
+      },
+      {
+        "question": "Come si crea un account Internxt?",
+        "answer": [
+          "Per creare un account Internxt gratuito, è sufficiente fare clic sul piano migliore in alto e seguire le istruzioni.",
+          "Oppure visitate la nostra homepage e fate clic su \"Inizia\". In questo modo otterrete immediatamente 10 GB di spazio di archiviazione gratuito a vita con un abbonamento Internxt gratuito. L'iscrizione gratuita può essere utilizzata per tutti i nostri servizi. Per iscriversi è sufficiente inserire un nome e un indirizzo e-mail. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Internxt accetta attualmente carte di debito e di credito (Mastercard, VISA, American Express, ecc.). È possibile pagare anche tramite Apple e Google Pay. Non accettiamo PayPal.",
+          "Su richiesta, accettiamo anche iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24 e Sofort. Per richiedere una fattura utilizzando uno dei metodi alternativi sopra descritti, è sufficiente inviare un'e-mail a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Qual è la politica di rimborso di Internxt?",
+        "answer": [
+          "Internxt offre una garanzia di rimborso standard di 30 giorni per tutti i suoi abbonamenti a pagamento, che inizia a decorrere dal momento dell'iscrizione.",
+          "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso. Accetteremo la vostra richiesta, senza fare domande!"
+        ]
+      },
+      {
+        "question": "Come posso cancellare il mio abbonamento?",
+        "answer": [
+          "L'annullamento dell'abbonamento è molto semplice e può essere fatto facilmente tramite l'app Internxt, entrando nelle impostazioni e cancellando il proprio account. In questo modo l'abbonamento e l'account verranno cancellati.",
+          "Se desiderate annullare un piano a pagamento e rimanere con il nostro servizio gratuito, potete inviarci un'e-mail all'indirizzo hello@internxt.com e provvederemo a elaborare la cancellazione dell'abbonamento in modo che possiate mantenere il vostro account sul piano gratuito."
+        ]
+      },
+      {
+        "question": "Come posso contattare l'assistenza?",
+        "answer": [
+          "Non riuscite a trovare quello che state cercando? Potete contattare il nostro team di Customer Success tramite live chat o inviando un'e-mail a hello@internxt.com."
+        ]
+      }
+    ]
   },
   "SchemaMarkupQuestions": {
     "faq": [

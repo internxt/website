@@ -5,50 +5,13 @@ import { checkout } from '../../lib/auth';
 const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
+  const textContent = require(`../../assets/lang/${lang}/banners.json`);
 
   const New = () => {
     if (lang === 'en') {
       return 'NEW RESOURCE:';
     } else {
       return '';
-    }
-  };
-
-  const textForWeb = () => {
-    if (lang === 'en') {
-      return 'Max out your Google privacy settings with our What Google Knows page';
-    } else if (lang === 'es') {
-      return 'Maximiza tu configuración de privacidad de Google con nuestra nueva página de privacidad';
-    } else if (lang === 'fr') {
-      return 'Optimisez vos paramètres de confidentialité Google avec notre nouvelle page sur la confidentialité';
-    } else if (lang === 'it') {
-      return 'Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy';
-    } else {
-      return 'Max out your Google privacy settings with our What Google Knows page';
-    }
-  };
-
-  const textForMobile = () => {
-    if (lang === 'en') {
-      return 'Max out your Google privacy settings with our What Google Knows page';
-    } else if (lang === 'es') {
-      return 'Maximiza tu configuración de privacidad de Google con nuestra nueva página de privacidad';
-    } else if (lang === 'fr') {
-      return 'Optimisez vos paramètres de confidentialité Google avec notre nouvelle page sur la confidentialité';
-    } else if (lang === 'it') {
-      return 'Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy';
-    } else {
-      return 'Get 80% off our 2TB plan for one year!';
-    }
-  };
-
-  const pickUp = () => {
-    if (lang === 'en') {
-      return 'Try now';
-    } else if (lang === 'es') {
-      return 'Pruébalo ahora';
-    } else if (lang === 'fr') {
-      return 'Essayez maintenant';
     }
   };
 
@@ -70,7 +33,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           }
         >
           <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
-          <p className="flex flex-row font-normal">{textForWeb()}</p>
+          <p className="flex flex-row font-normal">{textContent.GoogleKnows.title}</p>
           <CaretRight size={16} />
 
           {/* <p className="flex text-base font-semibold underline">{pickUp()}</p> */}
@@ -91,7 +54,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             }
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
-            <p className="flex flex-row font-normal">{textForMobile()}</p>
+            <p className="flex flex-row font-normal">{textContent.GoogleKnows.title}</p>
           </div>
         </div>
       </div>
