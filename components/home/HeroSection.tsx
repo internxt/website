@@ -244,15 +244,10 @@ export default function HeroSection({ textContent, lang }) {
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
-          <div className={lang === 'es' ? 'flex items-center justify-center' : 'flex xl:hidden'}>
-            <Marquee
-              className="justify-center bg-white"
-              gradientColor={[255, 255, 255]}
-              gradientWidth="32px"
-              speed={30}
-            >
+          <div className={lang === 'es' ? 'flex items-start justify-start' : 'flex xl:hidden'}>
+            <Marquee gradientColor={[255, 255, 255]} gradientWidth="32px" speed={30}>
               {lang === 'es' && (
-                <p className="hidden whitespace-nowrap text-xl font-semibold text-primary xl:flex">
+                <p className="mb-2 mr-8 hidden whitespace-nowrap text-xl font-semibold text-primary xl:flex">
                   {textContent.featuredIn}:
                 </p>
               )}
@@ -409,6 +404,7 @@ export default function HeroSection({ textContent, lang }) {
                     rel="noreferrer"
                   >
                     <img
+                      className="mr-24"
                       loading="lazy"
                       src="../../logos/featured/elpais.svg"
                       draggable="false"
