@@ -244,8 +244,18 @@ export default function HeroSection({ textContent, lang }) {
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
-          <div className="flex xl:hidden">
-            <Marquee className="bg-white" gradientColor={[255, 255, 255]} gradientWidth="32px" speed={30}>
+          <div className={lang === 'es' ? 'flex items-center justify-center' : 'flex xl:hidden'}>
+            <Marquee
+              className="justify-center bg-white"
+              gradientColor={[255, 255, 255]}
+              gradientWidth="32px"
+              speed={30}
+            >
+              {lang === 'es' && (
+                <p className="hidden whitespace-nowrap text-xl font-semibold text-primary xl:flex">
+                  {textContent.featuredIn}:
+                </p>
+              )}
               <div className="featured flex w-full flex-row p-6">
                 {lang === 'es' ? (
                   <a
@@ -412,7 +422,7 @@ export default function HeroSection({ textContent, lang }) {
             </Marquee>
           </div>
 
-          <div className="mx-auto hidden w-full overflow-hidden xl:flex">
+          <div className={lang === 'es' ? 'hidden' : 'mx-auto hidden w-full overflow-hidden xl:flex'}>
             <div className="featured flex w-full flex-row justify-center overflow-x-auto px-4 pb-8 pt-10">
               <div className="mr-12 flex">
                 <p className="text-xl font-semibold text-primary">{textContent.featuredIn}:</p>
