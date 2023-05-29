@@ -113,9 +113,9 @@
     }
   },
   "FeatureSection": {
-    "title": "Protect your pics with Internxt Photos",
-    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
-    "cta": "Get started"
+    "title": "Храните фото в безопасности с помощью Internxt Photos",
+    "description": "С Internxt доступ к вашим файлам есть только у вас. Храните, делитесь и создавайте резервные копии файлов в полной конфиденциальности.",
+    "cta": "Начать"
   },
   "FaqSection": {
     "title": "Появились вопросы? У нас есть ответы",
@@ -137,8 +137,8 @@
     ]
   },
   "CtaSection": {
-    "title": "Try Internxt risk-free",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
+    "title": "Познакомьтесь с Internxt",
+    "description": "Защитите важные файлы с помощью безопасного, приватного, зашифрованного облачного хранилища Internxt",
+    "cta": "Выбрать тарифный план"
   }
 }

@@ -148,15 +148,15 @@
       "MacOS": "Mac"
     }
   },
-  "CtaSection": {
-    "title": "Try Internxt risk-free",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
-  },
   "FeatureSection": {
-    "title": "Protect your files with Internxt Drive",
-    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
-    "cta": "Get started"
+    "title": "Храните файлы в безопасности с помощью Internxt Drive",
+    "description": "С Internxt только у вас есть доступ к вашим файлам. Храните, делитесь и создавайте резервные копии файлов в полной конфиденциальности.",
+    "cta": "Начать"
+  },
+  "CtaSection": {
+    "title": "Познакомьтесь с Internxt",
+    "description": "Защитите важные файлы с помощью безопасного, приватного, зашифрованного облачного хранилища Internxt",
+    "cta": "Выбрать тарифный план"
   },
   "FaqSection": {
     "title": "Есть вопросы? Мы ответим",
