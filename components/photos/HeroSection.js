@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import Image from 'next/image';
 import React from 'react';
-import DownloadComponent from '../drive/DownloadComponent';
+import DownloadComponent from '../shared/DownloadComponent';
 import RevealX from '../components/RevealX';
 import RevealY from '../components/RevealY';
 

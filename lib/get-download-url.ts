@@ -30,7 +30,10 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
   const ua = ctx.req.headers['user-agent'];
   const uaParsed = userAgent.parse(ua);
 
-  const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
+  const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({
+    cached: false,
+    links: { linux: null, windows: null, macos: null },
+  }));
 
   switch (uaParsed.os.family) {
     case 'iOS':
@@ -52,7 +55,10 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
 }
 
 export const downloadDriveLinks = async () => {
-  const release = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
+  const release = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({
+    cached: false,
+    links: { linux: null, windows: null, macos: null },
+  }));
 
   const platforms = {
     Android: androidURL,
@@ -62,22 +68,7 @@ export const downloadDriveLinks = async () => {
     MacOS: release.links.macos || macosURL,
     UNIX: release.links.linux || linuxURL,
     Linux: release.links.linux || linuxURL,
-    all: lastReleaseURL
-  };
-
-  return platforms;
-};
-
-export const downloadDriveByPlatform = async () => {
-  const release = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({ cached: false, links: { linux: null, windows: null, macos: null } }));
-
-  const platforms = {
-    ios: iosURL,
-    android: androidURL,
-    linux: release.links.linux || linuxURL,
-    windows: release.links.windows || windowsURL,
-    mac: release.links.macos || macosURL,
-    all: lastReleaseURL
+    all: lastReleaseURL,
   };
 
   return platforms;
