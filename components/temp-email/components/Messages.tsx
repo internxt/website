@@ -65,7 +65,7 @@ const NoMessageSelected = ({
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <p className="text-sm font-medium">
+        <p className="text-base font-medium text-gray-100">
           {textContent.youHave} {messages} {textContent.newMessages}
         </p>
 
