@@ -3,7 +3,7 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 
-import DownloadComponent from './DownloadComponent';
+import DownloadComponent from '../shared/DownloadComponent';
 import * as anim from '../../public/js/anim';
 import RevealX from '../components/RevealX';
 import Image from 'next/image';
