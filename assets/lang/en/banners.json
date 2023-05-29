@@ -75,5 +75,8 @@
     "subtitle": "Sign up to stay informed and get notified when our business plans become available.",
     "placeHolder": "Your email address",
     "cta": "Subscribe"
+  },
+  "GoogleKnows": {
+    "title": "Max out your Google privacy settings with our What Google Knows page"
   }
 }

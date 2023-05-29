@@ -20,75 +20,74 @@
   },
   "FaqSection": {
     "title": "Questions ? Nous avons les réponses",
-    "faq": {
-      "faq": [
-        {
-          "question": "Internxt peut-il accéder à mes fichiers ?",
-          "answer": [
-            "Non. Internxt ne peut pas accéder à vos fichiers, photos ou données.",
-            " Les services Internxt sont dotés d'un chiffrement à connaissance nulle, ce qui signifie que vous êtes le seul à pouvoir accéder à vos données privées. L'architecture d'Internxt fragmente vos fichiers avant de les chiffrer, de sorte qu'un serveur ne contient jamais un fichier entier, mais seulement un morceau chiffré, que vos seul pouvez décrypter."
-          ]
-        },
-        {
-          "question": "Internxt sauvegarde-t-il mon mot de passe ?",
-          "answer": [
-            "Non. Internxt ne stocke pas (et ne peut pas stocker) votre mot de passe.",
-            "Votre mot de passe Internxt est unique et utilisé pour crypter et décrypter vos données Internxt. Mais si vous souhaitez changer votre mot de passe, vous pouvez le faire depuis notre application."
-          ]
-        },
-        {
-          "question": "Puis-je activer 2FA ?",
-          "answer": [
-            "Oui. Vous pouvez configurer l'authentification à deux facteurs pour votre compte via l'application web Internxt.",
-            "Vous pouvez également utiliser Authy ou tout autre outil 2FA pour générer un code 2FA personnel avec Internxt."
-          ]
-        },
-        {
-          "question": "Comment créer un compte Internxt ?",
-          "answer": [
-            "Pour créer un compte Internxt, il suffit de cliquer sur un plan ci-dessus et de suivre les instructions.",
-            "Ou rendez-vous sur notre page d'accueil et cliquez sur \"Démarrer\". Vous obtiendrez instantanément 10 Go de stockage gratuit à vie avec Internxt. Vous pouvez utiliser tous nos services. Pour vous inscrire, il vous suffit de saisir votre nom et votre adresse e-mail. Aucune vérification n'est requise pour commencer à utiliser les services d'Internxt."
-          ]
-        },
-        {
-          "question": "Puis-je payer avec une carte de crédit, PayPal ou une crypto-monnaie ?",
-          "answer": [
-            "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc). Vous pouvez également payer via Apple et Google Pay. Nous n'acceptons pas PayPal.",
-            "Sur demande, nous acceptons également iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24 et Sofort. Pour demander une facture en utilisant l'une des méthodes alternatives décrites ci-dessus, il suffit de nous envoyer un courriel à hello@internxt.com."
-          ]
-        },
-        {
-          "question": "Quelle est la politique de remboursement d'Internxt ?",
-          "answer": [
-            "Internxt offre une garantie de remboursement standard de 30 jours pour tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
-            "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement. Nous répondrons votre demande, sans poser de questions !"
-          ]
-        },
-        {
-          "question": "Comment puis-je annuler mon abonnement ?",
-          "answer": [
-            "L’annulation de votre abonnement est très simple et peut être effectuée facilement via l'application Internxt, en accèdent aux paramètres et en supprimant votre compte. Cela mettra fin à votre abonnement et à votre compte.",
-            "Si vous souhaitez annuler un plan payant et rester avec notre service gratuit, vous pouvez nous envoyer un email à hello@internxt.com et nous ferons l'annulation de l'abonnement afin que vous puissiez garder votre compte en vie sur notre plan gratuit."
-          ]
-        },
-        {
-          "question": "Comment puis-je contacter l'assistance ?",
-          "answer": [
-            "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe par chat en direct ou en envoyant un e-mail à hello@internxt.com."
-          ]
-        },
-        {
-          "question": "Combien coûte un plan Internxt ?",
-          "answer": ["Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
-        },
-        {
-          "question": "Internxt a-t-il des plans à vie ?",
-          "answer": [
-            "Nous offrons des plans à vie que vous pouvez acheter sur notre site web. Ces plans vous donnent un accès à vie à nos plans, avec jusqu'à 10To de stockage, pour un paiement unique."
-          ]
-        }
-      ]
-    }
+
+    "faq": [
+      {
+        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "answer": [
+          "Non. Internxt ne peut pas accéder à vos fichiers, photos ou données.",
+          " Les services Internxt sont dotés d'un chiffrement à connaissance nulle, ce qui signifie que vous êtes le seul à pouvoir accéder à vos données privées. L'architecture d'Internxt fragmente vos fichiers avant de les chiffrer, de sorte qu'un serveur ne contient jamais un fichier entier, mais seulement un morceau chiffré, que vos seul pouvez décrypter."
+        ]
+      },
+      {
+        "question": "Internxt sauvegarde-t-il mon mot de passe ?",
+        "answer": [
+          "Non. Internxt ne stocke pas (et ne peut pas stocker) votre mot de passe.",
+          "Votre mot de passe Internxt est unique et utilisé pour crypter et décrypter vos données Internxt. Mais si vous souhaitez changer votre mot de passe, vous pouvez le faire depuis notre application."
+        ]
+      },
+      {
+        "question": "Puis-je activer 2FA ?",
+        "answer": [
+          "Oui. Vous pouvez configurer l'authentification à deux facteurs pour votre compte via l'application web Internxt.",
+          "Vous pouvez également utiliser Authy ou tout autre outil 2FA pour générer un code 2FA personnel avec Internxt."
+        ]
+      },
+      {
+        "question": "Comment créer un compte Internxt ?",
+        "answer": [
+          "Pour créer un compte Internxt, il suffit de cliquer sur un plan ci-dessus et de suivre les instructions.",
+          "Ou rendez-vous sur notre page d'accueil et cliquez sur \"Démarrer\". Vous obtiendrez instantanément 10 Go de stockage gratuit à vie avec Internxt. Vous pouvez utiliser tous nos services. Pour vous inscrire, il vous suffit de saisir votre nom et votre adresse e-mail. Aucune vérification n'est requise pour commencer à utiliser les services d'Internxt."
+        ]
+      },
+      {
+        "question": "Puis-je payer avec une carte de crédit, PayPal ou une crypto-monnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc). Vous pouvez également payer via Apple et Google Pay. Nous n'acceptons pas PayPal.",
+          "Sur demande, nous acceptons également iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24 et Sofort. Pour demander une facture en utilisant l'une des méthodes alternatives décrites ci-dessus, il suffit de nous envoyer un courriel à hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "answer": [
+          "Internxt offre une garantie de remboursement standard de 30 jours pour tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
+          "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement. Nous répondrons votre demande, sans poser de questions !"
+        ]
+      },
+      {
+        "question": "Comment puis-je annuler mon abonnement ?",
+        "answer": [
+          "L’annulation de votre abonnement est très simple et peut être effectuée facilement via l'application Internxt, en accèdent aux paramètres et en supprimant votre compte. Cela mettra fin à votre abonnement et à votre compte.",
+          "Si vous souhaitez annuler un plan payant et rester avec notre service gratuit, vous pouvez nous envoyer un email à hello@internxt.com et nous ferons l'annulation de l'abonnement afin que vous puissiez garder votre compte en vie sur notre plan gratuit."
+        ]
+      },
+      {
+        "question": "Comment puis-je contacter l'assistance ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe par chat en direct ou en envoyant un e-mail à hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Combien coûte un plan Internxt ?",
+        "answer": ["Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
+      },
+      {
+        "question": "Internxt a-t-il des plans à vie ?",
+        "answer": [
+          "Nous offrons des plans à vie que vous pouvez acheter sur notre site web. Ces plans vous donnent un accès à vie à nos plans, avec jusqu'à 10To de stockage, pour un paiement unique."
+        ]
+      }
+    ]
   },
   "SchemaMarkupQuestions": {
     "faq": [

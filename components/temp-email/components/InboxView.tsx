@@ -114,8 +114,6 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
 
     const navbar = document.querySelector('#navbar');
     const footer = document.querySelector('#footer');
-
-    console.log(selectedMessage);
     links.forEach((link) => {
       if (!navbar.contains(link) && !footer.contains(link)) {
         link.target = '_blank';

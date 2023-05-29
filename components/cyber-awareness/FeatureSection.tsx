@@ -6,7 +6,13 @@ const FeatureSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5">
       <div className="flex flex-col-reverse items-center justify-center space-y-10 space-y-reverse py-20 lg:flex-row lg:space-y-0 lg:space-x-20">
-        <Image src={'/images/cyber-awareness/cyber-awareness-info.png'} width={496} height={520} draggable={false} />
+        <Image
+          src={'/images/cyber-awareness/cyber-awareness-info.png'}
+          alt="Cyber Awareness info"
+          width={496}
+          height={520}
+          draggable={false}
+        />
         <RevealX
           direction="left"
           className="flex w-full max-w-[388px] flex-col items-center space-y-7 text-center lg:items-start lg:text-left"

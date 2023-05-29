@@ -48,5 +48,8 @@
   "GoogleLPBanner": {
     "line1": "Don’t let Google cash in on your data,",
     "blueText": "keep your files private with Internxt"
+  },
+  "GoogleKnows": {
+    "title": "Maximiza tu configuración de privacidad de Google con nuestra nueva página de privacidad"
   }
 }

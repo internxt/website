@@ -176,7 +176,7 @@ const ManifestoSection2 = ({ textContent, lang }) => (
 
           {/* Internxt Send */}
           <RevealX
-            direction="left"
+            direction="right"
             className="flex overflow-hidden rounded-2xl bg-gray-100 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
           >
             <div className="flex h-full flex-col items-center justify-center p-7 text-center lg:items-start lg:pl-20 lg:text-start">

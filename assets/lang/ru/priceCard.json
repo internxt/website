@@ -1,0 +1,70 @@
+{
+  "mostPopular": "Самый популярный",
+  "mostPopularPlan": "Самый популярный план",
+  "valentines": "Специальное предложение ко Дню Святого Валентина!",
+  "onlyForNewClients": "Только для новых клиентов и пользователей бесплатного плана",
+  "planTitles": {
+    "individuals": "Планы для физических лиц",
+    "business": "Планы для бизнеса",
+    "lifetimeCampaign": {
+      "blueText": "Получите скидку 50%",
+      "normalText": "на все наши эксклюзивные пожизненные планы"
+    }
+  },
+  "lifetimeDescription": "Заплатите один раз и получите конфиденциальность и безопасность навсегда",
+  "planDescription": "Все планы Internxt являются полнофункциональными и имеют полный доступ ко всем нашим сервисам для обеспечения конфиденциальности.",
+  "changePlan": {
+    "toIndividuals": "Перейти на планы для физических лиц",
+    "toBusiness": "Перейти на планы для бизнеса"
+  },
+  "billingFrequency": {
+    "monthly": "Ежемесячно",
+    "semiannually": "Раз в полгода",
+    "annually": "Ежегодно",
+    "lifetime": "Пожизненно"
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "Одноразовый платеж",
+    "monthly": "ежемесячный платеж",
+    "semiannually": "платеж раз в полгода",
+    "anually": "ежегодный платеж",
+    "afterMonth": "оплата по истечении 30 дней"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/ежемесячно",
+    "semiannually": "/раз в полгода",
+    "anually": "/ежегодно"
+  },
+  "perUserSlash": "/пользователь",
+  "perUser": "За пользователя",
+  "users": "пользователи",
+  "freePlan": "Бесплатно",
+  "price": {
+    "freeForever": "Бесплатно навсегда",
+    "free": "до "
+  },
+  "perMonth": "/в месяц",
+  "firstMonth": "Первые 30 дней",
+  "cta": {
+    "getStarted": "Начать",
+    "signUpNow": "Зарегистрироваться сейчас",
+    "buy": "Приобрести",
+    "get": "Получить",
+    "discount": "Получить скидку 90%",
+    "claimTheDeal": "Купить со скидкой",
+    "freemonth": "Получить 30 дней бесплатно"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Пользуйтесь",
+      "enjoyUpTo": "Пользуйтесь до",
+      "forFree": "бесплатно",
+      "forever": "навсегда"
+    },
+    "moneyBack": "30-дневная гарантия возврата денег",
+    "encryptedFiles": "Xранение и обмен файлами",
+    "accessFromAnywhere": "Доступ к файлам со всех устройств",
+    "allServices": "Доступ ко всем приложениям Internxt",
+    "dataAccess": "Нет несанкционированного доступа к данным"
+  }
+}
