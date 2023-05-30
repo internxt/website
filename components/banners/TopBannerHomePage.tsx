@@ -7,14 +7,6 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/banners.json`);
 
-  const New = () => {
-    if (lang === 'en') {
-      return 'NEW RESOURCE:';
-    } else {
-      return '';
-    }
-  };
-
   return (
     <>
       {/* Desktop view */}
@@ -32,7 +24,6 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             )
           }
         >
-          <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p>
           <p className="flex flex-row font-normal">{textContent.GoogleKnows.title}</p>
           <CaretRight size={16} />
 

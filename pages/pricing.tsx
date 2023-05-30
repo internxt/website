@@ -71,7 +71,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           mode={isLifetime ? 'payment' : 'subscription'}
         />
 
-        {/* <HeroSection textContent={textContent.HeroSection} /> */}
+        <HeroSection textContent={textContent.HeroSection} />
 
         <PriceTable
           setSegmentPageName={setPageName}
