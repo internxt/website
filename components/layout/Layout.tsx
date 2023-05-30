@@ -26,6 +26,7 @@ interface LayoutProps {
 const INTERNXT_URL = 'https://internxt.com';
 
 const excludedPaths = ['/pricing'];
+const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
   children,
@@ -46,6 +47,7 @@ LayoutProps) {
   const showBanner = !excludedPaths.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<Event>();
+  const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
   const slogan = {
     en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -87,7 +89,7 @@ LayoutProps) {
         <meta property="og:url" content={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <meta
           property="og:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${imagePreview}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
@@ -95,7 +97,7 @@ LayoutProps) {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${imagePreview}.png`}
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />

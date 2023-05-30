@@ -11,7 +11,7 @@ const SummerOfferImage = () => {
     <div className="relative flex">
       <Image
         alt="Summer sale cloud storage"
-        src="/images/pricing/Frame 1656.png"
+        src="/images/pricing/Background.png"
         className="rounded-3xl"
         width={496}
         height={520}
@@ -21,7 +21,7 @@ const SummerOfferImage = () => {
       <div className="absolute -right-28 flex flex-col items-center justify-center space-y-5 overflow-visible">
         <Image
           alt="Summer sale cloud storage"
-          src="/images/pricing/Vector.png"
+          src="/images/pricing/flower.png"
           className="rounded-3xl"
           width={423}
           height={475}
