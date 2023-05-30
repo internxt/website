@@ -65,7 +65,7 @@ export default function Footer({
                   </div>
                   <div className="flex">
                     <Image
-                      src="/images/footer/google-play.svg"
+                      src="/images/footer/store-for-android.svg"
                       onClick={() => {
                         platforms && window.open(platforms.Android, '_blank');
                       }}
