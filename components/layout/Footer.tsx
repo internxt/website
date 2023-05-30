@@ -28,7 +28,7 @@ export default function Footer({
 
     if (!cookie) setConsentCookie(false);
 
-    axios.get('api/download').then((res) => {
+    axios.get(`${window.location.origin}/api/download`).then((res) => {
       setPlatforms(res.data.platforms);
     });
   }, []);
