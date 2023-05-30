@@ -98,7 +98,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <FAQSection textContent={textContent.FaqSection} />
 
-        <CtaSection textContent={textContent.lastCtaSection} />
+        <CtaSection textContent={textContent.CtaSection} />
 
         <ShowSnackbar />
 
