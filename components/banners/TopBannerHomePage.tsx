@@ -24,7 +24,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             )
           }
         >
-          <p className="flex flex-row font-normal">{textContent.GoogleKnows.title}</p>
+          <p className="flex flex-row font-normal">{textContent.SummerOffer.title}</p>
           <CaretRight size={16} />
 
           {/* <p className="flex text-base font-semibold underline">{pickUp()}</p> */}
@@ -45,7 +45,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             }
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
-            <p className="flex flex-row font-normal">{textContent.GoogleKnows.title}</p>
+            <p className="flex flex-row font-normal">{textContent.SummerOffer.title}</p>
           </div>
         </div>
       </div>

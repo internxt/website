@@ -25,6 +25,8 @@ interface LayoutProps {
 
 const INTERNXT_URL = 'https://internxt.com';
 
+const excludedPaths = ['/pricing'];
+
 export default function Layout({
   children,
   title = 'Internxt',
@@ -41,7 +43,7 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = true;
+  const showBanner = !excludedPaths.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<Event>();
 
