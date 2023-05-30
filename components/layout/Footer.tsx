@@ -52,9 +52,10 @@ export default function Footer({
                 <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
                   <div className="flex">
                     <Image
-                      src="/images/footer/app-store.png"
+                      src="/images/footer/app-store.svg"
                       width={148}
                       height={44}
+                      quality={100}
                       className="cursor-pointer"
                       onClick={() => {
                         platforms && window.open(platforms.iPhone, '_blank');
@@ -63,7 +64,7 @@ export default function Footer({
                   </div>
                   <div className="flex">
                     <Image
-                      src="/images/footer/google-play.png"
+                      src="/images/footer/google-play.svg"
                       onClick={() => {
                         platforms && window.open(platforms.Android, '_blank');
                       }}
