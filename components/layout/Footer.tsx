@@ -57,6 +57,7 @@ export default function Footer({
                       height={44}
                       quality={100}
                       className="cursor-pointer"
+                      alt="Download on the App Store"
                       onClick={() => {
                         platforms && window.open(platforms.iPhone, '_blank');
                       }}
@@ -71,6 +72,7 @@ export default function Footer({
                       width={148}
                       height={44}
                       className="cursor-pointer"
+                      alt="Get it on Google Play"
                     />
                   </div>
                 </div>
@@ -115,7 +117,7 @@ export default function Footer({
                     className="ml-2 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
                   />
                 </form>
-                <span className="text-xs text-cool-gray-40 sm:text-supporting-2">
+                <span className="text-sm text-gray-40">
                   {textContent.NewsletterSection.privacy}{' '}
                   <Link href="/legal" locale={lang}>
                     <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
