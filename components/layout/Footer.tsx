@@ -38,8 +38,8 @@ export default function Footer({
       id="footer"
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
-      <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
-        <div className="flex w-full flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-y-0 lg:space-x-32 lg:text-left">
+      <div className="flex w-full  flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
+        <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-y-0 lg:space-x-32 lg:text-left">
           {/* Download app for iOS and Android */}
           {lang === 'en' ? (
             <>
@@ -177,16 +177,16 @@ export default function Footer({
 
         {/* Separator */}
         <div
-          className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full ${
+          className={`${hideNewsletter ? 'hidden' : 'flex'} h-px  w-full max-w-[896px] ${
             darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'
           } mb-10`}
         />
 
         {/* Footer content */}
-        <footer className="w-full">
+        <footer className="flex max-w-[896px] items-center justify-center">
           {/* Desktop version */}
-          <div className="hidden flex-col items-center md:space-y-16 lg:flex">
-            <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-28">
+          <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
+            <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20">
               <div className="flex flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
