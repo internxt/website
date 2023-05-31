@@ -4,15 +4,15 @@ import '../styles/globals.scss';
 import Script from 'next/script';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
+import SummerBanner from '../components/banners/SummerBanner';
 import { useRouter } from 'next/router';
-import GeneralBanner from '../components/banners/GeneralBanner';
 
-// const excludedPaths = ['/byte-converter', '/virus-scanner', '/password-checker', '/temporary-email'];
+const excludedPaths = ['/byte-converter', '/virus-scanner', '/password-checker', '/temporary-email'];
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const route = useRouter();
-  // const pathname = route.pathname;
-  // const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
+  const route = useRouter();
+  const pathname = route.pathname;
+  const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
   // const bannerLang = require(`../assets/lang/${route.locale}/banners.json`);
 
   // eslint-disable-next-line react/jsx-props-no-spreading
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
-        {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
+        {isExcludedPath ? null : <SummerBanner />}
         <Intercom />
       </GlobalUIManager>
     </LiveChatLoaderProvider>
