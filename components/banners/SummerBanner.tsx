@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 const SummerBanner = () => {
   const router = useRouter();
   const lang = router.locale;
-  const [bannerVisible, setIsBannerVisible] = useState(false);
+  const [bannerVisible, setIsBannerVisible] = useState(true);
   const onClose = () => {
     sessionStorage.setItem('SummerBanner', 'false');
     setIsBannerVisible(false);
