@@ -29,7 +29,7 @@ const SummerBanner = () => {
     >
       <div
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2 flex w-full
-        max-w-[320px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl lg:max-w-[800px]`}
+        max-w-[320px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl md:max-w-[800px]`}
         style={{
           backgroundImage: `url(/images/banners/BannerInternal-SummerCampaign-800x450-EN.svg)`,
           backgroundPosition: 'center',

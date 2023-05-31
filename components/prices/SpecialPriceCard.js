@@ -8,7 +8,7 @@ import React from 'react';
 import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 import { checkout } from '../../lib/auth';
 
-const TWOTB_OFF_COUPON = 'lxevN374';
+const TWOTB_OFF_COUPON = '6FACDcgf';
 
 export default function SpecialPriceCard({
   planType,
