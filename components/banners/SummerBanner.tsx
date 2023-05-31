@@ -57,9 +57,9 @@ const SummerBanner = () => {
               <div className="flex max-w-[443px] items-center justify-center rounded-xl bg-mint px-10 py-3 text-white">
                 <p className="text-4xl font-semibold">SUMMER DEAL!</p>
               </div>
-              <div className="flex flex-col items-center space-y-6 text-white">
+              <div className="flex flex-col items-center text-white">
                 <p className="text-8xl font-bold">90% off</p>
-                <p className="text-3xl font-bold">2TB PLAN FOR 1 YEAR</p>
+                <p className="pt-1 text-3xl font-bold">2TB PLAN FOR 1 YEAR</p>
               </div>
             </div>
           </div>
