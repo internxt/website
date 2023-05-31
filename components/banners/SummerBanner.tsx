@@ -12,14 +12,14 @@ const SummerBanner = () => {
     setIsBannerVisible(false);
   };
 
-  useEffect(() => {
-    const isBannerVisible = sessionStorage.getItem('SummerBanner');
-    if (!isBannerVisible) {
-      setTimeout(() => {
-        setIsBannerVisible(true);
-      }, 10000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const isBannerVisible = sessionStorage.getItem('SummerBanner');
+  //   if (!isBannerVisible) {
+  //     setTimeout(() => {
+  //       setIsBannerVisible(true);
+  //     }, 10000);
+  //   }
+  // }, []);
 
   return (
     <section
