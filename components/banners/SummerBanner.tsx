@@ -6,20 +6,20 @@ import { useRouter } from 'next/router';
 const SummerBanner = () => {
   const router = useRouter();
   const lang = router.locale;
-  const [bannerVisible, setIsBannerVisible] = useState(true);
+  const [bannerVisible, setIsBannerVisible] = useState(false);
   const onClose = () => {
     sessionStorage.setItem('SummerBanner', 'false');
     setIsBannerVisible(false);
   };
 
-  // useEffect(() => {
-  //   const isBannerVisible = sessionStorage.getItem('SummerBanner');
-  //   if (!isBannerVisible) {
-  //     setTimeout(() => {
-  //       setIsBannerVisible(true);
-  //     }, 10000);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const isBannerVisible = sessionStorage.getItem('SummerBanner');
+    if (!isBannerVisible) {
+      setTimeout(() => {
+        setIsBannerVisible(true);
+      }, 10000);
+    }
+  }, []);
 
   return (
     <section
