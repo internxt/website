@@ -69,7 +69,7 @@ export default function SpecialPriceCard({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-start  p-4 pt-6 ${
+        className={`info flex flex-col items-center justify-start  p-6 pt-6 ${
           popular && billingFrequency === 12 ? 'rounded-t-2xl bg-primary bg-cover' : 'bg-white'
         }`}
       >
