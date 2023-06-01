@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% di sconto ", "line2": "il nostro piano da 2TB" },
+    "title": { "line1": "90% di sconto ", "line2": "il nostro piano da 2TB" },
     "feeds": {
       "firstFeed": "Garanzia di rimborso di 30 giorni",
       "secondFeed": "Pagamento sicuro al 100%",
       "thirdFeed": "Creazione di un account anonimo"
     },
     "cta": {
-      "title": "Sconto del 80%",
+      "title": "Sconto del 90%",
       "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo non scontato per l'anno successivo."
     }
   },

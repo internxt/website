@@ -4,7 +4,34 @@ import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 import { checkout } from '../../lib/auth';
 
-const TWOTB_OFF_COUPON = 'lxevN374';
+const TWOTB_OFF_COUPON = '6FACDcgf';
+
+const SummerOfferImage = () => {
+  return (
+    <div className="relative flex">
+      <Image
+        alt="Summer sale cloud storage"
+        src="/images/pricing/Background.png"
+        className="rounded-3xl"
+        width={496}
+        height={520}
+        loading="eager"
+        quality={100}
+      />
+      <div className="absolute -right-28 flex flex-col items-center justify-center space-y-5 overflow-visible">
+        <Image
+          alt="Summer sale cloud storage"
+          src="/images/pricing/flower.png"
+          className="rounded-3xl"
+          width={423}
+          height={475}
+          loading="eager"
+          quality={100}
+        />
+      </div>
+    </div>
+  );
+};
 
 const HeroSection = ({ textContent }) => {
   const feeds = [
@@ -24,12 +51,12 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden pt-12">
-      <div className="flex flex-col items-center justify-center space-y-10 py-24 px-6 lg:flex-row lg:space-y-0 lg:space-x-48">
+      <div className="flex flex-col items-center justify-center space-y-10 py-24 px-6 lg:flex-row lg:space-x-48 lg:space-y-0">
         <div className="flex flex-col space-y-10">
-          <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 lg:items-start">
+          <div className="flex max-w-[500px] flex-col items-center justify-center space-y-10 lg:items-start">
             <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown textColor={'black'} />
+              <Countdown textColor={'black'} dt={'2023-06-29T23:59:59'} />
             </div>
             <div className="flex flex-col space-y-16">
               <div className="flex flex-col text-center lg:text-start">
@@ -48,9 +75,9 @@ const HeroSection = ({ textContent }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center space-y-5 space-x-8 lg:flex-row lg:space-y-0">
+          <div className="flex flex-col items-center justify-start space-y-5 space-x-8 lg:flex-row lg:space-y-0">
             <button
-              className="flex w-full items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
+              className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
               onClick={() =>
                 checkout({
                   planId: 'plan_FkTXxEg3GZW0pg',
@@ -60,20 +87,11 @@ const HeroSection = ({ textContent }) => {
             >
               {textContent.cta.title}
             </button>
-            <p className="max-w-[290px] text-sm text-gray-50">{textContent.cta.description}</p>
+            <p className="w-full max-w-[270px] text-sm text-gray-50">{textContent.cta.description}</p>
           </div>
         </div>
-        <div className="flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1 shadow-2xl">
-          <Image
-            alt="woman using file storage"
-            src="/images/pricing/woman-using-file-storage.png"
-            className=" rounded-3xl"
-            width={496}
-            height={520}
-            layout="intrinsic"
-            loading="eager"
-            quality={100}
-          />
+        <div className="flex flex-col rounded-3xl bg-white">
+          <SummerOfferImage />
         </div>
       </div>
     </section>
