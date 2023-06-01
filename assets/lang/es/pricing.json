@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": { "line1": "90% OFF", "line2": "en el plan de 2TB" },
     "feeds": {
-      "firstFeed": "Garantía de devolución del dinero en 30 días",
+      "firstFeed": "Garantía de devolución de 30 días",
       "secondFeed": "Pago 100% seguro",
       "thirdFeed": "Crea una cuenta anónima"
     },
@@ -13,7 +13,7 @@
   },
   "tableSection": {
     "featureSection": {
-      "firstFeature": "Garantía de devolución del dinero en 30 días",
+      "firstFeature": "Garantía de devolución de 30 días",
       "secondFeature": "Pago 100% seguro",
       "thirdFeature": "Creación de cuenta anónima"
     }
