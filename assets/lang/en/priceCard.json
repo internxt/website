@@ -26,9 +26,9 @@
   },
   "billingFrequencyLabel": {
     "lifetime": "One-time payment",
-    "monthly": "billed monthly",
-    "semiannually": "billed semiannually",
-    "annually": "billed annually",
+    "monthly": "Billed monthly",
+    "semiannually": "Billed semiannually",
+    "annually": "Billed annually",
     "afterMonth": "after 30 days"
   },
   "billingFrequencyLabelSmall": {

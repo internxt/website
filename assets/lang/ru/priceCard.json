@@ -27,13 +27,13 @@
     "lifetime": "Одноразовый платеж",
     "monthly": "ежемесячный платеж",
     "semiannually": "платеж раз в полгода",
-    "anually": "ежегодный платеж",
+    "annually": "Ежегодная оплата",
     "afterMonth": "оплата по истечении 30 дней"
   },
   "billingFrequencyLabelSmall": {
     "monthly": "/ежемесячно",
     "semiannually": "/раз в полгода",
-    "anually": "/ежегодно"
+    "annually": "/ежегодно"
   },
   "perUserSlash": "/пользователь",
   "perUser": "За пользователя",
@@ -47,7 +47,7 @@
   "firstMonth": "Первые 30 дней",
   "cta": {
     "getStarted": "Начать",
-    "signUpNow": "Зарегистрироваться сейчас",
+    "signUpNow": "Зарегистрироваться ",
     "buy": "Приобрести",
     "get": "Получить",
     "discount": "Получить скидку 90%",

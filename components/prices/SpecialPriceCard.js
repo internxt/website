@@ -112,7 +112,7 @@ export default function SpecialPriceCard({
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-white
+            } flex-row text-sm font-medium text-white
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
