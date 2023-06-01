@@ -25,9 +25,9 @@
   },
   "billingFrequencyLabel": {
     "lifetime": "Pagamento unico",
-    "monthly": "fatturato mensilmente",
-    "semiannually": "fatturato semestralmente",
-    "annually": "fatturato annualmente",
+    "monthly": "Fatturato mensilmente",
+    "semiannually": "Fatturato semestralmente",
+    "annually": "Fatturato annualmente",
     "afterMonth": "dopo 30 giorni"
   },
   "billingFrequencyLabelSmall": {
