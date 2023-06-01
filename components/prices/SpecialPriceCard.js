@@ -220,7 +220,7 @@ export default function SpecialPriceCard({
           onClick={() => {
             onOfferClick();
           }}
-          className="flex w-full flex-row"
+          className="mb-[6.2px] flex w-full flex-row"
         >
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg  font-medium text-primary transition-all duration-75 focus:bg-gray-1 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-gray-1 sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
