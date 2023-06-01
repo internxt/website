@@ -2,12 +2,12 @@ export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
 
-export function openAuthDialog(view: 'login' | 'signup' | 'recover'): void {
+const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
   } else if (view === 'signup') {
     window.top?.postMessage({ action: 'openDialogSignup' }, window.location.origin);
   }
-}
+};
 
 export function checkSession(): void {
   if (REDIRECT_AUTH_ENABLED) {
