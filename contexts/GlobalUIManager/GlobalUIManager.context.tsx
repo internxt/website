@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 
 type GlobalDialogState = {
   isOpen: boolean;
@@ -53,17 +53,16 @@ export const GlobalUIManager: React.FC<
       ),
     );
   };
-  return (
-    <GlobalUIManagerContext.Provider
-      value={{
-        dialogs,
-        openDialog: openDialog,
-        closeDialog: closeDialog,
-      }}
-    >
-      {props.children}
-    </GlobalUIManagerContext.Provider>
-  );
+
+  const value = useMemo(() => {
+    return {
+      dialogs,
+      openDialog: openDialog,
+      closeDialog: closeDialog,
+    };
+  }, [dialogs]);
+
+  return <GlobalUIManagerContext.Provider value={value}>{props.children}</GlobalUIManagerContext.Provider>;
 };
 
 export const useGlobalDialog = () => {

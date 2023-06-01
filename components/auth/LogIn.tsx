@@ -10,6 +10,7 @@ interface LogInProps {
   tfa?: boolean;
   error?: string;
   loading?: boolean;
+  openDialog?: boolean;
 }
 
 export default function LogIn(props: LogInProps) {
@@ -26,7 +27,7 @@ export default function LogIn(props: LogInProps) {
 
   return (
     <>
-      <div className="flex w-full flex-col items-center pt-3 text-center">
+      <div className={'flex w-full flex-col items-center pt-3 text-center'}>
         <h1 className="text-2xl font-medium">{props.textContent.LogIn.title}</h1>
 
         <span>

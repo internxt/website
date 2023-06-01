@@ -2,7 +2,7 @@ export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
 
-const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
+export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
   } else if (view === 'signup') {
     window.top?.postMessage({ action: 'openDialogSignup' }, window.location.origin);

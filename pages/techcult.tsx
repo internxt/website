@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import HeroSection from '../components/techcult/HeroSection';
 import FeatureSection from '../components/techcult/FeatureSection';
@@ -11,10 +11,13 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/techcult/CtaSection';
 
 import axios from 'axios';
+import { login } from '../lib/auth';
+import LogIn from '../components/auth/LogIn';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = React.useState('ES');
+  const [country, setCountry] = useState('ES');
+  const [openDialog, setOpenDialog] = useState(false);
 
   async function getCountryCode() {
     const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
@@ -25,7 +28,16 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
     getCountryCode().then((res) => {
       setCountry(res.data.country);
     });
-  });
+  }, []);
+
+  useEffect(() => {
+    //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
+    const redeemCodeButton = document.getElementById('redeemCode');
+    redeemCodeButton.addEventListener('click', () => {
+      console.log('button clicked');
+      setOpenDialog(true);
+    });
+  }, []);
 
   return (
     <Layout
@@ -35,6 +47,22 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
+      {openDialog ? (
+        <div
+          className={`fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}
+          onClick={() => {
+            setOpenDialog(false);
+          }}
+        >
+          <div
+            className={`absolute top-1/2 left-1/2
+        flex -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
+          >
+            <LogIn openDialog={openDialog} textContent={langJson.Auth} />
+          </div>
+        </div>
+      ) : null}
+
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
       <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />

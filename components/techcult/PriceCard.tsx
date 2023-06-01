@@ -4,24 +4,12 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { checkout, goToLoginURL, openAuthDialog } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
-
 const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
-const PriceCard = ({
-  planType,
-  storage,
-  price,
-  billingFrequency,
-  cta,
-  country,
-  popular,
-  lang,
-  actualPrice,
-  isCampaign,
-}) => {
+
+const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
   const [stripeObject, setStripeObject] = useState({});
 
   const currency = () => {
@@ -89,9 +77,7 @@ const PriceCard = ({
         <div
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
-          onClick={() => {
-            openAuthDialog('login');
-          }}
+          id="redeemCode"
           className="flex w-full flex-row"
         >
           <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2  text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
