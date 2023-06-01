@@ -4,7 +4,7 @@ import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 import { checkout } from '../../lib/auth';
 
-const TWOTB_OFF_COUPON = 'lxevN374';
+const TWOTB_OFF_COUPON = '6FACDcgf';
 
 const SummerOfferImage = () => {
   return (
