@@ -67,12 +67,12 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
             <CtaSection textContent={langJson.CtaSection} url={CTA_URL} />
           </>
         ) : (
-          <>
+          <div className="overflow-hidden">
             <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed={false} darkMode />
             <HeroSection2 textContent={langJson.HeroSection} />
 
             <ManifestoSection2 textContent={langJson.ManifestoSection} lang={lang} />
-          </>
+          </div>
         )}
 
         <Footer textContent={footerLang} lang={lang} />
