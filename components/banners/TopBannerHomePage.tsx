@@ -6,6 +6,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/banners.json`);
+  const title = textContent.SummerOffer.title.split('!');
 
   return (
     <>
@@ -26,7 +27,10 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             )
           }
         >
-          <p className="flex flex-row font-normal">{textContent.SummerOffer.title}</p>
+          <div className="flex flex-row space-x-1">
+            <p className="flex flex-row font-semibold">{title[0]}!</p>
+            <p className="flex flex-row font-normal">{title[1]}</p>
+          </div>
           <CaretRight size={16} />
 
           {/* <p className="flex text-base font-semibold underline">{pickUp()}</p> */}
