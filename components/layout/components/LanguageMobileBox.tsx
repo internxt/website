@@ -34,12 +34,12 @@ export default function Example() {
                     const lang = Object.keys(person)[0];
                     router.push(router.pathname, router.pathname, { locale: lang }).catch((err) => console.log(err));
                   }}
-                  value={person.en || person.es || person.fr || person.it || person.zh}
+                  value={person.en || person.es || person.fr || person.it || person.zh || person.ru}
                 >
                   {({ selected }) => (
                     <>
                       <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
-                        {person.en || person.es || person.fr || person.it || person.zh}
+                        {person.en || person.es || person.fr || person.it || person.zh || person.ru}
                       </span>
                       {selected ? (
                         <span className="text-amber-600 absolute inset-y-0 left-0 flex items-center pl-3">
