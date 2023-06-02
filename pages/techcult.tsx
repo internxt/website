@@ -11,8 +11,9 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/techcult/CtaSection';
 
 import axios from 'axios';
-import { login } from '../lib/auth';
 import LogIn from '../components/auth/LogIn';
+import SignUp from '../components/auth/SignUp';
+import { X } from '@phosphor-icons/react';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -32,11 +33,15 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
   useEffect(() => {
     //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const redeemCodeButton = document.getElementById('redeemCode');
-    redeemCodeButton.addEventListener('click', () => {
-      console.log('button clicked');
-      setOpenDialog(true);
-    });
+    const TB2Button = document.getElementById('2TB');
+    const TB5Button = document.getElementById('5TB');
+    const TB10Buton = document.getElementById('10TB');
+    [TB2Button, TB5Button, TB10Buton].forEach((button) =>
+      button.addEventListener('click', () => {
+        console.log('button clicked');
+        setOpenDialog(true);
+      }),
+    );
   }, []);
 
   return (
@@ -48,17 +53,13 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
       {openDialog ? (
-        <div
-          className={`fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}
-          onClick={() => {
-            setOpenDialog(false);
-          }}
-        >
+        <div className={`fixed top-0 left-0 right-0 bottom-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}>
           <div
             className={`absolute top-1/2 left-1/2
-        flex -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
+        z-20 flex w-max -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
           >
-            <LogIn openDialog={openDialog} textContent={langJson.Auth} />
+            <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
+            <SignUp textContent={langJson.Auth} />
           </div>
         </div>
       ) : null}

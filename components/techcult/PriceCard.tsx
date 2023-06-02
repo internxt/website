@@ -68,7 +68,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
               className={`${popular ? 'text-white' : 'text-black'} flex flex-row items-start space-x-0.5 font-semibold`}
             >
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-              <span className="price text-2xl font-semibold">{price}</span>
+              <span className="price text-4xl font-semibold">{price}</span>
             </p>
             <p className="pt-2 text-xs font-normal text-gray-50">{contentText.billingFrequencyLabel.lifetime}</p>
           </div>
@@ -77,7 +77,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
         <div
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
-          id="redeemCode"
+          id={storage}
           className="flex w-full flex-row"
         >
           <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2  text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
