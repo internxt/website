@@ -5,7 +5,6 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import { getPlanId, stripeProducts } from '../../pages/api/stripe/stripeProducts';
 import { checkout } from '../../lib/auth';
 
 const TWOTB_OFF_COUPON = '6FACDcgf';
@@ -43,15 +42,13 @@ export default function SpecialPriceCard({
 
   const onOfferClick = () => {
     const interval = billingFrequency === 1 ? 'month' : 'year';
-    stripeProducts()
-      .getPlanId(interval, storage)
-      .then((planId) => {
-        checkout({
-          planId: planId,
-          couponCode: TWOTB_OFF_COUPON,
-          mode: billingFrequency === -1 ? 'payment' : 'subscription',
-        });
+    stripeService.getPlanId(interval, storage).then((planId) => {
+      checkout({
+        planId: planId,
+        couponCode: TWOTB_OFF_COUPON,
+        mode: billingFrequency === -1 ? 'payment' : 'subscription',
       });
+    });
   };
 
   const teamsBilled = (price * getUsers).toFixed(2);
@@ -96,7 +93,7 @@ export default function SpecialPriceCard({
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 10) / 100).toFixed(2)}</span>
+            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 20) / 100).toFixed(2)}</span>
           </p>
           <div
             className={`priceBreakdown flex text-white ${

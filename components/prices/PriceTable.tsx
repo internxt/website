@@ -4,124 +4,116 @@ import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '../banners/BusinessBanner';
-import stripeService from '../../pages/api/stripe/stripeProducts';
 import SpecialPriceCard from './SpecialPriceCard';
+import axios from 'axios';
 
-export default function PriceTable({
-  setSegmentPageName,
-  lang,
-  country,
-  setIsLifetime,
-  textContent,
-  products,
-  setShowSnackbar,
-}) {
+export default function PriceTable({ setSegmentPageName, lang, country, setIsLifetime, textContent, setShowSnackbar }) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState(12);
-  const [userCount, setUserCount] = useState(2);
+  const [products, setProducts] = useState({});
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
 
-  function parentSetUserCount(count) {
-    setUserCount(count);
-  }
-
-  const billingPrice = (price) => price[billingFrequency];
+  useEffect(() => {
+    axios.get(`${window.origin}/api/stripe/stripe_products`).then((res) => {
+      console.log('res.data', res.data);
+    });
+  }, []);
 
   const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
 
-  const pricings = {
-    individuals: {
-      free: {
-        storage: '10GB',
-        price: {
-          1: '0',
-          12: '0',
-        },
-        popular: false,
-      },
-      GB20: {
-        storage: products.month20GB.storage,
-        price: {
-          1: products.month20GB.price,
-          12: products.year20GB.price,
-        },
-        popular: false,
-      },
-      GB200: {
-        storage: products.month200GB.storage,
-        price: {
-          1: products.month200GB.price,
-          12: products.year200GB.price,
-        },
-        popular: false,
-      },
-      TB2: {
-        storage: products.month2TB.storage,
-        price: {
-          1: products.month2TB.price,
-          12: products.year2TB.price,
-        },
-        popular: true,
-      },
-      lifetime2TB: {
-        stripeID: products.lifetime2TB.planId,
-        storage: products.lifetime2TB.storage,
-        price: {
-          '-1': products.lifetime2TB.price,
-        },
-        popular: false,
-      },
-      lifetime5TB: {
-        stripeID: products.lifetime5TB.planId,
-        storage: products.lifetime5TB.storage,
-        price: {
-          '-1': products.lifetime5TB.price,
-        },
-        popular: true,
-      },
-      lifetime10TB: {
-        stripeID: products.lifetime10TB.planId,
-        storage: products.lifetime10TB.storage,
-        price: {
-          '-1': products.lifetime10TB.price,
-        },
-        popular: false,
-      },
-    },
-    business: {
-      GB200: {
-        stripeID: '200GB',
-        storage: '200GB',
-        price: {
-          1: '4.49',
-          6: '3.99',
-          12: '3.49',
-        },
-        popular: false,
-      },
-      TB2: {
-        stripeID: '2TB',
-        storage: '2TB',
-        price: {
-          1: '9.99',
-          6: '9.49',
-          12: '8.99',
-        },
-        popular: true,
-      },
-      twentyTB: {
-        stripeID: '20TB',
-        storage: '20TB',
-        price: {
-          1: '95.00',
-          6: '94.49',
-          12: '93.99',
-        },
-        popular: false,
-      },
-    },
-  };
+  // const pricings = {
+  //   individuals: {
+  //     free: {
+  //       storage: '10GB',
+  //       price: {
+  //         1: '0',
+  //         12: '0',
+  //       },
+  //       popular: false,
+  //     },
+  //     GB20: {
+  //       storage: products.month20GB.storage,
+  //       price: {
+  //         1: products.month20GB.price,
+  //         12: products.year20GB.price,
+  //       },
+  //       popular: false,
+  //     },
+  //     GB200: {
+  //       storage: products.month200GB.storage,
+  //       price: {
+  //         1: products.month200GB.price,
+  //         12: products.year200GB.price,
+  //       },
+  //       popular: false,
+  //     },
+  //     TB2: {
+  //       storage: products.month2TB.storage,
+  //       price: {
+  //         1: products.month2TB.price,
+  //         12: products.year2TB.price,
+  //       },
+  //       popular: true,
+  //     },
+  //     lifetime2TB: {
+  //       stripeID: products.lifetime2TB.planId,
+  //       storage: products.lifetime2TB.storage,
+  //       price: {
+  //         '-1': products.lifetime2TB.price,
+  //       },
+  //       popular: false,
+  //     },
+  //     lifetime5TB: {
+  //       stripeID: products.lifetime5TB.planId,
+  //       storage: products.lifetime5TB.storage,
+  //       price: {
+  //         '-1': products.lifetime5TB.price,
+  //       },
+  //       popular: true,
+  //     },
+  //     lifetime10TB: {
+  //       stripeID: products.lifetime10TB.planId,
+  //       storage: products.lifetime10TB.storage,
+  //       price: {
+  //         '-1': products.lifetime10TB.price,
+  //       },
+  //       popular: false,
+  //     },
+  //   },
+  //   business: {
+  //     GB200: {
+  //       stripeID: '200GB',
+  //       storage: '200GB',
+  //       price: {
+  //         1: '4.49',
+  //         6: '3.99',
+  //         12: '3.49',
+  //       },
+  //       popular: false,
+  //     },
+  //     TB2: {
+  //       stripeID: '2TB',
+  //       storage: '2TB',
+  //       price: {
+  //         1: '9.99',
+  //         6: '9.49',
+  //         12: '8.99',
+  //       },
+  //       popular: true,
+  //     },
+  //     twentyTB: {
+  //       stripeID: '20TB',
+  //       storage: '20TB',
+  //       price: {
+  //         1: '95.00',
+  //         6: '94.49',
+  //         12: '93.99',
+  //       },
+  //       popular: false,
+  //     },
+  //   },
+  // };
 
   return (
     <section id="priceTable" className="bg-gray-1">
@@ -142,7 +134,7 @@ export default function PriceTable({
               onClick={() => {
                 setIndividual(!individual);
                 setSegmentPageName(
-                  `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequencySegment.billingFrequency}`,
+                  `Pricing ${!individual ? 'Individuals' : 'Business'} ${billingFrequencySegment[billingFrequency]}`,
                 );
                 if (billingFrequency === -1) {
                   setTimeout(() => {
@@ -201,7 +193,7 @@ export default function PriceTable({
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+          {/* <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
             {billingFrequency === -1 ? (
               <>
                 <PriceCard
@@ -277,7 +269,7 @@ export default function PriceTable({
                     storage={pricings.individuals.TB2.storage}
                     price={billingPrice(pricings.individuals.TB2.price)}
                     billingFrequency={billingFrequency}
-                    cta={['checkout', checkoutPlan('TB2')]}
+                    cta={['checkout', pricings.individuals.TB2.stripeID]}
                     popular={pricings.individuals.TB2.popular}
                     lang={lang}
                     country={country}
@@ -288,7 +280,7 @@ export default function PriceTable({
                     storage={pricings.individuals.TB2.storage}
                     price={billingPrice(pricings.individuals.TB2.price)}
                     billingFrequency={billingFrequency}
-                    cta={['checkout', checkoutPlan('TB2')]}
+                    cta={['checkout', pricings.individuals.TB2.stripeID]}
                     popular={pricings.individuals.TB2.popular}
                     lang={lang}
                     country={country}
@@ -296,7 +288,7 @@ export default function PriceTable({
                 )}
               </>
             )}
-          </div>
+          </div> */}
         </Transition>
 
         <Transition

@@ -9,19 +9,13 @@ import cookies from '../lib/cookies';
 import axios from 'axios';
 import FAQSection from '../components/pricing/FAQSection';
 import CtaSection from '../components/pricing/CtaSection';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import InfoSection from '../components/home/InfoSection';
-import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
-import BestStorageSection from '../components/pricing/BestStorageSection';
 import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import stripeService from './api/stripe/stripeProducts';
-import bytes from 'bytes';
 import { toast } from 'react-toastify';
 import ShowSnackbar from '../components/ShowSnackbar';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, products }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -80,7 +74,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           lang={lang}
           country={country}
           setIsLifetime={setIsLifetime}
-          products={products}
           textContent={textContent.tableSection}
           setShowSnackbar={setShowSnackbar}
         />
@@ -122,18 +115,6 @@ export async function getServerSideProps(ctx) {
 
   const pushObjects = {};
 
-  await stripeService.products().then((res) => {
-    return res.map((product) => {
-      const id: string = product.interval + bytes(product.bytes);
-
-      pushObjects[id] = {
-        storage: bytes(product.bytes),
-        price: product.amount / 100,
-        popular: ['lifetime2TB' || 'month2TB' || 'year2TB'].includes(id) ? true : false,
-      };
-    });
-  });
-
   return {
     props: {
       metatagsDescriptions,
@@ -141,7 +122,6 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       textContent,
-      products: JSON.stringify(pushObjects),
     },
   };
 }

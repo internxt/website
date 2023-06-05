@@ -6,7 +6,7 @@
 /* eslint-disable no-nested-ternary */
 
 import React from 'react';
-import stripeService from '../../pages/api/stripe/stripeProducts';
+import stripeService from '../../pages/api/stripe/stripe_products';
 import { checkout, goToSignUpURL } from '../../lib/auth';
 
 export default function PriceCard({
