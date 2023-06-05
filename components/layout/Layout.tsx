@@ -25,6 +25,9 @@ interface LayoutProps {
 
 const INTERNXT_URL = 'https://internxt.com';
 
+const excludedPaths = ['/pricing'];
+const imageLang = ['ES', 'FR', 'EN'];
+
 export default function Layout({
   children,
   title = 'Internxt',
@@ -41,9 +44,10 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = true;
+  const showBanner = !excludedPaths.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<Event>();
+  const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
   const slogan = {
     en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -70,12 +74,13 @@ LayoutProps) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="canonical" href={`${INTERNXT_URL}${pathname}`} />
+        <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <link rel="alternate" hrefLang={'en'} href={`${INTERNXT_URL}${pathname}`} />
         <link rel="alternate" hrefLang={'it'} href={`${INTERNXT_URL}/it${pathname}`} />
         <link rel="alternate" hrefLang={'es'} href={`${INTERNXT_URL}/es${pathname}`} />
         <link rel="alternate" hrefLang={'zh'} href={`${INTERNXT_URL}/zh${pathname}`} />
         <link rel="alternate" hrefLang={'fr'} href={`${INTERNXT_URL}/fr${pathname}`} />
+        <link rel="alternate" hrefLang={'ru'} href={`${INTERNXT_URL}/ru${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href={`${INTERNXT_URL}${pathname}`} />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
@@ -84,7 +89,7 @@ LayoutProps) {
         <meta property="og:url" content={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <meta
           property="og:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${imagePreview}.png`}
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
@@ -92,7 +97,7 @@ LayoutProps) {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${langToUpperCase}.png`}
+          content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${imagePreview}.png`}
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />

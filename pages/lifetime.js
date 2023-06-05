@@ -89,19 +89,10 @@ export async function getServerSideProps(ctx) {
       });
     });
 
-  if (ctx.locale !== 'en') {
-    return {
-      redirect: {
-        destination: '/lifetime',
-        permanent: false,
-      },
-    };
-  }
-
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/lifetime.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/${lang}/lifetime.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

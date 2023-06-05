@@ -11,7 +11,7 @@ import Navbar from '../components/layout/Navbar';
 import ProductsNavigation from '../components/layout/ProductsNavigation';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import { downloadDriveByPlatform } from '../lib/get-download-url';
+import { downloadDriveLinks } from '../lib/get-download-url';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import FileParallaxSection from '../components/home/FileParallaxSection';
@@ -55,7 +55,7 @@ const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, downlo
 };
 
 export async function getServerSideProps(ctx) {
-  const download = await downloadDriveByPlatform(ctx);
+  const download = await downloadDriveLinks(ctx);
 
   const ua = ctx.req.headers['user-agent'];
   const device = userAgent.parse(ua).os.family;

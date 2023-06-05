@@ -26,9 +26,9 @@
   },
   "billingFrequencyLabel": {
     "lifetime": "One-time payment",
-    "monthly": "billed monthly",
-    "semiannually": "billed semiannually",
-    "annually": "billed annually",
+    "monthly": "Billed monthly",
+    "semiannually": "Billed semiannually",
+    "annually": "Billed annually",
     "afterMonth": "after 30 days"
   },
   "billingFrequencyLabelSmall": {
@@ -51,7 +51,7 @@
     "signUpNow": "Sign up now",
     "buy": "Buy",
     "get": "Get",
-    "discount": "Get 80% off",
+    "discount": "Get 90% off",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Get 30 days for free"
   },

@@ -8,7 +8,7 @@ import React from 'react';
 import { getPlanId, stripeProducts } from '../../pages/api/stripe/stripeProducts';
 import { checkout } from '../../lib/auth';
 
-const TWOTB_OFF_COUPON = 'lxevN374';
+const TWOTB_OFF_COUPON = '6FACDcgf';
 
 export default function SpecialPriceCard({
   planType,
@@ -61,22 +61,20 @@ export default function SpecialPriceCard({
   return (
     <div
       className={`priceCard card ${
-        popular ? 'border-2 border-primary bg-primary shadow-lg ring-2 ring-primary' : ''
+        popular ? 'border-2 border-mint-dark bg-mint-dark shadow-lg ring-2 ring-mint-dark' : ''
       } m-2 flex w-full flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
         className={`mostPopular ${
           popular ? '' : 'hidden'
-        } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
+        } flex flex-col items-center justify-center py-2 text-sm font-medium text-white`}
       >
         {popular && billingFrequency === 12 ? contentText.cta.discount + ' ' + storage : contentText.mostPopular}
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center  p-4 pt-6 ${
-          popular && billingFrequency === 12
-            ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover'
-            : 'bg-white'
+        className={`info flex flex-col items-center justify-start  p-6 pt-6 ${
+          popular && billingFrequency === 12 ? 'rounded-t-2xl bg-primary bg-cover' : 'bg-white'
         }`}
       >
         <div
@@ -98,16 +96,13 @@ export default function SpecialPriceCard({
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-            <span className="price text-4xl font-semibold">{Math.abs((price * 10) / 100).toFixed(2)}</span>
+            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 10) / 100).toFixed(2)}</span>
           </p>
           <div
-            className={`priceBreakdown flex text-neutral-50 ${
+            className={`priceBreakdown flex text-white ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
-            {/* <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-xs font-medium`}>
-              {contentText.perUser}
-            </span> */}
             <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-2xl font-semibold line-through">
@@ -118,19 +113,10 @@ export default function SpecialPriceCard({
             <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}></span>
           </div>
 
-          {/* <span
-            className={`priceBefore ${
-              priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-50 line-through`}
-          >
-            {currency()}
-            {priceBefore}
-          </span> */}
-
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-xs text-neutral-50
+            } flex-row text-sm font-medium text-white
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
@@ -240,7 +226,7 @@ export default function SpecialPriceCard({
           }}
           className="flex w-full flex-row"
         >
-          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
+          <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg  font-medium text-primary transition-all duration-75 focus:bg-gray-1 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-gray-1 sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {popular && billingFrequency === 12 ? contentText.cta.discount : contentText.cta.get}{' '}
               {lang === 'en' && storage}

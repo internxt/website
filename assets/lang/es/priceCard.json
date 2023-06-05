@@ -24,9 +24,9 @@
   },
   "billingFrequencyLabel": {
     "lifetime": "Pago único",
-    "monthly": "facturado al mes",
-    "semiannually": "facturado cada 6 meses",
-    "annually": "facturado al año",
+    "monthly": "Facturado al mes",
+    "semiannually": "Facturado cada 6 meses",
+    "annually": "Facturado al año",
     "afterMonth": "después de 30 días"
   },
   "billingFrequencyLabelSmall": {
@@ -49,7 +49,7 @@
     "signUpNow": "Consigue Internxt gratis",
     "buy": "Conseguir",
     "get": "Obtener",
-    "discount": "80% de descuento",
+    "discount": "90% de descuento",
     "claimTheDeal": "Obtener descuento",
     "freemonth": "Consigue 30 días gratis"
   },

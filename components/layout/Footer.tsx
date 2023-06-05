@@ -1,13 +1,12 @@
 /* eslint-disable max-len */
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
 import { UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import setUTM from '../../lib/conversions';
-import { useRouter } from 'next/router';
-import { Globe } from '@phosphor-icons/react';
-import { UilAngleDown } from '@iconscout/react-unicons';
 import LanguageMobileBox from './components/LanguageMobileBox';
+import Image from 'next/image';
+import axios from 'axios';
 
 export default function Footer({
   textContent,
@@ -20,19 +19,18 @@ export default function Footer({
   hideNewsletter?: boolean;
   darkMode?: boolean;
 }) {
-  const [consentCookie, setConsentCookie] = React.useState(true);
-  const router = useRouter();
+  const [consentCookie, setConsentCookie] = useState(true);
+  const [platforms, setPlatforms] = useState<any>();
 
-  const handleAcceptCookies = () => {
-    localStorage.setItem('CookieConsent', 'true');
-    setConsentCookie(true);
-  };
-
-  React.useEffect(() => {
+  useEffect(() => {
     const cookie = localStorage.getItem('CookieConsent');
     setUTM();
 
     if (!cookie) setConsentCookie(false);
+
+    axios.get(`${window.location.origin}/api/download`).then((res) => {
+      setPlatforms(res.data.platforms);
+    });
   }, []);
 
   return (
@@ -40,67 +38,155 @@ export default function Footer({
       id="footer"
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
-      <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
-        {/* Newsletter */}
-        <div
-          className={`${
-            hideNewsletter ? 'hidden' : 'flex'
-          } mb-10 w-full flex-col items-start justify-center space-y-6 md:flex-row md:space-x-20 md:space-y-0`}
-        >
-          <div className="flex w-full flex-col space-y-1 md:max-w-sm">
-            <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
-            <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-              {textContent.NewsletterSection.description}
-            </p>
-          </div>
+      <div className="flex w-full  flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
+        <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-y-0 lg:space-x-32 lg:text-left">
+          {/* Download app for iOS and Android */}
+          {lang === 'en' ? (
+            <>
+              <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
+                <div className="flex flex-col space-y-1">
+                  <h2 className="text-lg font-medium text-gray-100">{textContent.DownloadApp.title}</h2>
+                  <p className="text-sm text-gray-80">{textContent.DownloadApp.description}</p>
+                </div>
+                {/* Images */}
+                <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
+                  <div className="flex">
+                    <Image
+                      src="/images/footer/app-store.svg"
+                      width={148}
+                      height={44}
+                      quality={100}
+                      className="cursor-pointer"
+                      alt="Download on the App Store"
+                      onClick={() => {
+                        platforms && window.open(platforms.iPhone, '_blank');
+                      }}
+                    />
+                  </div>
+                  <div className="flex">
+                    <Image
+                      src="/images/footer/store-for-android.svg"
+                      onClick={() => {
+                        platforms && window.open(platforms.Android, '_blank');
+                      }}
+                      width={148}
+                      height={44}
+                      className="cursor-pointer"
+                      alt="Get it on Google Play"
+                    />
+                  </div>
+                </div>
+              </div>
 
-          <form
-            data-code="r3s4c1"
-            method="post"
-            target="_blank"
-            rel="noopener"
-            action="https://app.mailerlite.com/webforms/submit/r3s4c1"
-            className="flex w-full flex-col items-center justify-center md:w-auto"
-          >
-            <input type="hidden" name="ml-submit" value="1" />
-            <input
-              name="fields[email]"
-              type="email"
-              placeholder={`${textContent.NewsletterSection.input}`}
-              className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
-                darkMode
-                  ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
-                  : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
-              } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
-              required
-            />
-            <input
-              name="signup"
-              type="submit"
-              value={`${textContent.NewsletterSection.cta}`}
-              className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
-            />
-            <span className="text-xs text-cool-gray-40 sm:text-supporting-2">
-              {textContent.NewsletterSection.privacy}{' '}
-              <Link href="/legal" locale={lang}>
-                <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
-              </Link>
-            </span>
-          </form>
+              <div
+                className={`${
+                  hideNewsletter ? 'hidden' : 'flex'
+                } mb-10 max-w-[384px] flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
+              >
+                <div className="flex w-full flex-col space-y-1 md:max-w-sm">
+                  <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
+                  <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                    {textContent.NewsletterSection.description}
+                  </p>
+                </div>
+
+                <form
+                  data-code="r3s4c1"
+                  method="post"
+                  target="_blank"
+                  rel="noopener"
+                  action="https://app.mailerlite.com/webforms/submit/r3s4c1"
+                  className="flex w-full flex-col items-center justify-center md:flex-row"
+                >
+                  <input type="hidden" name="ml-submit" value="1" />
+                  <input
+                    name="fields[email]"
+                    type="email"
+                    placeholder={`${textContent.NewsletterSection.input}`}
+                    className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
+                      darkMode
+                        ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
+                        : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
+                    } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
+                    required
+                  />
+                  <input
+                    name="signup"
+                    type="submit"
+                    value={`${textContent.NewsletterSection.cta}`}
+                    className="ml-2 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
+                  />
+                </form>
+                <span className="text-sm text-gray-40">
+                  {textContent.NewsletterSection.privacy}{' '}
+                  <Link href="/legal" locale={lang}>
+                    <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
+                  </Link>
+                </span>
+              </div>
+            </>
+          ) : (
+            <div
+              className={`${
+                hideNewsletter ? 'hidden' : 'flex'
+              } mb-10 w-full flex-col items-start justify-center space-y-6 md:flex-row md:space-x-20 md:space-y-0`}
+            >
+              <div className="flex w-full flex-col space-y-1 md:max-w-sm">
+                <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
+                <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                  {textContent.NewsletterSection.description}
+                </p>
+              </div>
+
+              <form
+                data-code="r3s4c1"
+                method="post"
+                target="_blank"
+                rel="noopener"
+                action="https://app.mailerlite.com/webforms/submit/r3s4c1"
+                className="flex w-full flex-col items-center justify-center md:w-auto"
+              >
+                <input type="hidden" name="ml-submit" value="1" />
+                <input
+                  name="fields[email]"
+                  type="email"
+                  placeholder={`${textContent.NewsletterSection.input}`}
+                  className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
+                    darkMode
+                      ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
+                      : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
+                  } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
+                  required
+                />
+                <input
+                  name="signup"
+                  type="submit"
+                  value={`${textContent.NewsletterSection.cta}`}
+                  className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
+                />
+                <span className="text-xs text-cool-gray-40 sm:text-supporting-2">
+                  {textContent.NewsletterSection.privacy}{' '}
+                  <Link href="/legal" locale={lang}>
+                    <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
+                  </Link>
+                </span>
+              </form>
+            </div>
+          )}
         </div>
 
         {/* Separator */}
         <div
-          className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full ${
+          className={`${hideNewsletter ? 'hidden' : 'flex'} h-px  w-full max-w-[896px] ${
             darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'
           } mb-10`}
         />
 
         {/* Footer content */}
-        <footer className="w-full">
+        <footer className="flex max-w-[896px] items-center justify-center">
           {/* Desktop version */}
-          <div className="hidden flex-col items-center px-36 md:flex md:space-y-16">
-            <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20 xl:space-x-32">
+          <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
+            <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20">
               <div className="flex flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
@@ -207,7 +293,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[180px] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.resources.title}</h3>
                   <div
@@ -224,13 +310,13 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
                     <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                      <a className="max-w-[150px] hover:text-primary">
+                      <a className="w-full max-w-[160px] hover:text-primary">
                         {textContent.FooterSection.sections.resources.comparison}
                       </a>
                     </Link>
 
                     <Link href="/privacy-directory" locale={lang} passHref>
-                      <a className="max-w-[165px] hover:text-primary">
+                      <a className="w-full max-w-[265px] hover:text-primary">
                         {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </a>
                     </Link>
@@ -241,9 +327,9 @@ export default function Footer({
                       </a>
                     </Link>
                     <Link href="/what-does-google-know-about-me" locale={lang} passHref>
-                      <a className="flex  flex-row hover:text-primary">
+                      <a className="flex  items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-primary bg-opacity-15 px-2 text-xs font-medium uppercase text-primary">
+                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
                         </div>
                       </a>
@@ -251,7 +337,7 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[180px] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
                   <div
@@ -279,7 +365,29 @@ export default function Footer({
               </div>
             </div>
 
-            <div className="mt-10 flex flex-col items-center space-y-4">
+            {/* Separator */}
+            <div
+              className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full ${
+                darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'
+              } mb-10`}
+            />
+
+            {/* Logos */}
+            <div className="flex w-full max-w-[900px] flex-row justify-between">
+              <div className="flex flex-row items-center space-x-4">
+                <Link href="/" locale={lang}>
+                  <a className="flex flex-shrink-0">
+                    <img
+                      loading="lazy"
+                      src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
+                      alt="Internxt logo"
+                    />
+                  </a>
+                </Link>
+                <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                  {textContent.FooterSection.copyright}
+                </p>
+              </div>
               <div className="flex flex-row space-x-1">
                 <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                   <img
@@ -342,25 +450,11 @@ export default function Footer({
                   />
                 </a>
               </div>
-
-              <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                {textContent.FooterSection.copyright}
-              </p>
-
-              <Link href="/" locale={lang}>
-                <a className="flex flex-shrink-0">
-                  <img
-                    loading="lazy"
-                    src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
-                    alt="Internxt logo"
-                  />
-                </a>
-              </Link>
             </div>
           </div>
 
           {/* Mobile version */}
-          <div className="flex flex-col md:hidden">
+          <div className="flex flex-col lg:hidden">
             <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
               {({ open }) => (
                 <div>

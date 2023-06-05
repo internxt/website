@@ -25,9 +25,9 @@
   },
   "billingFrequencyLabel": {
     "lifetime": "Pagamento unico",
-    "monthly": "fatturato mensilmente",
-    "semiannually": "fatturato semestralmente",
-    "annually": "fatturato annualmente",
+    "monthly": "Fatturato mensilmente",
+    "semiannually": "Fatturato semestralmente",
+    "annually": "Fatturato annualmente",
     "afterMonth": "dopo 30 giorni"
   },
   "billingFrequencyLabelSmall": {
@@ -50,7 +50,7 @@
     "signUpNow": "Iscriviti ora",
     "buy": "Acquista",
     "get": "Ottieni",
-    "discount": "Ottieni uno sconto del 80%",
+    "discount": "Ottieni uno sconto del 90%",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Ottieni 30 giorni gratis"
   },

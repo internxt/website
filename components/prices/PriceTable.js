@@ -5,6 +5,7 @@ import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '../banners/BusinessBanner';
 import stripeService from '../../pages/api/stripe/stripeProducts';
+import SpecialPriceCard from './SpecialPriceCard';
 
 export default function PriceTable({
   setSegmentPageName,
@@ -53,7 +54,7 @@ export default function PriceTable({
           1: products.month200GB.price,
           12: products.year200GB.price,
         },
-        popular: true,
+        popular: false,
       },
       TB2: {
         storage: products.month2TB.storage,
@@ -61,7 +62,7 @@ export default function PriceTable({
           1: products.month2TB.price,
           12: products.year2TB.price,
         },
-        popular: false,
+        popular: true,
       },
       lifetime2TB: {
         stripeID: products.lifetime2TB.planId,
@@ -123,7 +124,7 @@ export default function PriceTable({
   };
 
   return (
-    <section id="priceTable" className="">
+    <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
           <div className="flex flex-col items-center px-5">
@@ -270,16 +271,29 @@ export default function PriceTable({
                   products={products}
                 />
 
-                <PriceCard
-                  planType="individual"
-                  storage={pricings.individuals.TB2.storage}
-                  price={billingPrice(pricings.individuals.TB2.price)}
-                  billingFrequency={billingFrequency}
-                  cta={['checkout', checkoutPlan('TB2')]}
-                  popular={pricings.individuals.TB2.popular}
-                  lang={lang}
-                  country={country}
-                />
+                {pricings.individuals.TB2.popular && billingFrequency === 12 ? (
+                  <SpecialPriceCard
+                    planType="individual"
+                    storage={pricings.individuals.TB2.storage}
+                    price={billingPrice(pricings.individuals.TB2.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('TB2')]}
+                    popular={pricings.individuals.TB2.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                ) : (
+                  <PriceCard
+                    planType="individual"
+                    storage={pricings.individuals.TB2.storage}
+                    price={billingPrice(pricings.individuals.TB2.price)}
+                    billingFrequency={billingFrequency}
+                    cta={['checkout', checkoutPlan('TB2')]}
+                    popular={pricings.individuals.TB2.popular}
+                    lang={lang}
+                    country={country}
+                  />
+                )}
               </>
             )}
           </div>

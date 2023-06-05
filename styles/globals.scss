@@ -76,6 +76,7 @@
 
 // Fonts
 @import url('../public/fonts/NeueEinstellung/NeueEinstellung.css');
+@import url('../public/fonts/Roboto/Roboto.css');
 
 // Global styles
 
@@ -94,7 +95,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'NeueEinstellung' !important;
+  font-family: 'NeueEinstellung', 'Roboto' !important;
 }
 
 @layer {

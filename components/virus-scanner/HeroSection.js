@@ -511,7 +511,7 @@ const HeroSection = ({ textContent }) => {
                             </div>
                           </div>
 
-                          <div className="flex max-w-sm flex-col items-center space-y-4 text-center">
+                          <div className="flex max-w-xs flex-col items-center space-y-4 text-center">
                             <p className="text-2xl font-medium">{textContent.dropFile.line1}</p>
                             <button
                               type="button"

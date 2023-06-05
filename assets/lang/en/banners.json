@@ -75,5 +75,11 @@
     "subtitle": "Sign up to stay informed and get notified when our business plans become available.",
     "placeHolder": "Your email address",
     "cta": "Subscribe"
+  },
+  "GoogleKnows": {
+    "title": "Max out your Google privacy settings with our What Google Knows page"
+  },
+  "SummerOffer": {
+    "title": "SUMMER SALE! Use code SUMMER90 to get 90% OFF the 2TB plan"
   }
 }
