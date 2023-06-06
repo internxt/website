@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
-        {/* {isExcludedPath ? null : <SummerBanner />} */}
+        <SummerBanner />
         <Intercom />
       </GlobalUIManager>
     </LiveChatLoaderProvider>
