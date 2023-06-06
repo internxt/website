@@ -1,6 +1,8 @@
 import FeatureSection from '../components/affiliates/FeatureSection';
 import HeroSection from '../components/affiliates/HeroSection';
 import WhatIsInternxtSection from '../components/affiliates/WhatIsInternxtSection';
+import WhyJoinSection from '../components/affiliates/WhyJoinSection';
+import FileParallaxSection from '../components/home/FileParallaxSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -17,6 +19,10 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <FeatureSection textContent={langJson.FeatureSection} />
 
       <WhatIsInternxtSection textContent={langJson.WhatIsInternxtSection} />
+
+      <WhyJoinSection textContent={langJson.WhyJoinSection} />
+
+      <FileParallaxSection />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

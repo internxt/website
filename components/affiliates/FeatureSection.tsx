@@ -27,7 +27,10 @@ const FeatureSection = ({ textContent }) => {
         <p className="text-center text-5xl font-semibold">{textContent.title}</p>
         <RevealY className="flex w-full flex-row flex-wrap items-center justify-center gap-4 lg:gap-8">
           {cards.map((item, index) => (
-            <div key={item.title} className="flex max-w-[350px] flex-col space-y-6 rounded-2xl bg-white p-10">
+            <div
+              key={item.title}
+              className="flex max-w-[350px] flex-col items-center space-y-6 rounded-2xl bg-white p-10 text-center lg:items-start lg:text-left"
+            >
               <item.icon className="text-primary" size={32} />
               <p className="text-2xl font-medium text-gray-100">{item.title}</p>
               <p className="text-lg text-gray-80">{item.description}</p>

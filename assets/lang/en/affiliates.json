@@ -28,5 +28,23 @@
     "title": "What is Internxt?",
     "subtitle": "Internxt Drive is a zero-knowledge cloud storage service providing best-in-class privacy and security.",
     "description": "Internxt doesn’t access or sell your data. Unlike competitors, our business model is not based on ads or the sale of user information. Built on open-source, zero-knowledge technology, Internxt is designed for the future and protects users’ right to privacy."
+  },
+  "WhyJoinSection": {
+    "title": "Why join Internxt’s Affiliate Program?",
+    "cards": [
+      {
+        "title": "Earn up to $299 per sale"
+      },
+      {
+        "title": "Dedicated account managers"
+      },
+      {
+        "title": "30-days cookie duration period"
+      },
+      {
+        "title": "Exclusive sales, specials, and deals"
+      }
+    ],
+    "cta": "Sign up now"
   }
 }
