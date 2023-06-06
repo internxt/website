@@ -1,4 +1,8 @@
 {
+  "DownloadApp": {
+    "title": "下载Internxt",
+    "description": "使用iOS或Android的移动应用程序，在安全的云存储中管理你的文件。"
+  },
   "NewsletterSection": {
     "title": "通讯",
     "description": "想在我们推出新产品或发布更新时听到我们的消息吗？请输入你的电子邮件，我们会处理剩下的事情!",
