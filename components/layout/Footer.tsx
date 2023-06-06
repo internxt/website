@@ -41,138 +41,88 @@ export default function Footer({
       <div className="flex w-full  flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
         <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-y-0 lg:space-x-32 lg:text-left">
           {/* Download app for iOS and Android */}
-          {lang === 'en' ? (
-            <>
-              <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
-                <div className="flex flex-col space-y-1">
-                  <h2 className="text-lg font-medium text-gray-100">{textContent.DownloadApp.title}</h2>
-                  <p className="text-sm text-gray-80">{textContent.DownloadApp.description}</p>
-                </div>
-                {/* Images */}
-                <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
-                  <div className="flex">
-                    <Image
-                      src="/images/footer/app-store.svg"
-                      width={148}
-                      height={44}
-                      quality={100}
-                      className="cursor-pointer"
-                      alt="Download on the App Store"
-                      onClick={() => {
-                        platforms && window.open(platforms.iPhone, '_blank');
-                      }}
-                    />
-                  </div>
-                  <div className="flex">
-                    <Image
-                      src="/images/footer/store-for-android.svg"
-                      onClick={() => {
-                        platforms && window.open(platforms.Android, '_blank');
-                      }}
-                      width={148}
-                      height={44}
-                      className="cursor-pointer"
-                      alt="Get it on Google Play"
-                    />
-                  </div>
-                </div>
-              </div>
 
-              <div
-                className={`${
-                  hideNewsletter ? 'hidden' : 'flex'
-                } mb-10 max-w-[384px] flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
-              >
-                <div className="flex w-full flex-col space-y-1 md:max-w-sm">
-                  <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
-                  <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
-                    {textContent.NewsletterSection.description}
-                  </p>
-                </div>
-
-                <form
-                  data-code="r3s4c1"
-                  method="post"
-                  target="_blank"
-                  rel="noopener"
-                  action="https://app.mailerlite.com/webforms/submit/r3s4c1"
-                  className="flex w-full flex-col items-center justify-center md:flex-row"
-                >
-                  <input type="hidden" name="ml-submit" value="1" />
-                  <input
-                    name="fields[email]"
-                    type="email"
-                    placeholder={`${textContent.NewsletterSection.input}`}
-                    className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
-                      darkMode
-                        ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
-                        : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
-                    } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
-                    required
-                  />
-                  <input
-                    name="signup"
-                    type="submit"
-                    value={`${textContent.NewsletterSection.cta}`}
-                    className="ml-2 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
-                  />
-                </form>
-                <span className="text-sm text-gray-40">
-                  {textContent.NewsletterSection.privacy}{' '}
-                  <Link href="/legal" locale={lang}>
-                    <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
-                  </Link>
-                </span>
-              </div>
-            </>
-          ) : (
-            <div
-              className={`${
-                hideNewsletter ? 'hidden' : 'flex'
-              } mb-10 w-full flex-col items-start justify-center space-y-6 md:flex-row md:space-x-20 md:space-y-0`}
-            >
-              <div className="flex w-full flex-col space-y-1 md:max-w-sm">
-                <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
-                <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                  {textContent.NewsletterSection.description}
-                </p>
-              </div>
-
-              <form
-                data-code="r3s4c1"
-                method="post"
-                target="_blank"
-                rel="noopener"
-                action="https://app.mailerlite.com/webforms/submit/r3s4c1"
-                className="flex w-full flex-col items-center justify-center md:w-auto"
-              >
-                <input type="hidden" name="ml-submit" value="1" />
-                <input
-                  name="fields[email]"
-                  type="email"
-                  placeholder={`${textContent.NewsletterSection.input}`}
-                  className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
-                    darkMode
-                      ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
-                      : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
-                  } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
-                  required
-                />
-                <input
-                  name="signup"
-                  type="submit"
-                  value={`${textContent.NewsletterSection.cta}`}
-                  className="mb-6 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
-                />
-                <span className="text-xs text-cool-gray-40 sm:text-supporting-2">
-                  {textContent.NewsletterSection.privacy}{' '}
-                  <Link href="/legal" locale={lang}>
-                    <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
-                  </Link>
-                </span>
-              </form>
+          <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
+            <div className="flex flex-col space-y-1">
+              <h2 className="text-lg font-medium text-gray-100">{textContent.DownloadApp.title}</h2>
+              <p className="text-sm text-gray-80">{textContent.DownloadApp.description}</p>
             </div>
-          )}
+            {/* Images */}
+            <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
+              <div className="flex">
+                <Image
+                  src="/images/footer/app-store.svg"
+                  width={148}
+                  height={44}
+                  quality={100}
+                  className="cursor-pointer"
+                  alt="Download on the App Store"
+                  onClick={() => {
+                    platforms && window.open(platforms.iPhone, '_blank');
+                  }}
+                />
+              </div>
+              <div className="flex">
+                <Image
+                  src="/images/footer/store-for-android.svg"
+                  onClick={() => {
+                    platforms && window.open(platforms.Android, '_blank');
+                  }}
+                  width={148}
+                  height={44}
+                  className="cursor-pointer"
+                  alt="Get it on Google Play"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={`${
+              hideNewsletter ? 'hidden' : 'flex'
+            } mb-10 max-w-[384px] flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
+          >
+            <div className="flex w-full flex-col space-y-1 md:max-w-sm">
+              <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
+              <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.NewsletterSection.description}
+              </p>
+            </div>
+
+            <form
+              data-code="r3s4c1"
+              method="post"
+              target="_blank"
+              rel="noopener"
+              action="https://app.mailerlite.com/webforms/submit/r3s4c1"
+              className="flex w-full flex-col items-center justify-center md:flex-row"
+            >
+              <input type="hidden" name="ml-submit" value="1" />
+              <input
+                name="fields[email]"
+                type="email"
+                placeholder={`${textContent.NewsletterSection.input}`}
+                className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
+                  darkMode
+                    ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
+                    : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
+                } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
+                required
+              />
+              <input
+                name="signup"
+                type="submit"
+                value={`${textContent.NewsletterSection.cta}`}
+                className="ml-2 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
+              />
+            </form>
+            <span className="text-sm text-gray-40">
+              {textContent.NewsletterSection.privacy}{' '}
+              <Link href="/legal" locale={lang}>
+                <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
+              </Link>
+            </span>
+          </div>
         </div>
 
         {/* Separator */}

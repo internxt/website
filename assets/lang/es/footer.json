@@ -1,4 +1,8 @@
 {
+  "DownloadApp": {
+    "title": "Descarga Internxt",
+    "description": "Gestiona de tus archivos en un almacenamiento seguro en la nube usando la aplicación móvil para iOS o Android."
+  },
   "NewsletterSection": {
     "title": "Newsletter",
     "description": "¿Quieres saber de nosotros cuando lancemos nuevos productos o una nueva actualización? Introduce tu correo y nosotros nos haremos cargo del resto.",
