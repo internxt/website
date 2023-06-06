@@ -1,4 +1,6 @@
+import FeatureSection from '../components/affiliates/FeatureSection';
 import HeroSection from '../components/affiliates/HeroSection';
+import WhatIsInternxtSection from '../components/affiliates/WhatIsInternxtSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -9,7 +11,13 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
       <HeroSection textContent={langJson.HeroSection} />
+
+      <FeatureSection textContent={langJson.FeatureSection} />
+
+      <WhatIsInternxtSection textContent={langJson.WhatIsInternxtSection} />
+
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );

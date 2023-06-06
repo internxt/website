@@ -5,5 +5,28 @@
     "description": "Join Internxt’s world-class affiliate program and earn money promoting zero-knowledge cloud storage to your audience. Let’s build a safer, fairer, and better internet together.",
     "signUp": "Sign up now",
     "logIn": "Affiliate log in"
+  },
+  "FeatureSection": {
+    "title": "How to get started?",
+    "cards": [
+      {
+        "title": "Create an affiliate account",
+        "description": "Sign up to be an affiliate by following this link.",
+        "cta": "Sign up now"
+      },
+      {
+        "title": "Send subscribers to Internxt",
+        "description": "Promote Internxt to your audience. Every time someone clicks your personal link and makes a purchase, you earn a commission!"
+      },
+      {
+        "title": "Get paid for every purchase!",
+        "description": "Earn cash for every paid subscription made using your link. There is no limit to the number of payouts we issue at the end of each month."
+      }
+    ]
+  },
+  "WhatIsInternxtSection": {
+    "title": "What is Internxt?",
+    "subtitle": "Internxt Drive is a zero-knowledge cloud storage service providing best-in-class privacy and security.",
+    "description": "Internxt doesn’t access or sell your data. Unlike competitors, our business model is not based on ads or the sale of user information. Built on open-source, zero-knowledge technology, Internxt is designed for the future and protects users’ right to privacy."
   }
 }
