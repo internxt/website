@@ -6,15 +6,14 @@ import { useRouter } from 'next/router';
 const ToolsSection = ({ textContent, lang }) => {
   const router = useRouter();
   return (
-    <section className="overflow-hidden py-20">
+    <section className="overflow-hidden bg-gray-1 py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
-        <div className="flex max-w-[450px] text-center">
-          <p className="text-4xl font-semibold">{textContent.title}</p>
-        </div>
+        <p className="text-4xl font-semibold">{textContent.title}</p>
+
         <div className="gap flex flex-row flex-wrap items-center justify-center gap-8 ">
           {textContent.toolsCard.map((item, index) => (
-            <div className="z-10 flex h-[300px] max-w-[320px] flex-col rounded-2xl bg-gray-1 p-10" key={item.title}>
-              <div className="z-10 flex max-w-[240px] flex-col items-center justify-center space-y-6 bg-gray-1 text-center ">
+            <div className="z-10 flex h-[300px] max-w-[320px] flex-col rounded-2xl bg-white p-10" key={item.title}>
+              <div className="z-10 flex max-w-[240px] flex-col items-center justify-center space-y-6 bg-white text-center ">
                 <Image
                   src={item.url}
                   width={item.width}
@@ -24,7 +23,7 @@ const ToolsSection = ({ textContent, lang }) => {
                   loading={'lazy'}
                   alt={item.title}
                 />
-                <p className="max-w-[200px] bg-gray-1 text-2xl font-medium">{item.title}</p>
+                <p className="max-w-[200px] bg-white text-2xl font-medium">{item.title}</p>
                 <div
                   onClick={() =>
                     window.open(`${window.location.origin}/${router.locale}/${item.UrlRedirectName}`, '_blank')

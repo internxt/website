@@ -10,6 +10,7 @@ import FAQSection from '../components/password-checker/FAQSection';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import ToolsSection from '../components/shared/ToolsSection';
 
 const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-checker');
@@ -46,6 +47,8 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
           bannerText={bannerLang.SignUpPwdCheckerBanner}
           lang={lang}
         />
+
+        <ToolsSection textContent={langJson.ToolsSection} lang={lang} />
 
         <FAQSection textContent={langJson.FaqSection} />
 
