@@ -34,10 +34,10 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
 
         <HeroSection textContent={langJson.HeroSection} />
 
-        <TryInternxtBanner
+        {/* <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
-        />
+        /> */}
 
         <ExplanationSection
           textContent={langJson.ExplanationSection}
