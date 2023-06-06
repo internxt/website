@@ -1,0 +1,127 @@
+{
+  "HeroSection": {
+    "title": "Get a lifetime Internxt plan!",
+    "description": "Secure all your files and memories forever with a single, one-time payment.",
+    "cta": "Redeem code"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Create an Internxt account",
+      "or": "or",
+      "login": "Log in",
+      "disclaimer": {
+        "text": "By creating an account you accept the",
+        "link": "terms and conditions"
+      },
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
+        },
+        "submit": "Get started"
+      }
+    },
+    "LogIn": {
+      "title": "Log in to Internxt",
+      "or": "or",
+      "signup": "Create account",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "helper": "Forgot your password?"
+        },
+        "tfa": {
+          "label": "Two Factor Authentication",
+          "placeholder": "2FA Code",
+          "hint": "2FA Code must be 6 digits"
+        },
+        "submit": "Log in"
+      }
+    },
+    "Recover": {
+      "title": "Recover account",
+      "back": "Back to log in",
+      "disclaimer": "As specified in the app settings, only you have access to your password, therefore we can't restore your account without it. You can sign up again by entering your email below so we can delete your account and all your files.",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "submit": "Send confirmation email"
+      },
+      "success": {
+        "title": "Check your email",
+        "subtitle": "We've send an account reset link to"
+      }
+    }
+  },
+  "PaymentSection": {
+    "limitedOffer": "Limited time offer!",
+    "title": { "blueText": "", "normalText": "Explore all of our exclusive lifetime plans" },
+    "description": "Buy once and get privacy and security forever.",
+    "normalSection": {
+      "title": "Explore all of our exclusive lifetime plans",
+      "description": "This week only, buy once and get privacy and security forever."
+    },
+    "securePayment": "100% Secure payment, powered by Stripe",
+
+    "firstFeed": "30-day money-back guarantee",
+    "secondFeed": "100% secure payment",
+    "thirdFeed": "Anonymous account creation"
+  },
+  "GetLifetimeSection": {
+    "title": "Life is not short! But this limited-time deal is...",
+    "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
+  },
+  "FeatureSection": {
+    "title": "Why choose Internxt?",
+    "description": "Privacy made for everyone and simple-to-use online security that you don't have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
+    "features": {
+      "privacy": {
+        "title": "Private",
+        "description": "No first or third-party access to your file ever! You have total control of your data."
+      },
+      "fastSync": {
+        "title": "Fast sync",
+        "description": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
+      },
+      "security": {
+        "title": "Secure from the core",
+        "description": "Open-source code, end-to-end encrypted, and safely hosted across a vast distributed network."
+      },
+      "sharing": {
+        "title": "Safe sharing",
+        "description": "Send encrypted files and photos back and forth to your favorite people via link and email."
+      },
+      "multiplatform": {
+        "title": "Multiplatform",
+        "description": "Privacy for all devices, browsers, and operating systems! Linux, Windows, macOS, iOS, Android."
+      },
+      "zeroKnowledge": {
+        "title": "Zero-knowledge",
+        "description": "You are the only one with access to your data. Not even Internxt can view your files!"
+      }
+    }
+  },
+
+  "CtaSection": {
+    "title": "Your files secure and private forever",
+    "description": "We treat our users like family and family is forever!",
+    "cta": "Select a plan now"
+  }
+}

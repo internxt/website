@@ -25,7 +25,12 @@ export default function SignUp(props: SignUpProps) {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    signup({ email: form.email.value, password: form.password.value });
+    signup({
+      email: form.email.value,
+      password: form.password.value,
+      redeemCode: form.redeemCode.value,
+      provider: 'TECHCULT',
+    });
   };
 
   const checkPassword = (input) => {
@@ -47,23 +52,9 @@ export default function SignUp(props: SignUpProps) {
   };
 
   return (
-    <>
+    <div className="z-50 flex w-full flex-col space-y-5">
       <div className="flex w-full flex-col items-center pt-3 text-center">
         <h1 className="text-2xl font-medium">{props.textContent.SignUp.title}</h1>
-
-        <span>
-          {props.textContent.SignUp.or}{' '}
-          <a
-            onClick={() => {
-              if (!props.loading) {
-                globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'login' } });
-              }
-            }}
-            className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
-          >
-            {props.textContent.SignUp.login}
-          </a>
-        </span>
       </div>
 
       <form
@@ -101,6 +92,16 @@ export default function SignUp(props: SignUpProps) {
           {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
         </div>
 
+        <TextInput
+          name="redeemCode"
+          placeholder={'Redeem Code'}
+          type="text"
+          autoComplete="email"
+          required
+          autoCompleteOnFocus={autoCompleteOnFocus}
+          disabled={props.loading}
+        />
+
         {props.error && (
           <div className="flex w-full flex-row items-start">
             <div className="flex h-5 flex-row items-center">
@@ -125,6 +126,6 @@ export default function SignUp(props: SignUpProps) {
           {'.'}
         </span>
       </form>
-    </>
+    </div>
   );
 }
