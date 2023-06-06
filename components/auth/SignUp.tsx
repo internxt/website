@@ -25,7 +25,12 @@ export default function SignUp(props: SignUpProps) {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    signup({ email: form.email.value, password: form.password.value });
+    signup({
+      email: form.email.value,
+      password: form.password.value,
+      redeemCode: form.redeemCode.value,
+      provider: 'TECHCULT',
+    });
   };
 
   const checkPassword = (input) => {
@@ -88,7 +93,7 @@ export default function SignUp(props: SignUpProps) {
         </div>
 
         <TextInput
-          name="redeem code"
+          name="redeemCode"
           placeholder={'Redeem Code'}
           type="text"
           autoComplete="email"
