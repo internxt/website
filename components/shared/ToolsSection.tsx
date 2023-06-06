@@ -13,7 +13,7 @@ const ToolsSection = ({ textContent, lang }) => {
         <div className="gap flex flex-row flex-wrap items-center justify-center gap-8 ">
           {textContent.toolsCard.map((item, index) => (
             <div className="z-10 flex h-[300px] max-w-[320px] flex-col rounded-2xl bg-white p-10" key={item.title}>
-              <div className="z-10 flex max-w-[240px] flex-col items-center justify-center space-y-6 bg-white text-center ">
+              <div className="z-10 flex h-full max-w-[240px] flex-col items-center justify-between bg-white text-center ">
                 <Image
                   src={item.url}
                   width={item.width}
