@@ -13,7 +13,7 @@ const PriceTable = ({ lang, country }) => {
       price: {
         '-1': '299',
       },
-      popular: true,
+      popular: false,
       actualPrice: Math.abs((299 * 75) / 100)
         .toString()
         .split('.')[0],
@@ -24,7 +24,7 @@ const PriceTable = ({ lang, country }) => {
       price: {
         '-1': '499',
       },
-      popular: false,
+      popular: true,
       actualPrice: Math.abs((499 * 75) / 100)
         .toString()
         .split('.')[0],
@@ -50,17 +50,6 @@ const PriceTable = ({ lang, country }) => {
       >
         <PriceCard
           planType="individual"
-          storage={pricings.TB5.storage}
-          price={billingPrice(pricings.TB5.price)}
-          billingFrequency={billingFrequency}
-          cta={['checkout', 'lifetime5TB']}
-          popular={pricings.TB5.popular}
-          lang={lang}
-          country={country}
-          actualPrice={pricings.TB5.actualPrice}
-        />
-        <PriceCard
-          planType="individual"
           storage={pricings.TB2.storage}
           price={billingPrice(pricings.TB2.price)}
           billingFrequency={billingFrequency}
@@ -70,7 +59,17 @@ const PriceTable = ({ lang, country }) => {
           country={country}
           actualPrice={pricings.TB2.actualPrice}
         />
-
+        <PriceCard
+          planType="individual"
+          storage={pricings.TB5.storage}
+          price={billingPrice(pricings.TB5.price)}
+          billingFrequency={billingFrequency}
+          cta={['checkout', 'lifetime5TB']}
+          popular={pricings.TB5.popular}
+          lang={lang}
+          country={country}
+          actualPrice={pricings.TB5.actualPrice}
+        />
         <PriceCard
           planType="individual"
           storage={pricings.TB10.storage}

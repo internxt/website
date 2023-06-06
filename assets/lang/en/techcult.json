@@ -72,7 +72,7 @@
   },
   "PaymentSection": {
     "limitedOffer": "Limited time offer!",
-    "title": { "blueText": "Get 25% OFF", "normalText": " all our exclusive lifetime plans" },
+    "title": { "blueText": "", "normalText": "Explore all of our exclusive lifetime plans" },
     "description": "Buy once and get privacy and security forever.",
     "normalSection": {
       "title": "Explore all of our exclusive lifetime plans",

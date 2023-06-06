@@ -46,11 +46,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
         {contentText.mostPopularPlan}
       </div>
 
-      <div
-        className={`info flex flex-col items-center justify-center bg-white p-6 ${
-          popular ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover' : ''
-        }`}
-      >
+      <div className={`info flex flex-col items-center justify-center bg-white p-6 `}>
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full ${
             popular ? 'text-primary' : 'text-gray-50'
@@ -64,9 +60,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
             className={`priceBreakdown flex flex-col items-center
             `}
           >
-            <p
-              className={`${popular ? 'text-white' : 'text-black'} flex flex-row items-start space-x-0.5 font-semibold`}
-            >
+            <p className={`flex flex-row items-start space-x-0.5 font-semibold text-black`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-semibold">{price}</span>
             </p>

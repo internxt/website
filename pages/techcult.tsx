@@ -38,7 +38,6 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
     const TB10Buton = document.getElementById('10TB');
     [TB2Button, TB5Button, TB10Buton].forEach((button) =>
       button.addEventListener('click', () => {
-        console.log('button clicked');
         setOpenDialog(true);
       }),
     );
