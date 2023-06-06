@@ -1,11 +1,14 @@
+import FaqSection from '../components/affiliates/FaqSection';
 import FeatureSection from '../components/affiliates/FeatureSection';
 import HeroSection from '../components/affiliates/HeroSection';
 import WhatIsInternxtSection from '../components/affiliates/WhatIsInternxtSection';
+import WhatWeDoSection from '../components/affiliates/WhatWeDoSection';
 import WhyJoinSection from '../components/affiliates/WhyJoinSection';
 import FileParallaxSection from '../components/home/FileParallaxSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
+import CtaSection from '../components/shared/CtaSection';
 
 const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'affiliates');
@@ -23,6 +26,15 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <WhyJoinSection textContent={langJson.WhyJoinSection} />
 
       <FileParallaxSection />
+
+      <WhatWeDoSection textContent={langJson.WhatWeDoSection} />
+
+      <FaqSection textContent={langJson.FaqSection} />
+
+      <CtaSection
+        textContent={langJson.CtaSection}
+        url={'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1'}
+      />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

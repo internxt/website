@@ -14,7 +14,7 @@ const CtaSection = ({ textContent, url }) => {
         <button
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
-            window.open(url, '_blank');
+            window.open(url, '_blank', 'nofollow');
           }}
         >
           {textContent.cta}

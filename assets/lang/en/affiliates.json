@@ -46,5 +46,68 @@
       }
     ],
     "cta": "Sign up now"
+  },
+  "WhatWeDoSection": {
+    "title": "Privacy, security, and military-grade encryption for everyone",
+    "description": "Focusing on privacy, security, and the preservation of everyone’s digital rights, we want our partners to join us in promoting a safer and more ethical internet. Internxt is a tool and service built to provide the best and most secure cloud storage for everyone.",
+    "cards": [
+      {
+        "title": "All your files on all your devices",
+        "description": "Securely access all your files from any device with a connection to the internet via our web, desktop, and mobile apps."
+      },
+      {
+        "title": "Keep your files organized",
+        "description": "Internxt lets you organize your files in folders, rename them, and filter a list of files to find what you want faster."
+      },
+      {
+        "title": "Share your files with ease",
+        "description": "You choose who you want to share with and how many times you want your files to be downloaded."
+      },
+      {
+        "title": "Back up what matters to you",
+        "description": "Stay current and preserve the latest version of that important file or folder you're working on."
+      }
+    ],
+    "recognized": "Proudly recognized for quality protection"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What type of partners does Internxt work with?",
+        "answer": [
+          "We work with everyone who produces content: bloggers, websites, influencers, YouTubers, LinkedIn pros, etc."
+        ]
+      },
+      {
+        "question": "How soon can I receive my first payout?",
+        "answer": ["We issue payouts automatically at the end of the month."]
+      },
+      {
+        "question": "What is the best way to promote Internxt?",
+        "answer": [
+          "Nobody knows your audience better than you! However, once you register for our affiliate partner program you’ll be provided a ton of tips and assets to choose from."
+        ]
+      },
+      {
+        "question": "How long does the provided cookie last?",
+        "answer": ["We follow the market standard of a 30-day policy."]
+      },
+      {
+        "question": "When will my application be reviewed?",
+        "answer": ["Your dedicated affiliate manager will get back to you in about 24 hours."]
+      },
+      {
+        "question": "More questions?",
+        "answer": [
+          "If you have any additional questions, comments, or concerns please read our Terms and Conditions or message us at agne@internxt.com."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Get paid to protect the right to privacy",
+    "description": "Join now and promote the world's most private open-source cloud storage service.",
+    "cta": "Sign up now"
   }
 }
