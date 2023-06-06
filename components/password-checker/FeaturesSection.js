@@ -37,10 +37,12 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
             <div className="grid auto-rows-auto grid-cols-1 gap-5 px-1 sm:grid-cols-2 lg:max-w-max lg:grid-cols-3">
               {textContent.section2.tips.map((tip, index) => (
-                <div key={tip} className="flex flex-row rounded-2xl bg-white p-8 sm:flex-col lg:h-48 lg:w-64">
-                  <div className="flex h-full flex-col pb-3 pr-6 text-primary">{tipIcons[index]}</div>
-
-                  <span className="text-2xl tracking-tight">{tip}</span>
+                <div
+                  key={tip}
+                  className="flex flex-col items-start space-y-3 rounded-2xl bg-white p-8 lg:h-full lg:max-w-[256px]"
+                >
+                  <p className="flex flex-col text-primary">{tipIcons[index]}</p>
+                  <p className="text-2xl">{tip}</p>
                 </div>
               ))}
             </div>

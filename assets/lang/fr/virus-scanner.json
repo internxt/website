@@ -109,13 +109,32 @@
   },
   "BannersSection": {
     "title": "Essayez les outils en ligne gratuits d'Internxt :",
-    "passwordCheckerBanner": {
-      "title": "Vérificateur de Mot de Passe",
-      "cta": "Vérifier maintenant"
-    },
-    "byteConverterBanner": {
-      "title": "Convertisseur d'Octets",
-      "cta": "Convertir maintenant"
-    }
+    "passwordCheckerBanner": {}
+  },
+  "ToolsSection": {
+    "title": "Essayez les outils en ligne gratuits d'Internxt :",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "urlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Vérificateur de Mot de Passe",
+        "description": "Vérifier maintenant"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "urlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Convertisseur d'octets gratuit",
+        "description": " Convertissez maintenant "
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Email temporaire gratuit",
+        "width": 95,
+        "description": "Essayez maintenant"
+      }
+    ]
   }
 }
