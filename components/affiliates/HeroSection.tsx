@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 const HeroSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden lg:pt-12">
-      <div className="mx-auto flex w-full max-w-screen-xl flex-col space-y-10 px-5 py-40 lg:flex-row lg:justify-between lg:space-y-0 lg:px-0">
+    <section className="overflow-hidden pt-10 lg:pt-12">
+      <div className="flex flex-col space-y-10 px-5 py-20 lg:flex-row lg:justify-center lg:space-x-28 lg:space-y-0 lg:px-0">
         {/* Text */}
-        <div className="flex w-full flex-col items-center space-y-4 text-center lg:items-start lg:text-left">
+        <div className="flex flex-col items-center space-y-4 text-center lg:items-start lg:text-left">
           <div className="flex w-max items-center rounded-lg bg-gray-5 px-4 py-2">
             <p className="text-xl font-medium text-gray-80">{textContent.label}</p>
           </div>
@@ -41,12 +41,12 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
         {/* Image */}
-        <div className="flex w-full justify-end">
+        <div className="flex justify-end">
           <Image
             width={496}
             height={520}
             src="/images/affiliates/internxt-private-cloud-storage-service.webp"
-            alt="hero-section"
+            alt="internxt private cloud storage service"
             draggable="false"
           />
         </div>
