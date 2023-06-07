@@ -30,7 +30,12 @@ const HeroSection = ({ textContent }) => {
                 >
                   <p className="text-lg font-medium text-white">{textContent.signUp}</p>
                 </div>
-                <div className="flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 hover:bg-blue-10">
+                <div
+                  onClick={() => {
+                    window.open('https://app.impact.com/login.user', '_blank', 'nofollow');
+                  }}
+                  className="flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 hover:bg-blue-10"
+                >
                   <p className="text-lg font-medium text-primary">{textContent.logIn}</p>
                 </div>
               </div>
