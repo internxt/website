@@ -41,7 +41,7 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
         {/* Image */}
-        <div className="flex justify-end">
+        <div className="flex justify-center lg:justify-end">
           <Image
             width={496}
             height={520}

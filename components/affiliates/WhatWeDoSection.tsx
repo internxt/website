@@ -50,9 +50,9 @@ const WhatWeDoSection = ({ textContent }) => {
         </RevealY>
         {/* Recognized */}
         <p className="text-center text-4xl font-semibold text-gray-100">{textContent.recognized}</p>
-        <div className="flex flex-col space-y-5 lg:flex-row lg:space-x-20 lg:space-y-0">
-          <div className="flex flex-auto flex-shrink-0 pb-12 sm:p-0 sm:px-12">
-            <div className="flex flex-shrink-0 flex-col items-center space-y-3">
+        <div className="flex flex-col space-y-10 lg:flex-row lg:space-x-20 lg:space-y-0">
+          <div className="flex flex-shrink-0 items-center justify-center pb-12 sm:p-0">
+            <div className="flex flex-shrink-0 flex-col items-center">
               <Image
                 src="/images/about/logos/forbes.webp"
                 width={125}
