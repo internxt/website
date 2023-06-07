@@ -1,7 +1,5 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
 import RevealY from '../components/RevealY';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
