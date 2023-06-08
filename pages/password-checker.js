@@ -33,12 +33,12 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        {/* <TryInternxtBanner
+        <TryInternxtBanner
           textContent={
             lang === 'en' ? bannerLang.tryOutInternxtPasswordCheckerBanner : bannerLang.tryOutInternxtGeneralBanner
           }
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtpw'}
-        /> */}
+        />
 
         <HeroSection textContent={langJson.HeroSection} />
 
