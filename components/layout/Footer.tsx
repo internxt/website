@@ -39,6 +39,38 @@ export default function Footer({
       className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
     >
       <div className="flex w-full  flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
+        {lang === 'es' && (
+          <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-gray-5 bg-white py-8 sm:space-x-20">
+            <div className="mx-auto flex max-w-2xl flex-col items-center px-8">
+              <div className="mb-8 flex flex-row flex-wrap items-center justify-center">
+                <img
+                  loading="lazy"
+                  className="mx-4 h-16"
+                  src="../../logos/investors/eu.webp"
+                  alt="Unión Europea"
+                  draggable="false"
+                />
+                <img
+                  loading="lazy"
+                  className="mx-4 h-14"
+                  src="https://www.camaravalencia.com/Style%20Library/web2016/img/logo-camara-valencia.png"
+                  alt="Cámara Valencia"
+                  draggable="false"
+                />
+              </div>
+              <p className="text-gray- text-center text-xs">
+                <span className="font-medium">
+                  "INTERNXT UNIVERSAL TECHNOLOGIES SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo
+                  objetivo es mejorar la competitividad de las Pymes y gracias al cual ha puesto en marcha un Plan de
+                  Marketing Digital Internacional con el objetivo de mejorar su posicionamiento online en mercados
+                  exteriores durante el año 2021. Para ello ha contado con el apoyo del Programa XPANDE DIGITAL de la
+                  Cámara de Comercio de Valencia."
+                </span>
+              </p>
+              <p className="mt-4 text-center text-base font-medium lg:mt-6 lg:max-w-lg">"Una manera de hacer Europa"</p>
+            </div>
+          </div>
+        )}
         <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-y-0 lg:space-x-32 lg:text-left">
           {/* Download app for iOS and Android */}
 
