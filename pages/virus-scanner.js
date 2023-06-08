@@ -31,10 +31,10 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
 
         <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-        {/* <TryInternxtBanner
+        <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt'}
-        /> */}
+        />
 
         <FeaturesSection
           textContent={langJson.FeaturesSection}
