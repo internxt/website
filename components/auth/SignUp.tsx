@@ -42,9 +42,10 @@ export default function SignUp(props: SignUpProps) {
           provider: 'TECHCULT',
         });
       })
-      .catch((err) => {
-        if (err.response.status === 404) {
-          setError(err.response.data.message);
+      .catch((error) => {
+        const err = error.response;
+        if (err.status === 404) {
+          setError(err.data.message);
         } else {
           console.error(err.response.data.message);
         }
