@@ -7,16 +7,17 @@ import { WarningCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
 import PasswordStrength from '../components/PasswordStrength';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import axios from 'axios';
 
 interface SignUpProps {
   textContent: any;
-  error?: string;
   loading?: boolean;
 }
 
 export default function SignUp(props: SignUpProps) {
   const globalDialogs = useGlobalDialog();
   const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const [passwordState, setPasswordState] = useState<{
     tag: 'error' | 'warning' | 'success';
     label: string;
@@ -25,12 +26,30 @@ export default function SignUp(props: SignUpProps) {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    signup({
-      email: form.email.value,
-      password: form.password.value,
-      redeemCode: form.redeemCode.value,
-      provider: 'TECHCULT',
-    });
+
+    axios
+      .get(`${window.origin}/api/check_code`, {
+        params: {
+          code: form.redeemCode.value,
+          provider: 'TECHCULT',
+        },
+      })
+      .then((res) => {
+        signup({
+          email: form.email.value,
+          password: form.password.value,
+          redeemCode: form.redeemCode.value,
+          provider: 'TECHCULT',
+        });
+      })
+      .catch((error) => {
+        const err = error.response;
+        if (err.status === 404) {
+          setError(err.data.message);
+        } else {
+          console.error(err.response.data.message);
+        }
+      });
   };
 
   const checkPassword = (input) => {
@@ -102,12 +121,12 @@ export default function SignUp(props: SignUpProps) {
           disabled={props.loading}
         />
 
-        {props.error && (
+        {error && (
           <div className="flex w-full flex-row items-start">
             <div className="flex h-5 flex-row items-center">
               <WarningCircle weight="fill" className="mr-1 h-4 text-red" />
             </div>
-            <span className="text-sm text-red">{props.error}</span>
+            <span className="text-sm text-red">{error}</span>
           </div>
         )}
 
