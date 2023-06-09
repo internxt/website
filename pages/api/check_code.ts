@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// API endpoint to allow the client to download the app from any component without getServerSideProps
+// API endpoint to check if the unique code provided is valid or not
 export default async function handler(req, res) {
   const { code, provider } = req.query;
   if (req.method === 'GET') {
