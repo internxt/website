@@ -271,6 +271,10 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.join.github}
                     </a>
+
+                    <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.affiliates}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -605,6 +609,9 @@ export default function Footer({
 
                       <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.join.github}
+                      </a>
+                      <a href="https://internxt.com/affiliates" target="_blank">
+                        {textContent.FooterSection.sections.join.affiliates}
                       </a>
                     </Disclosure.Panel>
                   </Transition>
