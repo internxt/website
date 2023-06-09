@@ -5,10 +5,10 @@
   },
   "NewsletterSection": {
     "title": "Newsletter",
-    "description": "Vuoi essere informato quando lanciamo nuovi prodotti o rilasciamo un aggiornamento? Inserisci la tua e-mail e al resto pensiamo noi!",
+    "description": " ",
     "input": "Email",
     "info": "È possibile annullare l'iscrizione in qualsiasi momento",
-    "cta": "Iscriviti alla Newsletter",
+    "cta": "Iscriviti",
     "privacy": "Iscrivendosi si accetta la nostra",
     "privacyLink": "politica sulla privacy."
   },
