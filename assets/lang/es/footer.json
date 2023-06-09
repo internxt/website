@@ -5,7 +5,7 @@
   },
   "NewsletterSection": {
     "title": "Newsletter",
-    "description": "¿Quieres saber de nosotros cuando lancemos nuevos productos o una nueva actualización? Introduce tu correo y nosotros nos haremos cargo del resto.",
+    "description": "¿Quieres saber de nosotros cuando lancemos nuevos productos? Introduce tu correo y te informaremos.",
     "input": "Tu correo",
     "info": "Puedes cancelar tu suscripción en cualquier momento",
     "cta": "Suscribirse",
