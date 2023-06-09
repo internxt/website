@@ -255,6 +255,10 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
+                    <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.affiliates}
+                    </a>
+
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
@@ -595,6 +599,9 @@ export default function Footer({
                         darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                       } space-y-4 p-4 pt-2`}
                     >
+                      <a href="https://internxt.com/affiliates" target="_blank">
+                        {textContent.FooterSection.sections.join.affiliates}
+                      </a>
                       <a href="https://drive.internxt.com/new" target="_top">
                         {textContent.FooterSection.sections.join.signup}
                       </a>

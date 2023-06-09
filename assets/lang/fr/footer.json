@@ -37,6 +37,7 @@
       },
       "join": {
         "title": "Rejoindre",
+        "affiliates": "Affiliés",
         "signup": "Créer un compte",
         "login": "Connexion",
         "community": "Communauté",
