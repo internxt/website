@@ -4,7 +4,7 @@ import PrimaryButton from '../components/PrimaryButton';
 import { signup, toggleAuthMethod } from '../../lib/auth';
 import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStrength';
 import { WarningCircle } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PasswordStrength from '../components/PasswordStrength';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 import axios from 'axios';
@@ -12,6 +12,7 @@ import axios from 'axios';
 interface SignUpProps {
   textContent: any;
   loading?: boolean;
+  provider?: 'STACKCOMMERCE' | 'TECHCULT';
 }
 
 export default function SignUp(props: SignUpProps) {
@@ -23,6 +24,15 @@ export default function SignUp(props: SignUpProps) {
     label: string;
   } | null>(null);
 
+  //Remove error message when the user starts typing
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError(null);
+      }, 4000);
+    }
+  }, [error]);
+
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
@@ -31,7 +41,7 @@ export default function SignUp(props: SignUpProps) {
       .get(`${window.origin}/api/check_code`, {
         params: {
           code: form.redeemCode.value,
-          provider: 'TECHCULT',
+          provider: props.provider,
         },
       })
       .then((res) => {
@@ -39,7 +49,7 @@ export default function SignUp(props: SignUpProps) {
           email: form.email.value,
           password: form.password.value,
           redeemCode: form.redeemCode.value,
-          provider: 'TECHCULT',
+          provider: props.provider,
         });
       })
       .catch((error) => {
