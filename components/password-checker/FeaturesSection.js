@@ -23,16 +23,16 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center ">
           <div className="flex w-full flex-col items-center space-y-16">
-            <div className="flex flex-col space-y-3 px-2">
+            <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-3xl font-medium lg:text-2xl">{textContent.section1.title}</h3>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section1.subtitle}</p>
+              <p className="text-lg text-gray-80">{textContent.section1.subtitle}</p>
             </div>
 
-            <div className="flex flex-col space-y-3 px-2">
+            <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-3xl font-medium lg:text-2xl">{textContent.section2.title}</h3>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section2.subtitle}</p>
+              <p className="text-lg text-gray-80">{textContent.section2.subtitle}</p>
             </div>
 
             <div className="grid auto-rows-auto grid-cols-1 gap-5 px-1 sm:grid-cols-2 lg:max-w-max lg:grid-cols-3">
@@ -56,10 +56,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
       <div className="flex w-full flex-col items-center justify-center">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
           <div className="flex w-full flex-col items-center space-y-16">
-            <div className="flex flex-col space-y-3 px-2">
+            <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section3.title}</h3>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section3.subtitle}</p>
+              <p className="text-lg text-gray-80">{textContent.section3.subtitle}</p>
 
               <ul className="list-disc space-y-1.5 pl-6 lg:max-w-2xl">
                 {textContent.section3.features.map((feature) => (
@@ -70,12 +70,12 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </ul>
             </div>
 
-            <div className="flex flex-col space-y-3 px-2">
+            <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section4.title}</h3>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section4.subtitle1}</p>
+              <p className="text-lg text-gray-80">{textContent.section4.subtitle1}</p>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">
+              <p className="text-lg text-gray-80">
                 {textContent.section4.subtitle2.part1}{' '}
                 <a
                   href="https://github.com/internxt"
@@ -113,9 +113,9 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               )}
             </div>
 
-            <div className="flex flex-col space-y-3 px-2">
+            <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section5.title}</h3>
-              <p className="text-lg text-gray-80 md:max-w-2xl">
+              <p className="text-lg text-gray-80">
                 {textContent.section5.subtitle1.part1}{' '}
                 <Link href="/privacy" lang={lang} passHref>
                   <a target="_top" rel="noreferrer" className="text-primary underline">
@@ -127,7 +127,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
               <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section5.subtitle2}</p>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">
+              <p className="text-lg text-gray-80">
                 {textContent.section5.subtitle3.part1}{' '}
                 <a
                   href={`https://blog.internxt.com/${
@@ -146,7 +146,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
           <CtaSection textContent={textContent.CtaSection1} />
 
-          <div className="flex flex-col space-y-3 px-2">
+          <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
             <h3 className="text-2xl font-medium">{textContent.section6.title}</h3>
 
             <p className="text-lg text-gray-80 md:max-w-2xl">

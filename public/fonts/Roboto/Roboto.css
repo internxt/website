@@ -1,21 +1,5 @@
 /* Roboto font family */
 
-/*
-@font-face {
-  font-family: "Roboto";
-  font-display: auto;
-  src: url("./Roboto-Thin.ttf"),
-       url("./Roboto-Extralight.ttf"),
-       url("./Roboto-Light.ttf"),
-       url("./Roboto-Regular.ttf"),
-       url("./Roboto-Medium.ttf"),
-       url("./Roboto-Semibold.ttf"),
-       url("./Roboto-Bold.ttf"),
-       url("./Roboto-Extrabold.ttf"),
-       url("./Roboto-Black.ttf");
-}
-*/
-
 @font-face {
   font-family: Roboto;
   font-weight: 100;
@@ -53,16 +37,16 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: local(Roboto), url('./Roboto-Medium.ttf') format('truetype');
+  src: local('Roboto Medium'), url('./Roboto-Medium.ttf') format('truetype');
 }
 
-/* @font-face {
+@font-face {
   font-family: Roboto;
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: local('Roboto Semibold'), url('./Roboto-Semibold.ttf') format('truetype');
-} */
+  src: local('Roboto Semibold'), url('./Roboto-Bold.ttf') format('truetype');
+}
 
 @font-face {
   font-family: Roboto;
