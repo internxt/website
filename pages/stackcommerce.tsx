@@ -11,11 +11,10 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/techcult/CtaSection';
 
 import axios from 'axios';
-import LogIn from '../components/auth/LogIn';
 import SignUp from '../components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
-const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
+const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const [country, setCountry] = useState('ES');
   const [openDialog, setOpenDialog] = useState(false);
@@ -47,7 +46,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="Techcult"
+      segmentName="StackCommerce"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
@@ -58,7 +57,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
         z-20 flex w-max -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
           >
             <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
-            <SignUp textContent={langJson.Auth} provider="TECHCULT" />
+            <SignUp textContent={langJson.Auth} provider="STACKCOMMERCE" />
           </div>
         </div>
       ) : null}
@@ -103,4 +102,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Techcult;
+export default StackCommerce;

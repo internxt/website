@@ -12,6 +12,7 @@ import axios from 'axios';
 interface SignUpProps {
   textContent: any;
   loading?: boolean;
+  provider?: 'STACKCOMMERCE' | 'TECHCULT';
 }
 
 export default function SignUp(props: SignUpProps) {
@@ -31,7 +32,7 @@ export default function SignUp(props: SignUpProps) {
       .get(`${window.origin}/api/check_code`, {
         params: {
           code: form.redeemCode.value,
-          provider: 'TECHCULT',
+          provider: props.provider,
         },
       })
       .then((res) => {
@@ -39,7 +40,7 @@ export default function SignUp(props: SignUpProps) {
           email: form.email.value,
           password: form.password.value,
           redeemCode: form.redeemCode.value,
-          provider: 'TECHCULT',
+          provider: props.provider,
         });
       })
       .catch((error) => {
