@@ -5,7 +5,7 @@
   },
   "NewsletterSection": {
     "title": "Newsletter",
-    "description": " ",
+    "description": "Vuoi essere informato quando lanciamo nuovi prodotti? Inserisci la tua e-mail e al resto pensiamo noi!",
     "input": "Email",
     "info": "È possibile annullare l'iscrizione in qualsiasi momento",
     "cta": "Iscriviti",
