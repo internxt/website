@@ -8,11 +8,11 @@ const TryInternxtBanner = ({ textContent, url }) => {
     setIsBannerVisible(false);
   };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsBannerVisible(true);
-  //   }, 15000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBannerVisible(true);
+    }, 15000);
+  }, []);
 
   return (
     <section
