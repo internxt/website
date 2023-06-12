@@ -4,7 +4,7 @@ import PrimaryButton from '../components/PrimaryButton';
 import { signup, toggleAuthMethod } from '../../lib/auth';
 import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStrength';
 import { WarningCircle } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PasswordStrength from '../components/PasswordStrength';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 import axios from 'axios';
@@ -23,6 +23,15 @@ export default function SignUp(props: SignUpProps) {
     tag: 'error' | 'warning' | 'success';
     label: string;
   } | null>(null);
+
+  //Remove error message when the user starts typing
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError(null);
+      }, 4000);
+    }
+  }, [error]);
 
   const onSubmit = (event) => {
     event.preventDefault();
