@@ -3,8 +3,8 @@ import React from 'react';
 const WhenWhyHowSection = ({ textContent }) => {
   return (
     <>
-      <div className="mb-16 flex flex-col">
-        <h5 className=" mb-6 mt-24 text-4xl" id={textContent.privacy_policy_process_personal_data_title}>
+      <div className="mb-16 mt-1 flex flex-col">
+        <h5 className=" mb-6 text-4xl" id={textContent.privacy_policy_process_personal_data_title}>
           {textContent.privacy_policy_process_personal_data_title}
         </h5>
 
