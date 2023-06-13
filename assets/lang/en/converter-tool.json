@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Byte Converter: TB to GB",
     "description": "Convert terabytes to gigabytes to megabytes!",
-    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many Gb in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
+    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many GB in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
   },
   "ExplanationSection": {
     "convertTo": {
@@ -25,7 +25,7 @@
     },
     "MBMeaning": {
       "title": "MB meaning?",
-      "description": "Whether it's a MB, KB, TB, or GB all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
+      "description": "Whether it's a MB, KB, TB, or GB, all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
     }
   },
   "infoSection": {
@@ -66,7 +66,7 @@
         {
           "question": "What's next?",
           "answer": [
-            "A terabyte (TB) is then followed in the same pattern exponentially by a petabyte (PB), an exabyte (EB), then a zettabyte (ZB), and a yottabyte (YB). Then anything bigger than that is difficult to fathom"
+            "A terabyte (TB) is then followed in the same pattern exponentially by a petabyte (PB), an exabyte (EB), then a zettabyte (ZB), and a yottabyte (YB). Then anything bigger than that is difficult to fathom."
           ]
         }
       ]

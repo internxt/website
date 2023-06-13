@@ -40,7 +40,7 @@
           }
         },
         "controlled_file_sharing": {
-          "name": "File Sharing",
+          "name": "File sharing",
           "features": {
             "password_protection_for_links": "Password protection for links",
             "download_limits_for_links": "Download limits for links",
