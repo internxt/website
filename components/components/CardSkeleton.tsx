@@ -10,8 +10,6 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { checkout } from '../../lib/auth';
 import { PriceCardProps } from '../prices/PriceCard';
 
-const TWOTB_OFF_COUPON = '6FACDcgf';
-
 export default function CardSkeleton() {
   return (
     <div className="priceCard card m-2 flex max-w-xs flex-shrink-0 flex-grow-0 animate-pulse flex-col overflow-hidden rounded-2xl xs:w-72">
@@ -27,9 +25,7 @@ export default function CardSkeleton() {
         </div>
 
         <div className="flex w-full flex-row">
-          <div className="subscribePlan flex h-10 w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-20 px-6 py-2 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
-            {/* <Skeleton height={20} width={160} /> */}
-          </div>
+          <div className="subscribePlan flex h-10 w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-20 px-6 py-2 text-lg font-medium text-white transition-all duration-75"></div>
         </div>
       </div>
 

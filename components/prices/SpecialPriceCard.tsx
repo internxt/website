@@ -8,7 +8,7 @@ import React from 'react';
 import { checkout } from '../../lib/auth';
 import { PriceCardProps } from './PriceCard';
 
-const TWOTB_OFF_COUPON = '6FACDcgf';
+const TWOTB_90_OFF = '6FACDcgf';
 
 export default function SpecialPriceCard({
   planType,
@@ -43,7 +43,7 @@ export default function SpecialPriceCard({
 
     checkout({
       planId: cta[1],
-      couponCode: TWOTB_OFF_COUPON,
+      couponCode: TWOTB_90_OFF,
       mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
     });
   };

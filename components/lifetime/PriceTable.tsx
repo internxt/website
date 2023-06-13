@@ -46,7 +46,6 @@ const PriceTable = ({ lang, country }) => {
 
         <Transition
           show={!loadingCards}
-          enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >

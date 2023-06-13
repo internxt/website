@@ -4,10 +4,6 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
-
-const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
-const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
 
 const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
   const [stripeObject, setStripeObject] = useState({});

@@ -110,7 +110,7 @@ export default function PriceTable({
         )}
         {/* Loading cards */}
         <Transition
-          show={loadingCards}
+          show={individual && loadingCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
@@ -126,8 +126,7 @@ export default function PriceTable({
         {/* Render cards */}
 
         <Transition
-          show={!loadingCards}
-          enter="transition duration-500 ease-out"
+          show={individual && !loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >

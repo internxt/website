@@ -37,7 +37,6 @@ export default function PriceCard({
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
-    6: 'semiannually',
     year: 'annually',
   };
 
