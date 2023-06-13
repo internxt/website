@@ -50,7 +50,7 @@
       "title": "Find a summary of all the data stored in your Google Account",
       "numberedList": [
         "Log in to your Google Account",
-        "On the navigation panel, select “Data & privacy” or select the tab ‘Privacy & personalization.’",
+        "On the navigation panel, select “Data & privacy” or select the tab ‘Privacy & personalization’",
         "There, you will be able to view data from acquired by Google apps you use and the content saved from Google services"
       ],
       "footer": "You will also find the name of each of Google’s primary services in your dashboard under ‘Things you’ve done and places you’ve been’ to see data for each specific service. You may also select the right-pointing arrow next to each service to manage and change settings."
@@ -105,7 +105,7 @@
         },
         {
           "title": "Choose file type, frequency and destination",
-          "description": "Choose the type of file, the frequency of exporting the files and the destination (email, Internxt, Dropbox, OneDrive, Box, or Google Drive)"
+          "description": "Choose the type of file, the frequency of exporting the files and the destination (email, Internxt, Dropbox, OneDrive, Box, or Google Drive.)"
         },
         {
           "title": "Create export",
