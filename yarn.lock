@@ -4328,6 +4328,11 @@ react-live-chat-loader@^2.8.0:
   resolved "https://registry.yarnpkg.com/react-live-chat-loader/-/react-live-chat-loader-2.8.0.tgz#7ef889fbfc77156df03f429cf10d06af53b13686"
   integrity sha512-hGKZLha2THVr46hP3oxuAQfhJup05LvzfNP2Bp3mQmiYs7EjSiI5hLF0FdZv+COajYpknV7emG5un50T0tDJwA==
 
+react-loading-skeleton@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/react-loading-skeleton/-/react-loading-skeleton-3.3.1.tgz#cd6e3a626ee86c76a46c14e2379243f2f8834e1b"
+  integrity sha512-NilqqwMh2v9omN7LteiDloEVpFyMIa0VGqF+ukqp0ncVlYu1sKYbYGX9JEl+GtOT9TKsh04zCHAbavnQ2USldA==
+
 react-markdown@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-6.0.3.tgz#625ec767fa321d91801129387e7d31ee0cb99254"

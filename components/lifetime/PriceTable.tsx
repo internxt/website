@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PriceCard from './PriceCard';
 import { Interval, stripeService } from '../services/getPrices';
 import { Transition } from '@headlessui/react';
+import CardSkeleton from '../components/CardSkeleton';
 
 const PriceTable = ({ lang, country }) => {
   const billingFrequency = -1;
@@ -35,7 +36,9 @@ const PriceTable = ({ lang, country }) => {
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <p>Cargando...</p>
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
           </div>
         </Transition>
 
