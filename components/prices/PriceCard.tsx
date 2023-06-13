@@ -6,8 +6,21 @@
 /* eslint-disable no-nested-ternary */
 
 import React from 'react';
-import stripeService from '../../pages/api/stripe/stripe_products';
+
 import { checkout, goToSignUpURL } from '../../lib/auth';
+
+export interface PriceCardProps {
+  planType: string;
+  storage: string;
+  price: number;
+  priceBefore?: number;
+  billingFrequency?: string;
+  cta: any[];
+  popular?: boolean;
+  lang: string;
+  country: string;
+  priceId?: string;
+}
 
 export default function PriceCard({
   planType,
@@ -16,23 +29,16 @@ export default function PriceCard({
   priceBefore,
   billingFrequency,
   cta,
-  setUsers,
-  getUsers,
   popular,
   lang,
   country,
-}) {
+  priceId,
+}: PriceCardProps) {
   const billingFrequencyList = {
-    '-1': 'lifetime',
-    1: 'monthly',
+    lifetime: 'lifetime',
+    month: 'monthly',
     6: 'semiannually',
-    12: 'annually',
-  };
-
-  const stripeInterval = {
-    '-1': 'lifetime',
-    1: 'month',
-    12: 'year',
+    year: 'annually',
   };
 
   const currency = () => {
@@ -46,9 +52,6 @@ export default function PriceCard({
     }
   };
 
-  const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
-  const teamsBilled = (Number(totalBilled) * getUsers).toFixed(2);
-  const MAX_USERS = 200;
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   return (
     <div
@@ -97,7 +100,7 @@ export default function PriceCard({
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-bold">
-                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? totalBilled : price}
+                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
             </p>
 
@@ -133,105 +136,13 @@ export default function PriceCard({
           </div>
         </div>
         <div
-          className={`businessUserCount ${
-            planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'
-          } mb-4 w-full flex-col rounded-lg bg-neutral-10 p-4 ring-1 ring-neutral-20`}
-        >
-          <div className="input relative flex flex-row justify-between rounded-lg bg-white ring-1 ring-neutral-30">
-            <button
-              type="button"
-              onClick={() => {
-                if (getUsers >= 3) {
-                  setUsers(parseInt(getUsers, 10) - 1);
-                } else setUsers(2);
-              }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
-                getUsers > 2
-                  ? 'bg-primary text-white active:bg-primary-dark'
-                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-              } sm:duration-50 z-10 select-none rounded-l-lg text-2xl font-light transition-all`}
-            >
-              <span className="mb-1">-</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                if (getUsers <= MAX_USERS - 1) {
-                  setUsers(parseInt(getUsers, 10) + 1);
-                } else setUsers(MAX_USERS);
-              }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
-                getUsers < MAX_USERS
-                  ? 'bg-primary text-white active:bg-primary-dark'
-                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-              } sm:duration-50 z-10 select-none rounded-r-lg text-2xl font-light transition-all`}
-            >
-              <span className="mb-1">+</span>
-            </button>
-            <label
-              htmlFor={`users_${storage}`}
-              className="absolute top-0 left-0 flex h-full w-full cursor-text flex-row items-center justify-center text-xl font-medium sm:text-base"
-            >
-              <div className="relative flex h-full flex-row items-center">
-                <span
-                  className={`pointer-events-none ${
-                    Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? '' : 'opacity-0'
-                  }`}
-                >
-                  {Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? 0 : getUsers}
-                </span>
-                <input
-                  id={`users_${storage}`}
-                  type="number"
-                  inputMode="numeric"
-                  min="2"
-                  max={MAX_USERS}
-                  step="1"
-                  value={getUsers}
-                  // eslint-disable-next-line no-unused-expressions
-                  onChange={(e) => {
-                    e.target.value.toString().startsWith('0')
-                      ? (e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length))
-                      : setUsers(Number(e.target.value) > MAX_USERS ? MAX_USERS : e.target.value);
-                  }}
-                  // eslint-disable-next-line max-len
-                  onBlur={(e) => {
-                    setUsers(
-                      Number(e.target.value) > MAX_USERS ? MAX_USERS : Number(e.target.value) < 2 ? 2 : e.target.value,
-                    );
-                  }}
-                  // eslint-disable-next-line no-unused-expressions
-
-                  className="absolute left-0 w-14 min-w-full appearance-none bg-transparent font-medium outline-none"
-                />
-              </div>
-              <span className="ml-1 select-none">{contentText.users}</span>
-            </label>
-          </div>
-          <div className="mt-4 flex w-full flex-row justify-between text-neutral-700">
-            <span className="font-medium">Total:</span>
-            <div className="flex flex-row items-end">
-              <div className="flex flex-row items-start">
-                <span className="mt-0.5 mr-0.5 text-xs">€</span>
-                <span>{teamsBilled}</span>
-              </div>
-              <span className="mb-1 ml-0.5 text-xs text-neutral-100">
-                {contentText.billingFrequencyLabelSmall[billingFrequencyList[billingFrequency]]}
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          onClick={(e) => {
+          onClick={() => {
             if (cta[1] === 'Free plan') {
               goToSignUpURL();
             } else {
-              const interval = stripeInterval[billingFrequency];
-              stripeService.getPlanId(interval, storage).then((planId) => {
-                checkout({
-                  planId: planId,
-                  mode: billingFrequency === -1 ? 'payment' : 'subscription',
-                });
+              checkout({
+                planId: cta[1],
+                mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
               });
             }
           }}
@@ -245,9 +156,6 @@ export default function PriceCard({
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.signUpNow}
             </p>
-            <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.signUpNow}
-            </p>
 
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
@@ -255,7 +163,7 @@ export default function PriceCard({
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
-          {billingFrequency === -1 && (
+          {billingFrequency === 'lifetime' && (
             <div className={`flex flex-row items-start space-x-2 font-semibold`}>
               <img
                 loading="lazy"

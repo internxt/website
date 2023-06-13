@@ -6,6 +6,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { checkout } from '../../lib/auth';
+import { PriceCardProps } from './PriceCard';
 
 const TWOTB_OFF_COUPON = '6FACDcgf';
 
@@ -15,13 +16,10 @@ export default function SpecialPriceCard({
   price,
   billingFrequency,
   cta,
-  setUsers,
-  getUsers,
   popular,
   lang,
   country,
-  products,
-}) {
+}: PriceCardProps) {
   const billingFrequencyList = {
     '-1': 'lifetime',
     1: 'monthly',
@@ -41,18 +39,15 @@ export default function SpecialPriceCard({
   };
 
   const onOfferClick = () => {
-    const interval = billingFrequency === 1 ? 'month' : 'year';
-    stripeService.getPlanId(interval, storage).then((planId) => {
-      checkout({
-        planId: planId,
-        couponCode: TWOTB_OFF_COUPON,
-        mode: billingFrequency === -1 ? 'payment' : 'subscription',
-      });
+    const interval = billingFrequency === 'month' ? 'month' : 'year';
+
+    checkout({
+      planId: cta[1],
+      couponCode: TWOTB_OFF_COUPON,
+      mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
     });
   };
 
-  const teamsBilled = (price * getUsers).toFixed(2);
-  const MAX_USERS = 200;
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   return (
@@ -66,12 +61,12 @@ export default function SpecialPriceCard({
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-sm font-medium text-white`}
       >
-        {popular && billingFrequency === 12 ? contentText.cta.discount + ' ' + storage : contentText.mostPopular}
+        {popular && billingFrequency === 'year' ? contentText.cta.discount + ' ' + storage : contentText.mostPopular}
       </div>
 
       <div
         className={`info flex flex-col items-center justify-start  p-6 pt-6 ${
-          popular && billingFrequency === 12 ? 'rounded-t-2xl bg-primary bg-cover' : 'bg-white'
+          popular && billingFrequency === 'year' ? 'rounded-t-2xl bg-primary bg-cover' : 'bg-white'
         }`}
       >
         <div
@@ -93,7 +88,7 @@ export default function SpecialPriceCard({
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-            <span className="price text-4xl font-semibold">{Math.abs((totalBilled * 20) / 100).toFixed(2)}</span>
+            <span className="price text-4xl font-semibold">{Math.abs((price * 10) / 100).toFixed(2)}</span>
           </p>
           <div
             className={`priceBreakdown flex text-white ${
@@ -106,8 +101,6 @@ export default function SpecialPriceCard({
                 {price <= 0 ? `${contentText.freePlan}` : price}
               </span>
             </p>
-            {/* eslint-disable-next-line no-nested-ternary */}
-            <span className={`perMonth ${price <= 0 ? 'hidden' : billingFrequency < 0 ? 'hidden' : ''}`}></span>
           </div>
 
           <div
@@ -126,97 +119,6 @@ export default function SpecialPriceCard({
         </div>
 
         <div
-          className={`businessUserCount ${
-            planType.toLowerCase() === 'individual' ? 'hidden' : 'flex'
-          } mb-4 w-full flex-col rounded-lg bg-neutral-10 p-4 ring-1 ring-neutral-20`}
-        >
-          <div className="input relative flex flex-row justify-between rounded-lg bg-white ring-1 ring-neutral-30">
-            <button
-              type="button"
-              onClick={() => {
-                if (getUsers >= 3) {
-                  setUsers(parseInt(getUsers, 10) - 1);
-                } else setUsers(2);
-              }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
-                getUsers > 2
-                  ? 'bg-primary text-white active:bg-primary-dark'
-                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-              } sm:duration-50 z-10 select-none rounded-l-lg text-2xl font-light transition-all`}
-            >
-              <span className="mb-1">-</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                if (getUsers <= MAX_USERS - 1) {
-                  setUsers(parseInt(getUsers, 10) + 1);
-                } else setUsers(MAX_USERS);
-              }}
-              className={`flex h-10 w-10 flex-row items-center justify-center sm:h-8 sm:w-8 ${
-                getUsers < MAX_USERS
-                  ? 'bg-primary text-white active:bg-primary-dark'
-                  : 'cursor-not-allowed bg-neutral-30 text-neutral-80 active:bg-neutral-40'
-              } sm:duration-50 z-10 select-none rounded-r-lg text-2xl font-light transition-all`}
-            >
-              <span className="mb-1">+</span>
-            </button>
-            <label
-              htmlFor={`users_${storage}`}
-              className="absolute top-0 left-0 flex h-full w-full cursor-text flex-row items-center justify-center text-xl font-medium sm:text-base"
-            >
-              <div className="relative flex h-full flex-row items-center">
-                <span
-                  className={`pointer-events-none ${
-                    Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? '' : 'opacity-0'
-                  }`}
-                >
-                  {Number.isNaN(getUsers) || getUsers === '' || getUsers < 1 ? 0 : getUsers}
-                </span>
-                <input
-                  id={`users_${storage}`}
-                  type="number"
-                  inputMode="numeric"
-                  min="2"
-                  max={MAX_USERS}
-                  step="1"
-                  value={getUsers}
-                  // eslint-disable-next-line no-unused-expressions
-                  onChange={(e) => {
-                    e.target.value.toString().startsWith('0')
-                      ? (e.target.value = e.target.value.toString().slice(1, e.target.value.toString().length))
-                      : setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value);
-                  }}
-                  // eslint-disable-next-line max-len
-                  onBlur={(e) => {
-                    setUsers(e.target.value > MAX_USERS ? MAX_USERS : e.target.value < 2 ? 2 : e.target.value);
-                  }}
-                  // eslint-disable-next-line no-unused-expressions
-                  onKeyDown={(e) => {
-                    e.key === 'Enter' || e.key === 'Escape' ? e.target.blur() : null;
-                  }}
-                  className="absolute left-0 w-14 min-w-full appearance-none bg-transparent font-medium outline-none"
-                />
-              </div>
-              <span className="ml-1 select-none">{contentText.users}</span>
-            </label>
-          </div>
-
-          <div className="mt-4 flex w-full flex-row justify-between text-neutral-700">
-            <span className="font-medium">Total:</span>
-            <div className="flex flex-row items-end">
-              <div className="flex flex-row items-start">
-                <span className="mt-0.5 mr-0.5 text-xs">€</span>
-                <span>{teamsBilled}</span>
-              </div>
-              <span className="mb-1 ml-0.5 text-xs text-neutral-100">
-                {contentText.billingFrequencyLabelSmall[billingFrequencyList[billingFrequency]]}
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div
           tabIndex={0}
           onClick={() => {
             onOfferClick();
@@ -225,7 +127,7 @@ export default function SpecialPriceCard({
         >
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg  font-medium text-primary transition-all duration-75 focus:bg-gray-1 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-gray-1 sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {popular && billingFrequency === 12 ? contentText.cta.discount : contentText.cta.get}{' '}
+              {popular && billingFrequency === 'year' ? contentText.cta.discount : contentText.cta.get}{' '}
               {lang === 'en' && storage}
             </p>
 
@@ -240,7 +142,7 @@ export default function SpecialPriceCard({
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2 text-sm">
-          {billingFrequency === -1 && (
+          {billingFrequency === 'lifetime' && (
             <div className={`flex flex-row items-start space-x-2 font-semibold`}>
               <img
                 loading="lazy"

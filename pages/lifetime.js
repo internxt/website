@@ -11,19 +11,8 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
 
 import axios from 'axios';
-import { stripeProducts } from './api/stripe/stripeProducts';
-import bytes from 'bytes';
 
-const Lifetime = ({
-  lang,
-  metatagsDescriptions,
-  langJson,
-  footerLang,
-  deviceLang,
-  navbarLang,
-  products,
-  countryCode,
-}) => {
+const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang, countryCode }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const [country, setCountry] = React.useState('ES');
 
@@ -44,12 +33,7 @@ const Lifetime = ({
 
       <HeroSection lang={lang} textContent={langJson.HeroSection} />
 
-      <PaymentSection
-        textContent={langJson.PaymentSection}
-        lang={lang}
-        country={country}
-        products={JSON.parse(products)}
-      />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
 
       <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
 
@@ -73,22 +57,6 @@ export async function getServerSideProps(ctx) {
   };
   const countryCode = await axios(options);
 
-  await stripeProducts()
-    .products()
-    .then((res) => {
-      return res.map((product) => {
-        const id = product.interval + bytes(product.bytes);
-        if (product.interval === 'lifetime')
-          pushObjects[id] = {
-            storage: bytes(product.bytes),
-            price: product.amount / 100,
-            planId: product.id,
-            popular: id === 'lifetime2TB' ? true : false,
-            actualPrice: (product.amount * 75) / 100 / 100,
-          };
-      });
-    });
-
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/lifetime.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
@@ -104,7 +72,6 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
-      products: JSON.stringify(pushObjects),
       countryCode: countryCode.data.country,
     },
   };

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import bytes from 'bytes';
+
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export interface Product {
@@ -11,9 +11,8 @@ export interface Product {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<Product | void> {
-  const productsObject = {};
   if (req.method === 'GET') {
-    const productsRequest = await axios.get(`${process.env.PAYMENTS_API}/payments/prices`);
+    const productsRequest = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`);
     const productsData: Product[] = productsRequest.data;
 
     // Return the products with the correct parameters to be used in the client side.
@@ -22,28 +21,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!productsData) return res.status(404).end(); //Something went wrong while fetching the products
 
     // Create the products object to be used in the client side
-    const productsObject = productsData.reduce((acc, product) => {
-      const id = bytes(product.bytes);
+    // const productsObject = productsData.reduce((acc, product) => {
+    //   const id = bytes(product.bytes);
 
-      if (!acc[id]) {
-        // Si no existe un objeto con el ID, se crea uno nuevo
-        acc[id] = {
-          priceId: product.id,
-          storage: bytes(product.bytes),
-          price: {
-            [product.interval]: Math.abs(product.amount / 100).toFixed(2),
-          },
-          interval: product.interval,
-        };
-      } else {
-        // Si ya existe un objeto con el ID, se agrega un nuevo precio al objeto existente
-        acc[id].price[product.interval] = Math.abs(product.amount / 100).toFixed(2);
-      }
+    //   if (!acc[id]) {
+    //     acc[id] = {
+    //       priceId: { [product.interval]: product.id },
+    //       storage: bytes(product.bytes),
+    //       price: {
+    //         [product.interval]: Math.abs(product.amount / 100).toFixed(2),
+    //       },
+    //       interval: product.interval,
+    //     };
+    //   } else {
+    //     acc[id].price[product.interval] = Math.abs(product.amount / 100).toFixed(2);
+    //     acc[id].priceId[product.interval] = product.id;
+    //   }
 
-      return acc;
-    }, {});
+    //   return acc;
+    // }, {});
 
-    res.status(200).json({ productsObject });
+    res.status(200).json(productsData);
   } else {
     res.status(405).end(); // Method Not Allowed
   }

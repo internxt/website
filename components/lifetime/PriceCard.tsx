@@ -5,23 +5,33 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { checkout, goToLoginURL } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+
+interface PriceCardProps {
+  planType: string;
+  storage: string;
+  price: number;
+  cta: string[];
+  country: string;
+  popular: boolean;
+  lang: string;
+  actualPrice: string;
+  isCampaign?: boolean;
+}
 
 const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
-
 const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
+
 const PriceCard = ({
   planType,
   storage,
   price,
-  billingFrequency,
   cta,
   country,
   popular,
   lang,
   actualPrice,
   isCampaign,
-}) => {
+}: PriceCardProps) => {
   const [stripeObject, setStripeObject] = useState({});
 
   const currency = () => {
