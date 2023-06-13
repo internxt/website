@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '../prices/PriceCard';
 import { stripeService } from '../services/getPrices';
+import CardSkeleton from '../components/CardSkeleton';
 
 export default function PriceTable({ lang, country }) {
   const [products, setProducts] = useState(null);
@@ -39,7 +40,9 @@ export default function PriceTable({ lang, country }) {
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <p>Cargando...</p>
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
           </div>
         </Transition>
 
