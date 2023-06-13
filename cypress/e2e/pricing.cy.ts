@@ -4,7 +4,7 @@ import bytes from 'bytes';
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
 const API_DRIVE_URL = Cypress.env('API_DRIVE_URL');
-const TWOTB_OFF_COUPON = 'P8PSpVs6';
+const TWOTB_OFF_COUPON = '6FACDcgf';
 
 interface Products {
   [key: string]: {
@@ -17,7 +17,7 @@ interface Products {
 const url = ({ planId, couponCode, mode }: { planId: string; couponCode?: string; mode?: string }) => {
   return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(DRIVE_WEB_URL + '/checkout-plan')}${encodeURIComponent(
     `?planId=${planId}${couponCode ? '&couponCode=' + couponCode : ''}&mode=${mode ? mode : 'subscription'}`,
-  )}`;
+  )}&skipSignupIfLoggedIn=true`;
 };
 
 //Check if the buttons works properly
@@ -41,7 +41,7 @@ describe('Pricing page', () => {
     it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
       cy.visit('/pricing');
 
-      cy.get('#priceTable').contains('Get Internxt for free').click();
+      cy.get('#priceTable').contains('Sign up now').click();
 
       cy.url().should('eq', 'https://drive.internxt.com/new');
     });

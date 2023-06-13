@@ -18,7 +18,7 @@ interface Products {
 const url = ({ planId, couponCode }: { planId: string; couponCode?: string }) => {
   return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(DRIVE_WEB_URL + '/checkout-plan')}${encodeURIComponent(
     `?planId=${planId}${couponCode ? '&couponCode=' + couponCode : ''}&mode=payment`,
-  )}`;
+  )}&skipSignupIfLoggedIn=true`;
 };
 
 //Check if the buttons works properly
