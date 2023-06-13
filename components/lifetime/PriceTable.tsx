@@ -12,7 +12,6 @@ const PriceTable = ({ lang, country }) => {
     stripeService
       .getLifetimePrices()
       .then((res) => {
-        console.log(res);
         setProducts(res);
       })
       .catch((err) => {

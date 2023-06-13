@@ -2,7 +2,6 @@ import axios from 'axios';
 import bytes from 'bytes';
 
 export enum Interval {
-  'free' = 'free',
   'month' = 'month',
   'year' = 'year',
   'lifetime' = 'lifetime',
