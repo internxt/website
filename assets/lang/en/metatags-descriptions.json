@@ -70,6 +70,11 @@
     "description": "Redeem your exclusive coupon code provided by a certified Internxt partner. Get a special discount on Internxt secure cloud storage."
   },
   {
+    "id": "affiliates",
+    "title": "Affiliate Program | Internxt",
+    "description": "Join Internxt’s affiliate marketing program! How to get started plus program details, benefits, and perks."
+  },
+  {
     "id": "techradar-discount",
     "title": "TechRadar Partner Deals - Save big on Internxt cloud storage!",
     "description": "Redeem your exclusive coupon code provided by our partner TechRadar. Get a special discount on Internxt secure cloud storage."

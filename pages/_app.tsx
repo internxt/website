@@ -4,10 +4,10 @@ import '../styles/globals.scss';
 import Script from 'next/script';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
-import SummerBanner from '../components/banners/SummerBanner';
 import { useRouter } from 'next/router';
+import SummerBanner from '../components/banners/SummerBanner';
 
-// const excludedPaths = ['/byte-converter', '/virus-scanner', '/password-checker', '/temporary-email'];
+// const excludedPaths = ['/techcult', '/pricing'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   // const route = useRouter();

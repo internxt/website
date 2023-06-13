@@ -1,10 +1,14 @@
 {
+  "DownloadApp": {
+    "title": "Scaricare Internxt",
+    "description": "Gestite i vostri file in un cloud storage sicuro utilizzando l'app mobile per iOS o Android."
+  },
   "NewsletterSection": {
     "title": "Newsletter",
-    "description": "Vuoi essere informato quando lanciamo nuovi prodotti o rilasciamo un aggiornamento? Inserisci la tua e-mail e al resto pensiamo noi!",
+    "description": "Vuoi essere informato quando lanciamo nuovi prodotti? Inserisci la tua e-mail e al resto pensiamo noi!",
     "input": "Email",
     "info": "È possibile annullare l'iscrizione in qualsiasi momento",
-    "cta": "Iscriviti alla Newsletter",
+    "cta": "Iscriviti",
     "privacy": "Iscrivendosi si accetta la nostra",
     "privacyLink": "politica sulla privacy."
   },
@@ -33,6 +37,7 @@
       },
       "join": {
         "title": "Join Us",
+        "affiliates": "Affiliati",
         "signup": "Crea account",
         "login": "Accedi",
         "community": "Community",

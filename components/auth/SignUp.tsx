@@ -4,28 +4,62 @@ import PrimaryButton from '../components/PrimaryButton';
 import { signup, toggleAuthMethod } from '../../lib/auth';
 import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStrength';
 import { WarningCircle } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PasswordStrength from '../components/PasswordStrength';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import axios from 'axios';
 
 interface SignUpProps {
   textContent: any;
-  error?: string;
   loading?: boolean;
+  provider?: 'STACKCOMMERCE' | 'TECHCULT';
 }
 
 export default function SignUp(props: SignUpProps) {
   const globalDialogs = useGlobalDialog();
   const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const [passwordState, setPasswordState] = useState<{
     tag: 'error' | 'warning' | 'success';
     label: string;
   } | null>(null);
 
+  //Remove error message when the user starts typing
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError(null);
+      }, 4000);
+    }
+  }, [error]);
+
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target.elements;
-    signup({ email: form.email.value, password: form.password.value });
+
+    axios
+      .get(`${window.origin}/api/check_code`, {
+        params: {
+          code: form.redeemCode.value,
+          provider: props.provider,
+        },
+      })
+      .then((res) => {
+        signup({
+          email: form.email.value,
+          password: form.password.value,
+          redeemCode: form.redeemCode.value,
+          provider: props.provider,
+        });
+      })
+      .catch((error) => {
+        const err = error.response;
+        if (err.status === 404) {
+          setError(err.data.message);
+        } else {
+          console.error(err.response.data.message);
+        }
+      });
   };
 
   const checkPassword = (input) => {
@@ -47,23 +81,9 @@ export default function SignUp(props: SignUpProps) {
   };
 
   return (
-    <>
+    <div className="z-50 flex w-full flex-col space-y-5">
       <div className="flex w-full flex-col items-center pt-3 text-center">
         <h1 className="text-2xl font-medium">{props.textContent.SignUp.title}</h1>
-
-        <span>
-          {props.textContent.SignUp.or}{' '}
-          <a
-            onClick={() => {
-              if (!props.loading) {
-                globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'login' } });
-              }
-            }}
-            className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
-          >
-            {props.textContent.SignUp.login}
-          </a>
-        </span>
       </div>
 
       <form
@@ -101,12 +121,22 @@ export default function SignUp(props: SignUpProps) {
           {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
         </div>
 
-        {props.error && (
+        <TextInput
+          name="redeemCode"
+          placeholder={'Redeem Code'}
+          type="text"
+          autoComplete="email"
+          required
+          autoCompleteOnFocus={autoCompleteOnFocus}
+          disabled={props.loading}
+        />
+
+        {error && (
           <div className="flex w-full flex-row items-start">
             <div className="flex h-5 flex-row items-center">
               <WarningCircle weight="fill" className="mr-1 h-4 text-red" />
             </div>
-            <span className="text-sm text-red">{props.error}</span>
+            <span className="text-sm text-red">{error}</span>
           </div>
         )}
 
@@ -125,6 +155,6 @@ export default function SignUp(props: SignUpProps) {
           {'.'}
         </span>
       </form>
-    </>
+    </div>
   );
 }

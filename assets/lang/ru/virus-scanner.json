@@ -6,7 +6,7 @@
     "footer": "Internxt не несет ответственности за любую предоставленную вами личную информацию. Отправляя свои файлы, вы соглашаетесь с нашими [Условиями предоставления услуг и Политикой конфиденциальности](https://internxt.com/legal)",
 
     "dropFile": {
-      "line1": "Перетащите файл и сканируйте его на наличие вирусов"
+      "line1": "Перетащить файл и проверить на вирусы"
     },
     "fileSelected": "Файл для сканирования на наличие вирусов",
     "cancel": "Отмена",
@@ -18,7 +18,7 @@
     "loading": "Загрузка...",
     "maxFileSize": {
       "title": "Превышен максимальный размер файла",
-      "description": "Максимальный размер файла 1 ГБ"
+      "description": "Макс. размер файла 1 ГБ"
     },
     "table": {
       "loading": "Загрузка...",
@@ -108,15 +108,30 @@
       }
     ]
   },
-  "BannersSection": {
+  "ToolsSection": {
     "title": "Попробуйте бесплатные инструменты Internxt:",
-    "passwordCheckerBanner": {
-      "title": "Инструмент для проверки надежности пароля",
-      "cta": "Проверить сейчас"
-    },
-    "byteConverterBanner": {
-      "title": "Конвертер байтов",
-      "cta": "Конвертировать сейчас"
-    }
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Инструмент для проверки надежности пароля",
+        "description": "Проверить сейчас"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Бесплатный конвертер байтов",
+        "description": "Конвертировать сейчас"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "width": 95,
+        "title": "Бесплатная временная почта",
+        "description": "Отправить письмо"
+      }
+    ]
   }
 }

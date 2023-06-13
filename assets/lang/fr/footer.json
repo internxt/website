@@ -1,4 +1,8 @@
 {
+  "DownloadApp": {
+    "title": "Téléchargez Internxt",
+    "description": "Gérez vos fichiers dans un stockage sécurisé en utilisant l'application mobile pour iOS ou Android."
+  },
   "NewsletterSection": {
     "title": "Newsletter",
     "description": "Vous voulez être tenu au courant du lancement de nouveaux produits ou de nouvelles mises à jour? Saisissez votre adresse électronique et nous nous occuperons du reste.",
@@ -33,6 +37,7 @@
       },
       "join": {
         "title": "Rejoindre",
+        "affiliates": "Affiliés",
         "signup": "Créer un compte",
         "login": "Connexion",
         "community": "Communauté",

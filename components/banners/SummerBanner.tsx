@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
-import { checkout } from '../../lib/auth';
 import { useRouter } from 'next/router';
 
 const SummerBanner = () => {

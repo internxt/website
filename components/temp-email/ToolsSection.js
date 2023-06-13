@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { toolsCards } from './components/cards';
 import { CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 

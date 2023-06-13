@@ -37,6 +37,7 @@
       },
       "join": {
         "title": "Join Us",
+        "affiliates": "Affiliates",
         "signup": "Create account",
         "login": "Log in",
         "community": "Community",

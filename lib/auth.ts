@@ -2,12 +2,12 @@ export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
 
-export function openAuthDialog(view: 'login' | 'signup' | 'recover'): void {
+export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
   } else if (view === 'signup') {
     window.top?.postMessage({ action: 'openDialogSignup' }, window.location.origin);
   }
-}
+};
 
 export function checkSession(): void {
   if (REDIRECT_AUTH_ENABLED) {
@@ -102,8 +102,14 @@ const checkAuthFlowAvailable = () => {
   }
 };
 
-const prepareAuthFlow = (credentials: { email: string; password: string; tfaCode?: string }) => {
-  const payload: Record<string, string> = {};
+const prepareAuthFlow = (credentials: {
+  email: string;
+  password: string;
+  tfaCode?: string;
+  redeemCode?: string;
+  provider?: string;
+}) => {
+  const payload: Record<string, string | Record<string, string>> = {};
 
   if (credentials.email) {
     payload['email'] = credentials.email;
@@ -115,6 +121,10 @@ const prepareAuthFlow = (credentials: { email: string; password: string; tfaCode
 
   if (credentials.tfaCode) {
     payload['password'] = credentials.tfaCode;
+  }
+
+  if (credentials.redeemCode) {
+    payload['redeemCode'] = { code: credentials.redeemCode, provider: credentials.provider };
   }
 
   // 1 min
@@ -151,7 +161,10 @@ export function goToSignUpURL(options?: { redirectURL?: string }) {
   window.location.href = createUserURL;
 }
 
-export function signup(data: { email: string; password: string }, redirectURL?: string): void {
+export function signup(
+  data: { email: string; password: string; redeemCode?: string; provider?: string },
+  redirectURL?: string,
+): void {
   if (REDIRECT_AUTH_ENABLED) {
     checkAuthFlowAvailable();
     prepareAuthFlow(data);

@@ -103,15 +103,31 @@
       }
     ]
   },
-  "BannersSection": {
-    "title": "试用 Internxt 的免费在线安全工具：",
-    "passwordCheckerBanner": {
-      "title": "密码强度检查器",
-      "cta": "立即检查"
-    },
-    "byteConverterBanner": {
-      "title": "字节单位转换器",
-      "cta": "立即转换"
-    }
+
+  "ToolsSection": {
+    "title": "Prova gli strumenti online gratuiti di Internxt dedicati alla sicurezza:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "密码强度检查器",
+        "description": "立即检查"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "免费字节转换器",
+        "description": "立即转换"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "免费的临时电子邮件",
+        "width": 95,
+        "description": "现在邮寄"
+      }
+    ]
   }
 }

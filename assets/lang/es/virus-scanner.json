@@ -105,15 +105,31 @@
       }
     ]
   },
-  "BannersSection": {
-    "title": "Pruebe las herramientas gratuitas de seguridad en línea de Internxt:",
-    "passwordCheckerBanner": {
-      "title": "Comprobador de seguridad de contraseñas",
-      "cta": "Compruébalo ahora"
-    },
-    "byteConverterBanner": {
-      "title": "Conversor de unidades de bytes",
-      "cta": "Convertir ahora"
-    }
+
+  "ToolsSection": {
+    "title": "Prueba las herramientas gratuitas de seguridad en línea de Internxt:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "title": "Comprobador de seguridad de contraseñas",
+        "description": "Compruébalo ahora",
+        "width": 105
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Convertidor de unidades gratuito",
+        "description": "Convertir ahora"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Correo Temporal Gratuito",
+        "width": 95,
+        "description": "Enviar ahora"
+      }
+    ]
   }
 }
