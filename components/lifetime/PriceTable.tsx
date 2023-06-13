@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import PriceCard from './PriceCard';
-import NormalPaymentSection from './NormalPaymentSection';
-import NormalPriceCard from './NormalPriceCard';
 import { Interval, stripeService } from '../services/getPrices';
 import { Transition } from '@headlessui/react';
 
