@@ -2,9 +2,9 @@ import axios from 'axios';
 import bytes from 'bytes';
 
 export enum Interval {
-  'month' = 'month',
-  'year' = 'year',
-  'lifetime' = 'lifetime',
+  Month = 'month',
+  Year = 'year',
+  Lifetime = 'lifetime',
 }
 
 export enum Products {
@@ -29,27 +29,27 @@ async function getAllPrices() {
       Object.values(data).forEach((productValue: any) => {
         const storage = bytes(productValue.bytes);
 
-        if (productValue.interval === Interval.month) {
-          transformedData.individuals[Interval.month] = {
-            ...transformedData.individuals[Interval.month],
+        if (productValue.interval === Interval.Month) {
+          transformedData.individuals[Interval.Month] = {
+            ...transformedData.individuals[Interval.Month],
             [storage]: {
               priceId: productValue.id,
               storage: storage,
               price: Math.abs(productValue.amount / 100).toFixed(2),
             },
           };
-        } else if (productValue.interval === Interval.year) {
-          transformedData.individuals[Interval.year] = {
-            ...transformedData.individuals[Interval.year],
+        } else if (productValue.interval === Interval.Year) {
+          transformedData.individuals[Interval.Year] = {
+            ...transformedData.individuals[Interval.Year],
             [storage]: {
               priceId: productValue.id,
               storage: storage,
               price: Math.abs(productValue.amount / 100).toFixed(2),
             },
           };
-        } else if (productValue.interval === Interval.lifetime) {
-          transformedData.individuals[Interval.lifetime] = {
-            ...transformedData.individuals[Interval.lifetime],
+        } else if (productValue.interval === Interval.Lifetime) {
+          transformedData.individuals[Interval.Lifetime] = {
+            ...transformedData.individuals[Interval.Lifetime],
             [storage]: {
               priceId: productValue.id,
               storage: storage,
@@ -81,7 +81,7 @@ async function getAllPrices() {
 }
 async function getLifetimePrices() {
   const prices = await getAllPrices();
-  const lifetimePlans = prices.individuals[Interval.lifetime];
+  const lifetimePlans = prices.individuals[Interval.Lifetime];
   return lifetimePlans;
 }
 

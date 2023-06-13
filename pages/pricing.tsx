@@ -113,8 +113,6 @@ export async function getServerSideProps(ctx) {
 
   cookies.setReferralCookie(ctx);
 
-  const pushObjects = {};
-
   return {
     props: {
       metatagsDescriptions,

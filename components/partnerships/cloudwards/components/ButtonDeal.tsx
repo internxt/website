@@ -9,7 +9,7 @@ const CLOUDWARDS_COUPON_ID = '0eu0T11z';
 const ButtonDeal = ({ textContent, large }) => {
   const [priceId, setPriceId] = React.useState('');
   useEffect(() => {
-    stripeService.getSelectedPrice(Interval.month, '2TB').then((price) => {
+    stripeService.getSelectedPrice(Interval.Month, '2TB').then((price) => {
       setPriceId(price.priceId);
     });
   }, []);

@@ -198,7 +198,6 @@ type PaymentCheckoutConfig = {
 export function checkout({ planId, couponCode, mode }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
-    console.log('planId', planId);
 
     planId && params.set('planId', planId);
     couponCode && params.set('couponCode', couponCode);

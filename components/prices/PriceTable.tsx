@@ -25,7 +25,7 @@ export default function PriceTable({
   setShowSnackbar,
 }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.year);
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
@@ -74,11 +74,11 @@ export default function PriceTable({
             <button
               type="button"
               onClick={() => {
-                setBillingFrequency(Interval.month);
+                setBillingFrequency(Interval.Month);
                 setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`);
               }}
               className={`rounded-lg py-1.5 px-6 font-medium ${
-                billingFrequency === Interval.month ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+                billingFrequency === Interval.Month ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
               {contentText.billingFrequency.monthly}
@@ -86,11 +86,11 @@ export default function PriceTable({
             <button
               type="button"
               onClick={() => {
-                setBillingFrequency(Interval.year);
+                setBillingFrequency(Interval.Year);
                 setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`);
               }}
               className={`rounded-lg py-1.5 px-6 font-medium ${
-                billingFrequency === Interval.year ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+                billingFrequency === Interval.Year ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
               {contentText.billingFrequency.annually}
@@ -98,10 +98,10 @@ export default function PriceTable({
             <button
               type="button"
               onClick={() => {
-                setBillingFrequency(Interval.lifetime);
+                setBillingFrequency(Interval.Lifetime);
               }}
               className={`rounded-lg py-1.5 px-6 font-medium ${
-                billingFrequency === Interval.lifetime ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+                billingFrequency === Interval.Lifetime ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               } ${!individual && 'hidden'}`}
             >
               {contentText.billingFrequency.lifetime}
@@ -131,7 +131,7 @@ export default function PriceTable({
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            {products?.individuals[billingFrequency] && billingFrequency !== Interval.lifetime && (
+            {products?.individuals[billingFrequency] && billingFrequency !== Interval.Lifetime && (
               <PriceCard
                 planType="individual"
                 key={'10GB'}
@@ -147,7 +147,7 @@ export default function PriceTable({
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
                   <>
-                    {billingFrequency === Interval.year && product.storage === '2TB' ? (
+                    {billingFrequency === Interval.Year && product.storage === '2TB' ? (
                       <SpecialPriceCard
                         planType="individual"
                         storage={product.storage}
@@ -166,7 +166,7 @@ export default function PriceTable({
                         price={product.price}
                         billingFrequency={billingFrequency}
                         popular={
-                          (billingFrequency !== Interval.year && product.storage === '200GB') ||
+                          (billingFrequency !== Interval.Year && product.storage === '200GB') ||
                           product.storage === '5TB'
                         }
                         cta={['checkout', product.priceId]}
