@@ -162,6 +162,10 @@ export default function PriceTable({
                         storage={product.storage}
                         price={product.price}
                         billingFrequency={billingFrequency}
+                        popular={
+                          (billingFrequency !== Interval.year && product.storage === '200GB') ||
+                          product.storage === '5TB'
+                        }
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={country}
