@@ -5,7 +5,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { checkout, openAuthDialog } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
   const [stripeObject, setStripeObject] = useState({});
@@ -96,7 +95,7 @@ const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, coun
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
             checkout({
-              planId: getPlanId(stripeObject),
+              planId: cta[1],
               mode: 'payment',
             });
           }}

@@ -77,57 +77,23 @@ async function getAllPrices() {
     }
   } catch (err) {
     console.error(err);
-    return false;
   }
 }
 async function getLifetimePrices() {
-  try {
-    const res = await axios.get(`${window.origin}/api/stripe/stripe_products`);
-    const { data } = res;
+  const prices = await getAllPrices();
+  const lifetimePlans = prices.individuals[Interval.lifetime];
+  return lifetimePlans;
+}
 
-    if (data) {
-      const transformedData = {
-        individuals: {},
-      };
-
-      Object.values(data).forEach((productValue: any) => {
-        const storage = bytes(productValue.bytes);
-
-        if (productValue.interval === Interval.lifetime) {
-          transformedData.individuals[Interval.lifetime] = {
-            ...transformedData.individuals[Interval.lifetime],
-            [storage]: {
-              priceId: productValue.id,
-              storage: storage,
-              price: Math.abs(productValue.amount / 100).toFixed(2),
-            },
-          };
-        }
-      });
-
-      // Sort products by price descending order for each interval (month, year, lifetime)
-      Object.keys(transformedData.individuals).forEach((interval) => {
-        transformedData.individuals[interval] = Object.values(transformedData.individuals[interval])
-          .sort((a: any, b: any) => {
-            return a.price - b.price;
-          })
-          .reduce((acc: any, curr: any) => {
-            return {
-              ...acc,
-              [curr.storage]: curr,
-            };
-          }, {});
-      });
-
-      return transformedData;
-    }
-  } catch (err) {
-    console.error(err);
-    return false;
-  }
+async function getSelectedPrice(interval: string, plan: string) {
+  //Filter prices by plan
+  const prices = await getAllPrices();
+  const selectedPrice = prices.individuals[interval][plan];
+  return selectedPrice;
 }
 
 export const stripeService = {
   getAllPrices,
   getLifetimePrices,
+  getSelectedPrice,
 };

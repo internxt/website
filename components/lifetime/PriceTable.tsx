@@ -48,8 +48,8 @@ const PriceTable = ({ lang, country }) => {
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            {products?.individuals &&
-              Object.values(products.individuals[Interval.lifetime]).map((product: any) => {
+            {products &&
+              Object.values(products).map((product: any) => {
                 return (
                   <PriceCard
                     planType="individual"

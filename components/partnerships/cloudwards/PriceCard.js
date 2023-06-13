@@ -4,7 +4,6 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { getPlanId } from '../../../pages/api/stripe/stripeProducts';
 
 const PriceCard = () => {
   return (

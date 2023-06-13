@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import ShowSnackbar from '../ShowSnackbar';
 import { toast } from 'react-toastify';
 import { checkout } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+
 import { isMobile } from 'react-device-detect';
 
 const VALENTINES_COUPON_ID = 'G8Ti4z1k';
@@ -66,25 +66,7 @@ const ValentinesBanner = () => {
               </p>
             </div>
             <div className="flex pt-6">
-              <button
-                className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
-                onClick={() => {
-                  // if (isMobile) {
-                  window.location.replace(
-                    `https://drive.internxt.com/login?planId=${getPlanId(
-                      stripeObject,
-                    )}&couponCode=${VALENTINES_COUPON_ID}&mode=subscription`,
-                  );
-                  // } else {
-                  //   window.location.replace(
-                  //     `https://drive.internxt.com/checkout-plan?planId=${getPlanId(stripeObject)}${
-                  //       isCoupon ? '&couponCode=' + props.coupon : ''
-                  //     }${isPaymentMode ? '&mode=' + props.mode : '&mode=subscription'}`,
-                  //   );
-                  //   checkout(getPlanId(stripeObject));
-                  // }
-                }}
-              >
+              <button className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
                 {textContent.valentinesBanner.cta}
               </button>
             </div>

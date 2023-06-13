@@ -1,18 +1,23 @@
-import React from 'react';
-import { isMobile } from 'react-device-detect';
+import React, { useEffect } from 'react';
+
 import { checkout } from '../../../../lib/auth';
-import { getPlanId } from '../../../../pages/api/stripe/stripeProducts';
+import { Interval, stripeService } from '../../../services/getPrices';
 
 const CLOUDWARDS_COUPON_ID = '0eu0T11z';
 
+//!TODO: Get the priceID for 2TB plan (monthly) and add it to the checkout function
 const ButtonDeal = ({ textContent, large }) => {
-  const stripeObject = { product: 'TB21' };
-
+  const [priceId, setPriceId] = React.useState('');
+  useEffect(() => {
+    stripeService.getSelectedPrice(Interval.month, '2TB').then((price) => {
+      setPriceId(price.priceId);
+    });
+  }, []);
   return (
     <div
       onClick={() => {
         checkout({
-          planId: getPlanId(stripeObject),
+          planId: priceId,
           couponCode: CLOUDWARDS_COUPON_ID,
         });
       }}

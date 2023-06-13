@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { checkout } from '../../../lib/auth';
-import { getPlanId } from '../../../pages/api/stripe/stripeProducts';
 
 const PriceCard = ({
   planType,
@@ -216,9 +215,13 @@ const PriceCard = ({
         <div
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
-          onClick={() => {
-            cta[0] === 'checkout' ? checkout(getPlanId(stripeObject)) : (location.href = cta[1]);
-          }}
+          // onClick={() => {
+          //   cta[0] === 'checkout'
+          //     ? checkout({
+          //         priceId: cta[1],
+          //       })
+          //     : (location.href = cta[1]);
+          // }}
           className="flex w-full flex-col items-center text-center"
         >
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">

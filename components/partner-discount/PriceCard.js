@@ -1,7 +1,6 @@
 import React from 'react';
 import { Check } from '@phosphor-icons/react';
 import { checkout, goToSignUpURL } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
   const stripeObject = { product: cta[1] };
@@ -79,7 +78,7 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       <button
         type="button"
         onClick={() => {
-          checkout({ planId: getPlanId(stripeObject) });
+          checkout({ planId: cta[1] });
         }}
         className="button-primary"
       >
