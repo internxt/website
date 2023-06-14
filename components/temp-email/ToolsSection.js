@@ -8,12 +8,12 @@ const ToolsSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
-        <div className="flex max-w-[450px] text-center">
+        <div className={`flex ${lang === 'ru' ? 'max-w-[800px]' : 'max-w-[450px]'} text-center`}>
           <p className="text-4xl font-semibold">{textContent.title}</p>
         </div>
         <div className="gap flex flex-row flex-wrap items-center justify-center gap-8 ">
           {textContent.toolsCard.map((item, index) => (
-            <div className="z-10 flex h-[300px] max-w-[320px] flex-col rounded-2xl bg-gray-1 p-10" key={item.title}>
+            <div className="z-10 flex h-[320px] max-w-[320px] flex-col rounded-2xl bg-gray-1 p-10" key={item.title}>
               <div className="z-10 flex max-w-[240px] flex-col items-center justify-center space-y-6 bg-gray-1 text-center ">
                 <Image
                   src={item.url}

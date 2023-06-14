@@ -191,7 +191,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           </div>
 
           <div className="mb-24 flex flex-col px-10 pt-10 lg:px-0 lg:pt-0">
-            <h3 className="mb-6 text-3xl font-medium text-gray-90 lg:text-4xl">
+            <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
               {textContent.section5.title.line1} <br className="hidden sm:flex" />
               {textContent.section5.title.line2} <br className="hidden sm:flex" />
               {textContent.section5.title.line3}

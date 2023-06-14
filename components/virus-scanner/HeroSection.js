@@ -191,7 +191,7 @@ const HeroSection = ({ textContent }) => {
           </div>
 
           {/* Scan container (drop area & scan information) */}
-          <div className="flex w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
+          <div className="flex w-full max-w-2xl items-center rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
               <>
                 {isScannig ? (
@@ -414,10 +414,10 @@ const HeroSection = ({ textContent }) => {
                   ) : (
                     <>
                       {/* Default state */}
-                      <div className="flex h-60 w-full cursor-pointer flex-col items-center justify-center rounded-xl sm:h-96">
-                        <div className={`flex flex-row items-center  sm:space-x-20 lg:space-x-0 xl:space-x-20`}>
+                      <div className=" flex h-60 w-full cursor-pointer flex-col items-center justify-center rounded-xl sm:h-96">
+                        <div className={`flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:ml-10 xl:space-x-20`}>
                           {/* Icons */}
-                          <div className="relative hidden h-32 w-32 sm:flex lg:hidden xl:flex">
+                          <div className="relative mb-10 hidden h-32 w-32 sm:flex">
                             {/* Img icon */}
                             <svg
                               width="128"
