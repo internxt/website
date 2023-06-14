@@ -10,7 +10,6 @@ export enum CouponType {
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method === 'GET') {
     const coupon = req.query.coupon;
-    console.log(coupon);
     const couponType = coupon as CouponType;
 
     if (!coupon) return res.status(404).end(); //Something went wrong while fetching the products
