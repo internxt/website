@@ -4,8 +4,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import { checkout } from '../../lib/auth';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { stripeService } from '../services/getPrices';
 import { PriceCardProps } from './PriceCard';
 
 const TWOTB_90_OFF = '6FACDcgf';
@@ -20,6 +23,7 @@ export default function SpecialPriceCard({
   lang,
   country,
 }: PriceCardProps) {
+  const [coupon, setCoupon] = React.useState(null);
   const billingFrequencyList = {
     '-1': 'lifetime',
     1: 'monthly',
@@ -38,12 +42,23 @@ export default function SpecialPriceCard({
     }
   };
 
+  useEffect(() => {
+    stripeService
+      .getCoupon(CouponType.TwoTBCoupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const onOfferClick = () => {
     const interval = billingFrequency === 'month' ? 'month' : 'year';
 
     checkout({
       planId: cta[1],
-      couponCode: TWOTB_90_OFF,
+      couponCode: coupon,
       mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
     });
   };

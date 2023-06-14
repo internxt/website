@@ -92,8 +92,19 @@ async function getSelectedPrice(interval: string, plan: string) {
   return selectedPrice;
 }
 
+async function getCoupon(coupon: string) {
+  const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
+    params: {
+      coupon,
+    },
+  });
+  const { data } = res;
+  return data;
+}
+
 export const stripeService = {
   getAllPrices,
   getLifetimePrices,
   getSelectedPrice,
+  getCoupon,
 };

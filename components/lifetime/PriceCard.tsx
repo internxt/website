@@ -5,6 +5,8 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { checkout, goToLoginURL } from '../../lib/auth';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { stripeService } from '../services/getPrices';
 
 interface PriceCardProps {
   planType: string;
@@ -18,9 +20,6 @@ interface PriceCardProps {
   isCampaign?: boolean;
 }
 
-const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
-const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
-
 const PriceCard = ({
   planType,
   storage,
@@ -32,7 +31,7 @@ const PriceCard = ({
   actualPrice,
   isCampaign,
 }: PriceCardProps) => {
-  const [stripeObject, setStripeObject] = useState({});
+  const [coupon, setCoupon] = useState(null);
 
   const currency = () => {
     switch (country) {
@@ -48,11 +47,26 @@ const PriceCard = ({
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   useEffect(() => {
-    if (cta[0] === 'checkout') {
-      const stripeObj = { product: cta[1] };
-      setStripeObject(stripeObj);
+    if (isCampaign) {
+      stripeService
+        .getCoupon(CouponType.LifetimeSpecial)
+        .then((coupon) => {
+          setCoupon(coupon);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      stripeService
+        .getCoupon(CouponType.LifetimeGeneral)
+        .then((coupon) => {
+          setCoupon(coupon);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-  }, [cta]);
+  }, []);
 
   return (
     <div
@@ -110,7 +124,7 @@ const PriceCard = ({
           onClick={() => {
             checkout({
               planId: cta[1],
-              couponCode: isCampaign ? SPECIAL_COUPON_DISCOUNT : GENERAL_COUPON_DISCOUNT,
+              couponCode: coupon,
               mode: 'payment',
             });
           }}
