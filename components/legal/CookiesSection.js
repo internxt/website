@@ -81,7 +81,7 @@ const CookiesSection = ({ textContent }) => {
           <table className="table-auto bg-white">
             <tr>
               <th className="border border-cool-gray-30 bg-cool-gray-10 py-3" colSpan="2">
-                COOKIES ANALÍTICAS
+                {textContent.cookies_table_title}
               </th>
             </tr>
             <tr>
