@@ -67,14 +67,14 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
                 </div>
 
                 <div className="mt-24 flex flex-col px-10 lg:px-0">
-                  <h3 className="mb-6 text-3xl font-medium text-cool-gray-90 lg:text-4xl">
+                  <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
                     {textContent.section2.title.line1} <br className="hidden sm:flex" />
                     {textContent.section2.title.line2} <br className="hidden sm:flex" />
                     {textContent.section2.title.line3} <br className="hidden sm:flex" />
                     {textContent.section2.title.line4}
                   </h3>
 
-                  <p className="text-lg text-cool-gray-80 sm:text-base">
+                  <p className="text-lg text-gray-80">
                     {textContent.section2.subtitle.line1} <br className="hidden sm:flex" />
                     {textContent.section2.subtitle.line2} <br className="hidden sm:flex" />
                     {textContent.section2.subtitle.line3} <br className="hidden sm:flex" />
@@ -128,14 +128,14 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
 
             <div className="flex flex-col items-center lg:items-start ">
               <div className="flex flex-col px-10 lg:mb-24 lg:px-0">
-                <h3 className="mb-6 pt-20 text-3xl font-medium text-cool-gray-90 lg:text-4xl">
+                <h3 className="mb-6 pt-20 text-3xl font-semibold text-gray-100 lg:text-4xl">
                   {textContent.section3.title.line1} <br className="hidden sm:flex" />
                   {textContent.section3.title.line2} <br className="hidden sm:flex" />
                   {textContent.section3.title.line3} <br className="hidden sm:flex" />
                   {textContent.section3.title.line4}
                 </h3>
 
-                <p className="text-lg text-cool-gray-80 sm:text-base">
+                <p className="text-lg text-gray-80">
                   {textContent.section3.subtitle.line1} <br className="hidden sm:flex" />
                   {textContent.section3.subtitle.line2} <br className="hidden sm:flex" />
                   {textContent.section3.subtitle.line3} <br className="hidden sm:flex" />

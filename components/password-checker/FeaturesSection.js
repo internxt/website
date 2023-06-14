@@ -42,7 +42,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   className="flex flex-col items-start space-y-3 rounded-2xl bg-white p-8 lg:h-full lg:max-w-[256px]"
                 >
                   <p className="flex flex-col text-primary">{tipIcons[index]}</p>
-                  <p className="text-2xl">{tip}</p>
+                  <p className="text-2xl font-medium">{tip}</p>
                 </div>
               ))}
             </div>
