@@ -8,7 +8,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { checkout } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { stripeService } from '../services/getPrices';
+import { Interval, stripeService } from '../services/getPrices';
 import { PriceCardProps } from './PriceCard';
 
 const TWOTB_90_OFF = '6FACDcgf';
@@ -24,6 +24,7 @@ export default function SpecialPriceCard({
   country,
 }: PriceCardProps) {
   const [coupon, setCoupon] = React.useState(null);
+  const isPopularYearly = popular && billingFrequency === Interval.Year;
   const billingFrequencyList = {
     '-1': 'lifetime',
     1: 'monthly',
@@ -49,7 +50,7 @@ export default function SpecialPriceCard({
         setCoupon(coupon);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   }, []);
 
@@ -76,12 +77,12 @@ export default function SpecialPriceCard({
           popular ? '' : 'hidden'
         } flex flex-col items-center justify-center py-2 text-sm font-medium text-white`}
       >
-        {popular && billingFrequency === 'year' ? contentText.cta.discount + ' ' + storage : contentText.mostPopular}
+        {isPopularYearly ? contentText.cta.discount + ' ' + storage : contentText.mostPopular}
       </div>
 
       <div
         className={`info flex flex-col items-center justify-start  p-6 pt-6 ${
-          popular && billingFrequency === 'year' ? 'rounded-t-2xl bg-primary bg-cover' : 'bg-white'
+          isPopularYearly ? 'rounded-t-2xl bg-primary bg-cover' : 'bg-white'
         }`}
       >
         <div
@@ -142,8 +143,7 @@ export default function SpecialPriceCard({
         >
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg  font-medium text-primary transition-all duration-75 focus:bg-gray-1 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-gray-1 sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {popular && billingFrequency === 'year' ? contentText.cta.discount : contentText.cta.get}{' '}
-              {lang === 'en' && storage}
+              {isPopularYearly ? contentText.cta.discount : contentText.cta.get} {lang === 'en' && storage}
             </p>
 
             <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
