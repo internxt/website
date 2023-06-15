@@ -13,13 +13,13 @@ const PriceTable = ({ lang, country }) => {
     stripeService
       .getLifetimePrices()
       .then((res) => {
-        setProducts(res);
+        if (res) {
+          setProducts(res);
+          setLoadingCards(false);
+        }
       })
       .catch((err) => {
         console.error(err);
-      })
-      .finally(() => {
-        setLoadingCards(false);
       });
   }, []);
 

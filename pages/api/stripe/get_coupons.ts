@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const coupon = req.query.coupon;
     const couponType = coupon as CouponType;
 
-    if (!coupon) return res.status(404).end(); //Something went wrong while fetching the products
+    if (!coupon) return res.status(404).end(); //Something went wrong while fetching the products/Coupon not found
 
     //Return the correct coupon
     res.status(200).send(process.env[couponType]);

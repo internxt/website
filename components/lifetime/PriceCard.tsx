@@ -54,7 +54,7 @@ const PriceCard = ({
           setCoupon(coupon);
         })
         .catch((err) => {
-          console.log(err);
+          console.error(err);
         });
     } else {
       stripeService
@@ -63,7 +63,7 @@ const PriceCard = ({
           setCoupon(coupon);
         })
         .catch((err) => {
-          console.log(err);
+          console.error(err);
         });
     }
   }, []);
