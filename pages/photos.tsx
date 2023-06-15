@@ -55,7 +55,7 @@ const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, downlo
 };
 
 export async function getServerSideProps(ctx) {
-  const download = await downloadDriveLinks(ctx);
+  const download = await downloadDriveLinks();
 
   const ua = ctx.req.headers['user-agent'];
   const device = userAgent.parse(ua).os.family;

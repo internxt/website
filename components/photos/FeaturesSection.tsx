@@ -85,9 +85,9 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
               </div>
             </div>
 
-            <div className="absolute hidden w-full max-w-[750px] flex-col items-start object-contain object-right pt-10 lg:right-0 lg:flex">
+            <div className="relative hidden w-full max-w-[750px] flex-col items-start object-right pt-10 lg:flex 3xl:absolute 3xl:right-0">
               <RevealX
-                className="hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex"
+                className="right-0 hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex"
                 direction="left"
               >
                 <Image
