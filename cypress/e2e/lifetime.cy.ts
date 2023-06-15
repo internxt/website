@@ -3,7 +3,13 @@ export {};
 
 import bytes from 'bytes';
 
-const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
+export enum CouponType {
+  TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
+  LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
+  LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
+  CloudwardsCoupon = 'COUPON_CLOUDWARDS',
+}
+
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
 const API_DRIVE_URL = Cypress.env('API_DRIVE_URL');
 
@@ -24,6 +30,7 @@ const url = ({ planId, couponCode }: { planId: string; couponCode?: string }) =>
 //Check if the buttons works properly
 describe('Lifetime page', () => {
   const products: Products = {};
+  let coupon: string;
   before(() => {
     cy.request('get', `${API_DRIVE_URL}/payments/prices`).then((response) => {
       response.body.map((product) => {
@@ -36,6 +43,13 @@ describe('Lifetime page', () => {
         };
       });
     });
+
+    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
+      (response) => {
+        console.log('Lifetime ', response.body);
+        coupon = response.body;
+      },
+    );
   });
   describe('When the payment lifetime button is clicked', () => {
     describe('When the plan of 2TB is clicked', () => {
@@ -43,7 +57,7 @@ describe('Lifetime page', () => {
         cy.visit('/lifetime');
         cy.get('#priceTable').contains(`Get ${products.lifetime2TB.storage}`).click();
 
-        cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: GENERAL_COUPON_DISCOUNT }));
+        cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
       });
     });
 
@@ -52,7 +66,7 @@ describe('Lifetime page', () => {
         cy.visit('/lifetime');
         cy.get('#priceTable').contains(`Get ${products.lifetime5TB.storage}`).click();
 
-        cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: GENERAL_COUPON_DISCOUNT }));
+        cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
       });
     });
 
@@ -61,7 +75,7 @@ describe('Lifetime page', () => {
         cy.visit('/lifetime');
         cy.get('#priceTable').contains(`Get ${products.lifetime10TB.storage}`).click();
 
-        cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: GENERAL_COUPON_DISCOUNT }));
+        cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
       });
     });
   });

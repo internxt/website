@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 export {};
 import bytes from 'bytes';
+import { CouponType } from './lifetime.cy';
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
 const API_DRIVE_URL = Cypress.env('API_DRIVE_URL');
-const TWOTB_OFF_COUPON = '6FACDcgf';
 
 interface Products {
   [key: string]: {
@@ -23,6 +23,7 @@ const url = ({ planId, couponCode, mode }: { planId: string; couponCode?: string
 //Check if the buttons works properly
 describe('Pricing page', () => {
   const products: Products = {};
+  let coupon: string;
   before(() => {
     cy.request('get', `${API_DRIVE_URL}/payments/prices`).then((response) => {
       response.body.map((product) => {
@@ -33,6 +34,10 @@ describe('Pricing page', () => {
           price: product.amount / 100,
           planId: product.id,
         };
+      });
+      cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.TwoTBCoupon}`).then((response) => {
+        console.log('Pricing', response.body);
+        coupon = response.body;
       });
     });
   });
@@ -102,7 +107,7 @@ describe('Pricing page', () => {
           cy.visit('/pricing');
           cy.contains(`Get 90% off ${products.year2TB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: products.year2TB.planId, couponCode: TWOTB_OFF_COUPON }));
+          cy.url().should('eq', url({ planId: products.year2TB.planId, couponCode: coupon }));
         });
       });
     });
