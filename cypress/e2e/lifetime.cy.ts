@@ -32,7 +32,7 @@ describe('Lifetime page', () => {
   const products: Products = {};
   let coupon: string;
   before(() => {
-    cy.request('get', `${API_DRIVE_URL}/payments/prices`).then((response) => {
+    cy.request('get', `${window.origin}/api/stripe/stripe_products`).then((response) => {
       response.body.map((product) => {
         const id = product.interval + bytes(product.bytes);
 
