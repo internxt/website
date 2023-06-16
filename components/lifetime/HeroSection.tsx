@@ -2,7 +2,12 @@ import React from 'react';
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 
-const HeroSection = ({ lang, textContent, hideTimer }) => {
+interface HeroSectionProps {
+  textContent: any;
+  hideTimer?: boolean;
+}
+
+const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className="bg-primary-dark">
