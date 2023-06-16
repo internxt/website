@@ -7,6 +7,7 @@ import setUTM from '../../lib/conversions';
 import LanguageMobileBox from './components/LanguageMobileBox';
 import Image from 'next/image';
 import axios from 'axios';
+import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 
 export default function Footer({
   textContent,
@@ -36,9 +37,11 @@ export default function Footer({
   return (
     <section
       id="footer"
-      className={`flex w-full flex-col pb-10 ${darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'}`}
+      className={`flex w-full flex-col overflow-hidden pb-10 ${
+        darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'
+      }`}
     >
-      <div className="flex w-full  flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
+      <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
         {lang === 'es' && (
           <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-gray-5 bg-white py-8 sm:space-x-20">
             <div className="mx-auto flex max-w-2xl flex-col items-center px-8">
@@ -159,9 +162,9 @@ export default function Footer({
 
         {/* Separator */}
         <div
-          className={`${hideNewsletter ? 'hidden' : 'flex'} h-px  w-full max-w-[896px] ${
+          className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full max-w-[896px] ${
             darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'
-          } mb-10`}
+          } lg:mb-10`}
         />
 
         {/* Footer content */}
@@ -440,34 +443,207 @@ export default function Footer({
           </div>
 
           {/* Mobile version */}
-          <div className="flex flex-col lg:hidden">
-            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
+          <div className="flex flex-col overflow-hidden bg-white lg:hidden">
+            <Disclosure as="div" className="w-screen">
               {({ open }) => (
-                <div>
-                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
-                    <span className="relative h-5 w-5">
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
-                      />
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
-                      />
-                    </span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
-
                   <Transition
                     enter="transition duration-200 ease-out"
                     enterFrom="-translate-y-10 opacity-0"
                     enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-0"
+                    leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                      } space-y-4 p-4 pt-2`}
+                    >
+                      <Link href="/drive" locale={lang} passHref>
+                        <div className="flex flex-row space-x-2">
+                          <HardDrives className="h-6 w-6 text-gray-80" />
+                          <p>{textContent.FooterSection.sections.products.drive}</p>
+                        </div>
+                      </Link>
+
+                      <Link href="/photos" locale={lang} passHref>
+                        <div className="flex flex-row space-x-2">
+                          <Camera className="h-6 w-6 text-gray-80" />
+                          <p>{textContent.FooterSection.sections.products.photos}</p>
+                        </div>
+                      </Link>
+
+                      <a
+                        href="https://send.internxt.com"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center"
+                      >
+                        <div className="flex flex-row space-x-2">
+                          <PaperPlaneTilt className="h-6 w-6 text-gray-80" />
+                          <p>{textContent.FooterSection.sections.products.send}</p>
+                        </div>
+                      </a>
+                    </Disclosure.Panel>
+                  </Transition>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="w-screen">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                  </Disclosure.Button>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-200 ease-out"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                      } space-y-4 pt-2`}
+                    >
+                      <Link href="/about" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.about}</a>
+                      </Link>
+
+                      <Link href="/privacy" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.privacy}</a>
+                      </Link>
+
+                      <Link
+                        href={`https://blog.internxt.com/${
+                          lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'
+                        }`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center"
+                      >
+                        <div>{textContent.FooterSection.sections.company.security}</div>
+                      </Link>
+
+                      <Link href="/legal" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.legal}</a>
+                      </Link>
+
+                      <Link href={'https://help.internxt.com'} target={'_blank'} locale={lang} passHref>
+                        {textContent.FooterSection.sections.company.support}
+                      </Link>
+
+                      <Link href="/cloud-storage-comparison" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.comparison}</a>
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="w-screen">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                  </Disclosure.Button>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-200 ease-out"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col bg-gray-1 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                      } space-y-4 pt-2`}
+                    >
+                      <a href="https://drive.internxt.com/new" target="_blank">
+                        {textContent.FooterSection.sections.join.signup}
+                      </a>
+
+                      <a href="https://drive.internxt.com/login" target="_blank">
+                        {textContent.FooterSection.sections.join.login}
+                      </a>
+
+                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
+                        {textContent.FooterSection.sections.join.github}
+                      </a>
+                      <Link href="/affiliates" target="_blank">
+                        {textContent.FooterSection.sections.join.affiliates}
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="w-screen">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                  </Disclosure.Button>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-200 ease-out"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col bg-gray-1 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                      } space-y-4 pt-2`}
+                    >
+                      <a
+                        href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {textContent.FooterSection.sections.resources.blog}
+                      </a>
+
+                      <Link href="/privacy-directory" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
+                      </Link>
+
+                      <Link href="/cyber-awareness" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                      </Link>
+
+                      <Link href="/what-does-google-know-about-me" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}</a>
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="w-screen">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                  </Disclosure.Button>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-200 ease-out"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                       } space-y-4 p-4 pt-2`}
                     >
@@ -496,234 +672,56 @@ export default function Footer({
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
-                </div>
+                </>
               )}
             </Disclosure>
-
-            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
+            <Disclosure as="div" className="w-screen">
               {({ open }) => (
-                <div>
-                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
-                    <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
-                    <span className="relative h-5 w-5">
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
-                      />
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
-                      />
-                    </span>
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
-
                   <Transition
                     enter="transition duration-200 ease-out"
                     enterFrom="-translate-y-10 opacity-0"
                     enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-0"
+                    leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${
+                      className={`flex flex-col ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                       } space-y-4 p-4 pt-2`}
                     >
-                      <Link href="/about" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.about}</a>
+                      <Link href="/drive" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.products.drive}</a>
                       </Link>
 
-                      <Link href="/privacy" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.privacy}</a>
+                      <Link href="/photos" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.products.photos}</a>
                       </Link>
 
                       <a
-                        href={`https://blog.internxt.com/${
-                          lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'
-                        }`}
+                        href="https://send.internxt.com"
                         target="_blank"
                         rel="noreferrer"
+                        className="flex flex-row items-center"
                       >
-                        {textContent.FooterSection.sections.company.security}
+                        <div>{textContent.FooterSection.sections.products.send}</div>
+                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 py-1 text-supporting-1 font-medium uppercase text-orange">
+                          {textContent.FooterSection.new}
+                        </div>
                       </a>
 
-                      <Link href="/legal" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.legal}</a>
-                      </Link>
-
-                      <p
-                        onClick={() => {
-                          window.open('https://help.internxt.com', '_blank');
-                        }}
-                      >
-                        {textContent.FooterSection.sections.company.support}
-                      </p>
-
-                      <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.comparison}</a>
+                      <Link href="/pricing" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.products.pricing}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
-                </div>
+                </>
               )}
             </Disclosure>
-
-            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
-              {({ open }) => (
-                <div>
-                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
-                    <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
-                    <span className="relative h-5 w-5">
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
-                      />
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
-                      />
-                    </span>
-                  </Disclosure.Button>
-
-                  <Transition
-                    enter="transition duration-200 ease-out"
-                    enterFrom="-translate-y-10 opacity-0"
-                    enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-0"
-                  >
-                    <Disclosure.Panel
-                      className={`flex flex-col ${
-                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } space-y-4 p-4 pt-2`}
-                    >
-                      <a href="https://drive.internxt.com/new" target="_top">
-                        {textContent.FooterSection.sections.join.signup}
-                      </a>
-
-                      <a href="https://drive.internxt.com/login" target="_top">
-                        {textContent.FooterSection.sections.join.login}
-                      </a>
-
-                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.join.github}
-                      </a>
-                      <a href="https://internxt.com/affiliates" target="_blank">
-                        {textContent.FooterSection.sections.join.affiliates}
-                      </a>
-                    </Disclosure.Panel>
-                  </Transition>
-                </div>
-              )}
-            </Disclosure>
-
-            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
-              {({ open }) => (
-                <div>
-                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
-                    <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
-                    <span className="relative h-5 w-5">
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
-                      />
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
-                      />
-                    </span>
-                  </Disclosure.Button>
-
-                  <Transition
-                    enter="transition duration-200 ease-out"
-                    enterFrom="-translate-y-10 opacity-0"
-                    enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-0"
-                  >
-                    <Disclosure.Panel
-                      className={`flex flex-col ${
-                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } space-y-4 p-4 pt-2`}
-                    >
-                      <a
-                        href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {textContent.FooterSection.sections.resources.blog}
-                      </a>
-
-                      <Link href="/privacy-directory" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
-                      </Link>
-
-                      <Link href="/cyber-awareness" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
-                      </Link>
-
-                      <Link href="/what-does-google-know-about-me" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}</a>
-                      </Link>
-                    </Disclosure.Panel>
-                  </Transition>
-                </div>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className={`border-b ${darkMode ? 'border-cool-gray-90' : 'border-cool-gray-10'}`}>
-              {({ open }) => (
-                <div>
-                  <Disclosure.Button className="flex w-full items-center justify-between py-4 text-lg font-medium">
-                    <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
-                    <span className="relative h-5 w-5">
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-180'}`}
-                      />
-                      <UilMinus
-                        className={`absolute top-0 left-0 h-full w-full ${
-                          (open && darkMode) || (!open && !darkMode) ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                        } transition duration-300 ${open ? 'text-cool-gray-30' : '-rotate-90'}`}
-                      />
-                    </span>
-                  </Disclosure.Button>
-
-                  <Transition
-                    enter="transition duration-200 ease-out"
-                    enterFrom="-translate-y-10 opacity-0"
-                    enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-0"
-                  >
-                    <Disclosure.Panel
-                      className={`flex flex-col ${
-                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } space-y-4 p-4 pt-2`}
-                    >
-                      <a href={'/byte-converter'} lang={lang} target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.tools.byteConverter}
-                      </a>
-
-                      <Link href="/temporary-email" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
-                      </Link>
-
-                      <Link href="/password-checker" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.passwordChecker}</a>
-                      </Link>
-
-                      <Link href="/virus-scanner" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
-                      </Link>
-                    </Disclosure.Panel>
-                  </Transition>
-                </div>
-              )}
-            </Disclosure>
-
             {/* Language selection for mobile view */}
             <LanguageMobileBox />
 
