@@ -1,5 +1,6 @@
 import axios from 'axios';
 import bytes from 'bytes';
+import { notificationService } from '../Snackbar';
 
 export enum Interval {
   Month = 'month',
@@ -75,8 +76,9 @@ async function getAllPrices() {
 
       return transformedData;
     }
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
+    notificationService.openErrorToast('Something went wrong while fetching the products.');
   }
 }
 async function getLifetimePrices() {
@@ -93,13 +95,18 @@ async function getSelectedPrice(interval: string, plan: string) {
 }
 
 async function getCoupon(coupon: string) {
-  const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
-    params: {
-      coupon,
-    },
-  });
-  const { data } = res;
-  return data;
+  try {
+    const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
+      params: {
+        coupon,
+      },
+    });
+    const { data } = res;
+    return data;
+  } catch (error) {
+    console.error(error);
+    notificationService.openErrorToast('Something went wrong while fetching the coupon.');
+  }
 }
 
 export const stripeService = {

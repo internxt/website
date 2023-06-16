@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 
 import { checkout } from '../../../../lib/auth';
 import { CouponType } from '../../../../pages/api/stripe/get_coupons';
-import { Interval, stripeService } from '../../../services/getPrices';
+import { Interval, stripeService } from '../../../services/stripeService';
 
 //!TODO: Get the priceID for 2TB plan (monthly) and add it to the checkout function
 const ButtonDeal = ({ textContent, large }) => {
   const [priceId, setPriceId] = React.useState('');
   const [coupon, setCoupon] = React.useState(null);
+
   useEffect(() => {
     stripeService.getSelectedPrice(Interval.Month, '2TB').then((price) => {
       setPriceId(price.priceId);

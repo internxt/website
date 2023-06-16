@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import ShowSnackbar from '../ShowSnackbar';
+import ShowSnackbar from '../Snackbar';
 import { toast } from 'react-toastify';
 import { checkout } from '../../lib/auth';
 
 import { isMobile } from 'react-device-detect';
+import { notificationService } from '../Snackbar';
 
 const VALENTINES_COUPON_ID = 'G8Ti4z1k';
 
@@ -18,15 +19,13 @@ const ValentinesBanner = () => {
   const VDAY = textContent.valentinesBanner.subtitle.substr(textContent.valentinesBanner.subtitle.indexOf('VDAY'), 4);
   const stripeObject = { product: 'TB212' };
 
-  const openToast = () => toast.success(textContent.valentinesBanner.toast);
-
   const onClose = () => {
     setIsSendBannerVisible(false);
   };
 
   const copyCoupon = () => {
     navigator.clipboard.writeText(VDAY);
-    openToast();
+    notificationService.openSuccessToast(textContent.valentinesBanner.toast);
   };
 
   useEffect(() => {

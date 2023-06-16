@@ -8,7 +8,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { checkout } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { Interval, stripeService } from '../services/getPrices';
+import { Interval, stripeService } from '../services/stripeService';
 import { PriceCardProps } from './PriceCard';
 
 const TWOTB_90_OFF = '6FACDcgf';

@@ -4,9 +4,10 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import { checkout, goToLoginURL } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { stripeService } from '../services/getPrices';
+import { stripeService } from '../services/stripeService';
 
 interface PriceCardProps {
   planType: string;

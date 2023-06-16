@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PriceCard from './PriceCard';
-import { Interval, stripeService } from '../services/getPrices';
+import { Interval, stripeService } from '../services/stripeService';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '../components/CardSkeleton';
 

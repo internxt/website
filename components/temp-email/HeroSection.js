@@ -115,7 +115,6 @@ const HeroSection = ({ textContent }) => {
         </div>
 
         <Inbox email={email} textContent={textContent.inbox} />
-        <ShowSnackbar />
       </div>
     </section>
   );

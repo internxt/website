@@ -13,7 +13,7 @@ import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import { toast } from 'react-toastify';
-import ShowSnackbar from '../components/ShowSnackbar';
+import ShowSnackbar, { notificationService } from '../components/Snackbar';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -22,9 +22,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [country, setCountry] = useState('ES');
   const [isLifetime, setIsLifetime] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState<'success' | 'error'>();
-  const success = () => toast.success('Successfully submitted');
-  const sendEmailError = () => toast.error('Something went wrong!');
-  const open = showSnackbar === 'success' ? success : sendEmailError;
+  const open =
+    showSnackbar === 'success'
+      ? notificationService.openSuccessToast('Successfully submitted')
+      : notificationService.openErrorToast('Something went wrong!');
 
   async function getCountryCode() {
     const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
@@ -43,7 +44,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   useEffect(() => {
     if (showSnackbar) {
-      open();
+      open;
       setShowSnackbar(undefined);
     }
   }, [showSnackbar]);
@@ -95,8 +96,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <FAQSection textContent={textContent.FaqSection} />
 
         <CtaSection textContent={textContent.CtaSection} />
-
-        <ShowSnackbar />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>

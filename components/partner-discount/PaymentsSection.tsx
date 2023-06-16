@@ -1,7 +1,7 @@
 import { Transition } from '@headlessui/react';
 import React, { useEffect, useState } from 'react';
 import CardSkeleton from '../components/CardSkeleton';
-import { stripeService } from '../services/getPrices';
+import { stripeService } from '../services/stripeService';
 import PriceCard from './PriceCard';
 
 const PaymentsSection = ({ textContent, country }) => {

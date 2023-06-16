@@ -5,7 +5,7 @@ import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '../banners/BusinessBanner';
 import SpecialPriceCard from './SpecialPriceCard';
-import { Interval, stripeService } from '../services/getPrices';
+import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 
 interface PriceTableProps {
