@@ -8,13 +8,13 @@ import { useRouter } from 'next/router';
 import SummerBanner from '../components/banners/SummerBanner';
 import ShowSnackbar from '../components/Snackbar';
 
-// const excludedPaths = ['/techcult', '/pricing'];
+const excludedPaths = ['/techcult', '/pricing'];
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const route = useRouter();
-  // const pathname = route.pathname;
-  // const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
-  // const bannerLang = require(`../assets/lang/${route.locale}/banners.json`);
+  const route = useRouter();
+  const pathname = route.pathname;
+  const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
+  const bannerLang = require(`../assets/lang/${route.locale}/banners.json`);
 
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
         <ShowSnackbar />
-        {/* {isExcludedPath ? null : <SummerBanner />} */}
+        {isExcludedPath ? null : <SummerBanner />}
         <Intercom />
       </GlobalUIManager>
     </LiveChatLoaderProvider>

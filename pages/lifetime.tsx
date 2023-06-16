@@ -12,12 +12,23 @@ import CtaSection from '../components/lifetime/CtaSection';
 
 import axios from 'axios';
 
-const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang, countryCode }) => {
+const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const [country, setCountry] = React.useState('ES');
 
+  async function getCountryCode() {
+    const options = {
+      method: 'GET',
+      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
+    };
+    const countryCode = await axios(options);
+    return countryCode;
+  }
+
   useEffect(() => {
-    setCountry(countryCode);
+    getCountryCode().then((res) => {
+      setCountry(res.data.country);
+    });
   });
 
   return (
@@ -49,13 +60,6 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
-  const pushObjects = {};
-
-  const options = {
-    method: 'GET',
-    url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
-  };
-  const countryCode = await axios(options);
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/lifetime.json`);
@@ -72,7 +76,6 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
-      countryCode: countryCode.data.country,
     },
   };
 }

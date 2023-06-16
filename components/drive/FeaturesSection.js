@@ -113,8 +113,11 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           </div>
         </div>
 
-        <div className="absolute hidden w-full max-w-[750px] flex-col items-start object-contain object-right pt-10 lg:right-0 lg:flex">
-          <RevealX className="hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex" direction="left">
+        <div className="relative hidden w-full max-w-[750px] flex-col items-start object-right pt-10 lg:flex 3xl:absolute 3xl:right-0">
+          <RevealX
+            className="right-0 hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex"
+            direction="left"
+          >
             <Image
               className="h-full w-full bg-no-repeat "
               src="/images/drive/document-folders.webp"
@@ -129,6 +132,23 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             />
           </RevealX>
         </div>
+
+        {/* <div className="absolute hidden w-full max-w-[750px] flex-col items-start object-contain object-right pt-10 lg:right-0 lg:flex">
+          <RevealX className="hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex" direction="left">
+            <Image
+              className="h-full w-full bg-no-repeat "
+              src="/images/drive/document-folders.webp"
+              width={750}
+              height={900}
+              quality={100}
+              unoptimized={true}
+              objectPosition={'left'}
+              objectFit="cover"
+              draggable={false}
+              alt="Document folders"
+            />
+          </RevealX>
+        </div> */}
       </div>
 
       {/* Feature #3 - Share your files with ease, security is on us */}
@@ -191,7 +211,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           </div>
 
           <div className="mb-24 flex flex-col px-10 pt-10 lg:px-0 lg:pt-0">
-            <h3 className="mb-6 text-3xl font-medium text-gray-90 lg:text-4xl">
+            <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
               {textContent.section5.title.line1} <br className="hidden sm:flex" />
               {textContent.section5.title.line2} <br className="hidden sm:flex" />
               {textContent.section5.title.line3}

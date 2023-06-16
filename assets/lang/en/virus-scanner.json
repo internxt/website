@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Virus Scanner",
     "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
-    "subtitle2": "Scan any document, image, pdf, or other file types. Make sure your files are safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
+    "subtitle2": "Scan any document, image, PDF, or other file types. Make sure your files are safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
 
     "dropFile": {
@@ -62,7 +62,7 @@
     },
     "scanFiles": {
       "title": "Scan files for viruses in complete confidence",
-      "description": "Internxt has and will always put users' privacy and security first. We are committed to creating more fair, more free, and more transparent internet for all. That's why we created our free online virus scanner, to shine a light on stealthy viruses and expose malicious malware"
+      "description": "Internxt has and will always put users' privacy and security first. We are committed to creating a more fair, more free, and more transparent internet for all. That's why we created our free online virus scanner, to shine a light on stealthy viruses and expose malicious malware."
     }
   },
   "CtaSection": {

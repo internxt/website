@@ -28,7 +28,7 @@ const PriceCard = ({
   cta,
   country,
   popular,
-  lang,
+
   actualPrice,
   isCampaign,
 }: PriceCardProps) => {
@@ -45,7 +45,7 @@ const PriceCard = ({
     }
   };
 
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   useEffect(() => {
     if (isCampaign) {
@@ -72,7 +72,7 @@ const PriceCard = ({
   return (
     <div
       className={`priceCard card ${
-        popular ? 'border-2 border-primary  bg-blue-60 shadow-lg ring-2 ring-blue-60' : ''
+        popular ? 'border-2 border-primary  bg-blue-60 shadow-subtle-hard ring-2 ring-blue-60' : ''
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl sm:m-4`}
     >
       <div

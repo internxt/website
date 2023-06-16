@@ -28,7 +28,7 @@
       },
       "company": {
         "title": "Company",
-        "about": "About us",
+        "about": "About Us",
         "privacy": "Privacy",
         "security": "Security",
         "legal": "Legal",
@@ -38,8 +38,8 @@
       "join": {
         "title": "Join Us",
         "affiliates": "Affiliates",
-        "signup": "Create account",
-        "login": "Log in",
+        "signup": "Create Account",
+        "login": "Log In",
         "community": "Community",
         "github": "GitHub",
         "twitter": "Twitter",
@@ -55,8 +55,6 @@
         "comparison": "Cloud Storage Comparison",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
         "library": "Library",
-        "writeForUs": "Write for us",
-        "cyberSecurityGlossary": "Cyber Security Glossary",
         "cyberAwareness": "Cyber Awareness",
         "whatGoogleKnowsAboutMe": "What Google Knows"
       },

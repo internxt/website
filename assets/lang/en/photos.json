@@ -92,7 +92,7 @@
       },
       "card4": {
         "title": "Secure from the core",
-        "subtitle": "As security flaws and scandals are the daily news, we make sure our systems keep your data and files safe from attackers."
+        "subtitle": "Security flaws and scandals are daily news, that’s why we make sure our systems keep your data and files safe from attackers."
       }
     },
     "DownloadLinks": {
@@ -115,7 +115,7 @@
   },
   "FeatureSection": {
     "title": "Protect your pics with Internxt Photos",
-    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
+    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your images in complete privacy.",
     "cta": "Get started"
   },
   "FaqSection": {

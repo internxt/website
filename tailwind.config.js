@@ -1,3 +1,5 @@
+const { defaultTheme } = require('react-select');
+
 module.exports = {
   content: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
@@ -129,6 +131,8 @@ module.exports = {
     extend: {
       screens: {
         xs: '512px',
+        '3xl': '1582px',
+        ...defaultTheme.screens,
       },
       borderRadius: {
         '4xl': '2.75rem',

@@ -2,7 +2,7 @@ import React from 'react';
 import PriceTable from './PriceTable';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 
-const PaymentSection = ({ lang, textContent, country, products }) => {
+const PaymentSection = ({ lang, textContent, country }) => {
   return (
     <section id="payment" className="overflow-hidden pb-20">
       <div className="flex flex-col space-y-8 pt-10 lg:pt-0">
@@ -11,7 +11,7 @@ const PaymentSection = ({ lang, textContent, country, products }) => {
             <p className="text-xl font-medium text-gray-80">{textContent.limitedOffer}</p>
           </div>
           <div className="flex flex-col justify-center px-6 pt-4 text-center">
-            <p className="text-4xl font-semibold">
+            <p className="w-full max-w-[600px] text-5xl font-semibold leading-tight">
               <span className="text-primary">{textContent.title.blueText}</span>
               <span>{textContent.title.normalText}</span>
             </p>
@@ -21,7 +21,7 @@ const PaymentSection = ({ lang, textContent, country, products }) => {
 
         <PriceTable lang={lang} country={country} />
 
-        <div className="flex flex-col items-start justify-center space-y-8 text-center md:flex-row md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.firstFeed}</p>
