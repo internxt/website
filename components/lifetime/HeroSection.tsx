@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
   return (
-    <section className="overflow-hidden pt-16">
+    <section className="overflow-hidden pt-20 lg:pt-16">
       <div className="bg-primary-dark">
         <div className="lg:mx-10 xl:mx-32">
           <div className="mx-auto flex w-full max-w-screen-xl flex-col sm:mb-24 lg:flex-row">
