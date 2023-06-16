@@ -37,11 +37,11 @@ export default function Footer({
   return (
     <section
       id="footer"
-      className={`flex w-full flex-col overflow-hidden pb-10 ${
+      className={`flex w-full flex-col overflow-hidden lg:pb-10 ${
         darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'
       }`}
     >
-      <div className="flex w-full flex-col items-center justify-center px-6 py-16 sm:p-20 sm:py-12">
+      <div className="flex w-full flex-col items-center justify-center px-6 pt-16 sm:p-20 sm:py-12">
         {lang === 'es' && (
           <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-gray-5 bg-white py-8 sm:space-x-20">
             <div className="mx-auto flex max-w-2xl flex-col items-center px-8">
@@ -562,9 +562,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-gray-30' : 'text-gray-60'
-                      } space-y-4 pt-2`}
+                      } space-y-4 p-4`}
                     >
                       <a href="https://drive.internxt.com/new" target="_blank">
                         {textContent.FooterSection.sections.join.signup}
@@ -600,9 +600,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-gray-30' : 'text-gray-60'
-                      } space-y-4 pt-2`}
+                      } space-y-4 p-4`}
                     >
                       <a
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -632,7 +632,7 @@ export default function Footer({
               {({ open }) => (
                 <>
                   <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
-                    <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
+                    <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
@@ -643,79 +643,24 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } space-y-4 p-4 pt-2`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                      } space-y-4 p-4`}
                     >
-                      <Link href="/drive" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.drive}</a>
+                      <Link href="/byte-converter" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.byteConverter}</a>
                       </Link>
 
-                      <Link href="/photos" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.photos}</a>
+                      <Link href="/temporary-email" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
                       </Link>
 
-                      <a
-                        href="https://send.internxt.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center"
-                      >
-                        <div>{textContent.FooterSection.sections.products.send}</div>
-                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 py-1 text-supporting-1 font-medium uppercase text-orange">
-                          {textContent.FooterSection.new}
-                        </div>
-                      </a>
-
-                      <Link href="/pricing" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.pricing}</a>
-                      </Link>
-                    </Disclosure.Panel>
-                  </Transition>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="w-screen">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
-                    <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                  </Disclosure.Button>
-                  <Transition
-                    enter="transition duration-200 ease-out"
-                    enterFrom="-translate-y-10 opacity-0"
-                    enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-200 ease-out"
-                  >
-                    <Disclosure.Panel
-                      className={`flex flex-col ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                      } space-y-4 p-4 pt-2`}
-                    >
-                      <Link href="/drive" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.drive}</a>
+                      <Link href="/password-checker" locale={lang} passHref>
+                        <div>{textContent.FooterSection.sections.tools.passwordChecker}</div>
                       </Link>
 
-                      <Link href="/photos" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.photos}</a>
-                      </Link>
-
-                      <a
-                        href="https://send.internxt.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center"
-                      >
-                        <div>{textContent.FooterSection.sections.products.send}</div>
-                        <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 py-1 text-supporting-1 font-medium uppercase text-orange">
-                          {textContent.FooterSection.new}
-                        </div>
-                      </a>
-
-                      <Link href="/pricing" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.products.pricing}</a>
+                      <Link href="/virus-scanner" locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
@@ -725,7 +670,7 @@ export default function Footer({
             {/* Language selection for mobile view */}
             <LanguageMobileBox />
 
-            <div className="mt-16 flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-center space-y-4 py-10">
               <div className="flex flex-row space-x-1">
                 <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
                   <img
