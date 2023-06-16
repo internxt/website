@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '../prices/PriceCard';
-import { stripeService } from '../services/getPrices';
+import { stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 
 export default function PriceTable({ lang, country }) {

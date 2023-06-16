@@ -1,6 +1,5 @@
 import { Globe, SketchLogo, CloudCheck, FileArrowUp, ClockCounterClockwise } from '@phosphor-icons/react';
 import React from 'react';
-import ShowSnackbar from '../ShowSnackbar';
 import styles from './Background.module.scss';
 import { toast } from 'react-toastify';
 
