@@ -3,7 +3,7 @@ import PriceCard from './PriceCard';
 import NormalPaymentSection from './NormalPaymentSection';
 import NormalPriceCard from './NormalPriceCard';
 
-const PriceTable = ({ lang, country }) => {
+const PriceTable = ({ country }) => {
   const billingFrequency = -1;
 
   const billingPrice = (price) => price[billingFrequency];
@@ -56,7 +56,6 @@ const PriceTable = ({ lang, country }) => {
           price={billingPrice(pricings.TB5.price)}
           cta={['checkout', 'lifetime5TB']}
           popular={pricings.TB5.popular}
-          lang={lang}
           country={country}
           actualPrice={pricings.TB5.actualPrice}
         />
@@ -66,7 +65,6 @@ const PriceTable = ({ lang, country }) => {
           price={billingPrice(pricings.TB2.price)}
           cta={['checkout', 'lifetime2TB']}
           popular={pricings.TB2.popular}
-          lang={lang}
           country={country}
           actualPrice={pricings.TB2.actualPrice}
         />
@@ -77,7 +75,6 @@ const PriceTable = ({ lang, country }) => {
           price={billingPrice(pricings.TB10.price)}
           cta={['checkout', 'lifetime10TB']}
           popular={pricings.TB10.popular}
-          lang={lang}
           country={country}
           actualPrice={pricings.TB10.actualPrice}
         />

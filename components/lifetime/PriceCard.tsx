@@ -17,7 +17,7 @@ interface PriceCardProps {
   cta: string[];
   country: string;
   popular: boolean;
-  lang: string;
+
   actualPrice: string;
   isCampaign?: boolean;
 }
@@ -29,7 +29,7 @@ const PriceCard = ({
   cta,
   country,
   popular,
-  lang,
+
   actualPrice,
   isCampaign,
 }: PriceCardProps) => {
@@ -46,7 +46,7 @@ const PriceCard = ({
     }
   };
 
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   useEffect(() => {
     if (cta[0] === 'checkout') {

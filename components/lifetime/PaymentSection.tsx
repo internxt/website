@@ -2,7 +2,7 @@ import React from 'react';
 import PriceTable from './PriceTable';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 
-const PaymentSection = ({ lang, textContent, country }) => {
+const PaymentSection = ({ textContent, country }) => {
   return (
     <section id="payment" className="overflow-hidden pb-20">
       <div className="flex flex-col space-y-8 pt-10 lg:pt-0">
@@ -19,7 +19,7 @@ const PaymentSection = ({ lang, textContent, country }) => {
           </div>
         </div>
 
-        <PriceTable lang={lang} country={country} />
+        <PriceTable country={country} />
 
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
