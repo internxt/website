@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import { analyticsService } from '../services/analyticsService';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const SummerBanner = () => {
   const router = useRouter();
@@ -42,12 +44,12 @@ const SummerBanner = () => {
         <div
           className="flex  cursor-pointer flex-col items-center justify-center px-24 pt-20 pb-16"
           onClick={() => {
-            window.open(
-              `https://internxt.com/${
-                lang === 'en' ? '' : lang
-              }/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
-              '_blank',
-            );
+            analyticsService.offerTrack({
+              campaign: 'summersale',
+              discount: 90,
+              plan: getPlanId({ product: 'TB212' }),
+            });
+            window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_blank');
           }}
         >
           <div className="flex flex-col items-center justify-center space-y-9 text-center">
