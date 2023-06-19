@@ -664,7 +664,7 @@ export default function Footer({
               )}
             </Disclosure>
             {/* Language selection for mobile view */}
-            <LanguageMobileBox />
+            <LanguageMobileBox darkMode={darkMode} />
 
             <div className="flex flex-col items-center space-y-4 py-10">
               <div className="flex flex-row space-x-1">
