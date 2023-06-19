@@ -47,7 +47,7 @@ export default function Example() {
                   value={person.en || person.es || person.fr || person.it || person.zh || person.ru}
                 >
                   {({ selected }) => (
-                    <>
+                    <div className="flex flex-row">
                       <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
                         {person.en || person.es || person.fr || person.it || person.zh || person.ru}
                       </span>
@@ -56,7 +56,7 @@ export default function Example() {
                           <Check className="h-5 w-5" aria-hidden="true" />
                         </span>
                       ) : null}
-                    </>
+                    </div>
                   )}
                 </Listbox.Option>
               ))}
