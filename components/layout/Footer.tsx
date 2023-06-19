@@ -461,7 +461,7 @@ export default function Footer({
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-gray-30' : 'text-gray-60'
-                      } space-y-4 p-4 pt-2`}
+                      } space-y-8 p-4`}
                     >
                       <Link href="/drive" locale={lang} passHref>
                         <div className="flex flex-row space-x-2">
@@ -510,7 +510,7 @@ export default function Footer({
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-gray-30' : 'text-gray-60'
-                      } space-y-4 pt-2`}
+                      } space-y-8 p-4`}
                     >
                       <Link href="/about" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.about}</a>
@@ -538,10 +538,6 @@ export default function Footer({
                       <Link href={'https://help.internxt.com'} target={'_blank'} locale={lang} passHref>
                         {textContent.FooterSection.sections.company.support}
                       </Link>
-
-                      <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.comparison}</a>
-                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -564,7 +560,7 @@ export default function Footer({
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-gray-30' : 'text-gray-60'
-                      } space-y-4 p-4`}
+                      } space-y-8 p-4`}
                     >
                       <a href="https://drive.internxt.com/new" target="_blank">
                         {textContent.FooterSection.sections.join.signup}
@@ -602,7 +598,7 @@ export default function Footer({
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-gray-30' : 'text-gray-60'
-                      } space-y-4 p-4`}
+                      } space-y-8 p-4`}
                     >
                       <a
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -645,7 +641,7 @@ export default function Footer({
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'text-gray-30' : 'text-gray-60'
-                      } space-y-4 p-4`}
+                      } space-y-8 p-4`}
                     >
                       <Link href="/byte-converter" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.tools.byteConverter}</a>
