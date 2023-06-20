@@ -1,5 +1,9 @@
+function track(description: string, payload: Record<string, any>) {
+  window.rudderanalytics.track(description, payload);
+}
+
 function offerTrack({ campaign, discount, plan }: { campaign: string; discount: number; plan: string }) {
-  window.rudderanalytics.track('Offer Clicked', {
+  track('Offer Clicked', {
     campaign: campaign,
     discount: discount,
     plan: plan,
