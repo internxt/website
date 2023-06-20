@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
+import { analyticsService } from '../services/analyticsService';
+import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
@@ -17,14 +19,14 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       >
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
-          onClick={() =>
-            window.open(
-              `https://internxt.com/${
-                lang === 'en' ? '' : lang
-              }/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
-              '_blank',
-            )
-          }
+          onClick={() => {
+            analyticsService.offerTrack({
+              campaign: 'summersale',
+              discount: 90,
+              plan: getPlanId({ product: 'TB212' }),
+            });
+            window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');
+          }}
         >
           <div className="flex flex-row space-x-1">
             <p className="flex flex-row font-semibold">{title[0]}!</p>
