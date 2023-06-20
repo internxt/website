@@ -20,44 +20,11 @@ const cardsTitles = {
     title5: 'No unauthorized access',
     title6: 'Available on all devices',
   },
-  es: {
-    title1: 'Get up to 10GB free',
-    title2: 'Safe and secure cloud storage',
-    title3: 'Private file and photo backup',
-    title4: 'End-to-end encrypted transfers',
-    title5: 'No unauthorized access',
-    title6: 'Available on all devices',
-  },
-  fr: {
-    title1: 'Obtenez jusqu’à 10GB gratuits',
-    title2: 'Stockage en nuage sécurisé',
-    title3: 'Sauvegarde privée des fichiers',
-    title4: 'Transferts cryptés de bout en bout',
-    title5: 'Aucun accès non autorisé',
-    title6: 'Disponible sur tous les appareils',
-  },
-  it: {
-    title1: 'Get up to 10GB free',
-    title2: 'Safe and secure cloud storage',
-    title3: 'Private file and photo backup',
-    title4: 'End-to-end encrypted transfers',
-    title5: 'No unauthorized access',
-    title6: 'Available on all devices',
-  },
-  zh: {
-    title1: 'Get up to 10GB free',
-    title2: 'Safe and secure cloud storage',
-    title3: 'Private file and photo backup',
-    title4: 'End-to-end encrypted transfers',
-    title5: 'No unauthorized access',
-    title6: 'Available on all devices',
-  },
 };
 
 const LoginBFBanner = () => {
   const [showBanner, setShowBanner] = React.useState(false);
-  const router = useRouter();
-  const lang = router.locale;
+  const lang = 'en';
 
   React.useEffect(() => {
     setTimeout(() => {
