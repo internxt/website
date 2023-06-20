@@ -49,7 +49,8 @@ const SummerBanner = () => {
               discount: 90,
               plan: getPlanId({ product: 'TB212' }),
             });
-            window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_blank');
+            window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');
+            onClose();
           }}
         >
           <div className="flex flex-col items-center justify-center space-y-9 text-center">
