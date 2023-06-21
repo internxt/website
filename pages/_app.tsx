@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
   const pathname = route.pathname;
   const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
-  const bannerLang = require(`../assets/lang/${route.locale}/banners.json`);
 
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
