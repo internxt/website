@@ -53,8 +53,8 @@
       {
         "question": "Puis-je payer avec une carte de crédit, PayPal ou une crypto-monnaie ?",
         "answer": [
-          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc). Vous pouvez également payer via Apple et Google Pay. Nous n'acceptons pas PayPal.",
-          "Sur demande, nous acceptons également iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24 et Sofort. Pour demander une facture en utilisant l'une des méthodes alternatives décrites ci-dessus, il suffit de nous envoyer un courriel à hello@internxt.com."
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et Bancontact",
+          "Sur demande, nous acceptons également les paiements en crypto-monnaies ou en débit SEPA. Si vous avez des questions, envoyez-nous un courriel à hello@internxt.com."
         ]
       },
       {
