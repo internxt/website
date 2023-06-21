@@ -17,11 +17,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
   const [country, setCountry] = React.useState('ES');
 
   async function getCountryCode() {
-    const options = {
-      method: 'GET',
-      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
-    };
-    const countryCode = await axios(options);
+    const countryCode = await axios.get(process.env.NEXT_PUBLIC_COUNTRY_API_URL);
     return countryCode;
   }
 
@@ -38,17 +34,16 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       segmentName="Lifetime"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-      cta={['Default']}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
-      <HeroSection lang={lang} textContent={langJson.HeroSection} />
+      <HeroSection textContent={langJson.HeroSection} />
 
       <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
 
-      <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
+      <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
-      <FeatureSection lang={lang} textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} />
 
       <CtaSection textContent={langJson.CtaSection} />
 
