@@ -5,18 +5,8 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { checkout, openAuthDialog } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
 
 const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
-  const [stripeObject, setStripeObject] = useState({});
-
-  const billingFrequencyList = {
-    '-1': 'lifetime',
-    1: 'monthly',
-    6: 'semiannually',
-    12: 'annually',
-  };
-
   const currency = () => {
     switch (country) {
       case 'US':
@@ -30,14 +20,6 @@ const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, coun
 
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const contentText = require(`../../assets/lang/en/priceCard.json`);
-
-  useEffect(() => {
-    if (cta[0] === 'checkout') {
-      const stripeObj = { product: cta[1] };
-
-      setStripeObject(stripeObj);
-    }
-  }, [cta]);
 
   return (
     <div
@@ -96,7 +78,7 @@ const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, coun
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
             checkout({
-              planId: getPlanId(stripeObject),
+              planId: cta[1],
               mode: 'payment',
             });
           }}

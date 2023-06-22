@@ -4,11 +4,10 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import { checkout, goToLoginURL } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
-
-const GENERAL_COUPON_DISCOUNT = 'IoYrRdmY';
-const SPECIAL_COUPON_DISCOUNT = '29XNHhc8';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { stripeService } from '../services/stripeService';
 
 interface PriceCardProps {
   planType: string;
@@ -17,7 +16,7 @@ interface PriceCardProps {
   cta: string[];
   country: string;
   popular: boolean;
-
+  lang: string;
   actualPrice: string;
   isCampaign?: boolean;
 }
@@ -33,7 +32,7 @@ const PriceCard = ({
   actualPrice,
   isCampaign,
 }: PriceCardProps) => {
-  const [stripeObject, setStripeObject] = useState({});
+  const [coupon, setCoupon] = useState(null);
 
   const currency = () => {
     switch (country) {
@@ -49,11 +48,26 @@ const PriceCard = ({
   const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   useEffect(() => {
-    if (cta[0] === 'checkout') {
-      const stripeObj = { product: cta[1] };
-      setStripeObject(stripeObj);
+    if (isCampaign) {
+      stripeService
+        .getCoupon(CouponType.LifetimeSpecial)
+        .then((coupon) => {
+          setCoupon(coupon);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    } else {
+      stripeService
+        .getCoupon(CouponType.LifetimeGeneral)
+        .then((coupon) => {
+          setCoupon(coupon);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     }
-  }, [cta]);
+  }, []);
 
   return (
     <div
@@ -84,7 +98,7 @@ const PriceCard = ({
 
         <div className={`planPrice flex flex-col items-center justify-center p-5`}>
           <div
-            className={`priceBreakdown flex flex-col items-center
+            className={`priceBreakdown flex flex-row 
             `}
           >
             <p className={`flex flex-row  space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}>
@@ -110,8 +124,8 @@ const PriceCard = ({
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
             checkout({
-              planId: getPlanId(stripeObject),
-              couponCode: isCampaign ? SPECIAL_COUPON_DISCOUNT : GENERAL_COUPON_DISCOUNT,
+              planId: cta[1],
+              couponCode: coupon,
               mode: 'payment',
             });
           }}

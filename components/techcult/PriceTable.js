@@ -8,7 +8,6 @@ const PriceTable = ({ lang, country }) => {
 
   const pricings = {
     TB2: {
-      stripeID: 'lifetime2TB',
       storage: '2TB',
       price: {
         '-1': '299',
@@ -19,7 +18,6 @@ const PriceTable = ({ lang, country }) => {
         .split('.')[0],
     },
     TB5: {
-      stripeID: 'lifetime5TB',
       storage: '5TB',
       price: {
         '-1': '499',
@@ -30,7 +28,6 @@ const PriceTable = ({ lang, country }) => {
         .split('.')[0],
     },
     TB10: {
-      stripeID: 'lifetime10TB',
       storage: '10TB',
       price: {
         '-1': '999',

@@ -1,83 +1,77 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PriceCard from './PriceCard';
-import NormalPaymentSection from './NormalPaymentSection';
-import NormalPriceCard from './NormalPriceCard';
+import { Interval, stripeService } from '../services/stripeService';
+import { Transition } from '@headlessui/react';
+import CardSkeleton from '../components/CardSkeleton';
 
-const PriceTable = ({ country }) => {
+const PriceTable = ({ lang, country }) => {
   const billingFrequency = -1;
+  const [products, setProducts] = useState(null);
+  const [loadingCards, setLoadingCards] = useState(true);
 
-  const billingPrice = (price) => price[billingFrequency];
-
-  const pricings = {
-    TB2: {
-      stripeID: 'lifetime2TB',
-      storage: '2TB',
-      price: {
-        '-1': '299',
-      },
-      popular: true,
-      actualPrice: Math.abs((299 * 75) / 100)
-        .toString()
-        .split('.')[0],
-    },
-    TB5: {
-      stripeID: 'lifetime5TB',
-      storage: '5TB',
-      price: {
-        '-1': '499',
-      },
-      popular: false,
-      actualPrice: Math.abs((499 * 75) / 100)
-        .toString()
-        .split('.')[0],
-    },
-    TB10: {
-      stripeID: 'lifetime10TB',
-      storage: '10TB',
-      price: {
-        '-1': '999',
-      },
-      popular: false,
-      actualPrice: Math.abs((999 * 75) / 100)
-        .toString()
-        .split('.')[0],
-    },
-  };
+  useEffect(() => {
+    stripeService
+      .getLifetimePrices()
+      .then((res) => {
+        if (res) {
+          setProducts(res);
+          setLoadingCards(false);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   return (
-    <section className="">
+    <section className="overflow-hidden">
       <div
         id="priceTable"
         className="content mb-10 flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
       >
-        <PriceCard
-          planType="individual"
-          storage={pricings.TB5.storage}
-          price={billingPrice(pricings.TB5.price)}
-          cta={['checkout', 'lifetime5TB']}
-          popular={pricings.TB5.popular}
-          country={country}
-          actualPrice={pricings.TB5.actualPrice}
-        />
-        <PriceCard
-          planType="individual"
-          storage={pricings.TB2.storage}
-          price={billingPrice(pricings.TB2.price)}
-          cta={['checkout', 'lifetime2TB']}
-          popular={pricings.TB2.popular}
-          country={country}
-          actualPrice={pricings.TB2.actualPrice}
-        />
+        <Transition
+          show={loadingCards}
+          enter="transition duration-500 ease-out"
+          enterFrom="scale-95 translate-y-20 opacity-0"
+          enterTo="scale-100 translate-y-0 opacity-100"
+        >
+          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+          </div>
+        </Transition>
 
-        <PriceCard
-          planType="individual"
-          storage={pricings.TB10.storage}
-          price={billingPrice(pricings.TB10.price)}
-          cta={['checkout', 'lifetime10TB']}
-          popular={pricings.TB10.popular}
-          country={country}
-          actualPrice={pricings.TB10.actualPrice}
-        />
+        {/* Render cards */}
+
+        <Transition
+          show={!loadingCards}
+          enterFrom="scale-95 translate-y-20 opacity-0"
+          enterTo="scale-100 translate-y-0 opacity-100"
+        >
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+            {products &&
+              Object.values(products).map((product: any) => {
+                return (
+                  <PriceCard
+                    planType="individual"
+                    key={product.storage}
+                    storage={product.storage}
+                    price={product.price}
+                    cta={['checkout', product.priceId]}
+                    lang={lang}
+                    popular={product.storage === '2TB'}
+                    actualPrice={
+                      Math.abs((product.price * 75) / 100)
+                        .toFixed(2)
+                        .split('.')[0]
+                    }
+                    country={country}
+                  />
+                );
+              })}
+          </div>
+        </Transition>
       </div>
     </section>
   );

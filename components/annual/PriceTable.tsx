@@ -1,116 +1,70 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '../prices/PriceCard';
+import { stripeService } from '../services/stripeService';
+import CardSkeleton from '../components/CardSkeleton';
 
-export default function PriceTable({ lang, country }) {
-  const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState(12);
+export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
+  const [products, setProducts] = useState(null);
+  const [loadingCards, setLoadingCards] = useState(true);
   const [userCount, setUserCount] = useState(2);
-
-  function parentSetUserCount(count) {
-    setUserCount(count);
-  }
-
-  function checkoutPlan(plan) {
-    if (billingFrequency === -1) {
-      return plan;
-    } else {
-      return `${plan}${billingFrequency}`;
-    }
-  }
-
-  const billingPrice = (price) => price[billingFrequency];
 
   const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
 
-  const pricings = {
-    individuals: {
-      GB20: {
-        stripeID: '20GB',
-        storage: '20GB',
-        price: {
-          1: '0.99',
-          6: '0.95',
-          12: '0.89',
-        },
-        popular: false,
-      },
-      GB200: {
-        stripeID: '200GB',
-        storage: '200GB',
-        price: {
-          1: '4.49',
-          6: '3.99',
-          12: '3.49',
-        },
-        popular: true,
-      },
-      TB2: {
-        stripeID: '2TB',
-        storage: '2TB',
-        price: {
-          1: '9.99',
-          6: '9.49',
-          12: '8.99',
-        },
-        popular: false,
-      },
-    },
-  };
+  useEffect(() => {
+    stripeService
+      .getAllPrices()
+      .then((res) => {
+        if (res) {
+          setProducts(res);
+          setLoadingCards(false);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   return (
     <section id="priceTable" className="">
       <div className="flex flex-col items-center">
         <Transition
-          show={individual}
+          show={loadingCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 pb-20">
-            <>
-              <PriceCard
-                planType="individual"
-                storage={pricings.individuals.GB20.storage}
-                price={billingPrice(pricings.individuals.GB20.price)}
-                billingFrequency={12}
-                cta={['checkout', checkoutPlan('GB20')]}
-                popular={pricings.individuals.GB20.popular}
-                lang={lang}
-                country={country}
-                priceBefore={''}
-                getUsers={parentSetUserCount}
-                setUsers={userCount}
-              />
-              <PriceCard
-                planType="individual"
-                storage={pricings.individuals.GB200.storage}
-                price={billingPrice(pricings.individuals.GB200.price)}
-                billingFrequency={12}
-                cta={['checkout', checkoutPlan('GB200')]}
-                popular={pricings.individuals.GB200.popular}
-                lang={lang}
-                country={country}
-                priceBefore={''}
-                getUsers={parentSetUserCount}
-                setUsers={userCount}
-              />
+          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+          </div>
+        </Transition>
 
-              <PriceCard
-                planType="individual"
-                storage={pricings.individuals.TB2.storage}
-                price={billingPrice(pricings.individuals.TB2.price)}
-                billingFrequency={12}
-                cta={['checkout', checkoutPlan('TB2')]}
-                popular={pricings.individuals.TB2.popular}
-                lang={lang}
-                country={country}
-                priceBefore={''}
-                getUsers={parentSetUserCount}
-                setUsers={userCount}
-              />
-            </>
+        {/* Render cards */}
+
+        <Transition
+          show={!loadingCards}
+          enterFrom="scale-95 translate-y-20 opacity-0"
+          enterTo="scale-100 translate-y-0 opacity-100"
+        >
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+            {products?.individuals['year'] &&
+              Object.values(products.individuals['year']).map((product: any) => {
+                return (
+                  <PriceCard
+                    planType="individual"
+                    key={product.storage}
+                    storage={product.storage}
+                    price={product.price}
+                    billingFrequency={'year'}
+                    popular={product.storage === '200GB'}
+                    cta={['checkout', product.priceId]}
+                    lang={lang}
+                  />
+                );
+              })}
           </div>
         </Transition>
       </div>

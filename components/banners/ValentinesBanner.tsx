@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import ShowSnackbar from '../ShowSnackbar';
+import ShowSnackbar from '../Snackbar';
 import { toast } from 'react-toastify';
 import { checkout } from '../../lib/auth';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+
 import { isMobile } from 'react-device-detect';
+import { notificationService } from '../Snackbar';
 
 const VALENTINES_COUPON_ID = 'G8Ti4z1k';
 
@@ -18,15 +19,13 @@ const ValentinesBanner = () => {
   const VDAY = textContent.valentinesBanner.subtitle.substr(textContent.valentinesBanner.subtitle.indexOf('VDAY'), 4);
   const stripeObject = { product: 'TB212' };
 
-  const openToast = () => toast.success(textContent.valentinesBanner.toast);
-
   const onClose = () => {
     setIsSendBannerVisible(false);
   };
 
   const copyCoupon = () => {
     navigator.clipboard.writeText(VDAY);
-    openToast();
+    notificationService.openSuccessToast(textContent.valentinesBanner.toast);
   };
 
   useEffect(() => {
@@ -66,25 +65,7 @@ const ValentinesBanner = () => {
               </p>
             </div>
             <div className="flex pt-6">
-              <button
-                className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
-                onClick={() => {
-                  // if (isMobile) {
-                  window.location.replace(
-                    `https://drive.internxt.com/login?planId=${getPlanId(
-                      stripeObject,
-                    )}&couponCode=${VALENTINES_COUPON_ID}&mode=subscription`,
-                  );
-                  // } else {
-                  //   window.location.replace(
-                  //     `https://drive.internxt.com/checkout-plan?planId=${getPlanId(stripeObject)}${
-                  //       isCoupon ? '&couponCode=' + props.coupon : ''
-                  //     }${isPaymentMode ? '&mode=' + props.mode : '&mode=subscription'}`,
-                  //   );
-                  //   checkout(getPlanId(stripeObject));
-                  // }
-                }}
-              >
+              <button className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
                 {textContent.valentinesBanner.cta}
               </button>
             </div>

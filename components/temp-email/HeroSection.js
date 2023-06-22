@@ -2,7 +2,6 @@ import axios from 'axios';
 import { Copy, Info, Trash, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 import { createEmail } from './services/api/temp-api';
-import ShowSnackbar from '../ShowSnackbar';
 import { toast } from 'react-toastify';
 
 import Inbox from './components/InboxView';
@@ -115,7 +114,6 @@ const HeroSection = ({ textContent }) => {
         </div>
 
         <Inbox email={email} textContent={textContent.inbox} />
-        <ShowSnackbar />
       </div>
     </section>
   );

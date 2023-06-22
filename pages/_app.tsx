@@ -6,6 +6,7 @@ import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import SummerBanner from '../components/banners/SummerBanner';
+import ShowSnackbar from '../components/Snackbar';
 
 const excludedPaths = ['/techcult', '/pricing'];
 
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
+        <ShowSnackbar />
         {isExcludedPath ? null : <SummerBanner />}
         <Intercom />
       </GlobalUIManager>

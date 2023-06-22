@@ -1,25 +1,52 @@
 /// <reference types="cypress" />
+export {};
+import bytes from 'bytes';
+import { CouponType } from './lifetime.cy';
 
-import { STRIPE_PRODUCT } from '../../pages/api/stripe/stripeProducts';
+const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
+const API_DRIVE_URL = Cypress.env('API_DRIVE_URL');
+
+interface Products {
+  [key: string]: {
+    storage: string;
+    price: number;
+    planId: string;
+  };
+}
+
+const url = ({ planId, couponCode, mode }: { planId: string; couponCode?: string; mode?: string }) => {
+  return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(DRIVE_WEB_URL + '/checkout-plan')}${encodeURIComponent(
+    `?planId=${planId}${couponCode ? '&couponCode=' + couponCode : ''}&mode=${mode ? mode : 'subscription'}`,
+  )}&skipSignupIfLoggedIn=true`;
+};
 
 //Check if the buttons works properly
 describe('Pricing page', () => {
-  const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
-  const TWOTB_OFF_COUPON = 'P8PSpVs6';
+  const products: Products = {};
+  let coupon: string;
+  before(() => {
+    cy.request('get', `${window.origin}/api/stripe/stripe_products`).then((response) => {
+      response.body.map((product) => {
+        const id = product.interval + bytes(product.bytes);
 
-  const url = ({ planId, couponCode, mode }: { planId: string; couponCode?: string; mode?: string }) => {
-    return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(
-      DRIVE_WEB_URL + '/checkout-plan',
-    )}${encodeURIComponent(
-      `?planId=${planId}${couponCode ? '&couponCode=' + couponCode : ''}&mode=${mode ? mode : 'subscription'}`,
-    )}`;
-  };
+        products[id] = {
+          storage: bytes(product.bytes),
+          price: product.amount / 100,
+          planId: product.id,
+        };
+      });
+      cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.TwoTBCoupon}`).then((response) => {
+        console.log('Pricing', response.body);
+        coupon = response.body;
+      });
+    });
+  });
 
   describe('When the free plan button is clicked', () => {
     it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
       cy.visit('/pricing');
 
-      cy.get('#priceTable').contains('Get Internxt for free').click();
+      cy.get('#priceTable').contains('Sign up now').click();
 
       cy.url().should('eq', 'https://drive.internxt.com/new');
     });
@@ -31,9 +58,9 @@ describe('Pricing page', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Monthly').click();
-          cy.get('#priceTable').contains('Get 20GB').click();
+          cy.get('#priceTable').contains(`Get ${products.month20GB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB201.production }));
+          cy.url().should('eq', url({ planId: products.month20GB.planId }));
         });
       });
 
@@ -41,9 +68,9 @@ describe('Pricing page', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Monthly').click();
-          cy.get('#priceTable').contains('Get 200GB').click();
+          cy.get('#priceTable').contains(`Get ${products.month200GB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB2001.production }));
+          cy.url().should('eq', url({ planId: products.month200GB.planId }));
         });
       });
 
@@ -51,9 +78,9 @@ describe('Pricing page', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Monthly').click();
-          cy.get('#priceTable').contains('Get 2TB').click();
+          cy.get('#priceTable').contains(`Get ${products.month2TB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.TB21.production }));
+          cy.url().should('eq', url({ planId: products.month2TB.planId }));
         });
       });
     });
@@ -62,25 +89,25 @@ describe('Pricing page', () => {
       describe('When the plan is 20GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.get('#priceTable').contains('Get 20GB').click();
+          cy.get('#priceTable').contains(`Get ${products.year20GB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB2012.production }));
+          cy.url().should('eq', url({ planId: products.year20GB.planId }));
         });
       });
       describe('When the plan is 200GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.get('#priceTable').contains('Get 200GB').click();
+          cy.get('#priceTable').contains(`Get ${products.year200GB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.GB20012.production }));
+          cy.url().should('eq', url({ planId: products.year200GB.planId }));
         });
       });
       describe('When the plan is 2TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.contains('Get 90% off 2TB').click();
+          cy.contains(`Get 90% off ${products.year2TB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: STRIPE_PRODUCT.TB212.production, couponCode: TWOTB_OFF_COUPON }));
+          cy.url().should('eq', url({ planId: products.year2TB.planId, couponCode: coupon }));
         });
       });
     });
@@ -90,36 +117,27 @@ describe('Pricing page', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Lifetime').click();
-          cy.get('#priceTable').contains('Get 2TB').click();
+          cy.get('#priceTable').contains(`Get ${products.lifetime2TB.storage}`).click();
 
-          cy.url().should(
-            'eq',
-            url({ planId: STRIPE_PRODUCT.lifetime2TB.production, mode: STRIPE_PRODUCT.lifetime2TB.mode }),
-          );
+          cy.url().should('eq', url({ planId: products.lifetime2TB.planId, mode: 'payment' }));
         });
       });
       describe('When the plan is 5TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Lifetime').click();
-          cy.get('#priceTable').contains('Get 5TB').click();
+          cy.get('#priceTable').contains(`Get ${products.lifetime5TB.storage}`).click();
 
-          cy.url().should(
-            'eq',
-            url({ planId: STRIPE_PRODUCT.lifetime5TB.production, mode: STRIPE_PRODUCT.lifetime5TB.mode }),
-          );
+          cy.url().should('eq', url({ planId: products.lifetime5TB.planId, mode: 'payment' }));
         });
       });
       describe('When the plan is 2TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Lifetime').click();
-          cy.get('#priceTable').contains('Get 10TB').click();
+          cy.get('#priceTable').contains(`Get ${products.lifetime10TB.storage}`).click();
 
-          cy.url().should(
-            'eq',
-            url({ planId: STRIPE_PRODUCT.lifetime10TB.production, mode: STRIPE_PRODUCT.lifetime10TB.mode }),
-          );
+          cy.url().should('eq', url({ planId: products.lifetime10TB.planId, mode: 'payment' }));
         });
       });
     });

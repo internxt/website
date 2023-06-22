@@ -9,26 +9,18 @@ import cookies from '../lib/cookies';
 import axios from 'axios';
 import FAQSection from '../components/pricing/FAQSection';
 import CtaSection from '../components/pricing/CtaSection';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import InfoSection from '../components/home/InfoSection';
-import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
-import BestStorageSection from '../components/pricing/BestStorageSection';
 import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import { toast } from 'react-toastify';
-import ShowSnackbar from '../components/ShowSnackbar';
+import ShowSnackbar, { notificationService } from '../components/Snackbar';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [country, setCountry] = useState('ES');
   const [isLifetime, setIsLifetime] = useState(false);
-  const [showSnackbar, setShowSnackbar] = useState<'success' | 'error'>();
-  const success = () => toast.success('Successfully submitted');
-  const sendEmailError = () => toast.error('Something went wrong!');
-  const open = showSnackbar === 'success' ? success : sendEmailError;
 
   async function getCountryCode() {
     const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
@@ -45,12 +37,12 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       });
   }, []);
 
-  useEffect(() => {
-    if (showSnackbar) {
-      open();
-      setShowSnackbar(undefined);
-    }
-  }, [showSnackbar]);
+  // useEffect(() => {
+  //   if (showSnackbar) {
+  //     open;
+  //     setShowSnackbar(undefined);
+  //   }
+  // }, [showSnackbar]);
 
   return (
     <>
@@ -79,7 +71,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           country={country}
           setIsLifetime={setIsLifetime}
           textContent={textContent.tableSection}
-          setShowSnackbar={setShowSnackbar}
         />
 
         {/* <CtaSection textContent={textContent.CtaSection} freePlan />
@@ -100,8 +91,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <CtaSection textContent={textContent.CtaSection} />
 
-        <ShowSnackbar />
-
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>
     </>
@@ -114,7 +103,6 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`../assets/lang/${lang}/pricing.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const homeComponentsLang = require(`../assets/lang/${lang}/home.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -125,7 +113,6 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       textContent,
-      homeComponentsLang,
     },
   };
 }

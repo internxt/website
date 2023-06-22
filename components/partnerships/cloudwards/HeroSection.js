@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable prefer-const */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import PriceCard from './PriceCard';
 import ButtonDeal from './components/ButtonDeal';

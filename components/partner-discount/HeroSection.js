@@ -1,6 +1,5 @@
 import { Globe, SketchLogo, CloudCheck, FileArrowUp, ClockCounterClockwise } from '@phosphor-icons/react';
 import React from 'react';
-import ShowSnackbar from '../ShowSnackbar';
 import styles from './Background.module.scss';
 import { toast } from 'react-toastify';
 
@@ -99,7 +98,6 @@ const HeroSection = ({ textContent, isTechradar }) => {
             <div
               className={`absolute top-16 left-0 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
             />
-            <ShowSnackbar />
           </section>
           <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
             {FeatureSection.map((item, index) => (
@@ -152,7 +150,7 @@ const HeroSection = ({ textContent, isTechradar }) => {
               <img src="/images/home/devicesDesc.webp" alt="Devices image" />
             </div>
           </div>
-          <ShowSnackbar />
+
           <div
             className={`absolute top-16 left-0 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
           />
