@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { analyticsService } from '../services/analyticsService';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { Interval, stripeService } from '../services/stripeService';
 
 const SummerBanner = () => {
   const router = useRouter();
   const lang = router.locale;
+  const [priceId, setPriceId] = useState('');
   const [bannerVisible, setIsBannerVisible] = useState(false);
   const onClose = () => {
     sessionStorage.setItem('SummerBanner', 'false');
@@ -20,6 +21,12 @@ const SummerBanner = () => {
         setIsBannerVisible(true);
       }, 10000);
     }
+  }, []);
+
+  useEffect(() => {
+    stripeService.getSelectedPrice(Interval.Month, '2TB').then((price) => {
+      setPriceId(price.priceId);
+    });
   }, []);
 
   return (
@@ -47,7 +54,7 @@ const SummerBanner = () => {
             analyticsService.offerTrack({
               campaign: 'summersale',
               discount: 90,
-              plan: getPlanId({ product: 'TB212' }),
+              plan: priceId,
             });
             window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');
             onClose();
