@@ -1,13 +1,21 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
 import { analyticsService } from '../services/analyticsService';
-import { getPlanId } from '../../pages/api/stripe/stripeProducts';
+import { Interval, stripeService } from '../services/stripeService';
+import { useEffect, useState } from 'react';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/banners.json`);
   const title = textContent.SummerOffer.title.split('!');
+  const [priceId, setPriceId] = useState('');
+
+  useEffect(() => {
+    stripeService.getSelectedPrice(Interval.Month, '2TB').then((price) => {
+      setPriceId(price.priceId);
+    });
+  }, []);
 
   return (
     <>
@@ -23,7 +31,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             analyticsService.offerTrack({
               campaign: 'summersale',
               discount: 90,
-              plan: getPlanId({ product: 'TB212' }),
+              plan: priceId,
             });
             window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');
           }}
