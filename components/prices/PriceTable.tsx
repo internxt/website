@@ -13,17 +13,10 @@ interface PriceTableProps {
   lang: string;
   country: string;
   textContent: any;
-  setShowSnackbar: (showSnackbar: 'success' | 'error') => void;
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
-export default function PriceTable({
-  setSegmentPageName,
-  lang,
-  country,
-  textContent,
-  setShowSnackbar,
-}: PriceTableProps) {
+export default function PriceTable({ setSegmentPageName, lang, country, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
@@ -187,7 +180,7 @@ export default function PriceTable({
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <BusinessBanner textContent={banner.BusinessBanner} setShowSnackbar={setShowSnackbar} />
+            <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">

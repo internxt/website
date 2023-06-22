@@ -5,14 +5,10 @@ import PriceCard from '../prices/PriceCard';
 import { stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 
-export default function PriceTable({ lang, country }) {
+export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
   const [userCount, setUserCount] = useState(2);
-
-  function parentSetUserCount(count) {
-    setUserCount(count);
-  }
 
   const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
 
@@ -66,7 +62,6 @@ export default function PriceTable({ lang, country }) {
                     popular={product.storage === '200GB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
-                    country={country}
                   />
                 );
               })}

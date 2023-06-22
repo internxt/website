@@ -18,8 +18,8 @@ export interface PriceCardProps {
   cta: any[];
   popular?: boolean;
   lang: string;
-  country: string;
   priceId?: string;
+  country?: string;
 }
 
 export default function PriceCard({
@@ -31,8 +31,8 @@ export default function PriceCard({
   cta,
   popular,
   lang,
-  country,
   priceId,
+  country,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -40,18 +40,8 @@ export default function PriceCard({
     year: 'annually',
   };
 
-  const currency = () => {
-    switch (country) {
-      case 'US':
-        return '$';
-      case 'GB':
-        return '£';
-      default:
-        return '€';
-    }
-  };
-
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+
   return (
     <div
       className={`priceCard card ${
@@ -97,7 +87,7 @@ export default function PriceCard({
             `}
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span>
               <span className="price text-4xl font-bold">
                 {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
@@ -117,8 +107,7 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } text-base font-medium text-neutral-100 line-through`}
           >
-            {currency()}
-            {priceBefore}
+            €{priceBefore}
           </span>
           <div
             className={`totalBilling ${

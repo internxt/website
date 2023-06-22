@@ -70,7 +70,7 @@ export default function SpecialPriceCard({
     <div
       className={`priceCard card ${
         popular ? 'border-2 border-mint-dark bg-mint-dark shadow-lg ring-2 ring-mint-dark' : ''
-      } m-2 flex w-full flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      } m-2 flex w-max flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
         className={`mostPopular ${

@@ -14,20 +14,14 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
   const lang = 'en';
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Lifetime"
-      lang={lang}
-      cta={['Default']}
-    >
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
 
       <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
-      <FeatureSection textContent={langJson.FeatureSection} lang={lang} />
+      <FeatureSection textContent={langJson.FeatureSection} />
 
       <InfoSection textContent={infoSectionLang.InfoSection} lang={lang} withoutCta backgroundColor="bg-gray-1" />
 

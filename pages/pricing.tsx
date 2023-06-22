@@ -21,11 +21,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [country, setCountry] = useState('ES');
   const [isLifetime, setIsLifetime] = useState(false);
-  const [showSnackbar, setShowSnackbar] = useState<'success' | 'error'>();
-  const open =
-    showSnackbar === 'success'
-      ? notificationService.openSuccessToast('Successfully submitted')
-      : notificationService.openErrorToast('Something went wrong!');
 
   async function getCountryCode() {
     const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
@@ -42,12 +37,12 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       });
   }, []);
 
-  useEffect(() => {
-    if (showSnackbar) {
-      open;
-      setShowSnackbar(undefined);
-    }
-  }, [showSnackbar]);
+  // useEffect(() => {
+  //   if (showSnackbar) {
+  //     open;
+  //     setShowSnackbar(undefined);
+  //   }
+  // }, [showSnackbar]);
 
   return (
     <>
@@ -76,7 +71,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           country={country}
           setIsLifetime={setIsLifetime}
           textContent={textContent.tableSection}
-          setShowSnackbar={setShowSnackbar}
         />
 
         {/* <CtaSection textContent={textContent.CtaSection} freePlan />

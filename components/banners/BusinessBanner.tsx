@@ -1,8 +1,9 @@
 import axios from 'axios';
 import Image from 'next/image';
 import { useState } from 'react';
+import { notificationService } from '../Snackbar';
 
-const BusinessBanner = ({ textContent, setShowSnackbar }) => {
+const BusinessBanner = ({ textContent }) => {
   const [email, setEmail] = useState('');
 
   const handleSubmit = async (e) => {
@@ -13,11 +14,10 @@ const BusinessBanner = ({ textContent, setShowSnackbar }) => {
         email,
       })
       .then(() => {
-        setShowSnackbar('success');
+        notificationService.openSuccessToast('Successfully submitted');
       })
       .catch((err) => {
-        console.error(err);
-        setShowSnackbar('error');
+        notificationService.openErrorToast('Something went wrong!');
       });
   };
   return (
