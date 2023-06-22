@@ -132,7 +132,7 @@ LayoutProps) {
           ]
         }`}
       </Script>
-      {isAndroid && <AndroidSmartBanner installPrompt={installPrompt} />}
+      {/* {isAndroid && <AndroidSmartBanner installPrompt={installPrompt} />} */}
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
