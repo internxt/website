@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Transition, Disclosure } from '@headlessui/react';
 import Hamburger from 'hamburger-react';
-import { UilMinus, UilAngleDown } from '@iconscout/react-unicons';
+import { UilAngleDown } from '@iconscout/react-unicons';
 
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
-import { useGlobalDialog } from '../../contexts/GlobalUIManager';
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
 import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
@@ -55,7 +54,7 @@ export default function Navbar(props: NavbarProps) {
       } z-30 border-b border-black`}
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
-        <div className="navbar mx-auto flex max-w-screen-xl items-center justify-between">
+        <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           {/* Left side of navbar: Logo / Hamburguer menu */}
           <div className=" flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
             {/* Logo */}
@@ -257,7 +256,7 @@ export default function Navbar(props: NavbarProps) {
 
                 {/* Mobile hamburger menu background */}
                 <div
-                  className={`pointer-events-none fixed left-0 top-14 flex h-full w-full bg-white transition-all duration-500 ${
+                  className={`pointer-events-none fixed left-0 top-[144px] flex h-full w-full bg-white transition-all duration-500 ${
                     menuState ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
@@ -265,8 +264,8 @@ export default function Navbar(props: NavbarProps) {
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`fixed left-0 top-14 flex w-full flex-col overflow-hidden bg-white font-semibold transition-all duration-500 ${
-                      menuState ? 'h-screen overflow-y-auto pb-14' : 'h-0'
+                    className={`fixed left-0 top-[144px] flex w-full flex-col overflow-hidden bg-white font-semibold transition-all duration-500 ${
+                      menuState ? 'h-full pb-14' : 'h-0'
                     }`}
                   >
                     <div className="mt-4 text-gray-100">
