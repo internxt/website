@@ -196,6 +196,7 @@ export default function Navbar(props: NavbarProps) {
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
             {props.cta[0] === 'Hide Login' ? null : (
               <button
+                id="loginButton"
                 onClick={() => goToLoginURL()}
                 className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
@@ -210,7 +211,7 @@ export default function Navbar(props: NavbarProps) {
             {props.cta[0] === 'default' ? (
               <button
                 onClick={() => goToSignUpURL()}
-                id="get-started-link"
+                id="signupButton"
                 className={`flex justify-center rounded-lg border border-transparent py-1 px-3 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
@@ -370,6 +371,7 @@ export default function Navbar(props: NavbarProps) {
                           setMenuState(false);
                         }}
                         tabIndex={0}
+                        id="loginButton"
                         href="https://drive.internxt.com/login"
                         className={`flex w-full translate-y-0 px-8 py-4 text-primary outline-none transition delay-300 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'

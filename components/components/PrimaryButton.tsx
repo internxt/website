@@ -4,11 +4,13 @@ export interface PrimaryButtonProps {
   disabled?: boolean;
   loading?: boolean;
   className?: string;
+  id?: string;
 }
 
 export default function PrimaryButton(props: PrimaryButtonProps) {
   return (
     <button
+      id={props.id}
       type={props.type ?? 'button'}
       disabled={props.disabled}
       className={`${
