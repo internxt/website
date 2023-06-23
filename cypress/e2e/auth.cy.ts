@@ -46,7 +46,7 @@ describe('Auth flow (Sign Up / Log In)', () => {
     });
 
     describe('When the user do the Sign Up from the Sign Up inline (Home page)', () => {
-      it('Then, the user is redirected to https://drive.internxt.com/new to do auto Log In', () => {
+      it('Then, the user is redirected to https://drive.internxt.com/new to do auto Sign Up', () => {
         cy.visit('/');
 
         // Fill the email and password fields
@@ -58,7 +58,7 @@ describe('Auth flow (Sign Up / Log In)', () => {
         // Click on the Sign Up button
         cy.get('#signupInlineSubmit').click();
 
-        // Check that the user is redirected to https://drive.internxt.com/new with a cookie
+        // Check that the user is redirected to https://drive.internxt.com/new to do auto Sign Up
         cy.url().should('eq', 'https://drive.internxt.com/new?autoSubmit=true');
       });
     });
