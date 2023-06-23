@@ -15,6 +15,9 @@ function generateString(length) {
 }
 
 describe('Auth flow (Sign Up / Log In)', () => {
+  beforeEach(() => {
+    cy.visit('/');
+  });
   describe('When the user click on the Log In button', () => {
     it('Then, the user is redirected to https://drive.internxt.com/login', () => {
       // Open the home page
