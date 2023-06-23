@@ -55,7 +55,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
       <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-y-0 md:space-x-3">
         <div className="w-full">
           <TextInput
-            id="email"
+            id="signupEmail"
             name="email"
             placeholder={props.textContent.fields.email.placeholder}
             type="email"
@@ -68,6 +68,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
 
         <div className="w-full">
           <PasswordInput
+            id="signupPassword"
             name="password"
             placeholder={props.textContent.fields.password.placeholder}
             autoComplete="password"
@@ -97,6 +98,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
       <div className="flex w-full flex-row items-center space-x-3">
         <div className="w-full">
           <PrimaryButton
+            id="signupInlineSubmit"
             className="h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 hover:bg-primary-dark sm:text-base"
             type="submit"
             label={
