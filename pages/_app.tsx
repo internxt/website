@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import SummerBanner from '../components/banners/SummerBanner';
 import ShowSnackbar from '../components/Snackbar';
 
-const excludedPaths = ['/techcult', '/pricing'];
+const excludedPaths = ['/techcult', '/pricing', '/stackcommerce'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
