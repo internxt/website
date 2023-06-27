@@ -42,6 +42,7 @@
     "next-share": "^0.18.1",
     "popper.js": "^1.16.1",
     "prettysize": "^2.0.0",
+    "random-words": "^2.0.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.4.0",
     "react-device-detect": "^1.17.0",
