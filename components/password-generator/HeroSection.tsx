@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import pwnedpasswords from '../../lib/checker';
 import zxcvbn from 'zxcvbn';
 import Checkbox from '../components/Checkbox';
-import { WarningCircle } from '@phosphor-icons/react';
+import { ArrowsClockwise, Copy, WarningCircle } from '@phosphor-icons/react';
 import { generate } from 'random-words';
+import { notificationService } from '../Snackbar';
 
 interface PasswordProperties {
   length: string;
@@ -37,7 +38,10 @@ const HeroSection = () => {
     number: false,
   });
   const [password, setPassword] = useState<any>();
+  const [regenerate, setRegenerate] = useState(false);
   const [pwned, setPwned] = useState('-');
+  const [regenerateIcon, setRegenerateIcon] = useState(false);
+  const [copyIcon, setCopyIcon] = useState(false);
   const [crackTime, setCrackTime] = useState('-');
 
   useEffect(() => {
@@ -46,7 +50,19 @@ const HeroSection = () => {
     } else if (passwordType === 'passphrase') {
       setPassword(generateRandomPassphrase());
     }
-  }, [passwordProperties, passphraseProperties, passwordType]);
+  }, [passwordProperties, passphraseProperties, passwordType, regenerate]);
+
+  useEffect(() => {
+    if (regenerateIcon) {
+      setTimeout(() => {
+        setRegenerateIcon(false);
+      }, 1000);
+    } else if (copyIcon) {
+      setTimeout(() => {
+        setCopyIcon(false);
+      }, 500);
+    }
+  }, [regenerateIcon, copyIcon]);
 
   const hasNumber = (string) => /\d/.test(string);
 
@@ -112,6 +128,15 @@ const HeroSection = () => {
     if (passwordProperties.symbols) {
       characters += symbols;
     }
+    if (
+      !passwordProperties.uppercase &&
+      !passwordProperties.lowercase &&
+      !passwordProperties.numbers &&
+      !passwordProperties.symbols
+    ) {
+      passwordProperties.lowercase = true;
+      characters += lowercase;
+    }
 
     let password = '';
 
@@ -161,10 +186,33 @@ const HeroSection = () => {
 
   return (
     <section className="overflow-hidden">
-      <div className="flex h-full flex-col items-center justify-center pt-32">
+      <div className="flex flex-col items-center justify-center pt-32">
         <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-6">
           <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 py-3 shadow-lg">
             <p>{password}</p>
+          </div>
+          <div className="flex w-full flex-row space-x-2">
+            <div
+              className="flex w-full cursor-pointer items-center justify-center space-x-1 rounded-lg bg-green py-2"
+              onClick={() => {
+                navigator.clipboard.writeText(password);
+                notificationService.openSuccessToast('Password copied to clipboard');
+                setCopyIcon(true);
+              }}
+            >
+              <Copy className={`h-5 w-5 ${copyIcon && 'animate-ping'} text-white`} />
+              <p className="font-medium text-white">Copy password</p>
+            </div>
+            <div
+              className="flex w-full cursor-pointer flex-row items-center justify-center space-x-1 rounded-lg bg-primary py-2"
+              onClick={() => {
+                setRegenerate(!regenerate);
+                setRegenerateIcon(true);
+              }}
+            >
+              <ArrowsClockwise className={`h-5 w-5 text-white ${regenerateIcon && 'animate-spin'}`} />
+              <p className="font-medium text-white">Regenerate</p>
+            </div>
           </div>
           <div className="flex w-full flex-col items-stretch space-y-4 px-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
             <div className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
@@ -374,7 +422,7 @@ const HeroSection = () => {
                         value={passphraseProperties.separator}
                         onChange={(e) => {
                           // Only allow certain characters and allow removal of separator if it exists
-                          let parametersAllowed = /^[-.!?$]$/;
+                          let parametersAllowed = /^[-.!?$ ]$/;
                           if (e.target.value.match(parametersAllowed) || e.target.value === '') {
                             setPassphraseProperties({
                               ...passphraseProperties,
@@ -386,7 +434,7 @@ const HeroSection = () => {
                       />
                     </div>
                     <div className="flex cursor-pointer rounded-full bg-gray-10 px-2 py-0.5">
-                      <p className="text-gray-400 text-xs" aria-label="Only -.!?$ are allowed">
+                      <p className="text-gray-400 select-none text-xs" aria-label="Only -.!?$ are allowed">
                         ?
                       </p>
                     </div>
