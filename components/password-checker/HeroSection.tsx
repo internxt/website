@@ -112,7 +112,6 @@ const HeroSection = ({ textContent }) => {
           {['0', '1', '2', '3', '4'].map((step, index) => (
             <div
               key={step}
-              // eslint-disable-next-line no-nested-ternary
               className={`${
                 index <= crackScore && passwordLength !== 0
                   ? crackScore > 3

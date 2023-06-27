@@ -5,6 +5,7 @@ import Checkbox from '../components/Checkbox';
 import { ArrowsClockwise, Copy, WarningCircle } from '@phosphor-icons/react';
 import { generate } from 'random-words';
 import { notificationService } from '../Snackbar';
+import Tooltip from '../prices/ToolTip';
 
 interface PasswordProperties {
   length: string;
@@ -12,6 +13,7 @@ interface PasswordProperties {
   lowercase: boolean;
   numbers: boolean;
   symbols: boolean;
+  ambiguous: boolean;
 }
 
 interface PassphraseProperties {
@@ -30,12 +32,13 @@ const HeroSection = () => {
     lowercase: true,
     numbers: true,
     symbols: true,
+    ambiguous: true,
   });
   const [passphraseProperties, setPassphraseProperties] = useState<PassphraseProperties>({
     words: '4',
     separator: '-',
     capitalize: true,
-    number: false,
+    number: true,
   });
   const [password, setPassword] = useState<any>();
   const [regenerate, setRegenerate] = useState(false);
@@ -43,6 +46,8 @@ const HeroSection = () => {
   const [regenerateIcon, setRegenerateIcon] = useState(false);
   const [copyIcon, setCopyIcon] = useState(false);
   const [crackTime, setCrackTime] = useState('-');
+  const [crackScore, setCrackScore] = useState(0);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
     if (passwordType === 'password') {
@@ -87,6 +92,7 @@ const HeroSection = () => {
     if (password === '') {
       setPwned('-');
       setCrackTime('-');
+      setCrackScore(0);
     } else {
       // Check for leaked passwords
       pwnedpasswords(password)
@@ -99,13 +105,17 @@ const HeroSection = () => {
 
       // Check for crack time and get anti-crack feedback
       const crack = zxcvbn(password);
-
       setCrackTime(getTimeTranslation(crack.crack_times_display.offline_slow_hashing_1e4_per_second));
+      setCrackScore(crack.score);
     }
   };
 
   const getRandomInteger = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    const randomWords = new Uint32Array(1);
+    window.crypto.getRandomValues(randomWords);
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor((randomWords[0] / (0xffffffff + 1)) * (max - min + 1)) + min;
   };
 
   const generateRandomPassword = () => {
@@ -128,11 +138,18 @@ const HeroSection = () => {
     if (passwordProperties.symbols) {
       characters += symbols;
     }
+    if (!passwordProperties.ambiguous) {
+      lowercase = lowercase.replace(/[iol]/g, '');
+      uppercase = uppercase.replace(/[IO]/g, '');
+      numbers = numbers.replace(/[01]/g, '');
+      characters = characters.replace(/[iolIO01|]/g, '');
+    }
     if (
       !passwordProperties.uppercase &&
       !passwordProperties.lowercase &&
       !passwordProperties.numbers &&
-      !passwordProperties.symbols
+      !passwordProperties.symbols &&
+      !passwordProperties.ambiguous
     ) {
       passwordProperties.lowercase = true;
       characters += lowercase;
@@ -187,58 +204,51 @@ const HeroSection = () => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center pt-32">
-        <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-6">
-          <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 py-3 shadow-lg">
-            <p>{password}</p>
-          </div>
-          <div className="flex w-full flex-row space-x-2">
-            <div
-              className="flex w-full cursor-pointer items-center justify-center space-x-1 rounded-lg bg-green py-2"
-              onClick={() => {
-                navigator.clipboard.writeText(password);
-                notificationService.openSuccessToast('Password copied to clipboard');
-                setCopyIcon(true);
-              }}
-            >
-              <Copy className={`h-5 w-5 ${copyIcon && 'animate-ping'} text-white`} />
-              <p className="font-medium text-white">Copy password</p>
+        <div className="flex w-full max-w-xl flex-col space-y-6">
+          <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-6">
+            <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 py-3 shadow-lg">
+              <p>{password}</p>
             </div>
-            <div
-              className="flex w-full cursor-pointer flex-row items-center justify-center space-x-1 rounded-lg bg-primary py-2"
-              onClick={() => {
-                setRegenerate(!regenerate);
-                setRegenerateIcon(true);
-              }}
-            >
-              <ArrowsClockwise className={`h-5 w-5 text-white ${regenerateIcon && 'animate-spin'}`} />
-              <p className="font-medium text-white">Regenerate</p>
+            <div className="flex h-1.5 w-full flex-row">
+              {['0', '1', '2', '3', '4'].map((step, index) => (
+                <div
+                  key={step}
+                  // eslint-disable-next-line no-nested-ternary
+                  className={`${
+                    (index <= crackScore && Number(passwordProperties.length) !== 0) ||
+                    (index <= crackScore && Number(passphraseProperties.words) !== 0)
+                      ? crackScore > 3
+                        ? 'bg-green'
+                        : crackScore > 1
+                        ? 'bg-orange'
+                        : 'bg-red'
+                      : 'bg-gray-10'
+                  } h-full w-full transition-all duration-75 ease-out first:rounded-l-full last:rounded-r-full`}
+                />
+              ))}
             </div>
-          </div>
-          <div className="flex w-full flex-col items-stretch space-y-4 px-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
-            <div className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
-              <div className="flex h-full flex-col space-y-1">
-                <span className="text-sm text-gray-50">{textContent.HeroSection.result.pwned.title}</span>
-                <span className="text-2xl font-semibold text-gray-80">{pwned}</span>
-              </div>
-
-              <span className="text-sm text-gray-50">{textContent.HeroSection.result.pwned.subtitle}</span>
-
+            <div className="flex w-full flex-row space-x-2">
               <div
-                className={`absolute top-8 right-8 text-red-dark transition-opacity duration-100 ease-out ${
-                  hasNumber(pwned) && pwned.toString() !== '0' ? 'opacity-100' : 'opacity-0'
-                }`}
+                className="flex w-full cursor-pointer items-center justify-center space-x-1 rounded-lg bg-green py-2"
+                onClick={() => {
+                  navigator.clipboard.writeText(password);
+                  notificationService.openSuccessToast('Password copied to clipboard');
+                  setCopyIcon(true);
+                }}
               >
-                <WarningCircle weight="fill" size={24} />
+                <Copy className={`h-5 w-5 ${copyIcon && 'animate-ping'} text-white`} />
+                <p className="font-medium text-white">Copy password</p>
               </div>
-            </div>
-
-            <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
-              <div className="flex h-full flex-col space-y-1">
-                <span className="text-sm text-gray-50">{textContent.HeroSection.result.crack.title}</span>
-                <span className={`text-2xl font-semibold text-gray-80`}>{crackTime}</span>
+              <div
+                className="flex w-full cursor-pointer flex-row items-center justify-center space-x-1 rounded-lg bg-primary py-2"
+                onClick={() => {
+                  setRegenerate(!regenerate);
+                  setRegenerateIcon(true);
+                }}
+              >
+                <ArrowsClockwise className={`h-5 w-5 text-white ${regenerateIcon && 'animate-spin'}`} />
+                <p className="font-medium text-white">Regenerate</p>
               </div>
-
-              <span className="text-sm text-gray-50">{textContent.HeroSection.result.crack.subtitle}</span>
             </div>
           </div>
           <div className="flex w-full flex-col space-y-3">
@@ -270,7 +280,7 @@ const HeroSection = () => {
             </div>
             {passwordType === 'password' ? (
               <>
-                <div className="flex w-full flex-row items-center space-x-3">
+                <div className="flex w-full max-w-lg flex-row items-center space-x-3">
                   <p>Length</p>
                   <div className="flex rounded-lg border border-gray-10 py-1 px-2">
                     <p>{passwordProperties.length}</p>
@@ -356,10 +366,25 @@ const HeroSection = () => {
                     </div>
                   </div>
                 </div>
+                <div className="flex w-full flex-row items-center space-x-3">
+                  <p>Ambiguos Characters</p>
+                  <div className="flex w-full flex-col">
+                    <Checkbox
+                      id="symbols"
+                      onClick={() => {
+                        setPasswordProperties({
+                          ...passwordProperties,
+                          ambiguous: !passwordProperties.ambiguous,
+                        });
+                      }}
+                      checked={passwordProperties.ambiguous}
+                    />
+                  </div>
+                </div>
               </>
             ) : (
               <>
-                <div className="flex w-full flex-row items-center space-x-3">
+                <div className="flex w-full max-w-lg flex-row items-center space-x-3">
                   <p>Words</p>
                   <div className="flex rounded-lg border border-gray-10 py-1 px-2">
                     <p>{passphraseProperties.words}</p>
@@ -398,7 +423,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Include number</p>
+                    <p>Numbers</p>
                     <div className="flex w-full flex-col">
                       <Checkbox
                         id="number"
@@ -415,7 +440,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex w-full flex-row items-center justify-center space-x-3">
                   <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Separator</p>
+                    <p>Word Separator</p>
                     <div className="flex flex-col py-1 px-2">
                       <input
                         type="text"
@@ -433,10 +458,20 @@ const HeroSection = () => {
                         className="flex w-max rounded-lg border border-gray-10 py-1 px-2 focus:border-primary"
                       />
                     </div>
-                    <div className="flex cursor-pointer rounded-full bg-gray-10 px-2 py-0.5">
-                      <p className="text-gray-400 select-none text-xs" aria-label="Only -.!?$ are allowed">
-                        ?
-                      </p>
+                    <div className="flex w-full flex-row items-center space-x-1">
+                      <div
+                        onMouseEnter={() => setShowTooltip(true)}
+                        onMouseLeave={() => setShowTooltip(false)}
+                        className="flex cursor-pointer rounded-full bg-gray-10 px-2 py-0.5"
+                        title="Only -.!?$ are allowed"
+                      >
+                        <p className="text-gray-400 select-none text-xs">?</p>
+                      </div>
+                      {showTooltip && (
+                        <div className="flex w-full flex-col bg-white">
+                          <p className="text-gray-400 select-none text-sm">Only -, ., !, ?, $ and space are allowed</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

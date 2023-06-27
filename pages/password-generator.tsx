@@ -9,28 +9,6 @@ import HeroSection from '../components/password-generator/HeroSection';
 
 const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const [downloadUrl, setDownloadUrl] = useState(null);
-
-  function getOS() {
-    const osList = [
-      { keyword: 'Android', name: 'Android' },
-      { keyword: 'iPad', name: 'iPad' },
-      { keyword: 'iPhone', name: 'iPhone' },
-      { keyword: 'Win', name: 'Windows' },
-      { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
-      { keyword: 'X11', name: 'UNIX' },
-      { keyword: 'Linux', name: 'Linux' },
-    ];
-
-    const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
-
-    return res ? res.name : `Not known (${window.navigator.appVersion})`;
-  }
-
-  useEffect(() => {
-    setDownloadUrl(downloadURL[getOS()]);
-    AOS.init();
-  }, [downloadURL]);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
