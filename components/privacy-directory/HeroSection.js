@@ -9,7 +9,7 @@ const HeroSection = ({ textContent, lang, bannerText }) => (
     <section className={`relative flex w-full flex-col overflow-hidden pt-10 filter ${styles.neonBlur}`}>
       <div className="flex h-[300px] w-screen flex-col items-center justify-center">
         <div className="flex w-screen flex-col px-10 text-center">
-          <h1 className="text-4xl font-medium text-white lg:text-6xl">{textContent.title}</h1>
+          <p className="text-4xl font-medium text-white lg:text-6xl">{textContent.title}</p>
         </div>
       </div>
     </section>
