@@ -1,129 +1,62 @@
 {
   "HeroSection": {
-    "eyebrow": "Lifetime Membership",
-    "title": {
-      "line1": "Your files and memories",
-      "line2": "forever with you."
+    "title": "Get a lifetime Internxt plan!",
+    "description": "Secure all your files and memories forever with a single, one-time payment.",
+    "cta1": "Get 25% OFF now",
+    "cta2": "Browse lifetime deals"
+  },
+  "PaymentSection": {
+    "limitedOffer": "Limited time offer!",
+    "title": { "blueText": "Get 25% OFF", "normalText": " all our exclusive lifetime plans" },
+    "description": "Buy once and get privacy and security forever.",
+    "normalSection": {
+      "title": "Explore all of our exclusive lifetime plans",
+      "description": "This week only, buy once and get privacy and security forever."
     },
-    "description": {
-      "line1": "Lifetime Membership is one-time payment.",
-      "line2": "Say bye bye to lifelong subscriptions."
-    },
-    "securePayment": "100% Secure payment, powered by Stripe"
+    "securePayment": "100% Secure payment, powered by Stripe",
+
+    "firstFeed": "30-day money-back guarantee",
+    "secondFeed": "100% secure payment",
+    "thirdFeed": "Anonymous account creation"
+  },
+  "GetLifetimeSection": {
+    "title": "Life is not short! But this limited-time deal is...",
+    "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
   },
   "FeatureSection": {
-    "title": {
-      "line1": "Designed to protect you.",
-      "line2": "Powered by trust."
-    },
+    "title": "Why choose Internxt?",
+    "description": "Privacy made for everyone and simple-to-use online security that you don't have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
     "features": {
       "privacy": {
         "title": "Private",
-        "description": {
-          "line1": "Internxt is not just another cloud",
-          "line2": "storage solution, we don’t",
-          "line3": "share or sell your data."
-        }
+        "description": "No first or third-party access to your file ever! You have total control of your data."
       },
-      "unlimited": {
-        "title": "Unlimited access",
-        "description": {
-          "line1": "One payment to keep your files,",
-          "line2": "videos, photos and memories",
-          "line3": "safe with you forever and ever."
-        }
-      },
-      "improvement": {
-        "title": "Continuous improvement",
-        "description": {
-          "line1": "We love to listen to our community",
-          "line2": "in order to keep improving the things",
-          "line3": "that matter the most to you."
-        }
+      "fastSync": {
+        "title": "Fast sync",
+        "description": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
       },
       "security": {
-        "title": "Secure",
-        "description": {
-          "line1": "We use zero-knowledge to ensure",
-          "line2": "that your data remains private by",
-          "line3": "client-side encrypting it."
-        }
+        "title": "Secure from the core",
+        "description": "Open-source code, end-to-end encrypted, and safely hosted across a vast distributed network."
       },
-      "new": {
-        "title": "Get new features",
-        "description": {
-          "line1": "You will be able to access all the",
-          "line2": "current features and all the new",
-          "line3": "to come with each release."
-        }
+      "sharing": {
+        "title": "Safe sharing",
+        "description": "Send encrypted files and photos back and forth to your favorite people via link and email."
       },
-      "support": {
-        "title": "Premium support",
-        "description": {
-          "line1": "You will always have the best",
-          "line2": "treatment from our customer service,",
-          "line3": "for us you are part of the family."
-        }
+      "multiplatform": {
+        "title": "Multiplatform",
+        "description": "Privacy for all devices, browsers, and operating systems! Linux, Windows, macOS, iOS, Android."
+      },
+      "zeroKnowledge": {
+        "title": "Zero-knowledge",
+        "description": "You are the only one with access to your data. Not even Internxt can view your files!"
       }
     }
   },
-  "GetLifetimeSection": {
-    "title": {
-      "line1": "Your files secure and",
-      "line2": "private forever."
-    },
-    "cta": "Explore Plans"
-  },
-  "infiniteLifetime": {
-    "eyebrow": "INFINITE STORAGE FOREVER",
-    "title": {
-      "line1": "Claim your infinite",
-      "line2": "lifetime membership"
-    },
-    "subtitle": {
-      "line1": "Internxt is an encrypted cloud service, based on absolute",
-      "line2": "privacy and security. Get an unlimited plan for life, for a",
-      "line3": "unique, one-time payment of €999, taxes included."
-    },
-    "previousPrice": "Normal price €9,999",
-    "price": "Now €999",
-    "input": "Your email",
-    "loading": "Loading...",
-    "cta": "Claim limited-time offer"
-  },
-  "lifetime2TB": {
-    "eyebrow": "2TB FOREVER",
-    "title": {
-      "line1": "Exclusive secure cloud",
-      "line2": "offer, 2TB lifetime"
-    },
-    "subtitle": {
-      "line1": "Internxt is an encrypted cloud service, based on absolute",
-      "line2": "privacy and security. Get a 2TB plan for life, for a",
-      "line3": "unique, one-time payment of €299, taxes included."
-    },
-    "previousPrice": "Normal price €499",
-    "price": "Now €299",
-    "input": "Your email",
-    "loading": "Loading...",
-    "cta": "Claim limited-time offer"
-  },
-  "lifetime10TB": {
-    "eyebrow": "10TB FOREVER",
-    "title": {
-      "line1": "Are you fast enough to get",
-      "line2": "our 10TB lifetime account",
-      "line3": "for only €499?"
-    },
-    "subtitle": {
-      "line1": "Internxt Drive is an encrypted cloud storage service, based on",
-      "line2": "absolute privacy and security. We're offering a 10 TB account",
-      "line3": "for €499 to a handful of users. Claim one before they run out!"
-    },
-    "previousPrice": "Normal price €2,500",
-    "price": "Now €499",
-    "input": "Your email",
-    "loading": "Loading...",
-    "cta": "Claim this crazy limited-time offer!"
+
+  "CtaSection": {
+    "title": "Your files secure and private forever",
+    "description": "We treat our users like family and family is forever!",
+    "cta": "Select a plan now"
   }
 }
