@@ -367,7 +367,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="flex w-full flex-row items-center space-x-3">
-                  <p>Ambiguos Characters</p>
+                  <p>Ambiguous Characters</p>
                   <div className="flex w-full flex-col">
                     <Checkbox
                       id="symbols"
