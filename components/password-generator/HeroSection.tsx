@@ -336,7 +336,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex w-full flex-row items-center space-x-3">
                   <div className="flex w-full flex-row items-center space-x-3">
-                    <p>numbers</p>
+                    <p>Numbers</p>
                     <div className="flex w-full flex-col">
                       <Checkbox
                         id="numbers"
