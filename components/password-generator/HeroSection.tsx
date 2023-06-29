@@ -27,7 +27,7 @@ const HeroSection = () => {
   const textContent = require('../../assets/lang/en/password-checker.json');
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
   const [passwordProperties, setPasswordProperties] = useState<PasswordProperties>({
-    length: '10',
+    length: '13',
     uppercase: true,
     lowercase: true,
     numbers: true,
@@ -35,7 +35,7 @@ const HeroSection = () => {
     ambiguous: true,
   });
   const [passphraseProperties, setPassphraseProperties] = useState<PassphraseProperties>({
-    words: '4',
+    words: '5',
     separator: '-',
     capitalize: true,
     number: true,
