@@ -24,7 +24,7 @@ const SummerBanner = () => {
   }, []);
 
   useEffect(() => {
-    stripeService.getSelectedPrice(Interval.Month, '2TB').then((price) => {
+    stripeService.getSelectedPrice(Interval.Year, '2TB').then((price) => {
       setPriceId(price.priceId);
     });
   }, []);
@@ -52,8 +52,8 @@ const SummerBanner = () => {
           className="flex  cursor-pointer flex-col items-center justify-center px-24 pt-20 pb-16"
           onClick={() => {
             analyticsService.offerTrack({
-              campaign: 'summersale',
-              discount: 90,
+              campaign: '2TBPLAN75',
+              discount: 75,
               plan: priceId,
             });
             window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');

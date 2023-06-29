@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": { "line1": "90% 折扣", "line2": "我们的 2TB 计划" },
+    "title": { "line1": "75% 折扣", "line2": "我们的 2TB 计划" },
     "feeds": {
       "firstFeed": "30天退款保证",
       "secondFeed": "100%安全支付",
       "thirdFeed": "匿名账户创建"
     },
     "cta": {
-      "title": "2TB 价格立减 90%",
+      "title": "2TB 价格立减 75%",
       "description": "优惠有效期为一年。 计划将在下一年以非折扣价续订。"
     }
   },
