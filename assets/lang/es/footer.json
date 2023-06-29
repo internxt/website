@@ -28,7 +28,7 @@
       },
       "company": {
         "title": "Compañía",
-        "about": "Sobre nosotros",
+        "about": "Sobre Nosotros",
         "privacy": "Privacidad",
         "security": "Seguridad",
         "legal": "Legal",
@@ -52,11 +52,11 @@
       "resources": {
         "title": "Recursos",
         "blog": "Blog",
-        "comparison": "Comparación de servicios en la nube",
-        "directoryOfPrivacyOrganizations": "Directorio de organizaciones de privacidad",
+        "comparison": "Comparación de Servicios en la Nube",
+        "directoryOfPrivacyOrganizations": "Directorio de Organizaciones de Orivacidad",
         "library": "Biblioteca",
         "writeForUs": "Escribe para nosotros",
-        "cyberSecurityGlossary": "Glosario de ciberseguridad",
+        "cyberSecurityGlossary": "Glosario de Ciberseguridad",
         "cyberAwareness": "Cyber Awareness",
         "whatGoogleKnowsAboutMe": "What Google Knows"
       },
