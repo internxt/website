@@ -101,7 +101,14 @@ export default function SpecialPriceCard({
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-            <span className="price text-4xl font-semibold">{Math.abs((price * 25) / 100).toFixed(2)}</span>
+            <span className="price text-4xl font-semibold">
+              {
+                Math.abs((price * 25) / 100)
+                  .toFixed(2)
+                  .split('.')[0]
+              }
+              .98
+            </span>
           </p>
           <div
             className={`priceBreakdown flex text-neutral-50 ${
