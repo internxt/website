@@ -37,7 +37,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           }}
         >
           <div className="flex flex-row space-x-1">
-            <p className="flex flex-row font-semibold">{title[0]}!</p>
+            <p className="flex flex-row font-semibold">{title[0]}</p>
             <p className="flex flex-row font-normal">{title[1]}</p>
           </div>
           <CaretRight size={16} />
