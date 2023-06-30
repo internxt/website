@@ -12,7 +12,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
   const [priceId, setPriceId] = useState('');
 
   useEffect(() => {
-    stripeService.getSelectedPrice(Interval.Month, '2TB').then((price) => {
+    stripeService.getSelectedPrice(Interval.Year, '2TB').then((price) => {
       setPriceId(price.priceId);
     });
   }, []);
@@ -29,8 +29,8 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() => {
             analyticsService.offerTrack({
-              campaign: 'summersale',
-              discount: 90,
+              campaign: '2TBPLAN75',
+              discount: 75,
               plan: priceId,
             });
             window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');
