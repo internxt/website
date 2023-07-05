@@ -98,7 +98,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col items-start lg:w-full lg:flex-row lg:justify-between">
+        <div className="flex w-full flex-col items-start space-y-3 lg:flex-row lg:justify-between lg:space-y-0">
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
               <CheckboxSettings

@@ -117,7 +117,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
         </div>
       </div>
       <div className="flex flex-col items-center justify-center lg:flex-row">
-        <div className="flex flex-col items-start space-y-3 lg:w-full lg:flex-row lg:justify-between lg:space-y-0">
+        <div className="flex w-full flex-col items-start space-y-3 lg:flex-row lg:justify-between lg:space-y-0">
           <p className="text-xl font-medium text-gray-100">{textContent.options.separator.title}</p>
           {textContent.options.separator.options.map((item) => (
             <div className="flex flex-row items-center space-x-3">
