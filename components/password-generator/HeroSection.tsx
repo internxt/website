@@ -79,7 +79,8 @@ const HeroSection = ({ textContent }) => {
           <div className="flex w-full flex-col space-y-8">
             <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-2">
               <div
-                className={`flex w-full flex-row items-center space-x-3 rounded-lg border ${
+                onClick={() => setPasswordType('password')}
+                className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
                   passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : 'border-gray-10'
                 } p-5`}
               >
@@ -97,7 +98,8 @@ const HeroSection = ({ textContent }) => {
                 </p>
               </div>
               <div
-                className={`flex w-full flex-row items-center space-x-3 rounded-lg border ${
+                onClick={() => setPasswordType('passphrase')}
+                className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
                   passwordType === 'passphrase'
                     ? 'border-primary ring-4 ring-primary ring-opacity-10'
                     : 'border-gray-10'
