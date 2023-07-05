@@ -13,7 +13,6 @@ interface PasswordProperties {
   lowercase: boolean;
   numbers: boolean;
   symbols: boolean;
-  ambiguous: boolean;
 }
 
 interface PassphraseProperties {
@@ -32,7 +31,6 @@ const HeroSection = () => {
     lowercase: true,
     numbers: true,
     symbols: true,
-    ambiguous: true,
   });
   const [passphraseProperties, setPassphraseProperties] = useState<PassphraseProperties>({
     words: '5',
@@ -42,10 +40,6 @@ const HeroSection = () => {
   });
   const [password, setPassword] = useState<any>();
   const [regenerate, setRegenerate] = useState(false);
-  const [pwned, setPwned] = useState('-');
-  const [regenerateIcon, setRegenerateIcon] = useState(false);
-  const [copyIcon, setCopyIcon] = useState(false);
-  const [crackTime, setCrackTime] = useState('-');
   const [crackScore, setCrackScore] = useState(0);
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -57,55 +51,14 @@ const HeroSection = () => {
     }
   }, [passwordProperties, passphraseProperties, passwordType, regenerate]);
 
-  useEffect(() => {
-    if (regenerateIcon) {
-      setTimeout(() => {
-        setRegenerateIcon(false);
-      }, 1000);
-    } else if (copyIcon) {
-      setTimeout(() => {
-        setCopyIcon(false);
-      }, 500);
-    }
-  }, [regenerateIcon, copyIcon]);
-
-  const hasNumber = (string) => /\d/.test(string);
-
-  const getTimeTranslation = (displaytTime) => {
-    const timecases = textContent.HeroSection.result.crack.cases;
-    const displaytTimeHasNumbers = hasNumber(displaytTime);
-
-    // Time is composed of a number and one or more words
-    if (displaytTimeHasNumbers) {
-      const number = displaytTime.split(' ')[0]; // Get number (1 year --> 1)
-      const timecase = displaytTime.split(' ')[1]; // Get timecase (1 year --> year)
-      return `${number} ${timecases[timecase]}`;
-    }
-
-    // Time has only words
-    return timecases[displaytTime];
-  };
-
   const checkPassword = (pswrd) => {
     const password = pswrd.target.value;
 
     if (password === '') {
-      setPwned('-');
-      setCrackTime('-');
       setCrackScore(0);
     } else {
-      // Check for leaked passwords
-      pwnedpasswords(password)
-        .then((count) => {
-          setPwned(count);
-        })
-        .catch((err) => {
-          // eslint-disable-next-line no-console
-        });
-
       // Check for crack time and get anti-crack feedback
       const crack = zxcvbn(password);
-      setCrackTime(getTimeTranslation(crack.crack_times_display.offline_slow_hashing_1e4_per_second));
       setCrackScore(crack.score);
     }
   };
@@ -138,18 +91,12 @@ const HeroSection = () => {
     if (passwordProperties.symbols) {
       characters += symbols;
     }
-    if (!passwordProperties.ambiguous) {
-      lowercase = lowercase.replace(/[iol]/g, '');
-      uppercase = uppercase.replace(/[IO]/g, '');
-      numbers = numbers.replace(/[01]/g, '');
-      characters = characters.replace(/[iolIO01|]/g, '');
-    }
+
     if (
       !passwordProperties.uppercase &&
       !passwordProperties.lowercase &&
       !passwordProperties.numbers &&
-      !passwordProperties.symbols &&
-      !passwordProperties.ambiguous
+      !passwordProperties.symbols
     ) {
       passwordProperties.lowercase = true;
       characters += lowercase;
@@ -203,13 +150,13 @@ const HeroSection = () => {
 
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center justify-center pt-32">
+      <div className="flex flex-col items-center justify-center pt-32 pb-20">
         <div className="flex w-full max-w-xl flex-col space-y-6">
           <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-6">
             <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 py-3 shadow-lg">
               <p>{password}</p>
             </div>
-            <div className="flex h-1.5 w-full flex-row">
+            <div className="flex h-1.5 w-full flex-row space-x-1.5">
               {['0', '1', '2', '3', '4'].map((step, index) => (
                 <div
                   key={step}
@@ -223,7 +170,7 @@ const HeroSection = () => {
                         ? 'bg-orange'
                         : 'bg-red'
                       : 'bg-gray-10'
-                  } h-full w-full transition-all duration-75 ease-out first:rounded-l-full last:rounded-r-full`}
+                  } h-full w-full rounded-full transition-all duration-75 ease-out`}
                 />
               ))}
             </div>
@@ -233,20 +180,18 @@ const HeroSection = () => {
                 onClick={() => {
                   navigator.clipboard.writeText(password);
                   notificationService.openSuccessToast('Password copied to clipboard');
-                  setCopyIcon(true);
                 }}
               >
-                <Copy className={`h-5 w-5 ${copyIcon && 'animate-ping'} text-white`} />
+                <Copy className={`h-5 w-5 text-white`} />
                 <p className="font-medium text-white">Copy password</p>
               </div>
               <div
                 className="flex w-full cursor-pointer flex-row items-center justify-center space-x-1 rounded-lg bg-primary py-2"
                 onClick={() => {
                   setRegenerate(!regenerate);
-                  setRegenerateIcon(true);
                 }}
               >
-                <ArrowsClockwise className={`h-5 w-5 text-white ${regenerateIcon && 'animate-spin'}`} />
+                <ArrowsClockwise className={`h-5 w-5 text-white`} />
                 <p className="font-medium text-white">Regenerate</p>
               </div>
             </div>
@@ -364,21 +309,6 @@ const HeroSection = () => {
                         checked={passwordProperties.symbols}
                       />
                     </div>
-                  </div>
-                </div>
-                <div className="flex w-full flex-row items-center space-x-3">
-                  <p>Ambiguous Characters</p>
-                  <div className="flex w-full flex-col">
-                    <Checkbox
-                      id="symbols"
-                      onClick={() => {
-                        setPasswordProperties({
-                          ...passwordProperties,
-                          ambiguous: !passwordProperties.ambiguous,
-                        });
-                      }}
-                      checked={passwordProperties.ambiguous}
-                    />
                   </div>
                 </div>
               </>

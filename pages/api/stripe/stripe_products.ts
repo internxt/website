@@ -12,7 +12,7 @@ export interface Product {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<Product | void> {
   if (req.method === 'GET') {
-    const productsRequest = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`);
+    const productsRequest = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/prices`);
     const productsData: Product[] = productsRequest.data;
 
     if (!productsData) return res.status(404).end(); //Something went wrong while fetching the products
