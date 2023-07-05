@@ -8,9 +8,6 @@ import CardSkeleton from '../components/CardSkeleton';
 export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
-  const [userCount, setUserCount] = useState(2);
-
-  const billingFrequencySegment = { 1: 'Monthly', 6: 'Semiannually', 12: 'Annually', '-1': 'Lifetime' };
 
   useEffect(() => {
     stripeService
