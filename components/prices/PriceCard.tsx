@@ -5,6 +5,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 
+import { useRouter } from 'next/router';
 import React from 'react';
 
 import { checkout, goToSignUpURL } from '../../lib/auth';
@@ -31,8 +32,6 @@ export default function PriceCard({
   cta,
   popular,
   lang,
-  priceId,
-  country,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -40,7 +39,10 @@ export default function PriceCard({
     year: 'annually',
   };
 
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const router = useRouter();
+  const language = router.locale === 'it' ? 'it' : 'en';
+
+  const contentText = require(`../../assets/lang/${language}/priceCard.json`);
 
   return (
     <div
