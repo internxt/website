@@ -1,35 +1,27 @@
 import { Check } from '@phosphor-icons/react';
 
-function Checkbox({
+const CheckboxSettings = ({
   id,
   checked,
   onClick,
   required,
   className,
-  rounded,
 }: {
   id: string;
   checked: boolean;
   onClick?: React.DOMAttributes<HTMLLabelElement>['onClick'];
   required?: boolean;
   className?: string;
-  rounded?: string;
-}): JSX.Element {
+}) => {
   return (
-    <label className={`relative h-5 w-5 focus-within:outline-primary ${className}`} onClick={onClick}>
+    <label className={`relative h-5 w-5 rounded focus-within:outline-primary ${className}`} onClick={onClick}>
       <div
         onClick={(e) => e.preventDefault()}
-        className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full border p-1 text-white ${
+        className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded border text-white ${
           checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'
         }`}
       >
-        {checked && (
-          <div
-            className={`flex h-3 w-2.5 cursor-pointer flex-col items-center justify-center rounded-full border bg-white text-white ${
-              checked && 'bg-white'
-            }`}
-          />
-        )}
+        {checked && <Check size={16} weight="bold" />}
       </div>
       <input
         id={id}
@@ -41,6 +33,6 @@ function Checkbox({
       />
     </label>
   );
-}
+};
 
-export default Checkbox;
+export default CheckboxSettings;

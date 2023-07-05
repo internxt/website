@@ -1,206 +1,90 @@
 import { useEffect, useState } from 'react';
-import pwnedpasswords from '../../lib/checker';
-import zxcvbn from 'zxcvbn';
 import Checkbox from '../components/Checkbox';
-import { ArrowsClockwise, Copy, WarningCircle } from '@phosphor-icons/react';
+import { ArrowsClockwise, Copy, Info, WarningCircle } from '@phosphor-icons/react';
 import { generate } from 'random-words';
 import { notificationService } from '../Snackbar';
 import Tooltip from '../prices/ToolTip';
+import { checkPassword } from './utils';
+import PasswordSettings from './components/PasswordSettings';
+import PassphraseSettings from './components/PassphraseSettings';
 
-interface PasswordProperties {
-  length: string;
-  uppercase: boolean;
-  lowercase: boolean;
-  numbers: boolean;
-  symbols: boolean;
-}
-
-interface PassphraseProperties {
-  words: string;
-  separator: string;
-  capitalize: boolean;
-  number: boolean;
-}
-
-const HeroSection = () => {
-  const textContent = require('../../assets/lang/en/password-checker.json');
+const HeroSection = ({ textContent }) => {
+  // const textCases = require('../../assets/lang/en/password-checker.json');
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
-  const [passwordProperties, setPasswordProperties] = useState<PasswordProperties>({
-    length: '13',
-    uppercase: true,
-    lowercase: true,
-    numbers: true,
-    symbols: true,
-  });
-  const [passphraseProperties, setPassphraseProperties] = useState<PassphraseProperties>({
-    words: '5',
-    separator: '-',
-    capitalize: true,
-    number: true,
-  });
   const [password, setPassword] = useState<any>();
   const [regenerate, setRegenerate] = useState(false);
   const [crackScore, setCrackScore] = useState(0);
-  const [showTooltip, setShowTooltip] = useState(false);
-
-  useEffect(() => {
-    if (passwordType === 'password') {
-      setPassword(generateRandomPassword());
-    } else if (passwordType === 'passphrase') {
-      setPassword(generateRandomPassphrase());
-    }
-  }, [passwordProperties, passphraseProperties, passwordType, regenerate]);
-
-  const checkPassword = (pswrd) => {
-    const password = pswrd.target.value;
-
-    if (password === '') {
-      setCrackScore(0);
-    } else {
-      // Check for crack time and get anti-crack feedback
-      const crack = zxcvbn(password);
-      setCrackScore(crack.score);
-    }
-  };
-
-  const getRandomInteger = (min, max) => {
-    const randomWords = new Uint32Array(1);
-    window.crypto.getRandomValues(randomWords);
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor((randomWords[0] / (0xffffffff + 1)) * (max - min + 1)) + min;
-  };
-
-  const generateRandomPassword = () => {
-    const length: number = Number(passwordProperties.length);
-    let characters: string = '';
-    let uppercase: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let lowercase: string = 'abcdefghijklmnopqrstuvwxyz';
-    let numbers: string = '0123456789';
-    let symbols: string = '!@#$%^&*()<>,.?/[]{}-=_+|/';
-
-    if (passwordProperties.uppercase) {
-      characters += uppercase;
-    }
-    if (passwordProperties.lowercase) {
-      characters += lowercase;
-    }
-    if (passwordProperties.numbers) {
-      characters += numbers;
-    }
-    if (passwordProperties.symbols) {
-      characters += symbols;
-    }
-
-    if (
-      !passwordProperties.uppercase &&
-      !passwordProperties.lowercase &&
-      !passwordProperties.numbers &&
-      !passwordProperties.symbols
-    ) {
-      passwordProperties.lowercase = true;
-      characters += lowercase;
-    }
-
-    let password = '';
-
-    for (let i = 0; i < length; i++) {
-      password += characters[getRandomInteger(0, characters.length - 1)];
-    }
-
-    checkPassword({ target: { value: password } });
-
-    return password;
-  };
-
-  const generateRandomPassphrase = () => {
-    const words = Number(passphraseProperties.words);
-    const separator = passphraseProperties.separator;
-    const capitalize = passphraseProperties.capitalize;
-    const number = passphraseProperties.number;
-
-    const wordListLength = generate(words);
-
-    let passphrase = '';
-
-    wordListLength.map((word) => {
-      if (wordListLength.indexOf(word) !== wordListLength.length - 1 && separator !== '') {
-        word += separator;
-      }
-
-      if (capitalize) {
-        word = word.charAt(0).toUpperCase() + word.slice(1);
-      }
-
-      passphrase += word;
-    });
-
-    // Add number in random position
-    if (number) {
-      const numberPosition = getRandomInteger(0, passphrase.length - 1);
-      const number = getRandomInteger(0, 9);
-
-      passphrase = passphrase.slice(0, numberPosition) + number + passphrase.slice(numberPosition);
-    }
-
-    checkPassword({ target: { value: passphrase } });
-
-    return passphrase;
-  };
+  const passwordProperties = { length: 13 };
+  const passphraseProperties = { words: 5 };
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center pt-32 pb-20">
-        <div className="flex w-full max-w-xl flex-col space-y-6">
-          <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-6">
-            <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 py-3 shadow-lg">
-              <p>{password}</p>
+        <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-6">
+          <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-8">
+            <div className="flex w-full flex-col items-center justify-center space-y-4">
+              <div
+                onKeyUp={(e) => checkPassword(e)}
+                id="input"
+                className="flex h-14 w-full appearance-none flex-col items-center justify-center rounded-lg border-2 border-primary bg-white text-center text-xl font-medium text-gray-100 placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10 transition-all delay-150 duration-150 ease-out"
+              >
+                {password}
+              </div>
+
+              <div className="flex h-1.5 w-full flex-row space-x-1.5">
+                {['0', '1', '2', '3', '4'].map((step, index) => (
+                  <div
+                    key={step}
+                    // eslint-disable-next-line no-nested-ternary
+                    className={`${
+                      (index <= crackScore && Number(passwordProperties.length) !== 0) ||
+                      (index <= crackScore && Number(passphraseProperties.words) !== 0)
+                        ? crackScore > 3
+                          ? 'bg-green'
+                          : crackScore > 1
+                          ? 'bg-orange'
+                          : 'bg-red'
+                        : 'bg-gray-10'
+                    } h-full w-full rounded-full transition-all duration-75 ease-out`}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-row items-center justify-center space-x-1 text-gray-50">
+                <Info size={16} weight="bold" />
+                <p className="text-sm">{textContent.info}</p>
+              </div>
             </div>
-            <div className="flex h-1.5 w-full flex-row space-x-1.5">
-              {['0', '1', '2', '3', '4'].map((step, index) => (
-                <div
-                  key={step}
-                  // eslint-disable-next-line no-nested-ternary
-                  className={`${
-                    (index <= crackScore && Number(passwordProperties.length) !== 0) ||
-                    (index <= crackScore && Number(passphraseProperties.words) !== 0)
-                      ? crackScore > 3
-                        ? 'bg-green'
-                        : crackScore > 1
-                        ? 'bg-orange'
-                        : 'bg-red'
-                      : 'bg-gray-10'
-                  } h-full w-full rounded-full transition-all duration-75 ease-out`}
-                />
-              ))}
-            </div>
+
             <div className="flex w-full flex-row space-x-2">
               <div
-                className="flex w-full cursor-pointer items-center justify-center space-x-1 rounded-lg bg-green py-2"
+                className="flex w-full cursor-pointer select-none items-center justify-center space-x-2 rounded-lg bg-primary py-2 hover:bg-primary-dark"
                 onClick={() => {
                   navigator.clipboard.writeText(password);
                   notificationService.openSuccessToast('Password copied to clipboard');
                 }}
               >
                 <Copy className={`h-5 w-5 text-white`} />
-                <p className="font-medium text-white">Copy password</p>
+                <p className="font-medium text-white">{textContent.copy}</p>
               </div>
               <div
-                className="flex w-full cursor-pointer flex-row items-center justify-center space-x-1 rounded-lg bg-primary py-2"
+                className="flex w-full cursor-pointer select-none flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-white py-2 text-gray-100 hover:bg-gray-10"
                 onClick={() => {
                   setRegenerate(!regenerate);
                 }}
               >
-                <ArrowsClockwise className={`h-5 w-5 text-white`} />
-                <p className="font-medium text-white">Regenerate</p>
+                <ArrowsClockwise className={`h-5 w-5`} />
+                <p className="font-medium">{textContent.generate}</p>
               </div>
             </div>
           </div>
           <div className="flex w-full flex-col space-y-3">
-            <div className="flex w-full flex-row items-center">
-              <div className="flex w-full flex-row items-center space-x-3">
-                <p>Password</p>
-                <div className="flex w-full flex-col">
+            <div className="flex w-full flex-row items-center space-x-2">
+              <div
+                className={`flex w-full flex-row items-center space-x-3 rounded-lg border ${
+                  passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : 'border-gray-10'
+                } p-5`}
+              >
+                <div className="flex flex-col">
                   <Checkbox
                     id="uppercase"
                     onClick={() => {
@@ -209,10 +93,18 @@ const HeroSection = () => {
                     checked={passwordType === 'password'}
                   />
                 </div>
+                <p className={`text-xl font-medium ${passwordType === 'password' ? 'text-gray-100' : 'text-gray-50'}`}>
+                  {textContent.password.title}
+                </p>
               </div>
-              <div className="flex w-full flex-row items-center space-x-3">
-                <p>Passphrase</p>
-                <div className="flex w-full flex-col">
+              <div
+                className={`flex w-full flex-row items-center space-x-3 rounded-lg border ${
+                  passwordType === 'passphrase'
+                    ? 'border-primary ring-4 ring-primary ring-opacity-10'
+                    : 'border-gray-10'
+                } p-5`}
+              >
+                <div className="flex flex-col">
                   <Checkbox
                     id="lowercase"
                     onClick={() => {
@@ -221,190 +113,30 @@ const HeroSection = () => {
                     checked={passwordType === 'passphrase'}
                   />
                 </div>
+                <p
+                  className={`text-xl font-medium ${passwordType === 'passphrase' ? 'text-gray-100' : 'text-gray-50'}`}
+                >
+                  {textContent.passphrase.title}
+                </p>
               </div>
             </div>
             {passwordType === 'password' ? (
               <>
-                <div className="flex w-full max-w-lg flex-row items-center space-x-3">
-                  <p>Length</p>
-                  <div className="flex rounded-lg border border-gray-10 py-1 px-2">
-                    <p>{passwordProperties.length}</p>
-                  </div>
-                  <div className="flex w-full flex-col">
-                    <input
-                      type="range"
-                      min="1"
-                      max="25"
-                      value={passwordProperties.length}
-                      onChange={(e) =>
-                        setPasswordProperties({
-                          ...passwordProperties,
-                          length: e.target.value,
-                        })
-                      }
-                      className="w-full cursor-pointer"
-                      color="#000000"
-                    />
-                  </div>
-                </div>
-                <div className="flex w-full flex-row items-center">
-                  <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Uppercase</p>
-                    <div className="flex w-full flex-col">
-                      <Checkbox
-                        id="uppercase"
-                        onClick={() => {
-                          setPasswordProperties({
-                            ...passwordProperties,
-                            uppercase: !passwordProperties.uppercase,
-                          });
-                        }}
-                        checked={passwordProperties.uppercase}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Lowercase</p>
-                    <div className="flex w-full flex-col">
-                      <Checkbox
-                        id="lowercase"
-                        onClick={() => {
-                          setPasswordProperties({
-                            ...passwordProperties,
-                            lowercase: !passwordProperties.lowercase,
-                          });
-                        }}
-                        checked={passwordProperties.lowercase}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex w-full flex-row items-center space-x-3">
-                  <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Numbers</p>
-                    <div className="flex w-full flex-col">
-                      <Checkbox
-                        id="numbers"
-                        onClick={() => {
-                          setPasswordProperties({
-                            ...passwordProperties,
-                            numbers: !passwordProperties.numbers,
-                          });
-                        }}
-                        checked={passwordProperties.numbers}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Symbols</p>
-                    <div className="flex w-full flex-col">
-                      <Checkbox
-                        id="symbols"
-                        onClick={() => {
-                          setPasswordProperties({
-                            ...passwordProperties,
-                            symbols: !passwordProperties.symbols,
-                          });
-                        }}
-                        checked={passwordProperties.symbols}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <PasswordSettings
+                  textContent={textContent.password}
+                  setPassword={setPassword}
+                  setCrackScore={setCrackScore}
+                  regenerate={regenerate}
+                />
               </>
             ) : (
               <>
-                <div className="flex w-full max-w-lg flex-row items-center space-x-3">
-                  <p>Words</p>
-                  <div className="flex rounded-lg border border-gray-10 py-1 px-2">
-                    <p>{passphraseProperties.words}</p>
-                  </div>
-                  <div className="flex w-full flex-col">
-                    <input
-                      type="range"
-                      min="1"
-                      max="10"
-                      value={passphraseProperties.words}
-                      onChange={(e) =>
-                        setPassphraseProperties({
-                          ...passphraseProperties,
-                          words: e.target.value,
-                        })
-                      }
-                      className="w-full cursor-pointer"
-                      color="#000000"
-                    />
-                  </div>
-                </div>
-                <div className="flex w-full flex-row items-center">
-                  <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Capitalize</p>
-                    <div className="flex w-full flex-col">
-                      <Checkbox
-                        id="capitalize"
-                        onClick={() => {
-                          setPassphraseProperties({
-                            ...passphraseProperties,
-                            capitalize: !passphraseProperties.capitalize,
-                          });
-                        }}
-                        checked={passphraseProperties.capitalize}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Numbers</p>
-                    <div className="flex w-full flex-col">
-                      <Checkbox
-                        id="number"
-                        onClick={() => {
-                          setPassphraseProperties({
-                            ...passphraseProperties,
-                            number: !passphraseProperties.number,
-                          });
-                        }}
-                        checked={passphraseProperties.number}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex w-full flex-row items-center justify-center space-x-3">
-                  <div className="flex w-full flex-row items-center space-x-3">
-                    <p>Word Separator</p>
-                    <div className="flex flex-col py-1 px-2">
-                      <input
-                        type="text"
-                        value={passphraseProperties.separator}
-                        onChange={(e) => {
-                          // Only allow certain characters and allow removal of separator if it exists
-                          let parametersAllowed = /^[-.!?$ ]$/;
-                          if (e.target.value.match(parametersAllowed) || e.target.value === '') {
-                            setPassphraseProperties({
-                              ...passphraseProperties,
-                              separator: e.target.value,
-                            });
-                          }
-                        }}
-                        className="flex w-max rounded-lg border border-gray-10 py-1 px-2 focus:border-primary"
-                      />
-                    </div>
-                    <div className="flex w-full flex-row items-center space-x-1">
-                      <div
-                        onMouseEnter={() => setShowTooltip(true)}
-                        onMouseLeave={() => setShowTooltip(false)}
-                        className="flex cursor-pointer rounded-full bg-gray-10 px-2 py-0.5"
-                        title="Only -.!?$ are allowed"
-                      >
-                        <p className="text-gray-400 select-none text-xs">?</p>
-                      </div>
-                      {showTooltip && (
-                        <div className="flex w-full flex-col bg-white">
-                          <p className="text-gray-400 select-none text-sm">Only -, ., !, ?, $ and space are allowed</p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                <PassphraseSettings
+                  textContent={textContent.passphrase}
+                  setPassword={setPassword}
+                  setCrackScore={setCrackScore}
+                  regenerate={regenerate}
+                />
               </>
             )}
           </div>

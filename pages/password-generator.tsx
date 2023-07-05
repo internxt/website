@@ -22,7 +22,7 @@ const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection />
+      <HeroSection textContent={langJson.HeroSection} />
 
       <InfoSection textContent={langJson.InfoSection} />
 
