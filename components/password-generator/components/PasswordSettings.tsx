@@ -74,7 +74,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
 
   return (
     <>
-      <div className="flex flex-col  items-center space-y-5 lg:flex-row lg:space-x-3">
+      <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-x-3 lg:space-y-0">
         <div className="flex flex-row items-center space-x-3">
           <p className="text-xl font-medium text-gray-100">{textContent.length}</p>
           <div className="flex  rounded-lg border border-gray-10 py-1 px-2">
@@ -98,7 +98,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col items-start lg:flex-row lg:justify-between">
+        <div className="flex flex-col items-start lg:w-full lg:flex-row lg:justify-between">
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
               <CheckboxSettings
