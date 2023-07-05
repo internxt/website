@@ -16,7 +16,7 @@ import FAQSection from '../components/photos/FAQSection';
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
 const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-generator');
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
