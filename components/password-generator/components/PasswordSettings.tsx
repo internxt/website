@@ -74,7 +74,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
 
   return (
     <>
-      <div className="flex flex-row items-center space-x-3">
+      <div className="flex flex-col  items-center space-y-5 lg:flex-row lg:space-x-3">
         <div className="flex flex-row items-center space-x-3">
           <p className="text-xl font-medium text-gray-100">{textContent.length}</p>
           <div className="flex  rounded-lg border border-gray-10 py-1 px-2">
@@ -97,66 +97,68 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
           />
         </div>
       </div>
-      <div className="flex w-full flex-row items-center justify-between">
-        <div className="flex flex-row items-center space-x-3">
-          <div className="flex flex-col">
-            <CheckboxSettings
-              id="uppercase"
-              onClick={() => {
-                setPasswordProperties({
-                  ...passwordProperties,
-                  uppercase: !passwordProperties.uppercase,
-                });
-              }}
-              checked={passwordProperties.uppercase}
-            />
+      <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-start lg:flex-row lg:justify-between">
+          <div className="flex flex-row items-center space-x-3">
+            <div className="flex flex-col">
+              <CheckboxSettings
+                id="uppercase"
+                onClick={() => {
+                  setPasswordProperties({
+                    ...passwordProperties,
+                    uppercase: !passwordProperties.uppercase,
+                  });
+                }}
+                checked={passwordProperties.uppercase}
+              />
+            </div>
+            <p className="text-xl font-medium text-gray-100">{textContent.options.uppercase}</p>
           </div>
-          <p className="text-xl font-medium text-gray-100">{textContent.options.uppercase}</p>
-        </div>
-        <div className="flex flex-row items-center space-x-3">
-          <div className="flex flex-col">
-            <CheckboxSettings
-              id="lowercase"
-              onClick={() => {
-                setPasswordProperties({
-                  ...passwordProperties,
-                  lowercase: !passwordProperties.lowercase,
-                });
-              }}
-              checked={passwordProperties.lowercase}
-            />
+          <div className="flex flex-row items-center space-x-3">
+            <div className="flex flex-col">
+              <CheckboxSettings
+                id="lowercase"
+                onClick={() => {
+                  setPasswordProperties({
+                    ...passwordProperties,
+                    lowercase: !passwordProperties.lowercase,
+                  });
+                }}
+                checked={passwordProperties.lowercase}
+              />
+            </div>
+            <p className="text-xl font-medium text-gray-100">{textContent.options.lowercase}</p>
           </div>
-          <p className="text-xl font-medium text-gray-100">{textContent.options.lowercase}</p>
-        </div>
-        <div className="flex flex-row items-center space-x-3">
-          <div className="flex flex-col">
-            <CheckboxSettings
-              id="numbers"
-              onClick={() => {
-                setPasswordProperties({
-                  ...passwordProperties,
-                  numbers: !passwordProperties.numbers,
-                });
-              }}
-              checked={passwordProperties.numbers}
-            />
+          <div className="flex flex-row items-center space-x-3">
+            <div className="flex flex-col">
+              <CheckboxSettings
+                id="numbers"
+                onClick={() => {
+                  setPasswordProperties({
+                    ...passwordProperties,
+                    numbers: !passwordProperties.numbers,
+                  });
+                }}
+                checked={passwordProperties.numbers}
+              />
+            </div>
+            <p className="text-xl font-medium text-gray-100">{textContent.options.numbers}</p>
           </div>
-          <p className="text-xl font-medium text-gray-100">{textContent.options.numbers}</p>
-        </div>
-        <div className="flex flex-row items-center space-x-3">
-          <div className="flex flex-col">
-            <CheckboxSettings
-              id="symbols"
-              onClick={() => {
-                setPasswordProperties({
-                  ...passwordProperties,
-                  symbols: !passwordProperties.symbols,
-                });
-              }}
-              checked={passwordProperties.symbols}
-            />
+          <div className="flex flex-row items-center space-x-3">
+            <div className="flex flex-col">
+              <CheckboxSettings
+                id="symbols"
+                onClick={() => {
+                  setPasswordProperties({
+                    ...passwordProperties,
+                    symbols: !passwordProperties.symbols,
+                  });
+                }}
+                checked={passwordProperties.symbols}
+              />
+            </div>
+            <p className="text-xl font-medium text-gray-100">{textContent.options.symbols}</p>
           </div>
-          <p className="text-xl font-medium text-gray-100">{textContent.options.symbols}</p>
         </div>
       </div>
     </>

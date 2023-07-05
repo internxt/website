@@ -20,8 +20,8 @@ const HeroSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center pt-32 pb-20">
-        <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-6">
-          <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-8">
+        <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-16">
+          <div className="flex w-full max-w-lg flex-col items-center justify-center">
             <div className="flex w-full flex-col items-center justify-center space-y-4">
               <div
                 onKeyUp={(e) => checkPassword(e)}
@@ -53,32 +53,31 @@ const HeroSection = ({ textContent }) => {
                 <Info size={16} weight="bold" />
                 <p className="text-sm">{textContent.info}</p>
               </div>
-            </div>
-
-            <div className="flex w-full flex-row space-x-2">
-              <div
-                className="flex w-full cursor-pointer select-none items-center justify-center space-x-2 rounded-lg bg-primary py-2 hover:bg-primary-dark"
-                onClick={() => {
-                  navigator.clipboard.writeText(password);
-                  notificationService.openSuccessToast('Password copied to clipboard');
-                }}
-              >
-                <Copy className={`h-5 w-5 text-white`} />
-                <p className="font-medium text-white">{textContent.copy}</p>
-              </div>
-              <div
-                className="flex w-full cursor-pointer select-none flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-white py-2 text-gray-100 hover:bg-gray-10"
-                onClick={() => {
-                  setRegenerate(!regenerate);
-                }}
-              >
-                <ArrowsClockwise className={`h-5 w-5`} />
-                <p className="font-medium">{textContent.generate}</p>
+              <div className="flex w-full flex-row space-x-2">
+                <div
+                  className="flex w-full cursor-pointer select-none items-center justify-center space-x-2 rounded-lg bg-primary py-2 hover:bg-primary-dark"
+                  onClick={() => {
+                    navigator.clipboard.writeText(password);
+                    notificationService.openSuccessToast('Password copied to clipboard');
+                  }}
+                >
+                  <Copy className={`h-5 w-5 text-white`} />
+                  <p className="font-medium text-white">{textContent.copy}</p>
+                </div>
+                <div
+                  className="flex w-full cursor-pointer select-none flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-white py-2 text-gray-100 hover:bg-gray-10"
+                  onClick={() => {
+                    setRegenerate(!regenerate);
+                  }}
+                >
+                  <ArrowsClockwise className={`h-5 w-5`} />
+                  <p className="font-medium">{textContent.generate}</p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col space-y-3">
-            <div className="flex w-full flex-row items-center space-x-2">
+          <div className="flex w-full flex-col space-y-8">
+            <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-2">
               <div
                 className={`flex w-full flex-row items-center space-x-3 rounded-lg border ${
                   passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : 'border-gray-10'

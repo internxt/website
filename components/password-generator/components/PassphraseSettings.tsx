@@ -59,13 +59,15 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
     };
   };
   return (
-    <>
-      <div className="flex w-full flex-row items-center justify-center space-x-3">
-        <p>{textContent.length}</p>
-        <div className="flex rounded-lg border border-gray-10 py-1 px-2">
-          <p className="text-xl font-medium text-gray-100">{passphraseProperties.words}</p>
+    <div className="flex w-full flex-col space-y-8">
+      <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-y-0 lg:space-x-3">
+        <div className="flex flex-row items-center space-x-3">
+          <p className="text-xl font-medium text-gray-100">{textContent.length}</p>
+          <div className="flex  rounded-lg border border-gray-10 py-1 px-2">
+            <p className="text-xl font-medium text-gray-100">{passphraseProperties.words}</p>
+          </div>
         </div>
-        <div className="flex w-full flex-col">
+        <div className="flex w-full flex-1 flex-col">
           <input
             type="range"
             min="1"
@@ -77,11 +79,11 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
                 words: e.target.value,
               })
             }
-            className="w-full cursor-pointer"
-            color="#000000"
+            className="flex w-full cursor-pointer"
           />
         </div>
       </div>
+
       <div className="flex w-full flex-row items-center space-x-20">
         <div className="flex flex-row items-center space-x-3">
           <div className="flex flex-col">
@@ -114,29 +116,29 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
           <p className="text-xl font-medium text-gray-100">{textContent.options.numbers}</p>
         </div>
       </div>
-      <div className="flex w-full flex-row items-center justify-center space-x-3">
-        <div className="flex w-full flex-row items-center justify-between space-x-3">
+      <div className="flex flex-col items-center justify-center lg:flex-row">
+        <div className="flex flex-col items-start space-y-3 lg:w-full lg:flex-row lg:justify-between lg:space-y-0">
           <p className="text-xl font-medium text-gray-100">{textContent.options.separator.title}</p>
-          {textContent.options.separator.options.map((item) => {
-            return (
-              <>
+          {textContent.options.separator.options.map((item) => (
+            <div className="flex flex-row items-center space-x-3">
+              <div className="flex flex-col">
                 <CheckboxSettings
-                  id={item}
+                  id="symbols"
                   onClick={() => {
                     setPassphraseProperties({
                       ...passphraseProperties,
                       separator: item,
                     });
                   }}
-                  checked={passphraseProperties.separator === item}
+                  checked={item}
                 />
-                <p>{item === '\n' ? 'Space' : item}</p>
-              </>
-            );
-          })}
+              </div>
+              <p className="text-xl font-medium text-gray-100">{item === '\n' ? 'Space' : item}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
