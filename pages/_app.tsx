@@ -18,26 +18,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
-    <>
-      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
-      <noscript>
-        {/* eslint-disable @next/next/no-img-element */}
-        <img
-          src="https://queue.simpleanalyticscdn.com/noscript.gif"
-          alt=""
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </noscript>
-      <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
-        <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
-          <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
-          <Component {...pageProps} />
-          <ShowSnackbar />
-          {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
-          <Intercom />
-        </GlobalUIManager>
-      </LiveChatLoaderProvider>
-    </>
+    <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
+      <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
+        <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
+        <Component {...pageProps} />
+        <ShowSnackbar />
+        {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
+        <Intercom />
+      </GlobalUIManager>
+    </LiveChatLoaderProvider>
   );
 }
 
