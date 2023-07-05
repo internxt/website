@@ -21,6 +21,10 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center pt-32 pb-20">
         <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-16">
+          <div className="flex flex-col items-center space-y-5">
+            <h1 className="text-5xl font-semibold text-gray-100">{textContent.title}</h1>
+            <p className="text-xl text-gray-80">{textContent.subtitle}</p>
+          </div>
           <div className="flex w-full max-w-lg flex-col items-center justify-center">
             <div className="flex w-full flex-col items-center justify-center space-y-4">
               <div
