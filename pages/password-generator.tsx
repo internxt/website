@@ -42,6 +42,17 @@ export async function getServerSideProps(ctx) {
 
   const lang = ctx.locale;
 
+  const allowedLang = ['en', 'es'];
+
+  if (!allowedLang.includes(lang)) {
+    return {
+      redirect: {
+        destination: '/password-generator',
+        permanent: false,
+      },
+    };
+  }
+
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/en/password-generator.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
