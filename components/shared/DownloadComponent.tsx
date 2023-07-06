@@ -50,7 +50,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                 {OS === 'MacOS' && (
                   <>
                     <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
-                      {textContent.Linux}
+                      {textContent.Linux.split(' ')[0]}
                     </a>{' '}
                     {textContent.or}{' '}
                     <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
@@ -62,7 +62,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                 {(OS === 'Linux' || OS === 'UNIX') && (
                   <>
                     <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
-                      {textContent.MacOS}
+                      {textContent.MacOS.split(' ')[0]}
                     </a>{' '}
                     {textContent.or}{' '}
                     <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
@@ -74,7 +74,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                 {OS === 'Windows' && (
                   <>
                     <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
-                      {textContent.MacOS}
+                      {textContent.MacOS.split(' ')[0]}
                     </a>{' '}
                     {textContent.or}{' '}
                     <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
