@@ -59,10 +59,10 @@ const InfoSection = ({ textContent }): JSX.Element => {
         </div>
       </div>
       <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
-      <div className="flex flex-col items-center justify-center  space-y-16 bg-white py-20 px-5">
+      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20 px-5">
         {getSectionText(textContent.thirdSection)}
-        {getSectionText(textContent.fourthSection)}
         <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
+          {getSectionText(textContent.fourthSection)}
           <p className="text-lg">{textContent.bulletedList.title}</p>
           <ul className="list-disc pl-5 text-lg">
             {textContent.bulletedList.list.map((item, index) => (
