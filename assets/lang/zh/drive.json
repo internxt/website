@@ -13,20 +13,20 @@
     "DownloadLinks": {
       "downloadTitle": "下载Internxt Drive",
       "or": "或",
-      "downloadFor": "为",
+      "downloadFor": "下载",
       "orDownloadFor": "或为",
       "downloadOnThe": "在上下载",
       "orDownloadOnThe": "或在上下载",
-      "getOn": "上下载",
-      "orGetOn": "或在",
-      "openDriveWeb": "打开云盘网页端",
-      "iPhone": "应用商店",
-      "iPad": "应用商店",
-      "Android": "播放商店",
-      "Windows": "Windows下载",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+      "getOn": "从",
+      "orGetOn": "或到",
+      "openDriveWeb": "打开云盘网页端(Web)",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play 商店下载",
+      "Windows": "Windows 版",
+      "Linux": "Linux 版",
+      "UNIX": "Linux 版",
+      "MacOS": "Mac 版"
     }
   },
   "FeatureSection": {
@@ -142,21 +142,22 @@
       }
     },
     "DownloadLinks": {
+      "downloadTitle": "下载Internxt Drive",
       "or": "或",
-      "downloadFor": "下载为",
-      "orDownloadFor": "或下载为",
+      "downloadFor": "下载",
+      "orDownloadFor": "或为",
       "downloadOnThe": "在上下载",
       "orDownloadOnThe": "或在上下载",
-      "getOn": "上车",
-      "orGetOn": "或上车",
-      "openDriveWeb": "打开云盘网页端",
-      "iPhone": "应用商店",
-      "iPad": "应用商店",
-      "Android": "播放商店",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+      "getOn": "从",
+      "orGetOn": "或到",
+      "openDriveWeb": "打开云盘网页端(Web)",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play 商店下载",
+      "Windows": "Windows 版",
+      "Linux": "Linux 版",
+      "UNIX": "Linux 版",
+      "MacOS": "Mac 版"
     }
   },
   "FaqSection": {
