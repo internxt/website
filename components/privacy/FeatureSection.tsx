@@ -39,7 +39,7 @@ const FeatureSection = ({ textContent }) => {
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="text-4xl font-semibold text-gray-100">{textContent.title}</p>
+          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap gap-8 sm:grid-cols-2">

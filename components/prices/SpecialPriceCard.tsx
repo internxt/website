@@ -11,8 +11,6 @@ import { CouponType } from '../../pages/api/stripe/get_coupons';
 import { Interval, stripeService } from '../services/stripeService';
 import { PriceCardProps } from './PriceCard';
 
-const TWOTB_90_OFF = '6FACDcgf';
-
 export default function SpecialPriceCard({
   planType,
   storage,
@@ -26,10 +24,9 @@ export default function SpecialPriceCard({
   const [coupon, setCoupon] = React.useState(null);
   const isPopularYearly = popular && billingFrequency === Interval.Year;
   const billingFrequencyList = {
-    '-1': 'lifetime',
-    1: 'monthly',
-    6: 'semiannually',
-    12: 'annually',
+    lifetime: 'lifetime',
+    month: 'monthly',
+    year: 'annually',
   };
 
   const currency = () => {
@@ -45,7 +42,7 @@ export default function SpecialPriceCard({
 
   useEffect(() => {
     stripeService
-      .getCoupon(CouponType.TwoTBCoupon)
+      .getCoupon(CouponType.TwoTBCoupon75)
       .then((coupon) => {
         setCoupon(coupon);
       })
@@ -55,8 +52,6 @@ export default function SpecialPriceCard({
   }, []);
 
   const onOfferClick = () => {
-    const interval = billingFrequency === 'month' ? 'month' : 'year';
-
     checkout({
       planId: cta[1],
       couponCode: coupon,
@@ -69,7 +64,7 @@ export default function SpecialPriceCard({
   return (
     <div
       className={`priceCard card ${
-        popular ? 'border-2 border-mint-dark bg-mint-dark shadow-lg ring-2 ring-mint-dark' : ''
+        popular ? 'border-2 border-primary bg-primary shadow-lg ring-2 ring-primary' : ''
       } m-2 flex w-max flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
@@ -81,8 +76,10 @@ export default function SpecialPriceCard({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-start  p-6 pt-6 ${
-          isPopularYearly ? 'rounded-t-2xl bg-primary bg-cover' : 'bg-white'
+        className={`info flex flex-col items-center justify-center  p-4 pt-6 ${
+          popular && billingFrequency === 'year'
+            ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover'
+            : 'bg-white'
         }`}
       >
         <div
@@ -104,10 +101,17 @@ export default function SpecialPriceCard({
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
-            <span className="price text-4xl font-semibold">{Math.abs((price * 10) / 100).toFixed(2)}</span>
+            <span className="price text-4xl font-semibold">
+              {
+                Math.abs((price * 25) / 100)
+                  .toFixed(2)
+                  .split('.')[0]
+              }
+              .98
+            </span>
           </p>
           <div
-            className={`priceBreakdown flex text-white ${
+            className={`priceBreakdown flex text-neutral-50 ${
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
@@ -122,7 +126,7 @@ export default function SpecialPriceCard({
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-sm font-medium text-white
+            } flex-row text-sm font-medium text-gray-50
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>

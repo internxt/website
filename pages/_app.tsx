@@ -7,6 +7,7 @@ import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import SummerBanner from '../components/banners/SummerBanner';
 import ShowSnackbar from '../components/Snackbar';
+import GeneralBanner from '../components/banners/GeneralBanner';
 
 const excludedPaths = ['/techcult', '/pricing', '/stackcommerce', '/password-generator'];
 
@@ -22,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
         <ShowSnackbar />
-        {isExcludedPath ? null : <SummerBanner />}
+        {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
         <Intercom />
       </GlobalUIManager>
     </LiveChatLoaderProvider>

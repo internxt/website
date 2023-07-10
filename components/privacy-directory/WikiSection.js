@@ -5,10 +5,10 @@ const WikiSection = ({ textContent }) => (
   <section className="relative flex flex-col items-center bg-gray-1 px-6">
     <div className="flex w-full max-w-screen-lg flex-col items-center space-y-16 py-16 sm:space-y-24 sm:py-24">
       {/* Title */}
-      <h2 className="text-center text-3xl font-medium text-gray-100 md:text-4xl lg:text-5xl">
+      <h1 className="text-center text-3xl font-medium text-gray-100 md:text-4xl lg:text-5xl">
         {textContent.title.line1} <br className="hidden sm:flex" />
         {textContent.title.line2}
-      </h2>
+      </h1>
 
       {/* Cards */}
       <div className="hidden flex-row space-x-8 md:flex">

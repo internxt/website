@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export enum CouponType {
   TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
+  TwoTBCoupon75 = 'COUPON_SUBSCRIPTION_75_OFF',
   LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
   LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
   CloudwardsCoupon = 'COUPON_CLOUDWARDS',

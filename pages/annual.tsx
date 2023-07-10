@@ -33,20 +33,13 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 };
 
 export async function getServerSideProps(ctx) {
-  if (ctx.locale !== 'en') {
-    return {
-      redirect: {
-        destination: '/annual',
-        permanent: false,
-      },
-    };
-  }
+  const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/annual.json`);
-  const infoSectionLang = require(`../assets/lang/en/home.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`../assets/lang/${lang}/annual.json`);
+  const infoSectionLang = require(`../assets/lang/${lang}/home.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
   return {
     props: {

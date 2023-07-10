@@ -1,39 +1,14 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 import { checkout } from '../../lib/auth';
-
-const TWOTB_OFF_COUPON = '6FACDcgf';
-
-const SummerOfferImage = () => {
-  return (
-    <div className="relative flex">
-      <Image
-        alt="Summer sale cloud storage"
-        src="/images/pricing/Background.png"
-        className="rounded-3xl"
-        width={496}
-        height={520}
-        loading="eager"
-        quality={100}
-      />
-      <div className="absolute -right-28 flex flex-col items-center justify-center space-y-5 overflow-visible">
-        <Image
-          alt="Summer sale cloud storage"
-          src="/images/pricing/flower.png"
-          className="rounded-3xl"
-          width={423}
-          height={475}
-          loading="eager"
-          quality={100}
-        />
-      </div>
-    </div>
-  );
-};
+import { Interval, stripeService } from '../services/stripeService';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 const HeroSection = ({ textContent }) => {
+  const [priceId, setPriceId] = useState('');
+  const [coupon, setCoupon] = useState('');
   const feeds = [
     {
       icon: Coin,
@@ -49,6 +24,16 @@ const HeroSection = ({ textContent }) => {
     },
   ];
 
+  useEffect(() => {
+    stripeService.getSelectedPrice(Interval.Year, '2TB').then((price) => {
+      setPriceId(price.priceId);
+    });
+
+    stripeService.getCoupon(CouponType.TwoTBCoupon75).then((coupon) => {
+      setCoupon(coupon);
+    });
+  }, []);
+
   return (
     <section className="overflow-hidden pt-12">
       <div className="flex flex-col items-center justify-center space-y-10 py-24 px-6 lg:flex-row lg:space-x-48 lg:space-y-0">
@@ -56,7 +41,7 @@ const HeroSection = ({ textContent }) => {
           <div className="flex max-w-[500px] flex-col items-center justify-center space-y-10 lg:items-start">
             <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown textColor={'black'} dt={'2023-06-29T23:59:59'} />
+              <Countdown textColor={'black'} />
             </div>
             <div className="flex flex-col space-y-16">
               <div className="flex flex-col text-center lg:text-start">
@@ -80,8 +65,8 @@ const HeroSection = ({ textContent }) => {
               className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white"
               onClick={() =>
                 checkout({
-                  planId: 'plan_FkTXxEg3GZW0pg',
-                  couponCode: TWOTB_OFF_COUPON,
+                  planId: priceId,
+                  couponCode: coupon,
                 })
               }
             >
@@ -91,7 +76,16 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
         <div className="flex flex-col rounded-3xl bg-white">
-          <SummerOfferImage />
+          <Image
+            alt="woman using file storage"
+            src="/images/pricing/woman-using-file-storage.png"
+            className=" rounded-3xl"
+            width={496}
+            height={520}
+            layout="intrinsic"
+            loading="eager"
+            quality={100}
+          />
         </div>
       </div>
     </section>

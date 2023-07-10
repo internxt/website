@@ -24,7 +24,7 @@ const SuiteSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/drive-image.png" alt="Internxt Drive secure service" />
+                  <img src="/images/privacy/Internxt-Drive.webp" alt="Internxt Drive secure service" />
                 </div>
               </div>
             </div>
