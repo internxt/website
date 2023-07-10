@@ -26,7 +26,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             //   discount: 90,
             //   plan: priceId,
             // });
-            window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/password-generator`, '_blank');
+            window.open(`${window.origin}/${lang === 'en' ? '' : lang}/password-generator`, '_blank');
           }}
         >
           <div className="flex flex-row space-x-1">
@@ -45,9 +45,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div
             className="flex flex-col items-center justify-center"
-            onClick={() =>
-              window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/password-generator`, '_blank')
-            }
+            onClick={() => window.open(`${window.origin}/${lang === 'en' ? '' : lang}/password-generator`, '_blank')}
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
             <p className="flex flex-row font-normal">{textContent.TopBarBanner.title}</p>
