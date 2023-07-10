@@ -129,7 +129,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
         <div className="flex w-full flex-col items-start space-y-3 md:flex-row md:justify-between md:space-y-0">
           <p className="text-base font-medium text-gray-100">{textContent.options.separator.title}</p>
           {textContent.options.separator.options.map((item) => (
-            <div className="flex flex-row items-center space-x-3">
+            <div className="flex flex-row items-center space-x-3" key={item}>
               <div className="flex flex-col">
                 <CheckboxSettings
                   id="symbols"
@@ -139,7 +139,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
                       separator: item,
                     });
                   }}
-                  checked={item}
+                  checked={passphraseProperties.separator === item}
                 />
               </div>
               <p className="text-base font-medium text-gray-100">{item === '\n' ? space[lang] : item}</p>
