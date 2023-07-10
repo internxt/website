@@ -57,7 +57,7 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
               <div className="z-10 flex max-w-[205px] flex-col items-center justify-center space-y-6 text-center lg:items-start lg:text-left">
                 <item.icon className="h-8 w-8 text-primary" />
                 <p className="text-2xl font-medium text-gray-100">{item.title}</p>
-                <div className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline">
+                <div className="flex flex-row items-center justify-center text-primary hover:underline">
                   <p className="text-2xl text-gray-80">{item.description}</p>
                 </div>
               </div>
