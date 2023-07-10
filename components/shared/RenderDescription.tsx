@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const currentLang = ['Español (ES)', 'Français (FR)', 'English (EN)', 'Italiano (IT)', '中国 (ZH)'];
-
 const RenderDescription = ({ description }) => {
   useEffect(() => {
     const links = document.querySelectorAll('a');

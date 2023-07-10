@@ -55,6 +55,10 @@
     "line1": "Now that you’re aware, protect yourself with",
     "blueText": "Internxt secure cloud storage"
   },
+  "SignUpPasswordGenerator": {
+    "line1": "Shield your accounts with unique passwords,",
+    "blueText": "join Internxt for free"
+  },
   "privacyDirectoryBanner": {
     "line1": "Join the fight for privacy and build a better internet",
     "blueText": "with Internxt"
@@ -79,7 +83,7 @@
   "GoogleKnows": {
     "title": "Max out your Google privacy settings with our What Google Knows page"
   },
-  "SummerOffer": {
-    "title": "Need more space? Upgrade & save! Get 75% off our 2TB plan."
+  "TopBarBanner": {
+    "title": "NEW: Secure passwords, instantly. Try our new Password Generator."
   }
 }

@@ -8,14 +8,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/banners.json`);
-  const title = textContent.SummerOffer.title.split('!');
-  const [priceId, setPriceId] = useState('');
-
-  useEffect(() => {
-    stripeService.getSelectedPrice(Interval.Year, '2TB').then((price) => {
-      setPriceId(price.priceId);
-    });
-  }, []);
+  const title = textContent.TopBarBanner.title.split(':');
 
   return (
     <>
@@ -28,16 +21,16 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() => {
-            analyticsService.offerTrack({
-              campaign: '2TBPLAN75',
-              discount: 75,
-              plan: priceId,
-            });
-            window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');
+            // analyticsService.offerTrack({
+            //   campaign: 'summersale',
+            //   discount: 90,
+            //   plan: priceId,
+            // });
+            window.open(`${window.origin}${lang === 'en' ? '' : `/${lang}`}/password-generator`, '_blank');
           }}
         >
           <div className="flex flex-row space-x-1">
-            <p className="flex flex-row font-semibold">{title[0]}</p>
+            <p className="flex flex-row font-semibold">{title[0]}:</p>
             <p className="flex flex-row font-normal">{title[1]}</p>
           </div>
           <CaretRight size={16} />
@@ -53,16 +46,11 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           <div
             className="flex flex-col items-center justify-center"
             onClick={() =>
-              window.open(
-                `https://internxt.com/${
-                  lang === 'en' ? '' : lang
-                }/pricing?utm_source=website&utm_medium=banner&utm_campaign=lifetimeapril`,
-                '_blank',
-              )
+              window.open(`${window.origin}${lang === 'en' ? '' : `/${lang}`}/password-generator`, '_blank')
             }
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
-            <p className="flex flex-row font-normal">{textContent.SummerOffer.title}</p>
+            <p className="flex flex-row font-normal">{textContent.TopBarBanner.title}</p>
           </div>
         </div>
       </div>

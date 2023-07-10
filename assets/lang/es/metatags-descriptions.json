@@ -108,5 +108,10 @@
     "id": "password-checker",
     "title": "Internxt – Verificación gratuita y segura de contraseñas",
     "description": "Chequeo de seguridad de contraseñas gratuito. Compruebe la solidez de sus contraseñas con la herramienta segura en línea de Internxt."
+  },
+  {
+    "id": "password-generator",
+    "title": "Generador de contraseñas seguras | Internxt",
+    "description": "Generador de contraseñas seguras. Una herramienta gratis para crear contraseñas aleatorias y seguras para mantener tus cuentas a salvo."
   }
 ]

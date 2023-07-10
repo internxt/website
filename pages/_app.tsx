@@ -9,7 +9,7 @@ import SummerBanner from '../components/banners/SummerBanner';
 import ShowSnackbar from '../components/Snackbar';
 import GeneralBanner from '../components/banners/GeneralBanner';
 
-const excludedPaths = ['/techcult', '/pricing', '/stackcommerce'];
+const excludedPaths = ['/techcult', '/pricing', '/stackcommerce', '/password-generator'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();

@@ -10,9 +10,14 @@ export interface Product {
   interval: string;
 }
 
+const PRODUCTS_URL =
+  process.env.NODE_ENV === 'production'
+    ? `${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`
+    : `${process.env.NEXT_PUBLIC_PAYMENTS_API}/prices`;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<Product | void> {
   if (req.method === 'GET') {
-    const productsRequest = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`);
+    const productsRequest = await axios.get(PRODUCTS_URL);
     const productsData: Product[] = productsRequest.data;
 
     if (!productsData) return res.status(404).end(); //Something went wrong while fetching the products

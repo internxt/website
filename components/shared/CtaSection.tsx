@@ -1,4 +1,4 @@
-const CtaSection = ({ textContent, url }) => {
+const CtaSection = ({ textContent, url, maxWidth }: { textContent: any; url: string; maxWidth?: string }) => {
   return (
     <section
       style={{
@@ -7,7 +7,7 @@ const CtaSection = ({ textContent, url }) => {
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div className="flex  flex-col items-center space-y-4 text-center text-white">
+        <div className={`flex  ${maxWidth && maxWidth} flex-col items-center space-y-4 text-center text-white`}>
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="w-full max-w-[573px] text-xl font-normal">{textContent.description}</p>
         </div>
