@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import { isMobile } from 'react-device-detect';
+import React from 'react';
 import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '../lib/get-download-url';
 import Navbar from '../components/layout/Navbar';
@@ -10,7 +8,6 @@ import Footer from '../components/layout/Footer';
 import InfoSection from '../components/password-generator/InfoSection';
 import CtaSection from '../components/shared/CtaSection';
 import ToolsSection from '../components/shared/ToolsSection';
-import FaqAccordion from '../components/shared/FAQAccordion';
 import FAQSection from '../components/photos/FAQSection';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
@@ -55,7 +52,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/password-generator.json`);
-  const bannerText = require(`../assets/lang/en/banners.json`);
+  const bannerText = require(`../assets/lang/${lang}/banners.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 

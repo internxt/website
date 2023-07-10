@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { generate } from 'random-words';
 import { useEffect, useState } from 'react';
 import { checkPassword, getRandomInteger } from '../utils';
@@ -10,6 +11,11 @@ interface PassphraseProperties {
   number: boolean;
 }
 
+const space = {
+  en: 'Space',
+  es: 'Espacio',
+};
+
 const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerate }) => {
   const [passphraseProperties, setPassphraseProperties] = useState<PassphraseProperties>({
     words: '5',
@@ -17,6 +23,9 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
     capitalize: true,
     number: true,
   });
+
+  const router = useRouter();
+  const lang = router.locale;
 
   useEffect(() => {
     setPassword(generateRandomPassphrase().value);
@@ -33,7 +42,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
 
     let passphrase = '';
 
-    wordListLength.map((word) => {
+    wordListLength.forEach((word) => {
       if (wordListLength.indexOf(word) !== wordListLength.length - 1 && separator !== '') {
         word += separator;
       }
@@ -133,7 +142,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
                   checked={item}
                 />
               </div>
-              <p className="text-base font-medium text-gray-100">{item === '\n' ? 'Space' : item}</p>
+              <p className="text-base font-medium text-gray-100">{item === '\n' ? space[lang] : item}</p>
             </div>
           ))}
         </div>
