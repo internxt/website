@@ -78,11 +78,11 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
           </ul>
         </div>
         <img
-          src="/images/password-generator/Internxt_CTA_Blog_PasswordChecker_EN.png"
+          src={`/images/converter-tool/PasswordChecker${lang.toUpperCase()}.png`}
           alt="Password Checker"
           className="w-full max-w-4xl cursor-pointer px-5"
           onClick={() => {
-            window.open('https://internxt.com/password-checker', '_blank', 'nofollow');
+            window.open(`${window.origin}${lang === 'en' ? '' : `/${lang}`}/password-checker`, '_blank');
           }}
         />
         {getSectionText(textContent.fifthSection)}

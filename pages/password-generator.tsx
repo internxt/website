@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import { isMobile } from 'react-device-detect';
+import React from 'react';
 import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '../lib/get-download-url';
 import Navbar from '../components/layout/Navbar';
@@ -10,7 +8,6 @@ import Footer from '../components/layout/Footer';
 import InfoSection from '../components/password-generator/InfoSection';
 import CtaSection from '../components/shared/CtaSection';
 import ToolsSection from '../components/shared/ToolsSection';
-import FaqAccordion from '../components/shared/FAQAccordion';
 import FAQSection from '../components/photos/FAQSection';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
