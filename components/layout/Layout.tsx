@@ -25,7 +25,7 @@ interface LayoutProps {
 
 const INTERNXT_URL = 'https://internxt.com';
 
-const excludedPaths = ['/pricing'];
+const excludedPaths = ['/password-generator'];
 const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
