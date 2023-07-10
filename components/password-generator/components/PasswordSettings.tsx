@@ -76,9 +76,9 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
     <>
       <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-x-3 lg:space-y-0">
         <div className="flex flex-row items-center space-x-3">
-          <p className="text-xl font-medium text-gray-100">{textContent.length}</p>
+          <p className="text-base font-medium text-gray-100">{textContent.length}</p>
           <div className="flex  rounded-lg border border-gray-10 py-1 px-2">
-            <p className="text-xl font-medium text-gray-100">{passwordProperties.length}</p>
+            <p className="text-base font-medium text-gray-100">{passwordProperties.length}</p>
           </div>
         </div>
         <div className="flex w-full flex-1 flex-col">
@@ -112,7 +112,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
                 checked={passwordProperties.uppercase}
               />
             </div>
-            <p className="text-xl font-medium text-gray-100">{textContent.options.uppercase}</p>
+            <p className="text-base font-medium text-gray-100">{textContent.options.uppercase}</p>
           </div>
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
@@ -127,7 +127,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
                 checked={passwordProperties.lowercase}
               />
             </div>
-            <p className="text-xl font-medium text-gray-100">{textContent.options.lowercase}</p>
+            <p className="text-base font-medium text-gray-100">{textContent.options.lowercase}</p>
           </div>
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
@@ -142,7 +142,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
                 checked={passwordProperties.numbers}
               />
             </div>
-            <p className="text-xl font-medium text-gray-100">{textContent.options.numbers}</p>
+            <p className="text-base font-medium text-gray-100">{textContent.options.numbers}</p>
           </div>
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
@@ -157,7 +157,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
                 checked={passwordProperties.symbols}
               />
             </div>
-            <p className="text-xl font-medium text-gray-100">{textContent.options.symbols}</p>
+            <p className="text-base font-medium text-gray-100">{textContent.options.symbols}</p>
           </div>
         </div>
       </div>

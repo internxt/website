@@ -15,7 +15,7 @@ import FAQSection from '../components/photos/FAQSection';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
-const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
+const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-generator');
 
   return (
@@ -24,7 +24,7 @@ const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <InfoSection textContent={langJson.InfoSection} />
+      <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
 
       <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
@@ -55,6 +55,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/password-generator.json`);
+  const bannerText = require(`../assets/lang/en/banners.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
@@ -68,6 +69,7 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
+      bannerText,
     },
   };
 }

@@ -62,9 +62,9 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
     <div className="flex w-full flex-col space-y-8">
       <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-y-0 lg:space-x-3">
         <div className="flex flex-row items-center space-x-3">
-          <p className="text-xl font-medium text-gray-100">{textContent.length}</p>
+          <p className="text-base font-medium text-gray-100">{textContent.length}</p>
           <div className="flex  rounded-lg border border-gray-10 py-1 px-2">
-            <p className="text-xl font-medium text-gray-100">{passphraseProperties.words}</p>
+            <p className="text-base font-medium text-gray-100">{passphraseProperties.words}</p>
           </div>
         </div>
         <div className="flex w-full flex-1 flex-col">
@@ -98,7 +98,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
               checked={passphraseProperties.capitalize}
             />
           </div>
-          <p className="text-xl font-medium text-gray-100">{textContent.options.capitalize}</p>
+          <p className="text-base font-medium text-gray-100">{textContent.options.capitalize}</p>
         </div>
         <div className="flex flex-row items-center space-x-3">
           <div className="flex flex-col">
@@ -113,12 +113,12 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
               checked={passphraseProperties.number}
             />
           </div>
-          <p className="text-xl font-medium text-gray-100">{textContent.options.numbers}</p>
+          <p className="text-base font-medium text-gray-100">{textContent.options.numbers}</p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center lg:flex-row">
         <div className="flex w-full flex-col items-start space-y-3 md:flex-row md:justify-between md:space-y-0">
-          <p className="text-xl font-medium text-gray-100">{textContent.options.separator.title}</p>
+          <p className="text-base font-medium text-gray-100">{textContent.options.separator.title}</p>
           {textContent.options.separator.options.map((item) => (
             <div className="flex flex-row items-center space-x-3">
               <div className="flex flex-col">
@@ -133,7 +133,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
                   checked={item}
                 />
               </div>
-              <p className="text-xl font-medium text-gray-100">{item === '\n' ? 'Space' : item}</p>
+              <p className="text-base font-medium text-gray-100">{item === '\n' ? 'Space' : item}</p>
             </div>
           ))}
         </div>
