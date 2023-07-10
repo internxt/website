@@ -1,18 +1,22 @@
 import { CirclesThree, Fingerprint, Hash, NumberCircleThree, Ruler, TextAa, TextT } from '@phosphor-icons/react';
+import { useRouter } from 'next/router';
 import SignUpInline from '../auth/SignUpInline';
 import SignUpBanner from '../banners/SignUpBanner';
 import CtaSection from '../shared/CtaSection';
 import RenderDescription from '../shared/RenderDescription';
 
 const InfoSection = ({ textContent, bannerText }): JSX.Element => {
+  const router = useRouter();
+  const lang = router.locale;
+
   const iconSize = 32;
   const tipIcons = [
-    <Ruler size={iconSize} />,
-    <TextT size={iconSize} />,
-    <TextAa size={iconSize} />,
-    <NumberCircleThree size={iconSize} />,
-    <Hash size={iconSize} />,
-    <CirclesThree size={iconSize} />,
+    <Ruler size={iconSize} key={0} />,
+    <TextT size={iconSize} key={1} />,
+    <TextAa size={iconSize} key={2} />,
+    <NumberCircleThree size={iconSize} key={3} />,
+    <Hash size={iconSize} key={4} />,
+    <CirclesThree size={iconSize} key={5} />,
   ];
   const cards1 = [
     {
@@ -44,7 +48,7 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
-        <SignUpBanner textContent={bannerText} lang={'en'} />
+        <SignUpBanner textContent={bannerText} lang={lang} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
         <div className="gap flex flex-row flex-wrap items-center justify-center gap-8">

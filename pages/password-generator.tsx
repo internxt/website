@@ -55,7 +55,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/password-generator.json`);
-  const bannerText = require(`../assets/lang/en/banners.json`);
+  const bannerText = require(`../assets/lang/${lang}/banners.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
