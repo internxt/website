@@ -349,6 +349,10 @@ export default function Footer({
                     <Link href="/virus-scanner" locale={lang} passHref>
                       <a className="hover:text-primary">{textContent.FooterSection.sections.tools.fileVirusScan}</a>
                     </Link>
+
+                    <Link href="/password-generator" locale={lang} passHref>
+                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.passwordGenerator}</a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -657,6 +661,9 @@ export default function Footer({
 
                       <Link href="/virus-scanner" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
+                      </Link>
+                      <Link href="/password-generator" locale={lang} passHref>
+                        {textContent.FooterSection.sections.tools.passwordGenerator}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

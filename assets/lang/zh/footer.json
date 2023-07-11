@@ -65,7 +65,8 @@
         "temporaryEmail": "临时邮箱",
         "fileVirusScan": "文件病毒扫描器",
         "passwordChecker": "密码检查器",
-        "byteConverter": "字节转换器"
+        "byteConverter": "字节转换器",
+        "passwordGenerator": "密码生成器"
       }
     }
   },

@@ -65,7 +65,8 @@
         "temporaryEmail": "Временная почта",
         "fileVirusScan": "Сканер файлов на наличие вирусов",
         "passwordChecker": "Программа проверки паролей",
-        "byteConverter": "Конвертер байтов"
+        "byteConverter": "Конвертер байтов",
+        "passwordGenerator": "Генератор паролей"
       }
     }
   },
