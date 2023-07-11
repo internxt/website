@@ -65,7 +65,8 @@
         "temporaryEmail": "Email temporanea",
         "fileVirusScan": "Scanner di file virus",
         "passwordChecker": "Password Checker",
-        "byteConverter": "Byte Converter"
+        "byteConverter": "Byte Converter",
+        "passwordGenerator": "Generatore di Password"
       }
     }
   },

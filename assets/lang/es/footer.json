@@ -65,7 +65,8 @@
         "temporaryEmail": "Correo Temporal",
         "fileVirusScan": "Escaner de Virus",
         "passwordChecker": "Comprobador de Contraseñas",
-        "byteConverter": "Conversor de unidades"
+        "byteConverter": "Conversor de Unidades",
+        "passwordGenerator": "Generador de Contraseñas"
       },
       "language": "Idioma"
     }
