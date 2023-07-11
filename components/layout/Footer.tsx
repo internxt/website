@@ -42,38 +42,6 @@ export default function Footer({
       }`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 pt-16 sm:p-20 sm:py-12">
-        {lang === 'es' && (
-          <div className="mb-16 flex flex-col justify-center space-y-6 rounded-lg border border-gray-5 bg-white py-8 sm:space-x-20">
-            <div className="mx-auto flex max-w-2xl flex-col items-center px-8">
-              <div className="mb-8 flex flex-row flex-wrap items-center justify-center">
-                <img
-                  loading="lazy"
-                  className="mx-4 h-16"
-                  src="../../logos/investors/eu.webp"
-                  alt="Unión Europea"
-                  draggable="false"
-                />
-                <img
-                  loading="lazy"
-                  className="mx-4 h-14"
-                  src="https://www.camaravalencia.com/Style%20Library/web2016/img/logo-camara-valencia.png"
-                  alt="Cámara Valencia"
-                  draggable="false"
-                />
-              </div>
-              <p className="text-gray- text-center text-xs">
-                <span className="font-medium">
-                  "INTERNXT UNIVERSAL TECHNOLOGIES SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo
-                  objetivo es mejorar la competitividad de las Pymes y gracias al cual ha puesto en marcha un Plan de
-                  Marketing Digital Internacional con el objetivo de mejorar su posicionamiento online en mercados
-                  exteriores durante el año 2021. Para ello ha contado con el apoyo del Programa XPANDE DIGITAL de la
-                  Cámara de Comercio de Valencia."
-                </span>
-              </p>
-              <p className="mt-4 text-center text-base font-medium lg:mt-6 lg:max-w-lg">"Una manera de hacer Europa"</p>
-            </div>
-          </div>
-        )}
         <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-y-0 lg:space-x-32 lg:text-left">
           {/* Download app for iOS and Android */}
 
@@ -316,7 +284,7 @@ export default function Footer({
                       </a>
                     </Link>
                     <Link href="/what-does-google-know-about-me" locale={lang} passHref>
-                      <a className="flex  items-center hover:text-primary">
+                      <a className="flex items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                         <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
@@ -326,7 +294,7 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex max-w-[180px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[220px] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
                   <div
@@ -351,7 +319,12 @@ export default function Footer({
                     </Link>
 
                     <Link href="/password-generator" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.passwordGenerator}</a>
+                      <a className="flex items-center hover:text-primary">
+                        {textContent.FooterSection.sections.tools.passwordGenerator}
+                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                          {textContent.FooterSection.new}
+                        </div>
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -364,6 +337,42 @@ export default function Footer({
                 darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'
               } mb-10`}
             />
+
+            {lang === 'es' && (
+              <div className="mb-16 flex w-full max-w-[900px] flex-row">
+                <div className="mx-auto flex w-full flex-row items-center space-x-10">
+                  <div className="flex w-full max-w-[130px] flex-col flex-wrap items-start space-y-3">
+                    <img
+                      loading="lazy"
+                      className="h-12"
+                      src="../../logos/investors/eu.webp"
+                      alt="Unión Europea"
+                      draggable="false"
+                    />
+                    <img
+                      loading="lazy"
+                      className="h-12"
+                      src="https://www.camaravalencia.com/Style%20Library/web2016/img/logo-camara-valencia.png"
+                      alt="Cámara Valencia"
+                      draggable="false"
+                    />
+                  </div>
+                  <div className="flex w-full flex-col items-start space-y-4">
+                    <p className="text-sm text-gray-80">
+                      "INTERNXT UNIVERSAL TECHNOLOGIES SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional
+                      cuyo objetivo es mejorar la competitividad de las Pymes y gracias al cual ha puesto en marcha un
+                      Plan de Marketing Digital Internacional con el objetivo de mejorar su posicionamiento online en
+                      mercados exteriores durante el año 2021. Para ello ha contado con el apoyo del Programa XPANDE
+                      DIGITAL de la Cámara de Comercio de Valencia."
+                    </p>
+
+                    <p className="mt-4 text-center text-sm font-semibold text-gray-100 lg:mt-6 lg:max-w-lg">
+                      "Una manera de hacer Europa"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Logos */}
             <div className="flex w-full max-w-[900px] flex-row justify-between">
