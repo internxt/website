@@ -2,18 +2,18 @@ import axios from 'axios';
 
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export interface Product {
+const PRODUCTS_URL =
+  process.env.NODE_ENV === 'production'
+    ? `${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`
+    : `${process.env.NEXT_PUBLIC_PAYMENTS_API}/prices`;
+
+export type Product = {
   id: string;
   currency: string;
   amount: number;
   bytes: number;
   interval: string;
-}
-
-const PRODUCTS_URL =
-  process.env.NODE_ENV === 'production'
-    ? `${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`
-    : `${process.env.NEXT_PUBLIC_PAYMENTS_API}/prices`;
+};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<Product | void> {
   if (req.method === 'GET') {

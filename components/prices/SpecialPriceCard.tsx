@@ -4,8 +4,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
-import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { checkout } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
 import { Interval, stripeService } from '../services/stripeService';
@@ -21,7 +20,7 @@ export default function SpecialPriceCard({
   lang,
   country,
 }: PriceCardProps) {
-  const [coupon, setCoupon] = React.useState(null);
+  const [coupon, setCoupon] = useState(null);
   const isPopularYearly = popular && billingFrequency === Interval.Year;
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -55,6 +54,7 @@ export default function SpecialPriceCard({
     checkout({
       planId: cta[1],
       couponCode: coupon,
+      discount: 75,
       mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
     });
   };

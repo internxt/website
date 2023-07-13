@@ -67,6 +67,7 @@ const HeroSection = ({ textContent }) => {
                 checkout({
                   planId: priceId,
                   couponCode: coupon,
+                  discount: 75,
                 })
               }
             >

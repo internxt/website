@@ -11,7 +11,6 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/techcult/CtaSection';
 
 import axios from 'axios';
-import LogIn from '../components/auth/LogIn';
 import SignUp from '../components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 

@@ -194,13 +194,15 @@ type PaymentCheckoutConfig = {
   planId: string;
   couponCode?: string;
   mode?: 'subscription' | 'payment';
+  discount?: number;
 };
-export function checkout({ planId, couponCode, mode }: PaymentCheckoutConfig): void {
+export function checkout({ planId, couponCode, mode, discount }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
     planId && params.set('planId', planId);
     couponCode && params.set('couponCode', couponCode);
+    discount && params.set('discount', String(discount));
     params.set('mode', mode ? mode : 'subscription');
 
     const checkoutUrl = getAuthFlowCreateUserURL({
