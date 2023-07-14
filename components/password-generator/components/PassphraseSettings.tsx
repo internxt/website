@@ -14,6 +14,7 @@ interface PassphraseProperties {
 const space = {
   en: 'Space',
   es: 'Espacio',
+  ru: 'Пробел',
 };
 
 const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerate }) => {
