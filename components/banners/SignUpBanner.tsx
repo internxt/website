@@ -2,7 +2,7 @@ import React from 'react';
 import SignUpInline from '../auth/SignUpInline';
 import Image from 'next/image';
 
-const SignUpBanner = ({ textContent, lang }) => {
+const SignUpBanner = ({ textContent, lang }: { textContent: any; lang: string }) => {
   const signUpLang = require(`../../assets/lang/${lang}/home.json`);
 
   return (
@@ -13,7 +13,7 @@ const SignUpBanner = ({ textContent, lang }) => {
             {textContent.line1} <span className="text-primary">{textContent.blueText}</span>
           </p>
           <div className="flex w-full">
-            <SignUpInline textContent={signUpLang.HeroSection.SignUp} />
+            <SignUpInline textContent={signUpLang.HeroSection.SignUp} isBanner />
           </div>
         </div>
         <div className="absolute -right-64 flex items-center">

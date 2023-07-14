@@ -1,11 +1,10 @@
 import { CirclesThree, Fingerprint, Hash, NumberCircleThree, Ruler, TextAa, TextT } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
-import SignUpInline from '../auth/SignUpInline';
 import SignUpBanner from '../banners/SignUpBanner';
 import CtaSection from '../shared/CtaSection';
 import RenderDescription from '../shared/RenderDescription';
 
-const allowedLangForImage = ['en', 'es'];
+const allowedLangForImage = ['en', 'es', 'ru'];
 
 const InfoSection = ({ textContent, bannerText }): JSX.Element => {
   const router = useRouter();
@@ -50,7 +49,7 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
-        <SignUpBanner textContent={bannerText} lang={lang} />
+        <SignUpBanner textContent={bannerText} lang={lang} isBanner />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
         <div className="gap flex flex-row flex-wrap items-center justify-center ">
