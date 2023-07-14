@@ -53,18 +53,22 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
         <SignUpBanner textContent={bannerText} lang={lang} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
-        <div className="gap flex flex-row flex-wrap items-center justify-center gap-8">
-          {cards1.map((item) => (
-            <div className="z-10 flex max-w-[320px] flex-col rounded-2xl bg-white p-10" key={item.title}>
-              <div className="z-10 flex max-w-[205px] flex-col items-center justify-center space-y-6 text-center lg:items-start lg:text-left">
-                <item.icon className="h-8 w-8 text-primary" />
-                <p className="text-2xl font-medium text-gray-100">{item.title}</p>
-                <div className="flex flex-row items-center justify-center text-primary">
-                  <p className="text-2xl text-gray-80">{item.description}</p>
+        <div className="gap flex flex-row flex-wrap items-center justify-center ">
+          <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl p-10">
+            {cards1.map((item) => (
+              <div className="1 100% flex flex-1">
+                <div className="flex h-full flex-col rounded-2xl bg-white p-10">
+                  <div className="flex max-w-[200px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
+                    <item.icon className="h-8 w-8 text-primary" />
+                    <p className="text-2xl font-medium text-gray-100">{item.title}</p>
+                    <div className="flex flex-row items-center justify-center text-primary">
+                      <p className="text-2xl text-gray-80">{item.description}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
