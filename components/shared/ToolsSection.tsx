@@ -28,7 +28,7 @@ const ToolsSection = ({ textContent, lang, maxWidth }: { textContent: any; lang:
                   onClick={() =>
                     window.open(`${window.location.origin}/${router.locale}/${item.UrlRedirectName}`, '_blank')
                   }
-                  className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
+                  className="flex max-w-[200px] cursor-pointer flex-row items-center justify-center text-primary hover:underline"
                 >
                   <p className="text-sm font-semibold">{item.description}</p>
                   <CaretRight size={14} weight={'bold'} />
