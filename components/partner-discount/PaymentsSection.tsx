@@ -42,14 +42,14 @@ const PaymentsSection = ({ textContent, country }) => {
                 Object.values(products.individuals['year']).map((product: any) => {
                   return (
                     <PriceCard
-                      plan={textContent.card1.plan}
-                      price={textContent.card1.price}
+                      plan={product.storage}
+                      price={product.price}
                       country={country}
-                      cta={['checkout', 'GB2012']}
+                      cta={['checkout', product.priceId]}
                       month={textContent.month}
-                      annualPrice={textContent.card1.annualPrice}
-                      billedAnnually={textContent.billedAnnually}
+                      annualPrice={product.price}
                       info={textContent.infoPlan}
+                      billedAnnually={textContent.billedAnnually}
                       isPopular={false}
                       mostPopular={''}
                     />
