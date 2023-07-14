@@ -5,6 +5,8 @@ import SignUpBanner from '../banners/SignUpBanner';
 import CtaSection from '../shared/CtaSection';
 import RenderDescription from '../shared/RenderDescription';
 
+const allowedLangForImage = ['en', 'es'];
+
 const InfoSection = ({ textContent, bannerText }): JSX.Element => {
   const router = useRouter();
   const lang = router.locale;
@@ -78,7 +80,9 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
           </ul>
         </div>
         <img
-          src={`/images/converter-tool/PasswordChecker${lang.toUpperCase()}.png`}
+          src={`/images/converter-tool/PasswordChecker${
+            allowedLangForImage.includes(lang) ? lang.toUpperCase() : 'EN'
+          }.png`}
           alt="Password Checker"
           className="w-full max-w-4xl cursor-pointer px-5"
           onClick={() => {
