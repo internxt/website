@@ -55,6 +55,10 @@
     "line1": "Now that you’re aware, protect yourself with",
     "blueText": "Internxt secure cloud storage"
   },
+  "SignUpPasswordGenerator": {
+    "line1": "Shield your accounts with unique passwords,",
+    "blueText": "join Internxt for free"
+  },
   "privacyDirectoryBanner": {
     "line1": "Join the fight for privacy and build a better internet",
     "blueText": "with Internxt"
