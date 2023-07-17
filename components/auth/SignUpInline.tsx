@@ -10,7 +10,7 @@ interface SignUpInlineProps {
   textContent: any;
   error?: string;
   loading?: boolean;
-  isBlog?: boolean;
+  isBanner?: boolean;
 }
 
 export default function SignUpInline(props: SignUpInlineProps) {
@@ -99,7 +99,9 @@ export default function SignUpInline(props: SignUpInlineProps) {
         <div className="w-full">
           <PrimaryButton
             id="signupInlineSubmit"
-            className="h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 hover:bg-primary-dark sm:text-base"
+            className={`h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 hover:bg-primary-dark ${
+              props.isBanner ? 'sm:text-sm' : 'sm:text-base'
+            }`}
             type="submit"
             label={
               <div className="flex flex-row items-center space-x-1.5">
