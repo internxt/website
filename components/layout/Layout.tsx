@@ -25,7 +25,7 @@ interface LayoutProps {
 
 const INTERNXT_URL = 'https://internxt.com';
 
-const excludedPaths = ['/password-generator'];
+const includedPaths = ['/'];
 const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
@@ -44,7 +44,7 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = !excludedPaths.includes(router.pathname);
+  const showBanner = includedPaths.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const [installPrompt, setInstallPrompt] = React.useState<Event>();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
