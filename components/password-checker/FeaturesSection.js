@@ -168,7 +168,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
             <p className="text-lg text-gray-80 md:max-w-2xl">
               {textContent.section6.subtitle2.part1}{' '}
-              <Link href="/virus-scanner" lang={lang} passHref>
+              <Link href="/password-generator" lang={lang} passHref>
                 <a target="_top" rel="noreferrer" className="text-primary underline">
                   {textContent.section6.subtitle2.link}
                 </a>
@@ -178,12 +178,22 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
             <p className="text-lg text-gray-80 md:max-w-2xl">
               {textContent.section6.subtitle3.part1}{' '}
-              <Link href="/privacy-directory" lang={lang} passHref>
+              <Link href="/virus-scanner" lang={lang} passHref>
                 <a target="_top" rel="noreferrer" className="text-primary underline">
                   {textContent.section6.subtitle3.link}
                 </a>
               </Link>
               {textContent.section6.subtitle3.part2}
+            </p>
+
+            <p className="text-lg text-gray-80 md:max-w-2xl">
+              {textContent.section6.subtitle4.part1}{' '}
+              <Link href="/privacy-directory" lang={lang} passHref>
+                <a target="_top" rel="noreferrer" className="text-primary underline">
+                  {textContent.section6.subtitle4.link}
+                </a>
+              </Link>
+              {textContent.section6.subtitle4.part2}
             </p>
           </div>
           <div className="flex cursor-pointer">

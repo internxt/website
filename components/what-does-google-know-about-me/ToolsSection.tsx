@@ -14,10 +14,13 @@ const ToolsSection = ({ textContent }) => {
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <RenderDescription description={textContent.description} />
         </div>
-        <div className="grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-2">
+        <div className={`gap flex max-w-[672px] flex-row flex-wrap items-center justify-center gap-8`}>
           {textContent.tools.map((item, index) => (
-            <div className="z-10 flex h-[300px] max-w-[320px] flex-col rounded-2xl bg-white p-10" key={item.title}>
-              <div className="z-10 flex max-w-[240px] flex-col items-center justify-center space-y-6  text-center ">
+            <div
+              className="z-10 flex h-[300px] w-full max-w-[320px] flex-col rounded-2xl bg-white p-10"
+              key={item.title}
+            >
+              <div className="z-10 flex h-full max-w-[240px] flex-col items-center justify-between bg-white text-center ">
                 <Image
                   src={item.url}
                   width={item.width}
@@ -27,10 +30,12 @@ const ToolsSection = ({ textContent }) => {
                   loading={'lazy'}
                   alt={item.title}
                 />
-                <p className="max-w-[200px] text-2xl font-medium">{item.title}</p>
+                <p className="max-w-[200px] bg-white text-2xl font-medium">{item.title}</p>
                 <div
-                  onClick={() => window.open(`${window.location.origin}${lang}/${item.UrlRedirectName}`, '_blank')}
-                  className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
+                  onClick={() =>
+                    window.open(`${window.location.origin}/${router.locale}/${item.UrlRedirectName}`, '_blank')
+                  }
+                  className="flex max-w-[200px] cursor-pointer flex-row items-center justify-center text-primary hover:underline"
                 >
                   <p className="text-sm font-semibold">{item.description}</p>
                   <CaretRight size={14} weight={'bold'} />
