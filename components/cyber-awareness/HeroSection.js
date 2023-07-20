@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="text-2xl font-medium">{textContent.paragraph3.title}</p>
           <p className="mt-5 text-lg font-normal">{textContent.paragraph3.body}</p>
         </div>
-        {lang !== 'en' && (
+        {lang === 'es' && (
           <>
             <div className="mt-16 flex xl:px-64">
               <img
