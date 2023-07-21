@@ -6,14 +6,14 @@ import HeroSection from '../components/partner-discount/HeroSection';
 import PaymentsSection from '../components/partner-discount/PaymentsSection';
 import InfoSection from '../components/partner-discount/InfoSection';
 import Footer from '../components/layout/Footer';
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'partner-discount');
   const [country, setCountry] = React.useState('ES');
 
   async function getCountryCode() {
-    const options = {
+    const options: AxiosRequestConfig<any> = {
       method: 'GET',
       url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
     };
@@ -28,13 +28,7 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
   });
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      isSendSnackbar={false}
-      segmentName="Partners"
-      lang={lang}
-    >
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
@@ -43,7 +37,7 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
 
       <InfoSection textContent={langJson.InfoSection} />
 
-      <Footer textContent={footerLang} />
+      <Footer textContent={footerLang} lang={'en'} />
     </Layout>
   );
 };

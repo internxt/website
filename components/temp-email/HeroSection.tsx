@@ -31,14 +31,14 @@ const HeroSection = ({ textContent }) => {
   useEffect(() => {
     const setupTime = localStorage.getItem('setupTime');
     if (setupTime !== null) {
-      if (now - setupTime > hours * 60 * 60 * 1000) {
+      if (now - Number(setupTime) > hours * 60 * 60 * 1000) {
         removeLocalStorage();
       }
     }
     if (localStorage.getItem('email') !== null) {
       setEmail(localStorage.getItem('email'));
     } else {
-      localStorage.setItem('setupTime', now);
+      localStorage.setItem('setupTime', String(now));
       createEmail().then((res) => {
         localStorage.setItem('email', res[0]);
         setEmail(res[0]);
@@ -69,7 +69,6 @@ const HeroSection = ({ textContent }) => {
               }`}
             >
               <div
-                disabled
                 className={`flex h-full w-full cursor-pointer flex-row items-center justify-between rounded-xl bg-gray-1 shadow-sm ${
                   borderColor ? 'border border-primary' : ''
                 } px-4 py-3`}

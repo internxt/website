@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Background.module.scss';
 import { toast } from 'react-toastify';
 
-const HeroSection = ({ textContent, isTechradar }) => {
+const HeroSection = ({ textContent, isTechradar }: { textContent: any; isTechradar?: boolean }) => {
   const open = () => toast.success('Copied to clipboard!');
 
   const subtitle1Partner = textContent.subtitle.split('SPECIAL15')[0];

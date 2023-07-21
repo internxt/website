@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { steps, infoCards, bulletedList } from './components/cards';
+import { infoCards } from './components/cards';
 import SignUpBanner from '../banners/SignUpBanner';
 
 const InfoSection = ({ textContent, bannerText, lang }) => {
@@ -51,7 +51,6 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
                   className="flex flex-col items-start justify-start bg-white p-8 sm:p-10 md:max-w-[488px]"
                 >
                   <card.icon className="mb-6 text-4xl text-primary" />
-
                   <div className="flex w-full max-w-[400px] flex-col">
                     <p className="mb-6 text-2xl font-medium">{card.title}</p>
                     <p className="text-base text-cool-gray-80 sm:text-lg">{card.description}</p>
