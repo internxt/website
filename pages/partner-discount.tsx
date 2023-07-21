@@ -3,7 +3,7 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/partner-discount/HeroSection';
-import PaymentSection from '../components/annual/PaymentSection';
+import PaymentSection from '../components/partner-discount/PaymentSection';
 import FeatureSection from '../components/annual/FeatureSection';
 import InfoSection from '../components/home/InfoSection';
 import CtaSection from '../components/pricing/CtaSection';
