@@ -162,7 +162,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 className="text-primary underline"
               >
                 {textContent.section6.subtitle1.link}
-              </a>{' '}
+              </a>
               {textContent.section6.subtitle1.part2}
             </p>
 
