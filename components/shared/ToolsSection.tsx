@@ -16,10 +16,7 @@ const ToolsSection = ({ textContent, lang, maxWidth }: { textContent: any; lang:
           } max-w-[672px] items-center justify-center gap-8`}
         >
           {textContent.toolsCard.map((item, index) => (
-            <div
-              className="z-10 flex h-[300px] w-full max-w-[320px] flex-col rounded-2xl bg-white p-10"
-              key={item.title}
-            >
+            <div className="z-10 flex h-[300px] w-full max-w-[320px] flex-col rounded-2xl bg-white p-10" key={index}>
               <div className="z-10 flex h-full max-w-[240px] flex-col items-center justify-between bg-white text-center ">
                 <Image
                   src={item.url}
