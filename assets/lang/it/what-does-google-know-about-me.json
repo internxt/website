@@ -214,13 +214,6 @@
         "title": "Temporary Email",
         "width": 95,
         "description": "Mail now"
-      },
-      {
-        "url": "/images/temp-email/password-generator.svg",
-        "UrlRedirectName": "password-generator",
-        "title": "Free Password Generator",
-        "width": 124,
-        "description": "Generate now"
       }
     ]
   },
