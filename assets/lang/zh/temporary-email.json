@@ -115,6 +115,13 @@
         "width": 95,
         "title": "免费字节转换器",
         "description": "立即转换"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "免费密码生成器",
+        "width": 124,
+        "description": "立即生成"
       }
     ]
   },

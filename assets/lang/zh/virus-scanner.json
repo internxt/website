@@ -127,6 +127,13 @@
         "title": "免费的临时电子邮件",
         "width": 95,
         "description": "现在邮寄"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "免费密码生成器",
+        "width": 124,
+        "description": "立即生成"
       }
     ]
   }
