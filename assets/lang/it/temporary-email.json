@@ -115,6 +115,13 @@
         "width": 95,
         "title": "Convertitore gratuito delle dimensioni in Byte",
         "description": "Converti ora"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "width": 124,
+        "title": "Generatore di password",
+        "description": "Prova ora"
       }
     ]
   },

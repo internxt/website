@@ -115,6 +115,13 @@
         "width": 95,
         "title": "Convertisseur d'octets gratuit",
         "description": " Convertissez maintenant "
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "width": 124,
+        "title": "Générateur de mot de passe",
+        "description": "Essayer maintenant"
       }
     ]
   },

@@ -100,21 +100,28 @@
         "UrlRedirectName": "password-checker",
         "width": 125,
         "title": "Инструмент для проверки пароля",
-        "description": "Проверить сейчас"
+        "description": "узнать подробнее"
       },
       {
         "url": "/images/temp-email/virus-scanner.svg",
         "UrlRedirectName": "virus-scanner",
         "width": 105,
         "title": "сканер файлов на наличие вирусов",
-        "description": "Сканировать сейчас"
+        "description": "узнать подробнее"
       },
       {
         "url": "/images/temp-email/byte-converter.svg",
         "UrlRedirectName": "byte-converter",
         "width": 95,
         "title": "конвертер байтов",
-        "description": "Конвертировать сейчас"
+        "description": "узнать подробнее"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "width": 124,
+        "title": "Генератор паролей",
+        "description": "узнать подробнее"
       }
     ]
   },

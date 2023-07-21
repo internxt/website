@@ -33,7 +33,12 @@ const ToolsSection = ({ textContent, lang, maxWidth }: { textContent: any; lang:
                 <p className="max-w-[200px] bg-white text-2xl font-medium">{item.title}</p>
                 <div
                   onClick={() =>
-                    window.open(`${window.location.origin}/${router.locale}/${item.UrlRedirectName}`, '_blank')
+                    window.open(
+                      `${window.location.origin}${router.locale === 'en' ? '' : `/${router.locale}`}/${
+                        item.UrlRedirectName
+                      }`,
+                      '_blank',
+                    )
                   }
                   className="flex max-w-[200px] cursor-pointer flex-row items-center justify-center text-primary hover:underline"
                 >
