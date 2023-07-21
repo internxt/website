@@ -116,7 +116,7 @@ const InfoSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <div className="flex flex-col items-center bg-black bg-opacity-5 px-5 py-20">
         <div className="flex flex-col items-center space-y-16">
-          {lang === 'en' ? (
+          {lang !== 'es' ? (
             <div>
               <p className="text-center text-5xl font-semibold">{textContent.title}</p>
             </div>

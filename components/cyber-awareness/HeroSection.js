@@ -17,7 +17,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="mt-5 text-lg font-normal">{textContent.paragraph1.body}</p>
           <p className="mt-8 text-lg font-normal">{textContent.paragraph1.body2}</p>
         </div>
-        <div className="mt-16 flex xl:px-64">
+        <div className="mt-16 flex w-full items-center justify-center">
           <SignUpBanner textContent={bannerText} lang={lang} />
         </div>
       </div>
@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="text-2xl font-medium">{textContent.paragraph3.title}</p>
           <p className="mt-5 text-lg font-normal">{textContent.paragraph3.body}</p>
         </div>
-        {lang !== 'en' && (
+        {lang === 'es' && (
           <>
             <div className="mt-16 flex xl:px-64">
               <img

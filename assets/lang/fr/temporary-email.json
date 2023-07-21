@@ -93,7 +93,7 @@
     }
   },
   "ToolsSection": {
-    "title": "Autres outils gratuits de protection de la vie privée comme notre email jetable",
+    "title": "Essayez les outils en ligne gratuits d'Internxt :",
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",
@@ -115,6 +115,13 @@
         "width": 95,
         "title": "Convertisseur d'octets gratuit",
         "description": " Convertissez maintenant "
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "width": 124,
+        "title": "Générateur de mot de passe",
+        "description": "Essayer maintenant"
       }
     ]
   },

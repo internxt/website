@@ -93,7 +93,7 @@
     }
   },
   "ToolsSection": {
-    "title": "Otras herramientas gratuitas de privacidad como nuestro buzón temporal",
+    "title": "Otras herramientas de privacidad gratuitas de Internxt",
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",
@@ -115,6 +115,13 @@
         "width": 95,
         "title": "Convertidor de unidades gratuito",
         "description": "Convertir ahora"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Generador de contraseñas",
+        "width": 124,
+        "description": "Probar ahora"
       }
     ]
   },

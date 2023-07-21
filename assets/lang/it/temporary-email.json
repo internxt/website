@@ -93,7 +93,7 @@
     }
   },
   "ToolsSection": {
-    "title": "Altri strumenti per la privacy gratuiti, come la nostra casella e-mail temporanea",
+    "title": "Prova gli strumenti online gratuiti di Internxt dedicati alla sicurezza:",
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",
@@ -115,6 +115,13 @@
         "width": 95,
         "title": "Convertitore gratuito delle dimensioni in Byte",
         "description": "Converti ora"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "width": 124,
+        "title": "Generatore di password",
+        "description": "Prova ora"
       }
     ]
   },

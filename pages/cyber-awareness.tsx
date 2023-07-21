@@ -38,7 +38,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
         segmentName={'Cyber Awareness'}
       >
         <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
-        {lang === 'en' || lang === 'rs' ? (
+        {lang !== 'es' ? (
           <>
             <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
 
