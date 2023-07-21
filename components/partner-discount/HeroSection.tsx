@@ -34,7 +34,7 @@ const HeroSection = ({ textContent }) => {
                   onClick={() => {
                     //Copy to clipboard
                     navigator.clipboard.writeText(description.special15);
-                    notificationService.openSuccessToast('Copy to clipboard');
+                    notificationService.openSuccessToast('Copied to clipboard');
                   }}
                 >
                   {description.special15}
