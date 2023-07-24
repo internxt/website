@@ -46,7 +46,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/partner-discount.json`);
+  const langJson = require(`../assets/lang/en/techradar-discount.json`);
   const navbarLang = require(`../assets/lang/en/navbar.json`);
   const footerLang = require(`../assets/lang/en/footer.json`);
 

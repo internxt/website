@@ -62,7 +62,7 @@ const HeroSection = ({ textContent }) => {
                 </button>
               }
             </p>
-            <div className="flex rounded-full bg-white px-9 py-4">
+            <div className="flex rounded-lg bg-white px-9 py-4">
               <a href="#pricing">
                 <button className="text-lg font-normal text-primary" onClick={() => {}}>
                   {textContent.cta}
