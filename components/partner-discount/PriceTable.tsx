@@ -24,9 +24,14 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
         console.error(err);
       });
 
-    stripeService.getCoupon(CouponType.Special15Coupon).then((coupon) => {
-      setCoupon(coupon);
-    });
+    stripeService
+      .getCoupon(CouponType.Special15Coupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   return (
