@@ -1,13 +1,15 @@
 /* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
-import PriceCard from '../prices/PriceCard';
+import PriceCard from '../partner-discount/PriceCard';
 import { stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
+  const [coupon, setCoupon] = useState(null);
 
   useEffect(() => {
     stripeService
@@ -21,6 +23,10 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
       .catch((err) => {
         console.error(err);
       });
+
+    stripeService.getCoupon(CouponType.Special15Coupon).then((coupon) => {
+      setCoupon(coupon);
+    });
   }, []);
 
   return (
@@ -59,6 +65,7 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
                     popular={product.storage === '200GB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
+                    coupon={coupon}
                   />
                 );
               })}

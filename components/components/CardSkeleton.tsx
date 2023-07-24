@@ -12,7 +12,7 @@ import { PriceCardProps } from '../prices/PriceCard';
 
 export default function CardSkeleton() {
   return (
-    <div className="priceCard card m-2 flex max-w-xs flex-shrink-0 flex-grow-0 animate-pulse flex-col overflow-hidden rounded-2xl xs:w-72">
+    <div className="priceCard card m-2 flex w-full max-w-xs flex-shrink-0 flex-grow-0 animate-pulse flex-col overflow-hidden rounded-2xl xs:w-72">
       <div className="info flex flex-col items-center justify-center rounded-t-2xl bg-white p-6 pt-6">
         <Skeleton height={30} width={70} className="rounded-full" />
 

@@ -21,7 +21,7 @@ const FeatureSection = ({ textContent }) => (
         </button>
       </RevealY>
 
-      <RevealY className="flex w-full flex-col items-center justify-center pt-6">
+      <RevealY className="hidden w-full flex-col items-center justify-center pt-6 lg:flex">
         <picture>
           <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
           <img

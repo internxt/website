@@ -1,0 +1,59 @@
+{
+  "HeroSection": {
+    "title1": {
+      "line1": "Get the safest cloud storage",
+      "line2": "for all your files, photos and more"
+    },
+    "subtitle1": "Don't forget to use the exclusive coupon code TECHRADAR",
+    "card": "\"Individual users and businesses that prioritize security will enjoy advanced security features and commitment to privacy\"",
+    "cta": "Choose your plan"
+  },
+  "PaymentSection": {
+    "title": "Privacy at a reasonable price",
+    "subtitle": "Who says best-in-class security can't be affordable? Protect your privacy and take back total control of your data with any one of our three plans:",
+    "billedAnnually": "Billed annually",
+    "popular": "Most popular",
+    "month": "/month",
+    "card1": {
+      "plan": "20GB",
+      "price": "0.89",
+      "annualPrice": "10.68"
+    },
+    "card2": {
+      "plan": "200GB",
+      "price": "3.49",
+      "annualPrice": "41.88"
+    },
+    "card3": {
+      "plan": "2TB",
+      "price": "8.99",
+      "annualPrice": "107.88"
+    },
+    "infoPlan": {
+      "info1": "30 days money-back guarantee",
+      "info2": "Encrypted file storage and sharing",
+      "info3": "Access your files from any device",
+      "info4": "Get access to all our services"
+    }
+  },
+  "InfoSection": {
+    "title": "How we ensure user privacy",
+    "subtitle": "We take privacy and security very seriously, that's why we employ a stack of technologies and protocols to always ensure tht your data remains safe and private.",
+    "card1": {
+      "title": "Military-grade encryption",
+      "description": "All the data you store in your Internxt account is encrypted with AES-256. This means that the most powerful processor in the world would need twice the age of the universe to decrypt a small file."
+    },
+    "card2": {
+      "title": "Zero-knowledge technology",
+      "description": "We make sure that there is no point in time where files, photos, passwords, or any unencrypted data is visible to unauthorized users or servers."
+    },
+    "card3": {
+      "title": "GDPR-compliant synchronization",
+      "description": "We conform with all GDPR provisions, such as privacy by design, the right to information, and the right to be forgotten, among many others, and are committed to meeting all future provisions."
+    },
+    "card4": {
+      "title": "End-to-end encryption",
+      "description": "Everything you store or transfer is encrypted before leaving your device, making it impossible to decrypt without the user's permission. Even we can't access your files, photos, or passwords."
+    }
+  }
+}

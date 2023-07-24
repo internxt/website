@@ -37,7 +37,7 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
-        <ToolsSection textContent={textContent.ToolsSection} lang={lang} />
+        <ToolsSection textContent={textContent.ToolsSection} />
 
         <QASection textContent={textContent.QASection} />
 
