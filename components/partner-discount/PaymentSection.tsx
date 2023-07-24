@@ -1,15 +1,14 @@
 import React from 'react';
-
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import PriceTable from './PriceTable';
 
 const PaymentSection = ({ lang, textContent }) => {
   return (
     <section id="payment" className="overflow-hidden bg-gray-1 py-20">
-      <div className="flex flex-col space-y-8 pt-10 lg:pt-0">
+      <div className="flex flex-col space-y-8 lg:pt-0">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex w-full max-w-3xl flex-col justify-center px-6 pt-4 text-center">
-            <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
+          <div className="flex w-full max-w-3xl flex-col justify-center px-6 text-center">
+            <h2 className="text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
             <p className="pt-4 text-xl font-normal text-gray-80">{textContent.description}</p>
           </div>
         </div>
