@@ -32,7 +32,7 @@ const FeatureSection = ({ textContent }) => (
           />
         </picture>
       </RevealY>
-      <RevealY className="flex h-full w-full flex-col pt-6">
+      <RevealY className="flex h-full w-full flex-col pt-6 md:hidden">
         <picture>
           <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
           <img
