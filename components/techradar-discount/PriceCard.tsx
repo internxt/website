@@ -3,7 +3,6 @@ import { Check } from '@phosphor-icons/react';
 import { checkout, goToSignUpURL } from '../../lib/auth';
 
 const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
-  const stripeObject = { product: cta[1] };
   const features = [
     {
       feat: info.info1,
@@ -18,17 +17,6 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       feat: info.info4,
     },
   ];
-
-  const getCurrency = () => {
-    switch (country) {
-      case 'US':
-        return '$';
-      case 'GB':
-        return '£';
-      default:
-        return '€';
-    }
-  };
 
   const getFeatures = () => {
     return features.map((feature, index) => {
@@ -65,12 +53,12 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       {/* Prices and billing */}
       <div className="flex flex-col">
         <span className="text-2xl font-medium">
-          {price} {getCurrency()}
+          {price} {country}
           {month}
         </span>
         <span className="text-gray-50">
           {annualPrice}
-          {getCurrency()} {billedAnnually}
+          {country} {billedAnnually}
         </span>
       </div>
 
