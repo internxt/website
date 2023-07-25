@@ -5,33 +5,27 @@ import PriceCard from '../partner-discount/PriceCard';
 import { stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { currencyService } from '../services/currencyService';
 
-export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
+export default function PriceTable({ lang }: { lang: string }) {
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
   const [coupon, setCoupon] = useState(null);
+  const [currency, setCurrency] = useState(null);
 
   useEffect(() => {
-    stripeService
-      .getAllPrices()
+    Promise.all([
+      stripeService.getAllPrices(),
+      currencyService.filterCurrencyByCountry(),
+      stripeService.getCoupon(CouponType.Special15Coupon),
+    ])
       .then((res) => {
-        if (res) {
-          setProducts(res);
-          setLoadingCards(false);
-        }
+        setProducts(res[0]);
+        setCurrency(res[1]);
+        setCoupon(res[2]);
+        setLoadingCards(false);
       })
-      .catch((err) => {
-        console.error(err);
-      });
-
-    stripeService
-      .getCoupon(CouponType.Special15Coupon)
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+      .catch((err) => console.error(err));
   }, []);
 
   return (
@@ -70,6 +64,7 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
                     popular={product.storage === '200GB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
+                    country={currency}
                     coupon={coupon}
                   />
                 );

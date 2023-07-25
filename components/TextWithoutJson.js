@@ -5,11 +5,6 @@ export const buttonDeal = {
   it: 'Get the deal',
 };
 
-export const currency = {
-  US: '$',
-  GB: '£',
-};
-
 export const BFBannerText = {
   en: {
     head: 'Save big on privacy.',

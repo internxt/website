@@ -8,27 +8,18 @@ import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
-import PaymentSection from '../components/lifetime/PaymentSection';
 
 import axios from 'axios';
 import NormalPaymentSection from '../components/lifetime/NormalPaymentSection';
+import { currencyService } from '../components/services/currencyService';
 
 const yepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = React.useState('ES');
-
-  async function getCountryCode() {
-    const options = {
-      method: 'GET',
-      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
-    };
-    const countryCode = await axios(options);
-    return countryCode;
-  }
+  const [country, setCountry] = React.useState('€');
 
   useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
+    currencyService.filterCurrencyByCountry().then((countryCode) => {
+      setCountry(countryCode);
     });
   });
 
@@ -39,17 +30,16 @@ const yepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, 
       segmentName="Lifetime"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-      cta={['Default']}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
-      <HeroSection lang={lang} textContent={langJson.HeroSection} hideTimer />
+      <HeroSection textContent={langJson.HeroSection} hideTimer />
 
       <NormalPaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
 
-      <GetLifetimeSection lang={lang} textContent={langJson.GetLifetimeSection} />
+      <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
-      <FeatureSection lang={lang} textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} />
 
       <CtaSection textContent={langJson.CtaSection} />
 

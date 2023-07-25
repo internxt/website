@@ -12,37 +12,12 @@ import CtaSection from '../components/pricing/CtaSection';
 import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import { toast } from 'react-toastify';
-import ShowSnackbar, { notificationService } from '../components/Snackbar';
+import { currencyService } from '../components/services/currencyService';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [country, setCountry] = useState('ES');
   const [isLifetime, setIsLifetime] = useState(false);
-
-  async function getCountryCode() {
-    const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
-    return countryCode;
-  }
-
-  useEffect(() => {
-    getCountryCode()
-      .then((res) => {
-        setCountry(res.data.country);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
-
-  // useEffect(() => {
-  //   if (showSnackbar) {
-  //     open;
-  //     setShowSnackbar(undefined);
-  //   }
-  // }, [showSnackbar]);
 
   return (
     <>
@@ -68,7 +43,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PriceTable
           setSegmentPageName={setPageName}
           lang={lang}
-          country={country}
           setIsLifetime={setIsLifetime}
           textContent={textContent.tableSection}
         />

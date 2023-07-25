@@ -34,6 +34,7 @@ export default function PriceCard({
   popular,
   lang,
   coupon,
+  country,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -91,7 +92,7 @@ export default function PriceCard({
             `}
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>€</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
               <span className="price text-4xl font-bold">
                 {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
@@ -111,7 +112,8 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } text-base font-medium text-neutral-100 line-through`}
           >
-            €{priceBefore}
+            {country}
+            {priceBefore}
           </span>
           <div
             className={`totalBilling ${

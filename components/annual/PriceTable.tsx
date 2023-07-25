@@ -4,23 +4,21 @@ import { Transition } from '@headlessui/react';
 import PriceCard from '../prices/PriceCard';
 import { stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
+import { currencyService } from '../services/currencyService';
 
 export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
+  const [currency, setCurrency] = useState(null);
 
   useEffect(() => {
-    stripeService
-      .getAllPrices()
+    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
       .then((res) => {
-        if (res) {
-          setProducts(res);
-          setLoadingCards(false);
-        }
+        setProducts(res[0]);
+        setCurrency(res[1]);
+        setLoadingCards(false);
       })
-      .catch((err) => {
-        console.error(err);
-      });
+      .catch((err) => console.error(err));
   }, []);
 
   return (
@@ -59,6 +57,7 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
                     popular={product.storage === '200GB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
+                    country={currency}
                   />
                 );
               })}
