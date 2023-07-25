@@ -11,7 +11,7 @@ import WhatIsOSS from '../components/open-source/WhatIsOSS';
 import CtaSection from '../components/shared/CtaSection';
 import { downloadDriveLinks } from '../lib/get-download-url';
 
-const CTA_SIGNUP_URL = `${process.env.NEXT_DRIVE_WEB}/new`;
+const CTA_SIGNUP_URL = `https://drive.internxt.com/new`;
 
 const GITHUB_URL = 'https://github.com/internxt';
 
