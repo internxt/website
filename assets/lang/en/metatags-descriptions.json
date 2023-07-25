@@ -45,6 +45,11 @@
     "description": "Free tools to protect your privacy online: Password Checker, Virus Scanner, Directory of Privacy Organizations, and more. Internxt defends your right to privacy."
   },
   {
+    "id": "open-source",
+    "title": "Internxt – Open Source and Secure Cloud Storage",
+    "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
+  },
+  {
     "id": "virus-scanner",
     "title": "Internxt – Free Online File Virus Scanner",
     "description": "Free tool for scanning files for viruses and malware. Protect your personal documents, data, and hardware from online fraud with a quick and easy scan."
