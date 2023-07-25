@@ -10,22 +10,6 @@ import axios, { AxiosRequestConfig } from 'axios';
 
 const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'techradar-discount');
-  const [country, setCountry] = React.useState('ES');
-
-  async function getCountryCode() {
-    const options: AxiosRequestConfig<any> = {
-      method: 'GET',
-      url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
-    };
-    const countryCode = await axios(options);
-    return countryCode;
-  }
-
-  useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
-    });
-  });
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
@@ -33,7 +17,7 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentsSection textContent={langJson.PaymentSection} country={country} />
+      <PaymentsSection textContent={langJson.PaymentSection} />
 
       <InfoSection textContent={langJson.InfoSection} />
 

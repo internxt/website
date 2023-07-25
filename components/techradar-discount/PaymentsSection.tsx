@@ -1,25 +1,23 @@
 import { Transition } from '@headlessui/react';
 import React, { useEffect, useState } from 'react';
 import CardSkeleton from '../components/CardSkeleton';
+import { currencyService } from '../services/currencyService';
 import { stripeService } from '../services/stripeService';
 import PriceCard from './PriceCard';
 
-const PaymentsSection = ({ textContent, country }) => {
+const PaymentsSection = ({ textContent }) => {
   const [products, setProducts] = useState(null);
+  const [currency, setCurrency] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
 
   useEffect(() => {
-    stripeService
-      .getAllPrices()
-      .then((res) => {
-        if (res) {
-          setProducts(res);
-          setLoadingCards(false);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()]).then((res) => {
+      if (res) {
+        setProducts(res[0]);
+        setCurrency(res[1]);
+        setLoadingCards(false);
+      }
+    });
   }, []);
 
   return (
@@ -44,7 +42,7 @@ const PaymentsSection = ({ textContent, country }) => {
                     <PriceCard
                       plan={product.storage}
                       price={product.price}
-                      country={country}
+                      country={currency}
                       cta={['checkout', product.priceId]}
                       month={textContent.month}
                       annualPrice={product.price}

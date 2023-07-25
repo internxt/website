@@ -51,7 +51,6 @@ const NormalPriceTable = ({ lang, country }) => {
           popular={pricings.TB2.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB2.actualPrice}
         />
         <NormalPriceCard
           planType="individual"
@@ -62,7 +61,6 @@ const NormalPriceTable = ({ lang, country }) => {
           popular={pricings.TB5.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB5.actualPrice}
         />
         <NormalPriceCard
           planType="individual"
@@ -73,7 +71,6 @@ const NormalPriceTable = ({ lang, country }) => {
           popular={pricings.TB10.popular}
           lang={lang}
           country={country}
-          actualPrice={pricings.TB10.actualPrice}
         />
       </div>
     </section>

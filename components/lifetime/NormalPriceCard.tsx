@@ -7,17 +7,6 @@ import React, { useEffect, useState } from 'react';
 import { checkout, openAuthDialog } from '../../lib/auth';
 
 const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
-  const currency = () => {
-    switch (country) {
-      case 'US':
-        return '$';
-      case 'GB':
-        return '£';
-      default:
-        return '€';
-    }
-  };
-
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const contentText = require(`../../assets/lang/en/priceCard.json`);
 
@@ -53,7 +42,7 @@ const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, coun
             `}
           >
             <p className="flex flex-row items-start space-x-0.5 font-semibold text-neutral-700">
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
               <span className="price text-4xl font-bold">{price}</span>
             </p>
             <p className="pt-2 text-xs font-normal text-gray-50">{contentText.oneTime}</p>
@@ -66,7 +55,7 @@ const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, coun
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className={`totalBilled ${billingFrequency < 0 ? 'hidden' : ''}`}>
-                <span className="currency text-supporting-2">{currency()}</span>
+                <span className="currency text-supporting-2">{country}</span>
                 {totalBilled}{' '}
               </span>
             </p>

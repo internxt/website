@@ -7,35 +7,33 @@ import BusinessBanner from '../banners/BusinessBanner';
 import SpecialPriceCard from './SpecialPriceCard';
 import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
+import { currencyService } from '../services/currencyService';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
-  country: string;
+
   textContent: any;
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
-export default function PriceTable({ setSegmentPageName, lang, country, textContent }: PriceTableProps) {
+export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState(null);
+  const [currency, setCurrency] = useState(null);
 
   useEffect(() => {
-    stripeService
-      .getAllPrices()
+    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
       .then((res) => {
-        if (res) {
-          setProducts(res);
-          setLoadingCards(false);
-        }
+        setProducts(res[0]);
+        setCurrency(res[1]);
+        setLoadingCards(false);
       })
-      .catch((err) => {
-        console.error(err);
-      });
+      .catch((err) => console.error(err));
   }, []);
 
   return (
@@ -133,7 +131,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, textCont
                 billingFrequency={billingFrequency}
                 cta={['checkout', 'Free plan']}
                 lang={lang}
-                country={country}
+                country={currency}
               />
             )}
             {products?.individuals[billingFrequency] &&
@@ -149,7 +147,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, textCont
                         cta={['checkout', product.priceId]}
                         popular={true}
                         lang={lang}
-                        country={country}
+                        country={currency}
                       />
                     ) : (
                       <PriceCard
@@ -164,7 +162,7 @@ export default function PriceTable({ setSegmentPageName, lang, country, textCont
                         }
                         cta={['checkout', product.priceId]}
                         lang={lang}
-                        country={country}
+                        country={currency}
                       />
                     )}
                   </>
