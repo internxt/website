@@ -3,15 +3,19 @@ import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import DifferencesBetweenOpenAndCloseSS from '../components/open-source/DifferencesBetweenOpenAndCloseSS';
+import ExploreOurOSS from '../components/open-source/ExploreOurOSS';
 import HeroSection from '../components/open-source/HeroSection';
 import LearningWithOSCommunity from '../components/open-source/LearningWithOSCommunity';
 import WhatAreTheBenefits from '../components/open-source/WhatAreTheBenefits';
 import WhatIsOSS from '../components/open-source/WhatIsOSS';
 import CtaSection from '../components/shared/CtaSection';
+import { downloadDriveLinks } from '../lib/get-download-url';
 
 const CTA_SIGNUP_URL = `${process.env.NEXT_DRIVE_WEB}/new`;
 
-const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
+const GITHUB_URL = 'https://github.com/internxt';
+
+const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang, download }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'open-source');
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Open Source" lang={lang}>
@@ -33,6 +37,10 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
 
       <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} />
 
+      <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} />
+
+      <CtaSection textContent={langJson.CtaSection3} url={GITHUB_URL} />
+
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
@@ -40,6 +48,7 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
+  const download = await downloadDriveLinks();
 
   const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/en/open-source.json`);
@@ -53,6 +62,7 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
+      download,
     },
   };
 }

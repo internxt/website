@@ -92,9 +92,27 @@
   },
   "ExploreOurOSS": {
     "title": "Explore Our Open Source Software",
-    "description": "If you wish to explore under the hood of Internxt and see how we build our Drive app across desktop, mobile, and web, the source code for them is available on our GitHub. Happy coding!"
+    "description": "If you wish to explore under the hood of Internxt and see how we build our Drive app across desktop, mobile, and web, the source code for them is available on our GitHub. Happy coding!",
+    "DownloadLinks": {
+      "downloadTitle": "Download Internxt Drive",
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Download on the",
+      "orDownloadOnThe": "Or download on the",
+      "getOn": "Get on",
+      "orGetOn": "Or get on",
+      "openDriveWeb": "Open Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
   },
-  "ctaSection3": {
+  "CtaSection3": {
     "title": "Join Open Source Community",
     "description": "See how Internxt protects your data with our source code.",
     "cta": "View our GitHub"
