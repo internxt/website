@@ -2,8 +2,14 @@ import FileParallaxSection from '../components/home/FileParallaxSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
+import DifferencesBetweenOpenAndCloseSS from '../components/open-source/DifferencesBetweenOpenAndCloseSS';
 import HeroSection from '../components/open-source/HeroSection';
+import LearningWithOSCommunity from '../components/open-source/LearningWithOSCommunity';
+import WhatAreTheBenefits from '../components/open-source/WhatAreTheBenefits';
 import WhatIsOSS from '../components/open-source/WhatIsOSS';
+import CtaSection from '../components/shared/CtaSection';
+
+const CTA_SIGNUP_URL = `${process.env.NEXT_DRIVE_WEB}/new`;
 
 const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'open-source');
@@ -16,6 +22,16 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
       <FileParallaxSection />
 
       <WhatIsOSS textContent={langJson.WhatIsOSS} />
+
+      <WhatAreTheBenefits textContent={langJson.WhatAreTheBenefits} />
+
+      <CtaSection textContent={langJson.CtaSection1} url={CTA_SIGNUP_URL} />
+
+      <LearningWithOSCommunity textContent={langJson.LearningWithOSCommunity} />
+
+      <DifferencesBetweenOpenAndCloseSS textContent={langJson.DifferencesBetweenOpenAndCloseSS} />
+
+      <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

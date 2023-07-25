@@ -62,20 +62,26 @@
     "title": "What Are the Differences Between Open and Closed Source Software?",
     "description": "The pros and cons of open source software are essential when deciding which software is right for you. The main differences between OSS and closed-source software are as follows:",
     "table": {
-      "OpenSource": [
-        "Anyone can view, modify or change the code and improve it.",
-        "Open availability and transparency of the source code means anyone can review the code for potential issues.",
-        "The software can be maintained and fixed quickly.",
-        "More cost-effective as there are no licensing fees to pay for.",
-        "More accessible due to its flexibility to add features and make changes."
-      ],
-      "CloseSource": [
-        "The source code is only accessible to those who created it.",
-        "The code is inaccessible to the public, meaning a few people can check for security flaws.",
-        "Updating the code takes time, leaving it vulnerable to attacks.",
-        "The software can be high-priced and requires a license to use it.",
-        "Change relies on the company and may take some time."
-      ]
+      "OpenSource": {
+        "title": "Open Source",
+        "feat": [
+          "Anyone can view, modify or change the code and improve it.",
+          "Open availability and transparency of the source code means anyone can review the code for potential issues.",
+          "The software can be maintained and fixed quickly.",
+          "More cost-effective as there are no licensing fees to pay for.",
+          "More accessible due to its flexibility to add features and make changes."
+        ]
+      },
+      "CloseSource": {
+        "title": "Closed Source",
+        "disadvantages": [
+          "The source code is only accessible to those who created it.",
+          "The code is inaccessible to the public, meaning a few people can check for security flaws.",
+          "Updating the code takes time, leaving it vulnerable to attacks.",
+          "The software can be high-priced and requires a license to use it.",
+          "Change relies on the company and may take some time."
+        ]
+      }
     },
     "footer": "In general, however, many services use a hybrid OSS and closed-source software model in their platforms, although companies like Internxt choose to remain completely open-source."
   },
