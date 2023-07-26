@@ -6,7 +6,7 @@ import RevealX from '../components/RevealX';
 import RevealY from '../components/RevealY';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
-  <section className="flex w-full flex-col pt-12">
+  <section className="flex w-full flex-col">
     <div className="flex flex-col items-center py-28 px-5 lg:py-40">
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-6 text-center">

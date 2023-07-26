@@ -30,7 +30,6 @@ export default function Navbar(props: NavbarProps) {
 
   const router = useRouter();
   const getTitles = require(`../../assets/lang/en/navbar.json`);
-
   // DIALOG MANAGEMENT
 
   // SCROLL EFFECTS
@@ -152,23 +151,63 @@ export default function Navbar(props: NavbarProps) {
                   </div>
                 </div>
 
-                <Link href="/privacy" locale={props.lang}>
-                  <a
-                    className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                {router.locale === 'en' ? (
+                  <div
+                    className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
                       props.darkMode
-                        ? `text-white hover:text-cool-gray-20 ${
-                            router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase() &&
-                            'text-primary'
-                          }`
-                        : router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase()
-                        ? 'text-primary'
-                        : 'text-cool-gray-70 hover:text-primary'
-                    }
-                    } text-base font-medium`}
+                        ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
+                        : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
+                    } cursor-default rounded-lg`}
                   >
-                    {props.textContent.links.privacy}
-                  </a>
-                </Link>
+                    <span>{props.textContent.links.ourValues}</span>
+                    <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+
+                    {/* Menu items */}
+                    <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+                      <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
+
+                      <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
+                        <Link href="/privacy" locale={props.lang}>
+                          <a
+                            className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                              props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                            }`}
+                          >
+                            {props.textContent.ourValues.privacy}
+                          </a>
+                        </Link>
+
+                        <Link href="/open-source" locale={props.lang}>
+                          <a
+                            className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                              props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                            }`}
+                          >
+                            {props.textContent.ourValues.openSource}
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <Link href="/privacy" locale={props.lang}>
+                    <a
+                      className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                        props.darkMode
+                          ? `text-white hover:text-cool-gray-20 ${
+                              router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase() &&
+                              'text-primary'
+                            }`
+                          : router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase()
+                          ? 'text-primary'
+                          : 'text-cool-gray-70 hover:text-primary'
+                      }
+                    } text-base font-medium`}
+                    >
+                      {props.textContent.links.privacy}
+                    </a>
+                  </Link>
+                )}
 
                 <Link href="/about" locale={props.lang}>
                   <a
