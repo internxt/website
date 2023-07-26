@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import { useEffect, useState } from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
-import { UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import setUTM from '../../lib/conversions';
 import LanguageMobileBox from './components/LanguageMobileBox';
@@ -20,14 +19,10 @@ export default function Footer({
   hideNewsletter?: boolean;
   darkMode?: boolean;
 }) {
-  const [consentCookie, setConsentCookie] = useState(true);
   const [platforms, setPlatforms] = useState<any>();
 
   useEffect(() => {
-    const cookie = localStorage.getItem('CookieConsent');
     setUTM();
-
-    if (!cookie) setConsentCookie(false);
 
     axios.get(`${window.location.origin}/api/download`).then((res) => {
       setPlatforms(res.data.platforms);
@@ -190,6 +185,11 @@ export default function Footer({
                     <Link href="/privacy" locale={lang} passHref>
                       <a className="hover:text-primary">{textContent.FooterSection.sections.company.privacy}</a>
                     </Link>
+                    {lang === 'en' && (
+                      <Link href="/open-source" locale={lang} passHref>
+                        <a className="hover:text-primary">{textContent.FooterSection.sections.company.openSource}</a>
+                      </Link>
+                    )}
 
                     <a
                       href={`https://blog.internxt.com/${
@@ -532,6 +532,12 @@ export default function Footer({
                       <Link href="/privacy" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.privacy}</a>
                       </Link>
+
+                      {lang === 'en' && (
+                        <Link href="/open-source" locale={lang} passHref>
+                          <a className="hover:text-primary">{textContent.FooterSection.sections.company.openSource}</a>
+                        </Link>
+                      )}
 
                       <Link
                         href={`https://blog.internxt.com/${
