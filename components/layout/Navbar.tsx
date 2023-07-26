@@ -296,7 +296,7 @@ export default function Navbar(props: NavbarProps) {
 
                 {/* Mobile hamburger menu background */}
                 <div
-                  className={`pointer-events-none fixed left-0 top-[144px] flex h-full w-full bg-white transition-all duration-500 ${
+                  className={`pointer-events-none fixed left-0 top-16 flex h-screen w-full bg-white transition-all duration-500 ${
                     menuState ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
@@ -304,7 +304,7 @@ export default function Navbar(props: NavbarProps) {
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`fixed left-0 top-[144px] flex w-full flex-col overflow-hidden bg-white font-semibold transition-all duration-500 ${
+                    className={`fixed left-0 top-16 flex w-full flex-col  bg-white font-semibold transition-all duration-500 ${
                       menuState ? 'h-full pb-14' : 'h-0'
                     }`}
                   >
@@ -324,7 +324,12 @@ export default function Navbar(props: NavbarProps) {
                         </a>
                       </Link>
 
-                      <Disclosure as="div" className="w-screen">
+                      <Disclosure
+                        as="div"
+                        className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
+                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                        }`}
+                      >
                         {({ open }) => (
                           <>
                             <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
@@ -374,20 +379,63 @@ export default function Navbar(props: NavbarProps) {
                         )}
                       </Disclosure>
 
-                      <Link href="/privacy" locale={props.lang}>
-                        <a
-                          role="link"
-                          tabIndex={0}
-                          onClick={() => {
-                            setMenuState(false);
-                          }}
-                          className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-200 duration-300 ${
+                      {router.locale === 'en' ? (
+                        <Disclosure
+                          as="div"
+                          className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
                             menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                           }`}
                         >
-                          {props.textContent.links.privacy}
-                        </a>
-                      </Link>
+                          {({ open }) => (
+                            <>
+                              <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
+                                <span className="flex flex-row">{props.textContent.links.ourValues}</span>
+                                <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                                <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                              </Disclosure.Button>
+                              <Transition
+                                enter="transition duration-200 ease-out"
+                                enterFrom="-translate-y-10 opacity-0"
+                                enterTo="translate-y-0 opacity-100"
+                                leave="transition duration-200 ease-out"
+                              >
+                                <Disclosure.Panel
+                                  className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
+                                    props.darkMode ? 'text-gray-30' : 'text-gray-60'
+                                  } space-y-8 p-4`}
+                                >
+                                  <Link href="/drive" locale={props.lang} passHref>
+                                    <div className="flex flex-row space-x-2">
+                                      <p>{props.textContent.ourValues.privacy}</p>
+                                    </div>
+                                  </Link>
+
+                                  <Link href="/photos" locale={props.lang} passHref>
+                                    <div className="flex flex-row space-x-2">
+                                      <p>{props.textContent.ourValues.openSource}</p>
+                                    </div>
+                                  </Link>
+                                </Disclosure.Panel>
+                              </Transition>
+                            </>
+                          )}
+                        </Disclosure>
+                      ) : (
+                        <Link href="/privacy" locale={props.lang}>
+                          <a
+                            role="link"
+                            tabIndex={0}
+                            onClick={() => {
+                              setMenuState(false);
+                            }}
+                            className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-200 duration-300 ${
+                              menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                            }`}
+                          >
+                            {props.textContent.links.privacy}
+                          </a>
+                        </Link>
+                      )}
 
                       <Link href="/about" locale={props.lang}>
                         <a
