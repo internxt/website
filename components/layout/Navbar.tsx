@@ -398,13 +398,13 @@ export default function Navbar(props: NavbarProps) {
                                     props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                   } space-y-8 p-4`}
                                 >
-                                  <Link href="/drive" locale={props.lang} passHref>
+                                  <Link href="/privacy" locale={props.lang} passHref>
                                     <div className="flex flex-row space-x-2">
                                       <p>{props.textContent.ourValues.privacy}</p>
                                     </div>
                                   </Link>
 
-                                  <Link href="/photos" locale={props.lang} passHref>
+                                  <Link href="/open-source" locale={props.lang} passHref>
                                     <div className="flex flex-row space-x-2">
                                       <p>{props.textContent.ourValues.openSource}</p>
                                     </div>

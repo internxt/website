@@ -11,8 +11,8 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
         </div>
 
         {/* Table */}
-        <div className="flex w-full flex-row space-x-10 overflow-x-auto md:space-x-20 lg:items-center lg:justify-center">
-          <div className="flex w-[387px] flex-col lg:w-full lg:max-w-[387px]">
+        <div className="flex w-full flex-col space-y-10 md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
+          <div className="flex max-w-[387px] flex-col lg:w-full lg:max-w-[387px]">
             <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">
               <img src={'/images/open-source/open-source.svg'} className="h-8 w-8" alt="Open Source" />
               <p className="text-lg font-semibold text-gray-100">{textContent.table.OpenSource.title}</p>
@@ -34,7 +34,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
               ))}
             </div>
           </div>
-          <div className="flex w-[387px] flex-col lg:w-full lg:max-w-[387px]">
+          <div className="flex w-full max-w-[387px] flex-col lg:w-full lg:max-w-[387px]">
             <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">
               <img src={'/images/open-source/close-source.svg'} className="h-8 w-8" alt="Closed Source" />
               <p className="text-lg font-semibold text-gray-100">{textContent.table.CloseSource.title}</p>
