@@ -298,8 +298,8 @@ export default function Navbar(props: NavbarProps) {
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`absolute left-0 top-20 w-full bg-white font-semibold transition-all duration-500 ${
-                      menuState ? 'h-screen pb-14' : 'h-0 overflow-hidden'
+                    className={`absolute left-0 top-20 w-full overflow-hidden bg-white font-semibold transition-all duration-500 ${
+                      menuState ? 'h-screen pb-14' : 'h-0 '
                     }`}
                   >
                     <div className="mt-4 flex flex-col text-gray-100">
