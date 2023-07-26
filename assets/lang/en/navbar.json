@@ -2,6 +2,7 @@
   "links": {
     "products": "Products",
     "about": "About Us",
+    "ourValues": "Our Values",
     "privacy": "Privacy",
     "pricing": "Pricing",
     "login": "Log in",
@@ -14,6 +15,10 @@
     "send": "Send",
     "comingSoon": "Coming soon",
     "new": "New"
+  },
+  "ourValues": {
+    "privacy": "Privacy",
+    "openSource": "Open Source"
   },
   "Auth": {
     "SignUp": {

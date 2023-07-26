@@ -30,7 +30,6 @@ export default function Navbar(props: NavbarProps) {
 
   const router = useRouter();
   const getTitles = require(`../../assets/lang/en/navbar.json`);
-
   // DIALOG MANAGEMENT
 
   // SCROLL EFFECTS
@@ -56,7 +55,7 @@ export default function Navbar(props: NavbarProps) {
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           {/* Left side of navbar: Logo / Hamburguer menu */}
-          <div className=" flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
+          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
             {/* Logo */}
             <Link href="/" locale={props.lang} passHref>
               <a className="flex flex-shrink-0 pl-4 lg:hidden">
@@ -152,23 +151,63 @@ export default function Navbar(props: NavbarProps) {
                   </div>
                 </div>
 
-                <Link href="/privacy" locale={props.lang}>
-                  <a
-                    className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                {router.locale === 'en' ? (
+                  <div
+                    className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
                       props.darkMode
-                        ? `text-white hover:text-cool-gray-20 ${
-                            router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase() &&
-                            'text-primary'
-                          }`
-                        : router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase()
-                        ? 'text-primary'
-                        : 'text-cool-gray-70 hover:text-primary'
-                    }
-                    } text-base font-medium`}
+                        ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
+                        : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
+                    } cursor-default rounded-lg`}
                   >
-                    {props.textContent.links.privacy}
-                  </a>
-                </Link>
+                    <span>{props.textContent.links.ourValues}</span>
+                    <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+
+                    {/* Menu items */}
+                    <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+                      <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
+
+                      <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
+                        <Link href="/privacy" locale={props.lang}>
+                          <a
+                            className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                              props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                            }`}
+                          >
+                            {props.textContent.ourValues.privacy}
+                          </a>
+                        </Link>
+
+                        <Link href="/open-source" locale={props.lang}>
+                          <a
+                            className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                              props.darkMode ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                            }`}
+                          >
+                            {props.textContent.ourValues.openSource}
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <Link href="/privacy" locale={props.lang}>
+                    <a
+                      className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                        props.darkMode
+                          ? `text-white hover:text-cool-gray-20 ${
+                              router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase() &&
+                              'text-primary'
+                            }`
+                          : router.pathname.split('/')[1] === getTitles.links.privacy.trim().toLowerCase()
+                          ? 'text-primary'
+                          : 'text-cool-gray-70 hover:text-primary'
+                      }
+                    } text-base font-medium`}
+                    >
+                      {props.textContent.links.privacy}
+                    </a>
+                  </Link>
+                )}
 
                 <Link href="/about" locale={props.lang}>
                   <a
@@ -245,8 +284,9 @@ export default function Navbar(props: NavbarProps) {
             <div className="hidden items-center justify-center bg-transparent lg:flex">
               <LanguageBox darkMode={props.darkMode} />
             </div>
+
             {!props.isLinksHidden && (
-              <div className="flex lg:hidden">
+              <div className="lg:hidden">
                 <Hamburger
                   label="Show menu"
                   size={20}
@@ -255,21 +295,14 @@ export default function Navbar(props: NavbarProps) {
                   toggle={setMenuState}
                 />
 
-                {/* Mobile hamburger menu background */}
-                <div
-                  className={`pointer-events-none fixed left-0 top-[144px] flex h-full w-full bg-white transition-all duration-500 ${
-                    menuState ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`fixed left-0 top-[144px] flex w-full flex-col overflow-hidden bg-white font-semibold transition-all duration-500 ${
-                      menuState ? 'h-full pb-14' : 'h-0'
+                    className={`absolute left-0 top-20 w-full overflow-hidden bg-white font-semibold transition-all duration-500 ${
+                      menuState ? 'h-screen pb-14' : 'h-0 '
                     }`}
                   >
-                    <div className="mt-4 text-gray-100">
+                    <div className="mt-4 flex flex-col text-gray-100">
                       <Link href="/pricing" locale={props.lang}>
                         <a
                           role="link"
@@ -285,7 +318,12 @@ export default function Navbar(props: NavbarProps) {
                         </a>
                       </Link>
 
-                      <Disclosure as="div" className="w-screen">
+                      <Disclosure
+                        as="div"
+                        className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
+                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                        }`}
+                      >
                         {({ open }) => (
                           <>
                             <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
@@ -335,20 +373,63 @@ export default function Navbar(props: NavbarProps) {
                         )}
                       </Disclosure>
 
-                      <Link href="/privacy" locale={props.lang}>
-                        <a
-                          role="link"
-                          tabIndex={0}
-                          onClick={() => {
-                            setMenuState(false);
-                          }}
-                          className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-200 duration-300 ${
+                      {router.locale === 'en' ? (
+                        <Disclosure
+                          as="div"
+                          className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
                             menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                           }`}
                         >
-                          {props.textContent.links.privacy}
-                        </a>
-                      </Link>
+                          {({ open }) => (
+                            <>
+                              <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
+                                <span className="flex flex-row">{props.textContent.links.ourValues}</span>
+                                <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                                <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                              </Disclosure.Button>
+                              <Transition
+                                enter="transition duration-200 ease-out"
+                                enterFrom="-translate-y-10 opacity-0"
+                                enterTo="translate-y-0 opacity-100"
+                                leave="transition duration-200 ease-out"
+                              >
+                                <Disclosure.Panel
+                                  className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
+                                    props.darkMode ? 'text-gray-30' : 'text-gray-60'
+                                  } space-y-8 p-4`}
+                                >
+                                  <Link href="/privacy" locale={props.lang} passHref>
+                                    <div className="flex flex-row space-x-2">
+                                      <p>{props.textContent.ourValues.privacy}</p>
+                                    </div>
+                                  </Link>
+
+                                  <Link href="/open-source" locale={props.lang} passHref>
+                                    <div className="flex flex-row space-x-2">
+                                      <p>{props.textContent.ourValues.openSource}</p>
+                                    </div>
+                                  </Link>
+                                </Disclosure.Panel>
+                              </Transition>
+                            </>
+                          )}
+                        </Disclosure>
+                      ) : (
+                        <Link href="/privacy" locale={props.lang}>
+                          <a
+                            role="link"
+                            tabIndex={0}
+                            onClick={() => {
+                              setMenuState(false);
+                            }}
+                            className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-200 duration-300 ${
+                              menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                            }`}
+                          >
+                            {props.textContent.links.privacy}
+                          </a>
+                        </Link>
+                      )}
 
                       <Link href="/about" locale={props.lang}>
                         <a
