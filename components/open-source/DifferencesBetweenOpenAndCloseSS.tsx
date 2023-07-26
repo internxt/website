@@ -19,14 +19,14 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
             </div>
             <div className="flex h-full flex-col">
               {textContent.table.OpenSource.feat.map((item, index) => (
-                <div className="flex h-full w-full flex-row bg-primary bg-opacity-3" key={index}>
+                <div className="flex h-full w-full flex-row items-center bg-primary bg-opacity-3" key={index}>
                   <div className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 pl-6">
                     <div className="flex w-[275px] py-4 lg:max-w-[275px]">
                       <p className="text-gray-80">{item}</p>
                     </div>
                   </div>
-                  <div className="flex h-full flex-col">
-                    <div className="flex flex-grow flex-col items-center justify-center p-4">
+                  <div className="flex h-full w-full flex-col md:w-max md:px-4">
+                    <div className="flex flex-col items-center justify-center ">
                       <Check size={32} className="text-green-dark" weight="bold" />
                     </div>
                   </div>
@@ -41,14 +41,14 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
             </div>
             <div className="flex h-full flex-col">
               {textContent.table.CloseSource.disadvantages.map((item, index) => (
-                <div className="flex h-full w-full flex-row bg-primary bg-opacity-3" key={index}>
+                <div className="flex h-full w-full flex-row items-center bg-primary bg-opacity-3" key={index}>
                   <div className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 pl-6">
                     <div className="flex w-[275px] py-4 lg:max-w-[275px]">
                       <p className="text-gray-80">{item}</p>
                     </div>
                   </div>
-                  <div className="flex h-full flex-col">
-                    <div className="flex flex-grow flex-col items-center justify-center p-4">
+                  <div className="flex h-full w-full flex-col md:w-max md:px-4">
+                    <div className="flex flex-grow flex-col items-center justify-center md:px-4">
                       <X size={32} className="text-red-dark" weight="bold" />
                     </div>
                   </div>
