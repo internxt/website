@@ -43,7 +43,7 @@ const WhatAreTheBenefits = ({ textContent }) => {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {cards.map((card, index) => (
-            <div className="flex flex-col space-y-6 rounded-2xl bg-gray-5 p-10">
+            <div className="flex flex-col space-y-6 rounded-2xl bg-gray-1 p-10" key={index}>
               <card.icon className="h-8 w-8 text-primary" />
               <p className="text-2xl font-medium text-gray-100">{card.title}</p>
               <p className="max-w-[408px] text-lg  text-gray-80">{card.description}</p>
