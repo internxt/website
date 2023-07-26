@@ -295,18 +295,11 @@ export default function Navbar(props: NavbarProps) {
                   toggle={setMenuState}
                 />
 
-                {/* Mobile hamburger menu background */}
-                <div
-                  className={`pointer-events-none fixed left-0 h-screen w-full bg-white transition-all duration-500 ${
-                    menuState ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`fixed left-0 top-[128px] w-full overflow-hidden bg-white font-semibold transition-all duration-500 ${
-                      menuState ? 'h-max pb-14' : 'h-0'
+                    className={`absolute left-0 top-20 w-full bg-white font-semibold transition-all duration-500 ${
+                      menuState ? 'h-screen pb-14' : 'h-0 overflow-hidden'
                     }`}
                   >
                     <div className="mt-4 flex flex-col text-gray-100">
