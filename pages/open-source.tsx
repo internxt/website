@@ -39,7 +39,7 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
 
       <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} />
 
-      <CtaSection textContent={langJson.CtaSection3} url={GITHUB_URL} />
+      <CtaSection textContent={langJson.CtaSection3} url={GITHUB_URL} target="nofollow" />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
