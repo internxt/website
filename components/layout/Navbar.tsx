@@ -55,7 +55,7 @@ export default function Navbar(props: NavbarProps) {
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           {/* Left side of navbar: Logo / Hamburguer menu */}
-          <div className=" flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
+          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
             {/* Logo */}
             <Link href="/" locale={props.lang} passHref>
               <a className="flex flex-shrink-0 pl-4 lg:hidden">
@@ -284,8 +284,9 @@ export default function Navbar(props: NavbarProps) {
             <div className="hidden items-center justify-center bg-transparent lg:flex">
               <LanguageBox darkMode={props.darkMode} />
             </div>
+
             {!props.isLinksHidden && (
-              <div className="flex lg:hidden">
+              <div className="lg:hidden">
                 <Hamburger
                   label="Show menu"
                   size={20}
@@ -296,7 +297,7 @@ export default function Navbar(props: NavbarProps) {
 
                 {/* Mobile hamburger menu background */}
                 <div
-                  className={`pointer-events-none fixed left-0 top-16 flex h-screen w-full bg-white transition-all duration-500 ${
+                  className={`pointer-events-none fixed left-0 h-screen w-full bg-white transition-all duration-500 ${
                     menuState ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
@@ -304,11 +305,11 @@ export default function Navbar(props: NavbarProps) {
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`fixed left-0 top-24 flex w-full flex-col overflow-hidden bg-white font-semibold transition-all duration-500 ${
-                      menuState ? 'h-screen pb-14' : 'h-0'
+                    className={`fixed left-0 top-[128px] w-full overflow-hidden bg-white font-semibold transition-all duration-500 ${
+                      menuState ? 'h-max pb-14' : 'h-0'
                     }`}
                   >
-                    <div className="mt-4 text-gray-100">
+                    <div className="mt-4 flex flex-col text-gray-100">
                       <Link href="/pricing" locale={props.lang}>
                         <a
                           role="link"
