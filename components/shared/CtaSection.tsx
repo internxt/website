@@ -1,4 +1,14 @@
-const CtaSection = ({ textContent, url, maxWidth }: { textContent: any; url: string; maxWidth?: string }) => {
+const CtaSection = ({
+  textContent,
+  url,
+  maxWidth,
+  target,
+}: {
+  textContent: any;
+  url: string;
+  maxWidth?: string;
+  target?: string;
+}) => {
   return (
     <section
       style={{
@@ -14,7 +24,7 @@ const CtaSection = ({ textContent, url, maxWidth }: { textContent: any; url: str
         <button
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
-            window.open(url, '_blank');
+            window.open(url, '_blank', target);
           }}
         >
           {textContent.cta}
