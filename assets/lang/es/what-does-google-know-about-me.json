@@ -1,225 +1,225 @@
 {
   "HeroSection": {
-    "mainTitle": "What Does Google Know About Me?",
+    "mainTitle": "¿Qué sabe Google de mí?",
 
     "section1": {
-      "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
-      "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
+      "description": "Los grupos de defensa de la privacidad han expresado su alarma por la recopilación de datos personales por parte de Google y todo el mundo ha oído hablar de las numerosas violaciones de la privacidad por parte de Google",
+      "footer": "No es ningún secreto que Google recopila información personal y rastrea a sus usuarios a través de Chrome, Google Search, las aplicaciones de Google Play, Google Maps y Youtube, entre otras. Evita que Google acceda a tus datos ajustando los controles y la configuración de Google."
     },
     "section2": {
-      "title": "What does Google know about me based on Google activity?",
+      "title": "¿Qué sabe Google de mí basándose en la actividad de Google?",
       "bulletedList": {
-        "title": "When you search on Google, they collect all the following data:",
+        "title": "Cuando realizas una búsqueda en Google, recopilan los siguientes datos:",
         "list": [
-          "Personal information: Your name, phone number, gender, date of birth",
-          "Your email addresses",
-          "Where you live",
-          "Where you work",
-          "Your interests",
-          "Things you search for",
-          "Websites you visit",
-          "Videos you watch",
-          "Ads you click on or tap",
-          "Your location",
-          "Places you've visited around the world",
-          "Device information",
-          "IP address and cookie data",
-          "Your YouTube search history and recently watched videos",
-          "What you've said to the Google Assistant, including via smart speakers"
+          "Datos personales: Tu nombre, número de teléfono, sexo, fecha de nacimiento",
+          "Tus direcciones de correo electrónico",
+          "Dónde vives",
+          "Dónde trabajas",
+          "Tus intereses",
+          "Cosas que buscas",
+          "Páginas web que visitas",
+          "Vídeos que ves",
+          "Anuncios en los que haces clic",
+          "Tu ubicación",
+          "Lugares que has visitado en el mundo",
+          "Información del dispositivo",
+          "Dirección IP y datos de cookies",
+          "Tu historial de búsqueda en YouTube y los vídeos que has visto recientemente",
+          "Lo que le has dicho al Asistente de Google, incluso a través de altavoces inteligentes"
         ]
       }
     },
     "section3": {
-      "title": "Why does Google collect your data?",
-      "description": "In short, it's a form of exploitation. Google’s motivation is to target ads and ‘personalize’ your experience with their services. By giving up your data, you are allowing hundreds of thousands of advertisers to bid on displaying you their adverts based on your sensitive personal data by letting Google collect all of this information. "
+      "title": "¿Por qué Google recopila tus datos?",
+      "description": "Si te preguntas qué sabe google de mi, en pocas palabras, es una forma de explotación. La motivación de Google es orientar los anuncios y 'personalizar' tu experiencia con sus servicios. Al ceder tus datos, estás permitiendo que cientos de miles de anunciantes pujen por mostrarte sus anuncios basándose en tus datos personales confidenciales al permitir que Google recopile toda esta información. "
     },
     "footer": {
-      "line1": "Everyone involved benefits from your information except for you.",
-      "line2": "You are the product."
+      "line1": "Todos los implicados se benefician de tu información menos tú",
+      "line2": "Tú eres el producto."
     }
   },
   "CtaSection": {
-    "title": "Own your data",
-    "description": "Choose a service that protects your data instead of monetizing it.",
-    "cta": "Switch to Internxt"
+    "title": "¿Que sabe google de mi? Casi todo.",
+    "description": "Sé dueño de tus datos. Elige un servicio que proteja tus datos en lugar de monetizarlos",
+    "cta": "Cámbiate a Internxt"
   },
   "WhatGoogleKnowsSection": {
-    "title": "Explore what Google knows about you",
-    "description": "Google collects a ton of information on you primarily from your Google activity history, but they must make it available to you for various legal reasons. To understand just how much they collect and what data specifically they have on you, you must open your Google settings and dig a little.",
+    "title": "Explora lo que Google sabe sobre ti",
+    "description": "Google recopila una gran cantidad de información sobre ti principalmente a partir de tu historial de actividad en Google, pero debe ponerla a tu disposición por diversas razones legales. Para comprender cuánto recopilan y qué datos concretos tienen sobre ti, debes abrir la configuración de Google e indagar un poco.",
     "section1": {
-      "title": "Find a summary of all the data stored in your Google Account",
+      "title": "Consulta un resumen de todos los datos almacenados en tu cuenta de Google",
       "numberedList": [
-        "Log in to your Google Account",
-        "On the navigation panel, select “Data & privacy” or select the tab ‘Privacy & personalization.’",
-        "There, you will be able to view data from acquired by Google apps you use and the content saved from Google services"
+        "Accede a tu cuenta de Google",
+        "En el panel de navegación, selecciona 'Datos y privacidad' o selecciona la pestaña 'Privacidad y personalización'",
+        "Allí, podrás ver los datos adquiridos por las aplicaciones de Google que utilizas y el contenido guardado de los servicios de Google"
       ],
-      "footer": "You will also find the name of each of Google’s primary services in your dashboard under ‘Things you’ve done and places you’ve been’ to see data for each specific service. You may also select the right-pointing arrow next to each service to manage and change settings."
+      "footer": "También encontrarás el nombre de cada uno de los servicios principales de Google en tu panel de control, en 'Lugares en los que has estado', para ver los datos de cada servicio específico. También puedes seleccionar la flecha que apunta hacia la derecha junto a cada servicio para gestionar y cambiar la configuración."
     },
     "section2": {
-      "title": "Google Web & App Activity",
+      "title": "Actividad en Google y en sus apps",
       "description": [
-        "In [My Activity](https://myactivity.google.com/myactivity), located under ‘History settings’ you will be able to see every search made and the websites you've visited (thanks to Google Analytics).",
-        "If you've ever used a Google app, that data will appear as well. All of your Google activity history is displayed by date, hour, and app used."
+        "En [Mi actividad](https://myactivity.google.com/myactivity), situado en 'Configuración del historial', podrás ver todas las búsquedas realizadas y los sitios web que has visitado (gracias a Google Analytics)",
+        "Si alguna vez has utilizado una aplicación de Google, esos datos también aparecerán. Todo tu historial de actividad en Google se muestra por fecha, hora y aplicación utilizada."
       ]
     },
     "section3": {
-      "title": "Google Location History",
+      "title": "Historial de ubicaciones de Google",
       "description": [
-        "Your location privacy is compromised every time you leave a review or access a location service. Find your Google Location History and Google Maps Timeline [here](https://maps.google.com/locationhistory).",
-        "Google's location history page offers a complete list of where you've been, which you may have saved in Google Maps (specifically found in ‘Location History’). There is also Google ‘Maps Timeline,’ and the map will display all the areas Google knows you've visited."
+        "La privacidad de tu ubicación se ve comprometida cada vez que dejas una opinión o accedes a un servicio de ubicación. Encuentra tu historial de ubicaciones de Google y la cronología de Google Maps [aquí](https://maps.google.com/locationhistory).",
+        "La página del historial de ubicaciones de Google ofrece una lista completa de los lugares en los que has estado, que puedes haber guardado en Google Maps (concretamente se encuentra en 'Historial de ubicaciones'). También está Google 'Maps Timeline', y el mapa mostrará todas las zonas que Google sabe que has visitado."
       ]
     },
     "section4": {
-      "title": "YouTube History",
+      "title": "Historial de YouTube",
       "description": [
-        "Google also keeps a history of your YouTube searches, the date when you watched the video, and the device you used to view the content.",
-        "Log into your Google account and check [here](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): Select ‘YouTube watch and search history' and set it to auto-delete every 3 or 6 months, or select the option to not save any data at all."
+        "Google también guarda un historial de tus búsquedas en YouTube, la fecha en la que viste el vídeo y el dispositivo que utilizaste para ver el contenido",
+        "Accede a tu cuenta de Google y consulta [aquí](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): Selecciona 'Historial de búsquedas y visualizaciones de YouTube' y configúralo para que se elimine automáticamente cada 3 o 6 meses, o selecciona la opción de no guardar ningún dato."
       ]
     },
     "section5": {
-      "title": "Google info you share with others",
-      "description": "If you would like to explore the personal profile and location-sharing information made viewable to others, you can do so by clicking the respective tabs shown below. There you can also edit this information and adjust permissions."
+      "title": "La información de Google que compartes con otros",
+      "description": "Si quieres explorar el perfil personal y la información sobre la ubicación compartida visible para los demás, puedes hacerlo en las pestañas respectivas que se muestran a continuación. También puedes editar ahí esta información y ajustar los permisos."
     },
     "section6": {
-      "title": "Content saved from Google services and third-party apps",
+      "title": "Contenido guardado de servicios de Google y aplicaciones de terceros",
       "description": [
-        "When you install third-party (non-Google) apps and extensions, many give you a Google sign in option to log in directly with your Google account to facilitate the process, this is one of the ways they access the data of those apps.",
-        "Log into your Google account and [discover all the apps and extensions that are accessing your Google data](https://security.google.com/settings/security/permissions) under the section ‘Data from apps and services you use.’ There you’ll find a summary of services and third-party apps, as well as settings to browse and restrict your data."
+        "Cuando instalas aplicaciones y extensiones de terceros (que no son de Google), muchas te dan la opción de iniciar sesión en Google directamente con tu cuenta de Google para facilitar el proceso, esta es una de las formas en que acceden a los datos de esas aplicaciones.",
+        "Accede a tu cuenta de Google y [descubre todas las apps y extensiones que acceden a tus datos de Google](https://security.google.com/settings/security/permissions) en la sección 'Datos de apps y servicios que utilizas'. Allí encontrarás un resumen de servicios y apps de terceros, así como opciones de configuración para explorar y restringir tus datos."
       ]
     },
     "section7": {
-      "title": "Google Chrome cookies and bookmarks",
+      "title": "Cookies y marcadores de Google Chrome",
       "description": [
-        "[Web cookies](https://blog.internxt.com/web-cookies-explained/) are data sets that a computer receives that contain information aimed to make the websites you visit more personalized. Cookies are commonly used to identify when someone visits a website and record this activity.",
-        "In Google Chrome, you can check settings at chrome://settings/cookies to delete existing cookies, allow or block all cookies, and set cookie preferences for websites. You can allow all cookies, block third-party cookies, clear the cookies in your opened windows, block all cookies (recommended), and even select which web pages are never allowed to store cookies.",
-        "Also, Google Chrome also has an Incognito mode that deletes your browser history and clears cookies after you close the open windows."
+        "Las [cookies web](https://blog.internxt.com/web-cookies-explained/) son conjuntos de datos que recibe un ordenador y que contienen información destinada a personalizar los sitios web que se visitan. Las cookies se utilizan habitualmente para identificar cuándo alguien visita un sitio web y registrar esta actividad.",
+        "En Google Chrome, puedes consultar la configuración en chrome://settings/cookies para eliminar las cookies existentes, permitir o bloquear todas las cookies y establecer las preferencias de cookies para los sitios web. Puedes permitir todas las cookies, bloquear las cookies de terceros, borrar las cookies de las ventanas abiertas, bloquear todas las cookies (recomendado) e incluso seleccionar qué páginas web nunca podrán almacenar cookies.",
+        "Además, Google Chrome también dispone de un modo Incógnito que elimina el historial del navegador y borra las cookies después de cerrar las ventanas abiertas."
       ]
     },
     "section8": {
-      "title": "Export all of your data out of Google",
-      "description": "You can export and delete data saved by your Google account by finding the ‘Download or delete your data’ tab and selecting the necessary action. Then you can choose what data to export or delete by following the direction below.",
+      "title": "Exporta todos tus datos fuera de Google",
+      "description": "Puedes exportar y eliminar los datos guardados por tu cuenta de Google buscando la pestaña 'Descargar o eliminar tus datos' y seleccionando la acción necesaria. A continuación, puedes elegir qué datos exportar o eliminar siguiendo las instrucciones siguientes",
       "numberedList": [
         {
-          "title": "Select the data to include",
-          "description": "You can select all the data you want to export and from which platforms."
+          "title": "Selecciona los datos que deseas incluir",
+          "description": "Puedes seleccionar todos los datos que quieres exportar y de qué plataformas."
         },
         {
-          "title": "Choose file type, frequency and destination",
-          "description": "Choose the type of file, the frequency of exporting the files and the destination (email, Internxt, Dropbox, OneDrive, Box, or Google Drive)"
+          "title": "Elige el tipo de archivo, la frecuencia y el destino",
+          "description": "Elige el tipo de archivo, la frecuencia de exportación de los archivos y el destino  Internxt, Dropbox, OneDrive, Box o Google Drive.)"
         },
         {
-          "title": "Create export",
-          "description": "In this final step, you can check the number of data items selected (as the access log activity, search contributions, or your activity) and the date until which it will be available."
+          "title": "Crear exportación",
+          "description": "En este paso final, puede comprobar el número de elementos de datos seleccionados (como la actividad del registro de acceso, las contribuciones de búsqueda o su actividad) y la fecha hasta la que estará disponible."
         }
       ]
     }
   },
   "CtaSection1": {
-    "title": "Done being tracked?",
-    "description": "Give Google the slip and take back your freedom with Internxt.",
-    "cta": "Join Internxt"
+    "title": "¿Harto de ser rastreado?",
+    "description": "Ahora sabes como ver lo que google sabe de ti. Recupera tu libertad con Internxt",
+    "cta": "Únete a Internxt"
   },
   "ManageGoogleDataSection": {
-    "title": "Delete your Google data and adjust your Google privacy settings",
-    "description": "Now that you know your Google activity history, it’s time to stop them from gathering all that personal data in the first place. Below are instructions to help you edit your privacy settings, opt out of some data collection, and limit the amount of your personal info Google stores.",
+    "title": "Elimina tus datos de Google y ajusta tu configuración de privacidad de Google",
+    "description": "Ahora que ya conoces tu historial de actividad en Google, es hora de evitar que recopilen todos esos datos personales. A continuación encontrarás instrucciones que te ayudarán a configurar tu privacidad, a excluirte de la recopilación de algunos datos y a limitar la información personal que Google almacena",
     "section1": {
-      "title": "Delete Google Web & App Activity",
+      "title": "Eliminación de la actividad de Google y sus Apps",
       "description": [
-        "You’d be surprised at how much information Google saves: Google Pay information, YouTube channel subscriptions, YouTube 'not interested' feedback, YouTube survey answers, comments on YouTube, comment likes and dislikes on YouTube, YouTube purchase activity, Google Word Coach, Google survey answers, interests and notifications, Google Play library, news preferences, data archive history, product price tracking, and more.",
-        "By selecting ‘Web & App Activity’ you can delete your activity by clicking on the ‘Delete’ button in the middle of the page selecting: Last hour, Last day, Always, or Custom range. In the Web & App Activity’ page you can also disable future data collection by selecting “Saving activity’ and then clicking ‘Turn off’."
+        "Te sorprendería saber cuánta información guarda Google: Información de Google Pay, suscripciones a canales de YouTube, comentarios de 'no me interesa' en YouTube, respuestas a encuestas de YouTube, comentarios en YouTube, comentarios que te gustan y que no te gustan en YouTube, actividad de compra en YouTube, Google Word Coach, respuestas a encuestas e intereses, biblioteca de Google Play, preferencias de noticias, historial de archivos de datos, seguimiento de precios de productos, etc..",
+        "Al seleccionar 'Actividad en la web y en aplicaciones' puedes eliminar tu actividad haciendo clic en el botón 'Eliminar' situado en el centro de la página seleccionando: Última hora, Último día, Siempre o Rango personalizado. También puedes desactivar la recopilación de datos en el futuro seleccionando 'Guardar actividad' y haciendo clic en 'Desactivar.'"
       ]
     },
     "section2": {
-      "title": "Disable and delete Google Location History",
-      "description": "Location history may be the scariest data Google collects. You can click on Google location ‘Location History’ to disable tracking and turn on auto-delete to remove any previous saved location data.",
+      "title": "Desactivar y eliminar el historial de ubicaciones de Google",
+      "description": "El historial de ubicaciones puede ser el dato más aterrador que Google recopila. Puedes hacer clic en 'Historial de ubicaciones' de Google para inhabilitar el seguimiento y activar la función de eliminación automática para eliminar cualquier dato de ubicación guardado anteriormente",
       "numberedList": [
-        "Go to ‘Location History’",
-        "Select ‘Turn off’",
-        "On the bottom of the page, under ‘Auto-delete’, choose ‘Delete activity older that 3 months’",
-        "Select your preferred options, then click ‘Next’ to save your setting and erase older location data"
+        "Ve a 'Historial de ubicaciones'",
+        "Selecciona 'Desactivar'",
+        "En la parte inferior de la página, en 'Eliminación automática', selecciona 'Eliminar actividad anterior a 3 meses'",
+        "Selecciona las opciones que prefieras y haz clic en 'Siguiente' para guardar la configuración y borrar los datos de ubicación más antiguos."
       ]
     },
     "section3": {
-      "title": "Disable and delete Youtube History",
-      "description": "Are you a big YouTube fan? You can delete your Youtube history and disable further history collection by selecting ‘YouTube History’ in ‘Controls’ and clicking on ‘Turn Off.’ You should also enable auto-delete at the bottom of the page."
+      "title": "Desactivar y borrar el historial de Youtube",
+      "description": "¿Eres fan de Youtube? Puedes eliminar tu historial de Youtube y desactivar la recopilación de más historial seleccionando 'Historial de Youtube' en 'Controles' y haciendo clic en 'Desactivar'. También debes habilitar la eliminación automática en la parte inferior de la página."
     },
     "section4": {
-      "title": "Delete and disable Google Fit data",
+      "title": "Eliminar y desactivar los datos de Google Fit",
       "description": [
-        "Do you own a device connected to Google Fit? While this is helpful for tracking weight loss and exercise, Fit gathers a ton of personal health information that probably should not be kept online. ",
-        "Adjust and disable Fit’s data-collecting permissions by selecting ‘Manage Google Fit privacy’ and deselect any options you’re uncomfortable with–or turn off Fit completely."
+        "¿Tienes un dispositivo conectado a Google Fit? Si bien es útil para el seguimiento de la pérdida de peso y el ejercicio, Fit recoge una tonelada de información personal de salud que probablemente no debería estar en internet.",
+        "Ajusta e inhabilita los permisos de recopilación de datos de Fit seleccionando 'Administrar la privacidad de Google Fit' y anula la selección de las opciones con las que no te sientas cómodo, o desactivalo por completo."
       ]
     },
     "section5": {
-      "title": "Manage Google email preferences",
-      "description": "Sick of targeted emails from Google like price alerts and travel tips? Turn them off by adjusting your email settings by clicking ‘Manage email preferences’ under the “Emails from Google services’ tab."
+      "title": "Administrar las preferencias de correo electrónico de Google",
+      "description": "¿Estás harto de los correos electrónico personalizados de Google, como las alertas de precios y los consejos de viaje? Desactívalos ajustando la configuración de tu correo electrónico haciendo clic en 'Administrar preferencias de correo electrónico' en la pestaña 'Correos electrónicos de los servicios de Google'."
     },
     "section6": {
-      "title": "Google Ads personalization",
+      "title": "Personalización de los anuncios de Google",
       "description": [
-        "You can check what Google knows about you under ‘Personalized ads’ in ['My Ad Center’](http://www.google.com/settings/ads/), where you can find information about your age range, languages, education and so on. You also have the option to turn-off all personalized ads by clicking a button located in the upper-right side of the ‘My Ad Center’ page.",
-        "Or you can choose to customize your personalized ads or further manage your ad privacy setting, but as long as personalized ads are enabled, Google will still share some of your information with advertisers. "
+        "Puede comprobar lo que Google sabe de ti en 'Anuncios personalizados' en ['Mi centro de anuncios'](http://www.google.com/settings/ads/), donde encontrarás información sobre tu rango de edad, idiomas, educación, etc. También tienes la opción de desactivar todos los anuncios personalizados en la parte superior derecha de la página 'Mi centro de anuncios'. También puedes desactivar todos los anuncios personalizados en el botón situado en la parte superior derecha de la página 'Mi centro de anuncios.'",
+        "También puedes optar por personalizar tus anuncios personalizados o administrar aún más tu configuración de privacidad de los anuncios, pero mientras los anuncios personalizados estén habilitados, Google seguirá compartiendo parte de tu información con los anunciantes."
       ]
     },
     "section7": {
-      "title": "Remove third-party access of your Google data",
+      "title": "Eliminar el acceso de terceros a tus datos de Google",
       "description": [
-        "When you link your Google Account to a third-party account, the third-party account has the ability to extract information from Google. In fact, Google transmits our personal data 70 billion times a day. You should check which companies have access to your data and manage privacy settings.",
-        "Some third-party accounts may not allow you to unlink your third-party account from your Google Account, so for managing that you will have to check the settings options on those services websites.",
-        "To disable third-party access to individual apps and services, navigate down the privacy page and find the tab that says ‘Third-party apps with account access.’ Select it and there you will find which third parties have access to your account and manage settings. Click the services you would like to edit permissions of and then select the option to disable access."
+        "Cuando vinculas tu cuenta de Google a una cuenta de terceros, la cuenta de terceros puede extraer información de Google. De hecho, Google transmite nuestros datos personales 70.000 millones de veces al día. Debes comprobar qué empresas tienen acceso a tus datos y gestionar la configuración de privacidad.",
+        "Es posible que algunas cuentas de terceros no te permitan desvincular tu cuenta de terceros de tu cuenta de Google, por lo que para gestionarlo deberás comprobar las opciones de configuración de los sitios web de esos servicios.",
+        "Para inhabilitar el acceso de terceros a aplicaciones y servicios concretos, desplázate por la página de privacidad y busca la pestaña 'Aplicaciones de terceros con acceso a la cuenta'. Selecciónala y allí encontrarás qué terceros tienen acceso a tu cuenta. Haz clic en los servicios cuyos permisos quieras editar y selecciona la opción para desactivar el acceso."
       ]
     },
     "section8": {
-      "title": "Remove your personal data from Google Search",
-      "description": "If you don’t want your personal Google Account info showing up in Google Search if someone decides to search you, simply find the tab ‘Personal results in Search,’ click on it, then select the check mark slider to turn off whether Search can show you personal results based on info in your Google Account. "
+      "title": "Elimina tus datos personales de la Búsqueda de Google",
+      "description": "Si no quieres que la información personal de tu cuenta de Google aparezca en la Búsqueda de Google si alguien decide buscarte, simplemente busca la pestaña 'Resultados personales en la Búsqueda', haz clic en ella y, a continuación, selecciona la marca deslizante para desactivar la opción de que la Búsqueda pueda mostrarte resultados personales basados en la información de tu cuenta de Google. "
     },
     "section9": {
-      "title": "How to Delete Google Account",
+      "title": "Cómo eliminar la cuenta de Google",
       "description": [
-        "If you have had enough, are completely done with Google, and just want out, you can delete Google Account by navigating to the bottom of the privacy page under ‘More options’ and select ‘Delete your Google Account.’ ",
-        "Simply follow the directions from there. Be sure you are ready to delete all your information, because once this action is completed it cannot be undone. "
+        "Te preguntabas como saber lo que google sabe de mi, y ya lo sabes. Si ya has tenido suficiente, has terminado por completo con Google y simplemente quieres salir, puedes eliminar la cuenta de Google accediendo a la parte inferior de la página de privacidad en 'Más opciones' y seleccionando 'Eliminar tu cuenta de Google' ",
+        "A continuación, sigue las instrucciones. Asegúrate de que estás preparado para eliminar toda tu información, ya que una vez realizada esta acción no se puede deshacer."
       ]
     }
   },
   "ToolsSection": {
-    "title": "Other privacy resources from Internxt",
+    "title": "Otros recursos sobre privacidad de Internxt",
     "description": [
-      "Want to know more about protecting your data online? Google isn’t the only one harvesting your personal information. Visit our [Cyber Awareness](https://internxt.com/cyber-awareness) page for tons of best practices and strategies to make browsing online safer and more private."
+      "Tras responder a tu pregunta de Qué sabe google de mi, debes saber que no son los únicos que tienen tu información. Visita nuestra página [de concienciación cibernética](https://internxt.com/es/cyber-awareness) para conocer buenas prácticas para que navegar por Internet sea más seguro."
     ],
     "tools": [
       {
         "url": "/images/temp-email/password-checker.svg",
         "UrlRedirectName": "password-checker",
-        "title": "Free Password Strength Checker",
+        "title": "Comprobador gratuito de contraseñas",
         "width": 125,
-        "description": "Check now"
+        "description": "Probar ahora"
       },
       {
         "url": "/images/temp-email/virus-scanner.svg",
         "UrlRedirectName": "virus-scanner",
-        "title": "Free Virus Scanner",
+        "title": "Escáner de virus gratuito",
         "width": 105,
-        "description": "Scan now"
+        "description": "Escanear ahora"
       },
       {
         "url": "/images/temp-email/byte-converter.svg",
         "UrlRedirectName": "byte-converter",
-        "title": "Free Byte Converter",
+        "title": "Convertidor de bytes gratuito",
         "width": 95,
-        "description": "Convert now"
+        "description": "Convertir ahora"
       },
       {
         "url": "/images/temp-email/temporary-email.svg",
         "UrlRedirectName": "temporary-email",
-        "title": "Temporary Email",
+        "title": "Correo electrónico temporal",
         "width": 95,
-        "description": "Mail now"
+        "description": "Probar ahora"
       }
     ]
   },
   "CtaSection2": {
-    "title": "A cloud you can trust",
-    "description": "Internxt’s job is to protect your data, not exploit it.",
-    "cta": "Create free account"
+    "title": "Una nube en la que puedes confiar",
+    "description": "El trabajo de Internxt es proteger tus datos, no explotarlos",
+    "cta": "Crear cuenta gratuita"
   }
 }
