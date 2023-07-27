@@ -236,7 +236,7 @@ export default function Navbar(props: NavbarProps) {
               <button
                 id="loginButton"
                 onClick={() => goToLoginURL()}
-                className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1.5 px-4 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
+                className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'border-white text-white focus:opacity-80'
                     : 'border-primary text-primary hover:bg-primary hover:bg-opacity-10 active:border-primary-dark active:text-primary-dark'

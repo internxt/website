@@ -13,7 +13,7 @@ const HeroSection = ({ textContent }) => {
         <div className="flex flex-col items-center py-16 pb-20 lg:py-20">
           {/* Main title */}
           <div className="flex flex-col items-center justify-center px-6 text-center">
-            <h1 className="mb-6 max-w-[796px] text-5xl font-medium text-gray-100 sm:mb-10 sm:text-6xl lg:text-7xl">
+            <h1 className="mb-6 max-w-[796px] text-5xl font-medium text-gray-100 sm:mb-10 sm:text-6xl">
               {textContent.title.normalText}
               <span className="text-primary">{textContent.title.blueText}</span>
             </h1>
