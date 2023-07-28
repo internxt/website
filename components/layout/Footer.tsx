@@ -158,9 +158,6 @@ export default function Footer({
                       className="flex flex-row items-center hover:text-primary"
                     >
                       <div>{textContent.FooterSection.sections.products.send}</div>
-                      {/* <div className="pointer-events-none ml-2 flex flex-row items-center whitespace-nowrap rounded-full bg-orange bg-opacity-15 px-2 text-supporting-1 font-medium uppercase text-orange">
-                        {textContent.FooterSection.new}
-                      </div> */}
                     </a>
 
                     <Link href="/pricing" locale={lang} passHref>
@@ -187,7 +184,12 @@ export default function Footer({
                     </Link>
                     {lang === 'en' && (
                       <Link href="/open-source" locale={lang} passHref>
-                        <a className="hover:text-primary">{textContent.FooterSection.sections.company.openSource}</a>
+                        <a className="flex flex-row hover:text-primary">
+                          {textContent.FooterSection.sections.company.openSource}
+                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                            {textContent.FooterSection.new}
+                          </div>
+                        </a>
                       </Link>
                     )}
 
@@ -286,9 +288,11 @@ export default function Footer({
                     <Link href="/what-does-google-know-about-me" locale={lang} passHref>
                       <a className="flex items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
+                        {lang !== 'en' && (
+                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                            {textContent.FooterSection.new}
+                          </div>
+                        )}
                       </a>
                     </Link>
                   </div>
@@ -535,7 +539,12 @@ export default function Footer({
 
                       {lang === 'en' && (
                         <Link href="/open-source" locale={lang} passHref>
-                          <a className="hover:text-primary">{textContent.FooterSection.sections.company.openSource}</a>
+                          <a className="flex flex-row hover:text-primary">
+                            {textContent.FooterSection.sections.company.openSource}
+                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                              {textContent.FooterSection.new}
+                            </div>
+                          </a>
                         </Link>
                       )}
 
