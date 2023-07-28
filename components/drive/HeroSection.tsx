@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 import DownloadComponent from '../shared/DownloadComponent';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col">
