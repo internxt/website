@@ -26,7 +26,7 @@ const HeroSection = ({ textContent }) => {
             <div
               type="button"
               onClick={() => setIsOpen(true)}
-              className="flex flex-row items-center justify-center space-x-1 text-xl font-semibold text-blue-50 hover:underline sm:text-lg"
+              className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-xl font-semibold text-blue-50 hover:underline sm:text-lg"
             >
               <p>{textContent.cta}</p>
               <CaretRight size={12} weight="bold" />
