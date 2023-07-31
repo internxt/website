@@ -19,7 +19,7 @@ const PaymentSection = ({ lang, textContent, country }) => {
           </div>
         </div>
 
-        <PriceTable lang={lang} textContent={textContent} country={country} />
+        <PriceTable lang={lang} country={country} />
 
         <div className="flex flex-col items-start justify-center space-y-8 text-center md:flex-row md:space-x-32 md:space-y-0">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
