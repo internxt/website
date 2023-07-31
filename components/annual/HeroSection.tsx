@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 import { checkout } from '../../lib/auth';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
   return (
@@ -14,12 +15,10 @@ const HeroSection = ({ textContent }) => {
               <p className="text-xl font-medium text-gray-80">{textContent.header}</p>
             </div>
             <div className="flex flex-col space-y-16">
-              <div className="flex flex-col text-center lg:text-start">
-                <p className="text-6xl font-semibold">
-                  {textContent.title.normalText}
-                  <span className="text-6xl font-semibold text-primary">{textContent.title.blueText}</span>
-                </p>
-              </div>
+              <Header className="text-center text-gray-100 lg:text-start">
+                {textContent.title.normalText}
+                <span className="text-6xl font-semibold text-primary">{textContent.title.blueText}</span>
+              </Header>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center space-y-5 space-x-8 lg:flex-row lg:justify-start lg:space-y-0">

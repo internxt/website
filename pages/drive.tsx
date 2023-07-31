@@ -56,7 +56,7 @@ const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLan
 };
 
 export async function getServerSideProps(ctx) {
-  const download = await downloadDriveLinks(ctx);
+  const download = await downloadDriveLinks();
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);

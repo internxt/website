@@ -1,5 +1,6 @@
 import { Eye } from '@phosphor-icons/react';
 import SignUpBanner from '../banners/SignUpBanner';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent, bannerText, lang }) => {
   const bulletedList = textContent.section2.bulletedList.list.map((item, index) => (
@@ -12,7 +13,9 @@ const HeroSection = ({ textContent, bannerText, lang }) => {
     <section className="overflow-hidden pt-16">
       <div className="flex flex-col items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center bg-gradient-to-r from-primary to-primary-dark py-20 text-center">
-          <h1 className="max-w-xl text-6xl font-semibold leading-tight text-white">{textContent.mainTitle}</h1>
+          <Header maxWidth="max-w-xl" className="text-white">
+            {textContent.mainTitle}
+          </Header>
         </div>
         <div className="flex w-full flex-col items-center justify-center space-y-16 px-5 py-20">
           <div className=" flex max-w-2xl flex-col space-y-10">

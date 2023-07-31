@@ -4,6 +4,7 @@ import { goToSignUpURL } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
+import Header from '../shared/Header';
 
 export default function HeroSection({ textContent, lang }) {
   const [formError, setFormError] = useState<string | null>(null);
@@ -61,10 +62,10 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
-            <h1 className="pb-5 text-4xl font-semibold text-gray-100 sm:text-5xl lg:pb-8 lg:text-6xl lg:leading-[1.125]">
+            <Header>
               {title}
               <span className=" text-primary">{Internxt}</span>
-            </h1>
+            </Header>
 
             <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8">{textContent.subtitle}</h2>
 

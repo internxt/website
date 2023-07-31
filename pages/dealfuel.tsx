@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
-import HeroSection from '../components/techcult/HeroSection';
-import FeatureSection from '../components/techcult/FeatureSection';
-import GetLifetimeSection from '../components/techcult/GetLifetimeSection';
+import HeroSection from '../components/dealfuel/HeroSection';
+import FeatureSection from '../components/dealfuel/FeatureSection';
+import GetLifetimeSection from '../components/dealfuel/GetLifetimeSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import PaymentSection from '../components/techcult/PaymentSection';
+import PaymentSection from '../components/dealfuel/PaymentSection';
 import Navbar from '../components/layout/Navbar';
-import CtaSection from '../components/techcult/CtaSection';
+import CtaSection from '../components/dealfuel/CtaSection';
 
 import axios from 'axios';
 import LogIn from '../components/auth/LogIn';
