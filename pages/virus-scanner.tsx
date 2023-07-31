@@ -7,7 +7,7 @@ import Layout from '../components/layout/Layout';
 import HeroSection from '../components/virus-scanner/HeroSection';
 import FeaturesSection from '../components/virus-scanner/FeaturesSection';
 import CtaSection from '../components/virus-scanner/CtaSection';
-import FAQSection from '../components/virus-scanner/FAQSection';
+import FAQSection from '../components/shared/FaqSection';
 import ToolsSection from '../components/shared/ToolsSection';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
@@ -29,7 +29,7 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={langJson.HeroSection} lang={lang} />
+        <HeroSection textContent={langJson.HeroSection} />
 
         <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}

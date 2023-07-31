@@ -92,54 +92,52 @@
   },
   "FaqSection": {
     "title": "Domande? Abbiamo le riposte.",
-    "faq": {
-      "faq": [
-        {
-          "question": "Come utilizzo il Byte Converter?",
-          "answer": [
-            "Seleziona l'uintà di misura che desideri convertire e poi l'unità in cui desideri convertirla (ad esempio: KB in MB). Inserisci un valore nel riquadro di sinistra e la tua risposta apparirà nel riquadro di destra."
-          ]
-        },
-        {
-          "question": "Come faccio a convertire i terabyte in gigabyte, e così via?",
-          "answer": [
-            "Basta inserire il valore dei byte che si desidera convertire nel nostro Byte Converter e poi selezionare l'unità di misura dei byte in cui si desidera trasformarlo, il valore verrà automaticamente convertito e visualizzato.",
-            "Oppure, se desideri eseguire manualmente il calcolo, puoi anche utilizzare lo schema di conversione riportato sopra."
-          ]
-        },
-        {
-          "question": "Quanti gigabyte corrispondono a un terabyte?",
-          "answer": [
-            "1000 GB equivalgono a 1 TB. Quindi uno spazio di archiviazione di un TB può contenere 1000 GB di dati."
-          ]
-        },
-        {
-          "question": "Qual è la differenza tra TB e GB?",
-          "answer": [
-            "TB e GB sono solo due unità di misura di dimensioni diverse. Un terabyte è composto da un maggior numero di byte (la più piccola unità di misura dei dati) rispetto a un gigabyte. In generale, un B è più piccolo di un KB, un MB è più grande di un KB, un GB è ancora più grande e un TB è ulteriormente più grande.",
-            "Se vuoi paragonare tra loro tutte le diverse unità di misura, oppure cosa significa MB, o qual è quella più grande rispetto al terabyte, controlla lo schema di conversione che trovi più su, in questa pagina."
-          ]
-        },
-        {
-          "question": "Perché il mio disco da 1 TB non contiene 1 TB di dati?",
-          "answer": [
-            "Sebbene il tuo drive da 1 TB sia effettivamente composto da 1 TB di spazio di archiviazione, all'atto pratico non ti sarà possible utilizzarlo interamente, perché parte di quello spazio deve essere usato per memorizzare informazioni di servizio necessarie per il suo corretto funzionamento."
-          ]
-        },
-        {
-          "question": "Quanti sono 2TB?",
-          "answer": [
-            "2 terabyte (TB) equivalgono a 2'000 gigabyte (GB), ovvero 2'000'000 di megabyte (MB). In 2TB di spazio per i dati, puoi salvare mediamente 200'000 fotografie di un attuale smartphone, oppure approssimativamente 500'000 documenti."
-          ]
-        },
-        {
-          "question": "Quanto è 1TB?",
-          "answer": [
-            "1 terabyte (TB) equivale a 1'000 gigabytes (GB), ovvero 1'000'000 di megabyte (MB). In 1TB di spazio di archiviazione per i dati, puoi salvare mediamente 100'000 fotografie di un attuale smartphones, oppure approssimativamente 250'000 documenti."
-          ]
-        }
-      ]
-    }
+    "faq": [
+      {
+        "question": "Come utilizzo il Byte Converter?",
+        "answer": [
+          "Seleziona l'uintà di misura che desideri convertire e poi l'unità in cui desideri convertirla (ad esempio: KB in MB). Inserisci un valore nel riquadro di sinistra e la tua risposta apparirà nel riquadro di destra."
+        ]
+      },
+      {
+        "question": "Come faccio a convertire i terabyte in gigabyte, e così via?",
+        "answer": [
+          "Basta inserire il valore dei byte che si desidera convertire nel nostro Byte Converter e poi selezionare l'unità di misura dei byte in cui si desidera trasformarlo, il valore verrà automaticamente convertito e visualizzato.",
+          "Oppure, se desideri eseguire manualmente il calcolo, puoi anche utilizzare lo schema di conversione riportato sopra."
+        ]
+      },
+      {
+        "question": "Quanti gigabyte corrispondono a un terabyte?",
+        "answer": [
+          "1000 GB equivalgono a 1 TB. Quindi uno spazio di archiviazione di un TB può contenere 1000 GB di dati."
+        ]
+      },
+      {
+        "question": "Qual è la differenza tra TB e GB?",
+        "answer": [
+          "TB e GB sono solo due unità di misura di dimensioni diverse. Un terabyte è composto da un maggior numero di byte (la più piccola unità di misura dei dati) rispetto a un gigabyte. In generale, un B è più piccolo di un KB, un MB è più grande di un KB, un GB è ancora più grande e un TB è ulteriormente più grande.",
+          "Se vuoi paragonare tra loro tutte le diverse unità di misura, oppure cosa significa MB, o qual è quella più grande rispetto al terabyte, controlla lo schema di conversione che trovi più su, in questa pagina."
+        ]
+      },
+      {
+        "question": "Perché il mio disco da 1 TB non contiene 1 TB di dati?",
+        "answer": [
+          "Sebbene il tuo drive da 1 TB sia effettivamente composto da 1 TB di spazio di archiviazione, all'atto pratico non ti sarà possible utilizzarlo interamente, perché parte di quello spazio deve essere usato per memorizzare informazioni di servizio necessarie per il suo corretto funzionamento."
+        ]
+      },
+      {
+        "question": "Quanti sono 2TB?",
+        "answer": [
+          "2 terabyte (TB) equivalgono a 2'000 gigabyte (GB), ovvero 2'000'000 di megabyte (MB). In 2TB di spazio per i dati, puoi salvare mediamente 200'000 fotografie di un attuale smartphone, oppure approssimativamente 500'000 documenti."
+        ]
+      },
+      {
+        "question": "Quanto è 1TB?",
+        "answer": [
+          "1 terabyte (TB) equivale a 1'000 gigabytes (GB), ovvero 1'000'000 di megabyte (MB). In 1TB di spazio di archiviazione per i dati, puoi salvare mediamente 100'000 fotografie di un attuale smartphones, oppure approssimativamente 250'000 documenti."
+        ]
+      }
+    ]
   },
   "SchemaMarkupQuestions": {
     "faq": [

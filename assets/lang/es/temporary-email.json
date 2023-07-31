@@ -127,7 +127,7 @@
   },
   "QASection": {
     "title": "¿Preguntas? Tenemos respuestas",
-    "questions": [
+    "faq": [
       {
         "question": "¿Cuánto tiempo se guardan los correos electrónicos?",
         "answer": [

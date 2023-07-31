@@ -127,7 +127,7 @@
   },
   "QASection": {
     "title": "Questions? We have answers",
-    "questions": [
+    "faq": [
       {
         "question": "How long are emails kept?",
         "answer": [

@@ -127,7 +127,7 @@
   },
   "QASection": {
     "title": "Domande? Abbiamo le risposte",
-    "questions": [
+    "faq": [
       {
         "question": "Per quanto tempo vengono conservate le e-mail?",
         "answer": [

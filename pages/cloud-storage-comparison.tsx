@@ -4,7 +4,7 @@ import React from 'react';
 import TableSection from '../components/comparison/TableSection';
 import FeatureSection from '../components/comparison/FeatureSection';
 import InfoSection from '../components/home/InfoSection';
-import FAQSection from '../components/comparison/FAQSection';
+import FAQSection from '../components/shared/FaqSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';

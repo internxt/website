@@ -7,7 +7,7 @@ import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/temp-email/HeroSection';
 import InfoSection from '../components/temp-email/InfoSection';
 import ToolsSection from '../components/temp-email/ToolsSection';
-import QASection from '../components/temp-email/QASection';
+import QASection from '../components/shared/FaqSection';
 import SignupSection from '../components/temp-email/SignupSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';

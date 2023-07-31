@@ -127,7 +127,7 @@
   },
   "QASection": {
     "title": "问题？ 我们有答案",
-    "questions": [
+    "faq": [
       {
         "question": "电子邮件保存多长时间？",
         "answer": [

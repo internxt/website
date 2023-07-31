@@ -90,52 +90,51 @@
   },
   "FaqSection": {
     "title": "Questions? We have answers",
-    "faq": {
-      "faq": [
-        {
-          "question": "How do I use the Byte Converter?",
-          "answer": [
-            "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
-          ]
-        },
-        {
-          "question": "How do I convert terabytes to gigabytes and so on?",
-          "answer": [
-            "Simply input the byte value you want to convert into our Byte Converter and select the byte value you want to reformat in, the value will automatically be converted and displayed.",
-            "You may also use the conversion chart listed above if you want to manually do the calculation."
-          ]
-        },
-        {
-          "question": "How many gigabytes equal one terabyte?",
-          "answer": ["1024 GB equals 1 TB. So one TB of storage can hold 1024 GB of data."]
-        },
-        {
-          "question": "What is the difference between TB and GB?",
-          "answer": [
-            "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a KB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
-            "If you would like to see how they all stack up against each other or what’s MB meaning or what’s bigger than a terabyte, check out the conversion chart above on the page."
-          ]
-        },
-        {
-          "question": "Why is my 1 TB disk not 1TB?",
-          "answer": [
-            "Though your 1 TB drive is listed as having 1 TB worth of storage, typically, you won’t be able to use the whole amount as part of the drive may be used for operational files."
-          ]
-        },
-        {
-          "question": "How much is 2TB?",
-          "answer": [
-            "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
-          ]
-        },
-        {
-          "question": "How much is 1TB?",
-          "answer": [
-            "1 terabyte (TB) equals about 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
-          ]
-        }
-      ]
-    }
+
+    "faq": [
+      {
+        "question": "How do I use the Byte Converter?",
+        "answer": [
+          "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
+        ]
+      },
+      {
+        "question": "How do I convert terabytes to gigabytes and so on?",
+        "answer": [
+          "Simply input the byte value you want to convert into our Byte Converter and select the byte value you want to reformat in, the value will automatically be converted and displayed.",
+          "You may also use the conversion chart listed above if you want to manually do the calculation."
+        ]
+      },
+      {
+        "question": "How many gigabytes equal one terabyte?",
+        "answer": ["1024 GB equals 1 TB. So one TB of storage can hold 1024 GB of data."]
+      },
+      {
+        "question": "What is the difference between TB and GB?",
+        "answer": [
+          "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a KB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
+          "If you would like to see how they all stack up against each other or what’s MB meaning or what’s bigger than a terabyte, check out the conversion chart above on the page."
+        ]
+      },
+      {
+        "question": "Why is my 1 TB disk not 1TB?",
+        "answer": [
+          "Though your 1 TB drive is listed as having 1 TB worth of storage, typically, you won’t be able to use the whole amount as part of the drive may be used for operational files."
+        ]
+      },
+      {
+        "question": "How much is 2TB?",
+        "answer": [
+          "2 terabytes (TB) equals 2,000 gigabytes (GB) or 2,000,000 megabytes (MB). With 2TB of data, you can store an average of 200,000 photos with today's smartphones, and roughly 500,000 documents can fit on a 2TB drive."
+        ]
+      },
+      {
+        "question": "How much is 1TB?",
+        "answer": [
+          "1 terabyte (TB) equals about 1,000 gigabytes (GB) or 1,000,000 megabytes (MB). With 1TB of data, you can store an average of 100,000 photos with today's smartphones, and roughly 250,000 documents can fit on a 1TB drive."
+        ]
+      }
+    ]
   },
   "SchemaMarkupQuestions": {
     "faq": [

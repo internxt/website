@@ -4,7 +4,7 @@ import React from 'react';
 import HeroSection from '../components/drive/HeroSection';
 import FeaturesSection from '../components/drive/FeaturesSection';
 import FeatureSection from '../components/drive/FeatureSection';
-import FAQSection from '../components/drive/FAQSection';
+import FAQSection from '../components/shared/FaqSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import ProductsNavigation from '../components/layout/ProductsNavigation';
