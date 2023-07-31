@@ -14,7 +14,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
   const metatags = metatagsDescriptions.filter((item) => item.id === 'affiliates');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
