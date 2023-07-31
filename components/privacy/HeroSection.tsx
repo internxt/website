@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { UilPlayCircle } from '@iconscout/react-unicons';
 import YoutubeEmbed from '../utils/youtube';
-import styles from './HeroSection.module.scss';
 import { CaretRight } from '@phosphor-icons/react';
 import Header from '../shared/Header';
 
@@ -24,7 +22,6 @@ const HeroSection = ({ textContent }) => {
             </h2>
 
             <div
-              type="button"
               onClick={() => setIsOpen(true)}
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-xl font-semibold text-blue-50 hover:underline sm:text-lg"
             >
