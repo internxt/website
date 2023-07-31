@@ -8,7 +8,7 @@ import ExplanationSection from '../components/converter-tool/ExplanationSection'
 import CtaSection from '../components/converter-tool/CtaSection';
 import InfoSection from '../components/converter-tool/InfoSection';
 import ConversionTableSection from '../components/converter-tool/ConversionTableSection';
-import FaqSection from '../components/converter-tool/FaqSection';
+import FaqSection from '../components/shared/FaqSection';
 import Footer from '../components/layout/Footer';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
