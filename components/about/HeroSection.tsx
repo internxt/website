@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20">
@@ -7,10 +8,11 @@ const HeroSection = ({ textContent }) => (
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-16 px-6">
         <div className="flex flex-col space-y-6 text-center">
-          <h1 className="flex w-full max-w-4xl flex-col text-center text-5xl font-semibold text-gray-100 lg:text-6xl">
+          <Header className="text-gray-100">
             {textContent.title.line1} <br />
             {textContent.title.line2} <span className="text-primary">{textContent.blueText}</span>
-          </h1>
+          </Header>
+
           <p className="text-xl font-normal text-gray-80">{textContent.description}</p>
         </div>
 

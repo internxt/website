@@ -4,6 +4,7 @@ import React from 'react';
 import DownloadComponent from '../shared/DownloadComponent';
 import RevealX from '../components/RevealX';
 import RevealY from '../components/RevealY';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
   <section className="flex w-full flex-col">
@@ -14,10 +15,10 @@ const HeroSection = ({ textContent, lang, device, download }) => (
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
 
-        <h1 className="mb-10 px-4 text-4xl font-semibold text-cool-gray-90 lg:text-6xl lg:leading-tight">
+        <Header maxWidth="max-w-max" className="text-gray-100">
           {textContent.title.line1} <br className="hidden sm:flex" />
           <span className="text-primary">{textContent.title.line2}</span>
-        </h1>
+        </Header>
 
         <h3 className="max-w-4xl text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
           {textContent.subtitle.line1}

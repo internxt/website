@@ -3,14 +3,15 @@ import styles from '/components/privacy/HeroSection.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import SignUpBanner from '../banners/SignUpBanner';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent, lang, bannerText }) => (
   <>
     <section className={`relative flex w-full flex-col overflow-hidden pt-10 filter ${styles.neonBlur}`}>
       <div className="flex h-[300px] w-screen flex-col items-center justify-center">
-        <div className="flex w-screen flex-col px-10 text-center">
-          <p className="text-4xl font-medium text-white lg:text-6xl">{textContent.title}</p>
-        </div>
+        <Header maxWidth="max-w-max" className="text-center text-white">
+          {textContent.title}
+        </Header>
       </div>
     </section>
     <section className="flex flex-col  py-16">
