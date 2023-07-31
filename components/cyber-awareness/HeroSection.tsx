@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import SignUpBanner from '../banners/SignUpBanner';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent, bannerText }) => {
   const router = useRouter();
@@ -9,7 +10,7 @@ const HeroSection = ({ textContent, bannerText }) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className=" flex h-60 items-center justify-center border-b border-white bg-gradient-to-b from-primary to-primary-dark">
-        <h1 className="text-center text-5xl font-semibold text-white sm:text-6xl">{textContent.title}</h1>
+        <Header className="text-center text-white">{textContent.title}</Header>
       </div>
       <div className="flex flex-col items-center justify-center p-5 text-center md:p-20 lg:text-left">
         <div className="flex w-full max-w-[672px] flex-col">
