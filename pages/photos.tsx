@@ -5,7 +5,6 @@ import userAgent from 'useragent';
 import HeroSection from '../components/photos/HeroSection';
 import FeaturesSection from '../components/photos/FeaturesSection';
 import FeatureSection from '../components/photos/FeatureSection';
-import FAQSection from '../components/photos/FAQSection';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import ProductsNavigation from '../components/layout/ProductsNavigation';

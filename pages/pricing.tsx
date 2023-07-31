@@ -7,7 +7,7 @@ import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
 import axios from 'axios';
-import FAQSection from '../components/pricing/FAQSection';
+import FAQSection from '../components/shared/FaqSection';
 import CtaSection from '../components/pricing/CtaSection';
 import HeroSection from '../components/pricing/HeroSection';
 
