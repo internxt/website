@@ -1,18 +1,16 @@
 import Script from 'next/script';
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import PriceTable from '../components/prices/PriceTable';
 import Layout from '../components/layout/Layout';
 import cookies from '../lib/cookies';
-import axios from 'axios';
 import FAQSection from '../components/shared/FaqSection';
 import CtaSection from '../components/pricing/CtaSection';
 import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import { currencyService } from '../components/services/currencyService';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
