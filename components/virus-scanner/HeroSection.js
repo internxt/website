@@ -5,9 +5,9 @@
 /* eslint-disable no-console */
 import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
-import { UilRedo, UilExclamationOctagon } from '@iconscout/react-unicons';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
@@ -181,7 +181,7 @@ const HeroSection = ({ textContent }) => {
           {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
             <div className="flex w-full flex-col lg:w-[297px] lg:space-y-5">
-              <h1 className="text-5xl font-semibold">{textContent.title}</h1>
+              <Header>{textContent.title}</Header>
               <h2 className="pt-5 text-xl font-normal text-cool-gray-80 lg:pt-0">
                 {textContent.subtitle1}
                 <div className="hidden h-5 lg:flex" />

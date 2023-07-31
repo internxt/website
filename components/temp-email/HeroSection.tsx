@@ -5,6 +5,7 @@ import { createEmail } from './services/api/temp-api';
 import { toast } from 'react-toastify';
 
 import Inbox from './components/InboxView';
+import Header from '../shared/Header';
 
 function copy(email) {
   navigator.clipboard.writeText(email);
@@ -55,10 +56,10 @@ const HeroSection = ({ textContent }) => {
   }, [borderColor]);
 
   return (
-    <section className="overflow-hidden bg-gradient-to-b from-white to-gray-1 pb-20 pt-44">
+    <section className="overflow-hidden bg-gradient-to-b from-white to-gray-1 pt-32 pb-20">
       <div className="flex flex-col items-center justify-center space-y-10 px-5">
         <div className="flex flex-col items-center justify-center text-center">
-          <h1 className="text-4xl font-semibold lg:text-5xl">{textContent.title}</h1>
+          <Header>{textContent.title}</Header>
           <p className="max-w-2xl pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
         <div className="flex flex-col items-center ">
