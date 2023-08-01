@@ -38,7 +38,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
         <img
           src="/images/what-does-google-know-about-me/google-privacy-settings.png"
           alt="google privacy settings"
-          className="w-full max-w-4xl pt-10"
+          className="w-full max-w-4xl pt-16"
           draggable={false}
         />
 
