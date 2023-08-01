@@ -79,19 +79,19 @@
       "cta": "Il nostro impegno per la privacy",
       "card1": {
         "title": "Crittografia di livello militare.",
-        "subtitle": "Prendiamo molto sul serio la tua privacy, ecco perché i tuoi file sono crittografati end-to-end in modo che solo tu possa accedervi."
+        "subtitle": "Prendiamo molto sul serio la tua privacy, ecco perché i tuoi file sono crittografati in modo che solo tu possa accedervi."
       },
       "card2": {
         "title": "Tecnologia zero-knowledge.",
-        "subtitle": "Non archiviamo e non trasmettiamo mai nessun file, nessuna password utente o chiave di crittografia, in forma non crittografata o senza hashing."
+        "subtitle": "Non archiviamo e non trasmettiamo mai nessun file, nessuna password utente o chiave di crittografia in forma non crittografata o senza hashing."
       },
       "card3": {
         "title": "Privacy by design.",
-        "subtitle": "Sviluppiamo i nostri prodotti pensando all'utente e, nel mondo basato sui dati in cui viviamo, la sua privacy viene prima di tutto."
+        "subtitle": "Sviluppiamo i nostri prodotti pensando all'utente e, nel mondo basato sui dati in cui viviamo, consideriamo la sua privacy sacra."
       },
       "card4": {
-        "title": "Sicuro fin dalle fondamenta.",
-        "subtitle": "Poiché le falle di sicurezza e gli scandali sono all'ordine del giorno, ci assicuriamo che i nostri sistemi proteggano i tuoi dati e i tuoi file da ogni aggressione."
+        "title": "Open-source e trasparente",
+        "description": "Siamo orgogliosi di ciò che facciamo, e per questo motivo il nostro codice sorgente è reso pubblico su GitHub e può essere revisionato, controllato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere, se non i tuoi dati."
       }
     },
     "DownloadLinks": {
