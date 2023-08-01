@@ -3,7 +3,7 @@
     "mainTitle": "¿Qué sabe Google de mí?",
 
     "section1": {
-      "description": "Los grupos de defensa de la privacidad han expresado su alarma por la recopilación de datos personales por parte de Google y todo el mundo ha oído hablar de las numerosas violaciones de la privacidad por parte de Google",
+      "description": "Los grupos de defensa de la privacidad han expresado su alarma por la recopilación de datos personales por parte de Google y todo el mundo ha oído hablar de las numerosas violaciones de la privacidad por parte de Google.",
       "footer": "No es ningún secreto que Google recopila información personal y rastrea a sus usuarios a través de Chrome, Google Search, las aplicaciones de Google Play, Google Maps y Youtube, entre otras. Evita que Google acceda a tus datos ajustando los controles y la configuración de Google."
     },
     "section2": {
@@ -11,7 +11,7 @@
       "bulletedList": {
         "title": "Cuando realizas una búsqueda en Google, recopilan los siguientes datos:",
         "list": [
-          "Datos personales: Tu nombre, número de teléfono, sexo, fecha de nacimiento",
+          "Datos personales: tu nombre, número de teléfono, sexo, fecha de nacimiento",
           "Tus direcciones de correo electrónico",
           "Dónde vives",
           "Dónde trabajas",
@@ -39,8 +39,8 @@
     }
   },
   "CtaSection": {
-    "title": "¿Que sabe google de mi? Casi todo.",
-    "description": "Sé dueño de tus datos. Elige un servicio que proteja tus datos en lugar de monetizarlos",
+    "title": "¿Que sabe google de mi? Casi todo",
+    "description": "Sé dueño de tus datos. Elige un servicio que proteja tus datos en lugar de monetizarlos.",
     "cta": "Cámbiate a Internxt"
   },
   "WhatGoogleKnowsSection": {
@@ -97,7 +97,7 @@
     },
     "section8": {
       "title": "Exporta todos tus datos fuera de Google",
-      "description": "Puedes exportar y eliminar los datos guardados por tu cuenta de Google buscando la pestaña 'Descargar o eliminar tus datos' y seleccionando la acción necesaria. A continuación, puedes elegir qué datos exportar o eliminar siguiendo las instrucciones siguientes",
+      "description": "Puedes exportar y eliminar los datos guardados por tu cuenta de Google buscando la pestaña 'Descargar o eliminar tus datos' y seleccionando la acción necesaria. A continuación, puedes elegir qué datos exportar o eliminar siguiendo las instrucciones siguientes:",
       "numberedList": [
         {
           "title": "Selecciona los datos que deseas incluir",
@@ -105,7 +105,7 @@
         },
         {
           "title": "Elige el tipo de archivo, la frecuencia y el destino",
-          "description": "Elige el tipo de archivo, la frecuencia de exportación de los archivos y el destino  Internxt, Dropbox, OneDrive, Box o Google Drive.)"
+          "description": "Elige el tipo de archivo, la frecuencia de exportación de los archivos y el destino  Internxt, Dropbox, OneDrive, Box o Google Drive)."
         },
         {
           "title": "Crear exportación",
@@ -116,22 +116,22 @@
   },
   "CtaSection1": {
     "title": "¿Harto de ser rastreado?",
-    "description": "Ahora sabes como ver lo que google sabe de ti. Recupera tu libertad con Internxt",
+    "description": "Ahora sabes como ver lo que google sabe de ti. Recupera tu libertad con Internxt.",
     "cta": "Únete a Internxt"
   },
   "ManageGoogleDataSection": {
     "title": "Elimina tus datos de Google y ajusta tu configuración de privacidad de Google",
-    "description": "Ahora que ya conoces tu historial de actividad en Google, es hora de evitar que recopilen todos esos datos personales. A continuación encontrarás instrucciones que te ayudarán a configurar tu privacidad, a excluirte de la recopilación de algunos datos y a limitar la información personal que Google almacena",
+    "description": "Ahora que ya conoces tu historial de actividad en Google, es hora de evitar que recopilen todos esos datos personales. A continuación encontrarás instrucciones que te ayudarán a configurar tu privacidad, a excluirte de la recopilación de algunos datos y a limitar la información personal que Google almacena.",
     "section1": {
       "title": "Eliminación de la actividad de Google y sus Apps",
       "description": [
-        "Te sorprendería saber cuánta información guarda Google: Información de Google Pay, suscripciones a canales de YouTube, comentarios de 'no me interesa' en YouTube, respuestas a encuestas de YouTube, comentarios en YouTube, comentarios que te gustan y que no te gustan en YouTube, actividad de compra en YouTube, Google Word Coach, respuestas a encuestas e intereses, biblioteca de Google Play, preferencias de noticias, historial de archivos de datos, seguimiento de precios de productos, etc..",
+        "Te sorprendería saber cuánta información guarda Google: Información de Google Pay, suscripciones a canales de YouTube, comentarios de 'no me interesa' en YouTube, respuestas a encuestas de YouTube, comentarios en YouTube, comentarios que te gustan y que no te gustan en YouTube, actividad de compra en YouTube, Google Word Coach, respuestas a encuestas e intereses, biblioteca de Google Play, preferencias de noticias, historial de archivos de datos, seguimiento de precios de productos, etc.",
         "Al seleccionar 'Actividad en la web y en aplicaciones' puedes eliminar tu actividad haciendo clic en el botón 'Eliminar' situado en el centro de la página seleccionando: Última hora, Último día, Siempre o Rango personalizado. También puedes desactivar la recopilación de datos en el futuro seleccionando 'Guardar actividad' y haciendo clic en 'Desactivar.'"
       ]
     },
     "section2": {
       "title": "Desactivar y eliminar el historial de ubicaciones de Google",
-      "description": "El historial de ubicaciones puede ser el dato más aterrador que Google recopila. Puedes hacer clic en 'Historial de ubicaciones' de Google para inhabilitar el seguimiento y activar la función de eliminación automática para eliminar cualquier dato de ubicación guardado anteriormente",
+      "description": "El historial de ubicaciones puede ser el dato más aterrador que Google recopila. Puedes hacer clic en 'Historial de ubicaciones' de Google para inhabilitar el seguimiento y activar la función de eliminación automática para eliminar cualquier dato de ubicación guardado anteriormente:",
       "numberedList": [
         "Ve a 'Historial de ubicaciones'",
         "Selecciona 'Desactivar'",
@@ -176,7 +176,7 @@
     "section9": {
       "title": "Cómo eliminar la cuenta de Google",
       "description": [
-        "Te preguntabas como saber lo que google sabe de mi, y ya lo sabes. Si ya has tenido suficiente, has terminado por completo con Google y simplemente quieres salir, puedes eliminar la cuenta de Google accediendo a la parte inferior de la página de privacidad en 'Más opciones' y seleccionando 'Eliminar tu cuenta de Google' ",
+        "Te preguntabas como saber lo que google sabe de mi, y ya lo sabes. Si ya has tenido suficiente, has terminado por completo con Google y simplemente quieres salir, puedes eliminar la cuenta de Google accediendo a la parte inferior de la página de privacidad en 'Más opciones' y seleccionando 'Eliminar tu cuenta de Google'.",
         "A continuación, sigue las instrucciones. Asegúrate de que estás preparado para eliminar toda tu información, ya que una vez realizada esta acción no se puede deshacer."
       ]
     }
@@ -184,7 +184,7 @@
   "ToolsSection": {
     "title": "Otros recursos sobre privacidad de Internxt",
     "description": [
-      "Tras responder a tu pregunta de Qué sabe google de mi, debes saber que no son los únicos que tienen tu información. Visita nuestra página [de concienciación cibernética](https://internxt.com/es/cyber-awareness) para conocer buenas prácticas para que navegar por Internet sea más seguro."
+      "Tras responder a tu pregunta de Qué sabe google de mi, debes saber que no son los únicos que tienen tu información. Visita nuestra página de [concienciación cibernética](https://internxt.com/es/cyber-awareness) para conocer buenas prácticas para que navegar por Internet sea más seguro."
     ],
     "tools": [
       {
@@ -219,7 +219,7 @@
   },
   "CtaSection2": {
     "title": "Una nube en la que puedes confiar",
-    "description": "El trabajo de Internxt es proteger tus datos, no explotarlos",
+    "description": "El trabajo de Internxt es proteger tus datos, no explotarlos.",
     "cta": "Crear cuenta gratuita"
   }
 }
