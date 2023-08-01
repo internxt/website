@@ -2,25 +2,25 @@
   "HeroSection": {
     "eyebrow": "Internxt Photos",
     "title": {
-      "line1": "Your picture-perfect moments,",
-      "line2": "safe under lock and key"
+      "line1": "Deine Bilderbuchmomente",
+      "line2": "unter Verschluss."
     },
+    "featuredIn": "Abgebildet in",
     "subtitle": {
-      "line1": "Relive, share, and keep your best memories safe, all in one place. ",
-      "line2": "Let Internxt Photos focus on privacy and security, ",
-      "line3": "so you can concentrate on capturing the moments that matter to you."
+      "line1": "Erlebe deine schönsten Erinnerungen noch einmal, teile sie und bewahre sie sicher an einem Ort auf.",
+      "line2": "Bei Internxt Photos liegt der Schwerpunkt auf Datenschutz und Sicherheit.",
+      "line3": "Deine Fotos gehören dir und dir allein."
     },
-    "availableSoon": "Available soon",
+    "availableSoon": "Demnächst",
     "DownloadLinks": {
-      "downloadTitle": "Download Internxt Drive",
-      "or": "or",
-      "downloadFor": "Download for",
-      "orDownloadFor": "Or download for",
-      "downloadOnThe": "Download on the",
-      "orDownloadOnThe": "Or download on the",
-      "getOn": "Get on",
-      "orGetOn": "Or get on",
-      "openDriveWeb": "Open Drive Web",
+      "or": "oder",
+      "downloadFor": "Download für",
+      "orDownloadFor": "Oder Download für",
+      "downloadOnThe": "Download bei",
+      "orDownloadOnThe": "Oder Download bei",
+      "getOn": "Weiter",
+      "orGetOn": "Oder weiter",
+      "openDriveWeb": "Öffne Drive Web",
       "iPhone": "App Store",
       "iPad": "App Store",
       "Android": "Play Store",
@@ -33,77 +33,77 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "A synced gallery on",
-        "line2": "all your devices"
+        "line1": "Eine synchronisierte Galerie für",
+        "line2": "alle deine Geräte."
       }
     },
     "section2": {
       "title": {
-        "line1": "Upload from your",
-        "line2": "smartphone, access",
-        "line3": "wherever you want"
+        "line1": "Upload von deinem",
+        "line2": "Smartphone, Zugang",
+        "line3": "von wo auch immer du willst."
       },
       "subtitle": {
-        "line1": "Your photo library will always be up to",
-        "line2": "date on all your devices. This means that",
-        "line3": "you can access your synced photos even",
-        "line4": "when your device is lost, stolen, or broken."
+        "line1": "Deine Fotobibliothek bleibt immer auf dem neuesten Stand",
+        "line2": "auf allen deinen Geräten. Das bedeutet, dass",
+        "line3": "du sogar auf deine synchronisierten Fotos zugreifen kannst",
+        "line4": "wenn dein Gerät verloren geht, gestohlen wird oder kaputt ist."
       }
     },
     "section3": {
       "title": {
-        "line1": "Share your photos",
-        "line2": "with your friends",
-        "line3": "and family"
+        "line1": "Teile deine Fotos",
+        "line2": "mit deinen Freunden",
+        "line3": "und deiner Familie."
       },
       "subtitle": {
-        "line1": "Generate a share link so you can",
-        "line2": "control how many times a photo",
-        "line3": "can be accessed and downloaded."
+        "line1": "Generiere einen Freigabelink, damit du",
+        "line2": "kontrollieren kannst, wie oft ein Foto",
+        "line3": "abgerufen und heruntergeladen wurde."
       }
     },
     "section4": {
       "title": {
-        "line1": "Sync your photos",
-        "line2": "in total privacy"
+        "line1": "Beginne mit der Synchronisierung deiner Fotos",
+        "line2": "in absoluter Privatsphäre."
       }
     },
     "section5": {
       "title": {
-        "line1": "All your files,",
-        "line2": "secure and private"
+        "line1": "Alle deine Fotos.",
+        "line2": "Sicher und privat."
       },
       "subtitle": {
-        "line1": "Privacy and security are our core, we don’t run our business on data or advertising, but",
-        "line2": "on trust. We respect your rights and build amazing tools around them, not against them."
+        "line1": "Datenschutz und Sicherheit stehen bei uns im Mittelpunkt, unser Geschäft basiert nicht auf Daten oder Werbung, sondern",
+        "line2": "auf Vertrauen. Wir respektieren deine Rechte und entwickeln erstaunliche Tools um dich herum, nicht gegen dich."
       },
-      "cta": "Our commitment on privacy",
+      "cta": "Unser Engagement für den Datenschutz",
       "card1": {
-        "title": "Military-grade encryption",
-        "subtitle": "We take your privacy very seriously, that’s why your files are encrypted so only you can access your files."
+        "title": "Verschlüsselung auf Militärniveau.",
+        "subtitle": "Wir nehmen deine Privatsphäre sehr ernst. Deshalb werden deine Fotos verschlüsselt, sodass nur du auf deine Fotos zugreifen kannst."
       },
       "card2": {
-        "title": "Zero-knowledge technology",
-        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
+        "title": "Zero-Knowledge Technologie.",
+        "subtitle": "Wir speichern oder übertragen niemals Dateien, Benutzerkennwörter oder Verschlüsselungsschlüssel in unverschlüsselter oder nicht gehashter Form."
       },
       "card3": {
-        "title": "Privacy by design",
-        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
+        "title": "Datenschutz durch Design.",
+        "subtitle": "Wir entwickeln unsere Produkte mit Blick auf den Benutzer, und seine Privatsphäre ist in der datengesteuerten Welt, in der wir leben, ein Muss."
       },
       "card4": {
-        "title": "Open source and transparent",
-        "subtitle": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "Von Grund auf sicher.",
+        "subtitle": "Da Sicherheitslücken und Skandale an der Tagesordnung sind, stellen wir sicher, dass unsere Systeme deine Daten und Dateien vor Angreifern schützen."
       }
     },
     "DownloadLinks": {
-      "or": "or",
-      "downloadFor": "Download for",
-      "orDownloadFor": "Or download for",
-      "downloadOnThe": "Download on the",
-      "orDownloadOnThe": "Or download on the",
-      "getOn": "Get on",
-      "orGetOn": "Or get on",
-      "openDriveWeb": "Open Drive Web",
+      "or": "oder",
+      "downloadFor": "Download für",
+      "orDownloadFor": "Oder Download für",
+      "downloadOnThe": "Download bei",
+      "orDownloadOnThe": "Oder Download bei",
+      "getOn": "Weiter",
+      "orGetOn": "Oder weiter",
+      "openDriveWeb": "Öffne Drive Web",
       "iPhone": "App Store",
       "iPad": "App Store",
       "Android": "Play Store",
@@ -114,32 +114,32 @@
     }
   },
   "FeatureSection": {
-    "title": "Protect your pics with Internxt Photos",
-    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your images in complete privacy.",
+    "title": "Schützen Sie Ihre Bilder mit Internxt Photos",
+    "description": "Mit Internxt sind Sie der Einzige, der Zugriff auf Ihre Dateien hat. Speichern, teilen und sichern Sie Ihre Bilder in absoluter Privatsphäre.",
     "cta": "Get started"
   },
   "FaqSection": {
-    "title": "Questions? We have answers",
+    "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
-        "question": "How do I sync my files and photos in Internxt?",
+        "question": "Wie synchronisiere ich meine Dateien und Fotos bei Internxt?",
         "answer": [
-          "To sync and encrypt your photos from your phone library to the Internxt cloud, simply:",
-          "1.Open the Internxt mobile app",
-          "2.Select 'Photos' and your photos will start syncing automatically"
+          "Um deine Fotos aus deiner Telefonbibliothek mit der Internxt-Cloud zu synchronisieren und zu verschlüsseln, gehe einfach wie folgt vor:",
+          "1. Öffne die Internxt Mobile App",
+          "2. Wähle „Fotos“ und deine Fotos werden automatisch synchronisiert"
         ]
       },
       {
-        "question": "How can I upload files from my phone?",
+        "question": "Wie kann ich Dateien von meinem Smartphone hochladen?",
         "answer": [
-          "Open the Internxt mobile app, and tap the blue plus (+) icon at the bottom-center of the screen. Select 'Upload files' or 'Upload from camera roll' to upload a photo."
+          "Öffne die mobile Internxt-App und tippe auf das blaue Pluszeichen (+) unten in der Mitte des Bildschirms. Wähle „Dateien hochladen“ oder „Von Kamera hochladen“, um ein Foto hochzuladen."
         ]
       }
     ]
   },
   "CtaSection": {
-    "title": "Try Internxt risk-free",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
+    "title": "Probiere Internxt risikofrei aus",
+    "description": "Schütze die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Wähle jetzt einen Plan aus"
   }
 }
