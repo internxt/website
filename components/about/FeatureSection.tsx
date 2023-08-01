@@ -8,7 +8,7 @@ import {
   UsersThree,
 } from '@phosphor-icons/react';
 import Image from 'next/image';
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '../components/RevealX';
 
@@ -67,7 +67,9 @@ const FeatureSection = ({ textContent }) => {
               <div className="flex  w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
                 <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
-                <p className="text-xl font-normal text-gray-80">{cardInfo[cardIndex].description}</p>
+                <ReactMarkdown className="markdown text-xl font-normal text-gray-80">
+                  {cardInfo[cardIndex].description}
+                </ReactMarkdown>
               </div>
             </div>
           </div>
@@ -83,7 +85,7 @@ const FeatureSection = ({ textContent }) => {
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col">
               <p className="mb-6 text-2xl font-medium text-gray-100">{info.title}</p>
-              <p className="text-base text-cool-gray-80 sm:text-lg">{info.description}</p>
+              <ReactMarkdown className="text-base text-cool-gray-80 sm:text-lg">{info.description}</ReactMarkdown>
             </div>
           </div>
         ))}
