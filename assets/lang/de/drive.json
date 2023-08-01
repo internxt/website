@@ -1,0 +1,197 @@
+{
+  "HeroSection": {
+    "eyebrow": "Internxt Drive",
+    "title": {
+      "line1": "The safest cloud storage",
+      "line2": "for your files, photos, and more"
+    },
+    "subtitle": {
+      "line1": "Storing, backing up, and sharing your files in total privacy couldn’t be any easier. With Internxt Drive, you",
+      "line2": "get user-friendly storage, military-grade encryption, and full control over your files and data.",
+      "line3": ""
+    },
+    "DownloadLinks": {
+      "downloadTitle": "Download Internxt Drive",
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Download on the",
+      "orDownloadOnThe": "Or download from the",
+      "getOn": "Download from",
+      "orGetOn": "Or get on",
+      "openDriveWeb": "Open Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "All kinds of files,",
+        "line2": "all kinds of devices"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Find your files",
+        "line2": "on all your",
+        "line3": "devices"
+      },
+      "subtitle": {
+        "line1": "Securely access all your files from ",
+        "line2": "your computer, smartphone, tablet, ",
+        "line3": "or any device with a connection to ",
+        "line4": "the internet via the most secure ",
+        "line5": "cloud storage app."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Keep your files",
+        "line2": "organized and",
+        "line3": "accessible from",
+        "line4": "anywhere"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive lets you organize your",
+        "line2": "files in folders, rename them, and filter",
+        "line3": "a list of files to find what you want faster.",
+        "line4": "You can even backup your computer",
+        "line5": "folders so you always have the most",
+        "line6": "recent changes of your most important files",
+        "line7": ""
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Share your files",
+        "line2": "with ease,",
+        "line3": "security is on us"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive focuses on privacy and",
+        "line2": "security, so you only have to focus on",
+        "line3": "what matters to you, like sharing files",
+        "line4": "with your coworkers, or the plane tickets",
+        "line5": "for your next holiday with family. You",
+        "line6": "choose who you want to share them with",
+        "line7": "and how many times you want",
+        "line8": "them to be downloaded."
+      }
+    },
+    "section5": {
+      "eyebrow": "NEW FEATURE",
+      "title": {
+        "line1": "Back up what",
+        "line2": "matters to you"
+      },
+      "subtitle": {
+        "line1": "Now you can keep the latest draft",
+        "line2": "of that super important project",
+        "line3": "or your university homework you are",
+        "line4": "working on, safe and current in your",
+        "line5": "Internxt Drive."
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "Sync your files in total privacy",
+        "line2": ""
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "Keep your files secure",
+        "line2": "and private"
+      },
+      "subtitle": {
+        "line1": "Privacy and security are at the heart of all we do, we don’t run our business on data or",
+        "line2": "advertising, but on trust. We respect your rights and build amazing tools around them, not against them."
+      },
+      "cta": "Our commitment on privacy",
+      "card1": {
+        "title": "Military-grade encryption",
+        "subtitle": "We take your privacy very seriously, that’s why your files are encrypted so only you can access your files."
+      },
+      "card2": {
+        "title": "Zero-knowledge technology",
+        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
+      },
+      "card3": {
+        "title": "Privacy by design",
+        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
+      },
+      "card4": {
+        "title": "Open source and transparent",
+        "subtitle": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      }
+    },
+    "DownloadLinks": {
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Download on the",
+      "orDownloadOnThe": "Or download on the",
+      "getOn": "Get on",
+      "orGetOn": "Or get on",
+      "openDriveWeb": "Open Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeatureSection": {
+    "title": "Protect your files with Internxt Drive",
+    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
+    "cta": "Get started"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is Internxt Drive?",
+        "answer": [
+          "Internxt Drive is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Our service doesn’t access your personal data or files. Instead, it is designed to give you back control over your files and protect you from data collectors."
+        ]
+      },
+      {
+        "question": "How to create an Internxt account?",
+        "answer": [
+          "Head to our website and click 'Get started' in the upper right-hand corner. Fill out the registration form by entering an email address, then create your password. No identity or email verification is required to start using Internxt's services."
+        ]
+      },
+      {
+        "question": "How to upload files to Internxt Drive?",
+        "answer": [
+          "Visit Drive Web and log in. Drag and drop your chosen files or photos directly into the browser window. You can also click 'New' in the right-hand corner of the browser, which will open Explorer or Finder, and select the files you wish to upload."
+        ]
+      },
+      {
+        "question": "How to install Internxt's app?",
+        "answer": [
+          "Go to the Internxt website, scroll down the home page, and select 'Download apps.' Internxt App is also available Play Store or App Store. Once the downloading process is completed, you will be asked to run our storage app. Downloading our Drive app allows you to make better use of Internxt's ecosystem."
+        ]
+      },
+      {
+        "question": "Can I configure 2FA with Internxt?",
+        "answer": [
+          "Yes. You can configure two-factor authentication (2FA) for your Internxt account from the Drive Web app. Moreover, you can use Authy or any other 2FA tool to generate your 2FA code with Internxt, to log into our online drive app."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
+  }
+}

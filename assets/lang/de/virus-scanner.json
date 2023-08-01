@@ -1,0 +1,141 @@
+{
+  "HeroSection": {
+    "title": "Virus Scanner",
+    "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
+    "subtitle2": "Scan any document, image, PDF, or other file types. Make sure your files are safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
+    "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
+
+    "dropFile": {
+      "line1": "Drop file to scan for viruses"
+    },
+    "fileSelected": "File selected for scanning",
+    "cancel": "Cancel",
+    "close": "Close",
+    "scanNow": "Scan now",
+    "selectFile": "or select file",
+    "dropHere": "Drop file here",
+    "scanAgain": "Scan another file",
+    "loading": "Loading...",
+    "maxFileSize": {
+      "title": "File size limit exceeded",
+      "description": "Max file size of 1GB"
+    },
+    "table": {
+      "loading": "Loading...",
+      "virusDetected": "Virus detected for this file",
+      "noVirusDetected": "No virus detected for this file",
+      "detected": "Detected",
+      "undetected": "Undetected",
+      "unableToProcess": "Unable to process",
+      "noVirusesDetected": {
+        "message": "No viruses detected",
+        "title": "Want to keep your files safe?",
+        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
+        "cta": "Get started now"
+      },
+      "analyzing": "Scanning file...",
+      "scanTime": "Scan time",
+      "name": "Name",
+      "detection": "Detection"
+    },
+    "error": {
+      "title": "Something went wrong",
+      "description": "An error occurred while sending the file, please try again later"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "Why it’s vital to use a virus scanner",
+      "description": ["Scan first, ask questions later.", "Spot viruses before they infiltrate your devices."]
+    },
+    "virusesHatePrivacy": {
+      "title": "Viruses hate your privacy",
+      "description": "A potent virus can steal sensitive information like your credentials or passwords, encrypt and lock you out of your data, make individual transactions within apps, monitor your computer, and even attack other devices on connected networks. A virus has the potential to access nearly everything that is locked away on your hardware."
+    },
+    "stopMalware": {
+      "title": "Stop malware before it stops you",
+      "description": "Once a virus has propagated, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why it is crucial to utilize virus scanner."
+    },
+    "freeOnlineScanner": {
+      "title": "A free online virus scanner you can trust",
+      "description": "Safeguard your privacy with our free virus scanner, designed to help you avoid infection and protect your computer."
+    },
+    "scanFiles": {
+      "title": "Scan files for viruses in complete confidence",
+      "description": "Internxt has and will always put users' privacy and security first. We are committed to creating a more fair, more free, and more transparent internet for all. That's why we created our free online virus scanner, to shine a light on stealthy viruses and expose malicious malware."
+    }
+  },
+  "CtaSection": {
+    "title": "Safety is only a click away",
+    "description": "Protect your personal data with Internxt's privacy suite.",
+    "cta": "Create account"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How to check if a file is infected?",
+        "answer": [
+          "Internxt’s Virus Scanner is a tool to help you locate any viruses that may have compromised your files. Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos."
+        ]
+      },
+      {
+        "question": "How to know if your files have malware?",
+        "answer": [
+          "Submit your files, and relax knowing that your files are safe and secure. Using our Virus Scanner is a safe practice to evade a privacy nightmare. Scan before you click!"
+        ]
+      },
+      {
+        "question": "How to scan a file for viruses?",
+        "answer": [
+          "Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos. Drag and drop the chosen file in the Virus Scanner toolbar, and it will automatically scan the file for any viruses or malware."
+        ]
+      },
+      {
+        "question": "How to scan a file online?",
+        "answer": [
+          "With Internxt Virus Scanner you can drag and drop suspicious files into the toolbar to detect malware and other breaches for free."
+        ]
+      },
+      {
+        "question": "How to scan a PDF file?",
+        "answer": [
+          "Drag and drop the PDF into the toolbar like you would with any other file. With Internxt Virus Scanner, you can scan any document, image, PDF, or other file type. Make sure your files are safe and free from viruses before you open them with Internxt's Virus Scanner."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Try out Internxt's free online security tools:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Password Strength Checker",
+        "description": "Scan now"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Byte Unit Converter",
+        "description": "Convert now"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Free Temporary Email",
+        "width": 95,
+        "description": "Mail now"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Free Password Generator",
+        "width": 124,
+        "description": "Generate now"
+      }
+    ]
+  }
+}

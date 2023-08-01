@@ -11,6 +11,7 @@ const currentLang = {
   it: 'Italiano (IT)',
   zh: '中国 (ZH)',
   ru: 'Русский (RU)',
+  de: 'Deutsch (DE)',
 };
 
 const selectedLang = {
@@ -20,6 +21,7 @@ const selectedLang = {
   it: 'IT',
   zh: 'ZH',
   ru: 'RU',
+  de: 'DE',
 };
 
 export default function LanguageBox({ darkMode }) {
@@ -102,6 +104,16 @@ export default function LanguageBox({ darkMode }) {
               onClick={() => changeLang('ru')}
             >
               {currentLang.ru}
+            </a>
+          </Link>
+          <Link href={router.pathname} locale="de">
+            <a
+              className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                darkMode ? 'text-white' : 'text-cool-gray-80'
+              }`}
+              onClick={() => changeLang('de')}
+            >
+              {currentLang.de}
             </a>
           </Link>
         </div>
