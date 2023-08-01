@@ -25,7 +25,7 @@ interface LayoutProps {
 
 const INTERNXT_URL = 'https://internxt.com';
 
-const includedPaths = ['/'];
+const includedPaths = [''];
 const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
