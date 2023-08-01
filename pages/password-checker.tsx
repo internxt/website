@@ -5,8 +5,8 @@ import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/password-checker/HeroSection';
-import FeaturesSection from '../components/password-checker/FeaturesSection.js';
-import FAQSection from '../components/password-checker/FAQSection';
+import FeaturesSection from '../components/password-checker/FeaturesSection';
+import FAQSection from '../components/shared/FaqSection';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';

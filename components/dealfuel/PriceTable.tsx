@@ -49,34 +49,25 @@ const PriceTable = ({ lang, country }) => {
           planType="individual"
           storage={pricings.TB2.storage}
           price={billingPrice(pricings.TB2.price)}
-          billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime2TB']}
           popular={pricings.TB2.popular}
-          lang={lang}
           country={country}
-          actualPrice={pricings.TB2.actualPrice}
         />
         <PriceCard
           planType="individual"
           storage={pricings.TB5.storage}
           price={billingPrice(pricings.TB5.price)}
-          billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime5TB']}
           popular={pricings.TB5.popular}
-          lang={lang}
           country={country}
-          actualPrice={pricings.TB5.actualPrice}
         />
         <PriceCard
           planType="individual"
           storage={pricings.TB10.storage}
           price={billingPrice(pricings.TB10.price)}
-          billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime10TB']}
           popular={pricings.TB10.popular}
-          lang={lang}
           country={country}
-          actualPrice={pricings.TB10.actualPrice}
         />
       </div>
     </section>

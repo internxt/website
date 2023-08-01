@@ -28,11 +28,7 @@ const Cloudwards = ({ metatagsDescriptions, langJson, navbarLang, footerLang, la
 
       <FeaturesSection textContent={langJson.FeaturesSection} />
 
-      {/* <PartnershipSection textContent={langJson.PartnershipSection} /> */}
-
       <DealSection textContent={langJson.DealSection} />
-
-      {/* <FaqSection textContent={langJson.FaqSection} /> */}
 
       <Footer textContent={footerLang} lang={lang} darkMode={false} />
     </Layout>

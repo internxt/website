@@ -7,7 +7,7 @@ import HeroSection from '../components/privacy-directory/HeroSection';
 import WikiSection from '../components/privacy-directory/WikiSection';
 import SupportNGOsSection from '../components/privacy-directory/SupportNGOsSection';
 import Footer from '../components/layout/Footer';
-import FAQSection from '../components/privacy-directory/FAQSection';
+import FAQSection from '../components/shared/FaqSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import HeroSection2 from '../components/privacy-directory/HeroSection2';

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { UilPlayCircle } from '@iconscout/react-unicons';
 import YoutubeEmbed from '../utils/youtube';
 import styles from './HeroSection.module.scss';
+import Header from '../shared/Header';
 
 const HeroSection2 = ({ textContent }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,10 @@ const HeroSection2 = ({ textContent }) => {
       <section className="relative flex w-full flex-col overflow-hidden bg-cool-gray-100 pt-24">
         <div className="z-10 flex flex-col items-center py-16 pb-20 lg:py-40">
           {/* Main title */}
-          <div className="flex w-full max-w-2xl flex-col items-center justify-center px-6 text-center">
-            <h1 className="mb-6 text-3xl font-medium text-white sm:mb-10 lg:text-7xl">{textContent.title}</h1>
+          <div className="flex w-full max-w-2xl flex-col items-center justify-center space-y-8 px-6 text-center sm:space-y-10">
+            <Header className="text-white">{textContent.title}</Header>
 
-            <h2 className="mb-8 text-xl font-normal text-white sm:mb-10 sm:text-base">
+            <h2 className="text-xl font-normal text-white sm:text-base">
               {textContent.subtitle.line1} {textContent.subtitle.line2} {textContent.subtitle.line3}{' '}
               {textContent.subtitle.line4} {textContent.subtitle.line5}
             </h2>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import FAQSection from '../photos/FAQSection';
+import FAQSection from '../shared/FaqSection';
 import { UilAngleRightB } from '@iconscout/react-unicons';
 import { ArrowUpRight } from '@phosphor-icons/react';
 import RevealX from '../components/RevealX';

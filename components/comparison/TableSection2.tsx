@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { UilCheck, UilMinus } from '@iconscout/react-unicons';
+import Header from '../shared/Header';
 const TableSection2 = ({ textContent }) => {
   const competitors = [
     {
@@ -331,10 +332,10 @@ const TableSection2 = ({ textContent }) => {
         {/* Header */}
         <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-primary px-6 pt-20 pb-16 text-white md:pt-20">
           <div className="relative z-10 mb-16 flex flex-col items-center justify-center md:mb-8">
-            <h1 className="mb-4 text-center text-4xl font-medium sm:text-5xl md:text-6xl">
+            <Header>
               {textContent.title.line1}
               <br className="hidden sm:inline-flex" /> {textContent.title.line2}
-            </h1>
+            </Header>
             <h2 className="text-center text-xl md:text-lg">{textContent.description}</h2>
           </div>
 

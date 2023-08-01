@@ -3,6 +3,7 @@ import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
 import bytes from 'bytes';
 import { isMobile } from 'react-device-detect';
+import Header from '../shared/Header';
 
 const options = [
   { value: 'b', label: 'Bytes' },
@@ -13,8 +14,8 @@ const options = [
 ];
 
 const HeroSection = ({ textContent }) => {
-  const [value1, setValue1] = React.useState(1);
-  const [value2, setValue2] = React.useState();
+  const [value1, setValue1] = React.useState<number>(1);
+  const [value2, setValue2] = React.useState<number>();
   const [convertFrom, setConvertFrom] = React.useState('tb');
   const [convertTo, setConvertTo] = React.useState('gb');
   const [reverse, setReverse] = React.useState(false);
@@ -40,7 +41,7 @@ const HeroSection = ({ textContent }) => {
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
           <div className=" flex w-full max-w-[700px] flex-col items-center justify-center text-center">
-            <h1 className="text-4xl font-semibold lg:text-5xl">{textContent.title}</h1>
+            <Header>{textContent.title}</Header>
             <p className="pt-5 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description}</p>
             <p className="pt-5 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description1}</p>
           </div>
@@ -68,10 +69,10 @@ const HeroSection = ({ textContent }) => {
                     type="number"
                     onChange={(e) => {
                       if (!e.target.value) {
-                        setValue1('');
-                        setValue2('');
+                        setValue1(null);
+                        setValue2(null);
                       } else {
-                        setValue1(e.target.value);
+                        setValue1(Number(e.target.value));
                         setValue2(convert(e.target.value, convertFrom, convertTo));
                       }
                     }}
@@ -89,10 +90,10 @@ const HeroSection = ({ textContent }) => {
                         return;
                       } else {
                         if (reverse) {
-                          setValue1();
+                          setValue1(null);
                           setValue1(convert(value2, convertTo, e.value));
                         } else {
-                          setValue2();
+                          setValue2(null);
                           setValue2(convert(value1, e.value, convertTo));
                         }
                       }
@@ -111,10 +112,10 @@ const HeroSection = ({ textContent }) => {
                     autoComplete="off"
                     onChange={(e) => {
                       if (e.target.value === '') {
-                        setValue1('');
-                        setValue2('');
+                        setValue1(null);
+                        setValue2(null);
                       } else {
-                        setValue2(e.target.value);
+                        setValue2(Number(e.target.value));
                         setValue1(convert(e.target.value, convertTo, convertFrom));
                       }
                     }}
@@ -133,10 +134,10 @@ const HeroSection = ({ textContent }) => {
                         return;
                       } else {
                         if (reverse) {
-                          setValue1();
+                          setValue1(null);
                           setValue1(convert(value2, e.value, convertFrom));
                         } else {
-                          setValue2();
+                          setValue2(null);
                           setValue2(convert(value1, convertFrom, e.value));
                         }
                       }

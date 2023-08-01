@@ -1,11 +1,12 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import SignUpBanner from '../banners/SignUpBanner';
+import Header from '../shared/Header';
 
 const HeroSection2 = ({ textContent, lang, bannerText }) => {
   return (
     <section className="flex flex-col py-[88px] lg:py-16">
-      <div className="flex flex-col items-center bg-gradient-to-b from-primary to-primary-dark py-20 px-5 text-center">
-        <p className="text-6xl font-semibold text-white">{textContent.header}</p>
+      <div className="flex flex-col items-center bg-gradient-to-b from-primary to-primary-dark py-20 px-5">
+        <Header className="text-center text-white">{textContent.header}</Header>
       </div>
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-10">
         <div className="flex flex-col space-y-9">

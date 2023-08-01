@@ -90,40 +90,39 @@
   },
   "FaqSection": {
     "title": "Preguntas más frecuentes (FAQ)",
-    "faq": {
-      "faq": [
-        {
-          "question": "¿Cómo se utiliza el conversor de unidades?",
-          "answer": [
-            "Selecciona el valor que quieras convertir y selecciona el valor al que quieres convertir (por ejemplo: KB a MB). Introduce un valor en la primera sección de la izquierda, y tu respuesta aparecerá en la segunda sección de la derecha."
-          ]
-        },
-        {
-          "question": "¿Cómo convierto terabytes en gigabytes, etc.?",
-          "answer": [
-            "Solo tienes que introducir el valor en bytes que quieras convertir en nuestro Conversor de unidades y seleccionar el valor en bytes que quieras convertir y el valor se mostrará automáticamente.",
-            "También puedes utilizar la tabla de conversión que aparece más arriba si deseas realizar el cálculo manualmente."
-          ]
-        },
-        {
-          "question": "¿Cuántos gigabytes equivalen a un terabyte?",
-          "answer": ["1024 GB equivalen a 1 TB. Por tanto, un TB de almacenamiento puede contener 1024 GB de datos."]
-        },
-        {
-          "question": "¿Cuál es la diferencia entre TB y GB? ¿Y cuál es la diferencia entre B, KB, MB, GB y TB?",
-          "answer": [
-            "TB y GB solo se diferencian en el tamaño. Un terabyte está formado por más bytes, las unidades más pequeñas de datos, que un gigabyte. En general, un B es más pequeña que un KB, un MB es más grande, un GB es aún más grande y un TB es aún mayor.",
-            ""
-          ]
-        },
-        {
-          "question": "¿Por qué mi disco de 1 TB no es de 1 TB?",
-          "answer": [
-            "Aunque tu disco de 1 TB está catalogado como un disco con 1 TB de almacenamiento, normalmente no podrás utilizar toda la capacidad, ya que parte del disco puede estar destinado a archivos operativos."
-          ]
-        }
-      ]
-    }
+
+    "faq": [
+      {
+        "question": "¿Cómo se utiliza el conversor de unidades?",
+        "answer": [
+          "Selecciona el valor que quieras convertir y selecciona el valor al que quieres convertir (por ejemplo: KB a MB). Introduce un valor en la primera sección de la izquierda, y tu respuesta aparecerá en la segunda sección de la derecha."
+        ]
+      },
+      {
+        "question": "¿Cómo convierto terabytes en gigabytes, etc.?",
+        "answer": [
+          "Solo tienes que introducir el valor en bytes que quieras convertir en nuestro Conversor de unidades y seleccionar el valor en bytes que quieras convertir y el valor se mostrará automáticamente.",
+          "También puedes utilizar la tabla de conversión que aparece más arriba si deseas realizar el cálculo manualmente."
+        ]
+      },
+      {
+        "question": "¿Cuántos gigabytes equivalen a un terabyte?",
+        "answer": ["1024 GB equivalen a 1 TB. Por tanto, un TB de almacenamiento puede contener 1024 GB de datos."]
+      },
+      {
+        "question": "¿Cuál es la diferencia entre TB y GB? ¿Y cuál es la diferencia entre B, KB, MB, GB y TB?",
+        "answer": [
+          "TB y GB solo se diferencian en el tamaño. Un terabyte está formado por más bytes, las unidades más pequeñas de datos, que un gigabyte. En general, un B es más pequeña que un KB, un MB es más grande, un GB es aún más grande y un TB es aún mayor.",
+          ""
+        ]
+      },
+      {
+        "question": "¿Por qué mi disco de 1 TB no es de 1 TB?",
+        "answer": [
+          "Aunque tu disco de 1 TB está catalogado como un disco con 1 TB de almacenamiento, normalmente no podrás utilizar toda la capacidad, ya que parte del disco puede estar destinado a archivos operativos."
+        ]
+      }
+    ]
   },
   "SchemaMarkupQuestions": {
     "faq": [
