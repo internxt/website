@@ -35,7 +35,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <p className="text-lg text-gray-80">{textContent.section2.description}</p>
         </div>
         <div className="flex max-w-2xl flex-col">
-          <ul className="list-decimal space-y-3 pl-6">{numberedList}</ul>
+          <ul className="list-decimal space-y-3 pt-6 pl-6">{numberedList}</ul>
         </div>
         <img
           src="/images/what-does-google-know-about-me/google-activity-settings.png"

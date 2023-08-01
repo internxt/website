@@ -172,7 +172,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 <a target="_top" rel="noreferrer" className="text-primary underline">
                   {textContent.section6.subtitle2.link}
                 </a>
-              </Link>{' '}
+              </Link>
               {textContent.section6.subtitle2.part2}
             </p>
 
