@@ -5,9 +5,6 @@ import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
-import SquareBanner from '../banners/SquareBanner';
-import { isAndroid, isMobile } from 'react-device-detect';
-import AndroidSmartBanner from '../banners/AndroidSmartBanner';
 
 interface LayoutProps {
   children: React.ReactNode;
