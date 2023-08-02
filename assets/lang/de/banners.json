@@ -67,5 +67,9 @@
     "description": "Erhalte im ersten Jahr 90 % Rabatt auf unseren 2-TB-Plan.",
     "cta": "Klar, ich will es ausprobieren",
     "ctaCancel": "Nein danke"
+  },
+  "SignUpPasswordGenerator": {
+    "line1": "Schütze deine Konten mit einzigartigen Passwörtern,",
+    "blueText": "Komm kostenlos zu Internxt"
   }
 }
