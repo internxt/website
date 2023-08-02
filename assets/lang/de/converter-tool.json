@@ -28,7 +28,7 @@
       "description": "Ob MB, KB, TB oder GB, alle diese Abkürzungen stehen für die Anzahl der Bytes. Die Menge oder Anzahl der Bytes wird verwendet, um die Größe oder Menge digitaler Informationen zu messen."
     }
   },
-  "InfoSection": {
+  "infoSection": {
     "title": "Was ist der Unterschied zwischen GB und TB usw.?",
     "description": "Möchtest du wissen, wie viele GB eine TB hat? Oder, ohne die Abkürzungen, wie viele Gigabyte sind in einem Terabyte? Zuerst must du verstehen, was ein Byte ist, dann ist es ganz einfach, den Unterschied zwischen MB zu KB oder MB zu GB zu erkennen.",
     "faq": {
