@@ -50,8 +50,8 @@ const WhatWeDoSection = ({
           </h3>
 
           <p className="mb-6 text-xl text-gray-80">
-            {textContent.section5.subtitle.line1} <br className="hidden sm:flex" />
-            {textContent.section5.subtitle.line2} <br className="hidden sm:flex" />
+            {textContent.section5.subtitle.line1}
+            {textContent.section5.subtitle.line2}
             {textContent.section5.subtitle.line3}
           </p>
 
