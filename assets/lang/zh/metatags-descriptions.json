@@ -25,6 +25,11 @@
     "description": "注册一个 Internxt 安全云存储订阅并获得我们的每月时事通讯，其中包含最新的技术新闻和更新。"
   },
   {
+    "id": "open-source",
+    "title": "Internxt – Open Source and Secure Cloud Storage",
+    "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
+  },
+  {
     "id": "about",
     "title": "Internxt – 关于我们",
     "description": "认识 Internxt 的团队。 Internxt 创始人兼首席执行官 Fran Villalba Segarra。 Shuttle、Angels Capital、The Venture City、Internxt、ESADE BAN。"

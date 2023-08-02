@@ -45,6 +45,11 @@
     "description": "Бесплатный инструмент для сканирования файлов на наличие вирусов и вредоносных программ. Защитите свои личные документы, данные и оборудование от утечек с помощью быстрого и простого сканирования."
   },
   {
+    "id": "open-source",
+    "title": "Internxt – Open Source and Secure Cloud Storage",
+    "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
+  },
+  {
     "id": "temporary-email",
     "title": "Internxt - Бесплатная временная электронная почта",
     "description": "Сервис временной почты от Internxt позволяет забыть о спаме, рекламных расылках и любой другой нежелательной почте. Internxt предоставляет временный, безопасный, анонимный и бесплатный адрес электронной почты."

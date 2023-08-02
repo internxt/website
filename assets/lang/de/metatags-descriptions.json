@@ -15,6 +15,11 @@
     "description": "Speichere, teile und sichere deine Dateien und Fotos mit Internxt Drive in der Cloud. Open-Source- und end-to-end verschlüsselte Dateispeicherung und Online-Sicherung."
   },
   {
+    "id": "open-source",
+    "title": "Internxt – Open Source and Secure Cloud Storage",
+    "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
+  },
+  {
     "id": "photos",
     "title": "Internxt Photos – Sichere Fotospeicherung und Bildsicherung",
     "description": "Speichere, betrachte und synchronisiere deine Fotos und Bilder auf allen Geräten mit Internxt Photos. end-to-end-verschlüsselte Cloud-Fotofreigabe und Bildsicherung."
