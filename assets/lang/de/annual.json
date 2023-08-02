@@ -1,28 +1,28 @@
 {
   "HeroSection": {
-    "header": "Internxt Yearly Plans",
+    "header": "Internxt-Jahrespläne",
     "title": {
-      "normalText": "The most secure cloud ",
-      "blueText": "for all your photos and files"
+      "normalText": "Die sicherste Cloud ",
+      "blueText": "für all deine Fotos und Dateien"
     },
-    "description": "Sign up for an Internxt annual plan and get 365 days of total privacy.",
-    "cta": "Choose your plan"
+    "description": "Melde dich für einen Internxt-Jahresplan an und erhalte 365 Tage lang absolute Privatsphäre.",
+    "cta": "Wähle einen Plan"
   },
   "PaymentSection": {
-    "title": "Annual plans",
-    "description": "All Internxt plans are fully featured with complete access to all of our privacy services. Year-long security for all shapes and sizes.",
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "title": "Jahres-Pläne",
+    "description": "Alle Internxt-Pläne sind umfassend ausgestattet und bieten dir vollen Zugriff auf alle unsere Datenschutzdienste. Ganzjährig Sicherheit für alle Formen und Größen.",
+    "firstFeed": "30 Tage Geld-zurück-Garantie",
+    "secondFeed": "100 % sichere Zahlung",
+    "thirdFeed": "Anonyme Kontoerstellung"
   },
   "FeatureSection": {
-    "title": "Take back control of your privacy",
-    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
-    "cta": "Get a one-year plan"
+    "title": "Übernimm die Kontrolle über deine Privatsphäre zurück",
+    "description": "Internxt erstellt private und sichere Cloud-Dienste, die dir als Benutzer die Kontrolle über deine Daten zurückgeben sollen. Alle Internxt-Dienste schützen deine Dateien und dein Grundrecht auf Privatsphäre und sind von Grund auf auf beispiellose Sicherheit ausgelegt.",
+    "cta": "Hol dir einen Einjahresplan"
   },
   "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Find your plan"
+    "title": "Der privateste Cloud-Speicher der Welt",
+    "description": "Schütze die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Finde deinen Plan"
   }
 }
