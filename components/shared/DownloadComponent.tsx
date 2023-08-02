@@ -2,8 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { UilArrowUpRight, UilArrowCircleDown } from '@iconscout/react-unicons';
 import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
+import { useRouter } from 'next/router';
 
 const DownloadComponent = ({ textContent, lang, download }) => {
+  const router = useRouter();
+  const language = router.locale;
+  const replacement = (
+    <span>
+      <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+        {textContent.Linux.split(' ')[0]}
+      </a>{' '}
+      {textContent.or}{' '}
+      <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
+        {textContent.Windows}
+      </a>
+    </span>
+  );
+
+  const updatedText = textContent.orDownloadFor.replace(/<>/g, replacement);
   function getOS() {
     const osList = [
       { keyword: 'Android', name: 'Android' },
@@ -39,47 +55,101 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                 className="flex flex-row items-center space-x-1 text-lg font-semibold text-primary hover:underline"
                 href={download[OS]}
               >
-                <span>
-                  {textContent.downloadFor} {textContent[OS]}
-                </span>
+                {language === 'zh' ? (
+                  <span>{textContent.downloadFor.replace('<>', textContent[OS])}</span>
+                ) : (
+                  <span>
+                    {textContent.downloadFor} {textContent[OS]}
+                  </span>
+                )}
                 <ArrowCircleDown size={18} weight="bold" />
               </a>
 
               <div className="text-lg font-semibold text-gray-80">
-                {textContent.orDownloadFor} {/* Secondary downloads when is mac */}
                 {OS === 'MacOS' && (
                   <>
-                    <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
-                      {textContent.Linux.split(' ')[0]}
-                    </a>{' '}
-                    {textContent.or}{' '}
-                    <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
-                      {textContent.Windows}
-                    </a>
+                    {language === 'zh' ? (
+                      <>
+                        {textContent.orDownloadFor.split('<>')[0]}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                          {textContent.Linux.split(' ')[0]}
+                        </a>{' '}
+                        {textContent.or}{' '}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
+                          {textContent.Windows}
+                        </a>
+                        <span>{textContent.orDownloadFor.split('<>')[1]}</span>
+                      </>
+                    ) : (
+                      <>
+                        {textContent.orDownloadFor} {/* Secondary downloads when is mac */}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                          {textContent.Linux.split(' ')[0]}
+                        </a>{' '}
+                        {textContent.or}{' '}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
+                          {textContent.Windows}
+                        </a>
+                      </>
+                    )}
                   </>
                 )}
                 {/* Secondary downloads when is linux */}
                 {(OS === 'Linux' || OS === 'UNIX') && (
                   <>
-                    <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
-                      {textContent.MacOS.split(' ')[0]}
-                    </a>{' '}
-                    {textContent.or}{' '}
-                    <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
-                      {textContent.Windows}
-                    </a>
+                    {language === 'zh' ? (
+                      <>
+                        {textContent.orDownloadFor.split('<>')[0]}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
+                          {textContent.MacOS.split(' ')[0]}
+                        </a>{' '}
+                        {textContent.or}{' '}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
+                          {textContent.Windows}
+                        </a>
+                        <span>{textContent.orDownloadFor.split('<>')[1]}</span>
+                      </>
+                    ) : (
+                      <>
+                        {textContent.orDownloadFor} {/* Secondary downloads when is mac */}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
+                          {textContent.MacOS.split(' ')[0]}
+                        </a>{' '}
+                        {textContent.or}{' '}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
+                          {textContent.Windows}
+                        </a>
+                      </>
+                    )}
                   </>
                 )}
                 {/* Secondary downloads when is windows */}
                 {OS === 'Windows' && (
                   <>
-                    <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
-                      {textContent.MacOS.split(' ')[0]}
-                    </a>{' '}
-                    {textContent.or}{' '}
-                    <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
-                      {textContent.Linux}
-                    </a>
+                    {language === 'zh' ? (
+                      <>
+                        {textContent.orDownloadFor.split('<>')[0]}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                          {textContent.MacOS.split(' ')[0]}
+                        </a>{' '}
+                        {textContent.or}{' '}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                          {textContent.Linux}
+                        </a>
+                        <span>{textContent.orDownloadFor.split('<>')[1]}</span>
+                      </>
+                    ) : (
+                      <>
+                        {textContent.orDownloadFor} {/* Secondary downloads when is mac */}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                          {textContent.MacOS.split(' ')[0]}
+                        </a>{' '}
+                        {textContent.or}{' '}
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                          {textContent.Linux}
+                        </a>
+                      </>
+                    )}
                   </>
                 )}
               </div>
@@ -157,22 +227,43 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span>
-                      {textContent.downloadOnThe} {textContent.iPhone}
-                    </span>
+                    {language === 'zh' ? (
+                      <span>{textContent.downloadOnThe.replace('<>', textContent.iPhone)}</span>
+                    ) : (
+                      <span>
+                        {textContent.downloadOnThe} {textContent.iPhone}
+                      </span>
+                    )}
                     <CaretRight size={16} weight="bold" />
                   </a>
 
                   <div className="text-lg font-semibold text-gray-80">
-                    {textContent.orGetOn}{' '}
-                    <a
-                      className="font-medium text-gray-80 underline hover:no-underline"
-                      href={download.Android}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {textContent.Android}
-                    </a>
+                    {language === 'zh' ? (
+                      <>
+                        {textContent.orGetOn.split('<>')[0]}{' '}
+                        <a
+                          className="font-medium text-gray-80 underline hover:no-underline"
+                          href={download.Android}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {textContent.Android}
+                        </a>
+                        <span>{textContent.orGetOn.split('<>')[1]}</span>
+                      </>
+                    ) : (
+                      <>
+                        {textContent.orGetOn}{' '}
+                        <a
+                          className="font-medium text-gray-80 underline hover:no-underline"
+                          href={download.Android}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {textContent.Android}
+                        </a>
+                      </>
+                    )}
                   </div>
                 </>
               )}
@@ -186,22 +277,43 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span>
-                      {textContent.getOn} {textContent.Android}
-                    </span>
+                    {language === 'zh' ? (
+                      <span>{textContent.getOn.replace('<>', textContent.Android)}</span>
+                    ) : (
+                      <span>
+                        {textContent.getOn} {textContent.Android}
+                      </span>
+                    )}
                     <CaretRight size={16} weight="bold" />
                   </a>
 
                   <div className="text-base font-semibold text-gray-80">
-                    {textContent.orDownloadOnThe}{' '}
-                    <a
-                      className="font-medium text-gray-80 underline hover:no-underline"
-                      href={download.iPhone}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {textContent.iPhone}
-                    </a>
+                    {language === 'zh' ? (
+                      <>
+                        {textContent.orDownloadOnThe.split('<>')[0]}{' '}
+                        <a
+                          className="font-medium text-gray-80 underline hover:no-underline"
+                          href={download.iPhone}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {textContent.iPhone}
+                        </a>
+                        <span>{textContent.orDownloadOnThe.split('<>')[1]}</span>
+                      </>
+                    ) : (
+                      <>
+                        {textContent.orDownloadOnThe}{' '}
+                        <a
+                          className="font-medium text-gray-80 underline hover:no-underline"
+                          href={download.iPhone}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {textContent.iPhone}
+                        </a>
+                      </>
+                    )}
                   </div>
                 </>
               )}
