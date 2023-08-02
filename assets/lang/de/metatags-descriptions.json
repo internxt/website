@@ -5,6 +5,11 @@
     "description": "Stehe für Privatsphäre, wechsel zu Internxt. Die Open-Source-Suite der Cloud-Speicherdienste von Internxt schützt dein Recht auf Privatsphäre. Internxt Drive, Fotos, Senden, und mehr."
   },
   {
+    "id": "what-google-knows",
+    "title": "What Does Google Know About Me | Internxt",
+    "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
+  },
+  {
     "id": "drive",
     "title": "Internxt Drive – Privater und sicherer Cloud-Speicher",
     "description": "Speichere, teile und sichere deine Dateien und Fotos mit Internxt Drive in der Cloud. Open-Source- und end-to-end verschlüsselte Dateispeicherung und Online-Sicherung."
