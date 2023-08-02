@@ -1,55 +1,73 @@
 {
   "HeroSection": {
-    "title": { "line1": "We design and build", "line2": " world-class applications that" },
-    "blueText": "value digital rights",
-    "description": "We create powerful tools and services that respect and empower users.",
-    "recognitionsTitle": "Proudly recognized for outstanding work"
-  },
-  "WhatWeDoSection": {
-    "title": "The Internxt story",
-    "section1": {
-      "title": "Founded in 2020 by Fran Villalba Segarra, Internxt is a next-generation open-source cloud storage service based in Europe.",
-      "description": [
-        "With the advancement of end-to-end encryption and distributed cloud technologies, Internxt is designed and was created to wrestle away control of data away from money-hungry corporations and return power to everyday end-users.",
-        "Since our inception, one principle has guided every company decision: privacy is a fundamental human right."
-      ]
-    },
-    "section2": {
-      "title": "Internxt strives to be an ethical alternative to privacy-light mainstream cloud services offered by Big Tech.",
-      "description": [
-        "Internxt is currently developing a suite of services, following the successful launch of our very first cloud storage app, Internxt Drive, an alternative to the likes of Google Drive and Dropbox, a year ago.",
-        "Our goal is to create a cloud storage ecosystem that gives users total control, security, and privacy of the files and information they choose to move online."
-      ]
-    }
-  },
-  "FeatureSection": {
-    "info": [
-      {
-        "title": "Success comes when effort meets ethics",
-        "description": "We are sure that when something seems impossible, it’s only because it has not been tried enough. We’re pushing the limits of technology even further to provide innovative and ethical solutions to modern problems."
+    "title": {
+      "line1": "Wir entwerfen und erstellen",
+      "line2": {
+        "substring1": "Weltklasse",
+        "substring2": "Apps"
       },
-      {
-        "title": "Live and work to learn",
-        "description": "Developing periodic iterations of several products at once pushes us to be on the move and forces us to never settle. We are willing to take on some risk for the right reason and are always looking to learn and improve our products."
-      },
-      {
-        "title": "Users first, team close second",
-        "description": "Whether you work from home or love to leave it all in the office, we want you to feel like a valued part of the team. Internxt is nothing without our team members. We share in the struggle and we share in the success."
-      },
-      {
-        "title": "Compromise, just not our principles",
-        "description": "We are developing technology we wish to see in the future, so we opt for [open source software](https://internxt.com/open-source). Limited only by security, privacy, and user-centered design, everything we build must improve humanity’s online experience and respect fundamental digital rights."
+      "line3": {
+        "substring1": "die deine",
+        "substring2": "Privatsphäre respektieren"
       }
-    ],
-    "BetterFutureSection": {
-      "title": "Let’s build a better future together",
-      "description": "Is privacy as important to you as it is to us? If you think you have what it takes to make a difference and build a safer internet, **we're hiring!**",
-      "cta": "Careers at Internxt"
+    },
+    "figures": {
+      "activeUsers": {
+        "figure": "1M",
+        "caption": "Nutzer vertrauen Internxt"
+      },
+      "awards": {
+        "figure": "30",
+        "caption": "Auszeichnungen und Erwähnungen"
+      }
+    },
+    "description": {
+      "line1": "Seit 2020 arbeiten wir hart daran, leistungsstarke Tools zu entwickeln",
+      "line2": "für ein sichereres und privateres Internet, das seine Benutzer respektiert."
+    },
+    "recognitions": {
+      "title": "Stolz von den Besten anerkannt",
+      "brands": {
+        "forbes": {
+          "caption1": "Nächste 1000"
+        },
+        "southsummit": {
+          "caption1": "Bestes Startup"
+        },
+        "tnw": {
+          "caption1": "T500"
+        },
+        "startupvalencia": {
+          "caption1": "Bestes Startup"
+        }
+      }
     }
   },
-  "CtaSection": {
-    "title": "Try Internxt risk-free",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
+  "CompanySection": {
+    "values": {
+      "title": "Unsere Grundwerte",
+      "items": {
+        "achieve": {
+          "title": "Bemühung",
+          "description": "Wir sind sicher, dass etwas unmöglich erscheint, weil es nicht genug versucht wurde. Wir sind bestrebt, die Grenzen der Technologie noch weiter zu verschieben, um innovative Lösungen anzubieten."
+        },
+        "privacy": {
+          "title": "Lernen",
+          "description": "Die gleichzeitige Entwicklung regelmäßiger Iterationen mehrerer Produkte zwingt uns dazu, in Bewegung zu bleiben und uns nie zufrieden zu geben. Wir sind stets auf der Suche nach Möglichkeiten, unsere Produkte zu erlernen und zu verbessern."
+        },
+        "family": {
+          "title": "Team",
+          "description": "Egal, ob du von zu Hause aus arbeitest oder ins Büro kommst, wir möchten, dass du dich wie ein Teil der Familie fühlst. Wir lieben es, sowohl innerhalb als auch außerhalb der Bürozeiten Zeit miteinander zu verbringen."
+        },
+        "growth": {
+          "title": "Kompromiss",
+          "description": "Wir gestalten die Technologie, die wir in Zukunft gerne nutzen würden, mit Schwerpunkt auf Sicherheit, Datenschutz und benutzerzentriertem Design. Wir sind bestrebt, Technologien zu schaffen, die den Menschen respektieren."
+        }
+      }
+    },
+    "careers": {
+      "title": "Lasst uns die Zukunft zusammen erschaffen",
+      "link": "Karriere bei Internxt"
+    }
   }
 }
