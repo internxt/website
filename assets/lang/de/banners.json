@@ -1,89 +1,71 @@
 {
   "LoginBanner": {
-    "head": "Try before you buy.",
-    "title": "Get Internxt for free!",
-    "buttonText": "Sign up now",
+    "head": "Vor dem Kauf ausprobieren.",
+    "title": "Bekomme Internxt umsonst!",
+    "buttonText": "Jetzt anmelden",
     "card": {
-      "title1": "Get up to 10GB free",
-      "title2": "Safe and secure cloud storage",
-      "title3": "Private file and photo backup",
-      "title4": "End-to-end encrypted transfers",
-      "title5": "No unauthorized access",
-      "title6": "Available on all devices"
+      "title1": "Bekomme bis zu 10GB umsonst",
+      "title2": "Sicherer Cloud-Speicher",
+      "title3": "Backup privater Dateien und Fotos",
+      "title4": "End-to-end verschlüsselte Übertragungen",
+      "title5": "Kein unbefugter Zugriff",
+      "title6": "Verfügbar auf allen Geräten"
     }
   },
-  "AndroidSmartBanner": {
-    "title": "Download Internxt Drive for Android"
-  },
   "BFBanner": {
-    "head": "Save big on privacy.",
-    "title": "Internxt’s Black Friday Deal",
-    "buttonText": "Get the deal",
+    "head": "Spare viel beim Datenschutz.",
+    "title": "Internxt Black Friday Deal",
+    "buttonText": "Hol dir den Deal",
     "card": {
-      "title1": "Get 60% off our 2TB plan",
-      "title2": "Safe and secure cloud storage",
-      "title3": "Private file and photo backup",
-      "title4": "End-to-end encrypted transfers",
-      "title5": "No unauthorized access",
-      "title6": "Available until Dec 5th"
+      "title1": "Erhalte 60 % Rabatt auf unseren 2-TB-Plan",
+      "title2": "Sicherer Cloud-Speicher",
+      "title3": "Backup privater Dateien und Fotos",
+      "title4": "End-to-end verschlüsselte Übertragungen",
+      "title5": "Kein unbefugter Zugriff",
+      "title6": "Verfügbar bis zum 5.Dezember"
     }
   },
   "valentinesBanner": {
-    "title": "Love without limits!",
-    "subtitle": "Get 90% off our 2TB plan with code VDAY",
-    "cta": "Get the deal",
-    "toast": "Copied to clipboard!"
+    "title": "Liebe ohne Grenzen!",
+    "subtitle": "Erhalte 90 % Rabatt auf unseren 2-TB-Plan mit dem Code VDAY",
+    "cta": "Hol dir den Deal",
+    "toast": "In die Zwischenablage kopiert!"
   },
   "tryOutInternxtGeneralBanner": {
-    "title": "Try Internxt",
-    "description": "Secure cloud storage based on total privacy and encryption.",
-    "cta": "Sign up for free"
+    "title": "Versuche Internxt",
+    "description": "Sicherer Cloud-Speicher basierend auf absoluter Privatsphäre und Verschlüsselung.",
+    "cta": "Melde dich kostenlos an"
   },
   "tryOutInternxtPasswordCheckerBanner": {
-    "title": "Try Internxt",
-    "description": "Secure file storage with password-protected technology for your files.",
-    "cta": "Sign up for free"
+    "title": "Versuche Internxt",
+    "description": "Sichere Dateispeicherung mit passwortgeschützter Technologie für deine Dateien.",
+    "cta": "Melde dich kostenlos an"
   },
   "SignUpPwdCheckerBanner": {
-    "line1": "Put that strong password to use with a",
-    "blueText": "free Internxt account"
+    "line1": "Verwende dieses sichere Passwort mit einem",
+    "blueText": "kostenlosen Internxt Konto"
   },
-  "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
-  "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
-  "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
+  "SignUpVirusScannerBanner": {
+    "line1": "Bewahre diese jetzt sauberen Dateien sicher auf,",
+    "blueText": "komme kostenlos zu Internxt"
+  },
+  "SignUpByteConverterBanner": {
+    "line1": "Hole dir den Byte für Byte sicheren Cloud-Speicher",
+    "blueText": "mit Internxt"
+  },
+  "SignUpTempMailBanner": { "line1": "Halte deine E-Mails sauber und Dateien sicher", "blueText": "mit Internxt" },
   "SignUpCyberAwareness": {
-    "line1": "Now that you’re aware, protect yourself with",
-    "blueText": "Internxt secure cloud storage"
-  },
-  "SignUpPasswordGenerator": {
-    "line1": "Shield your accounts with unique passwords,",
-    "blueText": "join Internxt for free"
+    "line1": "Jetzt, da du dir dessen bewusst bist, schütze dich mit",
+    "blueText": "dem sicherem Cloud-Speicher von Internxt"
   },
   "privacyDirectoryBanner": {
-    "line1": "Join the fight for privacy and build a better internet",
-    "blueText": "with Internxt"
+    "line1": "Beteilige dich am Kampf für Privatsphäre und baue ein besseres Internet auf",
+    "blueText": "mit Internxt"
   },
   "GeneralBanner": {
-    "title": "Before you bounce...",
-    "description": "Get 80% off our 2TB plan for the first year.",
-    "cta": "Sure, I'll try it out",
-    "ctaCancel": "No, thanks"
-  },
-  "GoogleLPBanner": {
-    "line1": "Don’t let Google cash in on your data,",
-    "blueText": "keep your files private with Internxt"
-  },
-  "BusinessBanner": {
-    "line1": "Are you interested in private cloud storage",
-    "blueText": "for your business?",
-    "subtitle": "Sign up to stay informed and get notified when our business plans become available.",
-    "placeHolder": "Your email address",
-    "cta": "Subscribe"
-  },
-  "GoogleKnows": {
-    "title": "Max out your Google privacy settings with our What Google Knows page"
-  },
-  "TopBarBanner": {
-    "title": "Need more space? Upgrade & save! Get 75% off our 2TB plan"
+    "title": "Bevor du hüpfst...",
+    "description": "Erhalte im ersten Jahr 90 % Rabatt auf unseren 2-TB-Plan.",
+    "cta": "Klar, ich will es ausprobieren",
+    "ctaCancel": "Nein danke"
   }
 }
