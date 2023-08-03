@@ -29,7 +29,8 @@
       "company": {
         "title": "Firma",
         "about": "Über uns",
-        "privacy": "Privacy",
+        "privacy": "Privatsphäre",
+        "openSource": "Open Source",
         "security": "Sicherheit",
         "legal": "Legal",
         "support": "Support",

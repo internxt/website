@@ -24,6 +24,8 @@ export interface NavbarProps {
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
+const openSourcePaths = ['en', 'zh', 'de'];
+
 export default function Navbar(props: NavbarProps) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
@@ -151,7 +153,7 @@ export default function Navbar(props: NavbarProps) {
                   </div>
                 </div>
 
-                {router.locale === 'en' ? (
+                {openSourcePaths.includes(router.locale) ? (
                   <div
                     className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
                       props.darkMode
@@ -373,7 +375,7 @@ export default function Navbar(props: NavbarProps) {
                         )}
                       </Disclosure>
 
-                      {router.locale === 'en' ? (
+                      {openSourcePaths.includes(router.locale) ? (
                         <Disclosure
                           as="div"
                           className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${

@@ -3,6 +3,7 @@
     "products": "Produkte",
     "about": "Über uns",
     "privacy": "Privatsphäre",
+    "ourValues": "Unsere Werte",
     "pricing": "Preise",
     "login": "Log-in",
     "getStarted": "Starte jetzt",
@@ -14,6 +15,10 @@
     "send": "Send",
     "comingSoon": "Demnächst",
     "new": "Neu"
+  },
+  "ourValues": {
+    "privacy": "Privatsphäre",
+    "openSource": "Open Source"
   },
   "Auth": {
     "SignUp": {
