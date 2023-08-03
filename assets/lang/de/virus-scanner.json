@@ -53,7 +53,7 @@
       "description": "Ein starker Virus kann vertrauliche Informationen wie deine Zugangsdaten oder Passwörter stehlen, sie verschlüsseln und den Zugriff auf die Daten sperren, einzelne Transaktionen innerhalb von Apps durchführen, deinen Computer überwachen und sogar andere Geräte in verbundenen Netzwerken angreifen. Ein Virus hat das Potenzial, auf nahezu alles zuzugreifen, was auf deiner Hardware gesperrt ist."
     },
     "stopMalware": {
-      "title": "Stop malware before it stops you",
+      "title": "Stoppen Sie Malware, bevor sie Sie stoppt",
       "description": "Sobald sich ein Virus verbreitet hat, kann er unbeschadet alle deine Programme und Anwendungen infizieren. Sein zerstörerischer Code kann und wird sich wahrscheinlich überall verbreiten. Deshalb ist es wichtig, einen Virenscanner zu verwenden."
     },
     "freeOnlineScanner": {
