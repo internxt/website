@@ -21,17 +21,7 @@ interface PriceCardProps {
   isCampaign?: boolean;
 }
 
-const PriceCard = ({
-  planType,
-  storage,
-  price,
-  cta,
-  country,
-  popular,
-
-  actualPrice,
-  isCampaign,
-}: PriceCardProps) => {
+const PriceCard = ({ planType, storage, price, cta, country, popular, actualPrice, isCampaign }: PriceCardProps) => {
   const [coupon, setCoupon] = useState(null);
 
   const currency = () => {

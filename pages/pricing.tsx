@@ -11,8 +11,9 @@ import CtaSection from '../components/pricing/CtaSection';
 import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import InfoSection from '../components/home/InfoSection';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isLifetime, setIsLifetime] = useState(false);
@@ -45,9 +46,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
         />
 
+        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
+
         {/* <CtaSection textContent={textContent.CtaSection} freePlan />
 
-        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
 
         <FirstWhatWeDoSection
           textContent={textContent.FirstWhatWeDoSection}
@@ -75,6 +77,7 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`../assets/lang/${lang}/pricing.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const homeComponentsLang = require(`../assets/lang/${lang}/home.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -85,6 +88,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       textContent,
+      homeComponentsLang,
     },
   };
 }
