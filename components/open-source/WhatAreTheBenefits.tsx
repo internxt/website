@@ -37,7 +37,7 @@ const WhatAreTheBenefits = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
-        <div className="flex  flex-col space-y-6 text-center">
+        <div className="flex flex-col items-center space-y-6 text-center">
           <p className="max-w-[800px] text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>

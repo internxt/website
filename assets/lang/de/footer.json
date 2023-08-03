@@ -1,0 +1,78 @@
+{
+  "DownloadApp": {
+    "title": "Download Internxt",
+    "description": "Nahtlose Dateiverwaltung und sicherer Cloud-Speicher für unterwegs mit der mobilen Internxt-App für iOS oder Android."
+  },
+  "NewsletterSection": {
+    "title": "Newsletter",
+    "description": "Möchtest du von uns hören, wenn wir neue Produkte auf den Markt bringen oder ein neues Update veröffentlichen? Gib deine E-Mail-Adresse ein und wir erledigen den Rest!",
+    "input": "Deine E-Mail Adresse",
+    "info": "Du kannst dich jederzeit abmelden",
+    "cta": "Abonnieren",
+    "privacy": "Mit deiner Anmeldung stimmst du unserer Privacy-Policy zu",
+    "privacyLink": "Privacy Policy."
+  },
+  "FooterSection": {
+    "description": "Die Mission von Internxt ist es, eine Welt zu gestalten, die die Privatsphäre der Menschheit respektiert. Zu diesem Zweck veröffentlichen wir eine Reihe von Diensten, die alle das gemeinsame Ziel haben, der Menschheit beim Schutz dieses Grundrechts zu helfen.",
+    "copyright": "Copyright © 2023, Internxt Universal Technologies SL",
+    "comingSoon": "Demnächst",
+    "new": "Neu",
+    "sections": {
+      "products": {
+        "title": "Produkte",
+        "drive": "Drive",
+        "photos": "Photos",
+        "send": "Send",
+        "token": "Token",
+        "pricing": "Preise"
+      },
+      "company": {
+        "title": "Firma",
+        "about": "Über uns",
+        "privacy": "Privatsphäre",
+        "openSource": "Open Source",
+        "security": "Sicherheit",
+        "legal": "Legal",
+        "support": "Support",
+        "whyInternxt": "Warum Internxt?",
+        "comparison": "Vergleich"
+      },
+      "join": {
+        "title": "Mach mit",
+        "signup": "Erstelle ein Konto",
+        "login": "Log in",
+        "community": "Community",
+        "github": "GitHub",
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "youtube": "Youtube",
+        "instagram": "Instagram",
+        "mastodon": "Mastodon"
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "blog": "Blog",
+        "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
+        "library": "Library",
+        "writeForUs": "Schreibe für uns",
+        "cyberSecurityGlossary": "Cyber Security Glossary",
+        "cyberAwareness": "Cyber Awareness",
+        "whatGoogleKnowsAboutMe": "Was Google weiß"
+      },
+      "tools": {
+        "title": "Kostenlose Tools",
+        "temporaryEmail": "Temporäre E-Mail",
+        "fileVirusScan": "Datei Virus Scanner",
+        "passwordChecker": "Passwort Checker",
+        "byteConverter": "Byte Konverter",
+        "passwordGenerator": "Passwort Generator"
+      }
+    }
+  },
+  "Cookies": {
+    "title": "Internxt verwendet Cookies, um die Nutzung dieser Website zu vereinfachen",
+    "link": "Erfahre mehr über Cookies",
+    "close": "Ok, schließen"
+  }
+}

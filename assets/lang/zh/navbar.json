@@ -2,6 +2,7 @@
   "links": {
     "products": "产品",
     "about": "关于我们",
+    "ourValues": "我们的价值观",
     "privacy": "隐私",
     "pricing": "价格",
     "login": "登录",
@@ -14,6 +15,10 @@
     "send": "Send",
     "comingSoon": "即将推出",
     "new": "新的"
+  },
+  "ourValues": {
+    "privacy": "隐私",
+    "openSource": "通过"
   },
   "Auth": {
     "SignUp": {

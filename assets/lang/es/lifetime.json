@@ -24,39 +24,32 @@
     "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
   },
   "FeatureSection": {
-    "title": "Why choose Internxt?",
-    "description": "Privacy made for everyone and simple-to-use online security that you don't have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
-    "features": {
-      "privacy": {
-        "title": "Private",
-        "description": "No first or third-party access to your file ever! You have total control of your data."
+    "title": "Secure cloud storage with unmatched privacy",
+    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "cta": "Internxt's commitment to privacy",
+    "cards": [
+      {
+        "title": "Private by design",
+        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
       },
-      "fastSync": {
-        "title": "Fast sync",
-        "description": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
       },
-      "security": {
-        "title": "Secure from the core",
-        "description": "Open-source code, end-to-end encrypted, and safely hosted across a vast distributed network."
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
       },
-      "sharing": {
-        "title": "Safe sharing",
-        "description": "Send encrypted files and photos back and forth to your favorite people via link and email."
-      },
-      "multiplatform": {
-        "title": "Multiplatform",
-        "description": "Privacy for all devices, browsers, and operating systems! Linux, Windows, macOS, iOS, Android."
-      },
-      "zeroKnowledge": {
-        "title": "Zero-knowledge",
-        "description": "You are the only one with access to your data. Not even Internxt can view your files!"
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
       }
-    }
+    ]
   },
 
   "CtaSection": {
-    "title": "Your files secure and private forever",
-    "description": "We treat our users like family and family is forever!",
+    "title": "The world's most private cloud storage",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
     "cta": "Select a plan now"
   }
 }

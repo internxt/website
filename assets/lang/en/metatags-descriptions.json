@@ -30,11 +30,6 @@
     "description": "Meet Internxt's Team. Fran Villalba Segarra, Founder and CEO at Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
   },
   {
-    "id": "token",
-    "title": "Internxt – Token, the essence that moves Internxt.",
-    "description": "Internxt token. Learn all about our cryptocurrency, INXT. Buy Internxt Tokens from Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
-  },
-  {
     "id": "legal",
     "title": "Internxt – Legal Terms and Conditions of use",
     "description": "Internxt legal terms and conditions of use. Read all terms and conditions where we explain how we process your data."
@@ -98,11 +93,6 @@
     "id": "cloudwards",
     "title": "Internxt – CloudWards Partnership",
     "description": "Grab the best deals for the most secure cloud storage thanks to Cloudwards. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
-  },
-  {
-    "id": "startpage",
-    "title": "Internxt – Startpage Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Startpage. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
   },
   {
     "id": "guru99",

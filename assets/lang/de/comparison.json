@@ -1,0 +1,177 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "Cloud Storage",
+      "line2": "Security Comparison"
+    },
+    "description": "Compare cloud services and choose the best secure cloud storage for you.",
+    "cta": "Switch to Internxt for free",
+
+    "table": {
+      "sections": {
+        "encryption_and_security": {
+          "name": "Encryption and security",
+          "features": {
+            "encryption_at_rest_and_in_transit": "Encryption at rest and in transit",
+            "end_to_end_encrypted_storage": "End-to-end encrypted storage",
+            "end_to_end_encrypted_file_sharing": "End-to-end encrypted file sharing",
+            "zero_knowledge_encryption": "Zero-knowledge encryption",
+            "two_factor_authentication": "Two-Factor authentication",
+            "gdpr_compliant_synchronization": "GDPR Compliant synchronization",
+            "aes_256_encryption": "AES-256 encryption",
+            "zero_knowledge_access_from_browsers": "Zero-knowledge access from browsers",
+            "open_source": "Open source",
+            "no_third_party_file_access": "No third-party file access"
+          }
+        },
+        "storage_and_file_management": {
+          "name": "Access and file management",
+          "features": {
+            "sync_any_folders": "Sync any folders",
+            "web_app": "Web app",
+            "windows_desktop_app": "Windows desktop app",
+            "mac_desktop_app": "Mac desktop app",
+            "linux_desktop_app": "Linux desktop app",
+            "android_app": "Android app",
+            "ios_app": "iOS app",
+            "availability": "Available on all devices",
+            "backup_folders_and_files": "Backup folders and files",
+            "unlimited_bandwidth": "Unlimited bandwidth"
+          }
+        },
+        "controlled_file_sharing": {
+          "name": "File sharing",
+          "features": {
+            "password_protection_for_links": "Password protection for links",
+            "download_limits_for_links": "Download limits for links",
+            "file_requests": "File requests"
+          }
+        },
+        "pricing": {
+          "name": "Pricing",
+          "features": {
+            "free_account_storage": "Free account storage",
+            "monthly_base_pricing": "Monthly base pricing",
+            "max_storage_amount": "Max storage amount",
+            "lifetime_plans": "Lifetime plans"
+          }
+        },
+        "deployment": {
+          "name": "Deployment and support",
+          "features": {
+            "business_plans": "Business plans",
+            "support_center": "Support center",
+            "live_chat_support": "Live chat support"
+          }
+        }
+      },
+      "drag": {
+        "line1": "Drag horizontally",
+        "line2": "to show competitors"
+      },
+      "startNow": "Sign up now"
+    }
+  },
+  "FeatureSection": {
+    "title": "Why choose Internxt?",
+    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
+    "cta": "Create free account"
+  },
+  "InfoSection": {
+    "title": "Secure cloud storage with unmatched privacy",
+    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "cta": "Internxt's commitment to privacy",
+    "cards": [
+      {
+        "title": "Private by design",
+        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+      }
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "Get up to 10GB for free!",
+    "description": "Create your free account now and get full access to our suite of online privacy services.",
+    "cta": "Get started"
+  },
+  "TestimonialsSection": {
+    "title": "Honest reviews from our users",
+    "cards": [
+      {
+        "name": "Eva W.",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+      },
+      {
+        "name": "Josep C.",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+      },
+      {
+        "name": "Pat G.",
+        "enterprise": "Review from Capterra",
+        "review": "I am storing files for a non-profit organization and working with Internxt was marvelous! This drive was very easy to use. I didn't have to do anything but upload and download. The program and drive did the rest!"
+      },
+      {
+        "name": "Luca C.",
+        "enterprise": "Review from GetApp",
+        "review": "The future of cloud storage! Love the fact that finally we have an affordable encrypted and secure cloud storage software that also has a very cool look and is user-friendly."
+      },
+      {
+        "name": "Binet S.",
+        "enterprise": "Review from Trustpilot",
+        "review": "Fast, reliable, and inexpensive - best components of any product! The ample storage space is definitely appreciated! I have enough of space to save all of my photos and files. I also like how simple it is to share files."
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is the most secure cloud storage service?",
+        "answer": [
+          "If you compare Internxt with all the other services, you will find that Internxt is the most private and secure alternative to Google Drive, Dropbox, and other popular services."
+        ]
+      },
+      {
+        "question": "Which cloud storage service is the most private?",
+        "answer": [
+          " Internxt has no way to access your stored information and is the most private cloud service on the market today. While many cloud services offer advanced security features, very few of them don’t have access to your information."
+        ]
+      },
+      {
+        "question": "What is an open-source cloud storage service?",
+        "answer": [
+          "An open-source cloud service differs from a traditional service in that all of the service’s source code is made public. This allows individuals to independently verify that the service does what it says it does. Internxt is fully open source, and our code is posted publicly on GitHub."
+        ]
+      },
+      {
+        "question": "Which cloud providers have access to your stored data?",
+        "answer": [
+          "It’s difficult to know for sure which companies don’t access your data because very few of them keep their source code private, but almost none claim to ever access your data. Internxt, on the other hand, will never access your data, and that claim can be verified by auditing our source code."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Safety is only a click away",
+    "description": "Protect your personal data with Internxt's privacy suite.",
+    "cta": "Create account"
+  }
+}

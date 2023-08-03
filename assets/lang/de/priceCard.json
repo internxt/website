@@ -1,0 +1,70 @@
+{
+  "mostPopular": "Am beliebtesten",
+  "mostPopularPlan": "Beliebtester Plan",
+  "valentines": "Spezielles Valentinstag-Angebot!",
+  "onlyForNewClients": "Nur für neue Abonnenten oder Benutzer des kostenlosen Tarifs",
+  "planTitles": {
+    "individuals": "Pläne für Einzelpersonen",
+    "business": "Pläne für Unternehmen",
+    "lifetimeCampaign": {
+      "blueText": "Erhalte 50 % RABATT",
+      "normalText": "Alle unsere exklusiven Lifetime-Pläne"
+    }
+  },
+  "lifetimeDescription": "Kaufe einmal und erhalte Privatsphäre und Sicherheit für immer.",
+  "planDescription": "Alle Internxt-Pläne sind umfassend ausgestattet und bieten vollständigen Zugriff auf alle unsere Datenschutzdienste. Sicherheit für alle Formen und Größen.",
+  "changePlan": {
+    "toIndividuals": "Wechsel zu Plänen für Einzelpersonen",
+    "toBusiness": "Wechsel zu den Plänen für Unternehmen"
+  },
+  "billingFrequency": {
+    "monthly": "Monatlich",
+    "semiannually": "Halbjährlich",
+    "annually": "Jährlich",
+    "lifetime": "Lifetime"
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "Einmalige Zahlung",
+    "monthly": "Monatliche Abrechnung",
+    "semiannually": "Halbjährliche Abrechnung",
+    "annually": "Jährliche Abrechnung",
+    "afterMonth": "Nach 30 Tagen"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/Monatlich",
+    "semiannually": "/Halbmonatlich",
+    "annually": "/Jährlich"
+  },
+  "perUserSlash": "/Nutzer",
+  "perUser": "Pro Nutzer",
+  "users": "Nutzer",
+  "freePlan": "Kostenlos",
+  "price": {
+    "freeForever": "Für immer kostenlos",
+    "free": "Bis zu"
+  },
+  "perMonth": "/Monat",
+  "firstMonth": "Erste 30 Tage",
+  "cta": {
+    "getStarted": "Starte jetzt",
+    "signUpNow": "Jetzt registrieren",
+    "buy": "Kaufen",
+    "get": "Erhalten",
+    "discount": "Erhalte 75 % Rabatt",
+    "claimTheDeal": "Erhalte das Angebot",
+    "freemonth": "Erhalte 30 Tage kostenlos"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Genieße",
+      "enjoyUpTo": "Genieße bis zu",
+      "forFree": "Kostenlos",
+      "forever": "Für immer"
+    },
+    "moneyBack": "30 Tage Geld-zurück-Garantie",
+    "encryptedFiles": "Verschlüsselte Dateispeicherung und -freigabe",
+    "accessFromAnywhere": "Greife von jedem Gerät auf deine Dateien zu",
+    "allServices": "Erhalte Zugang zu allen unseren Dienstleistungen",
+    "dataAccess": "Kein unbefugter Datenzugriff"
+  }
+}

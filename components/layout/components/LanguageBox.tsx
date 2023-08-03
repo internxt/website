@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 const currentLang = {
   es: 'Español (ES)',
   fr: 'Français (FR)',
+  de: 'Deutsch (DE)',
   en: 'English (EN)',
   it: 'Italiano (IT)',
   zh: '中国 (ZH)',
@@ -16,6 +17,7 @@ const currentLang = {
 const selectedLang = {
   es: 'ES',
   fr: 'FR',
+  de: 'DE',
   en: 'EN',
   it: 'IT',
   zh: 'ZH',
@@ -72,6 +74,16 @@ export default function LanguageBox({ darkMode }) {
               onClick={() => changeLang('fr')}
             >
               {currentLang.fr}
+            </a>
+          </Link>
+          <Link href={router.pathname} locale="de">
+            <a
+              className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                darkMode ? 'text-white' : 'text-cool-gray-80'
+              }`}
+              onClick={() => changeLang('de')}
+            >
+              {currentLang.de}
             </a>
           </Link>
           <Link href={router.pathname} locale="it">

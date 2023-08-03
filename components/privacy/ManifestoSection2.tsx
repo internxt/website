@@ -47,22 +47,22 @@ const ManifestoSection2 = ({ textContent, lang }) => (
         </h3>
 
         <div className="flex flex-col space-y-16 text-left sm:grid sm:grid-flow-row sm:grid-cols-1 sm:gap-10 sm:space-y-0 md:grid-cols-2 md:grid-rows-2 md:gap-20">
-          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-80 md:w-80">
+          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-full md:w-80">
             <h4 className="mb-6 text-2xl font-medium">{textContent.section2.square1.title}</h4>
             <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section2.square1.description}</h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-80 md:w-80">
+          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-full md:w-80">
             <h4 className="mb-6 text-2xl font-medium">{textContent.section2.square2.title}</h4>
             <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section2.square2.description}</h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-80 md:w-80">
+          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-full md:w-80">
             <h4 className="mb-6 text-2xl font-medium">{textContent.section2.square3.title}</h4>
             <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section2.square3.description}</h5>
           </div>
 
-          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-80 md:w-80">
+          <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:h-full md:w-80">
             <h4 className="mb-6 text-2xl font-medium">{textContent.section2.square4.title}</h4>
             <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.section2.square4.description}</h5>
           </div>

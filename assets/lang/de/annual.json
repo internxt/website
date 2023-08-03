@@ -1,0 +1,28 @@
+{
+  "HeroSection": {
+    "header": "Internxt-Jahrespläne",
+    "title": {
+      "normalText": "Die sicherste Cloud ",
+      "blueText": "für all deine Fotos und Dateien"
+    },
+    "description": "Melde dich für einen Internxt-Jahresplan an und erhalte 365 Tage lang absolute Privatsphäre.",
+    "cta": "Wähle einen Plan"
+  },
+  "PaymentSection": {
+    "title": "Jahres-Pläne",
+    "description": "Alle Internxt-Pläne sind umfassend ausgestattet und bieten dir vollen Zugriff auf alle unsere Datenschutzdienste. Ganzjährig Sicherheit für alle Formen und Größen.",
+    "firstFeed": "30 Tage Geld-zurück-Garantie",
+    "secondFeed": "100 % sichere Zahlung",
+    "thirdFeed": "Anonyme Kontoerstellung"
+  },
+  "FeatureSection": {
+    "title": "Übernimm die Kontrolle über deine Privatsphäre zurück",
+    "description": "Internxt erstellt private und sichere Cloud-Dienste, die dir als Benutzer die Kontrolle über deine Daten zurückgeben sollen. Alle Internxt-Dienste schützen deine Dateien und dein Grundrecht auf Privatsphäre und sind von Grund auf auf beispiellose Sicherheit ausgelegt.",
+    "cta": "Hol dir einen Einjahresplan"
+  },
+  "CtaSection": {
+    "title": "Der privateste Cloud-Speicher der Welt",
+    "description": "Schütze die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Finde deinen Plan"
+  }
+}

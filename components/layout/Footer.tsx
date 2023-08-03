@@ -8,6 +8,8 @@ import Image from 'next/image';
 import axios from 'axios';
 import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 
+const openSourcePaths = ['en', 'de', 'zh'];
+
 export default function Footer({
   textContent,
   lang,
@@ -182,7 +184,7 @@ export default function Footer({
                     <Link href="/privacy" locale={lang} passHref>
                       <a className="hover:text-primary">{textContent.FooterSection.sections.company.privacy}</a>
                     </Link>
-                    {lang === 'en' && (
+                    {openSourcePaths.includes(lang) && (
                       <Link href="/open-source" locale={lang} passHref>
                         <a className="flex flex-row hover:text-primary">
                           {textContent.FooterSection.sections.company.openSource}
@@ -288,7 +290,7 @@ export default function Footer({
                     <Link href="/what-does-google-know-about-me" locale={lang} passHref>
                       <a className="flex items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                        {lang !== 'en' && (
+                        {!openSourcePaths.includes(lang) && (
                           <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                             {textContent.FooterSection.new}
                           </div>
@@ -537,7 +539,7 @@ export default function Footer({
                         <a>{textContent.FooterSection.sections.company.privacy}</a>
                       </Link>
 
-                      {lang === 'en' && (
+                      {openSourcePaths.includes(lang) && (
                         <Link href="/open-source" locale={lang} passHref>
                           <a className="flex flex-row hover:text-primary">
                             {textContent.FooterSection.sections.company.openSource}

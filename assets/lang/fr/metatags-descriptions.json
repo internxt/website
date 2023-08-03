@@ -20,6 +20,16 @@
     "description": "Alternative cryptée, privée, gratuite et sécurisée à zéro connaissance à Google Photos. Stockez gratuitement vos photos sur le cloud en toute sécurité."
   },
   {
+    "id": "open-source",
+    "title": "Internxt – Open Source and Secure Cloud Storage",
+    "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
+  },
+  {
+    "id": "lifetime",
+    "title": "Internxt Lifetime Plans - Sicherer Cloud-Speicher fürs Leben!",
+    "description": "Internxt Lifetime Deal: Einmal zahlen und 2TB, 5TB oder 10TB sicheren Cloud-Speicher für immer erhalten. Melden Sie sich an oder wechseln Sie zu einem Internxt Lifetime Plan für lebenslangen Schutz! Only for a limited time."
+  },
+  {
     "id": "pricing",
     "title": "Internxt – Pricing",
     "description": "Les tarifs d'Internxt. Une seule adhésion pour tous nos services. Internxt Drive, Internxt Send, Internxt Photos. Bienvenue sur Internxt."
@@ -28,11 +38,6 @@
     "id": "about",
     "title": "Internxt – À propos de nous",
     "description": "Rencontrez l'équipe d'Internxt. Fran Villalba Segarra, Fondateur et PDG d'Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
-  },
-  {
-    "id": "token",
-    "title": "Internxt – Token, l'essence qui anime Internxt.",
-    "description": "Internxt token. Apprenez tout sur notre crypto-monnaie, INXT. Achetez des jetons Internxt auprès de Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
   },
   {
     "id": "legal",

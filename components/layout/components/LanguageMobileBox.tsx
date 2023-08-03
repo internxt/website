@@ -10,6 +10,7 @@ const languages = [
   { it: 'Italiano (IT)' },
   { zh: '中国人 (ZH)' },
   { ru: 'Русский (RU)' },
+  { de: 'Deutsch (DE)' },
 ];
 
 export default function LanguageMobileBox({ darkMode }) {

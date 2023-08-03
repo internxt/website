@@ -1,0 +1,141 @@
+{
+  "HeroSection": {
+    "title": "Virus Scanner",
+    "subtitle1": "Ziehe verdächtige Dateien per Drag-and-Drop, um Malware und andere Verstöße kostenlos zu erkennen.",
+    "subtitle2": "Scanne alle Dokumente, Bilder, PDFs oder andere Dateitypen. Stelle sicher, dass deine Dateien sicher und frei von Viren sind, bevor du sie mit dem Zero-Knowledge Virenscanner von Internxt öffnen.",
+    "footer": "Internxt übernimmt keine Haftung für die von dir bereitgestellten personenbezogenen Daten. Durch das Absenden deiner Dateien stimmst du unseren [Nutzungsbedingungen und Datenschutzbestimmungen] zu. (https://internxt.com/legal)",
+
+    "dropFile": {
+      "line1": "Lege die Datei ab, um sie auf Viren zu prüfen"
+    },
+    "fileSelected": "Zum Scannen ausgewählte Datei",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "scanNow": "Scanne jetzt",
+    "selectFile": "Oder wähle eine Datei",
+    "dropHere": "Datei hier ablegen",
+    "scanAgain": "Scanne eine andere Datei",
+    "loading": "Lade...",
+    "maxFileSize": {
+      "title": "Dateigrößenbeschränkung überschritten",
+      "description": "Maximale Dateigröße von 1 GB"
+    },
+    "table": {
+      "loading": "Lade...",
+      "virusDetected": "Bei dieser Datei wurde ein Virus erkannt",
+      "noVirusDetected": "Kein Virus wurde bei dieser Datei erkannt",
+      "detected": "Erkannt",
+      "undetected": "Nicht erkannt",
+      "unableToProcess": "Kann nicht verarbeitet werden",
+      "noVirusesDetected": {
+        "message": "Kein Virus erkannt",
+        "title": "Kann nicht verarbeitet werden",
+        "subtitle": "Internxt ist ein privater Cloud-Speicherdienst mit integriertem Virenscan und end-to-end Verschlüsselung.",
+        "cta": "Starte jetzt"
+      },
+      "analyzing": "Scanne Datei...",
+      "scanTime": "Scan Zeit",
+      "name": "Name",
+      "detection": "Erkennung"
+    },
+    "error": {
+      "title": "Etwas ist schief gelaufen",
+      "description": "Beim Senden der Datei ist ein Fehler aufgetreten. Bitte versuche es später erneut"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "Warum es wichtig ist, einen Virenscanner zu verwenden",
+      "description": ["Zuerst scannen, später Fragen stellen.", "Erkenne Viren, bevor sie deine Geräte infiltrieren."]
+    },
+    "virusesHatePrivacy": {
+      "title": "Viren hassen deine Privatsphäre",
+      "description": "Ein starker Virus kann vertrauliche Informationen wie deine Zugangsdaten oder Passwörter stehlen, sie verschlüsseln und den Zugriff auf die Daten sperren, einzelne Transaktionen innerhalb von Apps durchführen, deinen Computer überwachen und sogar andere Geräte in verbundenen Netzwerken angreifen. Ein Virus hat das Potenzial, auf nahezu alles zuzugreifen, was auf deiner Hardware gesperrt ist."
+    },
+    "stopMalware": {
+      "title": "Stoppen Sie Malware, bevor sie Sie stoppt",
+      "description": "Sobald sich ein Virus verbreitet hat, kann er unbeschadet alle deine Programme und Anwendungen infizieren. Sein zerstörerischer Code kann und wird sich wahrscheinlich überall verbreiten. Deshalb ist es wichtig, einen Virenscanner zu verwenden."
+    },
+    "freeOnlineScanner": {
+      "title": "Ein kostenloser Online-Virenscanner, dem Sie vertrauen können",
+      "description": "Schütze deine Privatsphäre mit unserem kostenlosen Virenscanner, der dir hilft, Infektionen zu vermeiden und deinen Computer zu schützen."
+    },
+    "scanFiles": {
+      "title": "Scanne Dateien völlig vertraulich auf Viren",
+      "description": "Für Internxt stehen die Privatsphäre und die Sicherheit der Benutzer stets an erster Stelle. Wir setzen uns dafür ein, ein gerechteres, freies und transparenteres Internet für alle zu schaffen. Aus diesem Grund haben wir unseren kostenlosen Online-Virenscanner entwickelt, um heimliche Viren zu erkennen und bösartige Malware aufzudecken"
+    }
+  },
+  "CtaSection": {
+    "title": "Sicherheit ist nur ein Klick entfernt",
+    "description": "Schütze deine persönlichen Daten mit der Datenschutz-Suite von Internxt.",
+    "cta": "Erstelle Konto"
+  },
+  "ToolsSection": {
+    "title": "Probiere die kostenlosen Online-Sicherheitstools von Internxt aus",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "Passwort-Checker",
+        "width": 125,
+        "title": "Kostenloser Passwort-Stärke-Checker",
+        "description": "Prüfe jetzt"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Kostenloser Byte Konverter",
+        "description": "konvertiere jetzt"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "width": 95,
+        "title": "Kostenloser Temporäre E-Mail ",
+        "description": "Maile jetzt"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "width": 124,
+        "title": "Kostenloser Passwort-Generator",
+        "description": "Jetzt generieren"
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Wie kann man überprüfen, ob eine Datei infiziert ist?",
+        "answer": [
+          "Der Virenscanner von Internxt ist ein Tool, das dir dabei hilft, alle Viren zu finden, die deine Dateien möglicherweise kompromittiert haben. Unser kostenloser Virenscanner wurde entwickelt, um dir dabei zu helfen, Infektionen zu vermeiden und Malware aus deinen Dokumenten und Fotos zu identifizieren."
+        ]
+      },
+      {
+        "question": "Wie kannst du feststellen, ob deine Dateien Malware enthalten?",
+        "answer": [
+          "Sende deine Dateien und entspanne dich in dem Wissen, dass deine Dateien sicher und geschützt sind. Die Verwendung unseres Virenscanners ist eine sichere Vorgehensweise, um einem Datenschutz-Albtraum zu entgehen. Scanne, bevor du klickst!"
+        ]
+      },
+      {
+        "question": "Wie scanne ich eine Datei auf Viren?",
+        "answer": [
+          "Unser kostenloser Virenscanner wurde entwickelt, um dir dabei zu helfen, Infektionen zu vermeiden und Malware aus Ihren Dokumenten und Fotos zu identifizieren. Ziehen Sie die ausgewählte Datei per Drag-and-Drop in die Symbolleiste des Virenscanners und die Datei wird automatisch auf Viren oder Malware gescannt."
+        ]
+      },
+      {
+        "question": "Wie scanne ich eine Datei online?",
+        "answer": [
+          "Mit dem Internxt Virus Scanner kannst du verdächtige Dateien per Drag-and-Drop in die Symbolleiste ziehen, um Malware und andere Verstöße kostenlos zu erkennen."
+        ]
+      },
+      {
+        "question": "Wie scanne ich eine PDF-Datei?",
+        "answer": [
+          "Ziehe die PDF-Datei wie jede andere Datei per Drag-and-Drop in die Symbolleiste. Mit Internxt Virus Scanner kannst jedes Dokument, Bild, PDF oder jeden anderen Dateityp scannen. Stelle sicher, dass deine Dateien sicher und frei von Viren sind, bevor du sie mit dem Virenscanner von Internxt öffnen."
+        ]
+      }
+    ]
+  }
+}

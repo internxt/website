@@ -1,0 +1,120 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Building Trust Through the Power of",
+      "blueText": "Open Source"
+    },
+    "description": "Here at Internxt, we are committed to providing people with the highest level of privacy and security. This privacy-by-design approach is part of our philosophy to build technologies that protect your privacy and keep your data safe."
+  },
+  "WhatIsOSS": {
+    "title": "What Is Open Source Software?",
+    "description": "Open source software, or OSS, is the computer’s code used to create projects and is freely available to the public. With OSS, you can view the code which built the website and, with the proper knowledge, modify or improve its security, fix bugs, or add new features.",
+    "imgHeader": "We use open source software in our Drive, Photos, and Send apps, ensuring that we are constantly updating and improving our source code. This commitment allows us to bring you the best experience possible.",
+    "section": [
+      "Privacy and security are at the forefront of how we build our apps which is made possible thanks to the power of open source software. By choosing Internxt, you can rest assured that we will always be clear on how we protect your important files.",
+      "Thanks to the power of open source software, Internxt can deliver a service that emphasizes transparency, security, and privacy above all else."
+    ]
+  },
+  "WhatAreTheBenefits": {
+    "title": "What Are the Benefits of Open Source Software?",
+    "description": "OSS has numerous benefits that align with our vision of an Internet where user privacy comes first.",
+    "cards": [
+      {
+        "title": "Transparency",
+        "description": "With Internxt’s code, what you see is what you get. Anyone can view, modify or improve our code to ensure it remains up-to-date and secure and will not compromise your data or privacy."
+      },
+      {
+        "title": "Enhanced security",
+        "description": "Open source means that more people can inspect the code so that they can fix issues or vulnerabilities quickly, leaving little to no time for people to exploit any problems with the code."
+      },
+      {
+        "title": "Collaboration",
+        "description": "An active community of developers and users can actively contribute to improvements in the software. These updates mean you always use the most secure and up-to-date software and have the best experience possible."
+      },
+      {
+        "title": "Longevity",
+        "description": "OSS remains accessible to the public even if the company ends, allowing people to continue to work on the code; this ensures continuity and eliminates the need to pay for a new service or data loss."
+      },
+      {
+        "title": "Agility",
+        "description": "Open source software means developers can quickly resolve bugs rather than wait days for development teams to fix the problem, so people can continue using the software safely and without delay."
+      },
+      {
+        "title": "Reliable",
+        "description": "As the source code is constantly updated, you can be sure you are using the best version of the software."
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "Privacy comes from the source",
+    "description": "Secure your files with Internxt’s open-source cloud storage.",
+    "cta": "Join Internxt today"
+  },
+  "LearningWithOSCommunity": {
+    "title": "Learning and Improving With the Open-Source Community",
+    "description": [
+      "The open-source community has played a significant part in developing frameworks, tools, and libraries which allow for the continuous improvement of projects or businesses.",
+      "Internxt values the open source community, as more eyes on our code mean it is under constant scrutiny to be as secure as possible.",
+      "We encourage anyone interested in software development to view our source code, learn from the open-source community, and join us on our journey to a safer Internet."
+    ]
+  },
+  "DifferencesBetweenOpenAndCloseSS": {
+    "title": "What Are the Differences Between Open and Closed Source Software?",
+    "description": "The pros and cons of open source software are essential when deciding which software is right for you. The main differences between OSS and closed-source software are as follows:",
+    "table": {
+      "OpenSource": {
+        "title": "Open Source",
+        "feat": [
+          "Anyone can view, modify or change the code and improve it.",
+          "Open availability and transparency of the source code means anyone can review the code for potential issues.",
+          "The software can be maintained and fixed quickly.",
+          "More cost-effective as there are no licensing fees to pay for.",
+          "More accessible due to its flexibility to add features and make changes."
+        ]
+      },
+      "CloseSource": {
+        "title": "Closed Source",
+        "disadvantages": [
+          "The source code is only accessible to those who created it.",
+          "The code is inaccessible to the public, meaning a few people can check for security flaws.",
+          "Updating the code takes time, leaving it vulnerable to attacks.",
+          "The software can be high-priced and requires a license to use it.",
+          "Change relies on the company and may take some time."
+        ]
+      }
+    },
+    "footer": "In general, however, many services use a hybrid OSS and closed-source software model in their platforms, although companies like Internxt choose to remain completely open-source."
+  },
+  "CtaSection2": {
+    "title": "Keep your files secure",
+    "description": "Internxt uses open source software to keep your files secure, private, and encrypted.",
+    "cta": "Join Internxt today"
+  },
+  "ExploreOurOSS": {
+    "title": "Explore Our Open Source Software",
+    "description": "If you wish to explore under the hood of Internxt and see how we build our Drive app across desktop, mobile, and web, the source code for them is available on our GitHub. Happy coding!",
+    "DownloadLinks": {
+      "downloadTitle": "Download Internxt Drive",
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Download on the",
+      "orDownloadOnThe": "Or download on the",
+      "getOn": "Get on",
+      "orGetOn": "Or get on",
+      "openDriveWeb": "Open Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "CtaSection3": {
+    "title": "Join the Open Source Community",
+    "description": "See how Internxt protects your data with our source code.",
+    "cta": "View our GitHub"
+  }
+}

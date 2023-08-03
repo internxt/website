@@ -23,6 +23,8 @@ export interface PriceCardProps {
   country?: string;
 }
 
+const permitedLangs = ['en', 'it', 'de'];
+
 export default function PriceCard({
   planType,
   storage,
@@ -40,7 +42,7 @@ export default function PriceCard({
   };
 
   const router = useRouter();
-  const language = router.locale === 'it' ? 'it' : 'en';
+  const language = permitedLangs.includes(router.locale) ? router.locale : 'en';
 
   const contentText = require(`../../assets/lang/${language}/priceCard.json`);
 

@@ -30,11 +30,6 @@
     "description": "Познакомьтесь с командой Internxt. Фран Виллальба Сегарра, основатель и генеральный директор Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
   },
   {
-    "id": "token",
-    "title": "Internxt - токен движет Internxt",
-    "description": "Токен Internxt. Узнайте все о нашей криптовалюте INXT. Покупайте токены Internxt на Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
-  },
-  {
     "id": "legal",
     "title": "Internxt - условия использования",
     "description": "Internxt - юридические условия использования. Прочитайте все положения и условия об обработке ваших данных."
@@ -48,6 +43,11 @@
     "id": "virus-scanner",
     "title": "Internxt - Бесплатный онлайн сканер файлов на наличие вирусов",
     "description": "Бесплатный инструмент для сканирования файлов на наличие вирусов и вредоносных программ. Защитите свои личные документы, данные и оборудование от утечек с помощью быстрого и простого сканирования."
+  },
+  {
+    "id": "open-source",
+    "title": "Internxt – Open Source and Secure Cloud Storage",
+    "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
   },
   {
     "id": "temporary-email",

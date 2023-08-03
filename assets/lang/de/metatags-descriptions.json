@@ -1,0 +1,128 @@
+[
+  {
+    "id": "home",
+    "title": "Internxt – Privater und sicherer Cloud-Speicher",
+    "description": "Stehe für Privatsphäre, wechsel zu Internxt. Die Open-Source-Suite der Cloud-Speicherdienste von Internxt schützt dein Recht auf Privatsphäre. Internxt Drive, Fotos, Senden, und mehr."
+  },
+  {
+    "id": "what-google-knows",
+    "title": "What Does Google Know About Me | Internxt",
+    "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
+  },
+  {
+    "id": "drive",
+    "title": "Internxt Drive – Privater und sicherer Cloud-Speicher",
+    "description": "Speichere, teile und sichere deine Dateien und Fotos mit Internxt Drive in der Cloud. Open-Source- und end-to-end verschlüsselte Dateispeicherung und Online-Sicherung."
+  },
+  {
+    "id": "open-source",
+    "title": "Internxt - Open Source und sicherer Cloud-Speicher",
+    "description": "Lernen Sie die Vorteile von Open-Source-Software (OSS) kennen und erfahren Sie, warum Internxt sie nutzt, um Cloud-Speicher bereitzustellen, der Ihre Daten sichert und schützt."
+  },
+  {
+    "id": "photos",
+    "title": "Internxt Photos – Sichere Fotospeicherung und Bildsicherung",
+    "description": "Speichere, betrachte und synchronisiere deine Fotos und Bilder auf allen Geräten mit Internxt Photos. end-to-end-verschlüsselte Cloud-Fotofreigabe und Bildsicherung."
+  },
+  {
+    "id": "pricing",
+    "title": "Internxt Preise – Bekomme bis zu 10GB kostenlos",
+    "description": "Melde dich für ein sicheres Cloud-Speicherabonnement von Internxt an und erhalte Zugang zu unserem monatlichen Newsletter mit den neuesten technischen Neuigkeiten und Updates."
+  },
+  {
+    "id": "about",
+    "title": "Internxt – Über uns",
+    "description": "Lerne das Team von Internxt kennen. Fran Villalba Segarra, Gründerin und CEO von Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+  },
+  {
+    "id": "legal",
+    "title": "Internxt – Rechtliche Nutzungsbedingungen",
+    "description": "Internxt - Rechtliche Nutzungsbedingungen. Lese alle Allgemeinen Geschäftsbedingungen, in denen wir erklären, wie wir deine Daten verarbeiten."
+  },
+  {
+    "id": "privacy",
+    "title": "Internxt Privatsphäre – Kostenlose Datenschutz-Tools und -Ressourcen",
+    "description": "Kostenlose Tools zum Schutz deiner Privatsphäre im Internet: Passwortprüfer, Virenscanner, Verzeichnis von Datenschutzorganisationen, und mehr. Internxt verteidigt dein Recht auf Privatsphäre."
+  },
+  {
+    "id": "virus-scanner",
+    "title": "Internxt – Kostenloser Online Datei Virus Scanner",
+    "description": "Kostenloses Tool zum Scannen von Dateien auf Viren und Malware. Schütze persönlichen Dokumente, Daten und Hardware mit einem schnellen und einfachen Scan vor Online-Betrug."
+  },
+  {
+    "id": "temporary-email",
+    "title": "Internxt – Kostenlose temporäre E-Mail",
+    "description": "Halte dein E-Mail-Konto sauber, sicher und frei von unerwünschten E-Mails mit der kostenlosen temporären E-Mail von Internxt. Internxt bietet temporäre, sichere, anonyme und kostenlose E-Mail-Adressen."
+  },
+  {
+    "id": "converter-tool",
+    "title": "Byte Konverter: GB zu TB | Internxt",
+    "description": "Der kostenlose Byte-Konverter von Internxt: Finde heraus, wie viel Speicherplatz du hast, wie viele Gigabyte ein Terabyte hat, und konvertiere in B, KB, MB, GB und TB."
+  },
+  {
+    "id": "password-generator",
+    "title": "Starker Passwort-Generator | Internxt",
+    "description": "Kostenloser und sicherer Passwortgenerator. Ein einfaches und effektives Tool zum sofortigen Erstellen zufälliger und sicherer Passwörter, um deine Konten zu schützen."
+  },
+  {
+    "id": "lifetime",
+    "title": "Internxt Lifetime-Pläne – Sicherer Cloud-Speicher ein Leben lang!",
+    "description": "Internxt Lifetime Deal: Zahle einmal und erhalte für immer 2 TB, 5 TB oder 10 TB sicheren Cloud-Speicher. Melde dich an oder upgrade auf einen Internxt-Lifetime-Plan für lebenslange Privatsphäre! Nur für eine begrenzte Zeit."
+  },
+  {
+    "id": "partner-discount",
+    "title": "Partnerangebote – Spare viel beim Internxt-Cloud-Speicher!",
+    "description": "Löse deinen exklusiven Gutscheincode ein, der von einem zertifizierten Internxt-Partner bereitgestellt wird. Erhalte einen Sonderrabatt auf den sicheren Cloud-Speicher von Internxt."
+  },
+  {
+    "id": "techradar-discount",
+    "title": "TechRadar-Partnerangebote – Spare viel beim Internxt-Cloud-Speicher!",
+    "description": "Löse deinen exklusiven Gutscheincode ein, der von unserem Partner TechRadar bereitgestellt wird. Erhalte einen Sonderrabatt auf den sicheren Cloud-Speicher von Internxt."
+  },
+  {
+    "id": "comparison",
+    "title": "Internxt – Cloud-Speicher-Vergleich",
+    "description": "Vergleiche Internxt mit allen anderen Diensten da draußen. Internxt ist die privateste und sicherste Alternative zu Google Drive, Dropbox und anderen Diensten."
+  },
+  {
+    "id": "black-friday",
+    "title": "Internxt Black Friday Deal – Cloud-Speicher Angebot!",
+    "description": "Internxt Black Friday Deal 2022: Melde dich an oder upgrade und erhalte 1 Jahr lang mehr als die Hälfte Rabatt auf das 2-TB-Abonnement von Internxt. Hole dir noch heute Ihren Black Friday-Rabatt auf den größten Cloud-Speicherplan von Internxt!"
+  },
+  {
+    "id": "cloudwards",
+    "title": "Internxt – CloudWards Partnerschaft",
+    "description": "Sichere dir dank Cloudwards die besten Angebote für den sichersten Cloud-Speicher. Günstigere und sicherere Alternative zu pCloud, IceDrive und AppSumo verschlüsseltem Cloud-Speicher."
+  },
+
+  {
+    "id": "guru99",
+    "title": "Internxt – Guru99 Partnerschaft",
+    "description": "Sichere dir dank Guru99 die besten Angebote für den sichersten Cloud-Speicher. Günstigere und sicherere Alternative zu pCloud, IceDrive und AppSumo verschlüsseltem Cloud-Speicher."
+  },
+  {
+    "id": "freemonth",
+    "title": "Internxt – Bekomme 1 Monat kostenlos",
+    "description": "Sichere dir die besten Angebote für den sichersten Cloud-Speicher und erhalte 1 Monat kostenlos. Günstigere und sicherere Alternative zu pCloud, IceDrive und AppSumo verschlüsseltem Cloud-Speicher."
+  },
+  {
+    "id": "landing",
+    "title": "Internxt – Sicherster Cloud-Speicher",
+    "description": "Internxt bietet sichere, private und verschlüsselte Cloud-Dienste wie Internxt Drive und Internxt Photos."
+  },
+  {
+    "id": "privacy-directory",
+    "title": "Internxt – Verzeichnis von Datenschutzorganisationen, Institutionen und NGOs",
+    "description": "Verzeichnis von Organisationen, Institutionen und NGOs für digitale Rechte, die mit Internxt zusammenarbeiten, um die Privatsphäre aller zu fördern, zu unterstützen und zu verteidigen."
+  },
+  {
+    "id": "password-checker",
+    "title": "Internxt – Kostenloser und sicherer Passwort Checker",
+    "description": "Kostenloser Passwort Checker. Überprüfe die Stärke deiner Passwörter mit dem sicheren Online-Tool von Internxt."
+  },
+  {
+    "id": "cyber-awareness",
+    "title": "Cyber-Awareness | Internxt",
+    "description": "Was ist Cyber-Awareness, wie man online sicher bleibt und alles, was du über den Cybersecurity-Awareness-Monat im Oktober wissen must."
+  }
+]

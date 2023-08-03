@@ -15,6 +15,11 @@
     "description": "Averigua qué sabe Google sobre ti. Cómo ver y descargar tus datos de Google, cómo eliminarlos y cómo inhabilitar la recopilación de datos de Google."
   },
   {
+    "id": "open-source",
+    "title": "Internxt – Open Source and Secure Cloud Storage",
+    "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
+  },
+  {
     "id": "photos",
     "title": "Internxt Photos – Almacenamiento seguro de fotos y videos",
     "description": "Internxt Photos – Almacenamiento de fotos y copia de seguridad"
@@ -28,11 +33,6 @@
     "id": "about",
     "title": "Internxt – Sobre nosotros",
     "description": "Conoce al Equipo de Internxt. Fran Villalba Segarra, Fundador y CEO de Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
-  },
-  {
-    "id": "token",
-    "title": "Internxt Token – Token, la esencia que mueve a Internxt.",
-    "description": "Ficha de Internxt. Aprende todo sobre nuestra criptomoneda, INXT. Compra fichas de Internxt en Bittrex, CoinBase, CoinMarketCap, Crypto, UniSwap."
   },
   {
     "id": "legal",

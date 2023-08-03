@@ -25,14 +25,14 @@
     "description": "注册一个 Internxt 安全云存储订阅并获得我们的每月时事通讯，其中包含最新的技术新闻和更新。"
   },
   {
+    "id": "open-source",
+    "title": "Internxt--开源安全云存储",
+    "description": "了解开源 (OSS) 软件的优势，以及 Internxt 使用开源软件提供云存储，确保数据安全的原因。"
+  },
+  {
     "id": "about",
     "title": "Internxt – 关于我们",
     "description": "认识 Internxt 的团队。 Internxt 创始人兼首席执行官 Fran Villalba Segarra。 Shuttle、Angels Capital、The Venture City、Internxt、ESADE BAN。"
-  },
-  {
-    "id": "token",
-    "title": "Internxt – Token,移动Internxt的本质。",
-    "description": "Internxt token。全面了解我们的加密货币 INXT。 从 Bittrex、CoinBase、CoinMarketCap、Crypto、UniSwap 购买 Internxt 代币。"
   },
   {
     "id": "legal",
