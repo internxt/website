@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
+import Header from '../shared/Header';
 
 interface HeroSectionProps {
   textContent: any;
@@ -20,8 +21,8 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                   <Countdown textColor={'white'} />
                 </div>
               )}
-              <div className="flex max-w-[448px] flex-col pb-10 text-center text-white md:text-start">
-                <p className="text-7xl font-bold">{textContent.title}</p>
+              <div className="flex max-w-[450px] flex-col pb-10 text-center text-white md:text-start">
+                <Header>{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <div
