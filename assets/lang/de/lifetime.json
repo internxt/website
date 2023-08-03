@@ -2,12 +2,12 @@
   "HeroSection": {
     "title": "Erhalte einen Lifetime Internxt Plan!",
     "description": "Sichere alle deine Dateien und Erinnerungen für immer mit einer einzigen, einmaligen Zahlung.",
-    "cta1": "Sichere dir jetzt 50 % RABATT",
+    "cta1": "Sichere dir jetzt 25 % RABATT",
     "cta2": "Entdecke Lifetime-Angebote"
   },
   "PaymentSection": {
     "limitedOffer": "Zeitlich befristetes Angebot!",
-    "title": { "blueText": "Erhalte 50 % RABATT", "normalText": " auf alle unsere exklusiven Lifetime-Pläne" },
+    "title": { "blueText": "Erhalte 25 % RABATT", "normalText": " auf alle unsere exklusiven Lifetime-Pläne" },
     "description": "Kaufe einmal und erhalte Privatsphäre und Sicherheit für immer.",
     "normalSection": {
       "title": "Entdecke alle unsere exklusiven Lifetime-Pläne",

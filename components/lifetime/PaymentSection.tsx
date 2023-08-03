@@ -10,7 +10,7 @@ const PaymentSection = ({ lang, textContent, country }) => {
           <div className="flex items-center justify-center rounded-lg bg-gray-5 px-4 py-2 ">
             <p className="text-xl font-medium text-gray-80">{textContent.limitedOffer}</p>
           </div>
-          <div className="flex flex-col justify-center px-6 pt-4 text-center">
+          <div className="flex flex-col items-center justify-center px-6 pt-4 text-center">
             <p className="w-full max-w-[600px] text-5xl font-semibold leading-tight">
               <span className="text-primary">{textContent.title.blueText}</span>
               <span>{textContent.title.normalText}</span>
