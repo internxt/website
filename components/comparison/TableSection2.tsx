@@ -331,8 +331,8 @@ const TableSection2 = ({ textContent }) => {
       <div className="flex flex-col">
         {/* Header */}
         <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-primary px-6 pt-20 pb-16 text-white md:pt-20">
-          <div className="relative z-10 mb-16 flex flex-col items-center justify-center md:mb-8">
-            <Header>
+          <div className="relative z-10 mb-16 flex flex-col items-center justify-center text-center md:mb-8">
+            <Header className="text-center">
               {textContent.title.line1}
               <br className="hidden sm:inline-flex" /> {textContent.title.line2}
             </Header>

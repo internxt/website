@@ -19,6 +19,8 @@ import TableSection2 from '../components/comparison/TableSection2';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
+const allowedLangs = ['en', 'rs', 'de'];
+
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
 
@@ -39,7 +41,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
-        {lang === 'en' || lang === 'rs' ? (
+        {allowedLangs.includes(lang) ? (
           <>
             <TableSection textContent={langJson.HeroSection} />
 
