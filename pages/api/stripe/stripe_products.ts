@@ -11,7 +11,7 @@ export interface Product {
 }
 
 const PRODUCTS_URL =
-  process.env.NODE_ENV === 'production'
+  process.env.NODE_ENV !== 'production'
     ? `${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/prices`
     : `${process.env.NEXT_PUBLIC_PAYMENTS_API}/prices`;
 

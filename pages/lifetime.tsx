@@ -11,6 +11,7 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
 
 import axios from 'axios';
+import { currencyService } from '../components/services/currencyService';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -22,8 +23,8 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
   }
 
   useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
+    currencyService.filterCurrencyByCountry().then((res) => {
+      setCountry(res);
     });
   });
 

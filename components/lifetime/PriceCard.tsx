@@ -24,17 +24,6 @@ interface PriceCardProps {
 const PriceCard = ({ planType, storage, price, cta, country, popular, actualPrice, isCampaign }: PriceCardProps) => {
   const [coupon, setCoupon] = useState(null);
 
-  const currency = () => {
-    switch (country) {
-      case 'US':
-        return '$';
-      case 'GB':
-        return '£';
-      default:
-        return '€';
-    }
-  };
-
   const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   useEffect(() => {
@@ -92,7 +81,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular, actualPric
             `}
           >
             <p className={`flex flex-row  space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}>
-              <span className={`currency items-start`}>{currency()}</span>
+              <span className={`currency items-start`}>{country}</span>
               <span className="price text-4xl font-bold">{actualPrice}</span>
               {!isCampaign && <span className={`flex items-end justify-end pl-1`}>,25</span>}
             </p>
@@ -102,10 +91,10 @@ const PriceCard = ({ planType, storage, price, cta, country, popular, actualPric
             `}
           >
             <p className="flex flex-row items-start space-x-0.5 font-semibold text-gray-50 line-through">
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
               <span className="price text-2xl font-semibold">{price}</span>
             </p>
-            <p className="pt-2 text-xs font-normal text-gray-50">{contentText.billingFrequencyLabel.lifetime}</p>
+            <p className="pt-2 text-sm font-medium text-gray-50">{contentText.billingFrequencyLabel.lifetime}</p>
           </div>
         </div>
 
