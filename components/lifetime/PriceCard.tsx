@@ -104,7 +104,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular, actualPric
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
             analyticsService.offerTrack({
-              campaign: 'lifetime',
+              campaign: 'lifetime_august',
               discount: 50,
               plan: cta[1],
               coupon: 'LIFETIME50',
