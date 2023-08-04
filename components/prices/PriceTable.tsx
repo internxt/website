@@ -18,9 +18,18 @@ interface PriceTableProps {
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
+function LifetimeTitle({ contentText }) {
+  return (
+    <>
+      <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
+      <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
+    </>
+  );
+}
+
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Lifetime);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
@@ -38,15 +47,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
       .catch((err) => console.error(err));
   }, []);
 
-  function LifetimeTitle() {
-    return (
-      <>
-        <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
-        <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
-      </>
-    );
-  }
-
   return (
     <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
@@ -55,7 +55,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
               {individual ? (
                 isLifetime ? (
-                  <LifetimeTitle />
+                  <LifetimeTitle contentText={contentText} />
                 ) : (
                   contentText.planTitles.individuals
                 )
