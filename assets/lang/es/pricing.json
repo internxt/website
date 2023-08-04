@@ -1,6 +1,7 @@
 {
   "HeroSection": {
     "title": { "line1": "75% OFF", "line2": "En 2TB Anual" },
+    "lifetimeTitle": { "line1": "Consigue un", "blueText": " plan de por vida ", "line2": "de Internxt!" },
     "feeds": {
       "firstFeed": "Garantía de devolución de 30 días",
       "secondFeed": "Pago 100% seguro",

@@ -8,6 +8,7 @@ import SpecialPriceCard from './SpecialPriceCard';
 import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
+import LifetimeCard from '../lifetime/PriceCard';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -17,14 +18,24 @@ interface PriceTableProps {
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
+function LifetimeTitle({ contentText }) {
+  return (
+    <>
+      <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
+      <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
+    </>
+  );
+}
+
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Lifetime);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState(null);
   const [currency, setCurrency] = useState(null);
+  const isLifetime = billingFrequency === 'lifetime';
 
   useEffect(() => {
     Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
@@ -41,8 +52,16 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
           <div className="flex flex-col items-center px-5">
-            <h1 className="text-center text-6xl font-semibold">
-              {individual ? `${contentText.planTitles.individuals}` : `${contentText.planTitles.business}`}
+            <h1 className="max-w-4xl text-center text-6xl font-semibold">
+              {individual ? (
+                isLifetime ? (
+                  <LifetimeTitle contentText={contentText} />
+                ) : (
+                  contentText.planTitles.individuals
+                )
+              ) : (
+                `${contentText.planTitles.business}`
+              )}
             </h1>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
@@ -138,16 +157,21 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
                   <>
-                    {billingFrequency === Interval.Year && product.storage === '2TB' ? (
-                      <SpecialPriceCard
+                    {billingFrequency === Interval.Lifetime ? (
+                      <LifetimeCard
+                        country={currency}
                         planType="individual"
                         storage={product.storage}
-                        price={product.price}
-                        billingFrequency={billingFrequency}
+                        price={product.price.split('.')[0]}
                         cta={['checkout', product.priceId]}
-                        popular={true}
                         lang={lang}
-                        country={currency}
+                        popular={product.storage === '5TB'}
+                        actualPrice={
+                          Math.abs((product.price * 50) / 100)
+                            .toFixed(2)
+                            .split('.')[0]
+                        }
+                        isCampaign
                       />
                     ) : (
                       <PriceCard
@@ -156,10 +180,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         storage={product.storage}
                         price={product.price}
                         billingFrequency={billingFrequency}
-                        popular={
-                          (billingFrequency !== Interval.Year && product.storage === '200GB') ||
-                          product.storage === '5TB'
-                        }
+                        popular={billingFrequency === Interval.Year && product.storage === '200GB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency}

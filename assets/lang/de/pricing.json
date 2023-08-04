@@ -1,13 +1,15 @@
 {
   "HeroSection": {
     "title": { "line1": "75% RABATT", "line2": "auf unseren 2TB Plan" },
+    "lifetimeTitle": { "line1": "Holen Sie sich einen", "blueText": " lebenslangen ", "line2": "Internxt!" },
+
     "feeds": {
       "firstFeed": "30-Tage Geld-zurück-Garantie",
       "secondFeed": "100% sichere Zahlung",
       "thirdFeed": "Anonyme Kontenerstellung"
     },
     "cta": {
-      "title": "Erhalten Sie 75% Rabatt auf 2TB",
+      "title": "Erhalten Sie 50% Rabatt",
       "description": "Angebot gültig für ein Jahr. Der Plan verlängert sich zum nicht reduzierten Preis für das folgende Jahr."
     }
   },
