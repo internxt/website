@@ -160,6 +160,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                     {billingFrequency === Interval.Lifetime ? (
                       <LifetimeCard
                         country={currency}
+                        key={product.storage}
                         planType="individual"
                         storage={product.storage}
                         price={product.price.split('.')[0]}
