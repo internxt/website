@@ -17,11 +17,9 @@ export enum Products {
   '10TB' = '10TB',
 }
 
-const URL = process.env.NODE_ENV === 'production' ? 'https://internxt.com' : 'http://localhost:3001';
-
 async function getAllPrices() {
   try {
-    const res = await axios.get(`${URL}/api/stripe/stripe_products`);
+    const res = await axios.get(`${window.origin}/api/stripe/stripe_products`);
     const { data } = res;
 
     if (data) {
@@ -98,7 +96,7 @@ async function getSelectedPrice(interval: string, plan: string) {
 
 async function getCoupon(coupon: string) {
   try {
-    const res = await axios.get(`${URL}/api/stripe/get_coupons`, {
+    const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
       params: {
         coupon,
       },
