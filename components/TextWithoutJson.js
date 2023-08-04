@@ -3,6 +3,9 @@ export const buttonDeal = {
   es: 'Ir a la oferta',
   fr: "Obtenez l'offre",
   it: 'Get the deal',
+  de: 'Get the deal',
+  zh: 'Get the deal',
+  ru: 'Get the deal',
 };
 
 export const BFBannerText = {
