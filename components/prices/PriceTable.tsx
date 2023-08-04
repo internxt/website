@@ -13,35 +13,39 @@ import LifetimeCard from '../lifetime/PriceCard';
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
-  products?: any;
-  currency?: any;
+
   textContent: any;
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
-function LifetimeTitle({ contentText }) {
-  return (
-    <>
-      <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
-      <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
-    </>
-  );
-}
-
-export default function PriceTable({ setSegmentPageName, lang, textContent, products, currency }: PriceTableProps) {
+export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Lifetime);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
+  const [products, setProducts] = useState(null);
+  const [currency, setCurrency] = useState(null);
+  const isLifetime = billingFrequency === 'lifetime';
 
   useEffect(() => {
-    if (products && currency) {
-      setLoadingCards(false);
-    }
-  }, [products, currency]);
+    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
+      .then((res) => {
+        setProducts(res[0]);
+        setCurrency(res[1]);
+        setLoadingCards(false);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
-  const isLifetime = billingFrequency === 'lifetime';
+  function LifetimeTitle() {
+    return (
+      <>
+        <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
+        <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
+      </>
+    );
+  }
 
   return (
     <section id="priceTable" className="bg-gray-1">
@@ -51,7 +55,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, prod
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
               {individual ? (
                 isLifetime ? (
-                  <LifetimeTitle contentText={contentText} />
+                  <LifetimeTitle />
                 ) : (
                   contentText.planTitles.individuals
                 )
@@ -128,9 +132,11 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, prod
             <CardSkeleton />
           </div>
         </Transition>
+
         {/* Render cards */}
+
         <Transition
-          show={individual}
+          show={individual && !loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
@@ -154,7 +160,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, prod
                     {billingFrequency === Interval.Lifetime ? (
                       <LifetimeCard
                         country={currency}
-                        key={product.storage}
                         planType="individual"
                         storage={product.storage}
                         price={product.price.split('.')[0]}
@@ -186,6 +191,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, prod
               })}
           </div>
         </Transition>
+
         <Transition
           show={!individual}
           enter="transition duration-500 ease-out"
