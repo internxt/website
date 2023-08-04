@@ -75,5 +75,8 @@
   "SignUpPasswordGenerator": {
     "line1": "Schütze deine Konten mit einzigartigen Passwörtern,",
     "blueText": "Komm kostenlos zu Internxt"
+  },
+  "TopBarBanner": {
+    "title": "Mehr speichern, weniger bezahlen! Erhalten Sie 50% Rabatt auf alle unsere Lifetime-Pläne"
   }
 }
