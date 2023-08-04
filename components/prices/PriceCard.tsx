@@ -6,9 +6,11 @@
 /* eslint-disable no-nested-ternary */
 
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { checkout, goToSignUpURL } from '../../lib/auth';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { stripeService } from '../services/stripeService';
 
 export interface PriceCardProps {
   planType: string;
@@ -23,8 +25,6 @@ export interface PriceCardProps {
   country?: string;
 }
 
-const permitedLangs = ['en', 'it', 'de'];
-
 export default function PriceCard({
   planType,
   storage,
@@ -34,17 +34,25 @@ export default function PriceCard({
   cta,
   popular,
   country,
+  lang,
 }: PriceCardProps) {
+  const [coupon, setCoupon] = React.useState<any>(null);
+
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
     year: 'annually',
   };
 
-  const router = useRouter();
-  const language = permitedLangs.includes(router.locale) ? router.locale : 'en';
+  useEffect(() => {
+    stripeService.getCoupon(CouponType.LifetimeSpecial).then((res) => {
+      setCoupon(res);
+    });
+  }, []);
 
-  const contentText = require(`../../assets/lang/${language}/priceCard.json`);
+  const router = useRouter();
+
+  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   return (
     <div
@@ -136,6 +144,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+                couponCode: billingFrequency === 'lifetime' && coupon,
               });
             }
           }}
