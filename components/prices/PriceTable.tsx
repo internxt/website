@@ -13,7 +13,8 @@ import LifetimeCard from '../lifetime/PriceCard';
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
-
+  products?: any;
+  currency?: any;
   textContent: any;
   setIsLifetime?: (isLifetime: boolean) => void;
 }
@@ -27,25 +28,20 @@ function LifetimeTitle({ contentText }) {
   );
 }
 
-export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
+export default function PriceTable({ setSegmentPageName, lang, textContent, products, currency }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Lifetime);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
-  const [products, setProducts] = useState(null);
-  const [currency, setCurrency] = useState(null);
-  const isLifetime = billingFrequency === 'lifetime';
 
   useEffect(() => {
-    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
-      .then((res) => {
-        setProducts(res[0]);
-        setCurrency(res[1]);
-        setLoadingCards(false);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+    if (products && currency) {
+      setLoadingCards(false);
+    }
+  }, [products, currency]);
+
+  const isLifetime = billingFrequency === 'lifetime';
 
   return (
     <section id="priceTable" className="bg-gray-1">
@@ -132,11 +128,9 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <CardSkeleton />
           </div>
         </Transition>
-
         {/* Render cards */}
-
         <Transition
-          show={individual && !loadingCards}
+          show={individual}
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
@@ -192,7 +186,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               })}
           </div>
         </Transition>
-
         <Transition
           show={!individual}
           enter="transition duration-500 ease-out"

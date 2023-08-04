@@ -1,5 +1,5 @@
 import Script from 'next/script';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
@@ -12,11 +12,32 @@ import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import InfoSection from '../components/home/InfoSection';
+import { stripeService } from '../components/services/stripeService';
+import { currencyService } from '../components/services/currencyService';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isLifetime, setIsLifetime] = useState(false);
+  const [products, setProducts] = useState(null);
+  const [currency, setCurrency] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const { products, currency } = await getData();
+        setProducts(products);
+        setCurrency(currency);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    // Si los datos aún no se han cargado, llama a fetchData
+    if (!products || !currency) {
+      fetchData();
+    }
+  }, []); //
 
   return (
     <>
@@ -44,6 +65,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           lang={lang}
           setIsLifetime={setIsLifetime}
           textContent={textContent.tableSection}
+          products={products}
+          currency={currency}
         />
 
         <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
@@ -70,6 +93,18 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     </>
   );
 };
+
+async function getData() {
+  const [prices, currencies] = await Promise.all([
+    stripeService.getAllPrices(),
+    currencyService.filterCurrencyByCountry(),
+  ]);
+
+  return {
+    products: prices,
+    currency: currencies,
+  };
+}
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
