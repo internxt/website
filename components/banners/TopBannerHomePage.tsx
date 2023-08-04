@@ -11,17 +11,6 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/banners.json`);
   const title = textContent.TopBarBanner.title.split(':');
-  const [priceId, setPriceId] = useState<string>('');
-  const [couponCode, setCouponCode] = useState<string>('');
-
-  useEffect(() => {
-    stripeService.getSelectedPrice(Interval.Year, '2TB').then((priceId) => {
-      setPriceId(priceId.priceId);
-    });
-    stripeService.getCoupon(CouponType.TwoTBCoupon75).then((coupon) => {
-      setCouponCode(coupon);
-    });
-  }, []);
 
   return (
     <>
@@ -34,17 +23,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() => {
-            checkout({
-              planId: priceId,
-              couponCode: couponCode,
-              mode: 'subscription',
-            });
-
-            analyticsService.offerTrack({
-              campaign: 'summersale',
-              discount: 75,
-              plan: priceId,
-            });
+            router.push('/pricing');
           }}
         >
           <div className="flex flex-row space-x-1">
@@ -64,15 +43,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           <div
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              analyticsService.offerTrack({
-                campaign: 'summersale',
-                discount: 75,
-                plan: priceId,
-              });
-              checkout({
-                planId: priceId,
-                couponCode: couponCode,
-              });
+              router.push('/pricing');
             }}
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}

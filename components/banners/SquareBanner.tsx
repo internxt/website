@@ -1,10 +1,10 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { buttonDeal } from '../TextWithoutJson';
 
 const SquareBanner = () => {
-  const [hidePopup, setHidePopup] = React.useState(false);
+  const [hidePopup, setHidePopup] = useState(false);
   const router = useRouter();
   const lang = router.locale;
 
@@ -17,7 +17,7 @@ const SquareBanner = () => {
     setHidePopup(true);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const hidePopup = localStorage.getItem('hideSquareBanner');
     if (hidePopup) {
       setHidePopup(true);
@@ -53,12 +53,7 @@ const SquareBanner = () => {
         <button
           className="flex flex-row items-center justify-center space-x-4 rounded-lg bg-white py-3 px-5 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
           onClick={() => {
-            window.open(
-              `https://internxt.com${
-                lang === 'en' ? '' : `/${lang}`
-              }/pricing?utm_source=website&utm_medium=popbanner&utm_campaign=lifetimeapril`,
-              '_blank',
-            );
+            router.push('/pricing');
           }}
         >
           {buttonDeal[lang]}
