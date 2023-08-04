@@ -1,10 +1,10 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { buttonDeal } from '../TextWithoutJson';
 
 const SquareBanner = () => {
-  const [hidePopup, setHidePopup] = React.useState(false);
+  const [hidePopup, setHidePopup] = useState(false);
   const router = useRouter();
   const lang = router.locale;
 
@@ -17,7 +17,7 @@ const SquareBanner = () => {
     setHidePopup(true);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const hidePopup = localStorage.getItem('hideSquareBanner');
     if (hidePopup) {
       setHidePopup(true);

@@ -5,6 +5,7 @@ import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
+import SquareBanner from '../banners/SquareBanner';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -133,7 +134,7 @@ LayoutProps) {
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
-          {/* <SquareBanner /> */}
+          <SquareBanner />
           <div className="z-50 flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (

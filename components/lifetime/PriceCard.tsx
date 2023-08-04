@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { checkout, goToLoginURL } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { analyticsService } from '../services/analyticsService';
 import { stripeService } from '../services/stripeService';
 
 interface PriceCardProps {
@@ -102,6 +103,12 @@ const PriceCard = ({ planType, storage, price, cta, country, popular, actualPric
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
+            analyticsService.offerTrack({
+              campaign: 'lifetime',
+              discount: 50,
+              plan: cta[1],
+              coupon: 'LIFETIME50',
+            });
             checkout({
               planId: cta[1],
               couponCode: coupon,
