@@ -5,12 +5,12 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-20">
         {/* Title and description */}
-        <div className="flex flex-col space-y-6 text-center">
+        <div className="flex flex-col items-center space-y-6 text-center">
           <p className="max-w-[756px] text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="max-w-[850px] text-xl text-gray-80">{textContent.description}</p>
         </div>
 
-        {/* Table */}
+        {/* Tables */}
         <div className="flex w-full flex-col space-y-10 md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
           <div className="flex max-w-[387px] flex-col lg:w-full lg:max-w-[387px]">
             <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">

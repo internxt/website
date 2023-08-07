@@ -1,108 +1,108 @@
 {
   "HeroSection": {
     "title": {
-      "normalText": "Building Trust Through the Power of",
+      "normalText": "Construire la confiance grâce au pouvoir de",
       "blueText": "Open Source"
     },
-    "description": "Here at Internxt, we are committed to providing people with the highest level of privacy and security. This privacy-by-design approach is part of our philosophy to build technologies that protect your privacy and keep your data safe."
+    "description": "Chez Internxt, nous nous engageons à fournir aux gens le plus haut niveau de confidentialité et de sécurité. Cette approche fait partie de notre philosophie qui consiste à construire des technologies qui protègent votre vie privée et gardent vos données en sécurité."
   },
   "WhatIsOSS": {
-    "title": "What Is Open Source Software?",
-    "description": "Open source software, or OSS, is the computer’s code used to create projects and is freely available to the public. With OSS, you can view the code which built the website and, with the proper knowledge, modify or improve its security, fix bugs, or add new features.",
-    "imgHeader": "We use open source software in our Drive, Photos, and Send apps, ensuring that we are constantly updating and improving our source code. This commitment allows us to bring you the best experience possible.",
+    "title": "Qu'est-ce qu'un logiciel Open Source?",
+    "description": "Les logiciels libres, ou Open source (OSS), sont des codes informatiques utilisés pour créer des projets et mis gratuitement à la disposition du public. Vous pouvez voir le code qui a construit le site web et, avec les connaissances appropriées, modifier ou améliorer sa sécurité, corriger ou ajouter de nouvelles fonctionnalités",
+    "imgHeader": "Nous utilisons des logiciels libres dans nos applications Drive, Photos et Send, ce qui nous permet de mettre à jour et d'améliorer constamment notre code source. Cet engagement nous permet de vous offrir la meilleure expérience possible.",
     "section": [
-      "Privacy and security are at the forefront of how we build our apps which is made possible thanks to the power of open source software. By choosing Internxt, you can rest assured that we will always be clear on how we protect your important files.",
-      "Thanks to the power of open source software, Internxt can deliver a service that emphasizes transparency, security, and privacy above all else."
+      "La confidentialité et la sécurité sont au premier plan dans la façon dont nous construisons nos applications, ce qui est possible grâce à la puissance des logiciels open source. En choisissant Internxt, vous pouvez être assuré que nous serons toujours clairs sur la façon dont nous protégeons vos fichiers importants",
+      "Grâce à la puissance des logiciels libres, Internxt peut fournir un service qui met l'accent sur la transparence, la sécurité et la confidentialité avant tout."
     ]
   },
   "WhatAreTheBenefits": {
-    "title": "What Are the Benefits of Open Source Software?",
-    "description": "OSS has numerous benefits that align with our vision of an Internet where user privacy comes first.",
+    "title": "Quels sont les avantages des logiciels libres ?",
+    "description": "Les logiciels open source présentent de nombreux avantages qui s'alignent sur notre vision d'un internet où la vie privée de l'utilisateur passe avant tout",
     "cards": [
       {
-        "title": "Transparency",
-        "description": "With Internxt’s code, what you see is what you get. Anyone can view, modify or improve our code to ensure it remains up-to-date and secure and will not compromise your data or privacy."
+        "title": "Transparence",
+        "description": "Avec le code d'Internxt, ce que vous voyez est ce que vous obtenez. Tout le monde peut voir, modifier ou améliorer notre code pour s'assurer qu'il reste à jour et sécurisé et qu'il ne compromettra pas vos données ou votre vie privée."
       },
       {
-        "title": "Enhanced security",
-        "description": "Open source means that more people can inspect the code so that they can fix issues or vulnerabilities quickly, leaving little to no time for people to exploit any problems with the code."
+        "title": "Sécurité renforcée",
+        "description": "L'open source signifie que davantage de personnes peuvent inspecter le code afin de corriger rapidement les problèmes ou les vulnérabilités, ce qui laisse peu ou pas de temps aux personnes pour exploiter les problèmes du code."
       },
       {
         "title": "Collaboration",
-        "description": "An active community of developers and users can actively contribute to improvements in the software. These updates mean you always use the most secure and up-to-date software and have the best experience possible."
+        "description": "Une communauté active de développeurs et d'utilisateurs peut contribuer activement à l'amélioration du logiciel. Ces mises à jour signifient que vous utilisez toujours le logiciel le plus sûr et le plus récent et que vous bénéficiez de la meilleure expérience possible."
       },
       {
-        "title": "Longevity",
-        "description": "OSS remains accessible to the public even if the company ends, allowing people to continue to work on the code; this ensures continuity and eliminates the need to pay for a new service or data loss."
+        "title": "Longévité",
+        "description": "Le logiciel open source reste accessible au public même si l'entreprise disparaît, ce qui permet aux gens de continuer à travailler sur le code ; cela garantit la continuité et élimine la nécessité de payer pour un nouveau service ou la perte de données."
       },
       {
-        "title": "Agility",
-        "description": "Open source software means developers can quickly resolve bugs rather than wait days for development teams to fix the problem, so people can continue using the software safely and without delay."
+        "title": "Agilité",
+        "description": "Les logiciels open source permettent aux développeurs de résoudre rapidement les bogues plutôt que d'attendre des jours que les équipes de développement corrigent le problème, de sorte que les gens peuvent continuer à utiliser le logiciel en toute sécurité."
       },
       {
-        "title": "Reliable",
-        "description": "As the source code is constantly updated, you can be sure you are using the best version of the software."
+        "title": "Fiable",
+        "description": "Le code source étant constamment mis à jour, vous pouvez être sûr d'utiliser la meilleure version du logiciel."
       }
     ]
   },
   "CtaSection1": {
-    "title": "Privacy comes from the source",
-    "description": "Secure your files with Internxt’s open-source cloud storage.",
-    "cta": "Join Internxt today"
+    "title": "La vie privée vient de la source",
+    "description": "Sécurisez vos fichiers avec le stockage cloud open-source d'Internxt",
+    "cta": "Rejoignez Internxt aujourd'hui"
   },
   "LearningWithOSCommunity": {
-    "title": "Learning and Improving With the Open-Source Community",
+    "title": "Apprendre et s'améliorer avec la communauté Open-Source",
     "description": [
-      "The open-source community has played a significant part in developing frameworks, tools, and libraries which allow for the continuous improvement of projects or businesses.",
-      "Internxt values the open source community, as more eyes on our code mean it is under constant scrutiny to be as secure as possible.",
-      "We encourage anyone interested in software development to view our source code, learn from the open-source community, and join us on our journey to a safer Internet."
+      "La communauté open-source a joué un rôle important dans le développement de cadres, d'outils qui permettent l'amélioration continue des projets ou des entreprises",
+      "Internxt accorde une grande importance à la communauté open source, car plus d'yeux sur notre code signifient qu'il fait l'objet d'un examen constant afin d'être aussi sûr que possible",
+      "Nous encourageons toute personne intéressée par le développement de logiciels à consulter notre code source, à apprendre de la communauté open-source et à nous rejoindre sur notre chemin vers un Internet plus sûr."
     ]
   },
   "DifferencesBetweenOpenAndCloseSS": {
-    "title": "What Are the Differences Between Open and Closed Source Software?",
-    "description": "The pros and cons of open source software are essential when deciding which software is right for you. The main differences between OSS and closed-source software are as follows:",
+    "title": "Quelles sont les différences entre les logiciels à source ouverte et à source fermée ?",
+    "description": "Les avantages et les inconvénients des logiciels open source sont essentiels pour choisir le logiciel qui vous convient le mieux. Les principales différences entre les logiciels open source et les logiciels fermés sont les suivantes :",
     "table": {
       "OpenSource": {
         "title": "Open Source",
         "feat": [
-          "Anyone can view, modify or change the code and improve it.",
-          "Open availability and transparency of the source code means anyone can review the code for potential issues.",
-          "The software can be maintained and fixed quickly.",
-          "More cost-effective as there are no licensing fees to pay for.",
-          "More accessible due to its flexibility to add features and make changes."
+          "Tout le monde peut voir, modifier ou changer le code et l'améliorer",
+          "La disponibilité et la transparence du code source signifient que tout le monde peut examiner le code pour détecter d'éventuels problèmes",
+          "Le logiciel peut être entretenu et corrigé rapidement",
+          "Plus rentable car il n'y a pas de frais de licence à payer",
+          "Plus accessible grâce à sa flexibilité pour ajouter des fonctionnalités et apporter des modifications."
         ]
       },
       "CloseSource": {
         "title": "Closed Source",
         "disadvantages": [
-          "The source code is only accessible to those who created it.",
-          "The code is inaccessible to the public, meaning a few people can check for security flaws.",
-          "Updating the code takes time, leaving it vulnerable to attacks.",
-          "The software can be high-priced and requires a license to use it.",
-          "Change relies on the company and may take some time."
+          "Le code source n'est accessible qu'à ceux qui l'ont créé",
+          "Le code est inaccessible au public, ce qui signifie que seules quelques personnes peuvent vérifier la présence de failles de sécurité",
+          "La mise à jour du code prend du temps, ce qui le rend vulnérable aux attaques",
+          "Le logiciel peut être très coûteux et son utilisation nécessite une licence",
+          "Le changement dépend de l'entreprise et peut prendre un certain temps."
         ]
       }
     },
-    "footer": "In general, however, many services use a hybrid OSS and closed-source software model in their platforms, although companies like Internxt choose to remain completely open-source."
+    "footer": "En général, cependant, de nombreux services utilisent un modèle hybride de logiciel libre et de logiciel fermé dans leurs plateformes, bien que des entreprises comme Internxt choisissent de rester complètement libres."
   },
   "CtaSection2": {
-    "title": "Keep your files secure",
-    "description": "Internxt uses open source software to keep your files secure, private, and encrypted.",
-    "cta": "Join Internxt today"
+    "title": "Gardez vos fichiers en sécurité",
+    "description": "Internxt utilise des logiciels open source pour garder vos fichiers sécurisés, privés et chiffrés",
+    "cta": "Rejoignez Internxt aujourd'hui"
   },
   "ExploreOurOSS": {
-    "title": "Explore Our Open Source Software",
-    "description": "If you wish to explore under the hood of Internxt and see how we build our Drive app across desktop, mobile, and web, the source code for them is available on our GitHub. Happy coding!",
+    "title": "Voir votre Open Source Software",
+    "description": "Si vous souhaitez explorer Internxt et voir comment nous construisons notre application Drive sur le desktop, le mobile et le web, le code source est disponible sur notre GitHub.",
     "DownloadLinks": {
-      "downloadTitle": "Download Internxt Drive",
-      "or": "or",
-      "downloadFor": "Download for",
-      "orDownloadFor": "Or download for",
-      "downloadOnThe": "Download on the",
-      "orDownloadOnThe": "Or download on the",
-      "getOn": "Get on",
-      "orGetOn": "Or get on",
-      "openDriveWeb": "Open Drive Web",
+      "downloadTitle": "Télécharger Internxt Drive",
+      "or": "ou",
+      "downloadFor": "Télécharger pour",
+      "orDownloadFor": "Ou télécharger pour",
+      "downloadOnThe": "Télécharger sur",
+      "orDownloadOnThe": "ou télécharger sur",
+      "getOn": "Obtenez",
+      "ouGetOn": "ou obtenez sur",
+      "openDriveWeb": "Ouvrir Drive Web",
       "iPhone": "App Store",
       "iPad": "App Store",
       "Android": "Play Store",
@@ -113,8 +113,8 @@
     }
   },
   "CtaSection3": {
-    "title": "Join the Open Source Community",
-    "description": "See how Internxt protects your data with our source code.",
-    "cta": "View our GitHub"
+    "title": "Rejoindre la communauté Open Source",
+    "description": "Découvrez comment Internxt protège vos données avec notre code source",
+    "cta": "Voir notre GitHub"
   }
 }
