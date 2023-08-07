@@ -7,11 +7,7 @@ import Infinity from '/public/images/lifetime/infinity.svg';
 import { Interval, stripeService } from '../services/stripeService';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
 
-const TWOTB_OFF_COUPON = 'P8PSpVs6';
-
 const HeroSection = ({ textContent }) => {
-  const [priceId, setPriceId] = React.useState('');
-  const [coupon, setCoupon] = React.useState(null);
   const feeds = [
     {
       icon: Coin,
@@ -27,16 +23,6 @@ const HeroSection = ({ textContent }) => {
     },
   ];
 
-  useEffect(() => {
-    stripeService.getSelectedPrice(Interval.Year, '2TB').then((price) => {
-      setPriceId(price.priceId);
-    });
-
-    stripeService.getCoupon(CouponType.TwoTBCoupon75).then((coupon) => {
-      setCoupon(coupon);
-    });
-  }, []);
-
   return (
     <section className="overflow-hidden pt-12">
       <div className="xl:pl-58 flex w-full flex-col items-center justify-center space-y-10 py-24 px-6 lg:flex-row lg:space-x-10 lg:space-y-0 xl:space-x-56 xl:pl-32">
@@ -44,7 +30,7 @@ const HeroSection = ({ textContent }) => {
           <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 lg:items-start">
             <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown textColor={'black'} dt={'2023-08-22T00:00:00'} />
+              <Countdown textColor={'black'} dt={'2023-08-25T00:00:00'} />
             </div>
             <div className="flex flex-col space-y-16">
               <div className="flex flex-col text-center lg:text-start">
