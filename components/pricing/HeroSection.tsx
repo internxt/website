@@ -44,7 +44,7 @@ const HeroSection = ({ textContent }) => {
           <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 lg:items-start">
             <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown textColor={'black'} dt={'2023-08-22T00:00:00'} />
+              <Countdown textColor={'black'} dt={'2023-08-25T00:00:00'} />
             </div>
             <div className="flex flex-col space-y-16">
               <div className="flex flex-col text-center lg:text-start">
