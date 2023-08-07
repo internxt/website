@@ -7,11 +7,7 @@ import Infinity from '/public/images/lifetime/infinity.svg';
 import { Interval, stripeService } from '../services/stripeService';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
 
-const TWOTB_OFF_COUPON = 'P8PSpVs6';
-
 const HeroSection = ({ textContent }) => {
-  const [priceId, setPriceId] = React.useState('');
-  const [coupon, setCoupon] = React.useState(null);
   const feeds = [
     {
       icon: Coin,
@@ -26,16 +22,6 @@ const HeroSection = ({ textContent }) => {
       title: textContent.feeds.thirdFeed,
     },
   ];
-
-  useEffect(() => {
-    stripeService.getSelectedPrice(Interval.Year, '2TB').then((price) => {
-      setPriceId(price.priceId);
-    });
-
-    stripeService.getCoupon(CouponType.TwoTBCoupon75).then((coupon) => {
-      setCoupon(coupon);
-    });
-  }, []);
 
   return (
     <section className="overflow-hidden pt-12">
