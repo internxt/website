@@ -1,8 +1,8 @@
 {
   "HeroSection": {
     "title": {
-      "normalText": "Construire la confiance grâce au pouvoir de",
-      "blueText": "Open Source"
+      "normalText": "Construire la confiance grâce à",
+      "blueText": "l'Open Source"
     },
     "description": "Chez Internxt, nous nous engageons à fournir aux gens le plus haut niveau de confidentialité et de sécurité. Cette approche fait partie de notre philosophie qui consiste à construire des technologies qui protègent votre vie privée et gardent vos données en sécurité."
   },
@@ -91,7 +91,7 @@
     "cta": "Rejoignez Internxt aujourd'hui"
   },
   "ExploreOurOSS": {
-    "title": "Voir votre Open Source Software",
+    "title": "Découvrez nos logiciels Open Source",
     "description": "Si vous souhaitez explorer Internxt et voir comment nous construisons notre application Drive sur le desktop, le mobile et le web, le code source est disponible sur notre GitHub.",
     "DownloadLinks": {
       "downloadTitle": "Télécharger Internxt Drive",
