@@ -2,11 +2,15 @@
   "links": {
     "products": "Prodotti",
     "about": "Chi siamo",
-    "privacy": "Privacy",
+    "ourValues": "I nostri valori",
     "pricing": "Prezzi",
     "login": "Accedi",
     "getStarted": "Inizia",
     "checkout": "Claim now!"
+  },
+  "ourValues": {
+    "privacy": "Privacy",
+    "openSource": "Open Source"
   },
   "products": {
     "drive": "Drive",

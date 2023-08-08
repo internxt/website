@@ -2,11 +2,15 @@
   "links": {
     "products": "Продукты",
     "about": "О нас",
-    "privacy": "Конфиденциальность",
+    "ourValues": "Наши ценности",
     "pricing": "Тарифы",
     "login": "Войти",
     "getStarted": "Начать",
     "checkout": "Оформить заказ сейчас!"
+  },
+  "ourValues": {
+    "openSource": "открытого исходного кода",
+    "privacy": "Конфиденциальность"
   },
   "products": {
     "drive": "Drive",

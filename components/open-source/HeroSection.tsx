@@ -12,6 +12,10 @@ const HeroSection = ({ textContent }) => {
       <>
         {textInChinese[0]} <span className="text-primary">{blueTextInChinese}</span> {textInChinese[1]}
       </>
+    ) : lang === 'ru' ? (
+      <>
+        {textContent.title.normalText} <br /> <span className="text-primary">{textContent.title.blueText}</span>
+      </>
     ) : (
       <>
         {textContent.title.normalText} <span className="text-primary">{textContent.title.blueText}</span>
@@ -21,7 +25,7 @@ const HeroSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-6 pt-16 text-center">
-        <div className="flex w-full max-w-[796px] flex-col px-5">
+        <div className="flex w-full flex-col items-center px-5">
           <Header>{title}</Header>
         </div>
         <div className="flex max-w-[850px] flex-col">
