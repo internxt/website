@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   if (req.method === 'GET') {
     try {
       const isCouponValid = await axios.get(
-        `${process.env.NEXT_PUBLIC_PAYMENTS_API}/payments/is-unique-code-available`,
+        `${process.env.NEXT_PUBLIC_PAYMENTS_API}/is-unique-code-available`,
         {
           params: {
             code: code,
