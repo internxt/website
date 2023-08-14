@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
-import bytes from 'bytes';
-import { isMobile } from 'react-device-detect';
 import Header from '../shared/Header';
 
 const options = [
@@ -14,25 +12,46 @@ const options = [
 ];
 
 const HeroSection = ({ textContent }) => {
-  const [value1, setValue1] = React.useState<number>(1);
-  const [value2, setValue2] = React.useState<number>();
-  const [convertFrom, setConvertFrom] = React.useState('tb');
-  const [convertTo, setConvertTo] = React.useState('gb');
-  const [reverse, setReverse] = React.useState(false);
+  const [value1, setValue1] = useState<number>(1);
+  const [value2, setValue2] = useState<number>(null);
+  const [convertFrom, setConvertFrom] = useState('tb');
+  const [convertTo, setConvertTo] = useState('gb');
+  const [reverse, setReverse] = useState(false);
 
   useEffect(() => {
     if (!value1 && !value2) return;
-    setValue2(convert(value1, convertFrom, convertTo));
-  });
+    if (reverse) {
+      setValue2(convert(value1, convertFrom, convertTo));
+    } else {
+      setValue1(convert(value2, convertTo, convertFrom));
+    }
+  }, [convertFrom, convertTo, reverse]);
 
-  function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
-    const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
-      unit: convertToMeasure,
-      decimalPlaces: 100,
-      unitSeparator: ' ',
-    });
-    const valueConvertedNumber = valueConverted.split(' ')[0];
-    return valueConvertedNumber;
+  // TODO: Fix this function
+  // function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
+  //   const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
+  //     unit: convertToMeasure,
+  //     decimalPlaces: 100,
+  //     unitSeparator: ' ',
+  //   });
+  //   const valueConvertedNumber = valueConverted.split(' ')[0];
+  //   return valueConvertedNumber;
+  // }
+
+  //Temporal function to convert
+  function convert(valueToConvert: number, convertFromMeasure: string, convertToMeasure: string): number {
+    const units: Record<string, number> = {
+      b: 1,
+      kb: 1000,
+      mb: 1000 * 1000,
+      gb: 1000 * 1000 * 1000,
+      tb: 1000 * 1000 * 1000 * 1000,
+    };
+
+    const valueInBytes = valueToConvert * units[convertFromMeasure];
+    const valueConverted = valueInBytes / units[convertToMeasure];
+
+    return Number(valueConverted.toFixed(4));
   }
 
   return (
@@ -73,7 +92,7 @@ const HeroSection = ({ textContent }) => {
                         setValue2(null);
                       } else {
                         setValue1(Number(e.target.value));
-                        setValue2(convert(e.target.value, convertFrom, convertTo));
+                        setValue2(convert(Number(e.target.value), convertFrom, convertTo));
                       }
                     }}
                   />
@@ -116,7 +135,7 @@ const HeroSection = ({ textContent }) => {
                         setValue2(null);
                       } else {
                         setValue2(Number(e.target.value));
-                        setValue1(convert(e.target.value, convertTo, convertFrom));
+                        setValue1(convert(Number(e.target.value), convertTo, convertFrom));
                       }
                     }}
                   />
@@ -134,10 +153,8 @@ const HeroSection = ({ textContent }) => {
                         return;
                       } else {
                         if (reverse) {
-                          setValue1(null);
                           setValue1(convert(value2, e.value, convertFrom));
                         } else {
-                          setValue2(null);
                           setValue2(convert(value1, convertFrom, e.value));
                         }
                       }
