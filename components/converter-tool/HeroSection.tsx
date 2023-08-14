@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
-import bytes from 'bytes';
-import { isMobile } from 'react-device-detect';
 import Header from '../shared/Header';
 
 const options = [
@@ -14,25 +12,46 @@ const options = [
 ];
 
 const HeroSection = ({ textContent }) => {
-  const [value1, setValue1] = React.useState<number>(1);
-  const [value2, setValue2] = React.useState<number>();
-  const [convertFrom, setConvertFrom] = React.useState('tb');
-  const [convertTo, setConvertTo] = React.useState('gb');
-  const [reverse, setReverse] = React.useState(false);
+  const [value1, setValue1] = useState<number>(1);
+  const [value2, setValue2] = useState<number>(1000);
+  const [convertFrom, setConvertFrom] = useState('tb');
+  const [convertTo, setConvertTo] = useState('gb');
+  const [reverse, setReverse] = useState(false);
 
   useEffect(() => {
     if (!value1 && !value2) return;
-    setValue2(convert(value1, convertFrom, convertTo));
-  });
+    if (reverse) {
+      setValue2(convert(value1, convertFrom, convertTo));
+    } else {
+      setValue1(convert(value2, convertTo, convertFrom));
+    }
+  }, [convertFrom, convertTo, reverse]);
 
-  function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
-    const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
-      unit: convertToMeasure,
-      decimalPlaces: 100,
-      unitSeparator: ' ',
-    });
-    const valueConvertedNumber = valueConverted.split(' ')[0];
-    return valueConvertedNumber;
+  // TODO: Fix this function
+  // function convert(valueToConvert, convertFromMeasure, convertToMeasure) {
+  //   const valueConverted = bytes.format(bytes.parse(valueToConvert + convertFromMeasure), {
+  //     unit: convertToMeasure,
+  //     decimalPlaces: 100,
+  //     unitSeparator: ' ',
+  //   });
+  //   const valueConvertedNumber = valueConverted.split(' ')[0];
+  //   return valueConvertedNumber;
+  // }
+
+  //Temporal function to convert
+  function convert(valueToConvert: number, convertFromMeasure: string, convertToMeasure: string): number {
+    const units: Record<string, number> = {
+      b: 1,
+      kb: 1000,
+      mb: 1000 * 1000,
+      gb: 1000 * 1000 * 1000,
+      tb: 1000 * 1000 * 1000 * 1000,
+    };
+
+    const valueInBytes = valueToConvert * units[convertFromMeasure];
+    const valueConverted = valueInBytes / units[convertToMeasure];
+
+    return Number(valueConverted.toFixed(15));
   }
 
   return (
@@ -49,7 +68,7 @@ const HeroSection = ({ textContent }) => {
           <div className="relative w-full  lg:flex lg:w-auto">
             {/*  */}
             <div
-              className={`flex  ${
+              className={`flex ${
                 reverse
                   ? 'flex-col-reverse items-center justify-center gap-y-4 lg:flex-row-reverse lg:gap-20 lg:gap-y-0'
                   : 'flex-col items-center justify-center gap-y-4 lg:flex-row lg:gap-20 lg:gap-y-0'
@@ -70,20 +89,20 @@ const HeroSection = ({ textContent }) => {
                     onChange={(e) => {
                       if (!e.target.value) {
                         setValue1(null);
-                        setValue2(null);
                       } else {
                         setValue1(Number(e.target.value));
-                        setValue2(convert(e.target.value, convertFrom, convertTo));
+                        setValue2(convert(Number(e.target.value), convertFrom, convertTo));
                       }
                     }}
                   />
 
                   <Select
-                    className="z-30 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className={`${
+                      !reverse ? 'z-30' : null
+                    } inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2`}
                     defaultValue={options[4]}
                     id="Dropdown menu"
                     menuPosition="absolute"
-                    // menuPlacement={ ? 'top' : 'bottom'}
                     onChange={(e) => {
                       setConvertFrom(e.value);
                       if (!value2 && !value1) {
@@ -104,7 +123,7 @@ const HeroSection = ({ textContent }) => {
                 </div>
               </div>
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
-                <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
+                <div className="flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
                   <input
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     value={value2}
@@ -112,21 +131,21 @@ const HeroSection = ({ textContent }) => {
                     autoComplete="off"
                     onChange={(e) => {
                       if (e.target.value === '') {
-                        setValue1(null);
                         setValue2(null);
                       } else {
                         setValue2(Number(e.target.value));
-                        setValue1(convert(e.target.value, convertTo, convertFrom));
+                        setValue1(convert(Number(e.target.value), convertTo, convertFrom));
                       }
                     }}
                   />
 
                   <Select
-                    className="inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className={`absolute ${
+                      reverse ? 'z-30' : null
+                    } inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2`}
                     defaultValue={options[3]}
                     id="Dropdown menu"
                     menuPosition="absolute"
-                    // menuPlacement={reverseMobile ? 'top' : 'button'}
                     options={options}
                     onChange={(e) => {
                       setConvertTo(e.value);
@@ -134,10 +153,8 @@ const HeroSection = ({ textContent }) => {
                         return;
                       } else {
                         if (reverse) {
-                          setValue1(null);
                           setValue1(convert(value2, e.value, convertFrom));
                         } else {
-                          setValue2(null);
                           setValue2(convert(value1, convertFrom, e.value));
                         }
                       }

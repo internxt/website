@@ -42,25 +42,25 @@
         {
           "question": "What is a kilobyte?",
           "answer": [
-            "A kilobyte (KB) is a multiple of the unit byte for digital information. The International System of Units (SI) prefix kilo represents 1,000, so one kilobyte equals around 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol KB. 1 kilobyte (KB) = 1024 bytes (B)"
+            "A kilobyte (kB) is a multiple of the unit byte for digital information. The International System of Units (SI) prefix kilo represents 1,000, so one kilobyte equals around 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol kB. 1 kilobyte (kB) = 1000 bytes (B)"
           ]
         },
         {
           "question": "What is a megabyte?",
           "answer": [
-            "A megabyte (MB) is a multiple of the digital informational unit byte. The unit symbol for the megabyte is MB. The unit prefix mega represents one million in the International System of Units (SI). As a result, one megabyte is equal to about one million bytes of data. 1 megabyte (MB) = 1,024 kilobytes (KB)"
+            "A megabyte (MB) is a multiple of the digital informational unit byte. The unit symbol for the megabyte is MB. The unit prefix mega represents one million in the International System of Units (SI). As a result, one megabyte is equal to about one million bytes of data. 1 megabyte (MB) = 1,000 kilobytes (KB)"
           ]
         },
         {
           "question": "What is a gigabyte?",
           "answer": [
-            "A gigabyte (GB) is a widely-used multiple of the digital informational unit byte. According to SI, the prefix giga represents one billion. The gigabyte is denoted by the letters GB. A gigabyte is equal to about one billion bytes. 1 gigabyte (GB) = 1,024 megabytes (MB)"
+            "A gigabyte (GB) is a widely-used multiple of the digital informational unit byte. According to SI, the prefix giga represents one billion. The gigabyte is denoted by the letters GB. A gigabyte is equal to about one billion bytes. 1 gigabyte (GB) = 1,000 megabytes (MB)"
           ]
         },
         {
           "question": "What is a terabyte?",
           "answer": [
-            "Most digital data is measured in terabytes (TB). The prefix tera within the International System of Units (SI) denotes a value of one trillion. A terabyte is labeled with the letters TB and is roughly 1 trillion bytes. 1 terabyte (TB) = 1,024 gigabytes (GB)"
+            "Most digital data is measured in terabytes (TB). The prefix tera within the International System of Units (SI) denotes a value of one trillion. A terabyte is labeled with the letters TB and is roughly 1 trillion bytes. 1 terabyte (TB) = 1,000 gigabytes (GB)"
           ]
         },
         {
@@ -107,7 +107,7 @@
       },
       {
         "question": "How many gigabytes equal one terabyte?",
-        "answer": ["1024 GB equals 1 TB. So one TB of storage can hold 1024 GB of data."]
+        "answer": ["1000 GB equals 1 TB. So one TB of storage can hold 1000 GB of data."]
       },
       {
         "question": "What is the difference between TB and GB?",
