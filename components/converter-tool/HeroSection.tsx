@@ -13,7 +13,7 @@ const options = [
 
 const HeroSection = ({ textContent }) => {
   const [value1, setValue1] = useState<number>(1);
-  const [value2, setValue2] = useState<number>('');
+  const [value2, setValue2] = useState<number>(1000);
   const [convertFrom, setConvertFrom] = useState('tb');
   const [convertTo, setConvertTo] = useState('gb');
   const [reverse, setReverse] = useState(false);
@@ -51,7 +51,7 @@ const HeroSection = ({ textContent }) => {
     const valueInBytes = valueToConvert * units[convertFromMeasure];
     const valueConverted = valueInBytes / units[convertToMeasure];
 
-    return Number(valueConverted.toFixed(4));
+    return Number(valueConverted.toFixed(15));
   }
 
   return (
@@ -88,8 +88,7 @@ const HeroSection = ({ textContent }) => {
                     type="number"
                     onChange={(e) => {
                       if (!e.target.value) {
-                        setValue1(null);
-                        setValue2(null);
+                        setValue1(0);
                       } else {
                         setValue1(Number(e.target.value));
                         setValue2(convert(Number(e.target.value), convertFrom, convertTo));
@@ -131,8 +130,7 @@ const HeroSection = ({ textContent }) => {
                     autoComplete="off"
                     onChange={(e) => {
                       if (e.target.value === '') {
-                        setValue1(null);
-                        setValue2(null);
+                        setValue2(0);
                       } else {
                         setValue2(Number(e.target.value));
                         setValue1(convert(Number(e.target.value), convertTo, convertFrom));
