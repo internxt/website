@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Byte Converter: TB to GB",
     "description": "Convert terabytes to gigabytes to megabytes!",
-    "description1": "MB to KB, GB to TB or MB to GB and much, much more. Find out how many GB in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
+    "description1": "MB to kB, GB to TB or MB to GB and much, much more. Find out how many GB in a TB or how much cloud, phone or drive storage you really have left with Internxt's free Byte Converter."
   },
   "ExplanationSection": {
     "convertTo": {
@@ -25,12 +25,12 @@
     },
     "MBMeaning": {
       "title": "MB meaning?",
-      "description": "Whether it's a MB, KB, TB, or GB, all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
+      "description": "Whether it's a MB, kB, TB, or GB, all of these abbreviations stand for the amount of bytes. The amount or number of bytes are used to measure the size or amount of digital information."
     }
   },
   "infoSection": {
     "title": "What is the difference between GB and TB and so on?",
-    "description": "Want to know how many GB in a TB? Or, without the abbreviations, how many gigabytes are in a terabyte? First, you need to understand what a byte is, then it's super simple to know the difference between MB to KB or MB to GB.",
+    "description": "Want to know how many GB in a TB? Or, without the abbreviations, how many gigabytes are in a terabyte? First, you need to understand what a byte is, then it's super simple to know the difference between MB to kB or MB to GB.",
     "faq": {
       "faq": [
         {
@@ -48,7 +48,7 @@
         {
           "question": "What is a megabyte?",
           "answer": [
-            "A megabyte (MB) is a multiple of the digital informational unit byte. The unit symbol for the megabyte is MB. The unit prefix mega represents one million in the International System of Units (SI). As a result, one megabyte is equal to about one million bytes of data. 1 megabyte (MB) = 1,000 kilobytes (KB)"
+            "A megabyte (MB) is a multiple of the digital informational unit byte. The unit symbol for the megabyte is MB. The unit prefix mega represents one million in the International System of Units (SI). As a result, one megabyte is equal to about one million bytes of data. 1 megabyte (MB) = 1,000 kilobytes (kB)"
           ]
         },
         {
@@ -74,7 +74,7 @@
   },
   "ConversionTableSection": {
     "title": "Byte Conversion Chart",
-    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many KB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:",
+    "description": "Confused about how many gigabytes equal one terabyte? Or how many gigabytes are in a terabyte? Want to know how many MB in a GB or how many kB to a MB or how many GB in a TB or so on? Convert byte values on your own with our handy byte conversion chart below:",
     "header": {
       "unit": "Unit",
       "abbr": "Abbreviation",
@@ -95,7 +95,7 @@
       {
         "question": "How do I use the Byte Converter?",
         "answer": [
-          "Select the value you wish to convert and select the value you would like to convert it to (for example: KB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
+          "Select the value you wish to convert and select the value you would like to convert it to (for example: kB to MB). Enter a value in the first section on the left, and your answer will appear in the second section on the right."
         ]
       },
       {
@@ -112,7 +112,7 @@
       {
         "question": "What is the difference between TB and GB?",
         "answer": [
-          "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a KB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
+          "TB and GB only differ in size. A terabyte is made up of more bytes, the smallest units of data, than a gigabyte. In general, a B is smaller than a kB, a MB is bigger than that, a GB is bigger still, and a TB is even bigger.",
           "If you would like to see how they all stack up against each other or what’s MB meaning or what’s bigger than a terabyte, check out the conversion chart above on the page."
         ]
       },
@@ -141,13 +141,13 @@
       {
         "question": "How many GB to a TB?",
         "answer": [
-          "Use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
+          "Use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to kB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
         ]
       },
       {
         "question": "How many TB to GB?",
         "answer": [
-          "If you want to know how many terabytes are in a gigabyte, use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to KB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
+          "If you want to know how many terabytes are in a gigabyte, use our free Byte Converter and find out! Internxt's Byte Converter is a secure tool that allows you to convert terabytes to gigabytes and more. MB to kB, GB to TB, or MB to GB–any combination you can think of can be converted as quickly as you can type in the amount."
         ]
       },
       {
@@ -159,7 +159,7 @@
       {
         "question": "What is a kilobyte?",
         "answer": [
-          "A kilobyte (KB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, KB."
+          "A kilobyte (kB) is a multiple of the unit byte for digital information. According to the meaning of the prefix kilo in the International System of Units (SI), which is 1,000, one kilobyte equals 1,000 bytes. Kilobytes are denoted by the globally accepted unit symbol, kB."
         ]
       },
       {
