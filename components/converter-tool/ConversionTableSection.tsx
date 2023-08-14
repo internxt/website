@@ -29,7 +29,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
       abbreviation: 'kB',
       decimalValue: (
         <>
-          100<sup>1</sup> bytes
+          1000<sup>1</sup> bytes
         </>
       ),
       decimalSize: '1,000 bytes',
@@ -87,7 +87,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
     {
       unit: 'Zettabyte',
       abbreviation: 'ZB',
-        decimalValue: (
+      decimalValue: (
         <>
           1000<sup>7</sup> bytes
         </>
