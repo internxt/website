@@ -4,7 +4,6 @@ import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '../banners/BusinessBanner';
-import SpecialPriceCard from './SpecialPriceCard';
 import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
@@ -34,14 +33,21 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState(null);
-  const [currency, setCurrency] = useState(null);
+  const [currency, setCurrency] = useState({
+    symbol: '€',
+    value: 1,
+  });
   const isLifetime = billingFrequency === 'lifetime';
 
   useEffect(() => {
     Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
       .then((res) => {
         setProducts(res[0]);
-        setCurrency(res[1]);
+        setCurrency({
+          symbol: res[1].symbol,
+          value: res[1].value,
+        });
+
         setLoadingCards(false);
       })
       .catch((err) => console.error(err));
@@ -150,7 +156,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 billingFrequency={billingFrequency}
                 cta={['checkout', 'Free plan']}
                 lang={lang}
-                country={currency}
+                country={currency.symbol}
               />
             )}
             {products?.individuals[billingFrequency] &&
@@ -159,15 +165,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                   <>
                     {billingFrequency === Interval.Lifetime ? (
                       <LifetimeCard
-                        country={currency}
+                        currency={currency.symbol}
                         planType="individual"
                         storage={product.storage}
-                        price={product.price.split('.')[0]}
+                        price={product.price.split('.')[0] * currency.value}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         popular={product.storage === '5TB'}
                         actualPrice={
-                          Math.abs((product.price * 50) / 100)
+                          Math.abs((product.price * currency.value * 50) / 100)
                             .toFixed(2)
                             .split('.')[0]
                         }
@@ -178,12 +184,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price}
+                        price={product.price * currency.value}
                         billingFrequency={billingFrequency}
                         popular={billingFrequency === Interval.Year && product.storage === '200GB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
-                        country={currency}
+                        country={currency.symbol}
                       />
                     )}
                   </>

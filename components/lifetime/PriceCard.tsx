@@ -4,8 +4,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import { checkout, goToLoginURL } from '../../lib/auth';
+import { checkout } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
 import { analyticsService } from '../services/analyticsService';
 import { stripeService } from '../services/stripeService';
@@ -15,15 +14,16 @@ interface PriceCardProps {
   storage: string;
   price: number;
   cta: string[];
-  country: string;
+  currency: string;
   popular: boolean;
   lang: string;
   actualPrice: string;
   isCampaign?: boolean;
 }
 
-const PriceCard = ({ planType, storage, price, cta, country, popular, actualPrice, isCampaign }: PriceCardProps) => {
+const PriceCard = ({ planType, storage, price, cta, currency, popular, actualPrice, isCampaign }: PriceCardProps) => {
   const [coupon, setCoupon] = useState(null);
+  const [convertedPrice, setConvertedPrice] = useState<number>(price);
 
   const contentText = require(`../../assets/lang/en/priceCard.json`);
 
@@ -48,6 +48,14 @@ const PriceCard = ({ planType, storage, price, cta, country, popular, actualPric
         });
     }
   }, []);
+
+  useEffect(() => {
+    if (currency !== '€') {
+      const splitPrice = price.toString().split('.');
+      const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
+      setConvertedPrice(parseInt(splitPrice[0]) + checkDecimalPrice);
+    }
+  }, [price]);
 
   return (
     <div
@@ -82,7 +90,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular, actualPric
             `}
           >
             <p className={`flex flex-row  space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}>
-              <span className={`currency items-start`}>{country}</span>
+              <span className={`currency items-start`}>{currency}</span>
               <span className="price text-4xl font-bold">{actualPrice}</span>
               {!isCampaign && <span className={`flex items-end justify-end pl-1`}>,25</span>}
             </p>
@@ -92,8 +100,8 @@ const PriceCard = ({ planType, storage, price, cta, country, popular, actualPric
             `}
           >
             <p className="flex flex-row items-start space-x-0.5 font-semibold text-gray-50 line-through">
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
-              <span className="price text-2xl font-semibold">{price}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
+              <span className="price text-2xl font-semibold">{convertedPrice}</span>
             </p>
             <p className="pt-2 text-sm font-medium text-gray-50">{contentText.billingFrequencyLabel.lifetime}</p>
           </div>
