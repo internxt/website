@@ -1,7 +1,7 @@
 import React from 'react';
 import NormalPriceCard from './NormalPriceCard';
 
-const NormalPriceTable = ({ lang, country }) => {
+const NormalPriceTable = ({ lang, currency }) => {
   const billingFrequency = -1;
 
   const billingPrice = (price) => price[billingFrequency];
@@ -45,32 +45,32 @@ const NormalPriceTable = ({ lang, country }) => {
         <NormalPriceCard
           planType="individual"
           storage={pricings.TB2.storage}
-          price={billingPrice(pricings.TB2.price)}
+          price={billingPrice(pricings.TB2.price) * currency.value}
           billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime2TB']}
           popular={pricings.TB2.popular}
           lang={lang}
-          country={country}
+          country={currency.symbol}
         />
         <NormalPriceCard
           planType="individual"
           storage={pricings.TB5.storage}
-          price={billingPrice(pricings.TB5.price)}
+          price={billingPrice(pricings.TB5.price) * currency.value}
           billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime5TB']}
           popular={pricings.TB5.popular}
           lang={lang}
-          country={country}
+          country={currency.symbol}
         />
         <NormalPriceCard
           planType="individual"
           storage={pricings.TB10.storage}
-          price={billingPrice(pricings.TB10.price)}
+          price={billingPrice(pricings.TB10.price) * currency.value}
           billingFrequency={billingFrequency}
           cta={['checkout', 'lifetime10TB']}
           popular={pricings.TB10.popular}
           lang={lang}
-          country={country}
+          country={currency.symbol}
         />
       </div>
     </section>

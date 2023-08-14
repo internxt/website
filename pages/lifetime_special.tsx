@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import HeroSection from '../components/lifetime/HeroSection';
 import FeatureSection from '../components/lifetime/FeatureSection';
@@ -15,11 +15,17 @@ import { currencyService } from '../components/services/currencyService';
 
 const yepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = React.useState('€');
+  const [currency, setCurrency] = useState({
+    symbol: '€',
+    value: 1,
+  });
 
   useEffect(() => {
-    currencyService.filterCurrencyByCountry().then((countryCode) => {
-      setCountry(countryCode);
+    currencyService.filterCurrencyByCountry().then((res) => {
+      setCurrency({
+        symbol: res.symbol,
+        value: res.value,
+      });
     });
   });
 
@@ -35,7 +41,7 @@ const yepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, 
 
       <HeroSection textContent={langJson.HeroSection} hideTimer />
 
-      <NormalPaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <NormalPaymentSection textContent={langJson.PaymentSection} lang={lang} currency={currency} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
