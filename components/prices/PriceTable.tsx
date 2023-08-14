@@ -12,7 +12,6 @@ import LifetimeCard from '../lifetime/PriceCard';
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
-
   textContent: any;
   setIsLifetime?: (isLifetime: boolean) => void;
 }
