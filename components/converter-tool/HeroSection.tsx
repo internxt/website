@@ -13,7 +13,7 @@ const options = [
 
 const HeroSection = ({ textContent }) => {
   const [value1, setValue1] = useState<number>(1);
-  const [value2, setValue2] = useState<number>(null);
+  const [value2, setValue2] = useState<number>('');
   const [convertFrom, setConvertFrom] = useState('tb');
   const [convertTo, setConvertTo] = useState('gb');
   const [reverse, setReverse] = useState(false);

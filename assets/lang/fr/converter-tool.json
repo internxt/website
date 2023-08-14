@@ -107,7 +107,7 @@
       },
       {
         "question": "Combien de gigaoctets correspondent à un téraoctet ?",
-        "answer": ["1024 Go égalent 1 To. 1 To de stockage peut donc contenir 1024 Go de données."]
+        "answer": ["1000 Go égalent 1 To. 1 To de stockage peut donc contenir 1000 Go de données."]
       },
       {
         "question": "Quelle est la différence entre To et Go ?",

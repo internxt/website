@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Conversor de unidades: TB a GB",
     "description": "Convierte terabytes a gigabytes o megabytes.",
-    "description1": "MB a KB, GB a TB, MB a GB, y mucho más! Averigua cuántos GB hay en un TB o cuánto almacenamiento en la nube, en el teléfono o en tu disco duro te queda realmente con el convertidor de unidades gratuito de Internxt."
+    "description1": "MB a kB, GB a TB, MB a GB, y mucho más! Averigua cuántos GB hay en un TB o cuánto almacenamiento en la nube, en el teléfono o en tu disco duro te queda realmente con el convertidor de unidades gratuito de Internxt."
   },
   "ExplanationSection": {
     "convertTo": {
@@ -25,12 +25,12 @@
     },
     "MBMeaning": {
       "title": "¿Qué significa MB?",
-      "description": "Ya sea MB, KB, TB o GB, todas estas abreviaturas representan la cantidad de bytes. La cantidad o el número de bytes se utilizan para medir el tamaño o la cantidad de información digital."
+      "description": "Ya sea MB, kB, TB o GB, todas estas abreviaturas representan la cantidad de bytes. La cantidad o el número de bytes se utilizan para medir el tamaño o la cantidad de información digital."
     }
   },
   "infoSection": {
     "title": "¿Cuál es la diferencia entre GB y TB?",
-    "description": "¿Quieres saber cuántos GB hay en un TB? O, sin las abreviaturas, ¿cuántos gigabytes hay en un terabyte? En primer lugar, es necesario entender lo que es un byte, y a partir de ahí es súper simple saber la diferencia entre MB a KB o MB a GB.",
+    "description": "¿Quieres saber cuántos GB hay en un TB? O, sin las abreviaturas, ¿cuántos gigabytes hay en un terabyte? En primer lugar, es necesario entender lo que es un byte, y a partir de ahí es súper simple saber la diferencia entre MB a kB o MB a GB.",
     "faq": {
       "faq": [
         {
@@ -42,7 +42,7 @@
         {
           "question": "¿Qué es un kilobyte?",
           "answer": [
-            "Un kilobyte (KB) es un múltiplo de la unidad byte para la información digital. Según el significado del prefijo kilo en el Sistema Internacional de Unidades (SI), que es 1.000, un kilobyte equivale a 1.000 bytes. Los kilobytes se denotan mediante el símbolo de unidad globalmente aceptado, KB."
+            "Un kilobyte (kB) es un múltiplo de la unidad byte para la información digital. Según el significado del prefijo kilo en el Sistema Internacional de Unidades (SI), que es 1.000, un kilobyte equivale a 1.000 bytes. Los kilobytes se denotan mediante el símbolo de unidad globalmente aceptado, kB."
           ]
         },
         {
@@ -74,7 +74,7 @@
   },
   "ConversionTableSection": {
     "title": "Tabla de conversión de bytes",
-    "description": "¿Tienes dudas sobre cuántos gigabytes equivalen a un terabyte? ¿O cuántos gigabytes hay en un terabyte? ¿Quieres saber cuántos MB hay en un GB o cuántos KB en un MB o cuántos GB en un TB, etc.? Convierte unidades de bytes por tu cuenta con nuestra práctica tabla de conversión de bytes:",
+    "description": "¿Tienes dudas sobre cuántos gigabytes equivalen a un terabyte? ¿O cuántos gigabytes hay en un terabyte? ¿Quieres saber cuántos MB hay en un GB o cuántos kB en un MB o cuántos GB en un TB, etc.? Convierte unidades de bytes por tu cuenta con nuestra práctica tabla de conversión de bytes:",
     "header": {
       "unit": "Unidad",
       "abbr": "Abreviatura",
@@ -95,7 +95,7 @@
       {
         "question": "¿Cómo se utiliza el conversor de unidades?",
         "answer": [
-          "Selecciona el valor que quieras convertir y selecciona el valor al que quieres convertir (por ejemplo: KB a MB). Introduce un valor en la primera sección de la izquierda, y tu respuesta aparecerá en la segunda sección de la derecha."
+          "Selecciona el valor que quieras convertir y selecciona el valor al que quieres convertir (por ejemplo: kB a MB). Introduce un valor en la primera sección de la izquierda, y tu respuesta aparecerá en la segunda sección de la derecha."
         ]
       },
       {
@@ -107,12 +107,12 @@
       },
       {
         "question": "¿Cuántos gigabytes equivalen a un terabyte?",
-        "answer": ["1024 GB equivalen a 1 TB. Por tanto, un TB de almacenamiento puede contener 1024 GB de datos."]
+        "answer": ["1000 GB equivalen a 1 TB. Por tanto, un TB de almacenamiento puede contener 1000 GB de datos."]
       },
       {
-        "question": "¿Cuál es la diferencia entre TB y GB? ¿Y cuál es la diferencia entre B, KB, MB, GB y TB?",
+        "question": "¿Cuál es la diferencia entre TB y GB? ¿Y cuál es la diferencia entre B, kB, MB, GB y TB?",
         "answer": [
-          "TB y GB solo se diferencian en el tamaño. Un terabyte está formado por más bytes, las unidades más pequeñas de datos, que un gigabyte. En general, un B es más pequeña que un KB, un MB es más grande, un GB es aún más grande y un TB es aún mayor.",
+          "TB y GB solo se diferencian en el tamaño. Un terabyte está formado por más bytes, las unidades más pequeñas de datos, que un gigabyte. En general, un B es más pequeña que un kB, un MB es más grande, un GB es aún más grande y un TB es aún mayor.",
           ""
         ]
       },
@@ -129,13 +129,13 @@
       {
         "question": "¿Cuanto es un GB a TB?",
         "answer": [
-          "Utilice nuestro convertidor de bytes gratuito y descúbralo! El Conversor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a KB, GB a TB, o MB a GB: cualquier combinación que se le ocurra puede convertirse tan rápido como teclee la cantidad."
+          "Utilice nuestro convertidor de bytes gratuito y descúbralo! El Conversor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a kB, GB a TB, o MB a GB: cualquier combinación que se le ocurra puede convertirse tan rápido como teclee la cantidad."
         ]
       },
       {
         "question": "¿Cuanto es un TB a GB?",
         "answer": [
-          "Si quiere saber cuántos terabytes hay en un gigabyte , ¡utilice nuestro conversor de bytes gratuito y descúbralo! El Conversor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a KB, GB a TB o MB a GB: cualquier combinación que se le ocurra se puede convertir tan rápido como teclee la cantidad."
+          "Si quiere saber cuántos terabytes hay en un gigabyte , ¡utilice nuestro conversor de bytes gratuito y descúbralo! El Conversor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a kB, GB a TB o MB a GB: cualquier combinación que se le ocurra se puede convertir tan rápido como teclee la cantidad."
         ]
       },
       {
@@ -147,7 +147,7 @@
       {
         "question": "¿Qué es un kilobyte?",
         "answer": [
-          "Un kilobyte (KB) es un múltiplo de la unidad byte para la información digital. Según el significado del prefijo kilo en el Sistema Internacional de Unidades (SI), que es 1.000, un kilobyte equivale a 1.000 bytes. Los kilobytes se denotan mediante el símbolo de unidad globalmente aceptado, KB."
+          "Un kilobyte (kB) es un múltiplo de la unidad byte para la información digital. Según el significado del prefijo kilo en el Sistema Internacional de Unidades (SI), que es 1.000, un kilobyte equivale a 1.000 bytes. Los kilobytes se denotan mediante el símbolo de unidad globalmente aceptado, kB."
         ]
       },
       {
