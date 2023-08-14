@@ -68,7 +68,7 @@ const HeroSection = ({ textContent }) => {
           <div className="relative w-full  lg:flex lg:w-auto">
             {/*  */}
             <div
-              className={`flex  ${
+              className={`flex ${
                 reverse
                   ? 'flex-col-reverse items-center justify-center gap-y-4 lg:flex-row-reverse lg:gap-20 lg:gap-y-0'
                   : 'flex-col items-center justify-center gap-y-4 lg:flex-row lg:gap-20 lg:gap-y-0'
@@ -88,7 +88,7 @@ const HeroSection = ({ textContent }) => {
                     type="number"
                     onChange={(e) => {
                       if (!e.target.value) {
-                        setValue1(0);
+                        setValue1(null);
                       } else {
                         setValue1(Number(e.target.value));
                         setValue2(convert(Number(e.target.value), convertFrom, convertTo));
@@ -97,11 +97,12 @@ const HeroSection = ({ textContent }) => {
                   />
 
                   <Select
-                    className="z-30 inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className={`${
+                      !reverse ? 'z-30' : null
+                    } inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2`}
                     defaultValue={options[4]}
                     id="Dropdown menu"
                     menuPosition="absolute"
-                    // menuPlacement={ ? 'top' : 'bottom'}
                     onChange={(e) => {
                       setConvertFrom(e.value);
                       if (!value2 && !value1) {
@@ -122,7 +123,7 @@ const HeroSection = ({ textContent }) => {
                 </div>
               </div>
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
-                <div className="z-20 flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
+                <div className="flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
                   <input
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     value={value2}
@@ -130,7 +131,7 @@ const HeroSection = ({ textContent }) => {
                     autoComplete="off"
                     onChange={(e) => {
                       if (e.target.value === '') {
-                        setValue2(0);
+                        setValue2(null);
                       } else {
                         setValue2(Number(e.target.value));
                         setValue1(convert(Number(e.target.value), convertTo, convertFrom));
@@ -139,11 +140,12 @@ const HeroSection = ({ textContent }) => {
                   />
 
                   <Select
-                    className="inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className={`absolute ${
+                      reverse ? 'z-30' : null
+                    } inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2`}
                     defaultValue={options[3]}
                     id="Dropdown menu"
                     menuPosition="absolute"
-                    // menuPlacement={reverseMobile ? 'top' : 'button'}
                     options={options}
                     onChange={(e) => {
                       setConvertTo(e.value);
