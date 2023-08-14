@@ -5,8 +5,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 
-import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { checkout, goToSignUpURL } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
@@ -36,7 +35,8 @@ export default function PriceCard({
   country,
   lang,
 }: PriceCardProps) {
-  const [coupon, setCoupon] = React.useState<any>(null);
+  const [coupon, setCoupon] = useState<any>(null);
+  const [convertedPrice, setConvertedPrice] = useState<number>(price);
 
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -50,7 +50,13 @@ export default function PriceCard({
     });
   }, []);
 
-  const router = useRouter();
+  useEffect(() => {
+    if (country !== '€') {
+      const splitPrice = price.toString().split('.');
+      const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
+      setConvertedPrice(parseInt(splitPrice[0]) + checkDecimalPrice);
+    }
+  }, [price]);
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
@@ -101,7 +107,7 @@ export default function PriceCard({
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
               <span className="price text-4xl font-bold">
-                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
+                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? convertedPrice : convertedPrice}
               </span>
             </p>
 

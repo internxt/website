@@ -9,6 +9,14 @@ import { checkout, openAuthDialog } from '../../lib/auth';
 const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
   const contentText = require(`../../assets/lang/en/priceCard.json`);
+  const [convertedPrice, setConvertedPrice] = useState<number>(price);
+  useEffect(() => {
+    if (country !== '€') {
+      const splitPrice = price.toString().split('.');
+      const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
+      setConvertedPrice(parseInt(splitPrice[0]) + checkDecimalPrice);
+    }
+  }, [price]);
 
   return (
     <div
@@ -43,7 +51,7 @@ const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, coun
           >
             <p className="flex flex-row items-start space-x-0.5 font-semibold text-neutral-700">
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
-              <span className="price text-4xl font-bold">{price}</span>
+              <span className="price text-4xl font-bold">{convertedPrice}</span>
             </p>
             <p className="pt-2 text-xs font-normal text-gray-50">{contentText.oneTime}</p>
           </div>

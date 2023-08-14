@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import HeroSection from '../components/lifetime/HeroSection';
 import FeatureSection from '../components/lifetime/FeatureSection';
@@ -10,21 +10,21 @@ import PaymentSection from '../components/lifetime/PaymentSection';
 import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/lifetime/CtaSection';
 
-import axios from 'axios';
 import { currencyService } from '../components/services/currencyService';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = React.useState('ES');
-
-  async function getCountryCode() {
-    const countryCode = await axios.get(process.env.NEXT_PUBLIC_COUNTRY_API_URL);
-    return countryCode;
-  }
+  const [currency, setCurrency] = useState({
+    symbol: '€',
+    value: 1,
+  });
 
   useEffect(() => {
     currencyService.filterCurrencyByCountry().then((res) => {
-      setCountry(res);
+      setCurrency({
+        symbol: res.symbol,
+        value: res.value,
+      });
     });
   });
 
@@ -40,7 +40,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={currency} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

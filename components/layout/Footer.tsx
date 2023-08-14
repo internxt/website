@@ -336,42 +336,6 @@ export default function Footer({
               } mb-10`}
             />
 
-            {lang === 'es' && (
-              <div className="mb-16 flex w-full max-w-[900px] flex-row">
-                <div className="mx-auto flex w-full flex-row items-center space-x-10">
-                  <div className="flex w-full max-w-[130px] flex-col flex-wrap items-start space-y-3">
-                    <img
-                      loading="lazy"
-                      className="h-12"
-                      src="../../logos/investors/eu.webp"
-                      alt="Unión Europea"
-                      draggable="false"
-                    />
-                    <img
-                      loading="lazy"
-                      className="h-12"
-                      src="https://www.camaravalencia.com/Style%20Library/web2016/img/logo-camara-valencia.png"
-                      alt="Cámara Valencia"
-                      draggable="false"
-                    />
-                  </div>
-                  <div className="flex w-full flex-col items-start space-y-4">
-                    <p className="text-sm text-gray-80">
-                      "INTERNXT UNIVERSAL TECHNOLOGIES SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional
-                      cuyo objetivo es mejorar la competitividad de las Pymes y gracias al cual ha puesto en marcha un
-                      Plan de Marketing Digital Internacional con el objetivo de mejorar su posicionamiento online en
-                      mercados exteriores durante el año 2021. Para ello ha contado con el apoyo del Programa XPANDE
-                      DIGITAL de la Cámara de Comercio de Valencia."
-                    </p>
-
-                    <p className="mt-4 text-center text-sm font-semibold text-gray-100 lg:mt-6 lg:max-w-lg">
-                      "Una manera de hacer Europa"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
             {/* Logos */}
             <div className="flex w-full max-w-[900px] flex-row justify-between">
               <div className="flex flex-row items-center space-x-4">

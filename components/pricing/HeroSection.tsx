@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
-import { checkout } from '../../lib/auth';
-import Infinity from '/public/images/lifetime/infinity.svg';
-import { Interval, stripeService } from '../services/stripeService';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 const HeroSection = ({ textContent }) => {
   const feeds = [

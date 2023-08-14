@@ -9,13 +9,19 @@ import { currencyService } from '../services/currencyService';
 export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
-  const [currency, setCurrency] = useState(null);
+  const [currency, setCurrency] = useState({
+    symbol: '€',
+    value: 1,
+  });
 
   useEffect(() => {
     Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
       .then((res) => {
         setProducts(res[0]);
-        setCurrency(res[1]);
+        setCurrency({
+          symbol: res[1].symbol,
+          value: res[1].value,
+        });
         setLoadingCards(false);
       })
       .catch((err) => console.error(err));
@@ -52,12 +58,12 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price}
+                    price={product.price * currency.value}
                     billingFrequency={'year'}
                     popular={product.storage === '200GB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
-                    country={currency}
+                    country={currency.symbol}
                   />
                 );
               })}

@@ -57,17 +57,17 @@ const PriceTable = ({ lang, country }) => {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price}
+                    price={product.price * country.value}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     popular={product.storage === '2TB'}
                     isCampaign
                     actualPrice={
-                      Math.abs((product.price * 50) / 100)
+                      Math.abs((product.price * country.value * 50) / 100)
                         .toFixed(2)
                         .split('.')[0]
                     }
-                    country={country}
+                    currency={country.symbol}
                   />
                 );
               })}
