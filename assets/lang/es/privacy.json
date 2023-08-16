@@ -51,23 +51,23 @@
       },
       "endToEnd": {
         "title": "Cifrado de extremo a extremo",
-        "description": "Todos los datos que almacenas con Internxt están encriptados AES-256 de extremo a extremo. Eso significa que el procesador más potente del mundo necesitaría el doble de la edad del universo para descifrar incluso un archivo pequeño."
+        "description": "Todos los datos que almacenas con Internxt están cifrados con AES-256 de extremo a extremo. Eso significa que el procesador más potente del mundo necesitaría el doble de la edad del universo para descifrar incluso un archivo pequeño."
       },
       "zeroKnowledge": {
-        "title": "Tecnología de conocimiento-cero",
-        "description": "En absolutamente ningún momento los archivos, fotos, contraseñas o cualquier tipo de datos en bruto sin cifrar son visibles para usuarios o servidores no autorizados. Siempre tienes el control absoluto de quién tiene acceso."
+        "title": "Tecnología de conocimiento cero",
+        "description": "En ningún momento los archivos, fotos, contraseñas o cualquier tipo de datos en bruto sin cifrar son visibles para usuarios o servidores no autorizados. Siempre tienes el control absoluto de quién tiene acceso."
       },
       "gdpr": {
-        "title": "Sincronización conforme a GDPR",
-        "description": "Ahora nos ajustamos a todas las disposiciones del GDPR, como el derecho a la privacidad, el derecho a la información y el derecho a ser olvidado, entre muchas otras, y prometemos cumplir todas las disposiciones futuras."
+        "title": "Sincronización conforme a la RGPD",
+        "description": "Nos ajustamos a todas las disposiciones del RGPD, como el derecho a la privacidad, el derecho a la información y el derecho a ser olvidado, entre muchas otras, y prometemos cumplir todas las disposiciones futuras."
       },
       "noUnwantedAccess": {
         "title": "Ningún acceso no deseado a los datos",
-        "description": "Todo lo que almacenas o compartes se cifra antes de salir de tu dispositivo, por lo que es imposible descifrarlo sin permiso. Ni siquiera podemos acceder a tus archivos, fotos o contraseñas."
+        "description": "Todo lo que almacenas o compartes se cifra antes de salir de tu dispositivo, por lo que es imposible descifrarlo sin permiso. Ni nosotros podemos acceder a tus archivos, fotos o contraseñas."
       },
       "freeTools": {
         "title": "Herramientas gratuitas de privacidad online",
-        "description": "Queremos que todo el mundo esté más seguro en Internet, tanto si está suscrito a nuestros servicios como si no, y por eso hemos creado varias herramientas online gratuitas que cualquiera puede utilizar para protegerse mientras navega por la Red."
+        "description": "Queremos que todo el mundo esté más seguro en internet, tanto si está suscrito a nuestros servicios como si no, y por eso hemos creado varias herramientas online gratuitas que cualquiera puede utilizar para protegerse mientras navega por la red."
       }
     }
   },
@@ -93,7 +93,6 @@
       "cta": "Envía un archivo cifrado"
     }
   },
-
   "SecuritumSection": {
     "title": "Internxt supera con éxito una auditoría de seguridad independiente",
     "subtitle": "Informes completos de la auditoría de seguridad:",
@@ -103,7 +102,6 @@
       "mobile": "Auditoría de seguridad móvil de Internxt"
     }
   },
-
   "BetterTomorrowSection": {
     "title": "Luchando por un mañana mejor",
     "description": "Es hora de preocuparte por tu privacidad. Animamos a todos a ser proactivos en vuestra protección. Más información sobre el derecho a la privacidad. Involúcrate con nuestra lista de organizaciones que abogan por los derechos digitales.",
