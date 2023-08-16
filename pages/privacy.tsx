@@ -18,6 +18,8 @@ import FeatureSection from '../components/privacy/FeatureSection';
 import HeroSection2 from '../components/privacy/HeroSection2';
 import ManifestoSection2 from '../components/privacy/ManifestoSection2';
 
+const newDesign = ['en', 'es'];
+
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
   const CTA_URL = `https://internxt.com/${lang}}/pricing`;
@@ -47,7 +49,7 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
       )}
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
-        {lang === 'en' ? (
+        {newDesign.includes(lang) ? (
           <>
             <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
             <HeroSection textContent={langJson.HeroSection} />

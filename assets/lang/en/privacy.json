@@ -63,6 +63,11 @@
       "title": "With Photos, privacy is always on focus",
       "description": "Photos was developed to help you keep a synced gallery of your most perfect moments without fearing for your privacy and worrying about sudden data loss. Memories backed up, safe and sound.",
       "cta": "Sync your photos and keepsakes"
+    },
+    "square3": {
+      "title": "Send with absolute certainty.",
+      "description": "Send allows you to encrypt and share large files without worrying about the security of your documents, images or videos. Transfer to anyone in total confidentiality.",
+      "cta": "Send an encrypted file."
     }
   },
   "FaqSection": {
