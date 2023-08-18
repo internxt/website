@@ -167,7 +167,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                       <p title={item.from} className="truncate text-xs font-medium text-gray-50">
                         {item.from}
                       </p>
-                      {item.attachments.length > 0 ? (
+                      {item.attachments?.length > 0 ? (
                         <div className="flex flex-row items-center space-x-1">
                           <Paperclip size={14} className="text-gray-60" />
                           <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
@@ -295,7 +295,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                           {item.from}
                         </p>
                         {/* If the item has attachments, then render it and allow download files */}
-                        {item.attachments.length > 0 ? (
+                        {item.attachments?.length > 0 ? (
                           <div className="flex flex-row items-center space-x-1">
                             <Paperclip size={14} className="text-gray-60" />
                             <p title={item.subject} className="flex-row text-sm font-semibold">

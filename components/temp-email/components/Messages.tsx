@@ -94,7 +94,7 @@ const MessageSelected = ({
         </p>
         <div className="flex flex-row space-x-2">
           <div className="flex flex-col items-center justify-center rounded-full bg-primary bg-opacity-10 py-2 px-4">
-            <p className="text-lg text-primary">{item.from.charAt().toUpperCase()}</p>
+            <p className="text-lg text-primary">{item.from?.charAt().toUpperCase()}</p>
           </div>
           <div className="flex flex-col">
             <p title={item.from} className="truncate text-sm font-medium text-gray-80">
@@ -113,7 +113,7 @@ const MessageSelected = ({
 
       <div className="flex w-full border border-gray-5" />
 
-      {item.attachments.length > 0 && (
+      {item.attachments?.length > 0 && (
         <div className="flex w-full flex-col space-y-4">
           <div className="flex flex-row justify-between">
             <p className="text-sm font-medium">
