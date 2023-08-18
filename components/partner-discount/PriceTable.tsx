@@ -11,7 +11,10 @@ export default function PriceTable({ lang }: { lang: string }) {
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
   const [coupon, setCoupon] = useState(null);
-  const [currency, setCurrency] = useState(null);
+  const [currency, setCurrency] = useState({
+    symbol: '€',
+    value: 1,
+  });
 
   useEffect(() => {
     Promise.all([
@@ -21,7 +24,10 @@ export default function PriceTable({ lang }: { lang: string }) {
     ])
       .then((res) => {
         setProducts(res[0]);
-        setCurrency(res[1]);
+        setCurrency({
+          symbol: res[1].symbol,
+          value: res[1].value,
+        });
         setCoupon(res[2]);
         setLoadingCards(false);
       })
@@ -59,12 +65,12 @@ export default function PriceTable({ lang }: { lang: string }) {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price}
+                    price={product.price * currency.value}
                     billingFrequency={'year'}
                     popular={product.storage === '200GB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
-                    country={currency}
+                    country={currency.symbol}
                     coupon={coupon}
                   />
                 );
