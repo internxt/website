@@ -1,40 +1,29 @@
 import axios from 'axios';
 
 async function createEmail() {
-  const email = await axios(`${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=genRandomMailbox&count=1`);
+  const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
 
   return email.data;
 }
 
 async function showAllEmailData(email: string, item: Record<string, any>[]) {
   const allData: Record<string, any>[] = item.map(async (item) => {
-    const data = await axios(
-      `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=readMessage&login=${email.split('@')[0]}&domain=${
-        email.split('@')[1]
-      }&id=${item.id}`,
-    );
+    const data = await axios.get(`${window.origin}/api/temp-mail/email-data?email=${email}&item=${item.id}`);
     return { ...data.data, opened: false };
   });
-  return Promise.all(allData);
+  const data = Promise.all(allData);
+
+  return data;
 }
 
 const getInbox = async (email) => {
-  const userEmail = email.split('@')[0];
-  const domain = email.split('@')[1];
-  const inbox = await axios(
-    `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=getMessages&login=${userEmail}&domain=${domain}`,
-  );
+  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?email=${email}`);
   return inbox.data;
 };
 
 const downloadFile = async (email: string, itemId: number, itemName: string) => {
-  const userEmail = email.split('@')[0];
-  const domain = email.split('@')[1];
   const downloadFile = await axios.get(
-    `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=download&login=${userEmail}&domain=${domain}&id=${itemId}&file=${itemName}`,
-    {
-      responseType: 'blob',
-    },
+    `${window.origin}/api/temp-mail/download-file?email=${email}&itemId=${itemId}&itemName=${itemName}`,
   );
 
   return downloadFile;
