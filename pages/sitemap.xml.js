@@ -11,10 +11,9 @@ export const getServerSideProps = ({ res }) => {
 
   const pages = {
     index: '1.0',
-    about: '1.0',
-    legal: '0.5',
     pricing: '1.0',
-    products: '0.8',
+    drive: '1.0',
+    photos: '1.0',
   };
 
   const staticPages = fs

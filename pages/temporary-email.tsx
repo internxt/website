@@ -2,13 +2,13 @@ import Script from 'next/script';
 import React from 'react';
 
 import Layout from '../components/layout/Layout';
-import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/temp-email/HeroSection';
+import SignupSection from '../components/temp-email/SignupSection';
 import InfoSection from '../components/temp-email/InfoSection';
 import ToolsSection from '../components/temp-email/ToolsSection';
 import QASection from '../components/shared/FaqSection';
-import SignupSection from '../components/temp-email/SignupSection';
+import Footer from '../components/layout/Footer';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
