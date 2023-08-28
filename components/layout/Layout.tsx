@@ -134,7 +134,6 @@ LayoutProps) {
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
-          <SquareBanner /> 
           <div className="z-50 flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (
