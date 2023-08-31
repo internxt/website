@@ -4,6 +4,13 @@ import Navbar from '../components/layout/Navbar';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/media-area/HeroSection';
 import StandForPrivacySection from '../components/media-area/StandForPrivacySection';
+import KitSection from '../components/media-area/KitSection';
+import CtaSection from '../components/media-area/CtaSection';
+import ProductsSection from '../components/media-area/ProductsSection';
+import SocialProofSection from '../components/home/SocialProofSection';
+import ThirdFeaturesSection from '../components/media-area/FeatureSection';
+import InternxtInTheNews from '../components/media-area/InternxtInTheNews';
+import AnalysisSection from '../components/media-area/AnalysisSection';
 
 const MediaArea = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'media-area');
@@ -15,6 +22,22 @@ const MediaArea = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLan
       <HeroSection textContent={langJson.HeroSection} />
 
       <StandForPrivacySection textContent={langJson.StandForPrivacySection} />
+
+      <KitSection textContent={langJson.KitSection} />
+
+      <CtaSection textContent={langJson.CtaSection} />
+
+      <ProductsSection textContent={langJson.ProductsSection} lang={lang} />
+
+      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
+
+      <ThirdFeaturesSection textContent={langJson.FeatureSection} />
+
+      <InternxtInTheNews textContent={langJson.InternxtInTheNewsSection} />
+
+      <AnalysisSection textContent={langJson.AnalysisSection} />
+
+      <CtaSection textContent={langJson.CtaSection} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

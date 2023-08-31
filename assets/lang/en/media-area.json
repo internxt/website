@@ -25,7 +25,7 @@
       "cta": "Download"
     },
     "footer": {
-      "bodText": "Policy for using logos and assets.",
+      "boldText": "Policy for using logos and assets.",
       "normalText": "Logos and assets may not be used commercially for any products or services without first obtaining written permission from Internxt."
     }
   },
@@ -65,26 +65,28 @@
   },
   "InternxtInTheNewsSection": {
     "title": "Internxt in the news",
-    "forbes": {
-      "url": "",
-      "text": "Internxt is a cloud storage solution offering a significantly more economical, private, and secure service than what is currently available on the market."
-    },
-    "techradar": {
-      "url": "",
-      "title": "The zero-knowledge file storage service is based on absolute privacy and uncompromising security. One of the company’s strong points is its commitment to security."
-    },
-    "tnw": {
-      "url": "",
-      "title": "The military-grade encryption cloud storage company that is going up against the international corporate giants with a suite of encrypted cloud services."
-    },
-    "pcWorld": {
-      "url": "",
-      "title": "Fantastically affordable storage, sync, and backup that will totally preserve your files."
-    },
-    "techRepublic": {
-      "url": "",
-      "title": "Internxt is a zero-knowledge and encrypted cloud storage service you should check out."
-    }
+    "cards": [
+      {
+        "url": "",
+        "text": "Internxt is a cloud storage solution offering a significantly more economical, private, and secure service than what is currently available on the market."
+      },
+      {
+        "url": "",
+        "title": "The zero-knowledge file storage service is based on absolute privacy and uncompromising security. One of the company’s strong points is its commitment to security."
+      },
+      {
+        "url": "",
+        "title": "The military-grade encryption cloud storage company that is going up against the international corporate giants with a suite of encrypted cloud services."
+      },
+      {
+        "url": "",
+        "title": "Fantastically affordable storage, sync, and backup that will totally preserve your files."
+      },
+      {
+        "url": "",
+        "title": "Internxt is a zero-knowledge and encrypted cloud storage service you should check out."
+      }
+    ]
   },
   "AnalysisSection": {
     "title": "In-depth analysis and insights",
