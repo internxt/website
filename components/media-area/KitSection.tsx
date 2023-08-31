@@ -18,7 +18,7 @@ const KitSection = ({ textContent }) => {
             src={'/images/media-area/internxt-cloud-icon.png'}
             alt="internxt cloud icon"
           />
-          <div className="flex max-w-[380px] flex-col space-y-6">
+          <div className="flex max-w-[380px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
             <p className="text-5xl font-semibold">{textContent.firstSection.title}</p>
             <p className="font-gray-80 text-xl">{textContent.firstSection.description}</p>
             <a href="/images/cyber-awareness/Internxt-Checklist.pdf" download={true}>
@@ -29,8 +29,8 @@ const KitSection = ({ textContent }) => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center  gap-20 lg:flex-row">
-          <div className="flex max-w-[380px] flex-col space-y-6">
+        <div className="flex flex-col-reverse items-center justify-center gap-20 lg:flex-row">
+          <div className="flex max-w-[380px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
             <p className="text-5xl font-semibold">{textContent.secondSection.title}</p>
             <p className="font-gray-80 text-xl">{textContent.secondSection.description}</p>
             <a href="/images/cyber-awareness/Internxt-Checklist.pdf" download={true}>
