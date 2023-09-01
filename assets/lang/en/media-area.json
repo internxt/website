@@ -67,24 +67,34 @@
     "title": "Internxt in the news",
     "cards": [
       {
-        "url": "",
-        "text": "Internxt is a cloud storage solution offering a significantly more economical, private, and secure service than what is currently available on the market."
+        "img": "Forbes.svg",
+        "title": "Internxt is a cloud storage solution offering a significantly more economical, private, and secure service than what is currently available on the market.",
+        "width": "114"
       },
       {
-        "url": "",
-        "title": "The zero-knowledge file storage service is based on absolute privacy and uncompromising security. One of the company’s strong points is its commitment to security."
+        "img": "techradar.svg",
+        "title": "The zero-knowledge file storage service is based on absolute privacy and uncompromising security. One of the company’s strong points is its commitment to security.",
+        "width": "175"
       },
       {
-        "url": "",
-        "title": "The military-grade encryption cloud storage company that is going up against the international corporate giants with a suite of encrypted cloud services."
+        "img": "TNW.svg",
+        "title": "The military-grade encryption cloud storage company that is going up against the international corporate giants with a suite of encrypted cloud services.",
+        "width": "120"
       },
       {
-        "url": "",
-        "title": "Fantastically affordable storage, sync, and backup that will totally preserve your files."
+        "img": "PCWorld.svg",
+        "title": "Fantastically affordable storage, sync, and backup that will totally preserve your files.",
+        "width": "120"
       },
       {
-        "url": "",
-        "title": "Internxt is a zero-knowledge and encrypted cloud storage service you should check out."
+        "img": "TechRepublic.svg",
+        "title": "Internxt is a zero-knowledge and encrypted cloud storage service you should check out.",
+        "width": "150"
+      },
+      {
+        "img": "insider-Logo.svg",
+        "title": "Internxt is a cloud storage solution that successfully competes with tech giants such as Google, Microsoft or Apple.",
+        "width": "120"
       }
     ]
   },

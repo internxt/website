@@ -10,7 +10,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
       <div className="flex flex-col-reverse items-center justify-center px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
         <RevealX direction="right" className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
-            src="/images/media-area/sharing-large-files.png"
+            src="/images/about/photos/work-at-Internxt.png"
             width={496}
             height={520}
             quality={100}

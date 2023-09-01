@@ -9,7 +9,6 @@ const InternxtInTheNews = ({ textContent }) => {
   const router = useRouter();
   const lang = router.locale;
   const data = textContent.cards;
-  const repeatedData = [...data, ...data];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const beforeIndex =
@@ -19,11 +18,17 @@ const InternxtInTheNews = ({ textContent }) => {
     currentIndex !== 4 ? textContent.cards.slice(currentIndex + 2, data.length) : textContent.cards.slice(0, 2);
 
   const onPrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? repeatedData.length - 2 : prevIndex - 2));
+    if (currentIndex === 0) {
+      return setCurrentIndex(data.length - 2);
+    }
+    return setCurrentIndex(currentIndex - 2);
   };
 
   const onNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === repeatedData.length - 2 ? 0 : prevIndex + 2));
+    if (currentIndex === data.length - 2) {
+      return setCurrentIndex(0);
+    }
+    return setCurrentIndex(currentIndex + 2);
   };
 
   return (
@@ -37,9 +42,12 @@ const InternxtInTheNews = ({ textContent }) => {
           {beforeIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
+              className="relative flex h-[339px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
-              <p className="pt-9 text-lg font-normal">{card.title}</p>
+              <div className="flex flex-col items-start">
+                <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={120} />
+              </div>
+              <p className="text-lg font-normal">{card.title}</p>
             </div>
           ))}
           <div className="absolute flex">
@@ -52,23 +60,16 @@ const InternxtInTheNews = ({ textContent }) => {
             </button>
           </div>
         </div>
-        {/* <div className="flex flex-row items-center justify-center space-x-10">
-          {current.map((card, index) => (
-            <div
-              key={index}
-              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 shadow-subtle-hard"
-            >
-              <p className="pt-9 text-lg font-normal">{card.title}</p>
-            </div>
-          ))}
-        </div> */}
         <div className="flex flex-row items-center justify-center space-x-10">
           {current.map((card, index) => (
             <div
               key={index}
-              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 shadow-subtle-hard"
+              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 shadow-subtle-hard"
             >
-              <p className="pt-9 text-lg font-normal">{repeatedData[currentIndex + index].title}</p>
+              <div className="flex flex-col items-start justify-center">
+                <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
+              </div>
+              <p className="text-lg font-normal">{card.title}</p>
             </div>
           ))}
         </div>
@@ -85,9 +86,12 @@ const InternxtInTheNews = ({ textContent }) => {
           {afterIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[339px] w-[465px] shrink-0 flex-col rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
+              className="relative flex h-[339px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
-              <p className="pt-9 text-lg font-normal">{card.title}</p>
+              <div className="flex flex-col items-start justify-center">
+                <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
+              </div>
+              <p className="text-lg font-normal">{card.title}</p>
             </div>
           ))}
         </div>
@@ -102,15 +106,11 @@ const InternxtInTheNews = ({ textContent }) => {
                 <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
                   <div className="flex w-auto max-w-[300px] flex-col">
                     <div className="flex w-[331px] flex-row">
-                      <Image
-                        src="/images/home/testimonials/Comas.webp"
-                        loading="lazy"
-                        width={53}
-                        height={56}
-                        alt="Quote symbol"
-                      />
+                      <div className="flex flex-col pl-4">
+                        <Image src={`/images/media-area/${card.img}`} alt="logo" width={50} height={50} />
+                      </div>
                     </div>
-                    <p className="pt-9 text-lg font-normal">{card.title}</p>
+                    <p className="pt-9 text-lg font-normal">{card.review}</p>
                   </div>
                 </div>
               </div>

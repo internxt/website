@@ -15,7 +15,7 @@ const KitSection = ({ textContent }) => {
           <Image
             height={520}
             width={496}
-            src={'/images/media-area/internxt-cloud-icon.png'}
+            src={'/images/media-area/internxt_cloud_icon.webp'}
             alt="internxt cloud icon"
           />
           <div className="flex max-w-[380px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
@@ -42,7 +42,7 @@ const KitSection = ({ textContent }) => {
           <Image
             height={520}
             width={496}
-            src={'/images/media-area/internxt-private-cloud-storage-service.png'}
+            src="/images/affiliates/internxt-private-cloud-storage-service.webp"
             alt="internxt private cloud storage service"
           />
         </div>
