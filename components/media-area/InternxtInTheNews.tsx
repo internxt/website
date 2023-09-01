@@ -107,10 +107,10 @@ const InternxtInTheNews = ({ textContent }) => {
                   <div className="flex w-auto max-w-[300px] flex-col">
                     <div className="flex w-[331px] flex-row">
                       <div className="flex flex-col pl-4">
-                        <Image src={`/images/media-area/${card.img}`} alt="logo" width={50} height={50} />
+                        <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
                       </div>
                     </div>
-                    <p className="pt-9 text-lg font-normal">{card.review}</p>
+                    <p className="pt-9 text-lg font-normal">{card.title}</p>
                   </div>
                 </div>
               </div>
