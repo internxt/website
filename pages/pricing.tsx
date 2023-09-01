@@ -12,6 +12,9 @@ import HeroSection from '../components/pricing/HeroSection';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import InfoSection from '../components/home/InfoSection';
+import FileParallaxSection from '../components/home/FileParallaxSection';
+import BestStorageSection from '../components/pricing/BestStorageSection';
+import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -37,7 +40,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           mode={isLifetime ? 'payment' : 'subscription'}
         />
 
-        <HeroSection textContent={textContent.HeroSection} />
+        {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
         <PriceTable
           setSegmentPageName={setPageName}
@@ -48,8 +51,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
 
-        {/* <CtaSection textContent={textContent.CtaSection} freePlan />
-
+        <CtaSection textContent={textContent.CtaSection} freePlan />
 
         <FirstWhatWeDoSection
           textContent={textContent.FirstWhatWeDoSection}
@@ -59,7 +61,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <BestStorageSection textContent={textContent.BestStorageSection} />
 
-        <FileParallaxSection /> */}
+        <FileParallaxSection />
 
         <FAQSection textContent={textContent.FaqSection} />
 

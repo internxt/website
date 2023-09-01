@@ -111,12 +111,6 @@ const PriceCard = ({ planType, storage, price, cta, currency, popular, actualPri
           tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           onClick={() => {
-            analyticsService.offerTrack({
-              campaign: 'lifetime_august',
-              discount: 50,
-              plan: cta[1],
-              coupon: 'LIFETIME50',
-            });
             checkout({
               planId: cta[1],
               couponCode: coupon,

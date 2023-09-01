@@ -27,7 +27,7 @@ function LifetimeTitle({ contentText }) {
 
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Lifetime);
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
@@ -58,15 +58,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
         <div className="flex flex-col items-center space-y-10 pt-12">
           <div className="flex flex-col items-center px-5">
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
-              {individual ? (
-                isLifetime ? (
-                  <LifetimeTitle contentText={contentText} />
-                ) : (
-                  contentText.planTitles.individuals
-                )
-              ) : (
-                `${contentText.planTitles.business}`
-              )}
+              {individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}
             </h1>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
@@ -163,20 +155,16 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 return (
                   <>
                     {billingFrequency === Interval.Lifetime ? (
-                      <LifetimeCard
-                        currency={currency.symbol}
+                      <PriceCard
                         planType="individual"
+                        key={product.storage}
                         storage={product.storage}
-                        price={product.price.split('.')[0] * currency.value}
+                        price={product.price * currency.value}
+                        billingFrequency={billingFrequency}
+                        popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
-                        popular={product.storage === '5TB'}
-                        actualPrice={
-                          Math.abs((product.price * currency.value * 50) / 100)
-                            .toFixed(2)
-                            .split('.')[0]
-                        }
-                        isCampaign
+                        country={currency.symbol}
                       />
                     ) : (
                       <PriceCard
