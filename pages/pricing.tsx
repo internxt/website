@@ -40,7 +40,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           mode={isLifetime ? 'payment' : 'subscription'}
         />
 
-        {/* <HeroSection textContent={textContent.HeroSection} /> */}
+        <HeroSection textContent={textContent.HeroSection} />
 
         <PriceTable
           setSegmentPageName={setPageName}
@@ -49,7 +49,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
         />
 
-        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
+        {/* <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
 
@@ -57,11 +57,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.FirstWhatWeDoSection}
           lang={lang}
           backgroundColor={'bg-gray-1'}
-        />
+        /> 
 
         <BestStorageSection textContent={textContent.BestStorageSection} />
 
-        <FileParallaxSection />
+        <FileParallaxSection /> */}
 
         <FAQSection textContent={textContent.FaqSection} />
 

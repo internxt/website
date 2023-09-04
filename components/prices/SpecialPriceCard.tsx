@@ -8,6 +8,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { checkout } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { analyticsService } from '../services/analyticsService';
 import { Interval, stripeService } from '../services/stripeService';
 import { PriceCardProps } from './PriceCard';
 
@@ -41,6 +42,12 @@ export default function SpecialPriceCard({
   }, []);
 
   const onOfferClick = () => {
+    analyticsService.offerTrack({
+      campaign: '2TBPLAN75',
+      discount: 75,
+      plan: '2TB',
+      coupon: coupon,
+    });
     checkout({
       planId: cta[1],
       couponCode: coupon,

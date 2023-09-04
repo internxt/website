@@ -8,6 +8,7 @@ import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 import LifetimeCard from '../lifetime/PriceCard';
+import SpecialPriceCard from './SpecialPriceCard';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -167,17 +168,33 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         country={currency.symbol}
                       />
                     ) : (
-                      <PriceCard
-                        planType="individual"
-                        key={product.storage}
-                        storage={product.storage}
-                        price={product.price * currency.value}
-                        billingFrequency={billingFrequency}
-                        popular={billingFrequency === Interval.Year && product.storage === '200GB'}
-                        cta={['checkout', product.priceId]}
-                        lang={lang}
-                        country={currency.symbol}
-                      />
+                      <>
+                        {billingFrequency === Interval.Year && product.storage === '2TB' ? (
+                          <SpecialPriceCard
+                            planType="individual"
+                            key={product.storage}
+                            storage={product.storage}
+                            price={product.price * currency.value}
+                            billingFrequency={billingFrequency}
+                            popular={product.storage === '2TB'}
+                            cta={['checkout', product.priceId]}
+                            lang={lang}
+                            country={currency.symbol}
+                          />
+                        ) : (
+                          <PriceCard
+                            planType="individual"
+                            key={product.storage}
+                            storage={product.storage}
+                            price={product.price * currency.value}
+                            billingFrequency={billingFrequency}
+                            popular={billingFrequency === Interval.Month && product.storage === '200GB'}
+                            cta={['checkout', product.priceId]}
+                            lang={lang}
+                            country={currency.symbol}
+                          />
+                        )}
+                      </>
                     )}
                   </>
                 );
