@@ -3,14 +3,19 @@ import { CaretRight } from '@phosphor-icons/react';
 import { analyticsService } from '../services/analyticsService';
 import { Interval, stripeService } from '../services/stripeService';
 import { useEffect, useState } from 'react';
-import { checkout } from '../../lib/auth';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/banners.json`);
   const title = textContent.TopBarBanner.title.split(':');
+  const [priceId, setPriceId] = useState<string>('');
+
+  useEffect(() => {
+    stripeService.getSelectedPrice(Interval.Year, '2TB').then((price) => {
+      setPriceId(price.priceId);
+    });
+  }, []);
 
   return (
     <>
@@ -23,7 +28,12 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() => {
-            router.push('/pricing');
+            analyticsService.offerTrack({
+              campaign: '2TBPLAN75',
+              discount: 75,
+              plan: priceId,
+            });
+            window.open(`https://internxt.com/${lang === 'en' ? '' : lang}/pricing`, '_self');
           }}
         >
           <div className="flex flex-row space-x-1">
