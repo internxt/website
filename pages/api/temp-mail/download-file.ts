@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userEmail = email.split('@')[0];
     const domain = email.split('@')[1];
     const downloadFile = await axios.get(
-      `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=download&login=${userEmail}&domain=${domain}&id=${itemId}&file=${itemName}`,
+      `${process.env.TEMP_MAIL_SERVER}/${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=download&login=${userEmail}&domain=${domain}&id=${itemId}&file=${itemName}`,
       {
         responseType: 'blob',
       },

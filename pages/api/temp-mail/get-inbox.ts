@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userEmail = email.split('@')[0];
     const domain = email.split('@')[1];
     const inbox = await axios.get(
-      `${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=getMessages&login=${userEmail}&domain=${domain}`,
+      `${process.env.TEMP_MAIL_SERVER}/${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}?action=getMessages&login=${userEmail}&domain=${domain}`,
     );
     return res.status(200).json(inbox.data);
   } else {
