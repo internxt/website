@@ -45,7 +45,7 @@ export default function SpecialPriceCard({
     analyticsService.offerTrack({
       campaign: '2TBPLAN75',
       discount: 75,
-      plan: '2TB',
+      plan: cta[1],
       coupon: coupon,
     });
     checkout({
