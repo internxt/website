@@ -61,9 +61,8 @@ const PriceTable = ({ lang, country }) => {
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     popular={product.storage === '2TB'}
-                    isCampaign
                     actualPrice={
-                      Math.abs((product.price * country.value * 50) / 100)
+                      Math.abs((product.price * country.value * 75) / 100)
                         .toFixed(2)
                         .split('.')[0]
                     }
