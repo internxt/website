@@ -34,7 +34,7 @@ const InternxtInTheNews = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-white pb-20 pt-16">
       <RevealY className="flex items-center justify-center p-6 pb-[70px]">
-        <p className="mb-6 text-center text-4xl font-medium sm:text-5xl">{textContent.title}</p>
+        <p className="mb-6 text-center text-5xl font-medium">{textContent.title}</p>
       </RevealY>
       {/* Web View */}
       <RevealY className="hidden w-full flex-row items-center justify-center space-x-12 xl:flex">
