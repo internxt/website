@@ -8,7 +8,7 @@ const KitSection = ({ textContent }) => {
         <div className="flex max-w-[600px] flex-col items-center space-y-6 text-center">
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="font-gray-80 text-xl">{textContent.description}</p>
-          <a href="/media-area-zip/Internxt-Full-Media-Kit.zip" download={true}>
+          <a href="/media-area/Internxt-Full-Media-Kit.zip" download={true}>
             <p className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">{textContent.cta}</p>
           </a>
         </div>
@@ -24,7 +24,7 @@ const KitSection = ({ textContent }) => {
           <div className="flex max-w-[380px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
             <p className="text-5xl font-semibold">{textContent.firstSection.title}</p>
             <p className="font-gray-80 text-xl">{textContent.firstSection.description}</p>
-            <a href="/media-area-zip/Internxt-Logo-Set.zip" download={true}>
+            <a href="/media-area/Internxt-Logo-Set.zip" download={true}>
               <p className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">
                 {textContent.firstSection.cta}
               </p>
@@ -36,7 +36,7 @@ const KitSection = ({ textContent }) => {
           <div className="flex max-w-[380px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
             <p className="text-5xl font-semibold">{textContent.secondSection.title}</p>
             <p className="font-gray-80 text-xl">{textContent.secondSection.description}</p>
-            <a href="/media-area-zip/Internxt-Screenshots-Mockups.zip" download={true}>
+            <a href="/media-area/Internxt-Screenshots-Mockups.zip" download={true}>
               <p className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">
                 {textContent.secondSection.cta}
               </p>
