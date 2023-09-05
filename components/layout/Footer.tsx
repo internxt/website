@@ -186,12 +186,16 @@ export default function Footer({
                     <Link href="/open-source" locale={lang} passHref>
                       <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
                         {textContent.FooterSection.sections.company.openSource}
+                      </a>
+                    </Link>
+                    <Link href="/media-area" locale={lang} passHref>
+                      <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                        {textContent.FooterSection.sections.company.mediaArea}
                         <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
                         </div>
                       </a>
                     </Link>
-
                     <a
                       href={`https://blog.internxt.com/${
                         lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'
@@ -498,6 +502,15 @@ export default function Footer({
                       <Link href="/open-source" locale={lang} passHref>
                         <a className="flex flex-row hover:text-primary">
                           {textContent.FooterSection.sections.company.openSource}
+                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                            {textContent.FooterSection.new}
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link href="/media-area" locale={lang} passHref>
+                        <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                          {textContent.FooterSection.sections.company.mediaArea}
                           <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                             {textContent.FooterSection.new}
                           </div>
