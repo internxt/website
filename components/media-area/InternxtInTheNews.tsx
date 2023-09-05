@@ -42,7 +42,7 @@ const InternxtInTheNews = ({ textContent }) => {
           {beforeIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[339px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
+              className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-col items-start">
                 <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={120} />
@@ -64,7 +64,7 @@ const InternxtInTheNews = ({ textContent }) => {
           {current.map((card, index) => (
             <div
               key={index}
-              className="card-soft relative flex h-[339px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 shadow-subtle-hard"
+              className="card-soft relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 shadow-subtle-hard"
             >
               <div className="flex flex-col items-start justify-center">
                 <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
@@ -86,7 +86,7 @@ const InternxtInTheNews = ({ textContent }) => {
           {afterIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[339px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
+              className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-col items-start justify-center">
                 <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
