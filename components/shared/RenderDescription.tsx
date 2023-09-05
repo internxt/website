@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const RenderDescription = ({ description }) => {
+const RenderDescription = ({ description, fontSize }: { description: string[]; fontSize?: string }) => {
   useEffect(() => {
     const links = document.querySelectorAll('a');
     const navbar = document.querySelector('#navbar');
@@ -19,7 +19,7 @@ const RenderDescription = ({ description }) => {
   return (
     <div className="markdown flex flex-col space-y-4">
       {description.map((item, index) => (
-        <ReactMarkdown key={index} className="text-lg text-gray-80">
+        <ReactMarkdown key={index} className={`${fontSize ? fontSize : 'text-lg'} text-gray-80`}>
           {item}
         </ReactMarkdown>
       ))}
