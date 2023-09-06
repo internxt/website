@@ -20,9 +20,9 @@
     "sections": {
       "products": {
         "title": "Продукты",
-        "drive": "Drive",
-        "photos": "Photos",
-        "send": "Send",
+        "drive": "Internxt Drive",
+        "photos": "Internxt Photos",
+        "send": "Internxt Send",
         "token": "Токен",
         "pricing": "Тарифные планы"
       },
@@ -33,13 +33,13 @@
         "openSource": "открытого исходного кода",
         "security": "Безопасность",
         "legal": "Условия и положения",
-        "support": "Служба поддержки",
         "WhyInternxt": "Почему Internxt?"
       },
       "join": {
         "title": "Присоединяйтесь к нам",
         "affiliates": "Аффилированные лица",
         "signup": "Создать аккаунт",
+        "support": "Служба поддержки",
         "login": "Войти",
         "community": "Сообщество",
         "github": "GitHub",

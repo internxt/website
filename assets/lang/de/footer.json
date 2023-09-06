@@ -20,9 +20,9 @@
     "sections": {
       "products": {
         "title": "Produkte",
-        "drive": "Drive",
-        "photos": "Photos",
-        "send": "Send",
+        "drive": "Internxt Drive",
+        "photos": "Internxt Photos",
+        "send": "Internxt Send",
         "token": "Token",
         "pricing": "Preise"
       },
@@ -33,13 +33,13 @@
         "openSource": "Open Source",
         "security": "Sicherheit",
         "legal": "Legal",
-        "support": "Support",
         "whyInternxt": "Warum Internxt?",
         "comparison": "Vergleich"
       },
       "join": {
         "title": "Mach mit",
         "signup": "Erstelle ein Konto",
+        "support": "Support",
         "login": "Log in",
         "community": "Community",
         "github": "GitHub",
