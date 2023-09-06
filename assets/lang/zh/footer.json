@@ -20,9 +20,9 @@
     "sections": {
       "products": {
         "title": "产品",
-        "drive": "Drive",
-        "photos": "Photos",
-        "send": "Send",
+        "drive": "Internxt Drive",
+        "photos": "Internxt Photos",
+        "send": "Internxt Send",
         "token": "Token",
         "pricing": "价格"
       },
@@ -33,13 +33,13 @@
         "openSource": "通过",
         "security": "安全",
         "legal": "法律",
-        "support": "支持",
         "whyInternxt": "为什么选择 Internxt？"
       },
       "join": {
         "title": "加入我们",
         "affiliates": "关联公司",
         "signup": "创建账户",
+        "support": "支持",
         "login": "登录",
         "community": "社区",
         "github": "GitHub",

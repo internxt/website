@@ -20,9 +20,9 @@
     "sections": {
       "products": {
         "title": "Products",
-        "drive": "Drive",
-        "photos": "Photos",
-        "send": "Send",
+        "drive": "Internxt Drive",
+        "photos": "Internxt Photos",
+        "send": "Internxt Send",
         "token": "Token",
         "pricing": "Pricing"
       },
@@ -34,13 +34,13 @@
         "mediaArea": "Media Area",
         "security": "Security",
         "legal": "Legal",
-        "support": "Support",
         "whyInternxt": "Why Internxt?"
       },
       "join": {
         "title": "Join Us",
         "affiliates": "Affiliates",
         "signup": "Create Account",
+        "support": "Support",
         "login": "Log In",
         "community": "Community",
         "github": "GitHub",
