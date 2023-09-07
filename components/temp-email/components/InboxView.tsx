@@ -27,21 +27,21 @@ const Inbox = ({ email, textContent }) => {
 
   //Get inbox on mount or when the inbox is refreshed
   useEffect(() => {
-    getMailInbox();
+    getMailInbox(token);
     setIsMobileView(isMobile);
   }, [email, isRefreshed]);
 
   //Get inbox every 5 seconds when the window is focused
   useEffect(() => {
     if (isFocused) {
-      const interval = setInterval(() => getMailInbox(), 5000);
+      const interval = setInterval(() => getMailInbox(token), 5000);
       return () => clearInterval(interval);
     }
   }, [email, isFocused]);
 
   //Get inbox function
-  function getMailInbox() {
-    getInbox(token).then((res) => {
+  function getMailInbox(userToken: string) {
+    getInbox(userToken).then((res) => {
       const messages =
         res !== null
           ? res.map((item, index) => {
@@ -53,7 +53,6 @@ const Inbox = ({ email, textContent }) => {
             })
           : [];
 
-      setMessages(messages);
       //Get all messages and set opened to false
       if (!localStorage.getItem('inbox')) {
         localStorage.setItem('inbox', JSON.stringify(messages));
@@ -61,7 +60,8 @@ const Inbox = ({ email, textContent }) => {
       } else {
         if (JSON.parse(localStorage.getItem('selectedMessage'))) {
           setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
-        } else if (JSON.parse(localStorage.getItem('inbox')).length === messages.length) {
+        }
+        if (JSON.parse(localStorage.getItem('inbox')).length !== messages.length) {
           setMessages(JSON.parse(localStorage.getItem('inbox')));
           return;
         }
@@ -170,7 +170,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                   const date = moment(item.date);
                   return (
                     <button
-                      key={item.id}
+                      key={index}
                       onClick={() => {
                         //Update the message to local storage
                         const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
