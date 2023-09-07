@@ -22,6 +22,7 @@ const open = () => toast.success('Copied to clipboard!');
 
 const HeroSection = ({ textContent }) => {
   const [email, setEmail] = useState('');
+  const [token, setToken] = useState('');
   const [borderColor, setBorderColor] = useState(false);
 
   // (if someone want to clear after 8hrs simply change hours=8)
@@ -37,12 +38,16 @@ const HeroSection = ({ textContent }) => {
       }
     }
     if (localStorage.getItem('email') !== null) {
-      setEmail(localStorage.getItem('email'));
+      const data = localStorage.getItem('email');
+      const parseData = JSON.parse(data);
+      setEmail(parseData.address);
+      setToken(parseData.token);
     } else {
       localStorage.setItem('setupTime', String(now));
       createEmail().then((res) => {
-        localStorage.setItem('email', res[0]);
-        setEmail(res[0]);
+        localStorage.setItem('email', JSON.stringify(res));
+        setEmail(res.address);
+        setToken(res.token);
       });
     }
   }, [generateEmail]);
@@ -113,7 +118,7 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
 
-        <Inbox email={email} textContent={textContent.inbox} />
+        <Inbox email={email} token={token} textContent={textContent.inbox} />
       </div>
     </section>
   );

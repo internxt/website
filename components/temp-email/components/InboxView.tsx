@@ -2,7 +2,7 @@ import moment from 'moment';
 import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 import EmptyInbox from './EmptyInbox';
-import { getInbox, showAllEmailData } from '../services/api/temp-api';
+import { getInbox } from '../services/api/temp-api';
 
 import useWindowFocus from '../hooks/useWindowFocus';
 import MessageSelected from './Messages';
@@ -10,7 +10,7 @@ import Messages from './Messages';
 import { isMobile } from 'react-device-detect';
 import { Transition } from '@headlessui/react';
 
-const Inbox = ({ email, textContent }) => {
+const Inbox = ({ email, token, textContent }) => {
   const [messages, setMessages] = React.useState([]);
   const [selectedMessage, setSelectedMessage] = React.useState(null);
   const [isRefreshed, setIsRefreshed] = useState(false);
@@ -20,49 +20,38 @@ const Inbox = ({ email, textContent }) => {
 
   //Get inbox on mount or when the inbox is refreshed
   useEffect(() => {
-    getMailInbox();
+    getMailInbox(token);
     setIsMobileView(isMobile);
+    if (JSON.parse(localStorage.getItem('selectedMessage'))) {
+      setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
+    }
   }, [email, isRefreshed]);
 
   //Get inbox every 5 seconds when the window is focused
   useEffect(() => {
     if (isFocused) {
-      const interval = setInterval(() => getMailInbox(), 5000);
+      const interval = setInterval(() => getMailInbox(token), 5000);
       return () => clearInterval(interval);
     }
   }, [email, isFocused]);
 
   //Get inbox function
-  function getMailInbox() {
-    getInbox(email).then((res) => {
+  function getMailInbox(userToken: string) {
+    getInbox(userToken).then((res) => {
       //Get all messages and set opened to false
-      showAllEmailData(email, res).then((res: any) => {
-        if (!localStorage.getItem('inbox')) {
-          localStorage.setItem('inbox', JSON.stringify(res));
-          setMessages(res);
-        } else {
-          if (JSON.parse(localStorage.getItem('selectedMessage'))) {
-            setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
-          } else if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
-            setMessages(JSON.parse(localStorage.getItem('inbox')));
-            return;
-          }
-
-          const inbox = JSON.parse(localStorage.getItem('inbox'));
-          const newMessages = res.filter((item) => {
-            return !inbox.find((inboxItem) => inboxItem.id === item.id);
-          });
-          const allMessages = [...newMessages, ...inbox];
-          localStorage.setItem('inbox', JSON.stringify(allMessages));
-          setMessages(allMessages);
-          setOpenedMessages(0);
-          allMessages.forEach((item) => {
-            if (!item.opened) {
-              setOpenedMessages((prevState) => prevState + 1);
-            }
-          });
-        }
-      });
+      if (res?.length > 0) {
+        const message = {
+          ...res[0],
+          opened: false,
+          id: messages?.length > 0 ? messages.length + 1 : 1,
+        };
+        const allMessages = messages?.length > 0 ? [...messages, message] : [message];
+        setMessages(allMessages);
+        localStorage.setItem('inbox', JSON.stringify(allMessages));
+      } else {
+        const inbox = localStorage.getItem('inbox');
+        setMessages(JSON.parse(inbox));
+      }
     });
   }
 
@@ -143,52 +132,56 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
             </div>
 
             <div className="flex w-full flex-col overflow-y-scroll">
-              {messages.map((item, index) => {
-                const date = moment(item.date);
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      //Update the message to local storage
-                      const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
-                      newMessages[index].opened = true;
-                      setMessages(newMessages);
-                      setSelectedMessage(item);
-                      localStorage.setItem('inbox', JSON.stringify(newMessages));
-                      localStorage.setItem('selectedMessage', JSON.stringify(item));
-                    }}
-                    className={`flex h-full ${
-                      !item.opened ? 'border-l-2 border-l-primary' : ''
-                    } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
-                      item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
-                    } `}
-                  >
-                    <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 py-4">
-                      <p title={item.from} className="truncate text-xs font-medium text-gray-50">
-                        {item.from}
-                      </p>
-                      {item.attachments?.length > 0 ? (
-                        <div className="flex flex-row items-center space-x-1">
-                          <Paperclip size={14} className="text-gray-60" />
+              {messages?.length > 0 ? (
+                messages?.map((item, index) => {
+                  const date = moment(item.date);
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        //Update the message to local storage
+                        const newMessages = JSON.parse(localStorage.getItem('inbox'));
+                        newMessages[index].opened = true;
+                        setMessages(newMessages);
+                        setSelectedMessage(item);
+                        localStorage.setItem('inbox', JSON.stringify(newMessages));
+                        localStorage.setItem('selectedMessage', JSON.stringify(item));
+                      }}
+                      className={`flex h-full ${
+                        !item.opened ? 'border-l-2 border-l-primary' : ''
+                      } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
+                        item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
+                      } `}
+                    >
+                      <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 py-4">
+                        <p title={item.from} className="truncate text-xs font-medium text-gray-50">
+                          {item.from}
+                        </p>
+                        {item.attachments?.length > 0 ? (
+                          <div className="flex flex-row items-center space-x-1">
+                            <Paperclip size={14} className="text-gray-60" />
+                            <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
+                              {item.subject ? item.subject : '(no subject)'}
+                            </p>
+                          </div>
+                        ) : (
                           <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
                             {item.subject ? item.subject : '(no subject)'}
                           </p>
+                        )}
+                        <div className="flex flex-row items-end justify-end space-x-2">
+                          <p className="w-full text-xs line-clamp-2">{item.body}</p>
+                          <p className="text-supporting-2 font-semibold text-gray-60">
+                            {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
+                          </p>
                         </div>
-                      ) : (
-                        <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
-                          {item.subject ? item.subject : '(no subject)'}
-                        </p>
-                      )}
-                      <div className="flex flex-row items-end justify-end space-x-2">
-                        <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
-                        <p className="text-supporting-2 font-semibold text-gray-60">
-                          {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
-                        </p>
                       </div>
-                    </div>
-                  </button>
-                );
-              })}
+                    </button>
+                  );
+                })
+              ) : (
+                <div></div>
+              )}
             </div>
           </div>
         </div>
@@ -308,7 +301,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                           </p>
                         )}
                         <div className="flex flex-row items-end justify-end space-x-2">
-                          <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
+                          <p className="w-full text-xs line-clamp-2">{item.body}</p>
                           <p className="text-supporting-2 font-semibold text-gray-60">
                             {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                           </p>
