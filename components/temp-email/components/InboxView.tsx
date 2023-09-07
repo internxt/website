@@ -10,25 +10,21 @@ import Messages from './Messages';
 import { isMobile } from 'react-device-detect';
 import { Transition } from '@headlessui/react';
 
-const Inbox = ({ email, textContent }) => {
+const Inbox = ({ email, token, textContent }) => {
   const [messages, setMessages] = React.useState([]);
   const [selectedMessage, setSelectedMessage] = React.useState(null);
   const [isRefreshed, setIsRefreshed] = useState(false);
   const isFocused = useWindowFocus();
   const [openedMessages, setOpenedMessages] = useState(0);
   const [isMobileView, setIsMobileView] = useState(false);
-  const [token, setToken] = useState<string>('');
-
-  useEffect(() => {
-    const userData = localStorage.getItem('email');
-    const dataParsed = JSON.parse(userData);
-    setToken(dataParsed?.token);
-  }, []);
 
   //Get inbox on mount or when the inbox is refreshed
   useEffect(() => {
     getMailInbox(token);
     setIsMobileView(isMobile);
+    if (JSON.parse(localStorage.getItem('selectedMessage'))) {
+      setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
+    }
   }, [email, isRefreshed]);
 
   //Get inbox every 5 seconds when the window is focused
@@ -42,48 +38,19 @@ const Inbox = ({ email, textContent }) => {
   //Get inbox function
   function getMailInbox(userToken: string) {
     getInbox(userToken).then((res) => {
-      const messages =
-        res !== null
-          ? res.map((item, index) => {
-              return {
-                ...item,
-                opened: false,
-                id: index,
-              };
-            })
-          : [];
-
       //Get all messages and set opened to false
-      if (!localStorage.getItem('inbox')) {
-        localStorage.setItem('inbox', JSON.stringify(messages));
-        setMessages(messages);
+      if (res?.length > 0) {
+        const message = {
+          ...res[0],
+          opened: false,
+          id: messages?.length > 0 ? messages.length + 1 : 1,
+        };
+        const allMessages = messages?.length > 0 ? [...messages, message] : [message];
+        setMessages(allMessages);
+        localStorage.setItem('inbox', JSON.stringify(allMessages));
       } else {
-        if (JSON.parse(localStorage.getItem('selectedMessage'))) {
-          setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
-        }
-        if (JSON.parse(localStorage.getItem('inbox')).length !== messages.length) {
-          setMessages(JSON.parse(localStorage.getItem('inbox')));
-          return;
-        }
-        const inbox = JSON.parse(localStorage.getItem('inbox'));
-        inbox.forEach((item, index) => {
-          return {
-            ...item,
-            opened: false,
-            id: index,
-          };
-        });
-        if (res !== null) {
-          const allMessages = [...messages, ...inbox];
-          localStorage.setItem('inbox', JSON.stringify(allMessages));
-          setMessages(allMessages);
-          setOpenedMessages(0);
-          allMessages.forEach((item) => {
-            if (!item.opened) {
-              setOpenedMessages((prevState) => prevState + 1);
-            }
-          });
-        }
+        const inbox = localStorage.getItem('inbox');
+        setMessages(JSON.parse(inbox));
       }
     });
   }
@@ -165,18 +132,19 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
             </div>
 
             <div className="flex w-full flex-col overflow-y-scroll">
-              {messages ? (
-                messages.map((item, index) => {
+              {messages?.length > 0 ? (
+                messages?.map((item, index) => {
                   const date = moment(item.date);
                   return (
                     <button
                       key={index}
                       onClick={() => {
                         //Update the message to local storage
-                        const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
+                        const newMessages = JSON.parse(localStorage.getItem('inbox'));
                         newMessages[index].opened = true;
                         setMessages(newMessages);
                         setSelectedMessage(item);
+                        console.log({ item, newMessages });
                         localStorage.setItem('inbox', JSON.stringify(newMessages));
                         localStorage.setItem('selectedMessage', JSON.stringify(item));
                       }}
@@ -203,7 +171,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                           </p>
                         )}
                         <div className="flex flex-row items-end justify-end space-x-2">
-                          <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
+                          <p className="w-full text-xs line-clamp-2">{item.body}</p>
                           <p className="text-supporting-2 font-semibold text-gray-60">
                             {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                           </p>
@@ -213,7 +181,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                   );
                 })
               ) : (
-                <EmptyInbox />
+                <div></div>
               )}
             </div>
           </div>
@@ -334,7 +302,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                           </p>
                         )}
                         <div className="flex flex-row items-end justify-end space-x-2">
-                          <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
+                          <p className="w-full text-xs line-clamp-2">{item.body}</p>
                           <p className="text-supporting-2 font-semibold text-gray-60">
                             {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                           </p>
