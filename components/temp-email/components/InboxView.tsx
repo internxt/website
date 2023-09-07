@@ -43,7 +43,7 @@ const Inbox = ({ email, token, textContent }) => {
         const message = {
           ...res[0],
           opened: false,
-          id: messages?.length > 0 ? messages.length + 1 : 1,
+          id: messages?.length > 0 ? messages?.length + 1 : 1,
         };
         const allMessages = messages?.length > 0 ? [...messages, message] : [message];
         setMessages(allMessages);
@@ -213,7 +213,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
 
   return (
     <div className="flex h-[480px] w-full max-w-sm flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
-      {messages.length > 0 ? (
+      {messages?.length > 0 ? (
         //Render message selected
         <>
           <Transition
