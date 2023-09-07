@@ -17,6 +17,13 @@ const Inbox = ({ email, textContent }) => {
   const isFocused = useWindowFocus();
   const [openedMessages, setOpenedMessages] = useState(0);
   const [isMobileView, setIsMobileView] = useState(false);
+  const [token, setToken] = useState<string>('');
+
+  useEffect(() => {
+    const userData = localStorage.getItem('email');
+    const dataParsed = JSON.parse(userData);
+    setToken(dataParsed?.token);
+  }, []);
 
   //Get inbox on mount or when the inbox is refreshed
   useEffect(() => {
@@ -34,25 +41,40 @@ const Inbox = ({ email, textContent }) => {
 
   //Get inbox function
   function getMailInbox() {
-    getInbox(email).then((res) => {
-      //Get all messages and set opened to false
-      showAllEmailData(email, res).then((res: any) => {
-        if (!localStorage.getItem('inbox')) {
-          localStorage.setItem('inbox', JSON.stringify(res));
-          setMessages(res);
-        } else {
-          if (JSON.parse(localStorage.getItem('selectedMessage'))) {
-            setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
-          } else if (JSON.parse(localStorage.getItem('inbox')).length === res.length) {
-            setMessages(JSON.parse(localStorage.getItem('inbox')));
-            return;
-          }
+    getInbox(token).then((res) => {
+      const messages =
+        res !== null
+          ? res.map((item, index) => {
+              return {
+                ...item,
+                opened: false,
+                id: index,
+              };
+            })
+          : [];
 
-          const inbox = JSON.parse(localStorage.getItem('inbox'));
-          const newMessages = res.filter((item) => {
-            return !inbox.find((inboxItem) => inboxItem.id === item.id);
-          });
-          const allMessages = [...newMessages, ...inbox];
+      setMessages(messages);
+      //Get all messages and set opened to false
+      if (!localStorage.getItem('inbox')) {
+        localStorage.setItem('inbox', JSON.stringify(messages));
+        setMessages(messages);
+      } else {
+        if (JSON.parse(localStorage.getItem('selectedMessage'))) {
+          setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
+        } else if (JSON.parse(localStorage.getItem('inbox')).length === messages.length) {
+          setMessages(JSON.parse(localStorage.getItem('inbox')));
+          return;
+        }
+        const inbox = JSON.parse(localStorage.getItem('inbox'));
+        inbox.forEach((item, index) => {
+          return {
+            ...item,
+            opened: false,
+            id: index,
+          };
+        });
+        if (res !== null) {
+          const allMessages = [...messages, ...inbox];
           localStorage.setItem('inbox', JSON.stringify(allMessages));
           setMessages(allMessages);
           setOpenedMessages(0);
@@ -62,7 +84,7 @@ const Inbox = ({ email, textContent }) => {
             }
           });
         }
-      });
+      }
     });
   }
 
@@ -143,52 +165,56 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
             </div>
 
             <div className="flex w-full flex-col overflow-y-scroll">
-              {messages.map((item, index) => {
-                const date = moment(item.date);
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      //Update the message to local storage
-                      const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
-                      newMessages[index].opened = true;
-                      setMessages(newMessages);
-                      setSelectedMessage(item);
-                      localStorage.setItem('inbox', JSON.stringify(newMessages));
-                      localStorage.setItem('selectedMessage', JSON.stringify(item));
-                    }}
-                    className={`flex h-full ${
-                      !item.opened ? 'border-l-2 border-l-primary' : ''
-                    } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
-                      item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
-                    } `}
-                  >
-                    <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 py-4">
-                      <p title={item.from} className="truncate text-xs font-medium text-gray-50">
-                        {item.from}
-                      </p>
-                      {item.attachments?.length > 0 ? (
-                        <div className="flex flex-row items-center space-x-1">
-                          <Paperclip size={14} className="text-gray-60" />
+              {messages ? (
+                messages.map((item, index) => {
+                  const date = moment(item.date);
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => {
+                        //Update the message to local storage
+                        const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
+                        newMessages[index].opened = true;
+                        setMessages(newMessages);
+                        setSelectedMessage(item);
+                        localStorage.setItem('inbox', JSON.stringify(newMessages));
+                        localStorage.setItem('selectedMessage', JSON.stringify(item));
+                      }}
+                      className={`flex h-full ${
+                        !item.opened ? 'border-l-2 border-l-primary' : ''
+                      } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
+                        item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
+                      } `}
+                    >
+                      <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 py-4">
+                        <p title={item.from} className="truncate text-xs font-medium text-gray-50">
+                          {item.from}
+                        </p>
+                        {item.attachments?.length > 0 ? (
+                          <div className="flex flex-row items-center space-x-1">
+                            <Paperclip size={14} className="text-gray-60" />
+                            <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
+                              {item.subject ? item.subject : '(no subject)'}
+                            </p>
+                          </div>
+                        ) : (
                           <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
                             {item.subject ? item.subject : '(no subject)'}
                           </p>
+                        )}
+                        <div className="flex flex-row items-end justify-end space-x-2">
+                          <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
+                          <p className="text-supporting-2 font-semibold text-gray-60">
+                            {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
+                          </p>
                         </div>
-                      ) : (
-                        <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
-                          {item.subject ? item.subject : '(no subject)'}
-                        </p>
-                      )}
-                      <div className="flex flex-row items-end justify-end space-x-2">
-                        <p className="w-full text-xs line-clamp-2">{item.textBody}</p>
-                        <p className="text-supporting-2 font-semibold text-gray-60">
-                          {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
-                        </p>
                       </div>
-                    </div>
-                  </button>
-                );
-              })}
+                    </button>
+                  );
+                })
+              ) : (
+                <EmptyInbox />
+              )}
             </div>
           </div>
         </div>

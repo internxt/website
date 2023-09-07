@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const BASE_URL = 'https://api.tempmail.lol';
+
 async function createEmail() {
   const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
 
@@ -16,9 +18,10 @@ async function showAllEmailData(email: string, item: Record<string, any>[]) {
   return data;
 }
 
-const getInbox = async (email) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?email=${email}`);
-  return inbox.data;
+const getInbox = async (token: string) => {
+  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
+
+  return inbox.data.email;
 };
 
 const downloadFile = async (email: string, itemId: number, itemName: string) => {

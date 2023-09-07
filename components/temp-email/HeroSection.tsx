@@ -37,12 +37,14 @@ const HeroSection = ({ textContent }) => {
       }
     }
     if (localStorage.getItem('email') !== null) {
-      setEmail(localStorage.getItem('email'));
+      const data = localStorage.getItem('email');
+      const parseData = JSON.parse(data);
+      setEmail(parseData.address);
     } else {
       localStorage.setItem('setupTime', String(now));
       createEmail().then((res) => {
-        localStorage.setItem('email', res[0]);
-        setEmail(res[0]);
+        localStorage.setItem('email', JSON.stringify(res));
+        setEmail(res.address);
       });
     }
   }, [generateEmail]);
