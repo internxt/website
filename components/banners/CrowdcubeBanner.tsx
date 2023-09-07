@@ -22,7 +22,7 @@ const CrowdcubeBanner = () => {
           <X size={32} />
         </button>
         <div className="flex flex-row justify-between">
-          <div className="mx-12 flex w-full max-w-[394px] flex-col items-center justify-center space-y-9 pt-20 pb-16 text-center lg:items-start lg:justify-start lg:text-left">
+          <div className="mx-12 flex w-full max-w-[394px] flex-col items-center justify-center space-y-9 pt-20 pb-16 text-center md:items-start md:justify-start md:text-left">
             <img src="../../logos/internxt/white.svg" alt="Internxt" className="h-4 max-w-[120px]" />
             <div className="flex  flex-col space-y-6 text-white">
               <p className="text-5xl font-bold">Become a part of Internxt's future</p>
@@ -30,15 +30,18 @@ const CrowdcubeBanner = () => {
                 Don't just use it, own it. Let's shape a brighter future together!
               </p>
             </div>
-            <button
-              className="flex w-max items-center justify-center rounded-lg bg-white px-5 py-3 text-center font-medium text-primary"
-              onClick={() => {
-                window.open(`https://www.crowdcube.eu/early-access/internxt`, '_self');
-                onClose();
-              }}
-            >
-              Secure your stake
-            </button>
+            <div className="flex flex-col space-y-3">
+              <button
+                className="flex w-max items-center justify-center rounded-lg bg-white px-5 py-3 text-center font-medium text-primary"
+                onClick={() => {
+                  window.open(`https://www.crowdcube.eu/early-access/internxt`, '_blank', 'noopener');
+                  onClose();
+                }}
+              >
+                Secure your stake
+              </button>
+              <p className="text-xs font-medium text-gray-5">Capital at Risk</p>
+            </div>
           </div>
           <div className="hidden w-full max-w-[295px] flex-col items-center justify-center space-y-3 rounded-r-2xl bg-primary md:flex">
             <img src="../../logos/internxt/white.svg" alt="Internxt" className="h-[25px] max-w-[200px]" />
