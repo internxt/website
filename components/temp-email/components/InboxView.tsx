@@ -144,7 +144,6 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                         newMessages[index].opened = true;
                         setMessages(newMessages);
                         setSelectedMessage(item);
-                        console.log({ item, newMessages });
                         localStorage.setItem('inbox', JSON.stringify(newMessages));
                         localStorage.setItem('selectedMessage', JSON.stringify(item));
                       }}
