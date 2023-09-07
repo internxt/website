@@ -1,8 +1,14 @@
 import { X } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const CrowdcubeBanner = () => {
-  const [bannerVisible, setBannerVisible] = useState(true);
+  const [bannerVisible, setBannerVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBannerVisible(true);
+    }, 5000);
+  }, []);
 
   function onClose() {
     setBannerVisible(false);
