@@ -15,6 +15,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ message: 'Method not allowed' });
   }
 }
-
-// Your BananaCrumbs ID is 206241702562719090148847
-// Your Account Token is NACZB2DQBS6CH6JBMOOWJQWFW2KVXY3N

@@ -1,5 +1,4 @@
 import { DownloadSimple, Envelope } from '@phosphor-icons/react';
-import { downloadFile } from '../services/api/temp-api';
 import fileDownload from 'js-file-download';
 import iconService from '../services/icon-service';
 import moment from 'moment';
@@ -106,14 +105,10 @@ const MessageSelected = ({
           </div>
         </div>
       </div>
-
       <div className="flex w-full border border-gray-5" />
-
       <div dangerouslySetInnerHTML={{ __html: item.body }} className="flex w-full flex-col space-x-2" />
-
       <div className="flex w-full border border-gray-5" />
-
-      {item.attachments?.length > 0 && (
+      {/* {item.attachments?.length > 0 && (
         <div className="flex w-full flex-col space-y-4">
           <div className="flex flex-row justify-between">
             <p className="text-sm font-medium">
@@ -121,14 +116,7 @@ const MessageSelected = ({
             </p>
             <p
               className="cursor-pointer text-sm text-primary"
-              onClick={() => {
-                item.attachments.forEach(async (file) => {
-                  await downloadFile(email, item.id, file.filename).then((download) => {
-                    const blob = new Blob([download.data], { type: file.contentType });
-                    fileDownload(blob, file.filename);
-                  });
-                });
-              }}
+              
             >
               {textContent.downloadAll}
             </p>
@@ -163,7 +151,7 @@ const MessageSelected = ({
             })}
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

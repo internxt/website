@@ -40,14 +40,21 @@ const Inbox = ({ email, token, textContent }) => {
     getInbox(userToken).then((res) => {
       //Get all messages and set opened to false
       if (res?.length > 0) {
-        const message = {
-          ...res[0],
-          opened: false,
-          id: messages?.length > 0 ? messages?.length + 1 : 1,
-        };
-        const allMessages = messages?.length > 0 ? [...messages, message] : [message];
+        const message = res.map((item, index) => {
+          return {
+            ...item,
+            opened: false,
+            id: messages?.length > 0 ? messages.length + 1 : 1,
+          };
+        });
+        const allMessages = messages?.length > 0 ? [...messages, ...message] : [...message];
         setMessages(allMessages);
         localStorage.setItem('inbox', JSON.stringify(allMessages));
+        allMessages.forEach((item) => {
+          if (!item.opened) {
+            setOpenedMessages((prevState) => prevState + 1);
+          }
+        });
       } else {
         const inbox = localStorage.getItem('inbox');
         setMessages(JSON.parse(inbox));
