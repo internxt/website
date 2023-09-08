@@ -38,23 +38,23 @@ const Inbox = ({ email, token, textContent }) => {
   //Get inbox function
   function getMailInbox(userToken: string) {
     getInbox(userToken).then((res) => {
+      let messageIdCounter = messages?.length;
       //Get all messages and set opened to false
+      if (res == null) return;
       if (res?.length > 0) {
         const message = res.map((item, index) => {
+          messageIdCounter++;
           return {
             ...item,
             opened: false,
-            id: messages?.length > 0 ? messages.length + 1 : 1,
+            id: messageIdCounter,
           };
         });
-        const allMessages = messages?.length > 0 ? [...messages, ...message] : [...message];
+        const allMessages = messages == null ? [...message] : [...messages, ...message];
         setMessages(allMessages);
         localStorage.setItem('inbox', JSON.stringify(allMessages));
-        allMessages.forEach((item) => {
-          if (!item.opened) {
-            setOpenedMessages((prevState) => prevState + 1);
-          }
-        });
+        const unopenedMessages = allMessages.filter((item) => !item.opened).length;
+        setOpenedMessages(unopenedMessages);
       } else {
         const inbox = localStorage.getItem('inbox');
         setMessages(JSON.parse(inbox));
