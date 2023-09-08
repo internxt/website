@@ -288,18 +288,9 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                           {item.from}
                         </p>
                         {/* If the item has attachments, then render it and allow download files */}
-                        {item.attachments?.length > 0 ? (
-                          <div className="flex flex-row items-center space-x-1">
-                            <Paperclip size={14} className="text-gray-60" />
-                            <p title={item.subject} className="flex-row text-sm font-semibold">
-                              {item.subject ? item.subject : '(no subject)'}
-                            </p>
-                          </div>
-                        ) : (
-                          <p title={item.subject} className="flex-row text-sm font-semibold">
-                            {item.subject ? item.subject : '(no subject)'}
-                          </p>
-                        )}
+                        <p title={item.subject} className="flex-row text-sm font-semibold">
+                          {item.subject ? item.subject : '(no subject)'}
+                        </p>
                         <div className="flex flex-row items-end justify-end space-x-2">
                           <p className="w-full text-xs line-clamp-2">{item.body}</p>
                           <p className="text-supporting-2 font-semibold text-gray-60">
