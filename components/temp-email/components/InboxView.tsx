@@ -38,16 +38,23 @@ const Inbox = ({ email, token, textContent }) => {
   //Get inbox function
   function getMailInbox(userToken: string) {
     getInbox(userToken).then((res) => {
+      let messageIdCounter = messages?.length;
       //Get all messages and set opened to false
+      if (res == null) return;
       if (res?.length > 0) {
-        const message = {
-          ...res[0],
-          opened: false,
-          id: messages?.length > 0 ? messages?.length + 1 : 1,
-        };
-        const allMessages = messages?.length > 0 ? [...messages, message] : [message];
+        const message = res.map((item, index) => {
+          messageIdCounter++;
+          return {
+            ...item,
+            opened: false,
+            id: messageIdCounter,
+          };
+        });
+        const allMessages = messages == null ? [...message] : [...messages, ...message];
         setMessages(allMessages);
         localStorage.setItem('inbox', JSON.stringify(allMessages));
+        const unopenedMessages = allMessages.filter((item) => !item.opened).length;
+        setOpenedMessages(unopenedMessages);
       } else {
         const inbox = localStorage.getItem('inbox');
         setMessages(JSON.parse(inbox));
@@ -288,18 +295,9 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                           {item.from}
                         </p>
                         {/* If the item has attachments, then render it and allow download files */}
-                        {item.attachments?.length > 0 ? (
-                          <div className="flex flex-row items-center space-x-1">
-                            <Paperclip size={14} className="text-gray-60" />
-                            <p title={item.subject} className="flex-row text-sm font-semibold">
-                              {item.subject ? item.subject : '(no subject)'}
-                            </p>
-                          </div>
-                        ) : (
-                          <p title={item.subject} className="flex-row text-sm font-semibold">
-                            {item.subject ? item.subject : '(no subject)'}
-                          </p>
-                        )}
+                        <p title={item.subject} className="flex-row text-sm font-semibold">
+                          {item.subject ? item.subject : '(no subject)'}
+                        </p>
                         <div className="flex flex-row items-end justify-end space-x-2">
                           <p className="w-full text-xs line-clamp-2">{item.body}</p>
                           <p className="text-supporting-2 font-semibold text-gray-60">
