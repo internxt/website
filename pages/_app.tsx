@@ -24,7 +24,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
         <ShowSnackbar />
-        <CrowdcubeBanner />
         {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
         <Intercom />
       </GlobalUIManager>
