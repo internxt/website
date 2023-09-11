@@ -21,7 +21,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                   <Countdown textColor={'white'} />
                 </div>
               )}
-              <div className="flex max-w-[450px] flex-col pb-10 text-center text-white md:text-start">
+              <div className="flex max-w-[450px] flex-col pb-10 text-center text-white lg:text-start">
                 <Header>{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>

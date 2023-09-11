@@ -14,7 +14,6 @@
       "description": "This week only, buy once and get privacy and security forever."
     },
     "securePayment": "100% Secure payment, powered by Stripe",
-
     "firstFeed": "30-day money-back guarantee",
     "secondFeed": "100% secure payment",
     "thirdFeed": "Anonymous account creation"
@@ -46,7 +45,6 @@
       }
     ]
   },
-
   "CtaSection": {
     "title": "The world's most private cloud storage",
     "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
