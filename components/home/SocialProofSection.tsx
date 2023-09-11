@@ -14,14 +14,7 @@ const SocialProofSection = ({ textContent, lang }) => (
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img loading="lazy" src="../../logos/investors/telefonica.svg" draggable="false" alt="telefonica logo" />
           </div>
-          <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img
-              loading="lazy"
-              src="../../logos/investors/theventurecity.svg"
-              draggable="false"
-              alt="the venture city logo"
-            />
-          </div>
+
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
               loading="lazy"
