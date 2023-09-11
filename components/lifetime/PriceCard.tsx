@@ -21,11 +21,21 @@ interface PriceCardProps {
   isCampaign?: boolean;
 }
 
-const PriceCard = ({ planType, storage, price, cta, currency, popular, actualPrice, isCampaign }: PriceCardProps) => {
+const PriceCard = ({
+  planType,
+  storage,
+  price,
+  cta,
+  currency,
+  popular,
+  actualPrice,
+  isCampaign,
+  lang,
+}: PriceCardProps) => {
   const [coupon, setCoupon] = useState(null);
   const [convertedPrice, setConvertedPrice] = useState<number>(price);
 
-  const contentText = require(`../../assets/lang/en/priceCard.json`);
+  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   useEffect(() => {
     if (isCampaign) {

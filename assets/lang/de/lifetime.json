@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Hole dir einen lebenslangen Internxt-Plan!",
     "description": "Sichere alle deine Dateien und Erinnerungen für immer mit einer einmaligen Zahlung.",
-    "cta1": "Jetzt 25% Rabatt erhalten",
+    "cta1": "Jetzt 25% Rabatt",
     "cta2": "Angebote für lebenslange Pläne durchsuchen"
   },
   "PaymentSection": {
@@ -48,6 +48,6 @@
   "CtaSection": {
     "title": "Der privateste Cloud-Speicher der Welt",
     "description": "Schütze die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
-    "cta": "Jetzt einen Plan auswählen"
+    "cta": "Jetzt einen Plan"
   }
 }
