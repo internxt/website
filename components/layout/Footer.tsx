@@ -369,7 +369,7 @@ export default function Footer({
                       loading="lazy"
                       className="h-16"
                       src="https://www.dam-aguas.es/wp-content/uploads/2020/01/04-marca-ivace-cs.png"
-                      alt="Generalitat Valenciana logo"
+                      alt="IVACE logo"
                       draggable="false"
                     />
                   </div>
