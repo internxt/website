@@ -619,7 +619,7 @@ export default function Footer({
                       </Link>
 
                       <Link href={'https://help.internxt.com'} target={'_blank'} locale={lang} passHref>
-                        {textContent.FooterSection.sections.company.support}
+                        <a>{textContent.FooterSection.sections.company.support}</a>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
