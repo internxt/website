@@ -5,7 +5,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { checkout, goToSignUpURL } from '../../lib/auth';
 
@@ -33,21 +33,21 @@ export default function PriceCard({
   country,
   lang,
 }: PriceCardProps) {
-  const [convertedPrice, setConvertedPrice] = useState<number>(price);
-
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
     year: 'annually',
   };
 
-  useEffect(() => {
+  const convertedPrice = useMemo(() => {
     if (country !== '€') {
       const splitPrice = price.toString().split('.');
       const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
-      setConvertedPrice(parseInt(splitPrice[0]) + checkDecimalPrice);
+      return parseInt(splitPrice[0]) + checkDecimalPrice;
     }
-  }, [price]);
+    // En caso de que no se cumplan las condiciones, devuelve price sin cambios
+    return price;
+  }, [country, price]);
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
