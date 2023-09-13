@@ -7,6 +7,35 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
+        {lang === 'en' ? (
+          <a
+            href="https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1"
+            target="_blank"
+            className="mb-10 flex justify-center"
+          >
+            <div className="hidden md:flex">
+              <Image
+                src="/images/temp-email/gimmehost-horizontal.png"
+                alt="Gimme Host Offer"
+                width={726}
+                height={90}
+                layout="intrinsic"
+                quality={100}
+              />
+            </div>
+            <div className="flex md:hidden">
+              <Image
+                src="/images/temp-email/gimmehost-square.png"
+                alt="Gimme Host Offer"
+                width={350}
+                height={292}
+                layout="intrinsic"
+                quality={100}
+              />
+            </div>
+          </a>
+        ) : undefined}
+
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">{textContent.title}</p>
