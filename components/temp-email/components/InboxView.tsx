@@ -203,8 +203,8 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
           leaveTo="opacity-0"
           className={'flex overflow-y-scroll'}
         >
-          <div className="flex h-full w-screen">
-            <Messages.MessageSelected email={email} item={selectedMessage} textContent={textContent} />
+          <div className="flex h-full w-full">
+            <Messages.MessageSelected item={selectedMessage} textContent={textContent} />
           </div>
         </Transition>
         {!selectedMessage && <Messages.NoMessageSelected messagesLength={openedMessages} textContent={textContent} />}
@@ -244,7 +244,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                 </div>
               </div>
               <div className="flex h-full w-full">
-                <Messages.MessageSelected email={email} item={selectedMessage} textContent={textContent} />
+                <Messages.MessageSelected item={selectedMessage} textContent={textContent} />
               </div>
             </div>
           </Transition>
