@@ -40,7 +40,7 @@ const CrowdcubeBanner = () => {
               <button
                 className="flex w-max items-center justify-center rounded-lg bg-white px-5 py-3 text-center font-medium text-primary"
                 onClick={() => {
-                  window.open(`https://www.crowdcube.eu/early-access/internxt`, '_blank', 'noopener');
+                  window.open(` https://www.crowdcube.com/companies/internxt/pitches/l8aE5Z`, '_blank', 'noopener');
                   onClose();
                 }}
               >
