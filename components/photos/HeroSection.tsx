@@ -31,14 +31,15 @@ const HeroSection = ({ textContent, lang, device, download }) => {
           </h3>
         </div>
 
-        <div className="flex h-full flex-col px-5 pt-16 pb-10">
-          <img
-            src={imageUrl}
-            width={757}
-            height={419}
-            alt="Internxt secure cloud storage"
-            draggable="false"
+        <div className="flex h-full flex-col px-5 py-16">
+          <Image
+            width={622}
+            height={483}
+            src="/images/photos/photo-storage.webp"
             loading="eager"
+            alt="Internxt secure cloud storage"
+            quality={100}
+            draggable="false"
           />
         </div>
 
