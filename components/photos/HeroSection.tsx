@@ -2,8 +2,6 @@
 import Image from 'next/image';
 import React from 'react';
 import DownloadComponent from '../shared/DownloadComponent';
-import RevealX from '../components/RevealX';
-import RevealY from '../components/RevealY';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
