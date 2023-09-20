@@ -46,7 +46,6 @@ describe('Lifetime page', () => {
 
     cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
       (response) => {
-        console.log('Lifetime ', response.body);
         coupon = response.body;
       },
     );

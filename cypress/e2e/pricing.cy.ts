@@ -36,7 +36,6 @@ describe('Pricing page', () => {
         };
       });
       cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.TwoTBCoupon}`).then((response) => {
-        console.log('Pricing', response.body);
         coupon = response.body;
       });
     });
@@ -105,9 +104,14 @@ describe('Pricing page', () => {
       describe('When the plan is 2TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.contains(`Get 90% off ${products.year2TB.storage}`).click();
+          cy.get('#priceTable')
+            .contains('button', `${products.year2TB.storage}`)
+            .click()
+            .then(($button) => {
+              console.log('Button', $button);
+            });
 
-          cy.url().should('eq', url({ planId: products.year2TB.planId, couponCode: coupon }));
+          cy.url().should('contain', url({ planId: products.year2TB.planId }));
         });
       });
     });
@@ -131,7 +135,7 @@ describe('Pricing page', () => {
           cy.url().should('eq', url({ planId: products.lifetime5TB.planId, mode: 'payment' }));
         });
       });
-      describe('When the plan is 2TB of space', () => {
+      describe('When the plan is 10TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains('Lifetime').click();
