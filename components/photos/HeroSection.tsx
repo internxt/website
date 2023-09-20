@@ -8,9 +8,9 @@ import Header from '../shared/Header';
 
 const HeroSection = ({ textContent, lang, device, download }) => (
   <section className="flex w-full flex-col">
-    <div className="flex flex-col items-center px-5 py-40">
+    <div className="flex flex-col items-center pb-32 pt-40">
       {/* Main title */}
-      <div className="flex flex-col items-center justify-center space-y-6 text-center">
+      <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 py-2 px-4">
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
@@ -25,59 +25,27 @@ const HeroSection = ({ textContent, lang, device, download }) => (
           {textContent.subtitle.line2}
           {textContent.subtitle.line3}
         </h3>
-        <div className="flex h-full flex-col px-5 py-16 lg:hidden">
-          <Image
-            width={622}
-            height={483}
-            src="/images/photos/photo-storage.webp"
-            loading="eager"
-            alt="Internxt secure cloud storage"
-            draggable="false"
-          />
-        </div>
-        <div className="mx-auto hidden h-[700px] w-[622px] flex-col items-center justify-center object-contain lg:flex">
-          <div className="relative flex h-full w-full flex-col px-5 py-16">
-            {/* Dog image */}
-            <RevealX
-              direction="left"
-              className="absolute bottom-[147px] -right-5 z-20 flex  overflow-hidden rounded-3xl shadow-xl"
-            >
-              <Image
-                width={287}
-                height={287}
-                src="/images/photos/Dog-image.png"
-                loading="eager"
-                alt="Internxt secure cloud storage"
-                draggable="false"
-              />
-            </RevealX>
-            {/*  Girl image */}
-            <RevealX
-              direction="right"
-              className="absolute bottom-[107px] -left-5 flex overflow-hidden rounded-3xl shadow-xl"
-            >
-              <Image
-                width={287}
-                height={287}
-                src="/images/photos/Girl-image.png"
-                loading="eager"
-                alt="Internxt secure cloud storage"
-                draggable="false"
-              />
-            </RevealX>
-            {/* Skater image */}
-            <RevealY className="absolute bottom-[330px] left-[147px] z-10 flex w-max rounded-3xl shadow-xl">
-              <Image
-                width={287}
-                className="shadow-xl"
-                height={287}
-                src="/images/photos/Skater-image.png"
-                alt="Internxt secure cloud storage"
-                draggable="false"
-              />
-            </RevealY>
-          </div>
-        </div>
+      </div>
+
+      <div className="flex h-full flex-col px-5 py-16 lg:hidden">
+        <Image
+          width={622}
+          height={483}
+          src="/images/photos/photo-storage.webp"
+          loading="eager"
+          alt="Internxt secure cloud storage"
+          draggable="false"
+        />
+      </div>
+      <div className="flex h-full flex-col px-5 pt-16 pb-10">
+        <img
+          src="/images/photos/hero_image.svg"
+          width={757}
+          height={419}
+          alt="Internxt secure cloud storage"
+          draggable="false"
+          loading="eager"
+        />
       </div>
 
       {/* Download links */}
