@@ -1,89 +1,49 @@
 /* eslint-disable max-len */
+import getConfig from 'next/config';
 import Image from 'next/image';
 import React from 'react';
 import DownloadComponent from '../shared/DownloadComponent';
-import RevealX from '../components/RevealX';
-import RevealY from '../components/RevealY';
 import Header from '../shared/Header';
 
-const HeroSection = ({ textContent, lang, device, download }) => (
-  <section className="flex w-full flex-col">
-    <div className="flex flex-col items-center px-5 py-40">
-      {/* Main title */}
-      <div className="flex flex-col items-center justify-center space-y-6 text-center">
-        <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 py-2 px-4">
-          <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
+const HeroSection = ({ textContent, lang, device, download }) => {
+  return (
+    <section className="flex w-full flex-col">
+      <div className="flex flex-col items-center pb-32 pt-40">
+        {/* Main title */}
+        <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
+          <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 py-2 px-4">
+            <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
+          </div>
+
+          <Header maxWidth="max-w-max" className="text-gray-100">
+            {textContent.title.line1} <br className="hidden sm:flex" />
+            <span className="text-primary">{textContent.title.line2}</span>
+          </Header>
+
+          <h3 className="max-w-4xl text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
+            {textContent.subtitle.line1}
+            {textContent.subtitle.line2}
+            {textContent.subtitle.line3}
+          </h3>
         </div>
 
-        <Header maxWidth="max-w-max" className="text-gray-100">
-          {textContent.title.line1} <br className="hidden sm:flex" />
-          <span className="text-primary">{textContent.title.line2}</span>
-        </Header>
-
-        <h3 className="max-w-4xl text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
-          {textContent.subtitle.line1}
-          {textContent.subtitle.line2}
-          {textContent.subtitle.line3}
-        </h3>
-        <div className="flex h-full flex-col px-5 py-16 lg:hidden">
+        <div className="flex h-full flex-col px-5 py-16">
           <Image
             width={622}
             height={483}
             src="/images/photos/photo-storage.webp"
             loading="eager"
             alt="Internxt secure cloud storage"
+            quality={100}
             draggable="false"
           />
         </div>
-        <div className="mx-auto hidden h-[700px] w-[622px] flex-col items-center justify-center object-contain lg:flex">
-          <div className="relative flex h-full w-full flex-col px-5 py-16">
-            {/* Dog image */}
-            <RevealX
-              direction="left"
-              className="absolute bottom-[147px] -right-5 z-20 flex  overflow-hidden rounded-3xl shadow-xl"
-            >
-              <Image
-                width={287}
-                height={287}
-                src="/images/photos/Dog-image.png"
-                loading="eager"
-                alt="Internxt secure cloud storage"
-                draggable="false"
-              />
-            </RevealX>
-            {/*  Girl image */}
-            <RevealX
-              direction="right"
-              className="absolute bottom-[107px] -left-5 flex overflow-hidden rounded-3xl shadow-xl"
-            >
-              <Image
-                width={287}
-                height={287}
-                src="/images/photos/Girl-image.png"
-                loading="eager"
-                alt="Internxt secure cloud storage"
-                draggable="false"
-              />
-            </RevealX>
-            {/* Skater image */}
-            <RevealY className="absolute bottom-[330px] left-[147px] z-10 flex w-max rounded-3xl shadow-xl">
-              <Image
-                width={287}
-                className="shadow-xl"
-                height={287}
-                src="/images/photos/Skater-image.png"
-                alt="Internxt secure cloud storage"
-                draggable="false"
-              />
-            </RevealY>
-          </div>
-        </div>
-      </div>
 
-      {/* Download links */}
-      <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
-    </div>
-  </section>
-);
+        {/* Download links */}
+        <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
+      </div>
+    </section>
+  );
+};
 
 export default HeroSection;

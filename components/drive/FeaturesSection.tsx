@@ -9,13 +9,13 @@ import RevealX from '../components/RevealX';
 import Image from 'next/image';
 
 const FeaturesSection = ({ textContent, lang, download }) => (
-  <section className="flex w-full flex-col lg:pt-20">
+  <section className="flex w-full flex-col">
     <div className="flex w-full flex-col items-center">
       {/* Title */}
       <Parallax
         className="flex w-full flex-col items-center justify-center text-center"
         renderLayer={(percentage) => (
-          <h2 className="relative text-3xl font-medium text-cool-gray-90 lg:mb-20 lg:text-5xl">
+          <h2 className="relative text-3xl font-semibold text-cool-gray-90 lg:mb-20 lg:text-5xl">
             <Transition
               show={anim.trigger(percentage)}
               enter="transition-all duration-500"
