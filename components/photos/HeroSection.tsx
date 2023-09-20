@@ -5,11 +5,7 @@ import React from 'react';
 import DownloadComponent from '../shared/DownloadComponent';
 import Header from '../shared/Header';
 
-const { publicRuntimeConfig } = getConfig();
-
 const HeroSection = ({ textContent, lang, device, download }) => {
-  const imageUrl = `${publicRuntimeConfig.imagesPath}/hero_image.svg`;
-
   return (
     <section className="flex w-full flex-col">
       <div className="flex flex-col items-center pb-32 pt-40">
