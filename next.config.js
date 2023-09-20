@@ -3,6 +3,9 @@ module.exports = {
     locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de'],
     defaultLocale: 'en',
   },
+  publicRuntimeConfig: {
+    imagesPath: '/images/photos',
+  },
   webpack(config) {
     config.module.rules.push({
       loader: '@svgr/webpack',
