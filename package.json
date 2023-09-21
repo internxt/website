@@ -10,10 +10,8 @@
     "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
     "prod": "next export",
-    "yarn cypress:build": "yarn run add:npmrc && yarn && yarn build",
     "cypress": "cypress open",
-    "lint": "eslint './**/*.{js,ts,tsx}'",
-    "add:npmrc": "echo \"registry=https://registry.yarnpkg.com/\" >> .npmrc && echo \"@internxt:registry=https://npm.pkg.github.com\" >> .npmrc && echo \"//npm.pkg.github.com/:_authToken=$NPM_TOKEN\" >> .npmrc && echo \"always-auth=true\" >> .npmrc"
+    "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
