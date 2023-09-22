@@ -1,13 +1,13 @@
 /* Instrument Sans font family */
 
-@font-face {
+/* @font-face {
   font-family: 'Instrument Sans';
   font-style: normal;
   font-display: swap;
   src: local('Instrument Sans'), url('./InstrumentSans[wdth\,wght].woff2') format('woff2');
-}
+} */
 
-/* @font-face {
+@font-face {
   font-family: 'Instrument Sans';
   font-weight: 400;
   font-style: normal;
@@ -37,4 +37,4 @@
   font-style: normal;
   font-display: swap;
   src: local('Instrument Sans'), url('./InstrumentSans-Bold.woff2') format('woff2');
-} */
+}
