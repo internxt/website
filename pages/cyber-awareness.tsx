@@ -17,6 +17,7 @@ import Footer from '../components/layout/Footer';
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import FileParallaxSection from '../components/home/FileParallaxSection';
 import FeatureSection from '../components/cyber-awareness/FeatureSection';
+import QuizSection from '../components/cyber-awareness/QuizSection';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
@@ -47,6 +48,8 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
             <InfoSection textContent={textContent.InfoSection} />
 
             <FileParallaxSection />
+
+            <QuizSection textContent={textContent.QuizSection} />
 
             <SuiteSection textContent={textContent.SuiteSection} />
 

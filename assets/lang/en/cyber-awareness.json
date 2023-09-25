@@ -16,6 +16,13 @@
       "body": "Cyber threats are rising, so Cyber Awareness is critical for keeping your employees and organization secure online. Human mistakes are the primary cause of most data breaches. 80% of all data breaches are caused by human error, meaning 80% of breaches can be avoided with a bit of Cyber Awareness."
     }
   },
+  "QuizSection": {
+    "title": "It's easy to stay safe online!",
+    "description": [
+      "The amount of information about you that can be gathered by monitoring your online activity and raiding your accounts is enormous. Knowing how to protect yourself can save you from identity theft, phishing scams, and data breaches down the road.",
+      "Once you are familiar with the cybersecurity basics, it's time to test their effectiveness with a Cyber Security Quiz."
+    ]
+  },
   "CtaSection": {
     "title": "Safely back up your data where no one will ever see it",
     "description": "",
