@@ -1,9 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import Checkbox from './Checkbox';
-import { InstagramLogo } from '@phosphor-icons/react';
-import { TwitterIcon } from 'next-share';
-import QuestionsSection from './QuestionsSection';
-import { set } from 'cypress/types/lodash';
 import Footer from '../layout/Footer';
 import CheckQuestions from './CheckQuestions';
 import Link from 'next/link';
@@ -14,13 +10,12 @@ interface ViewProps {
   view: Views;
 }
 
-const AnswerQuestionsSection = ({ textContent, setQuestionsAnswers }) => {
+const AnswerQuestionsSection = ({ textContent }) => {
   const height = useRef(null);
   const [view, setView] = useState<Views>('initialState');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
   const [savedAnswers, setSavedAnswers] = useState<string[]>([]);
-  const [correctAnswers, setCorrectAnswers] = useState<string[]>([]);
   const [hash, setHash] = useState<string>('');
 
   const footerLang = require(`../../assets/lang/en/footer.json`);
@@ -32,44 +27,33 @@ const AnswerQuestionsSection = ({ textContent, setQuestionsAnswers }) => {
       const hash = window.location.hash.replace('#', '');
       setCurrentQuestion(parseInt(hash));
       setView('questions');
-      setCorrectAnswers(JSON.parse(sessionStorage.getItem('correctAnswers')));
+      setSavedAnswers(JSON.parse(sessionStorage.getItem('correctAnswers')));
     }
   }, []);
-
-  useEffect(() => {
-    handleCorrectAnswers();
-    console.log(correctAnswers);
-  }, [currentQuestion]);
 
   useEffect(() => {
     window.location.hash = hash;
   }, [hash]);
 
-  function handleCorrectAnswers() {}
-
   function handleNextQuestion() {
     if (currentQuestion + 1 === 8) {
       setView('quizCompleted');
-      window.location.hash = ``;
+      //Remove the hash from the url
+      window.location.hash = '';
     } else {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
       setHash(`#${currentQuestion + 1}`);
-      setSavedAnswers((previousAnswers) => [...previousAnswers, currentCheckbox]);
-      setCurrentCheckbox('');
-      sessionStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
-      if (correctAnswers[currentQuestion] === currentCheckbox) {
-        setCorrectAnswers((previousAnswers) => [...previousAnswers, currentCheckbox]);
-      }
     }
+    setCurrentCheckbox('');
   }
 
   function handleCheckbox(answer: string) {
     if (answer === currentCheckbox) {
       setCurrentCheckbox('');
-      setQuestionsAnswers((previousAnswers) => previousAnswers.filter((item) => item !== answer));
+      setSavedAnswers((previousAnswers) => previousAnswers.filter((item) => item !== answer));
     } else {
       setCurrentCheckbox(answer);
-      setQuestionsAnswers((previousAnswers) => [...previousAnswers, answer]);
+      setSavedAnswers((previousAnswers) => [...previousAnswers, answer]);
     }
   }
 
@@ -77,13 +61,13 @@ const AnswerQuestionsSection = ({ textContent, setQuestionsAnswers }) => {
     const view = {
       initialState: (
         <section
-          className="overflow-y-scroll xl:overflow-hidden"
+          className="h-screen xl:overflow-hidden"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
             height: height.current,
           }}
         >
-          <div className="flex flex-row items-center justify-center px-5 text-white  xl:ml-24 xl:justify-between">
+          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-24 xl:justify-between">
             <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
               <h1 className="text-6xl font-semibold">{textContent.QuizSection.title}</h1>
               <p className="text-3xl font-semibold">{textContent.QuizSection.subtitle}</p>
@@ -110,7 +94,7 @@ const AnswerQuestionsSection = ({ textContent, setQuestionsAnswers }) => {
             height: height.current,
           }}
         >
-          <div className="flex flex-col items-center px-5 text-white xl:ml-24 xl:items-start">
+          <div className="flex flex-col items-center justify-start px-5 text-white md:ml-5 md:items-start xl:ml-24">
             <div
               id={`${currentQuestion + 1}`}
               className={`flex flex-col space-y-8 pb-40 pt-44 xl:items-start xl:space-y-5`}
@@ -184,6 +168,7 @@ const AnswerQuestionsSection = ({ textContent, setQuestionsAnswers }) => {
       ),
       quizCompleted: (
         <section
+          id="quizCompleted"
           className="overflow-y-scroll"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
@@ -223,7 +208,6 @@ const AnswerQuestionsSection = ({ textContent, setQuestionsAnswers }) => {
               <button
                 onClick={() => {
                   setView('results');
-                  window.location.hash = `#${currentQuestion}`;
                 }}
                 className="w-max items-center rounded-lg bg-primary px-5 py-3"
               >
@@ -238,7 +222,6 @@ const AnswerQuestionsSection = ({ textContent, setQuestionsAnswers }) => {
         <>
           <CheckQuestions
             textContent={textContent.CheckQuestions}
-            totalCorrectAnswers={correctAnswers.length}
             answers={savedAnswers}
             correctAnswers={textContent.QuizSection.correctAnswers}
           />

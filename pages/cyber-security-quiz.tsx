@@ -7,8 +7,6 @@ import QuizSection from '../components/CybersecurityQuiz/QuizSection';
 
 const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');
-  const [questionsAnswers, setQuestionsAnswers] = useState([]);
-  const [isQuizFinished, setIsQuizFinished] = useState(false);
 
   return (
     <Layout
@@ -19,11 +17,7 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, foot
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isQuizSection />
 
-      <QuizSection textContent={textContent} setQuestionsAnswers={setQuestionsAnswers} />
-
-      {/* <CheckQuestions textContent={textContent.CheckQuestions} /> */}
-
-      {/* <Footer textContent={footerLang} lang={lang} /> */}
+      <QuizSection textContent={textContent} />
     </Layout>
   );
 };

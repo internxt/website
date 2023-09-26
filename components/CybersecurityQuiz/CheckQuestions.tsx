@@ -2,12 +2,12 @@ import { InstagramLogo } from '@phosphor-icons/react';
 import { TwitterIcon } from 'next-share';
 import QuestionsSection from './QuestionsSection';
 
-const CheckQuestions = ({ textContent, totalCorrectAnswers, answers, correctAnswers }) => {
+const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
   const isCorrectAnswer: Boolean[] = correctAnswers.map((answer, index) => {
     return answers[index] === answer;
   });
 
-  console.log(isCorrectAnswer);
+  const correctAnswerLength = isCorrectAnswer.filter((answer) => answer === true).length;
 
   return (
     <section className="overflow-hidden">
@@ -16,7 +16,7 @@ const CheckQuestions = ({ textContent, totalCorrectAnswers, answers, correctAnsw
           <p className="text-5xl font-semibold text-gray-100">{textContent.lessThan3.title}</p>
           <p className="text-xl text-gray-80">{textContent.lessThan3.subtitle}</p>
           <p className="text-9xl font-bold text-primary">
-            {totalCorrectAnswers}
+            {correctAnswerLength}
             {textContent.totalQuestions}
           </p>
           <p className="text-xl text-gray-80">{textContent.shareTheResults}</p>
