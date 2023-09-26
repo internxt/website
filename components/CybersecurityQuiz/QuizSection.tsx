@@ -30,17 +30,15 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       setView('questions');
       setSavedAnswers([]);
       try {
-        setSavedAnswers(getSavedAnswers);
-        console.log('Saved Answers', getSavedAnswers);
+        if (getSavedAnswers.length > 0) {
+          setSavedAnswers(getSavedAnswers);
+        }
       } catch (error) {
         window.location.pathname = '/cyber-security-quiz';
+        console.log(error);
       }
     }
   }, []);
-
-  useEffect(() => {
-    window.location.hash = hash;
-  }, [hash]);
 
   function handleNextQuestion() {
     if (currentQuestion + 1 === 8) {
@@ -50,7 +48,8 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
       setHash(`#${currentQuestion + 1}`);
     }
-    sessionStorage.setItem('savedAnswers', JSON.stringify(savedAnswers));
+    setSavedAnswers((previousAnswers) => [...previousAnswers, currentCheckbox]);
+    sessionStorage.setItem('savedAnswers', JSON.stringify([...savedAnswers, currentCheckbox]));
     setCurrentCheckbox('');
   }
 
@@ -60,7 +59,6 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       setSavedAnswers((previousAnswers) => previousAnswers.filter((item) => item !== answer));
     } else {
       setCurrentCheckbox(answer);
-      setSavedAnswers((previousAnswers) => [...previousAnswers, answer]);
     }
   }
 
@@ -74,7 +72,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
             height: height.current,
           }}
         >
-          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-24 xl:justify-between">
+          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-32 2xl:ml-60">
             <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
               <h1 className="text-6xl font-semibold">{textContent.QuizSection.title}</h1>
               <p className="text-3xl font-semibold">{textContent.QuizSection.subtitle}</p>
@@ -89,7 +87,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 {textContent.QuizSection.cta}
               </button>
             </div>
-            <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden xl:flex" />
+            <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden h-screen xl:flex" />
           </div>
         </section>
       ),
@@ -101,7 +99,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
             height: height.current,
           }}
         >
-          <div className="flex flex-col items-center justify-start px-5 text-white md:ml-5 md:items-start xl:ml-24">
+          <div className="flex flex-col items-center justify-start px-5 text-white md:ml-5 md:items-start xl:ml-24 2xl:mx-auto 2xl:max-w-screen-xl">
             <div
               id={`${currentQuestion + 1}`}
               className={`flex flex-col space-y-8 pb-40 pt-44 xl:items-start xl:space-y-5`}
@@ -176,13 +174,13 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       quizCompleted: (
         <section
           id="quizCompleted"
-          className="overflow-y-scroll"
+          className="h-screen overflow-y-scroll"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
             height: height.current,
           }}
         >
-          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-24  xl:items-start xl:justify-between">
+          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-32 2xl:ml-60">
             <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
               <p className="text-6xl font-semibold">{textContent.QuizSection.quizCompleted.title}</p>
               <p className="text-2xl font-semibold">{textContent.QuizSection.quizCompleted.subtitle}</p>
@@ -223,7 +221,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 {textContent.QuizSection.quizCompleted.cta}
               </button>
             </div>
-            <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden xl:flex" />
+            <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden h-screen xl:flex" />
           </div>
         </section>
       ),
