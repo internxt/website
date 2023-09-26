@@ -18,17 +18,22 @@ function Checkbox({
   return (
     <label className={`relative h-5 w-5 focus-within:outline-primary ${className}`} onClick={onClick}>
       <div
-        onClick={(e) => e.preventDefault()}
+        onClick={(e) => {
+          e.preventDefault();
+          console.log('clicked', id);
+        }}
         className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center ${
           rounded ?? 'rounded-full'
         } border p-1 text-white ${checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'}`}
       >
         {checked && (
           <div
-            className={`flex h-3 w-2.5 cursor-pointer flex-col items-center justify-center ${
+            className={`flex cursor-pointer flex-col items-center justify-center ${
               rounded ?? 'rounded-full'
-            } border bg-white text-white ${checked && 'bg-white'}`}
-          />
+            } text-white`}
+          >
+            <Check size={16} weight="bold" />
+          </div>
         )}
       </div>
       <input

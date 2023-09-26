@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { PlusCircle } from '@phosphor-icons/react';
+import { Check, CheckCircle, PlusCircle, X, XCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
 
-export default function FaqAccordion({ question, answer, isQuestionBigger = false }) {
+export default function FaqAccordion({ question, answer, isQuestionBigger = false, isCorrectAnswer }) {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -21,6 +21,11 @@ export default function FaqAccordion({ question, answer, isQuestionBigger = fals
         }}
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
+        {isCorrectAnswer ? (
+          <CheckCircle size={32} className="text-green" />
+        ) : (
+          <XCircle size={32} className="text-red" />
+        )}
         <span className={`w-full text-lg font-medium ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}>
           {question}
         </span>

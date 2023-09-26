@@ -7,6 +7,8 @@ import QuizSection from '../components/CybersecurityQuiz/QuizSection';
 
 const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');
+  const [questionsAnswers, setQuestionsAnswers] = useState([]);
+  const [isQuizFinished, setIsQuizFinished] = useState(false);
 
   return (
     <Layout
@@ -17,7 +19,7 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, foot
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isQuizSection />
 
-      <QuizSection textContent={textContent.QuizSection} />
+      <QuizSection textContent={textContent} setQuestionsAnswers={setQuestionsAnswers} />
 
       {/* <CheckQuestions textContent={textContent.CheckQuestions} /> */}
 
@@ -29,10 +31,10 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, foot
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const textContent = require(`../assets/lang/${lang}/cyber-security-quiz.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
+  const navbarLang = require(`../assets/lang/en/navbar.json`);
+  const textContent = require(`../assets/lang/en/cyber-security-quiz.json`);
+  const footerLang = require(`../assets/lang/en/footer.json`);
 
   return {
     props: {
