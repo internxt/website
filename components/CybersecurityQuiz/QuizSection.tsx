@@ -21,13 +21,20 @@ const AnswerQuestionsSection = ({ textContent }) => {
   const footerLang = require(`../../assets/lang/en/footer.json`);
 
   useEffect(() => {
+    const getSavedAnswers = JSON.parse(sessionStorage.getItem('correctAnswers'));
     height.current = window.innerHeight;
 
     if (window.location.hash) {
-      const hash = window.location.hash.replace('#', '');
-      setCurrentQuestion(parseInt(hash));
+      const getHash = window.location.hash;
+      setCurrentQuestion(parseInt(getHash.replace('#', '')));
       setView('questions');
-      setSavedAnswers(JSON.parse(sessionStorage.getItem('correctAnswers')));
+      setSavedAnswers([]);
+      try {
+        setSavedAnswers(getSavedAnswers);
+        console.log('Saved Answers', getSavedAnswers);
+      } catch (error) {
+        window.location.pathname = '/cyber-security-quiz';
+      }
     }
   }, []);
 
@@ -39,11 +46,14 @@ const AnswerQuestionsSection = ({ textContent }) => {
     if (currentQuestion + 1 === 8) {
       setView('quizCompleted');
       //Remove the hash from the url
+      console.log('Saved Answers', savedAnswers);
+      console.log(currentCheckbox);
       window.location.hash = '';
     } else {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
       setHash(`#${currentQuestion + 1}`);
     }
+    sessionStorage.setItem('correctAnswers', JSON.stringify(savedAnswers));
     setCurrentCheckbox('');
   }
 

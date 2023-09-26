@@ -9,6 +9,21 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
 
   const correctAnswerLength = isCorrectAnswer.filter((answer) => answer === true).length;
 
+  const shareUrlFacebook = 'https://www.facebook.com/sharer/sharer.php';
+  const shareUrlTwitter = 'https://twitter.com/intent/tweet';
+  const urlToShare = `https://${window.location.origin}/cyber-security-quiz`; // Reemplaza con la URL que deseas compartir
+  const textToShare = `I just scored ${correctAnswerLength}${textContent.totalQuestions} on Internxt’s cybersecurity quiz! Can you beat my score? Try it and find out!`;
+
+  const facebookShareLink = `${shareUrlFacebook}?u=${encodeURIComponent(urlToShare)}&quote=${encodeURIComponent(
+    textToShare,
+  )}`;
+  const twitterShareLink = `${shareUrlTwitter}?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(
+    textToShare,
+  )}`;
+  const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+    urlToShare,
+  )}&title=${encodeURIComponent(textToShare)}`;
+
   return (
     <section className="overflow-hidden">
       <div className="flex  flex-col items-center justify-center py-40 px-5">
@@ -23,8 +38,33 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
           <div className="flex flex-row items-center justify-center space-x-6">
             <p className="text-xl font-bold text-gray-80">{textContent.shareYourResults}</p>
             <div className="flex flex-row space-x-4">
-              <InstagramLogo size={18} />
-              <TwitterIcon size={18} />
+              <a href={twitterShareLink} target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  className="h-4.5"
+                  src={`/icons/social/cool-gray-60/twitter.svg`}
+                  draggable="false"
+                  alt="twitter icon"
+                />
+              </a>
+              <a href={facebookShareLink} target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  className="h-4.5"
+                  src={`/icons/social/cool-gray-60/facebook.svg`}
+                  draggable="false"
+                  alt="facebook icon"
+                />
+              </a>
+              <a href={linkedInShareLink} target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  className="h-4.5"
+                  src={`/icons/social/cool-gray-60/linkedin.svg`}
+                  draggable="false"
+                  alt="linkedin icon"
+                />
+              </a>
             </div>
           </div>
         </div>
