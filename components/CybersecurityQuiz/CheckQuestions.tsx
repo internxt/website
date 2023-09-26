@@ -24,12 +24,28 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
     urlToShare,
   )}&title=${encodeURIComponent(textToShare)}`;
 
+  function getTitle() {
+    if (correctAnswerLength < 3) {
+      return { title: textContent.lessThan3.title, subtitle: textContent.lessThan3.subtitle };
+    } else if (correctAnswerLength <= 5) {
+      return {
+        title: textContent.lessThan5.title,
+        subtitle: textContent.lessThan5.subtitle,
+      };
+    } else if (correctAnswerLength > 5) {
+      return {
+        title: textContent.moreThan6.title,
+        subtitle: textContent.moreThan6.subtitle,
+      };
+    }
+  }
+
   return (
     <section className="overflow-hidden">
-      <div className="flex  flex-col items-center justify-center py-40 px-5">
+      <div className="flex  flex-col items-center justify-center px-5 pt-40">
         <div className="flex w-full max-w-[847px] flex-col space-y-6 text-center">
-          <p className="text-5xl font-semibold text-gray-100">{textContent.lessThan3.title}</p>
-          <p className="text-xl text-gray-80">{textContent.lessThan3.subtitle}</p>
+          <p className="text-5xl font-semibold text-gray-100">{getTitle().title}</p>
+          <p className="text-xl text-gray-80">{getTitle().subtitle}</p>
           <p className="text-9xl font-bold text-primary">
             {correctAnswerLength}
             {textContent.totalQuestions}

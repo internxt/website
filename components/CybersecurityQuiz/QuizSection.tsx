@@ -10,7 +10,7 @@ interface ViewProps {
   view: Views;
 }
 
-const AnswerQuestionsSection = ({ textContent }) => {
+const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
   const height = useRef(null);
   const [view, setView] = useState<Views>('initialState');
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -21,7 +21,7 @@ const AnswerQuestionsSection = ({ textContent }) => {
   const footerLang = require(`../../assets/lang/en/footer.json`);
 
   useEffect(() => {
-    const getSavedAnswers = JSON.parse(sessionStorage.getItem('correctAnswers'));
+    const getSavedAnswers = JSON.parse(sessionStorage.getItem('savedAnswers'));
     height.current = window.innerHeight;
 
     if (window.location.hash) {
@@ -45,15 +45,12 @@ const AnswerQuestionsSection = ({ textContent }) => {
   function handleNextQuestion() {
     if (currentQuestion + 1 === 8) {
       setView('quizCompleted');
-      //Remove the hash from the url
-      console.log('Saved Answers', savedAnswers);
-      console.log(currentCheckbox);
       window.location.hash = '';
     } else {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
       setHash(`#${currentQuestion + 1}`);
     }
-    sessionStorage.setItem('correctAnswers', JSON.stringify(savedAnswers));
+    sessionStorage.setItem('savedAnswers', JSON.stringify(savedAnswers));
     setCurrentCheckbox('');
   }
 
@@ -218,6 +215,8 @@ const AnswerQuestionsSection = ({ textContent }) => {
               <button
                 onClick={() => {
                   setView('results');
+                  setIsQuizSection(false);
+                  sessionStorage.setItem('savedAnswers', JSON.stringify([]));
                 }}
                 className="w-max items-center rounded-lg bg-primary px-5 py-3"
               >

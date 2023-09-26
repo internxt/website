@@ -7,6 +7,7 @@ import QuizSection from '../components/CybersecurityQuiz/QuizSection';
 
 const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');
+  const [isQuizSection, setIsQuizSection] = useState(true);
 
   return (
     <Layout
@@ -15,9 +16,9 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, foot
       segmentName="Cyber Security Quiz"
       lang={lang}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isQuizSection />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isQuizSection={isQuizSection} />
 
-      <QuizSection textContent={textContent} />
+      <QuizSection textContent={textContent} setIsQuizSection={setIsQuizSection} />
     </Layout>
   );
 };
