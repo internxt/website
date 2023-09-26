@@ -71,7 +71,7 @@ const AnswerQuestionsSection = ({ textContent }) => {
     const view = {
       initialState: (
         <section
-          className="h-screen xl:overflow-hidden"
+          className="h-screen overflow-hidden"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
             height: height.current,
