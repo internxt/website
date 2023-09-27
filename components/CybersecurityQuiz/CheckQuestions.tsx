@@ -1,7 +1,4 @@
-import { InstagramLogo } from '@phosphor-icons/react';
-import { TwitterIcon } from 'next-share';
 import QuestionsSection from './QuestionsSection';
-import RenderDescription from '../shared/RenderDescription';
 import ReactMarkdown from 'react-markdown';
 
 const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
@@ -45,7 +42,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="flex  flex-col items-center justify-center px-5 pt-40">
+      <div className="flex  flex-col items-center justify-center px-5 pt-32 xl:pt-40">
         <div className="flex w-full max-w-[847px] flex-col space-y-6 text-center">
           <p className="text-5xl font-semibold text-gray-100">{getTitle().title}</p>
           <ReactMarkdown className="markdown text-xl text-gray-80">{getTitle().subtitle}</ReactMarkdown>
@@ -59,7 +56,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
             <div className="flex flex-row space-x-4">
               <a href={twitterShareLink} target="_blank" rel="noopener noreferrer">
                 <img
-                  loading="lazy"
+                  loading="eager"
                   className="h-4.5"
                   src={`/icons/social/cool-gray-60/twitter.svg`}
                   draggable="false"
@@ -68,7 +65,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
               </a>
               <a href={facebookShareLink} target="_blank" rel="noopener noreferrer">
                 <img
-                  loading="lazy"
+                  loading="eager"
                   className="h-4.5"
                   src={`/icons/social/cool-gray-60/facebook.svg`}
                   draggable="false"
@@ -77,7 +74,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
               </a>
               <a href={linkedInShareLink} target="_blank" rel="noopener noreferrer">
                 <img
-                  loading="lazy"
+                  loading="eager"
                   className="h-4.5"
                   src={`/icons/social/cool-gray-60/linkedin.svg`}
                   draggable="false"
@@ -87,7 +84,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center py-16">
+        <div className="flex flex-col items-center justify-center xl:py-16">
           <div className="flex flex-col items-center space-y-16">
             <QuestionsSection textContent={textContent.QuestionsSection} isCorrectAnswer={isCorrectAnswer} />
           </div>

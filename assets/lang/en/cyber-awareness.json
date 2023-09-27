@@ -21,7 +21,12 @@
     "description": [
       "The amount of information about you that can be gathered by monitoring your online activity and raiding your accounts is enormous. Knowing how to protect yourself can save you from identity theft, phishing scams, and data breaches down the road.",
       "Once you are familiar with the cybersecurity basics, it's time to test their effectiveness with a Cyber Security Quiz."
-    ]
+    ],
+    "mobileBanner": {
+      "title": "Try our Cybersecurity quiz!",
+      "description": "Find out if you're genuinely safe online!",
+      "cta": "Start the quiz now"
+    }
   },
   "CtaSection": {
     "title": "Safely back up your data where no one will ever see it",
