@@ -13,7 +13,8 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
 
   const shareUrlFacebook = 'https://www.facebook.com/sharer/sharer.php';
   const shareUrlTwitter = 'https://twitter.com/intent/tweet';
-  const urlToShare = `${window.location.origin}/cyber-security-quiz`; // Reemplaza con la URL que deseas compartir
+  const urlToShare = `${window.location.origin}/cyber-security-quiz`;
+  const linkedinTitle = 'Internxt Cybersecurity Quiz';
   const textToShare = `I just scored ${correctAnswerLength}${textContent.totalQuestions} on Internxt’s cybersecurity quiz! Can you beat my score? Try it and find out!`;
 
   const facebookShareLink = `${shareUrlFacebook}?u=${encodeURIComponent(urlToShare)}&quote=${encodeURIComponent(
@@ -24,7 +25,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
   )}`;
   const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
     urlToShare,
-  )}&title=${encodeURIComponent(textToShare)}`;
+  )}&title=${encodeURIComponent(linkedinTitle)}&summary=${encodeURIComponent(textToShare)}&source=Internxt`;
 
   function getTitle() {
     if (correctAnswerLength < 3) {
