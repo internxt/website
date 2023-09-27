@@ -83,22 +83,28 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
             height: height.current,
           }}
         >
-          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-28 2xl:ml-80">
-            <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
-              <h1 className="text-6xl font-semibold">{textContent.QuizSection.title}</h1>
-              <p className="text-3xl font-semibold">{textContent.QuizSection.subtitle}</p>
-              <p className="text-lg">{textContent.QuizSection.description}</p>
-              <button
-                onClick={() => {
-                  setView('questions');
-                  window.location.hash = `#${currentQuestion}`;
-                }}
-                className="w-max rounded-lg bg-primary px-5 py-3"
-              >
-                {textContent.QuizSection.cta}
-              </button>
+          <div className="flex w-full flex-row px-5 text-white lg:ml-8">
+            <div className="mx-auto flex w-full max-w-screen-xl items-center justify-center xl:justify-between 2xl:max-w-full 2xl:justify-center">
+              <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
+                <h1 className="text-6xl font-semibold">{textContent.QuizSection.title}</h1>
+                <p className="text-3xl font-semibold">{textContent.QuizSection.subtitle}</p>
+                <p className="text-lg">{textContent.QuizSection.description}</p>
+                <button
+                  onClick={() => {
+                    setView('questions');
+                    window.location.hash = `#${currentQuestion}`;
+                  }}
+                  className="w-max rounded-lg bg-primary px-5 py-3"
+                >
+                  {textContent.QuizSection.cta}
+                </button>
+              </div>
+              <img
+                src="/images/cyber-awareness/Frame.png"
+                alt="quiz-laptop"
+                className="hidden h-screen pt-10 xl:flex"
+              />
             </div>
-            <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden h-screen xl:flex" />
           </div>
         </section>
       ),
