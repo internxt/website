@@ -50,7 +50,7 @@ const SuiteSection = ({ textContent }) => {
                 target={'_blank'}
                 className="flex cursor-pointer flex-row items-center space-x-1"
               >
-                <p className="text-lg font-semibold text-primary">{card.textUrl}</p>
+                <p className="text-lg font-semibold text-primary hover:underline">{card.textUrl}</p>
                 <CaretRight size={16} weight="bold" className="text-primary" />
               </a>
             </div>

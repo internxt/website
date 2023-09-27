@@ -83,7 +83,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
             height: height.current,
           }}
         >
-          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-32 2xl:ml-60">
+          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-28 2xl:ml-80">
             <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
               <h1 className="text-6xl font-semibold">{textContent.QuizSection.title}</h1>
               <p className="text-3xl font-semibold">{textContent.QuizSection.subtitle}</p>
@@ -110,7 +110,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
             height: height.current,
           }}
         >
-          <div className="flex flex-col items-center justify-start px-5 text-white md:ml-5 md:items-start xl:ml-24 2xl:mx-auto 2xl:max-w-screen-xl">
+          <div className="flex flex-col items-center justify-start px-5 text-white md:ml-5 md:items-start xl:ml-28 2xl:mx-auto 2xl:max-w-screen-xl">
             <div
               id={`${currentQuestion + 1}`}
               className={`flex flex-col space-y-8 pb-40 pt-44 xl:items-start xl:space-y-5`}
