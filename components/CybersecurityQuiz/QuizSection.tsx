@@ -26,6 +26,13 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
 
     if (window.location.hash) {
       const getHash = window.location.hash;
+      if (getHash === '#initialState') {
+        setView('initialState');
+        setSavedAnswers([]);
+        setCurrentCheckbox('');
+        setCurrentQuestion(0);
+        return;
+      }
       setCurrentQuestion(parseInt(getHash.replace('#', '')));
       setView('questions');
       setSavedAnswers([]);
@@ -40,10 +47,13 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
     }
   }, []);
 
+  useEffect(() => {
+    window.location.hash = hash;
+  }, [hash]);
+
   function handleNextQuestion() {
     if (currentQuestion + 1 === 8) {
       setView('quizCompleted');
-      window.location.hash = '';
     } else {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
       setHash(`#${currentQuestion + 1}`);
@@ -66,6 +76,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
     const view = {
       initialState: (
         <section
+          id="initialState"
           className="h-screen overflow-hidden"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
@@ -215,6 +226,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                   setView('results');
                   setIsQuizSection(false);
                   sessionStorage.setItem('savedAnswers', JSON.stringify([]));
+                  window.location.hash = 'initialState';
                 }}
                 className="w-max items-center rounded-lg bg-primary px-5 py-3"
               >
