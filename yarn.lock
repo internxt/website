@@ -1291,11 +1291,6 @@
   dependencies:
     react ">=15.0.0 <17.0.0"
 
-"@internxt/lib@1.2.0":
-  version "1.2.0"
-  resolved "https://npm.pkg.github.com/download/@internxt/lib/1.2.0/172d7929abb3dc34fda044ad9977875791f7a471#172d7929abb3dc34fda044ad9977875791f7a471"
-  integrity sha512-14byNxSU0S0KSc3g+BWiJb7/fcHUfqxkHQRz9fwJhAHNmgOo+Bhx13xXk07KKUzeNX1JymSGEZkVCk0AOQiM+Q==
-
 "@jest/expect-utils@^29.4.2":
   version "29.4.2"
   resolved "https://registry.yarnpkg.com/@jest/expect-utils/-/expect-utils-29.4.2.tgz#cd0065dfdd8e8a182aa350cc121db97b5eed7b3f"

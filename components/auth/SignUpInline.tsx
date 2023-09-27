@@ -2,9 +2,9 @@ import TextInput from '../components/TextInput';
 import PasswordInput from '../components/PasswordInput';
 import PrimaryButton from '../components/PrimaryButton';
 import { signup } from '../../lib/auth';
-import testPasswordStrength from '@internxt/lib/dist/src/auth/testPasswordStrength';
 import { WarningCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
+import testPasswordStrength from './testPasswordStrength';
 
 interface SignUpInlineProps {
   textContent: any;
