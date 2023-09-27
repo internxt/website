@@ -15,13 +15,13 @@
         "C": "A strong password that is difficult to crack."
       },
       {
-        "title": "Of the following passwords, which is the most secure? ",
+        "title": "Of the following passwords, which is the most secure?",
         "A": "1q2w3e4r",
         "B": "D00R8377",
         "C": "Bi%DuIn!So57Lo"
       },
       {
-        "title": "When considering secure cloud storage, what is a key factor to prioritize? ",
+        "title": "When considering secure cloud storage, what is a key factor to prioritize?",
         "A": "The unlimited storage capacity offered by the provider.",
         "B": "The assurance of data privacy and encryption.",
         "C": "Storing data only when you are offline."
@@ -52,7 +52,7 @@
         "D": "Internet of Theories."
       },
       {
-        "title": "Last question! What is the primary purpose of data encryption? ",
+        "title": "Last question! What is the primary purpose of data encryption?",
         "A": "To ensure a faster internet connection.",
         "B": "To scramble data into an unreadable form.",
         "C": "To improve email communication."
@@ -91,38 +91,57 @@
       "title": "Check your results:",
       "faq": [
         {
-          "question": "Question 1: What does the term \"Phishing\" refer to in the context of cybersecurity?",
+          "question": "Question number 1",
           "answer": [
+            "**1. What does the term \"Phishing\" refer to in the context of cybersecurity?**",
             "C) A social engineering attack where attackers impersonate a legitimate entity to trick you into revealing sensitive information."
           ]
         },
         {
           "question": "Question number 2",
-          "answer": ["B) Bi%DuIn!So57Lo (Passwords should be long, unique, and complex to be secure.)"]
+          "answer": [
+            "**2. Of the following passwords, which is the most secure?**",
+            "B) Bi%DuIn!So57Lo (Passwords should be long, unique, and complex to be secure.)"
+          ]
         },
         {
-          "question": "Question number 3:",
-          "answer": ["B) The assurance of data privacy and encryption."]
+          "question": "Question number 3",
+          "answer": [
+            "**3. When considering secure cloud storage, what is a key factor to prioritize?**",
+            "B) The assurance of data privacy and encryption."
+          ]
         },
         {
           "question": "Question number 4",
-          "answer": ["C) Downloading software only from reputable sources."]
+          "answer": [
+            "**4. Which of the following is a standard method to protect your computer from malware?**",
+            "C) Downloading software only from reputable sources."
+          ]
         },
         {
           "question": "Question number 5",
-          "answer": ["A) Encrypting your internet traffic and ensuring online privacy."]
+          "answer": [
+            "**5. What is a VPN (Virtual Private Network) used for in cybersecurity?**",
+            "A) Encrypting your internet traffic and ensuring online privacy."
+          ]
         },
         {
           "question": "Question number 6",
-          "answer": ["C) Providing your fingerprint and a PIN to access an account."]
+          "answer": [
+            "**6. Which of the following is an example of two-factor authentication (2FA)?**",
+            "C) Providing your fingerprint and a PIN to access an account."
+          ]
         },
         {
           "question": "Question number 7",
-          "answer": ["A) Internet of Things."]
+          "answer": ["**7. What does \"IoT\" stand for in the context of cybersecurity?**", "A) Internet of Things."]
         },
         {
           "question": "Question number 8",
-          "answer": ["B) To Scramble data into an unreadable form."]
+          "answer": [
+            "**8. What is the primary purpose of data encryption?**",
+            "B) To Scramble data into an unreadable form."
+          ]
         }
       ]
     }
