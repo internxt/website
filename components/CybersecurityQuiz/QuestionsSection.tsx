@@ -1,5 +1,5 @@
 import React from 'react';
-import FaqAccordion from '../shared/FAQAccordion';
+import FaqAccordion from './FaqAccordion';
 
 const QuestionsSection = ({ textContent, isCorrectAnswer }) => {
   return (
@@ -15,6 +15,7 @@ const QuestionsSection = ({ textContent, isCorrectAnswer }) => {
                 answer={item.answer}
                 isQuestionBigger
                 isCorrectAnswer={isCorrectAnswer[index]}
+                isQuizSection
               />
             </div>
           ))}
