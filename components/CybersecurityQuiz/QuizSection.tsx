@@ -207,9 +207,9 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                   <Link href={'/cyber-awareness'}>{textContent.QuizSection.quizCompleted.cyberAwareness}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <a href={'https://internxt.com/images/cyber-awareness/Internxt-Checklist.pdf'}>
-                    <p>{textContent.QuizSection.quizCompleted.cyberSecurityChecklist}</p>
-                  </a>
+                  <Link href={'/images/cyber-awareness/Internxt-Checklist.pdf'}>
+                    {textContent.QuizSection.quizCompleted.cyberSecurityChecklist}
+                  </Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
                   <Link href={'/what-does-google-know-about-me'}>

@@ -74,15 +74,15 @@
   "CheckQuestions": {
     "lessThan3": {
       "title": "It’s time to brush up on your cybersecurity basics.",
-      "subtitle": "Knowing the foundations of good cybersecurity protects your personal information, data, and devices from online threats and vulnerabilities. Check out our page on cyber awareness to brush on your cyber security basics."
+      "subtitle": "Knowing the foundations of good cybersecurity protects your personal information, data, and devices from online threats and vulnerabilities. Check out [our page on cyber awareness](https://internxt.com/cyber-awareness) to brush on your cyber security basics."
     },
     "lessThan5": {
       "title": "You scored well, and you know some of the basics of cybersecurity.",
-      "subtitle": "Your cybersecurity knowledge is more than most, but there are still some areas where you can learn more. Check out our cyber awareness page to help you get that perfect score!"
+      "subtitle": "Your cybersecurity knowledge is more than most, but there are still some areas where you can learn more. Check out our [cyber awareness page](https://internxt.com/cyber-awareness) to help you get that perfect score!"
     },
     "moreThan6": {
       "title": "Impressive! You really know your cybersecurity basics.",
-      "subtitle": "You understand cybersecurity well and know how to protect yourself online effectively. Why not go beyond the basics and learn more from our cybersecurity blog? Discover how-to articles and tips focused on the best methods to protect your online privacy."
+      "subtitle": "You understand cybersecurity well and know how to protect yourself online effectively. Why not go beyond the basics and learn more from our [cybersecurity blog](https://blog.internxt.com/tag/cybersecurity/)? Discover how-to articles and tips focused on the best methods to protect your online privacy."
     },
     "totalQuestions": "/8",
     "shareTheResults": "Share this cyber security quiz with your friends to see if they can beat your score!",
@@ -91,7 +91,7 @@
       "title": "Check your results:",
       "faq": [
         {
-          "question": "Question number 1",
+          "question": "Question 1: What does the term \"Phishing\" refer to in the context of cybersecurity?",
           "answer": [
             "C) A social engineering attack where attackers impersonate a legitimate entity to trick you into revealing sensitive information."
           ]
@@ -101,7 +101,7 @@
           "answer": ["B) Bi%DuIn!So57Lo (Passwords should be long, unique, and complex to be secure.)"]
         },
         {
-          "question": "Question number 3",
+          "question": "Question number 3:",
           "answer": ["B) The assurance of data privacy and encryption."]
         },
         {
