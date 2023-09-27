@@ -25,7 +25,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
   )}`;
   const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
     urlToShare,
-  )}&title=${encodeURIComponent(linkedinTitle)}&summary=${encodeURIComponent(textToShare)}&source=Internxt`;
+  )}&title=${encodeURIComponent(linkedinTitle)}`;
 
   function getTitle() {
     if (correctAnswerLength < 3) {

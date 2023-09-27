@@ -191,55 +191,61 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       quizCompleted: (
         <section
           id="quizCompleted"
-          className="h-screen overflow-y-scroll"
+          className="h-screen overflow-hidden"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
             height: height.current,
           }}
         >
-          <div className="flex flex-row items-center justify-center px-5 text-white xl:ml-32 2xl:ml-60">
-            <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
-              <p className="text-6xl font-semibold">{textContent.QuizSection.quizCompleted.title}</p>
-              <p className="text-2xl font-semibold">{textContent.QuizSection.quizCompleted.subtitle}</p>
-              <p className="text-lg">{textContent.QuizSection.quizCompleted.description}</p>
-              <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
-                <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/cyber-awareness'}>{textContent.QuizSection.quizCompleted.cyberAwareness}</Link>
-                </li>
-                <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/images/cyber-awareness/Internxt-Checklist.pdf'}>
-                    {textContent.QuizSection.quizCompleted.cyberSecurityChecklist}
-                  </Link>
-                </li>
-                <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/what-does-google-know-about-me'}>
-                    {textContent.QuizSection.quizCompleted.whatGoogleKnows}
-                  </Link>
-                </li>
-                <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-generator'}>{textContent.QuizSection.quizCompleted.passwordGenerator}</Link>
-                </li>
-                <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/virus-scanner'}>{textContent.QuizSection.quizCompleted.freeVirusScanner}</Link>
-                </li>
-                <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-checker'}>{textContent.QuizSection.quizCompleted.passwordChecker}</Link>
-                </li>
-              </ul>
+          <div className="flex w-full flex-row px-5 text-white lg:ml-8">
+            <div className="mx-auto flex w-full max-w-screen-xl items-center justify-center xl:justify-between 2xl:max-w-full 2xl:justify-center">
+              <div className="flex max-w-[529px] flex-col items-center space-y-5 pb-40 pt-44 text-center xl:items-start xl:text-left">
+                <p className="text-6xl font-semibold">{textContent.QuizSection.quizCompleted.title}</p>
+                <p className="text-2xl font-semibold">{textContent.QuizSection.quizCompleted.subtitle}</p>
+                <p className="text-lg">{textContent.QuizSection.quizCompleted.description}</p>
+                <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
+                  <li className="cursor-pointer text-lg font-bold hover:underline">
+                    <Link href={'/cyber-awareness'}>{textContent.QuizSection.quizCompleted.cyberAwareness}</Link>
+                  </li>
+                  <li className="cursor-pointer text-lg font-bold hover:underline">
+                    <Link href={'/images/cyber-awareness/Internxt-Checklist.pdf'}>
+                      {textContent.QuizSection.quizCompleted.cyberSecurityChecklist}
+                    </Link>
+                  </li>
+                  <li className="cursor-pointer text-lg font-bold hover:underline">
+                    <Link href={'/what-does-google-know-about-me'}>
+                      {textContent.QuizSection.quizCompleted.whatGoogleKnows}
+                    </Link>
+                  </li>
+                  <li className="cursor-pointer text-lg font-bold hover:underline">
+                    <Link href={'/password-generator'}>{textContent.QuizSection.quizCompleted.passwordGenerator}</Link>
+                  </li>
+                  <li className="cursor-pointer text-lg font-bold hover:underline">
+                    <Link href={'/virus-scanner'}>{textContent.QuizSection.quizCompleted.freeVirusScanner}</Link>
+                  </li>
+                  <li className="cursor-pointer text-lg font-bold hover:underline">
+                    <Link href={'/password-checker'}>{textContent.QuizSection.quizCompleted.passwordChecker}</Link>
+                  </li>
+                </ul>
 
-              <button
-                onClick={() => {
-                  setView('results');
-                  setIsQuizSection(false);
-                  sessionStorage.setItem('savedAnswers', JSON.stringify([]));
-                  window.location.hash = 'initialState';
-                }}
-                className="w-max items-center rounded-lg bg-primary px-5 py-3"
-              >
-                {textContent.QuizSection.quizCompleted.cta}
-              </button>
+                <button
+                  onClick={() => {
+                    setView('results');
+                    setIsQuizSection(false);
+                    sessionStorage.setItem('savedAnswers', JSON.stringify([]));
+                    window.location.hash = 'initialState';
+                  }}
+                  className="w-max items-center rounded-lg bg-primary px-5 py-3"
+                >
+                  {textContent.QuizSection.quizCompleted.cta}
+                </button>
+              </div>
+              <img
+                src="/images/cyber-awareness/Frame.png"
+                alt="quiz-laptop"
+                className="hidden h-screen pt-10 xl:flex"
+              />
             </div>
-            <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden h-screen xl:flex" />
           </div>
         </section>
       ),
