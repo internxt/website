@@ -17,12 +17,12 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
   const linkedinTitle = 'Internxt Cybersecurity Quiz';
   const textToShare = `I just scored ${correctAnswerLength}${textContent.totalQuestions} on Internxt’s cybersecurity quiz! Can you beat my score? Try it and find out!`;
 
-  const facebookShareLink = `${shareUrlFacebook}?u=${encodeURIComponent(urlToShare)}&p[title]=${encodeURIComponent(
-    textToShare,
-  )}`;
-  const twitterShareLink = `${shareUrlTwitter}?url=${encodeURIComponent(
+  const facebookShareLink = `${shareUrlFacebook}?u=${encodeURIComponent(
     urlToShare,
   )}survey.php?title=${encodeURIComponent(textToShare)}`;
+  const twitterShareLink = `${shareUrlTwitter}?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(
+    textToShare,
+  )}`;
   const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
     urlToShare,
   )}&title=${encodeURIComponent(linkedinTitle)}`;

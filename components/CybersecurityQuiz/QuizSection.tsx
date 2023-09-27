@@ -16,50 +16,20 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
   const [savedAnswers, setSavedAnswers] = useState<string[]>([]);
-  const [hash, setHash] = useState<string>('');
 
   const footerLang = require(`../../assets/lang/en/footer.json`);
 
   useEffect(() => {
-    const getSavedAnswers = JSON.parse(sessionStorage.getItem('savedAnswers'));
     height.current = window.innerHeight;
-
-    if (window.location.hash) {
-      const getHash = window.location.hash;
-      if (getHash === '#initialState') {
-        setView('initialState');
-        setSavedAnswers([]);
-        setCurrentCheckbox('');
-        setCurrentQuestion(0);
-        return;
-      }
-      setCurrentQuestion(parseInt(getHash.replace('#', '')));
-      setView('questions');
-      setSavedAnswers([]);
-      try {
-        if (getSavedAnswers.length > 0) {
-          setSavedAnswers(getSavedAnswers);
-        }
-      } catch (error) {
-        window.location.pathname = '/cyber-security-quiz';
-        console.log(error);
-      }
-    }
   }, []);
-
-  useEffect(() => {
-    window.location.hash = hash;
-  }, [hash]);
 
   function handleNextQuestion() {
     if (currentQuestion + 1 === 8) {
       setView('quizCompleted');
     } else {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
-      setHash(`#${currentQuestion + 1}`);
     }
     setSavedAnswers((previousAnswers) => [...previousAnswers, currentCheckbox]);
-    sessionStorage.setItem('savedAnswers', JSON.stringify([...savedAnswers, currentCheckbox]));
     setCurrentCheckbox('');
   }
 
@@ -92,7 +62,6 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 <button
                   onClick={() => {
                     setView('questions');
-                    window.location.hash = `#${currentQuestion}`;
                   }}
                   className="w-max rounded-lg bg-primary px-5 py-3"
                 >
@@ -179,9 +148,11 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
               </div>
 
               <button
-                disabled={!!currentCheckbox}
+                disabled={currentCheckbox === ''}
                 onClick={handleNextQuestion}
-                className="flex w-full flex-col items-center justify-center rounded-lg bg-primary px-5 py-3 md:w-max"
+                className={`${
+                  currentCheckbox === '' ? 'cursor-not-allowed bg-gray-20' : 'cursor-pointer bg-primary'
+                } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
               >
                 {textContent.QuizSection.nextQuestion}
               </button>
@@ -233,8 +204,6 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                   onClick={() => {
                     setView('results');
                     setIsQuizSection(false);
-                    sessionStorage.setItem('savedAnswers', JSON.stringify([]));
-                    window.location.hash = 'initialState';
                   }}
                   className="w-max items-center rounded-lg bg-primary px-5 py-3"
                 >
