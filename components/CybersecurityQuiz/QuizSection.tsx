@@ -71,7 +71,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
               <img
                 src="/images/cyber-awareness/Frame.png"
                 alt="quiz-laptop"
-                className="hidden h-screen pt-10 xl:flex"
+                className="hidden h-screen xl:flex"
               />
             </div>
           </div>
@@ -211,9 +211,9 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 </button>
               </div>
               <img
-                src="/images/cyber-awareness/Frame.png"
+                src="/images/cyber-awareness/Frame.svg"
                 alt="quiz-laptop"
-                className="hidden h-screen pt-10 xl:flex"
+                className="hidden h-screen xl:flex"
               />
             </div>
           </div>
