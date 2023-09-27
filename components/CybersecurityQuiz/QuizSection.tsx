@@ -179,6 +179,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
               </div>
 
               <button
+                disabled={!!currentCheckbox}
                 onClick={handleNextQuestion}
                 className="flex w-full flex-col items-center justify-center rounded-lg bg-primary px-5 py-3 md:w-max"
               >
