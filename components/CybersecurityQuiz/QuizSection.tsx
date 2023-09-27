@@ -197,26 +197,26 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
               <p className="text-2xl font-semibold">{textContent.QuizSection.quizCompleted.subtitle}</p>
               <p className="text-lg">{textContent.QuizSection.quizCompleted.description}</p>
               <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
-                <li className="cursor-pointer text-lg font-bold hover:font-normal">
+                <li className="cursor-pointer text-lg font-bold hover:underline">
                   <Link href={'/cyber-awareness'}>{textContent.QuizSection.quizCompleted.cyberAwareness}</Link>
                 </li>
-                <li className="cursor-pointer text-lg font-bold hover:font-normal">
+                <li className="cursor-pointer text-lg font-bold hover:underline">
                   <a href={'https://internxt.com/images/cyber-awareness/Internxt-Checklist.pdf'}>
                     <p>{textContent.QuizSection.quizCompleted.cyberSecurityChecklist}</p>
                   </a>
                 </li>
-                <li className="cursor-pointer text-lg font-bold hover:font-normal">
+                <li className="cursor-pointer text-lg font-bold hover:underline">
                   <Link href={'/what-does-google-know-about-me'}>
                     {textContent.QuizSection.quizCompleted.whatGoogleKnows}
                   </Link>
                 </li>
-                <li className="cursor-pointer text-lg font-bold hover:font-normal">
+                <li className="cursor-pointer text-lg font-bold hover:underline">
                   <Link href={'/password-generator'}>{textContent.QuizSection.quizCompleted.passwordGenerator}</Link>
                 </li>
-                <li className="cursor-pointer text-lg font-bold hover:font-normal">
+                <li className="cursor-pointer text-lg font-bold hover:underline">
                   <Link href={'/virus-scanner'}>{textContent.QuizSection.quizCompleted.freeVirusScanner}</Link>
                 </li>
-                <li className="cursor-pointer text-lg font-bold hover:font-normal">
+                <li className="cursor-pointer text-lg font-bold hover:underline">
                   <Link href={'/password-checker'}>{textContent.QuizSection.quizCompleted.passwordChecker}</Link>
                 </li>
               </ul>
