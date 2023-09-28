@@ -159,7 +159,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       quizCompleted: (
         <section
           id="quizCompleted"
-          className="h-screen overflow-hidden"
+          className="h-screen overflow-auto"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
             height: height.current,
