@@ -55,7 +55,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
         >
           <div className="flex h-full w-full flex-row px-5 text-white lg:ml-8 xl:overflow-hidden">
             <div className="mx-auto flex w-full items-center justify-center xl:max-w-screen-xl xl:justify-between 2xl:ml-44 2xl:max-w-full 2xl:justify-center 2xl:space-x-2">
-              <div className="flex max-w-[529px] flex-col items-center justify-center space-y-5 py-32 text-center xl:ml-3 xl:items-start xl:pb-40 xl:pt-44 xl:text-left">
+              <div className="flex w-full max-w-[529px] flex-col items-center justify-center space-y-5 py-32 text-center xl:ml-3 xl:items-start xl:pb-40 xl:pt-44 xl:text-left">
                 <h1 className="text-5xl font-semibold xl:text-6xl">{textContent.QuizSection.title}</h1>
                 <p className="text-3xl font-semibold">{textContent.QuizSection.subtitle}</p>
                 <p className="text-lg">{textContent.QuizSection.description}</p>
@@ -68,11 +68,13 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                   {textContent.QuizSection.cta}
                 </button>
               </div>
-              <img
-                src="/images/cyber-awareness/Frame.svg"
-                alt="quiz-laptop"
-                className="fixed right-0 top-0 hidden xl:flex"
-              />
+              <div className="flex flex-col">
+                <img
+                  src="/images/cyber-awareness/Frame.svg"
+                  alt="quiz-laptop"
+                  className="fixed right-0 top-0 hidden h-screen xl:flex 2xl:relative"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -169,9 +171,9 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
             height: height.current,
           }}
         >
-          <div className="flex w-full flex-row px-5 text-white lg:ml-8">
+          <div className="flex h-full w-full flex-row px-5 text-white lg:ml-8">
             <div className="mx-auto flex w-full items-center justify-center xl:max-w-screen-xl xl:justify-between 2xl:ml-44 2xl:max-w-full 2xl:justify-center 2xl:space-x-2">
-              <div className="flex max-w-[529px] flex-col items-start space-y-5 py-24 lg:pt-44 xl:pb-40">
+              <div className="flex w-full max-w-[529px] flex-col items-start space-y-5 py-24 lg:pt-44 xl:pb-40">
                 <p className="text-center text-6xl font-semibold xl:text-left">
                   {textContent.QuizSection.quizCompleted.title}
                 </p>
@@ -214,11 +216,13 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                   {textContent.QuizSection.quizCompleted.cta}
                 </button>
               </div>
-              <img
-                src="/images/cyber-awareness/Frame.svg"
-                alt="quiz-laptop"
-                className="fixed right-0 top-0 hidden xl:flex"
-              />
+              <div className="flex flex-col">
+                <img
+                  src="/images/cyber-awareness/Frame.svg"
+                  alt="quiz-laptop"
+                  className="fixed right-0 top-0 hidden h-screen xl:flex 2xl:relative"
+                />
+              </div>
             </div>
           </div>
         </section>
