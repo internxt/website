@@ -6,10 +6,14 @@ export default function FaqAccordion({
   question,
   answer,
   isQuestionBigger = false,
+  isCorrectAnswer,
+  isQuizSection = false,
 }: {
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
+  isCorrectAnswer?: boolean;
+  isQuizSection?: boolean;
 }) {
   const [active, setActive] = useState(false);
 
@@ -29,6 +33,11 @@ export default function FaqAccordion({
         }}
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
+        {isCorrectAnswer ? (
+          <CheckCircle size={32} className="text-green" />
+        ) : (
+          <XCircle size={32} className="text-red" />
+        )}
         <span className={`w-full text-lg font-medium ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}>
           {question}
         </span>

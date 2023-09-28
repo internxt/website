@@ -133,5 +133,10 @@
     "id": "cyber-awareness",
     "title": "Cyber Awareness | Internxt",
     "description": "What is cyber awareness, how to stay safe online, and everything you need to know about Cybersecurity Awareness Month this October."
+  },
+  {
+    "id": "cyber-security-quiz",
+    "title": "Cyber Security Quiz: Test your Cyber Security Skills | Internxt",
+    "description": "Test your cyber awareness with this interactive cyber security quiz! Find out if you know the basics of cybersecurity required to protect your online privacy."
   }
 ]
