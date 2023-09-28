@@ -173,8 +173,8 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
         >
           <div className="flex h-full w-full flex-row px-5 text-white lg:ml-8">
             <div className="mx-auto flex w-full items-center justify-center xl:max-w-screen-xl xl:justify-between 2xl:ml-44 2xl:max-w-full 2xl:justify-center 2xl:space-x-2">
-              <div className="flex w-full max-w-[529px] flex-col items-start space-y-5 pt-20 lg:pt-44 xl:pb-40">
-                <p className="text-center text-6xl font-semibold xl:text-left">
+              <div className="flex w-full max-w-[529px] flex-col space-y-5 pt-20 lg:pt-44 xl:pb-40">
+                <p className="text-center text-5xl font-semibold xl:text-left xl:text-6xl">
                   {textContent.QuizSection.quizCompleted.title}
                 </p>
                 <p className="text-center text-2xl font-semibold xl:text-left">
@@ -183,26 +183,34 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 <p className="text-center text-lg xl:text-left">{textContent.QuizSection.quizCompleted.description}</p>
                 <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link href={'/cyber-awareness'}>{textContent.QuizSection.quizCompleted.cyberAwareness}</Link>
+                    <Link target={'_blank'} href={'/cyber-awareness'}>
+                      {textContent.QuizSection.quizCompleted.cyberAwareness}
+                    </Link>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link href={'/images/cyber-awareness/Internxt-Checklist.pdf'}>
+                    <Link target={'_blank'} href={'/images/cyber-awareness/Internxt-Checklist.pdf'}>
                       {textContent.QuizSection.quizCompleted.cyberSecurityChecklist}
                     </Link>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link href={'/what-does-google-know-about-me'}>
+                    <Link target={'_blank'} href={'/what-does-google-know-about-me'}>
                       {textContent.QuizSection.quizCompleted.whatGoogleKnows}
                     </Link>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link href={'/password-generator'}>{textContent.QuizSection.quizCompleted.passwordGenerator}</Link>
+                    <Link target={'_blank'} href={'/password-generator'}>
+                      {textContent.QuizSection.quizCompleted.passwordGenerator}
+                    </Link>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link href={'/virus-scanner'}>{textContent.QuizSection.quizCompleted.freeVirusScanner}</Link>
+                    <Link target={'_blank'} href={'/virus-scanner'}>
+                      {textContent.QuizSection.quizCompleted.freeVirusScanner}
+                    </Link>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link href={'/password-checker'}>{textContent.QuizSection.quizCompleted.passwordChecker}</Link>
+                    <Link target={'_blank'} href={'/password-checker'}>
+                      {textContent.QuizSection.quizCompleted.passwordChecker}
+                    </Link>
                   </li>
                 </ul>
 
