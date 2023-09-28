@@ -47,7 +47,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       initialState: (
         <section
           id="initialState"
-          className="h-screen overflow-auto"
+          className="flex h-screen items-center justify-center"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
             height: height.current,
@@ -75,7 +75,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
       ),
       questions: (
         <section
-          // className="overflow-y-auto"
+          className="h-screen overflow-y-auto"
           style={{
             background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
             height: height.current,
@@ -84,7 +84,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
           <div className="flex flex-col items-center justify-start px-5 text-white md:ml-5 md:items-start xl:ml-28 2xl:mx-auto 2xl:max-w-screen-xl">
             <div
               id={`${currentQuestion + 1}`}
-              className={`flex flex-col space-y-8 py-32 xl:items-start xl:space-y-5 xl:pb-40 xl:pt-44`}
+              className={`flex flex-col space-y-8 py-24 xl:items-start xl:space-y-5 xl:pb-40 xl:pt-44`}
             >
               <p className=" text-2xl font-semibold ">
                 {textContent.QuizSection.question} {currentQuestion + 1}:
@@ -167,7 +167,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
         >
           <div className="flex w-full flex-row px-5 text-white lg:ml-8">
             <div className="mx-auto flex w-full max-w-screen-xl items-center justify-center xl:justify-between 2xl:max-w-full 2xl:justify-center">
-              <div className="flex max-w-[529px] flex-col items-start space-y-5 pb-40 pt-44">
+              <div className="flex max-w-[529px] flex-col items-start space-y-5 py-24 lg:pt-44 xl:pb-40">
                 <p className="text-center text-6xl font-semibold xl:text-left">
                   {textContent.QuizSection.quizCompleted.title}
                 </p>
