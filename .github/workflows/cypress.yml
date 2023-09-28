@@ -21,4 +21,4 @@ jobs:
 
         with:
           build: yarn install
-          start: yarn dev
+          start: yarn build && yarn start
