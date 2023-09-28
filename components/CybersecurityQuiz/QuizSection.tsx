@@ -68,7 +68,11 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                   {textContent.QuizSection.cta}
                 </button>
               </div>
-              <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden h-screen xl:flex" />
+              <img
+                src="/images/cyber-awareness/Frame.svg"
+                alt="quiz-laptop"
+                className="fixed right-0 top-0 hidden xl:flex"
+              />
             </div>
           </div>
         </section>
@@ -210,7 +214,11 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                   {textContent.QuizSection.quizCompleted.cta}
                 </button>
               </div>
-              <img src="/images/cyber-awareness/Frame.svg" alt="quiz-laptop" className="hidden h-screen xl:flex" />
+              <img
+                src="/images/cyber-awareness/Frame.svg"
+                alt="quiz-laptop"
+                className="fixed right-0 top-0 hidden xl:flex"
+              />
             </div>
           </div>
         </section>

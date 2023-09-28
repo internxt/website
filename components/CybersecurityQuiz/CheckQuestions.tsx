@@ -25,7 +25,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
   )}&title=${encodeURIComponent(linkedinTitle)}`;
 
   function getTitle() {
-    if (correctAnswerLength < 3) {
+    if (correctAnswerLength <= 3) {
       return { title: textContent.lessThan3.title, subtitle: textContent.lessThan3.subtitle };
     } else if (correctAnswerLength <= 5) {
       return {
