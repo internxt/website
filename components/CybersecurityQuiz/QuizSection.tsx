@@ -173,7 +173,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
         >
           <div className="flex h-full w-full flex-row px-5 text-white lg:ml-8">
             <div className="mx-auto flex w-full items-center justify-center xl:max-w-screen-xl xl:justify-between 2xl:ml-44 2xl:max-w-full 2xl:justify-center 2xl:space-x-2">
-              <div className="flex w-full max-w-[529px] flex-col items-start space-y-5 py-24 lg:pt-44 xl:pb-40">
+              <div className="flex w-full max-w-[529px] flex-col items-start space-y-5 pt-20 lg:pt-44 xl:pb-40">
                 <p className="text-center text-6xl font-semibold xl:text-left">
                   {textContent.QuizSection.quizCompleted.title}
                 </p>
