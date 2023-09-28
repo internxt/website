@@ -11,7 +11,7 @@ const QuizSection = ({ textContent }) => {
         </div>
 
         <div
-          className="hidden cursor-pointer xl:flex"
+          className="hidden cursor-pointer lg:flex"
           onClick={() => {
             window.open(`${window.location.origin}/cyber-security-quiz`, '_blank');
           }}
@@ -25,7 +25,7 @@ const QuizSection = ({ textContent }) => {
           />
         </div>
 
-        <div className="flex flex-col rounded-[20px] bg-primary bg-opacity-5 p-8">
+        <div className="flex flex-col rounded-[20px] bg-primary bg-opacity-5 p-8 lg:hidden">
           <div className="flex max-w-[263px] flex-col space-y-6 text-center">
             <div className="flex flex-col space-y-2">
               <p className="text-2xl font-semibold">{textContent.mobileBanner.title}</p>
