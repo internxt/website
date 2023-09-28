@@ -4,7 +4,6 @@ import bytes from 'bytes';
 import { CouponType } from './lifetime.cy';
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
-const API_DRIVE_URL = Cypress.env('API_DRIVE_URL');
 
 interface Products {
   [key: string]: {
