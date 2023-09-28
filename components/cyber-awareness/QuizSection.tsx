@@ -32,7 +32,14 @@ const QuizSection = ({ textContent }) => {
               <p className="text-lg text-gray-80">{textContent.mobileBanner.description}</p>
             </div>
             <div className="flex w-full flex-col items-center">
-              <button className="rounded-lg bg-primary px-5 py-3 text-white">{textContent.mobileBanner.cta}</button>
+              <button
+                onClick={() => {
+                  window.open(`${window.location.origin}/cyber-security-quiz`, '_self');
+                }}
+                className="rounded-lg bg-primary px-5 py-3 text-white"
+              >
+                {textContent.mobileBanner.cta}
+              </button>
             </div>
           </div>
         </div>
