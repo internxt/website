@@ -183,34 +183,38 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 <p className="text-center text-lg xl:text-left">{textContent.QuizSection.quizCompleted.description}</p>
                 <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link target={'_blank'} href={'/cyber-awareness'}>
+                    <p onClick={() => window.open(`${window.origin}/cyber-awareness`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.cyberAwareness}
-                    </Link>
+                    </p>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link target={'_blank'} href={'/images/cyber-awareness/Internxt-Checklist.pdf'}>
+                    <p
+                      onClick={() =>
+                        window.open(`${window.origin}/images/cyber-awareness/Internxt-Checklist.pdf`, '_blank')
+                      }
+                    >
                       {textContent.QuizSection.quizCompleted.cyberSecurityChecklist}
-                    </Link>
+                    </p>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link target={'_blank'} href={'/what-does-google-know-about-me'}>
+                    <p onClick={() => window.open(`${window.origin}/what-does-google-know-about-me`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.whatGoogleKnows}
-                    </Link>
+                    </p>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link target={'_blank'} href={'/password-generator'}>
+                    <p onClick={() => window.open(`${window.origin}/password-generator`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.passwordGenerator}
-                    </Link>
+                    </p>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link target={'_blank'} href={'/virus-scanner'}>
+                    <p onClick={() => window.open(`${window.origin}/virus-scanner`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.freeVirusScanner}
-                    </Link>
+                    </p>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <Link target={'_blank'} href={'/password-checker'}>
+                    <p onClick={() => window.open(`${window.origin}/password-checker`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.passwordChecker}
-                    </Link>
+                    </p>
                   </li>
                 </ul>
 
