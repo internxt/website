@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { buttonDeal } from '../TextWithoutJson';
+import Image from 'next/image';
 
 const SquareBanner = () => {
   const [hidePopup, setHidePopup] = useState(false);
@@ -13,16 +14,8 @@ const SquareBanner = () => {
   }
 
   const handleClose = () => {
-    localStorage.setItem('hideSquareBanner', 'true');
     setHidePopup(true);
   };
-
-  useEffect(() => {
-    const hidePopup = localStorage.getItem('hideSquareBanner');
-    if (hidePopup) {
-      setHidePopup(true);
-    }
-  }, []);
 
   const title = () => {
     switch (lang) {
@@ -39,29 +32,28 @@ const SquareBanner = () => {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 hidden h-[300px] w-[300px] flex-col overflow-hidden rounded-2xl bg-primary-dark py-5 px-8 lg:${
+      className={`fixed bottom-8 right-8 z-50 hidden h-[300px] w-[300px] flex-col overflow-hidden rounded-2xl bg-[url(/images/banners/banner_pop_up_cs_month_800x450_300x300_bg.webp)] bg-contain py-7 px-8 lg:${
         hidePopup ? 'hidden' : 'flex'
       }`}
     >
       <div className="flex items-end justify-end">
-        <button onClick={handleClose} className=" right-0 flex h-auto pb-2">
-          <X className=" text-white" size={32} />
+        <button onClick={handleClose} className="absolute top-2 right-2 flex h-auto pb-2">
+          <X className=" text-white" size={24} />
         </button>
       </div>
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
-        <p className="text-6xl font-bold">{title()}</p>
+        <p className="text-2xl font-medium">Cyber Security Awareness Month</p>
+        <div className="flex flex-col">
+          <Image src="/images/banners/80-percent.svg" width={217} height={95} />
+        </div>
         <button
-          className="flex flex-row items-center justify-center space-x-4 rounded-lg bg-white py-3 px-5 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+          className="flex flex-row items-center justify-center space-x-4 rounded-lg bg-white py-3 px-5 text-base font-medium text-gray-80 transition duration-100 focus:outline-none focus-visible:bg-gray-10 active:bg-gray-10 sm:text-lg"
           onClick={() => {
-            router.push('/pricing');
+            router.push('/pricing#priceTable');
           }}
         >
-          {buttonDeal[lang]}
+          Get the deal!
         </button>
-
-        <div className="absolute -left-1 -z-40 flex h-[213px] w-[313px] pb-3">
-          <img src="/images/lifetime/infinity.svg" className="flex h-auto w-auto" />
-        </div>
       </div>
     </div>
   );

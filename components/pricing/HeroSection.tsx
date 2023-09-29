@@ -79,7 +79,7 @@ const HeroSection = ({ textContent }) => {
         <div className="flex flex-col rounded-3xl bg-white">
           <Image
             alt="woman using file storage"
-            src="/images/pricing/cyber-awareness-offer.png"
+            src="/images/pricing/cyber-awareness-offer-per-month.svg"
             className=" rounded-3xl"
             width={496}
             height={520}
