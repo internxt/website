@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "75% OFF", "line2": "our 2TB plan" },
+    "title": { "line1": "80% OFF", "line2": "our annual plans" },
     "lifetimeTitle": { "line1": "Get a", "blueText": " lifetime ", "line2": " Internxt plan!" },
     "feeds": {
       "firstFeed": "30-day money-back guarantee",
@@ -8,7 +8,7 @@
       "thirdFeed": "Anonymous account creation"
     },
     "cta": {
-      "title": "Get 75% OFF now",
+      "title": "Get 80% OFF",
       "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },

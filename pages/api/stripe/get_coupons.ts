@@ -7,6 +7,7 @@ export enum CouponType {
   LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
   CloudwardsCoupon = 'COUPON_CLOUDWARDS',
   Special15Coupon = 'COUPON_SPECIAL15',
+  AnnualDiscount = '80ANNUAL_PLAN_DISCOUNT',
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
