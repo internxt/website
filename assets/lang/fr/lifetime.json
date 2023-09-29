@@ -1,14 +1,14 @@
 {
   "HeroSection": {
-    "title": "Obtenez un plan Internxt à vie !",
-    "description": "Sécurisez tous vos fichiers et souvenirs pour toujours avec un seul paiement unique",
+    "title": "Obtenir un plan à vie d'Internxt",
+    "description": "Sécurisez tous vos fichiers et souvenirs pour toujours avec un seul paiement unique.",
     "cta1": "25% de réduction!",
     "cta2": "Voir les offres à vie"
   },
   "PaymentSection": {
     "limitedOffer": "Offre limitée dans le temps !",
     "title": { "blueText": "Bénéficiez de 25% de réduction", "normalText": " dans tous nos plans à vie" },
-    "description": "Achetez une fois et obtenez la confidentialité pour toujours",
+    "description": "Achetez une fois et obtenez la confidentialité pour toujours.",
     "normalSection": {
       "title": "Explorez tous nos plans exclusifs à vie",
       "description": "Cette semaine seulement, achetez une fois et bénéficiez de la confidentialité pour toujours."
@@ -47,7 +47,7 @@
   },
   "CtaSection": {
     "title": "Le stockage en nuage le plus privé du monde",
-    "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
+    "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt.",
     "cta": "Sélectionnez un plan"
   }
 }
