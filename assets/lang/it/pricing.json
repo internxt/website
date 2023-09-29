@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "75% di sconto ", "line2": "il nostro piano da 2TB" },
+    "title": { "line1": "80% OFF", "line2": "i nostri piani annuali" },
     "lifetimeTitle": { "line1": "Ottenete un piano Internxt ", "blueText": " a vita", "line2": "!" },
     "feeds": {
       "firstFeed": "Garanzia di rimborso di 30 giorni",
@@ -8,7 +8,7 @@
       "thirdFeed": "Creazione di un account anonimo"
     },
     "cta": {
-      "title": "Sconto del 75%",
+      "title": "Ottieni l'80% di sconto",
       "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo non scontato per l'anno successivo."
     }
   },
