@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import ShowSnackbar from '../components/Snackbar';
 import SquareBanner from '../components/banners/SquareBanner';
 
-const excludedPaths = ['/techcult', '/pricing', '/stackcommerce', '/password-generator'];
+const excludedPaths = ['/lifetime', '/pricing', '/affiliates'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
         <ShowSnackbar />
-        <SquareBanner />
+        {isExcludedPath ? null : <SquareBanner />}
         {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
         <Intercom />
       </GlobalUIManager>
