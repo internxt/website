@@ -4,7 +4,7 @@ import FaqAccordion from '../shared/FAQAccordion';
 const FAQSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-white">
-      <div className="flex flex-col items-center justify-center space-y-10 px-10 pb-16 lg:pb-20">
+      <div className="flex flex-col items-center justify-center space-y-10 px-10 pb-16 pt-10 lg:py-20">
         <p className="text-center text-4xl font-semibold">{textContent.title}</p>
         <div className="flex w-full max-w-[850px] flex-col space-y-2">
           {textContent.faq.map((item) => (
