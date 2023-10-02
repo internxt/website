@@ -1,17 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import cache from 'memory-cache';
 
-interface AssetInfo {
-  browser_download_url: string
-}
-
-interface LatestReleaseInfo {
-  id: number,
-  name: string,
-  published_at: Date,
-  assets: AssetInfo[]
-}
-
 export async function getLatestReleaseInfo(user: string, repo: string) {
   const cachedData = cache.get(`${user}/${repo}`);
 
@@ -20,43 +9,51 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
     return cachedData;
   }
 
-  const fetchUrl = `https://api.github.com/repos/${user}/${repo}/releases/latest`;
+  const fetchUrl = `https://api.github.com/repos/${user}/${repo}/releases`;
   const res = await fetch(fetchUrl);
 
   if (res.status !== 200) {
     throw Error('Release not found');
   }
 
-  const info: LatestReleaseInfo = await res.json();
+  const info = await res.json();
 
   let windows = null;
   let linux = null;
   let macos = null;
 
-  info.assets.forEach((asset) => {
-    const match = asset.browser_download_url.match(/\.(\w+)$/);
+  const latestAssets = {
+    exe: null,
+    deb: null,
+    dmg: null,
+  };
 
-    switch (match[1]) {
-      case 'exe':
-        windows = asset.browser_download_url;
-        break;
-      case 'dmg':
-        macos = asset.browser_download_url;
-        break;
-      case 'deb':
-        linux = asset.browser_download_url;
-        break;
-      default:
-        break;
-    }
+  info.forEach((release) => {
+    release.assets.forEach((asset) => {
+      const match = asset.browser_download_url.match(/\.(\w+)$/);
+
+      if (match) {
+        const extension = match[1];
+
+        if (!latestAssets[extension]) {
+          latestAssets[extension] = asset.browser_download_url;
+        }
+      }
+    });
   });
+
+  windows = latestAssets.exe || null;
+  linux = latestAssets.deb || null;
+  macos = latestAssets.dmg || null;
 
   const newCachedData = {
     version: info.name,
     links: {
-      windows, linux, macos
+      windows,
+      linux,
+      macos,
     },
-    cached: false
+    cached: false,
   };
 
   cache.put(`${user}/${repo}`, newCachedData, 1000 * 60 * 5); // 5 minutes
