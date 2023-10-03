@@ -11,7 +11,7 @@
     "description": "Buy once and get privacy and security forever.",
     "normalSection": {
       "title": "Explore all of our exclusive lifetime plans",
-      "description": "This week only, buy once and get privacy and security forever."
+      "description": "Buy once and get privacy and security forever."
     },
     "securePayment": "100% Secure payment, powered by Stripe",
     "firstFeed": "30-day money-back guarantee",
@@ -20,7 +20,7 @@
   },
   "GetLifetimeSection": {
     "title": "Life is not short! But this limited-time deal is...",
-    "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
+    "description": "Internxt is offering a deal on a lifetime of privacy and peace of mind."
   },
   "FeatureSection": {
     "title": "Secure cloud storage with unmatched privacy",
