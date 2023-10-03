@@ -11,7 +11,7 @@
     "description": "Acquista una volta e ottieni privacy e sicurezza per sempre",
     "normalSection": {
       "title": "Esplora tutti i nostri esclusivi piani a vita",
-      "description": "Solo per questa settimana, acquista una volta e ottieni privacy e sicurezza per sempre."
+      "description": "Acquista una volta e ottieni privacy e sicurezza per sempre."
     },
     "securePayment": "Pagamento sicuro al 100%, gestito da Stripe",
     "firstFeed": "Garanzia di rimborso di 30 giorni",
@@ -20,7 +20,7 @@
   },
   "GetLifetimeSection": {
     "title": "La vita non è breve! Ma questa offerta a tempo limitato lo è...",
-    "description": "Internxt offre un'offerta di una settimana per una vita di privacy e tranquillità."
+    "description": "Internxt offre un'offerta per una vita di privacy e tranquillità."
   },
   "FeatureSection": {
     "title": "Cloud storage sicuro con una privacy senza pari",
