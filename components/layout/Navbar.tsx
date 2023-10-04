@@ -211,6 +211,31 @@ export default function Navbar(props: NavbarProps) {
                     {props.textContent.links.about}
                   </a>
                 </Link>
+
+                {props.lang === 'en' && router.pathname === '/temporary-email' ? (
+                  <>
+                    <Link
+                      href="https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1"
+                      locale={props.lang}
+                    >
+                      <a
+                        className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                          props.darkMode || props.isQuizSection
+                            ? `text-white hover:text-cool-gray-20 ${
+                                router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
+                                'text-primary'
+                              }`
+                            : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
+                            ? 'text-primary'
+                            : 'text-cool-gray-70 hover:text-primary'
+                        }
+                    } text-base font-medium`}
+                      >
+                        Need a VPN?
+                      </a>
+                    </Link>
+                  </>
+                ) : undefined}
               </div>
             </div>
           )}
