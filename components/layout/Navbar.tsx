@@ -439,6 +439,28 @@ export default function Navbar(props: NavbarProps) {
                         </a>
                       </Link>
 
+                      {props.lang === 'en' && router.pathname === '/temporary-email' ? (
+                        <>
+                          <Link
+                            href="https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1"
+                            locale={props.lang}
+                          >
+                            <a
+                              role="link"
+                              tabIndex={0}
+                              onClick={() => {
+                                setMenuState(false);
+                              }}
+                              className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-250 duration-300 ${
+                                menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                              }`}
+                            >
+                              Need a VPN?
+                            </a>
+                          </Link>
+                        </>
+                      ) : undefined}
+
                       <a
                         onClick={() => {
                           setMenuState(false);
