@@ -94,7 +94,9 @@ export default function SpecialPriceCard({
             <>
               <p className={` flex flex-row items-start space-x-0.5 font-bold text-black`}>
                 <p className={` flex flex-row items-start space-x-0.5 font-medium`}>
-                  <span className="price text-4xl font-semibold">{price <= 0 ? `${contentText.freePlan}` : price}</span>
+                  <span className="price text-4xl font-semibold">
+                    {price <= 0 ? `${contentText.freePlan}` : price.toFixed(2)}
+                  </span>
                 </p>
               </p>
               <div
@@ -120,7 +122,7 @@ export default function SpecialPriceCard({
                 <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
                   <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
                   <span className="price text-2xl font-semibold line-through">
-                    {price <= 0 ? `${contentText.freePlan}` : price}
+                    {price <= 0 ? `${contentText.freePlan}` : price.toFixed(2)}
                   </span>
                 </p>
               </div>
