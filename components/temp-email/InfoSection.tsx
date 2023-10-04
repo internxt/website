@@ -13,7 +13,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
             target="_blank"
             className="mb-10 flex justify-center"
           >
-            <div className="flex">
+            <div className="hidden md:flex">
               <Image
                 src="/images/temp-email/surfshark-horizontal.png"
                 alt="Gimme Host Offer"
@@ -23,16 +23,16 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
                 quality={100}
               />
             </div>
-            {/* <div className="flex md:hidden">
+            <div className="flex md:hidden">
               <Image
-                src="/images/temp-email/gimmehost-square.png"
+                src="/images/temp-email/surfshark-square.png"
                 alt="Gimme Host Offer"
-                width={350}
-                height={292}
+                width={480}
+                height={320}
                 layout="intrinsic"
                 quality={100}
               />
-            </div> */}
+            </div>
           </a>
         ) : undefined}
 
