@@ -13,6 +13,39 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-4 lg:p-16">
+        {lang === 'en' ? (
+          <a
+            href="https://www.jdoqocy.com/click-100599574-15333879"
+            target="_blank"
+            className="mb-10 flex justify-center"
+          >
+            <div className="hidden md:flex">
+              <img
+                src="https://www.ftjcfx.com/image-100599574-15333879"
+                width={728}
+                height={90}
+                style={{
+                  border: 'none',
+                  borderColor: 'transparent',
+                }}
+                alt="Avast"
+                layout="intrinsic"
+                quality={100}
+              />
+            </div>
+            <div className="flex md:hidden">
+              <img
+                src="https://www.tqlkg.com/image-100599574-15045964"
+                width={300}
+                height={250}
+                alt="Avast"
+                border="0"
+                layout="intrinsic"
+                quality={100}
+              />
+            </div>
+          </a>
+        ) : undefined}
         <SignUpBanner textContent={bannerText} lang={lang} />
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
