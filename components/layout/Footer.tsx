@@ -255,6 +255,16 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.github}
                     </a>
 
+                    <a
+                      href={`/white-paper/Internxt-White-Paper.pdf`}
+                      target="_blank"
+                      rel="noreferrer"
+                      download={true}
+                      className="hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.join.whitePaper}
+                    </a>
+
                     <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </a>
@@ -655,6 +665,9 @@ export default function Footer({
 
                       <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.join.github}
+                      </a>
+                      <a href="/white-paper/Internxt-White-Paper.pdf" download={true} className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.whitePaper}
                       </a>
                       <Link href="/affiliates" target="_blank">
                         {textContent.FooterSection.sections.join.affiliates}
