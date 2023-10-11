@@ -19,6 +19,7 @@ const HeroSection = ({ textContent }) => {
                 alt={textContent.image.alt}
                 width={496}
                 height={520}
+                loading="eager"
               />
             </div>
           </div>
