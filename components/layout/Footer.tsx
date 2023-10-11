@@ -262,7 +262,7 @@ export default function Footer({
                       download={true}
                       className="hover:text-primary"
                     >
-                      {textContent.FooterSection.sections.join.whiteList}
+                      {textContent.FooterSection.sections.join.whitePaper}
                     </a>
 
                     <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
