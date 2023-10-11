@@ -11,27 +11,32 @@ const SecuringSuccess = ({ textContent }) => {
     {
       id: 1,
       icon: Laptop,
-      title: textContent.cards.digitalNomads,
+      title: textContent.cards.digitalNomads.title,
+      pathname: textContent.cards.digitalNomads.pathname,
     },
     {
       id: 2,
       icon: Student,
-      title: textContent.cards.students,
+      title: textContent.cards.students.title,
+      pathname: textContent.cards.students.pathname,
     },
     {
       id: 3,
       icon: Camera,
-      title: textContent.cards.photographers,
+      title: textContent.cards.photographers.title,
+      pathname: textContent.cards.photographers.pathname,
     },
     {
       id: 4,
       icon: Buildings,
-      title: textContent.cards.techCompanies,
+      title: textContent.cards.techCompanies.title,
+      pathname: textContent.cards.techCompanies.pathname,
     },
     {
       id: 5,
       icon: Scales,
-      title: textContent.cards.lawyers,
+      title: textContent.cards.lawyers.title,
+      pathname: textContent.cards.lawyers.pathname,
     },
   ];
 
