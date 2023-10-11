@@ -1,0 +1,43 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "How ",
+      "blueText": "journalists ",
+      "normalText": "protect sources and store information safely"
+    },
+    "description": "Journalists work with and handle mountains of sensitive information daily and must constantly update a ton of online data. Therefore, managing and storing data online is a common and critical practice in their day-to-day work.",
+    "image": {
+      "src": "internxt_for_journalists-1.webp",
+      "alt": ""
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Challenge",
+      "description": [
+        "The first of our case studies explores how the onset of the digital age has radically transformed working methods, particularly for journalists.",
+        "Many traditional cloud storage services hold the decryption keys to your data and thus lack privacy and security. Therefore, a company that owns these keys can theoretically access the sensitive information journalists are working on, causing data leaks or breaches of highly confidential information. For this reason, journalists have to be extra vigilant when choosing how they store their data.",
+        "Security-focused apps are also becoming increasingly present in the world of journalism, especially in countries where it is more dangerous to work as a journalist. Journalists working where censorship is commonplace in the media need a place to store their information securely, safe from parties who may object to a story's content and eventual publication."
+      ]
+    },
+    "solution": {
+      "title": "Solution",
+      "description": [
+        "Internxt uses AES (Advanced Encryption Standard) for its encryption and is widely recognized as the most robust method to protect sensitive information. Encryption technology transforms data from readable (plain text) to an unreadable form (cipher text).",
+        "Encrypted data software is the industry standard companies use to protect data while in transit or kept on a device because it is unreadable to anyone who does not hold the decryption key, so they cannot view or steal the data in its readable form if they gain unauthorized access.",
+        "Another critical aspect of this use case for journalists is the zero-knowledge technology Internxt provides. Thanks to these zero-knowledge technologies, journalists’ information cannot be accessed by third parties in any way. All information is fully encrypted, fragmented, and distributed on a vast peer-to-peer network, making leaks virtually impossible."
+      ]
+    },
+    "results": {
+      "title": "Results",
+      "description": [
+        "Thanks to Internxt’s secure cloud, journalists can accomplish their work safely without succumbing to paranoia and worrying about compromised files. By implementing Internxt, they can upload and download confidential information from any device and set strict access permissions. The story and sources stay safe, and freedom of speech stays protected."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Freedom of speech, freedom to privacy",
+    "description": "Secure your stories with Internxt",
+    "cta": "Try Internxt risk-free"
+  }
+}

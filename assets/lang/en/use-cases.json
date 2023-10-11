@@ -21,17 +21,17 @@
       },
       {
         "title": "39 seconds",
-        "description": "an internxt security attack takes place"
+        "description": "an internet security attack takes place"
       }
     ],
-    "secondaryMainText": "Internxt is committed to solving this problem with our privacy-centric product suite:",
-    "secondaryDescription": "Internxt Drive, Photos, and Send. We have successfully provided our customers secure encrypted services based on zero-knowledge policies. You can learn more about our customer experience from our use cases on how Internxt has benefitted students, digital nomads, and more."
+    "secondaryMainText": "Internxt is committed to solving this problem with our privacy-centric product suite.",
+    "secondaryDescription": "By creating Internxt Drive, Photos, and Send, we have successfully provided our customers with secure encrypted services based on zero-knowledge policies. You can learn more about our customer experience from our use cases on how Internxt has benefitted students, digital nomads, and more."
   },
   "SecuringSuccess": {
     "title": "Securing success: Internxt in action",
     "description": "Real-world success stories from industries that regained control of their online privacy by switching to Internxt.",
     "cards": {
-      "journalists": "Journalists",
+      "journalists": { "title": "Journalists", "pathname": "internxt-for-journalists" },
       "digitalNomads": "Digital nomads",
       "students": "Students",
       "photographers": "Photographers",

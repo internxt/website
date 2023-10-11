@@ -5,7 +5,8 @@ const SecuringSuccess = ({ textContent }) => {
     {
       id: 0,
       icon: MicrophoneStage,
-      title: textContent.cards.journalists,
+      title: textContent.cards.journalists.title,
+      pathname: textContent.cards.journalists.pathname,
     },
     {
       id: 1,
@@ -48,7 +49,12 @@ const SecuringSuccess = ({ textContent }) => {
               className="flex w-full max-w-[256px] flex-col items-start space-y-6 rounded-2xl bg-white p-8 pb-14"
             >
               <card.icon size={32} className="text-primary" />
-              <div className=" flex cursor-pointer flex-row items-center space-x-2 hover:underline">
+              <div
+                className=" flex cursor-pointer flex-row items-center space-x-2 hover:underline"
+                onClick={() => {
+                  window.open(`${window.location.origin}/${card.pathname}`, '_blank');
+                }}
+              >
                 <h3 className="whitespace-nowrap text-2xl font-medium text-gray-80">{card.title}</h3>
                 <CaretRight size={24} className="text-primary" />
               </div>

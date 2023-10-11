@@ -21,7 +21,7 @@ const UseCases = ({ metatagsDescriptions, navbarLang, langJson, footerLang, lang
 
       <SecuringSuccess textContent={langJson.SecuringSuccess} />
 
-      <CtaSection textContent={langJson.CtaSection} url={'https://drive.internxt.com/new'} />
+      <CtaSection textContent={langJson.CtaSection} url={`${process.env.NEXT_PUBLIC_DRIVE_WEB}/new`} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
