@@ -49,13 +49,28 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
+        {lang === 'en' ? (
+          <>
+            <div className="hidden md:flex">
+              <a href="https://www.anrdoezrs.net/click-100599574-15111876" target="_blank">
+                <img src="https://www.ftjcfx.com/image-100599574-15111876" width="936" height="120" alt="" />
+              </a>
+            </div>
+            <div className="flex md:hidden">
+              <a href="https://www.kqzyfj.com/click-100599574-15111884" target="_blank">
+                <img src="https://www.ftjcfx.com/image-100599574-15111884" width="672" height="560" alt="" />
+              </a>
+            </div>
+          </>
+        ) : undefined}
+
         <SignUpBanner textContent={bannerText} lang={lang} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
         <div className="gap flex flex-row flex-wrap items-center justify-center ">
           <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl p-10">
             {cards1.map((item) => (
-              <div className="1 100% flex flex-1">
+              <div className="1 100% flex flex-1" key={item.title}>
                 <div className="flex h-full flex-col rounded-2xl bg-white p-10">
                   <div className="flex max-w-[200px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
                     <item.icon className="h-8 w-8 text-primary" />
