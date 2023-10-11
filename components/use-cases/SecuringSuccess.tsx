@@ -41,7 +41,7 @@ const SecuringSuccess = ({ textContent }) => {
           <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
           <p className="font-gray-80 max-w-[750px] text-xl">{textContent.description}</p>
         </div>
-        <div className="flex max-w-[808px] flex-row flex-wrap gap-5">
+        <div className="flex max-w-[808px] flex-row flex-wrap items-center justify-center gap-5">
           {cards.map((card) => (
             <div
               key={card.id}
