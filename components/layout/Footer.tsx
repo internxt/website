@@ -255,6 +255,16 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.github}
                     </a>
 
+                    <a
+                      href="/downloads/Internxt-White-Paper.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                      download={true}
+                      className="hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.join.whiteList}
+                    </a>
+
                     <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </a>
