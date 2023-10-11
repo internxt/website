@@ -1,0 +1,46 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "How ",
+      "blueText": "lawyers ",
+      "normalText": "secure client data and information for upcoming trials"
+    },
+    "description": "Lawyers regularly have to deal with sensitive and confidential client data, and mishandling this data could put lawyers or law firms at risk of huge fines and legal liabilities due to mishandling or losing client information.",
+    "image": {
+      "src": "internxt_for_lawyers.webp",
+      "alt": "Internxt for lawyers"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Challenge",
+      "description": [
+        "The legal sector needs to catch up to the business world because lawyers and law firms have been slower than other use cases to adopt cloud storage in their legal practice. However, since COVID-19 and the rise of online meetings and courtrooms, the legal profession is embracing the cloud faster than before.",
+        "Lawyers adopting the cloud as their cloud storage solution still face many challenges in securing and protecting their data against cyberattacks, including ransomware and data breaches.",
+        "Law firms also have assumptions about the difficulties they believe switching to cloud storage means. For example, law firms are reluctant to store their files in the cloud because they believe the process is complex, time-consuming, and costly."
+      ]
+    },
+    "solution": {
+      "title": "Solution",
+      "description": [
+        "Since 2020, however, law firms have started to adopt cloud storage faster, despite previous concerns. Lawyers are digitizing their old and recent files and preparing to upload them to the cloud. Law firms favor Internxt due to its clean, easy-to-use interface, affordable and flexible storage plans, and quick upload speeds of large files.",
+        "As this use case is related to the field of law, Internxt has additional benefits for law firms utilizing cloud storage. From a legal point of view, companies such as Internxt follow privacy laws from the General Data Protection Regulation (GDPR), which governs how companies can use, process, and store personal data.",
+        "The GDPR has a global reputation for protecting user data from its many policies that were created to minimize data breaches and other cyberattacks. Not only does this help build trust with its clients by demonstrating a commitment to handling confidential information, but it also helps protect law firms in the case of an attack, as the GDPR implements swift action to minimize the effects of a cyberattack."
+      ]
+    },
+    "results": {
+      "title": "Results",
+      "description": [
+        "As more law firms and lawyers digitize their old files and move toward cloud storage, Internxt can provide the services needed to make this switch as easy, affordable, and secure as possible.",
+        "Due to the emphasis on security and privacy, many law professionals have benefited from Internxt’s secure, encrypted cloud storage and other privacy-centric apps, such as Internxt Send, to ensure secure communication and data protection between clients and other law professionals.",
+        "Within the legal profession, therefore, as is the case with other case studies from Internxt, ensuring the secure handling of sensitive data is essential, not only for the reputation of the law firm but also for the clients they represent.",
+        "Internxt is a solution that fits well with the security and diligence required by law firms to protect data due to its high standards of encryption, two-factor authentication, and methods to control access to specific files and documents."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Privacy: the legal right for everyone",
+    "description": "Defend your files with Internxt.",
+    "cta": "Learn more about Internxt"
+  }
+}

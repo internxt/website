@@ -33,10 +33,10 @@
     "cards": {
       "journalists": { "title": "Journalists", "pathname": "internxt-for-journalists" },
       "digitalNomads": { "title": "Digital nomads", "pathname": "internxt-for-digital-nomads" },
-      "students": "Students",
-      "photographers": "Photographers",
-      "techCompanies": "Tech companies",
-      "lawyers": "Lawyers"
+      "students": { "title": "Students", "pathname": "internxt-for-students" },
+      "photographers": { "title": "Photographers", "pathname": "internxt-for-photographers" },
+      "techCompanies": { "title": "Tech companies", "pathname": "internxt-for-tech-companies" },
+      "lawyers": { "title": "Lawyers", "pathname": "internxt-for-lawyers" }
     }
   },
   "CtaSection": {
