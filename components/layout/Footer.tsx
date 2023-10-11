@@ -256,7 +256,7 @@ export default function Footer({
                     </a>
 
                     <a
-                      href={`/white-paper/Internxt-White-Paper.pdf`}
+                      href={`/whitepaper/internxt-white-paper.pdf`}
                       target="_blank"
                       rel="noreferrer"
                       download={true}
@@ -666,7 +666,7 @@ export default function Footer({
                       <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.join.github}
                       </a>
-                      <a href="/white-paper/Internxt-White-Paper.pdf" download={true} className="hover:text-primary">
+                      <a href="/whitepaper/internxt-white-paper.pdf" download={true} className="hover:text-primary">
                         {textContent.FooterSection.sections.join.whitePaper}
                       </a>
                       <Link href="/affiliates" target="_blank">
