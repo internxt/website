@@ -256,7 +256,7 @@ export default function Footer({
                     </a>
 
                     <a
-                      href={`${window.location.origin}/downloads/Internxt-White-Paper.pdf`}
+                      href={`/white-paper/Internxt-White-Paper.pdf`}
                       target="_blank"
                       rel="noreferrer"
                       download={true}
@@ -667,7 +667,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.join.github}
                       </a>
                       <a
-                        href="/downloads/Internxt-White-Paper.pdf"
+                        href="/white-paper/Internxt-White-Paper.pdf"
                         target="_blank"
                         rel="noreferrer"
                         download={true}
