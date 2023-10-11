@@ -256,7 +256,7 @@ export default function Footer({
                     </a>
 
                     <a
-                      href="/downloads/Internxt-White-Paper.pdf"
+                      href={`${window.location.origin}/downloads/Internxt-White-Paper.pdf`}
                       target="_blank"
                       rel="noreferrer"
                       download={true}
