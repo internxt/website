@@ -38,11 +38,11 @@ const CybersecurityIsEssential = ({ textContent }) => {
 
         <p className="text-center text-5xl font-semibold text-gray-100">{textContent.title}</p>
 
-        <div className="flex flex-row flex-wrap items-center justify-center gap-6">
+        <div className="flex w-full flex-row flex-wrap items-center justify-center gap-6">
           {cards.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center"
+              className="flex w-full max-w-[350px] flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center"
             >
               <card.icon size={48} className="text-primary" />
               <h3 className="text-5xl font-semibold text-primary">{card.title}</h3>
