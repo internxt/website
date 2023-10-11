@@ -138,5 +138,10 @@
     "id": "cyber-security-quiz",
     "title": "Cyber Security Quiz: Test your Cyber Security Skills | Internxt",
     "description": "Test your cyber awareness with this interactive cyber security quiz! Find out if you know the basics of cybersecurity required to protect your online privacy."
+  },
+  {
+    "id": "use-cases",
+    "title": "Use Cases | Internxt",
+    "description": "Discover how Internxt cloud storage has given individuals and businesses effective solutions to improve online security and privacy in these successful case studies examples."
   }
 ]
