@@ -1,0 +1,48 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "How ",
+      "blueText": "students ",
+      "normalText": "get prepared and stay organized"
+    },
+    "description": "Students need a secure, accessible point of access for their files to work on, share, and collaborate with others. To mitigate the risks of losing their assignments, students can utilize cloud storage to organize their work and keep it private.",
+    "image": {
+      "src": "internxt_for_students.webp",
+      "alt": "Internxt for students"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Challenge",
+      "description": [
+        "Previously, students would have to rely on hard drives or USBs to store their data, but this came with risks of either forgetting or losing the device and leaving the student with no work to present. Furthermore, due to regularly traveling from home to school and between classrooms, students are at further risk of their devices being stolen, corrupted, or broken.",
+        "Many cloud storage providers are available on the market today, and many of the most popular ones have endless collaborative options and integrations that are extremely useful in a student environment.",
+        "However, not all storage clouds have secure encryption options, and those that do may not operate on zero-knowledge technology, meaning the cloud storage provider holds the key to decrypt and view a student's files or data.",
+        "Lack of encryption also raises issues for the school or university and its staff members, as these organizations keep the Personal Identifiable Information (PII) of students potentially as young as 11 years old. Other sensitive information, such as student and teacher emails, addresses, and phone numbers, is also at risk for education if not secured efficiently."
+      ]
+    },
+    "solution": {
+      "title": "Solution",
+      "description": [
+        "Students need a secure conduit to transfer files between their classmates and teachers without the risk of an external party, be it a hacker or another student, stealing or plagiarizing their assignments.",
+        "This case study highlights the effectiveness of an Internxt plan as a method to allow users to share encrypted documents at rest and in transit, which can be protected further by restricting access and permissions to files, allowing for safe and secure collaboration with classmates.",
+        "With peace of mind that their work is secure, students can focus on working productively with an Internxt account and enjoy coordinating with school professors and colleagues, using collaboration tools, encouraging dialogue, optimizing school organization, and sharing ideas.",
+        "Students can enjoy these advantages outside the school or university environment, so if students need to work from home or on a project later, Internxt allows them to enjoy this flexibility in their work.",
+        "Many use cases highlight that the cost of secure cloud storage can be an issue for students as it is another expense that students have to fit into their budget. With Internxt, students are entitled to a special discount on any Internxt subscription plan. Reach out to us if you are eligible!"
+      ]
+    },
+    "results": {
+      "title": "Results",
+      "description": [
+        "A secure cloud storage provider benefits students because they can upload and share documents privately with their colleagues or classmates.",
+        "Internxt makes possible encrypted file storage and sharing and access files from any device in a secure way. It makes daily communication easy between students, teachers, and parents and aligns with the education system's rules for protecting student data.",
+        "The importance of any education use case highlights that as technology grows within the classroom, it becomes more integral to a student’s learning experience. Schools that use Internxt ensure that education’s future remains private and secure for students, teachers, and parents."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Freedom of speech, freedom to privacy",
+    "description": "Secure your stories with Internxt",
+    "cta": "Try Internxt risk-free"
+  }
+}

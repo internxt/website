@@ -32,7 +32,7 @@
     "description": "Real-world success stories from industries that regained control of their online privacy by switching to Internxt.",
     "cards": {
       "journalists": { "title": "Journalists", "pathname": "internxt-for-journalists" },
-      "digitalNomads": "Digital nomads",
+      "digitalNomads": { "title": "Digital nomads", "pathname": "internxt-for-digital-nomads" },
       "students": "Students",
       "photographers": "Photographers",
       "techCompanies": "Tech companies",

@@ -1,0 +1,48 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "How ",
+      "blueText": "digital nomads ",
+      "normalText": "gain the freedom to work from anywhere"
+    },
+    "description": "The number of digital nomads has skyrocketed globally, and though this is still a relatively new phenomenon, the digital nomad lifestyle is here to stay. Managing information tools is therefore essential to securing their work.",
+    "image": {
+      "src": "Internxt_for_digital_nomads.webp",
+      "alt": "Internxt for digital nomads"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Challenge",
+      "description": [
+        "Digital nomads confront identical issues across this case study, regardless of their travel preferences, particularly regarding security and online privacy. Moving from one area to the next exposes digital nomads to cyberattacks and data breaches. Although many digital nomads may use a Virtual Private Network for protection, more action is needed to reduce the risks of data losses or cyberattacks.",
+        "Digital nomads often deal with unanticipated costs, burnout, unknown housing conditions, concerns about long-term income, visas, taxes, loneliness, and physical theft. On top of this, without proper measures to protect and back up data efficiently, digital nomads are also at risk of losing their data or their privacy.",
+        "Another challenge this use case must consider is location tracking. As digital nomads are often on the move, their data is more likely to be collected, tracked, and sold. Online monitoring is one of the most contentious forms of privacy breach, so keeping this data safe from third parties is paramount for this case study."
+      ]
+    },
+    "solution": {
+      "title": "Solution",
+      "description": [
+        "Internxt makes it easy for digital nomads to use cloud storage to store their work files or documents.",
+        "Backup features allow digital nomads a safe and reliable option if they lose their stored files. A reliable backup option assures digital nomads will not lose crucial or sensitive work information and can easily and quickly restore essential data whenever necessary.",
+        "Cloud storage alleviates concerns regarding traditional backup solutions, such as USBs and hard drives. Physical media brings higher risks of data corruption, theft, or the device being broken or stolen; if anything happens to the device, the data is essentially lost forever.",
+        "Internxt solves this solution for digital nomads by being accessible across all devices, from Windows, MacOS, Android, iOS, and Linux, eliminating the need for bulky and expensive physical storage devices.",
+        "Most digital nomads are more familiar with technology and the idea of using cloud storage than other case studies; even so, Internxt designed its interface to be clear, simple, and easy to use for everyone. Focusing on ease of use allows this use case to focus on further benefits for digital nomads.",
+        "An Internxt plan allows users to share files with the rest of the work team and collaborate on them from anywhere. It also facilitates remote learning and training, making communicating among departments easier, scaling the learning process, and tracking productivity within the team."
+      ]
+    },
+    "results": {
+      "title": "Results",
+      "description": [
+        "Digital nomads use Internxt cloud storage to store files, calendars, templates, schedules, and more from any device. As a result, their work process is more manageable, and work productivity and efficiency improve drastically due to the ease of collaboration and file sharing with their clients or in their company.",
+        "The Internxt cloud allows them to do this securely, which helps them have fewer worries that they will become a victim of phishing, malware, or ransomware, the top three threats that could corrupt, damage, or steal a digital nomad's sensitive data and files.",
+        "In case of a cyberattack, Internxt has options to back up files every 6, 12, or 24 hours, including manual backups, so digital nomads can go back to a recent version of a backed-up file and reduce the risk of losing vast amounts of work or data."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt: your passport to online privacy",
+    "description": "Secure your work, wherever you are.",
+    "cta": "Make the switch to privacy"
+  }
+}
