@@ -44,10 +44,10 @@ const SquareBanner = () => {
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-2xl font-medium">Cyber Security Awareness Month</p>
         <div className="flex flex-col">
-          <Image src="/images/banners/80-percent.svg" width={217} height={95} />
+          <Image src="/images/banners/80off-white.svg" width={217} height={95} />
         </div>
         <button
-          className="flex flex-row items-center justify-center space-x-4 rounded-lg bg-white py-3 px-5 text-base font-medium text-gray-80 transition duration-100 focus:outline-none focus-visible:bg-gray-10 active:bg-gray-10 sm:text-lg"
+          className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-gray-10 active:bg-gray-10 sm:text-lg"
           onClick={() => {
             router.push('/pricing#priceTable');
           }}
