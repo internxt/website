@@ -5,7 +5,6 @@ const excludedPaths: string[] = [
   `/badges`,
   `/fonts`,
   `/images`,
-  `/media-area`,
   `/icons`,
   `/img`,
   `/logos`,
