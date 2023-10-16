@@ -48,7 +48,7 @@ const HeroSection = ({ textContent }) => (
             <img
               loading="eager"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/team-at-Internxt.webp"
+              src="/images/about/photos/team-at-Internxt-1.webp"
               draggable="false"
               alt="Team at Internxt"
             />
