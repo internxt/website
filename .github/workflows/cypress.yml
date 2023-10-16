@@ -18,6 +18,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com'
       - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
+      - run: echo '${{ secrets.PAYMENTS_API }}' > .env.local
       - run: echo "registry=https://registry.yarnpkg.com/" > .npmrc
       - run: echo "@internxt:registry=https://npm.pkg.github.com" >> .npmrc
       # You cannot read packages from other private repos with GITHUB_TOKEN
