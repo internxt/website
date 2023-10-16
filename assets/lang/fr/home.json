@@ -1,7 +1,8 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "Choisissez la confidentialité"
+      "line1": "Choisissez la confidentialité",
+      "blueText": "avec Internxt"
     },
     "subtitle": "Protégez votre vie privée avec notre suite de services cloud sécurisés, open-source et chiffrés. Internxt Drive, Photos, Send, et plus encore.",
     "cta": {

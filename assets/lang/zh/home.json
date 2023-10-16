@@ -1,7 +1,8 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "站在隐私的角度，切换到Internxt"
+      "line1": "站在隐私的角度，切换到",
+      "blueText": "Internxt"
     },
     "subtitle": "用我们的开源和加密的安全云服务套件来保护你的隐私。Internxt Drive, Photos, Send, 和更多。",
     "cta": {

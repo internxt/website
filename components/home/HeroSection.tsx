@@ -3,7 +3,6 @@ import Marquee from 'react-fast-marquee';
 import { goToSignUpURL } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
 import Image from 'next/image';
-import RevealX from '../components/RevealX';
 import Header from '../shared/Header';
 
 export default function HeroSection({ textContent, lang }) {
@@ -59,8 +58,8 @@ export default function HeroSection({ textContent, lang }) {
           {/* Mobile view */}
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
             <Header>
-              {title}
-              <span className=" text-primary">{Internxt}</span>
+              {textContent.title.line1}{' '}
+              <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
             </Header>
 
             <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8">{textContent.subtitle}</h2>
