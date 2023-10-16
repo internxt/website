@@ -183,26 +183,6 @@ export default function Footer({
                       <a className="hover:text-primary">{textContent.FooterSection.sections.company.privacy}</a>
                     </Link>
 
-                    <Link href="/open-source" locale={lang} passHref>
-                      <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                        {textContent.FooterSection.sections.company.openSource}
-                        {lang !== 'en' && (
-                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                            {textContent.FooterSection.new}
-                          </div>
-                        )}
-                      </a>
-                    </Link>
-                    {lang === 'en' && (
-                      <Link href="/media-area" locale={lang} passHref>
-                        <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                          {textContent.FooterSection.sections.company.mediaArea}
-                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                            {textContent.FooterSection.new}
-                          </div>
-                        </a>
-                      </Link>
-                    )}
                     <a
                       href={`https://blog.internxt.com/${
                         lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'
@@ -214,9 +194,38 @@ export default function Footer({
                       {textContent.FooterSection.sections.company.security}
                     </a>
 
+                    <Link href="/open-source" locale={lang} passHref>
+                      <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                        {textContent.FooterSection.sections.company.openSource}
+                        {lang !== 'en' && (
+                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                            {textContent.FooterSection.new}
+                          </div>
+                        )}
+                      </a>
+                    </Link>
+
                     <Link href="/legal" locale={lang} passHref>
                       <a className="hover:text-primary">{textContent.FooterSection.sections.company.legal}</a>
                     </Link>
+
+                    {lang === 'en' && (
+                      <>
+                        <Link href="/media-area" locale={lang} passHref>
+                          <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                            {textContent.FooterSection.sections.company.mediaArea}
+                          </a>
+                        </Link>
+                        <Link href="/use-cases" locale={lang} passHref>
+                          <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                            {textContent.FooterSection.sections.company.useCases}
+                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                              {textContent.FooterSection.new}
+                            </div>
+                          </a>
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -592,27 +601,6 @@ export default function Footer({
                         <a>{textContent.FooterSection.sections.company.privacy}</a>
                       </Link>
 
-                      <Link href="/open-source" locale={lang} passHref>
-                        <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                          {textContent.FooterSection.sections.company.openSource}
-                          {lang !== 'en' && (
-                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                              {textContent.FooterSection.new}
-                            </div>
-                          )}
-                        </a>
-                      </Link>
-                      {lang === 'en' && (
-                        <Link href="/media-area" locale={lang} passHref>
-                          <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                            {textContent.FooterSection.sections.company.mediaArea}
-                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                              {textContent.FooterSection.new}
-                            </div>
-                          </a>
-                        </Link>
-                      )}
-
                       <Link
                         href={`https://blog.internxt.com/${
                           lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'
@@ -624,13 +612,38 @@ export default function Footer({
                         <div>{textContent.FooterSection.sections.company.security}</div>
                       </Link>
 
+                      <Link href="/open-source" locale={lang} passHref>
+                        <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                          {textContent.FooterSection.sections.company.openSource}
+                          {lang !== 'en' && (
+                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                              {textContent.FooterSection.new}
+                            </div>
+                          )}
+                        </a>
+                      </Link>
+
                       <Link href="/legal" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.company.legal}</a>
                       </Link>
 
-                      <Link href={'https://help.internxt.com'} target={'_blank'} locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.support}</a>
-                      </Link>
+                      {lang === 'en' && (
+                        <>
+                          <Link href="/media-area" locale={lang} passHref>
+                            <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                              {textContent.FooterSection.sections.company.mediaArea}
+                            </a>
+                          </Link>
+                          <Link href="/use-cases" locale={lang} passHref>
+                            <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                              {textContent.FooterSection.sections.company.useCases}
+                              <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                                {textContent.FooterSection.new}
+                              </div>
+                            </a>
+                          </Link>
+                        </>
+                      )}
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -658,6 +671,10 @@ export default function Footer({
                       <a href="https://drive.internxt.com/new" target="_blank">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
+
+                      <Link href={'https://help.internxt.com'} target={'_blank'} locale={lang} passHref>
+                        <a>{textContent.FooterSection.sections.company.support}</a>
+                      </Link>
 
                       <a href="https://drive.internxt.com/login" target="_blank">
                         {textContent.FooterSection.sections.join.login}

@@ -1,0 +1,47 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "How ",
+      "blueText": "photographers ",
+      "normalText": "protect their work and maintain copyrights"
+    },
+    "description": "Copyright and Image Security are always hot topics for photographer case studies. Photographers have new opportunities and challenges balancing online promotion and picture protection as online content sharing evolves.",
+    "learnMore": "Learn more",
+    "image": {
+      "src": "Internxt_for_photographers.webp",
+      "alt": "Internxt for photographers"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Challenge",
+      "description": [
+        "A photographer constantly takes photos of different people, landscapes, and more, so storing them securely and safely is critical. As a photographer, as soon as you upload your images online, they risk being lifted and passed off as another person’s work. This can be done as a malicious and targeted attack or simply by an uneducated party trying to find pictures to illustrate their project.",
+        "There are numerous solutions and case studies examples helping photographers to secure their work online, but only some are guaranteed; many are likely to lose control of your data when you least expect it.",
+        "However, losing photos is not the only risk photographers face. If pictures are leaked or stolen, hackers or criminals can use these images for various cybercrimes. For example, they may use a person’s face for fake IDs and identity theft or find the location from the picture’s surroundings, potentially exposing their address or workplace.",
+        "Protecting a photographer's work and the data it holds is essential to this use case example to ensure people’s work and livelihood are not exposed to cybercriminals."
+      ]
+    },
+    "solution": {
+      "title": "Solution",
+      "description": [
+        "Secure cloud storage gives photography hobbyists and professionals a secure storage solution to secure their photos or videos. Internxt is a beneficial service provider for photographers due to its open-source platform emphasizing security, flexibility, and affordability.",
+        "Some case studies will often suggest photography platforms built by proprietary software, which is closed source and can be more costly and vulnerable to data breaches or other security risks to a photographer’s photos.",
+        "On the other hand, open-source storage solutions for photographers are built with their source code freely available to the public, meaning developers or security experts can identify and fix vulnerabilities in the code quickly and more efficiently than other proprietary software.",
+        "An open-source solution gives Internxt users the power to view how their data is stored, as well as additional benefits in the long term. For example, the reliability of an open-source platform is achieved thanks to the constant updates by the open-source community. These updates ensure that Internxt is constantly updated to provide fast, secure, and reliable storage for photographers.",
+        "Finally, open-source storage solutions are often cheaper than proprietary software, making it affordable for many use cases, such as beginners, hobbyists, or professional photographers."
+      ]
+    },
+    "results": {
+      "title": "Results",
+      "description": [
+        "The ambiguity about when you can lose control of your data is precisely why every photographer should consider data security. Everyone is at risk of data breaches, regardless of where photographers are working or sharing their photos, so only by securing their photos with Internxt can photographers truly protect their memories."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Encrypted and secure photo storage, in a flash",
+    "description": "Try Internxt for free.",
+    "cta": "Secure your privacy"
+  }
+}
