@@ -7,8 +7,6 @@ import BusinessBanner from '../banners/BusinessBanner';
 import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
-import LifetimeCard from '../lifetime/PriceCard';
-import SpecialPriceCard from './SpecialPriceCard';
 import CyberAwarenessSpecialCard from './CyberAwarenessSpecialCard';
 
 interface PriceTableProps {
@@ -16,15 +14,6 @@ interface PriceTableProps {
   lang: string;
   textContent: any;
   setIsLifetime?: (isLifetime: boolean) => void;
-}
-
-function LifetimeTitle({ contentText }) {
-  return (
-    <>
-      <span className="text-primary">{contentText.planTitles.lifetimeCampaign.blueText}</span>
-      <span> {contentText.planTitles.lifetimeCampaign.normalText}</span>
-    </>
-  );
 }
 
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
@@ -38,18 +27,23 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     symbol: '€',
     value: 1,
   });
-  const isLifetime = billingFrequency === 'lifetime';
 
   useEffect(() => {
-    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
-      .then((res) => {
-        setProducts(res[0]);
-        setCurrency({
-          symbol: res[1].symbol,
-          value: res[1].value,
-        });
-
+    stripeService
+      .getAllPrices()
+      .then((product) => {
+        setProducts(product);
         setLoadingCards(false);
+      })
+      .catch((err) => console.error(err));
+
+    currencyService
+      .filterCurrencyByCountry()
+      .then((res) => {
+        setCurrency({
+          symbol: res.symbol,
+          value: res.value,
+        });
       })
       .catch((err) => console.error(err));
   }, []);
