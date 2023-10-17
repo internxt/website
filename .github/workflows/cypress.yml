@@ -29,5 +29,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: yarn install
-          start: yarn build && yarn start
+          install: yarn
+          build: yarn build
+          start: yarn start
