@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
+
 export {};
-const nameFiles = [
+let nameFiles = [
   '/',
   'about',
   'affiliates',
@@ -30,11 +31,28 @@ const nameFiles = [
   'temporary-email',
   'virus-scanner',
   'what-does-google-know-about-me',
+  'use-cases',
+  'internxt-for-digital-nomads',
+  'internxt-for-photographers',
+  'internxt-for-students',
+  'internxt-for-tech-companies',
+  'internxt-for-lawyers',
+  'internxt-for-journalists',
 ];
 
 const langs = { en: 'en', es: 'es', de: 'de', fr: 'fr', it: 'it', ru: 'ru', zh: 'zh' };
 
 describe('Verify that pages do not produce a 500 error', () => {
+  before(() => {
+    const screenshotsFolder = '/pages';
+    cy.task('readFolder', screenshotsFolder)
+      .then((paths: any) => paths.map((path) => path.replace('\\', '/'))) // normalise windows os
+      .then((paths) => paths.filter((path) => path.endsWith('.png'))) // filter for png
+      .then((paths) => {
+        console.log(paths);
+      });
+  });
+
   nameFiles.forEach((route) => {
     describe(`Verify that ${route} do not produce a 500 error`, () => {
       describe('Verify the English version', () => {
@@ -109,4 +127,9 @@ describe('Verify that pages do not produce a 500 error', () => {
       });
     });
   });
+
+  // after(() => {
+  //   // Después de las pruebas, ejecutamos un código para limpiar el archivo JSON
+  //   cy.exec('rm pageFileNames.json');
+  // });
 });

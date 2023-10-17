@@ -14,7 +14,7 @@ const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang
 
       <TermsAndConditionsOverview textContent={textContent} />
 
-      <Footer textContent={footerLang} hideNewsletter={false} />
+      <Footer lang={lang} textContent={footerLang} hideNewsletter={false} />
     </Layout>
   );
 };
