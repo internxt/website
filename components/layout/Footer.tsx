@@ -116,7 +116,7 @@ export default function Footer({
             </form>
             <span className="text-sm text-gray-40">
               {textContent.NewsletterSection.privacy}{' '}
-              <Link href="/legal" locale={lang}>
+              <Link href="/legal" locale={lang} legacyBehavior>
                 <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
               </Link>
             </span>
@@ -143,12 +143,12 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link href="/drive" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.drive}</a>
+                    <Link href="/drive" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.products.drive}
                     </Link>
 
-                    <Link href="/photos" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.photos}</a>
+                    <Link href="/photos" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.products.photos}
                     </Link>
 
                     <a
@@ -160,8 +160,8 @@ export default function Footer({
                       <div>{textContent.FooterSection.sections.products.send}</div>
                     </a>
 
-                    <Link href="/pricing" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.products.pricing}</a>
+                    <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.products.pricing}
                     </Link>
                   </div>
                 </div>
@@ -175,12 +175,12 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link href="/about" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.about}</a>
+                    <Link href="/about" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.company.about}
                     </Link>
 
-                    <Link href="/privacy" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.privacy}</a>
+                    <Link href="/privacy" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.company.privacy}
                     </Link>
 
                     <a
@@ -194,35 +194,47 @@ export default function Footer({
                       {textContent.FooterSection.sections.company.security}
                     </a>
 
-                    <Link href="/open-source" locale={lang} passHref>
-                      <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                        {textContent.FooterSection.sections.company.openSource}
-                        {lang !== 'en' && (
-                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                            {textContent.FooterSection.new}
-                          </div>
-                        )}
-                      </a>
+                    <Link
+                      href="/open-source"
+                      locale={lang}
+                      passHref
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary">
+
+                      {textContent.FooterSection.sections.company.openSource}
+                      {lang !== 'en' && (
+                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                          {textContent.FooterSection.new}
+                        </div>
+                      )}
+
                     </Link>
 
-                    <Link href="/legal" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.company.legal}</a>
+                    <Link href="/legal" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.company.legal}
                     </Link>
 
                     {lang === 'en' && (
                       <>
-                        <Link href="/media-area" locale={lang} passHref>
-                          <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                            {textContent.FooterSection.sections.company.mediaArea}
-                          </a>
+                        <Link
+                          href="/media-area"
+                          locale={lang}
+                          passHref
+                          className="flex max-w-[200px] flex-row items-center hover:text-primary">
+
+                          {textContent.FooterSection.sections.company.mediaArea}
+
                         </Link>
-                        <Link href="/use-cases" locale={lang} passHref>
-                          <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                            {textContent.FooterSection.sections.company.useCases}
-                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                              {textContent.FooterSection.new}
-                            </div>
-                          </a>
+                        <Link
+                          href="/use-cases"
+                          locale={lang}
+                          passHref
+                          className="flex max-w-[200px] flex-row items-center hover:text-primary">
+
+                          {textContent.FooterSection.sections.company.useCases}
+                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                            {textContent.FooterSection.new}
+                          </div>
+
                         </Link>
                       </>
                     )}
@@ -297,27 +309,43 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
-                    <Link href="/cloud-storage-comparison" locale={lang} passHref>
-                      <a className="w-full max-w-[160px] hover:text-primary">
-                        {textContent.FooterSection.sections.resources.comparison}
-                      </a>
+                    <Link
+                      href="/cloud-storage-comparison"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary">
+
+                      {textContent.FooterSection.sections.resources.comparison}
+
                     </Link>
 
-                    <Link href="/privacy-directory" locale={lang} passHref>
-                      <a className="w-full max-w-[265px] hover:text-primary">
-                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
-                      </a>
+                    <Link
+                      href="/privacy-directory"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[265px] hover:text-primary">
+
+                      {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
+
                     </Link>
 
-                    <Link href="/cyber-awareness" locale={lang} passHref>
-                      <a className="hover:text-primary">
-                        {textContent.FooterSection.sections.resources.cyberAwareness}
-                      </a>
+                    <Link
+                      href="/cyber-awareness"
+                      locale={lang}
+                      passHref
+                      className="hover:text-primary">
+
+                      {textContent.FooterSection.sections.resources.cyberAwareness}
+
                     </Link>
-                    <Link href="/what-does-google-know-about-me" locale={lang} passHref>
-                      <a className="flex items-center hover:text-primary">
-                        {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                      </a>
+                    <Link
+                      href="/what-does-google-know-about-me"
+                      locale={lang}
+                      passHref
+                      className="flex items-center hover:text-primary">
+
+                      {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
+
                     </Link>
                   </div>
                 </div>
@@ -330,29 +358,49 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link href="/byte-converter" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.byteConverter}</a>
+                    <Link
+                      href="/byte-converter"
+                      locale={lang}
+                      passHref
+                      className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.byteConverter}
                     </Link>
 
-                    <Link href="/temporary-email" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                    <Link
+                      href="/temporary-email"
+                      locale={lang}
+                      passHref
+                      className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.temporaryEmail}
                     </Link>
 
-                    <Link href="/password-checker" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.passwordChecker}</a>
+                    <Link
+                      href="/password-checker"
+                      locale={lang}
+                      passHref
+                      className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.passwordChecker}
                     </Link>
 
-                    <Link href="/virus-scanner" locale={lang} passHref>
-                      <a className="hover:text-primary">{textContent.FooterSection.sections.tools.fileVirusScan}</a>
+                    <Link
+                      href="/virus-scanner"
+                      locale={lang}
+                      passHref
+                      className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.fileVirusScan}
                     </Link>
 
-                    <Link href="/password-generator" locale={lang} passHref>
-                      <a className="flex items-center hover:text-primary">
-                        {textContent.FooterSection.sections.tools.passwordGenerator}
-                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
-                      </a>
+                    <Link
+                      href="/password-generator"
+                      locale={lang}
+                      passHref
+                      className="flex items-center hover:text-primary">
+
+                      {textContent.FooterSection.sections.tools.passwordGenerator}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+
                     </Link>
                   </div>
                 </div>
@@ -445,14 +493,14 @@ export default function Footer({
             {/* Logos */}
             <div className="flex w-full max-w-[900px] flex-row justify-between">
               <div className="flex flex-row items-center space-x-4">
-                <Link href="/" locale={lang}>
-                  <a className="flex flex-shrink-0">
-                    <img
-                      loading="lazy"
-                      src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
-                      alt="Internxt logo"
-                    />
-                  </a>
+                <Link href="/" locale={lang} className="flex flex-shrink-0">
+
+                  <img
+                    loading="lazy"
+                    src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
+                    alt="Internxt logo"
+                  />
+
                 </Link>
                 <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                   {textContent.FooterSection.copyright}
@@ -544,14 +592,14 @@ export default function Footer({
                         darkMode ? 'text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
-                      <Link href="/drive" locale={lang} passHref>
+                      <Link href="/drive" locale={lang} passHref legacyBehavior>
                         <div className="flex flex-row space-x-2">
                           <HardDrives className="h-6 w-6 text-gray-80" />
                           <p>{textContent.FooterSection.sections.products.drive}</p>
                         </div>
                       </Link>
 
-                      <Link href="/photos" locale={lang} passHref>
+                      <Link href="/photos" locale={lang} passHref legacyBehavior>
                         <div className="flex flex-row space-x-2">
                           <Camera className="h-6 w-6 text-gray-80" />
                           <p>{textContent.FooterSection.sections.products.photos}</p>
@@ -594,11 +642,11 @@ export default function Footer({
                       } space-y-8 p-4`}
                     >
                       <Link href="/about" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.about}</a>
+                        {textContent.FooterSection.sections.company.about}
                       </Link>
 
                       <Link href="/privacy" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.privacy}</a>
+                        {textContent.FooterSection.sections.company.privacy}
                       </Link>
 
                       <Link
@@ -608,39 +656,51 @@ export default function Footer({
                         target="_blank"
                         rel="noreferrer"
                         className="flex flex-row items-center"
-                      >
+                        legacyBehavior>
                         <div>{textContent.FooterSection.sections.company.security}</div>
                       </Link>
 
-                      <Link href="/open-source" locale={lang} passHref>
-                        <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                          {textContent.FooterSection.sections.company.openSource}
-                          {lang !== 'en' && (
-                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                              {textContent.FooterSection.new}
-                            </div>
-                          )}
-                        </a>
+                      <Link
+                        href="/open-source"
+                        locale={lang}
+                        passHref
+                        className="flex max-w-[200px] flex-row items-center hover:text-primary">
+
+                        {textContent.FooterSection.sections.company.openSource}
+                        {lang !== 'en' && (
+                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                            {textContent.FooterSection.new}
+                          </div>
+                        )}
+
                       </Link>
 
                       <Link href="/legal" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.legal}</a>
+                        {textContent.FooterSection.sections.company.legal}
                       </Link>
 
                       {lang === 'en' && (
                         <>
-                          <Link href="/media-area" locale={lang} passHref>
-                            <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                              {textContent.FooterSection.sections.company.mediaArea}
-                            </a>
+                          <Link
+                            href="/media-area"
+                            locale={lang}
+                            passHref
+                            className="flex max-w-[200px] flex-row items-center hover:text-primary">
+
+                            {textContent.FooterSection.sections.company.mediaArea}
+
                           </Link>
-                          <Link href="/use-cases" locale={lang} passHref>
-                            <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
-                              {textContent.FooterSection.sections.company.useCases}
-                              <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                                {textContent.FooterSection.new}
-                              </div>
-                            </a>
+                          <Link
+                            href="/use-cases"
+                            locale={lang}
+                            passHref
+                            className="flex max-w-[200px] flex-row items-center hover:text-primary">
+
+                            {textContent.FooterSection.sections.company.useCases}
+                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                              {textContent.FooterSection.new}
+                            </div>
+
                           </Link>
                         </>
                       )}
@@ -673,7 +733,7 @@ export default function Footer({
                       </a>
 
                       <Link href={'https://help.internxt.com'} target={'_blank'} locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.support}</a>
+                        {textContent.FooterSection.sections.company.support}
                       </Link>
 
                       <a href="https://drive.internxt.com/login" target="_blank">
@@ -686,7 +746,7 @@ export default function Footer({
                       <a href="/whitepaper/internxt-white-paper.pdf" download={true} className="hover:text-primary">
                         {textContent.FooterSection.sections.join.whitePaper}
                       </a>
-                      <Link href="/affiliates" target="_blank">
+                      <Link href="/affiliates" target="_blank" legacyBehavior>
                         {textContent.FooterSection.sections.join.affiliates}
                       </Link>
                     </Disclosure.Panel>
@@ -722,15 +782,15 @@ export default function Footer({
                       </a>
 
                       <Link href="/privacy-directory" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}</a>
+                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </Link>
 
                       <Link href="/cyber-awareness" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.cyberAwareness}</a>
+                        {textContent.FooterSection.sections.resources.cyberAwareness}
                       </Link>
 
                       <Link href="/what-does-google-know-about-me" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}</a>
+                        {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
@@ -757,21 +817,21 @@ export default function Footer({
                       } space-y-8 p-4`}
                     >
                       <Link href="/byte-converter" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.byteConverter}</a>
+                        {textContent.FooterSection.sections.tools.byteConverter}
                       </Link>
 
                       <Link href="/temporary-email" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.temporaryEmail}</a>
+                        {textContent.FooterSection.sections.tools.temporaryEmail}
                       </Link>
 
-                      <Link href="/password-checker" locale={lang} passHref>
+                      <Link href="/password-checker" locale={lang} passHref legacyBehavior>
                         <div>{textContent.FooterSection.sections.tools.passwordChecker}</div>
                       </Link>
 
                       <Link href="/virus-scanner" locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.tools.fileVirusScan}</a>
+                        {textContent.FooterSection.sections.tools.fileVirusScan}
                       </Link>
-                      <Link href="/password-generator" locale={lang} passHref>
+                      <Link href="/password-generator" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.passwordGenerator}
                       </Link>
                     </Disclosure.Panel>
@@ -850,14 +910,14 @@ export default function Footer({
                 {textContent.FooterSection.copyright}
               </p>
 
-              <Link href="/" locale={lang}>
-                <a className="flex flex-shrink-0">
-                  <img
-                    loading="lazy"
-                    src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
-                    alt="Internxt logo"
-                  />
-                </a>
+              <Link href="/" locale={lang} className="flex flex-shrink-0">
+
+                <img
+                  loading="lazy"
+                  src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
+                  alt="Internxt logo"
+                />
+
               </Link>
             </div>
           </div>

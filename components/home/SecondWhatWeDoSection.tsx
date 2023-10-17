@@ -28,11 +28,14 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 </h4>
                 <h5 className="mb-4 max-w-[340px] text-xl text-white">{textContent.square1.description}</h5>
                 <div className="flex justify-start">
-                  <Link href="/drive" locale={lang}>
-                    <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-                      <span>{textContent.square1.cta}</span>
-                      <UilAngleRightB className="h-4 w-4" />
-                    </a>
+                  <Link
+                    href="/drive"
+                    locale={lang}
+                    className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
+
+                    <span>{textContent.square1.cta}</span>
+                    <UilAngleRightB className="h-4 w-4" />
+
                   </Link>
                 </div>
               </div>
@@ -54,11 +57,14 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 </h4>
                 <h5 className="mb-4 max-w-[340px] text-xl text-white">{textContent.square2.description}</h5>
                 <div className="flex justify-start">
-                  <Link href="/drive" locale={lang}>
-                    <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-                      <span>{textContent.square2.cta}</span>
-                      <UilAngleRightB className="h-4 w-4" />
-                    </a>
+                  <Link
+                    href="/drive"
+                    locale={lang}
+                    className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
+
+                    <span>{textContent.square2.cta}</span>
+                    <UilAngleRightB className="h-4 w-4" />
+
                   </Link>
                 </div>
               </div>
@@ -81,11 +87,14 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
                 </h4>
                 <h5 className="mb-4 max-w-[340px] text-xl text-white">{textContent.square3.description}</h5>
                 <div className="flex justify-start">
-                  <Link href="/drive" locale={lang}>
-                    <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-                      <span>{textContent.square3.cta}</span>
-                      <UilAngleRightB className="h-4 w-4" />
-                    </a>
+                  <Link
+                    href="/drive"
+                    locale={lang}
+                    className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
+
+                    <span>{textContent.square3.cta}</span>
+                    <UilAngleRightB className="h-4 w-4" />
+
                   </Link>
                 </div>
               </div>

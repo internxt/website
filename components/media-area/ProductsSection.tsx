@@ -27,11 +27,14 @@ const ProductsSection = ({ textContent, lang }) => {
                 <p className="max-w-xs text-xl font-bold text-white">{textContent.drive.subtitle}</p>
                 <h5 className="max-w-[340px] text-xl text-white">{textContent.drive.description}</h5>
                 <div className="flex justify-start">
-                  <Link href="/drive" locale={lang}>
-                    <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-                      <span>{textContent.drive.cta}</span>
-                      <UilAngleRightB className="h-4 w-4" />
-                    </a>
+                  <Link
+                    href="/drive"
+                    locale={lang}
+                    className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
+
+                    <span>{textContent.drive.cta}</span>
+                    <UilAngleRightB className="h-4 w-4" />
+
                   </Link>
                 </div>
               </div>
@@ -52,11 +55,14 @@ const ProductsSection = ({ textContent, lang }) => {
                 <p className="max-w-xs text-xl font-bold text-white">{textContent.photos.subtitle}</p>
                 <h5 className="max-w-[340px] text-xl text-white">{textContent.photos.description}</h5>
                 <div className="flex justify-start">
-                  <Link href="/drive" locale={lang}>
-                    <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-                      <span>{textContent.photos.cta}</span>
-                      <UilAngleRightB className="h-4 w-4" />
-                    </a>
+                  <Link
+                    href="/drive"
+                    locale={lang}
+                    className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
+
+                    <span>{textContent.photos.cta}</span>
+                    <UilAngleRightB className="h-4 w-4" />
+
                   </Link>
                 </div>
               </div>
@@ -78,11 +84,14 @@ const ProductsSection = ({ textContent, lang }) => {
                 <p className="max-w-xs text-xl font-bold text-white">{textContent.drive.subtitle}</p>
                 <h5 className="max-w-[340px] text-xl text-white">{textContent.send.description}</h5>
                 <div className="flex justify-start">
-                  <Link href="/drive" locale={lang}>
-                    <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-                      <span>{textContent.send.cta}</span>
-                      <UilAngleRightB className="h-4 w-4" />
-                    </a>
+                  <Link
+                    href="/drive"
+                    locale={lang}
+                    className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
+
+                    <span>{textContent.send.cta}</span>
+                    <UilAngleRightB className="h-4 w-4" />
+
                   </Link>
                 </div>
               </div>

@@ -131,10 +131,16 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               <h3 className="text-2xl font-medium">{textContent.section5.title}</h3>
               <p className="text-lg text-gray-80">
                 {textContent.section5.subtitle1.part1}{' '}
-                <Link href="/privacy" lang={lang} passHref>
-                  <a target="_top" rel="noreferrer" className="text-primary underline">
-                    {textContent.section5.subtitle1.link}
-                  </a>
+                <Link
+                  href="/privacy"
+                  lang={lang}
+                  passHref
+                  target="_top"
+                  rel="noreferrer"
+                  className="text-primary underline">
+
+                  {textContent.section5.subtitle1.link}
+
                 </Link>{' '}
                 {textContent.section5.subtitle1.part2}
               </p>
@@ -182,30 +188,48 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
             <p className="text-lg text-gray-80 md:max-w-2xl">
               {textContent.section6.subtitle2.part1}{' '}
-              <Link href="/password-generator" lang={lang} passHref>
-                <a target="_top" rel="noreferrer" className="text-primary underline">
-                  {textContent.section6.subtitle2.link}
-                </a>
+              <Link
+                href="/password-generator"
+                lang={lang}
+                passHref
+                target="_top"
+                rel="noreferrer"
+                className="text-primary underline">
+
+                {textContent.section6.subtitle2.link}
+
               </Link>
               {textContent.section6.subtitle2.part2}
             </p>
 
             <p className="text-lg text-gray-80 md:max-w-2xl">
               {textContent.section6.subtitle3.part1}{' '}
-              <Link href="/virus-scanner" lang={lang} passHref>
-                <a target="_top" rel="noreferrer" className="text-primary underline">
-                  {textContent.section6.subtitle3.link}
-                </a>
+              <Link
+                href="/virus-scanner"
+                lang={lang}
+                passHref
+                target="_top"
+                rel="noreferrer"
+                className="text-primary underline">
+
+                {textContent.section6.subtitle3.link}
+
               </Link>
               {textContent.section6.subtitle3.part2}
             </p>
 
             <p className="text-lg text-gray-80 md:max-w-2xl">
               {textContent.section6.subtitle4.part1}{' '}
-              <Link href="/privacy-directory" lang={lang} passHref>
-                <a target="_top" rel="noreferrer" className="text-primary underline">
-                  {textContent.section6.subtitle4.link}
-                </a>
+              <Link
+                href="/privacy-directory"
+                lang={lang}
+                passHref
+                target="_top"
+                rel="noreferrer"
+                className="text-primary underline">
+
+                {textContent.section6.subtitle4.link}
+
               </Link>
               {textContent.section6.subtitle4.part2}
             </p>
