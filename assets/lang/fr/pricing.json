@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "75% de réduction", "line2": "sur le plan 2TB" },
+    "title": { "line1": "80% de réduction", "line2": "sur nos plans annuels" },
     "lifetimeTitle": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
@@ -8,7 +8,7 @@
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "Obtenez l'offre",
+      "title": "80% de réduction",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },

@@ -132,15 +132,6 @@ const InfoSection = ({ textContent }) => {
               <InfoCard id={id} title={title} title1={title1} img={img} link={link} key={title} />
             ))}
           </RevealY>
-          <RevealY className="flex flex-col space-y-3">
-            <p className="text-center text-2xl font-medium sm:text-left">{textContent.footer.title}</p>
-            <div className="w-full max-w-2xl space-y-6 pt-3 text-center sm:text-left">
-              <p className="text-lg font-normal">{textContent.footer.body.part1}</p>
-              <p className="text-lg font-normal">{textContent.footer.body.part2}</p>
-              <p className="text-lg font-normal">{textContent.footer.body.part3}</p>
-              <p className="text-lg font-normal">{textContent.footer.body.part4}</p>
-            </div>
-          </RevealY>
         </div>
       </div>
     </section>

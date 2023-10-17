@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "75% 折扣", "line2": "我们的 2TB 计划" },
+    "title": { "line1": "八折优惠", "line2": "我们的年度计划" },
     "lifetimeTitle": { "line1": "获得", "blueText": "终身", "line2": " Internxt 计划！" },
 
     "feeds": {
@@ -9,7 +9,7 @@
       "thirdFeed": "匿名账户创建"
     },
     "cta": {
-      "title": "价格立减 75%",
+      "title": "八折优惠",
       "description": "优惠有效期为一年。 计划将在下一年以非折扣价续订。"
     }
   },

@@ -18,7 +18,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="mt-5 text-lg font-normal">{textContent.paragraph1.body}</p>
           <p className="mt-8 text-lg font-normal">{textContent.paragraph1.body2}</p>
         </div>
-        <div className="mt-16 flex w-full items-center justify-center">
+        <div className="mt-16 hidden w-full items-center justify-center lg:flex">
           <SignUpBanner textContent={bannerText} lang={lang} />
         </div>
       </div>

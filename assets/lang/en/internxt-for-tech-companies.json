@@ -1,0 +1,52 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "How ",
+      "blueText": "tech companies ",
+      "normalText": "secure client information and business data"
+    },
+    "description": "Tech companies often store sensitive information related to their clients, employees, and other business needs in the cloud. Depending on their needs, many large-scale tech companies may combine private, public, or hybrid cloud storage.",
+    "learnMore": "Learn more",
+    "image": {
+      "src": "Internxt_for_tech_companies.webp",
+      "alt": "Internxt for tech companies"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Challenge",
+      "description": [
+        "For this B2B case study, Internxt will provide a solution for tech companies to help reduce data breach attacks. Many tech companies have become victims of a data breach or leak due to human error. A cybersecurity B2B case study is essential for all technology companies to be aware of to effectively raise employee awareness to protect and secure client and business data.",
+        "Malware infections have increased substantially over the past ten years, and tech companies and other businesses suffer from hundreds of cyberattacks yearly due to the sensitive data they store.",
+        "A tech business can become an easy target for cyber attackers and malicious actors to steal data. They can slow down your system and steal the data on your computers, reducing the speed of ongoing operations.",
+        "Data breach impacts not just your company but any third parties affected by proxy, such as customers, vendors, etc.",
+        "Moreover, the cost associated with the loss of data for any business and fixing the relevant issues caused by a cyberattack can result in massive losses and damage."
+      ]
+    },
+    "solution": {
+      "title": "Solution",
+      "description": [
+        "To protect themselves from data loss, leaks, or breaches, tech companies must secure data in a secure cloud storage platform and regularly backup files, since cyber criminals will be less likely to hold their data for substantial ransoms.",
+        "If customers or clients are sure their data is safe, it will instill trust in the company and create a brand based on security to help with customer retention and bringing in new customers.",
+        "A secure cloud storage solution responds to the threat of cyberattacks that have been spreading in recent years, as it establishes safe workplaces in a shared space for employees.",
+        "A B2B case study often emphasizes the best way to store and protect data. For tech companies, the best solution is to use end-to-end encryption.",
+        "Internxt encrypts each file you upload, fragmenting the data and keeping it unreadable. The encryption key can only be used by you to decrypt and read the file. Sharing files with an encrypted link is also possible, where only those with it can download the content safely.",
+        "It is also a matter of ethics; work ethic dictates that security services be secured from the ground up. Tech companies have strong standards for maintaining confidential work files containing extremely sensitive, sometimes CCPA or GDPR-regulated and even harmful data. As a result, they needed to use an encrypted file-sharing platform that restricts access from users to sensitive information."
+      ]
+    },
+    "results": {
+      "title": "Results",
+      "description": [
+        "Internxt helps secure data for tech companies in the cloud and provides additional security awareness through other free tools within this B2B case study.",
+        "A secure password generator allows employees to protect their work emails and other accounts, resulting in fewer security breaches and cyber-attacks, as a secure password combined with authentication methods significantly decreases the likelihood of a cyberattack.",
+        "In addition, the virus scan tool ensures that no employees store malware on company computers and viruses are not spread, as phishing emails are the most common methods cybercriminals will use to target businesses and spread malware.",
+        "By using a secure cloud storage provider such as Internxt that offers free security tools, such as secure file sharing, access controls, and two-factor authentication methods, tech companies can build a culture within a business based on privacy and security."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Your data, your business",
+    "description": "Protect your company data with Internxt.",
+    "cta": "Ready to work securely?"
+  }
+}

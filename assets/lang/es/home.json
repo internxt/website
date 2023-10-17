@@ -1,7 +1,8 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "Elige privacidad, pásate a Internxt"
+      "line1": "Elige privacidad, pásate a",
+      "blueText": "Internxt"
     },
     "subtitle": "Protege tu privacidad con nuestros servicios seguros en la nube, cifrados y de código abierto. Internxt Drive, Photos, Send y mucho más.",
     "cta": {

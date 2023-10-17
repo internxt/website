@@ -23,7 +23,7 @@ interface LayoutProps {
 
 const INTERNXT_URL = 'https://internxt.com';
 
-const includedPaths = [];
+const excludedPaths = ['/pricing', '/lifetime', '/affiliates'];
 const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
@@ -42,9 +42,8 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = includedPaths.includes(router.pathname);
+  const showBanner = !excludedPaths.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
-  const [installPrompt, setInstallPrompt] = React.useState<Event>();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
   const slogan = {
@@ -52,21 +51,6 @@ LayoutProps) {
     es: 'Internxt es un servicio seguro de almacenamiento en la nube basado en el cifrado y la privacidad absoluta. El conjunto de servicios de código abierto de Internxt protege tu privacidad. Internxt Drive, Photos, Send y mucho más.',
     fr: "Internxt est un service de stockage en ligne sécurisé basé sur le chiffrage et la confidentialité absolue. La suite open-source de services de stockage en nuage d'Internxt protège votre droit à la vie privée. Internxt Drive, Photos, Send, et plus encore.",
   };
-
-  //Add promote banner for Android users to download the app
-  useEffect(() => {
-    // Capture event and defer
-    window.addEventListener('beforeinstallprompt', function (e) {
-      e.preventDefault();
-      setInstallPrompt(e);
-    });
-  }, []);
-
-  useEffect(() => {
-    window.rudderanalytics.page(segmentName, {
-      brave: isBrave(),
-    });
-  }, [segmentName]);
 
   return (
     <>
@@ -90,10 +74,10 @@ LayoutProps) {
           property="og:image"
           content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${imagePreview}.png`}
         />
-        <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
+        <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:image"
           content={specialOffer || `${INTERNXT_URL}/images/previewLink/PreviewGeneric${imagePreview}.png`}
@@ -131,7 +115,6 @@ LayoutProps) {
           ]
         }`}
       </Script>
-      {/* {isAndroid && <AndroidSmartBanner installPrompt={installPrompt} />} */}
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />

@@ -32,7 +32,11 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
 
   const info = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({
     cached: false,
-    links: { linux: null, windows: null, macos: null },
+    links: { linux: null, windows: null },
+  }));
+  const infoMacOS = await getLatestReleaseInfo('internxt', 'drive-desktop-macos').catch(() => ({
+    cached: false,
+    links: { macos: null },
   }));
 
   switch (uaParsed.os.family) {
@@ -45,7 +49,7 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
     case 'Windows':
       return info.links.windows || 'https://internxt.com/downloads/drive.exe';
     case 'Mac OS X':
-      return info.links.macos || 'https://internxt.com/downloads/drive.dmg';
+      return infoMacOS.links.macos || 'https://internxt.com/downloads/drive.dmg';
     default:
       // No borrar
       // eslint-disable-next-line no-console
@@ -57,7 +61,11 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
 export const downloadDriveLinks = async () => {
   const release = await getLatestReleaseInfo('internxt', 'drive-desktop').catch(() => ({
     cached: false,
-    links: { linux: null, windows: null, macos: null },
+    links: { linux: null, windows: null },
+  }));
+  const releaseMacOS = await getLatestReleaseInfo('internxt', 'drive-desktop-macos').catch(() => ({
+    cached: false,
+    links: { macos: null },
   }));
 
   const platforms = {
@@ -65,7 +73,7 @@ export const downloadDriveLinks = async () => {
     iPad: iosURL,
     iPhone: iosURL,
     Windows: release.links.windows || windowsURL,
-    MacOS: release.links.macos || macosURL,
+    MacOS: releaseMacOS.links.macos || macosURL,
     UNIX: release.links.linux || linuxURL,
     Linux: release.links.linux || linuxURL,
     all: lastReleaseURL,

@@ -9,13 +9,13 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
         {lang === 'en' ? (
           <a
-            href="https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1"
+            href="https://get.surfshark.net/aff_c?offer_id=1441&aff_id=23820"
             target="_blank"
             className="mb-10 flex justify-center"
           >
             <div className="hidden md:flex">
               <Image
-                src="/images/temp-email/gimmehost-horizontal.png"
+                src="/images/temp-email/surfshark-horizontal.png"
                 alt="Gimme Host Offer"
                 width={726}
                 height={90}
@@ -25,10 +25,10 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
             </div>
             <div className="flex md:hidden">
               <Image
-                src="/images/temp-email/gimmehost-square.png"
+                src="/images/temp-email/surfshark-square.png"
                 alt="Gimme Host Offer"
-                width={350}
-                height={292}
+                width={480}
+                height={320}
                 layout="intrinsic"
                 quality={100}
               />
