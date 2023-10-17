@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { checkout } from '../../lib/auth';
 
 const GeneralBanner = ({ textContent }) => {

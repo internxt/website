@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React from 'react';
 import { CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';

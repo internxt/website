@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { notificationService } from '../Snackbar';
 
 const HeroSection = ({ textContent }) => {

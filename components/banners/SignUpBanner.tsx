@@ -1,6 +1,6 @@
 import React from 'react';
 import SignUpInline from '../auth/SignUpInline';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const SignUpBanner = ({ textContent, lang }: { textContent: any; lang: string }) => {
   const signUpLang = require(`../../assets/lang/${lang}/home.json`);

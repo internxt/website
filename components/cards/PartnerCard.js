@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from './PartnerCard.module.css';
 
 const PartnerCard = ({ company, bio, bio2, blue, logo, logoW, logoH, image, link, descriptions }) => {

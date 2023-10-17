@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { buttonDeal } from '../TextWithoutJson';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const SquareBanner = () => {
   const [hidePopup, setHidePopup] = useState(false);

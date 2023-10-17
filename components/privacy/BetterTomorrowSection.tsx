@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '../components/RevealX';
 

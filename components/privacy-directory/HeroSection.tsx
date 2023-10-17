@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '/components/privacy/HeroSection.module.scss';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import SignUpBanner from '../banners/SignUpBanner';
 import Header from '../shared/Header';

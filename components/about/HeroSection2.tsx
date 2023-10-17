@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const HeroSection2 = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20 md:pt-20">
