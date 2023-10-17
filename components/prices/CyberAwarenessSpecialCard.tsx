@@ -43,7 +43,7 @@ export default function SpecialPriceCard({
 
   const onOfferClick = () => {
     if (cta[1] === 'Free plan') {
-      window.open(`${process.env.NEXT_PUBLIC_DRIVE_WEB}/new`, '_blank');
+      window.open(`${process.env.NEXT_PUBLIC_DRIVE_WEB}/new`, '_self');
     } else {
       analyticsService.offerTrack({
         campaign: '80ANNUAL DISCOUNT',
