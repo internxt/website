@@ -42,17 +42,21 @@ export default function SpecialPriceCard({
   }, []);
 
   const onOfferClick = () => {
-    analyticsService.offerTrack({
-      campaign: '80ANNUAL DISCOUNT',
-      discount: 80,
-      plan: cta[1],
-      coupon: coupon,
-    });
-    checkout({
-      planId: cta[1],
-      couponCode: coupon,
-      mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-    });
+    if (cta[1] === 'Free plan') {
+      window.open(`${process.env.NEXT_PUBLIC_DRIVE_WEB}/new`, '_blank');
+    } else {
+      analyticsService.offerTrack({
+        campaign: '80ANNUAL DISCOUNT',
+        discount: 80,
+        plan: cta[1],
+        coupon: coupon,
+      });
+      checkout({
+        planId: cta[1],
+        couponCode: coupon,
+        mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+      });
+    }
   };
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
