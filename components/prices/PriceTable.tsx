@@ -153,7 +153,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 lang={lang}
                 country={currency.symbol}
               />
-            ) : (
+            ) : billingFrequency === Interval.Month ? (
               <PriceCard
                 planType="individual"
                 key={'10GB'}
@@ -164,7 +164,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 lang={lang}
                 country={currency.symbol}
               />
-            )}
+            ) : undefined}
 
             {products?.individuals[billingFrequency] &&
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
