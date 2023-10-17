@@ -30,4 +30,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: yarn install
-          start: yarn dev
+          start: yarn build && yarn start
