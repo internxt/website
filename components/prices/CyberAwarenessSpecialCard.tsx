@@ -150,6 +150,7 @@ export default function SpecialPriceCard({
 
         <div
           tabIndex={0}
+          id={`offerButton${storage}`}
           onClick={() => {
             onOfferClick();
           }}

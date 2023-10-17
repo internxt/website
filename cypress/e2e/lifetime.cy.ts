@@ -56,7 +56,7 @@ describe('Lifetime page', () => {
         cy.visit('/lifetime');
         cy.get('#priceTable').contains(`Get ${products.lifetime2TB.storage}`).click();
 
-        cy.url().should('include', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
+        cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
       });
     });
 
@@ -65,7 +65,7 @@ describe('Lifetime page', () => {
         cy.visit('/lifetime');
         cy.get('#priceTable').contains(`Get ${products.lifetime5TB.storage}`).click();
 
-        cy.url().should('include', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
+        cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
       });
     });
 
@@ -74,7 +74,7 @@ describe('Lifetime page', () => {
         cy.visit('/lifetime');
         cy.get('#priceTable').contains(`Get ${products.lifetime10TB.storage}`).click();
 
-        cy.url().should('include', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
+        cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
       });
     });
   });
