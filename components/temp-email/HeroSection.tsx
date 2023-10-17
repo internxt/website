@@ -84,7 +84,7 @@ const HeroSection = ({ textContent }) => {
                   copy(email);
                 }}
               >
-                <p>{email ? email : textContent.generatingEmail}</p>
+                <p className="max-w-[300px] truncate">{email ? email : textContent.generatingEmail}</p>
                 <Copy size={24} className={`${borderColor ? 'text-primary' : 'text-gray-50'}`} />
               </div>
             </div>
