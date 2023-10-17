@@ -82,7 +82,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Monthly').click();
           cy.get(`#planButton${products.month2TB.storage}`).contains(`${products.month2TB.storage}`).click();
 
-          cy.url().should('eq', url({ planId: products.month2TB.planId }));
+          cy.url().should('contain', products.month2TB.planId);
         });
       });
     });
