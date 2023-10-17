@@ -40,21 +40,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   });
 
   useEffect(() => {
-    stripeService
-      .getAllPrices()
-      .then((product) => {
-        setProducts(product);
-        setLoadingCards(false);
-      })
-      .catch((err) => console.error(err));
-
-    currencyService
-      .filterCurrencyByCountry()
+    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
       .then((res) => {
+        setProducts(res[0]);
         setCurrency({
-          symbol: res.symbol,
-          value: res.value,
+          symbol: res[1].symbol,
+          value: res[1].value,
         });
+
+        setLoadingCards(false);
       })
       .catch((err) => console.error(err));
   }, []);
