@@ -134,7 +134,7 @@ export default function PriceCard({
           </div>
         </div>
         <button
-          id={`offerButton${storage}`}
+          id={`planButton${storage}`}
           onClick={() => {
             if (cta[1] === 'Free plan') {
               goToSignUpURL();
