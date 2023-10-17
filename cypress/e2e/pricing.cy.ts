@@ -46,7 +46,7 @@ describe('Pricing page', () => {
 
       cy.get('#priceTable').contains('Sign up now').click();
 
-      cy.url().should('include', 'https://drive.internxt.com/new');
+      cy.url().should('eq', 'https://drive.internxt.com/new');
     });
   });
 
@@ -58,7 +58,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Monthly').click();
           cy.get('#priceTable').contains(`Get ${products.month20GB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.month20GB.planId }));
+          cy.url().should('eq', url({ planId: products.month20GB.planId }));
         });
       });
 
@@ -68,7 +68,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Monthly').click();
           cy.get('#priceTable').contains(`Get ${products.month200GB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.month200GB.planId }));
+          cy.url().should('eq', url({ planId: products.month200GB.planId }));
         });
       });
 
@@ -78,7 +78,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Monthly').click();
           cy.get('#priceTable').contains(`Get ${products.month2TB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.month2TB.planId }));
+          cy.url().should('eq', url({ planId: products.month2TB.planId }));
         });
       });
     });
@@ -89,7 +89,7 @@ describe('Pricing page', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains(`Get ${products.year20GB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.year20GB.planId }));
+          cy.url().should('eq', url({ planId: products.year20GB.planId }));
         });
       });
       describe('When the plan is 200GB of space', () => {
@@ -97,18 +97,13 @@ describe('Pricing page', () => {
           cy.visit('/pricing');
           cy.get('#priceTable').contains(`Get ${products.year200GB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.year200GB.planId }));
+          cy.url().should('eq', url({ planId: products.year200GB.planId }));
         });
       });
       describe('When the plan is 2TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           cy.visit('/pricing');
-          cy.get('#priceTable')
-            .contains('button', `${products.year2TB.storage}`)
-            .click()
-            .then(($button) => {
-              console.log('Button', $button);
-            });
+          cy.get('#priceTable').contains('button', `${products.year2TB.storage}`).click();
 
           cy.url().should('contain', url({ planId: products.year2TB.planId }));
         });
@@ -122,7 +117,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Lifetime').click();
           cy.get('#priceTable').contains(`Get ${products.lifetime2TB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.lifetime2TB.planId, mode: 'payment' }));
+          cy.url().should('eq', url({ planId: products.lifetime2TB.planId, mode: 'payment' }));
         });
       });
       describe('When the plan is 5TB of space', () => {
@@ -131,7 +126,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Lifetime').click();
           cy.get('#priceTable').contains(`Get ${products.lifetime5TB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.lifetime5TB.planId, mode: 'payment' }));
+          cy.url().should('eq', url({ planId: products.lifetime5TB.planId, mode: 'payment' }));
         });
       });
       describe('When the plan is 10TB of space', () => {
@@ -140,7 +135,7 @@ describe('Pricing page', () => {
           cy.get('#priceTable').contains('Lifetime').click();
           cy.get('#priceTable').contains(`Get ${products.lifetime10TB.storage}`).click();
 
-          cy.url().should('include', url({ planId: products.lifetime10TB.planId, mode: 'payment' }));
+          cy.url().should('eq', url({ planId: products.lifetime10TB.planId, mode: 'payment' }));
         });
       });
     });
