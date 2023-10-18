@@ -35,11 +35,13 @@ jobs:
           start: yarn start
           browser: chrome
 
+  slack_notification:
+    runs-on: ubuntu-latest
+    steps:
       - name: Send Slack notification
         uses: rtCamp/action-slack-notify@v2
         with:
           status: ${{ job.status }}
           channel: '#website-monitoring'
-
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
