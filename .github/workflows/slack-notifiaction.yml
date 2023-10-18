@@ -1,11 +1,11 @@
 name: Check website every 2 hours
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-
+  schedule:
+    - cron: '0 */2 * * *'
+  push:
+    branches:
+      - main
 jobs:
   cypress_tests:
     runs-on: ubuntu-latest

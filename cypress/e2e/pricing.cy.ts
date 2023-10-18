@@ -51,7 +51,7 @@ describe('Pricing page', () => {
     it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
       cy.visit('/pricing');
 
-      cy.get('#priceTabl').contains('Sign up now').click();
+      cy.get('#priceTable').contains('Sign up now').click();
 
       cy.url().should('eq', 'https://drive.internxt.com/new');
     });
