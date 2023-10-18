@@ -31,8 +31,8 @@ jobs:
 
         with:
           install: yarn
-          build: yarn build
-          start: yarn start
+          build: ''
+          start: ''
           browser: chrome
 
       - name: Send Slack notification

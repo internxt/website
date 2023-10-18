@@ -11,7 +11,6 @@ export enum CouponType {
 }
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
-const API_DRIVE_URL = Cypress.env('API_DRIVE_URL');
 
 interface Products {
   [key: string]: {
@@ -50,6 +49,8 @@ describe('Lifetime page', () => {
       },
     );
   });
+
+  cy.wait(3000);
 
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
