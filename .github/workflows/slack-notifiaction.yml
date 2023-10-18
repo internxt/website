@@ -35,15 +35,11 @@ jobs:
           start: yarn start
           browser: chrome
 
-  slack_notification:
-    needs: cypress_tests
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
       - name: Send Slack notification
         uses: rtCamp/action-slack-notify@v2
+        if: always()
         with:
-          status: ${{ job.status }}
+          status: ${{ github.job.status }}
           channel: '#website-monitoring'
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
