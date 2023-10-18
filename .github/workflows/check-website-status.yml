@@ -35,15 +35,11 @@ jobs:
           start: yarn start
           browser: chrome
 
-      - name: Send GitHub Action trigger data to Slack workflow
-        id: slack
-        uses: slackapi/slack-github-action@v1.24.0
+      - name: Send Slack notification
+        uses: rtCamp/action-slack-notify@v2
         with:
-          payload: |
-            {
-              "Repository": "github.com/internxt/website.git",
-              "Platform": "Web",
-              "Description": ${{github.job.status}},
-            }
+          status: ${{ job.status }}
+          channel: '#website-monitoring'
+
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
