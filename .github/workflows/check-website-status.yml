@@ -6,21 +6,32 @@ on:
       - opened
       - synchronize
 
-env:
-  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://npm.pkg.github.com'
+      - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
+      - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
+      - run: echo "registry=https://registry.yarnpkg.com/" > .npmrc
+      - run: echo "@internxt:registry=https://npm.pkg.github.com" >> .npmrc
+      # You cannot read packages from other private repos with GITHUB_TOKEN
+      # You have to use a PAT instead https://github.com/actions/setup-node/issues/49
+      - run: echo //npm.pkg.github.com/:_authToken=${{ secrets.CI_USER_GH_TOKEN }} >> .npmrc
+      - run: echo "always-auth=true" >> .npmrc
 
-      - name: Run Cypress Workflow
-        uses: ./cypress.yml
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          install: yarn
+          build: yarn build
+          start: yarn start
 
       - name: Send GitHub Action trigger data to Slack workflow
         id: slack
@@ -33,3 +44,5 @@ jobs:
               "Platform": "Web",
               "Description": "${{github.job.status}}",
             }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
