@@ -50,12 +50,12 @@ describe('Lifetime page', () => {
     );
   });
 
-  cy.wait(3000);
-
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
       cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime2TB.storage}`).contains(`${products.lifetime2TB.storage}`).click();
+
+      cy.wait(1000);
 
       cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
     });
@@ -66,6 +66,8 @@ describe('Lifetime page', () => {
       cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime5TB.storage}`).contains(`${products.lifetime5TB.storage}`).click();
 
+      cy.wait(1000);
+
       cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
     });
   });
@@ -74,6 +76,8 @@ describe('Lifetime page', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
       cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime10TB.storage}`).contains(`${products.lifetime10TB.storage}`).click();
+
+      cy.wait(1000);
 
       cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
     });
