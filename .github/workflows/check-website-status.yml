@@ -41,10 +41,9 @@ jobs:
         with:
           payload: |
             {
-              
               "Repository": "github.com/internxt/website.git",
               "Platform": "Web",
-              "Description": "${{github.job.status}}",
+              "Description": ${{github.job.status}},
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
