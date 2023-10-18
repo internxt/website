@@ -11,7 +11,6 @@ export enum CouponType {
 }
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
-const API_DRIVE_URL = Cypress.env('API_DRIVE_URL');
 
 interface Products {
   [key: string]: {
@@ -56,6 +55,8 @@ describe('Lifetime page', () => {
       cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime2TB.storage}`).contains(`${products.lifetime2TB.storage}`).click();
 
+      cy.wait(1000);
+
       cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
     });
   });
@@ -65,6 +66,8 @@ describe('Lifetime page', () => {
       cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime5TB.storage}`).contains(`${products.lifetime5TB.storage}`).click();
 
+      cy.wait(1000);
+
       cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
     });
   });
@@ -73,6 +76,8 @@ describe('Lifetime page', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
       cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime10TB.storage}`).contains(`${products.lifetime10TB.storage}`).click();
+
+      cy.wait(1000);
 
       cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
     });

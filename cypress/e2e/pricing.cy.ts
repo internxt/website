@@ -1,9 +1,15 @@
 /// <reference types="cypress" />
 export {};
 import bytes from 'bytes';
-import { CouponType } from './lifetime.cy';
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
+
+export enum CouponType {
+  TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
+  LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
+  LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
+  CloudwardsCoupon = 'COUPON_CLOUDWARDS',
+}
 
 interface Products {
   [key: string]: {
