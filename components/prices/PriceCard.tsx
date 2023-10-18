@@ -133,7 +133,8 @@ export default function PriceCard({
             <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
           </div>
         </div>
-        <div
+        <button
+          id={`planButton${storage}`}
           onClick={() => {
             if (cta[1] === 'Free plan') {
               goToSignUpURL();
@@ -157,7 +158,7 @@ export default function PriceCard({
 
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
-        </div>
+        </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">

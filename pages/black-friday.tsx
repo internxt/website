@@ -29,11 +29,10 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
   const isAffiliate = coupon === BLACK_FRIDAY_AFFILIATES_COUPON_ID ? true : false;
   const couponCode = coupon ? coupon : BLACK_FRIDAY_COUPON_ID;
   async function getCountryCode() {
-    const options = {
+    const countryCode = await axios({
       method: 'GET',
       url: `${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`,
-    };
-    const countryCode = await axios(options);
+    });
     return countryCode;
   }
 
@@ -47,10 +46,9 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <Navbar
         lang={deviceLang}
-        isBlackFriday={true}
+        isBlackfriday={true}
         textContent={navbarLang}
-        coupon={couponCode}
-        hideLogin={true}
+        coupon={couponCode as string}
         cta={['Hide Login']}
         isLinksHidden
         darkMode={true}
@@ -61,7 +59,7 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
 
-      <SuiteSection textContent={langJson.blackFriday} />
+      <SuiteSection lang={lang} textContent={langJson.blackFriday} />
 
       <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
 

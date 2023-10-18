@@ -50,10 +50,8 @@ describe('Auth flow (Sign Up / Log In)', () => {
         cy.visit('/');
 
         // Fill the email and password fields
-        cy.get('#signupEmail')
-          .focus()
-          .type(`test${generateString(4)}@inxt.com`, { delay: 100 });
-        cy.get('#signupPassword').focus().type('test1234.', { delay: 200 });
+        cy.get('#signupEmail').type(`test${generateString(4)}@inxt.com`, { force: true });
+        cy.get('#signupPassword').type('test1234.', { force: true });
 
         // Click on the Sign Up button
         cy.get('#signupInlineSubmit').click();

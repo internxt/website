@@ -1,14 +1,6 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-nested-ternary */
 import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { checkout } from '../../lib/auth';
-import { PriceCardProps } from '../prices/PriceCard';
 
 export default function CardSkeleton() {
   return (

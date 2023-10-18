@@ -46,37 +46,35 @@ describe('Lifetime page', () => {
 
     cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
       (response) => {
-        console.log('Lifetime ', response.body);
         coupon = response.body;
       },
     );
   });
-  describe('When the payment lifetime button is clicked', () => {
-    describe('When the plan of 2TB is clicked', () => {
-      it('Redirect to stripe checkout with the correct planId and mode', () => {
-        cy.visit('/lifetime');
-        cy.get('#priceTable').contains(`Get ${products.lifetime2TB.storage}`).click();
 
-        cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
-      });
+  describe('When the plan of 2TB is clicked', () => {
+    it('Redirect to stripe checkout with the correct planId and mode', () => {
+      cy.visit('/lifetime');
+      cy.get(`#planButton${products.lifetime2TB.storage}`).contains(`${products.lifetime2TB.storage}`).click();
+
+      cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
     });
+  });
 
-    describe('When the plan of 5TB is clicked', () => {
-      it('Redirect to stripe checkout with the correct planId and mode', () => {
-        cy.visit('/lifetime');
-        cy.get('#priceTable').contains(`Get ${products.lifetime5TB.storage}`).click();
+  describe('When the plan of 5TB is clicked', () => {
+    it('Redirect to stripe checkout with the correct planId and mode', () => {
+      cy.visit('/lifetime');
+      cy.get(`#planButton${products.lifetime5TB.storage}`).contains(`${products.lifetime5TB.storage}`).click();
 
-        cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
-      });
+      cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
     });
+  });
 
-    describe('When the plan of 10TB is clicked', () => {
-      it('Redirect to stripe checkout with the correct planId and mode', () => {
-        cy.visit('/lifetime');
-        cy.get('#priceTable').contains(`Get ${products.lifetime10TB.storage}`).click();
+  describe('When the plan of 10TB is clicked', () => {
+    it('Redirect to stripe checkout with the correct planId and mode', () => {
+      cy.visit('/lifetime');
+      cy.get(`#planButton${products.lifetime10TB.storage}`).contains(`${products.lifetime10TB.storage}`).click();
 
-        cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
-      });
+      cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
     });
   });
 });

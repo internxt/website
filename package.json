@@ -18,7 +18,6 @@
     "@emotion/styled": "^11.10.5",
     "@headlessui/react": "1.6.6",
     "@iconscout/react-unicons": "^1.1.6",
-    "@internxt/lib": "1.2.0",
     "@phosphor-icons/react": "^2.0.9",
     "@sendgrid/mail": "^7.4.0",
     "aos": "^2.3.4",
