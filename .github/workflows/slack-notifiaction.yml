@@ -39,7 +39,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         if: always()
         with:
-          status: ${{ github.job.status }}
+          status: ${{ job.status }}
           channel: '#website-monitoring'
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
