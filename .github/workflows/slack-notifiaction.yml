@@ -37,7 +37,7 @@ jobs:
 
       - name: Send Slack notification
         uses: rtCamp/action-slack-notify@v2
-        if: always()
+        if: failure()
         env:
           SLACK_CHANNEL: website-monitoring
           SLACK_COLOR: ${{ job.status }}
