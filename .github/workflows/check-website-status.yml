@@ -28,10 +28,12 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+
         with:
           install: yarn
           build: yarn build
           start: yarn start
+          browser: chrome
 
       - name: Send GitHub Action trigger data to Slack workflow
         id: slack

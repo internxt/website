@@ -32,3 +32,4 @@ jobs:
           install: yarn
           build: yarn build
           start: yarn start
+          browser: chrome
