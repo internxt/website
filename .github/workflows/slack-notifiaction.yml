@@ -41,5 +41,6 @@ jobs:
         with:
           status: ${{ job.status }}
           channel: '#website-monitoring'
+          message: 'Cypress tests finished: ${{ job.status }}'
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
