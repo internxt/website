@@ -50,7 +50,6 @@ describe('Verify that pages do not produce a 500 error', () => {
           cy.request({
             url: `/${langs.en}/${route === '/' ? '' : route}`,
           }).then((response) => {
-            // Espera que la respuesta sea 200
             expect(response.status).to.eq(200);
           });
         });
@@ -60,7 +59,6 @@ describe('Verify that pages do not produce a 500 error', () => {
           cy.request({
             url: `/${langs.es}/${route === '/' ? '' : route}`,
           }).then((response) => {
-            // Espera que la respuesta sea 200
             expect(response.status).to.eq(200);
           });
         });
@@ -70,7 +68,6 @@ describe('Verify that pages do not produce a 500 error', () => {
           cy.request({
             url: `/${langs.de}/${route === '/' ? '' : route}`,
           }).then((response) => {
-            // Espera que la respuesta sea 200
             expect(response.status).to.eq(200);
           });
         });
@@ -80,7 +77,6 @@ describe('Verify that pages do not produce a 500 error', () => {
           cy.request({
             url: `/${langs.fr}/${route === '/' ? '' : route}`,
           }).then((response) => {
-            // Espera que la respuesta sea 200
             expect(response.status).to.eq(200);
           });
         });
@@ -90,7 +86,6 @@ describe('Verify that pages do not produce a 500 error', () => {
           cy.request({
             url: `/${langs.it}/${route === '/' ? '' : route}`,
           }).then((response) => {
-            // Espera que la respuesta sea 200
             expect(response.status).to.eq(200);
           });
         });
@@ -100,7 +95,6 @@ describe('Verify that pages do not produce a 500 error', () => {
           cy.request({
             url: `/${langs.ru}/${route === '/' ? '' : route}`,
           }).then((response) => {
-            // Espera que la respuesta sea 200
             expect(response.status).to.eq(200);
           });
         });
@@ -110,7 +104,6 @@ describe('Verify that pages do not produce a 500 error', () => {
           cy.request({
             url: `/${langs.zh}/${route === '/' ? '' : route}`,
           }).then((response) => {
-            // Espera que la respuesta sea 200
             expect(response.status).to.eq(200);
           });
         });
