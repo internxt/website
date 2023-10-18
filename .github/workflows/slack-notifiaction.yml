@@ -41,8 +41,6 @@ jobs:
         env:
           SLACK_CHANNEL: website-monitoring
           SLACK_COLOR: ${{ job.status }}
-          SLACK_ICON: https://github.com/internxt/website/blob/main/public/favicon.ico
-          SLACK_MESSAGE: 'Cypress tests: ${{ job.status }}'
-          SLACK_TITLE: Checking website
-          SLACK_USERNAME: Inxt Bot
+          SLACK_MESSAGE: 'STATUS: ${{ job.status }}'
+          SLACK_TITLE: WEBSITE MONITORING
           SLACK_WEBHOOK: ${{ secrets.SLACK_NOTIFICATIONS_URL }}
