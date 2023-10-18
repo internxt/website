@@ -32,9 +32,6 @@ yarn-error.log*
 .env.production.local
 cypress.env.json
 
-# npmrc
-.npmrc
-
 # vercel
 .vercel
 
