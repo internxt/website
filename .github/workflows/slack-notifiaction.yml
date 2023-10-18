@@ -11,14 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: 'refs/heads/main'
-      - name: Check if on main branch
-        run: |
-          if [[ "${{ github.ref }}" != "refs/heads/main" ]]; then
-            echo "Not on the main branch, skipping the workflow."
-            exit 0
-          fi
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
