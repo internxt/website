@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Check website every 2 hours
 
 on:
   pull_request:
