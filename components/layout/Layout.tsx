@@ -46,6 +46,12 @@ LayoutProps) {
   const langToUpperCase = lang.toLocaleUpperCase();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
+  useEffect(() => {
+    window.rudderanalytics.page(segmentName, {
+      brave: isBrave(),
+    });
+  }, [segmentName]);
+
   const slogan = {
     en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
     es: 'Internxt es un servicio seguro de almacenamiento en la nube basado en el cifrado y la privacidad absoluta. El conjunto de servicios de código abierto de Internxt protege tu privacidad. Internxt Drive, Photos, Send y mucho más.',
