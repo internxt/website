@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
   return (
     <section className="relative -mt-16 flex w-full flex-col overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden">
-        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center py-16 sm:mb-6 md:flex-row lg:mx-32 lg:justify-between lg:space-x-11">
+        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center pt-16 sm:mb-6 sm:pt-0 md:flex-row lg:mx-32 lg:justify-between lg:space-x-11 lg:py-16">
           <div className="mt-16 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 pt-5 text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
             <div className="flex flex-row">
               <Alarm size={32} className="mr-4 text-primary" />
