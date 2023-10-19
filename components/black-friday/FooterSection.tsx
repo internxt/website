@@ -3,21 +3,6 @@ import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
 const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
-  const affiliates = isAffiliates
-    ? textContent.FooterSection.subtitle1.replace('6', '7')
-    : textContent.FooterSection.subtitle1;
-
-  const currency = () => {
-    switch (country) {
-      case 'US':
-        return '$';
-      case 'GB':
-        return '£';
-      default:
-        return '€';
-    }
-  };
-
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col">
