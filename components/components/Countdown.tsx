@@ -90,7 +90,7 @@ const Countdown = ({ textColor, dt }: CountdownProps) => {
     <div id="countdown" className={`flex text-${textColor}`}>
       <div className="flex flex-row items-end space-x-2 text-2xl">
         <div id={'days'} className={`days delay-350  font-semibold transition-colors duration-150`}>
-          18
+          00
         </div>
         <p className={` font-semibold`}> : </p>
         <div id={'hours'} className={`hours delay-350  font-semibold transition-colors duration-150`}>
