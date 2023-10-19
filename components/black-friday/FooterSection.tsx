@@ -30,7 +30,7 @@ const FooterSection = ({ textContent, lang, country, isAffiliates }) => {
             />
           </div> */}
           <div className="z-10 flex max-w-[585px] flex-col items-center justify-center space-y-4 py-16 text-center text-white">
-            <p className="text-4xl font-semibold">{textContent.FooterSection.title}</p>
+            <p className="text-5xl font-semibold">{textContent.FooterSection.title}</p>
             {/* <div>
               <p className="text-xl font-normal">{textContent.FooterSection.subtitle}</p>
               <p className="text-xl font-semibold">{affiliates}</p>
