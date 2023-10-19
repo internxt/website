@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
   return (
     <section className="relative -mt-16 flex w-full flex-col overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden">
-        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center pt-16 sm:mb-6 sm:pt-0 md:flex-row lg:mx-32 lg:justify-between lg:space-x-11 lg:py-16">
+        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 py-16 pt-16 sm:mb-6 sm:pt-0 md:flex-row md:space-y-0 lg:mx-32 lg:justify-between lg:space-x-11 lg:py-16">
           <div className="mt-16 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 pt-5 text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
             <div className="flex flex-row">
               <Alarm size={32} className="mr-4 text-primary" />
@@ -49,12 +49,12 @@ const HeroSection = ({ textContent, lang, country, isAffiliate }) => {
               <ButtonDeal lang={lang} />
             </div>
           </div>
-          <div className="flex w-full max-w-md flex-col md:mt-0 md:max-w-none md:flex-row">
-            <div className="relative flex h-[600px] items-center justify-center lg:left-16 lg:mt-10">
+          <div className="flex w-full  flex-col md:mt-0 md:max-w-none md:flex-row">
+            <div className="relative flex items-center justify-center md:h-[600px] lg:left-16 lg:mt-10">
               <div className="hidden lg:mt-24 lg:flex">
                 <img src="/images/special-offer/black-friday/file_icons.png" alt="File icons" />
               </div>
-              <div className="absolute m-auto flex max-h-[300px] max-w-[300px]">
+              <div className="m-auto flex max-h-[300px] max-w-[300px] md:absolute">
                 <img src="/images/special-offer/black-friday/inxtBF.png" alt="inxtBF image" />
               </div>
             </div>
