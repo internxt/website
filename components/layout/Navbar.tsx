@@ -221,7 +221,7 @@ export default function Navbar(props: NavbarProps) {
                           '_blank',
                         )
                       }
-                      className={`whitespace-nowrap cursor-pointer py-1.5 px-4 transition duration-150 ease-in-out ${
+                      className={`cursor-pointer whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                         props.darkMode || props.isQuizSection
                           ? `text-white hover:text-cool-gray-20 ${
                               router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
@@ -293,7 +293,7 @@ export default function Navbar(props: NavbarProps) {
               ''
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
-              <LanguageBox darkMode={props.darkMode || props.isQuizSection} />
+              <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode || props.isQuizSection} />
             </div>
 
             {!props.isLinksHidden && (

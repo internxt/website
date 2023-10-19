@@ -4,7 +4,6 @@ import { isMobile } from 'react-device-detect';
 import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '../lib/get-download-url';
 import HeroSection from '../components/home/HeroSection';
-import GetStartedSection from '../components/home/GetStartedSection';
 import SocialProofSection from '../components/home/SocialProofSection';
 import FirstFeaturesSection from '../components/home/FirstFeaturesSection';
 import Footer from '../components/layout/Footer';
