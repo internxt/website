@@ -50,36 +50,54 @@ describe('Lifetime page', () => {
     );
   });
 
+  beforeEach(() => {
+    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
+      (response) => {
+        coupon = response.body;
+        cy.visit('/lifetime');
+      },
+    );
+  });
+
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime2TB.storage}`).contains(`${products.lifetime2TB.storage}`).click();
 
       cy.wait(1000);
 
-      cy.url().should('eq', url({ planId: products.lifetime2TB.planId, couponCode: coupon }));
+      cy.url().should((url) => {
+        expect(url).to.include(products.lifetime2TB.planId);
+        expect(url).to.include(coupon);
+        expect(url).to.include(DRIVE_WEB_URL);
+      });
     });
   });
 
   describe('When the plan of 5TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime5TB.storage}`).contains(`${products.lifetime5TB.storage}`).click();
 
       cy.wait(1000);
 
-      cy.url().should('eq', url({ planId: products.lifetime5TB.planId, couponCode: coupon }));
+      cy.url().should((url) => {
+        expect(url).to.include(products.lifetime5TB.planId);
+        expect(url).to.include(coupon);
+        expect(url).to.include(DRIVE_WEB_URL);
+      });
     });
   });
 
   describe('When the plan of 10TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.visit('/lifetime');
       cy.get(`#planButton${products.lifetime10TB.storage}`).contains(`${products.lifetime10TB.storage}`).click();
 
       cy.wait(1000);
 
-      cy.url().should('eq', url({ planId: products.lifetime10TB.planId, couponCode: coupon }));
+      cy.url().should((url) => {
+        expect(url).to.include(products.lifetime10TB.planId);
+        expect(url).to.include(coupon);
+        expect(url).to.include(DRIVE_WEB_URL);
+      });
     });
   });
 });

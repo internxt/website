@@ -46,6 +46,7 @@ LayoutProps) {
   const langToUpperCase = lang.toLocaleUpperCase();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
+  // THIS CODE SNIPPET SHOULD NOT BE REMOVED
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
