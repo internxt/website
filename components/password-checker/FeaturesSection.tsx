@@ -20,20 +20,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
     <section className="relative">
       {/* Password tips and rules */}
       <div className="flex w-full flex-col items-center justify-center space-y-20 bg-gray-5 bg-opacity-50 px-4 py-10 sm:pt-20 lg:p-16">
-        {lang === 'en' ? (
-          <>
-            <div className="hidden md:flex">
-              <a href="https://www.anrdoezrs.net/click-100599574-15111876" target="_blank">
-                <img src="https://www.ftjcfx.com/image-100599574-15111876" width="936" height="120" alt="" />
-              </a>
-            </div>
-            <div className="flex md:hidden">
-              <a href="https://www.kqzyfj.com/click-100599574-15111884" target="_blank">
-                <img src="https://www.ftjcfx.com/image-100599574-15111884" width="672" height="560" alt="" />
-              </a>
-            </div>
-          </>
-        ) : undefined}
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center ">
           <div className="flex w-full flex-col items-center space-y-16">
