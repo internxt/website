@@ -49,21 +49,6 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
-        {lang === 'en' ? (
-          <>
-            <div className="hidden md:flex">
-              <a href="https://www.anrdoezrs.net/click-100599574-15111876" target="_blank">
-                <img src="https://www.ftjcfx.com/image-100599574-15111876" width="936" height="120" alt="" />
-              </a>
-            </div>
-            <div className="flex md:hidden">
-              <a href="https://www.kqzyfj.com/click-100599574-15111884" target="_blank">
-                <img src="https://www.ftjcfx.com/image-100599574-15111884" width="672" height="560" alt="" />
-              </a>
-            </div>
-          </>
-        ) : undefined}
-
         <SignUpBanner textContent={bannerText} lang={lang} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
