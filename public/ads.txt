@@ -365,3 +365,4 @@ hypelab.com, dca870e4ac, DIRECT #17319
 buysellads.com, 17592, DIRECT
 MANAGERDOMAIN=buysellads.com
 OWNERDOMAIN=internxt.com
+google.com, pub-6684818764777307, DIRECT, f08c47fec0942fa0
