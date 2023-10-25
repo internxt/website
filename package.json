@@ -37,7 +37,7 @@
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
     "net": "^1.0.2",
-    "next": "^12.2.5",
+    "next": "^13.5.0",
     "next-share": "^0.18.1",
     "popper.js": "^1.16.1",
     "prettysize": "^2.0.0",
