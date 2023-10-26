@@ -46,7 +46,7 @@ LayoutProps) {
   const langToUpperCase = lang.toLocaleUpperCase();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
-  // THIS CODE SNIPPET SHOULD NOT BE REMOVED
+  // THIS CODE SNIPPET SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
