@@ -67,7 +67,7 @@
     "babel-eslint": "^10.1.0",
     "cypress": "^12.5.1",
     "eslint": "^7.32.0",
-    "postcss": "8.3.11",
+    "postcss": "8.4.31",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
     "reset-css": "5.0.1",
