@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
         <ShowSnackbar />
-        {/* {isExcludedPath ? null : <SquareBanner />} */}
+        {isExcludedPath ? null : <SquareBanner />}
         {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
         <Intercom />
       </GlobalUIManager>
