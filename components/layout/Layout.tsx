@@ -100,7 +100,7 @@ LayoutProps) {
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
         <Script src="/js/matomo.js" strategy="beforeInteractive" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6EXL38KVWG" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB" />
         <Script src="/js/tag-manager.js" />
       </Head>
 
