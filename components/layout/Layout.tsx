@@ -99,6 +99,7 @@ LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
+        {<Script src="/js/matomo.js" strategy="beforeInteractive" />}
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
