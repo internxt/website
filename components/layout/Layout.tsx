@@ -99,7 +99,9 @@ LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
-        {<Script src="/js/matomo.js" strategy="beforeInteractive" />}
+        <Script src="/js/matomo.js" strategy="beforeInteractive" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6EXL38KVWG" />
+        <Script src="/js/tag-manager.js" />
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
