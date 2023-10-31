@@ -11,6 +11,7 @@ import QASection from '../components/shared/FaqSection';
 import Footer from '../components/layout/Footer';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import roundedTime from '../components/utils/roundedTime';
 
 const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
@@ -24,6 +25,12 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Temporary Email', 'temporary-email')}
       </Script>
+
+      <Script
+        type="text/javascript"
+        src={`https://cdn4.buysellads.net/pub/internxt.js?${roundedTime()}`}
+        strategy="lazyOnload"
+      />
 
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
