@@ -6,7 +6,6 @@ import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import ShowSnackbar from '../components/Snackbar';
-import SquareBanner from '../components/banners/SquareBanner';
 
 const excludedPaths = ['/lifetime', '/pricing', '/affiliates'];
 
@@ -22,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         <Component {...pageProps} />
         <ShowSnackbar />
-        {isExcludedPath ? null : <SquareBanner />}
+        {/* {isExcludedPath ? null : <SquareBanner />} */}
         {/* {isExcludedPath ? null : <GeneralBanner textContent={bannerLang.GeneralBanner} />} */}
         <Intercom />
       </GlobalUIManager>
