@@ -7,7 +7,8 @@ import BusinessBanner from '../banners/BusinessBanner';
 import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
-import CyberAwarenessSpecialCard from './CyberAwarenessSpecialCard';
+import LifetimeCard from '../lifetime/PriceCard';
+import SpecialPriceCard from './SpecialPriceCard';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -29,23 +30,16 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   });
 
   useEffect(() => {
-    stripeService
-      .getAllPrices()
-      .then((product) => {
-        setProducts(product);
-        setLoadingCards(false);
-      })
-      .catch((err) => console.error(err));
-
-    currencyService
-      .filterCurrencyByCountry()
-      .then((res) => {
-        setCurrency({
-          symbol: res.symbol,
-          value: res.value,
-        });
-      })
-      .catch((err) => console.error(err));
+    stripeService.getAllPrices().then((res) => {
+      setProducts(res);
+      setLoadingCards(false);
+    });
+    currencyService.filterCurrencyByCountry().then((res) => {
+      setCurrency({
+        symbol: res.symbol,
+        value: res.value,
+      });
+    });
   }, []);
 
   return (
@@ -56,9 +50,9 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
               {individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}
             </h1>
-            {/* <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
+            <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
-            </p> */}
+            </p>
           </div>
           <div className="items center flex flex-col">
             <button
@@ -134,20 +128,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            {products?.individuals[billingFrequency] &&
-            billingFrequency !== Interval.Lifetime &&
-            billingFrequency === Interval.Year ? (
-              <CyberAwarenessSpecialCard
-                planType="individual"
-                key={'10GB'}
-                storage={'10GB'}
-                price={0}
-                billingFrequency={billingFrequency}
-                cta={['checkout', 'Free plan']}
-                lang={lang}
-                country={currency.symbol}
-              />
-            ) : billingFrequency === Interval.Month ? (
+            {products?.individuals[billingFrequency] && billingFrequency !== Interval.Lifetime && (
               <PriceCard
                 planType="individual"
                 key={'10GB'}
@@ -158,8 +139,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 lang={lang}
                 country={currency.symbol}
               />
-            ) : undefined}
-
+            )}
             {products?.individuals[billingFrequency] &&
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
@@ -176,20 +156,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         lang={lang}
                         country={currency.symbol}
                       />
-                    ) : billingFrequency === Interval.Year ? (
-                      <>
-                        <CyberAwarenessSpecialCard
-                          planType="individual"
-                          key={product.storage}
-                          storage={product.storage}
-                          price={product.price * currency.value}
-                          billingFrequency={billingFrequency}
-                          popular={product.storage === '2TB'}
-                          cta={['checkout', product.priceId]}
-                          lang={lang}
-                          country={currency.symbol}
-                        />
-                      </>
                     ) : (
                       <>
                         <PriceCard
