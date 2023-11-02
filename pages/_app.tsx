@@ -31,7 +31,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
-        <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB`} />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+        />
         <Script
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -39,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-CHHGLQTHSB', {
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,
