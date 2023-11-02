@@ -99,19 +99,7 @@ LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB" />
-        <Script id="google-analytics">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-CHHGLQTHSB');
-        `}
-        </Script>
 
-        <Script src="/js/tag-manager.js" />
         <Script id="matomo">
           {`
             var _paq = (window._paq = window._paq || []);
@@ -126,6 +114,7 @@ LayoutProps) {
                 g = d.createElement('script'),
                 s = d.getElementsByTagName('script')[0];
               g.async = true;
+              g.defer=true;
               g.src = u + 'matomo.js';
               s.parentNode.insertBefore(g, s);
             })();
