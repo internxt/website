@@ -30,24 +30,51 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
-        <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-        />
-        <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${gtag.GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
-        />
+        {process.env.NODE_ENV === 'production' ? (
+          <>
+            <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+            />
+            <Script
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gtag.GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+              }}
+            />
+            <Script
+              strategy="afterInteractive"
+              id="matomo"
+              dangerouslySetInnerHTML={{
+                __html: `
+            var _paq = (window._paq = window._paq || []);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+              var u = 'https://inxt.matomo.cloud/';
+              _paq.push(['setTrackerUrl', u + 'matomo.php']);
+              _paq.push(['setSiteId', '1']);
+              var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0];
+              g.async = true;
+              g.defer=true;
+              g.src = u + 'matomo.js';
+              s.parentNode.insertBefore(g, s);
+            })();
+            `,
+              }}
+            />
+          </>
+        ) : null}
         <Component {...pageProps} />
         <ShowSnackbar />
         <Intercom />
