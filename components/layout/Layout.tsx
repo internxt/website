@@ -99,8 +99,38 @@ LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-CHHGLQTHSB');
+        `}
+        </Script>
+
         <Script src="/js/tag-manager.js" />
+        <Script id="matomo">
+          {`
+            var _paq = (window._paq = window._paq || []);
+
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+              var u = 'https://inxt.matomo.cloud/';
+              _paq.push(['setTrackerUrl', u + 'matomo.php']);
+              _paq.push(['setSiteId', '1']);
+              var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0];
+              g.async = true;
+              g.src = u + 'matomo.js';
+              s.parentNode.insertBefore(g, s);
+            })();
+            `}
+        </Script>
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
