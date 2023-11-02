@@ -12,7 +12,6 @@ import ToolsSection from '../components/shared/ToolsSection';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import roundedTime from '../components/utils/roundedTime';
 
 const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
@@ -26,12 +25,6 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Virus Scanner', 'virus-scanner')}
       </Script>
-
-      <Script
-        type="text/javascript"
-        src={`https://cdn4.buysellads.net/pub/internxt.js?${roundedTime()}`}
-        strategy="lazyOnload"
-      />
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />

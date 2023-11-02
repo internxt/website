@@ -11,7 +11,6 @@ import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import ToolsSection from '../components/shared/ToolsSection';
-import roundedTime from '../components/utils/roundedTime';
 
 const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-checker');
@@ -25,12 +24,6 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Password Checker', 'password-checker')}
       </Script>
-
-      <Script
-        type="text/javascript"
-        src={`https://cdn4.buysellads.net/pub/internxt.js?${roundedTime()}`}
-        strategy="lazyOnload"
-      />
 
       <Layout
         segmentName="Password Checker"

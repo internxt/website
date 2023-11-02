@@ -13,7 +13,6 @@ import Footer from '../components/layout/Footer';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import roundedTime from '../components/utils/roundedTime';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -29,12 +28,6 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Byte Converter', 'byte-converter')}
       </Script>
-
-      <Script
-        type="text/javascript"
-        src={`https://cdn4.buysellads.net/pub/internxt.js?${roundedTime()}`}
-        strategy="lazyOnload"
-      />
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
         <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
