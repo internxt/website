@@ -9,8 +9,6 @@ import InfoSection from '../components/password-generator/InfoSection';
 import CtaSection from '../components/shared/CtaSection';
 import ToolsSection from '../components/shared/ToolsSection';
 import FAQSection from '../components/shared/FaqSection';
-import Script from 'next/script';
-import roundedTime from '../components/utils/roundedTime';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
@@ -18,34 +16,26 @@ const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, f
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-generator');
 
   return (
-    <>
-      <Script
-        type="text/javascript"
-        src={`https://cdn4.buysellads.net/pub/internxt.js?${roundedTime()}`}
-        strategy="lazyOnload"
-      />
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="Password Generator"
+      lang={lang}
+    >
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
-        segmentName="Password Generator"
-        lang={lang}
-      >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <HeroSection textContent={langJson.HeroSection} />
 
-        <HeroSection textContent={langJson.HeroSection} />
+      <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
 
-        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
+      <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
-        <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
+      <ToolsSection textContent={langJson.ToolsSection} lang={lang} maxWidth="max-w-2xl" />
 
-        <ToolsSection textContent={langJson.ToolsSection} lang={lang} maxWidth="max-w-2xl" />
+      <FAQSection textContent={langJson.FaqSection} />
 
-        <FAQSection textContent={langJson.FaqSection} />
-
-        <Footer textContent={footerLang} lang={lang} />
-      </Layout>
-    </>
+      <Footer textContent={footerLang} lang={lang} />
+    </Layout>
   );
 };
 
