@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
+        <Script strategy="beforeInteractive" src="/js/matomo.js" />
         <Component {...pageProps} />
         <ShowSnackbar />
         {/* {isExcludedPath ? null : <SquareBanner />} */}
