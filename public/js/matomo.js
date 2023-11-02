@@ -10,6 +10,6 @@ _paq.push(['enableLinkTracking']);
     g = d.createElement('script'),
     s = d.getElementsByTagName('script')[0];
   g.async = true;
-  g.src = '//cdn.matomo.cloud/inxt.matomo.cloud/matomo.js';
+  g.src = 'https://cdn.matomo.cloud/inxt.matomo.cloud/matomo.js';
   s.parentNode.insertBefore(g, s);
 })();
