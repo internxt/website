@@ -33,33 +33,29 @@
   "FeatureSection": {
     "title": "Why choose Internxt?",
     "subtitle": "Privacy made for everyone and simple-to-use online security that you don’t have to be  an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
-    "feature1": {
-      "title": "Private by default",
-      "subtitle1": "No first or third-party access to your file ever! You have total control of your data."
-    },
-    "feature2": {
-      "title": "Fast sync",
-      "subtitle1": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
-    },
-    "feature3": {
-      "title": "Secure from the core",
-      "subtitle1": "Built on blockchain, end-to-end encrypted, and decentralized across a vast peer-to-peer network."
-    },
-    "feature4": {
-      "title": "Safe sharing",
-      "subtitle1": "Send encrypted files and photos back and forth to your favorite people via link and email."
-    },
-    "feature5": {
-      "title": "Multiplatform",
-      "subtitle1": "Privacy for all devices, browsers, and operating systems! Linux, Windows, macOS, iOS, Android."
-    },
-    "feature6": {
-      "title": "Zero-knowledge",
-      "subtitle1": "You are the only one with access to your data. Not even internxt can view your files!"
-    }
+    "cards": [
+      {
+        "title": "Private by design",
+        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+      }
+    ]
   },
   "PlatformSection": {
-    "title": "Available on all platforms",
+    "title": "Access your files anywhere, anytime",
+    "description": "Internxt is available on all platforms, meaning your files are just a click away!",
+    "web": "Web",
     "linux": "Linux",
     "windows": "Windows",
     "mac": "MacOS",
@@ -68,17 +64,23 @@
   },
   "TestimonialSection": {
     "title": "What our users are saying about Internxt",
-    "cristian": {
-      "text": "\"We needed a Dropbox alternative that allowed us to store client files and work (social media files) and, as Internxt is GDPR friendly, fit perfectly for us!\"",
-      "footer": "Cristian"
-    },
     "josep": {
       "text": "\"I've been using Google Drive for several years, but I needed an alternative that granted me the privacy of my data. Something that Google or other well-known platforms can't do. That's why I moved to Internxt.\"",
       "footer": "Josep"
     },
+    "cristian": {
+      "text": "\"We needed a Dropbox alternative that allowed us to store client files and work (social media files) and, as Internxt is GDPR friendly, fit perfectly for us!\"",
+      "footer": "Cristian"
+    },
     "eva": {
       "text": "\"Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.\"",
       "footer": "Eva"
+    },
+    "cta": {
+      "title": "Black Friday deal",
+      "subtitle": "Enjoy 91% off our annual plans",
+      "cta": "Get the deal!",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "faq": {
@@ -138,21 +140,6 @@
     "title": "Stand with privacy. Choose Internxt!",
     "subtitle": "Get a discount on privacy and peace of mind.",
     "subtitle1": "Get 60% off one whole year of our largest 2TB plan!",
-    "only": "Only",
-    "priceNow": "3.59",
-    "month": "/mo"
-  },
-
-  "cta": {
-    "title": "Black Friday is over...",
-    "subtitle": "Our sale has ended, but you can still get affordable privacy!",
-    "only": "Only",
-    "priceNow": "3.59",
-    "month": "/mo"
-  },
-  "cta2": {
-    "title": "Black Friday is over...",
-    "subtitle": "Our sale is over, but you can still get affordable privacy!",
     "only": "Only",
     "priceNow": "3.59",
     "month": "/mo"

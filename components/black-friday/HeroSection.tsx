@@ -69,7 +69,12 @@ const HeroSection = ({ textContent, lang }) => {
               </div>
             </div>
             <div className="hidden animate-pulse flex-row lg:flex">
-              <Image src="/images/black-friday/internxt_black_friday_offer.png" width={500} height={500} />
+              <Image
+                src="/images/black-friday/internxt_black_friday_offer.png"
+                alt="Internxt Black Friday Offer"
+                width={500}
+                height={500}
+              />
             </div>
           </div>
         </div>
