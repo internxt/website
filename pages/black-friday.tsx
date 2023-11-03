@@ -16,18 +16,18 @@ import TestimonialsSection from '../components/black-friday/TestimonialsSection'
 import FaqSection from '../components/black-friday/FAQSection';
 import FooterSection from '../components/black-friday/FooterSection';
 import LoginBFBanner from '../components/banners/LoginBFBanner';
+import Link from 'next/link';
 
-const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
-const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
+// const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
+// const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
 const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
   const [country, setCountry] = React.useState('ES');
   const router = useRouter();
-  const { coupon } = router.query;
-  const isAffiliate = coupon === BLACK_FRIDAY_AFFILIATES_COUPON_ID ? true : false;
-  const couponCode = coupon ? coupon : BLACK_FRIDAY_COUPON_ID;
+  // const { coupon } = router.query;
+  // const isAffiliate = coupon === BLACK_FRIDAY_AFFILIATES_COUPON_ID ? true : false;
   async function getCountryCode() {
     const countryCode = await axios({
       method: 'GET',
@@ -44,24 +44,13 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
-      <Navbar
-        lang={deviceLang}
-        isBlackfriday={true}
-        textContent={navbarLang}
-        coupon={couponCode as string}
-        cta={['Hide Login']}
-        isLinksHidden
-        darkMode={true}
-      />
-      <LoginBFBanner />
+      <HeroSection lang={lang} textContent={langJson.HeroSection} />
 
-      <HeroSection lang={lang} textContent={langJson.blackFriday} country={country} isAffiliate={isAffiliate} />
-
-      <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
+      {/* <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
 
       <SuiteSection lang={lang} textContent={langJson.blackFriday} />
 
-      <CtaSection textContent={langJson.cta} country={country} lang={lang} isAffiliates={isAffiliate} />
+      <CtaSection textContent={langJson.cta} country={country} lang={lang} />
 
       <FeatureSection textContent={langJson.blackFriday} />
 
@@ -69,11 +58,11 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <TestimonialsSection textContent={langJson.blackFriday} lang={lang} />
 
-      <CtaSection textContent={langJson.cta2} country={country} lang={lang} isAffiliates={isAffiliate} />
+      <CtaSection textContent={langJson.cta2} country={country} lang={lang} />
 
       <FaqSection textContent={langJson.blackFriday} />
 
-      <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} isAffiliates={isAffiliate} />
+      <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} /> */}
     </Layout>
   );
 };

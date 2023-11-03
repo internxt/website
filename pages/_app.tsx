@@ -30,9 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
+        <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
         {process.env.NODE_ENV === 'production' ? (
           <>
-            <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
             <Script
               strategy="afterInteractive"
               src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
