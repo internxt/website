@@ -3,9 +3,9 @@ import React from 'react';
 import styles from './BF-HeroSection.module.scss';
 import ButtonDeal from './components/ButtonDeal';
 
-const CtaSection = ({ textContent, lang, country, isAffiliates }) => {
-  const affiliates = isAffiliates ? textContent.title.replace('6', '7') : textContent.title;
-  const subtitleAffiliates = isAffiliates ? textContent.subtitle.replace('6', '7') : textContent.subtitle;
+const CtaSection = ({ textContent, lang, country }) => {
+  const affiliates = textContent.title;
+  const subtitleAffiliates = textContent.subtitle;
 
   const currency = () => {
     switch (country) {

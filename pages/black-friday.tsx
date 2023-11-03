@@ -1,22 +1,16 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 
 import cookies from '../lib/cookies';
 import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/black-friday/HeroSection';
-import BestStorageSection from '../components/black-friday/BestStorageSection';
 import SuiteSection from '../components/black-friday/SuiteSection';
 import CtaSection from '../components/black-friday/CtaSection';
 import FeatureSection from '../components/black-friday/FeatureSection';
 import PlatformSection from '../components/black-friday/PlatformSection';
 import TestimonialsSection from '../components/black-friday/TestimonialsSection';
 import FaqSection from '../components/black-friday/FAQSection';
-import FooterSection from '../components/black-friday/FooterSection';
-import LoginBFBanner from '../components/banners/LoginBFBanner';
-import Link from 'next/link';
 
 // const BLACK_FRIDAY_COUPON_ID = 'pkyYefOz';
 // const BLACK_FRIDAY_AFFILIATES_COUPON_ID = 'n7qEeZgb';
@@ -46,23 +40,19 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <HeroSection lang={lang} textContent={langJson.HeroSection} />
 
-      {/* <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
-
-      <SuiteSection lang={lang} textContent={langJson.blackFriday} />
+      <SuiteSection lang={lang} textContent={langJson.SuiteSection} />
 
       <CtaSection textContent={langJson.cta} country={country} lang={lang} />
 
-      <FeatureSection textContent={langJson.blackFriday} />
+      <FeatureSection textContent={langJson.FeatureSection} />
 
-      <PlatformSection textContent={langJson.blackFriday} />
+      <PlatformSection textContent={langJson.PlatformSection} />
 
-      <TestimonialsSection textContent={langJson.blackFriday} lang={lang} />
+      <TestimonialsSection textContent={langJson.TestimonialSection} lang={lang} />
 
       <CtaSection textContent={langJson.cta2} country={country} lang={lang} />
 
-      <FaqSection textContent={langJson.blackFriday} />
-
-      <FooterSection textContent={langJson.blackFriday} country={country} lang={lang} /> */}
+      <FaqSection textContent={langJson.faq} />
     </Layout>
   );
 };

@@ -5,33 +5,33 @@ const FeatureSection = ({ textContent }) => {
   const cards = [
     {
       icon: EyeSlash,
-      title: textContent.FeatureSection.feature1.title,
-      subtitle: textContent.FeatureSection.feature1.subtitle1,
+      title: textContent.feature1.title,
+      subtitle: textContent.feature1.subtitle1,
     },
     {
       icon: Gauge,
-      title: textContent.FeatureSection.feature2.title,
-      subtitle: textContent.FeatureSection.feature2.subtitle1,
+      title: textContent.feature2.title,
+      subtitle: textContent.feature2.subtitle1,
     },
     {
       icon: LockSimple,
-      title: textContent.FeatureSection.feature3.title,
-      subtitle: textContent.FeatureSection.feature3.subtitle1,
+      title: textContent.feature3.title,
+      subtitle: textContent.feature3.subtitle1,
     },
     {
       icon: ArrowsClockwise,
-      title: textContent.FeatureSection.feature4.title,
-      subtitle: textContent.FeatureSection.feature4.subtitle1,
+      title: textContent.feature4.title,
+      subtitle: textContent.feature4.subtitle1,
     },
     {
       icon: Monitor,
-      title: textContent.FeatureSection.feature5.title,
-      subtitle: textContent.FeatureSection.feature5.subtitle1,
+      title: textContent.feature5.title,
+      subtitle: textContent.feature5.subtitle1,
     },
     {
       icon: User,
-      title: textContent.FeatureSection.feature6.title,
-      subtitle: textContent.FeatureSection.feature6.subtitle1,
+      title: textContent.feature6.title,
+      subtitle: textContent.feature6.subtitle1,
     },
   ];
 
@@ -39,8 +39,8 @@ const FeatureSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <div className="content flex flex-1 flex-col items-center bg-white px-10 py-20">
         <div className="center flex flex-col items-center pb-16 text-center lg:max-w-[778px]">
-          <p className="text-4xl font-semibold">{textContent.FeatureSection.title}</p>
-          <p className="mt-4 text-center text-xl font-normal">{textContent.FeatureSection.subtitle}</p>
+          <p className="text-4xl font-semibold">{textContent.title}</p>
+          <p className="mt-4 text-center text-xl font-normal">{textContent.subtitle}</p>
         </div>
         <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {cards.map((card) => (
