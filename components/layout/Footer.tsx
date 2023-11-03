@@ -33,7 +33,7 @@ export default function Footer({
     <section
       id="footer"
       className={`flex w-full flex-col overflow-hidden lg:pb-10 ${
-        darkMode ? 'bg-cool-gray-100 text-white' : 'bg-gray-5 bg-opacity-50'
+        darkMode ? 'bg-[#111111] text-white' : 'bg-gray-5 bg-opacity-50'
       }`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 pt-16 sm:p-20 sm:py-12">
@@ -42,8 +42,10 @@ export default function Footer({
 
           <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
             <div className="flex flex-col space-y-1">
-              <h2 className="text-lg font-medium text-gray-100">{textContent.DownloadApp.title}</h2>
-              <p className="text-sm text-gray-80">{textContent.DownloadApp.description}</p>
+              <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
+              <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} text-sm`}>
+                {textContent.DownloadApp.description}
+              </p>
             </div>
             {/* Images */}
             <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
@@ -524,7 +526,11 @@ export default function Footer({
           </div>
 
           {/* Mobile version */}
-          <div className="flex flex-col overflow-hidden bg-white lg:hidden">
+          <div
+            className={`${
+              darkMode ? 'bg-[#111111] text-white' : 'bg-gray-5 bg-opacity-50'
+            } flex flex-col overflow-hidden lg:hidden`}
+          >
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
@@ -540,20 +546,20 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                      className={`flex flex-col px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-black text-gray-30' : 'bg-gray-1 text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <Link href="/drive" locale={lang} passHref>
                         <div className="flex flex-row space-x-2">
-                          <HardDrives className="h-6 w-6 text-gray-80" />
+                          <HardDrives className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.drive}</p>
                         </div>
                       </Link>
 
                       <Link href="/photos" locale={lang} passHref>
                         <div className="flex flex-row space-x-2">
-                          <Camera className="h-6 w-6 text-gray-80" />
+                          <Camera className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.photos}</p>
                         </div>
                       </Link>
@@ -565,7 +571,7 @@ export default function Footer({
                         className="flex flex-row items-center"
                       >
                         <div className="flex flex-row space-x-2">
-                          <PaperPlaneTilt className="h-6 w-6 text-gray-80" />
+                          <PaperPlaneTilt className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.send}</p>
                         </div>
                       </a>
@@ -590,7 +596,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <Link href="/about" locale={lang} passHref>
@@ -665,16 +671,12 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <a href="https://drive.internxt.com/new" target="_blank">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
-
-                      <Link href={'https://help.internxt.com'} target={'_blank'} locale={lang} passHref>
-                        <a>{textContent.FooterSection.sections.company.support}</a>
-                      </Link>
 
                       <a href="https://drive.internxt.com/login" target="_blank">
                         {textContent.FooterSection.sections.join.login}
@@ -710,7 +712,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <a
@@ -753,7 +755,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <Link href="/byte-converter" locale={lang} passHref>

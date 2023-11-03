@@ -1,17 +1,15 @@
 import React from 'react';
-import FaqAccordion from '../shared/FAQAccordion';
+import FaqAccordion from './FaqAccordion';
 
-const FaqSection = ({ textContent }) => {
+const FAQSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden">
-      <div className="flex flex-col items-center bg-gray-1 py-20 lg:px-44">
-        <div className="center flex flex-col items-center text-center">
-          <p className="text-4xl font-semibold">{textContent.title}</p>
-        </div>
-        <div className="flex w-full max-w-screen-sm flex-col space-y-2 pt-10">
-          {textContent.faq.map((item, index) => (
-            <div className="rounded-lg border border-gray-20 px-5" key={index}>
-              <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
+    <section className="overflow-hidden bg-black">
+      <div className="flex flex-col items-center justify-center space-y-10 px-10 pb-16 pt-10 lg:py-20">
+        <p className="text-center text-4xl font-semibold text-white">{textContent.title}</p>
+        <div className="flex w-full max-w-[850px] flex-col space-y-2">
+          {textContent.faq.map((item) => (
+            <div className="rounded-lg border border-gray-90 px-5" key={item.question}>
+              <FaqAccordion key={item.question} question={item.question} answer={item.answer} isQuestionBigger />
             </div>
           ))}
         </div>
@@ -20,4 +18,4 @@ const FaqSection = ({ textContent }) => {
   );
 };
 
-export default FaqSection;
+export default FAQSection;

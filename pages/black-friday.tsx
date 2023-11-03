@@ -8,10 +8,11 @@ import FeatureSection from '../components/black-friday/FeatureSection';
 import PlatformSection from '../components/black-friday/PlatformSection';
 import TestimonialsSection from '../components/black-friday/TestimonialsSection';
 import FaqSection from '../components/black-friday/FAQSection';
+import Footer from '../components/layout/Footer';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson }) => {
+const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
 
   return (
@@ -27,6 +28,8 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson }) => {
       <TestimonialsSection textContent={langJson.TestimonialSection} lang={lang} />
 
       <FaqSection textContent={langJson.faq} />
+
+      <Footer lang={lang} textContent={footerLang} darkMode />
     </Layout>
   );
 };
@@ -36,8 +39,9 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/black-friday.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const langJson = require(`../assets/lang/${lang}/black-friday.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -48,6 +52,7 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       navbarLang,
       langJson,
+      footerLang,
     },
   };
 }
