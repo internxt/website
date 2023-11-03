@@ -58,7 +58,15 @@ const HeroSection = ({ textContent, lang }) => {
               <div className="flex flex-col space-y-10">
                 <p className="text-4xl font-bold text-white">{textContent.description}</p>
                 <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-x-6 lg:space-y-0">
-                  <button className="flex items-center rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white">
+                  <button
+                    onClick={() => {
+                      window.scrollTo({
+                        top: document.getElementById('priceTable').offsetTop,
+                        behavior: 'smooth',
+                      });
+                    }}
+                    className="flex items-center rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white"
+                  >
                     {textContent.cta}
                   </button>
                   <div className="flex flex-row items-center space-x-3">

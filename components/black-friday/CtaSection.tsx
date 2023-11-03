@@ -15,7 +15,15 @@ const CtaSection = ({ textContent }) => {
               <p className="text-2xl font-medium">{textContent.title}</p>
               <p className="max-w-[430px] text-4xl font-bold lg:text-5xl">{textContent.subtitle}</p>
             </div>
-            <button className="flex items-center rounded-lg bg-primary px-5 py-3 font-medium text-white">
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: document.getElementById('priceTable').offsetTop,
+                  behavior: 'smooth',
+                });
+              }}
+              className="flex items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
+            >
               {textContent.cta}
             </button>
             <div className="flex flex-row items-center space-x-3">

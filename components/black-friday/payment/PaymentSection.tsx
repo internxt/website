@@ -28,7 +28,7 @@ const PaymentSection = ({ textContent }) => {
   }, []);
 
   return (
-    <section className="overflow-hidden bg-[#111111]">
+    <section id="priceTable" className="overflow-hidden bg-[#111111]">
       <div className="flex flex-col items-center space-y-16 px-5 py-20">
         <div className="flex max-w-[974px] flex-col items-center space-y-6">
           <h2 className="text-center text-5xl font-semibold text-white">{textContent.title}</h2>
