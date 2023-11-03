@@ -8,6 +8,15 @@
     "cta": "Get the deal!",
     "guarantee": "30-day money-back guarantee"
   },
+  "PaymentSection": {
+    "title": "Enjoy a year of encrypted, secure cloud storage at an incredible price!",
+    "subtitle": "This Black Friday, make the switch to Internxt and protect your privacy with our open-source, encrypted, and zero-knowledge secure services. It’s time to take back control of your online privacy.",
+    "feeds": {
+      "firstFeature": "30-day money-back guarantee",
+      "secondFeature": "100% secure payment",
+      "thirdFeature": "Anonymous account creation"
+    }
+  },
   "SuiteSection": {
     "title": "What’s included in Internxt’s Black Friday Cloud storage deal?",
     "subtitle": "Everything! With this deal, you can access all our privacy-centric suite of products designed to give you back control of your data and secure your important files.",
