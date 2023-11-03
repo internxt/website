@@ -8,24 +8,26 @@
     "cta": "Get the deal!",
     "guarantee": "30-day money-back guarantee"
   },
-  "BestStorage": {
-    "title": "The best cloud storage Black Friday deal",
-    "subtitle": "Internxt's discount on privacy and peace of mind will be back next year!"
-  },
   "SuiteSection": {
-    "title": "What's included in Internxt's Black Friday deal",
-    "subtitle": "Internxt has a whole suite of private cloud services designed to help you and your family stay safe online.",
+    "title": "What’s included in Internxt’s Black Friday Cloud storage deal?",
+    "subtitle": "Everything! With this deal, you can access all our privacy-centric suite of products designed to give you back control of your data and secure your important files.",
     "drive": {
       "title": "Internxt Drive",
-      "subtitle": "Back up your treasured family recipes with our safe and secure cloud storage service, Internxt Drive."
+      "subtitle": "Securely back up and organize your folders in the cloud with maximum privacy."
     },
     "photos": {
       "title": "Internxt Photos",
-      "subtitle": "Save all of your family photos this holiday season with a cloud-based gallery, Internxt Photos."
+      "subtitle": "Automatically sync and secure your favorite memories with our cloud-based photo gallery."
     },
     "send": {
       "title": "Internxt Send",
-      "subtitle": "Share your travel itineraries and tickets with our encrypted file-transfer service, Internxt Send."
+      "subtitle": "Enjoy complete security and privacy from the moment you hit send with our encrypted file transfer platform."
+    },
+    "cta": {
+      "title": "Black Friday deal",
+      "subtitle": "Grab 91% off any of our annual plans",
+      "cta": "Get the deal!",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FeatureSection": {

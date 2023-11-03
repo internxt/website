@@ -6,7 +6,6 @@ import cookies from '../lib/cookies';
 import Layout from '../components/layout/Layout';
 import HeroSection from '../components/black-friday/HeroSection';
 import SuiteSection from '../components/black-friday/SuiteSection';
-import CtaSection from '../components/black-friday/CtaSection';
 import FeatureSection from '../components/black-friday/FeatureSection';
 import PlatformSection from '../components/black-friday/PlatformSection';
 import TestimonialsSection from '../components/black-friday/TestimonialsSection';
@@ -42,15 +41,11 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
       <SuiteSection lang={lang} textContent={langJson.SuiteSection} />
 
-      <CtaSection textContent={langJson.cta} country={country} lang={lang} />
-
       <FeatureSection textContent={langJson.FeatureSection} />
 
       <PlatformSection textContent={langJson.PlatformSection} />
 
       <TestimonialsSection textContent={langJson.TestimonialSection} lang={lang} />
-
-      <CtaSection textContent={langJson.cta2} country={country} lang={lang} />
 
       <FaqSection textContent={langJson.faq} />
     </Layout>
