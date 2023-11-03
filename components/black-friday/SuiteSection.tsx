@@ -1,6 +1,7 @@
 import React from 'react';
 import { HardDrives, Image, PaperPlaneTilt } from '@phosphor-icons/react';
 import CtaSection from './CtaSection';
+import RevealX from '../components/RevealX';
 
 const SuiteSection = ({ textContent, lang }) => {
   return (
@@ -14,7 +15,10 @@ const SuiteSection = ({ textContent, lang }) => {
           </div>
 
           <div className="flex flex-col space-y-20 text-left text-white lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
-            <div className="bg-cool-white flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+            <RevealX
+              direction="right"
+              className="bg-cool-white flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+            >
               <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
                 <div className="flex flex-col space-y-10">
                   <HardDrives size={40} className="text-primary" />
@@ -28,9 +32,12 @@ const SuiteSection = ({ textContent, lang }) => {
                   <img src="/images/privacy/Internxt-Drive.webp" alt="Internxt Drive" draggable={false} />
                 </div>
               </div>
-            </div>
+            </RevealX>
 
-            <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+            <RevealX
+              direction="left"
+              className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+            >
               <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
                 <div className="flex flex-col space-y-10">
                   <Image size={40} className="text-primary" />
@@ -44,8 +51,11 @@ const SuiteSection = ({ textContent, lang }) => {
                   <img src="/images/privacy/photos-image.png" alt="Internxt Photos" />
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0">
+            </RevealX>
+            <RevealX
+              direction="right"
+              className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+            >
               <div className="w-auto px-10 pt-10 lg:h-[480px] lg:w-[480px] lg:p-20">
                 <div className="flex flex-col space-y-10">
                   <PaperPlaneTilt size={40} className="text-primary" />
@@ -59,7 +69,7 @@ const SuiteSection = ({ textContent, lang }) => {
                   <img src="/images/privacy/Share-by-email.webp" alt="Internxt Send" />
                 </div>
               </div>
-            </div>
+            </RevealX>
           </div>
         </div>
         <CtaSection textContent={textContent.cta} />
