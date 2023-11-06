@@ -7,7 +7,7 @@ const SuiteSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden bg-black">
       {/* Apps designed to protect your privacy */}
-      <div className="z-10 flex flex-col items-center space-y-16 py-16">
+      <div className="z-10 flex flex-col items-center space-y-16 py-20">
         <div className="px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center px-5 pb-16 text-center">
             <h2 className="max-w-[756px] text-4xl font-semibold text-white md:text-5xl">{textContent.title}</h2>

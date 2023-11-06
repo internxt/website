@@ -6,7 +6,7 @@ const PlatformSection = ({ textContent }) => {
     <section className="overflow-hidden bg-black">
       <div className="flex flex-col items-center py-12">
         <div className="flex flex-col items-center space-y-6 px-20 pb-16 text-center">
-          <p className="text-5xl font-semibold text-white">{textContent.title}</p>
+          <p className="text-4xl font-semibold text-white md:text-5xl">{textContent.title}</p>
           <p className="text-xl text-gray-5">{textContent.description}</p>
         </div>
         <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 lg:gap-x-24">

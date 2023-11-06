@@ -52,7 +52,7 @@ export default function PriceCard({
 
   return (
     <div
-      className={`priceCard card ${
+      className={`priceCard drop-shadow ${
         popular ? ' bg-primary-dark' : ''
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
@@ -64,9 +64,7 @@ export default function PriceCard({
         {contentText.cta.discount}
       </div>
 
-      <div
-        className={`info flex flex-col items-center justify-center bg-gradient-to-b from-primary to-black bg-cover p-6 pt-6`}
-      >
+      <div className={`info flex flex-col items-center justify-center bg-gradient-to-b from-primary to-black p-6 pt-6`}>
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full bg-primary py-1 px-4 pb-0.5 text-base font-semibold text-white`}
         >

@@ -29,9 +29,9 @@ const FeatureSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-[#111111]">
       <div className="content flex flex-1 flex-col items-center px-10 py-20 text-white">
-        <div className="center flex flex-col items-center pb-16 text-center lg:max-w-[778px]">
-          <p className="text-4xl font-semibold">{textContent.title}</p>
-          <p className="mt-4 text-center text-xl font-normal text-gray-5">{textContent.subtitle}</p>
+        <div className="center flex flex-col items-center space-y-4 pb-16 text-center lg:max-w-[778px]">
+          <p className="text-4xl font-semibold md:text-5xl">{textContent.title}</p>
+          <p className="text-center text-xl font-normal text-gray-5">{textContent.subtitle}</p>
         </div>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {Cards.map((card) => (

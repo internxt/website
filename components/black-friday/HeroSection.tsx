@@ -9,15 +9,14 @@ import Link from 'next/link';
 const HeroSection = ({ textContent, lang }) => {
   const [height, setHeight] = React.useState(0);
 
-  useEffect(() => {
-    setHeight(window.innerHeight);
-  }, []);
+  // useEffect(() => {
+  //   setHeight(window.innerHeight);
+  // }, []);
 
   return (
     <section
       className="overflow-hidden"
       style={{
-        height: height,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

@@ -24,7 +24,7 @@ const TestimonialsSection = ({ textContent, lang }) => {
     <section className="overflow-hidden bg-[#111111]">
       <div className="flex flex-col space-y-5 py-14 text-white lg:py-24">
         <div className="flex flex-col items-center text-center">
-          <p className="text-4xl font-semibold">{textContent.title}</p>
+          <p className="text-4xl font-semibold md:text-5xl">{textContent.title}</p>
         </div>
         <div className="flex flex-row flex-wrap justify-center gap-y-10 p-5 pt-10 sm:justify-evenly lg:gap-y-20 lg:pt-12 xl:px-40">
           {cards.map((card) => (
