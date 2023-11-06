@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { Globe } from '@phosphor-icons/react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const currentLang = {
   es: 'Español (ES)',

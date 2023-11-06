@@ -1,6 +1,6 @@
-import { Fragment, useEffect, useState } from 'react';
-import { Disclosure, Listbox, Transition } from '@headlessui/react';
-import { CaretDown, CaretUp, Check, Globe } from '@phosphor-icons/react';
+import { useState } from 'react';
+import { Disclosure, Transition } from '@headlessui/react';
+import { CaretDown, CaretUp, Globe } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 const languages = [
@@ -25,7 +25,7 @@ export default function LanguageMobileBox({ darkMode }) {
           <>
             <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
               <div className="flex flex-row items-center space-x-2">
-                <Globe className="text-gray-80" size={20} weight="regular" />
+                <Globe className={darkMode ? 'text-white' : 'text-gray-60'} size={20} weight="regular" />
                 <span className="flex flex-row">{selected}</span>
               </div>
               <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />

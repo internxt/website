@@ -22,11 +22,11 @@ const TestimonialsSection = ({ textContent, lang }) => {
   ];
   return (
     <section className="overflow-hidden bg-[#111111]">
-      <div className="flex flex-col py-24 text-white">
+      <div className="flex flex-col space-y-5 py-14 text-white lg:py-24">
         <div className="flex flex-col items-center text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
         </div>
-        <div className="flex flex-row flex-wrap justify-center gap-y-20 p-5 pt-10 sm:justify-evenly lg:pt-12 xl:px-40">
+        <div className="flex flex-row flex-wrap justify-center gap-y-10 p-5 pt-10 sm:justify-evenly lg:gap-y-20 lg:pt-12 xl:px-40">
           {cards.map((card) => (
             <div key={card.footer} className="h-full max-w-[320px] rounded-2xl bg-gray-100 lg:h-full">
               <div className="flex w-full flex-col space-y-6 p-8">
@@ -47,6 +47,8 @@ const TestimonialsSection = ({ textContent, lang }) => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex flex-col items-center">
           <CtaSection textContent={textContent.cta} />
         </div>
       </div>

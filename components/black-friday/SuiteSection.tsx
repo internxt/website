@@ -14,7 +14,8 @@ const SuiteSection = ({ textContent, lang }) => {
             <p className=" max-w-[756px] pt-5 text-xl text-gray-5">{textContent.subtitle}</p>
           </div>
 
-          <div className="flex flex-col space-y-20 text-left text-white lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
+          <div className="flex flex-col space-y-10 text-left text-white lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
+            {/* Drive */}
             <RevealX
               direction="right"
               className="bg-cool-white flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
@@ -34,6 +35,7 @@ const SuiteSection = ({ textContent, lang }) => {
               </div>
             </RevealX>
 
+            {/* Photos */}
             <RevealX
               direction="left"
               className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
@@ -52,6 +54,8 @@ const SuiteSection = ({ textContent, lang }) => {
                 </div>
               </div>
             </RevealX>
+
+            {/* Send */}
             <RevealX
               direction="right"
               className="flex flex-col items-start justify-start overflow-hidden rounded-2xl bg-[#18181B] lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
