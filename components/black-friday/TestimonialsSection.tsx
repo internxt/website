@@ -22,13 +22,13 @@ const TestimonialsSection = ({ textContent, lang }) => {
   ];
   return (
     <section className="overflow-hidden bg-[#111111]">
-      <div className="flex flex-col space-y-5 py-14 text-white lg:py-24">
+      <div className="flex flex-col space-y-10 py-14 px-5 text-white lg:space-y-20 lg:py-20">
         <div className="flex flex-col items-center text-center">
           <p className="text-4xl font-semibold md:text-5xl">{textContent.title}</p>
         </div>
-        <div className="flex flex-row flex-wrap justify-center gap-y-10 p-5 pt-10 sm:justify-evenly lg:gap-y-20 lg:pt-12 xl:px-40">
+        <div className="flex w-full flex-row flex-wrap items-start justify-center gap-10">
           {cards.map((card) => (
-            <div key={card.footer} className="h-full max-w-[320px] rounded-2xl bg-gray-100 lg:h-full">
+            <div key={card.footer} className="flex h-full max-w-[320px] rounded-2xl bg-gray-100 lg:h-full">
               <div className="flex w-full flex-col space-y-6 p-8">
                 <div>
                   <Image
