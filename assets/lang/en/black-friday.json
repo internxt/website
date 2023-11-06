@@ -96,38 +96,37 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "How can I get the Black Friday discount?",
+        "question": "How can I get the Black Friday Discount?",
         "answer": [
-          "To take advantage of our Black Friday discount, you must click one of the “Get the deal” buttons located on this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan."
+          "To get the Black Friday discount, simply select your plan and head to the checkout page. We will automatically apply your 91% discount in the payment section."
         ]
       },
       {
         "question": "When does the promotion end?",
-        "answer": ["Our Black Friday Sale runs from November 21st until December 5th, 2022."]
+        "answer": ["The last day of the Black Friday sale is November 30, 2023."]
       },
       {
         "question": "Who is eligible for this discount?",
         "answer": [
-          "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Black Friday Sale."
+          "New users or anyone with an Internxt subscription plan is eligible to take part in our Black Friday Sale."
         ]
       },
       {
-        "question": "Will I keep the discount when my plan ends?",
+        "question": "Will I keep my discount when my plan ends?",
         "answer": [
-          "The discount is applied for the first full year of service. Therefore, you will have access to our 2TB subscription plan at this discounted price for only one year.",
-          "If you choose to continue your existing subscription using the deal, your account will be charged at the standard 2TB plan price for the following year."
+          "The Black Friday deal is valid for one year. Your plan will automatically renew at the non-discounted price once it ends the following year."
         ]
       },
       {
         "question": "How much will it cost to renew the plan after the first year?",
         "answer": [
-          "The 2TB plan costs €9.99/month paid monthly or €8.99/month when paid annually. You can check out all [our pricing and subscription plans](https://internxt.com/pricing) on the Internxt website."
+          "Our yearly plans start at 20GB for €10.68, 200GB for €41.88, and 2TB for €107.88. You can check out all our pricing and subscription plans on the Internxt website."
         ]
       },
       {
-        "question": "What payment methods does Internxt accept?",
+        "question": "What payment methods do you accept?",
         "answer": [
-          "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit."
+          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
         ]
       },
       {
@@ -140,7 +139,7 @@
       {
         "question": "Have more questions?",
         "answer": [
-          "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+          "Feel free to contact us at [hello@internxt.com](mailto:hello@internxt.com) or visit our [help center](https://help.internxt.com/en/)."
         ]
       }
     ]
