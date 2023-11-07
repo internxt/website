@@ -29,7 +29,6 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
   };
 
   info.forEach((release) => {
-    console.log('Release: ', release);
     release.assets.forEach((asset) => {
       const match = asset.browser_download_url.match(/\.(\w+)$/);
 
