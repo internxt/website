@@ -61,16 +61,27 @@ LayoutProps) {
 
     if (document.referrer !== '') return;
 
+    const params = new URLSearchParams(window.location.search);
+    const source = params.get('utm_source');
+
     const randomUUID = crypto.randomUUID();
+
+    const cookieData = {
+      anonymousId: randomUUID,
+      source: source || 'direct',
+    };
 
     const expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 7);
 
-    const cookie = `anonymousID=${randomUUID};expires=${new Date(
+    // To check if the link is from an affiliate
+    const sourceCookie = `impactSource=${cookieData.source};expires=${new Date(
       expirationDate,
     ).toUTCString()};domain=${COOKIE_DOMAIN}; Path=/`;
 
-    document.cookie = cookie;
+    const anonymousIdCookie = `impactAnonymousId=${cookieData.anonymousId};domain=${COOKIE_DOMAIN}; Path=/`;
+
+    document.cookie = `${sourceCookie}; ${anonymousIdCookie}`;
 
     axios
       .post(process.env.NEXT_PUBLIC_IMPACT_API, {
