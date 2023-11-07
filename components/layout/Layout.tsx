@@ -75,7 +75,7 @@ LayoutProps) {
     axios
       .post(process.env.NEXT_PUBLIC_IMPACT_API, {
         anonymousId: randomUUID,
-        originalTimestamp: moment().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
+        timestamp: moment().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
         request_ip: ip,
         context: {
           userAgent: navigator.userAgent,
