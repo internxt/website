@@ -1,12 +1,12 @@
 {
   "links": {
     "products": "Productos",
-    "about": "Sobre nosotros",
-    "ourValues": "Nuestros valores",
+    "about": "Nosotros",
+    "ourValues": "Valores",
     "pricing": "Precios",
-    "login": "Iniciar sesión",
-    "getStarted": "Empezar ahora",
-    "checkout": "Reclamar oferta!"
+    "login": "Login",
+    "getStarted": "Registro",
+    "checkout": "¡Reclamar oferta!"
   },
   "ourValues": {
     "privacy": "Privacidad",
