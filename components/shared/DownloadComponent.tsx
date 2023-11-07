@@ -129,7 +129,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                     {language === 'zh' ? (
                       <>
                         {textContent.orDownloadFor.split('<>')[0]}
-                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
                           {textContent.MacOS.split(' ')[0]}
                         </a>{' '}
                         {textContent.or}{' '}
@@ -141,7 +141,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                     ) : (
                       <>
                         {textContent.orDownloadFor} {/* Secondary downloads when is mac */}
-                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
+                        <a className="font-medium text-gray-80 underline hover:no-underline" href={download.MacOS}>
                           {textContent.MacOS.split(' ')[0]}
                         </a>{' '}
                         {textContent.or}{' '}
