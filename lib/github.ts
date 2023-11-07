@@ -12,8 +12,6 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
   const fetchUrl = `https://api.github.com/repos/${user}/${repo}/releases`;
   const res = await fetch(fetchUrl);
 
-  console.log('res: ', res);
-
   if (res.status !== 200) {
     throw Error('Release not found');
   }
