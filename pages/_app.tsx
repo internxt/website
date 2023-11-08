@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       g = d.createElement('script'),
       s = d.getElementsByTagName('script')[0];
     g.async = true;
-    g.src = 'https://cdn.matomo.cloud/inxt.matomo.cloud/container_PcHBv1re.js';
+    g.src = process.env.NEXT_PUBLIC_MATOMO_URL;
     s.parentNode.insertBefore(g, s);
   }, []);
 
