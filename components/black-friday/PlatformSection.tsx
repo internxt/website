@@ -4,8 +4,8 @@ import React from 'react';
 const PlatformSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-black">
-      <div className="flex flex-col items-center py-12">
-        <div className="flex flex-col items-center space-y-6 px-20 pb-16 text-center">
+      <div className="flex flex-col items-center py-12 px-5">
+        <div className="flex flex-col items-center space-y-6 pb-16 text-center">
           <p className="text-4xl font-semibold text-white md:text-5xl">{textContent.title}</p>
           <p className="text-xl text-gray-5">{textContent.description}</p>
         </div>

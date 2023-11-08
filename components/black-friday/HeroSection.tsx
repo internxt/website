@@ -22,7 +22,7 @@ const HeroSection = ({ textContent, lang }) => {
         justifyContent: 'center',
       }}
     >
-      <div className="relative mx-auto flex min-h-screen w-full justify-center lg:max-w-screen-xl">
+      <div className="relative mx-auto flex w-full justify-center py-20 lg:min-h-screen lg:max-w-screen-xl">
         <div className="absolute left-5 top-12 z-50 flex flex-1 flex-shrink-0 flex-grow flex-row justify-start">
           {/* Logo */}
           <Link href={'/'} locale={lang} passHref>
@@ -33,18 +33,21 @@ const HeroSection = ({ textContent, lang }) => {
         </div>
         <div className="flex w-full flex-row items-center justify-center py-10 px-5 lg:justify-between lg:py-20">
           <div className="flex w-full max-w-[488px] flex-col items-center space-y-6 text-center lg:items-start lg:text-start">
-            <Link href="/" locale={lang} passHref>
-              <a className="flex flex-shrink-0 lg:hidden">
-                <img
-                  loading="lazy"
-                  className="select-none"
-                  src={`../../logos/internxt/white.svg`}
-                  alt="Internxt logo"
-                  width="96"
-                  height="10"
-                />
-              </a>
-            </Link>
+            <div className="absolute top-8 z-50 flex flex-1 flex-shrink-0 flex-grow flex-row justify-start">
+              {/* Logo */}
+              <Link href={'/'} locale={lang} passHref>
+                <a className="flex w-full flex-shrink-0">
+                  <img
+                    loading="lazy"
+                    className="select-none"
+                    src={`../../logos/internxt/white.svg`}
+                    alt="Internxt logo"
+                    width={96}
+                    height={10}
+                  />
+                </a>
+              </Link>
+            </div>
             <div className="flex flex-row items-center space-x-3">
               <Alarm size={32} className="text-primary" />
               <Countdown textColor="white" dt="2023-11-12T00:00:00" />
@@ -80,6 +83,7 @@ const HeroSection = ({ textContent, lang }) => {
               alt="Internxt Black Friday Offer"
               width={534}
               height={527}
+              loading="eager"
             />
           </div>
         </div>

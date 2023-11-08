@@ -59,7 +59,7 @@ export default function PriceCard({
       <div
         className={`mostPopular ${
           popular ? '' : 'hidden'
-        } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
+        } flex flex-col items-center justify-center py-2 text-xs font-bold text-white`}
       >
         {contentText.cta.discount}
       </div>
