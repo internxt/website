@@ -47,24 +47,37 @@ LayoutProps) {
   const showBanner = excludedPaths.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
-  const [ip, setIp] = useState('');
+
+  function getCookie(cookieName: string) {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+      const [nombre, valor] = cookie.trim().split('=');
+      if (nombre === cookieName) {
+        return decodeURIComponent(valor);
+      }
+    }
+    return null;
+  }
 
   // THIS CODE SNIPPET SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
+    let ip;
     axios.get('https://ipinfo.io/ip').then((res) => {
-      setIp(res.data);
+      ip = res.data;
     });
 
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
 
-    if (document.referrer !== '') return;
-
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
 
-    const randomUUID = crypto.randomUUID();
+    if (source !== 'Impact') return;
+
+    const impactAnonymousId = getCookie('impactAnonymousId');
+
+    const randomUUID = impactAnonymousId || crypto.randomUUID();
 
     const cookieData = {
       anonymousId: randomUUID,
@@ -74,14 +87,20 @@ LayoutProps) {
     const expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 7);
 
+    const anonymousDate = new Date();
+    anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);
+
     // To check if the link is from an affiliate
     const sourceCookie = `impactSource=${cookieData.source};expires=${new Date(
       expirationDate,
     ).toUTCString()};domain=${COOKIE_DOMAIN}; Path=/`;
 
-    const anonymousIdCookie = `impactAnonymousId=${cookieData.anonymousId};domain=${COOKIE_DOMAIN}; Path=/`;
+    const anonymousIdCookie = `impactAnonymousId=${
+      cookieData.anonymousId
+    };expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
-    document.cookie = `${sourceCookie}; ${anonymousIdCookie}`;
+    document.cookie = sourceCookie;
+    document.cookie = anonymousIdCookie;
 
     axios
       .post(process.env.NEXT_PUBLIC_IMPACT_API, {
