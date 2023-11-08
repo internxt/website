@@ -26,6 +26,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
+  useEffect(() => {
+    let _mtm = (window._mtm = window._mtm || []);
+    _mtm.push({ 'mtm.startTime': new Date().getTime(), event: 'mtm.Start' });
+    let d = document,
+      g = d.createElement('script'),
+      s = d.getElementsByTagName('script')[0];
+    g.async = true;
+    g.src = 'https://cdn.matomo.cloud/inxt.matomo.cloud/container_PcHBv1re.js';
+    s.parentNode.insertBefore(g, s);
+  }, []);
+
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
@@ -49,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               `,
             }}
           />
-          <Script
+          {/* <Script
             strategy="afterInteractive"
             id="matomo"
             dangerouslySetInnerHTML={{
@@ -71,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             })();
             `,
             }}
-          />
+          /> */}
         </>
 
         <Component {...pageProps} />

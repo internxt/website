@@ -85,7 +85,7 @@ LayoutProps) {
     };
 
     const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 7);
+    expirationDate.setDate(expirationDate.getDate() + 1);
 
     const anonymousDate = new Date();
     anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);
