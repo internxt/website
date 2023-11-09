@@ -7,12 +7,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const HeroSection = ({ textContent, lang }) => {
-  const [height, setHeight] = React.useState(0);
-
-  // useEffect(() => {
-  //   setHeight(window.innerHeight);
-  // }, []);
-
   return (
     <section
       className="overflow-hidden"
@@ -22,7 +16,7 @@ const HeroSection = ({ textContent, lang }) => {
         justifyContent: 'center',
       }}
     >
-      <div className="relative mx-auto flex w-full justify-center py-20 lg:min-h-screen lg:max-w-screen-xl">
+      <div className="relative mx-auto flex w-full justify-center py-20 lg:min-h-screen lg:max-w-screen-xl lg:py-0">
         <div className="absolute left-5 top-12 z-50 flex flex-1 flex-shrink-0 flex-grow flex-row justify-start">
           {/* Logo */}
           <Link href={'/'} locale={lang} passHref>
