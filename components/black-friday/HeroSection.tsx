@@ -36,7 +36,7 @@ const HeroSection = ({ textContent, lang }) => {
             <div className="absolute top-8 z-50 flex flex-1 flex-shrink-0 flex-grow flex-row justify-start">
               {/* Logo */}
               <Link href={'/'} locale={lang} passHref>
-                <a className="flex w-full flex-shrink-0">
+                <a className="flex w-full flex-shrink-0 lg:hidden">
                   <img
                     loading="lazy"
                     className="select-none"
