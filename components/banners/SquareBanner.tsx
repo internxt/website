@@ -40,18 +40,18 @@ const SquareBanner = () => {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 hidden h-[350px] w-[350px] flex-col overflow-hidden rounded-2xl bg-contain py-7 px-8 lg:${
+      className={`fixed bottom-8 right-8 z-50 hidden h-[350px] w-[350px] flex-col overflow-hidden rounded-2xl bg-contain py-8 px-8 lg:${
         hidePopup ? 'hidden' : 'flex'
       }`}
       style={{ background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, rgb(0,0,0) 100%)' }}
     >
       <div className="flex items-end justify-end">
-        <button onClick={handleClose} className="absolute top-2 right-2 flex h-auto pb-2">
+        <button onClick={handleClose} className="absolute top-3 right-3 flex h-auto pb-2">
           <X className=" text-white" size={24} />
         </button>
       </div>
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
-        <p className="text-2xl font-medium">{title()}</p>
+        <p className="text-3xl font-bold">{title()}</p>
         <div className="flex flex-col">
           <Image src="/images/black-friday/internxt_black_friday_offer.png" width={189} height={170} />
         </div>
