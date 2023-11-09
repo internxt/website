@@ -8,10 +8,6 @@ const SquareBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  if (router.pathname === '/lifetime') {
-    return null;
-  }
-
   const handleClose = () => {
     setHidePopup(true);
   };
@@ -19,21 +15,35 @@ const SquareBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return 'Lifetime deal!';
+        return 'Back Friday is here!';
       case 'es':
-        return '¡Plan lifetime!';
+        return '¡El Black Friday está aquí!';
       case 'fr':
-        return 'Plan lifetime!';
+        return 'Le Black Friday arrivé!';
       default:
-        return 'Lifetime deal!';
+        return 'Black Friday is here!';
+    }
+  };
+
+  const ctaText = () => {
+    switch (lang) {
+      case 'en':
+        return 'Get the deal!';
+      case 'es':
+        return '¡Obtén el descuento!';
+      case 'fr':
+        return "Obtenez l'offre";
+      default:
+        return 'Get the deal!';
     }
   };
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 hidden h-[300px] w-[300px] flex-col overflow-hidden rounded-2xl bg-[url(/images/banners/banner_pop_up_cs_month_800x450_300x300_bg.webp)] bg-contain py-7 px-8 lg:${
+      className={`fixed bottom-8 right-8 z-50 hidden h-[350px] w-[350px] flex-col overflow-hidden rounded-2xl bg-contain py-7 px-8 lg:${
         hidePopup ? 'hidden' : 'flex'
       }`}
+      style={{ background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, rgb(0,0,0) 100%)' }}
     >
       <div className="flex items-end justify-end">
         <button onClick={handleClose} className="absolute top-2 right-2 flex h-auto pb-2">
@@ -41,17 +51,17 @@ const SquareBanner = () => {
         </button>
       </div>
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
-        <p className="text-2xl font-medium">Cyber Security Awareness Month</p>
+        <p className="text-2xl font-medium">{title()}</p>
         <div className="flex flex-col">
-          <Image src="/images/banners/80off-white.svg" width={217} height={95} />
+          <Image src="/images/black-friday/internxt_black_friday_offer.png" width={189} height={170} />
         </div>
         <button
-          className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-gray-10 active:bg-gray-10 sm:text-lg"
+          className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-base font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
           onClick={() => {
-            router.push('/pricing#priceTable');
+            router.push('/black-friday#priceTable');
           }}
         >
-          Get the deal!
+          {ctaText()}
         </button>
       </div>
     </div>
