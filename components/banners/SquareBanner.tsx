@@ -1,16 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+
+const SHOW_SQUARE_BANNER_LS = 'showSquareBanner';
 
 const SquareBanner = () => {
   const [hidePopup, setHidePopup] = useState(false);
   const router = useRouter();
   const lang = router.locale;
 
-  const handleClose = () => {
+  useEffect(() => {
+    const getSquareBannerLS = localStorage.getItem(SHOW_SQUARE_BANNER_LS);
+    if (getSquareBannerLS) setHidePopup(true);
+  }, []);
+
+  function handleClose() {
     setHidePopup(true);
-  };
+    localStorage.setItem(SHOW_SQUARE_BANNER_LS, 'false');
+  }
 
   const title = () => {
     switch (lang) {
