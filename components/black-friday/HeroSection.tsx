@@ -78,6 +78,7 @@ const HeroSection = ({ textContent, lang }) => {
               width={534}
               height={527}
               loading="eager"
+              draggable={false}
             />
           </div>
         </div>
