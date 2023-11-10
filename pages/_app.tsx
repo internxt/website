@@ -14,7 +14,7 @@ const excludedPaths = ['/lifetime', '/black-friday', '/affiliates'];
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
   const pathname = route.pathname;
-  const isExcludedPath = excludedPaths.findIndex((path) => pathname.includes(path)) !== -1;
+  const isExcludedPath = excludedPaths.includes(pathname);
   const router = useRouter();
 
   useEffect(() => {
@@ -27,21 +27,31 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
+  useEffect(() => {
+    let _mtm = (window._mtm = window._mtm || []);
+    _mtm.push({ 'mtm.startTime': new Date().getTime(), event: 'mtm.Start' });
+    let d = document,
+      g = d.createElement('script'),
+      s = d.getElementsByTagName('script')[0];
+    g.async = true;
+    g.src = process.env.NEXT_PUBLIC_MATOMO_URL;
+    s.parentNode.insertBefore(g, s);
+  }, []);
+
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
-        <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
-        {process.env.NODE_ENV === 'production' ? (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-            />
-            <Script
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
+        <>
+          <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+          />
+          <Script
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -49,33 +59,10 @@ function MyApp({ Component, pageProps }: AppProps) {
                   page_path: window.location.pathname,
                 });
               `,
-              }}
-            />
-            <Script
-              strategy="afterInteractive"
-              id="matomo"
-              dangerouslySetInnerHTML={{
-                __html: `
-            var _paq = (window._paq = window._paq || []);
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function () {
-              var u = 'https://inxt.matomo.cloud/';
-              _paq.push(['setTrackerUrl', u + 'matomo.php']);
-              _paq.push(['setSiteId', '1']);
-              var d = document,
-                g = d.createElement('script'),
-                s = d.getElementsByTagName('script')[0];
-              g.async = true;
-              g.defer=true;
-              g.src = u + 'matomo.js';
-              s.parentNode.insertBefore(g, s);
-            })();
-            `,
-              }}
-            />
-          </>
-        ) : null}
+            }}
+          />
+        </>
+
         <Component {...pageProps} />
         {!isExcludedPath ? <SquareBanner /> : undefined}
         <ShowSnackbar />

@@ -1,27 +1,29 @@
 /* eslint-disable react/no-danger */
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
-import SquareBanner from '../banners/SquareBanner';
+import axios from 'axios';
+import moment from 'moment';
 
 interface LayoutProps {
-  children: React.ReactNode;
-  title: string;
-  description: string;
-  segmentName?: string | null;
-  disableMailerlite?: boolean;
-  disableDrift?: boolean;
-  isProduction?: boolean;
-  specialOffer?: string;
-  host?: string;
-  isBannerFixed?: boolean;
-  lang?: string;
+  readonly children: React.ReactNode;
+  readonly title: string;
+  readonly description: string;
+  readonly segmentName?: string | null;
+  readonly disableMailerlite?: boolean;
+  readonly disableDrift?: boolean;
+  readonly isProduction?: boolean;
+  readonly specialOffer?: string;
+  readonly host?: string;
+  readonly isBannerFixed?: boolean;
+  readonly lang?: string;
 }
 
 const INTERNXT_URL = 'https://internxt.com';
+const COOKIE_DOMAIN = 'internxt.com';
 
 const excludedPaths = [];
 const imageLang = ['ES', 'FR', 'EN'];
@@ -46,11 +48,77 @@ LayoutProps) {
   const langToUpperCase = lang.toLocaleUpperCase();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
+  function getCookie(cookieName: string) {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+      const [nombre, valor] = cookie.trim().split('=');
+      if (nombre === cookieName) {
+        return decodeURIComponent(valor);
+      }
+    }
+    return null;
+  }
+
   // THIS CODE SNIPPET SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
+    let ip;
+    axios.get('https://ipinfo.io/ip').then((res) => {
+      ip = res.data;
+    });
+
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
     });
+
+    const params = new URLSearchParams(window.location.search);
+    const source = params.get('utm_source');
+
+    if (source !== 'Impact') return;
+
+    const impactAnonymousId = getCookie('impactAnonymousId');
+
+    const randomUUID = impactAnonymousId || crypto.randomUUID();
+
+    const cookieData = {
+      anonymousId: randomUUID,
+      source: source || 'direct',
+    };
+
+    const expirationDate = new Date();
+    expirationDate.setHours(expirationDate.getHours() + 1);
+
+    const anonymousDate = new Date();
+    anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);
+
+    // To check if the link is from an affiliate
+    const sourceCookie = `impactSource=${cookieData.source};expires=${new Date(
+      expirationDate,
+    ).toUTCString()};domain=${COOKIE_DOMAIN}; Path=/`;
+
+    const anonymousIdCookie = `impactAnonymousId=${
+      cookieData.anonymousId
+    };expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
+
+    document.cookie = sourceCookie;
+    document.cookie = anonymousIdCookie;
+
+    axios
+      .post(process.env.NEXT_PUBLIC_IMPACT_API, {
+        anonymousId: randomUUID,
+        timestamp: moment().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
+        request_ip: ip,
+        context: {
+          userAgent: navigator.userAgent,
+          page: {
+            url: window.location.href,
+            referrer: document.referrer,
+          },
+        },
+        type: 'page',
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [segmentName]);
 
   const slogan = {
