@@ -10,6 +10,7 @@ import TestimonialsSection from '../components/black-friday/TestimonialsSection'
 import FaqSection from '../components/black-friday/FAQSection';
 import Footer from '../components/layout/Footer';
 import PaymentSection from '../components/black-friday/payment/PaymentSection';
+import LoginBFBanner from '../components/banners/LoginBFBanner';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
@@ -19,6 +20,8 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, footerL
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <HeroSection lang={lang} textContent={langJson.HeroSection} />
+
+      <LoginBFBanner />
 
       <PaymentSection textContent={langJson.PaymentSection} />
 
