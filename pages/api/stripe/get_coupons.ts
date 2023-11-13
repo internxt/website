@@ -8,6 +8,7 @@ export enum CouponType {
   CloudwardsCoupon = 'COUPON_CLOUDWARDS',
   Special15Coupon = 'COUPON_SPECIAL15',
   AnnualDiscount = 'ANNUAL_PLAN_80_DISCOUNT',
+  BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {

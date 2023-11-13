@@ -7,12 +7,14 @@ import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import ShowSnackbar from '../components/Snackbar';
 import * as gtag from '../lib/gtag';
+import SquareBanner from '../components/banners/SquareBanner';
 
-const excludedPaths = ['/lifetime', '/pricing', '/affiliates'];
+const excludedPaths = ['/lifetime', '/black-friday', '/affiliates'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
   const pathname = route.pathname;
+  const isExcludedPath = excludedPaths.includes(pathname);
   const router = useRouter();
 
   useEffect(() => {
@@ -62,6 +64,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
+        {!isExcludedPath ? <SquareBanner /> : undefined}
         <ShowSnackbar />
         <Intercom />
       </GlobalUIManager>

@@ -7,8 +7,6 @@ import BusinessBanner from '../banners/BusinessBanner';
 import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
-import LifetimeCard from '../lifetime/PriceCard';
-import SpecialPriceCard from './SpecialPriceCard';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -157,19 +155,17 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         country={currency.symbol}
                       />
                     ) : (
-                      <>
-                        <PriceCard
-                          planType="individual"
-                          key={product.storage}
-                          storage={product.storage}
-                          price={product.price * currency.value}
-                          billingFrequency={billingFrequency}
-                          popular={product.storage === '200GB'}
-                          cta={['checkout', product.priceId]}
-                          lang={lang}
-                          country={currency.symbol}
-                        />
-                      </>
+                      <PriceCard
+                        planType="individual"
+                        key={product.storage}
+                        storage={product.storage}
+                        price={product.price * currency.value}
+                        billingFrequency={billingFrequency}
+                        popular={product.storage === '200GB'}
+                        cta={['checkout', product.priceId]}
+                        lang={lang}
+                        country={currency.symbol}
+                      />
                     )}
                   </>
                 );
@@ -192,11 +188,11 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>
           </div>
-          <div className="flex max-w-[114px] flex-col items-center space-y-3">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <CreditCard size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.secondFeature}</p>
           </div>
-          <div className="flex max-w-[153px] flex-col items-center space-y-3">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Detective size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.thirdFeature}</p>
           </div>

@@ -45,15 +45,7 @@ const GeneralBanner = ({ textContent }) => {
               <p className=" pt-4 text-3xl font-medium text-white">{textContent.description}</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-6">
-              <div
-                className="relative flex cursor-pointer flex-col items-center justify-center rounded-lg bg-primary py-3 px-5 text-base font-medium text-white focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
-                onClick={() => {
-                  checkout({
-                    planId: 'plan_FkTXxEg3GZW0pg',
-                    couponCode: 'lxevN374',
-                  });
-                }}
-              >
+              <div className="relative flex cursor-pointer flex-col items-center justify-center rounded-lg bg-primary py-3 px-5 text-base font-medium text-white focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg">
                 {textContent.cta}
               </div>
               <div

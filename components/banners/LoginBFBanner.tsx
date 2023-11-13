@@ -8,7 +8,6 @@ import {
   X,
 } from '@phosphor-icons/react';
 import React from 'react';
-import styles from '../black-friday/BF-HeroSection.module.scss';
 import { useRouter } from 'next/router';
 
 const cardsTitles = {
@@ -20,25 +19,44 @@ const cardsTitles = {
     title5: 'No unauthorized access',
     title6: 'Available on all devices',
   },
+  es: {
+    title1: 'Consigue hasta 10GB gratis',
+    title2: 'Almacenamiento en la nube seguro',
+    title3: 'Backups seguros de archivos y fotos',
+    title4: 'Encriptación de punto a punto',
+    title5: 'Evita accesos no autorizados',
+    title6: 'Disponible en todos los dispositivos',
+  },
+  fr: {
+    title1: "Obtenez jusqu'à 10GB gratuits",
+    title2: 'Stockage en nuage sécurisé',
+    title3: 'Sauvegarde privée des fichiers',
+    title4: 'Transferts cryptés de bout en bout',
+    title5: 'Aucun accès non autorisé',
+    title6: 'Disponible sur tous les appareils',
+  },
 };
+
+const allowedLangs = ['en', 'es', 'fr'];
 
 const LoginBFBanner = () => {
   const [showBanner, setShowBanner] = React.useState(false);
-  const lang = 'en';
+  const router = useRouter();
+  const lang = allowedLangs.includes(router.locale as string) ? router.locale : 'en';
 
   React.useEffect(() => {
     setTimeout(() => {
       setShowBanner(true);
-    }, 300000);
+    }, 3000);
   }, []);
 
   const handleClose = () => {
-    localStorage.setItem('hideLoginBanner', true);
+    localStorage.setItem('hideBFLoginBanner', 'true');
     setShowBanner(false);
   };
 
   React.useEffect(() => {
-    const hideBanner = localStorage.getItem('hideLoginBanner');
+    const hideBanner = localStorage.getItem('hideBFLoginBanner');
     if (showBanner) {
       window.dispatchEvent(new Event('CloseSquare'));
     }
@@ -47,7 +65,7 @@ const LoginBFBanner = () => {
     }
     window.addEventListener('unload', function (e) {
       e.preventDefault();
-      localStorage.removeItem('hideLoginBanner');
+      localStorage.removeItem('hideBFLoginBanner');
     });
     return () => {
       window.removeEventListener('unload', () => {});
@@ -118,7 +136,7 @@ const LoginBFBanner = () => {
     showBanner && (
       <div className={`fixed top-0 left-0 right-0 bottom-0 z-50 flex bg-black bg-opacity-50 px-10`}>
         <div
-          className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl`}
+          className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl bg-gradient-to-r from-black to-primary`}
         >
           <button className="absolute right-0 m-7 flex text-white" onClick={handleClose}>
             <X size={32} />
@@ -131,7 +149,7 @@ const LoginBFBanner = () => {
               </div>
               <div className="flex pt-7 lg:pt-24">
                 <button
-                  className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-4xl bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+                  className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                   onClick={() => {
                     window.location.replace(
                       'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=blackfriday',
@@ -143,21 +161,18 @@ const LoginBFBanner = () => {
               </div>
             </div>
             <div className="hidden items-center lg:flex">
-              <div className="flex w-[340px] flex-col">
+              <div className="flex w-[360px] flex-col">
                 <div className="flex flex-col">
                   {cards.map((card, index) => (
                     <div className="flex flex-row pb-8 last:pb-0" key={index}>
                       <card.icon size={32} className="mr-4 text-primary" />
-                      <p className="text-xl font-semibold text-white">{card.title}</p>
+                      <p className="whitespace-nowrap text-xl font-semibold text-white">{card.title}</p>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
-          <div
-            className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.neonBlur} pointer-events-none origin-center`}
-          />
         </div>
       </div>
     )
