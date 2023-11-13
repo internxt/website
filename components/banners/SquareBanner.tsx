@@ -48,7 +48,7 @@ const SquareBanner = () => {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 hidden h-[350px] w-[350px] flex-col overflow-hidden rounded-2xl bg-contain py-8 px-8 lg:${
+      className={`fixed bottom-8 left-8 z-50 hidden h-[350px] w-[350px] flex-col overflow-hidden rounded-2xl bg-contain py-8 px-8 lg:${
         hidePopup ? 'hidden' : 'flex'
       }`}
       style={{ background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, rgb(0,0,0) 100%)' }}
