@@ -11,13 +11,13 @@ const SquareBanner = () => {
   const lang = router.locale;
 
   useEffect(() => {
-    const getSquareBannerLS = localStorage.getItem(SHOW_SQUARE_BANNER_LS);
+    const getSquareBannerLS = sessionStorage.getItem(SHOW_SQUARE_BANNER_LS);
     if (getSquareBannerLS) setHidePopup(true);
   }, []);
 
   function handleClose() {
     setHidePopup(true);
-    localStorage.setItem(SHOW_SQUARE_BANNER_LS, 'false');
+    sessionStorage.setItem(SHOW_SQUARE_BANNER_LS, 'false');
   }
 
   const title = () => {
