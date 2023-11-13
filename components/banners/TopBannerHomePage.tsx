@@ -17,7 +17,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() => {
-            router.push('/pricing#priceTable');
+            router.push('/black-friday#priceTable');
           }}
         >
           <div className="flex flex-row space-x-1">
@@ -36,7 +36,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           <div
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              router.push('/pricing');
+              router.push('/black-friday');
             }}
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
