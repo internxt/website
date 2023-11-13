@@ -25,9 +25,9 @@ const SquareBanner = () => {
       case 'en':
         return 'Back Friday is here!';
       case 'es':
-        return '¡El Black Friday está aquí!';
+        return '¡Ya es Black Friday!';
       case 'fr':
-        return 'Le Black Friday arrivé!';
+        return 'Black Friday arrivé!';
       default:
         return 'Black Friday is here!';
     }
@@ -38,7 +38,7 @@ const SquareBanner = () => {
       case 'en':
         return 'Get the deal!';
       case 'es':
-        return '¡Obtén el descuento!';
+        return '¡Obtén la oferta!';
       case 'fr':
         return "Obtenez l'offre";
       default:
