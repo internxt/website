@@ -25,7 +25,7 @@ interface LayoutProps {
 const INTERNXT_URL = 'https://internxt.com';
 const COOKIE_DOMAIN = 'internxt.com';
 
-const excludedPaths = [];
+const excludedPaths = ['/black-friday', '/lifetime', '/affiliates'];
 const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
@@ -44,7 +44,7 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = excludedPaths.includes(router.pathname);
+  const showBanner = !excludedPaths.includes(router.pathname);
   const langToUpperCase = lang.toLocaleUpperCase();
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
