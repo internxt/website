@@ -21,8 +21,6 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, footerL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <HeroSection lang={lang} textContent={langJson.HeroSection} />
 
-      <LoginBFBanner />
-
       <PaymentSection textContent={langJson.PaymentSection} />
 
       <SuiteSection lang={lang} textContent={langJson.SuiteSection} />
