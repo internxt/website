@@ -60,7 +60,7 @@ const SquareBanner = () => {
       </div>
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-3xl font-bold">{title()}</p>
-        <div className="flex flex-col">
+        <div className="flex max-h-[170px] w-full max-w-[189px] flex-col">
           <Image src="/images/black-friday/internxt_black_friday_offer.png" width={189} height={170} />
         </div>
         <button
