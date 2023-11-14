@@ -190,25 +190,6 @@ LayoutProps) {
           ]
         }`}
       </Script>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {`{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Internxt",
-          "url": "https://www.internxt.com/black-friday",
-          "logo": "https://internxt.com/images/black-friday/black-friday-search-results.png",
-          "location": "Valencia, Spain",
-          "legalName": "Internxt Universal Technologies SL",
-          "slogan": "${slogan[lang]}",
-          "sameAs": [
-            "https://twitter.com/Internxt",
-            "https://www.facebook.com/internxt",
-            "https://es.linkedin.com/company/internxt",
-            "https://www.instagram.com/internxt/",
-            "https://github.com/internxt"
-          ]
-        }`}
-      </Script>
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
