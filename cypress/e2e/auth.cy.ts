@@ -49,7 +49,7 @@ describe('Auth flow (Sign Up / Log In)', () => {
 
     describe('When the user do the Sign Up from the Sign Up inline (Home page)', () => {
       it(
-        'Then, the user is redirected to https://drive.internxt.com/new to do auto Sign Up',
+        'Then, the user is redirected to https://drive.internxt.com/app',
         {
           baseUrl: Cypress.env('productionUrl'),
         },
