@@ -36,7 +36,8 @@ jobs:
 
         with:
           install: yarn
-          start: yarn cypress
+          build: yarn build
+          start: yarn start
           browser: chrome
 
       # - name: Send Slack notification

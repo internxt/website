@@ -48,22 +48,24 @@ describe('Auth flow (Sign Up / Log In)', () => {
     });
 
     describe('When the user do the Sign Up from the Sign Up inline (Home page)', () => {
-      it('Then, the user is redirected to https://drive.internxt.com/new to do auto Sign Up', () => {
-        const linkToRedirect = isProduction
-          ? 'https://drive.internxt.com/app'
-          : 'https://drive.internxt.com/new?autoSubmit=true';
+      it(
+        'Then, the user is redirected to https://drive.internxt.com/new to do auto Sign Up',
+        {
+          baseUrl: Cypress.env('productionUrl'),
+        },
+        () => {
+          cy.visit('/');
 
-        cy.visit('/');
+          cy.get('#signupEmail').type(`test${generateString(4)}@inxt.com`, { force: true });
+          cy.get('#signupPassword').type('test1234.', { force: true });
 
-        cy.get('#signupEmail').type(`test${generateString(4)}@inxt.com`, { force: true });
-        cy.get('#signupPassword').type('test1234.', { force: true });
+          cy.get('#signupInlineSubmit').click({ force: true });
 
-        cy.get('#signupInlineSubmit').click({ force: true });
+          cy.getCookie('cr').should('exist');
 
-        isProduction && cy.getCookie('cr').should('exist');
-
-        cy.url().should('eq', linkToRedirect);
-      });
+          cy.url().should('eq', 'https://drive.internxt.com/app');
+        },
+      );
     });
   });
 });
