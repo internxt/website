@@ -4,8 +4,6 @@ export {};
 
 const characters = '0123456789';
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 function generateString(length) {
   let result = ' ';
   const charactersLength = characters.length;
