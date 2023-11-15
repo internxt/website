@@ -2,7 +2,7 @@
 export {};
 import bytes from 'bytes';
 
-const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
+const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
 export enum CouponType {
   TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
