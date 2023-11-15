@@ -8,7 +8,7 @@
     "dev": "next dev -p 3001",
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
     "build": "node ./scripts/check-envs.js && next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "prod": "next export",
     "cypress": "cypress open",
     "lint": "eslint './**/*.{js,ts,tsx}'"

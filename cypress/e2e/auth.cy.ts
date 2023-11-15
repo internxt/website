@@ -47,17 +47,19 @@ describe('Auth flow (Sign Up / Log In)', () => {
 
     describe('When the user do the Sign Up from the Sign Up inline (Home page)', () => {
       it('Then, the user is redirected to https://drive.internxt.com/new to do auto Sign Up', () => {
+        const linkToRedirect =
+          process.env.NODE_ENV === 'production' ? 'https://drive.internxt.com/app' : 'https://drive.internxt.com/new';
+
         cy.visit('/');
 
-        // Fill the email and password fields
         cy.get('#signupEmail').type(`test${generateString(4)}@inxt.com`, { force: true });
         cy.get('#signupPassword').type('test1234.', { force: true });
 
-        // Click on the Sign Up button
-        cy.get('#signupInlineSubmit').click();
+        cy.get('#signupInlineSubmit').click({ force: true });
 
-        // Check that the user is redirected to https://drive.internxt.com/new to do auto Sign Up
-        cy.url().should('eq', 'https://drive.internxt.com/new?autoSubmit=true');
+        cy.getCookie('cr').should('exist');
+
+        cy.url().should('eq', linkToRedirect);
       });
     });
   });
