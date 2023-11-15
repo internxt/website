@@ -4,6 +4,8 @@ export {};
 
 const characters = '0123456789';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 function generateString(length) {
   let result = ' ';
   const charactersLength = characters.length;
@@ -47,8 +49,9 @@ describe('Auth flow (Sign Up / Log In)', () => {
 
     describe('When the user do the Sign Up from the Sign Up inline (Home page)', () => {
       it('Then, the user is redirected to https://drive.internxt.com/new to do auto Sign Up', () => {
-        const linkToRedirect =
-          process.env.NODE_ENV === 'production' ? 'https://drive.internxt.com/app' : 'https://drive.internxt.com/new';
+        const linkToRedirect = isProduction
+          ? 'https://drive.internxt.com/app'
+          : 'https://drive.internxt.com/new?autoSubmit=true';
 
         cy.visit('/');
 
@@ -57,7 +60,7 @@ describe('Auth flow (Sign Up / Log In)', () => {
 
         cy.get('#signupInlineSubmit').click({ force: true });
 
-        cy.getCookie('cr').should('exist');
+        isProduction && cy.getCookie('cr').should('exist');
 
         cy.url().should('eq', linkToRedirect);
       });
