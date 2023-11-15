@@ -10,8 +10,6 @@ import TestimonialsSection from '../components/black-friday/TestimonialsSection'
 import FaqSection from '../components/black-friday/FAQSection';
 import Footer from '../components/layout/Footer';
 import PaymentSection from '../components/black-friday/payment/PaymentSection';
-import LoginBFBanner from '../components/banners/LoginBFBanner';
-import Head from 'next/head';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
@@ -19,31 +17,28 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, footerL
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
 
   return (
-    <>
-      <Head>
-        <meta
-          property="og:image"
-          content={'https://internxt.com/images/black-friday/black-friday-search-results.png'}
-        />
-      </Head>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
-        <HeroSection lang={lang} textContent={langJson.HeroSection} />
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="Black Friday"
+      specialOffer="https://internxt.com/images/black-friday/black-friday-search-results.png"
+    >
+      <HeroSection lang={lang} textContent={langJson.HeroSection} />
 
-        <PaymentSection textContent={langJson.PaymentSection} />
+      <PaymentSection textContent={langJson.PaymentSection} />
 
-        <SuiteSection lang={lang} textContent={langJson.SuiteSection} />
+      <SuiteSection lang={lang} textContent={langJson.SuiteSection} />
 
-        <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} />
 
-        <PlatformSection textContent={langJson.PlatformSection} />
+      <PlatformSection textContent={langJson.PlatformSection} />
 
-        <TestimonialsSection textContent={langJson.TestimonialSection} lang={lang} />
+      <TestimonialsSection textContent={langJson.TestimonialSection} lang={lang} />
 
-        <FaqSection textContent={langJson.faq} />
+      <FaqSection textContent={langJson.faq} />
 
-        <Footer lang={lang} textContent={footerLang} darkMode />
-      </Layout>
-    </>
+      <Footer lang={lang} textContent={footerLang} darkMode />
+    </Layout>
   );
 };
 
