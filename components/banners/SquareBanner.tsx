@@ -23,7 +23,7 @@ const SquareBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return 'Back Friday is here!';
+        return 'Black Friday is here!';
       case 'es':
         return '¡Ya es Black Friday!';
       case 'fr':
@@ -61,7 +61,7 @@ const SquareBanner = () => {
       <div className="relative flex flex-col items-center justify-center space-y-5 text-center text-white">
         <p className="text-3xl font-bold">{title()}</p>
         <div className="flex max-h-[170px] w-full max-w-[189px] flex-col">
-          <Image src="/images/black-friday/internxt_black_friday_offer.png" width={189} height={170} />
+          <Image src="/images/black-friday/internxt_black_friday_offer.png" width={189} height={170} alt="% icon" />
         </div>
         <button
           className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-base font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
