@@ -1,8 +1,20 @@
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 const CtaSection = ({ textContent }) => {
+  const router = useRouter();
+
+  function handleOnClick() {
+    router.pathname === '/black-friday'
+      ? window.scrollTo({
+          top: document.getElementById('priceTable').offsetTop,
+          behavior: 'smooth',
+        })
+      : router.push('/black-friday#priceTable');
+  }
+
   return (
     <section className="overflow-hidden px-5 lg:px-0">
       <div
@@ -16,12 +28,7 @@ const CtaSection = ({ textContent }) => {
               <p className="max-w-[430px] text-4xl font-bold lg:text-5xl">{textContent.subtitle}</p>
             </div>
             <button
-              onClick={() => {
-                window.scrollTo({
-                  top: document.getElementById('priceTable').offsetTop,
-                  behavior: 'smooth',
-                });
-              }}
+              onClick={handleOnClick}
               className="flex items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
             >
               {textContent.cta}
