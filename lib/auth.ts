@@ -1,7 +1,6 @@
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
-const COOKIE_DOMAIN = process.env.NODE_ENV === 'production' ? 'internxt.com' : 'localhost';
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
@@ -133,7 +132,7 @@ const prepareAuthFlow = (credentials: {
 
   const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(
     expiration,
-  ).toUTCString()};domain=${COOKIE_DOMAIN}; Path=/`;
+  ).toUTCString()};domain=internxt.com; Path=/`;
 
   document.cookie = cookie;
 };
