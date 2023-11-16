@@ -20,11 +20,9 @@ interface Products {
   };
 }
 
-const url = ({ planId, couponCode }: { planId: string; couponCode?: string }) => {
-  return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(DRIVE_WEB_URL + '/checkout-plan')}${encodeURIComponent(
-    `?planId=${planId}${couponCode ? '&couponCode=' + couponCode : ''}&mode=payment`,
-  )}&skipSignupIfLoggedIn=true`;
-};
+function getPlanButton(planButton) {
+  cy.get(`#planButton${planButton}`).contains(`${planButton}`).click({ force: true });
+}
 
 //Check if the buttons works properly
 describe('Lifetime page', () => {
@@ -51,19 +49,13 @@ describe('Lifetime page', () => {
   });
 
   beforeEach(() => {
-    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
-      (response) => {
-        coupon = response.body;
-        cy.visit('/lifetime');
-      },
-    );
+    cy.visit('/lifetime');
+    cy.wait(1000);
   });
 
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime2TB.storage}`).contains(`${products.lifetime2TB.storage}`).click();
-
-      cy.wait(1000);
+      getPlanButton(products.lifetime2TB.storage);
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime2TB.planId);
@@ -75,9 +67,7 @@ describe('Lifetime page', () => {
 
   describe('When the plan of 5TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime5TB.storage}`).contains(`${products.lifetime5TB.storage}`).click();
-
-      cy.wait(1000);
+      getPlanButton(products.lifetime5TB.storage);
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime5TB.planId);
@@ -89,9 +79,7 @@ describe('Lifetime page', () => {
 
   describe('When the plan of 10TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime10TB.storage}`).contains(`${products.lifetime10TB.storage}`).click();
-
-      cy.wait(1000);
+      getPlanButton(products.lifetime10TB.storage);
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime10TB.planId);

@@ -19,11 +19,9 @@ interface Products {
   };
 }
 
-const url = ({ planId, couponCode, mode }: { planId: string; couponCode?: string; mode?: string }) => {
-  return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(DRIVE_WEB_URL + '/checkout-plan')}${encodeURIComponent(
-    `?planId=${planId}${couponCode ? '&couponCode=' + couponCode : ''}&mode=${mode ? mode : 'subscription'}`,
-  )}&skipSignupIfLoggedIn=true`;
-};
+function getPlanButton(planButton) {
+  cy.get(`#planButton${planButton}`).contains(`${planButton}`).click({ force: true });
+}
 
 //Check if the buttons works properly
 describe('Pricing page', () => {
@@ -61,13 +59,12 @@ describe('Pricing page', () => {
 
   describe('When the payment plan button is clicked', () => {
     describe('When the payment plan is monthly', () => {
+      beforeEach(() => {
+        cy.get('#priceTable').contains('Monthly').click();
+      });
       describe('When the plan is 20GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get('#priceTable').contains('Monthly').click();
-
-          cy.get('#priceTable');
-
-          cy.get(`#planButton${products.month20GB.storage}`).contains(`${products.month20GB.storage}`).click();
+          getPlanButton(products.month20GB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(DRIVE_WEB_URL);
@@ -78,8 +75,7 @@ describe('Pricing page', () => {
 
       describe('When the plan is 200GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get('#priceTable').contains('Monthly').click();
-          cy.get(`#planButton${products.month200GB.storage}`).contains(`${products.month200GB.storage}`).click();
+          getPlanButton(products.month200GB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(DRIVE_WEB_URL);
@@ -90,8 +86,7 @@ describe('Pricing page', () => {
 
       describe('When the plan is 2TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get('#priceTable').contains('Monthly').click();
-          cy.get(`#planButton${products.month2TB.storage}`).contains(`${products.month2TB.storage}`).click();
+          getPlanButton(products.month2TB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(DRIVE_WEB_URL);
@@ -104,7 +99,7 @@ describe('Pricing page', () => {
     describe('When the payment plan is annually', () => {
       describe('When the plan is 20GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get(`#planButton${products.year20GB.storage}`).contains(`${products.year20GB.storage}`).click();
+          getPlanButton(products.year20GB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(DRIVE_WEB_URL);
@@ -114,7 +109,7 @@ describe('Pricing page', () => {
       });
       describe('When the plan is 200GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get(`#planButton${products.year200GB.storage}`).contains(`${products.year200GB.storage}`).click();
+          getPlanButton(products.year200GB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(DRIVE_WEB_URL);
@@ -124,7 +119,7 @@ describe('Pricing page', () => {
       });
       describe('When the plan is 2TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get(`#planButton${products.year2TB.storage}`).contains(`${products.year2TB.storage}`).click();
+          getPlanButton(products.year2TB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(DRIVE_WEB_URL);
@@ -135,10 +130,12 @@ describe('Pricing page', () => {
     });
 
     describe('When the payment plan is lifetime', () => {
+      beforeEach(() => {
+        cy.get('#priceTable').contains('Lifetime').click();
+      });
       describe('When the plan is 2TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get('#priceTable').contains('Lifetime').click();
-          cy.get(`#planButton${products.lifetime2TB.storage}`).contains(`${products.lifetime2TB.storage}`).click();
+          getPlanButton(products.lifetime2TB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(products.lifetime2TB.planId);
@@ -148,8 +145,7 @@ describe('Pricing page', () => {
       });
       describe('When the plan is 5TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get('#priceTable').contains('Lifetime').click();
-          cy.get(`#planButton${products.lifetime5TB.storage}`).contains(`${products.lifetime5TB.storage}`).click();
+          getPlanButton(products.lifetime5TB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(products.lifetime5TB.planId);
@@ -159,8 +155,7 @@ describe('Pricing page', () => {
       });
       describe('When the plan is 10TB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
-          cy.get('#priceTable').contains('Lifetime').click();
-          cy.get(`#planButton${products.lifetime10TB.storage}`).contains(`${products.lifetime10TB.storage}`).click();
+          getPlanButton(products.lifetime10TB.storage);
 
           cy.url().should((url) => {
             expect(url).to.include(products.lifetime10TB.planId);
