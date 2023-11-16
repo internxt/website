@@ -49,19 +49,13 @@ describe('Lifetime page', () => {
   });
 
   beforeEach(() => {
-    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
-      (response) => {
-        coupon = response.body;
-        cy.visit('/lifetime');
-      },
-    );
+    cy.visit('/lifetime');
+    cy.wait(1000);
   });
 
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
       getPlanButton(products.lifetime2TB.storage);
-
-      cy.wait(1000);
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime2TB.planId);
@@ -75,8 +69,6 @@ describe('Lifetime page', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
       getPlanButton(products.lifetime5TB.storage);
 
-      cy.wait(1000);
-
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime5TB.planId);
         expect(url).to.include(coupon);
@@ -88,8 +80,6 @@ describe('Lifetime page', () => {
   describe('When the plan of 10TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
       getPlanButton(products.lifetime10TB.storage);
-
-      cy.wait(1000);
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime10TB.planId);
