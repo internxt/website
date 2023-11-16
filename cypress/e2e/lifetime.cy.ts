@@ -20,11 +20,9 @@ interface Products {
   };
 }
 
-const url = ({ planId, couponCode }: { planId: string; couponCode?: string }) => {
-  return `${DRIVE_WEB_URL}/new?redirectUrl=${encodeURIComponent(DRIVE_WEB_URL + '/checkout-plan')}${encodeURIComponent(
-    `?planId=${planId}${couponCode ? '&couponCode=' + couponCode : ''}&mode=payment`,
-  )}&skipSignupIfLoggedIn=true`;
-};
+function getPlanButton(planButton) {
+  cy.get(`#planButton${planButton}`).contains(`${planButton}`).click({ force: true });
+}
 
 //Check if the buttons works properly
 describe('Lifetime page', () => {
@@ -61,7 +59,7 @@ describe('Lifetime page', () => {
 
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime2TB.storage}`).contains(`${products.lifetime2TB.storage}`).click();
+      getPlanButton(products.lifetime2TB.storage);
 
       cy.wait(1000);
 
@@ -75,7 +73,7 @@ describe('Lifetime page', () => {
 
   describe('When the plan of 5TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime5TB.storage}`).contains(`${products.lifetime5TB.storage}`).click();
+      getPlanButton(products.lifetime5TB.storage);
 
       cy.wait(1000);
 
@@ -89,7 +87,7 @@ describe('Lifetime page', () => {
 
   describe('When the plan of 10TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime10TB.storage}`).contains(`${products.lifetime10TB.storage}`).click();
+      getPlanButton(products.lifetime10TB.storage);
 
       cy.wait(1000);
 
