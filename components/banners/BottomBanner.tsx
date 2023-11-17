@@ -63,11 +63,11 @@ const BottomBanner = () => {
             <X className=" text-white" size={24} />
           </button>
         </div>
-        <div className="flex flex-row items-center justify-center">
+        <div className="z-50 flex flex-row items-center justify-center">
           <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-white">
             <p className="text-3xl font-bold">{title()}</p>
             <button
-              className="z-50 flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
               onClick={() => {
                 router.push('/black-friday#priceTable');
               }}
