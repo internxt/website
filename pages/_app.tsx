@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import ShowSnackbar from '../components/Snackbar';
 import * as gtag from '../lib/gtag';
 import SquareBanner from '../components/banners/SquareBanner';
+import BottomBanner from '../components/banners/BottomBanner';
 
 const excludedPaths = ['/lifetime', '/black-friday', '/affiliates'];
 
@@ -53,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
-        {!isExcludedPath ? <SquareBanner /> : undefined}
+        <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div>
         <ShowSnackbar />
         <Intercom />
       </GlobalUIManager>
