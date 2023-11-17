@@ -52,7 +52,7 @@ const BottomBanner = () => {
 
   return (
     <section
-      className={`fixed bottom-10 hidden lg:${hidePopup ? 'hidden' : 'flex'} mx-auto overflow-hidden px-5 lg:px-0`}
+      className={`fixed bottom-10 z-50 hidden lg:${hidePopup ? 'hidden' : 'flex'} mx-auto overflow-hidden px-5 lg:px-0`}
     >
       <div
         className="flex h-[100px] w-[898px] flex-col items-center justify-center rounded-lg"
