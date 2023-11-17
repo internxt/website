@@ -9,7 +9,7 @@ const BFMainPageBanner = () => {
   const header = () => {
     switch (lang) {
       case 'en':
-        return 'Black Friday super deal!';
+        return 'Black Friday Super Sale!';
       case 'es':
         return '¡Ya es Black Friday!';
       case 'fr':
