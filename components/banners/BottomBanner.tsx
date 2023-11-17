@@ -79,17 +79,17 @@ const BottomBanner = () => {
       </div>
       <div className="absolute left-5 top-0 hidden animate-pulse flex-row lg:flex">
         <Image
-          src="/images/black-friday/internxt_black_friday_offer.png"
-          width={158}
-          height={120}
+          src="/images/banners/discount-left.png"
+          width={178.5}
+          height={100}
           alt="Internxt Black Friday Offer"
           draggable={false}
         />
       </div>
-      <div className="absolute right-6 top-0 hidden h-full -rotate-45 animate-pulse flex-row lg:flex">
+      <div className="absolute right-6 top-0 hidden h-full animate-pulse flex-row lg:flex">
         <Image
-          src="/images/black-friday/internxt_black_friday_offer.png"
-          width={138}
+          src="/images/banners/discount-right.png"
+          width={178.5}
           height={100}
           alt="Internxt Black Friday Offer"
           draggable={false}
