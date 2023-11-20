@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-import getConfig from 'next/config';
 import Image from 'next/image';
 import React from 'react';
 import DownloadComponent from '../shared/DownloadComponent';
