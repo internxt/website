@@ -55,13 +55,25 @@ const HeroSection = ({ textContent }) => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col rounded-3xl ">
+          <div className="hidden flex-col rounded-3xl lg:flex">
             <Image
               alt="Woman with laptop"
               src="/images/partners-discount/Internxt_partners_discount.webp"
               className=" rounded-3xl"
               width={588}
               height={560}
+              layout="intrinsic"
+              loading="eager"
+              quality={100}
+            />
+          </div>
+          <div className="flex flex-col rounded-3xl shadow-2xl lg:hidden">
+            <Image
+              alt="Woman with laptop"
+              src="/images/partners-discount/Internxt_partners_discount_mobile.webp"
+              className=" rounded-3xl"
+              width={588}
+              height={660}
               layout="intrinsic"
               loading="eager"
               quality={100}
