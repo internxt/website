@@ -20,11 +20,11 @@ const PaymentSection = ({ lang, textContent }) => {
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.firstFeed}</p>
           </div>
-          <div className="flex max-w-[114px] flex-col items-center space-y-3">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <CreditCard size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.secondFeed}</p>
           </div>
-          <div className="flex max-w-[153px] flex-col items-center space-y-3">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Detective size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.thirdFeed}</p>
           </div>
