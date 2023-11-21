@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Gift } from '@phosphor-icons/react';
 import React from 'react';
-import { goToSignUpURL } from '../../lib/auth';
 import RevealX from '../components/RevealX';
 
 const ThirdFeaturesSection = ({ textContent }) => {

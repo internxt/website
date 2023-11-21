@@ -20,7 +20,7 @@ const CompanySection = ({ textContent }) => (
             <img
               loading="eager"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/Internxt-office.png"
+              src="/images/about/photos/Internxt-office.webp"
               draggable="false"
               alt="Internxt office"
             />

@@ -50,7 +50,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         >
           <Image
             className="w-full"
-            src="/images/drive/secure-file-storage.png"
+            src="/images/drive/secure_file_storage.webp"
             width={713}
             height={894}
             quality={100}
