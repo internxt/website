@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { Copy, Info, Trash, Tray } from '@phosphor-icons/react';
+import { Copy, Info, Trash } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 import { createEmail } from './services/api/temp-api';
 import { toast } from 'react-toastify';
@@ -75,6 +74,7 @@ const HeroSection = ({ textContent }) => {
               }`}
             >
               <div
+                onKeyDown={() => {}}
                 className={`flex h-full w-full cursor-pointer flex-row items-center justify-between rounded-xl bg-gray-1 shadow-sm ${
                   borderColor ? 'border border-primary' : ''
                 } px-4 py-3`}
@@ -84,7 +84,7 @@ const HeroSection = ({ textContent }) => {
                   copy(email);
                 }}
               >
-                <p>{email ? email : textContent.generatingEmail}</p>
+                <p className="max-w-[250px] truncate">{email ?? textContent.generatingEmail}</p>
                 <Copy size={24} className={`${borderColor ? 'text-primary' : 'text-gray-50'}`} />
               </div>
             </div>
