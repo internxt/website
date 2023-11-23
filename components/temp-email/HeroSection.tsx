@@ -67,7 +67,7 @@ const HeroSection = ({ textContent }) => {
           <p className="max-w-2xl pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
         <div className="flex flex-col items-center ">
-          <div className="flex w-full max-w-[425px] flex-col items-center justify-center space-y-3">
+          <div className="flex w-full max-w-[370px] flex-col items-center justify-center space-y-3">
             <div
               className={`flex h-full w-full items-center justify-center rounded-xl ${
                 borderColor ? 'ring   ring-primary ring-opacity-15' : 'border border-gray-20'
