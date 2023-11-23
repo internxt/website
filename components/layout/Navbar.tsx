@@ -232,7 +232,7 @@ export default function Navbar(props: NavbarProps) {
                     }
                     } text-base font-medium`}
                   >
-                    {props.textContent.links.about}
+                    {props.textContent.links.needVPN}
                   </button>
                 ) : undefined}
               </div>
