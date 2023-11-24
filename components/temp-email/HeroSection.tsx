@@ -17,7 +17,7 @@ function removeLocalStorage() {
   localStorage.removeItem('selectedMessage');
 }
 
-const open = () => toast.success('Copied to clipboard!');
+const openToast = () => toast.success('Copied to clipboard!');
 
 const HeroSection = ({ textContent }) => {
   const [email, setEmail] = useState('');
@@ -80,11 +80,11 @@ const HeroSection = ({ textContent }) => {
                 } px-4 py-3`}
                 onClick={() => {
                   setBorderColor(true);
-                  open();
+                  openToast();
                   copy(email);
                 }}
               >
-                <p className="">{email ?? textContent.generatingEmail}</p>
+                <p>{email ? email : textContent.generatingEmail}</p>
                 <Copy size={24} className={`${borderColor ? 'text-primary' : 'text-gray-50'}`} />
               </div>
             </div>
@@ -92,7 +92,7 @@ const HeroSection = ({ textContent }) => {
               <button
                 className="flex w-full flex-row items-center justify-center space-x-2 rounded-lg bg-primary px-5 py-2 text-white shadow-sm hover:bg-primary-dark"
                 onClick={() => {
-                  open();
+                  openToast();
                   copy(email);
                 }}
               >
