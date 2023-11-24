@@ -1,11 +1,9 @@
 import moment from 'moment';
 import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
-import EmptyInbox from './EmptyInbox';
 import { getInbox } from '../services/api/temp-api';
 
 import useWindowFocus from '../hooks/useWindowFocus';
-import MessageSelected from './Messages';
 import Messages from './Messages';
 import { isMobile } from 'react-device-detect';
 import { Transition } from '@headlessui/react';
@@ -30,7 +28,7 @@ const Inbox = ({ email, token, textContent }) => {
   //Get inbox every 5 seconds when the window is focused
   useEffect(() => {
     if (isFocused) {
-      const interval = setInterval(() => getMailInbox(token), 5000);
+      const interval = setInterval(() => getMailInbox(token), 20000);
       return () => clearInterval(interval);
     }
   }, [email, isFocused]);

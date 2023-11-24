@@ -24,8 +24,7 @@ const HeroSection = ({ textContent }) => {
   const [token, setToken] = useState('');
   const [borderColor, setBorderColor] = useState(false);
 
-  // (if someone want to clear after 8hrs simply change hours=8)
-  const hours = 3; // to clear the localStorage after 1 hour
+  const hours = 5;
   const now = new Date().getTime();
   const [generateEmail, setGenerateEmail] = useState(false);
 
@@ -43,11 +42,19 @@ const HeroSection = ({ textContent }) => {
       setToken(parseData.token);
     } else {
       localStorage.setItem('setupTime', String(now));
-      createEmail().then((res) => {
-        localStorage.setItem('email', JSON.stringify(res));
-        setEmail(res.address);
-        setToken(res.token);
-      });
+      createEmail()
+        .then((res) => {
+          localStorage.setItem('email', JSON.stringify(res));
+          setEmail(res.address);
+          setToken(res.token);
+        })
+        .catch((err) => {
+          createEmail().then((res) => {
+            localStorage.setItem('email', JSON.stringify(res));
+            setEmail(res.address);
+            setToken(res.token);
+          });
+        });
     }
   }, [generateEmail]);
 

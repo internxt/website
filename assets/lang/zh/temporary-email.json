@@ -5,7 +5,7 @@
     "generatingEmail": "正在生成随机电子邮件...",
     "copyEmail": "复制电子邮件",
     "deleteEmail": "删除电子邮件",
-    "expireEmail": "电子邮件和收件箱将在 3 小时不活动后过期",
+    "expireEmail": "电子邮件和收件箱将在 5 小时不活动后过期",
     "inbox": {
       "title": "收件箱",
       "youHave": "你有",
