@@ -5,7 +5,7 @@
     "generatingEmail": "Zufällige E-Mails generieren...",
     "copyEmail": "Kopiere E-Mail",
     "deleteEmail": "Lösche E-Mail",
-    "expireEmail": "E-Mail und Posteingang verfallen nach 3 Stunden Inaktivität",
+    "expireEmail": "E-Mail und Posteingang verfallen nach 5 Stunden Inaktivität",
     "inbox": {
       "title": "Eingang",
       "youHave": "Du hast",
