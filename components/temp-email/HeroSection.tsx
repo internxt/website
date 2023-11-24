@@ -49,7 +49,6 @@ const HeroSection = ({ textContent }) => {
           setToken(res.token);
         })
         .catch((err) => {
-          // Call create email again
           console.error('Failed to create email:', err);
         });
     }
