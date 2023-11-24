@@ -19,29 +19,6 @@ function removeLocalStorage() {
 
 const openToast = () => toast.success('Copied to clipboard!');
 
-function createAndSetEmail() {
-  return createEmail()
-    .then((res) => {
-      return res;
-    })
-    .catch((err) => {
-      // Tratar el error si es necesario
-      console.error('Error creating email:', err);
-
-      // Llamar a la función de nuevo en caso de error
-      return createAndSetEmail();
-    });
-}
-
-// Llamar a la función
-createAndSetEmail()
-  .then(() => {
-    console.log('Email created successfully.');
-  })
-  .catch((err) => {
-    console.error('Failed to create email:', err);
-  });
-
 const HeroSection = ({ textContent }) => {
   const [email, setEmail] = useState('');
   const [token, setToken] = useState('');
@@ -65,7 +42,7 @@ const HeroSection = ({ textContent }) => {
       setToken(parseData.token);
     } else {
       localStorage.setItem('setupTime', String(now));
-      createAndSetEmail()
+      createEmail()
         .then((res) => {
           localStorage.setItem('email', JSON.stringify(res));
           setEmail(res.address);
