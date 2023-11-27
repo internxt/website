@@ -7,21 +7,6 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
-        {lang === 'en' ? (
-          <>
-            <Image
-              src="/images/banners/banner_zoogvpn.png"
-              alt="ZoogVPN"
-              width={890}
-              height={195}
-              quality={100}
-              className="cursor-pointer"
-              onClick={() => {
-                window.open('https://zoogvpn.com/?a_aid=internxt', '_blank', 'noopener noreferrer');
-              }}
-            />
-          </>
-        ) : null}
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">{textContent.title}</p>
