@@ -9,6 +9,7 @@ export enum CouponType {
   Special15Coupon = 'COUPON_SPECIAL15',
   AnnualDiscount = 'ANNUAL_PLAN_80_DISCOUNT',
   BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
+  ChristmasCoupon = 'COUPON_CHRISTMAS',
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {

@@ -37,25 +37,14 @@ const PriceCard = ({
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
   useEffect(() => {
-    if (isCampaign) {
-      stripeService
-        .getCoupon(CouponType.LifetimeSpecial)
-        .then((coupon) => {
-          setCoupon(coupon);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    } else {
-      stripeService
-        .getCoupon(CouponType.LifetimeGeneral)
-        .then((coupon) => {
-          setCoupon(coupon);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    }
+    stripeService
+      .getCoupon(CouponType.ChristmasCoupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   useEffect(() => {
