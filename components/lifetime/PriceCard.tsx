@@ -6,7 +6,6 @@
 import React, { useEffect, useState } from 'react';
 import { checkout } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { analyticsService } from '../services/analyticsService';
 import { stripeService } from '../services/stripeService';
 
 interface PriceCardProps {
@@ -82,9 +81,10 @@ const PriceCard = ({
       </div>
 
       <div
-        className={`info flex flex-col items-center justify-center bg-white p-6 ${
-          popular ? 'rounded-t-2xl bg-[url(/images/privacy/neonBlur.png)] bg-cover' : ''
-        }`}
+        className={`info flex flex-col items-center justify-center bg-white p-6 ${popular ? 'rounded-t-2xl' : ''}`}
+        style={{
+          background: popular && 'linear-gradient(180deg, #112D91 0%, #060C40 100%)',
+        }}
       >
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full ${
@@ -102,7 +102,7 @@ const PriceCard = ({
             <p className={`flex flex-row  space-x-0.5 font-semibold ${popular ? 'text-white' : 'text-black'}`}>
               <span className={`currency items-start`}>{currency}</span>
               <span className="price text-4xl font-bold">{actualPrice}</span>
-              {!isCampaign && <span className={`flex items-end justify-end pl-1`}>,25</span>}
+              {!isCampaign && <span className={`flex items-end justify-end pl-1`}></span>}
             </p>
           </div>
           <div
@@ -118,6 +118,7 @@ const PriceCard = ({
         </div>
 
         <div
+          onKeyDown={() => {}}
           tabIndex={0}
           id={`planButton${storage}`}
           onClick={() => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PriceTable from './PriceTable';
-import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
+import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
 
 const PaymentSection = ({ lang, textContent, country }) => {
   return (
@@ -21,16 +21,16 @@ const PaymentSection = ({ lang, textContent, country }) => {
 
         <PriceTable lang={lang} country={country} />
 
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-8 bg-transparent text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <Coin size={40} className="text-primary" />
+            <CurrencyCircleDollar size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.firstFeed}</p>
           </div>
-          <div className="flex max-w-[114px] flex-col items-center space-y-3">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <CreditCard size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.secondFeed}</p>
           </div>
-          <div className="flex max-w-[153px] flex-col items-center space-y-3">
+          <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Detective size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.thirdFeed}</p>
           </div>

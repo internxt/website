@@ -1,7 +1,8 @@
 import React from 'react';
 import RevealY from '../components/RevealY';
-import { CaretLeft, CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import CampaignCtaSection from './CampaignCtaSection';
 
 const FeatureSection = ({
   textContent,
@@ -40,18 +41,19 @@ const FeatureSection = ({
   ];
 
   return (
-    <section className={`overflow-hidden ${backgroundColor ? backgroundColor : ''}`}>
+    <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
       <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
         <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
           {!withoutCta && (
             <div
+              onKeyDown={() => {}}
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
               onClick={() => {
                 window.open(
                   `${window.location.origin}${router.locale === 'en' ? '' : `/${router.locale}`}/${
-                    redirect ? redirect : 'about'
+                    redirect ?? 'about'
                   }`,
                   '_blank',
                 );
@@ -78,6 +80,7 @@ const FeatureSection = ({
             </div>
           ))}
         </RevealY>
+        <CampaignCtaSection textContent={textContent.campaignCtaSection} />
       </div>
     </section>
   );

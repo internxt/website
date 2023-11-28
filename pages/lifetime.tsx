@@ -46,7 +46,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
-      <CtaSection textContent={langJson.CtaSection} />
+      {/* <CtaSection textContent={langJson.CtaSection} /> */}
 
       <Footer textContent={footerLang} lang={deviceLang} hideNewsletter />
     </Layout>

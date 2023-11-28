@@ -43,7 +43,13 @@
         "title": "Independently verified",
         "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
       }
-    ]
+    ],
+    "campaignCtaSection": {
+      "title": "The world's most private cloud storage",
+      "subtitle": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+      "cta": "Select a plan now",
+      "guarantee": "30-day money-back guarantee"
+    }
   },
   "CtaSection": {
     "title": "The world's most private cloud storage",
