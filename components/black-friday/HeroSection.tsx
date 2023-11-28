@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { Alarm, CheckCircle } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
