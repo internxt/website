@@ -15,9 +15,10 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         } left-0 z-50 hidden h-[54px] w-screen cursor-pointer items-center justify-center overflow-hidden bg-primary text-white md:flex`}
       >
         <div
+          onKeyDown={() => {}}
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() => {
-            router.push('/black-friday#priceTable');
+            router.push('/lifetime#payment');
           }}
         >
           <div className="flex flex-row space-x-1">
@@ -34,9 +35,10 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div
+            onKeyDown={() => {}}
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              router.push('/black-friday');
+              router.push('/lifetime');
             }}
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}

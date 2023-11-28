@@ -23,15 +23,15 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return 'Black Friday is here!';
+        return '50% OFF all lifetime plans!';
       case 'es':
-        return '¡Ya es Black Friday!';
+        return 'DESCUENTO 50% en planes lifetime!';
       case 'fr':
-        return 'Black Friday arrivé!';
+        return '50% de reduction sur plans lifetime!';
       case 'ru':
-        return 'Черная пятница наступила!';
+        return 'Скидка 50% на пожизненные планы!';
       default:
-        return 'Black Friday is here!';
+        return '50% OFF all lifetime plans!';
     }
   };
 
@@ -55,8 +55,8 @@ const BottomBanner = () => {
       className={`fixed bottom-10 z-50 hidden lg:${hidePopup ? 'hidden' : 'flex'} mx-auto overflow-hidden px-5 lg:px-0`}
     >
       <div
-        className="flex h-[100px] w-[898px] flex-col items-center justify-center rounded-lg"
-        style={{ background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #18181B 100%)' }}
+        className="relative flex h-[100px] w-[898px] flex-col items-center justify-center rounded-lg bg-contain bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/images/banners/pop_up_banner_bf_2023_798x100_bg_2x.webp")' }}
       >
         <div className="flex items-end justify-end">
           <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2">
@@ -76,24 +76,6 @@ const BottomBanner = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div className="absolute left-5 top-0 hidden animate-pulse flex-row lg:flex">
-        <Image
-          src="/images/banners/discount-left.png"
-          width={178.5}
-          height={100}
-          alt="Internxt Black Friday Offer"
-          draggable={false}
-        />
-      </div>
-      <div className="absolute right-6 top-0 hidden h-full animate-pulse flex-row lg:flex">
-        <Image
-          src="/images/banners/discount-right.png"
-          width={178.5}
-          height={100}
-          alt="Internxt Black Friday Offer"
-          draggable={false}
-        />
       </div>
     </section>
   );
