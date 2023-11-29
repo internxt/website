@@ -12,7 +12,7 @@ const CampaignCtaSection = ({ textContent }) => {
           top: document.getElementById('payment').offsetTop,
           behavior: 'smooth',
         })
-      : router.push('/lifetime#payment');
+      : router.push('/lifetime');
   }
 
   return (
