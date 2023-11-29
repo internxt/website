@@ -55,10 +55,11 @@ export default function HeroSection({ textContent, lang }) {
           className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
+
+        <div className="relative mx-auto flex h-full w-full max-w-screen-xl flex-col items-center justify-start sm:mb-6 lg:flex-row lg:items-stretch">
           {/* Mobile view */}
           <HomePageBanner />
-          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
+          <div className="my-6 flex flex-shrink-0 flex-col items-center px-5 text-center sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
             <Header>
               {textContent.title.line1}{' '}
               <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
@@ -83,11 +84,14 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           {/* Desktop view full */}
-
-          <div className="absolute right-0 hidden h-full w-full translate-x-1/2 lg:flex 2xl:translate-x-1/2">
-            <Image src="/images/lifetime/Internxt_Lifetime.webp" width={2684} height={1398} quality={100} />
+          <div className="relative hidden max-w-sm flex-1 items-center justify-start md:flex">
+            <div className="absolute -left-16 flex h-full w-[5000px]">
+              <img
+                className="relative h-full object-contain object-left"
+                src="https://website-iujdji8gm-internxt-website-team.vercel.app/_next/image?url=%2Fimages%2Flifetime%2FInternxt_Lifetime.webp&w=3840&q=100"
+              />
+            </div>
           </div>
-
           {/* Desktop view reduced */}
           {/* <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex lg:-mr-7 xl:ml-20 xl:hidden">
             <Image
