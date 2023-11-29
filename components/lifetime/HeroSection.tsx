@@ -21,7 +21,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
     >
       <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
         <div className="relative mx-auto flex h-full w-full max-w-screen-xl flex-col items-center justify-start lg:flex-row lg:items-stretch">
-          <div className="my-6 flex flex-shrink-0 flex-col items-center px-5 text-center sm:px-0 lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
+          <div className="my-6 flex flex-shrink-0 flex-col items-center space-y-6 px-5 text-center sm:px-0 lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
             {!hideTimer && (
               <div className="flex flex-row items-center space-x-3">
                 <Alarm size={32} className="text-primary" />
@@ -30,7 +30,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
             )}
             <Header className="text-white lg:text-7xl">{textContent.title}</Header>
             <div className="flex flex-col space-y-10">
-              <p className="max-w-[449px] text-xl font-semibold text-white">{textContent.description}</p>
+              <p className="max-w-[470px] text-2xl font-semibold text-white">{textContent.description}</p>
               <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-x-6 lg:space-y-0">
                 <button
                   onClick={() => {
