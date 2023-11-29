@@ -48,7 +48,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       {/* <CtaSection textContent={langJson.CtaSection} /> */}
 
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter />
+      <Footer textContent={footerLang} lang={deviceLang} />
     </Layout>
   );
 };
