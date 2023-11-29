@@ -37,7 +37,7 @@ const GetLifetimeSection = ({ textContent }) => {
             <p className="pt-4 text-xl font-normal">{textContent.description}</p>
           </div>
 
-          <RevealY className="flex h-full w-full max-w-[760px] flex-col px-5 pt-6">
+          <RevealY className="flex h-full w-full flex-col px-5 pt-6">
             <img
               src="/images/lifetime/Internxt-secure-cloud-storage.webp"
               alt="Internxt secure cloud storage"
