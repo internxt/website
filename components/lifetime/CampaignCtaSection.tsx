@@ -24,7 +24,7 @@ const CampaignCtaSection = ({ textContent }) => {
         <div className="flex flex-col lg:w-screen">
           <div className="flex flex-col items-center justify-center space-y-6 px-4 py-14 text-white lg:px-0">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <p className="max-w-[558px] text-5xl font-bold">{textContent.title}</p>
+              <p className="max-w-[558px] text-4xl font-bold md:text-5xl">{textContent.title}</p>
               <p className="max-w-[443px] text-xl">{textContent.subtitle}</p>
             </div>
             <button

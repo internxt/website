@@ -5,7 +5,7 @@ import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/rea
 const PaymentSection = ({ lang, textContent, country }) => {
   return (
     <section id="payment" className="overflow-hidden py-20">
-      <div className="flex flex-col space-y-8 pt-10 lg:pt-0">
+      <div className="flex flex-col space-y-8">
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center rounded-lg bg-gray-5 px-4 py-2 ">
             <p className="text-xl font-medium text-gray-80">{textContent.limitedOffer}</p>

@@ -8,7 +8,7 @@ const Header = ({
   className?: string;
 }) => {
   return (
-    <h1 className={`${maxWidth} ${className} text-5xl font-semibold leading-tight sm:text-6xl sm:leading-tight`}>
+    <h1 className={`${maxWidth} ${className} text-4xl font-semibold leading-tight sm:text-6xl sm:leading-tight`}>
       {children}
     </h1>
   );
