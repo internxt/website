@@ -12,24 +12,17 @@ interface HeroSectionProps {
 const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
-    setHeight(window.innerHeight);
-  }, []);
-
   return (
     <section
       className="overflow-hidden"
       style={{
         background: 'linear-gradient(180deg, #112D91 0%, #060C40 100%)',
-        height: `${height}px`,
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
       }}
     >
-      <div className="relative mx-auto flex w-full justify-center py-20 lg:min-h-screen lg:max-w-screen-xl lg:py-0">
-        <div className="flex w-full flex-row items-center justify-center py-10 px-5 lg:justify-between lg:py-20">
-          <div className="flex w-full max-w-[488px] flex-col items-center space-y-6 text-center lg:items-start lg:text-start">
+      <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
+        <div className="relative mx-auto flex h-full w-full max-w-screen-xl flex-col items-center justify-start lg:flex-row lg:items-stretch">
+          <div className="my-6 flex flex-shrink-0 flex-col items-center px-5 text-center sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
             <div className="flex flex-row items-center space-x-3">
               <Alarm size={32} className="text-primary" />
               <Countdown textColor="white" dt="2023-11-30T23:59:59" />
@@ -56,10 +49,15 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
               </div>
             </div>
           </div>
+          <div className="relative hidden max-w-sm flex-1 items-center justify-start md:flex">
+            <div className="absolute -left-16 flex h-full w-[5000px]">
+              <img
+                className="relative h-full object-contain object-left"
+                src="/images/lifetime/Internxt_Lifetime.webp"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="absolute right-0 hidden h-full w-full translate-x-1/3 lg:flex 2xl:translate-x-1/2">
-        <Image src="/images/lifetime/Internxt_Lifetime.webp" width={2684} height={1398} quality={100} />
       </div>
     </section>
   );

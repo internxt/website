@@ -88,7 +88,7 @@ export default function HeroSection({ textContent, lang }) {
             <div className="absolute -left-16 flex h-full w-[5000px]">
               <img
                 className="relative h-full object-contain object-left"
-                src="https://website-iujdji8gm-internxt-website-team.vercel.app/_next/image?url=%2Fimages%2Flifetime%2FInternxt_Lifetime.webp&w=3840&q=100"
+                src="/images/lifetime/Internxt_Lifetime.webp"
               />
             </div>
           </div>
