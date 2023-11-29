@@ -24,15 +24,35 @@ const HomePageBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return '50% OFF all lifetime plans!';
+        return (
+          <p className="text-4xl font-bold">
+            50% OFF <br /> all lifetime plans!
+          </p>
+        );
       case 'es':
-        return 'DESCUENTO 50% en planes lifetime!';
+        return (
+          <p className="text-4xl font-bold">
+            DESCUENTO 50% <br /> en planes lifetime!
+          </p>
+        );
       case 'fr':
-        return '50% de reduction sur plans lifetime!';
+        return (
+          <p className="text-4xl font-bold">
+            50% de reduction <br /> sur plans lifetime!
+          </p>
+        );
       case 'ru':
-        return 'Скидка 50% на пожизненные планы!';
+        return (
+          <p className="text-4xl font-bold">
+            Скидка 50% <br /> на пожизненные планы!
+          </p>
+        );
       default:
-        return '50% OFF all lifetime plans!';
+        return (
+          <p className="text-4xl font-bold">
+            50% OFF <br /> all lifetime plans!
+          </p>
+        );
     }
   };
 
@@ -75,7 +95,7 @@ const HomePageBanner = () => {
         <div className="flex flex-col space-y-4">
           <p className="text-xl font-semibold">{header()}</p>
 
-          <p className="text-4xl font-bold">{title()}</p>
+          {title()}
         </div>
 
         <div className="flex flex-col items-center space-y-4">
@@ -93,7 +113,7 @@ const HomePageBanner = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col bg-contain">
+      <div className="flex w-full translate-y-2 flex-col">
         <Image src="/images/banners/Banner_Mobile.png" width={646} height={591} alt="Percentage icon" />
       </div>
     </div>
