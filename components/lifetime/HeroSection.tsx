@@ -22,7 +22,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
     >
       <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
         <div className="relative mx-auto flex h-full w-full max-w-screen-xl flex-col items-center justify-start lg:flex-row lg:items-stretch">
-          <div className="my-6 flex flex-shrink-0 flex-col items-center px-5 text-center sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
+          <div className="my-6 flex flex-shrink-0 flex-col items-center px-5 text-center sm:px-0 lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
             <div className="flex flex-row items-center space-x-3">
               <Alarm size={32} className="text-primary" />
               <Countdown textColor="white" dt="2023-11-30T23:59:59" />
