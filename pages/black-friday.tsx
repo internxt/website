@@ -2,42 +2,55 @@ import React from 'react';
 
 import cookies from '../lib/cookies';
 import Layout from '../components/layout/Layout';
+import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/black-friday/HeroSection';
+
 import SuiteSection from '../components/black-friday/SuiteSection';
+import CtaSection from '../components/black-friday/CtaSection';
 import FeatureSection from '../components/black-friday/FeatureSection';
 import PlatformSection from '../components/black-friday/PlatformSection';
 import TestimonialsSection from '../components/black-friday/TestimonialsSection';
 import FaqSection from '../components/black-friday/FAQSection';
-import Footer from '../components/layout/Footer';
-import PaymentSection from '../components/black-friday/payment/PaymentSection';
+import BestStorageSection from '../components/black-friday/BestStorageSection';
+import LoginBFBanner from '../components/banners/LoginBFBanner';
+import FooterSection from '../components/black-friday/FooterSection';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, footerLang }) => {
+const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Black Friday"
-      specialOffer="https://internxt.com/images/black-friday/black-friday-search-results.png"
-    >
-      <HeroSection lang={lang} textContent={langJson.HeroSection} />
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
+      <Navbar
+        lang={deviceLang}
+        isBlackfriday={true}
+        textContent={navbarLang}
+        cta={['Hide Login']}
+        isLinksHidden
+        darkMode={true}
+      />
+      <LoginBFBanner />
 
-      <PaymentSection textContent={langJson.PaymentSection} />
+      <HeroSection lang={lang} textContent={langJson.blackFriday} />
 
-      <SuiteSection lang={lang} textContent={langJson.SuiteSection} />
+      <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <SuiteSection lang={lang} textContent={langJson.blackFriday} />
 
-      <PlatformSection textContent={langJson.PlatformSection} />
+      <CtaSection textContent={langJson.cta} lang={lang} />
 
-      <TestimonialsSection textContent={langJson.TestimonialSection} lang={lang} />
+      <FeatureSection textContent={langJson.blackFriday} />
 
-      <FaqSection textContent={langJson.faq} />
+      <PlatformSection textContent={langJson.blackFriday} />
 
-      <Footer lang={lang} textContent={footerLang} darkMode />
+      <TestimonialsSection textContent={langJson.blackFriday} lang={lang} />
+
+      <CtaSection textContent={langJson.cta2} lang={lang} />
+
+      <FaqSection textContent={langJson.blackFriday} />
+
+      <FooterSection textContent={langJson.blackFriday} lang={lang} />
     </Layout>
   );
 };

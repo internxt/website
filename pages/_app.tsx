@@ -5,17 +5,15 @@ import Script from 'next/script';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
-import ShowSnackbar from '../components/Snackbar';
 import * as gtag from '../lib/gtag';
-import SquareBanner from '../components/banners/SquareBanner';
 import BottomBanner from '../components/banners/BottomBanner';
 
-const excludedPaths = ['/lifetime', '/black-friday', '/affiliates'];
+const excludedPaths = [];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
   const pathname = route.pathname;
-  const isExcludedPath = excludedPaths.includes(pathname);
+  const isExcludedPath = !excludedPaths.includes(pathname);
   const router = useRouter();
 
   useEffect(() => {
@@ -55,7 +53,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div>
-        <ShowSnackbar />
         <Intercom />
       </GlobalUIManager>
     </LiveChatLoaderProvider>

@@ -4,7 +4,6 @@ import { goToSignUpURL } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
 import Image from 'next/image';
 import Header from '../shared/Header';
-import BFMainPageBanner from '../banners/BFMainPageBanner';
 
 export default function HeroSection({ textContent, lang }) {
   const [formError, setFormError] = useState<string | null>(null);
@@ -56,8 +55,6 @@ export default function HeroSection({ textContent, lang }) {
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
-          {/* Mobile view */}
-          <BFMainPageBanner />
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
             <Header>
               {textContent.title.line1}{' '}
