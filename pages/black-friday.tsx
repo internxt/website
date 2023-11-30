@@ -23,12 +23,12 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <Navbar
-        lang={deviceLang}
+        lang={lang}
+        darkMode={true}
         isBlackfriday={true}
         textContent={navbarLang}
         cta={['Hide Login']}
         isLinksHidden
-        darkMode={true}
       />
       <LoginBFBanner />
 
@@ -56,13 +56,17 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
+  const language = ctx.locale;
   const deviceLang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const langJson = require(`../assets/lang/en/black-friday.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const allowedLanguages = ['en', 'fr'];
+
+  const lang = allowedLanguages.includes(language) ? language : 'en';
+
+  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
+  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const langJson = require(`../assets/lang/${lang}/black-friday.json`);
+  const footerLang = require(`../assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 
