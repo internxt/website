@@ -1,22 +1,20 @@
 import TextInput from '../components/TextInput';
 import PasswordInput from '../components/PasswordInput';
 import PrimaryButton from '../components/PrimaryButton';
-import { signup, toggleAuthMethod } from '../../lib/auth';
+import { signup } from '../../lib/auth';
 import { WarningCircle } from '@phosphor-icons/react';
 import { useEffect, useState } from 'react';
 import PasswordStrength from '../components/PasswordStrength';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 import axios from 'axios';
 import testPasswordStrength from './testPasswordStrength';
 
 interface SignUpProps {
   textContent: any;
   loading?: boolean;
-  provider?: 'STACKCOMMERCE' | 'TECHCULT';
+  provider?: 'STACKCOMMERCE' | 'TECHCULT' | 'DEALMIRROR';
 }
 
 export default function SignUp(props: SignUpProps) {
-  const globalDialogs = useGlobalDialog();
   const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [passwordState, setPasswordState] = useState<{
