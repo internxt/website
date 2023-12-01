@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, lang }) => {
   return (
     <section className="relative flex w-full flex-col overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden">
-        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 py-16 pt-16 sm:mb-6 sm:pt-0 md:flex-row md:space-y-0 lg:mx-32 lg:justify-between lg:space-x-11">
+        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 py-10 sm:mb-6 sm:pt-0 md:flex-row md:space-y-0 lg:mx-32 lg:justify-between lg:space-x-11">
           <div className="mt-16 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 pt-5 text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
             <div className="flex flex-row">
               <Alarm size={32} className="mr-4 text-primary" />
