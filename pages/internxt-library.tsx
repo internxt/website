@@ -1,5 +1,6 @@
 import HeroSection from '../components/inxt-library/HeroSection';
 import WhatWeDo from '../components/inxt-library/WhatWeDo';
+import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/shared/CtaSection';
@@ -32,6 +33,10 @@ const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, foot
         imageCardAlt={'Parents guide eBook'}
         bookUrl={'/inxt-library/Keeping_Kids_Safe_Online.pdf'}
       />
+
+      <CtaSection textContent={inxtLibrary.secondCta} url="https://drive.internxt.com/new" maxWidth="max-w-[507px]" />
+
+      <Footer textContent={footer} lang={'en'} />
     </Layout>
   );
 };
