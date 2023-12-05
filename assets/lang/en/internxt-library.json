@@ -10,7 +10,7 @@
   "WhatWeDo1": {
     "title": "Take Control of Your Online Privacy:",
     "subtitle": "A Guide to a More Private Online Experience, For Everyone",
-    "firstParagraphs": [
+    "firstParagraph": [
       "Leading a life of online safety may feel intimidating at first. That’s why at Internxt, we have made starting your journey to online privacy easier with our library of free eBooks and privacy resources.",
       "Learn the basics of online security, why it’s essential, and how switching to privacy-focused services, such as Internxt, is vital to protect you and your children from data leaks, fraud, or scams.",
       "Download, share, and save your free eBooks today!"
@@ -22,30 +22,33 @@
       "firstNameLabel": "First Name*",
       "emailAddressLabel": "Email Address*",
       "firstCheckbox": "I want to receive resources, discounts, and new updates from Internxt.",
-      "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal)."
+      "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
+      "cta": "Download eBook"
     },
-    "secondParagraphs": [
+    "secondParagraph": [
       "As the internet grows, more people feel they are losing power over who can access their personal data. It’s time to take back control.",
       "The combination of companies collecting and profiting from your data and increasing cyberattacks means we are at risk of hacking, ransomware, malware, and more.",
       "Fortunately, with the knowledge presented in this eBook and by switching to privacy-focused companies like Internxt, you can regain control of your privacy."
     ],
     "card": {
       "title": "What you will learn: ",
-      "firstFeed": "Why online privacy is important",
-      "secondFeed": "Secure, private browsers",
-      "thirdFeed": "Privacy-focused apps & service",
-      "fourthFeed": "And more"
+      "feeds": [
+        "Why online privacy is important",
+        "Secure, private browsers",
+        "Privacy-focused apps & service",
+        "And more"
+      ]
     }
   },
   "firstCta": {
     "title": "47% of people have had their personal information exposed",
-    "subtitle": "Don't be one of them.",
+    "description": "Don't be one of them.",
     "cta": "Join Internxt for free"
   },
   "WhatWeDo2": {
     "title": "Keeping Kids Safe Online:",
     "subtitle": "Tips and Strategies for Parents and Guardians",
-    "firstParagraphs": [
+    "firstParagraph": [
       "The internet can be dangerous for anyone unfamiliar with the basics of online safety, so how are kids supposed to stay safe online?",
       "Platforms such as YouTube and Roblox have millions of children logging in to their service every day. Without the proper parental controls in place, children can be exposed to cyberbullying, phishing scams, or worse.",
       "This eBook will cover the essentials you need to keep your kids safe online with parental controls designed to protect children from the potential dangers of the internet."
@@ -57,24 +60,27 @@
       "firstNameLabel": "First Name*",
       "emailAddressLabel": "Email Address*",
       "firstCheckbox": "I want to receive resources, discounts, and new updates from Internxt.",
-      "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal)."
+      "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
+      "cta": "Download eBook"
     },
-    "secondParagraphs": [
+    "secondParagraph": [
       "One of the many valuable gifts a parent or guardian can give their children is advice on staying safe online.",
       "With all the new trends and technology online, it can be difficult for parents to keep up with the latest dangers their children face.",
       "This eBook will help parents and guardians take the necessary steps to protect their children so that they can learn, create, and interact online in a safe, controlled environment."
     ],
     "card": {
       "title": "What you will learn: ",
-      "firstFeed": "What kids are doing online",
-      "secondFeed": "Why online safety is essential for kids",
-      "thirdFeed": "Potential risks of YouTube & Roblox",
-      "fourthFeed": "And more"
+      "feeds": [
+        "What kids are doing online",
+        "Why online safety is essential for kids",
+        "Potential risks of YouTube & Roblox",
+        "And more"
+      ]
     }
   },
   "secondCta": {
     "title": "Try Internxt risk-free",
-    "subtitle": "Sign up and get up to 10GB of Internxt's end-to-end encrypted cloud storage for free.",
+    "description": "Sign up and get up to 10GB of Internxt's end-to-end encrypted cloud storage for free.",
     "cta": "Create a free account"
   }
 }
