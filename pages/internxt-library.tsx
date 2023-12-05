@@ -21,9 +21,10 @@ const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, foot
         imageCardURL={'/images/inxt-library/online_privacy_ebook.webp'}
         imageCardAlt={'Online privacy eBook'}
         bookUrl={'/inxt-library/Guide_to_Online_Privacy.pdf'}
+        titleWidth={'max-w-[550px]'}
       />
 
-      <CtaSection textContent={inxtLibrary.firstCta} url="https://drive.internxt.com/new" maxWidth="max-w-[507px]" />
+      <CtaSection textContent={inxtLibrary.firstCta} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
 
       <WhatWeDo
         textContent={inxtLibrary.WhatWeDo2}
@@ -32,6 +33,7 @@ const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, foot
         imageCardURL={'/images/inxt-library/parents_guide_ebook.webp'}
         imageCardAlt={'Parents guide eBook'}
         bookUrl={'/inxt-library/Keeping_Kids_Safe_Online.pdf'}
+        titleWidth={'max-w-[600px]'}
       />
 
       <CtaSection textContent={inxtLibrary.secondCta} url="https://drive.internxt.com/new" maxWidth="max-w-[507px]" />
