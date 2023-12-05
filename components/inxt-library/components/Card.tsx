@@ -13,7 +13,7 @@ const Feed = ({ feed }) => (
 const Card = ({ textContent, imageUrl, imageAlt }) => {
   return (
     <div className="flex flex-col rounded-[32px] bg-white lg:flex-row">
-      <div className="flex flex-col space-y-6 px-10 py-7 lg:px-20 lg:pt-14">
+      <div className="flex flex-col space-y-6 px-10 py-7 lg:pl-20 lg:pr-40 lg:pt-14">
         <p className="text-4xl font-semibold text-gray-100">{textContent.title}</p>
         {textContent.feeds.map((feed) => {
           return <Feed key={feed} feed={feed} />;
