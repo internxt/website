@@ -68,7 +68,7 @@ const DownloadCard = ({ textContent, imageUrl, imageAlt, bookUrl }) => {
         </div>
         <a download={true} href={bookUrl} className="w-full">
           <button
-            className={`w-max rounded-lg ${
+            className={`w-full rounded-lg lg:w-max ${
               !secondCheckbox ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
             } py-3 px-14 font-medium text-white`}
             disabled={!secondCheckbox}
