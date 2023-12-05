@@ -22,6 +22,7 @@ const HeroSection = ({ textContent }) => {
             loading="eager"
             width={660}
             height={488}
+            draggable={false}
           />
         </div>
       </div>

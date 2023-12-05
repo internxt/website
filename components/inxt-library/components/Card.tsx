@@ -25,6 +25,7 @@ const Card = ({ textContent, imageUrl, imageAlt }) => {
         height={377}
         alt={imageAlt}
         className="flex flex-col rounded-b-[32px] lg:rounded-l-none lg:rounded-r-[32px]"
+        draggable={false}
       />
     </div>
   );

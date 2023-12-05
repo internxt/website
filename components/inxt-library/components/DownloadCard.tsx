@@ -31,7 +31,7 @@ const DownloadCard = ({ textContent, imageUrl, imageAlt, bookUrl }) => {
   return (
     <div className="flex flex-col items-center justify-center rounded-[32px] bg-white py-[42px] lg:flex-row lg:space-x-12">
       <div className="hidden flex-col lg:flex">
-        <Image src={imageUrl} width={371} height={488} alt={imageAlt} />
+        <Image src={imageUrl} width={371} height={488} alt={imageAlt} draggable={false} />
       </div>
       <div className="flex h-full max-w-[600px] flex-col items-center justify-center space-y-6 px-8 lg:items-start lg:pr-12">
         <div className="flex w-max flex-row items-center space-x-3 rounded-lg bg-gray-5 py-2 px-4">
