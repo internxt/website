@@ -66,12 +66,15 @@ const DownloadCard = ({ textContent, imageUrl, imageAlt, bookUrl }) => {
             <CheckboxItem checked={secondCheckbox} setCheckbox={setSecondCheckbox} label={textContent.secondCheckbox} />
           </div>
         </div>
-        <a
-          download={true}
-          href={bookUrl}
-          className="w-max rounded-lg bg-primary py-3 px-14 font-medium text-white hover:bg-primary-dark"
-        >
-          {textContent.cta}
+        <a download={true} href={bookUrl} className="w-full">
+          <button
+            className={`w-max rounded-lg ${
+              !secondCheckbox ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
+            } py-3 px-14 font-medium text-white`}
+            disabled={!secondCheckbox}
+          >
+            {textContent.cta}
+          </button>
         </a>
       </div>
     </div>
