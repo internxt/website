@@ -23,7 +23,12 @@
       "emailAddressLabel": "Email Address*",
       "firstCheckbox": "I want to receive resources, discounts, and new updates from Internxt.",
       "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
-      "cta": "Download eBook"
+      "cta": "Download eBook",
+      "successMessage": {
+        "title": "Thank you!",
+        "subtitle1": "You have successfully downloaded ",
+        "subtitle2": "\"Take Control of Your Online Privacy: A Guide to a More Private Online Experience, For Everyone.\""
+      }
     },
     "secondParagraph": [
       "As the internet grows, more people feel they are losing power over who can access their personal data. It’s time to take back control.",
@@ -61,7 +66,12 @@
       "emailAddressLabel": "Email Address*",
       "firstCheckbox": "I want to receive resources, discounts, and new updates from Internxt.",
       "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
-      "cta": "Download eBook"
+      "cta": "Download eBook",
+      "successMessage": {
+        "title": "Thank you!",
+        "subtitle1": "You have successfully downloaded ",
+        "subtitle2": "\"Keeping Kids Safe Online: Tips and Strategies for Parents and Guardians.\""
+      }
     },
     "secondParagraph": [
       "One of the many valuable gifts a parent or guardian can give their children is advice on staying safe online.",
