@@ -321,6 +321,13 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </a>
                     </Link>
+                    {lang === 'en' && (
+                      <Link href="/internxt-library" locale={lang} passHref>
+                        <a className="flex items-center hover:text-primary">
+                          {textContent.FooterSection.sections.resources.inxtLibrary}
+                        </a>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
@@ -658,6 +665,14 @@ export default function Footer({
                       <Link href="/what-does-google-know-about-me" locale={lang} passHref>
                         <a>{textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}</a>
                       </Link>
+
+                      {lang === 'en' && (
+                        <Link href="/internxt-library" locale={lang} passHref>
+                          <a className="flex items-center hover:text-primary">
+                            {textContent.FooterSection.sections.resources.inxtLibrary}
+                          </a>
+                        </Link>
+                      )}
                     </Disclosure.Panel>
                   </Transition>
                 </>
