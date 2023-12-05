@@ -10,11 +10,14 @@ import BottomBanner from '../components/banners/BottomBanner';
 
 const excludedPaths = [];
 
+const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
+
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
   const pathname = route.pathname;
   const isExcludedPath = !excludedPaths.includes(pathname);
   const router = useRouter();
+  const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -53,7 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div>
-        <Intercom />
+        {hideIntercomButton ? null : <Intercom />}
       </GlobalUIManager>
     </LiveChatLoaderProvider>
   );
