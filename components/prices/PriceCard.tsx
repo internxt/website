@@ -49,7 +49,7 @@ export default function PriceCard({
       const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
       return parseInt(splitPrice[0]) + checkDecimalPrice;
     }
-    // En caso de que no se cumplan las condiciones, devuelve price sin cambios
+
     return price;
   }, [country, price]);
 
