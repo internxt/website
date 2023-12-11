@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PriceCard from './PriceCard';
-import { Interval, stripeService } from '../services/stripeService';
+import { stripeService } from '../services/stripeService';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '../components/CardSkeleton';
 
@@ -27,7 +27,7 @@ const PriceTable = ({ lang, country }) => {
     <section className="overflow-hidden">
       <div
         id="priceTable"
-        className="content mb-10 flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
+        className="content flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
       >
         <Transition
           show={loadingCards}
@@ -49,7 +49,7 @@ const PriceTable = ({ lang, country }) => {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-16">
             {products &&
               Object.values(products).map((product: any) => {
                 return (
@@ -60,9 +60,9 @@ const PriceTable = ({ lang, country }) => {
                     price={product.price * country.value}
                     cta={['checkout', product.priceId]}
                     lang={lang}
-                    popular={product.storage === '2TB'}
+                    popular={product.storage === '5TB'}
                     actualPrice={
-                      Math.abs((product.price * country.value * 75) / 100)
+                      Math.abs((product.price * country.value * 50) / 100)
                         .toFixed(2)
                         .split('.')[0]
                     }

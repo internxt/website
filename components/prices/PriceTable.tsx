@@ -7,6 +7,7 @@ import BusinessBanner from '../banners/BusinessBanner';
 import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
+import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -20,7 +21,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
-  const ctaBanner = require('../../assets/lang/en/black-friday.json');
+  const ctaBanner = require('../../assets/lang/en/pricing.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState(null);
   const [currency, setCurrency] = useState({
@@ -45,6 +46,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
+          <CampaignCtaSection textContent={ctaBanner.tableSection.ctaBanner} />
           <div className="flex flex-col items-center px-5">
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
               {individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}
@@ -148,12 +150,17 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price * currency.value}
+                        price={Number(
+                          Math.abs((product.price * currency.value * 50) / 100)
+                            .toFixed(2)
+                            .split('.')[0],
+                        )}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
+                        priceBefore={product.price * currency.value}
                       />
                     ) : (
                       <PriceCard

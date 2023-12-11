@@ -2,12 +2,13 @@
   "HeroSection": {
     "title": "Get a lifetime Internxt plan!",
     "description": "Secure all your files and memories forever with a single, one-time payment.",
-    "cta1": "Get 25% OFF now",
-    "cta2": "Browse lifetime deals"
+    "cta1": "Get 50% OFF now",
+    "cta2": "Browse lifetime deals",
+    "guarantee": "30-day money-back guarantee"
   },
   "PaymentSection": {
     "limitedOffer": "Limited time offer!",
-    "title": { "blueText": "Get 25% OFF", "normalText": " all our exclusive lifetime plans" },
+    "title": { "blueText": "Get 50% OFF", "normalText": " all our exclusive lifetime plans" },
     "description": "Buy once and get privacy and security forever.",
     "normalSection": {
       "title": "Explore all of our exclusive lifetime plans",
@@ -44,6 +45,12 @@
         "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
       }
     ]
+  },
+  "campaignCtaSection": {
+    "title": "The world's most private cloud storage",
+    "subtitle": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now",
+    "guarantee": "30-day money-back guarantee"
   },
   "CtaSection": {
     "title": "The world's most private cloud storage",

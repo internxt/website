@@ -1,55 +1,63 @@
 {
   "HeroSection": {
-    "title": "Get a lifetime Internxt plan!",
-    "description": "Secure all your files and memories forever with a single, one-time payment.",
-    "cta1": "Get 25% OFF now",
-    "cta2": "Browse lifetime deals"
+    "title": "¡Consigue un plan de Internxt para toda la vida!",
+    "description": "Protege todos tus archivos y memorias en un pago único.",
+    "cta1": "Consigue el 50% de descuento ahora",
+    "cta2": "Explora las ofertas de por vida",
+    "guarantee": "Garantía de devolución de 30 días"
   },
   "PaymentSection": {
-    "limitedOffer": "Limited time offer!",
-    "title": { "blueText": "Get 25% OFF", "normalText": " all our exclusive lifetime plans" },
-    "description": "Buy once and get privacy and security forever.",
-    "normalSection": {
-      "title": "Explore all of our exclusive lifetime plans",
-      "description": "This week only, buy once and get privacy and security forever."
+    "limitedOffer": "¡Oferta por tiempo limitado!",
+    "title": {
+      "blueText": "Obtén un 50% de descuento",
+      "normalText": " en todos nuestros exclusivos planes de por vida"
     },
-    "securePayment": "100% Secure payment, powered by Stripe",
-
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "description": "Compra una vez y obtén privacidad y seguridad para siempre.",
+    "normalSection": {
+      "title": "Explora todos nuestros exclusivos planes de por vida",
+      "description": "Compra una vez y obtén privacidad y seguridad para siempre."
+    },
+    "securePayment": "Pago 100% seguro, con tecnología de Stripe",
+    "firstFeed": "Garantía de devolución de dinero de 30 días",
+    "secondFeed": "Pago 100% seguro",
+    "thirdFeed": "Creación de cuenta anónima"
   },
   "GetLifetimeSection": {
-    "title": "Life is not short! But this limited-time deal is...",
-    "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
+    "title": "¡La vida no es corta! Pero esta oferta por tiempo limitado sí lo es...",
+    "description": "Internxt ofrece una oferta para toda la vida de privacidad y tranquilidad."
   },
   "FeatureSection": {
-    "title": "Secure cloud storage with unmatched privacy",
-    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Internxt's commitment to privacy",
+    "title": "Almacenamiento seguro en la nube con privacidad inigualable",
+    "description": "¿Qué hace especial a Internxt? Somos un equipo unido de profesionales dedicados por completo a protegerte en línea. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos contra la explotación.",
+    "cta": "Internxt está comprometido con la privacidad",
     "cards": [
       {
-        "title": "Private by design",
-        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+        "title": "Privacidad por diseño",
+        "description": "No almacenamos contraseñas ni datos de usuario, y todos tus datos están encriptados en tránsito y en reposo. Internxt se asegura de que tengas el control total de tus archivos. Tus datos son tu negocio. Protegerlo es el nuestro."
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+        "title": "Seguridad intransigente",
+        "description": "Tus archivos están cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres absolutamente el único con acceso a tus datos."
       },
       {
-        "title": "Open source and transparent",
-        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por lo que nuestro código está disponible en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, excepto tus datos."
       },
       {
-        "title": "Independently verified",
-        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+        "title": "Verificado de forma independiente",
+        "description": "Estamos comprometidos con el RGPD y somos 100% seguros, pero no solo confíes en nuestra palabra. Internxt ha sido auditado y verificado de forma independiente por la principal empresa de pruebas de penetración de Europa, Securitum."
       }
     ]
   },
-
+  "campaignCtaSection": {
+    "title": "El almacenamiento en la nube más privado del mundo",
+    "subtitle": "Protege lo realmente importante con el almacenamiento en la nube seguro, privado y encriptado de Internxt.",
+    "cta": "Elige un plan ahora",
+    "guarantee": "Garantía de devolución de dinero de 30 días"
+  },
   "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
+    "title": "El almacenamiento en la nube más privado del mundo",
+    "description": "Protege lo realmente importante con el almacenamiento en la nube seguro, privado y encriptado de Internxt.",
+    "cta": "Elige un plan ahora"
   }
 }

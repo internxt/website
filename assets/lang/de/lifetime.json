@@ -2,12 +2,13 @@
   "HeroSection": {
     "title": "Hole dir einen lebenslangen Internxt-Plan!",
     "description": "Sichere alle deine Dateien und Erinnerungen für immer mit einer einmaligen Zahlung.",
-    "cta1": "Jetzt 25% Rabatt",
-    "cta2": "Angebote für lebenslange Pläne durchsuchen"
+    "cta1": "Jetzt 50% Rabatt",
+    "cta2": "Angebote für lebenslange Pläne durchsuchen",
+    "guarantee": "30 Tage Geld-zurück-Garantie"
   },
   "PaymentSection": {
     "limitedOffer": "Zeitlich begrenztes Angebot!",
-    "title": { "blueText": "Erhalte 25% Rabatt", "normalText": " auf alle unsere Exklusiven Pläne auf Lebenszeit" },
+    "title": { "blueText": "Erhalte 50% Rabatt", "normalText": " auf alle unsere Exklusiven Pläne auf Lebenszeit" },
     "description": "Kaufe einmalig und erhalte Datenschutz und Sicherheit für immer.",
     "normalSection": {
       "title": "Entdecke alle unsere exklusiven Pläne auf Lebenszeit",
@@ -44,6 +45,12 @@
         "description": "Wir sind vollständig GDPR-konform und 100% sicher, aber verlasse dich nicht nur auf unser Wort: Internxt wurde von Europas führendem Unternehmen für Penetrationstests, Securitum, unabhängig geprüft und verifiziert."
       }
     ]
+  },
+  "campaignCtaSection": {
+    "title": "Der privatste Cloud-Speicher der Welt",
+    "subtitle": "Schützen Sie die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Wählen Sie jetzt einen Plan",
+    "guarantee": "30 Tage Geld-zurück-Garantie"
   },
   "CtaSection": {
     "title": "Der privateste Cloud-Speicher der Welt",
