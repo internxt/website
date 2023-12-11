@@ -1,48 +1,49 @@
 {
   "HeroSection": {
-    "title": "Get a lifetime Internxt plan!",
-    "description": "Secure all your files and memories forever with a single, one-time payment.",
-    "cta1": "Get 50% OFF now",
-    "cta2": "Browse lifetime deals"
+    "title": "获得终身 Internxt 计划！",
+    "description": "只需一次性付款，便可永久保护您的所有文件和记忆",
+    "cta1": "立即获得 50% 优惠",
+    "cta2": "浏览终身优惠",
+    "guarantee": "30 天退款保证"
   },
   "PaymentSection": {
-    "limitedOffer": "Limited time offer!",
-    "title": { "blueText": "Get 50% OFF", "normalText": " all our exclusive lifetime plans" },
-    "description": "Buy once and get privacy and security forever.",
+    "limitedOffer": "限时优惠！",
+    "title": { "blueText": "五折优惠", "normalText": "我们所有的独家终身计划" },
+    "description": "一次购买，永久获得隐私和安全",
     "normalSection": {
-      "title": "Explore all of our exclusive lifetime plans",
-      "description": "This week only, buy once and get privacy and security forever."
+      "title": "探索我们所有的终身独家计划",
+      "description": "一次购买，永久获得隐私和安全。"
     },
-    "securePayment": "100% Secure payment, powered by Stripe",
+    "securePayment": "100% 安全支付，由 Stripe 提供支持",
 
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "firstFeed": "30天退款保证",
+    "secondFeed": "100% 安全支付",
+    "thirdFeed": "匿名账户创建"
   },
   "GetLifetimeSection": {
-    "title": "Life is not short! But this limited-time deal is...",
-    "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
+    "title": "生命并不短暂！但这一限时优惠却......",
+    "description": "Internxt正在提供终身隐私和安心的优惠。"
   },
   "FeatureSection": {
-    "title": "Secure cloud storage with unmatched privacy",
-    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Internxt's commitment to privacy",
+    "title": "具有无与伦比的隐私性的安全云存储",
+    "description": "是什么让 Internxt 如此与众不同？我们是一支紧密团结的专业团队，完全致力于保护您的在线安全。我们所做的每一件事、每一个决定都以保护您的数据不被利用为中心",
+    "cta": "Internxt 的隐私承诺",
     "cards": [
       {
-        "title": "Private by design",
-        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+        "title": "隐私设计",
+        "description": "我们不存储密码或用户数据，您的所有数据在传输和静止时都经过加密。Internxt 让您完全掌控自己的文件。您的数据就是您的业务。保护数据是我们的责任。"
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+        "title": "毫不妥协的安全性",
+        "description": "您的文件在离开您的设备之前已被端到端加密。由于采用了零知识 AES-256 加密技术，因此绝对只有你才能访问你的数据。"
       },
       {
-        "title": "Open source and transparent",
-        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "开源、透明",
+        "description": "我们为自己的工作感到自豪，因此我们的代码在 GitHub 上公开，任何人都可以亲自审查、审核和验证。除了您的数据，我们没有什么可隐藏的。"
       },
       {
-        "title": "Independently verified",
-        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+        "title": "独立验证",
+        "description": "我们完全符合 GDPR 要求，100% 安全，但不要相信我们的话。Internxt 已通过欧洲领先的渗透测试公司 Securitum 的独立审核和验证。"
       }
     ]
   },
@@ -54,8 +55,8 @@
   },
 
   "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
+    "title": "世界上最私密的云存储",
+    "description": "使用 Internxt 的安全、私有和加密云存储保护真正重要的内容",
+    "cta": "立即选择计划"
   }
 }
