@@ -46,6 +46,12 @@
       }
     ]
   },
+  "campaignCtaSection": {
+    "title": "世界上最私密的云存储",
+    "subtitle": "使用 Internxt 的安全、私有和加密云存储保护真正重要的内容",
+    "cta": "立即选择计划",
+    "guarantee": "30天退款保证"
+  },
 
   "CtaSection": {
     "title": "The world's most private cloud storage",

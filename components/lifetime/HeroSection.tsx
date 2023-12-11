@@ -25,7 +25,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
             {!hideTimer && (
               <div className="flex flex-row items-center space-x-3">
                 <Alarm size={32} className="text-primary" />
-                <Countdown textColor="white" dt="2023-11-30T23:59:59" />
+                <Countdown textColor="white" dt="2024-01-07T23:59:59" />
               </div>
             )}
             <Header className="text-white lg:text-7xl">{textContent.title}</Header>

@@ -150,12 +150,17 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price * currency.value}
+                        price={Number(
+                          Math.abs((product.price * currency.value * 50) / 100)
+                            .toFixed(2)
+                            .split('.')[0],
+                        )}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
+                        priceBefore={product.price * currency.value}
                       />
                     ) : (
                       <PriceCard

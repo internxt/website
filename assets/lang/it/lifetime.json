@@ -45,6 +45,12 @@
       }
     ]
   },
+  "campaignCtaSection": {
+    "title": "Il cloud storage più privato del mondo",
+    "subtitle": "Proteggi le cose davvero importanti con il cloud storage sicuro, privato e criptato di Internxt",
+    "cta": "Seleziona subito un piano",
+    "guarantee": "Garanzia di rimborso di 30 giorni"
+  },
   "CtaSection": {
     "title": "Il cloud storage più privato del mondo",
     "description": "Proteggi le cose davvero importanti con il cloud storage sicuro, privato e criptato di Internxt",

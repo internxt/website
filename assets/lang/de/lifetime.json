@@ -45,6 +45,12 @@
       }
     ]
   },
+  "campaignCtaSection": {
+    "title": "Der privatste Cloud-Speicher der Welt",
+    "subtitle": "Schützen Sie die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Wählen Sie jetzt einen Plan",
+    "guarantee": "30 Tage Geld-zurück-Garantie"
+  },
   "CtaSection": {
     "title": "Der privateste Cloud-Speicher der Welt",
     "description": "Schütze die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",

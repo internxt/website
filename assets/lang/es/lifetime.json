@@ -46,7 +46,12 @@
       }
     ]
   },
-
+  "campaignCtaSection": {
+    "title": "The world's most private cloud storage",
+    "subtitle": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now",
+    "guarantee": "30-day money-back guarantee"
+  },
   "CtaSection": {
     "title": "The world's most private cloud storage",
     "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",

@@ -16,6 +16,7 @@ const FeatureSection = ({
   redirect?: string;
 }) => {
   const router = useRouter();
+  const bannerText = require(`../../assets/lang/${router.locale}/lifetime.json`);
 
   const Cards = [
     {
@@ -80,7 +81,7 @@ const FeatureSection = ({
             </div>
           ))}
         </RevealY>
-        <CampaignCtaSection textContent={textContent.campaignCtaSection} />
+        <CampaignCtaSection textContent={bannerText.campaignCtaSection} />
       </div>
     </section>
   );

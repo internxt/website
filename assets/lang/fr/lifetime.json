@@ -45,6 +45,12 @@
       }
     ]
   },
+  "campaignCtaSection": {
+    "title": "Le stockage en nuage le plus privé du monde",
+    "subtitle": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et crypté d'Internxt",
+    "cta": "Select a plan now",
+    "guarantee": "Garantie de remboursement de 30 jours"
+  },
   "CtaSection": {
     "title": "Le stockage en nuage le plus privé du monde",
     "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt.",
