@@ -8,14 +8,14 @@ import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import BottomBanner from '../components/banners/BottomBanner';
 
-const excludedPaths = [];
+const excludedPaths = ['/pricing', '/lifetime', '/partner-discount'];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
   const pathname = route.pathname;
-  const isExcludedPath = !excludedPaths.includes(pathname);
+  const isExcludedPath = excludedPaths.includes(pathname);
   const router = useRouter();
   const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
 
