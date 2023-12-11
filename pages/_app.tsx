@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import BottomBanner from '../components/banners/BottomBanner';
 
-const excludedPaths = ['/pricing', '/lifetime', '/partner-discount'];
+const excludedPaths = ['/pricing', '/lifetime', '/partner-discount', '/annual'];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
 
