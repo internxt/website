@@ -1,18 +1,18 @@
 {
   "HeroSection": {
-    "title": "°Consigue un plan de Internxt para toda la vida!",
+    "title": "¡Consigue un plan de Internxt para toda la vida!",
     "description": "Protege todos tus archivos y memorias en un pago único.",
     "cta1": "Consigue el 50% de descuento ahora",
     "cta2": "Explora las ofertas de por vida",
     "guarantee": "Garantía de devolución de 30 días"
   },
   "PaymentSection": {
-    "limitedOffer": "°Oferta por tiempo limitado!",
-    "title": { "blueText": "ObtÈn el 50% de descuento", "normalText": " todos nuestros exclusivos planes de por vida" },
-    "description": "Compra una vez y obtÈn privacidad y seguridad para siempre.",
+    "limitedOffer": "¡Oferta por tiempo limitado!",
+    "title": { "blueText": "Obtén el 50% de descuento", "normalText": " todos nuestros exclusivos planes de por vida" },
+    "description": "Compra una vez y obtén privacidad y seguridad para siempre.",
     "normalSection": {
       "title": "Explora todos nuestros exclusivos planes de por vida",
-      "description": "Compra una vez y obtÈn privacidad y seguridad para siempre."
+      "description": "Compra una vez y obtén privacidad y seguridad para siempre."
     },
     "securePayment": "Pago 100% seguro, con tecnología de Stripe",
     "firstFeed": "Garantía de devolución de dinero de 30 días",
@@ -20,13 +20,13 @@
     "thirdFeed": "Creación de cuenta anónima"
   },
   "GetLifetimeSection": {
-    "title": "°La vida no es corta! Pero esta oferta por tiempo limitado sí lo es...",
+    "title": "¡La vida no es corta! Pero esta oferta por tiempo limitado sí lo es...",
     "description": "Internxt ofrece una oferta para toda la vida de privacidad y tranquilidad."
   },
   "FeatureSection": {
     "title": "Almacenamiento seguro en la nube con privacidad inigualable",
     "description": "¿Qué hace especial a Internxt? Somos un equipo unido de profesionales dedicados por completo a protegerte en línea. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos contra la explotación.",
-    "cta": "Internxt est· comprometido con la privacidad",
+    "cta": "Internxt está comprometido con la privacidad",
     "cards": [
       {
         "title": "Privacidad por diseño",
@@ -34,7 +34,7 @@
       },
       {
         "title": "Seguridad intransigente",
-        "description": "Tus archivos est·n cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres absolutamente el único con acceso a tus datos."
+        "description": "Tus archivos están cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres absolutamente el único con acceso a tus datos."
       },
       {
         "title": "Código abierto y transparente",
@@ -47,13 +47,13 @@
     ]
   },
   "campaignCtaSection": {
-    "title": "El almacenamiento en la nube m·s privado del mundo",
+    "title": "El almacenamiento en la nube más privado del mundo",
     "subtitle": "Protege lo realmente importante con el almacenamiento en la nube seguro, privado y encriptado de Internxt.",
     "cta": "Elige un plan ahora",
     "guarantee": "Garantía de devolución de dinero de 30 días"
   },
   "CtaSection": {
-    "title": "El almacenamiento en la nube m·s privado del mundo",
+    "title": "El almacenamiento en la nube más privado del mundo",
     "description": "Protege lo realmente importante con el almacenamiento en la nube seguro, privado y encriptado de Internxt.",
     "cta": "Elige un plan ahora"
   }
