@@ -8,7 +8,10 @@
   },
   "PaymentSection": {
     "limitedOffer": "¡Oferta por tiempo limitado!",
-    "title": { "blueText": "Obtén el 50% de descuento", "normalText": " todos nuestros exclusivos planes de por vida" },
+    "title": {
+      "blueText": "Obtén un 50% de descuento",
+      "normalText": " en todos nuestros exclusivos planes de por vida"
+    },
     "description": "Compra una vez y obtén privacidad y seguridad para siempre.",
     "normalSection": {
       "title": "Explora todos nuestros exclusivos planes de por vida",
