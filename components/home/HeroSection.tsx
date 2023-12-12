@@ -56,7 +56,7 @@ export default function HeroSection({ textContent, lang }) {
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
 
-        <div className="relative mx-auto flex h-full w-full max-w-screen-xl flex-col items-center justify-start sm:mb-6 lg:flex-row lg:items-stretch">
+        <div className="relative mx-auto flex h-full w-full max-w-screen-xl flex-col items-center justify-start lg:flex-row lg:items-stretch">
           {/* Mobile view */}
           <HomePageBanner />
           <div className="my-6 flex flex-shrink-0 flex-col items-center px-5 text-center sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
