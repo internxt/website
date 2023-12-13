@@ -13,15 +13,15 @@ const excludedPaths = ['/pricing', '/lifetime', '/partner-discount', '/annual'];
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const route = useRouter();
-  const pathname = route.pathname;
-  const isExcludedPath = excludedPaths.includes(pathname);
   const router = useRouter();
+  const pathname = router.pathname;
+  const isExcludedPath = excludedPaths.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
+  const lang = router.locale;
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      gtag.pageview(url);
+      gtag?.pageview(url);
     };
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
@@ -35,14 +35,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
         <>
           <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
-          <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-          />
-          <Script
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+          {lang !== 'es' && (
+            <>
+              <Script
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+              />
+              <Script
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -50,8 +52,10 @@ function MyApp({ Component, pageProps }: AppProps) {
                   page_path: window.location.pathname,
                 });
               `,
-            }}
-          />
+                }}
+              />
+            </>
+          )}
         </>
 
         <Component {...pageProps} />
