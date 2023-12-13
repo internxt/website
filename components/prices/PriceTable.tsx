@@ -21,7 +21,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
-  const ctaBanner = require('../../assets/lang/en/pricing.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState(null);
   const [currency, setCurrency] = useState({
@@ -46,7 +45,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          <CampaignCtaSection textContent={ctaBanner.tableSection.ctaBanner} />
+          <CampaignCtaSection textContent={textContent.ctaBanner} />
           <div className="flex flex-col items-center px-5">
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
               {individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}

@@ -14,6 +14,13 @@
     }
   },
   "tableSection": {
+    "ctaBanner": {
+      "header": "Weihnachtseinsparungen!",
+      "title": "50 % RABATT auf alle lebenslangen Pläne",
+      "subtitle": "Schützen Sie die wirklich wichtigen Dinge mit Internxts sicherem, privatem und verschlüsseltem Cloud-Speicher.",
+      "cta": "Jetzt 50 % RABATT sichern",
+      "guarantee": "30-tägige Geld-zurück-Garantie"
+    },
     "featureSection": {
       "firstFeature": "30-Tage Geld-zurück-Garantie",
       "secondFeature": "100% sichere Zahlung",

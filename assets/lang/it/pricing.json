@@ -13,6 +13,13 @@
     }
   },
   "tableSection": {
+    "ctaBanner": {
+      "header": "Risparmio natalizio!",
+      "title": "Tutti i piani a vita al 50% di sconto",
+      "subtitle": "Proteggi le cose davvero importanti con lo storage cloud sicuro, privato e criptato di Internxt.",
+      "cta": "Ottieni il 50% di sconto ora",
+      "guarantee": "Garanzia di rimborso entro 30 giorni"
+    },
     "featureSection": {
       "firstFeature": "Garanzia di rimborso di 30 giorni",
       "secondFeature": "Pagamento sicuro al 100%",
