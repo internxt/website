@@ -62,15 +62,9 @@ LayoutProps) {
   // THIS CODE SNIPPET SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
     let ip;
-    axios
-      .get('https://ipinfo.io/ip')
-      .then((res) => {
-        ip = res.data;
-      })
-      .catch((err) => {
-        const error = err as Error;
-        console.error(error);
-      });
+    axios.get('https://ipinfo.io/ip').then((res) => {
+      ip = res.data;
+    });
 
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
@@ -171,6 +165,22 @@ LayoutProps) {
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <link rel="icon" href="/favicon.ico" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/cookiebanner.style.css" />
+        <style
+          style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
+        ></style>
+        <script src="/js/cookiebanner.script.js"></script>
+        {lang === 'es' && (
+          <script>
+            {`
+          $(document).ready(function() {
+            cookieBanner.init();
+        });
+          `}
+          </script>
+        )}
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
