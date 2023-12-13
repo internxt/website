@@ -172,13 +172,15 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
-        <script>
-          {`
+        {lang === 'es' && (
+          <script>
+            {`
           $(document).ready(function() {
             cookieBanner.init();
         });
           `}
-        </script>
+          </script>
+        )}
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
