@@ -14,6 +14,13 @@
     }
   },
   "tableSection": {
+    "ctaBanner": {
+      "header": "圣诞储蓄！",
+      "title": "所有终身计划 5 折优惠",
+      "subtitle": "使用Internxt的安全、私密和加密云存储保护真正重要的内容。",
+      "cta": "立即享受 5 折优惠",
+      "guarantee": "30天退款保证"
+    },
     "featureSection": {
       "firstFeature": "30天退款保证",
       "secondFeature": "100%安全支付",
