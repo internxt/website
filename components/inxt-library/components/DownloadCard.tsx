@@ -51,7 +51,7 @@ const DownloadCard = ({ textContent, imageUrl, imageAlt, bookUrl }) => {
       </div>
       <p className="text-center text-5xl font-semibold text-gray-100 lg:text-left">{textContent.title}</p>
       <p className="text-center text-xl text-gray-80 lg:text-left">{textContent.subtitle}</p>
-      <div className="flex flex-col gap-6 lg:flex-row">
+      {/* <div className="flex flex-col gap-6 lg:flex-row">
         <TextInput
           type="text"
           onChange={(e) => setFirstName(e.target.value)}
@@ -76,7 +76,7 @@ const DownloadCard = ({ textContent, imageUrl, imageAlt, bookUrl }) => {
           <CheckboxItem checked={firstCheckbox} setCheckbox={setFirstCheckbox} label={textContent.firstCheckbox} />
           <CheckboxItem checked={secondCheckbox} setCheckbox={setSecondCheckbox} label={textContent.secondCheckbox} />
         </div>
-      </div>
+      </div> */}
       <a download={true} href={bookUrl} className="w-full">
         <button
           onClick={() => {

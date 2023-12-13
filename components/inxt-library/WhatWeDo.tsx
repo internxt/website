@@ -33,7 +33,13 @@ const WhatWeDo = ({
             textContent={textContent.downloadCard}
             bookUrl={bookUrl}
           />
-          <div className="flex max-w-[774px] flex-col space-y-5">
+          <DownloadCard
+            imageUrl={'/images/inxt-library/kids_online_safety_ebook.webp'}
+            imageAlt={'Kids online safety eBook'}
+            textContent={textContent.downloadCard2}
+            bookUrl={'/inxt-library/Keeping_Kids_Safe_Online.pdf'}
+          />
+          {/* <div className="flex max-w-[774px] flex-col space-y-5">
             {textContent.secondParagraph.map((item) => {
               return (
                 <div key={item} className="flex flex-col text-left">
@@ -42,7 +48,7 @@ const WhatWeDo = ({
               );
             })}
           </div>
-          <Card imageAlt={imageCardAlt} imageUrl={imageCardURL} textContent={textContent.card} />
+          <Card imageAlt={imageCardAlt} imageUrl={imageCardURL} textContent={textContent.card} /> */}
         </div>
       </div>
     </section>

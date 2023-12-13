@@ -26,7 +26,7 @@ const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, foot
 
       <CtaSection textContent={inxtLibrary.firstCta} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
 
-      <WhatWeDo
+      {/* <WhatWeDo
         textContent={inxtLibrary.WhatWeDo2}
         downloadCardImgUrl={'/images/inxt-library/kids_online_safety_ebook.webp'}
         downloadCardImgAlt={'Kids online safety eBook'}
@@ -36,7 +36,7 @@ const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, foot
         titleWidth={'max-w-[600px]'}
       />
 
-      <CtaSection textContent={inxtLibrary.secondCta} url="https://drive.internxt.com/new" maxWidth="max-w-[507px]" />
+      <CtaSection textContent={inxtLibrary.secondCta} url="https://drive.internxt.com/new" maxWidth="max-w-[507px]" /> */}
 
       <Footer textContent={footer} lang={'en'} />
     </Layout>
