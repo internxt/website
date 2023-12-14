@@ -40,5 +40,26 @@
     "title": "Try Internxt risk-free",
     "description": "Sign up and get up to 10GB of Internxt's end-to-end encrypted cloud storage for free.",
     "cta": "Create a free account"
+  },
+  "FeatureSection": {
+    "label": "Free download!",
+    "title": "Ready to learn?",
+    "subtitle": "Download your free eBook for insights on why online privacy is crucial and what measures you can take to protect it.",
+    "cta": "Download eBook"
+  },
+  "RelatedResourcesSection": {
+    "title": "Related resources",
+    "subtitle": "Online privacy is equally important for young people. Learn what risks they face and methods to help protect kids online in our free child safety eBook.",
+    "card": {
+      "title": "Child safety eBook.",
+      "downloadForFree": "Download for free",
+      "subtitle": "Tips and tricks to keep children safe online.",
+      "cta": "Learn more"
+    }
+  },
+  "CtaSection2": {
+    "title": "47% of people have had their personal information exposed",
+    "description": "Don’t be one of them.",
+    "cta": "Join Internxt for free"
   }
 }

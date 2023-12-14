@@ -5,6 +5,9 @@ import HeroSection from '../components/inxt-library/shared/HeroSection';
 import WhatWeDo from '../components/inxt-library/shared/WhatWeDo';
 import WhatYouWillLearn from '../components/inxt-library/shared/WhatYouWillLearn';
 import CtaSection from '../components/shared/CtaSection';
+import FeatureSection from '../components/inxt-library/shared/FeatureSection';
+import RelatedResourcesSection from '../components/inxt-library/shared/RelatedResourcesSection';
+import RelatedBannerCard from '../components/inxt-library/components/RelatedbannerCard';
 
 const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'online-privacy-ebook');
@@ -28,6 +31,23 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
       />
 
       <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
+
+      <FeatureSection
+        textContent={textContent.FeatureSection}
+        urlImage={'/images/inxt-library/internxt_ebook_download_banner.webp'}
+        altImage={'Internxt eBook download banner'}
+      />
+
+      <RelatedResourcesSection textContent={textContent.RelatedResourcesSection}>
+        <RelatedBannerCard
+          textContent={textContent.RelatedResourcesSection.card}
+          learnMoreLink={''}
+          imageUrl={'/images/inxt-library/internxt_ebook_download_banner.webp'}
+          altUrl={'Internxt eBook download banner'}
+        />
+      </RelatedResourcesSection>
+
+      <CtaSection textContent={textContent.CtaSection2} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
 
       <Footer textContent={footer} lang={'en'} />
     </Layout>

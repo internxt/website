@@ -9,7 +9,7 @@ const HeroSection = ({ textContent, imageUrl, altImage }) => {
           <DownloadEbook textContent={textContent} bookUrl={'https://drive.internxt.com/new'} />
 
           <div className="flex flex-col">
-            <Image src={imageUrl} alt={altImage} width={496} height={520} draggable={false} />
+            <Image src={imageUrl} alt={altImage} width={516} height={530} draggable={false} />
           </div>
         </div>
       </div>
