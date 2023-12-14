@@ -20,16 +20,25 @@
     "cta": "Download eBook"
   },
   "WhatYouWillLearn": {
-    "title": "",
-    "paragraph": [],
+    "title": "Taking the steps to manage your online privacy",
+    "paragraph": [
+      "As the internet grows, more people feel they are losing power over who can access their personal data. It’s time to take back control.",
+      "The combination of companies collecting and profiting from your data and increasing cyberattacks means we are at risk of hacking, ransomware, malware, and more.",
+      "Fortunately, with the knowledge presented in this eBook and by switching to privacy-focused companies like Internxt, you can regain control of your privacy."
+    ],
     "steps": {
       "title": "What you will learn:",
-      "steps": [
+      "feeds": [
         "Why online privacy is important",
         "Secure, private browsers",
         "Privacy-focused apps & services",
         "And more"
       ]
     }
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Sign up and get up to 10GB of Internxt's end-to-end encrypted cloud storage for free.",
+    "cta": "Create a free account"
   }
 }

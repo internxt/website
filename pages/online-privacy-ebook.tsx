@@ -2,6 +2,9 @@ import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import HeroSection from '../components/inxt-library/shared/HeroSection';
+import WhatWeDo from '../components/inxt-library/shared/WhatWeDo';
+import WhatYouWillLearn from '../components/inxt-library/shared/WhatYouWillLearn';
+import CtaSection from '../components/shared/CtaSection';
 
 const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'online-privacy-ebook');
@@ -15,6 +18,16 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
         imageUrl={'/images/inxt-library/internxt_ebook_download.webp'}
         altImage={'Internxt eBook download'}
       />
+
+      <WhatWeDo textContent={textContent.WhatWeDo} />
+
+      <WhatYouWillLearn
+        textContent={textContent.WhatYouWillLearn}
+        stepsAltImage={'Online privacy eBook steps'}
+        stepsImage={'/images/inxt-library/online_privacy_ebook.webp'}
+      />
+
+      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
 
       <Footer textContent={footer} lang={'en'} />
     </Layout>
