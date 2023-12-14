@@ -21,32 +21,17 @@
       "Learn the basics of online security, why it’s essential, and how switching to privacy-focused services, such as Internxt, is vital to protect you and your children from data leaks, fraud, or scams.",
       "Download, share, and save your free eBooks today!"
     ],
-    "downloadCard": {
+    "ebookCard": {
       "label": "Free download!",
       "title": "Take Control of Your Online Privacy:",
       "subtitle": "A Guide to a More Private Online Experience, For Everyone",
       "cta": "Learn more"
     },
-    "downloadCard2": {
+    "childrenCard": {
       "label": "Free download!",
       "title": "Keeping Kids Safe Online:",
       "subtitle": "Tips and Strategies for Parents and Guardians",
       "cta": "Learn more"
-    },
-
-    "secondParagraph": [
-      "As the internet grows, more people feel they are losing power over who can access their personal data. It’s time to take back control.",
-      "The combination of companies collecting and profiting from your data and increasing cyberattacks means we are at risk of hacking, ransomware, malware, and more.",
-      "Fortunately, with the knowledge presented in this eBook and by switching to privacy-focused companies like Internxt, you can regain control of your privacy."
-    ],
-    "card": {
-      "title": "What you will learn: ",
-      "feeds": [
-        "Why online privacy is important",
-        "Secure, private browsers",
-        "Privacy-focused apps & service",
-        "And more"
-      ]
     }
   },
   "firstCta": {

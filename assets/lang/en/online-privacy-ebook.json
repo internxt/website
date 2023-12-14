@@ -1,0 +1,35 @@
+{
+  "HeroSection": {
+    "label": "Free download!",
+    "title": "Online privacy eBook",
+    "subtitle": "Live a life of online privacy, safe from cyber attacks, data loss, ransomware, and more with your free eBook download from Internxt.",
+    "firstPlaceholder": "First Name*",
+    "secondPlaceholder": "Email Address*",
+    "firstCheckbox": "I want to receive resources, discounts, and new updates from Internxt.",
+    "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
+    "cta": "Download eBook"
+  },
+  "WhatWeDo": {
+    "title": "Take Control of Your Online Privacy:",
+    "subtitle": "A Guide to a More Private Online Experience, For Everyone",
+    "paragraph": [
+      "Leading a life of online safety may feel intimidating at first. That’s why at Internxt, we have made starting your journey to online privacy easier with our library of free eBooks and privacy resources.",
+      "Learn the basics of online security, why it’s essential, and how switching to privacy-focused services, such as Internxt, is vital to protect you and your children from data leaks, fraud, or scams.",
+      "Download, share, and save your free eBooks today!"
+    ],
+    "cta": "Download eBook"
+  },
+  "WhatYouWillLearn": {
+    "title": "",
+    "paragraph": [],
+    "steps": {
+      "title": "What you will learn:",
+      "steps": [
+        "Why online privacy is important",
+        "Secure, private browsers",
+        "Privacy-focused apps & services",
+        "And more"
+      ]
+    }
+  }
+}

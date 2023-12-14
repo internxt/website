@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Header from '../shared/Header';
+import Header from '../../shared/Header';
 
 const HeroSection = ({ textContent }) => {
   return (

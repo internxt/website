@@ -178,5 +178,15 @@
     "id": "internxt-library",
     "title": "Internxt Library: Free eBooks for Online Privacy | Internxt",
     "description": "Learn the fundamentals of online privacy for individuals and parents with Internxt’s library of free eBooks to ensure a safer, secure internet experience."
+  },
+  {
+    "id": "online-privacy-ebook",
+    "title": "Free Online Privacy eBook for Individuals | Internxt",
+    "description": "Internxt’s free eBook on online privacy is designed to help individuals protect themselves against cyberthreats and secure their online data. Download it here."
+  },
+  {
+    "id": "child-safety-ebook",
+    "title": "Free Child Safety eBook for Parents | Internxt",
+    "description": "Internxt’s free child safety eBook offers parents tips to secure their children’s online privacy and protect them from internet threats. Download it here."
   }
 ]
