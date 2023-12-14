@@ -1,4 +1,7 @@
+import { useRouter } from 'next/router';
+
 const WhatWeDo = ({ textContent }) => {
+  const router = useRouter();
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
@@ -15,7 +18,12 @@ const WhatWeDo = ({ textContent }) => {
             })}
           </div>
         </div>
-        <button className="flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white">
+        <button
+          onClick={() => {
+            router.push('#download-ebook');
+          }}
+          className="flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
+        >
           {textContent.cta}
         </button>
       </div>

@@ -25,6 +25,7 @@ const DownloadEbook = ({ textContent, bookUrl }) => {
   const [emailAddress, setEmailAddress] = useState('');
   const [firstCheckbox, setFirstCheckbox] = useState(false);
   const [secondCheckbox, setSecondCheckbox] = useState(false);
+  const isDownloadButtonDisabled = !secondCheckbox || firstName === '' || emailAddress === '';
 
   return (
     <div className="flex max-w-[533px] flex-col items-center space-y-6 lg:items-start">
@@ -66,9 +67,9 @@ const DownloadEbook = ({ textContent, bookUrl }) => {
           <button
             onClick={() => {}}
             className={`w-full rounded-lg lg:w-max ${
-              !secondCheckbox ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
+              isDownloadButtonDisabled ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
             } py-3 px-14 font-medium text-white`}
-            disabled={!secondCheckbox}
+            disabled={isDownloadButtonDisabled}
           >
             {textContent.cta}
           </button>

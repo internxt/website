@@ -41,7 +41,7 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
       <RelatedResourcesSection textContent={textContent.RelatedResourcesSection}>
         <RelatedBannerCard
           textContent={textContent.RelatedResourcesSection.card}
-          learnMoreLink={''}
+          learnMoreLink={'/child-safety-ebook'}
           imageUrl={'/images/inxt-library/internxt_ebook_download_banner.webp'}
           altUrl={'Internxt eBook download banner'}
         />
