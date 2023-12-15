@@ -19,7 +19,7 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
       {/* TODO:Add the correct eBook link */}
       <HeroSection
         textContent={textContent.HeroSection}
-        imageUrl={'/images/inxt-library/internxt_ebook_download.webp'}
+        imageUrl={'/images/inxt-library/Internxt_ebook_download.webp'}
         altImage={'Internxt eBook download'}
         templateId={process.env.NEXT_PUBLIC_SENDGRID_ONLINE_SAFETY}
         eBook={'http://localhost:3001/Guide_to_Online_Privacy.pdf'}
