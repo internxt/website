@@ -13,14 +13,13 @@ const TextCard = ({ textContent, url }) => {
       </div>
       <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
       <p className="text-xl text-gray-80">{textContent.subtitle}</p>
-      <button
+      <a
+        href={url}
+        target="_blank"
         className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
-        onClick={() => {
-          router.push(url);
-        }}
       >
         {textContent.cta}
-      </button>
+      </a>
     </div>
   );
 };
