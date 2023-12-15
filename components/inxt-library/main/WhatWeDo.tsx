@@ -48,7 +48,7 @@ const WhatWeDo = ({ textContent }) => {
           <div className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
             <div className="flex flex-col">
               <Image
-                src="/images/inxt-library/internxt_ebook_download.webp"
+                src="/images/inxt-library/Internxt_ebook_download.webp"
                 alt="Internxt eBook download"
                 width={496}
                 height={520}
