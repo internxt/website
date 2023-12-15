@@ -6,7 +6,7 @@ const TextCard = ({ textContent, url }) => {
   const router = useRouter();
 
   return (
-    <div className="flex max-w-[388px] flex-col space-y-6">
+    <div className="flex max-w-[388px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
       <div className="flex w-max flex-row items-center space-x-3 rounded-lg bg-gray-5 py-2 px-4">
         <FileArrowDown className="text-primary" size={32} />
         <p className="text-xl font-medium text-gray-80">{textContent.label}</p>
@@ -45,7 +45,7 @@ const WhatWeDo = ({ textContent }) => {
           </div>
 
           {/* GUIDE TO ONLINE PRIVACY */}
-          <div className="flex flex-row items-center justify-center space-x-[88px]">
+          <div className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
             <div className="flex flex-col">
               <Image
                 src="/images/inxt-library/internxt_ebook_download.webp"
@@ -59,8 +59,8 @@ const WhatWeDo = ({ textContent }) => {
           </div>
 
           {/* KEEPING KIDS SAFE ONLINE */}
-          <div className="flex flex-row items-center justify-center space-x-[88px]">
-            <TextCard textContent={textContent.childrenCard} url={''} />
+          <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
+            <TextCard textContent={textContent.childrenCard} url={'/child-safety-ebook'} />
             <div className="flex flex-col">
               <Image
                 src="/images/inxt-library/kids_online_safety_ebook.webp"
