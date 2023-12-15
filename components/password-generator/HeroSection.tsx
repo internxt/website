@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Checkbox from '../components/Checkbox';
-import { ArrowsClockwise, Copy, Info, WarningCircle } from '@phosphor-icons/react';
-import { generate } from 'random-words';
+import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '../Snackbar';
-import Tooltip from '../prices/ToolTip';
 import { checkPassword } from './utils';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
@@ -29,11 +27,11 @@ const HeroSection = ({ textContent }) => {
           <div className="flex w-full max-w-lg flex-col items-center justify-center">
             <div className="flex w-full flex-col items-center justify-center space-y-4">
               <div
-                onKeyUp={(e) => checkPassword(e)}
+                onKeyUp={checkPassword}
                 id="input"
-                className="flex h-14 w-full appearance-none flex-col items-center justify-center rounded-lg border-2 border-primary bg-white text-center text-xl font-medium text-gray-100 placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10 transition-all delay-150 duration-150 ease-out"
+                className="flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary bg-white py-3 px-3 text-center placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10"
               >
-                {password}
+                <p className="flex-row text-xl font-medium text-gray-100">{password}</p>
               </div>
 
               <div className="flex h-1.5 w-full flex-row space-x-1.5">
