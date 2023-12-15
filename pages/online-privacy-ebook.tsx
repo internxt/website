@@ -16,6 +16,7 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
     <Layout title={metatags[0].title} description={metatags[0].description}>
       <Navbar fixed lang="en" textContent={navbar} cta={['default']} />
 
+      {/* TODO:Add the correct eBook link */}
       <HeroSection
         textContent={textContent.HeroSection}
         imageUrl={'/images/inxt-library/internxt_ebook_download.webp'}

@@ -27,7 +27,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               email,
             },
           ],
-          download_url: eBook,
+          dynamic_template_data: {
+            download_url: eBook,
+          },
         },
       ],
       template_id: templateId,
