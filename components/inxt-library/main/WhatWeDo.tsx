@@ -16,6 +16,7 @@ const TextCard = ({ textContent, url }) => {
       <a
         href={url}
         target="_blank"
+        rel="noopener noreferrer"
         className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
       >
         {textContent.cta}
