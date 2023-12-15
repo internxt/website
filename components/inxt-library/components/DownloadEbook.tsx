@@ -4,6 +4,8 @@ import { useState } from 'react';
 import CheckboxSettings from '../../password-generator/components/CheckboxSettings';
 import ReactMarkdown from 'react-markdown';
 import Header from '../../shared/Header';
+import axios from 'axios';
+import { notificationService } from '../../Snackbar';
 
 const CheckboxItem = ({ checked, setCheckbox, label }) => {
   return (
@@ -20,12 +22,25 @@ const CheckboxItem = ({ checked, setCheckbox, label }) => {
   );
 };
 
-const DownloadEbook = ({ textContent, bookUrl }) => {
+const DownloadEbook = ({ textContent, bookUrl, templateId }) => {
   const [firstName, setFirstName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [firstCheckbox, setFirstCheckbox] = useState(false);
   const [secondCheckbox, setSecondCheckbox] = useState(false);
   const isDownloadButtonDisabled = !secondCheckbox || firstName === '' || emailAddress === '';
+
+  const handleDownloadEbook = async () => {
+    try {
+      await axios.post('/api/download-ebook', {
+        name: firstName,
+        email: emailAddress,
+        templateId,
+        eBook: bookUrl,
+      });
+    } catch (error) {
+      notificationService.openErrorToast('Error sending email');
+    }
+  };
 
   return (
     <div className="flex max-w-[533px] flex-col items-center space-y-6 lg:items-start">
@@ -37,7 +52,7 @@ const DownloadEbook = ({ textContent, bookUrl }) => {
         <Header>{textContent.title}</Header>
         <p className="text-center text-xl text-gray-80 lg:text-left">{textContent.subtitle}</p>
       </div>
-      <div className="flex flex-col items-center space-y-4">
+      <div className="flex flex-col items-center space-y-4 lg:items-start">
         <div className="flex w-full flex-col gap-6 lg:flex-row">
           <TextInput
             type="text"
@@ -63,17 +78,15 @@ const DownloadEbook = ({ textContent, bookUrl }) => {
             <CheckboxItem checked={secondCheckbox} setCheckbox={setSecondCheckbox} label={textContent.secondCheckbox} />
           </div>
         </div>
-        <a download={true} href={bookUrl} className="w-full">
-          <button
-            onClick={() => {}}
-            className={`w-full rounded-lg lg:w-max ${
-              isDownloadButtonDisabled ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
-            } py-3 px-14 font-medium text-white`}
-            disabled={isDownloadButtonDisabled}
-          >
-            {textContent.cta}
-          </button>
-        </a>
+        <button
+          onClick={() => handleDownloadEbook()}
+          className={`w-full rounded-lg lg:w-max ${
+            isDownloadButtonDisabled ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
+          } py-3 px-14 font-medium text-white`}
+          disabled={isDownloadButtonDisabled}
+        >
+          {textContent.cta}
+        </button>
       </div>
     </div>
   );

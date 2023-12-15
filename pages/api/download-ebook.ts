@@ -3,19 +3,19 @@ import sendgrid from '@sendgrid/mail';
 
 const { SENDGRID_API_KEY } = process.env;
 
-// API endpoint to allow the client to download the app from any component without getServerSideProps
+// API endpoint to allow the client to download send the ebook to the user's email
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'OPTIONS') {
     res.status(200).json({});
   }
   if (req.method === 'POST') {
-    const { email, template_id } = req.body;
-    sendgrid.setApiKey();
+    const { name, email, templateId, eBook } = req.body;
+    sendgrid.setApiKey(SENDGRID_API_KEY);
     const msg = {
       to: email,
       from: {
-        email: this.configService.get('mailer.from'),
-        name: this.configService.get('mailer.name'),
+        email,
+        name,
       },
       subject: '',
       text: 'send link',
@@ -27,18 +27,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               email,
             },
           ],
-          dynamic_template_data: context,
+          download_url: eBook,
         },
       ],
-      template_id: template_id,
+      template_id: templateId,
       mail_settings: {
         sandbox_mode: {
-          enable: this.configService.get('mailer.sandbox'),
+          enable: true,
         },
       },
     };
-    await sendgrid.send(msg);
+    try {
+      await sendgrid.send(msg);
+      res.status(200).json({
+        success: true,
+        message: 'Email sent successfully',
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: error.message,
+      });
+    }
   } else {
-    res.status(405).end(); // Método no permitido
+    res.status(405).end(); // Method not allowed
   }
 }
