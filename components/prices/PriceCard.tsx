@@ -35,8 +35,6 @@ export default function PriceCard({
   country,
   lang,
 }: PriceCardProps) {
-  const [coupon, setCoupon] = useState(null);
-
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -52,17 +50,6 @@ export default function PriceCard({
 
     return price;
   }, [country, price]);
-
-  useEffect(() => {
-    stripeService
-      .getCoupon(CouponType.ChristmasCoupon)
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
@@ -157,7 +144,6 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                couponCode: coupon,
               });
             }
           }}
