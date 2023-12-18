@@ -41,6 +41,10 @@ const DownloadEbook = ({ textContent, bookUrl, templateId, setBannerVisible }) =
     } catch (error) {
       notificationService.openErrorToast('Error sending email');
     } finally {
+      setFirstName('');
+      setEmailAddress('');
+      setFirstCheckbox(false);
+      setSecondCheckbox(false);
       setBannerVisible(true);
     }
   };
@@ -64,6 +68,7 @@ const DownloadEbook = ({ textContent, bookUrl, templateId, setBannerVisible }) =
             className="lg:max-w-[240px]"
             placeholder={textContent.firstPlaceholder}
             name={textContent.firstPlaceholder}
+            value={firstName}
           />
           <TextInput
             type="text"
@@ -72,6 +77,7 @@ const DownloadEbook = ({ textContent, bookUrl, templateId, setBannerVisible }) =
             autoComplete="off"
             placeholder={textContent.secondPlaceholder}
             name={textContent.secondPlaceholder}
+            value={emailAddress}
           />
         </div>
         <div className="flex flex-col">

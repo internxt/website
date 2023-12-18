@@ -34,7 +34,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
         textContent={textContent.HeroSection}
         imageUrl={'/images/inxt-library/kids_online_safety_ebook.webp'}
         altImage={'Internxt eBook download'}
-        eBook={url}
+        eBook={`${url}/download-ebook#child-safety-ebook`}
         templateId={process.env.NEXT_PUBLIC_SENDGRID_CHILD_SAFETY}
         setBannerVisible={setIsBannerVisible}
       />

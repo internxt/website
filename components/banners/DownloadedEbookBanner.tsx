@@ -4,11 +4,6 @@ import { useRouter } from 'next/router';
 const DownloadedEbookBanner = ({ textContent, bannerVisible, onClose }) => {
   const router = useRouter();
 
-  const handleCtaAction = () => {
-    router.push('/home');
-    onClose();
-  };
-
   return (
     <section
       className={`${
@@ -33,11 +28,11 @@ const DownloadedEbookBanner = ({ textContent, bannerVisible, onClose }) => {
               <div
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
-                    handleCtaAction();
+                    onClose();
                   }
                 }}
                 className="relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg bg-white py-3 px-5 text-base font-medium text-black transition duration-100 focus:outline-none active:bg-white active:text-black sm:text-lg"
-                onClick={handleCtaAction}
+                onClick={onClose}
               >
                 {textContent.cta}
               </div>
