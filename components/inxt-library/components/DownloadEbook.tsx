@@ -37,11 +37,11 @@ const DownloadEbook = ({ textContent, bookUrl, templateId, setBannerVisible }) =
         templateId,
         eBook: bookUrl,
       });
-
-      setBannerVisible(true);
       notificationService.openSuccessToast('Email sent');
     } catch (error) {
       notificationService.openErrorToast('Error sending email');
+    } finally {
+      setBannerVisible(true);
     }
   };
 
