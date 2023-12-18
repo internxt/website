@@ -8,9 +8,16 @@ import CtaSection from '../components/shared/CtaSection';
 import FeatureSection from '../components/inxt-library/shared/FeatureSection';
 import RelatedResourcesSection from '../components/inxt-library/shared/RelatedResourcesSection';
 import RelatedBannerCard from '../components/inxt-library/components/RelatedbannerCard';
+import { useEffect, useState } from 'react';
 
 const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'online-privacy-ebook');
+  const [url, setUrl] = useState('');
+
+  useEffect(() => {
+    const url = window.location.origin;
+    setUrl(url);
+  }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description}>
@@ -22,7 +29,7 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
         imageUrl={'/images/inxt-library/Internxt_ebook_download.webp'}
         altImage={'Internxt eBook download'}
         templateId={process.env.NEXT_PUBLIC_SENDGRID_ONLINE_SAFETY}
-        eBook={'http://localhost:3001/Guide_to_Online_Privacy.pdf'}
+        eBook={`${url}/download-ebook#online-privacy-ebook`}
       />
 
       <WhatWeDo textContent={textContent.WhatWeDo} />
@@ -45,8 +52,8 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
         <RelatedBannerCard
           textContent={textContent.RelatedResourcesSection.card}
           learnMoreLink={'/child-safety-ebook'}
-          imageUrl={'/images/inxt-library/internxt_ebook_download_banner.webp'}
-          altUrl={'Internxt eBook download banner'}
+          imageUrl={'/images/inxt-library/Internxt_ebook_banner.webp'}
+          altUrl={'Internxt Child Safety eBook banner'}
         />
       </RelatedResourcesSection>
 

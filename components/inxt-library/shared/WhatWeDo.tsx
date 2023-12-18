@@ -13,8 +13,12 @@ const WhatWeDo = ({ textContent }) => {
             <p className="text-2xl font-medium text-gray-100">{textContent.subtitle}</p>
           </div>
           <div className="flex flex-col space-y-3">
-            {textContent.paragraph.map((paragraph) => {
-              return <p className="text-lg text-gray-80">{paragraph}</p>;
+            {textContent.paragraph.map((paragraph, index) => {
+              return (
+                <p id={index} className="text-lg text-gray-80">
+                  {paragraph}
+                </p>
+              );
             })}
           </div>
         </div>

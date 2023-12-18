@@ -33,11 +33,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       ],
       template_id: templateId,
-      mail_settings: {
-        sandbox_mode: {
-          enable: true,
-        },
-      },
+      // mail_settings: {
+      //   sandbox_mode: {
+      //     enable: true,
+      //   },
+      // },
     };
     try {
       await sendgrid.send(msg);

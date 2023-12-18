@@ -20,7 +20,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
         textContent={textContent.HeroSection}
         imageUrl={'/images/inxt-library/kids_online_safety_ebook.webp'}
         altImage={'Internxt eBook download'}
-        eBook={'http://localhost:3001/Keeping_Kids_Safe_Online.pdf'}
+        eBook={'http://localhost:3001/download-ebook#child-safety-ebook'}
         templateId={process.env.NEXT_PUBLIC_SENDGRID_CHILD_SAFETY}
       />
 
@@ -44,7 +44,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
         <RelatedBannerCard
           textContent={textContent.RelatedResourcesSection.card}
           learnMoreLink={'/online-privacy-ebook'}
-          imageUrl={'/images/inxt-library/Internxt_ebook_banner.webp'}
+          imageUrl={'/images/inxt-library/internxt_ebook_download_banner.webp'}
           altUrl={'Internxt eBook download banner'}
         />
       </RelatedResourcesSection>
