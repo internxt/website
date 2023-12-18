@@ -30,9 +30,11 @@ const WhatWeDo = ({ textContent }) => {
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center py-20 px-5">
         <div className="flex flex-col items-center justify-center space-y-9">
-          <div className="flex max-w-[774px] flex-col items-center justify-center space-y-4 text-center">
-            <p className={`max-w-[550px] text-5xl font-semibold text-gray-100`}>{textContent.title}</p>
-            <p className="text-2xl font-medium text-gray-100">{textContent.subtitle}</p>
+          <div className="flex max-w-[774px] flex-col items-center justify-center space-y-9">
+            <div className="flex flex-col space-y-4 text-center">
+              <p className={`max-w-[550px] text-5xl font-semibold text-gray-100`}>{textContent.title}</p>
+              <p className="text-2xl font-medium text-gray-100">{textContent.subtitle}</p>
+            </div>
             <div className="flex flex-col space-y-5">
               {textContent.firstParagraph.map((item) => {
                 return (
