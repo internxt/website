@@ -9,6 +9,12 @@
     "secondCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
     "cta": "Download eBook"
   },
+  "DownloadedBanner": {
+    "thanks": "Thank you!",
+    "title": "Your eBook has been sent to your email",
+    "subtitle": "Thanks for downloading our ebook; it should be in your inbox already. If not, please check your spam folder, too.",
+    "cta": "Home"
+  },
   "WhatWeDo": {
     "title": "Take Control of Your Online Privacy:",
     "subtitle": "A Guide to a More Private Online Experience, For Everyone",

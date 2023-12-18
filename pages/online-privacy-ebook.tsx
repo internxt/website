@@ -9,15 +9,21 @@ import FeatureSection from '../components/inxt-library/shared/FeatureSection';
 import RelatedResourcesSection from '../components/inxt-library/shared/RelatedResourcesSection';
 import RelatedBannerCard from '../components/inxt-library/components/RelatedbannerCard';
 import { useEffect, useState } from 'react';
+import DownloadedEbookBanner from '../components/banners/DownloadedEbookBanner';
 
 const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'online-privacy-ebook');
   const [url, setUrl] = useState('');
+  const [bannerVisible, setIsBannerVisible] = useState(false);
 
   useEffect(() => {
     const url = window.location.origin;
     setUrl(url);
   }, []);
+
+  const onCloseBanner = () => {
+    setIsBannerVisible(false);
+  };
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description}>
@@ -30,6 +36,13 @@ const OnlinePrivacyEbook = ({ lang, metatagsDescriptions, navbar, textContent, f
         altImage={'Internxt eBook download'}
         templateId={process.env.NEXT_PUBLIC_SENDGRID_ONLINE_SAFETY}
         eBook={`${url}/download-ebook#online-privacy-ebook`}
+        setBannerVisible={setIsBannerVisible}
+      />
+
+      <DownloadedEbookBanner
+        bannerVisible={bannerVisible}
+        onClose={onCloseBanner}
+        textContent={textContent.DownloadedBanner}
       />
 
       <WhatWeDo textContent={textContent.WhatWeDo} />

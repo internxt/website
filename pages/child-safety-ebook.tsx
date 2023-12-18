@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -8,9 +10,21 @@ import CtaSection from '../components/shared/CtaSection';
 import FeatureSection from '../components/inxt-library/shared/FeatureSection';
 import RelatedResourcesSection from '../components/inxt-library/shared/RelatedResourcesSection';
 import RelatedBannerCard from '../components/inxt-library/components/RelatedbannerCard';
+import DownloadedEbookBanner from '../components/banners/DownloadedEbookBanner';
 
 const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'child-safety-ebook');
+  const [url, setUrl] = useState('');
+  const [bannerVisible, setIsBannerVisible] = useState(false);
+
+  useEffect(() => {
+    const url = window.location.origin;
+    setUrl(url);
+  }, []);
+
+  const onCloseBanner = () => {
+    setIsBannerVisible(false);
+  };
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description}>
@@ -20,8 +34,15 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
         textContent={textContent.HeroSection}
         imageUrl={'/images/inxt-library/kids_online_safety_ebook.webp'}
         altImage={'Internxt eBook download'}
-        eBook={'http://localhost:3001/download-ebook#child-safety-ebook'}
+        eBook={url}
         templateId={process.env.NEXT_PUBLIC_SENDGRID_CHILD_SAFETY}
+        setBannerVisible={setIsBannerVisible}
+      />
+
+      <DownloadedEbookBanner
+        bannerVisible={bannerVisible}
+        onClose={onCloseBanner}
+        textContent={textContent.DownloadedBanner}
       />
 
       <WhatWeDo textContent={textContent.WhatWeDo} />

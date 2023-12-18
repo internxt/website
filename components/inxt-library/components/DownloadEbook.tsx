@@ -22,7 +22,7 @@ const CheckboxItem = ({ checked, setCheckbox, label }) => {
   );
 };
 
-const DownloadEbook = ({ textContent, bookUrl, templateId }) => {
+const DownloadEbook = ({ textContent, bookUrl, templateId, setBannerVisible }) => {
   const [firstName, setFirstName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [firstCheckbox, setFirstCheckbox] = useState(false);
@@ -37,6 +37,9 @@ const DownloadEbook = ({ textContent, bookUrl, templateId }) => {
         templateId,
         eBook: bookUrl,
       });
+
+      setBannerVisible(true);
+      notificationService.openSuccessToast('Email sent');
     } catch (error) {
       notificationService.openErrorToast('Error sending email');
     }
@@ -79,7 +82,9 @@ const DownloadEbook = ({ textContent, bookUrl, templateId }) => {
           </div>
         </div>
         <button
-          onClick={() => handleDownloadEbook()}
+          onClick={() => {
+            handleDownloadEbook();
+          }}
           className={`w-full rounded-lg lg:w-max ${
             isDownloadButtonDisabled ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
           } py-3 px-14 font-medium text-white`}
