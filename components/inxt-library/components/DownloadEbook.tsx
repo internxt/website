@@ -4,7 +4,6 @@ import { useState } from 'react';
 import CheckboxSettings from '../../password-generator/components/CheckboxSettings';
 import ReactMarkdown from 'react-markdown';
 import Header from '../../shared/Header';
-import axios from 'axios';
 import { notificationService } from '../../Snackbar';
 
 const CheckboxItem = ({ checked, setCheckbox, label }) => {
@@ -22,7 +21,7 @@ const CheckboxItem = ({ checked, setCheckbox, label }) => {
   );
 };
 
-const DownloadEbook = ({ textContent, bookUrl, templateId, setBannerVisible }) => {
+const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
   const [firstName, setFirstName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [firstCheckbox, setFirstCheckbox] = useState(false);
@@ -31,15 +30,15 @@ const DownloadEbook = ({ textContent, bookUrl, templateId, setBannerVisible }) =
 
   const handleDownloadEbook = async () => {
     try {
-      await axios.post('/api/download-ebook', {
-        name: firstName,
-        email: emailAddress,
-        templateId,
-        eBook: bookUrl,
-      });
-      notificationService.openSuccessToast('Email sent');
+      const link = document.createElement('a');
+      link.href = bookUrl;
+      link.download = bookUrl.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      notificationService.openSuccessToast('eBook downloaded');
     } catch (error) {
-      notificationService.openErrorToast('Error sending email');
+      notificationService.openErrorToast('Error downloading eBook');
     } finally {
       setFirstName('');
       setEmailAddress('');
