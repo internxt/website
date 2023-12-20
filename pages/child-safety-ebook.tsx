@@ -56,7 +56,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
 
       <FeatureSection
         textContent={textContent.FeatureSection}
-        urlImage={'/images/inxt-library/kids_online_safety_ebook_banner.webp'}
+        urlImage={'/images/inxt-library/Internxt_ebook_banner.webp'}
         altImage={'Internxt eBook download banner'}
       />
 
