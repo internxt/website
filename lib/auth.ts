@@ -1,6 +1,6 @@
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
-const AUTH_FLOW_URL = 'http://localhost:3000';
+const AUTH_FLOW_URL = 'https://drive.internxt.com';
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
