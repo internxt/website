@@ -22,7 +22,6 @@ const DownloadedEbookBanner = ({ textContent, bannerVisible, onClose }) => {
             <div className="flex w-full max-w-[610px] flex-col items-center space-y-4">
               <p className="text-3xl font-semibold text-white">{textContent.thanks}</p>
               <p className="text-5xl font-bold text-white">{textContent.title}</p>
-              <p className="text-lg text-white">{textContent.subtitle}</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-6">
               <div
