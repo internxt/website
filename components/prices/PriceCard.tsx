@@ -25,6 +25,11 @@ export interface PriceCardProps {
   currency?: CouponType;
 }
 
+const currencyValue = {
+  '€': 'eur',
+  $: 'usd',
+};
+
 export default function PriceCard({
   planType,
   storage,
@@ -148,7 +153,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currency.toLowerCase(),
+                currency: currencyValue[country],
                 couponCode: billingFrequency === 'lifetime' ? coupon : null,
               });
             }

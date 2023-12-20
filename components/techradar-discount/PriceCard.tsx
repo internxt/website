@@ -1,6 +1,11 @@
 import React from 'react';
 import { Check } from '@phosphor-icons/react';
-import { checkout, goToSignUpURL } from '../../lib/auth';
+import { checkout } from '../../lib/auth';
+
+const currencyValue = {
+  '€': 'eur',
+  $: 'usd',
+};
 
 const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
   const features = [
@@ -66,7 +71,7 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       <button
         type="button"
         onClick={() => {
-          checkout({ planId: cta[1] });
+          checkout({ planId: cta[1], currency: currencyValue[country] });
         }}
         className="button-primary"
       >

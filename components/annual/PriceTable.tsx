@@ -58,7 +58,7 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price * currency.value}
+                    price={product.price}
                     billingFrequency={'year'}
                     popular={product.storage === '200GB'}
                     cta={['checkout', product.priceId]}

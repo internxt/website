@@ -14,17 +14,17 @@
     "billedAnnually": "Billed annually",
     "popular": "Most popular",
     "month": "/month",
-    "card1": {
+    "20GB": {
       "plan": "20GB",
       "price": "0.89",
       "annualPrice": "10.68"
     },
-    "card2": {
+    "200GB": {
       "plan": "200GB",
       "price": "3.49",
       "annualPrice": "41.88"
     },
-    "card3": {
+    "2TB": {
       "plan": "2TB",
       "price": "8.99",
       "annualPrice": "107.88"

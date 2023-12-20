@@ -1,8 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
-import Countdown from '../components/Countdown';
-import { checkout } from '../../lib/auth';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {

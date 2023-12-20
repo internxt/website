@@ -83,9 +83,16 @@ async function getAllPrices() {
     notificationService.openErrorToast('Something went wrong while fetching the products.');
   }
 }
+
 async function getLifetimePrices() {
   const prices = await getAllPrices();
   const lifetimePlans = prices.individuals[Interval.Lifetime];
+  return lifetimePlans;
+}
+
+async function getFrequencyPrices(frequency: string) {
+  const prices = await getAllPrices();
+  const lifetimePlans = prices.individuals[frequency];
   return lifetimePlans;
 }
 
@@ -114,6 +121,7 @@ async function getCoupon(coupon: string) {
 export const stripeService = {
   getAllPrices,
   getLifetimePrices,
+  getFrequencyPrices,
   getSelectedPrice,
   getCoupon,
 };
