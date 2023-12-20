@@ -19,9 +19,9 @@ function Checkbox({
     <label className={`relative h-5 w-5 focus-within:outline-primary ${className}`} onClick={onClick}>
       <div
         onClick={(e) => e.preventDefault()}
-        className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full border p-1 text-white ${
-          checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'
-        }`}
+        className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center ${
+          rounded ?? 'rounded-full'
+        } border p-1 text-white ${checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'}`}
       >
         {checked && (
           <div

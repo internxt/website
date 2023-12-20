@@ -38,6 +38,9 @@ let nameFiles = [
   'internxt-for-tech-companies',
   'internxt-for-lawyers',
   'internxt-for-journalists',
+  'internxt-library',
+  'online-privacy-ebook',
+  'child-safety-ebook',
 ];
 
 const langs = {
