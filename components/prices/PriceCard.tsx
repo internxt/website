@@ -9,6 +9,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { checkout, goToSignUpURL } from '../../lib/auth';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { stripeService } from '../services/stripeService';
 
 export interface PriceCardProps {
   planType: string;
@@ -41,16 +42,18 @@ export default function PriceCard({
     month: 'monthly',
     year: 'annually',
   };
+  const [coupon, setCoupon] = useState<string>(null);
 
-  const convertedPrice = useMemo(() => {
-    if (country !== '€') {
-      const splitPrice = price.toString().split('.');
-      const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
-      return parseInt(splitPrice[0]) + checkDecimalPrice;
-    }
-
-    return price;
-  }, [country, price]);
+  useEffect(() => {
+    stripeService
+      .getCoupon(CouponType.ChristmasCoupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
@@ -101,7 +104,7 @@ export default function PriceCard({
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
               <span className="price text-4xl font-bold">
-                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? convertedPrice : convertedPrice}
+                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
             </p>
 
@@ -145,7 +148,8 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: country,
+                currency: currency.toLowerCase(),
+                couponCode: billingFrequency === 'lifetime' ? coupon : null,
               });
             }
           }}

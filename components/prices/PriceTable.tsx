@@ -156,13 +156,13 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={Number(Math.abs((product.price * currency.value * 50) / 100).toFixed(2))}
+                        price={Number(Math.abs((product.price * 50) / 100).toFixed(2))}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
-                        priceBefore={Number(Math.abs(product.price * currency.value).toFixed(2))}
+                        priceBefore={Number(Math.abs(product.price).toFixed(2))}
                         currency={currencyValue}
                       />
                     ) : (
@@ -170,7 +170,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price * currency.value}
+                        price={product.price}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '200GB'}
                         cta={['checkout', product.priceId]}
