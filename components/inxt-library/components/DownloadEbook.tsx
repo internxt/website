@@ -5,6 +5,7 @@ import CheckboxSettings from '../../password-generator/components/CheckboxSettin
 import ReactMarkdown from 'react-markdown';
 import Header from '../../shared/Header';
 import { notificationService } from '../../Snackbar';
+import axios from 'axios';
 
 const CheckboxItem = ({ checked, setCheckbox, label }) => {
   return (
@@ -28,6 +29,18 @@ const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
   const [secondCheckbox, setSecondCheckbox] = useState(false);
   const isDownloadButtonDisabled = !secondCheckbox || firstName === '' || emailAddress === '';
 
+  const subscribeToMailerlite = async (email) => {
+    await axios
+      .post(`api/subscribe`, {
+        email,
+        firstName,
+        groups: [process.env.NEXT_PUBLIC_EBOOK_GROUP_ID],
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const handleDownloadEbook = async () => {
     try {
       const link = document.createElement('a');
@@ -36,6 +49,9 @@ const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      if (firstCheckbox) {
+        await subscribeToMailerlite(emailAddress);
+      }
       notificationService.openSuccessToast('eBook downloaded');
     } catch (error) {
       notificationService.openErrorToast('Error downloading eBook');

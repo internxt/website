@@ -221,9 +221,6 @@ export default function Footer({
                         <Link href="/use-cases" locale={lang} passHref>
                           <a className="flex max-w-[200px] flex-row items-center hover:text-primary">
                             {textContent.FooterSection.sections.company.useCases}
-                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                              {textContent.FooterSection.new}
-                            </div>
                           </a>
                         </Link>
                       </>
@@ -323,8 +320,11 @@ export default function Footer({
                     </Link>
                     {lang === 'en' && (
                       <Link href="/internxt-library" locale={lang} passHref>
-                        <a className="flex items-center hover:text-primary">
+                        <a className="flex flex-row items-center hover:text-primary">
                           {textContent.FooterSection.sections.resources.inxtLibrary}
+                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                            {textContent.FooterSection.new}
+                          </div>
                         </a>
                       </Link>
                     )}

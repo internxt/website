@@ -12,6 +12,7 @@ const BusinessBanner = ({ textContent }) => {
     await axios
       .post(`api/subscribe`, {
         email,
+        groups: [process.env.NEXT_PUBLIC_BUSINESS_GROUP_ID],
       })
       .then(() => {
         notificationService.openSuccessToast('Successfully submitted');
