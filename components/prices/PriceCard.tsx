@@ -8,7 +8,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import { checkout, goToSignUpURL } from '../../lib/auth';
-import { stripeService } from '../services/stripeService';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 export interface PriceCardProps {
@@ -22,6 +21,7 @@ export interface PriceCardProps {
   lang: string;
   priceId?: string;
   country?: string;
+  currency?: CouponType;
 }
 
 export default function PriceCard({
@@ -34,6 +34,7 @@ export default function PriceCard({
   popular,
   country,
   lang,
+  currency,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -144,6 +145,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+                currency: country,
               });
             }
           }}

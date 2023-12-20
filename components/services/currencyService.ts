@@ -5,12 +5,12 @@ export const currency = {
   GB: '£',
 };
 
-const value = {
+export const priceValue = {
   US: 'usd',
   GB: 'gbp',
 };
 
-const getCurrency = async () => {
+const getCountry = async () => {
   const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
   return countryCode;
 };
@@ -22,18 +22,25 @@ const getCurrencyValue = async () => {
 };
 
 const filterCurrencyByCountry = async () => {
-  const { data } = await getCurrency();
+  const { data } = await getCountry();
   const currencyValue = await getCurrencyValue();
 
   const currencyIcon = {
     symbol: currency[data.country] || '€',
-    value: currencyValue.data[value[data.country]] || 1,
+    value: currencyValue.data[priceValue[data.country]] || 1,
   };
 
   return currencyIcon;
 };
 
+const getCurrencyPrice = async () => {
+  const { data } = await getCountry();
+
+  return priceValue[data.country];
+};
+
 export const currencyService = {
-  getCurrency,
+  getCountry,
   filterCurrencyByCountry,
+  getCurrencyPrice,
 };

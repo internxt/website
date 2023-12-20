@@ -16,6 +16,11 @@ interface PriceTableProps {
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
+const CurrencyValue = {
+  '€': 'EUR',
+  $: 'USD',
+};
+
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
@@ -27,6 +32,8 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     symbol: '€',
     value: 1,
   });
+
+  const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
   useEffect(() => {
     stripeService.getAllPrices().then((res) => {
@@ -156,6 +163,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         lang={lang}
                         country={currency.symbol}
                         priceBefore={Number(Math.abs(product.price * currency.value).toFixed(2))}
+                        currency={currencyValue}
                       />
                     ) : (
                       <PriceCard
@@ -168,6 +176,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
+                        currency={currencyValue}
                       />
                     )}
                   </>

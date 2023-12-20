@@ -1,6 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { notificationService } from '../Snackbar';
+import { currencyService } from './currencyService';
 
 export enum Interval {
   Month = 'month',
@@ -19,7 +20,8 @@ export enum Products {
 
 async function getAllPrices() {
   try {
-    const res = await axios.get(`${window.origin}/api/stripe/stripe_products`);
+    const currency = await currencyService.getCurrencyPrice();
+    const res = await axios.get(`${window.origin}/api/stripe/stripe_products?currency=${currency ?? 'eur'}`);
     const { data } = res;
 
     if (data) {
