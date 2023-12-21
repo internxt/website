@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const user = await createUser(email, groups, firstName);
 
-    res.status(200).json({ status: 'OK', data: user });
+    res.status(200).json({ status: 'OK', email: email });
   } catch (error) {
     // console.error('Error al procesar la solicitud:', error);
     res.status(500).json({ status: 'Error', message: error });

@@ -41,17 +41,21 @@ const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
       });
   };
 
+  const downloadPdf = async (eBook) => {
+    const link = document.createElement('a');
+    link.href = eBook;
+    link.download = eBook.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleDownloadEbook = async () => {
     try {
-      const link = document.createElement('a');
-      link.href = bookUrl;
-      link.download = bookUrl.split('/').pop();
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      if (firstCheckbox) {
-        await subscribeToMailerlite(emailAddress);
-      }
+      await downloadPdf(bookUrl);
+
+      await subscribeToMailerlite(emailAddress);
+
       notificationService.openSuccessToast('eBook downloaded');
     } catch (error) {
       notificationService.openErrorToast('Error downloading eBook');
