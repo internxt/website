@@ -109,7 +109,7 @@ const PriceCard = ({
           onClick={() => {
             checkout({
               planId: cta[1],
-              couponCode: 'ZUHIxBE5',
+              couponCode: coupon,
               mode: 'payment',
               currency: currencyValue[currency],
             });
