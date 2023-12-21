@@ -90,12 +90,6 @@ async function getLifetimePrices() {
   return lifetimePlans;
 }
 
-async function getFrequencyPrices(frequency: string) {
-  const prices = await getAllPrices();
-  const lifetimePlans = prices.individuals[frequency];
-  return lifetimePlans;
-}
-
 async function getSelectedPrice(interval: string, plan: string) {
   //Filter prices by plan
   const prices = await getAllPrices();
@@ -121,7 +115,6 @@ async function getCoupon(coupon: string) {
 export const stripeService = {
   getAllPrices,
   getLifetimePrices,
-  getFrequencyPrices,
   getSelectedPrice,
   getCoupon,
 };
