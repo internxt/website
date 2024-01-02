@@ -14,7 +14,7 @@
   },
   "FooterSection": {
     "description": "Internxt 的使命是帮助塑造一个尊重人类隐私权的世界。 为此，我们发布了一系列服务，所有这些服务的共同目标都是帮助人类保护这项基本权利。",
-    "copyright": "Copyright © 2023, Internxt Universal Technologies SL",
+    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
     "comingSoon": "即将推出",
     "new": "新的",
     "sections": {
