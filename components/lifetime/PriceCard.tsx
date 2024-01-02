@@ -20,6 +20,11 @@ interface PriceCardProps {
   isCampaign?: boolean;
 }
 
+const currencyValue = {
+  '€': 'EUR',
+  $: 'USD',
+};
+
 const PriceCard = ({
   planType,
   storage,
@@ -32,7 +37,6 @@ const PriceCard = ({
   lang,
 }: PriceCardProps) => {
   const [coupon, setCoupon] = useState(null);
-  const [convertedPrice, setConvertedPrice] = useState<number>(price);
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
@@ -46,14 +50,6 @@ const PriceCard = ({
         console.error(err);
       });
   }, []);
-
-  useEffect(() => {
-    if (currency !== '€') {
-      const splitPrice = price.toString().split('.');
-      const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
-      setConvertedPrice(parseInt(splitPrice[0]) + checkDecimalPrice);
-    }
-  }, [price]);
 
   return (
     <div
@@ -100,7 +96,7 @@ const PriceCard = ({
           >
             <p className="flex flex-row items-start space-x-0.5 font-semibold text-gray-50 line-through">
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
-              <span className="price text-2xl font-semibold">{convertedPrice}</span>
+              <span className="price text-2xl font-semibold">{price}</span>
             </p>
             <p className="pt-2 text-sm font-medium text-gray-50">{contentText.billingFrequencyLabel.lifetime}</p>
           </div>
@@ -115,6 +111,7 @@ const PriceCard = ({
               planId: cta[1],
               couponCode: coupon,
               mode: 'payment',
+              currency: currencyValue[currency],
             });
           }}
           className="flex w-full flex-row"

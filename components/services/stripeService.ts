@@ -1,6 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { notificationService } from '../Snackbar';
+import { currencyService } from './currencyService';
 
 export enum Interval {
   Month = 'month',
@@ -17,9 +18,12 @@ export enum Products {
   '10TB' = '10TB',
 }
 
-async function getAllPrices() {
+async function getAllPrices(isLifetime?: boolean) {
   try {
-    const res = await axios.get(`${window.origin}/api/stripe/stripe_products`);
+    const currency = await currencyService.getCurrencyPrice();
+    const res = await axios.get(
+      `${window.origin}/api/stripe/stripe_products?currency=${isLifetime ? 'eur' : currency ?? 'eur'}`,
+    );
     const { data } = res;
 
     if (data) {
@@ -81,8 +85,9 @@ async function getAllPrices() {
     notificationService.openErrorToast('Something went wrong while fetching the products.');
   }
 }
-async function getLifetimePrices() {
-  const prices = await getAllPrices();
+
+async function getLifetimePrices(isLifetime?: boolean) {
+  const prices = await getAllPrices(isLifetime);
   const lifetimePlans = prices.individuals[Interval.Lifetime];
   return lifetimePlans;
 }

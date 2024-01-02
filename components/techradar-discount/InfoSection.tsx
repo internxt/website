@@ -22,7 +22,7 @@ const InfoSection = ({ textContent }) => {
               <h5 className="text-lg text-cool-gray-80 sm:text-base">{textContent.card2.description}</h5>
             </div>
           </div>
-          <div className="flex flex-row flex-wrap justify-center px-8 md:space-x-8">
+          <div className="flex flex-row flex-wrap justify-center space-y-8 px-8 sm:space-y-0 md:space-x-8">
             <div className="flex flex-col items-start justify-start rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
               <Scales className="mb-6 text-4xl text-primary" />
               <h4 className="mb-6 text-2xl font-medium">{textContent.card3.title}</h4>

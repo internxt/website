@@ -8,6 +8,7 @@ import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
+import FreePlanCard from './FreePlanCard';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -15,6 +16,11 @@ interface PriceTableProps {
   textContent: any;
   setIsLifetime?: (isLifetime: boolean) => void;
 }
+
+const CurrencyValue = {
+  '€': 'EUR',
+  $: 'USD',
+};
 
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
@@ -28,11 +34,25 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     value: 1,
   });
 
+  const currencyValue = CurrencyValue[currency.symbol] || 'eur';
+
   useEffect(() => {
     stripeService.getAllPrices().then((res) => {
+      console.log('products', res);
       setProducts(res);
       setLoadingCards(false);
     });
+    stripeService.getLifetimePrices(true).then((res) => {
+      console.log('lifetime prices', res);
+      setProducts((prev) => ({
+        ...prev,
+        individuals: {
+          ...prev.individuals,
+          lifetime: res,
+        },
+      }));
+    });
+
     currencyService.filterCurrencyByCountry().then((res) => {
       setCurrency({
         symbol: res.symbol,
@@ -125,21 +145,10 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
         <Transition
           show={individual && !loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
+          className={'flex flex-col pb-20 md:pb-0'}
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            {products?.individuals[billingFrequency] && billingFrequency !== Interval.Lifetime && (
-              <PriceCard
-                planType="individual"
-                key={'10GB'}
-                storage={'10GB'}
-                price={0}
-                billingFrequency={billingFrequency}
-                cta={['checkout', 'Free plan']}
-                lang={lang}
-                country={currency.symbol}
-              />
-            )}
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4 py-14">
             {products?.individuals[billingFrequency] &&
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
@@ -149,30 +158,35 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={Number(Math.abs((product.price * currency.value * 50) / 100).toFixed(2))}
+                        price={Number(Math.abs((product.price * 50) / 100).toFixed(2))}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
-                        priceBefore={Number(Math.abs(product.price * currency.value).toFixed(2))}
+                        priceBefore={Number(Math.abs(product.price).toFixed(2))}
+                        currency={currencyValue}
                       />
                     ) : (
                       <PriceCard
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price * currency.value}
+                        price={product.price}
                         billingFrequency={billingFrequency}
-                        popular={product.storage === '200GB'}
+                        popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
+                        currency={currencyValue}
                       />
                     )}
                   </>
                 );
               })}
+          </div>
+          <div className="flex px-5">
+            <FreePlanCard textContent={contentText.freePlanCard} />
           </div>
         </Transition>
 
@@ -186,7 +200,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>

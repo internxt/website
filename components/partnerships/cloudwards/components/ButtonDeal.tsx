@@ -3,11 +3,12 @@ import React, { useEffect } from 'react';
 import { checkout } from '../../../../lib/auth';
 import { CouponType } from '../../../../pages/api/stripe/get_coupons';
 import { Interval, stripeService } from '../../../services/stripeService';
+import { currencyService } from '../../../services/currencyService';
 
-//!TODO: Get the priceID for 2TB plan (monthly) and add it to the checkout function
 const ButtonDeal = ({ textContent, large }) => {
   const [priceId, setPriceId] = React.useState('');
   const [coupon, setCoupon] = React.useState(null);
+  const [currency, setCurrency] = React.useState();
 
   useEffect(() => {
     stripeService.getSelectedPrice(Interval.Month, '2TB').then((price) => {
@@ -22,6 +23,10 @@ const ButtonDeal = ({ textContent, large }) => {
       .catch((err) => {
         console.log(err);
       });
+
+    currencyService.getCurrencyPrice().then((currency) => {
+      setCurrency(currency);
+    });
   }, []);
   return (
     <div
@@ -29,6 +34,7 @@ const ButtonDeal = ({ textContent, large }) => {
         checkout({
           planId: priceId,
           couponCode: coupon,
+          currency: currency,
         });
       }}
       className={`${large ? 'w-full' : 'w-48'}  cursor-pointer rounded-lg bg-primary px-9 py-3 text-center`}

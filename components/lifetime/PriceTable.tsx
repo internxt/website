@@ -5,7 +5,6 @@ import { Transition } from '@headlessui/react';
 import CardSkeleton from '../components/CardSkeleton';
 
 const PriceTable = ({ lang, country }) => {
-  const billingFrequency = -1;
   const [products, setProducts] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
 
@@ -57,12 +56,12 @@ const PriceTable = ({ lang, country }) => {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price * country.value}
+                    price={product.price}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     popular={product.storage === '5TB'}
                     actualPrice={
-                      Math.abs((product.price * country.value * 50) / 100)
+                      Math.abs((product.price * 50) / 100)
                         .toFixed(2)
                         .split('.')[0]
                     }

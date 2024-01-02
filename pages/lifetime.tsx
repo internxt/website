@@ -26,7 +26,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
         value: res.value,
       });
     });
-  });
+  }, []);
 
   return (
     <Layout

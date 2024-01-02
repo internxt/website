@@ -6,8 +6,6 @@
 import React, { useEffect, useState } from 'react';
 
 const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
-  const [stripeObject, setStripeObject] = useState({});
-
   const currency = () => {
     switch (country) {
       case 'US':
@@ -20,13 +18,6 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
   };
 
   const contentText = require(`../../assets/lang/en/priceCard.json`);
-
-  useEffect(() => {
-    if (cta[0] === 'checkout') {
-      const stripeObj = { product: cta[1] };
-      setStripeObject(stripeObj);
-    }
-  }, [cta]);
 
   return (
     <div

@@ -1,4 +1,3 @@
-import { Transition } from '@headlessui/react';
 import React, { useEffect, useState } from 'react';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
@@ -14,7 +13,7 @@ const PaymentsSection = ({ textContent }) => {
     Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()]).then((res) => {
       if (res) {
         setProducts(res[0]);
-        setCurrency(res[1]);
+        setCurrency(res[1].symbol);
         setLoadingCards(false);
       }
     });

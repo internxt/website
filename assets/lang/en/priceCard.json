@@ -5,8 +5,8 @@
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
   "planTitles": {
-    "individuals": "Plans for Individuals",
-    "business": "Plans for Business",
+    "individuals": "Individual Plans",
+    "business": "Business Plans",
     "lifetimeCampaign": {
       "blueText": "Get 50% OFF",
       "normalText": "all our exclusive lifetime plans"
@@ -16,8 +16,8 @@
   "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
   "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
   "changePlan": {
-    "toIndividuals": "Change to Plans for Individuals",
-    "toBusiness": "Change to Plans for Business"
+    "toIndividuals": "Switch to Plans for Individuals",
+    "toBusiness": "Switch to Plans for Business"
   },
   "billingFrequency": {
     "monthly": "Monthly",
@@ -55,6 +55,13 @@
     "discount": "BEST VALUE!",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Get 30 days for free"
+  },
+  "freePlanCard": {
+    "getStarted": "Get started with our free plan",
+    "enjoy10gb": "Enjoy up to 10GB forever and get access to all our services",
+    "upTo": "Up to 10GB",
+    "freeForever": "Free forever",
+    "cta": "Sign up now"
   },
   "features": {
     "enjoyForever": {
