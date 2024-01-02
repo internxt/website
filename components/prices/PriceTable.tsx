@@ -38,9 +38,21 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
 
   useEffect(() => {
     stripeService.getAllPrices().then((res) => {
+      console.log('products', res);
       setProducts(res);
       setLoadingCards(false);
     });
+    stripeService.getLifetimePrices(true).then((res) => {
+      console.log('lifetime prices', res);
+      setProducts((prev) => ({
+        ...prev,
+        individuals: {
+          ...prev.individuals,
+          lifetime: res,
+        },
+      }));
+    });
+
     currencyService.filterCurrencyByCountry().then((res) => {
       setCurrency({
         symbol: res.symbol,
