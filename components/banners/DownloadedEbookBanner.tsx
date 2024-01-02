@@ -26,7 +26,7 @@ const DownloadedEbookBanner = ({ textContent, bannerVisible, onClose }) => {
             <div className="flex flex-col items-center justify-center space-y-6">
               <div
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
+                  if (e.key === 'esc') {
                     onClose();
                   }
                 }}
