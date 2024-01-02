@@ -14,7 +14,7 @@
   },
   "FooterSection": {
     "description": "La missione di Internxt è contribuire a creare un mondo che rispetti i diritti alla privacy dell'umanità. A tal fine, stiamo rilasciando una serie di servizi che hanno tutti l'obiettivo comune di aiutare l'umanità a proteggere questo diritto fondamentale.",
-    "copyright": "Copyright © 2023, Internxt Universal Technologies SL",
+    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
     "comingSoon": "Coming soon",
     "new": "New",
     "sections": {

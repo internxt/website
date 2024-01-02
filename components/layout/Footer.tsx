@@ -7,6 +7,7 @@ import LanguageMobileBox from './components/LanguageMobileBox';
 import Image from 'next/image';
 import axios from 'axios';
 import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import moment from 'moment';
 
 export default function Footer({
   textContent,
@@ -20,6 +21,7 @@ export default function Footer({
   darkMode?: boolean;
 }) {
   const [platforms, setPlatforms] = useState<any>();
+  const year = moment().format('YYYY');
 
   useEffect(() => {
     setUTM();
@@ -388,7 +390,7 @@ export default function Footer({
                   </a>
                 </Link>
                 <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                  {textContent.FooterSection.copyright}
+                  {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
               <div className="flex flex-row space-x-1">
@@ -788,7 +790,7 @@ export default function Footer({
               </div>
 
               <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
-                {textContent.FooterSection.copyright}
+                {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
               </p>
 
               <Link href="/" locale={lang}>
