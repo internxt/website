@@ -8,6 +8,7 @@ import { Interval, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
+import FreePlanCard from './FreePlanCard';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -132,21 +133,10 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
         <Transition
           show={individual && !loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
+          className={'flex flex-col pb-20 md:pb-0'}
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            {products?.individuals[billingFrequency] && billingFrequency !== Interval.Lifetime && (
-              <PriceCard
-                planType="individual"
-                key={'10GB'}
-                storage={'10GB'}
-                price={0}
-                billingFrequency={billingFrequency}
-                cta={['checkout', 'Free plan']}
-                lang={lang}
-                country={currency.symbol}
-              />
-            )}
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4 py-14">
             {products?.individuals[billingFrequency] &&
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
@@ -172,7 +162,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         storage={product.storage}
                         price={product.price}
                         billingFrequency={billingFrequency}
-                        popular={product.storage === '200GB'}
+                        popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
@@ -182,6 +172,9 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                   </>
                 );
               })}
+          </div>
+          <div className="flex px-5">
+            <FreePlanCard textContent={contentText.freePlanCard} />
           </div>
         </Transition>
 
@@ -195,7 +188,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-4">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <Coin size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>
