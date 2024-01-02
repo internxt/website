@@ -4,8 +4,8 @@
   "valentines": "Offerta speciale di San Valentino!",
   "onlyForNewClients": "Solo per i nuovi abbonati o per gli utenti del piano gratuito",
   "planTitles": {
-    "individuals": "Piani per Individui",
-    "business": "Piani per l'impresa",
+    "individuals": "Piani individuali",
+    "business": "Piani aziendali",
     "lifetimeCampaign": {
       "blueText": "Sconto del 50%",
       "normalText": "su tutti i nostri piani esclusivi a vita"
@@ -14,8 +14,8 @@
   "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
   "planDescription": "Tutti i piani Internxt sono dotati di tutte le funzionalità e di un accesso completo a tutti i nostri servizi per la privacy. Sicurezza per tutte le forme e dimensioni.",
   "changePlan": {
-    "toIndividuals": "Modifica dei piani per gli individui",
-    "toBusiness": "Modifica dei piani aziendali"
+    "toIndividuals": "Passa ai piani per individui",
+    "toBusiness": "Passa ai piani per le aziende"
   },
   "billingFrequency": {
     "monthly": "Mensile",
@@ -53,6 +53,13 @@
     "discount": "MIGLIOR VALORE!",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Ottieni 30 giorni gratis"
+  },
+  "freePlanCard": {
+    "getStarted": "Inizia con il nostro piano gratuito",
+    "enjoy10gb": "Goditi fino a 10 GB per sempre e accedi a tutti i nostri servizi",
+    "upTo": "Fino a 10 GB",
+    "freeForever": "Gratuito per sempre",
+    "cta": "Iscriviti ora"
   },
   "features": {
     "enjoyForever": {

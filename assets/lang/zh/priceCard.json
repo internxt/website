@@ -4,8 +4,8 @@
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "planTitles": {
-    "individuals": "针对个人的计划",
-    "business": "业务计划",
+    "individuals": "个人计划",
+    "business": "商业计划",
     "lifetimeCampaign": {
       "blueText": "五折优惠",
       "normalText": "我们的所有独家终身计划"
@@ -14,8 +14,8 @@
   "lifetimeDescription": "购买一次，永远获得隐私和安全。",
   "planDescription": "所有Internxt计划都有完整的功能，可以完全访问我们所有的隐私服务。所有形状和大小的安全。",
   "changePlan": {
-    "toIndividuals": "改变为个人的计划",
-    "toBusiness": "变更为企业的计划"
+    "toIndividuals": "切换到个人计划",
+    "toBusiness": "切换到商业计划"
   },
   "billingFrequency": {
     "monthly": "月度",
@@ -53,6 +53,13 @@
     "discount": "最佳价值!",
     "claimTheDeal": "声称交易",
     "freemonth": "免费获得30天"
+  },
+  "freePlanCard": {
+    "getStarted": "开始使用我们的免费计划",
+    "enjoy10gb": "永远享受最多10GB的容量，并获得所有我们的服务",
+    "upTo": "最高10GB",
+    "freeForever": "永久免费",
+    "cta": "立即注册"
   },
   "features": {
     "enjoyForever": {
