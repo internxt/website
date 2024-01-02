@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import Header from '../../shared/Header';
 import { notificationService } from '../../Snackbar';
 import axios from 'axios';
+import { event } from '../../../lib/gtag';
 
 const CheckboxItem = ({ checked, setCheckbox, label }) => {
   return (
@@ -55,6 +56,8 @@ const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
       await downloadPdf(bookUrl);
 
       await subscribeToMailerlite(emailAddress);
+
+      window.gtag('event', `${bookUrl.split('/').pop().split('.')[0]}_downloaded`);
 
       notificationService.openSuccessToast('eBook downloaded');
     } catch (error) {
