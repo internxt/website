@@ -111,7 +111,8 @@ const PriceCard = ({
               planId: cta[1],
               couponCode: coupon,
               mode: 'payment',
-              currency: currencyValue[currency],
+              // Change it once the offer is over
+              currency: 'eur',
             });
           }}
           className="flex w-full flex-row"
