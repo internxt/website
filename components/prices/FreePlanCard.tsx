@@ -24,7 +24,7 @@ const FreePlanCard = ({ textContent }) => {
       </div>
       <div className="flex">
         <button
-          className="flex w-full flex-col rounded-lg bg-primary px-20 py-3.5 font-medium text-white"
+          className="flex w-full flex-col rounded-lg bg-primary px-20 py-2.5 font-medium text-white"
           onClick={() => {
             goToSignUpURL();
           }}
