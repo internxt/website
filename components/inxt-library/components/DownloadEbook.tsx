@@ -1,27 +1,10 @@
 import { FileArrowDown } from '@phosphor-icons/react';
 import TextInput from '../../components/TextInput';
 import { useState } from 'react';
-import CheckboxSettings from '../../password-generator/components/CheckboxSettings';
-import ReactMarkdown from 'react-markdown';
 import Header from '../../shared/Header';
 import { notificationService } from '../../Snackbar';
 import axios from 'axios';
-import { event } from '../../../lib/gtag';
-
-const CheckboxItem = ({ checked, setCheckbox, label }) => {
-  return (
-    <div className="flex flex-row space-x-3 lg:items-center">
-      <CheckboxSettings
-        id={label}
-        checked={checked}
-        onClick={() => {
-          setCheckbox(!checked);
-        }}
-      />
-      <ReactMarkdown className="markdown text-sm font-medium text-gray-60">{label}</ReactMarkdown>
-    </div>
-  );
-};
+import CheckboxItem from '../../shared/CheckboxItem';
 
 const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
   const [firstName, setFirstName] = useState('');

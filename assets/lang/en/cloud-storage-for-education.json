@@ -55,7 +55,7 @@
   },
   "ClaimYourDiscountSection": {
     "title": "How to Claim Your Discount",
-    "subtitle": "Get 50% off our monthly, annual, or lifetime plans with a valid education email address.",
+    "subtitle": "Get 50% off our monthly or annual plans with a valid education email address.",
     "paragraph": [
       "If you’re a student, teacher, graduate, or work in the education sector with a valid email address from an accredited institution, please fill out the form below to claim your discount.",
       "Once we confirm your status, we will contact you to confirm how to claim your discount."
@@ -64,10 +64,14 @@
       "title": "Contact us to claim your 50% education discount",
       "fillForm": "Please fill in the form below:",
       "institutionName": "Institution name*",
+      "nameLabel": "Name",
       "institutionEmail": "Your institution email address*",
-      "whichPlan": "Which plan you would like your discount applied to?*"
+      "emailLabel": "Email address",
+      "whichPlan": "Which plan you would like your discount applied to?*",
+      "select": "Select"
     },
-    "privacyCheckbox": "I have read and understood the (privacy policy)[https://internxt.com/legal]."
+    "privacyCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
+    "cta": "Claim discount"
   },
   "WhyChooseInternxtSection": {
     "title": "Why choose Internxt?",
