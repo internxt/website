@@ -3,12 +3,15 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import FAQSection from '../components/shared/FaqSection';
 import CtaSection from '../components/cloud-storage-for-education/CtaSection';
+import HeroSection from '../components/cloud-storage-for-education/HeroSection';
 
 const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-storage-for-education');
   return (
     <Layout title={metatags[0].title} description={metatags[0].description}>
       <Navbar fixed lang={lang} textContent={navbar} cta={['default']} />
+
+      <HeroSection textContent={textContent.HeroSection} />
 
       <CtaSection textContent={textContent.CtaSection} />
 
