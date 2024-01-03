@@ -9,6 +9,7 @@ import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import FreePlanCard from './FreePlanCard';
+import { notificationService } from '../Snackbar';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -37,21 +38,31 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
   useEffect(() => {
-    stripeService.getAllPrices().then((res) => {
-      console.log('products', res);
-      setProducts(res);
-      setLoadingCards(false);
-    });
-    stripeService.getLifetimePrices(true).then((res) => {
-      console.log('lifetime prices', res);
-      setProducts((prev) => ({
-        ...prev,
-        individuals: {
-          ...prev.individuals,
-          lifetime: res,
-        },
-      }));
-    });
+    stripeService
+      .getAllPrices()
+      .then((prices) => {
+        stripeService
+          .getLifetimePrices(true)
+          .then((res) => {
+            setProducts({
+              ...prices,
+              individuals: {
+                ...prices.individuals,
+                lifetime: res,
+              },
+            });
+            setLoadingCards(false);
+          })
+          .catch(() => {
+            console.error('Error getting lifetime prices');
+          });
+      })
+      .catch(() => {
+        stripeService.getAllPrices(true).then((res) => {
+          setProducts(res);
+        });
+        console.error('Error getting prices');
+      });
 
     currencyService.filterCurrencyByCountry().then((res) => {
       setCurrency({
