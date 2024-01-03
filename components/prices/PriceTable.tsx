@@ -45,7 +45,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           .getLifetimePrices(true)
           .then((res) => {
             setProducts({
-              ...prices,
               individuals: {
                 ...prices.individuals,
                 lifetime: res,

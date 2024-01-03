@@ -13,7 +13,7 @@ const FreePlanCard = ({ textContent }) => {
             draggable="false"
             alt="check icon"
           />
-          <p className="text-base text-gray-80">{textContent.enjoy10gb}</p>
+          <p className="text-sm text-gray-80">{textContent.enjoy10gb}</p>
         </div>
       </div>
       <div className="flex flex-col items-center space-y-2">
