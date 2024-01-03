@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -14,13 +14,7 @@ import DownloadedEbookBanner from '../components/banners/DownloadedEbookBanner';
 
 const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'child-safety-ebook');
-  const [url, setUrl] = useState('');
   const [bannerVisible, setIsBannerVisible] = useState(false);
-
-  useEffect(() => {
-    const url = window.location.origin;
-    setUrl(url);
-  }, []);
 
   const onCloseBanner = () => {
     setIsBannerVisible(false);
