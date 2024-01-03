@@ -10,6 +10,7 @@ import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import FreePlanCard from './FreePlanCard';
 import { notificationService } from '../Snackbar';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -34,6 +35,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     symbol: '€',
     value: 1,
   });
+  const [coupon, setCoupon] = useState<string>(null);
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
@@ -61,6 +63,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           setProducts(res);
         });
         console.error('Error getting prices');
+      });
+
+    stripeService
+      .getCoupon(CouponType.ChristmasCoupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
+        console.error(err);
       });
 
     currencyService.filterCurrencyByCountry().then((res) => {
@@ -176,6 +187,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         country={currency.symbol}
                         priceBefore={Number(Math.abs(product.price).toFixed(2))}
                         currency={currencyValue}
+                        coupon={coupon}
                       />
                     ) : (
                       <PriceCard
