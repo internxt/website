@@ -6,6 +6,7 @@ import CtaSection from '../components/cloud-storage-for-education/CtaSection';
 import HeroSection from '../components/cloud-storage-for-education/HeroSection';
 import AchieveSecurityAndPrivacySection from '../components/cloud-storage-for-education/AchieveSecurityAndPrivacySection';
 import BenefitsOfInternxtSection from '../components/cloud-storage-for-education/BenefitsOfInternxtSection';
+import WhyChooseInternxtSection from '../components/cloud-storage-for-education/WhyChooseInternxtSection';
 
 const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-storage-for-education');
@@ -18,6 +19,8 @@ const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textCont
       <AchieveSecurityAndPrivacySection textContent={textContent.AchieveSecurityAndPrivacySection} />
 
       <BenefitsOfInternxtSection textContent={textContent.BenefitsOfInternxtSection} />
+
+      <WhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
 
       <CtaSection textContent={textContent.CtaSection} />
 
