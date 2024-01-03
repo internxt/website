@@ -22,6 +22,7 @@ export interface PriceCardProps {
   lang: string;
   priceId?: string;
   country?: string;
+  coupon?: string;
   currency?: CouponType;
 }
 
@@ -40,6 +41,7 @@ export default function PriceCard({
   popular,
   country,
   lang,
+  coupon,
   currency,
 }: PriceCardProps) {
   const billingFrequencyList = {
@@ -47,18 +49,6 @@ export default function PriceCard({
     month: 'monthly',
     year: 'annually',
   };
-  const [coupon, setCoupon] = useState<string>(null);
-
-  useEffect(() => {
-    stripeService
-      .getCoupon(CouponType.ChristmasCoupon)
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 

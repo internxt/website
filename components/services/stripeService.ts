@@ -18,11 +18,11 @@ export enum Products {
   '10TB' = '10TB',
 }
 
-async function getAllPrices(isLifetime?: boolean) {
+async function getAllPrices(isEur?: boolean) {
   try {
     const currency = await currencyService.getCurrencyPrice();
     const res = await axios.get(
-      `${window.origin}/api/stripe/stripe_products?currency=${isLifetime ? 'eur' : currency ?? 'eur'}`,
+      `${window.origin}/api/stripe/stripe_products?currency=${isEur ? 'eur' : currency ?? 'eur'}`,
     );
     const { data } = res;
 

@@ -9,6 +9,8 @@ import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import FreePlanCard from './FreePlanCard';
+import { notificationService } from '../Snackbar';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -33,25 +35,44 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     symbol: '€',
     value: 1,
   });
+  const [coupon, setCoupon] = useState<string>(null);
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
   useEffect(() => {
-    stripeService.getAllPrices().then((res) => {
-      console.log('products', res);
-      setProducts(res);
-      setLoadingCards(false);
-    });
-    stripeService.getLifetimePrices(true).then((res) => {
-      console.log('lifetime prices', res);
-      setProducts((prev) => ({
-        ...prev,
-        individuals: {
-          ...prev.individuals,
-          lifetime: res,
-        },
-      }));
-    });
+    stripeService
+      .getAllPrices()
+      .then((prices) => {
+        stripeService
+          .getLifetimePrices(true)
+          .then((res) => {
+            setProducts({
+              individuals: {
+                ...prices.individuals,
+                lifetime: res,
+              },
+            });
+            setLoadingCards(false);
+          })
+          .catch(() => {
+            console.error('Error getting lifetime prices');
+          });
+      })
+      .catch(() => {
+        stripeService.getAllPrices(true).then((res) => {
+          setProducts(res);
+        });
+        console.error('Error getting prices');
+      });
+
+    stripeService
+      .getCoupon(CouponType.ChristmasCoupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
 
     currencyService.filterCurrencyByCountry().then((res) => {
       setCurrency({
@@ -166,6 +187,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         country={currency.symbol}
                         priceBefore={Number(Math.abs(product.price).toFixed(2))}
                         currency={currencyValue}
+                        coupon={coupon}
                       />
                     ) : (
                       <PriceCard
