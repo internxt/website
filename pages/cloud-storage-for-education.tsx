@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -8,20 +10,37 @@ import AchieveSecurityAndPrivacySection from '../components/cloud-storage-for-ed
 import BenefitsOfInternxtSection from '../components/cloud-storage-for-education/BenefitsOfInternxtSection';
 import WhyChooseInternxtSection from '../components/cloud-storage-for-education/WhyChooseInternxtSection';
 import ClaimYourDiscountSection from '../components/cloud-storage-for-education/ClaimYourDiscountSection';
+import IntercomTicketCreatedBanner from '../components/banners/IntercomTicketCreatedBanner';
 
 const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-storage-for-education');
+  const [bannerVisible, setBannerVisible] = useState(false);
+
+  const onBannerClose = () => {
+    setBannerVisible(false);
+  };
+
+  const onOpenBanner = () => {
+    setBannerVisible(true);
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description}>
       <Navbar fixed lang={lang} textContent={navbar} cta={['default']} />
 
       <HeroSection textContent={textContent.HeroSection} />
 
+      <IntercomTicketCreatedBanner
+        textContent={textContent.banner}
+        bannerVisible={bannerVisible}
+        onClose={onBannerClose}
+      />
+
       <AchieveSecurityAndPrivacySection textContent={textContent.AchieveSecurityAndPrivacySection} />
 
       <BenefitsOfInternxtSection textContent={textContent.BenefitsOfInternxtSection} />
 
-      <ClaimYourDiscountSection textContent={textContent.ClaimYourDiscountSection} />
+      <ClaimYourDiscountSection textContent={textContent.ClaimYourDiscountSection} openBanner={onOpenBanner} />
 
       <WhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
 
@@ -29,7 +48,7 @@ const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textCont
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footer} lang={'en'} />
+      <Footer textContent={footer} lang={lang} />
     </Layout>
   );
 };

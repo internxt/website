@@ -25,11 +25,12 @@ const MenuItems = {
   ],
 };
 
-const ClaimYourDiscountSection = ({ textContent }) => {
+const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
   const [legalCheckbox, setLegalCheckbox] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [planRequested, setPlanRequested] = useState(null);
+  const isButtonDisabled = !legalCheckbox || !name || !email || !planRequested;
 
   const cardTitle1 = textContent.card.title.split('50%')[0];
   const cardTitle2 = textContent.card.title.split('50%')[1];
@@ -65,7 +66,7 @@ const ClaimYourDiscountSection = ({ textContent }) => {
     try {
       await axios.post(`${window.origin}/api/create_ticket`, object);
 
-      notificationService.openSuccessToast('Coupon code requested successfully');
+      openBanner();
     } catch (e) {
       console.error(e);
       notificationService.openErrorToast('Error requesting coupon code');
@@ -109,12 +110,15 @@ const ClaimYourDiscountSection = ({ textContent }) => {
                     placeholder={textContent.card.emailLabel}
                   />
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="relative flex flex-col space-y-1">
                   <p className="text-sm text-gray-80">{textContent.card.whichPlan}</p>
-                  <Card>
-                    <Dropdown buttonTitle={planRequested ?? textContent.card.select}>
-                      <div className="mt-2 flex flex-col">
-                        <p className="text-lg font-semibold">Annual</p>
+                  <Card className="relative z-50">
+                    <Dropdown
+                      className={planRequested ? 'text-gray-100' : 'text-gray-40'}
+                      buttonTitle={planRequested ?? textContent.card.select}
+                    >
+                      <div className="absolute z-50 mt-2 flex w-full flex-col rounded-md bg-white py-1 px-5 shadow-subtle-hard">
+                        <p className="text-lg font-semibold">{textContent.card.annual}</p>
                         <Menu.Items className={'mt-0.5 w-full rounded-md bg-white py-0.5'}>
                           {MenuItems.annual.map((item) => {
                             return (
@@ -135,7 +139,7 @@ const ClaimYourDiscountSection = ({ textContent }) => {
                             );
                           })}
                         </Menu.Items>
-                        <p className="text-lg font-semibold">Monthly</p>
+                        <p className="text-lg font-semibold">{textContent.card.monthly}</p>
                         <Menu.Items className={'mt-0.5 w-full rounded-md bg-white py-0.5'}>
                           {MenuItems.monthly.map((item) => {
                             return (
@@ -171,7 +175,10 @@ const ClaimYourDiscountSection = ({ textContent }) => {
                     e.preventDefault();
                     handleCreatingTicket({ name, email, planRequested });
                   }}
-                  className="flex w-full justify-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark lg:w-max"
+                  disabled={isButtonDisabled}
+                  className={`flex w-full justify-center ${
+                    isButtonDisabled ? 'bg-gray-10 text-gray-40' : 'bg-primary text-white hover:bg-primary-dark'
+                  } rounded-lg px-5 py-3 text-lg font-medium lg:w-max`}
                 >
                   {textContent.cta}
                 </button>
