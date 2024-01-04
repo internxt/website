@@ -56,7 +56,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
           <div className="flex flex-col">
             <Image
               src="/images/cloud-storage-for-education/file_sharing_for_universities.webp"
-              alt="Internxt eBook download"
+              alt="File Sharing for Universities"
               width={496}
               height={520}
               draggable={false}
@@ -70,7 +70,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
           <div className="flex flex-col">
             <Image
               src="/images/cloud-storage-for-education/cloud_storage_for_education.webp"
-              alt="Internxt eBook download"
+              alt="Cloud Storage for Education"
               width={496}
               height={520}
               draggable={false}
@@ -82,7 +82,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
           <div className="flex flex-col">
             <Image
               src="/images/cloud-storage-for-education/cloud_storage_for_schools.webp"
-              alt="Internxt eBook download"
+              alt="Cloud Storage for Schools"
               width={496}
               height={520}
               draggable={false}

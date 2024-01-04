@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import RenderDescription from '../shared/RenderDescription';
 
 const AchieveSecurityAndPrivacySection = ({ textContent }) => {
