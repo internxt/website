@@ -6,7 +6,7 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden px-5 pt-14">
       <div className="lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center space-y-6 py-20 lg:flex-row lg:justify-between lg:space-y-0">
-          <div className="flex max-w-[530px] flex-col space-y-8">
+          <div className="flex max-w-[530px] flex-col items-center space-y-8 text-center lg:items-start lg:text-left">
             {/* Label */}
             <div className="flex w-max rounded-lg bg-gray-5 px-4 py-2">
               <p className="text-xl font-medium text-black">
@@ -38,7 +38,13 @@ const HeroSection = ({ textContent }) => {
             </button>
           </div>
           <div className="flex">
-            <Image src="/images/cloud-storage-for-education/file_sharing_for_education.webp" width={496} height={520} />
+            <Image
+              src="/images/cloud-storage-for-education/file_sharing_for_education.webp"
+              draggable={false}
+              width={496}
+              height={520}
+              alt={'File Sharing for Education'}
+            />
           </div>
         </div>
       </div>

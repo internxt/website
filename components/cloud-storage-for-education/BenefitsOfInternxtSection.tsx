@@ -65,7 +65,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
           <CardText textContent={cards.workFromAnywhere} />
         </div>
         {/* Send files */}
-        <div className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
+        <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
           <CardText textContent={cards.sendFiles} />
           <div className="flex flex-col">
             <Image

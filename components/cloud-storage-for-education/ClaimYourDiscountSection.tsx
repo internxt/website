@@ -1,20 +1,35 @@
+import { useState } from 'react';
 import Image from 'next/image';
+import axios from 'axios';
+import { Menu } from '@headlessui/react';
+
 import TextInput from '../components/TextInput';
 import RenderDescription from '../shared/RenderDescription';
-import Select from 'react-select';
 import CheckboxItem from '../shared/CheckboxItem';
-import { useState } from 'react';
+import { notificationService } from '../Snackbar';
+import Dropdown from '../shared/Dropdown';
+import Card from '../shared/Card';
 
-const options = [
-  { value: 'b', label: 'Bytes' },
-  { value: 'kb', label: 'Kilobytes' },
-  { value: 'mb', label: 'Megabytes' },
-  { value: 'gb', label: 'Gigabytes' },
-  { value: 'tb', label: 'Terabytes' },
-];
+const MenuItems = {
+  annual: [
+    { label: '200GB', value: '200GB annual' },
+    { label: '2TB', value: '2TB annual' },
+    { label: '5TB', value: '5TB annual' },
+    { label: '10TB', value: '10TB annual' },
+  ],
+  monthly: [
+    { label: '200GB', value: '200GB monthly' },
+    { label: '2TB', value: '2TB monthly' },
+    { label: '5TB', value: '5TB monthly' },
+    { label: '10TB', value: '10TB monthly' },
+  ],
+};
 
 const ClaimYourDiscountSection = ({ textContent }) => {
   const [legalCheckbox, setLegalCheckbox] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [planRequested, setPlanRequested] = useState(null);
 
   const cardTitle1 = textContent.card.title.split('50%')[0];
   const cardTitle2 = textContent.card.title.split('50%')[1];
@@ -22,6 +37,40 @@ const ClaimYourDiscountSection = ({ textContent }) => {
     textContent.card.title.indexOf('50%'),
     textContent.card.title.indexOf('50%') + 3,
   );
+
+  const handleCreatingTicket = async ({
+    name,
+    email,
+    planRequested,
+  }: {
+    name: string;
+    email: string;
+    planRequested: string;
+  }) => {
+    const object = {
+      ticket_type_id: 1,
+      contacts: [
+        {
+          email: email,
+        },
+      ],
+      ticket_attributes: {
+        _default_title_: `Educational coupon code requested by ${name}`,
+        _default_description_: `Customer ${name} with email ${email} is requesting an educational coupon code for ${planRequested} plan.`,
+        Name: name,
+        'Institutional Email Address': email,
+        'Plan requested': planRequested,
+      },
+    };
+    try {
+      await axios.post(`${window.origin}/api/create_ticket`, object);
+
+      notificationService.openSuccessToast('Coupon code requested successfully');
+    } catch (e) {
+      console.error(e);
+      notificationService.openErrorToast('Error requesting coupon code');
+    }
+  };
 
   return (
     <section id="discountCard" className="bg-gray-1">
@@ -33,32 +82,83 @@ const ClaimYourDiscountSection = ({ textContent }) => {
         </div>
         <div className="flex flex-row space-x-20 rounded-[32px] bg-white">
           {/* Text Card */}
-          <div className="flex flex-col space-y-6 py-[50px] pl-[60px]">
-            <p className="max-w-[450px] text-5xl font-semibold text-gray-100">
+          <div className="flex flex-col space-y-6 py-[50px] px-16 lg:pl-[60px]">
+            <p className="max-w-[450px] text-center text-5xl font-semibold text-gray-100 lg:text-left">
               {cardTitle1} <span className="text-primary">{blueTextCardTitle}</span>
               {cardTitle2}
             </p>
-            <p className="text-xl">{textContent.card.fillForm}</p>
+            <p className="text-center text-xl lg:text-left">{textContent.card.fillForm}</p>
             {/* Form */}
             <div>
-              <form
-                className="flex flex-col space-y-6"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  console.log('Form submitted');
-                }}
-              >
+              <div className="flex flex-col space-y-6">
                 <div className="flex flex-col space-y-1">
                   <p className="text-sm text-gray-80">{textContent.card.institutionName}</p>
-                  <TextInput placeholder={textContent.card.nameLabel} />
+                  <TextInput
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
+                    placeholder={textContent.card.nameLabel}
+                  />
                 </div>
                 <div className="flex flex-col space-y-1">
                   <p className="text-sm text-gray-80">{textContent.card.institutionEmail}</p>
-                  <TextInput placeholder={textContent.card.emailLabel} />
+                  <TextInput
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    placeholder={textContent.card.emailLabel}
+                  />
                 </div>
                 <div className="flex flex-col space-y-1">
                   <p className="text-sm text-gray-80">{textContent.card.whichPlan}</p>
-                  <Select className="rounded-lg" menuPosition="absolute" options={options} />
+                  <Card>
+                    <Dropdown buttonTitle={planRequested ?? textContent.card.select}>
+                      <div className="mt-2 flex flex-col">
+                        <p className="text-lg font-semibold">Annual</p>
+                        <Menu.Items className={'mt-0.5 w-full rounded-md bg-white py-0.5'}>
+                          {MenuItems.annual.map((item) => {
+                            return (
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <button
+                                    onClick={() => {
+                                      setPlanRequested(item.value);
+                                    }}
+                                    className={`${
+                                      active ? 'rounded-lg bg-gray-10' : 'font-medium text-gray-100'
+                                    } w-full px-4 py-2 text-left text-sm`}
+                                  >
+                                    {item.label}
+                                  </button>
+                                )}
+                              </Menu.Item>
+                            );
+                          })}
+                        </Menu.Items>
+                        <p className="text-lg font-semibold">Monthly</p>
+                        <Menu.Items className={'mt-0.5 w-full rounded-md bg-white py-0.5'}>
+                          {MenuItems.monthly.map((item) => {
+                            return (
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <button
+                                    onClick={() => {
+                                      setPlanRequested(item.value);
+                                    }}
+                                    className={`${
+                                      active ? 'rounded-lg bg-gray-10' : 'font-medium text-gray-100'
+                                    } w-full px-4 py-2 text-left text-sm`}
+                                  >
+                                    {item.label}
+                                  </button>
+                                )}
+                              </Menu.Item>
+                            );
+                          })}
+                        </Menu.Items>
+                      </div>
+                    </Dropdown>
+                  </Card>
                 </div>
                 <CheckboxItem
                   textColor="text-gray-100"
@@ -66,10 +166,16 @@ const ClaimYourDiscountSection = ({ textContent }) => {
                   setCheckbox={setLegalCheckbox}
                   label={textContent.privacyCheckbox}
                 />
-                <button className="flex w-max rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleCreatingTicket({ name, email, planRequested });
+                  }}
+                  className="flex w-full justify-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark lg:w-max"
+                >
                   {textContent.cta}
                 </button>
-              </form>
+              </div>
             </div>
           </div>
           <div className="hidden lg:flex">
