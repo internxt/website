@@ -117,7 +117,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
                       className={planRequested ? 'text-gray-100' : 'text-gray-40'}
                       buttonTitle={planRequested ?? textContent.card.select}
                     >
-                      <div className="absolute z-50 mt-2 flex w-full flex-col rounded-md bg-white py-1 px-5 shadow-subtle-hard">
+                      <div className="absolute z-50 mt-3 flex w-full flex-col rounded-md border border-gray-10 bg-white py-2 px-5 shadow-subtle-hard">
                         <p className="text-lg font-semibold">{textContent.card.annual}</p>
                         <Menu.Items className={'mt-0.5 w-full rounded-md bg-white py-0.5'}>
                           {MenuItems.annual.map((item) => {
