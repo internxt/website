@@ -8,7 +8,6 @@ import { NextApiRequest, NextApiResponse } from 'next';
 // - name
 // - Institutional email
 // - plan_type
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const ticketObject = req.body;
   if (req.method === 'POST') {
