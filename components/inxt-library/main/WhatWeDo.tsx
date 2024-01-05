@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import { FileArrowDown } from '@phosphor-icons/react';
-import { useRouter } from 'next/router';
 
 const TextCard = ({ textContent, url }) => {
-  const router = useRouter();
-
   return (
     <div className="flex max-w-[388px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
       <div className="flex w-max flex-row items-center space-x-3 rounded-lg bg-gray-5 py-2 px-4">

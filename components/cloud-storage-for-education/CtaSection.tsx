@@ -1,14 +1,4 @@
-const CtaSection = ({
-  textContent,
-  url,
-  maxWidth,
-  target,
-}: {
-  textContent: any;
-  url: string;
-  maxWidth?: string;
-  target?: string;
-}) => {
+const CtaSection = ({ textContent, maxWidth }: { textContent: any; maxWidth?: string }) => {
   return (
     <section
       style={{
@@ -24,7 +14,10 @@ const CtaSection = ({
         <button
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
-            window.open(url, target);
+            window.scrollTo({
+              top: document.getElementById('discountCard').offsetTop,
+              behavior: 'smooth',
+            });
           }}
         >
           {textContent.cta}

@@ -278,6 +278,10 @@ export default function Footer({
                     <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </a>
+
+                    <a lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.storageForEducation}
+                    </a>
                   </div>
                 </div>
               </div>

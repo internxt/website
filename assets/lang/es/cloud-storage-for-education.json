@@ -1,0 +1,162 @@
+{
+  "HeroSection": {
+    "inxtLabel": "Internxt",
+    "educationLabel": "Educación",
+    "title": {
+      "line1": "Seguridad al compartir los datos ",
+      "line2": "en escuelas y universidades"
+    },
+    "description": {
+      "boldText": "Exclusivo 50% de descuento ",
+      "text": "en almacenamiento en la nube para estudiantes, profesores, educadores y graduados. Estudia duro, trabaja de forma segura y asegura tu trayectoria estudiantil con Internxt"
+    },
+    "cta": "Obtén el descuento"
+  },
+  "AchieveSecurityAndPrivacySection": {
+    "title": "Almacenamiento en la nube para el ámbito educativo: Logra seguridad y privacidad con Internxt",
+    "subtitle": "Maximiza la productividad académica, colaboración y gestión de archivos a mitad de precio.",
+    "description": "Internxt es consciente de la importancia de un método seguro para compartir archivos en escuelas, entre educadores y estudiantes con el fin de mantener la información segura. Si eres estudiante, graduado o trabajas en el ámbito educativo, puedes disfrutar de un 50% de descuento en nuestros planes de almacenamiento en la nube segura.",
+    "claimOffer": {
+      "title": {
+        "normalText1": "Solicita tu ",
+        "blueText": "oferta especial ",
+        "normalText2": "para obtener un 50% de descuento"
+      },
+      "description": "Elige entre nuestros planes mensuales o anuales para disfrutar de nuestra suite encriptada de productos a la mitad del precio.",
+      "paragraph": [
+        "Independientemente del plan que elijas, disfrutarás del mismo cifrado de extremo a extremo y servicios seguros para proteger tus archivos o proyectos confidenciales.",
+        "Cuando llegue el momento de renovar tu plan, si sigues queriendo disfrutar de tu 50%, sólo tienes que volver a confirmarnos para seguir disfrutando del descuento."
+      ],
+      "cta": "Obtén el descuento"
+    }
+  },
+  "BenefitsOfInternxtSection": {
+    "title": "Beneficios del almacenamiento en la nube de Internxt para el ámbito educativo",
+    "subtitle": "Una plataforma segura para compartir y almacenar tus archivos para que puedas centrarte en aprender.",
+    "paragraph": [
+      "Escuelas, estudiantes, graduados y empleados necesitan una forma segura y privada de respaldar información sensible, recursos, datos, planes de lecciones y más.",
+      "La suite de productos enfocada en la privacidad de Internxt ayuda a escuelas, universidades y miembros del personal a disfrutar de los siguientes beneficios del almacenamiento en la nube para educación, incluyendo:"
+    ],
+    "cta": "Obtén el descuento",
+    "cards": {
+      "workFromAnywhere": {
+        "title": "Trabaja, estudia y planifica desde cualquier lugar",
+        "description": "No importa desde dónde o cuándo estés estudiando, Internxt está disponible en todos los dispositivos. Tienes la libertad y la facilidad de trabajar en el momento que más te convenga."
+      },
+      "sendFiles": {
+        "title": "Envía archivos con tranquilidad",
+        "description": "Disfruta de las opciones avanzadas de uso compartido con Internxt Drive o de la transferencia cifrada de archivos con Internxt Send para proteger tu trabajo de accesos no autorizados. Nuestro intercambio seguro de archivos para centros educativos está diseñado para proteger la información confidencial de los alumnos y del personal frente a filtraciones de datos."
+      },
+      "secureBackup": {
+        "title": "Copias de seguridad y recuperación de datos seguros",
+        "description": "Ya no tienes que preocuparte por perder tus archivos, ya que puedes elegir hacer una copia de seguridad de tus trabajos desde la aplicación de escritorio cada 6, 12 o 24 horas o seleccionar sólo copias de seguridad manuales."
+      }
+    }
+  },
+  "ClaimYourDiscountSection": {
+    "title": "Cómo solicitar tu descuento",
+    "subtitle": "Obtén un 50% de descuento en nuestros planes mensuales o anuales con una dirección de correo electrónico educativa válida.",
+    "paragraph": [
+      "Si eres estudiante, profesor, graduado o trabajas en el sector educativo con una dirección de correo electrónico válida de una institución acreditada, por favor, completa el formulario a continuación para solicitar tu descuento.",
+      "Una vez que confirmemos tu estado, nos pondremos en contacto contigo para confirmar cómo solicitar tu descuento."
+    ],
+    "card": {
+      "title": "Contáctanos para reclamar el descuento educativo del 50%",
+      "fillForm": "Por favor, completa el formulario a continuación:",
+      "institutionName": "Nombre de la institución*",
+      "nameLabel": "Nombre",
+      "institutionEmail": "Tu dirección de correo electrónico institucional*",
+      "emailLabel": "Correo electrónico",
+      "whichPlan": "¿A qué plan te gustaría aplicar tu descuento?*",
+      "select": "Selecciona un plan",
+      "annual": "Anuales",
+      "monthly": "Mensuales"
+    },
+    "privacyCheckbox": "He leído y comprendido la [política de privacidad](https://internxt.com/legal).",
+    "cta": "Obtén el descuento"
+  },
+  "WhyChooseInternxtSection": {
+    "title": "¿Por qué elegir Internxt?",
+    "subtitle": "La privacidad es el centro de lo que hacemos; no basamos nuestro negocio en la recopilación de datos o publicidad. Lo construimos sobre la confianza.",
+    "description": "Nuestra tecnología encriptada es perfecta para escuelas y universidades, asegurando información confidencial y preservando tu derecho fundamental a la privacidad.",
+    "cards": [
+      {
+        "title": "Diseñado para la privacidad",
+        "description": "No almacenamos contraseñas ni datos de usuario; todos tus archivos están encriptados cuando se guardan en la nube y al compartirlos con compañeros de clase o amigos. Internxt te brinda control total sobre tus archivos."
+      },
+      {
+        "title": "Seguridad intransigente",
+        "description": "Proyectos, planes de clases, recursos y todo lo que necesitas se encriptará de extremo a extremo antes de salir de tu dispositivo, lo que significa que puedes concentrarte en tu trabajo y nosotros nos encargamos de protegerlo."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos y valoramos la transparencia, por lo que nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, excepto tus datos."
+      },
+      {
+        "title": "Verificado de forma independiente",
+        "description": "Cumplimos totalmente con el Reglamento General de Protección de Datos (GDPR) y somos 100% seguros, pero no solo tomes nuestra palabra. Internxt ha sido auditado y verificado de forma independiente por la principal empresa de pruebas de penetración de Europa, Securitum."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Internxt para la educación. Defiende tu privacidad. Cambia a Internxt.",
+    "description": "Verifica si puedes beneficiarte y obtén un 50% de descuento.",
+    "cta": "Obtén el descuento"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Puedo beneficiarme del descuento educativo de Internxt?",
+        "answer": [
+          "Si actualmente estás matriculado en una institución educativa como estudiante o empleado y cuentas con un correo electrónico de educación válido, tienes derecho al descuento de educación de Internxt. Este descuento permanecerá activo mientras tu correo electrónico de educación siga siendo válido.",
+          "Para renovaciones de planes, cambios o actualizaciones, ponte en contacto con nosotros con los detalles necesarios para que podamos aplicar el descuento a tu próximo período de suscripción."
+        ]
+      },
+      {
+        "question": "¿Cómo puedo aplicar?",
+        "answer": [
+          "Por favor, contáctanos en [hello@internxt.com](mailto:hello@internxt.com) y proporciona el nombre de tu institución, correo electrónico y el plan que te gustaría elegir. Una vez verificado, un miembro de nuestro equipo se pondrá en contacto contigo, y podrás comenzar a disfrutar de los beneficios de Internxt."
+        ]
+      },
+      {
+        "question": "¿Cuánto se me cobrará?",
+        "answer": [
+          "Se te cobrará un 50% de descuento en tu plan mensual o anual elegido. Para obtener una mirada más detallada de nuestras tarifas y decidir qué opción de almacenamiento se adapta a tus necesidades, visita nuestra [página de precios](https://internxt.com/pricing 'Internxt Precios – Obtén 10GB gratis!')."
+        ]
+      },
+      {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": [
+          "Actualmente, aceptamos pagos con tarjeta de crédito y débito (incluyendo Mastercard, VISA, American Express, y más), y también aceptamos Paypal, bankcontact, iDEAL y SOFORT."
+        ]
+      },
+      {
+        "question": "¿Cuándo expirará mi descuento?",
+        "answer": [
+          "Para los planes mensuales, el precio con descuento se aplicará a las renovaciones hasta que se cancele o elimine tu suscripción o si decides cambiar a un plan gratuito.",
+          "Si tienes un plan anual, tu descuento seguirá siendo válido durante un año a partir de la fecha de compra y se renovará automáticamente al coste estándar a menos que canceles o reconfirmes tu estado de elegibilidad con nosotros.",
+          "En el caso de que quieras volver a suscribirte a cualquier plan y mantener tu descuento educativo, tendrás que ponerte en contacto con nosotros para que podamos verificar tu elegibilidad."
+        ]
+      },
+      {
+        "question": "¿Qué pasa si quiero cambiar mi plan?",
+        "answer": [
+          "Puedes cambiar tu plan de suscripción en cualquier momento. Si deseas mejorar tu almacenamiento y seguir disfrutando de Internxt y el almacenamiento en la nube para educación, contáctanos con los detalles necesarios para volver a verificar tu estado. Nos pondremos en contacto si aún puedes acceder al descuento."
+        ]
+      },
+      {
+        "question": "¿Tienes más preguntas?",
+        "answer": [
+          "Contáctanos en nuestro chat en vivo en nuestro sitio web (de lunes a viernes), [hello@internxt.com](mailto:hello@internxt.com), o visita nuestro [centro de ayuda](https://help.internxt.com 'Internxt Help Center')."
+        ]
+      }
+    ]
+  },
+  "banner": {
+    "thanks": "¡Grácias!",
+    "title": "Hemos recibido con éxito tu solicitud.",
+    "description": "Te contactaremos para contarte cómo obtener tu descuento.",
+    "cta": "cerrar"
+  }
+}

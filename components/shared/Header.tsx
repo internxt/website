@@ -7,11 +7,7 @@ const Header = ({
   maxWidth?: string;
   className?: string;
 }) => {
-  return (
-    <h1 className={`${maxWidth} ${className} text-4xl font-semibold leading-tight sm:text-6xl sm:leading-tight`}>
-      {children}
-    </h1>
-  );
+  return <h1 className={`${maxWidth} ${className} text-4xl font-semibold leading-tight sm:text-6xl`}>{children}</h1>;
 };
 
 export default Header;

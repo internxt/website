@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import RevealY from '../components/RevealY';
 import DownloadComponent from '../shared/DownloadComponent';
 
 const ExploreOurOSS = ({ textContent, download }) => {

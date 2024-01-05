@@ -18,6 +18,12 @@ export default function FaqAccordion({
     bulletedList.forEach((list) => {
       list.classList.add('list-disc', 'list-inside');
     });
+
+    // if text has a link, add _blank target
+    const links = document.querySelectorAll('.markdown a');
+    links.forEach((link) => {
+      link.setAttribute('target', '_blank');
+    });
   }, []);
 
   return (
