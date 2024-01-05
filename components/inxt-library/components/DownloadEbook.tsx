@@ -10,8 +10,7 @@ const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
   const [firstName, setFirstName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [firstCheckbox, setFirstCheckbox] = useState(false);
-  const [secondCheckbox, setSecondCheckbox] = useState(false);
-  const isDownloadButtonDisabled = !secondCheckbox || firstName === '' || emailAddress === '';
+  const isDownloadButtonDisabled = firstName === '' || emailAddress === '' || !firstCheckbox;
 
   const subscribeToMailerlite = async (email) => {
     await axios
@@ -49,7 +48,6 @@ const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
       setFirstName('');
       setEmailAddress('');
       setFirstCheckbox(false);
-      setSecondCheckbox(false);
       setBannerVisible(true);
     }
   };
@@ -88,8 +86,7 @@ const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
         <div className="flex flex-col">
           <p className="text-lg text-gray-80">{textContent.checkboxTitle}</p>
           <div className="flex flex-col space-y-3">
-            <CheckboxItem checked={firstCheckbox} setCheckbox={setFirstCheckbox} label={textContent.firstCheckbox} />
-            <CheckboxItem checked={secondCheckbox} setCheckbox={setSecondCheckbox} label={textContent.secondCheckbox} />
+            <CheckboxItem checked={firstCheckbox} setCheckbox={setFirstCheckbox} label={textContent.secondCheckbox} />
           </div>
         </div>
         <button
