@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
-import { Menu } from '@headlessui/react';
 
 import TextInput from '../components/TextInput';
 import RenderDescription from '../shared/RenderDescription';
 import CheckboxItem from '../shared/CheckboxItem';
 import { notificationService } from '../Snackbar';
-import Dropdown from '../shared/Dropdown';
-import Card from '../shared/Card';
 
 const MenuItems = {
   annual: [
@@ -29,8 +26,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
   const [legalCheckbox, setLegalCheckbox] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [planRequested, setPlanRequested] = useState(null);
-  const isButtonDisabled = !legalCheckbox || !name || !email || !planRequested;
+  const isButtonDisabled = !legalCheckbox || !name || !email;
 
   const cardTitle1 = textContent.card.title.split('50%')[0];
   const cardTitle2 = textContent.card.title.split('50%')[1];
@@ -39,15 +35,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
     textContent.card.title.indexOf('50%') + 3,
   );
 
-  const handleCreatingTicket = async ({
-    name,
-    email,
-    planRequested,
-  }: {
-    name: string;
-    email: string;
-    planRequested: string;
-  }) => {
+  const handleCreatingTicket = async ({ name, email }: { name: string; email: string }) => {
     const object = {
       ticket_type_id: 1,
       contacts: [
@@ -57,10 +45,9 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
       ],
       ticket_attributes: {
         _default_title_: `Educational coupon code requested by ${name}`,
-        _default_description_: `Customer ${name} with email ${email} is requesting an educational coupon code for ${planRequested} plan.`,
+        _default_description_: `Customer ${name} with email ${email} is requesting an educational coupon code.`,
         Name: name,
         'Institutional Email Address': email,
-        'Plan requested': planRequested,
       },
     };
     try {
@@ -83,7 +70,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
         </div>
         <div className="flex flex-row space-x-20 rounded-[32px] bg-white">
           {/* Text Card */}
-          <div className="flex flex-col space-y-6 py-[50px] px-16 lg:pl-[60px]">
+          <div className="flex flex-col justify-center space-y-6 py-[50px] px-16 lg:pl-[60px]">
             <p className="max-w-[450px] text-center text-5xl font-semibold text-gray-100 lg:text-left">
               {cardTitle1} <span className="text-primary">{blueTextCardTitle}</span>
               {cardTitle2}
@@ -110,60 +97,6 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
                     placeholder={textContent.card.emailLabel}
                   />
                 </div>
-                <div className="relative flex flex-col space-y-1">
-                  <p className="text-sm text-gray-80">{textContent.card.whichPlan}</p>
-                  <Card className="relative z-50">
-                    <Dropdown
-                      className={planRequested ? 'text-gray-100' : 'text-gray-40'}
-                      buttonTitle={planRequested ?? textContent.card.select}
-                    >
-                      <div className="absolute z-50 mt-3 flex w-full flex-col rounded-md border border-gray-10 bg-white py-2 px-5 shadow-subtle-hard">
-                        <p className="text-lg font-semibold">{textContent.card.annual}</p>
-                        <Menu.Items className={'mt-0.5 w-full rounded-md bg-white py-0.5'}>
-                          {MenuItems.annual.map((item) => {
-                            return (
-                              <Menu.Item>
-                                {({ active }) => (
-                                  <button
-                                    onClick={() => {
-                                      setPlanRequested(item.value);
-                                    }}
-                                    className={`${
-                                      active ? 'rounded-lg bg-gray-10' : 'font-medium text-gray-100'
-                                    } w-full px-4 py-2 text-left text-sm`}
-                                  >
-                                    {item.label}
-                                  </button>
-                                )}
-                              </Menu.Item>
-                            );
-                          })}
-                        </Menu.Items>
-                        <p className="text-lg font-semibold">{textContent.card.monthly}</p>
-                        <Menu.Items className={'mt-0.5 w-full rounded-md bg-white py-0.5'}>
-                          {MenuItems.monthly.map((item) => {
-                            return (
-                              <Menu.Item>
-                                {({ active }) => (
-                                  <button
-                                    onClick={() => {
-                                      setPlanRequested(item.value);
-                                    }}
-                                    className={`${
-                                      active ? 'rounded-lg bg-gray-10' : 'font-medium text-gray-100'
-                                    } w-full px-4 py-2 text-left text-sm`}
-                                  >
-                                    {item.label}
-                                  </button>
-                                )}
-                              </Menu.Item>
-                            );
-                          })}
-                        </Menu.Items>
-                      </div>
-                    </Dropdown>
-                  </Card>
-                </div>
                 <CheckboxItem
                   textColor="text-gray-100"
                   checked={legalCheckbox}
@@ -173,7 +106,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
                 <button
                   onClick={(e) => {
                     e.preventDefault();
-                    handleCreatingTicket({ name, email, planRequested });
+                    handleCreatingTicket({ name, email });
                   }}
                   disabled={isButtonDisabled}
                   className={`flex w-full justify-center ${
