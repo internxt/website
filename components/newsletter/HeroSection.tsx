@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import Header from '../shared/Header';
-import TextInput from '../components/TextInput';
 import CheckboxItem from '../shared/CheckboxItem';
 
 const HeroSection = ({ textContent }) => {
-  const [email, setEmail] = useState('');
   const [checkbox, setCheckbox] = useState(false);
 
   return (
