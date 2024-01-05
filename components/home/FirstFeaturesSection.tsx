@@ -27,7 +27,7 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
 
           <RevealY className="flex h-full w-full flex-col px-5 pt-6">
             <img
-              src="/images/lifetime/Internxt-secure-cloud-storage.webp"
+              src="/images/home/Internxt-secure-cloud-storage.webp"
               alt="Internxt secure cloud storage"
               draggable={false}
             />

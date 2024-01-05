@@ -9,7 +9,7 @@ import * as gtag from '../lib/gtag';
 import BottomBanner from '../components/banners/BottomBanner';
 import ShowSnackbar from '../components/Snackbar';
 
-const excludedPaths = ['/pricing', '/lifetime', '/partner-discount', '/annual'];
+const excludedPaths = [];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
 
@@ -60,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
-        <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div>
+        <div className="flex justify-center">{isExcludedPath ? <BottomBanner /> : undefined}</div>
         {hideIntercomButton ? null : <Intercom />}
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
