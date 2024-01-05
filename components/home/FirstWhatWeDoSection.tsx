@@ -21,7 +21,8 @@ const FirstWhatWeDoSection = ({
   return (
     <section className={`overflow-hidden py-20 ${backgroundColor ? backgroundColor : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
-        <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0  md:space-x-20 lg:items-center lg:justify-center">
+        {/* First Card */}
+        <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative rounded-3xl">
             <Image
               src="/images/home/Secure-file-upload.webp"
@@ -61,6 +62,8 @@ const FirstWhatWeDoSection = ({
             </div>
           </div>
         </RevealY>
+
+        {/* Second Card */}
         <RevealY className="flex flex-col space-y-5 md:flex-row md:space-x-20 lg:items-center lg:justify-center">
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-center lg:text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card2.title}</p>
@@ -94,6 +97,8 @@ const FirstWhatWeDoSection = ({
             </RevealX>
           </div>
         </RevealY>
+
+        {/* Third Card */}
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative w-full rounded-3xl">
             <Image
