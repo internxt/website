@@ -22,17 +22,12 @@ const IntercomTicketCreatedBanner = ({ textContent, bannerVisible, onClose }) =>
             </div>
             <div className="flex flex-col items-center justify-center space-y-6">
               <p className="text-xl font-medium text-white">{textContent.description}</p>
-              <div
-                onKeyDown={(e) => {
-                  if (e.key === 'esc') {
-                    onClose();
-                  }
-                }}
-                className="relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg bg-white py-3 px-5 text-base font-medium text-black transition duration-100 focus:outline-none active:bg-white active:text-black sm:text-lg"
+              <button
+                className="relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg bg-white py-3 px-5 text-base font-medium text-black transition duration-100 focus:outline-none active:bg-white active:text-black sm:text-lg lg:w-max"
                 onClick={onClose}
               >
                 {textContent.cta}
-              </div>
+              </button>
             </div>
           </div>
         </div>
