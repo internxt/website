@@ -34,7 +34,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       description={metatags[0].description}
       segmentName="Lifetime"
       lang={lang}
-      specialOffer={`/images/banners/Christmas-2023-Preview-socials.png`}
+      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
@@ -46,7 +46,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
-      {/* <CtaSection textContent={langJson.CtaSection} /> */}
+      <CtaSection textContent={langJson.CtaSection} />
 
       <Footer textContent={footerLang} lang={deviceLang} />
     </Layout>

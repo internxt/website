@@ -43,20 +43,8 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     stripeService
       .getAllPrices()
       .then((prices) => {
-        stripeService
-          .getLifetimePrices(true)
-          .then((res) => {
-            setProducts({
-              individuals: {
-                ...prices.individuals,
-                lifetime: res,
-              },
-            });
-            setLoadingCards(false);
-          })
-          .catch(() => {
-            console.error('Error getting lifetime prices');
-          });
+        setProducts(prices);
+        setLoadingCards(false);
       })
       .catch(() => {
         stripeService.getAllPrices(true).then((res) => {
@@ -86,7 +74,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          <CampaignCtaSection textContent={textContent.ctaBanner} />
           <div className="flex flex-col items-center px-5">
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
               {individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}
@@ -179,13 +166,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={Number(Math.abs((product.price * 50) / 100).toFixed(2))}
+                        price={product.price}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
-                        priceBefore={Number(Math.abs(product.price).toFixed(2))}
                         currency={currencyValue}
                         coupon={coupon}
                       />
