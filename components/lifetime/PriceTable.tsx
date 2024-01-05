@@ -10,7 +10,7 @@ const PriceTable = ({ lang, country }) => {
 
   useEffect(() => {
     stripeService
-      .getLifetimePrices()
+      .getLifetimePrices(true)
       .then((res) => {
         if (res) {
           setProducts(res);
