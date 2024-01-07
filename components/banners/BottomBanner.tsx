@@ -23,47 +23,64 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return '50% OFF all lifetime plans!';
+        return 'Lifetime security for your files';
       case 'es':
-        return 'DESCUENTO 50% en planes lifetime!';
-      case 'fr':
-        return '50% de reduction sur plans lifetime!';
+        return 'Seguridad para tus archivos de por vida';
       case 'ru':
-        return 'Скидка 50% на пожизненные планы!';
+        return 'Пожизненная безопасность файлов';
+      case 'fr':
+        return 'Sécurité à vie pour vos fichiers';
+      case 'it':
+        return 'Sicurezza a vita per i tuoi file';
+      case 'zh':
+        return '文件的终身安全';
+      case 'de':
+        return 'Lebenslange Sicherheit für Ihre Dateien';
       default:
-        return '50% OFF all lifetime plans!';
+        return 'Lifetime security for your files';
     }
   };
 
   const ctaText = () => {
     switch (lang) {
       case 'en':
-        return 'Get the deal!';
+        return 'View plans';
       case 'es':
-        return '¡Obtén la oferta!';
-      case 'fr':
-        return "Obtenez l'offre";
+        return 'Ver planes';
       case 'ru':
-        return 'Получить скидку!';
+        return 'Тарифные планы';
+      case 'fr':
+        return 'Voir les plans';
+      case 'it':
+        return 'Visualizza i piani';
+      case 'zh':
+        return '查看计划';
+      case 'de':
+        return 'Pläne anzeigen';
       default:
-        return 'Get the deal!';
+        return 'View plans';
     }
   };
 
   return (
     <section
-      className={`fixed bottom-10 z-50 hidden lg:${hidePopup ? 'hidden' : 'flex'} mx-auto overflow-hidden px-5 lg:px-0`}
+      className={`fixed bottom-10 z-50 hidden lg:${
+        hidePopup ? 'hidden' : 'flex'
+      } mx-auto overflow-hidden rounded-lg bg-primary-dark px-5 lg:px-0`}
     >
-      <div
-        className="relative flex h-[100px] w-[898px] flex-col items-center justify-center rounded-lg bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("/images/banners/pop_up_banner_bf_2023_798x100_bg_2x.webp")' }}
-      >
+      <div className="relative flex h-[100px] w-[898px] flex-col items-center justify-center bg-contain bg-center bg-no-repeat">
         <div className="flex items-end justify-end">
           <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2">
             <X className=" text-white" size={24} />
           </button>
         </div>
-        <div className="z-50 flex flex-row items-center justify-center">
+        <div className="z-40 flex flex-row items-center justify-center">
+          <div className="absolute left-0">
+            <Image src="/images/banners/lifetime_small_left.png" width={140} height={109} />
+          </div>
+          <div className="absolute right-0">
+            <Image src="/images/banners/lifetime_small_right.png" width={140} height={109} />
+          </div>
           <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-white">
             <p className="text-3xl font-bold">{title()}</p>
             <button
