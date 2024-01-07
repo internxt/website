@@ -49,6 +49,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
       .catch(() => {
         stripeService.getAllPrices(true).then((res) => {
           setProducts(res);
+          setLoadingCards(false);
         });
         console.error('Error getting prices');
       });
@@ -62,12 +63,21 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
         console.error(err);
       });
 
-    currencyService.filterCurrencyByCountry().then((res) => {
-      setCurrency({
-        symbol: res.symbol,
-        value: res.value,
+    currencyService
+      .filterCurrencyByCountry()
+      .then((res) => {
+        setCurrency({
+          symbol: res.symbol,
+          value: res.value,
+        });
+      })
+      .catch((err) => {
+        setCurrency({
+          symbol: '€',
+          value: 1,
+        });
+        console.error(err);
       });
-    });
   }, []);
 
   return (

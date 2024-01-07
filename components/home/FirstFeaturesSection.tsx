@@ -25,12 +25,15 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
             {textContent.cta}
           </button>
 
-          <RevealY className="flex h-full w-full flex-col px-5 pt-6">
-            <img
-              src="/images/home/Internxt-secure-cloud-storage.webp"
-              alt="Internxt secure cloud storage"
-              draggable={false}
-            />
+          <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
+            <picture>
+              <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
+              <img
+                src="/images/home/Internxt-secure-cloud-storage.webp"
+                alt="Internxt secure cloud storage"
+                draggable={false}
+              />
+            </picture>
           </RevealY>
         </div>
       </div>
