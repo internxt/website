@@ -194,7 +194,7 @@ const HeroSection = ({ textContent }) => {
           <div className="flex h-full w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
               <>
-                {!isScannig ? (
+                {isScannig ? (
                   <>
                     {/* Scan process */}
                     <div className="relative flex w-full flex-col items-start justify-start overflow-hidden rounded-xl sm:h-96">
