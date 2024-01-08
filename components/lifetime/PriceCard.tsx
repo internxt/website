@@ -21,8 +21,8 @@ interface PriceCardProps {
 }
 
 const currencyValue = {
-  '€': 'EUR',
-  $: 'USD',
+  '€': 'eur',
+  $: 'usd',
 };
 
 const PriceCard = ({
@@ -112,7 +112,7 @@ const PriceCard = ({
               couponCode: coupon,
               mode: 'payment',
               // Change it once the offer is over
-              currency: 'eur',
+              currency: currencyValue[currency] ?? 'eur',
             });
           }}
           className="flex w-full flex-row"

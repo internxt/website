@@ -68,7 +68,7 @@ const PriceTable = ({ lang, country }) => {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price}
+                    price={product.price.split('.')[0]}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     popular={product.storage === '5TB'}
