@@ -76,10 +76,10 @@ const BottomBanner = () => {
         </div>
         <div className="z-40 flex flex-row items-center justify-center">
           <div className="absolute left-0">
-            <Image src="/images/banners/lifetime_small_left.png" width={140} height={109} />
+            <img width="148" height="100" src="/images/banners/lifetime_small_left.svg" />
           </div>
           <div className="absolute right-0">
-            <Image src="/images/banners/lifetime_small_right.png" width={140} height={109} />
+            <img width="148" height="100" src="/images/banners/lifetime_small_right.svg" />
           </div>
           <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-white">
             <p className="text-3xl font-bold">{title()}</p>
