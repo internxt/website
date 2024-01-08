@@ -134,7 +134,7 @@ export default function PriceCard({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
                 currency: billingFrequency === 'lifetime' ? 'eur' : currencyValue[country],
-                couponCode: billingFrequency === 'lifetime' ? coupon : null,
+                couponCode: coupon ?? null,
               });
             }
           }}

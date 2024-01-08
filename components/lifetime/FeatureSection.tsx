@@ -81,7 +81,6 @@ const FeatureSection = ({
             </div>
           ))}
         </RevealY>
-        <CampaignCtaSection textContent={bannerText.campaignCtaSection} />
       </div>
     </section>
   );

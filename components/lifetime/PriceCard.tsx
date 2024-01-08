@@ -42,7 +42,7 @@ const PriceCard = ({
 
   useEffect(() => {
     stripeService
-      .getCoupon(CouponType.ChristmasCoupon)
+      .getCoupon(CouponType.LifetimeExclusive)
       .then((coupon) => {
         setCoupon(coupon);
       })

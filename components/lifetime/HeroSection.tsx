@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Alarm, CheckCircle } from '@phosphor-icons/react';
+import React from 'react';
+import { Alarm } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 import Header from '../shared/Header';
-import Image from 'next/image';
 
 interface HeroSectionProps {
   textContent: any;
@@ -10,52 +9,48 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
-  const [height, setHeight] = useState(0);
-
   return (
-    <section
-      className="overflow-hidden"
-      style={{
-        background: 'linear-gradient(180deg, #112D91 0%, #060C40 100%)',
-      }}
-    >
-      <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
-        <div className="relative mx-auto flex h-full w-full max-w-screen-xl flex-col items-center justify-start lg:flex-row lg:items-stretch">
-          <div className="my-6 flex flex-shrink-0 flex-col items-center space-y-6 px-5 text-center sm:px-0 lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
-            {!hideTimer && (
-              <div className="flex flex-row items-center space-x-3">
-                <Alarm size={32} className="text-primary" />
-                <Countdown textColor="white" dt="2024-01-07T23:59:59" />
-              </div>
-            )}
-            <Header className="text-white lg:text-7xl">{textContent.title}</Header>
-            <div className="flex flex-col space-y-10">
-              <p className="max-w-[470px] text-2xl font-semibold text-white">{textContent.description}</p>
-              <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-x-6 lg:space-y-0">
-                <button
-                  onClick={() => {
-                    window.scrollTo({
-                      top: document.getElementById('payment').offsetTop,
-                      behavior: 'smooth',
-                    });
-                  }}
-                  className="flex items-center whitespace-nowrap rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white"
-                >
-                  {textContent.cta1}
-                </button>
-                <div className="flex flex-row items-center space-x-3">
-                  <CheckCircle size={24} className="text-primary" />
-                  <p className="whitespace-nowrap text-lg font-medium text-gray-5">{textContent.guarantee}</p>
+    <section className="overflow-hidden pt-20 lg:pt-16">
+      <div className="bg-primary-dark">
+        <div className="lg:mx-10 xl:mx-32">
+          <div className="mx-auto flex w-full max-w-screen-xl flex-col lg:flex-row">
+            <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 text-center sm:w-auto sm:px-0 md:my-8 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
+              {!hideTimer && (
+                <div className="flex flex-row rounded-lg py-2">
+                  <Alarm size={32} className="mr-4 text-white" />
+                  <Countdown textColor={'white'} />
                 </div>
+              )}
+              <div className="flex max-w-[450px] flex-col pb-10 text-center text-white lg:text-start">
+                <Header>{textContent.title}</Header>
+                <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
+              </div>
+              <div
+                onClick={() => {
+                  window.location.href = `#payment`;
+                }}
+                className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
+              >
+                <p className="px-9 py-3 text-lg font-medium text-primary">
+                  {hideTimer ? textContent.cta2 : textContent.cta1}
+                </p>
+              </div>
+
+              <div className="hidden w-full md:flex"></div>
+            </div>
+
+            <div className="hidden w-full flex-col items-end py-20 lg:flex">
+              <div className=" flex w-[770px] flex-col 2xl:w-[850px]">
+                <img
+                  src="/images/lifetime/infinity.svg"
+                  className="relative h-full w-full translate-x-56 object-contain object-left 2xl:translate-x-96"
+                  alt="Infinity icon"
+                  draggable={false}
+                />
               </div>
             </div>
-          </div>
-          <div className="relative hidden max-w-sm flex-1 items-center justify-start md:flex">
-            <div className="absolute -left-16 flex h-full w-[5000px]">
-              <img
-                className="relative h-full object-contain object-left"
-                src="/images/lifetime/Internxt_Lifetime.webp"
-              />
+            <div className="mb-20 flex flex-col items-center justify-center px-10 pt-12 lg:hidden">
+              <img src="/images/lifetime/infinity.svg" alt="Infinity icon" className="flex" draggable={false} />
             </div>
           </div>
         </div>
@@ -63,5 +58,4 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
     </section>
   );
 };
-
 export default HeroSection;

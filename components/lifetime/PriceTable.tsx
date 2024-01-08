@@ -10,15 +10,27 @@ const PriceTable = ({ lang, country }) => {
 
   useEffect(() => {
     stripeService
-      .getLifetimePrices(true)
+      .getLifetimePrices()
       .then((res) => {
         if (res) {
           setProducts(res);
-          setLoadingCards(false);
         }
       })
       .catch((err) => {
+        stripeService
+          .getLifetimePrices(true)
+          .then((prices) => {
+            if (prices) {
+              setProducts(prices);
+            }
+          })
+          .catch((error) => {
+            console.log('error');
+          });
         console.error(err);
+      })
+      .finally(() => {
+        setLoadingCards(false);
       });
   }, []);
 
