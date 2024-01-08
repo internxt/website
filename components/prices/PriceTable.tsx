@@ -35,7 +35,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     symbol: '€',
     value: 1,
   });
-  const [coupon, setCoupon] = useState<string>(null);
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
@@ -52,15 +51,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           setLoadingCards(false);
         });
         console.error('Error getting prices');
-      });
-
-    stripeService
-      .getCoupon(CouponType.ChristmasCoupon)
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch((err) => {
-        console.error(err);
       });
 
     currencyService
@@ -183,7 +173,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         lang={lang}
                         country={currency.symbol}
                         currency={currencyValue}
-                        coupon={coupon}
                       />
                     ) : (
                       <PriceCard
