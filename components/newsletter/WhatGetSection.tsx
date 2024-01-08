@@ -22,7 +22,7 @@ const WhatGetSection = ({ textContent }) => {
           <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
-        <div className="flex flex-row flex-wrap gap-32">
+        <div className="flex flex-row flex-wrap justify-center gap-32">
           {cards.map((card, index) => (
             <div key={index} className="flex max-w-[200px] flex-col items-center space-y-3 text-center">
               <card.icon className="text-primary" size={48} />
