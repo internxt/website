@@ -133,7 +133,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: billingFrequency === 'lifetime' ? 'eur' : currencyValue[country],
+                currency: currencyValue[country] ?? 'eur',
                 couponCode: coupon ?? null,
               });
             }
