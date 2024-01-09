@@ -8,7 +8,7 @@ import WhatGetSection from '../components/newsletter/WhatGetSection';
 import CtaSection from '../components/shared/CtaSection';
 
 const Newsletter = ({ lang, metatagsDescriptions, textContent, navbar, footer }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'online-privacy-ebook');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'newsletter-subscribe');
   return (
     <Layout title={metatags[0].title} description={metatags[0].description}>
       <Navbar fixed lang="en" textContent={navbar} cta={['default']} />
