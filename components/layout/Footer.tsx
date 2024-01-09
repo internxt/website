@@ -239,6 +239,9 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
+                    <Link href="/newsletter-subscribe" className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.newsletter}
+                    </Link>
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
@@ -611,6 +614,9 @@ export default function Footer({
                         darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
+                      <a href="/newsletter-subscribe" target="_top" className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.newsletter}
+                      </a>
                       <a href="https://drive.internxt.com/new" target="_blank">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
