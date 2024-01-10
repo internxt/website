@@ -18,7 +18,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           onKeyDown={() => {}}
           className="mx-auto flex flex-row items-center justify-center space-x-3"
           onClick={() => {
-            router.push('/lifetime');
+            router.push('/pricing');
           }}
         >
           <div className="flex flex-row space-x-1">
@@ -38,7 +38,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             onKeyDown={() => {}}
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              router.push('/lifetime');
+              router.push('/pricing');
             }}
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
