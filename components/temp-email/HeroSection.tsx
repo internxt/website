@@ -93,7 +93,7 @@ const HeroSection = ({ textContent }) => {
             </div>
             <div className="flex w-full flex-row items-center justify-center space-x-3">
               <button
-                className="flex w-full flex-row items-center justify-center space-x-2 rounded-lg bg-primary px-5 py-2 text-white shadow-sm hover:bg-primary-dark"
+                className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg bg-primary px-5 py-2 text-white shadow-sm hover:bg-primary-dark"
                 onClick={() => {
                   openToast();
                   copy(email);
@@ -103,7 +103,7 @@ const HeroSection = ({ textContent }) => {
                 <p>{textContent.copyEmail}</p>
               </button>
               <button
-                className="flex w-full flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-white px-5 py-2 shadow-sm hover:bg-gray-10"
+                className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-gray-10 bg-white px-5 py-2 shadow-sm hover:bg-gray-10"
                 onClick={() => {
                   removeLocalStorage();
                   setEmail('');
