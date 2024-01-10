@@ -153,7 +153,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
         <Transition
           show={individual && !loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
-          className={'flex flex-col pb-20 md:pb-0'}
+          className={'flex flex-col'}
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4 py-14">
@@ -192,10 +192,10 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 );
               })}
           </div>
-          <div className="flex px-5">
-            <FreePlanCard textContent={contentText.freePlanCard} />
-          </div>
         </Transition>
+        <div className="content flex w-full px-5 pb-20 md:pb-0">
+          <FreePlanCard textContent={contentText.freePlanCard} />
+        </div>
 
         <Transition
           show={!individual}
