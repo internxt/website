@@ -37,7 +37,7 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 py-20">
+    <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
         <p className="max-w-[720px] text-center text-5xl font-semibold">
           {textContent.title.text1}

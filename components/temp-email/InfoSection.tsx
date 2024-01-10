@@ -5,7 +5,7 @@ import SignUpBanner from '../banners/SignUpBanner';
 
 const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
-    <section className="overflow-hidden bg-gray-1 px-5">
+    <section className="overflow-hidden bg-gray-1 px-5 pb-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
@@ -74,9 +74,9 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
             />
           </div>
           <div className="flex max-w-2xl flex-col space-y-3">
-            <p className="text-3xl font-medium lg:text-2xl">{textContent.whenUseTempMail.title}</p>
+            <p className="text-3xl font-medium text-gray-100 lg:text-2xl">{textContent.whenUseTempMail.title}</p>
             <p className="text-lg">{textContent.whenUseTempMail.description}</p>
-            <ul className="list-disc space-y-1.5 pl-6 text-lg lg:max-w-2xl">
+            <ul className="list-disc space-y-1 pl-5 text-lg text-gray-80 lg:max-w-2xl">
               {textContent.whenUseTempMail.bulletedList.map((item, index) => (
                 <li key={item}>{item}</li>
               ))}
