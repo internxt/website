@@ -17,14 +17,15 @@ const SignUpBanner = ({ textContent, lang }: { textContent: any; lang: string })
           </div>
         </div>
         <div className="absolute -right-64 flex items-center">
-          <div className="relative right-0 top-6 flex flex-col bg-cover">
+          <div className="relative right-0  flex flex-col bg-contain">
             <Image
-              src="/images/special-offer/black-friday/Devices.png"
+              src="/images/home/Internxt-secure-cloud-storage.webp"
               width={534}
-              height={340}
+              height={300}
               // draggable="false"
               quality={100}
               loading="eager"
+              className="object-contain"
               layout="intrinsic"
               alt="desktop, laptop and phone with Internxt app"
             />

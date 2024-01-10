@@ -61,7 +61,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
           </div>
           <div>
             <Image
-              src="/images/temp-email/SwitchToPrivacy.png"
+              src="/images/temp-email/cta_general_10_storage_en.webp"
               alt="Switch to privacy"
               width={895}
               height={355}
