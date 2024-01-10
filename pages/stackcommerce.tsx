@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import HeroSection from '../components/dealfuel/HeroSection';
-import FeatureSection from '../components/dealfuel/FeatureSection';
+import FeatureSection from '../components/lifetime/FeatureSection';
 import GetLifetimeSection from '../components/dealfuel/GetLifetimeSection';
 import Footer from '../components/layout/Footer';
 import Layout from '../components/layout/Layout';
@@ -74,7 +74,7 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
 
       <CtaSection textContent={langJson.CtaSection} />
 
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter />
+      <Footer textContent={footerLang} lang={deviceLang} />
     </Layout>
   );
 };

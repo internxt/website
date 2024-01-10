@@ -11,10 +11,10 @@ const GetLifetimeSection = ({ textContent }) => {
   const secondTitle = splitTitle[1];
 
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-primary">
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">
         <div className="flex flex-col items-center py-16">
-          <div className="mb-8 flex flex-col items-center px-6 text-center font-semibold text-black">
+          <div className="mb-8 flex flex-col items-center px-6 text-center font-semibold text-white">
             {lang === 'it' || lang === 'de' || lang === 'ru' ? (
               <h2 className="max-w-[900px] text-5xl font-semibold leading-tight">
                 {firstTitle}!{secondTitle}

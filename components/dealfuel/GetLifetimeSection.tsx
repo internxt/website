@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import RevealY from '../components/RevealY';
 
 const GetLifetimeSection = ({ textContent }) => (
   <section className="bg-primary-dark">
@@ -9,28 +9,16 @@ const GetLifetimeSection = ({ textContent }) => (
         <p className="pt-4 text-xl font-normal">{textContent.description}</p>
       </div>
 
-      <div className="hidden flex-col px-8 pt-4 lg:flex">
-        <Image
-          loading="lazy"
-          width={673}
-          height={354}
-          layout="intrinsic"
-          draggable={false}
-          src="/images/lifetime/Devices.png"
-          alt="iPhone, iPad, and Mac"
-        />
-      </div>
-      <div className="flex flex-col px-8 pt-4 lg:hidden">
-        <Image
-          height={384}
-          width={600}
-          loading="lazy"
-          layout="intrinsic"
-          className="object-contain"
-          src="/images/home/devicesMobileView.webp"
-          alt="iPhone, iPad, and Mac"
-        />
-      </div>
+      <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
+        <picture>
+          <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
+          <img
+            src="/images/home/Internxt-secure-cloud-storage.webp"
+            alt="Internxt secure cloud storage"
+            draggable={false}
+          />
+        </picture>
+      </RevealY>
     </div>
   </section>
 );

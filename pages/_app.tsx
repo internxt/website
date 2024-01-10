@@ -9,7 +9,14 @@ import * as gtag from '../lib/gtag';
 import BottomBanner from '../components/banners/BottomBanner';
 import ShowSnackbar from '../components/Snackbar';
 
-const excludedPaths = ['/lifetime', '/pricing', '/partner-discount'];
+const excludedPaths = [
+  '/lifetime',
+  '/pricing',
+  '/partner-discount',
+  '/techradar-discount',
+  '/stackcommerce',
+  '/dealfuel',
+];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
 
