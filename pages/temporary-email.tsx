@@ -39,9 +39,9 @@ const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 
-        <QASection textContent={textContent.QASection} />
-
         <SignupSection textContent={textContent.SignupSection} />
+
+        <QASection textContent={textContent.QASection} />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>
