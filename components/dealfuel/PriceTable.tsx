@@ -43,7 +43,7 @@ const PriceTable = ({ lang, country }) => {
     <section className="overflow-hidden">
       <div
         id="priceTable"
-        className="content mb-10 flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
+        className="content mb-16 flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
       >
         <PriceCard
           planType="individual"
