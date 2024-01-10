@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import isBrave from '../../lib/brave';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
