@@ -35,6 +35,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     symbol: '€',
     value: 1,
   });
+  const [coupon, setCoupon] = useState<CouponType>(null);
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
@@ -51,6 +52,14 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           setLoadingCards(false);
         });
         console.error('Error getting prices');
+      });
+    stripeService
+      .getCoupon(CouponType.SoftSale)
+      .then((res) => {
+        setCoupon(res);
+      })
+      .catch(() => {
+        console.error('Error getting coupon');
       });
 
     currencyService
@@ -179,13 +188,19 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price}
+                        price={
+                          billingFrequency === Interval.Year
+                            ? Math.floor(((product.price * 50) / 100) * 100) / 100
+                            : product.price
+                        }
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
+                        priceBefore={billingFrequency === Interval.Year && product.price}
                         lang={lang}
                         country={currency.symbol}
                         currency={currencyValue}
+                        coupon={billingFrequency === Interval.Year ? coupon : null}
                       />
                     )}
                   </>

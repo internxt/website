@@ -11,6 +11,7 @@ export enum CouponType {
   BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
   ChristmasCoupon = 'COUPON_CHRISTMAS',
   LifetimeExclusive = 'COUPON_LIFETIME_FIFTY',
+  SoftSale = 'COUPON_SOFTSALE50',
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {

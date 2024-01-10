@@ -23,42 +23,42 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return 'Lifetime security for your files';
+        return '50% OFF annual subscription plans!';
       case 'es':
-        return 'Seguridad para tus archivos de por vida';
+        return '¡50% de descuento en planes anuales!';
       case 'ru':
-        return 'Пожизненная безопасность файлов';
+        return 'Скидка 50% на годовой абонемент!';
       case 'fr':
-        return 'Sécurité à vie pour vos fichiers';
+        return '50 % de réduction sur les abonnements annuels!';
       case 'it':
-        return 'Sicurezza a vita per i tuoi file';
+        return '50% di sconto sui piani di abbonamento annuali!';
       case 'zh':
-        return '文件的终身安全';
+        return '年度订阅计划 5 折优惠！';
       case 'de':
-        return 'Lebenslange Sicherheit für Ihre Dateien';
+        return '50 % Rabatt auf Jahresabonnementpläne!';
       default:
-        return 'Lifetime security for your files';
+        return '50% OFF annual subscription plans!';
     }
   };
 
   const ctaText = () => {
     switch (lang) {
       case 'en':
-        return 'View plans';
+        return 'Choose plan';
       case 'es':
-        return 'Ver planes';
+        return 'Elige un plan';
       case 'ru':
-        return 'Тарифные планы';
+        return 'Выбрать план';
       case 'fr':
-        return 'Voir les plans';
+        return 'Choisissez plan';
       case 'it':
-        return 'Visualizza i piani';
+        return 'Scegli un piano';
       case 'zh':
-        return '查看计划';
+        return '选择计划';
       case 'de':
-        return 'Pläne anzeigen';
+        return 'Wählen Sie einen Plan';
       default:
-        return 'View plans';
+        return 'Choose plan';
     }
   };
 
@@ -66,27 +66,21 @@ const BottomBanner = () => {
     <section
       className={`fixed bottom-10 z-50 hidden lg:${
         hidePopup ? 'hidden' : 'flex'
-      } mx-auto overflow-hidden rounded-lg bg-primary-dark px-5 lg:px-0`}
+      } mx-auto overflow-hidden rounded-lg bg-gradient-to-b from-[#060C40] to-primary px-5 lg:px-0`}
     >
-      <div className="relative flex h-[100px] w-[898px] flex-col items-center justify-center bg-contain bg-center bg-no-repeat">
+      <div className="relative flex h-[100px] flex-col items-center justify-center bg-contain bg-center bg-no-repeat px-20">
         <div className="flex items-end justify-end">
           <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2">
             <X className=" text-white" size={24} />
           </button>
         </div>
         <div className="z-40 flex flex-row items-center justify-center">
-          <div className="absolute left-0">
-            <img width="148" height="100" src="/images/banners/lifetime_small_left.svg" />
-          </div>
-          <div className="absolute right-0">
-            <img width="148" height="100" src="/images/banners/lifetime_small_right.svg" />
-          </div>
           <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-white">
             <p className="text-3xl font-bold">{title()}</p>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-blue-10 active:bg-blue-10 sm:text-lg"
               onClick={() => {
-                router.push('/lifetime');
+                router.push('/pricing');
               }}
             >
               {ctaText()}
