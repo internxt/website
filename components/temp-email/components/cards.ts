@@ -35,27 +35,3 @@ export const infoCards = (lang) => {
     },
   ];
 };
-
-export const toolsCards = [
-  {
-    url: '/images/temp-email/password-checker.svg',
-    UrlRedirectName: 'password-checker',
-    width: 125,
-    title: 'Free Password Strength Checker',
-    description: 'Check now',
-  },
-  {
-    url: '/images/temp-email/virus-scanner.svg',
-    UrlRedirectName: 'virus-scanner',
-    width: 105,
-    title: 'Free Virus Scanner',
-    description: 'Scan now',
-  },
-  {
-    url: '/images/temp-email/byte-converter.svg',
-    UrlRedirectName: 'byte-converter',
-    width: 95,
-    title: 'Free Byte Converter',
-    description: 'Convert now',
-  },
-];

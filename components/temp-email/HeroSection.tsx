@@ -100,10 +100,10 @@ const HeroSection = ({ textContent }) => {
                 }}
               >
                 <Copy size={24} />
-                <p>{textContent.copyEmail}</p>
+                <p className="whitespace-nowrap">{textContent.copyEmail}</p>
               </button>
               <button
-                className="flex w-full flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm hover:bg-gray-10"
+                className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm hover:bg-gray-10"
                 onClick={() => {
                   removeLocalStorage();
                   setEmail('');

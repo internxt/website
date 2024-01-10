@@ -92,39 +92,7 @@
       ]
     }
   },
-  "ToolsSection": {
-    "title": "Try out other Internxt's free online security tools:",
-    "toolsCard": [
-      {
-        "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "password-checker",
-        "width": 125,
-        "title": "Free Password Strength Checker",
-        "description": "Check now"
-      },
-      {
-        "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "virus-scanner",
-        "width": 105,
-        "title": "Free Virus Scanner",
-        "description": "Scan now"
-      },
-      {
-        "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "byte-converter",
-        "width": 95,
-        "title": "Free Byte Converter",
-        "description": "Convert now"
-      },
-      {
-        "url": "/images/temp-email/password-generator.svg",
-        "UrlRedirectName": "password-generator",
-        "title": "Free Password Generator",
-        "width": 124,
-        "description": "Generate now"
-      }
-    ]
-  },
+
   "QASection": {
     "title": "Questions? We have answers",
     "faq": [

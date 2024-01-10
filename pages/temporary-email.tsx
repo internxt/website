@@ -6,13 +6,13 @@ import Navbar from '../components/layout/Navbar';
 import HeroSection from '../components/temp-email/HeroSection';
 import SignupSection from '../components/temp-email/SignupSection';
 import InfoSection from '../components/temp-email/InfoSection';
-import ToolsSection from '../components/temp-email/ToolsSection';
+import ToolsSection from '../components/shared/ToolsSection';
 import QASection from '../components/shared/FaqSection';
 import Footer from '../components/layout/Footer';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
-const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerLang }) => {
+const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang, navbarLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
 
   return (
@@ -37,7 +37,7 @@ const TempEmail = ({ metatagsDescriptions, textContent, footerLang, navbarLang, 
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
-        <ToolsSection textContent={textContent.ToolsSection} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
         <QASection textContent={textContent.QASection} />
 
@@ -56,6 +56,7 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`../assets/lang/${lang}/temporary-email.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
   const bannerLang = require(`../assets/lang/${lang}/banners.json`);
 
   return {
@@ -66,6 +67,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       bannerLang,
+      toolsContent,
     },
   };
 }
