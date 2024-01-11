@@ -92,39 +92,6 @@
       ]
     }
   },
-  "ToolsSection": {
-    "title": "其他免费隐私工具，例如我们的临时邮箱",
-    "toolsCard": [
-      {
-        "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "password-checker",
-        "width": 125,
-        "title": "免费密码强度检查器",
-        "description": "现在检查"
-      },
-      {
-        "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "virus-scanner",
-        "width": 105,
-        "title": "免费病毒扫描程序",
-        "description": "现在扫描"
-      },
-      {
-        "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "byte-converter",
-        "width": 95,
-        "title": "免费字节转换器",
-        "description": "立即转换"
-      },
-      {
-        "url": "/images/temp-email/password-generator.svg",
-        "UrlRedirectName": "password-generator",
-        "title": "免费密码生成器",
-        "width": 124,
-        "description": "立即生成"
-      }
-    ]
-  },
   "QASection": {
     "title": "问题？ 我们有答案",
     "faq": [

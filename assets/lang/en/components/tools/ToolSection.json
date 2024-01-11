@@ -1,0 +1,35 @@
+{
+  "title": {
+    "text1": "Try out other Internxt's ",
+    "blueText": "free ",
+    "text2": "online security tools"
+  },
+  "free": "Free",
+  "toolsCard": [
+    {
+      "title": "Password Generator",
+      "cta": "Generate now",
+      "pathname": "/password-generator"
+    },
+    {
+      "title": "Password Strength Checker",
+      "cta": "Check now",
+      "pathname": "/password-checker"
+    },
+    {
+      "title": "Byte Unit Converter",
+      "cta": "Convert now",
+      "pathname": "/byte-converter"
+    },
+    {
+      "title": "Temporary Email",
+      "cta": "Mail now",
+      "pathname": "/temporary-email"
+    },
+    {
+      "title": "Virus Scanner",
+      "cta": "Scan now",
+      "pathname": "/virus-scanner"
+    }
+  ]
+}

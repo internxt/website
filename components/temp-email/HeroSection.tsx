@@ -69,10 +69,10 @@ const HeroSection = ({ textContent }) => {
           <Header>{textContent.title}</Header>
           <p className="max-w-2xl pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
-        <div className="flex flex-col items-center ">
-          <div className="flex w-full max-w-[370px] flex-col items-center justify-center space-y-3">
+        <div className="flex flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-9">
+          <div className="flex w-full flex-col items-center justify-center space-y-3">
             <div
-              className={`flex h-full w-full items-center justify-center rounded-xl ${
+              className={`flex h-full w-full max-w-[400px] items-center justify-center rounded-xl ${
                 borderColor ? 'ring   ring-primary ring-opacity-15' : 'border border-gray-20'
               }`}
             >
@@ -93,7 +93,7 @@ const HeroSection = ({ textContent }) => {
             </div>
             <div className="flex w-full flex-row items-center justify-center space-x-3">
               <button
-                className="flex w-full flex-row items-center justify-center space-x-2 rounded-lg bg-primary px-5 py-2 text-white shadow-sm hover:bg-primary-dark"
+                className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg bg-primary px-5 py-2 text-white shadow-sm hover:bg-primary-dark"
                 onClick={() => {
                   openToast();
                   copy(email);
@@ -103,7 +103,7 @@ const HeroSection = ({ textContent }) => {
                 <p>{textContent.copyEmail}</p>
               </button>
               <button
-                className="flex w-full flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-transparent px-5 py-2 shadow-sm hover:bg-gray-10"
+                className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-gray-10 bg-white px-5 py-2 shadow-sm hover:bg-gray-10"
                 onClick={() => {
                   removeLocalStorage();
                   setEmail('');
