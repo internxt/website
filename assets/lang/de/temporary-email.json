@@ -92,39 +92,6 @@
       ]
     }
   },
-  "ToolsSection": {
-    "title": "Andere kostenlose Datenschutz-Tools wie unser temporäres Postfach",
-    "toolsCard": [
-      {
-        "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "Passwort-Checker",
-        "width": 125,
-        "title": "Kostenloser Passwort-Stärke-Checker",
-        "description": "Prüfe jetzt"
-      },
-      {
-        "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "Virus-Scanner",
-        "width": 105,
-        "title": "Kostenloser Virus Scanner",
-        "description": "Scanne jetzt"
-      },
-      {
-        "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "Byte-Konverter",
-        "width": 95,
-        "title": "Kostenloser Byte-Konverter",
-        "description": "Konvertiere jetzt"
-      },
-      {
-        "url": "/images/temp-email/password-generator.svg",
-        "UrlRedirectName": "password-generator",
-        "width": 124,
-        "title": "Kostenloser Passwort-Generator",
-        "description": "Jetzt generieren"
-      }
-    ]
-  },
   "QASection": {
     "title": "Fragen? Wir haben Antworten",
     "faq": [

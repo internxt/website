@@ -4,12 +4,20 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/shared/CtaSection';
 import HeroSection from '../components/what-does-google-know-about-me/HeroSection';
 import ManageGoogleDataSection from '../components/what-does-google-know-about-me/ManageGoogleDataSection';
-import ToolsSection from '../components/what-does-google-know-about-me/ToolsSection';
+import ToolsSection from '../components/shared/ToolsSection';
 import WhatGoogleKnowsSection from '../components/what-does-google-know-about-me/WhatGoogleKnowsSection';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
-const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navbarLang, footerLang, bannerLang }) => {
+const WhatDoesGoogleKnowAboutMe = ({
+  lang,
+  langJson,
+  toolsContent,
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  bannerLang,
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'what-google-knows');
 
   return (
@@ -31,7 +39,7 @@ const WhatDoesGoogleKnowAboutMe = ({ lang, langJson, metatagsDescriptions, navba
 
       <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
-      <ToolsSection textContent={langJson.ToolsSection} />
+      <ToolsSection textContent={toolsContent} lang={lang} />
 
       <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
       <Footer textContent={footerLang} lang={lang} />
@@ -44,6 +52,7 @@ export async function getServerSideProps(ctx: any) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/what-does-google-know-about-me.json`);
+  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const bannerLang = require(`../assets/lang/${lang}/banners.json`);
@@ -51,6 +60,7 @@ export async function getServerSideProps(ctx: any) {
   return {
     props: {
       langJson,
+      toolsContent,
       metatagsDescriptions,
       navbarLang,
       footerLang,
