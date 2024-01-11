@@ -22,7 +22,6 @@ const PasswordChecker = ({
   footerLang,
   lang,
   bannerLang,
-  InfoSectionText,
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-checker');
 
@@ -53,7 +52,11 @@ const PasswordChecker = ({
 
         <HeroSection textContent={langJson.HeroSection} />
 
-        <InfoSection textContent={InfoSectionText} bannerText={bannerLang.SignUpPasswordGenerator} hideLast2Sections />
+        <InfoSection
+          textContent={langJson.InfoSection}
+          bannerText={bannerLang.SignUpPasswordGenerator}
+          hideLast2Sections
+        />
 
         <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
 
@@ -84,7 +87,6 @@ export async function getServerSideProps(ctx) {
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const bannerLang = require(`../assets/lang/${lang}/banners.json`);
-  const InfoSectionText = require(`../assets/lang/${lang}/password-generator.json`);
 
   return {
     props: {
@@ -93,7 +95,6 @@ export async function getServerSideProps(ctx) {
       toolsContent,
       footerLang,
       navbarLang,
-      InfoSectionText: InfoSectionText.InfoSection,
       lang,
       bannerLang,
     },
