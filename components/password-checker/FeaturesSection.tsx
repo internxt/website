@@ -51,8 +51,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
         </div>
       </div>
 
-      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
-
       {/* Password tool info */}
       <div className="flex w-full flex-col items-center justify-center">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
@@ -74,20 +72,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section4.title}</h3>
 
-              <p className="text-lg text-gray-80">{textContent.section4.subtitle1}</p>
-
-              <p className="text-lg text-gray-80">
-                {textContent.section4.subtitle2.part1}{' '}
-                <a
-                  href="https://github.com/internxt"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-primary underline"
-                >
-                  {textContent.section4.subtitle2.link}
-                </a>{' '}
-                {textContent.section4.subtitle2.part2}
-              </p>
+              <RenderDescription description={textContent.section4.description} />
             </div>
 
             <div className="flex cursor-pointer">
@@ -116,42 +101,16 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section5.title}</h3>
-              <p className="text-lg text-gray-80">
-                {textContent.section5.subtitle1.part1}{' '}
-                <Link href="/privacy" lang={lang} passHref>
-                  <a target="_top" rel="noreferrer" className="text-primary underline">
-                    {textContent.section5.subtitle1.link}
-                  </a>
-                </Link>{' '}
-                {textContent.section5.subtitle1.part2}
-              </p>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section5.subtitle2}</p>
-
-              <p className="text-lg text-gray-80">
-                {textContent.section5.subtitle3.part1}{' '}
-                <a
-                  href={`https://blog.internxt.com/${
-                    lang === 'es' ? 'es/que-es-la-tecnologia-web3/' : 'what-is-web3/'
-                  }`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-primary underline"
-                >
-                  {textContent.section5.subtitle3.link}
-                </a>{' '}
-                {textContent.section5.subtitle3.part2}
-              </p>
+              <RenderDescription description={textContent.section5.description} />
             </div>
           </div>
         </div>
       </div>
 
-      <CtaSection textContent={textContent.CtaSection1} url="https://drive.internxt.com/new" />
-
-      <div className="flex w-full flex-col items-center justify-center bg-gray-1 py-16">
+      <div className="flex w-full flex-col items-center justify-center py-16">
         <div className="flex flex-col items-center justify-center space-y-16">
-          <div className="justify-center-center flex max-w-2xl flex-col">
+          <div className="justify-center-center flex max-w-2xl flex-col space-y-3">
             <h3 className="text-left text-2xl font-medium">{textContent.section6.title}</h3>
 
             <RenderDescription description={textContent.section6.description} />

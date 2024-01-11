@@ -11,6 +11,8 @@ import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import ToolsSection from '../components/shared/ToolsSection';
+import CtaSection from '../components/shared/CtaSection';
+import InfoSection from '../components/password-generator/InfoSection';
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -20,6 +22,7 @@ const PasswordChecker = ({
   footerLang,
   lang,
   bannerLang,
+  InfoSectionText,
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-checker');
 
@@ -50,6 +53,10 @@ const PasswordChecker = ({
 
         <HeroSection textContent={langJson.HeroSection} />
 
+        <InfoSection textContent={InfoSectionText} bannerText={bannerLang.SignUpPasswordGenerator} hideLast2Sections />
+
+        <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
+
         <FeaturesSection
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpPwdCheckerBanner}
@@ -57,6 +64,8 @@ const PasswordChecker = ({
         />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
+
+        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
 
         <FAQSection textContent={langJson.FaqSection} />
 
@@ -75,6 +84,7 @@ export async function getServerSideProps(ctx) {
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const bannerLang = require(`../assets/lang/${lang}/banners.json`);
+  const InfoSectionText = require(`../assets/lang/${lang}/password-generator.json`);
 
   return {
     props: {
@@ -83,6 +93,7 @@ export async function getServerSideProps(ctx) {
       toolsContent,
       footerLang,
       navbarLang,
+      InfoSectionText: InfoSectionText.InfoSection,
       lang,
       bannerLang,
     },
