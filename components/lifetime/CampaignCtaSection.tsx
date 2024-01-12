@@ -17,7 +17,7 @@ const CampaignCtaSection = ({ textContent }) => {
     <section className="overflow-hidden px-5 lg:px-0">
       <div className="flex flex-col items-center rounded-[32px] bg-primary">
         <div className="relative flex flex-row">
-          <div className="flex w-full flex-col items-center justify-center space-y-6 py-16 pl-16 text-center text-white lg:items-start lg:text-left">
+          <div className="flex w-full flex-col items-center justify-center space-y-6 py-16 text-center text-white lg:items-start lg:pl-16 lg:text-left">
             <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white px-5 py-2">
               <p className="text-5xl font-bold text-primary">{textContent.label}</p>
             </div>
