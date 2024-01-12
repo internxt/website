@@ -14,10 +14,10 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "header": "¡Ahorros navideños",
-      "title": "50% DE DESCUENTO en todos los planes de por vida",
-      "subtitle": "Protege lo realmente importante con el almacenamiento en la nube seguro, privado y encriptado de Internxt.",
-      "cta": "Obtén un 50% DE DESCUENTO ahora",
+      "label": "Ahorra 70%",
+      "title": "¡Toma el control de tus datos!",
+      "subtitle": "Suscríbete y asegura tus archivos con Internxt",
+      "cta": "¡Obtén un 70% de descuento ahora!",
       "guarantee": "Garantía de devolución de dinero de 30 días"
     },
     "featureSection": {

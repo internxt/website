@@ -14,10 +14,10 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "header": "Christmas savings!",
-      "title": "50% OFF all lifetime plans",
-      "subtitle": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-      "cta": "Get 50% OFF now",
+      "label": "Save 70%",
+      "title": "Take control of your data!",
+      "subtitle": "Subscribe and secure your files with Internxt",
+      "cta": "Get 70% OFF now",
       "guarantee": "30-day money-back guarantee"
     },
     "featureSection": {
