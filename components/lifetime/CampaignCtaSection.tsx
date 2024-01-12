@@ -1,11 +1,8 @@
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import React from 'react';
 
 const CampaignCtaSection = ({ textContent }) => {
-  const router = useRouter();
-
   function handleOnClick() {
     window.scrollTo({
       top: document.getElementById('billingButtons').offsetTop,
