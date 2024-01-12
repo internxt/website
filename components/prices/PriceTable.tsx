@@ -54,7 +54,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
         console.error('Error getting prices');
       });
     stripeService
-      .getCoupon(CouponType.SoftSale)
+      .getCoupon(CouponType.DataPrivacy)
       .then((res) => {
         setCoupon(res);
       })
@@ -198,7 +198,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         lang={lang}
                         country={currency.symbol}
                         currency={currencyValue}
-                        coupon={billingFrequency === Interval.Year ? coupon : null}
+                        coupon={coupon}
                       />
                     )}
                   </>
