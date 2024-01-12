@@ -88,6 +88,10 @@
     "title": "Max out your Google privacy settings with our What Google Knows page"
   },
   "TopBarBanner": {
-    "title": "Get annual storage for 50% OFF! Choose plan"
+    "title": {
+      "normalText": "Prepare for Data Privacy Week: ",
+      "boldText": "70% off monthly & annual plans!",
+      "cta": "Choose plan"
+    }
   }
 }
