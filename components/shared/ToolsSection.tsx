@@ -47,7 +47,7 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
         <div className="flex w-full  max-w-[850px] flex-col gap-5 lg:gap-2">
           {cards.map((tool) => (
             <div
-              id={tool.title}
+              key={tool.title}
               className="flex w-full flex-col items-center justify-between gap-4 rounded-[10px] border border-gray-10 bg-white px-10 py-6 lg:flex-row lg:gap-0"
             >
               <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:text-left">
