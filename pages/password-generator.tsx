@@ -14,7 +14,7 @@ const DRIVE_URL = 'https://drive.internxt.com/new';
 
 const PasswordGenerator = ({
   metatagsDescriptions,
-  toolsSection,
+  toolsContent,
   langJson,
   lang,
   navbarLang,
@@ -38,7 +38,7 @@ const PasswordGenerator = ({
 
       <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
-      <ToolsSection textContent={toolsSection} lang={lang} />
+      <ToolsSection textContent={toolsContent} lang={lang} />
 
       <FAQSection textContent={langJson.FaqSection} />
 
