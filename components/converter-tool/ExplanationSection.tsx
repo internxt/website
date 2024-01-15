@@ -22,7 +22,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
         </div>
         <div>
           <Image
-            src="/images/converter-tool/GB-TB.png"
+            src="/images/converter-tool/GB-TB.webp"
             width={784}
             height={385.5}
             layout="intrinsic"
@@ -50,7 +50,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
             className="flex max-w-4xl cursor-pointer flex-row"
           >
             <Image
-              src={`/images/converter-tool/VirusScanner${langUpperCase}.png`}
+              src={`/images/converter-tool/VirusScanner${langUpperCase}.webp`}
               width={897}
               height={350}
               layout={'intrinsic'}

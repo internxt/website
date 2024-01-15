@@ -143,7 +143,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
             className="mx-5 flex max-w-4xl cursor-pointer flex-row"
           >
             <Image
-              src={`/images/converter-tool/PasswordChecker${langUpperCase}.png`}
+              src={`/images/converter-tool/PasswordChecker${langUpperCase}.webp`}
               width={897}
               height={350}
               layout="intrinsic"
