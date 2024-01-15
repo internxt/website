@@ -12,6 +12,7 @@ export enum CouponType {
   ChristmasCoupon = 'COUPON_CHRISTMAS',
   LifetimeExclusive = 'COUPON_LIFETIME_FIFTY',
   SoftSale = 'COUPON_SOFTSALE50',
+  DataPrivacy = 'COUPON_DATA_PRIVACY',
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {

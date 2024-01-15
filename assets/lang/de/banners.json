@@ -77,6 +77,10 @@
     "blueText": "Komm kostenlos zu Internxt"
   },
   "TopBarBanner": {
-    "title": "Erhalten Sie 50% Rabatt auf den jährlichen Speicher! Wählen Sie einen Plan"
+    "title": {
+      "normalText": "Bereiten Sie sich auf die Datenschutzwoche vor: ",
+      "boldText": "70% Rabatt auf monatliche und jährliche Pläne!",
+      "cta": "Plan auswählen"
+    }
   }
 }

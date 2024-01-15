@@ -23,21 +23,21 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return '50% OFF annual subscription plans!';
+        return { title1: 'Save 70%', title2: 'on monthly & annual subscriptions!' };
       case 'es':
-        return '¡50% de descuento en planes anuales!';
+        return { title1: '¡Ahorra un 70%', title2: 'en las suscripciones anuales y mensuales!' };
       case 'ru':
-        return 'Скидка 50% на годовой абонемент!';
+        return { title1: 'Экономия 70%', title2: 'на месячных и годовых планах!' };
       case 'fr':
-        return '50 % de réduction sur les abonnements annuels!';
+        return { title1: 'Économisez 70%', title2: 'sur les abonnements mensuels et annuels !' };
       case 'it':
-        return '50% di sconto sui piani di abbonamento annuali!';
+        return { title1: 'Risparmia il 70%', title2: 'su abbonamenti mensili e annuali!' };
       case 'zh':
-        return '年度订阅计划 5 折优惠！';
+        return { title1: '省 70%', title2: '月度和年度订阅优惠！' };
       case 'de':
-        return '50 % Rabatt auf Jahresabonnementpläne!';
+        return { title1: 'Sparen Sie 70%', title2: 'bei monatlichen und jährlichen Abonnements!' };
       default:
-        return '50% OFF annual subscription plans!';
+        return { title1: 'Save 70%', title2: 'on monthly & annual subscriptions!' };
     }
   };
 
@@ -66,17 +66,27 @@ const BottomBanner = () => {
     <section
       className={`fixed bottom-10 z-50 hidden lg:${
         hidePopup ? 'hidden' : 'flex'
-      } mx-auto overflow-hidden rounded-lg bg-gradient-to-b from-[#060C40] to-primary px-5 lg:px-0`}
+      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
-      <div className="relative flex h-[100px] flex-col items-center justify-center bg-contain bg-center bg-no-repeat px-20">
+      <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
           <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2">
             <X className=" text-white" size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row items-center justify-center">
-          <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-white">
-            <p className="text-3xl font-bold">{title()}</p>
+        <div className="z-40 flex flex-row ">
+          <div className="flex flex-col">
+            <Image
+              src="/images/banners/data_privacy_internxt.webp"
+              width={198}
+              height={100}
+              className="flex w-full object-fill"
+              draggable={false}
+            />
+          </div>
+          <div className="flex flex-row items-center justify-center space-x-5 text-white">
+            <p className="text-6xl font-bold">{title().title1}</p>
+            <p className="max-w-[300px] text-2xl font-bold">{title().title2}</p>
             <button
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-blue-10 active:bg-blue-10 sm:text-lg"
               onClick={() => {

@@ -14,10 +14,10 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "header": "Économies de Noël !",
-      "title": "50 % DE RÉDUCTION sur tous les plans à vie",
-      "subtitle": "Protégez les choses vraiment importantes avec le stockage cloud sécurisé, privé et crypté d'Internxt.",
-      "cta": "Profitez de 50 % DE RÉDUCTION maintenant",
+      "label": "Économisez 70%",
+      "title": "Prenez le contrôle de vos données !",
+      "subtitle": "Abonnez-vous et sécurisez vos fichiers avec Internxt",
+      "cta": "Obtenez 70% de réduction maintenant",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "featureSection": {

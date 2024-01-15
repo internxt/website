@@ -54,7 +54,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
         console.error('Error getting prices');
       });
     stripeService
-      .getCoupon(CouponType.SoftSale)
+      .getCoupon(CouponType.DataPrivacy)
       .then((res) => {
         setCoupon(res);
       })
@@ -83,6 +83,8 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
+          <CampaignCtaSection textContent={textContent.ctaBanner} />
+
           <div className="flex flex-col items-center px-5">
             <h1 className="max-w-4xl text-center text-6xl font-semibold">
               {individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}
@@ -104,7 +106,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           </div>
         </div>
         {individual && (
-          <div className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
+          <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
             <button
               type="button"
               onClick={() => {
@@ -188,19 +190,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={
-                          billingFrequency === Interval.Year
-                            ? Math.floor(((product.price * 50) / 100) * 100) / 100
-                            : product.price
-                        }
+                        price={Math.floor(((product.price * 30) / 100) * 100) / 100}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
-                        priceBefore={billingFrequency === Interval.Year && product.price}
+                        priceBefore={product.price}
                         lang={lang}
                         country={currency.symbol}
                         currency={currencyValue}
-                        coupon={billingFrequency === Interval.Year ? coupon : null}
+                        coupon={coupon}
                       />
                     )}
                   </>

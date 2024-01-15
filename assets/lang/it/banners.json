@@ -83,6 +83,10 @@
     "title": "Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy"
   },
   "TopBarBanner": {
-    "title": "Ottieni uno spazio di archiviazione annuale scontato del 50%! Scegli un piano"
+    "title": {
+      "normalText": "Preparati per la Settimana della Privacy dei Dati: ",
+      "boldText": "Sconto del 70% su piani mensili e annuali!",
+      "cta": "Scegli un piano"
+    }
   }
 }

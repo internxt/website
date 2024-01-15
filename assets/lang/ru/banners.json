@@ -83,7 +83,11 @@
     "title": "Max out your Google privacy settings with our What Google Knows page"
   },
   "TopBarBanner": {
-    "title": "Обеспечьте безопасность ваших файлов на всю жизнь одним легким платежом! Выберите свой план"
+    "title": {
+      "normalText": "Подготовьтесь к Неделе онлайн безопасности: ",
+      "boldText": "Скидка 70% на месячные и годовые тарифные планы! Выбрать",
+      "cta": "тарифный план"
+    }
   },
   "AndroidSmartBanner": {
     "title": "Годовой абонемент со скидкой 50%! Выбрать тарифный план"
