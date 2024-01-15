@@ -21,7 +21,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
     <section className="relative">
       {/* Password tips and rules */}
       <div className="flex w-full flex-col items-center justify-center space-y-20 bg-gray-5 bg-opacity-50 px-4 py-10 sm:pt-20 lg:p-16">
-        <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center ">
           <div className="flex w-full flex-col items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
