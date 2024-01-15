@@ -22,7 +22,7 @@ const HeroSection = ({ textContent }) => {
             <Header className="text-gray-100">{textContent.title}</Header>
             <p className="text-xl font-semibold text-gray-80">{textContent.subtitle}</p>
           </div>
-          <div className="flex w-full max-w-xl flex-col items-center justify-center border-4 border-primary/7 bg-primary/2">
+          <div className="flex w-full max-w-xl flex-col items-center justify-center rounded-2xl border-4 border-primary/7 bg-primary/2">
             <div className="flex w-full flex-col items-center justify-center space-y-4 p-9">
               <div
                 id="input"
