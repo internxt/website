@@ -5,13 +5,13 @@
     "subtitle2": "Scannez n'importe quel document, image, pdf ou autre type de fichier. Assurez-vous que vos fichiers sont sûrs et exempts de virus avant de les ouvrir grâce au scanner antivirus gratuit d'Internxt",
     "footer": "Internxt n'est pas responsable des informations personnelles que vous fournissez. En envoyant vos fichiers, vous acceptez nos [conditions générales de service et notre politique de confidentialité] (https://internxt.com/legal)",
     "dropFile": {
-      "line1": "Déposez un fichier"
+      "line1": "Déposez votre fichier pour le scanner contre les virus"
     },
-    "fileSelected": "Fichier sélectionné pour l'analyse",
+    "fileSelected": "Fichier sélectionné pour le balayage",
     "cancel": "Annuler",
     "close": "Fermer",
     "scanNow": "Scanner maintenant",
-    "selectFile": "ou sélectionner un fichier",
+    "selectFile": "Choisir un fichier",
     "dropHere": "Déposer le fichier ici",
     "scanAgain": "Scanner un autre fichier",
     "loading": "Chargement...",

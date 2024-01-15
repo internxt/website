@@ -6,15 +6,15 @@
     "footer": "Internxt 对您提供的任何个人信息概不负责。 提交您的文件，即表示您同意我们的[服务条款和条件以及隐私政策。](https://internxt.com/legal)",
 
     "dropFile": {
-      "line1": "拖放文件以扫描病毒"
+      "line1": "拖动文件进行病毒扫描"
     },
-    "fileSelected": "选择要扫描的文件",
+    "fileSelected": "选择文件进行扫描",
     "cancel": "取消",
     "close": "关闭",
     "scanNow": "立即扫描",
-    "selectFile": "或选择文件",
+    "selectFile": "选择文件",
     "dropHere": "将文件拖放到此处",
-    "scanAgain": "扫描另一个文件",
+    "scanAgain": "再次扫描",
     "loading": "加载中...",
     "maxFileSize": {
       "title": "超出文件大小限制",

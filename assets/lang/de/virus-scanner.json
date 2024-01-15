@@ -6,16 +6,16 @@
     "footer": "Internxt übernimmt keine Haftung für die von dir bereitgestellten personenbezogenen Daten. Durch das Absenden deiner Dateien stimmst du unseren [Nutzungsbedingungen und Datenschutzbestimmungen] zu. (https://internxt.com/legal)",
 
     "dropFile": {
-      "line1": "Lege die Datei ab, um sie auf Viren zu prüfen"
+      "line1": "Lassen Sie Ihre Datei fallen, um sie auf Viren zu überprüfen"
     },
-    "fileSelected": "Zum Scannen ausgewählte Datei",
+    "fileSelected": "Datei für die Überprüfung ausgewählt",
     "cancel": "Abbrechen",
     "close": "Schließen",
-    "scanNow": "Scanne jetzt",
-    "selectFile": "Oder wähle eine Datei",
+    "scanNow": "Jetzt scannen",
+    "selectFile": "Datei auswählen",
     "dropHere": "Datei hier ablegen",
-    "scanAgain": "Scanne eine andere Datei",
-    "loading": "Lade...",
+    "scanAgain": "Eine weitere Datei scannen",
+    "loading": "Laden...",
     "maxFileSize": {
       "title": "Dateigrößenbeschränkung überschritten",
       "description": "Maximale Dateigröße von 1 GB"
