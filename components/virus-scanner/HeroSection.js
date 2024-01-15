@@ -149,7 +149,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section
-      className="relative pb-32 pt-24"
+      className="relative pb-20 pt-24"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
