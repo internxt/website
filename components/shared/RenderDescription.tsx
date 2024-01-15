@@ -19,7 +19,7 @@ const RenderDescription = ({ description, fontSize }: { description: string[]; f
   return (
     <div id="render-description-section" className="markdown flex flex-col space-y-4">
       {description.map((item, index) => (
-        <ReactMarkdown key={item[index]} className={`${fontSize ? fontSize : 'text-lg'} text-gray-80`}>
+        <ReactMarkdown key={item} className={`${fontSize ? fontSize : 'text-lg'} text-gray-80`}>
           {item}
         </ReactMarkdown>
       ))}
