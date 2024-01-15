@@ -36,9 +36,9 @@ const PasswordGenerator = ({
 
       <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
 
-      <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
-
       <ToolsSection textContent={toolsContent} lang={lang} />
+
+      <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
       <FAQSection textContent={langJson.FaqSection} />
 
