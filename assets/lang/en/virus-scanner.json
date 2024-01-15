@@ -6,13 +6,13 @@
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
 
     "dropFile": {
-      "line1": "Drop file to scan for viruses"
+      "line1": "Drop your file to scan for viruses"
     },
     "fileSelected": "File selected for scanning",
     "cancel": "Cancel",
     "close": "Close",
     "scanNow": "Scan now",
-    "selectFile": "or select file",
+    "selectFile": "Choose file",
     "dropHere": "Drop file here",
     "scanAgain": "Scan another file",
     "loading": "Loading...",
@@ -46,7 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "Why it’s vital to use a virus scanner",
-      "description": ["Scan first, ask questions later.", "Spot viruses before they infiltrate your devices."]
+      "description": "Scan first, ask questions later. Spot viruses before they infiltrate your devices."
     },
     "virusesHatePrivacy": {
       "title": "Viruses hate your privacy",

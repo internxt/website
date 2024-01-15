@@ -46,7 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "Warum es wichtig ist, einen Virenscanner zu verwenden",
-      "description": ["Zuerst scannen, später Fragen stellen.", "Erkenne Viren, bevor sie deine Geräte infiltrieren."]
+      "description": "Zuerst scannen, später Fragen stellen. Erkenne Viren, bevor sie deine Geräte infiltrieren."
     },
     "virusesHatePrivacy": {
       "title": "Viren hassen deine Privatsphäre",

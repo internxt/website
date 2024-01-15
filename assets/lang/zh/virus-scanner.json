@@ -46,7 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "为什么使用病毒扫描程序至关重要",
-      "description": ["先扫描，再提问。", "在病毒渗入您的设备之前发现它们。"]
+      "description": "先扫描，再提问。在病毒渗入您的设备之前发现它们。"
     },
     "virusesHatePrivacy": {
       "title": "病毒讨厌你的隐私",

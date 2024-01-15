@@ -45,10 +45,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "Pourquoi il est vital d'utiliser un scanner de virus",
-      "description": [
-        "Scannez d'abord, posez des questions ensuite",
-        "Détectez les virus avant qu'ils ne s'infiltrent dans vos appareils"
-      ]
+      "description": "Scannez d'abord, posez des questions ensuite Détectez les virus avant qu'ils ne s'infiltrent dans vos appareils"
     },
     "virusesHatePrivacy": {
       "title": "Les virus détestent votre vie privée",

@@ -46,7 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "¿Por qué es vital utilizar un escáner de virus?",
-      "description": ["Detecta los virus antes de que se infiltren en tus dispositivos."]
+      "description": "Detecta los virus antes de que se infiltren en tus dispositivos."
     },
     "virusesHatePrivacy": {
       "title": "Los virus odian tu privacidad",

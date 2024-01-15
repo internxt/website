@@ -13,7 +13,7 @@ import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 
-const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, bannerLang }) => {
+const Scan = ({ metatagsDescriptions, langJson, toolsContent, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
 
   return (
@@ -42,7 +42,7 @@ const Scan = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, ba
           lang={lang}
         />
 
-        <ToolsSection textContent={langJson.ToolsSection} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
         <CtaSection textContent={langJson.CtaSection} />
 
@@ -59,6 +59,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/virus-scanner.json`);
+  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const bannerLang = require(`../assets/lang/${lang}/banners.json`);
@@ -67,6 +68,7 @@ export async function getServerSideProps(ctx) {
     props: {
       metatagsDescriptions,
       langJson,
+      toolsContent,
       footerLang,
       navbarLang,
       lang,
