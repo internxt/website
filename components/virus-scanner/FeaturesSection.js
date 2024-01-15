@@ -17,13 +17,9 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
           <div className="flex flex-col items-center space-y-6 px-4 text-center">
-            <h3 className="text-4xl font-semibold">{textContent.whyToScan.title}</h3>
+            <h3 className="text-4xl font-semibold sm:text-5xl">{textContent.whyToScan.title}</h3>
             <div className="flex flex-col">
-              {textContent.whyToScan.description.map((text, index) => (
-                <p key={index} className="text-xl text-gray-80">
-                  {text}
-                </p>
-              ))}
+              <p className="text-xl text-gray-80">{textContent.whyToScan.description}</p>
             </div>
           </div>
 
@@ -31,14 +27,14 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             {/* Viruses hate privacy */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
               <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
-                <p className="text-center text-3xl font-semibold md:text-start">
+                <p className="text-center text-4xl font-semibold md:text-start">
                   {textContent.virusesHatePrivacy.title}
                 </p>
-                <p className="text-lg text-gray-80">{textContent.virusesHatePrivacy.description}</p>
+                <p className="text-xl text-gray-80">{textContent.virusesHatePrivacy.description}</p>
               </div>
               <div className="flex">
                 <Image
-                  src={`/images/virus-scanner/VirusesHatePrivacy.png`}
+                  src={`/images/virus-scanner/virus_scanner.webp`}
                   width={573}
                   height={390}
                   alt="Viruses Hate Privacy"
@@ -50,7 +46,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex flex-col-reverse items-center md:flex-row md:space-x-16">
               <div className="flex">
                 <Image
-                  src={`/images/virus-scanner/StopMalware.png`}
+                  src={`/images/virus-scanner/malware.webp`}
                   width={573}
                   height={390}
                   alt="Stop malware image"
@@ -58,19 +54,19 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 />
               </div>
               <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
-                <p className="text-center text-3xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
-                <p className="text-lg text-gray-80">{textContent.stopMalware.description}</p>
+                <p className="text-center text-4xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
+                <p className="text-xl text-gray-80">{textContent.stopMalware.description}</p>
               </div>
             </div>
             {/* Free online scanner */}
             <div className="md;text-left flex flex-col justify-center space-y-5 px-10 py-7 text-center md:max-w-3xl md:py-0">
-              <p className="text-center text-3xl font-semibold">{textContent.freeOnlineScanner.title}</p>
-              <p className="text-lg text-gray-80">{textContent.freeOnlineScanner.description}</p>
+              <p className="text-center text-5xl font-semibold">{textContent.freeOnlineScanner.title}</p>
+              <p className="text-xl text-gray-80">{textContent.freeOnlineScanner.description}</p>
             </div>
             {/* Scan files card and info */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
               <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
-                <p className="text-center text-3xl font-semibold md:text-start">{textContent.scanFiles.title}</p>
+                <p className="text-center text-4xl font-semibold md:text-start">{textContent.scanFiles.title}</p>
                 <p className="text-xl">
                   {maliciousMalwareText}
                   {lang === 'en' && (
@@ -86,7 +82,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </div>
               <div className="flex">
                 <Image
-                  src={`/images/virus-scanner/ScanFiles.png`}
+                  src={`/images/virus-scanner/phishing.webp`}
                   width={573}
                   height={390}
                   alt="Scan files image"
