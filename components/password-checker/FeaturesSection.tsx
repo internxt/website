@@ -107,7 +107,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-center justify-center py-16">
+      <div className="flex w-full flex-col items-center justify-center pb-16">
         <div className="flex flex-col items-center justify-center space-y-16">
           <div className="justify-center-center flex max-w-2xl flex-col space-y-3">
             <h3 className="text-left text-2xl font-medium">{textContent.section6.title}</h3>

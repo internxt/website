@@ -7,7 +7,6 @@ import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
-import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
