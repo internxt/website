@@ -20,7 +20,7 @@ const HeroSection = ({ textContent }) => {
         <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
             <Header className="text-gray-100">{textContent.title}</Header>
-            <p className="text-xl text-gray-80">{textContent.subtitle}</p>
+            <p className="text-xl font-semibold text-gray-80">{textContent.subtitle}</p>
           </div>
           <div className="flex w-full max-w-xl flex-col items-center justify-center border-4 border-primary/7 bg-primary/2">
             <div className="flex w-full flex-col items-center justify-center space-y-4 p-9">
