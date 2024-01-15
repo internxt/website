@@ -20,16 +20,6 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
           <p className="text-2xl font-medium">{textContent.convertToAgain.title}</p>
           <p className="text-lg font-normal text-gray-80">{textContent.convertToAgain.description}</p>
         </div>
-        <div>
-          <Image
-            src="/images/converter-tool/GB-TB.webp"
-            width={784}
-            height={385.5}
-            layout="intrinsic"
-            loading="lazy"
-            alt="Cloud storage"
-          />
-        </div>
         <div className="flex w-full max-w-2xl flex-col">
           <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>{' '}
           {textContent.whyUseConverter.description.map((feature, index) => (

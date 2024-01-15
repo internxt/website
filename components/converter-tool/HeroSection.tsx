@@ -61,12 +61,11 @@ const HeroSection = ({ textContent }) => {
           {/* Title and subtitle */}
           <div className=" flex w-full max-w-[700px] flex-col items-center justify-center text-center">
             <Header>{textContent.title}</Header>
-            <p className="pt-5 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description}</p>
+            <p className="pt-5 text-lg font-semibold text-gray-80 lg:text-xl">{textContent.description}</p>
             <p className="pt-5 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description1}</p>
           </div>
           {/* Container */}
-          <div className="relative w-full  lg:flex lg:w-auto">
-            {/*  */}
+          <div className="relative w-full rounded-2xl border-4 border-primary/7 bg-primary/2 p-9 lg:flex lg:w-auto">
             <div
               className={`flex ${
                 reverse

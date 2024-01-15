@@ -13,10 +13,11 @@ import Footer from '../components/layout/Footer';
 import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import ToolsSection from '../components/shared/ToolsSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
-const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang, bannerLang }) => {
+const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, toolsContent, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === CONVERTER_TOOL_METATAG_ID);
 
   return (
@@ -53,9 +54,11 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, foote
 
         <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} />
 
-        <FaqSection textContent={langJson.FaqSection} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
         <CtaSection textContent={langJson.ctaSection3} />
+
+        <FaqSection textContent={langJson.FaqSection} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
@@ -68,6 +71,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/converter-tool.json`);
+  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const bannerLang = require(`../assets/lang/${lang}/banners.json`);
@@ -78,6 +82,7 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       navbarLang,
       langJson,
+      toolsContent,
       footerLang,
       bannerLang,
     },
