@@ -11,6 +11,8 @@ import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import ToolsSection from '../components/shared/ToolsSection';
+import CtaSection from '../components/shared/CtaSection';
+import InfoSection from '../components/password-generator/InfoSection';
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -50,6 +52,14 @@ const PasswordChecker = ({
 
         <HeroSection textContent={langJson.HeroSection} />
 
+        <InfoSection
+          textContent={langJson.InfoSection}
+          bannerText={bannerLang.SignUpPasswordGenerator}
+          hideLast2Sections
+        />
+
+        <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
+
         <FeaturesSection
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpPwdCheckerBanner}
@@ -57,6 +67,8 @@ const PasswordChecker = ({
         />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
+
+        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
 
         <FAQSection textContent={langJson.FaqSection} />
 

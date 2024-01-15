@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@phosphor-icons/react';
-import CtaSection from './CtaSection';
+import CtaSection from '../shared/CtaSection';
 import Image from 'next/image';
 import SignUpBanner from '../banners/SignUpBanner';
+import RenderDescription from '../shared/RenderDescription';
 
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const iconSize = 32;
@@ -20,7 +21,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
     <section className="relative">
       {/* Password tips and rules */}
       <div className="flex w-full flex-col items-center justify-center space-y-20 bg-gray-5 bg-opacity-50 px-4 py-10 sm:pt-20 lg:p-16">
-        <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center ">
           <div className="flex w-full flex-col items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
@@ -50,8 +50,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
         </div>
       </div>
 
-      <CtaSection textContent={textContent.CtaSection} />
-
       {/* Password tool info */}
       <div className="flex w-full flex-col items-center justify-center">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
@@ -73,26 +71,13 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section4.title}</h3>
 
-              <p className="text-lg text-gray-80">{textContent.section4.subtitle1}</p>
-
-              <p className="text-lg text-gray-80">
-                {textContent.section4.subtitle2.part1}{' '}
-                <a
-                  href="https://github.com/internxt"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-primary underline"
-                >
-                  {textContent.section4.subtitle2.link}
-                </a>{' '}
-                {textContent.section4.subtitle2.part2}
-              </p>
+              <RenderDescription description={textContent.section4.description} />
             </div>
 
             <div className="flex cursor-pointer">
               {lang === 'es' ? (
                 <Image
-                  src="/images/password-checker/virus-scanner-es.png"
+                  src="/images/password-checker/virus-scanner-es.webp"
                   width={897}
                   height={350}
                   layout="intrinsic"
@@ -102,7 +87,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 />
               ) : (
                 <Image
-                  src="/images/password-checker/virus-scanner.png"
+                  src="/images/password-checker/virus-scanner.webp"
                   width={897}
                   height={350}
                   layout="intrinsic"
@@ -115,91 +100,25 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section5.title}</h3>
-              <p className="text-lg text-gray-80">
-                {textContent.section5.subtitle1.part1}{' '}
-                <Link href="/privacy" lang={lang} passHref>
-                  <a target="_top" rel="noreferrer" className="text-primary underline">
-                    {textContent.section5.subtitle1.link}
-                  </a>
-                </Link>{' '}
-                {textContent.section5.subtitle1.part2}
-              </p>
 
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.section5.subtitle2}</p>
-
-              <p className="text-lg text-gray-80">
-                {textContent.section5.subtitle3.part1}{' '}
-                <a
-                  href={`https://blog.internxt.com/${
-                    lang === 'es' ? 'es/que-es-la-tecnologia-web3/' : 'what-is-web3/'
-                  }`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-primary underline"
-                >
-                  {textContent.section5.subtitle3.link}
-                </a>{' '}
-                {textContent.section5.subtitle3.part2}
-              </p>
+              <RenderDescription description={textContent.section5.description} />
             </div>
           </div>
+        </div>
+      </div>
 
-          <CtaSection textContent={textContent.CtaSection1} />
+      <div className="flex w-full flex-col items-center justify-center py-16">
+        <div className="flex flex-col items-center justify-center space-y-16">
+          <div className="justify-center-center flex max-w-2xl flex-col space-y-3">
+            <h3 className="text-left text-2xl font-medium">{textContent.section6.title}</h3>
 
-          <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
-            <h3 className="text-2xl font-medium">{textContent.section6.title}</h3>
-
-            <p className="text-lg text-gray-80 md:max-w-2xl">
-              {textContent.section6.subtitle1.part1}{' '}
-              <a
-                href={`https://blog.internxt.com/${
-                  lang === 'es'
-                    ? 'es/13-estrategias-para-proteger-tus-datos/'
-                    : '13-oversimplified-strategies-for-protecting-your-data-on-the-internet/'
-                }`}
-                target="_blank"
-                rel="noreferrer"
-                className="text-primary underline"
-              >
-                {textContent.section6.subtitle1.link}
-              </a>
-              {textContent.section6.subtitle1.part2}
-            </p>
-
-            <p className="text-lg text-gray-80 md:max-w-2xl">
-              {textContent.section6.subtitle2.part1}{' '}
-              <Link href="/password-generator" lang={lang} passHref>
-                <a target="_top" rel="noreferrer" className="text-primary underline">
-                  {textContent.section6.subtitle2.link}
-                </a>
-              </Link>
-              {textContent.section6.subtitle2.part2}
-            </p>
-
-            <p className="text-lg text-gray-80 md:max-w-2xl">
-              {textContent.section6.subtitle3.part1}{' '}
-              <Link href="/virus-scanner" lang={lang} passHref>
-                <a target="_top" rel="noreferrer" className="text-primary underline">
-                  {textContent.section6.subtitle3.link}
-                </a>
-              </Link>
-              {textContent.section6.subtitle3.part2}
-            </p>
-
-            <p className="text-lg text-gray-80 md:max-w-2xl">
-              {textContent.section6.subtitle4.part1}{' '}
-              <Link href="/privacy-directory" lang={lang} passHref>
-                <a target="_top" rel="noreferrer" className="text-primary underline">
-                  {textContent.section6.subtitle4.link}
-                </a>
-              </Link>
-              {textContent.section6.subtitle4.part2}
-            </p>
+            <RenderDescription description={textContent.section6.description} />
           </div>
+
           <div className="flex cursor-pointer">
             {lang === 'es' ? (
               <Image
-                src="/images/password-checker/byte-converter-es.png"
+                src="/images/password-checker/byte-converter-es.webp"
                 width={897}
                 height={350}
                 layout="intrinsic"
@@ -209,7 +128,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               />
             ) : (
               <Image
-                src="/images/password-checker/byte-converter.png"
+                src="/images/password-checker/byte-converter.webp"
                 width={897}
                 height={350}
                 layout="intrinsic"
