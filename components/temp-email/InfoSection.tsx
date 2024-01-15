@@ -5,7 +5,7 @@ import SignUpBanner from '../banners/SignUpBanner';
 
 const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 pb-16">
+    <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
@@ -48,7 +48,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
               {infoCards(lang).map((card) => (
                 <div
                   key={card.title}
-                  className="flex flex-col items-start justify-start bg-white p-8 sm:p-10 md:max-w-[488px]"
+                  className="flex flex-col items-start justify-start rounded-2xl bg-white p-8 sm:p-10 md:max-w-[488px]"
                 >
                   <card.icon className="mb-6 text-4xl text-primary" />
                   <div className="flex w-full max-w-[400px] flex-col">
@@ -59,7 +59,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
               ))}
             </div>
           </div>
-          <div>
+          <div className="flex">
             <Image
               src="/images/temp-email/cta_general_10_storage_en.webp"
               alt="Switch to privacy"

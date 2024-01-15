@@ -63,7 +63,7 @@ const HeroSection = ({ textContent }) => {
   }, [borderColor]);
 
   return (
-    <section className="overflow-hidden bg-gradient-to-b from-white to-gray-1 pt-32 pb-20">
+    <section className="overflow-hidden pt-32 pb-20">
       <div className="flex flex-col items-center justify-center space-y-10 px-5">
         <div className="flex flex-col items-center justify-center text-center">
           <Header>{textContent.title}</Header>
