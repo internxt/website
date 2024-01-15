@@ -411,12 +411,14 @@ const HeroSection = ({ textContent }) => {
                     {/* Default state */}
                     <div className=" flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-xl">
                       <div className={`flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:space-x-20`}>
-                        <Image
-                          src="/images/virus-scanner/upload_file.webp"
-                          width={187}
-                          height={187}
-                          alt="Upload File"
-                        />
+                        <div className="hidden lg:flex">
+                          <Image
+                            src="/images/virus-scanner/upload_file.webp"
+                            width={187}
+                            height={187}
+                            alt="Upload File"
+                          />
+                        </div>
                         <div className="flex max-w-[255px] flex-col items-center space-y-4 text-center">
                           <div className="flex flex-col rounded-lg bg-primary/7 px-4 py-2">
                             <p className="text-sm font-medium text-gray-80">{textContent.maxFileSize.description}</p>
