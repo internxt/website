@@ -97,7 +97,7 @@ const HeroSection = ({ textContent }) => {
 
                   <Select
                     className={`${
-                      !reverse ? 'z-30' : null
+                      !reverse ? 'z-10' : null
                     } inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2`}
                     defaultValue={options[4]}
                     id="Dropdown menu"
@@ -140,7 +140,7 @@ const HeroSection = ({ textContent }) => {
 
                   <Select
                     className={`absolute ${
-                      reverse ? 'z-30' : null
+                      reverse ? 'z-10' : null
                     } inline-block w-screen max-w-[160px] flex-shrink-0 rounded-lg border-gray-10 p-2`}
                     defaultValue={options[3]}
                     id="Dropdown menu"
@@ -163,7 +163,7 @@ const HeroSection = ({ textContent }) => {
                 </div>
               </div>
             </div>
-            <div
+            <button
               className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-20 bg-white p-2 lg:rotate-0"
               onClick={() => {
                 setReverse(!reverse);
@@ -178,7 +178,7 @@ const HeroSection = ({ textContent }) => {
               }}
             >
               <ArrowsLeftRight size={28} weight="light" className="text-gray-60" />
-            </div>
+            </button>
           </div>
         </div>
       </div>

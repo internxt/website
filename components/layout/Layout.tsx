@@ -209,7 +209,7 @@ LayoutProps) {
       {showBanner ? (
         <>
           <TopBannerHomePage isBannerFixed={isBannerFixed} />
-          <div className="z-50 flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
+          <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (
         children
