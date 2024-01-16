@@ -66,7 +66,7 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden pt-32 pb-20">
       <div className="flex flex-col items-center justify-center space-y-10 px-5">
         <div className="flex flex-col items-center justify-center text-center">
-          <Header>{textContent.title}</Header>
+          <Header isToolsPage>{textContent.title}</Header>
           <p className="max-w-2xl pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
         <div className="flex flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-9">

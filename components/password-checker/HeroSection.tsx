@@ -83,7 +83,9 @@ const HeroSection = ({ textContent }) => {
   return (
     <section className="relative flex flex-col items-center space-y-12 bg-white pt-32 pb-20 md:space-y-16">
       <div className="flex flex-col items-center space-y-5 px-4 text-center lg:px-0">
-        <Header className="text-gray-100">{textContent.title}</Header>
+        <Header isToolsPage className="text-gray-100">
+          {textContent.title}
+        </Header>
         <h2 className="text-lg font-normal text-gray-80 lg:text-xl">
           <span className="font-semibold">{textContent.subtitle1}</span>
           <br />

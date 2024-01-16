@@ -7,6 +7,7 @@ import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
+import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
@@ -148,7 +149,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section
-      className="relative pb-20 pt-24"
+      className="relative pt-32 pb-20"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -169,7 +170,7 @@ const HeroSection = ({ textContent }) => {
         onDrop={(e) => handleDrop(e)}
         onDragOver={(e) => e.preventDefault()}
       />
-      <div className="mx-4 py-10 lg:mx-10 xl:mx-32">
+      <div className="mx-4 lg:mx-10 xl:mx-32">
         <div
           className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch ${
             !isScannig && isDragging ? 'pointer-events-none' : ''
@@ -180,7 +181,7 @@ const HeroSection = ({ textContent }) => {
           {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
             <div className="flex w-full flex-col lg:w-[316px] lg:space-y-5">
-              <h1 className="text-4xl font-semibold sm:text-5xl">{textContent.title}</h1>
+              <Header isToolsPage>{textContent.title}</Header>
               <h2 className="pt-5 text-xl font-normal text-cool-gray-80 lg:pt-0">
                 <span className="font-semibold">{textContent.subtitle1}</span>
                 <div className="hidden h-5 lg:flex" />
