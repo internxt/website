@@ -55,8 +55,8 @@ const HeroSection = ({ textContent }) => {
   }
 
   return (
-    <section className="">
-      <div className="mx-3 flex pt-44 pb-20 md:mx-10 lg:mx-32">
+    <section className="pt-14">
+      <div className="mx-3 flex py-20 md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
           <div className=" flex w-full max-w-[700px] flex-col items-center justify-center text-center">
