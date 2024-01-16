@@ -2,12 +2,10 @@ import axios from 'axios';
 
 export const currency = {
   US: '$',
-  GB: '£',
 };
 
 export const priceValue = {
   US: 'usd',
-  GB: 'gbp',
 };
 
 const getCountry = async () => {

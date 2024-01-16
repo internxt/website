@@ -1,5 +1,4 @@
 import axios from 'axios';
-import cache from 'memory-cache';
 
 import { NextApiRequest, NextApiResponse } from 'next';
 
