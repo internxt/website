@@ -81,7 +81,7 @@ const HeroSection = ({ textContent }) => {
   };
 
   return (
-    <section className="relative flex flex-col items-center space-y-12 bg-white pt-32 pb-20 md:space-y-16">
+    <section className="relative flex flex-col items-center space-y-12 bg-white px-5 pt-32 pb-20 md:space-y-16">
       <div className="flex flex-col items-center space-y-5 px-4 text-center lg:px-0">
         <Header isToolsPage className="text-gray-100">
           {textContent.title}
@@ -93,7 +93,7 @@ const HeroSection = ({ textContent }) => {
         </h2>
       </div>
       <div className="flex w-full max-w-2xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-9">
-        <div className="flex w-full max-w-lg flex-col items-center space-y-5 px-4 lg:px-0">
+        <div className="flex w-full max-w-lg flex-col items-center space-y-5">
           <div className="relative w-full">
             <input
               onKeyUp={(e) => checkPassword(e)}
@@ -135,7 +135,7 @@ const HeroSection = ({ textContent }) => {
       </div>
 
       {/* Password dynamic feedback */}
-      <div className="flex w-full flex-col items-stretch space-y-4 px-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
+      <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
         <div className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
           <span className="text-sm text-gray-50">{textContent.result.feedback.title}</span>
           <span className={`text-2xl font-semibold text-gray-80`}>{crackFeedback}</span>
