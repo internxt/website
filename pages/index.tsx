@@ -95,4 +95,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default memo(Home);
+export default Home;
