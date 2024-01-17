@@ -12,11 +12,11 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
   return (
     <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
-      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-4 lg:p-16">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-5 lg:p-16">
         <SignUpBanner textContent={bannerText} lang={lang} />
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
-          <div className="flex flex-col items-center space-y-6 px-4 text-center">
+          <div className="flex flex-col items-center space-y-6">
             <h3 className="text-4xl font-semibold sm:text-5xl">{textContent.whyToScan.title}</h3>
             <div className="flex flex-col">
               <p className="text-xl text-gray-80">{textContent.whyToScan.description}</p>
@@ -26,10 +26,8 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
           <div className="flex flex-col items-center justify-center space-y-16">
             {/* Viruses hate privacy */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
-              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
-                <p className="text-center text-4xl font-semibold md:text-start">
-                  {textContent.virusesHatePrivacy.title}
-                </p>
+              <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
+                <p className=" text-3xl font-semibold md:text-start">{textContent.virusesHatePrivacy.title}</p>
                 <p className="text-xl text-gray-80">{textContent.virusesHatePrivacy.description}</p>
               </div>
               <div className="flex">
@@ -53,20 +51,20 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   loading="lazy"
                 />
               </div>
-              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
-                <p className="text-center text-4xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
+              <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
+                <p className=" text-3xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
                 <p className="text-xl text-gray-80">{textContent.stopMalware.description}</p>
               </div>
             </div>
             {/* Free online scanner */}
-            <div className="md;text-left flex flex-col justify-center space-y-5 px-10 py-7 text-center md:max-w-3xl md:py-0">
-              <p className="text-center text-5xl font-semibold">{textContent.freeOnlineScanner.title}</p>
+            <div className="flex flex-col justify-center space-y-5 py-7 text-left md:max-w-3xl md:py-0 md:text-center">
+              <p className=" text-4xl font-semibold">{textContent.freeOnlineScanner.title}</p>
               <p className="text-xl text-gray-80">{textContent.freeOnlineScanner.description}</p>
             </div>
             {/* Scan files card and info */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
-              <div className="flex flex-col justify-center space-y-5 px-10 pb-7 text-justify md:max-w-md md:pb-0 md:text-left">
-                <p className="text-center text-4xl font-semibold md:text-start">{textContent.scanFiles.title}</p>
+              <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
+                <p className=" text-3xl font-semibold md:text-start">{textContent.scanFiles.title}</p>
                 <p className="text-xl">
                   {maliciousMalwareText}
                   {lang === 'en' && (

@@ -64,7 +64,7 @@ const HeroSection = ({ textContent }) => {
                     notificationService.openSuccessToast('Password copied to clipboard');
                   }}
                 >
-                  <Copy className={`h-5 w-5 text-white`} />
+                  <Copy className={`hidden h-5 w-5 text-center text-white md:flex`} />
                   <p className="font-medium text-white">{textContent.copy}</p>
                 </div>
                 <div
@@ -73,7 +73,7 @@ const HeroSection = ({ textContent }) => {
                     setRegenerate(!regenerate);
                   }}
                 >
-                  <ArrowsClockwise className={`h-5 w-5`} />
+                  <ArrowsClockwise className={`hidden h-5 w-5 text-center md:flex`} />
                   <p className="font-medium">{textContent.generate}</p>
                 </div>
               </div>
