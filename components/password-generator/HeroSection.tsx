@@ -55,7 +55,7 @@ const HeroSection = ({ textContent }) => {
                 <Info size={16} weight="bold" />
                 <p className="text-sm">{textContent.info}</p>
               </div>
-              <div className="flex w-full flex-row space-x-2">
+              <div className="flex w-full flex-col gap-2 md:flex-row">
                 <div
                   role="button"
                   className="flex w-full cursor-pointer select-none items-center justify-center space-x-2 rounded-lg bg-primary py-2 hover:bg-primary-dark"
