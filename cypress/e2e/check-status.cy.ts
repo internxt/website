@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
 
 export {};
+// THe first item is empty because it is the home page
 let nameFiles = [
-  'home',
+  '',
   'about',
   'affiliates',
   'annual',
