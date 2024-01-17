@@ -180,13 +180,13 @@ const HeroSection = ({ textContent }) => {
         >
           {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
-            <div className="flex w-full flex-col lg:w-[316px] lg:space-y-5">
+            <div className="flex w-full flex-col space-y-5 lg:w-[316px]">
               <Header isToolsPage>{textContent.title}</Header>
-              <h2 className="pt-5 text-xl font-normal text-cool-gray-80 lg:pt-0">
-                <span className="font-semibold">{textContent.subtitle1}</span>
-                <div className="hidden h-5 lg:flex" />
-                {textContent.subtitle2}
+              <h2 className="text-xl font-semibold text-cool-gray-80">
+                {textContent.subtitle1}
+                <br />
               </h2>
+              <p className=" text-xl font-normal text-cool-gray-80">{textContent.subtitle2}</p>
             </div>
           </div>
 
