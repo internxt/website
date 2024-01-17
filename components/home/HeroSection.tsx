@@ -336,7 +336,7 @@ export default function HeroSection({ textContent, lang }) {
                     src="/logos/featured/HostingAdvice.webp"
                     draggable="false"
                     width="168"
-                    height="30"
+                    height="25"
                     alt="Hosting Advice logo"
                   />
                 </a>
