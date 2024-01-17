@@ -169,7 +169,7 @@ const ManifestoSection2 = ({ textContent, lang }) => (
 
             <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
               <div className="hidden lg:flex lg:max-w-[480px]">
-                <img src="/images/privacy/photos-image.png" alt="Internxt Photos" />
+                <img src="/images/privacy/photos-image.webp" alt="Internxt Photos" />
               </div>
             </div>
           </RevealX>

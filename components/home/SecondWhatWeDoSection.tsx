@@ -4,6 +4,7 @@ import React from 'react';
 import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
 import { UilAngleRightB } from '@iconscout/react-unicons';
+import Image from 'next/image';
 
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (
@@ -39,7 +40,13 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/Internxt-Drive.webp" alt="Internxt Drive" draggable={false} />
+                  <Image
+                    src="/images/privacy/Internxt-Drive.webp"
+                    width={480}
+                    height={480}
+                    alt="Internxt Drive"
+                    draggable={false}
+                  />
                 </div>
               </div>
             </RevealX>
@@ -65,7 +72,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
                 <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/photos-image.png" alt="Internxt Photos" />
+                  <Image src="/images/privacy/photos-image.webp" width={480} height={480} alt="Internxt Photos" />
                 </div>
               </div>
             </RevealX>
@@ -91,8 +98,8 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
               </div>
 
               <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
-                <div className="hidden lg:flex lg:max-w-[480px]">
-                  <img src="/images/privacy/Share-by-email.webp" alt="Internxt Send" />
+                <div className="hidden lg:flex">
+                  <Image src="/images/privacy/Share-by-email.webp" width={480} height={480} alt="Internxt Send" />
                 </div>
               </div>
             </RevealX>
