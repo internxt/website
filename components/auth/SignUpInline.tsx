@@ -95,7 +95,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
         </div>
       )}
 
-      <div className="flex w-full flex-row items-center space-x-3">
+      <div className="flex w-full flex-col items-center space-x-3 lg:flex-row">
         <div className="w-full">
           <PrimaryButton
             id="signupInlineSubmit"

@@ -92,39 +92,6 @@
       ]
     }
   },
-  "ToolsSection": {
-    "title": "Otras herramientas de privacidad gratuitas de Internxt",
-    "toolsCard": [
-      {
-        "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "password-checker",
-        "width": 125,
-        "title": "Comprobador gratuito de contraseñas",
-        "description": "Probar ahora"
-      },
-      {
-        "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "virus-scanner",
-        "width": 105,
-        "title": "Escáner de virus gratuito",
-        "description": "Escanear ahora"
-      },
-      {
-        "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "byte-converter",
-        "width": 95,
-        "title": "Convertidor de unidades gratuito",
-        "description": "Convertir ahora"
-      },
-      {
-        "url": "/images/temp-email/password-generator.svg",
-        "UrlRedirectName": "password-generator",
-        "title": "Generador de contraseñas",
-        "width": 124,
-        "description": "Probar ahora"
-      }
-    ]
-  },
   "QASection": {
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [

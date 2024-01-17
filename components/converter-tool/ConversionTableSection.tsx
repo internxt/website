@@ -103,9 +103,9 @@ const ConversionTableSection = ({ textContent, lang }) => {
   ];
 
   return (
-    <section className="">
+    <section className="bg-gray-1">
       <div className="flex flex-col space-y-16 py-20 lg:items-center lg:justify-center">
-        <div className="flex w-full max-w-[835px] flex-col items-center justify-center space-y-4 px-10 text-center">
+        <div className="flex w-full max-w-[840px] flex-col items-center justify-center space-y-4 px-5 text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="text-xl font-normal text-gray-100">{textContent.description}</p>
         </div>
@@ -113,7 +113,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
           className="flex 
          items-start overflow-scroll px-5 lg:overflow-hidden"
         >
-          <div className="flex max-w-[740px] flex-col rounded-lg border-gray-10">
+          <div className="flex max-w-[750px] flex-col rounded-lg border-gray-10">
             {table.map((item, index) => (
               <div
                 key={item.unit}
@@ -143,7 +143,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
             className="mx-5 flex max-w-4xl cursor-pointer flex-row"
           >
             <Image
-              src={`/images/converter-tool/PasswordChecker${langUpperCase}.png`}
+              src={`/images/converter-tool/PasswordChecker${langUpperCase}.webp`}
               width={897}
               height={350}
               layout="intrinsic"

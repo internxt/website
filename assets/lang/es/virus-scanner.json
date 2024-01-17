@@ -6,15 +6,15 @@
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
 
     "dropFile": {
-      "line1": "Arrastra un archivo"
+      "line1": "Suelta tu archivo para escanear en busca de virus"
     },
-    "fileSelected": "Archivo detectado",
+    "fileSelected": "Archivo seleccionado para escanear",
     "cancel": "Cancelar",
     "close": "Cerrar",
     "scanNow": "Escanear ahora",
-    "selectFile": "o selecciona un archivo",
-    "dropHere": "Drop file here",
-    "scanAgain": "Escanea otro archivo",
+    "selectFile": "Seleccionar archivo",
+    "dropHere": "Soltar archivo aquí",
+    "scanAgain": "Escanear otro archivo",
     "loading": "Cargando...",
     "maxFileSize": {
       "title": "Tamaño de archivo superado",
@@ -46,7 +46,7 @@
   "FeaturesSection": {
     "whyToScan": {
       "title": "¿Por qué es vital utilizar un escáner de virus?",
-      "description": ["Detecta los virus antes de que se infiltren en tus dispositivos."]
+      "description": "Detecta los virus antes de que se infiltren en tus dispositivos."
     },
     "virusesHatePrivacy": {
       "title": "Los virus odian tu privacidad",

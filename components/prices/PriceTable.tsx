@@ -11,6 +11,7 @@ import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import FreePlanCard from './FreePlanCard';
 import { notificationService } from '../Snackbar';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
+import Header from '../shared/Header';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -86,9 +87,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           <CampaignCtaSection textContent={textContent.ctaBanner} />
 
           <div className="flex flex-col items-center px-5">
-            <h1 className="max-w-4xl text-center text-6xl font-semibold">
-              {individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}
-            </h1>
+            <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
             </p>

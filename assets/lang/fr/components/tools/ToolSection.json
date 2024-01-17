@@ -1,0 +1,35 @@
+{
+  "title": {
+    "text1": "Plus de ",
+    "blueText": "gratuits ",
+    "text2": "outils de sécurité en ligne"
+  },
+  "free": "Gratuit",
+  "toolsCard": [
+    {
+      "title": "Générateur de Mots de Passe",
+      "cta": "Générer maintenant",
+      "pathname": "/password-generator"
+    },
+    {
+      "title": "Vérificateur de Force de Mot de Passe",
+      "cta": "Vérifier maintenant",
+      "pathname": "/password-checker"
+    },
+    {
+      "title": "Convertisseur d'Unités d'Octets",
+      "cta": "Convertir maintenant",
+      "pathname": "/byte-converter"
+    },
+    {
+      "title": "Messagerie Temporaire",
+      "cta": "Envoyer maintenant",
+      "pathname": "/temporary-email"
+    },
+    {
+      "title": "Scanner de Virus",
+      "cta": "Scanner maintenant",
+      "pathname": "/virus-scanner"
+    }
+  ]
+}

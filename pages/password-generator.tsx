@@ -12,7 +12,15 @@ import FAQSection from '../components/shared/FaqSection';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
-const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, bannerText }) => {
+const PasswordGenerator = ({
+  metatagsDescriptions,
+  toolsContent,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+  bannerText,
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-generator');
 
   return (
@@ -28,9 +36,9 @@ const PasswordGenerator = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
 
-      <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
+      <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <ToolsSection textContent={langJson.ToolsSection} lang={lang} maxWidth="max-w-2xl" />
+      <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
       <FAQSection textContent={langJson.FaqSection} />
 
@@ -46,6 +54,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/password-generator.json`);
+  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
   const bannerText = require(`../assets/lang/${lang}/banners.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
@@ -58,6 +67,7 @@ export async function getServerSideProps(ctx) {
       downloadURL,
       metatagsDescriptions,
       langJson,
+      toolsContent,
       navbarLang,
       footerLang,
       bannerText,

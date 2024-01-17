@@ -11,8 +11,18 @@ import TryInternxtBanner from '../components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
 import ToolsSection from '../components/shared/ToolsSection';
+import CtaSection from '../components/shared/CtaSection';
+import InfoSection from '../components/password-generator/InfoSection';
 
-const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang, bannerLang }) => {
+const PasswordChecker = ({
+  metatagsDescriptions,
+  toolsContent,
+  langJson,
+  navbarLang,
+  footerLang,
+  lang,
+  bannerLang,
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-checker');
 
   return (
@@ -42,13 +52,23 @@ const PasswordChecker = ({ metatagsDescriptions, langJson, navbarLang, footerLan
 
         <HeroSection textContent={langJson.HeroSection} />
 
+        <InfoSection
+          textContent={langJson.InfoSection}
+          bannerText={bannerLang.SignUpPasswordGenerator}
+          hideLast2Sections
+        />
+
+        <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
+
         <FeaturesSection
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpPwdCheckerBanner}
           lang={lang}
         />
 
-        <ToolsSection textContent={langJson.ToolsSection} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
+
+        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
 
         <FAQSection textContent={langJson.FaqSection} />
 
@@ -63,6 +83,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`../assets/lang/${lang}/password-checker.json`);
+  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
   const footerLang = require(`../assets/lang/${lang}/footer.json`);
   const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
   const bannerLang = require(`../assets/lang/${lang}/banners.json`);
@@ -71,6 +92,7 @@ export async function getServerSideProps(ctx) {
     props: {
       metatagsDescriptions,
       langJson,
+      toolsContent,
       footerLang,
       navbarLang,
       lang,

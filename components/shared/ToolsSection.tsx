@@ -1,47 +1,68 @@
-import Image from 'next/image';
 import React from 'react';
-import { CaretRight } from '@phosphor-icons/react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { ArrowsCounterClockwise, Bug, CaretRight, Envelope, Password, ShieldCheck } from '@phosphor-icons/react';
 
-const ToolsSection = ({ textContent, lang, maxWidth }: { textContent: any; lang: string; maxWidth?: string }) => {
-  const router = useRouter();
+const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
+  const cards = [
+    {
+      icon: Password,
+      title: textContent.toolsCard[0].title,
+      cta: textContent.toolsCard[0].cta,
+      pathname: textContent.toolsCard[0].pathname,
+    },
+    {
+      icon: ShieldCheck,
+      title: textContent.toolsCard[1].title,
+      cta: textContent.toolsCard[1].cta,
+      pathname: textContent.toolsCard[1].pathname,
+    },
+    {
+      icon: ArrowsCounterClockwise,
+      title: textContent.toolsCard[2].title,
+      cta: textContent.toolsCard[2].cta,
+      pathname: textContent.toolsCard[2].pathname,
+    },
+    {
+      icon: Envelope,
+      title: textContent.toolsCard[3].title,
+      cta: textContent.toolsCard[3].cta,
+      pathname: textContent.toolsCard[3].pathname,
+    },
+    {
+      icon: Bug,
+      title: textContent.toolsCard[4].title,
+      cta: textContent.toolsCard[4].cta,
+      pathname: textContent.toolsCard[4].pathname,
+    },
+  ];
+
   return (
-    <section className="overflow-hidden bg-gray-1 py-20">
-      <div className="flex flex-col items-center justify-center space-y-16 px-5 text-center">
-        <p className="text-4xl font-semibold">{textContent.title}</p>
-
-        <div
-          className={`gap flex flex-row flex-wrap ${
-            maxWidth && maxWidth
-          } max-w-[672px] items-center justify-center gap-8`}
-        >
-          {textContent.toolsCard.map((item, index) => (
-            <div className="z-10 flex h-[300px] w-full max-w-[320px] flex-col rounded-2xl bg-white p-10" key={index}>
-              <div className="z-10 flex h-full max-w-[240px] flex-col items-center justify-between bg-white text-center ">
-                <Image
-                  src={item.url}
-                  width={item.width}
-                  height={70}
-                  layout={'intrinsic'}
-                  quality={100}
-                  loading={'lazy'}
-                  alt={item.title}
-                />
-                <p className="max-w-[200px] bg-white text-2xl font-medium">{item.title}</p>
-                <div
-                  onClick={() =>
-                    window.open(
-                      `${window.location.origin}${router.locale === 'en' ? '' : `/${router.locale}`}/${
-                        item.UrlRedirectName
-                      }`,
-                      '_blank',
-                    )
-                  }
-                  className="flex max-w-[200px] cursor-pointer flex-row items-center justify-center text-primary hover:underline"
-                >
-                  <p className="text-sm font-semibold">{item.description}</p>
-                  <CaretRight size={14} weight={'bold'} />
-                </div>
+    <section className="overflow-hidden py-20">
+      <div className="flex flex-col items-center justify-center space-y-16 px-5">
+        <p className="max-w-[720px] text-center text-4xl font-semibold sm:text-5xl">
+          {textContent.title.text1}
+          <span className="text-primary">{textContent.title.blueText}</span>
+          {textContent.title.text2}
+        </p>
+        <div className="flex w-full  max-w-[850px] flex-col gap-5 lg:gap-2">
+          {cards.map((tool) => (
+            <div
+              key={tool.title}
+              className="flex w-full flex-col items-center justify-between gap-4 rounded-[10px] border border-gray-10 bg-white px-10 py-6 lg:flex-row lg:gap-0"
+            >
+              <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:text-left">
+                <tool.icon size={32} className="text-primary" />
+                <p className="text-2xl font-medium">
+                  <span className="font-semibold text-primary">{textContent.free}</span> {tool.title}
+                </p>
+              </div>
+              <div className=" flex flex-row items-center gap-2 text-lg font-semibold text-primary hover:underline">
+                <Link href={tool.pathname} locale={lang} passHref target="_self">
+                  <a target="_self" className="hover:text-primary">
+                    {tool.cta}
+                  </a>
+                </Link>
+                <CaretRight size={16} weight="bold" />
               </div>
             </div>
           ))}

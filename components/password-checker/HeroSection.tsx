@@ -81,58 +81,61 @@ const HeroSection = ({ textContent }) => {
   };
 
   return (
-    <section className="relative flex flex-col items-center space-y-12 bg-white pt-32 pb-20 md:space-y-16">
+    <section className="relative flex flex-col items-center space-y-12 bg-white px-5 pt-32 pb-20 md:space-y-16">
       <div className="flex flex-col items-center space-y-5 px-4 text-center lg:px-0">
-        <Header className="text-gray-100">{textContent.title}</Header>
+        <Header isToolsPage className="text-gray-100">
+          {textContent.title}
+        </Header>
         <h2 className="text-lg font-normal text-gray-80 lg:text-xl">
-          {textContent.subtitle1}
+          <span className="font-semibold">{textContent.subtitle1}</span>
           <br />
           {textContent.subtitle2}
         </h2>
       </div>
-
-      <div className="flex w-full max-w-lg flex-col items-center space-y-5 px-4 lg:px-0">
-        <div className="relative w-full">
-          <input
-            onKeyUp={(e) => checkPassword(e)}
-            id="input"
-            type={inputTypePassword ? 'password' : 'text'}
-            placeholder={textContent.placeholder}
-            autoComplete="off"
-            className="h-14 w-full appearance-none rounded-lg border-2 border-gray-10 bg-white pl-4 pr-14 text-2xl placeholder-gray-30 shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out focus:border-primary focus:ring-opacity-10"
-          />
-          <label
-            onClick={() => toggleShowPassword()}
-            className="absolute top-3 right-4 flex h-8 w-8 cursor-pointer flex-col items-center justify-center text-gray-80"
-          >
-            {inputTypePassword ? <EyeSlash size={28} /> : <Eye size={28} />}
-          </label>
-        </div>
-
-        <div className="flex h-1.5 w-full flex-row space-x-1.5">
-          {['0', '1', '2', '3', '4'].map((step, index) => (
-            <div
-              key={step}
-              className={`${
-                index <= crackScore && passwordLength !== 0
-                  ? crackScore > 3
-                    ? 'bg-green'
-                    : crackScore > 1
-                    ? 'bg-orange'
-                    : 'bg-red'
-                  : 'bg-gray-10'
-              } h-full w-full rounded-full transition-all duration-75 ease-out`}
+      <div className="flex w-full max-w-2xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-9">
+        <div className="flex w-full max-w-lg flex-col items-center space-y-5">
+          <div className="relative w-full">
+            <input
+              onKeyUp={(e) => checkPassword(e)}
+              id="input"
+              type={inputTypePassword ? 'password' : 'text'}
+              placeholder={textContent.placeholder}
+              autoComplete="off"
+              className="h-14 w-full appearance-none rounded-lg border-2 border-gray-10 bg-white pl-4 pr-14 text-2xl placeholder-gray-30 shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out focus:border-primary focus:ring-opacity-10"
             />
-          ))}
-        </div>
-        <div className="flex flex-row items-center space-x-1 text-sm text-gray-50">
-          <Info size={16} />
-          <span>{textContent.subtitle3}</span>
+            <label
+              onClick={() => toggleShowPassword()}
+              className="absolute top-3 right-4 flex h-8 w-8 cursor-pointer flex-col items-center justify-center text-gray-80"
+            >
+              {inputTypePassword ? <EyeSlash size={28} /> : <Eye size={28} />}
+            </label>
+          </div>
+
+          <div className="flex h-1.5 w-full flex-row space-x-1.5">
+            {['0', '1', '2', '3', '4'].map((step, index) => (
+              <div
+                key={step}
+                className={`${
+                  index <= crackScore && passwordLength !== 0
+                    ? crackScore > 3
+                      ? 'bg-green'
+                      : crackScore > 1
+                      ? 'bg-orange'
+                      : 'bg-red'
+                    : 'bg-gray-10'
+                } h-full w-full rounded-full transition-all duration-75 ease-out`}
+              />
+            ))}
+          </div>
+          <div className="flex flex-row items-center space-x-1 text-sm text-gray-50">
+            <Info size={16} />
+            <span>{textContent.subtitle3}</span>
+          </div>
         </div>
       </div>
 
       {/* Password dynamic feedback */}
-      <div className="flex w-full flex-col items-stretch space-y-4 px-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
+      <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
         <div className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
           <span className="text-sm text-gray-50">{textContent.result.feedback.title}</span>
           <span className={`text-2xl font-semibold text-gray-80`}>{crackFeedback}</span>

@@ -1,0 +1,35 @@
+{
+  "title": {
+    "text1": "更多 ",
+    "blueText": "免费 ",
+    "text2": "在线安全工具"
+  },
+  "free": "免费",
+  "toolsCard": [
+    {
+      "title": "密码生成器",
+      "cta": "立即生成",
+      "pathname": "/password-generator"
+    },
+    {
+      "title": "密码强度检查器",
+      "cta": "立即检查",
+      "pathname": "/password-checker"
+    },
+    {
+      "title": "字节单位转换器",
+      "cta": "立即转换",
+      "pathname": "/byte-converter"
+    },
+    {
+      "title": "临时电子邮件",
+      "cta": "立即发送",
+      "pathname": "/temporary-email"
+    },
+    {
+      "title": "病毒扫描器",
+      "cta": "立即扫描",
+      "pathname": "/virus-scanner"
+    }
+  ]
+}

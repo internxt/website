@@ -2,13 +2,11 @@ import { useState } from 'react';
 import Checkbox from '../components/Checkbox';
 import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '../Snackbar';
-import { checkPassword } from './utils';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
-  // const textCases = require('../../assets/lang/en/password-checker.json');
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
   const [password, setPassword] = useState<any>();
   const [regenerate, setRegenerate] = useState(false);
@@ -21,13 +19,14 @@ const HeroSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center pt-32 pb-20">
         <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
-            <Header className="text-gray-100">{textContent.title}</Header>
-            <p className="text-xl text-gray-80">{textContent.subtitle}</p>
+            <Header isToolsPage className="text-gray-100">
+              {textContent.title}
+            </Header>
+            <p className="text-xl font-semibold text-gray-80">{textContent.subtitle}</p>
           </div>
-          <div className="flex w-full max-w-lg flex-col items-center justify-center">
-            <div className="flex w-full flex-col items-center justify-center space-y-4">
+          <div className="flex w-full max-w-xl flex-col items-center justify-center rounded-2xl border-4 border-primary/7 bg-primary/2">
+            <div className="flex w-full flex-col items-center justify-center space-y-4 p-9">
               <div
-                onKeyUp={checkPassword}
                 id="input"
                 className="flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary bg-white py-3 px-3 text-center placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10"
               >
@@ -58,13 +57,14 @@ const HeroSection = ({ textContent }) => {
               </div>
               <div className="flex w-full flex-row space-x-2">
                 <div
+                  role="button"
                   className="flex w-full cursor-pointer select-none items-center justify-center space-x-2 rounded-lg bg-primary py-2 hover:bg-primary-dark"
                   onClick={() => {
                     navigator.clipboard.writeText(password);
                     notificationService.openSuccessToast('Password copied to clipboard');
                   }}
                 >
-                  <Copy className={`h-5 w-5 text-white`} />
+                  <Copy className={`hidden h-5 w-5 text-center text-white md:flex`} />
                   <p className="font-medium text-white">{textContent.copy}</p>
                 </div>
                 <div
@@ -73,7 +73,7 @@ const HeroSection = ({ textContent }) => {
                     setRegenerate(!regenerate);
                   }}
                 >
-                  <ArrowsClockwise className={`h-5 w-5`} />
+                  <ArrowsClockwise className={`hidden h-5 w-5 text-center md:flex`} />
                   <p className="font-medium">{textContent.generate}</p>
                 </div>
               </div>
@@ -125,23 +125,19 @@ const HeroSection = ({ textContent }) => {
               </div>
             </div>
             {passwordType === 'password' ? (
-              <>
-                <PasswordSettings
-                  textContent={textContent.password}
-                  setPassword={setPassword}
-                  setCrackScore={setCrackScore}
-                  regenerate={regenerate}
-                />
-              </>
+              <PasswordSettings
+                textContent={textContent.password}
+                setPassword={setPassword}
+                setCrackScore={setCrackScore}
+                regenerate={regenerate}
+              />
             ) : (
-              <>
-                <PassphraseSettings
-                  textContent={textContent.passphrase}
-                  setPassword={setPassword}
-                  setCrackScore={setCrackScore}
-                  regenerate={regenerate}
-                />
-              </>
+              <PassphraseSettings
+                textContent={textContent.passphrase}
+                setPassword={setPassword}
+                setCrackScore={setCrackScore}
+                regenerate={regenerate}
+              />
             )}
           </div>
         </div>

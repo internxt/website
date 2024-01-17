@@ -92,39 +92,6 @@
       ]
     }
   },
-  "ToolsSection": {
-    "title": "Essayez les outils en ligne gratuits d'Internxt :",
-    "toolsCard": [
-      {
-        "url": "/images/temp-email/password-checker.svg",
-        "urlRedirectName": "password-checker",
-        "width": 125,
-        "title": "Vérificateur de mot de passe gratuit",
-        "description": "Essayez maintenant"
-      },
-      {
-        "url": "/images/temp-email/virus-scanner.svg",
-        "urlRedirectName": "virus-scanner",
-        "width": 105,
-        "title": "Scanner de virus gratuit",
-        "description": "Scanner maintenant"
-      },
-      {
-        "url": "/images/temp-email/byte-converter.svg",
-        "urlRedirectName": "byte-converter",
-        "width": 95,
-        "title": "Convertisseur d'octets gratuit",
-        "description": " Convertissez maintenant "
-      },
-      {
-        "url": "/images/temp-email/password-generator.svg",
-        "UrlRedirectName": "password-generator",
-        "width": 124,
-        "title": "Générateur de mot de passe",
-        "description": "Essayer maintenant"
-      }
-    ]
-  },
 
   "QASection": {
     "title": "Des questions ? Nous avons les réponses.",

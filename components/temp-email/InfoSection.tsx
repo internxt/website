@@ -5,7 +5,7 @@ import SignUpBanner from '../banners/SignUpBanner';
 
 const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
-    <section className="overflow-hidden bg-gray-1 px-5">
+    <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
@@ -48,7 +48,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
               {infoCards(lang).map((card) => (
                 <div
                   key={card.title}
-                  className="flex flex-col items-start justify-start bg-white p-8 sm:p-10 md:max-w-[488px]"
+                  className="flex flex-col items-start justify-start rounded-2xl bg-white p-8 sm:p-10 md:max-w-[488px]"
                 >
                   <card.icon className="mb-6 text-4xl text-primary" />
                   <div className="flex w-full max-w-[400px] flex-col">
@@ -59,9 +59,9 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
               ))}
             </div>
           </div>
-          <div>
+          <div className="flex">
             <Image
-              src="/images/temp-email/SwitchToPrivacy.png"
+              src="/images/temp-email/cta_general_10_storage_en.webp"
               alt="Switch to privacy"
               width={895}
               height={355}
@@ -74,9 +74,9 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
             />
           </div>
           <div className="flex max-w-2xl flex-col space-y-3">
-            <p className="text-3xl font-medium lg:text-2xl">{textContent.whenUseTempMail.title}</p>
+            <p className="text-3xl font-medium text-gray-100 lg:text-2xl">{textContent.whenUseTempMail.title}</p>
             <p className="text-lg">{textContent.whenUseTempMail.description}</p>
-            <ul className="list-disc space-y-1.5 pl-6 text-lg lg:max-w-2xl">
+            <ul className="list-disc space-y-1 pl-5 text-lg text-gray-80 lg:max-w-2xl">
               {textContent.whenUseTempMail.bulletedList.map((item, index) => (
                 <li key={item}>{item}</li>
               ))}

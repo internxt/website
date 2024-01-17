@@ -6,7 +6,15 @@ import RenderDescription from '../shared/RenderDescription';
 
 const allowedLangForImage = ['en', 'es', 'ru'];
 
-const InfoSection = ({ textContent, bannerText }): JSX.Element => {
+const InfoSection = ({
+  textContent,
+  bannerText,
+  hideLast2Sections,
+}: {
+  textContent: any;
+  bannerText: any;
+  hideLast2Sections?: boolean;
+}): JSX.Element => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -70,42 +78,49 @@ const InfoSection = ({ textContent, bannerText }): JSX.Element => {
           </div>
         </div>
       </div>
-      <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
-      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20 px-5">
-        {getSectionText(textContent.thirdSection)}
-        <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
-          {getSectionText(textContent.fourthSection)}
-          <p className="text-lg">{textContent.bulletedList.title}</p>
-          <ul className="list-disc pl-5 text-lg">
-            {textContent.bulletedList.list.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div>
-        <img
-          src={`/images/converter-tool/PasswordChecker${
-            allowedLangForImage.includes(lang) ? lang.toUpperCase() : 'EN'
-          }.png`}
-          alt="Password Checker"
-          className="w-full max-w-4xl cursor-pointer px-5"
-          onClick={() => {
-            window.open(`${window.origin}${lang === 'en' ? '' : `/${lang}`}/password-checker`, '_blank');
-          }}
-        />
-        {getSectionText(textContent.fifthSection)}
-
-        <div className="grid auto-rows-auto grid-cols-1 gap-5 px-1 sm:grid-cols-2 lg:max-w-max lg:grid-cols-3">
-          {textContent.infoCards2.map((tip, index) => (
-            <div
-              key={tip}
-              className="flex flex-col items-start space-y-3 rounded-2xl bg-gray-1 p-8 lg:h-full lg:max-w-[256px]"
-            >
-              <p className="flex flex-col text-primary">{tipIcons[index]}</p>
-              <p className="text-2xl">{tip}</p>
+      {hideLast2Sections ? null : (
+        <>
+          <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
+          <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20 px-5">
+            {getSectionText(textContent.thirdSection)}
+            <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
+              {getSectionText(textContent.fourthSection)}
+              <p className="text-lg">{textContent.bulletedList.title}</p>
+              <ul className="list-disc pl-5 text-lg">
+                {textContent.bulletedList.list.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
-      </div>
+            <div
+              className="w-full max-w-4xl cursor-pointer px-5"
+              onClick={() => {
+                window.open(`${window.origin}${lang === 'en' ? '' : `/${lang}`}/password-checker`, '_blank');
+              }}
+            >
+              <img
+                src={`/images/converter-tool/PasswordChecker${
+                  allowedLangForImage.includes(lang) ? lang.toUpperCase() : 'EN'
+                }.webp`}
+                alt="Password Checker"
+              />
+            </div>
+            {getSectionText(textContent.fifthSection)}
+
+            <div className="grid auto-rows-auto grid-cols-1 gap-5 px-1 sm:grid-cols-2 lg:max-w-max lg:grid-cols-3">
+              {textContent.infoCards2.map((tip, index) => (
+                <div
+                  key={tip}
+                  className="flex flex-col items-start space-y-3 rounded-2xl bg-gray-1 p-8 lg:h-full lg:max-w-[256px]"
+                >
+                  <p className="flex flex-col text-primary">{tipIcons[index]}</p>
+                  <p className="text-2xl">{tip}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </section>
   );
 };

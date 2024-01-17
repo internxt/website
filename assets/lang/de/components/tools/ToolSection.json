@@ -1,0 +1,35 @@
+{
+  "title": {
+    "text1": "Mehr ",
+    "blueText": "kostenlose ",
+    "text2": "Online-Sicherheitstools"
+  },
+  "free": "Kostenlos",
+  "toolsCard": [
+    {
+      "title": "Passwortgenerator",
+      "cta": "Jetzt generieren",
+      "pathname": "/password-generator"
+    },
+    {
+      "title": "Passwortstärkeprüfer",
+      "cta": "Jetzt prüfen",
+      "pathname": "/password-checker"
+    },
+    {
+      "title": "Byte-Einheitskonverter",
+      "cta": "Jetzt konvertieren",
+      "pathname": "/byte-converter"
+    },
+    {
+      "title": "Temporäre E-Mail",
+      "cta": "Jetzt senden",
+      "pathname": "/temporary-email"
+    },
+    {
+      "title": "Virenscanner",
+      "cta": "Jetzt scannen",
+      "pathname": "/virus-scanner"
+    }
+  ]
+}
