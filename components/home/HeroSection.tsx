@@ -60,6 +60,7 @@ export default function HeroSection({ textContent, lang }) {
               width={564}
               height={529}
               alt="Internxt Cloud Storage"
+              priority={true}
               draggable={false}
             />
           </div>
@@ -68,17 +69,16 @@ export default function HeroSection({ textContent, lang }) {
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
           <div className={'flex xl:hidden'}>
             <Marquee gradientColor={[255, 255, 255]} className="bg-transparent" gradientWidth="32px" speed={30}>
-              <div className="featured flex w-full flex-row p-6">
+              <div className="featured flex w-full flex-row space-x-10 p-6">
                 {lang === 'es' ? (
                   <a
                     href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="/../../logos/featured/forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
@@ -91,10 +91,9 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="/../../logos/featured/forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
@@ -109,10 +108,9 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/elconfidencial.svg"
+                      src="/../../logos/featured/elconfidencial.svg"
                       draggable="false"
                       width="144"
                       height="16"
@@ -126,10 +124,9 @@ export default function HeroSection({ textContent, lang }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="mr-12"
-                    src="../../logos/featured/techradar.svg"
+                    src="/../../logos/featured/techradar.svg"
                     draggable="false"
                     width="94"
                     height="16"
@@ -142,10 +139,9 @@ export default function HeroSection({ textContent, lang }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="mr-12"
-                    src="../../logos/featured/techcrunch.svg"
+                    src="/../../logos/featured/techcrunch.svg"
                     draggable="false"
                     width="113"
                     height="16"
@@ -158,10 +154,9 @@ export default function HeroSection({ textContent, lang }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="mr-12"
-                    src="../../logos/featured/venturebeat.svg"
+                    src="/../../logos/featured/venturebeat.svg"
                     draggable="false"
                     width="125"
                     height="16"
@@ -174,20 +169,19 @@ export default function HeroSection({ textContent, lang }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="mr-10"
-                    src="../../logos/featured/HostingAdvice.png"
+                    src="/logos/featured/HostingAdvice.webp"
                     draggable="false"
                     width="168"
-                    height="18"
+                    height="25"
                     alt="Hosting Advice logo"
                   />
                 </a>
 
                 <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
-                  <img
-                    src="../../logos/featured/wired.svg"
+                  <Image
+                    src="/../../logos/featured/wired.svg"
                     width={82}
                     height={16}
                     alt="Wired logo"
@@ -202,10 +196,9 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/lavanguardia.svg"
+                      src="/../../logos/featured/lavanguardia.svg"
                       draggable="false"
                       width="152"
                       height="16"
@@ -220,10 +213,10 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       className="mr-24"
                       loading="lazy"
-                      src="../../logos/featured/elpais.svg"
+                      src="/../../logos/featured/elpais.svg"
                       draggable="false"
                       width="82"
                       height="16"
@@ -237,17 +230,16 @@ export default function HeroSection({ textContent, lang }) {
 
           <div className={'mx-auto hidden w-full overflow-hidden xl:flex'}>
             <div className="featured flex w-full flex-row justify-center overflow-x-auto px-4 pb-8 pt-10">
-              <div className="flex flex-row items-center">
+              <div className="flex flex-row items-center space-x-12">
                 {lang === 'es' ? (
                   <a
                     href="https://forbes.es/empresas/155897/telefonica-se-une-a-roig-e-invierte-en-internxt-el-google-drive-espanol-que-vale-40-millones/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="/../../logos/featured/forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
@@ -260,10 +252,9 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/forbes.svg"
+                      src="/../../logos/featured/forbes.svg"
                       draggable="false"
                       width="62"
                       height="16"
@@ -278,10 +269,9 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/elconfidencial.svg"
+                      src="/../../logos/featured/elconfidencial.svg"
                       draggable="false"
                       width="144"
                       height="16"
@@ -295,10 +285,9 @@ export default function HeroSection({ textContent, lang }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="mr-12"
-                    src="../../logos/featured/techradar.svg"
+                    src="/../../logos/featured/techradar.svg"
                     draggable="false"
                     width="94"
                     height="16"
@@ -311,10 +300,9 @@ export default function HeroSection({ textContent, lang }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="mr-12"
-                    src="../../logos/featured/techcrunch.svg"
+                    src="/../../logos/featured/techcrunch.svg"
                     draggable="false"
                     width="113"
                     height="16"
@@ -327,10 +315,9 @@ export default function HeroSection({ textContent, lang }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="mr-12"
-                    src="../../logos/featured/venturebeat.svg"
+                    src="/../../logos/featured/venturebeat.svg"
                     draggable="false"
                     width="125"
                     height="16"
@@ -342,27 +329,20 @@ export default function HeroSection({ textContent, lang }) {
                   href="https://www.hostingadvice.com/blog/internxt-delivers-secure-by-design-cloud-storage-with-user-privacy-locked-in/"
                   target="_blank"
                   rel="noreferrer"
+                  className="pt-1"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className={'mr-12'}
-                    src="../../logos/featured/HostingAdvice.png"
+                    src="/logos/featured/HostingAdvice.webp"
                     draggable="false"
                     width="168"
-                    height="18"
+                    height="30"
                     alt="Hosting Advice logo"
                   />
                 </a>
 
                 <a href="https://www.wired.com/gallery/best-cloud-storage-services/" target="_blank" rel="noreferrer">
-                  <img
-                    src="../../logos/featured/wired.svg"
-                    width={82}
-                    height={16}
-                    alt="Wired logo"
-                    className="mr-12"
-                    loading="lazy"
-                  />
+                  <Image src="/../../logos/featured/wired.svg" width={82} height={16} alt="Wired logo" loading="lazy" />
                 </a>
 
                 {lang === 'es' && (
@@ -371,10 +351,9 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      className="mr-12"
-                      src="../../logos/featured/lavanguardia.svg"
+                      src="/../../logos/featured/lavanguardia.svg"
                       draggable="false"
                       width="152"
                       height="16"
@@ -389,9 +368,9 @@ export default function HeroSection({ textContent, lang }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img
+                    <Image
                       loading="lazy"
-                      src="../../logos/featured/elpais.svg"
+                      src="/../../logos/featured/elpais.svg"
                       draggable="false"
                       width="82"
                       height="16"
