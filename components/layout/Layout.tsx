@@ -166,15 +166,14 @@ LayoutProps) {
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <link rel="icon" href="/favicon.ico" />
 
-        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></Script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="/cookiebanner.style.css" />
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
-        <Script strategy="afterInteractive" src="/js/cookiebanner.script.js"></Script>
+        <script src="/js/cookiebanner.script.js"></script>
         {lang === 'es' && (
-          <Script
-            strategy="afterInteractive"
+          <script
             dangerouslySetInnerHTML={{
               __html: `
           $(document).ready(function() {
