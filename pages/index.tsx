@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import AOS from 'aos';
 import { isMobile } from 'react-device-detect';
 import cookies from '../lib/cookies';
@@ -17,60 +17,75 @@ import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
 import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
 import FileParallaxSection from '../components/home/FileParallaxSection';
 
-const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const [downloadUrl, setDownloadUrl] = useState(null);
+const Home = memo(
+  ({
+    metatagsDescriptions,
+    langJson,
+    lang,
+    navbarLang,
+    footerLang,
+    downloadURL,
+  }: {
+    metatagsDescriptions: any;
+    langJson: any;
+    lang: string;
+    navbarLang: any;
+    footerLang: any;
+    downloadURL: any;
+  }) => {
+    const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+    const [downloadUrl, setDownloadUrl] = useState(null);
 
-  function getOS() {
-    const osList = [
-      { keyword: 'Android', name: 'Android' },
-      { keyword: 'iPad', name: 'iPad' },
-      { keyword: 'iPhone', name: 'iPhone' },
-      { keyword: 'Win', name: 'Windows' },
-      { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
-      { keyword: 'X11', name: 'UNIX' },
-      { keyword: 'Linux', name: 'Linux' },
-    ];
+    function getOS() {
+      const osList = [
+        { keyword: 'Android', name: 'Android' },
+        { keyword: 'iPad', name: 'iPad' },
+        { keyword: 'iPhone', name: 'iPhone' },
+        { keyword: 'Win', name: 'Windows' },
+        { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
+        { keyword: 'X11', name: 'UNIX' },
+        { keyword: 'Linux', name: 'Linux' },
+      ];
 
-    const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
+      const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
 
-    return res ? res.name : `Not known (${window.navigator.appVersion})`;
-  }
+      return res ? res.name : `Not known (${window.navigator.appVersion})`;
+    }
 
-  useEffect(() => {
-    setDownloadUrl(downloadURL[getOS()]);
-    AOS.init();
-  }, [downloadURL]);
+    useEffect(() => {
+      setDownloadUrl(downloadURL[getOS()]);
+      AOS.init();
+    }, [downloadURL]);
 
-  return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    return (
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
+        <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
 
-      <InfoSection textContent={langJson.InfoSection} lang={lang} />
+        <InfoSection textContent={langJson.InfoSection} lang={lang} />
 
-      <FileParallaxSection />
+        <FileParallaxSection />
 
-      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
+        <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
 
-      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} />
+        <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} />
 
-      <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
+        <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
 
-      <TestimonialsSection textContent={langJson.TestimonialsSection} />
+        <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
-      <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
+        <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 
-      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
+        <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
-  );
-};
-
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    );
+  },
+);
 export async function getServerSideProps(ctx) {
   const downloadURL = await downloadDriveLinks();
 
