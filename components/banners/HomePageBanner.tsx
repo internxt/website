@@ -113,7 +113,13 @@ const HomePageBanner = () => {
         </div>
       </div>
       <div className="flex w-full flex-col">
-        <Image src="/images/banners/data_privacy_internxt_mobile.webp" width={377} height={185} alt="Percentage icon" />
+        <Image
+          src="/images/banners/data_privacy_internxt_mobile.webp"
+          loading="lazy"
+          width={377}
+          height={185}
+          alt="Percentage icon"
+        />
       </div>
     </div>
   );

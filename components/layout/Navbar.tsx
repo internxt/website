@@ -462,7 +462,6 @@ export default function Navbar(props: NavbarProps) {
                           setMenuState(false);
                         }}
                         tabIndex={0}
-                        id="loginButton"
                         href="https://drive.internxt.com/login"
                         className={`flex w-full translate-y-0 px-8 py-4 text-primary outline-none transition delay-300 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'

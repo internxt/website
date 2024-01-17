@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { AppProps } from 'next/app';
 import '../styles/globals.scss';
 import Script from 'next/script';
@@ -76,4 +76,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default memo(MyApp);

@@ -82,6 +82,7 @@ const BottomBanner = () => {
               height={100}
               className="flex w-full object-fill"
               draggable={false}
+              alt="Data Privacy Internxt"
             />
           </div>
           <div className="flex flex-row items-center justify-center space-x-5 text-white">

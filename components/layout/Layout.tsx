@@ -173,13 +173,15 @@ LayoutProps) {
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
         {lang === 'es' && (
-          <script>
-            {`
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
           $(document).ready(function() {
             cookieBanner.init();
         });
-          `}
-          </script>
+          `,
+            }}
+          />
         )}
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
