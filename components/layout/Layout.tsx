@@ -171,15 +171,18 @@ LayoutProps) {
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
-        <Script src="/js/cookiebanner.script.js"></Script>
+        <Script strategy="afterInteractive" src="/js/cookiebanner.script.js"></Script>
         {lang === 'es' && (
-          <Script>
-            {`
+          <Script
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
           $(document).ready(function() {
             cookieBanner.init();
         });
-          `}
-          </Script>
+          `,
+            }}
+          />
         )}
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
