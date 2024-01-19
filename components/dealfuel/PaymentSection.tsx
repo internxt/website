@@ -1,6 +1,5 @@
 import React from 'react';
 import PriceTable from './PriceTable';
-import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 
 const PaymentSection = ({ lang, textContent, country }) => {
   return (

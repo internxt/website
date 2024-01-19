@@ -11,7 +11,7 @@ import testPasswordStrength from './testPasswordStrength';
 interface SignUpProps {
   textContent: any;
   loading?: boolean;
-  provider?: 'STACKCOMMERCE' | 'TECHCULT' | 'DEALMIRROR';
+  provider?: 'STACKCOMMERCE' | 'TECHCULT' | 'DEALMIRROR' | 'MIGHTYDEALS';
 }
 
 export default function SignUp(props: SignUpProps) {
