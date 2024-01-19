@@ -31,10 +31,10 @@ const PriceTable = ({ lang, country, textContent }) => {
     TB10: {
       storage: '10TB',
       price: {
-        '-1': '1.499',
+        '-1': '1499',
       },
       popular: false,
-      actualPrice: Math.abs((1.499 * 75) / 100)
+      actualPrice: Math.abs((1499 * 75) / 100)
         .toString()
         .split('.')[0],
     },
@@ -54,20 +54,20 @@ const PriceTable = ({ lang, country, textContent }) => {
     TB5: {
       storage: '5TB',
       price: {
-        '-1': '1.099',
+        '-1': '1099',
       },
       popular: true,
-      actualPrice: Math.abs((1.099 * 75) / 100)
+      actualPrice: Math.abs((1099 * 75) / 100)
         .toString()
         .split('.')[0],
     },
     TB10: {
       storage: '10TB',
       price: {
-        '-1': '1.599',
+        '-1': '1599',
       },
       popular: false,
-      actualPrice: Math.abs((1.599 * 75) / 100)
+      actualPrice: Math.abs((1599 * 75) / 100)
         .toString()
         .split('.')[0],
     },
