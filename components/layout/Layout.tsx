@@ -62,9 +62,14 @@ LayoutProps) {
   // THIS CODE SNIPPET SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
     let ip;
-    axios.get('https://ipinfo.io/ip').then((res) => {
-      ip = res.data;
-    });
+    axios
+      .get('https://ipinfo.io/ip')
+      .then((res) => {
+        ip = res.data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     window.rudderanalytics.page(segmentName, {
       brave: isBrave(),
