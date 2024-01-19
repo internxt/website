@@ -3,42 +3,81 @@ import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 
 const PriceTable = ({ lang, country, textContent }) => {
+  let prices;
   const billingFrequency = -1;
-
   const billingPrice = (price) => price[billingFrequency];
 
   const pricings = {
     TB2: {
       storage: '2TB',
       price: {
-        '-1': '299',
+        '-1': '499',
       },
       popular: false,
-      actualPrice: Math.abs((299 * 75) / 100)
+      actualPrice: Math.abs((499 * 75) / 100)
         .toString()
         .split('.')[0],
     },
     TB5: {
       storage: '5TB',
       price: {
-        '-1': '499',
+        '-1': '999',
       },
       popular: true,
-      actualPrice: Math.abs((499 * 75) / 100)
+      actualPrice: Math.abs((999 * 75) / 100)
         .toString()
         .split('.')[0],
     },
     TB10: {
       storage: '10TB',
       price: {
-        '-1': '999',
+        '-1': '1.499',
       },
       popular: false,
-      actualPrice: Math.abs((999 * 75) / 100)
+      actualPrice: Math.abs((1.499 * 75) / 100)
         .toString()
         .split('.')[0],
     },
   };
+
+  const dollarPricings = {
+    TB2: {
+      storage: '2TB',
+      price: {
+        '-1': '599',
+      },
+      popular: false,
+      actualPrice: Math.abs((599 * 75) / 100)
+        .toString()
+        .split('.')[0],
+    },
+    TB5: {
+      storage: '5TB',
+      price: {
+        '-1': '1.099',
+      },
+      popular: true,
+      actualPrice: Math.abs((1.099 * 75) / 100)
+        .toString()
+        .split('.')[0],
+    },
+    TB10: {
+      storage: '10TB',
+      price: {
+        '-1': '1.599',
+      },
+      popular: false,
+      actualPrice: Math.abs((1.599 * 75) / 100)
+        .toString()
+        .split('.')[0],
+    },
+  };
+
+  if (country === 'US') {
+    prices = dollarPricings;
+  } else {
+    prices = pricings;
+  }
 
   return (
     <section className="overflow-hidden">
@@ -48,26 +87,26 @@ const PriceTable = ({ lang, country, textContent }) => {
       >
         <PriceCard
           planType="individual"
-          storage={pricings.TB2.storage}
-          price={billingPrice(pricings.TB2.price)}
+          storage={prices.TB2.storage}
+          price={billingPrice(prices.TB2.price)}
           cta={['checkout', 'lifetime2TB']}
-          popular={pricings.TB2.popular}
+          popular={prices.TB2.popular}
           country={country}
         />
         <PriceCard
           planType="individual"
-          storage={pricings.TB5.storage}
-          price={billingPrice(pricings.TB5.price)}
+          storage={prices.TB5.storage}
+          price={billingPrice(prices.TB5.price)}
           cta={['checkout', 'lifetime5TB']}
-          popular={pricings.TB5.popular}
+          popular={prices.TB5.popular}
           country={country}
         />
         <PriceCard
           planType="individual"
-          storage={pricings.TB10.storage}
-          price={billingPrice(pricings.TB10.price)}
+          storage={prices.TB10.storage}
+          price={billingPrice(prices.TB10.price)}
           cta={['checkout', 'lifetime10TB']}
-          popular={pricings.TB10.popular}
+          popular={prices.TB10.popular}
           country={country}
         />
       </div>

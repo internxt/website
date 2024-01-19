@@ -10,32 +10,20 @@ import PaymentSection from '../components/dealfuel/PaymentSection';
 import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/dealfuel/CtaSection';
 
-import axios from 'axios';
 import SignUp from '../components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
-const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
+const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = useState('ES');
+  const [country, setCountry] = useState('US');
   const [openDialog, setOpenDialog] = useState(false);
-
-  async function getCountryCode() {
-    const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
-    return countryCode;
-  }
-
-  useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
-    });
-  }, []);
 
   useEffect(() => {
     //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
     const TB2Button = document.getElementById('2TB');
     const TB5Button = document.getElementById('5TB');
-    const TB10Buton = document.getElementById('10TB');
-    [TB2Button, TB5Button, TB10Buton].forEach((button) =>
+    const TB10Button = document.getElementById('10TB');
+    [TB2Button, TB5Button, TB10Button].forEach((button) =>
       button.addEventListener('click', () => {
         setOpenDialog(true);
       }),
@@ -102,4 +90,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default StackCommerce;
+export default MightyDeals;
