@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
-import { useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import Image from 'next/image';
 import Header from '../shared/Header';
@@ -14,7 +13,6 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
-  const { dialogIsOpen } = useGlobalDialog();
   const previewImg = getImage('/images/lifetime/file_item.webp');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
