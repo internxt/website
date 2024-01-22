@@ -64,7 +64,7 @@ const BottomBanner = () => {
 
   return (
     <section
-      className={`fixed bottom-10 z-50 hidden lg:${
+      className={`fixed bottom-10 z-50 hidden xl:${
         hidePopup ? 'hidden' : 'flex'
       } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
@@ -74,7 +74,7 @@ const BottomBanner = () => {
             <X className=" text-white" size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row ">
+        <div className="z-40 flex flex-row">
           <div className="flex flex-col">
             <Image
               src="/images/banners/data_privacy_internxt.webp"
