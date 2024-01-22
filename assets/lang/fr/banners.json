@@ -53,8 +53,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "normalText": "Préparez-vous pour la Semaine de la Protection des Données : ",
-      "boldText": "70% de réduction sur les abonnements mensuels et annuels !",
+      "boldText": "Économisez 70% sur les abonnements mensuels ou annuels",
+      "normalText": " cette semaine de protection des données.",
       "cta": "Choisir un plan"
     }
   }

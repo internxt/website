@@ -35,15 +35,15 @@ const CampaignCtaSection = ({ textContent }) => {
               </div>
             </div>
           </div>
-          <div className="relative hidden w-full flex-col lg:flex">
+          <div className="relative hidden h-full w-full flex-col xl:flex">
             <Image
-              src="/images/pricing/internxt_cloud_storage_pricing.webp"
+              src="/images/pricing/data_privacy_week_pricing.webp"
               width={723}
               quality={100}
               draggable={false}
               height={529}
               alt="Internxt Cloud Storage Pricing"
-              className="rounded-r-[32px]"
+              className="absolute h-full rounded-r-[32px]"
             />
           </div>
         </div>

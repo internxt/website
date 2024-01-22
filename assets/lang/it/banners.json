@@ -84,8 +84,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "normalText": "Preparati per la Settimana della Privacy dei Dati: ",
-      "boldText": "Sconto del 70% su piani mensili e annuali!",
+      "boldText": "Risparmia il 70% sui piani mensili o annuali",
+      "normalText": " in questa settimana della privacy dei dati.",
       "cta": "Scegli un piano"
     }
   }

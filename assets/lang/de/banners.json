@@ -78,8 +78,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "normalText": "Bereiten Sie sich auf die Datenschutzwoche vor: ",
-      "boldText": "70% Rabatt auf monatliche und jährliche Pläne!",
+      "boldText": "Sparen Sie 70% bei monatlichen oder jährlichen Plänen",
+      "normalText": " in dieser Datenschutzwoche.",
       "cta": "Plan auswählen"
     }
   }

@@ -56,7 +56,7 @@ export default function HeroSection({ textContent, lang }) {
             }}
           >
             <Image
-              src="/images/home/internxt_cloud_storage.webp"
+              src="/images/banners/data_privacy_week.webp"
               width={564}
               height={529}
               alt="Internxt Cloud Storage"
