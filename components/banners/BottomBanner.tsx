@@ -86,9 +86,9 @@ const BottomBanner = () => {
             />
           </div>
           <div className="flex flex-row items-center justify-center space-x-5 text-white">
-            <p className="text-5xl font-bold">{title()}</p>
+            <p className="text-4xl font-bold">{title()}</p>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-blue-10 active:bg-blue-10 sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-blue-10 active:bg-blue-10 sm:text-lg"
               onClick={() => {
                 router.push('/pricing');
               }}
