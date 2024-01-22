@@ -23,21 +23,21 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 70%', title2: 'on monthly & annual subscriptions!' };
+        return 'Data Privacy Week is here!';
       case 'es':
-        return { title1: '¡Ahorra un 70%', title2: 'en las suscripciones anuales y mensuales!' };
+        return '¡La Semana de Privacidad de Datos está aquí!';
       case 'ru':
-        return { title1: 'Экономия 70%', title2: 'на месячных и годовых планах!' };
+        return 'Неделя конфиденциальности данных здесь!';
       case 'fr':
-        return { title1: 'Économisez 70%', title2: 'sur les abonnements mensuels et annuels !' };
+        return 'Semaine de la Confidentialité des Données !';
       case 'it':
-        return { title1: 'Risparmia il 70%', title2: 'su abbonamenti mensili e annuali!' };
+        return 'La Settimana della Privacy dei Dati è arrivata!';
       case 'zh':
-        return { title1: '省 70%', title2: '月度和年度订阅优惠！' };
+        return '数据隐私周到了！';
       case 'de':
-        return { title1: 'Sparen Sie 70%', title2: 'bei monatlichen und jährlichen Abonnements!' };
+        return 'Die Datenschutzwoche ist da!';
       default:
-        return { title1: 'Save 70%', title2: 'on monthly & annual subscriptions!' };
+        return 'Data Privacy Week is here!';
     }
   };
 
@@ -86,8 +86,7 @@ const BottomBanner = () => {
             />
           </div>
           <div className="flex flex-row items-center justify-center space-x-5 text-white">
-            <p className="text-6xl font-bold">{title().title1}</p>
-            <p className="max-w-[300px] text-2xl font-bold">{title().title2}</p>
+            <p className="text-5xl font-bold">{title()}</p>
             <button
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-blue-10 active:bg-blue-10 sm:text-lg"
               onClick={() => {

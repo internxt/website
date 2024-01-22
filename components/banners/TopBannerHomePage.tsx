@@ -17,11 +17,11 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div onKeyDown={() => {}} className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              {textContent.TopBarBanner.title.normalText}
               <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
+              {textContent.TopBarBanner.title.normalText}
             </p>
           </div>
-          <div
+          <button
             className="flex cursor-pointer flex-row items-center space-x-2"
             onClick={() => {
               router.push('/pricing');
@@ -29,7 +29,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           >
             <p className="font-semibold underline hover:no-underline">{textContent.TopBarBanner.title.cta}</p>
             <CaretRight size={16} />
-          </div>
+          </button>
 
           {/* <p className="flex text-base font-semibold underline">{pickUp()}</p> */}
         </div>

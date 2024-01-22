@@ -58,8 +58,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "normalText": "¡Prepárate para la Semana de Privacidad de Datos! ",
-      "boldText": "¡70% de descuento en planes mensuales y anuales!",
+      "boldText": "Ahorra un 70% en planes anuales ",
+      "normalText": "esta Semana de la Privacidad de Datos.",
       "cta": "Elige plan"
     }
   }

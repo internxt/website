@@ -89,8 +89,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "normalText": "Prepare for Data Privacy Week: ",
-      "boldText": "70% off monthly & annual plans!",
+      "boldText": "Save 70% on monthly or annual plans",
+      "normalText": " this Data Privacy Week.",
       "cta": "Choose plan"
     }
   }
