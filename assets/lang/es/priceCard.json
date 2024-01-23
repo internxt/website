@@ -24,9 +24,9 @@
   },
   "billingFrequencyLabel": {
     "lifetime": "Pago único",
-    "monthly": "Facturado al mes",
+    "monthly": "Facturado mensualmente",
     "semiannually": "Facturado cada 6 meses",
-    "annually": "Facturado al año",
+    "annually": "Facturado anualmente",
     "afterMonth": "después de 30 días"
   },
   "billingFrequencyLabelSmall": {
