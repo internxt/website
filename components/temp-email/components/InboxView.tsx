@@ -25,7 +25,7 @@ const Inbox = ({ email, token, textContent }) => {
     }
   }, [email, isRefreshed]);
 
-  //Get inbox every 5 seconds when the window is focused
+  //Get inbox every 20 seconds when the window is focused
   useEffect(() => {
     if (isFocused) {
       const interval = setInterval(() => getMailInbox(token), 20000);
