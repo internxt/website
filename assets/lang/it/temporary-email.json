@@ -8,8 +8,11 @@
     "expireEmail": "L'indirizzo e-mail e la cartella della Posta in Arrivo scadranno dopo 5 ore di inattività",
     "inbox": {
       "title": "Posta in arrivo",
-      "youHave": "Hai",
-      "newMessages": "nuovi messaggi",
+      "withoutMessages": {
+        "youHave": "Hai",
+        "newMessages": "nuovi messaggi"
+      },
+      "withMessages": "Ci sono nuovi messaggi",
       "waitingEmail": "In attesa di nuova posta in arrivo",
       "selectMessage": "Seleziona un messaggio da aprire",
       "attachment": "Allegati",

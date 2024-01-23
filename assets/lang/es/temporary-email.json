@@ -8,8 +8,11 @@
     "expireEmail": "El correo electrónico y la bandeja de entrada caducarán tras 5 horas de inactividad",
     "inbox": {
       "title": "Bandeja de entrada",
-      "youHave": "Tienes",
-      "newMessages": "nuevos mensajes",
+      "withoutMessages": {
+        "youHave": "Tienes",
+        "newMessages": "mensajes nuevos"
+      },
+      "withMessages": "Tienes mensajes nuevos",
       "waitingEmail": "Esperando correo electrónico entrante",
       "selectMessage": "Seleccionar un mensaje para abrirlo",
       "attachment": "Adjuntos",

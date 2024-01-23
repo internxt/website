@@ -54,7 +54,9 @@ const NoMessageSelected = ({
   messagesLength: number;
   textContent: any;
 }): JSX.Element => {
-  const messages = messagesLength === 0 ? ' 0 ' : messagesLength + ' ';
+  const withoutMessagesSentence = `${textContent.withoutMessages.youHave} ${messagesLength} ${textContent.withoutMessages.newMessages}`;
+  const withMessagesSentence = `${textContent.withMessages}`;
+  const messages = messagesLength === 0;
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <div className="relative flex flex-col">
@@ -65,7 +67,7 @@ const NoMessageSelected = ({
       </div>
       <div className="flex flex-col items-center">
         <p className="text-base font-medium text-gray-100">
-          {textContent.youHave} {messages} {textContent.newMessages}
+          {messages ? withoutMessagesSentence : withMessagesSentence}
         </p>
 
         <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>

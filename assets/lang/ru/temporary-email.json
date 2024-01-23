@@ -8,8 +8,11 @@
     "expireEmail": "Временная почта и письма будут удалены после 5 часов бездействия",
     "inbox": {
       "title": "Входящие",
-      "youHave": "У вас",
-      "newMessages": "входящих",
+      "withoutMessages": {
+        "youHave": "У вас",
+        "newMessages": "входящих"
+      },
+      "withMessages": "У вас есть новые сообщения",
       "waitingEmail": "Ожидание новых сообщений",
       "selectMessage": "Выберите сообщение, которое хотите открыть",
       "attachment": "Вложения",
