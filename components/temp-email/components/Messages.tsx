@@ -54,7 +54,7 @@ const NoMessageSelected = ({
   messagesLength: number;
   textContent: any;
 }): JSX.Element => {
-  const messages = messagesLength === 0 ? ' 0 ' : messagesLength;
+  const messages = messagesLength === 0 ? ' 0 ' : messagesLength + ' ';
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <div className="relative flex flex-col">
