@@ -14,6 +14,7 @@
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
+    "@coderosh/images-to-pdf": "^2.1.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@headlessui/react": "1.6.6",
