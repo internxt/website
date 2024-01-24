@@ -11,6 +11,7 @@ const excludedPaths: string[] = [
   `/js`,
   '/inxt-library',
   `DPA.pdf`,
+  '/pages/index.tsx',
 ];
 
 const Middleware = (res) => {
@@ -28,6 +29,10 @@ const Middleware = (res) => {
     }
   }
   return NextResponse.next();
+};
+
+export const config = {
+  matcher: ['/:lang/:path*'],
 };
 
 export default Middleware;
