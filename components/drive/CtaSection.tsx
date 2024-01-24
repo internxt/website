@@ -9,7 +9,7 @@ const CtaSection = ({ textContent }) => {
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="w-full max-w-[410px] text-xl font-normal">{textContent.description}</p>
         </div>
-        <Link href="/pricing">
+        <Link href="/pricing" legacyBehavior>
           <div className="flex cursor-pointer rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary">
             {textContent.cta}
           </div>

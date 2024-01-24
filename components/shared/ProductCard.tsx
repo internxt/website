@@ -13,11 +13,14 @@ const ProductCard = ({ animationDirection, textContent, lang, imageUrl }) => {
         <h4 className="mb-10 max-w-xs text-4xl font-semibold text-white lg:text-4xl">{textContent.title}</h4>
         <h5 className="mb-4 max-w-[340px] text-xl text-white">{textContent.description}</h5>
         <div className="flex justify-start">
-          <Link href="/drive" locale={lang}>
-            <a className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-              <span>{textContent.cta}</span>
-              <UilAngleRightB className="h-4 w-4" />
-            </a>
+          <Link
+            href="/drive"
+            locale={lang}
+            className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
+
+            <span>{textContent.cta}</span>
+            <UilAngleRightB className="h-4 w-4" />
+
           </Link>
         </div>
       </div>

@@ -57,10 +57,15 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
                 </p>
               </div>
               <div className=" flex flex-row items-center gap-2 text-lg font-semibold text-primary hover:underline">
-                <Link href={tool.pathname} locale={lang} passHref target="_self">
-                  <a target="_self" className="hover:text-primary">
-                    {tool.cta}
-                  </a>
+                <Link
+                  href={tool.pathname}
+                  locale={lang}
+                  passHref
+                  target="_self"
+                  className="hover:text-primary">
+
+                  {tool.cta}
+
                 </Link>
                 <CaretRight size={16} weight="bold" />
               </div>
