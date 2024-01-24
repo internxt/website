@@ -1,5 +1,5 @@
 import { CheckCircle } from '@phosphor-icons/react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const Feed = ({ feed }) => (
   <div className="flex flex-row items-center space-x-3 lg:space-x-6">

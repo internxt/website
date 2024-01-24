@@ -1,5 +1,5 @@
 import { FileArrowDown } from '@phosphor-icons/react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { useRouter } from 'next/router';
 
 const FeatureSection = ({ textContent, urlImage, altImage }) => {

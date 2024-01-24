@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import RenderDescription from '../shared/RenderDescription';
 
 const QuizSection = ({ textContent }) => {

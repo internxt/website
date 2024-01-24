@@ -1,6 +1,6 @@
 import React from 'react';
 import ButtonDeal from './components/ButtonDeal';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const BestStorageSection = ({ textContent }) => {
   return (

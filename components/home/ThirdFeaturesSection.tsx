@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { Gift } from '@phosphor-icons/react';
 import React from 'react';
 import RevealX from '../components/RevealX';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const TryInternxtBanner = ({ textContent, url }) => {
   const [bannerVisible, setIsBannerVisible] = useState(false);

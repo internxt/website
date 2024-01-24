@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import RevealX from '../components/RevealX';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { UilAngleRightB } from '@iconscout/react-unicons';
 
 const ProductCard = ({ animationDirection, textContent, lang, imageUrl }) => {
