@@ -75,27 +75,27 @@ const LoginBFBanner = () => {
   const cards = [
     {
       icon: Gift,
-      title: cardsTitles[lang].title1,
+      title: cardsTitles[lang as string].title1,
     },
     {
       icon: CloudCheck,
-      title: cardsTitles[lang].title2,
+      title: cardsTitles[lang as string].title2,
     },
     {
       icon: ClockCounterClockwise,
-      title: cardsTitles[lang].title3,
+      title: cardsTitles[lang as string].title3,
     },
     {
       icon: ShieldCheck,
-      title: cardsTitles[lang].title4,
+      title: cardsTitles[lang as string].title4,
     },
     {
       icon: Fingerprint,
-      title: cardsTitles[lang].title5,
+      title: cardsTitles[lang as string].title5,
     },
     {
       icon: ArrowsClockwise,
-      title: cardsTitles[lang].title6,
+      title: cardsTitles[lang as string].title6,
     },
   ];
 

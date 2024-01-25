@@ -15,10 +15,13 @@ interface SignUpInlineProps {
 
 export default function SignUpInline(props: SignUpInlineProps) {
   const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
-  const [passwordState, setPasswordState] = useState<{
-    tag: 'error' | 'warning' | 'success';
-    label: string;
-  } | null>(null);
+  const [passwordState, setPasswordState] = useState<
+    | {
+        tag: 'error' | 'warning' | 'success';
+        label: string;
+      }
+    | undefined
+  >();
 
   const onSubmit = (event) => {
     event.preventDefault();

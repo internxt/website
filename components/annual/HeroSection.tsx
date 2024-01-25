@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
@@ -22,7 +22,7 @@ const HeroSection = ({ textContent }) => {
             <button
               className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
               onClick={() => {
-                window.scrollTo({ top: document.getElementById('payment').offsetTop, behavior: 'smooth' });
+                window.scrollTo({ top: document.getElementById('payment')?.offsetTop, behavior: 'smooth' });
               }}
             >
               {textContent.cta}

@@ -13,7 +13,7 @@ const CtaSection = ({ textContent }) => {
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary"
           onClick={() => {
             window.scrollTo({
-              top: document.getElementById('payment').offsetTop,
+              top: document.getElementById('payment')?.offsetTop,
               behavior: 'smooth',
             });
           }}

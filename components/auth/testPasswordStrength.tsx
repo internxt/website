@@ -43,7 +43,7 @@ export default function testPasswordStrength(
 function passwordLooksLikeAccountName(password: string, userAccountName: string): boolean {
   if (userAccountName.length < 3) return false;
 
-  const slices = [];
+  const slices: string[] = [];
 
   for (let i = 0; i < userAccountName.length; i++) {
     for (let j = 3; j <= userAccountName.length; j++) {

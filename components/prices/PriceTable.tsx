@@ -20,6 +20,10 @@ interface PriceTableProps {
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
+interface Products {
+  individuals: {} | undefined;
+}
+
 const CurrencyValue = {
   '€': 'EUR',
   $: 'USD',
@@ -31,12 +35,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState<Products>();
   const [currency, setCurrency] = useState({
     symbol: '€',
     value: 1,
   });
-  const [coupon, setCoupon] = useState<CouponType>(null);
+  const [coupon, setCoupon] = useState<CouponType>();
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
@@ -167,7 +171,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4 py-14">
-            {products?.individuals[billingFrequency] &&
+            {products?.individuals?.[billingFrequency] &&
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
                   <>
