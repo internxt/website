@@ -20,8 +20,8 @@ const Inbox = ({ email, token, textContent }) => {
   useEffect(() => {
     getMailInbox(token);
     setIsMobileView(isMobile);
-    if (JSON.parse(localStorage.getItem('selectedMessage') ?? '{}')) {
-      setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage') ?? '{}'));
+    if (JSON.parse(localStorage.getItem('selectedMessage') as string)) {
+      setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage') as string));
     }
   }, [email, isRefreshed]);
 
