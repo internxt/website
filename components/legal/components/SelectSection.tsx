@@ -5,7 +5,7 @@ import { Fragment, useEffect } from 'react';
 
 const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
   function linkTitles() {
-    let titles = [];
+    let titles: string[] = [];
     for (let key in textContent) {
       if (textContent.hasOwnProperty(key) && key.startsWith('title')) {
         titles.push(textContent[key]);
@@ -62,7 +62,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
                         onClick={() => {
                           setItemSelected(title);
                           setTimeout(() => {
-                            document.getElementById(title).scrollIntoView({
+                            document.getElementById(title)?.scrollIntoView({
                               behavior: 'smooth',
                               block: 'center',
                             });

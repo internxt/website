@@ -36,7 +36,7 @@ const HeroSection = ({ textContent }) => {
       }
     }
     if (localStorage.getItem('email') !== null) {
-      const data = localStorage.getItem('email');
+      const data = localStorage.getItem('email') as string;
       const parseData = JSON.parse(data);
       setEmail(parseData.address);
       setToken(parseData.token);

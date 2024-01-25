@@ -22,8 +22,7 @@ export default function SpecialPriceCard({
   lang,
   country,
 }: PriceCardProps) {
-  const [coupon, setCoupon] = React.useState(null);
-  const isPopularYearly = popular && billingFrequency === Interval.Year;
+  const [coupon, setCoupon] = React.useState<string>();
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -141,7 +140,7 @@ export default function SpecialPriceCard({
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className="billingFrequency">
-                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
+                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
               </span>
             </p>
             <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>

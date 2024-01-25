@@ -24,7 +24,7 @@ const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceL
     const TB5Button = document.getElementById('5TB');
     const TB10Button = document.getElementById('10TB');
     [TB2Button, TB5Button, TB10Button].forEach((button) =>
-      button.addEventListener('click', () => {
+      button?.addEventListener('click', () => {
         setOpenDialog(true);
       }),
     );

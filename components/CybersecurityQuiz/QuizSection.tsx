@@ -11,7 +11,7 @@ interface ViewProps {
 }
 
 const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
-  const height = useRef(null);
+  const height = useRef(0);
   const [view, setView] = useState<Views>('initialState');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');

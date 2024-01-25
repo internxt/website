@@ -9,7 +9,7 @@ const RenderDescription = ({ description, fontSize }: { description: string[]; f
     //Check if the link is not in the Language Box redirect
     links.forEach((link) => {
       console.log(link);
-      if (renderDescriptionComponent.contains(link)) {
+      if (renderDescriptionComponent?.contains(link)) {
         link.target = '_blank';
         link.rel = 'nofollow';
       }

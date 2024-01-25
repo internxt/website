@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
-import { stripeService } from '../services/stripeService';
+import { ProductsProps, stripeService } from '../services/stripeService';
 import PriceCard from './PriceCard';
 
 const PaymentsSection = ({ textContent }) => {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState<ProductsProps>();
   const [currency, setCurrency] = useState(null);
   const [loadingCards, setLoadingCards] = useState(true);
 
@@ -35,7 +35,7 @@ const PaymentsSection = ({ textContent }) => {
             </>
           ) : (
             <>
-              {products?.individuals['year'] &&
+              {products?.individuals?.['year'] &&
                 Object.values(products.individuals['year']).map((product: any) => {
                   return (
                     <PriceCard

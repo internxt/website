@@ -22,7 +22,7 @@ const Countdown = ({ textColor, dt }: CountdownProps) => {
   ];
 
   function CountDownTimer(id) {
-    const end = new Date(dt);
+    const end = dt ? new Date(dt) : new Date();
 
     const second = 1000;
     const minute = second * 60;
@@ -51,11 +51,11 @@ const Countdown = ({ textColor, dt }: CountdownProps) => {
       if (minutes === 0 && hours === 0 && days === 0) setCountdownDisableMinutes(true);
       if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) setCountdownDisableSeconds(true);
 
-      document.querySelector(`#${id} .days`).innerHTML = days < 10 ? `0${days}` : `${days}`;
-      document.querySelector(`#${id} .hours`).innerHTML = hours < 10 && days > 0 ? `0${hours}` : `${hours}`;
-      document.querySelector(`#${id} .minutes`).innerHTML =
+      document.querySelector(`#${id} .days`)!.innerHTML = days < 10 ? `0${days}` : `${days}`;
+      document.querySelector(`#${id} .hours`)!.innerHTML = hours < 10 && days > 0 ? `0${hours}` : `${hours}`;
+      document.querySelector(`#${id} .minutes`)!.innerHTML =
         minutes < 10 && hours > 0 && days > 0 ? `0${minutes}` : `${minutes}`;
-      document.querySelector(`#${id} .seconds`).innerHTML =
+      document.querySelector(`#${id} .seconds`)!.innerHTML =
         seconds < 10 && minutes > 0 && hours > 0 && days > 0 ? `0${seconds}` : `${seconds}`;
     }
 
@@ -77,10 +77,10 @@ const Countdown = ({ textColor, dt }: CountdownProps) => {
           const tHours = (tMins - mins) / 60;
           const hours = tHours % 24;
           const days = (tHours - hours) / 24;
-          document.getElementById('days').innerHTML = days < 10 ? `0${days}` : `${days}`;
-          document.getElementById('hours').innerHTML = hours < 10 ? `0${hours}` : `${hours}`;
-          document.getElementById('minutes').innerHTML = mins < 10 ? `0${mins}` : `${mins}`;
-          document.getElementById('seconds').innerHTML = secs < 10 ? `0${secs}` : `${secs}`;
+          document.getElementById('days')!.innerHTML = days < 10 ? `0${days}` : `${days}`;
+          document.getElementById('hours')!.innerHTML = hours < 10 ? `0${hours}` : `${hours}`;
+          document.getElementById('minutes')!.innerHTML = mins < 10 ? `0${mins}` : `${mins}`;
+          document.getElementById('seconds')!.innerHTML = secs < 10 ? `0${secs}` : `${secs}`;
         });
       }, 1000);
     }

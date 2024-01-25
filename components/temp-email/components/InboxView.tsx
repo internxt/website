@@ -9,8 +9,8 @@ import { isMobile } from 'react-device-detect';
 import { Transition } from '@headlessui/react';
 
 const Inbox = ({ email, token, textContent }) => {
-  const [messages, setMessages] = React.useState([]);
-  const [selectedMessage, setSelectedMessage] = React.useState(null);
+  const [messages, setMessages] = useState<any>([]);
+  const [selectedMessage, setSelectedMessage] = useState(null);
   const [isRefreshed, setIsRefreshed] = useState(false);
   const isFocused = useWindowFocus();
   const [openedMessages, setOpenedMessages] = useState(0);
@@ -20,8 +20,8 @@ const Inbox = ({ email, token, textContent }) => {
   useEffect(() => {
     getMailInbox(token);
     setIsMobileView(isMobile);
-    if (JSON.parse(localStorage.getItem('selectedMessage'))) {
-      setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage')));
+    if (JSON.parse(localStorage.getItem('selectedMessage') ?? '{}')) {
+      setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage') ?? '{}'));
     }
   }, [email, isRefreshed]);
 
@@ -54,7 +54,7 @@ const Inbox = ({ email, token, textContent }) => {
         const unopenedMessages = allMessages.filter((item) => !item.opened).length;
         setOpenedMessages(unopenedMessages);
       } else {
-        const inbox = localStorage.getItem('inbox');
+        const inbox = localStorage.getItem('inbox') as string;
         setMessages(JSON.parse(inbox));
       }
     });
@@ -109,7 +109,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
     const navbar = document.querySelector('#navbar');
     const footer = document.querySelector('#footer');
     links.forEach((link) => {
-      if (!navbar.contains(link) && !footer.contains(link)) {
+      if (!navbar?.contains(link) && !footer?.contains(link)) {
         link.target = '_blank';
         link.rel = 'nofollow';
       }
@@ -145,7 +145,7 @@ const InboxWeb = ({ email, getProps }: { email: string; getProps: Record<string,
                       key={index}
                       onClick={() => {
                         //Update the message to local storage
-                        const newMessages = JSON.parse(localStorage.getItem('inbox'));
+                        const newMessages = JSON.parse(localStorage.getItem('inbox') as string);
                         newMessages[index].opened = true;
                         setMessages(newMessages);
                         setSelectedMessage(item);
@@ -276,7 +276,7 @@ const InboxMobile = ({ email, getProps }: { email: string; getProps: Record<stri
                     <button
                       key={item.id}
                       onClick={() => {
-                        const newMessages = [...JSON.parse(localStorage.getItem('inbox'))];
+                        const newMessages = [...JSON.parse(localStorage.getItem('inbox') as string)];
                         newMessages[index].opened = true;
                         setMessages(newMessages);
                         setSelectedMessage(item);

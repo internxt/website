@@ -19,7 +19,6 @@ const DownloadComponent = ({ textContent, lang, download }) => {
     </span>
   );
 
-  const updatedText = textContent.orDownloadFor.replace(/<>/g, replacement);
   function getOS() {
     const osList = [
       { keyword: 'Android', name: 'Android' },
@@ -36,7 +35,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
     return res ? res.name : `Not known (${window.navigator.appVersion})`;
   }
 
-  const [OS, setOS] = useState(null);
+  const [OS, setOS] = useState<string>('');
 
   useEffect(() => {
     setOS(getOS());

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 import { analyticsService } from '../services/analyticsService';
@@ -68,7 +68,7 @@ const HeroSection = ({ textContent }) => {
             <button
               className="flex h-max w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
               onClick={() => {
-                window.scrollTo({ top: document.getElementById('priceTable').offsetTop, behavior: 'smooth' });
+                window.scrollTo({ top: document.getElementById('priceTable')?.offsetTop, behavior: 'smooth' });
               }}
             >
               {textContent.cta.title}

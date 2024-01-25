@@ -15,7 +15,7 @@ const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: bo
             freePlan
               ? goToSignUpURL()
               : window.scrollTo({
-                  top: document.getElementById('priceTable').offsetTop,
+                  top: document.getElementById('priceTable')?.offsetTop,
                   behavior: 'smooth',
                 });
           }}
