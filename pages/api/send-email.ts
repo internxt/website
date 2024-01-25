@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   if (req.method === 'POST') {
     const { name, email, templateId, eBook } = req.body;
-    sendgrid.setApiKey(SENDGRID_API_KEY);
+    sendgrid.setApiKey(SENDGRID_API_KEY as string);
     const msg = {
       to: email,
       from: {

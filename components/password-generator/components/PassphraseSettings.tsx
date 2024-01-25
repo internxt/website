@@ -143,7 +143,7 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
                   checked={passphraseProperties.separator === item}
                 />
               </div>
-              <p className="text-base font-medium text-gray-100">{item === '\n' ? space[lang] : item}</p>
+              <p className="text-base font-medium text-gray-100">{item === '\n' ? space[lang as string] : item}</p>
             </div>
           ))}
         </div>

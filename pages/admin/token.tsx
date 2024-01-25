@@ -24,22 +24,25 @@ export default function AdminToken({ isAuth, data }) {
                 </tr>
               </thead>
               <tbody>
-                {data && data.map((row) => {
-                  const dataRow = row.split('\t');
-                  return (
-                    <tr>
-                      <td>{dataRow[0]}</td>
-                      <td>{dataRow[1]}</td>
-                      <td>{dataRow[2]}</td>
-                      <td>{dataRow[3]}</td>
-                    </tr>
-                  );
-                })}
+                {data &&
+                  data.map((row) => {
+                    const dataRow = row.split('\t');
+                    return (
+                      <tr>
+                        <td>{dataRow[0]}</td>
+                        <td>{dataRow[1]}</td>
+                        <td>{dataRow[2]}</td>
+                        <td>{dataRow[3]}</td>
+                      </tr>
+                    );
+                  })}
               </tbody>
             </Table>
           </div>
         </>
-      ) : <>Unauthorized</>}
+      ) : (
+        <>Unauthorized</>
+      )}
     </div>
   );
 }
@@ -50,7 +53,7 @@ export async function getServerSideProps(ctx) {
   const savedToken = cookies.get('token');
 
   let isAuth = true;
-  let data = null;
+  let data = '';
 
   try {
     const login = ctx.req.headers.authorization;
@@ -67,7 +70,7 @@ export async function getServerSideProps(ctx) {
       cookies.set('token', token, {
         domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
         expires,
-        httpOnly: false
+        httpOnly: false,
       });
     } else if (savedToken) {
       const isValidToken = jsonwebtoken.verify(savedToken, process.env.JWT_DRIVE_SERVER);
@@ -95,6 +98,6 @@ export async function getServerSideProps(ctx) {
   }
 
   return {
-    props: { isAuth, data: data && data.split('\n') }
+    props: { isAuth, data: data && data.split('\n') },
   };
 }

@@ -36,7 +36,7 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
     const TB5Button = document.getElementById('5TB');
     const TB10Buton = document.getElementById('10TB');
     [TB2Button, TB5Button, TB10Buton].forEach((button) =>
-      button.addEventListener('click', () => {
+      button?.addEventListener('click', () => {
         setOpenDialog(true);
       }),
     );

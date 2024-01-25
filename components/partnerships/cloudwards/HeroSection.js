@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable prefer-const */
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import PriceCard from './PriceCard';
 import ButtonDeal from './components/ButtonDeal';
 

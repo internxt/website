@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import RenderDescription from '../shared/RenderDescription';
 import { ClockCounterClockwise, GlobeHemisphereWest, PaperPlaneTilt } from '@phosphor-icons/react';
 
@@ -41,7 +41,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
           <button
             onClick={() => {
               window.scrollTo({
-                top: document.getElementById('discountCard').offsetTop,
+                top: document.getElementById('discountCard')?.offsetTop,
                 behavior: 'smooth',
               });
             }}

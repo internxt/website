@@ -123,7 +123,7 @@ const prepareAuthFlow = (credentials: {
     payload['password'] = credentials.tfaCode;
   }
 
-  if (credentials.redeemCode) {
+  if (credentials.redeemCode && credentials.provider) {
     payload['redeemCode'] = { code: credentials.redeemCode, provider: credentials.provider };
   }
 

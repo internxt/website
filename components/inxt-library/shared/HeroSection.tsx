@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import DownloadEbook from '../components/DownloadEbook';
 
 const HeroSection = ({ textContent, imageUrl, altImage, eBook, setBannerVisible }) => {

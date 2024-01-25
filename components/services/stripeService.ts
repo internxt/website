@@ -9,6 +9,10 @@ export enum Interval {
   Lifetime = 'lifetime',
 }
 
+export interface ProductsProps {
+  individuals: {} | undefined;
+}
+
 export enum Products {
   'free' = 'free',
   '20GB' = '20GB',
@@ -88,14 +92,14 @@ async function getAllPrices(isEur?: boolean) {
 
 async function getLifetimePrices(isLifetime?: boolean) {
   const prices = await getAllPrices(isLifetime);
-  const lifetimePlans = prices.individuals[Interval.Lifetime];
+  const lifetimePlans = prices?.individuals[Interval.Lifetime];
   return lifetimePlans;
 }
 
 async function getSelectedPrice(interval: string, plan: string) {
   //Filter prices by plan
   const prices = await getAllPrices();
-  const selectedPrice = prices.individuals[interval][plan];
+  const selectedPrice = prices?.individuals[interval][plan];
   return selectedPrice;
 }
 

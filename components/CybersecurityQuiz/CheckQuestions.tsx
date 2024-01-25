@@ -44,8 +44,8 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
     <section className="overflow-hidden">
       <div className="flex  flex-col items-center justify-center px-5 pt-32 xl:pt-40">
         <div className="flex w-full max-w-[847px] flex-col space-y-6 text-center">
-          <p className="text-5xl font-semibold text-gray-100">{getTitle().title}</p>
-          <ReactMarkdown className="markdown text-xl text-gray-80">{getTitle().subtitle}</ReactMarkdown>
+          <p className="text-5xl font-semibold text-gray-100">{getTitle()?.title}</p>
+          <ReactMarkdown className="markdown text-xl text-gray-80">{getTitle()?.subtitle}</ReactMarkdown>
           <p className="text-9xl font-bold text-primary">
             {correctAnswerLength}
             {textContent.totalQuestions}

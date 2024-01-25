@@ -8,6 +8,8 @@ import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
 import axios from 'axios';
 import moment from 'moment';
 
+const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
+
 interface LayoutProps {
   readonly children: React.ReactNode;
   readonly title: string;
@@ -45,7 +47,7 @@ LayoutProps) {
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
   const showBanner = !excludedPaths.includes(router.pathname);
-  const langToUpperCase = lang.toLocaleUpperCase();
+  const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
   function getCookie(cookieName: string) {
@@ -108,7 +110,7 @@ LayoutProps) {
     document.cookie = anonymousIdCookie;
 
     axios
-      .post(process.env.NEXT_PUBLIC_IMPACT_API, {
+      .post(IMPACT_API, {
         anonymousId: randomUUID,
         timestamp: moment().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
         request_ip: ip,
@@ -203,7 +205,7 @@ LayoutProps) {
           "foundingDate": "2020",
           "location": "Valencia, Spain",
           "legalName": "Internxt Universal Technologies SL",
-          "slogan": "${slogan[lang]}",
+          "slogan": "${slogan[lang as string]}",
           "sameAs": [
             "https://twitter.com/Internxt",
             "https://www.facebook.com/internxt",

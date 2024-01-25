@@ -3,7 +3,7 @@ import fs from 'fs';
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const auth = req.headers.authorization;
+    const auth = req.headers.authorization ?? '';
     const usrpwd = Buffer.from(auth.split(' ')[1], 'base64').toString();
 
     if (usrpwd !== process.env.SECRET_AUTH) {

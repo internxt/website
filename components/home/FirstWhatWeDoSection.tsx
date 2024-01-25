@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { CaretRight, DotsThree } from '@phosphor-icons/react';
 import PdfItem from '../../public/icons/file-types/pdf.svg';
 import PPTItem from '../../public/icons/file-types/ppt.svg';

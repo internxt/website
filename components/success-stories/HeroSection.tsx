@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
@@ -15,7 +15,7 @@ const HeroSection = ({ textContent }) => {
               <p className="text-xl text-gray-80">{textContent.description}</p>
               <button
                 onClick={() => {
-                  window.scrollTo({ top: document.getElementById('whatWeDo').offsetTop - 70, behavior: 'smooth' });
+                  window.scrollTo({ top: document.getElementById('whatWeDo')!.offsetTop - 70, behavior: 'smooth' });
                 }}
                 className="flex w-max flex-col items-center rounded-lg bg-primary py-3 px-5 text-lg font-medium text-white"
               >

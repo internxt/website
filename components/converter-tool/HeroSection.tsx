@@ -87,7 +87,7 @@ const HeroSection = ({ textContent }) => {
                     type="number"
                     onChange={(e) => {
                       if (!e.target.value) {
-                        setValue1(null);
+                        setValue1(0);
                       } else {
                         setValue1(Number(e.target.value));
                         setValue2(convert(Number(e.target.value), convertFrom, convertTo));
@@ -103,16 +103,18 @@ const HeroSection = ({ textContent }) => {
                     id="Dropdown menu"
                     menuPosition="absolute"
                     onChange={(e) => {
-                      setConvertFrom(e.value);
-                      if (!value2 && !value1) {
-                        return;
-                      } else {
-                        if (reverse) {
-                          setValue1(null);
-                          setValue1(convert(value2, convertTo, e.value));
+                      if (e) {
+                        setConvertFrom(e.value);
+                        if (!value2 && !value1) {
+                          return;
                         } else {
-                          setValue2(null);
-                          setValue2(convert(value1, e.value, convertTo));
+                          if (reverse) {
+                            setValue1(0);
+                            setValue1(convert(value2, convertTo, e.value));
+                          } else {
+                            setValue2(0);
+                            setValue2(convert(value1, e.value, convertTo));
+                          }
                         }
                       }
                     }}
@@ -130,7 +132,7 @@ const HeroSection = ({ textContent }) => {
                     autoComplete="off"
                     onChange={(e) => {
                       if (e.target.value === '') {
-                        setValue2(null);
+                        setValue2(0);
                       } else {
                         setValue2(Number(e.target.value));
                         setValue1(convert(Number(e.target.value), convertTo, convertFrom));
@@ -147,14 +149,16 @@ const HeroSection = ({ textContent }) => {
                     menuPosition="absolute"
                     options={options}
                     onChange={(e) => {
-                      setConvertTo(e.value);
-                      if (!value1 && !value2) {
-                        return;
-                      } else {
-                        if (reverse) {
-                          setValue1(convert(value2, e.value, convertFrom));
+                      if (e) {
+                        setConvertTo(e.value);
+                        if (!value1 && !value2) {
+                          return;
                         } else {
-                          setValue2(convert(value1, convertFrom, e.value));
+                          if (reverse) {
+                            setValue1(convert(value2, e.value, convertFrom));
+                          } else {
+                            setValue2(convert(value1, convertFrom, e.value));
+                          }
                         }
                       }
                     }}

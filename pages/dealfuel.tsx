@@ -11,7 +11,6 @@ import Navbar from '../components/layout/Navbar';
 import CtaSection from '../components/dealfuel/CtaSection';
 
 import axios from 'axios';
-import LogIn from '../components/auth/LogIn';
 import SignUp from '../components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
@@ -37,7 +36,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
     const TB5Button = document.getElementById('5TB');
     const TB10Buton = document.getElementById('10TB');
     [TB2Button, TB5Button, TB10Buton].forEach((button) =>
-      button.addEventListener('click', () => {
+      button?.addEventListener('click', () => {
         setOpenDialog(true);
       }),
     );

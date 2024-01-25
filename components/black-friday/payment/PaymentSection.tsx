@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Interval, stripeService } from '../../services/stripeService';
+import { Interval, ProductsProps, stripeService } from '../../services/stripeService';
 import PriceCard from './PriceCard';
 import { currencyService } from '../../services/currencyService';
 import { Transition } from '@headlessui/react';
@@ -7,7 +7,7 @@ import CardSkeleton from '../../components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
 
 const PaymentSection = ({ textContent }) => {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState<ProductsProps>();
   const [isLoading, setIsLoading] = useState(true);
   const [currency, setCurrency] = useState({
     symbol: '€',
@@ -56,7 +56,7 @@ const PaymentSection = ({ textContent }) => {
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6">
             {!isLoading &&
-              Object.values(products.individuals[Interval.Year]).map((product: any) => (
+              Object.values(products?.individuals?.[Interval.Year]).map((product: any) => (
                 <PriceCard
                   planType="individual"
                   key={product.storage}

@@ -19,7 +19,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="mt-8 text-lg font-normal">{textContent.paragraph1.body2}</p>
         </div>
         <div className="mt-16 hidden w-full items-center justify-center lg:flex">
-          <SignUpBanner textContent={bannerText} lang={lang} />
+          <SignUpBanner textContent={bannerText} lang={lang as string} />
         </div>
       </div>
       <div className="flex flex-col items-center justify-center p-5 pt-11 text-center md:p-20 md:pt-0 lg:text-left">

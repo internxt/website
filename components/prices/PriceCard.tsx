@@ -118,7 +118,7 @@ export default function PriceCard({
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
               <span className="billingFrequency">
-                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency]]}
+                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
               </span>
             </p>
             <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
@@ -133,8 +133,8 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currencyValue[country] ?? 'eur',
-                couponCode: coupon ?? null,
+                currency: currencyValue[country as string] ?? 'eur',
+                couponCode: coupon ?? undefined,
               });
             }
           }}

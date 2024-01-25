@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable prefer-const */
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import PriceCard from './PriceCard';
 
 const HeroSection = ({ textContent, lang }) => {
