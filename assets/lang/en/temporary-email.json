@@ -8,8 +8,11 @@
     "expireEmail": "Email address and inbox will expire after 5 hours of inactivity",
     "inbox": {
       "title": "Inbox",
-      "youHave": "You have",
-      "newMessages": "new messages",
+      "withoutMessages": {
+        "youHave": "You have",
+        "newMessages": "new messages"
+      },
+      "withMessages": "You have new messages",
       "waitingEmail": "Waiting for incoming email",
       "selectMessage": "Select a message to open",
       "attachment": "Attachments",
