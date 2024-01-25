@@ -36,7 +36,7 @@ const AchieveSecurityAndPrivacySection = ({ textContent }) => {
             <button
               onClick={() => {
                 window.scrollTo({
-                  top: document.getElementById('discountCard').offsetTop,
+                  top: document.getElementById('discountCard')?.offsetTop,
                   behavior: 'smooth',
                 });
               }}

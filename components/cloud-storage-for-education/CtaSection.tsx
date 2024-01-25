@@ -15,7 +15,7 @@ const CtaSection = ({ textContent, maxWidth }: { textContent: any; maxWidth?: st
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
             window.scrollTo({
-              top: document.getElementById('discountCard').offsetTop,
+              top: document.getElementById('discountCard')?.offsetTop,
               behavior: 'smooth',
             });
           }}

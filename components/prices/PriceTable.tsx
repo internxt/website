@@ -4,12 +4,11 @@ import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '../banners/BusinessBanner';
-import { Interval, stripeService } from '../services/stripeService';
+import { Interval, ProductsProps, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import FreePlanCard from './FreePlanCard';
-import { notificationService } from '../Snackbar';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
 import Header from '../shared/Header';
 
@@ -18,10 +17,6 @@ interface PriceTableProps {
   lang: string;
   textContent: any;
   setIsLifetime?: (isLifetime: boolean) => void;
-}
-
-interface Products {
-  individuals: {} | undefined;
 }
 
 const CurrencyValue = {
@@ -35,7 +30,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
-  const [products, setProducts] = useState<Products>();
+  const [products, setProducts] = useState<ProductsProps>();
   const [currency, setCurrency] = useState({
     symbol: '€',
     value: 1,

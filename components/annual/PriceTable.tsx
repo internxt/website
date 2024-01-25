@@ -2,16 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '../prices/PriceCard';
-import { stripeService } from '../services/stripeService';
+import { ProductsProps, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 
-interface Products {
-  individuals: {} | undefined;
-}
-
 export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
-  const [products, setProducts] = useState<Products>();
+  const [products, setProducts] = useState<ProductsProps>();
   const [loadingCards, setLoadingCards] = useState(true);
   const [currency, setCurrency] = useState({
     symbol: '€',
