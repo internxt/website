@@ -11,7 +11,6 @@ const excludedPaths: string[] = [
   `/js`,
   '/inxt-library',
   `DPA.pdf`,
-  '/pages/index.tsx',
 ];
 
 const Middleware = (res) => {
