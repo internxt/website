@@ -1,23 +1,19 @@
 import React from 'react';
 import RevealY from '../components/RevealY';
 import { CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
-import CampaignCtaSection from './CampaignCtaSection';
 
 const FeatureSection = ({
   textContent,
   withoutCta,
   backgroundColor,
-  redirect,
 }: {
   textContent: any;
   withoutCta?: boolean;
   backgroundColor?: string;
-  redirect?: string;
 }) => {
   const router = useRouter();
-  const bannerText = require(`../../assets/lang/${router.locale}/lifetime.json`);
-
   const Cards = [
     {
       icon: ShieldCheck,
@@ -48,21 +44,15 @@ const FeatureSection = ({
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
           {!withoutCta && (
-            <div
-              onKeyDown={() => {}}
+            <Link
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
-              onClick={() => {
-                window.open(
-                  `${window.location.origin}${router.locale === 'en' ? '' : `/${router.locale}`}/${
-                    redirect ?? 'about'
-                  }`,
-                  '_blank',
-                );
-              }}
+              href="/about"
+              locale={router.locale}
+              target="_blank"
             >
               <p>{textContent.cta}</p>
               <CaretRight size={16} weight="bold" />
-            </div>
+            </Link>
           )}
         </div>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
