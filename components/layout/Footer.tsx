@@ -4,7 +4,7 @@ import { Transition, Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import setUTM from '../../lib/conversions';
 import LanguageMobileBox from './components/LanguageMobileBox';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import axios from 'axios';
 import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
@@ -202,15 +202,14 @@ export default function Footer({
                       href="/open-source"
                       locale={lang}
                       passHref
-                      className="flex max-w-[200px] flex-row items-center hover:text-primary">
-
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.company.openSource}
                       {lang !== 'en' && (
                         <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
                         </div>
                       )}
-
                     </Link>
 
                     <Link href="/legal" locale={lang} passHref className="hover:text-primary">
@@ -223,19 +222,17 @@ export default function Footer({
                           href="/media-area"
                           locale={lang}
                           passHref
-                          className="flex max-w-[200px] flex-row items-center hover:text-primary">
-
+                          className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                        >
                           {textContent.FooterSection.sections.company.mediaArea}
-
                         </Link>
                         <Link
                           href="/use-cases"
                           locale={lang}
                           passHref
-                          className="flex max-w-[200px] flex-row items-center hover:text-primary">
-
+                          className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                        >
                           {textContent.FooterSection.sections.company.useCases}
-
                         </Link>
                       </>
                     )}
@@ -251,10 +248,7 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link
-                      href="/newsletter-subscribe"
-                      className="hover:text-primary"
-                      legacyBehavior>
+                    <Link href="/newsletter-subscribe" className="hover:text-primary" legacyBehavior>
                       {textContent.FooterSection.sections.join.newsletter}
                     </Link>
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
@@ -297,9 +291,9 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.affiliates}
                     </a>
 
-                    <a lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
+                    <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
                       {textContent.FooterSection.sections.join.storageForEducation}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -324,53 +318,43 @@ export default function Footer({
                       href="/cloud-storage-comparison"
                       locale={lang}
                       passHref
-                      className="w-full max-w-[160px] hover:text-primary">
-
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.resources.comparison}
-
                     </Link>
 
                     <Link
                       href="/privacy-directory"
                       locale={lang}
                       passHref
-                      className="w-full max-w-[265px] hover:text-primary">
-
+                      className="w-full max-w-[265px] hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
-
                     </Link>
 
-                    <Link
-                      href="/cyber-awareness"
-                      locale={lang}
-                      passHref
-                      className="hover:text-primary">
-
+                    <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.resources.cyberAwareness}
-
                     </Link>
                     <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary">
-
+                      className="flex items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-
                     </Link>
                     {lang === 'en' && (
-                      (<Link
+                      <Link
                         href="/internxt-library"
                         locale={lang}
                         passHref
-                        className="flex flex-row items-center hover:text-primary">
-
+                        className="flex flex-row items-center hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.inxtLibrary}
                         <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                           {textContent.FooterSection.new}
                         </div>
-
-                      </Link>)
+                      </Link>
                     )}
                   </div>
                 </div>
@@ -383,35 +367,19 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link
-                      href="/byte-converter"
-                      locale={lang}
-                      passHref
-                      className="hover:text-primary">
+                    <Link href="/byte-converter" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.byteConverter}
                     </Link>
 
-                    <Link
-                      href="/temporary-email"
-                      locale={lang}
-                      passHref
-                      className="hover:text-primary">
+                    <Link href="/temporary-email" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.temporaryEmail}
                     </Link>
 
-                    <Link
-                      href="/password-checker"
-                      locale={lang}
-                      passHref
-                      className="hover:text-primary">
+                    <Link href="/password-checker" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.passwordChecker}
                     </Link>
 
-                    <Link
-                      href="/virus-scanner"
-                      locale={lang}
-                      passHref
-                      className="hover:text-primary">
+                    <Link href="/virus-scanner" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileVirusScan}
                     </Link>
 
@@ -419,13 +387,12 @@ export default function Footer({
                       href="/password-generator"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary">
-
+                      className="flex items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.tools.passwordGenerator}
                       <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
                       </div>
-
                     </Link>
                   </div>
                 </div>
@@ -443,13 +410,11 @@ export default function Footer({
             <div className="flex w-full max-w-[900px] flex-row justify-between">
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
-
                   <img
                     loading="lazy"
                     src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
                     alt="Internxt logo"
                   />
-
                 </Link>
                 <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
@@ -609,7 +574,8 @@ export default function Footer({
                         target="_blank"
                         rel="noreferrer"
                         className="flex flex-row items-center"
-                        legacyBehavior>
+                        legacyBehavior
+                      >
                         <div>{textContent.FooterSection.sections.company.security}</div>
                       </Link>
 
@@ -617,15 +583,14 @@ export default function Footer({
                         href="/open-source"
                         locale={lang}
                         passHref
-                        className="flex max-w-[200px] flex-row items-center hover:text-primary">
-
+                        className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.company.openSource}
                         {lang !== 'en' && (
                           <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                             {textContent.FooterSection.new}
                           </div>
                         )}
-
                       </Link>
 
                       <Link href="/legal" locale={lang} passHref>
@@ -638,22 +603,20 @@ export default function Footer({
                             href="/media-area"
                             locale={lang}
                             passHref
-                            className="flex max-w-[200px] flex-row items-center hover:text-primary">
-
+                            className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                          >
                             {textContent.FooterSection.sections.company.mediaArea}
-
                           </Link>
                           <Link
                             href="/use-cases"
                             locale={lang}
                             passHref
-                            className="flex max-w-[200px] flex-row items-center hover:text-primary">
-
+                            className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                          >
                             {textContent.FooterSection.sections.company.useCases}
                             <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                               {textContent.FooterSection.new}
                             </div>
-
                           </Link>
                         </>
                       )}
@@ -746,15 +709,14 @@ export default function Footer({
                       </Link>
 
                       {lang === 'en' && (
-                        (<Link
+                        <Link
                           href="/internxt-library"
                           locale={lang}
                           passHref
-                          className="flex items-center hover:text-primary">
-
+                          className="flex items-center hover:text-primary"
+                        >
                           {textContent.FooterSection.sections.resources.inxtLibrary}
-
-                        </Link>)
+                        </Link>
                       )}
                     </Disclosure.Panel>
                   </Transition>
@@ -875,13 +837,11 @@ export default function Footer({
               </p>
 
               <Link href="/" locale={lang} className="flex flex-shrink-0">
-
                 <img
                   loading="lazy"
                   src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
                   alt="Internxt logo"
                 />
-
               </Link>
             </div>
           </div>
