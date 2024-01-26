@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import RevealY from '../components/RevealY';
 
 const FeatureSection = ({ textContent }) => (
@@ -12,7 +12,7 @@ const FeatureSection = ({ textContent }) => (
           className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-dark"
           onClick={() => {
             window.scrollTo({
-              top: document.getElementById('payment').offsetTop,
+              top: document.getElementById('payment')?.offsetTop,
               behavior: 'smooth',
             });
           }}

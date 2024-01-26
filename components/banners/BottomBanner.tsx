@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 

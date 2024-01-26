@@ -27,7 +27,7 @@ const selectedLang = {
 export default function LanguageBox({ darkMode, isBlackFriday }) {
   const router = useRouter();
 
-  const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale]);
+  const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale as string]);
 
   function changeLang(lang: string) {
     setCurrentLangText(selectedLang[lang]);
@@ -52,90 +52,90 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
         <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
           {isBlackFriday ? (
             <>
-              <Link href={router.pathname} locale="en">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-                  onClick={() => changeLang('en')}
-                >
-                  {currentLang.en}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="en"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                onClick={() => changeLang('en')}
+              >
+                {currentLang.en}
               </Link>
-              <Link href={router.pathname} locale="fr">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-                  onClick={() => changeLang('fr')}
-                >
-                  {currentLang.fr}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="fr"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                onClick={() => changeLang('fr')}
+              >
+                {currentLang.fr}
               </Link>
             </>
           ) : (
             <>
-              <Link href={router.pathname} locale="en">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-                  onClick={() => changeLang('en')}
-                >
-                  {currentLang.en}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="en"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                onClick={() => changeLang('en')}
+              >
+                {currentLang.en}
               </Link>
 
-              <Link href={router.pathname} locale="es">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-                  onClick={() => changeLang('es')}
-                >
-                  {currentLang.es}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="es"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                onClick={() => changeLang('es')}
+              >
+                {currentLang.es}
               </Link>
 
-              <Link href={router.pathname} locale="fr">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-                  onClick={() => changeLang('fr')}
-                >
-                  {currentLang.fr}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="fr"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                onClick={() => changeLang('fr')}
+              >
+                {currentLang.fr}
               </Link>
-              <Link href={router.pathname} locale="de">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
-                    darkMode ? 'text-white' : 'text-cool-gray-80'
-                  }`}
-                  onClick={() => changeLang('de')}
-                >
-                  {currentLang.de}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="de"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                  darkMode ? 'text-white' : 'text-cool-gray-80'
+                }`}
+                onClick={() => changeLang('de')}
+              >
+                {currentLang.de}
               </Link>
-              <Link href={router.pathname} locale="it">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
-                    darkMode ? 'text-white' : 'text-cool-gray-80'
-                  }`}
-                  onClick={() => changeLang('it')}
-                >
-                  {currentLang.it}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="it"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                  darkMode ? 'text-white' : 'text-cool-gray-80'
+                }`}
+                onClick={() => changeLang('it')}
+              >
+                {currentLang.it}
               </Link>
-              <Link href={router.pathname} locale="zh">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
-                    darkMode ? 'text-white' : 'text-cool-gray-80'
-                  }`}
-                  onClick={() => changeLang('zh')}
-                >
-                  {currentLang.zh}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="zh"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                  darkMode ? 'text-white' : 'text-cool-gray-80'
+                }`}
+                onClick={() => changeLang('zh')}
+              >
+                {currentLang.zh}
               </Link>
-              <Link href={router.pathname} locale="ru">
-                <a
-                  className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
-                    darkMode ? 'text-white' : 'text-cool-gray-80'
-                  }`}
-                  onClick={() => changeLang('ru')}
-                >
-                  {currentLang.ru}
-                </a>
+              <Link
+                href={router.pathname}
+                locale="ru"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 ${
+                  darkMode ? 'text-white' : 'text-cool-gray-80'
+                }`}
+                onClick={() => changeLang('ru')}
+              >
+                {currentLang.ru}
               </Link>
             </>
           )}

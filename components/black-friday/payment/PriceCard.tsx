@@ -16,7 +16,7 @@ export interface PriceCardProps {
   readonly storage: string;
   readonly price: number;
   readonly priceBefore?: number;
-  readonly billingFrequency?: string;
+  readonly billingFrequency: string;
   readonly cta: any[];
   readonly popular?: boolean;
   readonly lang: string;

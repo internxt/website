@@ -36,7 +36,7 @@ const PriceCard = ({
   isCampaign,
   lang,
 }: PriceCardProps) => {
-  const [coupon, setCoupon] = useState(null);
+  const [coupon, setCoupon] = useState<string>();
 
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
 
@@ -68,7 +68,7 @@ const PriceCard = ({
       <div
         className={`info flex flex-col items-center justify-center bg-white p-6 ${popular ? 'rounded-t-2xl' : ''}`}
         style={{
-          background: popular && 'linear-gradient(180deg, #112D91 0%, #060C40 100%)',
+          background: popular ? 'linear-gradient(180deg, #112D91 0%, #060C40 100%)' : undefined,
         }}
       >
         <div

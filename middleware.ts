@@ -30,4 +30,8 @@ const Middleware = (res) => {
   return NextResponse.next();
 };
 
+export const config = {
+  matcher: ['/:lang/:path*'],
+};
+
 export default Middleware;

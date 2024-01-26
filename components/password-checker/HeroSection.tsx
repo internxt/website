@@ -22,7 +22,7 @@ const HeroSection = ({ textContent }) => {
 
   const toggleShowPassword = () => {
     setInputTypePassword(!inputTypePassword);
-    document.getElementById('input').focus();
+    document.getElementById('input')?.focus();
   };
 
   const getFeedbackTranslation = (feedback) => {

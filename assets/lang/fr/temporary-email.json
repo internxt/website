@@ -8,8 +8,11 @@
     "expireEmail": "Les emails et la boîte de réception expirent après 5 heures d'inactivité",
     "inbox": {
       "title": "Inbox",
-      "youHave": "Vous avez",
-      "newMessages": "nouveaux messages",
+      "withoutMessages": {
+        "youHave": "Vous avez",
+        "newMessages": "nouveaux messages"
+      },
+      "withMessages": "Vous abez de nouveaux messages",
       "waitingEmail": "En attente d'un email entrant",
       "selectMessage": "Sélectionner un message à ouvrir",
       "attachment ": "Attachments",

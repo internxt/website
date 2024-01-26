@@ -7,7 +7,7 @@ import { currencyService } from '../../../services/currencyService';
 
 const ButtonDeal = ({ textContent, large }) => {
   const [priceId, setPriceId] = React.useState('');
-  const [coupon, setCoupon] = React.useState(null);
+  const [coupon, setCoupon] = React.useState<string>();
   const [currency, setCurrency] = React.useState();
 
   useEffect(() => {

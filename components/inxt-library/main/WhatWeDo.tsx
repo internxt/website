@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { FileArrowDown } from '@phosphor-icons/react';
 
 const TextCard = ({ textContent, url }) => {

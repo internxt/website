@@ -1,11 +1,11 @@
 import { CheckCircle } from '@phosphor-icons/react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import React from 'react';
 
 const CampaignCtaSection = ({ textContent }) => {
   function handleOnClick() {
     window.scrollTo({
-      top: document.getElementById('billingButtons').offsetTop,
+      top: document.getElementById('billingButtons')?.offsetTop,
       behavior: 'smooth',
     });
   }

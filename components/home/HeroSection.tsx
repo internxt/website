@@ -2,16 +2,13 @@ import React, { useState } from 'react';
 import Marquee from 'react-fast-marquee';
 import { goToSignUpURL } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 import { useRouter } from 'next/router';
 import HomePageBanner from '../banners/HomePageBanner';
 
 export default function HeroSection({ textContent, lang }) {
   const router = useRouter();
-
-  const [formError, setFormError] = useState<string | null>(null);
-  const [formLoading, setFormLoading] = useState<boolean>(false);
 
   return (
     <section className="overflow-hidden">
@@ -43,7 +40,7 @@ export default function HeroSection({ textContent, lang }) {
             </button>
 
             <div className="hidden w-full md:flex">
-              <SignUpInline error={formError} loading={formLoading} textContent={textContent.SignUp} />
+              <SignUpInline textContent={textContent.SignUp} />
             </div>
           </div>
 

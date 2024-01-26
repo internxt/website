@@ -22,7 +22,7 @@ const YoutubeEmbed = ({
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const videoOptions = [];
+  const videoOptions: string[] = [];
   let parameters = '';
   if (jsapi) {
     videoOptions.push('enablejsapi=1&version=3&playerapiid=ytplayer');

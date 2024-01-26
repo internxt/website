@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
@@ -28,7 +28,7 @@ const HeroSection = ({ textContent }) => {
             <button
               onClick={() => {
                 window.scrollTo({
-                  top: document.getElementById('discountCard').offsetTop,
+                  top: document.getElementById('discountCard')?.offsetTop,
                   behavior: 'smooth',
                 });
               }}

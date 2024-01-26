@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import RevealY from '../components/RevealY';
 import { useRouter } from 'next/router';
 
@@ -161,7 +161,10 @@ const TestimonialsSection = ({ textContent }) => {
                       <div className="flex flex-col pl-4">
                         <p className="text-xl font-semibold">{card.name}</p>
                         {lang === 'en' && card.name.includes('Eva') ? (
-                          <Link href={'https://fixthephoto.com/internxt-review.html'} target="_blank">
+                          <Link
+                            href={'https://fixthephoto.com/internxt-review.html'}
+                            target="_blank"
+                            legacyBehavior>
                             <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
                           </Link>
                         ) : (

@@ -2,7 +2,7 @@ import { Cookie, HandCoins, SketchLogo, UsersThree } from '@phosphor-icons/react
 import RevealY from '../components/RevealY';
 
 function PaintedText({ text }): JSX.Element {
-  if (!text) return null;
+  if (!text) return <></>;
 
   if (!text.includes('$299')) return <p className="text-2xl font-medium text-gray-100">{text}</p>;
 

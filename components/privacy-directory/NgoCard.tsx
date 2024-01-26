@@ -5,7 +5,7 @@ import * as anim from '../../public/js/anim';
 
 const NgoCard = ({ id, name, short, description }) => {
   // Constant to avoid unnecessary re-renders
-  const showTrigger = [];
+  const showTrigger = [] as any;
   const setShowTrigger = () => {
     showTrigger.push(null);
   };

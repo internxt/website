@@ -8,8 +8,11 @@
     "expireEmail": "E-Mail und Posteingang verfallen nach 5 Stunden Inaktivität",
     "inbox": {
       "title": "Eingang",
-      "youHave": "Du hast",
-      "newMessages": "neue Nachrichten",
+      "withoutMessages": {
+        "youHave": "Du hast",
+        "newMessages": "neue Nachrichten"
+      },
+      "withMessages": "Sie haben neue Nachrichten",
       "waitingEmail": "Warte auf eingehende E-Mail",
       "selectMessage": "Wähle eine Nachricht zum öffnen",
       "attachment": "Anhänge",

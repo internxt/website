@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '../prices/PriceCard';
-import { stripeService } from '../services/stripeService';
+import { ProductsProps, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 
 export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState<ProductsProps>();
   const [loadingCards, setLoadingCards] = useState(true);
   const [currency, setCurrency] = useState({
     symbol: '€',
@@ -51,7 +51,7 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            {products?.individuals['year'] &&
+            {products?.individuals?.['year'] &&
               Object.values(products.individuals['year']).map((product: any) => {
                 return (
                   <PriceCard
