@@ -1,9 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
 import RevealY from '../components/RevealY';
-import RevealX from '../components/RevealX';
-import { UilAngleRightB } from '@iconscout/react-unicons';
-import Image from "next/legacy/image";
 import ProductCard from '../shared/ProductCard';
 
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
