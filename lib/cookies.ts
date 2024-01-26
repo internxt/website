@@ -11,6 +11,24 @@ function parseUri(ctx: GetServerSidePropsContext) {
   return parsedQuery;
 }
 
+function setCookie({
+  cookieName,
+  cookieValue,
+  expiration,
+}: {
+  cookieName: string;
+  cookieValue: string;
+  expiration?: Date;
+}) {
+  const domain = process.env.NODE_ENV === 'production' ? 'internxt.com' : 'localhost';
+
+  const expirationDate = expiration ? new Date(expiration).toUTCString() : moment().add(100, 'days').toDate();
+
+  const cookie = `${cookieName}=${cookieValue};expires=${expirationDate};domain=${domain}; Path=/`;
+
+  document.cookie = cookie;
+}
+
 function setReferralCookie(ctx: GetServerSidePropsContext): void {
   const parsedUri = parseUri(ctx);
 
@@ -48,6 +66,7 @@ function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: st
 
 export default {
   parseUri,
+  setCookie,
   setReferralCookie,
   setPublicCookie,
 };

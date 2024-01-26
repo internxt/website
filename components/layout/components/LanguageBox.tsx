@@ -3,6 +3,7 @@ import { Globe } from '@phosphor-icons/react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import { useState } from 'react';
+import cookies from '../../../lib/cookies';
 
 const currentLang = {
   es: 'Español (ES)',
@@ -30,6 +31,7 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
   const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale as string]);
 
   function changeLang(lang: string) {
+    cookies.setCookie({ cookieName: 'LOCALE', cookieValue: lang });
     setCurrentLangText(selectedLang[lang]);
   }
 
