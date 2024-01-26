@@ -1,9 +1,9 @@
-// pages/index.tsx
+'use client';
 
 import ImagesToPDF from '@coderosh/images-to-pdf';
 import { useState } from 'react';
-import TextInput from '../../components/components/TextInput';
 import { Spinner } from '@phosphor-icons/react';
+import TextInput from '../../../../components/components/TextInput';
 
 const Home: React.FC = () => {
   const [selectedImages, setSelectedImages] = useState<FileList | null>(null);
@@ -24,6 +24,7 @@ const Home: React.FC = () => {
       }
       setIsLoading(true);
       const imgArrayBuffer = await Promise.all(Array.from(selectedImages).map((image) => image.arrayBuffer()));
+      console.log('IMAGE ARRAY BUFFER: ', imgArrayBuffer);
 
       const imgToPdf = new ImagesToPDF();
 
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
       link.click();
 
       // Clean up and remove the link
-      link.parentNode.removeChild(link);
+      link.parentNode?.removeChild(link);
       setIsLoading(false);
     } catch (error) {
       console.error('Error converting images to PDF:', error);
