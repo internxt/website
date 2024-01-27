@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import mammoth from 'mammoth';
-import puppeteer from 'puppeteer';
 import { PDFDocument } from 'pdf-lib';
 
 import fs from 'fs';
@@ -31,10 +30,8 @@ export async function POST(req: Request, res: Response) {
 
   try {
     const filePath = await copyFileToTmp(file);
-    console.log('FILE PATH:', filePath);
 
-    const htmlObj = await mammoth.convertToHtml({ path: filePath });
-    console.log('HTML OBJ:', htmlObj.value);
+    const htmlObj = await mammoth.extractRawText({ path: filePath });
 
     // Genera un nuevo PDF con pdf-lib
     const pdfDoc = await PDFDocument.create();

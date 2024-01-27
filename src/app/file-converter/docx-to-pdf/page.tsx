@@ -28,9 +28,6 @@ const DocxToPdf = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log('POST: ', post.data);
-      const blob = new Blob([post.data], { type: 'application/pdf' });
-      const url = window.URL.createObjectURL(blob);
 
       const link = document.createElement('a');
       link.href = post.data;
