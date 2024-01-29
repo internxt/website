@@ -1,25 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Marquee from 'react-fast-marquee';
 import { goToSignUpURL } from '../../lib/auth';
 import SignUpInline from '../auth/SignUpInline';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
-import { useRouter } from 'next/router';
-import HomePageBanner from '../banners/HomePageBanner';
+import Animation from './components/Animation';
 
 export default function HeroSection({ textContent, lang }) {
-  const router = useRouter();
-
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat"
-          // style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
+          style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
-          <HomePageBanner />
           <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
             <Header>
               {textContent.title.line1}{' '}
@@ -45,22 +41,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           {/* Desktop animation/image */}
-          {/* <Animation /> */}
-          <div
-            className="hidden h-full max-w-[529px] cursor-pointer pt-16 md:flex"
-            onClick={() => {
-              router.push('/pricing');
-            }}
-          >
-            <Image
-              src="/images/banners/data_privacy_week.webp"
-              width={564}
-              height={529}
-              alt="Internxt Cloud Storage"
-              priority={true}
-              draggable={false}
-            />
-          </div>
+          <Animation />
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
