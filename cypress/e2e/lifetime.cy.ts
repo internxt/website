@@ -4,10 +4,9 @@ export {};
 import bytes from 'bytes';
 
 export enum CouponType {
-  TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
   LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
   LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
-  CloudwardsCoupon = 'COUPON_CLOUDWARDS',
+  LifetimeFifty = 'COUPON_LIFETIME_FIFTY',
 }
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
@@ -43,20 +42,16 @@ describe('Lifetime page', () => {
       });
     });
 
-    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
-      (response) => {
-        coupon = response.body;
-      },
-    );
+    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeFifty}`).then((response) => {
+      coupon = response.body;
+    });
   });
 
   beforeEach(() => {
-    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeGeneral}`).then(
-      (response) => {
-        coupon = response.body;
-        cy.visit('/lifetime');
-      },
-    );
+    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeFifty}`).then((response) => {
+      coupon = response.body;
+      cy.visit('/lifetime');
+    });
   });
 
   describe('When the plan of 2TB is clicked', () => {
