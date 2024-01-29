@@ -35,7 +35,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     symbol: '€',
     value: 1,
   });
-  const [coupon, setCoupon] = useState<CouponType>();
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
@@ -52,14 +51,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           setLoadingCards(false);
         });
         console.error('Error getting prices');
-      });
-    stripeService
-      .getCoupon(CouponType.DataPrivacy)
-      .then((res) => {
-        setCoupon(res);
-      })
-      .catch(() => {
-        console.error('Error getting coupon');
       });
 
     currencyService
@@ -83,8 +74,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     <section id="priceTable" className="bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          <CampaignCtaSection textContent={textContent.ctaBanner} />
-
           <div className="flex flex-col items-center px-5">
             <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
@@ -188,15 +177,13 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={Math.floor(((product.price * 30) / 100) * 100) / 100}
+                        price={product.price}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
-                        priceBefore={product.price}
                         lang={lang}
                         country={currency.symbol}
                         currency={currencyValue}
-                        coupon={coupon}
                       />
                     )}
                   </>

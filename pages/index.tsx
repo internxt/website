@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import { isMobile } from 'react-device-detect';
 import cookies from '../lib/cookies';
