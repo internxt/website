@@ -89,9 +89,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Save 70% on monthly or annual plans",
-      "normalText": " this Data Privacy Week.",
-      "cta": "Choose plan"
+      "boldText": "Spin the wheel to win discounts!",
+      "normalText": "Safer Internet Day offer: ",
+      "cta": "Spin to win"
     }
   }
 }

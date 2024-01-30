@@ -53,9 +53,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Économisez 70% sur les abonnements mensuels ou annuels",
-      "normalText": " cette semaine de protection des données.",
-      "cta": "Choisir un plan"
+      "boldText": "Faites tourner la roue pour gagner des remises !",
+      "normalText": "Offre pour la Journée de l'Internet plus sûr : ",
+      "cta": "Tournez pour gagner"
     }
   }
 }

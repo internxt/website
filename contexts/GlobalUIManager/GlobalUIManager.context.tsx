@@ -24,6 +24,7 @@ export const GlobalUIManagerContext = React.createContext<GlobalUIManagerContext
 });
 export enum GlobalDialog {
   Auth = 'Auth',
+  Wheel = 'Wheel',
 }
 export const GlobalUIManager: React.FC<
   React.PropsWithChildren<{ initialDialogs: GlobalUIManagerContextShape['dialogs'] }>
@@ -35,6 +36,8 @@ export const GlobalUIManager: React.FC<
 
     config?: GlobalDialogActionConfig,
   ) => {
+    console.log('dialogs', dialogs);
+    console.log('openDialog', dialogKey);
     setDialogs(
       dialogs.map<GlobalDialogState>((dialog) =>
         dialog.key === dialogKey
