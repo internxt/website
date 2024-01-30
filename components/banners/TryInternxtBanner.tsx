@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 const TryInternxtBanner = ({ textContent, url }) => {
-  const [bannerVisible, setIsBannerVisible] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(false);
   const onClose = () => {
-    setIsBannerVisible(false);
+    setBannerVisible(false);
   };
 
   // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsBannerVisible(true);
-  //   }, 15000);
-  // }, []);
 
   return (
     <section

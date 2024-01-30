@@ -6,8 +6,8 @@ import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
-import BottomBanner from '../components/banners/BottomBanner';
 import ShowSnackbar from '../components/Snackbar';
+import WheelBanner from '../components/banners/WheelBanner';
 
 const excludedPaths = [
   '/lifetime',
@@ -23,7 +23,6 @@ const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
-  const isExcludedPath = excludedPaths.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
   const lang = router.locale;
 
@@ -67,7 +66,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
-        {/* <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div> */}
+        <WheelBanner />
+        {/* <div className="flex justify-center">{!isExcludedPath ? <WheelBanner /> : undefined}</div> */}
         {hideIntercomButton ? null : <Intercom />}
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
