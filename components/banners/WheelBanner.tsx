@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { LockKey, X } from '@phosphor-icons/react';
-import Wheel from '../shared/Wheel';
-import { useRoulette } from 'react-hook-roulette';
+import { Roulette, useRoulette } from 'react-hook-roulette';
 import TextInput from '../components/TextInput';
 import CheckboxItem from '../shared/CheckboxItem';
-import { isMobile } from 'react-device-detect';
 
 const WheelBanner = () => {
   const [bannerVisible, setBannerVisible] = useState(true);
@@ -84,7 +82,9 @@ const WheelBanner = () => {
               <p className="text-4xl font-bold text-primary">Safer Internxt Day!</p>
               <p className="text-xl font-semibold text-gray-80">Spin, save, and secure your data!</p>
             </div>
-            <Wheel items={items} roulette={roulette} />
+            <div className="flex flex-col">
+              <Roulette roulette={roulette} />
+            </div>
             {/* Text input and button */}
             <div className="flex max-w-[240px] flex-col space-y-2">
               <TextInput placeholder="Email Address" className="w-max" onChange={onEmailInputChange} />
