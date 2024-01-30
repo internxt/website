@@ -20,7 +20,7 @@ function setCookie({
   cookieValue: string;
   expiration?: Date;
 }) {
-  const domain = process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost';
+  const domain = process.env.NODE_ENV === 'production' ? 'internxt.com' : 'localhost';
 
   const expirationDate = expiration ? new Date(expiration).toUTCString() : moment().add(100, 'days').toDate();
 
