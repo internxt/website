@@ -30,10 +30,12 @@ const getAuthFlowLoginURL = ({
   redirectURL,
   enableAutoSubmit,
   obtainAuthToken,
+  lang,
 }: {
   redirectURL?: string;
   obtainAuthToken?: boolean;
   enableAutoSubmit: boolean;
+  lang?: string;
 }) => {
   const url = `${AUTH_FLOW_URL}/login`;
 
@@ -48,6 +50,10 @@ const getAuthFlowLoginURL = ({
 
   if (enableAutoSubmit) {
     search.set('autoSubmit', 'true');
+  }
+
+  if (lang) {
+    search.set('lng', lang);
   }
 
   const searchQuery = search.toString();
@@ -68,11 +74,13 @@ const getAuthFlowCreateUserURL = ({
   obtainAuthToken,
   enableAutoSubmit,
   skipSignupIfLoggedIn,
+  lang,
 }: {
   redirectURL?: string;
   obtainAuthToken?: boolean;
   enableAutoSubmit: boolean;
   skipSignupIfLoggedIn?: boolean;
+  lang?: string;
 }) => {
   const url = `${AUTH_FLOW_URL}/new`;
   const search = new URLSearchParams();
@@ -90,6 +98,10 @@ const getAuthFlowCreateUserURL = ({
 
   if (skipSignupIfLoggedIn) {
     search.set('skipSignupIfLoggedIn', skipSignupIfLoggedIn.toString());
+  }
+
+  if (lang) {
+    search.set('lng', lang);
   }
 
   const searchQuery = search.toString();
@@ -149,15 +161,23 @@ export function login(data: { email: string; password: string; tfa?: string }, r
   }
 }
 
-export function goToLoginURL(options?: { redirectURL: string }) {
+export function goToLoginURL(options?: { redirectURL: string; lang?: string }) {
   checkAuthFlowAvailable();
-  const loginURL = getAuthFlowLoginURL({ redirectURL: options?.redirectURL, enableAutoSubmit: false });
+  const loginURL = getAuthFlowLoginURL({
+    redirectURL: options?.redirectURL,
+    enableAutoSubmit: false,
+    lang: options?.lang,
+  });
   window.location.href = loginURL;
 }
 
-export function goToSignUpURL(options?: { redirectURL?: string }) {
+export function goToSignUpURL(options?: { redirectURL?: string; lang?: string }) {
   checkAuthFlowAvailable();
-  const createUserURL = getAuthFlowCreateUserURL({ redirectURL: options?.redirectURL, enableAutoSubmit: false });
+  const createUserURL = getAuthFlowCreateUserURL({
+    redirectURL: options?.redirectURL,
+    enableAutoSubmit: false,
+    lang: options?.lang,
+  });
   window.location.href = createUserURL;
 }
 

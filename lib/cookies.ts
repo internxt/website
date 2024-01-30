@@ -29,6 +29,17 @@ function setCookie({
   document.cookie = cookie;
 }
 
+function getCookie(cookieName: string): string {
+  const cookie = {};
+  if (typeof document !== 'undefined') {
+    document.cookie.split(';').forEach((el) => {
+      const [key, value] = el.split('=');
+      cookie[key.trim()] = value;
+    });
+  }
+  return cookie[cookieName];
+}
+
 function setReferralCookie(ctx: GetServerSidePropsContext): void {
   const parsedUri = parseUri(ctx);
 
@@ -67,6 +78,7 @@ function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: st
 export default {
   parseUri,
   setCookie,
+  getCookie,
   setReferralCookie,
   setPublicCookie,
 };

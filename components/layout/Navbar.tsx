@@ -30,6 +30,7 @@ export default function Navbar(props: NavbarProps) {
   const [scrolled, setScrolled] = useState(true);
 
   const router = useRouter();
+  const lang = router.locale;
   const getTitles = require(`../../assets/lang/en/navbar.json`);
   // DIALOG MANAGEMENT
 
@@ -58,12 +59,7 @@ export default function Navbar(props: NavbarProps) {
           {/* Left side of navbar: Logo / Hamburguer menu */}
           <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
             {/* Logo */}
-            <Link
-              href="/"
-              locale={props.lang}
-              passHref
-              className="flex flex-shrink-0 pl-4 lg:hidden">
-
+            <Link href="/" locale={props.lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
               <img
                 loading="lazy"
                 className="select-none"
@@ -74,14 +70,8 @@ export default function Navbar(props: NavbarProps) {
                 width="96"
                 height="10"
               />
-
             </Link>
-            <Link
-              href={'/'}
-              locale={props.lang}
-              passHref
-              className="hidden flex-shrink-0 lg:flex">
-
+            <Link href={'/'} locale={props.lang} passHref className="hidden flex-shrink-0 lg:flex">
               <img
                 loading="lazy"
                 className="select-none"
@@ -90,7 +80,6 @@ export default function Navbar(props: NavbarProps) {
                 }.svg`}
                 alt="Internxt logo"
               />
-
             </Link>
           </div>
 
@@ -110,10 +99,9 @@ export default function Navbar(props: NavbarProps) {
                       : router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase()
                       ? 'text-primary'
                       : 'text-cool-gray-70 hover:text-primary'
-                  }  text-base font-medium`}>
-
+                  }  text-base font-medium`}
+                >
                   {props.textContent.links.pricing}
-
                 </Link>
 
                 <div
@@ -136,10 +124,9 @@ export default function Navbar(props: NavbarProps) {
                         locale={props.lang}
                         className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                           props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}>
-
+                        }`}
+                      >
                         {props.textContent.products.drive}
-
                       </Link>
 
                       <Link
@@ -147,10 +134,9 @@ export default function Navbar(props: NavbarProps) {
                         locale={props.lang}
                         className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                           props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}>
-
+                        }`}
+                      >
                         {props.textContent.products.photos}
-
                       </Link>
 
                       <a
@@ -187,10 +173,9 @@ export default function Navbar(props: NavbarProps) {
                         locale={props.lang}
                         className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                           props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}>
-
+                        }`}
+                      >
                         {props.textContent.ourValues.privacy}
-
                       </Link>
 
                       <Link
@@ -198,10 +183,9 @@ export default function Navbar(props: NavbarProps) {
                         locale={props.lang}
                         className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
                           props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}>
-
+                        }`}
+                      >
                         {props.textContent.ourValues.openSource}
-
                       </Link>
                     </div>
                   </div>
@@ -220,10 +204,9 @@ export default function Navbar(props: NavbarProps) {
                       ? 'text-primary'
                       : 'text-cool-gray-70 hover:text-primary'
                   }
-                  } text-base font-medium`}>
-
+                  } text-base font-medium`}
+                >
                   {props.textContent.links.about}
-
                 </Link>
 
                 {router.pathname === '/temporary-email' ? (
@@ -258,7 +241,7 @@ export default function Navbar(props: NavbarProps) {
             {props.cta[0] === 'Hide Login' ? null : (
               <button
                 id="loginButton"
-                onClick={() => goToLoginURL()}
+                onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
                 className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode || (props.isQuizSection && !menuState)
                     ? 'border-white text-white focus:opacity-80'
@@ -271,7 +254,7 @@ export default function Navbar(props: NavbarProps) {
 
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => goToSignUpURL()}
+                onClick={() => goToSignUpURL({ lang: lang })}
                 id="signupButton"
                 className={`flex justify-center rounded-lg border border-transparent py-1 px-3 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
@@ -336,10 +319,9 @@ export default function Navbar(props: NavbarProps) {
                         }}
                         className={`flex w-full translate-y-0 px-8 py-4 outline-none transition delay-100 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                        }`}>
-
+                        }`}
+                      >
                         {props.textContent.links.pricing}
-
                       </Link>
 
                       <Disclosure
@@ -448,10 +430,9 @@ export default function Navbar(props: NavbarProps) {
                         }}
                         className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-250 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                        }`}>
-
+                        }`}
+                      >
                         {props.textContent.links.about}
-
                       </Link>
 
                       {props.lang === 'en' && router.pathname === '/temporary-email' ? (
