@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Lock, LockKey, X } from '@phosphor-icons/react';
+import { LockKey, X } from '@phosphor-icons/react';
 import Wheel from '../shared/Wheel';
 import { useRoulette } from 'react-hook-roulette';
 import TextInput from '../components/TextInput';
 import CheckboxItem from '../shared/CheckboxItem';
+import { isMobile } from 'react-device-detect';
 
 const WheelBanner = () => {
   const [bannerVisible, setBannerVisible] = useState(true);
@@ -44,6 +45,10 @@ const WheelBanner = () => {
     setEmail(e.target.value);
   };
 
+  const onCheckboxChange = (checked) => {
+    setFirstCheckbox(!checked);
+  };
+
   return (
     <section
       className={`${
@@ -52,17 +57,18 @@ const WheelBanner = () => {
     >
       <div
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2
-        flex w-full max-w-[1000px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white text-neutral-900`}
+        flex w-full max-w-[1000px] -translate-y-1/2 -translate-x-1/2 transform flex-col bg-white text-neutral-900 lg:rounded-2xl`}
       >
         <button className="absolute right-0 m-7 flex w-auto text-black" onClick={onClose}>
           <X size={32} />
         </button>
         <div className="flex flex-row justify-between">
-          <div className="flex w-full max-w-[500px] flex-col items-center justify-end space-y-5 rounded-l-2xl bg-[url('/images/banners/wheel-banner-bg.webp')] bg-cover bg-no-repeat px-10 pb-14">
+          <div className="hidden w-full max-w-[500px] flex-col items-center justify-end space-y-5 rounded-l-2xl bg-[url('/images/banners/wheel-banner-bg.webp')] bg-cover bg-no-repeat px-10 pb-14 lg:flex">
             {/* Icon */}
             <div className="flex w-max rounded-[20px] bg-white p-3">
-              <LockKey weight="fill" size={32} className="text-primary" />
+              <LockKey weight="fill" size={42} className="text-primary" />
             </div>
+            {/* Text */}
             <div className="flex w-full flex-col space-y-5 text-center text-white">
               <p className="text-6xl font-bold">Safer Internxt Day!</p>
               <p className="text-xl font-semibold">Subscribe, spin, and save on a subscription of your choice!*</p>
@@ -71,7 +77,13 @@ const WheelBanner = () => {
               <p className="text-sm font-semibold">*Offer is for free accounts or new customers</p>
             </div>
           </div>
-          <div className="flex w-full max-w-[500px] flex-col items-center justify-center space-y-10 py-11">
+          {/* Wheel and mobile view */}
+          <div className="flex h-screen w-full max-w-[500px] flex-col items-center justify-center space-y-10 py-11 lg:h-full">
+            {/* Title */}
+            <div className="flex w-full flex-col space-y-5 text-center lg:hidden">
+              <p className="text-4xl font-bold text-primary">Safer Internxt Day!</p>
+              <p className="text-xl font-semibold text-gray-80">Spin, save, and secure your data!</p>
+            </div>
             <Wheel items={items} roulette={roulette} />
             {/* Text input and button */}
             <div className="flex max-w-[240px] flex-col space-y-2">
@@ -81,13 +93,16 @@ const WheelBanner = () => {
               </button>
             </div>
             {/* Checkbox and privacy policy */}
-            <div className="flex flex-row">
+            <div className="flex flex-col space-y-6 text-center">
               <CheckboxItem
                 checked={firstCheckbox}
-                setCheckbox={setFirstCheckbox}
+                setCheckbox={onCheckboxChange}
                 textColor="text-gray-100"
                 label={'By subscribing, you agree to our [privacy policy](https://internxt.com/legal).'}
               />
+              <div className="flex flex-col text-gray-100 lg:hidden">
+                <p className="text-sm font-semibold">*Offer is for free accounts or new customers</p>
+              </div>
             </div>
           </div>
         </div>
