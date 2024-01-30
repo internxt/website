@@ -9,7 +9,6 @@ import CardSkeleton from '../components/CardSkeleton';
 import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import FreePlanCard from './FreePlanCard';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
 import Header from '../shared/Header';
 
 interface PriceTableProps {
@@ -28,6 +27,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const CampaignContent = require(`../../assets/lang/en/pricing.json`);
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState<ProductsProps>();
@@ -71,9 +71,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   }, []);
 
   return (
-    <section id="priceTable" className="bg-gray-1">
+    <section id="priceTable" className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
+          <div className="flex flex-col px-5">
+            <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
+          </div>
           <div className="flex flex-col items-center px-5">
             <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">

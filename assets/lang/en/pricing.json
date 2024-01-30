@@ -14,11 +14,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 70%",
-      "title": "Take control of your data!",
-      "subtitle": "Subscribe and secure your files with Internxt",
-      "cta": "Get 70% OFF now",
-      "guarantee": "30-day money-back guarantee"
+      "label": "Spin, save, and secure your data!",
+      "title": "Safer Internet Day Offer",
+      "subtitle": "Win up to 50% off an Internxt subscription.*",
+      "cta": "Spin to win",
+      "guarantee": "30-day money-back guarantee",
+      "lastCta": "*Offer is for free accounts or new customers"
     },
     "featureSection": {
       "firstFeature": "30-day money-back guarantee",
