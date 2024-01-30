@@ -25,13 +25,15 @@ const selectedLang = {
   ru: 'RU',
 };
 
+const LOCALE_COOKIE = cookies.getCookie('i18next');
+
 export default function LanguageBox({ darkMode, isBlackFriday }) {
   const router = useRouter();
 
   const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale as string]);
 
   function changeLang(lang: string) {
-    cookies.setCookie({ cookieName: 'LOCALE', cookieValue: lang });
+    cookies.setCookie({ cookieName: 'i18next', cookieValue: lang });
     setCurrentLangText(selectedLang[lang]);
   }
 

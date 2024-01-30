@@ -20,13 +20,24 @@ function setCookie({
   cookieValue: string;
   expiration?: Date;
 }) {
-  const domain = process.env.NODE_ENV === 'production' ? 'internxt.com' : 'localhost';
+  const domain = process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost';
 
   const expirationDate = expiration ? new Date(expiration).toUTCString() : moment().add(100, 'days').toDate();
 
   const cookie = `${cookieName}=${cookieValue};expires=${expirationDate};domain=${domain}; Path=/`;
 
   document.cookie = cookie;
+}
+
+function getCookie(cookieName: string): string {
+  const cookie = {};
+  if (typeof document !== 'undefined') {
+    document.cookie.split(';').forEach((el) => {
+      const [key, value] = el.split('=');
+      cookie[key.trim()] = value;
+    });
+  }
+  return cookie[cookieName];
 }
 
 function setReferralCookie(ctx: GetServerSidePropsContext): void {
@@ -67,6 +78,7 @@ function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: st
 export default {
   parseUri,
   setCookie,
+  getCookie,
   setReferralCookie,
   setPublicCookie,
 };
