@@ -33,6 +33,19 @@ const WheelBanner = () => {
     },
   });
 
+  useEffect(() => {
+    const getSquareBannerLS = sessionStorage.getItem(SHOW_WHEEL_BANNER);
+    if (getSquareBannerLS) setBannerVisible(false);
+    else setBannerVisible(true);
+  }, []);
+
+  // Stop the roulette after random seconds between 4 and 6 seconds
+  useEffect(() => {
+    setTimeout(() => {
+      onStop();
+    }, Math.floor(Math.random() * 2000) + 4000);
+  }, [onStart]);
+
   const handleOnButtonClick = () => {
     axios
       .post('/api/authenticate', {
@@ -47,26 +60,11 @@ const WheelBanner = () => {
       });
   };
 
-  useEffect(() => {
-    const getSquareBannerLS = sessionStorage.getItem(SHOW_WHEEL_BANNER);
-    if (getSquareBannerLS) setBannerVisible(false);
-    else setBannerVisible(true);
-  }, []);
-
-  useEffect(() => {}, [globalDialogs.dialogIsOpen]);
-
   function handleOnClose() {
     setBannerVisible(false);
     sessionStorage.setItem(SHOW_WHEEL_BANNER, 'false');
     globalDialogs.closeDialog(GlobalDialog.Wheel);
   }
-
-  // Stop the roulette after random seconds between 4 and 6 seconds
-  useEffect(() => {
-    setTimeout(() => {
-      onStop();
-    }, Math.floor(Math.random() * 2000) + 4000);
-  }, [onStart]);
 
   const onEmailInputChange = (e) => {
     setEmail(e.target.value);

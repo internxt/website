@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CheckIfUserHasSubscription, UserData } from './types/types';
+import { CheckIfUserHasSubscriptionResponse, UserData } from './types/types';
 
 const API_URL = process.env.NEXT_DRIVE_API_URL;
 const NEW_API_URL = process.env.NEXT_DRIVE_NEW_API_URL;
@@ -49,7 +49,10 @@ export function getUser(email: string): Promise<UserData | null> {
     });
 }
 
-export function checkIfUserHasSubscription(email: string, token: string): Promise<CheckIfUserHasSubscription | null> {
+export function checkIfUserHasSubscription(
+  email: string,
+  token: string,
+): Promise<CheckIfUserHasSubscriptionResponse | null> {
   return axios
     .get(`${NEW_API_URL}/users/user/${email}`, {
       headers: {

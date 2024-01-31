@@ -37,11 +37,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       JWT_SECRET,
     );
 
-    const userHasSubscription = await checkIfUserHasSubscription(email, token);
+    const userSubscription = await checkIfUserHasSubscription(email, token);
 
-    if (!userHasSubscription) return res.status(404).json({ message: 'User not found' });
+    if (!userSubscription) return res.status(404).json({ message: 'User not found' });
 
-    const { user, hasSubscriptions } = userHasSubscription;
+    const { user, hasSubscriptions } = userSubscription;
 
     if (!hasSubscriptions) return res.status(403).json({ message: 'User has no subscription' });
 

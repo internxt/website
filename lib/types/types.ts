@@ -40,7 +40,7 @@ interface HKey {
   data: number[];
 }
 
-export interface CheckIfUserHasSubscription {
+export interface CheckIfUserHasSubscriptionResponse {
   user: {
     id: number;
     userId: string;
