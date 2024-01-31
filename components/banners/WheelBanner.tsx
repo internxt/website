@@ -4,6 +4,7 @@ import { Roulette, useRoulette } from 'react-hook-roulette';
 import TextInput from '../components/TextInput';
 import CheckboxItem from '../shared/CheckboxItem';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import axios, { AxiosError } from 'axios';
 
 const SHOW_WHEEL_BANNER = 'showWheelBanner';
 
@@ -31,6 +32,20 @@ const WheelBanner = () => {
       },
     },
   });
+
+  const handleOnButtonClick = () => {
+    axios
+      .post('/api/authenticate', {
+        userEmail: email,
+      })
+      .catch((error: AxiosError) => {
+        if (error.response?.status === 404 || error.response?.status === 403) {
+          onStart();
+        } else {
+          console.error('[ERROR]: ', 'You are not authorized to access this resource');
+        }
+      });
+  };
 
   useEffect(() => {
     const getSquareBannerLS = sessionStorage.getItem(SHOW_WHEEL_BANNER);
@@ -104,7 +119,7 @@ const WheelBanner = () => {
             {/* Text input and button */}
             <div className="flex max-w-[240px] flex-col space-y-2">
               <TextInput placeholder="Email Address" className="w-max" onChange={onEmailInputChange} />
-              <button className="rounded-lg bg-primary py-2.5 text-white" type="button" onClick={onStart}>
+              <button className="rounded-lg bg-primary py-2.5 text-white" type="button" onClick={handleOnButtonClick}>
                 Spin to win
               </button>
             </div>
