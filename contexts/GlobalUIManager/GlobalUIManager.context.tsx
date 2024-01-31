@@ -36,8 +36,6 @@ export const GlobalUIManager: React.FC<
 
     config?: GlobalDialogActionConfig,
   ) => {
-    console.log('dialogs', dialogs);
-    console.log('openDialog', dialogKey);
     setDialogs(
       dialogs.map<GlobalDialogState>((dialog) =>
         dialog.key === dialogKey
