@@ -105,13 +105,13 @@ const WheelComponent = ({ onViewChange, setResult }) => {
           <Roulette roulette={roulette} />
         </div>
         {/* Text input and button */}
-        <form className="flex max-w-[240px] flex-col space-y-2" onSubmit={handleOnButtonClick}>
+        <form className="flex w-full max-w-[240px] flex-col space-y-2" onSubmit={handleOnButtonClick}>
           <TextInput
             placeholder="Email Address"
             value={email}
             passwordError={error}
             type="email"
-            className="w-max"
+            className="w-full"
             onChange={onEmailInputChange}
           />
           {error && (
@@ -122,7 +122,7 @@ const WheelComponent = ({ onViewChange, setResult }) => {
           )}
           <button
             disabled={email === ''}
-            className={`rounded-lg ${email === '' ? 'bg-gray-30' : 'bg-primary'}  py-2.5 text-white`}
+            className={`rounded-lg ${email === '' ? 'bg-gray-30' : 'bg-primary'}  w-full py-2.5 text-white`}
             type="submit"
           >
             Spin to win
