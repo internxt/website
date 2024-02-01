@@ -111,7 +111,7 @@
       {
         "name": "Eva W.",
         "enterprise": "Journalist for FixThePhoto.com",
-        "review": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
       },
       {
         "name": "Cristian M.",
@@ -158,7 +158,7 @@
       {
         "question": "What is an open-source cloud storage service?",
         "answer": [
-          "An open-source cloud service differs from a traditional service in that all of the service’s source code is made public. This allows individuals to independently verify that the service does what it says it does. Internxt is fully open source, and our code is posted publicly on GitHub."
+          "An [open-source cloud service](https://internxt.com/open-source) differs from a traditional service in that all of the service’s source code is made public. This allows individuals to independently verify that the service does what it says it does. Internxt is fully open source, and our code is posted publicly on GitHub."
         ]
       },
       {
