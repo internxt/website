@@ -81,18 +81,21 @@ const WheelBanner = () => {
               <p className="text-4xl font-bold text-primary lg:text-7xl">Congratulations!</p>
               <p className="text-xl font-semibold text-gray-100">Choose your plan and activate your offer with code:</p>
             </div>
-            <div className="flex flex-col items-center space-y-8 rounded-2xl border-2 border-primary/7 bg-primary/2 p-9 px-5">
-              <div className="flex max-w-[512px] flex-col items-center space-y-8">
-                <div className="w-full">
-                  <TextInput value={coupon} disabled className="items-center text-center" />
-                </div>
-                <button
-                  onClick={handleOnCopy}
-                  className="flex w-max flex-col items-center rounded-lg bg-primary py-2.5 px-20 text-lg font-medium text-white"
-                >
-                  Get your discount
-                </button>
+            <div className="flex w-full max-w-[520px] flex-col items-center space-y-8 rounded-2xl border-2 border-primary/7 bg-primary/2 p-9">
+              <div className="w-full">
+                <TextInput
+                  value={coupon}
+                  className="items-center text-center"
+                  disabledText="disabled:text-gray-100 text-gray-100 font-medium"
+                  readonly
+                />
               </div>
+              <button
+                onClick={handleOnCopy}
+                className="flex w-max flex-col items-center rounded-lg bg-primary py-2.5 px-11 text-lg font-medium text-white"
+              >
+                Get your discount
+              </button>
             </div>
           </div>
         ) : null}
