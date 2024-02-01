@@ -66,7 +66,7 @@ const WheelComponent = ({ onViewChange, setResult }) => {
       .post('/api/authenticate', {
         userEmail: email,
       })
-      .then((response) => {
+      .then(() => {
         setError(true);
       })
       .catch((error: AxiosError) => {
