@@ -11,11 +11,11 @@ const CampaignCtaSection = ({ textContent }) => {
 
   return (
     <div className="flex flex-col overflow-hidden">
-      <div className="flex flex-col items-center rounded-[32px] bg-primary">
+      <div className="flex flex-col items-center rounded-[32px] bg-primary px-10 xl:px-0">
         <div className="flex flex-row">
-          <div className="flex w-full flex-col items-center justify-center space-y-6 py-16 text-center text-white lg:items-start lg:pl-16 lg:text-left">
-            <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-primary-dark py-2">
-              <p className="text-2xl font-bold text-white">{textContent.label}</p>
+          <div className="flex w-full flex-col items-center justify-center space-y-6 py-16 text-center text-white xl:items-start xl:pl-16 xl:text-left">
+            <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-primary-dark py-2 px-4">
+              <p className="textxl font-bold text-white lg:text-2xl">{textContent.label}</p>
             </div>
             <div className="flex w-full max-w-[574px] flex-col space-y-4">
               <p className="text-4xl font-bold md:text-5xl">{textContent.title}</p>
