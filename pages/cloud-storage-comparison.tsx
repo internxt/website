@@ -14,8 +14,6 @@ import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generat
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
 import CtaSection from '../components/shared/CtaSection';
-import FeatureSection2 from '../components/comparison/FeatureSection2';
-import TableSection2 from '../components/comparison/TableSection2';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
