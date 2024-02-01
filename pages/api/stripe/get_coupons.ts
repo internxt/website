@@ -13,6 +13,12 @@ export enum CouponType {
   LifetimeExclusive = 'COUPON_LIFETIME_FIFTY',
   SoftSale = 'COUPON_SOFTSALE50',
   DataPrivacy = 'COUPON_DATA_PRIVACY',
+  Wheel10 = 'WHEEL10_COUPON',
+  Wheel15 = 'WHEEL15_COUPON',
+  Wheel25 = 'WHEEL25_COUPON',
+  Wheel30 = 'WHEEL30_COUPON',
+  Wheel45 = 'WHEEL45_COUPON',
+  Wheel50 = 'WHEEL50_COUPON',
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {

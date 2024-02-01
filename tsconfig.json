@@ -22,14 +22,6 @@
     "strictNullChecks": true
   },
   "types": ["cypress", "node"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "components/banners/WheelBanner.js",
-    "components/shared/Whee.js",
-    "components/shared/Wheel.jsx"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

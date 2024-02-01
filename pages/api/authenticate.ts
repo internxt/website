@@ -1,7 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { AxiosError } from 'axios';
 
 import jwt from 'jsonwebtoken';
 import { checkIfUserHasSubscription, getUser } from '../../lib/utils';
+import { UserData } from '../../lib/types/types';
 
 const JWT_SECRET = process.env.JWT_DRIVE_SERVER;
 
@@ -13,9 +15,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const userData = await getUser(userEmail);
 
-    if (!userData) return res.status(404).json({ message: 'User not found' });
+    // Check if userData is an error
+    if ((userData as AxiosError).isAxiosError) {
+      if (
+        (userData as any).response?.status === 500 &&
+        (userData as AxiosError).response?.data.error === 'Failed to get user'
+      )
+        return res.status(404).json({ message: 'User not found' });
+    }
 
-    const { uuid, email, name, lastname, username, sharedWorkspace, bridgeUser, userId } = userData;
+    const { uuid, email, name, lastname, username, sharedWorkspace, bridgeUser, userId } = userData as UserData;
 
     const payload = {
       uuid,

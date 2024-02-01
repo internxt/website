@@ -1,3 +1,6 @@
+/*eslint-disable @typescript-eslint/no-explicit-any */
+/*eslint-disable @typescript-eslint/explicit-module-boundary-types */
+
 export interface TextInputProps {
   className?: string;
   type?: 'text' | 'email' | 'number' | 'password';
@@ -46,13 +49,15 @@ export interface TextInputProps {
   isPasswordInput?: boolean;
   pattern?: string;
   patternHint?: string;
+  passwordError?: boolean;
   onChange?: (e: any) => void | (() => void);
+  onChangeText?: (text: string) => void;
   onFocus?: (e: any) => void | (() => void);
   onBlur?: (e: any) => void | (() => void);
   autoCompleteOnFocus?: boolean;
 }
 
-export default function TextInput(props: TextInputProps) {
+const TextInput = (props: TextInputProps) => {
   return (
     <input
       type={props.type ?? 'text'}
@@ -68,12 +73,15 @@ export default function TextInput(props: TextInputProps) {
       disabled={props.disabled}
       readOnly={props.readonly || props.autoCompleteOnFocus}
       autoComplete={props.autoComplete ?? 'off'}
-      className={`h-11 w-full appearance-none rounded-lg border border-gray-30 bg-white px-3 ${
-        props.isPasswordInput && 'pr-12'
-      } text-lg text-gray-100 shadow-sm transition duration-100 focus:border-primary focus:shadow-none focus:outline-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 disabled:text-gray-30 md:text-base ${
+      className={`h-11 w-full appearance-none rounded-lg  border-gray-30 bg-white px-3 ${
+        props.isPasswordInput ? 'pr-12' : ''
+      } text-lg text-gray-100 shadow-sm transition duration-100 focus:outline-none ${
+        props.passwordError ? 'border-2 focus:border-red' : 'border focus:border-primary'
+      } focus:shadow-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 disabled:text-gray-30 md:text-base ${
         props.className ?? ''
       }`}
       onChange={props.onChange}
+      onKeyPress={() => props.onChangeText}
       onFocus={(e) => {
         if (props.autoCompleteOnFocus) {
           e.target.removeAttribute('readonly');
@@ -85,4 +93,6 @@ export default function TextInput(props: TextInputProps) {
       onBlur={props.onBlur}
     />
   );
-}
+};
+
+export default TextInput;

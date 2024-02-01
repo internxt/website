@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { CheckIfUserHasSubscriptionResponse, UserData } from './types/types';
 
 const API_URL = process.env.NEXT_DRIVE_API_URL;
@@ -30,7 +30,7 @@ export function getUserId(email: string) {
     });
 }
 
-export function getUser(email: string): Promise<UserData | null> {
+export function getUser(email: string): Promise<UserData | AxiosError> {
   const auth = getBridgeAuth();
 
   return axios
@@ -44,8 +44,8 @@ export function getUser(email: string): Promise<UserData | null> {
       const { data } = response;
       return data;
     })
-    .catch((err) => {
-      return null;
+    .catch((err: AxiosError) => {
+      return err;
     });
 }
 
@@ -63,7 +63,8 @@ export function checkIfUserHasSubscription(
       const { data } = response;
       return data;
     })
-    .catch((err) => {
-      return null;
+    .catch((err: AxiosError) => {
+      if (err.response?.status === 404) return null;
+      throw new Error(err.message);
     });
 }
