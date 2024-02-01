@@ -74,7 +74,7 @@
   },
   "FeatureSection": {
     "title": "¿Por qué Internxt?",
-    "subtitle": "Internxt crea servicios en la nube seguros diseñados para devolverte a ti el control de tus datos. Protegiendo tus archivos y tu derecho fundamental a la privacidad, todos los servicios de Internxt están construidos desde cero para una seguridad y protección sin precedentes.",
+    "description": "Internxt crea servicios en la nube seguros diseñados para devolverte a ti el control de tus datos. Protegiendo tus archivos y tu derecho fundamental a la privacidad, todos los servicios de Internxt están construidos desde cero para una seguridad y protección sin precedentes.",
     "cta": "Crea una cuenta gratuíta"
   },
   "InfoSection": {
@@ -158,7 +158,7 @@
       {
         "question": "¿Qué es un servicio de almacenamiento en la nube de código abierto?",
         "answer": [
-          "Un [servicio de almacenamiento en la nube de código abierto](https://internxt.com/open-source) difiere de un servicio tradicional en que todo el código fuente del servicio es público. Esto permite que las personas verifiquen de manera independiente que el servicio hace lo que dice. Internxt es completamente de código abierto y nuestro código se publica de forma abierta en GitHub."
+          "Un [servicio de almacenamiento en la nube de código abierto](https://internxt.com/es/open-source) difiere de un servicio tradicional en que todo el código fuente del servicio es público. Esto permite que las personas verifiquen de manera independiente que el servicio hace lo que dice. Internxt es completamente de código abierto y nuestro código se publica de forma abierta en GitHub."
         ]
       },
       {

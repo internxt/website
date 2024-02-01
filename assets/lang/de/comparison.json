@@ -74,7 +74,7 @@
   },
   "FeatureSection": {
     "title": "Why choose Internxt?",
-    "subtitle": "Internxt bietet private und sichere Cloud-Services, die darauf ausgelegt sind, dir, dem Benutzer, die Kontrolle über deine Daten zurückzugeben. Der Schutz deiner Dateien und deines grundlegenden Rechts auf Privatsphäre steht im Mittelpunkt. Alle Internxt-Services wurden von Grund auf für eine beispiellose Sicherheit entwickelt.",
+    "description": "Internxt bietet private und sichere Cloud-Services, die darauf ausgelegt sind, dir, dem Benutzer, die Kontrolle über deine Daten zurückzugeben. Der Schutz deiner Dateien und deines grundlegenden Rechts auf Privatsphäre steht im Mittelpunkt. Alle Internxt-Services wurden von Grund auf für eine beispiellose Sicherheit entwickelt.",
     "cta": "Kostenloses Konto erstellen"
   },
   "InfoSection": {
@@ -158,7 +158,7 @@
       {
         "question": "Was ist ein Cloud-Speicherdienst mit offenem Quellcode?",
         "answer": [
-          "Ein [Cloud-Speicherdienst mit offenem Quellcode](https://internxt.com/open-source) unterscheidet sich von einem traditionellen Dienst darin, dass der gesamte Quellcode des Dienstes öffentlich zugänglich ist. Dies ermöglicht es Einzelpersonen, unabhängig zu überprüfen, ob der Dienst das tut, was er sagt. Internxt ist vollständig Open Source, und unser Code wird öffentlich auf GitHub veröffentlicht."
+          "Ein [Cloud-Speicherdienst mit offenem Quellcode](https://internxt.com/de/open-source) unterscheidet sich von einem traditionellen Dienst darin, dass der gesamte Quellcode des Dienstes öffentlich zugänglich ist. Dies ermöglicht es Einzelpersonen, unabhängig zu überprüfen, ob der Dienst das tut, was er sagt. Internxt ist vollständig Open Source, und unser Code wird öffentlich auf GitHub veröffentlicht."
         ]
       },
       {
