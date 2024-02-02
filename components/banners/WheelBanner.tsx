@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 import WheelComponent from './components/WheelComponent';
-import { X } from '@phosphor-icons/react';
+import { Info, X } from '@phosphor-icons/react';
 import TextInput from '../components/TextInput';
 import { notificationService } from '../Snackbar';
 import { stripeService } from '../services/stripeService';
@@ -76,7 +76,7 @@ const WheelBanner = () => {
         {view === 'wheel' ? (
           <WheelComponent onViewChange={() => setView('congratulations')} setResult={setResult} />
         ) : view === 'congratulations' ? (
-          <div className="flex min-h-screen flex-col items-center justify-center space-y-7 px-5 lg:min-h-full lg:py-32">
+          <div className="flex min-h-screen flex-col items-center justify-center space-y-7 px-5 lg:min-h-full lg:pt-20 lg:pb-10">
             <div className="flex w-full flex-col items-center space-y-5 text-center">
               <p className="text-4xl font-bold text-primary lg:text-7xl">Congratulations!</p>
               <p className="text-xl font-semibold text-gray-100">Choose your plan and activate your offer with code:</p>
@@ -96,6 +96,12 @@ const WheelBanner = () => {
               >
                 Get your discount
               </button>
+            </div>
+            <div className="flex flex-row space-x-4 pt-6">
+              <Info size={20} className="text-primary" />
+              <p className="text-sm font-semibold text-gray-100">
+                Go to the pricing page and choose your subscription to activate your discount.
+              </p>
             </div>
           </div>
         ) : null}
