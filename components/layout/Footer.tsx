@@ -421,11 +421,11 @@ export default function Footer({
                 </p>
               </div>
               <div className="flex flex-row space-x-1">
-                <a href="https://twitter.com/Internxt" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                <a href="https://twitter.com/Internxt" target="_blank" className="h-4 py-[7px] pr-2" rel="noreferrer">
                   <img
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`}
+                    className="h-3.5"
+                    src={`/icons/social/X_logo.svg`}
                     draggable="false"
                     alt="twitter icon"
                   />
@@ -770,11 +770,11 @@ export default function Footer({
 
             <div className="flex flex-col items-center space-y-4 py-10">
               <div className="flex flex-row space-x-1">
-                <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-2 pr-6" rel="noreferrer">
                   <img
                     loading="lazy"
-                    className="h-5"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/twitter.svg`}
+                    className="h-4"
+                    src={`/icons/social/X_logo.svg`}
                     draggable="false"
                     alt="twitter icon"
                   />
