@@ -11,6 +11,7 @@
     "start": "next start",
     "prod": "next export",
     "cypress": "cypress open",
+    "test:e2e": "cypress run --spec cypress/e2e/**/*",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
