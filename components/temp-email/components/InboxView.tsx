@@ -131,7 +131,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
       </div>
 
       <Transition
-        show={!!selectedMessage}
+        show={true}
         enter="transition-opacity easy-in-out duration-800"
         enterFrom="opacity-0"
         enterTo="opacity-100"
@@ -141,11 +141,13 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
         className={'flex overflow-y-scroll'}
       >
         {selectedMessage ? (
-          <div className="flex h-full w-full">
+          <div className="flex h-full w-screen">
             <Messages.MessageSelected item={selectedMessage} textContent={textContent} />
           </div>
         ) : (
-          <Messages.NoMessageSelected messagesLength={openedMessages} textContent={textContent} />
+          <div className="flex w-screen items-center">
+            <Messages.NoMessageSelected messagesLength={openedMessages} textContent={textContent} />
+          </div>
         )}
       </Transition>
     </div>
