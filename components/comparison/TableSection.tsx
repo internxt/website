@@ -104,7 +104,7 @@ const HeroSection = ({ textContent }) => {
         backup_folders_and_files: true,
         file_sharding: true,
         unlimited_bandwidth: false,
-        free_account_storage: '12GB',
+        free_account_storage: '5GB',
         monthly_base_pricing: '$0.99',
         max_storage_amount: '12TB',
         support_center: true,
