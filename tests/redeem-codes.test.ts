@@ -1,6 +1,6 @@
 // Tests that a valid GET request with correct code and provider parameters returns the expected response
 import axios from 'axios';
-import handler from '../pages/api/check_code';
+import handler from '../src/pages/api/check_code';
 import { expect } from '@jest/globals';
 
 test('test_valid_coupon', async () => {

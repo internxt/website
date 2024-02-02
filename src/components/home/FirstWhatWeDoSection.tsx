@@ -1,7 +1,7 @@
-import Image from "next/legacy/image";
-import { CaretRight, DotsThree } from '@phosphor-icons/react';
-import PdfItem from '../../public/icons/file-types/pdf.svg';
-import PPTItem from '../../public/icons/file-types/ppt.svg';
+import Image from 'next/legacy/image';
+import { CaretRight } from '@phosphor-icons/react';
+import PdfItem from '../../../public/icons/file-types/pdf.svg';
+import PPTItem from '../../../public/icons/file-types/ppt.svg';
 import RevealY from '../components/RevealY';
 import RevealX from '../components/RevealX';
 import FileItem from './components/FileItem';

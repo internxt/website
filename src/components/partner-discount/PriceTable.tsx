@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
-import PriceCard from '../partner-discount/PriceCard';
+import PriceCard from './PriceCard';
 import { ProductsProps, stripeService } from '../services/stripeService';
 import CardSkeleton from '../components/CardSkeleton';
 import { CouponType } from '../../pages/api/stripe/get_coupons';
