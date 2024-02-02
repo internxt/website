@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import { UilCheck, UilMinus } from '@iconscout/react-unicons';
 import Header from '../shared/Header';
-const TableSection2 = ({ textContent }) => {
+
+const HeroSection = ({ textContent }) => {
   const competitors = [
     {
       name: 'Internxt',
-      logo: 'internxt',
+      logo: 'internxt.webp',
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
@@ -23,29 +24,37 @@ const TableSection2 = ({ textContent }) => {
         linux_desktop_app: true,
         android_app: true,
         ios_app: true,
+        business_plans: true,
+        availability: true,
         backup_folders_and_files: true,
         file_sharding: true,
         unlimited_bandwidth: true,
         free_account_storage: '10GB',
+        monthly_base_pricing: '$4.99',
+        max_storage_amount: '10TB',
         support_center: true,
         live_chat_support: true,
         open_source: true,
         file_requests: false,
+        lifetime_plans: true,
         password_protection_for_links: true,
         download_limits_for_links: true,
       },
     },
+
     {
       name: 'Google Drive',
-      logo: 'google_drive',
+      logo: 'google_drive.webp',
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: false,
         end_to_end_encrypted_file_sharing: false,
         zero_knowledge_encryption: false,
+        business_plans: true,
         two_factor_authentication: true,
         gdpr_compliant_synchronization: true,
         aes_256_encryption: true,
+        availability: false,
         zero_knowledge_access_from_browsers: false,
         no_third_party_file_access: false,
         sync_any_folders: false,
@@ -59,6 +68,9 @@ const TableSection2 = ({ textContent }) => {
         file_sharding: false,
         unlimited_bandwidth: false,
         free_account_storage: '15GB',
+        monthly_base_pricing: '$1.99',
+        max_storage_amount: '2TB',
+        lifetime_plans: false,
         support_center: true,
         live_chat_support: false,
         open_source: false,
@@ -68,8 +80,8 @@ const TableSection2 = ({ textContent }) => {
       },
     },
     {
-      name: 'Tresorit',
-      logo: 'tresorit',
+      name: 'iCloud',
+      logo: 'icloud.png',
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
@@ -84,24 +96,29 @@ const TableSection2 = ({ textContent }) => {
         web_app: true,
         windows_desktop_app: true,
         mac_desktop_app: true,
-        linux_desktop_app: true,
-        android_app: true,
+        linux_desktop_app: false,
+        android_app: false,
         ios_app: true,
-        backup_folders_and_files: false,
-        file_sharding: false,
-        unlimited_bandwidth: true,
-        free_account_storage: '2GB',
+        business_plans: true,
+        availability: false,
+        backup_folders_and_files: true,
+        file_sharding: true,
+        unlimited_bandwidth: false,
+        free_account_storage: '5GB',
+        monthly_base_pricing: '$0.99',
+        max_storage_amount: '12TB',
         support_center: true,
         live_chat_support: true,
         open_source: false,
         file_requests: true,
+        lifetime_plans: false,
         password_protection_for_links: true,
-        download_limits_for_links: true,
+        download_limits_for_links: false,
       },
     },
     {
-      name: 'Dropbox',
-      logo: 'dropbox',
+      name: 'OneDrive',
+      logo: 'onedrive.webp',
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: false,
@@ -112,6 +129,45 @@ const TableSection2 = ({ textContent }) => {
         aes_256_encryption: true,
         zero_knowledge_access_from_browsers: false,
         no_third_party_file_access: false,
+        sync_any_folders: false,
+        business_plans: true,
+        web_app: true,
+        availability: false,
+        windows_desktop_app: true,
+        mac_desktop_app: true,
+        linux_desktop_app: false,
+        android_app: true,
+        ios_app: true,
+        backup_folders_and_files: false,
+        file_sharding: false,
+        unlimited_bandwidth: false,
+        free_account_storage: '6GB',
+        monthly_base_pricing: '$1.99',
+        max_storage_amount: '6TB',
+        lifetime_plans: false,
+        support_center: true,
+        live_chat_support: false,
+        open_source: false,
+        file_requests: true,
+        password_protection_for_links: true,
+        download_limits_for_links: false,
+      },
+    },
+    {
+      name: 'Dropbox',
+      logo: 'dropbox.webp',
+      features: {
+        encryption_at_rest_and_in_transit: true,
+        end_to_end_encrypted_storage: false,
+        end_to_end_encrypted_file_sharing: false,
+        zero_knowledge_encryption: false,
+        two_factor_authentication: true,
+        gdpr_compliant_synchronization: true,
+        aes_256_encryption: true,
+        zero_knowledge_access_from_browsers: false,
+        availability: true,
+        no_third_party_file_access: false,
+        business_plans: true,
         sync_any_folders: true,
         web_app: true,
         windows_desktop_app: true,
@@ -123,6 +179,9 @@ const TableSection2 = ({ textContent }) => {
         file_sharding: false,
         unlimited_bandwidth: false,
         free_account_storage: '2GB',
+        monthly_base_pricing: '$18',
+        max_storage_amount: '3TB',
+        lifetime_plans: false,
         support_center: true,
         live_chat_support: true,
         open_source: false,
@@ -133,7 +192,7 @@ const TableSection2 = ({ textContent }) => {
     },
     {
       name: 'pCloud',
-      logo: 'pcloud',
+      logo: 'pcloud.webp',
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
@@ -146,15 +205,20 @@ const TableSection2 = ({ textContent }) => {
         no_third_party_file_access: true,
         sync_any_folders: true,
         web_app: true,
+        availability: true,
         windows_desktop_app: true,
         mac_desktop_app: true,
         linux_desktop_app: true,
         android_app: true,
+        business_plans: true,
         ios_app: true,
         backup_folders_and_files: true,
         file_sharding: false,
         unlimited_bandwidth: false,
         free_account_storage: '10GB',
+        monthly_base_pricing: '$4.99',
+        max_storage_amount: '2TB',
+        lifetime_plans: true,
         support_center: true,
         live_chat_support: false,
         open_source: false,
@@ -164,39 +228,46 @@ const TableSection2 = ({ textContent }) => {
       },
     },
     {
-      name: 'OneDrive',
-      logo: 'onedrive',
+      name: 'Tresorit',
+      logo: 'tresorit.webp',
       features: {
         encryption_at_rest_and_in_transit: true,
-        end_to_end_encrypted_storage: false,
-        end_to_end_encrypted_file_sharing: false,
-        zero_knowledge_encryption: false,
+        end_to_end_encrypted_storage: true,
+        end_to_end_encrypted_file_sharing: true,
+        zero_knowledge_encryption: true,
         two_factor_authentication: true,
         gdpr_compliant_synchronization: true,
+        business_plans: true,
         aes_256_encryption: true,
         zero_knowledge_access_from_browsers: true,
-        no_third_party_file_access: false,
-        sync_any_folders: false,
+        no_third_party_file_access: true,
+        sync_any_folders: true,
+        availability: true,
         web_app: true,
         windows_desktop_app: true,
         mac_desktop_app: true,
-        linux_desktop_app: false,
+        linux_desktop_app: true,
         android_app: true,
         ios_app: true,
         backup_folders_and_files: false,
         file_sharding: false,
-        unlimited_bandwidth: false,
-        free_account_storage: '5GB',
+        unlimited_bandwidth: true,
+        free_account_storage: '3GB',
+        monthly_base_pricing: '$11.99',
+        max_storage_amount: '4TB',
+        lifetime_plans: false,
         support_center: true,
-        live_chat_support: false,
+        live_chat_support: true,
         open_source: false,
         file_requests: true,
         password_protection_for_links: true,
-        download_limits_for_links: false,
+        download_limits_for_links: true,
       },
     },
   ];
+
   const getFeature = (feature) => competitors.map((brand) => brand.features[feature]);
+
   const table = [
     {
       name: `${textContent.table.sections.encryption_and_security.name}`,
@@ -234,6 +305,10 @@ const TableSection2 = ({ textContent }) => {
           feature: getFeature('zero_knowledge_access_from_browsers'),
         },
         {
+          title: `${textContent.table.sections.encryption_and_security.features.open_source}`,
+          feature: getFeature('open_source'),
+        },
+        {
           title: `${textContent.table.sections.encryption_and_security.features.no_third_party_file_access}`,
           feature: getFeature('no_third_party_file_access'),
         },
@@ -242,10 +317,6 @@ const TableSection2 = ({ textContent }) => {
     {
       name: `${textContent.table.sections.storage_and_file_management.name}`,
       rows: [
-        {
-          title: `${textContent.table.sections.storage_and_file_management.features.sync_any_folders}`,
-          feature: getFeature('sync_any_folders'),
-        },
         {
           title: `${textContent.table.sections.storage_and_file_management.features.web_app}`,
           feature: getFeature('web_app'),
@@ -271,47 +342,27 @@ const TableSection2 = ({ textContent }) => {
           feature: getFeature('ios_app'),
         },
         {
+          title: `${textContent.table.sections.storage_and_file_management.features.availability}`,
+          feature: getFeature('availability'),
+        },
+        {
+          title: `${textContent.table.sections.storage_and_file_management.features.sync_any_folders}`,
+          feature: getFeature('sync_any_folders'),
+        },
+        {
           title: `${textContent.table.sections.storage_and_file_management.features.backup_folders_and_files}`,
           feature: getFeature('backup_folders_and_files'),
         },
-        {
-          title: `${textContent.table.sections.storage_and_file_management.features.file_sharding}`,
-          feature: getFeature('file_sharding'),
-        },
+
         {
           title: `${textContent.table.sections.storage_and_file_management.features.unlimited_bandwidth}`,
           feature: getFeature('unlimited_bandwidth'),
-        },
-        {
-          title: `${textContent.table.sections.storage_and_file_management.features.free_account_storage}`,
-          feature: getFeature('free_account_storage'),
-        },
-      ],
-    },
-    {
-      name: `${textContent.table.sections.deployment.name}`,
-      rows: [
-        {
-          title: `${textContent.table.sections.deployment.features.support_center}`,
-          feature: getFeature('support_center'),
-        },
-        {
-          title: `${textContent.table.sections.deployment.features.live_chat_support}`,
-          feature: getFeature('live_chat_support'),
-        },
-        {
-          title: `${textContent.table.sections.deployment.features.open_source}`,
-          feature: getFeature('open_source'),
         },
       ],
     },
     {
       name: `${textContent.table.sections.controlled_file_sharing.name}`,
       rows: [
-        {
-          title: `${textContent.table.sections.controlled_file_sharing.features.file_requests}`,
-          feature: getFeature('file_requests'),
-        },
         {
           title: `${textContent.table.sections.controlled_file_sharing.features.password_protection_for_links}`,
           feature: getFeature('password_protection_for_links'),
@@ -320,40 +371,84 @@ const TableSection2 = ({ textContent }) => {
           title: `${textContent.table.sections.controlled_file_sharing.features.download_limits_for_links}`,
           feature: getFeature('download_limits_for_links'),
         },
+        {
+          title: `${textContent.table.sections.controlled_file_sharing.features.file_requests}`,
+          feature: getFeature('file_requests'),
+        },
+      ],
+    },
+    {
+      name: `${textContent.table.sections.pricing.name}`,
+      rows: [
+        {
+          title: `${textContent.table.sections.pricing.features.free_account_storage}`,
+          feature: getFeature('free_account_storage'),
+        },
+        {
+          title: `${textContent.table.sections.pricing.features.monthly_base_pricing}`,
+          feature: getFeature('monthly_base_pricing'),
+        },
+        {
+          title: `${textContent.table.sections.pricing.features.max_storage_amount}`,
+          feature: getFeature('max_storage_amount'),
+        },
+        {
+          title: `${textContent.table.sections.pricing.features.lifetime_plans}`,
+          feature: getFeature('lifetime_plans'),
+        },
+      ],
+    },
+    {
+      name: `${textContent.table.sections.deployment.name}`,
+      rows: [
+        {
+          title: `${textContent.table.sections.deployment.features.business_plans}`,
+          feature: getFeature('business_plans'),
+        },
+        {
+          title: `${textContent.table.sections.deployment.features.support_center}`,
+          feature: getFeature('support_center'),
+        },
+        {
+          title: `${textContent.table.sections.deployment.features.live_chat_support}`,
+          feature: getFeature('live_chat_support'),
+        },
       ],
     },
   ];
+
   return (
     <section
       id="buy"
-      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-16"
+      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-[88px] lg:pt-16"
     >
       <div className="flex flex-col">
         {/* Header */}
-        <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-primary px-6 pt-20 pb-16 text-white md:pt-20">
-          <div className="relative z-10 mb-16 flex flex-col items-center justify-center text-center md:mb-8">
-            <Header className="text-center">
+        <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 py-16 text-white md:pt-16">
+          <div className="relative z-10 mb-16 flex flex-col items-center justify-center md:mb-8">
+            <Header className="text-center text-white">
               {textContent.title.line1}
               <br className="hidden sm:inline-flex" /> {textContent.title.line2}
             </Header>
+
             <h2 className="text-center text-xl md:text-lg">{textContent.description}</h2>
           </div>
 
           <div className="relative z-10 flex flex-col items-center justify-center">
-            <a
-              href="https://drive.internxt.com/new"
+            <button
+              onClick={() => window.open('https://drive.internxt.com/new', '_blank')}
               id="get-started-link"
-              target="_top"
-              rel="noreferrer"
-              className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-auto sm:text-base"
+              className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-auto"
             >
               {textContent.cta}
-            </a>
+            </button>
 
             <p className="mt-1.5 text-center text-base opacity-80 md:text-xs">{textContent.noCredirCardNeeded}</p>
           </div>
+
           <div className="absolute top-2/3 left-0 h-full w-full scale-y-200 rounded-t-full-percentage bg-primary-dark blur-3xl filter" />
         </div>
+
         {/* Table */}
         <div className="flex w-screen flex-col items-center justify-start overflow-x-auto bg-white py-10 xl:overflow-x-visible">
           <div className="mx-auto flex flex-col items-center justify-center px-6">
@@ -371,7 +466,7 @@ const TableSection2 = ({ textContent }) => {
                         draggable="false"
                         alt="Drag horizontal"
                       />
-                      <div className="mt-1 flex flex-col items-start justify-center text-left text-sm font-medium leading-tight text-cool-gray-40">
+                      <div className="mt-1 flex flex-col items-start justify-center text-left text-sm font-medium leading-tight text-gray-40">
                         <span>{textContent.table.drag.line1}</span>
                         <span>{textContent.table.drag.line2}</span>
                       </div>
@@ -383,7 +478,7 @@ const TableSection2 = ({ textContent }) => {
                       <img
                         loading="lazy"
                         className="h-12 w-12 object-cover object-center"
-                        src={`/images/comparison/competitors/${competitors[0].logo}.webp`}
+                        src={`/images/comparison/competitors/${competitors[0].logo}`}
                         draggable="false"
                         alt={`${competitors[0].name} logo`}
                       />
@@ -394,14 +489,12 @@ const TableSection2 = ({ textContent }) => {
                     <th className="relative p-14 font-normal" key={col.name}>
                       {' '}
                       <div
-                        className={`absolute bottom-0 left-0 flex h-28 w-28 flex-col items-center justify-center space-y-1 rounded-t-lg ${
-                          index % 2 !== 0 && 'bg-cool-gray-5'
-                        }`}
+                        className={`absolute bottom-0 left-0 flex h-28 w-28 flex-col items-center justify-center space-y-1 rounded-t-lg `}
                       >
                         <img
                           loading="lazy"
-                          className="h-8 w-8 object-cover object-center"
-                          src={`/images/comparison/competitors/${col.logo}.webp`}
+                          className="h-8 w-8 object-contain object-center"
+                          src={`/images/comparison/competitors/${col.logo}`}
                           draggable="false"
                           alt={`${col.name} logo`}
                         />
@@ -411,6 +504,7 @@ const TableSection2 = ({ textContent }) => {
                   ))}
                 </tr>
               </thead>
+
               {table.map((section) => (
                 <Fragment key={section.name}>
                   {/* Section */}
@@ -422,18 +516,23 @@ const TableSection2 = ({ textContent }) => {
                       ))}
                     </tr>
                   </thead>
+
                   {/* Rows */}
                   <tbody className="divide-y divide-cool-gray-10">
                     {section.rows.map((row, rowIndex) => (
                       <tr className="h-14 md:h-12" key={row.title}>
                         <td className="whitespace-nowrap px-6 text-left text-base">{row.title}</td>
-                        <td className={`${rowIndex !== 0 && 'border-t border-blue-20 border-opacity-50'} bg-blue-10`}>
+                        <td
+                          className={`${
+                            rowIndex !== 0 && 'border-t border-blue-20 border-opacity-50'
+                          } bg-primary bg-opacity-6`}
+                        >
                           <div className="flex h-full flex-col items-center justify-center">
                             {typeof row.feature[0] === 'boolean' &&
                               (row.feature[0] ? (
-                                <UilCheck className="h-6 w-6 text-blue-50" />
+                                <UilCheck className="h-8 w-8 text-primary" />
                               ) : (
-                                <UilMinus className="h-6 w-6 text-blue-20" />
+                                <UilMinus className="h-8 w-8 text-primary" />
                               ))}
                             {typeof row.feature[0] === 'string' && (
                               <span className="font-medium text-primary">{row.feature[0]}</span>
@@ -441,18 +540,15 @@ const TableSection2 = ({ textContent }) => {
                           </div>
                         </td>
                         {row.feature.slice(1).map((feature, columnIndex) => (
-                          <td
-                            className={`${columnIndex % 2 !== 0 && 'bg-cool-gray-5'}`}
-                            key={`${row.title}${columnIndex.toString()}`}
-                          >
+                          <td key={`${row.title}${columnIndex.toString()}`}>
                             <div className="flex h-full flex-col items-center justify-center">
                               {typeof feature === 'boolean' &&
                                 (feature ? (
-                                  <UilCheck className="h-6 w-6 text-cool-gray-40" />
+                                  <UilCheck className="h-8 w-8 text-cool-gray-40" />
                                 ) : (
-                                  <UilMinus className="h-6 w-6 text-cool-gray-20" />
+                                  <UilMinus className="h-8 w-8 text-cool-gray-20" />
                                 ))}
-                              {typeof feature === 'string' && <span className="text-cool-gray-40">{feature}</span>}
+                              {typeof feature === 'string' && <span className="text-gray-60">{feature}</span>}
                             </div>
                           </td>
                         ))}
@@ -461,20 +557,21 @@ const TableSection2 = ({ textContent }) => {
                   </tbody>
                 </Fragment>
               ))}
+
               {/* Start now */}
               <tbody>
                 <tr className="h-0">
                   <td className="p-0" />
                   <td className="relative p-0">
-                    <a
-                      href="https://drive.internxt.com/new"
+                    <p
+                      onClick={() => {
+                        window.open('https://drive.internxt.com/new', '_blank');
+                      }}
                       id="get-started-link"
-                      target="_top"
-                      rel="noreferrer"
-                      className="absolute top-full left-0 flex h-14 w-full flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
+                      className="absolute top-full left-0 flex h-14 w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
                     >
                       {textContent.table.startNow}
-                    </a>
+                    </p>
                   </td>
                 </tr>
               </tbody>
@@ -485,4 +582,5 @@ const TableSection2 = ({ textContent }) => {
     </section>
   );
 };
-export default TableSection2;
+
+export default HeroSection;

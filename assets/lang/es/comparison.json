@@ -10,100 +10,135 @@
     "table": {
       "sections": {
         "encryption_and_security": {
-          "name": "Cifrado y Seguridad",
+          "name": "Encriptación y Seguridad",
           "features": {
-            "encryption_at_rest_and_in_transit": "Cifrado en reposo y en tránsito",
+            "encryption_at_rest_and_in_transit": "Encriptación en reposo y en tránsito",
             "end_to_end_encrypted_storage": "Almacenamiento cifrado de extremo a extremo",
-            "end_to_end_encrypted_file_sharing": "Archivos compartidos cifrados de extremo a extremo",
-            "zero_knowledge_encryption": "Cifrado de conocimiento cero",
+            "end_to_end_encrypted_file_sharing": "Compartir archivos cifrados de extremo a extremo",
+            "zero_knowledge_encryption": "Encriptación de conocimiento cero",
             "two_factor_authentication": "Autenticación de dos factores",
-            "gdpr_compliant_synchronization": "Sincronización conforme al GDPR",
-            "aes_256_encryption": "Cifrado AES-256",
-            "zero_knowledge_access_from_browsers": "Acceso de conocimiento cero desde navegador",
-            "no_third_party_file_access": "Terceros no tienen acceso a tus archivos"
+            "gdpr_compliant_synchronization": "Sincronización compatible con el GDPR",
+            "aes_256_encryption": "Encriptación AES-256",
+            "zero_knowledge_access_from_browsers": "Acceso de conocimiento cero desde navegadores",
+            "open_source": "Código abierto",
+            "no_third_party_file_access": "Sin acceso de terceros a archivos"
           }
         },
         "storage_and_file_management": {
-          "name": "Almacenamiento y Gestión",
+          "name": "Acceso y Gestión de Archivos",
           "features": {
-            "sync_any_folders": "Sincroniza cualquier carpeta",
-            "web_app": "Aplicación Web",
-            "windows_desktop_app": "Aplicación para Windows",
-            "mac_desktop_app": "Aplicación para Mac",
-            "linux_desktop_app": "Aplicación para Linux",
+            "sync_any_folders": "Sincronizar cualquier carpeta",
+            "web_app": "Aplicación web",
+            "windows_desktop_app": "Aplicación de escritorio para Windows",
+            "mac_desktop_app": "Aplicación de escritorio para Mac",
+            "linux_desktop_app": "Aplicación de escritorio para Linux",
             "android_app": "Aplicación para Android",
             "ios_app": "Aplicación para iOS",
-            "backup_folders_and_files": "Copia de seguridad",
-            "file_sharding": "Fragmentación de archivos",
-            "unlimited_bandwidth": "Ancho de banda ilimitado",
-            "free_account_storage": "Almacenamiento gratuíto"
-          }
-        },
-        "deployment": {
-          "name": "Despliegue",
-          "features": {
-            "support_center": "Centro de Soporte",
-            "live_chat_support": "Ayuda por chat en vivo",
-            "open_source": "Código abierto y público"
+            "availability": "Disponible en todos los dispositivos",
+            "backup_folders_and_files": "Copia de seguridad de carpetas y archivos",
+            "unlimited_bandwidth": "Ancho de banda ilimitado"
           }
         },
         "controlled_file_sharing": {
-          "name": "Control de archivos compartidos",
+          "name": "Compartir Archivos Controlado",
           "features": {
-            "file_requests": "Petición de archivos",
-            "password_protection_for_links": "Protección de links con contraseña",
-            "download_limits_for_links": "Límite de acceso a links"
+            "password_protection_for_links": "Protección con contraseña para enlaces",
+            "download_limits_for_links": "Límites de descarga para enlaces",
+            "file_requests": "Solicitudes de archivos"
+          }
+        },
+        "pricing": {
+          "name": "Precios",
+          "features": {
+            "free_account_storage": "Almacenamiento gratuito en la cuenta",
+            "monthly_base_pricing": "Precio base mensual",
+            "max_storage_amount": "Cantidad máxima de almacenamiento",
+            "lifetime_plans": "Planes de por vida"
+          }
+        },
+        "deployment": {
+          "name": "Implementación y Soporte",
+          "features": {
+            "business_plans": "Planes empresariales",
+            "support_center": "Centro de soporte",
+            "live_chat_support": "Soporte de chat en vivo"
           }
         }
       },
       "drag": {
-        "line1": "Desplazar horizontalmente",
+        "line1": "Arrastra horizontalmente",
         "line2": "para mostrar competidores"
       },
-      "startNow": "Empezar ya"
+      "startNow": "Regístrate ahora"
     }
   },
   "FeatureSection": {
-    "whyStartUsingInternxt": {
-      "title": "¿Por qué usar Internxt?",
-      "description": {
-        "line1": "A diferencia de otros competidores, la publicidad no es nuestro modelo de negocio.",
-        "line2": "Tus datos son sólo tuyos. Nos centramos en tu seguridad y privacidad y la de",
-        "line3": "tus archivos y fotos. Usando Internxt puedes volver a sentirte seguro."
+    "title": "¿Por qué Internxt?",
+    "description": "Internxt crea servicios en la nube seguros diseñados para devolverte a ti el control de tus datos. Protegiendo tus archivos y tu derecho fundamental a la privacidad, todos los servicios de Internxt están construidos desde cero para una seguridad y protección sin precedentes.",
+    "cta": "Crea una cuenta gratuíta"
+  },
+  "InfoSection": {
+    "title": "Almacenamiento seguro en la nube con una privacidad inigualable",
+    "description": "¿Qué hace que Internxt sea tan especial? Somos un equipo unido de profesionales completamente dedicados a protegerte. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos para que no sean explotados.",
+    "cta": "Presentación del equipo de Internxt",
+    "cards": [
+      {
+        "title": "Privado por diseño",
+        "description": "No almacenamos contraseñas ni datos de usuario y todos tus datos están encriptados en tránsito y en reposo. Internxt le da el control total de sus archivos. Tú gestionas tus datos y nosotros los protegemos."
+      },
+      {
+        "title": "Seguridad sin compromisos",
+        "description": "Tus archivos se cifran de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres el único que tiene acceso a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por eso nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, salvo tus datos."
+      },
+      {
+        "title": "Verificado de forma independiente",
+        "description": "Cumplimos totalmente con GDPR y somos 100% seguros, pero no te fíes de nuestra palabra. Internxt ha sido auditada y verificada de forma independiente por la empresa líder en Europa en pruebas de penetración, Securitum."
       }
-    },
-    "createAccount": {
-      "title": {
-        "line1": "Consigue hasta 10GB",
-        "line2": "de espacio encriptado",
-        "line3": "con tu cuenta gratuita."
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "¡Consigue hasta 10 GB gratis!",
+    "description": "Crea tu cuenta gratuita ahora y tendrás acceso completo a nuestro conjunto de servicios de privacidad en línea.",
+    "cta": "Comenzar"
+  },
+  "TestimonialsSection": {
+    "title": "Opiniones de nuestros usuarios",
+    "cards": [
+      {
+        "name": "Eva W.",
+        "enterprise": "Periodista en FixThePhoto.com",
+        "review": "Internxt es un servicio de almacenamiento en la nube para clientes preocupados por su presupuesto. Cuenta con una interfaz optimizada y un equipo de asistencia fiable, lo que lo convierte en una gran opción para quienes necesitan almacenar sus archivos de forma segura."
       },
-      "description": {
-        "line1": "Crea tu cuenta y empieza a sincronizar",
-        "line2": "tus archivos de forma privada y segura."
+      {
+        "name": "Cristian M.",
+        "enterprise": "Reseña de GetApp",
+        "review": "La mejor alternativa cifrada a Dropbox. En general: necesitábamos una alternativa que nos permitiera almacenar archivos de clientes y trabajo (archivos de redes sociales) y, como Internxt es compatible con GDPR, ¡se ajustaba perfectamente a nosotros!"
       },
-      "cta": "Crear cuenta"
-    },
-    "whyPeopleLoveInternxt": {
-      "title": "¿Por qué a la gente le encanta Internxt?",
-      "cards": [
-        {
-          "quote": "Internxt ha estado trabajando silenciosamente en un ambicioso plan para hacer accesible de forma masiva el almacenamiento descentralizado en la nube",
-          "author": "Natasha Lomas",
-          "company": "TechCrunch"
-        },
-        {
-          "quote": "Es más segura y privada que las aplicaciones basadas en la nube como las que ofrecen gigantes tecnológicos como Google",
-          "author": "Alison Coleman",
-          "company": "Forbes"
-        },
-        {
-          "quote": "Los grandes gigantes de internet tiene una contrapartida: el aprovechamiento de los datos para publicidad. [...] Internxt combate eso ofreciendo una nube encriptada y distribuida",
-          "author": "Miguel Ángel Moreno",
-          "company": "Business Insider"
-        }
-      ]
-    }
+      {
+        "name": "Josep C.",
+        "enterprise": "Reseña de Trustpilot",
+        "review": "Llevo varios años utilizando Google Drive, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me pasé a Internxt."
+      },
+      {
+        "name": "Pat G.",
+        "enterprise": "Reseña de Capterra",
+        "review": "¡Estoy almacenando archivos para una organización sin ánimo de lucro y trabajar con Internxt fue maravilloso! Esta unidad fue muy fácil de usar. No tuve que hacer nada más que cargar y descargar. El programa y la unidad hicieron el resto."
+      },
+      {
+        "name": "Luca C.",
+        "enterprise": "Reseña de GetApp",
+        "review": "¡El futuro del almacenamiento en la nube! Me encanta el hecho de que por fin tengamos un servicio de almacenamiento en la nube cifrado y seguro asequible que además tiene un aspecto muy chulo y es fácil de usar."
+      },
+      {
+        "name": "Binet S.",
+        "enterprise": "Reseña de Trustpilot",
+        "review": "Rápido, fiable y barato: ¡los mejores componentes de cualquier producto! ¡El amplio espacio de almacenamiento en la nube gratis es definitivamente apreciado! Tengo espacio suficiente para guardar todas mis fotos y archivos. También me gusta lo sencillo que es compartir archivos."
+      }
+    ]
   },
   "FaqSection": {
     "title": "¿Preguntas? Tenemos respuestas",
@@ -113,7 +148,30 @@
         "answer": [
           "Si comparas Internxt con todos los demás servicios, descubrirás que Internxt es la alternativa más privada y segura a Google Drive, Dropbox y otros servicios populares."
         ]
+      },
+      {
+        "question": "¿Cuál es el servicio de almacenamiento en la nube más privado?",
+        "answer": [
+          "Internxt no tiene forma de acceder a la información almacenada y es el servicio de nube más privado en el mercado actual. Mientras que muchos servicios en la nube ofrecen funciones avanzadas de seguridad, muy pocos no tienen acceso a tu información."
+        ]
+      },
+      {
+        "question": "¿Qué es un servicio de almacenamiento en la nube de código abierto?",
+        "answer": [
+          "Un [servicio de almacenamiento en la nube de código abierto](https://internxt.com/es/open-source) difiere de un servicio tradicional en que todo el código fuente del servicio es público. Esto permite que las personas verifiquen de manera independiente que el servicio hace lo que dice. Internxt es completamente de código abierto y nuestro código se publica de forma abierta en GitHub."
+        ]
+      },
+      {
+        "question": "¿Qué proveedores de servicios en la nube tienen acceso a tus datos almacenados?",
+        "answer": [
+          "Es difícil saber con certeza qué empresas no acceden a tus datos porque muy pocas mantienen su código fuente en privado, pero casi ninguna afirma nunca acceder a tus datos. Internxt, por otro lado, nunca accederá a tus datos, y esa afirmación se puede verificar auditando nuestro código fuente."
+        ]
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Tu seguridad al alcance de un clic",
+    "description": "Protege tus datos personales con los servicios de privacidad de Internxt.",
+    "cta": "Crear cuenta"
   }
 }
