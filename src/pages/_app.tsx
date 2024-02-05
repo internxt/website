@@ -77,8 +77,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
-        <WheelBanner />
-        <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div>
+        {/* <WheelBanner /> */}
+        {/* <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div> */}
         {hideIntercomButton ? null : <Intercom />}
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
