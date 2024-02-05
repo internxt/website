@@ -32,7 +32,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState<ProductsProps>();
-  const coupon = 'MgGBG5o5';
+  const coupon = 'H4cLmbx4';
   const [currency, setCurrency] = useState({
     symbol: '€',
     value: 1,
