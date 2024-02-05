@@ -6,6 +6,8 @@ import { checkIfUserHasSubscription, getUser } from '../../lib/utils';
 import { UserData } from '../../../lib/types/types';
 
 const JWT_SECRET = process.env.JWT_DRIVE_SERVER;
+const GATEWAY_USER = process.env.NEXT_BRIDGE_GATEWAY_USERNAME;
+const GATEWAY_PASS = process.env.NEXT_BRIDGE_GATEWAY_PASS;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
@@ -61,6 +63,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err) {
     const error = new Error(err);
 
-    return res.status(500).json(error.message);
+    return res.status(500).json({
+      message: error.message,
+      // API_URL,
+      // NEW_API_URL,
+      GATEWAY_USER,
+      GATEWAY_PASS,
+    });
   }
 }

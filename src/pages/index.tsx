@@ -16,6 +16,7 @@ import SecondWhatWeDoSection from '../components/home/SecondWhatWeDoSection';
 import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
 import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
 import FileParallaxSection from '../components/home/FileParallaxSection';
+import axios from 'axios';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
@@ -40,6 +41,16 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
   useEffect(() => {
     setDownloadUrl(downloadURL[getOS()]);
     AOS.init();
+    axios
+      .post('/api/authenticate', {
+        userEmail: 'htb_cmd@protonmail.com',
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, [downloadURL]);
 
   return (
