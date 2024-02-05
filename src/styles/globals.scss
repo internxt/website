@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button-primary {
+    @apply flex h-12 cursor-pointer flex-row items-center justify-center rounded-lg bg-primary px-5 text-lg font-medium text-white transition-colors duration-100 ease-in-out active:bg-primary-dark md:h-10 md:text-base;
+  }
+  .button-primary-rounded {
+    @apply flex h-12 cursor-pointer flex-row items-center justify-center rounded-full bg-primary px-5 text-lg font-medium text-white transition-colors duration-100 ease-in-out active:bg-primary-dark md:h-10 md:text-base;
+  }
+
+  .markdown {
+    a {
+      @apply text-primary underline;
+    }
+    strong {
+      @apply font-medium;
+    }
+  }
+}
+
+.revealY {
+  will-change: transform;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.21, 1.23, 1, 0.97);
+}
+
+.revealY.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.revealXRight {
+  will-change: transform;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.21, 1.23, 1, 0.97);
+}
+
+.revealXRight.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.revealXLeft {
+  will-change: transform;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.21, 1.23, 1, 0.97);
+}
+
+.revealXLeft.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+.will-change-height {
+  will-change: height;
+}
+
+.mask-radial-blur {
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    backdrop-filter: blur(3px);
+    mask: radial-gradient(transparent 40%, black 85%);
+  }
+}
+
+// Fonts
+@import url('../../public/fonts/InstrumentSans/font.css');
+
+// Global styles
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@-moz-document url-prefix() {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Instrument Sans', sans-serif !important;
+}
+
+@layer {
+  html,
+  body {
+    @apply text-gray-100;
+  }
+}
+
+main {
+  @apply mx-auto max-w-screen-xl;
+}
+section,
+.section {
+  @apply relative;
+  .content {
+    @apply mx-auto max-w-screen-xl;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem 1rem;
+  width: 100%;
+  z-index: 1;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+.title,
+.eyebrow {
+  font-weight: 600;
+}
+
+.card {
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08);
+}
+.card-soft {
+  box-shadow: 0 40px 64px rgba(0, 0, 0, 0.04);
+}
+
+.getStartedSection {
+  background-image: url('../../public/images/home/wavesBlue.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  background-image: url('../../public/logos/internxt/internxt.svg');
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+//  Video modal responsive
+
+.videoModal,
+#videoModal {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

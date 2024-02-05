@@ -1,0 +1,177 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "云存储",
+      "line2": "安全比较"
+    },
+    "description": "比较所有安全选项，选择合适的云存储解决方案。",
+    "cta": "免费获得10GB",
+    "table": {
+      "sections": {
+        "encryption_and_security": {
+          "name": "加密与安全",
+          "features": {
+            "encryption_at_rest_and_in_transit": "静态和传输时的加密",
+            "end_to_end_encrypted_storage": "端到端加密存储",
+            "end_to_end_encrypted_file_sharing": "端到端加密文件共享",
+            "zero_knowledge_encryption": "零知识加密",
+            "two_factor_authentication": "两步验证",
+            "gdpr_compliant_synchronization": "符合GDPR的同步",
+            "aes_256_encryption": "AES-256加密",
+            "zero_knowledge_access_from_browsers": "浏览器零知识访问",
+            "open_source": "开源",
+            "no_third_party_file_access": "无第三方文件访问"
+          }
+        },
+        "storage_and_file_management": {
+          "name": "访问和文件管理",
+          "features": {
+            "sync_any_folders": "同步任何文件夹",
+            "web_app": "Web应用",
+            "windows_desktop_app": "Windows桌面应用",
+            "mac_desktop_app": "Mac桌面应用",
+            "linux_desktop_app": "Linux桌面应用",
+            "android_app": "Android应用",
+            "ios_app": "iOS应用",
+            "availability": "在所有设备上都可用",
+            "backup_folders_and_files": "备份文件夹和文件",
+            "unlimited_bandwidth": "无限带宽"
+          }
+        },
+        "controlled_file_sharing": {
+          "name": "文件共享",
+          "features": {
+            "password_protection_for_links": "链接密码保护",
+            "download_limits_for_links": "链接下载限制",
+            "file_requests": "文件请求"
+          }
+        },
+        "pricing": {
+          "name": "定价",
+          "features": {
+            "free_account_storage": "免费账户存储",
+            "monthly_base_pricing": "月度基础定价",
+            "max_storage_amount": "最大存储量",
+            "lifetime_plans": "终身计划"
+          }
+        },
+        "deployment": {
+          "name": "部署和支持",
+          "features": {
+            "business_plans": "商业计划",
+            "support_center": "支持中心",
+            "live_chat_support": "实时聊天支持"
+          }
+        }
+      },
+      "drag": {
+        "line1": "横向拖动",
+        "line2": "显示竞争对手"
+      },
+      "startNow": "立即注册"
+    }
+  },
+  "FeatureSection": {
+    "title": "为什么选择Internxt？",
+    "description": "Internxt创建了私人和安全的云服务，旨在让你，用户，重新负责你的数据。保护你的文件和你的基本隐私权，所有Internxt的服务都是从基础开始建立的，具有无可比拟的安全保障。",
+    "cta": " 创建一个免费账户"
+  },
+  "InfoSection": {
+    "title": "安全的云存储，拥有无与伦比的隐私",
+    "description": "是什么让 Internxt 如此特别？ 我们是一个紧密团结的专业团队，完全致力于保护您的在线安全。 我们所做的一切和做出的每一个决定都以保护您的数据不被利用为中心。",
+    "cta": "有关Internxt的更多信息",
+    "cards": [
+      {
+        "title": "为隐私而生",
+        "description": "我们不存储密码或用户数据，你的所有数据在传输途中和闲置时都被加密。Internxt让你完全控制你的文件。你的数据是你的业务。保护它是我们的事。"
+      },
+      {
+        "title": "不妥协的安全",
+        "description": "你的文件在离开你的设备之前就已经被分割和端到端加密了。由于采用了零知识架构的AES-256加密，你绝对是唯一能够访问你的数据的人。"
+      },
+      {
+        "title": "开源和透明化",
+        "description": "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。"
+      },
+      {
+        "title": "经独立验证",
+        "description": "我们完全符合GDPR标准和100%安全。行动胜于语言，Internxt已被欧洲领先的渗透测试公司Securitum独立审计和验证。"
+      }
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "注册后可免费获得高达10GB的容量",
+    "description": "现在就创建你的免费账户，并获得对我们这套在线隐私服务的完全访问权。",
+    "cta": "开始吧"
+  },
+  "TestimonialsSection": {
+    "title": "来自我们用户的诚实的评价",
+    "cards": [
+      {
+        "name": "Eva W.",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+      },
+      {
+        "name": "Josep C.",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+      },
+      {
+        "name": "Pat G.",
+        "enterprise": "Review from Capterra",
+        "review": "I am storing files for a non-profit organization and working with Internxt was marvelous! This drive was very easy to use. I didn't have to do anything but upload and download. The program and drive did the rest!"
+      },
+      {
+        "name": "Luca C.",
+        "enterprise": "Review from GetApp",
+        "review": "The future of cloud storage! Love the fact that finally we have an affordable encrypted and secure cloud storage software that also has a very cool look and is user-friendly."
+      },
+      {
+        "name": "Binet S.",
+        "enterprise": "Review from Trustpilot",
+        "review": "Fast, reliable, and inexpensive - best components of any product! The ample storage space is definitely appreciated! I have enough of space to save all of my photos and files. I also like how simple it is to share files."
+      }
+    ]
+  },
+
+  "FaqSection": {
+    "title": "有问题吗？我们有答案",
+    "faq": [
+      {
+        "question": "什么是最安全的云存储服务？",
+        "answer": [
+          "如果您将Internxt与所有其他服务进行比较，您会发现Internxt是与Google Drive、Dropbox和其他流行服务相比最为私密和安全的选择。"
+        ]
+      },
+      {
+        "question": "哪个云存储服务最为私密？",
+        "answer": [
+          "Internxt无法访问您存储的信息，是市场上最为私密的云服务。尽管许多云服务提供先进的安全功能，但很少有它们无法访问您的信息。"
+        ]
+      },
+      {
+        "question": "什么是开源云存储服务？",
+        "answer": [
+          "[开源云服务](https://internxt.com/zh/open-source)与传统服务不同之处在于该服务的所有源代码都是公开的。这使个人能够独立验证服务是否履行其承诺。Internxt是完全开源的，我们的代码公开发布在GitHub上。"
+        ]
+      },
+      {
+        "question": "哪些云服务提供商可以访问您存储的数据？",
+        "answer": [
+          "很难确定哪些公司确实无法访问您的数据，因为很少有公司保持其源代码的私密性，但几乎没有公司声称曾经访问过您的数据。另一方面，Internxt绝不会访问您的数据，这一声明可以通过审计我们的源代码来验证。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "安全只需点击一下",
+    "description": "使用 Internxt 的隐私套件保护您的个人数据。",
+    "cta": "创建账号"
+  }
+}
