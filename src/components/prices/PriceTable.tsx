@@ -32,7 +32,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState<ProductsProps>();
-  const coupon = 'H4cLmbx4';
+  const coupon = '9lsCo1eq';
   const [currency, setCurrency] = useState({
     symbol: '€',
     value: 1,
@@ -182,10 +182,11 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price}
+                        price={parseFloat((Math.floor(parseFloat(product.price) * 50) / 100).toFixed(2))}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
+                        priceBefore={product.price}
                         lang={lang}
                         country={currency.symbol}
                         coupon={coupon}
