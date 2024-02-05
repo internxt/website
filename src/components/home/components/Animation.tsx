@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 const Animation = () => {
   // Header animation
@@ -170,7 +170,7 @@ const Animation = () => {
       </div>
 
       {/* Desktop view reduced */}
-      <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex lg:-mr-7 xl:ml-20 xl:hidden">
+      {/* <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex lg:-mr-7 xl:ml-20 xl:hidden">
         <Image
           loading="eager"
           className="object-contain"
@@ -181,7 +181,7 @@ const Animation = () => {
           draggable="false"
           alt="desktop, laptop and phone with Internxt app"
         />
-      </div>
+      </div> */}
     </>
   );
 };

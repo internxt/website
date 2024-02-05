@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { AppProps } from 'next/app';
 import '../styles/globals.scss';
 import Script from 'next/script';
@@ -6,8 +6,10 @@ import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
-import BottomBanner from '../components/banners/BottomBanner';
 import ShowSnackbar from '../components/Snackbar';
+import WheelBanner from '../components/banners/WheelBanner';
+import BottomBanner from '../components/banners/BottomBanner';
+import TopBannerHomePage from '../components/banners/TopBannerHomePage';
 
 const excludedPaths = [
   '/lifetime',
@@ -40,7 +42,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
-      <GlobalUIManager initialDialogs={[{ key: GlobalDialog.Auth, isOpen: false }]}>
+      <GlobalUIManager
+        initialDialogs={[
+          { key: GlobalDialog.Auth, isOpen: false },
+          {
+            key: GlobalDialog.Wheel,
+            isOpen: false,
+          },
+        ]}
+      >
         <>
           <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
           {lang !== 'es' && (
@@ -67,7 +77,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
-        {/* <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div> */}
+        <WheelBanner />
+        <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div>
         {hideIntercomButton ? null : <Intercom />}
         {/* Show snackbar in all pages */}
         <ShowSnackbar />

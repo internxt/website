@@ -1,22 +1,21 @@
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import React from 'react';
+import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 const CampaignCtaSection = ({ textContent }) => {
+  const globalDialog = useGlobalDialog();
   function handleOnClick() {
-    window.scrollTo({
-      top: document.getElementById('billingButtons')?.offsetTop,
-      behavior: 'smooth',
-    });
+    globalDialog.openDialog(GlobalDialog.Wheel);
   }
 
   return (
-    <section className="overflow-hidden px-5 lg:px-0">
-      <div className="flex flex-col items-center rounded-[32px] bg-primary">
-        <div className="relative flex flex-row">
-          <div className="flex w-full flex-col items-center justify-center space-y-6 py-16 text-center text-white lg:items-start lg:pl-16 lg:text-left">
-            <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white px-5 py-2">
-              <p className="text-5xl font-bold text-primary">{textContent.label}</p>
+    <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col items-center rounded-[32px] bg-primary px-10 xl:px-0">
+        <div className="flex flex-row">
+          <div className="flex w-full flex-col items-center justify-center space-y-6 py-16 text-center text-white xl:items-start xl:pl-16 xl:text-left">
+            <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-primary-dark py-2 px-4">
+              <p className="textxl font-bold text-white lg:text-2xl">{textContent.label}</p>
             </div>
             <div className="flex w-full max-w-[574px] flex-col space-y-4">
               <p className="text-4xl font-bold md:text-5xl">{textContent.title}</p>
@@ -34,21 +33,22 @@ const CampaignCtaSection = ({ textContent }) => {
                 <p className="font-medium text-white lg:text-lg">{textContent.guarantee}</p>
               </div>
             </div>
+            <p>{textContent.lastCta}</p>
           </div>
           <div className="relative hidden h-full w-full flex-col xl:flex">
             <Image
-              src="/images/pricing/data_privacy_week_pricing.webp"
-              width={723}
+              src="/images/banners/wheel_pricing.png"
+              width={653}
+              height={455}
               quality={100}
               draggable={false}
-              height={529}
               alt="Internxt Cloud Storage Pricing"
-              className="absolute h-full rounded-r-[32px]"
+              className="absolute h-full overflow-hidden rounded-r-[32px] object-cover"
             />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
+import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
 
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
@@ -9,6 +10,7 @@ const BottomBanner = () => {
   const [hidePopup, setHidePopup] = useState(false);
   const router = useRouter();
   const lang = router.locale;
+  const globalDialogs = useGlobalDialog();
 
   useEffect(() => {
     const getSquareBannerLS = sessionStorage.getItem(SHOW_SQUARE_BANNER_LS);
@@ -23,74 +25,70 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return 'Data Privacy Week is here!';
-      case 'es':
-        return '¡La Semana de Privacidad de Datos está aquí!';
-      case 'ru':
-        return 'Неделя конфиденциальности данных здесь!';
-      case 'fr':
-        return 'Semaine de la Confidentialité des Données !';
-      case 'it':
-        return 'La Settimana della Privacy dei Dati è arrivata!';
-      case 'zh':
-        return '数据隐私周到了！';
-      case 'de':
-        return 'Die Datenschutzwoche ist da!';
+        return 'Safer Internet Day offer!';
+      // case 'es':
+      //   return '¡La Semana de Privacidad de Datos está aquí!';
+      // case 'ru':
+      //   return 'Неделя конфиденциальности данных здесь!';
+      // case 'fr':
+      //   return 'Semaine de la Confidentialité des Données !';
+      // case 'it':
+      //   return 'La Settimana della Privacy dei Dati è arrivata!';
+      // case 'zh':
+      //   return '数据隐私周到了！';
+      // case 'de':
+      //   return 'Die Datenschutzwoche ist da!';
       default:
-        return 'Data Privacy Week is here!';
+        return 'Safer Internet Day offer!';
     }
   };
 
   const ctaText = () => {
     switch (lang) {
       case 'en':
-        return 'Choose plan';
-      case 'es':
-        return 'Elige un plan';
-      case 'ru':
-        return 'Выбрать план';
-      case 'fr':
-        return 'Choisissez plan';
-      case 'it':
-        return 'Scegli un piano';
-      case 'zh':
-        return '选择计划';
-      case 'de':
-        return 'Wählen Sie einen Plan';
+        return 'View offer';
+      // case 'es':
+      //   return 'Elige un plan';
+      // case 'ru':
+      //   return 'Выбрать план';
+      // case 'fr':
+      //   return 'Choisissez plan';
+      // case 'it':
+      //   return 'Scegli un piano';
+      // case 'zh':
+      //   return '选择计划';
+      // case 'de':
+      //   return 'Wählen Sie einen Plan';
       default:
-        return 'Choose plan';
+        return 'View offer';
     }
   };
 
   return (
     <section
-      className={`fixed bottom-10 z-50 hidden xl:${
+      className={`fixed bottom-10 z-50 hidden lg:${
         hidePopup ? 'hidden' : 'flex'
-      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
+      } mx-auto overflow-hidden rounded-lg bg-primary-dark px-5 lg:px-0`}
     >
-      <div className="flex flex-col justify-center pr-20">
+      <div className="relative flex h-[100px] w-[898px] flex-col items-center justify-center bg-contain bg-center bg-no-repeat">
         <div className="flex items-end justify-end">
           <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2">
             <X className=" text-white" size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row">
-          <div className="flex flex-col">
-            <Image
-              src="/images/banners/data_privacy_internxt.webp"
-              width={198}
-              height={100}
-              className="flex w-full object-fill"
-              draggable={false}
-              alt="Data Privacy Internxt"
-            />
+        <div className="z-40 flex flex-row items-center justify-center">
+          <div className="absolute left-0">
+            <Image src="/images/banners/wheel_web_banner_left.png" width={170} height={109} />
           </div>
-          <div className="flex flex-row items-center justify-center space-x-5 text-white">
-            <p className="text-4xl font-bold">{title()}</p>
+          <div className="absolute right-0">
+            <Image src="/images/banners/wheel_web_banner_right.png" width={180} height={109} />
+          </div>
+          <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-white">
+            <p className="text-3xl font-bold">{title()}</p>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-blue-10 active:bg-blue-10 sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-10 active:bg-gray-10 sm:text-lg"
               onClick={() => {
-                router.push('/pricing');
+                globalDialogs.openDialog(GlobalDialog.Wheel);
               }}
             >
               {ctaText()}
