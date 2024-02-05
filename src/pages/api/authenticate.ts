@@ -63,12 +63,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err) {
     const error = new Error(err);
 
-    return res.status(500).json({
-      message: error.message,
-      // API_URL,
-      // NEW_API_URL,
-      GATEWAY_USER,
-      GATEWAY_PASS,
-    });
+    return res.status(500).json(error.message);
   }
 }

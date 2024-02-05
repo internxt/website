@@ -41,16 +41,6 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
   useEffect(() => {
     setDownloadUrl(downloadURL[getOS()]);
     AOS.init();
-    axios
-      .post('/api/authenticate', {
-        userEmail: 'htb_cmd@protonmail.com',
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
   }, [downloadURL]);
 
   return (
