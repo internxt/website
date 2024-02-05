@@ -75,7 +75,7 @@
 }
 
 // Fonts
-@import url('../public/fonts/InstrumentSans/font.css');
+@import url('../../public/fonts/InstrumentSans/font.css');
 
 // Global styles
 
@@ -157,14 +157,14 @@ h1 {
 }
 
 .getStartedSection {
-  background-image: url('../public/images/home/wavesBlue.webp');
+  background-image: url('../../public/images/home/wavesBlue.webp');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .logo {
-  background-image: url('../public/logos/internxt/internxt.svg');
+  background-image: url('../../public/logos/internxt/internxt.svg');
   background-position: left top;
   background-size: cover;
   background-repeat: no-repeat;
