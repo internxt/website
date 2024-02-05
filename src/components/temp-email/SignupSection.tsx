@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '/components/techradar-discount/Background.module.scss';
+import styles from '../../components/techradar-discount/Background.module.scss';
 
 const SignupSection = ({ textContent }) => (
   <section className="overflow-hidden">

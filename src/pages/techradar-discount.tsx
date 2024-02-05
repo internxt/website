@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import cookies from '../lib/cookies';
 import Layout from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
@@ -6,7 +6,6 @@ import HeroSection from '../components/techradar-discount/HeroSection';
 import PaymentsSection from '../components/techradar-discount/PaymentsSection';
 import InfoSection from '../components/techradar-discount/InfoSection';
 import Footer from '../components/layout/Footer';
-import axios, { AxiosRequestConfig } from 'axios';
 
 const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'techradar-discount');
