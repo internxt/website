@@ -1,7 +1,7 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 import { Transition } from '@headlessui/react';
-import * as anim from '../../public/js/anim';
+import * as anim from '../../../public/js/anim';
 
 const NgoCard = ({ id, name, short, description }) => {
   // Constant to avoid unnecessary re-renders
