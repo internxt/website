@@ -19,6 +19,7 @@ export enum CouponType {
   Wheel30 = 'WHEEL30_COUPON',
   Wheel45 = 'WHEEL45_COUPON',
   Wheel50 = 'WHEEL50_COUPON',
+  SafeInternet = 'MgGBG5o5',
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {

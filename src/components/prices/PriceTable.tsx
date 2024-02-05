@@ -10,6 +10,7 @@ import { currencyService } from '../services/currencyService';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import FreePlanCard from './FreePlanCard';
 import Header from '../shared/Header';
+import { CouponType } from '../../pages/api/stripe/get_coupons';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -31,6 +32,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState<ProductsProps>();
+  const [coupon, setCoupon] = useState<any>();
   const [currency, setCurrency] = useState({
     symbol: '€',
     value: 1,
@@ -66,6 +68,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           symbol: '€',
           value: 1,
         });
+        console.error(err);
+      });
+
+    stripeService
+      .getCoupon(CouponType.SafeInternet)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
         console.error(err);
       });
   }, []);
@@ -186,6 +197,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         country={currency.symbol}
+                        coupon={coupon}
                         currency={currencyValue}
                       />
                     )}
