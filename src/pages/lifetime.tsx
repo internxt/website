@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
 import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
@@ -9,8 +7,6 @@ import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
-
-import { currencyService } from '@/components/services/currency.service';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');

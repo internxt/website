@@ -25,7 +25,7 @@ const reducer = (state: any, action: ActionType) => {
   }
 };
 
-function useStripeAndCurrency(couponCode?: CouponType): {
+function useStripeProductsAndCurrency(couponCode?: CouponType): {
   products: ProductsProps | undefined;
   loadingCards: boolean;
   currency: { symbol: string; value: number };
@@ -80,4 +80,4 @@ function useStripeAndCurrency(couponCode?: CouponType): {
   return { ...state };
 }
 
-export default useStripeAndCurrency;
+export default useStripeProductsAndCurrency;

@@ -1,10 +1,10 @@
 import React from 'react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from './PriceCard';
-import useStripeAndCurrency from '@/hooks/useProducts';
+import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
 
 const PaymentsSection = ({ textContent }) => {
-  const { products, currency, loadingCards } = useStripeAndCurrency();
+  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
 
   return (
     <section id="priceTable" className="">

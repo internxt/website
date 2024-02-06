@@ -8,7 +8,7 @@ import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
-import useStripeAndCurrency from '@/hooks/useProducts';
+import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -26,7 +26,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-  const { products, currency, loadingCards } = useStripeAndCurrency();
+  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
 
   const banner = require('@/assets/lang/en/banners.json');
   const coupon = '9lsCo1eq';

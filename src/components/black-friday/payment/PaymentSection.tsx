@@ -4,10 +4,10 @@ import PriceCard from '@/components/black-friday/payment/PriceCard';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
-import useStripeAndCurrency from '@/hooks/useProducts';
+import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
 
 const PaymentSection = ({ textContent }) => {
-  const { products, currency, loadingCards } = useStripeAndCurrency();
+  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
 
   return (
     <section id="priceTable" className="overflow-hidden bg-[#111111]">

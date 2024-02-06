@@ -2,11 +2,11 @@ import React from 'react';
 import PriceCard from './PriceCard';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import useStripeAndCurrency from '@/hooks/useProducts';
+import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
 
 const PriceTable = ({ lang }) => {
-  const { products, currency, loadingCards } = useStripeAndCurrency(CouponType.LifetimeExclusive);
+  const { products, currency, coupon, loadingCards } = useStripeProductsAndCurrency(CouponType.LifetimeExclusive);
 
   return (
     <section className="overflow-hidden">
@@ -52,6 +52,7 @@ const PriceTable = ({ lang }) => {
                         .split('.')[0]
                     }
                     currency={currency.symbol}
+                    coupon={coupon ?? undefined}
                   />
                 );
               })}
