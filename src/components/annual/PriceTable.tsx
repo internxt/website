@@ -6,7 +6,7 @@ import { ProductsProps, stripeService } from '@/components/services/stripeServic
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { currencyService } from '@/components/services/currencyService';
 
-export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
+export default function PriceTable({ lang }: { lang: string }) {
   const [products, setProducts] = useState<ProductsProps>();
   const [loadingCards, setLoadingCards] = useState(true);
   const [currency, setCurrency] = useState({
