@@ -3,7 +3,7 @@ import { AxiosError } from 'axios';
 
 import jwt from 'jsonwebtoken';
 import { checkIfUserHasSubscription, getUser } from '../../lib/utils';
-import { UserData } from '../../../lib/types/types';
+import { UserData } from '../../lib/types/types';
 
 const JWT_SECRET = process.env.JWT_DRIVE_SERVER;
 const GATEWAY_USER = process.env.NEXT_BRIDGE_GATEWAY_USERNAME;
