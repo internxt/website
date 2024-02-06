@@ -14,19 +14,6 @@ import { currencyService } from '@/components/services/currency.service';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [currency, setCurrency] = useState({
-    symbol: '€',
-    value: 1,
-  });
-
-  useEffect(() => {
-    currencyService.filterCurrencyByCountry().then((res) => {
-      setCurrency({
-        symbol: res.symbol,
-        value: res.value,
-      });
-    });
-  }, []);
 
   return (
     <Layout
@@ -40,7 +27,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={currency} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
