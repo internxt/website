@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from "next/legacy/image";
-import Header from '../shared/Header';
+import Image from 'next/legacy/image';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20">

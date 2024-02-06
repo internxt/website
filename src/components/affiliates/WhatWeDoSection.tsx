@@ -1,6 +1,6 @@
 import { ClockCountdown, Devices, FolderLock, ShareNetwork } from '@phosphor-icons/react';
-import Image from "next/legacy/image";
-import RevealY from '../components/RevealY';
+import Image from 'next/legacy/image';
+import RevealY from '@/components/components/RevealY';
 
 const WhatWeDoSection = ({ textContent }) => {
   const cards = [

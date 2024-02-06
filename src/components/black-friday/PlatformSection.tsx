@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './BF-HeroSection.module.scss';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 const PlatformSection = ({ textContent }) => {
   return (

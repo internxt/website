@@ -1,10 +1,9 @@
-import Link from 'next/link';
 import { Alarm, CircleWavyCheck } from '@phosphor-icons/react';
 import React from 'react';
-import styles from './BF-HeroSection.module.scss';
-import ButtonDeal from './components/ButtonDeal';
-import Countdown from '../components/Countdown';
-import Header from '../shared/Header';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import ButtonDeal from '@/components/black-friday/components/ButtonDeal';
+import Countdown from '@/components/components/Countdown';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent, lang }) => {
   const features = [

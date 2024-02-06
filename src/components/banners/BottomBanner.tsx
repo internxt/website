@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import Image from 'next/legacy/image';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 

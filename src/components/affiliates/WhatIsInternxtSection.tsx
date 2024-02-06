@@ -1,4 +1,4 @@
-import RevealY from '../components/RevealY';
+import RevealY from '@/components/components/RevealY';
 
 const WhatIsInternxtSection = ({ textContent }) => {
   return (

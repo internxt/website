@@ -1,17 +1,17 @@
 import Script from 'next/script';
 import React from 'react';
 
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import HeroSection from '../components/privacy-directory/HeroSection';
-import WikiSection from '../components/privacy-directory/WikiSection';
-import SupportNGOsSection from '../components/privacy-directory/SupportNGOsSection';
-import Footer from '../components/layout/Footer';
-import FAQSection from '../components/shared/FaqSection';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/privacy-directory/HeroSection';
+import WikiSection from '@/components/privacy-directory/WikiSection';
+import SupportNGOsSection from '@/components/privacy-directory/SupportNGOsSection';
+import Footer from '@/components/layout/Footer';
+import FAQSection from '@/components/shared/FaqSection';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import HeroSection2 from '../components/privacy-directory/HeroSection2';
-import CtaSection from '../components/shared/CtaSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import HeroSection2 from '@/components/privacy-directory/HeroSection2';
+import CtaSection from '@/components/shared/CtaSection';
 
 const CTA_URL_REDIRECT = 'https://drive.internxt.com/new';
 

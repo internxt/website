@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './BF-HeroSection.module.scss';
-import ButtonDeal from './components/ButtonDeal';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import ButtonDeal from '@/components/black-friday/components/ButtonDeal';
 
 const FooterSection = ({ textContent, lang }) => {
   return (

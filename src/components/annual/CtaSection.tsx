@@ -1,5 +1,4 @@
 import React from 'react';
-import { goToSignUpURL } from '../../lib/auth';
 
 const CtaSection = ({ textContent }) => {
   return (

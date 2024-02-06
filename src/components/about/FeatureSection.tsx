@@ -1,16 +1,8 @@
-import {
-  CaretLeft,
-  CaretRight,
-  HandHeart,
-  Lightbulb,
-  RocketLaunch,
-  ShieldStar,
-  UsersThree,
-} from '@phosphor-icons/react';
-import Image from "next/legacy/image";
-import { Fragment, useEffect, useState } from 'react';
+import { CaretRight, HandHeart, Lightbulb, RocketLaunch, ShieldStar, UsersThree } from '@phosphor-icons/react';
+import Image from 'next/legacy/image';
+import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import RevealX from '../components/RevealX';
+import RevealX from '@/components/components/RevealX';
 
 const FeatureSection = ({ textContent }) => {
   const [cardIndex, setCardIndex] = useState(0);

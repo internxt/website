@@ -1,10 +1,10 @@
-import TextInput from '../components/TextInput';
-import PasswordInput from '../components/PasswordInput';
-import PrimaryButton from '../components/PrimaryButton';
-import { signup } from '../../lib/auth';
+import TextInput from '@/components/components/TextInput';
+import PasswordInput from '@/components/components/PasswordInput';
+import PrimaryButton from '@/components/components/PrimaryButton';
+import { signup } from '@/lib/auth';
 import { WarningCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
-import testPasswordStrength from './testPasswordStrength';
+import testPasswordStrength from '@/components/auth/testPasswordStrength';
 
 interface SignUpInlineProps {
   textContent: any;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/legacy/image';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent }) => {
   return (

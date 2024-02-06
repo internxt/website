@@ -1,5 +1,5 @@
-import Image from "next/legacy/image";
-import RevealX from '../components/RevealX';
+import Image from 'next/legacy/image';
+import RevealX from '@/components/components/RevealX';
 
 const WhatWeDoSection = ({ textContent }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from 'next/legacy/image';
-import RevealY from '../components/RevealY';
+
+import RevealY from '@/components/components/RevealY';
 
 const FeatureSection = ({ textContent }) => (
   <section className="">
