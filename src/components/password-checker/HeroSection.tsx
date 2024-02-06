@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
-import pwnedpasswords from '../../lib/checker';
-import Header from '../shared/Header';
+import pwnedpasswords from '@/lib/checker';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
@@ -14,11 +14,6 @@ const HeroSection = ({ textContent }) => {
   const [crackScore, setCrackScore] = useState(0);
   const [crackTime, setCrackTime] = useState('-');
   const [crackTimeInSeconds, setCrackTimeInSeconds] = useState(0);
-
-  // useEffect(() => {
-  //   // Autofocus password input
-  //   document.getElementById('input').focus();
-  // });
 
   const toggleShowPassword = () => {
     setInputTypePassword(!inputTypePassword);

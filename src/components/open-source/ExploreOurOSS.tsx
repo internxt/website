@@ -1,4 +1,4 @@
-import DownloadComponent from '../shared/DownloadComponent';
+import DownloadComponent from '@/components/shared/DownloadComponent';
 
 const ExploreOurOSS = ({ textContent, download }) => {
   const description = textContent.description.split('GitHub');

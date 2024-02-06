@@ -4,11 +4,11 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { checkout, openAuthDialog } from '../../lib/auth';
+import { checkout } from '@/lib/auth';
 
 const NormalPriceCard = ({ planType, storage, price, billingFrequency, cta, country, popular, lang }) => {
   const totalBilled = Math.abs(price * billingFrequency).toFixed(2);
-  const contentText = require(`../../assets/lang/en/priceCard.json`);
+  const contentText = require(`@/assets/lang/en/priceCard.json`);
   const [convertedPrice, setConvertedPrice] = useState<number>(price);
   useEffect(() => {
     if (country !== '€') {

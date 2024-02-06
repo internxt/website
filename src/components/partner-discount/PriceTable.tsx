@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
-import PriceCard from '../partner-discount/PriceCard';
-import { ProductsProps, stripeService } from '../services/stripeService';
-import CardSkeleton from '../components/CardSkeleton';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { currencyService } from '../services/currencyService';
+import PriceCard from '@/components/partner-discount/PriceCard';
+import { ProductsProps, stripeService } from '@/components/services/stripeService';
+import CardSkeleton from '@/components/components/CardSkeleton';
+import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { currencyService } from '@/components/services/currencyService';
 
 export default function PriceTable({ lang }: { lang: string }) {
   const [products, setProducts] = useState<ProductsProps>();

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PriceCard from './PriceCard';
-import { stripeService } from '../services/stripeService';
+import { stripeService } from '@/components/services/stripeService';
 import { Transition } from '@headlessui/react';
-import CardSkeleton from '../components/CardSkeleton';
+import CardSkeleton from '@/components/components/CardSkeleton';
 
 const PriceTable = ({ lang, country }) => {
   const [products, setProducts] = useState(null);

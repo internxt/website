@@ -1,8 +1,7 @@
-import Image from "next/legacy/image";
-import { Gift, RocketLaunch } from '@phosphor-icons/react';
+import Image from 'next/legacy/image';
+import { RocketLaunch } from '@phosphor-icons/react';
 import React from 'react';
-import { goToSignUpURL } from '../../lib/auth';
-import RevealX from '../components/RevealX';
+import RevealX from '@/components/components/RevealX';
 
 const ThirdFeaturesSection = ({ textContent }) => {
   return (

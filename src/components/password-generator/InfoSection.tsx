@@ -1,8 +1,8 @@
 import { CirclesThree, Fingerprint, Hash, NumberCircleThree, Ruler, TextAa, TextT } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
-import SignUpBanner from '../banners/SignUpBanner';
-import CtaSection from '../shared/CtaSection';
-import RenderDescription from '../shared/RenderDescription';
+import SignUpBanner from '@/components/banners/SignUpBanner';
+import CtaSection from '@/components/shared/CtaSection';
+import RenderDescription from '@/components/shared/RenderDescription';
 
 const allowedLangForImage = ['en', 'es', 'ru'];
 

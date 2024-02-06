@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent }) => {
   const router = useRouter();
