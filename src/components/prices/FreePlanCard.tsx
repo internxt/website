@@ -1,4 +1,4 @@
-import { goToSignUpURL } from '../../lib/auth';
+import { goToSignUpURL } from '@/lib/auth';
 
 const FreePlanCard = ({ textContent }) => {
   return (

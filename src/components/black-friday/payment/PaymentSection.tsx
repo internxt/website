@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Interval, ProductsProps, stripeService } from '../../services/stripeService';
-import PriceCard from './PriceCard';
-import { currencyService } from '../../services/currencyService';
+import { Interval, ProductsProps, stripeService } from '@/components/services/stripeService';
+import PriceCard from '@/components/black-friday/payment/PriceCard';
+import { currencyService } from '@/components/services/currencyService';
 import { Transition } from '@headlessui/react';
-import CardSkeleton from '../../components/CardSkeleton';
+import CardSkeleton from '@/components/components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
 
 const PaymentSection = ({ textContent }) => {

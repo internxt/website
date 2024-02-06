@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import RevealY from '../components/RevealY';
-import RevealX from '../components/RevealX';
+import RevealY from '@/components/components/RevealY';
+import RevealX from '@/components/components/RevealX';
 import { CloudCheck, Gauge, Image, SketchLogo } from '@phosphor-icons/react';
 
 const SecondFeaturesSection = ({ textContent }) => {

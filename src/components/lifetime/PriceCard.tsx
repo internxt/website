@@ -4,9 +4,9 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
-import { checkout } from '../../lib/auth';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { stripeService } from '../services/stripeService';
+import { checkout } from '@/lib/auth';
+import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { stripeService } from '@/components/services/stripeService';
 
 interface PriceCardProps {
   planType: string;
@@ -38,7 +38,7 @@ const PriceCard = ({
 }: PriceCardProps) => {
   const [coupon, setCoupon] = useState<string>();
 
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
   useEffect(() => {
     stripeService

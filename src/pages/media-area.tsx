@@ -1,16 +1,16 @@
 import React from 'react';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import HeroSection from '../components/media-area/HeroSection';
-import StandForPrivacySection from '../components/media-area/StandForPrivacySection';
-import KitSection from '../components/media-area/KitSection';
-import CtaSection from '../components/media-area/CtaSection';
-import ProductsSection from '../components/media-area/ProductsSection';
-import SocialProofSection from '../components/home/SocialProofSection';
-import ThirdFeaturesSection from '../components/media-area/FeatureSection';
-import InternxtInTheNews from '../components/media-area/InternxtInTheNews';
-import AnalysisSection from '../components/media-area/AnalysisSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/media-area/HeroSection';
+import StandForPrivacySection from '@/components/media-area/StandForPrivacySection';
+import KitSection from '@/components/media-area/KitSection';
+import CtaSection from '@/components/media-area/CtaSection';
+import ProductsSection from '@/components/media-area/ProductsSection';
+import SocialProofSection from '@/components/home/SocialProofSection';
+import ThirdFeaturesSection from '@/components/media-area/FeatureSection';
+import InternxtInTheNews from '@/components/media-area/InternxtInTheNews';
+import AnalysisSection from '@/components/media-area/AnalysisSection';
 
 const MediaArea = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'media-area');
@@ -47,10 +47,10 @@ const MediaArea = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLan
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/media-area.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/media-area.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

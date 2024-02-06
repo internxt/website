@@ -2,20 +2,20 @@ import Script from 'next/script';
 import React from 'react';
 
 import userAgent from 'useragent';
-import HeroSection from '../components/photos/HeroSection';
-import FeaturesSection from '../components/photos/FeaturesSection';
-import FeatureSection from '../components/photos/FeatureSection';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import ProductsNavigation from '../components/layout/ProductsNavigation';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import { downloadDriveLinks } from '../lib/get-download-url';
+import HeroSection from '@/components/photos/HeroSection';
+import FeaturesSection from '@/components/photos/FeaturesSection';
+import FeatureSection from '@/components/photos/FeatureSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import ProductsNavigation from '@/components/layout/ProductsNavigation';
+import Layout from '@/components/layout/Layout';
+import cookies from '@/lib/cookies';
+import { downloadDriveLinks } from '@/lib/get-download-url';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import WhatWeDoSection from '../components/photos/WhatWeDoSection';
-import CtaSection from '../components/drive/CtaSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import WhatWeDoSection from '@/components/photos/WhatWeDoSection';
+import CtaSection from '@/components/drive/CtaSection';
 
 const Photos = ({ metatagsDescriptions, langJson, navbarLang, footerLang, download, device, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'photos');
@@ -61,10 +61,10 @@ export async function getServerSideProps(ctx) {
 
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/photos.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/photos.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

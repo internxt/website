@@ -1,5 +1,5 @@
-import { checkout, goToSignUpURL } from '../../lib/auth';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
+import { checkout, goToSignUpURL } from '@/lib/auth';
+import { CouponType } from '@/pages/api/stripe/get_coupons';
 
 export interface PriceCardProps {
   planType: string;

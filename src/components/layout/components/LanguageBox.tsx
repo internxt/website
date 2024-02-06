@@ -3,7 +3,7 @@ import { Globe } from '@phosphor-icons/react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import { useState } from 'react';
-import cookies from '../../../lib/cookies';
+import cookies from '@/lib/cookies';
 
 const currentLang = {
   es: 'Español (ES)',

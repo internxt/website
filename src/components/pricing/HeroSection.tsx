@@ -1,11 +1,6 @@
 import Image from 'next/legacy/image';
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
-import Countdown from '../components/Countdown';
-import { analyticsService } from '../services/analyticsService';
-import { useEffect, useState } from 'react';
-import { Interval, Products, stripeService } from '../services/stripeService';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { checkout } from '../../lib/auth';
+import Countdown from '@/components/components/Countdown';
 
 const HeroSection = ({ textContent }) => {
   const feeds = [
@@ -22,20 +17,6 @@ const HeroSection = ({ textContent }) => {
       title: textContent.feeds.thirdFeed,
     },
   ];
-
-  // useEffect(() => {
-  //   Promise.all([
-  //     stripeService.getSelectedPrice(Interval.Year, '2TB'),
-  //     stripeService.getCoupon(CouponType.TwoTBCoupon75),
-  //   ])
-  //     .then((data) => {
-  //       setProduct(data[0].priceId);
-  //       setCoupon(data[1]);
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //     });
-  // }, []);
 
   return (
     <section className="overflow-hidden pt-12">

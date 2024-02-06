@@ -1,19 +1,19 @@
 import Script from 'next/script';
 import React from 'react';
 
-import TableSection from '../components/comparison/TableSection';
-import FeatureSection from '../components/comparison/FeatureSection';
-import InfoSection from '../components/home/InfoSection';
-import FAQSection from '../components/shared/FaqSection';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
+import TableSection from '@/components/comparison/TableSection';
+import FeatureSection from '@/components/comparison/FeatureSection';
+import InfoSection from '@/components/home/InfoSection';
+import FAQSection from '@/components/shared/FaqSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import cookies from '@/lib/cookies';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import TestimonialsSection from '../components/home/TestimonialsSection';
-import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
-import CtaSection from '../components/shared/CtaSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
+import CtaSection from '@/components/shared/CtaSection';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
@@ -61,10 +61,10 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/comparison.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/comparison.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

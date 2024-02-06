@@ -8,7 +8,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import { checkout, goToSignUpURL } from '../../lib/auth';
+import { checkout, goToSignUpURL } from '@/lib/auth';
 
 export interface PriceCardProps {
   planType: string;
@@ -50,7 +50,7 @@ export default function PriceCard({
   const router = useRouter();
   const language = router.locale === 'it' ? 'it' : 'en';
 
-  const contentText = require(`../../assets/lang/${language}/priceCard.json`);
+  const contentText = require(`@/assets/lang/${language}/priceCard.json`);
 
   return (
     <div

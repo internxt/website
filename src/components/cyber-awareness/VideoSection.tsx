@@ -1,6 +1,6 @@
 import React from 'react';
-import RevealX from '../components/RevealX';
-import YoutubeFrame from './components/YoutubeFrame';
+import RevealX from '@/components/components/RevealX';
+import YoutubeFrame from '@/components/cyber-awareness/components/YoutubeFrame';
 
 const VideoSection = ({ textContent }) => {
   return (

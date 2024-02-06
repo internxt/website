@@ -1,6 +1,6 @@
 import axios from 'axios';
 import bytes from 'bytes';
-import { notificationService } from '../Snackbar';
+import { notificationService } from '@/components/Snackbar';
 import { currencyService } from './currencyService';
 
 export enum Interval {

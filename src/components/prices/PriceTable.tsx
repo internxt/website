@@ -3,14 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
-import BusinessBanner from '../banners/BusinessBanner';
-import { Interval, ProductsProps, stripeService } from '../services/stripeService';
-import CardSkeleton from '../components/CardSkeleton';
-import { currencyService } from '../services/currencyService';
-import CampaignCtaSection from '../lifetime/CampaignCtaSection';
+import BusinessBanner from '@/components/banners/BusinessBanner';
+import { Interval, ProductsProps, stripeService } from '@/components/services/stripeService';
+import CardSkeleton from '@/components/components/CardSkeleton';
+import { currencyService } from '@/components/services/currencyService';
 import FreePlanCard from './FreePlanCard';
-import Header from '../shared/Header';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
+import Header from '@/components/shared/Header';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -28,7 +26,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
-  const CampaignContent = require(`../../assets/lang/en/pricing.json`);
+
   const banner = require('../../assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState<ProductsProps>();

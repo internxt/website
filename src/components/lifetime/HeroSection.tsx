@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alarm } from '@phosphor-icons/react';
-import Countdown from '../components/Countdown';
-import Header from '../shared/Header';
+import Countdown from '@/components/components/Countdown';
+import Header from '@/components/shared/Header';
 
 interface HeroSectionProps {
   textContent: any;

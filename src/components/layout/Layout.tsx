@@ -1,10 +1,10 @@
 /* eslint-disable react/no-danger */
 import Head from 'next/head';
 import React, { useEffect } from 'react';
-import isBrave from '../../lib/brave';
+import isBrave from '@/lib/brave';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
-import TopBannerHomePage from '../../components/banners/TopBannerHomePage';
+import TopBannerHomePage from '@/components/banners/TopBannerHomePage';
 import axios from 'axios';
 import moment from 'moment';
 

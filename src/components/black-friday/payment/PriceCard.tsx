@@ -7,9 +7,9 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
-import { checkout, goToSignUpURL } from '../../../lib/auth';
-import { stripeService } from '../../services/stripeService';
-import { CouponType } from '../../../pages/api/stripe/get_coupons';
+import { checkout, goToSignUpURL } from '@/lib/auth';
+import { stripeService } from '@/components/services/stripeService';
+import { CouponType } from '@/pages/api/stripe/get_coupons';
 
 export interface PriceCardProps {
   readonly planType: string;

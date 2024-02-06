@@ -4,12 +4,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
-import axios from 'axios';
 import React, { useEffect } from 'react';
-import { checkout } from '../../lib/auth';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
-import { analyticsService } from '../services/analyticsService';
-import { Interval, stripeService } from '../services/stripeService';
+import { checkout } from '@/lib/auth';
+import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { analyticsService } from '@/components/services/analyticsService';
+import { stripeService } from '@/components/services/stripeService';
 import { PriceCardProps } from './PriceCard';
 
 export default function SpecialPriceCard({

@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import TermsAndConditionsOverview from '../components/legal/TermsAndConditionsOverview';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import cookies from '@/lib/cookies';
+import TermsAndConditionsOverview from '@/components/legal/TermsAndConditionsOverview';
 
 const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'legal');
@@ -22,10 +22,10 @@ const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`../assets/lang/${lang}/terms-and-conditions.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/terms-and-conditions.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
 
   cookies.setReferralCookie(ctx);
 

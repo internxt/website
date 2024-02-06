@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
-import PriceCard from '../prices/PriceCard';
-import { ProductsProps, stripeService } from '../services/stripeService';
-import CardSkeleton from '../components/CardSkeleton';
-import { currencyService } from '../services/currencyService';
+import PriceCard from '@/components/prices/PriceCard';
+import { ProductsProps, stripeService } from '@/components/services/stripeService';
+import CardSkeleton from '@/components/components/CardSkeleton';
+import { currencyService } from '@/components/services/currencyService';
 
 export default function PriceTable({ lang, country }: { lang: string; country?: string }) {
   const [products, setProducts] = useState<ProductsProps>();

@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 
-import HeroSection from '../components/lifetime/HeroSection';
-import FeatureSection from '../components/lifetime/FeatureSection';
-import GetLifetimeSection from '../components/lifetime/GetLifetimeSection';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import PaymentSection from '../components/lifetime/PaymentSection';
-import Navbar from '../components/layout/Navbar';
-import CtaSection from '../components/lifetime/CtaSection';
+import HeroSection from '@/components/lifetime/HeroSection';
+import FeatureSection from '@/components/lifetime/FeatureSection';
+import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import cookies from '@/lib/cookies';
+import PaymentSection from '@/components/lifetime/PaymentSection';
+import Navbar from '@/components/layout/Navbar';
+import CtaSection from '@/components/lifetime/CtaSection';
 
-import { currencyService } from '../components/services/currencyService';
+import { currencyService } from '@/components/services/currencyService';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -57,10 +57,10 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/lifetime.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

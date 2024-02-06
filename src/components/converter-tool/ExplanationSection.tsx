@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from "next/legacy/image";
-import SignUpBanner from '../banners/SignUpBanner';
+import Image from 'next/legacy/image';
+import SignUpBanner from '@/components/banners/SignUpBanner';
 
 const language = {
   en: 'EN',

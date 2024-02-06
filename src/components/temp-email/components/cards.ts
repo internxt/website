@@ -1,7 +1,7 @@
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
 
 export const infoCards = (lang) => {
-  const textContent = require(`../../../assets/lang/${lang}/temporary-email.json`);
+  const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);
   return [
     {
       icon: Bug,

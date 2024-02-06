@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import Link from 'next/link';
-import Image from "next/legacy/image";
-import RevealY from '../components/RevealY';
-import { useRouter } from 'next/router';
+import Image from 'next/legacy/image';
+import RevealY from '@/components/components/RevealY';
 
 const InternxtInTheNews = ({ textContent }) => {
-  const router = useRouter();
-  const lang = router.locale;
   const data = textContent.cards;
   const [currentIndex, setCurrentIndex] = useState(0);
 

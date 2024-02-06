@@ -1,10 +1,10 @@
 import { FileArrowDown } from '@phosphor-icons/react';
-import TextInput from '../../components/TextInput';
+import TextInput from '@/components/components/TextInput';
 import { useState } from 'react';
-import Header from '../../shared/Header';
-import { notificationService } from '../../Snackbar';
+import Header from '@/components/shared/Header';
+import { notificationService } from '@/components/Snackbar';
 import axios from 'axios';
-import CheckboxItem from '../../shared/CheckboxItem';
+import CheckboxItem from '@/components/shared/CheckboxItem';
 
 const DownloadEbook = ({ textContent, bookUrl, setBannerVisible }) => {
   const [firstName, setFirstName] = useState('');

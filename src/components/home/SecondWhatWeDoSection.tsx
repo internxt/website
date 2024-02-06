@@ -1,6 +1,6 @@
 import React from 'react';
-import RevealY from '../components/RevealY';
-import ProductCard from '../shared/ProductCard';
+import RevealY from '@/components/components/RevealY';
+import ProductCard from '@/components/shared/ProductCard';
 
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (

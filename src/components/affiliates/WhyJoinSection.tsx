@@ -1,5 +1,5 @@
 import { Cookie, HandCoins, SketchLogo, UsersThree } from '@phosphor-icons/react';
-import RevealY from '../components/RevealY';
+import RevealY from '@/components/components/RevealY';
 
 function PaintedText({ text }): JSX.Element {
   if (!text) return <></>;

@@ -1,15 +1,12 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useEffect } from 'react';
 import { AppProps } from 'next/app';
-import '../styles/globals.scss';
+import '@/styles/globals.scss';
 import Script from 'next/script';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
-import { GlobalDialog, GlobalUIManager } from '../contexts/GlobalUIManager';
+import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
-import * as gtag from '../lib/gtag';
-import ShowSnackbar from '../components/Snackbar';
-import WheelBanner from '../components/banners/WheelBanner';
-import BottomBanner from '../components/banners/BottomBanner';
-import TopBannerHomePage from '../components/banners/TopBannerHomePage';
+import * as gtag from '@/lib/gtag';
+import ShowSnackbar from '@/components/Snackbar';
 
 const excludedPaths = [
   '/lifetime',

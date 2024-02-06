@@ -1,19 +1,19 @@
 import Script from 'next/script';
 import { useState } from 'react';
 
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import PriceTable from '../components/prices/PriceTable';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import FAQSection from '../components/shared/FaqSection';
-import CtaSection from '../components/pricing/CtaSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import PriceTable from '@/components/prices/PriceTable';
+import Layout from '@/components/layout/Layout';
+import cookies from '@/lib/cookies';
+import FAQSection from '@/components/shared/FaqSection';
+import CtaSection from '@/components/pricing/CtaSection';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
-import BestStorageSection from '../components/pricing/BestStorageSection';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import InfoSection from '../components/home/InfoSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
+import BestStorageSection from '@/components/pricing/BestStorageSection';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import InfoSection from '@/components/home/InfoSection';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -74,11 +74,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`../assets/lang/${lang}/pricing.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const homeComponentsLang = require(`../assets/lang/${lang}/home.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/pricing.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const homeComponentsLang = require(`@/assets/lang/${lang}/home.json`);
 
   cookies.setReferralCookie(ctx);
 

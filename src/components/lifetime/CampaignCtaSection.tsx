@@ -1,7 +1,7 @@
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import React from 'react';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const CampaignCtaSection = ({ textContent }) => {
   const globalDialog = useGlobalDialog();

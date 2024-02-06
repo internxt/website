@@ -1,7 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import RevealY from '../components/RevealY';
-import Image from "next/legacy/image";
+import RevealY from '@/components/components/RevealY';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
   return (

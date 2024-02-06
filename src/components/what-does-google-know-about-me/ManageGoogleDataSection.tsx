@@ -1,6 +1,5 @@
-import Image from "next/legacy/image";
 import { Trash } from '@phosphor-icons/react';
-import RenderDescription from '../shared/RenderDescription';
+import RenderDescription from '@/components/shared/RenderDescription';
 
 const ManageGoogleDataSection = ({ textContent }) => {
   const numberedList = textContent.section2.numberedList.map((item) => (

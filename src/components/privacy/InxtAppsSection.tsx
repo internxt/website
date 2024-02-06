@@ -1,4 +1,4 @@
-import ProductCard from '../shared/ProductCard';
+import ProductCard from '@/components/shared/ProductCard';
 
 const InxtAppsSection = ({ textContent, lang }) => {
   return (

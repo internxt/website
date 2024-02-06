@@ -1,9 +1,9 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import { goToSignUpURL } from '../../lib/auth';
-import SignUpInline from '../auth/SignUpInline';
+import { goToSignUpURL } from '@/lib/auth';
+import SignUpInline from '@/components/auth/SignUpInline';
 import Image from 'next/legacy/image';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 import Animation from './components/Animation';
 
 export default function HeroSection({ textContent, lang }) {

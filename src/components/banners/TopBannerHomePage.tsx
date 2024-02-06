@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`../../assets/lang/${lang}/banners.json`);
+  const textContent = require(`@/assets/lang/${lang}/banners.json`);
   const globalDialog = useGlobalDialog();
 
   return (

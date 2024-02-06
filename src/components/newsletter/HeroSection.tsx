@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Header from '../shared/Header';
-import CheckboxItem from '../shared/CheckboxItem';
+import Header from '@/components/shared/Header';
+import CheckboxItem from '@/components/shared/CheckboxItem';
 
 const HeroSection = ({ textContent }) => {
   const [checkbox, setCheckbox] = useState(false);

@@ -1,17 +1,17 @@
 import Script from 'next/script';
 import React from 'react';
 
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import HeroSection from '../components/privacy-directory/HeroSection';
-import WikiSection from '../components/privacy-directory/WikiSection';
-import SupportNGOsSection from '../components/privacy-directory/SupportNGOsSection';
-import Footer from '../components/layout/Footer';
-import FAQSection from '../components/shared/FaqSection';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/privacy-directory/HeroSection';
+import WikiSection from '@/components/privacy-directory/WikiSection';
+import SupportNGOsSection from '@/components/privacy-directory/SupportNGOsSection';
+import Footer from '@/components/layout/Footer';
+import FAQSection from '@/components/shared/FaqSection';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import HeroSection2 from '../components/privacy-directory/HeroSection2';
-import CtaSection from '../components/shared/CtaSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import HeroSection2 from '@/components/privacy-directory/HeroSection2';
+import CtaSection from '@/components/shared/CtaSection';
 
 const CTA_URL_REDIRECT = 'https://drive.internxt.com/new';
 
@@ -82,11 +82,11 @@ const PrivacyDirectory = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const textContent = require(`../assets/lang/${lang}/privacy-directory.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const bannerText = require(`../assets/lang/${lang}/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${lang}/privacy-directory.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const bannerText = require(`@/assets/lang/${lang}/banners.json`);
 
   return {
     props: {

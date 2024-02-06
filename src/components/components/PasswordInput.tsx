@@ -1,6 +1,6 @@
 import { Eye, EyeSlash } from '@phosphor-icons/react';
 import { useState } from 'react';
-import TextInput, { TextInputProps } from './TextInput';
+import TextInput, { TextInputProps } from '@/components/components/TextInput';
 
 export default function PasswordInput(props: TextInputProps) {
   const [showPassword, setShowPassword] = useState<boolean>(false);

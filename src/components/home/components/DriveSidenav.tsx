@@ -1,14 +1,4 @@
-import {
-  CaretDown,
-  Clock,
-  ClockCounterClockwise,
-  Folder,
-  FolderSimple,
-  ImageSquare,
-  Link,
-  Trash,
-  Users,
-} from '@phosphor-icons/react';
+import { Clock, ClockCounterClockwise, FolderSimple, ImageSquare, Link, Trash, Users } from '@phosphor-icons/react';
 import React from 'react';
 
 const driveItems = [

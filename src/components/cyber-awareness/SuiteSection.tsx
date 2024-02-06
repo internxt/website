@@ -1,6 +1,6 @@
 import { CaretRight } from '@phosphor-icons/react';
 import React from 'react';
-import RevealY from '../components/RevealY';
+import RevealY from '@/components/components/RevealY';
 
 const SuiteSection = ({ textContent }) => {
   const suiteCards = [

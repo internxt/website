@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import Checkbox from '../components/Checkbox';
 import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
-import { notificationService } from '../Snackbar';
+import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent }) => {
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
-import WheelComponent from './components/WheelComponent';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import WheelComponent from '@/components/banners/components/WheelComponent';
 import { Info, X } from '@phosphor-icons/react';
-import TextInput from '../components/TextInput';
-import { notificationService } from '../Snackbar';
-import { stripeService } from '../services/stripeService';
-import { CouponType } from '../../pages/api/stripe/get_coupons';
+import TextInput from '@/components/components/TextInput';
+import { notificationService } from '@/components/Snackbar';
+import { stripeService } from '@/components/services/stripeService';
+import { CouponType } from '@/pages/api/stripe/get_coupons';
 
 const SHOW_WHEEL_BANNER = 'showWheelBanner';
 

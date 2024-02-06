@@ -1,7 +1,7 @@
 import axios from 'axios';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { useState } from 'react';
-import { notificationService } from '../Snackbar';
+import { notificationService } from '@/components/Snackbar';
 
 const BusinessBanner = ({ textContent }) => {
   const [email, setEmail] = useState('');

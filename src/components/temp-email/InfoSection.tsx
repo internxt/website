@@ -1,7 +1,7 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import React from 'react';
 import { infoCards } from './components/cards';
-import SignUpBanner from '../banners/SignUpBanner';
+import SignUpBanner from '@/components/banners/SignUpBanner';
 
 const InfoSection = ({ textContent, bannerText, lang }) => {
   return (

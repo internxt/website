@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import React from 'react';
-import DownloadComponent from '../shared/DownloadComponent';
-import Header from '../shared/Header';
+import DownloadComponent from '@/components/shared/DownloadComponent';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent, lang, device, download }) => {
   return (

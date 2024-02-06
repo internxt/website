@@ -1,9 +1,9 @@
-import TextInput from '../components/TextInput';
-import PasswordInput from '../components/PasswordInput';
-import PrimaryButton from '../components/PrimaryButton';
-import { login } from '../../lib/auth';
+import TextInput from '@/components/components/TextInput';
+import PasswordInput from '@/components/components/PasswordInput';
+import PrimaryButton from '@/components/components/PrimaryButton';
+import { login } from '@/lib/auth';
 import { WarningCircle } from '@phosphor-icons/react';
-import { GlobalDialog, useGlobalDialog } from '../../contexts/GlobalUIManager';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 interface LogInProps {
   textContent: any;

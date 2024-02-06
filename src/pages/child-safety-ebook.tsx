@@ -1,20 +1,20 @@
 import { useState } from 'react';
 
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
-import HeroSection from '../components/inxt-library/shared/HeroSection';
-import WhatWeDo from '../components/inxt-library/shared/WhatWeDo';
-import WhatYouWillLearn from '../components/inxt-library/shared/WhatYouWillLearn';
-import CtaSection from '../components/shared/CtaSection';
-import FeatureSection from '../components/inxt-library/shared/FeatureSection';
-import RelatedResourcesSection from '../components/inxt-library/shared/RelatedResourcesSection';
-import RelatedBannerCard from '../components/inxt-library/components/RelatedbannerCard';
-import DownloadedEbookBanner from '../components/banners/DownloadedEbookBanner';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import HeroSection from '@/components/inxt-library/shared/HeroSection';
+import WhatWeDo from '@/components/inxt-library/shared/WhatWeDo';
+import WhatYouWillLearn from '@/components/inxt-library/shared/WhatYouWillLearn';
+import CtaSection from '@/components/shared/CtaSection';
+import FeatureSection from '@/components/inxt-library/shared/FeatureSection';
+import RelatedResourcesSection from '@/components/inxt-library/shared/RelatedResourcesSection';
+import RelatedBannerCard from '@/components/inxt-library/components/RelatedbannerCard';
+import DownloadedEbookBanner from '@/components/banners/DownloadedEbookBanner';
 
 const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'child-safety-ebook');
-  const [bannerVisible, setIsBannerVisible] = useState(false);
+  const [isBannerVisible, setIsBannerVisible] = useState(false);
 
   const onCloseBanner = () => {
     setIsBannerVisible(false);
@@ -33,7 +33,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
       />
 
       <DownloadedEbookBanner
-        bannerVisible={bannerVisible}
+        bannerVisible={isBannerVisible}
         onClose={onCloseBanner}
         textContent={textContent.DownloadedBanner}
       />
@@ -73,10 +73,10 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const navbar = require(`../assets/lang/en/navbar.json`);
-  const textContent = require(`../assets/lang/en/child-safety-ebook.json`);
-  const footer = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const navbar = require(`@/assets/lang/en/navbar.json`);
+  const textContent = require(`@/assets/lang/en/child-safety-ebook.json`);
+  const footer = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

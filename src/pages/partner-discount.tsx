@@ -1,12 +1,12 @@
 import React from 'react';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import HeroSection from '../components/partner-discount/HeroSection';
-import PaymentSection from '../components/partner-discount/PaymentSection';
-import FeatureSection from '../components/annual/FeatureSection';
-import InfoSection from '../components/home/InfoSection';
-import CtaSection from '../components/pricing/CtaSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/partner-discount/HeroSection';
+import PaymentSection from '@/components/partner-discount/PaymentSection';
+import FeatureSection from '@/components/annual/FeatureSection';
+import InfoSection from '@/components/home/InfoSection';
+import CtaSection from '@/components/pricing/CtaSection';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -33,13 +33,11 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
-
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/partner-discount.json`);
-  const infoSectionLang = require(`../assets/lang/en/home.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/partner-discount.json`);
+  const infoSectionLang = require(`@/assets/lang/en/home.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

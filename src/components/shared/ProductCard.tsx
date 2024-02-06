@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import RevealX from '../components/RevealX';
-import Image from "next/legacy/image";
+import RevealX from '@/components/components/RevealX';
+import Image from 'next/legacy/image';
 import { UilAngleRightB } from '@iconscout/react-unicons';
 
 const ProductCard = ({ animationDirection, textContent, lang, imageUrl }) => {
@@ -16,11 +16,10 @@ const ProductCard = ({ animationDirection, textContent, lang, imageUrl }) => {
           <Link
             href="/drive"
             locale={lang}
-            className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline">
-
+            className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline"
+          >
             <span>{textContent.cta}</span>
             <UilAngleRightB className="h-4 w-4" />
-
           </Link>
         </div>
       </div>

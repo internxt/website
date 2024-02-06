@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from '../shared/ProductCard';
+import ProductCard from '@/components/shared/ProductCard';
 
 const ProductsSection = ({ textContent, lang }) => {
   return (

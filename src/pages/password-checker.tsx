@@ -1,18 +1,18 @@
 import Script from 'next/script';
 import React from 'react';
 
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import HeroSection from '../components/password-checker/HeroSection';
-import FeaturesSection from '../components/password-checker/FeaturesSection';
-import FAQSection from '../components/shared/FaqSection';
-import TryInternxtBanner from '../components/banners/TryInternxtBanner';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/password-checker/HeroSection';
+import FeaturesSection from '@/components/password-checker/FeaturesSection';
+import FAQSection from '@/components/shared/FaqSection';
+import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import ToolsSection from '../components/shared/ToolsSection';
-import CtaSection from '../components/shared/CtaSection';
-import InfoSection from '../components/password-generator/InfoSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import ToolsSection from '@/components/shared/ToolsSection';
+import CtaSection from '@/components/shared/CtaSection';
+import InfoSection from '@/components/password-generator/InfoSection';
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -81,12 +81,12 @@ const PasswordChecker = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/password-checker.json`);
-  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const bannerLang = require(`../assets/lang/${lang}/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/password-checker.json`);
+  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
 
   return {
     props: {

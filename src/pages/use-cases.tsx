@@ -1,11 +1,11 @@
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import HeroSection from '../components/use-cases/HeroSection';
-import CybersecurityIsEssential from '../components/use-cases/CybersecurityIsEssential';
-import SecuringSuccess from '../components/use-cases/SecuringSuccess';
-import CtaSection from '../components/use-cases/CtaSection';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/use-cases/HeroSection';
+import CybersecurityIsEssential from '@/components/use-cases/CybersecurityIsEssential';
+import SecuringSuccess from '@/components/use-cases/SecuringSuccess';
+import CtaSection from '@/components/use-cases/CtaSection';
 
 const UseCases = ({ metatagsDescriptions, navbarLang, langJson, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'use-cases');
@@ -31,10 +31,10 @@ const UseCases = ({ metatagsDescriptions, navbarLang, langJson, footerLang, lang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/use-cases.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/use-cases.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

@@ -1,5 +1,5 @@
 import { NumberOne, NumberThree, NumberTwo } from '@phosphor-icons/react';
-import RevealY from '../components/RevealY';
+import RevealY from '@/components/components/RevealY';
 
 const FeatureSection = ({ textContent }) => {
   const cards = [

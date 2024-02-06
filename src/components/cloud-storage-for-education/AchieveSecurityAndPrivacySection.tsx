@@ -1,4 +1,4 @@
-import RenderDescription from '../shared/RenderDescription';
+import RenderDescription from '@/components/shared/RenderDescription';
 
 const AchieveSecurityAndPrivacySection = ({ textContent }) => {
   return (

@@ -1,18 +1,18 @@
 import Script from 'next/script';
 import React from 'react';
 
-import HeroSection from '../components/about/HeroSection';
-import WhatWeDoSection from '../components/about/WhatWeDoSection';
-import FeatureSection from '../components/about/FeatureSection';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import cookies from '../lib/cookies';
+import HeroSection from '@/components/about/HeroSection';
+import WhatWeDoSection from '@/components/about/WhatWeDoSection';
+import FeatureSection from '@/components/about/FeatureSection';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import cookies from '@/lib/cookies';
 
-import { sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import CtaSection from '../components/shared/CtaSection';
-import CompanySection from '../components/about/CompanySection';
-import HeroSection2 from '../components/about/HeroSection2';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import CtaSection from '@/components/shared/CtaSection';
+import CompanySection from '@/components/about/CompanySection';
+import HeroSection2 from '@/components/about/HeroSection2';
 
 const CTA_URL = 'https://internxt.com/pricing';
 
@@ -53,10 +53,10 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const textContent = require(`../assets/lang/${lang}/about.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${lang}/about.json`);
   cookies.setReferralCookie(ctx);
 
   return {

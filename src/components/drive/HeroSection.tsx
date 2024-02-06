@@ -1,8 +1,7 @@
 /* eslint-disable max-len */
-import Image from "next/legacy/image";
 import React from 'react';
-import DownloadComponent from '../shared/DownloadComponent';
-import Header from '../shared/Header';
+import DownloadComponent from '@/components/shared/DownloadComponent';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col">

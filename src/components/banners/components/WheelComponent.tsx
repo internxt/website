@@ -1,6 +1,6 @@
 import { LockKey, WarningCircle } from '@phosphor-icons/react';
-import TextInput from '../../components/TextInput';
-import CheckboxItem from '../../shared/CheckboxItem';
+import TextInput from '@/components/components/TextInput';
+import CheckboxItem from '@/components/shared/CheckboxItem';
 import { useEffect, useState } from 'react';
 import { Roulette, useRoulette } from 'react-hook-roulette';
 import axios, { AxiosError } from 'axios';
