@@ -196,7 +196,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               })}
           </div>
         </Transition>
-        <div className="content flex w-full px-5 pb-20 md:pb-0">
+        <div id="freeAccountCard" className="content flex w-full px-5 pb-20 md:pb-0">
           <FreePlanCard textContent={contentText.freePlanCard} />
         </div>
 
