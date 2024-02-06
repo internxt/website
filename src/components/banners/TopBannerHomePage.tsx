@@ -1,12 +1,10 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
-  const globalDialog = useGlobalDialog();
 
   return (
     <>
@@ -26,7 +24,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           <button
             className="flex cursor-pointer flex-row items-center space-x-2"
             onClick={() => {
-              globalDialog.openDialog(GlobalDialog.Wheel);
+              router.push('/lifetime');
             }}
           >
             <p className="font-semibold underline hover:no-underline">{textContent.TopBarBanner.title.cta}</p>
@@ -45,7 +43,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             onKeyDown={() => {}}
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              globalDialog.openDialog(GlobalDialog.Wheel);
+              router.push('/lifetime');
             }}
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
