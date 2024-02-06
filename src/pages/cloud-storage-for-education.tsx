@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
-import FAQSection from '../components/shared/FaqSection';
-import CtaSection from '../components/cloud-storage-for-education/CtaSection';
-import HeroSection from '../components/cloud-storage-for-education/HeroSection';
-import AchieveSecurityAndPrivacySection from '../components/cloud-storage-for-education/AchieveSecurityAndPrivacySection';
-import BenefitsOfInternxtSection from '../components/cloud-storage-for-education/BenefitsOfInternxtSection';
-import WhyChooseInternxtSection from '../components/cloud-storage-for-education/WhyChooseInternxtSection';
-import ClaimYourDiscountSection from '../components/cloud-storage-for-education/ClaimYourDiscountSection';
-import IntercomTicketCreatedBanner from '../components/banners/IntercomTicketCreatedBanner';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import FAQSection from '@/components/shared/FaqSection';
+import CtaSection from '@/components/cloud-storage-for-education/CtaSection';
+import HeroSection from '@/components/cloud-storage-for-education/HeroSection';
+import AchieveSecurityAndPrivacySection from '@/components/cloud-storage-for-education/AchieveSecurityAndPrivacySection';
+import BenefitsOfInternxtSection from '@/components/cloud-storage-for-education/BenefitsOfInternxtSection';
+import WhyChooseInternxtSection from '@/components/cloud-storage-for-education/WhyChooseInternxtSection';
+import ClaimYourDiscountSection from '@/components/cloud-storage-for-education/ClaimYourDiscountSection';
+import IntercomTicketCreatedBanner from '@/components/banners/IntercomTicketCreatedBanner';
 
 const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-storage-for-education');

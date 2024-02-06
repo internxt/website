@@ -1,21 +1,21 @@
 import Script from 'next/script';
 import React from 'react';
 
-import HeroSection from '../components/drive/HeroSection';
-import FeaturesSection from '../components/drive/FeaturesSection';
-import FeatureSection from '../components/drive/FeatureSection';
-import FAQSection from '../components/shared/FaqSection';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import ProductsNavigation from '../components/layout/ProductsNavigation';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import WhatWeDoSection from '../components/drive/WhatWeDoSection';
-import CtaSection from '../components/drive/CtaSection';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import { downloadDriveLinks } from '../lib/get-download-url';
+import HeroSection from '@/components/drive/HeroSection';
+import FeaturesSection from '@/components/drive/FeaturesSection';
+import FeatureSection from '@/components/drive/FeatureSection';
+import FAQSection from '@/components/shared/FaqSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import ProductsNavigation from '@/components/layout/ProductsNavigation';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import WhatWeDoSection from '@/components/drive/WhatWeDoSection';
+import CtaSection from '@/components/drive/CtaSection';
+import Layout from '@/components/layout/Layout';
+import cookies from '@/lib/cookies';
+import { downloadDriveLinks } from '@/lib/get-download-url';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 
 const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');

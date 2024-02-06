@@ -1,14 +1,14 @@
-import FaqSection from '../components/shared/FaqSection';
-import FeatureSection from '../components/affiliates/FeatureSection';
-import HeroSection from '../components/affiliates/HeroSection';
-import WhatIsInternxtSection from '../components/affiliates/WhatIsInternxtSection';
-import WhatWeDoSection from '../components/affiliates/WhatWeDoSection';
-import WhyJoinSection from '../components/affiliates/WhyJoinSection';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import CtaSection from '../components/shared/CtaSection';
+import FaqSection from '@/components/shared/FaqSection';
+import FeatureSection from '@/components/affiliates/FeatureSection';
+import HeroSection from '@/components/affiliates/HeroSection';
+import WhatIsInternxtSection from '@/components/affiliates/WhatIsInternxtSection';
+import WhatWeDoSection from '@/components/affiliates/WhatWeDoSection';
+import WhyJoinSection from '@/components/affiliates/WhyJoinSection';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import CtaSection from '@/components/shared/CtaSection';
 
 const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'affiliates');

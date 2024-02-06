@@ -1,19 +1,19 @@
 import React from 'react';
 
-import cookies from '../lib/cookies';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import HeroSection from '../components/black-friday/HeroSection';
+import cookies from '@/lib/cookies';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/black-friday/HeroSection';
 
-import SuiteSection from '../components/black-friday/SuiteSection';
-import CtaSection from '../components/black-friday/CtaSection';
-import FeatureSection from '../components/black-friday/FeatureSection';
-import PlatformSection from '../components/black-friday/PlatformSection';
-import TestimonialsSection from '../components/black-friday/TestimonialsSection';
-import FaqSection from '../components/black-friday/FAQSection';
-import BestStorageSection from '../components/black-friday/BestStorageSection';
-import LoginBFBanner from '../components/banners/LoginBFBanner';
-import FooterSection from '../components/black-friday/FooterSection';
+import SuiteSection from '@/components/black-friday/SuiteSection';
+import CtaSection from '@/components/black-friday/CtaSection';
+import FeatureSection from '@/components/black-friday/FeatureSection';
+import PlatformSection from '@/components/black-friday/PlatformSection';
+import TestimonialsSection from '@/components/black-friday/TestimonialsSection';
+import FaqSection from '@/components/black-friday/FAQSection';
+import BestStorageSection from '@/components/black-friday/BestStorageSection';
+import LoginBFBanner from '@/components/banners/LoginBFBanner';
+import FooterSection from '@/components/black-friday/FooterSection';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 

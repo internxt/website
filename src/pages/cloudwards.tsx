@@ -1,12 +1,12 @@
 import React from 'react';
-import HeroSection from '../components/partnerships/cloudwards/HeroSection';
-import AdvantagesSection from '../components/partnerships/cloudwards/AdvantagesSection';
-import BestStorageSection from '../components/partnerships/cloudwards/BestStorageSection';
-import FeaturesSection from '../components/partnerships/cloudwards/FeaturesSection';
-import DealSection from '../components/partnerships/cloudwards/DealSection';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
+import HeroSection from '@/components/partnerships/cloudwards/HeroSection';
+import AdvantagesSection from '@/components/partnerships/cloudwards/AdvantagesSection';
+import BestStorageSection from '@/components/partnerships/cloudwards/BestStorageSection';
+import FeaturesSection from '@/components/partnerships/cloudwards/FeaturesSection';
+import DealSection from '@/components/partnerships/cloudwards/DealSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
 
 const Cloudwards = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');

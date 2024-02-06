@@ -1,23 +1,23 @@
 import Script from 'next/script';
 import React from 'react';
 
-import cookies from '../lib/cookies';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import HeroSection from '../components/cyber-awareness/HeroSection';
-import InfoSection from '../components/cyber-awareness/InfoSection';
-import CtaSection from '../components/cyber-awareness/CtaSection';
-import CtaSection2 from '../components/shared/CtaSection';
-import FAQSection from '../components/shared/FaqSection';
-import SuiteSection from '../components/cyber-awareness/SuiteSection';
-import SuiteSection2 from '../components/cyber-awareness/SuiteSection2';
-import VideoSection from '../components/cyber-awareness/VideoSection';
-import Footer from '../components/layout/Footer';
+import cookies from '@/lib/cookies';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/cyber-awareness/HeroSection';
+import InfoSection from '@/components/cyber-awareness/InfoSection';
+import CtaSection from '@/components/cyber-awareness/CtaSection';
+import CtaSection2 from '@/components/shared/CtaSection';
+import FAQSection from '@/components/shared/FaqSection';
+import SuiteSection from '@/components/cyber-awareness/SuiteSection';
+import SuiteSection2 from '@/components/cyber-awareness/SuiteSection2';
+import VideoSection from '@/components/cyber-awareness/VideoSection';
+import Footer from '@/components/layout/Footer';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import FeatureSection from '../components/cyber-awareness/FeatureSection';
-import QuizSection from '../components/cyber-awareness/QuizSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import FeatureSection from '@/components/cyber-awareness/FeatureSection';
+import QuizSection from '@/components/cyber-awareness/QuizSection';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');

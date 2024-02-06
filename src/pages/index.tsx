@@ -1,22 +1,21 @@
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import { isMobile } from 'react-device-detect';
-import cookies from '../lib/cookies';
-import { downloadDriveLinks } from '../lib/get-download-url';
-import HeroSection from '../components/home/HeroSection';
-import SocialProofSection from '../components/home/SocialProofSection';
-import FirstFeaturesSection from '../components/home/FirstFeaturesSection';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import TestimonialsSection from '../components/home/TestimonialsSection';
-import InfoSection from '../components/home/InfoSection';
-import SecondFeaturesSection from '../components/home/SecondFeaturesSection';
-import SecondWhatWeDoSection from '../components/home/SecondWhatWeDoSection';
-import FirstWhatWeDoSection from '../components/home/FirstWhatWeDoSection';
-import ThirdFeaturesSection from '../components/home/ThirdFeaturesSection';
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import axios from 'axios';
+import cookies from '@/lib/cookies';
+import { downloadDriveLinks } from '@/lib/get-download-url';
+import HeroSection from '@/components/home/HeroSection';
+import SocialProofSection from '@/components/home/SocialProofSection';
+import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import InfoSection from '@/components/home/InfoSection';
+import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
+import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
+import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
+import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');

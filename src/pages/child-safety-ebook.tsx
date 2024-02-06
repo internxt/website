@@ -1,20 +1,20 @@
 import { useState } from 'react';
 
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
-import HeroSection from '../components/inxt-library/shared/HeroSection';
-import WhatWeDo from '../components/inxt-library/shared/WhatWeDo';
-import WhatYouWillLearn from '../components/inxt-library/shared/WhatYouWillLearn';
-import CtaSection from '../components/shared/CtaSection';
-import FeatureSection from '../components/inxt-library/shared/FeatureSection';
-import RelatedResourcesSection from '../components/inxt-library/shared/RelatedResourcesSection';
-import RelatedBannerCard from '../components/inxt-library/components/RelatedbannerCard';
-import DownloadedEbookBanner from '../components/banners/DownloadedEbookBanner';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import HeroSection from '@/components/inxt-library/shared/HeroSection';
+import WhatWeDo from '@/components/inxt-library/shared/WhatWeDo';
+import WhatYouWillLearn from '@/components/inxt-library/shared/WhatYouWillLearn';
+import CtaSection from '@/components/shared/CtaSection';
+import FeatureSection from '@/components/inxt-library/shared/FeatureSection';
+import RelatedResourcesSection from '@/components/inxt-library/shared/RelatedResourcesSection';
+import RelatedBannerCard from '@/components/inxt-library/components/RelatedbannerCard';
+import DownloadedEbookBanner from '@/components/banners/DownloadedEbookBanner';
 
 const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'child-safety-ebook');
-  const [bannerVisible, setIsBannerVisible] = useState(false);
+  const [isBannerVisible, setIsBannerVisible] = useState(false);
 
   const onCloseBanner = () => {
     setIsBannerVisible(false);
@@ -33,7 +33,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
       />
 
       <DownloadedEbookBanner
-        bannerVisible={bannerVisible}
+        bannerVisible={isBannerVisible}
         onClose={onCloseBanner}
         textContent={textContent.DownloadedBanner}
       />

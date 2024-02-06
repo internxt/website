@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
-import HeroSection from '../components/dealfuel/HeroSection';
-import FeatureSection from '../components/dealfuel/FeatureSection';
-import GetLifetimeSection from '../components/dealfuel/GetLifetimeSection';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import cookies from '../lib/cookies';
-import PaymentSection from '../components/dealfuel/PaymentSection';
-import Navbar from '../components/layout/Navbar';
-import CtaSection from '../components/dealfuel/CtaSection';
+import HeroSection from '@/components/dealfuel/HeroSection';
+import FeatureSection from '@/components/dealfuel/FeatureSection';
+import GetLifetimeSection from '@/components/dealfuel/GetLifetimeSection';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import cookies from '@/lib/cookies';
+import PaymentSection from '@/components/dealfuel/PaymentSection';
+import Navbar from '@/components/layout/Navbar';
+import CtaSection from '@/components/dealfuel/CtaSection';
 
 import axios from 'axios';
-import SignUp from '../components/auth/SignUp';
+import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
 const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {

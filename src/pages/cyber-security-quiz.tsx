@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import CheckQuestions from '../components/CybersecurityQuiz/CheckQuestions';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import QuizSection from '../components/CybersecurityQuiz/QuizSection';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import QuizSection from '@/components/CybersecurityQuiz/QuizSection';
 
 const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');

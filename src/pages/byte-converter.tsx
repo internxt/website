@@ -1,19 +1,19 @@
 import Script from 'next/script';
 import React from 'react';
 
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import HeroSection from '../components/converter-tool/HeroSection';
-import ExplanationSection from '../components/converter-tool/ExplanationSection';
-import CtaSection from '../components/converter-tool/CtaSection';
-import InfoSection from '../components/converter-tool/InfoSection';
-import ConversionTableSection from '../components/converter-tool/ConversionTableSection';
-import FaqSection from '../components/shared/FaqSection';
-import Footer from '../components/layout/Footer';
-import TryInternxtBanner from '../components/banners/TryInternxtBanner';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/converter-tool/HeroSection';
+import ExplanationSection from '@/components/converter-tool/ExplanationSection';
+import CtaSection from '@/components/converter-tool/CtaSection';
+import InfoSection from '@/components/converter-tool/InfoSection';
+import ConversionTableSection from '@/components/converter-tool/ConversionTableSection';
+import FaqSection from '@/components/shared/FaqSection';
+import Footer from '@/components/layout/Footer';
+import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
-import ToolsSection from '../components/shared/ToolsSection';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import ToolsSection from '@/components/shared/ToolsSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 

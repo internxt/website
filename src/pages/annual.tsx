@@ -1,12 +1,12 @@
 import React from 'react';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import HeroSection from '../components/annual/HeroSection';
-import PaymentSection from '../components/annual/PaymentSection';
-import FeatureSection from '../components/annual/FeatureSection';
-import InfoSection from '../components/home/InfoSection';
-import CtaSection from '../components/pricing/CtaSection';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/annual/HeroSection';
+import PaymentSection from '@/components/annual/PaymentSection';
+import FeatureSection from '@/components/annual/FeatureSection';
+import InfoSection from '@/components/home/InfoSection';
+import CtaSection from '@/components/pricing/CtaSection';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
