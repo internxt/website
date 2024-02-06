@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Interval, ProductsProps, stripeService } from '@/components/services/stripeService';
+import { Interval, ProductsProps, stripeService } from '@/components/services/stripe.service';
 import PriceCard from '@/components/black-friday/payment/PriceCard';
-import { currencyService } from '@/components/services/currencyService';
+import { currencyService } from '@/components/services/currency.service';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';

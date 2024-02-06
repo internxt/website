@@ -4,7 +4,7 @@ import WheelComponent from '@/components/banners/components/WheelComponent';
 import { Info, X } from '@phosphor-icons/react';
 import TextInput from '@/components/components/TextInput';
 import { notificationService } from '@/components/Snackbar';
-import { stripeService } from '@/components/services/stripeService';
+import { stripeService } from '@/components/services/stripe.service';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
 
 const SHOW_WHEEL_BANNER = 'showWheelBanner';

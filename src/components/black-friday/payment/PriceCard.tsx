@@ -8,7 +8,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import { checkout, goToSignUpURL } from '@/lib/auth';
-import { stripeService } from '@/components/services/stripeService';
+import { stripeService } from '@/components/services/stripe.service';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
 
 export interface PriceCardProps {

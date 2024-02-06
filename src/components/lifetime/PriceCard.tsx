@@ -6,7 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import { checkout } from '@/lib/auth';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
-import { stripeService } from '@/components/services/stripeService';
+import { stripeService } from '@/components/services/stripe.service';
 
 interface PriceCardProps {
   planType: string;

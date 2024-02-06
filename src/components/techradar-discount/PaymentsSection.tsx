@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { currencyService } from '@/components/services/currencyService';
-import { ProductsProps, stripeService } from '@/components/services/stripeService';
+import { currencyService } from '@/components/services/currency.service';
+import { ProductsProps, stripeService } from '@/components/services/stripe.service';
 import PriceCard from './PriceCard';
 
 const PaymentsSection = ({ textContent }) => {

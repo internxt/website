@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PriceCard from './PriceCard';
-import { stripeService } from '@/components/services/stripeService';
+import { stripeService } from '@/components/services/stripe.service';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 

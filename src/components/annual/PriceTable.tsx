@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/prices/PriceCard';
-import { ProductsProps, stripeService } from '@/components/services/stripeService';
+import { ProductsProps, stripeService } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { currencyService } from '@/components/services/currencyService';
+import { currencyService } from '@/components/services/currency.service';
 
 export default function PriceTable({ lang }: { lang: string }) {
   const [products, setProducts] = useState<ProductsProps>();

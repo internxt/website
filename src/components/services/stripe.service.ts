@@ -1,7 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { notificationService } from '@/components/Snackbar';
-import { currencyService } from './currencyService';
+import { currencyService } from './currency.service';
 
 export enum Interval {
   Month = 'month',
