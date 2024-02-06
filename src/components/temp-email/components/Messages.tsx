@@ -1,8 +1,4 @@
-import { DownloadSimple, Envelope } from '@phosphor-icons/react';
-import fileDownload from 'js-file-download';
-import iconService from '../services/icon-service';
 import moment from 'moment';
-import PrettySize from 'prettysize';
 
 const Loader = (): JSX.Element => {
   return (
