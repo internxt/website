@@ -3,7 +3,13 @@ import { ProductsProps, stripeService } from '@/components/services/stripe.servi
 import { useEffect, useReducer } from 'react';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
 
-// Definir los tipos de acción
+interface UseStripeProductsAndCurrencyResponse {
+  products: ProductsProps | undefined;
+  loadingCards: boolean;
+  currency: { symbol: string; value: number };
+  coupon: CouponType | null;
+}
+
 type ActionType =
   | { type: 'SET_PRODUCTS'; payload: ProductsProps | undefined }
   | { type: 'SET_LOADING_CARDS'; payload: boolean }
@@ -25,12 +31,7 @@ const reducer = (state: any, action: ActionType) => {
   }
 };
 
-function useStripeProductsAndCurrency(couponCode?: CouponType): {
-  products: ProductsProps | undefined;
-  loadingCards: boolean;
-  currency: { symbol: string; value: number };
-  coupon: CouponType | null;
-} {
+function useStripeProductsAndCurrency(couponCode?: CouponType): UseStripeProductsAndCurrencyResponse {
   const initialState = {
     products: undefined,
     loadingCards: true,
