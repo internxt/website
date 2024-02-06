@@ -1,7 +1,7 @@
+import { Fragment } from 'react';
+
 import { Menu, Transition } from '@headlessui/react';
-import Link from 'next/link';
-import { CaretDown, Check, Globe } from '@phosphor-icons/react';
-import { Fragment, useEffect } from 'react';
+import { CaretDown } from '@phosphor-icons/react';
 
 const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
   function linkTitles() {

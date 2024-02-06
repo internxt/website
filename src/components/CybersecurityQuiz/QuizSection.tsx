@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Checkbox from './Checkbox';
-import Footer from '../layout/Footer';
+import Footer from '@/components/layout/Footer';
 import CheckQuestions from './CheckQuestions';
-import Link from 'next/link';
 
 type Views = 'initialState' | 'questions' | 'quizCompleted' | 'results';
 

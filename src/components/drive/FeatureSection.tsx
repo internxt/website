@@ -1,7 +1,7 @@
 import { ShieldStar } from '@phosphor-icons/react';
-import Image from "next/legacy/image";
-import RevealX from '../components/RevealX';
-import { goToSignUpURL } from '../../lib/auth';
+import Image from 'next/legacy/image';
+import RevealX from '@/components/components/RevealX';
+import { goToSignUpURL } from '@/lib/auth';
 
 const FeatureSection = ({ textContent }) => {
   return (

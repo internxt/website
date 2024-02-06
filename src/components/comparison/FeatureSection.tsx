@@ -1,5 +1,5 @@
 import React from 'react';
-import RevealY from '../components/RevealY';
+import RevealY from '@/components/components/RevealY';
 
 const FeatureSection = ({ textContent }) => {
   return (

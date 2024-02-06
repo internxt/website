@@ -1,5 +1,3 @@
-import { Check } from '@phosphor-icons/react';
-
 function Checkbox({
   id,
   checked,

@@ -4,7 +4,7 @@ import { Transition, Disclosure } from '@headlessui/react';
 import Hamburger from 'hamburger-react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 
-import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '../../lib/auth';
+import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
 import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';

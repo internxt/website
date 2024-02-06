@@ -10,8 +10,7 @@ import {
 } from 'next-share';
 import { useRouter } from 'next/router';
 import React from 'react';
-import RevealY from '../components/RevealY';
-import Tooltip from '../prices/ToolTip';
+import RevealY from '@/components/components/RevealY';
 
 export const InfoCard = ({ id, title, title1, img, link }) => {
   const [isShareIcon, setIsShareIcon] = React.useState(null);

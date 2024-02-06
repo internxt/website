@@ -1,5 +1,5 @@
 import React from 'react';
-import FaqAccordion from '../shared/FAQAccordion';
+import FaqAccordion from '@/components/shared/FAQAccordion';
 
 const InfoSection = ({ textContent }) => {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/legacy/image';
-import RenderDescription from '../shared/RenderDescription';
+import RenderDescription from '@/components/shared/RenderDescription';
 import { ClockCounterClockwise, GlobeHemisphereWest, PaperPlaneTilt } from '@phosphor-icons/react';
 
 const CardText = ({ textContent }) => (

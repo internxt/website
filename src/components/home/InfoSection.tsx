@@ -1,6 +1,6 @@
 import React from 'react';
-import RevealY from '../components/RevealY';
-import { CaretLeft, CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import RevealY from '@/components/components/RevealY';
+import { CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 const InfoSection = ({

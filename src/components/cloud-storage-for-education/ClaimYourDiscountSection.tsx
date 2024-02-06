@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import axios from 'axios';
 
-import TextInput from '../components/TextInput';
-import RenderDescription from '../shared/RenderDescription';
-import CheckboxItem from '../shared/CheckboxItem';
-import { notificationService } from '../Snackbar';
+import TextInput from '@/components/components/TextInput';
+import RenderDescription from '@/components/shared/RenderDescription';
+import CheckboxItem from '@/components/shared/CheckboxItem';
+import { notificationService } from '@/components/Snackbar';
 
 const MenuItems = {
   annual: [

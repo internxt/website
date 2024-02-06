@@ -1,5 +1,5 @@
 import React from 'react';
-import { goToSignUpURL } from '../../lib/auth';
+import { goToSignUpURL } from '@/lib/auth';
 
 const GetStartedSection = ({ textContent }) => (
   <section className="text-white">

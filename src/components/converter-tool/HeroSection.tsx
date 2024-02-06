@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 
 const options = [
   { value: 'b', label: 'Bytes' },
