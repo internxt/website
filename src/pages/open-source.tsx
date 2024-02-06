@@ -1,15 +1,15 @@
-import FileParallaxSection from '../components/home/FileParallaxSection';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import DifferencesBetweenOpenAndCloseSS from '../components/open-source/DifferencesBetweenOpenAndCloseSS';
-import ExploreOurOSS from '../components/open-source/ExploreOurOSS';
-import HeroSection from '../components/open-source/HeroSection';
-import LearningWithOSCommunity from '../components/open-source/LearningWithOSCommunity';
-import WhatAreTheBenefits from '../components/open-source/WhatAreTheBenefits';
-import WhatIsOSS from '../components/open-source/WhatIsOSS';
-import CtaSection from '../components/shared/CtaSection';
-import { downloadDriveLinks } from '../lib/get-download-url';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import DifferencesBetweenOpenAndCloseSS from '@/components/open-source/DifferencesBetweenOpenAndCloseSS';
+import ExploreOurOSS from '@/components/open-source/ExploreOurOSS';
+import HeroSection from '@/components/open-source/HeroSection';
+import LearningWithOSCommunity from '@/components/open-source/LearningWithOSCommunity';
+import WhatAreTheBenefits from '@/components/open-source/WhatAreTheBenefits';
+import WhatIsOSS from '@/components/open-source/WhatIsOSS';
+import CtaSection from '@/components/shared/CtaSection';
+import { downloadDriveLinks } from '@/lib/get-download-url';
 
 const CTA_SIGNUP_URL = `https://drive.internxt.com/new`;
 
@@ -50,10 +50,10 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const download = await downloadDriveLinks();
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/open-source.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/open-source.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {

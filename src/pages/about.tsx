@@ -53,10 +53,10 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const textContent = require(`../assets/lang/${lang}/about.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${lang}/about.json`);
   cookies.setReferralCookie(ctx);
 
   return {

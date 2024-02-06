@@ -63,10 +63,10 @@ export async function getServerSideProps(ctx) {
 
   const lang = allowedLanguages.includes(language) ? language : 'en';
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const langJson = require(`../assets/lang/${lang}/black-friday.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const langJson = require(`@/assets/lang/${lang}/black-friday.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

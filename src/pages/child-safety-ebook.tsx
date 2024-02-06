@@ -73,10 +73,10 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const navbar = require(`../assets/lang/en/navbar.json`);
-  const textContent = require(`../assets/lang/en/child-safety-ebook.json`);
-  const footer = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const navbar = require(`@/assets/lang/en/navbar.json`);
+  const textContent = require(`@/assets/lang/en/child-safety-ebook.json`);
+  const footer = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

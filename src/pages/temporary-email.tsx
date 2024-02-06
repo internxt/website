@@ -1,16 +1,16 @@
 import Script from 'next/script';
 import React from 'react';
 
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import HeroSection from '../components/temp-email/HeroSection';
-import SignupSection from '../components/temp-email/SignupSection';
-import InfoSection from '../components/temp-email/InfoSection';
-import ToolsSection from '../components/shared/ToolsSection';
-import QASection from '../components/shared/FaqSection';
-import Footer from '../components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/temp-email/HeroSection';
+import SignupSection from '@/components/temp-email/SignupSection';
+import InfoSection from '@/components/temp-email/InfoSection';
+import ToolsSection from '@/components/shared/ToolsSection';
+import QASection from '@/components/shared/FaqSection';
+import Footer from '@/components/layout/Footer';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Head from 'next/head';
 
 const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang, navbarLang, lang, bannerLang }) => {
@@ -60,12 +60,12 @@ const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`../assets/lang/${lang}/temporary-email.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
-  const bannerLang = require(`../assets/lang/${lang}/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
+  const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
 
   return {
     props: {

@@ -1,17 +1,17 @@
 import Script from 'next/script';
 import React from 'react';
 
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import HeroSection from '../components/virus-scanner/HeroSection';
-import FeaturesSection from '../components/virus-scanner/FeaturesSection';
-import CtaSection from '../components/virus-scanner/CtaSection';
-import FAQSection from '../components/shared/FaqSection';
-import ToolsSection from '../components/shared/ToolsSection';
-import TryInternxtBanner from '../components/banners/TryInternxtBanner';
+import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/virus-scanner/HeroSection';
+import FeaturesSection from '@/components/virus-scanner/FeaturesSection';
+import CtaSection from '@/components/virus-scanner/CtaSection';
+import FAQSection from '@/components/shared/FaqSection';
+import ToolsSection from '@/components/shared/ToolsSection';
+import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
-import { sm_faq, sm_breadcrumb } from '../components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 
 const Scan = ({ metatagsDescriptions, langJson, toolsContent, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
@@ -57,12 +57,12 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, navbarLang, footer
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/virus-scanner.json`);
-  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const bannerLang = require(`../assets/lang/${lang}/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/virus-scanner.json`);
+  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
 
   return {
     props: {

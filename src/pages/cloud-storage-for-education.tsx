@@ -56,10 +56,10 @@ const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textCont
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale || ctx.defaultLocale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const navbar = require(`../assets/lang/${lang}/navbar.json`);
-  const textContent = require(`../assets/lang/${lang}/cloud-storage-for-education.json`);
-  const footer = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const navbar = require(`@/assets/lang/${lang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${lang}/cloud-storage-for-education.json`);
+  const footer = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {

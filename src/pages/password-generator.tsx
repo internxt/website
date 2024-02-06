@@ -1,14 +1,14 @@
 import React from 'react';
 import cookies from '../lib/cookies';
-import { downloadDriveLinks } from '../lib/get-download-url';
-import Navbar from '../components/layout/Navbar';
-import Layout from '../components/layout/Layout';
-import HeroSection from '../components/password-generator/HeroSection';
-import Footer from '../components/layout/Footer';
-import InfoSection from '../components/password-generator/InfoSection';
-import CtaSection from '../components/shared/CtaSection';
-import ToolsSection from '../components/shared/ToolsSection';
-import FAQSection from '../components/shared/FaqSection';
+import { downloadDriveLinks } from '@/lib/get-download-url';
+import Navbar from '@/components/layout/Navbar';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/password-generator/HeroSection';
+import Footer from '@/components/layout/Footer';
+import InfoSection from '@/components/password-generator/InfoSection';
+import CtaSection from '@/components/shared/CtaSection';
+import ToolsSection from '@/components/shared/ToolsSection';
+import FAQSection from '@/components/shared/FaqSection';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
@@ -52,12 +52,12 @@ export async function getServerSideProps(ctx) {
 
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/${lang}/password-generator.json`);
-  const toolsContent = require(`../assets/lang/${lang}/components/tools/ToolSection.json`);
-  const bannerText = require(`../assets/lang/${lang}/banners.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/password-generator.json`);
+  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
+  const bannerText = require(`@/assets/lang/${lang}/banners.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

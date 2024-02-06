@@ -1,11 +1,11 @@
 import React from 'react';
-import cookies from '../lib/cookies';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import HeroSection from '../components/techradar-discount/HeroSection';
-import PaymentsSection from '../components/techradar-discount/PaymentsSection';
-import InfoSection from '../components/techradar-discount/InfoSection';
-import Footer from '../components/layout/Footer';
+import cookies from '@/lib/cookies';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/techradar-discount/HeroSection';
+import PaymentsSection from '@/components/techradar-discount/PaymentsSection';
+import InfoSection from '@/components/techradar-discount/InfoSection';
+import Footer from '@/components/layout/Footer';
 
 const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'techradar-discount');
@@ -28,10 +28,10 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/techradar-discount.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/techradar-discount.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   cookies.setReferralCookie(ctx);
 

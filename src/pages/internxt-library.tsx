@@ -1,9 +1,9 @@
-import HeroSection from '../components/inxt-library/main/HeroSection';
-import WhatWeDo from '../components/inxt-library/main/WhatWeDo';
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import CtaSection from '../components/shared/CtaSection';
+import HeroSection from '@/components/inxt-library/main/HeroSection';
+import WhatWeDo from '@/components/inxt-library/main/WhatWeDo';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import CtaSection from '@/components/shared/CtaSection';
 
 const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-library');
@@ -26,10 +26,10 @@ const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, foot
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const navbar = require(`../assets/lang/en/navbar.json`);
-  const inxtLibrary = require(`../assets/lang/en/internxt-library.json`);
-  const footer = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const navbar = require(`@/assets/lang/en/navbar.json`);
+  const inxtLibrary = require(`@/assets/lang/en/internxt-library.json`);
+  const footer = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

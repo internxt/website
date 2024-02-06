@@ -82,11 +82,11 @@ const PrivacyDirectory = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`../assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`../assets/lang/${lang}/navbar.json`);
-  const textContent = require(`../assets/lang/${lang}/privacy-directory.json`);
-  const footerLang = require(`../assets/lang/${lang}/footer.json`);
-  const bannerText = require(`../assets/lang/${lang}/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${lang}/privacy-directory.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const bannerText = require(`@/assets/lang/${lang}/banners.json`);
 
   return {
     props: {

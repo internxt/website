@@ -1,9 +1,9 @@
-import Footer from '../components/layout/Footer';
-import Layout from '../components/layout/Layout';
-import Navbar from '../components/layout/Navbar';
-import CtaSection from '../components/shared/CtaSection';
-import HeroSection from '../components/success-stories/HeroSection';
-import WhatWeDo from '../components/success-stories/WhatWeDo';
+import Footer from '@/components/layout/Footer';
+import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Navbar';
+import CtaSection from '@/components/shared/CtaSection';
+import HeroSection from '@/components/success-stories/HeroSection';
+import WhatWeDo from '@/components/success-stories/WhatWeDo';
 
 const InternxtForPhotographers = ({ metatagsDescriptions, navbarLang, bannerLang, langJson, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-for-journalists');
@@ -30,11 +30,11 @@ const InternxtForPhotographers = ({ metatagsDescriptions, navbarLang, bannerLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`../assets/lang/en/internxt-for-lawyers.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
-  const bannerLang = require(`../assets/lang/en/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/internxt-for-lawyers.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const bannerLang = require(`@/assets/lang/en/banners.json`);
 
   return {
     props: {

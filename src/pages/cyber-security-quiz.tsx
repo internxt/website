@@ -24,10 +24,10 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, foot
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`../assets/lang/en/metatags-descriptions.json`);
-  const navbarLang = require(`../assets/lang/en/navbar.json`);
-  const textContent = require(`../assets/lang/en/cyber-security-quiz.json`);
-  const footerLang = require(`../assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const textContent = require(`@/assets/lang/en/cyber-security-quiz.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {
