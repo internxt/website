@@ -1,12 +1,11 @@
 /* eslint-disable max-len */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
-import { Interval, ProductsProps, stripeService } from '@/components/services/stripe.service';
+import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { currencyService } from '@/components/services/currency.service';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
 import useStripeAndCurrency from '@/hooks/useProducts';

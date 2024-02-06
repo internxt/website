@@ -1,31 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Interval, ProductsProps, stripeService } from '@/components/services/stripe.service';
+import React from 'react';
+import { Interval } from '@/components/services/stripe.service';
 import PriceCard from '@/components/black-friday/payment/PriceCard';
-import { currencyService } from '@/components/services/currency.service';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
+import useStripeAndCurrency from '@/hooks/useProducts';
 
 const PaymentSection = ({ textContent }) => {
-  const [products, setProducts] = useState<ProductsProps>();
-  const [isLoading, setIsLoading] = useState(true);
-  const [currency, setCurrency] = useState({
-    symbol: '€',
-    value: 1,
-  });
-
-  useEffect(() => {
-    stripeService.getAllPrices().then((res) => {
-      setProducts(res);
-      setIsLoading(false);
-    });
-    currencyService.filterCurrencyByCountry().then((res) => {
-      setCurrency({
-        symbol: res.symbol,
-        value: res.value,
-      });
-    });
-  }, []);
+  const { products, currency, loadingCards } = useStripeAndCurrency();
 
   return (
     <section id="priceTable" className="overflow-hidden bg-[#111111]">
@@ -36,7 +18,7 @@ const PaymentSection = ({ textContent }) => {
         </div>
         {
           <Transition
-            show={isLoading}
+            show={loadingCards}
             enter="transition duration-500 ease-out"
             enterFrom="scale-95 translate-y-20 opacity-0"
             enterTo="scale-100 translate-y-0 opacity-100"
@@ -50,12 +32,12 @@ const PaymentSection = ({ textContent }) => {
           </Transition>
         }
         <Transition
-          show={!isLoading}
+          show={!loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6">
-            {!isLoading &&
+            {!loadingCards &&
               Object.values(products?.individuals?.[Interval.Year]).map((product: any) => (
                 <PriceCard
                   planType="individual"
