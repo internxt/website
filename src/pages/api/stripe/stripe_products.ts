@@ -17,8 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const productsRequest = await axios.get(PRODUCTS_URL + `?currency=${currency ?? 'eur'}`);
     const productsData: Product[] = productsRequest.data;
 
-    if (!productsData) return res.status(404).end(); //Something went wrong while fetching the products
-
     res.status(200).json(productsData);
   } else {
     res.status(405).end(); // Method Not Allowed
