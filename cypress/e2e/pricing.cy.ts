@@ -49,7 +49,7 @@ describe('Pricing page', () => {
 
   describe('When the free plan button is clicked', () => {
     it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
-      cy.get('#FreeAccountCard').contains('Sign up now').click();
+      cy.get('#freeAccountCard').contains('Sign up now').click();
 
       cy.url().should('eq', 'https://drive.internxt.com/new');
     });
