@@ -17,7 +17,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
+              <span className="font-bold">{textContent.TopBarBanner.title.boldText}</span>
               {textContent.TopBarBanner.title.normalText}
             </p>
           </div>
@@ -40,7 +40,6 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <div
-            onKeyDown={() => {}}
             className="flex flex-col items-center justify-center"
             onClick={() => {
               router.push('/lifetime');
