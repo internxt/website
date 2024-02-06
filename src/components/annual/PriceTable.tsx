@@ -60,7 +60,7 @@ export default function PriceTable({ lang, country }: { lang: string; country?: 
                     storage={product.storage}
                     price={product.price}
                     billingFrequency={'year'}
-                    popular={product.storage === '200GB'}
+                    popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     country={currency.symbol}
