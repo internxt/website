@@ -39,6 +39,7 @@ const PaymentsSection = ({ textContent }) => {
                 Object.values(products.individuals['year']).map((product: any) => {
                   return (
                     <PriceCard
+                      key={product.storage}
                       plan={product.storage}
                       price={product.price}
                       country={currency}

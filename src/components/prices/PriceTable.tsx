@@ -9,6 +9,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import { currencyService } from '@/components/services/currencyService';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
+import useStripeAndCurrency from '@/hooks/useProducts';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -25,50 +26,13 @@ const CurrencyValue = {
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+  const { products, currency, loadingCards } = useStripeAndCurrency();
 
-  const banner = require('../../assets/lang/en/banners.json');
-  const [loadingCards, setLoadingCards] = useState(true);
-  const [products, setProducts] = useState<ProductsProps>();
+  const banner = require('@/assets/lang/en/banners.json');
   const coupon = '9lsCo1eq';
-  const [currency, setCurrency] = useState({
-    symbol: '€',
-    value: 1,
-  });
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
-
-  useEffect(() => {
-    stripeService
-      .getAllPrices()
-      .then((prices) => {
-        setProducts(prices);
-        setLoadingCards(false);
-      })
-      .catch(() => {
-        stripeService.getAllPrices(true).then((res) => {
-          setProducts(res);
-          setLoadingCards(false);
-        });
-        console.error('Error getting prices');
-      });
-
-    currencyService
-      .filterCurrencyByCountry()
-      .then((res) => {
-        setCurrency({
-          symbol: res.symbol,
-          value: res.value,
-        });
-      })
-      .catch((err) => {
-        setCurrency({
-          symbol: '€',
-          value: 1,
-        });
-        console.error(err);
-      });
-  }, []);
 
   return (
     <section id="priceTable" className="overflow-hidden bg-gray-1">
