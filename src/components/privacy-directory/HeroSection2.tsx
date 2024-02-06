@@ -1,6 +1,6 @@
-import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import SignUpBanner from '../banners/SignUpBanner';
-import Header from '../shared/Header';
+import { CaretRight } from '@phosphor-icons/react';
+import SignUpBanner from '@/components/banners/SignUpBanner';
+import Header from '@/components/shared/Header';
 
 const HeroSection2 = ({ textContent, lang, bannerText }) => {
   return (

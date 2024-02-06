@@ -1,6 +1,6 @@
 import React from 'react';
 import { Check } from '@phosphor-icons/react';
-import { checkout } from '../../lib/auth';
+import { checkout } from '@/lib/auth';
 
 const currencyValue = {
   '€': 'eur',

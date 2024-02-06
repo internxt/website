@@ -3,10 +3,10 @@ import { isMobile } from 'react-device-detect';
 import { Copy, Info, Trash } from '@phosphor-icons/react';
 
 import Inbox from './components/InboxView';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 import useWindowFocus from './hooks/useWindowFocus';
 import { createEmail, getInbox } from './services/temp-mail.service';
-import { notificationService } from '../Snackbar';
+import { notificationService } from '@/components/Snackbar';
 
 const EMAIL_STORAGE_KEY = 'email';
 const SETUP_TIME_STORAGE_KEY = 'setupTime';

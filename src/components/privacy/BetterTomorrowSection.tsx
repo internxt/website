@@ -1,6 +1,6 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { CaretRight, ShieldStar } from '@phosphor-icons/react';
-import RevealX from '../components/RevealX';
+import RevealX from '@/components/components/RevealX';
 
 const BetterTomorrowSection = ({ textContent, lang }) => {
   return (

@@ -1,6 +1,6 @@
 import { Eye } from '@phosphor-icons/react';
-import SignUpBanner from '../banners/SignUpBanner';
-import Header from '../shared/Header';
+import SignUpBanner from '@/components/banners/SignUpBanner';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent, bannerText, lang }) => {
   const bulletedList = textContent.section2.bulletedList.list.map((item, index) => (

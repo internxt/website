@@ -3,8 +3,8 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 import * as anim from '../../../public/js/anim';
-import DownloadComponent from '../shared/DownloadComponent';
-import RevealX from '../components/RevealX';
+import DownloadComponent from '@/components/shared/DownloadComponent';
+import RevealX from '@/components/components/RevealX';
 import Image from 'next/legacy/image';
 
 const FeaturesSection = ({ textContent, lang, device, download }) => (

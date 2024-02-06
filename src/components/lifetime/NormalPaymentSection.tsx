@@ -1,5 +1,4 @@
 import React from 'react';
-import PriceTable from './PriceTable';
 
 import NormalPriceTable from './NormalPriceTable';
 

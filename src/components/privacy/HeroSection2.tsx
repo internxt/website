@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { UilPlayCircle } from '@iconscout/react-unicons';
-import YoutubeEmbed from '../utils/youtube';
+import YoutubeEmbed from '@/components/utils/youtube';
 import styles from './HeroSection.module.scss';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 
 const HeroSection2 = ({ textContent }) => {
   const [isOpen, setIsOpen] = useState(false);

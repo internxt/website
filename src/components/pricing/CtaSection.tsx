@@ -1,5 +1,5 @@
 import React from 'react';
-import { goToSignUpURL } from '../../lib/auth';
+import { goToSignUpURL } from '@/lib/auth';
 
 const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: boolean }) => {
   return (

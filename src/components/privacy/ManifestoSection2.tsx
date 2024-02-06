@@ -1,10 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-import FAQSection from '../shared/FaqSection';
-import { UilAngleRightB } from '@iconscout/react-unicons';
+import FAQSection from '@/components/shared/FaqSection';
 import { ArrowUpRight } from '@phosphor-icons/react';
-import RevealX from '../components/RevealX';
-import ProductCard from '../shared/ProductCard';
+import ProductCard from '@/components/shared/ProductCard';
 
 const ManifestoSection2 = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col">

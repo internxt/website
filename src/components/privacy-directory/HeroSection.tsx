@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../components/privacy/HeroSection.module.scss';
-import SignUpBanner from '../banners/SignUpBanner';
-import Header from '../shared/Header';
+import SignUpBanner from '@/components/banners/SignUpBanner';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent, lang, bannerText }) => (
   <>

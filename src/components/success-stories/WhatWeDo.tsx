@@ -1,6 +1,6 @@
 import { ListMagnifyingGlass, MagicWand, SketchLogo } from '@phosphor-icons/react';
-import RenderDescription from '../shared/RenderDescription';
-import SignUpBanner from '../banners/SignUpBanner';
+import RenderDescription from '@/components/shared/RenderDescription';
+import SignUpBanner from '@/components/banners/SignUpBanner';
 
 const WhatWeDo = ({ textContent, bannerLang }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import YoutubeEmbed from '../utils/youtube';
+import YoutubeEmbed from '@/components/utils/youtube';
 import { CaretRight } from '@phosphor-icons/react';
-import Header from '../shared/Header';
+import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent }) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown';
-import CheckboxSettings from '../password-generator/components/CheckboxSettings';
+import CheckboxSettings from '@/components/password-generator/components/CheckboxSettings';
 
 const CheckboxItem = ({
   checked,
