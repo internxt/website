@@ -1,31 +1,12 @@
 /* eslint-disable max-len */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/prices/PriceCard';
-import { ProductsProps, stripeService } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { currencyService } from '@/components/services/currency.service';
+import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
 
 export default function PriceTable({ lang }: { lang: string }) {
-  const [products, setProducts] = useState<ProductsProps>();
-  const [loadingCards, setLoadingCards] = useState(true);
-  const [currency, setCurrency] = useState({
-    symbol: '€',
-    value: 1,
-  });
-
-  useEffect(() => {
-    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()])
-      .then((res) => {
-        setProducts(res[0]);
-        setCurrency({
-          symbol: res[1].symbol,
-          value: res[1].value,
-        });
-        setLoadingCards(false);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
 
   return (
     <section id="priceTable" className="">

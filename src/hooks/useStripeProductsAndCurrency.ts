@@ -43,12 +43,12 @@ function useStripeProductsAndCurrency(couponCode?: CouponType): UseStripeProduct
 
   const fetchData = async () => {
     try {
-      const prices = await stripeService.getAllPrices();
+      const prices = await stripeService.getPrices();
       dispatch({ type: 'SET_PRODUCTS', payload: prices });
       dispatch({ type: 'SET_LOADING_CARDS', payload: false });
     } catch (error) {
       try {
-        const res = await stripeService.getAllPrices(true);
+        const res = await stripeService.getPrices(true);
         dispatch({ type: 'SET_PRODUCTS', payload: res });
         dispatch({ type: 'SET_LOADING_CARDS', payload: false });
       } catch (error) {
