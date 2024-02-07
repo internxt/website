@@ -16,7 +16,7 @@ export default function HeroSection({ textContent, lang }) {
         />
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
-          <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
+          <div className="flex w-screen flex-shrink-0 flex-col items-center space-y-6 px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
             <Header>
               {textContent.title.line1}{' '}
               <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
