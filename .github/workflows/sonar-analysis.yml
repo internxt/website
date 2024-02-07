@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com'
-
-      - name: Test and coverage
       - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
       - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
+
+      - name: Test and coverage
         uses: cypress-io/github-action@v6
         with:
           install: yarn
