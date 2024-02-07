@@ -1,8 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { checkout } from '@/lib/auth';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
