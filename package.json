@@ -12,6 +12,7 @@
     "start": "next start",
     "prod": "next export",
     "cypress": "cypress open",
+    "cypress:cov": "cypress --coverage",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
@@ -53,6 +54,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.12.20",
     "@svgr/webpack": "^6.5.1",
     "@tailwindcss/line-clamp": "0.4.0",
     "@types/jest": "^29.4.0",
