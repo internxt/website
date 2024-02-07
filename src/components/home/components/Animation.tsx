@@ -168,20 +168,6 @@ const Animation = () => {
           />
         </div>
       </div>
-
-      {/* Desktop view reduced */}
-      {/* <div className="ml-5 hidden max-w-2xl flex-grow translate-x-10 transform flex-col md:flex lg:-mr-7 xl:ml-20 xl:hidden">
-        <Image
-          loading="eager"
-          className="object-contain"
-          width={600}
-          height={450}
-          layout="responsive"
-          src="/images/home/devicesAscCut.webp"
-          draggable="false"
-          alt="desktop, laptop and phone with Internxt app"
-        />
-      </div> */}
     </>
   );
 };
