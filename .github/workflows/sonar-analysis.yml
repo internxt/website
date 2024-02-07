@@ -24,7 +24,7 @@ jobs:
         run: yarn
 
       - name: Test and coverage
-        run: yarn cypress
+        uses: ./.github/workflows/cypress.yml
 
       - name: Publish coverage results
         uses: actions/upload-artifact@v2
