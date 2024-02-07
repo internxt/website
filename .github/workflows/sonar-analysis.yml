@@ -20,17 +20,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com'
 
-      - name: Install dependencies
-        run: yarn
-
       - name: Test and coverage
-        uses: ./.github/workflows/cypress.yml
-
-      - name: Publish coverage results
-        uses: actions/upload-artifact@v2
+      - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
+      - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
+        uses: cypress-io/github-action@v6
         with:
-          name: coverage
-          path: cypress/coverage
+          install: yarn
+          build: yarn build
+          start: yarn start
+          browser: chrome
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
