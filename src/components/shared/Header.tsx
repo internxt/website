@@ -12,7 +12,11 @@ const Header = ({
   const isToolsPageStyle = isToolsPage ? 'sm:text-5xl' : 'sm:text-6xl';
 
   return (
-    <h1 className={`${maxWidth} ${className} text-4xl font-semibold leading-tight ${isToolsPageStyle}`}>{children}</h1>
+    <h1
+      className={`${maxWidth} ${className} whitespace-normal text-4xl font-semibold leading-tight sm:leading-tight ${isToolsPageStyle}`}
+    >
+      {children}
+    </h1>
   );
 };
 
