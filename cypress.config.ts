@@ -15,5 +15,10 @@ export default defineConfig({
     viewportHeight: 660,
     scrollBehavior: 'center',
     chromeWebSecurity: false,
+    env: {
+      codeCoverage: {
+        finalAllowedMemories: 512,
+      },
+    },
   },
 });
