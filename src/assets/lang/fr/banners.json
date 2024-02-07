@@ -53,9 +53,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Faites tourner la roue pour gagner des remises !",
-      "normalText": "Offre pour la Journée de l'Internet plus sûr : ",
-      "cta": "Tournez pour gagner"
+      "boldText": "50 % de réduction sur les plans à vie : ",
+      "normalText": "Sécurisez vos fichiers pour toujours !",
+      "cta": "Choisissez votre plan"
     }
   }
 }
