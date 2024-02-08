@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
@@ -23,12 +23,12 @@ const CurrencyValue = {
 };
 
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
+  const banner = require('@/assets/lang/en/banners.json');
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { products, currency, loadingCards } = useStripeProductsAndCurrency();
-
-  const banner = require('@/assets/lang/en/banners.json');
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
