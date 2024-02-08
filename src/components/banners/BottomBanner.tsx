@@ -105,7 +105,7 @@ const BottomBanner = () => {
             <Image src="/images/banners/wheel_web_banner_right.png" width={180} height={109} />
           </div> */}
           <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-gray-80">
-            <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red-dark/80">
+            <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red">
               <p className="text-3xl font-bold text-white lg:text-5xl">{label()}</p>
             </div>
             <p className="text-5xl font-bold">{title()}</p>

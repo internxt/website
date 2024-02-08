@@ -1,21 +1,21 @@
 import { CircleWavyCheck, X } from '@phosphor-icons/react';
-import React from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../black-friday/BF-HeroSection.module.scss';
 import { useRouter } from 'next/router';
 import { buttonDeal, buttonLink } from '../TextWithoutJson';
 import { BFBannerText } from '../TextWithoutJson';
 
 const BFBanner = () => {
-  const [showBanner, setShowBanner] = React.useState(false);
+  const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
   const lang = router.locale;
 
   const handleClose = () => {
-    localStorage.setItem('hideBanner', true);
+    localStorage.setItem('hideBanner', 'true');
     setShowBanner(false);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       if (router.pathname !== '/black-friday') {
         setShowBanner(true);
@@ -23,7 +23,7 @@ const BFBanner = () => {
     }, 20000);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const hideBanner = localStorage.getItem('hideBanner');
     if (showBanner) {
       window.dispatchEvent(new Event('CloseSquare'));

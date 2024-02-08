@@ -12,7 +12,7 @@ const CampaignCtaSection = ({ textContent }) => {
       <div className="flex flex-col items-center rounded-[32px] border-4 border-primary/10 bg-white px-10 xl:px-0">
         <div className="flex h-full flex-row">
           <div className="flex h-full w-max flex-col items-center justify-center space-y-6 py-16 text-center xl:items-start xl:pl-16 xl:text-left">
-            <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red-dark/80">
+            <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red">
               <p className="text-3xl font-bold text-white lg:text-5xl">{textContent.label}</p>
             </div>
             <div className="flex w-full max-w-[574px] flex-col space-y-4">

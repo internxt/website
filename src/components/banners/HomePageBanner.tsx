@@ -10,7 +10,7 @@ const HomePageBanner = () => {
   return (
     <div className="flex flex-col overflow-hidden rounded-[32px] bg-white pt-10 ring-4 ring-primary/7 md:hidden">
       <div className="flex w-full flex-col items-center justify-center space-y-6 text-center text-white lg:items-start lg:text-left">
-        <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red-dark/80">
+        <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red">
           <p className="text-5xl font-bold text-white">{textContent.tableSection.ctaBanner.label}</p>
         </div>
         <div className="flex w-full max-w-[253px] flex-col space-y-4">

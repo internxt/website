@@ -10,6 +10,7 @@ import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 const LifetimeBanner = dynamic(() => import('@/components/banners/LifetimeBanner'));
 
 const excludedPaths = [
@@ -84,7 +85,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             {!isExcludedPath ? (
               <>
                 <BottomBanner />
-                <LifetimeBanner />
+                <FeaturesBanner />
               </>
             ) : undefined}
           </div>
