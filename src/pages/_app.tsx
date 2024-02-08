@@ -7,6 +7,7 @@ import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
+import LifetimeBanner from '@/components/banners/LifetimeBanner';
 
 const excludedPaths = [
   '/lifetime',
@@ -74,9 +75,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
-        {/* <WheelBanner /> */}
-        {/* <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div> */}
         {hideIntercomButton ? null : <Intercom />}
+        {<div className="flex justify-center">{!isExcludedPath ? <LifetimeBanner /> : undefined}</div>}
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

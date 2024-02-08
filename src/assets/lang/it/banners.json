@@ -88,5 +88,11 @@
       "normalText": "Proteggi i tuoi file per sempre!",
       "cta": "Scegli il tuo piano"
     }
+  },
+  "lifetimeBanner": {
+    "label": "Cercate uno spazio sicuro per i vostri dati per tutta la vita?",
+    "title": "Proteggete i vostri file con i piani a vita di Internxt!",
+    "cta": "Scegli il piano",
+    "guarantee": "Garanzia di rimborso entro 30 giorni"
   }
 }

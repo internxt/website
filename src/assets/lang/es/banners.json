@@ -62,5 +62,11 @@
       "normalText": "¡Asegura tus archivos para siempre!",
       "cta": "Elige un plan"
     }
+  },
+  "lifetimeBanner": {
+    "label": "¿Necesitas almacenamiento seguro de por vida?",
+    "title": "¡Asegura tus archivos de por vida con nuestros planes!",
+    "cta": "Elige tu plan",
+    "guarantee": "Garantía de devolución de 30 días"
   }
 }

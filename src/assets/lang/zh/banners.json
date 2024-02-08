@@ -82,5 +82,11 @@
       "normalText": "永久保护您的文件！",
       "cta": "选择您的计划"
     }
+  },
+  "lifetimeBanner": {
+    "label": "寻找终身安全的数据存储？",
+    "title": "通过Internxt的终身计划保护您的文件！",
+    "cta": "选择计划",
+    "guarantee": "30天内退款保证"
   }
 }
