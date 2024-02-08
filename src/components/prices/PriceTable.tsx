@@ -29,7 +29,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const { products, currency, loadingCards } = useStripeProductsAndCurrency();
 
   const banner = require('@/assets/lang/en/banners.json');
-  const coupon = '9lsCo1eq';
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
@@ -143,14 +142,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={parseFloat((Math.floor(parseFloat(product.price) * 50) / 100).toFixed(2))}
+                        price={product.price}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
-                        priceBefore={product.price}
                         lang={lang}
                         country={currency.symbol}
-                        coupon={coupon}
                         currency={currencyValue}
                       />
                     )}
@@ -159,7 +156,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               })}
           </div>
         </Transition>
-        <div className="content flex w-full px-5 pb-20 md:pb-0">
+        <div id="freeAccountCard" className="content flex w-full px-5 pb-20 md:pb-0">
           <FreePlanCard textContent={contentText.freePlanCard} />
         </div>
 

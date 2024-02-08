@@ -58,9 +58,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "¡Gira la rueda y consigue descuentos!",
-      "normalText": "Día de Internet Seguro: ",
-      "cta": "Gira para ganar"
+      "boldText": "50% en planes lifetime: ",
+      "normalText": "¡Asegura tus archivos para siempre!",
+      "cta": "Elige un plan"
     }
   }
 }

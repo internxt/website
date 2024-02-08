@@ -27,7 +27,15 @@ interface LayoutProps {
 const INTERNXT_URL = 'https://internxt.com';
 const COOKIE_DOMAIN = 'internxt.com';
 
-const excludedPaths = [];
+const excludedPaths = [
+  '/pricing',
+  '/lifetime',
+  '/partner-discount',
+  '/techradar-discount',
+  '/stackcommerce',
+  '/dealfuel',
+  '/mightydeals',
+];
 const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
@@ -46,7 +54,7 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = false;
+  const showBanner = !excludedPaths.includes(pathname);
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 

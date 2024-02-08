@@ -84,9 +84,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Gira la ruota per vincere sconti!",
-      "normalText": "Offerta per il Safer Internet Day: ",
-      "cta": "Gira per vincere"
+      "boldText": "50 % di sconto sui piani a vita: ",
+      "normalText": "Proteggi i tuoi file per sempre!",
+      "cta": "Scegli il tuo piano"
     }
   }
 }
