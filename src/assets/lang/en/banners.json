@@ -93,5 +93,11 @@
       "normalText": "Secure your files forever!",
       "cta": "Choose your plan"
     }
+  },
+  "lifetimeBanner": {
+    "label": "Need secure storage for life?",
+    "title": "Protect your files forever with our lifetime plans!",
+    "cta": "Choose your plan",
+    "guarantee": "30-day money-back guarantee"
   }
 }
