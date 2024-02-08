@@ -13,6 +13,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
             width={496}
             height={520}
             quality={100}
+            loading="lazy"
             layout="intrinsic"
             className="rounded-3xl"
             alt="Only privacy services image"

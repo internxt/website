@@ -7,15 +7,15 @@ import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 
-const SocialProofSection = dynamic(() => import('@/components/home/SocialProofSection'));
-const Footer = dynamic(() => import('@/components/layout/Footer'));
-const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'));
-const ThirdFeaturesSection = dynamic(() => import('@/components/home/ThirdFeaturesSection'));
 const InfoSection = dynamic(() => import('@/components/home/InfoSection'));
+const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
 const SecondFeaturesSection = dynamic(() => import('@/components/home/SecondFeaturesSection'));
 const FirstWhatWeDoSection = dynamic(() => import('@/components/home/FirstWhatWeDoSection'));
 const SecondWhatWeDoSection = dynamic(() => import('@/components/home/SecondWhatWeDoSection'));
-const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
+const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'));
+const ThirdFeaturesSection = dynamic(() => import('@/components/home/ThirdFeaturesSection'));
+const SocialProofSection = dynamic(() => import('@/components/home/SocialProofSection'));
+const Footer = dynamic(() => import('@/components/layout/Footer'));
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');

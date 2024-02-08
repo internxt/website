@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import RevealY from '@/components/components/RevealY';
+import Image from 'next/image';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
   return (
@@ -25,14 +26,14 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
           </button>
 
           <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
-            <picture>
-              <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
-              <img
-                src="/images/home/Internxt-secure-cloud-storage.webp"
-                alt="Internxt secure cloud storage"
-                draggable={false}
-              />
-            </picture>
+            <Image
+              src="/images/home/Internxt-secure-cloud-storage.webp"
+              alt="Internxt secure cloud storage"
+              draggable={false}
+              loading="lazy"
+              width={1920}
+              height={1080}
+            />
           </RevealY>
         </div>
       </div>
