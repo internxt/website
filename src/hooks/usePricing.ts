@@ -6,14 +6,14 @@ import { CouponType } from '@/pages/api/stripe/get_coupons';
 interface UseStripeProductsAndCurrencyResponse {
   products: ProductsProps | undefined;
   loadingCards: boolean;
-  currency: { symbol: string; value: number };
+  currency: string;
   coupon: CouponType | null;
 }
 
 type ActionType =
   | { type: 'SET_PRODUCTS'; payload: ProductsProps | undefined }
   | { type: 'SET_LOADING_CARDS'; payload: boolean }
-  | { type: 'SET_CURRENCY'; payload: { symbol: string; value: number } }
+  | { type: 'SET_CURRENCY'; payload: string }
   | { type: 'SET_COUPON'; payload: CouponType | null };
 
 const reducer = (state: any, action: ActionType) => {
@@ -31,11 +31,11 @@ const reducer = (state: any, action: ActionType) => {
   }
 };
 
-function useStripeProductsAndCurrency(couponCode?: CouponType): UseStripeProductsAndCurrencyResponse {
+function usePricing(couponCode?: CouponType): UseStripeProductsAndCurrencyResponse {
   const initialState = {
     products: undefined,
     loadingCards: true,
-    currency: { symbol: '€', value: 1 },
+    currency: '€',
     coupon: null,
   };
 
@@ -58,9 +58,9 @@ function useStripeProductsAndCurrency(couponCode?: CouponType): UseStripeProduct
 
     try {
       const res = await currencyService.filterCurrencyByCountry();
-      dispatch({ type: 'SET_CURRENCY', payload: { symbol: res.symbol, value: res.value } });
+      dispatch({ type: 'SET_CURRENCY', payload: res.symbol });
     } catch (err) {
-      dispatch({ type: 'SET_CURRENCY', payload: { symbol: '€', value: 1 } });
+      dispatch({ type: 'SET_CURRENCY', payload: '€' });
       console.error(err);
     }
 
@@ -78,7 +78,12 @@ function useStripeProductsAndCurrency(couponCode?: CouponType): UseStripeProduct
     fetchData();
   }, []);
 
-  return { ...state };
+  return {
+    products: state.products,
+    loadingCards: state.loadingCards,
+    currency: state.currency,
+    coupon: state.coupon,
+  };
 }
 
-export default useStripeProductsAndCurrency;
+export default usePricing;

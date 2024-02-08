@@ -8,7 +8,7 @@ import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
-import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
+import usePricing from '@/hooks/usePricing';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -17,20 +17,13 @@ interface PriceTableProps {
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
-const CurrencyValue = {
-  '€': 'EUR',
-  $: 'USD',
-};
-
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const banner = require('@/assets/lang/en/banners.json');
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
-
-  const currencyValue = CurrencyValue[currency.symbol] || 'eur';
+  const { products, currency, loadingCards } = usePricing();
 
   return (
     <section id="priceTable" className="overflow-hidden bg-gray-1">
@@ -134,8 +127,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
-                        country={currency.symbol}
-                        currency={currencyValue}
+                        currency={currency}
                       />
                     ) : (
                       <PriceCard
@@ -147,8 +139,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
-                        country={currency.symbol}
-                        currency={currencyValue}
+                        currency={currency}
                       />
                     )}
                   </>

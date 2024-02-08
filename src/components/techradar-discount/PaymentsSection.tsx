@@ -1,10 +1,10 @@
 import React from 'react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from './PriceCard';
-import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
+import usePricing from '@/hooks/usePricing';
 
 const PaymentsSection = ({ textContent }) => {
-  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
+  const { products, currency, loadingCards } = usePricing();
 
   return (
     <section id="priceTable" className="">
@@ -29,7 +29,7 @@ const PaymentsSection = ({ textContent }) => {
                       key={product.storage}
                       plan={product.storage}
                       price={product.price}
-                      country={currency.symbol}
+                      currency={currency}
                       cta={['checkout', product.priceId]}
                       month={textContent.month}
                       annualPrice={product.price}

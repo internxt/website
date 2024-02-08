@@ -1,10 +1,3 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-nested-ternary */
-
 import { useRouter } from 'next/router';
 import React from 'react';
 
@@ -20,7 +13,7 @@ export interface PriceCardProps {
   popular?: boolean;
   lang: string;
   priceId?: string;
-  country?: string;
+  currency?: string;
   coupon?: string;
 }
 
@@ -39,7 +32,7 @@ export default function PriceCard({
   popular,
   lang,
   coupon,
-  country,
+  currency,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -97,7 +90,7 @@ export default function PriceCard({
             `}
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
                 {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
@@ -117,7 +110,7 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } text-base font-medium text-neutral-100 line-through`}
           >
-            {country}
+            {currency}
             {priceBefore}
           </span>
           <div
@@ -143,7 +136,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currencyValue[country as string],
+                currency: currencyValue[currency as string],
                 ...couponCode,
               });
             }

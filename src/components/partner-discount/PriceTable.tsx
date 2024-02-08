@@ -4,10 +4,10 @@ import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/partner-discount/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
-import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
+import usePricing from '@/hooks/usePricing';
 
 export default function PriceTable({ lang }: { lang: string }) {
-  const { products, currency, loadingCards, coupon } = useStripeProductsAndCurrency(CouponType.Special15Coupon);
+  const { products, currency, loadingCards, coupon } = usePricing(CouponType.Special15Coupon);
 
   return (
     <section id="priceTable" className="">
@@ -45,7 +45,7 @@ export default function PriceTable({ lang }: { lang: string }) {
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
-                    country={currency.symbol}
+                    currency={currency}
                     coupon={coupon ?? undefined}
                   />
                 );

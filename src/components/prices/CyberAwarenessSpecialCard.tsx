@@ -1,9 +1,3 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-nested-ternary */
 import React, { useEffect } from 'react';
 import { checkout } from '@/lib/auth';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
@@ -19,7 +13,7 @@ export default function SpecialPriceCard({
   cta,
   popular,
   lang,
-  country,
+  currency,
 }: PriceCardProps) {
   const [coupon, setCoupon] = React.useState<string>();
   const billingFrequencyList = {
@@ -106,14 +100,14 @@ export default function SpecialPriceCard({
                   planType.toLowerCase() === 'individual' ? 'flex-row space-x-px' : 'flex-col items-center'
                 }`}
               >
-                <span className={`currency`}>{country}</span>
+                <span className={`currency`}>{currency}</span>
                 <span className="price text-2xl font-semibold">{Math.abs((price * 20) / 100).toFixed(2)[0]}</span>
               </div>
             </>
           ) : (
             <>
               <p className={` flex flex-row items-start space-x-0.5 font-bold text-black`}>
-                <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+                <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
                 <span className="price text-4xl font-semibold">{Math.abs((price * 20) / 100).toFixed(2)}</span>
               </p>
               <div
@@ -122,7 +116,7 @@ export default function SpecialPriceCard({
                 }`}
               >
                 <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
-                  <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+                  <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
                   <span className="price text-2xl font-semibold line-through">
                     {price <= 0 ? `${contentText.freePlan}` : price.toFixed(2)}
                   </span>

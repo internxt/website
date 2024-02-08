@@ -3,10 +3,10 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/prices/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
+import usePricing from '@/hooks/usePricing';
 
 export default function PriceTable({ lang }: { lang: string }) {
-  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
+  const { products, currency, loadingCards } = usePricing();
 
   return (
     <section id="priceTable" className="">
@@ -44,7 +44,7 @@ export default function PriceTable({ lang }: { lang: string }) {
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
-                    country={currency.symbol}
+                    currency={currency}
                   />
                 );
               })}

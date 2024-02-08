@@ -20,7 +20,7 @@ export interface PriceCardProps {
   readonly cta: any[];
   readonly popular?: boolean;
   readonly lang: string;
-  readonly country?: string;
+  readonly currency?: string;
 }
 
 export default function PriceCard({
@@ -31,7 +31,7 @@ export default function PriceCard({
   billingFrequency,
   cta,
   popular,
-  country,
+  currency,
   lang,
 }: PriceCardProps) {
   const [couponCode, setCouponCode] = useState('');
@@ -43,14 +43,14 @@ export default function PriceCard({
   };
 
   const convertedPrice = useMemo(() => {
-    if (country !== '€') {
+    if (currency !== '€') {
       const splitPrice = price.toString().split('.');
       const checkDecimalPrice = splitPrice[1] >= '50' ? 0.99 : 0.49;
       return parseInt(splitPrice[0]) + checkDecimalPrice;
     }
     // En caso de que no se cumplan las condiciones, devuelve price sin cambios
     return price;
-  }, [country, price]);
+  }, [currency, price]);
 
   useEffect(() => {
     stripeService
@@ -105,7 +105,7 @@ export default function PriceCard({
             `}
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-white`}>
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
               <span className="text-4xl font-bold">
                 {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? convertedPrice : convertedPrice}
               </span>
@@ -123,7 +123,7 @@ export default function PriceCard({
           <span
             className={`priceBefore ${priceBefore ? 'flex' : 'hidden'} text-2xl font-semibold text-white line-through`}
           >
-            {country}
+            {currency}
             {priceBefore}
           </span>
           <div

@@ -11,9 +11,8 @@ export interface PriceCardProps {
   popular?: boolean;
   lang: string;
   priceId?: string;
-  country?: string;
-  coupon?: string;
-  currency?: CouponType;
+  coupon?: CouponType;
+  currency?: string;
 }
 
 const currencyValue = {
@@ -29,7 +28,6 @@ export default function PriceCard({
   billingFrequency,
   cta,
   popular,
-  country,
   lang,
   coupon,
   currency,
@@ -87,7 +85,7 @@ export default function PriceCard({
             `}
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
                 {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
@@ -107,7 +105,7 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } text-base font-medium text-neutral-100 line-through`}
           >
-            {country}
+            {currency}
             {priceBefore}
           </span>
           <div
@@ -133,7 +131,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currencyValue[country as string] ?? 'eur',
+                currency: currencyValue[currency as string] ?? 'eur',
                 couponCode: coupon ?? undefined,
               });
             }

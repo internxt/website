@@ -4,10 +4,10 @@ import PriceCard from '@/components/black-friday/payment/PriceCard';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
-import useStripeProductsAndCurrency from '@/hooks/useStripeProductsAndCurrency';
+import usePricing from '@/hooks/usePricing';
 
 const PaymentSection = ({ textContent }) => {
-  const { products, currency, loadingCards } = useStripeProductsAndCurrency();
+  const { products, currency, loadingCards } = usePricing();
 
   return (
     <section id="priceTable" className="overflow-hidden bg-[#111111]">
@@ -43,13 +43,13 @@ const PaymentSection = ({ textContent }) => {
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={Number(Math.abs((product.price * 9 * currency.value) / 100).toFixed(2))}
+                  price={Number(Math.abs((product.price * 9) / 100).toFixed(2))}
                   billingFrequency={Interval.Year}
                   popular={product.storage === '2TB'}
                   cta={['checkout', product.priceId]}
                   lang={'en'}
-                  country={currency.symbol}
-                  priceBefore={product.price * currency.value}
+                  currency={currency}
+                  priceBefore={product.price}
                 />
               ))}
           </div>
