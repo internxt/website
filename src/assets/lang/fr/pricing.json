@@ -14,11 +14,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 70%",
-      "title": "Prenez le contrôle de vos données !",
-      "subtitle": "Abonnez-vous et sécurisez vos fichiers avec Internxt",
-      "cta": "Obtenez 70% de réduction maintenant",
-      "guarantee": "Garantie de remboursement de 30 jours"
+      "label": "Économisez 69%",
+      "title": "Sentez l'amour, sécurisez vos fichiers !",
+      "subtitle": "Abonnez-vous et économisez avec Internxt.",
+      "cta": "Donnez-moi 69% DE RÉDUCTION",
+      "guarantee": "Garantie de remboursement de 30 jours",
+      "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients"
     },
     "featureSection": {
       "firstFeature": "Garantie de remboursement de 30 jours",

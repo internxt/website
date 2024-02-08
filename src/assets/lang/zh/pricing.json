@@ -15,11 +15,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "省 70%",
-      "title": "掌控你的数据!",
-      "subtitle": "订阅并使用Internxt保护你的文件",
-      "cta": "立即享受 70% 折扣",
-      "guarantee": "30天退款保证"
+      "label": "省69%",
+      "title": "感受爱，保护您的文件！",
+      "subtitle": "订阅 Internxt，节省更多。",
+      "cta": "给我 69% 折扣",
+      "guarantee": "30 天内退款保证",
+      "lastCta": "*此优惠仅适用于免费账户或新客户"
     },
     "featureSection": {
       "firstFeature": "30天退款保证",
