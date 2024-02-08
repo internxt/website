@@ -1,46 +1,24 @@
-import { useEffect, useState } from 'react';
-import AOS from 'aos';
-import { isMobile } from 'react-device-detect';
+import dynamic from 'next/dynamic';
+
 import cookies from '@/lib/cookies';
-import { downloadDriveLinks } from '@/lib/get-download-url';
-import HeroSection from '@/components/home/HeroSection';
-import SocialProofSection from '@/components/home/SocialProofSection';
-import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
+
 import Layout from '@/components/layout/Layout';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import InfoSection from '@/components/home/InfoSection';
-import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
-import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
-import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
-import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
-import FileParallaxSection from '@/components/home/FileParallaxSection';
+import Navbar from '@/components/layout/Navbar';
+import HeroSection from '@/components/home/HeroSection';
+import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 
-const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
+const SocialProofSection = dynamic(() => import('@/components/home/SocialProofSection'));
+const Footer = dynamic(() => import('@/components/layout/Footer'));
+const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'));
+const ThirdFeaturesSection = dynamic(() => import('@/components/home/ThirdFeaturesSection'));
+const InfoSection = dynamic(() => import('@/components/home/InfoSection'));
+const SecondFeaturesSection = dynamic(() => import('@/components/home/SecondFeaturesSection'));
+const FirstWhatWeDoSection = dynamic(() => import('@/components/home/FirstWhatWeDoSection'));
+const SecondWhatWeDoSection = dynamic(() => import('@/components/home/SecondWhatWeDoSection'));
+const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
+
+const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const [downloadUrl, setDownloadUrl] = useState(null);
-
-  function getOS() {
-    const osList = [
-      { keyword: 'Android', name: 'Android' },
-      { keyword: 'iPad', name: 'iPad' },
-      { keyword: 'iPhone', name: 'iPhone' },
-      { keyword: 'Win', name: 'Windows' },
-      { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
-      { keyword: 'X11', name: 'UNIX' },
-      { keyword: 'Linux', name: 'Linux' },
-    ];
-
-    const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
-
-    return res ? res.name : `Not known (${window.navigator.appVersion})`;
-  }
-
-  useEffect(() => {
-    setDownloadUrl(downloadURL[getOS()]);
-    AOS.init();
-  }, [downloadURL]);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
@@ -72,8 +50,6 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, do
 };
 
 export async function getServerSideProps(ctx) {
-  const downloadURL = await downloadDriveLinks();
-
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -86,7 +62,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      downloadURL,
       metatagsDescriptions,
       langJson,
       navbarLang,

@@ -15,7 +15,11 @@ const LifetimeBanner = (): JSX.Element => {
   useEffect(() => {
     const getSquareBannerSS = sessionStorage.getItem(SHOW_LIFETIME_BANNER);
     if (getSquareBannerSS) setShowBanner(false);
-    else setShowBanner(true);
+    else {
+      setTimeout(() => {
+        setShowBanner(true);
+      }, 3000);
+    }
   }, []);
 
   const onClose = () => {
