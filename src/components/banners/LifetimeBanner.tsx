@@ -15,7 +15,11 @@ const LifetimeBanner = (): JSX.Element => {
   useEffect(() => {
     const getSquareBannerSS = sessionStorage.getItem(SHOW_LIFETIME_BANNER);
     if (getSquareBannerSS) setShowBanner(false);
-    else setShowBanner(true);
+    else {
+      setTimeout(() => {
+        setShowBanner(true);
+      }, 3000);
+    }
   }, []);
 
   const onClose = () => {
@@ -35,16 +39,22 @@ const LifetimeBanner = (): JSX.Element => {
         <button className="absolute right-0 z-50 m-5 flex w-auto text-white" onClick={onClose}>
           <X size={32} />
         </button>
-        <div className="flex w-screen max-w-[800px] flex-col py-10 pl-10">
-          <div className="absolute right-0 top-0">
-            <Image src={'/images/banners/lifetime_big.png'} alt="Discount label" height={260} width={508} />
+        <div className="flex w-screen max-w-[800px] flex-col py-10 px-5 lg:pl-10">
+          <div className="absolute top-20 right-0 lg:top-0">
+            <Image
+              src={'/images/banners/lifetime_big.png'}
+              loading="lazy"
+              alt="Internxt Lifetime Offer"
+              width={508}
+              height={260}
+            />
           </div>
-          <div className="z-50 flex w-full  flex-col space-y-8">
+          <div className="z-50 flex w-full flex-col items-center space-y-8 text-center lg:items-start lg:text-left">
             <div className="flex flex-col space-y-4">
-              <p className="pr-20 text-3xl font-semibold text-white">{textContent.lifetimeBanner.label}</p>
+              <p className="text-3xl font-semibold text-white lg:pr-20">{textContent.lifetimeBanner.label}</p>
               <p className="max-w-[500px] text-5xl font-bold text-white">{textContent.lifetimeBanner.title}</p>
             </div>
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col items-center space-y-6 lg:items-start">
               <button
                 className="relative flex w-max flex-row items-center space-x-4 rounded-lg bg-white px-7 py-3 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-1 sm:text-lg"
                 onClick={() => {

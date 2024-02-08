@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 export default function FileParallaxSection() {
   return (
@@ -50,6 +50,7 @@ export default function FileParallaxSection() {
                   src={`/images/home/files-parallax/${item.url}`}
                   alt={item.alt}
                   layout="fill"
+                  loading="lazy"
                   objectFit="contain"
                   draggable={false}
                 />

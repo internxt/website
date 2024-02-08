@@ -26,7 +26,7 @@ const ProductCard = ({ animationDirection, textContent, lang, imageUrl }) => {
 
       <div className="lg:pl-15 relative mt-16 flex self-stretch  lg:mt-0">
         <div className="hidden lg:flex lg:max-w-[480px]">
-          <Image src={imageUrl} width={480} height={480} alt="Internxt Drive" draggable={false} />
+          <Image src={imageUrl} loading="lazy" width={480} height={480} alt="Internxt Drive" draggable={false} />
         </div>
       </div>
     </RevealX>

@@ -1,10 +1,12 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Marquee from 'react-fast-marquee';
+import Image from 'next/legacy/image';
+
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
-import Image from 'next/legacy/image';
-import Header from '@/components/shared/Header';
-import Animation from './components/Animation';
+const Header = dynamic(() => import('@/components/shared/Header'));
+const Animation = dynamic(() => import('./components/Animation'));
 
 export default function HeroSection({ textContent, lang }) {
   return (
