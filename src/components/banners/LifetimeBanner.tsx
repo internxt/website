@@ -13,8 +13,8 @@ const LifetimeBanner = (): JSX.Element => {
   const textContent = require(`@/assets/lang/${language}/banners.json`);
 
   useEffect(() => {
-    const getSquareBannerLS = sessionStorage.getItem(SHOW_LIFETIME_BANNER);
-    if (getSquareBannerLS) setShowBanner(false);
+    const getSquareBannerSS = sessionStorage.getItem(SHOW_LIFETIME_BANNER);
+    if (getSquareBannerSS) setShowBanner(false);
     else setShowBanner(true);
   }, []);
 
