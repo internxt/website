@@ -53,9 +53,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "50 % de réduction sur les plans à vie : ",
-      "normalText": "Sécurisez vos fichiers pour toujours !",
-      "cta": "Choisissez votre plan"
+      "boldText": "Profitez de 69 % de réduction sur les plans mensuels ou annuels.",
+      "normalText": "Ressentez l'amour en ce jour de la Saint-Valentin !",
+      "cta": "Choisissez un plan"
     }
   },
   "lifetimeBanner": {

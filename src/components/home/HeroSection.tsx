@@ -6,6 +6,7 @@ import Image from 'next/legacy/image';
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
 import { useRouter } from 'next/navigation';
+import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -20,7 +21,7 @@ export default function HeroSection({ textContent, lang }) {
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col-reverse items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
           <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
             {/* <div className="flex object-contain lg:hidden">
               <Image
@@ -33,6 +34,7 @@ export default function HeroSection({ textContent, lang }) {
                 alt="Laptop and phone with Internxt app"
               />
             </div> */}
+
             <Header>
               {textContent.title.line1}{' '}
               <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
@@ -58,7 +60,7 @@ export default function HeroSection({ textContent, lang }) {
 
           {/* Desktop animation/image */}
           <div
-            className="flex items-center pl-5 lg:pl-0 lg:pt-5"
+            className="hidden items-center lg:flex lg:pt-5"
             onClick={() => {
               router.push('/pricing');
             }}
