@@ -9,6 +9,7 @@ import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
+import BottomBanner from '@/components/banners/BottomBanner';
 const LifetimeBanner = dynamic(() => import('@/components/banners/LifetimeBanner'));
 
 const excludedPaths = [
@@ -78,7 +79,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        {<div className="flex justify-center">{!isExcludedPath ? <LifetimeBanner /> : undefined}</div>}
+        {
+          <div className="flex justify-center">
+            {!isExcludedPath ? (
+              <>
+                <BottomBanner />
+                <LifetimeBanner />
+              </>
+            ) : undefined}
+          </div>
+        }
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

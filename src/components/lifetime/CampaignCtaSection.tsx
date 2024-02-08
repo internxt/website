@@ -1,6 +1,6 @@
-import { CheckCircle } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
 import React from 'react';
+import Image from 'next/legacy/image';
+import { CheckCircle } from '@phosphor-icons/react';
 
 const CampaignCtaSection = ({ textContent }) => {
   function handleOnClick() {

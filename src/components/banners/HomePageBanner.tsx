@@ -1,91 +1,11 @@
 import { CheckCircle } from '@phosphor-icons/react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 
 const HomePageBanner = () => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/pricing.json`);
-
-  const header = () => {
-    switch (lang) {
-      case 'en':
-        return 'Christmas savings!';
-      case 'es':
-        return '¡Ya es Black Friday!';
-      case 'fr':
-        return 'Black Friday arrivé!';
-      case 'ru':
-        return 'Черная пятница наступила!';
-      default:
-        return 'Christmas savings!';
-    }
-  };
-
-  const title = () => {
-    switch (lang) {
-      case 'en':
-        return (
-          <p className="text-4xl font-bold">
-            50% OFF <br /> all lifetime plans!
-          </p>
-        );
-      case 'es':
-        return (
-          <p className="text-4xl font-bold">
-            DESCUENTO 50% <br /> en planes lifetime!
-          </p>
-        );
-      case 'fr':
-        return (
-          <p className="text-4xl font-bold">
-            50% de reduction <br /> sur plans lifetime!
-          </p>
-        );
-      case 'ru':
-        return (
-          <p className="text-4xl font-bold">
-            Скидка 50% <br /> на пожизненные планы!
-          </p>
-        );
-      default:
-        return (
-          <p className="text-4xl font-bold">
-            50% OFF <br /> all lifetime plans!
-          </p>
-        );
-    }
-  };
-
-  const description = () => {
-    switch (lang) {
-      case 'en':
-        return '30-day money-back guarantee';
-      case 'es':
-        return '30 días de garantía';
-      case 'fr':
-        return 'Garantie de remboursement de 30 jours';
-      case 'ru':
-        return '30-дневная гарантия возврата денег';
-      default:
-        return '30-day money-back guarantee';
-    }
-  };
-
-  const ctaText = () => {
-    switch (lang) {
-      case 'en':
-        return 'Get the deal!';
-      case 'es':
-        return '¡Obtén la oferta!';
-      case 'fr':
-        return "Obtenez l'offre";
-      case 'ru':
-        return 'Получить скидку!';
-      default:
-        return 'Get the deal!';
-    }
-  };
 
   return (
     <div className="flex flex-col overflow-hidden rounded-[10px] bg-primary pt-10 md:hidden">
