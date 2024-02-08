@@ -27,7 +27,7 @@ export default function HeroSection({ textContent, lang }) {
                 draggable="false"
                 width={600}
                 height={450}
-                alt="desktop, laptop and phone with Internxt app"
+                alt="Laptop and phone with Internxt app"
               />
             </div>
             <Header>
