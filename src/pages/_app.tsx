@@ -1,13 +1,15 @@
 import React, { memo, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { AppProps } from 'next/app';
-import '@/styles/globals.scss';
 import Script from 'next/script';
-import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
-import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
+import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
+
+import '@/styles/globals.scss';
+import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
-import LifetimeBanner from '@/components/banners/LifetimeBanner';
+const LifetimeBanner = dynamic(() => import('@/components/banners/LifetimeBanner'));
 
 const excludedPaths = [
   '/lifetime',

@@ -41,7 +41,13 @@ const LifetimeBanner = (): JSX.Element => {
         </button>
         <div className="flex w-screen max-w-[800px] flex-col py-10 pl-10">
           <div className="absolute right-0 top-0">
-            <Image src={'/images/banners/lifetime_big.png'} alt="Discount label" height={260} width={508} />
+            <Image
+              src={'/images/banners/lifetime_big.png'}
+              loading="lazy"
+              alt="Internxt Lifetime Offer"
+              width={508}
+              height={260}
+            />
           </div>
           <div className="z-50 flex w-full  flex-col space-y-8">
             <div className="flex flex-col space-y-4">
