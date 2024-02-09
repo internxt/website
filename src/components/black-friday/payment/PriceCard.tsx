@@ -1,15 +1,8 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-nested-ternary */
-
 import { useEffect, useMemo, useState } from 'react';
 
 import { checkout, goToSignUpURL } from '@/lib/auth';
 import { stripeService } from '@/components/services/stripeService';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { CouponType } from '@/lib/types/types';
 
 export interface PriceCardProps {
   readonly planType: string;

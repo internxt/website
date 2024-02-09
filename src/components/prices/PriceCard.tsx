@@ -1,5 +1,5 @@
 import { checkout, goToSignUpURL } from '@/lib/auth';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { CouponType } from '@/lib/types/types';
 
 export interface PriceCardProps {
   planType: string;
@@ -12,8 +12,8 @@ export interface PriceCardProps {
   lang: string;
   priceId?: string;
   country?: string;
-  coupon?: string;
-  currency?: CouponType;
+  coupon?: CouponType;
+  currency?: string;
 }
 
 const currencyValue = {
