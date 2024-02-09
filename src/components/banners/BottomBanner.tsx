@@ -26,7 +26,7 @@ const BottomBanner = () => {
       case 'es':
         return 'Ahorra un 69%';
       case 'ru':
-        return 'Скидка 69%';
+        return 'Скидка 69%!';
       case 'fr':
         return 'Économisez 69%';
       case 'it':
@@ -47,7 +47,7 @@ const BottomBanner = () => {
       case 'es':
         return 'Ofertas de San Valentín!';
       case 'ru':
-        return 'Облачное хранилище для поклонников безопасности!';
+        return 'На день Св. Валентина!';
       case 'fr':
         return 'Offres de la Saint-Valentin!';
       case 'it':
