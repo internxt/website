@@ -88,7 +88,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           <div className="flex flex-col px-5">
             <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
           </div>
-          <div id="priceTable" className="flex flex-col items-center px-5">
+          <div id="priceTable" className="flex flex-col items-center px-5 text-center">
             <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
