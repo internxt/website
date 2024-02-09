@@ -10,6 +10,7 @@ import { currencyService } from '@/components/services/currencyService';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
+import { CouponType } from '@/lib/types/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -31,6 +32,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const banner = require('@/assets/lang/en/banners.json');
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState<ProductsProps>();
+  const [coupon, setCoupon] = useState<CouponType>();
   const [currency, setCurrency] = useState({
     symbol: '€',
     value: 1,
@@ -66,6 +68,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           symbol: '€',
           value: 1,
         });
+        console.error(err);
+      });
+
+    stripeService
+      .getCoupon(CouponType.ValentinesCoupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
         console.error(err);
       });
   }, []);
@@ -180,13 +191,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price}
+                        price={parseFloat((Math.floor(parseFloat(product.price) * 31) / 100).toFixed(2))}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
+                        priceBefore={product.price}
                         lang={lang}
                         country={currency.symbol}
                         currency={currencyValue}
+                        coupon={coupon}
                       />
                     )}
                   </>

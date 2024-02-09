@@ -40,7 +40,7 @@ export default function PriceCard({
     year: 'annually',
   };
 
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
   return (
     <div
