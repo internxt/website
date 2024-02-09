@@ -1,6 +1,5 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/legacy/image';
 import Marquee from 'react-fast-marquee';
@@ -12,8 +11,6 @@ const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
 export default function HeroSection({ textContent, lang }) {
-  const router = useRouter();
-
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
