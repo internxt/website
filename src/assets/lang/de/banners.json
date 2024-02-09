@@ -26,10 +26,19 @@
     }
   },
   "valentinesBanner": {
-    "title": "Liebe ohne Grenzen!",
-    "subtitle": "Erhalte 90 % Rabatt auf unseren 2-TB-Plan mit dem Code VDAY",
-    "cta": "Hol dir den Deal",
-    "toast": "In die Zwischenablage kopiert!"
+    "label": "Spare 69%",
+    "title": "Süße Valentinstagsgeschenke!",
+    "cta": "Wähle einen Plan",
+    "guarantee": "30 Tage Geld-zurück-Garantie",
+    "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden",
+    "features": [
+      "Erhalte 60 % Rabatt auf unseren 2-TB-Plan",
+      "Sicherer Cloud-Speicher",
+      "Backup privater Dateien und Fotos",
+      "End-to-end verschlüsselte Übertragungen",
+      "Kein unbefugter Zugriff",
+      "Angebot endet am 25. Februar"
+    ]
   },
   "tryOutInternxtGeneralBanner": {
     "title": "Versuche Internxt",

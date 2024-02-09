@@ -65,8 +65,8 @@ const FeaturesBanner = () => {
           <div className="hidden items-center lg:flex">
             <div className="flex flex-col">
               <div className="flex flex-col space-y-8">
-                {textContent.valentinesBanner.features.map((card, index) => (
-                  <div className="flex flex-row" key={index}>
+                {textContent.valentinesBanner.features.map((card) => (
+                  <div className="flex flex-row" key={card}>
                     <Heart size={32} weight="fill" className="mr-4 text-red-dark" />
                     <p className="whitespace-nowrap text-xl font-semibold text-gray-80">{card}</p>
                   </div>
