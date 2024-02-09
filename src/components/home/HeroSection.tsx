@@ -1,13 +1,12 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Marquee from 'react-fast-marquee';
+import { useRouter } from 'next/navigation';
 import Image from 'next/legacy/image';
+import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
-import { useRouter } from 'next/navigation';
-import CampaignCtaSection from '../lifetime/CampaignCtaSection';
-import HomePageBanner from '../banners/HomePageBanner';
+import HomePageBanner from '@/components/banners/HomePageBanner';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 

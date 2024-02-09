@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
-import Image from 'next/legacy/image';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
@@ -10,7 +8,6 @@ const BottomBanner = () => {
   const [hidePopup, setHidePopup] = useState(false);
   const router = useRouter();
   const lang = router.locale;
-  const globalDialogs = useGlobalDialog();
 
   useEffect(() => {
     const getSquareBannerLS = sessionStorage.getItem(SHOW_SQUARE_BANNER_LS);

@@ -91,8 +91,8 @@ const BFBanner = () => {
             <div className="hidden items-center lg:flex">
               <div className="flex w-[340px] flex-col">
                 <div className="flex flex-col">
-                  {cards.map((card, index) => (
-                    <div className="flex flex-row pb-5 last:pb-0" key={index}>
+                  {cards.map((card) => (
+                    <div className="flex flex-row pb-5 last:pb-0" key={card.title}>
                       <CircleWavyCheck size={32} weight="fill" className="mr-4 text-primary" />
                       <p className="text-xl font-semibold text-white">{card.title}</p>
                     </div>
