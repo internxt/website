@@ -1,6 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Image from 'next/legacy/image';
 import Marquee from 'react-fast-marquee';
 
@@ -60,12 +61,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           {/* Desktop animation/image */}
-          <div
-            className="hidden items-center lg:flex lg:pt-5"
-            onClick={() => {
-              router.push('/pricing');
-            }}
-          >
+          <Link href="/pricing" className="hidden items-center lg:flex lg:pt-5" locale={lang}>
             <Image
               src="/images/home/internxt_valentines_sale.webp"
               width={562}
@@ -73,7 +69,7 @@ export default function HeroSection({ textContent, lang }) {
               alt="Internxt Valentines Sale"
               className="cursor-pointer object-contain"
             />
-          </div>
+          </Link>
           {/* <Animation /> */}
         </div>
 
