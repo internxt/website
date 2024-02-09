@@ -12,7 +12,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
-        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:flex`}
+        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-red-dark text-white md:flex`}
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
