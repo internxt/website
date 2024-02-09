@@ -2,8 +2,7 @@ import { CircleWavyCheck, X } from '@phosphor-icons/react';
 import { useState, useEffect } from 'react';
 import styles from '../black-friday/BF-HeroSection.module.scss';
 import { useRouter } from 'next/router';
-import { buttonDeal, buttonLink } from '../TextWithoutJson';
-import { BFBannerText } from '../TextWithoutJson';
+import { buttonDeal, buttonLink, BFBannerText } from '../TextWithoutJson';
 
 const BFBanner = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -28,7 +27,7 @@ const BFBanner = () => {
     if (showBanner) {
       window.dispatchEvent(new Event('CloseSquare'));
     }
-    if (Boolean(hideBanner)) {
+    if (hideBanner) {
       setShowBanner(false);
     }
     window.addEventListener('unload', function (e) {
