@@ -19,6 +19,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
+      - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
 
       - name: Cypress install
         uses: cypress-io/github-action@v6
@@ -51,5 +53,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
+          install: yarn
+          build: yarn build
           start: yarn start
           browser: chrome
