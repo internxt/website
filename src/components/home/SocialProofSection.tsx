@@ -9,12 +9,17 @@ const SocialProofSection = ({ textContent, lang }) => (
 
         <div className="flex flex-row flex-wrap justify-around sm:px-10">
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovh cloud logo" />
-          </div>
-          <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img loading="lazy" src="../../logos/investors/telefonica.svg" draggable="false" alt="telefonica logo" />
           </div>
-
+          <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
+            <img
+              loading="lazy"
+              src="../../logos/investors/eset-logo.svg"
+              className="mx-auto h-7"
+              draggable="false"
+              alt="eset logo"
+            />
+          </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
               loading="lazy"
@@ -24,14 +29,9 @@ const SocialProofSection = ({ textContent, lang }) => (
               alt="Revolut logo"
             />
           </div>
+
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img
-              loading="lazy"
-              src="../../logos/investors/eset-logo.svg"
-              className="mx-auto h-6"
-              draggable="false"
-              alt="eset logo"
-            />
+            <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovh cloud logo" />
           </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
