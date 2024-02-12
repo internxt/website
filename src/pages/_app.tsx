@@ -11,7 +11,6 @@ import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
-const LifetimeBanner = dynamic(() => import('@/components/banners/LifetimeBanner'));
 
 const excludedPaths = [
   '/lifetime',
@@ -20,6 +19,7 @@ const excludedPaths = [
   '/techradar-discount',
   '/stackcommerce',
   '/dealfuel',
+  '/temporary-email',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
