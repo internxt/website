@@ -28,7 +28,7 @@ function checkIfProductExistAndRedirectWorks(product) {
 //Check if the buttons works properly
 describe('Pricing page', () => {
   const products: Products = {};
-  before(() => {
+  beforeEach(() => {
     cy.request('get', `${window.origin}/api/stripe/stripe_products`).then((response) => {
       response.body.map((product) => {
         const id = product.interval + bytes(product.bytes);
@@ -40,9 +40,6 @@ describe('Pricing page', () => {
         };
       });
     });
-  });
-
-  beforeEach(() => {
     cy.visit('/pricing');
   });
 
