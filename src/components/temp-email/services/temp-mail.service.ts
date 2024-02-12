@@ -9,7 +9,13 @@ async function createEmail() {
 const getInbox = async (token: string) => {
   const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
 
-  return inbox.data.email;
+  const { data } = inbox;
+
+  if (data.expired) {
+    return { expired: data.expired };
+  } else {
+    return data.emails;
+  }
 };
 
 export { createEmail, getInbox };
