@@ -1,5 +1,4 @@
 import React, { memo, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
@@ -11,7 +10,6 @@ import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
-const LifetimeBanner = dynamic(() => import('@/components/banners/LifetimeBanner'));
 
 const excludedPaths = [
   '/lifetime',
@@ -20,6 +18,7 @@ const excludedPaths = [
   '/techradar-discount',
   '/stackcommerce',
   '/dealfuel',
+  '/temporary-email',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];

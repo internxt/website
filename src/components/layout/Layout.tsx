@@ -35,6 +35,7 @@ const excludedPaths = [
   '/stackcommerce',
   '/dealfuel',
   '/mightydeals',
+  '/temporary-email',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 
