@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
 import { checkout } from '../../../../lib/auth';
-import { CouponType } from '../../../../pages/api/stripe/get_coupons';
 import { Interval, stripeService } from '../../../services/stripeService';
 import { currencyService } from '../../../services/currencyService';
+import { CouponType } from '@/lib/types/types';
 
 const ButtonDeal = ({ textContent, large }) => {
   const [priceId, setPriceId] = React.useState('');

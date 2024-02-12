@@ -26,10 +26,19 @@
     }
   },
   "valentinesBanner": {
-    "title": "Love without limits!",
-    "subtitle": "Get 90% off our 2TB plan with code VDAY",
-    "cta": "Get the deal",
-    "toast": "Copied to clipboard!"
+    "label": "Risparmia il 69%",
+    "title": "Dolci regali di San Valentino!",
+    "cta": "Scegli un piano",
+    "guarantee": "Garanzia di rimborso entro 30 giorni",
+    "lastCta": "*L'offerta è valida solo per account gratuiti o nuovi clienti",
+    "features": [
+      "Risparmia su piani mensili e annuali",
+      "Archiviazione cloud sicura e protetta",
+      "Open source e trasparente",
+      "Trasferimenti crittografati end-to-end",
+      "Nessun accesso non autorizzato",
+      "L'offerta termina il 25 febbraio"
+    ]
   },
   "tryOutInternxtGeneralBanner": {
     "title": "Try Internxt",
@@ -84,9 +93,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "50 % di sconto sui piani a vita: ",
-      "normalText": "Proteggi i tuoi file per sempre!",
-      "cta": "Scegli il tuo piano"
+      "boldText": "Approfitta del 69% di sconto su piani mensili o annuali.",
+      "normalText": "Sentiti amato questo San Valentino!",
+      "cta": "Scegli il piano"
     }
   },
   "lifetimeBanner": {

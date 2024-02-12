@@ -7,10 +7,10 @@
 
 import React, { useEffect } from 'react';
 import { checkout } from '@/lib/auth';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
 import { analyticsService } from '@/components/services/analyticsService';
 import { Interval, stripeService } from '@/components/services/stripeService';
 import { PriceCardProps } from './PriceCard';
+import { CouponType } from '@/lib/types/types';
 
 export default function SpecialPriceCard({
   planType,
