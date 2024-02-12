@@ -27,10 +27,10 @@ const SocialProofSection = ({ textContent, lang }) => (
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
               loading="lazy"
-              src="../../logos/investors/notion_vc.webp"
-              className="mx-auto h-4"
+              src="../../logos/investors/eset-logo.svg"
+              className="mx-auto h-6"
               draggable="false"
-              alt="notion vc logo"
+              alt="eset logo"
             />
           </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
