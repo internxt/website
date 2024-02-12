@@ -11,8 +11,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
     });
 
-    console.log(email);
-
     return res.status(200).json(email.data);
   } else {
     return res.status(405).json({ message: 'Method not allowed' });
