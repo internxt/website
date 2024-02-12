@@ -1,5 +1,4 @@
 import React, { memo, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
