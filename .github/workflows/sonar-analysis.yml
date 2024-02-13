@@ -6,7 +6,6 @@ on:
     branches: ['main']
 
 permissions:
-  contents: read
   pull-requests: read
 
 jobs:
@@ -17,7 +16,7 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
@@ -33,13 +32,13 @@ jobs:
       - name: Test and coverage
         uses: cypress-io/github-action@v6
         with:
-          install: yarn
+          install: yarn install
           build: yarn build
           start: yarn start
           browser: chrome
 
-      - name: SonarCloud Scan
+      - name: Analyze with SonarCloud
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
