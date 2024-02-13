@@ -41,6 +41,9 @@ describe('Pricing page', () => {
       });
     });
     cy.visit('/pricing');
+    cy.get('priceTable', {
+      timeout: 10000,
+    }).should('be.visible');
   });
 
   describe('When the free plan button is clicked', () => {
