@@ -1,5 +1,6 @@
 import { MagnifyingGlass } from '@phosphor-icons/react';
 import RenderDescription from '../shared/RenderDescription';
+import Image from 'next/image';
 
 const WhatGoogleKnowsSection = ({ textContent }) => {
   const numberedList = textContent.section1.numberedList.map((item, index) => (
@@ -34,14 +35,12 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           </div>
           <p className="text-lg text-gray-80">{textContent.section1.footer}</p>
         </div>
-
         <img
           src="/images/what-does-google-know-about-me/google-privacy-settings.png"
           alt="google privacy settings"
           className="w-full max-w-4xl pt-16"
           draggable={false}
         />
-
         <div className="flex max-w-2xl flex-col space-y-16">
           {/* Second section */}
           <div className="flex flex-col space-y-3">
@@ -54,10 +53,12 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
             <RenderDescription description={textContent.section3.description} />
           </div>
         </div>
-        <img
+        <Image
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank');
+            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
           }}
+          width={897}
+          height={200}
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.webp"
           alt="google privacy settings"
           className="w-full max-w-4xl cursor-pointer py-16"
