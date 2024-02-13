@@ -87,10 +87,6 @@ describe('Pricing page', () => {
     });
 
     describe('When the payment plan is annually', () => {
-      beforeEach(() => {
-        cy.get('#priceTable');
-      });
-
       describe('When the plan is 200GB of space', () => {
         it('Redirect to stripe checkout with the correct planId and mode', () => {
           checkIfProductExistAndRedirectWorks(products.year200GB);
