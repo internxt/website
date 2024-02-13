@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { CaretRight } from '@phosphor-icons/react';
 
 const BannersSection = ({ textContent, lang }) => {
@@ -21,13 +21,15 @@ const BannersSection = ({ textContent, lang }) => {
               alt="Password checker image"
             />
             <p className="max-w-[240px] text-2xl font-medium">{textContent.passwordCheckerBanner.title}</p>
-            <div
-              onClick={() => window.open(`https://internxt.com/${lang}/password-checker`, '_blank')}
+            <button
+              onClick={() =>
+                window.open(`https://internxt.com/${lang}/password-checker`, '_blank', 'noopener noreferrer')
+              }
               className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
             >
               <p className="text-sm font-semibold">{textContent.passwordCheckerBanner.cta}</p>
               <CaretRight size={14} weight={'bold'} />
-            </div>
+            </button>
           </div>
           <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center">
             <Image
@@ -40,13 +42,15 @@ const BannersSection = ({ textContent, lang }) => {
               alt="Byte converter image"
             />
             <p className="max-w-[200px] text-2xl font-medium">{textContent.byteConverterBanner.title}</p>
-            <div
-              onClick={() => window.open(`https://internxt.com/${lang}/byte-converter`, '_blank')}
+            <button
+              onClick={() =>
+                window.open(`https://internxt.com/${lang}/byte-converter`, '_blank', 'noopener noreferrer')
+              }
               className="flex cursor-pointer flex-row items-center justify-center text-primary hover:underline"
             >
               <p className="text-sm font-semibold">{textContent.byteConverterBanner.cta}</p>
               <CaretRight size={14} weight={'bold'} />
-            </div>
+            </button>
           </div>
         </div>
       </div>

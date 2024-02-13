@@ -39,7 +39,7 @@ const FeatureSection = ({ textContent }) => {
         <div className="flex max-w-[288px] flex-col">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
-              <div
+              <button
                 className={`flex ${
                   cardIndex === index ? 'border-gray-80' : 'border-gray-10'
                 } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
@@ -48,7 +48,7 @@ const FeatureSection = ({ textContent }) => {
                 }}
               >
                 <p className="text-2xl font-medium text-gray-100  hover:text-primary">{info.title}</p>
-              </div>
+              </button>
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </Fragment>
           ))}
@@ -106,14 +106,14 @@ const FeatureSection = ({ textContent }) => {
             {textContent.BetterFutureSection.description}
           </ReactMarkdown>
           <div className="flex flex-row items-center space-x-1">
-            <p
+            <button
               className="cursor-pointer text-lg font-semibold text-primary hover:text-primary-dark hover:underline"
               onClick={() => {
-                window.open('mailTo:hello@internxt.com', '_blank');
+                window.open('mailTo:hello@internxt.com', '_blank', 'noopener noreferrer');
               }}
             >
               {textContent.BetterFutureSection.cta}
-            </p>
+            </button>
             <CaretRight size={10} className="text-primary" />
           </div>
         </div>
