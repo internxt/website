@@ -56,18 +56,18 @@ const WhyJoinSection = ({ textContent }) => {
             ))}
           </RevealY>
           <RevealY>
-            <div
+            <button
               onClick={() => {
                 window.open(
                   'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1',
                   '_blank',
-                  'nofollow',
+                  'noopener noreferrer nofollow',
                 );
               }}
               className="flex w-max cursor-pointer items-center rounded-lg border border-primary bg-primary px-5 py-3 hover:bg-primary-dark"
             >
               <p className="text-lg font-medium text-white">{textContent.cta}</p>
-            </div>
+            </button>
           </RevealY>
         </div>
       </div>
