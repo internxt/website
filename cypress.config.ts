@@ -10,6 +10,10 @@ export default defineConfig({
       // with any changed environment variables
       return config;
     },
+    reporter: 'lcov',
+    reporterOptions: {
+      reportDir: '.nyc_output',
+    },
     baseUrl: 'http://localhost:3000',
     viewportWidth: 1500,
     viewportHeight: 660,
