@@ -126,28 +126,36 @@ const HeroSection = ({ textContent }) => {
   }
 
   function getMailInbox(userToken: string) {
-    getInbox(userToken).then((res) => {
-      let messageIdCounter = messages?.length;
-      if (res == null) return;
-      if (res?.length > 0) {
-        const message = res.map((item) => {
-          messageIdCounter++;
-          return {
-            ...item,
-            opened: false,
-            id: messageIdCounter,
-          };
-        });
-        const allMessages = messages == null ? [...message] : [...messages, ...message];
-        setMessages(allMessages);
-        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessages));
-        const unopenedMessages = allMessages.filter((item) => !item.opened).length;
-        setOpenedMessages(unopenedMessages);
-      } else {
-        const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-        setMessages(JSON.parse(inbox));
-      }
-    });
+    if (!userToken) return;
+    getInbox(userToken)
+      .then((res) => {
+        if (res.expired) return;
+
+        let messageIdCounter = messages?.length;
+        if (res == null) return;
+        if (res?.length > 0) {
+          const message = res.map((item) => {
+            messageIdCounter++;
+            return {
+              ...item,
+              opened: false,
+              id: messageIdCounter,
+            };
+          });
+          const allMessages = messages == null ? [...message] : [...messages, ...message];
+          setMessages(allMessages);
+          localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessages));
+          const unopenedMessages = allMessages.filter((item) => !item.opened).length;
+          setOpenedMessages(unopenedMessages);
+        } else {
+          const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
+          setMessages(JSON.parse(inbox));
+        }
+      })
+      .catch((err) => {
+        const error = err as Error;
+        console.log(error);
+      });
   }
 
   function onRefresh() {

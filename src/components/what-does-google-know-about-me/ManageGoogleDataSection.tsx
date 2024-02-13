@@ -1,5 +1,6 @@
 import { Trash } from '@phosphor-icons/react';
 import RenderDescription from '@/components/shared/RenderDescription';
+import Image from 'next/image';
 
 const ManageGoogleDataSection = ({ textContent }) => {
   const numberedList = textContent.section2.numberedList.map((item) => (
@@ -43,10 +44,12 @@ const ManageGoogleDataSection = ({ textContent }) => {
           className="w-full max-w-2xl"
         />
 
-        <img
+        <Image
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank');
+            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
           }}
+          width={897}
+          height={200}
           className="w-full max-w-[897px] cursor-pointer"
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.png"
           alt="google activity settings"
@@ -84,13 +87,15 @@ const ManageGoogleDataSection = ({ textContent }) => {
           className="w-full max-w-md pt-16"
           draggable={false}
         />
-        <img
+        <Image
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank');
+            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
           }}
+          width={897}
+          height={200}
+          className="w-full max-w-[897px] cursor-pointer"
           src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnowsAboutUs_EN.png"
           alt="Internxt CTA"
-          className="w-full max-w-[897px] cursor-pointer"
           draggable={false}
         />
         {/* Seventh Section */}

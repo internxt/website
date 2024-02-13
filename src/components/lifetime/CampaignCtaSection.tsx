@@ -1,43 +1,41 @@
-import { CheckCircle } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
 import React from 'react';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import Image from 'next/legacy/image';
+import { CheckCircle } from '@phosphor-icons/react';
 
 const CampaignCtaSection = ({ textContent }) => {
-  const globalDialog = useGlobalDialog();
   function handleOnClick() {
-    globalDialog.openDialog(GlobalDialog.Wheel);
+    window.location.hash = 'priceTable';
   }
 
   return (
     <div className="flex flex-col overflow-hidden">
-      <div className="flex flex-col items-center rounded-[32px] bg-primary px-10 xl:px-0">
-        <div className="flex flex-row">
-          <div className="flex w-full flex-col items-center justify-center space-y-6 py-16 text-center text-white xl:items-start xl:pl-16 xl:text-left">
-            <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-primary-dark py-2 px-4">
-              <p className="textxl font-bold text-white lg:text-2xl">{textContent.label}</p>
+      <div className="flex flex-col items-center rounded-[32px] border-4 border-primary/10 bg-white px-10 xl:px-0">
+        <div className="flex h-full flex-row">
+          <div className="flex h-full w-max flex-col items-center justify-center space-y-6 py-16 text-center xl:items-start xl:pl-16 xl:text-left">
+            <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red">
+              <p className="text-3xl font-bold text-white lg:text-5xl">{textContent.label}</p>
             </div>
             <div className="flex w-full max-w-[574px] flex-col space-y-4">
-              <p className="text-4xl font-bold md:text-5xl">{textContent.title}</p>
-              <p className="text-xl">{textContent.subtitle}</p>
+              <p className="text-4xl font-bold text-red-dark">{textContent.title}</p>
+              <p className="text-xl text-gray-80">{textContent.subtitle}</p>
             </div>
             <div className="flex flex-col items-center gap-4 lg:flex-row">
               <button
                 onClick={handleOnClick}
-                className="flex w-max items-center rounded-lg bg-white px-5 py-3 text-lg font-medium text-gray-80"
+                className="flex w-max items-center rounded-lg bg-gray-5 px-5 py-3 text-lg font-medium text-gray-80 hover:bg-gray-10"
               >
                 {textContent.cta}
               </button>
-              <div className="flex flex-row items-center space-x-3">
-                <CheckCircle size={24} className="text-white" />
-                <p className="font-medium text-white lg:text-lg">{textContent.guarantee}</p>
+              <div className="flex flex-row items-center space-x-3 text-gray-80">
+                <CheckCircle size={24} className="" />
+                <p className="whitespace-nowrap font-medium lg:text-lg">{textContent.guarantee}</p>
               </div>
             </div>
-            <p>{textContent.lastCta}</p>
+            <p className="text-sm font-medium text-gray-80">{textContent.lastCta}</p>
           </div>
           <div className="relative hidden h-full w-full flex-col xl:flex">
             <Image
-              src="/images/banners/wheel_pricing.png"
+              src="/images/banners/internxt_valentines_sale_pricing.webp"
               width={653}
               height={455}
               quality={100}

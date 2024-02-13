@@ -1,9 +1,18 @@
 {
   "valentinesBanner": {
-    "title": "L'amour sans limites!",
-    "subtitle": "90% de réduction sur notre plan 2 To avec le code VDAY",
-    "cta": "Obtenez l'offre",
-    "toast": "Copié sur le presse-papiers"
+    "label": "Économisez 69%",
+    "title": "Délices sucrés de la Saint-Valentin!",
+    "cta": "Choisissez un plan",
+    "guarantee": "Garantie de remboursement de 30 jours",
+    "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients",
+    "features": [
+      "Économisez sur les plans mensuels et annuels",
+      "Stockage cloud sûr et sécurisé",
+      "Open source et transparent",
+      "Transferts chiffrés de bout en bout",
+      "Aucun accès non autorisé",
+      "L'offre se termine le 25 février"
+    ]
   },
   "tryOutInternxtGeneralBanner": {
     "title": "Internxt",
@@ -53,9 +62,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "50 % de réduction sur les plans à vie : ",
-      "normalText": "Sécurisez vos fichiers pour toujours !",
-      "cta": "Choisissez votre plan"
+      "boldText": "Profitez de 69 % de réduction sur les plans mensuels ou annuels.",
+      "normalText": "Ressentez l'amour en ce jour de la Saint-Valentin !",
+      "cta": "Choisissez un plan"
     }
   },
   "lifetimeBanner": {

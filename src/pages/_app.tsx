@@ -1,5 +1,4 @@
 import React, { memo, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
@@ -9,7 +8,8 @@ import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
-const LifetimeBanner = dynamic(() => import('@/components/banners/LifetimeBanner'));
+import BottomBanner from '@/components/banners/BottomBanner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const excludedPaths = [
   '/lifetime',
@@ -18,6 +18,7 @@ const excludedPaths = [
   '/techradar-discount',
   '/stackcommerce',
   '/dealfuel',
+  '/temporary-email',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
@@ -78,7 +79,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        {<div className="flex justify-center">{!isExcludedPath ? <LifetimeBanner /> : undefined}</div>}
+        {
+          <div className="flex justify-center">
+            {!isExcludedPath ? (
+              <>
+                <BottomBanner />
+                <FeaturesBanner />
+              </>
+            ) : undefined}
+          </div>
+        }
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

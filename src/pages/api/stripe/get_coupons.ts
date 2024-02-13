@@ -1,25 +1,5 @@
+import { CouponType } from '@/lib/types/types';
 import { NextApiRequest, NextApiResponse } from 'next';
-
-export enum CouponType {
-  TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
-  TwoTBCoupon75 = 'COUPON_SUBSCRIPTION_75_OFF',
-  LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
-  LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
-  CloudwardsCoupon = 'COUPON_CLOUDWARDS',
-  Special15Coupon = 'COUPON_SPECIAL15',
-  AnnualDiscount = 'ANNUAL_PLAN_80_DISCOUNT',
-  BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
-  ChristmasCoupon = 'COUPON_CHRISTMAS',
-  LifetimeExclusive = 'COUPON_LIFETIME_FIFTY',
-  SoftSale = 'COUPON_SOFTSALE50',
-  DataPrivacy = 'COUPON_DATA_PRIVACY',
-  Wheel10 = 'WHEEL10_COUPON',
-  Wheel15 = 'WHEEL15_COUPON',
-  Wheel25 = 'WHEEL25_COUPON',
-  Wheel30 = 'WHEEL30_COUPON',
-  Wheel45 = 'WHEEL45_COUPON',
-  Wheel50 = 'WHEEL50_COUPON',
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method === 'GET') {

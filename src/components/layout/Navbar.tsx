@@ -31,7 +31,7 @@ export default function Navbar(props: NavbarProps) {
 
   const router = useRouter();
   const lang = router.locale;
-  const getTitles = require(`../../assets/lang/en/navbar.json`);
+  const getTitles = require(`@/assets/lang/en/navbar.json`);
   // DIALOG MANAGEMENT
 
   // SCROLL EFFECTS
@@ -215,6 +215,7 @@ export default function Navbar(props: NavbarProps) {
                       window.open(
                         'https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1',
                         '_blank',
+                        'noopener noreferrer',
                       )
                     }
                     className={`cursor-pointer whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
@@ -436,22 +437,21 @@ export default function Navbar(props: NavbarProps) {
                       </Link>
 
                       {props.lang === 'en' && router.pathname === '/temporary-email' ? (
-                        <>
-                          <p
-                            onClick={() => {
-                              setMenuState(false);
-                              window.open(
-                                'https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1',
-                                '_blank',
-                              );
-                            }}
-                            className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-250 duration-300 ${
-                              menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                            }`}
-                          >
-                            Need a VPN?
-                          </p>
-                        </>
+                        <button
+                          onClick={() => {
+                            setMenuState(false);
+                            window.open(
+                              'https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1',
+                              '_blank',
+                              'noopener noreferrer',
+                            );
+                          }}
+                          className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-250 duration-300 ${
+                            menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                          }`}
+                        >
+                          Need a VPN?
+                        </button>
                       ) : undefined}
 
                       <a

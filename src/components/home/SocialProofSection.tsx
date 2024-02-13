@@ -9,29 +9,29 @@ const SocialProofSection = ({ textContent, lang }) => (
 
         <div className="flex flex-row flex-wrap justify-around sm:px-10">
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovh cloud logo" />
+            <img loading="lazy" src="../../logos/investors/telefonica.svg" draggable="false" alt="telefonica logo" />
           </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img loading="lazy" src="../../logos/investors/telefonica.svg" draggable="false" alt="telefonica logo" />
+            <img
+              loading="lazy"
+              src="../../logos/investors/eset-logo.svg"
+              className="mx-auto h-7"
+              draggable="false"
+              alt="eset logo"
+            />
+          </div>
+          <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
+            <img
+              loading="lazy"
+              src="../../logos/investors/Revolut.png"
+              className="mx-auto h-5"
+              draggable="false"
+              alt="Revolut logo"
+            />
           </div>
 
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img
-              loading="lazy"
-              src="../../logos/investors/esade.webp"
-              className="mx-auto h-7"
-              draggable="false"
-              alt="esade logo"
-            />
-          </div>
-          <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img
-              loading="lazy"
-              src="../../logos/investors/notion_vc.webp"
-              className="mx-auto h-4"
-              draggable="false"
-              alt="notion vc logo"
-            />
+            <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovh cloud logo" />
           </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
@@ -42,10 +42,10 @@ const SocialProofSection = ({ textContent, lang }) => (
             />
           </div>
           {lang === 'es' && (
-            <div
+            <button
               className="flex h-20 w-2/5 flex-shrink-0 cursor-pointer items-center justify-center md:w-1/3 xl:w-auto xl:px-6"
               onClick={() => {
-                window.open('https://opentrustedcloud.ovhcloud.com/es-es/', '_blank');
+                window.open('https://opentrustedcloud.ovhcloud.com/es-es/', '_blank', 'noopener noreferrer');
               }}
             >
               <img
@@ -55,7 +55,7 @@ const SocialProofSection = ({ textContent, lang }) => (
                 alt="OTC logo"
                 className="mx-auto h-[26px]"
               />
-            </div>
+            </button>
           )}
         </div>
       </div>

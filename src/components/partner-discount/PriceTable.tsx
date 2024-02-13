@@ -4,8 +4,8 @@ import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/partner-discount/PriceCard';
 import { ProductsProps, stripeService } from '@/components/services/stripeService';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
 import { currencyService } from '@/components/services/currencyService';
+import { CouponType } from '@/lib/types/types';
 
 export default function PriceTable({ lang }: { lang: string }) {
   const [products, setProducts] = useState<ProductsProps>();
