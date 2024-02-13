@@ -20,14 +20,14 @@ const FooterSection = ({ textContent, lang }) => {
             <a href="https://www.internxt.com/privacy" className="text-sm">
               {lang !== 'es' ? <p>Privacy</p> : <p>Privacidad</p>}
             </a>
-            <div
+            <button
               onClick={() => {
-                window.open('https://help.internxt.com/en', '_blank');
+                window.open('https://help.internxt.com/en', '_blank', 'noopener noreferrer');
               }}
               className="cursor-pointer text-sm"
             >
               {lang !== 'es' ? <p>Contact us</p> : <p>Contacta con nosotros</p>}
-            </div>
+            </button>
           </div>
         </div>
       </div>

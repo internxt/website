@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import SignUpBanner from '../banners/SignUpBanner';
 
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
@@ -70,7 +70,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   {lang === 'en' && (
                     <button
                       onClick={() => {
-                        window.open('https://blog.internxt.com/what-is-malware/', '_blank');
+                        window.open('https://blog.internxt.com/what-is-malware/', '_blank', 'noopener noreferrer');
                       }}
                     >
                       <p className="text-primary underline underline-offset-4 hover:no-underline">{maliciousMalware}</p>

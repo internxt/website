@@ -255,14 +255,14 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.signup}
                     </a>
 
-                    <p
+                    <button
                       onClick={() => {
-                        window.open('https://help.internxt.com', '_blank');
+                        window.open('https://help.internxt.com', '_blank', 'noopener noreferrer');
                       }}
                       className="cursor-pointer hover:text-primary"
                     >
                       {textContent.FooterSection.sections.join.support}
-                    </p>
+                    </button>
 
                     <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}
