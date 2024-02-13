@@ -42,10 +42,10 @@ const SocialProofSection = ({ textContent, lang }) => (
             />
           </div>
           {lang === 'es' && (
-            <div
+            <button
               className="flex h-20 w-2/5 flex-shrink-0 cursor-pointer items-center justify-center md:w-1/3 xl:w-auto xl:px-6"
               onClick={() => {
-                window.open('https://opentrustedcloud.ovhcloud.com/es-es/', '_blank');
+                window.open('https://opentrustedcloud.ovhcloud.com/es-es/', '_blank', 'noopener noreferrer');
               }}
             >
               <img
@@ -55,7 +55,7 @@ const SocialProofSection = ({ textContent, lang }) => (
                 alt="OTC logo"
                 className="mx-auto h-[26px]"
               />
-            </div>
+            </button>
           )}
         </div>
       </div>
