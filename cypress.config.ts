@@ -1,4 +1,4 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
@@ -13,22 +13,15 @@ export default defineConfig({
     reporterOptions: {
       reportDir: '.nyc_output',
     },
-    baseUrl: "http://localhost:3000",
+    baseUrl: 'http://localhost:3000',
     viewportWidth: 1500,
     viewportHeight: 660,
-    scrollBehavior: "center",
+    scrollBehavior: 'center',
     chromeWebSecurity: false,
     env: {
       codeCoverage: {
         finalAllowedMemories: 512,
       },
-    },
-  },
-
-  component: {
-    devServer: {
-      framework: "next",
-      bundler: "webpack",
     },
   },
 });
