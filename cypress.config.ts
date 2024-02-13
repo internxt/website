@@ -15,7 +15,7 @@ export default defineConfig({
     },
     baseUrl: 'http://localhost:3000',
     viewportWidth: 1500,
-    viewportHeight: 660,
+    viewportHeight: 860,
     scrollBehavior: 'center',
     chromeWebSecurity: false,
     env: {
