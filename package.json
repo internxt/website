@@ -12,7 +12,6 @@
     "start": "next start",
     "prod": "next export",
     "cypress": "cypress open",
-    "cypress:cov": "cypress --coverage",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
