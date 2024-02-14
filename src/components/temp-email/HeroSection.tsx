@@ -4,7 +4,6 @@ import { Copy, Info, Trash } from '@phosphor-icons/react';
 
 import Inbox from './components/InboxView';
 import Header from '@/components/shared/Header';
-import useWindowFocus from './hooks/useWindowFocus';
 import { createEmail, getInbox } from './services/temp-mail.service';
 import { notificationService } from '@/components/Snackbar';
 
@@ -27,7 +26,7 @@ const HeroSection = ({ textContent }) => {
   const [email, setEmail] = useState(null);
   const [token, setToken] = useState('');
   const [borderColor, setBorderColor] = useState(false);
-  const isFocused = useWindowFocus();
+  // const isFocused = useWindowFocus();
   const [openedMessages, setOpenedMessages] = useState(0);
   const [isMobileView, setIsMobileView] = useState(false);
   const [isRefreshed, setIsRefreshed] = useState(false);
@@ -68,9 +67,9 @@ const HeroSection = ({ textContent }) => {
     handleInboxUpdate();
   }, [email, isRefreshed]);
 
-  useEffect(() => {
-    handleInterval();
-  }, [isFocused]);
+  // useEffect(() => {
+  //   handleInterval();
+  // }, [isFocused]);
 
   function checkLocalStorage() {
     const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
@@ -118,12 +117,12 @@ const HeroSection = ({ textContent }) => {
     setIsMobileView(isMobile);
   }
 
-  function handleInterval() {
-    if (isFocused) {
-      const interval = setInterval(() => getMailInbox(token), 20000);
-      return () => clearInterval(interval);
-    }
-  }
+  // function handleInterval() {
+  //   if (isFocused) {
+  //     const interval = setInterval(() => getMailInbox(token), 20000);
+  //     return () => clearInterval(interval);
+  //   }
+  // }
 
   function getMailInbox(userToken: string) {
     if (!userToken) return;
