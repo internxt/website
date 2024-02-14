@@ -1,24 +1,18 @@
-import rateLimit from '@/components/utils/rate-limit';
 import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const TEMP_MAIL_API_KEY = process.env.TEMP_MAIL_API_KEY;
 
-const limiter = rateLimit({
-  interval: 60 * 1000, // 1 minute
-  uniqueTokenPerInterval: 1000, // Max users per second
-});
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      await limiter.check(res, 5, 'create-email'); // 5 requests per minute
-
       const email = await axios.get(`${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}/inbox/create`, {
         headers: {
           Authorization: `Bearer ${TEMP_MAIL_API_KEY}`,
         },
       });
+
+      console.log('REFERER: ', req.headers.referer);
 
       return res.status(200).json(email.data);
     } catch (err) {
