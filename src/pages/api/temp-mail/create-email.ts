@@ -5,14 +5,14 @@ import { NextApiRequest, NextApiResponse } from 'next';
 const TEMP_MAIL_API_KEY = process.env.TEMP_MAIL_API_KEY;
 
 const limiter = rateLimit({
-  interval: 60 * 1000,
-  uniqueTokenPerInterval: 1000,
+  interval: 60 * 1000, // 1 minute
+  uniqueTokenPerInterval: 1000, // Max users per second
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      await limiter.check(res, 5, 'create-email');
+      await limiter.check(res, 5, 'create-email'); // 5 requests per minute
 
       const email = await axios.get(`${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}/inbox/create`, {
         headers: {
