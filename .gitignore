@@ -40,7 +40,6 @@ cypress.env.json
 .vercel
 
 # public files
-
 public/downloads/*
 public/*.pdf
 core
