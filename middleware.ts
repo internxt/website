@@ -10,6 +10,7 @@ const excludedPaths: string[] = [
   `/logos`,
   `/js`,
   '/inxt-library',
+  `/media-area`,
   `DPA.pdf`,
 ];
 
