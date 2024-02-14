@@ -1,5 +1,5 @@
+import LRUCache from 'lru-cache';
 import type { NextApiResponse } from 'next';
-import { LRUCache } from 'lru-cache';
 
 type Options = {
   uniqueTokenPerInterval?: number;
@@ -23,6 +23,10 @@ export default function rateLimit(options?: Options) {
 
         const currentUsage = tokenCount[0];
         const isRateLimited = currentUsage >= limit;
+
+        //Get information about the rate limit and check if it is working
+        console.log({ currentUsage, limit, isRateLimited });
+
         res.setHeader('X-RateLimit-Limit', limit);
         res.setHeader('X-RateLimit-Remaining', isRateLimited ? 0 : limit - currentUsage);
 
