@@ -25,7 +25,7 @@ function checkIfProductExistAndRedirectWorks(product) {
   });
 }
 
-describe('Monthly products in Pricing page', () => {
+describe('Lifetime products in Pricing page', () => {
   const products: Products = {};
   beforeEach(() => {
     cy.request('get', `${window.origin}/api/stripe/stripe_products`).then((response) => {
