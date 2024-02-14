@@ -244,7 +244,7 @@ export default function Footer({
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.join.title}</h3>
                   <div
-                    className={`flex flex-col space-y-1.5 text-base ${
+                    className={`flex flex-col items-start space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
