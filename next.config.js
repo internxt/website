@@ -33,7 +33,7 @@ module.exports = {
         headers: [
           { key: 'Access-Control-Allow-Credentials', value: 'true' },
           { key: 'Vary', value: 'Origin' },
-          { key: 'Access-Control-Allow-Origin', value: 'https://internxt.com' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
           { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
         ],
       },
