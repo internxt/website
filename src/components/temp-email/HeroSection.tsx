@@ -26,7 +26,6 @@ const HeroSection = ({ textContent }) => {
   const [email, setEmail] = useState(null);
   const [token, setToken] = useState('');
   const [borderColor, setBorderColor] = useState(false);
-  // const isFocused = useWindowFocus();
   const [openedMessages, setOpenedMessages] = useState(0);
   const [isMobileView, setIsMobileView] = useState(false);
   const [isRefreshed, setIsRefreshed] = useState(false);
@@ -66,10 +65,6 @@ const HeroSection = ({ textContent }) => {
   useEffect(() => {
     handleInboxUpdate();
   }, [email, isRefreshed]);
-
-  // useEffect(() => {
-  //   handleInterval();
-  // }, [isFocused]);
 
   function checkLocalStorage() {
     const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
