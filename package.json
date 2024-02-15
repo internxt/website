@@ -11,7 +11,7 @@
     "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
     "prod": "next export",
-    "cypress": "nyc cypress open",
+    "cypress": "cypress open",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
