@@ -7,7 +7,7 @@ describe('Creating an email for temporary-email', () => {
   });
 
   it('Should create an email with address and token', () => {
-    cy.intercept('GET', '/api/temp-mail/create-email').as('createEmail');
+    cy.intercept('GET', 'http://localhost:3000/api/temp-mail/create-email').as('createEmail');
 
     cy.visit('/temporary-email');
     cy.wait('@createEmail').then((interception) => {
