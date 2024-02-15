@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const folderPath = path.join(process.cwd(), 'public', relativePath as string);
     const zipFileName = `${namePath}.zip`;
 
-    // Crear un archivo ZIP de la carpeta
+    // Create a ZIP file from the folder
     const archive = archiver('zip', { zlib: { level: 9 } });
 
     res.setHeader('Content-Type', 'application/zip');
