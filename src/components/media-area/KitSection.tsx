@@ -1,6 +1,7 @@
 import Image from 'next/legacy/image';
 import RevealX from '@/components/components/RevealX';
 import Link from 'next/link';
+import downloadItem from '@/lib/downloadItem';
 
 const KitSection = ({ textContent }) => {
   return (
@@ -9,9 +10,12 @@ const KitSection = ({ textContent }) => {
         <div className="flex max-w-[600px] flex-col items-center space-y-6 text-center">
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="font-gray-80 text-xl">{textContent.description}</p>
-          <Link href="/media-area/internxt-full-media-kit.zip" download={true}>
-            <p className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">{textContent.cta}</p>
-          </Link>
+          <button
+            className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
+            onClick={() => downloadItem('internxt-full-media-kit.zip')}
+          >
+            {textContent.cta}
+          </button>
         </div>
         <div className="flex flex-col items-center justify-center  gap-20 lg:flex-row">
           <RevealX direction="right">
@@ -20,6 +24,7 @@ const KitSection = ({ textContent }) => {
               width={496}
               src={'/images/media-area/internxt_cloud_icon.webp'}
               alt="internxt cloud icon"
+              draggable={false}
             />
           </RevealX>
           <div className="flex max-w-[380px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
@@ -37,11 +42,12 @@ const KitSection = ({ textContent }) => {
           <div className="flex max-w-[380px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
             <p className="text-5xl font-semibold">{textContent.secondSection.title}</p>
             <p className="font-gray-80 text-xl">{textContent.secondSection.description}</p>
-            <Link href="/media-area/internxt-screenshots-mockups.zip" target="_blank" rel="noreferrer" download={true}>
-              <p className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">
-                {textContent.secondSection.cta}
-              </p>
-            </Link>
+            <button
+              className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
+              onClick={() => downloadItem('internxt-screenshots-mockups.zip')}
+            >
+              {textContent.secondSection.cta}
+            </button>
           </div>
           <RevealX direction="left">
             <Image
@@ -49,6 +55,7 @@ const KitSection = ({ textContent }) => {
               width={496}
               src="/images/affiliates/internxt-private-cloud-storage-service.webp"
               alt="internxt private cloud storage service"
+              draggable={false}
             />
           </RevealX>
         </div>
