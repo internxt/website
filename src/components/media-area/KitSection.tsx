@@ -12,7 +12,7 @@ const KitSection = ({ textContent }) => {
         <div className="flex max-w-[600px] flex-col items-center space-y-6 text-center">
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="font-gray-80 text-xl">{textContent.description}</p>
-          <Link href={`/api/download-media-kit?relativePath=${relativePathForMediaKit}`} download={true}>
+          <Link href={`/api/download-local-folder?relativePath=${relativePathForMediaKit}`} download={true}>
             <p className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">{textContent.cta}</p>
           </Link>
         </div>
@@ -41,7 +41,7 @@ const KitSection = ({ textContent }) => {
             <p className="text-5xl font-semibold">{textContent.secondSection.title}</p>
             <p className="font-gray-80 text-xl">{textContent.secondSection.description}</p>
             <Link
-              href={`/api/download-media-kit?relativePath=${relativePathForMockups}`}
+              href={`/api/download-local-folder?relativePath=${relativePathForMockups}`}
               target="_blank"
               rel="noreferrer"
               download={true}

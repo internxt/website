@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
-const archiver = require('archiver');
+import archiver from 'archiver';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') return res.status(405).end('method not allowed');

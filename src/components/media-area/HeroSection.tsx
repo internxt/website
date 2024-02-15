@@ -14,7 +14,7 @@ const HeroSection = ({ textContent }) => {
         </div>
 
         <Link
-          href={`/api/download-media-kit?relativePath=${relativePath}`}
+          href={`/api/download-local-folder?relativePath=${relativePath}`}
           target="_blank"
           rel="noreferrer"
           download={true}
