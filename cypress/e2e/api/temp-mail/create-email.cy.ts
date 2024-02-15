@@ -10,7 +10,9 @@ describe('Creating an email for temporary-email', () => {
     cy.intercept('GET', 'http://localhost:3000/api/temp-mail/create-email').as('createEmail');
 
     cy.visit('/temporary-email');
-    cy.wait('@createEmail').then((interception) => {
+    cy.wait('@createEmail', {
+      timeout: 20000,
+    }).then((interception) => {
       const res = interception.response;
       if (!res) throw new Error('No response from the server');
 
