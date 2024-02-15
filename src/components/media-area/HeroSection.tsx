@@ -1,6 +1,4 @@
-/* eslint-disable no-nested-ternary */
 import downloadItem from '@/lib/downloadItem';
-import Link from 'next/link';
 import React from 'react';
 
 const HeroSection = ({ textContent }) => {
