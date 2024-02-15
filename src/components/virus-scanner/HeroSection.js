@@ -6,7 +6,7 @@
 import React, { useState, Fragment } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
@@ -201,7 +201,7 @@ const HeroSection = ({ textContent }) => {
                       <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between bg-primary bg-opacity-6 px-5">
                         {isScanFinished ? (
                           <div className="flex flex-row items-center space-x-1.5">
-                            {scanResult.isInfected ? (
+                            {scanResult?.isInfected ? (
                               <WarningCircle weight="fill" size={24} className="text-red" />
                             ) : (
                               <CheckCircle weight="fill" size={24} className="text-green" />
