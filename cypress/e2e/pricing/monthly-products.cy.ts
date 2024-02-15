@@ -16,6 +16,9 @@ function checkIfProductExistAndRedirectWorks(product) {
   const buttonId = `#planButton${product.storage}`;
   const planId = product.planId;
 
+  cy.visit('/pricing');
+  cy.get('#billingButtons').contains('Monthly').click();
+
   cy.get(buttonId).should('exist');
   cy.get(buttonId).contains(`${product.storage}`).click();
 
@@ -39,8 +42,6 @@ describe('Monthly products in Pricing page', () => {
         };
       });
     });
-    cy.visit('/pricing');
-    cy.get('#billingButtons').contains('Monthly').click();
   });
 
   describe('When the payment plan is monthly', () => {

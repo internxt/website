@@ -16,6 +16,8 @@ function checkIfProductExistAndRedirectWorks(product) {
   const buttonId = `#planButton${product.storage}`;
   const planId = product.planId;
 
+  cy.visit('/pricing');
+
   cy.get(buttonId).should('exist');
   cy.get(buttonId).contains(`${product.storage}`).click();
 
@@ -39,7 +41,6 @@ describe('Yearly products in Pricing page', () => {
         };
       });
     });
-    cy.visit('/pricing');
   });
 
   describe('When the payment plan is annually', () => {
