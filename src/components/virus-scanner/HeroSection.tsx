@@ -1,12 +1,7 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable no-console */
-import React, { useState, Fragment } from 'react';
+import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 
 const HeroSection = ({ textContent }) => {
@@ -14,10 +9,11 @@ const HeroSection = ({ textContent }) => {
   const [isScannig, setIsScannig] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isScanFinished, setIsScanFinished] = useState(false);
-  const [scanResult, setScanResult] = useState(null);
+  const [scanResult, setScanResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
-  const [file, setFile] = useState({});
+  const uploadFileRef = createRef<HTMLInputElement>();
+  const [file, setFile] = useState<File | null>(null);
   const isDragging = dragEnter;
   const maxFileSize = 1_000_000_000;
 
@@ -34,14 +30,13 @@ const HeroSection = ({ textContent }) => {
 
   const scanFiles = () => {
     setScanResult(null);
-    const fileInput = document.querySelector('#uploadFile');
+    const fileInput = uploadFileRef.current;
     const formdata = new FormData();
-    formdata.append('', fileInput.files[0], 'test.txt');
+    formdata.append('', (fileInput as any).files[0], 'test.txt');
 
     const requestOptions = {
       method: 'POST',
       body: formdata,
-      redirect: 'follow',
     };
 
     fetch(`https://clamav.internxt.com/filescan`, requestOptions)
@@ -74,7 +69,7 @@ const HeroSection = ({ textContent }) => {
     setIsScannig(false);
     setIsScanFinished(false);
     setIsError(false);
-    setFile({});
+    setFile(null);
   };
 
   const handleCancelScan = () => {
@@ -87,8 +82,8 @@ const HeroSection = ({ textContent }) => {
   };
 
   const handleFiles = () => {
-    const fileInput = document.querySelector('#uploadFile');
-    if (fileInput.files) {
+    const fileInput = uploadFileRef.current;
+    if (fileInput?.files) {
       setDragEnter(false);
       setFileSizeLimitReached(false);
       setIsSelectedFile(true);
@@ -103,20 +98,21 @@ const HeroSection = ({ textContent }) => {
   };
 
   const handleFileInput = () => {
-    const fileInput = document.querySelector('#uploadFile');
-    if (fileInput.files) {
+    const fileInput = uploadFileRef.current;
+    if (fileInput?.files) {
       handleFiles();
     }
   };
 
   const handleOpenFileExplorer = () => {
-    document.querySelector('input[type=file]').click();
+    (document.querySelector('input[type=file]') as any).click();
   };
 
   const handleDrop = async (e) => {
     e.preventDefault();
-    if (!isScannig) {
-      document.querySelector('#uploadFile').files = e.dataTransfer.files;
+    const fileInput = uploadFileRef.current;
+    if (!isScannig && fileInput) {
+      fileInput.files = e.dataTransfer.files;
       handleFiles();
     }
   };
@@ -156,8 +152,8 @@ const HeroSection = ({ textContent }) => {
         handleDragEnter();
       }}
     >
-      <label htmlFor="uploadFile" className="pointer-events-none absolute h-0 w-0 overflow-hidden">
-        <input type="file" id="uploadFile" tabIndex={-1} onChange={() => handleFileInput()} />
+      <label className="pointer-events-none absolute h-0 w-0 overflow-hidden">
+        <input type="file" id="uploadFile" ref={uploadFileRef} tabIndex={-1} onChange={() => handleFileInput()} />
       </label>
 
       <div
@@ -201,14 +197,14 @@ const HeroSection = ({ textContent }) => {
                       <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between bg-primary bg-opacity-6 px-5">
                         {isScanFinished ? (
                           <div className="flex flex-row items-center space-x-1.5">
-                            {scanResult.isInfected ? (
+                            {scanResult?.isInfected ? (
                               <WarningCircle weight="fill" size={24} className="text-red" />
                             ) : (
                               <CheckCircle weight="fill" size={24} className="text-green" />
                             )}
                             <span
                               className={`text-lg font-semibold ${
-                                scanResult.isInfected ? 'text-red' : 'text-green-dark'
+                                scanResult?.isInfected ? 'text-red' : 'text-green-dark'
                               }`}
                             >
                               {scanResult &&
@@ -222,23 +218,26 @@ const HeroSection = ({ textContent }) => {
                         )}
 
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
-                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80">{file.name}</p>
-                          <p className="text-sm text-cool-gray-60">{file.type}</p>
+                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80">{file?.name}</p>
+                          <p className="text-sm text-cool-gray-60">{file?.type}</p>
                         </div>
                       </div>
 
                       {isScanFinished ? (
                         <>
-                          {scanResult && scanResult.isInfected ? (
+                          {scanResult.isInfected ? (
                             <div className="flex h-full w-full flex-col items-center justify-center">
                               <p className="text-2xl font-semibold">Virus identified:</p>
                               <div className="flex max-w-xl flex-row space-x-1 text-center">
-                                {scanResult.viruses &&
-                                  scanResult.viruses.map((virus) => (
-                                    <p className="text-lg font-semibold text-gray-50">{virus};</p>
-                                  ))}
+                                {scanResult.viruses
+                                  ? scanResult.viruses.map((virus) => (
+                                      <p key={virus} className="text-lg font-semibold text-gray-50">
+                                        {virus};
+                                      </p>
+                                    ))
+                                  : null}
                               </div>
-                              {scanResult.viruses.length > 1 ? scanAgainButton() : scanAgainButton(true)}
+                              {scanResult.viruses.length > 1 ? scanAgainButton(false) : scanAgainButton(true)}
                             </div>
                           ) : (
                             <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 py-5 px-5 text-center text-gray-80">
@@ -259,7 +258,7 @@ const HeroSection = ({ textContent }) => {
                                   </div>
                                 </div>
                               </div>
-                              {scanAgainButton()}
+                              {scanAgainButton(false)}
                             </div>
                           )}
                         </>
@@ -355,7 +354,7 @@ const HeroSection = ({ textContent }) => {
                               <div className="flex w-full flex-shrink flex-col items-center overflow-hidden">
                                 <p className="px-4 text-center text-2xl font-medium">{textContent.fileSelected}</p>
                                 <p className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 lg:w-auto lg:max-w-md xl:max-w-xl">
-                                  {file.name}
+                                  {file?.name}
                                 </p>
                               </div>
 
@@ -443,7 +442,7 @@ const HeroSection = ({ textContent }) => {
 
             {isError && (
               <div className="absolute inset-0 z-50 flex h-full w-full flex-row items-center justify-center overflow-hidden rounded-xl bg-primary bg-opacity-3">
-                <div
+                <button
                   className="absolute inset-0 cursor-pointer bg-black bg-opacity-40"
                   onClick={() => {
                     handleRestartScan();

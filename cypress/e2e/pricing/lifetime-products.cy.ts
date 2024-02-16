@@ -16,6 +16,9 @@ function checkIfProductExistAndRedirectWorks(product) {
   const buttonId = `#planButton${product.storage}`;
   const planId = product.planId;
 
+  cy.visit('/pricing');
+  cy.get('#billingButtons').contains('Lifetime').click();
+
   cy.get(buttonId).should('exist');
   cy.get(buttonId).contains(`${product.storage}`).click();
 
@@ -39,8 +42,6 @@ describe('Lifetime products in Pricing page', () => {
         };
       });
     });
-    cy.visit('/pricing');
-    cy.get('#billingButtons').contains('Lifetime').click();
   });
 
   describe('When the payment plan is lifetime', () => {

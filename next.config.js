@@ -3,6 +3,9 @@ module.exports = {
     locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de'],
     defaultLocale: 'en',
   },
+  experimental: {
+    swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
+  },
   webpack(config) {
     config.module.rules.push({
       loader: '@svgr/webpack',
