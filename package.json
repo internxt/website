@@ -12,7 +12,7 @@
     "start": "next start",
     "prod": "next export",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
+    "cypress:run": "cypress run --browser chrome",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {

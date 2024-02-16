@@ -13,6 +13,7 @@ export default defineConfig({
     reporterOptions: {
       reportDir: '.nyc_output',
     },
+    fileServerFolder: '.',
     specPattern: ['**/*.spec.ts', '**/*.cy.ts'],
     baseUrl: 'http://localhost:3000',
     viewportWidth: 1500,
