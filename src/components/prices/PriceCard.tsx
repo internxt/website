@@ -1,5 +1,5 @@
 import { checkout, goToSignUpURL } from '@/lib/auth';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { CouponType } from '@/lib/types/types';
 
 export interface PriceCardProps {
   planType: string;
@@ -38,7 +38,7 @@ export default function PriceCard({
     year: 'annually',
   };
 
-  const contentText = require(`../../assets/lang/${lang}/priceCard.json`);
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
   return (
     <div

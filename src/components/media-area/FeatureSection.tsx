@@ -28,7 +28,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
               onClick={() => {
-                window.open('https://internxt.com/about', '_blank');
+                window.open('https://internxt.com/about', '_blank', 'noopener noreferrer');
               }}
             >
               {textContent.cta}

@@ -1,9 +1,18 @@
 {
   "valentinesBanner": {
-    "title": "¡Amor sin limites!",
-    "subtitle": "90% de descuento en nuestro plan de 2TB. Código: VDAY",
-    "cta": "Obtén la oferta",
-    "toast": "Copiado al portapapeles"
+    "label": "Ahorra un 69%",
+    "title": "¡Dulces regalos de San Valentín!",
+    "cta": "Elige un plan",
+    "guarantee": "Garantía de devolución de dinero de 30 días",
+    "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
+    "features": [
+      "Ahorra en suscripciones mensuales y anuales",
+      "Almacenamiento seguro en la nube",
+      "Código abierto y transparente",
+      "Transferencias cifradas de extremo a extremo",
+      "Sin acceso no autorizado",
+      "La oferta finaliza el 25 de febrero"
+    ]
   },
   "virusScannerBanner": {
     "title": "Prueba Internxt",
@@ -58,9 +67,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "50% en planes lifetime: ",
-      "normalText": "¡Asegura tus archivos para siempre!",
+      "boldText": "Consigue un descuento del 69% en planes de suscripción.",
+      "normalText": "¡Siente el amor de San Valentín! ",
       "cta": "Elige un plan"
     }
+  },
+  "lifetimeBanner": {
+    "label": "¿Necesitas almacenamiento seguro de por vida?",
+    "title": "¡Asegura tus archivos de por vida con nuestros planes!",
+    "cta": "Elige tu plan",
+    "guarantee": "Garantía de devolución de 30 días"
   }
 }

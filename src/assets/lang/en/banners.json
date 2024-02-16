@@ -29,10 +29,19 @@
     }
   },
   "valentinesBanner": {
-    "title": "Love without limits!",
-    "subtitle": "Get 90% off our 2TB plan with code VDAY",
-    "cta": "Get the deal",
-    "toast": "Copied to clipboard!"
+    "label": "Save 69%",
+    "title": "Sweet Valentine's treats!",
+    "cta": "Choose plan",
+    "guarantee": "30-day money-back guarantee",
+    "lastCta": "*Offer is for free accounts or new customers",
+    "features": [
+      "Save on monthly & annual plans",
+      "Safe and secure cloud storage",
+      "Open source and transparent",
+      "End-to-end encrypted transfers",
+      "No unauthorized access",
+      "Offer ends February 25th"
+    ]
   },
   "tryOutInternxtGeneralBanner": {
     "title": "Try Internxt",
@@ -89,9 +98,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "50% off lifetime plans: ",
-      "normalText": "Secure your files forever!",
-      "cta": "Choose your plan"
+      "boldText": "Enjoy 69% off monthly or annual plans.",
+      "normalText": "Feel the love this Valentine’s! ",
+      "cta": "Choose plan"
     }
+  },
+  "lifetimeBanner": {
+    "label": "Need secure storage for life?",
+    "title": "Protect your files forever with our lifetime plans!",
+    "cta": "Choose your plan",
+    "guarantee": "30-day money-back guarantee"
   }
 }

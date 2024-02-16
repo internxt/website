@@ -35,18 +35,18 @@ const FeatureSection = ({ textContent }) => {
               <p className="text-2xl font-medium text-gray-100">{item.title}</p>
               <p className="text-lg text-gray-80">{item.description}</p>
               {item.cta && (
-                <div
+                <button
                   onClick={() => {
                     window.open(
                       'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1',
                       '_blank',
-                      'nofollow',
+                      'noopener noreferrer nofollow',
                     );
                   }}
                   className="flex w-max cursor-pointer items-center rounded-lg border border-primary bg-primary px-5 py-3 hover:bg-primary-dark"
                 >
                   <p className="text-lg font-medium text-white">{item.cta}</p>
-                </div>
+                </button>
               )}
             </div>
           ))}

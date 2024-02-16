@@ -11,7 +11,8 @@
     "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
     "prod": "next export",
-    "cypress": "cypress open",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
@@ -53,6 +54,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.12.20",
     "@svgr/webpack": "^6.5.1",
     "@tailwindcss/line-clamp": "0.4.0",
     "@types/jest": "^29.4.0",
@@ -61,6 +63,7 @@
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^6.1.1",
     "cypress": "^12.5.1",
     "eslint": "^7.32.0",
     "next-unused": "^0.0.6",
@@ -69,6 +72,7 @@
     "prettier-plugin-tailwindcss": "0.1.13",
     "reset-css": "5.0.1",
     "sass": "1.41.0",
+    "swc-plugin-coverage-instrument": "^0.0.20",
     "tailwindcss": "3.1.8",
     "typescript": "^4.1.5"
   },

@@ -8,7 +8,7 @@ import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
-import usePricing from '@/hooks/usePricing';
+import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -23,16 +23,68 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
 
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const { products, currency, loadingCards } = usePricing();
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
+  const banner = require('@/assets/lang/en/banners.json');
+  const [loadingCards, setLoadingCards] = useState(true);
+  const [products, setProducts] = useState<ProductsProps>();
+  const [coupon, setCoupon] = useState<CouponType>();
+  const [currency, setCurrency] = useState({
+    symbol: '€',
+    value: 1,
+  });
+
+  const currencyValue = CurrencyValue[currency.symbol] || 'eur';
+
+  useEffect(() => {
+    stripeService
+      .getAllPrices()
+      .then((prices) => {
+        setProducts(prices);
+        setLoadingCards(false);
+      })
+      .catch(() => {
+        stripeService.getAllPrices(true).then((res) => {
+          setProducts(res);
+          setLoadingCards(false);
+        });
+        console.error('Error getting prices');
+      });
+
+    currencyService
+      .filterCurrencyByCountry()
+      .then((res) => {
+        setCurrency({
+          symbol: res.symbol,
+          value: res.value,
+        });
+      })
+      .catch((err) => {
+        setCurrency({
+          symbol: '€',
+          value: 1,
+        });
+        console.error(err);
+      });
+
+    stripeService
+      .getCoupon(CouponType.ValentinesCoupon)
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   return (
-    <section id="priceTable" className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          {/* <div className="flex flex-col px-5">
+          <div className="flex flex-col px-5">
             <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
-          </div> */}
-          <div className="flex flex-col items-center px-5">
+          </div>
+          <div id="priceTable" className="flex flex-col items-center px-5 text-center">
             <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
@@ -134,12 +186,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={product.price}
+                        price={parseFloat((Math.floor(parseFloat(product.price) * 31) / 100).toFixed(2))}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
+                        priceBefore={product.price}
                         lang={lang}
-                        currency={currency}
+                        country={currency.symbol}
+                        currency={currencyValue}
+                        coupon={coupon}
                       />
                     )}
                   </>

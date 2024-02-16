@@ -13,6 +13,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
             width={496}
             height={520}
             quality={100}
+            loading="lazy"
             layout="intrinsic"
             className="rounded-3xl"
             alt="Only privacy services image"
@@ -29,7 +30,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
               onClick={() => {
-                window.open('https://drive.internxt.com/new', '_blank');
+                window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
               }}
             >
               {textContent.cta}

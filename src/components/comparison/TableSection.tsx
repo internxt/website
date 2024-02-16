@@ -436,7 +436,7 @@ const HeroSection = ({ textContent }) => {
 
           <div className="relative z-10 flex flex-col items-center justify-center">
             <button
-              onClick={() => window.open('https://drive.internxt.com/new', '_blank')}
+              onClick={() => window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer')}
               id="get-started-link"
               className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-auto"
             >
@@ -563,15 +563,15 @@ const HeroSection = ({ textContent }) => {
                 <tr className="h-0">
                   <td className="p-0" />
                   <td className="relative p-0">
-                    <p
+                    <button
                       onClick={() => {
-                        window.open('https://drive.internxt.com/new', '_blank');
+                        window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
                       }}
                       id="get-started-link"
                       className="absolute top-full left-0 flex h-14 w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
                     >
                       {textContent.table.startNow}
-                    </p>
+                    </button>
                   </td>
                 </tr>
               </tbody>

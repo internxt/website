@@ -53,9 +53,7 @@ const Animation = () => {
               loading="eager"
               src="/images/home/header/browser.webp"
               draggable="false"
-              width={811}
-              layout="responsive"
-              height={490}
+              layout="fill"
               alt="desktop, laptop and phone with Internxt app"
             />
           </div>
@@ -70,9 +68,7 @@ const Animation = () => {
             loading="eager"
             src="/images/home/header/folder.svg"
             draggable="false"
-            width={64}
-            layout="responsive"
-            height={64}
+            layout="fill"
             alt="folder icon"
           />
         </div>
@@ -82,15 +78,7 @@ const Animation = () => {
           className={`${headerAnimation5 ? 'animate-fade-in-r' : 'hidden'} absolute left-20 top-32`}
           style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '56px', height: '56px' }}
         >
-          <Image
-            loading="eager"
-            src="/images/home/header/zip.svg"
-            draggable="false"
-            width={56}
-            layout="responsive"
-            height={56}
-            alt="folder icon"
-          />
+          <Image loading="eager" src="/images/home/header/zip.svg" draggable="false" layout="fill" alt="folder icon" />
         </div>
 
         {/* Icon / Powerpoint */}
@@ -102,9 +90,7 @@ const Animation = () => {
             loading="eager"
             src="/images/home/header/powerpoint.svg"
             draggable="false"
-            width={52}
-            layout="responsive"
-            height={52}
+            layout="fill"
             alt="folder icon"
           />
         </div>
@@ -114,15 +100,7 @@ const Animation = () => {
           className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute left-14 bottom-20`}
           style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '48px', height: '48px' }}
         >
-          <Image
-            loading="eager"
-            src="/images/home/header/csv.svg"
-            draggable="false"
-            width={48}
-            layout="responsive"
-            height={48}
-            alt="folder icon"
-          />
+          <Image loading="eager" src="/images/home/header/csv.svg" draggable="false" layout="fill" alt="folder icon" />
         </div>
 
         {/* File preview */}
@@ -140,9 +118,7 @@ const Animation = () => {
             loading="eager"
             src="/images/home/header/preview.webp"
             draggable="false"
-            width={164}
-            layout="responsive"
-            height={178}
+            layout="fill"
             alt="photo file preview"
           />
         </div>
@@ -161,9 +137,7 @@ const Animation = () => {
             loading="eager"
             src="/images/home/header/tasklogger.webp"
             draggable="false"
-            width={211}
-            layout="responsive"
-            height={190}
+            layout="fill"
             alt="file logger with items downloading"
           />
         </div>

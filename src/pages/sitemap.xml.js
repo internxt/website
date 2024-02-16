@@ -17,7 +17,7 @@ export const getServerSideProps = ({ res }) => {
   };
 
   const staticPages = fs
-    .readdirSync('pages')
+    .readdirSync('src/pages')
     .filter((staticPage) => Object.keys(pages).includes(path.parse(staticPage).name))
     .map((staticPagePath) => `${path.parse(staticPagePath).name}`);
 

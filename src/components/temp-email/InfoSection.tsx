@@ -69,7 +69,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
               quality={100}
               className="cursor-pointer"
               onClick={() => {
-                window.open('https://drive.internxt.com/new', '_blank');
+                window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
               }}
             />
           </div>

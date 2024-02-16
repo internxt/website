@@ -11,14 +11,14 @@ const ExploreOurOSS = ({ textContent, download }) => {
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <div className="text-xl text-gray-80">
             {description[0]}
-            <span
+            <button
               className="cursor-pointer underline hover:no-underline"
               onClick={() => {
-                window.open('https://github.com/internxt', '_blank');
+                window.open('https://github.com/internxt', '_blank', 'noopener noreferrer');
               }}
             >
               {GitHub}
-            </span>
+            </button>
 
             {description[1]}
           </div>

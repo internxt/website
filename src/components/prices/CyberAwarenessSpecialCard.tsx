@@ -4,6 +4,7 @@ import { CouponType } from '@/pages/api/stripe/get_coupons';
 import { analyticsService } from '@/components/services/analytics.service';
 import { stripeService } from '@/components/services/stripe.service';
 import { PriceCardProps } from './PriceCard';
+import { CouponType } from '@/lib/types/types';
 
 export default function SpecialPriceCard({
   planType,

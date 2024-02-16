@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Copy, Info, Trash } from '@phosphor-icons/react';
 
 import Inbox from './components/InboxView';
 import Header from '@/components/shared/Header';
-import useWindowFocus from './hooks/useWindowFocus';
 import { createEmail, getInbox } from './services/temp-mail.service';
 import { notificationService } from '@/components/Snackbar';
+import useWindowFocus from './hooks/useWindowFocus';
 
 const EMAIL_STORAGE_KEY = 'email';
 const SETUP_TIME_STORAGE_KEY = 'setupTime';
@@ -27,13 +27,14 @@ const HeroSection = ({ textContent }) => {
   const [email, setEmail] = useState(null);
   const [token, setToken] = useState('');
   const [borderColor, setBorderColor] = useState(false);
-  const isFocused = useWindowFocus();
   const [openedMessages, setOpenedMessages] = useState(0);
   const [isMobileView, setIsMobileView] = useState(false);
   const [isRefreshed, setIsRefreshed] = useState(false);
   const [messages, setMessages] = useState<any>([]);
   const [selectedMessage, setSelectedMessage] = useState(null);
   const [generateEmail, setGenerateEmail] = useState(false);
+
+  const isFocused = useWindowFocus();
 
   const hours = 5;
   const now = new Date().getTime();
@@ -66,11 +67,8 @@ const HeroSection = ({ textContent }) => {
 
   useEffect(() => {
     handleInboxUpdate();
+    return autoFetchEmails();
   }, [email, isRefreshed]);
-
-  useEffect(() => {
-    handleInterval();
-  }, [isFocused]);
 
   function checkLocalStorage() {
     const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
@@ -99,13 +97,13 @@ const HeroSection = ({ textContent }) => {
     }
   }
 
-  function handleBorderColor() {
+  const handleBorderColor = useCallback(() => {
     if (borderColor) {
       setTimeout(() => {
         setBorderColor(false);
       }, 4000);
     }
-  }
+  }, [borderColor]);
 
   function handleInitialSetup() {
     if (localStorage.getItem('selectedMessage')) {
@@ -113,56 +111,70 @@ const HeroSection = ({ textContent }) => {
     }
   }
 
-  function handleInboxUpdate() {
+  const handleInboxUpdate = useCallback(() => {
     getMailInbox(token);
     setIsMobileView(isMobile);
-  }
+  }, [token, isMobileView]);
 
-  function handleInterval() {
+  const autoFetchEmails = useCallback(() => {
     if (isFocused) {
-      const interval = setInterval(() => getMailInbox(token), 20000);
+      const interval = setInterval(() => getMailInbox(token), 10000);
       return () => clearInterval(interval);
     }
-  }
+  }, [isFocused, token]);
 
-  function getMailInbox(userToken: string) {
-    getInbox(userToken).then((res) => {
-      let messageIdCounter = messages?.length;
-      if (res == null) return;
-      if (res?.length > 0) {
-        const message = res.map((item) => {
-          messageIdCounter++;
-          return {
-            ...item,
-            opened: false,
-            id: messageIdCounter,
-          };
+  const getMailInbox = useCallback(
+    (userToken: string) => {
+      if (!userToken) return;
+      getInbox(userToken)
+        .then((res) => {
+          if (res.expired) return;
+
+          let messageIdCounter = messages?.length;
+          if (res == null) return;
+          if (res?.length > 0) {
+            const message = res.map((item) => {
+              messageIdCounter++;
+              return {
+                ...item,
+                opened: false,
+                id: messageIdCounter,
+              };
+            });
+            const allMessages = messages == null ? [...message] : [...messages, ...message];
+            setMessages(allMessages);
+            localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessages));
+            const unopenedMessages = allMessages.filter((item) => !item.opened).length;
+            setOpenedMessages(unopenedMessages);
+          } else {
+            const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
+            setMessages(JSON.parse(inbox));
+          }
+        })
+        .catch((err) => {
+          const error = err as Error;
+          console.log(error);
         });
-        const allMessages = messages == null ? [...message] : [...messages, ...message];
-        setMessages(allMessages);
-        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessages));
-        const unopenedMessages = allMessages.filter((item) => !item.opened).length;
-        setOpenedMessages(unopenedMessages);
-      } else {
-        const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-        setMessages(JSON.parse(inbox));
-      }
-    });
-  }
+    },
+    [messages, token],
+  );
 
-  function onRefresh() {
+  const onRefresh = useCallback(() => {
     setIsRefreshed(!isRefreshed);
-  }
+  }, [isRefreshed]);
 
-  function onMessageSelected(item, index) {
-    //Update the message to local storage
-    const newMessages = JSON.parse(localStorage.getItem('inbox') as string);
-    newMessages[index].opened = true;
-    setMessages(newMessages);
-    setSelectedMessage(item);
-    localStorage.setItem('inbox', JSON.stringify(newMessages));
-    localStorage.setItem('selectedMessage', JSON.stringify(item));
-  }
+  const onMessageSelected = useCallback(
+    (item, index) => {
+      //Update the message to local storage
+      const newMessages = JSON.parse(localStorage.getItem('inbox') as string);
+      newMessages[index].opened = true;
+      setMessages(newMessages);
+      setSelectedMessage(item);
+      localStorage.setItem('inbox', JSON.stringify(newMessages));
+      localStorage.setItem('selectedMessage', JSON.stringify(item));
+    },
+    [selectedMessage],
+  );
 
   return (
     <section className="overflow-hidden pt-32 pb-20">

@@ -9,14 +9,14 @@ const CtaSection = ({ textContent }) => {
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="text-xl font-normal">{textContent.description}</p>
         </div>
-        <div
+        <button
           className="flex cursor-pointer rounded-lg bg-white px-6 py-2 hover:bg-blue-10"
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank');
+            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
           }}
         >
           <p className="text-base font-semibold text-primary">{textContent.cta}</p>
-        </div>
+        </button>
       </div>
       <div
         className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.partnerHeroSection} pointer-events-none origin-center`}

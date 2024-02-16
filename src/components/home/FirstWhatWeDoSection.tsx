@@ -1,5 +1,5 @@
 import Image from 'next/legacy/image';
-import { CaretRight, DotsThree } from '@phosphor-icons/react';
+import { CaretRight } from '@phosphor-icons/react';
 import PdfItem from '../../../public/icons/file-types/pdf.svg';
 import PPTItem from '../../../public/icons/file-types/ppt.svg';
 import RevealY from '@/components/components/RevealY';
@@ -29,6 +29,7 @@ const FirstWhatWeDoSection = ({
               width={496}
               height={520}
               quality={100}
+              loading="lazy"
               draggable={false}
               className="rounded-3xl"
               alt="Secure cloud storage"
@@ -42,6 +43,7 @@ const FirstWhatWeDoSection = ({
                 width={320}
                 height={290}
                 quality={100}
+                loading="lazy"
                 draggable={false}
                 className="rounded-lg"
                 alt="TaskLogger image"
@@ -84,6 +86,7 @@ const FirstWhatWeDoSection = ({
               width={444}
               height={520}
               quality={100}
+              loading="lazy"
               draggable={false}
               className="rounded-3xl"
               alt="End-to-end encrypted cloud storage"
@@ -106,6 +109,7 @@ const FirstWhatWeDoSection = ({
               width={496}
               height={520}
               quality={100}
+              loading="lazy"
               draggable={false}
               className="rounded-3xl"
               alt="Free cloud storage account"

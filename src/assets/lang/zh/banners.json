@@ -29,10 +29,19 @@
     }
   },
   "valentinesBanner": {
-    "title": "Love without limits!",
-    "subtitle": "Get 90% off our 2TB plan with code VDAY",
-    "cta": "Get the deal",
-    "toast": "Copied to clipboard!"
+    "label": "省69%",
+    "title": "甜蜜的情人节礼物!",
+    "cta": "选择计划",
+    "guarantee": "30 天内退款保证",
+    "lastCta": "*此优惠仅适用于免费账户或新客户",
+    "features": [
+      "在月度和年度计划上节省",
+      "安全可靠的云存储",
+      "开源和透明",
+      "端到端加密传输",
+      "无未经授权访问",
+      "优惠截止日期为2月25日"
+    ]
   },
   "tryOutInternxtGeneralBanner": {
     "title": "Try Internxt",
@@ -78,9 +87,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "终身计划 5 折优惠：",
-      "normalText": "永久保护您的文件！",
-      "cta": "选择您的计划"
+      "boldText": "尽情享受月度或年度计划 69% 的折扣。",
+      "normalText": "感受这个情人节的爱意！",
+      "cta": "选择计划"
     }
+  },
+  "lifetimeBanner": {
+    "label": "寻找终身安全的数据存储？",
+    "title": "通过Internxt的终身计划保护您的文件！",
+    "cta": "选择计划",
+    "guarantee": "30天内退款保证"
   }
 }

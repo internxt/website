@@ -244,7 +244,7 @@ export default function Footer({
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.join.title}</h3>
                   <div
-                    className={`flex flex-col space-y-1.5 text-base ${
+                    className={`flex flex-col items-start space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
@@ -255,14 +255,14 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.signup}
                     </a>
 
-                    <p
+                    <button
                       onClick={() => {
-                        window.open('https://help.internxt.com', '_blank');
+                        window.open('https://help.internxt.com', '_blank', 'noopener noreferrer');
                       }}
                       className="cursor-pointer hover:text-primary"
                     >
                       {textContent.FooterSection.sections.join.support}
-                    </p>
+                    </button>
 
                     <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}

@@ -66,5 +66,17 @@ describe('Auth flow (Sign Up / Log In)', () => {
         });
       });
     });
+
+    describe('When the user clicks on the free plan button in the card price section of the card', () => {
+      it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
+        cy.visit('/pricing');
+        const cardId = '#freeAccountCard';
+
+        cy.get(cardId).should('exist');
+        cy.get(cardId).contains('Sign up now').click();
+
+        cy.url().should('eq', 'https://drive.internxt.com/new');
+      });
+    });
   });
 });

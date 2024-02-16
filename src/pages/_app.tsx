@@ -1,12 +1,15 @@
 import React, { memo, useEffect } from 'react';
 import { AppProps } from 'next/app';
-import '@/styles/globals.scss';
 import Script from 'next/script';
-import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
-import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
+import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
+
+import '@/styles/globals.scss';
+import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
+import BottomBanner from '@/components/banners/BottomBanner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const excludedPaths = [
   '/lifetime',
@@ -15,14 +18,17 @@ const excludedPaths = [
   '/techradar-discount',
   '/stackcommerce',
   '/dealfuel',
+  '/temporary-email',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
-  const isExcludedPath = excludedPaths.includes(pathname);
+  const shouldBannerBeenShowed = excludedPaths.includes(pathname) && isProduction;
   const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
   const lang = router.locale;
 
@@ -74,9 +80,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
 
         <Component {...pageProps} />
-        {/* <WheelBanner /> */}
-        {/* <div className="flex justify-center">{!isExcludedPath ? <BottomBanner /> : undefined}</div> */}
         {hideIntercomButton ? null : <Intercom />}
+        {
+          <div className="flex justify-center">
+            {!shouldBannerBeenShowed ? (
+              <>
+                <BottomBanner />
+                <FeaturesBanner />
+              </>
+            ) : undefined}
+          </div>
+        }
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>
