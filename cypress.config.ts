@@ -10,6 +10,9 @@ export default defineConfig({
       // with any changed environment variables
       return config;
     },
+    reporterOptions: {
+      reportDir: '.nyc_output',
+    },
     specPattern: ['**/*.spec.ts', '**/*.cy.ts'],
     baseUrl: 'http://localhost:3000',
     viewportWidth: 1500,
