@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { checkout } from '@/lib/auth';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
 import { analyticsService } from '@/components/services/analytics.service';
 import { stripeService } from '@/components/services/stripe.service';
 import { PriceCardProps } from './PriceCard';

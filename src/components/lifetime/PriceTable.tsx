@@ -3,7 +3,7 @@ import PriceCard from './PriceCard';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { CouponType } from '@/lib/types/types';
 
 const PriceTable = ({ lang }) => {
   const { products, currency, coupon, loadingCards } = usePricing({

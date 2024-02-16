@@ -3,8 +3,8 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/partner-discount/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { CouponType } from '@/pages/api/stripe/get_coupons';
 import usePricing from '@/hooks/usePricing';
+import { CouponType } from '@/lib/types/types';
 
 export default function PriceTable({ lang }: { lang: string }) {
   const { products, currency, loadingCards, coupon } = usePricing({
