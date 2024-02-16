@@ -1,5 +1,5 @@
-describe('Download API', () => {
-  it('returns a download URL', () => {
+describe('Download files endpoint', () => {
+  it('should return the link to download the requested file', () => {
     // Make a request to the API endpoint
     cy.request('/api/download/test-file.txt').then((response) => {
       // Ensure the response status is 200
