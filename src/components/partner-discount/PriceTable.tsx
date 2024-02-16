@@ -7,7 +7,9 @@ import { CouponType } from '@/pages/api/stripe/get_coupons';
 import usePricing from '@/hooks/usePricing';
 
 export default function PriceTable({ lang }: { lang: string }) {
-  const { products, currency, loadingCards, coupon } = usePricing(CouponType.Special15Coupon);
+  const { products, currency, loadingCards, coupon } = usePricing({
+    couponCode: CouponType.Special15Coupon,
+  });
 
   return (
     <section id="priceTable" className="">

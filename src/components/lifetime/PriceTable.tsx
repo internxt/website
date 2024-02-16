@@ -6,7 +6,9 @@ import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
 
 const PriceTable = ({ lang }) => {
-  const { products, currency, coupon, loadingCards } = usePricing(CouponType.LifetimeExclusive);
+  const { products, currency, coupon, loadingCards } = usePricing({
+    couponCode: CouponType.LifetimeExclusive,
+  });
 
   return (
     <section className="overflow-hidden">

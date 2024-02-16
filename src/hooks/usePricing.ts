@@ -2,19 +2,24 @@ import { currencyService } from '@/components/services/currency.service';
 import { ProductsProps, stripeService } from '@/components/services/stripe.service';
 import { useEffect, useReducer } from 'react';
 import { CouponType } from '@/pages/api/stripe/get_coupons';
+import { notificationService } from '@/components/Snackbar';
+
+type UsePricingOptions = {
+  couponCode?: CouponType;
+};
 
 interface UseStripeProductsAndCurrencyResponse {
-  products: ProductsProps | undefined;
   loadingCards: boolean;
   currency: string;
-  coupon: CouponType | null;
+  coupon?: CouponType;
+  products?: ProductsProps;
 }
 
 type ActionType =
   | { type: 'SET_PRODUCTS'; payload: ProductsProps | undefined }
   | { type: 'SET_LOADING_CARDS'; payload: boolean }
   | { type: 'SET_CURRENCY'; payload: string }
-  | { type: 'SET_COUPON'; payload: CouponType | null };
+  | { type: 'SET_COUPON'; payload: CouponType | undefined };
 
 const reducer = (state: any, action: ActionType) => {
   switch (action.type) {
@@ -31,12 +36,13 @@ const reducer = (state: any, action: ActionType) => {
   }
 };
 
-function usePricing(couponCode?: CouponType): UseStripeProductsAndCurrencyResponse {
+function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurrencyResponse {
+  const { couponCode } = options;
   const initialState = {
     products: undefined,
     loadingCards: true,
     currency: '€',
-    coupon: null,
+    coupon: undefined,
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -46,14 +52,9 @@ function usePricing(couponCode?: CouponType): UseStripeProductsAndCurrencyRespon
       const prices = await stripeService.getPrices();
       dispatch({ type: 'SET_PRODUCTS', payload: prices });
       dispatch({ type: 'SET_LOADING_CARDS', payload: false });
-    } catch (error) {
-      try {
-        const res = await stripeService.getPrices(true);
-        dispatch({ type: 'SET_PRODUCTS', payload: res });
-        dispatch({ type: 'SET_LOADING_CARDS', payload: false });
-      } catch (error) {
-        console.error('Error getting prices');
-      }
+    } catch (err) {
+      const res = await stripeService.getPrices(true);
+      dispatch({ type: 'SET_PRODUCTS', payload: res });
     }
 
     try {
@@ -61,7 +62,6 @@ function usePricing(couponCode?: CouponType): UseStripeProductsAndCurrencyRespon
       dispatch({ type: 'SET_CURRENCY', payload: res.symbol });
     } catch (err) {
       dispatch({ type: 'SET_CURRENCY', payload: '€' });
-      console.error(err);
     }
 
     if (couponCode) {
@@ -69,7 +69,7 @@ function usePricing(couponCode?: CouponType): UseStripeProductsAndCurrencyRespon
         const coupon = await stripeService.getCoupon(couponCode);
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        console.error(err);
+        notificationService.openSuccessToast('Error fetching coupon');
       }
     }
   };

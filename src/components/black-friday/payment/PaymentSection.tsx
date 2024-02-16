@@ -1,10 +1,10 @@
 import React from 'react';
 import { Interval } from '@/components/services/stripe.service';
-import PriceCard from '@/components/black-friday/payment/PriceCard';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
 import usePricing from '@/hooks/usePricing';
+import PriceCard from '@/components/prices/PriceCard';
 
 const PaymentSection = ({ textContent }) => {
   const { products, currency, loadingCards } = usePricing();

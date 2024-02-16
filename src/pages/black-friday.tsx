@@ -17,7 +17,7 @@ import FooterSection from '@/components/black-friday/FooterSection';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarLang }) => {
+const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
 
   return (
@@ -57,7 +57,6 @@ const BlackFriday = ({ lang, deviceLang, metatagsDescriptions, langJson, navbarL
 
 export async function getServerSideProps(ctx) {
   const language = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const allowedLanguages = ['en', 'fr'];
 
@@ -73,7 +72,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      deviceLang,
       metatagsDescriptions,
       navbarLang,
       langJson,
