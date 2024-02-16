@@ -4,12 +4,7 @@ module.exports = {
     defaultLocale: 'en',
   },
   experimental: {
-    swcPlugins: [
-      'swc-plugin-coverage-instrument',
-      {
-        coverage: true,
-      },
-    ],
+    swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
   },
   webpack(config) {
     config.module.rules.push({
