@@ -9,10 +9,10 @@ const HeroSection = ({ textContent }) => {
   const [isScannig, setIsScannig] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isScanFinished, setIsScanFinished] = useState(false);
-  const [scanResult, setScanResult] = useState(null);
+  const [scanResult, setScanResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
-  const [file, setFile] = useState({});
+  const [file, setFile] = useState<File | null>(null);
   const isDragging = dragEnter;
   const maxFileSize = 1_000_000_000;
 
@@ -31,12 +31,11 @@ const HeroSection = ({ textContent }) => {
     setScanResult(null);
     const fileInput = document.querySelector('#uploadFile');
     const formdata = new FormData();
-    formdata.append('', fileInput.files[0], 'test.txt');
+    formdata.append('', (fileInput as any).files[0], 'test.txt');
 
     const requestOptions = {
       method: 'POST',
       body: formdata,
-      redirect: 'follow',
     };
 
     fetch(`https://clamav.internxt.com/filescan`, requestOptions)
@@ -69,7 +68,7 @@ const HeroSection = ({ textContent }) => {
     setIsScannig(false);
     setIsScanFinished(false);
     setIsError(false);
-    setFile({});
+    setFile(null);
   };
 
   const handleCancelScan = () => {
@@ -82,7 +81,7 @@ const HeroSection = ({ textContent }) => {
   };
 
   const handleFiles = () => {
-    const fileInput = document.querySelector('#uploadFile');
+    const fileInput = document.querySelector('#uploadFile') as any;
     if (fileInput.files) {
       setDragEnter(false);
       setFileSizeLimitReached(false);
@@ -98,20 +97,20 @@ const HeroSection = ({ textContent }) => {
   };
 
   const handleFileInput = () => {
-    const fileInput = document.querySelector('#uploadFile');
+    const fileInput = document.querySelector('#uploadFile') as any;
     if (fileInput.files) {
       handleFiles();
     }
   };
 
   const handleOpenFileExplorer = () => {
-    document.querySelector('input[type=file]').click();
+    (document.querySelector('input[type=file]') as any).click();
   };
 
   const handleDrop = async (e) => {
     e.preventDefault();
     if (!isScannig) {
-      document.querySelector('#uploadFile').files = e.dataTransfer.files;
+      (document.querySelector('#uploadFile') as any).files = e.dataTransfer.files;
       handleFiles();
     }
   };
@@ -217,8 +216,8 @@ const HeroSection = ({ textContent }) => {
                         )}
 
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
-                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80">{file.name}</p>
-                          <p className="text-sm text-cool-gray-60">{file.type}</p>
+                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80">{file?.name}</p>
+                          <p className="text-sm text-cool-gray-60">{file?.type}</p>
                         </div>
                       </div>
 
@@ -233,7 +232,7 @@ const HeroSection = ({ textContent }) => {
                                     <p className="text-lg font-semibold text-gray-50">{virus};</p>
                                   ))}
                               </div>
-                              {scanResult.viruses.length > 1 ? scanAgainButton() : scanAgainButton(true)}
+                              {scanResult.viruses.length > 1 ? scanAgainButton(false) : scanAgainButton(true)}
                             </div>
                           ) : (
                             <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 py-5 px-5 text-center text-gray-80">
@@ -254,7 +253,7 @@ const HeroSection = ({ textContent }) => {
                                   </div>
                                 </div>
                               </div>
-                              {scanAgainButton()}
+                              {scanAgainButton(false)}
                             </div>
                           )}
                         </>
@@ -350,7 +349,7 @@ const HeroSection = ({ textContent }) => {
                               <div className="flex w-full flex-shrink flex-col items-center overflow-hidden">
                                 <p className="px-4 text-center text-2xl font-medium">{textContent.fileSelected}</p>
                                 <p className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 lg:w-auto lg:max-w-md xl:max-w-xl">
-                                  {file.name}
+                                  {file?.name}
                                 </p>
                               </div>
 
