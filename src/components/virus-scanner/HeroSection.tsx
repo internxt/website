@@ -152,7 +152,7 @@ const HeroSection = ({ textContent }) => {
         handleDragEnter();
       }}
     >
-      <label htmlFor="uploadFile" className="pointer-events-none absolute h-0 w-0 overflow-hidden">
+      <label className="pointer-events-none absolute h-0 w-0 overflow-hidden">
         <input type="file" id="uploadFile" ref={uploadFileRef} tabIndex={-1} onChange={() => handleFileInput()} />
       </label>
 
@@ -225,14 +225,17 @@ const HeroSection = ({ textContent }) => {
 
                       {isScanFinished ? (
                         <>
-                          {scanResult && scanResult.isInfected ? (
+                          {scanResult.isInfected ? (
                             <div className="flex h-full w-full flex-col items-center justify-center">
                               <p className="text-2xl font-semibold">Virus identified:</p>
                               <div className="flex max-w-xl flex-row space-x-1 text-center">
-                                {scanResult.viruses &&
-                                  scanResult.viruses.map((virus) => (
-                                    <p className="text-lg font-semibold text-gray-50">{virus};</p>
-                                  ))}
+                                {scanResult.viruses
+                                  ? scanResult.viruses.map((virus) => (
+                                      <p key={virus} className="text-lg font-semibold text-gray-50">
+                                        {virus};
+                                      </p>
+                                    ))
+                                  : null}
                               </div>
                               {scanResult.viruses.length > 1 ? scanAgainButton(false) : scanAgainButton(true)}
                             </div>
@@ -439,7 +442,7 @@ const HeroSection = ({ textContent }) => {
 
             {isError && (
               <div className="absolute inset-0 z-50 flex h-full w-full flex-row items-center justify-center overflow-hidden rounded-xl bg-primary bg-opacity-3">
-                <div
+                <button
                   className="absolute inset-0 cursor-pointer bg-black bg-opacity-40"
                   onClick={() => {
                     handleRestartScan();
