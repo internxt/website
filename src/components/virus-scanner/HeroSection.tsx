@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
@@ -12,6 +12,7 @@ const HeroSection = ({ textContent }) => {
   const [scanResult, setScanResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
+  const uploadFileRef = createRef<HTMLInputElement>();
   const [file, setFile] = useState<File | null>(null);
   const isDragging = dragEnter;
   const maxFileSize = 1_000_000_000;
@@ -29,7 +30,7 @@ const HeroSection = ({ textContent }) => {
 
   const scanFiles = () => {
     setScanResult(null);
-    const fileInput = document.querySelector('#uploadFile');
+    const fileInput = uploadFileRef.current;
     const formdata = new FormData();
     formdata.append('', (fileInput as any).files[0], 'test.txt');
 
@@ -81,8 +82,8 @@ const HeroSection = ({ textContent }) => {
   };
 
   const handleFiles = () => {
-    const fileInput = document.querySelector('#uploadFile') as any;
-    if (fileInput.files) {
+    const fileInput = uploadFileRef.current;
+    if (fileInput?.files) {
       setDragEnter(false);
       setFileSizeLimitReached(false);
       setIsSelectedFile(true);
@@ -97,8 +98,8 @@ const HeroSection = ({ textContent }) => {
   };
 
   const handleFileInput = () => {
-    const fileInput = document.querySelector('#uploadFile') as any;
-    if (fileInput.files) {
+    const fileInput = uploadFileRef.current;
+    if (fileInput?.files) {
       handleFiles();
     }
   };
@@ -109,8 +110,9 @@ const HeroSection = ({ textContent }) => {
 
   const handleDrop = async (e) => {
     e.preventDefault();
-    if (!isScannig) {
-      (document.querySelector('#uploadFile') as any).files = e.dataTransfer.files;
+    const fileInput = uploadFileRef.current;
+    if (!isScannig && fileInput) {
+      fileInput.files = e.dataTransfer.files;
       handleFiles();
     }
   };
@@ -151,7 +153,7 @@ const HeroSection = ({ textContent }) => {
       }}
     >
       <label htmlFor="uploadFile" className="pointer-events-none absolute h-0 w-0 overflow-hidden">
-        <input type="file" id="uploadFile" tabIndex={-1} onChange={() => handleFileInput()} />
+        <input type="file" id="uploadFile" ref={uploadFileRef} tabIndex={-1} onChange={() => handleFileInput()} />
       </label>
 
       <div
