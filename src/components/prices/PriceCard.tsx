@@ -44,42 +44,32 @@ export default function PriceCard({
 
   return (
     <div
-      className={`priceCard card ${
-        popular ? 'border-2 border-primary bg-primary shadow-subtle ring-2 ring-primary' : ''
+      className={`${
+        popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
-      <div
-        className={`mostPopular ${
-          popular ? '' : 'hidden'
-        } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
-      >
-        {contentText.mostPopularPlan}
-      </div>
-
-      <div
-        className={`info flex flex-col items-center justify-center rounded-t-2xl  bg-white p-6 pt-6 
-        `}
-      >
-        <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap bg-neutral-20 py-1 px-4 pb-0.5 text-base font-semibold ${
-            popular ? 'text-gray-100' : ' text-gray-50'
-          } rounded-full font-medium`}
-        >
-          <p>
-            {price <= 0 ? (
-              <span className="">
-                {contentText.price.free}
-                {storage}
-              </span>
-            ) : (
-              storage
-            )}
-          </p>
+      <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
+        <div className="flex flex-col items-center justify-center space-y-1">
+          <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
+            <p className="text-lg font-medium text-primary">Save 69%</p>
+          </div>
+          <div
+            className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full px-4 text-4xl font-medium text-gray-100`}
+          >
+            <p>
+              {price <= 0 ? (
+                <span className="">
+                  {contentText.price.free}
+                  {storage}
+                </span>
+              ) : (
+                storage
+              )}
+            </p>
+          </div>
         </div>
         <div
-          className={`planPrice flex flex-col items-center justify-center py-8 ${
-            priceBefore ? 'space-y-1' : 'space-y-4'
-          }`}
+          className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
         >
           <div
             className={`priceBreakdown flex flex-row
@@ -102,18 +92,18 @@ export default function PriceCard({
           >
             {contentText.perUser}
           </span>
-          <span
-            className={`priceBefore ${
+          <p
+            className={`${
               priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-100 line-through`}
+            } flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-50 line-through`}
           >
-            {country}
-            {priceBefore}
-          </span>
+            <span className={`currency`}>{country}</span>
+            <span className="price text-xl">{priceBefore}</span>
+          </p>
           <div
             className={`totalBilling ${
               planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-sm font-medium text-gray-50
+            } flex-row text-gray-50
             `}
           >
             <p className={`${price <= 0 ? 'hidden' : ''}`}>
@@ -154,7 +144,7 @@ export default function PriceCard({
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
-        <div className="flex flex-col space-y-2 text-sm">
+        <div className="flex flex-col space-y-2 whitespace-nowrap text-sm">
           {billingFrequency === 'lifetime' && (
             <div className={`flex flex-row items-start space-x-2 font-semibold`}>
               <img

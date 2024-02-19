@@ -102,7 +102,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           </div>
         </div>
 
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-9">
           {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
           <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
             <button
