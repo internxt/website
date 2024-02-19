@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
-import { Transition } from '@headlessui/react';
+import { Switch, Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
-import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
+import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { Interval, ProductsProps, stripeService } from '@/components/services/stripeService';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -24,19 +24,27 @@ const CurrencyValue = {
   $: 'USD',
 };
 
+type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
+
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
-  const [individual, setIndividual] = useState(true);
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
-  const [loadingCards, setLoadingCards] = useState(true);
+
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
+
   const [products, setProducts] = useState<ProductsProps>();
+  const [loadingCards, setLoadingCards] = useState(true);
   const [coupon, setCoupon] = useState<CouponType>();
   const [currency, setCurrency] = useState({
     symbol: '€',
     value: 1,
   });
+
+  const isIndividual = activeSwitchPlan !== 'Business';
+  const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
+  const isSubscription = billingFrequency === Interval.Month || billingFrequency === Interval.Year;
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
@@ -82,70 +90,97 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   }, []);
 
   return (
-    <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center py-20">
+    <section className="overflow-hidden bg-white">
+      <div className="flex flex-col items-center space-y-10 py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
           <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
-            <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
+            <Header>{isIndividual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
-              {!individual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
+              {!isIndividual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
             </p>
           </div>
-          <div className="items center flex flex-col">
-            <button
-              type="button"
-              className="mt-4 mb-6 cursor-pointer text-center font-medium text-primary active:text-blue-50"
-              onClick={() => {
-                setIndividual(!individual);
-              }}
-            >
-              {individual ? `${contentText.changePlan.toBusiness}` : `${contentText.changePlan.toIndividuals}`}
-            </button>
-          </div>
         </div>
-        {individual && (
+
+        <div className="flex flex-col items-center space-y-4">
+          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
           <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
             <button
               type="button"
               onClick={() => {
-                setBillingFrequency(Interval.Month);
-                setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Monthly`);
-              }}
-              className={`rounded-lg py-1.5 px-6 font-medium ${
-                billingFrequency === Interval.Month ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
-              }`}
-            >
-              {contentText.billingFrequency.monthly}
-            </button>
-            <button
-              type="button"
-              onClick={() => {
+                setActiveSwitchPlan('Individuals');
                 setBillingFrequency(Interval.Year);
-                setSegmentPageName(`Pricing ${individual ? 'Individuals' : 'Business'} Annually`);
+                setSegmentPageName(`Pricing Individuals ${billingFrequency}`);
               }}
               className={`rounded-lg py-1.5 px-6 font-medium ${
-                billingFrequency === Interval.Year ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+                activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
-              {contentText.billingFrequency.annually}
+              {contentText.billingFrequency.individual}
             </button>
             <button
               type="button"
               onClick={() => {
+                setActiveSwitchPlan('Lifetime');
                 setBillingFrequency(Interval.Lifetime);
+                setSegmentPageName(`Pricing Individuals Lifetime`);
               }}
               className={`rounded-lg py-1.5 px-6 font-medium ${
-                billingFrequency === Interval.Lifetime ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
-              } ${!individual && 'hidden'}`}
+                activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+              }`}
             >
               {contentText.billingFrequency.lifetime}
             </button>
+            <button
+              type="button"
+              onClick={() => {
+                setActiveSwitchPlan('Business');
+                setSegmentPageName(`Pricing Business`);
+              }}
+              className={`rounded-lg py-1.5 px-6 font-medium ${
+                activeSwitchPlan === 'Business' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+              }`}
+            >
+              {contentText.billingFrequency.Business}
+            </button>
           </div>
-        )}
-        {/* Loading cards */}
+          {/* Switch buttons for Individual plans (Monthly | Annually) */}
+          <div className={`flex-row space-x-5 ${isSubscription ? 'flex' : 'hidden'}`}>
+            <p
+              className={`text-base font-semibold ${
+                billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
+              }`}
+            >
+              Monthly
+            </p>
+            <Switch
+              checked={isIndividualSwitchEnabled}
+              onChange={() => {
+                setBillingFrequency(isIndividualSwitchEnabled ? Interval.Month : Interval.Year);
+              }}
+              className={`${
+                isIndividualSwitchEnabled ? 'bg-green' : 'bg-gray-10'
+              } relative inline-flex h-6 w-11 items-center rounded-full`}
+            >
+              <span
+                className={`${
+                  isIndividualSwitchEnabled ? 'translate-x-6' : 'translate-x-1'
+                } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+              />
+            </Switch>
+            <p
+              className={`text-base font-semibold ${
+                billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
+              }`}
+            >
+              Annually
+            </p>
+          </div>
+        </div>
+
+        {/* Skeleton cards while fetching products data */}
         <Transition
-          show={individual && loadingCards}
+          show={isIndividual && loadingCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
@@ -158,15 +193,14 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           </div>
         </Transition>
 
-        {/* Render cards */}
-
+        {/* Subscriptions and Lifetime cards */}
         <Transition
-          show={individual && !loadingCards}
+          show={isIndividual && !loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
           className={'flex flex-col'}
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4 py-14">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
             {products?.individuals?.[billingFrequency] &&
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
@@ -205,12 +239,10 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               })}
           </div>
         </Transition>
-        <div id="freeAccountCard" className="content flex w-full px-5 pb-20 md:pb-0">
-          <FreePlanCard textContent={contentText.freePlanCard} />
-        </div>
 
+        {/* Business banner */}
         <Transition
-          show={!individual}
+          show={!isIndividual}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
@@ -219,16 +251,20 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <Coin size={40} className="text-primary" />
+        <div id="freeAccountCard" className="content flex w-full px-5 pb-20 md:pb-0">
+          <FreePlanCard textContent={contentText.freePlanCard} />
+        </div>
+
+        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-y-0 md:space-x-32 md:pt-20">
+          <div className="flex flex-row items-center space-x-3">
+            <ShieldCheck size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>
           </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <CreditCard size={40} className="text-primary" />
+          <div className="flex flex-row items-center space-x-3">
+            <FolderSimpleLock size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.secondFeature}</p>
           </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
+          <div className="flex flex-row items-center space-x-3">
             <Detective size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.featureSection.thirdFeature}</p>
           </div>

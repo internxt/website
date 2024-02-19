@@ -15,15 +15,10 @@
   "lifetimeDescription": "Buy once and get privacy and security forever.",
   "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
   "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
-  "changePlan": {
-    "toIndividuals": "Switch to Plans for Individuals",
-    "toBusiness": "Switch to Plans for Business"
-  },
   "billingFrequency": {
-    "monthly": "Monthly",
-    "semiannually": "Semiannually",
-    "annually": "Annually",
-    "lifetime": "Lifetime"
+    "individual": "Individual",
+    "lifetime": "Lifetime",
+    "Business": "Business"
   },
   "billingFrequencyLabel": {
     "lifetime": "One-time payment",
