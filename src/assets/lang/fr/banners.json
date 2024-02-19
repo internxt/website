@@ -1,7 +1,7 @@
 {
   "valentinesBanner": {
     "label": "Économisez 69%",
-    "title": "Délices sucrés de la Saint-Valentin!",
+    "title": "Aimez votre vie privée!",
     "cta": "Choisissez un plan",
     "guarantee": "Garantie de remboursement de 30 jours",
     "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients",
@@ -63,7 +63,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "Profitez de 69 % de réduction sur les plans mensuels ou annuels.",
-      "normalText": "Ressentez l'amour en ce jour de la Saint-Valentin !",
+      "normalText": "Montrez de l'amour à vos fichiers! ",
       "cta": "Choisissez un plan"
     }
   },
