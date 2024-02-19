@@ -85,9 +85,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          <div className="flex flex-col px-5">
-            <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
-          </div>
+          <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
             <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
