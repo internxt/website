@@ -132,23 +132,6 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             />
           </RevealX>
         </div>
-
-        {/* <div className="absolute hidden w-full max-w-[750px] flex-col items-start object-contain object-right pt-10 lg:right-0 lg:flex">
-          <RevealX className="hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex" direction="left">
-            <Image
-              className="h-full w-full bg-no-repeat "
-              src="/images/drive/document-folders.webp"
-              width={750}
-              height={900}
-              quality={100}
-              unoptimized={true}
-              objectPosition={'left'}
-              objectFit="cover"
-              draggable={false}
-              alt="Document folders"
-            />
-          </RevealX>
-        </div> */}
       </div>
 
       {/* Feature #3 - Share your files with ease, security is on us */}
@@ -157,7 +140,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           <RevealX className="hidden flex-col shadow-subtle-hard lg:flex" direction="right">
             <Image
               className="h-full w-full bg-no-repeat "
-              src="/images/drive/File-sharing.webp"
+              src="/images/drive/file_sharing.webp"
               width={650}
               height={545}
               quality={100}
@@ -172,7 +155,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
         <div className="flex w-full flex-col items-center lg:w-auto lg:items-start lg:pl-10">
           <div className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat px-5 shadow-subtle lg:hidden">
-            <img src={'/images/drive/File-sharing.webp'} alt="Work list" />
+            <img src={'/images/drive/file_sharing.webp'} alt="Work list" />
           </div>
 
           <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
@@ -198,7 +181,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       </div>
 
       {/* Feature #4 - Backup what matters to you. */}
-      <div className="grid w-full grid-cols-1 justify-center gap-20 pt-5 lg:grid-cols-2 lg:pt-20 lg:pb-20">
+      {/* <div className="grid w-full grid-cols-1 justify-center gap-20 pt-5 lg:grid-cols-2 lg:pt-20 lg:pb-20">
         <div className="flex flex-col items-center justify-center lg:items-end lg:pr-20">
           <div className="flex w-full flex-col bg-transparent px-5 lg:hidden">
             <img
@@ -242,7 +225,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             />
           </RevealX>
         </div>
-      </div>
+      </div> */}
 
       <div className="flex w-full flex-col items-center bg-gray-1 px-10 py-10 lg:px-0 lg:py-20">
         <h3 className="mb-12 text-center text-5xl font-semibold text-gray-100">
