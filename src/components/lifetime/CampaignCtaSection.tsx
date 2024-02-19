@@ -35,7 +35,7 @@ const CampaignCtaSection = ({ textContent }) => {
           </div>
           <div className="relative hidden h-full w-full flex-col xl:flex">
             <Image
-              src="/images/banners/internxt_valentines_sale_pricing.webp"
+              src="/images/banners/internxt_sale_pricing.webp"
               width={653}
               height={455}
               quality={100}
