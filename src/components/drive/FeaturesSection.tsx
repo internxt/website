@@ -140,7 +140,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           <RevealX className="hidden flex-col shadow-subtle-hard lg:flex" direction="right">
             <Image
               className="h-full w-full bg-no-repeat "
-              src="/images/drive/File-sharing.webp"
+              src="/images/drive/file_sharing.webp"
               width={650}
               height={545}
               quality={100}
@@ -155,7 +155,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
         <div className="flex w-full flex-col items-center lg:w-auto lg:items-start lg:pl-10">
           <div className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat px-5 shadow-subtle lg:hidden">
-            <img src={'/images/drive/File-sharing.webp'} alt="Work list" />
+            <img src={'/images/drive/file_sharing.webp'} alt="Work list" />
           </div>
 
           <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
