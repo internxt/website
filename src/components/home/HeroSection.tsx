@@ -60,7 +60,7 @@ export default function HeroSection({ textContent, lang }) {
           {/* Desktop animation/image */}
           <Link href="/pricing" className="hidden items-center lg:flex lg:pt-5" locale={lang}>
             <Image
-              src="/images/home/internxt_valentines_sale.webp"
+              src="/images/home/internxt_sale.webp"
               width={562}
               height={529}
               alt="Internxt Valentines Sale"
