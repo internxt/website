@@ -14,6 +14,7 @@ export interface PriceCardProps {
   country?: string;
   coupon?: CouponType;
   currency?: string;
+  savePercentage?: number;
 }
 
 const currencyValue = {
@@ -33,6 +34,7 @@ export default function PriceCard({
   lang,
   coupon,
   currency,
+  savePercentage,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -42,49 +44,6 @@ export default function PriceCard({
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
-  const productFeatures = {
-    '200GB': [
-      `${storage} encrypted storage`,
-      'Encrypted file storage',
-      'Encrypted file and folder sharing',
-      'Password-protected file sharing',
-      'Access your files from any device',
-      'Get access to all our services',
-      'Upload files up to 20GB',
-      'Two-factor authentication',
-    ],
-    '2TB': [
-      `${storage} encrypted storage`,
-      'Encrypted file storage',
-      'Encrypted file and folder sharing',
-      'Password-protected file sharing',
-      'Access your files from any device',
-      'Get access to all our services',
-      'Upload files up to 20GB',
-      'Two-factor authentication',
-    ],
-    '5TB': [
-      `${storage} encrypted storage`,
-      'Encrypted file storage',
-      'Encrypted file and folder sharing',
-      'Password-protected file sharing',
-      'Access your files from any device',
-      'Get access to all our services',
-      'Upload files up to 20GB',
-      'Two-factor authentication',
-    ],
-    '10TB': [
-      `${storage} encrypted storage`,
-      'Encrypted file storage',
-      'Encrypted file and folder sharing',
-      'Password-protected file sharing',
-      'Access your files from any device',
-      'Get access to all our services',
-      'Upload files up to 20GB',
-      'Two-factor authentication',
-    ],
-  };
-
   return (
     <div
       className={`${
@@ -93,9 +52,13 @@ export default function PriceCard({
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-2">
-          <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">Save 69%</p>
-          </div>
+          {savePercentage ? (
+            <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
+              <p className="text-lg font-medium text-primary">
+                {contentText.save} {savePercentage}%
+              </p>
+            </div>
+          ) : null}
           <div
             className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full px-4 text-4xl font-medium text-gray-100`}
           >
@@ -194,7 +157,7 @@ export default function PriceCard({
               </span>
             </div>
           )}
-          {productFeatures[storage].map((feature) => (
+          {contentText.productFeatures[storage].map((feature) => (
             <div className="flex flex-row items-start space-x-2">
               <img
                 loading="lazy"

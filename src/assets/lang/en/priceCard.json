@@ -1,6 +1,7 @@
 {
   "mostPopular": "Most popular",
   "mostPopularPlan": "Most Popular Plan",
+  "save": "Save",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
@@ -16,9 +17,11 @@
   "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
   "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
   "billingFrequency": {
+    "monthly": "Monthly",
+    "annually": "Annually",
     "individual": "Individual",
     "lifetime": "Lifetime",
-    "Business": "Business"
+    "business": "Business"
   },
   "billingFrequencyLabel": {
     "lifetime": "One-time payment",
@@ -71,5 +74,47 @@
     "accessFromAnywhere": "Access your files from any device",
     "allServices": "Get access to all our services",
     "dataAccess": "No unauthorized data access"
+  },
+  "productFeatures": {
+    "200GB": [
+      "200GB encrypted storage",
+      "Encrypted file storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication"
+    ],
+    "2TB": [
+      "2TB encrypted storage",
+      "Encrypted file storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication"
+    ],
+    "5TB": [
+      "5TB encrypted storage",
+      "Encrypted file storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication"
+    ],
+    "10TB": [
+      "10TB encrypted storage",
+      "Encrypted file storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication"
+    ]
   }
 }

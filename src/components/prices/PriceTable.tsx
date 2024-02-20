@@ -156,7 +156,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 activeSwitchPlan === 'Business' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
-              {contentText.billingFrequency.Business}
+              {contentText.billingFrequency.business}
             </button>
           </div>
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
@@ -166,7 +166,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
               }`}
             >
-              Monthly
+              {contentText.billingFrequency.monthly}
             </p>
             <Switch
               checked={isIndividualSwitchEnabled}
@@ -188,7 +188,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
               }`}
             >
-              Annually
+              {contentText.billingFrequency.annually}
             </p>
           </div>
         </div>
@@ -247,6 +247,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         country={currency.symbol}
                         currency={currencyValue}
                         coupon={coupon}
+                        savePercentage={69}
                       />
                     )}
                   </>
