@@ -161,13 +161,18 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           </div>
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
           <div className={`flex-row items-center space-x-5 ${isSubscription ? 'flex' : 'hidden'}`}>
-            <p
-              className={`text-base font-medium ${
-                billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
-              }`}
-            >
-              {contentText.billingFrequency.monthly}
-            </p>
+            <div className="relative flex flex-row items-center">
+              <p className="absolute right-full whitespace-nowrap pr-1.5 font-semibold text-green-dark">
+                {contentText.save} 69%
+              </p>
+              <p
+                className={`text-base font-medium ${
+                  billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
+                }`}
+              >
+                {contentText.billingFrequency.monthly}
+              </p>
+            </div>
             <Switch
               checked={isIndividualSwitchEnabled}
               onChange={() => {
