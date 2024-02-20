@@ -79,43 +79,43 @@
   "productFeatures": {
     "200GB": [
       "Stockage chiffré de 200 Go",
-      "Stockage de fichiers chiffré",
       "Partage chiffré de fichiers et de dossiers",
       "Partage de fichiers protégé par mot de passe",
       "Accédez à vos fichiers depuis n'importe quel appareil",
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs"
+      "Authentification à deux facteurs (2FA)",
+      "Assistance par e-mail"
     ],
     "2TB": [
       "Stockage chiffré de 2 To",
-      "Stockage de fichiers chiffré",
       "Partage chiffré de fichiers et de dossiers",
       "Partage de fichiers protégé par mot de passe",
       "Accédez à vos fichiers depuis n'importe quel appareil",
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs"
+      "Authentification à deux facteurs (2FA)",
+      "Assistance par e-mail"
     ],
     "5TB": [
       "Stockage chiffré de 5 To",
-      "Stockage de fichiers chiffré",
       "Partage chiffré de fichiers et de dossiers",
       "Partage de fichiers protégé par mot de passe",
       "Accédez à vos fichiers depuis n'importe quel appareil",
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs"
+      "Authentification à deux facteurs (2FA)",
+      "Assistance par e-mail"
     ],
     "10TB": [
       "Stockage chiffré de 10 To",
-      "Stockage de fichiers chiffré",
       "Partage chiffré de fichiers et de dossiers",
       "Partage de fichiers protégé par mot de passe",
       "Accédez à vos fichiers depuis n'importe quel appareil",
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs"
+      "Authentification à deux facteurs (2FA)",
+      "Assistance par e-mail"
     ]
   }
 }

@@ -80,43 +80,43 @@
   "productFeatures": {
     "200GB": [
       "Archiviazione crittografata da 200 GB",
-      "Archiviazione di file crittografata",
       "Condivisione crittografata di file e cartelle",
       "Condivisione protetta da password",
       "Accedi ai tuoi file da qualsiasi dispositivo",
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
-      "Autenticazione a due fattori"
+      "Autenticazione a due fattori (2FA)",
+      "Supporto via e-mail"
     ],
     "2TB": [
       "Archiviazione crittografata da 2 TB",
-      "Archiviazione di file crittografata",
       "Condivisione crittografata di file e cartelle",
       "Condivisione protetta da password",
       "Accedi ai tuoi file da qualsiasi dispositivo",
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
-      "Autenticazione a due fattori"
+      "Autenticazione a due fattori (2FA)",
+      "Supporto via e-mail"
     ],
     "5TB": [
       "Archiviazione crittografata da 5 TB",
-      "Archiviazione di file crittografata",
       "Condivisione crittografata di file e cartelle",
       "Condivisione protetta da password",
       "Accedi ai tuoi file da qualsiasi dispositivo",
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
-      "Autenticazione a due fattori"
+      "Autenticazione a due fattori (2FA)",
+      "Supporto via e-mail"
     ],
     "10TB": [
       "Archiviazione crittografata da 10 TB",
-      "Archiviazione di file crittografata",
       "Condivisione crittografata di file e cartelle",
       "Condivisione protetta da password",
       "Accedi ai tuoi file da qualsiasi dispositivo",
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
-      "Autenticazione a due fattori"
+      "Autenticazione a due fattori (2FA)",
+      "Supporto via e-mail"
     ]
   }
 }
