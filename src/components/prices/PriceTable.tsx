@@ -273,7 +273,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
 
         <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-y-0 md:space-x-32">
           {features.map((feature) => (
-            <div className="flex flex-row items-center space-x-3">
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
               <p className="text-xl font-medium text-gray-80">{feature.text}</p>
             </div>

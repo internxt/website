@@ -62,16 +62,7 @@ export default function PriceCard({
           <div
             className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full px-4 text-4xl font-medium text-gray-100`}
           >
-            <p>
-              {price <= 0 ? (
-                <span className="">
-                  {contentText.price.free}
-                  {storage}
-                </span>
-              ) : (
-                storage
-              )}
-            </p>
+            <p>{storage}</p>
           </div>
         </div>
         <div
