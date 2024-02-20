@@ -52,17 +52,10 @@ export default function PriceCard({
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-2">
-          {savePercentage ? (
-            <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-              <p className="text-lg font-medium text-primary">
-                {contentText.save} {savePercentage}%
-              </p>
-            </div>
-          ) : null}
-          <div
-            className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full px-4 text-4xl font-medium text-gray-100`}
-          >
-            <p>{storage}</p>
+          <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
+            <p className="text-lg font-medium text-primary">
+              <p>{storage}</p>
+            </p>
           </div>
         </div>
         <div
@@ -90,24 +83,18 @@ export default function PriceCard({
           <p
             className={`${
               priceBefore ? 'flex' : 'hidden'
-            } flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-50 line-through`}
+            } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
-            <span className={`currency`}>{country}</span>
-            <span className="price text-xl">{priceBefore}</span>
+            <span className={`text-sm`}>{country}</span>
+            <span className="price text-2xl">{priceBefore}</span>
           </p>
-          <div
-            className={`totalBilling ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-gray-50
+
+          <p
+            className={`${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} text-gray-50
             `}
           >
-            <p className={`${price <= 0 ? 'hidden' : ''}`}>
-              <span className="billingFrequency">
-                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
-              </span>
-            </p>
-            <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
-          </div>
+            {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
+          </p>
         </div>
         <button
           id={`planButton${storage}`}
@@ -152,12 +139,12 @@ export default function PriceCard({
             <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap">
               <img
                 loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
+                className="translate-y-px select-none"
                 src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
-              <span>{feature}</span>
+              <span className="text-gray-80">{feature}</span>
             </div>
           ))}
         </div>

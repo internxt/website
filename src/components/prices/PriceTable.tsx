@@ -127,7 +127,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 setBillingFrequency(Interval.Year);
                 setSegmentPageName(`Pricing Individuals ${billingFrequency}`);
               }}
-              className={`rounded-lg py-1.5 px-6 font-medium ${
+              className={`rounded-lg py-0.5 px-6 font-medium ${
                 activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -140,7 +140,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 setBillingFrequency(Interval.Lifetime);
                 setSegmentPageName(`Pricing Individuals Lifetime`);
               }}
-              className={`rounded-lg py-1.5 px-6 font-medium ${
+              className={`rounded-lg py-0.5 px-6 font-medium ${
                 activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -152,7 +152,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 setActiveSwitchPlan('Business');
                 setSegmentPageName(`Pricing Business`);
               }}
-              className={`rounded-lg py-1.5 px-6 font-medium ${
+              className={`rounded-lg py-0.5 px-6 font-medium ${
                 activeSwitchPlan === 'Business' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -160,9 +160,9 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             </button>
           </div>
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
-          <div className={`flex-row space-x-5 ${isSubscription ? 'flex' : 'hidden'}`}>
+          <div className={`flex-row items-center space-x-5 ${isSubscription ? 'flex' : 'hidden'}`}>
             <p
-              className={`text-base font-semibold ${
+              className={`text-base font-medium ${
                 billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
               }`}
             >
@@ -183,13 +183,18 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 } inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            <p
-              className={`text-base font-semibold ${
-                billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
-              }`}
-            >
-              {contentText.billingFrequency.annually}
-            </p>
+            <div className="relative flex flex-row space-x-1">
+              <p
+                className={`text-base font-medium ${
+                  billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
+                }`}
+              >
+                {contentText.billingFrequency.annually}
+              </p>
+              <p className="absolute translate-x-16 whitespace-nowrap font-semibold text-green-dark">
+                {contentText.save} 69%
+              </p>
+            </div>
           </div>
         </div>
 
