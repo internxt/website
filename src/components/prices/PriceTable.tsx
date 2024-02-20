@@ -196,7 +196,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               >
                 {contentText.billingFrequency.annually}
               </p>
-              <p className="absolute left-full whitespace-nowrap pl-1.5 font-semibold text-green-dark">
+              <p className="absolute left-full whitespace-nowrap pl-1.5 font-medium text-green-dark">
                 {contentText.save} 69%
               </p>
             </div>
