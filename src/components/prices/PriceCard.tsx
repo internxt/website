@@ -89,10 +89,7 @@ export default function PriceCard({
             <span className="price text-2xl">{priceBefore}</span>
           </p>
 
-          <p
-            className={`${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} text-gray-50
-            `}
-          >
+          <p className={`${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} text-sm text-gray-50`}>
             {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
           </p>
         </div>
