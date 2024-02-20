@@ -48,6 +48,21 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
 
   const currencyValue = CurrencyValue[currency.symbol] || 'eur';
 
+  const features = [
+    {
+      icon: ShieldCheck,
+      text: textContent.featureSection.firstFeature,
+    },
+    {
+      icon: FolderSimpleLock,
+      text: textContent.featureSection.secondFeature,
+    },
+    {
+      icon: Detective,
+      text: textContent.featureSection.thirdFeature,
+    },
+  ];
+
   useEffect(() => {
     stripeService
       .getAllPrices()
@@ -185,7 +200,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
@@ -247,27 +262,21 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
             <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
-        <div id="freeAccountCard" className="content flex w-full px-5 pb-20 md:pb-0">
+        <div id="freeAccountCard" className="content flex w-full px-5">
           <FreePlanCard textContent={contentText.freePlanCard} />
         </div>
 
-        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-y-0 md:space-x-32 md:pt-20">
-          <div className="flex flex-row items-center space-x-3">
-            <ShieldCheck size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>
-          </div>
-          <div className="flex flex-row items-center space-x-3">
-            <FolderSimpleLock size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.secondFeature}</p>
-          </div>
-          <div className="flex flex-row items-center space-x-3">
-            <Detective size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.thirdFeature}</p>
-          </div>
+        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-y-0 md:space-x-32">
+          {features.map((feature) => (
+            <div className="flex flex-row items-center space-x-3">
+              <feature.icon size={40} className="text-primary" />
+              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

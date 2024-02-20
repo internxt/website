@@ -47,6 +47,7 @@
     "signUpNow": "Sign up now",
     "buy": "Buy",
     "get": "Get",
+    "selectPlan": "Select plan",
     "discount": "BEST VALUE!",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Get 30 days for free"
@@ -56,7 +57,7 @@
     "enjoy10gb": "Enjoy up to 10GB forever and get access to all our services",
     "upTo": "Up to 10GB",
     "freeForever": "Free forever",
-    "cta": "Sign up now"
+    "cta": "Select plan"
   },
   "features": {
     "enjoyForever": {

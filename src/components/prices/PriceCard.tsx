@@ -42,6 +42,49 @@ export default function PriceCard({
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
+  const productFeatures = {
+    '200GB': [
+      `${storage} encrypted storage`,
+      'Encrypted file storage',
+      'Encrypted file and folder sharing',
+      'Password-protected file sharing',
+      'Access your files from any device',
+      'Get access to all our services',
+      'Upload files up to 20GB',
+      'Two-factor authentication',
+    ],
+    '2TB': [
+      `${storage} encrypted storage`,
+      'Encrypted file storage',
+      'Encrypted file and folder sharing',
+      'Password-protected file sharing',
+      'Access your files from any device',
+      'Get access to all our services',
+      'Upload files up to 20GB',
+      'Two-factor authentication',
+    ],
+    '5TB': [
+      `${storage} encrypted storage`,
+      'Encrypted file storage',
+      'Encrypted file and folder sharing',
+      'Password-protected file sharing',
+      'Access your files from any device',
+      'Get access to all our services',
+      'Upload files up to 20GB',
+      'Two-factor authentication',
+    ],
+    '10TB': [
+      `${storage} encrypted storage`,
+      'Encrypted file storage',
+      'Encrypted file and folder sharing',
+      'Password-protected file sharing',
+      'Access your files from any device',
+      'Get access to all our services',
+      'Upload files up to 20GB',
+      'Two-factor authentication',
+    ],
+  };
+
   return (
     <div
       className={`${
@@ -49,7 +92,7 @@ export default function PriceCard({
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
-        <div className="flex flex-col items-center justify-center space-y-1">
+        <div className="flex flex-col items-center justify-center space-y-2">
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
             <p className="text-lg font-medium text-primary">Save 69%</p>
           </div>
@@ -82,8 +125,6 @@ export default function PriceCard({
                 {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
             </p>
-
-            {/* eslint-disable-next-line no-nested-ternary */}
           </div>
           <span
             className={`perUser ${
@@ -128,19 +169,13 @@ export default function PriceCard({
               });
             }
           }}
-          className="flex w-full flex-row"
+          className={`flex w-full flex-col rounded-lg border ${
+            popular
+              ? 'bg-primary text-white hover:bg-primary-dark'
+              : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
+          } px-20 py-2.5 font-medium`}
         >
-          <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
-            <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.get} {storage}
-            </p>
-
-            <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.signUpNow}
-            </p>
-
-            <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
-          </div>
+          <p className="whitespace-nowrap">{contentText.cta.selectPlan}</p>
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
@@ -159,36 +194,18 @@ export default function PriceCard({
               </span>
             </div>
           )}
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.encryptedFiles}</span>
-          </div>
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.accessFromAnywhere}</span>
-          </div>
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.allServices}</span>
-          </div>
+          {productFeatures[storage].map((feature) => (
+            <div className="flex flex-row items-start space-x-2">
+              <img
+                loading="lazy"
+                className="mt-0.5 translate-y-px select-none"
+                src="/icons/checkPrimary.svg"
+                draggable="false"
+                alt="check icon"
+              />
+              <span>{feature}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
