@@ -1,6 +1,7 @@
 {
   "mostPopular": "Más popular",
   "mostPopularPlan": "Plan más popular",
+  "save": "Ahorra",
   "valentines": "¡Oferta especial de San Valentín!",
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
   "planTitles": {
@@ -19,9 +20,10 @@
   },
   "billingFrequency": {
     "monthly": "Mensual",
-    "semiannually": "Semianual",
     "annually": "Anual",
-    "lifetime": "Lifetime"
+    "lifetime": "Lifetime",
+    "individual": "Individual",
+    "business": "Empresa"
   },
   "billingFrequencyLabel": {
     "lifetime": "Pago único",
@@ -50,6 +52,7 @@
     "signUpNow": "Consigue Internxt gratis",
     "buy": "Conseguir",
     "get": "Obtener",
+    "selectPlan": "Seleccionar plan",
     "discount": "EL MEJOR VALORADO!",
     "claimTheDeal": "Obtener descuento",
     "freemonth": "Consigue 30 días gratis"
@@ -59,7 +62,7 @@
     "enjoy10gb": "Disfruta de hasta 10GB y accede a todos nuestros servicios",
     "upTo": "Hasta 10GB",
     "freeForever": "Gratis para siempre",
-    "cta": "Regístrate ahora"
+    "cta": "Seleccionar plan"
   },
   "features": {
     "enjoyForever": {
@@ -72,5 +75,47 @@
     "encryptedFiles": "Almacenamiento encriptado",
     "accessFromAnywhere": "Todos tus dispositivos",
     "allServices": "Todos nuestros servicios"
+  },
+  "productFeatures": {
+    "200GB": [
+      "Almacenamiento cifrado de 200 GB",
+      "Almacenamiento de archivos cifrado",
+      "Compartir archivos y carpetas cifrados",
+      "Compartir archivos protegidos con contraseña",
+      "Accede a tus archivos desde cualquier dispositivo",
+      "Acceso a todos nuestros servicios",
+      "Sube archivos de hasta 20 GB",
+      "Autenticación de dos factores"
+    ],
+    "2TB": [
+      "Almacenamiento cifrado de 2 TB",
+      "Almacenamiento de archivos cifrado",
+      "Compartir archivos y carpetas cifrados",
+      "Compartir archivos protegidos con contraseña",
+      "Accede a tus archivos desde cualquier dispositivo",
+      "Acceso a todos nuestros servicios",
+      "Sube archivos de hasta 20 GB",
+      "Autenticación de dos factores"
+    ],
+    "5TB": [
+      "Almacenamiento cifrado de 5 TB",
+      "Almacenamiento de archivos cifrado",
+      "Compartir archivos y carpetas cifrados",
+      "Compartir archivos protegidos con contraseña",
+      "Accede a tus archivos desde cualquier dispositivo",
+      "Acceso a todos nuestros servicios",
+      "Sube archivos de hasta 20 GB",
+      "Autenticación de dos factores"
+    ],
+    "10TB": [
+      "Almacenamiento cifrado de 10 TB",
+      "Almacenamiento de archivos cifrado",
+      "Compartir archivos y carpetas cifrados",
+      "Compartir archivos protegidos con contraseña",
+      "Accede a tus archivos desde cualquier dispositivo",
+      "Acceso a todos nuestros servicios",
+      "Sube archivos de hasta 20 GB",
+      "Autenticación de dos factores"
+    ]
   }
 }

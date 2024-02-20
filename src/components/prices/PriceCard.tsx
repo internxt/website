@@ -132,17 +132,17 @@ export default function PriceCard({
               });
             }
           }}
-          className={`flex w-full flex-col rounded-lg border ${
+          className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'bg-primary text-white hover:bg-primary-dark'
               : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
-          } px-20 py-2.5 font-medium`}
+          } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
-          <p className="whitespace-nowrap">{contentText.cta.selectPlan}</p>
+          <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
-        <div className="flex flex-col space-y-2 whitespace-nowrap text-sm">
+        <div className="flex flex-col space-y-2 text-sm">
           {billingFrequency === 'lifetime' && (
             <div className={`flex flex-row items-start space-x-2 font-semibold`}>
               <img
@@ -158,7 +158,7 @@ export default function PriceCard({
             </div>
           )}
           {contentText.productFeatures[storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2">
+            <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap">
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"

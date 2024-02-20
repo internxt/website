@@ -1,6 +1,7 @@
 {
   "mostPopular": "Le plus populaire",
   "mostPopularPlan": "Le plus populaire",
+  "save": "Sauvegarde",
   "valentines": "Offre spéciale pour la Saint-Valentin!",
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "planTitles": {
@@ -19,9 +20,10 @@
   },
   "billingFrequency": {
     "monthly": "Mensuel",
-    "semiannually": "Semiannually",
     "annually": "Annuel",
-    "lifetime": "Lifetime"
+    "lifetime": "Lifetime",
+    "individual": "Individuel",
+    "business": "Entreprise"
   },
   "billingFrequencyLabel": {
     "lifetime": "Paiement unique",
@@ -50,6 +52,7 @@
     "signUpNow": "Obtenez Internxt",
     "buy": "Obtenir",
     "get": "Obtenir",
+    "selectPlan": "Sélectionner un plan",
     "discount": " MEILLEURE VALEUR ! ",
     "claimTheDeal": "Réclamer l'affaire",
     "freemonth": "Obtenez 30 jours gratuits"
@@ -59,7 +62,7 @@
     "enjoy10gb": "Profitez jusqu'à 10 Go pour toujours et accédez à tous nos services",
     "upTo": "Jusqu'à 10 Go",
     "freeForever": "Gratuit pour toujours",
-    "cta": "Inscrivez-vous maintenant"
+    "cta": "Sélectionner un plan"
   },
   "features": {
     "enjoyForever": {
@@ -72,5 +75,47 @@
     "encryptedFiles": "Stockez et partagez des fichiers cryptés",
     "accessFromAnywhere": "Vos fichiers sur tous vos apparells",
     "allServices": "Accès à tous nos services"
+  },
+  "productFeatures": {
+    "200GB": [
+      "Stockage chiffré de 200 Go",
+      "Stockage de fichiers chiffré",
+      "Partage chiffré de fichiers et de dossiers",
+      "Partage de fichiers protégé par mot de passe",
+      "Accédez à vos fichiers depuis n'importe quel appareil",
+      "Accès à tous nos services",
+      "Téléchargez des fichiers jusqu'à 20 Go",
+      "Authentification à deux facteurs"
+    ],
+    "2TB": [
+      "Stockage chiffré de 2 To",
+      "Stockage de fichiers chiffré",
+      "Partage chiffré de fichiers et de dossiers",
+      "Partage de fichiers protégé par mot de passe",
+      "Accédez à vos fichiers depuis n'importe quel appareil",
+      "Accès à tous nos services",
+      "Téléchargez des fichiers jusqu'à 20 Go",
+      "Authentification à deux facteurs"
+    ],
+    "5TB": [
+      "Stockage chiffré de 5 To",
+      "Stockage de fichiers chiffré",
+      "Partage chiffré de fichiers et de dossiers",
+      "Partage de fichiers protégé par mot de passe",
+      "Accédez à vos fichiers depuis n'importe quel appareil",
+      "Accès à tous nos services",
+      "Téléchargez des fichiers jusqu'à 20 Go",
+      "Authentification à deux facteurs"
+    ],
+    "10TB": [
+      "Stockage chiffré de 10 To",
+      "Stockage de fichiers chiffré",
+      "Partage chiffré de fichiers et de dossiers",
+      "Partage de fichiers protégé par mot de passe",
+      "Accédez à vos fichiers depuis n'importe quel appareil",
+      "Accès à tous nos services",
+      "Téléchargez des fichiers jusqu'à 20 Go",
+      "Authentification à deux facteurs"
+    ]
   }
 }
