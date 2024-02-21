@@ -7,7 +7,13 @@ import { currencyService } from '@/components/services/currencyService';
 import PriceCard from './PriceCard';
 import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
 
-const PriceTable = ({ textContent }: { textContent: any }) => {
+const PriceTable = ({
+  textContent,
+  handlePriceCardButton,
+}: {
+  textContent: any;
+  handlePriceCardButton: (planId, currency, coupon) => void;
+}) => {
   const billingFrequency = 'year';
   const [loadingCards, setLoadingCards] = useState(true);
   const [products, setProducts] = useState<any>();
@@ -70,6 +76,7 @@ const PriceTable = ({ textContent }: { textContent: any }) => {
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
+        <div id="pricing-table"></div>
         <Transition
           show={loadingCards}
           enter="transition duration-500 ease-out"
@@ -85,8 +92,8 @@ const PriceTable = ({ textContent }: { textContent: any }) => {
         </Transition>
 
         {/* Render cards */}
-
         <Transition
+          id="pricing-table"
           show={!loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
           className={'flex flex-col'}
@@ -106,6 +113,7 @@ const PriceTable = ({ textContent }: { textContent: any }) => {
                     cta={['checkout', product.priceId]}
                     currency={currency.symbol}
                     contentText={textContent.priceCard}
+                    onButtonClicked={handlePriceCardButton}
                   />
                 );
               })}

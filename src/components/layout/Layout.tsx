@@ -38,6 +38,7 @@ const excludedPaths = [
   '/temporary-email',
   '/locker',
   '/startpage',
+  '/oystervpn',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 

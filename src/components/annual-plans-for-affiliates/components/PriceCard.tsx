@@ -7,9 +7,10 @@ export interface PriceCardProps {
   storage: string;
   price: number;
   currency: string;
+  cta: any[];
+  onButtonClicked: (planId, currency, coupon) => void;
   priceBefore?: number;
   billingFrequency?: string;
-  cta: any[];
   popular?: boolean;
   priceId?: string;
   coupon?: CouponType;
@@ -31,13 +32,8 @@ export default function PriceCard({
   currency,
   coupon,
   contentText,
+  onButtonClicked,
 }: PriceCardProps) {
-  const billingFrequencyList = {
-    lifetime: 'lifetime',
-    month: 'monthly',
-    year: 'annually',
-  };
-
   return (
     <div
       className={`priceCard card ${
@@ -92,14 +88,7 @@ export default function PriceCard({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={() => {
-            checkout({
-              planId: cta[1],
-              mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-              currency: currencyValue[currency] ?? 'eur',
-              couponCode: coupon ?? undefined,
-            });
-          }}
+          onClick={() => onButtonClicked(cta[1], currencyValue[currency], coupon)}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'bg-primary text-white hover:bg-primary-dark'

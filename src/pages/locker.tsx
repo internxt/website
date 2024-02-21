@@ -11,18 +11,18 @@ import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
 
-const START_PAGE = 'STARTPAGE';
+const LOCKER = 'LOCKER';
 
 const currencyValue = {
   '€': 'eur',
   $: 'usd',
 };
 
-export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
+export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   function onStartPageClicked() {
-    copyToClipboard(START_PAGE);
+    copyToClipboard(LOCKER);
     notificationService.openSuccessToast('Copied to clipboard');
   }
 
@@ -38,12 +38,12 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
   // Split the info from the textContent object in STARTPAGE
   const heroSectionText = textContent.HeroSection;
   const infoSection = {
-    part1: heroSectionText.info.split(START_PAGE)[0],
+    part1: heroSectionText.info.split(LOCKER)[0],
     startPage: heroSectionText.info.substring(
-      heroSectionText.info.indexOf(START_PAGE),
-      heroSectionText.info.indexOf(START_PAGE) + 9,
+      heroSectionText.info.indexOf(LOCKER),
+      heroSectionText.info.indexOf(LOCKER) + 6,
     ),
-    part2: heroSectionText.info.split(START_PAGE)[1],
+    part2: heroSectionText.info.split(LOCKER)[1],
   };
 
   const InfoTextComponent = (
@@ -76,7 +76,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/en/startpage.json`);
+  const textContent = require(`@/assets/lang/en/locker.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
 

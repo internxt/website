@@ -1,6 +1,9 @@
-const Button = ({ text }: { text: string }) => {
+const Button = ({ text, onClick }: { text: string; onClick: () => void }) => {
   return (
-    <button className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark">
+    <button
+      onClick={onClick}
+      className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
+    >
       {text}
     </button>
   );
