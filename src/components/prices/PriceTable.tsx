@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Switch, Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
-import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -11,6 +10,7 @@ import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import { CouponType } from '@/lib/types/types';
+import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -27,13 +27,34 @@ const CurrencyValue = {
 type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
-  const banner = require('@/assets/lang/en/banners.json');
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-
+  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
+  const banner = require('@/assets/lang/en/banners.json');
   const { products, currency, loadingCards, coupon } = usePricing({
     couponCode: CouponType.ValentinesCoupon,
   });
-  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
+
+  const features = [
+    {
+      icon: ShieldCheck,
+      text: textContent.featureSection.firstFeature,
+    },
+    {
+      icon: FolderSimpleLock,
+      text: textContent.featureSection.secondFeature,
+    },
+    {
+      icon: Detective,
+      text: textContent.featureSection.thirdFeature,
+    },
+  ];
+
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
+
+  const isIndividual = activeSwitchPlan !== 'Business';
+  const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
+  const isSubscription = billingFrequency === Interval.Month || billingFrequency === Interval.Year;
 
   return (
     <section className="overflow-hidden bg-white">

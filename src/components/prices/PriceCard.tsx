@@ -41,9 +41,9 @@ export default function PriceCard({
   };
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+
   const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
-  const isBusinessPlan = planType.toLowerCase() === 'business';
 
   return (
     <div
@@ -51,33 +51,13 @@ export default function PriceCard({
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
-      <div
-        className={`mostPopular ${
-          popular ? '' : 'hidden'
-        } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
-      >
-        {contentText.mostPopularPlan}
-      </div>
-
-      <div
-        className={`info flex flex-col items-center justify-center rounded-t-2xl  bg-white p-6 pt-6 
-        `}
-      >
-        <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap bg-neutral-20 py-1 px-4 pb-0.5 text-base font-semibold ${
-            popular ? 'text-gray-100' : ' text-gray-50'
-          } rounded-full font-medium`}
-        >
-          <p>
-            {isFreePlan ? (
-              <span className="">
-                {contentText.price.free}
-                {storage}
-              </span>
-            ) : (
-              storage
-            )}
-          </p>
+      <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
+        <div className="flex flex-col items-center justify-center space-y-2">
+          <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
+            <p className="text-lg font-medium text-primary">
+              <p>{storage}</p>
+            </p>
+          </div>
         </div>
         <div
           className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
@@ -90,7 +70,7 @@ export default function PriceCard({
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
-                {isFreePlan ? `${contentText.freePlan}` : isBusinessPlan ? price : price}
+                {isFreePlan ? `${contentText.freePlan}` : planType === 'business' ? price : price}
               </span>
             </p>
           </div>
@@ -102,20 +82,13 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
-            {currency}
-            {priceBefore}
-          </span>
-          <div
-            className={`totalBilling ${isIndividualPlan ? 'flex' : 'hidden'} flex-row text-sm font-medium text-gray-50
-            `}
-          >
-            <p className={`${isFreePlan ? 'hidden' : ''}`}>
-              <span className="billingFrequency">
-                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
-              </span>
-            </p>
-            <p className={`${isFreePlan ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
-          </div>
+            <span className={`text-sm`}>{currency}</span>
+            <span className="price text-2xl">{priceBefore}</span>
+          </p>
+
+          <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
+            {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
+          </p>
         </div>
         <button
           id={`planButton${storage}`}
@@ -131,17 +104,13 @@ export default function PriceCard({
               });
             }
           }}
-          className="flex w-full flex-row"
+          className={`flex w-full flex-col items-center rounded-lg border ${
+            popular
+              ? 'bg-primary text-white hover:bg-primary-dark'
+              : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
+          } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
-          <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
-            <p className={`${isFreePlan ? 'hidden' : ''} ${isIndividualPlan ? '' : 'hidden'}`}>
-              {contentText.cta.get} {storage}
-            </p>
-
-            <p className={`${isFreePlan && isIndividualPlan ? '' : 'hidden'}`}>{contentText.cta.signUpNow}</p>
-
-            <p className={`${isIndividualPlan ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
-          </div>
+          <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
