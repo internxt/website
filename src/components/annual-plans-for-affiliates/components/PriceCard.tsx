@@ -2,18 +2,17 @@ import { checkout, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
 
 export interface PriceCardProps {
+  contentText: any;
   planType: string;
   storage: string;
   price: number;
+  currency: string;
   priceBefore?: number;
   billingFrequency?: string;
   cta: any[];
   popular?: boolean;
-  lang: string;
   priceId?: string;
-  country?: string;
   coupon?: CouponType;
-  currency?: string;
 }
 
 const currencyValue = {
@@ -29,16 +28,15 @@ export default function PriceCard({
   billingFrequency,
   cta,
   popular,
-  country,
-  lang,
-  coupon,
   currency,
+  coupon,
+  contentText,
 }: PriceCardProps) {
   const billingFrequencyList = {
+    lifetime: 'lifetime',
+    month: 'monthly',
     year: 'annually',
   };
-
-  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
   return (
     <div
@@ -53,31 +51,14 @@ export default function PriceCard({
       >
         {contentText.mostPopularPlan}
       </div>
-
-      <div
-        className={`info flex flex-col items-center justify-center rounded-t-2xl  bg-white p-6 pt-6 
-        `}
-      >
-        <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap bg-neutral-20 py-1 px-4 pb-0.5 text-base font-semibold ${
-            popular ? 'text-gray-100' : ' text-gray-50'
-          } rounded-full font-medium`}
-        >
-          <p>
-            {price <= 0 ? (
-              <span className="">
-                {contentText.price.free}
-                {storage}
-              </span>
-            ) : (
-              storage
-            )}
-          </p>
+      <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
+        <div className="flex flex-col items-center justify-center space-y-2">
+          <div className="flex rounded-full bg-[#F3F3F8] px-3 py-0.5">
+            <p className={`${popular ? 'text-gray-100' : 'text-[#8E8E94]'} font-medium`}>{storage}</p>
+          </div>
         </div>
         <div
-          className={`planPrice flex flex-col items-center justify-center py-8 ${
-            priceBefore ? 'space-y-1' : 'space-y-4'
-          }`}
+          className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
         >
           <div
             className={`priceBreakdown flex flex-row
@@ -85,7 +66,7 @@ export default function PriceCard({
             `}
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-              <span className={`currency`}>{country}</span>
+              <span>{currency}</span>
               <span className="price text-4xl font-bold">{price}</span>
             </p>
           </div>
@@ -96,26 +77,18 @@ export default function PriceCard({
           >
             {contentText.perUser}
           </span>
-          <span
-            className={`priceBefore ${
+          <p
+            className={`${
               priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-100 line-through`}
+            } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
-            {country}
-            {priceBefore}
-          </span>
-          <div
-            className={`totalBilling ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-sm font-medium text-gray-50
-            `}
-          >
-            <p>
-              <span className="billingFrequency">
-                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
-              </span>
-            </p>
-          </div>
+            <span className={`text-sm`}>{currency}</span>
+            <span className="price text-2xl">{priceBefore}</span>
+          </p>
+
+          <p className={`${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} text-sm text-gray-50`}>
+            {contentText.billedAnnually}
+          </p>
         </div>
         <button
           id={`planButton${storage}`}
@@ -123,51 +96,33 @@ export default function PriceCard({
             checkout({
               planId: cta[1],
               mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-              currency: 'eur',
+              currency: currencyValue[currency] ?? 'eur',
               couponCode: coupon ?? undefined,
             });
           }}
-          className="flex w-full flex-row"
+          className={`flex w-full flex-col items-center rounded-lg border ${
+            popular
+              ? 'bg-primary text-white hover:bg-primary-dark'
+              : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
+          } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
-          <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
-            <p>
-              {contentText.cta.get} {storage}
-            </p>
-          </div>
+          <p className="">{contentText.cta}</p>
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.encryptedFiles}</span>
-          </div>
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.accessFromAnywhere}</span>
-          </div>
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.allServices}</span>
-          </div>
+          {contentText.features[storage].map((feature) => (
+            <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap">
+              <img
+                loading="lazy"
+                className="translate-y-px select-none"
+                src="/icons/checkPrimary.svg"
+                draggable="false"
+                alt="check icon"
+              />
+              <span className="text-gray-80">{feature}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

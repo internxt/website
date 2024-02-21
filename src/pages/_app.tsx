@@ -19,6 +19,8 @@ const excludedPaths = [
   '/stackcommerce',
   '/dealfuel',
   '/temporary-email',
+  '/locker',
+  '/startpage',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];

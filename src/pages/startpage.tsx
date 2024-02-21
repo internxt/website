@@ -8,6 +8,7 @@ import copyToClipboard from '@/components/utils/copy-to-clipboard';
 import { notificationService } from '@/components/Snackbar';
 import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
+import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 
 const START_PAGE = 'STARTPAGE';
 
@@ -45,6 +46,8 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} />
 
+      <PriceTable textContent={textContent.PriceTable} />
+
       <FeatureSection textContent={textContent.FeatureSection} />
 
       <InfoSection textContent={textContent.SecureCloudSection} lang="en" withoutCta backgroundColor="bg-gray-1" />
@@ -57,10 +60,10 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/locker.json`);
-  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/en/startpage.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
 
   return {
     props: {

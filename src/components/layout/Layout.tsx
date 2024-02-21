@@ -37,6 +37,7 @@ const excludedPaths = [
   '/mightydeals',
   '/temporary-email',
   '/locker',
+  '/startpage',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 
