@@ -112,19 +112,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             </button>
           </div>
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
-          <div className={`flex-row items-center space-x-5 ${isSubscription ? 'flex' : 'hidden'}`}>
-            <div className="relative flex flex-row items-center">
-              <p className="absolute right-full whitespace-nowrap pr-1.5 font-semibold text-green-dark">
-                {contentText.save} 69%
-              </p>
-              <p
-                className={`text-base font-medium ${
-                  billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
-                }`}
-              >
-                {contentText.billingFrequency.monthly}
-              </p>
-            </div>
+          <div className={`flex-row items-start  gap-5 lg:items-center ${isSubscription ? 'flex' : 'hidden'}`}>
+            <p
+              className={`text-base font-medium ${
+                billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
+              }`}
+            >
+              {contentText.billingFrequency.monthly}
+            </p>
+
             <Switch
               checked={isIndividualSwitchEnabled}
               onChange={() => {
@@ -140,7 +136,8 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 } inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </Switch>
-            <div className="relative flex flex-row items-center">
+
+            <div className="relative flex flex-col lg:flex-row lg:items-center">
               <p
                 className={`text-base font-medium ${
                   billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
@@ -148,7 +145,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               >
                 {contentText.billingFrequency.annually}
               </p>
-              <p className="absolute left-full whitespace-nowrap pl-1.5 font-medium text-green-dark">
+              <p className="absolute top-full whitespace-nowrap font-medium text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
                 {contentText.save} 69%
               </p>
             </div>
