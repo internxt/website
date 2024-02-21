@@ -60,7 +60,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
     <section className="overflow-hidden bg-white">
       <div className="flex flex-col items-center space-y-10 py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
+          {/* <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} /> */}
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
             <Header>{isIndividual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
@@ -146,7 +146,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                 {contentText.billingFrequency.annually}
               </p>
               <p className="absolute top-full whitespace-nowrap font-medium text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
-                {contentText.save} 69%
+                {contentText.save} 23%
               </p>
             </div>
           </div>
@@ -196,14 +196,18 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={parseFloat((Math.floor(parseFloat(product.price) * 31) / 100).toFixed(2))}
+                        price={
+                          billingFrequency === 'year'
+                            ? parseFloat((Math.floor(parseFloat(product.price) * 77) / 100).toFixed(2))
+                            : product.price
+                        }
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
-                        priceBefore={product.price}
+                        priceBefore={billingFrequency === 'year' ? product.price : undefined}
                         lang={lang}
                         currency={currency}
-                        coupon={coupon}
+                        coupon={billingFrequency === 'year' ? coupon : undefined}
                         savePercentage={69}
                       />
                     )}
