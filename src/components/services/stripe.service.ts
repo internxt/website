@@ -1,7 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { notificationService } from '@/components/Snackbar';
-import { currencyService } from './currencyService';
+import { currencyService } from './currency.service';
 
 export enum Interval {
   Month = 'month',
@@ -22,7 +22,7 @@ export enum Products {
   '10TB' = '10TB',
 }
 
-async function getAllPrices(isEur?: boolean) {
+async function getPrices(isEur?: boolean) {
   try {
     const currency = await currencyService.getCurrencyPrice();
     const res = await axios.get(
@@ -45,6 +45,7 @@ async function getAllPrices(isEur?: boolean) {
               priceId: productValue.id,
               storage: storage,
               price: Math.abs(productValue.amount / 100).toFixed(2),
+              currency: productValue.currency,
             },
           };
         } else if (productValue.interval === Interval.Year) {
@@ -54,6 +55,7 @@ async function getAllPrices(isEur?: boolean) {
               priceId: productValue.id,
               storage: storage,
               price: Math.abs(productValue.amount / 100).toFixed(2),
+              currency: productValue.currency,
             },
           };
         } else if (productValue.interval === Interval.Lifetime) {
@@ -63,6 +65,7 @@ async function getAllPrices(isEur?: boolean) {
               priceId: productValue.id,
               storage: storage,
               price: Math.abs(productValue.amount / 100).toFixed(2),
+              currency: productValue.currency,
             },
           };
         }
@@ -90,15 +93,9 @@ async function getAllPrices(isEur?: boolean) {
   }
 }
 
-async function getLifetimePrices(isLifetime?: boolean) {
-  const prices = await getAllPrices(isLifetime);
-  const lifetimePlans = prices?.individuals[Interval.Lifetime];
-  return lifetimePlans;
-}
-
 async function getSelectedPrice(interval: string, plan: string) {
   //Filter prices by plan
-  const prices = await getAllPrices();
+  const prices = await getPrices();
   const selectedPrice = prices?.individuals[interval][plan];
   return selectedPrice;
 }
@@ -119,8 +116,7 @@ async function getCoupon(coupon: string) {
 }
 
 export const stripeService = {
-  getAllPrices,
-  getLifetimePrices,
+  getPrices,
   getSelectedPrice,
   getCoupon,
 };

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 
 import { checkout } from '../../../../lib/auth';
-import { Interval, stripeService } from '../../../services/stripeService';
-import { currencyService } from '../../../services/currencyService';
+import { Interval, stripeService } from '../../../services/stripe.service';
+import { currencyService } from '../../../services/currency.service';
 import { CouponType } from '@/lib/types/types';
 
 const ButtonDeal = ({ textContent, large }) => {

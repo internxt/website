@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Switch, Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
-import { Interval, ProductsProps, stripeService } from '@/components/services/stripeService';
+import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { currencyService } from '@/components/services/currencyService';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
+import usePricing from '@/hooks/usePricing';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import { CouponType } from '@/lib/types/types';
 
@@ -27,82 +27,13 @@ const CurrencyValue = {
 type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
-  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
-
-  const [products, setProducts] = useState<ProductsProps>();
-  const [loadingCards, setLoadingCards] = useState(true);
-  const [coupon, setCoupon] = useState<CouponType>();
-  const [currency, setCurrency] = useState({
-    symbol: '€',
-    value: 1,
+  const { products, currency, loadingCards, coupon } = usePricing({
+    couponCode: CouponType.ValentinesCoupon,
   });
-
-  const isIndividual = activeSwitchPlan !== 'Business';
-  const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
-  const isSubscription = billingFrequency === Interval.Month || billingFrequency === Interval.Year;
-
-  const currencyValue = CurrencyValue[currency.symbol] || 'eur';
-
-  const features = [
-    {
-      icon: ShieldCheck,
-      text: textContent.featureSection.firstFeature,
-    },
-    {
-      icon: FolderSimpleLock,
-      text: textContent.featureSection.secondFeature,
-    },
-    {
-      icon: Detective,
-      text: textContent.featureSection.thirdFeature,
-    },
-  ];
-
-  useEffect(() => {
-    stripeService
-      .getAllPrices()
-      .then((prices) => {
-        setProducts(prices);
-        setLoadingCards(false);
-      })
-      .catch(() => {
-        stripeService.getAllPrices(true).then((res) => {
-          setProducts(res);
-          setLoadingCards(false);
-        });
-        console.error('Error getting prices');
-      });
-
-    currencyService
-      .filterCurrencyByCountry()
-      .then((res) => {
-        setCurrency({
-          symbol: res.symbol,
-          value: res.value,
-        });
-      })
-      .catch((err) => {
-        setCurrency({
-          symbol: '€',
-          value: 1,
-        });
-        console.error(err);
-      });
-
-    stripeService
-      .getCoupon(CouponType.ValentinesCoupon)
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
+  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
 
   return (
     <section className="overflow-hidden bg-white">
@@ -240,8 +171,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
-                        country={currency.symbol}
-                        currency={currencyValue}
+                        currency={currency}
                       />
                     ) : (
                       <PriceCard
@@ -254,8 +184,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         cta={['checkout', product.priceId]}
                         priceBefore={product.price}
                         lang={lang}
-                        country={currency.symbol}
-                        currency={currencyValue}
+                        currency={currency}
                         coupon={coupon}
                         savePercentage={69}
                       />
