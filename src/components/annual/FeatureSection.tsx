@@ -3,10 +3,10 @@ import React from 'react';
 import RevealY from '@/components/components/RevealY';
 
 const FeatureSection = ({ textContent }) => (
-  <section className="">
-    <div className="flex flex-col items-center px-5 pt-20 pb-16">
-      <RevealY className="mb-8 flex flex-col items-center justify-center space-y-6 px-6 text-center font-semibold">
-        <h2 className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
+  <section className="overflow-hidden">
+    <div className="flex flex-col items-center space-y-8 px-5 pt-20 pb-16">
+      <div className=" flex flex-col items-center justify-center space-y-6 px-6 text-center font-semibold">
+        <h2 className="max-w-[550px] text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
         <p className="max-w-3xl text-xl font-normal text-gray-100">{textContent.description}</p>
         <button
           className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-dark"
@@ -19,7 +19,7 @@ const FeatureSection = ({ textContent }) => (
         >
           {textContent.cta}
         </button>
-      </RevealY>
+      </div>
 
       <RevealY className="hidden w-full flex-col items-center justify-center pt-6 md:flex">
         <picture>
