@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react';
 import { checkout } from '@/lib/auth';
-import { stripeService } from '@/components/services/stripeService';
-import { CouponType } from '@/lib/types/types';
 
 interface PriceCardProps {
   planType: string;
@@ -13,6 +10,7 @@ interface PriceCardProps {
   lang: string;
   actualPrice: string;
   isCampaign?: boolean;
+  coupon?: string;
 }
 
 const currencyValue = {
@@ -30,21 +28,9 @@ const PriceCard = ({
   actualPrice,
   isCampaign,
   lang,
+  coupon,
 }: PriceCardProps) => {
-  const [coupon, setCoupon] = useState<string>();
-
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-
-  useEffect(() => {
-    stripeService
-      .getCoupon(CouponType.LifetimeExclusive)
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
 
   return (
     <div

@@ -1,38 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PriceCard from './PriceCard';
-import { stripeService } from '@/components/services/stripeService';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
+import usePricing from '@/hooks/usePricing';
+import { CouponType } from '@/lib/types/types';
 
-const PriceTable = ({ lang, country }) => {
-  const [products, setProducts] = useState(null);
-  const [loadingCards, setLoadingCards] = useState(true);
-
-  useEffect(() => {
-    stripeService
-      .getLifetimePrices()
-      .then((res) => {
-        if (res) {
-          setProducts(res);
-        }
-      })
-      .catch((err) => {
-        stripeService
-          .getLifetimePrices(true)
-          .then((prices) => {
-            if (prices) {
-              setProducts(prices);
-            }
-          })
-          .catch((error) => {
-            console.log('error');
-          });
-        console.error(err);
-      })
-      .finally(() => {
-        setLoadingCards(false);
-      });
-  }, []);
+const PriceTable = ({ lang }) => {
+  const { products, currency, coupon, loadingCards } = usePricing({
+    couponCode: CouponType.LifetimeExclusive,
+  });
 
   return (
     <section className="overflow-hidden">
@@ -61,8 +37,8 @@ const PriceTable = ({ lang, country }) => {
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-16">
-            {products &&
-              Object.values(products).map((product: any) => {
+            {products?.individuals?.['lifetime'] &&
+              Object.values(products.individuals['lifetime']).map((product: any) => {
                 return (
                   <PriceCard
                     planType="individual"
@@ -77,7 +53,8 @@ const PriceTable = ({ lang, country }) => {
                         .toFixed(2)
                         .split('.')[0]
                     }
-                    currency={country.symbol}
+                    currency={currency}
+                    coupon={coupon ?? undefined}
                   />
                 );
               })}

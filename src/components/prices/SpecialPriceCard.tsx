@@ -1,14 +1,7 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-nested-ternary */
-
 import React, { useEffect } from 'react';
 import { checkout } from '@/lib/auth';
-import { analyticsService } from '@/components/services/analyticsService';
-import { Interval, stripeService } from '@/components/services/stripeService';
+import { analyticsService } from '@/components/services/analytics.service';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import { PriceCardProps } from './PriceCard';
 import { CouponType } from '@/lib/types/types';
 
@@ -20,7 +13,7 @@ export default function SpecialPriceCard({
   cta,
   popular,
   lang,
-  country,
+  currency,
 }: PriceCardProps) {
   const [coupon, setCoupon] = React.useState<string>();
   const isPopularYearly = popular && billingFrequency === Interval.Year;
@@ -96,7 +89,7 @@ export default function SpecialPriceCard({
             py-8`}
         >
           <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
-            <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+            <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
             <span className="price text-4xl font-semibold">
               {
                 Math.abs((price * 25) / 100)
@@ -112,7 +105,7 @@ export default function SpecialPriceCard({
             }`}
           >
             <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-2xl font-semibold line-through">
                 {price <= 0 ? `${contentText.freePlan}` : price}
               </span>

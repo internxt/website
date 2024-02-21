@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { currencyService } from '@/components/services/currencyService';
-import { ProductsProps, stripeService } from '@/components/services/stripeService';
 import PriceCard from './PriceCard';
+import usePricing from '@/hooks/usePricing';
 
 const PaymentsSection = ({ textContent }) => {
-  const [products, setProducts] = useState<ProductsProps>();
-  const [currency, setCurrency] = useState(null);
-  const [loadingCards, setLoadingCards] = useState(true);
-
-  useEffect(() => {
-    Promise.all([stripeService.getAllPrices(), currencyService.filterCurrencyByCountry()]).then((res) => {
-      if (res) {
-        setProducts(res[0]);
-        setCurrency(res[1].symbol);
-        setLoadingCards(false);
-      }
-    });
-  }, []);
+  const { products, currency, loadingCards } = usePricing();
 
   return (
     <section id="priceTable" className="">
@@ -39,9 +26,10 @@ const PaymentsSection = ({ textContent }) => {
                 Object.values(products.individuals['year']).map((product: any) => {
                   return (
                     <PriceCard
+                      key={product.storage}
                       plan={product.storage}
                       price={product.price}
-                      country={currency}
+                      currency={currency}
                       cta={['checkout', product.priceId]}
                       month={textContent.month}
                       annualPrice={product.price}
