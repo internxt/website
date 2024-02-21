@@ -120,20 +120,6 @@ export default function PriceCard({
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
-          {billingFrequency === 'lifetime' && (
-            <div className={`flex flex-row items-start space-x-2 font-semibold`}>
-              <img
-                loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
-                src="/icons/checkPrimary.svg"
-                draggable="false"
-                alt="check icon"
-              />
-              <span className="flex">
-                {`${contentText.features.enjoyForever.enjoy} ${storage} ${contentText.features.enjoyForever.forever}`}
-              </span>
-            </div>
-          )}
           {contentText.productFeatures[storage].map((feature) => (
             <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap">
               <img

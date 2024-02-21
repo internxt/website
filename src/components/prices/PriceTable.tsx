@@ -178,40 +178,24 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             {products?.individuals?.[billingFrequency] &&
               Object.values(products.individuals[billingFrequency]).map((product: any) => {
                 return (
-                  <>
-                    {billingFrequency === Interval.Lifetime ? (
-                      <PriceCard
-                        planType="individual"
-                        key={product.storage}
-                        storage={product.storage}
-                        price={product.price.split('.')[0]}
-                        billingFrequency={billingFrequency}
-                        popular={product.storage === '5TB'}
-                        cta={['checkout', product.priceId]}
-                        lang={lang}
-                        currency={currency}
-                      />
-                    ) : (
-                      <PriceCard
-                        planType="individual"
-                        key={product.storage}
-                        storage={product.storage}
-                        price={
-                          billingFrequency === 'year'
-                            ? parseFloat((Math.floor(parseFloat(product.price) * 77) / 100).toFixed(2))
-                            : product.price
-                        }
-                        billingFrequency={billingFrequency}
-                        popular={product.storage === '5TB'}
-                        cta={['checkout', product.priceId]}
-                        priceBefore={billingFrequency === 'year' ? product.price : undefined}
-                        lang={lang}
-                        currency={currency}
-                        coupon={billingFrequency === 'year' ? coupon : undefined}
-                        savePercentage={69}
-                      />
-                    )}
-                  </>
+                  <PriceCard
+                    planType="individual"
+                    key={product.storage}
+                    storage={product.storage}
+                    price={
+                      billingFrequency === 'year'
+                        ? parseFloat((Math.floor(parseFloat(product.price) * 77) / 100).toFixed(2))
+                        : product.price
+                    }
+                    billingFrequency={billingFrequency}
+                    popular={product.storage === '5TB'}
+                    cta={['checkout', product.priceId]}
+                    priceBefore={billingFrequency === 'year' ? product.price : undefined}
+                    lang={lang}
+                    currency={currency}
+                    coupon={billingFrequency === 'year' ? coupon : undefined}
+                    savePercentage={69}
+                  />
                 );
               })}
           </div>
