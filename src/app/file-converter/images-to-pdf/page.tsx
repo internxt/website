@@ -3,7 +3,7 @@
 // import ImagesToPDF from '@coderosh/images-to-pdf';
 import { useState } from 'react';
 import { Spinner } from '@phosphor-icons/react';
-import TextInput from '../../../../components/components/TextInput';
+import TextInput from '@/components/components/TextInput';
 
 const Home: React.FC = () => {
   const [selectedImages, setSelectedImages] = useState<FileList | null>(null);
