@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { stripeService } from '@/components/services/stripeService';
-import { currencyService } from '@/components/services/currencyService';
+
 import PriceCard from './PriceCard';
-import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
+import { Detective, ShieldCheck } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
+import { stripeService } from '@/components/services/stripe.service';
+import { currencyService } from '@/components/services/currency.service';
 
 const PriceTable = ({
   textContent,
@@ -41,13 +42,13 @@ const PriceTable = ({
 
   useEffect(() => {
     stripeService
-      .getAllPrices()
+      .getPrices()
       .then((prices) => {
         setProducts(prices);
         setLoadingCards(false);
       })
       .catch(() => {
-        stripeService.getAllPrices(true).then((res) => {
+        stripeService.getPrices(true).then((res) => {
           setProducts(res);
           setLoadingCards(false);
         });
