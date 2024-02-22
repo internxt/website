@@ -11,7 +11,6 @@ export interface PriceCardProps {
   popular?: boolean;
   lang: string;
   priceId?: string;
-  country?: string;
   coupon?: CouponType;
   currency?: string;
 }
@@ -29,7 +28,6 @@ export default function PriceCard({
   billingFrequency,
   cta,
   popular,
-  country,
   lang,
   coupon,
   currency,
@@ -41,6 +39,9 @@ export default function PriceCard({
   };
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+  const isFreePlan = price <= 0;
+  const isIndividualPlan = planType.toLowerCase() === 'individual';
+  const isBusinessPlan = planType.toLowerCase() === 'business';
 
   return (
     <div
@@ -66,7 +67,7 @@ export default function PriceCard({
           } rounded-full font-medium`}
         >
           <p>
-            {price <= 0 ? (
+            {isFreePlan ? (
               <span className="">
                 {contentText.price.free}
                 {storage}
@@ -87,19 +88,15 @@ export default function PriceCard({
             `}
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-              <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{country}</span>
+              <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
-                {price <= 0 ? `${contentText.freePlan}` : planType === 'business' ? price : price}
+                {isFreePlan ? `${contentText.freePlan}` : isBusinessPlan ? price : price}
               </span>
             </p>
 
             {/* eslint-disable-next-line no-nested-ternary */}
           </div>
-          <span
-            className={`perUser ${
-              planType.toLowerCase() === 'individual' ? 'hidden' : ''
-            } text-sm font-medium text-gray-50`}
-          >
+          <span className={`perUser ${isIndividualPlan ? 'hidden' : ''} text-sm font-medium text-gray-50`}>
             {contentText.perUser}
           </span>
           <span
@@ -107,21 +104,19 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } text-base font-medium text-neutral-100 line-through`}
           >
-            {country}
+            {currency}
             {priceBefore}
           </span>
           <div
-            className={`totalBilling ${
-              planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'
-            } flex-row text-sm font-medium text-gray-50
+            className={`totalBilling ${isIndividualPlan ? 'flex' : 'hidden'} flex-row text-sm font-medium text-gray-50
             `}
           >
-            <p className={`${price <= 0 ? 'hidden' : ''}`}>
+            <p className={`${isFreePlan ? 'hidden' : ''}`}>
               <span className="billingFrequency">
                 {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
               </span>
             </p>
-            <p className={`${price <= 0 ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
+            <p className={`${isFreePlan ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
           </div>
         </div>
         <button
@@ -133,7 +128,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currencyValue[country as string] ?? 'eur',
+                currency: currencyValue[currency as string] ?? 'eur',
                 couponCode: coupon ?? undefined,
               });
             }
@@ -141,15 +136,13 @@ export default function PriceCard({
           className="flex w-full flex-row"
         >
           <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
-            <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
+            <p className={`${isFreePlan ? 'hidden' : ''} ${isIndividualPlan ? '' : 'hidden'}`}>
               {contentText.cta.get} {storage}
             </p>
 
-            <p className={`${price <= 0 ? '' : 'hidden'} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
-              {contentText.cta.signUpNow}
-            </p>
+            <p className={`${isFreePlan && isIndividualPlan ? '' : 'hidden'}`}>{contentText.cta.signUpNow}</p>
 
-            <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
+            <p className={`${isIndividualPlan ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
         </button>
       </div>

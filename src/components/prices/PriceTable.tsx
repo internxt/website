@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
-import { Interval, ProductsProps, stripeService } from '@/components/services/stripeService';
+import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { currencyService } from '@/components/services/currencyService';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
+import usePricing from '@/hooks/usePricing';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import { CouponType } from '@/lib/types/types';
 
@@ -19,67 +19,16 @@ interface PriceTableProps {
   setIsLifetime?: (isLifetime: boolean) => void;
 }
 
-const CurrencyValue = {
-  '€': 'EUR',
-  $: 'USD',
-};
-
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
+  const banner = require('@/assets/lang/en/banners.json');
+  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
-  const banner = require('@/assets/lang/en/banners.json');
-  const [loadingCards, setLoadingCards] = useState(true);
-  const [products, setProducts] = useState<ProductsProps>();
-  const [coupon, setCoupon] = useState<CouponType>();
-  const [currency, setCurrency] = useState({
-    symbol: '€',
-    value: 1,
+  const { products, currency, loadingCards, coupon } = usePricing({
+    couponCode: CouponType.ValentinesCoupon,
   });
-
-  const currencyValue = CurrencyValue[currency.symbol] || 'eur';
-
-  useEffect(() => {
-    stripeService
-      .getAllPrices()
-      .then((prices) => {
-        setProducts(prices);
-        setLoadingCards(false);
-      })
-      .catch(() => {
-        stripeService.getAllPrices(true).then((res) => {
-          setProducts(res);
-          setLoadingCards(false);
-        });
-        console.error('Error getting prices');
-      });
-
-    currencyService
-      .filterCurrencyByCountry()
-      .then((res) => {
-        setCurrency({
-          symbol: res.symbol,
-          value: res.value,
-        });
-      })
-      .catch((err) => {
-        setCurrency({
-          symbol: '€',
-          value: 1,
-        });
-        console.error(err);
-      });
-
-    stripeService
-      .getCoupon(CouponType.ValentinesCoupon)
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
+  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
 
   return (
     <section className="overflow-hidden bg-gray-1">
@@ -181,8 +130,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
                         lang={lang}
-                        country={currency.symbol}
-                        currency={currencyValue}
+                        currency={currency}
                       />
                     ) : (
                       <PriceCard
@@ -195,8 +143,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         cta={['checkout', product.priceId]}
                         priceBefore={product.price}
                         lang={lang}
-                        country={currency.symbol}
-                        currency={currencyValue}
+                        currency={currency}
                         coupon={coupon}
                       />
                     )}

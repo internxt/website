@@ -7,7 +7,18 @@ const currencyValue = {
   $: 'usd',
 };
 
-const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, info, month, isPopular, mostPopular }) => {
+const PriceCard = ({
+  plan,
+  price,
+  currency,
+  annualPrice,
+  billedAnnually,
+  cta,
+  info,
+  month,
+  isPopular,
+  mostPopular,
+}) => {
   const features = [
     {
       feat: info.info1,
@@ -58,12 +69,12 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       {/* Prices and billing */}
       <div className="flex flex-col">
         <span className="text-2xl font-medium">
-          {price} {country}
+          {price} {currency}
           {month}
         </span>
         <span className="text-gray-50">
           {annualPrice}
-          {country} {billedAnnually}
+          {currency} {billedAnnually}
         </span>
       </div>
 
@@ -71,7 +82,7 @@ const PriceCard = ({ plan, price, country, annualPrice, billedAnnually, cta, inf
       <button
         type="button"
         onClick={() => {
-          checkout({ planId: cta[1], currency: currencyValue[country] });
+          checkout({ planId: cta[1], currency: currencyValue[currency] });
         }}
         className="button-primary"
       >

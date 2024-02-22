@@ -10,7 +10,7 @@ import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 
 import NormalPaymentSection from '@/components/lifetime/NormalPaymentSection';
-import { currencyService } from '@/components/services/currencyService';
+import { currencyService } from '@/components/services/currency.service';
 
 const YepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
