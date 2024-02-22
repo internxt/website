@@ -13,6 +13,7 @@ import { checkout } from '@/lib/auth';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { CouponType } from '@/lib/types/types';
+import ReactMarkdown from 'react-markdown';
 
 const START_PAGE = 'STARTPAGE';
 
@@ -68,7 +69,9 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <button onClick={onStartPageClicked} className="font-bold text-primary hover:underline">
         {infoSection.startPage}
       </button>
-      {infoSection.part2}
+      {infoSection.part2.split('80% OFF')[0]}
+      <span className="font-bold">80% OFF</span>
+      {infoSection.part2.split('80% OFF')[1]}
     </p>
   );
 
