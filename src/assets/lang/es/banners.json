@@ -1,0 +1,81 @@
+{
+  "valentinesBanner": {
+    "label": "Ahorra un 69%",
+    "title": "¡Ama tu privacidad!",
+    "cta": "Elige un plan",
+    "guarantee": "Garantía de devolución de dinero de 30 días",
+    "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
+    "features": [
+      "Ahorra en suscripciones mensuales y anuales",
+      "Almacenamiento seguro en la nube",
+      "Código abierto y transparente",
+      "Transferencias cifradas de extremo a extremo",
+      "Sin acceso no autorizado",
+      "La oferta finaliza el 25 de febrero"
+    ]
+  },
+  "virusScannerBanner": {
+    "title": "Prueba Internxt",
+    "description": "Almacenamiento seguro de archivos con antivirus integrado.",
+    "cta": "Regístrate gratis"
+  },
+  "tryOutInternxtGeneralBanner": {
+    "title": "Pásate a Internxt",
+    "description": "Almacenamiento seguro en la nube basado en la privacidad.",
+    "cta": "Pruébalo gratis"
+  },
+  "SignUpPwdCheckerBanner": {
+    "line1": "Introduce tu contraseña segura al crear tu",
+    "blueText": "cuenta gratuita en Internxt"
+  },
+  "SignUpVirusScannerBanner": {
+    "line1": "Guarda tus archivos libres de virus,",
+    "blueText": "regístrate en Internxt gratis"
+  },
+  "SignUpByteConverterBanner": {
+    "line1": "Usa miles de bytes en la nube de almacenamiento segura",
+    "blueText": "de Internxt"
+  },
+  "SignUpTempMailBanner": { "line1": "Mantén tu correo limpio y tus archivos a salvo", "blueText": "con Internxt" },
+  "SignUpCyberAwareness": {
+    "line1": "Mantén tu correo limpio y tus archivos a salvo",
+    "blueText": "con Internxt"
+  },
+  "SignUpPasswordGenerator": {
+    "line1": "Asegura tu cuenta con contraseñas únicas,",
+    "blueText": "prueba Internxt gratis"
+  },
+  "privacyDirectoryBanner": {
+    "line1": "Lucha por tu privacidad en línea y únete a",
+    "blueText": "Internxt"
+  },
+  "GeneralBanner": {
+    "title": "Antes de que te vayas...",
+    "description": "Obtén un 80% de descuento en nuestro plan de 2TB durante un año.",
+    "cta": "Sí, quiero la oferta",
+    "ctaCancel": "No, gracias"
+  },
+  "AndroidSmartBanner": {
+    "title": "Descargar Internxt Drive para Android"
+  },
+  "GoogleLPBanner": {
+    "line1": "Que Google no se aproveche de tus datos, mantén tu privacidad con",
+    "blueText": "Internxt"
+  },
+  "GoogleKnows": {
+    "title": "Maximiza tu configuración de privacidad de Google con nuestra nueva página de privacidad"
+  },
+  "TopBarBanner": {
+    "title": {
+      "boldText": "Consigue un descuento del 69% en planes de suscripción.",
+      "normalText": "¡Cuida tus archivos! ",
+      "cta": "Elige un plan"
+    }
+  },
+  "lifetimeBanner": {
+    "label": "¿Necesitas almacenamiento seguro de por vida?",
+    "title": "¡Asegura tus archivos de por vida con nuestros planes!",
+    "cta": "Elige tu plan",
+    "guarantee": "Garantía de devolución de 30 días"
+  }
+}

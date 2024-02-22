@@ -1,0 +1,165 @@
+{
+  "HeroSection": {
+    "title": { "line1": "80% OFF", "line2": "our annual plans" },
+    "lifetimeTitle": { "line1": "Get a", "blueText": " lifetime ", "line2": " Internxt plan!" },
+    "feeds": {
+      "firstFeed": "30-day money-back guarantee",
+      "secondFeed": "100% secure payment",
+      "thirdFeed": "Anonymous account creation"
+    },
+    "cta": {
+      "title": "Get 80% OFF",
+      "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
+    }
+  },
+  "tableSection": {
+    "ctaBanner": {
+      "label": "Save 69%",
+      "title": "Feel the love, secure your files!",
+      "subtitle": "Subscribe and save with Internxt.",
+      "cta": "Give me 69% OFF",
+      "guarantee": "30-day money-back guarantee",
+      "lastCta": "*Offer is for free accounts or new customers"
+    },
+    "featureSection": {
+      "firstFeature": "30-day money-back guarantee",
+      "secondFeature": "100% secure payment",
+      "thirdFeature": "Anonymous account creation"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+
+    "faq": [
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
+          " Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+        ]
+      },
+      {
+        "question": "Does Internxt store my password?",
+        "answer": [
+          "No. As such, Internxt does not (and cannot) store your password.",
+          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+        ]
+      },
+      {
+        "question": "Can I enable 2FA?",
+        "answer": [
+          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
+          "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+        ]
+      },
+      {
+        "question": "How do I create an Internxt account?",
+        "answer": [
+          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
+          "Or head to our homepage and click on “Get started”. There, you will instantly get 10GB of free storage for life with a free Internxt membership. You can use your free membership across all our services. To sign up, simply enter a name and email address. No identity nor email verification is required to start using Internxt's services."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal,  iDEAL, Sofort and Bancontact.",
+          "Under request, we also accept, Cryptocurrency and SEPA Debit. If you have doubts about payment methods, simply email us at hello@internxt.com."
+        ]
+      },
+      {
+        "question": "What is Internxt’s refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, reach out to us at hello@internxt.com and request a refund. We will honor your request, no questions asked!"
+        ]
+      },
+      {
+        "question": "How can I cancel my subscription?",
+        "answer": [
+          "Canceling your subscription is very straightforward and can be done easily through the Internxt app, by going into settings and deleting your account. This will terminate your subscription and your account.",
+          "If you would like to cancel a paid plan and remain with our free service, you can email us at hello@internxt.com and we’ll process the subscription cancellation so that you can keep your account live on our free plan."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
+        ]
+      },
+      {
+        "question": "How much does an Internxt plan cost?",
+        "answer": [
+          "Need more storage? We also offer individual plans that range from 200GB to 10TB. They all come with a 30 day money-back guarantee."
+        ]
+      },
+      {
+        "question": "Does Internxt have lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+        ]
+      }
+    ]
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "How much does an Internxt plan cost?",
+        "answer": [
+          "Need more storage? We also offer individual plans that range from 20GB to 2TB, from as low as €0.89/month."
+        ]
+      },
+      {
+        "question": "Does Internxt have lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Try Internxt risk-free",
+    "description": "Sign up and get up to 10GB of Internxt's end-to-end encrypted cloud storage for free.",
+    "cta": "Create free account"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "Private to the core",
+      "description": "We put the user and their rights first in everything that we do. Our mission is simple, to create better tools and services that return agency to the end user.",
+      "cta": "Our commitment to privacy"
+    },
+    "card2": {
+      "title": "One seamless experience",
+      "description": "Internxt is available on all platforms, even Linux! Sync your files and photos with our mobile, web, and desktop apps, each engineered to supercharge your encrypted storage on the go.",
+      "cta": "Download app"
+    },
+    "card3": {
+      "title": "Try Internxt for free!",
+      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
+      "cta": "Create free account"
+    }
+  },
+  "BestStorageSection": {
+    "title": "Built for the future",
+    "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
+    "card1": {
+      "title": "Distributed work"
+    },
+    "card2": {
+      "title": "AES-256 encryption"
+    },
+    "card3": {
+      "title": "Built-in redundancy"
+    },
+    "card4": {
+      "title": "Open-source code"
+    },
+    "card5": {
+      "title": "Independently verified"
+    }
+  },
+  "lastCtaSection": {
+    "title": "The world's most private cloud storage",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select a plan now"
+  }
+}

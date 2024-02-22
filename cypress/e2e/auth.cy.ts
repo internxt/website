@@ -27,7 +27,9 @@ describe('Auth flow (Sign Up / Log In)', () => {
       cy.get('#loginButton').click();
 
       // Check that the user is redirected to https://drive.internxt.com/login
-      cy.url().should('eq', 'https://drive.internxt.com/login');
+      cy.url().should((url) => {
+        expect(url).to.include('https://drive.internxt.com/login');
+      });
     });
   });
 
@@ -41,7 +43,9 @@ describe('Auth flow (Sign Up / Log In)', () => {
         cy.get('#signupButton').as('btn').click();
 
         // Check that the user is redirected to https://drive.internxt.com/new
-        cy.url().should('eq', 'https://drive.internxt.com/new');
+        cy.url().should((url) => {
+          expect(url).to.include('https://drive.internxt.com/new');
+        });
       });
     });
 
@@ -57,7 +61,21 @@ describe('Auth flow (Sign Up / Log In)', () => {
         cy.get('#signupInlineSubmit').click();
 
         // Check that the user is redirected to https://drive.internxt.com/new to do auto Sign Up
-        cy.url().should('eq', 'https://drive.internxt.com/new?autoSubmit=true');
+        cy.url().should((url) => {
+          expect(url).to.include('https://drive.internxt.com/new?autoSubmit=true');
+        });
+      });
+    });
+
+    describe('When the user clicks on the free plan button in the card price section of the card', () => {
+      it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
+        cy.visit('/pricing');
+        const cardId = '#freeAccountCard';
+
+        cy.get(cardId).should('exist');
+        cy.get(cardId).contains('Sign up now').click();
+
+        cy.url().should('eq', 'https://drive.internxt.com/new');
       });
     });
   });

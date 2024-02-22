@@ -1,0 +1,107 @@
+{
+  "LoginBanner": {
+    "head": "Try before you buy.",
+    "title": "Get Internxt for free!",
+    "buttonText": "Sign up now",
+    "card": {
+      "title1": "Get up to 10GB free",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available on all devices"
+    }
+  },
+  "BFBanner": {
+    "head": "Save big on privacy.",
+    "title": "Internxt’s Black Friday Deal",
+    "buttonText": "Get the deal",
+    "card": {
+      "title1": "Get 60% off our 2TB plan",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available until Dec 5th"
+    }
+  },
+  "valentinesBanner": {
+    "label": "Risparmia il 69%",
+    "title": "Ama la tua privacy!",
+    "cta": "Scegli un piano",
+    "guarantee": "Garanzia di rimborso entro 30 giorni",
+    "lastCta": "*L'offerta è valida solo per account gratuiti o nuovi clienti",
+    "features": [
+      "Risparmia su piani mensili e annuali",
+      "Archiviazione cloud sicura e protetta",
+      "Open source e trasparente",
+      "Trasferimenti crittografati end-to-end",
+      "Nessun accesso non autorizzato",
+      "L'offerta termina il 25 febbraio"
+    ]
+  },
+  "tryOutInternxtGeneralBanner": {
+    "title": "Try Internxt",
+    "description": "Secure cloud storage based on total privacy and encryption.",
+    "cta": "Sign up for free"
+  },
+  "tryOutInternxtPasswordCheckerBanner": {
+    "title": "Try Internxt",
+    "description": "Secure file storage with password-protected technology for your files.",
+    "cta": "Sign up for free"
+  },
+  "SignUpPwdCheckerBanner": {
+    "line1": "Utilizzate la vostra password forte con un",
+    "blueText": "conto Internxt gratuito"
+  },
+  "SignUpVirusScannerBanner": {
+    "line1": "Tieni al sicuro quei file ormai puliti",
+    "blueText": "unisciti gratuitamente a Internxt"
+  },
+  "SignUpByteConverterBanner": { "line1": "Ottieni byte e byte di cloud storage sicuro", "blueText": "con Internxt" },
+  "SignUpTempMailBanner": {
+    "line1": "Mantieni le tue e-mail pulite e i tuoi file al sicuro",
+    "blueText": "con Internxt"
+  },
+  "SignUpPasswordGenerator": {
+    "line1": "Shield your accounts with unique passwords,",
+    "blueText": "join Internxt for free"
+  },
+  "SignUpCyberAwareness": {
+    "line1": "Now that you’re aware, protect yourself with",
+    "blueText": "Internxt secure cloud storage"
+  },
+  "privacyDirectoryBanner": {
+    "line1": "Join the fight for privacy and build a better internet",
+    "blueText": "with Internxt"
+  },
+  "GeneralBanner": {
+    "title": "Before you bounce...",
+    "description": "Get 80% off our 2TB plan for the first year.",
+    "cta": "Sure, I'll try it out",
+    "ctaCancel": "No, thanks"
+  },
+  "AndroidSmartBanner": {
+    "title": "Scarica Internxt Drive per Android"
+  },
+  "GoogleLPBanner": {
+    "line1": "Don’t let Google cash in on your data,",
+    "blueText": "keep your files private with Internxt"
+  },
+  "GoogleKnows": {
+    "title": "Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy"
+  },
+  "TopBarBanner": {
+    "title": {
+      "boldText": "Approfitta del 69% di sconto su piani mensili o annuali.",
+      "normalText": "Mostra un po' d'amore ai tuoi file! ",
+      "cta": "Scegli il piano"
+    }
+  },
+  "lifetimeBanner": {
+    "label": "Cercate uno spazio sicuro per i vostri dati per tutta la vita?",
+    "title": "Proteggete i vostri file con i piani a vita di Internxt!",
+    "cta": "Scegli il piano",
+    "guarantee": "Garanzia di rimborso entro 30 giorni"
+  }
+}

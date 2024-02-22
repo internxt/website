@@ -3,6 +3,9 @@ module.exports = {
     locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de'],
     defaultLocale: 'en',
   },
+  experimental: {
+    swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
+  },
   webpack(config) {
     config.module.rules.push({
       loader: '@svgr/webpack',
@@ -29,10 +32,10 @@ module.exports = {
   async headers() {
     return [
       {
-        // matching all API routes
         source: '/api/:path*',
         headers: [
           { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Vary', value: 'Origin' },
           { key: 'Access-Control-Allow-Origin', value: '*' },
           { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
         ],

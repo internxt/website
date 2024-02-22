@@ -4,18 +4,18 @@
   "private": true,
   "scripts": {
     "preinstall": "node ./scripts/use-yarn.js",
+    "find:unused": "next-unused",
     "prebuild": "node ./scripts/check-envs.js",
     "dev": "next dev -p 3001",
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
     "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
     "prod": "next export",
-    "cypress": "cypress open",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
     "lint": "eslint './**/*.{js,ts,tsx}'"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@headlessui/react": "1.6.6",
     "@iconscout/react-unicons": "^1.1.6",
     "@phosphor-icons/react": "^2.0.9",
@@ -30,17 +30,12 @@
     "dotenv": "^8.2.0",
     "eslint-config-next": "13",
     "hamburger-react": "^2.4.1",
-    "jquery": "^3.5.1",
-    "js-file-download": "^0.4.12",
-    "js-url-downloader": "^0.1.6",
     "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
-    "net": "^1.0.2",
     "next": "13",
     "next-share": "^0.18.1",
-    "popper.js": "^1.16.1",
     "prettysize": "^2.0.0",
     "random-words": "^2.0.0",
     "react": "^18.2.0",
@@ -48,6 +43,7 @@
     "react-device-detect": "^1.17.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.2.1",
+    "react-hook-roulette": "^0.0.10",
     "react-live-chat-loader": "^2.8.0",
     "react-loading-skeleton": "^3.3.1",
     "react-markdown": "6.0.3",
@@ -58,6 +54,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.12.20",
     "@svgr/webpack": "^6.5.1",
     "@tailwindcss/line-clamp": "0.4.0",
     "@types/jest": "^29.4.0",
@@ -66,17 +63,23 @@
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^6.1.1",
     "cypress": "^12.5.1",
     "eslint": "^7.32.0",
+    "next-unused": "^0.0.6",
     "postcss": "8.4.31",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
     "reset-css": "5.0.1",
     "sass": "1.41.0",
+    "swc-plugin-coverage-instrument": "^0.0.20",
     "tailwindcss": "3.1.8",
     "typescript": "^4.1.5"
   },
   "browser": {
     "child_process": false
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

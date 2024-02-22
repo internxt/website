@@ -1,0 +1,188 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "Stand for privacy, switch to",
+      "blueText": "Internxt"
+    },
+    "subtitle": "Protect your privacy with our open source and encrypted suite of secure services. Internxt Drive, Photos, Send, and more.",
+    "cta": {
+      "title": "Get up to 10GB",
+      "subtitle": "For free!"
+    },
+    "featuredIn": "Featured in",
+    "SignUp": {
+      "cta": {
+        "title": "Get started with Internxt",
+        "subtitle": "Create an account now and get 10GB for FREE"
+      },
+      "disclaimer": {
+        "text": "By creating an account you accept the",
+        "link": "terms of service, and privacy policy"
+      },
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
+        },
+        "submit": {
+          "get": "Get up to 10GB",
+          "free": "Free!"
+        }
+      }
+    }
+  },
+  "FirstFeaturesSection": {
+    "title": {
+      "line1": "The most secure cloud for",
+      "line2": "all your files and photos"
+    },
+    "subtitle": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, Internxt services are built from the ground up using open source software for unparalleled safety and security.",
+
+    "cta": "Create free account"
+  },
+  "InfoSection": {
+    "title": "Secure cloud storage with unmatched privacy",
+    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "cta": "Introducing the Internxt Team",
+    "cards": [
+      {
+        "title": "Private by design",
+        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+      }
+    ]
+  },
+  "SecondFeaturesSection": {
+    "info": [
+      {
+        "title": "Speed without limits",
+        "description": "Have the need for speed? Our distributed service is optimized across lightning-fast servers scattered throughout the EU, so you can get the best performance out of your connection."
+      },
+      {
+        "title": "Frictionless workflows",
+        "description": "Internxt products are streamlined to be as usable as possible while providing a clean look to enhance and boost your productivity. Business security, made easy."
+      },
+      {
+        "title": "Backup storage on demand",
+        "description": "Save your data from disaster with built-in redundancy. Back up your essential work and projects, across multiple fast servers throughout the EU, and access them from all your devices."
+      },
+      {
+        "title": "Protection for your best moments",
+        "description": "Store all your photos in one gallery and access them from everywhere. Save your memories straight to your phone and view them from anywhere."
+      }
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "Get up to 10GB for free!",
+    "description": "Create your free account now and get full access to our suite of online privacy services.",
+    "cta": "Get started"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "Built for the future",
+      "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
+      "cta": "The fight for privacy"
+    },
+    "card2": {
+      "title": "All your devices, one seamless experience",
+      "description": "Internxt is available on all platforms, even Linux! Sync your files and photos with our mobile, web, and desktop apps, each engineered to supercharge your encrypted storage on the go.",
+      "cta": "Download apps"
+    },
+    "card3": {
+      "title": "Try Internxt for free",
+      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
+      "cta": "Create free account"
+    }
+  },
+  "SecondWhatWeDoSection": {
+    "title": "You are not the product",
+    "description": "Our services are tools built for you. Drive, Photos and Send are just the beginning of a full family of products that put you back in charge of your privacy.",
+    "square1": {
+      "title": "Internxt Drive",
+      "subtitle": "The safest cloud storage for all your files, photos, and more",
+      "description": "Take back control of your files and data with Internxt Drive. Storing and backing up your files in complete privacy couldn’t be any easier. Modern cloud storage meets military-grade encryption.",
+      "cta": "Save with Drive"
+    },
+    "square2": {
+      "title": "Internxt Photos",
+      "subtitle": "Secure online photo storage for all your picture-perfect moments",
+      "description": "Relive, share, and keep your best memories safe all in one place with Internxt Photos. Always have your photos on hand and conveniently sync images back and forth between devices.",
+      "cta": "Sync with Photos"
+    },
+    "square3": {
+      "title": "Internxt Send",
+      "subtitle": "Encrypt, share, and send large files with absolute certainty",
+      "description": "Send allows you to end-to-end encrypt and share large files fast without worrying about the security of your documents, images, or videos. Transfer to anyone in total confidentiality.",
+      "cta": "Share with Send"
+    }
+  },
+
+  "InvestorsSection": {
+    "title": "Brands that trust us"
+  },
+  "TestimonialsSection": {
+    "title": "Honest reviews from our users",
+    "cards": [
+      {
+        "name": "Eva W.",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+      },
+      {
+        "name": "Josep C.",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+      },
+      {
+        "name": "Pat G.",
+        "enterprise": "Review from Capterra",
+        "review": "I am storing files for a non-profit organization and working with Internxt was marvelous! This drive was very easy to use. I didn't have to do anything but upload and download. The program and drive did the rest!"
+      },
+      {
+        "name": "Luca C.",
+        "enterprise": "Review from GetApp",
+        "review": "The future of cloud storage! Love the fact that finally we have an affordable encrypted and secure cloud storage software that also has a very cool look and is user-friendly."
+      },
+      {
+        "name": "Binet S.",
+        "enterprise": "Review from Trustpilot",
+        "review": "Fast, reliable, and inexpensive - best components of any product! The ample storage space is definitely appreciated! I have enough of space to save all of my photos and files. I also like how simple it is to share files."
+      }
+    ]
+  },
+
+  "GetStartedSection": {
+    "title": { "line1": "Get started and", "line2": "get up to 10GB for free" },
+    "subtitle": {
+      "line1": "Our clients are very happy with Internxt Drive, but",
+      "line2": "they are happier knowing they are in total privacy."
+    },
+    "cta1": "Get started"
+  }
+}

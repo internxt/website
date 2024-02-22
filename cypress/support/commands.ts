@@ -1,38 +1,48 @@
 /// <reference types="cypress" />
 export {};
 // ***********************************************
-// This example commands.ts shows you how to
-// create various custom commands and overwrite
-// existing commands.
+// Custom commands to use it in the tests
 //
 // For more comprehensive examples of custom
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-//
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
+
+import { getLatestReleaseInfo } from '../../src/lib/github';
+
+const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
+
+type Interval = 'Monthly' | 'Annually' | 'Lifetime';
+
+function checkIfProductExistAndRedirectWorks(product, interval: Interval = 'Annually') {
+  const buttonId = `#planButton${product.storage}`;
+  const planId = product.planId;
+
+  cy.visit('/pricing');
+  cy.get('#billingButtons').contains(interval).click();
+
+  cy.get(buttonId).should('exist');
+  cy.get(buttonId).contains(`${product.storage}`).click();
+
+  cy.url().should((url) => {
+    expect(url).to.include(DRIVE_WEB_URL);
+    expect(url).to.include(planId);
+  });
+}
+
+// Get the platform and version of the latest release
+Cypress.Commands.add('getLatestReleaseInfo', (client: string, repo: string) => {
+  return getLatestReleaseInfo(client, repo);
+});
+
+// Check if the product exists and the redirect works
+Cypress.Commands.add('checkIfProductExistAndRedirectWorks', checkIfProductExistAndRedirectWorks);
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      getLatestReleaseInfo: typeof getLatestReleaseInfo;
+      checkIfProductExistAndRedirectWorks: typeof checkIfProductExistAndRedirectWorks;
+    }
+  }
+}

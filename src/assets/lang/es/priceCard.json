@@ -1,0 +1,76 @@
+{
+  "mostPopular": "Más popular",
+  "mostPopularPlan": "Plan más popular",
+  "valentines": "¡Oferta especial de San Valentín!",
+  "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
+  "planTitles": {
+    "individuals": "Planes individuales",
+    "business": "Planes para empresas",
+    "lifetimeCampaign": {
+      "blueText": "50% de descuento",
+      "normalText": "en todos nuestros planes exclusivos de por vida"
+    }
+  },
+  "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
+  "planDescription": "Todos los planes de Internxt cuentan con todas las funciones y acceso completo a todos nuestros servicios de privacidad. Seguridad para todas las formas y tamaños.",
+  "changePlan": {
+    "toIndividuals": "Cambiar a planes para particulares",
+    "toBusiness": "Cambiar a planes para empresas"
+  },
+  "billingFrequency": {
+    "monthly": "Mensual",
+    "semiannually": "Semianual",
+    "annually": "Anual",
+    "lifetime": "Lifetime"
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "Pago único",
+    "monthly": "Facturado mensualmente",
+    "semiannually": "Facturado cada 6 meses",
+    "annually": "Facturado anualmente",
+    "afterMonth": "después de 30 días"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/mes",
+    "semiannually": "/6 meses",
+    "annually": "/año"
+  },
+  "perUserSlash": "/usuario",
+  "perUser": "Por usuario",
+  "users": "usuarios",
+  "freePlan": "Gratis",
+  "price": {
+    "freeForever": "Gratis para siempre",
+    "free": "Hasta "
+  },
+  "perMonth": "/mes",
+  "firstMonth": "Los primeros 30 días",
+  "cta": {
+    "getStarted": "Empezar ahora",
+    "signUpNow": "Consigue Internxt gratis",
+    "buy": "Conseguir",
+    "get": "Obtener",
+    "discount": "EL MEJOR VALORADO!",
+    "claimTheDeal": "Obtener descuento",
+    "freemonth": "Consigue 30 días gratis"
+  },
+  "freePlanCard": {
+    "getStarted": "Empieza con nuestro plan gratuito",
+    "enjoy10gb": "Disfruta de hasta 10GB y accede a todos nuestros servicios",
+    "upTo": "Hasta 10GB",
+    "freeForever": "Gratis para siempre",
+    "cta": "Regístrate ahora"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Disfruta de",
+      "enjoyUpTo": "Disfruta de hasta",
+      "forFree": "gratis",
+      "forever": "para siempre"
+    },
+    "moneyBack": "30 días de garantía o te devolvemos el dinero",
+    "encryptedFiles": "Almacenamiento encriptado",
+    "accessFromAnywhere": "Todos tus dispositivos",
+    "allServices": "Todos nuestros servicios"
+  }
+}
