@@ -21,7 +21,8 @@
           "Get access to all our services",
           "Upload files up to 20GB",
           "Two-factor authentication (2FA)",
-          "Customer support"
+          "Customer support",
+          "30-day money-back guarantee"
         ],
         "2TB": [
           "2TB encrypted storage",
@@ -31,7 +32,8 @@
           "Get access to all our services",
           "Upload files up to 20GB",
           "Two-factor authentication (2FA)",
-          "Customer support"
+          "Customer support",
+          "30-day money-back guarantee"
         ],
         "5TB": [
           "5TB encrypted storage",
@@ -41,7 +43,8 @@
           "Get access to all our services",
           "Upload files up to 20GB",
           "Two-factor authentication (2FA)",
-          "Customer support"
+          "Customer support",
+          "30-day money-back guarantee"
         ],
         "10TB": [
           "10TB encrypted storage",
@@ -51,13 +54,14 @@
           "Get access to all our services",
           "Upload files up to 20GB",
           "Two-factor authentication (2FA)",
-          "Customer support"
+          "Customer support",
+          "30-day money-back guarantee"
         ]
       }
     },
     "features": {
       "guarantee": "30-day money-back guarantee",
-      "fileSharing": "Secure file sharing",
+      "openSource": "Open-source and audited",
       "anonymousAccount": "Anonymous account creation"
     }
   },

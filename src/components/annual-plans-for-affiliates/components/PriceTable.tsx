@@ -7,6 +7,8 @@ import { currencyService } from '@/components/services/currencyService';
 import PriceCard from './PriceCard';
 import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
 
+import OpenSource from '../../../../public/icons/open-source.svg';
+
 const PriceTable = ({
   textContent,
   handlePriceCardButton,
@@ -28,8 +30,8 @@ const PriceTable = ({
       text: textContent.features.guarantee,
     },
     {
-      icon: FolderSimpleLock,
-      text: textContent.features.fileSharing,
+      icon: OpenSource,
+      text: textContent.features.openSource,
     },
     {
       icon: Detective,

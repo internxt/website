@@ -101,7 +101,10 @@ export default function PriceCard({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.features[storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap">
+            <div
+              className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold"
+              key={feature}
+            >
               <img
                 loading="lazy"
                 className="translate-y-px select-none"
