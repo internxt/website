@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 
@@ -7,22 +5,23 @@ import PriceCard from './PriceCard';
 import { Detective, ShieldCheck } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
-import { stripeService } from '@/components/services/stripe.service';
-import { currencyService } from '@/components/services/currency.service';
+import usePricing from '@/hooks/usePricing';
+import { CouponType } from '@/lib/types/types';
 
 const PriceTable = ({
   textContent,
   handlePriceCardButton,
+  couponType,
+  discount,
 }: {
   textContent: any;
   handlePriceCardButton: (planId, currency, coupon) => void;
+  couponType?: CouponType;
+  discount?: number;
 }) => {
   const billingFrequency = 'year';
-  const [loadingCards, setLoadingCards] = useState(true);
-  const [products, setProducts] = useState<any>();
-  const [currency, setCurrency] = useState({
-    symbol: '€',
-    value: 1,
+  const { products, currency, loadingCards, coupon } = usePricing({
+    couponCode: couponType,
   });
 
   const features = [
@@ -39,38 +38,6 @@ const PriceTable = ({
       text: textContent.features.anonymousAccount,
     },
   ];
-
-  useEffect(() => {
-    stripeService
-      .getPrices()
-      .then((prices) => {
-        setProducts(prices);
-        setLoadingCards(false);
-      })
-      .catch(() => {
-        stripeService.getPrices(true).then((res) => {
-          setProducts(res);
-          setLoadingCards(false);
-        });
-        console.error('Error getting prices');
-      });
-
-    currencyService
-      .filterCurrencyByCountry()
-      .then((res) => {
-        setCurrency({
-          symbol: res.symbol,
-          value: res.value,
-        });
-      })
-      .catch((err) => {
-        setCurrency({
-          symbol: '€',
-          value: 1,
-        });
-        console.error(err);
-      });
-  }, []);
 
   return (
     <section className="overflow-hidden bg-gray-1">
@@ -110,13 +77,19 @@ const PriceTable = ({
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price}
+                    price={
+                      discount
+                        ? parseFloat((Math.floor(parseFloat(product.price) * discount) / 100).toFixed(2))
+                        : product.price
+                    }
                     billingFrequency={billingFrequency}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
-                    currency={currency.symbol}
+                    currency={currency}
                     contentText={textContent.priceCard}
                     onButtonClicked={handlePriceCardButton}
+                    coupon={coupon ?? undefined}
+                    priceBefore={discount ? product.price : undefined}
                   />
                 );
               })}

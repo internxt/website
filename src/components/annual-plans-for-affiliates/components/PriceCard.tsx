@@ -1,4 +1,3 @@
-import { checkout, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
 
 export interface PriceCardProps {
@@ -26,14 +25,13 @@ export default function PriceCard({
   storage,
   price,
   priceBefore,
-  billingFrequency,
   cta,
   popular,
   currency,
   coupon,
   contentText,
   onButtonClicked,
-}: PriceCardProps) {
+}: Readonly<PriceCardProps>) {
   return (
     <div
       className={`priceCard card ${

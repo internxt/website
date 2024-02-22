@@ -12,6 +12,7 @@ import PriceTable from '@/components/annual-plans-for-affiliates/components/Pric
 import { checkout } from '@/lib/auth';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { CouponType } from '@/lib/types/types';
 
 const START_PAGE = 'STARTPAGE';
 
@@ -24,6 +25,7 @@ const START_PAGE_PROVIDER_NAME = 'startpage';
 
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+  const offerDiscount = 20;
 
   const router = useRouter();
 
@@ -75,7 +77,12 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} />
 
-      <PriceTable textContent={textContent.PriceTable} handlePriceCardButton={handlePriceCardButton} />
+      <PriceTable
+        textContent={textContent.PriceTable}
+        handlePriceCardButton={handlePriceCardButton}
+        couponType={CouponType.StartPageCoupon}
+        discount={offerDiscount}
+      />
 
       <FeatureSection textContent={textContent.FeatureSection} />
 

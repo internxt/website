@@ -12,6 +12,7 @@ import PriceTable from '@/components/annual-plans-for-affiliates/components/Pric
 import { checkout } from '@/lib/auth';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { CouponType } from '@/lib/types/types';
 
 const LOCKER = 'LOCKER';
 
@@ -25,6 +26,7 @@ const LOCKER_PROVIDER_NAME = 'locker';
 export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const router = useRouter();
+  const offerDiscount = 25;
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -74,7 +76,12 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} />
 
-      <PriceTable textContent={textContent.PriceTable} handlePriceCardButton={handlePriceCardButton} />
+      <PriceTable
+        textContent={textContent.PriceTable}
+        handlePriceCardButton={handlePriceCardButton}
+        couponType={CouponType.LockerCoupon}
+        discount={offerDiscount}
+      />
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
