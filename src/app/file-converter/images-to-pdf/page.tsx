@@ -1,6 +1,6 @@
 'use client';
 
-import ImagesToPDF from '@coderosh/images-to-pdf';
+// import ImagesToPDF from '@coderosh/images-to-pdf';
 import { useState } from 'react';
 import { Spinner } from '@phosphor-icons/react';
 import TextInput from '../../../../components/components/TextInput';
@@ -16,43 +16,43 @@ const Home: React.FC = () => {
     }
   };
 
-  const handleConvertToPdf = async () => {
-    try {
-      if (!selectedImages || selectedImages.length === 0) {
-        console.error('No images selected.');
-        return;
-      }
-      setIsLoading(true);
-      const imgArrayBuffer = await Promise.all(Array.from(selectedImages).map((image) => image.arrayBuffer()));
-      console.log('IMAGE ARRAY BUFFER: ', imgArrayBuffer);
+  // const handleConvertToPdf = async () => {
+  //   try {
+  //     if (!selectedImages || selectedImages.length === 0) {
+  //       console.error('No images selected.');
+  //       return;
+  //     }
+  //     setIsLoading(true);
+  //     const imgArrayBuffer = await Promise.all(Array.from(selectedImages).map((image) => image.arrayBuffer()));
+  //     console.log('IMAGE ARRAY BUFFER: ', imgArrayBuffer);
 
-      const imgToPdf = new ImagesToPDF();
+  //     const imgToPdf = new ImagesToPDF();
 
-      imgArrayBuffer.forEach((image) => {
-        imgToPdf.addImage(image);
-      });
+  //     imgArrayBuffer.forEach((image) => {
+  //       imgToPdf.addImage(image);
+  //     });
 
-      const pdf = await imgToPdf.createPdf();
+  //     const pdf = await imgToPdf.createPdf();
 
-      const dataUrl = pdf.dataUrl();
+  //     const dataUrl = pdf.dataUrl();
 
-      const link = document.createElement('a');
-      link.href = dataUrl;
-      link.setAttribute('download', pdfName);
+  //     const link = document.createElement('a');
+  //     link.href = dataUrl;
+  //     link.setAttribute('download', pdfName);
 
-      // Append to html link element page
-      document.body.appendChild(link);
+  //     // Append to html link element page
+  //     document.body.appendChild(link);
 
-      // Start download
-      link.click();
+  //     // Start download
+  //     link.click();
 
-      // Clean up and remove the link
-      link.parentNode?.removeChild(link);
-      setIsLoading(false);
-    } catch (error) {
-      console.error('Error converting images to PDF:', error);
-    }
-  };
+  //     // Clean up and remove the link
+  //     link.parentNode?.removeChild(link);
+  //     setIsLoading(false);
+  //   } catch (error) {
+  //     console.error('Error converting images to PDF:', error);
+  //   }
+  // };
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center space-y-4">
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
 
       <button
         className="flex flex-col items-center rounded-lg bg-primary py-3 px-5 text-lg font-medium text-white"
-        onClick={handleConvertToPdf}
+        onClick={() => {}}
       >
         {isLoading ? <Spinner className="animate-spin" /> : 'Convert to PDF'}
       </button>
