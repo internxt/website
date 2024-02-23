@@ -13,7 +13,6 @@ import { checkout } from '@/lib/auth';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { CouponType } from '@/lib/types/types';
-import ReactMarkdown from 'react-markdown';
 
 const START_PAGE = 'STARTPAGE';
 
