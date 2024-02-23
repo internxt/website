@@ -50,33 +50,10 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
     });
   }
 
-  // Split the info from the textContent object in STARTPAGE
-  const heroSectionText = textContent.HeroSection;
-  const infoSection = {
-    part1: heroSectionText.info.split(LOCKER)[0],
-    startPage: heroSectionText.info.substring(
-      heroSectionText.info.indexOf(LOCKER),
-      heroSectionText.info.indexOf(LOCKER) + 6,
-    ),
-    part2: heroSectionText.info.split(LOCKER)[1],
-  };
-
-  const InfoTextComponent = (
-    <p className="text-xl text-gray-80">
-      {infoSection.part1}
-      <button onClick={onStartPageClicked} className="font-bold text-primary hover:underline">
-        {infoSection.startPage}
-      </button>
-      {infoSection.part2.split('75% OFF')[0]}
-      <span className="font-bold">75% OFF</span>
-      {infoSection.part2.split('75% OFF')[1]}
-    </p>
-  );
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} />
+      <HeroSection textContent={textContent.HeroSection} />
 
       <PriceTable
         textContent={textContent.PriceTable}
