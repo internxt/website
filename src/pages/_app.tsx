@@ -19,6 +19,9 @@ const excludedPaths = [
   '/stackcommerce',
   '/dealfuel',
   '/temporary-email',
+  '/locker',
+  '/startpage',
+  '/oystervpn',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
@@ -84,7 +87,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         {hideIntercomButton ? null : <Intercom />}
         {
           <div className="flex justify-center">
-            {!shouldBannerBeenShowed ? (
+            {shouldShowBanner ? (
               <>
                 <BottomBanner />
                 <FeaturesBanner />
