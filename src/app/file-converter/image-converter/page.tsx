@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import axios from 'axios';
 import { UilAngleDown } from '@iconscout/react-unicons';
 
 const Dropdown = ({
