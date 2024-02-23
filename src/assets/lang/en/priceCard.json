@@ -52,6 +52,7 @@
     "signUpNow": "Sign up now",
     "buy": "Buy",
     "get": "Get",
+    "selectPlan": "Select plan",
     "discount": "BEST VALUE!",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Get 30 days for free"
@@ -61,7 +62,7 @@
     "enjoy10gb": "Enjoy up to 10GB forever and get access to all our services",
     "upTo": "Up to 10GB",
     "freeForever": "Free forever",
-    "cta": "Sign up now"
+    "cta": "Select plan"
   },
   "features": {
     "enjoyForever": {
@@ -75,5 +76,51 @@
     "accessFromAnywhere": "Access your files from any device",
     "allServices": "Get access to all our services",
     "dataAccess": "No unauthorized data access"
+  },
+  "productFeatures": {
+    "200GB": [
+      "200GB encrypted storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication (2FA)",
+      "Premium customer support",
+      "30-day money-back guarantee"
+    ],
+    "2TB": [
+      "2TB encrypted storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication (2FA)",
+      "Premium customer support",
+      "30-day money-back guarantee"
+    ],
+    "5TB": [
+      "5TB encrypted storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication (2FA)",
+      "Premium customer support",
+      "30-day money-back guarantee"
+    ],
+    "10TB": [
+      "10TB encrypted storage",
+      "Encrypted file and folder sharing",
+      "Password-protected file sharing",
+      "Access your files from any device",
+      "Get access to all our services",
+      "Upload files up to 20GB",
+      "Two-factor authentication (2FA)",
+      "Premium customer support",
+      "30-day money-back guarantee"
+    ]
   }
 }

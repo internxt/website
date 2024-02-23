@@ -50,6 +50,7 @@
     "signUpNow": "Iscriviti ora",
     "buy": "Acquista",
     "get": "Ottieni",
+    "selectPlan": "Seleziona piano",
     "discount": "MIGLIOR VALORE!",
     "claimTheDeal": "Claim the deal",
     "freemonth": "Ottieni 30 giorni gratis"
@@ -59,7 +60,7 @@
     "enjoy10gb": "Goditi fino a 10 GB per sempre e accedi a tutti i nostri servizi",
     "upTo": "Fino a 10 GB",
     "freeForever": "Gratuito per sempre",
-    "cta": "Iscriviti ora"
+    "cta": "Seleziona piano"
   },
   "features": {
     "enjoyForever": {
@@ -73,5 +74,51 @@
     "accessFromAnywhere": "Accesso ai file da qualsiasi dispositivo",
     "allServices": "Accedi a tutti i nostri servizi",
     "dataAccess": "No unauthorized data access"
+  },
+  "productFeatures": {
+    "200GB": [
+      "Archiviazione crittografata da 200 GB",
+      "Condivisione crittografata di file e cartelle",
+      "Condivisione protetta da password",
+      "Accedi ai tuoi file da qualsiasi dispositivo",
+      "Accesso a tutti i nostri servizi",
+      "Carica file fino a 20 GB",
+      "Autenticazione a due fattori (2FA)",
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
+    ],
+    "2TB": [
+      "Archiviazione crittografata da 2 TB",
+      "Condivisione crittografata di file e cartelle",
+      "Condivisione protetta da password",
+      "Accedi ai tuoi file da qualsiasi dispositivo",
+      "Accesso a tutti i nostri servizi",
+      "Carica file fino a 20 GB",
+      "Autenticazione a due fattori (2FA)",
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
+    ],
+    "5TB": [
+      "Archiviazione crittografata da 5 TB",
+      "Condivisione crittografata di file e cartelle",
+      "Condivisione protetta da password",
+      "Accedi ai tuoi file da qualsiasi dispositivo",
+      "Accesso a tutti i nostri servizi",
+      "Carica file fino a 20 GB",
+      "Autenticazione a due fattori (2FA)",
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
+    ],
+    "10TB": [
+      "Archiviazione crittografata da 10 TB",
+      "Condivisione crittografata di file e cartelle",
+      "Condivisione protetta da password",
+      "Accedi ai tuoi file da qualsiasi dispositivo",
+      "Accesso a tutti i nostri servizi",
+      "Carica file fino a 20 GB",
+      "Autenticazione a due fattori (2FA)",
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
+    ]
   }
 }

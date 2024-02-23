@@ -2,13 +2,14 @@
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
-import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
+import { Coin, CreditCard, Detective, FolderLock } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
+import OpenSource from '../../../public/icons/open-source.svg';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -24,6 +25,21 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const { products, currency, loadingCards } = usePricing();
+
+  const features = [
+    {
+      icon: FolderLock,
+      text: textContent.features.endToEnd,
+    },
+    {
+      icon: OpenSource,
+      text: textContent.features.openSource,
+    },
+    {
+      icon: Detective,
+      text: textContent.features.anonymousAccount,
+    },
+  ];
 
   return (
     <section className="overflow-hidden bg-gray-1">
@@ -160,18 +176,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
           </div>
         </Transition>
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <Coin size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.firstFeature}</p>
-          </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <CreditCard size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.secondFeature}</p>
-          </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <Detective size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.featureSection.thirdFeature}</p>
-          </div>
+          {features.map((feature) => (
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
+              <feature.icon size={40} className="text-primary" />
+              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

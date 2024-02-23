@@ -21,10 +21,10 @@
       "guarantee": "Garantie de remboursement de 30 jours",
       "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients"
     },
-    "featureSection": {
-      "firstFeature": "Garantie de remboursement de 30 jours",
-      "secondFeature": "Paiement 100% sécurisé",
-      "thirdFeature": "Création de compte anonyme"
+    "features": {
+      "endToEnd": "Chiffré de bout en bout",
+      "openSource": "Open-source et vérifié",
+      "anonymousAccount": "Création de compte anonyme"
     }
   },
   "FaqSection": {

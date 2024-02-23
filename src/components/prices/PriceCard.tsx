@@ -136,62 +136,24 @@ export default function PriceCard({
           className="flex w-full flex-row"
         >
           <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
-            <p className={`${isFreePlan ? 'hidden' : ''} ${isIndividualPlan ? '' : 'hidden'}`}>
-              {contentText.cta.get} {storage}
-            </p>
-
-            <p className={`${isFreePlan && isIndividualPlan ? '' : 'hidden'}`}>{contentText.cta.signUpNow}</p>
-
-            <p className={`${isIndividualPlan ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
+            {contentText.cta.selectPlan}
           </div>
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
-          {billingFrequency === 'lifetime' && (
-            <div className={`flex flex-row items-start space-x-2 font-semibold`}>
+          {contentText.productFeatures[storage].map((feature) => (
+            <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold">
               <img
                 loading="lazy"
-                className="mt-0.5 translate-y-px select-none"
+                className="translate-y-px select-none"
                 src="/icons/checkPrimary.svg"
                 draggable="false"
                 alt="check icon"
               />
-              <span className="flex">
-                {`${contentText.features.enjoyForever.enjoy} ${storage} ${contentText.features.enjoyForever.forever}`}
-              </span>
+              <span className="text-gray-80">{feature}</span>
             </div>
-          )}
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.encryptedFiles}</span>
-          </div>
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.accessFromAnywhere}</span>
-          </div>
-          <div className="flex flex-row items-start space-x-2">
-            <img
-              loading="lazy"
-              className="mt-0.5 translate-y-px select-none"
-              src="/icons/checkPrimary.svg"
-              draggable="false"
-              alt="check icon"
-            />
-            <span>{contentText.features.allServices}</span>
-          </div>
+          ))}
         </div>
       </div>
     </div>
