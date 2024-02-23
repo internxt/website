@@ -10,7 +10,6 @@ import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { CouponType } from '@/lib/types/types';
 
@@ -21,21 +20,9 @@ const currencyValue = {
   $: 'usd',
 };
 
-const START_PAGE_PROVIDER_NAME = 'startpage';
-
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const offerDiscount = 20;
-
-  const router = useRouter();
-
-  useEffect(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const provider = queryParams.get('provider');
-    if (!provider || provider !== START_PAGE_PROVIDER_NAME) {
-      router.push('/pricing');
-    }
-  }, []);
 
   function onStartPageClicked() {
     copyToClipboard(START_PAGE);
