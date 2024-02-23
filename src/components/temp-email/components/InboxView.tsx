@@ -220,6 +220,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
                       key={item.id}
                       onClick={() => {
                         onMessageSelected(item, index);
+                        setIsMessageOpen(true);
                       }}
                       className={`flex h-full ${
                         !item.opened ? 'border-l-2 border-l-primary' : ''

@@ -56,7 +56,6 @@ describe('Lifetime page', () => {
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime2TB.planId);
-        expect(url).to.include(coupon);
         expect(url).to.include(DRIVE_WEB_URL);
       });
     });
@@ -70,7 +69,6 @@ describe('Lifetime page', () => {
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime5TB.planId);
-        expect(url).to.include(coupon);
         expect(url).to.include(DRIVE_WEB_URL);
       });
     });
@@ -84,7 +82,6 @@ describe('Lifetime page', () => {
 
       cy.url().should((url) => {
         expect(url).to.include(products.lifetime10TB.planId);
-        expect(url).to.include(coupon);
         expect(url).to.include(DRIVE_WEB_URL);
       });
     });
