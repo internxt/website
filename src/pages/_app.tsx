@@ -21,6 +21,7 @@ const excludedPaths = [
   '/temporary-email',
   '/locker',
   '/startpage',
+  '/oystervpn',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner'];
