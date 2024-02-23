@@ -24,7 +24,6 @@ const Home: React.FC = () => {
       }
       setIsLoading(true);
       const imgArrayBuffer = await Promise.all(Array.from(selectedImages).map((image) => image.arrayBuffer()));
-      console.log('IMAGE ARRAY BUFFER: ', imgArrayBuffer);
 
       const imgToPdf = new ImagesToPDF();
 

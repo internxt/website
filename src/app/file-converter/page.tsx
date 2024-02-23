@@ -20,6 +20,11 @@ const FileConverter = () => {
       description: 'Convert images to PDF online, easily and free.',
       route: '/file-converter/images-to-pdf',
     },
+    {
+      title: 'Image converter',
+      description: 'Convert images to different formats online, easily and free.',
+      route: '/file-converter/image-converter',
+    },
   ];
 
   return (
@@ -31,7 +36,7 @@ const FileConverter = () => {
               router.push(card.route);
             }}
             key={card.title}
-            className="flex max-w-[350px] cursor-pointer flex-col space-y-2 rounded-xl p-10 shadow-subtle-hard"
+            className="flex max-w-[350px] cursor-pointer flex-col items-center space-y-2 rounded-xl p-10 shadow-subtle-hard hover:shadow-lg"
           >
             <p className="text-2xl font-semibold">{card.title}</p>
             <p className="text-lg font-medium text-gray-80">{card.description}</p>
