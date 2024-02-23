@@ -67,7 +67,9 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
       <button onClick={onStartPageClicked} className="font-bold text-primary hover:underline">
         {infoSection.startPage}
       </button>
-      {infoSection.part2}
+      {infoSection.part2.split('80% OFF')[0]}
+      <span className="font-bold">75% OFF</span>
+      {infoSection.part2.split('80% OFF')[1]}
     </p>
   );
 
