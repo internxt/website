@@ -18,7 +18,7 @@ const FeaturesBanner = () => {
     if (getSquareBannerSS) setShowBanner(false);
     else {
       setTimeout(() => {
-        setShowBanner(true);
+        setShowBanner(false);
       }, 10000);
     }
   }, []);

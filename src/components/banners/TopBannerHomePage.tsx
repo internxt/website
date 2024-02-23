@@ -17,8 +17,8 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              {textContent.TopBarBanner.title.normalText}
               <span className="font-bold">{textContent.TopBarBanner.title.boldText}</span>
+              {textContent.TopBarBanner.title.normalText}
             </p>
           </div>
           <button
@@ -47,8 +47,8 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
             <p className="font-normal">
-              {textContent.TopBarBanner.title.normalText}
               <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
+              {textContent.TopBarBanner.title.normalText}
             </p>
           </div>
         </div>

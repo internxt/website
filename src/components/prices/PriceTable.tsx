@@ -9,8 +9,6 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
-import CampaignCtaSection from '../lifetime/CampaignCtaSection';
-import { CouponType } from '@/lib/types/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
