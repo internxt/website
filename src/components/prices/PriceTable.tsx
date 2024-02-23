@@ -25,16 +25,13 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
 
   const [individual, setIndividual] = useState(true);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const { products, currency, loadingCards, coupon } = usePricing({
-    couponCode: CouponType.ValentinesCoupon,
-  });
-  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
+  const { products, currency, loadingCards } = usePricing();
 
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
+          {/* <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} /> */}
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
             <Header>{individual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
@@ -137,14 +134,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={parseFloat((Math.floor(parseFloat(product.price) * 31) / 100).toFixed(2))}
+                        price={product.price}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
-                        priceBefore={product.price}
                         lang={lang}
                         currency={currency}
-                        coupon={coupon}
                       />
                     )}
                   </>
