@@ -10,36 +10,17 @@ import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { CouponType } from '@/lib/types/types';
-
-const LOCKER = 'LOCKER';
 
 const currencyValue = {
   '€': 'eur',
   $: 'usd',
 };
 
-const LOCKER_PROVIDER_NAME = 'locker';
-
 export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const router = useRouter();
   const offerDiscount = 25;
-
-  useEffect(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const provider = queryParams.get('provider');
-    if (!provider || provider !== LOCKER_PROVIDER_NAME) {
-      router.push('/pricing');
-    }
-  }, []);
-
-  function onStartPageClicked() {
-    copyToClipboard(LOCKER);
-    notificationService.openSuccessToast('Copied to clipboard');
-  }
 
   function handlePriceCardButton(planId, currency, coupon) {
     checkout({
