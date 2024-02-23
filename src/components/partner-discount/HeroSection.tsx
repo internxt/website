@@ -30,7 +30,7 @@ const HeroSection = ({ textContent }) => {
                 </div>
                 <p className="text-center text-xl text-gray-80 lg:text-left">
                   {description.part1}{' '}
-                  <span
+                  <button
                     className="cursor-pointer font-medium text-primary underline"
                     onClick={() => {
                       //Copy to clipboard
@@ -39,7 +39,7 @@ const HeroSection = ({ textContent }) => {
                     }}
                   >
                     {description.special15}
-                  </span>{' '}
+                  </button>{' '}
                   {description.part2}
                 </p>
               </div>
