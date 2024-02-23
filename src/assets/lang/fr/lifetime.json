@@ -15,9 +15,11 @@
       "description": "Achetez une fois et bénéficiez de la confidentialité pour toujours."
     },
     "securePayment": " Paiement 100% sécurisé, développé par Stripe ",
-    "firstFeed": "Garantie de remboursement de 30 jours",
-    "secondFeed": "Paiement 100% sécurisé",
-    "thirdFeed": "Création de compte anonyme"
+    "features": {
+      "endToEnd": "Chiffré de bout en bout",
+      "openSource": "Open-source et vérifié",
+      "anonymousAccount": "Création de compte anonyme"
+    }
   },
   "GetLifetimeSection": {
     "title": "La vie n'est pas courte ! Mais cette offre à temps limité l'est...",

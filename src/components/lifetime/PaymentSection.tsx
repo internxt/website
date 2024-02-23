@@ -1,8 +1,23 @@
 import React from 'react';
 import PriceTable from './PriceTable';
-import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
+import { Detective, FolderLock } from '@phosphor-icons/react';
+import OpenSource from '../../../public/icons/open-source.svg';
 
 const PaymentSection = ({ lang, textContent }) => {
+  const features = [
+    {
+      icon: FolderLock,
+      text: textContent.features.endToEnd,
+    },
+    {
+      icon: OpenSource,
+      text: textContent.features.openSource,
+    },
+    {
+      icon: Detective,
+      text: textContent.features.anonymousAccount,
+    },
+  ];
   return (
     <section id="payment" className="overflow-hidden py-20">
       <div className="flex flex-col space-y-8">
@@ -22,18 +37,12 @@ const PaymentSection = ({ lang, textContent }) => {
         <PriceTable lang={lang} />
 
         <div className="flex flex-col items-center justify-center space-y-8 bg-transparent text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <CurrencyCircleDollar size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.firstFeed}</p>
-          </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <CreditCard size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.secondFeed}</p>
-          </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <Detective size={40} className="text-primary" />
-            <p className="text-xl font-medium text-gray-80">{textContent.thirdFeed}</p>
-          </div>
+          {features.map((feature) => (
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
+              <feature.icon size={40} className="text-primary" />
+              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
