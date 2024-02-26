@@ -15,9 +15,11 @@
       "description": "Acquista una volta e ottieni privacy e sicurezza per sempre."
     },
     "securePayment": "Pagamento sicuro al 100%, gestito da Stripe",
-    "firstFeed": "Garanzia di rimborso di 30 giorni",
-    "secondFeed": "Pagamento sicuro al 100%",
-    "thirdFeed": "Creazione di un account anonimo"
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione di account anonimi"
+    }
   },
   "GetLifetimeSection": {
     "title": "La vita non è breve! Ma questa offerta a tempo limitato lo è...",

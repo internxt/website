@@ -21,10 +21,10 @@
       "guarantee": "Garantía de devolución de dinero de 30 días",
       "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes"
     },
-    "featureSection": {
-      "firstFeature": "Garantía de devolución de 30 días",
-      "secondFeature": "Pago 100% seguro",
-      "thirdFeature": "Creación de cuenta anónima"
+    "features": {
+      "endToEnd": "Encriptado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima"
     }
   },
   "FaqSection": {

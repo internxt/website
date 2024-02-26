@@ -14,9 +14,11 @@
       "description": "Buy once and get privacy and security forever."
     },
     "securePayment": "100% Secure payment, powered by Stripe",
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
+    }
   },
   "GetLifetimeSection": {
     "title": "Life is not short! But this limited-time deal is...",

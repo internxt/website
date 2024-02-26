@@ -22,7 +22,7 @@ export default function CardSkeleton() {
       </div>
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
-        <Skeleton count={4} />
+        <Skeleton count={9} />
       </div>
     </div>
   );

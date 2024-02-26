@@ -87,9 +87,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "尽情享受月度或年度计划 69% 的折扣。",
-      "normalText": "展示一些对你的文件的爱! ",
-      "cta": "选择计划"
+      "boldText": "终身计划 5 折优惠：",
+      "normalText": "永久保护您的文件！",
+      "cta": "选择您的计划"
     }
   },
   "lifetimeBanner": {

@@ -15,10 +15,11 @@
       "description": "一次购买，永久获得隐私和安全。"
     },
     "securePayment": "100% 安全支付，由 Stripe 提供支持",
-
-    "firstFeed": "30天退款保证",
-    "secondFeed": "100% 安全支付",
-    "thirdFeed": "匿名账户创建"
+    "features": {
+      "endToEnd": "Encriptado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima"
+    }
   },
   "GetLifetimeSection": {
     "title": "生命并不短暂！但这一限时优惠却......",

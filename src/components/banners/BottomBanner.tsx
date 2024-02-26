@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
 const BottomBanner = () => {
-  const [hidePopup, setHidePopup] = useState(false);
+  const [hidePopup, setHidePopup] = useState(true);
   const router = useRouter();
   const lang = router.locale;
 
