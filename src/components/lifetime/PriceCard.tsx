@@ -83,8 +83,7 @@ const PriceCard = ({
           </div>
         </div>
 
-        <div
-          onKeyDown={() => {}}
+        <button
           tabIndex={0}
           id={`planButton${storage}`}
           onClick={() => {
@@ -92,7 +91,6 @@ const PriceCard = ({
               planId: cta[1],
               couponCode: coupon,
               mode: 'payment',
-              // Change it once the offer is over
               currency: currencyValue[currency] ?? 'eur',
             });
           }}
@@ -109,7 +107,7 @@ const PriceCard = ({
 
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
-        </div>
+        </button>
       </div>
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">

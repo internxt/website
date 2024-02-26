@@ -47,6 +47,7 @@ const PriceTable = ({ lang }) => {
                     price={Number((product.price * 0.5).toString().split('.')[0])}
                     cta={['checkout', product.priceId]}
                     lang={lang}
+                    billingFrequency="lifetime"
                     popular={product.storage === '5TB'}
                     priceBefore={product.price.split('.')[0]}
                     currency={currency}
