@@ -2,14 +2,12 @@
 import { useState } from 'react';
 import { Switch, Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
-import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
+import { Detective, FolderLock } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types/types';
 import OpenSource from '../../../public/icons/open-source.svg';
 
 interface PriceTableProps {
@@ -30,22 +28,20 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, loadingCards, coupon } = usePricing({
-    couponCode: CouponType.ValentinesCoupon,
-  });
+  const { products, currency, loadingCards } = usePricing();
 
   const features = [
     {
-      icon: ShieldCheck,
-      text: textContent.featureSection.firstFeature,
+      icon: FolderLock,
+      text: textContent.features.endToEnd,
     },
     {
       icon: OpenSource,
-      text: textContent.featureSection.secondFeature,
+      text: textContent.features.openSource,
     },
     {
       icon: Detective,
-      text: textContent.featureSection.thirdFeature,
+      text: textContent.features.anonymousAccount,
     },
   ];
 

@@ -1,12 +1,10 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 import Image from 'next/legacy/image';
 import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
-import HomePageBanner from '@/components/banners/HomePageBanner';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
