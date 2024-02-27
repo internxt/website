@@ -22,10 +22,10 @@
       "guarantee": "30 天内退款保证",
       "lastCta": "*此优惠仅适用于免费账户或新客户"
     },
-    "featureSection": {
-      "firstFeature": "30天退款保证",
-      "secondFeature": "安全文件共享",
-      "thirdFeature": "匿名账户创建"
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审核",
+      "anonymousAccount": "匿名帐户创建"
     }
   },
   "FaqSection": {

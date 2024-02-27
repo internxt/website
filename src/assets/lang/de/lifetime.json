@@ -14,9 +14,11 @@
       "description": "Kaufe einmalig und erhalte Datenschutz und Sicherheit für immer."
     },
     "securePayment": "100% sichere Zahlung, powered by Stripe",
-    "firstFeed": "30 Tage Geld-zurück-Garantie",
-    "secondFeed": "100% sichere Zahlung",
-    "thirdFeed": "Anonyme Kontoerstellung"
+    "features": {
+      "endToEnd": "End-to-End-verschlüsselt",
+      "openSource": "Open Source und überprüft",
+      "anonymousAccount": "Anonyme Kontenerstellung"
+    }
   },
   "GetLifetimeSection": {
     "title": "Das Leben ist nicht kurz! Aber dieses zeitlich begrenzte Angebot schon...",

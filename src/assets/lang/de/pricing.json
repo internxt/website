@@ -22,10 +22,10 @@
       "guarantee": "30 Tage Geld-zurück-Garantie",
       "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden"
     },
-    "featureSection": {
-      "firstFeature": "30-Tage Geld-zurück-Garantie",
-      "secondFeature": "Sicheres Teilen von Dateien",
-      "thirdFeature": "Anonyme Kontenerstellung"
+    "features": {
+      "endToEnd": "End-to-End-verschlüsselt",
+      "openSource": "Open Source und überprüft",
+      "anonymousAccount": "Anonyme Kontenerstellung"
     }
   },
   "ctaText": "Angebot gültig für ein Jahr. Der Plan wird im folgenden Jahr zum regulären Preis erneuert.",

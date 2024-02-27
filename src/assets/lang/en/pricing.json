@@ -21,10 +21,10 @@
       "guarantee": "30-day money-back guarantee",
       "lastCta": "*Offer is for free accounts or new customers"
     },
-    "featureSection": {
-      "firstFeature": "30-day money-back guarantee",
-      "secondFeature": "Secure file sharing",
-      "thirdFeature": "Anonymous account creation"
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
     }
   },
   "FaqSection": {

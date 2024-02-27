@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import cache from 'memory-cache';
 
 export async function getLatestReleaseInfo(user: string, repo: string) {
@@ -9,14 +8,14 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
     return cachedData;
   }
 
-  const fetchUrl = `https://api.github.com/repos/${user}/${repo}/releases`;
+  const fetchUrl = `https://api.github.com/repos/${user}/${repo}/releases/latest`;
   const res = await fetch(fetchUrl);
 
   if (res.status !== 200) {
-    throw Error('Release not found');
+    throw Error('Latest release information not found');
   }
 
-  const info = await res.json();
+  const latestRelease = await res.json();
 
   let windows = null;
   let linux = null;
@@ -28,18 +27,14 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
     dmg: null,
   };
 
-  info.forEach((release) => {
-    release.assets.forEach((asset) => {
-      const match = asset.browser_download_url.match(/\.(\w+)$/);
-
-      if (match) {
-        const extension = match[1];
-
-        if (!latestAssets[extension]) {
-          latestAssets[extension] = asset.browser_download_url;
-        }
+  latestRelease.assets.forEach((asset) => {
+    const match = asset.browser_download_url.match(/\.(\w+)$/);
+    if (match) {
+      const extension = match[1];
+      if (!latestAssets[extension]) {
+        latestAssets[extension] = asset.browser_download_url;
       }
-    });
+    }
   });
 
   windows = latestAssets.exe || null;
@@ -47,7 +42,7 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
   macos = latestAssets.dmg || null;
 
   const newCachedData = {
-    version: info.name,
+    version: latestRelease.name,
     links: {
       windows,
       linux,

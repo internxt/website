@@ -86,7 +86,8 @@
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
       "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti"
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
     ],
     "2TB": [
       "Archiviazione crittografata da 2 TB",
@@ -96,7 +97,8 @@
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
       "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti"
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
     ],
     "5TB": [
       "Archiviazione crittografata da 5 TB",
@@ -106,7 +108,8 @@
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
       "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti"
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
     ],
     "10TB": [
       "Archiviazione crittografata da 10 TB",
@@ -116,7 +119,8 @@
       "Accesso a tutti i nostri servizi",
       "Carica file fino a 20 GB",
       "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti"
+      "Supporto premium per i clienti",
+      "Garanzia di rimborso di 30 giorni"
     ]
   }
 }

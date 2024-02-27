@@ -2,15 +2,15 @@
 import { useState } from 'react';
 import { Switch, Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
+import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from './FreePlanCard';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
-import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 import { CouponType } from '@/lib/types/types';
-import { Detective, FolderSimpleLock, ShieldCheck } from '@phosphor-icons/react';
+import OpenSource from '../../../public/icons/open-source.svg';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -29,7 +29,6 @@ type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
   const { products, currency, loadingCards, coupon } = usePricing({
     couponCode: CouponType.ValentinesCoupon,
@@ -41,7 +40,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
       text: textContent.featureSection.firstFeature,
     },
     {
-      icon: FolderSimpleLock,
+      icon: OpenSource,
       text: textContent.featureSection.secondFeature,
     },
     {
@@ -196,19 +195,12 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         planType="individual"
                         key={product.storage}
                         storage={product.storage}
-                        price={
-                          billingFrequency === 'year'
-                            ? parseFloat((Math.floor(parseFloat(product.price) * 77) / 100).toFixed(2))
-                            : product.price
-                        }
+                        price={product.price}
                         billingFrequency={billingFrequency}
                         popular={product.storage === '5TB'}
                         cta={['checkout', product.priceId]}
-                        priceBefore={billingFrequency === 'year' ? product.price : undefined}
                         lang={lang}
                         currency={currency}
-                        coupon={billingFrequency === 'year' ? coupon : undefined}
-                        savePercentage={69}
                       />
                     )}
                   </>
@@ -228,11 +220,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
             <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
-        <div id="freeAccountCard" className="content flex w-full px-5">
-          <FreePlanCard textContent={contentText.freePlanCard} />
-        </div>
-
-        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-y-0 md:space-x-32">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />

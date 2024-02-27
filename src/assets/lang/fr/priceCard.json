@@ -53,6 +53,7 @@
     "buy": "Obtenir",
     "get": "Obtenir",
     "selectPlan": "Sélectionner un plan",
+    "selectPlan": "Sélectionner un plan",
     "discount": " MEILLEURE VALEUR ! ",
     "claimTheDeal": "Réclamer l'affaire",
     "freemonth": "Obtenez 30 jours gratuits"
@@ -85,7 +86,8 @@
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
       "Authentification à deux facteurs (2FA)",
-      "Support client premium"
+      "Support client premium",
+      "Garantie de remboursement de 30 jours"
     ],
     "2TB": [
       "Stockage chiffré de 2 To",
@@ -95,7 +97,8 @@
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
       "Authentification à deux facteurs (2FA)",
-      "Support client premium"
+      "Support client premium",
+      "Garantie de remboursement de 30 jours"
     ],
     "5TB": [
       "Stockage chiffré de 5 To",
@@ -105,7 +108,8 @@
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
       "Authentification à deux facteurs (2FA)",
-      "Support client premium"
+      "Support client premium",
+      "Garantie de remboursement de 30 jours"
     ],
     "10TB": [
       "Stockage chiffré de 10 To",
@@ -115,7 +119,8 @@
       "Accès à tous nos services",
       "Téléchargez des fichiers jusqu'à 20 Go",
       "Authentification à deux facteurs (2FA)",
-      "Support client premium"
+      "Support client premium",
+      "Garantie de remboursement de 30 jours"
     ]
   }
 }

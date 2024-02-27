@@ -57,6 +57,7 @@ export default function HeroSection({ textContent, lang }) {
             </div>
           </div>
 
+          {/* Desktop animation/image */}
           <Animation />
         </div>
 

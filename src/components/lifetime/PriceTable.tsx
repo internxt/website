@@ -1,9 +1,9 @@
 import React from 'react';
-import PriceCard from './PriceCard';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types/types';
+import PriceCard from '../prices/PriceCard';
 
 const PriceTable = ({ lang }) => {
   const { products, currency, coupon, loadingCards } = usePricing({
@@ -44,15 +44,12 @@ const PriceTable = ({ lang }) => {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price.split('.')[0]}
+                    price={Number((product.price * 0.5).toString().split('.')[0])}
                     cta={['checkout', product.priceId]}
                     lang={lang}
+                    billingFrequency="lifetime"
                     popular={product.storage === '5TB'}
-                    actualPrice={
-                      Math.abs((product.price * 50) / 100)
-                        .toFixed(2)
-                        .split('.')[0]
-                    }
+                    priceBefore={product.price.split('.')[0]}
                     currency={currency}
                     coupon={coupon ?? undefined}
                   />

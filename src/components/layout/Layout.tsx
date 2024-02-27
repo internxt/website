@@ -1,12 +1,12 @@
-/* eslint-disable react/no-danger */
-import Head from 'next/head';
 import React, { useEffect } from 'react';
-import isBrave from '@/lib/brave';
-import Script from 'next/script';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
-import TopBannerHomePage from '@/components/banners/TopBannerHomePage';
+import Script from 'next/script';
 import axios from 'axios';
 import moment from 'moment';
+
+import isBrave from '@/lib/brave';
+import TopBannerHomePage from '@/components/banners/TopBannerHomePage';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -36,6 +36,9 @@ const excludedPaths = [
   '/dealfuel',
   '/mightydeals',
   '/temporary-email',
+  '/locker',
+  '/startpage',
+  '/oystervpn',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 
