@@ -7,6 +7,25 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
+        <div className="flex">
+          <Image
+            src="/images/banners/banner-locker-temp-mail.webp"
+            alt="Locker Lifetime Offer Banner"
+            width={895}
+            height={355}
+            layout="intrinsic"
+            quality={100}
+            draggable={false}
+            className="cursor-pointer"
+            onClick={() => {
+              window.open(
+                'https://locker.io/lifetime?utm_source=partnership&utm_medium=internxt_banner&utm_campaign=temporary_email',
+                '_blank',
+                'noopener noreferrer',
+              );
+            }}
+          />
+        </div>
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">{textContent.title}</p>
