@@ -10,11 +10,12 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
         <div className="flex">
           <Image
             src="/images/banners/banner-locker-temp-mail.webp"
-            alt="Switch to privacy"
+            alt="Locker Lifetime Offer Banner"
             width={895}
             height={355}
             layout="intrinsic"
             quality={100}
+            draggable={false}
             className="cursor-pointer"
             onClick={() => {
               window.open(
