@@ -9,7 +9,7 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
         <div className="flex">
           <Image
-            src="/images/banners/banner-locker-temp-mail.webp"
+            src="/images/banners/banner-locker-temp-mail.png"
             alt="Locker Lifetime Offer Banner"
             width={895}
             height={355}
