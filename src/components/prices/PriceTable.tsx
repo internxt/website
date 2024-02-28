@@ -14,11 +14,12 @@ interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
   textContent: any;
+  discount?: number;
 }
 
 type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
-export default function PriceTable({ setSegmentPageName, lang, textContent }: PriceTableProps) {
+export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: PriceTableProps) {
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const banner = require('@/assets/lang/en/banners.json');
@@ -134,9 +135,11 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
               >
                 {contentText.billingFrequency.annually}
               </p>
-              <p className="absolute top-full whitespace-nowrap font-medium text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
-                {contentText.save} 23%
-              </p>
+              {discount ? (
+                <p className="absolute top-full whitespace-nowrap font-medium text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
+                  {contentText.save} {discount}%
+                </p>
+              ) : null}
             </div>
           </div>
         </div>
