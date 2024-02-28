@@ -1,6 +1,7 @@
 {
   "mostPopular": "Самый популярный",
   "mostPopularPlan": "Самый популярный план",
+  "save": "Экономьте до",
   "valentines": "Специальное предложение ко Дню Святого Валентина!",
   "onlyForNewClients": "Только для новых клиентов и пользователей бесплатного плана",
   "planTitles": {
@@ -19,9 +20,10 @@
   },
   "billingFrequency": {
     "monthly": "Ежемесячно",
-    "semiannually": "Раз в полгода",
     "annually": "Ежегодно",
-    "lifetime": "Пожизненно"
+    "lifetime": "Пожизненно",
+    "individual": "Индивидуальный",
+    "business": "Бизнес"
   },
   "billingFrequencyLabel": {
     "lifetime": "Одноразовый платеж",

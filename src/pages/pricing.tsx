@@ -18,7 +18,6 @@ import InfoSection from '@/components/home/InfoSection';
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [isLifetime, setIsLifetime] = useState(false);
 
   return (
     <>
@@ -31,22 +30,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       </Script>
 
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
-        <Navbar
-          textContent={navbarLang}
-          lang={lang}
-          cta={['default']}
-          fixed
-          mode={isLifetime ? 'payment' : 'subscription'}
-        />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
-        <PriceTable
-          setSegmentPageName={setPageName}
-          lang={lang}
-          setIsLifetime={setIsLifetime}
-          textContent={textContent.tableSection}
-        />
+        <PriceTable setSegmentPageName={setPageName} lang={lang} textContent={textContent.tableSection} />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
 

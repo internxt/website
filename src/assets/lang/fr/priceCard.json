@@ -1,6 +1,7 @@
 {
   "mostPopular": "Le plus populaire",
   "mostPopularPlan": "Le plus populaire",
+  "save": "Économisez jusqu'à",
   "valentines": "Offre spéciale pour la Saint-Valentin!",
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "planTitles": {
@@ -19,9 +20,10 @@
   },
   "billingFrequency": {
     "monthly": "Mensuel",
-    "semiannually": "Semiannually",
     "annually": "Annuel",
-    "lifetime": "Lifetime"
+    "lifetime": "Lifetime",
+    "individual": "Individuel",
+    "business": "Entreprise"
   },
   "billingFrequencyLabel": {
     "lifetime": "Paiement unique",

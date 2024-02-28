@@ -22,8 +22,8 @@ const YepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, 
   useEffect(() => {
     currencyService.filterCurrencyByCountry().then((res) => {
       setCurrency({
-        symbol: res.symbol,
-        value: res.value,
+        symbol: res.currency,
+        value: res.currencyValue,
       });
     });
   });
@@ -56,15 +56,6 @@ const YepAds = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
-
-  if (ctx.locale !== 'en') {
-    return {
-      redirect: {
-        destination: '/lifetime',
-        permanent: false,
-      },
-    };
-  }
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/en/lifetime.json`);

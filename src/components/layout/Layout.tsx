@@ -58,7 +58,8 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = !excludedPaths.includes(pathname);
+  const showBanner = false;
+
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 

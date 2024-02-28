@@ -1,6 +1,7 @@
 {
   "mostPopular": "最受欢迎",
   "mostPopularPlan": "最受欢迎的计划",
+  "save": "省高达",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "planTitles": {
@@ -21,7 +22,9 @@
     "monthly": "月度",
     "semiannually": "Semiannually",
     "annually": "每年一次",
-    "lifetime": "终身"
+    "lifetime": "终身",
+    "individual": "个人",
+    "business": "商业"
   },
   "billingFrequencyLabel": {
     "lifetime": "一次性付款",

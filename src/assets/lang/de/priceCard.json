@@ -1,6 +1,7 @@
 {
   "mostPopular": "Am beliebtesten",
   "mostPopularPlan": "Beliebtester Plan",
+  "save": "Spare bis zu",
   "valentines": "Spezielles Valentinstag-Angebot!",
   "onlyForNewClients": "Nur für neue Abonnenten oder Benutzer des kostenlosen Tarifs",
   "planTitles": {
@@ -19,9 +20,10 @@
   },
   "billingFrequency": {
     "monthly": "Monatlich",
-    "semiannually": "Halbjährlich",
     "annually": "Jährlich",
-    "lifetime": "Lifetime"
+    "individual": "Individuell",
+    "lifetime": "Lebenslang",
+    "business": "Geschäftlich"
   },
   "billingFrequencyLabel": {
     "lifetime": "Einmalige Zahlung",

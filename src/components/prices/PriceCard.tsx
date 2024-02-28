@@ -1,5 +1,6 @@
 import { checkout, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
+import { Fire } from '@phosphor-icons/react';
 
 export interface PriceCardProps {
   planType: string;
@@ -13,12 +14,8 @@ export interface PriceCardProps {
   priceId?: string;
   coupon?: CouponType;
   currency?: string;
+  currencyValue?: string;
 }
-
-const currencyValue = {
-  '€': 'eur',
-  $: 'usd',
-};
 
 export default function PriceCard({
   planType,
@@ -31,6 +28,7 @@ export default function PriceCard({
   lang,
   coupon,
   currency,
+  currencyValue,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -39,48 +37,30 @@ export default function PriceCard({
   };
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+
   const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
-  const isBusinessPlan = planType.toLowerCase() === 'business';
 
   return (
     <div
-      className={`priceCard card ${
-        popular ? 'border-2 border-primary bg-primary shadow-subtle ring-2 ring-primary' : ''
+      className={`${
+        popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
-      <div
-        className={`mostPopular ${
-          popular ? '' : 'hidden'
-        } flex flex-col items-center justify-center py-2 text-xs font-medium text-white`}
-      >
-        {contentText.mostPopularPlan}
-      </div>
-
-      <div
-        className={`info flex flex-col items-center justify-center rounded-t-2xl  bg-white p-6 pt-6 
-        `}
-      >
-        <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap bg-neutral-20 py-1 px-4 pb-0.5 text-base font-semibold ${
-            popular ? 'text-gray-100' : ' text-gray-50'
-          } rounded-full font-medium`}
-        >
-          <p>
-            {isFreePlan ? (
-              <span className="">
-                {contentText.price.free}
-                {storage}
-              </span>
-            ) : (
-              storage
-            )}
-          </p>
+      <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
+        <div className="flex flex-col items-center justify-center space-y-4">
+          {popular ? (
+            <div className="flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1">
+              <Fire size={28} className="text-white" />
+              <p className="font-semibold text-white">{contentText.mostPopular}</p>
+            </div>
+          ) : null}
+          <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
+            <p className="text-lg font-medium text-primary">{storage}</p>
+          </div>
         </div>
         <div
-          className={`planPrice flex flex-col items-center justify-center py-8 ${
-            priceBefore ? 'space-y-1' : 'space-y-4'
-          }`}
+          className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
         >
           <div
             className={`priceBreakdown flex flex-row
@@ -89,35 +69,24 @@ export default function PriceCard({
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
-              <span className="price text-4xl font-bold">
-                {isFreePlan ? `${contentText.freePlan}` : isBusinessPlan ? price : price}
-              </span>
+              <span className="price text-4xl font-bold">{isFreePlan ? `${contentText.freePlan}` : price}</span>
             </p>
-
-            {/* eslint-disable-next-line no-nested-ternary */}
           </div>
           <span className={`perUser ${isIndividualPlan ? 'hidden' : ''} text-sm font-medium text-gray-50`}>
             {contentText.perUser}
           </span>
-          <span
-            className={`priceBefore ${
+          <p
+            className={`${
               priceBefore ? 'flex' : 'hidden'
-            } text-base font-medium text-neutral-100 line-through`}
+            } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
-            {currency}
-            {priceBefore}
-          </span>
-          <div
-            className={`totalBilling ${isIndividualPlan ? 'flex' : 'hidden'} flex-row text-sm font-medium text-gray-50
-            `}
-          >
-            <p className={`${isFreePlan ? 'hidden' : ''}`}>
-              <span className="billingFrequency">
-                {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
-              </span>
-            </p>
-            <p className={`${isFreePlan ? '' : 'hidden'}`}>{contentText.price.freeForever}</p>
-          </div>
+            <span className={`text-sm`}>{currency}</span>
+            <span className="price text-2xl">{priceBefore}</span>
+          </p>
+
+          <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
+            {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
+          </p>
         </div>
         <button
           id={`planButton${storage}`}
@@ -128,22 +97,27 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currencyValue[currency as string] ?? 'eur',
+                currency: currencyValue ?? 'eur',
                 couponCode: coupon ?? undefined,
               });
             }
           }}
-          className="flex w-full flex-row"
+          className={`flex w-full flex-col items-center rounded-lg border ${
+            popular
+              ? 'border-primary bg-primary text-white hover:bg-primary-dark'
+              : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
+          } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
-          <div className="subscribePlan flex w-full origin-center transform cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-blue-60 px-6 py-2 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:bg-blue-70 focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-blue-70 sm:text-base">
-            {contentText.cta.selectPlan}
-          </div>
+          <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.productFeatures[storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold">
+            <div
+              className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold"
+              key={feature}
+            >
               <img
                 loading="lazy"
                 className="translate-y-px select-none"

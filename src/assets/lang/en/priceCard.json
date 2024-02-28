@@ -1,6 +1,7 @@
 {
   "mostPopular": "Most popular",
   "mostPopularPlan": "Most Popular Plan",
+  "save": "Save up to",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
@@ -15,15 +16,12 @@
   "lifetimeDescription": "Buy once and get privacy and security forever.",
   "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
   "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
-  "changePlan": {
-    "toIndividuals": "Switch to Plans for Individuals",
-    "toBusiness": "Switch to Plans for Business"
-  },
   "billingFrequency": {
     "monthly": "Monthly",
-    "semiannually": "Semiannually",
     "annually": "Annually",
-    "lifetime": "Lifetime"
+    "individual": "Individual",
+    "lifetime": "Lifetime",
+    "business": "Business"
   },
   "billingFrequencyLabel": {
     "lifetime": "One-time payment",
