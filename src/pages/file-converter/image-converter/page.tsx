@@ -70,54 +70,20 @@ export default function ImageConverter() {
   const handleImageConverter = async () => {
     if (!image || !newFormat) return;
 
-    const convertedImage = await convertImage(image, newFormat);
+    const worker = new Worker('path/to/worker.js');
 
-    if (convertedImage) {
-      // Download the file
+    // Escuchar mensajes del Web Worker
+    worker.onmessage = (event) => {
+      const { blob, newFormat } = event.data;
+
+      // Descargar el archivo
       const link = document.createElement('a');
-      link.href = URL.createObjectURL(convertedImage as Blob);
+      link.href = URL.createObjectURL(blob);
       link.download = `converted-image.${newFormat.toLowerCase()}`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    }
-  };
-
-  const convertImage = async (image, newFormat) => {
-    return new Promise((resolve) => {
-      const canvas = document.createElement('canvas');
-      const context = canvas.getContext('2d');
-
-      if (!context) {
-        console.error('Canvas context not supported.');
-        resolve(null);
-        return;
-      }
-
-      const newImage = new Image();
-      newImage.onload = () => {
-        canvas.width = newImage.naturalWidth;
-        canvas.height = newImage.naturalHeight;
-        context.drawImage(newImage, 0, 0);
-
-        canvas.toBlob((blob) => {
-          if (!blob) {
-            console.error('Conversion to blob failed.');
-            resolve(null);
-            return;
-          }
-
-          const convertedImage = new File([blob], `converted-image.${newFormat.toLowerCase()}`, {
-            type: `image/${newFormat.toLowerCase()}`,
-            lastModified: Date.now(),
-          });
-
-          resolve(convertedImage);
-        }, `image/${newFormat.toLowerCase()}`);
-      };
-
-      newImage.src = URL.createObjectURL(image);
-    });
+    };
   };
 
   function handleOnFileChange(e: React.ChangeEvent<HTMLInputElement>) {

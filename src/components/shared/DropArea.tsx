@@ -3,12 +3,15 @@ import EmptyFile from './icons/EmptyFile';
 
 const DropArea = ({
   onItemsDropped,
+  isDragging,
+  setIsDragging,
   children,
 }: {
   onItemsDropped: (items: FileList) => void;
   children: React.ReactNode;
+  isDragging: boolean;
+  setIsDragging: (isDragging: boolean) => void;
 }) => {
-  const [isDragging, setIsDragging] = useState(false);
   const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setIsDragging(true);
@@ -38,20 +41,13 @@ const DropArea = ({
 
   return (
     <div
-      className="flex w-full max-w-screen-lg flex-col items-center space-y-8 border-4 border-primary/8 bg-primary/2 py-12"
+      className={`flex h-full w-full items-center justify-center`}
       onDragEnter={handleDragEnter}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
-      {isDragging ? (
-        <div className="flex flex-col items-center space-y-4">
-          <EmptyFile />
-          <p className="text-lg font-semibold text-primary">Drop file here</p>
-        </div>
-      ) : (
-        children
-      )}
+      {children}
     </div>
   );
 };
