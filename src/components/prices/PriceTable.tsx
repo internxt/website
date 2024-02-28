@@ -9,6 +9,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
+import FreePlanCard from './FreePlanCard';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -161,7 +162,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
 
         {/* Subscriptions and Lifetime cards */}
         <Transition
-          show={isIndividual && !loadingCards}
+          show={isSubscription && !loadingCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
@@ -204,6 +205,34 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
           </div>
         </Transition>
 
+        {/* Extract lifetime plans into a new Transition component */}
+        <Transition
+          show={activeSwitchPlan === 'Lifetime' && !loadingCards}
+          enter="transition duration-500 ease-out"
+          enterFrom="scale-95 translate-y-20 opacity-0"
+          enterTo="scale-100 translate-y-0 opacity-100"
+        >
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
+            {products?.individuals?.[Interval.Lifetime] &&
+              Object.values(products.individuals[Interval.Lifetime]).map((product: any) => {
+                return (
+                  <PriceCard
+                    planType="individual"
+                    key={product.storage}
+                    storage={product.storage}
+                    price={product.price.split('.')[0]}
+                    billingFrequency={Interval.Lifetime}
+                    popular={product.storage === '5TB'}
+                    cta={['checkout', product.priceId]}
+                    lang={lang}
+                    currency={currency}
+                    currencyValue={currencyValue}
+                  />
+                );
+              })}
+          </div>
+        </Transition>
+
         {/* Business banner */}
         <Transition
           show={!isIndividual}
@@ -215,6 +244,11 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
             <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
+
+        <div id="freeAccountCard" className="content flex w-full px-5 pb-20 md:pb-0">
+          <FreePlanCard textContent={contentText.freePlanCard} />
+        </div>
+
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
