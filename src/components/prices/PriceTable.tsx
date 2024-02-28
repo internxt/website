@@ -162,8 +162,8 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
         {/* Subscriptions and Lifetime cards */}
         <Transition
           show={isIndividual && !loadingCards}
+          enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
-          className={'flex flex-col'}
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
