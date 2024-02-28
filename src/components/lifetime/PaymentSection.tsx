@@ -3,7 +3,15 @@ import PriceTable from './PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
 
-const PaymentSection = ({ lang, textContent }) => {
+const PaymentSection = ({
+  lang,
+  textContent,
+  normalPrice,
+}: {
+  lang: string;
+  textContent: any;
+  normalPrice?: boolean;
+}) => {
   const features = [
     {
       icon: FolderLock,
@@ -34,7 +42,7 @@ const PaymentSection = ({ lang, textContent }) => {
           </div>
         </div>
 
-        <PriceTable lang={lang} />
+        <PriceTable lang={lang} normalPrice={normalPrice} />
 
         <div className="flex flex-col items-center justify-center space-y-8 bg-transparent text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (
