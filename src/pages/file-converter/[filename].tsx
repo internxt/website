@@ -2,9 +2,10 @@
 
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
-import HeroSection from '@/components/file-converter/HeroSection';
-import ToolsSection from '@/components/shared/ToolsSection';
 import Footer from '@/components/layout/Footer';
+
+import ToolsSection from '@/components/shared/ToolsSection';
+import ConverterSection from '@/components/file-converter/ConverterSection';
 
 const FileConverter = ({ metatagsDescriptions, navbarLang, textContent, footerLang, lang, toolsContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'file-converter');
@@ -13,7 +14,7 @@ const FileConverter = ({ metatagsDescriptions, navbarLang, textContent, footerLa
     <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <ConverterSection textContent={textContent.ConverterSection} />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
