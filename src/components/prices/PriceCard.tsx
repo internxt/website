@@ -81,7 +81,7 @@ export default function PriceCard({
             } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
             <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl">{priceBefore}</span>
+            <span className="price text-2xl font-medium">{priceBefore}</span>
           </p>
 
           <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
