@@ -4,7 +4,7 @@ import { Spinner } from '@phosphor-icons/react';
 import axios from 'axios';
 import { useState } from 'react';
 
-const DocxToPdf = () => {
+const ExcelToPdf = () => {
   const [selectedDocxFile, setSelectedDocxFile] = useState<FileList | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -27,14 +27,31 @@ const DocxToPdf = () => {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        responseType: 'json',
       });
 
-      const link = document.createElement('a');
-      link.href = post.data;
-      link.download = selectedDocxFile[0].name.replace('.docx', '.pdf');
+      const postData = post.data;
+      const buffer = Buffer.from(postData.buffer);
 
+      const blob = new Blob([buffer], { type: 'application/pdf' });
+
+      // Create a link element
+      const link = document.createElement('a');
+
+      // Set the href attribute with the Blob data
+      link.href = window.URL.createObjectURL(blob);
+
+      // Set the download attribute with the desired file name
+      link.download = postData.filename;
+
+      // Append the link to the document body
       document.body.appendChild(link);
+
+      // Trigger a click event on the link to start the download
       link.click();
+
+      // Remove the link from the document body
+      document.body.removeChild(link);
     } catch (error) {
       console.error('Error converting docx to PDF:', error);
     }
@@ -43,7 +60,7 @@ const DocxToPdf = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center space-y-4">
       <div className="flex w-full max-w-sm flex-col items-center space-y-5">
-        <input type="file" accept=".docx" multiple onChange={handleFileChange} />
+        <input type="file" accept=".xlsx" multiple onChange={handleFileChange} />
       </div>
 
       <button
@@ -56,4 +73,4 @@ const DocxToPdf = () => {
   );
 };
 
-export default DocxToPdf;
+export default ExcelToPdf;

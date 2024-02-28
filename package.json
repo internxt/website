@@ -33,6 +33,7 @@
     "hamburger-react": "^2.4.1",
     "html-pdf-node": "^1.0.8",
     "jsonwebtoken": "^9.0.0",
+    "libreoffice-convert": "^1.5.1",
     "lodash": "^4.17.21",
     "mammoth": "^1.7.0",
     "memory-cache": "^0.2.0",

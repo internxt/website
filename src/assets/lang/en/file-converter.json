@@ -1,0 +1,66 @@
+{
+  "ConversionsSection": {
+    "title": "File Converter",
+    "description": {
+      "normal": "Securely convert multiple file formats instantly with our free online file converter.",
+      "bold": "100% free and easy to use!"
+    },
+    "cards": [
+      {
+        "title": "PDF to Word",
+        "description": "A free PDF to Word converter.",
+        "pathname": "pdf-to-word"
+      },
+      {
+        "title": "PNG to PDF",
+        "description": "Convert PNG to PDF documents.",
+        "pathname": "png-to-pdf"
+      },
+      {
+        "title": "PDF to JPG",
+        "description": "PDF to JPG file converter",
+        "pathname": "pdf-to-jpg"
+      },
+      {
+        "title": "JPG to Excel",
+        "description": "JPG to Excel converter.",
+        "pathname": "jpg-to-excel"
+      },
+      {
+        "title": "JPG to PNG",
+        "description": "Convert a JPG to PNG.",
+        "pathname": "jpg-to-png"
+      },
+      {
+        "title": "PNG to WEBP",
+        "description": "PNG to WEBP converter.",
+        "pathname": "png-to-webp"
+      },
+      {
+        "title": "WEBP to PNG",
+        "description": "WEBP to PNG files.",
+        "pathname": "webp-to-png"
+      },
+      {
+        "title": "PPTX to PDF",
+        "description": "PowerPoint to PDF converter.",
+        "pathname": "pptx-to-pdf"
+      },
+      {
+        "title": "PDF to PPTX",
+        "description": "Convert a PDF into PowerPoint.",
+        "pathname": "pdf-to-pptx"
+      },
+      {
+        "title": "HTML to PDF",
+        "description": "HTML to PDF converter.",
+        "pathname": "html-to-pdf"
+      },
+      {
+        "title": "PDF to HTML",
+        "description": "Convert PDF to HTML files.",
+        "pathname": "pdf-to-html"
+      }
+    ]
+  }
+}

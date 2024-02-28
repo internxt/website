@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
-import mammoth from 'mammoth';
-import { PDFDocument } from 'pdf-lib';
 
 import fs from 'fs';
 import path from 'path';
+
+const libre = require('libreoffice-convert');
+libre.convertAsync = require('util').promisify(libre.convert);
 
 async function copyFileToTmp(file: File) {
   const fileName = file.name;
@@ -27,22 +28,21 @@ async function copyFileToTmp(file: File) {
 export async function POST(req: Request, res: Response) {
   const formData = await req.formData();
   const file = formData.get('file') as unknown as File;
+  const fileName = file.name.split('.').shift();
 
   try {
-    const filePath = await copyFileToTmp(file);
+    const tmpFilePath = await copyFileToTmp(file);
 
-    const htmlObj = await mammoth.extractRawText({ path: filePath });
+    const docxBuf = fs.readFileSync(tmpFilePath);
 
-    // Genera un nuevo PDF con pdf-lib
-    const pdfDoc = await PDFDocument.create();
-    const page = pdfDoc.addPage();
-    page.drawText(htmlObj.value, { x: 50, y: 500, font: await pdfDoc.embedFont('Helvetica') });
+    let pdfBuf = await libre.convertAsync(docxBuf, '.pdf', undefined);
 
-    // Convierte el PDF a un ArrayBuffer
-    const pdfBytes = await pdfDoc.saveAsBase64({ dataUri: true });
+    fs.unlink(tmpFilePath, () => {});
 
-    // Envía el PDF al cliente
-    return NextResponse.json(pdfBytes);
+    return NextResponse.json({
+      buffer: pdfBuf,
+      filename: fileName,
+    });
   } catch (error) {
     console.log('ERROR:', error);
     return NextResponse.json({ message: 'error' });
