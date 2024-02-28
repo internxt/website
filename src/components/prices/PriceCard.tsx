@@ -15,7 +15,6 @@ export interface PriceCardProps {
   coupon?: CouponType;
   currency?: string;
   currencyValue?: string;
-  savePercentage?: number;
 }
 
 export default function PriceCard({
@@ -70,9 +69,7 @@ export default function PriceCard({
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
-              <span className="price text-4xl font-bold">
-                {isFreePlan ? `${contentText.freePlan}` : planType === 'business' ? price : price}
-              </span>
+              <span className="price text-4xl font-bold">{isFreePlan ? `${contentText.freePlan}` : price}</span>
             </p>
           </div>
           <span className={`perUser ${isIndividualPlan ? 'hidden' : ''} text-sm font-medium text-gray-50`}>
@@ -117,7 +114,10 @@ export default function PriceCard({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.productFeatures[storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold">
+            <div
+              className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold"
+              key={feature}
+            >
               <img
                 loading="lazy"
                 className="translate-y-px select-none"
