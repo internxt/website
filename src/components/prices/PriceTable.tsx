@@ -46,6 +46,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const isIndividual = activeSwitchPlan !== 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
   const isSubscription = billingFrequency === Interval.Month || billingFrequency === Interval.Year;
+  const isLifetime = activeSwitchPlan === 'Lifetime';
 
   return (
     <section className="overflow-hidden bg-white">
@@ -145,111 +146,94 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
           </div>
         </div>
 
-        {/* Skeleton cards while fetching products data */}
-        <Transition
-          show={isIndividual && loadingCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
-          </div>
-        </Transition>
+        <div className="flex flex-col">
+          {/* Skeleton cards while fetching products data */}
+          <Transition
+            show={isIndividual && loadingCards}
+            enter="transition duration-500 ease-out"
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+            </div>
+          </Transition>
 
-        {/* Subscriptions and Lifetime cards */}
-        <Transition
-          show={isSubscription && !loadingCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
-            {products?.individuals?.[billingFrequency] &&
-              Object.values(products.individuals[billingFrequency]).map((product: any) => {
-                return (
-                  <>
-                    {billingFrequency === Interval.Lifetime ? (
-                      <PriceCard
-                        planType="individual"
-                        key={product.storage}
-                        storage={product.storage}
-                        price={product.price.split('.')[0]}
-                        billingFrequency={billingFrequency}
-                        popular={product.storage === '5TB'}
-                        cta={['checkout', product.priceId]}
-                        lang={lang}
-                        currency={currency}
-                        currencyValue={currencyValue}
-                      />
-                    ) : (
-                      <PriceCard
-                        planType="individual"
-                        key={product.storage}
-                        storage={product.storage}
-                        price={product.price}
-                        billingFrequency={billingFrequency}
-                        popular={product.storage === '5TB'}
-                        cta={['checkout', product.priceId]}
-                        lang={lang}
-                        currency={currency}
-                        currencyValue={currencyValue}
-                      />
-                    )}
-                  </>
-                );
-              })}
-          </div>
-        </Transition>
-
-        {/* Extract lifetime plans into a new Transition component */}
-        <Transition
-          show={activeSwitchPlan === 'Lifetime' && !loadingCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
-            {products?.individuals?.[Interval.Lifetime] &&
-              Object.values(products.individuals[Interval.Lifetime]).map((product: any) => {
-                return (
+          {/* Subscriptions cards */}
+          <Transition
+            show={isSubscription && !loadingCards}
+            enter="transition duration-500 ease-out"
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
+              {products?.individuals?.[billingFrequency] &&
+                Object.values(products.individuals[billingFrequency]).map((product: any) => (
                   <PriceCard
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price.split('.')[0]}
-                    billingFrequency={Interval.Lifetime}
+                    price={product.price}
+                    billingFrequency={billingFrequency}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
                   />
-                );
-              })}
-          </div>
-        </Transition>
+                ))}
+            </div>
+          </Transition>
 
-        {/* Business banner */}
-        <Transition
-          show={!isIndividual}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-            <BusinessBanner textContent={banner.BusinessBanner} />
-          </div>
-        </Transition>
+          {/* Lifetime cards */}
+          <Transition
+            show={isLifetime && !loadingCards}
+            enter="transition duration-500 ease-out"
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+              {products?.individuals?.[Interval.Lifetime] &&
+                Object.values(products.individuals[Interval.Lifetime]).map((product: any) => {
+                  return (
+                    <PriceCard
+                      planType="individual"
+                      key={product.storage}
+                      storage={product.storage}
+                      price={product.price.split('.')[0]}
+                      billingFrequency={Interval.Lifetime}
+                      popular={product.storage === '5TB'}
+                      cta={['checkout', product.priceId]}
+                      lang={lang}
+                      currency={currency}
+                      currencyValue={currencyValue}
+                    />
+                  );
+                })}
+            </div>
+          </Transition>
 
-        <div id="freeAccountCard" className="content flex w-full px-5 pb-20 md:pb-0">
-          <FreePlanCard textContent={contentText.freePlanCard} />
+          {/* Business banner */}
+          <Transition
+            show={!isIndividual}
+            enter="transition duration-500 ease-out"
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
+              <BusinessBanner textContent={banner.BusinessBanner} />
+            </div>
+          </Transition>
+
+          <div id="freeAccountCard" className="content flex w-full p-4 px-5 pb-10 md:pb-0">
+            <FreePlanCard textContent={contentText.freePlanCard} />
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
+        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
