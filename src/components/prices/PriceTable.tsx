@@ -20,7 +20,7 @@ interface PriceTableProps {
 
 type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
-export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: PriceTableProps) {
+export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const banner = require('@/assets/lang/en/banners.json');
@@ -180,6 +180,11 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   billingFrequency={billingFrequency}
                   popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}
+                  priceBefore={
+                    billingFrequency === Interval.Year
+                      ? products?.individuals?.[Interval.Month][product.storage].price * 12
+                      : undefined
+                  }
                   lang={lang}
                   currency={currency}
                   currencyValue={currencyValue}
