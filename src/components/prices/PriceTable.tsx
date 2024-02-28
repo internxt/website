@@ -14,13 +14,7 @@ interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
   textContent: any;
-  setIsLifetime?: (isLifetime: boolean) => void;
 }
-
-const CurrencyValue = {
-  '€': 'EUR',
-  $: 'USD',
-};
 
 type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
@@ -28,7 +22,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, loadingCards } = usePricing();
+  const { products, currency, currencyValue, loadingCards } = usePricing();
 
   const features = [
     {
@@ -185,6 +179,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         currency={currency}
+                        currencyValue={currencyValue}
                       />
                     ) : (
                       <PriceCard
@@ -197,6 +192,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent }: Pr
                         cta={['checkout', product.priceId]}
                         lang={lang}
                         currency={currency}
+                        currencyValue={currencyValue}
                       />
                     )}
                   </>

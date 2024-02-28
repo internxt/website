@@ -24,9 +24,9 @@ export enum Products {
 
 async function getPrices(isEur?: boolean) {
   try {
-    const currency = await currencyService.getCurrencyPrice();
+    const currency = await currencyService.filterCurrencyByCountry();
     const res = await axios.get(
-      `${window.origin}/api/stripe/stripe_products?currency=${isEur ? 'eur' : currency ?? 'eur'}`,
+      `${window.origin}/api/stripe/stripe_products?currency=${isEur ? 'eur' : currency.currencyValue ?? 'eur'}`,
     );
     const { data } = res;
 

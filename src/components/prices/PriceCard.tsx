@@ -14,13 +14,9 @@ export interface PriceCardProps {
   priceId?: string;
   coupon?: CouponType;
   currency?: string;
+  currencyValue?: string;
   savePercentage?: number;
 }
-
-const currencyValue = {
-  '€': 'eur',
-  $: 'usd',
-};
 
 export default function PriceCard({
   planType,
@@ -33,7 +29,7 @@ export default function PriceCard({
   lang,
   coupon,
   currency,
-  savePercentage,
+  currencyValue,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -104,7 +100,7 @@ export default function PriceCard({
               checkout({
                 planId: cta[1],
                 mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currencyValue[currency as string] ?? 'eur',
+                currency: currencyValue ?? 'eur',
                 couponCode: coupon ?? undefined,
               });
             }
