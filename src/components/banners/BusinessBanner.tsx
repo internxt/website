@@ -61,9 +61,9 @@ const BusinessBanner = ({ textContent }) => {
           </div>
         </div>
         <div className="-ml-40 hidden w-full items-center lg:flex">
-          <div className="relative left-56 top-6 flex w-full flex-col bg-contain">
+          <div className="relative left-56 top-2 flex w-full flex-col bg-contain">
             <Image
-              src="/images/special-offer/black-friday/Devices.png"
+              src="/images/home/Internxt-secure-cloud-storage.webp"
               width={534}
               height={340}
               draggable="false"
