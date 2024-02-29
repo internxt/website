@@ -65,9 +65,8 @@ const BusinessBanner = ({ textContent }) => {
             <Image
               src="/images/home/Internxt-secure-cloud-storage.webp"
               width={534}
-              height={340}
-              draggable="false"
-              unoptimized
+              height={300}
+              draggable={false}
               quality={100}
               loading="eager"
               layout="intrinsic"

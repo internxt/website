@@ -48,7 +48,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
 
   const isIndividual = activeSwitchPlan !== 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
-  const isSubscription = billingFrequency === Interval.Month || billingFrequency === Interval.Year;
+  const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
 
   return (
