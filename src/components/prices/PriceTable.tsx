@@ -48,7 +48,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
 
   const isIndividual = activeSwitchPlan !== 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
-  const isSubscription = billingFrequency === Interval.Month || billingFrequency === Interval.Year;
+  const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
 
   return (
@@ -66,7 +66,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
 
         <div className="flex flex-col items-center space-y-9">
           {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-          <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5 text-sm">
+          <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
             <button
               type="button"
               onClick={() => {
@@ -74,7 +74,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                 setBillingFrequency(Interval.Year);
                 setSegmentPageName(`Pricing Individuals ${billingFrequency}`);
               }}
-              className={`rounded-lg py-0.5 px-6 font-medium ${
+              className={`rounded-lg py-0.5 px-6 font-semibold ${
                 activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -87,7 +87,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                 setBillingFrequency(Interval.Lifetime);
                 setSegmentPageName(`Pricing Individuals Lifetime`);
               }}
-              className={`rounded-lg py-0.5 px-6 font-medium ${
+              className={`rounded-lg py-0.5 px-6 font-semibold ${
                 activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -99,7 +99,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                 setActiveSwitchPlan('Business');
                 setSegmentPageName(`Pricing Business`);
               }}
-              className={`rounded-lg py-0.5 px-6 font-medium ${
+              className={`rounded-lg py-0.5 px-6 font-semibold ${
                 activeSwitchPlan === 'Business' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -107,9 +107,9 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
             </button>
           </div>
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
-          <div className={`flex-row items-start  gap-5 lg:items-center ${isSubscription ? 'flex' : 'hidden'}`}>
+          <div className={`flex-row items-start gap-5 lg:items-center ${isSubscription ? 'flex' : 'hidden'}`}>
             <p
-              className={`text-base font-medium ${
+              className={`text-base font-semibold ${
                 billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
               }`}
             >
@@ -135,14 +135,14 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
 
             <div className="relative flex flex-col lg:flex-row lg:items-center">
               <p
-                className={`text-base font-medium ${
+                className={`text-base font-semibold ${
                   billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
                 }`}
               >
                 {contentText.billingFrequency.annually}
               </p>
               {discount ? (
-                <p className="absolute top-full whitespace-nowrap font-medium text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
+                <p className="absolute top-full whitespace-nowrap font-semibold text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
                   {contentText.save} {discount}%
                 </p>
               ) : null}
