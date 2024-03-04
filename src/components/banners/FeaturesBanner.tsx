@@ -1,4 +1,4 @@
-import { CheckCircle, Flower, Heart, X } from '@phosphor-icons/react';
+import { CheckCircle, Flower, X } from '@phosphor-icons/react';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
