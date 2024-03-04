@@ -8,9 +8,9 @@ const HomePageBanner = () => {
   const textContent = require(`../../assets/lang/${lang}/pricing.json`);
 
   return (
-    <div className="flex flex-col overflow-hidden rounded-[32px] bg-white pt-10 ring-4 ring-primary/7 md:hidden">
+    <div className="flex w-full flex-col overflow-hidden rounded-[32px] bg-white pt-10 ring-4 ring-primary/7 md:hidden">
       <div className="flex w-full flex-col items-center justify-center space-y-6 text-center text-white lg:items-start lg:text-left">
-        <div className="flex w-max rounded-2xl bg-white py-2 px-4 ring-4 ring-primary/7">
+        <div className="flex w-max rounded-2xl bg-white py-2 px-5 ring-4 ring-primary/7">
           <p className="text-5xl font-bold text-primary">{textContent.tableSection.ctaBanner.label}</p>
         </div>
         <div className="flex w-full max-w-[253px] flex-col space-y-4">
@@ -36,7 +36,7 @@ const HomePageBanner = () => {
           src="/images/banners/internxt_spring_sale_mobile.webp"
           loading="lazy"
           width={297}
-          height={189}
+          height={219}
           alt="Spring sale image"
         />
       </div>
