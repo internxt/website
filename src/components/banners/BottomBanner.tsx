@@ -71,7 +71,7 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row ">
           <div className="flex flex-col">
             <Image
-              src="/images/banners/data_privacy_internxt.webp"
+              src="/images/banners/internxt_spring_sale_banner.webp"
               width={198}
               height={100}
               className="flex w-full object-fill"
