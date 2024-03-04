@@ -53,6 +53,13 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
 
+  const priceForSubscriptions = (product) => {
+    const priceWithDiscount = Number((product.price * 0.25).toString());
+    const firstPartOfPrice = priceWithDiscount.toString().split('.')[0];
+    const secondPartOfPrice = priceWithDiscount.toString().split('.')[1].trim().slice(0, 2);
+    return coupon ? firstPartOfPrice + '.' + secondPartOfPrice : product.price.split('.')[0];
+  };
+
   return (
     <section className="overflow-hidden bg-white">
       <div className="flex flex-col items-center space-y-10 py-20">
@@ -181,14 +188,17 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={product.price}
+                  price={
+                    // Get the price with the 75% discount with 22 decimals if there is a coupon
+                    priceForSubscriptions(product)
+                  }
                   billingFrequency={billingFrequency}
                   popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={
                     billingFrequency === Interval.Year
                       ? products?.individuals?.[Interval.Month][product.storage].price * 12
-                      : undefined
+                      : product.price
                   }
                   lang={lang}
                   currency={currency}
@@ -218,7 +228,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      coupon ? Number((product.price * 0.5).toString().split('.')[0]) : product.price.split('.')[0]
+                      coupon ? Number((product.price * 0.25).toString().split('.')[0]) : product.price.split('.')[0]
                     }
                     priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}

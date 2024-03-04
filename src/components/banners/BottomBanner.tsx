@@ -80,7 +80,7 @@ const BottomBanner = () => {
             />
           </div>
           <div className="flex flex-row items-center justify-center space-x-5">
-            <p className="text-6xl font-bold">{title().title1}</p>
+            <p className="text-6xl font-bold text-primary">{title().title1}</p>
             <p className="max-w-[300px] text-2xl font-bold">{title().title2}</p>
             <button
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"

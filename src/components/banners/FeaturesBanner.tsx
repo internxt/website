@@ -41,11 +41,13 @@ const FeaturesBanner = () => {
           <X size={32} />
         </button>
         <div className="flex w-full max-w-[800px] flex-col py-14 lg:flex-row">
-          <div className="flex w-full flex-col  items-center justify-center space-y-4 text-center lg:items-start lg:justify-between lg:text-start">
+          <div className="flex w-full flex-col  items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
             <div className="flex rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7">
               <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="w-full text-5xl font-bold leading-tight text-gray-100">{textContent.featuresBanner.title}</p>
+            <p className="w-full max-w-[380px] text-4xl font-bold leading-tight text-gray-100">
+              {textContent.featuresBanner.title}
+            </p>
 
             <div className="flex flex-col items-center space-y-3 lg:items-start">
               <button
@@ -67,8 +69,8 @@ const FeaturesBanner = () => {
               <div className="flex flex-col space-y-8">
                 {textContent.featuresBanner.features.map((card) => (
                   <div className="flex flex-row" key={card}>
-                    <Flower size={32} weight="fill" className="mr-4 text-primary" />
-                    <p className="whitespace-nowrap text-xl font-semibold text-gray-80">{card}</p>
+                    <Flower size={30} weight="fill" className="mr-4 text-primary" />
+                    <p className="whitespace-nowrap text-lg font-semibold text-gray-80">{card}</p>
                   </div>
                 ))}
               </div>
