@@ -188,10 +188,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={
-                    // Get the price with the 75% discount with 22 decimals if there is a coupon
-                    priceForSubscriptions(product)
-                  }
+                  price={Number(priceForSubscriptions(product))}
                   billingFrequency={billingFrequency}
                   popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}
