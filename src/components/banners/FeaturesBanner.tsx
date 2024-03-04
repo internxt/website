@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const FeaturesBanner = () => {
-  const [showBanner, setShowBanner] = useState(true);
+  const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
@@ -17,9 +17,9 @@ const FeaturesBanner = () => {
     const getSquareBannerSS = sessionStorage.getItem('hideBanner');
     if (getSquareBannerSS) setShowBanner(false);
     else {
-      // setTimeout(() => {
-      //   setShowBanner(true);
-      // }, 10000);
+      setTimeout(() => {
+        setShowBanner(true);
+      }, 10000);
     }
   }, []);
 
@@ -35,17 +35,17 @@ const FeaturesBanner = () => {
     >
       {/* Banner */}
       <div
-        className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl border-4 border-primary/7 bg-white`}
+        className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl border-4 border-primary/7 bg-white px-10`}
       >
         <button className="absolute  right-0 m-7 flex text-black" onClick={handleClose}>
           <X size={32} />
         </button>
-        <div className="flex w-auto flex-col p-14 lg:flex-row">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center lg:items-start lg:justify-between lg:pr-20 lg:text-start">
-            <div className="flex w-max rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7">
+        <div className="flex w-full max-w-[800px] flex-col py-14 lg:flex-row">
+          <div className="flex w-full flex-col  items-center justify-center space-y-4 text-center lg:items-start lg:justify-between lg:text-start">
+            <div className="flex rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7">
               <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="text-5xl font-bold leading-tight text-gray-100">{textContent.featuresBanner.title}</p>
+            <p className="w-full text-5xl font-bold leading-tight text-gray-100">{textContent.featuresBanner.title}</p>
 
             <div className="flex flex-col items-center space-y-3 lg:items-start">
               <button

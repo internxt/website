@@ -28,7 +28,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const banner = require('@/assets/lang/en/banners.json');
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const { products, currency, currencyValue, loadingCards, coupon } = usePricing({
-    couponCode: CouponType.LifetimeExclusive,
+    couponCode: CouponType.SpringCoupon,
   });
 
   const features = [
@@ -192,6 +192,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   }
                   lang={lang}
                   currency={currency}
+                  coupon={coupon ?? undefined}
                   currencyValue={currencyValue}
                 />
               ))}
