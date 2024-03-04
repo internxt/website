@@ -224,9 +224,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={
-                      coupon ? Number((product.price * 0.25).toString().split('.')[0]) : product.price.split('.')[0]
-                    }
+                    price={coupon ? Number(priceForSubscriptions(product)) : product.price.split('.')[0]}
                     priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
