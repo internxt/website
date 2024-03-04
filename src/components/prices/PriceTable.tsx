@@ -57,7 +57,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     const priceWithDiscount = Number((product.price * 0.25).toString());
     const firstPartOfPrice = priceWithDiscount.toString().split('.')[0];
     const secondPartOfPrice = priceWithDiscount.toString().split('.')[1].trim().slice(0, 2);
-    return coupon ? firstPartOfPrice + '.' + secondPartOfPrice : product.price.split('.')[0];
+    return firstPartOfPrice + '.' + secondPartOfPrice;
   };
 
   return (
