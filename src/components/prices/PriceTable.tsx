@@ -188,7 +188,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={Number(priceForSubscriptions(product))}
+                  price={coupon ? Number(priceForSubscriptions(product)) : product.price}
                   billingFrequency={billingFrequency}
                   popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}

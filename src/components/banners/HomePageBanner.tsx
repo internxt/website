@@ -31,12 +31,12 @@ const HomePageBanner = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col">
+      <div className="flex h-full w-full flex-col">
         <Image
           src="/images/banners/internxt_spring_sale_mobile.webp"
           loading="lazy"
-          width={323}
-          height={185}
+          width={297}
+          height={189}
           alt="Spring sale image"
         />
       </div>
