@@ -36,7 +36,7 @@ const HomePageBanner = () => {
           src="/images/banners/internxt_spring_sale_mobile.webp"
           loading="lazy"
           width={297}
-          height={219}
+          height={225}
           alt="Spring sale image"
         />
       </div>

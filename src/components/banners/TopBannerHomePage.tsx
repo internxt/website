@@ -48,8 +48,8 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
             <p className="font-normal">
-              <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
               {textContent.TopBarBanner.title.normalText}
+              <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
             </p>
           </div>
         </div>
