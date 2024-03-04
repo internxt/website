@@ -38,7 +38,7 @@ export default function HeroSection({ textContent, lang }) {
 
             <button
               onClick={() => router.push('/pricing')}
-              className="mb-4 flex w-max cursor-pointer select-none flex-row items-center rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7"
+              className="mb-4 hidden w-max cursor-pointer select-none flex-row items-center rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7 lg:flex"
             >
               <p className="text-5xl font-bold text-primary hover:underline">{textContent.label}</p>
               <CaretRight size={36} className="text-primary" />
