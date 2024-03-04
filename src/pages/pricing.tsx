@@ -34,7 +34,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
-        <PriceTable setSegmentPageName={setPageName} lang={lang} textContent={textContent.tableSection} discount={23} />
+        <PriceTable setSegmentPageName={setPageName} lang={lang} textContent={textContent.tableSection} />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
 
