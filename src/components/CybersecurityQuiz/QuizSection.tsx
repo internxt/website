@@ -2,16 +2,21 @@ import { useEffect, useRef, useState } from 'react';
 import Checkbox from './Checkbox';
 import Footer from '@/components/layout/Footer';
 import CheckQuestions from './CheckQuestions';
-
-type Views = 'initialState' | 'questions' | 'quizCompleted' | 'results';
+import { CyberSecurityQuizViews } from '@/lib/types';
 
 interface ViewProps {
-  view: Views;
+  view: CyberSecurityQuizViews | undefined;
 }
 
-const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
+interface AnswerQuestionsSectionProps {
+  textContent: any;
+  view: CyberSecurityQuizViews | undefined;
+  setIsQuizSection: (isQuizSection: boolean) => void;
+  onViewChange: (newView: CyberSecurityQuizViews) => void;
+}
+
+const AnswerQuestionsSection = ({ textContent, setIsQuizSection, onViewChange, view }: AnswerQuestionsSectionProps) => {
   const height = useRef(0);
-  const [view, setView] = useState<Views>('initialState');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
   const [savedAnswers, setSavedAnswers] = useState<string[]>([]);
@@ -24,7 +29,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
 
   function handleNextQuestion() {
     if (currentQuestion + 1 === 8) {
-      setView('quizCompleted');
+      onViewChange('quizCompleted');
     } else {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
     }
@@ -41,7 +46,9 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
     }
   }
 
-  const View = (viewSelected: ViewProps) => {
+  const View = (viewSelected: ViewProps | undefined) => {
+    if (viewSelected?.view === undefined) return <></>;
+
     const view = {
       initialState: (
         <section
@@ -60,7 +67,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 <p className="text-lg">{textContent.QuizSection.description}</p>
                 <button
                   onClick={() => {
-                    setView('questions');
+                    onViewChange('questions');
                   }}
                   className="w-full rounded-lg bg-primary px-5 py-3 xl:w-max"
                 >
@@ -96,7 +103,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
               </p>
               <p className="text-4xl">{textContent.QuizSection.questions[currentQuestion].title}</p>
               <div className="flex flex-col space-y-8 xl:space-y-5">
-                <div
+                <button
                   onClick={() => handleCheckbox('A')}
                   className="flex cursor-pointer flex-row items-center space-x-2 text-white"
                 >
@@ -107,8 +114,8 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                     id="A"
                   />
                   <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].A}</p>
-                </div>
-                <div
+                </button>
+                <button
                   onClick={() => handleCheckbox('B')}
                   className="flex cursor-pointer flex-row items-center space-x-2 text-white"
                 >
@@ -119,8 +126,8 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                     id="B"
                   />
                   <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].B}</p>
-                </div>
-                <div
+                </button>
+                <button
                   onClick={() => handleCheckbox('C')}
                   className="flex cursor-pointer flex-row items-center space-x-2 text-white"
                 >
@@ -131,9 +138,9 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                     id="C"
                   />
                   <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].C}</p>
-                </div>
+                </button>
                 {textContent.QuizSection.questions[currentQuestion].D && (
-                  <div
+                  <button
                     onClick={() => handleCheckbox('D')}
                     className="flex cursor-pointer flex-row items-center space-x-2 text-white"
                   >
@@ -144,7 +151,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                       id="C"
                     />
                     <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].D}</p>
-                  </div>
+                  </button>
                 )}
               </div>
 
@@ -219,7 +226,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
 
                 <button
                   onClick={() => {
-                    setView('results');
+                    onViewChange('results');
                     setIsQuizSection(false);
                   }}
                   className="w-full items-center justify-center rounded-lg bg-primary px-5 py-3 xl:w-max"
@@ -252,11 +259,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
     return view[viewSelected.view];
   };
 
-  return (
-    <>
-      <View view={view} />
-    </>
-  );
+  return <View view={view} />;
 };
 
 export default AnswerQuestionsSection;
