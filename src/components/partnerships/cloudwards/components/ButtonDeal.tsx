@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { checkout } from '../../../../lib/auth';
 import { Interval, stripeService } from '../../../services/stripe.service';
 import { currencyService } from '../../../services/currency.service';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 const ButtonDeal = ({ textContent, large }) => {
   const [priceId, setPriceId] = React.useState('');

@@ -1,4 +1,4 @@
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 export interface PriceCardProps {
   contentText: any;

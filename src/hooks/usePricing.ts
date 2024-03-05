@@ -2,7 +2,7 @@ import { currencyService } from '@/components/services/currency.service';
 import { ProductsProps, stripeService } from '@/components/services/stripe.service';
 import { useEffect, useReducer } from 'react';
 import { notificationService } from '@/components/Snackbar';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 type UsePricingOptions = {
   couponCode?: CouponType;

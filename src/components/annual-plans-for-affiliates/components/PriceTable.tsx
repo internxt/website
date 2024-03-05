@@ -6,7 +6,7 @@ import { Detective, FolderLock, ShieldCheck } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 const PriceTable = ({
   textContent,

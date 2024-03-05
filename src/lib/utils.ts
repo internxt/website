@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { CheckIfUserHasSubscriptionResponse, UserData } from './types/types';
+import { CheckIfUserHasSubscriptionResponse, UserData } from './types';
 
 const API_URL = process.env.NEXT_DRIVE_API_URL;
 const NEW_API_URL = process.env.NEXT_DRIVE_NEW_API_URL;

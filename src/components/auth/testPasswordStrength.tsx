@@ -11,13 +11,13 @@ export default function testPasswordStrength(
     return { valid: false, reason: 'NOT_LONG_ENOUGH' };
   }
 
-  const containsUppercaseChars = /^.*[A-Z].*$/.test(password);
+  const containsUppercaseChars = /[A-Z]/.test(password);
 
-  const containsLowercaseChars = /^.*[a-z].*$/.test(password);
+  const containsLowercaseChars = /[a-z]/.test(password);
 
-  const containsDigits = /^.*\d.*$/.test(password);
+  const containsDigits = /\d/.test(password);
 
-  const containsNonAlphanumeric = /^.*[^\w_].*$/.test(password);
+  const containsNonAlphanumeric = /\W/.test(password);
 
   const notLooksLikeHisAccountName = !passwordLooksLikeAccountName(password, userAccountName);
 

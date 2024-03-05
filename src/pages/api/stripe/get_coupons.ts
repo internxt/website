@@ -1,4 +1,4 @@
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {

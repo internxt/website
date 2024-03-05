@@ -97,3 +97,5 @@ export enum CouponType {
   StartPageCoupon = 'STARTPAGE_COUPON_CODE',
   SpringCoupon = 'SPRING_COUPON_CODE',
 }
+
+export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

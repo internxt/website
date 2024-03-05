@@ -1,5 +1,5 @@
 import { checkout, goToSignUpURL } from '@/lib/auth';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 import { Fire } from '@phosphor-icons/react';
 
 export interface PriceCardProps {

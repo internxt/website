@@ -2,7 +2,7 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 import PriceCard from '../prices/PriceCard';
 
 const PriceTable = ({ lang, normalPrice }: { lang: string; normalPrice?: boolean }) => {

@@ -3,7 +3,7 @@ import { checkout } from '@/lib/auth';
 import { analyticsService } from '@/components/services/analytics.service';
 import { stripeService } from '@/components/services/stripe.service';
 import { PriceCardProps } from './PriceCard';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 export default function SpecialPriceCard({
   planType,
