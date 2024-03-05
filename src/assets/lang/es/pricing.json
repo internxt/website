@@ -14,13 +14,14 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra un 69%",
-      "title": "Siente el amor, ¡protege tus archivos!",
+      "label": "Ahorra un 75%",
+      "title": "¡Han llegado los ahorros de primavera!",
       "subtitle": "Suscríbete y ahorra con Internxt.",
-      "cta": "Dame un 69% DE DESCUENTO",
+      "cta": "Elegir plan",
       "guarantee": "Garantía de devolución de dinero de 30 días",
       "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes"
     },
+
     "features": {
       "endToEnd": "Encriptado de extremo a extremo",
       "openSource": "Código abierto y auditado",

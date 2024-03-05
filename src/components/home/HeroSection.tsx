@@ -5,10 +5,14 @@ import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
+import { CaretRight } from '@phosphor-icons/react';
+import { useRouter } from 'next/router';
+import HomePageBanner from '../banners/HomePageBanner';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
 export default function HeroSection({ textContent, lang }) {
+  const router = useRouter();
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
@@ -17,10 +21,12 @@ export default function HeroSection({ textContent, lang }) {
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
-          {/* <HomePageBanner /> */}
-          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
-            <div className="flex object-contain lg:hidden">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
+          <div className="flex w-full flex-col px-2 lg:hidden">
+            <HomePageBanner />
+          </div>
+          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
+            {/* <div className="flex object-contain lg:hidden">
               <Image
                 loading="eager"
                 className="object-contain"
@@ -30,7 +36,15 @@ export default function HeroSection({ textContent, lang }) {
                 height={450}
                 alt="Laptop and phone with Internxt app"
               />
-            </div>
+            </div> */}
+
+            <button
+              onClick={() => router.push('/pricing')}
+              className="mb-4 hidden w-max cursor-pointer select-none flex-row items-center rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7 lg:flex"
+            >
+              <p className="text-5xl font-bold text-primary hover:underline">{textContent.label}</p>
+              <CaretRight size={36} className="text-primary" />
+            </button>
 
             <Header>
               {textContent.title.line1}{' '}
@@ -56,7 +70,12 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           {/* Desktop animation/image */}
-          <Animation />
+          {/* <Animation /> */}
+          <div className="relative hidden max-w-sm flex-1 items-center justify-start lg:flex">
+            <div className="absolute -left-44 flex h-full w-[5000px]">
+              <img className="relative h-full object-contain object-left" src="/images/home/inxt_spring_sale.webp" />
+            </div>
+          </div>
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
@@ -222,7 +241,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className={'mx-auto hidden w-full overflow-hidden xl:flex'}>
-            <div className="featured flex w-full flex-row justify-center overflow-x-auto px-4 pb-8 pt-10">
+            <div className="featured flex w-full flex-row justify-center overflow-x-auto px-4 pb-5 pt-5">
               <div className="flex flex-row items-center space-x-12">
                 {lang === 'es' ? (
                   <a

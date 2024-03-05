@@ -95,4 +95,5 @@ export enum CouponType {
   Wheel50 = 'WHEEL50_COUPON',
   LockerCoupon = 'LOCKER_COUPON_CODE',
   StartPageCoupon = 'STARTPAGE_COUPON_CODE',
+  SpringCoupon = 'SPRING_COUPON_CODE',
 }

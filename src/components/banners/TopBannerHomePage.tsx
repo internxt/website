@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { CaretRight } from '@phosphor-icons/react';
+import { CaretRight, Sun } from '@phosphor-icons/react';
 
 const TopBannerHomePage = ({ isBannerFixed }) => {
   const router = useRouter();
@@ -15,16 +15,17 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
         } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:flex`}
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
+          <Sun size={30} />
           <div className="flex cursor-default">
             <p className="font-normal">
-              <span className="font-bold">{textContent.TopBarBanner.title.boldText}</span>
               {textContent.TopBarBanner.title.normalText}
+              <span className="font-bold">{textContent.TopBarBanner.title.boldText}</span>
             </p>
           </div>
           <button
             className="flex cursor-pointer flex-row items-center space-x-2"
             onClick={() => {
-              router.push('/lifetime');
+              router.push('/pricing');
             }}
           >
             <p className="font-semibold underline hover:no-underline">{textContent.TopBarBanner.title.cta}</p>
@@ -42,13 +43,13 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
           <div
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              router.push('/lifetime');
+              router.push('/pricing');
             }}
           >
             {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
             <p className="font-normal">
-              <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
               {textContent.TopBarBanner.title.normalText}
+              <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
             </p>
           </div>
         </div>
