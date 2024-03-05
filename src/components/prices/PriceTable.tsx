@@ -10,7 +10,7 @@ import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 
 interface PriceTableProps {
