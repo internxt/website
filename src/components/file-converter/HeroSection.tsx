@@ -1,15 +1,13 @@
 import { useRouter } from 'next/navigation';
 import Header from '../shared/Header';
-import { useEffect } from 'react';
+import Image from 'next/image';
 
 const HeroSection = ({ textContent }) => {
   const router = useRouter();
 
-  useEffect(() => {}, []);
-
   return (
     <section className="overflow-hidden bg-gray-1 pt-32 pb-20">
-      <div className="flex flex-col items-center space-y-12 py-20 px-5">
+      <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex max-w-[700px] flex-col space-y-5 text-center">
           <Header>{textContent.title}</Header>
           <div className="flex flex-col text-center text-xl text-gray-80">
@@ -21,15 +19,19 @@ const HeroSection = ({ textContent }) => {
           {textContent.cards.map((card) => (
             <button
               key={card.id}
-              className="flex w-full max-w-[285px] cursor-pointer flex-col justify-center rounded-2xl bg-white px-5 py-5 shadow-subtle-hard hover:shadow-box-floating lg:p-9"
+              className="flex w-full max-w-[285px] cursor-pointer flex-col space-y-6 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:shadow-box-floating lg:p-9"
               onClick={() => {
                 router.push(`/file-converter/${card.pathname}`);
               }}
             >
-              <div className="flex flex-col justify-center space-y-3">
-                <p className="text-xl font-semibold">{card.title}</p>
-                <p className="text-gray-80">{card.description}</p>
-              </div>
+              <Image
+                src={`/icons/file-converter/${card.pathname}.svg`}
+                width={64}
+                height={62}
+                alt={`${card.title} icon`}
+              />
+              <p className="text-2xl font-semibold text-gray-100">{card.title}</p>
+              <p className="text-xl text-gray-80">{card.description}</p>
             </button>
           ))}
         </div>

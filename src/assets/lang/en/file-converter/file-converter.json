@@ -22,11 +22,6 @@
         "pathname": "pdf-to-jpg"
       },
       {
-        "title": "JPG to Excel",
-        "description": "JPG to Excel converter.",
-        "pathname": "jpg-to-excel"
-      },
-      {
         "title": "JPG to PNG",
         "description": "Convert a JPG to PNG.",
         "pathname": "jpg-to-png"

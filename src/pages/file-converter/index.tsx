@@ -10,7 +10,7 @@ const FileConverter = ({ metatagsDescriptions, navbarLang, textContent, footerLa
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'file-converter');
 
   return (
-    <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+    <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={textContent.HeroSection} />
