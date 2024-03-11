@@ -2,7 +2,7 @@ const fileConverter = ['pptx-to-pdf', 'pdf-to-pptx', 'word-to-pdf', 'pdf-to-word
 const imageConverter = ['png-to-jpg', 'jpg-to-png', 'webp-to-jpg', 'jpg-to-webp', 'webp-to-png', 'png-to-webp'];
 
 const fileTypes = {
-  docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  word: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   pdf: 'application/pdf',
   pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
   html: 'text/html',

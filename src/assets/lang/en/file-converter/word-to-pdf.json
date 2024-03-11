@@ -1,0 +1,58 @@
+{
+  "ConverterSection": {
+    "title": "Internxt Word To PDF Converter",
+    "description": "Convert Word to PDf documents for easier file collaboration and editing.",
+    "secureUpload": "Secure uploads protected by HTTPS.",
+    "dragNDropArea": {
+      "maxFileSize": "Max file size of 1GB",
+      "dragYourFile": "Dag and drop your Word file here",
+      "cta": "Choose PDF file",
+      "draggingFile": "Drop file here"
+    },
+    "fileSelected": {
+      "title": "File selected for converting",
+      "cancel": "Cancel",
+      "convert": "Convert to PDF file"
+    },
+    "converting": "Converting your file",
+    "fileConverted": {
+      "label": "Your Word file has been converted to Word successfully.",
+      "title": "Your download will automatically start shortly",
+      "description": "If not, click the button below.",
+      "convertAnother": "Convert another file",
+      "downloadFile": "Download PDF file"
+    }
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert a Word to PDF file",
+      "description": "We made our file converter to be as easy to use as possible. Converting your Word to a PDF document involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your Word: Click upload to choose a file from your computer, or drag your file into the dropzone above."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click 'Convert to PDF': This converts your file from Word to PDF."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your document: Your download will start automatically, or you can click to download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert Word to PDF files",
+      "paragraphs": [
+        "You may need a free Word to PDF download to make changes to a document in one simple step. PDFs typically preserve their original formatting, meaning making changes to the document would require multiple downloads, checking, and editing.",
+        "This PDF converter will quickly change your Word to a PDF file, allowing for easier accessibility for others to collaborate and edit the document. Once you download your Word file, you can easily manipulate text, images, and the structure of the content to prepare it for the final draft."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

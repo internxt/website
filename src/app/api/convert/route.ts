@@ -22,8 +22,6 @@ export async function POST(req: Request, res: Response) {
     const chunks: Uint8Array[] = [];
     const reader = response.body.getReader();
 
-    console.log('Reading response body...');
-
     while (true) {
       const { done, value } = await reader.read();
 

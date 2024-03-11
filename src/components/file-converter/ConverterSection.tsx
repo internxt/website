@@ -6,7 +6,6 @@ import { fileConverter, fileTypes, imageConverter } from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
-import { notificationService } from '../Snackbar';
 import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
 
@@ -30,7 +29,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
   const pathnameSegments = pathname.split('-');
   const lastPathnameSegment = pathnameSegments[pathnameSegments.length - 1];
 
-  const allowedFiles = pathnameSegments[0];
+  const allowedFiles = fileTypes[pathnameSegments[0]];
 
   const mimeType = fileTypes[lastPathnameSegment];
 
@@ -49,29 +48,48 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
       console.error('No file selected.');
       return;
     }
+    setViews('convertingState');
 
-    const worker = new Worker(new URL('/file-converter.worker', import.meta.url), { type: 'module' });
+    const formData = new FormData();
+    formData.append('file', files[0]);
 
-    worker.onmessage = (event) => {
-      const { blob, error } = event.data;
+    try {
+      const response = await fetch(`/api/convert?format=pdf`, {
+        method: 'POST',
+        body: formData,
+      });
 
-      console.log('[BLOB]:', blob);
-
-      if (blob) {
-        const link = document.createElement('a');
-        link.href = window.URL.createObjectURL(blob);
-        link.download = 'converted-file.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } else if (error) {
-        notificationService.openErrorToast('');
+      if (!response.ok || !response.body) {
+        return;
       }
 
-      worker.terminate();
-    };
+      const chunks: Uint8Array[] = [];
+      const reader = response.body.getReader();
 
-    worker.postMessage({ type: 'convert', file: files[0], mimeType: mimeType, format: lastPathnameSegment });
+      while (true) {
+        const { done, value } = await reader.read();
+
+        if (done) {
+          const blob = new Blob(chunks, { type: mimeType });
+
+          const link = document.createElement('a');
+          link.href = window.URL.createObjectURL(blob);
+          link.download = 'converted-file.docx';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          break;
+        }
+
+        chunks.push(value);
+      }
+    } catch (err) {
+      const error = err as Error;
+      console.error('[WORKER ERROR]:', error.stack ?? error.message);
+    } finally {
+      setViews('downloadFileState');
+    }
   };
 
   const handleImageConverterWorker = async (filesToConvert) => {
@@ -99,11 +117,8 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
 
     if (!relevantPath) return;
 
-    setViews('convertingState');
-
     if (fileConverter.includes(relevantPath)) {
       await handleFileConverter();
-      setViews('downloadFileState');
     } else if (imageConverter.includes(relevantPath)) {
       handleImageConverterWorker(files);
     } else {
@@ -171,7 +186,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
         <input
           className="pointer-events-none absolute h-0 w-0 overflow-hidden"
           type="file"
-          accept={`application/${allowedFiles}`}
+          accept={`${allowedFiles}`}
           id="uploadFile"
           ref={uploadFileRef}
           tabIndex={-1}
