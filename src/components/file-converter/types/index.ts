@@ -9,6 +9,14 @@ const fileTypes = {
   excel: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
   png: 'image/png',
   jpg: 'image/jpg',
+  webp: 'image/webp',
 };
 
-export { fileConverter, imageConverter, fileTypes };
+const format = {
+  word: 'docx',
+  pdf: 'pdf',
+  pptx: 'pptx',
+  html: 'html',
+};
+
+export { fileConverter, imageConverter, fileTypes, format };

@@ -2,7 +2,7 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import { fileConverter, fileTypes, imageConverter } from './types';
+import { fileConverter, fileTypes, format, imageConverter } from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
@@ -21,13 +21,6 @@ interface ConverterSectionProps {
 interface ViewProps {
   view: Views;
 }
-
-const format = {
-  word: 'docx',
-  pdf: 'pdf',
-  pptx: 'pptx',
-  html: 'html',
-};
 
 const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);

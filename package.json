@@ -21,6 +21,7 @@
     "@iconscout/react-unicons": "^1.1.6",
     "@phosphor-icons/react": "^2.0.9",
     "@sendgrid/mail": "^8.1.0",
+    "@types/offscreencanvas": "^2019.7.3",
     "aos": "^2.3.4",
     "autoprefixer": "^10.0.2",
     "axios": "^0.24.0",
