@@ -19,7 +19,7 @@ const HeroSection = ({ textContent }) => {
           {textContent.cards.map((card) => (
             <button
               key={card.id}
-              className="flex w-full max-w-[285px] cursor-pointer flex-col space-y-6 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:shadow-box-floating lg:p-9"
+              className="flex w-full max-w-[285px] cursor-pointer flex-col space-y-6 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:border-4 hover:border-primary/8 lg:p-9"
               onClick={() => {
                 router.push(`/file-converter/${card.pathname}`);
               }}

@@ -8,6 +8,8 @@ import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
 import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
+import fileConverterService from '../services/file-converter.service';
+import { notificationService } from '../Snackbar';
 
 type Views = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState';
 
@@ -20,18 +22,26 @@ interface ViewProps {
   view: Views;
 }
 
+const format = {
+  word: 'docx',
+  pdf: 'pdf',
+  pptx: 'pptx',
+  html: 'html',
+};
+
 const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);
   const [views, setViews] = useState<Views>('initialState');
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const uploadFileRef = createRef<HTMLInputElement>();
   const borderStyle = isDragging ? 'border border-dashed border-primary' : 'border-4 border-primary/8 bg-primary/2';
+
   const pathnameSegments = pathname.split('-');
   const lastPathnameSegment = pathnameSegments[pathnameSegments.length - 1];
 
-  const allowedFiles = fileTypes[pathnameSegments[0]];
+  const allowedUploadFiles = fileTypes[pathnameSegments[0]];
 
-  const mimeType = fileTypes[lastPathnameSegment];
+  const isMultipleFilesAllowed = pathname.includes('png-to-pdf') ? true : false;
 
   const resetViewToInitialState = useCallback(() => {
     setFiles(null);
@@ -48,70 +58,67 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
       console.error('No file selected.');
       return;
     }
-    setViews('convertingState');
-
-    const formData = new FormData();
-    formData.append('file', files[0]);
 
     try {
-      const response = await fetch(`/api/convert?format=pdf`, {
-        method: 'POST',
-        body: formData,
-      });
+      setViews('convertingState');
+      const response = await fileConverterService.convertFileToPdf(files[0], format[lastPathnameSegment]);
 
-      if (!response.ok || !response.body) {
-        return;
-      }
+      if (!response) return;
 
-      const chunks: Uint8Array[] = [];
-      const reader = response.body.getReader();
+      const url = window.URL.createObjectURL(response);
+      const fileName = `${files[0].name.split('.')[0]}.${lastPathnameSegment}`;
 
-      while (true) {
-        const { done, value } = await reader.read();
-
-        if (done) {
-          const blob = new Blob(chunks, { type: mimeType });
-
-          const link = document.createElement('a');
-          link.href = window.URL.createObjectURL(blob);
-          link.download = 'converted-file.docx';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-
-          break;
-        }
-
-        chunks.push(value);
-      }
-    } catch (err) {
-      const error = err as Error;
-      console.error('[WORKER ERROR]:', error.stack ?? error.message);
-    } finally {
       setViews('downloadFileState');
+
+      fileConverterService.downloadBlob(url, fileName);
+    } catch (err) {
+      console.error('[WORKER ERROR]:', err.stack ?? err.message);
+      notificationService.openErrorToast('An error occurred converting your file');
+      setViews('initialState');
     }
   };
 
-  const handleImageConverterWorker = async (filesToConvert) => {
-    if (!filesToConvert) return;
+  const handleImagesToPdfConverter = async () => {
+    setViews('convertingState');
+    const pdfUrl = await fileConverterService.convertImagesToPdf(files as unknown as File[]);
 
-    const worker = new Worker(new URL('/image-converter.worker', import.meta.url), { type: 'module' });
+    if (!pdfUrl) {
+      setViews('initialState');
+      notificationService.openErrorToast('An error occurred.');
+      return;
+    }
 
-    worker.onmessage = (event) => {
-      const { blob, newFormat } = event.data;
-
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = `${filesToConvert[0].name.split('.')[0]}.${newFormat.toLowerCase()}`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    };
-
-    worker.postMessage({ type: 'convert', file: filesToConvert });
+    fileConverterService.downloadBlob(pdfUrl, 'pdfWithImages.pdf');
+    setViews('downloadFileState');
   };
 
-  const handleWorker = async () => {
+  const handleImageConverter = async (filesToConvert) => {
+    if (!filesToConvert) return;
+
+    setViews('convertingState');
+
+    const image = new Image();
+    image.src = URL.createObjectURL(filesToConvert[0]);
+
+    image.onload = async () => {
+      const blob = await fileConverterService.convertImage(image, lastPathnameSegment);
+
+      if (!blob) {
+        setViews('initialState');
+        notificationService.openErrorToast('Error while converting image');
+        return;
+      }
+
+      const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastPathnameSegment.toLowerCase()}`;
+      const url = window.URL.createObjectURL(blob);
+
+      setViews('downloadFileState');
+
+      fileConverterService.downloadBlob(url, fileName);
+    };
+  };
+
+  const handleConverter = async () => {
     if (!pathname || !files) return;
     const relevantPath = pathname.split('/').pop();
 
@@ -120,7 +127,9 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
     if (fileConverter.includes(relevantPath)) {
       await handleFileConverter();
     } else if (imageConverter.includes(relevantPath)) {
-      handleImageConverterWorker(files);
+      handleImageConverter(files);
+    } else if (relevantPath.includes('png-to-pdf')) {
+      handleImagesToPdfConverter();
     } else {
       console.log('No converter found');
     }
@@ -138,7 +147,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
     }
   };
 
-  const View = (selectedView: ViewProps) => {
+  const View = (views: ViewProps) => {
     const view = {
       initialState: (
         <InitialState
@@ -153,7 +162,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
         <SelectedFile
           textContent={textContent.fileSelected}
           files={files}
-          onFileConvert={handleWorker}
+          onFileConvert={handleConverter}
           onCancel={resetViewToInitialState}
         />
       ),
@@ -172,12 +181,12 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
         <DownloadFileState
           textContent={textContent.fileConverted}
           onConvertMoreFilesButtonPressed={resetViewToInitialState}
-          onDownloadFile={handleWorker}
+          onDownloadFile={handleConverter}
         />
       ),
     };
 
-    return view[selectedView.view];
+    return view[views.view];
   };
 
   return (
@@ -186,7 +195,8 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
         <input
           className="pointer-events-none absolute h-0 w-0 overflow-hidden"
           type="file"
-          accept={`${allowedFiles}`}
+          accept={`${allowedUploadFiles}`}
+          multiple={isMultipleFilesAllowed}
           id="uploadFile"
           ref={uploadFileRef}
           tabIndex={-1}

@@ -208,5 +208,35 @@
     "id": "word-to-pdf",
     "title": "Convert PDF to Word Files Online for Free | Internxt",
     "description": "Internxt’s File Converter converts PDF to Word files for free. Our PDF to Word converter is an easy, fast, and secure way to convert your files."
+  },
+  {
+    "id": "png-to-pdf",
+    "title": "Convert PNG to PDF Files Online for Free | Internxt",
+    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+  },
+  {
+    "id": "html-to-pdf",
+    "title": "Convert HTML to PDF Files Online for Free | Internxt",
+    "description": "Internxt’s File Converter converts HTML to PDF files for free. Our HTML to PDF converter is an easy, fast, and secure way to convert your files."
+  },
+  {
+    "id": "pdf-to-html",
+    "title": "Convert PDF to HTML Files Online for Free | Internxt",
+    "description": "Internxt’s File Converter converts PDF to HTML files for free. Our PDF to HTML converter is an easy, fast, and secure way to convert your files."
+  },
+  {
+    "id": "pptx-to-pdf",
+    "title": "Convert PPTX to PDF Files Online for Free | Internxt",
+    "description": "Internxt’s File Converter converts PPTX to PDF files for free. Our PPTX to PDF converter is an easy, fast, and secure way to convert your files."
+  },
+  {
+    "id": "jpg-to-png",
+    "title": "Convert JPG to PNG Files Online for Free | Internxt",
+    "description": "Internxt’s File Converter converts JPG to PNG files for free. Our JPG to PNG converter is an easy, fast, and secure way to convert your files."
+  },
+  {
+    "id": "png-to-webp",
+    "title": "Convert PNG to WEBP Files Online for Free | Internxt",
+    "description": "Internxt’s File Converter converts PNG to WEBP files for free. Our PNG to WEBP converter is an easy, fast, and secure way to convert your files."
   }
 ]

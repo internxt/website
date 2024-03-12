@@ -12,14 +12,9 @@
         "pathname": "word-to-pdf"
       },
       {
-        "title": "PNG to PDF",
+        "title": "Images to PDF",
         "description": "Convert PNG to PDF documents.",
         "pathname": "png-to-pdf"
-      },
-      {
-        "title": "PDF to JPG",
-        "description": "PDF to JPG file converter",
-        "pathname": "pdf-to-jpg"
       },
       {
         "title": "JPG to PNG",
@@ -40,11 +35,6 @@
         "title": "PPTX to PDF",
         "description": "PowerPoint to PDF converter.",
         "pathname": "pptx-to-pdf"
-      },
-      {
-        "title": "PDF to PPTX",
-        "description": "Convert a PDF into PowerPoint.",
-        "pathname": "pdf-to-pptx"
       },
       {
         "title": "HTML to PDF",

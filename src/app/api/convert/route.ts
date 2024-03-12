@@ -5,7 +5,6 @@ const API_HOSTNAME = process.env.FILE_CONVERTER_HOSTNAME;
 export async function POST(req: Request, res: Response) {
   try {
     const format = req.url.split('format=')[1];
-    console.log(format);
 
     const formData = await req.formData();
     const file = formData.get('file');
