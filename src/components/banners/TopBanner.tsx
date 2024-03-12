@@ -41,7 +41,7 @@ const TopBanner = ({ isBannerFixed }) => {
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
-          <div
+          <button
             className="flex flex-col items-center justify-center"
             onClick={() => {
               router.push('/lifetime');
@@ -52,7 +52,7 @@ const TopBanner = ({ isBannerFixed }) => {
               {textContent.TopBarBanner.title.normalText}
               <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
             </p>
-          </div>
+          </button>
         </div>
       </div>
     </>

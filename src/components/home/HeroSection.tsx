@@ -5,14 +5,10 @@ import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
-import { CaretRight } from '@phosphor-icons/react';
-import { useRouter } from 'next/router';
-import HomePageBanner from '../banners/HomePageBanner';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
 export default function HeroSection({ textContent, lang }) {
-  const router = useRouter();
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
@@ -35,14 +31,6 @@ export default function HeroSection({ textContent, lang }) {
                 alt="Laptop and phone with Internxt app"
               />
             </div>
-
-            {/* <button
-              onClick={() => router.push('/pricing')}
-              className="mb-4 hidden w-max cursor-pointer select-none flex-row items-center rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7 lg:flex"
-            >
-              <p className="text-5xl font-bold text-primary hover:underline">{textContent.label}</p>
-              <CaretRight size={36} className="text-primary" />
-            </button> */}
 
             <Header>
               {textContent.title.line1}{' '}

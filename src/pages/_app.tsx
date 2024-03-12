@@ -11,7 +11,7 @@ import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
-const excludedPaths = [
+const EXCLUDED_PATHS = [
   '/lifetime',
   '/pricing',
   '/partner-discount',
@@ -30,7 +30,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const pathname = router.pathname;
   const shouldShowBanner = false;
   const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
   const lang = router.locale;

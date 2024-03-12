@@ -10,8 +10,6 @@ import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
-import { CouponType } from '@/lib/types/types';
-import CampaignCtaSection from '../lifetime/CampaignCtaSection';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -26,7 +24,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const banner = require('@/assets/lang/en/banners.json');
-  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const { products, currency, currencyValue, loadingCards, coupon } = usePricing();
 
   const features = [
