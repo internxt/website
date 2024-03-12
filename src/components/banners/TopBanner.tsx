@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { CaretRight, Sun } from '@phosphor-icons/react';
 
-const TopBannerHomePage = ({ isBannerFixed }) => {
+const TopBanner = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
@@ -23,6 +23,7 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
             </p>
           </div>
           <button
+            id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
             onClick={() => {
               router.push('/lifetime');
@@ -58,4 +59,4 @@ const TopBannerHomePage = ({ isBannerFixed }) => {
   );
 };
 
-export default TopBannerHomePage;
+export default TopBanner;

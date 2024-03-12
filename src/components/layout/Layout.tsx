@@ -6,7 +6,7 @@ import axios from 'axios';
 import moment from 'moment';
 
 import isBrave from '@/lib/brave';
-import TopBannerHomePage from '@/components/banners/TopBannerHomePage';
+import TopBanner from '@/components/banners/TopBanner';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -230,7 +230,7 @@ LayoutProps) {
       </Script>
       {showBanner ? (
         <>
-          <TopBannerHomePage isBannerFixed={isBannerFixed} />
+          <TopBanner isBannerFixed={isBannerFixed} />
           <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (
