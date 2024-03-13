@@ -7,6 +7,7 @@
       "maxFileSize": "Max file size of 1GB",
       "dragYourFile": "Dag and drop your PPTX file here",
       "cta": "Choose PPTX file",
+
       "draggingFile": "Drop file here"
     },
     "fileSelected": {

@@ -2,7 +2,7 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import { fileConverter, fileTypes, format, imageConverter } from './types';
+import { fileConverter, fileMimeTypes, allowedExtensions, imageConverter } from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
@@ -25,14 +25,16 @@ interface ViewProps {
 const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);
   const [views, setViews] = useState<Views>('initialState');
+  const [error, setError] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const uploadFileRef = createRef<HTMLInputElement>();
   const borderStyle = isDragging ? 'border border-dashed border-primary' : 'border-4 border-primary/8 bg-primary/2';
 
   const pathnameSegments = pathname.split('-');
-  const lastPathnameSegment = pathnameSegments[pathnameSegments.length - 1];
 
-  const allowedUploadFiles = fileTypes[pathnameSegments[0]];
+  const lastExtensionInPathname = pathnameSegments[pathnameSegments.length - 1];
+
+  const allowedUploadFiles = fileMimeTypes[pathnameSegments[0]];
 
   const isMultipleFilesAllowed = pathname.includes('png-to-pdf') ? true : false;
 
@@ -46,6 +48,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
     setViews('selectedFileState');
   };
 
+  //File converter
   const handleFileConverter = async () => {
     if (!files) {
       console.error('No file selected.');
@@ -54,23 +57,29 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
 
     try {
       setViews('convertingState');
-      const response = await fileConverterService.convertFileToPdf(files[0], format[lastPathnameSegment]);
+      const response = await fileConverterService.convertFileToPdf(
+        files[0],
+        allowedExtensions[lastExtensionInPathname],
+      );
 
-      if (!response) return;
-
-      const url = window.URL.createObjectURL(response);
-      const fileName = `${files[0].name.split('.')[0]}.${lastPathnameSegment}`;
+      const url = window.URL.createObjectURL(response as Blob);
+      const fileName = `${files[0].name.split('.')[0]}.${lastExtensionInPathname}`;
 
       setViews('downloadFileState');
 
       fileConverterService.downloadBlob(url, fileName);
     } catch (err) {
-      console.error('[WORKER ERROR]:', err.stack ?? err.message);
-      notificationService.openErrorToast('An error occurred converting your file');
+      const error = err as Error;
+      if (error.message.includes('File too large')) {
+        setError('fileTooLarge');
+      } else {
+        setError('internalError');
+      }
       setViews('initialState');
     }
   };
 
+  // Images to PDF converter
   const handleImagesToPdfConverter = async () => {
     setViews('convertingState');
     const pdfUrl = await fileConverterService.convertImagesToPdf(files as unknown as File[]);
@@ -85,6 +94,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
     setViews('downloadFileState');
   };
 
+  // Image Converter
   const handleImageConverter = async (filesToConvert) => {
     if (!filesToConvert) return;
 
@@ -94,15 +104,13 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
     image.src = URL.createObjectURL(filesToConvert[0]);
 
     image.onload = async () => {
-      const blob = await fileConverterService.convertImage(image, lastPathnameSegment);
+      const blob = await fileConverterService.convertImage(image, lastExtensionInPathname);
 
       if (!blob) {
-        setViews('initialState');
-        notificationService.openErrorToast('Error while converting image');
-        return;
+        setError('internalError');
       }
 
-      const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastPathnameSegment.toLowerCase()}`;
+      const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastExtensionInPathname.toLowerCase()}`;
       const url = window.URL.createObjectURL(blob);
 
       setViews('downloadFileState');
@@ -145,6 +153,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
       initialState: (
         <InitialState
           textContent={textContent.dragNDropArea}
+          error={error}
           handleFileDrop={handleFileDrop}
           isDragging={isDragging}
           setIsDragging={setIsDragging}
@@ -163,7 +172,7 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
         <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
           <div className="relative">
             <div className="absolute inset-1">
-              <div className="animate-pingpong-v absolute left-0 z-10 h-1 w-full -translate-y-1/2 rounded-xl bg-primary shadow-2xl" />
+              <div className="upDownMotion absolute left-0 z-10 h-1 w-full -translate-y-1/2 rounded-xl bg-primary shadow-2xl" />
             </div>
             <EmptyFile />
           </div>

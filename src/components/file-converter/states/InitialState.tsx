@@ -3,6 +3,7 @@ import EmptyFile from '@/components/shared/icons/EmptyFile';
 
 interface InitialStateProps {
   textContent: any;
+  error: string | null;
   handleFileDrop: (files: FileList) => void;
   isDragging: boolean;
   setIsDragging: (isDragging: boolean) => void;
@@ -11,6 +12,7 @@ interface InitialStateProps {
 
 const InitialState = ({
   textContent,
+  error,
   handleFileDrop,
   isDragging,
   setIsDragging,

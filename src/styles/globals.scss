@@ -20,6 +20,23 @@
   }
 }
 
+.upDownMotion {
+  animation: MoveUpDown 2.5s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-75px);
+  }
+}
+
 .revealY {
   will-change: transform;
   transform: translateY(150px);

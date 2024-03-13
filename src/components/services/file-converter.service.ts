@@ -1,15 +1,13 @@
 import ImagesToPDF from '@coderosh/images-to-pdf';
 
 /**
- *
  * @param file The file we want to convert
  * @param format The format we want to convert it to
  * @returns The blob of the file to download
  */
-async function convertFileToPdf(file: File, format: string) {
+async function convertFileToPdf(file: File, format: string): Promise<Blob | Error> {
   const formData = new FormData();
   formData.append('file', file);
-  console.log(format);
 
   try {
     const response = await fetch(`/api/convert?format=${format.toLowerCase()}`, {
@@ -17,12 +15,20 @@ async function convertFileToPdf(file: File, format: string) {
       body: formData,
     });
 
+    if (!response.ok || !response.body) {
+      if (response.status === 413) {
+        throw new Error('File too large');
+      } else if (response.status === 500) {
+        throw new Error('Something went wrong');
+      }
+    }
+
     const blob = await response.blob();
 
-    return response.ok ? blob : null;
+    return blob;
   } catch (err) {
-    console.error('Error converting file:', err);
-    return null;
+    const error = new Error(err);
+    throw new Error(`[ERROR CONVERTING FILE]: ${error.stack ?? error.message}`);
   }
 }
 
@@ -64,19 +70,18 @@ async function convertImagesToPdf(files: File[]) {
 }
 
 /**
- *
  * @param image The image file we want to convert
  * @param newFormat The format we want to convert it to
  * @returns The blob of the image or null if the conversion fails
  */
-async function convertImage(image, newFormat: string): Promise<Blob | null> {
-  return new Promise((resolve) => {
+async function convertImage(image, newFormat: string): Promise<Blob> {
+  return new Promise((resolve, reject) => {
     const canvas = new OffscreenCanvas(image.width, image.height);
     const context = canvas.getContext('2d');
 
     if (!context) {
       console.error('Canvas context not supported.');
-      resolve(null);
+      reject(`[ERROR CONVERTING IMAGE]: Context not found`);
       return;
     }
 
@@ -86,15 +91,14 @@ async function convertImage(image, newFormat: string): Promise<Blob | null> {
       canvas.convertToBlob({ type: `image/${newFormat.toLowerCase()}` }).then((blob) => {
         if (!blob) {
           console.error('Conversion to blob failed.');
-          resolve(null);
           return;
         }
 
         resolve(blob);
       });
-    } catch (error) {
-      console.error('Error during image conversion:', error);
-      resolve(null);
+    } catch (err) {
+      const error = err as Error;
+      reject(`[ERROR CONVERTING IMAGE]: ${error.stack ?? error.message}`);
     }
   });
 }
