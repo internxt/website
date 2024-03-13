@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const API_HOSTNAME = process.env.FILE_CONVERTER_HOSTNAME;
+const API_HOSTNAME = process.env.FILE_CONVERTER_API;
 
 export async function POST(req: Request, res: Response) {
   try {
