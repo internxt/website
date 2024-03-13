@@ -17,7 +17,9 @@ async function convertFileToPdf(file: File, format: string) {
       body: formData,
     });
 
-    return response.ok ? await response.blob() : null;
+    const blob = await response.blob();
+
+    return response.ok ? blob : null;
   } catch (err) {
     console.error('Error converting file:', err);
     return null;
