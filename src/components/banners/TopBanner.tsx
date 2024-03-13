@@ -4,7 +4,8 @@ import { CaretRight, Sun } from '@phosphor-icons/react';
 const TopBanner = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`@/assets/lang/${lang}/banners.json`);
+  const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
+  const textContent = bannersJson.TopBarBanner;
 
   return (
     <>
@@ -15,11 +16,10 @@ const TopBanner = ({ isBannerFixed }) => {
         } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:flex`}
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
-          <Sun size={30} />
           <div className="flex cursor-default">
             <p className="font-normal">
-              {textContent.TopBarBanner.title.normalText}
-              <span className="font-bold">{textContent.TopBarBanner.title.boldText}</span>
+              <span className="font-bold">{textContent.title.boldText}</span>
+              {textContent.title.normalText}
             </p>
           </div>
           <button
@@ -29,11 +29,9 @@ const TopBanner = ({ isBannerFixed }) => {
               router.push('/lifetime');
             }}
           >
-            <p className="font-semibold underline hover:no-underline">{textContent.TopBarBanner.title.cta}</p>
+            <p className="font-semibold underline hover:no-underline">{textContent.title.cta}</p>
             <CaretRight size={16} />
           </button>
-
-          {/* <p className="flex text-base font-semibold underline">{pickUp()}</p> */}
         </div>
       </div>
       {/* Mobile view */}
@@ -47,10 +45,9 @@ const TopBanner = ({ isBannerFixed }) => {
               router.push('/lifetime');
             }}
           >
-            {/* <p className="flex flex-row rounded-full  font-bold">{New().toUpperCase()}</p> */}
             <p className="font-normal">
-              {textContent.TopBarBanner.title.normalText}
-              <span className="font-semibold">{textContent.TopBarBanner.title.boldText}</span>
+              <span className="font-semibold">{textContent.title.boldText}</span>
+              {textContent.title.normalText}
             </p>
           </button>
         </div>

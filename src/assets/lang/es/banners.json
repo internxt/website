@@ -67,8 +67,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "¡Consigue un 75% de descuento en todos nuestros planes!",
-      "normalText": "Hola, primavera. Hola, ¡ahorro! ",
+      "boldText": "75% en planes lifetime: ",
+      "normalText": "¡Asegura tus archivos para siempre!",
       "cta": "Elige un plan"
     }
   },

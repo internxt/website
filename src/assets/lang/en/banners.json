@@ -98,9 +98,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Get 75% off all our plans!",
-      "normalText": "Hello, Spring. Hello, Savings! ",
-      "cta": "Choose plan"
+      "boldText": "75% off lifetime plans: ",
+      "normalText": "secure your files forever!",
+      "cta": "Choose your plan"
     }
   },
   "lifetimeBanner": {
