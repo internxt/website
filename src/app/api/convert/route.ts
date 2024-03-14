@@ -4,10 +4,9 @@ const isProduction = process.env.NODE_ENV == 'production';
 
 const API_HOSTNAME = isProduction ? process.env.FILE_CONVERTER_API : 'http://localhost:3000';
 
-export const allowedExtensions: Record<string, string> = {
+const allowedExtensions: Record<string, string> = {
   pdf: 'pdf',
   html: 'html',
-  docx: 'docx',
 };
 
 export async function POST(req: Request, res: Response) {
@@ -29,8 +28,9 @@ export async function POST(req: Request, res: Response) {
     });
 
     if (!response.ok || !response.body) {
-      return new NextResponse('Something went wrong converting the file', {
-        status: 500,
+      const message = await response.text();
+      return new NextResponse(message, {
+        status: response.status,
       });
     }
 
