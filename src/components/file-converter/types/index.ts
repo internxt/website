@@ -1,4 +1,12 @@
-const fileConverter = ['pptx-to-pdf', 'word-to-pdf', 'xlsx-to-pdf', 'html-to-pdf', 'pdf-to-html'];
+const fileConverter = [
+  'pptx-to-pdf',
+  'word-to-pdf',
+  'xlsx-to-pdf',
+  'html-to-pdf',
+  'pdf-to-html',
+  'excel-to-pdf',
+  'word-to-html',
+];
 const imageConverter = ['png-to-jpg', 'jpg-to-png', 'webp-to-jpg', 'jpg-to-webp', 'webp-to-png', 'png-to-webp'];
 
 const fileMimeTypes = {

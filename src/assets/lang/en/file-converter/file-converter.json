@@ -67,9 +67,9 @@
         "pathname": "pdf-to-html"
       },
       {
-        "title": "DOCX to HTML",
-        "description": "Convert DOCX to HTML files.",
-        "pathname": "docx-to-html"
+        "title": "WORD to HTML",
+        "description": "Convert WORD to HTML files.",
+        "pathname": "word-to-html"
       }
     ]
   }

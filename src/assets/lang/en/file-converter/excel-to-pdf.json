@@ -1,0 +1,58 @@
+{
+  "ConverterSection": {
+    "title": "Internxt EXCEL To PDF Converter",
+    "description": "Convert EXCEL to PDf documents for easier file collaboration and editing.",
+    "secureUpload": "Secure uploads protected by HTTPS.",
+    "dragNDropArea": {
+      "maxFileSize": "Max file size of 1GB",
+      "dragYourFile": "Dag and drop your EXCEL file here",
+      "cta": "Choose PDF file",
+      "draggingFile": "Drop file here"
+    },
+    "fileSelected": {
+      "title": "File selected for converting",
+      "cancel": "Cancel",
+      "convert": "Convert to PDF file"
+    },
+    "converting": "Converting your file",
+    "fileConverted": {
+      "label": "Your EXCEL file has been converted to EXCEL successfully.",
+      "title": "Your download will automatically start shortly",
+      "description": "If not, click the button below.",
+      "convertAnother": "Convert another file",
+      "downloadFile": "Download PDF file"
+    }
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert a EXCEL to PDF file",
+      "description": "We made our file converter to be as easy to use as possible. Converting your EXCEL to a PDF document involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your EXCEL: Click upload to choose a file from your computer, or drag your file into the dropzone above."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click 'Convert to PDF': This converts your file from EXCEL to PDF."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your document: Your download will start automatically, or you can click to download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert EXCEL to PDF files",
+      "paragraphs": [
+        "You may need a free EXCEL to PDF download to make changes to a document in one simple step. PDFs typically preserve their original formatting, meaning making changes to the document would require multiple downloads, checking, and editing.",
+        "This PDF converter will quickly change your EXCEL to a PDF file, allowing for easier accessibility for others to collaborate and edit the document. Once you download your EXCEL file, you can easily manipulate text, images, and the structure of the content to prepare it for the final draft."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

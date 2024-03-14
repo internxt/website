@@ -55,8 +55,10 @@ async function convertImagesToPdf(files: File[]) {
     const dataUrl = pdf.dataUrl();
 
     return dataUrl;
-  } catch (error) {
-    console.error('Error converting images to PDF:', error);
+  } catch (err) {
+    const error = err as Error;
+    console.error('Error converting images to PDF:', error.message);
+    throw new Error(error.message);
   }
 }
 

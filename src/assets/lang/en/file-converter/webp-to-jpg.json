@@ -1,0 +1,58 @@
+{
+  "ConverterSection": {
+    "title": "Internxt WEBP to JPG Converter",
+    "description": "A Secure WEBP to JPG converter.",
+    "secureUpload": "Secure uploads protected by HTTPS.",
+    "dragNDropArea": {
+      "maxFileSize": "Max file size of 1GB",
+      "dragYourFile": "Dag and drop your image files here",
+      "cta": "Select WEBP files",
+      "draggingFile": "Drop files here"
+    },
+    "fileSelected": {
+      "title": "File selected for converting",
+      "cancel": "Cancel",
+      "convert": "Convert to WEBP file"
+    },
+    "converting": "Converting your file",
+    "fileConverted": {
+      "label": "Your WEBP file has been converted to JPG successfully",
+      "title": "Your download will start shortly.",
+      "description": "If not, click the button below.",
+      "convertAnother": "Convert another file",
+      "downloadFile": "Download JPG file"
+    }
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert WEBP to JPG files",
+      "description": "We made our file converter to be as easy to use as possible. Converting your JPG to a JPG file involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your WEBP: Click upload to choose a file from your computer, or drag your file into the dropzone above."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Convert to JPG: This converts your file from WEBP to JPG."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your document: Your download will start automatically, or you can click to download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert WEBP to JPG files",
+      "paragraphs": [
+        "Using our WEBP to JPG converter ensures compatibility across various platforms and applications. Our file converter maintains image quality without compression loss to maintain your pixel-perfect images.",
+        "Choosing a WEBP to JPG file converter ensures consistency and ease of use within your workflow and allows for more advanced editing possibilities for your JPG files."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}
