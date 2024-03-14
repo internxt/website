@@ -22,6 +22,16 @@
         "pathname": "jpg-to-png"
       },
       {
+        "title": "JPG to WEBP",
+        "description": "Convert a JPG to WEBP.",
+        "pathname": "jpg-to-webp"
+      },
+      {
+        "title": "PNG to JPG",
+        "description": "Convert a PNG to JPG.",
+        "pathname": "png-to-jpg"
+      },
+      {
         "title": "PNG to WEBP",
         "description": "PNG to WEBP converter.",
         "pathname": "png-to-webp"
@@ -32,9 +42,19 @@
         "pathname": "webp-to-png"
       },
       {
+        "title": "WEBP to JGP",
+        "description": "WEBP to JPG files.",
+        "pathname": "webp-to-jpg"
+      },
+      {
         "title": "PPTX to PDF",
         "description": "PowerPoint to PDF converter.",
         "pathname": "pptx-to-pdf"
+      },
+      {
+        "title": "EXCEL to PDF",
+        "description": "EXCEL to PDF converter.",
+        "pathname": "excel-to-pdf"
       },
       {
         "title": "HTML to PDF",
@@ -45,6 +65,11 @@
         "title": "PDF to HTML",
         "description": "Convert PDF to HTML files.",
         "pathname": "pdf-to-html"
+      },
+      {
+        "title": "DOCX to HTML",
+        "description": "Convert DOCX to HTML files.",
+        "pathname": "docx-to-html"
       }
     ]
   }

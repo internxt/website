@@ -7,7 +7,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden bg-gray-1 pt-32 pb-20">
-      <div className="flex flex-col items-center space-y-12 px-5">
+      <div className="flex w-full flex-col items-center space-y-12 px-5">
         <div className="flex max-w-[700px] flex-col space-y-5 text-center">
           <Header>{textContent.title}</Header>
           <div className="flex flex-col text-center text-xl text-gray-80">
@@ -15,11 +15,11 @@ const HeroSection = ({ textContent }) => {
             <p className="font-semibold">{textContent.description.bold}</p>
           </div>
         </div>
-        <div className="flex max-w-screen-xl flex-row flex-wrap gap-4">
+        <div className="flex w-full max-w-screen-xl flex-row flex-wrap gap-4 border">
           {textContent.cards.map((card) => (
             <button
               key={card.id}
-              className="flex w-full max-w-[285px] cursor-pointer flex-col space-y-6 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:border-4 hover:border-primary/8 lg:p-9"
+              className="flex w-full max-w-[285px] cursor-pointer flex-col space-y-6 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:ring-4 hover:ring-primary/8 lg:p-9"
               onClick={() => {
                 router.push(`/file-converter/${card.pathname}`);
               }}

@@ -2,14 +2,13 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import { fileConverter, fileMimeTypes, allowedExtensions, imageConverter } from './types';
+import { fileConverter, fileMimeTypes, imageConverter } from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
 import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
-import { notificationService } from '../Snackbar';
 
 type Views = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState';
 
@@ -48,91 +47,30 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
     setViews('selectedFileState');
   };
 
-  //File converter
-  const handleFileConverter = async () => {
-    if (!files) {
-      console.error('No file selected.');
-      return;
-    }
-
-    try {
-      setViews('convertingState');
-      const response = await fileConverterService.convertFileToPdf(
-        files[0],
-        allowedExtensions[lastExtensionInPathname],
-      );
-
-      const url = window.URL.createObjectURL(response as Blob);
-      const fileName = `${files[0].name.split('.')[0]}.${lastExtensionInPathname}`;
-
-      setViews('downloadFileState');
-
-      fileConverterService.downloadBlob(url, fileName);
-    } catch (err) {
-      const error = err as Error;
-      if (error.message.includes('File too large')) {
-        setError('fileTooLarge');
-      } else {
-        setError('internalError');
-      }
-      setViews('initialState');
-    }
-  };
-
-  // Images to PDF converter
-  const handleImagesToPdfConverter = async () => {
-    setViews('convertingState');
-    const pdfUrl = await fileConverterService.convertImagesToPdf(files as unknown as File[]);
-
-    if (!pdfUrl) {
-      setViews('initialState');
-      notificationService.openErrorToast('An error occurred.');
-      return;
-    }
-
-    fileConverterService.downloadBlob(pdfUrl, 'pdfWithImages.pdf');
-    setViews('downloadFileState');
-  };
-
-  // Image Converter
-  const handleImageConverter = async (filesToConvert) => {
-    if (!filesToConvert) return;
-
-    setViews('convertingState');
-
-    const image = new Image();
-    image.src = URL.createObjectURL(filesToConvert[0]);
-
-    image.onload = async () => {
-      const blob = await fileConverterService.convertImage(image, lastExtensionInPathname);
-
-      if (!blob) {
-        setError('internalError');
-      }
-
-      const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastExtensionInPathname.toLowerCase()}`;
-      const url = window.URL.createObjectURL(blob);
-
-      setViews('downloadFileState');
-
-      fileConverterService.downloadBlob(url, fileName);
-    };
-  };
-
   const handleConverter = async () => {
     if (!pathname || !files) return;
     const relevantPath = pathname.split('/').pop();
 
     if (!relevantPath) return;
 
-    if (fileConverter.includes(relevantPath)) {
-      await handleFileConverter();
-    } else if (imageConverter.includes(relevantPath)) {
-      handleImageConverter(files);
-    } else if (relevantPath.includes('png-to-pdf')) {
-      handleImagesToPdfConverter();
-    } else {
-      console.log('No converter found');
+    setViews('convertingState');
+    try {
+      if (fileConverter.includes(relevantPath)) {
+        await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
+        setViews('downloadFileState');
+      } else if (imageConverter.includes(relevantPath)) {
+        await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
+        setViews('downloadFileState');
+      } else if (relevantPath.includes('png-to-pdf')) {
+        await fileConverterService.handleImagesToPdfConverter(files);
+        setViews('downloadFileState');
+      } else {
+        setViews('initialState');
+      }
+    } catch (err) {
+      const error = err as Error;
+      setError(error.message);
+      setViews('initialState');
     }
   };
 
