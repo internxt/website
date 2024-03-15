@@ -42,6 +42,7 @@ async function convertImagesToPdf(files: File[]) {
       console.error('No images selected.');
       return;
     }
+
     const imgArrayBuffer = await Promise.all(Array.from(files).map((image) => image.arrayBuffer()));
 
     const imgToPdf = new ImagesToPDF();
@@ -57,7 +58,7 @@ async function convertImagesToPdf(files: File[]) {
     return dataUrl;
   } catch (err) {
     const error = err as Error;
-    console.error('Error converting images to PDF:', error.message);
+    console.error('Error converting images to PDF:', error);
     throw new Error(error.message);
   }
 }
@@ -90,6 +91,7 @@ async function convertImage(image, newFormat: string): Promise<Blob> {
         resolve(blob);
       });
     } catch (err) {
+      console.log('ERROR');
       const error = err as Error;
       reject(`[ERROR CONVERTING IMAGE]: ${error.stack ?? error.message}`);
     }

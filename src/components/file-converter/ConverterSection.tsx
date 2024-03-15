@@ -10,10 +10,13 @@ import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
 
+export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
+
 type Views = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState';
 
 interface ConverterSectionProps {
   textContent: any;
+  errorContent: any;
   pathname: string;
 }
 
@@ -21,10 +24,12 @@ interface ViewProps {
   view: Views;
 }
 
-const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
+const MAX_FILE_SIZE = 1073741824;
+
+const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);
   const [views, setViews] = useState<Views>('initialState');
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<Errors | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const uploadFileRef = createRef<HTMLInputElement>();
   const borderStyle = isDragging ? 'border border-dashed border-primary' : 'border-4 border-primary/8 bg-primary/2';
@@ -35,9 +40,10 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
 
   const allowedUploadFiles = fileMimeTypes[pathnameSegments[0]];
 
-  const isMultipleFilesAllowed = pathname.includes('png-to-pdf') ? true : false;
+  const isMultipleFilesAllowed = pathname === 'png-to-pdf';
 
   const resetViewToInitialState = useCallback(() => {
+    setError(null);
     setFiles(null);
     setViews('initialState');
   }, []);
@@ -53,6 +59,15 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
 
     if (!relevantPath) return;
 
+    const filesSize = Array.from(files).reduce((accumulator, file) => accumulator + file.size, 0);
+
+    if (filesSize > MAX_FILE_SIZE) {
+      setError('bigFile');
+      resetViewToInitialState();
+
+      return;
+    }
+
     setViews('convertingState');
     try {
       if (fileConverter.includes(relevantPath)) {
@@ -65,12 +80,17 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
         await fileConverterService.handleImagesToPdfConverter(files);
         setViews('downloadFileState');
       } else {
+        setError('unsupportedFormat');
         setViews('initialState');
       }
     } catch (err) {
       const error = err as Error;
-      setError(error.message);
-      setViews('initialState');
+      if (error.message.includes('File too large')) {
+        setError('bigFile');
+      } else {
+        setError('internalError');
+      }
+      resetViewToInitialState();
     }
   };
 
@@ -83,6 +103,9 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
     if (fileInput?.files) {
       setFiles(fileInput.files);
       setViews('selectedFileState');
+    } else {
+      setFiles(null);
+      setViews('initialState');
     }
   };
 
@@ -92,6 +115,8 @@ const ConverterSection = ({ textContent, pathname }: ConverterSectionProps) => {
         <InitialState
           textContent={textContent.dragNDropArea}
           error={error}
+          resetViewToInitialState={resetViewToInitialState}
+          errorContent={errorContent}
           handleFileDrop={handleFileDrop}
           isDragging={isDragging}
           setIsDragging={setIsDragging}

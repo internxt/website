@@ -51,21 +51,30 @@ const handleImagesToPdfConverter = async (files: FileList) => {
 const handleImageConverter = async (filesToConvert, lastExtensionInPathname: string) => {
   if (!filesToConvert) return;
 
-  const image = new Image();
-  image.src = URL.createObjectURL(filesToConvert[0]);
+  try {
+    const image = new Image();
+    image.src = URL.createObjectURL(filesToConvert[0]);
 
-  image.onload = async () => {
-    const blob = await convertImage(image, lastExtensionInPathname);
+    image.onerror = () => {};
 
-    if (!blob) {
-      throw new Error('Something went wrong');
-    }
+    image.onload = async () => {
+      const blob = await convertImage(image, lastExtensionInPathname);
 
-    const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastExtensionInPathname.toLowerCase()}`;
-    const url = window.URL.createObjectURL(blob);
+      console.log('url', blob);
+      if (!blob) {
+        console.log('OPS');
+        throw new Error('Something went wrong');
+      }
 
-    downloadBlob(url, fileName);
-  };
+      const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastExtensionInPathname.toLowerCase()}`;
+      const url = window.URL.createObjectURL(blob);
+
+      downloadBlob(url, fileName);
+    };
+  } catch (err) {
+    const error = err as Error;
+    return error.message;
+  }
 };
 
 const fileConverterService = {
