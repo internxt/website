@@ -35,7 +35,7 @@ export default function Oystervpn({ metatagsDescriptions, navbarLang, footerLang
               size={24}
               onClick={() => setIsSignupBannerOpen(false)}
             />
-            <SignUp textContent={textContent.Auth} provider="STACKCOMMERCE" />
+            <SignUp textContent={textContent.Auth} provider="OYSTERVPN" />
           </div>
         </div>
       ) : null}
