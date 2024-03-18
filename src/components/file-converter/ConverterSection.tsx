@@ -59,6 +59,21 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
     setViews('selectedFileState');
   };
 
+  const handleOpenFileExplorer = () => {
+    (document.querySelector('input[type=file]') as any).click();
+  };
+
+  const handleFileInput = () => {
+    const fileInput = uploadFileRef.current;
+    if (fileInput?.files) {
+      setFiles(fileInput.files);
+      setViews('selectedFileState');
+    } else {
+      setFiles(null);
+      setViews('initialState');
+    }
+  };
+
   const handleConverter = async () => {
     if (!pathname || !files) return;
 
@@ -81,6 +96,8 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
       return;
     }
 
+    setViews('convertingState');
+
     try {
       switch (converter.type) {
         case 'file':
@@ -99,21 +116,6 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
     } catch (err) {
       const error = err as Error;
       setError(error.message.includes('File too large') ? 'bigFile' : 'internalError');
-      setViews('initialState');
-    }
-  };
-
-  const handleOpenFileExplorer = () => {
-    (document.querySelector('input[type=file]') as any).click();
-  };
-
-  const handleFileInput = () => {
-    const fileInput = uploadFileRef.current;
-    if (fileInput?.files) {
-      setFiles(fileInput.files);
-      setViews('selectedFileState');
-    } else {
-      setFiles(null);
       setViews('initialState');
     }
   };
