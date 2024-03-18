@@ -58,8 +58,13 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       dispatch({ type: 'SET_PRODUCTS', payload: prices });
       dispatch({ type: 'SET_LOADING_CARDS', payload: false });
     } catch (err) {
-      const res = await stripeService.getPrices(true);
-      dispatch({ type: 'SET_PRODUCTS', payload: res });
+      try {
+        const res = await stripeService.getPrices(true);
+        dispatch({ type: 'SET_PRODUCTS', payload: res });
+        dispatch({ type: 'SET_LOADING_CARDS', payload: false });
+      } catch (error) {
+        console.error('Error al obtener precios:', error);
+      }
     }
 
     try {
