@@ -7,7 +7,7 @@ import PriceCard from '../prices/PriceCard';
 
 const PriceTable = ({ lang, normalPrice }: { lang: string; normalPrice?: boolean }) => {
   const { products, currency, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.LifetimeExclusive,
+    couponCode: CouponType.SpringCoupon,
   });
 
   return (
@@ -45,9 +45,7 @@ const PriceTable = ({ lang, normalPrice }: { lang: string; normalPrice?: boolean
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      coupon && !normalPrice
-                        ? Number((product.price * 0.5).toString().split('.')[0])
-                        : product.price.split('.')[0]
+                      coupon && !normalPrice ? Number((product.price * 0.25).toString()) : product.price.split('.')[0]
                     }
                     cta={['checkout', product.priceId]}
                     lang={lang}
