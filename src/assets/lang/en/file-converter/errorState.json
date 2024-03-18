@@ -5,7 +5,7 @@
   },
   "internalError": {
     "label": {
-      "bold": "Something went wrong.",
+      "bold": "Something went wrong. ",
       "normal": "Please try again."
     }
   },

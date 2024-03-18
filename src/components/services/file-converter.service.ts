@@ -1,6 +1,14 @@
-import { downloadBlob } from '@/lib/downloadBlob';
 import { allowedExtensions } from '@/components/file-converter/types';
 import { convertFileToPdf, convertImage, convertImagesToPdf } from '@/components/utils/converter';
+
+function downloadBlob(url: string, fileName: string) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 /**
  *
@@ -48,33 +56,36 @@ const handleImagesToPdfConverter = async (files: FileList) => {
  * @param lastExtensionInPathname - The format we want to convert it to
  * Downloads the image directly using the blob got from the conversion
  */
-const handleImageConverter = async (filesToConvert, lastExtensionInPathname: string) => {
+const handleImageConverter = async (filesToConvert, lastExtensionInPathname) => {
   if (!filesToConvert) return;
 
-  try {
-    const image = new Image();
-    image.src = URL.createObjectURL(filesToConvert[0]);
+  return new Promise((resolve, reject) => {
+    try {
+      const image = new Image();
+      image.src = URL.createObjectURL(filesToConvert[0]);
 
-    image.onerror = () => {};
+      image.onerror = (error) => {
+        console.log('[ERROR]: ', error);
+        reject(new Error('Failed to load image'));
+      };
 
-    image.onload = async () => {
-      const blob = await convertImage(image, lastExtensionInPathname);
+      image.onload = async () => {
+        const blob = await convertImage(image, lastExtensionInPathname);
 
-      console.log('url', blob);
-      if (!blob) {
-        console.log('OPS');
-        throw new Error('Something went wrong');
-      }
+        if (!blob) {
+          reject(new Error('Failed to convert image'));
+        }
 
-      const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastExtensionInPathname.toLowerCase()}`;
-      const url = window.URL.createObjectURL(blob);
+        const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastExtensionInPathname.toLowerCase()}`;
+        const url = window.URL.createObjectURL(blob);
 
-      downloadBlob(url, fileName);
-    };
-  } catch (err) {
-    const error = err as Error;
-    return error.message;
-  }
+        downloadBlob(url, fileName);
+        resolve('Image Downloaded Successfully');
+      };
+    } catch (err) {
+      reject(err);
+    }
+  });
 };
 
 const fileConverterService = {

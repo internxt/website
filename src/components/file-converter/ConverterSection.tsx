@@ -26,6 +26,12 @@ interface ViewProps {
 
 const MAX_FILE_SIZE = 1073741824;
 
+const converters = [
+  { type: 'file', paths: fileConverter },
+  { type: 'image', paths: imageConverter },
+  { type: 'pdf', paths: ['png-to-pdf'] },
+];
+
 const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);
   const [views, setViews] = useState<Views>('initialState');
@@ -55,42 +61,45 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
 
   const handleConverter = async () => {
     if (!pathname || !files) return;
-    const relevantPath = pathname.split('/').pop();
 
+    const relevantPath = pathname.split('/').pop();
     if (!relevantPath) return;
 
     const filesSize = Array.from(files).reduce((accumulator, file) => accumulator + file.size, 0);
 
     if (filesSize > MAX_FILE_SIZE) {
       setError('bigFile');
-      resetViewToInitialState();
-
+      setViews('initialState');
       return;
     }
 
-    setViews('convertingState');
+    const converter = converters.find(({ paths }) => paths.includes(relevantPath));
+
+    if (!converter) {
+      setError('unsupportedFormat');
+      setViews('initialState');
+      return;
+    }
+
     try {
-      if (fileConverter.includes(relevantPath)) {
-        await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
-        setViews('downloadFileState');
-      } else if (imageConverter.includes(relevantPath)) {
-        await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
-        setViews('downloadFileState');
-      } else if (relevantPath.includes('png-to-pdf')) {
-        await fileConverterService.handleImagesToPdfConverter(files);
-        setViews('downloadFileState');
-      } else {
-        setError('unsupportedFormat');
-        setViews('initialState');
+      switch (converter.type) {
+        case 'file':
+          await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
+          break;
+        case 'image':
+          await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
+          break;
+        case 'pdf':
+          await fileConverterService.handleImagesToPdfConverter(files);
+          break;
+        default:
+          throw new Error('Invalid converter type');
       }
+      setViews('downloadFileState');
     } catch (err) {
       const error = err as Error;
-      if (error.message.includes('File too large')) {
-        setError('bigFile');
-      } else {
-        setError('internalError');
-      }
-      resetViewToInitialState();
+      setError(error.message.includes('File too large') ? 'bigFile' : 'internalError');
+      setViews('initialState');
     }
   };
 
