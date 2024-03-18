@@ -24,7 +24,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, currencyValue, loadingCards, coupon } = usePricing();
+  const { products, currency, currencyValue, loadingCards, coupon } = usePricing({});
 
   const features = [
     {
@@ -190,7 +190,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   priceBefore={
                     billingFrequency === Interval.Year
                       ? products?.individuals?.[Interval.Month][product.storage].price * 12
-                      : product.price
+                      : undefined
                   }
                   lang={lang}
                   currency={currency}

@@ -76,7 +76,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
         const coupon = await stripeService.getCoupon(couponCode);
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        notificationService.openSuccessToast('Error fetching coupon');
+        notificationService.openErrorToast('Error fetching coupon');
       }
     }
   };
