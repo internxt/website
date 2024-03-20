@@ -96,6 +96,7 @@ export enum CouponType {
   LockerCoupon = 'LOCKER_COUPON_CODE',
   StartPageCoupon = 'STARTPAGE_COUPON_CODE',
   SpringCoupon = 'SPRING_COUPON_CODE',
+  PcComponentesCoupon = 'PC_COMPONENTES_COUPON',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';
