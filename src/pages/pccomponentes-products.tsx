@@ -148,6 +148,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
                   currency={currency}
                   coupon={coupon ?? undefined}
                   currencyValue={currencyValue}
+                  isIframe={true}
                 />
               ))}
           </div>
@@ -176,6 +177,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
+                    isIframe={true}
                     coupon={coupon ?? undefined}
                   />
                 );

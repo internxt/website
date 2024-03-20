@@ -1,4 +1,4 @@
-import { checkout, goToSignUpURL } from '@/lib/auth';
+import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
 import { Fire } from '@phosphor-icons/react';
 
@@ -15,6 +15,7 @@ export interface PriceCardProps {
   coupon?: CouponType;
   currency?: string;
   currencyValue?: string;
+  isIframe?: boolean;
 }
 
 export default function PriceCard({
@@ -29,6 +30,7 @@ export default function PriceCard({
   coupon,
   currency,
   currencyValue,
+  isIframe,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -94,12 +96,21 @@ export default function PriceCard({
             if (cta[1] === 'Free plan') {
               goToSignUpURL();
             } else {
-              checkout({
-                planId: cta[1],
-                mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                currency: currencyValue ?? 'eur',
-                couponCode: coupon ?? undefined,
-              });
+              if (isIframe) {
+                checkoutForPcComponentes({
+                  planId: cta[1],
+                  mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+                  currency: currencyValue ?? 'eur',
+                  couponCode: coupon ?? undefined,
+                });
+              } else {
+                checkout({
+                  planId: cta[1],
+                  mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+                  currency: currencyValue ?? 'eur',
+                  couponCode: coupon ?? undefined,
+                });
+              }
             }
           }}
           className={`flex w-full flex-col items-center rounded-lg border ${
