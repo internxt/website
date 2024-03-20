@@ -2,16 +2,21 @@ import { useEffect, useRef, useState } from 'react';
 import Checkbox from './Checkbox';
 import Footer from '@/components/layout/Footer';
 import CheckQuestions from './CheckQuestions';
-
-type Views = 'initialState' | 'questions' | 'quizCompleted' | 'results';
+import { CyberSecurityQuizViews } from '@/lib/types/types';
 
 interface ViewProps {
-  view: Views;
+  view: CyberSecurityQuizViews | undefined;
 }
 
-const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
+interface AnswerQuestionsSectionProps {
+  textContent: any;
+  view: CyberSecurityQuizViews | undefined;
+  setIsQuizSection: (isQuizSection: boolean) => void;
+  onViewChange: (newView: CyberSecurityQuizViews) => void;
+}
+
+const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewChange }: AnswerQuestionsSectionProps) => {
   const height = useRef(0);
-  const [view, setView] = useState<Views>('initialState');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
   const [savedAnswers, setSavedAnswers] = useState<string[]>([]);
@@ -24,7 +29,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
 
   function handleNextQuestion() {
     if (currentQuestion + 1 === 8) {
-      setView('quizCompleted');
+      onViewChange('quizCompleted');
     } else {
       setCurrentQuestion((previousQuestion) => previousQuestion + 1);
     }
@@ -60,7 +65,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
                 <p className="text-lg">{textContent.QuizSection.description}</p>
                 <button
                   onClick={() => {
-                    setView('questions');
+                    onViewChange('questions');
                   }}
                   className="w-full rounded-lg bg-primary px-5 py-3 xl:w-max"
                 >
@@ -219,7 +224,7 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
 
                 <button
                   onClick={() => {
-                    setView('results');
+                    onViewChange('results');
                     setIsQuizSection(false);
                   }}
                   className="w-full items-center justify-center rounded-lg bg-primary px-5 py-3 xl:w-max"
@@ -249,14 +254,13 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection }) => {
         </>
       ),
     };
+
+    if (viewSelected?.view === undefined) return view.initialState;
+
     return view[viewSelected.view];
   };
 
-  return (
-    <>
-      <View view={view} />
-    </>
-  );
+  return <View view={view} />;
 };
 
 export default AnswerQuestionsSection;
