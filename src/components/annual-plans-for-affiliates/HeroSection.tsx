@@ -25,7 +25,7 @@ const HeroSection = ({ textContent, InfoTextComponent }: { textContent: any; Inf
           <Button onClick={redirectToPricingTable} text={textContent.cta} />
         </div>
         <Image
-          src="/images/affiliates/partner_discount_collab.webp"
+          src="/images/affiliates/startpage_collab.webp"
           alt="Affiliates Hero Section"
           draggable={false}
           width={500}
