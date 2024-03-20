@@ -22,7 +22,7 @@ const currencyValue = {
 
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const offerDiscount = 20;
+  const offerDiscount = 10;
 
   function onStartPageClicked() {
     copyToClipboard(START_PAGE);
@@ -55,9 +55,9 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <button onClick={onStartPageClicked} className="font-bold text-primary hover:underline">
         {infoSection.startPage}
       </button>
-      {infoSection.part2.split('80% OFF')[0]}
-      <span className="font-bold">80% OFF</span>
-      {infoSection.part2.split('80% OFF')[1]}
+      {infoSection.part2.split('90% OFF')[0]}
+      <span className="font-bold">90% OFF</span>
+      {infoSection.part2.split('90% OFF')[1]}
     </p>
   );
 
