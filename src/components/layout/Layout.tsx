@@ -28,6 +28,7 @@ interface LayoutProps {
   readonly host?: string;
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
+  readonly showBanner?: boolean;
 }
 
 const INTERNXT_URL = 'https://internxt.com';
@@ -58,13 +59,14 @@ export default function Layout({
   disableDrift = true,
   isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
+  showBanner,
 }: // lang
 LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = !excludedPaths.includes(pathname);
+  const shouldShowBanner = showBanner ?? !excludedPaths.includes(pathname);
 
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
@@ -228,7 +230,7 @@ LayoutProps) {
           ]
         }`}
       </Script>
-      {showBanner ? (
+      {shouldShowBanner ? (
         <>
           <TopBanner isBannerFixed={isBannerFixed} />
           <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
