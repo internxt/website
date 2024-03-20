@@ -18,8 +18,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
     couponCode: CouponType.PcComponentesCoupon,
   });
 
-  console.log('items', textContent);
-
   const contentText = textContent;
 
   const isIndividual = activeSwitchPlan !== 'Business';
