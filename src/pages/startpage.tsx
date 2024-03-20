@@ -22,7 +22,7 @@ const currencyValue = {
 
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const offerDiscount = 20;
+  const offerDiscount = 10;
 
   function onStartPageClicked() {
     copyToClipboard(START_PAGE);
