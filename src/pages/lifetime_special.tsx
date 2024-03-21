@@ -7,6 +7,7 @@ import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
+import { CouponType } from '@/lib/types/types';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -23,7 +24,12 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} normalPrice />
+      <PaymentSection
+        textContent={langJson.PaymentSection}
+        lang={lang}
+        normalPrice
+        couponCode={CouponType.LifetimeFiftyPercent}
+      />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
@@ -41,7 +47,7 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
+  const langJson = require(`@/assets/lang/${lang}/lifetime_special.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
