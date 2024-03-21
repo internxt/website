@@ -2,7 +2,7 @@ import RenderDescription from '../shared/RenderDescription';
 
 const FeaturesSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden py-20">
+    <section className="overflow-hidden py-20 px-5">
       <div className="flex w-full flex-col items-center space-y-16">
         <div className="flex max-w-[672px] flex-col space-y-3">
           <p className="text-2xl font-medium text-gray-100">{textContent.howToConvert.title}</p>

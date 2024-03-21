@@ -51,8 +51,9 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
   const resetViewToInitialState = useCallback(() => {
     setError(null);
     setFiles(null);
+    uploadFileRef.current === null;
     setViews('initialState');
-  }, [files]);
+  }, []);
 
   const handleFileDrop = (files: FileList) => {
     setFiles(files);
@@ -65,12 +66,17 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
 
   const handleFileInput = () => {
     const fileInput = uploadFileRef.current;
-    if (fileInput?.files) {
-      setFiles(fileInput.files);
-      setViews('selectedFileState');
-    } else {
-      setFiles(null);
-      setViews('initialState');
+    console.log(fileInput?.files);
+    if (fileInput?.files && fileInput.files.length > 0) {
+      const filesSize = Array.from(fileInput.files).reduce((accumulator, file) => accumulator + file.size, 0);
+
+      if (filesSize > MAX_FILE_SIZE) {
+        setError('bigFile');
+        setViews('initialState');
+      } else {
+        setFiles(fileInput.files);
+        setViews('selectedFileState');
+      }
     }
   };
 
@@ -79,14 +85,6 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
 
     const relevantPath = pathname.split('/').pop();
     if (!relevantPath) return;
-
-    const filesSize = Array.from(files).reduce((accumulator, file) => accumulator + file.size, 0);
-
-    if (filesSize > MAX_FILE_SIZE) {
-      setError('bigFile');
-      setViews('initialState');
-      return;
-    }
 
     const converter = converters.find(({ paths }) => paths.includes(relevantPath));
 
@@ -176,7 +174,7 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
           id="uploadFile"
           ref={uploadFileRef}
           tabIndex={-1}
-          onChange={() => handleFileInput()}
+          onChange={handleFileInput}
         />
       </label>
       <div className="flex flex-col items-center space-y-12 px-5">

@@ -7,7 +7,7 @@ interface SelectedFileProps {
 
 const SelectedFile = ({ textContent, files, onCancel, onFileConvert }: SelectedFileProps) => {
   const isMultipleFiles = files.length > 1;
-  const fileName = isMultipleFiles ? 'Files' : files[0].name;
+  const fileName = files && isMultipleFiles ? 'Files' : files[0].name;
 
   return (
     <div className="flex flex-col items-center space-y-8">

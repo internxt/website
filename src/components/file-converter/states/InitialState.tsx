@@ -104,7 +104,7 @@ const InitialState = ({
 
   return (
     <DropArea onItemsDropped={handleFileDrop} isDragging={isDragging} setIsDragging={setIsDragging}>
-      <div className="flex flex-col items-center space-y-8">
+      <div className="flex flex-col items-center space-y-8 text-center">
         {isDragging ? (
           <div className="flex flex-col items-center space-y-4">
             <EmptyFile />

@@ -1,5 +1,4 @@
-import { useCallback, useState } from 'react';
-import EmptyFile from './icons/EmptyFile';
+import { useCallback } from 'react';
 
 const DropArea = ({
   onItemsDropped,
