@@ -52,7 +52,7 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
     setError(null);
     setFiles(null);
     setViews('initialState');
-  }, []);
+  }, [files]);
 
   const handleFileDrop = (files: FileList) => {
     setFiles(files);

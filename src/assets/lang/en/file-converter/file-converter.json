@@ -65,11 +65,6 @@
         "title": "PDF to HTML",
         "description": "Convert PDF to HTML files.",
         "pathname": "pdf-to-html"
-      },
-      {
-        "title": "WORD to HTML",
-        "description": "Convert WORD to HTML files.",
-        "pathname": "word-to-html"
       }
     ]
   }
