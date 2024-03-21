@@ -24,10 +24,11 @@ const ButtonDeal = ({ textContent, large }) => {
         console.log(err);
       });
 
-    currencyService.getCurrencyPrice().then((currency) => {
-      setCurrency(currency);
+    currencyService.filterCurrencyByCountry().then((currency) => {
+      setCurrency(currency.currency);
     });
   }, []);
+
   return (
     <div
       onClick={() => {

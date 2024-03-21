@@ -23,73 +23,75 @@ export enum Products {
 }
 
 async function getPrices(isEur?: boolean) {
-  try {
-    const currency = await currencyService.getCurrencyPrice();
-    const res = await axios.get(
-      `${window.origin}/api/stripe/stripe_products?currency=${isEur ? 'eur' : currency ?? 'eur'}`,
-    );
-    const { data } = res;
+  let currency;
 
-    if (data) {
-      const transformedData = {
-        individuals: {},
-      };
+  if (isEur) {
+    currency = 'eur';
+  } else {
+    currency = await currencyService.filterCurrencyByCountry();
+  }
 
-      Object.values(data).forEach((productValue: any) => {
-        const storage = bytes(productValue.bytes);
+  const res = await axios.get(
+    `${window.origin}/api/stripe/stripe_products?currency=${isEur ? 'eur' : currency.currencyValue ?? 'eur'}`,
+  );
+  const { data } = res;
 
-        if (productValue.interval === Interval.Month) {
-          transformedData.individuals[Interval.Month] = {
-            ...transformedData.individuals[Interval.Month],
-            [storage]: {
-              priceId: productValue.id,
-              storage: storage,
-              price: Math.abs(productValue.amount / 100).toFixed(2),
-              currency: productValue.currency,
-            },
+  if (data) {
+    const transformedData = {
+      individuals: {},
+    };
+
+    Object.values(data).forEach((productValue: any) => {
+      const storage = bytes(productValue.bytes);
+
+      if (productValue.interval === Interval.Month) {
+        transformedData.individuals[Interval.Month] = {
+          ...transformedData.individuals[Interval.Month],
+          [storage]: {
+            priceId: productValue.id,
+            storage: storage,
+            price: Math.abs(productValue.amount / 100).toFixed(2),
+            currency: productValue.currency,
+          },
+        };
+      } else if (productValue.interval === Interval.Year) {
+        transformedData.individuals[Interval.Year] = {
+          ...transformedData.individuals[Interval.Year],
+          [storage]: {
+            priceId: productValue.id,
+            storage: storage,
+            price: Math.abs(productValue.amount / 100).toFixed(2),
+            currency: productValue.currency,
+          },
+        };
+      } else if (productValue.interval === Interval.Lifetime) {
+        transformedData.individuals[Interval.Lifetime] = {
+          ...transformedData.individuals[Interval.Lifetime],
+          [storage]: {
+            priceId: productValue.id,
+            storage: storage,
+            price: Math.abs(productValue.amount / 100).toFixed(2),
+            currency: productValue.currency,
+          },
+        };
+      }
+    });
+
+    // Sort products by price descending order for each interval (month, year, lifetime)
+    Object.keys(transformedData.individuals).forEach((interval) => {
+      transformedData.individuals[interval] = Object.values(transformedData.individuals[interval])
+        .sort((a: any, b: any) => {
+          return a.price - b.price;
+        })
+        .reduce((acc: any, curr: any) => {
+          return {
+            ...acc,
+            [curr.storage]: curr,
           };
-        } else if (productValue.interval === Interval.Year) {
-          transformedData.individuals[Interval.Year] = {
-            ...transformedData.individuals[Interval.Year],
-            [storage]: {
-              priceId: productValue.id,
-              storage: storage,
-              price: Math.abs(productValue.amount / 100).toFixed(2),
-              currency: productValue.currency,
-            },
-          };
-        } else if (productValue.interval === Interval.Lifetime) {
-          transformedData.individuals[Interval.Lifetime] = {
-            ...transformedData.individuals[Interval.Lifetime],
-            [storage]: {
-              priceId: productValue.id,
-              storage: storage,
-              price: Math.abs(productValue.amount / 100).toFixed(2),
-              currency: productValue.currency,
-            },
-          };
-        }
-      });
+        }, {});
+    });
 
-      // Sort products by price descending order for each interval (month, year, lifetime)
-      Object.keys(transformedData.individuals).forEach((interval) => {
-        transformedData.individuals[interval] = Object.values(transformedData.individuals[interval])
-          .sort((a: any, b: any) => {
-            return a.price - b.price;
-          })
-          .reduce((acc: any, curr: any) => {
-            return {
-              ...acc,
-              [curr.storage]: curr,
-            };
-          }, {});
-      });
-
-      return transformedData;
-    }
-  } catch (error) {
-    console.error(error);
-    notificationService.openErrorToast('Something went wrong while fetching the products.');
+    return transformedData;
   }
 }
 

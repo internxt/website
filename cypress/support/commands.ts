@@ -12,17 +12,21 @@ import { getLatestReleaseInfo } from '../../src/lib/github';
 
 const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
 
-type Interval = 'Monthly' | 'Annually' | 'Lifetime';
+type Interval = 'Individual' | 'Lifetime';
 
-function checkIfProductExistAndRedirectWorks(product, interval: Interval = 'Annually') {
+function checkIfProductExistAndRedirectWorks(product, interval: Interval = 'Individual', switchButton?) {
   const buttonId = `#planButton${product.storage}`;
   const planId = product.planId;
 
   cy.visit('/pricing');
   cy.get('#billingButtons').contains(interval).click();
 
+  if (switchButton) {
+    cy.get('#switchButton').should('exist').click();
+  }
+
   cy.get(buttonId).should('exist');
-  cy.get(buttonId).contains(`${product.storage}`).click();
+  cy.get(buttonId).click();
 
   cy.url().should((url) => {
     expect(url).to.include(DRIVE_WEB_URL);

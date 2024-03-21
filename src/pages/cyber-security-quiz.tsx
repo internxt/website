@@ -1,11 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import QuizSection from '@/components/CybersecurityQuiz/QuizSection';
+import { CyberSecurityQuizViews } from '@/lib/types/types';
 
-const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, footerLang, lang }) => {
+const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');
   const [isQuizSection, setIsQuizSection] = useState(true);
+  const [view, setView] = useState<CyberSecurityQuizViews>();
+
+  const onViewChange = (view: CyberSecurityQuizViews) => {
+    setView(view);
+  };
+
+  useEffect(() => {
+    setView('initialState');
+  }, []);
 
   return (
     <Layout
@@ -16,7 +26,12 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, foot
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isQuizSection={isQuizSection} />
 
-      <QuizSection textContent={textContent} setIsQuizSection={setIsQuizSection} />
+      <QuizSection
+        textContent={textContent}
+        setIsQuizSection={setIsQuizSection}
+        onViewChange={onViewChange}
+        view={view}
+      />
     </Layout>
   );
 };
@@ -27,14 +42,12 @@ export async function getServerSideProps(ctx) {
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const textContent = require(`@/assets/lang/en/cyber-security-quiz.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {
       metatagsDescriptions,
       navbarLang,
       textContent,
-      footerLang,
       lang,
     },
   };

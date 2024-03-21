@@ -1,13 +1,13 @@
 import React from 'react';
-import PriceCard from './PriceCard';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types/types';
+import PriceCard from '../prices/PriceCard';
 
-const PriceTable = ({ lang }) => {
+const PriceTable = ({ lang, normalPrice }: { lang: string; normalPrice?: boolean }) => {
   const { products, currency, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.LifetimeExclusive,
+    couponCode: CouponType.SpringCoupon,
   });
 
   return (
@@ -44,17 +44,16 @@ const PriceTable = ({ lang }) => {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price.split('.')[0]}
+                    price={
+                      coupon && !normalPrice ? Number((product.price * 0.25).toString()) : product.price.split('.')[0]
+                    }
                     cta={['checkout', product.priceId]}
                     lang={lang}
+                    billingFrequency="lifetime"
                     popular={product.storage === '5TB'}
-                    actualPrice={
-                      Math.abs((product.price * 50) / 100)
-                        .toFixed(2)
-                        .split('.')[0]
-                    }
+                    priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}
-                    coupon={coupon ?? undefined}
+                    coupon={normalPrice ? undefined : coupon}
                   />
                 );
               })}

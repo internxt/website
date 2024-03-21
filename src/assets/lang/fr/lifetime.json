@@ -2,22 +2,24 @@
   "HeroSection": {
     "title": "Obtenir un plan à vie d'Internxt",
     "description": "Sécurisez tous vos fichiers et souvenirs pour toujours avec un seul paiement unique.",
-    "cta1": "50% de réduction!",
+    "cta1": "75% de réduction!",
     "cta2": "Voir les offres à vie",
     "guarantee": "Garantie de remboursement de 30 jours"
   },
   "PaymentSection": {
     "limitedOffer": "Offre limitée dans le temps !",
-    "title": { "blueText": "Bénéficiez de 50% de réduction", "normalText": " dans tous nos plans à vie" },
+    "title": { "blueText": "Bénéficiez de 75% de réduction", "normalText": " dans tous nos plans à vie" },
     "description": "Achetez une fois et obtenez la confidentialité pour toujours.",
     "normalSection": {
       "title": "Explorez tous nos plans exclusifs à vie",
       "description": "Achetez une fois et bénéficiez de la confidentialité pour toujours."
     },
     "securePayment": " Paiement 100% sécurisé, développé par Stripe ",
-    "firstFeed": "Garantie de remboursement de 30 jours",
-    "secondFeed": "Paiement 100% sécurisé",
-    "thirdFeed": "Création de compte anonyme"
+    "features": {
+      "endToEnd": "Chiffré de bout en bout",
+      "openSource": "Open-source et vérifié",
+      "anonymousAccount": "Création de compte anonyme"
+    }
   },
   "GetLifetimeSection": {
     "title": "La vie n'est pas courte ! Mais cette offre à temps limité l'est...",

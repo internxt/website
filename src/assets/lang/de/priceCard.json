@@ -1,6 +1,7 @@
 {
   "mostPopular": "Am beliebtesten",
   "mostPopularPlan": "Beliebtester Plan",
+  "save": "Spare bis zu",
   "valentines": "Spezielles Valentinstag-Angebot!",
   "onlyForNewClients": "Nur für neue Abonnenten oder Benutzer des kostenlosen Tarifs",
   "planTitles": {
@@ -19,9 +20,10 @@
   },
   "billingFrequency": {
     "monthly": "Monatlich",
-    "semiannually": "Halbjährlich",
     "annually": "Jährlich",
-    "lifetime": "Lifetime"
+    "individual": "Individuell",
+    "lifetime": "Lebenslang",
+    "business": "Geschäftlich"
   },
   "billingFrequencyLabel": {
     "lifetime": "Einmalige Zahlung",
@@ -50,6 +52,7 @@
     "signUpNow": "Jetzt registrieren",
     "buy": "Kaufen",
     "get": "Erhalten",
+    "selectPlan": "Plan auswählen",
     "discount": "BESTER WERT!",
     "claimTheDeal": "Erhalte das Angebot",
     "freemonth": "Erhalte 30 Tage kostenlos"
@@ -59,7 +62,7 @@
     "enjoy10gb": "Genießen Sie dauerhaft bis zu 10 GB und erhalten Sie Zugriff auf alle unsere Dienstleistungen",
     "upTo": "Bis zu 10 GB",
     "freeForever": "Für immer kostenlos",
-    "cta": "Jetzt anmelden"
+    "cta": "Plan auswählen"
   },
   "features": {
     "enjoyForever": {
@@ -73,5 +76,47 @@
     "accessFromAnywhere": "Greife von jedem Gerät auf deine Dateien zu",
     "allServices": "Erhalte Zugang zu allen unseren Dienstleistungen",
     "dataAccess": "Kein unbefugter Datenzugriff"
+  },
+  "productFeatures": {
+    "200GB": [
+      "200GB verschlüsselter Speicher",
+      "Verschlüsselte Datei- und Ordnerfreigabe",
+      "Passwortgeschützte Dateifreigabe",
+      "Zugriff auf Ihre Dateien von jedem Gerät aus",
+      "Zugang zu allen unseren Dienstleistungen",
+      "Dateien bis zu 20 GB hochladen",
+      "Zwei-Faktor-Authentifizierung (2FA)",
+      "Premium-Kundensupport"
+    ],
+    "2TB": [
+      "2TB verschlüsselter Speicher",
+      "Verschlüsselte Datei- und Ordnerfreigabe",
+      "Passwortgeschützte Dateifreigabe",
+      "Zugriff auf Ihre Dateien von jedem Gerät aus",
+      "Zugang zu allen unseren Dienstleistungen",
+      "Dateien bis zu 20 GB hochladen",
+      "Zwei-Faktor-Authentifizierung (2FA)",
+      "Premium-Kundensupport"
+    ],
+    "5TB": [
+      "5TB verschlüsselter Speicher",
+      "Verschlüsselte Datei- und Ordnerfreigabe",
+      "Passwortgeschützte Dateifreigabe",
+      "Zugriff auf Ihre Dateien von jedem Gerät aus",
+      "Zugang zu allen unseren Dienstleistungen",
+      "Dateien bis zu 20 GB hochladen",
+      "Zwei-Faktor-Authentifizierung (2FA)",
+      "Premium-Kundensupport"
+    ],
+    "10TB": [
+      "10TB verschlüsselter Speicher",
+      "Verschlüsselte Datei- und Ordnerfreigabe",
+      "Passwortgeschützte Dateifreigabe",
+      "Zugriff auf Ihre Dateien von jedem Gerät aus",
+      "Zugang zu allen unseren Dienstleistungen",
+      "Dateien bis zu 20 GB hochladen",
+      "Zwei-Faktor-Authentifizierung (2FA)",
+      "Premium-Kundensupport"
+    ]
   }
 }

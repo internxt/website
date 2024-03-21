@@ -1,12 +1,10 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 import Image from 'next/legacy/image';
 import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
-import HomePageBanner from '@/components/banners/HomePageBanner';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -19,10 +17,10 @@ export default function HeroSection({ textContent, lang }) {
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 md:flex-row md:items-stretch">
-          <HomePageBanner />
-          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md md:items-start md:text-left lg:my-28 lg:ml-0 lg:max-w-xl">
-            {/* <div className="flex object-contain lg:hidden">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
+          <div className="flex w-full flex-col px-2 lg:hidden">{/* <HomePageBanner /> */}</div>
+          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
+            <div className="flex object-contain lg:hidden">
               <Image
                 loading="eager"
                 className="object-contain"
@@ -32,7 +30,7 @@ export default function HeroSection({ textContent, lang }) {
                 height={450}
                 alt="Laptop and phone with Internxt app"
               />
-            </div> */}
+            </div>
 
             <Header>
               {textContent.title.line1}{' '}
@@ -58,16 +56,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           {/* Desktop animation/image */}
-          <Link href="/pricing" className="hidden items-center lg:flex lg:pt-5" locale={lang}>
-            <Image
-              src="/images/home/internxt_sale.webp"
-              width={562}
-              height={529}
-              alt="Internxt Valentines Sale"
-              className="cursor-pointer object-contain"
-            />
-          </Link>
-          {/* <Animation /> */}
+          <Animation />
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
@@ -233,7 +222,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           <div className={'mx-auto hidden w-full overflow-hidden xl:flex'}>
-            <div className="featured flex w-full flex-row justify-center overflow-x-auto px-4 pb-8 pt-10">
+            <div className="featured flex w-full flex-row justify-center overflow-x-auto px-4 pb-5 pt-5">
               <div className="flex flex-row items-center space-x-12">
                 {lang === 'es' ? (
                   <a

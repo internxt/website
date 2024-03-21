@@ -42,6 +42,8 @@ let nameFiles = [
   'internxt-library',
   'online-privacy-ebook',
   'child-safety-ebook',
+  'locker',
+  'startpage',
 ];
 
 const langs = {

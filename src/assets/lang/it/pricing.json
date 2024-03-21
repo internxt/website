@@ -14,17 +14,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia il 69%",
-      "title": "Senti l'amore, proteggi i tuoi file!",
-      "subtitle": "Iscriviti e risparmia con Internxt.",
-      "cta": "Dammi il 69% DI SCONTO",
-      "guarantee": "Garanzia di rimborso entro 30 giorni",
-      "lastCta": "*L'offerta è valida solo per account gratuiti o nuovi clienti"
+      "label": "Risparmia il 75%",
+      "title": "Sono arrivati gli sconti primaverili!",
+      "subtitle": "Abbonati e risparmia con Internxt.",
+      "cta": "Scegli un piano",
+      "guarantee": "Garanzia soddisfatti o rimborsati entro 30 giorni",
+      "lastCta": "*L'offerta è valida solo per gli account gratuiti o i nuovi clienti"
     },
-    "featureSection": {
-      "firstFeature": "Garanzia di rimborso di 30 giorni",
-      "secondFeature": "Pagamento sicuro al 100%",
-      "thirdFeature": "Creazione di un account anonimo"
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione di account anonimi"
     }
   },
   "FaqSection": {

@@ -2,7 +2,7 @@ import { goToSignUpURL } from '@/lib/auth';
 
 const FreePlanCard = ({ textContent }) => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-5 rounded-2xl bg-white px-5 py-9 shadow-subtle md:flex-row md:justify-between">
+    <div className="flex w-full flex-col items-center justify-center gap-5 rounded-2xl border border-gray-10 px-5 py-9 md:flex-row md:justify-between">
       <div className="flex flex-col space-y-5 text-center md:text-left">
         <p className="text-2xl font-bold text-gray-100">{textContent.getStarted}</p>
         <div className="flex flex-row space-x-2 md:items-center">
@@ -17,14 +17,11 @@ const FreePlanCard = ({ textContent }) => {
         </div>
       </div>
       <div className="flex flex-col items-center space-y-2">
-        <div className="flex rounded-full bg-gray-5 py-0.5 px-3">
-          <p className="font-semibold text-cool-gray-50">{textContent.upTo}</p>
-        </div>
         <p className="text-4xl font-bold text-gray-100">{textContent.freeForever}</p>
       </div>
       <div className="flex">
         <button
-          className="flex w-full flex-col rounded-lg bg-primary px-20 py-2.5 font-medium text-white"
+          className="flex w-full flex-col rounded-lg border border-primary px-20 py-2.5 font-medium text-primary hover:bg-gray-1 active:bg-gray-5"
           onClick={() => {
             goToSignUpURL();
           }}

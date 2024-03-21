@@ -73,7 +73,7 @@ describe('Auth flow (Sign Up / Log In)', () => {
         const cardId = '#freeAccountCard';
 
         cy.get(cardId).should('exist');
-        cy.get(cardId).contains('Sign up now').click();
+        cy.get(cardId).contains('Select plan').click();
 
         cy.url().should('eq', 'https://drive.internxt.com/new');
       });

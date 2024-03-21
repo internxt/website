@@ -1,14 +1,20 @@
-/* eslint-disable react/no-danger */
-import Head from 'next/head';
 import React, { useEffect } from 'react';
-import isBrave from '@/lib/brave';
-import Script from 'next/script';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
-import TopBannerHomePage from '@/components/banners/TopBannerHomePage';
+import Script from 'next/script';
 import axios from 'axios';
 import moment from 'moment';
 
+import isBrave from '@/lib/brave';
+import TopBanner from '@/components/banners/TopBanner';
+
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
+
+const slogan = {
+  en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
+  es: 'Internxt es un servicio seguro de almacenamiento en la nube basado en el cifrado y la privacidad absoluta. El conjunto de servicios de código abierto de Internxt protege tu privacidad. Internxt Drive, Photos, Send y mucho más.',
+  fr: "Internxt est un service de stockage en ligne sécurisé basé sur le chiffrage et la confidentialité absolue. La suite open-source de services de stockage en nuage d'Internxt protège votre droit à la vie privée. Internxt Drive, Photos, Send, et plus encore.",
+};
 
 interface LayoutProps {
   readonly children: React.ReactNode;
@@ -22,6 +28,7 @@ interface LayoutProps {
   readonly host?: string;
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
+  readonly showBanner?: boolean;
 }
 
 const INTERNXT_URL = 'https://internxt.com';
@@ -36,6 +43,9 @@ const excludedPaths = [
   '/dealfuel',
   '/mightydeals',
   '/temporary-email',
+  '/locker',
+  '/startpage',
+  '/oystervpn',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 
@@ -49,13 +59,15 @@ export default function Layout({
   disableDrift = true,
   isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
+  showBanner,
 }: // lang
 LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const showBanner = !excludedPaths.includes(pathname);
+  const shouldShowBanner = showBanner ?? !excludedPaths.includes(pathname);
+
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
 
@@ -136,12 +148,6 @@ LayoutProps) {
         console.log(err);
       });
   }, [segmentName]);
-
-  const slogan = {
-    en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
-    es: 'Internxt es un servicio seguro de almacenamiento en la nube basado en el cifrado y la privacidad absoluta. El conjunto de servicios de código abierto de Internxt protege tu privacidad. Internxt Drive, Photos, Send y mucho más.',
-    fr: "Internxt est un service de stockage en ligne sécurisé basé sur le chiffrage et la confidentialité absolue. La suite open-source de services de stockage en nuage d'Internxt protège votre droit à la vie privée. Internxt Drive, Photos, Send, et plus encore.",
-  };
 
   return (
     <>
@@ -224,9 +230,9 @@ LayoutProps) {
           ]
         }`}
       </Script>
-      {showBanner ? (
+      {shouldShowBanner ? (
         <>
-          <TopBannerHomePage isBannerFixed={isBannerFixed} />
+          <TopBanner isBannerFixed={isBannerFixed} />
           <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (

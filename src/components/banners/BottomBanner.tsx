@@ -1,63 +1,38 @@
 import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
-
+import Image from 'next/image';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
-
 const BottomBanner = () => {
   const [hidePopup, setHidePopup] = useState(false);
   const router = useRouter();
   const lang = router.locale;
-
   useEffect(() => {
     const getSquareBannerLS = sessionStorage.getItem(SHOW_SQUARE_BANNER_LS);
     if (getSquareBannerLS) setHidePopup(true);
   }, []);
-
   function handleClose() {
     setHidePopup(true);
     sessionStorage.setItem(SHOW_SQUARE_BANNER_LS, 'false');
   }
-
-  const label = () => {
-    switch (lang) {
-      case 'en':
-        return 'Save 69%';
-      case 'es':
-        return 'Ahorra un 69%';
-      case 'ru':
-        return 'Скидка 69%!';
-      case 'fr':
-        return 'Économisez 69%';
-      case 'it':
-        return 'Risparmia il 69%';
-      case 'zh':
-        return '节省69%';
-      case 'de':
-        return 'Sparen Sie 69%';
-      default:
-        return 'Save 69%';
-    }
-  };
-
   const title = () => {
     switch (lang) {
       case 'en':
-        return 'Cloud cover for privacy lovers!';
+        return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
       case 'es':
-        return 'Ofertas de San Valentín!';
+        return { title1: '¡Ahorra un 75%', title2: ' ¡Llegaron las ofertas de primavera!' };
       case 'ru':
-        return 'На день Св. Валентина!';
+        return { title1: 'Экономия 75%', title2: 'Весенние скидки уже здесь!' };
       case 'fr':
-        return 'Offres de la Saint-Valentin!';
+        return { title1: 'Économisez 75%', title2: 'Les économies de printemps sont arrivées!' };
       case 'it':
-        return 'Offerte di San Valentino!';
+        return { title1: 'Risparmia il 75%', title2: 'Sono arrivati i risparmi primaverili!' };
       case 'zh':
-        return '情人节特惠！';
+        return { title1: '省 75%', title2: '春季优惠来啦！' };
       case 'de':
-        return 'Valentinstagsangebote!';
+        return { title1: 'Sparen Sie 75%', title2: 'Frühlingssparangebote sind eingetroffen!' };
       default:
-        return 'Cloud cover for privacy lovers!';
+        return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
     }
   };
 
@@ -81,33 +56,34 @@ const BottomBanner = () => {
         return 'Choose plan';
     }
   };
-
   return (
     <section
       className={`fixed bottom-10 z-50 hidden lg:${
         hidePopup ? 'hidden' : 'flex'
-      } mx-auto overflow-hidden rounded-lg border-4 border-primary/7 bg-white px-5 lg:px-0`}
+      } overflow-hidden rounded-lg border-4 border-primary/7 bg-white px-5 lg:px-0`}
     >
-      <div className="relative flex h-[100px] flex-col items-center justify-center bg-contain bg-center bg-no-repeat px-14">
+      <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
           <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2">
-            <X className=" text-gray-100" size={24} />
+            <X size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row items-center justify-center">
-          {/* <div className="absolute left-0">
-            <Image src="/images/banners/wheel_web_banner_left.png" width={170} height={109} />
+        <div className="z-40 flex flex-row ">
+          <div className="flex flex-col">
+            <Image
+              src="/images/banners/internxt_spring_sale_banner.webp"
+              width={198}
+              height={100}
+              className="flex w-full object-fill"
+              draggable={false}
+              alt={"Internxt's spring sale"}
+            />
           </div>
-          <div className="absolute right-0">
-            <Image src="/images/banners/wheel_web_banner_right.png" width={180} height={109} />
-          </div> */}
-          <div className="relative flex flex-row items-center justify-center space-x-5 text-center text-gray-80">
-            <div className="flex w-max rounded-2xl bg-red-dark py-2 px-4 ring-4 ring-red">
-              <p className="text-3xl font-bold text-white lg:text-5xl">{label()}</p>
-            </div>
-            <p className="text-5xl font-bold">{title()}</p>
+          <div className="flex flex-row items-center justify-center space-x-5">
+            <p className="text-6xl font-bold text-primary">{title().title1}</p>
+            <p className="max-w-[300px] text-2xl font-bold">{title().title2}</p>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-gray-5 py-2.5 px-5 text-xl font-medium text-gray-80 transition duration-100 hover:bg-gray-10 focus:outline-none focus-visible:bg-gray-10 active:bg-gray-10 sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
               onClick={() => {
                 router.push('/pricing');
               }}
@@ -120,5 +96,4 @@ const BottomBanner = () => {
     </section>
   );
 };
-
 export default BottomBanner;

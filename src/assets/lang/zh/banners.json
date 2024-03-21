@@ -28,19 +28,19 @@
       "title6": "Available until Dec 5th"
     }
   },
-  "valentinesBanner": {
-    "label": "省69%",
-    "title": "珍爱你的隐私!",
+  "featuresBanner": {
+    "label": "省75%",
+    "title": "开始您的数字春季大扫除",
     "cta": "选择计划",
-    "guarantee": "30 天内退款保证",
-    "lastCta": "*此优惠仅适用于免费账户或新客户",
+    "guarantee": "30天退款保证",
+    "lastCta": "*优惠仅适用于免费帐户或新客户",
     "features": [
-      "在月度和年度计划上节省",
+      "在我们所有的计划上节省",
       "安全可靠的云存储",
       "开源和透明",
       "端到端加密传输",
-      "无未经授权访问",
-      "优惠截止日期为2月25日"
+      "没有未经授权的访问",
+      "优惠截至日期为3月18日"
     ]
   },
   "tryOutInternxtGeneralBanner": {
@@ -87,9 +87,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "尽情享受月度或年度计划 69% 的折扣。",
-      "normalText": "展示一些对你的文件的爱! ",
-      "cta": "选择计划"
+      "boldText": "终身计划 75 折优惠：",
+      "normalText": "永久保护您的文件！",
+      "cta": "选择您的计划"
     }
   },
   "lifetimeBanner": {

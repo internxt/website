@@ -93,4 +93,10 @@ export enum CouponType {
   Wheel30 = 'WHEEL30_COUPON',
   Wheel45 = 'WHEEL45_COUPON',
   Wheel50 = 'WHEEL50_COUPON',
+  LockerCoupon = 'LOCKER_COUPON_CODE',
+  StartPageCoupon = 'STARTPAGE_COUPON_CODE',
+  SpringCoupon = 'SPRING_COUPON_CODE',
+  PcComponentesCoupon = 'PC_COMPONENTES_COUPON',
 }
+
+export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

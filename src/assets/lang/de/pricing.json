@@ -15,17 +15,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Spare 69%",
-      "title": "Spüre die Liebe, sichere deine Dateien!",
-      "subtitle": "Abonnieren und sparen mit Internxt.",
-      "cta": "Gib mir 69% RABATT",
+      "label": "75% sparen",
+      "title": "Die Frühlingssparangebote sind da!",
+      "subtitle": "Abonnieren Sie und sparen Sie mit Internxt.",
+      "cta": "Plan auswählen",
       "guarantee": "30 Tage Geld-zurück-Garantie",
-      "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden"
+      "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden"
     },
-    "featureSection": {
-      "firstFeature": "30-Tage Geld-zurück-Garantie",
-      "secondFeature": "100% sichere Zahlung",
-      "thirdFeature": "Anonyme Kontenerstellung"
+    "features": {
+      "endToEnd": "End-to-End-verschlüsselt",
+      "openSource": "Open Source und überprüft",
+      "anonymousAccount": "Anonyme Kontenerstellung"
     }
   },
   "ctaText": "Angebot gültig für ein Jahr. Der Plan wird im folgenden Jahr zum regulären Preis erneuert.",
