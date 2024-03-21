@@ -7,8 +7,8 @@
     },
     "cards": [
       {
-        "title": "PDF to Word",
-        "description": "A free PDF to Word converter.",
+        "title": "Word to PDF",
+        "description": "A free Word to PDF converter.",
         "pathname": "word-to-pdf"
       },
       {
