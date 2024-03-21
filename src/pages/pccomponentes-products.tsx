@@ -190,9 +190,9 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/priceCard.json`);
+  const lang = 'es';
+  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/es/priceCard.json`);
 
   return {
     props: {
