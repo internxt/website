@@ -63,7 +63,10 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
   }, [animation]);
 
   return (
-    <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
+    <div
+      id="inbox"
+      className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard"
+    >
       <div className="flex flex-col">
         <div className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10">
           <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 px-4 py-5">

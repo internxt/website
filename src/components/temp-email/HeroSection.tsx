@@ -12,6 +12,8 @@ const EMAIL_STORAGE_KEY = 'email';
 const SETUP_TIME_STORAGE_KEY = 'setupTime';
 const INBOX_STORAGE_KEY = 'inbox';
 
+const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
+
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text);
 }
@@ -36,12 +38,16 @@ const HeroSection = ({ textContent }) => {
 
   const isFocused = useWindowFocus();
 
-  const hours = 5;
-  const now = new Date().getTime();
+  const timeNow = new Date().getTime();
 
   // Open the links that are in the email received in a new tab
   useEffect(() => {
-    const links = document.querySelectorAll('a');
+    const inboxElement = document.getElementById('inbox');
+    console.log(inboxElement);
+
+    if (!inboxElement) return;
+
+    const links = inboxElement.querySelectorAll('a');
 
     const navbar = document.querySelector('#navbar');
     const footer = document.querySelector('#footer');
@@ -72,7 +78,7 @@ const HeroSection = ({ textContent }) => {
 
   function checkLocalStorage() {
     const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
-    if (setupTime !== null && now - Number(setupTime) > hours * 60 * 60 * 1000) {
+    if (setupTime !== null && timeNow - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL) {
       removeLocalStorage();
       setSelectedMessage(null);
     }
@@ -83,7 +89,7 @@ const HeroSection = ({ textContent }) => {
       setEmail(address);
       setToken(token);
     } else {
-      localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(now));
+      localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(timeNow));
       createEmail()
         .then((res) => {
           localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(res));
