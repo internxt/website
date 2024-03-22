@@ -72,6 +72,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
         couponType={CouponType.SpringCoupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
+        isStartPage
       />
 
       <FeatureSection textContent={textContent.FeatureSection} />

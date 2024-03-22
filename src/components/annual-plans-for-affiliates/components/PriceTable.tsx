@@ -14,6 +14,7 @@ interface PriceTableProps {
   billingFrequency: string;
   couponType?: CouponType;
   discount?: number;
+  isStartPage?: boolean;
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({
@@ -22,6 +23,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
   couponType,
   discount,
   billingFrequency,
+  isStartPage,
 }) => {
   const { products, currency, loadingCards, coupon } = usePricing({
     couponCode: couponType,
@@ -46,6 +48,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center py-20">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
+          {isStartPage ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
