@@ -4,9 +4,9 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
-import ToolsSection from '@/components/shared/ToolsSection';
-import ConverterSection from '@/components/file-converter/ConverterSection';
-import FeaturesSection from '@/components/file-converter/FeaturesSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
+import { ConverterSection } from '@/components/file-converter/ConverterSection';
+import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
 
 const FileConverter = ({

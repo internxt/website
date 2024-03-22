@@ -2,17 +2,14 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import { fileConverter, fileMimeTypes, imageConverter } from './types';
+import { Errors, MAX_FILE_SIZE, fileConverter, fileMimeTypes, imageConverter } from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
 import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
-
-export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
-
-type Views = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState';
+import { ErrorState } from './states/ErrorState';
 
 interface ConverterSectionProps {
   textContent: any;
@@ -20,11 +17,11 @@ interface ConverterSectionProps {
   pathname: string;
 }
 
-interface ViewProps {
-  view: Views;
+interface ConverterStatesProps {
+  state: ConverterStates;
 }
 
-const MAX_FILE_SIZE = 1073741824;
+type ConverterStates = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState' | 'errorState';
 
 const converters = [
   { type: 'file', paths: fileConverter },
@@ -32,9 +29,9 @@ const converters = [
   { type: 'pdf', paths: ['png-to-pdf'] },
 ];
 
-const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSectionProps) => {
+export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent, errorContent, pathname }) => {
   const [files, setFiles] = useState<FileList | null>(null);
-  const [views, setViews] = useState<Views>('initialState');
+  const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
   const [error, setError] = useState<Errors | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const uploadFileRef = createRef<HTMLInputElement>();
@@ -44,7 +41,7 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
 
   const lastExtensionInPathname = pathnameSegments[pathnameSegments.length - 1];
 
-  const allowedUploadFiles = fileMimeTypes[pathnameSegments[0]];
+  const allowedUploadedFilesExtension = fileMimeTypes[pathnameSegments[0]];
 
   const isMultipleFilesAllowed = pathname === 'png-to-pdf';
 
@@ -52,12 +49,12 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
     setError(null);
     setFiles(null);
     uploadFileRef.current === null;
-    setViews('initialState');
-  }, []);
+    setConverterStates('initialState');
+  }, [error, files, uploadFileRef, converterStates]);
 
-  const handleFileDrop = (files: FileList) => {
+  const handleDroppedFiles = (files: FileList) => {
     setFiles(files);
-    setViews('selectedFileState');
+    setConverterStates('selectedFileState');
   };
 
   const handleOpenFileExplorer = () => {
@@ -66,35 +63,34 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
 
   const handleFileInput = () => {
     const fileInput = uploadFileRef.current;
-    console.log(fileInput?.files);
     if (fileInput?.files && fileInput.files.length > 0) {
       const filesSize = Array.from(fileInput.files).reduce((accumulator, file) => accumulator + file.size, 0);
 
       if (filesSize > MAX_FILE_SIZE) {
         setError('bigFile');
-        setViews('initialState');
+        setConverterStates('errorState');
       } else {
         setFiles(fileInput.files);
-        setViews('selectedFileState');
+        setConverterStates('selectedFileState');
       }
     }
   };
 
-  const handleConverter = async () => {
+  const handleConversion = async () => {
     if (!pathname || !files) return;
 
-    const relevantPath = pathname.split('/').pop();
-    if (!relevantPath) return;
+    const extensionToConvertTo = pathname.split('/').pop();
+    if (!extensionToConvertTo) return;
 
-    const converter = converters.find(({ paths }) => paths.includes(relevantPath));
+    const converter = converters.find(({ paths }) => paths.includes(extensionToConvertTo));
 
     if (!converter) {
       setError('unsupportedFormat');
-      setViews('initialState');
+      setConverterStates('errorState');
       return;
     }
 
-    setViews('convertingState');
+    setConverterStates('convertingState');
 
     try {
       switch (converter.type) {
@@ -110,23 +106,20 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
         default:
           throw new Error('Invalid converter type');
       }
-      setViews('downloadFileState');
+      setConverterStates('downloadFileState');
     } catch (err) {
       const error = err as Error;
       setError(error.message.includes('File too large') ? 'bigFile' : 'internalError');
-      setViews('initialState');
+      setConverterStates('errorState');
     }
   };
 
-  const View = (views: ViewProps) => {
-    const view = {
+  const State = (views: ConverterStatesProps) => {
+    const state = {
       initialState: (
         <InitialState
           textContent={textContent.dragNDropArea}
-          error={error}
-          resetViewToInitialState={resetViewToInitialState}
-          errorContent={errorContent}
-          handleFileDrop={handleFileDrop}
+          handleFileDrop={handleDroppedFiles}
           isDragging={isDragging}
           setIsDragging={setIsDragging}
           handleOpenFileExplorer={handleOpenFileExplorer}
@@ -136,7 +129,7 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
         <SelectedFile
           textContent={textContent.fileSelected}
           files={files}
-          onFileConvert={handleConverter}
+          onFileConvert={handleConversion}
           onCancel={resetViewToInitialState}
         />
       ),
@@ -155,12 +148,20 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
         <DownloadFileState
           textContent={textContent.fileConverted}
           onConvertMoreFilesButtonPressed={resetViewToInitialState}
-          onDownloadFile={handleConverter}
+          onDownloadFile={handleConversion}
+        />
+      ),
+      errorState: (
+        <ErrorState
+          error={error}
+          resetViewToInitialState={resetViewToInitialState}
+          errorContent={errorContent}
+          textContent={textContent.dragNDropArea}
         />
       ),
     };
 
-    return view[views.view];
+    return state[views.state];
   };
 
   return (
@@ -169,7 +170,7 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
         <input
           className="pointer-events-none absolute h-0 w-0 overflow-hidden"
           type="file"
-          accept={`${allowedUploadFiles}`}
+          accept={`${allowedUploadedFilesExtension}`}
           multiple={isMultipleFilesAllowed}
           id="uploadFile"
           ref={uploadFileRef}
@@ -186,11 +187,10 @@ const ConverterSection = ({ textContent, errorContent, pathname }: ConverterSect
         <div
           className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl ${borderStyle}  py-12`}
         >
-          <View view={views} />
+          {/* Card */}
+          <State state={converterStates} />
         </div>
       </div>
     </section>
   );
 };
-
-export default ConverterSection;

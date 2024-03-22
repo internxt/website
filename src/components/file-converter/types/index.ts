@@ -26,3 +26,7 @@ const allowedExtensions = {
 };
 
 export { fileConverter, imageConverter, fileMimeTypes, allowedExtensions };
+
+export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
+
+export const MAX_FILE_SIZE = 1073741824;

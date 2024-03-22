@@ -3,7 +3,7 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/file-converter/HeroSection';
-import ToolsSection from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
 import Footer from '@/components/layout/Footer';
 
 const FileConverter = ({ metatagsDescriptions, navbarLang, textContent, footerLang, lang, toolsContent }) => {

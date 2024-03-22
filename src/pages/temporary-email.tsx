@@ -6,7 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/temp-email/HeroSection';
 import SignupSection from '@/components/temp-email/SignupSection';
 import InfoSection from '@/components/temp-email/InfoSection';
-import ToolsSection from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
 import QASection from '@/components/shared/FaqSection';
 import Footer from '@/components/layout/Footer';
 
