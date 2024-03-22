@@ -8,6 +8,16 @@ import { createEmail, getInbox } from './services/temp-mail.service';
 import { notificationService } from '@/components/Snackbar';
 import useWindowFocus from './hooks/useWindowFocus';
 
+interface MessageProps {
+  body: string;
+  date: number;
+  from: string;
+  html: string;
+  ip: string;
+  subject: string;
+  to: string;
+}
+
 const EMAIL_STORAGE_KEY = 'email';
 const SETUP_TIME_STORAGE_KEY = 'setupTime';
 const INBOX_STORAGE_KEY = 'inbox';
@@ -26,15 +36,15 @@ function removeLocalStorage() {
 }
 
 const HeroSection = ({ textContent }) => {
-  const [email, setEmail] = useState(null);
-  const [token, setToken] = useState('');
-  const [borderColor, setBorderColor] = useState(false);
-  const [openedMessages, setOpenedMessages] = useState(0);
-  const [isMobileView, setIsMobileView] = useState(false);
-  const [isRefreshed, setIsRefreshed] = useState(false);
-  const [messages, setMessages] = useState<any>([]);
-  const [selectedMessage, setSelectedMessage] = useState(null);
-  const [generateEmail, setGenerateEmail] = useState(false);
+  const [email, setEmail] = useState<string | null>(null);
+  const [token, setToken] = useState<string>('');
+  const [borderColor, setBorderColor] = useState<boolean>(false);
+  const [openedMessages, setOpenedMessages] = useState<number>(0);
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+  const [isRefreshed, setIsRefreshed] = useState<boolean>(false);
+  const [messages, setMessages] = useState<MessageProps[]>([]);
+  const [selectedMessage, setSelectedMessage] = useState<MessageProps | null>(null);
+  const [generateEmail, setGenerateEmail] = useState<boolean>(false);
 
   const isFocused = useWindowFocus();
 
@@ -43,7 +53,6 @@ const HeroSection = ({ textContent }) => {
   // Open the links that are in the email received in a new tab
   useEffect(() => {
     const inboxElement = document.getElementById('inbox');
-    console.log(inboxElement);
 
     if (!inboxElement) return;
 
@@ -159,7 +168,7 @@ const HeroSection = ({ textContent }) => {
         })
         .catch((err) => {
           const error = err as Error;
-          console.log(error);
+          console.error(error);
         });
     },
     [messages, token],
