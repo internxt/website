@@ -40,24 +40,12 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
 
   // Split the info from the textContent object in STARTPAGE
   const heroSectionText = textContent.HeroSection;
-  const infoSection = {
-    part1: heroSectionText.info.split(START_PAGE)[0],
-    startPage: heroSectionText.info.substring(
-      heroSectionText.info.indexOf(START_PAGE),
-      heroSectionText.info.indexOf(START_PAGE) + 9,
-    ),
-    part2: heroSectionText.info.split(START_PAGE)[1],
-  };
 
   const InfoTextComponent = (
     <p className="text-xl text-gray-80">
-      {infoSection.part1}
-      <button onClick={onStartPageClicked} className="font-bold text-primary hover:underline">
-        {infoSection.startPage}
-      </button>
-      {infoSection.part2.split('75% OFF')[0]}
+      {heroSectionText.info.split('75% OFF')[0]}
       <span className="font-bold">75% OFF</span>
-      {infoSection.part2.split('75% OFF')[1]}
+      {heroSectionText.info.split('75% OFF')[1]}
     </p>
   );
 
