@@ -1,15 +1,16 @@
 {
   "HeroSection": {
     "title": "Secure, encrypted cloud storage",
-    "subtitle": "that protects your fundamental right to privacy online",
-    "info": "Use the code STARTPAGE at checkout to claim your exclusive 90% OFF one-time discount!",
+    "subtitle": "that protects your right to privacy",
+    "info": "Use the code STARTPAGE at checkout to claim your exclusive 75% OFF one-time discount!",
     "cta": "Choose your plan"
   },
   "PriceTable": {
-    "title": "Annual plans",
-    "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with year-long security",
+    "header": "Unlock 75% OFF",
+    "title": "Lifetime storage plans",
+    "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with lifetime-long security.",
     "priceCard": {
-      "mostPopularPlan": "Most popular",
+      "mostPopular": "Most popular",
       "billedAnnually": "Billed annually",
       "cta": "Redeem deal",
       "features": {

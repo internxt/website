@@ -22,7 +22,7 @@ const currencyValue = {
 
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const offerDiscount = 10;
+  const offerDiscount = 25;
 
   function onStartPageClicked() {
     copyToClipboard(START_PAGE);
@@ -32,7 +32,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
   function handlePriceCardButton(planId, currency, coupon) {
     checkout({
       planId: planId,
-      mode: 'subscription',
+      mode: 'payment',
       currency: currencyValue[currency] ?? 'eur',
       couponCode: coupon ?? undefined,
     });
@@ -55,22 +55,23 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <button onClick={onStartPageClicked} className="font-bold text-primary hover:underline">
         {infoSection.startPage}
       </button>
-      {infoSection.part2.split('90% OFF')[0]}
-      <span className="font-bold">90% OFF</span>
-      {infoSection.part2.split('90% OFF')[1]}
+      {infoSection.part2.split('75% OFF')[0]}
+      <span className="font-bold">75% OFF</span>
+      {infoSection.part2.split('75% OFF')[1]}
     </p>
   );
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} />
+      <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} isStartPage />
 
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={CouponType.StartPageCoupon}
+        couponType={CouponType.SpringCoupon}
         discount={offerDiscount}
+        billingFrequency="lifetime"
       />
 
       <FeatureSection textContent={textContent.FeatureSection} />
