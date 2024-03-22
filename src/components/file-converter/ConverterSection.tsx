@@ -11,6 +11,8 @@ import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
 
+const FILE_SCANNER_URL = process.env.FILE_SCANNER_URL;
+
 interface ConverterSectionProps {
   textContent: any;
   errorContent: any;
@@ -57,6 +59,27 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
     setConverterStates('selectedFileState');
   };
 
+  const scanFile = async (): Promise<boolean> => {
+    const fileInput = uploadFileRef.current;
+    const formdata = new FormData();
+    formdata.append('', (fileInput as any).files[0], 'test.txt');
+
+    const requestOptions = {
+      method: 'POST',
+      body: formdata,
+    };
+
+    const scanFile = await fetch(`/api/scan`, requestOptions);
+
+    if (scanFile.status === 200) {
+      const data = await scanFile.json();
+
+      return data.isInfected;
+    } else {
+      return true;
+    }
+  };
+
   const handleOpenFileExplorer = () => {
     (document.querySelector('input[type=file]') as any).click();
   };
@@ -77,6 +100,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
   };
 
   const handleConversion = async () => {
+    let isFileInfected;
     if (!pathname || !files) return;
 
     const extensionToConvertTo = pathname.split('/').pop();
@@ -90,23 +114,39 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
       return;
     }
 
+    const scanResults = await Promise.all(Array.from(files).map(scanFile));
+
+    scanResults.map((isFileInfected) => {
+      if (isFileInfected) {
+        setError('internalError');
+        setConverterStates('errorState');
+        return;
+      }
+    });
+
     setConverterStates('convertingState');
 
     try {
-      switch (converter.type) {
-        case 'file':
-          await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
-          break;
-        case 'image':
-          await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
-          break;
-        case 'pdf':
-          await fileConverterService.handleImagesToPdfConverter(files);
-          break;
-        default:
-          throw new Error('Invalid converter type');
+      if (!isFileInfected) {
+        switch (converter.type) {
+          case 'file':
+            await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
+            setConverterStates('downloadFileState');
+            break;
+          case 'image':
+            await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
+            setConverterStates('downloadFileState');
+            break;
+          case 'pdf':
+            await fileConverterService.handleImagesToPdfConverter(files);
+            setConverterStates('downloadFileState');
+            break;
+          default:
+            throw new Error('Invalid converter type');
+        }
+      } else {
+        setError('internalError');
       }
-      setConverterStates('downloadFileState');
     } catch (err) {
       const error = err as Error;
       setError(error.message.includes('File too large') ? 'bigFile' : 'internalError');
