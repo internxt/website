@@ -15,6 +15,7 @@ interface PriceTableProps {
   couponType?: CouponType;
   discount?: number;
   isStartPage?: boolean;
+  titleFontSize?: string;
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({
@@ -24,6 +25,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
   discount,
   billingFrequency,
   isStartPage,
+  titleFontSize,
 }) => {
   const { products, currency, loadingCards, coupon } = usePricing({
     couponCode: couponType,
@@ -49,10 +51,9 @@ const PriceTable: React.FC<PriceTableProps> = ({
       <div className="flex flex-col items-center py-20">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
           {isStartPage ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
+          <p className={`${titleFontSize ?? 'text-5xl'} font-semibold text-gray-100`}>{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
-        <div id="pricing-table"></div>
         <Transition
           show={loadingCards}
           enter="transition duration-500 ease-out"
@@ -69,7 +70,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
 
         {/* Render cards */}
         <Transition
-          id="pricing-table"
+          id="payment"
           show={!loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
           className={'flex flex-col'}

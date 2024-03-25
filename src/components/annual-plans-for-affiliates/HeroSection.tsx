@@ -12,7 +12,7 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage }) => {
   function redirectToPricingTable() {
     window.scrollTo({
-      top: document?.getElementById('pricing-table')?.offsetTop! + 500,
+      top: document?.getElementById('payment')?.offsetTop! + 500,
       behavior: 'smooth',
     });
   }

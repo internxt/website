@@ -14,7 +14,7 @@ import axios from 'axios';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
-const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang, priceTableContent }) => {
+const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const [country, setCountry] = useState('ES');
   const [openDialog, setOpenDialog] = useState(false);
@@ -63,10 +63,11 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />
 
       <PriceTable
-        textContent={priceTableContent.PriceTable}
+        textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
         discount={25}
         billingFrequency="lifetime"
+        titleFontSize="text-4xl"
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
@@ -85,8 +86,7 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/techcult.json`);
-  const priceTableContent = require(`@/assets/lang/en/locker.json`);
+  const langJson = require(`@/assets/lang/en/dealfuel.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
 
@@ -100,7 +100,6 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
-      priceTableContent,
     },
   };
 }
