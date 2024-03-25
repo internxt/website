@@ -11,6 +11,7 @@ import { CouponType } from '@/lib/types/types';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+  const discount = 0.5;
 
   return (
     <Layout
@@ -27,8 +28,8 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       <PaymentSection
         textContent={langJson.PaymentSection}
         lang={lang}
-        normalPrice
         couponCode={CouponType.LifetimeFiftyPercent}
+        discount={discount}
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
