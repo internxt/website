@@ -25,9 +25,13 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
   }
 
   useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
-    });
+    getCountryCode()
+      .then((res) => {
+        setCountry(res.data.country);
+      })
+      .catch((error) => {
+        // NO OP
+      });
   }, []);
 
   useEffect(() => {

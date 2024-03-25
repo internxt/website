@@ -7,9 +7,11 @@ import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
+import { CouponType } from '@/lib/types/types';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+  const discount = 0.25;
 
   return (
     <Layout
@@ -23,7 +25,12 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
+      <PaymentSection
+        textContent={langJson.PaymentSection}
+        discount={discount}
+        lang={lang}
+        couponCode={CouponType.SpringCoupon}
+      />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

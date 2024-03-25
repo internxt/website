@@ -1,0 +1,63 @@
+{
+  "HeroSection": {
+    "title": "获得终身 Internxt 计划！",
+    "description": "只需一次性付款，便可永久保护您的所有文件和记忆",
+    "cta1": "立即获得 50% 优惠",
+    "cta2": "浏览终身优惠",
+    "guarantee": "30 天退款保证"
+  },
+  "PaymentSection": {
+    "limitedOffer": "限时优惠！",
+    "title": { "blueText": "五折优惠", "normalText": "我们所有的独家终身计划" },
+    "description": "一次购买，永久获得隐私和安全",
+    "normalSection": {
+      "title": "探索我们所有的终身独家计划",
+      "description": "一次购买，永久获得隐私和安全。"
+    },
+    "securePayment": "100% 安全支付，由 Stripe 提供支持",
+    "features": {
+      "endToEnd": "Encriptado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima"
+    }
+  },
+  "GetLifetimeSection": {
+    "title": "生命并不短暂！但这一限时优惠却......",
+    "description": "Internxt正在提供终身隐私和安心的优惠。"
+  },
+  "FeatureSection": {
+    "title": "具有无与伦比的隐私性的安全云存储",
+    "description": "是什么让 Internxt 如此与众不同？我们是一支紧密团结的专业团队，完全致力于保护您的在线安全。我们所做的每一件事、每一个决定都以保护您的数据不被利用为中心",
+    "cta": "Internxt 的隐私承诺",
+    "cards": [
+      {
+        "title": "隐私设计",
+        "description": "我们不存储密码或用户数据，您的所有数据在传输和静止时都经过加密。Internxt 让您完全掌控自己的文件。您的数据就是您的业务。保护数据是我们的责任。"
+      },
+      {
+        "title": "毫不妥协的安全性",
+        "description": "您的文件在离开您的设备之前已被端到端加密。由于采用了零知识 AES-256 加密技术，因此绝对只有你才能访问你的数据。"
+      },
+      {
+        "title": "开源、透明",
+        "description": "我们为自己的工作感到自豪，因此我们的代码在 GitHub 上公开，任何人都可以亲自审查、审核和验证。除了您的数据，我们没有什么可隐藏的。"
+      },
+      {
+        "title": "独立验证",
+        "description": "我们完全符合 GDPR 要求，100% 安全，但不要相信我们的话。Internxt 已通过欧洲领先的渗透测试公司 Securitum 的独立审核和验证。"
+      }
+    ]
+  },
+  "campaignCtaSection": {
+    "title": "世界上最私密的云存储",
+    "subtitle": "使用 Internxt 的安全、私有和加密云存储保护真正重要的内容",
+    "cta": "立即选择计划",
+    "guarantee": "30天退款保证"
+  },
+
+  "CtaSection": {
+    "title": "世界上最私密的云存储",
+    "description": "使用 Internxt 的安全、私有和加密云存储保护真正重要的内容",
+    "cta": "立即选择计划"
+  }
+}
