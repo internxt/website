@@ -70,7 +70,7 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
 
       <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

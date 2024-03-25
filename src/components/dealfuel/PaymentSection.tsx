@@ -1,7 +1,15 @@
 import React from 'react';
 import PriceTable from './PriceTable';
 
-const PaymentSection = ({ lang, textContent }) => {
+const PaymentSection = ({
+  lang,
+  textContent,
+  priceCurrency,
+}: {
+  lang: string;
+  textContent: any;
+  priceCurrency?: string;
+}) => {
   return (
     <section id="payment" className="overflow-hidden pb-20">
       <div className="flex flex-col pt-10  lg:pt-0">
@@ -15,7 +23,7 @@ const PaymentSection = ({ lang, textContent }) => {
           </div>
         </div>
 
-        <PriceTable lang={lang} textContent={textContent} />
+        <PriceTable lang={lang} textContent={textContent} priceCurrency={priceCurrency} />
       </div>
     </section>
   );

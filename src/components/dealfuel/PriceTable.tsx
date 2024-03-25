@@ -13,7 +13,15 @@ const priceForSubscriptions = (product) => {
   return firstPartOfPrice + '.' + secondPartOfPrice;
 };
 
-const PriceTable = ({ lang, textContent }) => {
+const PriceTable = ({
+  lang,
+  textContent,
+  priceCurrency,
+}: {
+  lang: string;
+  textContent: any;
+  priceCurrency?: string;
+}) => {
   const { products, currency, currencyValue, loadingCards, coupon } = usePricing({});
 
   return (
@@ -50,7 +58,7 @@ const PriceTable = ({ lang, textContent }) => {
                   popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}
                   lang={lang}
-                  currency={currency}
+                  currency={priceCurrency ?? currency}
                   currencyValue={currencyValue}
                   coupon={coupon ?? undefined}
                   isRedeemCodePage

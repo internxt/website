@@ -10,7 +10,6 @@ import PaymentSection from '@/components/dealfuel/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/dealfuel/CtaSection';
 
-import axios from 'axios';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
@@ -22,8 +21,8 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
     //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
     const TB2Button = document.getElementById('planButton2TB');
     const TB5Button = document.getElementById('planButton5TB');
-    const TB10Buton = document.getElementById('planButton10TB');
-    [TB2Button, TB5Button, TB10Buton].forEach((button) =>
+    const TB10Button = document.getElementById('planButton10TB');
+    [TB2Button, TB5Button, TB10Button].forEach((button) =>
       button?.addEventListener('click', () => {
         setOpenDialog(true);
       }),

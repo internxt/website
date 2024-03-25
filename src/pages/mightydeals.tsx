@@ -54,7 +54,7 @@ const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceL
 
       <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} priceCurrency="$" />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
