@@ -45,7 +45,6 @@ const fetchAndFormatInbox = async (
     return [];
   } catch (err) {
     const error = err as Error;
-    console.error('[ERROR FETCHING INBOX]:', error.message);
     throw new Error(`Something went wrong`);
   }
 };
