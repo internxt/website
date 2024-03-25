@@ -4,11 +4,11 @@ import { Copy, Info, Trash } from '@phosphor-icons/react';
 
 import Inbox from './components/InboxView';
 import Header from '@/components/shared/Header';
-import { createEmail, getInbox } from './services/temp-mail.service';
+import { createEmail, fetchAndFormatInbox } from './services/temp-mail.service';
 import { notificationService } from '@/components/Snackbar';
 import useWindowFocus from './hooks/useWindowFocus';
 
-interface MessageProps {
+export interface MessageObjProps {
   body: string;
   date: number;
   from: string;
@@ -16,6 +16,7 @@ interface MessageProps {
   ip: string;
   subject: string;
   to: string;
+  opened: boolean;
 }
 
 const EMAIL_STORAGE_KEY = 'email';
@@ -42,8 +43,8 @@ const HeroSection = ({ textContent }) => {
   const [openedMessages, setOpenedMessages] = useState<number>(0);
   const [isMobileView, setIsMobileView] = useState<boolean>(false);
   const [isRefreshed, setIsRefreshed] = useState<boolean>(false);
-  const [messages, setMessages] = useState<MessageProps[]>([]);
-  const [selectedMessage, setSelectedMessage] = useState<MessageProps | null>(null);
+  const [messages, setMessages] = useState<MessageObjProps[]>([]);
+  const [selectedMessage, setSelectedMessage] = useState<MessageObjProps | null>(null);
   const [generateEmail, setGenerateEmail] = useState<boolean>(false);
 
   const isFocused = useWindowFocus();
@@ -139,39 +140,56 @@ const HeroSection = ({ textContent }) => {
   }, [isFocused, token]);
 
   const getMailInbox = useCallback(
-    (userToken: string) => {
+    async (userToken: string) => {
       if (!userToken) return;
-      getInbox(userToken)
-        .then((res) => {
-          if (res.expired) return;
 
-          let messageIdCounter = messages?.length;
-          if (res == null) return;
-          if (res?.length > 0) {
-            const message = res.map((item) => {
-              messageIdCounter++;
-              return {
-                ...item,
-                opened: false,
-                id: messageIdCounter,
-              };
-            });
-            const allMessages = messages == null ? [...message] : [...messages, ...message];
-            setMessages(allMessages);
-            localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessages));
-            const unopenedMessages = allMessages.filter((item) => !item.opened).length;
-            setOpenedMessages(unopenedMessages);
-          } else {
-            const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-            setMessages(JSON.parse(inbox));
-          }
-        })
-        .catch((err) => {
-          const error = err as Error;
-          console.error(error);
-        });
+      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(userToken);
+
+      if (messagesInInbox && messagesInInbox.length > 0) {
+        const allMessagesInInbox = messages == null ? [...messagesInInbox] : [...messages, ...messagesInInbox];
+        const unopenedMessages = allMessagesInInbox.filter((item) => !item.opened).length;
+
+        setMessages(allMessagesInInbox);
+        setOpenedMessages(unopenedMessages);
+        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessagesInInbox));
+      } else {
+        const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
+        setMessages(JSON.parse(inbox));
+      }
+
+      // fetchInbox(userToken)
+      //   .then((res) => {
+      //     if (res.expired) return;
+
+      //     let messageIdCounter = messages?.length;
+      //     if (res == null) return;
+      //     if (res?.length > 0) {
+      //       const message = res.map((item, index) => {
+      //         messageIdCounter++;
+      //         return {
+      //           ...item,
+      //           opened: false,
+      //           id: index,
+      //         };
+      //       });
+
+      //       const allMessages = messages == null ? [...message] : [...messages, ...message];
+      //       const unopenedMessages = allMessages.filter((item) => !item.opened).length;
+
+      //       setMessages(allMessages);
+      //       setOpenedMessages(unopenedMessages);
+      //       localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessages));
+      //     } else {
+      //       const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
+      //       setMessages(JSON.parse(inbox));
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     const error = err as Error;
+      //     console.error(error);
+      //   });
     },
-    [messages, token],
+    [token],
   );
 
   const onRefresh = useCallback(() => {
