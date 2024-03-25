@@ -15,7 +15,7 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
                   <Countdown textColor={'white'} />
                 </div>
               )}
-              <div className="flex max-w-[448px] flex-col pb-10 text-center text-white md:text-start">
+              <div className="flex max-w-[600px] flex-col pb-10 text-center text-white md:text-start">
                 <p className="text-7xl font-bold">{textContent.title}</p>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
@@ -35,7 +35,7 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
               <div className=" flex w-[770px] flex-col 2xl:w-[850px]">
                 <img
                   src="/images/lifetime/infinity.svg"
-                  className="relative h-full w-full translate-x-56 object-contain object-left 2xl:translate-x-96"
+                  className="relative h-full w-full translate-x-56 object-contain object-left"
                   alt="Infinity image"
                 />
               </div>

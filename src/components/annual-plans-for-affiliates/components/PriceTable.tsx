@@ -2,7 +2,7 @@ import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 
 import PriceCard from './PriceCard';
-import { Detective, FolderLock, ShieldCheck } from '@phosphor-icons/react';
+import { Detective, FolderLock } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';

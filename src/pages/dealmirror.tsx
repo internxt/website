@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import HeroSection from '@/components/dealfuel/HeroSection';
-import FeatureSection from '@/components/dealfuel/FeatureSection';
+import FeatureSection from '@/components/lifetime/FeatureSection';
 import GetLifetimeSection from '@/components/dealfuel/GetLifetimeSection';
 import Footer from '@/components/layout/Footer';
 import Layout from '@/components/layout/Layout';
@@ -25,9 +25,13 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
   }
 
   useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
-    });
+    getCountryCode()
+      .then((res) => {
+        setCountry(res.data.country);
+      })
+      .catch(() => {
+        //NO OP
+      });
   }, []);
 
   useEffect(() => {
