@@ -11,6 +11,7 @@ const fetchInbox = async (token: string) => {
   const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
 
   const { data } = inbox;
+  console.log(data);
 
   if (data.expired) {
     return { expired: data.expired };
@@ -19,18 +20,22 @@ const fetchInbox = async (token: string) => {
   }
 };
 
-const fetchAndFormatInbox = async (userToken: string): Promise<MessageObjProps[] | undefined> => {
+const fetchAndFormatInbox = async (
+  userToken: string,
+  messagesLength: number,
+): Promise<MessageObjProps[] | undefined> => {
   try {
     const inbox = await fetchInbox(userToken);
 
     if (inbox.expired || inbox == null) return;
-
     if (inbox.length > 0) {
+      let messagesId = messagesLength;
       const messages = inbox.map((item, index) => {
+        messagesId++;
         return {
           ...item,
           opened: false,
-          id: index,
+          id: messagesId,
         };
       });
 

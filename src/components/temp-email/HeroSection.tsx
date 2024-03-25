@@ -143,53 +143,26 @@ const HeroSection = ({ textContent }) => {
     async (userToken: string) => {
       if (!userToken) return;
 
-      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(userToken);
+      const messagesLength = messages != null ? messages.length : 0;
 
-      if (messagesInInbox && messagesInInbox.length > 0) {
-        const allMessagesInInbox = messages == null ? [...messagesInInbox] : [...messages, ...messagesInInbox];
-        const unopenedMessages = allMessagesInInbox.filter((item) => !item.opened).length;
+      try {
+        const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(userToken, messagesLength);
+        if (messagesInInbox && messagesInInbox.length > 0) {
+          const allMessagesInInbox = messages == null ? [...messagesInInbox] : [...messages, ...messagesInInbox];
+          const unopenedMessages = allMessagesInInbox.filter((item) => !item.opened).length;
 
-        setMessages(allMessagesInInbox);
-        setOpenedMessages(unopenedMessages);
-        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessagesInInbox));
-      } else {
-        const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-        setMessages(JSON.parse(inbox));
+          setMessages(allMessagesInInbox);
+          setOpenedMessages(unopenedMessages);
+          localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessagesInInbox));
+        } else {
+          const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
+          setMessages(JSON.parse(inbox));
+        }
+      } catch (err) {
+        notificationService.openErrorToast('Something went wrong');
       }
-
-      // fetchInbox(userToken)
-      //   .then((res) => {
-      //     if (res.expired) return;
-
-      //     let messageIdCounter = messages?.length;
-      //     if (res == null) return;
-      //     if (res?.length > 0) {
-      //       const message = res.map((item, index) => {
-      //         messageIdCounter++;
-      //         return {
-      //           ...item,
-      //           opened: false,
-      //           id: index,
-      //         };
-      //       });
-
-      //       const allMessages = messages == null ? [...message] : [...messages, ...message];
-      //       const unopenedMessages = allMessages.filter((item) => !item.opened).length;
-
-      //       setMessages(allMessages);
-      //       setOpenedMessages(unopenedMessages);
-      //       localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessages));
-      //     } else {
-      //       const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-      //       setMessages(JSON.parse(inbox));
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     const error = err as Error;
-      //     console.error(error);
-      //   });
     },
-    [token],
+    [messages, token],
   );
 
   const onRefresh = useCallback(() => {
