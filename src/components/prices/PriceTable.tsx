@@ -20,6 +20,13 @@ interface PriceTableProps {
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
+const priceForSubscriptions = (product) => {
+  const priceWithDiscount = Number((product.price * 0.25).toString());
+  const firstPartOfPrice = priceWithDiscount.toString().split('.')[0];
+  const secondPartOfPrice = priceWithDiscount.toString().split('.')[1].trim().slice(0, 2);
+  return firstPartOfPrice + '.' + secondPartOfPrice;
+};
+
 export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -47,13 +54,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
   const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
-
-  const priceForSubscriptions = (product) => {
-    const priceWithDiscount = Number((product.price * 0.25).toString());
-    const firstPartOfPrice = priceWithDiscount.toString().split('.')[0];
-    const secondPartOfPrice = priceWithDiscount.toString().split('.')[1].trim().slice(0, 2);
-    return firstPartOfPrice + '.' + secondPartOfPrice;
-  };
 
   return (
     <section className="overflow-hidden bg-white">

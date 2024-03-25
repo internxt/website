@@ -1,4 +1,4 @@
-import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
+import { checkout, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
 import { Fire } from '@phosphor-icons/react';
 
@@ -11,11 +11,11 @@ export interface PriceCardProps {
   cta: any[];
   popular?: boolean;
   lang: string;
-  priceId?: string;
   coupon?: CouponType;
   currency?: string;
   currencyValue?: string;
   isIframe?: boolean;
+  isRedeemCodePage?: boolean;
 }
 
 export default function PriceCard({
@@ -31,7 +31,8 @@ export default function PriceCard({
   currency,
   currencyValue,
   isIframe,
-}: PriceCardProps) {
+  isRedeemCodePage,
+}: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -42,6 +43,22 @@ export default function PriceCard({
 
   const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
+
+  const handleCheckout = () => {
+    if (isRedeemCodePage) return;
+
+    if (cta[1] === 'Free plan') {
+      goToSignUpURL();
+    } else {
+      checkout({
+        planId: cta[1],
+        mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+        currency: currencyValue ?? 'eur',
+        couponCode: coupon ?? undefined,
+        openInParent: isIframe,
+      });
+    }
+  };
 
   return (
     <div
@@ -92,27 +109,7 @@ export default function PriceCard({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={() => {
-            if (cta[1] === 'Free plan') {
-              goToSignUpURL();
-            } else {
-              if (isIframe) {
-                checkoutForPcComponentes({
-                  planId: cta[1],
-                  mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                  currency: currencyValue ?? 'eur',
-                  couponCode: coupon ?? undefined,
-                });
-              } else {
-                checkout({
-                  planId: cta[1],
-                  mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                  currency: currencyValue ?? 'eur',
-                  couponCode: coupon ?? undefined,
-                });
-              }
-            }
-          }}
+          onClick={handleCheckout}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'

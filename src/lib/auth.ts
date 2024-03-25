@@ -215,8 +215,9 @@ type PaymentCheckoutConfig = {
   couponCode?: string;
   mode?: 'subscription' | 'payment';
   currency?: string;
+  openInParent?: boolean;
 };
-export function checkout({ planId, couponCode, mode, currency }: PaymentCheckoutConfig): void {
+export function checkout({ planId, couponCode, mode, currency, openInParent }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
@@ -231,29 +232,11 @@ export function checkout({ planId, couponCode, mode, currency }: PaymentCheckout
       skipSignupIfLoggedIn: true,
     });
 
-    window.location.href = checkoutUrl;
-  }
-  if (IFRAME_AUTH_ENABLED) {
-    window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
-  }
-}
-
-export function checkoutForPcComponentes({ planId, couponCode, mode, currency }: PaymentCheckoutConfig): void {
-  if (REDIRECT_AUTH_ENABLED) {
-    const params = new URLSearchParams();
-
-    planId && params.set('planId', planId);
-    couponCode && params.set('couponCode', couponCode);
-    currency && params.set('currency', currency);
-    params.set('mode', mode ? mode : 'subscription');
-
-    const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
-      enableAutoSubmit: false,
-      skipSignupIfLoggedIn: true,
-    });
-
-    window.open(checkoutUrl, '_parent', 'noopener noreferrer');
+    if (openInParent) {
+      window.open(checkoutUrl, '_parent', 'noopener noreferrer');
+    } else {
+      window.location.href = checkoutUrl;
+    }
   }
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);

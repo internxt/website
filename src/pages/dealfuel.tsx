@@ -16,25 +16,13 @@ import { X } from '@phosphor-icons/react';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = useState('ES');
   const [openDialog, setOpenDialog] = useState(false);
-
-  async function getCountryCode() {
-    const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
-    return countryCode;
-  }
-
-  useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
-    });
-  }, []);
 
   useEffect(() => {
     //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const TB2Button = document.getElementById('2TB');
-    const TB5Button = document.getElementById('5TB');
-    const TB10Buton = document.getElementById('10TB');
+    const TB2Button = document.getElementById('planButton2TB');
+    const TB5Button = document.getElementById('planButton5TB');
+    const TB10Buton = document.getElementById('planButton10TB');
     [TB2Button, TB5Button, TB10Buton].forEach((button) =>
       button?.addEventListener('click', () => {
         setOpenDialog(true);
@@ -66,7 +54,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
