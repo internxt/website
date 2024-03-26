@@ -5,7 +5,10 @@
     "generatingEmail": "Génération d'un email aléatoire...",
     "copyEmail": "Copier l'email",
     "deleteEmail": "Supprimer l'email",
-    "expireEmail": "Les emails et la boîte de réception expirent après 3 heures d'inactivité",
+    "expireEmail": {
+      "normal": "L'adresse e-mail et la boîte de réception expireront après ",
+      "bold": "3 heures d'inactivité"
+    },
     "inbox": {
       "title": "Inbox",
       "withoutMessages": {

@@ -4,29 +4,27 @@ import { ArrowClockwise, Copy } from '@phosphor-icons/react';
 interface EmailToolBarProps {
   email: string | null;
   borderColor: boolean;
-  onCopy: () => void;
-  onDelete: () => void;
+  isChangeEmailIconAnimated: boolean;
   textContent: {
     generatingEmail: string;
     copyEmail: string;
     deleteEmail: string;
     expireEmail: string;
   };
+  onCopy: () => void;
+  onDelete: () => void;
 }
 
-function EmailToolbar({ email, borderColor, onCopy, onDelete, textContent }: Readonly<EmailToolBarProps>) {
-  const [isChangeEmailIconAnimate, setIsChangeEmailIconAnimate] = useState(false);
-
-  useEffect(() => {
-    if (isChangeEmailIconAnimate) {
-      setTimeout(() => {
-        setIsChangeEmailIconAnimate(false);
-      }, 1000);
-    }
-  }, [isChangeEmailIconAnimate]);
-
+function EmailToolbar({
+  email,
+  borderColor,
+  isChangeEmailIconAnimated,
+  onCopy,
+  onDelete,
+  textContent,
+}: Readonly<EmailToolBarProps>) {
   return (
-    <div className="flex flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 px-5 py-5 lg:p-9">
+    <div className="flex w-full max-w-3xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 px-5 py-5 lg:p-9">
       <div className="flex w-full flex-row items-center justify-center space-x-3">
         <div
           className={`flex h-full w-screen max-w-[490px] items-center justify-center rounded-xl ${
@@ -44,13 +42,10 @@ function EmailToolbar({ email, borderColor, onCopy, onDelete, textContent }: Rea
           </button>
         </div>
         <button
-          className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-gray-20 bg-gray-5 py-2.5 text-gray-80 shadow-sm hover:bg-gray-5 active:bg-gray-10"
-          onClick={() => {
-            onDelete();
-            setIsChangeEmailIconAnimate(true);
-          }}
+          className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-gray-20 bg-gray-5 px-5 py-2.5 text-gray-80 shadow-sm hover:bg-gray-5 active:bg-gray-10"
+          onClick={onDelete}
         >
-          <ArrowClockwise size={24} className={`${isChangeEmailIconAnimate ? 'animate-spin-refresh' : ''}`} />
+          <ArrowClockwise size={24} className={`${isChangeEmailIconAnimated ? 'animate-spin-refresh' : ''}`} />
           <p>{textContent.deleteEmail}</p>
         </button>
       </div>

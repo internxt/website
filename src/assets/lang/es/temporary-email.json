@@ -5,7 +5,10 @@
     "generatingEmail": "Generando correo electrónico aleatorio",
     "copyEmail": "Copiar email",
     "deleteEmail": "Borrar email",
-    "expireEmail": "El correo electrónico y la bandeja de entrada caducarán tras 3 horas de inactividad",
+    "expireEmail": {
+      "normal": "La dirección de correo electrónico y la bandeja de entrada caducarán después de ",
+      "bold": "3 horas de inactividad"
+    },
     "inbox": {
       "title": "Bandeja de entrada",
       "withoutMessages": {

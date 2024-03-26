@@ -5,7 +5,7 @@
     "generatingEmail": "Generating random email...",
     "copyEmail": "Copy email",
     "deleteEmail": "Delete email",
-    "expireEmail": "Email address and inbox will expire after 3 hours of inactivity",
+    "expireEmail": { "normal": "Email address and inbox will expire after ", "bold": "3 hours of inactivity" },
     "inbox": {
       "title": "Inbox",
       "withoutMessages": {

@@ -47,6 +47,7 @@ const HeroSection = ({ textContent }) => {
   const [messages, setMessages] = useState<MessageObjProps[]>([]);
   const [selectedMessage, setSelectedMessage] = useState<MessageObjProps | null>(null);
   const [generateEmail, setGenerateEmail] = useState<boolean>(false);
+  const [isChangeEmailIconAnimated, setIsChangeEmailIconAnimated] = useState(false);
 
   const isFocused = useWindowFocus();
 
@@ -86,6 +87,14 @@ const HeroSection = ({ textContent }) => {
     handleInboxUpdate();
     return autoFetchEmails();
   }, [email, isRefreshed]);
+
+  useEffect(() => {
+    if (isChangeEmailIconAnimated) {
+      setTimeout(() => {
+        setIsChangeEmailIconAnimated(false);
+      }, 1000);
+    }
+  }, [isChangeEmailIconAnimated]);
 
   function checkLocalStorage() {
     const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
@@ -193,6 +202,7 @@ const HeroSection = ({ textContent }) => {
     removeLocalStorage();
     setEmail(null);
     setGenerateEmail(!generateEmail);
+    setIsChangeEmailIconAnimated(true);
   };
 
   return (
@@ -204,6 +214,7 @@ const HeroSection = ({ textContent }) => {
         </div>
         <EmailToolbar
           borderColor={borderColor}
+          isChangeEmailIconAnimated={isChangeEmailIconAnimated}
           email={email}
           onCopy={onCopyEmailButtonClicked}
           onDelete={onDeleteEmailButtonClicked}
@@ -218,9 +229,12 @@ const HeroSection = ({ textContent }) => {
           selectedMessage={selectedMessage}
           onMessageSelected={onMessageSelected}
         />
-        <div className="flex flex-row items-center space-x-1 pt-2 text-sm text-gray-50">
+        <div className="flex flex-row items-center space-x-1 pt-2 text-sm text-gray-70">
           <Info size={16} />
-          <p>{textContent.expireEmail}</p>
+          <p>
+            {textContent.expireEmail.normal}{' '}
+            <span className="font-semibold text-gray-100">{textContent.expireEmail.bold}</span>.
+          </p>
         </div>
       </div>
     </section>

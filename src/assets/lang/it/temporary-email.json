@@ -5,7 +5,10 @@
     "generatingEmail": "Generazione di un indirizzo e-mail casuale...",
     "copyEmail": "Copia indirizzo e-mail",
     "deleteEmail": "Cancella e-mail",
-    "expireEmail": "L'indirizzo e-mail e la cartella della Posta in Arrivo scadranno dopo 3 ore di inattività",
+    "expireEmail": {
+      "normal": "L'indirizzo e-mail e la casella di posta scadranno dopo ",
+      "bold": "3 ore di inattività"
+    },
     "inbox": {
       "title": "Posta in arrivo",
       "withoutMessages": {
