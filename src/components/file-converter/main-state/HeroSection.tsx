@@ -2,7 +2,7 @@ import { useRouter } from 'next/navigation';
 import Header from '../../shared/Header';
 import Image from 'next/image';
 
-const HeroSection = ({ textContent }) => {
+export const HeroSection = ({ textContent }) => {
   const router = useRouter();
 
   return (
@@ -41,5 +41,3 @@ const HeroSection = ({ textContent }) => {
     </section>
   );
 };
-
-export default HeroSection;
