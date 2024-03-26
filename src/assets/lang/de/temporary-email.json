@@ -4,9 +4,10 @@
     "subtitle": "Sende anonym E-Mails mit unserem kostenlosen, privaten und sicheren Generator für temporäre E-Mail-Adressen.",
     "generatingEmail": "Zufällige E-Mails generieren...",
     "copyEmail": "Kopiere E-Mail",
-    "deleteEmail": "Lösche E-Mail",
+    "deleteEmail": "E-Mail ändern",
     "expireEmail": { "normal": "Die E-Mail-Adresse und das Postfach verfallen nach ", "bold": "3 Stunden Inaktivität" },
     "inbox": {
+      "refresh": "Aktualisieren",
       "title": "Eingang",
       "withoutMessages": {
         "youHave": "Du hast",

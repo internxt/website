@@ -4,19 +4,20 @@
     "subtitle": "Recibe correos electrónicos de forma anónima con nuestro generador de correos electrónicos temporales gratuito, privado y seguro.",
     "generatingEmail": "Generando correo electrónico aleatorio",
     "copyEmail": "Copiar email",
-    "deleteEmail": "Borrar email",
+    "deleteEmail": "Cambiar email",
     "expireEmail": {
       "normal": "La dirección de correo electrónico y la bandeja de entrada caducarán después de ",
       "bold": "3 horas de inactividad"
     },
     "inbox": {
+      "refresh": "Actualizar",
       "title": "Bandeja de entrada",
       "withoutMessages": {
         "youHave": "Tienes",
         "newMessages": "mensajes nuevos"
       },
       "withMessages": "Tienes mensajes nuevos",
-      "waitingEmail": "Actualiza tus correos electrónicos o disfruta de la paz y tranquilidad.",
+      "waitingEmail": "Actualiza tus emails o disfruta de la paz y tranquilidad.",
       "selectMessage": "Seleccionar un mensaje para abrirlo",
       "attachment": "Adjuntos",
       "downloadAll": "Descargar todos",

@@ -4,12 +4,13 @@
     "subtitle": "Invia e-mail anonime con il nostro generatore gratuito, privato e sicuro di indirizzi email temporanei.",
     "generatingEmail": "Generazione di un indirizzo e-mail casuale...",
     "copyEmail": "Copia indirizzo e-mail",
-    "deleteEmail": "Cancella e-mail",
+    "deleteEmail": "Cambia email",
     "expireEmail": {
       "normal": "L'indirizzo e-mail e la casella di posta scadranno dopo ",
       "bold": "3 ore di inattività"
     },
     "inbox": {
+      "refresh": "Aggiorna",
       "title": "Posta in arrivo",
       "withoutMessages": {
         "youHave": "Hai",

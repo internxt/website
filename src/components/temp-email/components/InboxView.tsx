@@ -62,6 +62,11 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
     }
   }, [animation]);
 
+  const handleRefresh = () => {
+    setAnimation(true);
+    onRefresh();
+  };
+
   return (
     <div
       id="inbox"
@@ -77,10 +82,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
             <ArrowsClockwise
               size={24}
               className={`cursor-pointer text-gray-50 hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
-              onClick={() => {
-                setAnimation(true);
-                onRefresh();
-              }}
+              onClick={handleRefresh}
             />
           </div>
 
@@ -127,7 +129,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                 );
               })
             ) : (
-              <div></div>
+              <></>
             )}
           </div>
         </div>
@@ -149,7 +151,11 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
           </div>
         ) : (
           <div className="flex w-screen items-center">
-            <NoMessageSelected messagesLength={openedMessages} textContent={textContent} />
+            <NoMessageSelected
+              messagesLength={openedMessages}
+              textContent={textContent}
+              onRefreshButtonClicked={onRefresh}
+            />
           </div>
         )}
       </Transition>
@@ -252,7 +258,9 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
           </Transition>
         </>
       ) : (
-        !selectedMessage && <NoMessageSelected messagesLength={0} textContent={textContent} />
+        !selectedMessage && (
+          <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} />
+        )
       )}
     </div>
   );
