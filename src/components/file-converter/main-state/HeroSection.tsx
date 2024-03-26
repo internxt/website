@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation';
-import Header from '../shared/Header';
+import Header from '../../shared/Header';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent }) => {
