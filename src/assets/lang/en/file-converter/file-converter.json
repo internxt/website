@@ -2,8 +2,7 @@
   "HeroSection": {
     "title": "File Converter",
     "description": {
-      "normal": "Securely convert multiple file formats instantly with our free online file converter.",
-      "bold": "100% free and easy to use!"
+      "normal": "Securely convert multiple file formats instantly with our free online file converter."
     },
     "cards": [
       {
@@ -13,58 +12,58 @@
       },
       {
         "title": "Images to PDF",
-        "description": "Convert PNG to PDF documents.",
+        "description": "A free images to PDF document.",
         "pathname": "png-to-pdf"
       },
       {
-        "title": "JPG to PNG",
-        "description": "Convert a JPG to PNG.",
-        "pathname": "jpg-to-png"
-      },
-      {
-        "title": "JPG to WEBP",
-        "description": "Convert a JPG to WEBP.",
-        "pathname": "jpg-to-webp"
-      },
-      {
-        "title": "PNG to JPG",
-        "description": "Convert a PNG to JPG.",
-        "pathname": "png-to-jpg"
-      },
-      {
-        "title": "PNG to WEBP",
-        "description": "PNG to WEBP converter.",
-        "pathname": "png-to-webp"
-      },
-      {
-        "title": "WEBP to PNG",
-        "description": "WEBP to PNG files.",
-        "pathname": "webp-to-png"
-      },
-      {
-        "title": "WEBP to JGP",
-        "description": "WEBP to JPG files.",
-        "pathname": "webp-to-jpg"
-      },
-      {
         "title": "PPTX to PDF",
-        "description": "PowerPoint to PDF converter.",
+        "description": "A free PPTX to PDF converter.",
         "pathname": "pptx-to-pdf"
       },
       {
-        "title": "EXCEL to PDF",
-        "description": "EXCEL to PDF converter.",
+        "title": "Excel to PDF",
+        "description": "A free excel to PDF converter.",
         "pathname": "excel-to-pdf"
       },
       {
         "title": "HTML to PDF",
-        "description": "HTML to PDF converter.",
+        "description": "A free HTML to PDF converter.",
         "pathname": "html-to-pdf"
       },
       {
         "title": "PDF to HTML",
-        "description": "Convert PDF to HTML files.",
+        "description": "A free PDF to HTML converter.",
         "pathname": "pdf-to-html"
+      },
+      {
+        "title": "JPG to PNG",
+        "description": "A free JPG to PNG converter.",
+        "pathname": "jpg-to-png"
+      },
+      {
+        "title": "JPG to WebP",
+        "description": "A free JPG to WebP converter.",
+        "pathname": "jpg-to-webp"
+      },
+      {
+        "title": "PNG to JPG",
+        "description": "A free PNG to JPG converter.",
+        "pathname": "png-to-jpg"
+      },
+      {
+        "title": "PNG to WebP",
+        "description": "A free PNG to WebP converter.",
+        "pathname": "png-to-webp"
+      },
+      {
+        "title": "WebP to PNG",
+        "description": "A free WebP to PNG converter.",
+        "pathname": "webp-to-png"
+      },
+      {
+        "title": "WebP to JGP",
+        "description": "A free WebP to JPG converter.",
+        "pathname": "webp-to-jpg"
       }
     ]
   },
@@ -89,7 +88,7 @@
         },
         {
           "step": "Step 3:",
-          "description": "Your download will start automatically. Once complete, we delete all downloaded files from our server."
+          "description": "Your download will start automatically."
         }
       ]
     },

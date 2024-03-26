@@ -12,7 +12,6 @@ export const HeroSection = ({ textContent }) => {
           <Header maxWidth="max-w-[700px]">{textContent.title}</Header>
           <div className="flex flex-col text-center text-xl text-gray-80">
             <p>{textContent.description.normal}</p>
-            <p className="font-semibold">{textContent.description.bold}</p>
           </div>
         </div>
         <div className="flex w-full max-w-[1280px] flex-col items-center justify-center">
