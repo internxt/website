@@ -32,7 +32,7 @@ const HeroSection = ({ textContent }) => {
                   alt={`${card.title} icon`}
                 />
                 <p className="text-2xl font-semibold text-gray-100">{card.title}</p>
-                <p className="text-xl text-gray-80">{card.description}</p>
+                <p className="text-regular text-gray-50">{card.description}</p>
               </button>
             ))}
           </div>
