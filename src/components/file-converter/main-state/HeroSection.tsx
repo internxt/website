@@ -16,7 +16,7 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
         <div className="flex w-full max-w-[1280px] flex-col items-center justify-center">
-          <div className="grid grid-flow-row grid-cols-1 flex-row flex-wrap gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-flow-row grid-cols-1 flex-row flex-wrap gap-4 md:grid-cols-2 lg:grid-cols-5">
             {textContent.cards.map((card) => (
               <button
                 key={card.title}
