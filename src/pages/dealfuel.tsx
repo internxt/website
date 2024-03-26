@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import HeroSection from '@/components/dealfuel/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
@@ -10,29 +10,12 @@ import PriceTable from '@/components/annual-plans-for-affiliates/components/Pric
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/dealfuel/CtaSection';
 
-import axios from 'axios';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = useState('ES');
   const [openDialog, setOpenDialog] = useState(false);
-
-  async function getCountryCode() {
-    const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
-    return countryCode;
-  }
-
-  useEffect(() => {
-    getCountryCode()
-      .then((res) => {
-        setCountry(res.data.country);
-      })
-      .catch(() => {
-        //NO OP
-      });
-  }, []);
 
   const handlePriceCardButton = () => {
     setOpenDialog(true);
@@ -65,7 +48,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
       <PriceTable
         textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        discount={25}
+        discount={50}
         billingFrequency="lifetime"
         titleFontSize="text-4xl"
       />
