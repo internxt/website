@@ -5,7 +5,7 @@
     "generatingEmail": "Zufällige E-Mails generieren...",
     "copyEmail": "Kopiere E-Mail",
     "deleteEmail": "Lösche E-Mail",
-    "expireEmail": "E-Mail und Posteingang verfallen nach 5 Stunden Inaktivität",
+    "expireEmail": "E-Mail und Posteingang verfallen nach 3 Stunden Inaktivität",
     "inbox": {
       "title": "Eingang",
       "withoutMessages": {
@@ -13,7 +13,7 @@
         "newMessages": "neue Nachrichten"
       },
       "withMessages": "Sie haben neue Nachrichten",
-      "waitingEmail": "Warte auf eingehende E-Mail",
+      "waitingEmail": "Aktualisieren Sie Ihre E-Mails oder genießen Sie die Ruhe und Stille.",
       "selectMessage": "Wähle eine Nachricht zum öffnen",
       "attachment": "Anhänge",
       "downloadAll": "Alle runterladen",

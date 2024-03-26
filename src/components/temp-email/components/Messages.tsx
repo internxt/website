@@ -1,4 +1,5 @@
 import moment from 'moment';
+import Image from 'next/image';
 
 const Loader = (): JSX.Element => {
   return (
@@ -43,7 +44,7 @@ const EnvelopeWithColor = (): JSX.Element => {
   );
 };
 
-const NoMessageSelected = ({
+export const NoMessageSelected = ({
   messagesLength,
   textContent,
 }: {
@@ -56,10 +57,7 @@ const NoMessageSelected = ({
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <div className="relative flex flex-col">
-        <Loader />
-        <div className="absolute  translate-y-5 translate-x-6">
-          <EnvelopeWithColor />
-        </div>
+        <Image src="/images/temp-email/empty-inbox.svg" alt="Empty inbox" width={172} height={135} />
       </div>
       <div className="flex flex-col items-center">
         <p className="text-base font-medium text-gray-100">
@@ -72,7 +70,13 @@ const NoMessageSelected = ({
   );
 };
 
-const MessageSelected = ({ item, textContent }: { item: Record<string, any>; textContent: any }): JSX.Element => {
+export const MessageSelected = ({
+  item,
+  textContent,
+}: {
+  item: Record<string, any>;
+  textContent: any;
+}): JSX.Element => {
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
 
   return (
@@ -101,5 +105,3 @@ const MessageSelected = ({ item, textContent }: { item: Record<string, any>; tex
     </div>
   );
 };
-
-export default { MessageSelected, NoMessageSelected };

@@ -5,7 +5,7 @@
     "generatingEmail": "Generando correo electrónico aleatorio",
     "copyEmail": "Copiar email",
     "deleteEmail": "Borrar email",
-    "expireEmail": "El correo electrónico y la bandeja de entrada caducarán tras 5 horas de inactividad",
+    "expireEmail": "El correo electrónico y la bandeja de entrada caducarán tras 3 horas de inactividad",
     "inbox": {
       "title": "Bandeja de entrada",
       "withoutMessages": {
@@ -13,7 +13,7 @@
         "newMessages": "mensajes nuevos"
       },
       "withMessages": "Tienes mensajes nuevos",
-      "waitingEmail": "Esperando correo electrónico entrante",
+      "waitingEmail": "Actualiza tus correos electrónicos o disfruta de la paz y tranquilidad.",
       "selectMessage": "Seleccionar un mensaje para abrirlo",
       "attachment": "Adjuntos",
       "downloadAll": "Descargar todos",

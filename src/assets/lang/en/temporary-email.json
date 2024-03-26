@@ -5,7 +5,7 @@
     "generatingEmail": "Generating random email...",
     "copyEmail": "Copy email",
     "deleteEmail": "Delete email",
-    "expireEmail": "Email address and inbox will expire after 5 hours of inactivity",
+    "expireEmail": "Email address and inbox will expire after 3 hours of inactivity",
     "inbox": {
       "title": "Inbox",
       "withoutMessages": {
@@ -13,7 +13,7 @@
         "newMessages": "new messages"
       },
       "withMessages": "You have new messages",
-      "waitingEmail": "Waiting for incoming email",
+      "waitingEmail": "Refresh your emails or enjoy the peace and quiet",
       "selectMessage": "Select a message to open",
       "attachment": "Attachments",
       "downloadAll": "Download all",
