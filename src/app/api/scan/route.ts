@@ -2,10 +2,9 @@ import { NextResponse } from 'next/server';
 
 const API_HOSTNAME = process.env.FILE_SCANNER_URL;
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   try {
     const formData = await req.formData();
-    const file = formData.get('file');
 
     const requestOptions = {
       method: 'POST',

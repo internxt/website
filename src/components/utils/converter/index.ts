@@ -75,7 +75,7 @@ async function convertImage(image, newFormat: string): Promise<Blob> {
 
     if (!context) {
       console.error('Canvas context not supported.');
-      reject(`[ERROR CONVERTING IMAGE]: Context not found`);
+      reject(new Error(`[ERROR CONVERTING IMAGE]: Context not found`));
       return;
     }
 
@@ -93,7 +93,7 @@ async function convertImage(image, newFormat: string): Promise<Blob> {
     } catch (err) {
       console.log('ERROR');
       const error = err as Error;
-      reject(`[ERROR CONVERTING IMAGE]: ${error.stack ?? error.message}`);
+      reject(new Error(`[ERROR CONVERTING IMAGE]: ${error.stack ?? error.message}`));
     }
   });
 }

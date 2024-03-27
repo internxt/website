@@ -1,4 +1,4 @@
-import { createRef, useCallback, useState } from 'react';
+import { createRef, useCallback, useRef, useState } from 'react';
 
 import Header from '../shared/Header';
 
@@ -37,7 +37,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
   const [error, setError] = useState<Errors | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const uploadFileRef = createRef<HTMLInputElement>();
+  const uploadFileRef = useRef<HTMLInputElement>(null);
   const borderStyle = isDragging ? 'border border-dashed border-primary' : 'border-4 border-primary/8 bg-primary/2';
 
   const pathnameSegments = pathname.split('-');
@@ -51,7 +51,6 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
   const resetViewToInitialState = useCallback(() => {
     setError(null);
     setFiles(null);
-    uploadFileRef.current === null;
     setConverterStates('initialState');
   }, [error, files, uploadFileRef, converterStates]);
 
@@ -121,7 +120,6 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
       if (isFileInfected) {
         setError('internalError');
         setConverterStates('errorState');
-        return;
       }
     });
 
@@ -207,18 +205,16 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
 
   return (
     <section className="overflow-hidden bg-gray-1 pt-32 pb-20">
-      <label>
-        <input
-          className="pointer-events-none absolute h-0 w-0 overflow-hidden"
-          type="file"
-          accept={`${allowedUploadedFilesExtension}`}
-          multiple={isMultipleFilesAllowed}
-          id="uploadFile"
-          ref={uploadFileRef}
-          tabIndex={-1}
-          onChange={handleFileInput}
-        />
-      </label>
+      <input
+        className="pointer-events-none absolute h-0 w-0 overflow-hidden"
+        type="file"
+        accept={`${allowedUploadedFilesExtension}`}
+        multiple={isMultipleFilesAllowed}
+        id="uploadFile"
+        ref={uploadFileRef}
+        tabIndex={-1}
+        onChange={handleFileInput}
+      />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
           <Header maxWidth="w-full">{textContent.title}</Header>
