@@ -16,7 +16,7 @@ const fileMimeTypes = {
   html: 'text/html',
   excel: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
   png: 'image/png',
-  jpg: 'image/jpg',
+  jpg: 'image/jpeg',
   webp: 'image/webp',
 };
 
