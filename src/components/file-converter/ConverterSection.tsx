@@ -12,8 +12,6 @@ import fileConverterService from '../services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
 import { ShieldCheck } from '@phosphor-icons/react';
 
-const FILE_SCANNER_URL = process.env.FILE_SCANNER_URL;
-
 interface ConverterSectionProps {
   textContent: any;
   errorContent: any;
@@ -45,8 +43,6 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
   const lastExtensionInPathname = pathnameSegments[pathnameSegments.length - 1];
 
   const allowedUploadedFilesExtension = fileMimeTypes[pathnameSegments[0]];
-
-  const isMultipleFilesAllowed = pathname === 'png-to-pdf';
 
   const resetViewToInitialState = useCallback(() => {
     setError(null);
@@ -128,7 +124,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
             setConverterStates('downloadFileState');
             break;
           case 'pdf':
-            await fileConverterService.handleImagesToPdfConverter(files);
+            await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
             setConverterStates('downloadFileState');
             break;
           default:
@@ -200,7 +196,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
         className="pointer-events-none absolute h-0 w-0 overflow-hidden"
         type="file"
         accept={`${allowedUploadedFilesExtension}`}
-        multiple={isMultipleFilesAllowed}
+        multiple={false}
         id="uploadFile"
         ref={uploadFileRef}
         tabIndex={-1}
