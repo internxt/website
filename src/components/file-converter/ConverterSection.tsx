@@ -1,4 +1,4 @@
-import { createRef, useCallback, useRef, useState } from 'react';
+import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
@@ -37,7 +37,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
   const [error, setError] = useState<Errors | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const uploadFileRef = useRef<HTMLInputElement>(null);
+  const uploadFileRef = createRef<HTMLInputElement>();
   const borderStyle = isDragging ? 'border border-dashed border-primary' : 'border-4 border-primary/8 bg-primary/2';
 
   const pathnameSegments = pathname.split('-');
@@ -113,15 +113,6 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
       setConverterStates('errorState');
       return;
     }
-
-    const scanResults = await Promise.all(Array.from(files).map(scanFile));
-
-    scanResults.map((isFileInfected) => {
-      if (isFileInfected) {
-        setError('internalError');
-        setConverterStates('errorState');
-      }
-    });
 
     setConverterStates('convertingState');
 
