@@ -5,7 +5,7 @@
     "secureUpload": "Secure uploads protected by HTTPS.",
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop you word file here",
+      "dragYourFile": "Drag and drop your Word file here",
       "cta": "Choose Word file",
       "draggingFile": "Drop file here"
     },
