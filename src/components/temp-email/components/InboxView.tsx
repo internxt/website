@@ -2,7 +2,7 @@ import moment from 'moment';
 import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 
-import Messages from './Messages';
+import { MessageSelected, NoMessageSelected } from './Messages';
 import { Transition } from '@headlessui/react';
 
 interface InboxProps {
@@ -62,6 +62,11 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
     }
   }, [animation]);
 
+  const handleRefresh = () => {
+    setAnimation(true);
+    onRefresh();
+  };
+
   return (
     <div
       id="inbox"
@@ -77,10 +82,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
             <ArrowsClockwise
               size={24}
               className={`cursor-pointer text-gray-50 hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
-              onClick={() => {
-                setAnimation(true);
-                onRefresh();
-              }}
+              onClick={handleRefresh}
             />
           </div>
 
@@ -90,7 +92,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                 const date = moment(item.date);
                 return (
                   <button
-                    key={index}
+                    key={item.id}
                     onClick={() => {
                       onMessageSelected(item, index);
                     }}
@@ -127,7 +129,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                 );
               })
             ) : (
-              <div></div>
+              <></>
             )}
           </div>
         </div>
@@ -145,11 +147,15 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
       >
         {selectedMessage ? (
           <div className="flex h-full w-screen">
-            <Messages.MessageSelected item={selectedMessage} textContent={textContent} />
+            <MessageSelected item={selectedMessage} textContent={textContent} />
           </div>
         ) : (
           <div className="flex w-screen items-center">
-            <Messages.NoMessageSelected messagesLength={openedMessages} textContent={textContent} />
+            <NoMessageSelected
+              messagesLength={openedMessages}
+              textContent={textContent}
+              onRefreshButtonClicked={onRefresh}
+            />
           </div>
         )}
       </Transition>
@@ -188,7 +194,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
                 </div>
               </div>
               <div className="flex h-full w-full">
-                {selectedMessage && <Messages.MessageSelected item={selectedMessage} textContent={textContent} />}
+                {selectedMessage && <MessageSelected item={selectedMessage} textContent={textContent} />}
               </div>
             </div>
           </Transition>
@@ -252,7 +258,9 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
           </Transition>
         </>
       ) : (
-        !selectedMessage && <Messages.NoMessageSelected messagesLength={0} textContent={textContent} />
+        !selectedMessage && (
+          <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} />
+        )
       )}
     </div>
   );

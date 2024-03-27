@@ -45,7 +45,7 @@ const fetchAndFormatInbox = async (
     return [];
   } catch (err) {
     const error = err as Error;
-    throw new Error(`Something went wrong`);
+    throw new Error(error.message);
   }
 };
 
