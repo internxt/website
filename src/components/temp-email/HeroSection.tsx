@@ -1,53 +1,119 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useReducer, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Info } from '@phosphor-icons/react';
 
 import Inbox from './components/InboxView';
 import Header from '@/components/shared/Header';
-import { createEmail, fetchAndFormatInbox } from './services/temp-mail.service';
+import {
+  EMAIL_STORAGE_KEY,
+  INBOX_STORAGE_KEY,
+  MAX_HOURS_BEFORE_EXPIRE_EMAIL,
+  SETUP_TIME_STORAGE_KEY,
+  copyToClipboard,
+  createEmail,
+  fetchAndFormatInbox,
+  removeLocalStorage,
+} from './services/temp-mail.service';
 import { notificationService } from '@/components/Snackbar';
 import useWindowFocus from './hooks/useWindowFocus';
 import EmailToolbar from './components/EmailToolBar';
+import { ActionType, ActionTypes, MessageObjProps } from './types/types';
 
-export interface MessageObjProps {
-  body: string;
-  date: number;
-  from: string;
-  html: string;
-  ip: string;
-  subject: string;
-  to: string;
-  opened: boolean;
-}
+const reducer = (state, action: ActionType) => {
+  switch (action.type) {
+    case ActionTypes.SET_EMAIL:
+      return { ...state, email: action.payload };
+    case ActionTypes.SET_TOKEN:
+      return { ...state, token: action.payload };
+    case ActionTypes.SET_BORDER_COLOR:
+      return { ...state, borderColor: action.payload };
+    case ActionTypes.SET_OPENED_MESSAGES:
+      return { ...state, openedMessages: action.payload };
+    case ActionTypes.SET_IS_MOBILE_VIEW:
+      return { ...state, isMobileView: action.payload };
+    case ActionTypes.SET_IS_REFRESHED:
+      return { ...state, isRefreshed: action.payload };
+    case ActionTypes.SET_MESSAGES:
+      return { ...state, messages: action.payload };
+    case ActionTypes.SET_SELECTED_MESSAGES:
+      return { ...state, selectedMessages: action.payload };
+    case ActionTypes.SET_GENERATE_EMAIL:
+      return { ...state, generateEmail: action.payload };
+    case ActionTypes.SET_IS_CHANGE_EMAIL_ICON_ANIMATED:
+      return { ...state, isChangeEmailIconAnimated: action.payload };
+    default:
+      return state;
+  }
+};
 
-const EMAIL_STORAGE_KEY = 'email';
-const SETUP_TIME_STORAGE_KEY = 'setupTime';
-const INBOX_STORAGE_KEY = 'inbox';
+const initialState = {
+  email: undefined,
+  token: '',
+  borderColor: false,
+  openedMessages: 0,
+  isMobileView: false,
+  isRefreshed: false,
+  messages: [],
+  selectedMessage: null,
+  generateEmail: false,
+  isChangeEmailIconAnimated: false,
+};
 
-const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
+export const HeroSection = ({ textContent }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text);
-}
+  const {
+    email,
+    token,
+    borderColor,
+    openedMessages,
+    isMobileView,
+    isRefreshed,
+    messages,
+    selectedMessage,
+    generateEmail,
+    isChangeEmailIconAnimated,
+  } = state;
 
-function removeLocalStorage() {
-  localStorage.removeItem(EMAIL_STORAGE_KEY);
-  localStorage.removeItem(SETUP_TIME_STORAGE_KEY);
-  localStorage.removeItem(INBOX_STORAGE_KEY);
-  localStorage.removeItem('selectedMessage');
-}
+  const setEmail = useCallback((email: string | undefined) => {
+    dispatch({ type: 'SET_EMAIL', payload: email });
+  }, []);
 
-const HeroSection = ({ textContent }) => {
-  const [email, setEmail] = useState<string | null>(null);
-  const [token, setToken] = useState<string>('');
-  const [borderColor, setBorderColor] = useState<boolean>(false);
-  const [openedMessages, setOpenedMessages] = useState<number>(0);
-  const [isMobileView, setIsMobileView] = useState<boolean>(false);
-  const [isRefreshed, setIsRefreshed] = useState<boolean>(false);
-  const [messages, setMessages] = useState<MessageObjProps[]>([]);
-  const [selectedMessage, setSelectedMessage] = useState<MessageObjProps | null>(null);
-  const [generateEmail, setGenerateEmail] = useState<boolean>(false);
-  const [isChangeEmailIconAnimated, setIsChangeEmailIconAnimated] = useState(false);
+  const setToken = useCallback((token: string) => {
+    dispatch({ type: 'SET_TOKEN', payload: token });
+  }, []);
+
+  const setBorderColor = useCallback((borderColor: boolean) => {
+    dispatch({ type: 'SET_BORDER_COLOR', payload: borderColor });
+  }, []);
+
+  const setOpenedMessages = useCallback((openedMessages: number) => {
+    dispatch({ type: 'SET_OPENED_MESSAGES', payload: openedMessages });
+  }, []);
+
+  const setIsMobileView = useCallback((isMobileView: boolean) => {
+    dispatch({ type: 'SET_IS_MOBILE_VIEW', payload: isMobileView });
+  }, []);
+
+  const setIsRefreshed = useCallback((isRefreshed: boolean) => {
+    dispatch({ type: 'SET_IS_REFRESHED', payload: isRefreshed });
+  }, []);
+
+  const setMessages = useCallback((messages: MessageObjProps[]) => {
+    dispatch({ type: 'SET_MESSAGES', payload: messages });
+  }, []);
+
+  const setSelectedMessage = useCallback((selectedMessage: MessageObjProps | null) => {
+    dispatch({ type: 'SET_SELECTED_MESSAGES', payload: selectedMessage });
+  }, []);
+
+  const setGenerateEmail = useCallback((generateEmail: boolean) => {
+    dispatch({ type: 'SET_GENERATE_EMAIL', payload: generateEmail });
+  }, []);
+
+  const setIsChangeEmailIconAnimated = useCallback((isChangeEmailIconAnimated: boolean) => {
+    dispatch({ type: 'SET_IS_CHANGE_EMAIL_ICON_ANIMATED', payload: isChangeEmailIconAnimated });
+  }, []);
 
   const isFocused = useWindowFocus();
 
@@ -200,7 +266,7 @@ const HeroSection = ({ textContent }) => {
 
   const onDeleteEmailButtonClicked = () => {
     removeLocalStorage();
-    setEmail(null);
+    setEmail(undefined);
     setGenerateEmail(!generateEmail);
     setIsChangeEmailIconAnimated(true);
   };
@@ -240,5 +306,3 @@ const HeroSection = ({ textContent }) => {
     </section>
   );
 };
-
-export default HeroSection;

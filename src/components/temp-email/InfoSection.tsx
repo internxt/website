@@ -3,7 +3,7 @@ import React from 'react';
 import { infoCards } from './components/cards';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 
-const InfoSection = ({ textContent, bannerText, lang }) => {
+export const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
@@ -77,5 +77,3 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
     </section>
   );
 };
-
-export default InfoSection;

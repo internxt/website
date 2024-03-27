@@ -1,5 +1,11 @@
 import axios from 'axios';
-import { MessageObjProps } from '../HeroSection';
+import { MessageObjProps } from '../types/types';
+
+export const EMAIL_STORAGE_KEY = 'email';
+export const SETUP_TIME_STORAGE_KEY = 'setupTime';
+export const INBOX_STORAGE_KEY = 'inbox';
+
+export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
 async function createEmail() {
   const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
@@ -49,4 +55,15 @@ const fetchAndFormatInbox = async (
   }
 };
 
-export { createEmail, fetchInbox, fetchAndFormatInbox };
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
+}
+
+function removeLocalStorage() {
+  localStorage.removeItem(EMAIL_STORAGE_KEY);
+  localStorage.removeItem(SETUP_TIME_STORAGE_KEY);
+  localStorage.removeItem(INBOX_STORAGE_KEY);
+  localStorage.removeItem('selectedMessage');
+}
+
+export { createEmail, fetchInbox, fetchAndFormatInbox, copyToClipboard, removeLocalStorage };
