@@ -16,7 +16,7 @@
     },
     "converting": "Converting your file",
     "fileConverted": {
-      "label": "Your JPG file has been converted to WebP successfully",
+      "label": "Your PNG file has been converted to WebP successfully",
       "title": "Your download will automatically start shortly",
       "description": "If not, click the button below.",
       "convertAnother": "Convert another file",
@@ -34,7 +34,7 @@
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to WebP’: This converts your file from JPG to WebP."
+          "description": "Click ‘Convert to WebP’: This converts your file from PNG to WebP."
         },
         {
           "step": "Step 3:",

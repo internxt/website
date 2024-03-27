@@ -6,7 +6,7 @@
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",
       "dragYourFile": "Drag and drop your PNG file here",
-      "cta": "Select PNG files",
+      "cta": "Choose PNG file",
       "draggingFile": "Drop files here"
     },
     "fileSelected": {

@@ -6,7 +6,7 @@
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",
       "dragYourFile": "Drag and drop your WebP file here",
-      "cta": "Select WebP files",
+      "cta": "Choose WebP file",
       "draggingFile": "Drop files here"
     },
     "fileSelected": {
@@ -34,7 +34,7 @@
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to JPG: This converts your file from WebP to JPG."
+          "description": "Click 'Convert to JPG': This converts your file from WebP to JPG."
         },
         {
           "step": "Step 3:",

@@ -1,7 +1,7 @@
 {
   "ConverterSection": {
     "title": "Internxt Word To PDF Converter",
-    "description": "Convert Word to PDf documents for easier file collaboration and editing.",
+    "description": "Convert Word to PDF documents for easier file collaboration and editing.",
     "secureUpload": "Secure uploads protected by HTTPS.",
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",

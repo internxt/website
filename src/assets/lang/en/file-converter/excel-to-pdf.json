@@ -6,7 +6,7 @@
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",
       "dragYourFile": "Drag and drop your Excel file here",
-      "cta": "Choose PDF file",
+      "cta": "Choose Excel file",
       "draggingFile": "Drop file here"
     },
     "fileSelected": {
@@ -26,7 +26,7 @@
   "FeaturesSection": {
     "howToConvert": {
       "title": "How to convert a Excel to PDF file",
-      "description": "We made our file converter to be as easy to use as possible. Converting your EXCEL to a PDF document involves three steps:",
+      "description": "We made our file converter to be as easy to use as possible. Converting your Excel to a PDF document involves three steps:",
       "steps": [
         {
           "step": "Step 1:",
