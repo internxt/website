@@ -2,24 +2,31 @@ import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 
 import PriceCard from './PriceCard';
-import { Detective, FolderLock, ShieldCheck } from '@phosphor-icons/react';
+import { Detective, FolderLock } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types/types';
 
-const PriceTable = ({
+interface PriceTableProps {
+  textContent: any;
+  handlePriceCardButton: (planId: string, currency: string, coupon: string) => void;
+  billingFrequency: string;
+  couponType?: CouponType;
+  discount?: number;
+  isStartPage?: boolean;
+  titleFontSize?: string;
+}
+
+const PriceTable: React.FC<PriceTableProps> = ({
   textContent,
   handlePriceCardButton,
   couponType,
   discount,
-}: {
-  textContent: any;
-  handlePriceCardButton: (planId, currency, coupon) => void;
-  couponType?: CouponType;
-  discount?: number;
+  billingFrequency,
+  isStartPage,
+  titleFontSize,
 }) => {
-  const billingFrequency = 'year';
   const { products, currency, loadingCards, coupon } = usePricing({
     couponCode: couponType,
   });
@@ -41,12 +48,12 @@ const PriceTable = ({
 
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center space-y-10 py-20">
+      <div className="flex flex-col items-center py-20">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
+          {isStartPage ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
+          <p className={`${titleFontSize ?? 'text-5xl'} font-semibold text-gray-100`}>{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
-        <div id="pricing-table"></div>
         <Transition
           show={loadingCards}
           enter="transition duration-500 ease-out"
@@ -63,7 +70,7 @@ const PriceTable = ({
 
         {/* Render cards */}
         <Transition
-          id="pricing-table"
+          id="payment"
           show={!loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
           className={'flex flex-col'}

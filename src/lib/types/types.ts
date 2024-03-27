@@ -83,7 +83,7 @@ export enum CouponType {
   AnnualDiscount = 'ANNUAL_PLAN_80_DISCOUNT',
   BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
   ChristmasCoupon = 'COUPON_CHRISTMAS',
-  LifetimeExclusive = 'COUPON_LIFETIME_FIFTY',
+  LifetimeFiftyPercent = 'COUPON_LIFETIME_FIFTY',
   SoftSale = 'COUPON_SOFTSALE50',
   DataPrivacy = 'COUPON_DATA_PRIVACY',
   ValentinesCoupon = 'COUPON_VALENTINE_DAY',

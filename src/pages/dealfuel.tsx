@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import HeroSection from '@/components/dealfuel/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
@@ -6,41 +6,20 @@ import GetLifetimeSection from '@/components/dealfuel/GetLifetimeSection';
 import Footer from '@/components/layout/Footer';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import PaymentSection from '@/components/dealfuel/PaymentSection';
+import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/dealfuel/CtaSection';
 
-import axios from 'axios';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = useState('ES');
   const [openDialog, setOpenDialog] = useState(false);
 
-  async function getCountryCode() {
-    const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
-    return countryCode;
-  }
-
-  useEffect(() => {
-    getCountryCode().then((res) => {
-      setCountry(res.data.country);
-    });
-  }, []);
-
-  useEffect(() => {
-    //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const TB2Button = document.getElementById('2TB');
-    const TB5Button = document.getElementById('5TB');
-    const TB10Buton = document.getElementById('10TB');
-    [TB2Button, TB5Button, TB10Buton].forEach((button) =>
-      button?.addEventListener('click', () => {
-        setOpenDialog(true);
-      }),
-    );
-  }, []);
+  const handlePriceCardButton = () => {
+    setOpenDialog(true);
+  };
 
   return (
     <Layout
@@ -66,7 +45,13 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <PriceTable
+        textContent={langJson.PriceTable}
+        handlePriceCardButton={handlePriceCardButton}
+        discount={50}
+        billingFrequency="lifetime"
+        titleFontSize="text-4xl"
+      />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
@@ -84,7 +69,7 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/techcult.json`);
+  const langJson = require(`@/assets/lang/en/dealfuel.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
 

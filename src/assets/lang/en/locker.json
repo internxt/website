@@ -9,7 +9,7 @@
     "title": "Annual plans",
     "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with year-long security",
     "priceCard": {
-      "mostPopularPlan": "Most popular",
+      "mostPopular": "Most popular",
       "billedAnnually": "Billed annually",
       "cta": "Redeem code",
       "features": {
