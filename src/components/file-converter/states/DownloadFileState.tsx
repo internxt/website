@@ -1,4 +1,5 @@
-import { CheckCircle } from '@phosphor-icons/react';
+import { CheckCircle, House } from '@phosphor-icons/react';
+import { useRouter } from 'next/navigation';
 
 interface DownloadFileStateProps {
   textContent: any;
@@ -11,6 +12,7 @@ const DownloadFileState = ({
   onConvertMoreFilesButtonPressed,
   onDownloadFile,
 }: DownloadFileStateProps) => {
+  const route = useRouter();
   return (
     <div className="flex flex-col items-center space-y-8">
       <div className="flex flex-row space-x-2 bg-green/8 p-4">
@@ -21,8 +23,14 @@ const DownloadFileState = ({
       <p className="text-lg font-semibold text-gray-60">{textContent.description}</p>
       <div className="flex flex-row space-x-2">
         <button
+          onClick={() => route.push('/file-converter')}
+          className="flex rounded-lg border-gray-10 bg-white px-5 py-2 shadow-sm hover:bg-gray-5"
+        >
+          <House size={24} />
+        </button>
+        <button
           onClick={onConvertMoreFilesButtonPressed}
-          className="rounded-lg border border-gray-5 bg-white px-5 py-2.5 font-medium text-gray-80 shadow-sm hover:bg-gray-10"
+          className="rounded-lg border border-gray-5 bg-white px-5 py-2.5 font-medium text-gray-80 shadow-sm hover:bg-gray-5"
         >
           {textContent.convertAnother}
         </button>
