@@ -30,11 +30,11 @@
       "steps": [
         {
           "step": "Step 1:",
-          "description": "Upload or drag your PDF"
+          "description": "Upload your PDF: drag and drop your file into the area above to start the conversion."
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to HTML’"
+          "description": "Click ‘Convert to HTML’: This converts your file from PDF to HTML"
         },
         {
           "step": "Step 3:",

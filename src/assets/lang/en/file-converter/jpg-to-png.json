@@ -30,15 +30,15 @@
       "steps": [
         {
           "step": "Step 1:",
-          "description": "Upload your JPG: Click upload to choose a file from your computer, or drag your file into the dropzone above."
+          "description": "Upload your JPG: drag and drop your file into the area above to start the conversion."
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to Word’: This converts your file from JPG to PNG."
+          "description": "Click ‘Convert to PNG’: This converts your file from JPG to PNG."
         },
         {
           "step": "Step 3:",
-          "description": "Download your document: Your download will start automatically, or you can click to download your file."
+          "description": "Download your file."
         }
       ]
     },

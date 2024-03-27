@@ -30,7 +30,7 @@
       "steps": [
         {
           "step": "Step 1:",
-          "description": "Upload your PNG: Click upload to choose a file from your computer, or drag your file into the dropzone above."
+          "description": "Upload your PNG: drag and drop your file into the area above to start the conversion."
         },
         {
           "step": "Step 2:",
@@ -38,7 +38,7 @@
         },
         {
           "step": "Step 3:",
-          "description": "Download your document: Your download will start automatically, or you can click to download your file."
+          "description": "Download your file."
         }
       ]
     },

@@ -25,28 +25,28 @@
   },
   "FeaturesSection": {
     "howToConvert": {
-      "title": "How to convert a Word to PDF file",
-      "description": "We made our file converter to be as easy to use as possible. Converting your Word to a PDF document involves three steps:",
+      "title": "How to convert HTML to PDF files",
+      "description": "We made our file converter to be as easy to use as possible. Converting your HTML to a PDF file involves three steps:",
       "steps": [
         {
           "step": "Step 1:",
-          "description": "Upload your Word: Click upload to choose a file from your computer, or drag your file into the dropzone above."
+          "description": "Upload your HTML: drag and drop your file into the area above to start the conversion."
         },
         {
           "step": "Step 2:",
-          "description": "Click 'Convert to PDF': This converts your file from Word to PDF."
+          "description": "Click ‘Convert to PDF’: This converts your file from HTML to PDF."
         },
         {
           "step": "Step 3:",
-          "description": "Download your document: Your download will start automatically, or you can click to download your file."
+          "description": "Download your file."
         }
       ]
     },
     "whyConvert": {
-      "title": "Why convert Word to PDF files",
+      "title": "Why convert HTML to PDF files",
       "paragraphs": [
-        "You may need a free Word to PDF download to make changes to a document in one simple step. PDFs typically preserve their original formatting, meaning making changes to the document would require multiple downloads, checking, and editing.",
-        "This PDF converter will quickly change your Word to a PDF file, allowing for easier accessibility for others to collaborate and edit the document. Once you download your Word file, you can easily manipulate text, images, and the structure of the content to prepare it for the final draft."
+        "Internxt's HTML to PDF converter optimizes your workflow, providing a secure and versatile solution for managing, sharing, and presenting web content. Protect your PDF file with password sharing and digital signatures for optimum security.",
+        "If you need an HTML to PDF converter to present your content on the web, choose our file converter for free."
       ]
     }
   },

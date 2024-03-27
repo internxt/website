@@ -1,22 +1,22 @@
 {
   "ConverterSection": {
-    "title": "Internxt WEBP to PNG Converter",
-    "description": "A Secure WEBP to PNG converter.",
+    "title": "Internxt WebP to PNG Converter",
+    "description": "Transform a web page's visuals and text into a PNG image file.",
     "secureUpload": "Secure uploads protected by HTTPS.",
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your image files here",
-      "cta": "Select WEBP files",
+      "dragYourFile": "Drag and drop your PNG here",
+      "cta": "Select WebP files",
       "draggingFile": "Drop files here"
     },
     "fileSelected": {
       "title": "File selected for converting",
       "cancel": "Cancel",
-      "convert": "Convert to WEBP file"
+      "convert": "Convert to WebP file"
     },
     "converting": "Converting your file",
     "fileConverted": {
-      "label": "Your WEBP file has been converted to PNG successfully",
+      "label": "Your WebP file has been converted to PNG successfully",
       "title": "Your download will start shortly.",
       "description": "If not, click the button below.",
       "convertAnother": "Convert another file",
@@ -25,28 +25,28 @@
   },
   "FeaturesSection": {
     "howToConvert": {
-      "title": "How to convert WEBP to PNG files",
-      "description": "We made our file converter to be as easy to use as possible. Converting your PNG to a JPG file involves three steps:",
+      "title": "How to convert WebP to PNG files",
+      "description": "We made our file converter to be as easy to use as possible. Converting your WebP to a PNG file involves three steps:",
       "steps": [
         {
           "step": "Step 1:",
-          "description": "Upload your WEBP: Click upload to choose a file from your computer, or drag your file into the dropzone above."
+          "description": "Upload your WebP: drag and drop your file into the area above to start the conversion."
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to PNG: This converts your file from WEBP to PNG."
+          "description": "Click ‘Convert to PNG: This converts your file from WebP to PNG."
         },
         {
           "step": "Step 3:",
-          "description": "Download your document: Your download will start automatically, or you can click to download your file."
+          "description": "Download your file."
         }
       ]
     },
     "whyConvert": {
-      "title": "Why convert WEBP to PNG files",
+      "title": "Why convert WebP to PNG files",
       "paragraphs": [
-        "Using our WEBP to PNG converter ensures compatibility across various platforms and applications. Our file converter maintains image quality without compression loss to maintain your pixel-perfect images.",
-        "Choosing a WEBP to PNG file converter ensures consistency and ease of use within your workflow and allows for more advanced editing possibilities for your PNG files."
+        "Using our WebP to PNG converter ensures compatibility across various platforms and applications. Our file converter maintains image quality without compression loss to maintain your pixel-perfect images.",
+        "Try Internxt’s WebP to PNG file converter to ensure consistency and ease of use within your workflow and allow for more advanced editing possibilities for your PNG files."
       ]
     }
   },
