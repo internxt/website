@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import { Copy, Info, Trash } from '@phosphor-icons/react';
+import { Info } from '@phosphor-icons/react';
 
 import Inbox from './components/InboxView';
 import Header from '@/components/shared/Header';

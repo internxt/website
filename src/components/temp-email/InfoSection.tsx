@@ -12,16 +12,6 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
           <p className="text-2xl font-medium">{textContent.title}</p>
           <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.subtitle}</p>
         </div>
-        <div className="flex flex-col">
-          <Image
-            src="/images/temp-email/magicImage.png"
-            alt="Magic Image for Temp Mail"
-            width={785}
-            height={385}
-            layout="intrinsic"
-            quality={100}
-          />
-        </div>
         <div className="flex flex-col items-center space-y-9">
           <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">{textContent.steps.title}</p>
