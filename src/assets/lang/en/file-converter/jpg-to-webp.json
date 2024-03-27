@@ -5,7 +5,7 @@
     "secureUpload": "Secure uploads protected by HTTPS.",
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Dag and drop your JPG file here",
+      "dragYourFile": "Drag and drop your JPG file here",
       "cta": "Choose JPG file",
       "draggingFile": "Drop file here"
     },

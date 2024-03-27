@@ -10,6 +10,7 @@ import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
+import { ShieldCheck } from '@phosphor-icons/react';
 
 const FILE_SCANNER_URL = process.env.FILE_SCANNER_URL;
 
@@ -222,7 +223,10 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
         <div className="flex flex-col items-center space-y-5 text-center">
           <Header maxWidth="w-full">{textContent.title}</Header>
           <h2 className="text-xl text-gray-80">{textContent.description}</h2>
-          <p className="text-sm font-medium text-gray-80">{textContent.secureUpload}</p>
+          <div className="flex flex-row items-center space-x-1">
+            <ShieldCheck size={16} className="text-green" />
+            <p className="text-sm font-medium text-gray-80">{textContent.secureUpload}</p>
+          </div>
         </div>
         <div
           className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl ${borderStyle}  py-12`}
