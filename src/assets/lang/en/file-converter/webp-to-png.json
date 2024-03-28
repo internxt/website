@@ -5,14 +5,14 @@
     "secureUpload": "Secure uploads protected by HTTPS.",
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your PNG file here",
+      "dragYourFile": "Drag and drop your WebP file here",
       "cta": "Choose WebP file",
       "draggingFile": "Drop files here"
     },
     "fileSelected": {
       "title": "File selected for converting",
       "cancel": "Cancel",
-      "convert": "Convert to WebP file"
+      "convert": "Convert to PNG file"
     },
     "converting": "Converting your file",
     "fileConverted": {

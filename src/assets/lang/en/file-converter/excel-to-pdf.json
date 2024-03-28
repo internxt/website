@@ -1,7 +1,7 @@
 {
   "ConverterSection": {
     "title": "Internxt Excel To PDF Converter",
-    "description": "Convert Excel to PDf documents for easier file collaboration and editing.",
+    "description": "Convert Excel to PDF documents for easier file collaboration and editing.",
     "secureUpload": "Secure uploads protected by HTTPS.",
     "dragNDropArea": {
       "maxFileSize": "Max file size of 1GB",

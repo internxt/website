@@ -13,7 +13,7 @@
     "fileSelected": {
       "title": "File selected for converting",
       "cancel": "Cancel",
-      "convert": "Convert to PPTX file"
+      "convert": "Convert to PDF file"
     },
     "converting": "Converting your file",
     "fileConverted": {

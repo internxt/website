@@ -12,7 +12,7 @@
     "fileSelected": {
       "title": "File selected for converting",
       "cancel": "Cancel",
-      "convert": "Convert to WebP file"
+      "convert": "Convert to JPG file"
     },
     "converting": "Converting your file",
     "fileConverted": {
