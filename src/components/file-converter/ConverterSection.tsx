@@ -51,29 +51,27 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
   }, [error, files, uploadFileRef, converterStates]);
 
   const handleDroppedFiles = (files: FileList) => {
+    const file = files.length > 0 ? files.item(files.length - 1) : null;
+    if (!file) return;
+
+    const fileTypes = file.type;
+
+    if (!pathnameSegments.length) {
+      setError('unsupportedFormat');
+      setConverterStates('errorState');
+      return;
+    }
+
+    const isExtensionAllowed = fileTypes.includes(pathnameSegments[0]);
+
+    if (!isExtensionAllowed) {
+      setError('unsupportedFormat');
+      setConverterStates('errorState');
+      return;
+    }
+
     setFiles(files);
     setConverterStates('selectedFileState');
-  };
-
-  const scanFile = async (): Promise<boolean> => {
-    const fileInput = uploadFileRef.current;
-    const formdata = new FormData();
-    formdata.append('', (fileInput as any).files[0], 'test.txt');
-
-    const requestOptions = {
-      method: 'POST',
-      body: formdata,
-    };
-
-    const scanFile = await fetch(`/api/scan`, requestOptions);
-
-    if (scanFile.status === 200) {
-      const data = await scanFile.json();
-
-      return data.isInfected;
-    } else {
-      return true;
-    }
   };
 
   const handleOpenFileExplorer = () => {
