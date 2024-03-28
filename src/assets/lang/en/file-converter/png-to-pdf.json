@@ -1,27 +1,7 @@
 {
   "ConverterSection": {
-    "title": "Internxt PNG to PDF Converter",
     "description": "PNG to PDF Converter: organize and share images into a cohesive, secure document",
-    "secureUpload": "Secure uploads protected by HTTPS.",
-    "dragNDropArea": {
-      "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your PNG file here",
-      "cta": "Choose PNG file",
-      "draggingFile": "Drop files here"
-    },
-    "fileSelected": {
-      "title": "File selected for converting",
-      "cancel": "Cancel",
-      "convert": "Convert to PDF file"
-    },
-    "converting": "Converting your file",
-    "fileConverted": {
-      "label": "Your PNG file has been converted to PDF successfully",
-      "title": "Your download will start shortly.",
-      "description": "If not, click the button below.",
-      "convertAnother": "Convert another file",
-      "downloadFile": "Download PDF file"
-    }
+    "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {

@@ -1,27 +1,7 @@
 {
   "ConverterSection": {
-    "title": "Internxt PDF to HTML Converter",
     "description": "A Secure PDF to HTML Converter to optimize content for online audiences.",
-    "secureUpload": "Secure uploads protected by HTTPS.",
-    "dragNDropArea": {
-      "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your PDF file here",
-      "cta": "Choose PDF file",
-      "draggingFile": "Drop file here"
-    },
-    "fileSelected": {
-      "title": "File selected for converting",
-      "cancel": "Cancel",
-      "convert": "Convert to HTML file"
-    },
-    "converting": "Converting your file",
-    "fileConverted": {
-      "label": "Your PDF file has been converted to HTML successfully",
-      "title": "Your download will automatically start shortly",
-      "description": "If not, click the button below.",
-      "convertAnother": "Convert another file",
-      "downloadFile": "Download HTML file"
-    }
+    "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {

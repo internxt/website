@@ -1,0 +1,23 @@
+{
+  "title": "Internxt ${{pathFrom}} to ${{pathTo}} Converter",
+  "secureUpload": "Secure uploads protected by HTTPS.",
+  "dragNDropArea": {
+    "maxFileSize": "Max file size of 1GB",
+    "dragYourFile": "Drag and drop your ${{pathFrom}} file here",
+    "cta": "Choose ${{pathFrom}} file",
+    "draggingFile": "Drop file here"
+  },
+  "fileSelected": {
+    "title": "File selected for converting",
+    "cancel": "Cancel",
+    "convert": "Convert to ${{pathTo}} file"
+  },
+  "converting": "Converting your file",
+  "fileConverted": {
+    "label": "Your ${{pathFrom}} file has been converted to ${{pathTo}} successfully",
+    "title": "Your download will automatically start shortly",
+    "description": "If not, click the button below.",
+    "convertAnother": "Convert another file",
+    "downloadFile": "Download ${{pathTo}} file"
+  }
+}

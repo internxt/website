@@ -2,7 +2,7 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import { Errors, MAX_FILE_SIZE, fileConverter, fileMimeTypes, imageConverter } from './types';
+import { Errors, MAX_FILE_SIZE, extensionName, fileConverter, fileMimeTypes, imageConverter } from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
@@ -11,9 +11,11 @@ import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
 import { ShieldCheck } from '@phosphor-icons/react';
+import { formatText } from '../utils/formatText';
 
 interface ConverterSectionProps {
   textContent: any;
+  converterText: any;
   errorContent: any;
   pathname: string;
 }
@@ -27,10 +29,14 @@ type ConverterStates = 'initialState' | 'selectedFileState' | 'convertingState' 
 const converters = [
   { type: 'file', paths: fileConverter },
   { type: 'image', paths: imageConverter },
-  { type: 'pdf', paths: ['png-to-pdf'] },
 ];
 
-export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent, errorContent, pathname }) => {
+export const ConverterSection: React.FC<ConverterSectionProps> = ({
+  textContent,
+  converterText,
+  errorContent,
+  pathname,
+}) => {
   const [files, setFiles] = useState<FileList | null>(null);
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
   const [error, setError] = useState<Errors | null>(null);
@@ -43,6 +49,11 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
   const lastExtensionInPathname = pathnameSegments[pathnameSegments.length - 1];
 
   const allowedUploadedFilesExtension = fileMimeTypes[pathnameSegments[0]];
+
+  const formattedConverterText = formatText(converterText, {
+    pathFrom: extensionName[pathnameSegments[0]],
+    pathTo: extensionName[lastExtensionInPathname],
+  });
 
   const resetViewToInitialState = useCallback(() => {
     setError(null);
@@ -121,10 +132,6 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
             await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
             setConverterStates('downloadFileState');
             break;
-          case 'pdf':
-            await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
-            setConverterStates('downloadFileState');
-            break;
           default:
             throw new Error('Invalid converter type');
         }
@@ -142,7 +149,8 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
     const state = {
       initialState: (
         <InitialState
-          textContent={textContent.dragNDropArea}
+          textContent={formattedConverterText.dragNDropArea}
+          pathFrom={extensionName[pathnameSegments[0]]}
           handleFileDrop={handleDroppedFiles}
           isDragging={isDragging}
           setIsDragging={setIsDragging}
@@ -151,7 +159,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
       ),
       selectedFileState: files && (
         <SelectedFile
-          textContent={textContent.fileSelected}
+          textContent={formattedConverterText.fileSelected}
           files={files}
           onFileConvert={handleConversion}
           onCancel={resetViewToInitialState}
@@ -165,12 +173,12 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
             </div>
             <EmptyFile />
           </div>
-          <p className="text-2xl font-semibold">{textContent.converting}</p>
+          <p className="text-2xl font-semibold">{formattedConverterText.converting}</p>
         </div>
       ),
       downloadFileState: (
         <DownloadFileState
-          textContent={textContent.fileConverted}
+          textContent={formattedConverterText.fileConverted}
           onConvertMoreFilesButtonPressed={resetViewToInitialState}
           onDownloadFile={handleConversion}
         />
@@ -202,7 +210,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
       />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <Header maxWidth="w-full">{textContent.title}</Header>
+          <Header maxWidth="w-full">{formattedConverterText.title}</Header>
           <h2 className="text-xl text-gray-80">{textContent.description}</h2>
           <div className="flex flex-row items-center space-x-1">
             <ShieldCheck size={16} className="text-green" />
@@ -210,7 +218,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({ textContent,
           </div>
         </div>
         <div
-          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl ${borderStyle}  py-12`}
+          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle}  py-12`}
         >
           {/* Card */}
           <State state={converterStates} />

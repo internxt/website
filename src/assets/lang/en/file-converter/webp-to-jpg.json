@@ -1,27 +1,7 @@
 {
   "ConverterSection": {
-    "title": "Internxt WebP to JPG Converter",
     "description": "A secure WebP to JPG converter to share images easily.",
-    "secureUpload": "Secure uploads protected by HTTPS.",
-    "dragNDropArea": {
-      "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your WebP file here",
-      "cta": "Choose WebP file",
-      "draggingFile": "Drop files here"
-    },
-    "fileSelected": {
-      "title": "File selected for converting",
-      "cancel": "Cancel",
-      "convert": "Convert to JPG file"
-    },
-    "converting": "Converting your file",
-    "fileConverted": {
-      "label": "Your WebP file has been converted to JPG successfully",
-      "title": "Your download will start shortly.",
-      "description": "If not, click the button below.",
-      "convertAnother": "Convert another file",
-      "downloadFile": "Download JPG file"
-    }
+    "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {

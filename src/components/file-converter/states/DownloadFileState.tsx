@@ -14,14 +14,14 @@ const DownloadFileState = ({
 }: DownloadFileStateProps) => {
   const route = useRouter();
   return (
-    <div className="flex flex-col items-center space-y-8">
-      <div className="flex flex-row space-x-2 bg-green/8 p-4">
-        <CheckCircle className="text-green" size={19.5} />
+    <div className="flex flex-col items-center space-y-8 text-center">
+      <div className="flex flex-row space-x-2 bg-green/8 p-4 text-start">
+        <CheckCircle className="flex text-green" size={19.5} />
         <p className="text-gray-100">{textContent.label}</p>
       </div>
       <h3 className="text-3xl font-semibold">{textContent.title}</h3>
       <p className="text-lg font-semibold text-gray-60">{textContent.description}</p>
-      <div className="flex flex-row space-x-2">
+      <div className="flex flex-col gap-2 md:flex-row">
         <button
           onClick={() => route.push('/file-converter')}
           className="flex rounded-lg border-gray-10 bg-white px-5 py-2 shadow-sm hover:bg-gray-5"

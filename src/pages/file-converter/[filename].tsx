@@ -13,6 +13,7 @@ const FileConverter = ({
   metatagsDescriptions,
   navbarLang,
   textContent,
+  converterText,
   errorContent,
   footerLang,
   lang,
@@ -25,7 +26,12 @@ const FileConverter = ({
     <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <ConverterSection textContent={textContent.ConverterSection} errorContent={errorContent} pathname={pathname} />
+      <ConverterSection
+        textContent={textContent.ConverterSection}
+        converterText={converterText}
+        errorContent={errorContent}
+        pathname={pathname}
+      />
 
       <FeaturesSection textContent={textContent.FeaturesSection} />
 
@@ -45,6 +51,7 @@ export async function getServerSideProps(ctx) {
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const textContent = require(`@/assets/lang/en/file-converter/${pathname}.json`);
+  const converterText = require(`@/assets/lang/en/file-converter/converter-card.json`);
   const errorContent = require(`@/assets/lang/en/file-converter/errorState.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
   const toolsContent = require(`@/assets/lang/en/components/tools/ToolSection.json`);
@@ -54,6 +61,7 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       navbarLang,
       textContent,
+      converterText,
       errorContent,
       footerLang,
       lang,

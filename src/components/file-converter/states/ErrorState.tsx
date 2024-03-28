@@ -28,7 +28,7 @@ export const ErrorState = ({ textContent, errorContent, error, resetViewToInitia
       bigFile: (
         <>
           <div className="flex flex-row space-x-2 rounded-lg bg-red/8 p-4">
-            <WarningCircle className="text-red" size={19.5} />
+            <WarningCircle className="mt-0.5 text-red sm:mt-0" size={19.5} />
             <p className="text-gray-100">
               <span className="font-semibold">{errorContent.bigFile.label} </span>
               {textContent.maxFileSize}.
@@ -43,7 +43,7 @@ export const ErrorState = ({ textContent, errorContent, error, resetViewToInitia
       internalError: (
         <>
           <div className="flex flex-row space-x-2 rounded-lg bg-red/8 p-4">
-            <WarningCircle className="text-red" size={19.5} />
+            <WarningCircle className="mt-0.5 text-red sm:mt-0" size={19.5} />
             <p className="text-gray-100">
               <span className="font-semibold">{errorContent.internalError.label.bold}</span>
               {errorContent.internalError.label.normal}
@@ -58,7 +58,7 @@ export const ErrorState = ({ textContent, errorContent, error, resetViewToInitia
       unsupportedFormat: (
         <>
           <div className="flex flex-row space-x-2 rounded-lg bg-red/8 p-4">
-            <WarningCircle className="text-red" size={19.5} />
+            <WarningCircle className="mt-0.5 text-red sm:mt-0" size={19.5} />
             <p className="text-gray-100">
               <span className="font-semibold">{errorContent.internalError.label.bold}</span>
               {errorContent.internalError.label.normal}

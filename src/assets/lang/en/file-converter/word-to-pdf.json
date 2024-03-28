@@ -1,27 +1,7 @@
 {
   "ConverterSection": {
-    "title": "Internxt Word To PDF Converter",
     "description": "Convert Word to PDF documents for easier file collaboration and editing.",
-    "secureUpload": "Secure uploads protected by HTTPS.",
-    "dragNDropArea": {
-      "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your Word file here",
-      "cta": "Choose Word file",
-      "draggingFile": "Drop file here"
-    },
-    "fileSelected": {
-      "title": "File selected for converting",
-      "cancel": "Cancel",
-      "convert": "Convert to PDF file"
-    },
-    "converting": "Converting your file",
-    "fileConverted": {
-      "label": "Your Word file has been converted to PDF successfully.",
-      "title": "Your download will automatically start shortly",
-      "description": "If not, click the button below.",
-      "convertAnother": "Convert another file",
-      "downloadFile": "Download PDF file"
-    }
+    "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {

@@ -6,6 +6,7 @@ const fileConverter = [
   'pdf-to-html',
   'excel-to-pdf',
   'word-to-html',
+  'png-to-pdf',
 ];
 const imageConverter = ['png-to-jpg', 'jpg-to-png', 'webp-to-jpg', 'jpg-to-webp', 'webp-to-png', 'png-to-webp'];
 
@@ -23,6 +24,17 @@ const fileMimeTypes = {
 const allowedExtensions = {
   pdf: 'pdf',
   html: 'html',
+};
+
+export const extensionName = {
+  word: 'Word',
+  pdf: 'PDF',
+  html: 'HTML',
+  excel: 'Excel',
+  png: 'PNG',
+  jpg: 'JPG',
+  webp: 'WebP',
+  pptx: 'PPTX',
 };
 
 export { fileConverter, imageConverter, fileMimeTypes, allowedExtensions };

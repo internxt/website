@@ -1,27 +1,7 @@
 {
   "ConverterSection": {
-    "title": "Internxt PNG to WebP Converter",
     "description": "A PNG to WebP converter offers smaller file sizes with minimal quality loss.",
-    "secureUpload": "Secure uploads protected by HTTPS.",
-    "dragNDropArea": {
-      "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your PNG file here",
-      "cta": "Choose PNG file",
-      "draggingFile": "Drop file here"
-    },
-    "fileSelected": {
-      "title": "File selected for converting",
-      "cancel": "Cancel",
-      "convert": "Convert to WebP file"
-    },
-    "converting": "Converting your file",
-    "fileConverted": {
-      "label": "Your PNG file has been converted to WebP successfully",
-      "title": "Your download will automatically start shortly",
-      "description": "If not, click the button below.",
-      "convertAnother": "Convert another file",
-      "downloadFile": "Download WebP file"
-    }
+    "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
