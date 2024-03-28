@@ -1,28 +1,7 @@
 {
   "ConverterSection": {
-    "title": "Internxt PPTX to PDF Converter",
     "description": "A Secure PPTX to PDF Converter for accessible sharing of webpage content.",
-    "secureUpload": "Secure uploads protected by HTTPS.",
-    "dragNDropArea": {
-      "maxFileSize": "Max file size of 1GB",
-      "dragYourFile": "Drag and drop your PPTX file here",
-      "cta": "Choose PPTX file",
-
-      "draggingFile": "Drop file here"
-    },
-    "fileSelected": {
-      "title": "File selected for converting",
-      "cancel": "Cancel",
-      "convert": "Convert to PDF file"
-    },
-    "converting": "Converting your file",
-    "fileConverted": {
-      "label": "Your PPTX file has been converted to PDF successfully",
-      "title": "Your download will automatically start shortly",
-      "description": "If not, click the button below.",
-      "convertAnother": "Convert another file",
-      "downloadFile": "Download PDF file"
-    }
+    "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
