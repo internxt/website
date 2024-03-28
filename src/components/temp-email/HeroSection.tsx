@@ -60,6 +60,9 @@ const initialState = {
 };
 
 export const HeroSection = ({ textContent }) => {
+  const isFocused = useWindowFocus();
+  const timeNow = new Date().getTime();
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const {
@@ -114,10 +117,6 @@ export const HeroSection = ({ textContent }) => {
   const setIsChangeEmailIconAnimated = useCallback((isChangeEmailIconAnimated: boolean) => {
     dispatch({ type: 'SET_IS_CHANGE_EMAIL_ICON_ANIMATED', payload: isChangeEmailIconAnimated });
   }, []);
-
-  const isFocused = useWindowFocus();
-
-  const timeNow = new Date().getTime();
 
   // Open the links that are in the email received in a new tab
   useEffect(() => {
@@ -185,6 +184,7 @@ export const HeroSection = ({ textContent }) => {
         })
         .catch((err) => {
           console.error('Failed to create email:', err);
+          notificationService.openErrorToast('Something went wrong');
         });
     }
   }
