@@ -11,6 +11,7 @@
     },
     "inbox": {
       "refresh": "Actualizar",
+      "refreshInbox": "Actualizar bandeja",
       "title": "Bandeja de entrada",
       "withoutMessages": {
         "youHave": "Tienes",

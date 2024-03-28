@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 
 import { MessageSelected, NoMessageSelected } from './Messages';
 import { Transition } from '@headlessui/react';
@@ -79,8 +80,17 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
               <Tray size={24} className="text-gray-80" />
               <p className="text-base font-medium text-gray-100">{textContent.title}</p>
             </div>
+            <Tooltip
+              variant="light"
+              id="arrows-clockwise"
+              delayShow={700}
+              className="z-40 rounded-lg bg-white drop-shadow-md"
+            >
+              <p className="break-word  text-center text-gray-80">{textContent.refreshInbox}</p>
+            </Tooltip>
             <ArrowsClockwise
               size={24}
+              data-tooltip-id="arrows-clockwise"
               className={`cursor-pointer text-gray-50 hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
               onClick={handleRefresh}
             />

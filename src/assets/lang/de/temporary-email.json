@@ -8,6 +8,7 @@
     "expireEmail": { "normal": "Die E-Mail-Adresse und das Postfach verfallen nach ", "bold": "3 Stunden Inaktivität" },
     "inbox": {
       "refresh": "Aktualisieren",
+      "refreshInbox": "Posteingang aktualisieren",
       "title": "Eingang",
       "withoutMessages": {
         "youHave": "Du hast",

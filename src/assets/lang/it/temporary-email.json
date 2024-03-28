@@ -11,6 +11,7 @@
     },
     "inbox": {
       "refresh": "Aggiorna",
+      "refreshInbox": "Aggiorna la posta in arrivo",
       "title": "Posta in arrivo",
       "withoutMessages": {
         "youHave": "Hai",

@@ -9,6 +9,7 @@ import {
   INBOX_STORAGE_KEY,
   MAX_HOURS_BEFORE_EXPIRE_EMAIL,
   SETUP_TIME_STORAGE_KEY,
+  TIME_NOW,
   createEmail,
   fetchAndFormatInbox,
   removeLocalStorage,
@@ -20,15 +21,13 @@ import { MessageObjProps } from './types/types';
 import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
 
-const SETUP_TIME = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
-const TIME_NOW = new Date().getTime();
-const STORED_EMAIL = localStorage.getItem(EMAIL_STORAGE_KEY);
-
 export const HeroSection = ({ textContent }) => {
   const isFocused = useWindowFocus();
-  const isEmailExpired = SETUP_TIME !== null && TIME_NOW - Number(SETUP_TIME) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
-  const isEmailStored = STORED_EMAIL !== null;
-  const savedSelectedMessage = localStorage.getItem('selectedMessage');
+  let storedEmail;
+  let setupTime;
+  const isEmailExpired = setupTime !== null && TIME_NOW - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
+  const isEmailStored = storedEmail !== null;
+  let savedSelectedMessage;
 
   const {
     state,
@@ -76,16 +75,19 @@ export const HeroSection = ({ textContent }) => {
   }, [selectedMessage]);
 
   useEffect(() => {
+    storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
+    setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
+    savedSelectedMessage = localStorage.getItem('selectedMessage');
+    handleInitialSetup();
+  }, []);
+
+  useEffect(() => {
     checkLocalStorageAndGetEmail();
   }, [generateEmail]);
 
   useEffect(() => {
     handleBorderColor();
   }, [borderColor]);
-
-  useEffect(() => {
-    handleInitialSetup();
-  }, []);
 
   useEffect(() => {
     handleInboxUpdate();
@@ -117,7 +119,7 @@ export const HeroSection = ({ textContent }) => {
     removeDataFromStorageIfExpired();
 
     if (isEmailStored) {
-      const { address, token } = JSON.parse(STORED_EMAIL as string);
+      const { address, token } = JSON.parse(storedEmail as string);
       setEmail(address);
       setToken(token);
     } else {

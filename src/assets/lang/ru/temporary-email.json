@@ -11,6 +11,7 @@
     },
     "inbox": {
       "refresh": "Обновить",
+      "refreshInbox": "Обновить входящие",
       "title": "Входящие",
       "withoutMessages": {
         "youHave": "У вас",
