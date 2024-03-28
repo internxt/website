@@ -5,6 +5,7 @@ export const EMAIL_STORAGE_KEY = 'email';
 export const SETUP_TIME_STORAGE_KEY = 'setupTime';
 export const INBOX_STORAGE_KEY = 'inbox';
 
+export const TIME_NOW = new Date().getTime();
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
 const getEmail = async () => {
