@@ -1,0 +1,185 @@
+{
+  "HeroSection": {
+    "title": "File Converter",
+    "description": {
+      "normal": "Securely convert multiple file formats instantly with our free online file converter."
+    },
+    "cards": [
+      {
+        "title": "Word to PDF",
+        "description": "A free Word to PDF converter.",
+        "pathname": "word-to-pdf"
+      },
+      {
+        "title": "PNG to PDF",
+        "description": "A free PNG to PDF document.",
+        "pathname": "png-to-pdf"
+      },
+      {
+        "title": "PPTX to PDF",
+        "description": "A free PPTX to PDF converter.",
+        "pathname": "pptx-to-pdf"
+      },
+      {
+        "title": "Excel to PDF",
+        "description": "A free excel to PDF converter.",
+        "pathname": "excel-to-pdf"
+      },
+      {
+        "title": "HTML to PDF",
+        "description": "A free HTML to PDF converter.",
+        "pathname": "html-to-pdf"
+      },
+      {
+        "title": "PDF to HTML",
+        "description": "A free PDF to HTML converter.",
+        "pathname": "pdf-to-html"
+      },
+      {
+        "title": "JPG to PNG",
+        "description": "A free JPG to PNG converter.",
+        "pathname": "jpg-to-png"
+      },
+      {
+        "title": "JPG to WebP",
+        "description": "A free JPG to WebP converter.",
+        "pathname": "jpg-to-webp"
+      },
+      {
+        "title": "PNG to JPG",
+        "description": "A free PNG to JPG converter.",
+        "pathname": "png-to-jpg"
+      },
+      {
+        "title": "PNG to WebP",
+        "description": "A free PNG to WebP converter.",
+        "pathname": "png-to-webp"
+      },
+      {
+        "title": "WebP to PNG",
+        "description": "A free WebP to PNG converter.",
+        "pathname": "webp-to-png"
+      },
+      {
+        "title": "WebP to JPG",
+        "description": "A free WebP to JPG converter.",
+        "pathname": "webp-to-jpg"
+      }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileConverter": {
+      "title": "Internxt's free file converter",
+      "description": [
+        "Our File Converter takes the stress out of file management and storage by offering a simple, secure, and quick solution to convert your PDFs, Word (Doc), images, and more.",
+        "In just a few simple steps, you can take an unsupported file and convert it to your preferred format so you can edit, protect, and collaborate on your files with ease. Say goodbye to unsupported formats with our free, secure, private file converter."
+      ]
+    },
+    "howUseFileConverter": {
+      "title": "How to use Internxt's file converter",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload the file you want from your device, or click & drag it on the page."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Wait a few seconds for us to convert your file."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Your download will start automatically."
+        }
+      ]
+    },
+    "whyUseFileConverter": {
+      "title": "Why use a file converter",
+      "description": "Internxt’s file converter removes the struggles of downloading incompatible files and gives you multiple options to secure, edit, and collaborate on documents. Our free online file converter eliminates the reliance on third parties or expensive downloads that could pose risks to the privacy of your files."
+    },
+    "cards": [
+      {
+        "title": "Convert multiple file formats",
+        "description": "We offer the most popular file conversions for increased efficiency, customization, and versatility when working on projects, presentations, or spreadsheets."
+      },
+      {
+        "title": "Privacy guaranteed",
+        "description": "Files are uploaded using encryption via HTTPS to protect your content. Internxt does not store the files you use with our file converter."
+      },
+      {
+        "title": "No registration required",
+        "description": "Convert your files in complete privacy—no need to share personal information such as email, usernames, or billing information."
+      },
+      {
+        "title": "Integrate with the Internxt ecosystem",
+        "description": "Our file converter integrates perfectly with all Internxt products to convert, store, and share your files in complete privacy."
+      },
+      {
+        "title": "Access and convert your files from anywhere",
+        "description": "Use our file converter from anywhere to quickly access the files you need without limitations."
+      },
+      {
+        "title": "Multiple uses",
+        "description": "Internxt’s file converter is perfect for professional, educational, or personal file management."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  },
+  "CtaSection2": {
+    "title": "File management, made simple.",
+    "description": "Convert and store files securely with Internxt Drive.",
+    "cta": "Create account"
+  },
+  "QASection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What file formats does our file converter support?",
+        "answer": [
+          "We offer popular PDF file converter options, including a free PDF to Word converter. We also support options to convert PNG, JPG, Excel, PowerPoint, WEBP, and HTML files."
+        ]
+      },
+      {
+        "question": "Is there a file size limit?",
+        "answer": ["Our file converter currently supports file sizes up to 1GB."]
+      },
+      {
+        "question": "Are my files safe during conversion?",
+        "answer": [
+          "We encrypt the files you upload with the industry-standard AES 256 encryption that scrambles them throughout the conversion process. Your files are automatically deleted from our servers once the conversion is complete."
+        ]
+      },
+      {
+        "question": "Are converted files stored on your servers?",
+        "answer": [
+          "Internxt does not store any of your personal data or files on our servers. We respect your right to privacy and take the necessary measures to ensure your data only belongs to you."
+        ]
+      },
+      {
+        "question": "Is your file converter free to use?",
+        "answer": ["Yes, you can use our File Converter for free."]
+      },
+      {
+        "question": "How long does it take to convert a file?",
+        "answer": [
+          "A stable and reliable internet connection will convert your files in a matter of seconds. However, file conversions will vary depending on your internet connection, the size of your file, and which file format you are converting to."
+        ]
+      },
+      {
+        "question": "How do I download my converted file?",
+        "answer": [
+          "Once the file converter finishes converting your files, your download will start automatically, or you can click ‘download file’ to begin the download manually."
+        ]
+      },
+      {
+        "question": "Does the Internxt File Converter have conversion limits?",
+        "answer": [
+          "No, you can use our file converter as much as you like and download as many files as you need without paying for premium plans."
+        ]
+      }
+    ]
+  }
+}

@@ -7,7 +7,7 @@ import HeroSection from '@/components/password-generator/HeroSection';
 import Footer from '@/components/layout/Footer';
 import InfoSection from '@/components/password-generator/InfoSection';
 import CtaSection from '@/components/shared/CtaSection';
-import ToolsSection from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
 import FAQSection from '@/components/shared/FaqSection';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';

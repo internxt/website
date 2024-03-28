@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowsCounterClockwise, Bug, CaretRight, Envelope, Password, ShieldCheck } from '@phosphor-icons/react';
 
-const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
+export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
   const cards = [
     {
       icon: Password,
@@ -57,15 +57,8 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
                 </p>
               </div>
               <div className=" flex flex-row items-center gap-2 text-lg font-semibold text-primary hover:underline">
-                <Link
-                  href={tool.pathname}
-                  locale={lang}
-                  passHref
-                  target="_self"
-                  className="hover:text-primary">
-
+                <Link href={tool.pathname} locale={lang} passHref target="_self" className="hover:text-primary">
                   {tool.cta}
-
                 </Link>
                 <CaretRight size={16} weight="bold" />
               </div>
@@ -76,5 +69,3 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
     </section>
   );
 };
-
-export default ToolsSection;

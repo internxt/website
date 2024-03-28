@@ -42,13 +42,13 @@ const InfoSection = ({
   ];
 
   return (
-    <section className={`overflow-hidden ${backgroundColor ? backgroundColor : ''}`}>
+    <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
       <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
         <RevealY className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
           {!withoutCta && (
-            <div
+            <button
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
               onClick={() => {
                 window.open(
@@ -61,7 +61,7 @@ const InfoSection = ({
             >
               <p>{textContent.cta}</p>
               <CaretRight size={16} weight="bold" />
-            </div>
+            </button>
           )}
         </RevealY>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">

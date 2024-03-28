@@ -69,7 +69,8 @@
         "fileVirusScan": "Datei Virus Scanner",
         "passwordChecker": "Passwort Checker",
         "byteConverter": "Byte Konverter",
-        "passwordGenerator": "Passwort Generator"
+        "passwordGenerator": "Passwort Generator",
+        "fileConverter": "Dateikonverter"
       }
     }
   },

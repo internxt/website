@@ -70,7 +70,8 @@
         "fileVirusScan": "Сканер файлов на наличие вирусов",
         "passwordChecker": "Программа проверки паролей",
         "byteConverter": "Конвертер байтов",
-        "passwordGenerator": "Генератор паролей"
+        "passwordGenerator": "Генератор паролей",
+        "fileConverter": "Преобразователь файлов"
       }
     }
   },

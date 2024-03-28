@@ -25,8 +25,6 @@ const selectedLang = {
   ru: 'RU',
 };
 
-const LOCALE_COOKIE = cookies.getCookie('i18next');
-
 export default function LanguageBox({ darkMode, isBlackFriday }) {
   const router = useRouter();
 

@@ -5,6 +5,7 @@ module.exports = {
   },
   experimental: {
     swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
+    scrollRestoration: true,
   },
   webpack(config) {
     config.module.rules.push({

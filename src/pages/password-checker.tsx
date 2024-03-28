@@ -10,7 +10,7 @@ import FAQSection from '@/components/shared/FaqSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import ToolsSection from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
 
