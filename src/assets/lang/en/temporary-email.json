@@ -4,16 +4,17 @@
     "subtitle": "Receive emails anonymously with our free, private, and secure temporary email address generator.",
     "generatingEmail": "Generating random email...",
     "copyEmail": "Copy email",
-    "deleteEmail": "Delete email",
-    "expireEmail": "Email address and inbox will expire after 5 hours of inactivity",
+    "deleteEmail": "Change email",
+    "expireEmail": { "normal": "Email address and inbox will expire after ", "bold": "3 hours of inactivity" },
     "inbox": {
+      "refresh": "Refresh",
       "title": "Inbox",
       "withoutMessages": {
         "youHave": "You have",
         "newMessages": "new messages"
       },
       "withMessages": "You have new messages",
-      "waitingEmail": "Waiting for incoming email",
+      "waitingEmail": "Refresh your emails or enjoy the peace and quiet",
       "selectMessage": "Select a message to open",
       "attachment": "Attachments",
       "downloadAll": "Download all",

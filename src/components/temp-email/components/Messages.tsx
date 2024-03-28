@@ -1,4 +1,7 @@
+import { ArrowClockwise } from '@phosphor-icons/react';
 import moment from 'moment';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const Loader = (): JSX.Element => {
   return (
@@ -43,36 +46,63 @@ const EnvelopeWithColor = (): JSX.Element => {
   );
 };
 
-const NoMessageSelected = ({
+export const NoMessageSelected = ({
   messagesLength,
   textContent,
+  onRefreshButtonClicked,
 }: {
   messagesLength: number;
   textContent: any;
+  onRefreshButtonClicked: () => void;
 }): JSX.Element => {
+  const [isRefreshIconAnimated, setIsRefreshIconAnimated] = useState<boolean>(false);
   const withoutMessagesSentence = `${textContent.withoutMessages.youHave} ${messagesLength} ${textContent.withoutMessages.newMessages}`;
   const withMessagesSentence = `${textContent.withMessages}`;
   const messages = messagesLength === 0;
+
+  useEffect(() => {
+    if (isRefreshIconAnimated) {
+      setTimeout(() => {
+        setIsRefreshIconAnimated(false);
+      }, 2000);
+    }
+  }, [isRefreshIconAnimated]);
+
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <div className="relative flex flex-col">
-        <Loader />
-        <div className="absolute  translate-y-5 translate-x-6">
-          <EnvelopeWithColor />
-        </div>
+        <Image src="/images/temp-email/empty-inbox.svg" alt="Empty inbox" width={172} height={135} />
       </div>
-      <div className="flex flex-col items-center">
-        <p className="text-base font-medium text-gray-100">
-          {messages ? withoutMessagesSentence : withMessagesSentence}
-        </p>
+      <div className="flex flex-col items-center space-y-8">
+        <div className="flex flex-col items-center">
+          <p className="text-base font-medium text-gray-100">
+            {messages ? withoutMessagesSentence : withMessagesSentence}
+          </p>
 
-        <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
+          <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
+        </div>
+        <button
+          className="flex w-max flex-row space-x-2 rounded-lg border border-gray-10 px-5 py-2.5 shadow-sm"
+          onClick={() => {
+            onRefreshButtonClicked();
+            setIsRefreshIconAnimated(true);
+          }}
+        >
+          <ArrowClockwise size={24} className={`${isRefreshIconAnimated ? 'animate-spin-refresh' : ''}`} />
+          <p>{textContent.refresh}</p>
+        </button>
       </div>
     </div>
   );
 };
 
-const MessageSelected = ({ item, textContent }: { item: Record<string, any>; textContent: any }): JSX.Element => {
+export const MessageSelected = ({
+  item,
+  textContent,
+}: {
+  item: Record<string, any>;
+  textContent: any;
+}): JSX.Element => {
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
 
   return (
@@ -101,5 +131,3 @@ const MessageSelected = ({ item, textContent }: { item: Record<string, any>; tex
     </div>
   );
 };
-
-export default { MessageSelected, NoMessageSelected };

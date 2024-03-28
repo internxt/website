@@ -4,16 +4,20 @@
     "subtitle": "Recevez des emails anonymes grâce à notre générateur d'adresses email temporaires gratuites, privées et sécurisées",
     "generatingEmail": "Génération d'un email aléatoire...",
     "copyEmail": "Copier l'email",
-    "deleteEmail": "Supprimer l'email",
-    "expireEmail": "Les emails et la boîte de réception expirent après 5 heures d'inactivité",
+    "deleteEmail": "Changer d'email",
+    "expireEmail": {
+      "normal": "L'adresse e-mail et la boîte de réception expireront après ",
+      "bold": "3 heures d'inactivité"
+    },
     "inbox": {
+      "refresh": "Actualiser",
       "title": "Inbox",
       "withoutMessages": {
         "youHave": "Vous avez",
         "newMessages": "nouveaux messages"
       },
       "withMessages": "Vous abez de nouveaux messages",
-      "waitingEmail": "En attente d'un email entrant",
+      "waitingEmail": "Rafraîchissez vos e-mails ou profitez de la paix et du calme.",
       "selectMessage": "Sélectionner un message à ouvrir",
       "attachment ": "Attachments",
       "downloadAll": "Télécharger tout",

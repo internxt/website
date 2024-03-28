@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../components/techradar-discount/Background.module.scss';
 
-const SignupSection = ({ textContent }) => (
+export const SignupSection = ({ textContent }) => (
   <section className="overflow-hidden">
     <div className="flex flex-col items-center justify-center space-y-8 px-4 py-14 text-white">
       <div className="flex max-w-[595px] flex-col space-y-4 text-center">
@@ -22,5 +22,3 @@ const SignupSection = ({ textContent }) => (
     />
   </section>
 );
-
-export default SignupSection;
