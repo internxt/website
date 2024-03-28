@@ -7,11 +7,11 @@ export const INBOX_STORAGE_KEY = 'inbox';
 
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
-async function createEmail() {
+const getEmail = async () => {
   const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
 
   return email.data;
-}
+};
 
 const fetchInbox = async (token: string) => {
   const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
@@ -23,6 +23,16 @@ const fetchInbox = async (token: string) => {
     return { expired: data.expired };
   } else {
     return data.emails;
+  }
+};
+
+const createEmail = async () => {
+  try {
+    const fetchEmail = await getEmail();
+
+    return fetchEmail;
+  } catch (err) {
+    const error = err as Error;
   }
 };
 
@@ -55,10 +65,6 @@ const fetchAndFormatInbox = async (
   }
 };
 
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text);
-}
-
 function removeLocalStorage() {
   localStorage.removeItem(EMAIL_STORAGE_KEY);
   localStorage.removeItem(SETUP_TIME_STORAGE_KEY);
@@ -66,4 +72,4 @@ function removeLocalStorage() {
   localStorage.removeItem('selectedMessage');
 }
 
-export { createEmail, fetchInbox, fetchAndFormatInbox, copyToClipboard, removeLocalStorage };
+export { createEmail, fetchInbox, fetchAndFormatInbox, removeLocalStorage };

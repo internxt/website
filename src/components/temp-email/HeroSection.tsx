@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useReducer, useState } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Info } from '@phosphor-icons/react';
 
@@ -9,7 +9,6 @@ import {
   INBOX_STORAGE_KEY,
   MAX_HOURS_BEFORE_EXPIRE_EMAIL,
   SETUP_TIME_STORAGE_KEY,
-  copyToClipboard,
   createEmail,
   fetchAndFormatInbox,
   removeLocalStorage,
@@ -17,53 +16,33 @@ import {
 import { notificationService } from '@/components/Snackbar';
 import useWindowFocus from './hooks/useWindowFocus';
 import EmailToolbar from './components/EmailToolBar';
-import { ActionType, ActionTypes, MessageObjProps } from './types/types';
+import { MessageObjProps } from './types/types';
+import { useTempMailReducer } from './hooks/useTempMailReducer';
+import copyToClipboard from '../utils/copy-to-clipboard';
 
-const reducer = (state, action: ActionType) => {
-  switch (action.type) {
-    case ActionTypes.SET_EMAIL:
-      return { ...state, email: action.payload };
-    case ActionTypes.SET_TOKEN:
-      return { ...state, token: action.payload };
-    case ActionTypes.SET_BORDER_COLOR:
-      return { ...state, borderColor: action.payload };
-    case ActionTypes.SET_OPENED_MESSAGES:
-      return { ...state, openedMessages: action.payload };
-    case ActionTypes.SET_IS_MOBILE_VIEW:
-      return { ...state, isMobileView: action.payload };
-    case ActionTypes.SET_IS_REFRESHED:
-      return { ...state, isRefreshed: action.payload };
-    case ActionTypes.SET_MESSAGES:
-      return { ...state, messages: action.payload };
-    case ActionTypes.SET_SELECTED_MESSAGES:
-      return { ...state, selectedMessages: action.payload };
-    case ActionTypes.SET_GENERATE_EMAIL:
-      return { ...state, generateEmail: action.payload };
-    case ActionTypes.SET_IS_CHANGE_EMAIL_ICON_ANIMATED:
-      return { ...state, isChangeEmailIconAnimated: action.payload };
-    default:
-      return state;
-  }
-};
-
-const initialState = {
-  email: undefined,
-  token: '',
-  borderColor: false,
-  openedMessages: 0,
-  isMobileView: false,
-  isRefreshed: false,
-  messages: [],
-  selectedMessage: null,
-  generateEmail: false,
-  isChangeEmailIconAnimated: false,
-};
+const SETUP_TIME = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
+const TIME_NOW = new Date().getTime();
+const STORED_EMAIL = localStorage.getItem(EMAIL_STORAGE_KEY);
 
 export const HeroSection = ({ textContent }) => {
   const isFocused = useWindowFocus();
-  const timeNow = new Date().getTime();
+  const isEmailExpired = SETUP_TIME !== null && TIME_NOW - Number(SETUP_TIME) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
+  const isEmailStored = STORED_EMAIL !== null;
+  const savedSelectedMessage = localStorage.getItem('selectedMessage');
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const {
+    state,
+    setEmail,
+    setToken,
+    setBorderColor,
+    setGenerateEmail,
+    setIsChangeEmailIconAnimated,
+    setIsMobileView,
+    setIsRefreshed,
+    setMessages,
+    setOpenedMessages,
+    setSelectedMessage,
+  } = useTempMailReducer();
 
   const {
     email,
@@ -77,46 +56,6 @@ export const HeroSection = ({ textContent }) => {
     generateEmail,
     isChangeEmailIconAnimated,
   } = state;
-
-  const setEmail = useCallback((email: string | undefined) => {
-    dispatch({ type: 'SET_EMAIL', payload: email });
-  }, []);
-
-  const setToken = useCallback((token: string) => {
-    dispatch({ type: 'SET_TOKEN', payload: token });
-  }, []);
-
-  const setBorderColor = useCallback((borderColor: boolean) => {
-    dispatch({ type: 'SET_BORDER_COLOR', payload: borderColor });
-  }, []);
-
-  const setOpenedMessages = useCallback((openedMessages: number) => {
-    dispatch({ type: 'SET_OPENED_MESSAGES', payload: openedMessages });
-  }, []);
-
-  const setIsMobileView = useCallback((isMobileView: boolean) => {
-    dispatch({ type: 'SET_IS_MOBILE_VIEW', payload: isMobileView });
-  }, []);
-
-  const setIsRefreshed = useCallback((isRefreshed: boolean) => {
-    dispatch({ type: 'SET_IS_REFRESHED', payload: isRefreshed });
-  }, []);
-
-  const setMessages = useCallback((messages: MessageObjProps[]) => {
-    dispatch({ type: 'SET_MESSAGES', payload: messages });
-  }, []);
-
-  const setSelectedMessage = useCallback((selectedMessage: MessageObjProps | null) => {
-    dispatch({ type: 'SET_SELECTED_MESSAGES', payload: selectedMessage });
-  }, []);
-
-  const setGenerateEmail = useCallback((generateEmail: boolean) => {
-    dispatch({ type: 'SET_GENERATE_EMAIL', payload: generateEmail });
-  }, []);
-
-  const setIsChangeEmailIconAnimated = useCallback((isChangeEmailIconAnimated: boolean) => {
-    dispatch({ type: 'SET_IS_CHANGE_EMAIL_ICON_ANIMATED', payload: isChangeEmailIconAnimated });
-  }, []);
 
   // Open the links that are in the email received in a new tab
   useEffect(() => {
@@ -137,7 +76,7 @@ export const HeroSection = ({ textContent }) => {
   }, [selectedMessage]);
 
   useEffect(() => {
-    checkLocalStorage();
+    checkLocalStorageAndGetEmail();
   }, [generateEmail]);
 
   useEffect(() => {
@@ -161,59 +100,31 @@ export const HeroSection = ({ textContent }) => {
     }
   }, [isChangeEmailIconAnimated]);
 
-  function checkLocalStorage() {
-    const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
-    if (setupTime !== null && timeNow - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL) {
-      removeLocalStorage();
+  const fetchEmail = async () => {
+    try {
+      const emailData = await createEmail();
+      localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
+      setEmail(emailData.address);
+      setToken(emailData.token);
       setSelectedMessage(null);
+      setMessages(undefined);
+    } catch (err) {
+      notificationService.openErrorToast('Something went wrong');
     }
+  };
 
-    const storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
-    if (storedEmail !== null) {
-      const { address, token } = JSON.parse(storedEmail);
+  const checkLocalStorageAndGetEmail = async () => {
+    removeDataFromStorageIfExpired();
+
+    if (isEmailStored) {
+      const { address, token } = JSON.parse(STORED_EMAIL as string);
       setEmail(address);
       setToken(token);
     } else {
-      localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(timeNow));
-      createEmail()
-        .then((res) => {
-          localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(res));
-          setEmail(res.address);
-          setToken(res.token);
-          setSelectedMessage(null);
-        })
-        .catch((err) => {
-          console.error('Failed to create email:', err);
-          notificationService.openErrorToast('Something went wrong');
-        });
+      localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(TIME_NOW));
+      await fetchEmail();
     }
-  }
-
-  const handleBorderColor = useCallback(() => {
-    if (borderColor) {
-      setTimeout(() => {
-        setBorderColor(false);
-      }, 4000);
-    }
-  }, [borderColor]);
-
-  function handleInitialSetup() {
-    if (localStorage.getItem('selectedMessage')) {
-      setSelectedMessage(JSON.parse(localStorage.getItem('selectedMessage') as string));
-    }
-  }
-
-  const handleInboxUpdate = useCallback(() => {
-    getMailInbox(token);
-    setIsMobileView(isMobile);
-  }, [token, isMobileView]);
-
-  const autoFetchEmails = useCallback(() => {
-    if (isFocused) {
-      const interval = setInterval(() => getMailInbox(token), 10000);
-      return () => clearInterval(interval);
-    }
-  }, [isFocused, token]);
+  };
 
   const getMailInbox = useCallback(
     async (userToken: string) => {
@@ -241,6 +152,40 @@ export const HeroSection = ({ textContent }) => {
     [messages, token],
   );
 
+  const removeDataFromStorageIfExpired = () => {
+    if (isEmailExpired) {
+      removeLocalStorage();
+      setSelectedMessage(null);
+      setMessages(undefined);
+    }
+  };
+
+  const handleBorderColor = useCallback(() => {
+    if (borderColor) {
+      setTimeout(() => {
+        setBorderColor(false);
+      }, 4000);
+    }
+  }, [borderColor]);
+
+  const handleInitialSetup = () => {
+    if (savedSelectedMessage) {
+      setSelectedMessage(JSON.parse(savedSelectedMessage as string));
+    }
+  };
+
+  const handleInboxUpdate = useCallback(() => {
+    getMailInbox(token);
+    setIsMobileView(isMobile);
+  }, [token, isMobileView]);
+
+  const autoFetchEmails = useCallback(() => {
+    if (isFocused) {
+      const interval = setInterval(() => getMailInbox(token), 10000);
+      return () => clearInterval(interval);
+    }
+  }, [isFocused, token]);
+
   const onRefresh = useCallback(() => {
     setIsRefreshed(!isRefreshed);
   }, [isRefreshed]);
@@ -248,11 +193,11 @@ export const HeroSection = ({ textContent }) => {
   const onMessageSelected = useCallback(
     (item, index) => {
       //Update the message to local storage
-      const newMessages = JSON.parse(localStorage.getItem('inbox') as string);
-      newMessages[index].opened = true;
-      setMessages(newMessages);
+      const messagesFromLS = JSON.parse(localStorage.getItem('inbox') as string);
+      messagesFromLS[index].opened = true;
+      setMessages(messagesFromLS);
       setSelectedMessage(item);
-      localStorage.setItem('inbox', JSON.stringify(newMessages));
+      localStorage.setItem('inbox', JSON.stringify(messagesFromLS));
       localStorage.setItem('selectedMessage', JSON.stringify(item));
     },
     [selectedMessage],
@@ -260,7 +205,6 @@ export const HeroSection = ({ textContent }) => {
 
   const onCopyEmailButtonClicked = () => {
     setBorderColor(true);
-    notificationService.openSuccessToast('Copied to clipboard');
     copyToClipboard(email);
   };
 
