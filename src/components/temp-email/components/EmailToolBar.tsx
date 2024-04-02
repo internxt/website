@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ArrowClockwise, Copy } from '@phosphor-icons/react';
+import { Tooltip } from 'react-tooltip';
 
 interface EmailToolBarProps {
   email: string | null;
@@ -38,7 +39,19 @@ function EmailToolbar({
             onClick={onCopy}
           >
             <p>{email ?? textContent.generatingEmail}</p>
-            <Copy size={24} className={`${borderColor ? 'text-primary' : 'text-gray-50'}`} />
+            <Tooltip
+              variant="light"
+              id="copy-to-clipboard"
+              delayShow={700}
+              className="z-40 rounded-lg bg-white drop-shadow-md"
+            >
+              <p className="break-word  text-center text-gray-80">{textContent.copyEmail}</p>
+            </Tooltip>
+            <Copy
+              data-tooltip-id="copy-to-clipboard"
+              size={24}
+              className={`${borderColor ? 'text-primary' : 'text-gray-50'}`}
+            />
           </button>
         </div>
         <button

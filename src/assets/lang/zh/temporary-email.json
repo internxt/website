@@ -8,6 +8,7 @@
     "expireEmail": { "normal": "电子邮件地址和收件箱将在 ", "bold": "3小时不活动后过期" },
     "inbox": {
       "refresh": "刷新",
+      "refreshInbox": "刷新收件箱",
       "title": "收件箱",
       "withoutMessages": {
         "youHave": "你有",
