@@ -4,16 +4,12 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/Footer';
 
-import copyToClipboard from '@/components/utils/copy-to-clipboard';
-import { notificationService } from '@/components/Snackbar';
 import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
 
 import { CouponType } from '@/lib/types/types';
-
-const START_PAGE = 'STARTPAGE';
 
 const currencyValue = {
   '€': 'eur',
@@ -23,11 +19,6 @@ const currencyValue = {
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const offerDiscount = 25;
-
-  function onStartPageClicked() {
-    copyToClipboard(START_PAGE);
-    notificationService.openSuccessToast('Copied to clipboard');
-  }
 
   function handlePriceCardButton(planId, currency, coupon) {
     checkout({
