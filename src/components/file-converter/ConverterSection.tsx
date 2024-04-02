@@ -50,6 +50,11 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     pathTo: extensionName[lastExtensionInPathname],
   });
 
+  const formattedErrorText = formatText(errorContent, {
+    pathFrom: extensionName[pathnameSegments[0]],
+    pathTo: extensionName[lastExtensionInPathname],
+  });
+
   const resetViewToInitialState = useCallback(() => {
     setError(null);
     setFiles(null);
@@ -182,7 +187,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
         <ErrorState
           error={error}
           resetViewToInitialState={resetViewToInitialState}
-          errorContent={errorContent}
+          errorContent={formattedErrorText}
           textContent={formattedConverterText.dragNDropArea}
         />
       ),

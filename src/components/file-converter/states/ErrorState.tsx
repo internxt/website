@@ -60,8 +60,8 @@ export const ErrorState = ({ textContent, errorContent, error, resetViewToInitia
           <div className="flex flex-row space-x-2 rounded-lg bg-red/8 p-4">
             <WarningCircle className="mt-0.5 hidden text-red sm:mt-0 md:flex" size={19.5} />
             <p className="text-gray-100">
-              <span className="font-semibold">{errorContent.internalError.label.bold}</span>
-              {errorContent.internalError.label.normal}
+              <span className="font-semibold">{errorContent.unsupportedFormat.label.bold}</span>
+              {errorContent.unsupportedFormat.label.normal}
             </p>
           </div>
           <p className="text-3xl font-semibold text-gray-100">{textContent.dragYourFile}</p>

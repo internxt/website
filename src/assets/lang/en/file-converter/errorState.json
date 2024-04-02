@@ -11,8 +11,8 @@
   },
   "unsupportedFormat": {
     "label": {
-      "bold": "Unsupported file format.",
-      "normal": "Please upload a valid PDF file."
+      "bold": "Unsupported file format. ",
+      "normal": "Please upload a valid ${{pathFrom}} file."
     }
   }
 }
