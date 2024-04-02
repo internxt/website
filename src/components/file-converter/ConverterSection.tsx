@@ -31,12 +31,7 @@ const converters = [
   { type: 'image', paths: imageConverter },
 ];
 
-export const ConverterSection: React.FC<ConverterSectionProps> = ({
-  textContent,
-  converterText,
-  errorContent,
-  pathname,
-}) => {
+export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
   const [error, setError] = useState<Errors | null>(null);
@@ -188,7 +183,7 @@ export const ConverterSection: React.FC<ConverterSectionProps> = ({
           error={error}
           resetViewToInitialState={resetViewToInitialState}
           errorContent={errorContent}
-          textContent={textContent.dragNDropArea}
+          textContent={formattedConverterText.dragNDropArea}
         />
       ),
     };
