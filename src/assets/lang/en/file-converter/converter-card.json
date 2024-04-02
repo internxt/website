@@ -17,7 +17,7 @@
     "label": "Your ${{pathFrom}} file has been converted to ${{pathTo}} successfully",
     "title": "Your download will automatically start shortly",
     "description": "If not, click the button below.",
-    "goHome": "Back to Home",
+    "goHome": "Home",
     "convertAnother": "Convert another file",
     "downloadFile": "Download ${{pathTo}} file"
   }
