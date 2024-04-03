@@ -194,33 +194,33 @@ const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewCha
                     </p>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <p
+                    <button
                       onClick={() =>
                         window.open(`${window.origin}/images/cyber-awareness/Internxt-Checklist.pdf`, '_blank')
                       }
                     >
                       {textContent.QuizSection.quizCompleted.cyberSecurityChecklist}
-                    </p>
+                    </button>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <p onClick={() => window.open(`${window.origin}/what-does-google-know-about-me`, '_blank')}>
+                    <button onClick={() => window.open(`${window.origin}/what-does-google-know-about-me`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.whatGoogleKnows}
-                    </p>
+                    </button>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <p onClick={() => window.open(`${window.origin}/password-generator`, '_blank')}>
+                    <button onClick={() => window.open(`${window.origin}/password-generator`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.passwordGenerator}
-                    </p>
+                    </button>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <p onClick={() => window.open(`${window.origin}/virus-scanner`, '_blank')}>
+                    <button onClick={() => window.open(`${window.origin}/virus-scanner`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.freeVirusScanner}
-                    </p>
+                    </button>
                   </li>
                   <li className="cursor-pointer text-lg font-bold hover:underline">
-                    <p onClick={() => window.open(`${window.origin}/password-checker`, '_blank')}>
+                    <button onClick={() => window.open(`${window.origin}/password-checker`, '_blank')}>
                       {textContent.QuizSection.quizCompleted.passwordChecker}
-                    </p>
+                    </button>
                   </li>
                 </ul>
 
