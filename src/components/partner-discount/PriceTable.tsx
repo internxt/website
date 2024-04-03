@@ -1,15 +1,23 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { Transition } from '@headlessui/react';
-import PriceCard from '@/components/partner-discount/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
+import PriceCard from '../prices/PriceCard';
+import { Interval } from '../services/stripe.service';
 
 export default function PriceTable({ lang }: { lang: string }) {
-  const { products, currency, loadingCards, coupon } = usePricing({
+  const { products, currency, currencyValue, loadingCards, coupon } = usePricing({
     couponCode: CouponType.Special15Coupon,
   });
+
+  const priceForSubscriptions = (product) => {
+    const priceWithDiscount = Number((product.price * 0.85).toString());
+    const firstPartOfPrice = priceWithDiscount.toString().split('.')[0];
+    const secondPartOfPrice = priceWithDiscount.toString().split('.')[1].trim().slice(0, 2);
+    return firstPartOfPrice + '.' + secondPartOfPrice;
+  };
 
   return (
     <section id="priceTable" className="">
@@ -42,13 +50,15 @@ export default function PriceTable({ lang }: { lang: string }) {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price}
-                    billingFrequency={'year'}
+                    price={coupon ? Number(priceForSubscriptions(product)) : product.price.split('.')[0]}
+                    billingFrequency={Interval.Year}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
+                    priceBefore={product.price}
                     lang={lang}
                     currency={currency}
                     coupon={coupon ?? undefined}
+                    currencyValue={currencyValue}
                   />
                 );
               })}
