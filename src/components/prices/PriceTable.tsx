@@ -10,6 +10,7 @@ import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
+import { CouponType } from '@/lib/types/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -24,7 +25,9 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, currencyValue, loadingCards, coupon } = usePricing({});
+  const { products, currency, currencyValue, loadingCards, coupon } = usePricing({
+    couponCode: CouponType.SpringCoupon,
+  });
 
   const features = [
     {
@@ -41,7 +44,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     },
   ];
 
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Lifetime');
 
   const isIndividual = activeSwitchPlan !== 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
@@ -183,7 +186,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={coupon ? Number(priceForSubscriptions(product)) : product.price}
+                  price={product.price}
                   billingFrequency={billingFrequency}
                   popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}
@@ -194,7 +197,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   }
                   lang={lang}
                   currency={currency}
-                  coupon={coupon ?? undefined}
+                  coupon={undefined}
                   currencyValue={currencyValue}
                 />
               ))}
