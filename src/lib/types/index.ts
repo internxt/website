@@ -83,7 +83,7 @@ export enum CouponType {
   AnnualDiscount = 'ANNUAL_PLAN_80_DISCOUNT',
   BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
   ChristmasCoupon = 'COUPON_CHRISTMAS',
-  LifetimeExclusive = 'COUPON_LIFETIME_FIFTY',
+  LifetimeFiftyPercent = 'COUPON_LIFETIME_FIFTY',
   SoftSale = 'COUPON_SOFTSALE50',
   DataPrivacy = 'COUPON_DATA_PRIVACY',
   ValentinesCoupon = 'COUPON_VALENTINE_DAY',
@@ -96,6 +96,7 @@ export enum CouponType {
   LockerCoupon = 'LOCKER_COUPON_CODE',
   StartPageCoupon = 'STARTPAGE_COUPON_CODE',
   SpringCoupon = 'SPRING_COUPON_CODE',
+  PcComponentesCoupon = 'PC_COMPONENTES_COUPON',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

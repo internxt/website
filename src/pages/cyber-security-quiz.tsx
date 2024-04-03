@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import QuizSection from '@/components/CybersecurityQuiz/QuizSection';
-import { CyberSecurityQuizViews } from '@/lib/types';
+import { CyberSecurityQuizViews } from '@/lib/types/types';
 
 const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');
@@ -42,14 +42,12 @@ export async function getServerSideProps(ctx) {
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const textContent = require(`@/assets/lang/en/cyber-security-quiz.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {
       metatagsDescriptions,
       navbarLang,
       textContent,
-      footerLang,
       lang,
     },
   };

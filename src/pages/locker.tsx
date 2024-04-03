@@ -19,7 +19,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const offerDiscount = 25;
 
-  function handlePriceCardButton(planId, currency, coupon) {
+  function handlePriceCardButton(planId: string, currency: string, coupon: string) {
     checkout({
       planId: planId,
       mode: 'subscription',
@@ -38,6 +38,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
         handlePriceCardButton={handlePriceCardButton}
         couponType={CouponType.LockerCoupon}
         discount={offerDiscount}
+        billingFrequency="year"
       />
 
       <FeatureSection textContent={textContent.FeatureSection} />

@@ -42,9 +42,8 @@ let nameFiles = [
   'internxt-library',
   'online-privacy-ebook',
   'child-safety-ebook',
-  'locker?provider=locker',
-  'startpage?provider=startpage',
-  'oystervpn',
+  'locker',
+  'startpage',
 ];
 
 const langs = {

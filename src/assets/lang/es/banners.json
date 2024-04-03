@@ -67,9 +67,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "¡Consigue un 75% de descuento en todos nuestros planes!",
-      "normalText": "Hola, primavera. Hola, ¡ahorro! ",
-      "cta": "Elige un plan"
+      "boldText": "¡75% de descuento en todos los planes de por vida!",
+      "normalText": "Día Mundial de la Seguridad en la Nube: ",
+      "cta": "Elige tu plan"
     }
   },
   "lifetimeBanner": {

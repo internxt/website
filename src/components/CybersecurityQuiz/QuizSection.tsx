@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Checkbox from './Checkbox';
 import Footer from '@/components/layout/Footer';
 import CheckQuestions from './CheckQuestions';
-import { CyberSecurityQuizViews } from '@/lib/types';
+import { CyberSecurityQuizViews } from '@/lib/types/types';
 
 interface ViewProps {
   view: CyberSecurityQuizViews | undefined;
@@ -15,7 +15,7 @@ interface AnswerQuestionsSectionProps {
   onViewChange: (newView: CyberSecurityQuizViews) => void;
 }
 
-const AnswerQuestionsSection = ({ textContent, setIsQuizSection, onViewChange, view }: AnswerQuestionsSectionProps) => {
+const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewChange }: AnswerQuestionsSectionProps) => {
   const height = useRef(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
@@ -256,6 +256,9 @@ const AnswerQuestionsSection = ({ textContent, setIsQuizSection, onViewChange, v
         </>
       ),
     };
+
+    if (viewSelected?.view === undefined) return view.initialState;
+
     return view[viewSelected.view];
   };
 

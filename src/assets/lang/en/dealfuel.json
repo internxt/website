@@ -1,13 +1,78 @@
 {
   "HeroSection": {
-    "title": "Secure, encrypted cloud storage",
-    "subtitle": "that protects your right to privacy",
-    "info": "Apply your custom code at checkout to secure your exclusive discount.",
-    "cta": "Choose your plan"
+    "title": "Get a lifetime Internxt plan!",
+    "description": "Secure all your files and memories forever with a single, one-time payment.",
+    "cta": "Redeem code"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Create an Internxt account",
+      "or": "or",
+      "login": "Log in",
+      "disclaimer": {
+        "text": "By creating an account you accept the",
+        "link": "terms and conditions"
+      },
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password has to be at least 8 characters long",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
+        },
+        "submit": "Get started"
+      }
+    },
+    "LogIn": {
+      "title": "Log in to Internxt",
+      "or": "or",
+      "signup": "Create account",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "helper": "Forgot your password?"
+        },
+        "tfa": {
+          "label": "Two Factor Authentication",
+          "placeholder": "2FA Code",
+          "hint": "2FA Code must be 6 digits"
+        },
+        "submit": "Log in"
+      }
+    },
+    "Recover": {
+      "title": "Recover account",
+      "back": "Back to log in",
+      "disclaimer": "As specified in the app settings, only you have access to your password, therefore we can't restore your account without it. You can sign up again by entering your email below so we can delete your account and all your files.",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "submit": "Send confirmation email"
+      },
+      "success": {
+        "title": "Check your email",
+        "subtitle": "We've send an account reset link to"
+      }
+    }
   },
   "PriceTable": {
-    "title": "Annual plans",
-    "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with year-long security",
+    "title": "Explore all of our exclusive lifetime plans",
+    "subtitle": "Buy once and get privacy and security forever.",
     "priceCard": {
       "mostPopular": "Most popular",
       "billedAnnually": "Billed annually",
@@ -65,14 +130,28 @@
       "anonymousAccount": "Anonymous account creation"
     }
   },
-  "FeatureSection": {
-    "title": "Take back control of your privacy",
-    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
-    "cta": "Get a one-year plan"
+  "PaymentSection": {
+    "limitedOffer": "Limited time offer!",
+    "title": { "blueText": "", "normalText": "Explore all of our exclusive lifetime plans" },
+    "description": "Buy once and get privacy and security forever.",
+    "normalSection": {
+      "title": "Explore all of our exclusive lifetime plans",
+      "description": "This week only, buy once and get privacy and security forever."
+    },
+    "securePayment": "100% Secure payment, powered by Stripe",
+
+    "firstFeed": "30-day money-back guarantee",
+    "secondFeed": "100% secure payment",
+    "thirdFeed": "Anonymous account creation"
   },
-  "SecureCloudSection": {
+  "GetLifetimeSection": {
+    "title": "Life is not short! But this limited-time deal is...",
+    "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
+  },
+  "FeatureSection": {
     "title": "Secure cloud storage with unmatched privacy",
     "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "cta": "Internxt's commitment to privacy",
     "cards": [
       {
         "title": "Private by design",
@@ -93,8 +172,8 @@
     ]
   },
   "CtaSection": {
-    "title": "The world’s most secure cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Choose your plan"
+    "title": "Your files secure and private forever",
+    "description": "We treat our users like family and family is forever!",
+    "cta": "Select a plan now"
   }
 }

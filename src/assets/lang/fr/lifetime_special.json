@@ -2,13 +2,13 @@
   "HeroSection": {
     "title": "Obtenir un plan à vie d'Internxt",
     "description": "Sécurisez tous vos fichiers et souvenirs pour toujours avec un seul paiement unique.",
-    "cta1": "75% de réduction!",
+    "cta1": "50% de réduction!",
     "cta2": "Voir les offres à vie",
     "guarantee": "Garantie de remboursement de 30 jours"
   },
   "PaymentSection": {
     "limitedOffer": "Offre limitée dans le temps !",
-    "title": { "blueText": "Bénéficiez de 75% de réduction", "normalText": " dans tous nos plans à vie" },
+    "title": { "blueText": "Bénéficiez de 50% de réduction", "normalText": " dans tous nos plans à vie" },
     "description": "Achetez une fois et obtenez la confidentialité pour toujours.",
     "normalSection": {
       "title": "Explorez tous nos plans exclusifs à vie",

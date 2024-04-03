@@ -1,17 +1,18 @@
 {
   "HeroSection": {
     "title": "Secure, encrypted cloud storage",
-    "subtitle": "that protects your right to privacy",
-    "info": "Use the code STARTPAGE at checkout to claim your exclusive 80% OFF discount!",
+    "subtitle": "for a lifetime of privacy",
+    "info": "Get your exclusive 75% OFF discount on our lifetime plans!",
     "cta": "Choose your plan"
   },
   "PriceTable": {
-    "title": "Annual plans",
-    "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with year-long security",
+    "header": "Unlock 75% OFF",
+    "title": "Lifetime storage plans",
+    "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with lifetime security.",
     "priceCard": {
-      "mostPopularPlan": "Most popular",
-      "billedAnnually": "Billed annually",
-      "cta": "Redeem code",
+      "mostPopular": "Most popular",
+      "billedAnnually": "One-time payment",
+      "cta": "Redeem deal",
       "features": {
         "200GB": [
           "200GB encrypted storage",
@@ -68,7 +69,7 @@
   "FeatureSection": {
     "title": "Take back control of your privacy",
     "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
-    "cta": "Get a one-year plan"
+    "cta": "Select lifetime plan"
   },
   "SecureCloudSection": {
     "title": "Secure cloud storage with unmatched privacy",

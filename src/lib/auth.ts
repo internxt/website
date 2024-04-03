@@ -237,3 +237,25 @@ export function checkout({ planId, couponCode, mode, currency }: PaymentCheckout
     window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
   }
 }
+
+export function checkoutForPcComponentes({ planId, couponCode, mode, currency }: PaymentCheckoutConfig): void {
+  if (REDIRECT_AUTH_ENABLED) {
+    const params = new URLSearchParams();
+
+    planId && params.set('planId', planId);
+    couponCode && params.set('couponCode', couponCode);
+    currency && params.set('currency', currency);
+    params.set('mode', mode ? mode : 'subscription');
+
+    const checkoutUrl = getAuthFlowCreateUserURL({
+      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
+      enableAutoSubmit: false,
+      skipSignupIfLoggedIn: true,
+    });
+
+    window.open(checkoutUrl, '_parent', 'noopener noreferrer');
+  }
+  if (IFRAME_AUTH_ENABLED) {
+    window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
+  }
+}

@@ -1,20 +1,50 @@
 import Image from 'next/image';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import Button from '../shared/Button';
-import { Percent } from '@phosphor-icons/react';
+import { Percent, X } from '@phosphor-icons/react';
 
-const HeroSection = ({ textContent, InfoTextComponent }: { textContent: any; InfoTextComponent?: React.ReactNode }) => {
+interface HeroSectionProps {
+  textContent: any;
+  InfoTextComponent?: React.ReactNode;
+  isStartPage?: boolean;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage }) => {
   function redirectToPricingTable() {
     window.scrollTo({
-      top: document?.getElementById('pricing-table')?.offsetTop! + 500,
+      top: document?.getElementById('payment')?.offsetTop! + 500,
       behavior: 'smooth',
     });
   }
+
+  const StartPageLabel = () => {
+    return (
+      <div className="flex flex-row items-center space-x-3.5">
+        <Image
+          src={'/images/partnerships/start-page/Startpage_logo.svg'}
+          width={117}
+          height={27}
+          alt="StartPage logo"
+        />
+        <X size={16} />
+        <Image
+          loading="lazy"
+          className="select-none"
+          src={`../../logos/internxt/cool-gray-90.svg`}
+          alt="Internxt logo"
+          width={130}
+          height={16}
+        />
+      </div>
+    );
+  };
+
   return (
     <section className="overflow-hidden pt-12">
       <HeroSectionSafeArea>
         <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:text-left">
           <div className="flex flex-col space-y-4">
+            {isStartPage ? <StartPageLabel /> : null}
             <h1 className="text-6xl font-bold text-gray-100">{textContent.title}</h1>
             <h2 className="text-4xl font-semibold text-primary">{textContent.subtitle}</h2>
           </div>
@@ -25,7 +55,7 @@ const HeroSection = ({ textContent, InfoTextComponent }: { textContent: any; Inf
           <Button onClick={redirectToPricingTable} text={textContent.cta} />
         </div>
         <Image
-          src="/images/affiliates/partner_discount_collab.webp"
+          src="/images/affiliates/Startpage_discount_collab.webp"
           alt="Affiliates Hero Section"
           draggable={false}
           width={500}

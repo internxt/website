@@ -2,12 +2,19 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types';
 import PriceCard from '../prices/PriceCard';
+import { CouponType } from '@/lib/types/types';
 
-const PriceTable = ({ lang, normalPrice }: { lang: string; normalPrice?: boolean }) => {
+interface PriceTableProps {
+  lang: string;
+  discount: number;
+  normalPrice?: boolean;
+  couponCode?: CouponType;
+}
+
+const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount }) => {
   const { products, currency, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.LifetimeExclusive,
+    couponCode: couponCode,
   });
 
   return (
@@ -46,7 +53,7 @@ const PriceTable = ({ lang, normalPrice }: { lang: string; normalPrice?: boolean
                     storage={product.storage}
                     price={
                       coupon && !normalPrice
-                        ? Number((product.price * 0.5).toString().split('.')[0])
+                        ? Number((product.price * discount).toString())
                         : product.price.split('.')[0]
                     }
                     cta={['checkout', product.priceId]}
@@ -55,7 +62,7 @@ const PriceTable = ({ lang, normalPrice }: { lang: string; normalPrice?: boolean
                     popular={product.storage === '5TB'}
                     priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}
-                    coupon={normalPrice ? undefined : coupon}
+                    coupon={coupon ?? undefined}
                   />
                 );
               })}

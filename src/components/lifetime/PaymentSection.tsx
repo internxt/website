@@ -2,16 +2,17 @@ import React from 'react';
 import PriceTable from './PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
+import { CouponType } from '@/lib/types/types';
 
-const PaymentSection = ({
-  lang,
-  textContent,
-  normalPrice,
-}: {
+interface PaymentSectionProps {
   lang: string;
   textContent: any;
   normalPrice?: boolean;
-}) => {
+  discount: number;
+  couponCode?: CouponType;
+}
+
+const PaymentSection: React.FC<PaymentSectionProps> = ({ lang, textContent, normalPrice, couponCode, discount }) => {
   const features = [
     {
       icon: FolderLock,
@@ -42,7 +43,7 @@ const PaymentSection = ({
           </div>
         </div>
 
-        <PriceTable lang={lang} normalPrice={normalPrice} />
+        <PriceTable lang={lang} normalPrice={normalPrice} discount={discount} couponCode={couponCode} />
 
         <div className="flex flex-col items-center justify-center space-y-8 bg-transparent text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (

@@ -144,7 +144,7 @@
     "title": "Construido para el futuro",
     "description": "Queremos construir una World Wide Web mejor, que sea justa, segura y equitativa para todos. La batalla por el futuro de la privacidad en Internet es dura, y nosotros estamos en primera línea",
     "card1": {
-      "título": "Distribuido"
+      "title": "Distribuido"
     },
     "card2": {
       "title": "Encriptación AES-256"
@@ -162,6 +162,6 @@
   "lastCtaSection": {
     "title": "El almacenamiento en la nube más seguro del mundo",
     "description": "Protege las cosas realmente importantes con el almacenamiento en la nube seguro, privado y cifrado de Internxt",
-    "cta": "Seleccione un plan ahora"
+    "cta": "Selecciona un plan ahora"
   }
 }
