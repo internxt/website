@@ -2,7 +2,7 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
-import PriceCard from '../prices/PriceCard';
+import PriceCard from '@/components/prices/PriceCard';
 import { CouponType } from '@/lib/types';
 import { Interval } from '../services/stripe.service';
 
