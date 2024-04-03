@@ -7,7 +7,7 @@ import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');

@@ -2,7 +2,7 @@ import React from 'react';
 import PriceTable from './PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 interface PaymentSectionProps {
   lang: string;

@@ -4,6 +4,7 @@ import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/prices/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
+import { Interval } from '../services/stripe.service';
 
 export default function PriceTable({ lang }: { lang: string }) {
   const { products, currency, loadingCards } = usePricing();
@@ -40,7 +41,7 @@ export default function PriceTable({ lang }: { lang: string }) {
                     key={product.storage}
                     storage={product.storage}
                     price={product.price}
-                    billingFrequency={'year'}
+                    billingFrequency={Interval.Year}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
