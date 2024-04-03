@@ -18,7 +18,6 @@ const fetchInbox = async (token: string) => {
   const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
 
   const { data } = inbox;
-  console.log(data);
 
   if (data.expired) {
     return { expired: data.expired };

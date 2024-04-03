@@ -12,8 +12,12 @@ import QASection from '@/components/shared/FaqSection';
 import Footer from '@/components/layout/Footer';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang, navbarLang, lang, bannerLang }) => {
+  const dialogAction = useGlobalDialog();
+
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
 
   return (
@@ -35,6 +39,8 @@ const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang
 
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
+        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
         <HeroSection textContent={textContent.HeroSection} />
 
