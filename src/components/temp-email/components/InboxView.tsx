@@ -86,14 +86,15 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
               delayShow={700}
               className="z-40 rounded-lg bg-white drop-shadow-md"
             >
-              <p className="break-word  text-center text-gray-80">{textContent.refreshInbox}</p>
+              <p className="break-word text-center text-gray-80">{textContent.refreshInbox}</p>
             </Tooltip>
-            <ArrowsClockwise
-              size={24}
-              data-tooltip-id="arrows-clockwise"
-              className={`cursor-pointer text-gray-50 hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
-              onClick={handleRefresh}
-            />
+            <button onClick={handleRefresh}>
+              <ArrowsClockwise
+                size={24}
+                data-tooltip-id="arrows-clockwise"
+                className={`text-gray-50 outline-none hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
+              />
+            </button>
           </div>
 
           <div className="flex w-full flex-col overflow-y-scroll">
