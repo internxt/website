@@ -3,7 +3,8 @@ import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import PriceCard from '../prices/PriceCard';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
+import { Interval } from '../services/stripe.service';
 
 interface PriceTableProps {
   lang: string;
@@ -58,7 +59,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     }
                     cta={['checkout', product.priceId]}
                     lang={lang}
-                    billingFrequency="lifetime"
+                    billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
                     priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}

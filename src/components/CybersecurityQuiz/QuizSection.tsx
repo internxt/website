@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Checkbox from './Checkbox';
 import Footer from '@/components/layout/Footer';
 import CheckQuestions from './CheckQuestions';
-import { CyberSecurityQuizViews } from '@/lib/types/types';
+import { CyberSecurityQuizViews } from '@/lib/types';
 
 interface ViewProps {
   view: CyberSecurityQuizViews | undefined;

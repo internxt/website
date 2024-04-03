@@ -11,7 +11,7 @@ import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
 
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 const START_PAGE = 'STARTPAGE';
 

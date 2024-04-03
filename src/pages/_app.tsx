@@ -30,7 +30,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const shouldShowBanner = false;
+  const pathname = router.pathname;
+  const shouldShowBanner = !EXCLUDED_PATHS.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
   const lang = router.locale;
 
