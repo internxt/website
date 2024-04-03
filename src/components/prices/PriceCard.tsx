@@ -1,13 +1,14 @@
 import { checkout, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
 import { Fire } from '@phosphor-icons/react';
+import { Interval } from '../services/stripe.service';
 
 export interface PriceCardProps {
   planType: string;
   storage: string;
   price: number;
   priceBefore?: number;
-  billingFrequency?: string;
+  billingFrequency?: Interval;
   cta: any[];
   popular?: boolean;
   lang: string;

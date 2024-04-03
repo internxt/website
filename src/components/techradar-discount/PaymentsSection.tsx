@@ -1,10 +1,11 @@
 import React from 'react';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import PriceCard from './PriceCard';
 import usePricing from '@/hooks/usePricing';
+import PriceCard from '../prices/PriceCard';
+import { Interval } from '../services/stripe.service';
 
 const PaymentsSection = ({ textContent }) => {
-  const { products, currency, loadingCards } = usePricing();
+  const { products, currency, loadingCards, currencyValue } = usePricing();
 
   return (
     <section id="priceTable" className="">
@@ -26,17 +27,18 @@ const PaymentsSection = ({ textContent }) => {
                 Object.values(products.individuals['year']).map((product: any) => {
                   return (
                     <PriceCard
+                      planType="individual"
                       key={product.storage}
-                      plan={product.storage}
+                      storage={product.storage}
                       price={product.price}
-                      currency={currency}
+                      billingFrequency={Interval.Year}
+                      popular={product.storage === '5TB'}
                       cta={['checkout', product.priceId]}
-                      month={textContent.month}
-                      annualPrice={product.price}
-                      info={textContent.infoPlan}
-                      billedAnnually={textContent.billedAnnually}
-                      isPopular={false}
-                      mostPopular={''}
+                      priceBefore={products?.individuals?.[Interval.Month][product.storage].price * 12}
+                      lang={'en'}
+                      currency={currency}
+                      coupon={undefined}
+                      currencyValue={currencyValue}
                     />
                   );
                 })}
