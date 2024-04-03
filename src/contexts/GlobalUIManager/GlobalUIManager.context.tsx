@@ -25,6 +25,7 @@ export const GlobalUIManagerContext = React.createContext<GlobalUIManagerContext
 export enum GlobalDialog {
   Auth = 'Auth',
   Wheel = 'Wheel',
+  TempMailAction = 'TempMailAction',
 }
 export const GlobalUIManager: React.FC<
   React.PropsWithChildren<{ initialDialogs: GlobalUIManagerContextShape['dialogs'] }>

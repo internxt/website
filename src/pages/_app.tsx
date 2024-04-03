@@ -11,6 +11,7 @@ import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
+import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 
 const EXCLUDED_PATHS = [
   '/lifetime',
@@ -53,6 +54,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           { key: GlobalDialog.Auth, isOpen: false },
           {
             key: GlobalDialog.Wheel,
+            isOpen: false,
+          },
+          {
+            key: GlobalDialog.TempMailAction,
             isOpen: false,
           },
         ]}

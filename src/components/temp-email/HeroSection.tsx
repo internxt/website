@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useCallback, useEffect } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Info } from '@phosphor-icons/react';
@@ -20,14 +22,10 @@ import EmailToolbar from './components/EmailToolBar';
 import { MessageObjProps } from './types/types';
 import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
+import { create } from 'cypress/types/lodash';
 
 export const HeroSection = ({ textContent }) => {
   const isFocused = useWindowFocus();
-  let storedEmail;
-  let setupTime;
-  const isEmailExpired = setupTime !== null && TIME_NOW - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
-  const isEmailStored = storedEmail !== null;
-  let savedSelectedMessage;
 
   const {
     state,
@@ -75,9 +73,6 @@ export const HeroSection = ({ textContent }) => {
   }, [selectedMessage]);
 
   useEffect(() => {
-    storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
-    setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
-    savedSelectedMessage = localStorage.getItem('selectedMessage');
     handleInitialSetup();
   }, []);
 
@@ -118,7 +113,9 @@ export const HeroSection = ({ textContent }) => {
   const checkLocalStorageAndGetEmail = async () => {
     removeDataFromStorageIfExpired();
 
-    if (isEmailStored) {
+    const storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
+
+    if (storedEmail !== null) {
       const { address, token } = JSON.parse(storedEmail as string);
       setEmail(address);
       setToken(token);
@@ -155,6 +152,9 @@ export const HeroSection = ({ textContent }) => {
   );
 
   const removeDataFromStorageIfExpired = () => {
+    const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
+    const isEmailExpired = setupTime !== null && TIME_NOW - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
+
     if (isEmailExpired) {
       removeLocalStorage();
       setSelectedMessage(null);
@@ -171,6 +171,8 @@ export const HeroSection = ({ textContent }) => {
   }, [borderColor]);
 
   const handleInitialSetup = () => {
+    const savedSelectedMessage = localStorage.getItem('selectedMessage');
+
     if (savedSelectedMessage) {
       setSelectedMessage(JSON.parse(savedSelectedMessage as string));
     }
@@ -210,11 +212,13 @@ export const HeroSection = ({ textContent }) => {
     copyToClipboard(email);
   };
 
-  const onDeleteEmailButtonClicked = () => {
+  const onDeleteEmailButtonClicked = async () => {
     removeLocalStorage();
     setEmail(undefined);
     setGenerateEmail(!generateEmail);
     setIsChangeEmailIconAnimated(true);
+
+    await fetchEmail();
   };
 
   return (
