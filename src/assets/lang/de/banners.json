@@ -1,4 +1,13 @@
 {
+  "changeEmailBanner": {
+    "title": "E-Mail-Adresse ändern?",
+    "description": [
+      "Diese Aktion löscht Ihre aktuelle E-Mail-Adresse ${{email}} und alle E-Mails in Ihrem Posteingang.",
+      "Sie erhalten sofort eine neue temporäre E-Mail-Adresse."
+    ],
+    "actionCta": "Holen Sie sich eine neue E-Mail",
+    "cancelCta": "Abbrechen"
+  },
   "LoginBanner": {
     "head": "Vor dem Kauf ausprobieren.",
     "title": "Bekomme Internxt umsonst!",

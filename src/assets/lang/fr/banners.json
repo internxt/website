@@ -1,4 +1,13 @@
 {
+  "changeEmailBanner": {
+    "title": "Changer d'adresse e-mail ?",
+    "description": [
+      "Cette action supprimera votre adresse e-mail actuelle ${{email}} et tous les e-mails de votre boîte de réception.",
+      "Vous recevrez immédiatement une nouvelle adresse e-mail temporaire."
+    ],
+    "actionCta": "Obtenir une nouvelle adresse e-mail",
+    "cancelCta": "Annuler"
+  },
   "featuresBanner": {
     "label": "Économisez 75%",
     "title": "Profitez de votre offre de printemps",
