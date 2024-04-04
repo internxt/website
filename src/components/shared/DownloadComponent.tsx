@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import { UilArrowUpRight, UilArrowCircleDown } from '@iconscout/react-unicons';
+
 import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
