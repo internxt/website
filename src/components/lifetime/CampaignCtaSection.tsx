@@ -1,8 +1,11 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 
 const CampaignCtaSection = ({ textContent }) => {
+  const router = useRouter();
+
   function handleOnClick() {
-    window.location.hash = 'priceTable';
+    router.push('/lifetime');
   }
 
   return (
