@@ -10,12 +10,12 @@ const CampaignCtaSection = ({ textContent }) => {
 
   return (
     <div className="flex flex-col overflow-hidden px-5">
-      <div className="flex max-w-screen-xl flex-col rounded-[32px] border-4 border-primary/10 bg-white px-16 lg:flex-row">
+      <div className="flex max-w-screen-xl flex-col rounded-[32px] border-4 border-primary/10 bg-white lg:flex-row lg:px-16">
         <div className="flex flex-col items-center space-y-6 p-10 text-center lg:py-16 xl:w-full xl:items-start xl:text-left">
           <div className="flex w-max rounded-2xl bg-white py-2 px-4 ring-4 ring-primary/10">
             <p className="text-3xl font-bold text-primary">{textContent.label}</p>
           </div>
-          <div className="flex w-max max-w-[400px] flex-col">
+          <div className="flex max-w-[400px] flex-col">
             <p className="text-4xl font-bold text-gray-100">{textContent.title}</p>
           </div>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
