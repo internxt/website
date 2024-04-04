@@ -6,7 +6,7 @@ import Marquee from 'react-fast-marquee';
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
 import { useRouter } from 'next/router';
-import HomePageBanner from '../banners/HomePageBanner';
+import { HomePageBanner } from '../banners/HomePageBanner';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -64,7 +64,7 @@ export default function HeroSection({ textContent, lang }) {
           {/* Desktop animation/image */}
           {/* <Animation /> */}
           <div
-            className="flex"
+            className="hidden md:flex"
             onClick={() => {
               router.push('/lifetime');
             }}

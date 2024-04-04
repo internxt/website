@@ -2,7 +2,7 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 
-const HomePageBanner = () => {
+export const HomePageBanner = () => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/pricing.json`);
@@ -31,17 +31,16 @@ const HomePageBanner = () => {
           </div>
         </div>
       </div>
-      <div className="flex h-full w-full flex-col">
+      <div className="flex h-full flex-col">
         <Image
           src="/images/banners/data_privacy_internxt_mobile.webp"
           loading="lazy"
           width={377}
           height={190}
           alt="Spring sale image"
+          className="object-cover"
         />
       </div>
     </div>
   );
 };
-
-export default HomePageBanner;
