@@ -16,7 +16,7 @@ interface InboxProps {
   selectedMessage: Record<any, any> | null;
 }
 
-const Inbox = ({
+export const Inbox = ({
   textContent,
   onRefresh,
   openedMessages,
@@ -25,28 +25,33 @@ const Inbox = ({
   onMessageSelected,
   selectedMessage,
 }: InboxProps) => {
-  return !isMobileView ? (
-    <InboxWeb
-      getProps={{
-        messages,
-        selectedMessage,
-        onMessageSelected,
-        onRefresh,
-        openedMessages,
-        textContent,
-      }}
-    />
-  ) : (
-    <InboxMobile
-      getProps={{
-        messages,
-        selectedMessage,
-        onMessageSelected,
-        onRefresh,
-        openedMessages,
-        textContent,
-      }}
-    />
+  return (
+    <>
+      <div className="hidden md:flex">
+        <InboxWeb
+          getProps={{
+            messages,
+            selectedMessage,
+            onMessageSelected,
+            onRefresh,
+            openedMessages,
+            textContent,
+          }}
+        />
+      </div>
+      <div className="flex md:hidden">
+        <InboxMobile
+          getProps={{
+            messages,
+            selectedMessage,
+            onMessageSelected,
+            onRefresh,
+            openedMessages,
+            textContent,
+          }}
+        />
+      </div>
+    </>
   );
 };
 
@@ -276,5 +281,3 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
     </div>
   );
 };
-
-export default Inbox;

@@ -4,7 +4,7 @@ import React, { useCallback, useEffect } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Info } from '@phosphor-icons/react';
 
-import Inbox from './components/InboxView';
+import { Inbox } from './components/InboxView';
 import Header from '@/components/shared/Header';
 import {
   EMAIL_STORAGE_KEY,
@@ -22,7 +22,6 @@ import EmailToolbar from './components/EmailToolBar';
 import { MessageObjProps } from './types/types';
 import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
-import { create } from 'cypress/types/lodash';
 
 export const HeroSection = ({ textContent }) => {
   const isFocused = useWindowFocus();
@@ -180,8 +179,7 @@ export const HeroSection = ({ textContent }) => {
 
   const handleInboxUpdate = useCallback(() => {
     getMailInbox(token);
-    setIsMobileView(isMobile);
-  }, [token, isMobileView]);
+  }, [token]);
 
   const autoFetchEmails = useCallback(() => {
     if (isFocused) {
@@ -245,8 +243,8 @@ export const HeroSection = ({ textContent }) => {
           selectedMessage={selectedMessage}
           onMessageSelected={onMessageSelected}
         />
-        <div className="flex flex-row items-center space-x-1 pt-2 text-sm text-gray-70">
-          <Info size={16} />
+        <div className="flex flex-row items-center space-x-1 pt-2 text-center text-sm text-gray-70">
+          <Info size={16} className="hidden md:flex" />
           <p>
             {textContent.expireEmail.normal}{' '}
             <span className="font-semibold text-gray-100">{textContent.expireEmail.bold}</span>.

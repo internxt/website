@@ -49,8 +49,8 @@ export const NoMessageSelected = ({
       <div className="relative flex flex-col">
         <Image src="/images/temp-email/empty-inbox.svg" alt="Empty inbox" width={172} height={135} />
       </div>
-      <div className="flex flex-col items-center space-y-8">
-        <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center space-y-8 px-5">
+        <div className="flex flex-col items-center text-center">
           <p className="text-base font-medium text-gray-100">
             {messages ? withoutMessagesSentence : withMessagesSentence}
           </p>
