@@ -30,8 +30,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const shouldShowBanner = false;
-  const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
+  const pathname = router.pathname;
+
+  const shouldShowBanner = !EXCLUDED_PATHS.includes(pathname);
+  const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
 
   useEffect(() => {
@@ -88,7 +90,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             {shouldShowBanner ? (
               <>
                 <BottomBanner />
-                <FeaturesBanner />
               </>
             ) : undefined}
           </div>
