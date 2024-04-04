@@ -87,7 +87,7 @@ const BottomBanner = () => {
           </div>
           <div className="flex flex-row items-center justify-center space-x-5">
             <p className="text-6xl font-bold text-white">{title().title1}</p>
-            <p className="max-w-[300px] text-2xl font-bold text-white">{title().title2}</p>
+            <p className="max-w-[300px] text-2xl font-semibold text-white">{title().title2}</p>
             <button
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-5 sm:text-lg"
               onClick={() => {

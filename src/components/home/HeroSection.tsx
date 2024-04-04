@@ -63,13 +63,13 @@ export default function HeroSection({ textContent, lang }) {
 
           {/* Desktop animation/image */}
           {/* <Animation /> */}
-          <button
+          <div
             className="flex"
             onClick={() => {
               router.push('/lifetime');
             }}
           >
-            <img
+            <Image
               loading="eager"
               className="object-contain"
               src="/images/home/identity_management_day_internxt.webp"
@@ -78,7 +78,7 @@ export default function HeroSection({ textContent, lang }) {
               height={450}
               alt="Laptop and phone with Internxt app"
             />
-          </button>
+          </div>
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
