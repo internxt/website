@@ -10,7 +10,6 @@ interface InboxProps {
   textContent: any;
   onRefresh: any;
   openedMessages: number;
-  isMobileView?: boolean;
   messages: Record<any, any>[];
   onMessageSelected: (item: Record<any, any>, index: number) => void;
   selectedMessage: Record<any, any> | null;
@@ -20,7 +19,6 @@ export const Inbox = ({
   textContent,
   onRefresh,
   openedMessages,
-  isMobileView,
   messages,
   onMessageSelected,
   selectedMessage,

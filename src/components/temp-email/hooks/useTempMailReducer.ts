@@ -11,8 +11,6 @@ const reducer = (state, action: ActionType) => {
       return { ...state, borderColor: action.payload };
     case ActionTypes.SET_OPENED_MESSAGES:
       return { ...state, openedMessages: action.payload };
-    case ActionTypes.SET_IS_MOBILE_VIEW:
-      return { ...state, isMobileView: action.payload };
     case ActionTypes.SET_IS_REFRESHED:
       return { ...state, isRefreshed: action.payload };
     case ActionTypes.SET_MESSAGES:
@@ -33,7 +31,6 @@ const initialState = {
   token: '',
   borderColor: false,
   openedMessages: 0,
-  isMobileView: false,
   isRefreshed: false,
   messages: [],
   selectedMessage: null,
@@ -58,10 +55,6 @@ export const useTempMailReducer = () => {
 
   const setOpenedMessages = useCallback((openedMessages: number) => {
     dispatch({ type: 'SET_OPENED_MESSAGES', payload: openedMessages });
-  }, []);
-
-  const setIsMobileView = useCallback((isMobileView: boolean) => {
-    dispatch({ type: 'SET_IS_MOBILE_VIEW', payload: isMobileView });
   }, []);
 
   const setIsRefreshed = useCallback((isRefreshed: boolean) => {
@@ -90,7 +83,6 @@ export const useTempMailReducer = () => {
     setToken,
     setBorderColor,
     setOpenedMessages,
-    setIsMobileView,
     setIsRefreshed,
     setMessages,
     setSelectedMessage,

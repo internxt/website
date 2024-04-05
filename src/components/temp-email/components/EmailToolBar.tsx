@@ -37,10 +37,10 @@ function EmailToolbar({
   };
 
   return (
-    <div className="flex w-max max-w-3xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 px-5 py-5 lg:p-9">
+    <div className="flex w-max max-w-3xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-5 lg:p-9">
       <div className="flex w-full flex-col items-center justify-center gap-3 lg:flex-row">
         <div
-          className={`flex h-full w-screen max-w-[490px] items-center justify-center rounded-xl ${
+          className={`flex h-full w-full max-w-[490px] items-center justify-center rounded-xl lg:w-screen ${
             borderColor ? 'ring ring-primary ring-opacity-15' : 'border border-gray-20'
           }`}
         >

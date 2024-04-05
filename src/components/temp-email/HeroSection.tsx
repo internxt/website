@@ -33,7 +33,6 @@ export const HeroSection = ({ textContent }) => {
     setBorderColor,
     setGenerateEmail,
     setIsChangeEmailIconAnimated,
-    setIsMobileView,
     setIsRefreshed,
     setMessages,
     setOpenedMessages,
@@ -45,7 +44,6 @@ export const HeroSection = ({ textContent }) => {
     token,
     borderColor,
     openedMessages,
-    isMobileView,
     isRefreshed,
     messages,
     selectedMessage,
@@ -221,7 +219,7 @@ export const HeroSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden pt-32 pb-20">
-      <div className="flex flex-col items-center justify-center space-y-10 px-5">
+      <div className="flex flex-col items-center justify-center space-y-10 px-4">
         <div className="flex flex-col items-center justify-center text-center">
           <Header isToolsPage>{textContent.title}</Header>
           <p className="pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
@@ -234,9 +232,9 @@ export const HeroSection = ({ textContent }) => {
           onDelete={onDeleteEmailButtonClicked}
           textContent={textContent}
         />
+
         <Inbox
           textContent={textContent.inbox}
-          isMobileView={isMobileView}
           openedMessages={openedMessages}
           onRefresh={onRefresh}
           messages={messages}
