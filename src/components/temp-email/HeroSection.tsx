@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useCallback, useEffect } from 'react';
-import { isMobile } from 'react-device-detect';
 import { Info } from '@phosphor-icons/react';
 
 import { Inbox } from './components/InboxView';
@@ -113,7 +112,7 @@ export const HeroSection = ({ textContent }) => {
     const storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
 
     if (storedEmail !== null) {
-      const { address, token } = JSON.parse(storedEmail as string);
+      const { address, token } = JSON.parse(storedEmail);
       setEmail(address);
       setToken(token);
     } else {
