@@ -8,7 +8,7 @@ interface PaymentSectionProps {
   lang: string;
   textContent: any;
   normalPrice?: boolean;
-  discount: number;
+  discount?: number;
   couponCode?: CouponType;
 }
 

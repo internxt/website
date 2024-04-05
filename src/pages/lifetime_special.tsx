@@ -7,11 +7,9 @@ import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
-import { CouponType } from '@/lib/types/types';
 
-const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
+const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.5;
 
   return (
     <Layout
@@ -25,12 +23,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentSection
-        textContent={langJson.PaymentSection}
-        lang={lang}
-        couponCode={CouponType.LifetimeFiftyPercent}
-        discount={discount}
-      />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
@@ -66,4 +59,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Lifetime;
+export default LifetimeSpecial;
