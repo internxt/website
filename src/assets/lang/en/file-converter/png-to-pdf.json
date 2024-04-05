@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "PNG to PDF Converter: organize and share images into a cohesive, secure document",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert a PNG to PDF file",
+      "description": "We made our file converter to be as easy to use as possible. Converting your PNG to a PDF file involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your PNG: drag and drop your file into the area above to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Convert to PDF’: This converts your file from PNG to PDF."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert PNG to PDF files",
+      "paragraphs": [
+        "A PNG to PDF converter is beneficial for organizing and sharing images in one unified document. PNG files are typically used for high-quality images, so using a PNG to PDF file converter can help present images in a PDF professionally.",
+        "Internxt’s PNG to PDF converter allows you to create a visually appealing and professional document to create a visually appealing narrative of your PNG files."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

@@ -66,6 +66,10 @@
     "line1": "Put that strong password to use with a",
     "blueText": "free Internxt account"
   },
+  "SignUpFileConverterBanner": {
+    "line1": "Convert, store, and secure.",
+    "blueText": "Effortless file conversion with Internxt"
+  },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
@@ -107,8 +111,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% off lifetime plans: ",
-      "normalText": "secure your files forever!",
+      "boldText": "75% OFF all lifetime plans!",
+      "normalText": "World Cloud Security Day offer: ",
       "cta": "Choose your plan"
     }
   },

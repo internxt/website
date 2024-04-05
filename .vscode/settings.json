@@ -5,6 +5,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
     "source.fixAll.format": "always"
-  },
-  "svg.preview.background": "editor"
+  }
 }

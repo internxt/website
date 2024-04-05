@@ -390,6 +390,15 @@ export default function Footer({
                       className="flex items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.tools.passwordGenerator}
+                    </Link>
+
+                    <Link
+                      href="/file-converter"
+                      locale={lang}
+                      passHref
+                      className="flex items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.tools.fileConverter}
                       <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
                       </div>
@@ -759,6 +768,9 @@ export default function Footer({
                       </Link>
                       <Link href="/password-generator" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.passwordGenerator}
+                      </Link>
+                      <Link href="/file-converter" locale={lang} passHref legacyBehavior>
+                        {textContent.FooterSection.sections.tools.fileConverter}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
