@@ -189,18 +189,14 @@ export const HeroSection = ({ textContent }) => {
     setIsRefreshed(!isRefreshed);
   }, [isRefreshed]);
 
-  const onMessageSelected = useCallback(
-    (item, index) => {
-      //Update the message to local storage
-      const messagesFromLS = JSON.parse(localStorage.getItem('inbox') as string);
-      messagesFromLS[index].opened = true;
-      setMessages(messagesFromLS);
-      setSelectedMessage(item);
-      localStorage.setItem('inbox', JSON.stringify(messagesFromLS));
-      localStorage.setItem('selectedMessage', JSON.stringify(item));
-    },
-    [selectedMessage],
-  );
+  const onMessageSelected = (item, index) => {
+    const messagesFromLS = JSON.parse(localStorage.getItem('inbox') as string);
+    messagesFromLS[index].opened = true;
+    setMessages(messagesFromLS);
+    setSelectedMessage(item);
+    localStorage.setItem('inbox', JSON.stringify(messagesFromLS));
+    localStorage.setItem('selectedMessage', JSON.stringify(item));
+  };
 
   const onCopyEmailButtonClicked = () => {
     setBorderColor(true);

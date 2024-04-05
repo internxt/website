@@ -25,7 +25,7 @@ export const Inbox = ({
 }: InboxProps) => {
   return (
     <>
-      <div className="hidden w-full md:flex">
+      <div className="hidden w-full justify-center md:flex">
         <InboxWeb
           getProps={{
             messages,

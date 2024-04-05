@@ -16,7 +16,7 @@ const reducer = (state, action: ActionType) => {
     case ActionTypes.SET_MESSAGES:
       return { ...state, messages: action.payload };
     case ActionTypes.SET_SELECTED_MESSAGES:
-      return { ...state, selectedMessages: action.payload };
+      return { ...state, selectedMessage: action.payload };
     case ActionTypes.SET_GENERATE_EMAIL:
       return { ...state, generateEmail: action.payload };
     case ActionTypes.SET_IS_CHANGE_EMAIL_ICON_ANIMATED:
