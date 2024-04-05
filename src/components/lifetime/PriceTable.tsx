@@ -7,7 +7,7 @@ import { CouponType } from '@/lib/types/types';
 
 interface PriceTableProps {
   lang: string;
-  discount: number;
+  discount?: number;
   normalPrice?: boolean;
   couponCode?: CouponType;
 }
@@ -52,7 +52,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      coupon && !normalPrice
+                      coupon && discount && !normalPrice
                         ? Number((product.price * discount).toString())
                         : product.price.split('.')[0]
                     }
