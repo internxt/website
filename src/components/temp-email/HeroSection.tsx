@@ -170,7 +170,7 @@ export const HeroSection = ({ textContent }) => {
     const savedSelectedMessage = localStorage.getItem('selectedMessage');
 
     if (savedSelectedMessage) {
-      setSelectedMessage(JSON.parse(savedSelectedMessage as string));
+      setSelectedMessage(JSON.parse(savedSelectedMessage));
     }
   };
 
