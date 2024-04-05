@@ -28,13 +28,13 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ lang, textContent, norm
     },
   ];
   return (
-    <section id="payment" className="overflow-hidden py-20">
+    <section id="payment" className="overflow-hidden pb-20">
       <div className="flex flex-col space-y-8">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center rounded-lg bg-gray-5 px-4 py-2 ">
+          {/* <div className="flex items-center justify-center rounded-lg bg-gray-5 px-4 py-2 ">
             <p className="text-xl font-medium text-gray-80">{textContent.limitedOffer}</p>
-          </div>
-          <div className="flex flex-col items-center justify-center px-6 pt-4 text-center">
+          </div> */}
+          <div className="flex flex-col items-center justify-center px-6 text-center">
             <p className="w-full text-5xl font-semibold leading-tight">
               <span className="text-primary">{textContent.title.blueText}</span> <br />
               <span>{textContent.title.normalText}</span>

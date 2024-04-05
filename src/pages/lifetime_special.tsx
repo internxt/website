@@ -21,7 +21,7 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, footerLang, dev
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <HeroSection textContent={langJson.HeroSection} hideTimer />
 
       <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
