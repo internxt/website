@@ -15,7 +15,7 @@ interface PriceTableProps {
 
 const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount }) => {
   const [coupon, setCoupon] = useState();
-  const { products, currency, loadingCards } = usePricing({});
+  const { products, currency, currencyValue, loadingCards } = usePricing({});
 
   useEffect(() => {
     stripeService.getLifetimeCoupons().then((coupon) => {
@@ -24,10 +24,18 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
   }, []);
 
   const lifetimePrices = {
-    '2TB': 199,
-    '5TB': 299,
-    '10TB': 499,
+    eur: {
+      '2TB': 199,
+      '5TB': 299,
+      '10TB': 499,
+    },
+    usd: {
+      '2TB': 249,
+      '5TB': 349,
+      '10TB': 549,
+    },
   };
+  console.log();
 
   return (
     <section className="overflow-hidden">
@@ -64,7 +72,9 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      coupon && discount && !normalPrice ? lifetimePrices[product.storage] : product.price.split('.')[0]
+                      coupon && discount && !normalPrice
+                        ? lifetimePrices[currencyValue][product.storage]
+                        : product.price.split('.')[0]
                     }
                     cta={['checkout', product.priceId]}
                     lang={lang}
@@ -72,6 +82,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     popular={product.storage === '5TB'}
                     priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}
+                    currencyValue={currencyValue}
                     coupon={coupon?.[product.storage] ?? undefined}
                   />
                 );
