@@ -111,9 +111,10 @@ async function getCoupon(coupon: string) {
     });
     const { data } = res;
     return data;
-  } catch (error) {
-    console.error(error);
-    notificationService.openErrorToast('Something went wrong while fetching the coupon.');
+  } catch (err) {
+    const error = err as Error;
+
+    throw new Error(error.message);
   }
 }
 
