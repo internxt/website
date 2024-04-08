@@ -117,8 +117,21 @@ async function getCoupon(coupon: string) {
   }
 }
 
+async function getLifetimeCoupons() {
+  try {
+    const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
+    const { data } = res;
+
+    return data;
+  } catch (err) {
+    const error = err as Error;
+    throw new Error(error.message);
+  }
+}
+
 export const stripeService = {
   getPrices,
   getSelectedPrice,
   getCoupon,
+  getLifetimeCoupons,
 };

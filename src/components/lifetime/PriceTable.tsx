@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import PriceCard from '../prices/PriceCard';
 import { CouponType } from '@/lib/types/types';
+import { stripeService } from '../services/stripe.service';
 
 interface PriceTableProps {
   lang: string;
@@ -13,9 +14,20 @@ interface PriceTableProps {
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount }) => {
-  const { products, currency, coupon, loadingCards } = usePricing({
-    couponCode: couponCode,
-  });
+  const [coupon, setCoupon] = useState();
+  const { products, currency, loadingCards } = usePricing({});
+
+  useEffect(() => {
+    stripeService.getLifetimeCoupons().then((coupon) => {
+      setCoupon(coupon);
+    });
+  }, []);
+
+  const lifetimePrices = {
+    '2TB': 199,
+    '5TB': 299,
+    '10TB': 499,
+  };
 
   return (
     <section className="overflow-hidden">
@@ -52,9 +64,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      coupon && discount && !normalPrice
-                        ? Number((product.price * discount).toString())
-                        : product.price.split('.')[0]
+                      coupon && discount && !normalPrice ? lifetimePrices[product.storage] : product.price.split('.')[0]
                     }
                     cta={['checkout', product.priceId]}
                     lang={lang}
@@ -62,7 +72,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     popular={product.storage === '5TB'}
                     priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}
-                    coupon={coupon ?? undefined}
+                    coupon={coupon?.[product.storage] ?? undefined}
                   />
                 );
               })}
