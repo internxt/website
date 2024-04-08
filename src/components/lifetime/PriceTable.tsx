@@ -35,7 +35,6 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
       '10TB': 549,
     },
   };
-  console.log();
 
   return (
     <section className="overflow-hidden">
