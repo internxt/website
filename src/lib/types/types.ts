@@ -97,6 +97,9 @@ export enum CouponType {
   StartPageCoupon = 'STARTPAGE_COUPON_CODE',
   SpringCoupon = 'SPRING_COUPON_CODE',
   PcComponentesCoupon = 'PC_COMPONENTES_COUPON',
+  Lifetime2TBDiscount = 'LIFETIME_2TB_DISCOUNT',
+  Lifetime5TBDiscount = 'LIFETIME_5TB_DISCOUNT',
+  Lifetime10TBDiscount = 'LIFETIME_10TB_DISCOUNT',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

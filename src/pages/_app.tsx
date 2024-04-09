@@ -23,7 +23,7 @@ const EXCLUDED_PATHS = [
   '/oystervpn',
 ];
 
-const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', 'pccomponentes-products'];
+const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
 
 const isProduction = process.env.NODE_ENV === 'production';
 
