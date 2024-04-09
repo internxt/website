@@ -28,7 +28,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ lang, textContent, norm
     },
   ];
   return (
-    <section id="payment" className="overflow-hidden pb-20">
+    <section id="payment" className="overflow-hidden py-20">
       <div className="flex flex-col space-y-8">
         <div className="flex flex-col items-center justify-center">
           {/* <div className="flex items-center justify-center rounded-lg bg-gray-5 px-4 py-2 ">
