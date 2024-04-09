@@ -11,6 +11,8 @@ import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 
+import CampaignCtaSection from '../lifetime/CampaignCtaSection';
+
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
@@ -24,6 +26,8 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const [coupon, setCoupon] = useState();
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
+
   const banner = require('@/assets/lang/en/banners.json');
   const { products, currency, currencyValue, loadingCards } = usePricing({});
 
@@ -72,7 +76,8 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     <section className="overflow-hidden bg-white">
       <div className="flex flex-col items-center space-y-10 py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          {/* <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} /> */}
+          <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
+
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
             <Header>{isIndividual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
