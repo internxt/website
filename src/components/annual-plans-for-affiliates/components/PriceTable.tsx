@@ -7,10 +7,12 @@ import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types/types';
+import { useEffect, useState } from 'react';
+import { stripeService } from '@/components/services/stripe.service';
 
 interface PriceTableProps {
   textContent: any;
-  handlePriceCardButton: (planId: string, currency: string, coupon: string) => void;
+  handlePriceCardButton: (planId: string, coupon: string) => void;
   billingFrequency: string;
   couponType?: CouponType;
   discount?: number;
@@ -21,15 +23,32 @@ interface PriceTableProps {
 const PriceTable: React.FC<PriceTableProps> = ({
   textContent,
   handlePriceCardButton,
-  couponType,
   discount,
   billingFrequency,
   isStartPage,
   titleFontSize,
 }) => {
-  const { products, currency, loadingCards, coupon } = usePricing({
-    couponCode: couponType,
-  });
+  const [coupon, setCoupon] = useState();
+  const { products, currency, currencyValue, loadingCards } = usePricing({});
+
+  useEffect(() => {
+    stripeService.getLifetimeCoupons().then((coupon) => {
+      setCoupon(coupon);
+    });
+  }, []);
+
+  const lifetimePrices = {
+    eur: {
+      '2TB': 199,
+      '5TB': 299,
+      '10TB': 499,
+    },
+    usd: {
+      '2TB': 249,
+      '5TB': 349,
+      '10TB': 549,
+    },
+  };
 
   const features = [
     {
@@ -84,18 +103,14 @@ const PriceTable: React.FC<PriceTableProps> = ({
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={
-                      discount
-                        ? parseFloat((Math.floor(parseFloat(product.price) * discount) / 100).toFixed(2))
-                        : product.price
-                    }
+                    price={discount ? lifetimePrices[currencyValue][product.storage] : product.price}
                     billingFrequency={billingFrequency}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     currency={currency}
                     contentText={textContent.priceCard}
                     onButtonClicked={handlePriceCardButton}
-                    coupon={coupon ?? undefined}
+                    coupon={coupon?.[product.storage] ?? undefined}
                     priceBefore={discount ? product.price : undefined}
                   />
                 );

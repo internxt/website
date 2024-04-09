@@ -12,16 +12,13 @@ import PriceTable from '@/components/annual-plans-for-affiliates/components/Pric
 import { checkout } from '@/lib/auth';
 
 import { CouponType } from '@/lib/types/types';
+import usePricing from '@/hooks/usePricing';
 
 const START_PAGE = 'STARTPAGE';
 
-const currencyValue = {
-  '€': 'eur',
-  $: 'usd',
-};
-
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+  const { currencyValue } = usePricing({});
   const offerDiscount = 25;
 
   function onStartPageClicked() {
@@ -29,11 +26,11 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
     notificationService.openSuccessToast('Copied to clipboard');
   }
 
-  function handlePriceCardButton(planId, currency, coupon) {
+  function handlePriceCardButton(planId, coupon) {
     checkout({
       planId: planId,
       mode: 'payment',
-      currency: currencyValue[currency] ?? 'eur',
+      currency: currencyValue,
       couponCode: coupon ?? undefined,
     });
   }
