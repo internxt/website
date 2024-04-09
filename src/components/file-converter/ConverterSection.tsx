@@ -2,7 +2,15 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import { Errors, MAX_FILE_SIZE, extensionName, fileConverter, fileMimeTypes, imageConverter } from './types';
+import {
+  Errors,
+  MAX_FILE_SIZE,
+  extensionName,
+  fileConverter,
+  fileMimeTypes,
+  imageConverter,
+  imageToTextConverter,
+} from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
@@ -29,6 +37,7 @@ type ConverterStates = 'initialState' | 'selectedFileState' | 'convertingState' 
 const converters = [
   { type: 'file', paths: fileConverter },
   { type: 'image', paths: imageConverter },
+  { type: 'text', paths: imageToTextConverter },
 ];
 
 export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
@@ -130,6 +139,11 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
             break;
           case 'image':
             await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
+            setConverterStates('downloadFileState');
+            break;
+          case 'text':
+            console.log('Item');
+            await fileConverterService.handleImageToTextConverter(files[0]);
             setConverterStates('downloadFileState');
             break;
           default:

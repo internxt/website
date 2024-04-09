@@ -1,3 +1,7 @@
+import { PDFDocument } from 'pdf-lib';
+
+import Tesseract from 'tesseract.js';
+
 import { allowedExtensions } from '@/components/file-converter/types';
 import { convertFileToPdf, convertImage, convertImagesToPdf } from '@/components/utils/converter';
 
@@ -88,10 +92,45 @@ const handleImageConverter = async (filesToConvert, lastExtensionInPathname) => 
   });
 };
 
+const handleImageToTextConverter = async (imageToConvert) => {
+  const fontSize = 12;
+  const filename = 'text-from-image';
+  const file = imageToConvert;
+
+  if (!file) return;
+
+  const pdfDoc = await PDFDocument.create();
+  const reader = new FileReader();
+
+  reader.readAsDataURL(file);
+
+  reader.onload = async () => {
+    const {
+      data: { text },
+    } = await Tesseract.recognize(file as string, 'eng', { logger: (m) => console.log('[OPSI]:', m) });
+
+    const page = pdfDoc.addPage();
+
+    const { height } = page.getSize();
+
+    page.drawText(text, {
+      x: 50,
+      y: height - 4 * fontSize,
+      size: fontSize,
+    });
+
+    const pdfBytes = await pdfDoc.save();
+    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    const url = window.URL.createObjectURL(blob);
+    downloadBlob(url, filename);
+  };
+};
+
 const fileConverterService = {
   handleFileConverter,
   handleImagesToPdfConverter,
   handleImageConverter,
+  handleImageToTextConverter,
 };
 
 export default fileConverterService;
