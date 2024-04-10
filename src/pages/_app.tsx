@@ -21,6 +21,7 @@ const EXCLUDED_PATHS = [
   '/locker',
   '/startpage',
   '/oystervpn',
+  '/lifetime_special',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];

@@ -49,7 +49,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 />
               </div>
             </div>
-            <div className="mb-20 flex flex-col items-center justify-center px-10 pt-12 lg:hidden">
+            <div className="flex flex-col items-center justify-center px-10 pt-12 lg:hidden">
               <img src="/images/lifetime/infinity.svg" alt="Infinity icon" className="flex" draggable={false} />
             </div>
           </div>
