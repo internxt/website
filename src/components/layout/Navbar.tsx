@@ -7,7 +7,7 @@ import { UilAngleDown } from '@iconscout/react-unicons';
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
-import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 
 export interface NavbarProps {
   textContent: any;

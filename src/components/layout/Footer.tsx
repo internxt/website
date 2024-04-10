@@ -6,7 +6,7 @@ import setUTM from '@/lib/conversions';
 import LanguageMobileBox from './components/LanguageMobileBox';
 import Image from 'next/legacy/image';
 import axios from 'axios';
-import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
 
 export default function Footer({
