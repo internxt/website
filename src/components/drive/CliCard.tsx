@@ -32,14 +32,14 @@ export const CliCard = ({ textContent }) => {
               alt="Terminal Image"
               className="hidden rounded-l-3xl shadow-subtle md:flex"
             />
-            <div className="flex justify-end">
+            <div className="flex w-screen justify-end md:hidden">
               <Image
                 src="/images/drive/Terminal.svg"
                 width={352}
                 draggable={false}
                 height={353}
                 alt="Terminal Image"
-                className="flex translate-x-0.5 object-cover md:hidden"
+                className="flex w-full translate-x-0.5 object-cover md:hidden"
               />
             </div>
             <div className="flex flex-row items-center space-x-3">
