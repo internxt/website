@@ -19,7 +19,7 @@ export const ActionBanner = () => {
   const dialogData = dialogAction.getDialogData(DIALOG_KEY) as DialogDataProps;
 
   const bannerFormattedText = formatText(textContent.changeEmailBanner, {
-    email: dialogData.email,
+    email: `**${dialogData.email}**`,
   });
 
   const onCloseDialog = () => {
@@ -46,7 +46,7 @@ export const ActionBanner = () => {
         >
           <X size={32} className="text-black" />
         </button>
-        <div className="flex flex-col items-center py-12 px-5 md:flex-row md:items-start md:space-x-4 md:p-14">
+        <div className="flex flex-col items-center py-12 px-5 md:flex-row md:space-x-4 md:p-14">
           <div className="hidden w-full object-contain md:flex">
             <Image
               src="/images/temp-email/empty-inbox.svg"
@@ -56,7 +56,7 @@ export const ActionBanner = () => {
               className="w-full"
             />
           </div>
-          <div className="flex max-w-[551px] flex-col items-center gap-6 text-center md:items-start md:text-left">
+          <div className="flex max-w-[551px] flex-col items-center gap-6 text-center md:items-start md:justify-center md:text-left">
             <p className="text-4xl font-semibold text-gray-100">{bannerFormattedText.title}</p>
             <RenderDescription description={bannerFormattedText.description} />
             <div className="flex w-full flex-col gap-6 md:flex-row">
