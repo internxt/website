@@ -1,4 +1,13 @@
 {
+  "changeEmailBanner": {
+    "title": "更改电子邮件地址？",
+    "description": [
+      "此操作将删除您当前的电子邮件地址 ${{email}} 和收件箱中的所有电子邮件。",
+      "您将立即收到一个新的临时电子邮件地址。"
+    ],
+    "actionCta": "获取新电子邮件",
+    "cancelCta": "取消"
+  },
   "LoginBanner": {
     "head": "Try before you buy.",
     "title": "Get Internxt for free!",

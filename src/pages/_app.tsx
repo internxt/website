@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
+import 'react-tooltip/dist/react-tooltip.css';
 
 import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
@@ -54,6 +55,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           { key: GlobalDialog.Auth, isOpen: false },
           {
             key: GlobalDialog.Wheel,
+            isOpen: false,
+          },
+          {
+            key: GlobalDialog.TempMailAction,
             isOpen: false,
           },
         ]}

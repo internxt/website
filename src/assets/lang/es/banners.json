@@ -1,4 +1,13 @@
 {
+  "changeEmailBanner": {
+    "title": "¿Cambiar dirección de email?",
+    "description": [
+      "Esta acción eliminará tu email actual ${{email}} y todos los correos electrónicos de tu bandeja de entrada.",
+      "Recibirás un nuevo email temporal de inmediato."
+    ],
+    "actionCta": "Obtener un nuevo email",
+    "cancelCta": "Cancelar"
+  },
   "featuresBanner": {
     "label": "Ahorra un 75%",
     "title": "Comienza a ahorrar esta primavera",

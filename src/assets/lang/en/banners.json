@@ -1,4 +1,13 @@
 {
+  "changeEmailBanner": {
+    "title": "Change email address?",
+    "description": [
+      "This action will delete your current email address ${{email}} and all emails in your inbox.",
+      "You will receive a new temporary email address right away."
+    ],
+    "actionCta": "Get a new email",
+    "cancelCta": "Cancel"
+  },
   "LoginBanner": {
     "head": "Try before you buy.",
     "title": "Get Internxt for free!",

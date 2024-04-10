@@ -4,8 +4,6 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/Footer';
 
-import copyToClipboard from '@/components/utils/copy-to-clipboard';
-import { notificationService } from '@/components/Snackbar';
 import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
@@ -14,17 +12,10 @@ import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
 import usePricing from '@/hooks/usePricing';
 
-const START_PAGE = 'STARTPAGE';
-
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const { currencyValue } = usePricing({});
   const offerDiscount = 25;
-
-  function onStartPageClicked() {
-    copyToClipboard(START_PAGE);
-    notificationService.openSuccessToast('Copied to clipboard');
-  }
 
   function handlePriceCardButton(planId, coupon) {
     checkout({
