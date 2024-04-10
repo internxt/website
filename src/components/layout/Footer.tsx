@@ -201,11 +201,6 @@ export default function Footer({
                       className="flex max-w-[200px] flex-row items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.company.openSource}
-                      {lang !== 'en' && (
-                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
-                      )}
                     </Link>
 
                     <Link href="/legal" locale={lang} passHref className="hover:text-primary">
@@ -347,9 +342,6 @@ export default function Footer({
                         className="flex flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.inxtLibrary}
-                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
                       </Link>
                     )}
                   </div>
@@ -584,11 +576,6 @@ export default function Footer({
                         className="flex max-w-[200px] flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.company.openSource}
-                        {lang !== 'en' && (
-                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                            {textContent.FooterSection.new}
-                          </div>
-                        )}
                       </Link>
 
                       <Link href="/legal" locale={lang} passHref>
@@ -612,9 +599,6 @@ export default function Footer({
                             className="flex max-w-[200px] flex-row items-center hover:text-primary"
                           >
                             {textContent.FooterSection.sections.company.useCases}
-                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                              {textContent.FooterSection.new}
-                            </div>
                           </Link>
                         </>
                       )}

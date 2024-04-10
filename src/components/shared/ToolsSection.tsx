@@ -1,6 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowsCounterClockwise, Bug, CaretRight, Envelope, Password, ShieldCheck } from '@phosphor-icons/react';
+import {
+  ArrowsCounterClockwise,
+  Bug,
+  CaretRight,
+  Envelope,
+  FileDashed,
+  Password,
+  ShieldCheck,
+} from '@phosphor-icons/react';
 
 export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
   const cards = [
@@ -33,6 +41,12 @@ export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: st
       title: textContent.toolsCard[4].title,
       cta: textContent.toolsCard[4].cta,
       pathname: textContent.toolsCard[4].pathname,
+    },
+    {
+      icon: FileDashed,
+      title: textContent.toolsCard[5].title,
+      cta: textContent.toolsCard[5].cta,
+      pathname: textContent.toolsCard[5].pathname,
     },
   ];
 
