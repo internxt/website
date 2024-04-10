@@ -1,6 +1,6 @@
 import DropArea from '@/components/shared/DropArea';
 import EmptyFile from '@/components/shared/icons/EmptyFile';
-import { formatText } from '@/components/utils/formatText';
+import { formatText } from '@/components/utils/format-text';
 
 interface InitialStateProps {
   textContent: any;
