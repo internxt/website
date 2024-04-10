@@ -151,10 +151,6 @@ export default function Footer({
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
 
-                    <Link href="/photos" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.products.photos}
-                    </Link>
-
                     <a
                       href="https://send.internxt.com"
                       target="_blank"
@@ -523,13 +519,6 @@ export default function Footer({
                         <div className="flex flex-row space-x-2">
                           <HardDrives className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.drive}</p>
-                        </div>
-                      </Link>
-
-                      <Link href="/photos" locale={lang} passHref legacyBehavior>
-                        <div className="flex flex-row space-x-2">
-                          <Camera className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
-                          <p>{textContent.FooterSection.sections.products.photos}</p>
                         </div>
                       </Link>
 

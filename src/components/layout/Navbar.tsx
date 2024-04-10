@@ -129,16 +129,6 @@ export default function Navbar(props: NavbarProps) {
                         {props.textContent.products.drive}
                       </Link>
 
-                      <Link
-                        href="/photos"
-                        locale={props.lang}
-                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}
-                      >
-                        {props.textContent.products.photos}
-                      </Link>
-
                       <a
                         href="https://send.internxt.com"
                         target="_blank"
@@ -353,13 +343,6 @@ export default function Navbar(props: NavbarProps) {
                                   <div className="flex flex-row space-x-2">
                                     <HardDrives className="h-6 w-6 text-gray-80" />
                                     <p>{props.textContent.products.drive}</p>
-                                  </div>
-                                </Link>
-
-                                <Link href="/photos" locale={props.lang} passHref legacyBehavior>
-                                  <div className="flex flex-row space-x-2">
-                                    <Camera className="h-6 w-6 text-gray-80" />
-                                    <p>{props.textContent.products.photos}</p>
                                   </div>
                                 </Link>
 
