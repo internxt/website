@@ -81,3 +81,23 @@ export const downloadDriveLinks = async () => {
 
   return platforms;
 };
+
+export const downloadCliLinks = async () => {
+  const release = await getLatestReleaseInfo('internxt', 'cli').catch(() => ({
+    cached: false,
+    links: { linux: null, windows: null },
+  }));
+
+  const platforms = {
+    Android: androidURL,
+    iPad: iosURL,
+    iPhone: iosURL,
+    Windows: release.links.windows || windowsURL,
+    MacOS: release.links.macos || macosURL,
+    UNIX: release.links.linux || linuxURL,
+    Linux: release.links.linux || linuxURL,
+    all: lastReleaseURL,
+  };
+
+  return platforms;
+};

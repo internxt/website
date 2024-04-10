@@ -29,6 +29,31 @@
       "MacOS": "Mac"
     }
   },
+  "CliCard": {
+    "new": "新",
+    "title": {
+      "bold": "强大工具",
+      "normal": "适用于高级用户",
+      "description": "Internxt CLI是一款强大的命令行工具，可以通过命令和WebDAV访问和管理Internxt Drive数据。",
+      "installCli": "使用npm安装",
+      "command": "npm i @internxt/cli",
+      "available": "可用于",
+      "feeds": [
+        {
+          "title": "WebDAV支持",
+          "description": "使用您喜欢的WebDAV客户端与Internxt CLI一起使用。"
+        },
+        {
+          "title": "可脚本化",
+          "description": "在任何平台上从您喜欢的shell运行脚本命令。"
+        },
+        {
+          "title": "加密同步",
+          "description": "始终保证零知识和端到端安全性。"
+        }
+      ]
+    }
+  },
   "FeatureSection": {
     "title": "使用 Internxt Drive 保护您的文件",
     "description": "使用 Internxt，您绝对是唯一可以访问您的文件的人。 以完全隐私的方式存储、共享和备份您的数据。",
