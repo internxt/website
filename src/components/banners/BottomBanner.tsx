@@ -2,35 +2,41 @@ import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
+
 const BottomBanner = () => {
-  const [hidePopup, setHidePopup] = useState(false);
   const router = useRouter();
+
+  const [hidePopup, setHidePopup] = useState(false);
   const lang = router.locale;
+
   useEffect(() => {
     const getSquareBannerLS = sessionStorage.getItem(SHOW_SQUARE_BANNER_LS);
     if (getSquareBannerLS) setHidePopup(true);
   }, []);
+
   function handleClose() {
     setHidePopup(true);
     sessionStorage.setItem(SHOW_SQUARE_BANNER_LS, 'false');
   }
+
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
+        return { title1: 'Save 75%', title2: 'Secure your online identity for a lifetime' };
       case 'es':
-        return { title1: '¡Ahorra un 75%', title2: ' ¡Llegaron las ofertas de primavera!' };
+        return { title1: 'Ahorra un 75%', title2: 'Asegura tu identidad en línea de por vida' };
       case 'ru':
-        return { title1: 'Экономия 75%', title2: 'Весенние скидки уже здесь!' };
+        return { title1: 'Экономия 75%', title2: 'Защитите свою личность на всю жизнь' };
       case 'fr':
-        return { title1: 'Économisez 75%', title2: 'Les économies de printemps sont arrivées!' };
+        return { title1: 'Économisez 75%', title2: 'Sécurisez votre identité en ligne pour toute une vie' };
       case 'it':
-        return { title1: 'Risparmia il 75%', title2: 'Sono arrivati i risparmi primaverili!' };
+        return { title1: 'Risparmia il 75%', title2: 'Proteggi la tua identità online per tutta la vita' };
       case 'zh':
-        return { title1: '省 75%', title2: '春季优惠来啦！' };
+        return { title1: '省 75%', title2: '保护您的在线身份一生' };
       case 'de':
-        return { title1: 'Sparen Sie 75%', title2: 'Frühlingssparangebote sind eingetroffen!' };
+        return { title1: 'Sparen Sie 75%', title2: 'Sichern Sie Ihre Online-Identität ein Leben lang' };
       default:
         return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
     }
@@ -60,32 +66,32 @@ const BottomBanner = () => {
     <section
       className={`fixed bottom-10 z-50 hidden lg:${
         hidePopup ? 'hidden' : 'flex'
-      } overflow-hidden rounded-lg border-4 border-primary/7 bg-white px-5 lg:px-0`}
+      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
-          <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2">
+          <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2 text-white">
             <X size={24} />
           </button>
         </div>
         <div className="z-40 flex flex-row ">
           <div className="flex flex-col">
             <Image
-              src="/images/banners/internxt_spring_sale_banner.webp"
-              width={198}
-              height={100}
+              src="/images/banners/data_privacy_internxt.webp"
+              width={178}
+              height={70}
               className="flex w-full object-fill"
               draggable={false}
               alt={"Internxt's spring sale"}
             />
           </div>
           <div className="flex flex-row items-center justify-center space-x-5">
-            <p className="text-6xl font-bold text-primary">{title().title1}</p>
-            <p className="max-w-[300px] text-2xl font-bold">{title().title2}</p>
+            <p className="text-6xl font-bold text-white">{title().title1}</p>
+            <p className="max-w-[300px] text-2xl font-semibold text-white">{title().title2}</p>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-5 sm:text-lg"
               onClick={() => {
-                router.push('/pricing');
+                router.push('/lifetime');
               }}
             >
               {ctaText()}

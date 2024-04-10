@@ -30,6 +30,11 @@
       "title": "Антивирус",
       "cta": "Сканировать сейчас",
       "pathname": "/virus-scanner"
+    },
+    {
+      "title": "Конвертер файлов",
+      "cta": "Конвертировать сейчас",
+      "pathname": "/file-converter"
     }
   ]
 }

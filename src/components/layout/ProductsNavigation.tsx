@@ -14,16 +14,7 @@ const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
       >
         {textContent.products.drive}
       </Link>
-      <Link
-        href="/photos"
-        locale={lang}
-        passHref
-        className={`relative whitespace-nowrap py-1.5 px-4 font-semibold transition duration-150 ease-in-out ${
-          selectedItem === 'photos' ? 'text-primary' : 'text-gray-60 hover:text-primary-dark'
-        } text-base`}
-      >
-        {textContent.products.photos}
-      </Link>
+
       <a
         href="https://send.internxt.com"
         target="_blank"

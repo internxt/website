@@ -46,6 +46,8 @@ const excludedPaths = [
   '/locker',
   '/startpage',
   '/oystervpn',
+  '/pccomponentes-products',
+  '/lifetime_special',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 

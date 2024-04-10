@@ -1,21 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import PriceCard from '../prices/PriceCard';
 import { CouponType } from '@/lib/types/types';
+import { stripeService } from '../services/stripe.service';
 
 interface PriceTableProps {
   lang: string;
-  discount: number;
+  discount?: number;
   normalPrice?: boolean;
   couponCode?: CouponType;
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount }) => {
-  const { products, currency, coupon, loadingCards } = usePricing({
-    couponCode: couponCode,
-  });
+  const [coupon, setCoupon] = useState();
+  const { products, currency, currencyValue, loadingCards } = usePricing({});
+
+  useEffect(() => {
+    stripeService.getLifetimeCoupons().then((coupon) => {
+      setCoupon(coupon);
+    });
+  }, []);
+
+  const lifetimePrices = {
+    eur: {
+      '2TB': 199,
+      '5TB': 299,
+      '10TB': 499,
+    },
+    usd: {
+      '2TB': 249,
+      '5TB': 349,
+      '10TB': 549,
+    },
+  };
 
   return (
     <section className="overflow-hidden">
@@ -52,8 +71,8 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      coupon && !normalPrice
-                        ? Number((product.price * discount).toString())
+                      coupon && discount && !normalPrice
+                        ? lifetimePrices[currencyValue][product.storage]
                         : product.price.split('.')[0]
                     }
                     cta={['checkout', product.priceId]}
@@ -62,7 +81,8 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     popular={product.storage === '5TB'}
                     priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}
-                    coupon={coupon ?? undefined}
+                    currencyValue={currencyValue}
+                    coupon={!normalPrice ? coupon?.[product.storage] ?? undefined : undefined}
                   />
                 );
               })}

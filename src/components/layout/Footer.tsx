@@ -6,7 +6,7 @@ import setUTM from '@/lib/conversions';
 import LanguageMobileBox from './components/LanguageMobileBox';
 import Image from 'next/legacy/image';
 import axios from 'axios';
-import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
 
 export default function Footer({
@@ -151,10 +151,6 @@ export default function Footer({
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
 
-                    <Link href="/photos" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.products.photos}
-                    </Link>
-
                     <a
                       href="https://send.internxt.com"
                       target="_blank"
@@ -205,11 +201,6 @@ export default function Footer({
                       className="flex max-w-[200px] flex-row items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.company.openSource}
-                      {lang !== 'en' && (
-                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
-                      )}
                     </Link>
 
                     <Link href="/legal" locale={lang} passHref className="hover:text-primary">
@@ -351,9 +342,6 @@ export default function Footer({
                         className="flex flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.inxtLibrary}
-                        <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
                       </Link>
                     )}
                   </div>
@@ -526,13 +514,6 @@ export default function Footer({
                         </div>
                       </Link>
 
-                      <Link href="/photos" locale={lang} passHref legacyBehavior>
-                        <div className="flex flex-row space-x-2">
-                          <Camera className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
-                          <p>{textContent.FooterSection.sections.products.photos}</p>
-                        </div>
-                      </Link>
-
                       <a
                         href="https://send.internxt.com"
                         target="_blank"
@@ -595,11 +576,6 @@ export default function Footer({
                         className="flex max-w-[200px] flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.company.openSource}
-                        {lang !== 'en' && (
-                          <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                            {textContent.FooterSection.new}
-                          </div>
-                        )}
                       </Link>
 
                       <Link href="/legal" locale={lang} passHref>
@@ -623,9 +599,6 @@ export default function Footer({
                             className="flex max-w-[200px] flex-row items-center hover:text-primary"
                           >
                             {textContent.FooterSection.sections.company.useCases}
-                            <div className=" ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                              {textContent.FooterSection.new}
-                            </div>
                           </Link>
                         </>
                       )}

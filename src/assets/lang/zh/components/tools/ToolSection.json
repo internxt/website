@@ -30,6 +30,11 @@
       "title": "病毒扫描器",
       "cta": "立即扫描",
       "pathname": "/virus-scanner"
+    },
+    {
+      "title": "文件转换器",
+      "cta": "立即转换",
+      "pathname": "/file-converter"
     }
   ]
 }
