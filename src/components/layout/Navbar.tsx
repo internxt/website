@@ -7,7 +7,7 @@ import { UilAngleDown } from '@iconscout/react-unicons';
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
-import { Camera, CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 
 export interface NavbarProps {
   textContent: any;
@@ -127,16 +127,6 @@ export default function Navbar(props: NavbarProps) {
                         }`}
                       >
                         {props.textContent.products.drive}
-                      </Link>
-
-                      <Link
-                        href="/photos"
-                        locale={props.lang}
-                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}
-                      >
-                        {props.textContent.products.photos}
                       </Link>
 
                       <a
@@ -353,13 +343,6 @@ export default function Navbar(props: NavbarProps) {
                                   <div className="flex flex-row space-x-2">
                                     <HardDrives className="h-6 w-6 text-gray-80" />
                                     <p>{props.textContent.products.drive}</p>
-                                  </div>
-                                </Link>
-
-                                <Link href="/photos" locale={props.lang} passHref legacyBehavior>
-                                  <div className="flex flex-row space-x-2">
-                                    <Camera className="h-6 w-6 text-gray-80" />
-                                    <p>{props.textContent.products.photos}</p>
                                   </div>
                                 </Link>
 
