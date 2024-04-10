@@ -82,7 +82,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={coupon?.[product.storage] ?? undefined}
+                    coupon={!normalPrice ? coupon?.[product.storage] ?? undefined : undefined}
                   />
                 );
               })}
