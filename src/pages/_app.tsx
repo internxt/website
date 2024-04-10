@@ -10,8 +10,6 @@ import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
-import FeaturesBanner from '@/components/banners/FeaturesBanner';
-import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 
 const EXCLUDED_PATHS = [
   '/lifetime',

@@ -12,8 +12,6 @@ import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
 import usePricing from '@/hooks/usePricing';
 
-const START_PAGE = 'STARTPAGE';
-
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const { currencyValue } = usePricing({});
