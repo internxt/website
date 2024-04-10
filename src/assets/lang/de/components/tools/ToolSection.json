@@ -30,6 +30,11 @@
       "title": "Virenscanner",
       "cta": "Jetzt scannen",
       "pathname": "/virus-scanner"
+    },
+    {
+      "title": "Dateikonverter",
+      "cta": "Jetzt konvertieren",
+      "pathname": "/file-converter"
     }
   ]
 }
