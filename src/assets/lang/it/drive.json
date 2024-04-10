@@ -33,26 +33,26 @@
     "new": "NUOVO",
     "title": {
       "bold": "Strumenti potenti",
-      "normal": "per utenti esperti",
-      "description": "Internxt CLI è un potente strumento a riga di comando che consente di accedere e gestire i dati di Internxt Drive tramite comandi e WebDAV.",
-      "installCli": "Installare con npm",
-      "command": "npm i @internxt/cli",
-      "available": "Disponibile su",
-      "feeds": [
-        {
-          "title": "Supporto WebDAV",
-          "description": "Utilizza il tuo client WebDAV preferito con Internxt CLI."
-        },
-        {
-          "title": "Scriptabile",
-          "description": "Esegui comandi di script dalla tua shell preferita su qualsiasi piattaforma."
-        },
-        {
-          "title": "Sincronizzazione crittografata",
-          "description": "Sicurezza a prova di zero-knowledge ed end-to-end sempre garantita."
-        }
-      ]
-    }
+      "normal": "per utenti esperti"
+    },
+    "description": "Internxt CLI è un potente strumento a riga di comando che consente di accedere e gestire i dati di Internxt Drive tramite comandi e WebDAV.",
+    "installCli": "Installare con npm",
+    "command": "npm i @internxt/cli",
+    "available": "Disponibile su",
+    "feeds": [
+      {
+        "title": "Supporto WebDAV",
+        "description": "Utilizza il tuo client WebDAV preferito con Internxt CLI."
+      },
+      {
+        "title": "Scriptabile",
+        "description": "Esegui comandi di script dalla tua shell preferita su qualsiasi piattaforma."
+      },
+      {
+        "title": "Sincronizzazione crittografata",
+        "description": "Sicurezza a prova di zero-knowledge ed end-to-end sempre garantita."
+      }
+    ]
   },
   "FeaturesSection": {
     "section1": {
