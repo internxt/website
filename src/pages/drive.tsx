@@ -38,7 +38,7 @@ const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLan
 
         <HeroSection textContent={langJson.HeroSection} lang={lang} download={download} />
 
-        <div className="flex flex-col items-center justify-center pb-20">
+        <div className="flex items-center justify-center px-2 pb-20">
           <CliCard textContent={langJson.CliCard} />
         </div>
 

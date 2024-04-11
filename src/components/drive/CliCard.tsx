@@ -1,7 +1,10 @@
 import Image from 'next/image';
-import { LinkToComponent } from './components/LinkToComponent';
+import { LinkTo } from './components/LinkTo';
 import { CopyTextInput } from '../shared/CopyTextInput';
 import { AppleLogo } from '../shared/icons/AppleIcon';
+
+const GH_README_LINK = 'https://github.com/internxt/cli/tree/main?tab=readme-ov-file#readme';
+const USER_GUIDE_LINK = 'https://help.internxt.com/en/articles/9178044-does-internxt-support-webdav';
 
 export const CliCard = ({ textContent }) => {
   return (
@@ -24,7 +27,7 @@ export const CliCard = ({ textContent }) => {
               <CopyTextInput text={textContent.command} />
             </div>
           </div>
-          <div className="flex flex-col space-y-3 pl-5 md:pl-0">
+          <div className="flex w-full flex-col space-y-3 pl-5 md:pl-0">
             <Image
               src="/images/drive/Terminal.svg"
               width={256}
@@ -32,7 +35,7 @@ export const CliCard = ({ textContent }) => {
               alt="Terminal Image"
               className="hidden rounded-l-3xl shadow-subtle md:flex"
             />
-            <div className="flex w-screen justify-end md:hidden">
+            <div className="flex justify-end md:hidden">
               <Image
                 src="/images/drive/Terminal.svg"
                 width={352}
@@ -71,8 +74,8 @@ export const CliCard = ({ textContent }) => {
         <div className="mx-12 flex flex-row flex-wrap items-center gap-8">
           <p className="text-lg text-gray-60">{textContent.learnMore}</p>
 
-          <LinkToComponent text={textContent.readme} />
-          <LinkToComponent text={textContent.userGuide} />
+          <LinkTo text={textContent.readme} linkToRedirect={GH_README_LINK} />
+          <LinkTo text={textContent.userGuide} linkToRedirect={USER_GUIDE_LINK} />
         </div>
       </div>
     </section>
