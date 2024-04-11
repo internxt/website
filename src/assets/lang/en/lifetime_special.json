@@ -1,14 +1,14 @@
 {
   "HeroSection": {
     "title": "Get a lifetime Internxt plan!",
-    "description": "Buy once and securely, store share, and access your files across all devices.",
+    "description": "Securely store your files and protect your data for a lifetime.",
     "cta1": "Get lifetime plan",
     "cta2": "Choose lifetime plan"
   },
   "PaymentSection": {
     "limitedOffer": "Limited time offer!",
     "title": { "blueText": "", "normalText": "Internxt lifetime plans" },
-    "description": "Buy once and get privacy and security forever.",
+    "description": "Buy once and securely, store share, and access your files across all devices.",
     "normalSection": {
       "title": "Explore all of our exclusive lifetime plans",
       "description": "Buy once and get privacy and security forever."

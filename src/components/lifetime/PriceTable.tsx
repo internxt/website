@@ -11,9 +11,10 @@ interface PriceTableProps {
   discount?: number;
   normalPrice?: boolean;
   couponCode?: CouponType;
+  isLifetimeSpecial?: boolean;
 }
 
-const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount }) => {
+const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount, isLifetimeSpecial }) => {
   const [coupon, setCoupon] = useState();
   const { products, currency, currencyValue, loadingCards } = usePricing({});
 
@@ -35,6 +36,26 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
       '10TB': 549,
     },
   };
+
+  const productsArray = products?.individuals?.['lifetime'] && Object.values(products?.individuals?.['lifetime']);
+
+  // Intercambiar la posición del segundo y tercer elementos
+  const updatedProductsArray =
+    productsArray &&
+    productsArray.map((product: any, index: number) => {
+      if (index === 1) {
+        // Si es el segundo elemento, devolver el tercer elemento
+        return productsArray[2];
+      } else if (index === 2) {
+        // Si es el tercer elemento, devolver el segundo elemento
+        return productsArray[1];
+      } else {
+        // Devolver los elementos restantes sin cambios
+        return product;
+      }
+    });
+
+  const lifetimeProducts = isLifetimeSpecial ? updatedProductsArray : productsArray;
 
   return (
     <section className="overflow-hidden">
@@ -63,8 +84,8 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-16">
-            {products?.individuals?.['lifetime'] &&
-              Object.values(products.individuals['lifetime']).map((product: any) => {
+            {lifetimeProducts &&
+              lifetimeProducts.map((product: any) => {
                 return (
                   <PriceCard
                     planType="individual"
@@ -78,7 +99,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     billingFrequency="lifetime"
-                    popular={product.storage === '5TB'}
+                    popular={isLifetimeSpecial ? product.storage === '10TB' : product.storage === '5TB'}
                     priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                     currency={currency}
                     currencyValue={currencyValue}

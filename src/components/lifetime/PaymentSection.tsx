@@ -10,9 +10,17 @@ interface PaymentSectionProps {
   normalPrice?: boolean;
   discount?: number;
   couponCode?: CouponType;
+  isLifetimeSpecial?: boolean;
 }
 
-const PaymentSection: React.FC<PaymentSectionProps> = ({ lang, textContent, normalPrice, couponCode, discount }) => {
+const PaymentSection: React.FC<PaymentSectionProps> = ({
+  lang,
+  textContent,
+  normalPrice,
+  couponCode,
+  discount,
+  isLifetimeSpecial,
+}) => {
   const features = [
     {
       icon: FolderLock,
@@ -42,7 +50,13 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ lang, textContent, norm
           </div>
         </div>
 
-        <PriceTable lang={lang} normalPrice={normalPrice} discount={discount} couponCode={couponCode} />
+        <PriceTable
+          lang={lang}
+          normalPrice={normalPrice}
+          discount={discount}
+          couponCode={couponCode}
+          isLifetimeSpecial={isLifetimeSpecial}
+        />
 
         <div className="flex flex-col items-center justify-center space-y-8 bg-transparent text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (
