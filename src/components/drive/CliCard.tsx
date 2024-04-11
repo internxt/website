@@ -27,7 +27,7 @@ export const CliCard = ({ textContent }) => {
               <CopyTextInput text={textContent.command} />
             </div>
           </div>
-          <div className="flex w-full flex-col space-y-3 pl-5 md:pl-0">
+          <div className="flex w-full flex-col space-y-3 pl-5 md:w-max md:pl-0">
             <Image
               src="/images/drive/Terminal.svg"
               width={256}
@@ -45,7 +45,7 @@ export const CliCard = ({ textContent }) => {
                 className="flex w-full translate-x-0.5 object-cover md:hidden"
               />
             </div>
-            <div className="flex flex-row items-center space-x-3">
+            <div className="flex flex-row items-center space-x-3 px-5">
               <p className="text-sm text-gray-60">{textContent.available}</p>
               {/* Logos */}
               <img src="/images/drive/Windows-logo.svg" width={16} height={16} alt="Windows image" />
@@ -60,8 +60,8 @@ export const CliCard = ({ textContent }) => {
             </div>
           </div>
         </div>
-        <div className="mx-12 flex border border-gray-10" />
-        <div className="flex flex-col items-center px-12">
+        <div className="mx-5 flex border border-gray-10 md:mx-12" />
+        <div className="flex flex-col items-center px-5 md:px-12">
           <div className="flex flex-row flex-wrap  gap-10">
             {textContent.feeds.map((item: { title: string; description: string }) => (
               <div className="flex flex-col space-y-1 md:max-w-[182px]">
@@ -71,7 +71,7 @@ export const CliCard = ({ textContent }) => {
             ))}
           </div>
         </div>
-        <div className="mx-12 flex flex-row flex-wrap items-center gap-8">
+        <div className="mx-5 flex flex-col gap-3 md:mx-12 md:flex-row md:items-center md:gap-8">
           <p className="text-lg text-gray-60">{textContent.learnMore}</p>
 
           <LinkTo text={textContent.readme} linkToRedirect={GH_README_LINK} />
