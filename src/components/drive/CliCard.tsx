@@ -11,13 +11,13 @@ export const CliCard = ({ textContent }) => {
     <section className="flex flex-col rounded-3xl border border-gray-5 bg-gray-1 py-12">
       <div className="flex flex-col space-y-12">
         {/* First path */}
-        <div className="flex flex-col items-center gap-12 md:flex-row md:pl-12">
+        <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between md:pl-12">
           <div className="flex flex-col space-y-10 px-5 md:px-0">
             <div className="flex flex-col space-y-4">
               <div className="text w-max rounded-lg bg-orange/15 py-1.5 px-2.5">
                 <p className="text-sm font-bold text-orange">{textContent.new}</p>
               </div>
-              <h2 className="text-5xl font-semibold text-gray-100">
+              <h2 className="max-w-[550px] text-5xl font-semibold leading-tight text-gray-100">
                 {textContent.title.bold} <br /> <span className="text-gray-40">{textContent.title.normal}</span>
               </h2>
               <p className="max-w-[384px] text-lg text-gray-100">{textContent.description}</p>
@@ -33,7 +33,7 @@ export const CliCard = ({ textContent }) => {
               width={256}
               height={256}
               alt="Terminal Image"
-              className="hidden rounded-l-3xl shadow-subtle md:flex"
+              className="hidden w-max rounded-l-3xl shadow-subtle md:flex"
             />
             <div className="flex justify-end md:hidden">
               <Image

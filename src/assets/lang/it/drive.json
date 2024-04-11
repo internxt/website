@@ -37,7 +37,7 @@
     },
     "description": "Internxt CLI è un potente strumento a riga di comando che consente di accedere e gestire i dati di Internxt Drive tramite comandi e WebDAV.",
     "installCli": "Installare con npm",
-    "command": "npm i @internxt/cli",
+    "command": "npm i -g @internxt/cli",
     "available": "Disponibile su",
     "feeds": [
       {
@@ -52,7 +52,10 @@
         "title": "Sincronizzazione crittografata",
         "description": "Sicurezza a prova di zero-knowledge ed end-to-end sempre garantita."
       }
-    ]
+    ],
+    "learnMore": "Per saperne di più su Internxt CLI:",
+    "readme": "ReadMe di GitHub",
+    "userGuide": "Guida per l'utente"
   },
   "FeaturesSection": {
     "section1": {
