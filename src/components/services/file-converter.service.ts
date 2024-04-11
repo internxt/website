@@ -1,5 +1,5 @@
 import { allowedExtensions } from '@/components/file-converter/types';
-import { convertFileToPdf, convertImage, convertImagesToPdf } from '@/components/utils/converter';
+import { convertFileToPdf, convertImage, convertImagesToPdf, imageConverter } from '@/components/utils/converter';
 
 function downloadBlob(url: string, fileName: string) {
   const link = document.createElement('a');
@@ -88,10 +88,28 @@ const handleImageConverter = async (filesToConvert, lastExtensionInPathname) => 
   });
 };
 
+const handleImageConverterV2 = async (fileToConvert: File, fromExtension: string, toExtension: string) => {
+  if (!fileToConvert) {
+    return;
+  }
+  try {
+    const response = await imageConverter(fileToConvert, fromExtension, toExtension);
+
+    const url = window.URL.createObjectURL(response as Blob);
+    const fileName = `${fileToConvert.name.split('.')[0]}.${toExtension}`;
+
+    downloadBlob(url, fileName);
+  } catch (err) {
+    const error = err as Error;
+    return error.message;
+  }
+};
+
 const fileConverterService = {
   handleFileConverter,
   handleImagesToPdfConverter,
   handleImageConverter,
+  handleImageConverterV2,
 };
 
 export default fileConverterService;

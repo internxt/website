@@ -129,7 +129,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
             setConverterStates('downloadFileState');
             break;
           case 'image':
-            await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
+            await fileConverterService.handleImageConverterV2(files[0], pathnameSegments[0], lastExtensionInPathname);
             setConverterStates('downloadFileState');
             break;
           default:

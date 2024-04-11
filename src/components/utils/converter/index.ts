@@ -32,6 +32,36 @@ async function convertFileToPdf(file: File, format: string): Promise<Blob | Erro
   }
 }
 
+async function imageConverter(file: File, fromExtension: string, toExtension: string): Promise<Blob | Error> {
+  const formData = new FormData();
+  formData.append('file', file);
+
+  try {
+    const response = await fetch(
+      `/api/convert/image?from=${fromExtension.toLowerCase()}&to=${toExtension.toLowerCase()}`,
+      {
+        method: 'POST',
+        body: formData,
+      },
+    );
+
+    if (!response.ok || !response.body) {
+      if (response.status === 413) {
+        throw new Error('File too large');
+      } else if (response.status === 500) {
+        throw new Error('Something went wrong');
+      }
+    }
+
+    const blob = await response.blob();
+
+    return blob;
+  } catch (err) {
+    const error = new Error(err);
+    throw new Error(`[ERROR CONVERTING FILE]: ${error.stack ?? error.message}`);
+  }
+}
+
 /**
  * @param files - Array of all images that we need to add to a PDF
  * @returns the url to download the PDF from the client side
@@ -97,4 +127,4 @@ async function convertImage(image, newFormat: string): Promise<Blob> {
   });
 }
 
-export { convertFileToPdf, convertImage, convertImagesToPdf };
+export { convertFileToPdf, imageConverter, convertImage, convertImagesToPdf };
