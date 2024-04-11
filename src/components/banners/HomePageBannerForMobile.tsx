@@ -1,14 +1,21 @@
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 
-export const HomePageBanner = () => {
+export const HomePageBannerForMobile = () => {
+  const { dialogIsOpen } = useGlobalDialog();
+  const shouldShowBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/pricing.json`);
 
   return (
-    <div className="flex w-full flex-col overflow-hidden rounded-[32px] bg-primary pt-10 md:hidden">
+    <div
+      className={`${
+        shouldShowBanner ? 'flex' : 'hidden'
+      } w-full flex-col overflow-hidden rounded-[32px] bg-primary pt-10 md:hidden`}
+    >
       <div className="flex w-full flex-col items-center justify-center space-y-6 text-center text-white lg:items-start lg:text-left">
         <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white py-2 px-5">
           <p className="text-4xl font-bold text-primary">{textContent.tableSection.ctaBanner.label}</p>

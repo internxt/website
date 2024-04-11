@@ -7,6 +7,7 @@ import moment from 'moment';
 
 import isBrave from '@/lib/brave';
 import TopBanner from '@/components/banners/TopBanner';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -65,10 +66,12 @@ export default function Layout({
 }: // lang
 LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
+  const { dialogIsOpen } = useGlobalDialog();
+  const shouldShowBanner = dialogIsOpen(GlobalDialog.TopBanner);
+
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = !excludedPaths.includes(pathname);
 
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';

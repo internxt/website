@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
-import { CaretRight, Sun } from '@phosphor-icons/react';
+import { CaretRight } from '@phosphor-icons/react';
 
 const TopBanner = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
+
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
 

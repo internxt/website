@@ -61,6 +61,22 @@ function MyApp({ Component, pageProps }: AppProps) {
             key: GlobalDialog.TempMailAction,
             isOpen: false,
           },
+          {
+            key: GlobalDialog.PriceBannerForCampaigns,
+            isOpen: true,
+          },
+          {
+            key: GlobalDialog.MobileBannerForHome,
+            isOpen: true,
+          },
+          {
+            key: GlobalDialog.TopBanner,
+            isOpen: true,
+          },
+          {
+            key: GlobalDialog.BottomBanner,
+            isOpen: true,
+          },
         ]}
       >
         <>

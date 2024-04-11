@@ -1,23 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
 const BottomBanner = () => {
   const router = useRouter();
 
-  const [hidePopup, setHidePopup] = useState(false);
+  const { dialogIsOpen, closeDialog } = useGlobalDialog();
+  const shouldShowBanner = dialogIsOpen(GlobalDialog.BottomBanner);
+
   const lang = router.locale;
 
   useEffect(() => {
     const getSquareBannerLS = sessionStorage.getItem(SHOW_SQUARE_BANNER_LS);
-    if (getSquareBannerLS) setHidePopup(true);
+    if (getSquareBannerLS) closeDialog(GlobalDialog.BottomBanner);
   }, []);
 
   function handleClose() {
-    setHidePopup(true);
+    closeDialog(GlobalDialog.BottomBanner);
     sessionStorage.setItem(SHOW_SQUARE_BANNER_LS, 'false');
   }
 
@@ -64,8 +67,8 @@ const BottomBanner = () => {
   };
   return (
     <section
-      className={`fixed bottom-10 z-50 hidden lg:${
-        hidePopup ? 'hidden' : 'flex'
+      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden lg:${
+        shouldShowBanner ? 'flex' : 'hidden'
       } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center pr-20">
