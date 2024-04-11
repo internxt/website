@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -8,19 +8,23 @@ const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
 const BottomBanner = () => {
   const router = useRouter();
+  const [shouldShowBanner, setShouldShowBanner] = useState(false);
 
   const { dialogIsOpen, closeDialog } = useGlobalDialog();
-  const shouldShowBanner = dialogIsOpen(GlobalDialog.BottomBanner);
 
   const lang = router.locale;
 
   useEffect(() => {
     const getSquareBannerLS = sessionStorage.getItem(SHOW_SQUARE_BANNER_LS);
-    if (getSquareBannerLS) closeDialog(GlobalDialog.BottomBanner);
+    if (getSquareBannerLS) {
+      closeDialog(GlobalDialog.BottomBanner);
+    } else {
+      setShouldShowBanner(dialogIsOpen(GlobalDialog.BottomBanner));
+    }
   }, []);
 
   function handleClose() {
-    closeDialog(GlobalDialog.BottomBanner);
+    setShouldShowBanner(false);
     sessionStorage.setItem(SHOW_SQUARE_BANNER_LS, 'false');
   }
 
