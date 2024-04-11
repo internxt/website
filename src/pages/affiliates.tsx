@@ -33,7 +33,9 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
       <CtaSection
         textContent={langJson.CtaSection}
-        url={'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1'}
+        url={
+          'https://app.impact.com/campaign-mediapartner-signup/Internxt.brand?type=dm&io=e2AXxeEh7q3EO8TzTRQ1yfzRimhVUUQ4VIYp7wvigF46G5y9GkCkRC94J2GfuR%2Fa'
+        }
       />
 
       <Footer textContent={footerLang} lang={lang} />
