@@ -28,7 +28,6 @@ export enum GlobalDialog {
   TempMailAction = 'TempMailAction',
   MobileBannerForHome = 'MobileBannerForHome',
   PriceBannerForCampaigns = 'PriceBannerForCampaigns',
-  TopBanner = 'TopBanner',
   BottomBanner = 'BottomBanner',
 }
 export const GlobalUIManager: React.FC<
