@@ -8,10 +8,10 @@
   "PaymentSection": {
     "limitedOffer": "Zeitlich begrenztes Angebot!",
     "title": { "blueText": "", "normalText": "Lebenslange Pläne von Internxt." },
-    "description": "Kaufe einmalig und erhalte Datenschutz und Sicherheit für immer.",
+    "description": "Einmal kaufen und sicher aufbewahren, freigeben und auf Ihre Dateien auf allen Geräten zugreifen.",
     "normalSection": {
       "title": "Entdecke alle unsere exklusiven Pläne auf Lebenszeit",
-      "description": "Kaufe einmalig und erhalte Datenschutz und Sicherheit für immer."
+      "description": "Einmal kaufen und sicher aufbewahren, freigeben und auf Ihre Dateien auf allen Geräten zugreifen."
     },
     "securePayment": "100% sichere Zahlung, powered by Stripe",
     "features": {
