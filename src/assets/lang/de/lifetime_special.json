@@ -1,17 +1,17 @@
 {
   "HeroSection": {
     "title": "Hole dir einen lebenslangen Internxt-Plan!",
-    "description": "Sichere alle deine Dateien und Erinnerungen für immer mit einer einmaligen Zahlung.",
+    "description": "Einmal kaufen und sicher aufbewahren, freigeben und auf Ihre Dateien auf allen Geräten zugreifen.",
     "cta1": "Erhalte einen lebenslangen Plan",
     "cta2": "Angebote für lebenslange Pläne durchsuchen"
   },
   "PaymentSection": {
     "limitedOffer": "Zeitlich begrenztes Angebot!",
     "title": { "blueText": "", "normalText": "Lebenslange Pläne von Internxt." },
-    "description": "Einmal kaufen und sicher aufbewahren, freigeben und auf Ihre Dateien auf allen Geräten zugreifen.",
+    "description": "Kaufe einmalig und erhalte Datenschutz und Sicherheit für immer.",
     "normalSection": {
       "title": "Entdecke alle unsere exklusiven Pläne auf Lebenszeit",
-      "description": "Einmal kaufen und sicher aufbewahren, freigeben und auf Ihre Dateien auf allen Geräten zugreifen."
+      "description": "Kaufe einmalig und erhalte Datenschutz und Sicherheit für immer."
     },
     "securePayment": "100% sichere Zahlung, powered by Stripe",
     "features": {
