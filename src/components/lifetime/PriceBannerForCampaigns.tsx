@@ -1,7 +1,11 @@
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-const CampaignCtaSection = ({ textContent }) => {
+export const PriceBannerForCampaigns = ({ textContent }) => {
+  const globalDialog = useGlobalDialog();
+  const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
+
   const router = useRouter();
 
   function handleOnClick() {
@@ -9,7 +13,7 @@ const CampaignCtaSection = ({ textContent }) => {
   }
 
   return (
-    <div className="flex flex-col overflow-hidden px-5">
+    <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden px-5`}>
       <div className="flex max-w-screen-xl flex-col rounded-[32px] border-4 border-primary/10 bg-white lg:flex-row lg:px-16">
         <div className="flex flex-col items-center space-y-6 p-10 text-center lg:py-16 xl:w-full xl:items-start xl:text-left">
           <div className="flex w-max rounded-2xl bg-white py-2 px-4 ring-4 ring-primary/10">
@@ -44,5 +48,3 @@ const CampaignCtaSection = ({ textContent }) => {
     </div>
   );
 };
-
-export default CampaignCtaSection;
