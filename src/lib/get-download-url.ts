@@ -63,9 +63,15 @@ export const downloadDriveLinks = async () => {
     cached: false,
     links: { linux: null, windows: null },
   }));
+
   const releaseMacOS = await getLatestReleaseInfo('internxt', 'drive-desktop-macos').catch(() => ({
     cached: false,
     links: { macos: null },
+  }));
+
+  const releaseLinux = await getLatestReleaseInfo('internxt', 'drive-desktop-linux').catch(() => ({
+    cached: false,
+    links: { linux: null },
   }));
 
   const platforms = {
@@ -74,28 +80,8 @@ export const downloadDriveLinks = async () => {
     iPhone: iosURL,
     Windows: release.links.windows || windowsURL,
     MacOS: releaseMacOS.links.macos || macosURL,
-    UNIX: release.links.linux || linuxURL,
-    Linux: release.links.linux || linuxURL,
-    all: lastReleaseURL,
-  };
-
-  return platforms;
-};
-
-export const downloadCliLinks = async () => {
-  const release = await getLatestReleaseInfo('internxt', 'cli').catch(() => ({
-    cached: false,
-    links: { linux: null, windows: null },
-  }));
-
-  const platforms = {
-    Android: androidURL,
-    iPad: iosURL,
-    iPhone: iosURL,
-    Windows: release.links.windows || windowsURL,
-    MacOS: release.links.macos || macosURL,
-    UNIX: release.links.linux || linuxURL,
-    Linux: release.links.linux || linuxURL,
+    UNIX: releaseLinux.links.linux || linuxURL,
+    Linux: releaseLinux.links.linux || linuxURL,
     all: lastReleaseURL,
   };
 
