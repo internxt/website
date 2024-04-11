@@ -6,6 +6,7 @@
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "planTitles": {
     "individuals": "个人计划",
+    "lifetime": "终身计划",
     "business": "商业计划",
     "lifetimeCampaign": {
       "blueText": "五折优惠",

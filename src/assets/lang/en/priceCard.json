@@ -7,6 +7,7 @@
   "redeemCode": "Redeem code",
   "planTitles": {
     "individuals": "Individual Plans",
+    "lifetime": "Lifetime Plans",
     "business": "Business Plans",
     "lifetimeCampaign": {
       "blueText": "Get 50% OFF",
