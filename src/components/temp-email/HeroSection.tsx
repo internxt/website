@@ -102,7 +102,8 @@ export const HeroSection = ({ textContent }) => {
       setSelectedMessage(null);
       setMessages(undefined);
     } catch (err) {
-      notificationService.openErrorToast('Something went wrong');
+      const error = err as Error;
+      // NO OP
     }
   };
 
@@ -141,7 +142,7 @@ export const HeroSection = ({ textContent }) => {
           setMessages(JSON.parse(inbox));
         }
       } catch (err) {
-        notificationService.openErrorToast('Something went wrong');
+        // notificationService.openErrorToast('Something went wrong');
       }
     },
     [messages, token],
