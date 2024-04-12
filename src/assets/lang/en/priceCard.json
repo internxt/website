@@ -25,7 +25,7 @@
     "business": "Business"
   },
   "billingFrequencyLabel": {
-    "lifetime": "One-time payment",
+    "lifetime": "Lifetime access",
     "monthly": "Billed monthly",
     "semiannually": "Billed semiannually",
     "annually": "Billed annually",

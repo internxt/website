@@ -21,7 +21,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                   <Countdown textColor={'white'} />
                 </div>
               )}
-              <div className="flex max-w-[450px] flex-col text-center text-white lg:text-start">
+              <div className="flex max-w-[600px] flex-col text-center text-white lg:text-start">
                 <Header>{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
@@ -29,21 +29,19 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 onClick={() => {
                   window.location.href = `#payment`;
                 }}
-                className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
+                className="flex  cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
               >
                 <p className="px-9 py-3 text-lg font-medium text-primary">
                   {hideTimer ? textContent.cta2 : textContent.cta1}
                 </p>
               </button>
-
-              <div className="hidden w-full md:flex"></div>
             </div>
 
             <div className="hidden w-full flex-col items-end py-20 lg:flex">
               <div className=" flex w-[770px] flex-col 2xl:w-[850px]">
                 <img
                   src="/images/lifetime/infinity.svg"
-                  className="relative h-full w-full translate-x-56 object-contain object-left 2xl:translate-x-96"
+                  className="relative h-full w-full translate-x-64 object-contain object-left"
                   alt="Infinity icon"
                   draggable={false}
                 />
