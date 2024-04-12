@@ -92,9 +92,9 @@ const handleImageConverter = async (filesToConvert, lastExtensionInPathname) => 
   });
 };
 
-const handleImageToTextConverter = async (imageToConvert) => {
+const handleImageToTextConverter = async (imageToConvert: File) => {
   const fontSize = 12;
-  const filename = 'text-from-image';
+  const filename = imageToConvert.name.split('.')[0];
   const file = imageToConvert;
 
   if (!file) return;
@@ -107,7 +107,11 @@ const handleImageToTextConverter = async (imageToConvert) => {
   reader.onload = async () => {
     const {
       data: { text },
-    } = await Tesseract.recognize(file as string, 'eng', { logger: (m) => console.log('[OPSI]:', m) });
+    } = await Tesseract.recognize(file, 'eng', {
+      logger: (m) => {
+        // you can add a console.log for debug purposes.
+      },
+    });
 
     const page = pdfDoc.addPage();
 
