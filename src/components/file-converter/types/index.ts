@@ -25,6 +25,7 @@ export const fileMimeTypes = {
   png: 'image/png',
   jpg: 'image/jpeg',
   webp: 'image/webp',
+  image: 'image/*',
 };
 
 export const allowedExtensions = {

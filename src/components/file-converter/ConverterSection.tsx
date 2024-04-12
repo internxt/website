@@ -35,9 +35,9 @@ interface ConverterStatesProps {
 type ConverterStates = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState' | 'errorState';
 
 const converters = [
-  { type: 'file', paths: fileConverter },
-  { type: 'image', paths: imageConverter },
-  { type: 'text', paths: imageToTextConverter },
+  { type: 'fileConverter', paths: fileConverter },
+  { type: 'imageConverter', paths: imageConverter },
+  { type: 'imageToText', paths: imageToTextConverter },
 ];
 
 export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
@@ -114,7 +114,6 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   const handleConversion = async () => {
-    let isFileInfected;
     if (!pathname || !files) return;
 
     const extensionToConvertTo = pathname.split('/').pop();
@@ -131,26 +130,21 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     setConverterStates('convertingState');
 
     try {
-      if (!isFileInfected) {
-        switch (converter.type) {
-          case 'file':
-            await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
-            setConverterStates('downloadFileState');
-            break;
-          case 'image':
-            await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
-            setConverterStates('downloadFileState');
-            break;
-          case 'text':
-            console.log('Item');
-            await fileConverterService.handleImageToTextConverter(files[0]);
-            setConverterStates('downloadFileState');
-            break;
-          default:
-            throw new Error('Invalid converter type');
-        }
-      } else {
-        setError('internalError');
+      switch (converter.type) {
+        case 'fileConverter':
+          await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
+          setConverterStates('downloadFileState');
+          break;
+        case 'imageConverter':
+          await fileConverterService.handleImageConverter(files, lastExtensionInPathname);
+          setConverterStates('downloadFileState');
+          break;
+        case 'imageToText':
+          await fileConverterService.handleImageToTextConverter(files[0]);
+          setConverterStates('downloadFileState');
+          break;
+        default:
+          throw new Error('Invalid converter type');
       }
     } catch (err) {
       const error = err as Error;
