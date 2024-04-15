@@ -31,9 +31,9 @@
         "pathname": "html-to-pdf"
       },
       {
-        "title": "Image to PDF",
-        "description": "A free Image to PDF converter.",
-        "pathname": "image-to-pdf"
+        "title": "Image to Text",
+        "description": "A free image to text converter.",
+        "pathname": "image-to-text"
       },
       {
         "title": "PDF to HTML",
