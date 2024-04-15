@@ -26,7 +26,7 @@ export default function HeroSection({ textContent, lang }) {
             <HomePageBannerForMobile />
           </div>
           <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
-            {/* <div className="flex object-contain lg:hidden">
+            <div className="flex object-contain lg:hidden">
               <Image
                 loading="eager"
                 className="object-contain"
@@ -36,7 +36,7 @@ export default function HeroSection({ textContent, lang }) {
                 height={450}
                 alt="Laptop and phone with Internxt app"
               />
-            </div> */}
+            </div>
 
             <Header>
               {textContent.title.line1}{' '}
@@ -62,23 +62,7 @@ export default function HeroSection({ textContent, lang }) {
           </div>
 
           {/* Desktop animation/image */}
-          {/* <Animation /> */}
-          <div
-            className="hidden md:flex"
-            onClick={() => {
-              router.push('/lifetime');
-            }}
-          >
-            <Image
-              loading="eager"
-              className="object-contain"
-              src="/images/home/identity_management_day_internxt.webp"
-              draggable="false"
-              width={600}
-              height={450}
-              alt="Laptop and phone with Internxt app"
-            />
-          </div>
+          <Animation />
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">

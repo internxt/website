@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
 
-  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BOTTOM_BANNER.includes(pathname);
+  const shouldShowBanner = false;
   const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
 
@@ -62,15 +62,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
         ]}
       >
@@ -101,13 +101,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        <div className="flex justify-center">
-          {shouldShowBanner ? (
-            <>
-              <BottomBanner />
-            </>
-          ) : undefined}
-        </div>
+        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

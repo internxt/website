@@ -23,32 +23,12 @@ interface PriceTableProps {
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
 export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
-  const [coupon, setCoupon] = useState();
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
 
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, currencyValue, loadingCards } = usePricing({});
-
-  useEffect(() => {
-    stripeService.getLifetimeCoupons().then((coupon) => {
-      setCoupon(coupon);
-    });
-  }, []);
-
-  const lifetimePrices = {
-    eur: {
-      '2TB': 199,
-      '5TB': 299,
-      '10TB': 499,
-    },
-    usd: {
-      '2TB': 249,
-      '5TB': 349,
-      '10TB': 549,
-    },
-  };
+  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({});
 
   const features = [
     {
@@ -65,7 +45,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     },
   ];
 
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Lifetime');
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
 
   const isIndividual = activeSwitchPlan !== 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
@@ -238,7 +218,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={coupon ? lifetimePrices[currencyValue][product.storage] : product.price.split('.')[0]}
+                    price={product.price.split('.')[0]}
                     priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
@@ -246,7 +226,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={coupon?.[product.storage] ?? undefined}
+                    coupon={coupon ?? undefined}
                   />
                 );
               })}
