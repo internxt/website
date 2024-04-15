@@ -1,6 +1,6 @@
 {
   "ConverterSection": {
-    "description": "A Secure image to text converter to extract text from images.",
+    "description": "A secure image to text converter to extract text from images.",
     "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {

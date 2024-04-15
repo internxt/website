@@ -14,7 +14,7 @@ export const fileConverter = [
 ];
 export const imageConverter = ['png-to-jpg', 'jpg-to-png', 'webp-to-jpg', 'jpg-to-webp', 'webp-to-png', 'png-to-webp'];
 
-export const imageToTextConverter = ['image-to-pdf'];
+export const imageToTextConverter = ['image-to-text'];
 
 export const fileMimeTypes = {
   word: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
