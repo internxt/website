@@ -7,21 +7,6 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
-        <div className="flex">
-          <Image
-            src="/images/temp-email/tuta-banner-inxt.webp"
-            alt="Tuta Banner"
-            width={895}
-            height={355}
-            layout="intrinsic"
-            quality={100}
-            draggable={false}
-            className="cursor-pointer"
-            onClick={() => {
-              window.open('https://tuta.com/internxt', '_blank', 'noopener noreferrer');
-            }}
-          />
-        </div>
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">{textContent.title}</p>
