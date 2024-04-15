@@ -105,7 +105,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           {shouldShowBanner ? (
             <>
               <BottomBanner />
-              <FeaturesBanner />
             </>
           ) : undefined}
         </div>
