@@ -135,7 +135,7 @@ const handleImageToTextConverter = async (imageToConvert: File) => {
       };
     } catch (err) {
       const error = err as Error;
-      reject(error.message);
+      reject(new Error(error.message));
     }
   });
 };
