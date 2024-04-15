@@ -28,6 +28,7 @@
           "name": "Zugriff und Dateiverwaltung",
           "features": {
             "sync_any_folders": "Synchronisieren Sie beliebige Ordner",
+            "webdav_support": "WebDAV-Unterstützung",
             "web_app": "Web-App",
             "windows_desktop_app": "Windows Desktop-App",
             "mac_desktop_app": "Mac Desktop-App",

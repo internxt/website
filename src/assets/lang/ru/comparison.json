@@ -27,6 +27,7 @@
           "name": "Доступ и управление файлами",
           "features": {
             "sync_any_folders": "Синхронизация любых папок",
+            "webdav_support": "Поддержка WebDAV",
             "web_app": "Веб-приложение",
             "windows_desktop_app": "Приложение для ПК с Windows",
             "mac_desktop_app": "Приложение для ПК с Mac",
