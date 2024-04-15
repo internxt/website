@@ -29,6 +29,34 @@
       "MacOS": "Mac"
     }
   },
+  "CliCard": {
+    "new": "NOUVEAU",
+    "title": {
+      "bold": "Outils puissants",
+      "normal": "pour les utilisateurs avancés"
+    },
+    "description": "Internxt CLI est un outil de ligne de commande puissant qui vous permet d'accéder et de gérer les données de Internxt Drive via des commandes et WebDAV.",
+    "installCli": "Installer avec npm",
+    "command": "npm i -g @internxt/cli",
+    "available": "Disponible sur",
+    "feeds": [
+      {
+        "title": "Support WebDAV",
+        "description": "Utilisez votre client WebDAV préféré avec la CLI Internxt."
+      },
+      {
+        "title": "Scriptable",
+        "description": "Exécutez des commandes de script depuis votre shell préféré sur n'importe quelle plateforme."
+      },
+      {
+        "title": "Synchronisation chiffrée",
+        "description": "Sécurité zéro-connaissance et de bout en bout toujours garantie."
+      }
+    ],
+    "learnMore": "En savoir plus sur Internxt CLI :",
+    "readme": "ReadMe GitHub",
+    "userGuide": "Guide de l'utilisateur"
+  },
   "FeaturesSection": {
     "section1": {
       "title": {

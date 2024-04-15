@@ -8,7 +8,7 @@ export interface PriceCardProps {
   price: number;
   currency: string;
   cta: any[];
-  onButtonClicked: (planId, currency, coupon) => void;
+  onButtonClicked: (planId, coupon) => void;
   priceBefore?: number;
   billingFrequency?: string;
   popular?: boolean;
@@ -86,7 +86,7 @@ export default function PriceCard({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={() => onButtonClicked(cta[1], currencyValue[currency], coupon)}
+          onClick={() => onButtonClicked(cta[1], coupon)}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'

@@ -1,17 +1,26 @@
 {
+  "changeEmailBanner": {
+    "title": "¿Cambiar dirección de email?",
+    "description": [
+      "Esta acción eliminará tu email actual ${{email}} y todos los correos electrónicos de tu bandeja de entrada.",
+      "Recibirás un nuevo email temporal de inmediato."
+    ],
+    "actionCta": "Obtener un nuevo email",
+    "cancelCta": "Cancelar"
+  },
   "featuresBanner": {
-    "label": "Ahorra un 75%",
-    "title": "Comienza a ahorrar esta primavera",
-    "cta": "Elige un plan",
+    "label": "Ahorra hasta un 75%",
+    "title": "Asegura tu identidad en línea de por vida.",
+    "cta": "Consíguela",
     "guarantee": "Garantía de devolución de 30 días",
     "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
     "features": [
-      "Ahorra en todos nuestros planes",
+      "Hasta el 75% en planes lifetime",
       "Almacenamiento seguro en la nube",
       "Código abierto y auditado",
       "Transferencias cifradas de extremo a extremo",
       "Sin accesos no autorizados",
-      "La oferta finaliza el 18 de marzo"
+      "La promoción finaliza el 18 de abril"
     ]
   },
   "virusScannerBanner": {
@@ -68,7 +77,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "¡75% de descuento en todos los planes de por vida!",
-      "normalText": "Día Mundial de la Seguridad en la Nube: ",
+      "normalText": "Día de la Gestión de Identidad: ",
       "cta": "Elige tu plan"
     }
   },

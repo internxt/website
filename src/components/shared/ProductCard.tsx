@@ -3,7 +3,7 @@ import RevealX from '@/components/components/RevealX';
 import Image from 'next/legacy/image';
 import { UilAngleRightB } from '@iconscout/react-unicons';
 
-const ProductCard = ({ animationDirection, textContent, lang, imageUrl }) => {
+const ProductCard = ({ animationDirection, redirect, textContent, lang, imageUrl }) => {
   return (
     <RevealX
       direction={animationDirection}
@@ -14,7 +14,7 @@ const ProductCard = ({ animationDirection, textContent, lang, imageUrl }) => {
         <h5 className="mb-4 max-w-[340px] text-xl text-white">{textContent.description}</h5>
         <div className="flex justify-start">
           <Link
-            href="/drive"
+            href={redirect}
             locale={lang}
             className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline"
           >

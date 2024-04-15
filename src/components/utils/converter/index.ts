@@ -91,7 +91,6 @@ async function convertImage(image, newFormat: string): Promise<Blob> {
         resolve(blob);
       });
     } catch (err) {
-      console.log('ERROR');
       const error = err as Error;
       reject(new Error(`[ERROR CONVERTING IMAGE]: ${error.stack ?? error.message}`));
     }

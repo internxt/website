@@ -167,6 +167,16 @@ module.exports = {
         destination: '/byte-converter',
         permanent: false,
       },
+      {
+        source: '/photos',
+        destination: '/drive',
+        permanent: false,
+      },
+      {
+        source: '/:lang/photos',
+        destination: '/:lang/drive',
+        permanent: false,
+      },
     ];
   },
   images: {

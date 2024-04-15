@@ -1,4 +1,13 @@
 {
+  "changeEmailBanner": {
+    "title": "E-Mail-Adresse ändern?",
+    "description": [
+      "Diese Aktion löscht Ihre aktuelle E-Mail-Adresse ${{email}} und alle E-Mails in Ihrem Posteingang.",
+      "Sie erhalten sofort eine neue temporäre E-Mail-Adresse."
+    ],
+    "actionCta": "Holen Sie sich eine neue E-Mail",
+    "cancelCta": "Abbrechen"
+  },
   "LoginBanner": {
     "head": "Vor dem Kauf ausprobieren.",
     "title": "Bekomme Internxt umsonst!",
@@ -26,18 +35,18 @@
     }
   },
   "featuresBanner": {
-    "label": "Spare 75%",
-    "title": "Starten Sie Ihre digitale Frühjahrsputz",
+    "label": "Bis zu 75% sparen",
+    "title": "Sichern Sie Ihre Online-Identität fürs Leben.",
     "cta": "Wähle einen Plan",
     "guarantee": "30 Tage Geld-zurück-Garantie",
     "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden",
     "features": [
-      "Sparen Sie bei allen unseren Plänen",
+      "Bis zu 75% Rabatt auf alle lebenslangen Pläne",
       "Sicherer Cloud-Speicher",
       "Backup privater Dateien und Fotos",
       "End-to-end verschlüsselte Übertragungen",
       "Kein unbefugter Zugriff",
-      "Angebot endet am 18. März"
+      "Angebot endet am 18. April"
     ]
   },
   "tryOutInternxtGeneralBanner": {
@@ -88,7 +97,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "75% RABATT auf alle lebenslangen Pläne!",
-      "normalText": "Angebot zum Welt-Cloud-Sicherheitstag: ",
+      "normalText": "Identitätsmanagement-Tag Angebot: ",
       "cta": "Wählen Sie Ihren Plan"
     }
   },

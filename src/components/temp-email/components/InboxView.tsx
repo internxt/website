@@ -1,51 +1,55 @@
 import moment from 'moment';
 import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 
-import Messages from './Messages';
+import { MessageSelected, NoMessageSelected } from './Messages';
 import { Transition } from '@headlessui/react';
 
 interface InboxProps {
   textContent: any;
   onRefresh: any;
   openedMessages: number;
-  isMobileView?: boolean;
   messages: Record<any, any>[];
   onMessageSelected: (item: Record<any, any>, index: number) => void;
   selectedMessage: Record<any, any> | null;
 }
 
-const Inbox = ({
+export const Inbox = ({
   textContent,
   onRefresh,
   openedMessages,
-  isMobileView,
   messages,
   onMessageSelected,
   selectedMessage,
 }: InboxProps) => {
-  return !isMobileView ? (
-    <InboxWeb
-      getProps={{
-        messages,
-        selectedMessage,
-        onMessageSelected,
-        onRefresh,
-        openedMessages,
-        textContent,
-      }}
-    />
-  ) : (
-    <InboxMobile
-      getProps={{
-        messages,
-        selectedMessage,
-        onMessageSelected,
-        onRefresh,
-        openedMessages,
-        textContent,
-      }}
-    />
+  return (
+    <>
+      <div className="hidden w-full justify-center md:flex">
+        <InboxWeb
+          getProps={{
+            messages,
+            selectedMessage,
+            onMessageSelected,
+            onRefresh,
+            openedMessages,
+            textContent,
+          }}
+        />
+      </div>
+      <div className="flex w-full md:hidden">
+        <InboxMobile
+          getProps={{
+            messages,
+            selectedMessage,
+            onMessageSelected,
+            onRefresh,
+            openedMessages,
+            textContent,
+          }}
+        />
+      </div>
+    </>
   );
 };
 
@@ -62,8 +66,16 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
     }
   }, [animation]);
 
+  const handleRefresh = () => {
+    setAnimation(true);
+    onRefresh();
+  };
+
   return (
-    <div className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
+    <div
+      id="inbox"
+      className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard"
+    >
       <div className="flex flex-col">
         <div className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10">
           <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 px-4 py-5">
@@ -71,14 +83,21 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
               <Tray size={24} className="text-gray-80" />
               <p className="text-base font-medium text-gray-100">{textContent.title}</p>
             </div>
-            <ArrowsClockwise
-              size={24}
-              className={`cursor-pointer text-gray-50 hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
-              onClick={() => {
-                setAnimation(true);
-                onRefresh();
-              }}
-            />
+            <Tooltip
+              variant="light"
+              id="arrows-clockwise"
+              delayShow={700}
+              className="z-40 rounded-lg bg-white drop-shadow-md"
+            >
+              <p className="break-word text-center text-gray-80">{textContent.refreshInbox}</p>
+            </Tooltip>
+            <button onClick={handleRefresh}>
+              <ArrowsClockwise
+                size={24}
+                data-tooltip-id="arrows-clockwise"
+                className={`text-gray-50 outline-none hover:text-gray-80 ${animation ? 'animate-spin-refresh' : ''}`}
+              />
+            </button>
           </div>
 
           <div className="flex w-full flex-col overflow-y-scroll">
@@ -87,7 +106,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                 const date = moment(item.date);
                 return (
                   <button
-                    key={index}
+                    key={item.id}
                     onClick={() => {
                       onMessageSelected(item, index);
                     }}
@@ -124,7 +143,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                 );
               })
             ) : (
-              <div></div>
+              <></>
             )}
           </div>
         </div>
@@ -142,11 +161,15 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
       >
         {selectedMessage ? (
           <div className="flex h-full w-screen">
-            <Messages.MessageSelected item={selectedMessage} textContent={textContent} />
+            <MessageSelected item={selectedMessage} textContent={textContent} />
           </div>
         ) : (
           <div className="flex w-screen items-center">
-            <Messages.NoMessageSelected messagesLength={openedMessages} textContent={textContent} />
+            <NoMessageSelected
+              messagesLength={openedMessages}
+              textContent={textContent}
+              onRefreshButtonClicked={onRefresh}
+            />
           </div>
         )}
       </Transition>
@@ -185,7 +208,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
                 </div>
               </div>
               <div className="flex h-full w-full">
-                {selectedMessage && <Messages.MessageSelected item={selectedMessage} textContent={textContent} />}
+                {selectedMessage && <MessageSelected item={selectedMessage} textContent={textContent} />}
               </div>
             </div>
           </Transition>
@@ -249,10 +272,10 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
           </Transition>
         </>
       ) : (
-        !selectedMessage && <Messages.NoMessageSelected messagesLength={0} textContent={textContent} />
+        !selectedMessage && (
+          <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} />
+        )
       )}
     </div>
   );
 };
-
-export default Inbox;

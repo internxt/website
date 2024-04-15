@@ -16,21 +16,17 @@ const ProductsSection = ({ textContent, lang }) => {
             {/* Internxt Drive */}
             <ProductCard
               imageUrl={'/images/privacy/Internxt-Drive.webp'}
+              redirect="/drive"
               animationDirection={'right'}
               lang={lang}
               textContent={textContent.drive}
             />
-            {/* Internxt Photos */}
-            <ProductCard
-              imageUrl={'/images/privacy/photos-image.webp'}
-              animationDirection={'left'}
-              lang={lang}
-              textContent={textContent.photos}
-            />
+
             {/* Internxt Send */}
             <ProductCard
               imageUrl={'/images/privacy/Share-by-email.webp'}
-              animationDirection={'right'}
+              redirect={'https://send.internxt.com'}
+              animationDirection={'left'}
               lang={lang}
               textContent={textContent.send}
             />

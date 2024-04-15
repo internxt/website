@@ -22,7 +22,8 @@ const newDesign = ['en', 'es'];
 
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
-  const CTA_URL = `https://internxt.com/${lang}}/pricing`;
+  const langForLink = lang === 'en' ? '' : lang;
+  const CTA_URL = `https://internxt.com/${langForLink}/pricing`;
 
   return (
     <>

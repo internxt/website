@@ -3,7 +3,7 @@ import React from 'react';
 import { infoCards } from './components/cards';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 
-const InfoSection = ({ textContent, bannerText, lang }) => {
+export const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
@@ -11,16 +11,6 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">{textContent.title}</p>
           <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.subtitle}</p>
-        </div>
-        <div className="flex flex-col">
-          <Image
-            src="/images/temp-email/magicImage.png"
-            alt="Magic Image for Temp Mail"
-            width={785}
-            height={385}
-            layout="intrinsic"
-            quality={100}
-          />
         </div>
         <div className="flex flex-col items-center space-y-9">
           <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
@@ -87,5 +77,3 @@ const InfoSection = ({ textContent, bannerText, lang }) => {
     </section>
   );
 };
-
-export default InfoSection;

@@ -16,6 +16,7 @@ import cookies from '@/lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import { CliCard } from '@/components/drive/CliCard';
 
 const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
@@ -36,6 +37,10 @@ const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLan
         <ProductsNavigation textContent={navbarLang} lang={lang} selectedItem="drive" />
 
         <HeroSection textContent={langJson.HeroSection} lang={lang} download={download} />
+
+        <div className="flex items-center justify-center px-2 pb-20">
+          <CliCard textContent={langJson.CliCard} />
+        </div>
 
         <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={download} />
 
