@@ -105,7 +105,6 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   const handleConversion = async () => {
-    let isFileInfected;
     if (!pathname || !files) return;
 
     const extensionToConvertTo = pathname.split('/').pop();
@@ -122,25 +121,25 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     setConverterStates('convertingState');
 
     try {
-      if (!isFileInfected) {
-        switch (converter.type) {
-          case 'file':
-            await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
-            setConverterStates('downloadFileState');
-            break;
-          case 'image':
-            await fileConverterService.handleImageConverterV2(files[0], pathnameSegments[0], lastExtensionInPathname);
-            setConverterStates('downloadFileState');
-            break;
-          default:
-            throw new Error('Invalid converter type');
-        }
-      } else {
-        setError('internalError');
+      switch (converter.type) {
+        case 'file':
+          await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
+          setConverterStates('downloadFileState');
+          break;
+        case 'image':
+          await fileConverterService.handleImageConverterV2(files[0], pathnameSegments[0], lastExtensionInPathname);
+          setConverterStates('downloadFileState');
+          break;
+        default:
+          throw new Error('Invalid converter type');
       }
     } catch (err) {
       const error = err as Error;
-      setError(error.message.includes('File too large') ? 'bigFile' : 'internalError');
+      const filteredError = error.message.includes('File too large') ? 'bigFile' : 'internalError';
+
+      console.log('[ERROR]:', error.message);
+
+      setError(filteredError);
       setConverterStates('errorState');
     }
   };

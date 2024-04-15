@@ -1,5 +1,5 @@
-import { allowedExtensions } from '@/components/file-converter/types';
 import { NextResponse } from 'next/server';
+import { allowedExtensions } from '@/components/file-converter/types';
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -8,8 +8,6 @@ const API_HOSTNAME = isProduction ? process.env.FILE_CONVERTER_API : 'http://loc
 export async function POST(req: Request, res: Response) {
   const fromExtension = req.url.split('from=')[1].split('&')[0];
   const toExtension = req.url.split('to=')[1];
-
-  console.log('[FROM EXTENSION]: ', fromExtension, '[TO EXTENSION]: ', toExtension);
 
   try {
     const formData = await req.formData();
