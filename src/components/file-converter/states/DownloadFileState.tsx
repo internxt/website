@@ -24,7 +24,7 @@ const DownloadFileState = ({
       <div className="flex flex-col gap-2 md:flex-row">
         <button
           onClick={() => route.push('/file-converter')}
-          className="flex flex-row justify-center space-x-2 rounded-lg border-gray-10 bg-white px-5 py-2 font-medium shadow-sm hover:bg-gray-5"
+          className="flex flex-row items-center justify-center space-x-2 rounded-lg border-gray-10 bg-white px-5 py-2 font-medium shadow-sm hover:bg-gray-5"
         >
           <House size={24} />
           <p>{textContent.goHome}</p>

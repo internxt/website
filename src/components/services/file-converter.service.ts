@@ -1,3 +1,7 @@
+import { PDFDocument } from 'pdf-lib';
+
+import Tesseract from 'tesseract.js';
+
 import { allowedExtensions } from '@/components/file-converter/types';
 import { convertFileToPdf, convertImagesToPdf, imageConverter } from '@/components/utils/converter';
 
@@ -50,10 +54,11 @@ const handleImagesToPdfConverter = async (files: FileList) => {
   downloadBlob(pdfUrl, 'pdfWithImages.pdf');
 };
 
-const handleImageConverterV2 = async (fileToConvert: File, fromExtension: string, toExtension: string) => {
+const handleImageConverter = async (fileToConvert: File, fromExtension: string, toExtension: string) => {
   if (!fileToConvert) {
     return;
   }
+
   try {
     const response = await imageConverter(fileToConvert, fromExtension, toExtension);
 
@@ -67,10 +72,59 @@ const handleImageConverterV2 = async (fileToConvert: File, fromExtension: string
   }
 };
 
+const handleImageToTextConverter = async (imageToConvert: File) => {
+  const fontSize = 12;
+  const filename = imageToConvert.name.split('.')[0];
+  const file = imageToConvert;
+
+  if (!file) return;
+
+  return new Promise(async (resolve, reject) => {
+    try {
+      const pdfDoc = await PDFDocument.create();
+      const reader = new FileReader();
+
+      reader.readAsDataURL(file);
+
+      reader.onload = async () => {
+        const {
+          data: { text },
+        } = await Tesseract.recognize(file, 'eng', {
+          logger: (m) => {
+            // you can add a console.log for debug purposes.
+          },
+        });
+
+        const page = pdfDoc.addPage();
+
+        const { height } = page.getSize();
+
+        page.drawText(text, {
+          x: 50,
+          y: height - 4 * fontSize,
+          size: fontSize,
+        });
+
+        const pdfBytes = await pdfDoc.save();
+        const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+        const url = window.URL.createObjectURL(blob);
+
+        resolve('The image has been converted');
+
+        downloadBlob(url, filename);
+      };
+    } catch (err) {
+      const error = err as Error;
+      reject(new Error(error.message));
+    }
+  });
+};
+
 const fileConverterService = {
   handleFileConverter,
   handleImagesToPdfConverter,
-  handleImageConverterV2,
+  handleImageConverter,
+  handleImageToTextConverter,
 };
 
 export default fileConverterService;

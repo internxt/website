@@ -38,6 +38,7 @@
     "moment": "^2.29.1",
     "next": "13",
     "next-share": "^0.18.1",
+    "pdf-lib": "^1.17.1",
     "prettysize": "^2.0.0",
     "random-words": "^2.0.0",
     "react": "^18.2.0",
@@ -53,6 +54,7 @@
     "react-select": "^5.7.0",
     "react-toastify": "^9.1.1",
     "react-tooltip": "^5.26.3",
+    "tesseract.js": "^5.0.5",
     "useragent": "^2.3.0",
     "zxcvbn": "^4.4.2"
   },

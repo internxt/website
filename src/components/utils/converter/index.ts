@@ -1,4 +1,8 @@
+import { allowedExtensions } from '@/components/file-converter/types';
 import ImagesToPDF from '@coderosh/images-to-pdf';
+
+const isProduction = process.env.NODE_ENV == 'production';
+const API_HOSTNAME = isProduction ? process.env.NEXT_PUBLIC_FILE_CONVERTER_API : 'http://localhost:3000';
 
 /**
  * @param file The file we want to convert
@@ -9,9 +13,13 @@ async function convertFileToPdf(file: File, format: string): Promise<Blob | Erro
   const formData = new FormData();
   formData.append('file', file);
 
-  const response = await fetch(`/api/convert?format=${format.toLowerCase()}`, {
+  if (!(format in allowedExtensions) || !file) {
+    throw new Error('Extensions not allowed');
+  }
+
+  const response = await fetch(`${API_HOSTNAME}/api/convert/stream?format=${format}`, {
     method: 'POST',
-    body: formData,
+    body: file,
   });
 
   if (!response.ok || !response.body) {
@@ -31,14 +39,15 @@ async function imageConverter(file: File, fromExtension: string, toExtension: st
   const formData = new FormData();
   formData.append('file', file);
 
+  if (!(toExtension in allowedExtensions) || fromExtension === toExtension) {
+    throw new Error('Extensions not allowed');
+  }
+
   try {
-    const response = await fetch(
-      `/api/convert/image?from=${fromExtension.toLowerCase()}&to=${toExtension.toLowerCase()}`,
-      {
-        method: 'POST',
-        body: formData,
-      },
-    );
+    const response = await fetch(`${API_HOSTNAME}/api/convert/stream/image?from=${fromExtension}&to=${toExtension}`, {
+      method: 'POST',
+      body: file,
+    });
 
     if (!response.ok || !response.body) {
       if (response.status === 413) {
@@ -87,11 +96,5 @@ async function convertImagesToPdf(files: File[]) {
     throw new Error(error.message);
   }
 }
-
-/**
- * @param image The image file we want to convert
- * @param newFormat The format we want to convert it to
- * @returns The blob of the image or null if the conversion fails
- */
 
 export { convertFileToPdf, imageConverter, convertImagesToPdf };

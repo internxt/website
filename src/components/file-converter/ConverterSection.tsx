@@ -2,7 +2,15 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import { Errors, MAX_FILE_SIZE, extensionName, fileConverter, fileMimeTypes, imageConverter } from './types';
+import {
+  Errors,
+  MAX_FILE_SIZE,
+  extensionName,
+  fileConverter,
+  fileMimeTypes,
+  imageConverter,
+  imageToTextConverter,
+} from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
@@ -27,8 +35,9 @@ interface ConverterStatesProps {
 type ConverterStates = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState' | 'errorState';
 
 const converters = [
-  { type: 'file', paths: fileConverter },
-  { type: 'image', paths: imageConverter },
+  { type: 'fileConverter', paths: fileConverter },
+  { type: 'imageConverter', paths: imageConverter },
+  { type: 'imageToText', paths: imageToTextConverter },
 ];
 
 export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
@@ -122,12 +131,16 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
 
     try {
       switch (converter.type) {
-        case 'file':
+        case 'fileConverter':
           await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
           setConverterStates('downloadFileState');
           break;
-        case 'image':
-          await fileConverterService.handleImageConverterV2(files[0], pathnameSegments[0], lastExtensionInPathname);
+        case 'imageConverter':
+          await fileConverterService.handleImageConverter(files[0], pathnameSegments[0], lastExtensionInPathname);
+          setConverterStates('downloadFileState');
+          break;
+        case 'imageToText':
+          await fileConverterService.handleImageToTextConverter(files[0]);
           setConverterStates('downloadFileState');
           break;
         default:

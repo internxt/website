@@ -1,4 +1,8 @@
-const fileConverter = [
+export const MAX_FILE_SIZE = 1073741824;
+
+export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
+
+export const fileConverter = [
   'pptx-to-pdf',
   'word-to-pdf',
   'xlsx-to-pdf',
@@ -8,7 +12,7 @@ const fileConverter = [
   'word-to-html',
   'png-to-pdf',
 ];
-const imageConverter = [
+export const imageConverter = [
   'png-to-jpg',
   'png-to-heic',
   'jpg-to-png',
@@ -21,7 +25,9 @@ const imageConverter = [
   'heic-to-png',
 ];
 
-const fileMimeTypes = {
+export const imageToTextConverter = ['image-to-text'];
+
+export const fileMimeTypes = {
   word: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   pdf: 'application/pdf',
   pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
@@ -31,9 +37,10 @@ const fileMimeTypes = {
   jpg: 'image/jpeg',
   webp: 'image/webp',
   heic: 'image/heic',
+  image: 'image/*',
 };
 
-const allowedExtensions = {
+export const allowedExtensions = {
   pdf: 'pdf',
   html: 'html',
   png: 'png',
@@ -52,10 +59,6 @@ export const extensionName = {
   webp: 'WebP',
   pptx: 'PPTX',
   heic: 'HEIC',
+  image: 'Image',
+  text: 'Text',
 };
-
-export { fileConverter, imageConverter, fileMimeTypes, allowedExtensions };
-
-export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
-
-export const MAX_FILE_SIZE = 1073741824;
