@@ -2,7 +2,7 @@ import { allowedExtensions } from '@/components/file-converter/types';
 import ImagesToPDF from '@coderosh/images-to-pdf';
 
 const isProduction = process.env.NODE_ENV == 'production';
-const API_HOSTNAME = !isProduction ? process.env.NEXT_PUBLIC_FILE_CONVERTER_API : 'http://localhost:3000';
+const API_HOSTNAME = isProduction ? process.env.NEXT_PUBLIC_FILE_CONVERTER_API : 'http://localhost:3000';
 
 /**
  * @param file The file we want to convert
