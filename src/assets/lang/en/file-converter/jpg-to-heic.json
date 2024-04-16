@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Convert your JPG to HEIC images for increased storage space on your iPhone.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert a JPG to HEIC images",
+      "description": "We made our file converter to be as easy to use as possible. Converting your JPG to HEIC involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your JPG: drag and drop your file into the area above to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Convert to HEIC’: This converts your file’s format from JPG to HEIC."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert JPG to HEIC files",
+      "paragraphs": [
+        "Converting a JPG to a HEIC image lets you store significantly more photos on your iPhone, maximizing your device's storage capacity. Converting from JPG to HEIC will also maintain the image quality of your photos.",
+        "Use Internxt’s free JPG to HEIC converter to enjoy more storage for your photos without compromising quality."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

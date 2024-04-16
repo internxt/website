@@ -1,28 +1,25 @@
 import { NextResponse } from 'next/server';
+import { allowedExtensions } from '@/components/file-converter/types';
 
 const isProduction = process.env.NODE_ENV == 'production';
 
 const API_HOSTNAME = isProduction ? process.env.FILE_CONVERTER_API : 'http://localhost:3000';
 
-const allowedExtensions: Record<string, string> = {
-  pdf: 'pdf',
-  html: 'html',
-};
-
 export async function POST(req: Request, res: Response) {
-  const extensionToConvert = req.url.split('format=')[1];
+  const fromExtension = req.url.split('from=')[1].split('&')[0];
+  const toExtension = req.url.split('to=')[1];
 
   try {
     const formData = await req.formData();
     const file = formData.get('file');
 
-    if (!(extensionToConvert in allowedExtensions) || !file) {
+    if (!(toExtension in allowedExtensions) || fromExtension === toExtension) {
       return new NextResponse('Extensions not allowed', {
         status: 405,
       });
     }
 
-    const response = await fetch(`${API_HOSTNAME}/api/convert/stream?format=${extensionToConvert}`, {
+    const response = await fetch(`${API_HOSTNAME}/api/convert/stream/image?from=${fromExtension}&to=${toExtension}`, {
       method: 'POST',
       body: file,
     });
@@ -51,15 +48,6 @@ export async function POST(req: Request, res: Response) {
     return new NextResponse(blob);
   } catch (err) {
     const error = err as Error;
-
-    if (error.message.includes('File too large')) {
-      return new NextResponse(error.message, {
-        status: 413,
-      });
-    }
-
-    return new NextResponse(error.message, {
-      status: 500,
-    });
+    console.error('[ERROR CONVERTING AN IMAGE]: ', error.stack ?? error.message);
   }
 }

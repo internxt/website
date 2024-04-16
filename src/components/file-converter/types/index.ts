@@ -8,7 +8,18 @@ const fileConverter = [
   'word-to-html',
   'png-to-pdf',
 ];
-const imageConverter = ['png-to-jpg', 'jpg-to-png', 'webp-to-jpg', 'jpg-to-webp', 'webp-to-png', 'png-to-webp'];
+const imageConverter = [
+  'png-to-jpg',
+  'png-to-heic',
+  'jpg-to-png',
+  'jpg-to-heic',
+  'webp-to-jpg',
+  'jpg-to-webp',
+  'webp-to-png',
+  'png-to-webp',
+  'heic-to-jpg',
+  'heic-to-png',
+];
 
 const fileMimeTypes = {
   word: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -19,11 +30,16 @@ const fileMimeTypes = {
   png: 'image/png',
   jpg: 'image/jpeg',
   webp: 'image/webp',
+  heic: 'image/heic',
 };
 
 const allowedExtensions = {
   pdf: 'pdf',
   html: 'html',
+  png: 'png',
+  jpg: 'jpg',
+  webp: 'webp',
+  heic: 'heic',
 };
 
 export const extensionName = {
@@ -35,6 +51,7 @@ export const extensionName = {
   jpg: 'JPG',
   webp: 'WebP',
   pptx: 'PPTX',
+  heic: 'HEIC',
 };
 
 export { fileConverter, imageConverter, fileMimeTypes, allowedExtensions };
