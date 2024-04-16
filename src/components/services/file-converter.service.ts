@@ -3,7 +3,7 @@ import { PDFDocument } from 'pdf-lib';
 import Tesseract from 'tesseract.js';
 
 import { allowedExtensions } from '@/components/file-converter/types';
-import { convertFileToPdf, convertImage, convertImagesToPdf } from '@/components/utils/converter';
+import { convertFileToPdf, convertImagesToPdf, imageConverter } from '@/components/utils/converter';
 
 function downloadBlob(url: string, fileName: string) {
   const link = document.createElement('a');
@@ -36,7 +36,7 @@ const handleFileConverter = async (files: FileList, lastExtensionInPathname: str
     downloadBlob(url, fileName);
   } catch (err) {
     const error = err as Error;
-    return error.message;
+    throw new Error(error.message);
   }
 };
 
@@ -54,42 +54,22 @@ const handleImagesToPdfConverter = async (files: FileList) => {
   downloadBlob(pdfUrl, 'pdfWithImages.pdf');
 };
 
-/**
- *
- * @param filesToConvert - The image we want to convert
- * @param lastExtensionInPathname - The format we want to convert it to
- * Downloads the image directly using the blob got from the conversion
- */
-const handleImageConverter = async (filesToConvert, lastExtensionInPathname) => {
-  if (!filesToConvert) return;
+const handleImageConverterV2 = async (fileToConvert: File, fromExtension: string, toExtension: string) => {
+  if (!fileToConvert) {
+    return;
+  }
 
-  return new Promise((resolve, reject) => {
-    try {
-      const image = new Image();
-      image.src = URL.createObjectURL(filesToConvert[0]);
+  try {
+    const response = await imageConverter(fileToConvert, fromExtension, toExtension);
 
-      image.onerror = (error) => {
-        console.log('[ERROR]: ', error);
-        reject(new Error('Failed to load image'));
-      };
+    const url = window.URL.createObjectURL(response as Blob);
+    const fileName = `${fileToConvert.name.split('.')[0]}.${toExtension}`;
 
-      image.onload = async () => {
-        const blob = await convertImage(image, lastExtensionInPathname);
-
-        if (!blob) {
-          reject(new Error('Failed to convert image'));
-        }
-
-        const fileName = `${filesToConvert[0].name.split('.')[0]}.${lastExtensionInPathname.toLowerCase()}`;
-        const url = window.URL.createObjectURL(blob);
-
-        downloadBlob(url, fileName);
-        resolve('Image Downloaded Successfully');
-      };
-    } catch (err) {
-      reject(err);
-    }
-  });
+    downloadBlob(url, fileName);
+  } catch (err) {
+    const error = err as Error;
+    throw new Error(error.message);
+  }
 };
 
 const handleImageToTextConverter = async (imageToConvert: File) => {
@@ -143,7 +123,7 @@ const handleImageToTextConverter = async (imageToConvert: File) => {
 const fileConverterService = {
   handleFileConverter,
   handleImagesToPdfConverter,
-  handleImageConverter,
+  handleImageConverterV2,
   handleImageToTextConverter,
 };
 

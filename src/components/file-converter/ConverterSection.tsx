@@ -148,7 +148,9 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       }
     } catch (err) {
       const error = err as Error;
-      setError(error.message.includes('File too large') ? 'bigFile' : 'internalError');
+      const filteredError = error.message.includes('File too large') ? 'bigFile' : 'internalError';
+
+      setError(filteredError);
       setConverterStates('errorState');
     }
   };

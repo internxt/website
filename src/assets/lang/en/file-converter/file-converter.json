@@ -12,7 +12,7 @@
       },
       {
         "title": "PNG to PDF",
-        "description": "A free PNG to PDF document.",
+        "description": "A free PNG to PDF converter.",
         "pathname": "png-to-pdf"
       },
       {
@@ -46,6 +46,11 @@
         "pathname": "jpg-to-png"
       },
       {
+        "title": "JPG to HEIC",
+        "description": "A free JPG to HEIC converter.",
+        "pathname": "jpg-to-heic"
+      },
+      {
         "title": "JPG to WebP",
         "description": "A free JPG to WebP converter.",
         "pathname": "jpg-to-webp"
@@ -54,6 +59,11 @@
         "title": "PNG to JPG",
         "description": "A free PNG to JPG converter.",
         "pathname": "png-to-jpg"
+      },
+      {
+        "title": "PNG to HEIC",
+        "description": "A free PNG to HEIC converter.",
+        "pathname": "png-to-heic"
       },
       {
         "title": "PNG to WebP",
@@ -69,6 +79,16 @@
         "title": "WebP to JPG",
         "description": "A free WebP to JPG converter.",
         "pathname": "webp-to-jpg"
+      },
+      {
+        "title": "HEIC to JPG",
+        "description": "A free HEIC to JPG converter.",
+        "pathname": "heic-to-jpg"
+      },
+      {
+        "title": "HEIC to PNG",
+        "description": "A free HEIC to PNG converter.",
+        "pathname": "heic-to-png"
       }
     ]
   },
