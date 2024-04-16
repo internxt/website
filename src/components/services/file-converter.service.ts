@@ -54,7 +54,7 @@ const handleImagesToPdfConverter = async (files: FileList) => {
   downloadBlob(pdfUrl, 'pdfWithImages.pdf');
 };
 
-const handleImageConverterV2 = async (fileToConvert: File, fromExtension: string, toExtension: string) => {
+const handleImageConverter = async (fileToConvert: File, fromExtension: string, toExtension: string) => {
   if (!fileToConvert) {
     return;
   }
@@ -123,7 +123,7 @@ const handleImageToTextConverter = async (imageToConvert: File) => {
 const fileConverterService = {
   handleFileConverter,
   handleImagesToPdfConverter,
-  handleImageConverterV2,
+  handleImageConverter,
   handleImageToTextConverter,
 };
 
