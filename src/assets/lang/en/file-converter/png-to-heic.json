@@ -5,8 +5,8 @@
   },
   "FeaturesSection": {
     "howToConvert": {
-      "title": "How to convert PNG to HEIC files",
-      "description": "We made our file converter to be as easy to use as possible. Converting your PNG to a HEIC file involves three steps:",
+      "title": "How to convert a PNG to HEIC file",
+      "description": "We made our file converter to be as easy to use as possible. Converting your PNG to HEIC involves three steps:",
       "steps": [
         {
           "step": "Step 1:",
@@ -14,7 +14,7 @@
         },
         {
           "step": "Step 2:",
-          "description": "Click 'Convert to HEIC': This converts your file from PNG to HEIC."
+          "description": "Click ‘Convert to HEIC’: This converts your file’s format from PNG to HEIC."
         },
         {
           "step": "Step 3:",
@@ -23,10 +23,10 @@
       ]
     },
     "whyConvert": {
-      "title": "Why convert PNG to HEIC files",
+      "title": "Why convert PNG to HEIC images",
       "paragraphs": [
-        "You may find a PNG to HEIC converter useful when your photos' quality, transparency, and long-term preservation are paramount. While both are common image formats, JPGs are slightly more versatile and supported across various websites and platforms.",
-        "For increased accessibility and benefits for your PNGs, such as image transparency and smaller file sizes, convert your PNG to HEIC files with our online file converter for free with Internxt."
+        "Converting PNG to HEIC files offers potential storage benefits on iPhones. HEIC utilizes a more efficient compression method than PNG, resulting in smaller file sizes while maintaining similar image quality.",
+        "Try Internxt’s PNG to HEIC file converter to maximize your photo storage."
       ]
     }
   },

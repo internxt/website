@@ -1,12 +1,12 @@
 {
   "ConverterSection": {
-    "description": "A Secure HEIC to JPG converter for preserving the quality of your images",
+    "description": "Convert HEIC to JPG for easier photo sharing and access across various devices.",
     "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
-      "title": "How to convert HEIC to JPG files",
-      "description": "We made our file converter to be as easy to use as possible. Converting your HEIC to a JPG file involves three steps:",
+      "title": "How to convert a HEIC to JPG images",
+      "description": "We made our file converter to be as easy to use as possible. Converting your HEIC to JPG involves three steps:",
       "steps": [
         {
           "step": "Step 1:",
@@ -14,7 +14,7 @@
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to JPG’: This converts your file from HEIC to JPG."
+          "description": "Click ‘Convert to JPG’: This converts your file’s format from HEIC to JPG."
         },
         {
           "step": "Step 3:",
@@ -25,8 +25,8 @@
     "whyConvert": {
       "title": "Why convert HEIC to JPG files",
       "paragraphs": [
-        "You may find a HEIC to JPG converter useful when your photos' quality, transparency, and long-term preservation are paramount. While both are common image formats, PNGs are slightly more versatile and supported across various websites and platforms.",
-        "For increased accessibility and benefits for your PNGs, such as image transparency and smaller file sizes, convert your HEIC to HEIC files with our online file converter for free with Internxt."
+        "HEIC images are the common format for iPhones, but many platforms and devices don't natively support them. Our HEIC to JPG converter transforms images into a universally recognized format that’s viewable on almost any device with a photo viewer.",
+        "Internxt’s HEIC to JPG converter ensures your photos can be shared, uploaded, and stored easily, eliminating compatibility issues and guaranteeing wider accessibility."
       ]
     }
   },

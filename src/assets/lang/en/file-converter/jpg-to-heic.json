@@ -1,12 +1,12 @@
 {
   "ConverterSection": {
-    "description": "A Secure JPG to HEIC converter for preserving the quality of your images",
+    "description": "Convert your JPG to HEIC images for increased storage space on your iPhone.",
     "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
-      "title": "How to convert JPG to HEIC files",
-      "description": "We made our file converter to be as easy to use as possible. Converting your HEIC to a JPG file involves three steps:",
+      "title": "How to convert a JPG to HEIC images",
+      "description": "We made our file converter to be as easy to use as possible. Converting your JPG to HEIC involves three steps:",
       "steps": [
         {
           "step": "Step 1:",
@@ -14,7 +14,7 @@
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to PNG’: This converts your file from JPG to HEIC."
+          "description": "Click ‘Convert to HEIC’: This converts your file’s format from JPG to HEIC."
         },
         {
           "step": "Step 3:",
@@ -25,8 +25,8 @@
     "whyConvert": {
       "title": "Why convert JPG to HEIC files",
       "paragraphs": [
-        "You may find a JPG to HEIC converter useful when your photos' quality, transparency, and long-term preservation are paramount. While both are common image formats, PNGs are slightly more versatile and supported across various websites and platforms.",
-        "For increased accessibility and benefits for your PNGs, such as image transparency and smaller file sizes, convert your JPG to HEIC files with our online file converter for free with Internxt."
+        "Converting a JPG to a HEIC image lets you store significantly more photos on your iPhone, maximizing your device's storage capacity. Converting from JPG to HEIC will also maintain the image quality of your photos.",
+        "Use Internxt’s free JPG to HEIC converter to enjoy more storage for your photos without compromising quality."
       ]
     }
   },
