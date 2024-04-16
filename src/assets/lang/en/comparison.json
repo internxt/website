@@ -28,6 +28,7 @@
           "name": "Access and file management",
           "features": {
             "sync_any_folders": "Sync any folders",
+            "webdav_support": "WebDAV support",
             "web_app": "Web app",
             "windows_desktop_app": "Windows desktop app",
             "mac_desktop_app": "Mac desktop app",

@@ -28,6 +28,7 @@
           "name": "Acceso y Gestión de Archivos",
           "features": {
             "sync_any_folders": "Sincronizar cualquier carpeta",
+            "webdav_support": "Soporte WebDAV",
             "web_app": "Aplicación web",
             "windows_desktop_app": "Aplicación de escritorio para Windows",
             "mac_desktop_app": "Aplicación de escritorio para Mac",
