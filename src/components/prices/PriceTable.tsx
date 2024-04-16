@@ -11,7 +11,7 @@ import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 
-import CampaignCtaSection from '../lifetime/CampaignCtaSection';
+import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -71,15 +71,16 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
   const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
+  const individualPlansTitle = isLifetime ? contentText.planTitles.lifetime : contentText.planTitles.individuals;
 
   return (
     <section className="overflow-hidden bg-white">
       <div className="flex flex-col items-center space-y-10 py-20">
         <div className="flex flex-col items-center space-y-10 pt-12">
-          <CampaignCtaSection textContent={CampaignContent.tableSection.ctaBanner} />
+          <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />
 
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
-            <Header>{isIndividual ? contentText.planTitles.individuals : `${contentText.planTitles.business}`}</Header>
+            <Header>{isIndividual ? individualPlansTitle : contentText.planTitles.business}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!isIndividual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
             </p>

@@ -23,7 +23,7 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, footerLang, dev
 
       <HeroSection textContent={langJson.HeroSection} hideTimer />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} normalPrice isLifetimeSpecial />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

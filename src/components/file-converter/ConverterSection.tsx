@@ -11,7 +11,7 @@ import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
 import { ShieldCheck } from '@phosphor-icons/react';
-import { formatText } from '../utils/formatText';
+import { formatText } from '../utils/format-text';
 
 interface ConverterSectionProps {
   textContent: any;

@@ -1,4 +1,13 @@
 {
+  "changeEmailBanner": {
+    "title": "Change email address?",
+    "description": [
+      "This action will delete your current email address ${{email}} and all emails in your inbox.",
+      "You will receive a new temporary email address right away."
+    ],
+    "actionCta": "Get a new email",
+    "cancelCta": "Cancel"
+  },
   "LoginBanner": {
     "head": "Try before you buy.",
     "title": "Get Internxt for free!",
@@ -29,18 +38,18 @@
     }
   },
   "featuresBanner": {
-    "label": "Save 75%",
-    "title": "Start your digital spring cleaning",
+    "label": "Save up to 75%",
+    "title": "Secure your online ID for life",
     "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee",
     "lastCta": "*Offer is for free accounts or new customers",
     "features": [
-      "Save on all of our plans",
+      "Up to 75% OFF all lifetime plans",
       "Safe and secure cloud storage",
       "Open source and transparent",
       "End-to-end encrypted transfers",
       "No unauthorized access",
-      "Offer ends March 18th"
+      "Offer ends April 18th"
     ]
   },
   "tryOutInternxtGeneralBanner": {

@@ -6,6 +6,7 @@
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "planTitles": {
     "individuals": "个人计划",
+    "lifetime": "终身计划",
     "business": "商业计划",
     "lifetimeCampaign": {
       "blueText": "五折优惠",
@@ -27,7 +28,7 @@
     "business": "商业"
   },
   "billingFrequencyLabel": {
-    "lifetime": "一次性付款",
+    "lifetime": "终身访问",
     "monthly": "按月结算",
     "semiannually": "每半年结算一次",
     "annually": "每年计费",

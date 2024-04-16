@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { CaretRight, Sun } from '@phosphor-icons/react';
+import { CaretRight } from '@phosphor-icons/react';
 
 const TopBanner = ({ isBannerFixed }) => {
   const router = useRouter();

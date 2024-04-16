@@ -6,6 +6,7 @@
   "onlyForNewClients": "Nur für neue Abonnenten oder Benutzer des kostenlosen Tarifs",
   "planTitles": {
     "individuals": "Individuelle Pläne",
+    "lifetime": "Lebenslange Pläne",
     "business": "Geschäftspläne",
     "lifetimeCampaign": {
       "blueText": "Erhalte 50 % RABATT",
@@ -26,7 +27,7 @@
     "business": "Geschäftlich"
   },
   "billingFrequencyLabel": {
-    "lifetime": "Einmalige Zahlung",
+    "lifetime": "Lebenslanger Zugang",
     "monthly": "Monatliche Abrechnung",
     "semiannually": "Halbjährliche Abrechnung",
     "annually": "Jährliche Abrechnung",

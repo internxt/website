@@ -6,6 +6,7 @@
   "onlyForNewClients": "Solo per i nuovi abbonati o per gli utenti del piano gratuito",
   "planTitles": {
     "individuals": "Piani individuali",
+    "lifetime": "Piani a vita",
     "business": "Piani aziendali",
     "lifetimeCampaign": {
       "blueText": "Sconto del 50%",
@@ -26,7 +27,7 @@
     "business": "Business"
   },
   "billingFrequencyLabel": {
-    "lifetime": "Pagamento unico",
+    "lifetime": "Accesso a vita",
     "monthly": "Fatturato mensilmente",
     "semiannually": "Fatturato semestralmente",
     "annually": "Fatturato annualmente",
