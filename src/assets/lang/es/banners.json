@@ -33,6 +33,10 @@
     "description": "Almacenamiento seguro en la nube basado en la privacidad.",
     "cta": "Pruébalo gratis"
   },
+  "SignUpFileConverterBanner": {
+    "line1": "Convierte, almacena y asegura.",
+    "blueText": "Conversión de archivos sin esfuerzo con Internxt"
+  },
   "SignUpPwdCheckerBanner": {
     "line1": "Introduce tu contraseña segura al crear tu",
     "blueText": "cuenta gratuita en Internxt"

@@ -26,7 +26,11 @@ const FileConverter = ({
 
       <HeroSection textContent={textContent.HeroSection} />
 
-      <FeaturesSection textContent={textContent.FeaturesSection} bannerText={bannerLang.SignUpFileConverterBanner} />
+      <FeaturesSection
+        textContent={textContent.FeaturesSection}
+        bannerText={bannerLang.SignUpFileConverterBanner}
+        lang={lang}
+      />
 
       <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
 
@@ -43,13 +47,14 @@ const FileConverter = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
+  const textLang = lang === 'es' ? lang : 'en';
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const textContent = require(`@/assets/lang/en/file-converter/file-converter.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
-  const toolsContent = require(`@/assets/lang/en/components/tools/ToolSection.json`);
-  const bannerLang = require(`@/assets/lang/en/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${textLang}/file-converter/file-converter.json`);
+  const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
+  const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
+  const bannerLang = require(`@/assets/lang/${textLang}/banners.json`);
 
   return {
     props: {
