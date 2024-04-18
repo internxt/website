@@ -45,15 +45,16 @@ const FileConverter = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
+  const textLang = lang === 'es' ? lang : 'en';
   const pathname = ctx.params.filename;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const textContent = require(`@/assets/lang/en/file-converter/${pathname}.json`);
-  const converterText = require(`@/assets/lang/en/file-converter/converter-card.json`);
-  const errorContent = require(`@/assets/lang/en/file-converter/errorState.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
-  const toolsContent = require(`@/assets/lang/en/components/tools/ToolSection.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${textLang}/file-converter/${pathname}.json`);
+  const converterText = require(`@/assets/lang/${textLang}/file-converter/converter-card.json`);
+  const errorContent = require(`@/assets/lang/${textLang}/file-converter/errorState.json`);
+  const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
+  const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
 
   return {
     props: {
