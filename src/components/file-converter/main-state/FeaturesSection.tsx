@@ -3,7 +3,7 @@ import SignUpBanner from '@/components/banners/SignUpBanner';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { Browsers, CopySimple, FolderSimpleDashed, Keyhole, Planet, UserCircleMinus } from '@phosphor-icons/react';
 
-export const FeaturesSection = ({ textContent, bannerText }) => {
+export const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const cards = [
     {
       icon: FolderSimpleDashed,

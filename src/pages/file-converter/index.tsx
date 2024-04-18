@@ -26,7 +26,11 @@ const FileConverter = ({
 
       <HeroSection textContent={textContent.HeroSection} />
 
-      <FeaturesSection textContent={textContent.FeaturesSection} bannerText={bannerLang.SignUpFileConverterBanner} />
+      <FeaturesSection
+        textContent={textContent.FeaturesSection}
+        bannerText={bannerLang.SignUpFileConverterBanner}
+        lang={lang}
+      />
 
       <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
 
@@ -44,6 +48,7 @@ const FileConverter = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
+  console.log('LANG:', textLang);
 
   const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
