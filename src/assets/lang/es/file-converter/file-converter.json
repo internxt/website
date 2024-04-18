@@ -94,9 +94,9 @@
   },
   "FeaturesSection": {
     "inxtFileConverter": {
-      "title": "Convertidor de archivos gratuito de Internxt",
+      "title": "Conversor de archivos gratuito de Internxt",
       "description": [
-        "Nuestro Convertidor de Archivos elimina el estrés de la gestión y almacenamiento de archivos al ofrecer una solución simple, segura y rápida para convertir tus PDFs, Word (Doc), imágenes, y más.",
+        "Nuestro Conversor de Archivos elimina el estrés de la gestión y almacenamiento de archivos al ofrecer una solución simple, segura y rápida para convertir tus PDFs, Word (Doc), imágenes, y más.",
         "En solo unos sencillos pasos, puedes tomar un archivo no compatible y convertirlo a tu formato preferido para que puedas editar, proteger y colaborar en tus archivos con facilidad. Dile adiós a los formatos no compatibles con nuestro conversor de archivos gratuito, seguro y privado."
       ]
     },
@@ -200,7 +200,7 @@
         ]
       },
       {
-        "question": "¿El Convertidor de Archivos de Internxt tiene límites de conversión?",
+        "question": "¿El Conversor de Archivos de Internxt tiene límites de conversión?",
         "answer": [
           "No, puedes usar nuestro conversor de archivos tanto como desees y descargar tantos archivos como necesites sin pagar planes premium."
         ]
