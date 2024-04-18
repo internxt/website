@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Convierte HEIC a JPG para facilitar el intercambio de fotos y el acceso en diversos dispositivos.",
+    "secureUpload": "Cargas seguras protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo convertir imágenes de HEIC a JPG",
+      "description": "Hemos diseñado nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu HEIC a JPG implica tres pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo de HEIC: arrastra y suelta tu archivo en el área de arriba para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en 'Convertir a JPG': Esto convierte el formato de tu archivo de HEIC a JPG."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por qué convertir archivos de HEIC a JPG",
+      "paragraphs": [
+        "Las imágenes HEIC son el formato común para iPhones, pero muchas plataformas y dispositivos no los admiten nativamente. Nuestro conversor de HEIC a JPG transforma las imágenes en un formato universalmente reconocido que se puede ver en casi cualquier dispositivo con un visor de fotos.",
+        "El conversor de HEIC a JPG de Internxt garantiza que tus fotos se puedan compartir, cargar y almacenar fácilmente, eliminando problemas de compatibilidad y garantizando una mayor accesibilidad."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "¿Cansado de archivos incompatibles?",
+    "description": "Convierte a los archivos que necesitas con Internxt",
+    "cta": "Crear cuenta"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "Convierte documentos de Word a PDF para facilitar la colaboración y edición de archivos.",
+    "secureUpload": "Cargas seguras protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo convertir un archivo de Word a PDF",
+      "description": "Hemos diseñado nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu documento de Word a un documento PDF implica tres pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu documento de Word: arrastra y suelta tu archivo en el área de arriba para comenzar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en 'Convertir a PDF': Esto convierte tu archivo de Word a PDF."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por qué convertir archivos de Word a PDF",
+      "paragraphs": [
+        "El conversor de Word a PDF de Internxt ofrece compatibilidad universal. Los archivos PDF garantizan que los documentos se puedan acceder y ver en varios dispositivos y sistemas operativos sin necesidad de un software específico.",
+        "Los PDF también ofrecen funciones adicionales de seguridad, como la protección con contraseña, y pueden comprimir tamaños de archivo para ayudar a optimizar tu espacio de almacenamiento al guardar archivos en línea.",
+        "Utiliza el conversor de Word a PDF de Internxt para obtener mayor comodidad al compartir, proteger y almacenar tus archivos."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "¿Cansado de archivos incompatibles?",
+    "description": "Convierte a los archivos que necesitas con Internxt",
+    "cta": "Crear cuenta"
+  }
+}
