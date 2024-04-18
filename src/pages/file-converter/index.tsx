@@ -48,7 +48,6 @@ const FileConverter = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
-  console.log('LANG:', textLang);
 
   const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);

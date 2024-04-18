@@ -8,7 +8,7 @@ export const HeroSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-gray-1 pt-32 pb-20">
       <div className="flex w-full flex-col items-center space-y-12 px-5">
-        <div className="flex flex-col space-y-5 text-center">
+        <div className="flex flex-col items-center space-y-5 text-center">
           <Header maxWidth="max-w-[700px]">{textContent.title}</Header>
           <div className="flex flex-col text-center text-xl text-gray-80">
             <p>{textContent.description.normal}</p>
