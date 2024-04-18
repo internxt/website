@@ -1,18 +1,18 @@
 {
   "bigFile": {
     "label": "El tamaño del archivo excede el límite.",
-    "selectFile": "Por favor selecciona un archivo más pequeño."
+    "selectFile": " Por favor selecciona un archivo más pequeño."
   },
   "internalError": {
     "label": {
       "bold": "Algo salió mal.",
-      "normal": "Por favor, inténtalo de nuevo."
+      "normal": " Por favor, inténtalo de nuevo."
     }
   },
   "unsupportedFormat": {
     "label": {
       "bold": "Formato de archivo no compatible.",
-      "normal": "Por favor, carga un archivo ${{pathFrom}} válido."
+      "normal": " Por favor, carga un archivo ${{pathFrom}} válido."
     }
   }
 }
