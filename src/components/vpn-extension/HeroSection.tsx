@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Button from '../shared/Button';
 import Header from '../shared/Header';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
-import RevealX from '../components/RevealX';
 
 export const HeroSection = ({ textContent }) => {
   return (
@@ -39,7 +38,7 @@ export const HeroSection = ({ textContent }) => {
           <Image
             src={'/images/vpn-extension/vpn-hero.svg'}
             alt="VPN Widget"
-            className={`absolute top-10 left-0 -translate-x-72  rounded-lg`}
+            className={`top-10 left-0 hidden -translate-x-72 rounded-lg  md:absolute`}
             width={328}
             draggable={false}
             height={385}
