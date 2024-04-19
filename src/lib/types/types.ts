@@ -100,6 +100,7 @@ export enum CouponType {
   Lifetime2TBDiscount = 'LIFETIME_2TB_DISCOUNT',
   Lifetime5TBDiscount = 'LIFETIME_5TB_DISCOUNT',
   Lifetime10TBDiscount = 'LIFETIME_10TB_DISCOUNT',
+  lifetime70OFF = 'LIFETIME_70OFF',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';
