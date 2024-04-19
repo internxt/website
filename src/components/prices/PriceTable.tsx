@@ -12,6 +12,7 @@ import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
+import { CouponType } from '@/lib/types/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -28,7 +29,9 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
 
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({});
+  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
+    couponCode: CouponType.lifetime70OFF,
+  });
 
   const features = [
     {
@@ -45,7 +48,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     },
   ];
 
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Lifetime');
 
   const isIndividual = activeSwitchPlan !== 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
@@ -218,7 +221,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price.split('.')[0]}
+                    price={coupon ? Number(product.price.split('.')[0] * 0.3).toFixed(2) : product.price.split('.')[0]}
                     priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
