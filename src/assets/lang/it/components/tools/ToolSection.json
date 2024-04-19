@@ -35,6 +35,11 @@
       "title": "Convertitore di file",
       "cta": "Converti ora",
       "pathname": "/file-converter"
+    },
+    {
+      "title": "Estensione VPN per Chrome",
+      "cta": "Scarica ora",
+      "pathname": "/vpn"
     }
   ]
 }

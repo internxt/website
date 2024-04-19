@@ -6,8 +6,10 @@ import { EncryptedVPNSection } from '@/components/vpn-extension/EncryptedVPNSect
 import { SecureVPNSection } from '@/components/vpn-extension/SecureVPNSection';
 import { HowItWorksSection } from '@/components/vpn-extension/HowItWorksSection';
 import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection';
+import CtaSection from '@/components/shared/CtaSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
 
-const VPN = ({ metatagsDescriptions, langJson, bannerJson, lang, navbarLang, footerLang }) => {
+const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
 
   return (
@@ -24,6 +26,10 @@ const VPN = ({ metatagsDescriptions, langJson, bannerJson, lang, navbarLang, foo
 
       <WhenUseVPNSection textContent={langJson.WhenUseVPNSection} />
 
+      <CtaSection textContent={langJson.CtaSection} url="" />
+
+      <ToolsSection textContent={toolsContent} lang="en" />
+
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
@@ -34,6 +40,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/vpn.json`);
+  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
@@ -43,6 +50,7 @@ export async function getServerSideProps(ctx) {
       lang,
       metatagsDescriptions,
       langJson,
+      toolsContent,
       bannerJson,
       navbarLang,
       footerLang,

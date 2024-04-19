@@ -6,6 +6,8 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
+import CtaSection from '@/components/shared/CtaSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
 
 const InfoSection = dynamic(() => import('@/components/home/InfoSection'));
 const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
