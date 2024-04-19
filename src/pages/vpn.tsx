@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import { EncryptedVPNSection } from '@/components/vpn-extension/EncryptedVPNSection';
 import { SecureVPNSection } from '@/components/vpn-extension/SecureVPNSection';
 import { HowItWorksSection } from '@/components/vpn-extension/HowItWorksSection';
+import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection';
 
 const VPN = ({ metatagsDescriptions, langJson, bannerJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
@@ -20,6 +21,8 @@ const VPN = ({ metatagsDescriptions, langJson, bannerJson, lang, navbarLang, foo
       <SecureVPNSection textContent={langJson.SecureVPNSection} />
 
       <HowItWorksSection textContent={langJson.HowItWorksSection} />
+
+      <WhenUseVPNSection textContent={langJson.WhenUseVPNSection} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
