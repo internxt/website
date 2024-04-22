@@ -44,7 +44,7 @@ export const HomePageBannerForMobile = () => {
       </div>
       <div className="flex h-full flex-col">
         <Image
-          src="/images/banners/data_privacy_internxt_mobile.webp"
+          src="/images/star-wars/internxt_starwars_promotion_mobile.webp"
           loading="lazy"
           width={377}
           height={190}
