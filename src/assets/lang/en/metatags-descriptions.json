@@ -200,6 +200,11 @@
     "description": "Subscribe to Internxt’s online privacy newsletter for the latest updates, tips, and resources to help you protect your online data and security."
   },
   {
+    "id": "webdav",
+    "name": "Internxt CLI and WebDAV | Internxt",
+    "description": "Access your Internxt Drive account with Internxt CLI and WebDAV features. Experience a new method to manage and control your files privately."
+  },
+  {
     "id": "file-converter",
     "title": "Online File Converter | Internxt",
     "description": "Internxt’s free online file converter. Convert your files to different formats and sizes. Convert PDF, Word, Excel, and more."
