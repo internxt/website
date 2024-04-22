@@ -10,7 +10,7 @@ const KitSection = ({ textContent }) => {
           <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
-        <div className="flex flex-row space-x-10">
+        <div className="flex flex-row flex-wrap items-stretch gap-10">
           <KitCard
             downloadImagesLink={'/media-area/internxt-logo-set.zip'}
             image={'/images/media-area/inxt-logo-set.svg'}
