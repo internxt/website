@@ -3,12 +3,12 @@
     "title": "Get an Internxt lifetime plan!",
     "description": "Securely store and share your memories forever.",
     "maintenance": "Plus maintenance fee after 9 years of use",
-    "cta1": "Get 75% off",
+    "cta1": "Get 70% off",
     "cta2": "Browse lifetime deals"
   },
   "PaymentSection": {
     "limitedOffer": "Limited time offer!",
-    "title": { "blueText": "Get up to 75% OFF", "normalText": " on our exclusive lifetime plans" },
+    "title": { "blueText": "Get up to 70% OFF", "normalText": " on our exclusive lifetime plans" },
     "description": "A lifetime of privacy and security for your files.",
     "normalSection": {
       "title": "Explore all of our exclusive lifetime plans",
