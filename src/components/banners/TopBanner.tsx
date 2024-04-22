@@ -18,8 +18,8 @@ const TopBanner = ({ isBannerFixed }) => {
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              <span className="font-bold">{textContent.title.boldText}</span>
               {textContent.title.normalText}
+              <span className="font-bold">{textContent.title.boldText}</span>
             </p>
           </div>
           <button
@@ -46,8 +46,8 @@ const TopBanner = ({ isBannerFixed }) => {
             }}
           >
             <p className="font-normal">
-              <span className="font-semibold">{textContent.title.boldText}</span>
               {textContent.title.normalText}
+              <span className="font-semibold">{textContent.title.boldText}</span>
             </p>
           </button>
         </div>

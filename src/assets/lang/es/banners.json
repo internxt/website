@@ -80,8 +80,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "¡75% de descuento en todos los planes lifetime! ",
-      "normalText": "Protege tus archivos de por vida.",
+      "boldText": "75% de descuento en todos los planes.",
+      "normalText": "¡Siente la fuerza de nuestro almacenamiento en la nube! ",
       "cta": "Elige tu plan"
     }
   },

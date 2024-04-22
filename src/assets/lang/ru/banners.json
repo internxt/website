@@ -102,9 +102,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% скидка на пожизненные планы! ",
-      "normalText": "Сохраните свои файлы в тайне навсегда!",
-      "cta": "Выбрать план"
+      "boldText": "所有计划 70% OFF。",
+      "normalText": "感受安全云存储的力量！",
+      "cta": "选择计划"
     }
   },
   "AndroidSmartBanner": {
