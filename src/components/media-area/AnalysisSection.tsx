@@ -3,12 +3,12 @@ import { EyeSlash, FileCloud, FileLock, Key, ShieldCheck, TrendUp } from '@phosp
 const AnalysisSection = ({ textContent }) => {
   const iconSize = 32;
   const tipIcons = [
-    <FileCloud size={iconSize} />,
-    <FileLock size={iconSize} />,
-    <TrendUp size={iconSize} />,
-    <EyeSlash size={iconSize} />,
-    <ShieldCheck size={iconSize} />,
-    <Key size={iconSize} />,
+    <FileCloud size={iconSize} key={'File Cloud'} />,
+    <FileLock size={iconSize} key={'File clock'} />,
+    <TrendUp size={iconSize} key={'Trend Up'} />,
+    <EyeSlash size={iconSize} key={'Eye Slash'} />,
+    <ShieldCheck size={iconSize} key={'Shield Check'} />,
+    <Key size={iconSize} key={'Key Icon'} />,
   ];
 
   return (
@@ -25,7 +25,7 @@ const AnalysisSection = ({ textContent }) => {
               className="flex flex-col items-start space-y-3 rounded-2xl bg-white p-8 lg:h-full lg:max-w-[256px]"
             >
               <p className="flex flex-col text-primary">{tipIcons[index]}</p>
-              <p className="text-2xl font-medium">{tip}</p>
+              <p className="text-2xl">{tip}</p>
             </div>
           ))}
         </div>
