@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
 
-  const shouldShowBanner = false;
+  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BOTTOM_BANNER.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
 
@@ -70,7 +70,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: false,
+            isOpen: true,
           },
         ]}
       >
