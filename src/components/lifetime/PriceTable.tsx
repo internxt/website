@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import PriceCard from '../prices/PriceCard';
 import { CouponType } from '@/lib/types/types';
+import { stripeService } from '../services/stripe.service';
 
 interface PriceTableProps {
   lang: string;
@@ -14,27 +15,41 @@ interface PriceTableProps {
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount, isLifetimeSpecial }) => {
-  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.lifetime70OFF,
-  });
+  const [coupon, setCoupon] = useState();
+  const { products, currency, currencyValue, loadingCards } = usePricing({});
+
+  useEffect(() => {
+    stripeService.getLifetimeCoupons().then((coupon) => {
+      setCoupon(coupon);
+    });
+  }, []);
+
+  const lifetimePrices = {
+    eur: {
+      '2TB': 199,
+      '5TB': 299,
+      '10TB': 499,
+    },
+    usd: {
+      '2TB': 249,
+      '5TB': 349,
+      '10TB': 549,
+    },
+  };
 
   const productsArray = products?.individuals?.['lifetime'] && Object.values(products?.individuals?.['lifetime']);
 
-  // Intercambiar la posición del segundo y tercer elementos
-  const updatedProductsArray =
-    productsArray &&
-    productsArray.map((product: any, index: number) => {
-      if (index === 1) {
-        // Si es el segundo elemento, devolver el tercer elemento
-        return productsArray[2];
-      } else if (index === 2) {
-        // Si es el tercer elemento, devolver el segundo elemento
-        return productsArray[1];
-      } else {
-        // Devolver los elementos restantes sin cambios
-        return product;
-      }
-    });
+  const updatedProductsArray = productsArray
+    ? productsArray.map((product: any, index: number) => {
+        if (index === 1) {
+          return productsArray[2];
+        } else if (index === 2) {
+          return productsArray[1];
+        } else {
+          return product;
+        }
+      })
+    : null;
 
   const lifetimeProducts = isLifetimeSpecial ? updatedProductsArray : productsArray;
 
@@ -65,29 +80,30 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 pb-16">
-            {lifetimeProducts &&
-              lifetimeProducts.map((product: any) => {
-                return (
-                  <PriceCard
-                    planType="individual"
-                    key={product.storage}
-                    storage={product.storage}
-                    price={
-                      coupon && discount && !normalPrice
-                        ? Number(product.price.split('.')[0] * 0.3).toFixed(2)
-                        : product.price.split('.')[0]
-                    }
-                    cta={['checkout', product.priceId]}
-                    lang={lang}
-                    billingFrequency="lifetime"
-                    popular={isLifetimeSpecial ? product.storage === '10TB' : product.storage === '5TB'}
-                    priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
-                    currency={currency}
-                    currencyValue={currencyValue}
-                    coupon={!normalPrice ? coupon ?? undefined : undefined}
-                  />
-                );
-              })}
+            {lifetimeProducts
+              ? lifetimeProducts.map((product: any) => {
+                  return (
+                    <PriceCard
+                      planType="individual"
+                      key={product.storage}
+                      storage={product.storage}
+                      price={
+                        coupon && discount && !normalPrice
+                          ? lifetimePrices[currencyValue][product.storage]
+                          : product.price.split('.')[0]
+                      }
+                      cta={['checkout', product.priceId]}
+                      lang={lang}
+                      billingFrequency="lifetime"
+                      popular={isLifetimeSpecial ? product.storage === '10TB' : product.storage === '5TB'}
+                      priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
+                      currency={currency}
+                      currencyValue={currencyValue}
+                      coupon={!normalPrice ? coupon?.[product.storage] ?? undefined : undefined}
+                    />
+                  );
+                })
+              : null}
           </div>
         </Transition>
       </div>

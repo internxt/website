@@ -12,7 +12,6 @@ import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
-import { CouponType } from '@/lib/types/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -25,13 +24,31 @@ export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
 export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+  const [coupon, setCoupon] = useState();
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
 
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.lifetime70OFF,
-  });
+  const { products, currency, currencyValue, loadingCards } = usePricing({});
+
+  useEffect(() => {
+    stripeService.getLifetimeCoupons().then((coupon) => {
+      setCoupon(coupon);
+    });
+  }, []);
+
+  const lifetimePrices = {
+    eur: {
+      '2TB': 199,
+      '5TB': 299,
+      '10TB': 499,
+    },
+    usd: {
+      '2TB': 249,
+      '5TB': 349,
+      '10TB': 549,
+    },
+  };
 
   const features = [
     {
@@ -221,7 +238,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={coupon ? Number(product.price.split('.')[0] * 0.3).toFixed(2) : product.price.split('.')[0]}
+                    price={coupon ? lifetimePrices[currencyValue][product.storage] : product.price.split('.')[0]}
                     priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
@@ -229,7 +246,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={coupon ?? undefined}
+                    coupon={coupon?.[product.storage] ?? undefined}
                   />
                 );
               })}
