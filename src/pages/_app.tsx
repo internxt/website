@@ -10,7 +10,6 @@ import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
-import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDED_PATHS_FOR_BOTTOM_BANNER = [
   '/lifetime',
@@ -66,7 +65,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.BottomBanner,

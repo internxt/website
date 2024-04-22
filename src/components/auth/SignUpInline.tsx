@@ -11,6 +11,7 @@ interface SignUpInlineProps {
   error?: string;
   loading?: boolean;
   isBanner?: boolean;
+  textColor?: string;
 }
 
 export default function SignUpInline(props: SignUpInlineProps) {
@@ -117,7 +118,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
           />
         </div>
 
-        <span className="w-full text-sm text-gray-50 sm:text-left">
+        <span className={`w-full text-sm ${props.textColor ?? 'text-gray-50'} sm:text-left`}>
           <span>{props.textContent.disclaimer.text}</span>{' '}
           <a href="/legal" target="_blank" className="underline hover:text-gray-60 active:text-gray-80">
             {props.textContent.disclaimer.link}

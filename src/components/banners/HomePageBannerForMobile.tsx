@@ -14,7 +14,11 @@ export const HomePageBannerForMobile = () => {
     <div
       className={`${
         shouldShowBanner ? 'flex' : 'hidden'
-      } w-full flex-col overflow-hidden rounded-[32px] bg-primary pt-10 md:hidden`}
+      } w-full flex-col overflow-hidden rounded-[32px] bg-primary bg-[url('/images/star-wars/bg.webp')] pt-10 md:hidden`}
+      style={{
+        backgroundImage: '',
+        // filter: 'blur(24px)'
+      }}
     >
       <div className="flex w-full flex-col items-center justify-center space-y-6 text-center text-white lg:items-start lg:text-left">
         <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white py-2 px-5">

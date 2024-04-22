@@ -6,6 +6,8 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
+import { useEffect, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 const InfoSection = dynamic(() => import('@/components/home/InfoSection'));
 const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
@@ -22,7 +24,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={isMobile} />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
