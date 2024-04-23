@@ -9,7 +9,7 @@ export const HeroSection = ({ textContent }) => {
     <section className="-mb-10 overflow-hidden px-5 pt-10">
       <HeroSectionSafeArea>
         <div className="flex w-full flex-col-reverse items-center justify-between gap-5 md:flex-row md:gap-0">
-          <div className="flex h-full max-w-[553px] flex-col justify-center gap-8 text-center md:text-left">
+          <div className="flex h-full max-w-[553px] flex-col items-center justify-center gap-8 text-center md:items-start md:text-left">
             <Header>{textContent.title}</Header>
             <p className="text-xl text-gray-80">{textContent.description}</p>
             <Link
