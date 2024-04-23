@@ -1,17 +1,11 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import React from 'react';
 
 export const PriceBannerForCampaigns = ({ textContent }) => {
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
-
-  const router = useRouter();
-
-  function handleOnClick() {
-    window.location.hash = 'billingButtons';
-  }
 
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden px-5`}>
@@ -34,12 +28,12 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
             <p className="text-4xl font-bold text-white">{textContent.title}</p>
           </div>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
-            <button
-              onClick={handleOnClick}
+            <Link
+              href={'#billingButtons'}
               className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white lg:hover:bg-primary-dark"
             >
               {textContent.cta}
-            </button>
+            </Link>
             {/* <div className="flex flex-row items-center space-x-2 text-gray-80">
               <CheckCircle size={24} className="text-primary" />
               <p className="whitespace-nowrap font-medium lg:text-lg">{textContent.guarantee}</p>

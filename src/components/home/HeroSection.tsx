@@ -86,7 +86,7 @@ export default function HeroSection({ textContent, lang }) {
             </button>
 
             <div className="hidden w-full md:flex">
-              <SignUpInline textContent={textContent.SignUp} textColor="text-white" />
+              <SignUpInline textContent={textContent.SignUp} darkMode />
             </div>
           </div>
 
