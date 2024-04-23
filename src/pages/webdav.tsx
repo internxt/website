@@ -1,9 +1,13 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import { HeroSection } from '@/components/webdav/HeroSection';
-import Footer from '@/components/layout/Footer';
 import { WebDAVSupportSection } from '@/components/webdav/WebDAVSupportSection';
 import { DownloadCLISection } from '@/components/webdav/DownloadCLISection';
+import CtaSection from '@/components/shared/CtaSection';
+import { HowToUseCLISection } from '@/components/webdav/HowToUseCLISection';
+import Footer from '@/components/layout/Footer';
+import { SIGNUP_DRIVE_WEB } from '../constants';
+import FAQSection from '@/components/shared/FaqSection';
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -17,6 +21,14 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
       <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
 
       <DownloadCLISection textContent={langJson.DownloadCLISection} />
+
+      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
+
+      <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
+
+      <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB} />
+
+      <FAQSection textContent={langJson.FaqSection} />
 
       <Footer textContent={footerLang} lang={'en'} />
     </Layout>

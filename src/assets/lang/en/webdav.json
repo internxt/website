@@ -53,7 +53,7 @@
       },
       {
         "platform": "Linux",
-        "description": "Ubuntu and Debian."
+        "description": "Ubuntu and Debian"
       }
     ],
     "installation": "Install using npm",
@@ -71,20 +71,17 @@
       {
         "title": "ReadMe",
         "description": "Information about the Internxt CLI. Find out about its usage, features, commands, and download instructions from our GitHub Repository.",
-        "cta": "Learn more",
-        "link": ""
+        "cta": "Learn more"
       },
       {
         "title": "User guide",
         "description": "Learn more about the Internxt CLI, how WebDAV works, and security features from our help center.",
-        "cta": "Read guide",
-        "link": ""
+        "cta": "Read guide"
       },
       {
         "title": "Updates",
         "description": "Stay updated with new updates for the Internxt CLI from our source code to find out about new releases and features.",
-        "cta": "More details",
-        "link": ""
+        "cta": "More details"
       }
     ]
   },
@@ -111,19 +108,25 @@
       },
       {
         "question": "How can I install the Internxt CLI?",
-        "answer": "To install our CLI on your computer and start using WebDAV, you can follow the installation steps from our [GitHub page](https://github.com/internxt/cli?tab=readme-ov-file#installation)."
+        "answer": [
+          "To install our CLI on your computer and start using WebDAV, you can follow the installation steps from our [GitHub page](https://github.com/internxt/cli?tab=readme-ov-file#installation)."
+        ]
       },
       {
         "question": "Is WebDAV secure?",
-        "answer": "Yes. When enabled, the WebDAV feature uses a local-only server on your machine, thanks to our CLI. We implement the same zero-knowledge and end-to-end encryption methods to guarantee the privacy and security of your files."
+        "answer": [
+          "Yes. When enabled, the WebDAV feature uses a local-only server on your machine, thanks to our CLI. We implement the same zero-knowledge and end-to-end encryption methods to guarantee the privacy and security of your files."
+        ]
       },
       {
         "question": "What WebDAV clients does Internxt support?",
-        "answer": "We support the following WebDAV clients:*CyberDuck*Transmit*Cadaver*Finder"
+        "answer": ["We support the following WebDAV clients:", "* CyberDuck", "*  Transmit", "* Cadaver", "* Finder"]
       },
       {
         "question": "Do I need to worry about self-signed certificates?",
-        "answer": "Internxt uses self-signed certificates for the WebDAV local server. While some WebDAV clients might raise a warning about these certificates, they are safe to ignore. The encryption protects your data regardless."
+        "answer": [
+          "Internxt uses self-signed certificates for the WebDAV local server. While some WebDAV clients might raise a warning about these certificates, they are safe to ignore. The encryption protects your data regardless."
+        ]
       }
     ]
   }
