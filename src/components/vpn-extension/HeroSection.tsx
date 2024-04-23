@@ -7,8 +7,8 @@ export const HeroSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden pt-8">
       <HeroSectionSafeArea>
-        <div className="flex max-w-[447px] flex-col space-y-8">
-          <div className="flex flex-col space-y-4">
+        <div className="flex max-w-[447px] flex-col items-center space-y-8 md:items-start">
+          <div className="flex flex-col items-center space-y-4 text-center md:items-start md:text-start">
             <div className="flex w-max rounded-lg bg-gray-5 py-2 px-4">
               <p className="text-xl font-medium text-gray-80">{textContent.label}</p>
             </div>
@@ -18,7 +18,7 @@ export const HeroSection = ({ textContent }) => {
               <span className="text-4xl">{textContent.title.line2}</span>
             </Header>
           </div>
-          <h3 className="text-xl text-gray-80">{textContent.description}</h3>
+          <h3 className="text-center text-xl text-gray-80 md:text-left">{textContent.description}</h3>
           <Button
             text={textContent.cta}
             onClick={() => {
