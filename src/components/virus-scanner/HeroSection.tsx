@@ -4,8 +4,6 @@ import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 
-const FILE_SCANNER_URL = process.env.FILE_SCANNER_URL;
-
 const HeroSection = ({ textContent }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isScannig, setIsScannig] = useState(false);
@@ -41,7 +39,7 @@ const HeroSection = ({ textContent }) => {
       body: formdata,
     };
 
-    fetch(`${FILE_SCANNER_URL}/filescan`, requestOptions)
+    fetch(`https://clamav.internxt.com/filescan`, requestOptions)
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();

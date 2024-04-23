@@ -68,14 +68,6 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     },
   ];
 
-  const priceForSubscriptions = (product) => {
-    const priceWithDiscount = Number((product.price * 0.25).toFixed(2)); // Redondea a dos decimales
-    const secondDecimal = Math.round((priceWithDiscount - Math.floor(priceWithDiscount)) * 100); // Obtiene el segundo decimal
-    const secondDecimalRounded = secondDecimal >= 50 ? '50' : '00'; // Redondea a .50 o .00
-
-    return Math.floor(priceWithDiscount) + '.' + secondDecimalRounded;
-  };
-
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
 
   const isIndividual = activeSwitchPlan !== 'Business';
@@ -213,7 +205,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={priceForSubscriptions(product)}
+                  price={product.price}
                   billingFrequency={billingFrequency}
                   popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}
@@ -222,6 +214,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   currency={currency}
                   coupon={coupon}
                   currencyValue={currencyValue}
+                  isOffer
                 />
               ))}
           </div>

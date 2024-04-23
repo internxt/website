@@ -5,7 +5,7 @@ import { Fire } from '@phosphor-icons/react';
 export interface PriceCardProps {
   planType: string;
   storage: string;
-  price: string;
+  price: number;
   priceBefore?: number;
   billingFrequency?: string;
   cta: any[];
@@ -16,6 +16,7 @@ export interface PriceCardProps {
   currency?: string;
   currencyValue?: string;
   isIframe?: boolean;
+  isOffer?: boolean;
 }
 
 export default function PriceCard({
@@ -31,6 +32,7 @@ export default function PriceCard({
   currency,
   currencyValue,
   isIframe,
+  isOffer,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -40,7 +42,24 @@ export default function PriceCard({
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
-  const isFreePlan = Number(price) <= 0;
+  const priceForSubscriptions = (product) => {
+    const priceWithDiscount = Number((product * 0.25).toFixed(2));
+    const priceString = priceWithDiscount.toString();
+
+    if (!priceString.includes('.')) {
+      return priceString + '.00';
+    }
+
+    if (priceString.split('.')[1].length === 1) {
+      return priceString + '0';
+    }
+
+    return priceString;
+  };
+
+  const formattedPrice = isOffer ? priceForSubscriptions(price) : price;
+
+  const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
 
   return (
@@ -71,7 +90,9 @@ export default function PriceCard({
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
-              <span className="price text-4xl font-bold">{isFreePlan ? `${contentText.freePlan}` : price}</span>
+              <span className="price text-4xl font-bold">
+                {isFreePlan ? `${contentText.freePlan}` : formattedPrice}
+              </span>
             </p>
           </div>
           <span className={`perUser ${isIndividualPlan ? 'hidden' : ''} text-sm font-medium text-gray-50`}>
