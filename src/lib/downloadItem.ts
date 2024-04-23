@@ -3,8 +3,10 @@ const downloadItem = async (filename) => {
   const data = await response.json();
 
   if (data.downloadUrl) {
-    window.open(data.downloadUrl, '_blank');
+    return data.downloadUrl;
   }
+
+  return undefined;
 };
 
 export default downloadItem;

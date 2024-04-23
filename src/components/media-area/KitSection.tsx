@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import { KitCard } from './components/KitCard';
 
 import downloadItem from '@/lib/downloadItem';
 
 const KitSection = ({ textContent }) => {
+  const [inxtScreenshotMockups, setInxtScreenshotMockups] = useState('');
+  useEffect(() => {
+    downloadItem('internxt-screenshots-mockups.zip')
+      .then((dataURL) => {
+        setInxtScreenshotMockups(dataURL);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-20 py-20 px-5">
@@ -17,7 +29,7 @@ const KitSection = ({ textContent }) => {
             textContent={textContent.firstSection}
           />
           <KitCard
-            downloadImagesLink={downloadItem('internxt-screenshots-mockups.zip')}
+            downloadImagesLink={inxtScreenshotMockups}
             image={'/images/media-area/screenshots-mockups.svg'}
             textContent={textContent.secondSection}
           />
