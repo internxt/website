@@ -19,7 +19,13 @@ export const HeroSection = ({ textContent }) => {
             />
           </div>
           <div className="flex h-full lg:translate-x-10">
-            <Image src={'/images/webdav/cli-and-drive-web.svg'} alt="WebDAV and Drive Web" width={614} height={491} />
+            <Image
+              src={'/images/webdav/cli-and-drive-web.svg'}
+              draggable={false}
+              alt="WebDAV and Drive Web"
+              width={614}
+              height={491}
+            />
           </div>
         </div>
       </HeroSectionSafeArea>

@@ -2,6 +2,8 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import { HeroSection } from '@/components/webdav/HeroSection';
 import Footer from '@/components/layout/Footer';
+import { WebDAVSupportSection } from '@/components/webdav/WebDAVSupportSection';
+import { DownloadCLISection } from '@/components/webdav/DownloadCLISection';
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -11,6 +13,10 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
       <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
+
+      <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
+
+      <DownloadCLISection textContent={langJson.DownloadCLISection} />
 
       <Footer textContent={footerLang} lang={'en'} />
     </Layout>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { LinkTo } from './components/LinkTo';
-import { CopyTextInput } from '../shared/CopyTextInput';
+import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { AppleLogo } from '../shared/icons/AppleIcon';
 
 const GH_README_LINK = 'https://github.com/internxt/cli/tree/main?tab=readme-ov-file#readme';
@@ -24,7 +24,7 @@ export const CliCard = ({ textContent }) => {
             </div>
             <div className="flex flex-col space-y-2">
               <p className="text-lg font-semibold text-gray-100">{textContent.installCli}</p>
-              <CopyTextInput text={textContent.command} />
+              <CommandTextInputCopy text={textContent.command} />
             </div>
           </div>
           <div className="flex w-full flex-col space-y-3 pl-5 md:w-max md:pl-0">
@@ -56,7 +56,7 @@ export const CliCard = ({ textContent }) => {
                 alt="Linux image"
                 className="mt-0.5"
               />
-              <AppleLogo />
+              <AppleLogo width={16} height={21} />
             </div>
           </div>
         </div>

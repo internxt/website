@@ -15,7 +15,7 @@
       "steps": [
         {
           "step": "Step 1:",
-          "description": "Download and install Internxt CLI"
+          "description": "[Download and install Internxt CLI](https://www.npmjs.com/package/@internxt/cli)"
         },
         {
           "step": "Step 2:",
@@ -27,17 +27,17 @@
         },
         {
           "step": "Step 4:",
-          "description": "Insert the URL webdav.local.internxt.com and port 3005."
+          "description": "Insert the URL [webdav.local.internxt.com](https://webdav.local.internxt.com:3005) and port 3005."
         }
-      ],
-      "whyUseCLI": {
-        "title": "Why use a CLI with a WebDAV client",
-        "description": [
-          "We built the Internxt CLI  and WebDAV support with the same emphasis on security and award-winning architecture for our commitment to privacy.",
-          "Your files are encrypted on your device before ever reaching our servers, and only you possess the decryption key. This unwavering commitment to security puts you in complete control of your data.",
-          "Remember to prioritize security when transferring sensitive or confidential data online."
-        ]
-      }
+      ]
+    },
+    "whyUseCLI": {
+      "title": "Why use a CLI with a WebDAV client",
+      "description": [
+        "We built the Internxt CLI  and WebDAV support with the same emphasis on security and award-winning architecture for our commitment to privacy.",
+        "Your files are encrypted on your device before ever reaching our servers, and only you possess the decryption key. This unwavering commitment to security puts you in complete control of your data.",
+        "Remember to prioritize security when transferring sensitive or confidential data online."
+      ]
     }
   },
   "DownloadCLISection": {
@@ -53,7 +53,7 @@
       },
       {
         "platform": "Linux",
-        "description": "Ubuntu and Debian"
+        "description": "Ubuntu and Debian."
       }
     ],
     "installation": "Install using npm",
