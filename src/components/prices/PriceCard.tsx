@@ -5,7 +5,7 @@ import { Fire } from '@phosphor-icons/react';
 export interface PriceCardProps {
   planType: string;
   storage: string;
-  price: number;
+  price: string;
   priceBefore?: number;
   billingFrequency?: string;
   cta: any[];
@@ -40,7 +40,7 @@ export default function PriceCard({
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
-  const isFreePlan = price <= 0;
+  const isFreePlan = Number(price) <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
 
   return (

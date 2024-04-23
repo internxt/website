@@ -10,7 +10,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
   const router = useRouter();
 
   function handleOnClick() {
-    router.push('/lifetime');
+    window.location.hash = 'billingButtons';
   }
 
   return (
@@ -26,7 +26,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
             className="rounded-r-[32px]"
           />
         </div>
-        <div className="flex w-full flex-col items-center gap-6 text-center lg:py-16 xl:w-full">
+        <div className="flex w-full flex-col items-center gap-6 p-10 text-center lg:py-16 xl:w-full">
           <div className="flex w-max rounded-2xl bg-gray-100 py-2 px-4 ring-4 ring-primary">
             <p className="text-3xl font-bold text-white">{textContent.label}</p>
           </div>
