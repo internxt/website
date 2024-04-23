@@ -39,7 +39,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={darkModeForDesk} />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isQuizSection={darkModeForDesk} />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
