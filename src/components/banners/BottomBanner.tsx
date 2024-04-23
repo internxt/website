@@ -31,21 +31,21 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 70%', title2: 'Secure your accounts and files forever!' };
+        return { title1: 'Save 75%', title2: 'Secure your accounts and files forever!' };
       case 'es':
-        return { title1: 'Ahorra un 70%', title2: '¡Asegura tus archivos para siempre!' };
+        return { title1: 'Ahorra un 75%', title2: '¡Asegura tus archivos para siempre!' };
       case 'ru':
-        return { title1: 'Экономия 70%', title2: 'Защитите свои аккаунты и файлы навсегда!' };
+        return { title1: 'Экономия 75%', title2: 'Защитите свои аккаунты и файлы навсегда!' };
       case 'fr':
-        return { title1: 'Économisez 70%', title2: 'Sécurisez vos comptes et fichiers pour toujours !' };
+        return { title1: 'Économisez 75%', title2: 'Sécurisez vos comptes et fichiers pour toujours !' };
       case 'it':
-        return { title1: 'Risparmia il 70%', title2: 'Proteggi i tuoi account e file per sempre!' };
+        return { title1: 'Risparmia il 75%', title2: 'Proteggi i tuoi account e file per sempre!' };
       case 'zh':
-        return { title1: '省 70%', title2: '永久保护您的帐户和文件！' };
+        return { title1: '省 75%', title2: '永久保护您的帐户和文件！' };
       case 'de':
-        return { title1: 'Sparen Sie 70%', title2: 'Sichern Sie Ihre Konten und Dateien für immer!' };
+        return { title1: 'Sparen Sie 75%', title2: 'Sichern Sie Ihre Konten und Dateien für immer!' };
       default:
-        return { title1: 'Save 70%', title2: 'Spring savings have arrived!' };
+        return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
     }
   };
 
