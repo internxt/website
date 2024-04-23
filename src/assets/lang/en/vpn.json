@@ -81,5 +81,40 @@
     "title": "Break free from online trackers",
     "description": "Hide your data for a secure browsing experience with Internxt VPN",
     "cta": "Download VPN"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is a VPN for Chrome extension?",
+        "answer": [
+          "A VPN or virtual private network ensures secure private browsing on the internet. A VPN is designed to create an encrypted channel for private data and lets you protect your online identity on higher-risk connections such as public Wi-Fi hotspots."
+        ]
+      },
+      {
+        "question": "How to install the VPN extension?",
+        "answer": [
+          "To install Internxt’s VPN, click the download VPN button on this page. Once downloaded, you can launch the VPN and choose your preferred VPN server."
+        ]
+      },
+      {
+        "question": "Is it safe to use a VPN connection?",
+        "answer": [
+          "We developed our free VPN extension using industry-standard security protocols in line with Internxt’s mission to protect your data from hackers and Internet service providers (ISPs). A VPN extension prevents external parties from tracking your online activity."
+        ]
+      },
+      {
+        "question": "What platforms does the VPN support?",
+        "answer": [
+          "You can download our VPN Chrome extension on Google Chrome web browsers for Windows and MacOS desktop devices."
+        ]
+      },
+      {
+        "question": "How does the VPN ensure my privacy?",
+        "answer": [
+          "A VPN ensures your privacy by encrypting your internet traffic, masking your IP address, and adhering to strict no-logs policies. This combination of security measures prevents third parties from monitoring your online activities, preserving your anonymity and data privacy."
+        ]
+      }
+    ]
   }
 }

@@ -8,6 +8,7 @@ import { HowItWorksSection } from '@/components/vpn-extension/HowItWorksSection'
 import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
+import FAQSection from '@/components/shared/FaqSection';
 
 const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
@@ -29,6 +30,10 @@ const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, n
       <CtaSection textContent={langJson.CtaSection} url="" />
 
       <ToolsSection textContent={toolsContent} lang="en" />
+
+      <CtaSection textContent={langJson.CtaSection2} url="" />
+
+      <FAQSection textContent={langJson.FaqSection} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

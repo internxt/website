@@ -22,6 +22,7 @@ export const WhenUseVPNSection = ({ textContent }) => {
             <Image
               src="/images/vpn-extension/superhero2.svg"
               alt="Super Hero"
+              draggable={false}
               width={444}
               height={420}
               className="mx-auto"

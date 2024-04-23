@@ -35,14 +35,16 @@ export const HeroSection = ({ textContent }) => {
             draggable={false}
             height={444}
           />
-          <Image
-            src={'/images/vpn-extension/vpn-hero.svg'}
-            alt="VPN Widget"
-            className={`top-10 left-0 hidden -translate-x-72 rounded-lg  md:absolute`}
-            width={328}
-            draggable={false}
-            height={385}
-          />
+          <div className="hidden md:flex">
+            <Image
+              src={'/images/vpn-extension/vpn-hero.svg'}
+              alt="VPN Hero"
+              className={`top-10 left-0 -translate-x-72 rounded-lg  md:absolute`}
+              width={328}
+              height={385}
+              draggable={false}
+            />
+          </div>
         </div>
       </HeroSectionSafeArea>
     </section>
