@@ -68,7 +68,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     },
   ];
 
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Lifetime');
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
 
   const isIndividual = activeSwitchPlan !== 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;

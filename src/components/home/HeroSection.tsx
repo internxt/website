@@ -59,7 +59,7 @@ export default function HeroSection({ textContent, lang }) {
 
             <button
               onClick={() => {
-                router.push('/lifetime');
+                router.push('/pricing');
               }}
               className="hidden items-center gap-1.5 rounded-[20px] bg-gray-100 py-2 pl-3 pr-2 ring-4 ring-primary lg:flex"
             >
