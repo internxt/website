@@ -13,12 +13,14 @@ export const WebDAVSupportSection = ({ textContent }) => {
           <RenderDescription description={textContent.description} />
 
           {/* Steps */}
-          <div className="flex flex-col gap-3">
-            <p className="text-5xl font-semibold text-gray-100">{textContent.howToInstall.title}</p>
+          <div className="flex flex-col gap-6 md:gap-3">
+            <p className="text-center text-2xl font-semibold text-gray-100 md:text-left">
+              {textContent.howToInstall.title}
+            </p>
             <div className="flex flex-col gap-3">
               {textContent.howToInstall.steps.map((steps) => (
-                <div className="flex flex-row items-center gap-3">
-                  <div className="flex rounded-lg bg-gray-5 px-4 py-2">
+                <div className="flex flex-row items-start gap-3 md:items-center">
+                  <div className="flex whitespace-nowrap rounded-lg bg-gray-5 px-4 py-2">
                     <p className="text-lg font-semibold text-gray-80">{steps.step}</p>
                   </div>
                   <ReactMarkdown className="markdown text-lg text-gray-80">{steps.description}</ReactMarkdown>
@@ -29,7 +31,7 @@ export const WebDAVSupportSection = ({ textContent }) => {
 
           {/* Why use CLI + WebDAV */}
           <div className="flex flex-col gap-3">
-            <p className="text-2xl font-medium text-gray-100">{textContent.whyUseCLI.title}</p>
+            <p className="text-center text-2xl font-medium text-gray-100 md:text-left">{textContent.whyUseCLI.title}</p>
             <RenderDescription description={textContent.whyUseCLI.description} />
           </div>
         </div>
