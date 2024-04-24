@@ -10,7 +10,7 @@ import { SIGNUP_DRIVE_WEB } from '../constants';
 import FAQSection from '@/components/shared/FaqSection';
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webdav');
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={'en'}>
