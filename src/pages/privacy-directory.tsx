@@ -12,8 +12,7 @@ import FAQSection from '@/components/shared/FaqSection';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import HeroSection2 from '@/components/privacy-directory/HeroSection2';
 import CtaSection from '@/components/shared/CtaSection';
-
-const CTA_URL_REDIRECT = 'https://drive.internxt.com/new';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
@@ -70,7 +69,7 @@ const PrivacyDirectory = ({
 
             <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
 
-            <CtaSection textContent={textContent.CtaSection} url={CTA_URL_REDIRECT} />
+            <CtaSection textContent={textContent.CtaSection} url={SIGNUP_DRIVE_WEB} />
           </>
         )}
 

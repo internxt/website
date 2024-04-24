@@ -1,7 +1,12 @@
 import { Copy } from '@phosphor-icons/react';
 import copyToClipboard from '../utils/copy-to-clipboard';
 
-export const CopyTextInput = ({ text }) => {
+interface CopyTextInputProps {
+  text: string;
+  isCommandCard?: boolean;
+}
+
+export const CommandTextInputCopy = ({ text, isCommandCard }: CopyTextInputProps) => {
   const onCopy = () => {
     copyToClipboard(text);
   };
@@ -12,7 +17,7 @@ export const CopyTextInput = ({ text }) => {
       onClick={onCopy}
     >
       <p
-        className={`text-base font-medium`}
+        className={`${isCommandCard ? 'text-sm' : 'text-base'} font-medium`}
         style={{
           fontFamily: 'Fira Code VF',
         }}

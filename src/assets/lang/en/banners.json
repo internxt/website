@@ -70,6 +70,10 @@
     "line1": "Convert, store, and secure.",
     "blueText": "Effortless file conversion with Internxt"
   },
+  "SignUpWebDAVBanner": {
+    "line1": "Use the Internxt CLI for",
+    "blueText": "advanced file management with Internxt"
+  },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
