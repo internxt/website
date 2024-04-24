@@ -30,7 +30,7 @@ const KitSection = ({ textContent }) => {
           />
           <KitCard
             downloadImagesLink={inxtScreenshotMockups}
-            image={'/images/media-area/screenshots-mockups.svg'}
+            image={'/images/media-area/screenshots-mockup.webp'}
             textContent={textContent.secondSection}
           />
         </div>
