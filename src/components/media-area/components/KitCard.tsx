@@ -9,7 +9,7 @@ export const KitCard = ({ textContent, image, downloadImagesLink }) => {
       </div>
       <div className="flex h-full w-full flex-col p-10">
         <div className="flex h-full flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
-          <p className="text-3xl font-semibold lg:text-5xl">{textContent.title}</p>
+          <p className="text-3xl font-semibold lg:text-4xl">{textContent.title}</p>
           <p className="font-gray-80 max-w-[380px]  text-xl">{textContent.description}</p>
           <Link href={downloadImagesLink} download={true}>
             <p className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">
