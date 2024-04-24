@@ -160,6 +160,15 @@ export default function Footer({
                       <div>{textContent.FooterSection.sections.products.send}</div>
                     </a>
 
+                    <Link
+                      href="/webdav"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-row items-center hover:text-primary"
+                    >
+                      <div>{textContent.FooterSection.sections.products.webDAV}</div>
+                    </Link>
+
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -512,6 +521,15 @@ export default function Footer({
                           <HardDrives className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.drive}</p>
                         </div>
+                      </Link>
+
+                      <Link
+                        href="/webdav"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center hover:text-primary"
+                      >
+                        <div>{textContent.FooterSection.sections.products.webDAV}</div>
                       </Link>
 
                       <a
