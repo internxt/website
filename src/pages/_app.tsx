@@ -10,8 +10,9 @@ import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
+import LifetimeBanner from '@/components/banners/LifetimeBanner';
 
-const EXCLUDED_PATHS_FOR_BOTTOM_BANNER = [
+const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime',
   '/pricing',
   '/partner-discount',
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
 
-  const shouldShowBanner = false;
+  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
 
@@ -100,7 +101,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
+        <div className="flex justify-center">
+          {shouldShowBanner ? (
+            <>
+              <BottomBanner />
+              <LifetimeBanner />
+            </>
+          ) : undefined}
+        </div>
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>
