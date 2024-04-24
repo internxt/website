@@ -4,8 +4,16 @@ import Link from 'next/link';
 export const KitCard = ({ textContent, image, downloadImagesLink }) => {
   return (
     <div className="flex flex-col items-center justify-between rounded-2xl bg-gray-1">
-      <div>
-        <Image height={520} width={496} src={image} alt="internxt cloud icon" draggable={false} />
+      <div className="flex flex-col">
+        <Image
+          height={520}
+          width={496}
+          loading="eager"
+          src={image}
+          alt="internxt cloud icon"
+          draggable={false}
+          priority
+        />
       </div>
       <div className="flex h-full w-full flex-col p-10">
         <div className="flex h-full flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
