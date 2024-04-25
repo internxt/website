@@ -51,9 +51,10 @@ const Animation = () => {
           >
             <Image
               loading="eager"
-              src="/images/home/header/browser.webp"
+              src="/images/home/header/drive_web_drive.webp"
               draggable="false"
               layout="fill"
+              className="rounded-2xl"
               alt="desktop, laptop and phone with Internxt app"
             />
           </div>
@@ -109,14 +110,14 @@ const Animation = () => {
           style={{
             boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
             width: '164px',
-            height: '178px',
-            bottom: '120px',
+            height: '152px',
+            bottom: '150px',
             borderRadius: '24px',
           }}
         >
           <Image
             loading="eager"
-            src="/images/home/header/preview.webp"
+            src="/images/home/header/preview_image.webp"
             draggable="false"
             layout="fill"
             alt="photo file preview"
