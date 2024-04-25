@@ -1,8 +1,8 @@
 {
   "HeroSection": {
-    "title": "Internxt CLI for WebDAV",
-    "description": "Internxt CLI works with your chosen WebDAV client to manage your Internxt Drive files via commands.",
-    "cta": "Download Internxt CLI"
+    "title": "Internxt CLI and WebDAV support",
+    "description": "Internxt works with your chosen WebDAV client to manage your Internxt Drive files via commands.",
+    "cta": "Get Started"
   },
   "WebDAVSupportSection": {
     "title": "Internxt Command Line Interface & WebDAV support",
