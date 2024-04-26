@@ -19,10 +19,10 @@ const SignUpBanner = ({ textContent, lang }: { textContent: any; lang: string })
         <div className="absolute -right-64 hidden items-center lg:flex">
           <div className="relative right-0  flex flex-col bg-contain">
             <Image
-              src="/images/home/Internxt-secure-cloud-storage.webp"
+              src="/images/home/internxt_secure_cloud_storage.webp"
               width={534}
               height={300}
-              // draggable="false"
+              draggable="false"
               quality={100}
               loading="eager"
               className="object-contain"

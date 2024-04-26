@@ -32,9 +32,9 @@ const GetLifetimeSection = ({ textContent }) => {
 
           <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
             <picture>
-              <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
+              <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
               <img
-                src="/images/home/Internxt-secure-cloud-storage.webp"
+                src="/images/home/internxt_secure_cloud_storage.webp"
                 alt="Internxt secure cloud storage"
                 draggable={false}
               />
