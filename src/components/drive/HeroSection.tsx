@@ -27,7 +27,7 @@ const HeroSection = ({ textContent, lang, download }) => (
       {/* Main title Mockup */}
       <div className="flex h-full flex-col px-5 py-16">
         <img
-          src="/images/drive/internxt_secure_cloud_storage.webp"
+          src="/images/home/internxt_secure_cloud_storage.webp"
           width={757}
           height={419}
           alt="Internxt secure cloud storage"
