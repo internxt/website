@@ -1,4 +1,4 @@
-import { Clock, ClockCounterClockwise, FolderSimple, Link, Trash, Users } from '@phosphor-icons/react';
+import { Clock, ClockCounterClockwise, FolderSimple, Trash, Users } from '@phosphor-icons/react';
 import React from 'react';
 
 const driveItems = [
@@ -11,12 +11,8 @@ const driveItems = [
     icon: ClockCounterClockwise,
   },
   {
-    item: 'Shared with me',
+    item: 'Shared',
     icon: Users,
-  },
-  {
-    item: 'Shared links',
-    icon: Link,
   },
   {
     item: 'Recents',
