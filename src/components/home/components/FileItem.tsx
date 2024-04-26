@@ -1,4 +1,5 @@
 import { DotsThree } from '@phosphor-icons/react';
+import moment from 'moment';
 import React from 'react';
 
 const FileItem = ({
@@ -12,6 +13,8 @@ const FileItem = ({
   ItemImg: any;
   encrypted?: boolean;
 }) => {
+  const fileYear = moment().year();
+
   return (
     <div className={`${className} flex w-[375px] flex-row bg-white px-4 py-3`}>
       <div className={`flex w-full flex-row items-center justify-between space-x-2`}>
@@ -25,7 +28,7 @@ const FileItem = ({
               <div className="flex flex-row space-x-1 text-xs text-gray-50">
                 <p>1.2MB</p>
                 <p>·</p>
-                <p>1 March 2023 at 08:05</p>
+                <p>1 March {fileYear} at 08:05</p>
               </div>
             )}
           </div>
