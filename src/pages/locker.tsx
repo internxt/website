@@ -11,11 +11,6 @@ import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
-const currencyValue = {
-  '€': 'eur',
-  $: 'usd',
-};
-
 export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const { currencyValue } = usePricing({});
