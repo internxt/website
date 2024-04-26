@@ -19,6 +19,7 @@ export interface NavbarProps {
   isLinksHidden?: boolean;
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
+  mode?: 'subscription' | 'payment';
 }
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
