@@ -13,7 +13,7 @@ interface LogInProps {
   openDialog?: boolean;
 }
 
-export default function LogIn(props: LogInProps) {
+export default function LogIn(props: Readonly<LogInProps>) {
   const globalDialogs = useGlobalDialog();
   const onSubmit = (event) => {
     event.preventDefault();

@@ -9,6 +9,23 @@ interface HeroSectionProps {
   isStartPage?: boolean;
 }
 
+const StartPageLabel = () => {
+  return (
+    <div className="flex flex-row items-center space-x-3.5">
+      <Image src={'/images/partnerships/start-page/Startpage_logo.svg'} width={117} height={27} alt="StartPage logo" />
+      <X size={16} />
+      <Image
+        loading="lazy"
+        className="select-none"
+        src={`../../logos/internxt/cool-gray-90.svg`}
+        alt="Internxt logo"
+        width={130}
+        height={16}
+      />
+    </div>
+  );
+};
+
 const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage }) => {
   function redirectToPricingTable() {
     window.scrollTo({
@@ -16,28 +33,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponen
       behavior: 'smooth',
     });
   }
-
-  const StartPageLabel = () => {
-    return (
-      <div className="flex flex-row items-center space-x-3.5">
-        <Image
-          src={'/images/partnerships/start-page/Startpage_logo.svg'}
-          width={117}
-          height={27}
-          alt="StartPage logo"
-        />
-        <X size={16} />
-        <Image
-          loading="lazy"
-          className="select-none"
-          src={`../../logos/internxt/cool-gray-90.svg`}
-          alt="Internxt logo"
-          width={130}
-          height={16}
-        />
-      </div>
-    );
-  };
 
   return (
     <section className="overflow-hidden pt-12">
@@ -50,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponen
           </div>
           <div className="flex flex-row items-center space-x-2.5 rounded-lg bg-primary/7 p-4">
             <Percent className="h-16 w-16 text-primary" />
-            {InfoTextComponent ? InfoTextComponent : <p className="text-xl text-gray-80">{textContent.info}</p>}
+            {InfoTextComponent ?? <p className="text-xl text-gray-80">{textContent.info}</p>}
           </div>
           <Button onClick={redirectToPricingTable} text={textContent.cta} />
         </div>
