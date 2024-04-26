@@ -102,7 +102,7 @@ const Animation = () => {
         className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20`}
         style={{
           boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
-          width: '149px',
+          width: '142px',
           height: '152px',
           bottom: '150px',
           borderRadius: '24px',
