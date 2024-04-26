@@ -12,7 +12,7 @@
   },
   "products": {
     "drive": "Internxt Drive",
-    "photos": "Internxt Photos",
+    "webDAV": "Internxt WebDAV",
     "send": "Internxt Send",
     "comingSoon": "即将推出",
     "new": "新的"
