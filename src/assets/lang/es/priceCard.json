@@ -6,6 +6,7 @@
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
   "planTitles": {
     "individuals": "Planes individuales",
+    "lifetime": "Planes de por vida",
     "business": "Planes para empresas",
     "lifetimeCampaign": {
       "blueText": "50% de descuento",
@@ -26,7 +27,7 @@
     "business": "Empresa"
   },
   "billingFrequencyLabel": {
-    "lifetime": "Pago único",
+    "lifetime": "Acceso de por vida",
     "monthly": "Facturado mensualmente",
     "semiannually": "Facturado cada 6 meses",
     "annually": "Facturado anualmente",

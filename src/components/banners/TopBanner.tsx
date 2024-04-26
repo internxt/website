@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { CaretRight, Sun } from '@phosphor-icons/react';
+import { CaretRight } from '@phosphor-icons/react';
 
 const TopBanner = ({ isBannerFixed }) => {
   const router = useRouter();
@@ -18,8 +18,8 @@ const TopBanner = ({ isBannerFixed }) => {
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              {textContent.title.normalText}
               <span className="font-bold">{textContent.title.boldText}</span>
+              {textContent.title.normalText}
             </p>
           </div>
           <button
@@ -46,8 +46,8 @@ const TopBanner = ({ isBannerFixed }) => {
             }}
           >
             <p className="font-normal">
-              {textContent.title.normalText}
               <span className="font-semibold">{textContent.title.boldText}</span>
+              {textContent.title.normalText}
             </p>
           </button>
         </div>

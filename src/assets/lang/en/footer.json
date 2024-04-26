@@ -23,6 +23,7 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
+        "webDAV": "WebDAV",
         "token": "Token",
         "pricing": "Pricing"
       },
@@ -71,7 +72,8 @@
         "fileVirusScan": "File Virus Scanner",
         "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter",
-        "passwordGenerator": "Password Generator"
+        "passwordGenerator": "Password Generator",
+        "fileConverter": "File Converter"
       }
     }
   },

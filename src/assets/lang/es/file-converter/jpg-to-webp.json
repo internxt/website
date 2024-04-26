@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Un conversor de JPG a WebP ofrece tamaños de archivo más pequeños con una pérdida mínima de calidad.",
+    "secureUpload": "Cargas seguras protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo convertir archivos JPG a archivos WebP",
+      "description": "Diseñamos nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu JPG a un archivo WebP implica tres pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu JPG: arrastra y suelta tu archivo en el área de arriba para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en 'Convertir a WebP': Esto convierte tu archivo de JPG a WebP."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por qué convertir archivos JPG a archivos WebP",
+      "paragraphs": [
+        "Nuestro conversor de archivos gratuito de JPG a WebP convierte imágenes basadas en la web cuando los tamaños de archivo más pequeños y los tiempos de carga más rápidos son cruciales para tu flujo de trabajo. Convertir tu JPG a un archivo WebP puede optimizar tu almacenamiento en la nube al comprimir tus archivos hasta un 34% sin comprometer la calidad del archivo.",
+        "La conversión de JPG a WebP está volviéndose popular debido a sus capacidades para tiempos de carga de sitios web más rápidos y uso reducido de datos."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "¿Cansado de archivos incompatibles?",
+    "description": "Convierte a los archivos que necesitas con Internxt",
+    "cta": "Crear cuenta"
+  }
+}

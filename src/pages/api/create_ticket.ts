@@ -23,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ status: 'OK', ticket: 'Ticket created' });
     } catch (error) {
       const err = error.response;
-      console.log(err.data);
       res.status(err.status).json({ message: err.data.message });
     }
   } else {

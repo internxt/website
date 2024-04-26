@@ -5,7 +5,7 @@ import PPTItem from '../../../public/icons/file-types/ppt.svg';
 import RevealY from '@/components/components/RevealY';
 import RevealX from '@/components/components/RevealX';
 import FileItem from './components/FileItem';
-import DriveSidenav from './components/DriveSidenav';
+import { DriveSidenav } from './components/DriveSidenav';
 import { useRouter } from 'next/router';
 
 const FirstWhatWeDoSection = ({
@@ -19,7 +19,7 @@ const FirstWhatWeDoSection = ({
 }) => {
   const router = useRouter();
   return (
-    <section className={`overflow-hidden py-20 ${backgroundColor ? backgroundColor : ''}`}>
+    <section className={`overflow-hidden py-20 ${backgroundColor}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5">
         {/* First Card */}
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
@@ -53,7 +53,7 @@ const FirstWhatWeDoSection = ({
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-center lg:text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card1.title}</p>
             <p className="text-xl font-normal">{textContent.card1.description}</p>
-            <div
+            <button
               className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
                 window.open(`${window.location.origin}/${router.locale}/privacy`, '_blank');
@@ -61,7 +61,7 @@ const FirstWhatWeDoSection = ({
             >
               <p className="text-lg font-semibold">{textContent.card1.cta}</p>
               <CaretRight size={12} />
-            </div>
+            </button>
           </div>
         </RevealY>
 
@@ -70,7 +70,7 @@ const FirstWhatWeDoSection = ({
           <div className="flex w-full max-w-[390px] flex-col space-y-6 text-center lg:text-start">
             <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.card2.title}</p>
             <p className="text-xl">{textContent.card2.description}</p>
-            <div
+            <button
               className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               onClick={() => {
                 window.open(`${window.location.origin}/${router.locale}/drive`, '_blank');
@@ -78,7 +78,7 @@ const FirstWhatWeDoSection = ({
             >
               <p className="text-lg font-semibold">{textContent.card2.cta}</p>
               <CaretRight size={12} />
-            </div>
+            </button>
           </div>
           <div className="relative w-full rounded-3xl">
             <Image
@@ -128,14 +128,14 @@ const FirstWhatWeDoSection = ({
               <p className=" text-xl">{textContent.card3.description}</p>
             </div>
             <div className="flex justify-center lg:justify-start">
-              <div
+              <button
                 className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
                 onClick={() => {
                   window.open(`https://drive.internxt.com/new`, '_blank');
                 }}
               >
                 <p>{textContent.card3.cta}</p>
-              </div>
+              </button>
             </div>
           </div>
         </RevealY>

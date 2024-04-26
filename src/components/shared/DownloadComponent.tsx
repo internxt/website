@@ -1,23 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import { UilArrowUpRight, UilArrowCircleDown } from '@iconscout/react-unicons';
+
 import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 const DownloadComponent = ({ textContent, lang, download }) => {
   const router = useRouter();
   const language = router.locale;
-  const replacement = (
-    <span>
-      <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Linux}>
-        {textContent.Linux.split(' ')[0]}
-      </a>{' '}
-      {textContent.or}{' '}
-      <a className="font-medium text-gray-80 underline hover:no-underline" href={download.Windows}>
-        {textContent.Windows}
-      </a>
-    </span>
-  );
 
   function getOS() {
     const osList = [

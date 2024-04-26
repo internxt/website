@@ -33,13 +33,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   };
 
   return (
-    <Layout
-      segmentName={pageName}
-      title={metatags[0].title}
-      description={metatags[0].description}
-      lang={lang}
-      showBanner={false}
-    >
+    <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <div className="flex flex-col space-y-10">
         <div className="flex flex-col items-center space-y-9">
           {/* Switch buttons (Individual plans | Lifetime plans | Business) */}

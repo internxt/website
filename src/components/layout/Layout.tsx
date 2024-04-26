@@ -28,7 +28,6 @@ interface LayoutProps {
   readonly host?: string;
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
-  readonly showBanner?: boolean;
 }
 
 const INTERNXT_URL = 'https://internxt.com';
@@ -46,6 +45,8 @@ const excludedPaths = [
   '/locker',
   '/startpage',
   '/oystervpn',
+  '/pccomponentes-products',
+  '/lifetime_special',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 
@@ -59,7 +60,6 @@ export default function Layout({
   disableDrift = true,
   isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
-  showBanner,
 }: // lang
 LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;

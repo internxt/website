@@ -5,6 +5,7 @@ import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
+import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -17,14 +18,16 @@ export default function HeroSection({ textContent, lang }) {
           style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
         />
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
-          <div className="flex w-full flex-col px-2 lg:hidden">{/* <HomePageBanner /> */}</div>
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between pt-5 sm:mb-6 lg:flex-row lg:items-stretch">
+          <div className="flex w-full flex-col px-2 lg:hidden">
+            <HomePageBannerForMobile />
+          </div>
           <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
             <div className="flex object-contain lg:hidden">
               <Image
                 loading="eager"
                 className="object-contain"
-                src="/images/home/devicesMobileView.webp"
+                src="/images/home/internxt_home_mobile.webp"
                 draggable="false"
                 width={600}
                 height={450}

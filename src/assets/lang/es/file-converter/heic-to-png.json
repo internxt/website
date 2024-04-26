@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Convierte HEIC a PNG para facilitar el intercambio de fotos y el acceso en diversos dispositivos.",
+    "secureUpload": "Cargas seguras protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo convertir imágenes de HEIC a PNG",
+      "description": "Hemos diseñado nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu HEIC a PNG implica tres pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo de HEIC: arrastra y suelta tu archivo en el área de arriba para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en 'Convertir a PNG': Esto convierte el formato de tu archivo de HEIC a PNG."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por qué convertir imágenes de HEIC a PNG",
+      "paragraphs": [
+        "La conversión de HEIC a PNG prioriza la compatibilidad amplia sobre el tamaño del archivo, garantizando que tus fotos se puedan ver en diversos dispositivos y plataformas que quizás no admitan nativamente el formato HEIC.",
+        "Prueba el conversor de archivos de HEIC a PNG de Internxt para maximizar el almacenamiento de tus fotos y hacer que tus imágenes sean accesibles en múltiples dispositivos y plataformas."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "¿Cansado de archivos incompatibles?",
+    "description": "Convierte a los archivos que necesitas con Internxt",
+    "cta": "Crear cuenta"
+  }
+}

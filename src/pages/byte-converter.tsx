@@ -13,7 +13,7 @@ import Footer from '@/components/layout/Footer';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import ToolsSection from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/ToolsSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 

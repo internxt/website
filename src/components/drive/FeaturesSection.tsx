@@ -1,12 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
+import Image from 'next/legacy/image';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import * as anim from '../../../public/js/anim';
 import RevealX from '@/components/components/RevealX';
-import Image from 'next/legacy/image';
 
 const FeaturesSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col">

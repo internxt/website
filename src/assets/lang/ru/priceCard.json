@@ -6,6 +6,7 @@
   "onlyForNewClients": "Только для новых клиентов и пользователей бесплатного плана",
   "planTitles": {
     "individuals": "Индивидуальные тарифные планы",
+    "lifetime": "Пожизненные планы",
     "business": "Тарифные планы для бизнеса",
     "lifetimeCampaign": {
       "blueText": "Получите скидку 50%",
@@ -26,7 +27,7 @@
     "business": "Бизнес"
   },
   "billingFrequencyLabel": {
-    "lifetime": "Одноразовый платеж",
+    "lifetime": "Пожизненный доступ",
     "monthly": "ежемесячный платеж",
     "semiannually": "платеж раз в полгода",
     "annually": "Ежегодная оплата",

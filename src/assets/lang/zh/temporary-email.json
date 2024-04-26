@@ -4,16 +4,18 @@
     "subtitle": "使用我们免费、私密且安全的临时电子邮件地址生成器来匿名发送电子邮件。",
     "generatingEmail": "正在生成随机电子邮件...",
     "copyEmail": "复制电子邮件",
-    "deleteEmail": "删除电子邮件",
-    "expireEmail": "电子邮件和收件箱将在 5 小时不活动后过期",
+    "deleteEmail": "更改电子邮件",
+    "expireEmail": { "normal": "电子邮件地址和收件箱将在 ", "bold": "3小时不活动后过期" },
     "inbox": {
+      "refresh": "刷新",
+      "refreshInbox": "刷新收件箱",
       "title": "收件箱",
       "withoutMessages": {
         "youHave": "你有",
         "newMessages": "新消息"
       },
       "withMessages": "您有新信息",
-      "waitingEmail": "等待收到的电子邮件",
+      "waitingEmail": "刷新您的电子邮件或享受宁静。",
       "selectMessage": "选择要打开的消息",
       "attachment": "附件",
       "downloadAll": "全部下载",

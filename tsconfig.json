@@ -9,7 +9,8 @@
       "@/lib/*": ["lib/*"],
       "@/hooks/*": ["hooks/*"],
       "@/contexts/*": ["contexts/*"],
-      "@/assets/*": ["assets/*"]
+      "@/assets/*": ["assets/*"],
+      "@/*": ["./*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -33,6 +34,6 @@
     "strictNullChecks": true
   },
   "types": ["cypress", "node"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/convert/route.ts"],
   "exclude": ["node_modules"]
 }

@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Un conversor seguro de imagen a texto para extraer texto de imágenes.",
+    "secureUpload": "Cargas seguras protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo convertir una imagen a un archivo de texto",
+      "description": "Diseñamos nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu imagen a un documento de texto implica tres pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu imagen: arrastra y suelta tu archivo en el área de arriba para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en 'Convertir a texto': Esto convierte tu archivo de imagen a texto."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por qué convertir archivos de imagen a texto",
+      "paragraphs": [
+        "Un conversor de imagen a texto extrae texto de imágenes, haciéndolas accesibles para personas que usan lectores de pantalla o tienen discapacidades visuales. Nuestro conversor de archivos te permite acceder a la información bloqueada dentro de imágenes en sitios web, documentos o PDFs escaneados.",
+        "La solución de imagen a texto de Internxt proporciona una forma segura y versátil de convertir documentos y imágenes escaneadas en formatos de texto buscables y editables."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "¿Cansado de archivos incompatibles?",
+    "description": "Convierte a los archivos que necesitas con Internxt",
+    "cta": "Crear cuenta"
+  }
+}

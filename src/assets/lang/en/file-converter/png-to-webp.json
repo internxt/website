@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "A PNG to WebP converter offers smaller file sizes with minimal quality loss.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert PNG to WebP files",
+      "description": "We made our file converter to be as easy to use as possible. Converting your PNG to a WebP file involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your PNG: drag and drop your file into the area above to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Convert to WebP’: This converts your file from PNG to WebP."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert PNG to WebP files",
+      "paragraphs": [
+        "Our PNG to WebP online file converter converts web-based images when smaller file sizes and faster loading times are crucial to your workflow. Converting your PNG to a WebP file can optimize your cloud storage by compressing files up to 34% without compromising file quality.",
+        "PNG to WebP conversion is becoming a popular method because of its capabilities for faster loading times on websites and reduced data usage."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

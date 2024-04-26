@@ -3,15 +3,15 @@ import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
+import 'react-tooltip/dist/react-tooltip.css';
 
 import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
-import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
-const EXCLUDED_PATHS = [
+const EXCLUDED_PATHS_FOR_BOTTOM_BANNER = [
   '/lifetime',
   '/pricing',
   '/partner-discount',
@@ -22,17 +22,17 @@ const EXCLUDED_PATHS = [
   '/locker',
   '/startpage',
   '/oystervpn',
+  '/lifetime_special',
 ];
 
-const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', 'pccomponentes-products'];
-
-const isProduction = process.env.NODE_ENV === 'production';
+const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
-  const shouldShowBanner = !EXCLUDED_PATHS.includes(pathname);
-  const hideIntercomButton = excludeIntercomPaths.includes(router.pathname);
+
+  const shouldShowBanner = false;
+  const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
 
   useEffect(() => {
@@ -53,6 +53,22 @@ function MyApp({ Component, pageProps }: AppProps) {
           { key: GlobalDialog.Auth, isOpen: false },
           {
             key: GlobalDialog.Wheel,
+            isOpen: false,
+          },
+          {
+            key: GlobalDialog.TempMailAction,
+            isOpen: false,
+          },
+          {
+            key: GlobalDialog.PriceBannerForCampaigns,
+            isOpen: false,
+          },
+          {
+            key: GlobalDialog.MobileBannerForHome,
+            isOpen: false,
+          },
+          {
+            key: GlobalDialog.BottomBanner,
             isOpen: false,
           },
         ]}
@@ -84,16 +100,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        {
-          <div className="flex justify-center">
-            {shouldShowBanner ? (
-              <>
-                <BottomBanner />
-                <FeaturesBanner />
-              </>
-            ) : undefined}
-          </div>
-        }
+        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

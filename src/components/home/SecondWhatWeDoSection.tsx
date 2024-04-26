@@ -17,21 +17,17 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
             {/* Internxt Drive */}
             <ProductCard
               imageUrl={'/images/privacy/Internxt-Drive.webp'}
+              redirect="/drive"
               animationDirection={'right'}
               lang={lang}
               textContent={textContent.square1}
             />
-            {/* Internxt Photos */}
-            <ProductCard
-              imageUrl={'/images/privacy/photos-image.webp'}
-              animationDirection={'left'}
-              lang={lang}
-              textContent={textContent.square2}
-            />
+
             {/* Internxt Send */}
             <ProductCard
               imageUrl={'/images/privacy/Share-by-email.webp'}
-              animationDirection={'right'}
+              animationDirection={'left'}
+              redirect={'https://send.internxt.com'}
               lang={lang}
               textContent={textContent.square3}
             />

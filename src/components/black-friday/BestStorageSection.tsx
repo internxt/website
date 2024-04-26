@@ -17,7 +17,7 @@ const BestStorageSection = ({ textContent, lang }) => {
         </div>
         <img
           className="hidden md:flex lg:max-w-3xl"
-          src="/images/home/Internxt-secure-cloud-storage.webp"
+          src="/images/home/internxt_secure_cloud_storage.webp"
           alt="Internxt secure cloud storage"
           draggable="false"
         />

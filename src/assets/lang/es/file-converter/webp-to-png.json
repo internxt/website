@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Transforma los visuales y el texto de una página web en un archivo de imagen PNG.",
+    "secureUpload": "Cargas seguras protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo convertir archivos WebP a PNG",
+      "description": "Hemos diseñado nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu WebP a un archivo PNG implica tres pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu WebP: arrastra y suelta tu archivo en el área de arriba para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en 'Convertir a PNG': Esto convierte tu archivo de WebP a PNG."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por qué convertir archivos WebP a PNG",
+      "paragraphs": [
+        "Usar nuestro conversor de WebP a PNG garantiza compatibilidad en diversas plataformas y aplicaciones. Nuestro conversor de archivos mantiene la calidad de imagen sin pérdida de compresión para conservar tus imágenes perfectas en píxeles.",
+        "Prueba el conversor de archivos de WebP a PNG de Internxt para garantizar consistencia y facilidad de uso en tu flujo de trabajo y permitir más posibilidades de edición avanzadas para tus archivos PNG."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "¿Cansado de archivos incompatibles?",
+    "description": "Convierte a los archivos que necesitas con Internxt",
+    "cta": "Crear cuenta"
+  }
+}

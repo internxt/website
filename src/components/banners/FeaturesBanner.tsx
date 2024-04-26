@@ -1,6 +1,12 @@
-import { CheckCircle, Flower, X } from '@phosphor-icons/react';
-import { useState, useEffect } from 'react';
+import { CheckCircle, X } from '@phosphor-icons/react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+
+const KeyHoleIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(0,102,255)" viewBox="0 0 256 256">
+    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm29.52,146.39a4,4,0,0,1-3.66,5.61H102.14a4,4,0,0,1-3.66-5.61L112,139.72a32,32,0,1,1,32,0Z"></path>
+  </svg>
+);
 
 const FeaturesBanner = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -45,7 +51,7 @@ const FeaturesBanner = () => {
             <div className="flex rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7">
               <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="w-full max-w-[380px] text-4xl font-bold leading-tight text-gray-100">
+            <p className="w-full max-w-[310px] text-4xl font-bold leading-tight text-gray-100">
               {textContent.featuresBanner.title}
             </p>
 
@@ -68,8 +74,8 @@ const FeaturesBanner = () => {
             <div className="flex flex-col">
               <div className="flex flex-col space-y-8">
                 {textContent.featuresBanner.features.map((card) => (
-                  <div className="flex flex-row" key={card}>
-                    <Flower size={30} weight="fill" className="mr-4 text-primary" />
+                  <div className="flex flex-row space-x-4" key={card}>
+                    <KeyHoleIcon />
                     <p className="whitespace-nowrap text-lg font-semibold text-gray-80">{card}</p>
                   </div>
                 ))}

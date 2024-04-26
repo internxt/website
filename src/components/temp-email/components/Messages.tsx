@@ -1,4 +1,7 @@
+import { ArrowClockwise } from '@phosphor-icons/react';
 import moment from 'moment';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const Loader = (): JSX.Element => {
   return (
@@ -19,60 +22,63 @@ const Loader = (): JSX.Element => {
   );
 };
 
-const EnvelopeWithColor = (): JSX.Element => {
-  return (
-    <svg width="48" height="48" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M47.5443 2.50673V33.4874C47.5443 34.1008 47.2762 34.6508 46.8457 35.0246C46.4902 35.3402 46.0185 35.5275 45.5117 35.5275H2.58824C2.07553 35.5275 1.60978 35.3402 1.25428 35.0246C0.82376 34.6508 0.555664 34.1008 0.555664 33.4874V2.50739C0.555664 1.38062 1.46563 0.467285 2.58824 0.467285H45.5124C46.6343 0.467285 47.5443 1.38062 47.5443 2.50673Z"
-        fill="#97BFFE"
-      />
-      <path
-        d="M46.8458 35.0253C46.4903 35.3408 46.0186 35.5281 45.5118 35.5281H2.58835C2.07564 35.5281 1.6099 35.3408 1.25439 35.0253L22.1776 19.3395L24.0471 17.9947L25.9225 19.3395L46.8458 35.0253Z"
-        fill="#80B0FC"
-      />
-      <path
-        opacity="0.15"
-        d="M47.5451 2.50673V4.62409L27.8808 20.7426L27.4209 20.4152L25.2866 22.02C24.556 22.5693 23.5514 22.5706 22.8196 22.0226L20.6872 20.427L20.2156 20.7485L0.557129 4.62409V2.50739C0.557129 1.38062 1.46709 0.467285 2.5897 0.467285H45.5138C46.6358 0.467285 47.5457 1.38062 47.5457 2.50673H47.5451Z"
-        fill="#80B0FC"
-      />
-      <path
-        d="M47.5443 2.50673V3.15687L25.9224 19.3395L25.2512 19.8221C24.5343 20.3373 23.5702 20.338 22.8533 19.824L22.1775 19.3395L0.555664 3.15687V2.50739C0.555664 1.38062 1.46563 0.467285 2.58824 0.467285H45.5124C46.6343 0.467285 47.5443 1.38062 47.5443 2.50673Z"
-        fill="#C0D8FF"
-      />
-    </svg>
-  );
-};
-
-const NoMessageSelected = ({
+export const NoMessageSelected = ({
   messagesLength,
   textContent,
+  onRefreshButtonClicked,
 }: {
   messagesLength: number;
   textContent: any;
+  onRefreshButtonClicked: () => void;
 }): JSX.Element => {
+  const [isRefreshIconAnimated, setIsRefreshIconAnimated] = useState<boolean>(false);
   const withoutMessagesSentence = `${textContent.withoutMessages.youHave} ${messagesLength} ${textContent.withoutMessages.newMessages}`;
   const withMessagesSentence = `${textContent.withMessages}`;
   const messages = messagesLength === 0;
+
+  useEffect(() => {
+    if (isRefreshIconAnimated) {
+      setTimeout(() => {
+        setIsRefreshIconAnimated(false);
+      }, 2000);
+    }
+  }, [isRefreshIconAnimated]);
+
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <div className="relative flex flex-col">
-        <Loader />
-        <div className="absolute  translate-y-5 translate-x-6">
-          <EnvelopeWithColor />
-        </div>
+        <Image src="/images/temp-email/empty-inbox.svg" alt="Empty inbox" width={172} height={135} />
       </div>
-      <div className="flex flex-col items-center">
-        <p className="text-base font-medium text-gray-100">
-          {messages ? withoutMessagesSentence : withMessagesSentence}
-        </p>
+      <div className="flex flex-col items-center space-y-8 px-5">
+        <div className="flex flex-col items-center text-center">
+          <p className="text-base font-medium text-gray-100">
+            {messages ? withoutMessagesSentence : withMessagesSentence}
+          </p>
 
-        <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
+          <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
+        </div>
+        <button
+          className="flex w-max flex-row space-x-2 rounded-lg border border-gray-10 px-5 py-2.5 shadow-sm"
+          onClick={() => {
+            onRefreshButtonClicked();
+            setIsRefreshIconAnimated(true);
+          }}
+        >
+          <ArrowClockwise size={24} className={`${isRefreshIconAnimated ? 'animate-spin-refresh' : ''}`} />
+          <p>{textContent.refresh}</p>
+        </button>
       </div>
     </div>
   );
 };
 
-const MessageSelected = ({ item, textContent }: { item: Record<string, any>; textContent: any }): JSX.Element => {
+export const MessageSelected = ({
+  item,
+  textContent,
+}: {
+  item: Record<string, any>;
+  textContent: any;
+}): JSX.Element => {
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
 
   return (
@@ -101,5 +107,3 @@ const MessageSelected = ({ item, textContent }: { item: Record<string, any>; tex
     </div>
   );
 };
-
-export default { MessageSelected, NoMessageSelected };

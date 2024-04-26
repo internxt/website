@@ -1,8 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowsCounterClockwise, Bug, CaretRight, Envelope, Password, ShieldCheck } from '@phosphor-icons/react';
+import {
+  ArrowsCounterClockwise,
+  Bug,
+  CaretRight,
+  Envelope,
+  FileDashed,
+  Password,
+  ShieldCheck,
+} from '@phosphor-icons/react';
+import { useRouter } from 'next/router';
 
-const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
+export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
+  const router = useRouter();
+  const pathname = router.pathname;
+
   const cards = [
     {
       icon: Password,
@@ -34,7 +46,14 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
       cta: textContent.toolsCard[4].cta,
       pathname: textContent.toolsCard[4].pathname,
     },
+    {
+      icon: FileDashed,
+      title: textContent.toolsCard[5].title,
+      cta: textContent.toolsCard[5].cta,
+      pathname: textContent.toolsCard[5].pathname,
+    },
   ];
+  const filteredCards = cards.filter((item) => item.pathname !== pathname);
 
   return (
     <section className="overflow-hidden py-20">
@@ -45,7 +64,7 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
           {textContent.title.text2}
         </p>
         <div className="flex w-full  max-w-[850px] flex-col gap-5 lg:gap-2">
-          {cards.map((tool) => (
+          {filteredCards.map((tool) => (
             <div
               key={tool.title}
               className="flex w-full flex-col items-center justify-between gap-4 rounded-[10px] border border-gray-10 bg-white px-10 py-6 lg:flex-row lg:gap-0"
@@ -57,15 +76,8 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
                 </p>
               </div>
               <div className=" flex flex-row items-center gap-2 text-lg font-semibold text-primary hover:underline">
-                <Link
-                  href={tool.pathname}
-                  locale={lang}
-                  passHref
-                  target="_self"
-                  className="hover:text-primary">
-
+                <Link href={tool.pathname} locale={lang} passHref target="_self" className="hover:text-primary">
                   {tool.cta}
-
                 </Link>
                 <CaretRight size={16} weight="bold" />
               </div>
@@ -76,5 +88,3 @@ const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string })
     </section>
   );
 };
-
-export default ToolsSection;

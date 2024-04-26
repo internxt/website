@@ -5,6 +5,7 @@ module.exports = {
   },
   experimental: {
     swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
+    scrollRestoration: true,
   },
   webpack(config) {
     config.module.rules.push({
@@ -164,6 +165,16 @@ module.exports = {
       {
         source: '/converter-tool',
         destination: '/byte-converter',
+        permanent: false,
+      },
+      {
+        source: '/photos',
+        destination: '/drive',
+        permanent: false,
+      },
+      {
+        source: '/:lang/photos',
+        destination: '/:lang/drive',
         permanent: false,
       },
     ];
