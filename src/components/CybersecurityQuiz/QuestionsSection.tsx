@@ -15,7 +15,6 @@ const QuestionsSection = ({ textContent, isCorrectAnswer }) => {
                 answer={item.answer}
                 isQuestionBigger
                 isCorrectAnswer={isCorrectAnswer[index]}
-                isQuizSection
               />
             </div>
           ))}
