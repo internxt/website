@@ -8,9 +8,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     try {
       const email = await axios.get(`${CONVERTER_URL}/api/temp-mail/address`);
+
       return res.status(200).json(email.data);
     } catch (err) {
       const error = err as Error;
+      console.log('ERROR:', error.message);
       return res.status(500).json({ message: error.message });
     }
   } else {
