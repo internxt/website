@@ -105,7 +105,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           {shouldShowBanner ? (
             <>
               <BottomBanner />
-              <LifetimeBanner />
             </>
           ) : undefined}
         </div>
