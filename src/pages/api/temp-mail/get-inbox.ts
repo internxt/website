@@ -1,17 +1,16 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
-const TEMP_MAIL_API_KEY = process.env.TEMP_MAIL_API_KEY;
+const CONVERTER_URL =
+  process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_FILE_CONVERTER_API : 'http://localhost:3000';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { token } = req.query;
     try {
-      const inbox = await axios.get(`${process.env.NEXT_PUBLIC_TEMP_MAIL_URL}/inbox?token=${token}`, {
-        headers: {
-          Authorization: `Bearer ${TEMP_MAIL_API_KEY}`,
-        },
-      });
+      const inbox = await axios.get(`${CONVERTER_URL}/api/temp-mail/messages/${token}`);
+
+      console.log(inbox.data);
 
       return res.status(200).json(inbox.data);
     } catch (err) {
