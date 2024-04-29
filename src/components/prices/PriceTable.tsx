@@ -31,7 +31,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
 
   const banner = require('@/assets/lang/en/banners.json');
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.SpringCoupon,
+    couponCode: CouponType.starWarsSubscription,
   });
 
   useEffect(() => {
