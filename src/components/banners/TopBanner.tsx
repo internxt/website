@@ -19,7 +19,7 @@ const TopBanner = ({ isBannerFixed }) => {
           <div className="flex cursor-default">
             <p className="font-normal">
               <span className="font-bold">{textContent.title.boldText}</span>
-              {textContent.title.normalText}
+              {/* {textContent.title.normalText} */}
             </p>
           </div>
           <button
@@ -47,7 +47,7 @@ const TopBanner = ({ isBannerFixed }) => {
           >
             <p className="font-normal">
               <span className="font-semibold">{textContent.title.boldText}</span>
-              {textContent.title.normalText}
+              {/* {textContent.title.normalText} */}
             </p>
           </button>
         </div>

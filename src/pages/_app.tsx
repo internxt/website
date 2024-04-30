@@ -10,7 +10,6 @@ import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
-import LifetimeBanner from '@/components/banners/LifetimeBanner';
 
 const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime',
@@ -70,7 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: false,
+            isOpen: true,
           },
         ]}
       >
@@ -101,13 +100,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        <div className="flex justify-center">
-          {shouldShowBanner ? (
-            <>
-              <BottomBanner />
-            </>
-          ) : undefined}
-        </div>
+        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

@@ -31,19 +31,19 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 75%', title2: 'Secure your online identity for a lifetime' };
+        return { title1: 'Save 75%', title2: 'Secure your accounts and files forever!' };
       case 'es':
-        return { title1: 'Ahorra un 75%', title2: 'Asegura tu identidad en línea de por vida' };
+        return { title1: 'Ahorra un 75%', title2: '¡Asegura tus archivos para siempre!' };
       case 'ru':
-        return { title1: 'Экономия 75%', title2: 'Защитите свою личность на всю жизнь' };
+        return { title1: 'Экономия 75%', title2: 'Защитите свои аккаунты и файлы навсегда!' };
       case 'fr':
-        return { title1: 'Économisez 75%', title2: 'Sécurisez votre identité en ligne pour toute une vie' };
+        return { title1: 'Économisez 75%', title2: 'Sécurisez vos comptes et fichiers pour toujours !' };
       case 'it':
-        return { title1: 'Risparmia il 75%', title2: 'Proteggi la tua identità online per tutta la vita' };
+        return { title1: 'Risparmia il 75%', title2: 'Proteggi i tuoi account e file per sempre!' };
       case 'zh':
-        return { title1: '省 75%', title2: '保护您的在线身份一生' };
+        return { title1: '省 75%', title2: '永久保护您的帐户和文件！' };
       case 'de':
-        return { title1: 'Sparen Sie 75%', title2: 'Sichern Sie Ihre Online-Identität ein Leben lang' };
+        return { title1: 'Sparen Sie 75%', title2: 'Sichern Sie Ihre Konten und Dateien für immer!' };
       default:
         return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
     }
