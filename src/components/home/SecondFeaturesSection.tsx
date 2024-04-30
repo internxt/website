@@ -38,6 +38,7 @@ const SecondFeaturesSection = ({ textContent }) => {
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
               <div
+                key={info.title}
                 className={`flex ${
                   cardIndex === index ? 'border-gray-80' : 'border-gray-10'
                 } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}

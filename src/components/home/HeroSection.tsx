@@ -5,7 +5,6 @@ import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
-import { useRouter } from 'next/router';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import { CaretRight } from '@phosphor-icons/react';
 const Header = dynamic(() => import('@/components/shared/Header'));
@@ -49,8 +48,9 @@ export default function HeroSection({ textContent, lang }) {
               <Image
                 loading="eager"
                 className="object-contain"
-                src="/images/home/devicesMobileView.webp"
+                src="/images/home/image_mobile.webp"
                 draggable="false"
+                quality={100}
                 width={600}
                 height={450}
                 alt="Laptop and phone with Internxt app"

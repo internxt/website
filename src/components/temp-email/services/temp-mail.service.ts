@@ -27,13 +27,9 @@ const fetchInbox = async (token: string) => {
 };
 
 const createEmail = async () => {
-  try {
-    const fetchEmail = await getEmail();
+  const fetchEmail = await getEmail();
 
-    return fetchEmail;
-  } catch (err) {
-    const error = err as Error;
-  }
+  return fetchEmail;
 };
 
 const fetchAndFormatInbox = async (

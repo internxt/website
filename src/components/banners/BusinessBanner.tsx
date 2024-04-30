@@ -51,7 +51,7 @@ const BusinessBanner = ({ textContent }) => {
               <div className="ml-form-embedSubmit">
                 <button
                   type="submit"
-                  disabled={email ? false : true}
+                  disabled={!email}
                   className="rounded-lg bg-primary px-5 py-3 font-medium text-white"
                 >
                   {textContent.cta}
@@ -63,7 +63,7 @@ const BusinessBanner = ({ textContent }) => {
         <div className="-ml-40 hidden w-full items-center lg:flex">
           <div className="relative left-56 top-2 flex w-full flex-col bg-contain">
             <Image
-              src="/images/home/Internxt-secure-cloud-storage.webp"
+              src="/images/home/internxt_secure_cloud_storage.webp"
               width={534}
               height={300}
               draggable={false}
