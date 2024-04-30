@@ -127,7 +127,6 @@ export const HeroSection = ({ textContent }) => {
     try {
       const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken);
 
-      console.log(messagesInInbox);
       if (messagesInInbox && messagesInInbox.length > 0) {
         const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;
 
@@ -141,7 +140,7 @@ export const HeroSection = ({ textContent }) => {
     } catch (err) {
       // NO OP
       const error = err as Error;
-      console.log('ERROR', err);
+
       if (error.message.includes('404')) {
         await onDeleteEmailButtonClicked();
       }
