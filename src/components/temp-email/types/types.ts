@@ -23,7 +23,7 @@ export const ActionTypes = {
 
 export type ActionType =
   | { type: 'SET_EMAIL'; payload: string | undefined }
-  | { type: 'SET_TOKEN'; payload: string }
+  | { type: 'SET_TOKEN'; payload: string | undefined }
   | { type: 'SET_BORDER_COLOR'; payload: boolean }
   | { type: 'SET_OPENED_MESSAGES'; payload: number }
   | { type: 'SET_IS_REFRESHED'; payload: boolean | undefined }

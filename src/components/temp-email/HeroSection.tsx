@@ -206,6 +206,7 @@ export const HeroSection = ({ textContent }) => {
   const onDeleteEmailButtonClicked = async () => {
     removeLocalStorage();
     setEmail(undefined);
+    setToken(undefined);
     setGenerateEmail(!generateEmail);
     setIsChangeEmailIconAnimated(true);
 

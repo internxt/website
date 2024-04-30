@@ -28,7 +28,7 @@ const reducer = (state, action: ActionType) => {
 
 const initialState = {
   email: undefined,
-  token: '',
+  token: undefined,
   borderColor: false,
   openedMessages: 0,
   isRefreshed: false,
@@ -45,7 +45,7 @@ export const useTempMailReducer = () => {
     dispatch({ type: 'SET_EMAIL', payload: email });
   }, []);
 
-  const setToken = useCallback((token: string) => {
+  const setToken = useCallback((token: string | undefined) => {
     dispatch({ type: 'SET_TOKEN', payload: token });
   }, []);
 
