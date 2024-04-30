@@ -8,24 +8,14 @@ export const INBOX_STORAGE_KEY = 'inbox';
 export const TIME_NOW = new Date().getTime();
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
-const encodedAuth = btoa(process.env.NEXT_PUBLIC_IOS_APP_ID as string);
-
 const getEmail = async () => {
-  const email = await axios.get(`${window.origin}/api/temp-mail/create-email`, {
-    headers: {
-      Authorization: `Bearer ${encodedAuth}`,
-    },
-  });
+  const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
 
   return email.data;
 };
 
 const fetchInbox = async (email: string, token: string) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}&email=${email}`, {
-    headers: {
-      Authorization: `Bearer ${encodedAuth}`,
-    },
-  });
+  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}&email=${email}`);
 
   const { data } = inbox;
 

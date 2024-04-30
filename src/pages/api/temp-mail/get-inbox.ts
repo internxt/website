@@ -6,12 +6,6 @@ const CONVERTER_URL =
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    const auth = req.headers['authorization']?.split('Bearer ')[1];
-
-    const decodedAuth = atob(auth as string);
-
-    if (decodedAuth !== process.env.NEXT_PUBLIC_IOS_APP_ID) return res.status(401).send('Unauthenticated');
-
     const { token, email } = req.query;
     try {
       const inbox = await axios.get(`${CONVERTER_URL}/api/temp-mail/messages/${email}/${token}`);
