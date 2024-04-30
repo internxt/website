@@ -7,6 +7,7 @@ import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import { CaretRight } from '@phosphor-icons/react';
+import { useRouter } from 'next/router';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
