@@ -124,9 +124,12 @@ export const HeroSection = ({ textContent }) => {
   const getMailInbox = useCallback(async (email: string, userToken: string) => {
     if (!userToken && !email) return;
 
+    console.log(userToken, email);
+
     try {
       const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken);
 
+      console.log(messagesInInbox);
       if (messagesInInbox && messagesInInbox.length > 0) {
         const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;
 
@@ -209,8 +212,6 @@ export const HeroSection = ({ textContent }) => {
     setToken(undefined);
     setGenerateEmail(!generateEmail);
     setIsChangeEmailIconAnimated(true);
-
-    await fetchEmail();
   };
 
   return (
