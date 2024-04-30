@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowClockwise, Copy } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 interface EmailToolBarProps {
   email: string | null;
@@ -25,17 +24,6 @@ function EmailToolbar({
   onDelete,
   textContent,
 }: Readonly<EmailToolBarProps>) {
-  const { openDialog } = useGlobalDialog();
-
-  const onDeleteEmail = () => {
-    openDialog(GlobalDialog.TempMailAction, {
-      data: {
-        email,
-        onActionButtonClicked: onDelete,
-      },
-    });
-  };
-
   return (
     <div className="flex w-max max-w-3xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-5 lg:p-9">
       <div className="flex w-full flex-col items-center justify-center gap-3 lg:flex-row">
@@ -68,7 +56,7 @@ function EmailToolbar({
         </div>
         <button
           className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-gray-20 bg-gray-5 px-5 py-2.5 text-gray-80 shadow-sm hover:bg-gray-5 active:bg-gray-10"
-          onClick={onDeleteEmail}
+          onClick={onDelete}
         >
           <ArrowClockwise size={24} className={`${isChangeEmailIconAnimated ? 'animate-spin-refresh' : ''}`} />
           <p>{textContent.deleteEmail}</p>

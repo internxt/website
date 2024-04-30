@@ -121,31 +121,31 @@ export const HeroSection = ({ textContent }) => {
     }
   };
 
-  const getMailInbox = useCallback(
-    async (userToken: string) => {
-      if (!userToken) return;
+  const getMailInbox = useCallback(async (email: string, userToken: string) => {
+    if (!userToken && !email) return;
 
-      const messagesLength = messages != null ? messages.length : 0;
+    try {
+      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken);
 
-      try {
-        const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(userToken, messagesLength);
-        if (messagesInInbox && messagesInInbox.length > 0) {
-          const allMessagesInInbox = messages == null ? [...messagesInInbox] : [...messages, ...messagesInInbox];
-          const unopenedMessages = allMessagesInInbox.filter((item) => !item.opened).length;
+      if (messagesInInbox && messagesInInbox.length > 0) {
+        const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;
 
-          setMessages(allMessagesInInbox);
-          setOpenedMessages(unopenedMessages);
-          localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(allMessagesInInbox));
-        } else {
-          const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-          setMessages(JSON.parse(inbox));
-        }
-      } catch (err) {
-        // notificationService.openErrorToast('Something went wrong');
+        setMessages(messagesInInbox);
+        setOpenedMessages(unopenedMessages);
+        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(messagesInInbox));
+      } else {
+        const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
+        setMessages(JSON.parse(inbox));
       }
-    },
-    [messages, token],
-  );
+    } catch (err) {
+      // NO OP
+      const error = err as Error;
+      console.log('ERROR', err);
+      if (error.message.includes('404')) {
+        await onDeleteEmailButtonClicked();
+      }
+    }
+  }, []);
 
   const removeDataFromStorageIfExpired = () => {
     const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
@@ -174,13 +174,13 @@ export const HeroSection = ({ textContent }) => {
     }
   };
 
-  const handleInboxUpdate = useCallback(() => {
-    getMailInbox(token);
-  }, [token]);
+  const handleInboxUpdate = useCallback(async () => {
+    await getMailInbox(email, token);
+  }, [email, token]);
 
   const autoFetchEmails = useCallback(() => {
     if (isFocused) {
-      const interval = setInterval(() => getMailInbox(token), 10000);
+      const interval = setInterval(() => getMailInbox(email, token), 30000);
       return () => clearInterval(interval);
     }
   }, [isFocused, token]);
