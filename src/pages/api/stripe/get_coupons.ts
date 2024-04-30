@@ -2,6 +2,10 @@ import { CouponType } from '@/lib/types/types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  if (req.method === 'OPTIONS') {
+    res.status(200).json({});
+  }
+
   if (req.method === 'GET') {
     const coupon = req.query.coupon;
     const couponType = coupon as CouponType;
