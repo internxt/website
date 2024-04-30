@@ -77,6 +77,13 @@
     "dataAccess": "No unauthorized data access"
   },
   "productFeatures": {
+    "starWarsFeatures": {
+      "title": "Special Edition freebies:",
+      "200GB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
+      "2TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
+      "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
+      "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
+    },
     "200GB": [
       "200GB encrypted storage",
       "Encrypted file and folder sharing",

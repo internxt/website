@@ -1,6 +1,6 @@
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
-import { Fire } from '@phosphor-icons/react';
+import { Fire, Star } from '@phosphor-icons/react';
 
 export interface PriceCardProps {
   planType: string;
@@ -143,11 +143,22 @@ export default function PriceCard({
           <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
-        <div className="flex flex-col space-y-2 text-sm">
+      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
+        {isOffer ? (
+          <div className="flex w-full flex-col space-y-4 bg-gray-100 p-6">
+            <p className="font-bold text-yellow">{contentText.productFeatures.starWarsFeatures.title}</p>
+            {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
+              <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap" key={feature}>
+                <Star size={16} weight="fill" className="text-yellow" />
+                <span className="text-white">{feature}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
+        <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[storage].map((feature) => (
             <div
-              className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold"
+              className="flex flex-row items-start space-x-2 px-6 first:whitespace-nowrap last:font-semibold"
               key={feature}
             >
               <img

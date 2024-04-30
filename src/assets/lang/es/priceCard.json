@@ -78,6 +78,13 @@
     "allServices": "Todos nuestros servicios"
   },
   "productFeatures": {
+    "starWarsFeatures": {
+      "title": "Regalos Edición Limitada:",
+      "200GB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
+      "2TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
+      "5TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
+      "10TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App", "Stickers de Star Wars"]
+    },
     "200GB": [
       "Almacenamiento cifrado de 200 GB",
       "Compartir archivos y carpetas cifrados",

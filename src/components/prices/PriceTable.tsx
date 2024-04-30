@@ -207,7 +207,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   storage={product.storage}
                   price={product.price}
                   billingFrequency={billingFrequency}
-                  popular={product.storage === '5TB'}
+                  popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={coupon ? product.price : undefined}
                   lang={lang}

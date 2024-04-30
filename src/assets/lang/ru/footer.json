@@ -15,6 +15,7 @@
   "FooterSection": {
     "description": "Цель Internxt заключается в том, чтобы сделать свой вклад в создание приложений, уважающих права человека на конфиденциальность. Для этого мы выпускаем ряд сервисов, общая цель которых - помочь человечеству защитить это фундаментальное право.",
     "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
+    "independentPromotion": "Эта акция предлагается компанией Internxt независимо, и нет прямого партнерства с компанией The Walt Disney Company",
     "comingSoon": "В разработке",
     "new": "Новые",
     "sections": {

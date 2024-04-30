@@ -33,7 +33,7 @@ export default function HeroSection({ textContent, lang }) {
     <section className="overflow-hidden">
       <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
         <div
-          className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:bg-[url('/images/star-wars/bg.webp')]"
+          className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:bg-[url('/images/star-wars/bg.webp')]"
           // style={{
           //   backgroundImage: "url('images/star-wars/bg.webp')",
           //   // filter: 'blur(24px)'
@@ -67,12 +67,12 @@ export default function HeroSection({ textContent, lang }) {
               <CaretRight size={36} className="text-primary" />
             </button>
 
-            <Header className="pt-5 text-gray-100 lg:text-white">
+            <Header className="pt-5 text-gray-100 md:text-white">
               {textContent.title.line1}{' '}
               <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
             </Header>
 
-            <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8 lg:text-white">{textContent.subtitle}</h2>
+            <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8 md:text-white">{textContent.subtitle}</h2>
 
             <button
               className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"
@@ -99,7 +99,12 @@ export default function HeroSection({ textContent, lang }) {
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
           <div className={'flex xl:hidden'}>
-            <Marquee gradientColor={[255, 255, 255]} className="bg-transparent" gradientWidth="32px" speed={30}>
+            <Marquee
+              // gradientColor={[255, 255, 255]}
+              className="bg-transparent"
+              gradientWidth="32px"
+              speed={30}
+            >
               <div className="featured flex w-full flex-row space-x-10 p-6">
                 {lang === 'es' ? (
                   <a
