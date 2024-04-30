@@ -94,18 +94,16 @@ export const HeroSection = ({ textContent }) => {
   }, [isChangeEmailIconAnimated]);
 
   const fetchEmail = async () => {
-    // try {
-    //   const emailData = await createEmail();
-    //   localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
-    //   setEmail(emailData.address);
-    //   setToken(emailData.token);
-    //   setSelectedMessage(null);
-    //   setMessages(undefined);
-    // } catch (err) {
-    //   // NO OP
-    // }
-    setEmail(undefined);
-    setToken(undefined);
+    try {
+      const emailData = await createEmail();
+      localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
+      setEmail(emailData.address);
+      setToken(emailData.token);
+      setSelectedMessage(null);
+      setMessages(undefined);
+    } catch (err) {
+      // NO OP
+    }
   };
 
   const checkLocalStorageAndGetEmail = async () => {
@@ -126,32 +124,28 @@ export const HeroSection = ({ textContent }) => {
   const getMailInbox = useCallback(async (email: string, userToken: string) => {
     if (!userToken && !email) return;
 
-    return [];
+    try {
+      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken);
 
-    // console.log(userToken, email);
+      console.log(messagesInInbox);
+      if (messagesInInbox && messagesInInbox.length > 0) {
+        const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;
 
-    // try {
-    //   const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken);
-
-    //   console.log(messagesInInbox);
-    //   if (messagesInInbox && messagesInInbox.length > 0) {
-    //     const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;
-
-    //     setMessages(messagesInInbox);
-    //     setOpenedMessages(unopenedMessages);
-    //     localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(messagesInInbox));
-    //   } else {
-    //     const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-    //     setMessages(JSON.parse(inbox));
-    //   }
-    // } catch (err) {
-    //   // NO OP
-    //   const error = err as Error;
-    //   console.log('ERROR', err);
-    //   if (error.message.includes('404')) {
-    //     await onDeleteEmailButtonClicked();
-    //   }
-    // }
+        setMessages(messagesInInbox);
+        setOpenedMessages(unopenedMessages);
+        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(messagesInInbox));
+      } else {
+        const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
+        setMessages(JSON.parse(inbox));
+      }
+    } catch (err) {
+      // NO OP
+      const error = err as Error;
+      console.log('ERROR', err);
+      if (error.message.includes('404')) {
+        await onDeleteEmailButtonClicked();
+      }
+    }
   }, []);
 
   const removeDataFromStorageIfExpired = () => {
