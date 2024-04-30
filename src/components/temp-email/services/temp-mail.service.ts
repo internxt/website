@@ -14,16 +14,12 @@ const getEmail = async () => {
   return email.data;
 };
 
-const fetchInbox = async (token: string) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
+const fetchInbox = async (email: string, token: string) => {
+  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}&email=${email}`);
 
   const { data } = inbox;
 
-  if (data.expired) {
-    return { expired: data.expired };
-  } else {
-    return data.emails;
-  }
+  return data;
 };
 
 const createEmail = async () => {
@@ -32,22 +28,21 @@ const createEmail = async () => {
   return fetchEmail;
 };
 
-const fetchAndFormatInbox = async (
-  userToken: string,
-  messagesLength: number,
-): Promise<MessageObjProps[] | undefined> => {
+const fetchAndFormatInbox = async (email: string, userToken: string): Promise<MessageObjProps[] | undefined> => {
   try {
-    const inbox = await fetchInbox(userToken);
+    const inbox = await fetchInbox(email, userToken);
 
-    if (inbox.expired || inbox == null) return;
+    if (inbox == null) return;
+
+    if (inbox === 'Email has expired') {
+      throw new Error('Auto fetching email');
+    }
+
     if (inbox.length > 0) {
-      let messagesId = messagesLength;
       const messages = inbox.map((item, index) => {
-        messagesId++;
         return {
           ...item,
           opened: false,
-          id: messagesId,
         };
       });
 

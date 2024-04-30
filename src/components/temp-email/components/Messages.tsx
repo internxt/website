@@ -80,6 +80,7 @@ export const MessageSelected = ({
   textContent: any;
 }): JSX.Element => {
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
+  const name = item.from?.split('')[1].charAt().toUpperCase();
 
   return (
     <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">
@@ -89,7 +90,7 @@ export const MessageSelected = ({
         </p>
         <div className="flex flex-row space-x-2">
           <div className="flex flex-col items-center justify-center rounded-full bg-primary bg-opacity-10 py-2 px-4">
-            <p className="truncate text-lg text-primary">{item.from?.charAt().toUpperCase()}</p>
+            <p className="truncate text-lg text-primary">{name}</p>
           </div>
           <div className="flex w-full flex-col pr-10">
             <p title={item.from} className="truncate text-sm font-medium text-gray-80">
