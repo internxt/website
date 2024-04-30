@@ -5,14 +5,11 @@ import Marquee from 'react-fast-marquee';
 
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
-import { useRouter } from 'next/router';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
 export default function HeroSection({ textContent, lang }) {
-  const router = useRouter();
-
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
@@ -25,13 +22,14 @@ export default function HeroSection({ textContent, lang }) {
           <div className="flex w-full flex-col px-2 lg:hidden">
             <HomePageBannerForMobile />
           </div>
-          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
+          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 text-center sm:w-auto sm:px-0 lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
             <div className="flex object-contain lg:hidden">
               <Image
                 loading="eager"
                 className="object-contain"
-                src="/images/home/devicesMobileView.webp"
+                src="/images/home/image_mobile.webp"
                 draggable="false"
+                quality={100}
                 width={600}
                 height={450}
                 alt="Laptop and phone with Internxt app"

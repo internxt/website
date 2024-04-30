@@ -15,7 +15,7 @@ import {
   fetchAndFormatInbox,
   removeLocalStorage,
 } from './services/temp-mail.service';
-import { notificationService } from '@/components/Snackbar';
+
 import useWindowFocus from './hooks/useWindowFocus';
 import EmailToolbar from './components/EmailToolBar';
 import { MessageObjProps } from './types/types';
@@ -102,7 +102,6 @@ export const HeroSection = ({ textContent }) => {
       setSelectedMessage(null);
       setMessages(undefined);
     } catch (err) {
-      const error = err as Error;
       // NO OP
     }
   };

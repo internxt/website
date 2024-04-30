@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import { LinkTo } from './components/LinkTo';
-import { CopyTextInput } from '../shared/CopyTextInput';
+import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { AppleLogo } from '../shared/icons/AppleIcon';
-
-const GH_README_LINK = 'https://github.com/internxt/cli/tree/main?tab=readme-ov-file#readme';
-const USER_GUIDE_LINK = 'https://help.internxt.com/en/articles/9178044-does-internxt-support-webdav';
+import { GH_README_LINK, USER_GUIDE_LINK } from '@/constants';
 
 export const CliCard = ({ textContent }) => {
   return (
@@ -24,7 +22,7 @@ export const CliCard = ({ textContent }) => {
             </div>
             <div className="flex flex-col space-y-2">
               <p className="text-lg font-semibold text-gray-100">{textContent.installCli}</p>
-              <CopyTextInput text={textContent.command} />
+              <CommandTextInputCopy text={textContent.command} />
             </div>
           </div>
           <div className="flex w-full flex-col space-y-3 pl-5 md:w-max md:pl-0">
@@ -56,7 +54,7 @@ export const CliCard = ({ textContent }) => {
                 alt="Linux image"
                 className="mt-0.5"
               />
-              <AppleLogo />
+              <AppleLogo width={16} height={21} />
             </div>
           </div>
         </div>
@@ -73,7 +71,6 @@ export const CliCard = ({ textContent }) => {
         </div>
         <div className="mx-5 flex flex-col gap-3 md:mx-12 md:flex-row md:items-center md:gap-8">
           <p className="text-lg text-gray-60">{textContent.learnMore}</p>
-
           <LinkTo text={textContent.readme} linkToRedirect={GH_README_LINK} />
           <LinkTo text={textContent.userGuide} linkToRedirect={USER_GUIDE_LINK} />
         </div>

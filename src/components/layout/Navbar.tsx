@@ -16,16 +16,15 @@ export interface NavbarProps {
   darkMode?: boolean;
   fixed?: boolean;
   hide?: boolean;
-  coupon?: string;
   isLinksHidden?: boolean;
   isBlackfriday?: boolean;
-  mode?: 'payment' | 'subscription';
   isQuizSection?: boolean;
+  mode?: 'subscription' | 'payment';
 }
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
-export default function Navbar(props: NavbarProps) {
+export default function Navbar(props: Readonly<NavbarProps>) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
 
@@ -128,6 +127,16 @@ export default function Navbar(props: NavbarProps) {
                       >
                         {props.textContent.products.drive}
                       </Link>
+
+                      {/* <Link
+                        href="/webdav"
+                        locale={props.lang}
+                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                          props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                        }`}
+                      >
+                        {props.textContent.products.webDAV}
+                      </Link> */}
 
                       <a
                         href="https://send.internxt.com"
