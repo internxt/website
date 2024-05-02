@@ -1,13 +1,14 @@
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types/types';
 import { Fire, Star } from '@phosphor-icons/react';
+import { Interval } from '../services/stripe.service';
 
 export interface PriceCardProps {
   planType: string;
   storage: string;
   price: number;
   priceBefore?: number;
-  billingFrequency?: string;
+  billingFrequency?: Interval;
   cta: any[];
   popular?: boolean;
   lang: string;
@@ -57,7 +58,7 @@ export default function PriceCard({
     return priceString;
   };
 
-  const formattedPrice = isOffer ? priceForSubscriptions(price) : price;
+  const formattedPrice = isOffer && billingFrequency !== Interval.Lifetime ? priceForSubscriptions(price) : price;
 
   const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
