@@ -249,6 +249,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     currency={currency}
                     currencyValue={currencyValue}
                     coupon={lifetimeCouponCode?.[product.storage] ?? undefined}
+                    isOffer
                   />
                 );
               })}
