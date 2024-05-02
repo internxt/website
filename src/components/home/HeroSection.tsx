@@ -94,7 +94,7 @@ export default function HeroSection({ textContent, lang }) {
           {/* Desktop animation/image */}
           {/* <Animation /> */}
           <div className="hidden w-full items-center justify-end lg:flex">
-            <Image src={starWarsImage} alt="Star Wars" width={571} height={591} />
+            <Image src={starWarsImage} alt="Star Wars" draggable={false} width={571} height={591} />
           </div>
         </div>
 
