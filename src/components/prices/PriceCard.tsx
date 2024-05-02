@@ -146,9 +146,14 @@ export default function PriceCard({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         {isOffer ? (
           <div className="flex w-full flex-col space-y-4 bg-gray-100 p-6">
-            <p className="font-bold text-yellow">{contentText.productFeatures.starWarsFeatures.title}</p>
+            <p className={`} font-bold text-yellow`}>{contentText.productFeatures.starWarsFeatures.title}</p>
             {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
-              <div className="flex flex-row items-start space-x-2 first:whitespace-nowrap" key={feature}>
+              <div
+                className={`${
+                  popular && billingFrequency !== 'lifetime' ? 'last:hidden' : ''
+                } flex flex-row items-start space-x-2 first:whitespace-nowrap`}
+                key={feature}
+              >
                 <Star size={16} weight="fill" className="text-yellow" />
                 <span className="text-white">{feature}</span>
               </div>
