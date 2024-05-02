@@ -243,7 +243,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     }
                     priceBefore={lifetimeCouponCode ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
-                    popular={product.storage === '5TB'}
+                    popular={product.storage === '10TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     currency={currency}
