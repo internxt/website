@@ -14,6 +14,8 @@ import Footer from '@/components/layout/Footer';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import cookies from '@/lib/cookies';
+import moment from 'moment';
 
 const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang, navbarLang, lang, bannerLang }) => {
   const dialogAction = useGlobalDialog();
@@ -60,6 +62,12 @@ const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
+
+  const randomToken = crypto.randomUUID();
+
+  const expires = moment().add(3, 'hours').toDate();
+
+  cookies.setPublicCookie(ctx, 'tempMailToken', randomToken, expires);
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);

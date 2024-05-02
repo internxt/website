@@ -7,6 +7,13 @@ const CONVERTER_URL =
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
+      const tempMailToken = req.cookies['tempMailToken'];
+
+      if (!tempMailToken)
+        return res.status(401).json({
+          message: 'Unauthorized',
+        });
+
       const email = await axios.get(`${CONVERTER_URL}/api/temp-mail/address`);
 
       return res.status(200).json(email.data);

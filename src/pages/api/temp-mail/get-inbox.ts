@@ -8,6 +8,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     const { token, email } = req.query;
     try {
+      const tempMailToken = req.cookies['tempMailToken'];
+
+      if (!tempMailToken)
+        return res.status(401).json({
+          message: 'Unauthorized',
+        });
+
       const inbox = await axios.get(`${CONVERTER_URL}/api/temp-mail/messages/${email}/${token}`);
 
       return res.status(200).json(inbox.data);

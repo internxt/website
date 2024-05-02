@@ -207,31 +207,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 >
                   {props.textContent.links.about}
                 </Link>
-
-                {router.pathname === '/temporary-email' ? (
-                  <button
-                    onClick={() =>
-                      window.open(
-                        'https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1',
-                        '_blank',
-                        'noopener noreferrer',
-                      )
-                    }
-                    className={`cursor-pointer whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                      props.darkMode || props.isQuizSection
-                        ? `text-white hover:text-cool-gray-20 ${
-                            router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
-                            'text-primary'
-                          }`
-                        : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
-                        ? 'text-primary'
-                        : 'text-cool-gray-70 hover:text-primary'
-                    }
-                    } text-base font-medium`}
-                  >
-                    {props.textContent.links.needVPN}
-                  </button>
-                ) : undefined}
               </div>
             </div>
           )}
