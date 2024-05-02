@@ -8,21 +8,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     try {
       const tempMailToken = req.cookies['tempMailToken'];
-      const tempMailAccessToken = req.headers['x-access-token'];
 
-      if (tempMailToken !== tempMailAccessToken)
-        return res.status(401).json({
-          message: 'Unauthorized',
-        });
+      return res.status(500).json({ message: 'Unavailable' });
 
-      if (!tempMailToken)
-        return res.status(401).json({
-          message: 'Unauthorized',
-        });
+      // if (!tempMailToken)
+      //   return res.status(401).json({
+      //     message: 'Unauthorized',
+      //   });
 
-      const email = await axios.get(`${CONVERTER_URL}/api/temp-mail/address`);
+      // const email = await axios.get(`${CONVERTER_URL}/api/temp-mail/address`);
 
-      return res.status(200).json(email.data);
+      // return res.status(200).json(email.data);
     } catch (err) {
       const error = err as Error;
       console.log('ERROR:', error.message);
