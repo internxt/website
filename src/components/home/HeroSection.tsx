@@ -31,7 +31,7 @@ export default function HeroSection({ textContent, lang }) {
 
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
+      <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-10 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:bg-[url('/images/star-wars/bg.webp')]"
           // style={{
@@ -40,11 +40,11 @@ export default function HeroSection({ textContent, lang }) {
           // }}
         />
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between pt-5 sm:mb-6 lg:flex-row lg:items-stretch">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
           <div className="flex w-full flex-col px-2 lg:hidden">
             <HomePageBannerForMobile />
           </div>
-          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
+          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
             {/* <div className="flex object-contain lg:hidden">
               <Image
                 loading="eager"
