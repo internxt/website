@@ -14,17 +14,10 @@ import Footer from '@/components/layout/Footer';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import cookies from '@/lib/cookies';
+import moment from 'moment';
 
-const TempEmail = ({
-  metatagsDescriptions,
-  toolsContent,
-  textContent,
-  footerLang,
-  navbarLang,
-  lang,
-  bannerLang,
-  csrfToken,
-}) => {
+const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang, navbarLang, lang, bannerLang }) => {
   const dialogAction = useGlobalDialog();
 
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
@@ -51,7 +44,7 @@ const TempEmail = ({
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
-        <HeroSection textContent={textContent.HeroSection} csrfToken={csrfToken} />
+        <HeroSection textContent={textContent.HeroSection} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
@@ -70,7 +63,11 @@ const TempEmail = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const csrfToken = process.env.TEMP_MAIL_API_KEY;
+  const randomToken = crypto.randomUUID();
+
+  const expires = moment().add(3, 'hours').toDate();
+
+  cookies.setPublicCookie(ctx, 'tempMailToken', randomToken, expires);
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);
@@ -88,7 +85,6 @@ export async function getServerSideProps(ctx) {
       lang,
       bannerLang,
       toolsContent,
-      csrfToken,
     },
   };
 }

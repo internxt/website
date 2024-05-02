@@ -7,9 +7,9 @@ const CONVERTER_URL =
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      const accessToken = req.headers['x-access-token'];
+      const tempMailToken = req.cookies['tempMailToken'];
 
-      if (accessToken !== process.env.TEMP_MAIL_API_KEY)
+      if (!tempMailToken)
         return res.status(401).json({
           message: 'Unauthorized',
         });

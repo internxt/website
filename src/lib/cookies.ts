@@ -62,10 +62,8 @@ function setReferralCookie(ctx: GetServerSidePropsContext): void {
   // httpOnly must be false in order to be accesible by JavaScript
 }
 
-function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: string): void {
+function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: string, expires: Date): void {
   const cookies = new Cookies(ctx.req, ctx.res);
-
-  const expires = moment().add(2, 'days').toDate();
 
   cookies.set(name, value, {
     domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
