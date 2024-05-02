@@ -15,7 +15,16 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
-const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang, navbarLang, lang, bannerLang }) => {
+const TempEmail = ({
+  metatagsDescriptions,
+  toolsContent,
+  textContent,
+  footerLang,
+  navbarLang,
+  lang,
+  bannerLang,
+  csrfToken,
+}) => {
   const dialogAction = useGlobalDialog();
 
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
@@ -42,7 +51,7 @@ const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
-        <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} csrfToken={csrfToken} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
@@ -61,6 +70,8 @@ const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
+  const csrfToken = process.env.TEMP_MAIL_API_KEY;
+
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
@@ -77,6 +88,7 @@ export async function getServerSideProps(ctx) {
       lang,
       bannerLang,
       toolsContent,
+      csrfToken,
     },
   };
 }
