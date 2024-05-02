@@ -22,7 +22,7 @@ import { MessageObjProps } from './types/types';
 import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
 
-export const HeroSection = ({ textContent }) => {
+export const HeroSection = ({ textContent, csrfToken }) => {
   const isFocused = useWindowFocus();
 
   const {
@@ -95,7 +95,7 @@ export const HeroSection = ({ textContent }) => {
 
   const fetchEmail = async () => {
     try {
-      const emailData = await createEmail();
+      const emailData = await createEmail(csrfToken);
       localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
       setEmail(emailData.address);
       setToken(emailData.token);
@@ -125,7 +125,7 @@ export const HeroSection = ({ textContent }) => {
     if (!userToken && !email) return;
 
     try {
-      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken);
+      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken, csrfToken);
 
       if (messagesInInbox && messagesInInbox.length > 0) {
         const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;

@@ -17,7 +17,16 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import cookies from '@/lib/cookies';
 import moment from 'moment';
 
-const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang, navbarLang, lang, bannerLang }) => {
+const TempEmail = ({
+  metatagsDescriptions,
+  toolsContent,
+  textContent,
+  footerLang,
+  navbarLang,
+  lang,
+  bannerLang,
+  csrfToken,
+}) => {
   const dialogAction = useGlobalDialog();
 
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
@@ -44,7 +53,7 @@ const TempEmail = ({ metatagsDescriptions, toolsContent, textContent, footerLang
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
-        <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} csrfToken={csrfToken} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
@@ -69,6 +78,8 @@ export async function getServerSideProps(ctx) {
 
   cookies.setPublicCookie(ctx, 'tempMailToken', randomToken, expires);
 
+  const csrfToken = randomToken;
+
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
@@ -85,6 +96,7 @@ export async function getServerSideProps(ctx) {
       lang,
       bannerLang,
       toolsContent,
+      csrfToken,
     },
   };
 }
