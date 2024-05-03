@@ -78,6 +78,13 @@
     "allServices": "Accès à tous nos services"
   },
   "productFeatures": {
+    "starWarsFeatures": {
+      "title": "Édition spéciale cadeaux gratuits :",
+      "200GB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
+      "2TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
+      "5TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
+      "10TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web", "Stickers Star Wars"]
+    },
     "200GB": [
       "Stockage chiffré de 200 Go",
       "Partage chiffré de fichiers et de dossiers",

@@ -15,6 +15,7 @@
   "FooterSection": {
     "description": "Internxt’s mission is to help shape a world that respects humanity’s privacy rights. To do so, we are releasing a series of services, which all have the common goal of helping humanity protect this fundamental right.",
     "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
+    "independentPromotion": "This promotion is offered by Internxt independently and there is no direct partnership with The Walt Disney Company",
     "comingSoon": "Coming soon",
     "new": "New",
     "sections": {

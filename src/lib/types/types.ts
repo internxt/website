@@ -101,6 +101,10 @@ export enum CouponType {
   Lifetime5TBDiscount = 'LIFETIME_5TB_DISCOUNT',
   Lifetime10TBDiscount = 'LIFETIME_10TB_DISCOUNT',
   lifetime70OFF = 'LIFETIME_70OFF',
+  starWarsSubscription = 'STAR_WARS_SUBSCRIPTION',
+  starWars2TBLifetime = 'STAR_WARS_2TB_LIFETIME',
+  starWars5TBLifetime = 'STAR_WARS_5TB_LIFETIME',
+  starWars10TBLifetime = 'STAR_WARS_10TB_LIFETIME',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

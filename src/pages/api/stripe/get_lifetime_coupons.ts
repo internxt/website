@@ -4,9 +4,9 @@ import { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method === 'GET') {
     const coupons = {
-      '2TB': process.env[CouponType.Lifetime2TBDiscount],
-      '5TB': process.env[CouponType.Lifetime5TBDiscount],
-      '10TB': process.env[CouponType.Lifetime10TBDiscount],
+      '2TB': process.env[CouponType.starWars2TBLifetime],
+      '5TB': process.env[CouponType.starWars5TBLifetime],
+      '10TB': process.env[CouponType.starWars10TBLifetime],
     };
 
     //Return the correct coupon

@@ -14,7 +14,7 @@ export const HomePageBannerForMobile = () => {
     <div
       className={`${
         shouldShowBanner ? 'flex' : 'hidden'
-      } w-full flex-col overflow-hidden rounded-[32px] bg-primary pt-10 md:hidden`}
+      } w-full flex-col overflow-hidden rounded-[32px] bg-primary bg-[url('/images/star-wars/bg.webp')] pt-10 md:hidden`}
     >
       <div className="flex w-full flex-col items-center justify-center space-y-6 text-center text-white lg:items-start lg:text-left">
         <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white py-2 px-5">
@@ -26,7 +26,7 @@ export const HomePageBannerForMobile = () => {
         <div className="flex flex-col items-center gap-4 lg:flex-row">
           <button
             onClick={() => {
-              router.push('/lifetime');
+              router.push('/pricing');
             }}
             className="flex w-max items-center rounded-lg bg-white px-3.5 py-1.5 text-lg font-medium text-gray-100 hover:bg-primary"
           >
@@ -40,7 +40,7 @@ export const HomePageBannerForMobile = () => {
       </div>
       <div className="flex h-full flex-col">
         <Image
-          src="/images/banners/data_privacy_internxt_mobile.webp"
+          src="/images/star-wars/internxt_starwars_promotion_mobile.webp"
           loading="lazy"
           width={377}
           height={190}

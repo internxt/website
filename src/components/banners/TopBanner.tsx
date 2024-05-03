@@ -18,15 +18,15 @@ const TopBanner = ({ isBannerFixed }) => {
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
+              {textContent.title.normalText}
               <span className="font-bold">{textContent.title.boldText}</span>
-              {/* {textContent.title.normalText} */}
             </p>
           </div>
           <button
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
             onClick={() => {
-              router.push('/lifetime');
+              router.push('/pricing');
             }}
           >
             <p className="font-semibold underline hover:no-underline">{textContent.title.cta}</p>
@@ -42,12 +42,12 @@ const TopBanner = ({ isBannerFixed }) => {
           <button
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              router.push('/lifetime');
+              router.push('/pricing');
             }}
           >
             <p className="font-normal">
+              {textContent.title.normalText}
               <span className="font-semibold">{textContent.title.boldText}</span>
-              {/* {textContent.title.normalText} */}
             </p>
           </button>
         </div>

@@ -31,19 +31,19 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 75%', title2: 'Secure your accounts and files forever!' };
+        return { title1: 'Save 75%', title2: 'We’ve got a good feeling about this deal!' };
       case 'es':
-        return { title1: 'Ahorra un 75%', title2: '¡Asegura tus archivos para siempre!' };
+        return { title1: 'Ahorra un 75%', title2: '¡Tenemos un buen presentimiento sobre esta oferta!' };
       case 'ru':
-        return { title1: 'Экономия 75%', title2: 'Защитите свои аккаунты и файлы навсегда!' };
+        return { title1: 'Экономия 75%', title2: 'У нас хорошее чувство от этой сделки!' };
       case 'fr':
-        return { title1: 'Économisez 75%', title2: 'Sécurisez vos comptes et fichiers pour toujours !' };
+        return { title1: 'Économisez 75%', title2: 'Nous avons un bon pressentiment concernant cette offre !' };
       case 'it':
-        return { title1: 'Risparmia il 75%', title2: 'Proteggi i tuoi account e file per sempre!' };
+        return { title1: 'Risparmia il 75%', title2: 'Abbiamo un buon presentimento su questa offerta!' };
       case 'zh':
-        return { title1: '省 75%', title2: '永久保护您的帐户和文件！' };
+        return { title1: '省 75%', title2: '我们对这个交易有好感！' };
       case 'de':
-        return { title1: 'Sparen Sie 75%', title2: 'Sichern Sie Ihre Konten und Dateien für immer!' };
+        return { title1: 'Sparen Sie 75%', title2: 'Wir haben ein gutes Gefühl bei diesem Angebot!' };
       default:
         return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
     }
@@ -73,7 +73,7 @@ const BottomBanner = () => {
     <section
       className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden lg:${
         shouldShowBanner ? 'flex' : 'hidden'
-      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
+      } overflow-hidden rounded-lg bg-gray-100 px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
@@ -84,7 +84,7 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row ">
           <div className="flex flex-col">
             <Image
-              src="/images/banners/data_privacy_internxt.webp"
+              src="/images/star-wars/internxt_starwars_promotion_banner.webp"
               width={178}
               height={70}
               className="flex w-full object-fill"
@@ -96,9 +96,9 @@ const BottomBanner = () => {
             <p className="text-6xl font-bold text-white">{title().title1}</p>
             <p className="max-w-[300px] text-2xl font-semibold text-white">{title().title2}</p>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-5 sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
               onClick={() => {
-                router.push('/lifetime');
+                router.push('/pricing');
               }}
             >
               {ctaText()}

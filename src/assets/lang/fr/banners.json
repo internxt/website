@@ -71,9 +71,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Célébrez la Journée mondiale du mot de passe avec 75% de réduction sur les abonnements à vie !",
-      "normalText": "Gardez vos fichiers privés pour toujours !",
-      "cta": "Choisissez un plan"
+      "boldText": "Jusqu'à 75% de réduction.",
+      "normalText": "Ressentez la puissance du stockage sécurisé dans le cloud ! ",
+      "cta": "Choisir un plan"
     }
   },
   "lifetimeBanner": {
