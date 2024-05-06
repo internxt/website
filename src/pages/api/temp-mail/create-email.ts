@@ -1,11 +1,10 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
-import rateLimitMiddleware from './rate-limiter';
 
 const CONVERTER_URL =
   process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_FILE_CONVERTER_API : 'http://localhost:3000';
 
-async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
       const tempMailToken = req.cookies['tempMailToken'];
@@ -29,5 +28,3 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 }
-
-export default rateLimitMiddleware(handler, 'create-email', 1);
