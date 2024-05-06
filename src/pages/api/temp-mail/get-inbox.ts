@@ -37,4 +37,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default rateLimitMiddleware(handler);
+export default rateLimitMiddleware(handler, 'get-inbox', 10);

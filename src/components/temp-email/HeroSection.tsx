@@ -180,7 +180,7 @@ export const HeroSection = ({ textContent, csrfToken }) => {
 
   const autoFetchEmails = useCallback(() => {
     if (isFocused) {
-      const interval = setInterval(() => getMailInbox(email, token), 30000);
+      const interval = setInterval(() => getMailInbox(email, token), 60000);
       return () => clearInterval(interval);
     }
   }, [isFocused, token]);

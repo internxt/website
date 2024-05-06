@@ -2,22 +2,21 @@ import { NextApiHandler } from 'next';
 
 const rateLimitMap = new Map();
 
-export default function rateLimitMiddleware(handler: NextApiHandler) {
+export default function rateLimitMiddleware(handler: NextApiHandler, path: string, limit: number, windowMs = 60 * 60 * 1000) {
   return (req, res) => {
-    const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
-    const limit = 5;
-    const windowMs = 60 * 60 * 1000;
+    const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;;
+    const mapIdentifier = `${ip}-${path}`;
 
     console.log('REQUEST RECEIVED FROM IP', ip);
 
-    if (!rateLimitMap.has(ip)) {
-      rateLimitMap.set(ip, {
+    if (!rateLimitMap.has(mapIdentifier)) {
+      rateLimitMap.set(mapIdentifier, {
         count: 0,
         lastReset: Date.now(),
       });
     }
 
-    const ipData = rateLimitMap.get(ip);
+    const ipData = rateLimitMap.get(mapIdentifier);
 
     if (Date.now() - ipData.lastReset > windowMs) {
       ipData.count = 0;
