@@ -9,9 +9,9 @@ const CONVERTER_URL =
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') return res.status(405).json({ message: 'Method not allowed' });
 
-  const { token, email } = req.query;
+  const { token } = req.query;
   try {
-    const inbox = await axios.get(`${CONVERTER_URL}/api/temp-mail/messages/${email}/${token}`);
+    const inbox = await axios.get(`${CONVERTER_URL}/api/temp-mail/messages/${token}`);
 
     return res.status(200).json(inbox.data);
   } catch (err) {
@@ -27,4 +27,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default csrf(rateLimitMiddleware(handler, 'get-inbox', 10));
+export default csrf(rateLimitMiddleware(handler, 'get-inbox', 20));
