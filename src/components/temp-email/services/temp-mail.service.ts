@@ -15,7 +15,7 @@ const getEmail = async () => {
 };
 
 const fetchInbox = async (email: string, token: string) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}&email=${email}`);
+  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
 
   const { data } = inbox;
 

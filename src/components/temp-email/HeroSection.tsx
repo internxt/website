@@ -121,11 +121,11 @@ export const HeroSection = ({ textContent }) => {
     }
   };
 
-  const getMailInbox = useCallback(async (email: string, userToken: string) => {
-    if (!userToken && !email) return;
+  const getMailInbox = useCallback(async (email: string, tempMailToken: string) => {
+    if (!tempMailToken && !email) return;
 
     try {
-      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, userToken);
+      const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, tempMailToken);
 
       if (messagesInInbox && messagesInInbox.length > 0) {
         const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;
