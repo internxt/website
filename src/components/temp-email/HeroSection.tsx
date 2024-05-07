@@ -81,11 +81,6 @@ export const HeroSection = ({ textContent }) => {
   }, [borderColor]);
 
   useEffect(() => {
-    handleInboxUpdate();
-    return autoFetchEmails();
-  }, [email, isRefreshed]);
-
-  useEffect(() => {
     if (isChangeEmailIconAnimated) {
       setTimeout(() => {
         setIsChangeEmailIconAnimated(false);
@@ -178,15 +173,9 @@ export const HeroSection = ({ textContent }) => {
     await getMailInbox(email, token);
   }, [email, token]);
 
-  const autoFetchEmails = useCallback(() => {
-    if (isFocused) {
-      const interval = setInterval(() => getMailInbox(email, token), 60000);
-      return () => clearInterval(interval);
-    }
-  }, [isFocused, token]);
-
   const onRefresh = useCallback(() => {
     setIsRefreshed(!isRefreshed);
+    handleInboxUpdate();
   }, [isRefreshed]);
 
   const onMessageSelected = (item, index) => {
