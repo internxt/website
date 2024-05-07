@@ -52,7 +52,7 @@ const TempEmail = () => {
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
-        <HeroSection textContent={textContent.HeroSection} csrfToken={csrfToken} />
+        <HeroSection textContent={textContent.HeroSection} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
