@@ -9,11 +9,13 @@ const CONVERTER_URL =
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') return res.status(405).json({ message: 'Method not allowed' });
 
-  const { email, token } = req.query;
+  const { email, token, messageId } = req.query;
   try {
-    const inbox = await axios.get(`${CONVERTER_URL}/api/temp-mail/messages/${email}/${token}`);
+    const inbox = await axios.get(
+      `${CONVERTER_URL}/api/temp-mail/messages/selectedMessage/${email}/${token}/${messageId}`,
+    );
 
-    return res.status(200).json(inbox.data.mails);
+    return res.status(200).json(inbox.data.messageObj);
   } catch (err) {
     const error = err as Error;
     if (error.message.includes('404')) {
@@ -27,4 +29,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default csrf(rateLimitMiddleware(handler, 'get-inbox', 15));
+export default csrf(rateLimitMiddleware(handler, 'get-message', 20));

@@ -1,12 +1,14 @@
 import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 
+const windowMsValue = process.env.NODE_ENV !== 'production' ? 1000 : 60 * 60 * 1000;
+
 const rateLimitMap = new Map();
 
 export default function rateLimitMiddleware(
   handler: NextApiHandler,
   path: string,
   limit: number,
-  windowMs = 60 * 60 * 1000,
+  windowMs = windowMsValue,
 ) {
   return (req: NextApiRequest, res: NextApiResponse) => {
     const ip = req.headers['x-forwarded-for'];

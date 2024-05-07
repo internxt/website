@@ -13,6 +13,7 @@ import {
   TIME_NOW,
   createEmail,
   fetchAndFormatInbox,
+  getMessageData,
   removeLocalStorage,
 } from './services/temp-mail.service';
 
@@ -178,13 +179,19 @@ export const HeroSection = ({ textContent }) => {
     handleInboxUpdate();
   }, [isRefreshed]);
 
-  const onMessageSelected = (item, index) => {
+  const onMessageSelected = async (item, index) => {
     const messagesFromLS = JSON.parse(localStorage.getItem('inbox') as string);
     messagesFromLS[index].opened = true;
-    setMessages(messagesFromLS);
-    setSelectedMessage(item);
-    localStorage.setItem('inbox', JSON.stringify(messagesFromLS));
-    localStorage.setItem('selectedMessage', JSON.stringify(item));
+    try {
+      const messageData = await getMessageData(email, token, item.id);
+      setMessages(messagesFromLS);
+      setSelectedMessage(messageData.data);
+      localStorage.setItem('inbox', JSON.stringify(messagesFromLS));
+      localStorage.setItem('selectedMessage', JSON.stringify(item));
+    } catch (err) {
+      const error = err as Error;
+      console.log({ errorMessage: error.message });
+    }
   };
 
   const onCopyEmailButtonClicked = () => {
