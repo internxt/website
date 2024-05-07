@@ -15,11 +15,19 @@ const getEmail = async () => {
 };
 
 const fetchInbox = async (email: string, token: string) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
+  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?email=${email}&token=${token}`);
 
   const { data } = inbox;
 
   return data;
+};
+
+const getMessageData = async (email: string, token: string, messageId: string) => {
+  const messageData = await axios.get(
+    `${window.origin}/api/temp-mail/get-message?email=${email}&token=${token}&messageId=${messageId}`,
+  );
+
+  return messageData;
 };
 
 const createEmail = async () => {
@@ -40,9 +48,10 @@ const fetchAndFormatInbox = async (email: string, userToken: string): Promise<Me
 
     if (inbox.length > 0) {
       const messages = inbox.map((item, index) => {
+        console.log({ seen: item.seen });
         return {
           ...item,
-          opened: false,
+          opened: item.seen,
         };
       });
 
@@ -63,4 +72,4 @@ function removeLocalStorage() {
   localStorage.removeItem('selectedMessage');
 }
 
-export { createEmail, fetchInbox, fetchAndFormatInbox, removeLocalStorage };
+export { createEmail, fetchInbox, getMessageData, fetchAndFormatInbox, removeLocalStorage };
