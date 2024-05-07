@@ -80,7 +80,7 @@ export const MessageSelected = ({
   textContent: any;
 }): JSX.Element => {
   const date = moment(item.date).format('dddd DD, MMMM YYYY [at] HH:mm');
-  const name = item.from?.split('')[1].charAt().toUpperCase();
+  const name = item.from?.charAt().toUpperCase();
 
   return (
     <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">

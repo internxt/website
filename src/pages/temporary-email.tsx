@@ -14,20 +14,19 @@ import Footer from '@/components/layout/Footer';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
-import cookies from '@/lib/cookies';
-import moment from 'moment';
+import { setup } from '@/lib/csrf';
+import { useRouter } from 'next/router';
 
-const TempEmail = ({
-  metatagsDescriptions,
-  toolsContent,
-  textContent,
-  footerLang,
-  navbarLang,
-  lang,
-  bannerLang,
-  csrfToken,
-}) => {
+const TempEmail = () => {
   const dialogAction = useGlobalDialog();
+  const { locale: lang } = useRouter() as { locale: string };
+
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
+  const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
 
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'temporary-email');
 
@@ -53,7 +52,7 @@ const TempEmail = ({
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
-        <HeroSection textContent={textContent.HeroSection} csrfToken={csrfToken} />
+        <HeroSection textContent={textContent.HeroSection} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
@@ -69,36 +68,8 @@ const TempEmail = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
-
-  const randomToken = crypto.randomUUID();
-
-  const expires = moment().add(3, 'hours').toDate();
-
-  cookies.setPublicCookie(ctx, 'tempMailToken', randomToken, expires);
-
-  const csrfToken = randomToken;
-
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/temporary-email.json`);
-  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
-  const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
-
-  return {
-    props: {
-      metatagsDescriptions,
-      textContent,
-      footerLang,
-      navbarLang,
-      lang,
-      bannerLang,
-      toolsContent,
-      csrfToken,
-    },
-  };
-}
+export const getServerSideProps = setup(async (req, res) => {
+  return { props: {} };
+});
 
 export default TempEmail;
