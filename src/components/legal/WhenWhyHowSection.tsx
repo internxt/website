@@ -206,7 +206,7 @@ const WhenWhyHowSection = ({ textContent }) => {
             </tr>
 
             <tr>
-              <td className="border border-cool-gray-20 p-2 px-4" rowSpan="2">
+              <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
                 {textContent.privacy_policy_table2_row2_column1}
               </td>
               <td className="border border-cool-gray-20 p-2 px-4">
@@ -226,7 +226,7 @@ const WhenWhyHowSection = ({ textContent }) => {
             </tr>
 
             <tr>
-              <td className="border border-cool-gray-20 p-2 px-4" rowSpan="4">
+              <td className="border border-cool-gray-20 p-2 px-4" rowSpan={4}>
                 {textContent.privacy_policy_table2_row3_column1}
               </td>
               <td className="border border-cool-gray-20 p-2 px-4">
@@ -268,7 +268,7 @@ const WhenWhyHowSection = ({ textContent }) => {
             </tr>
 
             <tr>
-              <td className="border border-cool-gray-20 p-2 px-4" rowSpan="2">
+              <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
                 {textContent.privacy_policy_table2_row5_column1}
               </td>
               <td className="border border-cool-gray-20 p-2 px-4">
@@ -289,7 +289,7 @@ const WhenWhyHowSection = ({ textContent }) => {
             </tr>
 
             <tr>
-              <td className="border border-cool-gray-20 p-2 px-4" rowSpan="2">
+              <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
                 {textContent.privacy_policy_table2_row6_column1}
               </td>
               <td className="border border-cool-gray-20 p-2 px-4">
@@ -340,7 +340,7 @@ const WhenWhyHowSection = ({ textContent }) => {
             </tr>
 
             <tr>
-              <td className="border border-cool-gray-20 p-2 px-4" rowSpan="2">
+              <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
                 {textContent.privacy_policy_table2_row12_column1}
               </td>
               <td className="border border-cool-gray-20 p-2 px-4">
