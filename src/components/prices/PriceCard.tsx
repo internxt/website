@@ -1,6 +1,6 @@
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
-import { Fire } from '@phosphor-icons/react';
+import { Fire, Star } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 
 export interface PriceCardProps {
@@ -17,6 +17,7 @@ export interface PriceCardProps {
   currency?: string;
   currencyValue?: string;
   isIframe?: boolean;
+  isOffer?: boolean;
 }
 
 export default function PriceCard({
@@ -32,6 +33,7 @@ export default function PriceCard({
   currency,
   currencyValue,
   isIframe,
+  isOffer,
 }: PriceCardProps) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -40,6 +42,23 @@ export default function PriceCard({
   };
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+
+  const priceForSubscriptions = (product) => {
+    const priceWithDiscount = Number((product * 0.25).toFixed(2));
+    const priceString = priceWithDiscount.toString();
+
+    if (!priceString.includes('.')) {
+      return priceString + '.00';
+    }
+
+    if (priceString.split('.')[1].length === 1) {
+      return priceString + '0';
+    }
+
+    return priceString;
+  };
+
+  const formattedPrice = isOffer && billingFrequency !== Interval.Lifetime ? priceForSubscriptions(price) : price;
 
   const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
@@ -72,7 +91,9 @@ export default function PriceCard({
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
-              <span className="price text-4xl font-bold">{isFreePlan ? `${contentText.freePlan}` : price}</span>
+              <span className="price text-4xl font-bold">
+                {isFreePlan ? `${contentText.freePlan}` : formattedPrice}
+              </span>
             </p>
           </div>
           <span className={`perUser ${isIndividualPlan ? 'hidden' : ''} text-sm font-medium text-gray-50`}>
@@ -123,11 +144,27 @@ export default function PriceCard({
           <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
-        <div className="flex flex-col space-y-2 text-sm">
+      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
+        {isOffer ? (
+          <div className="flex w-full flex-col space-y-4 bg-gray-100 p-6">
+            <p className={`} font-bold text-yellow`}>{contentText.productFeatures.starWarsFeatures.title}</p>
+            {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
+              <div
+                className={`${
+                  popular && billingFrequency !== 'lifetime' ? 'last:hidden' : ''
+                } flex flex-row items-start space-x-2 first:whitespace-nowrap`}
+                key={feature}
+              >
+                <Star size={16} weight="fill" className="text-yellow" />
+                <span className="text-white">{feature}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
+        <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[storage].map((feature) => (
             <div
-              className="flex flex-row items-start space-x-2 first:whitespace-nowrap last:font-semibold"
+              className="flex flex-row items-start space-x-2 px-6 first:whitespace-nowrap last:font-semibold"
               key={feature}
             >
               <img

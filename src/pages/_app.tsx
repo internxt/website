@@ -11,7 +11,7 @@ import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 
-const EXCLUDED_PATHS_FOR_BOTTOM_BANNER = [
+const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime',
   '/pricing',
   '/partner-discount',
@@ -23,6 +23,7 @@ const EXCLUDED_PATHS_FOR_BOTTOM_BANNER = [
   '/startpage',
   '/oystervpn',
   '/lifetime_special',
+  '/pccomponentes-products',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
 
-  const shouldShowBanner = false;
+  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
 
@@ -61,15 +62,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: false,
+            isOpen: true,
           },
         ]}
       >

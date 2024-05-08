@@ -207,31 +207,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 >
                   {props.textContent.links.about}
                 </Link>
-
-                {router.pathname === '/temporary-email' ? (
-                  <button
-                    onClick={() =>
-                      window.open(
-                        'https://gimmehost.org/vpn/?utm_source=inter&utm_medium=banner&utm_campaign=1&utm_zoneid=1',
-                        '_blank',
-                        'noopener noreferrer',
-                      )
-                    }
-                    className={`cursor-pointer whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                      props.darkMode || props.isQuizSection
-                        ? `text-white hover:text-cool-gray-20 ${
-                            router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
-                            'text-primary'
-                          }`
-                        : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
-                        ? 'text-primary'
-                        : 'text-cool-gray-70 hover:text-primary'
-                    }
-                    } text-base font-medium`}
-                  >
-                    {props.textContent.links.needVPN}
-                  </button>
-                ) : undefined}
               </div>
             </div>
           )}
@@ -244,7 +219,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
                 className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode || (props.isQuizSection && !menuState)
-                    ? 'border-white text-white focus:opacity-80'
+                    ? 'bg-white text-gray-80 focus:opacity-80'
                     : 'border-primary text-primary hover:bg-primary hover:bg-opacity-10 active:border-primary-dark active:text-primary-dark'
                 } text-sm font-medium`}
               >
@@ -256,11 +231,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               <button
                 onClick={() => goToSignUpURL({ lang: lang })}
                 id="signupButton"
-                className={`flex justify-center rounded-lg border border-transparent py-1 px-3 text-sm font-medium focus:outline-none sm:inline-flex ${
-                  props.darkMode && !menuState
-                    ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
-                    : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
-                } transition-all duration-75`}
+                className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
+                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.getStarted}</p>
               </button>

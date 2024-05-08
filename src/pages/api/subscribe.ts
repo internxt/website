@@ -5,12 +5,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { email, firstName, groups } = req.body;
 
   try {
-    const user = await createUser(email, groups, firstName);
+    await createUser(email, groups, firstName);
 
     res.status(200).json({ status: 'OK', email: email });
   } catch (error) {
-    // console.error('Error al procesar la solicitud:', error);
-    res.status(500).json({ status: 'Error', message: error });
+    res.status(500).json({ status: 'Error', message: error.message });
   }
 }
 

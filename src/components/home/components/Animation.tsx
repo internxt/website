@@ -36,7 +36,7 @@ const Animation = () => {
   }, []);
 
   return (
-    <div className="relative ml-10 hidden max-w-2xl flex-grow md:flex xl:ml-20">
+    <div className="relative ml-10 hidden max-w-2xl flex-grow lg:flex xl:ml-20">
       {/* Browser window */}
       <div className={`${headerAnimation1 ? 'animate-fade-in-r-large' : 'hidden'} absolute inset-0`}>
         <div

@@ -80,14 +80,14 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "¡75% de descuento en todos los planes lifetime! ",
-      "normalText": "Protege tus archivos de por vida.",
+      "boldText": "Hasta un 75% de descuento.",
+      "normalText": "¡Siente la fuerza de nuestro almacenamiento en la nube! ",
       "cta": "Elige tu plan"
     }
   },
   "lifetimeBanner": {
-    "label": "¿Necesitas almacenamiento seguro de por vida?",
-    "title": "¡Asegura tus archivos de por vida con nuestros planes!",
+    "label": "Protege tus archivos de por vida",
+    "title": "Obtén acceso de por vida a tu almacenamiento en la nube en Internxt",
     "cta": "Elige tu plan",
     "guarantee": "Garantía de devolución de 30 días"
   }

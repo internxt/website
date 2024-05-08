@@ -71,15 +71,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% de réduction sur les abonnements à vie ! ",
-      "normalText": "Gardez vos fichiers privés pour toujours !",
-      "cta": "Choisissez un plan"
+      "boldText": "Jusqu'à 75% de réduction.",
+      "normalText": "Ressentez la puissance du stockage sécurisé dans le cloud ! ",
+      "cta": "Choisir un plan"
     }
   },
   "lifetimeBanner": {
-    "label": "Cherchez-vous un espace de stockage sécurisé à vie?",
-    "title": "Protégez vos fichiers avec les plans à vie d'Internxt!",
-    "cta": "Choisir un plan",
-    "guarantee": "Garantie de remboursement sous 30 jours"
+    "label": "Sécurisez vos fichiers pour toujours",
+    "title": "Obtenez un accès à vie sur Internxt",
+    "cta": "Choisissez votre plan",
+    "guarantee": "Garantie de remboursement de 30 jours"
   }
 }

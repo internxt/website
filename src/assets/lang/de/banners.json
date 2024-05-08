@@ -96,15 +96,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% Rabatt auf Lebenszeitpläne! ",
-      "normalText": "Halten Sie Ihre Dateien für immer privat!",
+      "boldText": "Bis zu 75% Rabatt.",
+      "normalText": "Spüren Sie die Kraft des sicheren Cloud-Speichers! ",
       "cta": "Plan auswählen"
     }
   },
   "lifetimeBanner": {
-    "label": "Suchen Sie einen sicheren Datenspeicher fürs Leben?",
-    "title": "Schützen Sie Ihre Dateien mit lebenslangen Internxt-Plänen!",
-    "cta": "Plan auswählen",
-    "guarantee": "Geld-zurück-Garantie innerhalb von 30 Tagen"
+    "label": "Sichern Sie Ihre Dateien für immer",
+    "title": "Erhalte lebenslangen Zugang bei Internxt",
+    "cta": "Wählen Sie Ihren Plan",
+    "guarantee": "30-Tage-Geld-zurück-Garantie"
   }
 }

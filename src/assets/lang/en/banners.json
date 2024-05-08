@@ -115,15 +115,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% off lifetime plans! ",
-      "normalText": "Keep your files private forever!",
+      "boldText": "Up to 75% off.",
+      "normalText": "Feel the force of secure cloud storage! ",
       "cta": "Choose plan"
     }
   },
   "lifetimeBanner": {
-    "label": "Need secure storage for life?",
-    "title": "Protect your files forever with our lifetime plans!",
-    "cta": "Choose your plan",
+    "label": "Secure your files forever",
+    "title": "Get lifetime access to secure, private cloud storage with Internxt!",
+    "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee"
   }
 }

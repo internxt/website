@@ -79,6 +79,13 @@
     "dataAccess": "No unauthorized data access"
   },
   "productFeatures": {
+    "starWarsFeatures": {
+      "title": "Omaggio edizione speciale:",
+      "200GB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
+      "2TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
+      "5TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
+      "10TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App", "Adesivi di Star Wars"]
+    },
     "200GB": [
       "Archiviazione crittografata da 200 GB",
       "Condivisione crittografata di file e cartelle",

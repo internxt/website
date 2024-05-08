@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/legacy/image';
 import Marquee from 'react-fast-marquee';
@@ -6,41 +6,74 @@ import Marquee from 'react-fast-marquee';
 import { goToSignUpURL } from '@/lib/auth';
 import SignUpInline from '@/components/auth/SignUpInline';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
+import { CaretRight } from '@phosphor-icons/react';
+import { useRouter } from 'next/router';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
+const IMAGES_LENGTH = 3;
+
+const STAR_WARS_IMAGE = [
+  '/images/star-wars/internxt_starwars_promotion1.webp',
+  '/images/star-wars/internxt_starwars_promotion2.webp',
+  '/images/star-wars/internxt_starwars_promotion3.webp',
+];
+
 export default function HeroSection({ textContent, lang }) {
+  const router = useRouter();
+  const [starWarsImage, setStarWarsImage] = useState<string>('');
+
+  useEffect(() => {
+    const randomNum = Math.floor(Math.random() * IMAGES_LENGTH);
+
+    setStarWarsImage(STAR_WARS_IMAGE[randomNum]);
+  }, []);
+
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-16 xl:mx-32">
+      <div className="relative mx-4 border-b border-gray-5 pt-24 lg:mx-10 lg:pt-10 xl:mx-32">
         <div
-          className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
+          className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:bg-[url('/images/star-wars/bg.webp')]"
+          // style={{
+          //   backgroundImage: "url('images/star-wars/bg.webp')",
+          //   // filter: 'blur(24px)'
+          // }}
         />
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between pt-5 sm:mb-6 lg:flex-row lg:items-stretch">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
           <div className="flex w-full flex-col px-2 lg:hidden">
             <HomePageBannerForMobile />
           </div>
-          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-8 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-xl lg:items-start lg:text-left">
-            <div className="flex object-contain lg:hidden">
+          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
+            {/* <div className="flex object-contain lg:hidden">
               <Image
                 loading="eager"
                 className="object-contain"
-                src="/images/home/internxt_home_mobile.webp"
+                src="/images/home/image_mobile.webp"
                 draggable="false"
+                quality={100}
                 width={600}
                 height={450}
                 alt="Laptop and phone with Internxt app"
               />
-            </div>
+            </div> */}
 
-            <Header>
+            <button
+              onClick={() => {
+                router.push('/pricing');
+              }}
+              className="hidden items-center gap-1.5 rounded-[20px] bg-gray-100 py-2 pl-3 pr-2 ring-4 ring-primary lg:flex"
+            >
+              <p className="text-5xl font-bold text-white">{textContent.label}</p>
+              <CaretRight size={36} className="text-primary" />
+            </button>
+
+            <Header className="pt-5 text-gray-100 md:text-white">
               {textContent.title.line1}{' '}
               <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
             </Header>
 
-            <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8">{textContent.subtitle}</h2>
+            <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8 md:text-white">{textContent.subtitle}</h2>
 
             <button
               className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"
@@ -54,17 +87,25 @@ export default function HeroSection({ textContent, lang }) {
             </button>
 
             <div className="hidden w-full md:flex">
-              <SignUpInline textContent={textContent.SignUp} />
+              <SignUpInline textContent={textContent.SignUp} darkMode />
             </div>
           </div>
 
           {/* Desktop animation/image */}
-          <Animation />
+          {/* <Animation /> */}
+          <div className="hidden w-full items-center justify-end lg:flex">
+            <Image src={starWarsImage} alt="Star Wars" draggable={false} width={571} height={591} />
+          </div>
         </div>
 
         <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 bg-transparent">
           <div className={'flex xl:hidden'}>
-            <Marquee gradientColor={[255, 255, 255]} className="bg-transparent" gradientWidth="32px" speed={30}>
+            <Marquee
+              // gradientColor={[255, 255, 255]}
+              className="bg-transparent"
+              gradientWidth="32px"
+              speed={30}
+            >
               <div className="featured flex w-full flex-row space-x-10 p-6">
                 {lang === 'es' ? (
                   <a
