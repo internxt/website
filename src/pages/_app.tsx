@@ -23,6 +23,7 @@ const EXCLUDED_PATHS_FOR_BANNER = [
   '/startpage',
   '/oystervpn',
   '/lifetime_special',
+  '/pccomponentes-products',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
