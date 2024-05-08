@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/legacy/image';
+import Link from 'next/link';
 
 const language = {
   en: 'EN',
@@ -113,7 +114,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
          items-start overflow-scroll px-5 lg:overflow-hidden"
         >
           <div className="flex max-w-[750px] flex-col rounded-lg border-gray-10">
-            {table.map((item, index) => (
+            {table.map((item) => (
               <div
                 key={item.unit}
                 className="flex flex-row text-base first:rounded-t-lg first:font-medium first:text-white last:rounded-b-lg odd:bg-primary odd:bg-opacity-6 even:bg-white first-of-type:bg-primary"
@@ -135,12 +136,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
           </div>
         </div>
         <div className="flex cursor-pointer">
-          <div
-            onClick={() => {
-              window.open(`${window.location.origin}/${lang}/password-checker`, '_blank');
-            }}
-            className="mx-5 flex max-w-4xl cursor-pointer flex-row"
-          >
+          <Link href="/password-checker" target="_blank" className="mx-5 flex max-w-4xl cursor-pointer flex-row">
             <Image
               src={`/images/converter-tool/PasswordChecker${langUpperCase}.webp`}
               width={897}
@@ -149,7 +145,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
               loading="lazy"
               alt="Password checker"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </section>
