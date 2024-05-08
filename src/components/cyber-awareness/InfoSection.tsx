@@ -11,26 +11,25 @@ import {
 import { useRouter } from 'next/router';
 import React from 'react';
 import RevealY from '@/components/components/RevealY';
+import Link from 'next/link';
 
 export const InfoCard = ({ id, title, title1, img, link }) => {
   const [isShareIcon, setIsShareIcon] = React.useState(null);
   return (
-    <div
+    <Link
+      href={link}
+      target="_blank"
       id={id}
       key={title}
       onMouseEnter={(e) => {
         e.stopPropagation();
-
-        if (e.target.id == id) setIsShareIcon(id);
+        if ((e.target as any).id == id) setIsShareIcon(id);
       }}
       onMouseLeave={() => setIsShareIcon(null)}
       className={`${'flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl bg-white p-8'} 
         `}
-      onClick={() => {
-        window.open(link, '_blank');
-      }}
     >
-      <img key={id} src={img} alt={`${title} image`} width={32} height={32} />
+      <img key={id} src={img} alt={`${title}`} width={32} height={32} />
       <p className="flex flex-col text-left text-2xl font-medium">
         {title}
         <span className="flex text-left text-2xl font-medium">{title1}</span>
@@ -50,7 +49,7 @@ export const InfoCard = ({ id, title, title1, img, link }) => {
           <RedditIcon size={24} round />
         </RedditShareButton>
       </div>
-    </div>
+    </Link>
   );
 };
 

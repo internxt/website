@@ -1,5 +1,5 @@
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 import { Fire, Star } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 
@@ -12,7 +12,6 @@ export interface PriceCardProps {
   cta: any[];
   popular?: boolean;
   lang: string;
-  priceId?: string;
   coupon?: CouponType;
   currency?: string;
   currencyValue?: string;
@@ -34,7 +33,7 @@ export default function PriceCard({
   currencyValue,
   isIframe,
   isOffer,
-}: PriceCardProps) {
+}: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',

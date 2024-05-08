@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
-import PriceCard from '../prices/PriceCard';
-import { CouponType } from '@/lib/types/types';
+import PriceCard from '@/components/prices/PriceCard';
+import { CouponType } from '@/lib/types';
 import { Interval, stripeService } from '../services/stripe.service';
 
 interface PriceTableProps {

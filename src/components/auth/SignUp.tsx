@@ -14,8 +14,7 @@ interface SignUpProps {
   provider?: 'STACKCOMMERCE' | 'TECHCULT' | 'DEALMIRROR' | 'MIGHTYDEALS' | 'OYSTERVPN';
 }
 
-export default function SignUp(props: SignUpProps) {
-  const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
+export default function SignUp(props: Readonly<SignUpProps>) {
   const [error, setError] = useState<string | null>(null);
   const [passwordState, setPasswordState] = useState<{
     tag: 'error' | 'warning' | 'success';
@@ -84,20 +83,13 @@ export default function SignUp(props: SignUpProps) {
         <h1 className="text-2xl font-medium">{props.textContent.SignUp.title}</h1>
       </div>
 
-      <form
-        className="flex w-full flex-col space-y-3"
-        onClick={() => {
-          autoCompleteOnFocus && setAutoCompleteOnFocus(false);
-        }}
-        onSubmit={onSubmit}
-      >
+      <form className="flex w-full flex-col space-y-3" onSubmit={onSubmit}>
         <TextInput
           name="email"
           placeholder={props.textContent.SignUp.fields.email.placeholder}
           type="email"
           autoComplete="email"
           required
-          autoCompleteOnFocus={autoCompleteOnFocus}
           disabled={props.loading}
         />
 
@@ -112,7 +104,6 @@ export default function SignUp(props: SignUpProps) {
                 : '^[]{1}'
             }
             required
-            autoCompleteOnFocus={autoCompleteOnFocus}
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
           />
@@ -125,7 +116,6 @@ export default function SignUp(props: SignUpProps) {
           type="text"
           autoComplete="email"
           required
-          autoCompleteOnFocus={autoCompleteOnFocus}
           disabled={props.loading}
         />
 

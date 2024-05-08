@@ -8,13 +8,8 @@ import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-
-const currencyValue = {
-  '€': 'eur',
-  $: 'usd',
-};
 
 export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');

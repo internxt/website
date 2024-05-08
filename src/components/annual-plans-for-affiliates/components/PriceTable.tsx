@@ -6,9 +6,9 @@ import { Detective, FolderLock } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types/types';
 import { useEffect, useState } from 'react';
 import { stripeService } from '@/components/services/stripe.service';
+import { CouponType } from '@/lib/types';
 
 interface PriceTableProps {
   textContent: any;

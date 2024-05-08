@@ -5,7 +5,6 @@ import WhenWhyHowSection from './WhenWhyHowSection';
 import MainSection from './MainSection';
 import { CalendarBlank } from '@phosphor-icons/react';
 import { isMobile } from 'react-device-detect';
-import Link from 'next/link';
 
 const TermsAndConditionsOverview = ({ textContent }) => {
   const [itemSelected, setItemSelected] = useState();
@@ -14,7 +13,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
   useEffect(() => {
     if (itemSelected && !isMobile) {
       const element = document.getElementById(itemSelected);
-      element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+      element?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
     }
   }, [itemSelected]);
 

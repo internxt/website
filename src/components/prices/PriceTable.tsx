@@ -12,7 +12,7 @@ import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import QuizSection from '@/components/CybersecurityQuiz/QuizSection';
-import { CyberSecurityQuizViews } from '@/lib/types/types';
+import { CyberSecurityQuizViews } from '@/lib/types';
 
 const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');

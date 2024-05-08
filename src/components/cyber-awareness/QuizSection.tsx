@@ -1,5 +1,6 @@
 import Image from 'next/legacy/image';
 import RenderDescription from '@/components/shared/RenderDescription';
+import Link from 'next/link';
 
 const QuizSection = ({ textContent }) => {
   return (
@@ -10,12 +11,7 @@ const QuizSection = ({ textContent }) => {
           <RenderDescription description={textContent.description} />
         </div>
 
-        <div
-          className="hidden cursor-pointer lg:flex"
-          onClick={() => {
-            window.open(`${window.location.origin}/cyber-security-quiz`, '_blank');
-          }}
-        >
+        <Link href={'/cyber-security-quiz'} target="_blank" className="hidden cursor-pointer lg:flex">
           <Image
             src={'/images/cyber-awareness/Internxt_CTA_Blog_CyberSecurityQuiz_EN-1.png'}
             width={897}
@@ -23,7 +19,7 @@ const QuizSection = ({ textContent }) => {
             loading="eager"
             alt="Quiz image"
           />
-        </div>
+        </Link>
 
         <div className="flex flex-col rounded-[20px] bg-primary bg-opacity-5 p-8 lg:hidden">
           <div className="flex max-w-[263px] flex-col space-y-6 text-center">

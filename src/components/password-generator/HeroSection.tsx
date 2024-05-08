@@ -1,10 +1,36 @@
 import { useState } from 'react';
-import Checkbox from '../components/Checkbox';
 import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
 import Header from '@/components/shared/Header';
+
+const CheckboxButton = ({ checked, id }) => (
+  <>
+    <div
+      className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full
+                  border p-1 text-white ${
+                    checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'
+                  }`}
+    >
+      {checked && (
+        <div
+          className={`flex cursor-pointer flex-col items-center justify-center rounded-full
+                      text-white`}
+        >
+          <div className="rounded-full bg-white p-1" />
+        </div>
+      )}
+    </div>
+    <input
+      id={id}
+      checked={checked}
+      type="checkbox"
+      readOnly
+      className="base-checkbox h-0 w-0 appearance-none opacity-0"
+    />
+  </>
+);
 
 const HeroSection = ({ textContent }) => {
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
@@ -56,8 +82,7 @@ const HeroSection = ({ textContent }) => {
                 <p className="text-sm">{textContent.info}</p>
               </div>
               <div className="flex w-full flex-col gap-2 md:flex-row">
-                <div
-                  role="button"
+                <button
                   className="flex w-full cursor-pointer select-none items-center justify-center space-x-2 rounded-lg bg-primary py-2 hover:bg-primary-dark"
                   onClick={() => {
                     navigator.clipboard.writeText(password);
@@ -66,8 +91,8 @@ const HeroSection = ({ textContent }) => {
                 >
                   <Copy className={`hidden h-5 w-5 text-center text-white md:flex`} />
                   <p className="font-medium text-white">{textContent.copy}</p>
-                </div>
-                <div
+                </button>
+                <button
                   className="flex w-full cursor-pointer select-none flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-white py-2 text-gray-100 hover:bg-gray-10"
                   onClick={() => {
                     setRegenerate(!regenerate);
@@ -75,32 +100,24 @@ const HeroSection = ({ textContent }) => {
                 >
                   <ArrowsClockwise className={`hidden h-5 w-5 text-center md:flex`} />
                   <p className="font-medium">{textContent.generate}</p>
-                </div>
+                </button>
               </div>
             </div>
           </div>
           <div className="flex w-full flex-col space-y-8">
             <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-2">
-              <div
+              <button
                 onClick={() => setPasswordType('password')}
                 className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
                   passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : 'border-gray-10'
                 } p-5`}
               >
-                <div className="flex flex-col">
-                  <Checkbox
-                    id="uppercase"
-                    onClick={() => {
-                      setPasswordType('password');
-                    }}
-                    checked={passwordType === 'password'}
-                  />
-                </div>
+                <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} />
                 <p className={`text-xl font-medium ${passwordType === 'password' ? 'text-gray-100' : 'text-gray-50'}`}>
                   {textContent.password.title}
                 </p>
-              </div>
-              <div
+              </button>
+              <button
                 onClick={() => setPasswordType('passphrase')}
                 className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
                   passwordType === 'passphrase'
@@ -108,21 +125,14 @@ const HeroSection = ({ textContent }) => {
                     : 'border-gray-10'
                 } p-5`}
               >
-                <div className="flex flex-col">
-                  <Checkbox
-                    id="lowercase"
-                    onClick={() => {
-                      setPasswordType('passphrase');
-                    }}
-                    checked={passwordType === 'passphrase'}
-                  />
-                </div>
+                <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} />
+
                 <p
                   className={`text-xl font-medium ${passwordType === 'passphrase' ? 'text-gray-100' : 'text-gray-50'}`}
                 >
                   {textContent.passphrase.title}
                 </p>
-              </div>
+              </button>
             </div>
             {passwordType === 'password' ? (
               <PasswordSettings

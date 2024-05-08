@@ -6,7 +6,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import { Interval } from '../services/stripe.service';
 
-export default function PriceTable({ lang }: { lang: string }) {
+export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
   const { products, currency, loadingCards } = usePricing();
 
   return (
