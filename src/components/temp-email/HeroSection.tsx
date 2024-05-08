@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Info } from '@phosphor-icons/react';
 
 import { Inbox } from './components/InboxView';
@@ -25,8 +25,11 @@ import EmailToolbar from './components/EmailToolBar';
 import { MessageObjProps, StateProps } from './types/types';
 import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
+import useWindowFocus from '@/hooks/useWindowFocus';
 
 export const HeroSection = ({ textContent }) => {
+  const isFocused = useWindowFocus();
+
   const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =
     useTempMailReducer();
 
@@ -56,16 +59,8 @@ export const HeroSection = ({ textContent }) => {
   }, []);
 
   useEffect(() => {
-    handleBorderColor();
-  }, [borderColor]);
-
-  useEffect(() => {
-    if (isChangeEmailIconAnimated) {
-      setTimeout(() => {
-        setIsChangeEmailIconAnimated(false);
-      }, 1000);
-    }
-  }, [isChangeEmailIconAnimated]);
+    return autoFetchEmails();
+  }, [isFocused]);
 
   const settingUpTempMailData = async () => {
     await checkLocalStorageAndGetEmail();
@@ -157,19 +152,13 @@ export const HeroSection = ({ textContent }) => {
     }
   };
 
-  const handleBorderColor = useCallback(() => {
-    if (borderColor) {
-      setTimeout(() => {
-        setBorderColor(false);
-      }, 4000);
-    }
-  }, [borderColor]);
-
-  const handleInboxUpdate = useCallback(async () => {
+  const autoFetchEmails = () => {
     if (!user) return;
-
-    await getMailInbox(user?.address, user?.token);
-  }, [user?.address, user?.token]);
+    if (isFocused) {
+      const interval = setInterval(() => getMailInbox(user?.address, user.token), 40000);
+      return () => clearInterval(interval);
+    }
+  };
 
   const onRefresh = async () => {
     if (!user) return;
@@ -210,15 +199,23 @@ export const HeroSection = ({ textContent }) => {
     if (!user?.address) return;
 
     setBorderColor(true);
+    setTimeout(() => {
+      setBorderColor(false);
+    }, 4000);
+
     copyToClipboard(user?.address);
   };
 
   const onDeleteEmailButtonClicked = async () => {
+    setIsChangeEmailIconAnimated(true);
+    setTimeout(() => {
+      setIsChangeEmailIconAnimated(false);
+    }, 1000);
+
     removeLocalStorage();
     setUser(undefined);
 
     await getNewEmail();
-    setIsChangeEmailIconAnimated(true);
   };
 
   return (
