@@ -1,4 +1,4 @@
-name: Check website every 2 hours
+name: Check website every 6 hours
 
 on:
   schedule:
