@@ -3,7 +3,7 @@ import { ArrowClockwise, Copy } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
 
 interface EmailToolBarProps {
-  email: string | null;
+  email: string | undefined;
   borderColor: boolean;
   isChangeEmailIconAnimated: boolean;
   textContent: {

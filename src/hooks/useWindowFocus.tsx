@@ -11,12 +11,16 @@ const useWindowFocus = () => {
     const onFocus = () => setFocused(true);
     const onBlur = () => setFocused(false);
 
-    window.addEventListener('focus', onFocus);
-    window.addEventListener('blur', onBlur);
+    window.document.addEventListener('visibilitychange', function (event) {
+      if (document.hidden) {
+        onBlur();
+      } else {
+        onFocus();
+      }
+    });
 
     return () => {
-      window.removeEventListener('focus', onFocus);
-      window.removeEventListener('blur', onBlur);
+      window.document.removeEventListener('visibilitychange', () => {});
     };
   }, []);
 

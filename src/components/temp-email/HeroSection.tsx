@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Info } from '@phosphor-icons/react';
 
 import { Inbox } from './components/InboxView';
@@ -11,45 +11,30 @@ import {
   MAX_HOURS_BEFORE_EXPIRE_EMAIL,
   SETUP_TIME_STORAGE_KEY,
   TIME_NOW,
-  createEmail,
+  fetchNewEmail,
   fetchAndFormatInbox,
   getMessageData,
   removeLocalStorage,
+  MESSAGES_INFO,
+  SELECTED_MESSAGE,
+  saveInfoOfMessageSelectedInLocalStorage,
+  saveInboxInLocalStorage,
 } from './services/temp-mail.service';
 
-import useWindowFocus from './hooks/useWindowFocus';
 import EmailToolbar from './components/EmailToolBar';
-import { MessageObjProps } from './types/types';
+import { MessageObjProps, StateProps } from './types/types';
 import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
+import useWindowFocus from '@/hooks/useWindowFocus';
 
 export const HeroSection = ({ textContent }) => {
   const isFocused = useWindowFocus();
 
-  const {
-    state,
-    setEmail,
-    setToken,
-    setBorderColor,
-    setGenerateEmail,
-    setIsChangeEmailIconAnimated,
-    setIsRefreshed,
-    setMessages,
-    setOpenedMessages,
-    setSelectedMessage,
-  } = useTempMailReducer();
+  const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =
+    useTempMailReducer();
 
-  const {
-    email,
-    token,
-    borderColor,
-    openedMessages,
-    isRefreshed,
-    messages,
-    selectedMessage,
-    generateEmail,
-    isChangeEmailIconAnimated,
-  } = state;
+  const { user, borderColor, openedMessages, messages, selectedMessage, isChangeEmailIconAnimated } =
+    state as StateProps;
 
   // Open the links that are in the email received in a new tab
   useEffect(() => {
@@ -70,68 +55,76 @@ export const HeroSection = ({ textContent }) => {
   }, [selectedMessage]);
 
   useEffect(() => {
-    handleInitialSetup();
+    settingUpTempMailData();
   }, []);
 
   useEffect(() => {
-    checkLocalStorageAndGetEmail();
-  }, [generateEmail]);
+    return autoFetchEmails();
+  }, [isFocused]);
 
-  useEffect(() => {
-    handleBorderColor();
-  }, [borderColor]);
+  const settingUpTempMailData = async () => {
+    await checkLocalStorageAndGetEmail();
 
-  useEffect(() => {
-    if (isChangeEmailIconAnimated) {
-      setTimeout(() => {
-        setIsChangeEmailIconAnimated(false);
-      }, 1000);
-    }
-  }, [isChangeEmailIconAnimated]);
+    const savedMessages = localStorage.getItem(INBOX_STORAGE_KEY);
+    const savedSelectedMessage = localStorage.getItem(SELECTED_MESSAGE);
 
-  const fetchEmail = async () => {
-    try {
-      const emailData = await createEmail();
-      localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
-      setEmail(emailData.address);
-      setToken(emailData.token);
-      setSelectedMessage(null);
-      setMessages(undefined);
-    } catch (err) {
-      // NO OP
+    if (savedMessages) {
+      setMessages(JSON.parse(savedMessages));
+    } else if (savedSelectedMessage) {
+      setSelectedMessage(JSON.parse(savedSelectedMessage));
     }
   };
 
   const checkLocalStorageAndGetEmail = async () => {
-    removeDataFromStorageIfExpired();
+    removeUserDataIfExpired();
 
     const storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
 
     if (storedEmail !== null) {
       const { address, token } = JSON.parse(storedEmail);
-      setEmail(address);
-      setToken(token);
+      setUser({
+        address,
+        token,
+      });
     } else {
-      localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(TIME_NOW));
-      await fetchEmail();
+      await getNewEmail();
     }
   };
 
-  const getMailInbox = useCallback(async (email: string, tempMailToken: string) => {
+  const getNewEmail = async () => {
+    try {
+      const emailData = await fetchNewEmail();
+
+      setUser({
+        address: emailData.address,
+        token: emailData.token,
+      });
+      setSelectedMessage(null);
+      setMessages(undefined);
+
+      localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(TIME_NOW));
+      localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
+    } catch (error) {
+      // NO OP
+    }
+  };
+
+  const getMailInbox = async (email: string, tempMailToken: string) => {
     if (!tempMailToken && !email) return;
+
+    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) ?? '[]');
 
     try {
       const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, tempMailToken);
 
-      if (messagesInInbox && messagesInInbox.length > 0) {
-        const unopenedMessages = messagesInInbox.filter((item) => !item.opened).length;
+      if (messagesInInbox) {
+        const newMessages = messagesInInbox.filter(
+          (message) => !inboxInLocalStorage.some((item) => item.id === message.id),
+        );
 
-        setMessages(messagesInInbox);
-        setOpenedMessages(unopenedMessages);
-        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(messagesInInbox));
-      } else {
-        const inbox = localStorage.getItem(INBOX_STORAGE_KEY) as string;
-        setMessages(JSON.parse(inbox));
+        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify([...inboxInLocalStorage, ...newMessages]));
+
+        setMessages([...inboxInLocalStorage, ...newMessages]);
       }
     } catch (err) {
       // NO OP
@@ -141,70 +134,87 @@ export const HeroSection = ({ textContent }) => {
         await onDeleteEmailButtonClicked();
       }
     }
-  }, []);
+  };
 
-  const removeDataFromStorageIfExpired = () => {
+  const onMessageSelected = async (item: MessageObjProps) => {
+    if (!user) return;
+
+    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) ?? '[]');
+    const infoOfMessagesInSessionStorage = JSON.parse(localStorage.getItem(MESSAGES_INFO) ?? '[]');
+    const messageInSessionStorage = infoOfMessagesInSessionStorage?.find((message) => message.id === item.id);
+
+    if (messageInSessionStorage) {
+      setSelectedMessage(messageInSessionStorage);
+    } else {
+      try {
+        const messageInfo = await getMessageData(user.address, user.token, item.id);
+
+        messageInfo.seen = true;
+
+        saveInfoOfMessageSelectedInLocalStorage(infoOfMessagesInSessionStorage, messageInfo);
+
+        setSelectedMessage(messageInfo);
+        localStorage.setItem(SELECTED_MESSAGE, JSON.stringify(messageInfo));
+
+        saveInboxInLocalStorage(inboxInLocalStorage, messageInfo.id);
+        setMessages(inboxInLocalStorage);
+      } catch (err) {
+        const error = err as Error;
+        console.log({ errorMessage: error.message });
+      }
+    }
+  };
+
+  const autoFetchEmails = () => {
+    if (!user) return;
+    if (isFocused) {
+      const interval = setInterval(() => getMailInbox(user?.address, user.token), 40000);
+      return () => clearInterval(interval);
+    }
+  };
+
+  const onRefresh = async () => {
+    if (!user) return;
+    await getMailInbox(user?.address, user?.token);
+  };
+
+  function removeUserDataIfExpired() {
     const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
     const isEmailExpired = setupTime !== null && TIME_NOW - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
 
     if (isEmailExpired) {
-      removeLocalStorage();
-      setSelectedMessage(null);
-      setMessages(undefined);
+      removeAllUserData();
     }
-  };
+  }
 
-  const handleBorderColor = useCallback(() => {
-    if (borderColor) {
-      setTimeout(() => {
-        setBorderColor(false);
-      }, 4000);
-    }
-  }, [borderColor]);
-
-  const handleInitialSetup = () => {
-    const savedSelectedMessage = localStorage.getItem('selectedMessage');
-
-    if (savedSelectedMessage) {
-      setSelectedMessage(JSON.parse(savedSelectedMessage));
-    }
-  };
-
-  const handleInboxUpdate = useCallback(async () => {
-    await getMailInbox(email, token);
-  }, [email, token]);
-
-  const onRefresh = useCallback(() => {
-    setIsRefreshed(!isRefreshed);
-    handleInboxUpdate();
-  }, [isRefreshed]);
-
-  const onMessageSelected = async (item, index) => {
-    const messagesFromLS = JSON.parse(localStorage.getItem('inbox') as string);
-    messagesFromLS[index].opened = true;
-    try {
-      const messageData = await getMessageData(email, token, item.id);
-      setMessages(messagesFromLS);
-      setSelectedMessage(messageData.data);
-      localStorage.setItem('inbox', JSON.stringify(messagesFromLS));
-      localStorage.setItem('selectedMessage', JSON.stringify(item));
-    } catch (err) {
-      const error = err as Error;
-      console.log({ errorMessage: error.message });
-    }
-  };
+  function removeAllUserData() {
+    removeLocalStorage();
+    setUser(undefined);
+    setSelectedMessage(null);
+    setMessages(undefined);
+  }
 
   const onCopyEmailButtonClicked = () => {
+    if (!user?.address) return;
+
     setBorderColor(true);
-    copyToClipboard(email);
+    setTimeout(() => {
+      setBorderColor(false);
+    }, 4000);
+
+    copyToClipboard(user?.address);
   };
 
   const onDeleteEmailButtonClicked = async () => {
-    removeLocalStorage();
-    setEmail(undefined);
-    setToken(undefined);
-    setGenerateEmail(!generateEmail);
     setIsChangeEmailIconAnimated(true);
+    setTimeout(() => {
+      setIsChangeEmailIconAnimated(false);
+    }, 1000);
+
+    removeLocalStorage();
+    setUser(undefined);
+
+    await getNewEmail();
   };
 
   return (
@@ -217,7 +227,7 @@ export const HeroSection = ({ textContent }) => {
         <EmailToolbar
           borderColor={borderColor}
           isChangeEmailIconAnimated={isChangeEmailIconAnimated}
-          email={email}
+          email={user?.address}
           onCopy={onCopyEmailButtonClicked}
           onDelete={onDeleteEmailButtonClicked}
           textContent={textContent}

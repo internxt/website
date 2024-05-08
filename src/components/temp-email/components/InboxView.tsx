@@ -5,14 +5,15 @@ import { Tooltip } from 'react-tooltip';
 
 import { MessageSelected, NoMessageSelected } from './Messages';
 import { Transition } from '@headlessui/react';
+import { MessageObjProps } from '../types/types';
 
 interface InboxProps {
   textContent: any;
   onRefresh: any;
   openedMessages: number;
-  messages: Record<any, any>[];
-  onMessageSelected: (item: Record<any, any>, index: number) => void;
-  selectedMessage: Record<any, any> | null;
+  messages: MessageObjProps[];
+  onMessageSelected: (item: MessageObjProps) => void;
+  selectedMessage: MessageObjProps | null;
 }
 
 export const Inbox = ({
@@ -108,10 +109,10 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                   <button
                     key={item.id}
                     onClick={() => {
-                      onMessageSelected(item, index);
+                      onMessageSelected(item);
                     }}
                     className={`flex h-full ${
-                      !item.opened ? 'border-l-2 border-l-primary' : ''
+                      !item.seen ? 'border-l-2 border-l-primary' : ''
                     } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
                       item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
                     } `}
@@ -120,18 +121,11 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                       <p title={item.from} className="truncate text-xs font-medium text-gray-50">
                         {item.from}
                       </p>
-                      {item.attachments?.length > 0 ? (
-                        <div className="flex flex-row items-center space-x-1">
-                          <Paperclip size={14} className="text-gray-60" />
-                          <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
-                            {item.subject ? item.subject : '(no subject)'}
-                          </p>
-                        </div>
-                      ) : (
-                        <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
-                          {item.subject ? item.subject : '(no subject)'}
-                        </p>
-                      )}
+
+                      <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
+                        {item.subject ? item.subject : '(no subject)'}
+                      </p>
+
                       <div className="flex flex-row items-end justify-end space-x-2">
                         <p className="w-full text-xs line-clamp-2">{item.body}</p>
                         <p className="text-supporting-2 font-semibold text-gray-60">
@@ -236,17 +230,17 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
               </div>
               <div className="flex w-full flex-col overflow-y-scroll">
                 {/* Render messages list */}
-                {messages?.map((item, index) => {
+                {messages?.map((item) => {
                   const date = moment(item.date);
                   return (
                     <button
                       key={item.id}
                       onClick={() => {
-                        onMessageSelected(item, index);
+                        onMessageSelected(item);
                         setIsMessageOpen(true);
                       }}
                       className={`flex h-full ${
-                        !item.opened ? 'border-l-2 border-l-primary' : ''
+                        !item.seen ? 'border-l-2 border-l-primary' : ''
                       } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                     >
                       <div className="flex w-full flex-col border-b border-gray-10 py-4">

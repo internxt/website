@@ -7,6 +7,8 @@ describe('Creating an email for temporary-email', () => {
   });
 
   it('Should create an email with address and token', () => {
+    cy.visit('/temporary-email');
+
     cy.request('GET', '/api/temp-mail/create-email').then((interception) => {
       const status = interception.status;
       const body = interception.body;

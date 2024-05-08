@@ -1,18 +1,14 @@
 import { useCallback, useReducer } from 'react';
-import { ActionType, ActionTypes, MessageObjProps } from '../types/types';
+import { ActionType, ActionTypes, MessageObjProps, UserProps } from '../types/types';
 
 const reducer = (state, action: ActionType) => {
   switch (action.type) {
-    case ActionTypes.SET_EMAIL:
-      return { ...state, email: action.payload };
-    case ActionTypes.SET_TOKEN:
-      return { ...state, token: action.payload };
+    case ActionTypes.SET_USER:
+      return { ...state, user: action.payload };
     case ActionTypes.SET_BORDER_COLOR:
       return { ...state, borderColor: action.payload };
     case ActionTypes.SET_OPENED_MESSAGES:
       return { ...state, openedMessages: action.payload };
-    case ActionTypes.SET_IS_REFRESHED:
-      return { ...state, isRefreshed: action.payload };
     case ActionTypes.SET_MESSAGES:
       return { ...state, messages: action.payload };
     case ActionTypes.SET_SELECTED_MESSAGES:
@@ -27,11 +23,9 @@ const reducer = (state, action: ActionType) => {
 };
 
 const initialState = {
-  email: undefined,
-  token: undefined,
+  user: undefined,
   borderColor: false,
   openedMessages: 0,
-  isRefreshed: false,
   messages: [],
   selectedMessage: null,
   generateEmail: false,
@@ -41,12 +35,8 @@ const initialState = {
 export const useTempMailReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const setEmail = useCallback((email: string | undefined) => {
-    dispatch({ type: 'SET_EMAIL', payload: email });
-  }, []);
-
-  const setToken = useCallback((token: string | undefined) => {
-    dispatch({ type: 'SET_TOKEN', payload: token });
+  const setUser = useCallback((user: UserProps | undefined) => {
+    dispatch({ type: 'SET_USER', payload: user });
   }, []);
 
   const setBorderColor = useCallback((borderColor: boolean) => {
@@ -55,10 +45,6 @@ export const useTempMailReducer = () => {
 
   const setOpenedMessages = useCallback((openedMessages: number) => {
     dispatch({ type: 'SET_OPENED_MESSAGES', payload: openedMessages });
-  }, []);
-
-  const setIsRefreshed = useCallback((isRefreshed: boolean) => {
-    dispatch({ type: 'SET_IS_REFRESHED', payload: isRefreshed });
   }, []);
 
   const setMessages = useCallback((messages: MessageObjProps[] | undefined) => {
@@ -79,11 +65,9 @@ export const useTempMailReducer = () => {
 
   return {
     state,
-    setEmail,
-    setToken,
+    setUser,
     setBorderColor,
     setOpenedMessages,
-    setIsRefreshed,
     setMessages,
     setSelectedMessage,
     setGenerateEmail,
