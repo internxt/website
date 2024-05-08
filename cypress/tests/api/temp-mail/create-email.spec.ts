@@ -1,4 +1,4 @@
-// <reference types="cypress" />
+/// <reference types="cypress" />
 export {};
 
 describe('Creating an email for temporary-email', () => {
