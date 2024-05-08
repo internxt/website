@@ -76,7 +76,7 @@ export const HeroSection = ({ textContent }) => {
   };
 
   const checkLocalStorageAndGetEmail = async () => {
-    removeDataFromUserIfExpired();
+    removeUserDataIfExpired();
 
     const storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
 
@@ -109,22 +109,6 @@ export const HeroSection = ({ textContent }) => {
     }
   };
 
-  const removeDataFromUserIfExpired = () => {
-    const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
-    const isEmailExpired = setupTime !== null && TIME_NOW - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
-
-    if (isEmailExpired) {
-      removeAllUserData();
-    }
-  };
-
-  function removeAllUserData() {
-    removeLocalStorage();
-    setUser(undefined);
-    setSelectedMessage(null);
-    setMessages(undefined);
-  }
-
   const getMailInbox = async (email: string, tempMailToken: string) => {
     if (!tempMailToken && !email) return;
 
@@ -152,6 +136,35 @@ export const HeroSection = ({ textContent }) => {
     }
   };
 
+  const onMessageSelected = async (item: MessageObjProps) => {
+    if (!user) return;
+
+    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) ?? '[]');
+    const infoOfMessagesInSessionStorage = JSON.parse(localStorage.getItem(MESSAGES_INFO) ?? '[]');
+    const messageInSessionStorage = infoOfMessagesInSessionStorage?.find((message) => message.id === item.id);
+
+    if (messageInSessionStorage) {
+      setSelectedMessage(messageInSessionStorage);
+    } else {
+      try {
+        const messageInfo = await getMessageData(user.address, user.token, item.id);
+
+        messageInfo.seen = true;
+
+        saveInfoOfMessageSelectedInLocalStorage(infoOfMessagesInSessionStorage, messageInfo);
+
+        setSelectedMessage(messageInfo);
+        localStorage.setItem(SELECTED_MESSAGE, JSON.stringify(messageInfo));
+
+        saveInboxInLocalStorage(inboxInLocalStorage, messageInfo.id);
+        setMessages(inboxInLocalStorage);
+      } catch (err) {
+        const error = err as Error;
+        console.log({ errorMessage: error.message });
+      }
+    }
+  };
+
   const autoFetchEmails = () => {
     if (!user) return;
     if (isFocused) {
@@ -165,35 +178,21 @@ export const HeroSection = ({ textContent }) => {
     await getMailInbox(user?.address, user?.token);
   };
 
-  const onMessageSelected = async (item: MessageObjProps) => {
-    if (!user) return;
+  function removeUserDataIfExpired() {
+    const setupTime = localStorage.getItem(SETUP_TIME_STORAGE_KEY);
+    const isEmailExpired = setupTime !== null && TIME_NOW - Number(setupTime) > MAX_HOURS_BEFORE_EXPIRE_EMAIL;
 
-    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) as string);
-    const infoOfMessagesInSessionStorage = localStorage.getItem(MESSAGES_INFO) as string;
-    const parsedInfoInSessionStorage = infoOfMessagesInSessionStorage ? JSON.parse(infoOfMessagesInSessionStorage) : [];
-    const messageInSessionStorage = parsedInfoInSessionStorage?.find((message) => message.id === item.id);
-
-    if (messageInSessionStorage) {
-      setSelectedMessage(messageInSessionStorage);
-    } else {
-      try {
-        const messageInfo = await getMessageData(user.address, user.token, item.id);
-
-        messageInfo.seen = true;
-
-        saveInfoOfMessageSelectedInLocalStorage(parsedInfoInSessionStorage, messageInfo);
-
-        setSelectedMessage(messageInfo);
-        localStorage.setItem(SELECTED_MESSAGE, JSON.stringify(messageInfo));
-
-        saveInboxInLocalStorage(inboxInLocalStorage, messageInfo.id);
-        setMessages(inboxInLocalStorage);
-      } catch (err) {
-        const error = err as Error;
-        console.log({ errorMessage: error.message });
-      }
+    if (isEmailExpired) {
+      removeAllUserData();
     }
-  };
+  }
+
+  function removeAllUserData() {
+    removeLocalStorage();
+    setUser(undefined);
+    setSelectedMessage(null);
+    setMessages(undefined);
+  }
 
   const onCopyEmailButtonClicked = () => {
     if (!user?.address) return;
