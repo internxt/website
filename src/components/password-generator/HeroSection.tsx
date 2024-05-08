@@ -1,10 +1,36 @@
 import { useState } from 'react';
-import Checkbox from '../components/Checkbox';
 import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
 import Header from '@/components/shared/Header';
+
+const CheckboxButton = ({ checked, id }) => (
+  <>
+    <div
+      className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full
+                  border p-1 text-white ${
+                    checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'
+                  }`}
+    >
+      {checked && (
+        <div
+          className={`flex cursor-pointer flex-col items-center justify-center rounded-full
+                      text-white`}
+        >
+          <div className="rounded-full bg-white p-1" />
+        </div>
+      )}
+    </div>
+    <input
+      id={id}
+      checked={checked}
+      type="checkbox"
+      readOnly
+      className="base-checkbox h-0 w-0 appearance-none opacity-0"
+    />
+  </>
+);
 
 const HeroSection = ({ textContent }) => {
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
@@ -86,7 +112,7 @@ const HeroSection = ({ textContent }) => {
                   passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : 'border-gray-10'
                 } p-5`}
               >
-                <Checkbox id="uppercase" checked={passwordType === 'password'} />
+                <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} />
                 <p className={`text-xl font-medium ${passwordType === 'password' ? 'text-gray-100' : 'text-gray-50'}`}>
                   {textContent.password.title}
                 </p>
@@ -99,7 +125,8 @@ const HeroSection = ({ textContent }) => {
                     : 'border-gray-10'
                 } p-5`}
               >
-                <Checkbox id="lowercase" checked={passwordType === 'passphrase'} />
+                <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} />
+
                 <p
                   className={`text-xl font-medium ${passwordType === 'passphrase' ? 'text-gray-100' : 'text-gray-50'}`}
                 >
