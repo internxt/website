@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { MessageObjProps } from '../types/types';
+import { MessageObjProps, UserProps } from '../types/types';
 
 export const EMAIL_STORAGE_KEY = 'temp-mail-user-data';
 export const SETUP_TIME_STORAGE_KEY = 'setupTime';
@@ -10,7 +10,7 @@ export const SELECTED_MESSAGE = 'selectedMessage';
 export const TIME_NOW = new Date().getTime();
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
-const fetchNewEmail = async () => {
+const fetchNewEmail = async (): Promise<UserProps> => {
   const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
 
   const { data: userInfo } = email;
