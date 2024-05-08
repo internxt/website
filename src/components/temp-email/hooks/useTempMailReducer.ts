@@ -5,13 +5,10 @@ const reducer = (state, action: ActionType) => {
   switch (action.type) {
     case ActionTypes.SET_USER:
       return { ...state, user: action.payload };
-
     case ActionTypes.SET_BORDER_COLOR:
       return { ...state, borderColor: action.payload };
     case ActionTypes.SET_OPENED_MESSAGES:
       return { ...state, openedMessages: action.payload };
-    case ActionTypes.SET_IS_REFRESHED:
-      return { ...state, isRefreshed: action.payload };
     case ActionTypes.SET_MESSAGES:
       return { ...state, messages: action.payload };
     case ActionTypes.SET_SELECTED_MESSAGES:
@@ -29,7 +26,6 @@ const initialState = {
   user: undefined,
   borderColor: false,
   openedMessages: 0,
-  isRefreshed: false,
   messages: [],
   selectedMessage: null,
   generateEmail: false,
@@ -49,10 +45,6 @@ export const useTempMailReducer = () => {
 
   const setOpenedMessages = useCallback((openedMessages: number) => {
     dispatch({ type: 'SET_OPENED_MESSAGES', payload: openedMessages });
-  }, []);
-
-  const setIsRefreshed = useCallback((isRefreshed: boolean) => {
-    dispatch({ type: 'SET_IS_REFRESHED', payload: isRefreshed });
   }, []);
 
   const setMessages = useCallback((messages: MessageObjProps[] | undefined) => {
@@ -76,7 +68,6 @@ export const useTempMailReducer = () => {
     setUser,
     setBorderColor,
     setOpenedMessages,
-    setIsRefreshed,
     setMessages,
     setSelectedMessage,
     setGenerateEmail,

@@ -13,7 +13,6 @@ export interface StateProps {
   user: UserProps | undefined;
   borderColor: boolean;
   openedMessages: number;
-  isRefreshed: boolean;
   messages: MessageObjProps[];
   selectedMessage: MessageObjProps | null;
   generateEmail: boolean | undefined;
@@ -24,7 +23,6 @@ export const ActionTypes = {
   SET_USER: 'SET_USER',
   SET_BORDER_COLOR: 'SET_BORDER_COLOR',
   SET_OPENED_MESSAGES: 'SET_OPENED_MESSAGES',
-  SET_IS_REFRESHED: 'SET_IS_REFRESHED',
   SET_MESSAGES: 'SET_MESSAGES',
   SET_SELECTED_MESSAGES: 'SET_SELECTED_MESSAGES',
   SET_GENERATE_EMAIL: 'SET_GENERATE_EMAIL',
@@ -40,7 +38,6 @@ export type ActionType =
   | { type: 'SET_USER'; payload: UserProps | undefined }
   | { type: 'SET_BORDER_COLOR'; payload: boolean }
   | { type: 'SET_OPENED_MESSAGES'; payload: number }
-  | { type: 'SET_IS_REFRESHED'; payload: boolean | undefined }
   | { type: 'SET_MESSAGES'; payload: MessageObjProps[] | undefined }
   | { type: 'SET_SELECTED_MESSAGES'; payload: MessageObjProps | null }
   | { type: 'SET_GENERATE_EMAIL'; payload: boolean | undefined }

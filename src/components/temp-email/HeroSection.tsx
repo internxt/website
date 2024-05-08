@@ -15,6 +15,10 @@ import {
   fetchAndFormatInbox,
   getMessageData,
   removeLocalStorage,
+  MESSAGES_INFO,
+  SELECTED_MESSAGE,
+  saveInfoOfMessageSelectedInLocalStorage,
+  saveInboxInLocalStorage,
 } from './services/temp-mail.service';
 
 import EmailToolbar from './components/EmailToolBar';
@@ -23,28 +27,11 @@ import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
 
 export const HeroSection = ({ textContent }) => {
-  const {
-    state,
-    setUser,
-    setBorderColor,
-    setGenerateEmail,
-    setIsChangeEmailIconAnimated,
-    setIsRefreshed,
-    setMessages,
-    setOpenedMessages,
-    setSelectedMessage,
-  } = useTempMailReducer();
+  const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =
+    useTempMailReducer();
 
-  const {
-    user,
-    borderColor,
-    openedMessages,
-    isRefreshed,
-    messages,
-    selectedMessage,
-    generateEmail,
-    isChangeEmailIconAnimated,
-  } = state as StateProps;
+  const { user, borderColor, openedMessages, messages, selectedMessage, isChangeEmailIconAnimated } =
+    state as StateProps;
 
   // Open the links that are in the email received in a new tab
   useEffect(() => {
@@ -69,10 +56,6 @@ export const HeroSection = ({ textContent }) => {
   }, []);
 
   useEffect(() => {
-    checkLocalStorageAndGetEmail();
-  }, [generateEmail]);
-
-  useEffect(() => {
     handleBorderColor();
   }, [borderColor]);
 
@@ -88,7 +71,7 @@ export const HeroSection = ({ textContent }) => {
     await checkLocalStorageAndGetEmail();
 
     const savedMessages = localStorage.getItem(INBOX_STORAGE_KEY);
-    const savedSelectedMessage = localStorage.getItem('selectedMessage');
+    const savedSelectedMessage = localStorage.getItem(SELECTED_MESSAGE);
 
     if (savedMessages) {
       setMessages(JSON.parse(savedMessages));
@@ -147,17 +130,22 @@ export const HeroSection = ({ textContent }) => {
     setMessages(undefined);
   }
 
-  const getMailInbox = useCallback(async (email: string, tempMailToken: string) => {
+  const getMailInbox = async (email: string, tempMailToken: string) => {
     if (!tempMailToken && !email) return;
+
+    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) ?? '[]');
 
     try {
       const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, tempMailToken);
 
-      if (messagesInInbox && messagesInInbox.length > 0) {
-        const unopenedMessages = messagesInInbox.filter((item) => !item.seen).length;
+      if (messagesInInbox) {
+        const newMessages = messagesInInbox.filter(
+          (message) => !inboxInLocalStorage.some((item) => item.id === message.id),
+        );
 
-        setMessages(messagesInInbox);
-        setOpenedMessages(unopenedMessages);
+        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify([...inboxInLocalStorage, ...newMessages]));
+
+        setMessages([...inboxInLocalStorage, ...newMessages]);
       }
     } catch (err) {
       // NO OP
@@ -167,7 +155,7 @@ export const HeroSection = ({ textContent }) => {
         await onDeleteEmailButtonClicked();
       }
     }
-  }, []);
+  };
 
   const handleBorderColor = useCallback(() => {
     if (borderColor) {
@@ -183,25 +171,38 @@ export const HeroSection = ({ textContent }) => {
     await getMailInbox(user?.address, user?.token);
   }, [user?.address, user?.token]);
 
-  const onRefresh = useCallback(() => {
-    setIsRefreshed(!isRefreshed);
-    handleInboxUpdate();
-  }, [isRefreshed]);
+  const onRefresh = async () => {
+    if (!user) return;
+    await getMailInbox(user?.address, user?.token);
+  };
 
-  const onMessageSelected = async (item, index) => {
+  const onMessageSelected = async (item: MessageObjProps) => {
     if (!user) return;
 
-    const messagesFromLS = JSON.parse(localStorage.getItem('inbox') as string);
-    messagesFromLS[index].opened = true;
-    try {
-      const messageData = await getMessageData(user.address, user.token, item.id);
-      setMessages(messagesFromLS);
-      setSelectedMessage(messageData.data);
-      localStorage.setItem('inbox', JSON.stringify(messagesFromLS));
-      localStorage.setItem('selectedMessage', JSON.stringify(item));
-    } catch (err) {
-      const error = err as Error;
-      console.log({ errorMessage: error.message });
+    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) as string);
+    const infoOfMessagesInSessionStorage = localStorage.getItem(MESSAGES_INFO) as string;
+    const parsedInfoInSessionStorage = infoOfMessagesInSessionStorage ? JSON.parse(infoOfMessagesInSessionStorage) : [];
+    const messageInSessionStorage = parsedInfoInSessionStorage?.find((message) => message.id === item.id);
+
+    if (messageInSessionStorage) {
+      setSelectedMessage(messageInSessionStorage);
+    } else {
+      try {
+        const messageInfo = await getMessageData(user.address, user.token, item.id);
+
+        messageInfo.seen = true;
+
+        saveInfoOfMessageSelectedInLocalStorage(parsedInfoInSessionStorage, messageInfo);
+
+        setSelectedMessage(messageInfo);
+        localStorage.setItem(SELECTED_MESSAGE, JSON.stringify(messageInfo));
+
+        saveInboxInLocalStorage(inboxInLocalStorage, messageInfo.id);
+        setMessages(inboxInLocalStorage);
+      } catch (err) {
+        const error = err as Error;
+        console.log({ errorMessage: error.message });
+      }
     }
   };
 
