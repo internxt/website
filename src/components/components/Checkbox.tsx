@@ -1,15 +1,25 @@
+import { Check } from '@phosphor-icons/react';
 import { MouseEventHandler } from 'react';
 
 interface CheckboxProps {
   id: string;
   checked: boolean;
+  showCheckIcon?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   required?: boolean;
   className?: string;
   rounded?: string;
 }
 
-function Checkbox({ id, checked, onClick, required, className, rounded }: Readonly<CheckboxProps>): JSX.Element {
+function Checkbox({
+  id,
+  checked,
+  showCheckIcon,
+  onClick,
+  required,
+  className,
+  rounded,
+}: Readonly<CheckboxProps>): JSX.Element {
   return (
     <button className={`relative h-5 w-5 focus-within:outline-primary ${className}`} onClick={onClick}>
       <div
@@ -19,10 +29,12 @@ function Checkbox({ id, checked, onClick, required, className, rounded }: Readon
       >
         {checked && (
           <div
-            className={`flex h-3 w-2.5 cursor-pointer flex-col items-center justify-center rounded-full border bg-white text-white ${
-              checked && 'bg-white'
-            }`}
-          />
+            className={`flex cursor-pointer flex-col items-center justify-center ${
+              rounded ?? 'rounded-full'
+            } text-white`}
+          >
+            {showCheckIcon ? <Check size={16} weight="bold" /> : null}
+          </div>
         )}
       </div>
       <input

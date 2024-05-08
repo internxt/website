@@ -1,9 +1,9 @@
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
-import Checkbox from './Checkbox';
 import Footer from '@/components/layout/Footer';
 import CheckQuestions from './CheckQuestions';
 import { CyberSecurityQuizViews } from '@/lib/types';
 import Link from 'next/link';
+import Checkbox from '../components/Checkbox';
 
 interface ViewProps {
   view: CyberSecurityQuizViews | undefined;
@@ -102,6 +102,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                 <Checkbox
                   onClick={() => handleCheckbox('A')}
                   rounded="rounded-md"
+                  showCheckIcon
                   checked={currentCheckbox === 'A'}
                   id="A"
                 />
@@ -114,6 +115,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                 <Checkbox
                   onClick={() => handleCheckbox('B')}
                   checked={currentCheckbox === 'B'}
+                  showCheckIcon
                   rounded="rounded-md"
                   id="B"
                 />
@@ -127,6 +129,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                   onClick={() => handleCheckbox('C')}
                   rounded="rounded-md"
                   checked={currentCheckbox === 'C'}
+                  showCheckIcon
                   id="C"
                 />
                 <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].C}</p>
@@ -140,6 +143,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                     onClick={() => handleCheckbox('D')}
                     rounded="rounded-md"
                     checked={currentCheckbox === 'D'}
+                    showCheckIcon
                     id="C"
                   />
                   <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].D}</p>
