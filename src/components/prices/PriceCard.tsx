@@ -12,7 +12,6 @@ export interface PriceCardProps {
   cta: any[];
   popular?: boolean;
   lang: string;
-  priceId?: string;
   coupon?: CouponType;
   currency?: string;
   currencyValue?: string;
@@ -34,7 +33,7 @@ export default function PriceCard({
   currencyValue,
   isIframe,
   isOffer,
-}: PriceCardProps) {
+}: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
