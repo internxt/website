@@ -37,7 +37,7 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
 
   return (
     <div
-      className={`group relative z-50 flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
+      className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
     >
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
       <p className={darkMode ? 'text-white' : 'text-gray-60'}>{currentLangText}</p>
