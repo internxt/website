@@ -15,7 +15,6 @@ interface SignUpInlineProps {
 }
 
 export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
-  const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
   const [passwordState, setPasswordState] = useState<
     | {
         tag: 'error' | 'warning' | 'success';
@@ -49,11 +48,7 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
   };
 
   return (
-    <form
-      onFocus={() => autoCompleteOnFocus && setAutoCompleteOnFocus(false)}
-      className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0"
-      onSubmit={onSubmit}
-    >
+    <form className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0" onSubmit={onSubmit}>
       <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-y-0 md:space-x-3">
         <div className="w-full">
           <TextInput
@@ -63,7 +58,6 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             type="email"
             autoComplete="email"
             required
-            autoCompleteOnFocus={autoCompleteOnFocus}
             disabled={props.loading}
           />
         </div>
@@ -81,7 +75,6 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             }
             patternHint={passwordState ? passwordState.label : ''}
             required
-            autoCompleteOnFocus={autoCompleteOnFocus}
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
           />
