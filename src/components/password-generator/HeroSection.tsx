@@ -86,15 +86,7 @@ const HeroSection = ({ textContent }) => {
                   passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : 'border-gray-10'
                 } p-5`}
               >
-                <div className="flex flex-col">
-                  <Checkbox
-                    id="uppercase"
-                    onClick={() => {
-                      setPasswordType('password');
-                    }}
-                    checked={passwordType === 'password'}
-                  />
-                </div>
+                <Checkbox id="uppercase" checked={passwordType === 'password'} />
                 <p className={`text-xl font-medium ${passwordType === 'password' ? 'text-gray-100' : 'text-gray-50'}`}>
                   {textContent.password.title}
                 </p>
@@ -107,15 +99,7 @@ const HeroSection = ({ textContent }) => {
                     : 'border-gray-10'
                 } p-5`}
               >
-                <div className="flex flex-col">
-                  <Checkbox
-                    id="lowercase"
-                    onClick={() => {
-                      setPasswordType('passphrase');
-                    }}
-                    checked={passwordType === 'passphrase'}
-                  />
-                </div>
+                <Checkbox id="lowercase" checked={passwordType === 'passphrase'} />
                 <p
                   className={`text-xl font-medium ${passwordType === 'passphrase' ? 'text-gray-100' : 'text-gray-50'}`}
                 >

@@ -33,7 +33,7 @@ function Checkbox({
               rounded ?? 'rounded-full'
             } text-white`}
           >
-            {showCheckIcon ? <Check size={16} weight="bold" /> : null}
+            {showCheckIcon ? <Check size={16} weight="bold" /> : <div className="rounded-full bg-white p-1" />}
           </div>
         )}
       </div>
