@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import { isMobile } from 'react-device-detect';
 
 import cookies from '@/lib/cookies';
 
