@@ -14,12 +14,12 @@ export default function Footer({
   lang,
   hideNewsletter,
   darkMode,
-}: {
+}: Readonly<{
   textContent: any;
   lang: string;
   hideNewsletter?: boolean;
   darkMode?: boolean;
-}) {
+}>) {
   const [platforms, setPlatforms] = useState<any>();
   const year = moment().format('YYYY');
 
