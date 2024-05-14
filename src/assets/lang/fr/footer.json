@@ -72,7 +72,8 @@
         "passwordChecker": "Vérifier Mot de Passe",
         "byteConverter": "Convertisseur d'Octets",
         "passwordGenerator": "Générateur de Mot de Passe",
-        "fileConverter": "Convertisseur de fichiers"
+        "fileConverter": "Convertisseur de fichiers",
+        "vpn": "Extension VPN"
       },
       "language": "Langue"
     }
