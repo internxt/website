@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/legacy/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
+import Link from 'next/link';
 
 const language = {
   en: 'EN',
@@ -22,8 +23,8 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
         </div>
         <div className="flex w-full max-w-2xl flex-col">
           <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>{' '}
-          {textContent.whyUseConverter.description.map((feature, index) => (
-            <p className="ml-5 list-item pb-1 text-lg font-normal text-gray-80" key={index}>
+          {textContent.whyUseConverter.description.map((feature) => (
+            <p className="ml-5 list-item pb-1 text-lg font-normal text-gray-80" key={feature.adv}>
               {feature.adv}
             </p>
           ))}
@@ -33,12 +34,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
           <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
         </div>
         <div className="flex cursor-pointer">
-          <div
-            onClick={() => {
-              window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank');
-            }}
-            className="flex max-w-4xl cursor-pointer flex-row"
-          >
+          <Link href={'/virus-scanner'} target="_blank" className="flex max-w-4xl cursor-pointer flex-row">
             <Image
               src={`/images/converter-tool/VirusScanner${langUpperCase}.webp`}
               width={897}
@@ -47,7 +43,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
               loading="lazy"
               alt="Virus scanner image"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </section>

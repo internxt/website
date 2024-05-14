@@ -56,7 +56,6 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
         </div>
 
         <div
-          tabIndex={0}
           // eslint-disable-next-line no-unused-expressions
           id={storage}
           className="flex w-full flex-row"

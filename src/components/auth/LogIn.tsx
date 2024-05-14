@@ -13,7 +13,7 @@ interface LogInProps {
   openDialog?: boolean;
 }
 
-export default function LogIn(props: LogInProps) {
+export default function LogIn(props: Readonly<LogInProps>) {
   const globalDialogs = useGlobalDialog();
   const onSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +32,7 @@ export default function LogIn(props: LogInProps) {
 
         <span>
           {props.textContent.LogIn.or}{' '}
-          <a
+          <button
             onClick={() => {
               if (!props.loading) {
                 globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'signup' } });
@@ -41,7 +41,7 @@ export default function LogIn(props: LogInProps) {
             className={`text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
           >
             {props.textContent.LogIn.signup}
-          </a>
+          </button>
         </span>
       </div>
 
@@ -91,7 +91,7 @@ export default function LogIn(props: LogInProps) {
           loading={props.loading}
         />
 
-        <a
+        <button
           onClick={() => {
             if (!props.loading) {
               globalDialogs.openDialog(GlobalDialog.Auth, { data: { mode: 'recover' } });
@@ -100,7 +100,7 @@ export default function LogIn(props: LogInProps) {
           className={`text-center text-primary active:text-primary-dark ${props.loading && 'cursor-not-allowed'}`}
         >
           {props.textContent.LogIn.fields.password.helper}
-        </a>
+        </button>
       </form>
     </>
   );

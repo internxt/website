@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import CheckboxSettings from './CheckboxSettings';
 import { checkPassword, getRandomInteger } from '../utils';
+import Checkbox from '@/components/components/Checkbox';
 
 interface PasswordProperties {
   length: string;
@@ -101,7 +101,9 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
         <div className="flex w-full flex-col items-start space-y-3 md:flex-row md:justify-between md:space-y-0">
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
-              <CheckboxSettings
+              <Checkbox
+                rounded="rounded"
+                showCheckIcon
                 id="uppercase"
                 onClick={() => {
                   setPasswordProperties({
@@ -116,8 +118,10 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
           </div>
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
-              <CheckboxSettings
+              <Checkbox
+                rounded="rounded"
                 id="lowercase"
+                showCheckIcon
                 onClick={() => {
                   setPasswordProperties({
                     ...passwordProperties,
@@ -131,8 +135,10 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
           </div>
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
-              <CheckboxSettings
+              <Checkbox
+                rounded="rounded"
                 id="numbers"
+                showCheckIcon
                 onClick={() => {
                   setPasswordProperties({
                     ...passwordProperties,
@@ -146,8 +152,10 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
           </div>
           <div className="flex flex-row items-center space-x-3">
             <div className="flex flex-col">
-              <CheckboxSettings
+              <Checkbox
+                rounded="rounded"
                 id="symbols"
+                showCheckIcon
                 onClick={() => {
                   setPasswordProperties({
                     ...passwordProperties,

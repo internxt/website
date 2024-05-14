@@ -1,21 +1,20 @@
 import { FunctionComponent, SVGProps } from 'react';
 
-import LightFolder from '/public/icons/file-types/folder.svg';
-import DefaultFile from '/public/icons/file-types/default.svg';
-import AudioFile from '/public/icons/file-types/audio.svg';
-import CodeFile from '/public/icons/file-types/code.svg';
-import FigmaFile from '/public/icons/file-types/figma.svg';
-import ImageFile from '/public/icons/file-types/image.svg';
-import PdfFile from '/public/icons/file-types/pdf.svg';
-import PptFile from '/public/icons/file-types/ppt.svg';
-import TxtFile from '/public/icons/file-types/txt.svg';
-import VideoFile from '/public/icons/file-types/video.svg';
-import WordFile from '/public/icons/file-types/word.svg';
-import XlsFile from '/public/icons/file-types/excel.svg';
-import XmlFile from '/public/icons/file-types/code.svg';
-import CsvFile from '/public/icons/file-types/csv.svg';
-import ZipFile from '/public/icons/file-types/zip.svg';
-import fileExtensionGroups from '../components/file-types';
+import LightFolder from '../public/icons/file-types/folder.svg';
+import DefaultFile from '../public/icons/file-types/default.svg';
+import AudioFile from '../public/icons/file-types/audio.svg';
+import CodeFile from '../public/icons/file-types/code.svg';
+import FigmaFile from '../public/icons/file-types/figma.svg';
+import ImageFile from '../public/icons/file-types/image.svg';
+import PdfFile from '../public/icons/file-types/pdf.svg';
+import PptFile from '../public/icons/file-types/ppt.svg';
+import TxtFile from '../public/icons/file-types/txt.svg';
+import VideoFile from '../public/icons/file-types/video.svg';
+import WordFile from '../public/icons/file-types/word.svg';
+import XlsFile from '../public/icons/file-types/excel.svg';
+import CsvFile from '../public/icons/file-types/csv.svg';
+import ZipFile from '../public/icons/file-types/zip.svg';
+import fileExtensionGroups from '../types/types';
 
 export enum FileExtensionGroup {
   Audio,
@@ -45,7 +44,7 @@ const iconsByFileExtensionGroup = {
   [FileExtensionGroup.Video]: VideoFile,
   [FileExtensionGroup.Word]: WordFile,
   [FileExtensionGroup.Xls]: XlsFile,
-  [FileExtensionGroup.Xml]: XmlFile,
+  [FileExtensionGroup.Xml]: CodeFile,
   [FileExtensionGroup.Csv]: CsvFile,
   [FileExtensionGroup.Zip]: ZipFile,
   [FileExtensionGroup.Default]: DefaultFile,
@@ -89,7 +88,6 @@ export const icons = {
   VideoFile,
   WordFile,
   XlsFile,
-  XmlFile,
   ZipFile,
   DefaultFile,
   LightFolder,

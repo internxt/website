@@ -47,5 +47,4 @@ const PaymentsSection = ({ textContent }) => {
     </section>
   );
 };
-
 export default PaymentsSection;

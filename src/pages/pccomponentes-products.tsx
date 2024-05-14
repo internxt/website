@@ -7,7 +7,7 @@ import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types/types';
+import { CouponType } from '@/lib/types';
 
 const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -26,7 +26,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   const isLifetime = activeSwitchPlan === 'Lifetime';
 
   const priceForSubscriptions = (product) => {
-    const priceWithDiscount = Number((product.price * 0.5).toString());
+    const priceWithDiscount = Number((product.price * 0.25).toString());
     const firstPartOfPrice = priceWithDiscount.toString().split('.')[0];
     const secondPartOfPrice = priceWithDiscount.toString().split('.')[1].trim().slice(0, 2);
     return firstPartOfPrice + '.' + secondPartOfPrice;

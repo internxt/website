@@ -23,9 +23,9 @@ const FeatureSection = ({ textContent }) => (
 
       <RevealY className="hidden w-full flex-col items-center justify-center pt-6 md:flex">
         <picture>
-          <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
+          <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
           <img
-            src="/images/home/Internxt-secure-cloud-storage.webp"
+            src="/images/home/internxt_secure_cloud_storage.webp"
             alt="Internxt secure cloud storage"
             width={757}
             draggable={false}
@@ -34,9 +34,9 @@ const FeatureSection = ({ textContent }) => (
       </RevealY>
       <RevealY className="flex h-full w-full flex-col pt-6 md:hidden">
         <picture>
-          <source srcSet="/images/home/Internxt-secure-cloud-storage.webp" type="image/webp" />
+          <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
           <img
-            src="/images/home/Internxt-secure-cloud-storage.webp"
+            src="/images/home/internxt_secure_cloud_storage.webp"
             alt="Internxt secure cloud storage"
             draggable={false}
           />

@@ -70,6 +70,10 @@
     "line1": "Convert, store, and secure.",
     "blueText": "Effortless file conversion with Internxt"
   },
+  "SignUpWebDAVBanner": {
+    "line1": "Use the Internxt CLI for",
+    "blueText": "advanced file management with Internxt"
+  },
   "SignUpVPNBanner": {
     "line1": "Secure while you surf.",
     "blueText": "Encrypted, private VPN from Internxt"
@@ -115,15 +119,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Internxt’s free file converter is now available!",
-      "normalText": " Convert, store, secure.",
-      "cta": "Convert files"
+      "boldText": "Up to 75% off.",
+      "normalText": "Feel the force of secure cloud storage! ",
+      "cta": "Choose plan"
     }
   },
   "lifetimeBanner": {
-    "label": "Need secure storage for life?",
-    "title": "Protect your files forever with our lifetime plans!",
-    "cta": "Choose your plan",
+    "label": "Secure your files forever",
+    "title": "Get lifetime access to secure, private cloud storage with Internxt!",
+    "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee"
   }
 }

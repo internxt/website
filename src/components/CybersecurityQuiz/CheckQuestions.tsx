@@ -2,7 +2,7 @@ import QuestionsSection from './QuestionsSection';
 import ReactMarkdown from 'react-markdown';
 
 const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
-  const isCorrectAnswer: Boolean[] = correctAnswers.map((answer, index) => {
+  const isCorrectAnswer = correctAnswers.map((answer, index) => {
     return answers[index] === answer;
   });
 

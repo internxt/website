@@ -37,7 +37,8 @@ const SecondFeaturesSection = ({ textContent }) => {
         <RevealX direction="right" className="flex max-w-[250px] flex-col">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
-              <div
+              <button
+                key={info.title}
                 className={`flex ${
                   cardIndex === index ? 'border-gray-80' : 'border-gray-10'
                 } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
@@ -46,7 +47,7 @@ const SecondFeaturesSection = ({ textContent }) => {
                 }}
               >
                 <p className="text-2xl font-medium text-gray-100  hover:text-primary">{info.title}</p>
-              </div>
+              </button>
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </Fragment>
           ))}

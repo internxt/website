@@ -1,9 +1,43 @@
 import Image from 'next/legacy/image';
 import React from 'react';
-import { infoCards } from './components/cards';
 import SignUpBanner from '@/components/banners/SignUpBanner';
+import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
 
 export const InfoSection = ({ textContent, bannerText, lang }) => {
+  const infoCards = (lang) => {
+    return [
+      {
+        icon: Bug,
+        title: textContent.whyUseDisposableMail.infoCards[0].title,
+        description: textContent.whyUseDisposableMail.infoCards[0].description,
+      },
+      {
+        icon: EyeSlash,
+        title: textContent.whyUseDisposableMail.infoCards[1].title,
+        description: textContent.whyUseDisposableMail.infoCards[1].description,
+      },
+      {
+        icon: Tray,
+        title: textContent.whyUseDisposableMail.infoCards[2].title,
+        description: textContent.whyUseDisposableMail.infoCards[2].description,
+      },
+      {
+        icon: Detective,
+        title: textContent.whyUseDisposableMail.infoCards[3].title,
+        description: textContent.whyUseDisposableMail.infoCards[3].description,
+      },
+      {
+        icon: UserPlus,
+        title: textContent.whyUseDisposableMail.infoCards[4].title,
+        description: textContent.whyUseDisposableMail.infoCards[4].description,
+      },
+      {
+        icon: Gift,
+        title: textContent.whyUseDisposableMail.infoCards[5].title,
+        description: textContent.whyUseDisposableMail.infoCards[5].description,
+      },
+    ];
+  };
   return (
     <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">

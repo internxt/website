@@ -2,6 +2,7 @@ import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import { Password, CaretRight, LockKey, ShieldCheck, Key } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const WhatWeDoSection = ({
   textContent,
@@ -40,7 +41,7 @@ const WhatWeDoSection = ({
   ];
 
   return (
-    <section className={`overflow-hidden ${backgroundColor ? backgroundColor : ''}`}>
+    <section className={`overflow-hidden ${backgroundColor}`}>
       <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
         <RevealY className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <h3 className="text-center text-3xl font-semibold text-gray-100 lg:text-5xl">
@@ -56,15 +57,14 @@ const WhatWeDoSection = ({
           </p>
 
           {!withoutCta && (
-            <div
+            <Link
+              href={'/privacy'}
+              target="_blank"
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
-              onClick={() => {
-                window.open(`${window.location.origin}/${router.locale}/privacy`, '_blank');
-              }}
             >
               <span>{textContent.section7.cta}</span>
               <CaretRight size={16} weight="bold" />
-            </div>
+            </Link>
           )}
         </RevealY>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">

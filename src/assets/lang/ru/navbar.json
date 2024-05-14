@@ -2,7 +2,6 @@
   "links": {
     "products": "Продукты",
     "about": "О нас",
-    "needVPN": "Нужен VPN?",
     "ourValues": "Наши ценности",
     "pricing": "Тарифы",
     "login": "Войти",
@@ -15,7 +14,7 @@
   },
   "products": {
     "drive": "Internxt Drive",
-    "photos": "Internxt Photos",
+    "webDAV": "Internxt WebDAV",
     "send": "Internxt Send",
     "comingSoon": "В разработке",
     "new": "Новый"

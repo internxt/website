@@ -4,7 +4,7 @@ import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 
-const FILE_SCANNER_URL = process.env.FILE_SCANNER_URL;
+const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
 
 const HeroSection = ({ textContent }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
@@ -41,7 +41,7 @@ const HeroSection = ({ textContent }) => {
       body: formdata,
     };
 
-    fetch(`${FILE_SCANNER_URL}/filescan`, requestOptions)
+    fetch(`/api/scan`, requestOptions)
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
@@ -89,7 +89,7 @@ const HeroSection = ({ textContent }) => {
       setDragEnter(false);
       setFileSizeLimitReached(false);
       setIsSelectedFile(true);
-      if (fileInput.files[0].size >= maxFileSize) {
+      if (fileInput.files[0] && fileInput.files[0].size >= maxFileSize) {
         setFileSizeLimitReached(true);
       } else {
         setFile(fileInput.files[0]);
@@ -200,20 +200,23 @@ const HeroSection = ({ textContent }) => {
                         {isScanFinished ? (
                           <div className="flex flex-row items-center space-x-1.5">
                             {scanResult?.isInfected ? (
-                              <WarningCircle weight="fill" size={24} className="text-red" />
+                              <div className="flex flex-row gap-2">
+                                <WarningCircle weight="fill" size={24} className="text-red" />
+                                <span
+                                  className={`text-lg font-semibold text-red
+                              `}
+                                >
+                                  {textContent.table.virusDetected}
+                                </span>
+                              </div>
                             ) : (
-                              <CheckCircle weight="fill" size={24} className="text-green" />
+                              <div className="flex flex-row gap-2">
+                                <CheckCircle weight="fill" size={24} className="text-green" />
+                                <span className={`text-lg font-semibold text-green-dark`}>
+                                  {textContent.table.noVirusDetected}
+                                </span>
+                              </div>
                             )}
-                            <span
-                              className={`text-lg font-semibold ${
-                                scanResult?.isInfected ? 'text-red' : 'text-green-dark'
-                              }`}
-                            >
-                              {scanResult &&
-                                (scanResult.isInfected
-                                  ? textContent.table.virusDetected
-                                  : textContent.table.noVirusDetected)}
-                            </span>
                           </div>
                         ) : (
                           <div></div>
@@ -443,7 +446,7 @@ const HeroSection = ({ textContent }) => {
             )}
 
             {isError && (
-              <div className="absolute inset-0 z-50 flex h-full w-full flex-row items-center justify-center overflow-hidden rounded-xl bg-primary bg-opacity-3">
+              <div className="fixed inset-0 z-50 flex h-screen w-full flex-row items-center justify-center overflow-hidden rounded-xl bg-primary bg-opacity-3">
                 <button
                   className="absolute inset-0 cursor-pointer bg-black bg-opacity-40"
                   onClick={() => {

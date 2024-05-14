@@ -14,12 +14,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save up to 75%",
-      "title": "Secure your online identity for a lifetime",
+      "label": "Save 75%",
+      "title": "Protect your data from the dark side",
       "subtitle": "Subscribe and save with Internxt.",
-      "cta": "Choose plan",
+      "cta": "Get 75% OFF now",
       "guarantee": "30-day money-back guarantee",
-      "lastCta": "*Offer is for free accounts or new customers"
+      "lastCta": ""
     },
     "features": {
       "endToEnd": "End-to-end encrypted",
@@ -87,15 +87,15 @@
         ]
       },
       {
-        "question": "How much does an Internxt plan cost?",
+        "question": "Does Internxt have lifetime plans?",
         "answer": [
-          "Need more storage? We also offer individual plans that range from 200GB to 10TB, from as low as €4.99/month."
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
         ]
       },
       {
-        "question": "Does Internxt have lifetime plans?",
+        "question": "Can I add more storage to my lifetime plan?",
         "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage. After 9 years of usage, lifetime memberships come with a small, symbolic €99 maintenance fee to cover the long-term costs derived from the storage usage of your account, which you can pay if you want to keep your account after 9 years. This helps keep our services sustainable, independent, and secure."
+          "Yes, you can add up as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so that we can stack them together for you on the same account."
         ]
       }
     ]
@@ -103,15 +103,15 @@
   "SchemaMarkupQuestions": {
     "faq": [
       {
-        "question": "How much does an Internxt plan cost?",
+        "question": "Does Internxt have lifetime plans?",
         "answer": [
-          "Need more storage? We also offer individual plans that range from 20GB to 2TB, from as low as €4.99/month."
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
         ]
       },
       {
-        "question": "Does Internxt have lifetime plans?",
+        "question": "Can I add more storage to my lifetime plan?",
         "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage. After 9 years of usage, lifetime memberships come with a small, symbolic €99 maintenance fee to cover the long-term costs derived from the storage usage of your account, which you can pay if you want to keep your account after 9 years. This helps keep our services sustainable, independent, and secure."
+          "Yes, you can add up as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so that we can stack them together for you on the same account."
         ]
       }
     ]

@@ -6,6 +6,7 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
+import { useEffect, useState } from 'react';
 import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
 
@@ -21,10 +22,25 @@ const Footer = dynamic(() => import('@/components/layout/Footer'));
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const [darkModeForDesk, setDarkModeForDesk] = useState<boolean>(false);
+
+  const handleResize = () => {
+    setDarkModeForDesk(window.innerWidth >= 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isQuizSection={darkModeForDesk} />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 

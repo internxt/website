@@ -11,10 +11,10 @@ interface SignUpInlineProps {
   error?: string;
   loading?: boolean;
   isBanner?: boolean;
+  darkMode?: boolean;
 }
 
-export default function SignUpInline(props: SignUpInlineProps) {
-  const [autoCompleteOnFocus, setAutoCompleteOnFocus] = useState<boolean>(true);
+export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
   const [passwordState, setPasswordState] = useState<
     | {
         tag: 'error' | 'warning' | 'success';
@@ -48,13 +48,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
   };
 
   return (
-    <form
-      className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0"
-      onClick={() => {
-        autoCompleteOnFocus && setAutoCompleteOnFocus(false);
-      }}
-      onSubmit={onSubmit}
-    >
+    <form className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0" onSubmit={onSubmit}>
       <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-y-0 md:space-x-3">
         <div className="w-full">
           <TextInput
@@ -64,7 +58,6 @@ export default function SignUpInline(props: SignUpInlineProps) {
             type="email"
             autoComplete="email"
             required
-            autoCompleteOnFocus={autoCompleteOnFocus}
             disabled={props.loading}
           />
         </div>
@@ -80,9 +73,8 @@ export default function SignUpInline(props: SignUpInlineProps) {
                 ? '[\\s\\S]+'
                 : '^[]{1}'
             }
-            patternHint={passwordState && passwordState.label}
+            patternHint={passwordState ? passwordState.label : ''}
             required
-            autoCompleteOnFocus={autoCompleteOnFocus}
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
           />
@@ -116,8 +108,7 @@ export default function SignUpInline(props: SignUpInlineProps) {
             disabled={props.loading}
           />
         </div>
-
-        <span className="w-full text-sm text-gray-50 sm:text-left">
+        <span className={`w-full text-sm ${props.darkMode ? 'text-white' : 'text-gray-50'} sm:text-left`}>
           <span>{props.textContent.disclaimer.text}</span>{' '}
           <a href="/legal" target="_blank" className="underline hover:text-gray-60 active:text-gray-80">
             {props.textContent.disclaimer.link}

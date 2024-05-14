@@ -79,6 +79,13 @@
     "dataAccess": "Kein unbefugter Datenzugriff"
   },
   "productFeatures": {
+    "starWarsFeatures": {
+      "title": "Sonderausgabe Gratiszugaben:",
+      "200GB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
+      "2TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
+      "5TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
+      "10TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App", "Star Wars Aufkleber"]
+    },
     "200GB": [
       "200GB verschlüsselter Speicher",
       "Verschlüsselte Datei- und Ordnerfreigabe",

@@ -1,75 +1,81 @@
 import axios from 'axios';
-import { MessageObjProps } from '../types/types';
+import { MessageObjProps, UserProps } from '../types/types';
 
-export const EMAIL_STORAGE_KEY = 'email';
+export const EMAIL_STORAGE_KEY = 'temp-mail-user-data';
 export const SETUP_TIME_STORAGE_KEY = 'setupTime';
 export const INBOX_STORAGE_KEY = 'inbox';
+export const MESSAGES_INFO = 'info-of-messages';
+export const SELECTED_MESSAGE = 'selectedMessage';
 
 export const TIME_NOW = new Date().getTime();
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
-const getEmail = async () => {
+const fetchNewEmail = async (): Promise<UserProps> => {
   const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
 
-  return email.data;
+  const { data: userInfo } = email;
+
+  return userInfo;
 };
 
-const fetchInbox = async (token: string) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?token=${token}`);
+const fetchInbox = async (email: string, token: string) => {
+  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?email=${email}&token=${token}`);
 
   const { data } = inbox;
 
-  if (data.expired) {
-    return { expired: data.expired };
-  } else {
-    return data.emails;
-  }
+  return data;
 };
 
-const createEmail = async () => {
-  try {
-    const fetchEmail = await getEmail();
+const getMessageData = async (email: string, token: string, messageId: string): Promise<MessageObjProps> => {
+  const messageData = await axios.get(
+    `${window.origin}/api/temp-mail/get-message?email=${email}&token=${token}&messageId=${messageId}`,
+  );
 
-    return fetchEmail;
-  } catch (err) {
-    const error = err as Error;
-  }
+  return messageData.data;
 };
 
-const fetchAndFormatInbox = async (
-  userToken: string,
-  messagesLength: number,
-): Promise<MessageObjProps[] | undefined> => {
+const fetchAndFormatInbox = async (email: string, userToken: string): Promise<MessageObjProps[] | undefined> => {
   try {
-    const inbox = await fetchInbox(userToken);
+    const inbox = await fetchInbox(email, userToken);
 
-    if (inbox.expired || inbox == null) return;
-    if (inbox.length > 0) {
-      let messagesId = messagesLength;
-      const messages = inbox.map((item, index) => {
-        messagesId++;
-        return {
-          ...item,
-          opened: false,
-          id: messagesId,
-        };
-      });
+    if (inbox == null) return;
 
-      return messages;
+    if (inbox === 'Email has expired') {
+      throw new Error('Auto fetching email');
     }
 
-    return [];
+    return inbox;
   } catch (err) {
     const error = err as Error;
     throw new Error(error.message);
   }
 };
 
+function saveInfoOfMessageSelectedInLocalStorage(parsedInfoInSessionStorage, messageInfo) {
+  const infoOfMessagesObj = JSON.stringify([...parsedInfoInSessionStorage, messageInfo]);
+  localStorage.setItem(MESSAGES_INFO, infoOfMessagesObj);
+}
+
+function saveInboxInLocalStorage(inboxInLocalStorage, messageInfoId: string) {
+  const messageInLocalStorageInbox = inboxInLocalStorage.find((message) => message.id === messageInfoId);
+  messageInLocalStorageInbox.seen = true;
+  localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(inboxInLocalStorage));
+}
+
 function removeLocalStorage() {
   localStorage.removeItem(EMAIL_STORAGE_KEY);
   localStorage.removeItem(SETUP_TIME_STORAGE_KEY);
   localStorage.removeItem(INBOX_STORAGE_KEY);
-  localStorage.removeItem('selectedMessage');
+  localStorage.removeItem(MESSAGES_INFO);
+  localStorage.removeItem(SELECTED_MESSAGE);
 }
 
-export { createEmail, fetchInbox, fetchAndFormatInbox, removeLocalStorage };
+export {
+  fetchNewEmail,
+  fetchInbox,
+  getMessageData,
+  fetchAndFormatInbox,
+  saveInfoOfMessageSelectedInLocalStorage,
+  saveInboxInLocalStorage,
+  removeLocalStorage,
+};

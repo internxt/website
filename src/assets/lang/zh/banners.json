@@ -96,15 +96,15 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Internxt 的免费文件转换器现已上线！",
-      "normalText": "转换、存储、保护。",
-      "cta": "转换文件"
+      "boldText": "最高可享受75%的折扣。",
+      "normalText": "感受安全云存储的力量！",
+      "cta": "选择计划"
     }
   },
   "lifetimeBanner": {
-    "label": "寻找终身安全的数据存储？",
-    "title": "通过Internxt的终身计划保护您的文件！",
-    "cta": "选择计划",
-    "guarantee": "30天内退款保证"
+    "label": "永久保护您的文件",
+    "title": "通过Internxt获得终身访问安全的私人云存储！",
+    "cta": "选择您的计划",
+    "guarantee": "30天退款保证"
   }
 }

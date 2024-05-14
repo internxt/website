@@ -12,6 +12,7 @@ import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
+import { CouponType } from '@/lib/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -22,13 +23,36 @@ interface PriceTableProps {
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
+const LIFETIME_PRICES = {
+  eur: {
+    '2TB': 199,
+    '5TB': 299,
+    '10TB': 499,
+  },
+  usd: {
+    '2TB': 249,
+    '5TB': 349,
+    '10TB': 549,
+  },
+};
+
 export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+
+  const [lifetimeCouponCode, setLifetimeCouponCode] = useState();
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
 
   const banner = require('@/assets/lang/en/banners.json');
-  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({});
+  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
+    couponCode: CouponType.starWarsSubscription,
+  });
+
+  useEffect(() => {
+    stripeService.getLifetimeCoupons().then((coupon) => {
+      setLifetimeCouponCode(coupon);
+    });
+  }, []);
 
   const features = [
     {
@@ -56,7 +80,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   return (
     <section className="overflow-hidden bg-white">
       <div className="flex flex-col items-center space-y-10 py-20">
-        <div className="flex flex-col items-center space-y-10 pt-12">
+        <div className="flex flex-col items-center space-y-10">
           <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />
 
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
@@ -184,17 +208,14 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   storage={product.storage}
                   price={product.price}
                   billingFrequency={billingFrequency}
-                  popular={product.storage === '5TB'}
+                  popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
-                  priceBefore={
-                    billingFrequency === Interval.Year
-                      ? products?.individuals?.[Interval.Month][product.storage].price * 12
-                      : undefined
-                  }
+                  priceBefore={coupon ? product.price : undefined}
                   lang={lang}
                   currency={currency}
-                  coupon={undefined}
+                  coupon={coupon}
                   currencyValue={currencyValue}
+                  isOffer
                 />
               ))}
           </div>
@@ -218,15 +239,18 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price.split('.')[0]}
-                    priceBefore={coupon ? product.price.split('.')[0] : undefined}
+                    price={
+                      lifetimeCouponCode ? LIFETIME_PRICES[currencyValue][product.storage] : product.price.split('.')[0]
+                    }
+                    priceBefore={lifetimeCouponCode ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
-                    popular={product.storage === '5TB'}
+                    popular={product.storage === '10TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={coupon ?? undefined}
+                    coupon={lifetimeCouponCode?.[product.storage] ?? undefined}
+                    isOffer
                   />
                 );
               })}

@@ -2,7 +2,6 @@
   "links": {
     "products": "Produits",
     "about": "À propos",
-    "needVPN": "Besoin d'un VPN?",
     "ourValues": "Nos valeurs",
     "pricing": "Tarifs",
     "login": "Se connecter",
@@ -15,7 +14,7 @@
   },
   "products": {
     "drive": "Internxt Drive",
-    "photos": "Internxt Photos",
+    "webDAV": "Internxt WebDAV",
     "send": "Internxt Send",
     "comingSoon": "Proximité",
     "new": "Nouveau"
