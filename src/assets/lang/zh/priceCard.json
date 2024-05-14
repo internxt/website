@@ -28,7 +28,7 @@
     "business": "商业"
   },
   "billingFrequencyLabel": {
-    "lifetime": "终身访问",
+    "lifetime": "一次性付款",
     "monthly": "按月结算",
     "semiannually": "每半年结算一次",
     "annually": "每年计费",

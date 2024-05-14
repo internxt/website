@@ -27,7 +27,7 @@
     "business": "Бизнес"
   },
   "billingFrequencyLabel": {
-    "lifetime": "Пожизненный доступ",
+    "lifetime": "Одноразовый платеж",
     "monthly": "ежемесячный платеж",
     "semiannually": "платеж раз в полгода",
     "annually": "Ежегодная оплата",
