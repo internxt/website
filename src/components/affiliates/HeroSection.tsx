@@ -1,3 +1,4 @@
+import { IMPACT_INXT_BRAND_URL, IMPACT_LOGIN_USER_URL } from '@/constants';
 import Image from 'next/legacy/image';
 
 const HeroSection = ({ textContent }) => {
@@ -20,11 +21,7 @@ const HeroSection = ({ textContent }) => {
               <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
                 <button
                   onClick={() => {
-                    window.open(
-                      'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1',
-                      '_blank',
-                      'noopener noreferrer nofollow',
-                    );
+                    window.open(IMPACT_INXT_BRAND_URL, '_blank', 'noopener noreferrer nofollow');
                   }}
                   className="flex cursor-pointer items-center rounded-lg border border-primary bg-primary px-5 py-3 hover:bg-primary-dark"
                 >
@@ -32,7 +29,7 @@ const HeroSection = ({ textContent }) => {
                 </button>
                 <button
                   onClick={() => {
-                    window.open('https://app.impact.com/login.user', '_blank', 'noopener noreferrer nofollow');
+                    window.open(IMPACT_LOGIN_USER_URL, '_blank', 'noopener noreferrer nofollow');
                   }}
                   className="flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 hover:bg-blue-10"
                 >

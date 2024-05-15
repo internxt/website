@@ -8,6 +8,7 @@ import { FeaturesSection } from '@/components/file-converter/main-state/Features
 import CtaSection from '@/components/shared/CtaSection';
 import QASection from '@/components/shared/FaqSection';
 import Footer from '@/components/layout/Footer';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const FileConverter = ({
   metatagsDescriptions,
@@ -32,11 +33,11 @@ const FileConverter = ({
         lang={lang}
       />
 
-      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
+      <CtaSection textContent={textContent.CtaSection} url={SIGNUP_DRIVE_WEB_URL} />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection textContent={textContent.CtaSection2} url="https://drive.internxt.com/new" />
+      <CtaSection textContent={textContent.CtaSection2} url={SIGNUP_DRIVE_WEB_URL} />
 
       <QASection textContent={textContent.QASection} />
 

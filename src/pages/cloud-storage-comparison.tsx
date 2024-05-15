@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import TableSection from '@/components/comparison/TableSection';
 import FeatureSection from '@/components/comparison/FeatureSection';
@@ -14,8 +13,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
-
-const URL_REDIRECT = 'https://drive.internxt.com/new';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
@@ -50,7 +48,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
+        <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB_URL} />
 
         <Footer textContent={footerLang} lang={lang} darkMode={false} />
       </Layout>

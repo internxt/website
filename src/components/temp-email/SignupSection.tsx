@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from '../../components/techradar-discount/Background.module.scss';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 export const SignupSection = ({ textContent }) => (
   <section className="overflow-hidden">
@@ -11,7 +11,7 @@ export const SignupSection = ({ textContent }) => (
       <button
         className="flex cursor-pointer rounded-lg bg-white px-6 py-2 hover:bg-blue-10"
         onClick={() => {
-          window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+          window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
         }}
       >
         <p className="text-base font-semibold text-primary">{textContent.createAccount}</p>

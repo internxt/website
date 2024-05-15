@@ -8,6 +8,18 @@ import Image from 'next/legacy/image';
 import axios from 'axios';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
+import {
+  HELP_CENTER_INXT_URL,
+  INXT_INSTAGRAM_URL,
+  INXT_FACEBOOK_URL,
+  INXT_GITHUB_URL,
+  INXT_SEND_URL,
+  INXT_TWITTER_URL,
+  INXT_LINKEDIN_URL,
+  LOGIN_DRIVE_WEB_URL,
+  MAILERLITE_NEWSLETTER_URL,
+  SIGNUP_DRIVE_WEB_URL,
+} from '@/constants';
 
 export default function Footer({
   textContent,
@@ -96,7 +108,7 @@ export default function Footer({
               method="post"
               target="_blank"
               rel="noopener"
-              action="https://app.mailerlite.com/webforms/submit/r3s4c1"
+              action={MAILERLITE_NEWSLETTER_URL}
               className="flex w-full flex-col items-center justify-center md:flex-row"
             >
               <input type="hidden" name="ml-submit" value="1" />
@@ -152,7 +164,7 @@ export default function Footer({
                     </Link>
 
                     <a
-                      href="https://send.internxt.com"
+                      href={INXT_SEND_URL}
                       target="_blank"
                       rel="noreferrer"
                       className="flex flex-row items-center hover:text-primary"
@@ -256,33 +268,28 @@ export default function Footer({
                     <Link href="/newsletter-subscribe" className="hover:text-primary" legacyBehavior>
                       {textContent.FooterSection.sections.join.newsletter}
                     </Link>
-                    <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
+                    <Link href={SIGNUP_DRIVE_WEB_URL} target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
-                    </a>
+                    </Link>
 
                     <button
                       onClick={() => {
-                        window.open('https://help.internxt.com', '_blank', 'noopener noreferrer');
+                        window.open(HELP_CENTER_INXT_URL, '_blank', 'noopener noreferrer');
                       }}
                       className="cursor-pointer hover:text-primary"
                     >
                       {textContent.FooterSection.sections.join.support}
                     </button>
 
-                    <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
+                    <Link href={LOGIN_DRIVE_WEB_URL} target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}
-                    </a>
+                    </Link>
 
-                    <a
-                      href="https://github.com/internxt"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-primary"
-                    >
+                    <Link href={INXT_GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.github}
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href={`/whitepaper/internxt-white-paper.pdf`}
                       target="_blank"
                       rel="noreferrer"
@@ -290,11 +297,11 @@ export default function Footer({
                       className="hover:text-primary"
                     >
                       {textContent.FooterSection.sections.join.whitePaper}
-                    </a>
+                    </Link>
 
-                    <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
+                    <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
-                    </a>
+                    </Link>
 
                     <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
                       {textContent.FooterSection.sections.join.storageForEducation}
@@ -432,7 +439,7 @@ export default function Footer({
                 </p>
               </div>
               <div className="flex flex-row space-x-1">
-                <a href="https://twitter.com/Internxt" target="_blank" className="h-4 py-[7px] pr-2" rel="noreferrer">
+                <a href={INXT_TWITTER_URL} target="_blank" className="h-4 py-[7px] pr-2" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-3.5"
@@ -441,12 +448,7 @@ export default function Footer({
                     alt="twitter icon"
                   />
                 </a>
-                <a
-                  href="https://www.facebook.com/internxt"
-                  target="_blank"
-                  className="h-6 py-1.5 pr-2"
-                  rel="noreferrer"
-                >
+                <a href={INXT_FACEBOOK_URL} target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-4"
@@ -455,12 +457,7 @@ export default function Footer({
                     alt="facebook icon"
                   />
                 </a>
-                <a
-                  href="https://linkedin.com/company/internxt"
-                  target="_blank"
-                  className="h-6 py-1.5 pr-2"
-                  rel="noreferrer"
-                >
+                <a href={INXT_LINKEDIN_URL} target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-4"
@@ -483,13 +480,13 @@ export default function Footer({
                     alt="youtube icon"
                   />
                 </a>
-                <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
+                <a href={INXT_INSTAGRAM_URL} target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-4"
                     src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`}
                     draggable="false"
-                    alt="instagram icon"
+                    alt="Instagram icon"
                   />
                 </a>
               </div>
@@ -538,12 +535,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.products.webDAV}
                       </Link>
 
-                      <a
-                        href="https://send.internxt.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center"
-                      >
+                      <a href={INXT_SEND_URL} target="_blank" rel="noreferrer" className="flex flex-row items-center">
                         <div className="flex flex-row space-x-2">
                           <PaperPlaneTilt className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.send}</p>
@@ -650,18 +642,18 @@ export default function Footer({
                         darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
-                      <a href="/newsletter-subscribe" target="_top" className="hover:text-primary">
+                      <Link href="/newsletter-subscribe" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.newsletter}
-                      </a>
-                      <a href="https://drive.internxt.com/new" target="_blank">
+                      </Link>
+                      <a href={SIGNUP_DRIVE_WEB_URL} target="_blank">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
 
-                      <a href="https://drive.internxt.com/login" target="_blank">
+                      <a href={LOGIN_DRIVE_WEB_URL} target="_blank">
                         {textContent.FooterSection.sections.join.login}
                       </a>
 
-                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
+                      <a href={INXT_GITHUB_URL} target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.join.github}
                       </a>
                       <a href="/whitepaper/internxt-white-paper.pdf" download={true} className="hover:text-primary">
@@ -779,7 +771,7 @@ export default function Footer({
 
             <div className="flex flex-col items-center space-y-4 py-10">
               <div className="flex flex-row space-x-1">
-                <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-2 pr-6" rel="noreferrer">
+                <a href={INXT_TWITTER_URL} target="_blank" className="h-8 py-2 pr-6" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-4"
@@ -788,12 +780,7 @@ export default function Footer({
                     alt="twitter icon"
                   />
                 </a>
-                <a
-                  href="https://www.facebook.com/internxt"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
+                <a href={INXT_FACEBOOK_URL} target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-5"
@@ -802,12 +789,7 @@ export default function Footer({
                     alt="facebook icon"
                   />
                 </a>
-                <a
-                  href="https://linkedin.com/company/internxt"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
+                <a href={INXT_LINKEDIN_URL} target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-5"
@@ -830,7 +812,7 @@ export default function Footer({
                     alt="youtube icon"
                   />
                 </a>
-                <a href="https://instagram.com/internxt/" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
+                <a href={INXT_INSTAGRAM_URL} target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
                   <img
                     loading="lazy"
                     className="h-5"

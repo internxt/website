@@ -7,6 +7,7 @@ import { ToolsSection } from '@/components/shared/ToolsSection';
 import { ConverterSection } from '@/components/file-converter/ConverterSection';
 import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const FileConverter = ({
   metatagsDescriptions,
@@ -34,7 +35,7 @@ const FileConverter = ({
 
       <FeaturesSection textContent={textContent.FeaturesSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
+      <CtaSection textContent={textContent.CtaSection} url={SIGNUP_DRIVE_WEB_URL} />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 

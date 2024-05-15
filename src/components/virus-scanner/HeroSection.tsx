@@ -3,6 +3,8 @@ import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
+import Link from 'next/link';
 
 const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
 
@@ -257,9 +259,9 @@ const HeroSection = ({ textContent }) => {
                                       <span>{textContent.table.noVirusesDetected.subtitle}</span>
                                     </div>
 
-                                    <a href="https://drive.internxt.com/new" target="_top" className="button-primary">
+                                    <Link href={SIGNUP_DRIVE_WEB_URL} target="_top" className="button-primary">
                                       {textContent.table.noVirusesDetected.cta}
-                                    </a>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>

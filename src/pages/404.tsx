@@ -1,9 +1,9 @@
-import React from 'react';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import navbarLang from '@/assets/lang/en/navbar.json';
 import footerLang from '@/assets/lang/en/footer.json';
 import { House, Lifebuoy, Question } from '@phosphor-icons/react';
+import { HELP_CENTER_INXT_URL } from '@/constants';
 export default function Custom404() {
   const cards = [
     {
@@ -16,7 +16,7 @@ export default function Custom404() {
       icon: Question,
       title: 'Visit Help Center',
       description: 'Troubleshoot common issues and browse our FAQ.',
-      urlRedirect: 'https://help.internxt.com/',
+      urlRedirect: HELP_CENTER_INXT_URL,
     },
     {
       icon: Lifebuoy,

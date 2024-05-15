@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import { INXT_SEND_URL } from '@/constants';
 
 const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
   <div className="absolute z-10 hidden h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center lg:top-[120px] lg:flex">
@@ -16,7 +16,7 @@ const ProductsNavigation = ({ textContent, selectedItem, lang }) => (
       </Link>
 
       <a
-        href="https://send.internxt.com"
+        href={INXT_SEND_URL}
         target="_blank"
         rel="noreferrer"
         className={`relative whitespace-nowrap py-1.5 px-4 font-semibold transition duration-150 ease-in-out ${
