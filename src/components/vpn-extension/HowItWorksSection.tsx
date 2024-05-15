@@ -27,9 +27,9 @@ export const HowItWorksSection = ({ textContent }) => {
           <p className="text-2xl font-medium text-gray-80">{textContent.subtitle}</p>
           <p className="text-lg text-gray-80">{textContent.description}</p>
         </div>
-        <div className="flex flex-row flex-wrap gap-8">
+        <div className="flex flex-row flex-wrap justify-center gap-8">
           {cards.map((card) => (
-            <div className="flex w-full max-w-[350px] flex-col space-y-6 rounded-2xl bg-white p-10">
+            <div className="flex w-full flex-col space-y-6 rounded-2xl bg-white p-10 sm:max-w-[350px]" key={card.title}>
               <card.icon size={32} className="text-primary" />
               <p className="text-2xl font-medium text-gray-100">{card.title}</p>
               <p className="text-lg text-gray-80">{card.description}</p>

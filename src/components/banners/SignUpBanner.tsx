@@ -6,11 +6,13 @@ const SignUpBanner = ({ textContent, lang }: { textContent: any; lang: string })
 
   return (
     <section className="flex w-full max-w-[877px] overflow-hidden bg-gradient-to-br from-blue-20 to-white">
-      <div className="flex flex-row items-center justify-center">
-        <div className="mt-11 mb-11 flex w-full max-w-[490px] flex-col items-center justify-center space-y-10 px-5 lg:ml-11 lg:px-0">
-          <p className="text-center text-4xl font-semibold lg:text-left">
-            {textContent.line1} <span className="text-primary">{textContent.blueText}</span>
-          </p>
+      <div className="flex w-full flex-row items-center justify-center lg:w-max">
+        <div className="mt-11 mb-11 flex w-full max-w-[490px] flex-col items-center justify-center space-y-8 px-5 lg:ml-11 lg:items-start lg:px-0">
+          <div className="flex w-full max-w-[400px] items-start text-left">
+            <p className=" text-center text-4xl font-semibold lg:text-left">
+              {textContent.line1} <span className="text-primary">{textContent.blueText}</span>
+            </p>
+          </div>
           <div className="flex w-full">
             <SignUpInline textContent={signUpLang.HeroSection.SignUp} isBanner />
           </div>
