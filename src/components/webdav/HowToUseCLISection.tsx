@@ -1,4 +1,4 @@
-import { CLI_UPDATES_URL, GH_README_URL, USER_GUIDE_URL } from '@/constants';
+import { GH_CLI_UPDATES_URL, GH_CLI_README_URL, USER_GUIDE_CLI_URL } from '@/constants';
 import { LinkTo } from '../drive/components/LinkTo';
 
 export const HowToUseCLISection = ({ textContent }) => {
@@ -7,19 +7,19 @@ export const HowToUseCLISection = ({ textContent }) => {
       title: textContent.info[0].title,
       description: textContent.info[0].description,
       cta: textContent.info[0].cta,
-      link: GH_README_URL,
+      link: GH_CLI_README_URL,
     },
     {
       title: textContent.info[1].title,
       description: textContent.info[1].description,
       cta: textContent.info[1].cta,
-      link: USER_GUIDE_URL,
+      link: USER_GUIDE_CLI_URL,
     },
     {
       title: textContent.info[2].title,
       description: textContent.info[2].description,
       cta: textContent.info[2].cta,
-      link: CLI_UPDATES_URL,
+      link: GH_CLI_UPDATES_URL,
     },
   ];
 

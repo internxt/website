@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { LinkTo } from './components/LinkTo';
 import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { AppleLogo } from '../shared/icons/AppleIcon';
-import { GH_README_URL, USER_GUIDE_URL } from '@/constants';
+import { GH_CLI_README_URL, USER_GUIDE_CLI_URL } from '@/constants';
 
 export const CliCard = ({ textContent }) => {
   return (
@@ -71,8 +71,8 @@ export const CliCard = ({ textContent }) => {
         </div>
         <div className="mx-5 flex flex-col gap-3 md:mx-12 md:flex-row md:items-center md:gap-8">
           <p className="text-lg text-gray-60">{textContent.learnMore}</p>
-          <LinkTo text={textContent.readme} linkToRedirect={GH_README_URL} />
-          <LinkTo text={textContent.userGuide} linkToRedirect={USER_GUIDE_URL} />
+          <LinkTo text={textContent.readme} linkToRedirect={GH_CLI_README_URL} />
+          <LinkTo text={textContent.userGuide} linkToRedirect={USER_GUIDE_CLI_URL} />
         </div>
       </div>
     </section>
