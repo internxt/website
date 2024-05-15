@@ -17,7 +17,7 @@ export const WhenUseVPNSection = ({ textContent }) => {
             // NO OP RN
           }}
         />
-        <div className="relative grid w-full max-w-6xl grid-cols-1 flex-row justify-between gap-5 bg-contain bg-center bg-no-repeat md:grid-cols-2 lg:bg-[url(/images/vpn-extension/map.svg)]">
+        <div className="relative grid w-full max-w-6xl grid-cols-1 flex-row justify-between gap-5 bg-contain bg-center bg-no-repeat sm:grid-cols-2 lg:bg-[url(/images/vpn-extension/map.svg)]">
           <div className="inset-0 ml-5 hidden items-center justify-center lg:absolute lg:flex">
             <Image
               src="/images/vpn-extension/superhero2.svg"
