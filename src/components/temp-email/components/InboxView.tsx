@@ -41,7 +41,7 @@ export const Inbox = ({
           }}
         />
       </div>
-      <div className="flex w-full md:hidden">
+      <div className="flex w-screen px-5 md:hidden">
         <InboxMobile
           getProps={{
             messages,
