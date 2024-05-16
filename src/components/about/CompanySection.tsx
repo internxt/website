@@ -1,5 +1,5 @@
-import React from 'react';
 import { UilAngleRightB } from '@iconscout/react-unicons';
+import { LINKEDIN_INXT_JOBS_URL } from '@/constants';
 
 const CompanySection = ({ textContent }) => (
   <section className="overflow-hidden">
@@ -90,7 +90,7 @@ const CompanySection = ({ textContent }) => (
         <h4 className="z-10 text-4xl font-medium">{textContent.careers.title}</h4>
         <a
           className="z-10 flex flex-row items-center space-x-1 text-lg font-medium text-primary hover:underline sm:text-base"
-          href="https://www.linkedin.com/company/internxt/jobs/"
+          href={LINKEDIN_INXT_JOBS_URL}
           target="_blank"
           rel="noreferrer"
         >

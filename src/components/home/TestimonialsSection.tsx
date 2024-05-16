@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Image from 'next/legacy/image';
 import RevealY from '@/components/components/RevealY';
 import { useRouter } from 'next/router';
+import { FIX_THE_PHOTO_URL } from '@/constants';
 
 const TestimonialsSection = ({ textContent }) => {
   const router = useRouter();
@@ -92,7 +93,7 @@ const TestimonialsSection = ({ textContent }) => {
                     <div>
                       <a
                         target={'_blank'}
-                        href={'https://fixthephoto.com/internxt-review.html'}
+                        href={FIX_THE_PHOTO_URL}
                         className="cursor-pointer text-lg font-normal text-gray-50"
                       >
                         {card.enterprise}
@@ -161,7 +162,7 @@ const TestimonialsSection = ({ textContent }) => {
                       <div className="flex flex-col pl-4">
                         <p className="text-xl font-semibold">{card.name}</p>
                         {lang === 'en' && card.name.includes('Eva') ? (
-                          <Link href={'https://fixthephoto.com/internxt-review.html'} target="_blank" legacyBehavior>
+                          <Link href={FIX_THE_PHOTO_URL} target="_blank" legacyBehavior>
                             <p className="cursor-pointer text-lg font-normal text-gray-50">{card.enterprise}</p>
                           </Link>
                         ) : (

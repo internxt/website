@@ -1,7 +1,7 @@
 import Image from 'next/legacy/image';
 import { RocketLaunch } from '@phosphor-icons/react';
-import React from 'react';
 import RevealX from '@/components/components/RevealX';
+import Link from 'next/link';
 
 const ThirdFeaturesSection = ({ textContent }) => {
   return (
@@ -25,14 +25,14 @@ const ThirdFeaturesSection = ({ textContent }) => {
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl">{textContent.description}</p>
           <div>
-            <button
+            <Link
+              href={'/about'}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
-              onClick={() => {
-                window.open('https://internxt.com/about', '_blank', 'noopener noreferrer');
-              }}
             >
               {textContent.cta}
-            </button>
+            </Link>
           </div>
         </RevealX>
       </div>

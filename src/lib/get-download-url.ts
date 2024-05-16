@@ -2,13 +2,7 @@ import { GetServerSidePropsContext } from 'next';
 import userAgent from 'useragent';
 import { isMobile } from 'react-device-detect';
 import { getLatestReleaseInfo } from './github';
-
-const iosURL = 'https://apps.apple.com/es/app/internxt-drive/id1465869889';
-const androidURL = 'https://play.google.com/store/apps/details?id=com.internxt.cloud';
-const windowsURL = 'https://internxt.com/downloads/drive.exe';
-const macosURL = 'https://internxt.com/downloads/drive.dmg';
-const linuxURL = 'https://internxt.com/downloads/drive.deb';
-const lastReleaseURL = 'https://github.com/internxt/drive-desktop/releases';
+import { ANDROID_URL, IOS_URL, LAST_RELEASE_URL, LINUX_URL, MACOS_URL, WINDOWS_URL } from '@/constants';
 
 export function getOS() {
   const osList = [
@@ -41,20 +35,20 @@ export async function getDriveDownloadUrl(ctx: GetServerSidePropsContext) {
 
   switch (uaParsed.os.family) {
     case 'iOS':
-      return 'https://apps.apple.com/es/app/internxt-drive/id1465869889';
+      return IOS_URL;
     case 'Android':
-      return 'https://play.google.com/store/apps/details?id=com.internxt.cloud';
+      return ANDROID_URL;
     case 'Ubuntu':
-      return info.links.linux || 'https://internxt.com/downloads/drive.deb';
+      return info.links.linux || LINUX_URL;
     case 'Windows':
-      return info.links.windows || 'https://internxt.com/downloads/drive.exe';
+      return info.links.windows || WINDOWS_URL;
     case 'Mac OS X':
-      return infoMacOS.links.macos || 'https://internxt.com/downloads/drive.dmg';
+      return infoMacOS.links.macos || MACOS_URL;
     default:
       // No borrar
       // eslint-disable-next-line no-console
       console.log('Unknown device %s. User-Agent: %s', uaParsed.os.family, ua);
-      return 'https://github.com/internxt/drive-desktop/releases';
+      return LAST_RELEASE_URL;
   }
 }
 
@@ -75,14 +69,14 @@ export const downloadDriveLinks = async () => {
   }));
 
   const platforms = {
-    Android: androidURL,
-    iPad: iosURL,
-    iPhone: iosURL,
-    Windows: release.links.windows || windowsURL,
-    MacOS: releaseMacOS.links.macos || macosURL,
-    UNIX: releaseLinux.links.linux || linuxURL,
-    Linux: releaseLinux.links.linux || linuxURL,
-    all: lastReleaseURL,
+    Android: ANDROID_URL,
+    iPad: IOS_URL,
+    iPhone: IOS_URL,
+    Windows: release.links.windows || WINDOWS_URL,
+    MacOS: releaseMacOS.links.macos || MACOS_URL,
+    UNIX: releaseLinux.links.linux || LINUX_URL,
+    Linux: releaseLinux.links.linux || LINUX_URL,
+    all: LAST_RELEASE_URL,
   };
 
   return platforms;

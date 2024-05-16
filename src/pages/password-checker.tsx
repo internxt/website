@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
@@ -13,6 +12,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -58,7 +58,7 @@ const PasswordChecker = ({
           hideLast2Sections
         />
 
-        <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
+        <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB_URL} maxWidth="max-w-lg" />
 
         <FeaturesSection
           textContent={langJson.FeaturesSection}
@@ -68,7 +68,7 @@ const PasswordChecker = ({
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 
-        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
+        <CtaSection textContent={langJson.CtaSection1} url={SIGNUP_DRIVE_WEB_URL} maxWidth="max-w-[511px]" />
 
         <FAQSection textContent={langJson.FaqSection} />
 

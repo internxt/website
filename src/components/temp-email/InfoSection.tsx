@@ -1,7 +1,7 @@
 import Image from 'next/legacy/image';
-import React from 'react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 export const InfoSection = ({ textContent, bannerText, lang }) => {
   const infoCards = (lang) => {
@@ -93,7 +93,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               quality={100}
               className="cursor-pointer"
               onClick={() => {
-                window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+                window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
               }}
             />
           </div>

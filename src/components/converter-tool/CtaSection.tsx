@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from '@/components/techradar-discount/Background.module.scss';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const CtaSection = ({ textContent }) => {
   return (
@@ -12,7 +12,7 @@ const CtaSection = ({ textContent }) => {
         <button
           className="flex cursor-pointer rounded-lg bg-white px-6 py-2 hover:bg-blue-10"
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+            window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
           }}
         >
           <p className="text-base font-semibold text-primary">{textContent.cta}</p>

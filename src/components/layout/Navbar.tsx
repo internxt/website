@@ -8,6 +8,7 @@ import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/li
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import { INXT_SEND_URL, LOGIN_DRIVE_WEB_URL } from '@/constants';
 
 export interface NavbarProps {
   textContent: any;
@@ -139,7 +140,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       </Link> */}
 
                       <a
-                        href="https://send.internxt.com"
+                        href={INXT_SEND_URL}
                         target="_blank"
                         rel="noreferrer"
                         className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
@@ -328,7 +329,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                 </Link>
 
                                 <a
-                                  href="https://send.internxt.com"
+                                  href={INXT_SEND_URL}
                                   target="_blank"
                                   rel="noreferrer"
                                   className="flex flex-row items-center"
@@ -423,7 +424,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           setMenuState(false);
                         }}
                         tabIndex={0}
-                        href="https://drive.internxt.com/login"
+                        href={LOGIN_DRIVE_WEB_URL}
                         className={`flex w-full translate-y-0 px-8 py-4 text-primary outline-none transition delay-300 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                         }`}

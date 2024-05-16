@@ -1,7 +1,7 @@
 import Image from 'next/legacy/image';
 import { Gift } from '@phosphor-icons/react';
-import React from 'react';
 import RevealX from '@/components/components/RevealX';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const ThirdFeaturesSection = ({ textContent }) => {
   return (
@@ -30,7 +30,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
               onClick={() => {
-                window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+                window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
               }}
             >
               {textContent.cta}

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import CtaSection from '@/components/shared/CtaSection';
 import RenderDescription from '@/components/shared/RenderDescription';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const allowedLangForImage = ['en', 'es', 'ru'];
 
@@ -80,7 +81,7 @@ const InfoSection = ({
       </div>
       {hideLast2Sections ? null : (
         <>
-          <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
+          <CtaSection textContent={textContent.ctaSection} url={SIGNUP_DRIVE_WEB_URL} maxWidth="max-w-2xl" />
           <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20 px-5">
             {getSectionText(textContent.thirdSection)}
             <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">

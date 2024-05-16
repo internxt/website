@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import cookies from '@/lib/cookies';
 import Navbar from '@/components/layout/Navbar';
@@ -18,6 +17,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import FeatureSection from '@/components/cyber-awareness/FeatureSection';
 import QuizSection from '@/components/cyber-awareness/QuizSection';
+import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
@@ -59,7 +59,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
 
             <FAQSection textContent={textContent.FaqSection} />
 
-            <CtaSection2 textContent={textContent.CtaSection2} url="https://drive.internxt.com/new" />
+            <CtaSection2 textContent={textContent.CtaSection2} url={SIGNUP_DRIVE_WEB_URL} />
           </>
         ) : (
           <>
