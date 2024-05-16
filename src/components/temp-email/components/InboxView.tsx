@@ -27,6 +27,7 @@ export const Inbox = ({
   return (
     <div className="relative px-52">
       <div id="sidebar_right" className="absolute left-0"></div>
+      <div id="sidebar_left" className="absolute right-0"></div>
 
       <div className="hidden w-full justify-center md:flex">
         <InboxWeb
@@ -52,7 +53,6 @@ export const Inbox = ({
           }}
         />
       </div>
-      <div id="sidebar_left" className="absolute right-0"></div>
     </div>
   );
 };
