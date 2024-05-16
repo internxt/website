@@ -39,7 +39,7 @@ const TempEmail = () => {
                       var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
                       if (window.innerWidth <= 768) {
                           adUnits = adUnits.filter(function(unit) {
-                              return unit !== "adhesive" && unit !== "incontent_4";
+                              return unit !== "adhesive" && unit !== "incontent_4" && unit !== "sidebar_right" && unit !== "sidebar_right";
                           });
                       }
                       return adUnits;
