@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowClockwise, Copy } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
 
@@ -25,7 +24,7 @@ function EmailToolbar({
   textContent,
 }: Readonly<EmailToolBarProps>) {
   return (
-    <div className="flex w-max max-w-3xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-5 lg:p-9">
+    <div className="flex w-full max-w-3xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-5 lg:w-max lg:p-9">
       <div className="flex w-full flex-col items-center justify-center gap-3 lg:flex-row">
         <div
           className={`flex h-full w-full max-w-[490px] items-center justify-center rounded-xl lg:w-screen ${
