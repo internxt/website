@@ -36,7 +36,7 @@ export const HeroSection = ({ textContent }) => {
               draggable={false}
               height={444}
             />
-            <div className="hidden lg:flex">
+            <div className="hidden xl:flex">
               <Image
                 src={'/images/vpn-extension/vpn-hero.svg'}
                 alt="VPN Hero"
