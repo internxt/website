@@ -40,7 +40,7 @@ export const HeroSection = ({ textContent }) => {
               <Image
                 src={'/images/vpn-extension/vpn-hero.svg'}
                 alt="VPN Hero"
-                className={`top-10 left-0 -translate-x-72 rounded-lg  lg:absolute`}
+                className={`top-10 left-0 -translate-x-72 rounded-lg lg:absolute`}
                 width={328}
                 height={385}
                 draggable={false}
