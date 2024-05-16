@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Info } from '@phosphor-icons/react';
 
 import { Inbox } from './components/InboxView';
@@ -224,6 +224,9 @@ export const HeroSection = ({ textContent }) => {
           <Header isToolsPage>{textContent.title}</Header>
           <p className="pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
+        <div id="sidebar_right"></div>
+
+        <div id="sidebar_left"></div>
         <EmailToolbar
           borderColor={borderColor}
           isChangeEmailIconAnimated={isChangeEmailIconAnimated}

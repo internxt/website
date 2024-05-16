@@ -40,6 +40,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
+        <div id="incontent_1"></div>
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3 text-start">
           <p className="text-2xl font-medium">{textContent.title}</p>
@@ -58,7 +59,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             </ul>
           </div>
 
-          <div id="incontent_1"></div>
+          <div id="incontent_2"></div>
 
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">{textContent.whatIsTempMail.title}</p>
@@ -84,6 +85,9 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               ))}
             </div>
           </div>
+
+          <div id="incontent_3"></div>
+
           <div className="flex">
             <Image
               src="/images/temp-email/cta_general_10_storage_en.webp"
@@ -99,8 +103,6 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             />
           </div>
 
-          <div id="incontent_2"></div>
-
           <div className="flex max-w-2xl flex-col space-y-3">
             <p className="text-3xl font-medium text-gray-100 lg:text-2xl">{textContent.whenUseTempMail.title}</p>
             <p className="text-lg">{textContent.whenUseTempMail.description}</p>
@@ -111,7 +113,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             </ul>
           </div>
 
-          <div id="incontent_3"></div>
+          <div id="incontent_4"></div>
         </div>
       </div>
     </section>
