@@ -1,6 +1,5 @@
 import { Cookie, HandCoins, SketchLogo, UsersThree } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
-import { IMPACT_INXT_BRAND_URL } from '@/constants';
 
 function PaintedText({ text }): JSX.Element {
   if (!text) return <></>;
@@ -59,7 +58,11 @@ const WhyJoinSection = ({ textContent }) => {
           <RevealY>
             <button
               onClick={() => {
-                window.open(IMPACT_INXT_BRAND_URL, '_blank', 'noopener noreferrer nofollow');
+                window.open(
+                  'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1',
+                  '_blank',
+                  'noopener noreferrer nofollow',
+                );
               }}
               className="flex w-max cursor-pointer items-center rounded-lg border border-primary bg-primary px-5 py-3 hover:bg-primary-dark"
             >

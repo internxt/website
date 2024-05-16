@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Header from '@/components/shared/Header';
 import CheckboxItem from '@/components/shared/CheckboxItem';
-import { MAILERLITE_NEWSLETTER_URL } from '@/constants';
 
 const HeroSection = ({ textContent }) => {
   const [checkbox, setCheckbox] = useState(false);
@@ -21,7 +20,7 @@ const HeroSection = ({ textContent }) => {
           method="post"
           target="_blank"
           rel="noopener"
-          action={MAILERLITE_NEWSLETTER_URL}
+          action="https://app.mailerlite.com/webforms/submit/r3s4c1"
           className="flex w-full max-w-[568px] flex-col justify-center rounded-lg border border-primary/7 bg-primary/2 p-9 ring-5 ring-primary/7"
         >
           <input type="hidden" name="ml-submit" value="1" />

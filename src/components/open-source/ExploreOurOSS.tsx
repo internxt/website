@@ -1,5 +1,4 @@
 import DownloadComponent from '@/components/shared/DownloadComponent';
-import { INXT_GITHUB_URL } from '@/constants';
 
 const ExploreOurOSS = ({ textContent, download }) => {
   const description = textContent.description.split('GitHub');
@@ -15,7 +14,7 @@ const ExploreOurOSS = ({ textContent, download }) => {
             <button
               className="cursor-pointer underline hover:no-underline"
               onClick={() => {
-                window.open(INXT_GITHUB_URL, '_blank', 'noopener noreferrer');
+                window.open('https://github.com/internxt', '_blank', 'noopener noreferrer');
               }}
             >
               {GitHub}

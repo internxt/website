@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
@@ -11,7 +12,7 @@ import FAQSection from '@/components/shared/FaqSection';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import HeroSection2 from '@/components/privacy-directory/HeroSection2';
 import CtaSection from '@/components/shared/CtaSection';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
@@ -68,7 +69,7 @@ const PrivacyDirectory = ({
 
             <SupportNGOsSection textContent={textContent.SupportNGOsSection} />
 
-            <CtaSection textContent={textContent.CtaSection} url={SIGNUP_DRIVE_WEB_URL} />
+            <CtaSection textContent={textContent.CtaSection} url={SIGNUP_DRIVE_WEB} />
           </>
         )}
 

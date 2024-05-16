@@ -1,3 +1,4 @@
+import React from 'react';
 import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import Navbar from '@/components/layout/Navbar';
@@ -8,7 +9,8 @@ import InfoSection from '@/components/password-generator/InfoSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import FAQSection from '@/components/shared/FaqSection';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
+
+const DRIVE_URL = 'https://drive.internxt.com/new';
 
 const PasswordGenerator = ({
   metatagsDescriptions,
@@ -36,7 +38,7 @@ const PasswordGenerator = ({
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
       <FAQSection textContent={langJson.FaqSection} />
 

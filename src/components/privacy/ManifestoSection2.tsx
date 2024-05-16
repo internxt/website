@@ -1,7 +1,7 @@
+import React from 'react';
 import FAQSection from '@/components/shared/FaqSection';
 import { ArrowUpRight } from '@phosphor-icons/react';
 import ProductCard from '@/components/shared/ProductCard';
-import { INXT_SEND_URL } from '@/constants';
 
 const ManifestoSection2 = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col">
@@ -132,7 +132,7 @@ const ManifestoSection2 = ({ textContent, lang }) => (
           <ProductCard
             imageUrl={'/images/privacy/Share-by-email.webp'}
             animationDirection={'left'}
-            redirect={INXT_SEND_URL}
+            redirect={'https://send.internxt.com'}
             lang={lang}
             textContent={textContent.section3.square3}
           />

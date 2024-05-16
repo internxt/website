@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
+import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import Image from 'next/image';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
   return (
@@ -19,7 +19,7 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
           <button
             className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
             onClick={() => {
-              window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
+              window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
             }}
           >
             {textContent.cta}

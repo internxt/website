@@ -9,8 +9,11 @@ import LearningWithOSCommunity from '@/components/open-source/LearningWithOSComm
 import WhatAreTheBenefits from '@/components/open-source/WhatAreTheBenefits';
 import WhatIsOSS from '@/components/open-source/WhatIsOSS';
 import CtaSection from '@/components/shared/CtaSection';
-import { INXT_GITHUB_URL, SIGNUP_DRIVE_WEB_URL } from '@/constants';
 import { downloadDriveLinks } from '@/lib/get-download-url';
+
+const CTA_SIGNUP_URL = `https://drive.internxt.com/new`;
+
+const GITHUB_URL = 'https://github.com/internxt';
 
 const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang, download }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'open-source');
@@ -26,17 +29,17 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
 
       <WhatAreTheBenefits textContent={langJson.WhatAreTheBenefits} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection1} url={CTA_SIGNUP_URL} />
 
       <LearningWithOSCommunity textContent={langJson.LearningWithOSCommunity} />
 
       <DifferencesBetweenOpenAndCloseSS textContent={langJson.DifferencesBetweenOpenAndCloseSS} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} />
 
       <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} />
 
-      <CtaSection textContent={langJson.CtaSection3} url={INXT_GITHUB_URL} target="nofollow" />
+      <CtaSection textContent={langJson.CtaSection3} url={GITHUB_URL} target="nofollow" />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

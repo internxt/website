@@ -4,7 +4,6 @@ import Footer from '@/components/layout/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-library');
@@ -17,7 +16,7 @@ const InternxtLibrary = ({ lang, metatagsDescriptions, navbar, inxtLibrary, foot
 
       <WhatWeDo textContent={inxtLibrary.WhatWeDo1} />
 
-      <CtaSection textContent={inxtLibrary.firstCta} url={SIGNUP_DRIVE_WEB_URL} maxWidth="max-w-[550px]" />
+      <CtaSection textContent={inxtLibrary.firstCta} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
 
       <Footer textContent={footer} lang={'en'} />
     </Layout>

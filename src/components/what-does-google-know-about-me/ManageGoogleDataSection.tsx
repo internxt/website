@@ -1,7 +1,6 @@
 import { Trash } from '@phosphor-icons/react';
 import RenderDescription from '@/components/shared/RenderDescription';
 import Image from 'next/image';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const ManageGoogleDataSection = ({ textContent }) => {
   const numberedList = textContent.section2.numberedList.map((item) => (
@@ -47,7 +46,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
 
         <Image
           onClick={() => {
-            window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
+            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
           }}
           width={897}
           height={200}
@@ -90,7 +89,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         <Image
           onClick={() => {
-            window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
+            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
           }}
           width={897}
           height={200}

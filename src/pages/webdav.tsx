@@ -6,7 +6,7 @@ import { DownloadCLISection } from '@/components/webdav/DownloadCLISection';
 import CtaSection from '@/components/shared/CtaSection';
 import { HowToUseCLISection } from '@/components/webdav/HowToUseCLISection';
 import Footer from '@/components/layout/Footer';
-import { SIGNUP_DRIVE_WEB_URL } from '../constants';
+import { SIGNUP_DRIVE_WEB } from '../constants';
 import FAQSection from '@/components/shared/FaqSection';
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
@@ -22,11 +22,11 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
 
       <DownloadCLISection textContent={langJson.DownloadCLISection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
 
       <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB} />
 
       <FAQSection textContent={langJson.FaqSection} />
 
