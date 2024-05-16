@@ -1,4 +1,3 @@
-import React from 'react';
 import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import Navbar from '@/components/layout/Navbar';
@@ -9,6 +8,8 @@ import InfoSection from '@/components/password-generator/InfoSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import FAQSection from '@/components/shared/FaqSection';
+import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
@@ -24,26 +25,35 @@ const PasswordGenerator = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'password-generator');
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Password Generator"
-      lang={lang}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(langJson.SchemaMarkupQuestions.faq)}
+      </Script>
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Password Generator', 'password-generator')}
+      </Script>
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Password Generator"
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <ToolsSection textContent={toolsContent} lang={lang} />
+        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
 
-      <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <FAQSection textContent={langJson.FaqSection} />
+        <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <FAQSection textContent={langJson.FaqSection} />
+
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 
