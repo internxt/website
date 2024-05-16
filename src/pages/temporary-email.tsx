@@ -47,17 +47,6 @@ const TempEmail = () => {
               }
           };`}
         </script>
-        <script data-cfasync="false" type="text/javascript">
-          {`
-		window.addEventListener("adnginLoaderReady", function() {
-          adngin.queue.push(function() {
-            googletag.cmd.push(function(){
-              googletag.pubads().set("page_url", "internxt.com");
-            });
-          });
-        });`}
-        </script>
-
         <script
           async
           data-cfasync="false"
