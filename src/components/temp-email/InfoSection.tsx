@@ -47,7 +47,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
           <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.subtitle}</p>
         </div>
         <div className="flex flex-col items-center space-y-9">
-          <div className="flex w-full max-w-2xl flex-col space-y-3 px-5 text-start">
+          <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">{textContent.steps.title}</p>
             <ul className="list-disc space-y-3 pl-6">
               {textContent.steps.steps.map((item) => (
@@ -61,15 +61,15 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
 
           <div id="incontent_2"></div>
 
-          <div className="flex max-w-2xl flex-col space-y-3 px-5 text-start">
+          <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">{textContent.whatIsTempMail.title}</p>
             <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.whatIsTempMail.description}</p>
           </div>
-          <div className="flex max-w-2xl flex-col space-y-3 px-5 text-start">
+          <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">{textContent.whyUseDisposableMail.title}</p>
             <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.whyUseDisposableMail.description}</p>
           </div>
-          <div className="flex flex-col space-y-8 px-5">
+          <div className="flex flex-col space-y-8">
             <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
               {infoCards(lang).map((card) => (
                 <div
@@ -103,7 +103,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             />
           </div>
 
-          <div className="flex max-w-2xl flex-col space-y-3 px-5">
+          <div className="flex max-w-2xl flex-col space-y-3">
             <p className="text-3xl font-medium text-gray-100 lg:text-2xl">{textContent.whenUseTempMail.title}</p>
             <p className="text-lg">{textContent.whenUseTempMail.description}</p>
             <ul className="list-disc space-y-1 pl-5 text-lg text-gray-80 lg:max-w-2xl">
