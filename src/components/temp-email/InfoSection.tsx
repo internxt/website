@@ -46,7 +46,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
           <p className="text-2xl font-medium">{textContent.title}</p>
           <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.subtitle}</p>
         </div>
-        <div className="flex flex-col items-center space-y-9">
+        <div className="flex flex-col items-center space-y-9 px-3">
           <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">{textContent.steps.title}</p>
             <ul className="list-disc space-y-3 pl-6">
