@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 
@@ -33,6 +32,27 @@ const TempEmail = () => {
   return (
     <>
       <Head>
+        <script data-cfasync="false" type="text/javascript">
+          {`window.snigelPubConf = {
+              "adengine": {
+                  "activeAdUnits": (function() {
+                      var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
+                      if (window.innerWidth <= 768) {
+                          adUnits = adUnits.filter(function(unit) {
+                              return unit !== "adhesive" && unit !== "incontent_4";
+                          });
+                      }
+                      return adUnits;
+                  })()
+              }
+          };`}
+        </script>
+        <script
+          async
+          data-cfasync="false"
+          src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js"
+          type="text/javascript"
+        ></script>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6684818764777307"

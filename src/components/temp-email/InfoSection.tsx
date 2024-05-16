@@ -1,5 +1,4 @@
 import Image from 'next/legacy/image';
-import React from 'react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
 
@@ -59,6 +58,8 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             </ul>
           </div>
 
+          <div id="incontent_1"></div>
+
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className="text-3xl font-medium lg:text-2xl">{textContent.whatIsTempMail.title}</p>
             <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.whatIsTempMail.description}</p>
@@ -97,6 +98,9 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               }}
             />
           </div>
+
+          <div id="incontent_2"></div>
+
           <div className="flex max-w-2xl flex-col space-y-3">
             <p className="text-3xl font-medium text-gray-100 lg:text-2xl">{textContent.whenUseTempMail.title}</p>
             <p className="text-lg">{textContent.whenUseTempMail.description}</p>
@@ -106,6 +110,8 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               ))}
             </ul>
           </div>
+
+          <div id="incontent_3"></div>
         </div>
       </div>
     </section>
