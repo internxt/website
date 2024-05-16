@@ -1,6 +1,6 @@
 import moment from 'moment';
-import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
-import React, { useEffect, useState } from 'react';
+import { ArrowsClockwise, CaretLeft, Tray } from '@phosphor-icons/react';
+import { useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 
 import { MessageSelected, NoMessageSelected } from './Messages';
@@ -25,7 +25,9 @@ export const Inbox = ({
   selectedMessage,
 }: InboxProps) => {
   return (
-    <>
+    <div className="relative px-52">
+      <div id="sidebar_right" className="absolute left-0"></div>
+
       <div className="hidden w-full justify-center md:flex">
         <InboxWeb
           getProps={{
@@ -50,7 +52,8 @@ export const Inbox = ({
           }}
         />
       </div>
-    </>
+      <div id="sidebar_left" className="absolute right-0"></div>
+    </div>
   );
 };
 

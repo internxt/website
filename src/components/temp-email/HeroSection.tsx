@@ -224,9 +224,7 @@ export const HeroSection = ({ textContent }) => {
           <Header isToolsPage>{textContent.title}</Header>
           <p className="pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
-        <div id="sidebar_right"></div>
 
-        <div id="sidebar_left"></div>
         <EmailToolbar
           borderColor={borderColor}
           isChangeEmailIconAnimated={isChangeEmailIconAnimated}
