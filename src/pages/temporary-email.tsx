@@ -32,12 +32,12 @@ const TempEmail = () => {
   return (
     <>
       <Head>
-        <Script data-cfasync="false" type="text/javascript">
+        <script data-cfasync="false" type="text/javascript">
           {`window.snigelPubConf = {
               "adengine": {
                   "activeAdUnits": (function() {
                       var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
-                      if (window.innerWidth <= 768) { // Consideramos móvil si el ancho de la ventana es 768px o menor
+                      if (window.innerWidth <= 768) {
                           adUnits = adUnits.filter(function(unit) {
                               return unit !== "adhesive" && unit !== "incontent_4";
                           });
@@ -46,7 +46,7 @@ const TempEmail = () => {
                   })()
               }
           };`}
-        </Script>
+        </script>
         <script
           async
           data-cfasync="false"

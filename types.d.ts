@@ -3,4 +3,5 @@ interface Window {
   rudderanalytics: any;
   gtag: any;
   _mtm: any;
+  snigelPubConf: any;
 }
