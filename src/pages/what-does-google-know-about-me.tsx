@@ -6,7 +6,8 @@ import HeroSection from '@/components/what-does-google-know-about-me/HeroSection
 import ManageGoogleDataSection from '@/components/what-does-google-know-about-me/ManageGoogleDataSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import WhatGoogleKnowsSection from '@/components/what-does-google-know-about-me/WhatGoogleKnowsSection';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
+
+const URL_REDIRECT = 'https://drive.internxt.com/new';
 
 const WhatDoesGoogleKnowAboutMe = ({
   lang,
@@ -30,17 +31,17 @@ const WhatDoesGoogleKnowAboutMe = ({
 
       <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
       <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
 
       <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB_URL} />
+      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );

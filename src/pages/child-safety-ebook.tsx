@@ -11,7 +11,6 @@ import FeatureSection from '@/components/inxt-library/shared/FeatureSection';
 import RelatedResourcesSection from '@/components/inxt-library/shared/RelatedResourcesSection';
 import RelatedBannerCard from '@/components/inxt-library/components/RelatedbannerCard';
 import DownloadedEbookBanner from '@/components/banners/DownloadedEbookBanner';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'child-safety-ebook');
@@ -47,7 +46,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
         stepsImage={'/images/inxt-library/parents_guide_ebook.webp'}
       />
 
-      <CtaSection textContent={textContent.CtaSection} url={SIGNUP_DRIVE_WEB_URL} maxWidth="max-w-[550px]" />
+      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
 
       <FeatureSection
         textContent={textContent.FeatureSection}
@@ -64,7 +63,7 @@ const ChildSafetyEbook = ({ lang, metatagsDescriptions, navbar, textContent, foo
         />
       </RelatedResourcesSection>
 
-      <CtaSection textContent={textContent.CtaSection2} url={SIGNUP_DRIVE_WEB_URL} maxWidth="max-w-[550px]" />
+      <CtaSection textContent={textContent.CtaSection2} url="https://drive.internxt.com/new" maxWidth="max-w-[550px]" />
 
       <Footer textContent={footer} lang={'en'} />
     </Layout>

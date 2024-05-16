@@ -6,7 +6,6 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import MakePrivacySection from '@/components/newsletter/MakePrivacySection';
 import WhatGetSection from '@/components/newsletter/WhatGetSection';
 import CtaSection from '@/components/shared/CtaSection';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const Newsletter = ({ lang, metatagsDescriptions, textContent, navbar, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'newsletter-subscribe');
@@ -22,7 +21,7 @@ const Newsletter = ({ lang, metatagsDescriptions, textContent, navbar, footer })
 
       <WhatGetSection textContent={textContent.WhatGetSection} />
 
-      <CtaSection url={SIGNUP_DRIVE_WEB_URL} textContent={textContent.CtaSection} />
+      <CtaSection url={'https://drive.internxt.com/new'} textContent={textContent.CtaSection} />
 
       <Footer textContent={footer} lang={'en'} />
     </Layout>

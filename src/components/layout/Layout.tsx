@@ -7,14 +7,6 @@ import moment from 'moment';
 
 import isBrave from '@/lib/brave';
 import TopBanner from '@/components/banners/TopBanner';
-import {
-  INTERNXT_URL,
-  INXT_FACEBOOK_URL,
-  INXT_GITHUB_URL,
-  INXT_INSTAGRAM_URL,
-  INXT_LINKEDIN_URL,
-  INXT_TWITTER_URL,
-} from '@/constants';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -38,9 +30,8 @@ interface LayoutProps {
   readonly lang?: string;
 }
 
+const INTERNXT_URL = 'https://internxt.com';
 const COOKIE_DOMAIN = 'internxt.com';
-
-const IP_INFO = process.env.NEXT_PUBLIC_IP_INFO as string;
 
 const excludedPaths = [
   '/pricing',
@@ -95,7 +86,7 @@ LayoutProps) {
   useEffect(() => {
     let ip;
     axios
-      .get(IP_INFO)
+      .get('https://ipinfo.io/ip')
       .then((res) => {
         ip = res.data;
       })
@@ -231,11 +222,11 @@ LayoutProps) {
           "legalName": "Internxt Universal Technologies SL",
           "slogan": "${slogan[lang as string]}",
           "sameAs": [
-            "${INXT_TWITTER_URL}",
-            "${INXT_FACEBOOK_URL}",
-            "${INXT_LINKEDIN_URL}",
-            "${INXT_INSTAGRAM_URL}",
-            "${INXT_GITHUB_URL}"
+            "https://twitter.com/Internxt",
+            "https://www.facebook.com/internxt",
+            "https://es.linkedin.com/company/internxt",
+            "https://www.instagram.com/internxt/",
+            "https://github.com/internxt"
           ]
         }`}
       </Script>

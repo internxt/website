@@ -1,7 +1,6 @@
 import { MagnifyingGlass } from '@phosphor-icons/react';
 import RenderDescription from '../shared/RenderDescription';
 import Image from 'next/image';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const WhatGoogleKnowsSection = ({ textContent }) => {
   const numberedList = textContent.section1.numberedList.map((item, index) => (
@@ -56,7 +55,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
         </div>
         <Image
           onClick={() => {
-            window.open(SIGNUP_DRIVE_WEB_URL, '_blank', 'noopener noreferrer');
+            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
           }}
           width={897}
           height={200}

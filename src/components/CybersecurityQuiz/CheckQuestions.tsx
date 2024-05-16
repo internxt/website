@@ -1,8 +1,3 @@
-import {
-  SHARE_ARTICLE_IN_FACEBOOK_URL,
-  SHARE_ARTICLE_IN_LINKEDIN_URL,
-  SHARE_ARTICLE_IN_TWITTER_URL,
-} from '@/constants';
 import QuestionsSection from './QuestionsSection';
 import ReactMarkdown from 'react-markdown';
 
@@ -13,18 +8,19 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
 
   const correctAnswerLength = isCorrectAnswer.filter((answer) => answer === true).length;
 
+  const shareUrlFacebook = 'https://www.facebook.com/sharer/sharer.php';
+  const shareUrlTwitter = 'https://twitter.com/intent/tweet';
   const urlToShare = `${window.location.origin}/cyber-security-quiz`;
-
   const linkedinTitle = 'Internxt Cybersecurity Quiz';
   const textToShare = `I just scored ${correctAnswerLength}${textContent.totalQuestions} on Internxt’s cybersecurity quiz! Can you beat my score? Try it and find out!`;
 
-  const facebookShareLink = `${SHARE_ARTICLE_IN_FACEBOOK_URL}?u=${encodeURIComponent(
+  const facebookShareLink = `${shareUrlFacebook}?u=${encodeURIComponent(
     urlToShare,
   )}survey.php?title=${encodeURIComponent(textToShare)}`;
-  const twitterShareLink = `${SHARE_ARTICLE_IN_TWITTER_URL}?url=${encodeURIComponent(
-    urlToShare,
-  )}&text=${encodeURIComponent(textToShare)}`;
-  const linkedInShareLink = `${SHARE_ARTICLE_IN_LINKEDIN_URL}?mini=true&url=${encodeURIComponent(
+  const twitterShareLink = `${shareUrlTwitter}?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(
+    textToShare,
+  )}`;
+  const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
     urlToShare,
   )}&title=${encodeURIComponent(linkedinTitle)}`;
 

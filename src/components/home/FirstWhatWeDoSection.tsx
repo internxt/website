@@ -7,7 +7,6 @@ import RevealX from '@/components/components/RevealX';
 import FileItem from './components/FileItem';
 import { DriveSidenav } from './components/DriveSidenav';
 import { useRouter } from 'next/router';
-import { SIGNUP_DRIVE_WEB_URL } from '@/constants';
 
 const FirstWhatWeDoSection = ({
   textContent,
@@ -132,7 +131,7 @@ const FirstWhatWeDoSection = ({
               <button
                 className="flex w-max cursor-pointer flex-row items-center rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
                 onClick={() => {
-                  window.open(SIGNUP_DRIVE_WEB_URL, '_blank');
+                  window.open(`https://drive.internxt.com/new`, '_blank');
                 }}
               >
                 <p>{textContent.card3.cta}</p>

@@ -1,6 +1,6 @@
+import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import ProductCard from '@/components/shared/ProductCard';
-import { INXT_SEND_URL } from '@/constants';
 
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (
@@ -27,7 +27,7 @@ const SecondWhatWeDoSection = ({ textContent, lang }) => {
             <ProductCard
               imageUrl={'/images/privacy/Share-by-email.webp'}
               animationDirection={'left'}
-              redirect={INXT_SEND_URL}
+              redirect={'https://send.internxt.com'}
               lang={lang}
               textContent={textContent.square3}
             />

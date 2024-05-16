@@ -1,5 +1,4 @@
 import ProductCard from '@/components/shared/ProductCard';
-import { INXT_SEND_URL } from '@/constants';
 
 const InxtAppsSection = ({ textContent, lang }) => {
   return (
@@ -27,7 +26,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
           <ProductCard
             imageUrl={'/images/privacy/Share-by-email.webp'}
             animationDirection={'left'}
-            redirect={INXT_SEND_URL}
+            redirect={'https://send.internxt.com'}
             lang={lang}
             textContent={textContent.square3}
           />

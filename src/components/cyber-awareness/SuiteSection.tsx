@@ -1,6 +1,6 @@
 import { CaretRight } from '@phosphor-icons/react';
+import React from 'react';
 import RevealY from '@/components/components/RevealY';
-import { INXT_SEND_URL } from '@/constants';
 
 const SuiteSection = ({ textContent }) => {
   const suiteCards = [
@@ -23,7 +23,7 @@ const SuiteSection = ({ textContent }) => {
       title: textContent.cards['title-3'],
       body: textContent.cards['body-3'],
       textUrl: textContent.cards['textUrl-3'],
-      url: INXT_SEND_URL,
+      url: 'https://send.internxt.com',
     },
     {
       img: '/images/cyber-awareness/SuiteSection/card-4.svg',
