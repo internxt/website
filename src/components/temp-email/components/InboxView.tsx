@@ -26,8 +26,8 @@ export const Inbox = ({
 }: InboxProps) => {
   return (
     <div className="relative px-52">
-      <div id="sidebar_right" className="left-0 hidden lg:absolute"></div>
-      <div id="sidebar_left" className="right-0 hidden lg:absolute"></div>
+      <div id="sidebar_right" className="left-0 hidden lg:absolute lg:flex"></div>
+      <div id="sidebar_left" className="right-0 hidden lg:absolute lg:flex"></div>
 
       <div className="hidden w-full justify-center md:flex">
         <InboxWeb
