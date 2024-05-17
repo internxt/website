@@ -9,6 +9,7 @@ import isBrave from '@/lib/brave';
 import TopBanner from '@/components/banners/TopBanner';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
+const GET_IP_INFO_API = process.env.NEXT_PUBLIC_IP_INFO as string;
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -86,7 +87,7 @@ LayoutProps) {
   useEffect(() => {
     let ip;
     axios
-      .get('https://ipinfo.io/ip')
+      .get(GET_IP_INFO_API)
       .then((res) => {
         ip = res.data;
       })

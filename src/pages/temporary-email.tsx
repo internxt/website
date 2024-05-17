@@ -44,7 +44,7 @@ const TempEmail = () => {
                       }
                       if (window.innerWidth <= 1500) {
                           adUnits = adUnits.filter(function(unit) {
-                              return
+                              return unit !== "sidebar_right" && unit !== "sidebar_left";
                           });
                       }
                       return adUnits;
