@@ -72,7 +72,7 @@ const TempEmail = () => {
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
-        <div id="sidebar_right" className="left-0 mt-36 hidden h-screen w-80 items-end lg:absolute lg:flex"></div>
+        <div id="sidebar_right" className="left-0 mt-36 hidden h-screen w-80 justify-end lg:absolute lg:flex"></div>
         <div id="sidebar_left" className="right-0 mt-36 hidden h-full w-80 lg:absolute lg:flex"></div>
 
         <HeroSection textContent={textContent.HeroSection} />
