@@ -41,7 +41,7 @@ const HeroSection = ({ textContent }) => {
       body: formdata,
     };
 
-    fetch(`/api/scan`, requestOptions)
+    fetch(`https://clamav.internxt.com/filescan`, requestOptions)
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
