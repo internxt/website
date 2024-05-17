@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-import React from 'react';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 import * as anim from '../../../public/js/anim';
@@ -85,7 +84,7 @@ const FeaturesSection = ({ textContent, lang, device, download }) => (
               </div>
             </div>
 
-            <div className="relative hidden w-full max-w-[750px] flex-col items-start object-right pt-10 lg:flex 3xl:absolute 3xl:right-0">
+            <div className="4xl:absolute 4xl:right-0 relative hidden w-full max-w-[750px] flex-col items-start object-right pt-10 lg:flex">
               <RevealX
                 className="right-0 hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex"
                 direction="left"

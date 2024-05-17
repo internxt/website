@@ -42,6 +42,11 @@ const TempEmail = () => {
                               return unit !== "adhesive" && unit !== "incontent_4" && unit !== "sidebar_right" && unit !== "sidebar_right";
                           });
                       }
+                      if (window.innerWidth <= 1535) {
+                          adUnits = adUnits.filter(function(unit) {
+                              return unit !== "sidebar_right" && unit !== "sidebar_right";
+                          });
+                      }
                       return adUnits;
                   })()
               }
@@ -67,13 +72,15 @@ const TempEmail = () => {
         {sm_breadcrumb('Temporary Email', 'temporary-email')}
       </Script>
 
+      <div
+        id="sidebar_right"
+        className="left-0 mt-36 hidden h-screen w-80 justify-end border border-green 3xl:absolute 3xl:flex"
+      ></div>
+      <div id="sidebar_left" className="right-0 mt-36 hidden h-full w-80 border 3xl:absolute 3xl:flex"></div>
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
-
-        <div id="sidebar_right" className="left-0 mt-72 hidden h-screen w-80 justify-end xl:absolute xl:flex"></div>
-        <div id="sidebar_left" className="right-0 mt-72 hidden h-full w-80 xl:absolute xl:flex"></div>
 
         <HeroSection textContent={textContent.HeroSection} />
 
