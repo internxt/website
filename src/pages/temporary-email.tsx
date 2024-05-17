@@ -39,12 +39,12 @@ const TempEmail = () => {
                       var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
                       if (window.innerWidth <= 768) {
                           adUnits = adUnits.filter(function(unit) {
-                              return unit !== "adhesive" && unit !== "incontent_4" && unit !== "sidebar_right" && unit !== "sidebar_right";
+                              return unit !== "adhesive" && unit !== "incontent_4";
                           });
                       }
-                      if (window.innerWidth <= 1535) {
+                      if (window.innerWidth <= 1500) {
                           adUnits = adUnits.filter(function(unit) {
-                              return unit !== "sidebar_right" && unit !== "sidebar_right";
+                              return
                           });
                       }
                       return adUnits;
@@ -57,11 +57,6 @@ const TempEmail = () => {
           data-cfasync="false"
           src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js"
           type="text/javascript"
-        ></script>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6684818764777307"
-          crossOrigin="anonymous"
         ></script>
       </Head>
       <Script type="application/ld+json" strategy="beforeInteractive">
