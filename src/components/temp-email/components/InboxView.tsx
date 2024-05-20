@@ -38,7 +38,7 @@ export const Inbox = ({
           }}
         />
       </div>
-      <div className="flex w-screen px-5 md:hidden">
+      <div className="flex w-screen justify-center px-5 md:hidden">
         <InboxMobile
           getProps={{
             messages,
@@ -177,7 +177,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
-    <div className="flex h-[480px] w-full max-w-sm flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
+    <div className="flex h-[480px] w-full  flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
       {messages?.length > 0 ? (
         //Render message selected
         <>

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Script from 'next/script';
 
 import Layout from '@/components/layout/Layout';
@@ -15,6 +14,7 @@ import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { setup } from '@/lib/csrf';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const TempEmail = () => {
   const dialogAction = useGlobalDialog();
@@ -32,32 +32,32 @@ const TempEmail = () => {
   return (
     <>
       <Head>
-        <script data-cfasync="false" type="text/javascript">
-          {`window.snigelPubConf = {
-              "adengine": {
-                  "activeAdUnits": (function() {
-                      var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
-                      if (window.innerWidth <= 768) {
-                          adUnits = adUnits.filter(function(unit) {
-                              return unit !== "adhesive" && unit !== "incontent_4";
-                          });
-                      }
-                      if (window.innerWidth <= 1300) {
-                          adUnits = adUnits.filter(function(unit) {
-                              return unit !== "sidebar_right" && unit !== "sidebar_left";
-                          });
-                      }
-                      return adUnits;
-                  })()
-              }
-          };`}
-        </script>
         <script
-          async
-          data-cfasync="false"
-          src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js"
-          type="text/javascript"
-        ></script>
+          id="adengine-config"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.snigelPubConf = {
+              "adengine": {
+                "activeAdUnits": (function() {
+                  var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
+                  if (window.innerWidth <= 768) {
+                    adUnits = adUnits.filter(function(unit) {
+                      return unit !== "adhesive" && unit !== "incontent_4";
+                    });
+                  }
+                  if (window.innerWidth <= 1300) {
+                    adUnits = adUnits.filter(function(unit) {
+                      return unit !== "sidebar_right" && unit !== "sidebar_left";
+                    });
+                  }
+                  return adUnits;
+                })()
+              }
+            };
+          `,
+          }}
+        />
+        <script async data-cfasync="false" src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js" />
       </Head>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.SchemaMarkupQuestions.faq)}
@@ -67,18 +67,18 @@ const TempEmail = () => {
         {sm_breadcrumb('Temporary Email', 'temporary-email')}
       </Script>
 
-      <div id="sidebar_right" className="left-0 mt-36 hidden h-screen w-80 justify-end 3xl:absolute 3xl:flex"></div>
-      <div id="sidebar_left" className="right-0 mt-36 hidden h-full w-80 3xl:absolute 3xl:flex"></div>
+      <div id="sidebar_right" className="left-0 mt-36 hidden w-72 justify-end 3xl:absolute 3xl:flex"></div>
+      <div id="sidebar_left" className="right-0 mt-36 hidden w-72 3xl:absolute 3xl:flex"></div>
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-
-        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
         <HeroSection textContent={textContent.HeroSection} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
+
+        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
         <SignupSection textContent={textContent.SignupSection} />
 
