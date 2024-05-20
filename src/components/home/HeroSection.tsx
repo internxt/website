@@ -17,7 +17,7 @@ export default function HeroSection({ textContent, lang }) {
         />
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
-          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 lg:my-28 lg:ml-0 lg:items-start lg:text-left">
+          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-5 text-center sm:w-auto sm:px-0  md:ml-2 lg:my-28 lg:ml-0 lg:items-start lg:text-left">
             <div className="flex lg:hidden">
               <Image
                 loading="eager"
