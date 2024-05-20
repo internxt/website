@@ -8,6 +8,7 @@ import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/li
 import LanguageBox from './components/LanguageBox';
 import { useRouter } from 'next/router';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import Image from 'next/image';
 
 export interface NavbarProps {
   textContent: any;
@@ -27,6 +28,7 @@ const DRIVE_WEB_URL = 'https://drive.internxt.com';
 export default function Navbar(props: Readonly<NavbarProps>) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
+  const [isRibbonHidden, setIsRibbonHidden] = useState<boolean>();
 
   const router = useRouter();
   const lang = router.locale;
@@ -42,6 +44,16 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     window.addEventListener('scroll', handleScroll);
   });
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsRibbonHidden(window.innerWidth <= 1090);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div
       id="navbar"
@@ -55,80 +67,79 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
-          {/* Left side of navbar: Logo / Hamburguer menu */}
-          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
-            {/* Logo */}
-            <Link href="/" locale={props.lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
-              <img
-                loading="lazy"
-                className="select-none"
-                src={`../../logos/internxt/${
-                  (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-                }.svg`}
-                alt="Internxt logo"
-                width="96"
-                height="10"
-              />
-            </Link>
-            <Link href={'/'} locale={props.lang} passHref className="hidden flex-shrink-0 lg:flex">
-              <img
-                loading="lazy"
-                className="select-none"
-                src={`../../logos/internxt/${
-                  (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-                }.svg`}
-                alt="Internxt logo"
-              />
-            </Link>
-          </div>
+          <div className="flex flex-row space-x-10">
+            <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
+              {/* Logo */}
+              <Link href="/" locale={props.lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
+                <img
+                  loading="lazy"
+                  className="select-none"
+                  src={`../../logos/internxt/${
+                    (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
+                  }.svg`}
+                  alt="Internxt logo"
+                  width="96"
+                  height="10"
+                />
+              </Link>
+              <Link href={'/'} locale={props.lang} passHref className="hidden flex-shrink-0 lg:flex">
+                <img
+                  loading="lazy"
+                  className="select-none"
+                  src={`../../logos/internxt/${
+                    (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
+                  }.svg`}
+                  alt="Internxt logo"
+                />
+              </Link>
+            </div>
+            {/* Desktop links */}
+            {!props.isLinksHidden && (
+              <div className="links">
+                <div className="hidden space-x-2 lg:inline-flex">
+                  <Link
+                    href="/pricing"
+                    locale={props.lang}
+                    className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                      props.darkMode || props.isQuizSection
+                        ? `text-white hover:text-cool-gray-20 ${
+                            router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase() &&
+                            'text-primary'
+                          }`
+                        : router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase()
+                        ? 'text-primary'
+                        : 'text-cool-gray-70 hover:text-primary'
+                    }  text-base font-medium`}
+                  >
+                    {props.textContent.links.pricing}
+                  </Link>
 
-          {/* Desktop links */}
-          {!props.isLinksHidden && (
-            <div className="links">
-              <div className="hidden space-x-2 lg:inline-flex">
-                <Link
-                  href="/pricing"
-                  locale={props.lang}
-                  className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode || props.isQuizSection
-                      ? `text-white hover:text-cool-gray-20 ${
-                          router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase() &&
-                          'text-primary'
-                        }`
-                      : router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase()
-                      ? 'text-primary'
-                      : 'text-cool-gray-70 hover:text-primary'
-                  }  text-base font-medium`}
-                >
-                  {props.textContent.links.pricing}
-                </Link>
+                  <div
+                    className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
+                      props.darkMode || props.isQuizSection
+                        ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
+                        : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
+                    } cursor-default rounded-lg`}
+                  >
+                    <span>{props.textContent.links.products}</span>
+                    <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
 
-                <div
-                  className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
-                    props.darkMode || props.isQuizSection
-                      ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
-                      : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
-                  } cursor-default rounded-lg`}
-                >
-                  <span>{props.textContent.links.products}</span>
-                  <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+                    {/* Menu items */}
+                    <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+                      <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
-                  {/* Menu items */}
-                  <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
-                    <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
+                      <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
+                        <Link
+                          href="/drive"
+                          locale={props.lang}
+                          className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                            props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          }`}
+                        >
+                          {props.textContent.products.drive}
+                        </Link>
 
-                    <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
-                      <Link
-                        href="/drive"
-                        locale={props.lang}
-                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}
-                      >
-                        {props.textContent.products.drive}
-                      </Link>
-
-                      {/* <Link
+                        {/* <Link
                         href="/webdav"
                         locale={props.lang}
                         className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
@@ -138,86 +149,101 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         {props.textContent.products.webDAV}
                       </Link> */}
 
-                      <a
-                        href="https://send.internxt.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}
-                      >
-                        <span>{props.textContent.products.send}</span>
-                      </a>
+                        <a
+                          href="https://send.internxt.com"
+                          target="_blank"
+                          rel="noreferrer"
+                          className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                            props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          }`}
+                        >
+                          <span>{props.textContent.products.send}</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div
-                  className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
-                    props.darkMode || props.isQuizSection
-                      ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
-                      : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
-                  } cursor-default rounded-lg`}
-                >
-                  <span>{props.textContent.links.ourValues}</span>
-                  <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+                  <div
+                    className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
+                      props.darkMode || props.isQuizSection
+                        ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
+                        : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
+                    } cursor-default rounded-lg`}
+                  >
+                    <span>{props.textContent.links.ourValues}</span>
+                    <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
 
-                  {/* Menu items */}
-                  <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
-                    <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
+                    {/* Menu items */}
+                    <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+                      <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
-                    <div className="relative grid gap-0 lg:grid-cols-1">
-                      <Link
-                        href="/privacy"
-                        locale={props.lang}
-                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}
-                      >
-                        {props.textContent.ourValues.privacy}
-                      </Link>
+                      <div className="relative grid gap-0 lg:grid-cols-1">
+                        <Link
+                          href="/privacy"
+                          locale={props.lang}
+                          className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                            props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          }`}
+                        >
+                          {props.textContent.ourValues.privacy}
+                        </Link>
 
-                      <Link
-                        href="/open-source"
-                        locale={props.lang}
-                        className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                          props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                        }`}
-                      >
-                        {props.textContent.ourValues.openSource}
-                      </Link>
+                        <Link
+                          href="/open-source"
+                          locale={props.lang}
+                          className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                            props.darkMode || props.isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                          }`}
+                        >
+                          {props.textContent.ourValues.openSource}
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <Link
-                  href="/about"
-                  locale={props.lang}
-                  className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
-                    props.darkMode || props.isQuizSection
-                      ? `text-white hover:text-cool-gray-20 ${
-                          router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
-                          'text-primary'
-                        }`
-                      : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
-                      ? 'text-primary'
-                      : 'text-cool-gray-70 hover:text-primary'
-                  }
+                  <Link
+                    href="/about"
+                    locale={props.lang}
+                    className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+                      props.darkMode || props.isQuizSection
+                        ? `text-white hover:text-cool-gray-20 ${
+                            router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
+                            'text-primary'
+                          }`
+                        : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
+                        ? 'text-primary'
+                        : 'text-cool-gray-70 hover:text-primary'
+                    }
                   } text-base font-medium`}
-                >
-                  {props.textContent.links.about}
-                </Link>
+                  >
+                    {props.textContent.links.about}
+                  </Link>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
 
+          {/* Left side of navbar: Logo / Hamburguer menu */}
           {/* Login and CTA */}
-          <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-end">
+          <div className="relative flex w-max flex-row items-center justify-end space-x-2">
+            <div className={`${isRibbonHidden ? 'hidden' : 'flex'} -left-32 translate-y-1 lg:absolute`}>
+              <Image
+                onClick={() => {
+                  router.push('/lifetime');
+                }}
+                src="/images/banners/ribbon.svg"
+                alt="Ribbon label"
+                width={100}
+                height={100}
+                className="cursor-pointer"
+              />
+            </div>
+
             {props.cta[0] === 'Hide Login' ? null : (
               <button
                 id="loginButton"
                 onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
-                className={`mr-2 hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
+                className={`hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode || (props.isQuizSection && !menuState)
                     ? 'bg-white text-gray-80 focus:opacity-80'
                     : 'border-primary text-primary hover:bg-primary hover:bg-opacity-10 active:border-primary-dark active:text-primary-dark'
@@ -226,7 +252,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 {props.textContent.links.login}
               </button>
             )}
-
             {props.cta[0] === 'default' ? (
               <button
                 onClick={() => goToSignUpURL({ lang: lang })}
@@ -239,7 +264,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             ) : (
               ''
             )}
-
             {props.cta[0] === 'checkout' ? (
               <button
                 type="button"
@@ -262,7 +286,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             <div className="hidden items-center justify-center bg-transparent lg:flex">
               <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode || props.isQuizSection} />
             </div>
-
             {!props.isLinksHidden && (
               <div className="lg:hidden">
                 <Hamburger
