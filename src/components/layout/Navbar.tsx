@@ -23,6 +23,22 @@ export interface NavbarProps {
   mode?: 'subscription' | 'payment';
 }
 
+const EXCLUDED_PATHS_FOR_RIBBON = [
+  '/pricing',
+  '/lifetime',
+  '/partner-discount',
+  '/techradar-discount',
+  '/stackcommerce',
+  '/dealfuel',
+  '/mightydeals',
+  '/temporary-email',
+  '/locker',
+  '/startpage',
+  '/oystervpn',
+  '/pccomponentes-products',
+  '/lifetime_special',
+];
+
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
 export default function Navbar(props: Readonly<NavbarProps>) {
@@ -34,6 +50,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const lang = router.locale;
   const getTitles = require(`@/assets/lang/en/navbar.json`);
   // DIALOG MANAGEMENT
+
+  const shouldHideLifetimeRibbon = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname) || isRibbonHidden;
 
   // SCROLL EFFECTS
 
@@ -226,10 +244,10 @@ export default function Navbar(props: Readonly<NavbarProps>) {
           {/* Left side of navbar: Logo / Hamburguer menu */}
           {/* Login and CTA */}
           <div className="relative flex w-max flex-row items-center justify-end space-x-2">
-            <div className={`${isRibbonHidden ? 'hidden' : 'flex'} -left-32 translate-y-1 lg:absolute`}>
+            <div className={`${shouldHideLifetimeRibbon ? 'hidden' : 'flex'} -left-32 translate-y-1 lg:absolute`}>
               <Image
                 onClick={() => {
-                  router.push('/lifetime');
+                  router.replace('/lifetime');
                 }}
                 src="/images/banners/ribbon.svg"
                 alt="Ribbon label"
