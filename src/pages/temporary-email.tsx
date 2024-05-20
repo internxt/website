@@ -42,7 +42,7 @@ const TempEmail = () => {
                               return unit !== "adhesive" && unit !== "incontent_4";
                           });
                       }
-                      if (window.innerWidth <= 1500) {
+                      if (window.innerWidth <= 1300) {
                           adUnits = adUnits.filter(function(unit) {
                               return unit !== "sidebar_right" && unit !== "sidebar_left";
                           });

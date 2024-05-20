@@ -135,7 +135,7 @@ module.exports = {
     extend: {
       screens: {
         xs: '512px',
-        '3xl': '1535px',
+        '3xl': '1500px',
         '4xl': '1582px',
         ...defaultTheme.screens,
       },
