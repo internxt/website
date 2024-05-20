@@ -10,6 +10,7 @@ import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
+import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -22,6 +23,7 @@ export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
 export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+  const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
 
   const { products, currency, currencyValue, loadingCards } = usePricing({});
