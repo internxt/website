@@ -75,9 +75,9 @@ LayoutProps) {
   function getCookie(cookieName: string) {
     const cookies = document.cookie.split(';');
     for (const cookie of cookies) {
-      const [nombre, valor] = cookie.trim().split('=');
-      if (nombre === cookieName) {
-        return decodeURIComponent(valor);
+      const [name, value] = cookie.trim().split('=');
+      if (name === cookieName) {
+        return decodeURIComponent(value);
       }
     }
     return null;

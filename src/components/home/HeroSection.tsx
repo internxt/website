@@ -17,11 +17,10 @@ export default function HeroSection({ textContent, lang }) {
         />
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
-          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 md:max-w-md lg:my-28 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
-            <div className="flex object-contain lg:hidden">
+          <div className="flex w-screen flex-shrink-0 flex-col items-center px-5 pt-5 text-center sm:w-auto sm:px-0 md:my-20 md:ml-2 lg:my-28 lg:ml-0 lg:items-start lg:text-left">
+            <div className="flex lg:hidden">
               <Image
                 loading="eager"
-                className="object-contain"
                 src="/images/home/image_mobile.webp"
                 draggable="false"
                 quality={100}
@@ -30,27 +29,28 @@ export default function HeroSection({ textContent, lang }) {
                 alt="Laptop and phone with Internxt app"
               />
             </div>
+            <div className="flex flex-col md:max-w-lg">
+              <Header className="pt-5 text-gray-100">
+                {textContent.title.line1}{' '}
+                <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
+              </Header>
 
-            <Header className="pt-5 text-gray-100">
-              {textContent.title.line1}{' '}
-              <span className=" whitespace-nowrap text-primary">{textContent.title.blueText}</span>
-            </Header>
+              <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8">{textContent.subtitle}</h2>
 
-            <h2 className="mb-4 text-xl font-normal text-gray-80 md:mb-8">{textContent.subtitle}</h2>
+              <button
+                className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"
+                onClick={() => goToSignUpURL()}
+              >
+                <div className="flex flex-row items-center space-x-2">
+                  <span className="font-medium">{textContent.cta.title}</span>
+                  <span className="opacity-60">{'—'}</span>
+                  <span className="opacity-60">{textContent.cta.subtitle}</span>
+                </div>
+              </button>
 
-            <button
-              className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"
-              onClick={() => goToSignUpURL()}
-            >
-              <div className="flex flex-row items-center space-x-2">
-                <span className="font-medium">{textContent.cta.title}</span>
-                <span className="opacity-60">{'—'}</span>
-                <span className="opacity-60">{textContent.cta.subtitle}</span>
+              <div className="hidden w-full md:flex">
+                <SignUpInline textContent={textContent.SignUp} />
               </div>
-            </button>
-
-            <div className="hidden w-full md:flex">
-              <SignUpInline textContent={textContent.SignUp} darkMode />
             </div>
           </div>
 
