@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import {
   ArrowsCounterClockwise,
@@ -56,8 +55,8 @@ export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: st
   const filteredCards = cards.filter((item) => item.pathname !== pathname);
 
   return (
-    <section className="overflow-hidden py-20">
-      <div className="flex flex-col items-center justify-center space-y-16 px-5">
+    <section className="flex justify-center overflow-hidden py-20">
+      <div className="flex max-w-[1000px] flex-col items-center justify-center space-y-16 px-5">
         <p className="max-w-[720px] text-center text-4xl font-semibold sm:text-5xl">
           {textContent.title.text1}
           <span className="text-primary">{textContent.title.blueText}</span>
