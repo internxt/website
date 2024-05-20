@@ -195,6 +195,36 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
+        {pathname === '/temporary-email' ? (
+          <>
+            <script
+              id="adengine-config"
+              dangerouslySetInnerHTML={{
+                __html: `
+            window.snigelPubConf = {
+              "adengine": {
+                "activeAdUnits": (function() {
+                  var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
+                  if (window.innerWidth <= 768) {
+                    adUnits = adUnits.filter(function(unit) {
+                      return unit !== "adhesive" && unit !== "incontent_4";
+                    });
+                  }
+                  if (window.innerWidth <= 1300) {
+                    adUnits = adUnits.filter(function(unit) {
+                      return unit !== "sidebar_right" && unit !== "sidebar_left";
+                    });
+                  }
+                  return adUnits;
+                })()
+              }
+            };
+          `,
+              }}
+            />
+            <script async data-cfasync="false" src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js" />
+          </>
+        ) : null}
         {lang === 'es' && (
           <script
             dangerouslySetInnerHTML={{
