@@ -28,12 +28,12 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
     eur: {
       '2TB': 199,
       '5TB': 299,
-      '10TB': 499,
+      '10TB': 599,
     },
     usd: {
       '2TB': 249,
       '5TB': 349,
-      '10TB': 549,
+      '10TB': 649,
     },
   };
 
