@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/legacy/image';
 import SignUpBanner from '../banners/SignUpBanner';
 
@@ -14,6 +13,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
     <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-5 lg:p-16">
         <SignUpBanner textContent={bannerText} lang={lang} />
+        <div id="incontent_2" className="flex w-full max-w-[1000px] justify-center"></div>
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
           <div className="flex flex-col items-center space-y-6">
@@ -56,6 +56,8 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 <p className="text-xl text-gray-80">{textContent.stopMalware.description}</p>
               </div>
             </div>
+
+            <div id="incontent_3" className="flex w-full max-w-[1000px] justify-center"></div>
             {/* Free online scanner */}
             <div className="flex flex-col justify-center space-y-5 py-7 text-left md:max-w-3xl md:py-0 md:text-center">
               <p className=" text-4xl font-semibold">{textContent.freeOnlineScanner.title}</p>
@@ -88,6 +90,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 />
               </div>
             </div>
+            <div id="incontent_4" className="flex w-full max-w-[1000px] justify-center"></div>
           </div>
         </div>
       </div>
