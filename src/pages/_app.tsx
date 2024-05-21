@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
@@ -62,15 +62,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
         ]}
       >
