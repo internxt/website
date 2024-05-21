@@ -91,6 +91,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               darkMode={props.darkMode}
               getTitles={getTitles}
               isQuizSection={props.isQuizSection}
+              shouldHideItems={props.isLinksHidden}
               lang={lang}
               menuState={menuState}
               router={router}
@@ -107,6 +108,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               darkMode={props.darkMode}
               getTitles={getTitles}
               isQuizSection={props.isQuizSection}
+              shouldHideItems={props.isLinksHidden}
               lang={lang}
               menuState={menuState}
               router={router}
