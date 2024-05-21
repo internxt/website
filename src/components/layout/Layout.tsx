@@ -34,6 +34,8 @@ interface LayoutProps {
 const INTERNXT_URL = 'https://internxt.com';
 const COOKIE_DOMAIN = 'internxt.com';
 
+const INCLUDED_PATHS_FOR_SNIGEL = ['/temporary-email', '/virus-scanner'];
+
 const excludedPaths = [
   '/pricing',
   '/lifetime',
@@ -195,7 +197,7 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
-        {pathname === '/temporary-email' ? (
+        {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           <>
             <script
               id="adengine-config"
@@ -210,7 +212,7 @@ LayoutProps) {
                       return unit !== "adhesive" && unit !== "incontent_4";
                     });
                   }
-                  if (window.innerWidth <= 1300) {
+                  if (window.innerWidth <= 1300 && window.location.pathname.includes('temporary-email')) {
                     adUnits = adUnits.filter(function(unit) {
                       return unit !== "sidebar_right" && unit !== "sidebar_left";
                     });

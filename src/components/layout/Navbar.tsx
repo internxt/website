@@ -126,7 +126,9 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             >
               <Image
                 onClick={() => {
-                  router.replace('/lifetime');
+                  router.replace(
+                    '/lifetime?utm_source=website&utm_medium=ribbon70&utm_campaign=softsale&utm_term=utm_campaign',
+                  );
                 }}
                 src="/images/banners/ribbon.svg"
                 alt="Ribbon label"
