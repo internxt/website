@@ -185,7 +185,11 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   billingFrequency={billingFrequency}
                   popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
-                  priceBefore={products.individuals?.[Interval.Month][product.storage].price * 12}
+                  priceBefore={
+                    billingFrequency === Interval.Year
+                      ? products.individuals?.[Interval.Month][product.storage].price * 12
+                      : undefined
+                  }
                   lang={lang}
                   currency={currency}
                   coupon={undefined}
