@@ -51,7 +51,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const getTitles = require(`@/assets/lang/en/navbar.json`);
   // DIALOG MANAGEMENT
 
-  const shouldModifyRibbonStyle = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname) || isRibbonHidden;
+  const shouldModifyRibbonStyle = isRibbonHidden;
+  const shouldHideRibbon = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname);
 
   // SCROLL EFFECTS
 
@@ -243,11 +244,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
           {/* Left side of navbar: Logo / Hamburguer menu */}
           {/* Login and CTA */}
-          <div className="relative flex w-max flex-row items-center justify-end space-x-2">
+          <div className="relative flex h-full w-max flex-row items-center justify-end space-x-2">
             <div
-              className={`${
-                shouldModifyRibbonStyle ? '-left-20' : '-left-24'
-              } lg:absolute lg:translate-y-1 xs:-translate-y-1`}
+              className={`${shouldHideRibbon ? 'hidden' : 'flex'} ${
+                shouldModifyRibbonStyle ? '-left-24' : '-left-20'
+              } -top-4 flex lg:absolute`}
             >
               <Image
                 onClick={() => {
