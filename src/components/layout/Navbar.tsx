@@ -64,7 +64,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsRibbonHidden(window.innerWidth <= 1090);
+      setIsRibbonHidden(window.innerWidth <= 1090 && window.innerWidth >= 1023);
     };
     window.addEventListener('resize', handleResize);
     return () => {
