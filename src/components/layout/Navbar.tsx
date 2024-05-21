@@ -51,7 +51,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const getTitles = require(`@/assets/lang/en/navbar.json`);
   // DIALOG MANAGEMENT
 
-  const shouldHideLifetimeRibbon = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname) || isRibbonHidden;
+  const shouldModifyRibbonStyle = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname) || isRibbonHidden;
 
   // SCROLL EFFECTS
 
@@ -85,7 +85,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
-          <div className="flex flex-row space-x-10">
+          <div className={`${shouldModifyRibbonStyle ? 'space-x-1' : 'space-x-10'} flex flex-row`}>
             <div className="flex flex-1 flex-shrink-0 flex-grow flex-row items-center justify-start space-x-4 lg:space-x-0">
               {/* Logo */}
               <Link href="/" locale={props.lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
@@ -244,16 +244,20 @@ export default function Navbar(props: Readonly<NavbarProps>) {
           {/* Left side of navbar: Logo / Hamburguer menu */}
           {/* Login and CTA */}
           <div className="relative flex w-max flex-row items-center justify-end space-x-2">
-            <div className={`${shouldHideLifetimeRibbon ? 'hidden' : 'flex'} -left-32 translate-y-1 lg:absolute`}>
+            <div
+              className={`${
+                shouldModifyRibbonStyle ? '-left-20' : '-left-24'
+              } lg:absolute lg:translate-y-1 xs:-translate-y-1`}
+            >
               <Image
                 onClick={() => {
                   router.replace('/lifetime');
                 }}
                 src="/images/banners/ribbon.svg"
                 alt="Ribbon label"
-                width={100}
-                height={100}
-                className="cursor-pointer"
+                width={70}
+                height={74}
+                className="cursor-pointer object-contain"
               />
             </div>
 
