@@ -102,9 +102,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Fino al 75% di sconto.",
-      "normalText": "Sentite la forza dello storage cloud sicuro! ",
-      "cta": "Scegli un piano"
+      "boldText": "70% di sconto sui piani a vita! ",
+      "normalText": "Tieni i tuoi file privati per sempre!",
+      "cta": "Scegli il piano"
     }
   },
   "lifetimeBanner": {
