@@ -52,7 +52,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   // DIALOG MANAGEMENT
 
   const shouldModifyRibbonStyle = isRibbonHidden;
-  const shouldHideRibbon = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname);
+  const shouldHideRibbon = true;
+  // EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname);
 
   // SCROLL EFFECTS
 
