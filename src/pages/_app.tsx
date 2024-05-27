@@ -33,7 +33,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
 
-  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowBanner = false;
+  // !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
 
