@@ -18,8 +18,9 @@ import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
 import fileConverterService from '../services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
-import { ShieldCheck } from '@phosphor-icons/react';
+import { House, ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
+import Link from 'next/link';
 
 interface ConverterSectionProps {
   textContent: any;
@@ -220,6 +221,13 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
+          <Link
+            href={'/file-converter'}
+            className="flex flex-row items-center space-x-1 rounded-lg border border-gray-10 bg-white px-5 py-3 font-medium text-gray-80 shadow-sm"
+          >
+            <House size={24} />
+            <p>Convert more files</p>
+          </Link>
           <Header maxWidth="w-full">{formattedConverterText.title}</Header>
           <h2 className="text-xl text-gray-80">{textContent.description}</h2>
           <div className="flex flex-row items-center space-x-1">
