@@ -5,11 +5,19 @@
     "maintenance": "Tariffa di manutenzione aggiuntiva dopo 9 anni di utilizzo",
     "cta1": "Ottieni il 70% di sconto",
     "cta2": "Vedi le offerte a vita",
-    "guarantee": "Garanzia di rimborso di 30 giorni"
+    "guarantee": "Garanzia di rimborso di 30 giorni",
+    "celebration": {
+      "title": "Dì ciao alla tua offerta Internxt a vita",
+      "description": "Proteggi i tuoi file per sempre con il tuo sconto per la Festa dell'Indipendenza Italiana.",
+      "cta1": "Ottieni l'80% di SCONTO"
+    }
   },
   "PaymentSection": {
     "limitedOffer": "Offerta a tempo limitato!",
-    "title": { "blueText": "Ottieni il 70% di sconto", "normalText": " tutti i nostri esclusivi piani a vita" },
+    "title": {
+      "blueText": "Ottieni il ${{percent}} di sconto",
+      "normalText": " tutti i nostri esclusivi piani a vita"
+    },
     "description": "Acquista una volta e ottieni privacy e sicurezza per sempre",
     "normalSection": {
       "title": "Esplora tutti i nostri esclusivi piani a vita",
@@ -24,28 +32,28 @@
   },
   "GetLifetimeSection": {
     "title": "La vita non è breve! Ma questa offerta a tempo limitato lo è...",
-    "description": "Internxt offre un'offerta per una vita di privacy e tranquillità."
+    "description": "Internxt offre un'offerta di 3 giorni per una vita di privacy e tranquillità."
   },
   "FeatureSection": {
-    "title": "Cloud storage sicuro con una privacy senza pari",
-    "description": "Cosa rende Internxt così speciale? Siamo un team affiatato di professionisti completamente dedicati alla protezione online. Tutto ciò che facciamo e ogni decisione che prendiamo è incentrata sulla protezione dei vostri dati dallo sfruttamento.",
-    "cta": "L'impegno di Internxt per la privacy",
+    "title": "Perché scegliere Internxt per proteggere i tuoi file?",
+    "description": "Internxt ti restituisce il controllo della tua privacy. A differenza dello storage cloud tradizionale, garantiamo che solo tu abbia le chiavi dei tuoi dati crittografati. Prendiamo tutte le misure per garantire che le tue informazioni rimangano al sicuro.",
+    "cta": "",
     "cards": [
       {
-        "title": "Privato per design",
-        "description": "Non memorizziamo password o dati degli utenti e tutti i vostri dati sono criptati in transito e a riposo. Internxt vi permette di avere il pieno controllo dei vostri file. I vostri dati sono il vostro business. Proteggerli è il nostro."
+        "title": "Privacy Potenziata",
+        "description": "La nostra potente crittografia protegge i tuoi dati da accessi non autorizzati. Non memorizziamo mai le password; tutti i tuoi dati sono crittografati in transito e a riposo."
       },
       {
-        "title": "Sicurezza senza compromessi",
-        "description": "I vostri file sono crittografati end-to-end prima ancora di lasciare il vostro dispositivo. Grazie alla crittografia AES-256 a conoscenza zero, siete gli unici ad avere accesso ai vostri dati."
+        "title": "Controllo dell'Utente",
+        "description": "Per proteggerti dalle violazioni dei dati, Internxt protegge i tuoi dati rendendoli inaccessibili a terzi, compreso Internxt."
       },
       {
-        "title": "Open source e trasparente",
-        "description": "Siamo orgogliosi di ciò che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere rivisto personalmente, controllato e verificato da chiunque. Non abbiamo nulla da nascondere se non i vostri dati."
+        "title": "Accesso Multi-Piattaforma",
+        "description": "Lavora liberamente e accedi a tutti i tuoi file su vari dispositivi e sistemi operativi."
       },
       {
-        "title": "Verificato in modo indipendente",
-        "description": "Siamo completamente conformi al GDPR e sicuri al 100%, ma non credeteci sulla parola. Internxt è stato sottoposto a un audit indipendente e verificato dalla società Securitum, leader in Europa nei test di penetrazione."
+        "title": "Pagamento Unico",
+        "description": "I piani a vita di Internxt offrono un accesso sicuro ai tuoi file per sempre con un unico pagamento anticipato. Paga una volta per proteggere i tuoi dati per tutta la vita senza costi ricorrenti."
       }
     ]
   },

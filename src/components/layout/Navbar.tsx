@@ -37,6 +37,7 @@ const EXCLUDED_PATHS_FOR_RIBBON = [
   '/oystervpn',
   '/pccomponentes-products',
   '/lifetime_special',
+  '/lifetime/celebration',
 ];
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';

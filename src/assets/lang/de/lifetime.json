@@ -4,11 +4,19 @@
     "description": "Sichere alle deine Dateien und Erinnerungen für immer mit einer einmaligen Zahlung.",
     "maintenance": "Zuzüglich Wartungsgebühr nach 9 Jahren Nutzung",
     "cta1": "Jetzt 70% Rabatt",
-    "cta2": "Angebote für lebenslange Pläne durchsuchen"
+    "cta2": "Angebote für lebenslange Pläne durchsuchen",
+    "celebration": {
+      "title": "Sagen Sie ciao zu Ihrem lebenslangen Internxt-Angebot",
+      "description": "Sichern Sie Ihre Dateien für immer mit Ihrem Italienischen Unabhängigkeitstag-Rabatt.",
+      "cta1": "Erhalten Sie 80% RABATT"
+    }
   },
   "PaymentSection": {
     "limitedOffer": "Zeitlich begrenztes Angebot!",
-    "title": { "blueText": "Erhalte 70% Rabatt", "normalText": " auf alle unsere Exklusiven Pläne auf Lebenszeit" },
+    "title": {
+      "blueText": "Erhalte ${{percent}} Rabatt",
+      "normalText": " auf alle unsere Exklusiven Pläne auf Lebenszeit"
+    },
     "description": "Kaufe einmalig und erhalte Datenschutz und Sicherheit für immer.",
     "normalSection": {
       "title": "Entdecke alle unsere exklusiven Pläne auf Lebenszeit",
@@ -23,28 +31,28 @@
   },
   "GetLifetimeSection": {
     "title": "Das Leben ist nicht kurz! Aber dieses zeitlich begrenzte Angebot schon...",
-    "description": "Internxt bietet ein Leben in Privatsphäre und Ruhe."
+    "description": "Internxt bietet ein 3-tägiges Angebot für ein Leben voller Privatsphäre und Seelenfrieden."
   },
   "FeatureSection": {
-    "title": "Sicherer Cloud-Speicher mit unübertroffenem Datenschutz",
-    "description": "Was macht Internxt so besonders? Wir sind ein eingespieltes Team von Fachleuten, die sich voll und ganz dem Schutz deiner Daten widmen. Alles, was wir tun und jede Entscheidung, die wir treffen, ist darauf ausgerichtet, deine Daten vor Missbrauch zu schützen.",
-    "cta": "Internxt's Verpflichtung zum Datenschutz",
+    "title": "Warum Internxt zur Sicherung Ihrer Dateien wählen?",
+    "description": "Internxt gibt Ihnen die Kontrolle über Ihre Privatsphäre zurück. Im Gegensatz zu herkömmlichem Cloud-Speicher stellen wir sicher, dass nur Sie die Schlüssel zu Ihren verschlüsselten Daten haben. Wir unternehmen alle Schritte, um sicherzustellen, dass Ihre Informationen sicher bleiben.",
+    "cta": "",
     "cards": [
       {
-        "title": "Vollständig privat",
-        "description": "Wir speichern keine Passwörter oder Benutzerdaten und alle deine Daten werden während der Übertragung und im Ruhezustand verschlüsselt. Mit Internxt hast du die volle Kontrolle über deine Dateien. Deine Daten gehören dir! Sie zu schützen, ist unsere Aufgabe."
+        "title": "Erhöhte Privatsphäre",
+        "description": "Unsere leistungsstarke Verschlüsselung schützt Ihre Daten vor unbefugtem Zugriff. Wir speichern niemals Passwörter; alle Ihre Daten sind während der Übertragung und im Ruhezustand verschlüsselt."
       },
       {
-        "title": "Kompromisslose Sicherheit",
-        "description": "Deine Dateien werden End-to-End verschlüsselt, bevor sie dein Gerät verlassen. Dank der Zero-Knowledge-AES-256-Verschlüsselung bist du der absolut Einzige, der Zugriff auf deine Daten hat."
+        "title": "Benutzerkontrolle",
+        "description": "Um Sie vor Datenverletzungen zu schützen, macht Internxt Ihre Daten für Dritte, einschließlich Internxt, unzugänglich."
       },
       {
-        "title": " Open Source und transparent",
-        "description": "Wir sind stolz auf das, was wir tun, daher wird unser Code auf GitHub veröffentlicht und kann von jedermann persönlich überprüft, kontrolliert und verifiziert werden. Wir haben nichts zu verbergen, außer deinen Daten."
+        "title": "Plattformübergreifender Zugriff",
+        "description": "Arbeiten Sie frei und greifen Sie auf all Ihre Dateien auf verschiedenen Geräten und Betriebssystemen zu."
       },
       {
-        "title": "Unabhängig verifiziert",
-        "description": "Wir sind vollständig GDPR-konform und 100% sicher, aber verlasse dich nicht nur auf unser Wort: Internxt wurde von Europas führendem Unternehmen für Penetrationstests, Securitum, unabhängig geprüft und verifiziert."
+        "title": "Einmalige Zahlung",
+        "description": "Die lebenslangen Pläne von Internxt bieten Ihnen sicheren Zugriff auf Ihre Dateien für immer mit einer einzigen Vorauszahlung. Zahlen Sie einmal, um Ihre Daten lebenslang zu sichern, ohne wiederkehrende Gebühren."
       }
     ]
   },

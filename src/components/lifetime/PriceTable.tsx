@@ -12,9 +12,17 @@ interface PriceTableProps {
   normalPrice?: boolean;
   couponCode?: CouponType;
   isLifetimeSpecial?: boolean;
+  isCelebrationPage?: boolean;
 }
 
-const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount, isLifetimeSpecial }) => {
+const PriceTable: React.FC<PriceTableProps> = ({
+  lang,
+  normalPrice,
+  couponCode,
+  discount,
+  isLifetimeSpecial,
+  isCelebrationPage,
+}) => {
   const [coupon, setCoupon] = useState();
   const { products, currency, currencyValue, loadingCards } = usePricing({});
 
@@ -23,19 +31,6 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
       setCoupon(coupon);
     });
   }, []);
-
-  const lifetimePrices = {
-    eur: {
-      '2TB': 199,
-      '5TB': 299,
-      '10TB': 599,
-    },
-    usd: {
-      '2TB': 249,
-      '5TB': 349,
-      '10TB': 649,
-    },
-  };
 
   const productsArray = products?.individuals?.['lifetime'] && Object.values(products?.individuals?.['lifetime']);
 
@@ -89,7 +84,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                       storage={product.storage}
                       price={
                         coupon && discount && !normalPrice
-                          ? lifetimePrices[currencyValue][product.storage]
+                          ? Number(product.price * 0.2).toFixed(2)
                           : product.price.split('.')[0]
                       }
                       cta={['checkout', product.priceId]}
@@ -100,6 +95,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                       currency={currency}
                       currencyValue={currencyValue}
                       coupon={!normalPrice ? coupon?.[product.storage] ?? undefined : undefined}
+                      isCelebrationPage={isCelebrationPage}
                     />
                   );
                 })

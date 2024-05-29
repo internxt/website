@@ -29,6 +29,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
         textContent={langJson.PaymentSection}
         discount={discount}
         lang={lang}
+        percent={'70%'}
         couponCode={CouponType.SpringCoupon}
       />
 

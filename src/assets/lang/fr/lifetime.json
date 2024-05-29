@@ -5,11 +5,16 @@
     "maintenance": "Frais d'entretien supplémentaires après 9 ans d'utilisation",
     "cta1": "70% de réduction!",
     "cta2": "Voir les offres à vie",
-    "guarantee": "Garantie de remboursement de 30 jours"
+    "guarantee": "Garantie de remboursement de 30 jours",
+    "celebration": {
+      "title": "Dites ciao à votre offre à vie d'Internxt",
+      "description": "Sécurisez vos fichiers pour toujours avec votre réduction pour la fête de l'indépendance de l'Italie.",
+      "cta1": "Obtenez 80% DE RÉDUCTION"
+    }
   },
   "PaymentSection": {
     "limitedOffer": "Offre limitée dans le temps !",
-    "title": { "blueText": "Bénéficiez de 70% de réduction", "normalText": " dans tous nos plans à vie" },
+    "title": { "blueText": "Bénéficiez de ${{percent}} de réduction", "normalText": " dans tous nos plans à vie" },
     "description": "Achetez une fois et obtenez la confidentialité pour toujours.",
     "normalSection": {
       "title": "Explorez tous nos plans exclusifs à vie",
@@ -24,28 +29,28 @@
   },
   "GetLifetimeSection": {
     "title": "La vie n'est pas courte ! Mais cette offre à temps limité l'est...",
-    "description": "Internxt propose une offre sur son service de cloud privé."
+    "description": "Internxt propose une offre de 3 jours pour une vie de confidentialité et de tranquillité d'esprit."
   },
   "FeatureSection": {
-    "title": "Stockage cloud sécurisé avec une confidentialité inégalée",
-    "description": "Qu'est-ce qui rend Internxt si spécial ? Nous sommes une équipe de professionnels entièrement dédiée à votre protection en ligne. Tout ce que nous faisons et toutes les décisions que nous prenons sont centrées sur la protection de vos données.",
-    "cta": " L'engagement d'Internxt en matière de confidentialité ",
+    "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers?",
+    "description": "Internxt vous redonne le contrôle de votre vie privée. Contrairement au stockage cloud traditionnel, nous veillons à ce que vous seul ayez les clés de vos données chiffrées. Nous prenons toutes les mesures pour garantir que vos informations restent sécurisées.",
+    "cta": "",
     "cards": [
       {
-        "title": " Privé par conception ",
-        "description": "Nous ne stockons pas les mots de passe ou les données des utilisateurs et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données sont votre affaire. Les protéger, c'est notre affaire."
+        "title": "Confidentialité Renforcée",
+        "description": "Notre puissant chiffrement protège vos données contre les accès non autorisés. Nous ne stockons jamais de mots de passe; toutes vos données sont chiffrées en transit et au repos."
       },
       {
-        "title": "Sécurité sans compromis",
-        "description": "Vos fichiers sont chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement AES-256 à connaissance nulle, vous êtes le seul à avoir accès à vos données."
+        "title": "Contrôle de l'Utilisateur",
+        "description": "Pour vous protéger des violations de données, Internxt protège vos données en les rendant inaccessibles aux tiers, y compris Internxt."
       },
       {
-        "title": "Open source et transparent",
-        "description": "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien d'autre à cacher que vos données."
+        "title": "Accès Multi-Plateforme",
+        "description": "Travaillez librement et accédez à tous vos fichiers sur divers appareils et systèmes d'exploitation."
       },
       {
-        "title": "Vérifié de manière indépendante",
-        "description": "Nous sommes entièrement conformes au GDPR et 100% sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
+        "title": "Paiement Unique",
+        "description": "Les plans à vie d'Internxt offrent un accès sécurisé à vos fichiers pour toujours avec un paiement unique et anticipé. Payez une fois pour sécuriser vos données à vie sans frais récurrents."
       }
     ]
   },

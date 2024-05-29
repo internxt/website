@@ -3,6 +3,7 @@ import PriceTable from './PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
 import { CouponType } from '@/lib/types';
+import { formatText } from '../utils/format-text';
 
 interface PaymentSectionProps {
   lang: string;
@@ -11,6 +12,8 @@ interface PaymentSectionProps {
   discount?: number;
   couponCode?: CouponType;
   isLifetimeSpecial?: boolean;
+  percent?: string;
+  isCelebrationPage?: boolean;
 }
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({
@@ -20,6 +23,8 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
   couponCode,
   discount,
   isLifetimeSpecial,
+  percent,
+  isCelebrationPage,
 }) => {
   const features = [
     {
@@ -51,7 +56,12 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
             <p className="w-full text-5xl font-semibold leading-tight">
               {!isLifetimeSpecial ? (
                 <>
-                  <span className="text-primary">{textContent.title.blueText}</span> <br />
+                  <span className="text-primary">
+                    {formatText(textContent.title.blueText, {
+                      percent: percent ?? '70',
+                    })}
+                  </span>{' '}
+                  <br />
                 </>
               ) : undefined}
               <span>{textContent.title.normalText}</span>
@@ -66,6 +76,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
           discount={discount}
           couponCode={couponCode}
           isLifetimeSpecial={isLifetimeSpecial}
+          isCelebrationPage={isCelebrationPage}
         />
       </div>
     </section>
