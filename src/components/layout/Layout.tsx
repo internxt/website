@@ -50,6 +50,7 @@ const excludedPaths = [
   '/oystervpn',
   '/pccomponentes-products',
   '/lifetime_special',
+  ,
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 
@@ -69,7 +70,7 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = false;
+  const shouldShowBanner = pathname === '/lifetime/celebration';
   // !excludedPaths.includes(pathname);
 
   const langToUpperCase = lang?.toLocaleUpperCase() as string;

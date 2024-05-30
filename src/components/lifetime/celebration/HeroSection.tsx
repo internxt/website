@@ -33,8 +33,8 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                   alt="Laptop and phone with Internxt app"
                 />
               </div>
-              <div className="flex max-w-[600px] flex-col text-center text-white lg:text-start">
-                <Header>{textContent.title}</Header>
+              <div className="kg:items-start flex max-w-[600px] flex-col items-center text-center text-white lg:text-start">
+                <Header maxWidth="max-w-[400px]">{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <button
@@ -48,7 +48,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 </p>
               </button>
             </div>
-            <div className="absolute -top-36 right-0  flex h-screen">
+            <div className="absolute -top-36 right-0 hidden h-screen lg:flex">
               <Image src={'/images/lifetime/celebration/confetti.svg'} alt="Confetti" width={464} height={603} />
             </div>
             <Animation previewImg="/images/lifetime/celebration/file_item.webp" />
