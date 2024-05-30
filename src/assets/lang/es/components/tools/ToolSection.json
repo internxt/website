@@ -17,7 +17,7 @@
       "pathname": "/password-checker"
     },
     {
-      "title": "Conversor de Unidades",
+      "title": "Convertidor de Unidades",
       "cta": "Convertir ahora",
       "pathname": "/byte-converter"
     },
@@ -32,7 +32,7 @@
       "pathname": "/virus-scanner"
     },
     {
-      "title": "Conversor de archivos",
+      "title": "Convertidor de archivos",
       "cta": "Convertir ahora",
       "pathname": "/file-converter"
     }

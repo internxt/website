@@ -1,12 +1,12 @@
 {
   "ConverterSection": {
-    "description": "Conversor de PNG a PDF: organiza y comparte imágenes en un documento cohesivo y seguro",
+    "description": "Convertidor de PNG a PDF: organiza y comparte imágenes en un documento cohesivo y seguro",
     "secureUpload": "Cargas seguras protegidas por HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
       "title": "Cómo convertir un archivo PNG a PDF",
-      "description": "Diseñamos nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu PNG a un archivo PDF implica tres pasos:",
+      "description": "Diseñamos nuestro convertidor de archivos para que sea lo más fácil de usar posible. Convertir tu PNG a un archivo PDF implica tres pasos:",
       "steps": [
         {
           "step": "Paso 1:",
@@ -25,8 +25,8 @@
     "whyConvert": {
       "title": "Por qué convertir archivos PNG a PDF",
       "paragraphs": [
-        "Un conversor de PNG a PDF es beneficioso para organizar y compartir imágenes en un documento unificado. Los archivos PNG se utilizan típicamente para imágenes de alta calidad, por lo que usar un conversor de archivos de PNG a PDF puede ayudar a presentar imágenes en un PDF de manera profesional.",
-        "El conversor de PNG a PDF de Internxt te permite crear un documento visualmente atractivo y profesional para narrar de manera visual tus archivos PNG."
+        "Un convertidor de PNG a PDF es beneficioso para organizar y compartir imágenes en un documento unificado. Los archivos PNG se utilizan típicamente para imágenes de alta calidad, por lo que usar un convertidor de archivos de PNG a PDF puede ayudar a presentar imágenes en un PDF de manera profesional.",
+        "El convertidor de PNG a PDF de Internxt te permite crear un documento visualmente atractivo y profesional para narrar de manera visual tus archivos PNG."
       ]
     }
   },

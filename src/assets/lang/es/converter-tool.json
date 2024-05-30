@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Conversor de unidades: TB a GB",
+    "title": "Convertidor de unidades: TB a GB",
     "description": "Convierte terabytes a gigabytes o megabytes.",
     "description1": "MB a kB, GB a TB, MB a GB, y mucho más! Averigua cuántos GB hay en un TB o cuánto almacenamiento en la nube, en el teléfono o en tu disco duro te queda realmente con el convertidor de unidades gratuito de Internxt."
   },
@@ -11,10 +11,10 @@
     },
     "convertToAgain": {
       "title": "¿Cómo convertir GB a MB y viceversa?",
-      "description": "¿No estás seguro de si tienes suficiente espacio en tu móvil? ¿Te preocupa que tu disco duro sea demasiado pequeño? ¿Te preguntas cuántos archivos de 1 GB caben en 2 TB de almacenamiento en la nube? Utiliza nuestro conversor gratuito de unidades bytes para saber exactamente cuántos kilobytes, megabytes, gigabytes o terabytes ocupan tus archivos."
+      "description": "¿No estás seguro de si tienes suficiente espacio en tu móvil? ¿Te preocupa que tu disco duro sea demasiado pequeño? ¿Te preguntas cuántos archivos de 1 GB caben en 2 TB de almacenamiento en la nube? Utiliza nuestro convertidor gratuito de unidades bytes para saber exactamente cuántos kilobytes, megabytes, gigabytes o terabytes ocupan tus archivos."
     },
     "whyUseConverter": {
-      "title": "¿Por qué utilizar un convertidor de unidades y un conversor de bytes?",
+      "title": "¿Por qué utilizar un convertidor de unidades y un convertidor de bytes?",
       "description": [
         { "adv": "Determina exactamente cuánto almacenamiento en la nube necesitas para tus archivos" },
         { "adv": "Asegúrate de que tus transferencias de archivos entran dentro de los límites de carga y descarga" },
@@ -93,7 +93,7 @@
 
     "faq": [
       {
-        "question": "¿Cómo se utiliza el conversor de unidades?",
+        "question": "¿Cómo se utiliza el convertidor de unidades?",
         "answer": [
           "Selecciona el valor que quieras convertir y selecciona el valor al que quieres convertir (por ejemplo: kB a MB). Introduce un valor en la primera sección de la izquierda, y tu respuesta aparecerá en la segunda sección de la derecha."
         ]
@@ -101,7 +101,7 @@
       {
         "question": "¿Cómo convierto terabytes en gigabytes, etc.?",
         "answer": [
-          "Solo tienes que introducir el valor en bytes que quieras convertir en nuestro Conversor de unidades y seleccionar el valor en bytes que quieras convertir y el valor se mostrará automáticamente.",
+          "Solo tienes que introducir el valor en bytes que quieras convertir en nuestro Convertidor de unidades y seleccionar el valor en bytes que quieras convertir y el valor se mostrará automáticamente.",
           "También puedes utilizar la tabla de conversión que aparece más arriba si deseas realizar el cálculo manualmente."
         ]
       },
@@ -129,13 +129,13 @@
       {
         "question": "¿Cuanto es un GB a TB?",
         "answer": [
-          "Utilice nuestro convertidor de bytes gratuito y descúbralo! El Conversor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a kB, GB a TB, o MB a GB: cualquier combinación que se le ocurra puede convertirse tan rápido como teclee la cantidad."
+          "Utilice nuestro convertidor de bytes gratuito y descúbralo! El Convertidor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a kB, GB a TB, o MB a GB: cualquier combinación que se le ocurra puede convertirse tan rápido como teclee la cantidad."
         ]
       },
       {
         "question": "¿Cuanto es un TB a GB?",
         "answer": [
-          "Si quiere saber cuántos terabytes hay en un gigabyte , ¡utilice nuestro conversor de bytes gratuito y descúbralo! El Conversor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a kB, GB a TB o MB a GB: cualquier combinación que se le ocurra se puede convertir tan rápido como teclee la cantidad."
+          "Si quiere saber cuántos terabytes hay en un gigabyte , ¡utilice nuestro convertidor de bytes gratuito y descúbralo! El Convertidor de Bytes de Internxt es una herramienta segura que le permite convertir terabytes a gigabytes y mucho más. MB a kB, GB a TB o MB a GB: cualquier combinación que se le ocurra se puede convertir tan rápido como teclee la cantidad."
         ]
       },
       {

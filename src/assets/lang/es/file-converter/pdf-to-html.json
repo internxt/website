@@ -1,12 +1,12 @@
 {
   "ConverterSection": {
-    "description": "Un conversor seguro de PDF a HTML para optimizar el contenido para audiencias en línea.",
+    "description": "Un convertidor seguro de PDF a HTML para optimizar el contenido para audiencias en línea.",
     "secureUpload": "Cargas seguras protegidas por HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
       "title": "Cómo convertir archivos PDF a archivos HTML",
-      "description": "Diseñamos nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu PDF a un archivo HTML implica tres pasos:",
+      "description": "Diseñamos nuestro convertidor de archivos para que sea lo más fácil de usar posible. Convertir tu PDF a un archivo HTML implica tres pasos:",
       "steps": [
         {
           "step": "Paso 1:",
@@ -23,9 +23,9 @@
       ]
     },
     "whyConvert": {
-      "title": "Por qué elegir un conversor de PDF a HTML",
+      "title": "Por qué elegir un convertidor de PDF a HTML",
       "paragraphs": [
-        "Optimiza tus páginas web convirtiendo tus archivos PDF a archivos HTML para hacer tu contenido accesible para navegadores web e indexable para motores de búsqueda. Nuestro conversor de archivos PDF ofrece una plataforma segura para convertir tus PDF a HTML al instante.",
+        "Optimiza tus páginas web convirtiendo tus archivos PDF a archivos HTML para hacer tu contenido accesible para navegadores web e indexable para motores de búsqueda. Nuestro convertidor de archivos PDF ofrece una plataforma segura para convertir tus PDF a HTML al instante.",
         "Si deseas convertir archivos HTML a un documento seguro, puedes utilizar nuestra herramienta gratuita de HTML a PDF para proteger la privacidad de tus documentos."
       ]
     }
