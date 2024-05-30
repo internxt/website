@@ -13,7 +13,7 @@ const currentLang = {
   it: 'Italiano (IT)',
   zh: '中国 (ZH)',
   ru: 'Русский (RU)',
-  'zh-tw': 'Taiwanese (TW)',
+  'zh-tw': 'Taiwan (TW)',
 };
 
 const selectedLang = {
