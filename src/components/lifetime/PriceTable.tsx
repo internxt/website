@@ -71,6 +71,22 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
     }
   };
 
+  const couponCodeFiltered = (storage) => {
+    switch (lifetimeMode) {
+      case 'custom-disc':
+        return specialCoupons?.[storage];
+
+      case 'celebration':
+        return coupon;
+
+      case 'normal':
+        return undefined;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <section className="overflow-hidden">
       <div
@@ -113,7 +129,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                       priceBefore={lifetimeMode !== 'normal' ? product.price.split('.')[0] : undefined}
                       currency={currency}
                       currencyValue={currencyValue}
-                      coupon={normalPrice ? undefined : coupon ?? specialCoupons?.[product.storage] ?? undefined}
+                      coupon={couponCodeFiltered(product.storage)}
                       isCelebrationPage={lifetimeMode === 'celebration'}
                     />
                   );
