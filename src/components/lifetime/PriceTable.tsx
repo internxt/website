@@ -23,12 +23,14 @@ const PriceTable: React.FC<PriceTableProps> = ({
   isLifetimeSpecial,
   isCelebrationPage,
 }) => {
-  const [coupon, setCoupon] = useState();
-  const { products, currency, currencyValue, loadingCards } = usePricing({});
+  const [specialCoupons, setSpecialCoupon] = useState();
+  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
+    couponCode: couponCode,
+  });
 
   useEffect(() => {
     stripeService.getLifetimeCoupons().then((coupon) => {
-      setCoupon(coupon);
+      setSpecialCoupon(coupon);
     });
   }, []);
 
@@ -94,7 +96,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
                       currency={currency}
                       currencyValue={currencyValue}
-                      coupon={!normalPrice ? coupon?.[product.storage] ?? undefined : undefined}
+                      coupon={!normalPrice && !coupon ? specialCoupons?.[product.storage] ?? undefined : coupon}
                       isCelebrationPage={isCelebrationPage}
                     />
                   );
