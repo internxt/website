@@ -11,9 +11,8 @@ interface PaymentSectionProps {
   normalPrice?: boolean;
   discount?: number;
   couponCode?: CouponType;
-  isLifetimeSpecial?: boolean;
   percent?: string;
-  isCelebrationPage?: boolean;
+  lifetimeMode?: 'celebration' | 'custom-disc' | 'normal';
 }
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({
@@ -22,9 +21,8 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
   normalPrice,
   couponCode,
   discount,
-  isLifetimeSpecial,
   percent,
-  isCelebrationPage,
+  lifetimeMode,
 }) => {
   const features = [
     {
@@ -54,7 +52,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p className="w-full text-5xl font-semibold leading-tight">
-              {!isLifetimeSpecial ? (
+              {lifetimeMode !== 'normal' ? (
                 <>
                   <span className="text-primary">
                     {formatText(textContent.title.blueText, {
@@ -75,8 +73,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
           normalPrice={normalPrice}
           discount={discount}
           couponCode={couponCode}
-          isLifetimeSpecial={isLifetimeSpecial}
-          isCelebrationPage={isCelebrationPage}
+          lifetimeMode={lifetimeMode}
         />
       </div>
     </section>

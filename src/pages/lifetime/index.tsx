@@ -24,7 +24,13 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} discount={discount} lang={lang} percent={'70%'} />
+      <PaymentSection
+        textContent={langJson.PaymentSection}
+        discount={discount}
+        lang={lang}
+        percent={'70%'}
+        lifetimeMode="custom-disc"
+      />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

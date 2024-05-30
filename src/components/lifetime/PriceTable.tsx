@@ -11,26 +11,33 @@ interface PriceTableProps {
   discount?: number;
   normalPrice?: boolean;
   couponCode?: CouponType;
-  isLifetimeSpecial?: boolean;
-  isCelebrationPage?: boolean;
+  lifetimeMode?: 'celebration' | 'custom-disc' | 'normal';
 }
 
-const PriceTable: React.FC<PriceTableProps> = ({
-  lang,
-  normalPrice,
-  couponCode,
-  discount,
-  isLifetimeSpecial,
-  isCelebrationPage,
-}) => {
-  const [specialCoupons, setSpecialCoupon] = useState();
+const DISC_LIFETIME_PRICES = {
+  eur: {
+    '2TB': 199,
+    '5TB': 299,
+    '10TB': 599,
+  },
+  usd: {
+    '2TB': 249,
+    '5TB': 349,
+    '10TB': 649,
+  },
+};
+
+const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount, lifetimeMode }) => {
+  const [specialCoupons, setSpecialCoupons] = useState();
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
     couponCode: couponCode,
   });
 
   useEffect(() => {
+    if (normalPrice) return;
+    console.log(lifetimeMode === 'normal');
     stripeService.getLifetimeCoupons().then((coupon) => {
-      setSpecialCoupon(coupon);
+      setSpecialCoupons(coupon);
     });
   }, []);
 
@@ -48,7 +55,21 @@ const PriceTable: React.FC<PriceTableProps> = ({
       })
     : null;
 
-  const lifetimeProducts = isLifetimeSpecial ? updatedProductsArray : productsArray;
+  const lifetimeProducts = lifetimeMode === 'normal' ? updatedProductsArray : productsArray;
+
+  const lifetimePrices = (price, discount, storage) => {
+    switch (lifetimeMode) {
+      case 'normal':
+        return price.split('.')[0];
+      case 'celebration':
+        return Number(price * discount).toFixed(2);
+
+      case 'custom-disc':
+        return DISC_LIFETIME_PRICES[currencyValue][storage];
+      default:
+        return price.split('.')[0];
+    }
+  };
 
   return (
     <section className="overflow-hidden">
@@ -84,20 +105,16 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       planType="individual"
                       key={product.storage}
                       storage={product.storage}
-                      price={
-                        coupon && discount && !normalPrice
-                          ? Number(product.price * 0.2).toFixed(2)
-                          : product.price.split('.')[0]
-                      }
+                      price={lifetimePrices(product.price, discount, product.storage)}
                       cta={['checkout', product.priceId]}
                       lang={lang}
                       billingFrequency={Interval.Lifetime}
-                      popular={isLifetimeSpecial ? product.storage === '10TB' : product.storage === '5TB'}
-                      priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
+                      popular={lifetimeMode === 'normal' ? product.storage === '10TB' : product.storage === '5TB'}
+                      priceBefore={lifetimeMode !== 'normal' ? product.price.split('.')[0] : undefined}
                       currency={currency}
                       currencyValue={currencyValue}
-                      coupon={!normalPrice && !coupon ? specialCoupons?.[product.storage] ?? undefined : coupon}
-                      isCelebrationPage={isCelebrationPage}
+                      coupon={normalPrice ? undefined : coupon ?? specialCoupons?.[product.storage] ?? undefined}
+                      isCelebrationPage={lifetimeMode === 'celebration'}
                     />
                   );
                 })

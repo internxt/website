@@ -13,7 +13,7 @@ import moment from 'moment';
 
 const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.25;
+  const discount = 0.2;
   const year = moment().format('YYYY');
 
   return (
@@ -34,7 +34,7 @@ const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, lan
         lang={lang}
         percent={'80%'}
         couponCode={CouponType.IndependenceDayItaly}
-        isCelebrationPage
+        lifetimeMode="celebration"
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
