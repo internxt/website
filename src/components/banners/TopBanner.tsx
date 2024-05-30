@@ -26,7 +26,7 @@ const TopBanner = ({ isBannerFixed }) => {
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
             onClick={() => {
-              router.push('/lifetime/celebration#payment');
+              router.push('/lifetime/celebration');
             }}
           >
             <p className="font-semibold underline hover:no-underline">{textContent.title.cta}</p>
@@ -42,7 +42,7 @@ const TopBanner = ({ isBannerFixed }) => {
           <button
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              router.push('/lifetime/celebration#payment');
+              router.push('/lifetime/celebration');
             }}
           >
             <p className="font-normal">

@@ -12,12 +12,12 @@ interface HeroSectionProps {
 const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
   return (
     <section className="overflow-hidden bg-[url('/images/lifetime/celebration/swiggles_italy.png')] bg-cover bg-no-repeat py-20">
-      <div className="flex flex-col justify-center pt-20">
+      <div className="flex flex-col justify-center pt-10 lg:pt-20">
         <div className=" lg:mx-10 xl:mx-32">
           <div className="relative mx-auto flex w-full max-w-screen-xl flex-col lg:flex-row">
             <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 text-center sm:w-auto sm:px-0 md:my-8 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
               {!hideTimer && (
-                <div className="flex flex-row rounded-lg py-2">
+                <div className="flex flex-row items-center rounded-lg py-2">
                   <Alarm size={32} className="mr-4 text-white" />
                   <Countdown textColor={'white'} />
                 </div>
@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                   alt="Laptop and phone with Internxt app"
                 />
               </div>
-              <div className="flex max-w-[600px] flex-col items-center text-center text-white lg:items-start lg:text-start">
+              <div className="flex max-w-[600px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
                 <Header maxWidth="max-w-[400px]">{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
