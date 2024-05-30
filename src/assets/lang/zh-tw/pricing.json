@@ -1,0 +1,164 @@
+{
+  "HeroSection": {
+    "title": { "line1": "80% 折扣", "line2": "我們的年度計劃" },
+    "lifetimeTitle": { "line1": "獲取", "blueText": "終身", "line2": "Internxt 計劃！" },
+    "feeds": {
+      "firstFeed": "30 天退款保證",
+      "secondFeed": "100% 安全付款",
+      "thirdFeed": "匿名帳戶創建"
+    },
+    "cta": {
+      "title": "享受 80% 折扣",
+      "description": "優惠有效期為一年。計劃將在次年以非折扣價格自動續訂。"
+    }
+  },
+  "tableSection": {
+    "ctaBanner": {
+      "label": "節省 75%",
+      "title": "保護您的數據免受黑暗面的威脅",
+      "subtitle": "訂閱 Internxt 並節省費用。",
+      "cta": "立即享受 75% 折扣",
+      "guarantee": "30 天退款保證",
+      "lastCta": ""
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "開源且經過審計",
+      "anonymousAccount": "匿名帳戶創建"
+    }
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是否可以訪問我的文件？",
+        "answer": [
+          "不行。Internxt 和任何其他第三方都無法訪問您的文件、照片或數據。",
+          "Internxt 服務具有零知識加密功能，這意味著只有您才能真正訪問您的私人數據。此外，Internxt 的架構在加密文件之前會對其進行分段，因此服務器永遠不會保存完整的文件，而只是文件的加密片段，只有您才能解密。"
+        ]
+      },
+      {
+        "question": "Internxt 是否存儲我的密碼？",
+        "answer": [
+          "不會。因此，Internxt 不會（也無法）存儲您的密碼。",
+          "您的 Internxt 密碼是您獨有的，用於加密和解密您的 Internxt 數據。但如果您想更改密碼，可以通過我們的應用程式進行。"
+        ]
+      },
+      {
+        "question": "我可以啟用雙因素身份驗證嗎？",
+        "answer": [
+          "可以。您可以通過 Internxt Web 應用程序為您的帳戶配置雙因素身份驗證。",
+          "您還可以使用 Authy 或任何其他雙因素身份驗證工具生成個人 2FA 代碼與 Internxt 一起使用。"
+        ]
+      },
+      {
+        "question": "如何創建 Internxt 帳戶？",
+        "answer": [
+          "要創建免費的 Internxt 帳戶，只需單擊上方的最佳計劃並按照說明操作。",
+          "或者前往我們的主頁，然後點擊“立即開始”。在那裡，您將立即獲得終身免費 10GB 的存儲空間，成為免費的 Internxt 會員。您可以在所有服務中使用您的免費會員資格。要註冊，只需輸入名稱和電子郵件地址。開始使用 Internxt 的服務無需身份驗證或電子郵件驗證。"
+        ]
+      },
+      {
+        "question": "我可以用信用卡、PayPal 或加密貨幣付款嗎？",
+        "answer": [
+          "Internxt 目前接受儲蓄卡和信用卡（萬事達卡、VISA、美國運通卡等）。您也可以通過 PayPal、iDEAL、Sofort 和 Bancontact 付款。",
+          "根據要求，我們還接受加密貨幣和 SEPA 借記。如果您對付款方式有疑問，只需發送電子郵件至 hello@internxt.com。"
+        ]
+      },
+      {
+        "question": "Internxt 的退款政策是什麼？",
+        "answer": [
+          "Internxt 在所有付費訂閱中都提供標準的 30 天退款保證，從您訂閱開始計算。",
+          "如果您對我們的服務感到不滿，請通過 hello@internxt.com 聯繫我們並請求退款。我們將尊重您的要求，不會問任何問題！"
+        ]
+      },
+      {
+        "question": "如何取消訂閱？",
+        "answer": [
+          "取消訂閱非常簡單，可以通過 Internxt 應用程序輕鬆完成，只需進入設置並刪除您的帳戶。這將終止您的訂閱和帳戶。",
+          "如果您想取消付費計劃並保留我們的免費服務，可以發送電子郵件至 hello@internxt.com，我們將處理訂閱取消，以便您可以保留帳戶並繼續使用我們的免費計劃。"
+        ]
+      },
+      {
+        "question": "如何聯繫客服？",
+        "answer": [
+          "找不到您要找的內容？您可以通過在線聊天或發送電子郵件至 hello@internxt.com 與我們的客戶成功團隊聯繫。"
+        ]
+      },
+      {
+        "question": "Internxt 是否有終身計劃？",
+        "answer": [
+          "我們提供從我們的網站購買的終身計劃。這些計劃讓您終身訪問我們的計劃，一次性付款可獲得高達 10TB 的存儲空間。"
+        ]
+      },
+      {
+        "question": "我可以向我的終身計劃添加更多存儲空間嗎？",
+        "answer": [
+          "是的，您可以向您的 Internxt 終身會員賬戶添加任意多的存儲空間。Internxt 終身計劃是可堆疊的。只需使用相同的電子郵件地址購買它們，然後聯繫我們的 hello@internxt.com，我們將在同一帳戶上為您堆疊它們。"
+        ]
+      }
+    ]
+  },
+    "SchemaMarkupQuestions": {
+      "faq": [
+        {
+          "question": "Internxt 是否有終身計劃？",
+          "answer": [
+            "我們提供從我們的網站購買的終身計劃。這些計劃讓您終身訪問我們的計劃，一次性付款可獲得高達 10TB 的存儲空間。"
+          ]
+        },
+        {
+          "question": "我可以向我的終身計劃添加更多存儲空間嗎？",
+          "answer": [
+            "是的，您可以向您的 Internxt 終身會員賬戶添加任意多的存儲空間。Internxt 終身計劃是可堆疊的。只需使用相同的電子郵件地址購買它們，然後聯繫我們的 hello@internxt.com，我們將在同一帳戶上為您堆疊它們。"
+          ]
+        }
+      ]
+    },
+    "CtaSection": {
+      "title": "試用 Internxt，無風險",
+      "description": "註冊並獲得高達 10GB 的 Internxt 端到端加密雲存儲免費使用。",
+      "cta": "創建免費帳戶"
+    },
+    "FirstWhatWeDoSection": {
+      "card1": {
+        "title": "核心隱私",
+        "description": "在我們所做的一切中，我們始終把用戶和他們的權利放在首位。我們的使命很簡單，就是創建更好的工具和服務，讓最終用戶重獲主動權。",
+        "cta": "我們對隱私的承諾"
+      },
+      "card2": {
+        "title": "無縫體驗",
+        "description": "Internxt 在所有平台上都可用，甚至還有 Linux！使用我們的移動應用程序、Web 和桌面應用程序同步您的文件和照片，每個都被設計成在您移動時提供超強加密存儲。",
+        "cta": "下載應用程序"
+      },
+      "card3": {
+        "title": "免費試用 Internxt！",
+        "description": "在全面投入之前，免費獲得高達 10GB 的存儲空間，看看隱私是否適合您！創建帳戶即可獲得 2GB，然後將您的免費存儲擴展到完整的 10GB，以幫助宣傳。",
+        "cta": "創建免費帳戶"
+      }
+    },
+    "BestStorageSection": {
+      "title": "為未來而建",
+      "description": "我們希望建立一個更好的全球互聯網，一個對所有人都公平、安全和公正的互聯網。互聯網隱私的未來戰爭正在進行中，我們正處於前沿。",
+      "card1": {
+        "title": "分散式工作"
+      },
+      "card2": {
+        "title": "AES-256 加密"
+      },
+      "card3": {
+        "title": "內置冗餘"
+      },
+      "card4": {
+        "title": "開源代碼"
+      },
+      "card5": {
+        "title": "獨立驗證"
+      }
+    },
+    "lastCtaSection": {
+      "title": "全球最私密的雲存儲",
+      "description": "保護 Internxt 安全、私密且加密的雲存儲中的真正重要的內容。",
+      "cta": "立即選擇計劃"
+  }
+}

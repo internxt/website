@@ -1,0 +1,62 @@
+{
+  "HeroSection": {
+    "label": "Internxt 的聯盟計畫",
+    "title": { "normalText": "讓互聯網更安全 - ", "blueText": "並且賺錢！" },
+    "description": "加入 Internxt 的世界級聯盟計畫，通過向您的觀眾推廣零知識雲端儲存來賺取收入。讓我們一起構建一個更安全、更公平、更好的互聯網。",
+    "signUp": "立即註冊",
+    "logIn": "聯盟登錄"
+  },
+  "FeatureSection": {
+    "title": "如何開始？",
+    "cards": [
+      {
+        "title": "創建聯盟賬戶",
+        "description": "通過此連結註冊成為聯盟會員。",
+        "cta": "立即註冊"
+      },
+      {
+        "title": "將訂閱者帶到 Internxt",
+        "description": "向您的觀眾推廣 Internxt。每次有人點擊您的個人連結並購買時，您都會賺取佣金！"
+      },
+      {
+        "title": "每次購買都會獲得報酬！",
+        "description": "通過您的連結進行的每次付費訂閱都可以賺取現金。我們每月月底發放的付款數量沒有上限。"
+      }
+    ]
+  },
+  "WhatIsInternxtSection": {
+    "title": "什麼是 Internxt？",
+    "subtitle": "Internxt Drive 是一個提供一流隱私和安全性的零知識雲端儲存服務。",
+    "description": "Internxt 不會訪問或出售您的數據。與競爭對手不同，我們的商業模式不是基於廣告或出售用戶信息。Internxt 基於開源的零知識技術，為未來設計並保護用戶的隱私權。"
+  },
+  "WhyJoinSection": {
+    "title": "為什麼加入 Internxt 的聯盟計畫？",
+    "cards": [
+      {
+        "title": "每次銷售可賺取高達 $299"
+      },
+      {
+        "title": "專屬賬戶經理"
+      },
+      {
+        "title": "30 天的 cookie 有效期"
+      },
+      {
+        "title": "獨家銷售、特惠和交易"
+      }
+    ],
+    "cta": "立即註冊"
+  },
+  "WhatWeDoSection": {
+    "title": "為每個人提供隱私、安全和軍事級加密",
+    "description": "專注於隱私、安全和保護每個人的數位權利，我們希望我們的合作夥伴與我們一起推廣一個更安全和更道德的互聯網。Internxt 是一個旨在為每個人提供最佳和最安全的雲端儲存工具和服務。"},
+    "cards": [
+      {
+        "title": "所有設備上的所有文件",
+        "description": "通過我們的網頁、桌面和移動應用程式，從任何連接互聯網的設備安全訪問您的所有文件。"
+      },
+      {
+        "title": "保持文件有序",
+        "description": "Internxt"} 
+      ]
+    }

@@ -1,0 +1,82 @@
+{
+  "template": {
+    "HeroSection": {
+      "coupon": {
+        "before": "使用優惠代碼獲得前30天免費",
+        "after": "在結帳時使用"
+      },
+      "partnershipWith": "合作夥伴",
+      "title": {
+        "line1": "將您的文件存儲在",
+        "line2": "完全隱私中，",
+        "line3": "前30天免費。"
+      },
+      "description": {
+        "line1": "Internxt Drive 處理所有安全和隱私問題。",
+        "line2": "專注於您重要的事，輕鬆上傳、分享、",
+        "line3": "下載或備份任何類型、任何大小的文件。"
+      }
+    },
+    "FeatureSection": {
+      "title": {
+        "line1": "設計旨在保護您。",
+        "line2": "再次感到安全。"
+      },
+      "features": {
+        "privacy": {
+          "title": "默認為私密",
+          "description": {
+            "line1": "Internxt 保護您的數據隱私",
+            "line2": "免受第三方和犯罪分子的侵害，您的",
+            "line3": "文件和照片只屬於您。"
+          }
+        },
+        "speed": {
+          "title": "快速同步",
+          "description": {
+            "line1": "Internxt 會找到最佳的服務器選項，",
+            "line2": "讓您可以以最快且更穩定的速度上傳和下載。",
+            "line3": ""
+          }
+        },
+        "security": {
+          "title": "核心安全",
+          "description": {
+            "line1": "管理文件時保持安全，",
+            "line2": "Internxt 使用零知識等加密技術保護您的數據。",
+            "line3": ""
+          }
+        },
+        "multiplatform": {
+          "title": "多平台",
+          "description": {
+            "line1": "Internxt 支持所有流行平台，包括",
+            "line2": "Windows、macOS、Linux、Android 和 iOS。",
+            "line3": "您甚至可以從網頁瀏覽器訪問。"
+          }
+        },
+        "support": {
+          "title": "高級支持",
+          "description": {
+            "line1": "需要幫助？我們的專業和",
+            "line2": "友好的技術支持代理隨時為您提供幫助。",
+            "line3": ""
+          }
+        }
+      },
+      "buyNowSection": {
+        "title": {
+          "line1": "為什麼開始使用 Internxt？"
+        },
+        "description": {
+          "line1": "與其他競爭對手不同，廣告不是我們的商業模式。",
+          "line2": "您的數據應該只屬於您。我們專注於您的安全和隱私",
+          "line3": "以及您的文件和照片。使用 Internxt，您可以再次感到安全。"
+        },
+        "cta": "立即獲取優惠",
+        "freemonth": "獲得30天免費使用"
+      }
+    }
+  }
+}
+

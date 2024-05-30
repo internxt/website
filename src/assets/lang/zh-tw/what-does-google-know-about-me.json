@@ -1,0 +1,225 @@
+{
+  "HeroSection": {
+    "mainTitle": "Google 對我的了解是什麼？",
+
+    "section1": {
+      "description": "隱私組織對 Google 收集個人數據感到擔憂，每個人都聽說過 Google 的許多隱私違規事件。",
+      "footer": "毫不秘密地，Google 通過 Chrome、Google 搜索、Google Play 應用、Google 地圖、YouTube 等收集個人信息並跟蹤其用戶。通過調整 Google 控件和設置，防止 Google 訪問您的數據。"
+    },
+    "section2": {
+      "title": "根據 Google 活動，Google 對我的了解是什麼？",
+      "bulletedList": {
+        "title": "當您在 Google 上搜索時，他們收集以下所有數據：",
+        "list": [
+          "個人信息：您的姓名、電話號碼、性別、出生日期",
+          "您的電子郵件地址",
+          "您的住址",
+          "您的工作地點",
+          "您的興趣",
+          "您搜索的內容",
+          "您訪問的網站",
+          "您觀看的視頻",
+          "您單擊或點擊的廣告",
+          "您的位置",
+          "您在世界各地訪問的地方",
+          "設備信息",
+          "IP 地址和 Cookie 數據",
+          "您的 YouTube 搜索歷史和最近觀看的視頻",
+          "您對 Google 助手說的話，包括通過智能音箱"
+        ]
+      }
+    },
+    "section3": {
+      "title": "Google 為什麼收集您的數據？",
+      "description": "簡而言之，這是一種剝削形式。Google 的動機是為了定向廣告並“個性化”您與其服務的體驗。通過放棄您的數據，您允許數十萬廣告商根據您的敏感個人數據競標顯示他們的廣告，讓 Google 收集所有這些信息。"
+    },
+    "footer": {
+      "line1": "除了您之外，參與的每個人都從您的信息中受益。",
+      "line2": "您就是產品。"
+    }
+  },
+  "CtaSection": {
+    "title": "擁有您的數據",
+    "description": "選擇一個保護您的數據而不是將其商品化的服務。",
+    "cta": "切換到 Internxt"
+  },
+  "WhatGoogleKnowsSection": {
+    "title": "探索 Google 對您了解的信息",
+    "description": "Google 主要從您的 Google 活動歷史中收集大量信息，但基於各種法律原因，他們必須向您提供這些信息。要了解他們收集了多少信息以及具體有關您的哪些數據，您必須打開您的 Google 設置並進行一些挖掘。",
+    "section1": {
+      "title": "查看存儲在您的 Google 帳戶中的所有數據摘要",
+      "numberedList": [
+        "登錄您的 Google 帳戶",
+        "在導航面板上，選擇“數據和隱私”或選擇“隱私和個性化”選項卡",
+        "在那裡，您將能夠查看由您使用的 Google 應用程序獲得的數據以及從 Google 服務中保存的內容"
+      ],
+      "footer": "您還可以在您的控制台中的“您的活動和所在地點”下找到 Google 的每個主要服務的名稱，以查看每個特定服務的數據。您也可以選擇每個服務旁邊的右箭頭來管理和更改設置。"
+    },
+    "section2": {
+      "title": "Google 網頁和應用活動",
+      "description": [
+        "在 [我的活動](https://myactivity.google.com/myactivity) 中，位於“歷史設置”下，您將能夠查看每次搜索和您訪問的網站（感謝 Google Analytics）。",
+        "如果您曾經使用過 Google 應用程式，那些數據也將顯示出來。您所有的 Google 活動歷史都按日期、時間和應用程式使用顯示。"
+      ]
+    },
+    "section3": {
+      "title": "Google 位置歷史",
+      "description": [
+        "每次您發表評論或訪問位置服務時，您的位置隱私都會受到威脅。在 [這裡](https://maps.google.com/locationhistory) 找到您的 Google 位置歷史和 Google 地圖時間軸。",
+        "Google 的位置歷史頁面提供了您曾經去過的完整列表，您可能已經在 Google 地圖中保存了這些地點（具體在“位置歷史”中找到）。還有 Google ‘地圖時間軸’，地圖將顯示 Google 知道您已經訪問的所有地區。"
+      ]
+    },
+    "section4": {
+      "title": "YouTube 歷史",
+      "description": [
+        "Google 還保存了您的 YouTube 搜索歷史、您觀看視頻的日期以及您用於查看內容的設備。",
+        "登錄您的 Google 帳戶並在 [這裡](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1) 檢查：選擇‘YouTube 觀看和搜索歷史’，並將其設置為每隔 3 或 6 個月自動刪除，或選擇不保存任何數據的選項。"
+      ]
+    },
+    "section5": {
+      "title": "與他人分享的 Google 資訊",
+      "description": "如果您想查看向他人公開的個人資料和位置共享資訊，可以點擊下面顯示的相應標籤來進行。在那裡，您還可以編輯此信息並調整權限。"
+    },
+    "section6": {
+      "title": "從 Google 服務和第三方應用程式中保存的內容",
+      "description": [
+        "當您安裝第三方（非 Google）應用程式和擴展時，許多都會提供 Google 登錄選項，以直接使用您的 Google 帳戶登錄以便促進流程，這是他們訪問這些應用程式數據的方式之一。",
+        "登錄您的 Google 帳戶並在 [這裡](https://security.google.com/settings/security/permissions) 找到正在訪問您的 Google 數據的所有應用程式和擴展，該頁面位於“您使用的應用程式和服務的數據”部分下。在那裡，您將找到服務和第三方應用程式的摘要，以及瀏覽和限制您的數據的設置。"
+      ]
+    },
+    "section7": {
+      "title": "Google Chrome 的 Cookie 和書籤",
+      "description": [
+        "[Web cookies](https://blog.internxt.com/web-cookies-explained/) 是計算機接收的包含旨在使您訪問的網站更加個性化的信息的數據集。 Cookie 通常用於識別某人訪問網站的時間並記錄此活動。",
+        "在 Google Chrome 中，您可以在 chrome://settings/cookies 檢查設置以刪除現有的 Cookie、允許或阻止所有 Cookie，並為網站設置 Cookie 偏好。 您可以允許所有 Cookie、阻止第三方 Cookie、清除您打開窗口中的 Cookie、阻止所有 Cookie（建議）以及甚至選擇從不允許存儲 Cookie 的網頁。",
+        "此外，Google Chrome 還具有隱身模式，可在您關閉打開的窗口後刪除您的瀏覽器歷史記錄並清除 Cookie。"
+      ]
+    },
+    "section8": {
+      "title": "將您的所有數據從 Google 中導出",
+      "description": "您可以通過找到“下載或刪除您的數據”選項卡並選擇必要的操作來導出和刪除您的 Google 帳戶保存的數據。 然後，您可以按照以下步驟選擇要導出或刪除的數據。",
+      "numberedList": [
+        {
+          "title": "將您的所有數據從 Google 中導出",
+          "description": "您可以通過找到“下載或刪除您的數據”選項卡並選擇必要的操作來導出和刪除您的 Google 帳戶保存的數據。 然後，您可以按照以下步驟選擇要導出或刪除的數據。"
+        },
+        {
+          "title": "選擇文件類型、頻率和目的地",
+          "description": "選擇文件類型、導出文件的頻率和目的地（電子郵件、Internxt、Dropbox、OneDrive、Box 或 Google Drive）。"
+        },
+        {
+          "title": "創建導出",
+          "description": "在此最後一步中，您可以檢查所選擇的數據項目數量（如訪問日誌活動、搜索貢獻或您的活動）以及它將可用的日期。"
+        }
+      ]
+    }
+  },
+  "CtaSection1": {
+    "title": "不想再被追蹤了嗎？",
+    "description": "擺脫 Google，恢復你的自由與 Internxt。",
+    "cta": "加入 Internxt"
+  },
+  "ManageGoogleDataSection": {
+    "title": "刪除你的 Google 數據並調整你的 Google 隱私設置",
+    "description": "既然你知道你的 Google 活動歷史，是時候阻止他們在第一時間收集所有這些個人數據了。以下是幫助你編輯隱私設置、退出部分數據收集並限制 Google 存儲的個人信息量的說明。",
+    "section1": {
+      "title": "刪除 Google Web & App 活動",
+      "description": [
+        "你會驚訝地發現 Google 保存了多少信息：Google Pay 信息、YouTube 頻道訂閱、YouTube '不感興趣' 反饋、YouTube 調查答案、YouTube 上的評論、YouTube 上的評論喜歡和不喜歡、YouTube 購買活動、Google Word Coach、Google 調查答案、興趣和通知、Google Play 圖書館、新聞偏好、數據存檔歷史、產品價格跟蹤等等。",
+        "通過選擇 ‘Web & App 活動’，你可以通過在頁面中間點擊 ‘刪除’ 按鈕來刪除你的活動，選擇：最近一小時、最近一天、始終或自定義範圍。在 ‘Web & App 活動’ 頁面上，你還可以通過選擇 “保存活動” 然後點擊 “關閉” 來禁用未來的數據收集。"
+      ]
+    },
+    "section2": {
+      "title": "禁用並刪除 Google 位置歷史",
+      "description": "位置歷史可能是 Google 收集的最可怕的數據。你可以點擊 Google 位置 ‘位置歷史’ 來禁用跟踪並打開自動刪除以刪除任何以前保存的位置數據。",
+      "numberedList": [
+        "進入 ‘位置歷史’",
+        "選擇 ‘關閉’",
+        "在頁面底部，在 ‘自動刪除’ 下，選擇 ‘刪除 3 個月前的活動’",
+        "選擇你偏好的選項，然後點擊 ‘下一步’ 保存你的設置並擦除舊的位置數據"
+      ]
+    },
+    "section3": {
+      "title": "禁用並刪除 YouTube 歷史",
+      "description": "你是一個狂熱的 YouTube 粉絲嗎？你可以通過在 ‘控制’ 中選擇 ‘YouTube 歷史’ 並點擊 ‘關閉’ 來刪除你的 Youtube 歷史並禁用進一步的歷史收集。你還應該在頁面底部啟用自動刪除。"
+    },
+    "section4": {
+      "title": "刪除並禁用 Google Fit 數據",
+      "description": [
+        "你擁有與 Google Fit 相連的設備嗎？雖然這對於跟踪體重減輕和運動很有幫助，但 Fit 收集了大量的個人健康信息，這些信息可能不應該在線上保留。",
+        "通過選擇 ‘管理 Google Fit 隱私’ 並取消選擇你感到不舒服的任何選項來調整並禁用 Fit 的數據收集權限，或者完全關閉 Fit。"
+      ]
+    },
+    "section5": {
+      "title": "管理 Google 電子郵件偏好",
+      "description": "厭倦了來自 Google 的定向電子郵件，例如價格警報和旅行提示嗎？通過點擊 ‘管理電子郵件偏好’ 在 “來自 Google 服務的電子郵件” 頁籤下來關閉它們。"
+    },
+    "section6": {
+      "title": "Google 廣告個性化",
+      "description": [
+        "你可以在 ['我的廣告中心’](http://www.google.com/settings/ads/) 中的 ‘個性化廣告’ 下查看 Google 對你的了解，你可以找到有關你的年齡段、語言、教育等信息。你還可以通過點擊 ‘我的廣告中心’ 頁面右上角的按鈕來關閉所有個性化廣告。",
+        "或者你可以選擇自定義你的個性化廣告或進一步管理你的廣告隱私設置，但只要個性化廣告被啟用，Google 仍然會與廣告商分享你的一些信息。"
+      ]
+    },
+    "section7": {
+      "title": "移除第三方訪問你的 Google 數據",
+      "description": [
+        "當你將你的 Google 帳戶鏈接到第三方帳戶時，第三方帳戶有能力從 Google 中提取信息。事實上，Google 每天傳輸我們的個人數據達 700 億次。你應該檢查哪些公司可以訪問你的數據並管理隱私設置。",
+        "有些第三方帳戶可能不允許你將你的第三方帳戶與你的 Google 帳戶取消鏈接，所以你需要查看這些服務網站的設置選項來管理這一點。",
+        "要禁用對個別應用程序和服務的第三方訪問，請向下滾動隱私頁面並找到標籤 ‘帶有帳戶訪問權限的第三方應用程序’。選擇它，然後你會發現哪些第三方可以訪問你的帳戶並管理設置。點擊你想編輯權限的服務，然後選擇禁用訪問的選項。"
+      ]
+    },
+    "section8": {
+      "title": "從 Google 搜索中刪除你的個人數據",
+      "description": "如果你不希望你的個人 Google 帳戶信息出現在 Google 搜索中，如果有人決定搜索你，只需找到 ‘搜索中的個人結果’ 標籤，點擊它，然後選擇檢查標記滑塊，以關閉搜索是否可以基於你的 Google 帳戶信息顯示你的個人結果。"
+    },
+    "section9": {
+      "title": "如何刪除 Google 帳戶",
+      "description": [
+        "如果你已經受夠了，完全對 Google 沒興趣，只想離開，你可以通過在隱私頁面底部下方的 ‘更多選項’ 下選擇 ‘刪除你的 Google 帳戶’ 來刪除 Google 帳戶。",
+        "只需按照那裡的指示進行。請確保你已準備好刪除所有信息，因為一旦完成此操作，就無法撤消。"
+      ]
+    }
+  },
+  "ToolsSection": {
+    "title": "Internxt 提供的其他隱私資源",
+    "description": [
+      "想了解更多有關保護你的在線數據的信息嗎？ Google 不是唯一一個收集你個人信息的公司。請訪問我們的 [網絡安全意識](https://internxt.com/cyber-awareness) 頁面，了解大量保護在線瀏覽更安全和更私密的最佳實踐和策略。"
+    ],
+    "tools": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "title": "免費密碼強度檢查器",
+        "width": 125,
+        "description": "立即檢查"
+      },
+      {
+        "url": "/images/temp-email/virus-scanner.svg",
+        "UrlRedirectName": "virus-scanner",
+        "title": "免費病毒掃描器",
+        "width": 105,
+        "description": "立即掃描"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "title": "免費字節轉換器",
+        "width": 95,
+        "description": "立即轉換"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "臨時郵件",
+        "width": 95,
+        "description": "現在發送郵件"
+      }
+    ]
+  },
+  "CtaSection2": {
+    "title": "一個可以信任的雲",
+    "description": "Internxt 的工作是保護你的數據，而不是利用它。",
+    "cta": "創建免費帳戶"
+  }
+}

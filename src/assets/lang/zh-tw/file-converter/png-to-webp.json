@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "PNG 到 WebP 轉換器可提供較小的文件大小，並且最小化品質損失。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 PNG 轉換為 WebP 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 PNG 轉換為 WebP 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 PNG：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 WebP'：這將您的文件從 PNG 轉換為 WebP。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 PNG 轉換為 WebP 文件",
+      "paragraphs": [
+        "我們的 PNG 到 WebP 在線文件轉換器可在需要較小文件大小和更快加載時間的工作流程中轉換基於 Web 的圖像。將 PNG 轉換為 WebP 文件可以通過壓縮文件高達 34%，而不會影響文件質量，從而優化您的雲存儲。",
+        "PNG 到 WebP 轉換由於其在網站上更快的加載時間和降低的數據使用量而變得越來越受歡迎。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

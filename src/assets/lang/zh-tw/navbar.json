@@ -1,0 +1,90 @@
+{
+  "links": {
+    "products": "產品",
+    "about": "關於我們",
+    "ourValues": "我們的價值觀",
+    "privacy": "隱私",
+    "pricing": "定價",
+    "login": "登入",
+    "getStarted": "開始使用",
+    "checkout": "立即領取！"
+  },
+  "products": {
+    "drive": "Internxt Drive",
+    "webDAV": "Internxt WebDAV",
+    "send": "Internxt Send",
+    "comingSoon": "即將推出",
+    "new": "新"
+  },
+  "ourValues": {
+    "privacy": "隱私",
+    "openSource": "開源"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "創建 Internxt 帳戶",
+      "or": "或",
+      "login": "登入",
+      "disclaimer": {
+        "text": "創建帳戶即表示您接受",
+        "link": "條款和條件"
+      },
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "strength": {
+            "complexity": "密碼不夠複雜",
+            "length": "密碼至少要有 8 個字符",
+            "weak": "密碼強度弱",
+            "strong": "密碼強度強"
+          }
+        },
+        "submit": "開始使用"
+      }
+    },
+    "LogIn": {
+      "title": "登入 Internxt",
+      "or": "或",
+      "signup": "創建帳戶",
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "helper": "忘記密碼了？"
+        },
+        "tfa": {
+          "label": "雙重身份驗證",
+          "placeholder": "2FA 驗證碼",
+          "hint": "2FA 驗證碼必須是 6 位數字"
+        },
+        "submit": "登入"
+      }
+    },
+    "Recover": {
+      "title": "恢復帳戶",
+      "back": "返回登入",
+      "disclaimer": "如應用程式設定中所述，只有您能夠訪問您的密碼，因此我們無法在沒有密碼的情況下恢復您的帳戶。您可以再次註冊，輸入您的電子郵件，我們將刪除您的帳戶及所有文件。",
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "submit": "發送確認電子郵件"
+      },
+      "success": {
+        "title": "檢查您的電子郵件",
+        "subtitle": "我們已經發送了帳戶重置鏈接到"
+      }
+    }
+  }
+}
+

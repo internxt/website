@@ -1,0 +1,119 @@
+{
+  "HeroSection": {
+    "title": "獲取Internxt終身方案！",
+    "description": "通過一次單次付款永久保護所有您的文件和回憶。",
+    "cta": "兌換代碼"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "創建Internxt帳戶",
+      "or": "或",
+      "login": "登錄",
+      "disclaimer": {
+        "text": "通過創建帳戶，您接受",
+        "link": "條款和條件"
+      },
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "strength": {
+            "complexity": "密碼不夠複雜",
+            "length": "密碼至少需8個字符長",
+            "weak": "密碼太弱",
+            "strong": "密碼很強"
+          }
+        },
+        "submit": "開始使用"
+      }
+    },
+    "LogIn": {
+      "title": "登錄Internxt",
+      "or": "或",
+      "signup": "創建帳戶",
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "helper": "忘記密碼了？"
+        },
+        "tfa": {
+          "label": "雙因素認證",
+          "placeholder": "2FA代碼",
+          "hint": "2FA代碼必須是6位數字"
+        },
+        "submit": "登錄"
+      }
+    },
+    "Recover": {
+      "title": "恢復帳戶",
+      "back": "返回登錄",
+      "disclaimer": "根據應用程序設置，只有您可以訪問您的密碼，因此我們無法在沒有它的情況下恢復您的帳戶。您可以在下面輸入您的電子郵件地址再次註冊，以便我們可以刪除您的帳戶和所有文件。",
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "submit": "發送確認郵件"
+      },
+      "success": {
+        "title": "查看您的電子郵件",
+        "subtitle": "我們已向您發送一封帳戶重置鏈接"
+      }
+    }
+  },
+  "PaymentSection": {
+    "limitedOffer": "限時優惠！",
+    "title": { "blueText": "", "normalText": "探索我們所有獨家終身計劃" },
+    "description": "一次購買，永久獲得隱私和安全。",
+    "normalSection": {
+      "title": "探索我們所有獨家終身計劃",
+      "description": "本周限定，一次購買，永久獲得隱私和安全。"
+    },
+    "securePayment": "100%安全付款，由Stripe提供",
+
+    "firstFeed": "30天退款保證",
+    "secondFeed": "100%安全付款",
+    "thirdFeed": "匿名帳戶創建"
+  },
+  "GetLifetimeSection": {
+    "title": "人生不短！但這個限時交易是……",
+    "description": "Internxt提供一周的終身隱私和安心的交易。"
+  },
+  "FeatureSection": {
+    "title": "安全雲存儲，無與倫比的隱私",
+    "description": "Internxt是什麼使得如此特殊？我們是一個緊密結合的專業團隊，完全致力於保護您在線上的安全。我們所做的每一件事和我們所做的每一個決定都是為了保護您的數據不被利用。",
+    "cta": "Internxt對隱私的承諾",
+    "cards": [
+      {
+        "title": "設計上的私密性",
+        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜止時都是加密的。Internxt完全讓您控制您的文件。您的數據是您的業務。保護它是我們的業務。"
+      },
+      {
+        "title": "無妥協的安全性",
+        "description": "您的文件在離開設備之前即已進行端到端加密。多虧了零知識AES-256加密，您絕對是唯一能夠訪問您的數據的人。"
+      },
+      {
+        "title": "開源和透明",
+        "description": "我們對自己所做的感到自豪，因此我們的代碼在GitHub上公開，任何人都可以進行個人審查、審計和驗證。我們沒有什麼可隱藏的，只有您的數據。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合GDPR，並且百分之百安全，但不要只聽我們的話。Internxt已由歐洲領先的滲透測試公司Securitum進行了獨立審核和驗證。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "您的文件永遠安全和私密",
+    "description": "我們對待我們的用戶就像家人一樣，家人是永遠的！",
+    "cta": "現在選擇計劃"
+  }
+}

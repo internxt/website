@@ -1,0 +1,199 @@
+{
+  "HeroSection": {
+    "title": "文件轉換器",
+    "description": {
+      "normal": "使用我們的免費在線文件轉換器即時安全地轉換多種文件格式。"
+    },
+    "cards": [
+      {
+        "title": "Word 轉 PDF",
+        "description": "免費的 Word 轉 PDF 轉換器。",
+        "pathname": "word-to-pdf"
+      },
+      {
+        "title": "PNG 轉 PDF",
+        "description": "免費的 PNG 轉 PDF 轉換器。",
+        "pathname": "png-to-pdf"
+      },
+      {
+        "title": "PPTX 轉 PDF",
+        "description": "免費的 PPTX 轉 PDF 轉換器。",
+        "pathname": "pptx-to-pdf"
+      },
+      {
+        "title": "Excel 轉 PDF",
+        "description": "免費的 Excel 轉 PDF 轉換器。",
+        "pathname": "excel-to-pdf"
+      },
+      {
+        "title": "HTML 轉 PDF",
+        "description": "免費的 HTML 轉 PDF 轉換器。",
+        "pathname": "html-to-pdf"
+      },
+      {
+        "title": "圖片轉文本",
+        "description": "免費的圖片轉文本轉換器。",
+        "pathname": "image-to-text"
+      },
+      {
+        "title": "PDF 轉 HTML",
+        "description": "免費的 PDF 轉 HTML 轉換器。",
+        "pathname": "pdf-to-html"
+      },
+      {
+        "title": "JPG 轉 PNG",
+        "description": "免費的 JPG 轉 PNG 轉換器。",
+        "pathname": "jpg-to-png"
+      },
+      {
+        "title": "JPG 轉 HEIC",
+        "description": "免費的 JPG 轉 HEIC 轉換器。",
+        "pathname": "jpg-to-heic"
+      },
+      {
+        "title": "JPG 轉 WebP",
+        "description": "免費的 JPG 轉 WebP 轉換器。",
+        "pathname": "jpg-to-webp"
+      },
+      {
+        "title": "PNG 轉 JPG",
+        "description": "免費的 PNG 轉 JPG 轉換器。",
+        "pathname": "png-to-jpg"
+      },
+      {
+        "title": "PNG 轉 HEIC",
+        "description": "免費的 PNG 轉 HEIC 轉換器。",
+        "pathname": "png-to-heic"
+      },
+      {
+        "title": "PNG 轉 WebP",
+        "description": "免費的 PNG 轉 WebP 轉換器。",
+        "pathname": "png-to-webp"
+      },
+      {
+        "title": "WebP 轉 PNG",
+        "description": "免費的 WebP 轉 PNG 轉換器。",
+        "pathname": "webp-to-png"
+      },
+      {
+        "title": "WebP 轉 JPG",
+        "description": "免費的 WebP 轉 JPG 轉換器。",
+        "pathname": "webp-to-jpg"
+      },
+      {
+        "title": "HEIC 轉 JPG",
+        "description": "免費的 HEIC 轉 JPG 轉換器。",
+        "pathname": "heic-to-jpg"
+      },
+      {
+        "title": "HEIC 轉 PNG",
+        "description": "免費的 HEIC 轉 PNG 轉換器。",
+        "pathname": "heic-to-png"
+      }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileConverter": {
+      "title": "Internxt 的免費文件轉換器",
+      "description": [
+        "我們的文件轉換器通過提供簡單、安全且快速的解決方案來轉換您的 PDF、Word（Doc）、圖片等，減輕了文件管理和存儲的壓力。",
+        "只需幾個簡單的步驟，您就可以將不受支持的文件轉換為您喜歡的格式，以便輕鬆地編輯、保護和協作您的文件。使用我們的免費、安全、私密的文件轉換器，告別不支持的格式。"
+      ]
+    },
+    "howUseFileConverter": {
+      "title": "如何使用 Internxt 的文件轉換器",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "從您的設備上傳您想要的文件，或點擊並拖動到頁面上。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "等待幾秒鐘，我們將為您轉換文件。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "您的下載將自動開始。"
+        }
+      ]
+    },
+    "whyUseFileConverter": {
+      "title": "為什麼要使用文件轉換器",
+      "description": "Internxt 的文件轉換器消除了下載不兼容文件的困難，並為您提供了多種選項來保護、編輯和協作處理文件。我們的免費在線文件轉換器消除了對第三方或昂貴下載的依賴，這些下載可能會對您的文件隱私構成風險。"
+    },
+    "cards": [
+      {
+        "title": "轉換多種文件格式",
+        "description": "我們提供最受歡迎的文件轉換，以提高項目、演示文稿或電子表格工作的效率、定制和多功能性。"
+      },
+      {
+        "title": "保證隱私",
+        "description": "文件通過 HTTPS 加密上傳，以保護您的內容。Internxt 不會存儲您使用我們文件轉換器的文件。"
+      },
+      {
+        "title": "無需註冊",
+        "description": "在完全隱私的情況下轉換您的文件——無需共享電子郵件、用戶名或賬單信息等個人信息。"
+      },
+      {
+        "title": "與 Internxt 生態系統集成",
+        "description": "我們的文件轉換器與所有 Internxt 產品完美集成，可在完全隱私的情況下轉換、存儲和共享您的文件。"
+      },
+      {
+        "title": "隨時隨地訪問和轉換您的文件",
+        "description": "隨時隨地使用我們的文件轉換器快速訪問您需要的文件，沒有任何限制。"
+      },
+      {
+        "title": "多種用途",
+        "description": "Internxt 的文件轉換器非常適合專業、教育或個人文件管理。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  },
+  "CtaSection2": {
+    "title": "文件管理，變得簡單。",
+    "description": "使用 Internxt Drive 安全地轉換和存儲文件。",
+    "cta": "創建賬戶"
+  },
+  "QASection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "我們的文件轉換器支持哪些文件格式？",
+        "answer": [
+          "我們提供流行的 PDF 文件轉換選項，包括免費的 PDF 轉 Word 轉換器。我們還支持將 PNG、JPG、Excel、PowerPoint、WEBP 和 HTML 文件進行轉換。"
+        ]
+      },
+      {
+        "question": "有文件大小限制嗎？",
+        "answer": ["我們的文件轉換器目前支持最大 1GB 的文件大小。"]
+      },
+      {
+        "question": "我的文件在轉換過程中是安全的嗎？",
+        "answer": [
+          "我們使用行業標準的 AES 256 加密來加密您上傳的文件，確保它們在轉換過程中被加密。您的文件在轉換完成後將自動從我們的服務器中刪除。"
+        ]
+      },
+      {
+        "question": "轉換後的文件會存儲在你們的服務器上嗎？",
+        "answer": [
+          "Internxt 不會在我們的服務器上存儲您的任何個人數據或文件。我們尊重您的隱私權，並採取必要措施確保您的數據僅屬於您自己。"
+        ]
+      },
+      {
+        "question": "你的文件轉換器是免費使用的嗎？",
+        "answer": ["是的，您可以免費使用我們的文件轉換器。"]
+      },
+      {
+        "question": "轉換文件需要多長時間？",
+        "answer": [
+          "穩定可靠的互聯網連接將在幾秒鐘內轉換您的文件。但是，文件轉換時間會根據您的網絡連接、文件大小和轉換"]
+
+        
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "HeroSection": {
+    "header": "Internxt 年度計劃",
+    "title": {
+      "normalText": "最安全的雲端存儲 ",
+      "blueText": "適用於您的所有照片和文件"
+    },
+    "description": "註冊 Internxt 年度計劃，獲得 365 天的完全隱私。使用優惠代碼 SPECIAL15 可享受額外折扣",
+    "cta": "選擇您的計劃"
+  },
+  "PaymentSection": {
+    "title": "年度計劃",
+    "description": "所有 Internxt 計劃都配備完整的隱私服務訪問權限。全年安全，適用於各種需求。",
+    "firstFeed": "30 天退款保證",
+    "secondFeed": "100% 安全支付",
+    "thirdFeed": "匿名帳戶創建"
+  },
+  "FeatureSection": {
+    "title": "重新掌控您的隱私",
+    "description": "Internxt 創建了私密和安全的雲服務，旨在讓您——用戶，重新掌控您的數據。保護您的文件和您基本的隱私權，所有 Internxt 服務從零開始設計，提供無與倫比的安全性。",
+    "cta": "獲取一年計劃"
+  },
+  "CtaSection": {
+    "title": "世界上最私密的雲端存儲",
+    "description": "使用 Internxt 的安全、私密和加密雲存儲保護重要的東西。",
+    "cta": "選擇您的計劃"
+  }
+}
+

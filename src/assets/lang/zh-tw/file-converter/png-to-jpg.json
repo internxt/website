@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "一個安全的 PNG 到 JPG 轉換器，用於保留您圖像的質量",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 PNG 轉換為 JPG 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 PNG 轉換為 JPG 包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 PNG：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 JPG'：這將您的文件從 PNG 轉換為 JPG。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 PNG 轉換為 JPG 文件",
+      "paragraphs": [
+        "當您的照片質量、透明度和長期保存至關重要時，您可能會發現將 PNG 轉換為 JPG 轉換器非常有用。雖然兩者都是常見的圖像格式，但 JPG 稍微更加靈活，並在各種網站和平台上得到支持。",
+        "為了增加 PNG 的可訪問性和好處，例如圖像透明度和更小的文件大小，請使用 Internxt 的免費在線文件轉換器將 PNG 轉換為 JPG 文件。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

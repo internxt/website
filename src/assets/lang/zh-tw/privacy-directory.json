@@ -1,0 +1,222 @@
+{
+  "HeroSection": {
+    "header": "數據隱私目錄",
+    "title": "隱私是一項基本的人權。Internxt 只是為了個人數據隱私權和個人數據保護而奮鬥的一家公司。",
+    "description": " 在這裡，我們已經編制了一份不斷更新的隱私和數字權利組織名單。我們目錄中列出的每個組織都致力於創建一個自由和公平的互聯網。",
+    "cta": "Internxt 對隱私的承諾"
+  },
+  "WikiSection": {
+    "title": {
+      "line1": "隱私和數字權利組織",
+      "line2": ""
+    },
+    "ngos": [
+      {
+        "id": "european-digital-rights",
+        "name": "歐洲數字權利",
+        "short": "EDRi",
+        "description": "歐洲數字權利倡議是一個聯盟組織，致力於捍衛信息社會中的公民權利，特別是關於互聯網、版權和歐洲聯盟隱私的問題。",
+        "url": "https://edri.org/"
+      },
+      {
+        "id": "the-electronic-frontier-foundation",
+        "name": "電子邊緣基金會",
+        "short": "EEF",
+        "description": "EFF 是一個領先的國際數字權利非營利組織，致力於保護我們在技術方面的基本權利。他們的使命是教育新聞界、政策制定者和普通大眾，關於數字公民自由問題的教育，並作為這些自由的捍衛者。",
+        "url": "https://www.eff.org/"
+      },
+      {
+        "id": "foundation-for-technology-and-privacy-outreach",
+        "name": "技術和隱私外展基金會",
+        "description": "從事教育項目，旨在提高公眾對技術、在線隱私和身份問題的認識，以促進創新和促進消費者隱私。",
+        "url": "https://www.onlineprivacymatters.org/"
+      },
+      {
+        "id": "electronic-privacy-information-center",
+        "name": "電子隱私信息中心",
+        "short": "EPIC",
+        "description": "一家非營利性研究和倡導中心，進行政策研究，開展公共教育活動，進行立法倡議。EPIC 的使命是將公眾注意力集中在新興的隱私和公民自由問題上，保護隱私、言論自由和民主價值觀。",
+        "url": "https://epic.org/"
+      },
+      {
+        "id": "center-for-democracy-and-technology",
+        "name": "民主與技術中心",
+        "short": "CDT",
+        "description": "CDT 旨在通過塑造技術政策和架構來促進民主價值觀，專注於個人權利，提供領導和倡導，以幫助塑造公共政策和行業最佳實踐，同時提供利益相關者對話的平台。",
+        "url": "https://cdt.org/"
+      },
+      {
+        "id": "privacy-international",
+        "name": "隱私國際",
+        "short": "PI",
+        "description": "一家註冊慈善機構，致力於捍衛民主，保護人的尊嚴，要求機構對違反公眾信任的行為進行責任追究。PI 調查並挑戰政府監視，揭露促使其行事的公司，並倡導制定保護隱私的強法律。",
+        "url": "https://www.privacyinternational.org/"
+      },
+      {
+        "id": "the-international-association-of-privacy-professionals",
+        "name": "國際隱私專業協會",
+        "short": "IAPP",
+        "description": "政策中立且全球最大、最全面的全球信息隱私社區，IAPP 是專業人士的資源，幫助他們成功管理隱私風險和數據安全。",
+        "url": "https://iapp.org/"
+      },
+      {
+        "id": "fight-for-the-future",
+        "name": "為未來而戰",
+        "description": "為未來而戰是一家非營利組織，通過網絡高調宣傳活動，確保網絡繼續把言論自由和創造力放在核心地位，不受干擾或審查，並確保完整的隱私。",
+        "url": "https://www.fightforthefuture.org/"
+      },
+      {
+        "id": "privacy-rights-clearinghouse",
+        "name": "隱私權清理中心",
+        "description": "一個專注於消費者隱私權並賦予個人權力的非營利組織，隱私權清理中心通過發布大量的教育資料和消費者指南，提供對於複雜隱私議題的澄清，同時還提供各種在線服務，包括一個投訴中心，消費者可以在其中報告隱私違規和不良隱私做法。",
+        "url": "https://privacyrights.org/"
+      },
+      {
+        "id": "internet-free-expression-alliance",
+        "name": "互聯網自由表達聯盟",
+        "short": "IFEA",
+        "description": "IFEA是一個由30個成員組成的團體，由在線出版商、新聞機構、學術團體和其他注重隱私的機構組成，他們反對將互聯網限制為除了開放、多樣和民主的溝通平台以外的任何其他技術和標準。",
+        "url": "http://ifea.net/"
+      },
+      {
+        "id": "future-of-privacy-forum",
+        "name": "未來隱私論壇",
+        "short": "FPF",
+        "description": "一個集體論壇，支持隱私領導力和學術研究，推動支持新興技術的原則性數據實踐。 FPF匯集了行業、學術界、消費者倡導者和其他思想領袖，探討技術創新帶來的挑戰，制定隱私保護、道德規範和可行的商業實踐。",
+        "url": "https://fpf.org/"
+      },
+      {
+        "id": "triangle-privacy-research-hub",
+        "name": "三角隱私研究中心",
+        "short": "TPRH",
+        "description": "TPRH是一個致力於推進數據的創新和道德使用的非營利組織，通過在學術界、學生、行業領袖和政策倡導者之間建立聯繫，來探索政策方法，允許數據的使用，同時保護個人隱私，以改善訪問信息、教育、性別和性暴力、醫療保健以及國家安全/執法等問題。",
+        "url": "https://www.triangleprivacyhub.org/"
+      },
+      {
+        "id": "demand-progress",
+        "name": "需求進展",
+        "description": "需求進展利用基層策略來反對所有監視措施，並保護互聯網的民主性格，並利用它來對抗集中的企業權力並追究政府的責任，以反對《網絡盜版阻止法案》（SOPA）為代表的行動而聞名。",
+        "url": "https://demandprogress.org/"
+      },
+      {
+        "id": "noyb",
+        "name": "NOYB",
+        "description": "NOYB是一個非政府組織，致力於保護互聯網上的隱私，它利用來自消費者權益團體、隱私活動家、黑客和法律技術倡議的最佳實踐，將它們融合成一個穩定的歐洲執法平台。",
+        "url": "https://noyb.eu/"
+      },
+      {
+        "id": "privaterra",
+        "name": "Privaterra",
+        "description": "Privaterra是一個組織，為公民社會組織（特別是人權非政府組織）提供技術教育和支持，涉及數據隱私、安全通信和信息安全領域。",
+        "url": "http://www.privaterra.org/"
+      },
+      {
+        "id": "agencia-espanola-de-proteccion-de-datos",
+        "name": "西班牙數據保護局",
+        "short": "AEPD",
+        "description": "AEPD是一個獨立的公共機構，負責確保西班牙公民的隱私和數據保護。 該機構保護公民的訪問、糾正、限制、反對、刪除（被遺忘權）、可攜性以及反對自動決策的權利。",
+        "url": "https://www.aepd.es/"
+      },
+      {
+        "id": "protege-tus-datos",
+        "name": "保護你的數據",
+        "description": "一個西班牙的非政府組織，主要由年輕專業人士組成，專門從事新的信息和通信技術，關注在互聯網上保護個人數據的問題。保護你的數據提供計算機安全培訓，促進區域隱私立法，並就隱私和用戶安全方面的新興技術進行調查。",
+        "url": "http://www.protegetusdatos.org/"
+      },
+      {
+        "id": "derechos-digitales",
+        "name": "數字權利",
+        "description": "數字權利是一個非政府組織，其使命是通過全面的互聯網方法來保護和促進在線環境中的基本權利，從人權、言論自由和隱私，以及版權和知識獲取權，公民和政治權利，以及社會和文化權利的角度來看互聯網。",
+        "url": "https://www.derechosdigitales.org/"
+      },
+      {
+        "id": "datos-protegidos",
+        "name": "受保護的數據",
+        "description": "一個智利非營利基金會，旨在推廣健康和安全的實踐，以保護您的信息，關注與人們每天使用的設備和平台相關的風險。",
+        "url": "https://datosprotegidos.org/"
+      },
+      {
+        "id": "instituto-nacional-de-proteccion-de-datos",
+        "name": "國家數據保護研究所",
+        "short": "INPD",
+        "description": "西班牙法律機構提供隱私法律咨詢，屬於tugesto，為公司和自由職業者提供遵守當前個人數據保護法律和信息社會和電子商務法律的全面服務。",
+        "url": "https://tugesto.com/"
+      },
+      {
+        "id": "bits-of-freedom",
+        "name": "自由之線",
+        "description": "一家獨立的荷蘭數字權利基金會，自由之線專注於隱私和數字時代的通信自由，致力於影響立法和自律，同時通過提高人們對自由增進技術的認識、使用和發展來賦予公民和用戶權力。",
+        "url": "https://www.bitsoffreedom.nl/english/"
+      },
+      {
+        "id": "the-confederation-of-european-data-protection-organisations",
+        "name": "歐洲數據保護組織聯合會",
+        "short": "CEDPO",
+        "description": "CEDPO旨在通過提供關於平衡、實用和有效的數據保護建議，來促進歐盟數據保護主任（DPO）的作用，同時也為更好地協調整個歐盟/歐洲經濟區的數據保護法律和實踐做出貢獻。",
+        "url": "https://cedpo.eu/"
+      },
+      {
+        "id": "identity-theft-resource-center",
+        "name": "身份盜竊資源中心",
+        "short": "ITRC",
+        "description": "ITRC是一個非營利組織，旨在支持身份盜竊受害者解決案件，同時也致力於擴大公眾對身份盜竊、數據洩露、網絡安全、騙局、欺詐和隱私問題的認識。",
+        "url": "https://www.idtheftcenter.org/"
+      },
+      {
+        "id": "open-source-initiative",
+        "name": "開放源碼倡議",
+        "short": "OSI",
+        "description": "OSI是一家總部位於加利福尼亞州的非營利組織，通過公共倡導、教育和社區建設來促進非專有軟件的重要性。 OSI致力於賦予透明、同行評審、高質量和負擔得起的軟件權力，以結束掠奪性的供應商封鎖。",
+        "url": "https://opensource.org/"
+      },
+      {
+        "id": "access-now",
+        "name": "立即訪問",
+        "description": "立即訪問是一個倡導組織，致力於捍衛和擴大用戶的數字權利。通過運營全天候的數字安全熱線、組織年度RightsCon大會，以及向基層組織提供製定數字法律政策的補助金，立即訪問已在數字時代全球範圍內確立了自己為善的力量。",
+        "url": "https://www.accessnow.org/"
+      },
+      {
+        "id": "cyberpeaceinstitute",
+        "name": "網絡和平研究所",
+        "description": "網絡和平研究所是一個非政府組織，其使命是確保人們的安全權利，協助和保護脆弱社區，使他們能夠應對並從旨在破壞他們工作的網絡攻擊中恢復過來。",
+        "url": "https://www.cyberpeaceinstitute.org/"
+      }
+    ]
+  },
+  "SupportNGOsSection": {
+    "cardTitle": {
+      "line1": "我們團結一心",
+      "line2": "共同創造",
+      "line3": "更美好的世界。",
+      "line4": ""
+    },
+    "body": {
+      "title": "Internxt支持非營利組織",
+      "paragraph1": "人類對隱私的權利必須以任何代價得到保護。只有通過共同努力，我們才能確保每個人對數據所有權和數字隱私的基本權利。",
+      "paragraph2": {
+        "regular": "Internxt致力於支持致力於使互聯網更美好的非營利組織和NGO。如果您或您的團隊正在致力於實現更自由和道德的互聯網，您可以通過與我們聯繫，獲得",
+        "semibold": "50％折扣的訂閱計劃。"
+      },
+      "cta": {
+        "line1": "聯繫我們以獲得特殊的非營利組織",
+        "line2": "價格"
+      }
+    }
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "什麼是隱私目錄？",
+        "answer": [
+          "Internxt的隱私組織目錄為與Internxt合作的數字權利組織、機構和非營利組織提供支持，推進、支持和捍衛所有人的隱私。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "安全只需一個點擊",
+    "description": "使用Internxt的隱私套件保護您的個人數據。",
+    "cta": "創建帳戶"
+  }
+}

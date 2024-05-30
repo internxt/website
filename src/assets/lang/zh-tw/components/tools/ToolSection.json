@@ -1,0 +1,46 @@
+{
+  "title": {
+    "text1": "更多",
+    "blueText": "免費的",
+    "text2": "在線安全工具"
+  },
+  "free": "免費",
+  "toolsCard": [
+    {
+      "title": "密碼生成器",
+      "cta": "立即生成",
+      "pathname": "/password-generator"
+    },
+    {
+      "title": "密碼強度檢查器",
+      "cta": "立即檢查",
+      "pathname": "/password-checker"
+    },
+    {
+      "title": "位元單位轉換器",
+      "cta": "立即轉換",
+      "pathname": "/byte-converter"
+    },
+    {
+      "title": "臨時郵箱",
+      "cta": "立即郵件",
+      "pathname": "/temporary-email"
+    },
+    {
+      "title": "病毒掃描器",
+      "cta": "立即掃描",
+      "pathname": "/virus-scanner"
+    },
+    {
+      "title": "文件轉換器",
+      "cta": "立即轉換",
+      "pathname": "/file-converter"
+    },
+    {
+      "title": "VPN Chrome 擴充功能",
+      "cta": "立即下載",
+      "pathname": "/vpn"
+    }
+  ]
+}
+

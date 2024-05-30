@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "一個安全的 PPTX 到 PDF 轉換器，可方便地分享網頁內容。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 PPTX 轉換為 PDF 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 PPTX 轉換為 PDF 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 PPTX：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 PDF'：這將您的文件從 PPTX 轉換為 PDF。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 PPTX 轉換為 PDF 文件",
+      "paragraphs": [
+        "PowerPoint 到 PDF 文件轉換器使您的演示文稿在不同平台和設備上普遍可訪問，以便更輕鬆地共享文件。 PDF 文件還支持安全功能，如密碼保護和受限權限。",
+        "使用 Internxt 的 PowerPoint 到 PDF 解決方案是您工作流程中不可或缺的工具，為您的文件存儲、共享和演示提供安全、多功能的解決方案。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

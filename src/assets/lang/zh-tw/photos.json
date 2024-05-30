@@ -1,0 +1,139 @@
+{
+  "HeroSection": {
+    "eyebrow": "Internxt 照片",
+    "title": {
+      "line1": "完美的照片瞬間，",
+      "line2": "安全保護"
+    },
+    "subtitle": {
+      "line1": "重溫、分享並保護您的最佳記憶，盡在一處。",
+      "line2": "讓 Internxt 照片專注於隱私和安全，",
+      "line3": "讓您能專注於捕捉對您重要的瞬間。"
+    },
+    "availableSoon": "即將推出",
+    "DownloadLinks": {
+      "downloadTitle": "下載 Internxt Drive",
+      "or": "或",
+      "downloadFor": "下載適用於",
+      "orDownloadFor": "或下載適用於",
+      "downloadOnThe": "下載於",
+      "orDownloadOnThe": "或下載於",
+      "getOn": "獲取於",
+      "orGetOn": "或獲取於",
+      "openDriveWeb": "打開 Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "所有設備上的同步畫廊"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "從您的智能手機上傳，",
+        "line2": "隨時隨地訪問"
+      },
+      "subtitle": {
+        "line1": "您的照片庫將始終保持最新，",
+        "line2": "這意味著即使您的設備丟失、被盜或損壞，",
+        "line3": "您也可以訪問同步的照片。"
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "與朋友和家人分享您的照片"
+      },
+      "subtitle": {
+        "line1": "生成共享鏈接，這樣您可以控制照片",
+        "line2": "可以被訪問和下載的次數。"
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "完全隱私地同步您的照片"
+      }
+    },
+    "section5": {
+      "title": {
+        "line1": "所有文件，",
+        "line2": "安全且私密"
+      },
+      "subtitle": {
+        "line1": "隱私和安全是我們的核心，我們不依賴數據或廣告運營業務，",
+        "line2": "而是依賴信任。我們尊重您的權利，並圍繞它們構建出色的工具，而不是與之對立。"
+      },
+      "cta": "我們對隱私的承諾",
+      "card1": {
+        "title": "軍用級加密",
+        "subtitle": "我們非常重視您的隱私，因此您的文件會被加密，只有您可以訪問。"
+      },
+      "card2": {
+        "title": "零知識技術",
+        "subtitle": "我們從不以未加密或未哈希的形式存儲或傳輸文件、用戶密碼或加密密鑰。"
+      },
+      "card3": {
+        "title": "隱私設計",
+        "subtitle": "我們以用戶為中心開發產品，並在數據驅動的世界中，將隱私視為必需。"
+      },
+      "card4": {
+        "title": "開源和透明",
+        "subtitle": "我們為自己的工作感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以親自審查、審計和驗證。我們沒有什麼可隱藏的，除了您的數據。"
+      }
+    },
+    "DownloadLinks": {
+      "or": "或",
+      "downloadFor": "下載適用於",
+      "orDownloadFor": "或下載適用於",
+      "downloadOnThe": "下載於",
+      "orDownloadOnThe": "或下載於",
+      "getOn": "獲取於",
+      "orGetOn": "或獲取於",
+      "openDriveWeb": "打開 Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "FeatureSection": {
+    "title": "用 Internxt 照片保護您的照片",
+    "description": "使用 Internxt，只有您可以訪問您的文件。以完全私密的方式存儲、分享和備份您的圖片。",
+    "cta": "立即開始"
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "如何在 Internxt 中同步我的文件和照片？",
+        "answer": [
+          "要將您的照片從手機庫同步並加密到 Internxt 雲端，只需：",
+          "1. 打開 Internxt 手機應用",
+          "2. 選擇「照片」，您的照片將自動開始同步"
+        ]
+      },
+      {
+        "question": "如何從手機上傳文件？",
+        "answer": [
+          "打開 Internxt 手機應用，點擊屏幕底部中間的藍色加號（+）圖標。選擇「上傳文件」或「從相機膠捲上傳」以上傳照片。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "無風險試用 Internxt",
+    "description": "使用 Internxt 安全、私密和加密的雲存儲來保護真正重要的東西。",
+    "cta": "立即選擇計劃"
+  }
+}
+
