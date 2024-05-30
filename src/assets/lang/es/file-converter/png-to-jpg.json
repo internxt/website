@@ -1,12 +1,12 @@
 {
   "ConverterSection": {
-    "description": "Un conversor seguro de PNG a JPG para preservar la calidad de tus imágenes",
+    "description": "Un convertidor seguro de PNG a JPG para preservar la calidad de tus imágenes",
     "secureUpload": "Cargas seguras protegidas por HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
       "title": "Cómo convertir archivos PNG a JPG",
-      "description": "Diseñamos nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu PNG a un archivo JPG implica tres pasos:",
+      "description": "Diseñamos nuestro convertidor de archivos para que sea lo más fácil de usar posible. Convertir tu PNG a un archivo JPG implica tres pasos:",
       "steps": [
         {
           "step": "Paso 1:",
@@ -25,8 +25,8 @@
     "whyConvert": {
       "title": "Por qué convertir archivos PNG a JPG",
       "paragraphs": [
-        "Puedes encontrar útil un conversor de PNG a JPG cuando la calidad, la transparencia y la preservación a largo plazo de tus fotos son primordiales. Aunque ambos son formatos comunes de imagen, los JPG son ligeramente más versátiles y compatibles con diversos sitios web y plataformas.",
-        "Para obtener mayor accesibilidad y beneficios para tus PNG, como transparencia de imagen y tamaños de archivo más pequeños, convierte tus archivos PNG a JPG con nuestro conversor de archivos en línea de forma gratuita con Internxt."
+        "Puedes encontrar útil un convertidor de PNG a JPG cuando la calidad, la transparencia y la preservación a largo plazo de tus fotos son primordiales. Aunque ambos son formatos comunes de imagen, los JPG son ligeramente más versátiles y compatibles con diversos sitios web y plataformas.",
+        "Para obtener mayor accesibilidad y beneficios para tus PNG, como transparencia de imagen y tamaños de archivo más pequeños, convierte tus archivos PNG a JPG con nuestro convertidor de archivos en línea de forma gratuita con Internxt."
       ]
     }
   },
