@@ -12,7 +12,7 @@ const FeaturesBanner = () => {
   const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`@/assets/lang/${lang}/banners.json`);
+  const textContent = require(`@/assets/lang/it/banners.json`);
 
   const handleClose = () => {
     sessionStorage.setItem('hideBanner', 'true');
@@ -30,7 +30,8 @@ const FeaturesBanner = () => {
   }, []);
 
   const handleOnClick = () => {
-    router.push('/pricing');
+    router.push('/lifetime/celebration');
+    handleClose();
   };
 
   return (
@@ -41,17 +42,17 @@ const FeaturesBanner = () => {
     >
       {/* Banner */}
       <div
-        className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl border-4 border-primary/7 bg-white px-10`}
+        className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl bg-[url('/images/lifetime/celebration/swiggles_italy.png')] bg-cover bg-no-repeat  px-10`}
       >
-        <button className="absolute  right-0 m-7 flex text-black" onClick={handleClose}>
+        <button className="absolute right-0 m-7 flex rounded-md text-white hover:bg-gray-1/10" onClick={handleClose}>
           <X size={32} />
         </button>
         <div className="flex w-full max-w-[800px] flex-col space-x-10 py-14 lg:flex-row">
           <div className="flex w-full flex-col  items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
-            <div className="flex rounded-lg bg-white py-1.5 px-3 ring-4 ring-primary/7">
-              <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
+            <div className="flex rounded-lg py-1.5 px-3 ring-2 ring-white">
+              <p className="text-2xl font-bold text-white">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="w-full max-w-[310px] text-4xl font-bold leading-tight text-gray-100">
+            <p className="w-full max-w-[310px] text-4xl font-bold leading-tight text-white">
               {textContent.featuresBanner.title}
             </p>
 
@@ -62,21 +63,21 @@ const FeaturesBanner = () => {
               >
                 {textContent.featuresBanner.cta}
               </button>
-              <div className="flex flex-row items-center space-x-3 pt-2 text-gray-80">
+              <div className="flex flex-row items-center space-x-3 pt-2 text-white">
                 <CheckCircle size={24} className="" />
                 <p className="whitespace-nowrap font-medium lg:text-lg">{textContent.featuresBanner.guarantee}</p>
               </div>
 
-              <p className="text-sm font-medium text-gray-80">{textContent.featuresBanner.lastCta}</p>
+              <p className="text-sm font-medium text-gray-50">{textContent.featuresBanner.lastCta}</p>
             </div>
           </div>
           <div className="hidden items-center lg:flex">
             <div className="flex flex-col">
               <div className="flex flex-col space-y-8">
                 {textContent.featuresBanner.features.map((card) => (
-                  <div className="flex flex-row space-x-4" key={card}>
-                    <KeyHoleIcon />
-                    <p className="whitespace-nowrap text-lg font-semibold text-gray-80">{card}</p>
+                  <div className="flex flex-row items-center space-x-4" key={card}>
+                    <CheckCircle size={32} className="text-white" weight="fill" />
+                    <p className="whitespace-nowrap text-lg font-semibold text-white">{card}</p>
                   </div>
                 ))}
               </div>

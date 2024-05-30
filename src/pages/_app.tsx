@@ -9,8 +9,7 @@ import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
-import BottomBanner from '@/components/banners/BottomBanner';
-import LifetimeBanner from '@/components/banners/LifetimeBanner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime',
@@ -25,6 +24,7 @@ const EXCLUDED_PATHS_FOR_BANNER = [
   '/oystervpn',
   '/lifetime_special',
   '/pccomponentes-products',
+  '/lifetime/celebration',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
@@ -32,11 +32,10 @@ const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponen
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
-
-  const shouldShowBanner = false;
-  // !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
-  const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
+
+  const shouldShowBanner = lang === 'it' && !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const hideIntercomButton = excludeIntercomPaths.includes(pathname);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -106,8 +105,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="flex justify-center">
           {shouldShowBanner ? (
             <>
-              <BottomBanner />
-              <LifetimeBanner />
+              {/* <BottomBanner /> */}
+              <FeaturesBanner />
             </>
           ) : undefined}
         </div>
