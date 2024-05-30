@@ -33,7 +33,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                   alt="Laptop and phone with Internxt app"
                 />
               </div>
-              <div className="kg:items-start flex max-w-[600px] flex-col items-center text-center text-white lg:text-start">
+              <div className="flex max-w-[600px] flex-col items-center text-center text-white lg:items-start lg:text-start">
                 <Header maxWidth="max-w-[400px]">{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
