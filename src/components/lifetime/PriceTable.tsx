@@ -34,6 +34,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
   });
 
   useEffect(() => {
+    stripeService.getCoupon(couponCode as string).then((coupon) => console.log(coupon));
     if (lifetimeMode === 'normal' || lifetimeMode === 'celebration') return;
 
     stripeService.getLifetimeCoupons().then((coupon) => {
