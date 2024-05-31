@@ -9,33 +9,36 @@ import { Interval, stripeService } from '../services/stripe.service';
 interface PriceTableProps {
   lang: string;
   discount?: number;
-  normalPrice?: boolean;
   couponCode?: CouponType;
-  isLifetimeSpecial?: boolean;
+  lifetimeMode?: 'celebration' | 'custom-disc' | 'normal';
 }
 
-const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount, isLifetimeSpecial }) => {
-  const [coupon, setCoupon] = useState();
-  const { products, currency, currencyValue, loadingCards } = usePricing({});
+const DISC_LIFETIME_PRICES = {
+  eur: {
+    '2TB': 199,
+    '5TB': 299,
+    '10TB': 599,
+  },
+  usd: {
+    '2TB': 249,
+    '5TB': 349,
+    '10TB': 649,
+  },
+};
+
+const PriceTable: React.FC<PriceTableProps> = ({ lang, couponCode, discount, lifetimeMode }) => {
+  const [specialCoupons, setSpecialCoupons] = useState();
+  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
+    couponCode: couponCode,
+  });
 
   useEffect(() => {
+    if (lifetimeMode === 'normal' || lifetimeMode === 'celebration') return;
+
     stripeService.getLifetimeCoupons().then((coupon) => {
-      setCoupon(coupon);
+      setSpecialCoupons(coupon);
     });
   }, []);
-
-  const lifetimePrices = {
-    eur: {
-      '2TB': 199,
-      '5TB': 299,
-      '10TB': 599,
-    },
-    usd: {
-      '2TB': 249,
-      '5TB': 349,
-      '10TB': 649,
-    },
-  };
 
   const productsArray = products?.individuals?.['lifetime'] && Object.values(products?.individuals?.['lifetime']);
 
@@ -51,7 +54,37 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
       })
     : null;
 
-  const lifetimeProducts = isLifetimeSpecial ? updatedProductsArray : productsArray;
+  const lifetimeProducts = lifetimeMode === 'normal' ? updatedProductsArray : productsArray;
+
+  const lifetimePrices = (price, discount, storage) => {
+    switch (lifetimeMode) {
+      case 'normal':
+        return price.split('.')[0];
+      case 'celebration':
+        return Number(price * discount).toFixed(2);
+
+      case 'custom-disc':
+        return DISC_LIFETIME_PRICES[currencyValue][storage];
+      default:
+        return price.split('.')[0];
+    }
+  };
+
+  const couponCodeFiltered = (storage) => {
+    switch (lifetimeMode) {
+      case 'custom-disc':
+        return specialCoupons?.[storage];
+
+      case 'celebration':
+        return coupon;
+
+      case 'normal':
+        return undefined;
+
+      default:
+        return undefined;
+    }
+  };
 
   return (
     <section className="overflow-hidden">
@@ -87,19 +120,16 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, 
                       planType="individual"
                       key={product.storage}
                       storage={product.storage}
-                      price={
-                        coupon && discount && !normalPrice
-                          ? lifetimePrices[currencyValue][product.storage]
-                          : product.price.split('.')[0]
-                      }
+                      price={lifetimePrices(product.price, discount, product.storage)}
                       cta={['checkout', product.priceId]}
                       lang={lang}
                       billingFrequency={Interval.Lifetime}
-                      popular={isLifetimeSpecial ? product.storage === '10TB' : product.storage === '5TB'}
-                      priceBefore={coupon && !normalPrice ? product.price.split('.')[0] : undefined}
+                      popular={lifetimeMode === 'normal' ? product.storage === '10TB' : product.storage === '5TB'}
+                      priceBefore={lifetimeMode !== 'normal' ? product.price.split('.')[0] : undefined}
                       currency={currency}
                       currencyValue={currencyValue}
-                      coupon={!normalPrice ? coupon?.[product.storage] ?? undefined : undefined}
+                      coupon={couponCodeFiltered(product.storage)}
+                      isCelebrationPage={lifetimeMode === 'celebration'}
                     />
                   );
                 })

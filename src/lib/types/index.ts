@@ -105,6 +105,7 @@ export enum CouponType {
   starWars2TBLifetime = 'STAR_WARS_2TB_LIFETIME',
   starWars5TBLifetime = 'STAR_WARS_5TB_LIFETIME',
   starWars10TBLifetime = 'STAR_WARS_10TB_LIFETIME',
+  IndependenceDayItaly = 'INDEPENDENCE_DAY_ITALY_COUPON',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

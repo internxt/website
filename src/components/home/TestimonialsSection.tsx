@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import Image from 'next/legacy/image';
 import RevealY from '@/components/components/RevealY';
 import { useRouter } from 'next/router';
 
-const TestimonialsSection = ({ textContent }) => {
+const TestimonialsSection = ({ textContent, bgColor }: { textContent: any; bgColor?: string }) => {
   const router = useRouter();
   const lang = router.locale;
   const data = textContent.cards;
@@ -32,7 +32,7 @@ const TestimonialsSection = ({ textContent }) => {
   };
 
   return (
-    <section className="overflow-hidden bg-white pb-20 pt-16">
+    <section className={`overflow-hidden ${bgColor ?? 'bg-white'} pb-20 pt-16`}>
       <RevealY className="flex items-center justify-center p-6 pb-[70px]">
         <p className="mb-6 text-center text-4xl font-medium sm:text-5xl">{textContent.title}</p>
       </RevealY>

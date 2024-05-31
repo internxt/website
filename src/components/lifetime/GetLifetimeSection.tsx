@@ -1,5 +1,5 @@
-import React from 'react';
 import RevealY from '@/components/components/RevealY';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const GetLifetimeSection = ({ textContent }) => {
@@ -11,7 +11,7 @@ const GetLifetimeSection = ({ textContent }) => {
   const secondTitle = splitTitle[1];
 
   return (
-    <section className="overflow-hidden bg-primary">
+    <section className="overflow-hidden bg-[url('/images/lifetime/celebration/normal-bg.png')] bg-cover bg-no-repeat">
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">
         <div className="flex flex-col items-center py-16">
           <div className="mb-8 flex flex-col items-center px-6 text-center font-semibold text-white">
@@ -30,15 +30,22 @@ const GetLifetimeSection = ({ textContent }) => {
             <p className="pt-4 text-xl font-normal">{textContent.description}</p>
           </div>
 
-          <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
-            <picture>
-              <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
-              <img
-                src="/images/home/internxt_secure_cloud_storage.webp"
-                alt="Internxt secure cloud storage"
-                draggable={false}
-              />
-            </picture>
+          <RevealY className="content relative flex h-full w-full flex-col items-center px-5 pt-6">
+            <Image
+              src="/images/lifetime/celebration/confetti-horizontal.svg"
+              alt="Confetti"
+              width={1103}
+              height={464}
+              className="absolute"
+            />
+            <Image
+              src="/images/home/internxt_secure_cloud_storage.webp"
+              alt="Internxt secure cloud storage"
+              draggable={false}
+              width={805}
+              height={431}
+              className="z-50"
+            />
           </RevealY>
         </div>
       </div>

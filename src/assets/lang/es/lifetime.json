@@ -5,12 +5,17 @@
     "maintenance": "Más tarifa de mantenimiento después de 9 años de uso",
     "cta1": "Consigue la oferta",
     "cta2": "Explora las ofertas de por vida",
-    "guarantee": "Garantía de devolución de 30 días"
+    "guarantee": "Garantía de devolución de 30 días",
+    "celebration": {
+      "title": "Di ciao a tu oferta de por vida de Internxt",
+      "description": "Asegura tus archivos para siempre con tu descuento por el día de la independencia de Italia.",
+      "cta1": "Obtén un 80% DE DESCUENTO"
+    }
   },
   "PaymentSection": {
     "limitedOffer": "¡Oferta por tiempo limitado!",
     "title": {
-      "blueText": "Obtén hasta un 70% de descuento",
+      "blueText": "Obtén hasta un ${{percent}} de descuento",
       "normalText": " en todos nuestros exclusivos planes de por vida"
     },
     "description": "Compra una vez y obtén privacidad y seguridad para siempre.",
@@ -27,28 +32,28 @@
   },
   "GetLifetimeSection": {
     "title": "¡La vida no es corta! Pero esta oferta por tiempo limitado sí lo es...",
-    "description": "Internxt ofrece una oferta para toda la vida de privacidad y tranquilidad."
+    "description": "Internxt está ofreciendo una oferta de 3 días para una vida de privacidad y tranquilidad."
   },
   "FeatureSection": {
-    "title": "Almacenamiento seguro en la nube con privacidad inigualable",
-    "description": "¿Qué hace especial a Internxt? Somos un equipo unido de profesionales dedicados por completo a protegerte en línea. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos contra la explotación.",
-    "cta": "Internxt está comprometido con la privacidad",
+    "title": "¿Por qué elegir Internxt para asegurar tus archivos?",
+    "description": "Internxt te devuelve el control de tu privacidad. A diferencia del almacenamiento en la nube tradicional, aseguramos que solo tú tengas las llaves de tus datos cifrados. Tomamos todas las medidas para asegurar que tu información permanezca segura.",
+    "cta": "",
     "cards": [
       {
-        "title": "Privacidad por diseño",
-        "description": "No almacenamos contraseñas ni datos de usuario, y todos tus datos están encriptados en tránsito y en reposo. Internxt se asegura de que tengas el control total de tus archivos. Tus datos son tu negocio. Protegerlo es el nuestro."
+        "title": "Privacidad Mejorada",
+        "description": "Nuestro potente cifrado protege tus datos de accesos no autorizados. Nunca almacenamos contraseñas; todos tus datos están cifrados en tránsito y en reposo."
       },
       {
-        "title": "Seguridad intransigente",
-        "description": "Tus archivos están cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres absolutamente el único con acceso a tus datos."
+        "title": "Control del Usuario",
+        "description": "Para protegerte de las brechas de datos, Internxt protege tus datos haciéndolos inaccesibles a terceros, incluyendo Internxt."
       },
       {
-        "title": "Código abierto y transparente",
-        "description": "Estamos orgullosos de lo que hacemos, por lo que nuestro código está disponible en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, excepto tus datos."
+        "title": "Acceso Multi-Plataforma",
+        "description": "Trabaja libremente y accede a todos tus archivos en varios dispositivos y sistemas operativos."
       },
       {
-        "title": "Verificado de forma independiente",
-        "description": "Estamos comprometidos con el RGPD y somos 100% seguros, pero no solo confíes en nuestra palabra. Internxt ha sido auditado y verificado de forma independiente por la principal empresa de pruebas de penetración de Europa, Securitum."
+        "title": "Pago Único",
+        "description": "Los planes de por vida de Internxt ofrecen acceso seguro a tus archivos para siempre con un solo pago por adelantado. Paga una vez para asegurar tus datos de por vida sin tarifas recurrentes."
       }
     ]
   },

@@ -1,6 +1,6 @@
 const CtaSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden bg-primary-dark">
+    <section className="overflow-hidden bg-[url('/images/lifetime/celebration/normal-bg.png')] bg-cover bg-no-repeat">
       <div className="flex flex-col items-center justify-center py-12 px-5 pb-12 lg:px-20">
         <div className="flex flex-col text-center text-white">
           <p className="text-3xl font-semibold">{textContent.title}</p>

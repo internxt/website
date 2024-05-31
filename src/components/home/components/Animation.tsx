@@ -1,7 +1,25 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/legacy/image';
 
-const Animation = () => {
+interface AnimationProps {
+  browserImg?: string;
+  folderImg?: string;
+  zipImg?: string;
+  powerpointImg?: string;
+  csvImg?: string;
+  previewImg?: string;
+  taskloggerImg?: string;
+}
+
+const Animation = ({
+  browserImg = '/images/home/header/browser.webp',
+  folderImg = '/images/home/header/folder.svg',
+  zipImg = '/images/home/header/zip.svg',
+  powerpointImg = '/images/home/header/powerpoint.svg',
+  csvImg = '/images/home/header/csv.svg',
+  previewImg = '/images/home/header/preview.webp',
+  taskloggerImg = '/images/home/header/tasklogger.webp',
+}: AnimationProps) => {
   // Header animation
   const [headerAnimation1, setHeaderAnimation1] = useState<boolean>(false);
   const [headerAnimation2, setHeaderAnimation2] = useState<boolean>(false);
@@ -50,7 +68,7 @@ const Animation = () => {
         >
           <Image
             loading="eager"
-            src="/images/home/header/browser.webp"
+            src={browserImg}
             draggable="false"
             layout="fill"
             className="rounded-2xl"
@@ -64,7 +82,7 @@ const Animation = () => {
         className={`${headerAnimation4 ? 'animate-fade-in-r' : 'hidden'} absolute left-0 top-12`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '64px', height: '64px' }}
       >
-        <Image loading="eager" src="/images/home/header/folder.svg" draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="eager" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
       </div>
 
       {/* Icon / Zip */}
@@ -72,7 +90,7 @@ const Animation = () => {
         className={`${headerAnimation5 ? 'animate-fade-in-r' : 'hidden'} absolute left-20 top-32`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '56px', height: '56px' }}
       >
-        <Image loading="eager" src="/images/home/header/zip.svg" draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="folder icon" />
       </div>
 
       {/* Icon / Powerpoint */}
@@ -80,13 +98,7 @@ const Animation = () => {
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '52px', height: '52px' }}
       >
-        <Image
-          loading="eager"
-          src="/images/home/header/powerpoint.svg"
-          draggable="false"
-          layout="fill"
-          alt="folder icon"
-        />
+        <Image loading="eager" src={powerpointImg} draggable="false" layout="fill" alt="folder icon" />
       </div>
 
       {/* Icon / Csv */}
@@ -94,7 +106,7 @@ const Animation = () => {
         className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute left-14 bottom-20`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '48px', height: '48px' }}
       >
-        <Image loading="eager" src="/images/home/header/csv.svg" draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="eager" src={csvImg} draggable="false" layout="fill" alt="folder icon" />
       </div>
 
       {/* File preview */}
@@ -108,13 +120,7 @@ const Animation = () => {
           borderRadius: '24px',
         }}
       >
-        <Image
-          loading="eager"
-          src="/images/home/header/preview.webp"
-          draggable="false"
-          layout="fill"
-          alt="photo file preview"
-        />
+        <Image loading="eager" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
       </div>
 
       {/* Tasklogger */}
@@ -129,7 +135,7 @@ const Animation = () => {
       >
         <Image
           loading="eager"
-          src="/images/home/header/tasklogger.webp"
+          src={taskloggerImg}
           draggable="false"
           layout="fill"
           alt="file logger with items downloading"
