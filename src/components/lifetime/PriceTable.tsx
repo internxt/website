@@ -9,7 +9,6 @@ import { Interval, stripeService } from '../services/stripe.service';
 interface PriceTableProps {
   lang: string;
   discount?: number;
-  normalPrice?: boolean;
   couponCode?: CouponType;
   lifetimeMode?: 'celebration' | 'custom-disc' | 'normal';
 }
@@ -27,7 +26,7 @@ const DISC_LIFETIME_PRICES = {
   },
 };
 
-const PriceTable: React.FC<PriceTableProps> = ({ lang, normalPrice, couponCode, discount, lifetimeMode }) => {
+const PriceTable: React.FC<PriceTableProps> = ({ lang, couponCode, discount, lifetimeMode }) => {
   const [specialCoupons, setSpecialCoupons] = useState();
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
     couponCode: couponCode,

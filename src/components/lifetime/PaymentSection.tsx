@@ -8,7 +8,6 @@ import { formatText } from '../utils/format-text';
 interface PaymentSectionProps {
   lang: string;
   textContent: any;
-  normalPrice?: boolean;
   discount?: number;
   couponCode?: CouponType;
   percent?: string;
@@ -18,7 +17,6 @@ interface PaymentSectionProps {
 const PaymentSection: React.FC<PaymentSectionProps> = ({
   lang,
   textContent,
-  normalPrice,
   couponCode,
   discount,
   percent,
@@ -68,13 +66,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
           </div>
         </div>
 
-        <PriceTable
-          lang={lang}
-          normalPrice={normalPrice}
-          discount={discount}
-          couponCode={couponCode}
-          lifetimeMode={lifetimeMode}
-        />
+        <PriceTable lang={lang} discount={discount} couponCode={couponCode} lifetimeMode={lifetimeMode} />
       </div>
     </section>
   );
