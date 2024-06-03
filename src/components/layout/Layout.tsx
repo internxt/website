@@ -99,7 +99,6 @@ LayoutProps) {
     axios
       .get(GET_IP_INFO_API)
       .then((res) => {
-        console.log(res);
         ip = res.data;
       })
       .catch((err) => {
