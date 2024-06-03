@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
+import { VPN_CHROME_WEB_STORE } from '@/constants';
 
 const TopBanner = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
-  const bannersJson = require(`@/assets/lang/it/banners.json`);
+  const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
 
   return (
@@ -26,7 +27,7 @@ const TopBanner = ({ isBannerFixed }) => {
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
             onClick={() => {
-              router.push('/lifetime/celebration');
+              router.push(VPN_CHROME_WEB_STORE);
             }}
           >
             <p className="font-semibold underline hover:no-underline">{textContent.title.cta}</p>
@@ -42,7 +43,7 @@ const TopBanner = ({ isBannerFixed }) => {
           <button
             className="flex flex-col items-center justify-center"
             onClick={() => {
-              router.push('/lifetime/celebration');
+              router.push(VPN_CHROME_WEB_STORE);
             }}
           >
             <p className="font-normal">

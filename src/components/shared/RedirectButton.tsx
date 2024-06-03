@@ -9,7 +9,7 @@ interface RedirectButtonProps {
 }
 
 export const RedirectButton = ({ url, className, target = '_blank', rel, children }: RedirectButtonProps) => (
-  <Link href={url} target={target} rel={rel} className={className}>
+  <Link id={`redirect-button-id`} href={url} target={target} rel={rel} className={className}>
     {children}
   </Link>
 );

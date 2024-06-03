@@ -26,7 +26,6 @@ interface LayoutProps {
   readonly disableDrift?: boolean;
   readonly isProduction?: boolean;
   readonly specialOffer?: string;
-  readonly host?: string;
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
 }
