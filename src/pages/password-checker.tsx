@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
@@ -35,6 +34,8 @@ const PasswordChecker = ({
         {sm_breadcrumb('Password Checker', 'password-checker')}
       </Script>
 
+      <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
+      <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>
       <Layout
         segmentName="Password Checker"
         title={metatags[0].title}

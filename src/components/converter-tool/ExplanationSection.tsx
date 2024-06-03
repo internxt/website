@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/legacy/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import Link from 'next/link';
@@ -12,6 +11,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-start space-y-16 px-5 pt-20 pb-16 lg:px-10">
+        <div id="incontent_1" className="flex w-full justify-center"></div>
         <SignUpBanner textContent={bannerText} lang={lang} />
         <div className="flex max-w-2xl flex-col space-y-3">
           <p className="text-2xl font-medium">{textContent.convertTo.title}</p>
@@ -21,6 +21,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
           <p className="text-2xl font-medium">{textContent.convertToAgain.title}</p>
           <p className="text-lg font-normal text-gray-80">{textContent.convertToAgain.description}</p>
         </div>
+
         <div className="flex w-full max-w-2xl flex-col">
           <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>{' '}
           {textContent.whyUseConverter.description.map((feature) => (
@@ -45,6 +46,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
             />
           </Link>
         </div>
+        <div id="incontent_2" className="flex w-full justify-center"></div>
       </div>
     </section>
   );

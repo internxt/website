@@ -33,7 +33,14 @@ interface LayoutProps {
 const INTERNXT_URL = 'https://internxt.com';
 const COOKIE_DOMAIN = 'internxt.com';
 
-const INCLUDED_PATHS_FOR_SNIGEL = ['/temporary-email', '/virus-scanner'];
+const INCLUDED_PATHS_FOR_SNIGEL = [
+  '/temporary-email',
+  '/virus-scanner',
+  '/password-generator',
+  '/password-checker',
+  '/byte-converter',
+  '/file-converter',
+];
 
 const excludedPaths = [
   '/pricing',

@@ -24,6 +24,8 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
+        "webDAV": "WebDAV",
+        "vpn": "Расширение VPN",
         "token": "Токен",
         "pricing": "Тарифные планы"
       },

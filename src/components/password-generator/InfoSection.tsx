@@ -57,6 +57,7 @@ const InfoSection = ({
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
+        <div id="incontent_1" className="flex w-full justify-center"></div>
         <SignUpBanner textContent={bannerText} lang={lang as string} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
@@ -77,11 +78,13 @@ const InfoSection = ({
             ))}
           </div>
         </div>
+        <div id="incontent_2" className="flex w-full justify-center"></div>
       </div>
       {hideLast2Sections ? null : (
         <>
           <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
           <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20 px-5">
+            <div id="incontent_3" className="flex w-full justify-center"></div>
             {getSectionText(textContent.thirdSection)}
             <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
               {getSectionText(textContent.fourthSection)}
@@ -118,6 +121,7 @@ const InfoSection = ({
                 </div>
               ))}
             </div>
+            <div id="incontent_4" className="flex w-full justify-center"></div>
           </div>
         </>
       )}
