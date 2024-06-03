@@ -12,6 +12,7 @@
   "products": {
     "drive": "Internxt Drive",
     "webDAV": "Internxt WebDAV",
+    "vpn": "VPN Extension",
     "send": "Internxt Send",
     "comingSoon": "Coming soon",
     "new": "New"

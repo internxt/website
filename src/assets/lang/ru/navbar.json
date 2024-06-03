@@ -15,6 +15,7 @@
   "products": {
     "drive": "Internxt Drive",
     "webDAV": "Internxt WebDAV",
+    "vpn": "Расширение VPN",
     "send": "Internxt Send",
     "comingSoon": "В разработке",
     "new": "Новый"
