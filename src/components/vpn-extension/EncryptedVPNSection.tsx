@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import SignUpBanner from '../banners/SignUpBanner';
+import { RedirectButton } from '../shared/RedirectButton';
+import { VPN_CHROME_WEB_STORE } from '@/constants';
 
 export const EncryptedVPNSection = ({ textContent, bannerText }) => {
   return (
@@ -10,15 +11,12 @@ export const EncryptedVPNSection = ({ textContent, bannerText }) => {
           <p className="text-2xl font-medium text-gray-80">{textContent.subtitle}</p>
           <p className="text-lg text-gray-80">{textContent.description}</p>
         </div>
-        <Link
+        <RedirectButton
           className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
-          href={
-            'https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0'
-          }
-          target="_blank"
+          url={VPN_CHROME_WEB_STORE}
         >
           {textContent.cta}
-        </Link>
+        </RedirectButton>
       </div>
       <SignUpBanner textContent={bannerText} lang="en" />
     </section>

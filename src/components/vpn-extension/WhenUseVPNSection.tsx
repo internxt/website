@@ -1,6 +1,7 @@
 import { CheckSquare } from '@phosphor-icons/react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { RedirectButton } from '../shared/RedirectButton';
+import { VPN_CHROME_WEB_STORE } from '@/constants';
 
 export const WhenUseVPNSection = ({ textContent }) => {
   return (
@@ -11,15 +12,12 @@ export const WhenUseVPNSection = ({ textContent }) => {
           <p className="text-2xl font-medium text-gray-80">{textContent.subtitle}</p>
           <p className="text-lg font-medium text-gray-80">{textContent.description}</p>
         </div>
-        <Link
+        <RedirectButton
           className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
-          href={
-            'https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0'
-          }
-          target="_blank"
+          url={VPN_CHROME_WEB_STORE}
         >
           {textContent.cta}
-        </Link>
+        </RedirectButton>
         <div className="relative grid w-full max-w-6xl grid-cols-1 flex-row justify-between gap-5 bg-contain bg-center bg-no-repeat sm:grid-cols-2 lg:bg-[url(/images/vpn-extension/map.svg)]">
           <div className="inset-0 ml-5 hidden items-center justify-center lg:absolute lg:flex">
             <Image

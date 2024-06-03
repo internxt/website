@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Header from '../shared/Header';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
-import Link from 'next/link';
+import { RedirectButton } from '../shared/RedirectButton';
+import { VPN_CHROME_WEB_STORE } from '@/constants';
 
 export const HeroSection = ({ textContent }) => {
   return (
@@ -20,15 +21,13 @@ export const HeroSection = ({ textContent }) => {
               </Header>
             </div>
             <h3 className="text-center text-xl text-gray-80 lg:text-left">{textContent.description}</h3>
-            <Link
+
+            <RedirectButton
               className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
-              href={
-                'https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0'
-              }
-              target="_blank"
+              url={VPN_CHROME_WEB_STORE}
             >
               {textContent.cta}
-            </Link>
+            </RedirectButton>
           </div>
           <div className="relative flex h-full flex-col items-center justify-center bg-transparent">
             <Image

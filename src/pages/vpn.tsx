@@ -9,6 +9,7 @@ import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection'
 import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import FAQSection from '@/components/shared/FaqSection';
+import { VPN_CHROME_WEB_STORE } from '@/constants';
 
 const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
@@ -27,17 +28,11 @@ const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, n
 
       <WhenUseVPNSection textContent={langJson.WhenUseVPNSection} />
 
-      <CtaSection
-        textContent={langJson.CtaSection}
-        url="https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0"
-      />
+      <CtaSection textContent={langJson.CtaSection} url={VPN_CHROME_WEB_STORE} />
 
       <ToolsSection textContent={toolsContent} lang="en" />
 
-      <CtaSection
-        textContent={langJson.CtaSection2}
-        url="https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0"
-      />
+      <CtaSection textContent={langJson.CtaSection2} url={VPN_CHROME_WEB_STORE} />
 
       <FAQSection textContent={langJson.FaqSection} />
 
