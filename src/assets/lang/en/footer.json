@@ -25,6 +25,7 @@
         "photos": "Internxt Photos",
         "send": "Internxt Send",
         "webDAV": "WebDAV",
+        "vpn": "VPN Extension",
         "token": "Token",
         "pricing": "Pricing"
       },
@@ -74,8 +75,7 @@
         "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter",
         "passwordGenerator": "Password Generator",
-        "fileConverter": "File Converter",
-        "vpn": "VPN Extension"
+        "fileConverter": "File Converter"
       }
     }
   },

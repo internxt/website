@@ -150,16 +150,6 @@ export default function Footer({
                     <Link href="/drive" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
-
-                    <a
-                      href="https://send.internxt.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex flex-row items-center hover:text-primary"
-                    >
-                      <div>{textContent.FooterSection.sections.products.send}</div>
-                    </a>
-
                     <Link
                       href="/webdav"
                       target="_blank"
@@ -174,6 +164,21 @@ export default function Footer({
                       </div>
                     </Link>
 
+                    <a
+                      href="https://send.internxt.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-row items-center hover:text-primary"
+                    >
+                      <div>{textContent.FooterSection.sections.products.send}</div>
+                    </a>
+
+                    <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
+                      {textContent.FooterSection.sections.products.vpn}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -402,12 +407,6 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
-                    <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.vpn}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </div>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -552,6 +551,13 @@ export default function Footer({
                           <p>{textContent.FooterSection.sections.products.send}</p>
                         </div>
                       </a>
+
+                      <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.vpn}
+                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                          {textContent.FooterSection.new}
+                        </div>
+                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -774,6 +780,9 @@ export default function Footer({
                       </Link>
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}
+                      </Link>
+                      <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.products.pricing}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
