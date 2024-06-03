@@ -249,6 +249,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                     <p>{props.textContent.products.drive}</p>
                                   </div>
                                 </Link>
+                                <Link href="/webdav" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <HardDrives className="h-6 w-6 text-gray-80" />
+                                    <p>{props.textContent.products.webDAV}</p>
+                                  </div>
+                                </Link>
 
                                 <a
                                   href="https://send.internxt.com"
@@ -261,6 +267,13 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                     <p>{props.textContent.products.send}</p>
                                   </div>
                                 </a>
+
+                                <Link href="/vpn" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <HardDrives className="h-6 w-6 text-gray-80" />
+                                    <p>{props.textContent.products.vpn}</p>
+                                  </div>
+                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>

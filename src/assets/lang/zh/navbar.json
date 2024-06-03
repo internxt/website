@@ -12,6 +12,7 @@
   "products": {
     "drive": "Internxt Drive",
     "webDAV": "Internxt WebDAV",
+    "vpn": "VPN扩展",
     "send": "Internxt Send",
     "comingSoon": "即将推出",
     "new": "新的"

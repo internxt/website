@@ -1,4 +1,4 @@
-import HeroSection from '@/components/lifetime/celebration/HeroSection';
+import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
 import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
@@ -26,7 +26,12 @@ const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, lan
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection textContent={langJson.HeroSection.celebration} />
+      <HeroSection
+        textContent={langJson.HeroSection.celebration}
+        isCelebrationPage
+        previewImg="/images/lifetime/celebration/file_item.webp"
+        bgImage="/images/lifetime/celebration/swiggles_italy.png"
+      />
 
       <PaymentSection
         textContent={langJson.PaymentSection}
@@ -37,7 +42,7 @@ const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, lan
         lifetimeMode="celebration"
       />
 
-      <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
+      <GetLifetimeSection textContent={langJson.GetLifetimeSection} isCelebrationPage />
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
