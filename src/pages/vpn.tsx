@@ -27,11 +27,17 @@ const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, n
 
       <WhenUseVPNSection textContent={langJson.WhenUseVPNSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url="" />
+      <CtaSection
+        textContent={langJson.CtaSection}
+        url="https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0"
+      />
 
       <ToolsSection textContent={toolsContent} lang="en" />
 
-      <CtaSection textContent={langJson.CtaSection2} url="" />
+      <CtaSection
+        textContent={langJson.CtaSection2}
+        url="https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0"
+      />
 
       <FAQSection textContent={langJson.FaqSection} />
 
