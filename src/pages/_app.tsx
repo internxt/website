@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
@@ -9,7 +9,7 @@ import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
-import BottomBanner from '@/components/banners/BottomBanner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime',
@@ -24,6 +24,7 @@ const EXCLUDED_PATHS_FOR_BANNER = [
   '/oystervpn',
   '/lifetime_special',
   '/pccomponentes-products',
+  '/lifetime/celebration',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
@@ -31,10 +32,10 @@ const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponen
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
-
-  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
-  const hideIntercomButton = excludeIntercomPaths.includes(pathname);
   const lang = router.locale;
+
+  const shouldShowBanner = lang === 'it' && !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const hideIntercomButton = excludeIntercomPaths.includes(pathname);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -62,15 +63,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
         ]}
       >
@@ -101,7 +102,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
+        <div className="flex justify-center">
+          {shouldShowBanner ? (
+            <>
+              {/* <BottomBanner /> */}
+              <FeaturesBanner />
+            </>
+          ) : undefined}
+        </div>
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

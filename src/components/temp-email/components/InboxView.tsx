@@ -1,6 +1,6 @@
 import moment from 'moment';
-import { ArrowsClockwise, CaretLeft, Paperclip, Tray } from '@phosphor-icons/react';
-import React, { useEffect, useState } from 'react';
+import { ArrowsClockwise, CaretLeft, Tray } from '@phosphor-icons/react';
+import { useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 
 import { MessageSelected, NoMessageSelected } from './Messages';
@@ -25,7 +25,7 @@ export const Inbox = ({
   selectedMessage,
 }: InboxProps) => {
   return (
-    <>
+    <div className="relative px-52">
       <div className="hidden w-full justify-center md:flex">
         <InboxWeb
           getProps={{
@@ -38,7 +38,7 @@ export const Inbox = ({
           }}
         />
       </div>
-      <div className="flex w-full md:hidden">
+      <div className="flex w-screen justify-center px-5 md:hidden">
         <InboxMobile
           getProps={{
             messages,
@@ -50,7 +50,7 @@ export const Inbox = ({
           }}
         />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -177,7 +177,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
-    <div className="flex h-[480px] w-full max-w-sm flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
+    <div className="flex h-[480px] w-full  flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
       {messages?.length > 0 ? (
         //Render message selected
         <>

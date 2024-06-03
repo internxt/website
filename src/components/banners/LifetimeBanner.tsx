@@ -18,7 +18,7 @@ const LifetimeBanner = (): JSX.Element => {
     else {
       setTimeout(() => {
         setShowBanner(true);
-      }, 3000);
+      }, 10000);
     }
   }, []);
 

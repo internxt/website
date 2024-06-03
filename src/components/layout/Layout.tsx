@@ -9,6 +9,7 @@ import isBrave from '@/lib/brave';
 import TopBanner from '@/components/banners/TopBanner';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
+const GET_IP_INFO_API = process.env.NEXT_PUBLIC_IP_INFO as string;
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -33,6 +34,8 @@ interface LayoutProps {
 const INTERNXT_URL = 'https://internxt.com';
 const COOKIE_DOMAIN = 'internxt.com';
 
+const INCLUDED_PATHS_FOR_SNIGEL = ['/temporary-email', '/virus-scanner'];
+
 const excludedPaths = [
   '/pricing',
   '/lifetime',
@@ -47,6 +50,7 @@ const excludedPaths = [
   '/oystervpn',
   '/pccomponentes-products',
   '/lifetime_special',
+  '/lifetime/celebration',
 ];
 const imageLang = ['ES', 'FR', 'EN'];
 
@@ -66,7 +70,7 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = !excludedPaths.includes(pathname);
+  const shouldShowBanner = lang === 'it' && !excludedPaths.includes(pathname);
 
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
@@ -74,9 +78,9 @@ LayoutProps) {
   function getCookie(cookieName: string) {
     const cookies = document.cookie.split(';');
     for (const cookie of cookies) {
-      const [nombre, valor] = cookie.trim().split('=');
-      if (nombre === cookieName) {
-        return decodeURIComponent(valor);
+      const [name, value] = cookie.trim().split('=');
+      if (name === cookieName) {
+        return decodeURIComponent(value);
       }
     }
     return null;
@@ -86,7 +90,7 @@ LayoutProps) {
   useEffect(() => {
     let ip;
     axios
-      .get('https://ipinfo.io/ip')
+      .get(GET_IP_INFO_API)
       .then((res) => {
         ip = res.data;
       })
@@ -194,6 +198,36 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
+        {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
+          <>
+            <script
+              id="adengine-config"
+              dangerouslySetInnerHTML={{
+                __html: `
+            window.snigelPubConf = {
+              "adengine": {
+                "activeAdUnits": (function() {
+                  var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
+                  if (window.innerWidth <= 768) {
+                    adUnits = adUnits.filter(function(unit) {
+                      return unit !== "adhesive" && unit !== "incontent_4";
+                    });
+                  }
+                  if (window.innerWidth <= 1300 && window.location.pathname.includes('temporary-email')) {
+                    adUnits = adUnits.filter(function(unit) {
+                      return unit !== "sidebar_right" && unit !== "sidebar_left";
+                    });
+                  }
+                  return adUnits;
+                })()
+              }
+            };
+          `,
+              }}
+            />
+            <script async data-cfasync="false" src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js" />
+          </>
+        ) : null}
         {lang === 'es' && (
           <script
             dangerouslySetInnerHTML={{

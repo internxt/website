@@ -6,7 +6,7 @@
   "FeaturesSection": {
     "howToConvert": {
       "title": "Cómo convertir imágenes de HEIC a JPG",
-      "description": "Hemos diseñado nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu HEIC a JPG implica tres pasos:",
+      "description": "Hemos diseñado nuestro convertidor de archivos para que sea lo más fácil de usar posible. Convertir tu HEIC a JPG implica tres pasos:",
       "steps": [
         {
           "step": "Paso 1:",
@@ -25,8 +25,8 @@
     "whyConvert": {
       "title": "Por qué convertir archivos de HEIC a JPG",
       "paragraphs": [
-        "Las imágenes HEIC son el formato común para iPhones, pero muchas plataformas y dispositivos no los admiten nativamente. Nuestro conversor de HEIC a JPG transforma las imágenes en un formato universalmente reconocido que se puede ver en casi cualquier dispositivo con un visor de fotos.",
-        "El conversor de HEIC a JPG de Internxt garantiza que tus fotos se puedan compartir, cargar y almacenar fácilmente, eliminando problemas de compatibilidad y garantizando una mayor accesibilidad."
+        "Las imágenes HEIC son el formato común para iPhones, pero muchas plataformas y dispositivos no los admiten nativamente. Nuestro convertidor de HEIC a JPG transforma las imágenes en un formato universalmente reconocido que se puede ver en casi cualquier dispositivo con un visor de fotos.",
+        "El convertidor de HEIC a JPG de Internxt garantiza que tus fotos se puedan compartir, cargar y almacenar fácilmente, eliminando problemas de compatibilidad y garantizando una mayor accesibilidad."
       ]
     }
   },

@@ -17,7 +17,14 @@ export interface PriceCardProps {
   currencyValue?: string;
   isIframe?: boolean;
   isOffer?: boolean;
+  isCelebrationPage?: boolean;
 }
+
+const STORAGE_LEVELS = {
+  '2TB': 'Lite ',
+  '5TB': 'Pro ',
+  '10TB': 'Ultra ',
+};
 
 export default function PriceCard({
   planType,
@@ -33,6 +40,7 @@ export default function PriceCard({
   currencyValue,
   isIframe,
   isOffer,
+  isCelebrationPage,
 }: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -59,6 +67,14 @@ export default function PriceCard({
 
   const formattedPrice = isOffer && billingFrequency !== Interval.Lifetime ? priceForSubscriptions(price) : price;
 
+  const getPlanStorage = (storage) => {
+    if (isCelebrationPage) {
+      return STORAGE_LEVELS[storage] + storage;
+    }
+
+    return storage;
+  };
+
   const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
 
@@ -77,7 +93,7 @@ export default function PriceCard({
             </div>
           ) : null}
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{storage}</p>
+            <p className="text-lg font-medium text-primary">{getPlanStorage(storage)}</p>
           </div>
         </div>
         <div

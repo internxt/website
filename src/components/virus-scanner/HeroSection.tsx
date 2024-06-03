@@ -41,7 +41,7 @@ const HeroSection = ({ textContent }) => {
       body: formdata,
     };
 
-    fetch(`/api/scan`, requestOptions)
+    fetch(`https://clamav.internxt.com/filescan`, requestOptions)
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
@@ -168,7 +168,7 @@ const HeroSection = ({ textContent }) => {
         onDrop={(e) => handleDrop(e)}
         onDragOver={(e) => e.preventDefault()}
       />
-      <div className="mx-4 lg:mx-10 xl:mx-32">
+      <div className="mx-4 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
           className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch ${
             !isScannig && isDragging ? 'pointer-events-none' : ''
@@ -177,8 +177,8 @@ const HeroSection = ({ textContent }) => {
           onDragOver={(e) => e.preventDefault()}
         >
           {/* Title and subtitle */}
-          <div className="mb-10 flex flex-col items-center space-y-5 text-center lg:mb-0 lg:items-start lg:justify-between lg:text-left">
-            <div className="flex w-full flex-col space-y-5 lg:w-[316px]">
+          <div className="mb-10 flex flex-col items-center space-y-5 lg:mb-0 lg:items-start lg:justify-between lg:text-left">
+            <div className="flex w-full flex-col items-center space-y-5 text-center lg:w-[316px] lg:items-start lg:text-left">
               <Header isToolsPage>{textContent.title}</Header>
               <h2 className="text-xl font-semibold text-cool-gray-80">
                 {textContent.subtitle1}
@@ -414,7 +414,7 @@ const HeroSection = ({ textContent }) => {
                   <>
                     {/* Default state */}
                     <div className=" flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-xl">
-                      <div className={`flex flex-row items-center sm:space-x-20 lg:space-x-0 xl:space-x-20`}>
+                      <div className={`flex flex-row items-center lg:space-x-0 xl:space-x-20`}>
                         <div className="hidden lg:flex">
                           <Image
                             src="/images/virus-scanner/upload_file.webp"
@@ -478,6 +478,7 @@ const HeroSection = ({ textContent }) => {
             )}
           </div>
         </div>
+        <div id="incontent_1" className="flex w-full max-w-[1000px] justify-center"></div>
       </div>
     </section>
   );

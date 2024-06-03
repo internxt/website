@@ -1,12 +1,12 @@
 {
   "ConverterSection": {
-    "description": "Un conversor seguro de WebP a JPG para compartir imágenes fácilmente.",
+    "description": "Un convertidor seguro de WebP a JPG para compartir imágenes fácilmente.",
     "secureUpload": "Cargas seguras protegidas por HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
       "title": "Cómo convertir archivos WebP a JPG",
-      "description": "Hemos diseñado nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu WebP a un archivo JPG implica tres pasos:",
+      "description": "Hemos diseñado nuestro convertidor de archivos para que sea lo más fácil de usar posible. Convertir tu WebP a un archivo JPG implica tres pasos:",
       "steps": [
         {
           "step": "Paso 1:",
@@ -25,7 +25,7 @@
     "whyConvert": {
       "title": "Por qué convertir archivos WebP a JPG",
       "paragraphs": [
-        "Un conversor de archivos de WebP a JPG te permite convertir una imagen más pequeña y optimizada para la web (WebP) a un formato más universalmente compatible (JPG) para compartir y utilizar más fácilmente fuera de las plataformas web.",
+        "Un convertidor de archivos de WebP a JPG te permite convertir una imagen más pequeña y optimizada para la web (WebP) a un formato más universalmente compatible (JPG) para compartir y utilizar más fácilmente fuera de las plataformas web.",
         "Elegir un archivo de WebP a JPG te ofrece posibilidades de edición más avanzadas para tus archivos JPG y facilita el intercambio de archivos con amigos, familiares o equipos."
       ]
     }

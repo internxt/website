@@ -13,7 +13,6 @@ export const getServerSideProps = ({ res }) => {
     index: '1.0',
     pricing: '1.0',
     drive: '1.0',
-    photos: '1.0',
   };
 
   const staticPages = fs

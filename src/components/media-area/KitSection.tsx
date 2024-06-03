@@ -24,12 +24,12 @@ const KitSection = ({ textContent }) => {
         </div>
         <div className="flex flex-row flex-wrap items-stretch gap-10">
           <KitCard
-            downloadImagesLink={'/media-area/internxt-logo-set.zip'}
+            downloadImagesLink={`https://internxt.com/media-area/internxt-logo-set.zip`}
             image={'/images/media-area/inxt-logo-set.svg'}
             textContent={textContent.firstSection}
           />
           <KitCard
-            downloadImagesLink={inxtScreenshotMockups}
+            downloadImagesLink={`${inxtScreenshotMockups}`}
             image={'/images/media-area/screenshots-mockup.webp'}
             textContent={textContent.secondSection}
           />

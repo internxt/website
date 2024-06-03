@@ -3,23 +3,24 @@ import PriceTable from './PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
 import { CouponType } from '@/lib/types';
+import { formatText } from '../utils/format-text';
 
 interface PaymentSectionProps {
   lang: string;
   textContent: any;
-  normalPrice?: boolean;
   discount?: number;
   couponCode?: CouponType;
-  isLifetimeSpecial?: boolean;
+  percent?: string;
+  lifetimeMode?: 'celebration' | 'custom-disc' | 'normal';
 }
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({
   lang,
   textContent,
-  normalPrice,
   couponCode,
   discount,
-  isLifetimeSpecial,
+  percent,
+  lifetimeMode,
 }) => {
   const features = [
     {
@@ -36,17 +37,27 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
     },
   ];
   return (
-    <section id="payment" className="overflow-hidden py-20">
-      <div className="flex flex-col space-y-8">
+    <section id="payment" className="overflow-hidden">
+      <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 py-10 text-center md:flex-row md:space-x-32 md:space-y-0">
+        {features.map((feature) => (
+          <div key={feature.text} className="flex flex-row items-center space-x-3">
+            <feature.icon size={40} className="text-primary" />
+            <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+          </div>
+        ))}
+      </div>
+      <div className="flex flex-col space-y-8 pt-20">
         <div className="flex flex-col items-center justify-center">
-          {/* <div className="flex items-center justify-center rounded-lg bg-gray-5 px-4 py-2 ">
-            <p className="text-xl font-medium text-gray-80">{textContent.limitedOffer}</p>
-          </div> */}
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p className="w-full text-5xl font-semibold leading-tight">
-              {!isLifetimeSpecial ? (
+              {lifetimeMode !== 'normal' ? (
                 <>
-                  <span className="text-primary">{textContent.title.blueText}</span> <br />
+                  <span className="text-primary">
+                    {formatText(textContent.title.blueText, {
+                      percent: percent ?? '70',
+                    })}
+                  </span>{' '}
+                  <br />
                 </>
               ) : undefined}
               <span>{textContent.title.normalText}</span>
@@ -55,22 +66,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
           </div>
         </div>
 
-        <PriceTable
-          lang={lang}
-          normalPrice={normalPrice}
-          discount={discount}
-          couponCode={couponCode}
-          isLifetimeSpecial={isLifetimeSpecial}
-        />
-
-        <div className="flex flex-col items-center justify-center space-y-8 bg-transparent text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
-          {features.map((feature) => (
-            <div key={feature.text} className="flex flex-row items-center space-x-3">
-              <feature.icon size={40} className="text-primary" />
-              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
-            </div>
-          ))}
-        </div>
+        <PriceTable lang={lang} discount={discount} couponCode={couponCode} lifetimeMode={lifetimeMode} />
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 {
-  "title": "Conversor de Internxt de ${{pathFrom}} a ${{pathTo}}",
+  "title": "Convertidor de Internxt de ${{pathFrom}} a ${{pathTo}}",
   "secureUpload": "Cargas seguras garantizadas por la protección de la privacidad de Internxt. No almacenamos ninguna información.",
   "dragNDropArea": {
     "maxFileSize": "Tamaño máximo del archivo de 1GB",

@@ -6,7 +6,7 @@
   "FeaturesSection": {
     "howToConvert": {
       "title": "Cómo convertir un archivo de Excel a PDF",
-      "description": "Hemos diseñado nuestro conversor de archivos para que sea lo más fácil de usar posible. Convertir tu Excel a un documento PDF implica tres pasos:",
+      "description": "Hemos diseñado nuestro convertidor de archivos para que sea lo más fácil de usar posible. Convertir tu Excel a un documento PDF implica tres pasos:",
       "steps": [
         {
           "step": "Paso 1:",
@@ -25,8 +25,8 @@
     "whyConvert": {
       "title": "Por qué convertir archivos de Excel a PDF",
       "paragraphs": [
-        "Un conversor de Excel a PDF es necesario si quieres permitir que otras personas vean tus datos pero no los editen. Los PDF ofrecen compatibilidad universal, lo que significa que se pueden acceder y ver en prácticamente cualquier dispositivo o sistema operativo sin software específico.",
-        "El conversor de Excel a PDF de Internxt ofrece una manera conveniente de compartir, ver y preservar tus datos mientras asegura la compatibilidad y facilita la distribución de datos importantes."
+        "Un convertidor de Excel a PDF es necesario si quieres permitir que otras personas vean tus datos pero no los editen. Los PDF ofrecen compatibilidad universal, lo que significa que se pueden acceder y ver en prácticamente cualquier dispositivo o sistema operativo sin software específico.",
+        "El convertidor de Excel a PDF de Internxt ofrece una manera conveniente de compartir, ver y preservar tus datos mientras asegura la compatibilidad y facilita la distribución de datos importantes."
       ]
     }
   },

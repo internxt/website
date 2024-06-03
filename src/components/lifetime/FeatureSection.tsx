@@ -1,8 +1,21 @@
-import React from 'react';
 import RevealY from '@/components/components/RevealY';
-import { CaretRight, Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { CaretRight, Devices, ShieldCheck, UserCircleGear } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
+const InfinityIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 256 256">
+    <rect width="256" height="256" fill="none" />
+    <path
+      d="M106.63,152.13l-8.69,9.81a48,48,0,1,1,0-67.88l60.12,67.88a48,48,0,1,0,0-67.88l-8.69,9.81"
+      fill="none"
+      stroke="rgb(0,102,255)"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="16"
+    />
+  </svg>
+);
 
 const FeatureSection = ({
   textContent,
@@ -21,17 +34,17 @@ const FeatureSection = ({
       description: textContent.cards[0].description,
     },
     {
-      icon: LockKey,
+      icon: UserCircleGear,
       title: textContent.cards[1].title,
       description: textContent.cards[1].description,
     },
     {
-      icon: Eye,
+      icon: Devices,
       title: textContent.cards[2].title,
       description: textContent.cards[2].description,
     },
     {
-      icon: Fingerprint,
+      icon: InfinityIcon,
       title: textContent.cards[3].title,
       description: textContent.cards[3].description,
     },
@@ -50,8 +63,12 @@ const FeatureSection = ({
               locale={router.locale}
               target="_blank"
             >
-              <p>{textContent.cta}</p>
-              <CaretRight size={16} weight="bold" />
+              {textContent.cta ? (
+                <>
+                  <p>{textContent.cta}</p>
+                  <CaretRight size={16} weight="bold" />
+                </>
+              ) : null}
             </Link>
           )}
         </div>
@@ -61,9 +78,9 @@ const FeatureSection = ({
               key={card.title}
               className={`flex flex-col items-start justify-start rounded-2xl ${
                 backgroundColor ? 'bg-white' : 'bg-gray-1'
-              } p-8 sm:p-10 md:max-w-[488px]`}
+              } space-y-6 p-8 sm:p-10 md:max-w-[488px]`}
             >
-              <card.icon className="mb-6 text-4xl text-primary" size={32} />
+              <card.icon className=" text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
                 <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
                 <p className="text-base text-cool-gray-80 sm:text-lg">{card.description}</p>

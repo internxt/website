@@ -27,7 +27,7 @@
     "business": "Empresa"
   },
   "billingFrequencyLabel": {
-    "lifetime": "Acceso de por vida",
+    "lifetime": "Pago único",
     "monthly": "Facturado mensualmente",
     "semiannually": "Facturado cada 6 meses",
     "annually": "Facturado anualmente",

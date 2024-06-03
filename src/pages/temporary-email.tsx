@@ -1,5 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
 import Script from 'next/script';
 
 import Layout from '@/components/layout/Layout';
@@ -32,13 +30,6 @@ const TempEmail = () => {
 
   return (
     <>
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6684818764777307"
-          crossOrigin="anonymous"
-        ></script>
-      </Head>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.SchemaMarkupQuestions.faq)}
       </Script>
@@ -47,16 +38,18 @@ const TempEmail = () => {
         {sm_breadcrumb('Temporary Email', 'temporary-email')}
       </Script>
 
+      <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
+      <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-
-        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
         <HeroSection textContent={textContent.HeroSection} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
+
+        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
 
         <SignupSection textContent={textContent.SignupSection} />
 
