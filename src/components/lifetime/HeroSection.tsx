@@ -21,8 +21,8 @@ const HeroSection = ({ textContent, hideTimer, isCelebrationPage, previewImg, bg
         backgroundImage: `url('${bgImage}')`,
       }}
     >
-      <div className="flex flex-col justify-center pt-10 lg:pt-20">
-        <div className=" lg:mx-10 xl:mx-32">
+      <div className="relative flex h-full flex-col pt-10 ">
+        <div className="lg:mx-10 xl:mx-32">
           <div className="relative mx-auto flex w-full max-w-screen-xl flex-col lg:flex-row">
             <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 text-center sm:w-auto sm:px-0 md:my-8 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
               {!hideTimer && (
@@ -62,7 +62,9 @@ const HeroSection = ({ textContent, hideTimer, isCelebrationPage, previewImg, bg
                 <Image src={'/images/lifetime/celebration/confetti.svg'} alt="Confetti" width={464} height={603} />
               </div>
             ) : null}
-            <Animation previewImg={previewImg} />
+            <div className="flex h-[580px]">
+              <Animation previewImg={previewImg} />
+            </div>
           </div>
         </div>
       </div>

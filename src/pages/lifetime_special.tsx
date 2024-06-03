@@ -1,15 +1,26 @@
 import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
 import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
-import Footer from '@/components/layout/Footer';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import Link from 'next/link';
+import moment from 'moment';
 
-const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
+const LifetimeSpecial = ({
+  lang,
+  metatagsDescriptions,
+  langJson,
+  testimonialsJson,
+  footerLang,
+  deviceLang,
+  navbarLang,
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+  const year = moment().format('YYYY');
 
   return (
     <Layout
@@ -19,7 +30,7 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, footerLang, dev
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
       <HeroSection
         textContent={langJson.HeroSection}
@@ -34,9 +45,18 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, footerLang, dev
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
+      <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-gray-1" />
+
       <CtaSection textContent={langJson.CtaSection} />
 
-      <Footer textContent={footerLang} lang={deviceLang} />
+      <div className="flex w-full flex-row items-center justify-center space-x-4 py-16">
+        <Link href="/" locale={lang} className="flex flex-shrink-0">
+          <img loading="lazy" src={`../../logos/internxt/cool-gray-90.svg`} alt="Internxt logo" />
+        </Link>
+        <p className={`text-xs text-cool-gray-60`}>
+          {footerLang.FooterSection.copyright.line1 + year + footerLang.FooterSection.copyright.line2}
+        </p>
+      </div>
     </Layout>
   );
 };
@@ -47,6 +67,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime_special.json`);
+  const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -58,6 +79,7 @@ export async function getServerSideProps(ctx) {
       deviceLang,
       metatagsDescriptions,
       langJson,
+      testimonialsJson,
       navbarLang,
       footerLang,
     },
