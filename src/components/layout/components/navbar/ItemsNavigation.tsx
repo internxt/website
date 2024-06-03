@@ -82,15 +82,6 @@ export const ItemsNavigation = ({
                   >
                     {textContent.products.drive}
                   </Link>
-                  <Link
-                    href="/webdav"
-                    locale={lang}
-                    className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
-                    }`}
-                  >
-                    {textContent.products.webDAV}
-                  </Link>
 
                   <a
                     href="https://send.internxt.com"
