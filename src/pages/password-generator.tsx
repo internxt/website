@@ -33,6 +33,9 @@ const PasswordGenerator = ({
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Password Generator', 'password-generator')}
       </Script>
+
+      <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
+      <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}

@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
