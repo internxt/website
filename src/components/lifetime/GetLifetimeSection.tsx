@@ -2,7 +2,12 @@ import RevealY from '@/components/components/RevealY';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-const GetLifetimeSection = ({ textContent }) => {
+interface GetLifetimeSectionProps {
+  textContent: any;
+  isCelebrationPage?: boolean;
+}
+
+const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSectionProps) => {
   const router = useRouter();
   const lang = router.locale;
   const { title } = textContent;
@@ -31,13 +36,15 @@ const GetLifetimeSection = ({ textContent }) => {
           </div>
 
           <RevealY className="content relative flex h-full w-full flex-col items-center px-5 pt-6">
-            <Image
-              src="/images/lifetime/celebration/confetti-horizontal.svg"
-              alt="Confetti"
-              width={1103}
-              height={464}
-              className="absolute"
-            />
+            {isCelebrationPage ? (
+              <Image
+                src="/images/lifetime/celebration/confetti-horizontal.svg"
+                alt="Confetti"
+                width={1103}
+                height={464}
+                className="absolute"
+              />
+            ) : null}
             <Image
               src="/images/home/internxt_secure_cloud_storage.webp"
               alt="Internxt secure cloud storage"

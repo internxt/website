@@ -22,7 +22,11 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        previewImg="/images/lifetime/file_item.webp"
+        bgImage="/images/lifetime/celebration/normal-bg.png"
+      />
 
       <PaymentSection
         textContent={langJson.PaymentSection}

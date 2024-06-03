@@ -17,7 +17,7 @@ export interface PriceCardProps {
   currencyValue?: string;
   isIframe?: boolean;
   isOffer?: boolean;
-  isCelebrationPage?: boolean;
+  isLifetimePage?: boolean;
 }
 
 const STORAGE_LEVELS = {
@@ -40,7 +40,7 @@ export default function PriceCard({
   currencyValue,
   isIframe,
   isOffer,
-  isCelebrationPage,
+  isLifetimePage,
 }: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -68,7 +68,7 @@ export default function PriceCard({
   const formattedPrice = isOffer && billingFrequency !== Interval.Lifetime ? priceForSubscriptions(price) : price;
 
   const getPlanStorage = (storage) => {
-    if (isCelebrationPage) {
+    if (isLifetimePage) {
       return STORAGE_LEVELS[storage] + storage;
     }
 

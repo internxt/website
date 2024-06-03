@@ -129,7 +129,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, couponCode, discount, lif
                       currency={currency}
                       currencyValue={currencyValue}
                       coupon={couponCodeFiltered(product.storage)}
-                      isCelebrationPage={lifetimeMode === 'celebration'}
+                      isLifetimePage={true}
                     />
                   );
                 })

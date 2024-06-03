@@ -21,7 +21,12 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, footerLang, dev
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
-      <HeroSection textContent={langJson.HeroSection} hideTimer />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        previewImg="/images/lifetime/file_item.webp"
+        hideTimer
+        bgImage="/images/lifetime/celebration/normal-bg.png"
+      />
 
       <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode="normal" />
 
