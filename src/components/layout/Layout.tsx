@@ -40,6 +40,7 @@ const INCLUDED_PATHS_FOR_SNIGEL = [
   '/password-checker',
   '/byte-converter',
   '/file-converter',
+  '/file-converter/[filename]',
 ];
 
 const excludedPaths = [
@@ -98,6 +99,7 @@ LayoutProps) {
     axios
       .get(GET_IP_INFO_API)
       .then((res) => {
+        console.log(res);
         ip = res.data;
       })
       .catch((err) => {
