@@ -1,10 +1,12 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
+import { VPN_CHROME_WEB_STORE } from '@/constants';
+import Link from 'next/link';
 
 const TopBanner = ({ isBannerFixed }) => {
   const router = useRouter();
   const lang = router.locale;
-  const bannersJson = require(`@/assets/lang/it/banners.json`);
+  const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
 
   return (
@@ -22,16 +24,15 @@ const TopBanner = ({ isBannerFixed }) => {
               {textContent.title.normalText}
             </p>
           </div>
-          <button
+          <Link
+            href={VPN_CHROME_WEB_STORE}
+            target="_blank"
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
-            onClick={() => {
-              router.push('/lifetime/celebration');
-            }}
           >
             <p className="font-semibold underline hover:no-underline">{textContent.title.cta}</p>
             <CaretRight size={16} />
-          </button>
+          </Link>
         </div>
       </div>
       {/* Mobile view */}
@@ -39,17 +40,12 @@ const TopBanner = ({ isBannerFixed }) => {
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
-          <button
-            className="flex flex-col items-center justify-center"
-            onClick={() => {
-              router.push('/lifetime/celebration');
-            }}
-          >
+          <Link className="flex flex-col items-center justify-center" href={VPN_CHROME_WEB_STORE} target="_blank">
             <p className="font-normal">
               <span className="font-semibold">{textContent.title.boldText}</span>
               {textContent.title.normalText}
             </p>
-          </button>
+          </Link>
         </div>
       </div>
     </>

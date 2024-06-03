@@ -35,6 +35,11 @@
       "title": "文件转换器",
       "cta": "立即转换",
       "pathname": "/file-converter"
+    },
+    {
+      "title": "VPN Chrome扩展",
+      "cta": "立即下载",
+      "pathname": "/vpn"
     }
   ]
 }

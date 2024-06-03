@@ -253,7 +253,7 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link href="/newsletter-subscribe" className="hover:text-primary" legacyBehavior>
+                    <Link href="/newsletter-subscribe" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.newsletter}
                     </Link>
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
@@ -401,6 +401,9 @@ export default function Footer({
                       className="flex items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.tools.fileConverter}
+                    </Link>
+                    <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.vpn}
                       <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
                       </div>
@@ -768,6 +771,9 @@ export default function Footer({
                       </Link>
                       <Link href="/file-converter" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.fileConverter}
+                      </Link>
+                      <Link href="/vpn" locale={lang} passHref>
+                        {textContent.FooterSection.sections.tools.vpn}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

@@ -74,6 +74,10 @@
     "line1": "Use the Internxt CLI for",
     "blueText": "advanced file management with Internxt"
   },
+  "SignUpVPNBanner": {
+    "line1": "Secure while you surf.",
+    "blueText": "Enjoy a more private online experience with Internxt"
+  },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
@@ -115,9 +119,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Get 80% off lifetime plans! ",
-      "normalText": "Keep your files private forever!",
-      "cta": "Choose plan"
+      "boldText": "Internxt VPN is now available! ",
+      "normalText": "Surf the web in complete privacy",
+      "cta": "Download for free"
     }
   },
   "lifetimeBanner": {

@@ -35,6 +35,11 @@
       "title": "File Converter",
       "cta": "Convert now",
       "pathname": "/file-converter"
+    },
+    {
+      "title": "VPN Chrome Extension",
+      "cta": "Download now",
+      "pathname": "/vpn"
     }
   ]
 }

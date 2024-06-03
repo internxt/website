@@ -22,7 +22,6 @@ interface Products {
 //Check if the buttons works properly
 describe('Lifetime page', () => {
   const products: Products = {};
-  let coupon: string;
   before(() => {
     cy.request('get', `${window.origin}/api/stripe/stripe_products`).then((response) => {
       response.body.map((product) => {
@@ -34,17 +33,6 @@ describe('Lifetime page', () => {
           planId: product.id,
         };
       });
-    });
-
-    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeFifty}`).then((response) => {
-      coupon = response.body;
-    });
-  });
-
-  beforeEach(() => {
-    cy.request('get', `${window.origin}/api/stripe/get_coupons?coupon=${CouponType.LifetimeFifty}`).then((response) => {
-      coupon = response.body;
-      cy.visit('/lifetime');
     });
   });
 

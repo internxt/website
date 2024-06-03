@@ -72,7 +72,8 @@
         "passwordChecker": "Comprobador de Contraseñas",
         "byteConverter": "Convertidor de Unidades",
         "passwordGenerator": "Generador de Contraseñas",
-        "fileConverter": "Convertidor de archivos"
+        "fileConverter": "Convertidor de archivos",
+        "vpn": "Extensión de VPN"
       },
       "language": "Idioma"
     }

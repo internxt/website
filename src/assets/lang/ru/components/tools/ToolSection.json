@@ -35,6 +35,11 @@
       "title": "Конвертер файлов",
       "cta": "Конвертировать сейчас",
       "pathname": "/file-converter"
+    },
+    {
+      "title": "Расширение VPN для Chrome",
+      "cta": "Скачать сейчас",
+      "pathname": "/vpn"
     }
   ]
 }

@@ -5,6 +5,7 @@ import {
   CaretRight,
   Envelope,
   FileDashed,
+  Globe,
   Password,
   ShieldCheck,
 } from '@phosphor-icons/react';
@@ -50,6 +51,12 @@ export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: st
       title: textContent.toolsCard[5].title,
       cta: textContent.toolsCard[5].cta,
       pathname: textContent.toolsCard[5].pathname,
+    },
+    {
+      icon: Globe,
+      title: textContent.toolsCard[6].title,
+      cta: textContent.toolsCard[6].cta,
+      pathname: textContent.toolsCard[6].pathname,
     },
   ];
   const filteredCards = cards.filter((item) => item.pathname !== pathname);

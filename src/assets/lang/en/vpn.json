@@ -1,0 +1,120 @@
+{
+  "HeroSection": {
+    "label": "Free VPN",
+    "title": {
+      "line1": "Internxt secure VPN protects",
+      "line2": "your online activity"
+    },
+    "description": "Surf the web in complete freedom and privacy with Internxt's free VPN.",
+    "cta": "Download VPN"
+  },
+  "EncryptedVPNSection": {
+    "title": "Internxt's encrypted VPN extension",
+    "subtitle": "Our free and secure VPN hides your IP address to keep your browsing experience private, secure, and unrestricted.",
+    "description": "We built this VPN in line with our mission of creating a more private internet, and with this extension, your connection will be encrypted and safe from network attacks and data leaks. You focus on safe surfing, and we’ll take care of the security.",
+    "cta": "Download VPN"
+  },
+  "SecureVPNSection": {
+    "title": "Why use a secure VPN",
+    "subtitle": "Unsecured internet connections, such as Public Wi-Fi, can expose your information to data leaks, hacks, or breaches.",
+    "description": " Internxt’s free VPN encrypts your connection for a safer, more private online experience.",
+    "cards": [
+      {
+        "title": "Encrypt your internet traffic",
+        "description": "We encrypt your data to protect your right to privacy and keep your browsing activity hidden from hackers, ISPs, and Google."
+      },
+      {
+        "title": "Avoid targeted advertising",
+        "description": "A secure VPN helps you avoid personalized ads and reduces data collection from companies like Google."
+      },
+      {
+        "title": "Unlock Global Content",
+        "description": "Bypass geo-restrictions and access websites unavailable in your region."
+      },
+      {
+        "title": "Control your online identity",
+        "description": "Internxt’s secure VPN gives you back control over how much information you share online and keeps it protected."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "How it works",
+    "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
+    "description": "Our free VPN extension masks your IP address and protects your information from third-party data collection.",
+    "cards": [
+      {
+        "title": "Advanced encryption",
+        "description": "Internxt VPN extension uses secure data encryption protocols, offering the highest protection for a safe and private connection."
+      },
+      {
+        "title": "Secure networks",
+        "description": "Enjoy secure access to private networks and connect to your work or home networks while maintaining data confidentiality."
+      },
+      {
+        "title": "Enhanced anonymity",
+        "description": "A VPN extension changes your IP address to hide your location and doesn’t track your browsing history or connection logs."
+      }
+    ]
+  },
+  "WhenUseVPNSection": {
+    "title": "When to use a VPN",
+    "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
+    "description": "Our free VPN extension masks your IP address and protects your information from third-party data collection.",
+    "cta": "Download VPN",
+    "cards": [
+      "Prevent targeted ads",
+      "Anonymously create accounts",
+      "Bypass annoying Geo-restrictions",
+      "Free VPN",
+      "Protect your privacy",
+      "No registration required",
+      "Defend against network attacks",
+      "No logs policy"
+    ]
+  },
+  "CtaSection": {
+    "title": "Break free from online trackers",
+    "description": "Hide your data for a secure browsing experience with Internxt VPN",
+    "cta": "Download VPN"
+  },
+  "CtaSection2": {
+    "title": "Break free from online trackers",
+    "description": "Hide your data for a secure browsing experience with Internxt VPN",
+    "cta": "Download VPN"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is a VPN for Chrome extension?",
+        "answer": [
+          "A VPN or virtual private network ensures secure private browsing on the internet. A VPN is designed to create an encrypted channel for private data and lets you protect your online identity on higher-risk connections such as public Wi-Fi hotspots."
+        ]
+      },
+      {
+        "question": "How to install the VPN extension?",
+        "answer": [
+          "To install Internxt’s VPN, click the download VPN button on this page. Once downloaded, you can launch the VPN and choose your preferred VPN server."
+        ]
+      },
+      {
+        "question": "Is it safe to use a VPN connection?",
+        "answer": [
+          "We developed our free VPN extension using industry-standard security protocols in line with Internxt’s mission to protect your data from hackers and Internet service providers (ISPs). A VPN extension prevents external parties from tracking your online activity."
+        ]
+      },
+      {
+        "question": "What platforms does the VPN support?",
+        "answer": [
+          "You can download our VPN Chrome extension on Google Chrome web browsers for Windows and MacOS desktop devices."
+        ]
+      },
+      {
+        "question": "How does the VPN ensure my privacy?",
+        "answer": [
+          "A VPN ensures your privacy by encrypting your internet traffic, masking your IP address, and adhering to strict no-logs policies. This combination of security measures prevents third parties from monitoring your online activities, preserving your anonymity and data privacy."
+        ]
+      }
+    ]
+  }
+}
