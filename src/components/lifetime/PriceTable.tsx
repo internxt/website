@@ -5,12 +5,13 @@ import usePricing from '@/hooks/usePricing';
 import PriceCard from '@/components/prices/PriceCard';
 import { CouponType } from '@/lib/types';
 import { Interval, stripeService } from '../services/stripe.service';
+import { LifetimeMode } from './PaymentSection';
 
 interface PriceTableProps {
   lang: string;
   discount?: number;
   couponCode?: CouponType;
-  lifetimeMode?: 'celebration' | 'custom-disc' | 'normal';
+  lifetimeMode?: LifetimeMode;
 }
 
 const DISC_LIFETIME_PRICES = {
@@ -125,11 +126,14 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, couponCode, discount, lif
                       lang={lang}
                       billingFrequency={Interval.Lifetime}
                       popular={lifetimeMode === 'normal' ? product.storage === '10TB' : product.storage === '5TB'}
-                      priceBefore={lifetimeMode !== 'normal' ? product.price.split('.')[0] : undefined}
+                      priceBefore={
+                        lifetimeMode !== 'normal' && lifetimeMode !== 'redeem' ? product.price.split('.')[0] : undefined
+                      }
                       currency={currency}
                       currencyValue={currencyValue}
                       coupon={couponCodeFiltered(product.storage)}
                       isLifetimePage={true}
+                      lifetimeMode={lifetimeMode}
                     />
                   );
                 })

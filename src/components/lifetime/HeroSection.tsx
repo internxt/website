@@ -9,11 +9,16 @@ interface HeroSectionProps {
   hideTimer?: boolean;
   isCelebrationPage?: boolean;
   previewImg?: string;
-  bgImage: string;
+  bgImage?: string;
 }
 
-const HeroSection = ({ textContent, hideTimer, isCelebrationPage, previewImg, bgImage }: HeroSectionProps) => {
-  console.log(bgImage);
+const HeroSection = ({
+  textContent,
+  hideTimer,
+  isCelebrationPage,
+  previewImg,
+  bgImage = '/images/lifetime/celebration/normal-bg.png',
+}: HeroSectionProps) => {
   return (
     <section
       className={`overflow-hidden bg-cover bg-no-repeat py-20`}

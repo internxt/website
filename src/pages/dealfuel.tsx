@@ -1,20 +1,23 @@
 import { useState } from 'react';
 
-import HeroSection from '@/components/dealfuel/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
-import GetLifetimeSection from '@/components/dealfuel/GetLifetimeSection';
-import Footer from '@/components/layout/Footer';
+import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import Navbar from '@/components/layout/Navbar';
-import CtaSection from '@/components/dealfuel/CtaSection';
+import CtaSection from '@/components/lifetime/CtaSection';
 
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
+import PaymentSection from '@/components/lifetime/PaymentSection';
+import Link from 'next/link';
+import moment from 'moment';
+import HeroSection from '@/components/lifetime/HeroSection';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+  const year = moment().format('YYYY');
+
   const [openDialog, setOpenDialog] = useState(false);
 
   const handlePriceCardButton = () => {
@@ -43,23 +46,24 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
 
-      <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />
+      <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
 
-      <PriceTable
-        textContent={langJson.PriceTable}
-        handlePriceCardButton={handlePriceCardButton}
-        discount={50}
-        billingFrequency="lifetime"
-        titleFontSize="text-4xl"
-      />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode="redeem" />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} withoutCta />
 
       <CtaSection textContent={langJson.CtaSection} />
 
-      <Footer textContent={footerLang} lang={deviceLang} />
+      <div className="flex w-full flex-row items-center justify-center space-x-4 py-16">
+        <Link href="/" locale={lang} className="flex flex-shrink-0">
+          <img loading="lazy" src={`../../logos/internxt/cool-gray-90.svg`} alt="Internxt logo" />
+        </Link>
+        <p className={`text-xs text-cool-gray-60`}>
+          {footerLang.FooterSection.copyright.line1 + year + footerLang.FooterSection.copyright.line2}
+        </p>
+      </div>
     </Layout>
   );
 };
@@ -69,7 +73,7 @@ export async function getServerSideProps(ctx) {
   const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/dealfuel.json`);
+  const langJson = require(`@/assets/lang/en/techcult.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
 

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Get a lifetime Internxt plan!",
     "description": "Secure all your files and memories forever with a single, one-time payment.",
-    "cta": "Redeem code"
+    "cta2": "Redeem code"
   },
   "Auth": {
     "SignUp": {
@@ -79,41 +79,42 @@
       "description": "This week only, buy once and get privacy and security forever."
     },
     "securePayment": "100% Secure payment, powered by Stripe",
-
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
+    }
   },
   "GetLifetimeSection": {
     "title": "Life is not short! But this limited-time deal is...",
     "description": "Internxt is offering a weeklong deal on a lifetime of privacy and peace of mind."
   },
   "FeatureSection": {
-    "title": "Secure cloud storage with unmatched privacy",
-    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Internxt's commitment to privacy",
+    "title": "Why choose Internxt to secure your files?",
+    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data. We take every step to ensure your information remains secure.",
+    "cta": "",
     "cards": [
       {
-        "title": "Private by design",
-        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+        "title": "Enhanced Privacy",
+        "description": "Our powerful encryption protects your data from unauthorized access. We never store passwords; all your data is encrypted in transit and at rest."
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+        "title": "User Control",
+        "description": "To protect you from data breaches, Internxt protects your data by making it inaccessible to third parties, including Internxt."
       },
       {
-        "title": "Open source and transparent",
-        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "Cross-Platform Access",
+        "description": "Work freely and access all your files across various devices and operating systems."
       },
       {
-        "title": "Independently verified",
-        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+        "title": "One-Time Payment",
+        "description": "Internxt's lifetime plans offer secure access to your files forever with a single, upfront payment.  Pay once to secure your data for life without any recurring fees."
       }
     ]
   },
   "CtaSection": {
-    "title": "Your files secure and private forever",
-    "description": "We treat our users like family and family is forever!",
-    "cta": "Select a plan now"
+    "title": "The world's most private cloud storage",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Select plan"
   }
 }
