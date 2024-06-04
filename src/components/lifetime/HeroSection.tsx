@@ -13,7 +13,10 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ textContent, hideTimer, isCelebrationPage, previewImg, bgImage }: HeroSectionProps) => {
-  console.log(bgImage);
+  const imageMobile = isCelebrationPage
+    ? '/images/lifetime/celebration/image_mobile.webp'
+    : '/images/lifetime/image_mobile.webp';
+
   return (
     <section
       className={`overflow-hidden bg-cover bg-no-repeat py-20`}
@@ -34,7 +37,7 @@ const HeroSection = ({ textContent, hideTimer, isCelebrationPage, previewImg, bg
               <div className="flex px-5 lg:hidden">
                 <Image
                   loading="eager"
-                  src="/images/lifetime/celebration/image_mobile.webp"
+                  src={imageMobile}
                   draggable="false"
                   quality={100}
                   width={600}
