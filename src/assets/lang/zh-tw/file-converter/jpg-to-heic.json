@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "將您的 JPG 轉換為 HEIC 圖像，以增加 iPhone 的存儲空間。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 JPG 轉換為 HEIC 圖像",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將 JPG 轉換為 HEIC 包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 JPG：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊‘轉換為 HEIC’：這將您的文件的格式從 JPG 轉換為 HEIC。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼要將 JPG 轉換為 HEIC 文件",
+      "paragraphs": [
+        "將 JPG 轉換為 HEIC 圖像可使您在 iPhone 上存儲更多照片，最大限度地發揮您設備的存儲容量。從 JPG 轉換為 HEIC 還將保持您照片的圖像質量。",
+        "使用 Internxt 的免費 JPG 轉 HEIC 轉換器，享受更多照片的存儲空間，而無需犧牲質量。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

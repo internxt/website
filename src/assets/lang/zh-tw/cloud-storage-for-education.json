@@ -1,0 +1,163 @@
+{
+  "HeroSection": {
+    "inxtLabel": "Internxt",
+    "educationLabel": "教育",
+    "title": {
+      "line1": "安全的文件共享給 ",
+      "line2": "學校和大學"
+    },
+    "description": {
+      "boldText": "專屬50%折扣 ",
+      "text": "適用於學生、教師、教育工作者和畢業生。努力學習，安全工作，用 Internxt 保護你的教育旅程！"
+    },
+    "cta": "領取折扣"
+  },
+  "AchieveSecurityAndPrivacySection": {
+    "title": "教育雲存儲：通過 Internxt 實現安全和隱私",
+    "subtitle": "以一半的價格最大化學術生產力、協作和文件管理。",
+    "description": "Internxt 認識到安全文件共享方法對學校、教育工作者和學生的重要性，以保護信息安全。如果您是學生、畢業生或從事教育工作，可以享受我們安全雲存儲計劃的50%折扣。",
+    "claimOffer": {
+      "title": {
+        "normalText1": "領取您的 ",
+        "blueText": "一次性 ",
+        "normalText2": "特別優惠，獲得50%折扣"
+      },
+      "description": "選擇我們的月度或年度計劃，以一半的價格享受我們加密的產品套件。",
+      "paragraph": [
+        "無論選擇哪個計劃，您都可以享受同樣的端到端加密和安全服務，以保護您的機密文件或項目。",
+        "當需要續訂計劃時，只需通過電子郵件確認您的教育身份，即可繼續享受折扣。"
+      ],
+      "cta": "領取折扣"
+    }
+  },
+  "BenefitsOfInternxtSection": {
+    "title": "Internxt 雲存儲對教育的好處",
+    "subtitle": "一個安全的平台，用於共享和存儲文件，讓您專注於學習。",
+    "paragraph": [
+      "學校、學生、畢業生和員工需要一種安全、私密的方式來備份敏感信息、資源、數據、教案等。",
+      "Internxt 的隱私重視產品套件幫助學校、大學和教職員工享受雲存儲對教育的以下好處："
+    ],
+    "cta": "領取折扣",
+    "cards": {
+      "workFromAnywhere": {
+        "title": "隨時隨地工作、學習和計劃",
+        "description": "無論您何時何地學習，Internxt 在所有設備上都可以使用。您可以在適合自己的時間自由輕鬆地工作。"
+      },
+      "sendFiles": {
+        "title": "放心地傳送文件",
+        "description": "享受 Internxt Drive 的高級共享選項或 Internxt Send 的加密文件傳輸，以防止未經授權的訪問。我們為學校設計的安全文件共享系統旨在保護學生和教職員工的機密信息免受數據泄露。"
+      },
+      "secureBackup": {
+        "title": "安全備份和恢復",
+        "description": "您不再需要擔心丟失您的工作，因為您可以選擇每 6、12 或 24 小時從桌面應用程序備份您的文件，或僅選擇手動備份。"
+      }
+    }
+  },
+  "ClaimYourDiscountSection": {
+    "title": "如何領取折扣",
+    "subtitle": "使用有效的教育電子郵件地址即可獲得我們月度或年度計劃的 50% 折扣。",
+    "paragraph": [
+      "如果您是學生、教師、畢業生或在教育部門工作，擁有經認可的機構的有效電子郵件地址，請填寫以下表格以領取折扣。",
+      "一旦我們確認您的身份，我們將聯繫您確認如何領取折扣。"
+    ],
+    "card": {
+      "title": "聯繫我們以領取50%的教育折扣",
+      "fillForm": "請填寫以下表格：",
+      "institutionName": "機構名稱*",
+      "nameLabel": "姓名",
+      "institutionEmail": "您的機構電子郵件地址*",
+      "emailLabel": "電子郵件地址",
+      "whichPlan": "您希望將折扣應用於哪個計劃？*",
+      "select": "選擇",
+      "annual": "年度",
+      "monthly": "月度"
+    },
+    "privacyCheckbox": "我已閱讀並理解[隱私政策](https://internxt.com/legal)。",
+    "cta": "領取折扣"
+  },
+  "WhyChooseInternxtSection": {
+    "title": "為什麼選擇 Internxt？",
+    "subtitle": "隱私是我們所做工作的核心。我們的業務不依賴於數據收集或廣告。我們建立在信任之上。",
+    "description": "我們的加密技術非常適合學校和大學，以保護機密信息並保護您基本的隱私權。",
+    "cards": [
+      {
+        "title": "設計私密",
+        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜止時都會被加密。Internxt 讓您完全控制您的文件。您的數據是您的事。保護它是我們的責任。"
+      },
+      {
+        "title": "無妥協的安全",
+        "description": "您的文件在離開設備之前就已經過端到端加密。由於零知識 AES-256 加密，只有您能訪問您的數據。"
+      },
+      {
+        "title": "開源和透明",
+        "description": "我們為我們所做的工作感到自豪，因此我們的代碼公開在 GitHub 上，任何人都可以親自審查、審計和驗證。我們除了您的數據外，沒有什麼可隱藏的。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合 GDPR 規範且100%安全，但不要只聽我們的話。Internxt 已由歐洲領先的滲透測試公司 Securitum 獨立審核和驗證。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Internxt 為教育而生。支持隱私。轉向 internxt",
+    "description": "驗證您的資格以獲得50%的折扣。",
+    "cta": "領取折扣"
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "我有資格享受 Internxt 的教育折扣嗎？",
+        "answer": [
+          "如果您目前就讀於教育機構或作為員工工作，並擁有有效的教育郵箱，則符合 Internxt 的教育折扣資格。只要您的教育郵箱有效，這個折扣就會保持有效。",
+          "對於計劃續訂、變更或升級，請與我們聯繫提供所需的詳細信息，以便我們將折扣應用於您的下個訂閱期。"
+        ]
+      },
+      {
+        "question": "如何申請？",
+        "answer": [
+          "請通過 [hello@internxt.com](mailto:hello@internxt.com) 聯繫我們，並告知您的機構名稱、電子郵件和您希望選擇的計劃。一旦核實，我們的團隊成員將與您聯繫，您即可開始享受 Internxt 的優惠！"
+        ]
+      },
+      {
+        "question": "我將被收取多少費用？",
+        "answer": [
+          "您將按所選月度或年度計劃的 50% 收費。欲了解我們的詳細價格，並決定哪種存儲選項適合您的需求，請訪問我們的[價格頁面](https://internxt.com/pricing 'Internxt Pricing – Get Up To 10GB Free!')。"
+        ]
+      },
+      {
+        "question": "您接受哪些支付方式？",
+        "answer": [
+          "目前，我們接受信用卡和借記卡支付（包括萬事達卡、VISA、美國運通等），我們還接受 Paypal、銀行聯絡、iDEAL 和 SOFORT。"
+        ]
+      },
+      {
+        "question": "我的折扣何時到期？",
+        "answer": [
+          "對於月度計劃，折扣價格將適用於續訂，直到您取消或刪除訂閱，或選擇降級至免費計劃。",
+          "如果您有年度計劃，您的折扣將從購買日期起有效一年，並會自動以標準價格續訂，除非您取消或重新確認您的資格。",
+          "如果您希望重新訂閱任何計劃並保留您的教育折扣，請與我們聯繫，以便我們核實您的資格。"
+        ]
+      },
+      {
+        "question": "如果我想更改計劃怎麼辦？",
+        "answer": [
+          "您可以隨時更改您的訂閱計劃。如果您希望升級存儲並繼續享受 Internxt 和教育雲存儲的優惠，請與我們聯繫提供必要的詳細信息以重新核實您的身份。如果您仍然符合折扣資格，我們將與您聯繫。"
+        ]
+      },
+      {
+        "question": "有更多問題嗎？",
+        "answer": [
+          "請通過我們網站上的在線聊天（週一至週五），發送電子郵件至 [hello@internxt.com](mailto:hello@internxt.com)，或訪問我們的[幫助中心](https://help.internxt.com 'Internxt Help Center') 與我們聯繫。"
+        ]
+      }
+    ]
+  },
+  "banner": {
+    "thanks": "謝謝！",
+    "title": "我們已成功收到您的請求。",
+    "description": "我們將與您聯繫，提供有關如何領取折扣的說明！",
+    "cta": "關閉"
+  }
+}
+

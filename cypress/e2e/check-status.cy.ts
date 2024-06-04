@@ -44,6 +44,7 @@ let nameFiles = [
   'child-safety-ebook',
   'locker',
   'startpage',
+  'file-converter',
 ];
 
 const langs = {
@@ -54,6 +55,7 @@ const langs = {
   it: 'Italian',
   ru: 'Russian',
   zh: 'Chinese',
+  'zh-tw': 'Taiwan',
 };
 
 describe('Verify that pages do not produce a 500 error', () => {

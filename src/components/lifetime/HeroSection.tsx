@@ -39,7 +39,7 @@ const HeroSection = ({
               <div className="flex px-5 lg:hidden">
                 <Image
                   loading="eager"
-                  src="/images/lifetime/celebration/image_mobile.webp"
+                  src={imageMobile}
                   draggable="false"
                   quality={100}
                   width={600}

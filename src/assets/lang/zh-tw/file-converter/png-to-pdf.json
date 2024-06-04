@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "PNG 到 PDF 轉換器：將圖像組織和共享到一個統一、安全的文檔中",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 PNG 轉換為 PDF 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 PNG 轉換為 PDF 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 PNG：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 PDF'：這將您的文件從 PNG 轉換為 PDF。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 PNG 轉換為 PDF 文件",
+      "paragraphs": [
+        "PNG 到 PDF 轉換器有助於將圖像組織和共享到一個統一的文檔中。PNG 文件通常用於高質量圖像，因此使用 PNG 到 PDF 文件轉換器可以幫助以專業的方式在 PDF 中展示圖像。",
+        "Internxt 的 PNG 到 PDF 轉換器允許您創建一個視覺上吸引人且專業的文檔，以展示您 PNG 文件的故事。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

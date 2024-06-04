@@ -16,14 +16,14 @@ interface PriceTableProps {
 
 const DISC_LIFETIME_PRICES = {
   eur: {
-    '2TB': 199,
-    '5TB': 299,
-    '10TB': 599,
+    '2TB': 299,
+    '5TB': 549,
+    '10TB': 849,
   },
   usd: {
-    '2TB': 249,
-    '5TB': 349,
-    '10TB': 649,
+    '2TB': 349,
+    '5TB': 599,
+    '10TB': 899,
   },
 };
 

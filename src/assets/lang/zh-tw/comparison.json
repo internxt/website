@@ -1,0 +1,179 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "雲存儲",
+      "line2": "安全比較"
+    },
+    "description": "比較雲服務並選擇最適合您的安全雲存儲。",
+    "cta": "免費切換到 Internxt",
+
+    "table": {
+      "sections": {
+        "encryption_and_security": {
+          "name": "加密和安全",
+          "features": {
+            "encryption_at_rest_and_in_transit": "靜態和傳輸中的加密",
+            "end_to_end_encrypted_storage": "端到端加密存儲",
+            "end_to_end_encrypted_file_sharing": "端到端加密文件共享",
+            "zero_knowledge_encryption": "零知識加密",
+            "two_factor_authentication": "雙因素身份驗證",
+            "gdpr_compliant_synchronization": "符合 GDPR 的同步",
+            "aes_256_encryption": "AES-256 加密",
+            "zero_knowledge_access_from_browsers": "瀏覽器中的零知識訪問",
+            "open_source": "開源",
+            "no_third_party_file_access": "無第三方文件訪問"
+          }
+        },
+        "storage_and_file_management": {
+          "name": "訪問和文件管理",
+          "features": {
+            "sync_any_folders": "同步任何文件夾",
+            "webdav_support": "支持 WebDAV",
+            "web_app": "網頁應用",
+            "windows_desktop_app": "Windows 桌面應用",
+            "mac_desktop_app": "Mac 桌面應用",
+            "linux_desktop_app": "Linux 桌面應用",
+            "android_app": "Android 應用",
+            "ios_app": "iOS 應用",
+            "availability": "所有設備可用",
+            "backup_folders_and_files": "備份文件夾和文件",
+            "unlimited_bandwidth": "無限帶寬"
+          }
+        },
+        "controlled_file_sharing": {
+          "name": "文件共享",
+          "features": {
+            "password_protection_for_links": "鏈接的密碼保護",
+            "download_limits_for_links": "鏈接下載限制",
+            "file_requests": "文件請求"
+          }
+        },
+        "pricing": {
+          "name": "價格",
+          "features": {
+            "free_account_storage": "免費帳戶存儲",
+            "monthly_base_pricing": "每月基本價格",
+            "max_storage_amount": "最大存儲量",
+            "lifetime_plans": "終身計劃"
+          }
+        },
+        "deployment": {
+          "name": "部署和支持",
+          "features": {
+            "business_plans": "商業計劃",
+            "support_center": "支持中心",
+            "live_chat_support": "實時聊天支持"
+          }
+        }
+      },
+      "drag": {
+        "line1": "橫向拖動",
+        "line2": "以顯示競爭對手"
+      },
+      "startNow": "立即註冊"
+    }
+  },
+  "FeatureSection": {
+    "title": "為什麼選擇 Internxt？",
+    "description": "Internxt 創建了私密且安全的雲服務，旨在讓您重新掌控自己的數據。保護您的文件和基本的隱私權，所有 Internxt 服務都是從頭開始構建，以提供無與倫比的安全性。",
+    "cta": "創建免費帳戶"
+  },
+  "InfoSection": {
+    "title": "具有無與倫比隱私性的安全雲存儲",
+    "description": "什麼讓 Internxt 如此特別？我們是一支完全致力於保護您在線安全的緊密團隊。我們所做的一切以及我們做出的每一個決定都以保護您的數據不被濫用為中心。",
+    "cta": "Internxt 對隱私的承諾",
+    "cards": [
+      {
+        "title": "私密設計",
+        "description": "我們不存儲密碼或用戶數據，您的所有數據都在傳輸和靜態時加密。Internxt 讓您完全控制您的文件。您的數據是您的事。保護它是我們的責任。"
+      },
+      {
+        "title": "不妥協的安全性",
+        "description": "您的文件在離開您的設備之前已經進行了端到端加密。由於零知識 AES-256 加密，您是唯一能夠訪問您數據的人。"
+      },
+      {
+        "title": "開源和透明",
+        "description": "我們為我們所做的感到自豪，所以我們的代碼在 GitHub 上公開，任何人都可以親自審核、審計和驗證。我們除了保護您的數據外，沒有任何隱瞞。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合 GDPR 標準並且 100% 安全，但不要只聽我們的話。Internxt 已經由歐洲領先的滲透測試公司 Securitum 獨立審核和驗證。"
+      }
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "免費獲得最多 10GB 空間！",
+    "description": "立即創建您的免費帳戶，並全面訪問我們的一套在線隱私服務。",
+    "cta": "立即開始"
+  },
+  "TestimonialsSection": {
+    "title": "用戶的真實評論",
+    "cards": [
+      {
+        "name": "Eva W.",
+        "enterprise": "FixThePhoto.com 的記者",
+        "review": "Internxt 是一個方便的雲存儲服務，適合注重隱私的客戶。它有一個簡潔的界面和可靠的支持團隊，是需要安全存儲文件的人的絕佳選擇。"
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "來自 GetApp 的評論",
+        "review": "最好的加密 Dropbox 替代品。總體來說：我們需要一個允許我們存儲客戶文件和工作的替代方案（社交媒體文件），而 Internxt 符合 GDPR 的特點完美地適合我們！"
+      },
+      {
+        "name": "Josep C.",
+        "enterprise": "來自 Trustpilot 的評論",
+        "review": "我用了幾年的 Google Drive，但我需要一個能保證我數據隱私的替代品。這是 Google 或其他知名平台無法做到的。因此，我轉用了 Internxt。"
+      },
+      {
+        "name": "Pat G.",
+        "enterprise": "來自 Capterra 的評論",
+        "review": "我為一個非營利組織存儲文件，使用 Internxt 非常棒！這個雲盤非常易於使用。我只需要上傳和下載，程序和雲盤完成了其他一切！"
+      },
+      {
+        "name": "Luca C.",
+        "enterprise": "來自 GetApp 的評論",
+        "review": "雲存儲的未來！喜歡這款終於有了一個經濟實惠的加密和安全的雲存儲軟件，還有非常酷的外觀和用戶友好的界面。"
+      },
+      {
+        "name": "Binet S.",
+        "enterprise": "來自 Trustpilot 的評論",
+        "review": "快速、可靠且價格低廉——是任何產品的最佳組成部分！充足的存儲空間確實值得讚賞！我有足夠的空間保存我所有的照片和文件。我也喜歡共享文件的簡單性。"
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "有疑問嗎？我們有答案",
+    "faq": [
+      {
+        "question": "什麼是最安全的雲存儲服務？",
+        "answer": [
+          "如果您比較 Internxt 與其他所有服務，您會發現 Internxt 是 Google Drive、Dropbox 和其他流行服務的最私密和安全的替代品。"
+        ]
+      },
+      {
+        "question": "哪種雲存儲服務最私密？",
+        "answer": [
+          "Internxt 無法訪問您存儲的信息，是當今市場上最私密的雲服務。雖然許多雲服務提供先進的安全功能，但很少有服務不能訪問您的信息。"
+        ]
+      },
+      {
+        "question": "什麼是開源雲存儲服務？",
+        "answer": [
+          "一個[開源雲服務](https://internxt.com/open-source)與傳統服務不同，所有服務的源代碼都是公開的。這使得個人可以獨立驗證服務是否符合其聲稱的功能。Internxt 是完全開源的，我們的代碼公開在 GitHub 上。"
+        ]
+      },
+      {
+        "question": "哪些雲提供商可以訪問您的存儲數據？",
+        "answer": [
+          "很難確定哪些公司不會訪問您的數據，因為很少有公司會將他們的源代碼保密，但幾乎沒有聲稱會訪問您的數據。Internxt 不會訪問您的數據，這一點可以通過審核我們的源代碼來驗證。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "安全只需點擊一下",
+    "description": "使用 Internxt 的隱私套件保護您的個人數據。",
+    "cta": "創建帳戶"
+  }
+}
+

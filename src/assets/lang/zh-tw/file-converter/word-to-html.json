@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "一個安全的 WORD 到 HTML 轉換器，為線上觀眾優化內容。",
+    "secureUpload": "受 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 WORD 轉換為 HTML 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 WORD 轉換為 HTML 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳或拖放您的 WORD 文件"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 HTML'"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼選擇 WORD 到 HTML 轉換器",
+      "paragraphs": [
+        "通過將 WORD 轉換為 HTML 文件來優化您的網頁，使您的內容對於網絡瀏覽器可訪問，對於搜索引擎可索引。我們的 WORD 文件轉換器提供了一個安全的平台，可以立即將您的 PDF 轉換為 HTML。",
+        "如果您想將 HTML 文件轉換為安全文件，您可以使用我們的免費 HTML 到 WORD 工具來保護您文檔的隱私。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

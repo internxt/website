@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import HeroSection from '@/components/about/HeroSection';
 import WhatWeDoSection from '@/components/about/WhatWeDoSection';
@@ -16,6 +15,8 @@ import HeroSection2 from '@/components/about/HeroSection2';
 
 const CTA_URL = 'https://internxt.com/pricing';
 
+const ACCEPTED_LANGUAGES_FOR_NEW_VERSION = ['en', 'zh-tw'];
+
 const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
@@ -27,7 +28,7 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        {lang === 'en' ? (
+        {ACCEPTED_LANGUAGES_FOR_NEW_VERSION.includes(lang) ? (
           <>
             <HeroSection textContent={textContent.HeroSection} />
 

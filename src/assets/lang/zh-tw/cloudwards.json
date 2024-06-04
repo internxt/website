@@ -1,0 +1,95 @@
+{
+  "HeroSection": {
+    "header": "合作夥伴",
+    "title": {
+      "line1": "在完全隱私中存儲您的文件",
+      "line2": "前30天免費"
+    },
+    "cta": "立即領取優惠"
+  },
+  "AdvantagesSection": {
+    "features": [
+      "加密文件存儲和共享",
+      "從任何設備訪問您的文件",
+      "訪問我們的所有服務",
+      "沒有未經授權的數據訪問"
+    ]
+  },
+  "BestStorageSection": {
+    "title": "使用 Internxt 保護您的數據",
+    "description": "讓我們為您負責安全和隱私保護。您專注於重要的事情。使用 Internxt 加密、存儲、共享、發送和備份您的所有文件和照片。",
+    "cta": "立即領取優惠"
+  },
+  "FeaturesSection": {
+    "title": "為什麼選擇 Internxt？",
+    "description": "為每個人設計的隱私和簡單易用的在線安全，不需要專家知識就能理解。強大而熟悉，Internxt 是為日常生活中使用而設計的加密雲存儲。"
+  },
+  "PartnershipSection": {
+    "title": "世界上最私密的雲存儲遇上世界上最私密的搜索引擎。",
+    "description1": "Internxt 自豪地宣布與 Startpage 合作！",
+    "description2": "Startpage 與 Internxt 分享了許多相同的價值觀，我們非常高興能與一家幫助您保護個人數據、隱藏追蹤器並完全匿名瀏覽的搜索引擎合作。"
+  },
+  "DealSection": {
+    "title": "我們的 2TB 優惠包括：",
+    "adv": [
+      { "title": "30天退款保證" },
+      { "title": "加密文件存儲和共享" },
+      { "title": "在任何設備上同步文件和照片" },
+      { "title": "訪問我們的所有服務：\nDrive、Photos 和 Send" }
+    ],
+    "footer": "優惠僅對新訂戶或免費計劃用戶有效。",
+    "card": {
+      "title": "前30天免費",
+      "amount": "0.00",
+      "priceBefore": "8.99",
+      "month": "30天後/月",
+      "cta": "立即領取優惠"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑問嗎？我們有答案",
+    "faq": [
+      {
+        "question": "我如何獲得 Startpage 優惠折扣？",
+        "answer": [
+          "要享受我們的 Startpage 折扣，您必須點擊此頁面上的“立即領取優惠”按鈕之一，您將被直接重定向到結帳頁面，並且折扣將已應用於您的新 2TB Internxt 計劃。或者，簡單地在結帳時使用代碼 STARTPAGE。"
+        ]
+      },
+      {
+        "question": "促銷活動何時結束？",
+        "answer": ["我們的 Startpage 優惠活動從 2023 年 2 月 20 日至 3 月 6 日。"]
+      },
+      {
+        "question": "誰有資格享受此折扣？",
+        "answer": [
+          "新用戶或擁有 Internxt 免費、20GB 或 200GB 訂閱計劃的任何人都可以參加我們的 Startpage 優惠活動。"
+        ]
+      },
+      {
+        "question": "當我的計劃結束時，我會保留折扣嗎？",
+        "answer": [
+          "折扣僅適用於服務的前30天。如果您在使用優惠後選擇繼續訂閱，您的帳戶將按標準 2TB 計劃價格收費。"
+        ]
+      },
+      {
+        "question": "第一個月後計劃費用是多少？",
+        "answer": [
+          "在前30天免費之後，2TB 計劃的費用是每月 €9.99，按月支付或每月 €8.99，按年支付。您可以在 Internxt 網站查看我們的所有[價格和訂閱計劃](https://internxt.com/pricing)。"
+        ]
+      },
+      {
+        "question": "Internxt 接受哪些支付方式？",
+        "answer": [
+          "我們目前接受信用卡和借記卡支付（包括萬事達卡、VISA、美國運通等）。您也可以通過 Apple 和 Google Pay、Cartes Banaires、Alipay、Wechat Pay、Bancontact、EPS、GiroPay、iDEAL、Przelewy24、Sofort、Blik、Klarna、Afterpay、SEPA 直接借記支付。"
+        ]
+      },
+      {
+        "question": "有更多問題嗎？",
+        "answer": [
+          "如果您有更多問題，請隨時通過[hello@internxt.com](mailto:hello@internxt.com)與我們聯繫，或者在社交媒體上向我們問好。我們總是很高興聽到您的消息！"
+        ]
+      }
+    ]
+  }
+}
+

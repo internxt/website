@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import HeroSection from '@/components/privacy/HeroSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
@@ -18,7 +17,7 @@ import FeatureSection from '@/components/privacy/FeatureSection';
 import HeroSection2 from '@/components/privacy/HeroSection2';
 import ManifestoSection2 from '@/components/privacy/ManifestoSection2';
 
-const newDesign = ['en', 'es'];
+const newDesignLang = ['en', 'es', 'zh-tw'];
 
 const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
@@ -27,7 +26,7 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
 
   return (
     <>
-      {lang === 'en' ? (
+      {newDesignLang.includes(lang) ? (
         <>
           <Script type="application/ld+json" strategy="beforeInteractive">
             {sm_faq(langJson.FaqSection.faq)}
@@ -50,7 +49,7 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
       )}
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
-        {newDesign.includes(lang) ? (
+        {newDesignLang.includes(lang) ? (
           <>
             <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
             <HeroSection textContent={langJson.HeroSection} />

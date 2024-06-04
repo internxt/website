@@ -1,0 +1,87 @@
+{
+  "DownloadApp": {
+    "title": "下載 Internxt",
+    "description": "使用 Internxt iOS 或 Android 移動應用程序，隨時隨地輕鬆管理文件並安全存儲在雲端。"
+  },
+  "NewsletterSection": {
+    "title": "通訊",
+    "description": "想要在我們推出新產品或發布新更新時收到我們的消息嗎？輸入您的郵件地址，其餘就交給我們吧！",
+    "input": "您的電子郵件地址",
+    "info": "您隨時可以取消訂閱",
+    "cta": "訂閱",
+    "privacy": "訂閱即表示您同意我們的",
+    "privacyLink": "隱私政策。"
+  },
+  "FooterSection": {
+    "description": "Internxt 的使命是幫助塑造尊重人權隱私的世界。為此，我們正在推出一系列服務，所有這些服務都有一個共同目標，那就是幫助人類保護這一基本權利。",
+    "copyright": { "line1": "版權所有 © ", "line2": "，Internxt Universal Technologies SL" },
+    "independentPromotion": "此促銷活動由 Internxt 獨立提供，與華特迪士尼公司無直接合作關係",
+    "comingSoon": "即將推出",
+    "new": "新",
+    "sections": {
+      "products": {
+        "title": "產品",
+        "drive": "Internxt Drive",
+        "photos": "Internxt Photos",
+        "send": "Internxt Send",
+        "webDAV": "WebDAV",
+        "token": "Token",
+        "pricing": "價格"
+      },
+      "company": {
+        "title": "公司",
+        "about": "關於我們",
+        "privacy": "隱私",
+        "openSource": "開源",
+        "mediaArea": "媒體區",
+        "useCases": "用例",
+        "security": "安全",
+        "legal": "法律",
+        "whyInternxt": "為何選擇 Internxt？"
+      },
+      "join": {
+        "title": "加入我們",
+        "newsletter": "通訊",
+        "affiliates": "聯盟",
+        "storageForEducation": "教育存儲",
+        "signup": "創建帳戶",
+        "support": "支援",
+        "login": "登錄",
+        "community": "社區",
+        "github": "GitHub",
+        "whitePaper": "白皮書",
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "youtube": "Youtube",
+        "instagram": "Instagram",
+        "mastodon": "Mastodon"
+      },
+      "resources": {
+        "title": "資源",
+        "blog": "博客",
+        "comparison": "雲存儲比較",
+        "directoryOfPrivacyOrganizations": "隱私組織目錄",
+        "library": "圖書館",
+        "cyberAwareness": "網絡安全意識",
+        "whatGoogleKnowsAboutMe": "Google 了解我什麼",
+        "inxtLibrary": "圖書館"
+      },
+      "tools": {
+        "title": "免費工具",
+        "temporaryEmail": "臨時郵件",
+        "fileVirusScan": "文件病毒掃描",
+        "passwordChecker": "密碼檢查器",
+        "byteConverter": "字節轉換器",
+        "passwordGenerator": "密碼生成器",
+        "fileConverter": "文件轉換器",
+        "vpn": "VPN 擴展"
+      }
+    }
+  },
+  "Cookies": {
+    "title": "Internxt 使用 cookie 使本網站更易於使用",
+    "link": "了解更多關於 cookie",
+    "close": "好的，關閉"
+  }
+}

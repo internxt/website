@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "將網頁的視覺和文本轉換為 PNG 圖像文件。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 WebP 轉換為 PNG 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 WebP 轉換為 PNG 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 WebP：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 PNG'：這將您的文件從 WebP 轉換為 PNG。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 WebP 轉換為 PNG 文件",
+      "paragraphs": [
+        "使用我們的 WebP 到 PNG 轉換器可確保在各種平台和應用程序之間的兼容性。我們的文件轉換器保持圖像質量，無壓縮損失，以保持您的像素完美圖像。",
+        "嘗試 Internxt 的 WebP 到 PNG 文件轉換器，確保您的工作流程中的一致性和易用性，並為 PNG 文件提供更多高級編輯可能性。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

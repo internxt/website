@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "將 HEIC 轉換為 PNG 以便更輕鬆地在各種設備上分享和訪問照片。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 HEIC 轉換為 PNG 圖片",
+      "description": "我們的文件轉換器操作非常簡單。將 HEIC 轉換為 PNG 只需三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 HEIC 文件：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊‘轉換為 PNG’：這會將您的文件格式從 HEIC 轉換為 PNG。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼要將 HEIC 轉換為 PNG 圖片",
+      "paragraphs": [
+        "HEIC 轉換為 PNG 更注重廣泛的兼容性而非文件大小，確保您的照片可以在可能不支持 HEIC 格式的各種設備和平台上查看。",
+        "嘗試 Internxt 的 HEIC 轉 PNG 文件轉換器，最大化您的照片存儲，讓您的圖片可以在多個設備和平台上訪問。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

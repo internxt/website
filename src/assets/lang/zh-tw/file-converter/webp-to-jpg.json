@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "一個安全的 WebP 到 JPG 轉換器，可輕鬆分享圖片。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 WebP 轉換為 JPG 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 WebP 轉換為 JPG 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 WebP：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 JPG'：這將您的文件從 WebP 轉換為 JPG。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 WebP 轉換為 JPG 文件",
+      "paragraphs": [
+        "WebP 到 JPG 轉換器可讓您將較小的、針對 Web 優化的圖片（WebP）轉換為更具普遍兼容性的格式（JPG），以便在 Web 平台外更輕鬆地共享和使用。",
+        "選擇將 WebP 轉換為 JPG 文件，可為您的 JPG 文件提供更多高級編輯可能性，並更輕鬆地與朋友、家人或團隊共享文件。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+
