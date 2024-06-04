@@ -1,9 +1,12 @@
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
+import { IsPCloudSafeSection } from '@/components/comparison/pCloud-alternative/IsPCloudSafeSection';
 import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
+import { WhyChooseInxtSection } from '@/components/comparison/pCloud-alternative/WhyChooseInxtSection';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/MinimalFooter';
 import Navbar from '@/components/layout/Navbar';
+import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import cookies from '@/lib/cookies';
 
@@ -20,7 +23,13 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
       <TablesSection textContent={langJson.TablesSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
+      <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
+
+      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
+
+      <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
+
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>
   );
 };

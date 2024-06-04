@@ -1,5 +1,10 @@
 import { Check, X } from '@phosphor-icons/react';
 import Image from 'next/image';
+import Link from 'next/link';
+
+import SignUpBanner from '@/components/banners/SignUpBanner';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
+import bannerText from '@/assets/lang/en/banners.json';
 
 const InxtTable = ({ textContent }) => {
   return (
@@ -17,7 +22,7 @@ const InxtTable = ({ textContent }) => {
                 <p className="text-gray-100">{item.description}</p>
               </div>
             </div>
-            <div className="flex h-full w-max flex-col px-4">
+            <div className="mx-auto flex h-full w-max flex-col">
               <div className="flex flex-grow flex-col items-center justify-center">
                 <Check size={32} className="text-green-dark" weight="bold" />
               </div>
@@ -45,8 +50,8 @@ const PCloudTable = ({ textContent }) => {
                 <p className="text-gray-100">{item.description}</p>
               </div>
             </div>
-            <div className="flex h-full w-max flex-col px-4">
-              <div className="flex flex-grow flex-col items-center justify-center">
+            <div className="mx-auto flex h-full w-max flex-col">
+              <div className="flex ">
                 <X size={32} className="text-red-dark" weight="bold" />
               </div>
             </div>
@@ -98,6 +103,16 @@ export const TablesSection = ({ textContent }) => {
             <PCloudTable textContent={textContent.userExpAndFeatures.pCloudTable} />
           </div>
         </div>
+        <div className="flex max-w-3xl flex-col items-center gap-9 text-center">
+          <p className="text-5xl font-semibold text-primary">{textContent.switchToInternxt.title}</p>
+          <Link
+            href={SIGNUP_DRIVE_WEB}
+            className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
+          >
+            {textContent.switchToInternxt.cta}
+          </Link>
+        </div>
+        <SignUpBanner textContent={bannerText.SignUpPCloudAlternativeBanner2} lang="en" changeTextOrder />
       </div>
     </section>
   );

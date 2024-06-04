@@ -194,7 +194,7 @@
       }
     ]
   },
-  "ctaSection": {
+  "CtaSection": {
     "title": "No trackers. No problems.",
     "description": "Get complete privacy for your files with Internxt",
     "cta": "Sign up for free"
