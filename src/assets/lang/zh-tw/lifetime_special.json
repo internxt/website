@@ -1,0 +1,62 @@
+{
+  "HeroSection": {
+    "title": "獲取Internxt終身方案！",
+    "description": "安全地永久存儲和分享您的回憶。",
+    "cta1": "立即獲取75%折扣",
+    "cta2": "選擇終身方案"
+  },
+  "PaymentSection": {
+    "limitedOffer": "限時優惠！",
+    "title": { "blueText": "", "normalText": "Internxt終身方案" },
+    "description": "安全地永久存儲和分享您的回憶。",
+    "normalSection": {
+      "title": "探索我們所有獨家終身方案",
+      "description": "只需購買一次，即可永久獲得隱私和安全。"
+    },
+    "securePayment": "100%安全付款，由Stripe提供支持",
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "開源並通過審計",
+      "anonymousAccount": "匿名帳戶創建"
+    }
+  },
+  "GetLifetimeSection": {
+    "title": "生命並不短暫！但這個限時交易是...",
+    "description": "Internxt正在提供一個終身隱私和安心的交易。"
+  },
+  "FeatureSection": {
+    "title": "具有無與倫比隱私保護的安全雲存儲",
+    "description": "什麼使Internxt如此特別？我們是一個專業的緊密團隊，完全致力於保護您的在線安全。我們所做的一切以及我們做出的每個決定都圍繞著保護您的數據不被利用。",
+    "cta": "Internxt對隱私的承諾",
+    "cards": [
+      {
+        "title": "設計私密",
+        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜置時都是加密的。Internxt讓您完全掌握文件。您的數據就是您的業務。保護它是我們的責任。"
+      },
+      {
+        "title": "無妥協的安全性",
+        "description": "您的文件在離開設備之前已進行端到端加密。由於零知識AES-256加密，您是唯一能夠訪問您的數據的人。"
+      },
+      {
+        "title": "開源且透明",
+        "description": "我們對我們的工作感到自豪，因此我們的代碼在GitHub上公開，任何人都可以對其進行個人審查、審計和驗證。我們沒有什麼可隱藏的，只有您的數據。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合GDPR，100%安全，但別只聽我們的話。Internxt已由歐洲領先的滲透測試公司Securitum進行了獨立審核和驗證。"
+      }
+    ]
+  },
+  "campaignCtaSection": {
+    "title": "世界上最私密的雲存儲",
+    "subtitle": "使用Internxt的安全、私密和加密的雲存儲來保護真正重要的內容。",
+    "cta": "立即選擇方案",
+    "guarantee": "30天退款保證"
+  },
+  "CtaSection": {
+    "title": "世界上最私密的雲存儲",
+    "description": "使用Internxt的安全、私密和加密的雲存儲來保護真正重要的內容。",
+    "cta": "立即選擇方案"
+  }
+}
+

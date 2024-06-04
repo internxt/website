@@ -1,0 +1,538 @@
+{
+  "HeroSection": {
+    "title": "服務條款"
+  },
+  "lastUpdated": "最後更新：2024年5月",
+  "title": "條款與條件概述",
+  "subtitle": "這些條款與條件（「條款」）是規範訪問和使用網站和服務的條款，這些網站和服務由 Internxt Universal Technologies SL（以下簡稱「Internxt」）提供，該公司在西班牙瓦倫西亞省拉馬里納註冊，地址為46024瓦倫西亞，La Marina de Valencia，Muelle de la Aduana s/n，Edificio Lanzadera。這些條款應受西班牙法律管轄和解釋，並且在任何爭議、索賠或糾紛發生時均應適用專屬管轄權。Internxt 可能隨時且不需事先通知更新和修訂這些條款與條件，以適應當前法規以及技術或業務變化。用戶應經常查看條款和條件，以確保他們始終使用最新版本。通過訪問或使用Internxt的網站、移動應用程序和在線服務，包括 internxt.com，（以下統稱為「服務」），即表示您同意遵守這些使用條款（「條款」）和所有納入引用的條款。如果您不同意這些條款，您可能無法訪問或使用服務。如果您對這些條款有任何問題，請通過 hello@internxt.com 聯繫我們。請參閱我們的隱私政策，以瞭解有關我們如何收集、使用和披露有關您的信息的信息。",
+
+  "title2": "資格和權限",
+  "subtitle2": "您必須年滿18歲或以上才能訪問或使用我們的服務。如果您代表任何實體使用服務：(a)您表示並保證您有權代表該實體接受這些條款，並且該實體將對您或任何其他雇員或代理人違反這些條款負責;並且(b)這些條款中對「您」的引用指的是您和該實體，共同。",
+  
+  "title3": "開放源碼軟件",
+  "subtitle3": "我們可能將支持我們的服務的大部分軟件的源代碼作為開放源碼軟件提供下載。您同意受制於適用於此開放源碼軟件的任何許可協議，並遵守該協議。您不得指示您與Internxt有關聯以及進行您對該開放源碼軟件的任何修改或分發。我們釋出的與開放源碼軟件相關的源代碼不屬於服務的一部分，您未與我們的服務互動而使用該源代碼不受這些條款約束。但是，當我們托管任何軟件並允許您通過我們的網站和應用程序作為服務使用該軟件時，這些條款將適用於該訪問和使用。",
+  
+  "title4": "使用服務",
+  "subtitle4": "服務，包括服務上包含的所有文字、視頻、圖像、數據、軟件或其他文件、內容和材料，是Internxt及我們的許可方的專有財產。在您遵守這些條款的情況下，您可以以非排他性的方式使用服務以供您個人使用。這些條款中的任何內容都不得被解釋為授予任何專利、商標、版權或其他Internxt或任何第三方的專有權利的權利或許可，無論是通過禁止抗辯、含蓄或其他方式。明確的是，我們不主張對您通過服務提交的內容擁有任何所有權。",
+  
+  "title5": "對服務的修改",
+  "subtitle5": "我們保留在不通知您並且對您不負義務或責任的情況下隨時修改服務（或服務的任何功能或功能）的權利。",
+
+  "title6": "重複侵權政策與版權投訴",
+  "subtitle6": "我們有一項限制服務存取和終止侵犯他人知識產權的用戶帳戶的政策。如果您認為服務中的任何內容侵犯了您擁有或控制的任何版權，您可以使用電子郵件地址hello@internxt.com通知我們。",
+
+  "title7": "商標",
+  "subtitle7": "“Internxt”，公司標誌，任何其他可能出現在服務中的公司服務名稱、標誌或口號，以及服務的外觀和感覺，包括所有頁面標題、自定義圖形、按鈕圖標和腳本，均為Internxt及我們的供應商和許可方的商標、服務標誌或外觀，未經我們或適用商標持有人事先書面許可，不得全部或部分復制、模仿或使用。您不得使用任何meta標籤或其他使用“Internxt”或Internxt的任何其他名稱、商標或產品或服務名稱的“隱藏文本”，未經我們事先書面許可。此外，您不得使用、框架化或利用任何框架技術來包裹任何Internxt商標、標誌或其他專有信息，包括在服務上找到的圖像、任何文本的內容或頁面上包含的頁面的佈局或設計，或包含在頁面上的表格，未經我們的明確書面同意。",
+
+  "title8": "第三方內容",
+  "subtitle8": "我們可能通過服務顯示第三方內容、廣告、鏈接、促銷、標誌和其他材料（統稱為“第三方內容”）。我們不控制、支持、贊助或採納在服務中引用的任何第三方或第三方內容，我們對這些第三方內容不提供任何形式的陳述或保證，包括但不限於其準確性或完整性。您與第三方內容的互動，以及提供第三方內容的任何第三方之間的互動，完全由您和該等第三方之間自行負責，Internxt對此類互動或第三方內容不負責任或承擔任何責任。當您離開服務並進入第三方網站或服務時，我們的條款和政策將不再適用。",
+
+  "title9": "用戶行為",
+  "subtitle9": "您將遵守與您訪問和使用服務相關的所有適用法律，您在訪問或使用服務時，您將獨自對您的行為負責。此外，您不得：進行騷擾、威脅、恐嚇或跟蹤等行為，或者我們認為不良的行為；以任何可能干擾、打擾、對其他用戶完全享受服務產生負面影響或抑制服務功能的方式使用服務，或者可能損壞、禁用、過度負擔或損壞服務功能的方式；反向工程服務的任何方面，或者進行可能發現服務源代碼的任何操作（與我們發布的開源軟件相關除外）；違反、侵犯或侵占任何知識產權或其他第三方權利，或者犯侵權行為；修改、復制（除標準頁面緩存外）、公開執行、公開展示、出售、租賃、出租、共享或以其他方式分發服務的全部或部分。這一限制不適用於我們發布的開源軟件，您可以根據適用的開源軟件許可條款使用；未提前通知Internxt使用旨在防止或限制訪問服務的內容、區域或功能的措施的方法，試圖規避或繞過這些措施；除非我們事先明確書面同意，否則不得以非預期目的使用任何服務；或者利用服務從事或促進違反這些條款的任何活動。",
+
+  "title10": "用戶內容",
+  "subtitle10": "(a) 服務包括允許用戶創建、發布、上傳、分享或存儲內容的區域，包括但不限於照片、視頻、音頻、文本、圖形、代碼、物品或其他信息和材料，包括存儲材料（統稱為“用戶內容”）。 “存儲材料”是指通過我們的服務提供或以其他方式處理的任何用戶內容，用於存儲在存儲平台上。",
+  "subtitle102": "(b) 我們不擁有、控制或認可通過服務傳輸、存儲或處理的任何用戶內容。您對您的任何用戶內容及您對服務的任何交互功能和區域的使用負全部責任，並聲明並保證：(i) 您擁有所有知識產權（或已獲得所有必要的許可）以提供您的用戶內容並授予本協議中的許可；(ii) 您的用戶內容不會違反任何協議或保密義務；(iii) 您的用戶內容不會侵犯、違反或挪用任何知識產權或其他專有權利，包括任何個人或實體的公開或隱私權。",
+  "subtitle103": "(c) 您不得創建、發布、分享或存儲以下用戶內容：非法、誹謗、誹謗、騷擾、威脅、侵犯隱私或公開權利、濫用、煽動、欺詐或其他令人反感的內容；構成、鼓勵或提供犯罪行為的指示，侵犯任何方的權利，否則產生責任或違反任何地方、州、國家或國際法律；包含或描繪任何不反映您真實觀點和經歷的陳述、言論或主張；冒充或誤導您與任何個人或實體（包括Internxt）的隸屬關係；參考或描繪Internxt或我們的服務，但未披露可能存在的與我們的實質性聯繫；包含任何未經請求的推廣、政治活動、廣告或招攬；包含任何病毒、損壞的數據或其他有害的、干擾的或破壞性的文件或內容；或者在我們的唯一判斷下，具有不良意或限制或阻礙其他人使用或享受服務的內容，或可能使Internxt或其他人承擔任何類型的損害或責任。",
+  
+  "title11": "反饋",
+  "subtitle11": "您可以向我們提交有關Internxt或服務的問題、評論、建議、想法、原創或創意材料或其他信息（統稱為“反饋”）。反饋不包括用戶內容。我們保留使用反饋的權利，而無需向您支付任何報酬。如果您期望得到報酬或希望繼續擁有或聲稱對其擁有權利，請不要向我們發送反饋；您的想法可能很棒，但我們可能已經有了相同或類似的想法，我們不希望發生爭議。",
+  
+  "title12": "賠償",
+  "subtitle12": "(a) 在適用法律允許的最大範圍內，您將賠償、捍衛並使Internxt及我們各自的過去、現在和未來的雇員、官員、董事、承包商、顧問、股權持有人、供應商、供應商、服務提供商、母公司、子公司、關聯公司、代理人、代表、前任、繼任者和受讓方（“公司方”）免受任何索賠、損害、費用和支出（包括律師費），這些索賠、損害、費用和支出源自或與以下事項相關：(i) 您對我們服務的訪問或使用；(ii) 您的用戶內容（包括任何存儲材料）；(iii) 您提供的任何反饋；或(iv) 您違反本條款。",
+  "subtitle122": "(b) Internxt保留獨自控制對您負責的任何索賠的辯護權利，費用由您承擔。此賠償補償額外，並非替代您與Internxt之間的書面協議中規定的任何其他賠償。",
+
+  "title13": "免責聲明",
+  "subtitle13": "在適用法律允許的最大範圍內，並且除本協議另有規定外，(A) 服務按“現有”和“可得到”的基礎提供，不提供任何形式的保證，我們明確否認與服務相關的所有暗示性保證，包括但不限於適銷性、特定目的的適用性、所有權和非侵權的暗示性保證；(B) 我們不聲明或保證服務準確、完整、可靠、當前或無錯誤，滿足您的要求，或服務中的缺陷將得到糾正；(C) 我們不能並且不聲明或保證服務或我們的服務器不含病毒或其他有害成分。",
+
+  "title14": "責任限制",
+  "subtitle14": "(A) 在適用法律允許的最大範圍內：(I) 在任何情況下，Internxt或任何公司方均不對任何間接、特殊、附帶、後果性或示範性的損害承擔責任（包括但不限於與收入、利潤、使用或數據丟失或業務中斷有關的損害），無論與服務的訪問或使用有任何關係或與協議有任何關係，無論是基於合同、侵權（包括但不限於簡單過失，無論是主動的、被動的還是歸責於的）還是任何其他法律或公平原則（即使已被告知此類損害的可能性，也無論此類損害是否可預見）；(II) 在任何情況下，Internxt和公司方（共同）的總責任（無論是基於合同、保證、侵權（包括主動、被動或歸責於的侵權）還是其他理論，與協議或服務的使用或無法使用有關），不會超過您支付給我們的服務使用費用或100歐元，以較高者為準。",
+  "subtitle142": "(B) 第15條(A)款所規定的限制將不限制或排除Internxt的重大疏忽、欺詐或故意、惡意或魯莽行為的責任。",
+  
+  "title15": "解除",
+  "subtitle15": "在適用法律允許的最大範圍內，您免除Internxt和其他公司方對各種已知和未知（包括但不限於疏忽的索賠）產生的責任、損失、索賠、要求和/或損害（實際和後果性）的責任，該責任、損失、索賠、要求和/或損害與用戶之間的爭議以及第三方的行為或不作為有關。",
+  
+  "title16": "爭議解決和仲裁",
+  "subtitle16": "請仔細閱讀以下章節，因為它要求您對某些與Internxt的爭議和索賠進行仲裁，並限制您尋求我們救濟的方式。",
+  "subtitle162": "除非任何一方試圖在小額索賠法院提起個人訴訟或尋求因涉嫌非法使用知識產權（包括但不限於版權、商標、商號、標誌、商業秘密或專利）而尋求禁令或其他補救措施的爭議之外，您和Internxt（a）放棄您和Internxt各自在法庭上解決與本協議或服務有關的所有爭議的權利，並（b）放棄您和Internxt各自有權進行陪審團審判的權利。相反，您和Internxt將通過仲裁解決爭議（仲裁是將爭議提交給一名或多名負責審查爭議並做出最終和約束性決定的人員，以解決爭議，而不是讓法官或陪審團在法庭上做出決定）。",
+  "subtitle163": "由本協議或服務引起的任何爭議都是您和Internxt之間的個人爭議，將僅通過個人仲裁解決，不會作為集體仲裁、集體訴訟或任何其他類型的代表性程序提出。不會有集體仲裁或一個個人試圖以另一個個人或一組個人的代表身份解決爭議的仲裁。此外，爭議不能作為集體或其他類型的代表性行動提出，無論是在仲裁內部還是在仲裁外部，或代表任何其他個人或個人組織。",
+  "subtitle164": "每一方都將在爭議產生之日起三十（30）天內書面通知另一方，以便各方可以本着誠信嘗試非正式解決爭議。向Internxt發送通知將通過電子郵件發送至Internxt的hello@internxt.com。向您發送通知將通過電子郵件發送至您帳戶中的當前電子郵件地址。您的通知必須包括（a）您的姓名、郵政地址、電子郵件地址和電話號碼，（b）爭議性質或根據的合理詳細說明，以及（c）您正在尋求的具體救濟。如果您和Internxt在適用方收到通知之日起三十（30）天內無法就如何解決爭議達成一致，則您或Internxt可以根據適用的情況並符合本第17條的規定，啟動仲裁程序或根據第17.1條的具體規定在法院提起訴訟。",
+  "subtitle165": "任何仲裁將在西班牙進行。仲裁將由一名仲裁員依照司法仲裁和調解服務（“JAMS”）的規則進行，這些規則已經通過引用納入。位於西班牙的州和聯邦法院將對任何上訴和仲裁裁決的執行具有專屬管轄權。如果爭議符合在小額索賠法院審理的要求，您還可以在您居住的縣的小額索賠法院訴訟。",
+  "subtitle166": "本協議和適用的JAMS規則，仲裁員將具有(a)關於爭議的所有程序和實質性決定的專有權力和管轄權，包括確定爭議是否可仲裁，以及(b)授予任何在法庭上本應可獲得的救濟的權力；但仲裁員無權進行集體仲裁或代表行動，這在本協議中是被禁止的。仲裁員只能進行個人仲裁，不得合併多個個人的索賠，也不得主持任何類型的集體或代表性程序，或主持涉及多個個人的任何程序。",
+  "subtitle167": "您可以在JAMS网站上获取有关JAMS规则和其他信息。通过同意受这些条款的约束，您要么（a）承认并同意您已阅读和理解了JAMS的规则，要么（b）放弃了阅读JAMS规则的机会，以及任何主张JAMS规则不公平或不应适用的主张。",
+  
+  "title17": "法律管辖和地点",
+  "subtitle17": "本协议及您对服务的访问和使用将受西班牙法律管辖，并依据西班牙的法律进行解释和执行，不考虑冲突法规或原则（无论是西班牙还是任何其他司法管辖区的），如果适用其他司法管辖区的法律将导致适用任何其他司法管辖区的法律。双方之间关于本协议引起的或与之相关的任何争议，如果不受仲裁约束或无法在小额索赔法庭审理，则将在西班牙的法院解决。",
+
+  "title18": "可分割性",
+  "subtitle18": "如果本协议的任何条款、款项或规定被视为无效或不可执行，则该条款、款项或规定将可分割于本协议之外，并且不影响该条款、款项或规定的任何剩余部分的有效性或可执行性，或本协议的任何其他条款、款项或规定的有效性或可执行性。",
+
+  "title19": "终止或暂停",
+  "subtitle19": "尽管本协议中的任何内容，我们保留在不经通知且依我们的唯一判断权下终止本协议或暂停您访问服务的权利的权利。您可以在不经通知的情况下通过停止使用服务来终止本协议。在我们终止本协议或暂停您访问服务后，授予您的所有权利和许可将立即被撤销，并且您必须立即支付根据本协议应支付给Internxt的任何费用（按照存储条款规定）。Internxt用户可以购买终身计划。终身计划的持续时间为最长99年。终身账户配有标准的30天退款保证，该保证涵盖我们其余的计划。如果用户失去对其终身账户的访问权，则该终身账户将被视为丢失。终身会员资格是独特且不可转让的。Internxt保留阻止或停止任何看似滥用或不合理繁重的客户使用Internxt服务的权利。有关此政策如何适用于您的服务计划的更多信息，请联系我们。",
+
+  "title20": "修订",
+  "subtitle20": "我们保留随时自行决定更改本协议条款的权利。如果我们对协议进行更改，我们将提供此类更改的通知，例如通过将修订后的协议条款发布到服务中并更新本条款和存储条款顶部的“最近更新”日期。您对服务的持续使用将确认您接受修订后的协议。如果您不同意修改后的协议，则必须停止使用服务。",
+
+  "title21": "服务水平",
+  "subtitle21": "(a) Internxt将尽商业上合理的努力来满足以下服务水平承诺：除定期维护外，我们的存储服务将有99.99%的可用时间。我们根据我们维护的服务记录来计算可用性。我们将尽力提前通知您任何定期维护。",
+  "subtitle212": "(b) 我们的服务水平协议义务不包括由以下原因引起的存储服务不可用：(i) 您在使用存储服务时使用的任何硬件或软件；(ii) 对我们的存储服务或存储平台的滥用，包括违反协议或不按照Internxt提供的任何文件或说明使用；(iii) Internxt合理控制范围之外的情况或事件；或(iv) 根据我们在协议中保留的权利，暂停或终止您对存储服务的访问。",
+
+  "title22": "存储平台",
+  "subtitle22": "存储服务通过由第三方设备（“存储节点”）组成的分布式网络使您能够存储数据和其他材料（“存储材料”）。存储平台是一组相互连接的存储节点，独立运行开源软件以促进存储您的存储材料。作为存储节点的用户应遵守EU GDPR隐私法律。存储服务旨在在您的设备上本地加密存储材料，然后促进这些加密数据片段分布到存储节点。存储平台和存储节点不由Internxt操作或维护，Internxt对存储平台或存储节点没有责任或责任。存储服务使您能够通过配置存储材料的冗余和分发来防止由于任何单个存储节点的故障而导致存储材料丢失。您完全负责使用存储平台，包括您认为适合以满足您期望的方式维护对存储材料的访问的配置。要使用存储服务，您需要注册一个帐户（“帐户”）。在创建任何帐户时，您将（i）提供准确、及时和完整的帐户信息，（ii）根据需要及时更新您的帐户信息，（iii）维护您的帐户安全，包括不使用与第三方服务相同的密码用于存储服务，（iv）不向任何第三方披露您的密码或私钥，并且（v）如果发现或怀疑与您的帐户或存储服务相关的任何未经授权的活动，立即通知我们。您承认并同意如果您丢失密码，您可能无法恢复任何存储材料。同一人不能拥有多个免费的Internxt帐户。Internxt提供了一个推荐计划，用户可以获得价值5欧元的信用，可以在Internxt的平台内使用。通过推荐朋友加入Internxt，双方都可以获得5欧元。您推荐的人必须是活跃的Internxt用户，并且可以在Internxt的任何计划中注册。Internxt保留审核推荐并取消未在平台上活跃的任何推荐的权利。单个用户最多可以获得价值100欧元的推荐信用。",
+
+  "title23": "存储材料",
+  "subtitle23": "(a) Internxt不对存储材料的任何丢失、滥用或删除或任何存储材料的存储或加密失败负责。您完全负责备份任何存储材料。",
+  "subtitle232": "(b) 您负责适当配置和使用存储服务通过存储平台存储您的存储材料，并保持存储材料的适当安全性，其中可能包括使用加密。我们保留随时、无需通知地删除、拒绝或删除违反本协议条款（包括与用户内容相关的Internxt使用条款）的任何存储材料的权利。",
+  "subtitle233": "(c) 您完全负责确保通过存储服务处理存储材料的任何处理都符合所有适用法律。我们不对存储服务适用于处理任何特定类型数据作出任何陈述或保证。您将按照适用法律的要求向第三方提供所有通知，并取得第三方在通过存储服务处理存储材料方面所需的任何同意。您不得处理包含需要加强安全保护的敏感数据的任何存储材料，包括任何（i）根据HIPAA定义的“受保护健康信息”；（ii）根据PCI DSS定义的“持卡人数据”；或（iii）根据欧盟95/46/EC指令在欧盟成员国中的实施所定义的“敏感个人数据”。",
+
+  "title24": "支付",
+  "subtitle24": "(a) 我们将通过存储服务通知适用于使用存储服务的费用（“费用”）。除非另有说明，所有费用均不包括任何适用的税款，这是您的唯一责任。我们将在至少提前30天通知您任何费用的增加。",
+  "subtitle242": "(b) 除非通过存储服务另有说明，否则我们将所有费用收取到您通过存储服务指定的我们接受的支付方式。您声明并保证您有权使用您通过存储服务指定的支付方式，并授权我们将所有费用收取到该方式。如果您的支付方式无法验证、无效或其他不可接受，则您使用存储服务的权利可能会自动暂停。费用将根据前一个月的使用情况每月收取。您可以随时通过停止使用存储服务来避免产生费用来存储您的存储材料。",
+  "subtitle243": "(c) 在一年内不登录其帐户的免费帐户将被视为非活动帐户。用户将在达到非活动状态之前收到一封电子邮件通知，提前7天。一旦免费帐户达到该状态，其文件将从网络中删除，以为积极使用其帐户的免费用户释放空间。",
+  "subtitle244": "(d) 任何未在7天內更新其高級計劃的帳戶將被終止。",
+  "subtitle245": "(e) 所有購買Internxt任何高級計劃的用戶將有資格獲得30天退款，除非他們已經收到Internxt任何高級計劃的30天試用期。在使用我們的任何高級計劃的頭30天結束後，將不再適用任何退款。如需退款，請通過電子郵件聯繫我們，地址為hello@internxt.com。",
+  "subtitle246": "(f) 存儲節點同意讓Internxt代表他們生成發票，以便雙方都可以合法地證明Internxt每月發送給存儲節點的支付。發票將由存儲節點（在註冊時指定的個人詳細信息）發出，給Internxt。存儲節點可以隨時與我們聯繫並要求這些發票。",
+
+  "title25": "暫停或終止的影響",
+  "subtitle25": "如果您的存儲服務訪問被暫停或終止，您將不再能夠訪問通過存儲服務處理並存儲在存儲平台中的存儲材料，您的存儲材料可能無法恢復。如果我們終止或暫停您對存儲服務的訪問，原因不是因為您違反協議，我們將商業上合理努力為您提供機會通過存儲服務檢索您的存儲材料。我們將終止一年內無活動的任何免費帳戶（這包括一年內未上傳、下載、共享或修改文件的任何帳戶）。我們還將終止任何未能在支付續約截止日期後7天內續約的付費計劃下的帳戶。我們將向用戶發出適當的通知，以試圖避免帳戶終止。",
+
+  "title26": "雜項",
+  "subtitle26": "本協議構成您與Internxt關於您訪問和使用我們服務的完整協議。我們可以轉讓協議下的權利和義務。Internxt未行使或執行協議中的任何權利或條款將不構成對該等權利或條款的放棄。如果延遲或未能履行協議下的任何義務是由於我們合理控制範圍外的任何原因造成的，我們將不承擔任何責任。除非本協議另有規定，否則本協議僅為雙方利益而設，不擬授予任何其他人或實體第三方受益權利。",
+
+  "title27": "隱私政策概述",
+  
+  "privacy_policy_intro_part1": "隱私政策是管理網頁：www.internxt.com 的法律聲明的一部分，連同 Cookies 使用政策。",
+  "privacy_policy_intro_part2": "網頁 www.internxt.com 為 Internxt Universal Technologies, S.L. 擁有，符合衍生自2002年7月11日第34/2002號法案《關於信息社會服務和電子商務的法律》及與個人數據保護相關的現行法規，特別是2016年4月27日歐洲議會和理事會關於自然人有關個人數據的處理及此類數據自由流動的保護的規則（EU）2016/679 及2018年12月5日《關於個人數據保護和數字權利保證的法律》。",
+  "privacy_policy_intro_part3": "Internxt Universal Technologies, S.L. 保留隨時修改或適應本隱私政策的權利。因此，建議您每次訪問網站時都重新查看。如果您在網站上註冊並訪問您的帳戶或個人資料，在訪問時，如果對於處理您個人資料的相關變更存在重大變化，將會通知您。",
+
+  "privacy_policy_person_responsible_title": "誰是負責處理的人？",
+
+  "privacy_policy_person_responsible_part1": "通過瀏覽網頁或通過聯繫表單、電子郵件或電話向我們提供的數據將由下列數據管理者收集並處理：",
+
+  "privacy_policy_table_row1_column1": "身份",
+  "privacy_policy_table_row1_column2": "Internxt Universal Technologies, S.L.",
+
+  "privacy_policy_table_row2_column1": "CIF",
+  "privacy_policy_table_row2_column2": "B98936354",
+
+  "privacy_policy_table_row3_column1": "P郵寄地址",
+  "privacy_policy_table_row3_column2": "La Marina de València, Muelle de la Aduana s/n, Edificio Lanzadera, - 46024 – València (Valencia/València)",
+
+  "privacy_policy_table_row4_column1": "電話",
+  "privacy_policy_table_row4_column2": "677753624",
+
+  "privacy_policy_table_row5_column1": "電子郵件",
+  "privacy_policy_table_row5_column2": "hello@internxt.com",
+
+  "privacy_policy_table_row6_column1": "資料保護主管聯繫方式:",
+  "privacy_policy_table_row6_column2": "dpd@prodatvalencia.es",
+
+  "privacy_policy_table_row7_column1": "網址:",
+  "privacy_policy_table_row7_column2": "www.internxt.com",
+
+  "privacy_policy_table_row8_column1": "商業登記",
+  "privacy_policy_table_row8_column2": "Valencia/València, Tomo ..., Libro ..., Folio ..., Sección ..., Hoja V-....",
+
+  "privacy_policy_person_responsible_part2": "如果您因任何原因希望就與您個人數據處理或隱私相關的任何問題（與我們的數據保護主任）聯繫我們，您可以通過上述任何方式進行。",
+
+  "privacy_policy_process_personal_data_title": "我們如何、為何、由誰、如何、出於何種目的以及多久處理您的個人數據？",
+
+  "privacy_policy_process_personal_data_subtitle1": "何時及為何？",
+
+  "privacy_policy_process_personal_data_part1": "您可以在大多數情況下瀏覽我們的網頁而不提供任何個人信息，但在某些情況下，這些信息是提供您所要求的電子服務所必需的。",
+
+  "privacy_policy_process_personal_data_part2": "如果我們需要收集個人數據以向您提供服務，我們將根據本文件中設定的政策以及特定服務的具體條款和條件（如果有的話）來處理信息，這些條款和條件包含有關數據使用的具體隱私聲明，並告知您我們處理您的個人數據的原因、目的、方式、持續時間以及我們實施的安全措施。",
+
+  "privacy_policy_process_personal_data_subtitle2": "誰收集您的數據？",
+
+  "privacy_policy_process_personal_data_part3": "您可能向我們提供的個人數據的收集和處理由我們公司或必要時其數據處理器執行。就後者而言，這些處理器是根據合同要求確保其活動符合法律並實施適當的安全措施來保護該等數據的第三方。",
+
+  "privacy_policy_process_personal_data_subtitle3": "用途？",
+
+  "privacy_policy_process_personal_data_part4": "我們向您請求的個人數據，或者您在瀏覽過程中提供給我們的數據，將由我們用於管理、提供和改善您向我們請求的服務。",
+
+  "privacy_policy_process_personal_data_part5": "例如，我們將處理您的個人數據以管理您發送給我們的查詢，管理您參與人員選擇過程，如果您要求，向您發送電子通訊，以及/或者為統計數據的準備。",
+
+  "privacy_policy_process_personal_data_part6": "在這方面，當您使用我們網站上的聯繫表單時，我們會要求您提供電子郵件地址。我們只收集發件人的個人數據以回復您。",
+
+  "privacy_policy_process_personal_data_part7": "當您訂閱我們的新聞通訊時，我們也會要求您提供電子郵件以提供服務，無論如何，您可以隨時管理取消訂閱服務，我們會提供手段讓您這樣做。",
+
+  "privacy_policy_process_personal_data_subtitle4": "我們如何處理您的數據？",
+
+  "privacy_policy_process_personal_data_part8": "我們僅收集達到特定目的所需的個人信息。該信息不會用於與所描述目的不相容的目的。",
+
+  "privacy_policy_process_personal_data_part9": "我們僅在必要時將信息披露給第三方，以實現服務目的，並僅向需要知道的人員披露。所有這些都是為了根據現行法律以保密和保留方式處理您的個人數據，以便能夠提供服務。",
+
+  "privacy_policy_process_personal_data_part10": "無論如何，我們的公司都會採取安全措施來保護數據免受潛在濫用或未經授權的訪問、更改或丟失。",
+
+  "privacy_policy_process_personal_data_subtitle5": "我們如何處理您的數據？",
+
+  "privacy_policy_process_personal_data_part11": "我們僅存儲數據以滿足其收集或進一步處理的目的所需的時間。數據保留期將取決於服務，每項服務將指示個人數據處理的持續時間。",
+
+  "privacy_policy_process_personal_data_part12": "本文件末尾提供了具體保留期限的表格。",
+
+  "privacy_policy_process_personal_data_subtitle6": "我們將處理您的個人數據用於何種目的？",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_1": "客戶：",
+
+  "privacy_policy_process_personal_data_part13": "我們處理您的個人數據，以（i）管理您的購買或提供的服務；（ii）維護與計費、預算準備以及後續跟進相關的合同和預先合同關係，並通過電子方式向您發送與您的請求相關的信息；（iii）通過電子方式向您發送可能對您感興趣的商業信息，前提是有明確的授權；（iv）我們可能根據您提供給我們的信息制定商業檔案，以便根據您的興趣為您提供產品和服務。不會基於此類檔案做出自動決策。",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_2": "供應商：",
+
+  "privacy_policy_process_personal_data_part14": "我們處理您的個人數據，以（i）開具發票；（ii）維護業務聯繫；（iii）並通過電子方式向您發送有關我們產品或服務的信息。",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_3": "網站或電子郵件聯繫：",
+
+  "privacy_policy_process_personal_data_part15": "我們處理您的個人數據，以（i）回答您的查詢和請求；（ii）管理您請求的服務或處理您的訂單；（iii）通過電子方式向您發送可能對您感興趣的商業信息，我們可能根據您提供給我們的信息制定商業檔案，以便根據您的興趣為您提供產品和服務。不會基於此類檔案做出自動決策。",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_4": "社交媒體聯繫：",
+
+  "privacy_policy_process_personal_data_part16": "我們處理您的個人數據，以（i）回答您的查詢和請求；（ii）管理您請求的服務，回答您的請求或處理您的訂單；（iii）與您互動並建立追隨者社區。",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_5": "求職者：",
+
+  "privacy_policy_process_personal_data_part17": "我們處理您的個人數據，以（i）在招聘選擇過程中考慮您；（ii）約見您進行工作面試並評估您的候選資格；（iii）將您的簡歷傳達給集團公司、合作夥伴或僅為了將您納入其選擇過程的相關公司，前提是您已經給予我們您的同意。",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_6": "我們活動的參與者：",
+
+  "privacy_policy_process_personal_data_part18": "我們處理您的個人數據，以管理我們組織的競賽參與以及宣傳競賽的獲獎者和頒獎典禮。",
+
+  "privacy_policy_process_personal_data_part19": "獲獎者可能會在任何媒體、我們的網站或其他媒體上被攝影或錄像並被傳播。因此，參與者的形象可能被以附帶的方式捕捉、錄製和/或再現。",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_7": "在線聊天：",
+
+  "privacy_policy_process_personal_data_part20": "我們處理您的個人數據，以回答您的查詢和請求。",
+
+  "privacy_policy_process_personal_data_part21": "一旦通過聊天解決了查詢或通過聊天請求的信息，數據將從我們的數據庫中刪除。",
+
+  "privacy_policy_process_personal_data_sub_subtitle6_8": "網站用戶：",
+
+  "privacy_policy_process_personal_data_part22": "通過瀏覽我們的網站，我們收集有關您的瀏覽器、您的設備以及您使用我們的網站的數據，以及您在使用我們的網站時提供給我們的任何信息。以匿名化或聚合的形式，我們可能記錄 IP 地址（設備的互聯網訪問識別號，允許設備、系統和服務互相識別和通信）。",
+
+  "privacy_policy_process_personal_data_part23": "處理的目的是（i）獲取有關用戶如何使用我們的網站的實際知識，以使我們能夠改進它；（ii）進行統計分析，以幫助我們改進我們的業務策略；（iii）進行網絡性能分析和（iv）進行技術安全性和系統診斷。",
+
+  "privacy_policy_process_personal_data_part24": "我們收集的數據與特定用戶無關，將存儲在我們的數據庫中。",
+
+  "privacy_policy_process_personal_data_part25": "上述數據以及您可能向我們提供的任何個人數據都是通過收集偽匿名化的格式的 cookie 存儲的，並且受到對此類個人數據處理提出異議的限制，詳情請參閱 Cookie 政策。",
+
+  "privacy_policy_process_personal_data_part26": "您可以在相應部分查看 Cookie 政策。",
+
+  "privacy_policy_process_personal_data_part27": "您的瀏覽信息可能會被 Google Analytics 存儲，因此我們參考 Google 的隱私政策，因為它收集和處理此類信息。http://www.google.com/intl/zh-CN/policies/privacy/",
+
+  "privacy_policy_process_personal_data_part28": "同樣地，您可以通過我們的網站提供 Google 地圖的實用程序，這可能會訪問您的位置（如果允許），以便為您提供有關距離和/或前往我們總部的路線的更具體的信息。在這方面，我們參考 Google 地圖使用的隱私政策，以了解此類數據的使用和處理。http://www.google.com/intl/zh-CN/policies/privacy/",
+
+  "privacy_policy_process_personal_data_part29": "為了根據用戶位置提供信息或服務的需求，我們可能會訪問與用戶設備的地理位置相關的數據，前提是用戶為此目的的配置允許。",
+
+  "privacy_policy_process_personal_data_part30": "門戶可能提供通過第三方應用程序共享內容的功能，例如 Facebook 或 Twitter。這些應用程序可能收集和處理與用戶在不同網站上的瀏覽相關的信息。通過這些應用程序收集的任何個人信息可能會被這些應用程序的第三方用戶使用。您的互動受到提供應用程序的公司的隱私政策約束。",
+
+  "privacy_policy_process_personal_data_part31": "門戶可能託管博客、論壇和其他社交網絡應用程序或服務，以便促進知識和內容的交流。用戶提供的任何個人信息可能與該服務的其他用戶共享，我們對此無法控制。",
+
+  "privacy_policy_process_personal_data_subtitle7": "處理您的數據的合法性是什麼？",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_1": "客戶：",
+
+  "privacy_policy_process_personal_data_part32": "處理您的數據的法律依據是（i）執行合同並維護合同關係，以及（ii）您被要求同意通過電子方式發送產品和服務優惠，而您的同意的撤回在任何情況下都不會影響合同的執行。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_2": "供應商：",
+
+  "privacy_policy_process_personal_data_part33": "處理您的數據的法律依據是（i）數據主體是合同的一方或用於實施預先合同措施的合同執行。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_3": "網站或電子郵件聯繫：",
+
+  "privacy_policy_process_personal_data_part34": "處理您的數據的法律依據是（i）數據主體的同意。",
+
+  "privacy_policy_process_personal_data_part35": "在需要填寫表格並“點擊”提交按鈕才能提出請求的情況下，完成表格將必然意味著您已經被告知並明確地同意了附加在表格上的條款或隱私政策的內容。",
+
+  "privacy_policy_process_personal_data_part36": "我們所有的表格都有一個必須勾選的核選框，以訪問提供的服務。",
+
+  "privacy_policy_process_personal_data_part37": "處理的目的將是以下幾個方面：",
+
+  "privacy_policy_process_personal_data_part38": "a）管理通過網站、電子郵件或電話向我們發送的查詢或信息請求。",
+
+  "privacy_policy_process_personal_data_part39": "b）發送您感興趣或您向我們請求的通訊、特別促銷、新聞或活動，包括通過電子方式。由於這是主要目的的附屬目的，您必須勾選專門為此目的提供的核選框。",
+
+  "privacy_policy_process_personal_data_part40": "您通過此方式向我們提供的個人數據將不會被通知給第三方，直接回答此類查詢的是 Internxt Universal Technologies, S.L.。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_4": "社交網絡聯繫：",
+
+  "privacy_policy_process_personal_data_part41": "處理您的數據的法律依據是與相關社交網絡提供商的合同關係的接受，該合同在您在其應用程序中註冊時表現出來並符合其隱私政策，該政策與我們無關。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_5": "與我們合作：",
+
+  "privacy_policy_process_personal_data_part42": "如果您通過網頁、電子郵件或親自前往 Internxt Universal Technologies, S.L. 的地址或任何總部將您的簡歷提供給我們，我們將其納入我們的數據庫。簡歷將存儲一年，之後，如果我們沒有與您聯繫，將被刪除。",
+
+  "privacy_policy_process_personal_data_part43": "處理的法律依據將基於感興趣方對於通過發送簡歷和勾選專門為此目的提供的核選框給予的明確同意。在需要填寫表格並“點擊”提交按鈕才能提出請求的情況下，完成表格將必然意味著您已經被告知並明確地同意了附加在表格上的條款或隱私政策的內容。",
+
+  "privacy_policy_process_personal_data_part44": "處理的目的是將您納入 Internxt Universal Technologies, S.L. 或商業集團中任何實體的現有和未來選拔流程中。",
+
+  "privacy_policy_process_personal_data_part45": "如果感興趣的一方最終被納入 Internxt Universal Technologies, S.L. 或商業集團中的任何實體作為員工，您的數據將被納入相同所有的數據庫中，以內部管理雇主-員工的就業關係。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_6": "發送通訊:",
+
+  "privacy_policy_process_personal_data_part46": "網頁允許訂閱 Internxt Universal Technologies, S.L. 的通訊選項。為此，需要提供一個電子郵件地址，通訊將發送到該地址。",
+
+  "privacy_policy_process_personal_data_part47": "此類信息將存儲在 Internxt Universal Technologies, S.L. 的數據庫中，直到感興趣的一方要求取消訂閱，或者 Internxt Universal Technologies, S.L. 停止發送。",
+
+  "privacy_policy_process_personal_data_part48": "處理此個人數據的法律依據是所有訂閱此服務的感興趣方給予的明確同意，他們通過勾選專門為此目的提供的核選框而訂閱了該服務。",
+
+  "privacy_policy_process_personal_data_part49": "電子郵件數據僅用於管理用戶訂閱通訊的目的而進行處理和存儲。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_7": "在線聊天:",
+
+  "privacy_policy_process_personal_data_part50": "處理您的數據的法律依據是您使用聊天時的同意。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_8": "我們比賽中的參與者:",
+
+  "privacy_policy_process_personal_data_part51": "處理您的數據的法律依據是您註冊比賽並接受隱私政策和比賽規則時給予的同意。",
+
+  "privacy_policy_process_personal_data_part52": "收集的個人數據將不會披露給第三方。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_9": "網頁用戶:",
+
+  "privacy_policy_process_personal_data_part53": "數據處理的法律依據是我們（i）對了解我們用戶的瀏覽模式以適應他們的興趣並改善與他們的關係的合法利益，以及（ii）當用戶瀏覽我們的網站並接受 cookie 使用條款時的同意。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_10": "您的數據將被通報給哪些接收者？",
+
+  "privacy_policy_process_personal_data_part54": "除非法律要求，否則您的數據將不會向我們提供的服務之外的第三方披露。具體而言，它們將被通報給國家稅務局以及用於收取所提供服務或購買產品的銀行和金融機構。",
+
+  "privacy_policy_process_personal_data_part55": "在執行合同時，您的數據也可能會被通報給我們的服務提供商。在這些情況下，數據處理者已經通過合同承諾僅將數據用於確定處理的目的，並保持適當的安全措施。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_11": "國際數據轉移。",
+
+  "privacy_policy_process_personal_data_part56": "由於 Internxt 在世界各地擁有服務器和節點，因此進行國際數據轉移。其中許多轉移是向歐洲委員會宣告為適當水平的國家進行的，例如：加拿大、阿根廷或日本。",
+
+  "privacy_policy_process_personal_data_part57": "但是，還有許多其他國家接收數據，這些國家並未被宣告為適當水平；向這些國家進行的轉移其合法依據在於這些轉移對於數據主體和數據控制者之間的合同的執行是必要的，否則將無法提供服務。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_12": "我們採取了哪些安全措施？",
+
+  "privacy_policy_process_personal_data_part58": "請放心，我們已採取適當的技術和組織措施，以確保我們執行的個人數據的保密性、完整性和可用性，特別是防止個人數據的丟失、誤用、變更、未經授權的訪問和盜竊。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_13": "在您提供數據時，您有哪些權利？",
+
+  "privacy_policy_process_personal_data_part59": "您可以行使您的訪問權、更正權、刪除權、可攜性權、處理限制權或反對處理您的數據的權利，包括撤回您的同意，如下所詳述：",
+
+  "privacy_policy_process_personal_data_part60": "訪問權：您可以詢問我們是否正在處理您的數據，以及以何種方式處理。",
+
+  "privacy_policy_process_personal_data_part61": "更正權：如果您的個人數據不正確，您可以要求我們將其更新，並在您願意時刪除它們。",
+
+  "privacy_policy_process_personal_data_part62": "處理限制權：在這種情況下，我們只會保留您的數據以進行索賠的行使或防禦。",
+
+  "privacy_policy_process_personal_data_part63": "反對權：在您要求反對處理後，我們將停止以您指示的方式處理數據，除非出於重要的合法原因或為了繼續處理或防禦可能的索賠。",
+
+  "privacy_policy_process_personal_data_part64": "數據可攜性權：如果您希望將您的數據由另一家公司處理，我們將協助您將數據轉移到新的數據控制者。",
+
+  "privacy_policy_process_personal_data_part65": "刪除權：當數據不再需要進行處理、您撤回同意、數據處理不合法或存在法律義務時，您可以要求我們刪除您的數據。我們將分析情況並適用法律。",
+
+  "privacy_policy_process_personal_data_part66": "如果您需要了解有關法律下您的權利以及如何行使這些權利的更多信息，我們建議您聯繫西班牙數據保護機構，該機構是數據保護的監管機構。",
+
+  "privacy_policy_process_personal_data_part67": "在向西班牙數據保護機構提出投訴之前，您可以在向數據控制者之前與數據保護代表聯繫。",
+
+  "privacy_policy_process_personal_data_part68": "如果我們未能回應您的權利行使，您可以向西班牙數據保護機構提出投訴。",
+
+  "privacy_policy_process_personal_data_part69": "我們提供了行使權利的表格，可以通過上述電子郵件地址請求；您也可以使用西班牙數據保護機構或第三方準備的表格。這些表格必須以電子方式簽署，或附有身份證的影印本。如果您通過代表行動，則必須以同樣的方式附上您的身份證副本或電子簽名。",
+
+  "privacy_policy_process_personal_data_part70": "表格必須親自提交，或通過郵寄或電子郵件寄送至“負責人”部分列出的地址。",
+
+  "privacy_policy_process_personal_data_part71": "作出決定的最大時限為自收到您的請求之日起一個月。",
+
+  "privacy_policy_process_personal_data_sub_subtitle7_14": "我們將保留您的數據多久？",
+
+  "privacy_policy_process_personal_data_part72": "個人數據將根據您與我們的關係而保留。",
+
+  "privacy_policy_process_personal_data_part73": "在關係結束後，為每個指示目的處理的個人數據將根據法律規定的時間進行保留。如果沒有法定期限，直到當事人要求刪除或撤銷給予的同意，或根據訴訟時效規定，法官或法院可能要求的期限。",
+
+  "privacy_policy_process_personal_data_part74": "對於每個處理或數據類型，我們為您提供了一個特定的期限，您可以在以下表格中查閱：",
+
+  "privacy_policy_table2_row1_column1": "文件",
+
+  "privacy_policy_table2_row1_column2": "文件",
+
+  "privacy_policy_table2_row1_column3": "保存期限",
+
+  "privacy_policy_table2_row2_column1": "客戶",
+
+  "privacy_policy_table2_row2_column2_1": "發票",
+
+  "privacy_policy_table2_row2_column2_2": "合同",
+
+  "privacy_policy_table2_row2_column3_1": "10年",
+
+  "privacy_policy_table2_row2_column3_2": "5年",
+
+  "privacy_policy_table2_row3_column1": "人力資源",
+
+  "privacy_policy_table2_row3_column2_1": "工資單，TC1，TC2等",
+
+  "privacy_policy_table2_row3_column2_2": "履歷",
+
+  "privacy_policy_table2_row3_column2_3": "合同。臨時工人數據",
+
+  "privacy_policy_table2_row3_column2_4": "員工檔案",
+
+  "privacy_policy_table2_row3_column3_1": "10年",
+
+  "privacy_policy_table2_row3_column3_2": "直到招聘過程結束，並在您同意的情況下再保留1年",
+
+  "privacy_policy_table2_row3_column3_3": "4年",
+
+  "privacy_policy_table2_row3_column3_4": "病假結束後最多保留5年",
+
+  "privacy_policy_table2_row4_column1": "行銷",
+
+  "privacy_policy_table2_row4_column2": "數據庫或網站訪客",
+
+  "privacy_policy_table2_row4_column3": "處理期間",
+
+  "privacy_policy_table2_row5_column1": "供應商",
+
+  "privacy_policy_table2_row5_column2_1": "發票",
+
+  "privacy_policy_table2_row5_column2_2": "合同",
+
+  "privacy_policy_table2_row5_column3_1": "10年",
+
+  "privacy_policy_table2_row5_column3_2": "5年",
+
+  "privacy_policy_table2_row6_column1": "存取控制和視頻監控",
+
+  "privacy_policy_table2_row6_column2_1": "訪客名單",
+
+  "privacy_policy_table2_row6_column2_2": "視頻",
+
+  "privacy_policy_table2_row6_column3_1": "30天",
+
+  "privacy_policy_table2_row6_column3_2": "30天阻止。3年銷毀",
+
+  "privacy_policy_table2_row7_column1": "會計",
+
+  "privacy_policy_table2_row7_column2": "會計帳簿和文件",
+
+  "privacy_policy_table2_row7_column3": "6年",
+
+  "privacy_policy_table2_row8_column1": "稅收",
+
+  "privacy_policy_table2_row8_column2": "管理公司行政事務，與納稅有關的權利和義務。",
+
+  "privacy_policy_table2_row8_column3": "10年",
+
+  "privacy_policy_table2_row9_column1": "健康與安全",
+
+  "privacy_policy_table2_row9_column2": "員工醫療記錄",
+
+  "privacy_policy_table2_row9_column3": "5年",
+
+  "privacy_policy_table2_row10_column1": "保險",
+
+  "privacy_policy_table2_row10_column2": "保險政策",
+
+  "privacy_policy_table2_row10_column3": "6年（一般規定）。2年（損害）",
+
+  "privacy_policy_table2_row11_column1": "購物",
+
+  "privacy_policy_table2_row11_column2": "商品或服務交付、歐盟內部採購、進口和出口的登記以用於增值稅目的。",
+
+  "privacy_policy_table2_row11_column3": "5年",
+
+  "privacy_policy_table2_row12_column1": "關於數據保護的有機法律",
+
+  "privacy_policy_table2_row12_column2_1": "個人數據處理。",
+
+  "privacy_policy_table2_row12_column2_2": "員工存儲在網絡、計算機和員工使用的通信設備中的個人數據、訪問控制和內部管理/管理系統。",
+
+  "privacy_policy_table2_row12_column3_1": "3年",
+
+  "privacy_policy_table2_row12_column3_2": "5年",
+
+  "title28": "您提供給我們的信息",
+  "subtitle28": "我們直接收集您直接向我們提供的信息。例如，當您創建帳戶、訂閱我們的更新、回答調查、填寫表格、請求客戶支援或與我們聯繫時，我們會收集您提供的信息。我們可能收集的信息類型包括您的電子郵件地址、用戶名和密碼、調查回答以及您選擇提供的任何其他信息。如果您使用我們的存儲服務，我們的第三方服務提供商可能會收集您的支付方式信息，以便在與您的存儲付款相關的情況下使用。",
+
+  "title29": "通過我們的服務收集的cookie和其他跟踪技術的信息。",
+  "subtitle29": "當您與我們的網站和移動應用程序交互時，我們和我們的服務提供商使用各種技術收集信息，包括cookie和網絡信標。 Cookie是在您訪問網站時存儲在您設備上的小數據文件，它們使我們能夠收集有關您的設備識別符、用於訪問服務的Web瀏覽器、查看的頁面或功能、在頁面上花費的時間、移動應用程序性能和點擊的鏈接的信息。網絡信標（或像素標籤）是可能在我們的Web服務或電子郵件中使用的電子圖像，以幫助傳遞cookie、計算網站訪問次數、了解使用情況並確定電子郵件營銷活動的效果。",
+  "subtitle292": "我們還可能從其他來源收到有關您的信息，例如，通過使用獨立第三方服務的帳戶認證登錄您的存儲服務帳戶。我們將根據相關第三方的授權屏幕中指示的方式收到來自該服務的信息。",
+  "subtitle293": "使用Internxt的Core軟件會使您的計算機成為分佈式網絡的一部分。這意味著您的計算機可能與許多其他計算機通信。作為這個過程的一部分，其他節點可以存儲有關您的計算機和您的交互的一些信息。這些信息中沒有一條是與網絡分享危險的。您的計算機每天在瀏覽網絡時都會共享很多信息。我們堅信，您有權了解您正在共享的信息，並能夠就自己的隱私做出決定。以下是其他人可能了解有關您計算機的一些事項的列表。IP地址：這是您計算機在互聯網上的地址。這需要共享，以便其他節點的消息能夠到達您的計算機。與IP相關的信息：使用您的IP地址，通常可以查找大致位置（通常是您可能所在的城市）以及您的ISP。網絡信息：當您與另一個節點通信時，它可以記錄您的節點回應所花費的時間，並測試您的互聯網連接的帶寬。節點ID：這是您計算機的偽名。它是一長串隨機數字，可用於識別網絡上的節點。您需要發送此信息，以便其他節點能夠識別和聯繫您的節點。磁盤空間信息：為了協商存儲合同，您的計算機必須讓其他節點知道有關其可存儲量的一些信息。如果您不希望共享此信息，建議您不要運行Internxt的Core程序。",
+
+  "subtitle294": "我們可能允許其他人代表我們提供與我們的服務相關的分析服務。這些實體可能使用cookie、網絡信標和其他技術收集有關您使用服務和其他網站和應用程序的信息，包括您的IP地址、Web瀏覽器、查看的頁面、應用程序性能、在頁面上花費的時間和點擊的鏈接。此信息可能被公司和其他人用於分析和跟踪數據，確定特定內容的受歡迎程度並更好地了解您的在線活動。",
+
+  "title30": "安全",
+  "subtitle30": "Internxt採取合理措施來幫助保護關於您的信息，防止丟失、被盜、被誤用和未經授權的訪問、披露、更改和破壞。",
+
+  "title31": "向監管機構轉移信息",
+  "subtitle31": "Internxt位於西班牙，我們收集的信息受西班牙法律管轄。通過訪問或使用我們的服務或向我們提供信息，您同意在西班牙和其他國家處理和轉移信息，您在這些國家可能沒有與在本地法律下相同的權利。在這種情況下，我們將採取適當的措施來保護關於您的信息，符合本隱私政策。由於Internxt使用客戶端端到端加密，因此無法知道用戶在其Drive帳戶下擁有的內容。",
+
+  "cookies_title": "Cookies",
+  "cookies_subtitle1": "關於使用Cookies的規定",
+  "cookies_data_part1": "本Cookies政策是Internxt Universal Technologies, S.L.的法律聲明和隱私政策的組成部分。訪問和瀏覽本網站，或使用其服務，即表示接受我們法律聲明中所述的一般條件（因此也接受隱私政策和Cookies政策）。請仔細閱讀這些內容。",
+  "cookies_data_part2": "感謝您決定訪問我們。我們希望您在本網站上的體驗是最佳的，出於此原因，我們根據2002年7月11日第34/2002號法律《信息社會服務和電子商務法》（以下簡稱LSSI）第22條第二款的規定，以最清晰、透明、完整和易於理解的方式編寫了這個Cookies政策。",
+  
+  "cookies_subtitle2": "什麼是Cookie？",
+  "cookies_data_part3": "本網站使用Cookies和/或類似技術在您瀏覽時存儲和檢索信息。一般來說，這些技術可以用於各種目的，例如，識別您為用戶、獲取有關您的瀏覽習慣的信息，或自定義內容顯示的方式。",
+  "cookies_data_part4": "Cookies是包含少量信息的文件，在訪問網站時下載到用戶的瀏覽器或正在使用的設備（智能手機、平板電腦或連接電視）中。它們的主要目的是存儲有關您的訪問的信息，並在您每次訪問網站時識別用戶。它還使我們能夠提高我們網站的質量和可用性。",
+  "cookies_data_part5": "Cookies對於互聯網的運作至關重要；它們不會損壞用戶的計算機/設備，並且如果在您的瀏覽器設置中啟用，有助於識別和解決www.internxt.com可能出現的故障。",
+  "cookies_data_part6": "與互聯網上大多數站點一樣，本網站使用Cookies來確保網站正常運行，存儲偏好設置，例如您選擇的語言或字體大小，瞭解用戶的瀏覽體驗，收集匿名統計信息，例如用戶訪問過哪些頁面或用戶在網站上停留了多長時間。",
+  
+  "cookies_subtitle3": "Cookies的類型",
+  "cookies_data_part7": "有不同類型的Cookies。它們的工作方式都相同，但有細微差異：",
+  "cookies_data_part8": "會話Cookies：這些設計用於在用戶訪問網頁時收集和存儲數據。通常用於存儲僅在用戶單次訪問時保留的信息（例如產品列表、已購買的產品列表），並在會話結束時消失。",
+
+  "cookies_data_part9": "會話Cookies僅在您訪問期間存在，並在關閉瀏覽器時刪除。它們的主要目的是識別設備類型，支持網站的安全性或其基本功能。它們不包含可用於識別個人的個人信息。",
+
+  "cookies_data_part10": "持久性或永久性Cookies：這些Cookies中的數據在終端上保留並可在由Cookie的負責人定義的時間段內訪問和處理，該時間段可從幾分鐘到幾年不等。",
+
+  "cookies_data_part11": "它們存儲在設備的硬盤驅動器上，並且我們的網站每次您訪問網站時都會讀取它們；它們具有特定的到期日期，到期後，Cookie停止工作。它們允許我們識別您的操作和偏好；分析訪問量並幫助我們瞭解用戶如何訪問我們的網站並改進我們的服務。",
+
+  "cookies_data_part12": "技術Cookies，嚴格必要：（當它們允許提供用戶請求的服務時，不需要遵守LSSI第22.2條所規定的義務）。它們允許用戶通過網站、平台或應用程序進行導航，並使用其中存在的不同選項或服務，包括出版商用於啟用網站的管理和運作以及啟用其功能和服務的選項，例如，控制流量和數據通信，識別會話，訪問受限部分，記住構成訂單的元素，進行訂單的購買過程，管理付款，控制與服務安全性相關的欺詐，發送註冊或參加活動的請求，計算用於與服務運作的軟件（網站、平台或應用程序）授權的訪問量，瀏覽期間使用安全功能，存儲用於廣播視頻或聲音的內容，啟用動態內容（例如，加載文本或圖像的動畫）或通過社交網絡分享內容。",
+
+  "cookies_data_part13": "偏好或個性化Cookies：這些Cookies允許記住信息，以便用戶可以訪問具有某些特徵的服務，這些特徵可能與其他用戶的體驗有所不同，例如，語言、用戶執行搜索時要顯示的結果數量、用戶通過其訪問服務的瀏覽器類型或用戶訪問服務的地區等。",
+
+  "cookies_data_part14": "地理位置Cookies：這些Cookies用於確定用戶在訪問網站服務時所處的國家或地區，以便根據用戶的位置提供相應的內容或服務。",
+
+  "cookies_data_part15": "分析或測量Cookies：這些Cookies允許負責它們的一方監控和分析與它們相連接的網站的用戶行為，包括廣告影響的量化。通過這類Cookies收集的信息用於測量網站、應用程序或平台的活動，以便根據用戶對服務的使用數據分析來進行改進。",
+
+  "cookies_data_part16": "行為廣告Cookies：這些Cookies存儲通過持續觀察用戶瀏覽習慣獲得的用戶行為信息，從而允許根據這些行為開發特定檔案以顯示基於它們的廣告。",
+
+  "cookies_data_part17": "匿名：它們僅收集有關網站上顯示的廣告空間的信息，而不考慮訪問網站的用戶，即不明確識別用戶。",
+
+  "cookies_data_part18": "個性化：它們由第三方收集用戶的個人信息，用於個性化這些廣告空間。",
+
+  "cookies_data_part19": "功能性Cookies：允許記住用戶所做的決定，例如登錄或標識符。",
+
+  "cookies_data_part20": "這些Cookies收集的信息已匿名化（即不包含您的姓名、地址或其他數據）。",
+
+   "cookies_data_part21": "自有Cookies：這些是從編輯器自身管理的計算機或域發送到用戶終端設備上的Cookies，並提供用戶請求的服務。",
+
+  "cookies_data_part22": "第三方Cookies：第三方Cookies是由您所訪問的網站安裝的Cookies；例如，社交網絡（如Facebook）或外部內容插件（如Google Maps）所使用的Cookies。此外，一些廣告公司使用此類文件來追蹤您在每個廣告所在的網站上的訪問情況。",
+
+  "cookies_subtitle4": "www.internxt.com使用Cookies的情況",
+
+  "cookies_data_part23": "通過訪問www.internxt.com，您明確同意我們可以在您的設備上使用此類Cookies。如果禁用Cookies，您的瀏覽可能不夠優化，並且某些可用的工具可能無法正常工作。",
+
+  "cookies_data_part24": "自有Cookies：為了識別您並為您提供更好的服務，我們的網站使用自有Cookies（您的瀏覽器存儲的小型文本文件）。接受我們的Cookies的好處轉化為節省時間。",
+
+  "cookies_data_part25": "它們還可用於識別您在連續訪問之間，並因此使顯示給您的內容適應，獲取有關您上次訪問的日期和時間的信息，測量站點內部的一些流量參數，並估算訪問次數，以便我們能夠更有效地聚焦和調整服務和促銷。",
+
+  "cookies_data_part26": "沒有任何Cookie可以通過您的電話號碼、電子郵件地址或任何其他聯繫方式與您聯繫。沒有任何Cookie可以從您的硬盤驅動器中提取信息或竊取個人信息。",
+
+  "cookies_data_part27": "第三方Cookies：這些Cookies是從未由編輯器管理，而是由另一個處理通過Cookies獲得的數據的實體管理的計算機或域發送到用戶終端設備上的。",
+
+  "cookies_subtitle5": "用戶配置以避免Cookies。",
+
+  "cookies_data_part33": "根據當前法律，從www.internxt.com提供讓您配置瀏覽器/互聯網瀏覽器以保持與Cookies相關的隱私和安全性的信息。因此，我們向您提供信息和指向主要瀏覽器的官方支持站點的鏈接，以便您可以決定是否接受使用Cookies。",
+
+  "cookies_data_part34": "因此，您可以通過瀏覽器的配置工具阻止Cookies（所有現代瀏覽器都允許更改Cookie設置。這些設置通常在瀏覽器菜單的“選項”或“首選項”中找到），或者您可以設置瀏覽器以在服務器要求保存Cookie時通知您：",
+
+  "cookies_data_part35": "如果您使用Microsoft Internet Explorer，請在菜單選項工具 > Internet選項 > 隱私 > 設置中進行配置。要獲取更多信息，請訪問https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies",
+
+  "cookies_data_part36": "如果您使用Mozilla Firefox，請在菜單選項工具 > 選項 > 隱私 > Cookies中進行配置。要獲取更多信息，請訪問https://support.mozilla.org/es/kb/Deshabilitar%20cookies%20de%20terceros",
+
+  "cookies_data_part37": "如果您使用Google Chrome，請在選項 > 進階 > 隱私中進行配置。要獲取更多信息，請訪問http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647 ",
+
+  "cookies_data_part38": "如果您使用Opera，請在“安全性和隱私”選項中，您可以配置瀏覽器。要獲取更多信息，請訪問http://www.opera.com/help/tutorials/security/cookies/",
+
+  "cookies_data_part39": "如果您使用Apple Safari，可以在“偏好設置 > 安全性或隱私”選項中配置瀏覽器設置。欲了解更多，請訪問https://support.apple.com/kb/PH21411?viewlocale=es_ES&locale=es_ES",
+
+  "cookies_data_part40": "如果您想要禁用Google通用分析，您可以安裝由Google提供的以下擴展：https://tools.google.com/dlpage/gaoptout",
+
+  "cookies_data_part41": "某些功能和服務可能會被禁用或表現出與預期不同的行為，例如保持識別、在電子商務服務中保留“購物車”中的購買項目或接收針對您位置的信息等。",
+  
+  "cookies_data_part42": "如果您在本網站上禁用Cookies的使用，您可能無法再訪問該網站的某些區域，或者網站上的瀏覽體驗將明顯降低。"
+}

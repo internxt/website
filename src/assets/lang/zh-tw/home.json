@@ -1,0 +1,188 @@
+{
+  "HeroSection": {
+    "label": "優惠 75%",
+    "title": {
+      "line1": "支持隱私，切換到",
+      "blueText": "Internxt"
+    },
+    "subtitle": "使用我們的開源和加密套件，保護您的隱私。Internxt Drive、Send 等等。",
+    "cta": {
+      "title": "獲取多達 10GB",
+      "subtitle": "免費！"
+    },
+    "featuredIn": "在以下平台上推薦",
+    "SignUp": {
+      "cta": {
+        "title": "開始使用 Internxt",
+        "subtitle": "立即創建帳戶，即可免費獲得 10GB"
+      },
+      "disclaimer": {
+        "text": "創建帳戶即表示您接受",
+        "link": "服務條款和隱私政策"
+      },
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "strength": {
+            "complexity": "密碼不夠複雜",
+            "length": "密碼至少需 8 個字符長",
+            "weak": "密碼太弱",
+            "strong": "密碼很強"
+          }
+        },
+        "submit": {
+          "get": "獲取多達 10GB",
+          "free": "免費！"
+        }
+      }
+    }
+  },
+  "FirstFeaturesSection": {
+    "title": {
+      "line1": "最安全的雲端存儲，適用於",
+      "line2": "您的所有文件和照片"
+    },
+    "subtitle": "Internxt 創建了私密且安全的雲服務，旨在讓您重新掌控數據。保護您的文件和隱私權，Internxt 服務從頭開始使用開源軟件，實現了無與倫比的安全性和隱私性。",
+    "cta": "創建免費帳戶"
+  },
+  "InfoSection": {
+    "title": "無與倫比的隱私安全的雲存儲",
+    "description": "Internxt 有何特色？我們是一支緊密團結的專業團隊，致力於全面保護您的在線安全。我們所做的一切和每一個決定都圍繞著保護您的數據不受利用。",
+    "cta": "介紹 Internxt 團隊",
+    "cards": [
+      {
+        "title": "設計上獨具私密性",
+        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜態時都是加密的。Internxt 讓您完全掌控您的文件。您的數據是您的業務。保護它就是我們的業務。"
+      },
+      {
+        "title": "毫不妥協的安全性",
+        "description": "您的文件在離開您的設備之前就已進行端到端加密。多虧了零知識 AES-256 加密，您是唯一可以訪問您的數據的人。"
+      },
+      {
+        "title": "開源和透明",
+        "description": "我們對自己的工作感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以進行個人審查、審計和驗證。我們除了您的數據之外，一無所隱藏。"
+      },
+      {
+        "title": "經獨立驗證",
+        "description": "我們完全符合 GDPR，並且百分之百安全，但不要聽我們的。Internxt 已經由歐洲領先的滲透測試公司 Securitum 進行了獨立審核和驗證。"
+      }
+    ]
+  },
+  "SecondFeaturesSection": {
+    "info": [
+      {
+        "title": "無限速度",
+        "description": "有需要速度嗎？我們的分散式服務在整個歐盟境內分佈的高速伺服器上進行了優化，讓您能夠充分發揮您的連接性能。"
+      },
+      {
+        "title": "無痛工作流程",
+        "description": "Internxt 產品的設計旨在盡可能地提供易用性，同時提供乾淨的外觀，以增強和提高您的生產力。簡單實現企業安全。"
+      },
+      {
+        "title": "按需備份存儲",
+        "description": "通過內置冗餘性來保存您的數據，從而使其免受災難。在整個歐盟境內的多個快速伺服器上備份您的重要工作和項目，並從所有設備上訪問它們。"
+      },
+      {
+        "title": "保護您最美好的時刻",
+        "description": "將您的所有照片存儲在一個畫廊中，並從任何地方訪問它們。直接將您的回憶保存到手機上，並從任何地方查看它們。"
+      }
+    ]
+  },
+  "ThirdFeaturesSection": {
+    "title": "免費獲得高達10GB！",
+    "description": "立即創建您的免費帳戶，並完全使用我們的一系列在線隱私服務。",
+    "cta": "立即開始"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "為未來而建",
+      "description": "我們希望建立一個更好的全球網際網路，一個對所有人都是公平、安全和公正的。網際網路隱私的未來之戰正在進行，而我們就在前線。",
+      "cta": "為隱私而戰"
+    },
+    "card2": {
+      "title": "所有設備，無縫體驗",
+      "description": "Internxt 在所有平台上都可用，甚至包括 Linux！使用我們的移動應用程序、網頁和桌面應用程序同步您的文件和照片，每一個都被設計成在行動中加速您的加密存儲。",
+      "cta": "下載應用程式"
+    },
+    "card3": {
+      "title": "免費試用 Internxt",
+      "description": "免費獲得高達 10GB 的空間，看看隱私對您是否合適！創建帳戶即可獲得 2GB，然後將您的免費存儲擴展到完整的 10GB，以幫助傳播消息。",
+      "cta": "創建免費帳戶"
+    }
+  },
+  "SecondWhatWeDoSection": {
+    "title": "您不是產品",
+    "description": "我們的服務是為您量身打造的工具。Drive、Photos 和 Send 只是一系列產品的開始，讓您重新掌控隱私權。",
+    "square1": {
+      "title": "Internxt Drive",
+      "subtitle": "所有文件、照片等的最安全的雲存儲",
+      "description": "使用 Internxt Drive 恢復對文件和數據的控制。在完全隱私中存儲和備份您的文件變得更加容易。現代雲存儲滿足軍事級加密。",
+      "cta": "使用 Drive 保存"
+    },
+    "square2": {
+      "title": "Internxt Photos",
+      "subtitle": "所有完美瞬間的安全線上照片存儲",
+      "description": "在 Internxt Photos 中重溫、分享和保護您最美好的回憶。始終保持您的照片在手，並在設備之間方便地同步圖像。",
+      "cta": "與 Photos 同步"
+    },
+    "square3": {
+      "title": "Internxt Send",
+      "subtitle": "以絕對的安全性加密、分享和發送大文件",
+      "description": "Send 允許您快速地對大文件進行端到端加密和分享，而無需擔心文件、圖像或視頻的安全性。向任何人傳輸文件的完全保密性。",
+      "cta": "與 Send 分享"
+    }
+  },
+
+  "InvestorsSection": {
+    "title": "信任我們的品牌"
+  },
+  "TestimonialsSection": {
+    "title": "來自我們用戶的誠實評論",
+    "cards": [
+      {
+        "name": "Eva W.",
+        "enterprise": "FixThePhoto.com 的記者",
+        "review": "Internxt 是一個方便的雲存儲服務，專為注重隱私的客戶而設。它具有簡化的界面和可靠的支持團隊，這使得它成為需要安全存儲文件的人的絕佳選擇。"
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "GetApp 的評論",
+        "review": "最佳的加密 Dropbox 替代品。總體而言：我們需要一個允許我們存儲客戶文件和工作（社交媒體文件）的替代方案，而 Internxt 符合我們的 GDPR 友好性！"
+      },
+      {
+        "name": "Josep C.",
+        "enterprise": "Trustpilot 的評論",
+        "review": "我已經使用 Google Drive 數年了，但我需要一個可以保護我的數據隱私的替代方案。Google 或其他知名平台無法做到這一點。這就是為什麼我轉向 Internxt 的原因。"
+      },
+      {
+        "name": "Pat G.",
+        "enterprise": "Capterra 的評論",
+        "review": "我正在為一個非營利組織存儲文件，和 Internxt 合作非常棒！這個驅動器非常容易使用。我只需要上傳和下載。程序和驅動器剩下的都會自動完成！"
+      },
+      {
+        "name": "Luca C.",
+        "enterprise": "GetApp 的評論",
+        "review": "雲端儲存的未來！非常喜歡終於有一個負擔得起的、加密和安全的雲端儲存軟件，而且還有非常酷的外觀和用戶友好的功能。"
+      },
+      {
+        "name": "Binet S.",
+        "enterprise": "Trustpilot 的評論",
+        "review": "快速、可靠、價格實惠——是任何產品的最佳組成部分！充足的存儲空間絕對受到贊賞！我有足夠的空間來保存我所有的照片和文件。我也喜歡分享文件的簡單方式。"
+      }
+    ]
+  },
+
+  "GetStartedSection": {
+    "title": { "line1": "開始並", "line2": "免費獲得高達10GB" },
+    "subtitle": {
+      "line1": "我們的客戶非常喜歡Internxt Drive，但是",
+      "line2": "他們更喜歡知道他們的隱私得到了完全保護。"
+    },
+    "cta1": "立即開始"
+  }
+}

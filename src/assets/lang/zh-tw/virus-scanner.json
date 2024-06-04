@@ -1,0 +1,141 @@
+{
+  "HeroSection": {
+    "title": "病毒掃描器",
+    "subtitle1": "拖放可疑文件以免費檢測惡意軟件和其他漏洞。",
+    "subtitle2": "掃描任何文檔、圖像、PDF 或其他文件類型。在您使用 Internxt 的零知識病毒掃描器打開它們之前，確保您的文件安全無虞。",
+    "footer": "Internxt 對您提供的任何個人信息不承擔責任。通過提交您的文件，您同意我們的[服務條款和隱私政策。](https://internxt.com/legal)",
+
+    "dropFile": {
+      "line1": "拖放文件以掃描病毒"
+    },
+    "fileSelected": "已選擇文件進行掃描",
+    "cancel": "取消",
+    "close": "關閉",
+    "scanNow": "立即掃描",
+    "selectFile": "選擇文件",
+    "dropHere": "在此處放置文件",
+    "scanAgain": "掃描另一個文件",
+    "loading": "加載中...",
+    "maxFileSize": {
+      "title": "文件大小超過限制",
+      "description": "最大文件大小為 1GB"
+    },
+    "table": {
+      "loading": "加載中...",
+      "virusDetected": "檢測到此文件的病毒",
+      "noVirusDetected": "未檢測到此文件的病毒",
+      "detected": "已檢測到",
+      "undetected": "未檢測到",
+      "unableToProcess": "無法處理",
+      "noVirusesDetected": {
+        "message": "未檢測到病毒",
+        "title": "想要保護您的文件安全嗎？",
+        "subtitle": "Internxt 是一家具有內置病毒掃描和端到端加密的私人雲存儲服務。",
+        "cta": "立即開始"
+      },
+      "analyzing": "正在掃描文件...",
+      "scanTime": "掃描時間",
+      "name": "名稱",
+      "detection": "檢測"
+    },
+    "error": {
+      "title": "出現錯誤",
+      "description": "在發送文件時發生錯誤，請稍後再試"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "為什麼使用病毒掃描器至關重要",
+      "description": "先掃描，再問問題。在病毒滲入您的設備之前發現病毒。"
+    },
+    "virusesHatePrivacy": {
+      "title": "病毒討厭您的隱私",
+      "description": "一種強大的病毒可以竊取敏感信息，如您的憑證或密碼，加密並鎖定您的數據，對應用程序進行單獨交易，監控您的計算機，甚至攻擊連接的網絡上的其他設備。病毒有可能訪問幾乎存儲在您的硬件上的所有東西。"
+    },
+    "stopMalware": {
+      "title": "在病毒阻止您之前停止惡意軟件",
+      "description": "一旦病毒傳播，它可以毫不偏袒地感染所有您的程序和應用程序。它的破壞性代碼可以且可能會無處不在地傳播。這就是為什麼利用病毒掃描器至關重要的原因。"
+    },
+    "freeOnlineScanner": {
+      "title": "您可以信賴的免費在線病毒掃描器",
+      "description": "使用我們的免費病毒掃描器保護您的隱私，旨在幫助您避免感染並保護您的計算機。"
+    },
+    "scanFiles": {
+      "title": "放心地對文件進行病毒掃描",
+      "description": "Internxt 一直將用戶的隱私和安全放在首位。我們致力於為所有人創建一個更公平、更自由和更透明的互聯網。這就是為什麼我們創建了我們的免費在線病毒掃描器，以照亮隱蔽的病毒並揭露惡意軟件。"
+    }
+  },
+  "CtaSection": {
+    "title": "安全只隔一個點擊",
+    "description": "使用 Internxt 的隱私套件保護您的個人數據。",
+    "cta": "創建帳戶"
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "如何檢查文件是否感染？",
+        "answer": [
+          "Internxt 的病毒掃描器是一個幫助您找到可能破壞您文件的任何病毒的工具。我們的免費病毒掃描器旨在幫助您避免感染，並從您的文檔和照片中識別惡意軟件。"
+        ]
+      },
+      {
+        "question": "如何知道您的文件是否有惡意軟件？",
+        "answer": [
+          "提交您的文件，放心地知道您的文件是安全的和安全的。使用我們的病毒掃描器是一種安全的做法，可以避免隱私惡夢。點擊之前進行掃描！"
+        ]
+      },
+      {
+        "question": "如何掃描文件中的病毒？",
+        "answer": [
+          "我們的免費病毒掃描器旨在幫助您避免感染，並從您的文檔和照片中識別惡意軟件。將所選文件拖放到病毒掃描器工具欄中，它將自動掃描文件中的任何病毒或惡意軟件。"
+        ]
+      },
+      {
+        "question": "如何在線掃描文件？",
+        "answer": [
+          "使用 Internxt 病毒掃描器，您可以將可疑文件拖放到工具欄中免費檢測惡意軟件和其他漏洞。"
+        ]
+      },
+      {
+        "question": "如何掃描 PDF 文件？",
+        "answer": [
+          "像對待任何其他文件一樣，將 PDF 拖放到工具欄中。使用 Internxt 病毒掃描器，您可以掃描任何文檔、圖像、PDF 或其他文件類型。在您使用 Internxt 的病毒掃描器打開它們之前，確保您的文件安全無虞。"
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "試試 Internxt 的免費在線安全工具：",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "密碼強度檢查器",
+        "description": "立即掃描"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "字節單位轉換器",
+        "description": "立即轉換"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "免費臨時電子郵件",
+        "width": 95,
+        "description": "立即發送郵件"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "免費密碼生成器",
+        "width": 124,
+        "description": "立即創建"
+      }
+    ]
+  }
+}

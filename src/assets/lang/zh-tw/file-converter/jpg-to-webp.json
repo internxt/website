@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "JPG 到 WebP 轉換器提供較小的文件大小，並最小化質量損失。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 JPG 轉換為 WebP 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 JPG 轉換為 WebP 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 JPG：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊‘轉換為 WebP’：這將您的文件的格式從 JPG 轉換為 WebP。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼要將 JPG 轉換為 WebP 文件",
+      "paragraphs": [
+        "我們的 JPG 到 WebP 免費文件轉換器在較小的文件大小和更快的加載時間對您的工作流程至關重要時，轉換基於 Web 的圖像。將您的 JPG 轉換為 WebP 文件可以通過壓縮文件高達 34%，而不影響文件質量，從而優化您的雲存儲。",
+        "由於其在加載網站時更快的能力和減少數據使用量的功能，JPG 到 WebP 轉換正在成為一種流行的方法。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

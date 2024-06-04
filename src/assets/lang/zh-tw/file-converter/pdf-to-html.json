@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "安全的 PDF 到 HTML 轉換器，優化內容以供在線觀眾使用。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 PDF 轉換為 HTML 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 PDF 轉換為 HTML 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 PDF：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊‘轉換為 HTML’：這將您的文件從 PDF 轉換為 HTML。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼選擇 PDF 到 HTML 轉換器",
+      "paragraphs": [
+        "通過將 PDF 轉換為 HTML 文件，優化您的網頁，使您的內容可供網絡瀏覽器訪問，並且可供搜索引擎索引。我們的 PDF 文件轉換器提供了一個安全的平台，可以立即將您的 PDF 轉換為 HTML。",
+        "如果您想將 HTML 文件轉換為安全文檔，您可以使用我們的免費 HTML 到 PDF 工具來保護您文檔的隱私。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

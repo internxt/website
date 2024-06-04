@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "將 Excel 轉換為 PDF 文件，以便於文件協作和編輯。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 Excel 轉換為 PDF 文件",
+      "description": "我們的文件轉換器旨在盡可能易於使用。將 Excel 轉換為 PDF 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 Excel 文件：將您的文件拖放到上面的區域開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊“轉換為 PDF”：這將把您的文件從 Excel 轉換為 PDF。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼要將 Excel 轉換為 PDF 文件",
+      "paragraphs": [
+        "如果您想讓其他人查看但不能編輯您的數據，那麼 Excel 轉 PDF 轉換器是必需的。PDF 提供了通用的兼容性，這意味著它們可以在幾乎任何設備或操作系統上無需特定軟件即可訪問和查看。",
+        "Internxt 的 Excel 轉 PDF 轉換器提供了一種方便的方法來共享、查看和保存您的數據，同時確保兼容性並促進重要數據的分發。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

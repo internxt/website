@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "一個安全的 HTML 轉 PDF 轉換器，便於共享網頁內容。",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 HTML 轉換為 PDF 文件",
+      "description": "我們的文件轉換器操作非常簡單。將 HTML 轉換為 PDF 文件只需三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 HTML 文件：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊‘轉換為 PDF’：這會將您的文件從 HTML 轉換為 PDF。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼要將 HTML 轉換為 PDF 文件",
+      "paragraphs": [
+        "Internxt 的 HTML 轉 PDF 轉換器優化了您的工作流程，提供安全且靈活的解決方案來管理、共享和呈現網頁內容。使用密碼共享和數字簽名來保護您的 PDF 文件，確保最佳安全性。",
+        "如果您需要將 HTML 轉換為 PDF 以便在網頁上展示您的內容，請選擇我們的免費文件轉換器。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

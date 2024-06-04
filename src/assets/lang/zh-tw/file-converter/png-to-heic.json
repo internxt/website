@@ -1,0 +1,39 @@
+{
+  "ConverterSection": {
+    "description": "一個安全的 PNG 到 HEIC 轉換器，用於保留您圖像的質量",
+    "secureUpload": "通過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 PNG 轉換為 HEIC 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 PNG 轉換為 HEIC 包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 PNG：將文件拖放到上方區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊‘轉換為 HEIC’：這將您的文件格式從 PNG 轉換為 HEIC。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 PNG 轉換為 HEIC 圖像",
+      "paragraphs": [
+        "將 PNG 轉換為 HEIC 文件可在 iPhone 上帶來潛在的存儲好處。HEIC 使用比 PNG 更有效的壓縮方法，從而使文件大小更小，同時保持類似的圖像質量。",
+        "嘗試 Internxt 的 PNG 到 HEIC 文件轉換器，以最大化您的照片存儲。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

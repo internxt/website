@@ -1,0 +1,40 @@
+{
+  "ConverterSection": {
+    "description": "將 Word 轉換為 PDF 文件，以便更輕鬆地進行文件協作和編輯。",
+    "secureUpload": "受 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何將 Word 轉換為 PDF 文件",
+      "description": "我們設計了盡可能易於使用的文件轉換器。將您的 Word 轉換為 PDF 文件包括三個步驟：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 Word 文件：將文件拖放到上面的區域以開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊 '轉換為 PDF'：這將您的文件從 Word 轉換為 PDF。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的文件。"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "為什麼將 Word 轉換為 PDF 文件",
+      "paragraphs": [
+        "Internxt 的 Word 到 PDF 轉換器提供了通用的兼容性。PDF 文件確保文檔可以在各種設備和操作系統上訪問和查看，而無需特定的軟件。",
+        "PDF 還提供了更多的安全功能，如密碼保護，並且它們可以壓縮文件大小，以幫助優化您在線存儲文件時的存儲空間。",
+        "在共享、保護和存儲文件時，使用 Internxt 的 Word 到 PDF 轉換器可提供更多便利。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "厭倦了不兼容的文件？",
+    "description": "使用 Internxt 轉換您需要的文件",
+    "cta": "創建賬戶"
+  }
+}
+

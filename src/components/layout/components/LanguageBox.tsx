@@ -13,6 +13,7 @@ const currentLang = {
   it: 'Italiano (IT)',
   zh: '中国 (ZH)',
   ru: 'Русский (RU)',
+  'zh-tw': 'Taiwan (TW)',
 };
 
 const selectedLang = {
@@ -23,6 +24,7 @@ const selectedLang = {
   it: 'IT',
   zh: 'ZH',
   ru: 'RU',
+  'zh-tw': 'TW',
 };
 
 export default function LanguageBox({ darkMode, isBlackFriday }) {
@@ -130,6 +132,14 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
                 onClick={() => changeLang('ru')}
               >
                 {currentLang.ru}
+              </Link>
+              <Link
+                href={router.pathname}
+                locale="zh-tw"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 `}
+                onClick={() => changeLang('zh-tw')}
+              >
+                {currentLang['zh-tw']}
               </Link>
             </>
           )}
