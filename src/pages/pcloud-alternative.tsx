@@ -1,0 +1,49 @@
+import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
+import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
+import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
+import Layout from '@/components/layout/Layout';
+import { MinimalFooter } from '@/components/layout/MinimalFooter';
+import Navbar from '@/components/layout/Navbar';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
+import cookies from '@/lib/cookies';
+
+const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
+
+  return (
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
+      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={SIGNUP_DRIVE_WEB} />
+
+      <HeroSection textContent={langJson.HeroSection} />
+
+      <TablesSection textContent={langJson.TablesSection} />
+
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
+    </Layout>
+  );
+};
+
+export async function getServerSideProps(ctx) {
+  const lang = 'en';
+
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/pcloud-alternative.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+
+  cookies.setReferralCookie(ctx);
+
+  return {
+    props: {
+      lang,
+      metatagsDescriptions,
+      langJson,
+      navbarLang,
+      footerLang,
+    },
+  };
+}
+
+export default pCloudComparison;

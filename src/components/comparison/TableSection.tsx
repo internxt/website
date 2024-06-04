@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import { UilCheck, UilMinus } from '@iconscout/react-unicons';
-import Header from '@/components/shared/Header';
 
-const HeroSection = ({ textContent }) => {
+const TableSection = ({ textContent }) => {
   const competitors = [
     {
       name: 'Internxt',
@@ -467,37 +466,8 @@ const HeroSection = ({ textContent }) => {
   ];
 
   return (
-    <section
-      id="buy"
-      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white pt-[88px] lg:pt-16"
-    >
+    <section id="buy" className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white">
       <div className="flex flex-col">
-        {/* Header */}
-        <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 py-16 text-white md:pt-16">
-          <div className="relative z-10 mb-16 flex flex-col items-center justify-center md:mb-8">
-            <Header className="text-center text-white">
-              {textContent.title.line1}
-              <br className="hidden sm:inline-flex" /> {textContent.title.line2}
-            </Header>
-
-            <h2 className="text-center text-xl md:text-lg">{textContent.description}</h2>
-          </div>
-
-          <div className="relative z-10 flex flex-col items-center justify-center">
-            <button
-              onClick={() => window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer')}
-              id="get-started-link"
-              className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-auto"
-            >
-              {textContent.cta}
-            </button>
-
-            <p className="mt-1.5 text-center text-base opacity-80 md:text-xs">{textContent.noCredirCardNeeded}</p>
-          </div>
-
-          <div className="absolute top-2/3 left-0 h-full w-full scale-y-200 rounded-t-full-percentage bg-primary-dark blur-3xl filter" />
-        </div>
-
         {/* Table */}
         <div className="flex w-screen flex-col items-center justify-start overflow-x-auto bg-white py-10 xl:overflow-x-visible">
           <div className="mx-auto flex flex-col items-center justify-center px-6">
@@ -632,4 +602,4 @@ const HeroSection = ({ textContent }) => {
   );
 };
 
-export default HeroSection;
+export default TableSection;
