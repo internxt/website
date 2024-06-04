@@ -26,10 +26,16 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   const isLifetime = activeSwitchPlan === 'Lifetime';
 
   const priceForSubscriptions = (product) => {
-    const priceWithDiscount = Number((product.price * 0.25).toString());
-    const firstPartOfPrice = priceWithDiscount.toString().split('.')[0];
-    const secondPartOfPrice = priceWithDiscount.toString().split('.')[1].trim().slice(0, 2);
-    return firstPartOfPrice + '.' + secondPartOfPrice;
+    const priceWithDiscount = (product.price * 0.25).toString();
+    if (billingFrequency !== Interval.Lifetime) {
+      const firstPartOfPrice = priceWithDiscount.split('.')[0];
+
+      const secondPartOfPrice = priceWithDiscount.split('.')[1].slice(0, 2);
+
+      return firstPartOfPrice + '.' + secondPartOfPrice;
+    } else {
+      return priceWithDiscount;
+    }
   };
 
   return (
@@ -163,7 +169,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={coupon ? Number(priceForSubscriptions(product)) : product.price.split('.')[0]}
+                    price={product.price.split('.')[0] * 0.25}
                     priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
