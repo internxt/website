@@ -1,4 +1,5 @@
 import { EyeSlash, Fingerprint, HardDrive, Key, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import Image from 'next/image';
 
 export const WhyChooseInxtSection = ({ textContent }) => {
   const cards = [
@@ -49,13 +50,27 @@ export const WhyChooseInxtSection = ({ textContent }) => {
               key={card.title}
               className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
             >
-              <card.icon className="mb-6 text-4xl text-red" size={32} />
+              <card.icon className="mb-6 text-4xl text-green" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
                 <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
                 <p className="text-base text-cool-gray-80 sm:text-lg">{card.subtitle}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex">
+          <Image
+            src="/images/temp-email/cta_general_10_storage_en.webp"
+            alt="Switch to privacy"
+            width={895}
+            height={355}
+            layout="intrinsic"
+            quality={100}
+            className="cursor-pointer"
+            onClick={() => {
+              window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+            }}
+          />
         </div>
       </div>
     </section>
