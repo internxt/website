@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import FeatureSection from '@/components/lifetime/FeatureSection';
 import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
@@ -20,17 +20,9 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang
 
   const [openDialog, setOpenDialog] = useState(false);
 
-  useEffect(() => {
-    //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const TB2Button = document.getElementById('planButton2TB');
-    const TB5Button = document.getElementById('planButton5TB');
-    const TB10Button = document.getElementById('planButton10TB');
-    [TB2Button, TB5Button, TB10Button].forEach((button) =>
-      button?.addEventListener('click', () => {
-        setOpenDialog(true);
-      }),
-    );
-  }, []);
+  const onButtonClicked = () => {
+    setOpenDialog(true);
+  };
 
   return (
     <Layout
@@ -56,7 +48,12 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang
 
       <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={'en'} lifetimeMode="redeem" />
+      <PaymentSection
+        textContent={langJson.PaymentSection}
+        lang={'en'}
+        lifetimeMode="redeem"
+        onButtonClicked={onButtonClicked}
+      />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

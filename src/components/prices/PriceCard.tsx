@@ -20,6 +20,7 @@ export interface PriceCardProps {
   isOffer?: boolean;
   isLifetimePage?: boolean;
   lifetimeMode?: LifetimeMode;
+  onButtonClicked?: () => void;
 }
 
 const STORAGE_LEVELS = {
@@ -44,6 +45,7 @@ export default function PriceCard({
   isOffer,
   isLifetimePage,
   lifetimeMode,
+  onButtonClicked,
 }: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -53,8 +55,8 @@ export default function PriceCard({
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
-  function onButtonClicked() {
-    if (lifetimeMode === 'redeem') return;
+  function onCheckoutButtonClicked() {
+    if (lifetimeMode === 'redeem') return onButtonClicked?.();
 
     if (cta[1] === 'Free plan') {
       goToSignUpURL();
@@ -156,7 +158,7 @@ export default function PriceCard({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={onButtonClicked}
+          onClick={onCheckoutButtonClicked}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'

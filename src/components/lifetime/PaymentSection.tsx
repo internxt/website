@@ -14,6 +14,7 @@ interface PaymentSectionProps {
   couponCode?: CouponType;
   percent?: string;
   lifetimeMode?: LifetimeMode;
+  onButtonClicked?: () => void;
 }
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({
@@ -23,6 +24,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
   discount,
   percent,
   lifetimeMode,
+  onButtonClicked,
 }) => {
   const features = [
     {
@@ -68,7 +70,13 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
           </div>
         </div>
 
-        <PriceTable lang={lang} discount={discount} couponCode={couponCode} lifetimeMode={lifetimeMode} />
+        <PriceTable
+          lang={lang}
+          discount={discount}
+          couponCode={couponCode}
+          lifetimeMode={lifetimeMode}
+          onButtonClicked={onButtonClicked}
+        />
       </div>
     </section>
   );
