@@ -52,6 +52,7 @@
     "buy": "購買",
     "get": "獲取",
     "selectPlan": "選擇計劃",
+    "redeem": "兌換代碼",
     "discount": "最佳價值！",
     "claimTheDeal": "領取優惠",
     "freemonth": "獲取 30 天免費"
@@ -130,4 +131,3 @@
     ]
   }
 }
-
