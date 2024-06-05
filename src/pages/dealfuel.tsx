@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import FeatureSection from '@/components/lifetime/FeatureSection';
 import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
@@ -14,15 +14,23 @@ import Link from 'next/link';
 import moment from 'moment';
 import HeroSection from '@/components/lifetime/HeroSection';
 
-const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
+const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const year = moment().format('YYYY');
 
   const [openDialog, setOpenDialog] = useState(false);
 
-  const handlePriceCardButton = () => {
-    setOpenDialog(true);
-  };
+  useEffect(() => {
+    //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
+    const TB2Button = document.getElementById('planButton2TB');
+    const TB5Button = document.getElementById('planButton5TB');
+    const TB10Button = document.getElementById('planButton10TB');
+    [TB2Button, TB5Button, TB10Button].forEach((button) =>
+      button?.addEventListener('click', () => {
+        setOpenDialog(true);
+      }),
+    );
+  }, []);
 
   return (
     <Layout
@@ -44,7 +52,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
         </div>
       ) : null}
 
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
       <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
 
@@ -70,7 +78,6 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/en/techcult.json`);
@@ -82,7 +89,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      deviceLang,
       metatagsDescriptions,
       langJson,
       navbarLang,

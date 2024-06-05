@@ -52,7 +52,7 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
         </div>
       ) : null}
 
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
       <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
 
