@@ -27,13 +27,19 @@ async function getPrices(isEur?: boolean) {
   if (isEur) {
     currency = 'eur';
   } else {
-    currency = await currencyService.filterCurrencyByCountry();
+    try {
+      const currencyResponse = await currencyService.filterCurrencyByCountry();
+      currency = currencyResponse.currencyValue ?? 'eur';
+    } catch (error) {
+      console.error('Error getting currency:', error);
+      currency = 'eur'; // Default to EUR in case of error
+    }
   }
 
-  const res = await axios.get(
-    `${window.origin}/api/stripe/stripe_products?currency=${isEur ? 'eur' : currency.currencyValue ?? 'eur'}`,
-  );
+  const res = await axios.get(`${window.origin}/api/stripe/stripe_products?currency=${currency}`);
   const { data } = res;
+  // Procesa los datos de los productos aquí
+  console.log(data);
 
   if (data) {
     const transformedData = {
