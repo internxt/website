@@ -147,29 +147,26 @@ export const HeroSection = ({ textContent }) => {
                           )}
                         </div>
                       </td>
-                      {row.feature.slice(1).map((feature, columnIndex) => {
-                        console.log(row.id);
-                        return (
-                          <td className="h-14 bg-white md:h-16" key={`${row.title}${columnIndex.toString()}`}>
-                            <div className="flex h-full flex-row items-center justify-center gap-3">
-                              {typeof feature === 'string' && <span className="text-gray-100">{feature}</span>}
-                              {row.id === 6 && (
-                                <div className="hidden lg:flex">
-                                  <Tooltip
-                                    variant="dark"
-                                    id="info-icon"
-                                    delayShow={400}
-                                    className="z-40 max-w-xs rounded-lg drop-shadow-md"
-                                  >
-                                    {textContent.tooltip}
-                                  </Tooltip>
-                                  <Info data-tooltip-id="info-icon" className="text-primary" />
-                                </div>
-                              )}
-                            </div>
-                          </td>
-                        );
-                      })}
+                      {row.feature.slice(1).map((feature, columnIndex) => (
+                        <td className="h-14 bg-white md:h-16" key={`${row.title}${columnIndex.toString()}`}>
+                          <div className="flex h-full flex-row items-center justify-center gap-3">
+                            {typeof feature === 'string' && <span className="text-gray-100">{feature}</span>}
+                            {row.id === 6 && (
+                              <div className="hidden lg:flex">
+                                <Tooltip
+                                  variant="dark"
+                                  id="info-icon"
+                                  delayShow={400}
+                                  className="z-40 max-w-xs rounded-lg drop-shadow-md"
+                                >
+                                  {textContent.tooltip}
+                                </Tooltip>
+                                <Info data-tooltip-id="info-icon" className="text-primary" />
+                              </div>
+                            )}
+                          </div>
+                        </td>
+                      ))}
                     </tr>
                   ))}
                 </tbody>
