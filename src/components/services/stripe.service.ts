@@ -38,8 +38,6 @@ async function getPrices(isEur?: boolean) {
 
   const res = await axios.get(`${window.origin}/api/stripe/stripe_products?currency=${currency}`);
   const { data } = res;
-  // Procesa los datos de los productos aquí
-  console.log(data);
 
   if (data) {
     const transformedData = {
