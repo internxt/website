@@ -62,6 +62,14 @@
     "description": "Secure file storage with password-protected technology for your files.",
     "cta": "Sign up for free"
   },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Get end-to-end encrypted cloud storage at no extra cost.",
+    "blueText": " Join Internxt for free"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "for a more secure, open, cost-effective cloud storage solution.",
+    "blueText": "Switch to Internxt "
+  },
   "SignUpPwdCheckerBanner": {
     "line1": "Put that strong password to use with a",
     "blueText": "free Internxt account"

@@ -1,7 +1,15 @@
 import SignUpInline from '@/components/auth/SignUpInline';
 import Image from 'next/legacy/image';
 
-const SignUpBanner = ({ textContent, lang }: { textContent: any; lang: string }) => {
+const SignUpBanner = ({
+  textContent,
+  lang,
+  changeTextOrder,
+}: {
+  textContent: any;
+  lang: string;
+  changeTextOrder?: boolean;
+}) => {
   const signUpLang = require(`../../assets/lang/${lang}/home.json`);
 
   return (
@@ -10,7 +18,16 @@ const SignUpBanner = ({ textContent, lang }: { textContent: any; lang: string })
         <div className="mt-11 mb-11 flex w-full max-w-[390px] flex-col items-center justify-center px-5 md:ml-11 md:items-start md:space-y-8 md:px-0 lg:max-w-[490px]">
           <div className="flex w-full max-w-[400px] items-start text-left">
             <p className=" text-center text-4xl font-semibold md:text-left">
-              {textContent.line1} <span className="text-primary">{textContent.blueText}</span>
+              {changeTextOrder ? (
+                <>
+                  <span className="text-primary">{textContent.blueText}</span>
+                  {textContent.line1}
+                </>
+              ) : (
+                <>
+                  {textContent.line1} <span className="text-primary">{textContent.blueText}</span>
+                </>
+              )}
             </p>
           </div>
           <div className="flex w-full">
